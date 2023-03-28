@@ -80,7 +80,7 @@ The inner radius of the progress bar can be customized using the [InnerRadius](h
 
 ## Progress Color and Track Color
 
-We can customize the color of the progress, secondary progress, and track using [ProgressColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ProgressBar.SfProgressBar.html#Syncfusion_Blazor_ProgressBar_SfProgressBar_ProgressColor), [SecondaryProgressColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ProgressBar.SfProgressBar.html#Syncfusion_Blazor_ProgressBar_SfProgressBar_SecondaryProgressColor) and [TrackColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ProgressBar.SfProgressBar.html#Syncfusion_Blazor_ProgressBar_SfProgressBar_TrackColor) properties.  
+We can customize the color of the progress, secondary progress, and track using [ProgressColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ProgressBar.SfProgressBar.html#Syncfusion_Blazor_ProgressBar_SfProgressBar_ProgressColor), [SecondaryProgressColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ProgressBar.SfProgressBar.html#Syncfusion_Blazor_ProgressBar_SfProgressBar_SecondaryProgressColor) and [TrackColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ProgressBar.SfProgressBar.html#Syncfusion_Blazor_ProgressBar_SfProgressBar_TrackColor) properties. 
 
 ```cshtml
 @using Syncfusion.Blazor.ProgressBar
@@ -91,7 +91,7 @@ We can customize the color of the progress, secondary progress, and track using 
 </SfProgressBar>
 ```
 
-![Customizing Blazor ProgressBar and TrackBar Color](images/blazor-progressbar-and-trackbar-with-custom-color.png)
+![Customizing Blazor ProgressBar and Track Color](images/blazor-progressbar-and-trackbar-with-custom-color.png)
 
 ```cshtml
 @using Syncfusion.Blazor.ProgressBar
@@ -104,7 +104,6 @@ We can customize the color of the progress, secondary progress, and track using 
 ```
 
 ![Customizing Blazor Secondary ProgressBar Color](images/blazor-progressbar-secondaryprogressbar-color.png)
-
 
 ## Range Colors
 
@@ -141,7 +140,7 @@ The progress bar supports right-to-left (RTL) rendering, which can be enabled by
 </SfProgressBar>
 ```
 
-![Right to Left in Blazor ProgressBar](images/blazor-progressbar-right-to-left.png)
+![Right-to-left in Blazor ProgressBar](images/blazor-progressbar-right-to-left.png)
 
 ## Progress Bar Visibility 
 
@@ -174,6 +173,3 @@ The progress bar visibility can be changed by using the [Visible](https://help.s
 ```
 
 ![Blazor ProgressBar Visibility](images/progress-bar-visibility.gif)
-
-
-
