@@ -90,7 +90,7 @@ Get the currently selected items from the [Nodes](https://help.syncfusion.com/cr
 
 The [SelectAll](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_SelectAll) method is used to select all the elements such as nodes/connectors in the diagram. Refer to the following link which shows how to use SelectAll method on the diagram.
 ### How to clone the selected nodes and connector at runtime
-Clone is a virtual method of the node that is used to create a copy of a diagram object. After cloning, we need to set the ID for cloned nodes and connectors.The following code demonstrates how to clone selected nodes during runtime.
+Clone is a virtual method of the node that is used to create a copy of a diagram object. After cloning, we need to set the ID for cloned nodes and connectors. The following code demonstrates how to clone selected nodes during runtime.
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 @using System.Collections.ObjectModel
