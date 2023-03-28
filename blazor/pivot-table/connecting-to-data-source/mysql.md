@@ -16,7 +16,7 @@ This section describes how to use [MySQL data](https://www.nuget.org/packages/My
 
 ![Add the NuGet package "MySQL.Data" to the project](../images/MySQL-nuget-package-install.png)
 
-**3.** Next, in the **Index.razor** page, under the **OnInitialized** method, connect to MySQL. **MySqlConnection** helps to connect the MySQL database. Next, using **MySqlCommand** and **MySqlDataAdapter** you can process the desired query string and retrieve data from the MySQL database. The **Fill** method of the **MySqlDataAdapter** is used to populate the retrieved data into a **DataTable**,  which is then serialized into JSON string using **JsonConvert.SerializeObject()**.
+**3.** Next, in the **Index.razor** page, under the **OnInitialized** method, connect to MySQL. **MySqlConnection** helps to connect the MySQL database. Next, using **MySqlCommand** and **MySqlDataAdapter** you can process the desired query string and retrieve data from the MySQL database. The **Fill** method of the **MySqlDataAdapter** is used to populate the retrieved data into a **DataTable**,  which is then converted to a List.
 
 **4.** Finally, bind the list to the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html?&_ga=2.187712492.558891908.1675655056-779654442.1675225237#Syncfusion_Blazor_PivotView_PivotViewDataSourceSettings_1_DataSource) property in the [PivotViewDataSourceSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.DataSourceSettingsModel-1.html?_ga=2.112723776.558891908.1675655056-779654442.1675225237) and configure the report to use the MySQL data.
 
