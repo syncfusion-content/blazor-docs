@@ -620,6 +620,8 @@ The selected row indexes is got by using the GetSelectedRowIndexes method.
 
 @using TreeGridComponent.Data;
 @using Syncfusion.Blazor.TreeGrid;
+@using Newtonsoft.Json;
+@inject IJSRuntime JsRuntime;
 
 <SfTreeGrid @ref="TreeGrid" DataSource="@TreeGridData" IdMapping="TaskId" AllowSelection="true" ParentIdMapping="ParentId" TreeColumnIndex="1">
     <TreeGridEvents RowSelected="RowSelectHandler" TValue="TreeData"></TreeGridEvents>
@@ -637,7 +639,7 @@ The selected row indexes is got by using the GetSelectedRowIndexes method.
 
     SfTreeGrid<TreeData> TreeGrid;
 
-    public List<double> SelectedRowIndexes { get; set; }
+    public List<int> SelectedRowIndexes { get; set; }
 
     public List<TreeData> SelectedRecords { get; set; }
 

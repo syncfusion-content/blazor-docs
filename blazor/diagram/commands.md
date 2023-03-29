@@ -592,7 +592,7 @@ Clipboard commands are used to cut, copy, or paste the selected elements.
 
 * Copies the selected elements from the diagram to the diagram’s clipboard using [Copy](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Copy) command.
 
-* Pastes the diagram’s clipboard data (nodes/connectors) into the diagram using [Paste](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Paste) command.
+* Pastes the diagram’s clipboard data (nodes/connectors) into the diagram. Also, when the collection of the diagram elements is passed, the passed items will be pasted into the diagram. Otherwise, the cloned copy of elements from the internal clipboard is pasted using the [Paste](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Paste_Syncfusion_Blazor_Diagram_DiagramObjectCollection_Syncfusion_Blazor_Diagram_NodeBase__) command.
 
 The following code illustrates how to execute the clipboard commands.
 
@@ -602,6 +602,7 @@ The following code illustrates how to execute the clipboard commands.
 <input type="button" value="Cut" @onclick="@OnCut" />
 <input type="button" value="Copy" @onclick="@OnCopy" />
 <input type="button" value="Paste" @onclick="@OnPaste" />
+<input type="button" value="PasteWithArgument" @OnClick="@PasteWithArgument"/>
 
 <SfDiagramComponent @ref="@diagram" Height="600px" Nodes="@nodes" Connectors="@Connectors"/>
 
@@ -654,6 +655,16 @@ The following code illustrates how to execute the clipboard commands.
     {
         //Pastes the copied object.
         diagram.Paste();
+    }
+
+    private void PasteWithArgument()
+    {
+        DiagramObjectCollection<NodeBase> nodeBase = new DiagramObjectCollection<NodeBase>();
+        Node clonedNode = diagram.Nodes[0].Clone() as Node;
+        nodeBase.Add(clonedNode);
+
+        //pastes an object as a parameter.
+        diagram.Paste(nodeBase);
     }
 }
 ```
