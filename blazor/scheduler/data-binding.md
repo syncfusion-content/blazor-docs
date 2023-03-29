@@ -82,6 +82,28 @@ Any kind of remote data services can be bound to the Scheduler. To do so, provid
 }
 ```
 
+### Filter events using the in-built query
+
+To enable server-side filtering operations based on predetermined conditions, the [`includeFiltersInQuery`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleEventSettings-1.html#Syncfusion_Blazor_Schedule_ScheduleEventSettings_1_IncludeFiltersInQuery) API can be set to true, this allows the filter query to be constructed using the start date, end date, and recurrence rule which in turn enables the request to be filtered accordingly.
+
+This method greatly improves the component's performance by reducing the data that needs to be transferred to the client side. As a result, the component's efficiency and responsiveness are significantly enhanced, resulting in a better user experience. However, it is important to consider the possibility of longer query strings, which may cause issues with the maximum URL length or server limitations on query string length.
+
+```cshtml
+@using Syncfusion.Blazor
+@using Syncfusion.Blazor.Schedule
+@using Syncfusion.Blazor.Data
+
+<SfSchedule TValue="Restful_Crud.Models.EventData" Height="550px" SelectedDate="@(new DateTime(2020, 3, 11))">
+    <ScheduleEventSettings TValue="Restful_Crud.Models.EventData" Query="@QueryData" IncludeFiltersInQuery ="true">
+        <SfDataManager Url="https://localhost:44360/api" Adaptor="Adaptors.ODataV4Adaptor"></SfDataManager>
+    </ScheduleEventSettings>
+</SfSchedule>
+
+@code{
+    public Query QueryData = new Query().From("EventDatas");
+}
+```
+
 ### Using custom adaptor
 
 It is possible to create your own `CustomAdaptor` by extending the built-in available adaptors. The following example demonstrates the custom adaptor usage and how to bind the data with custom service and the CRUD operations for custom bounded data is performed using the methods of [DataAdaptor](https://blazor.syncfusion.com/documentation/data/custom-binding/) abstract class.
