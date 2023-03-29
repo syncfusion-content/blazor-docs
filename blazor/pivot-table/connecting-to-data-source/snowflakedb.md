@@ -188,7 +188,7 @@ namespace MyWebService.Controllers
 @using Syncfusion.Blazor.PivotView
 
 <SfPivotView TValue="ProductDetails" Width="1000" Height="300" ShowFieldList="true">
-    <PivotViewDataSourceSettings TValue="SnowflakeService" Url="https://localhost:44378/Pivot"" ExpandAll=false EnableSorting=true>
+    <PivotViewDataSourceSettings TValue="SnowflakeService" Url="https://localhost:44378/Pivot" ExpandAll=false EnableSorting=true>
         <PivotViewColumns>
             <PivotViewColumn Name="CC_CALL_CENTER_SK"></PivotViewColumn>
             <PivotViewColumn Name="CC_SQ_FT"></PivotViewColumn>
