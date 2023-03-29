@@ -24,6 +24,7 @@ The new toolbar button 'Custom' is added using the `ToolbarSettings` property. T
                                  GetImageUrl="/api/SampleData/GetImage">
         </FileManagerAjaxSettings>
         <FileManagerToolbarSettings Items="@Items"></FileManagerToolbarSettings>
+        <FileManagerEvents TValue="FileManagerDirectoryContent" ToolbarCreated="toolbarCreate"></FileManagerEvents>
     </SfFileManager>
 
 @code {
