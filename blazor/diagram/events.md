@@ -571,6 +571,10 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 ## OnAutoScrollChange Event
 The [OnAutoScrollChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_OnAutoScrollChange)  event is triggered when changes are detected to the scroll position, extent, or viewport size as a result of auto-scrolling for diagram elements. To explore the arguments, refer to the [AutoScrollChangeEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.AutoScrollChangeEventArgs.html) class.
 
+The [AutoScrollChangeEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.AutoScrollChangeEventArgs.html) include the following options:
+* [Cancel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.AutoScrollChangeEventArgs.html#Syncfusion_Blazor_Diagram_AutoScrollChangeEventArgs_Cancel) - The auto-scroll can be stopped using this property.
+* [Item](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.AutoScrollChangeEventArgs.html#Syncfusion_Blazor_Diagram_AutoScrollChangeEventArgs_Item) - This property is used to retrieve the diagram element that is currently being auto-scrolled.
+* [Delay](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.AutoScrollChangeEventArgs.html#Syncfusion_Blazor_Diagram_AutoScrollChangeEventArgs_Delay) - By utilizing this property, we can customize the speed limit of the auto-scroll.
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 <SfDiagramComponent Height="400px" Width="400px" Nodes="@nodes" OnAutoScrollChange="AutoScrollChange">
@@ -612,5 +616,7 @@ The [OnAutoScrollChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
     }
 }
 ```
-|![Speed Limit control in autoScroll support for node](images/SpeedLimit.gif) | 
+
+![Speed Limit control in autoScroll support for node](images/SpeedLimit.gif) 
+
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Events)
