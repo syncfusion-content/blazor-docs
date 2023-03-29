@@ -74,3 +74,7 @@ The following code example illustrates how to print the region occupied by the d
 }
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Print/PrintSample/PrintSample)
+
+## See Also
+
+* [How to print or export the HTML and Native node into image format](https://www.syncfusion.com/kb/13993/how-to-print-or-export-the-html-and-native-node-into-image-format)
