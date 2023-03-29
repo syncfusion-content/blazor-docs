@@ -41,7 +41,7 @@ Refer to the following steps to download the custom resources in CRG:
 
    ![Final output of customized resources in Blazor](images/customized-resources.png)
 
-5. Moreover, the 'styles' folder of the Material and Tailwind themes contains CSS files and a 'customized' folder. The CSS files under the 'customized' folder do not include online Google font dependencies. For more details, please refer to [this](https://blazor.syncfusion.com/documentation/appearance/themes#render-syncfusion-components-in-offline-with-material-and-tailwind-themes).
+N> If you download resources of Material and Tailwind themes, either alone or with other themes, the 'styles' folder will contain CSS files along with a 'customized' folder. The CSS files within the 'customized' folder do not include online Google font dependencies of the Material and Tailwind themes. For more details, please refer to [this](https://blazor.syncfusion.com/documentation/appearance/themes#render-syncfusion-components-in-offline-with-material-and-tailwind-themes).
 
 ## How to use custom resources in the Blazor application
 
