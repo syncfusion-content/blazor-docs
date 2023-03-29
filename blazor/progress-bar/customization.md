@@ -1,4 +1,3 @@
-
 ---
 layout: post
 title: Customization in Blazor ProgressBar Component | Syncfusion
@@ -143,7 +142,7 @@ The progress bar supports right-to-left (RTL) rendering, which can be enabled by
 
 ![Right-to-left in Blazor ProgressBar](images/blazor-progressbar-right-to-left.png)
 
-## Progress Bar Visibility 
+## ProgressBar Visibility 
 
 The progress bar visibility can be changed by using the [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ProgressBar.SfProgressBar.html#Syncfusion_Blazor_ProgressBar_SfProgressBar_Visible) property.
 
