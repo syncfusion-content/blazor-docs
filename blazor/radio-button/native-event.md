@@ -27,9 +27,9 @@ The following native event support have been provided to the Radio Button compon
 | onchange | oninput | onblur | onfocus | onfocusout |
 |onfocusin|onclick|onkeydown|onkeyup|onkeypress |
 
-## How to bind click event to Radio Button
+## ValueChange event in Radio Button
 
-The `onclick` attribute is used to bind the click event for Radio Button.
+The [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfRadioButton-1.html#Syncfusion_Blazor_Buttons_SfRadioButton_1_ValueChange) event is triggered when the value of the Radio Button component get changed or modified.
 
 ```cshtml
 @using Syncfusion.Blazor.Buttons
