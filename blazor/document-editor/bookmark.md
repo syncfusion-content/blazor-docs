@@ -31,8 +31,10 @@ container.DocumentEditor.Editor.InsertBookmarkAsync("Bookmark1");
 You can select the bookmark in the document using [`SelectBookmarkAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.SelectionModule.html#Syncfusion_Blazor_DocumentEditor_SelectionModule_SelectBookmarkAsync_System_String_) method by providing Bookmark name to select as shown in the following code snippet.
 
 ```csharp
-container.DocumentEditor.Selection.SelectBookmarkAsync("Bookmark1");
+container.DocumentEditor.Selection.SelectBookmarkAsync("Bookmark1",true);
 ```
+
+>Note: Second parameter is optional parameter and it denotes is exclude bookmark start and end from selection. If true, excludes bookmark start and end from selection.
 
 ## Delete Bookmark
 
@@ -44,10 +46,34 @@ container.DocumentEditor.Editor.DeleteBookmarkAsync("Bookmark1");
 
 ## Get Bookmark
 
-You can get all the bookmarks in the document using [`GetBookmarksAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.SelectionModule.html#Syncfusion_Blazor_DocumentEditor_SelectionModule_GetBookmarksAsync_System_Boolean_) method as shown in the following code snippet.
+You can get all the bookmarks in the document using [`GetBookmarksAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.html#Syncfusion_Blazor_DocumentEditor_GetBookmarksAsync_System_Boolean_) method as shown in the following code snippet.
+
+```csharp
+container.DocumentEditor.GetBookmarksAsync();
+```
+
+## Get Bookmark  in selection
+
+You can get bookmarks in current selection in the document using [`GetBookmarksAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.SelectionModule.html#Syncfusion_Blazor_DocumentEditor_SelectionModule_GetBookmarksAsync_System_Boolean_) method as shown in the following code snippet.
 
 ```csharp
 container.DocumentEditor.Selection.GetBookmarksAsync(false);
 ```
 
 N> Parameter denotes is include hidden bookmarks. If false, ignore hidden bookmark.
+
+## Show or Hide bookmark
+
+You can show or hide the show square brackets around bookmarked items in Document editor component.
+
+The following example code illustrates how to show or hide square brackets around bookmarked items.
+
+```csharp
+<SfDocumentEditorContainer @ref="container" Height="590px" DocumentEditorSettings="settings">
+</SfDocumentEditorContainer>
+
+@code {
+    SfDocumentEditorContainer container;
+    DocumentEditorSettingsModel settings = new DocumentEditorSettingsModel() { showBookmarks = true };
+}
+```

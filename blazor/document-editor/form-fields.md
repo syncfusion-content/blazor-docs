@@ -34,6 +34,47 @@ All the form fields names form current document can be retrieved using [`GetForm
 Task<List<string>> formFieldsNames = container.DocumentEditor.GetFormFieldNamesAsync();
 ```
 
+## Get form field properties
+
+Form field properties can be retrieved using [`GetFormFieldInfoAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.SfDocumentEditor.html#Syncfusion_Blazor_DocumentEditor_SfDocumentEditor_GetFormFieldInfoAsync).
+
+```csharp
+//Text form field
+Task<FormFieldInfo> textfieldInfo = container.Documenteditor.GetFormFieldInfoAsync("Text1");
+//Checkbox form field
+Task<FormFieldInfo> checkboxfieldInfo = container.Documenteditor.GetFormFieldInfoAsync("Check1");
+//Dropdown form field
+Task<FormFieldInfo> dropdownfieldInfo = container.Documenteditor.GetFormFieldInfoAsync("Dropdown1");
+```
+
+## Set form field properties
+
+Form field properties can be modified using [`SetFormFieldInfoAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.SfDocumentEditor.html#Syncfusion_Blazor_DocumentEditor_SfDocumentEditor_SetFormFieldInfoAsync).
+
+```csharp
+// Set text form field properties
+Task<FormFieldInfo> textfieldInfo = container.Documenteditor.GetFormFieldInfoAsync("Text1");
+textfieldInfo.defaultValue = "Hello";
+textfieldInfo.format = "Uppercase";
+textfieldInfo.type = "Text";
+textfieldInfo.name = "Text2";
+container.Documenteditor.SetFormFieldInfoAsync('Text1',textfieldInfo);
+
+// Set checkbox form field properties
+Task<FormFieldInfo> checkboxfieldInfo = container.Documenteditor.GetFormFieldInfoAsync("Check1");
+checkboxfieldInfo.defaultValue = true;
+checkboxfieldInfo.name = "Check2";
+container.Documenteditor.SetFormFieldInfoAsync('Check1',checkboxfieldInfo);
+
+// Set dropdown form field properties
+Task<FormFieldInfo> dropdownfieldInfo = container.Documenteditor.GetFormFieldInfoAsync("Drop1");
+dropdownfieldInfo.dropDownItems = ['One','Two', 'Three']
+dropdownfieldInfo.name = "Drop2";
+container.Documenteditor.SetFormFieldInfoAsync('Check1',dropdownfieldInfo);
+```
+
+>Note:If a form field already exists in the document with the new name specified, the old form field name property will be cleared and it will not be accessible. Ensure the new name is unique.
+
 ## Export form field data
 
 Data of the all the Form fields in the document can be exported using [`ExportFormDataAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.SfDocumentEditor.html#Syncfusion_Blazor_DocumentEditor_SfDocumentEditor_ExportFormDataAsync).
