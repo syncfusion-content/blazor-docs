@@ -49,6 +49,7 @@ This section describes how to use [Nest](https://www.nuget.org/packages/Nest) to
 
     protected override void OnInitialized()
     {
+        // Replace with your own connection string.
         var connectionString = "<Enter your valid connection string here>";
         var uri = new Uri(connectionString);
         var connectionSettings = new ConnectionSettings(uri);
@@ -114,6 +115,7 @@ namespace MyWebService.Controllers
     {
         private static object FetchElasticsearchData()
         {
+            // Replace with your own connection string.
             var connectionString = "<Enter your valid connection string here>";
             var uri = new Uri(connectionString);
             var connectionSettings = new ConnectionSettings(uri);
@@ -149,6 +151,7 @@ namespace MyWebService.Controllers
 
         private static object FetchElasticsearchData()
         {
+            // Replace with your own connection string.
             var connectionString = "<Enter your valid connection string here>";
             var uri = new Uri(connectionString);
             var connectionSettings = new ConnectionSettings(uri);
