@@ -467,6 +467,29 @@ namespace filemanager.Server.Controllers
 {% endhighlight %}
 {% endtabs %}
 
+## Folder upload support
+
+To perform the Folder upload operation, initialize the [UploadUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerAjaxSettings.html#Syncfusion_Blazor_FileManager_FileManagerAjaxSettings_UploadUrl) property in a FileManagerAjaxSettings.
+Use [DirectoryUpload](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerUploadSettings.html#Syncfusion_Blazor_FileManager_FileManagerUploadSettings_DirectoryUpload) property in the FileManagerUploadSettings.
+
+{% tabs %}
+{% highlight razor %}
+
+<SfFileManager TValue="FileManagerDirectoryContent">
+        <FileManagerAjaxSettings Url="/api/SampleData/FileOperations"
+                                UploadUrl="/api/SampleData/Upload">
+        </FileManagerAjaxSettings>
+        <FileManagerUploadSettings DirectoryUpload="@IsDirectoryUpload" ></FileManagerUploadSettings>
+        <FileManagerEvents TValue="FileManagerDirectoryContent"  ToolbarCreated="Created" ToolbarItemClicked="ItemClicked"></FileManagerEvents>
+</SfFileManager>
+
+{% endhighlight %}
+{% endtabs %}
+
+## Output
+
+![Folder Upload support in Blazor FileManager](images/blazor-filemanager-folder-upload.gif)
+
 ## Image preview support
 
 To perform image preview support in the File Manager component, initialize the [GetImageUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerAjaxSettings.html#Syncfusion_Blazor_FileManager_FileManagerAjaxSettings_GetImageUrl) property in a FileManagerAjaxSettings.
