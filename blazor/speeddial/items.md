@@ -103,29 +103,6 @@ You can disable Speed Dial items by setting [Disabled](https://help.syncfusion.c
 
 ![Blazor Speed Dial with Disabled](./images/Blazor-SpeedDial-DisabledItem.png)
 
-## Animation
-
-The Speed Dial items can be animated during the opening and closing of the popup action items. You can customize the animation's `Effect`, `Delay`, and `Duration` by setting [SpeedDialAnimationSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SpeedDialAnimationSettings.html) tag directive. By default, Speed Dial animates with a `Fade` effect and supports all [SpeedDialAnimationEffect](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SpeedDialAnimationEffect.html) effects.
-
-Below example demonstrates the Speed Dial items with applied Zoom effect.
-
-```cshtml
-
-@using Syncfusion.Blazor.Buttons
-
-<SfSpeedDial OpenIconCss="e-icons e-edit" CloseIconCss="e-icons e-close" Content="Edit">
-    <SpeedDialItems>
-        <SpeedDialItem Text="Cut" IconCss="e-icons e-cut"/>
-        <SpeedDialItem Text="Copy" IconCss="e-icons e-copy"/>
-        <SpeedDialItem Text="Paste" IconCss="e-icons e-paste"/>
-    </SpeedDialItems>
-    <SpeedDialAnimationSettings Effect="SpeedDialAnimationEffect.Zoom"></SpeedDialAnimationSettings>
-</SfSpeedDial>
-
-```
-
-![Blazor Speed Dial Animation](./images/Blazor-SpeedDial-Animation.png)
-
 ## Template
 
 The Speed Dial supports to customize the action items and entire pop-up container by setting [ItemTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSpeedDial.html#Syncfusion_Blazor_Buttons_SfSpeedDial_ItemTemplate) and [PopupTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSpeedDial.html#Syncfusion_Blazor_Buttons_SfSpeedDial_PopupTemplate) tag directive. For more details about templates, check out the link [here](https://blazor.syncfusion.com/documentation/speeddial/getting-started).
