@@ -104,6 +104,10 @@ This method greatly improves the component's performance by reducing the data th
 }
 ```
 
+The following image represents how the parameters are passed using ODataV4 filter.
+
+![ODataV4 filter](images/blazor-odatav4-filter.jpg)
+
 ### Using custom adaptor
 
 It is possible to create your own `CustomAdaptor` by extending the built-in available adaptors. The following example demonstrates the custom adaptor usage and how to bind the data with custom service and the CRUD operations for custom bounded data is performed using the methods of [DataAdaptor](https://blazor.syncfusion.com/documentation/data/custom-binding/) abstract class.
