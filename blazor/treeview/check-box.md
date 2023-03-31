@@ -7,12 +7,12 @@ control: TreeView
 documentation: ug
 ---
 
-# CheckBox in Blazor TreeView component
+# CheckBox in Blazor TreeView Component
 
 The Blazor TreeView component allows to check more than one node in TreeView by enabling the [ShowCheckBox](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_ShowCheckBox) property. When this property is enabled, checkbox appears before each TreeView node text.
 
 
-## AutoCheck in Blazor TreeView component.
+## AutoCheck in Blazor TreeView Component
 
 By default, the checkbox state of parent and child nodes are dependent on each other. For independent checked state, achieve it using the [AutoCheck](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_AutoCheck) property.
 
@@ -20,7 +20,6 @@ By default, the checkbox state of parent and child nodes are dependent on each o
 * If all child nodes are checked, the parent node will display as fully checked.
 * When a parent node is checked, its child nodes will also display as checked.
 
-{% highlight cshtml hl_lines="2" %}
 ```cshtml
 @using Syncfusion.Blazor.Navigations
 <SfTreeView TValue="MusicAlbum" ShowCheckBox="true" AutoCheck="true">
@@ -100,7 +99,6 @@ By default, the checkbox state of parent and child nodes are dependent on each o
     }
 }
 ```
-{% endhighlight %}
 
 ![Blazor TreeView with CheckBox](./images/blazor-treeview-checkbox.png)
 

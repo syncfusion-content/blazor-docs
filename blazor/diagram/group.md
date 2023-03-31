@@ -13,7 +13,7 @@ documentation: ug
 
 ## Create NodeGroup
 
-## Add NodeGroup when initializing diagram
+## How to add nodeGroup while initialize the diagram
 
 A node group can be added to the diagram model through [Nodes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Node.html) collection. To define an object as node group, add the child objects to the [Children](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeGroup.html#Syncfusion_Blazor_Diagram_NodeGroup_Children) collection of the node group. The following code illustrates how to create a node group.
 
@@ -165,7 +165,88 @@ The following code illustrates how to ungroup at runtime.
 }
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Group)
-## Add NodeGroup at runtime
+### How to clone the group of node at runtime
+[Clone](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Node.html#Syncfusion_Blazor_Diagram_Node_Clone) is a virtual method of the node that is used to create a copy of a diagram object. After cloning, we need to set the ID for cloned nodes. The following code demonstrates how to clone the group of nodes during runtime.
+```cshtml
+@using Syncfusion.Blazor.Diagram
+@using System.Collections.ObjectModel
+@inject IJSRuntime js
+<input type="button" id="add" value="Clone Group" @onclick="@CloneGroup" />
+<SfDiagramComponent @ref="diagram" Width="50%" Height="500px" @bind-Nodes="NodeCollection"></SfDiagramComponent>
+
+@functions
+{
+
+    SfDiagramComponent diagram;
+    public DiagramObjectCollection<Node> NodeCollection = new DiagramObjectCollection<Node>();
+    protected override void OnInitialized()
+    {
+        Node node1 = new Node()
+            {
+                OffsetX = 100,
+                OffsetY = 150,
+                Height = 100,
+                Width = 100,
+                ID = "node1",
+
+            };
+        NodeCollection.Add(node1);
+        Node node2 = new Node()
+            {
+                OffsetX = 400,
+                OffsetY = 200,
+                Height = 100,
+                Width = 100,
+                ID = "node2",
+               
+            };
+        NodeCollection.Add(node2);
+        NodeGroup group1 = new NodeGroup()
+            {
+                ID = "group1",
+                Children = new string[] { "node1", "node2" },
+                OffsetX = 300,
+                OffsetY = 300,
+                Annotations = new DiagramObjectCollection<ShapeAnnotation>()
+                        {
+                            new ShapeAnnotation()
+                            {
+                            Content = "Group1"
+                            }
+                        },
+            };
+        NodeCollection.Add(group1);
+    }
+    public async Task CloneGroup()
+    {
+        Node node2 = NodeCollection[0].Clone() as Node;
+        node2.ID = RandomId();
+        Node node3 = NodeCollection[1].Clone() as Node;
+        node3.ID = RandomId();
+        Node node4 = NodeCollection[2].Clone() as Node;
+        node4.ID = RandomId();
+        string[] array = { node2.ID, node3.ID };
+        (node4 as NodeGroup).Children = array;
+        node4.OffsetX += 25;
+        node4.OffsetY += 25;
+        await diagram.AddDiagramElements(new DiagramObjectCollection<NodeBase>() { node2, node3, node4 });
+    }
+
+    internal string RandomId()
+    {
+        Random random = new Random();
+        const string chars = "ABCDEFGHIJKLMNOPQRSTUVWXTZabcdefghiklmnopqrstuvwxyz";
+#pragma warning disable CA5394 // Do not use insecure randomness
+        return new string(Enumerable.Repeat(chars, 5)
+          .Select(s => s[random.Next(s.Length)]).ToArray());
+#pragma warning restore CA5394 // Do not use insecure randomness
+    }
+
+}
+```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Group)
+![Grouping in Blazor Diagram](images/CloneGroup.gif)
+## How to add nodeGroup at runtime
 
 A node group can be added at runtime by using Nodes collection of diagram.
 
@@ -314,7 +395,8 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 }
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Group)
-## Update position at runtime
+
+## How to update nodeGroup's position at runtime
 
 You can change the position of the node group similar to node. For more information about node positioning, refer to [Positioning](https://blazor.syncfusion.com/documentation/diagram/nodes/positioning).
 
@@ -379,7 +461,8 @@ You can change the position of the node group similar to node. For more informat
 }
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Group)
-## Change the appearance of the node group
+
+## How to change appearance of the node group
 
 You can change the appearance of the node group similar to node. For more information about node appearance, refer to [Appearance](https://blazor.syncfusion.com/documentation/diagram/nodes/customization).
 

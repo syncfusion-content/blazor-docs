@@ -9,7 +9,14 @@ documentation: ug
 
 # Organizational Chart in Blazor Diagram Component
 
-An organizational chart is a diagram that displays the structure of an organization and relationships. To create an organizational chart, the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_Type) of layout should be set as an [OrganizationalChart](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.LayoutType.html#Syncfusion_Blazor_Diagram_LayoutType_OrganizationalChart). The following code example illustrates how to create an organizational chart.
+An organizational chart is a diagram that displays the structure of an organization and relationships. To create an organizational chart, the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_Type) of layout should be set as an [OrganizationalChart](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.LayoutType.html#Syncfusion_Blazor_Diagram_LayoutType_OrganizationalChart).
+
+To create and position the Organizational Chart Using Blazor Diagram, you can check the video below.
+
+{% youtube "youtube:https://www.youtube.com/watch?v=cjMCTTJssCE&t=22s" %}
+
+
+The following code example illustrates how to create an organizational chart.
 
 ```csharp
 @using Syncfusion.Blazor.Diagram
@@ -378,3 +385,7 @@ diagram.DoLayout();
 * [How to create a node](../nodes/nodes)
 
 * [How to create a connector](../connectors/connectors)
+
+* [How to create and render the Organization chart diagram by using SQL database](https://www.syncfusion.com/kb/13881/how-to-create-and-render-the-organization-chart-diagram-by-using-sql-database)
+
+* [How to create and render the Organization chart diagram by using MDF database](https://www.syncfusion.com/kb/13888/how-to-create-and-render-the-org-chart-diagram-by-using-mdf-database)
