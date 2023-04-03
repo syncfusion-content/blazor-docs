@@ -311,7 +311,7 @@ N> Syncfusion recommends to reference scripts using [Static Web Assets](https://
 
 ![Blazor MenuBar Component](./images/blazor-menubar.png)
 
-N> TValue can be specified as either `MenuItemModel` or `MenuItem`. The `TValue` is `MenuItemModel`, if the menu is rendered using the `Items` property otherwise the TValue is specified as `MenuItem`.
+N> `TValue` can be specified as either `MenuItemModel` or `MenuItem`. If the menu is generated using the `Items` property, then `TValue` is specified as `MenuItemModel`. However, if it is created using a tag directive, then `TValue` is specified as `MenuItem`.
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/MenuBar).
 
