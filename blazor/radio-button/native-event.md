@@ -27,20 +27,22 @@ The following native event support have been provided to the Radio Button compon
 | onchange | oninput | onblur | onfocus | onfocusout |
 |onfocusin|onclick|onkeydown|onkeyup|onkeypress |
 
-## ValueChange event in Radio Button
+## How to bind onchange event to Radio Button
 
-The [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfRadioButton-1.html#Syncfusion_Blazor_Buttons_SfRadioButton_1_ValueChange) event is triggered when the value of the Radio Button component get changed or modified.
+The `onchange` attribute is used to bind the onchange event for Radio Button. Here, we have explained about the sample code snippets of Radio Button.
 
 ```cshtml
 @using Syncfusion.Blazor.Buttons
 
-<SfRadioButton Label="Credit/Debit Card" Name="payment" Value="credit/debit" TChecked="string" ValueChange="onValueChange" @bind-Checked="stringChecked"></SfRadioButton><br />
-<SfRadioButton Label="Net Banking" Name="payment" Value="netbanking" TChecked="string" ValueChange="onValueChange" @bind-Checked="stringChecked"></SfRadioButton>
+<SfRadioButton Label="Credit/Debit Card" Name="payment" Value="credit/debit" TChecked="string" @onchange="onChange" @bind-Checked="stringChecked"></SfRadioButton>
+<br />
+<SfRadioButton Label="Net Banking" Name="payment" Value="netbanking" TChecked="string" @onchange="onChange" @bind-Checked="stringChecked"></SfRadioButton>
 
 @code {
     private string stringChecked = "netbanking";
-    private void onValueChange(ChangeArgs<string> args){
-        //ValueChange Event triggered
+    private void onChange(Microsoft.AspNetCore.Components.ChangeEventArgs args)
+    {
+       //onChange Event triggered
     }
 }
 
