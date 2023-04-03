@@ -72,6 +72,8 @@ In the following example, the **id**, **pId**, and **text** columns from self-re
 
 ![Data Binding in Blazor MenuBar](./images/blazor-menubar-data-binding.png)
 
+N> Above example, used the `Items` Proeprty, So that TValue as `MenuItemModel`
+
 ## Custom Menu Bar Items
 
 To customize Menu Bar items in your application, set your customized template using [MenuTemplates](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Navigations.MenuTemplates.html). In the following example, the Menu Bar has been rendered with customized Menu Bar items.

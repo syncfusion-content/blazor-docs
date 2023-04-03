@@ -311,6 +311,8 @@ N> Syncfusion recommends to reference scripts using [Static Web Assets](https://
 
 ![Blazor MenuBar Component](./images/blazor-menubar.png)
 
+N> TValue can be used as the `MenuItemModel`, if you use the `Items` property. You can use the TValue as `MenuItem` when rendering the MenuItem tag.
+
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/MenuBar).
 
 ## See Also
