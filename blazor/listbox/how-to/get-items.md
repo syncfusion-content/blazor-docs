@@ -9,7 +9,9 @@ documentation: ug
 
 # Get Items in Blazor ListBox Component
 
-In the following example, Get the selected items using [GetDataByValue](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfListBox-2.html#Syncfusion_Blazor_DropDowns_SfListBox_2_GetDataByValue__0_) method.
+The [GetDataByValue](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfListBox-2.html#Syncfusion_Blazor_DropDowns_SfListBox_2_GetDataByValue__0_) method is used to get the selected item/items from the list box component based on the value/values passed to this method.
+
+The below example showcases the `GetDataByValue` method.
 
 ```cshtml
 @using Syncfusion.Blazor.Buttons
