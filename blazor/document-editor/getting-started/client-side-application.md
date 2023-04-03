@@ -158,9 +158,9 @@ N> Syncfusion recommends to reference scripts using [Static Web Assets](https://
     
 N> The Document editor is one of the large functionalities covered component as it gives you many functionalities of Microsoft Word application. It has more UI views like text properties pane, header footer properties pane, image properties pane and dialogs.
 The dependency components are listed below:
-          *[Newtonsoft.Json](https://www.nuget.org/packages/Newtonsoft.Json/)
-          *[Syncfusion.Blazor.Calendars](https://www.nuget.org/packages/Syncfusion.Blazor.Calendars/)
-          *[Syncfusion.Blazor.Core] (https://www.nuget.org/packages/Syncfusion.Blazor.Core/)
+*[Newtonsoft.Json](https://www.nuget.org/packages/Newtonsoft.Json/)
+*[Syncfusion.Blazor.Calendars](https://www.nuget.org/packages/Syncfusion.Blazor.Calendars/)
+*[Syncfusion.Blazor.Core] (https://www.nuget.org/packages/Syncfusion.Blazor.Core/)
           *[Syncfusion.Blazor.Data](https://www.nuget.org/packages/Syncfusion.Blazor.Data/)
           *[Syncfusion.Blazor.DropDowns](https://www.nuget.org/packages/Syncfusion.Blazor.DropDowns/)
           *[Syncfusion.Blazor.Navigations](https://www.nuget.org/packages/Syncfusion.Blazor.Navigations/)
