@@ -22,11 +22,13 @@ In the following example, the **id**, **pId**, and **text** columns from self-re
 @using Syncfusion.Blazor.Navigations
 
 <SfMenu Items="@MenuItems">
+    <MenuEvents  TValue="MenuItemModel" OnOpen="onOpen"></MenuEvents>
     <MenuFieldSettings ItemId="Id" Text="Text" ParentId="ParentId"></MenuFieldSettings>
 </SfMenu>
 
 @code {
 
+    private string eventName = "No";
     public List<CustomMenuItem> MenuItems = new List<CustomMenuItem>
     {
         new CustomMenuItem{ Id = "parent1", Text = "Events" },
@@ -57,6 +59,11 @@ In the following example, the **id**, **pId**, and **text** columns from self-re
         public string Id { get; set; }
         public string Text { get; set; }
         public string ParentId { get; set; }
+    }
+
+    private void onOpen()
+    {
+        this.eventName = "OnOpen";
     }
 }
 
