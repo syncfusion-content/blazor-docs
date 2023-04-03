@@ -160,7 +160,7 @@ N> The Document editor is one of the large functionalities covered component as 
 The dependency components are listed below:
           *[Newtonsoft.Json](https://www.nuget.org/packages/Newtonsoft.Json/)
           *[Syncfusion.Blazor.Calendars](https://www.nuget.org/packages/Syncfusion.Blazor.Calendars/)
-          *[Syncfusion.Blazor.Core] (https://www.nuget.org/packages/Syncfusion.Blazor.Core/)
+          *[Syncfusion.Blazor.Core](https://www.nuget.org/packages/Syncfusion.Blazor.Core/)
           *[Syncfusion.Blazor.Data](https://www.nuget.org/packages/Syncfusion.Blazor.Data/)
           *[Syncfusion.Blazor.DropDowns](https://www.nuget.org/packages/Syncfusion.Blazor.DropDowns/)
           *[Syncfusion.Blazor.Navigations](https://www.nuget.org/packages/Syncfusion.Blazor.Navigations/)
