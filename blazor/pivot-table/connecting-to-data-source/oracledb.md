@@ -123,7 +123,7 @@ namespace MyWebService.Controllers
     [Route("[controller]")]
     public class PivotController : ControllerBase
     {
-        private static DataTable FetchOracleDbResult()
+        private static DataTable FetchOracleResult()
         {
             // Replace with your own connection string.
             string connectionString = "<Enter your valid connection string here>";
@@ -154,13 +154,13 @@ namespace MyWebService.Controllers
     [Route("[controller]")]
     public class PivotController : ControllerBase
     {
-        [HttpGet(Name = "GetOracleDbResult")]
+        [HttpGet(Name = "GetOracleResult")]
         public object Get()
         {
-            return JsonConvert.SerializeObject(FetchOracleDbResult());
+            return JsonConvert.SerializeObject(FetchOracleResult());
         }
 
-        private static DataTable FetchOracleDbResult()
+        private static DataTable FetchOracleResult()
         {
             // Replace with your own connection string.
             string connectionString = "<Enter your valid connection string here>";
