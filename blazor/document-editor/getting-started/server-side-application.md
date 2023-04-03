@@ -227,3 +227,5 @@ To load an existing document during control initialization, use the following co
 N> As per the discussion thread [#30064](https://github.com/dotnet/aspnetcore/issues/30064), null out the reference of streams and other instances when they are no longer required. Using this approach you'll observe the memory go down and become stable.
 
 ![Blazor DocumentEditor](../images/blazor-document-editor-component.png)
+
+N> The Document editor is one of the large functionalities covered component as it gives you many functionalities of Microsoft Word application. It has more UI views like text properties pane, header footer properties pane, image properties pane and dialogs.The dependency components are Newtonsoft.Json, Syncfusion.Blazor.Calendars, Syncfusion.Blazor.Core, Syncfusion.Blazor.Data, Syncfusion.Blazor.DropDowns, Syncfusion.Blazor.Navigations, Syncfusion.WordProcessor.AspNet.Core. So, it takes some time (less than 6seconds) for initial loading in client browsers to load all the dependency components and it is an expected one.
