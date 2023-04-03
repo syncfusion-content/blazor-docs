@@ -28,7 +28,7 @@ In the following example, the **id**, **pId**, and **text** columns from self-re
 
 @code {
 
-    private string eventName = "No";
+    private string eventName = "";
     public List<CustomMenuItem> MenuItems = new List<CustomMenuItem>
     {
         new CustomMenuItem{ Id = "parent1", Text = "Events" },
@@ -72,7 +72,7 @@ In the following example, the **id**, **pId**, and **text** columns from self-re
 
 ![Data Binding in Blazor MenuBar](./images/blazor-menubar-data-binding.png)
 
-N> Above example, used the `Items` Proeprty, So that TValue as `MenuItemModel`
+N> In the above example, `Items` proeprty is used for rendering menu, So that TValue is specified as `MenuItemModel`.
 
 ## Custom Menu Bar Items
 
