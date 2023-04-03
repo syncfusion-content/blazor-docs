@@ -72,7 +72,7 @@ In the following example, the **id**, **pId**, and **text** columns from self-re
 
 ![Data Binding in Blazor MenuBar](./images/blazor-menubar-data-binding.png)
 
-N> In the above example, `Items` proeprty is used for rendering menu, So that TValue is specified as `MenuItemModel`.
+N> The `TValue` in the above example is specified as `MenuItemModel` because the menu is rendered using the `Items` property.
 
 ## Custom Menu Bar Items
 
