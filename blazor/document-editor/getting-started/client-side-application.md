@@ -155,5 +155,16 @@ N> Syncfusion recommends to reference scripts using [Static Web Assets](https://
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to run the application. Then, the Syncfusion `Blazor DocumentEditor` component will be rendered in the default web browser.
 
 ![Blazor DocumentEditor](../images/blazor-document-editor.png)
+    
+N> The Document editor is one of the large functionalities covered component as it gives you many functionalities of Microsoft Word application. It has more UI views like text properties pane, header footer properties pane, image properties pane and dialogs.
+The dependency components are listed below:
+          *[Newtonsoft.Json](https://www.nuget.org/packages/Newtonsoft.Json/)
+          *[Syncfusion.Blazor.Calendars](https://www.nuget.org/packages/Syncfusion.Blazor.Calendars/)
+          *[Syncfusion.Blazor.Core] (https://www.nuget.org/packages/Syncfusion.Blazor.Core/)
+          *[Syncfusion.Blazor.Data](https://www.nuget.org/packages/Syncfusion.Blazor.Data/)
+          *[Syncfusion.Blazor.DropDowns](https://www.nuget.org/packages/Syncfusion.Blazor.DropDowns/)
+          *[Syncfusion.Blazor.Navigations](https://www.nuget.org/packages/Syncfusion.Blazor.Navigations/)
+          *[Syncfusion.WordProcessor.AspNet.Core](https://www.nuget.org/packages/Syncfusion.WordProcessor.AspNet.Core/)
+So, it takes some time (less than 6seconds) for initial loading in client browsers to load all the dependency components and it is an expected one.
 
 You can also explore our [Blazor Word Processor](https://blazor.syncfusion.com/demos/document-editor/default-functionalities) example to know how to render and configure the document editor.
