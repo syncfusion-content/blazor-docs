@@ -14,7 +14,7 @@ This section describes how to use [MySQL data](https://www.nuget.org/packages/My
 
 **2.** To connect a MySQL using the MySQL driver in our application, we need to install the [MySQL.Data](https://www.nuget.org/packages/MySql.Data) NuGet package. To do so, open the NuGet package manager of the project solution, search for the package **MySQL.Data** and install it.
 
-![Add the NuGet package "MySQL.Data" to the project](../images/MySQL-nuget-package-install.png)
+![Add the NuGet package "MySQL.Data" to the project](../images/MySQL-nuget-package-install-in-web-service-app.png)
 
 **3.** Next, in the **Index.razor** page, under the **OnInitialized** method, connect to MySQL. **MySqlConnection** helps to connect the MySQL database. Next, using **MySqlCommand** and **MySqlDataAdapter** you can process the desired query string and retrieve data from the MySQL database. The **Fill** method of the **MySqlDataAdapter** is used to populate the retrieved data into a **DataTable**,  which is then converted to a List.
 
