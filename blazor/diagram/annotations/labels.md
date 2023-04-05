@@ -13,7 +13,14 @@ The [Annotation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram
 
 ## How to create annotation
 
-An annotation can be added to a node or connector by defining the annotation object and adding that to the annotation collection of the node or connector. The [Content](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Annotation.html#Syncfusion_Blazor_Diagram_Annotation_Content) property of annotation defines the text to be displayed. The following code explains how to create an annotation.
+An annotation can be added to a node or connector by defining the annotation object and adding that to the annotation collection of the node or connector. The [Content](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Annotation.html#Syncfusion_Blazor_Diagram_Annotation_Content) property of annotation defines the text to be displayed. 
+
+
+To create and add annotation to Nodes and Connectors using the Blazor Diagram, refer to the below video link,
+
+{% youtube "youtube:https://www.youtube.com/watch?v=f7Jnl5hSy7I" %}
+
+The following code explains how to create an annotation.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
