@@ -227,17 +227,15 @@ N> By default, the legend will not be visible for the accumulation chart types l
 
 SQL Server is a relational database management system (RDBMS) that can be used to store and manage large amounts of data. In this topic, we will see how to save, save as, rename, load, delete, and add reports between a SQL Server database and a Blazor Pivot Table at runtime.
 
-### Create a Web API service to connect to a SQL Server database
+### Create a Blazor Pivot Table application to connect to a SQL Server database
 
-**1.** Create a simple Blazor Pivot Table by following the **"Getting Started"** documentation [link](../getting-started).
+**1.** Create a simple Blazor Pivot Table by following the **"Getting Started"** documentation [link](./getting-started).
 
 **2.** To connect a SQL Server database using the Microsoft SqlClient in our application, we need to install the [Microsoft.Data.SqlClient](https://www.nuget.org/packages/Microsoft.Data.SqlClient) NuGet package. To do so, open the NuGet package manager of the project solution, search for the package **Microsoft.Data.SqlClient** and install it.
 
-![Add the NuGet package Microsoft.Data.SqlClient to the project](../images/ms-data-sqlclient-nuget-package-install.png)
+![Add the NuGet package Microsoft.Data.SqlClient to the project](./images/blazor_ms-data-sqlclient-nuget-package-install.png)
 
-**3.** Under the **Controllers** folder, create a Web API controller (aka, PivotController.cs) file that aids in data communication with the Pivot Table.
-
-**4.** In the Web API Controller (aka, PivotController), the **OpenConnection** method is used to connect to the SQL database. The **GetDataTable** method then processes the specified SQL query string, retrieves data from the database, and converts it into a **DataTable** using **SqlCommand** and **SqlDataAdapter**. This **DataTable** can be used to retrieve saved reports and modify them further as shown in the code block below.
+**3.** Next, in the **Index.razor** page, the **OpenConnection** method is used to connect to the SQL database. The **GetDataTable** method then processes the specified SQL query string, retrieves data from the database, and converts it into a **DataTable** using **SqlCommand** and **SqlDataAdapter**. This **DataTable** can be used to retrieve saved reports and modify them further as shown in the code block below.
 
 ```cshtml
 @using System.Data
@@ -406,15 +404,15 @@ SQL Server is a relational database management system (RDBMS) that can be used t
 
 ```
 
-**5.** When you run the app, it will be hosted at `https://localhost:44313`. You can use the hosted URL to save and load reports in the SQL database from the Pivot Table.
+**4.** We can use the **OpenConnection** method to create **SqlConnection**, you can use that SqlConnection created to save and load reports in the SQL database from the Blazor Pivot Table.
 
-Further, let us explore more on how to save, load, rename, delete, and add reports using the built-in toolbar options via Web API controller (aka, PivotController) one-by-one.
+Further, let us explore more on how to save, load, rename, delete, and add reports in the SQL database using **SqlConnection**.
 
 ### Saving a report
 
-When you select the **"Save a report"** option from the toolbar, the [saveReport](#savereport) event is triggered. In this event, an AJAX request is made to the Web API controller's **SaveReport** method, passing the name of the current report and the current report, which you can use to check and save in the SQL database.
+When you select the **"Save a report"** option from the toolbar, the [SaveReport](#savereport) event is triggered. In this event, **SaveReportToDB** method is called passing the name of the current report and the current report, which uses **SqlConnection** to check and save in the SQL database.
 
-For example, the report shown in the following code snippet will be passed to the **SaveReport** method along with the report name **"Sample Report"** and saved in the SQL database.
+For example, the report shown in the following code snippet will be passed to the **SaveReportToDB** method along with the report name **"Sample Report"** and saved in the SQL database.
 
 ```cshtml
 @using System.Data
@@ -517,17 +515,17 @@ For example, the report shown in the following code snippet will be passed to th
 
 ```
 
-![The current report has been saved in the SQL database](../images/output_save_report.png)
+![The current report has been saved in the SQL database](./images/blazor_output_save_report.png)
 
-In the meantime, you can save a duplicate of the current report to the SQL Server database with a different name by selecting **"Save as current report"** from the toolbar. The [saveReport](#savereport) event will then be triggered with the new report name **"Sample Report 1"** and the current report. You can save them to the SQL Server database after passing them to the Web API service, as mentioned above.
+In the meantime, you can save a duplicate of the current report to the SQL Server database with a different name by selecting **"Save as current report"** from the toolbar. The [saveReport](#savereport) event will then be triggered with the new report name **"Sample Report 1"** and the current report. You can save them to the SQL Server database after passing them to the **SaveReportToDB** method, as mentioned above.
 
-![Copy of the current report has been saved in the SQL database](../images/output_save_as_report.png)
+![Copy of the current report has been saved in the SQL database](./images/blazor_output_save_as_report.png)
 
 ### Loading a report
 
-When you select the dropdown menu item from the toolbar, the [loadReport](#loadreport) event is triggered. In this event, an AJAX request is made to the **LoadReport** method of the Web API controller, passing the name of the selected report. The method uses this information to search for the report in the SQL database, fetch it, and load it into the pivot table.
+When you select the dropdown menu item from the toolbar, the [LoadReport](#loadreport) event is triggered. In this event, **LoadReportFromDB** method is called passing the name of the selected report. The method uses this information to search for the report in the SQL database, fetch it, and load it into the pivot table.
 
-For example, if the report name **"Sample Report 1"** is selected from a dropdown menu and passed, the **LoadReport** method will use that name to search for the report in the SQL database, retrieve it, and then load it into the pivot table.
+For example, if the report name **"Sample Report 1"** is selected from a dropdown menu and passed, the **LoadReportFromDB** method will use that name to search for the report in the SQL database, retrieve it, and then load it into the pivot table.
 
 ```cshtml
 @using System.Data
@@ -622,251 +620,225 @@ For example, if the report name **"Sample Report 1"** is selected from a dropdow
 
 ```
 
-![Loading a report from SQL database](../images/output_load_report.png)
+![Loading a report from SQL database](./images/blazor_output_load_report.png)
 
 ### Renaming a report
 
-When you select the **"Rename a current report"** option from the toolbar, the [renameReport](#renameReport) event is triggered. In this event, an AJAX request is made to the **RenameReport** method of the Web API controller, passing the current and new report names, where you can use the current report name to identify the report and resave it with the new report name in the SQL database.
+When you select the **"Rename a current report"** option from the toolbar, the [RenameReport](#renamereport) event is triggered. In this event, **RenameReportInDB** method is called passing the current and new report names, where you can use the current report name to identify the report and resave it with the new report name in the SQL database.
 
-For example, if we rename the current report from **"Sample Report 1"** to **"Sample Report 2"**, both **"Sample Report 1"** and **"Sample Report 2"** will be passed to the **RenameReport** method, which will rename the current report with the new report name **"Sample Report 2"** in the SQL database.
+For example, if we rename the current report from **"Sample Report 1"** to **"Sample Report 2"**, both **"Sample Report 1"** and **"Sample Report 2"** will be passed to the **RenameReportInDB** method, which will rename the current report with the new report name **"Sample Report 2"** in the SQL database.
 
 ```cshtml
+@using System.Data
+@using Microsoft.Data.SqlClient;
+@using EFPivotTable.Data;
 
-import { pivotData } from './datasource.ts';
-import {
-    PivotView, FieldList, CalculatedField, Toolbar, ConditionalFormatting, IDataSet, SaveReportArgs
-} from '@syncfusion/ej2-pivotview';
+<SfPivotView @ref=PivotRef TValue="ProductDetails" ID="pivot-table" Height="450" Width="700" ShowToolbar="true" ShowFieldList=true AllowExcelExport=true AllowPdfExport=true Toolbar="@PivotToolbar">
+    <PivotViewDisplayOption View="View.Both"></PivotViewDisplayOption>
+    <PivotViewDataSourceSettings DataSource="@DataSource" EnableSorting="true">
+        <PivotViewColumns>
+            <PivotViewColumn Name="Year"></PivotViewColumn>
+            <PivotViewColumn Name="Quarter"></PivotViewColumn>
+        </PivotViewColumns>
+        <PivotViewRows>
+            <PivotViewRow Name="Country"></PivotViewRow>
+            <PivotViewRow Name="Products"></PivotViewRow>
+        </PivotViewRows>
+        <PivotViewValues>
+            <PivotViewValue Name="Sold" Caption="Units Sold"></PivotViewValue>
+            <PivotViewValue Name="Amount" Caption="Sold Amount"></PivotViewValue>
+        </PivotViewValues>
+        <PivotViewFormatSettings>
+            <PivotViewFormatSetting Name="Amount" Format="C"></PivotViewFormatSetting>
+            <PivotViewFormatSetting Name="Sold" Format="N0"></PivotViewFormatSetting>
+        </PivotViewFormatSettings>
+    </PivotViewDataSourceSettings>
+    <PivotViewEvents TValue="ProductDetails" SaveReport="SaveReport" LoadReport="LoadReport" RenameReport="RenameReport" RemoveReport="RemoveReport" FetchReport="FetchReport"></PivotViewEvents>
+</SfPivotView>
 
-PivotView.Inject(FieldList, CalculatedField, Toolbar, ConditionalFormatting);
+@code {
+    SfPivotView<ProductDetails> PivotRef { get; set; }
 
-let pivotTableObj: PivotView = new PivotView({
-        dataSourceSettings: {
-        dataSource: pivotData as IDataSet[],
-        expandAll: false,
-        enableSorting: true,
-        drilledMembers: [{ name: 'Country', items: ['France'] }],
-        columns: [{ name: 'Year', caption: 'Production Year' }, { name: 'Quarter' }],
-        values: [{ name: 'Sold', caption: 'Units Sold' }, { name: 'Amount', caption: 'Sold Amount' }],
-        rows: [{ name: 'Country' }, { name: 'Products' }],
-        filters: []
-    },
-    height: 350,
-    renameReport: (args: RenameReportArgs) => {
-        fetch('https://localhost:44313/Pivot/RenameReport', {
-        method: 'POST',
-        headers: {
-            'Accept': 'application/json',
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ reportName: args.reportName, renameReport: args.rename, isReportExists: args.isReportExists })
-        }).then(response => {
-            pivotTableObj.fetchReport();
-        });
-    },
-    toolbar: ['New', 'Save', 'SaveAs', 'Rename', 'Remove', 'Load',
-    'Grid', 'Chart', 'Export', 'SubTotal', 'GrandTotal', 'ConditionalFormatting', 'FieldList'],
-    allowExcelExport: true,
-    allowConditionalFormatting: true,
-    allowPdfExport: true,
-    showToolbar: true,
-    allowCalculatedField: true,
-    displayOption:{ view:'Both' },
-    showFieldList: true,
-    height: 450
-});
-pivotTableObj.appendTo('#PivotTable');
-
-```
-
-[PivotController.cs]
-
-```csharp
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.Data.SqlClient;
-using System.Data;
-
-namespace MyWebApp.Controllers
-{
-    [ApiController]
-    [Route("[controller]")]
-    public class PivotController : ControllerBase
+    public List<ProductDetails> DataSource { get; set; }
+    public List<ToolbarItems> PivotToolbar = new List<ToolbarItems> {
+        ToolbarItems.New,
+        ToolbarItems.Save,
+        ToolbarItems.SaveAs,
+        ToolbarItems.Rename,
+        ToolbarItems.Remove,
+        ToolbarItems.Load,
+        ToolbarItems.Grid,
+        ToolbarItems.Chart,
+        ToolbarItems.Export,
+        ToolbarItems.SubTotal,
+        ToolbarItems.GrandTotal,
+        ToolbarItems.FieldList
+    };
+    protected override void OnInitialized()
     {
-        [HttpPost]
-        [Route("Pivot/RenameReport")]
-        public void RenameReport(Dictionary<string, string, bool> args)
-        {
-            RenameReportInDB(args["ReportName"], args["Rename"], args["isReportExists"]);
-        }
+        this.DataSource = ProductDetails.GetProductData().ToList();
+    }
 
-        public void RenameReportInDB(string reportName, string renameReport, bool isReportExists)
-        {
-            SqlConnection sqlConn = OpenConnection();
-            SqlCommand cmd1 = null;
-            if (isReportExists)
-            {
-                RemoveReportFromDB(renameReport);
-            }
-            foreach (DataRow row in GetDataTable(sqlConn).Rows)
-            {
-                if ((row["ReportName"] as string).Equals(reportName))
-                {
-                    cmd1 = new SqlCommand("UPDATE ReportTable set ReportName=@RenameReport where ReportName like '%" + reportName + "%'", sqlConn);
-                    break;
-                }
-            }
-            cmd1.Parameters.AddWithValue("@RenameReport", renameReport);
-            cmd1.ExecuteNonQuery();
-            sqlConn.Close();
-        }
-        private SqlConnection OpenConnection()
-        {
-            // Replace with your own connection string.
-            string connectionString = @"<Enter your valid connection string here>";
-            SqlConnection sqlConn = new SqlConnection(connectionString);
-            sqlConn.Open();
-            return sqlConn;
-        }
+    // to rename a report
+    public void RenameReport(RenameReportArgs args)
+    {
+        RenameReportInDB(args.ReportName, args.Rename, args.IsReportExists);
+    }
 
-        private DataTable GetDataTable(SqlConnection sqlConn)
+    public void RenameReportInDB(string reportName, string renameReport, bool isReportExists)
+    {
+        SqlConnection sqlConn = OpenConnection();
+        SqlCommand cmd1 = null;
+        if (isReportExists)
         {
-            string xquery = "SELECT * FROM ReportTable";
-            SqlCommand cmd = new SqlCommand(xquery, sqlConn);
-            SqlDataAdapter da = new SqlDataAdapter(cmd);
-            DataTable dt = new DataTable();
-            da.Fill(dt);
-            return dt;
+            RemoveReportFromDB(renameReport);
         }
+        foreach (DataRow row in GetDataTable(sqlConn).Rows)
+        {
+            if ((row["ReportName"] as string).Equals(reportName))
+            {
+                cmd1 = new SqlCommand("UPDATE ReportTable set ReportName=@RenameReport where ReportName like '%" + reportName + "%'", sqlConn);
+                break;
+            }
+        }
+        cmd1.Parameters.AddWithValue("@RenameReport", renameReport);
+        cmd1.ExecuteNonQuery();
+        sqlConn.Close();
+    }
+    private SqlConnection OpenConnection()
+    {
+        // Replace with your own connection string.
+        string connectionString = @"<Enter your valid connection string here>";
+        SqlConnection sqlConn = new SqlConnection(connectionString);
+        sqlConn.Open();
+        return sqlConn;
+    }
+
+    private DataTable GetDataTable(SqlConnection sqlConn)
+    {
+        string xquery = "SELECT * FROM ReportTable";
+        SqlCommand cmd = new SqlCommand(xquery, sqlConn);
+        SqlDataAdapter da = new SqlDataAdapter(cmd);
+        DataTable dt = new DataTable();
+        da.Fill(dt);
+        return dt;
     }
 }
 
 ```
 
-![Renaming a report in the SQL database](../images/output_rename_report.png)
+![Renaming a report in the SQL database](./images/blazor_output_rename_report.png)
 
 ### Deleting a report
 
-When you select the **"Delete a current report"** option from the toolbar, the [removeReport](#removeReport) event is triggered. In this event, an AJAX request is made to the **RemoveReport** method of the Web API controller, passing the current report name to identify and delete the appropriate report from the SQL database.
+When you select the **"Delete a current report"** option from the toolbar, the [removeReport](#removereport) event is triggered. In this event, **RemoveReportFromDB** method is called passing the current report name to identify and delete the appropriate report from the SQL database.
 
 N> * If the current report **n** from the pivot table is deleted, the pivot table will automatically load the last report from the report list.
 N> * When a report is removed from a pivot table with only one report, the SQL database refreshes; however, the pivot table will continue to show the removed report until a new report is added to the pivot table.
 
-For example, if we delete the current report **"Sample Report 2"** from the pivot table, the current report name **"Sample Report 2"** is passed to the **RemoveReport** method, which allows you to identify and delete the report from the SQL database.
+For example, if we delete the current report **"Sample Report 2"** from the pivot table, the current report name **"Sample Report 2"** is passed to the **RemoveReportFromDB** method, which allows you to identify and delete the report from the SQL database.
 
-[app.ts]
+```cshtml
+@using System.Data
+@using Microsoft.Data.SqlClient;
+@using EFPivotTable.Data;
 
-```typescript
+<SfPivotView @ref=PivotRef TValue="ProductDetails" ID="pivot-table" Height="450" Width="700" ShowToolbar="true" ShowFieldList=true AllowExcelExport=true AllowPdfExport=true Toolbar="@PivotToolbar">
+    <PivotViewDisplayOption View="View.Both"></PivotViewDisplayOption>
+    <PivotViewDataSourceSettings DataSource="@DataSource" EnableSorting="true">
+        <PivotViewColumns>
+            <PivotViewColumn Name="Year"></PivotViewColumn>
+            <PivotViewColumn Name="Quarter"></PivotViewColumn>
+        </PivotViewColumns>
+        <PivotViewRows>
+            <PivotViewRow Name="Country"></PivotViewRow>
+            <PivotViewRow Name="Products"></PivotViewRow>
+        </PivotViewRows>
+        <PivotViewValues>
+            <PivotViewValue Name="Sold" Caption="Units Sold"></PivotViewValue>
+            <PivotViewValue Name="Amount" Caption="Sold Amount"></PivotViewValue>
+        </PivotViewValues>
+        <PivotViewFormatSettings>
+            <PivotViewFormatSetting Name="Amount" Format="C"></PivotViewFormatSetting>
+            <PivotViewFormatSetting Name="Sold" Format="N0"></PivotViewFormatSetting>
+        </PivotViewFormatSettings>
+    </PivotViewDataSourceSettings>
+    <PivotViewEvents TValue="ProductDetails" SaveReport="SaveReport" LoadReport="LoadReport" RenameReport="RenameReport" RemoveReport="RemoveReport" FetchReport="FetchReport"></PivotViewEvents>
+</SfPivotView>
 
-import { pivotData } from './datasource.ts';
-import {
-    PivotView, FieldList, CalculatedField, Toolbar, ConditionalFormatting, IDataSet, SaveReportArgs
-} from '@syncfusion/ej2-pivotview';
+@code {
+    SfPivotView<ProductDetails> PivotRef { get; set; }
 
-PivotView.Inject(FieldList, CalculatedField, Toolbar, ConditionalFormatting);
-
-let pivotTableObj: PivotView = new PivotView({
-        dataSourceSettings: {
-        dataSource: pivotData as IDataSet[],
-        expandAll: false,
-        enableSorting: true,
-        drilledMembers: [{ name: 'Country', items: ['France'] }],
-        columns: [{ name: 'Year', caption: 'Production Year' }, { name: 'Quarter' }],
-        values: [{ name: 'Sold', caption: 'Units Sold' }, { name: 'Amount', caption: 'Sold Amount' }],
-        rows: [{ name: 'Country' }, { name: 'Products' }],
-        filters: []
-    },
-    height: 350,
-    removeReport: (args: RemoveReportArgs) => {
-        fetch('https://localhost:44313/Pivot/RemoveReport', {
-        method: 'POST',
-        headers: {
-            'Accept': 'application/json',
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ reportName: args.reportName })
-        }).then(response => {
-            pivotTableObj.fetchReport();
-        });
-    },
-    toolbar: ['New', 'Save', 'SaveAs', 'Rename', 'Remove', 'Load',
-    'Grid', 'Chart', 'Export', 'SubTotal', 'GrandTotal', 'ConditionalFormatting', 'FieldList'],
-    allowExcelExport: true,
-    allowConditionalFormatting: true,
-    allowPdfExport: true,
-    showToolbar: true,
-    allowCalculatedField: true,
-    displayOption:{ view:'Both' },
-    showFieldList: true,
-    height: 450
-});
-pivotTableObj.appendTo('#PivotTable');
-
-```
-
-[PivotController.cs]
-
-```csharp
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.Data.SqlClient;
-using System.Data;
-
-namespace MyWebApp.Controllers
-{
-    [ApiController]
-    [Route("[controller]")]
-    public class PivotController : ControllerBase
+    public List<ProductDetails> DataSource { get; set; }
+    public List<ToolbarItems> PivotToolbar = new List<ToolbarItems> {
+        ToolbarItems.New,
+        ToolbarItems.Save,
+        ToolbarItems.SaveAs,
+        ToolbarItems.Rename,
+        ToolbarItems.Remove,
+        ToolbarItems.Load,
+        ToolbarItems.Grid,
+        ToolbarItems.Chart,
+        ToolbarItems.Export,
+        ToolbarItems.SubTotal,
+        ToolbarItems.GrandTotal,
+        ToolbarItems.FieldList
+    };
+    protected override void OnInitialized()
     {
-        [HttpPost]
-        [Route("Pivot/RemoveReport")]
-        public void RemoveReport(Dictionary<string, string> args)
-        {
-            RemoveReportFromDB(args["ReportName"]);
-        }
+        this.DataSource = ProductDetails.GetProductData().ToList();
+    }
 
-        public void RemoveReportFromDB(string reportName)
+    //to delete a report
+    public void RemoveReport(RemoveReportArgs args)
+    {
+        RemoveReportFromDB(args.ReportName);
+    }
+
+    public void RemoveReportFromDB(string reportName)
+    {
+        SqlConnection sqlConn = OpenConnection();
+        SqlCommand cmd1 = null;
+        foreach (DataRow row in GetDataTable(sqlConn).Rows)
         {
-            SqlConnection sqlConn = OpenConnection();
-            SqlCommand cmd1 = null;
-            foreach (DataRow row in GetDataTable(sqlConn).Rows)
+            if ((row["ReportName"] as string).Equals(reportName))
             {
-                if ((row["ReportName"] as string).Equals(reportName))
-                {
-                    cmd1 = new SqlCommand("DELETE FROM ReportTable WHERE ReportName LIKE '%" + reportName + "%'", sqlConn);
-                    break;
-                }
+                cmd1 = new SqlCommand("DELETE FROM ReportTable WHERE ReportName LIKE '%" + reportName + "%'", sqlConn);
+                break;
             }
-            cmd1.ExecuteNonQuery();
-            sqlConn.Close();
         }
-        private SqlConnection OpenConnection()
-        {
-            // Replace with your own connection string.
-            string connectionString = @"<Enter your valid connection string here>";
-            SqlConnection sqlConn = new SqlConnection(connectionString);
-            sqlConn.Open();
-            return sqlConn;
-        }
+        cmd1.ExecuteNonQuery();
+        sqlConn.Close();
+    }
+    private SqlConnection OpenConnection()
+    {
+        // Replace with your own connection string.
+        string connectionString = @"<Enter your valid connection string here>";
+        SqlConnection sqlConn = new SqlConnection(connectionString);
+        sqlConn.Open();
+        return sqlConn;
+    }
 
-        private DataTable GetDataTable(SqlConnection sqlConn)
-        {
-            string xquery = "SELECT * FROM ReportTable";
-            SqlCommand cmd = new SqlCommand(xquery, sqlConn);
-            SqlDataAdapter da = new SqlDataAdapter(cmd);
-            DataTable dt = new DataTable();
-            da.Fill(dt);
-            return dt;
-        }
+    private DataTable GetDataTable(SqlConnection sqlConn)
+    {
+        string xquery = "SELECT * FROM ReportTable";
+        SqlCommand cmd = new SqlCommand(xquery, sqlConn);
+        SqlDataAdapter da = new SqlDataAdapter(cmd);
+        DataTable dt = new DataTable();
+        da.Fill(dt);
+        return dt;
     }
 }
 
 ```
 
-![Deleting a report from the SQL database](../images/output_remove_report.png)
+![Deleting a report from the SQL database](./images/blazor_output_remove_report.png)
 
 ### Adding a report
 
-When you select the **"Create a new report"** option from the toolbar, the [newReport](#newReport) event is triggered, followed by the [saveReport](#savereport) event. To save this new report to the SQL database, use the [saveReport](#savereport) event triggered later, and then follow the save report briefing in the preceding [topic](#saving-a-report).
+When you select the **"Create a new report"** option from the toolbar, the [NewReport](#newreport) event is triggered, followed by the [SaveReport](#savereport) event. To save this new report to the SQL database, the [SaveReport](#savereport) event triggered later, and then follow the save report briefing in the preceding [topic](#saving-a-report).
 
-![Adding a report in the SQL database](../images/output_new_report.png)
+![Adding a report in the SQL database](./images/blazor_output_new_report.png)
 
 ### Limitations with respect to report manipulation
 
@@ -877,7 +849,7 @@ Below points need to be considered when saving the report to SQL Server database
 * **Hyperlinks**: Option to link external facts via pivot table cells won't be saved and loaded from the database.
 * The pivot table should always load reports from the SQL database based on the data source that is currently bound to it.
 
-> In [this](https://github.com/SyncfusionExamples/Save-and-load-report-from-SQL-database-to-pivot-table) GitHub repository, you can find our Typescript Pivot Table sample and ASP.NET Core Web Application to save and load reports from SQL Server database.
+> In [this](https://github.com/SyncfusionExamples/Save-and-load-report-from-SQL-database-to-blazor-pivot-table) GitHub repository, you can find our Blazor Pivot Table sample to save and load reports from SQL Server database.
 
 ## Events
 
