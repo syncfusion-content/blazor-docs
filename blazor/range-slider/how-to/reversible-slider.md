@@ -27,3 +27,5 @@ You can create a Reverse Slider by setting the `Min` property to the maximum val
 ```
 
 ![Blazor Reversible Slider](./../images/blazor-reversibleslider.gif)
+
+N> Reversible order is currently supported only with `Vertical Orientation` Slider.
