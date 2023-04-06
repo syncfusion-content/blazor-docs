@@ -9,7 +9,7 @@ documentation: ug
 
 # Reversible Slider in Blazor Range Slider Component
 
-You can create a Reverse Slider by setting the `Min` property to the maximum value and the `Max` property to the minimum value. An example of how to achieve a Reverse Slider is shown below
+You can create a Range Slider rendered with values in reverse order by setting the `Min` property to the maximum value and the `Max` property to the minimum value. An example of how to achieve a Reversible Slider is shown below
 
 ```cshtml
 @using System.Globalization;
