@@ -39,6 +39,7 @@ Use the following CSS to customize the background color of button while clicking
 
     .e-btn:focus, .e-btn:active {
        background-color: #0078d4
+    }   
 </style>
 
 ```
