@@ -14,7 +14,7 @@ The events provided in PDF Viewer component are listed out as follows:
 |Name|Description|
 |---|---|
 |addSignature|Triggers when signature is added over the page of the PDF document.|
-|AjaxRequestFailed|Triggers when the request gets failed in case of server-side component. Triggers when the communication between service and viewer gets failed in case of client-side component.|
+|AjaxRequestFailed|Triggers when the AJAX request is failed.|
 |AnnotationAdded|Triggers when an annotation is added over the page of the PDF document.|
 |AnnotationMouseover|Triggers when mouse over the annotation object.|
 |AnnotationMoved|Triggers when an annotation is moved over the page of the PDF document.|
