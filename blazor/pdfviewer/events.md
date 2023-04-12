@@ -27,6 +27,17 @@ The events provided in PDF Viewer component are listed out as follows:
 |DocumentLoaded|Triggers while loading document into PdfViewer.|
 |DocumentLoadFailed|Triggers while loading document got failed in PdfViewer.|
 |DcoumentUnloaded|Triggers while close the document|
+|DownloadEnd|Triggers an event when the download actions is finished.|
+|DownloadStart|Triggers an event when the download action is started.|
+|ExportFailed|Triggers when an export annotations failed in the PDF Viewer.|
+|ExportStarted|Triggers when an exported annotations started in the PDF Viewer.|
+|ExportSucceed|Triggers when an export annotations succeed in the PDF Viewer.|
+|ExtractTextCompleted|Triggers when an text extraction is completed in the PDF Viewer.|
+|ImportFailed|Triggers when an imports annotations failed in the PDF document.
+|ImportStarted|Triggers when an imported annotations started in the PDF document.|
+|ImportSucceed|Triggers when an imports annotations succeed in the PDF document.|
+|MoveSignature|Triggers when an signature is moved over the page of the PDF document.|
+|OnAnnotationDoubleClick|Triggers an event when the annotation is double click.|
 |OnHyperlinkClick|Triggers when hyperlink in the PDF Document is clicked|
 |OnHyperlinkMouseOver|Triggers when hyperlink in the PDF Document is hovered|
 |OnPageClick|Triggers when the mouse click is performed over the page of the PDF document.|
