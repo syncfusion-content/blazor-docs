@@ -22,7 +22,7 @@ The events provided in PDF Viewer component are listed out as follows:
 |AnnotationRemoved|Triggers when an annotation is removed from the page of the PDF document.|
 |AnnotationResized|Triggers when an annotation is resized over the page of the PDF document.|
 |AnnotationSelected|Triggers when an annotation is selected over the page of the PDF document.|
-|AnnotationUnSelect|Triggers when an annotation is unselected over the page of the PDF document.|
+|AnnotationUnselected|Triggers when an annotation is unselected over the page of the PDF document.|
 |Created|Triggers when the PDFViewer component is created.|
 |DocumentLoaded|Triggers while loading document into PdfViewer.|
 |DocumentLoadFailed|Triggers while loading document got failed in PdfViewer.|
