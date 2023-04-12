@@ -25,6 +25,10 @@ A node group can be added to the diagram model through [Nodes](https://help.sync
 
 * A node group can be added into a child of another node group.
 
+To create a group using Nodes and Connectors in the Blazor Diagram, refer to the below video link,
+
+{% youtube "youtube:https://www.youtube.com/watch?v=qLIyc9RSytQ" %}
+
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
