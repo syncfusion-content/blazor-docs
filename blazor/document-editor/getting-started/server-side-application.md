@@ -227,4 +227,3 @@ To load an existing document during control initialization, use the following co
 N> As per the discussion thread [#30064](https://github.com/dotnet/aspnetcore/issues/30064), null out the reference of streams and other instances when they are no longer required. Using this approach you'll observe the memory go down and become stable.
 
 ![Blazor DocumentEditor](../images/blazor-document-editor-component.png)
-
