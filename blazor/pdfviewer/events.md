@@ -13,7 +13,7 @@ The events provided in PDF Viewer component are listed out as follows:
 
 |Name|Description|
 |---|---|
-|addSignature|Triggers when signature is added over the page of the PDF document.|
+|AddSignature|Triggers when signature is added over the page of the PDF document.|
 |AjaxRequestFailed|Triggers when the AJAX request is failed.|
 |AnnotationAdded|Triggers when an annotation is added over the page of the PDF document.|
 |AnnotationMouseover|Triggers when mouse over the annotation object.|
@@ -37,13 +37,12 @@ The events provided in PDF Viewer component are listed out as follows:
 |OnTextSelectionStart|Triggers an event when the text selection is started.|
 |OnThumbnailClick|Triggers an event when the thumbnail is clicked in the thumbnail panel of PDF Viewer.|
 |PageChanged|Triggers when there is change in current page number.|
-|pageMouseover|Triggers when mouse over the page.|
+|PageMouseover|Triggers when mouse over the page.|
 |PrintEnd|Triggers an event when the print actions is finished.|
 |PrintStart|Triggers an event when the print action is started.|
 |RemoveSignature|Triggers when signature is removed over the page of the PDF document.|
 |ResizeSignature|Triggers when signature is resized over the page of the PDF document.|
 |SignaturePropertiesChange|Triggers when the property of the signature is changed in the page of the PDF document.|
-|SignatureSelect|Triggers when signature is selected over the page of the PDF document.|
 |SignatureSelected|Triggers when signature is selected over the page of the PDF document.|
 |SignatureUnselected|Triggers when signature is unselected over the page of the PDF document.|
 |ZoomChanged|Triggers when there is change in the magnification value.|
