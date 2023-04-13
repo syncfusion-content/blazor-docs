@@ -73,12 +73,19 @@ Register the `ISyncfusionStringLocalizer` implementation to localize the Syncfus
     * For **.NET 5 and .NET 3.X** app, open the **~/Startup.cs** file and register the Syncfusion Blazor Service.
 * For **Blazor WebAssembly App**, register the Syncfusion Blazor Service in the client web app of **~/Program.cs** file.
 
+N> As of the 2023 Vol1 release, [Built-in JavaScript isolation](https://blazor.syncfusion.com/documentation/common/adding-script-references#javascript-isolation) feature has been removed. If you are still using it, we recommend loading scripts externally via [CDN](https://blazor.syncfusion.com/documentation/common/adding-script-references#cdn-reference), [Static Web Assets](https://blazor.syncfusion.com/documentation/common/adding-script-references#static-web-assets) and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator).
+
 {% tabs %}
 
-{% highlight c# tabtitle="C#" hl_lines="4" %}
+{% highlight c# tabtitle="C#" hl_lines="9" %}
 
 ...
+// Starting from version 21.1.*
+// builder.Services.AddSyncfusionBlazor();
+
+// For versions before 21.1.*
 builder.Services.AddSyncfusionBlazor(options => { options.IgnoreScriptIsolation = true; });
+
 // Register the locale service to localize the  SyncfusionBlazor components.
 builder.Services.AddSingleton(typeof(ISyncfusionStringLocalizer), typeof(SyncfusionLocalizer));
 ...
@@ -194,7 +201,7 @@ Set the app's supported cultures. Also, ensure the app is configured to process 
 
 {% tabs %}
 
-{% highlight c# tabtitle=".NET 6 & .NET 7 (~/Program.cs)" hl_lines="7 11 13 14 15 16 17 20 31" %}
+{% highlight c# tabtitle=".NET 6 & .NET 7 (~/Program.cs)" hl_lines="7 15 17 18 19 20 21 24 35" %}
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -204,6 +211,10 @@ builder.Services.AddServerSideBlazor();
 builder.Services.AddSingleton<WeatherForecastService>();
 builder.Services.AddControllers();
 
+// Starting from version 21.1.*
+// builder.Services.AddSyncfusionBlazor();
+
+// For versions before 21.1.*
 builder.Services.AddSyncfusionBlazor(options => { options.IgnoreScriptIsolation = true; });
 //Register the Syncfusion locale service to localize Syncfusion Blazor components.
 builder.Services.AddSingleton(typeof(ISyncfusionStringLocalizer), typeof(SyncfusionLocalizer));
