@@ -72,7 +72,7 @@ N> You can achieve better performance by using datagrid paging to fetch only a p
 
 The pager dropdown allows you to change the number of records in the DataGrid dynamically. It can be enabled by defining the [PageSizes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridPageSettings.html#Syncfusion_Blazor_Grids_GridPageSettings_PageSizes) property of **GridPageSettings** as true.
 
-N> By default, dropdown list will show values as **new int[]{ 5, 10, 12, 20 }**. You can customize the dropdown values using the **PageSizes** property itself.
+N> By default, dropdown list will show values as **new int[]{ 5, 10, 12, 20 }**. You can customize the dropdown values using the **PageSizes** property itself.  For example, ```private object[] pagesize = new object[] { 5, 12, 10, 15, "All" };``` and setting ```PageSizes="@pagesize"```.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
