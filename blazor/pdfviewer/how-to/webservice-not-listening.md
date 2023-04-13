@@ -9,13 +9,13 @@ domainurl: ##DomainURL##
 ---
 # How to clear the "Web-service is not listening" error
 
-![Alt text](./images/webservice.png)
+![Alt text](../../pdfviewer/images/webservice.png)
 
 If you are facing a **Web-service is not listening** error in Syncfusion PDF Viewer, there could be a number of reasons why this is happening. To troubleshoot the issue, you can use the Network tab in your browser's developer tools to gather more information. Here are the steps you can follow:
 
 **Step 1:** Open the browser's developer tools by pressing `F12` or right-clicking on the page and selecting `Inspect`. Navigate to the Network tab. This will show you all of the requests that are being made by the page.
 
-![Alt text](./images/networktab.png)
+![Alt text](../../pdfviewer/images/networktab.png)
 
 **Step 2:** Try to make a request to the web service. If the service is not listening, the request will fail and you should see an error message in the Network tab. Click on the failing request to see the details of the error, such as the error message or stack trace. This can help you identify the root cause of the issue. Check the server logs for any errors or warnings that may indicate the cause of the issue and help you to troubleshoot the issue.
 
