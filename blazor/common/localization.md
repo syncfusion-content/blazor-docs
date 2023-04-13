@@ -73,8 +73,6 @@ Register the `ISyncfusionStringLocalizer` implementation to localize the Syncfus
     * For **.NET 5 and .NET 3.X** app, open the **~/Startup.cs** file and register the Syncfusion Blazor Service.
 * For **Blazor WebAssembly App**, register the Syncfusion Blazor Service in the client web app of **~/Program.cs** file.
 
-N> As of the 2023 Vol1 release, [Built-in JavaScript isolation](https://blazor.syncfusion.com/documentation/common/adding-script-references#javascript-isolation) feature has been removed. If you are still using it, we recommend loading scripts externally via [CDN](https://blazor.syncfusion.com/documentation/common/adding-script-references#cdn-reference), [Static Web Assets](https://blazor.syncfusion.com/documentation/common/adding-script-references#static-web-assets) and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator).
-
 {% tabs %}
 
 {% highlight c# tabtitle="C#" hl_lines="4" %}
