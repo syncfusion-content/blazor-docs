@@ -9,19 +9,20 @@ documentation: ug
 
 # Data Binding in Blazor Scheduler Component
 
-The Scheduler uses `DataManager`, which supports both RESTful data service binding and datasource collections. The `DataSource` property of Scheduler can be assigned either with the instance of `DataManager` or list of datasource collection, as it supports the following two kinds of data binding methods:
+The Scheduler uses [DataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html), which supports both RESTful data service binding and datasource collections to bind data to the Scheduler. The [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleEventSettings-1.html#Syncfusion_Blazor_Schedule_ScheduleEventSettings_1_DataSource) property of Scheduler can be assigned either with the instance of `DataManager` or list of datasource collection.
 
-* Local data
+It supports the following kinds of data binding methods:
+* List binding
 * Remote data
 
-You can check out the following video to bind the appointments in the Blazor Scheduler.
+Please take a moment to watch this video to learn about data binding in the Blazor Scheduler.
 
 {% youtube
 "youtube:https://www.youtube.com/watch?v=EwfxPrqxma8"%}
 
-## Binding local data
+## List binding
 
-To bind local data to the Scheduler, you can simply assign a list of datasource collections to the `DataSource` option of the scheduler within the `ScheduleEventSettings` tag. The local data source can also be provided as an instance of the `DataManager`.
+To bind list binding to the Scheduler, you can simply assign a list of datasource collections as IEnumerable object to the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleEventSettings-1.html#Syncfusion_Blazor_Schedule_ScheduleEventSettings_1_DataSource) option of the scheduler within the ScheduleEventSettings tag. The list data source can also be provided as an instance of the [SfDataManager](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Data.SfDataManager.html) or by using [SfDataManager](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Data.SfDataManager.html) component.
 
 ```cshtml
 @using Syncfusion.Blazor.Schedule
@@ -58,7 +59,114 @@ N> By default, `DataManager` uses `BlazorAdaptor` for binding local data.
 
 You can also bind different field names to the default event fields as well as include additional custom fields to the event object collection which can be referred [here](./appointments/#event-fields).
 
-## Binding remote data
+## ExpandoObject binding
+
+The Scheduler is a generic component which is strongly bound to a model type, but there may be cases where the model type is unknown during compile or runtime. In these scenarios, you can use **ExpandoObject** binding to bind data to the Scheduler as a list of dynamic objects.
+
+**ExpandoObject** can be bound to the `DataSource` option of the scheduler within the `ScheduleEventSettings` tag. Scheduler can also perform all kinds of supported data operations and editing in ExpandoObject.
+To bind data to the Scheduler using ExpandoObject, you can create a list of ExpandoObjects and set it as the DataSource property of the Scheduler's ScheduleEventSettings tag.
+
+```csharp
+@using System.Dynamic
+@using Syncfusion.Blazor.Schedule
+<SfSchedule TValue="ExpandoObject" @bind-SelectedDate="@CurrentDate" Width="100%" Height="550px">
+    <ScheduleEventSettings DataSource="@EventsCollection" AllowEditFollowingEvents="true"></ScheduleEventSettings>
+    <ScheduleViews>
+        <ScheduleView Option="View.Day"></ScheduleView>
+        <ScheduleView Option="View.Week"></ScheduleView>
+        <ScheduleView Option="View.WorkWeek"></ScheduleView>
+        <ScheduleView Option="View.Month"></ScheduleView>
+        <ScheduleView Option="View.Agenda"></ScheduleView>
+    </ScheduleViews>
+</SfSchedule>
+@code {
+    DateTime CurrentDate = new DateTime(2021, 8, 10);
+    public List<ExpandoObject> EventsCollection = new List<ExpandoObject>() { };
+    protected override void OnInitialized()
+    {
+        DateTime scheduleStart = new DateTime(2021, 8, 8, 10, 0, 0);
+        EventsCollection = Enumerable.Range(1, 5).Select((x) =>
+        {
+            scheduleStart = scheduleStart.AddDays(1);
+            dynamic d = new ExpandoObject();
+            d.Id = 1000 + x;
+            d.Subject = (new string[] { "Project Discussion", "Work Flow Analysis", "Report", "Meeting", "Project Demo" })[new Random().Next(5)];
+            d.StartTime = scheduleStart;
+            d.EndTime = scheduleStart.AddHours(1);
+            d.IsAllDay = false;
+            d.RecurrenceRule = null;
+            d.RecurrenceException = null;
+            d.RecurrenceID = null;
+            return d;
+        }).Cast<ExpandoObject>().ToList<ExpandoObject>();
+    }
+}
+```
+## DynamicObject Binding 
+
+Scheduler is a generic component which is strongly bound to a model type. There are cases when the model type is unknown during compile type. In such cases, bind the data to the scheduler as list of  **DynamicObject**.
+
+**DynamicObject** can be bound to the `DataSource` option of the scheduler within the `ScheduleEventSettings` tag. Scheduler can also perform all kinds of supported data operations and editing in DynamicObject.
+
+N> The [`GetDynamicMemberNames`](https://docs.microsoft.com/en-us/dotnet/api/system.dynamic.dynamicobject.getdynamicmembernames?view=netcore-3.1) method of DynamicObject class must be overridden and return the property names to perform data operation and editing while using DynamicObject.
+
+```csharp
+@using System.Dynamic
+@using System.Text.Json
+@using Syncfusion.Blazor.Schedule
+
+<SfSchedule TValue="DynamicDictionary" @bind-SelectedDate="@CurrentDate" Width="100%" Height="550px">
+    <ScheduleEventSettings DataSource="@EventsCollection"></ScheduleEventSettings>
+    <ScheduleViews>
+        <ScheduleView Option="View.Day"></ScheduleView>
+        <ScheduleView Option="View.Week"></ScheduleView>
+        <ScheduleView Option="View.WorkWeek"></ScheduleView>
+        <ScheduleView Option="View.Month"></ScheduleView>
+        <ScheduleView Option="View.Agenda"></ScheduleView>
+    </ScheduleViews>
+</SfSchedule>
+@code {
+    DateTime CurrentDate = new DateTime(2021, 8, 10);
+    public List<DynamicDictionary> EventsCollection = new List<DynamicDictionary>() { };
+    protected override void OnInitialized()
+    {
+        DateTime scheduleStart = new DateTime(2021, 8, 8, 10, 0, 0);
+        EventsCollection = Enumerable.Range(1, 5).Select((x) =>
+        {
+            scheduleStart = scheduleStart.AddDays(1);
+            dynamic d = new DynamicDictionary();
+            d.Id = 1000 + x;
+            d.Subject = (new string[] { "Project Discussion", "Work Flow Analysis", "Report", "Meeting", "Project Demo" })[new Random().Next(5)];
+            d.StartTime = scheduleStart;
+            d.EndTime = scheduleStart.AddHours(1);
+            d.RecurrenceRule = null;
+            d.RecurrenceException = null;
+            d.RecurrenceID = null;
+            return d;
+        }).Cast<DynamicDictionary>().ToList<DynamicDictionary>();
+    }
+    public class DynamicDictionary : System.Dynamic.DynamicObject
+    {
+        Dictionary<string, object> dictionary = new Dictionary<string, object>();
+        public override bool TryGetMember(GetMemberBinder binder, out object result)
+        {
+            string name = binder.Name;
+            return dictionary.TryGetValue(name, out result);
+        }
+        public override bool TrySetMember(SetMemberBinder binder, object value)
+        {
+            dictionary[binder.Name] = value;
+            return true;
+        }
+        public override System.Collections.Generic.IEnumerable<string> GetDynamicMemberNames()
+        {
+            return this.dictionary?.Keys;
+        }
+    }
+}
+```
+
+## Remote data
 
 Any kind of remote data services can be bound to the Scheduler. To do so, provide the service URL to the `Url` option of `SfDataManager` within `ScheduleEventSettings` tag.
 
@@ -278,48 +386,6 @@ It is possible to create your own `CustomAdaptor` by extending the built-in avai
 }
 ```
 
-## Binding ExpandoObject
-
-Scheduler is a generic component which is strongly bound to a model type. There are cases when the model type is unknown during compile type. In such cases, bind the data to the scheduler as list of  **ExpandoObject**.
-
-**ExpandoObject** can be bound to the `DataSource` option of the scheduler within the `ScheduleEventSettings` tag. Scheduler can also perform all kinds of supported data operations and editing in ExpandoObject.
-
-```csharp
-@using System.Dynamic
-@using Syncfusion.Blazor.Schedule
-<SfSchedule TValue="ExpandoObject" @bind-SelectedDate="@CurrentDate" Width="100%" Height="550px">
-    <ScheduleEventSettings DataSource="@EventsCollection" AllowEditFollowingEvents="true"></ScheduleEventSettings>
-    <ScheduleViews>
-        <ScheduleView Option="View.Day"></ScheduleView>
-        <ScheduleView Option="View.Week"></ScheduleView>
-        <ScheduleView Option="View.WorkWeek"></ScheduleView>
-        <ScheduleView Option="View.Month"></ScheduleView>
-        <ScheduleView Option="View.Agenda"></ScheduleView>
-    </ScheduleViews>
-</SfSchedule>
-@code {
-    DateTime CurrentDate = new DateTime(2021, 8, 10);
-    public List<ExpandoObject> EventsCollection = new List<ExpandoObject>() { };
-    protected override void OnInitialized()
-    {
-        DateTime scheduleStart = new DateTime(2021, 8, 8, 10, 0, 0);
-        EventsCollection = Enumerable.Range(1, 5).Select((x) =>
-        {
-            scheduleStart = scheduleStart.AddDays(1);
-            dynamic d = new ExpandoObject();
-            d.Id = 1000 + x;
-            d.Subject = (new string[] { "Project Discussion", "Work Flow Analysis", "Report", "Meeting", "Project Demo" })[new Random().Next(5)];
-            d.StartTime = scheduleStart;
-            d.EndTime = scheduleStart.AddHours(1);
-            d.IsAllDay = false;
-            d.RecurrenceRule = null;
-            d.RecurrenceException = null;
-            d.RecurrenceID = null;
-            return d;
-        }).Cast<ExpandoObject>().ToList<ExpandoObject>();
-    }
-}
-```
 
 ## Binding DynamicObject
 
