@@ -29,6 +29,10 @@ Ports act as the connection points of the node and allows creating connections w
 
 To add a connection port, define the port object and add it to node’s ports collection. The [Offset](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PointPort.html#Syncfusion_Blazor_Diagram_PointPort_Offset) property of the port accepts an object of fractions and is used to determine the position of ports. The following code explains how to add ports when initializing the node.
 
+To create and customize the ports in the Blazor Diagram, refer to the below video link,
+
+{% youtube "youtube:https://www.youtube.com/watch?v=aMgmimZZBcA" %}
+
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 

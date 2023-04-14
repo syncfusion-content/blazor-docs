@@ -116,10 +116,8 @@ In the following sample, the dropdown is used as a custom component in the Durat
         <TreeGridColumn Field="StartDate" HeaderText="Start Date" Width="100" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right"></TreeGridColumn>
         <TreeGridColumn Field="Duration" HeaderText="Duration" Width="100" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right">
             <FilterTemplate>
-                <SfDropDownList TValue="string" DataSource="@DropDownData" TItem="string">
-                    <DropDownListEvents ValueChange="change" TValue="string"></DropDownListEvents>
-                <SfDropDownList TValue="string"c DataSource="@DropDownData" TItem="string" Value="@((string)(context as PredicateModel).Value)">
-                    <DropDownListEvents ValueChange="change" TValue="string" ></DropDownListEvents>
+                <SfDropDownList TValue="string" DataSource="@DropDownData" TItem="string" Value="@((string)(context as PredicateModel).Value)">
+                    <DropDownListEvents ValueChange="change" TItem="string" TValue="string" ></DropDownListEvents>
                 </SfDropDownList>
             </FilterTemplate>
         </TreeGridColumn>
@@ -148,16 +146,17 @@ In the following sample, the dropdown is used as a custom component in the Durat
         this.DropDownData.Add("All");
     }    
 
-    public void change(Syncfusion.Blazor.DropDowns.ChangeEventArgs<string> Args)
+    public void change(Syncfusion.Blazor.DropDowns.ChangeEventArgs<string,string> Args)
     {
         if (Args.Value == "All")
         {
-            TreeGrid.ClearFiltering("Duration");
+            List<string> Data = new List<string>();
+            Data.Add("Duration");
+            TreeGrid.ClearFiltering(Data);
         }
         else
         {
-            int val = Convert.ToInt32(Args.Value);
-            TreeGrid.FilterByColumn("Duration", "equal", val);
+            TreeGrid.FilterByColumn("Duration", "equal", Args.Value);
         }
     }
 }
