@@ -26,6 +26,6 @@ You can create a Range Slider rendered with values in reverse order by setting t
 }
 ```
 
-![Blazor Reversible Slider](./../images/blazor-reversibleslider.gif)
+![Blazor Reversible Slider](./../images/blazor-reversible-slider.gif)
 
 N> Reversible order is currently supported only with `Vertical Orientation` Slider.
