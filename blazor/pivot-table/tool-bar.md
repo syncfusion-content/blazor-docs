@@ -285,12 +285,11 @@ SQL Server is a relational database management system (RDBMS) that can be used t
         await this.PivotRef.LoadPersistDataAsync(LoadReportFromDB(args.ReportName).ToString());
     }
 
-    // To delete a report
     public void RemoveReport(RemoveReportArgs args)
     {
         RemoveReportFromDB(args.ReportName);
     }
-    // To rename a report
+    
     public void RenameReport(RenameReportArgs args)
     {
         RenameReportInDB(args.ReportName, args.Rename, args.IsReportExists);
@@ -414,7 +413,7 @@ SQL Server is a relational database management system (RDBMS) that can be used t
 
 Further, let us explore more on how to save, load, rename, delete, and add reports in the SQL database using **SqlConnection**.
 
-### Saving a report
+#### Saving a report
 
 When you select the **"Save a report"** option from the toolbar, the [SaveReport](#savereport) event is triggered. In this event, **SaveReportToDB** method is called passing the name of the current report and the current report, which you can use to check and save in the SQL database.
 
@@ -527,7 +526,7 @@ In the meantime, you can save a duplicate of the current report to the SQL Serve
 
 ![Copy of the current report has been saved in the SQL database](./images/blazor_output_save_as_report.png)
 
-### Loading a report
+#### Loading a report
 
 When you select the dropdown menu item from the toolbar, the [LoadReport](#loadreport) event is triggered. In this event, **LoadReportFromDB** method is called passing the name of the selected report. The method uses this information to search for the report in the SQL database, fetch it, and load it into the pivot table.
 
@@ -604,6 +603,7 @@ For example, if the report name **"Sample Report 1"** is selected from a dropdow
         sqlConn.Close();
         return report;
     }
+    
     private SqlConnection OpenConnection()
     {
         // Replace with your own connection string.
@@ -628,7 +628,7 @@ For example, if the report name **"Sample Report 1"** is selected from a dropdow
 
 ![Loading a report from SQL database](./images/blazor_output_load_report.png)
 
-### Renaming a report
+#### Renaming a report
 
 When you select the **"Rename a current report"** option from the toolbar, the [RenameReport](#renamereport) event is triggered. In this event, **RenameReportInDB** method is called passing the current and new report names, where you can use the current report name to identify the report and resave it with the new report name in the SQL database.
 
@@ -743,11 +743,11 @@ For example, if we rename the current report from **"Sample Report 1"** to **"Sa
 
 ![Renaming a report in the SQL database](./images/blazor_output_rename_report.png)
 
-### Deleting a report
+#### Deleting a report
 
 When you select the **"Delete a current report"** option from the toolbar, the [removeReport](#removereport) event is triggered. In this event, **RemoveReportFromDB** method is called passing the current report name to identify and delete the appropriate report from the SQL database.
 
-N> * If the current report **n** from the pivot table is deleted, the pivot table will automatically load the last report from the report list.
+N> * If the current report **n** from the pivot table is deleted, the pivot table will automatically load the next report from the report list.
 N> * When a report is removed from a pivot table with only one report, the SQL database refreshes; however, the pivot table will continue to show the removed report until a new report is added to the pivot table.
 
 For example, if we delete the current report **"Sample Report 2"** from the pivot table, the current report name **"Sample Report 2"** is passed to the **RemoveReportFromDB** method, which allows you to identify and delete the report from the SQL database.
@@ -848,20 +848,11 @@ For example, if we delete the current report **"Sample Report 2"** from the pivo
 
 ![Deleting a report from the SQL database](./images/blazor_output_remove_report.png)
 
-### Adding a report
+#### Adding a report
 
 When you select the **"Create a new report"** option from the toolbar, the [NewReport](#newreport) event is triggered, followed by the [SaveReport](#savereport) event. To save this new report to the SQL database, the [SaveReport](#savereport) event triggered later, and then follow the save report briefing in the preceding [topic](#saving-a-report).
 
 ![Adding a report in the SQL database](./images/blazor_output_new_report.png)
-
-### Limitations with respect to report manipulation
-
-Below points need to be considered when saving the report to SQL Server database.
-
-* **Data source**: Both raw data and aggregated data won't be saved and loaded from the database.
-* **Conditional formatting**: The appearance of the pivot table, such as background color, font color, font family, and font size based on the specific conditions won't be saved and loaded from the database.
-* **Hyperlinks**: Option to link external facts via pivot table cells won't be saved and loaded from the database.
-* The pivot table should always load reports from the SQL database based on the data source that is currently bound to it.
 
 > In [this](https://github.com/SyncfusionExamples/Save-and-load-report-from-SQL-database-to-blazor-pivot-table) GitHub repository, you can find our Blazor Pivot Table sample to save and load reports from SQL Server database.
 
@@ -1056,14 +1047,13 @@ namespace MyWebService.Controllers
 
 Further, let us explore more on how to save, load, rename, delete, and add reports using the built-in toolbar options via Web API controller (aka, PivotController) one-by-one.
 
-### Saving a report
+#### Saving a report
 
 When you select the **"Save a report"** option from the toolbar, the [SaveReport](#savereport) event is triggered. In this event, a HTTP request is made to the Web API controller's **SaveReport** method, passing the name of the current report and the current report, which you can use to check and save in the SQL database.
 
 For example, the report shown in the following code snippet will be passed to the **SaveReport** method along with the report name **"Sample Report"** and saved in the SQL database.
 
 [Index.razor]
-
 ```cshtml
 @using System.Data
 @using MyBlazorServerApp.Data;
@@ -1133,7 +1123,6 @@ For example, the report shown in the following code snippet will be passed to th
 ```
 
 [PivotController.cs]
-
 ```csharp
 namespace MyWebService.Controllers
 {
@@ -1197,14 +1186,13 @@ In the meantime, you can save a duplicate of the current report to the SQL Serve
 
 ![Copy of the current report has been saved in the SQL database](images/blazor_output_save_as_report.png)
 
-### Loading a report
+#### Loading a report
 
 When you select the dropdown menu item from the toolbar, the [LoadReport](#loadreport) event is triggered. In this event, an HTTP request is made to the **LoadReport** method of the Web API controller, passing the name of the selected report. The method uses this information to search for the report in the SQL database, fetch it, and load it into the pivot table.
 
 For example, if the report name **"Sample Report 1"** is selected from a dropdown menu and passed, the **LoadReport** method will use that name to search for the report in the SQL database, retrieve it, and then load it into the pivot table.
 
 [Index.razor]
-
 ```cshtml
 @using System.Data
 @using MyBlazorServerApp.Data;
@@ -1281,7 +1269,6 @@ For example, if the report name **"Sample Report 1"** is selected from a dropdow
 ```
 
 [PivotController.cs]
-
 ```csharp
 namespace MyWebService.Controllers
 {
@@ -1334,14 +1321,13 @@ namespace MyWebService.Controllers
 
 ![Loading a report from SQL database](images/blazor_output_load_report.png)
 
-### Renaming a report
+#### Renaming a report
 
 When you select the **"Rename a current report"** option from the toolbar, the [RenameReport](#renamereport) event is triggered. In this event, an HTTP request is made to the **RenameReport** method of the Web API controller, passing the current and new report names, where you can use the current report name to identify the report and resave it with the new report name in the SQL database.
 
 For example, if we rename the current report from **"Sample Report 1"** to **"Sample Report 2"**, both **"Sample Report 1"** and **"Sample Report 2"** will be passed to the **RenameReport** method, which will rename the current report with the new report name **"Sample Report 2"** in the SQL database.
 
 [Index.razor]
-
 ```cshtml
 @using System.Data
 @using MyBlazorServerApp.Data;
@@ -1416,7 +1402,6 @@ For example, if we rename the current report from **"Sample Report 1"** to **"Sa
 ```
 
 [PivotController.cs]
-
 ```csharp
 namespace MyWebService.Controllers
 {
@@ -1489,17 +1474,16 @@ namespace MyWebService.Controllers
 
 ![Renaming a report in the SQL database](images/blazor_output_rename_report.png)
 
-### Deleting a report
+#### Deleting a report
 
 When you select the **"Delete a current report"** option from the toolbar, the [RemoveReport](#removereport) event is triggered. In this event, an HTTP request is made to the **RemoveReport** method of the Web API controller, passing the current report name to identify and delete the appropriate report from the SQL database.
 
-> * If the current report **n** from the pivot table is deleted, the pivot table will automatically load the last report from the report list.
+> * If the current report **n** from the pivot table is deleted, the pivot table will automatically load the next report from the report list.
 > * When a report is removed from a pivot table with only one report, the SQL database refreshes; however, the pivot table will continue to show the removed report until a new report is added to the pivot table.
 
 For example, if we delete the current report **"Sample Report 2"** from the pivot table, the current report name **"Sample Report 2"** is passed to the **RemoveReport** method, which allows you to identify and delete the report from the SQL database.
 
 [Index.razor]
-
 ```cshtml
 @using System.Data
 @using MyBlazorServerApp.Data;
@@ -1569,7 +1553,6 @@ For example, if we delete the current report **"Sample Report 2"** from the pivo
 ```
 
 [PivotController.cs]
-
 ```csharp
 namespace MyWebService.Controllers
 {
@@ -1622,11 +1605,13 @@ namespace MyWebService.Controllers
 
 ![Deleting a report from the SQL database](images/blazor_output_remove_report.png)
 
-### Adding a report
+#### Adding a report
 
 When you select the **"Create a new report"** option from the toolbar, the [NewReport](#newreport) event is triggered, followed by the [SaveReport](#savereport) event. To save this new report to the SQL database, use the [SaveReport](#savereport) event triggered later, and then follow the save report briefing in the preceding [topic](#saving-a-report).
 
 ![Adding a report in the SQL database](images/blazor_output_new_report.png)
+
+> In [this](https://github.com/SyncfusionExamples/Save-and-load-report-from-SQL-database-to-pivot-table) GitHub repository, you can find our Blazor Pivot Table sample and ASP.NET Core Web Application to save and load reports from SQL Server database.
 
 ### Limitations with respect to report manipulation
 
@@ -1636,8 +1621,6 @@ Below points need to be considered when saving the report to SQL Server database
 * **Conditional formatting**: The appearance of the pivot table, such as background color, font color, font family, and font size based on the specific conditions won't be saved and loaded from the database.
 * **Hyperlinks**: Option to link external facts via pivot table cells won't be saved and loaded from the database.
 * The pivot table should always load reports from the SQL database based on the data source that is currently bound to it.
-
-> In [this](https://github.com/SyncfusionExamples/Save-and-load-report-from-SQL-database-to-pivot-table) GitHub repository, you can find our Blazor Pivot Table sample and ASP.NET Core Web Application to save and load reports from SQL Server database.
 
 ## Events
 
