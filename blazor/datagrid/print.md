@@ -63,7 +63,7 @@ Some of the print options cannot be configured through code. So, you have to cus
 * [Chrome](https://support.google.com/chrome/answer/1069693?hl=en&visit_id=1-636335333734668335-3165046395&rd=1)
 * [Firefox](https://support.mozilla.org/en-US/kb/how-print-web-pages-firefox)
 * [Safari](https://www.mintprintables.com/print-tips/adjust-margins-osx/)
-* [IE](http://www.helpteaching.com/help/print/index.htm)
+* [IE](https://www.helpteaching.com/help/print/index.htm)
 
 ## Print using an external button
 
