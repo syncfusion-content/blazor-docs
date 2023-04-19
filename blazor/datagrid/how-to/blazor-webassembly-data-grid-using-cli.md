@@ -58,14 +58,14 @@ dotnet new blazorwasm -o BlazorApp -ho
 {% endhighlight %}
 {% endtabs %}
 
-N> If you have installed multiple SDK versions and need any specific framework version (net5.0/netcoreapp3.1) project, then add -f flag along with dotnet new blazorwasm comment. Refer [here](https://docs.microsoft.com/en-us/dotnet/core/tools/dotnet-new#blazorwasm) for the available options.
+N> If you have installed multiple SDK versions and need any specific framework version (net5.0/netcoreapp3.1) project, then add -f flag along with dotnet new blazorwasm comment. Refer [here](https://learn.microsoft.com/en-us/dotnet/core/tools/dotnet-new#blazorwasm) for the available options.
 
 ## Install Syncfusion Blazor packages in the App
 
 Install Syncfusion Blazor packages in the App.
 Syncfusion Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). To use Syncfusion Blazor components in the application, add reference to the corresponding NuGet. Refer to [NuGet packages topic](https://blazor.syncfusion.com/documentation/nuget-packages) for available NuGet packages list with component details.
 
-Add `Syncfusion.Blazor.Grid` NuGet package to the application using the following command in the command prompt (Windows) or terminal (Linux and macOS) to install a NuGet package. See [Install and manage packages using the dotnet CLI](https://docs.microsoft.com/en-us/nuget/consume-packages/install-use-packages-dotnet-cli) topics for more details.
+Add `Syncfusion.Blazor.Grid` NuGet package to the application using the following command in the command prompt (Windows) or terminal (Linux and macOS) to install a NuGet package. See [Install and manage packages using the dotnet CLI](https://learn.microsoft.com/en-us/nuget/consume-packages/install-use-packages-dotnet-cli) topics for more details.
 
 {% tabs %}
 {% highlight c# tabtitle=".NET CLI" %}
@@ -272,7 +272,7 @@ To bind data for the DataGrid component, you can assign a IEnumerable object to 
 
 The columns are automatically generated when columns declaration is empty or undefined while initializing the datagrid.
 
-The DataGrid has an option to define columns using [GridColumns](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Grids.GridColumns.html) component. In `GridColumn` component we have properties to customize columns.
+The DataGrid has an option to define columns using [GridColumns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumns.html) component. In `GridColumn` component we have properties to customize columns.
 
 Let’s check the properties used here:
 
