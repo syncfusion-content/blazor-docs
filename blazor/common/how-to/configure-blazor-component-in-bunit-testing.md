@@ -89,9 +89,7 @@ This section explains how to configure Syncfusion Blazor component in bUnit test
                 using var testContext = new TestContext();
 
                 // Add Syncfusion Blazor service and Ignore script isolation.
-                testContext.Services.AddSyncfusionBlazor(options => {
-                    options.IgnoreScriptIsolation = true;
-                });
+                testContext.Services.AddSyncfusionBlazor();
                 testContext.Services.AddOptions();
 
                 // Rendering application Index component (~/Pages/Index.razor).
@@ -123,9 +121,7 @@ This section explains how to configure Syncfusion Blazor component in bUnit test
     using var testContext = new TestContext();
 
     // Add Syncfusion Blazor service and Ignore script isolation.
-    testContext.Services.AddSyncfusionBlazor(options => {
-        options.IgnoreScriptIsolation = true;
-    });
+    testContext.Services.AddSyncfusionBlazor();
     testContext.Services.AddOptions();
     ```
 
@@ -244,9 +240,7 @@ This section explains how to configure Syncfusion Blazor component in bUnit test
                 using var testContext = new Bunit.TestContext();
 
                 // Add Syncfusion Blazor service and Ignore script Isolation.
-                testContext.Services.AddSyncfusionBlazor(options => {
-                    options.IgnoreScriptIsolation = true;
-                });
+                testContext.Services.AddSyncfusionBlazor();
                 testContext.Services.AddOptions();
 
                 // Rendering application Index component (~/Pages/Index.razor).
@@ -278,9 +272,7 @@ This section explains how to configure Syncfusion Blazor component in bUnit test
     using var testContext = new Bunit.TestContext();
 
     // Add Syncfusion Blazor service and Ignore script isolation.
-    testContext.Services.AddSyncfusionBlazor(options => {
-        options.IgnoreScriptIsolation = true;
-    });
+    testContext.Services.AddSyncfusionBlazor();
     testContext.Services.AddOptions();
     ```
 
@@ -331,9 +323,7 @@ public void TestParameter()
     using var testContext = new TestContext();
 
     // Add Syncfusion Blazor service and Ignore script isolation.
-    testContext.Services.AddSyncfusionBlazor(options => {
-        options.IgnoreScriptIsolation = true;
-    });
+    testContext.Services.AddSyncfusionBlazor();
     testContext.Services.AddOptions();
 
     // Rendering application Index component (~/Pages/Index.razor).
