@@ -858,6 +858,71 @@ The following table represents the request parameters of *download* operations.
 
 Downloads the requested items from the file server in response.
 
+In the Blazor FileManager component, you are able to download the selected files dynamically using our [DownloadFilesAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.SfFileManager-1.html#Syncfusion_Blazor_FileManager_SfFileManager_1_DownloadFilesAsync_System_String___) method instead of our default download toolbar button.
+
+To use this method, you need to pass the selected files or folders as parameters.
+
+```cshtml
+
+@using Syncfusion.Blazor.FileManager
+@using Syncfusion.Blazor.Buttons
+
+<SfButton OnClick="DownloadFiles">ClickToDownload</SfButton>
+<SfFileManager @ref="FileManager" TValue="FileManagerDirectoryContent">
+    <FileManagerAjaxSettings Url="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/FileOperations"
+                             UploadUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Upload"
+                             DownloadUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Download"
+                             GetImageUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/GetImage">
+    </FileManagerAjaxSettings>
+</SfFileManager>
+
+@code {
+    SfFileManager<FileManagerDirectoryContent>? FileManager;
+    public void DownloadFiles()
+    {
+        this.FileManager.DownloadFilesAsync(FileManager.SelectedItems);
+    }
+
+}
+
+```
+
+#### Prevent downloading file
+
+In the Blazor FileManager component, you are able to prevent the download action for any types of files or folders by setting the [Cancel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.BeforeDownloadEventArgs-1.html#Syncfusion_Blazor_FileManager_BeforeDownloadEventArgs_1_Cancel) argument to **true** of the [BeforeDownload](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerEvents-1.html#Syncfusion_Blazor_FileManager_FileManagerEvents_1_BeforeDownload) event. 
+
+The following example demonstrates how to prevent the download actions for all types of files in the Blazor FileManager component.
+
+```cshtml
+
+@using Syncfusion.Blazor.FileManager
+
+<SfFileManager @ref="FileManager" TValue="FileManagerDirectoryContent">
+    <FileManagerAjaxSettings Url="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/FileOperations"
+                                UploadUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Upload"
+                                DownloadUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Download"
+                                GetImageUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/GetImage">
+    </FileManagerAjaxSettings>
+    <FileManagerEvents TValue="FileManagerDirectoryContent" BeforeDownload="BeforeDownload">
+    </FileManagerEvents>
+</SfFileManager>
+
+@code {
+    public void BeforeDownload(BeforeDownloadEventArgs<FileManagerDirectoryContent>args)
+    {
+        for(int i=0; i < args.DownloadData.DownloadFileDetails.Count(); i++)
+        {
+            if (args.DownloadData.DownloadFileDetails[i].IsFile)
+            {
+                args.Cancel = true;
+            }
+        }
+    }
+
+}
+
+```
+
 ### GetImage
 
 The following table represents the request parameters of *GetImage* operations.
@@ -1075,3 +1140,89 @@ The following table provides the default context menu item and the corresponding
 </tr>
 
 </table>
+
+### Perform custom filtering 
+
+In the Blazor FileManager component, filtering support is provided. When the [FilterFilesAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.SfFileManager-1.html#Syncfusion_Blazor_FileManager_SfFileManager_1_FilterFilesAsync_System_Collections_Generic_List__0__) method is called, it triggers a custom operation on the controller side. Using this method, you can perform search operations by passing the SearchString as a parameter. 
+
+In the following example, the SearchStringvalue **Downloads** is passed, and based on that, a search operation is performed in the Blazor FileManager using a button click.
+
+```cshtml
+
+@using Syncfusion.Blazor.FileManager
+@using Syncfusion.Blazor.Buttons
+
+<SfButton @onclick="CustomClick">ClickToPerformCustomFilter</SfButton>
+<SfFileManager @ref="FileManager" TValue="FileManagerDirectoryContent">
+    <FileManagerAjaxSettings Url="/api/FilemanagerSyncfusion/FileOperations"
+                            UploadUrl="/api/FilemanagerSyncfusion/Upload"
+                            DownloadUrl="/api/FilemanagerSyncfusion/Download"
+                            GetImageUrl="/api/FilemanagerSyncfusion/GetImage">
+    </FileManagerAjaxSettings>
+</SfFileManager>
+
+@code {
+    SfFileManager<FileManagerDirectoryContent>? FileManager;
+    public async Task CustomClick()
+    {
+        List<FileManagerDirectoryContent> Files = new List<FileManagerDirectoryContent>() {
+            new FileManagerDirectoryContent() { SearchString = "Downloads" }
+        };
+        await FileManager.FilterFilesAsync(Files);
+    }
+}
+
+```
+
+```csharp
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Http.Features;
+using Syncfusion.EJ2.FileManager.PhysicalFileProvider;
+using Syncfusion.EJ2.FileManager.Base;
+using Newtonsoft.Json;
+
+namespace BlazorFileManager.Controllers
+{
+    [Route("api/[controller]")]
+    public class FilemanagerSyncfusionController : Controller
+    {
+        ...
+
+        //[HttpPost]
+        [Route("FileOperations")]
+        public object FileOperations([FromBody] FileManagerDirectoryContent args)
+        {
+            if (args.Action == "delete" || args.Action == "rename")
+            {
+                if ((args.TargetPath == null) && (args.Path == ""))
+                {
+                    FileManagerResponse response = new FileManagerResponse();
+                    response.Error = new ErrorDetails { Code = "401", Message = "Restricted to modify the root folder." };
+                    return this.operation.ToCamelCase(response);
+                }
+            }
+            switch (args.Action)
+            {
+                ...
+
+                case "filter":
+                    if (args.Data[0].SearchString == "")
+                    {
+                        // Perform read operation while search string is empty.
+                        return this.operation.ToCamelCase(this.operation.GetFiles(args.Path, args.ShowHiddenItems));
+                    }
+                    else
+                    {
+                        // Perform Search operation while serach string has value.
+                        args.SearchString = args.Data[0].SearchString + "*";
+                        return this.operation.ToCamelCase(this.operation.Search(args.Path, args.SearchString, args.ShowHiddenItems, args.CaseSensitive));
+                    }
+            }
+            return null;
+        }
+        
+        ...
+    }
+}
+
+```
