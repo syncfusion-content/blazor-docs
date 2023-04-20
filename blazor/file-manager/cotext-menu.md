@@ -15,6 +15,75 @@ The context menu items can be added for the files, folders, and layout in the Bl
 * [Folder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerContextMenuSettings.html#Syncfusion_Blazor_FileManager_FileManagerContextMenuSettings_Folder) - Specifies the array of string that is used to configure folder items.
 * [Layout](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerContextMenuSettings.html#Syncfusion_Blazor_FileManager_FileManagerContextMenuSettings_Layout) - Specifies the array of string that is used to configure layout items.
 
+The following table provides the default context menu item and the corresponding target areas.
+
+<!-- markdownlint-disable MD033 -->
+<table>
+<tr>
+<td> <b>Menu Name</b> </td>
+<td> <b>Menu Items </b></td>
+<td> <b>Target </b></td>
+</tr>
+
+<tr>
+<td>Layout</td>
+<td>
+
+* SortBy
+* View
+* Refresh
+* NewFolder
+* Upload
+* Details
+* Select all
+
+</td>
+<td>
+
+* Empty space in the view section (details view and large icon view area).
+* Empty folder content.
+
+</td>
+</tr>
+
+<tr>
+<td>Folders</td>
+<td>
+
+* Open
+* Delete
+* Rename
+* Downloads
+* Details
+
+</td>
+<td>
+
+* Folders in treeview, details view, and large icon view.
+
+</td>
+</tr>
+
+<tr>
+<td>Files</td>
+<td>
+
+* Open
+* Delete
+* Rename
+* Downloads
+* Details
+
+</td>
+<td>
+
+* Files in details view and large icon view.
+
+</td>
+</tr>
+
+</table>
+
 ## Adding custom items
 
 In the Blazor FileManager component, the context menu can be customized by utilizing the [ContextMenuSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerContextMenuSettings.html) and the [MenuOpened](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerEvents-1.html#Syncfusion_Blazor_FileManager_FileManagerEvents_1_MenuOpened) event. 
@@ -85,13 +154,61 @@ The following example demonstrates how to achieve this by showing different cont
     public string[] FolderItems = new string[] { "Open", "|", "Cut", "Copy", "Paste"};
 }
 
-<style>
-    .e-fe-tick::before {
-        content: '\e614';
+```
+
+## Enabling or disabling items
+
+In the Blazor FileManager component, you can enable or disable context menu items by setting the [Disabled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.MenuItemModel.html#Syncfusion_Blazor_FileManager_MenuItemModel_Disabled) value of the [MenuOpened](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerEvents-1.html#Syncfusion_Blazor_FileManager_FileManagerEvents_1_MenuOpened) event arguments to either **true** or **false**.
+
+In the following example, the **Cut** context menu item is disabled for the folders.
+
+```cshtml
+
+@using Syncfusion.Blazor.FileManager
+
+<SfFileManager TValue="FileManagerDirectoryContent">
+    <FileManagerEvents TValue="FileManagerDirectoryContent"></FileManagerEvents>
+    <FileManagerAjaxSettings Url="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/FileOperations"
+                             UploadUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Upload"
+                             DownloadUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Download"
+                             GetImageUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/GetImage">
+    </FileManagerAjaxSettings>
+    <FileManagerEvents TValue="FileManagerDirectoryContent" MenuOpened="MenuOpened"></FileManagerEvents>
+</SfFileManager>
+
+@code {
+
+    public void MenuOpened(MenuOpenEventArgs<FileManagerDirectoryContent> args)
+    {
+        for (int i = 0; i < args.FileDetails.Count(); i++)
+        {
+            if (!args.FileDetails[i].IsFile)
+            {
+                for (int j = 0; j < args.Items.Count(); j++)
+                {
+                    if (args.Items[j].Text == "Cut")
+                    {
+                        args.Items[j].Disabled = true;
+                    }
+                }
+            }
+            else
+            {
+                for (int j = 0; j < args.Items.Count(); j++)
+                {
+                    if (args.Items[j].Disabled = true;)
+                    {
+                        args.Items[j].Disabled = false;
+                    }
+                }
+            }
+        }
+        
     }
-</style> 
+}
 
 ```
+
 
 ## Showing or hiding items
 
@@ -103,7 +220,7 @@ In the following example, the **Cut** context menu item is shown for the files.
 
 @using Syncfusion.Blazor.FileManager
 
-<SfFileManager TValue="FileManagerDirectoryContent" @ref="FileManager">
+<SfFileManager TValue="FileManagerDirectoryContent" >
     <FileManagerEvents TValue="FileManagerDirectoryContent"></FileManagerEvents>
     <FileManagerAjaxSettings Url="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/FileOperations"
                              UploadUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Upload"
@@ -114,7 +231,6 @@ In the following example, the **Cut** context menu item is shown for the files.
 </SfFileManager>
 
 @code {
-    SfFileManager<FileManagerDirectoryContent>? FileManager;
 
     public void MenuOpened(MenuOpenEventArgs<FileManagerDirectoryContent> args)
     {
@@ -162,7 +278,6 @@ The [MenuOpened](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileMan
 @using Syncfusion.Blazor.FileManager
 
 <SfFileManager TValue="FileManagerDirectoryContent">
-    <FileManagerEvents TValue="FileManagerDirectoryContent"></FileManagerEvents>
     <FileManagerAjaxSettings Url="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/FileOperations"
                              UploadUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Upload"
                              DownloadUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Download"
@@ -189,7 +304,6 @@ The [OnMenuClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileMa
 @using Syncfusion.Blazor.FileManager
 
 <SfFileManager TValue="FileManagerDirectoryContent">
-    <FileManagerEvents TValue="FileManagerDirectoryContent"></FileManagerEvents>
     <FileManagerAjaxSettings Url="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/FileOperations"
                              UploadUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Upload"
                              DownloadUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Download"
