@@ -90,7 +90,7 @@ To remove an item or multiple items, [RemoveItem](https://help.syncfusion.com/cr
     };
 
     private async Task removeData() {
-      await ListBoxObj.RemoveItem(Item);
+      await ListBoxObj.RemoveItemAsync(Item);
     }
 }
 ```

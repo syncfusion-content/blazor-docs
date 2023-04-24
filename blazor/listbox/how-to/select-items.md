@@ -39,7 +39,7 @@ In the following example, `Bugatti Chiron` is selected using [SelectItems](https
     public string[] Value = new string[] { "Bugatti Chiron" };
     private async Task created(object args)
     {
-        await ListBoxObj.SelectItems(this.Value, true);
+        await ListBoxObj.SelectItemsAsync(this.Value, true);
     }
 }
 
