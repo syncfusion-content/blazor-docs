@@ -28,4 +28,4 @@ You can create a Range Slider rendered with values in reverse order by setting t
 
 ![Blazor Reversible Slider](./../images/blazor-reversible-slider.gif)
 
-N> Reversible order is currently supported only with `Vertical Orientation` Slider.
+N> Reversible order can be achieved with horizontal orientation Slider by setting [EnableRtl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSlider-1.html#Syncfusion_Blazor_Inputs_SfSlider_1_EnableRtl) as true.
