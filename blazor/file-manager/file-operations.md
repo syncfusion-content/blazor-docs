@@ -1734,3 +1734,100 @@ The [UploadListCreated](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 }
 
 ```
+## Action buttons
+
+The file manager has several menu buttons to access the file operations. The list of menu buttons available in the file manager is given in the following table.
+
+|Menu Button|Behavior|
+|----|----|
+|SortBy| Opens the sub menu to choose the sorting order and sorting parameter.|
+|View| Opens the sub menu to choose the View.|
+|Open| Navigates to the selected folder. Opens the preview for image files.|
+|Refresh| Initiates the read operation for the current directory and displays the updated directory content.|
+|NewFolder| Opens the new folder dialog box to receive the name for the new folder.|
+|Rename| Opens the rename dialog box to receive the new name for the selected item.|
+|Delete| Opens the delete dialog box to confirm the removal of the selected items from the file system.|
+|Upload| Opens the upload box to select the items to upload to the file system.|
+|Download| Downloads the selected item(s).|
+|Details| Get details about the selected items and display them in details dialog box.|
+|SelectAll| Selects all the files and folders displayed in the view section.|
+
+The action menu buttons are present in the toolbar and context menu. The toolbar contains the buttons based on the selected items count, while the context menu will appear with a list based on the target.
+
+### Toolbar
+
+The toolbar can be divided into two sections as right and left. Whenever the toolbar buttons exceed the size, the buttons present in the left section of the toolbar will be moved to the toolbar popup.
+
+The following table provides the toolbar buttons that appear based on the selection.
+
+<!-- markdownlint-disable MD033 -->
+<table>
+<tr>
+<td> <b>Selected Items Count</b> </td>
+<td> <b>Left section </b></td>
+<td> <b>Right section </b></td>
+</tr>
+
+<tr>
+<td>
+
+`0` (none of the item )
+</td>
+<td>
+
+* SortBy
+* Refresh
+* NewFolder
+* Upload
+
+</td>
+<td>
+
+* View
+* Details
+
+</td>
+</tr>
+
+<tr>
+<td>
+
+`1` (single item selected)
+</td>
+<td>
+
+* Delete
+* Download
+* Rename
+
+</td>
+<td>
+
+* Selected items count
+* View
+* Details
+
+</td>
+</tr>
+
+<tr>
+<td>
+
+`>1` (multiple selection)
+</td>
+<td>
+
+* Delete
+* Download
+
+</td>
+<td>
+
+* Selected items count
+* View
+* Details
+
+</td>
+</tr>
+
+</table>
