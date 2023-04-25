@@ -9,9 +9,9 @@ documentation: ug
 
 # Getting Started with Blazor Rating Component
 
-This section briefly explains about how to include `Blazor Rating` component in your Blazor Server App and Blazor WebAssembly App using Visual Studio. 
+This section briefly explains about how to include `Blazor Rating` component in your Blazor Server App and Blazor WebAssembly App using Visual Studio.
 
-To get started quickly with Blazor Rating, check on the following video:
+To get started quickly with the Blazor Rating component, you can check out this video.
 
 {% youtube "youtube:https://www.youtube.com/watch?v=yWhINyylnTU"%}
 
