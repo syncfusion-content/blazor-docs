@@ -39,7 +39,7 @@ Refer [Toolbar](./file-operations.md#toolbar) section in file operations to know
 
 ![Blazor FileManager with Toolbar](./images/blazor-filemanager-toolbar.png)
 
-## Context menu
+## Context Menu
 
 The Context Menu appears on user interaction such as right-click. The FileManager is provided with Context Menu support to perform list of file operations with the files and folders. Context menu appears with varying menu items based on the targets such as file, folder (including navigation pane folders), and layout (empty area in view).
 
@@ -49,14 +49,14 @@ Refer [Context Menu](./context-menu.md#context-menu-in-blazor-filemanager-compon
 
 ![Blazor FileManager with Context Menu](./images/blazor-filemanager-contextmenu.png)
 
-## Files and folders navigation
+## Files and Folders Navigation
 
 The FileManager provides navigation between files and folders using the following two options.
 
 * [Navigation Pane](#navigation-pane)
 * [Breadcrumb](#breadcrumb)
 
-## Navigation pane
+## Navigation Pane
 
 The navigation pane displays the folder hierarchy of the file system and provides easy navigation to the desired folder. Using [NavigationPaneSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerNavigationPaneSettings.html), minimum and maximum width of the navigation pane can be changed. The navigation pane can be shown or hidden using the [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerNavigationPaneSettings.html#Syncfusion_Blazor_FileManager_FileManagerNavigationPaneSettings_Visible) option in the [NavigationPaneSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerNavigationPaneSettings.html).
 
@@ -66,7 +66,7 @@ The FileManager provides breadcrumb for navigating to the parent folders. The br
 
 ![Blazor FileManager with BreadCrumb](./images/blazor-filemanager-with-breadcrumb.png)
 
-## Large icons view
+## Large Icons View
 
 The `Large Icons View` is the default starting view in the FileManager. The view can be changed by using the [Toolbar](#toolbar) view button or by using the view menu in [Context Menu](#context-menu). The [View](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.SfFileManager-1.html#Syncfusion_Blazor_FileManager_SfFileManager_1_View) API can also be used to change the initial view of the FileManager.
 
@@ -74,7 +74,7 @@ In the large icons view, the thumbnail icons will be shown in a larger size, whi
 
 ![Blazor FileManager with LargeIconView](./images/blazor-filemanager-largeiconsview.png)
 
-## Details view
+## Details View
 
 In the details view, the files are displayed in a sorted list order. This file list comprises of several columns of information about the files such as **Name**, **Date Modified**, **Type**, and **Size**. Each file has its own small icon representing the file type. Additional columns can be added using [DetailsViewSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerDetailsViewSettings.html) API. The details view allows you to perform sorting using column header.
 
@@ -101,7 +101,7 @@ Moreover, the table below displays the basic operations in the FileManager compo
 
 N> The *CreateFolder*, *Remove*, and *Rename* actions will be reflected in the FileManager only after the successful response from the server.
 
-### File and folder selection 
+### File and Folder Selection 
 
 In the Blazor FileManager component, you can select files and folders using the mouse click and arrow keys. The FileManager allows you to select multiple files and folders by enabling the [AllowMultiSelection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.SfFileManager-1.html#Syncfusion_Blazor_FileManager_SfFileManager_1_AllowMultiSelection) property, which is enabled by default. 
 
@@ -111,7 +111,7 @@ The [FileSelected](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileM
 
 ![File and folder selection in Blazor FileManger](./images/blazor-filemanager-selection.png)
 
-### Create, rename, delete a file or folder
+### Create, Rename, Delete a File or Folder
 
 In the Blazor FileManager component, you can perform the [create](./file-operations.md#creating-files-and-folders), [rename](./file-operations.md#renaming-files-and-folders), and [delete](./file-operations.md#deleting-files-and-folders) operation for the files and folder with the help of the Toolbar items button or by using Context Menu items.
 
@@ -121,7 +121,7 @@ Refer to the [Toolbar](./file-operations.md#toolbar)and [Context Menu](./context
 
 ![Rename, delete a folder in Blazor FileManger](./images/blazor-filemanager-rename-delete.png)
 
-### Moving file or folder
+### Moving File or Folder
 
 In the Blazor FileManager component, you can [move](./file-operations.md#moving-files-and-folders) desired files or folders by using the **cut** or **copy** items button in the Toolbar, or by using the Context Menu. Additionally, you can move files or folders by utilizing the drag and drop functionality, which requires enabling the [AllowDragAndDrop](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.SfFileManager-1.html#Syncfusion_Blazor_FileManager_SfFileManager_1_AllowDragAndDrop) property to **true**. 
 
@@ -129,7 +129,7 @@ To learn more, you can refer to the [Toolbar](./file-operations.md#toolbar), [Co
 
 ![Moving file or folder in Blazor FileManager](images/blazor-filemanager-drag-and-drop.gif)
 
-### Upload or download a file
+### Upload or Download a File
 
 In the Blazor FileManager component, you can perform the [upload](./file-operations.md#uploading-files) or [download](./file-operations.md#downloading-files) operations with the help of the Toolbar items button or by using Context Menu items.
 
@@ -139,13 +139,13 @@ Refer to the [Toolbar](./file-operations.md#toolbar) and [Context Menu](./contex
 
 ![Download a file in Blazor FileManger](./images/blazor-filemanager-download-operation.png)
 
-### Searching files and folders
+### Searching Files and Folders
 
 In the Blazor FileManager component, you are able to [search](./file-operations.md#searching-files-and-folders) for the wanted files and folders using the default input search functionality option.
 
 ![Searching files and folders in Blazor FileManger](./images/blazor-filemanager-search-operation.png)
 
-### Cut, copy, and paste
+### Cut, Copy, and Paste
 
 You can perform the **cut**, **copy**, and **paste** operation for the files and folders in the Blazor FileManager component with the help of the Toolbar items button or by using Context Menu items.
 

@@ -84,7 +84,7 @@ The following table provides the default context menu item and the corresponding
 
 </table>
 
-## Adding custom items
+## Adding Custom Items
 
 In the Blazor FileManager component, the context menu can be customized by utilizing the [ContextMenuSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerContextMenuSettings.html) and the [MenuOpened](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerEvents-1.html#Syncfusion_Blazor_FileManager_FileManagerEvents_1_MenuOpened) event. 
 
@@ -128,7 +128,7 @@ The following example demonstrates how to add a custom item to the context menu.
 
 ```
 
-## Showing different context menu for files and folders
+## Showing Different Context Menu for Files and Folders
 
 In the Blazor FileManager component, you can customize the context menu items for files and folders using the FileManager [ContextMenuSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerContextMenuSettings.html) [File](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerContextMenuSettings.html#Syncfusion_Blazor_FileManager_FileManagerContextMenuSettings_File) and [Folder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerContextMenuSettings.html#Syncfusion_Blazor_FileManager_FileManagerContextMenuSettings_Folder) properties. 
 
@@ -156,7 +156,7 @@ The following example demonstrates how to achieve this by showing different cont
 
 ```
 
-## Enabling or disabling items
+## Enabling or Disabling Items
 
 In the Blazor FileManager component, you can enable or disable context menu items by setting the [Disabled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.MenuItemModel.html#Syncfusion_Blazor_FileManager_MenuItemModel_Disabled) value of the [MenuOpened](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerEvents-1.html#Syncfusion_Blazor_FileManager_FileManagerEvents_1_MenuOpened) event arguments to either **true** or **false**.
 
@@ -196,7 +196,7 @@ In the following example, the **Cut** context menu item is disabled for the fold
             {
                 for (int j = 0; j < args.Items.Count(); j++)
                 {
-                    if (args.Items[j].Disabled = true;)
+                    if (args.Items[j].Disabled == true;)
                     {
                         args.Items[j].Disabled = false;
                     }
@@ -210,7 +210,7 @@ In the following example, the **Cut** context menu item is disabled for the fold
 ```
 
 
-## Showing or hiding items
+## Showing or Hiding Items
 
 In the Blazor FileManager component, you can control the visibility of context menu items by setting the [Hidden](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.MenuItemModel.html#Syncfusion_Blazor_FileManager_MenuItemModel_Hidden) value of the [MenuOpened](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerEvents-1.html#Syncfusion_Blazor_FileManager_FileManagerEvents_1_MenuOpened) event arguments to **true** or **false**. 
 
@@ -265,7 +265,7 @@ In the following example, the **Cut** context menu item is shown for the files.
 
 ## Events
 
-The Blazor FileManager Context Menu component has a [MenuOpened](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerEvents-1.html#Syncfusion_Blazor_FileManager_FileManagerEvents_1_MenuOpened) and [OnMenuClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerEvents-1.html#Syncfusion_Blazor_FileManager_FileManagerEvents_1_OnMenuClick) events that can be triggered for certain actions. These events can be attached to the FileManager using the **FileManagerEvents** component, which requires the **TValue** to be provided.
+The Blazor FileManager Context Menu component has a [MenuOpened](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerEvents-1.html#Syncfusion_Blazor_FileManager_FileManagerEvents_1_MenuOpened) and [OnMenuClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerEvents-1.html#Syncfusion_Blazor_FileManager_FileManagerEvents_1_OnMenuClick) events that can be triggered for certain actions. These events can be bound to the FileManager using the **FileManagerEvents** component, which requires the **TValue** to be provided.
 
 N> All the events should be provided in a single **FileManagerEvents** component.
 

@@ -231,7 +231,7 @@ string name = folders[folders.Length - 1];
 Refer to the [GitHub](https://github.com/SyncfusionExamples/amazon-s3-aspcore-file-provider/blob/master/Models/AmazonS3FileProvider.cs#L585) for more details.
 
 
-## Reading files and folders
+## Reading Files and Folders
 
 The following table represents the request parameters of *read* operations.
 
@@ -307,7 +307,7 @@ case "read":
 
 ```
 
-## Creating files and folders
+## Creating Files and Folders
 
 The following table represents the request parameters of *create* operations.
 
@@ -384,7 +384,7 @@ case "create":
 
 ```
 
-## Renaming files and folders
+## Renaming Files and Folders
 
 The following table represents the request parameters of *rename* operations.
 
@@ -464,7 +464,7 @@ case "rename":
 
 ```
 
-## Deleting files and folders
+## Deleting Files and Folders
 
 The following table represents the request parameters of *delete* operations.
 
@@ -529,7 +529,7 @@ Delete operation triggers on the server side and find the related code details.
 
 ```
 
-## Getting file details
+## Getting File Details
 
 The following table represents the request parameters of *details* operations.
 
@@ -593,7 +593,7 @@ Details operation triggers on the server side and find the related code details.
 
 ```
 
-## Searching files and folders
+## Searching Files and Folders
 
 The following table represents the request parameters of *search* operations.
 
@@ -672,7 +672,7 @@ case "search":
 
 ```
 
-## Copying files and folders
+## Copying Files and Folders
 
 The following table represents the request parameters of *copy* operations.
 
@@ -746,7 +746,7 @@ Copy operation triggers on the server side and find the related code details.
 
 ```
 
-## Moving files and folders
+## Moving Files and Folders
 
 The following table represents the request parameters of *move* operations.
 
@@ -820,7 +820,7 @@ Move operation triggers on the server side and find the related code details.
 
 ```
 
-## Sorting files and folders 
+## Sorting Files and Folders 
 
 In the Blazor FileManager component, you can perform sorting operations for both folders and files using the [SortBy](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.SfFileManager-1.html#Syncfusion_Blazor_FileManager_SfFileManager_1_SortBy) and [SortOrder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.SfFileManager-1.html#Syncfusion_Blazor_FileManager_SfFileManager_1_SortOrder) properties. Additionally, you can use the **Sort by** toolbar button available in the FileManager component to perform sorting operations.
 
@@ -847,7 +847,7 @@ The available options for the sort order are:
 
 ```
 
-## Uploading files
+## Uploading Files
 
 The following table represents the request parameters of *Upload* operations.
 
@@ -936,7 +936,7 @@ The upload operation triggers on the server side and find the related code detai
 
 ```
 
-## Downloading files
+## Downloading Files
 
 The following table represents the request parameters of *download* operations.
 
@@ -1049,7 +1049,7 @@ To use this method, you need to pass the selected files or folders as parameters
 
 ```
 
-### Prevent downloading file
+### Prevent Downloading File
 
 In the Blazor FileManager component, you are able to prevent the download action for any types of files or folders by setting the [Cancel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.BeforeDownloadEventArgs-1.html#Syncfusion_Blazor_FileManager_BeforeDownloadEventArgs_1_Cancel) argument to **true** of the [BeforeDownload](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerEvents-1.html#Syncfusion_Blazor_FileManager_FileManagerEvents_1_BeforeDownload) event. 
 
@@ -1085,7 +1085,7 @@ The following example demonstrates how to prevent the download actions for all t
 
 ```
 
-## Getting images
+## Getting Images
 
 The following table represents the request parameters of *GetImage* operations.
 
@@ -1113,7 +1113,7 @@ GetImage operation triggers on the server side and find the related code details
 
 N> Refer to the [Providers](https://blazor.syncfusion.com/documentation/file-manager/file-system-provider) for more details.
 
-## Request and response contents format
+## Request and Response Contents Format
 
 The following table represents the contents of *data, cwd, and files* in the file manager request and response.
 
@@ -1154,7 +1154,7 @@ The following table represents the contents of *details* in the file manager req
 
 In the Blazor FileManager component, you can preview PDF files using the PDF viewer component, docx files using the DocumentEditor component, and play videos within the dialog component.
 
-### Previewing PDF and Word file in Dialog
+### Previewing PDF and Word File in Dialog
 
 In the Blazor FileManager component, you can view PDF files using the PDF viewer component and docx files using the DocumentEditor component by setting the proper file path in these components.
 
@@ -1265,7 +1265,7 @@ The following example demonstrates how to preview PDF and docx files by utilizin
 
 N> The fully working sample can be found [here](https://github.com/SyncfusionExamples/Blazor-FileManager-Word-PDF).
 
-## Perform custom filtering
+## Perform Custom Filtering
 
 In the Blazor FileManager component, filtering support is provided. When the [FilterFilesAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.SfFileManager-1.html#Syncfusion_Blazor_FileManager_SfFileManager_1_FilterFilesAsync_System_Collections_Generic_List__0__) method is called, it triggers a custom operation on the controller side. Using this method, you can perform search operations by passing the SearchString as a parameter. 
 
@@ -1353,7 +1353,7 @@ namespace BlazorFileManager.Controllers
 
 ## Events 
 
-The Blazor FileManager component has a list of events that can be triggered for certain actions. These events can be attached to the FileManager using the **FileManagerEvents** component, which requires the **TValue** to be provided.
+The Blazor FileManager component has a list of events that can be triggered for certain actions. These events can be bound to the FileManager using the **FileManagerEvents** component, which requires the **TValue** to be provided.
 
 N> All the events should be provided in a single **FileManagerEvents** component.
 

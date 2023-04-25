@@ -33,7 +33,7 @@ After successful compilation of your application, simply press `F5` to run the a
 
 ![Blazor FileManager with Multiple Selection](images/blazor-filemanager-multi-selection.png)
 
-## Getting selected files
+## Getting Selected Files
 
 In the Blazor FileManager component, you can retrieve the details of the selected files or folders using the [GetSelectedFiles](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.SfFileManager-1.html#Syncfusion_Blazor_FileManager_SfFileManager_1_GetSelectedFiles) method. 
 
@@ -69,7 +69,7 @@ Additionally, you can obtain these details through the [FileDetails](https://hel
 
 ```
 
-## Prevent selection for specific files/folders
+## Prevent Selection for Specific Files/Folders
 
 In the Blazor FileManager component, you are able to prevent selection of specific files or folders by setting the [FileSelection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerEvents-1.html#Syncfusion_Blazor_FileManager_FileManagerEvents_1_FileSelection) event's [Cancel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileSelectionEventArgs-1.html#Syncfusion_Blazor_FileManager_FileSelectionEventArgs_1_Cancel) argument value to **true**. 
 
@@ -103,7 +103,7 @@ For example, in the following example, selection is prevented for the **Music** 
 
 ## Events
 
-The Blazor FileManager component includes FileSelection and FileSelected events which are triggered during file selection and after a file has been selected, respectively. These events can be attached to the FileManager using the **FileManagerEvents** component, which requires the **TValue** to be provided.
+The Blazor FileManager component includes FileSelection and FileSelected events which are triggered during file selection and after a file has been selected, respectively. These events can be bound to the FileManager using the **FileManagerEvents** component, which requires the **TValue** to be provided.
 
 N> All the events should be provided in a single **FileManagerEvents** component.
 
