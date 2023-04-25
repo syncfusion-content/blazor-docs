@@ -82,6 +82,57 @@ Any kind of remote data services can be bound to the Scheduler. To do so, provid
 }
 ```
 
+### Filter events using the in-built query
+
+To enable server-side filtering operations based on predetermined conditions, the [`IncludeFiltersInQuery`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleEventSettings-1.html#Syncfusion_Blazor_Schedule_ScheduleEventSettings_1_IncludeFiltersInQuery) API can be set to true, this allows the filter query to be constructed using the start date, end date, and recurrence rule which in turn enables the request to be filtered accordingly.
+
+This method greatly improves the component's performance by reducing the data that needs to be transferred to the client side. As a result, the component's efficiency and responsiveness are significantly enhanced, resulting in a better user experience. However, it is important to consider the possibility of longer query strings, which may cause issues with the maximum URL length or server limitations on query string length.
+
+```cshtml
+@using Syncfusion.Blazor
+@using Syncfusion.Blazor.Data;
+@using Syncfusion.Blazor.Schedule
+
+<SfSchedule TValue="AppointmentData" Height="550px" @bind-SelectedDate="@currentDate">
+    <ScheduleEventSettings TValue="AppointmentData" Query="@QueryData" IncludeFiltersInQuery="true">
+        <ScheduleViews>
+            <ScheduleView Option="View.Month"></ScheduleView>
+        </ScheduleViews>
+        <SfDataManager Url="https://services.odata.org/V4/Northwind/Northwind.svc/Orders/" Adaptor="Adaptors.ODataV4Adaptor">
+        </SfDataManager>
+        <ScheduleField Id="Id">
+            <FieldSubject Name="ShipName"></FieldSubject>
+            <FieldLocation Name="ShipCountry"></FieldLocation>
+            <FieldDescription Name="ShipAddress"></FieldDescription>
+            <FieldStartTime Name="OrderDate"></FieldStartTime>
+            <FieldEndTime Name="RequiredDate"></FieldEndTime>
+            <FieldRecurrenceRule Name="ShipRegion"></FieldRecurrenceRule>
+        </ScheduleField>
+    </ScheduleEventSettings>
+</SfSchedule>
+
+@code {
+
+    DateTime currentDate = new DateTime(1996, 7, 9);
+    public Query QueryData = new Query();
+
+    public class AppointmentData
+    {
+        public int Id { get; set; }
+        public string? ShipName { get; set; }
+        public DateTime OrderDate { get; set; }
+        public DateTime RequiredDate { get; set; }
+        public string? ShipCountry { get; set; }
+        public string? ShipAddress { get; set; }
+        public string? ShipRegion { get; set; }
+    }
+}
+```
+
+The following image represents how the parameters are passed using ODataV4 filter.
+
+![ODataV4 filter](images/blazor-odatav4-filter.jpg)
+
 ### Using custom adaptor
 
 It is possible to create your own `CustomAdaptor` by extending the built-in available adaptors. The following example demonstrates the custom adaptor usage and how to bind the data with custom service and the CRUD operations for custom bounded data is performed using the methods of [DataAdaptor](https://blazor.syncfusion.com/documentation/data/custom-binding/) abstract class.

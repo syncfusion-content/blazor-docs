@@ -15,6 +15,10 @@ To get started quickly with the Blazor Rating component, you can check out this 
 
 {% youtube "youtube:https://www.youtube.com/watch?v=yWhINyylnTU"%}
 
+To get started quickly with Blazor Rating, check on the following video:
+
+{% youtube "youtube:https://www.youtube.com/watch?v=yWhINyylnTU"%}
+
 ## Prerequisites
 
 * [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
@@ -23,7 +27,7 @@ To get started quickly with the Blazor Rating component, you can check out this 
 
 You can create **Blazor Server App** or **Blazor WebAssembly App** using Visual Studio in one of the following ways,
 
-* [Create a Project using Microsoft Templates](https://docs.microsoft.com/en-us/aspnet/core/blazor/tooling?pivots=windows)
+* [Create a Project using Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?pivots=windows&view=aspnetcore-7.0)
 
 * [Create a Project using Syncfusion Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project)
 
