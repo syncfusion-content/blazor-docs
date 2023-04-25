@@ -103,7 +103,7 @@ For example, in the following example, selection is prevented for the **Music** 
 
 ## Events
 
-The Blazor FileManager component includes FileSelection and FileSelected events which are triggered during file selection and after a file has been selected, respectively. These events can be bound to the FileManager using the **FileManagerEvents** component, which requires the **TValue** to be provided.
+The Blazor FileManager component includes FileSelection and FileSelected events which are triggered during file selection and after a file has been selected, respectively. These events can be bound to the FileManager using the **FileManagerEvents**, which requires the **TValue** to be provided.
 
 N> All the events should be provided in a single **FileManagerEvents** component.
 

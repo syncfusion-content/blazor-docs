@@ -1353,7 +1353,7 @@ namespace BlazorFileManager.Controllers
 
 ## Events 
 
-The Blazor FileManager component has a list of events that can be triggered for certain actions. These events can be bound to the FileManager using the **FileManagerEvents** component, which requires the **TValue** to be provided.
+The Blazor FileManager component has a list of events that can be triggered for certain actions. These events can be bound to the FileManager using the **FileManagerEvents**, which requires the **TValue** to be provided.
 
 N> All the events should be provided in a single **FileManagerEvents** component.
 
