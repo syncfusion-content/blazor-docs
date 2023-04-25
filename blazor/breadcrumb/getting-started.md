@@ -296,7 +296,7 @@ To render Breadcrumb component with items use [BreadcrumbItem](https://help.sync
 
 N> Place list of [BreadcrumbItem](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.BreadcrumbItem.html) within [BreadcrumbItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.BreadcrumbItems.html) tag directive.
 
-![Blazor Breadcrumb Component](./images/blazor-Breadcrumb-items.png)
+![Add items in Blazor Breadcrumb Component](./images/blazor-Breadcrumb-items.png)
 
 ## Enable or disable navigation
 
