@@ -53,6 +53,26 @@ The [Column](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Spar
 
 <SfSparkline DataSource="PopulationData" TValue="PopulationReport" XName="Year" YName="Population" Width="500px" Height="150px" Type="SparklineType.Column">
 </SfSparkline>
+
+@code {
+    public class PopulationReport
+    {
+        public int Year { get; set; }
+        public int Population { get; set; }
+    };
+    private List<PopulationReport> PopulationData = new List<PopulationReport> {
+        new  PopulationReport { Year= 2005, Population= 20090440 },
+        new  PopulationReport { Year= 2006, Population= 20264080 },
+        new  PopulationReport { Year= 2007, Population= 20434180 },
+        new  PopulationReport { Year= 2008, Population= 21007310 },
+        new  PopulationReport { Year= 2009, Population= 21262640 },
+        new  PopulationReport { Year= 2010, Population= 21515750 },
+        new  PopulationReport { Year= 2011, Population= 21766710 },
+        new  PopulationReport { Year= 2012, Population= 22015580 },
+        new  PopulationReport { Year= 2013, Population= 22262500 },
+        new  PopulationReport { Year= 2014, Population= 22507620 }
+    };
+}
 ```
 
 N> Refer to the [code block](#line) to know about the property value of the **PopulationData**.
@@ -68,6 +88,26 @@ The [Pie](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Sparkli
 
 <SfSparkline DataSource="PopulationData" TValue="PopulationReport" XName="Year" YName="Population" Width="500px" Height="250px" Type="SparklineType.Pie">
 </SfSparkline>
+
+@code {
+    public class PopulationReport
+    {
+        public int Year { get; set; }
+        public int Population { get; set; }
+    };
+    private List<PopulationReport> PopulationData = new List<PopulationReport> {
+        new  PopulationReport { Year= 2005, Population= 20090440 },
+        new  PopulationReport { Year= 2006, Population= 20264080 },
+        new  PopulationReport { Year= 2007, Population= 20434180 },
+        new  PopulationReport { Year= 2008, Population= 21007310 },
+        new  PopulationReport { Year= 2009, Population= 21262640 },
+        new  PopulationReport { Year= 2010, Population= 21515750 },
+        new  PopulationReport { Year= 2011, Population= 21766710 },
+        new  PopulationReport { Year= 2012, Population= 22015580 },
+        new  PopulationReport { Year= 2013, Population= 22262500 },
+        new  PopulationReport { Year= 2014, Population= 22507620 }
+    };
+}
 ```
 
 N> Refer to the [code block](#line) to know about the property value of the **PopulationData**.
@@ -96,6 +136,26 @@ The [Area](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Sparkl
 
 <SfSparkline DataSource="PopulationData" TValue="PopulationReport" XName="Year" YName="Population" Width="500px" Height="100px" Type="SparklineType.Area">
 </SfSparkline>
+
+@code {
+    public class PopulationReport
+    {
+        public int Year { get; set; }
+        public int Population { get; set; }
+    };
+    private List<PopulationReport> PopulationData = new List<PopulationReport> {
+        new  PopulationReport { Year= 2005, Population= 20090440 },
+        new  PopulationReport { Year= 2006, Population= 20264080 },
+        new  PopulationReport { Year= 2007, Population= 20434180 },
+        new  PopulationReport { Year= 2008, Population= 21007310 },
+        new  PopulationReport { Year= 2009, Population= 21262640 },
+        new  PopulationReport { Year= 2010, Population= 21515750 },
+        new  PopulationReport { Year= 2011, Population= 21766710 },
+        new  PopulationReport { Year= 2012, Population= 22015580 },
+        new  PopulationReport { Year= 2013, Population= 22262500 },
+        new  PopulationReport { Year= 2014, Population= 22507620 }
+    };
+}
 ```
 
 N> Refer to the [code block](#line) to know about the property value of the **PopulationData**.

@@ -116,6 +116,23 @@ The min and the max values of the X-axis can be customized using the [MinX](http
 <SfSparkline DataSource="@ExpenditureReport" TValue="ExpenditureDetails" XName="Year" YName="Expense" Type="SparklineType.Column" ValueType="SparklineValueType.Numeric" Height="250px" Width="450px">
     <SparklineAxisSettings MinY="100" MaxY="220"></SparklineAxisSettings>
 </SfSparkline>
+
+@code {
+    public class ExpenditureDetails
+    {
+        public int Year { get; set; }
+        public int Expense { get; set; }
+    };
+    public List<ExpenditureDetails> ExpenditureReport = new List<ExpenditureDetails> {
+        new ExpenditureDetails{ Year= 2010, Expense= 190 },
+        new ExpenditureDetails{ Year= 2011, Expense= 165 },
+        new ExpenditureDetails{ Year= 2012, Expense= 158 },
+        new ExpenditureDetails{ Year= 2013, Expense= 175 },
+        new ExpenditureDetails{ Year= 2014, Expense= 200 },
+        new ExpenditureDetails{ Year= 2015, Expense= 180 },
+        new ExpenditureDetails{ Year= 2016, Expense= 210 }
+    };
+}
 ```
 
 N> Refer to the [code block](#numeric) to know about the property value of the **ExpenditureReport**.
@@ -132,6 +149,23 @@ The horizontal axis line value can be customized by setting the [Value](https://
 <SfSparkline DataSource="@ExpenditureReport" TValue="ExpenditureDetails" XName="Year" YName="Expense" Type="SparklineType.Column" ValueType="SparklineValueType.Numeric" Height="250px" Width="450px">
     <SparklineAxisSettings Value="170"></SparklineAxisSettings>
 </SfSparkline>
+
+@code {
+    public class ExpenditureDetails
+    {
+        public int Year { get; set; }
+        public int Expense { get; set; }
+    };
+    public List<ExpenditureDetails> ExpenditureReport = new List<ExpenditureDetails> {
+        new ExpenditureDetails{ Year= 2010, Expense= 190 },
+        new ExpenditureDetails{ Year= 2011, Expense= 165 },
+        new ExpenditureDetails{ Year= 2012, Expense= 158 },
+        new ExpenditureDetails{ Year= 2013, Expense= 175 },
+        new ExpenditureDetails{ Year= 2014, Expense= 200 },
+        new ExpenditureDetails{ Year= 2015, Expense= 180 },
+        new ExpenditureDetails{ Year= 2016, Expense= 210 }
+    };
+}
 ```
 
 N> Refer to the [code block](#numeric) to know about the property value of the **ExpenditureReport**.
@@ -159,6 +193,23 @@ The axis line can be customized using the following properties.
         <SparklineAxisLineSettings Visible="true" Color="#ff14ae" DashArray="5" Opacity="1"></SparklineAxisLineSettings>
     </SparklineAxisSettings>
 </SfSparkline>
+
+@code {
+    public class ExpenditureDetails
+    {
+        public int Year { get; set; }
+        public int Expense { get; set; }
+    };
+    public List<ExpenditureDetails> ExpenditureReport = new List<ExpenditureDetails> {
+        new ExpenditureDetails{ Year= 2010, Expense= 190 },
+        new ExpenditureDetails{ Year= 2011, Expense= 165 },
+        new ExpenditureDetails{ Year= 2012, Expense= 158 },
+        new ExpenditureDetails{ Year= 2013, Expense= 175 },
+        new ExpenditureDetails{ Year= 2014, Expense= 200 },
+        new ExpenditureDetails{ Year= 2015, Expense= 180 },
+        new ExpenditureDetails{ Year= 2016, Expense= 210 }
+    };
+}
 ```
 
 N> Refer to the [code block](#numeric) to know about the property value of **ExpenditureReport**.

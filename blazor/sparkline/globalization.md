@@ -14,7 +14,7 @@ Globalization is the process of designing and developing a component that can wo
 ```cshtml
 @using Syncfusion.Blazor.Charts
 
-<SfSparkline DataSource="new double[]{ 300.00, 600.00, 400.21, 100.20, 300.70, 200.04, 500.00 }" Height="200px" Width="350px" Format="C">
+<SfSparkline DataSource="new double[]{ 300.00, 600.00, 400.21, 100.20, 300.70, 200.04, 500.00 }" Height="200px" Width="350px" Format="de">
     <SparklineTooltipSettings TValue="double" Visible="true"></SparklineTooltipSettings>
 </SfSparkline>
 ```
