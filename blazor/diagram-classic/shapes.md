@@ -130,7 +130,7 @@ The following code illustrates how to add Base64 image into image node.
 
 N> Deploy your HTML file in the web application and export the diagram (image node) or else the image node will not be exported in the Chrome and Firefox due to security issues. Refer to the following link.
 
-Link 1: [http://stackoverflow.com/questions/4761711/local-image-in-canvas-in-chrome](http://stackoverflow.com/questions/4761711/local-image-in-canvas-in-chrome)
+Link 1: [https://stackoverflow.com/questions/4761711/local-image-in-canvas-in-chrome](https://stackoverflow.com/questions/4761711/local-image-in-canvas-in-chrome)
 
 ## Image alignment
 

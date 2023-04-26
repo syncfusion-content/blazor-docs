@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with Blazor Mention Component | Syncfusion
-description: Checkout and learn about getting started with Blazor Mention component in Blazor Server App and Blazor WebAssembly App.
+description: Checkout and learn about getting started with Syncfusion Blazor Mention component in Blazor Server App and Blazor WebAssembly App.
 platform: Blazor
 control: Mention
 documentation: ug

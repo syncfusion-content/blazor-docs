@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with Blazor Dialog Component | Syncfusion
-description: Checkout and learn about getting started with Blazor Dialog component in Blazor Server App and Blazor WebAssembly App.
+description: Checkout and learn about getting started with Syncfusion Blazor Dialog component in Blazor Server App and Blazor WebAssembly App.
 platform: Blazor
 control: Dialog
 documentation: ug

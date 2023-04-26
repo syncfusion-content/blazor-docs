@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Install Syncfusion Blazor NuGet packages - Syncfusion
+title: Install Syncfusion Blazor NuGet packages | Syncfusion
 description: Learn here about the how to install Syncfusion Blazor NuGet packages from Package manager and NuGet manager.
 platform: Blazor
 component: Common
