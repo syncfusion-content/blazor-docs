@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Breadcrumb Templates with Blazor Breadcrumb component | Syncfusion
-description: Checkout and learn here all about templates support in Blazor Breadcrumb component of Syncfusion and more.
+description: Checkout and learn here all about templates support in Syncfusion Blazor Breadcrumb component, its elements, and more.
 platform: Blazor
 control: Breadcrumb
 documentation: ug

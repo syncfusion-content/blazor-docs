@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Breadcrumb Overflow with Blazor Breadcrumb component | Syncfusion
-description: Checkout and learn here all about overflow in Blazor Breadcrumb component of Syncfusion, its element, and more.
+description: Checkout and learn here all about overflow in Syncfusion Blazor Breadcrumb component, its element, and more.
 platform: Blazor
 control: Breadcrumb
 documentation: ug
