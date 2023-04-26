@@ -143,7 +143,7 @@ Aggregation types can be changed easily through UI at runtime. The value fields 
 
 ## Hiding aggregation type from button text
 
-By default, in value axis each field would be displayed by its name and aggregation type together. To hide aggregation type and display field name alone, set the property [ShowAggregationOnValueField](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.DataSourceSettingsModel-1.html#Syncfusion_Blazor_PivotView_DataSourceSettingsModel_1_ShowAggregationOnValueField) in [PivotViewDataSourceSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.DataSourceSettingsModel-1.html) class to **false**.
+By default, in value axis each field would be displayed by its name and aggregation type together. To hide aggregation type and display field name alone, set the property [ShowAggregationOnValueField](https://help.syncfusion.com/cr/blazor#Syncfusion_Blazor_PivotView_DataSourceSettingsModel_1_ShowAggregationOnValueField) in [PivotViewDataSourceSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.html) class to **false**.
 
 ```cshtml
 @using Syncfusion.Blazor.PivotView
@@ -398,4 +398,4 @@ The event [OnActionFailure](https://help.syncfusion.com/cr/blazor/Syncfusion.Bla
 }
 ```
 
-N> You can refer to the [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) feature tour page for its groundbreaking feature representations. You can also explore the [Blazor Pivot Table example](https://blazor.syncfusion.com/demos/pivot-table/default-functionalities?theme=bootstrap4) to know how to render and configure the pivot table.
+N> You can refer to the [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) feature tour page for its groundbreaking feature representations. You can also explore the [Blazor Pivot Table example](https://blazor.syncfusion.com/demos/pivot-table/default-functionalities?theme=bootstrap5) to know how to render and configure the pivot table.
