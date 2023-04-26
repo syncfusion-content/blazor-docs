@@ -81,4 +81,4 @@ In the following sample, the Message component content is customized with HTML e
 {% endhighlight %}
 {% endtabs %}
 
-![Message Template](./images/message-template.png)
+![Blazor Message Template](./images/message-template.png)
