@@ -96,7 +96,7 @@ Other than these positions, the legend can be placed anywhere in the Smith Chart
 }
 ```
 
-![Blazor Smith Chart Legend with Custom Position](./images/Legend/blazor-smith-chart-legend-with-custom-position.png)
+![Blazor Smith Chart Legend Position](./images/Legend/blazor-smith-chart-legend-with-custom-position.png)
 
 ## Legend Alignment
 
@@ -142,7 +142,7 @@ Other than positioning the legend in the Smith Chart, its alignment also can be 
 }
 ```
 
-![Changing Legend Alignment in Blazor Smith Chart](./images/Legend/blazor-smith-chart-legend-alignment.png)
+![Legend Alignment in Blazor Smith Chart](./images/Legend/blazor-smith-chart-legend-alignment.png)
 
 ## Customization
 
@@ -190,7 +190,7 @@ By default, the legend is rendered in **Circle** shape and the color of the shap
 }
 ```
 
-![Blazor Smith Chart Legend with Custom Shape](./images/Legend/blazor-smith-chart-legend-custom-shape.png)
+![Blazor Smith Chart with legend Shape](./images/Legend/blazor-smith-chart-legend-custom-shape.png)
 
 ### Legend Size
 
@@ -234,7 +234,7 @@ By default, the legend takes 20% - 25% of the Smith Chart's height horizontally 
 }
 ```
 
-![Blazor Smith Chart Legend with Custom Size](./images/Legend/blazor-smith-chart-legend-custom-size.png)
+![Blazor Smith Chart with Legend Size](./images/Legend/blazor-smith-chart-legend-custom-size.png)
 
 ### Padding
 
@@ -332,7 +332,7 @@ Each legend item's style, border, and text can be customized in the Smith Chart 
 }
 ```
 
-![Customizing Legend in Blazor Smith Chart](./images/Legend/blazor-smith-chart-custom-legend.png)
+![Other customization in Blazor Smith Chart](./images/Legend/blazor-smith-chart-custom-legend.png)
 
 ## Toggle Visibility
 
@@ -421,7 +421,7 @@ The legend can also be placed in rows and columns using the [RowCount](https://h
 }
 ```
 
-![Blazor Smith Chart with Legend Row and Column](./images/Legend/blazor-smith-chart-legend-row-and-column.png)
+![Blazor Smith Chart with legend Row and Column](./images/Legend/blazor-smith-chart-legend-row-and-column.png)
 
 ## Title
 

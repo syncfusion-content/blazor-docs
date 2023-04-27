@@ -19,7 +19,7 @@ This section briefly explains about how to include [Blazor Sparkline](https://ww
 
 You can create **Blazor Server App** or **Blazor WebAssembly App** using Visual Studio in one of the following ways,
 
-* [Create a Project using Microsoft Templates](https://docs.microsoft.com/en-us/aspnet/core/blazor/tooling?pivots=windows)
+* [Create a Project using Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?pivots=windows&view=aspnetcore-7.0)
 
 * [Create a Project using Syncfusion Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project)
 
@@ -322,7 +322,7 @@ Now map the `Month` and the `Celsius` fields from the datasource to [XName](http
 
 Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to run the application. Then, the Syncfusion `Blazor Sparkline` component will be rendered in the default web browser.
 
-![Blazor Sparkline Chart](./images/blazor-sparkline.png)
+![Populate Sparkline with Data in Blazor Sparkline Chart](./images/blazor-sparkline.png)
 
 ## Sparkline chart types
 
@@ -344,7 +344,7 @@ Change the Sparkline type using the [Type](https://help.syncfusion.com/cr/blazor
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor Sparkline Area Chart](./images/blazor-area-sparkline.png)
+![Blazor Sparkline with Chart types](./images/blazor-area-sparkline.png)
 
 N> Refer to [code block](#populate-sparkline-with-data) to know about the property value of **ClimateData**.
 

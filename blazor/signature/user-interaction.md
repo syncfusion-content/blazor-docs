@@ -7,7 +7,7 @@ control: Signature
 documentation: ug
 ---
 
-# User Interactions in Blazor Signature component
+# User Interaction in Blazor Signature component
 
 The [Blazor Signature](https://www.syncfusion.com/blazor-components/blazor-signature) component supports various interaction like Undo, Redo, Clear, Disabled, and ReadOnly. Every changes occurred in signature can be taken as a snap and saved to collection for handling the above user interactions. 
 
@@ -115,4 +115,4 @@ The following sample explains about user interactions available in signature.
 }
 ```
 
-![Blazor Signature Component](./images/blazor-signature-user.png)
+![Blazor Signature Component with User Interaction](./images/blazor-signature-user.png)

@@ -41,7 +41,7 @@ The numeric axis value can be provided by specifying the [ValueType](https://hel
 }
 ```
 
-![Blazor Sparkline Chart with Numeric Value](images/Axis/blazor-sparkline-numeric-value.png)
+![Blazor Sparkline Chart with Numeric values](images/Axis/blazor-sparkline-numeric-value.png)
 
 ### Category
 
@@ -136,7 +136,7 @@ The horizontal axis line value can be customized by setting the [Value](https://
 
 N> Refer to the [code block](#numeric) to know about the property value of the **ExpenditureReport**.
 
-![Blazor Sparkline Chart with Axis Value](images/Axis/blazor-sparkline-axis-value.png)
+![Blazor Sparkline Chart with Axis Value changed](images/Axis/blazor-sparkline-axis-value.png)
 
 ## Axis Line Customization
 
@@ -163,4 +163,4 @@ The axis line can be customized using the following properties.
 
 N> Refer to the [code block](#numeric) to know about the property value of **ExpenditureReport**.
 
-![Blazor Sparkline Chart with Custom Axis Line](images/Axis/blazor-sparkline-custom-axis-line.png)
+![Blazor Sparkline Chart with Axis Line customization](images/Axis/blazor-sparkline-custom-axis-line.png)

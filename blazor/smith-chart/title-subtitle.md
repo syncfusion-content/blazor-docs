@@ -43,7 +43,7 @@ The information about the data plotted in the Smith Chart is depicted using the 
 }
 ```
 
-![Blazor Smith Chart with Title and Subtitle](./images/Title/blazor-smith-chart-title-and-subtitle.png)
+![Blazor Smith Chart with Enable Title  ](./images/Title/blazor-smith-chart-title-and-subtitle.png)
 
 ## Trim Title
 
@@ -126,4 +126,4 @@ Title and subtitle can be customized using the following properties.
 }
 ```
 
-![Blazor Smith Chart with Custom Title](./images/Title/blazor-smith-chart-with-custom-title.png)
+![Blazor Smith Chart with Title customization](./images/Title/blazor-smith-chart-with-custom-title.png)

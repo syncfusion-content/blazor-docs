@@ -24,7 +24,7 @@ To get start quickly with Skeleton Component using Blazor, you can check on this
 
 You can create **Blazor Server App** or **Blazor WebAssembly App** using Visual Studio in one of the following ways,
 
-* [Create a Project using Microsoft Templates](https://docs.microsoft.com/en-us/aspnet/core/blazor/tooling?pivots=windows)
+* [Create a Project using Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?pivots=windows&view=aspnetcore-7.0)
 
 * [Create a Project using Syncfusion Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project)
 
@@ -280,7 +280,7 @@ N> Syncfusion recommends to reference scripts using [Static Web Assets](https://
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to run the application. Then, the Syncfusion `Blazor Skeleton` component will be rendered in the default web browser.
 
-![Blazor Skeleton Component](./images/blazor-skeleton-component.png)
+![Add Blazor Skeleton Component](./images/blazor-skeleton-component.png)
 
 ## Skeleton Shapes
 
@@ -306,7 +306,7 @@ The [`Shape`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Notificati
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor Skeleton Component](./images/blazor-skeleton-shape-sample.png)
+![Skeleton shapes with Blazor Skeleton Component](./images/blazor-skeleton-shape-sample.png)
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/Skeleton).
 

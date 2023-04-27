@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Chart Types in Blazor Sparkline Component | Syncfusion
-description: Checkout and learn here all about chart types in Syncfusion Blazor Sparkline component and much more.
+title: Chart Types with Blazor Sparkline Component | Syncfusion
+description: Checkout and learn here all about chart types with Syncfusion Blazor Sparkline component and much more.
 platform: Blazor
 control: Sparkline Charts
 documentation: ug
 ---
 
-# Chart Types in Blazor Sparkline Component
+# Chart Types with Blazor Sparkline Component
 
 The different type of shapes can be used to represent the Sparkline Chart, and the type of Sparkline Chart can be changed by specifying the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfSparkline-1.html#Syncfusion_Blazor_Charts_SfSparkline_1_Type) property.
 

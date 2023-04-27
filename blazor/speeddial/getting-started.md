@@ -24,7 +24,7 @@ To get start quickly with SpeedDial Component using Blazor, you can check on thi
 
 You can create **Blazor Server App** or **Blazor WebAssembly App** using Visual Studio in one of the following ways,
 
-* [Create a Project using Microsoft Templates](https://docs.microsoft.com/en-us/aspnet/core/blazor/tooling?pivots=windows)
+* [Create a Project using Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?pivots=windows&view=aspnetcore-7.0)
 
 * [Create a Project using Syncfusion Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project)
 
@@ -286,7 +286,7 @@ N> Syncfusion recommends to reference scripts using [Static Web Assets](https://
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to run the application. Then, the Syncfusion `Blazor SpeedDial` component will be rendered in the default web browser.
 
-![Blazor SpeedDial Component](./images/blazor-speeddial-component.png)
+![Add Blazor SpeedDial Component](./images/blazor-speeddial-component.png)
 
 ## Linear and radial display modes
 
@@ -316,8 +316,8 @@ You can use the [`Mode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor SpeedDial Component](./images/blazor-speeddial-linear-sample.png)
-![Blazor SpeedDial Component](./images/blazor-speeddial-mode-radial-sample.png)
+![Blazor SpeedDial Component with Linear and radial display modes](./images/blazor-speeddial-linear-sample.png)
+![Blazor SpeedDial Component with Linear and radial display modes](./images/blazor-speeddial-mode-radial-sample.png)
 
 
 ## Item clicked event
@@ -347,7 +347,7 @@ You can use this event to perform the required action.
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor SpeedDial Component](./images/blazor-speeddial-event-sample.png)
+![Blazor SpeedDial Component with Item clicked event](./images/blazor-speeddial-event-sample.png)
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/SpeedDial).
 

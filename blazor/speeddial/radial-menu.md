@@ -1,7 +1,7 @@
 ---
 layout: post
-title: RadialMenu in Blazor SpeedDial Component | Syncfusion
-description: Checkout and learn about radial menu and its customization in Blazor SpeedDial component and much more.
+title: Radial Menu in Blazor SpeedDial Component | Syncfusion
+description: Checkout and learn about radial menu and its customizations in syncfusion Blazor SpeedDial component and much more.
 platform: Blazor
 control: SpeedDial
 documentation: ug
@@ -30,7 +30,7 @@ You can open the action items in either clockwise or anticlockwise by setting [D
 
 ```
 
-![Blazor Speed Dial Radial Mode](./images/Blazor-SpeedDial-RadialMenu.png)
+![Blazor Speed Dial with Radial menu direction](./images/Blazor-SpeedDial-RadialMenu.png)
 
 ## Start and end angle
 
@@ -38,7 +38,7 @@ You can modify the start and end angle of action items by setting [StartAngle](h
 
 The SpeedDial angle starts with `0` degree in the right side and increases in the clockwise direction.
 
-![Blazor Speed Dial Radial Angle](./images/Blazor-RadialAngle.png)
+![Blazor Speed Dial with start and end angle](./images/Blazor-RadialAngle.png)
 
 
 ```cshtml
@@ -56,7 +56,7 @@ The SpeedDial angle starts with `0` degree in the right side and increases in th
 
 ```
 
-![Blazor Speed Dial Angles](./images/Blazor-SpeedDial-Angles.png)
+![Blazor Speed Dial with start and end angle](./images/Blazor-SpeedDial-Angles.png)
 
 ## Offset
 
@@ -77,4 +77,4 @@ You can modify the offset distance between action items and Speed Dial button us
 
 ```
 
-![Blazor Speed Dial Offset](./images/Blazor-SpeedDial-Offset.png)
+![Blazor Speed Dial with Offset](./images/Blazor-SpeedDial-Offset.png)

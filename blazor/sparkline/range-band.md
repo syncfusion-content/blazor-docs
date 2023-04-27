@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Range Band in Blazor Sparkline Component | Syncfusion
-description: Checkout and learn here all about range band in Syncfusion Blazor Sparkline component and much more.
+title: Range Band in Blazor Sparkline chart Component | Syncfusion
+description: Checkout and learn all about range band in Syncfusion Blazor Sparkline charts component and much more.
 platform: Blazor
 control: Sparkline Charts
 documentation: ug
 ---
 
-# Range Band in Blazor Sparkline Component
+# Range Band in Blazor Sparkline charts Component
 
 Range band represents the quality or improves the readability of a specific range for the Sparkline y-axis by specifying the [StartRange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineRangeBand.html#Syncfusion_Blazor_Charts_SparklineRangeBand_StartRange) and [EndRange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineRangeBand.html#Syncfusion_Blazor_Charts_SparklineRangeBand_EndRange) properties in the [SparklineRangeBand](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineRangeBand.html) in the [SparklineRangeBandSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineRangeBandSettings.html).
 
@@ -31,4 +31,4 @@ The following properties are used for the customization of the range band:
 </SfSparkline>
 ```
 
-![Blazor Sparkline Chart with Multiple Range Band](./images/rangeband/blazor-sparkline-chart-multiple-range-band.png)
+![Blazor Sparkline Charts with Multiple Range Band](./images/rangeband/blazor-sparkline-chart-multiple-range-band.png)
