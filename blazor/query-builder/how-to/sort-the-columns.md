@@ -9,7 +9,7 @@ documentation: ug
 
 # Sort the Columns in Blazor QueryBuilder Component
 
-The QueryBuilder has options to sort the column fields by `ascending` or `descending` order. To sort the columns, you need to set [SortDirection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_SortDirection) property.
+The QueryBuilder has options to sort the column fields by `ascending` or `descending` order. To sort the columns, you need to set [SortDirection](https://help.syncfusion.com/cr/blazor#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_SortDirection/Syncfusion.Blazor.html) property.
 
 ```cshtml
 @using Syncfusion.Blazor.QueryBuilder

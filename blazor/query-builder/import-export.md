@@ -66,7 +66,7 @@ To apply the conditions initially, you can define the condition and rules in **Q
 
 ### Importing from SQL
 
-You can set the conditions from SQL query through the [SetRulesFromSql](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_SetRulesFromSql_System_String_) method.
+You can set the conditions from SQL query through the [SetRulesFromSql](https://help.syncfusion.com/cr/blazor#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_SetRulesFromSql_System_String_/Syncfusion.Blazor.html) method.
 
 ```cshtml
 @using Syncfusion.Blazor.QueryBuilder
@@ -173,4 +173,4 @@ The defined conditions can be exported to the SQL query through the [GetSqlFromR
 
 ```
 
-N> You can also explore our [Blazor Query Builder example](https://blazor.syncfusion.com/demos/query-builder/default-functionalities?theme=bootstrap4) to know how to render and configure the query builder.
+N> You can also explore our [Blazor Query Builder example](https://blazor.syncfusion.com/demos/query-builder/default-functionalities?theme=bootstrap5) to know how to render and configure the query builder.

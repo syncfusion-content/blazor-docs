@@ -9,13 +9,13 @@ documentation: ug
 
 # Columns in Blazor QueryBuilder Component
 
-The column definitions are used as the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_DataSource) schema in the Query Builder. This plays a vital role in rendering column values. The Query Builder operations such as create or delete conditions and create or delete groups are performed based on the column definitions. The [Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.QueryBuilderColumn.html#Syncfusion_Blazor_QueryBuilder_QueryBuilderColumn_Field) property of the [Columns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_Columns) is necessary to map the data source values in the query builder columns.
+The column definitions are used as the [DataSource](https://help.syncfusion.com/cr/blazor#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_DataSource/Syncfusion.Blazor.html) schema in the Query Builder. This plays a vital role in rendering column values. The Query Builder operations such as create or delete conditions and create or delete groups are performed based on the column definitions. The [Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.QueryBuilderColumn.html#Syncfusion_Blazor_QueryBuilder_QueryBuilderColumn_Field) property of the [Columns](https://help.syncfusion.com/cr/blazor#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_Columns/Syncfusion.Blazor.html) is necessary to map the data source values in the query builder columns.
 
 N> If the column field is not specified in the data source, the column values will be empty.
 
 ## Auto generation
 
-The [Columns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_Columns) are automatically generated from the datasource when the [Columns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_Columns) declaration is empty or undefined while initializing the query builder. All the columns in the `DataSource` are bound as the query builder columns.
+The [Columns](https://help.syncfusion.com/cr/blazor#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_Columns/Syncfusion.Blazor.html) are automatically generated from the datasource when the [Columns](https://help.syncfusion.com/cr/blazor#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_Columns/Syncfusion.Blazor.html) declaration is empty or undefined while initializing the query builder. All the columns in the `DataSource` are bound as the query builder columns.
 
 N> When columns are auto-generated, the column type will be determined from the first record of the data source.
 
@@ -154,7 +154,7 @@ In the following sample, the date field is formatted as MM/yyyy/dd and the numbe
 
 ![Formatting in Blazor QueryBuilder](./images/blazor-querybuilder-format.png)
 
-N> You can also explore our [Blazor Query Builder example](https://blazor.syncfusion.com/demos/query-builder/default-functionalities?theme=bootstrap4) to know how to render and configure the query builder.
+N> You can also explore our [Blazor Query Builder example](https://blazor.syncfusion.com/demos/query-builder/default-functionalities?theme=bootstrap5) to know how to render and configure the query builder.
 
 ## Validations
 
