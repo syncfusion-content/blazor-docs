@@ -97,8 +97,7 @@ N> From 2022 Vol1 (20.1) version - The default value of `IgnoreScriptIsolation` 
         public static Maui CreateMauiApp()
         {
             ...
-            // Set IgnoreScriptIsolation as true to load scripts externally.
-            builder.Services.AddSyncfusionBlazor(options => { options.IgnoreScriptIsolation = true; });
+            builder.Services.AddSyncfusionBlazor();
         }
     }
 
