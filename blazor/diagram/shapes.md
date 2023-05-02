@@ -302,7 +302,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ![HTML Node Template in Blazor Diagram](images/blazor-diagram-html-node-template.png)
 
-N> HTML node cannot be exported to image format, like JPEG, PNG and BMP. It is by design, while exporting the diagram is drawn in a canvas. Further, this canvas is exported into image formats. Currently, drawing in a canvas equivalent from all possible HTML is not feasible. Hence, this limitation. Also , HTML node always appears as topmost layer ( whose index is the higher index, even though it is defined at the last).
+N> HTML node cannot be exported to image format, like JPEG and PNG. It is by design, while exporting the diagram is drawn in a canvas. Further, this canvas is exported into image formats. Currently, drawing in a canvas equivalent from all possible HTML is not feasible. Hence, this limitation. Also , HTML node always appears as topmost layer ( whose index is the higher index, even though it is defined at the last).
 
 ## Node with basic shapes
 
