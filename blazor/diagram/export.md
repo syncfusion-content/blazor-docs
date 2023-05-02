@@ -13,7 +13,7 @@ Diagram provides support to export the diagram as an image/svg files. The follow
 
 * `ExportAsync(DiagramExportFormat, DiagramExportSettings)` : Returns the exported diagram as base64 string of the specified file type.To explore the parameters, refer to [ExportAsync(DiagramExportFormat, DiagramExportSettings)](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_ExportAsync_Syncfusion_Blazor_Diagram_DiagramExportFormat_Syncfusion_Blazor_Diagram_DiagramExportSettings_).
 
-* `ExportAsync(String, DiagramExportFormat, DiagramExportSettings)` : Exports the rendered diagram to various file types. It supports jpeg, png, svg ,bmp and pdf file types. Exported file will be downloaded at the client machine. To explore the parameters, refer to [ExportAsync(String, DiagramExportFormat, DiagramExportSettings)](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_ExportAsync_System_String_Syncfusion_Blazor_Diagram_DiagramExportFormat_Syncfusion_Blazor_Diagram_DiagramExportSettings_).  
+* `ExportAsync(String, DiagramExportFormat, DiagramExportSettings)` : Exports the rendered diagram to various file types. It supports jpeg, png, svg and pdf file types. Exported file will be downloaded at the client machine. To explore the parameters, refer to [ExportAsync(String, DiagramExportFormat, DiagramExportSettings)](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_ExportAsync_System_String_Syncfusion_Blazor_Diagram_DiagramExportFormat_Syncfusion_Blazor_Diagram_DiagramExportSettings_).  
 
 <!-- markdownlint-disable MD033 -->
 
