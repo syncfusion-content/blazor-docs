@@ -63,6 +63,8 @@ You can also bind different field names to the default event fields as well as i
 
 The Scheduler is a generic component which is strongly bound to a model type, but there may be cases where the model type is unknown during compile or runtime. In these scenarios, you can use **ExpandoObject** binding to bind data to the Scheduler as a list of dynamic objects.
 
+**ExpandoObject** implements the IDictionary<string, object> interface, which means you can add properties and values to the object like you would with a dictionary.**ExpandoObject** binding provides a flexible way to bind data to the Scheduler component without the need for a predefined class or data structure. This can be particularly useful in scenarios where you have data sources with varying structures, or when you need to bind to data sources that are not known at compile-time.
+
 **ExpandoObject** can be bound to the `DataSource` option of the scheduler within the `ScheduleEventSettings` tag. Scheduler can also perform all kinds of supported data operations and editing in ExpandoObject.
 To bind data to the Scheduler using ExpandoObject, you can create a list of ExpandoObjects and set it as the DataSource property of the Scheduler's ScheduleEventSettings tag.
 
@@ -104,294 +106,11 @@ To bind data to the Scheduler using ExpandoObject, you can create a list of Expa
 ```
 ## DynamicObject Binding 
 
-Scheduler is a generic component which is strongly bound to a model type. There are cases when the model type is unknown during compile type. In such cases, bind the data to the scheduler as list of  **DynamicObject**.
+**DynamicObject** binding is another approach for binding data to the Scheduler when the model type is unknown at compile time. In this approach, you use the dynamic keyword to define variables that can hold objects of any type, including those with dynamically added properties.
 
-**DynamicObject** can be bound to the `DataSource` option of the scheduler within the `ScheduleEventSettings` tag. Scheduler can also perform all kinds of supported data operations and editing in DynamicObject.
+To bind data to the Scheduler using **DynamicObject** binding, you can create a list of dynamic objects and set it as the `DataSource` property of the Scheduler's `ScheduleEventSettings` tag. You can then use the Scheduler's built-in data operations and editing features to work with the data.   
 
-N> The [`GetDynamicMemberNames`](https://docs.microsoft.com/en-us/dotnet/api/system.dynamic.dynamicobject.getdynamicmembernames?view=netcore-3.1) method of DynamicObject class must be overridden and return the property names to perform data operation and editing while using DynamicObject.
-
-```csharp
-@using System.Dynamic
-@using System.Text.Json
-@using Syncfusion.Blazor.Schedule
-
-<SfSchedule TValue="DynamicDictionary" @bind-SelectedDate="@CurrentDate" Width="100%" Height="550px">
-    <ScheduleEventSettings DataSource="@EventsCollection"></ScheduleEventSettings>
-    <ScheduleViews>
-        <ScheduleView Option="View.Day"></ScheduleView>
-        <ScheduleView Option="View.Week"></ScheduleView>
-        <ScheduleView Option="View.WorkWeek"></ScheduleView>
-        <ScheduleView Option="View.Month"></ScheduleView>
-        <ScheduleView Option="View.Agenda"></ScheduleView>
-    </ScheduleViews>
-</SfSchedule>
-@code {
-    DateTime CurrentDate = new DateTime(2021, 8, 10);
-    public List<DynamicDictionary> EventsCollection = new List<DynamicDictionary>() { };
-    protected override void OnInitialized()
-    {
-        DateTime scheduleStart = new DateTime(2021, 8, 8, 10, 0, 0);
-        EventsCollection = Enumerable.Range(1, 5).Select((x) =>
-        {
-            scheduleStart = scheduleStart.AddDays(1);
-            dynamic d = new DynamicDictionary();
-            d.Id = 1000 + x;
-            d.Subject = (new string[] { "Project Discussion", "Work Flow Analysis", "Report", "Meeting", "Project Demo" })[new Random().Next(5)];
-            d.StartTime = scheduleStart;
-            d.EndTime = scheduleStart.AddHours(1);
-            d.RecurrenceRule = null;
-            d.RecurrenceException = null;
-            d.RecurrenceID = null;
-            return d;
-        }).Cast<DynamicDictionary>().ToList<DynamicDictionary>();
-    }
-    public class DynamicDictionary : System.Dynamic.DynamicObject
-    {
-        Dictionary<string, object> dictionary = new Dictionary<string, object>();
-        public override bool TryGetMember(GetMemberBinder binder, out object result)
-        {
-            string name = binder.Name;
-            return dictionary.TryGetValue(name, out result);
-        }
-        public override bool TrySetMember(SetMemberBinder binder, object value)
-        {
-            dictionary[binder.Name] = value;
-            return true;
-        }
-        public override System.Collections.Generic.IEnumerable<string> GetDynamicMemberNames()
-        {
-            return this.dictionary?.Keys;
-        }
-    }
-}
-```
-
-## Remote data
-
-Any kind of remote data services can be bound to the Scheduler. To do so, provide the service URL to the `Url` option of `SfDataManager` within `ScheduleEventSettings` tag.
-
-### Using ODataV4Adaptor
-
-[ODataV4](https://www.odata.org/documentation/) is a standardized protocol for creating and consuming data. Refer to the following code example to retrieve the data from ODataV4 service using the DataManager. To connect with ODataV4 service end points, it is necessary to make use of `ODataV4Adaptor` within `DataManager`.
-
-```cshtml
-@using Syncfusion.Blazor
-@using Syncfusion.Blazor.Schedule
-@using Syncfusion.Blazor.Data
-
-<SfSchedule TValue="Restful_Crud.Models.EventData" Height="550px" SelectedDate="@(new DateTime(2020, 3, 11))">
-    <ScheduleEventSettings TValue="Restful_Crud.Models.EventData" Query="@QueryData">
-        <SfDataManager Url="http://localhost:25255/odata" Adaptor="Adaptors.ODataV4Adaptor"></SfDataManager>
-    </ScheduleEventSettings>
-</SfSchedule>
-
-@code{
-    public Query QueryData = new Query().From("EventDatas");
-}
-```
-
-### Filter events using the in-built query
-
-To enable server-side filtering operations based on predetermined conditions, the [`IncludeFiltersInQuery`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleEventSettings-1.html#Syncfusion_Blazor_Schedule_ScheduleEventSettings_1_IncludeFiltersInQuery) API can be set to true, this allows the filter query to be constructed using the start date, end date, and recurrence rule which in turn enables the request to be filtered accordingly.
-
-This method greatly improves the component's performance by reducing the data that needs to be transferred to the client side. As a result, the component's efficiency and responsiveness are significantly enhanced, resulting in a better user experience. However, it is important to consider the possibility of longer query strings, which may cause issues with the maximum URL length or server limitations on query string length.
-
-```cshtml
-@using Syncfusion.Blazor
-@using Syncfusion.Blazor.Data;
-@using Syncfusion.Blazor.Schedule
-
-<SfSchedule TValue="AppointmentData" Height="550px" @bind-SelectedDate="@currentDate">
-    <ScheduleEventSettings TValue="AppointmentData" Query="@QueryData" IncludeFiltersInQuery="true">
-        <ScheduleViews>
-            <ScheduleView Option="View.Month"></ScheduleView>
-        </ScheduleViews>
-        <SfDataManager Url="https://services.odata.org/V4/Northwind/Northwind.svc/Orders/" Adaptor="Adaptors.ODataV4Adaptor">
-        </SfDataManager>
-        <ScheduleField Id="Id">
-            <FieldSubject Name="ShipName"></FieldSubject>
-            <FieldLocation Name="ShipCountry"></FieldLocation>
-            <FieldDescription Name="ShipAddress"></FieldDescription>
-            <FieldStartTime Name="OrderDate"></FieldStartTime>
-            <FieldEndTime Name="RequiredDate"></FieldEndTime>
-            <FieldRecurrenceRule Name="ShipRegion"></FieldRecurrenceRule>
-        </ScheduleField>
-    </ScheduleEventSettings>
-</SfSchedule>
-
-@code {
-
-    DateTime currentDate = new DateTime(1996, 7, 9);
-    public Query QueryData = new Query();
-
-    public class AppointmentData
-    {
-        public int Id { get; set; }
-        public string? ShipName { get; set; }
-        public DateTime OrderDate { get; set; }
-        public DateTime RequiredDate { get; set; }
-        public string? ShipCountry { get; set; }
-        public string? ShipAddress { get; set; }
-        public string? ShipRegion { get; set; }
-    }
-}
-```
-
-The following image represents how the parameters are passed using ODataV4 filter.
-
-![ODataV4 filter](images/blazor-odatav4-filter.jpg)
-
-### Using custom adaptor
-
-It is possible to create your own `CustomAdaptor` by extending the built-in available adaptors. The following example demonstrates the custom adaptor usage and how to bind the data with custom service and the CRUD operations for custom bounded data is performed using the methods of [DataAdaptor](https://blazor.syncfusion.com/documentation/data/custom-binding/) abstract class.
-
-```cshtml
-@using Syncfusion.Blazor
-@using Syncfusion.Blazor.Schedule
-@using Syncfusion.Blazor.Data
-
-<SfSchedule TValue="AppointmentData" Width="100%" Height="650px" SelectedDate="@(new DateTime(2020, 1, 9))">
-    <ScheduleResources>
-        <ScheduleResource TItem="ResourceData" TValue="int" DataSource="@ProjectData" Field="ProjectId" Title="Choose Project" Name="Projects" TextField="Text" IdField="Id" ColorField="Color">
-        </ScheduleResource>
-    </ScheduleResources>
-    <ScheduleEventSettings TValue="AppointmentData">
-        <SfDataManager AdaptorInstance="@typeof(CustomAdaptor)" Adaptor="Adaptors.CustomAdaptor"></SfDataManager>
-    </ScheduleEventSettings>
-</SfSchedule>
-
-@code {
-    public class CustomAdaptor : DataAdaptor
-    {
-        List<AppointmentData> EventData = DataList();
-        public async override Task<object> ReadAsync(DataManagerRequest dataManagerRequest, string key = null)
-        {
-            await Task.Delay(100); //To mimic asynchronous operation, we delayed this operation using Task.Delay
-            return dataManagerRequest.RequiresCounts ? new DataResult() { Result = EventData, Count = EventData.Count() } : (object)EventData;
-        }
-        public async override Task<object> InsertAsync(DataManager dataManager, object data, string key)
-        {
-            await Task.Delay(100); //To mimic asynchronous operation, we delayed this operation using Task.Delay
-            EventData.Insert(0, data as AppointmentData);
-            return data;
-        }
-        public async override Task<object> UpdateAsync(DataManager dataManager, object data, string keyField, string key)
-        {
-            await Task.Delay(100); //To mimic asynchronous operation, we delayed this operation using Task.Delay
-            var val = (data as AppointmentData);
-            var appointment = EventData.Where((AppointmentData) => AppointmentData.Id == val.Id).FirstOrDefault();
-            if (appointment != null)
-            {
-                appointment.Id = val.Id;
-                appointment.Subject = val.Subject;
-                appointment.StartTime = val.StartTime;
-                appointment.EndTime = val.EndTime;
-                appointment.Location = val.Location;
-                appointment.Description = val.Description;
-                appointment.IsAllDay = val.IsAllDay;
-                appointment.ProjectId = val.ProjectId;
-                appointment.RecurrenceException = val.RecurrenceException;
-                appointment.RecurrenceID = val.RecurrenceID;
-                appointment.RecurrenceRule = val.RecurrenceRule;
-            }
-            return data;
-        }
-        public async override Task<object> RemoveAsync(DataManager dataManager, object data, string keyField, string key) //triggers on appointment deletion through public method DeleteEvent
-        {
-            await Task.Delay(100); //To mimic asynchronous operation, we delayed this operation using Task.Delay
-            int value = (int)data;
-            EventData.Remove(EventData.Where((AppointmentData) => AppointmentData.Id == value).FirstOrDefault());
-            return data;
-        }
-        public async override Task<object> BatchUpdateAsync(DataManager dataManager, object changedRecords, object addedRecords, object deletedRecords, string keyField, string key, int? dropIndex)
-        {
-            await Task.Delay(100); //To mimic asynchronous operation, we delayed this operation using Task.Delay
-            object records = deletedRecords;
-            List<AppointmentData> deleteData = deletedRecords as List<AppointmentData>;
-            foreach (var data in deleteData)
-            {
-                EventData.Remove(EventData.Where((AppointmentData) => AppointmentData.Id == data.Id).FirstOrDefault());
-            }
-            List<AppointmentData> addData = addedRecords as List<AppointmentData>;
-            foreach (var data in addData)
-            {
-                EventData.Insert(0, data as AppointmentData);
-                records = addedRecords;
-            }
-            List<AppointmentData> updateData = changedRecords as List<AppointmentData>;
-            foreach (var data in updateData)
-            {
-                var val = (data as AppointmentData);
-                var appointment = EventData.Where((AppointmentData) => AppointmentData.Id == val.Id).FirstOrDefault();
-                if (appointment != null)
-                {
-                    appointment.Id = val.Id;
-                    appointment.Subject = val.Subject;
-                    appointment.StartTime = val.StartTime;
-                    appointment.EndTime = val.EndTime;
-                    appointment.Location = val.Location;
-                    appointment.Description = val.Description;
-                    appointment.IsAllDay = val.IsAllDay;
-                    appointment.ProjectId = val.ProjectId;
-                    appointment.RecurrenceException = val.RecurrenceException;
-                    appointment.RecurrenceID = val.RecurrenceID;
-                    appointment.RecurrenceRule = val.RecurrenceRule;
-                }
-                records = changedRecords;
-            }
-            return records;
-        }
-    }
-    private static List<AppointmentData> DataList()
-    {
-        List<AppointmentData> eventDatas = new List<AppointmentData>
-        {
-            new AppointmentData { Id = 1, Subject = "Meeting", StartTime = new DateTime(2020, 1, 5, 10, 0, 0) , EndTime = new DateTime(2020, 1, 5, 11, 0, 0), ProjectId = 1, RecurrenceRule = "FREQ=DAILY;INTERVAL=1;COUNT=5;"},
-            new AppointmentData { Id = 2, Subject = "Project Discussion", StartTime = new DateTime(2020, 1, 6, 11, 30, 0) , EndTime = new DateTime(2020, 1, 6, 13, 0, 0), ProjectId = 2},
-            new AppointmentData { Id = 3, Subject = "Work Flow Analysis", StartTime = new DateTime(2020, 1, 7, 12, 0, 0) , EndTime = new DateTime(2020, 1, 7, 13, 0, 0), ProjectId = 2, RecurrenceRule = "FREQ=DAILY;INTERVAL=1;COUNT=3;"},
-            new AppointmentData { Id = 4, Subject = "Report", StartTime = new DateTime(2020, 1, 10, 11, 30, 0) , EndTime = new DateTime(2020, 1, 10, 13, 0, 0), ProjectId = 2}
-        };
-        return eventDatas;
-    }
-    List<ResourceData> ProjectData = ResourceList();
-    private static List<ResourceData> ResourceList()
-    {
-        List<ResourceData> resourceDatas = new List<ResourceData>
-        {
-            new ResourceData { Text = "PROJECT 1", Id = 1, Color = "#cb6bb2" },
-            new ResourceData { Text = "PROJECT 2", Id = 2, Color = "#56ca85" }
-        };
-        return resourceDatas;
-    }
-    public class AppointmentData
-    {
-        public int Id { get; set; }
-        public string Subject { get; set; }
-        public string Location { get; set; }
-        public DateTime StartTime { get; set; }
-        public DateTime EndTime { get; set; }
-        public string Description { get; set; }
-        public bool IsAllDay { get; set; }
-        public string RecurrenceRule { get; set; }
-        public string RecurrenceException { get; set; }
-        public Nullable<int> RecurrenceID { get; set; }
-        public int ProjectId { get; set; }
-    }
-    public class ResourceData
-    {
-        public int Id { get; set; }
-        public string Text { get; set; }
-        public string Color { get; set; }
-    }
-}
-```
-
-
-## Binding DynamicObject
-
-Scheduler is a generic component which is strongly bound to a model type. There are cases when the model type is unknown during compile type. In such cases, bind the data to the scheduler as list of  **DynamicObject**.
-
-**DynamicObject** can be bound to the `DataSource` option of the scheduler within the `ScheduleEventSettings` tag. Scheduler can also perform all kinds of supported data operations and editing in DynamicObject.
+**DynamicObject** implements the `IDynamicMetaObjectProvider` interface, which means you can override member access operations like `GetMember` and `SetMember` to provide your own custom logic.**DynamicObject** binding is that it allows you to create objects with dynamic behavior, which can be useful in scenarios where you need to work with objects whose behavior is not known at compile-time.
 
 N> The [`GetDynamicMemberNames`](https://docs.microsoft.com/en-us/dotnet/api/system.dynamic.dynamicobject.getdynamicmembernames?view=netcore-3.1) method of DynamicObject class must be overridden and return the property names to perform data operation and editing while using DynamicObject.
 
@@ -549,6 +268,321 @@ Here, AppointmentData class implements the interface of **INotifyPropertyChanged
     }
 }
 ```
+### Using custom adaptor
+
+It is possible to create your own `CustomAdaptor` by extending the built-in available adaptors. The following example demonstrates the custom adaptor usage and how to bind the data with custom service and the CRUD operations for custom bounded data is performed using the methods of [DataAdaptor](https://blazor.syncfusion.com/documentation/data/custom-binding/) abstract class.
+
+```cshtml
+@using Syncfusion.Blazor
+@using Syncfusion.Blazor.Schedule
+@using Syncfusion.Blazor.Data
+
+<SfSchedule TValue="AppointmentData" Width="100%" Height="650px" SelectedDate="@(new DateTime(2020, 1, 9))">
+    <ScheduleResources>
+        <ScheduleResource TItem="ResourceData" TValue="int" DataSource="@ProjectData" Field="ProjectId" Title="Choose Project" Name="Projects" TextField="Text" IdField="Id" ColorField="Color">
+        </ScheduleResource>
+    </ScheduleResources>
+    <ScheduleEventSettings TValue="AppointmentData">
+        <SfDataManager AdaptorInstance="@typeof(CustomAdaptor)" Adaptor="Adaptors.CustomAdaptor"></SfDataManager>
+    </ScheduleEventSettings>
+</SfSchedule>
+
+@code {
+    public class CustomAdaptor : DataAdaptor
+    {
+        List<AppointmentData> EventData = DataList();
+        public async override Task<object> ReadAsync(DataManagerRequest dataManagerRequest, string key = null)
+        {
+            await Task.Delay(100); //To mimic asynchronous operation, we delayed this operation using Task.Delay
+            return dataManagerRequest.RequiresCounts ? new DataResult() { Result = EventData, Count = EventData.Count() } : (object)EventData;
+        }
+        public async override Task<object> InsertAsync(DataManager dataManager, object data, string key)
+        {
+            await Task.Delay(100); //To mimic asynchronous operation, we delayed this operation using Task.Delay
+            EventData.Insert(0, data as AppointmentData);
+            return data;
+        }
+        public async override Task<object> UpdateAsync(DataManager dataManager, object data, string keyField, string key)
+        {
+            await Task.Delay(100); //To mimic asynchronous operation, we delayed this operation using Task.Delay
+            var val = (data as AppointmentData);
+            var appointment = EventData.Where((AppointmentData) => AppointmentData.Id == val.Id).FirstOrDefault();
+            if (appointment != null)
+            {
+                appointment.Id = val.Id;
+                appointment.Subject = val.Subject;
+                appointment.StartTime = val.StartTime;
+                appointment.EndTime = val.EndTime;
+                appointment.Location = val.Location;
+                appointment.Description = val.Description;
+                appointment.IsAllDay = val.IsAllDay;
+                appointment.ProjectId = val.ProjectId;
+                appointment.RecurrenceException = val.RecurrenceException;
+                appointment.RecurrenceID = val.RecurrenceID;
+                appointment.RecurrenceRule = val.RecurrenceRule;
+            }
+            return data;
+        }
+        public async override Task<object> RemoveAsync(DataManager dataManager, object data, string keyField, string key) //triggers on appointment deletion through public method DeleteEvent
+        {
+            await Task.Delay(100); //To mimic asynchronous operation, we delayed this operation using Task.Delay
+            int value = (int)data;
+            EventData.Remove(EventData.Where((AppointmentData) => AppointmentData.Id == value).FirstOrDefault());
+            return data;
+        }
+        public async override Task<object> BatchUpdateAsync(DataManager dataManager, object changedRecords, object addedRecords, object deletedRecords, string keyField, string key, int? dropIndex)
+        {
+            await Task.Delay(100); //To mimic asynchronous operation, we delayed this operation using Task.Delay
+            object records = deletedRecords;
+            List<AppointmentData> deleteData = deletedRecords as List<AppointmentData>;
+            foreach (var data in deleteData)
+            {
+                EventData.Remove(EventData.Where((AppointmentData) => AppointmentData.Id == data.Id).FirstOrDefault());
+            }
+            List<AppointmentData> addData = addedRecords as List<AppointmentData>;
+            foreach (var data in addData)
+            {
+                EventData.Insert(0, data as AppointmentData);
+                records = addedRecords;
+            }
+            List<AppointmentData> updateData = changedRecords as List<AppointmentData>;
+            foreach (var data in updateData)
+            {
+                var val = (data as AppointmentData);
+                var appointment = EventData.Where((AppointmentData) => AppointmentData.Id == val.Id).FirstOrDefault();
+                if (appointment != null)
+                {
+                    appointment.Id = val.Id;
+                    appointment.Subject = val.Subject;
+                    appointment.StartTime = val.StartTime;
+                    appointment.EndTime = val.EndTime;
+                    appointment.Location = val.Location;
+                    appointment.Description = val.Description;
+                    appointment.IsAllDay = val.IsAllDay;
+                    appointment.ProjectId = val.ProjectId;
+                    appointment.RecurrenceException = val.RecurrenceException;
+                    appointment.RecurrenceID = val.RecurrenceID;
+                    appointment.RecurrenceRule = val.RecurrenceRule;
+                }
+                records = changedRecords;
+            }
+            return records;
+        }
+    }
+    private static List<AppointmentData> DataList()
+    {
+        List<AppointmentData> eventDatas = new List<AppointmentData>
+        {
+            new AppointmentData { Id = 1, Subject = "Meeting", StartTime = new DateTime(2020, 1, 5, 10, 0, 0) , EndTime = new DateTime(2020, 1, 5, 11, 0, 0), ProjectId = 1, RecurrenceRule = "FREQ=DAILY;INTERVAL=1;COUNT=5;"},
+            new AppointmentData { Id = 2, Subject = "Project Discussion", StartTime = new DateTime(2020, 1, 6, 11, 30, 0) , EndTime = new DateTime(2020, 1, 6, 13, 0, 0), ProjectId = 2},
+            new AppointmentData { Id = 3, Subject = "Work Flow Analysis", StartTime = new DateTime(2020, 1, 7, 12, 0, 0) , EndTime = new DateTime(2020, 1, 7, 13, 0, 0), ProjectId = 2, RecurrenceRule = "FREQ=DAILY;INTERVAL=1;COUNT=3;"},
+            new AppointmentData { Id = 4, Subject = "Report", StartTime = new DateTime(2020, 1, 10, 11, 30, 0) , EndTime = new DateTime(2020, 1, 10, 13, 0, 0), ProjectId = 2}
+        };
+        return eventDatas;
+    }
+    List<ResourceData> ProjectData = ResourceList();
+    private static List<ResourceData> ResourceList()
+    {
+        List<ResourceData> resourceDatas = new List<ResourceData>
+        {
+            new ResourceData { Text = "PROJECT 1", Id = 1, Color = "#cb6bb2" },
+            new ResourceData { Text = "PROJECT 2", Id = 2, Color = "#56ca85" }
+        };
+        return resourceDatas;
+    }
+    public class AppointmentData
+    {
+        public int Id { get; set; }
+        public string Subject { get; set; }
+        public string Location { get; set; }
+        public DateTime StartTime { get; set; }
+        public DateTime EndTime { get; set; }
+        public string Description { get; set; }
+        public bool IsAllDay { get; set; }
+        public string RecurrenceRule { get; set; }
+        public string RecurrenceException { get; set; }
+        public Nullable<int> RecurrenceID { get; set; }
+        public int ProjectId { get; set; }
+    }
+    public class ResourceData
+    {
+        public int Id { get; set; }
+        public string Text { get; set; }
+        public string Color { get; set; }
+    }
+}
+```
+
+
+## Remote data
+
+Any kind of remote data services can be bound to the Scheduler. To do so, provide the service URL to the `Url` option of `SfDataManager` within `ScheduleEventSettings` tag.
+
+### Binding with OData services
+
+OData is a standardized protocol for creating and consuming data. You can retrieve data from OData service using the SfDataManager. Refer to the following code example for remote Data binding using OData service.
+```cshtml
+@using Syncfusion.Blazor
+@using Syncfusion.Blazor.Data;
+@using Syncfusion.Blazor.Schedule
+
+<SfSchedule TValue="AppointmentData" Height="550px" @bind-SelectedDate="@currentDate">
+    <ScheduleEventSettings TValue="AppointmentData" Query="@QueryData">
+        <ScheduleViews>
+            <ScheduleView Option="View.Month"></ScheduleView>
+        </ScheduleViews>
+        <SfDataManager Url="https://services.odata.org/V4/Northwind/Northwind.svc/Orders/" Adaptor="Adaptors.ODataAdaptor">
+        </SfDataManager>
+        <ScheduleField Id="Id">
+            <FieldSubject Name="ShipName"></FieldSubject>
+            <FieldLocation Name="ShipCountry"></FieldLocation>
+            <FieldDescription Name="ShipAddress"></FieldDescription>
+            <FieldStartTime Name="OrderDate"></FieldStartTime>
+            <FieldEndTime Name="RequiredDate"></FieldEndTime>
+            <FieldRecurrenceRule Name="ShipRegion"></FieldRecurrenceRule>
+        </ScheduleField>
+    </ScheduleEventSettings>
+</SfSchedule>
+
+@code {
+
+    DateTime currentDate = new DateTime(1996, 7, 9);
+    public Query QueryData = new Query();
+
+    public class AppointmentData
+    {
+        public int Id { get; set; }
+        public string? ShipName { get; set; }
+        public DateTime OrderDate { get; set; }
+        public DateTime RequiredDate { get; set; }
+        public string? ShipCountry { get; set; }
+        public string? ShipAddress { get; set; }
+        public string? ShipRegion { get; set; }
+    }
+}
+```
+
+### Binding with OData v4 services 
+
+[ODataV4](https://www.odata.org/documentation/) is a standardized protocol for creating and consuming data. Refer to the following code example to retrieve the data from ODataV4 service using the DataManager. To connect with ODataV4 service end points, it is necessary to make use of `ODataV4Adaptor` within `DataManager`.
+
+```cshtml
+@using Syncfusion.Blazor
+@using Syncfusion.Blazor.Schedule
+@using Syncfusion.Blazor.Data
+
+<SfSchedule TValue="AppointmentData" Height="550px" @bind-SelectedDate="@currentDate">
+    <ScheduleEventSettings TValue="AppointmentData" Query="@QueryData">
+        <ScheduleViews>
+            <ScheduleView Option="View.Month"></ScheduleView>
+        </ScheduleViews>
+        <SfDataManager Url="https://services.odata.org/V4/Northwind/Northwind.svc/Orders/" Adaptor="Adaptors.ODataV4Adaptor">
+        </SfDataManager>
+        <ScheduleField Id="Id">
+            <FieldSubject Name="ShipName"></FieldSubject>
+            <FieldLocation Name="ShipCountry"></FieldLocation>
+            <FieldDescription Name="ShipAddress"></FieldDescription>
+            <FieldStartTime Name="OrderDate"></FieldStartTime>
+            <FieldEndTime Name="RequiredDate"></FieldEndTime>
+            <FieldRecurrenceRule Name="ShipRegion"></FieldRecurrenceRule>
+        </ScheduleField>
+    </ScheduleEventSettings>
+</SfSchedule>
+
+@code {
+
+    DateTime currentDate = new DateTime(1996, 7, 9);
+    public Query QueryData = new Query();
+
+    public class AppointmentData
+    {
+        public int Id { get; set; }
+        public string? ShipName { get; set; }
+        public DateTime OrderDate { get; set; }
+        public DateTime RequiredDate { get; set; }
+        public string? ShipCountry { get; set; }
+        public string? ShipAddress { get; set; }
+        public string? ShipRegion { get; set; }
+    }
+}
+```
+
+### Filter events using the in-built query
+
+To enable server-side filtering operations based on predetermined conditions, the [`IncludeFiltersInQuery`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleEventSettings-1.html#Syncfusion_Blazor_Schedule_ScheduleEventSettings_1_IncludeFiltersInQuery) API can be set to true, this allows the filter query to be constructed using the start date, end date, and recurrence rule which in turn enables the request to be filtered accordingly.
+
+This method greatly improves the component's performance by reducing the data that needs to be transferred to the client side. As a result, the component's efficiency and responsiveness are significantly enhanced, resulting in a better user experience. However, it is important to consider the possibility of longer query strings, which may cause issues with the maximum URL length or server limitations on query string length.
+
+```cshtml
+@using Syncfusion.Blazor
+@using Syncfusion.Blazor.Data;
+@using Syncfusion.Blazor.Schedule
+
+<SfSchedule TValue="AppointmentData" Height="550px" @bind-SelectedDate="@currentDate">
+    <ScheduleEventSettings TValue="AppointmentData" Query="@QueryData" IncludeFiltersInQuery="true">
+        <ScheduleViews>
+            <ScheduleView Option="View.Month"></ScheduleView>
+        </ScheduleViews>
+        <SfDataManager Url="https://services.odata.org/V4/Northwind/Northwind.svc/Orders/" Adaptor="Adaptors.ODataV4Adaptor">
+        </SfDataManager>
+        <ScheduleField Id="Id">
+            <FieldSubject Name="ShipName"></FieldSubject>
+            <FieldLocation Name="ShipCountry"></FieldLocation>
+            <FieldDescription Name="ShipAddress"></FieldDescription>
+            <FieldStartTime Name="OrderDate"></FieldStartTime>
+            <FieldEndTime Name="RequiredDate"></FieldEndTime>
+            <FieldRecurrenceRule Name="ShipRegion"></FieldRecurrenceRule>
+        </ScheduleField>
+    </ScheduleEventSettings>
+</SfSchedule>
+
+@code {
+
+    DateTime currentDate = new DateTime(1996, 7, 9);
+    public Query QueryData = new Query();
+
+    public class AppointmentData
+    {
+        public int Id { get; set; }
+        public string? ShipName { get; set; }
+        public DateTime OrderDate { get; set; }
+        public DateTime RequiredDate { get; set; }
+        public string? ShipCountry { get; set; }
+        public string? ShipAddress { get; set; }
+        public string? ShipRegion { get; set; }
+    }
+}
+```
+
+The following image represents how the parameters are passed using ODataV4 filter.
+
+![ODataV4 filter](images/blazor-odatav4-filter.jpg)
+
+### Passing additional parameters to the server
+
+To send an additional custom parameter to the server-side post, make use of the `AddParams` method of `Query`. Now, assign this `Query` object with additional parameters to the `Query` property of Scheduler.
+
+```cshtml
+@using Syncfusion.Blazor
+@using Syncfusion.Blazor.Schedule
+@using Syncfusion.Blazor.Data
+
+<SfSchedule TValue="Restful_Crud.Models.EventData" Height="550px" SelectedDate="@(new DateTime(2020, 3, 11))">
+    <ScheduleEventSettings TValue="Restful_Crud.Models.EventData" Query="@QueryData">
+        <SfDataManager Url="http://localhost:25255/odata" Adaptor="Adaptors.ODataV4Adaptor"></SfDataManager>
+    </ScheduleEventSettings>
+</SfSchedule>
+
+@code{
+    public Query QueryData = new Query().From("EventDatas").AddParams("Readonly", true);
+}
+```
+
+The value passed to the additional parameter is shown in the following image.
+
+![Passing Additional Parameters in Blazor Scheduler](./images/blazor-scheduler-additional-parameters.png)
+
+N> The parameters added using the `Query` property will be sent along with the data request sent to the server on every scheduler actions.
 
 ## Performing CRUD using Entity Framework
 
@@ -739,31 +773,7 @@ Now, the Scheduler can be configured using the `SfDataManager` to interact with 
 
 N> You can find the working sample [here](https://github.com/SyncfusionExamples/blazor-scheduler-crud).
 
-## Passing additional parameters to the server
 
-To send an additional custom parameter to the server-side post, make use of the `AddParams` method of `Query`. Now, assign this `Query` object with additional parameters to the `Query` property of Scheduler.
-
-```cshtml
-@using Syncfusion.Blazor
-@using Syncfusion.Blazor.Schedule
-@using Syncfusion.Blazor.Data
-
-<SfSchedule TValue="Restful_Crud.Models.EventData" Height="550px" SelectedDate="@(new DateTime(2020, 3, 11))">
-    <ScheduleEventSettings TValue="Restful_Crud.Models.EventData" Query="@QueryData">
-        <SfDataManager Url="http://localhost:25255/odata" Adaptor="Adaptors.ODataV4Adaptor"></SfDataManager>
-    </ScheduleEventSettings>
-</SfSchedule>
-
-@code{
-    public Query QueryData = new Query().From("EventDatas").AddParams("Readonly", true);
-}
-```
-
-The value passed to the additional parameter is shown in the following image.
-
-![Passing Additional Parameters in Blazor Scheduler](./images/blazor-scheduler-additional-parameters.png)
-
-N> The parameters added using the `Query` property will be sent along with the data request sent to the server on every scheduler actions.
 
 ## Scheduler CRUD actions
 
