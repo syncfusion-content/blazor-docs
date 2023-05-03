@@ -9,7 +9,7 @@ documentation: ug
 
 # Globalization in Blazor Circular Gauge Component
 
-The internationalization library provides support for formatting and parsing the number using the official [Unicode CLDR](http://cldr.unicode.org/) JSON data and also provides the `loadCldr` method to load the culture-specific CLDR JSON data. The Circular Gauge component comes with built-in internationalization support to adapt to different cultures.
+The internationalization library provides support for formatting and parsing the number using the official [Unicode CLDR](https://cldr.unicode.org/) JSON data and also provides the `loadCldr` method to load the culture-specific CLDR JSON data. The Circular Gauge component comes with built-in internationalization support to adapt to different cultures.
 
 By default, all the Blazor components are specific to the English culture ('en-US'). If you need a different culture, follow the given steps:
 
