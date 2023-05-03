@@ -105,7 +105,7 @@ The Blazor TreeView component enables the selection of specific nodes during ini
 
 ```
 
-![Select nodes through data binding](./images/blazor-treeview-select-nodes-through-data-binding.png)
+![Select nodes through data binding in Blazor TreeView](./images/blazor-treeview-select-nodes-through-data-binding.png)
 
 ## Select nodes through API
 
@@ -305,7 +305,7 @@ Here, selected all TreeView parent nodes by clicking a button. If the nodes have
 
 ```
 
-![Parent nodes](./images/blazor-treeview-parent-node-selection.png)
+![Parent nodes in Blazor TreeView](./images/blazor-treeview-parent-node-selection.png)
 
 ### Child nodes
 
@@ -412,7 +412,7 @@ Here, selected all TreeView child nodes by clicking a button. If the nodes do no
 
 ```
 
-![Child nodes](./images/blazor-treeview-child-node-selection.png)
+![Child nodes in Blazor TreeView](./images/blazor-treeview-child-node-selection.png)
 
 ## Get selected nodes
 
@@ -569,7 +569,7 @@ The Blazor TreeView component provides the capability to select specific nodes d
 
 ```
 
-![Get selected nodes](./images/blazor-treeview-get-selected-nodes.png)
+![Get selected nodes in Blazor TreeView](./images/blazor-treeview-get-selected-nodes.png)
 
 ## Select all nodes on load
 
@@ -672,7 +672,7 @@ In the Blazor TreeView component, you can select all TreeView nodes on initial r
 
 ```
 
-![Select all nodes on load](./images/blazor-treeview-select-all-nodes-onload.png)
+![Select all nodes on load in Blazor TreeView](./images/blazor-treeview-select-all-nodes-onload.png)
 
 ## Select all nodes programmatically
 
@@ -776,7 +776,7 @@ In the Blazor TreeView component, you can select all TreeView nodes using a butt
 
 ```
 
-![Select all nodes programmatically](./images/blazor-treeview-select-all-nodes-programmatically.png)
+![Select all nodes programmatically in Blazor TreeView](./images/blazor-treeview-select-all-nodes-programmatically.png)
 
 ## Select individual node programmatically
 
@@ -871,7 +871,7 @@ In the Blazor TreeView component, you can select particular TreeView nodes using
 
 ```
 
-![Select individual node programmatically](./images/blazor-treeview-select-individual-node-programmatically.png)
+![Select individual node programmatically in Blazor TreeView](./images/blazor-treeview-select-individual-node-programmatically.png)
 
 ## Retrieve indices of selected nodes
 
@@ -1043,7 +1043,7 @@ In the Blazor treeview component, you can show the index value of the selected T
 
 ```
 
-![Retrieve indices of selected nodes](./images/blazor-treeview-retrieve-indices-of-selected-nodes.png)
+![Retrieve indices of selected nodes in Blazor TreeView](./images/blazor-treeview-retrieve-indices-of-selected-nodes.png)
 
 ## Disable full row selection
 

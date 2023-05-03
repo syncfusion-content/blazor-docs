@@ -7,7 +7,7 @@ control: DropDown List
 documentation: ug
 ---
 
-# Cascading in ComboBox
+# Cascading in Blazor ComboBox
 
 A cascading ComboBox allows you to select an item from a list of options, and the options in the second ComboBox are filtered based on the selection made in the first ComboBox. This allows you to create a hierarchy of comboBox options, where the options in the child ComboBox are dependent on the selection made in the parent ComboBox.
 
