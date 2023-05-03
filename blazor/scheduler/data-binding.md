@@ -558,6 +558,48 @@ The following image represents how the parameters are passed using ODataV4 filte
 
 ![ODataV4 filter](images/blazor-odatav4-filter.jpg)
 
+### Web API adaptor
+
+You can bind Web API data to the scheduler using WebApiAdaptor. The following sample code demonstrates the way of binding remote services to the Scheduler component.
+
+```cshtml
+@using Syncfusion.Blazor
+@using Syncfusion.Blazor.Data;
+@using Syncfusion.Blazor.Schedule
+
+<SfSchedule TValue="AppointmentData" Height="550px" @bind-SelectedDate="@currentDate" Readonly="true">
+    <ScheduleEventSettings TValue="AppointmentData" >
+        <ScheduleViews>
+            <ScheduleView Option="View.Month"></ScheduleView>
+        </ScheduleViews>
+       <SfDataManager Url="https://blazor.syncfusion.com/services/production/api/schedule" Adaptor="Adaptors.WebApiAdaptor">
+       </SfDataManager>
+    </ScheduleEventSettings>
+</SfSchedule>
+
+@code {
+    DateTime currentDate = new DateTime(2023, 1, 6);
+   
+    public class AppointmentData
+    { 
+            public int Id { get; set; }
+            public string Subject { get; set; }
+            public string Location { get; set; }
+            public string Description { get; set; }
+            public DateTime StartTime { get; set; }
+            public DateTime EndTime { get; set; }
+            public Nullable<bool> IsAllDay { get; set; }
+            public string CategoryColor { get; set; }
+            public string RecurrenceRule { get; set; }
+            public Nullable<int> RecurrenceID { get; set; }
+            public Nullable<int> FollowingID { get; set; }
+            public string RecurrenceException { get; set; }
+            public string StartTimezone { get; set; }
+            public string EndTimezone { get; set; }
+    }
+}
+```
+
 ### Passing additional parameters to the server
 
 To send an additional custom parameter to the server-side post, make use of the `AddParams` method of `Query`. Now, assign this `Query` object with additional parameters to the `Query` property of Scheduler.
