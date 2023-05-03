@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Breadcrumb Templates with Blazor Breadcrumb component | Syncfusion
-description: Breadcrumb section explains how to customize the item template and separator template to the Breadcrumb items.
+description: Checkout and learn here all about templates support in Syncfusion Blazor Breadcrumb component, its elements, and more.
 platform: Blazor
 control: Breadcrumb
 documentation: ug
@@ -48,7 +48,7 @@ In the following example, shopping cart details are used as Breadcrumb items and
 </SfBreadcrumb>
 ```
 
-![Blazor Breadcrumb Component](./images/blazor-Breadcrumb-item-template.png)
+![Blazor Breadcrumb Component with item template](./images/blazor-Breadcrumb-item-template.png)
 
 ## Separator template
 
@@ -79,7 +79,7 @@ In the following example, the separators are customized with icons using [Separa
 </style>
 ```
 
-![Blazor Breadcrumb Component](./images/blazor-breadcrumb-separator-temp.png)
+![Blazor Breadcrumb Component with separator template](./images/blazor-breadcrumb-separator-temp.png)
 
 ## Customize Specific Item Template
 
@@ -147,4 +147,4 @@ The specific breadcrumb item can be customizable by adding the custom element as
 </style>
 ```
 
-![Blazor Breadcrumb Component](./images/breadcrumb-specific-item-template.png)
+![Blazor Breadcrumb Component with specific item template](./images/breadcrumb-specific-item-template.png)

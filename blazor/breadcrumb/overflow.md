@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Breadcrumb Overflow with Blazor Breadcrumb component | Syncfusion
-description: Overflow section in Blazor Breadcrumb explains how to limit the number of Breadcrumb items to be displayed.
+description: Checkout and learn here all about overflow in Syncfusion Blazor Breadcrumb component, its element, and more.
 platform: Blazor
 control: Breadcrumb
 documentation: ug
@@ -45,7 +45,7 @@ Collapsed mode shows the first and last Breadcrumb items and hides the remaining
 </SfBreadcrumb>
 ```
 
-![Blazor Breadcrumb Component](./images/breadcrumb-collapsed.png)
+![Blazor Breadcrumb Component collapsed](./images/breadcrumb-collapsed.png)
 
 ## Menu
 
@@ -70,7 +70,7 @@ Menu mode shows the number of Breadcrumb items that can be accommodated within t
 </SfBreadcrumb>
 ```
 
-![Blazor Breadcrumb Component](./images/breadcrumb-menu.png)
+![Blazor Breadcrumb Component menu](./images/breadcrumb-menu.png)
 
 ## Wrap
 
@@ -95,7 +95,7 @@ Wrap mode wraps the items to multiple lines when the Breadcrumb’s width exceed
 </SfBreadcrumb>
 ```
 
-![Blazor Breadcrumb Component](./images/breadcrumb-wrap.png)
+![Blazor Breadcrumb Component wrap](./images/breadcrumb-wrap.png)
 
 ## Scroll
 
@@ -122,7 +122,7 @@ Scroll mode shows an HTML scroll bar when the Breadcrumb’s width exceeds the c
 </SfBreadcrumb>
 ```
 
-![Blazor Breadcrumb Component](./images/breadcrumb-scroll.png)
+![Blazor Breadcrumb Component scroll](./images/breadcrumb-scroll.png)
 
 ## Hidden
 
@@ -147,7 +147,7 @@ Hidden mode shows the maximum number of items possible in the container space an
 </SfBreadcrumb>
 ```
 
-![Blazor Breadcrumb Component](./images/bread-overflow-hidden.png)
+![Blazor Breadcrumb Component hidden](./images/bread-overflow-hidden.png)
 
 ## None
 

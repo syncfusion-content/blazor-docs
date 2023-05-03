@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Breadcrumb Icons with Blazor Breadcrumb component | Syncfusion
-description: Breadcrumb allows the end user to place the icons on Breadcrumb items and navigate to other webpages while clicking the Breadcrumb items.
+description: Checkout and learn here all about icons in Syncfusion Blazor Breadcrumb component, its element, and more.
 platform: Blazor
 control: Breadcrumb
 documentation: ug
@@ -28,7 +28,7 @@ To place the font icon on the Breadcrumb item, set the [IconCss](https://help.sy
 </SfBreadcrumb>
 ```
 
-![Blazor Breadcrumb Component](./images/blazor-Breadcrumb-items.png)
+![Blazor Breadcrumb Component with font icon](./images/blazor-Breadcrumb-items.png)
 
 N> By default, the icon is positioned to the left side of the item.
 
@@ -57,7 +57,7 @@ In the Breadcrumb component, you can add images to the items using [IconCss](htt
 </style>
 ```
 
-![Blazor Breadcrumb Component](./images/image.png)
+![Blazor Breadcrumb Component with image](./images/image.png)
 
 ## Breadcrumb with SVG image
 
@@ -84,7 +84,7 @@ In the Breadcrumb component, SVG image can be added for the items using the [Ico
 </style>
 ```
 
-![Breadcrumb Sample](./images/svg.PNG)
+![Blazor Breadcrumb Component with SVG image](./images/svg.PNG)
 
 ## Icon only
 
@@ -104,7 +104,7 @@ In the following example, Breadcrumb items are demonstrated with only icons by p
 </SfBreadcrumb>
 ```
 
-![Breadcrumb Sample](./images/icon-only.PNG)
+![Blazor Breadcrumb Component with icon only](./images/icon-only.PNG)
 
 ## Show icon only for first item
 
@@ -123,4 +123,4 @@ To show icon only for the first item in the Breadcrumb component, add icons to t
 </SfBreadcrumb>
 ```
 
-![Blazor Breadcrumb Component](./images/blazor-Breadcrumb-items.png)
+![Blazor Breadcrumb Component with icon only for first item](./images/blazor-Breadcrumb-items.png)
