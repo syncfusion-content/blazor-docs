@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# How to clear the "Web-service is not listening" to error
+# How to clear the Web-service is not listening to error
 
 ![Alt text](../../pdfviewer/images/webservice.png)
 
