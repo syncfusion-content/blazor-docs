@@ -75,7 +75,7 @@ The following sample code demonstrates binding data to the DataGrid component th
 @using Syncfusion.Blazor.Grids
 
 <SfGrid TValue="EmployeeData" ID="Grid" AllowPaging="true">
-    <SfDataManager Url="https://www.controller.com/actions" Adaptor="Adaptors.UrlAdaptor"></SfDataManager>
+    <SfDataManager Url="http://controller.com/actions" Adaptor="Adaptors.UrlAdaptor"></SfDataManager>
     <GridColumns>
         <GridColumn Field=@nameof(EmployeeData.EmployeeID) TextAlign="TextAlign.Center" HeaderText="Employee ID" Width="120"></GridColumn>
         <GridColumn Field=@nameof(EmployeeData.Name) HeaderText="First Name" Width="130"></GridColumn>
