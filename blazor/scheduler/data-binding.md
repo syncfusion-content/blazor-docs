@@ -585,6 +585,143 @@ The value passed to the additional parameter is shown in the following image.
 
 N> The parameters added using the `Query` property will be sent along with the data request sent to the server on every scheduler actions.
 
+### Authorization and Authentication
+
+It is common to have authorization in the server of origin to prevent anonymous access to the data services. **SfDataManager** can consume data from such protected remote data services with the proper bearer token. The access token or bearer token can be used by **SfDataManager** in one of the following ways.
+
+* By using the pre-configured HttpClient with the access token or authentication message handler, SfDataManager can access protected remote services. When registering your HttpClient, the registration should be done before calling `AddSyncfusionBlazor()` method in **Startup.cs/Program.cs**, so that SfDataManager will not create its own HttpClient and uses the already configured HttpClient.
+* Setting access token in the default header of the HttpClient by injecting it in the page. See here for adding default headers to HttpClient.
+
+```csharp
+
+@inject HttpClient _httpClient
+
+. . . .
+
+@code {
+
+    . . .
+
+    protected override async Task OnInitializedAsync()
+    {
+        . . . .
+        _httpClient.DefaultRequestHeaders.Add("Authorization", $"Bearer {tokenValue}");
+
+        await base.OnInitializedAsync();
+    }
+}
+```
+
+* Setting the access token in the **Headers** property of the **SfDataManager**. See [here](#setting-custom-headers) for adding headers.
+
+Getting the bearer token may vary with access token providers. More information on configuring HttpClient with authentication can be found on the official page [here](https://docs.microsoft.com/en-us/aspnet/core/blazor/security/webassembly/additional-scenarios?view=aspnetcore-3.1).
+
+### Setting custom headers
+
+To add a custom headers to the data request, use the [Headers](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_Headers) property of the [SfDataManager](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Data.SfDataManager.html).
+
+The following sample code demonstrates adding custom headers to the `SfDataManager` request,
+
+```cshtml
+@using Syncfusion.Blazor
+@using Syncfusion.Blazor.Data;
+@using Syncfusion.Blazor.Schedule
+
+<SfSchedule TValue="AppointmentData" Height="550px" @bind-SelectedDate="@currentDate" Readonly="true">
+    <ScheduleEventSettings TValue="AppointmentData">
+        <ScheduleViews>
+            <ScheduleView Option="View.Month"></ScheduleView>
+        </ScheduleViews>
+        <SfDataManager Headers=@HeaderData Url="https://blazor.syncfusion.com/services/production/api/schedule" Adaptor="Adaptors.WebApiAdaptor">
+        </SfDataManager>
+    </ScheduleEventSettings>
+</SfSchedule>
+
+@code {
+    DateTime currentDate = new DateTime(2023, 1, 6);
+    private IDictionary<string, string> HeaderData = new Dictionary<string, string>();
+
+    public class AppointmentData
+    {
+        public int Id { get; set; }
+        public string Subject { get; set; }
+        public string Location { get; set; }
+        public string Description { get; set; }
+        public DateTime StartTime { get; set; }
+        public DateTime EndTime { get; set; }
+        public Nullable<bool> IsAllDay { get; set; }
+        public string CategoryColor { get; set; }
+        public string RecurrenceRule { get; set; }
+        public Nullable<int> RecurrenceID { get; set; }
+        public Nullable<int> FollowingID { get; set; }
+        public string RecurrenceException { get; set; }
+        public string StartTimezone { get; set; }
+        public string EndTimezone { get; set; }
+    }
+}
+```
+### Handling HTTP error
+
+During server interaction from the Scheduler, sometimes server-side exceptions might occur. These error messages or exception details can be acquired in client-side using the [OnActionFailure](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleEvents-1.html#Syncfusion_Blazor_Schedule_ScheduleEvents_1_OnActionFailure) event.
+
+The argument passed to the [OnActionFailure](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleEvents-1.html#Syncfusion_Blazor_Schedule_ScheduleEvents_1_OnActionFailure) event contains the error details returned from the server.
+
+The following sample code demonstrates notifying user when server-side exception has occurred,
+
+```cshtml
+@using Syncfusion.Blazor
+@using Syncfusion.Blazor.Data;
+@using Syncfusion.Blazor.Schedule
+
+<span class="error">@ErrorDetails</span>
+
+<SfSchedule TValue="AppointmentData" Height="550px" @bind-SelectedDate="@currentDate" Readonly="true">
+    <ScheduleEventSettings TValue="AppointmentData">
+        <ScheduleEvents TValue="AppointmentData" OnActionFailure="@ActionFailure"></ScheduleEvents>
+        <ScheduleViews>
+            <ScheduleView Option="View.Month"></ScheduleView>
+        </ScheduleViews>
+        <SfDataManager Url="https://some.com/invalidUrl" Adaptor=" Adaptors.WebApiAdaptor">
+        </SfDataManager>
+    </ScheduleEventSettings>
+</SfSchedule>
+
+<style>
+    .error {
+        color: red;
+    }
+</style>
+
+@code {
+    DateTime currentDate = new DateTime(2023, 1, 6);
+    public string ErrorDetails = "";
+
+    public class AppointmentData
+    {
+        public int Id { get; set; }
+        public string Subject { get; set; }
+        public string Location { get; set; }
+        public string Description { get; set; }
+        public DateTime StartTime { get; set; }
+        public DateTime EndTime { get; set; }
+        public Nullable<bool> IsAllDay { get; set; }
+        public string CategoryColor { get; set; }
+        public string RecurrenceRule { get; set; }
+        public Nullable<int> RecurrenceID { get; set; }
+        public Nullable<int> FollowingID { get; set; }
+        public string RecurrenceException { get; set; }
+        public string StartTimezone { get; set; }
+        public string EndTimezone { get; set; }
+    }
+
+    public void ActionFailure(ActionEventArgs<AppointmentData> args)
+    {
+        this.ErrorDetails = "Server exception: 404 Not found";
+        StateHasChanged();
+    }
+}
+```
+
 ## Performing CRUD using Entity Framework
 
 You need to follow the below steps to consume data from the **Entity Framework** in our Scheduler component.
