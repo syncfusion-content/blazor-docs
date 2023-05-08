@@ -17,7 +17,7 @@ N> The javascript interop files needs to be added to support the features that c
 
 You can refer the Syncfusion Blazor scripts through the CDN resources.
 
-N> From 2022 Vol1 (20.1) version, JavaScript isolation is marked as obsolete and disabled by default to refer scripts externally. Refer [Disable JavaScript isolation](https://blazor.syncfusion.com/documentation/common/adding-script-references#disable-javascript-isolation) topic to disable for earlier versions to refer scripts externally.
+N> From 2022 Vol1 (20.1) version, JavaScript isolation is marked as obsolete and disabled by default and it was completely removed in the 2023 Vol1 (21.1) version to refer scripts externally. This means that the feature is no longer available in the latest versions. Refer [Disable JavaScript isolation](https://blazor.syncfusion.com/documentation/common/adding-script-references#disable-javascript-isolation) topic to disable for earlier versions to refer scripts externally.
 
 * For **Blazor WASM App**, reference scripts in `~/wwwroot/index.html` file. 
 * For **Blazor Server App**, reference scripts in `~/Pages/_Layout.cshtml` file for `.NET 6` project and in `~/Pages/_Host.cshtml` file for `.NET Core 3.X, .NET 5 and .NET 7` project.
@@ -95,7 +95,7 @@ W> The un-versioned CDN links which always maintains latest version scripts are 
 
 You can refer the Syncfusion Blazor scripts through the NuGet package's static web assets.
 
-N> From 2022 Vol1 (20.1) version, JavaScript isolation is marked as obsolete and disabled by default to refer scripts externally. Refer [Disable JavaScript isolation](https://blazor.syncfusion.com/documentation/common/adding-script-references#disable-javascript-isolation) topic to disable for earlier versions to refer scripts externally.
+N> From 2022 Vol1 (20.1) version, JavaScript isolation is marked as obsolete and disabled by default and it was completely removed in the 2023 Vol1 (21.1) version to refer scripts externally. This means that the feature is no longer available in the latest versions. Refer [Disable JavaScript isolation](https://blazor.syncfusion.com/documentation/common/adding-script-references#disable-javascript-isolation) topic to disable for earlier versions to refer scripts externally.
 
 ### Enable static web assets usage
 
@@ -145,9 +145,9 @@ N> For **Blazor WASM App**, call `UseStaticFiles` method in **Server project** o
 
 Syncfusion Blazor components supports JavaScript isolation where the needed scripts are loaded by the component itself when its rendered. So, you don't have to reference scripts externally in application. 
 
-N> Syncfusion recommends to reference scripts using [Static Web Assets](https://blazor.syncfusion.com/documentation/common/adding-script-references#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/common/adding-script-references#cdn-reference) and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator) over JavaScript isolation approach for better loading performance of the blazor application. 
+N> The [Built-in JavaScript isolation](https://blazor.syncfusion.com/documentation/common/adding-script-references#javascript-isolation) feature has been marked as deprecated in 2022 Vol1 release and it has been completely removed in the 2023 Vol1 (21.1) release, since loading scripts externally provides better performance over JavaScript isolation approach. This means that the JavaScript isolation feature is no longer available in the latest versions. If you are still using it, we recommend loading scripts externally via [CDN](https://blazor.syncfusion.com/documentation/common/adding-script-references#cdn-reference), [Static Web Assets](https://blazor.syncfusion.com/documentation/common/adding-script-references#static-web-assets) and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator).
 
-From 2022 Vol1 (20.1) version version, JavaScript isolation is marked as obsolete and disabled by default. You can enable JavaScript isolation by following below steps,
+If you are using `20.*` and before release versions, you can enable JavaScript isolation by following steps,
 
 **Blazor Server App**
 
@@ -240,9 +240,9 @@ namespace WebApplication1
 
 ## Disable JavaScript isolation
 
-N> From 2022 Vol1 (20.1) version version, JavaScript isolation is marked as obsolete and disabled by default. You don't have to make below additional changes.
+N> From 2022 Vol1 (20.1) version, JavaScript isolation is marked as obsolete and disabled by default and it has been completely removed in the 2023 Vol1 (21.1) release, since loading scripts externally provides better performance over JavaScript isolation approach. This means that the JavaScript isolation feature is no longer available in the latest (21.*) versions. You don't have to make below additional changes.
 
-The Syncfusion Blazor components supports to refer scripts externally at the application-end by disabling default JavaScript isolation approach for better initial loading performance which explained in the previous section. You can disable JS isolation by setting [IgnoreScriptIsolation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.GlobalOptions.html#Syncfusion_Blazor_GlobalOptions_IgnoreScriptIsolation) as `true` while adding Syncfusion blazor service using `AddSyncfusionBlazor()`. 
+The Syncfusion Blazor components supports to refer scripts externally at the application-end by disabling default JavaScript isolation approach for better initial loading performance which explained in the previous section. If you are using 20.* and before release versions, you can disable JS isolation by setting [IgnoreScriptIsolation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.GlobalOptions.html#Syncfusion_Blazor_GlobalOptions_IgnoreScriptIsolation) as `true` while adding Syncfusion blazor service using `AddSyncfusionBlazor()`. 
 
 ### Blazor Server App
 

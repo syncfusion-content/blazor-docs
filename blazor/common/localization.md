@@ -78,7 +78,7 @@ Register the `ISyncfusionStringLocalizer` implementation to localize the Syncfus
 {% highlight c# tabtitle="C#" hl_lines="4" %}
 
 ...
-builder.Services.AddSyncfusionBlazor(options => { options.IgnoreScriptIsolation = true; });
+builder.Services.AddSyncfusionBlazor();
 // Register the locale service to localize the  SyncfusionBlazor components.
 builder.Services.AddSingleton(typeof(ISyncfusionStringLocalizer), typeof(SyncfusionLocalizer));
 ...
@@ -204,7 +204,7 @@ builder.Services.AddServerSideBlazor();
 builder.Services.AddSingleton<WeatherForecastService>();
 builder.Services.AddControllers();
 
-builder.Services.AddSyncfusionBlazor(options => { options.IgnoreScriptIsolation = true; });
+builder.Services.AddSyncfusionBlazor();
 //Register the Syncfusion locale service to localize Syncfusion Blazor components.
 builder.Services.AddSingleton(typeof(ISyncfusionStringLocalizer), typeof(SyncfusionLocalizer));
 
@@ -245,7 +245,7 @@ public class Startup
         services.AddControllers();
         services.AddServerSideBlazor();
         services.AddSingleton<WeatherForecastService>();
-        services.AddSyncfusionBlazor(options => { options.IgnoreScriptIsolation = true; });
+        services.AddSyncfusionBlazor();
         //Register the Syncfusion locale service to localize Syncfusion Blazor components.
         services.AddSingleton(typeof(ISyncfusionStringLocalizer), typeof(SyncfusionLocalizer));
         services.Configure<RequestLocalizationOptions>(options =>
@@ -497,7 +497,7 @@ using System.Globalization;
 
 ...
 
-builder.Services.AddSyncfusionBlazor(options => { options.IgnoreScriptIsolation = true; });
+builder.Services.AddSyncfusionBlazor();
 builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
 //Register the Syncfusion locale service to localize Syncfusion Blazor components.
 builder.Services.AddSingleton(typeof(ISyncfusionStringLocalizer), typeof(SyncfusionLocalizer));
@@ -536,7 +536,7 @@ namespace SyncfusionWasmLocalization
         public static async Task Main(string[] args)
         {
             ...
-            builder.Services.AddSyncfusionBlazor(options => { options.IgnoreScriptIsolation = true; });
+            builder.Services.AddSyncfusionBlazor();
             //Register the Syncfusion locale service to localize Syncfusion Blazor components.
             builder.Services.AddSingleton(typeof(ISyncfusionStringLocalizer), typeof(SyncfusionLocalizer));
 
