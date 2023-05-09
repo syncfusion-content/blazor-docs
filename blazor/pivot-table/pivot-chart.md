@@ -1359,4 +1359,4 @@ In the following code sample, printing can be done using an external button name
 
 ![Printing in Blazor PivotChart](images/blazor-pivotchart-printing.png)
 
-N> You can also explore the [Blazor Pivot Table example](https://blazor.syncfusion.com/demos/pivot-table/default-functionalities?theme=bootstrap4) to know how to render and configure the pivot table.
+N> You can also explore the [Blazor Pivot Table example](https://blazor.syncfusion.com/demos/pivot-table/default-functionalities?theme=bootstrap5) to know how to render and configure the pivot table.

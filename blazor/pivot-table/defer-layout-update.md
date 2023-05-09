@@ -121,4 +121,4 @@ N> To make field list interact with pivot table, you need to use the **UpdateVie
 
 ![Blazor PivotTable with Defer Static Update](images/blazor-pivottable-defer-static-update.png)
 
-N> You can also explore the [Blazor Pivot Table example](https://blazor.syncfusion.com/demos/pivot-table/default-functionalities?theme=bootstrap4) to know how to render and configure the pivot table.
+N> You can also explore the [Blazor Pivot Table example](https://blazor.syncfusion.com/demos/pivot-table/default-functionalities?theme=bootstrap5) to know how to render and configure the pivot table.
