@@ -721,6 +721,207 @@ The following sample code demonstrates notifying user when server-side exception
     }
 }
 ```
+## Load on demand
+
+In the Scheduler, there is an option to implement data loading on demand, which helps minimize the amount of data transmitted over the network, especially when working with large volumes of data.This can be achieved by filtering appointments on the server side based on  start date and end date.
+
+The following code example describes the behavior of the Load on demand using custom adaptor.
+
+{% tabs %}
+
+{% highlight razor %}
+
+@using Syncfusion.Blazor.Schedule
+@using Syncfusion.Blazor.Data
+
+@using syncfusion_blazor_app.Data
+
+@inject IJSRuntime Js
+
+<SfSchedule @ref="AvailabilityScheduleRef" TValue="AppointmentData" Width="100%" Height="600px" @bind-SelectedDate="@SelectedDate">
+    <ScheduleViews>
+        <ScheduleView Option="View.Day"></ScheduleView>
+        <ScheduleView Option="View.Week"></ScheduleView>
+        <ScheduleView Option="View.WorkWeek"></ScheduleView>
+        <ScheduleView Option="View.Month"></ScheduleView>
+        <ScheduleView Option="View.Agenda"></ScheduleView>
+    </ScheduleViews>
+    <ScheduleEventSettings TValue="AppointmentData" Query="@QueryData">
+        <SfDataManager AdaptorInstance="@typeof(AppointmentDataAdaptor)" Adaptor="Adaptors.CustomAdaptor">
+        </SfDataManager>
+    </ScheduleEventSettings>
+</SfSchedule>
+
+@code {
+    public static string UserID = "1";
+    public Query QueryData = new Query().From("AppointmentDatas");
+    SfSchedule<AppointmentData>? AvailabilityScheduleRef;
+    DateTime SelectedDate { get; set; } = new DateTime(2023, 5, 10);
+}
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+using Syncfusion.Blazor;
+using Syncfusion.Blazor.Data;
+
+namespace syncfusion_blazor_app.Data {
+    public class AppointmentDataAdaptor : DataAdaptor {
+        private readonly AppointmentDataService _appService;
+        public AppointmentDataAdaptor(AppointmentDataService appService) {
+            _appService = appService;
+        }
+
+        List<AppointmentData>? EventData;
+        public override async Task<object> ReadAsync(DataManagerRequest dataManagerRequest, string key = null) {
+            await Task.Delay(100);//To mimic asynchronous operation, we delayed this operation using Task.Delay
+            System.Collections.Generic.IDictionary<string, object> Params = dataManagerRequest.Params;
+            DateTime start =  (DateTime)Params["StartDate"];
+            DateTime end = (DateTime)Params["EndDate"];
+            EventData = await _appService.Get(start, end);
+            return dataManagerRequest.RequiresCounts ? new DataResult() { Result = EventData, Count = EventData.Count() } : EventData;
+        }
+        public async override Task<object> InsertAsync(DataManager dataManager, object data, string key) {
+            await Task.Delay(100); //To mimic asynchronous operation, we delayed this operation using Task.Delay
+            await _appService.Insert(data as AppointmentData);
+            return data;
+        }
+        public async override Task<object> UpdateAsync(DataManager dataManager, object data, string keyField, string key) {
+            await Task.Delay(100); //To mimic asynchronous operation, we delayed this operation using Task.Delay
+            await _appService.Update(data as AppointmentData);
+            return data;
+        }
+        public async override Task<object> RemoveAsync(DataManager dataManager, object data, string keyField, string key) //triggers on appointment deletion through public method DeleteEvent
+        {
+            await Task.Delay(100); //To mimic asynchronous operation, we delayed this operation using Task.Delay
+            var app = await _appService.GetByID((int)data);
+            await _appService.Delete(app);
+            return data;
+        }
+        public async override Task<object> BatchUpdateAsync(DataManager dataManager, object changedRecords, object addedRecords, object deletedRecords, string keyField, string key, int? dropIndex) {
+            await Task.Delay(100); //To mimic asynchronous operation, we delayed this operation using Task.Delay
+            object records = deletedRecords;
+            List<AppointmentData>? deleteData = deletedRecords as List<AppointmentData>;
+            if(deleteData != null) {
+                foreach (var data in deleteData) {
+                    await _appService.Delete(data as AppointmentData);
+                }
+            }
+            List<AppointmentData>? addData = addedRecords as List<AppointmentData>;
+            if(addData != null) {
+                foreach (var data in addData) {
+                    await _appService.Insert(data as AppointmentData);
+                    records = addedRecords;
+                }
+            }
+            List<AppointmentData>? updateData = changedRecords as List<AppointmentData>;
+            if (updateData != null) {
+                foreach (var data in updateData) {
+                    await _appService.Update(data as AppointmentData);
+                    records = changedRecords;
+                }
+            }
+            return records;
+        }
+    }
+}
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using Syncfusion.Blazor;
+using Microsoft.EntityFrameworkCore;
+
+namespace syncfusion_blazor_app.Data
+{
+    public class AppointmentDataService
+    {
+        private readonly AppointmentDataContext _appointmentDataContext;
+
+        public AppointmentDataService(AppointmentDataContext appDBContext)
+        {
+            _appointmentDataContext = appDBContext;
+        }
+
+        public async Task<List<AppointmentData>> Get(DateTime StartDate, DateTime EndDate)
+        {
+            return await _appointmentDataContext.AppointmentDatas.Where(evt => evt.StartTime >= StartDate && evt.EndTime <= EndDate).ToListAsync();
+        }
+
+        public async Task Insert(AppointmentData appointment)
+        {
+            var app = new AppointmentData();
+            app.Id = appointment.Id;
+            app.UserID = appointment.UserID;
+            app.Subject = appointment.Subject;
+            app.StartTime = appointment.StartTime;
+            app.EndTime = appointment.EndTime;
+            app.IsAllDay = appointment.IsAllDay;
+            app.Location = appointment.Location;
+            app.Description = appointment.Description;
+            app.RecurrenceRule = appointment.RecurrenceRule;
+            app.RecurrenceID = appointment.RecurrenceID;
+            app.RecurrenceException = appointment.RecurrenceException;
+            app.StartTimezone = appointment.StartTimezone;
+            app.EndTimezone = appointment.EndTimezone;
+            app.IsReadOnly = appointment.IsReadOnly;
+            await _appointmentDataContext.AppointmentDatas.AddAsync(app);
+            await _appointmentDataContext.SaveChangesAsync();
+        }
+
+        public async Task<AppointmentData> GetByID(int Id)
+        {
+            var app = await _appointmentDataContext.AppointmentDatas.FirstAsync(c => c.Id == Id);
+            return app;
+        }
+
+        public async Task Update(AppointmentData appointment)
+        {
+            var app = await _appointmentDataContext.AppointmentDatas.FirstAsync(c => c.Id == appointment.Id);
+
+            if (app != null)
+            {
+                app.UserID = appointment.UserID;
+                app.Subject = appointment.Subject;
+                app.StartTime = appointment.StartTime;
+                app.EndTime = appointment.EndTime;
+                app.IsAllDay = appointment.IsAllDay;
+                app.Location = appointment.Location;
+                app.Description = appointment.Description;
+                app.RecurrenceRule = appointment.RecurrenceRule;
+                app.RecurrenceID = appointment.RecurrenceID;
+                app.RecurrenceException = appointment.RecurrenceException;
+                app.StartTimezone = appointment.StartTimezone;
+                app.EndTimezone = appointment.EndTimezone;
+                app.IsReadOnly = appointment.IsReadOnly;
+
+                _appointmentDataContext.AppointmentDatas?.Update(app);
+                await _appointmentDataContext.SaveChangesAsync();
+            }
+        }
+
+        public async Task Delete(AppointmentData appointment)
+        {
+            var app = await _appointmentDataContext.AppointmentDatas.FirstAsync(c => c.Id == appointment.Id);
+
+            if (app != null)
+            {
+                _appointmentDataContext.AppointmentDatas?.Remove(app);
+                await _appointmentDataContext.SaveChangesAsync();
+            }
+        }
+    }
+}
+
+{% endhighlight %}
+
+{% endtabs %}
 
 ## Performing CRUD using Entity Framework
 
