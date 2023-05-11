@@ -923,6 +923,113 @@ namespace syncfusion_blazor_app.Data
 
 {% endtabs %}
 
+## SQL Server data binding(SQL Client)
+
+The following examples demonstrate how to consume data from SQL Server using Microsoft SqlClient and bound it to Blazor Scheduler. You can achieve this requirement by using [Custom Adaptor](./custom-binding/#custom-adaptor-as-component).
+
+Before the implementation, add required NuGet like **Microsoft.Data.SqlClient** and **Syncfusion.Blazor** in your application. In the following sample, Custom Adaptor can be created as a Component. In custom adaptor **Read** method, you can get filter appointments using **DataManagerRequest**.
+
+Based on the DataManagerRequest, you can form SQL query string (to perform paging) and execute the SQL query and retrieve the data from database using **SqlDataAdapter**. The Fill method of the **DataAdapter** is used to populate a **DataSet** with the results of the **SelectCommand** of the DataAdapter, then convert the DataSet into List and return **Result** and **Count** pair object in **Read** method to bind the data to Scheduler.
+
+```cshtml
+@using Syncfusion.Blazor.Schedule
+@using Syncfusion.Blazor.Data
+@using syncfusion_blazor_app.Data
+@inject IJSRuntime Js
+@using syncfusion_blazor_app.Shared
+
+<SfSchedule TValue="AppointmentData" Width="100%" Height="600px" @bind-SelectedDate="@SelectedDate">
+    <ScheduleViews>
+        <ScheduleView Option="View.Day"></ScheduleView>
+        <ScheduleView Option="View.Week"></ScheduleView>
+        <ScheduleView Option="View.WorkWeek"></ScheduleView>
+        <ScheduleView Option="View.Month"></ScheduleView>
+        <ScheduleView Option="View.Agenda"></ScheduleView>
+    </ScheduleViews>
+    <ScheduleEventSettings TValue="AppointmentData">
+        <SfDataManager Adaptor="Adaptors.CustomAdaptor">
+            <CustomAdaptorComponent></CustomAdaptorComponent>
+        </SfDataManager>
+    </ScheduleEventSettings>
+</SfSchedule>
+
+@code {
+    DateTime SelectedDate { get; set; } = new DateTime(2023, 5, 10);
+    public static List<AppointmentData> Appointment { get; set; }
+}
+```
+
+```cshtml
+@using Syncfusion.Blazor;
+@using Syncfusion.Blazor.Data;
+@using static syncfusion_blazor_app.Pages.Sql;
+@using Microsoft.Data.SqlClient;
+@using System.Data;
+@using System.IO;
+@using Microsoft.AspNetCore.Hosting;
+@using System.Text.Json.Serialization;
+@using syncfusion_blazor_app.Data;
+@inject IHostingEnvironment _env
+
+@inherits DataAdaptor<AppointmentData>
+
+<CascadingValue Value="@this">
+    @ChildContent
+</CascadingValue>
+
+@code {
+    [Parameter]
+    [JsonIgnore]
+    public RenderFragment ChildContent { get; set; }
+
+    public static DataSet CreateCommand(string queryString, string connectionString)
+    {
+        using (SqlConnection connection = new SqlConnection(connectionString))
+        {
+            SqlDataAdapter adapter = new SqlDataAdapter(queryString, connection);
+            DataSet dt = new DataSet();
+            try
+            {
+                connection.Open();
+                adapter.Fill(dt); // Using sqlDataAdapter, we process the query string and fill the data into the dataset
+            }
+            catch (SqlException se)
+            {
+                Console.WriteLine(se.ToString());
+            }
+            finally
+            {
+                connection.Close();
+            }
+            return dt;
+        }
+    }
+
+    // Performs data Read operation
+    public override object Read(DataManagerRequest DataManagerReq, string Key = null)
+    {
+        string AppData = _env.ContentRootPath;
+        string DatabasePath = Path.Combine(AppData, "App_Data\\AppointmentDataDB.mdf");
+        var connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=" + Directory.GetCurrentDirectory() + "\\AppData\\AppointmentDataDB.mdf;Integrated Security=True";
+        string QueryStr = "SELECT * FROM dbo.AppointmentDatas";
+        DataSet Data = CreateCommand(QueryStr, connectionString);
+        Appointment = Data.Tables[0].AsEnumerable().Select(r => new AppointmentData
+            {
+                Id = r.Field<int>("Id"),
+                Subject = r.Field<string>("Subject"),
+                StartTime = r.Field<DateTime>("StartTime"),
+                EndTime = r.Field<DateTime>("EndTime")
+            }).ToList();  // Here, we convert dataset into list
+        IEnumerable<AppointmentData> DataSource = Appointment;
+        SqlConnection Con = new SqlConnection(connectionString);
+        Con.Open();
+        SqlCommand Cmd = new SqlCommand("SELECT COUNT(*) FROM dbo.AppointmentDatas", Con);
+        Int32 Count = (Int32)Cmd.ExecuteScalar();
+        return DataManagerReq.RequiresCounts ? new DataResult() { Result = DataSource, Count = Count } : (object)DataSource;
+    }
+}
+```
+
 ## Performing CRUD using Entity Framework
 
 You need to follow the below steps to consume data from the **Entity Framework** in our Scheduler component.
