@@ -723,7 +723,7 @@ The following sample code demonstrates notifying user when server-side exception
 ```
 ## Load on demand
 
-In the Scheduler, there is an option to implement data loading on demand, which helps minimize the amount of data transmitted over the network, especially when working with large volumes of data.This can be achieved by filtering appointments on the server side based on  start date and end date.
+In the Scheduler, there is an option to implement data loading on demand, which helps minimize the amount of data transmitted over the network, especially when working with large volumes of data.This can be achieved by filtering appointments on the server side based on start date and end date.
 
 The following code example describes the behavior of the Load on demand using custom adaptor.
 
