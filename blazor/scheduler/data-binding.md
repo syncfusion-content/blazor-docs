@@ -1110,6 +1110,8 @@ Now, the Scheduler can be configured using the `SfDataManager` to interact with 
 }
 ```
 
+N> You can find the working sample on Entity framework [here](https://github.com/SyncfusionExamples/blazor-scheduler-crud-using-restful-service).
+
 ## Configuring Scheduler with Google API service
 
 We have assigned the dataSource that is retrieved from the Google services within the `OnInitializedAsync` method. And, the CRUD actions are performed within the `ActionCompleted` event.
