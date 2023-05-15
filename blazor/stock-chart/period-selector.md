@@ -17,7 +17,7 @@ The period selector allows to select a range with specified periods. By default 
 
 <!-- markdownlint-disable MD034 -->
 
-Periods is an array of objects that allows users to specify the range of [Periods](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartModel.html#Syncfusion_Blazor_Charts_StockChartModel_Periods). The `Interval` property specifies the count value of the button, and the `Text` property specifies the text to be displayed on button. The `IntervalType` property allows users to customize the intervals of the buttons. The `IntervalType` property supports the following interval types:
+Periods is an array of objects that allows users to specify the range of [Periods](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartPeriods.html). The `Interval` property specifies the count value of the button, and the `Text` property specifies the text to be displayed on button. The `IntervalType` property allows users to customize the intervals of the buttons. The `IntervalType` property supports the following interval types:
 
 * Auto
 * Years
@@ -92,7 +92,7 @@ Periods is an array of objects that allows users to specify the range of [Period
 
 ## Visibility of period selector
 
-The [EnablePeriodSelector](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartModel.html#Syncfusion_Blazor_Charts_StockChartModel_EnablePeriodSelector) property allows users to toggle the visibility of period selector.
+The [EnablePeriodSelector](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.PeriodSelector.html) property allows users to toggle the visibility of period selector.
 
 ```cshtml
 
