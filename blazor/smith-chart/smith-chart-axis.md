@@ -7,7 +7,7 @@ control: Smith Chart
 documentation: ug
 ---
 
-# Axis in Blazor Smith Chart Component
+# Axis in the Blazor Smith Chart Component.
 
 Smith Chart supports two different types of axes. They are:
 * **Horizontal Axis** - The axis is drawn as a straight line in the horizontal direction of the Smith Chart.
