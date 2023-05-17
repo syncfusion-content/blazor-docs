@@ -129,7 +129,7 @@ W> If you prefer the above new standard (individual NuGet packages), then skip t
 
 ## Create a Blazor Server project in Visual Studio with Razor Class Library (RCL)
 
-Refer to the [Blazor Tooling documentation](https://docs.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-5.0&pivots=windows) to create a new Blazor Server-Side Application using Visual Studio.
+Refer to the [Blazor Tooling documentation](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-5.0&pivots=windows) to create a new Blazor Server-Side Application using Visual Studio.
 
 ### Configure the Razor Class Library and Blazor Server Application
 
@@ -249,7 +249,7 @@ Refer to the [Blazor Tooling documentation](https://docs.microsoft.com/en-us/asp
 
 ## Create a Blazor WebAssembly project in Visual Studio with Razor Class Library (RCL)
 
-Refer to the [Blazor Tooling documentation](https://docs.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-5.0&pivots=windows) to create a new Blazor Server-Side Application using Visual Studio.
+Refer to the [Blazor Tooling documentation](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-5.0&pivots=windows) to create a new Blazor Server-Side Application using Visual Studio.
 
 ### Configure the Razor Class Library and Blazor WebAssembly Application
 
