@@ -318,7 +318,7 @@ After initialization, populate the MultiSelect with data using the [DataSource](
 
 By default, the width of the popup list automatically adjusts according to the MultiSelect input element's width, and the height auto adjust's according to the height of the popup list items.
 
-The height and width of the popup list can also be customized using the [PopupHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMultiSelect-1.html#Syncfusion_Blazor_DropDowns_SfMultiSelect_1_PopupHeight) and [PopupWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMultiSelect-1.html#Syncfusion_Blazor_DropDowns_SfMultiSelect_1_PopupWidth) properties respectively.
+The height and width of the popup list can also be customized using the [PopupHeight](https://help.syncfusion.com/cr/blazor#Syncfusion_Blazor_DropDowns_SfMultiSelect_1_PopupHeight/Syncfusion.Blazor.html) and [PopupWidth](https://help.syncfusion.com/cr/blazor#Syncfusion_Blazor_DropDowns_SfMultiSelect_1_PopupWidth/Syncfusion.Blazor.html) properties respectively.
 
 {% tabs %}
 {% highlight razor %}
