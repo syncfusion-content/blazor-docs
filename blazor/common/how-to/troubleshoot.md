@@ -63,7 +63,7 @@ documentation: ug
 
     Update your dotnet SDK/hosting bundle with the latest version in your production/hosting server machine.
 
-    Install the latest dotnet SDK/hosting bundle from [here](https://dotnet.microsoft.com/download/dotnet-core/) in your hosting machine to resolve this.
+    Install the latest dotnet SDK/hosting bundle from [here](https://dotnet.microsoft.com/en-us/download/dotnet) in your hosting machine to resolve this.
 
 * **The type name 'Shared' does not exist in the type 'SyncfusionBlazor'**
 
