@@ -17,17 +17,17 @@ The size of the [Blazor Sparkline Chart](https://www.syncfusion.com/blazor-compo
 @using Syncfusion.Blazor.Charts
 
 <div style="width:650px; height:350px;">
-    <SfSparkline XName="Year" YName="Population" TValue="PopulationReport" DataSource="PopulationData"></SfSparkline>
+    <SfSparkline DataSource="PopulationData" TValue="PopulationReport" XName="Year" YName="Population" Width="200px" Height="150px" Type="SparklineType.Line">
+    </SfSparkline>
 </div>
 
 @code {
     public class PopulationReport
     {
-        public int Year;
-        public int Population;
+        public int Year { get; set; }
+        public int Population { get; set; }
     };
-    
-    private List<PopulationReport> populationData = new List<PopulationReport> {
+    private List<PopulationReport> PopulationData = new List<PopulationReport> {
         new  PopulationReport { Year= 2005, Population= 20090440 },
         new  PopulationReport { Year= 2006, Population= 20264080 },
         new  PopulationReport { Year= 2007, Population= 20434180 },
@@ -55,13 +55,28 @@ The Sparkline Chart can be sized in pixels.
 ```cshtml
 @using Syncfusion.Blazor.Charts
 
-<SfSparkline XName="Year"
-              YName="Population"
-              TValue="PopulationReport"
-              DataSource="PopulationData"
-              Width="350px"
-              Height="150px">
+<SfSparkline DataSource="PopulationData" TValue="PopulationReport" XName="Year" YName="Population" Width="350px" Height="150px" Type="SparklineType.Line">
 </SfSparkline>
+
+@code {
+    public class PopulationReport
+    {
+        public int Year { get; set; }
+        public int Population { get; set; }
+    };
+    private List<PopulationReport> PopulationData = new List<PopulationReport> {
+        new  PopulationReport { Year= 2005, Population= 20090440 },
+        new  PopulationReport { Year= 2006, Population= 20264080 },
+        new  PopulationReport { Year= 2007, Population= 20434180 },
+        new  PopulationReport { Year= 2008, Population= 21007310 },
+        new  PopulationReport { Year= 2009, Population= 21262640 },
+        new  PopulationReport { Year= 2010, Population= 21515750 },
+        new  PopulationReport { Year= 2011, Population= 21766710 },
+        new  PopulationReport { Year= 2012, Population= 22015580 },
+        new  PopulationReport { Year= 2013, Population= 22262500 },
+        new  PopulationReport { Year= 2014, Population= 22507620 }
+    };
+}
 ```
 
 N> Refer to the [code block](#size-for-the-container) to know about the property value of the `populationData`.
@@ -76,14 +91,29 @@ By setting values in percentage, the Sparkline Chart gets their dimension with r
 @using Syncfusion.Blazor.Charts
 
 <div style="width:650px; height:350px;">
-    <SfSparkline XName="Year"
-                  YName="Population"
-                  TValue="PopulationReport"
-                  DataSource="PopulationData"
-                  Width="50%"
-                  Height="80%">
+    <SfSparkline DataSource="PopulationData" TValue="PopulationReport" XName="Year" YName="Population" Width="50%" Height="80%" Type="SparklineType.Line">
     </SfSparkline>
 </div>
+
+@code {
+    public class PopulationReport
+    {
+        public int Year { get; set; }
+        public int Population { get; set; }
+    };
+    private List<PopulationReport> PopulationData = new List<PopulationReport> {
+        new  PopulationReport { Year= 2005, Population= 20090440 },
+        new  PopulationReport { Year= 2006, Population= 20264080 },
+        new  PopulationReport { Year= 2007, Population= 20434180 },
+        new  PopulationReport { Year= 2008, Population= 21007310 },
+        new  PopulationReport { Year= 2009, Population= 21262640 },
+        new  PopulationReport { Year= 2010, Population= 21515750 },
+        new  PopulationReport { Year= 2011, Population= 21766710 },
+        new  PopulationReport { Year= 2012, Population= 22015580 },
+        new  PopulationReport { Year= 2013, Population= 22262500 },
+        new  PopulationReport { Year= 2014, Population= 22507620 }
+    };
+}
 ```
 
 N> Refer to the [code block](#size-for-the-container) to know about the property value of the `populationData`.
