@@ -13,7 +13,7 @@ Annotations are used to mark a specific area of interest in the Circular Gauge w
 
 ## Customization
 
-You can place any custom element on the axis area using [ContentTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeAnnotation.html#Syncfusion_Blazor_CircularGauge_CircularGaugeAnnotation_ContentTemplate) in the [CircularGaugeAnnotation](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeAnnotation.html).
+You can place any custom element on the axis area using [ContentTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeAnnotation.html#Syncfusion_Blazor_CircularGauge_CircularGaugeAnnotation_ContentTemplate) in the [CircularGaugeAnnotation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeAnnotation.html).
 
 ```cshtml
 @using Syncfusion.Blazor.CircularGauge
@@ -93,7 +93,7 @@ The radius of an annotation takes values either in pixel or in percentage. By se
 
 ## Multiple annotations
 
-Using [CircularGaugeAnnotation](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeAnnotation.html), you can add multiple annotations to the circular gauge and each annotation content can be customized separately.
+Using [CircularGaugeAnnotation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeAnnotation.html), you can add multiple annotations to the circular gauge and each annotation content can be customized separately.
 
 ```cshtml
 @using Syncfusion.Blazor.CircularGauge
