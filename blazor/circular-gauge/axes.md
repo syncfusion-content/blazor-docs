@@ -103,9 +103,9 @@ By setting value in percentage, Circular Gauge gets its dimension with respect t
 
 ## Ticks
 
-You can customize the [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeTickSettings.html#Syncfusion_Blazor_CircularGauge_CircularGaugeTickSettings_Height), [Color](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeTickSettings.html#Syncfusion_Blazor_CircularGauge_CircularGaugeTickSettings_Color), and [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeTickSettings.html#Syncfusion_Blazor_CircularGauge_CircularGaugeTickSettings_Width) of major ticks and minor ticks using the [CircularGaugeAxisMajorTicks](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeAxisMajorTicks.html) and [CircularGaugeAxisMinorTicks](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeAxisMinorTicks.html) tags.
+You can customize the [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeTickSettings.html#Syncfusion_Blazor_CircularGauge_CircularGaugeTickSettings_Height), [Color](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeTickSettings.html#Syncfusion_Blazor_CircularGauge_CircularGaugeTickSettings_Color), and [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeTickSettings.html#Syncfusion_Blazor_CircularGauge_CircularGaugeTickSettings_Width) of major ticks and minor ticks using the [CircularGaugeAxisMajorTicks](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeAxisMajorTicks.html) and [CircularGaugeAxisMinorTicks](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeAxisMinorTicks.html) tags.
 
-By default, [Interval](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeTickSettings.html#Syncfusion_Blazor_CircularGauge_CircularGaugeTickSettings_Interval) for [CircularGaugeAxisMajorTicks](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeAxisMajorTicks.html) will be calculated automatically. You can customize the interval for major ticks and minor ticks using the [Interval](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeTickSettings.html#Syncfusion_Blazor_CircularGauge_CircularGaugeTickSettings_Interval) property.
+By default, [Interval](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeTickSettings.html#Syncfusion_Blazor_CircularGauge_CircularGaugeTickSettings_Interval) for [CircularGaugeAxisMajorTicks](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeAxisMajorTicks.html) will be calculated automatically. You can customize the interval for major ticks and minor ticks using the [Interval](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeTickSettings.html#Syncfusion_Blazor_CircularGauge_CircularGaugeTickSettings_Interval) property.
 
 ```cshtml
 @using Syncfusion.Blazor.CircularGauge
@@ -130,7 +130,7 @@ The minor ticks and major ticks can be positioned using the [Offset](https://hel
 
 * The [Offset](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeTickSettings.html#Syncfusion_Blazor_CircularGauge_CircularGaugeTickSettings_Offset) defines the distance between the axis and ticks. By default, offset value is 0.
 
-* The [Position](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.CircularGauge.Position.html) will place the ticks on the axis. By default, ticks will be placed inside the axis. Its possible values are 'Position.Inside', 'Position.Outside', and 'Position.Cross'.
+* The [Position](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.Position.html) will place the ticks on the axis. By default, ticks will be placed inside the axis. Its possible values are 'Position.Inside', 'Position.Outside', and 'Position.Cross'.
 
 ```cshtml
 @using Syncfusion.Blazor.CircularGauge
@@ -157,7 +157,7 @@ The minor ticks and major ticks can be positioned using the [Offset](https://hel
 
 ## Labels
 
-The labels of an axis can be customized using the [CircularGaugeAxisLabelFont](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeAxisLabelFont.html) tag in [CircularGaugeAxisLabelStyle](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeAxisLabelStyle.html) option.
+The labels of an axis can be customized using the [CircularGaugeAxisLabelFont](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeAxisLabelFont.html) tag in [CircularGaugeAxisLabelStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeAxisLabelStyle.html) option.
 
 ```cshtml
 @using Syncfusion.Blazor.CircularGauge
@@ -220,7 +220,7 @@ The labels can be swept along the axis angle by enabling the [AutoAngle](https:/
 
 ### Smart labels
 
-When an axis makes a complete circle, then the first and last labels of the axis will overlap with each other. So, you need to either hide first or last label using the [HiddenLabel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeAxisLabelStyle.html#Syncfusion_Blazor_CircularGauge_CircularGaugeAxisLabelStyle_HiddenLabel) property. When 'HiddenLabel' value is [First](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.CircularGauge.HiddenLabel.html), the first label will be hidden and when the 'HiddenLabel' value is [Last](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.CircularGauge.HiddenLabel.html), the last label will be hidden.
+When an axis makes a complete circle, then the first and last labels of the axis will overlap with each other. So, you need to either hide first or last label using the [HiddenLabel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeAxisLabelStyle.html#Syncfusion_Blazor_CircularGauge_CircularGaugeAxisLabelStyle_HiddenLabel) property. When 'HiddenLabel' value is [First](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.HiddenLabel.html), the first label will be hidden and when the 'HiddenLabel' value is [Last](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.HiddenLabel.html), the last label will be hidden.
 
 ```cshtml
 @using Syncfusion.Blazor.CircularGauge
@@ -251,7 +251,7 @@ When an axis makes a complete circle, then the first and last labels of the axis
 
 ### Label format
 
-The axis labels can be formatted using the [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeAxisLabelStyle.html#Syncfusion_Blazor_CircularGauge_CircularGaugeAxisLabelStyle_Format) property in [CircularGaugeAxisLabelStyle](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeAxisLabelStyle.html), it supports all globalize format.
+The axis labels can be formatted using the [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeAxisLabelStyle.html#Syncfusion_Blazor_CircularGauge_CircularGaugeAxisLabelStyle_Format) property in [CircularGaugeAxisLabelStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeAxisLabelStyle.html), it supports all globalize format.
 
 ```cshtml
 @using Syncfusion.Blazor.CircularGauge
@@ -383,7 +383,7 @@ When the axis labels overlap with each other, you can hide the intersected label
 
 ## Axis direction
 
-You can change the axis direction of the circular gauge using [Direction](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.CircularGauge.GaugeDirection.html) property. Following axis directions are available in the circular gauge.
+You can change the axis direction of the circular gauge using [Direction](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.GaugeDirection.html) property. Following axis directions are available in the circular gauge.
 
 * ClockWise
 * AntiClockWise

@@ -21,7 +21,7 @@ This articles provides a step-by-step instructions for building Blazor WebAssemb
 
 You can create **Blazor WebAssembly App** in Visual Studio for mac by the following way.
 
-* [Create a project using Microsoft Templates](https://docs.microsoft.com/en-us/aspnet/core/blazor/tooling?pivots=macos)
+* [Create a project using Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?pivots=macos&view=aspnetcore-7.0)
 
 ## Install Syncfusion Blazor Packages in the App
 
