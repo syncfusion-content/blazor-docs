@@ -192,6 +192,8 @@ You can add the `SCSS theme` for Blazor applications through NPM package and com
 
 * Run the application to see the customized Fluent theme applied.
 
+N> If you are using Visual Studio 2019, please use the includePath property instead of loadPaths as the latter does not support the Web Compiler for VS 2019. However, we highly recommend using the Web Compiler 2022+ for Visual Studio 2022. For more information, please refer to the following discussion: [WebCompiler Issue #24](https://github.com/failwyn/WebCompiler/issues/24)
+
 The following shows the importing theme path for the overall theme.
 
 ```css
