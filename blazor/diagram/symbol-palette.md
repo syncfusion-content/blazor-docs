@@ -648,13 +648,15 @@ SymbolPalette.Palettes[0].IsExpanded = false;
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/SymbolPalette)
 
 
-## How to add tooltip for symbols in symbol palette
+## How to provide tooltip for symbols in symbol palette
 
 * Symbol palette provides supports to show toolip when mouse hovers over any node or connector. The tooltip can be customized for each symbols in the symbol palette.
 
 ### Default tooltip for symbol palette
 
 * By default, the symbol's ID will be displayed as the tooltip for symbol palette. The following image illustrate how the tooltip displays when mouse hovers over the symbols in symbol palette.
+
+![Default Tooltip in symbol palette](images/DefaultTooltip.gif)
 
 ### Tooltip with constraints
 
@@ -721,6 +723,9 @@ The following code example illustrates how to provide the tooltip for nodes.
 }
 
 ```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/SymbolPalette)
+
+![Tooltip in symbol palette](images/SymbolTooltip.gif)
 
 ## How to provide different tooltip for Symbol palette and diagram elements.
 
@@ -814,6 +819,9 @@ The following code example illustrates how to provide the tooltip for nodes.
     }
 }
 ```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/SymbolPalette)
+
+![Tooltip in symbol palette](images/DifferentTooltip.gif)
 
 ## How to add/remove symbols from palette at runtime
 
