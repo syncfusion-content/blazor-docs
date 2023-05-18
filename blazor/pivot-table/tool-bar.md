@@ -1618,7 +1618,6 @@ When you select the **"Create a new report"** option from the toolbar, the [NewR
 Below points need to be considered when saving the report to SQL Server database.
 
 * **Data source**: Both raw data and aggregated data won't be saved and loaded from the database.
-* **Conditional formatting**: The appearance of the pivot table, such as background color, font color, font family, and font size based on the specific conditions won't be saved and loaded from the database.
 * **Hyperlinks**: Option to link external facts via pivot table cells won't be saved and loaded from the database.
 * The pivot table should always load reports from the SQL database based on the data source that is currently bound to it.
 
