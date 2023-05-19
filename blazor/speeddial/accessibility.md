@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Accessibility in Blazor SpeedDial Component | Syncfusion
-description: Checkout and learn here all about accessibility and keyboard in Syncfusion Speed Dial component and much more.
+description: Checkout and learn here all about accessibility in Syncfusion Speed Dial component and much more.
 platform: Blazor
 control: SpeedDial
 documentation: ug

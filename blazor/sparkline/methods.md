@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Methods in Blazor Sparkline Component | Syncfusion
-description: Checkout and learn here all about methods in Syncfusion Blazor Sparkline component and much more details.
+title: Methods in Blazor Sparkline charts Component | Syncfusion
+description: Checkout and learn all about methods in Syncfusion Blazor Sparkline charts component and much more details.
 platform: Blazor
 control: Sparkline Charts
 documentation: ug
 ---
 
-# Methods in Blazor Sparkline Component
+# Methods in Blazor Sparkline charts Component
 
 Using the `@ref` property, create an object for the Sparkline component and call the desired method.
 

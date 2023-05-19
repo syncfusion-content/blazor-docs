@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Marker and Data labels in Blazor Smith Chart Component | Syncfusion
-description: Checkout and learn here all about marker and data labels in Syncfusion Blazor Smith Chart component and more.
+title: Marker in Blazor Smith Chart Component | Syncfusion
+description: Checkout and learn here all about marker in Syncfusion Blazor Smith Chart component and more.
 platform: Blazor
 control: Smith Chart
 documentation: ug
 ---
 
-# Marker and Data labels in Blazor Smith Chart Component
+# Marker in Blazor Smith Chart Component
 
 Markers and data labels are used to provide information about the data points in the series. Both the marker and the datalabel are disabled by default in the Smith Chart. Both can be enabled by making the [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartSeriesMarker.html#Syncfusion_Blazor_Charts_SmithChartSeriesMarker_Visible) property in the marker and the datalabel settings to **true**.
 
@@ -92,7 +92,7 @@ Using the [SmithChartSeriesMarker](https://help.syncfusion.com/cr/blazor/Syncfus
 }
 ```
 
-![Blazor Smith Chart with Custom Marker](./images/Marker/blazor-smith-chart-custom-marker.png)
+![Blazor Smith Chart with Marker customization](./images/Marker/blazor-smith-chart-custom-marker.png)
 
 ## Data labels
 
@@ -173,7 +173,7 @@ The data labels can be customized using the following properties.
 }
 ```
 
-![Blazor Smith Chart with Custom Data Label](./images/Marker/blazor-smith-chart-custom-data-label.png)
+![Blazor Smith Chart with Data Label customization](./images/Marker/blazor-smith-chart-custom-data-label.png)
 
 ### Smart Labels
 
@@ -211,7 +211,7 @@ Data labels can be placed smartly by setting the [EnableSmartLabels](https://hel
 }
 ```
 
-![Blazor Smith Chart with Smart Data Labels](./images/Marker/blazor-smith-chart-with-smart-data-labels.png)
+![Blazor Smith Chart with Smart Labels](./images/Marker/blazor-smith-chart-with-smart-data-labels.png)
 
 ### Datalabel Template
 
@@ -254,4 +254,4 @@ To access the aggregate values inside the template, the implicit named parameter
 }
 ```
 
-![Blazor Smith Chart with Data Label Template](./images/Marker/blazor-smith-chart-data-label-template.png)
+![Blazor Smith Chart with Data LabelTemplate](./images/Marker/blazor-smith-chart-data-label-template.png)

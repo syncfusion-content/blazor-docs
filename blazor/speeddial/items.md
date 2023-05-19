@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Items in Blazor SpeedDial Component | Syncfusion
-description: Checkout and learn here all about items and how to configure action items in Syncfusion Speed Dial component and much more.
+description: Checkout and learn about items and how to configure action items in Syncfusion SpeedDial component and much more.
 platform: Blazor
 control: SpeedDial
 documentation: ug
@@ -41,7 +41,7 @@ You can show icon only in SpeedDial items by setting [IconCss](https://help.sync
 
 ```
 
-![Blazor Speed Dial with Icon](./images/Blazor-SpeedDial-Icon.png)
+![Blazor speeddial with icon only](./images/Blazor-SpeedDial-Icon.png)
 
 ### Text Only
 
@@ -61,7 +61,7 @@ You can show only text in Speed Dial items by setting [Text](https://help.syncfu
 
 ```
 
-![Blazor Speed Dial with Text](./images/Blazor-SpeedDial-Text.png)
+![Blazor Speed Dial with Text only](./images/Blazor-SpeedDial-Text.png)
 
 ### Icon with Text
 
@@ -81,7 +81,7 @@ You can show icon along with text in Speed Dial items by setting [IconCss](https
 
 ```
 
-![Blazor Speed Dial with Icon and Text](./images/Blazor-SpeedDial-Iconwithtext.png)
+![Blazor Speed Dial in Icon with Text](./images/Blazor-SpeedDial-Iconwithtext.png)
 
 ### Disabled
 
@@ -101,7 +101,7 @@ You can disable Speed Dial items by setting [Disabled](https://help.syncfusion.c
 
 ```
 
-![Blazor Speed Dial with Disabled](./images/Blazor-SpeedDial-DisabledItem.png)
+![Blazor Speed Dial with Disabled item](./images/Blazor-SpeedDial-DisabledItem.png)
 
 ## Animation
 
@@ -124,7 +124,7 @@ Below example demonstrates the Speed Dial items with applied Zoom effect.
 
 ```
 
-![Blazor Speed Dial Animation](./images/Blazor-SpeedDial-Animation.png)
+![Blazor Speed Dial with Animation](./images/Blazor-SpeedDial-Animation.png)
 
 ## Template
 
@@ -150,4 +150,4 @@ Below example demonstrates the Speed Dial items with HTML attributes.
 
 ```
 
-![Blazor Speed Dial With HTML attributes](./images/Blazor-SpeedDial-HTML-Attribute.png)
+![Blazor Speed Dial With HTML attribute](./images/Blazor-SpeedDial-HTML-Attribute.png)

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Effects in Blazor Skeleton Component | Syncfusion
+title: Shimmer effects in Blazor Skeleton Component | Syncfusion
 description: Checkout and learn here all about shimmer effects and how to use them in Syncfusion Blazor Skeleton component and much more.
 platform: Blazor
 control: Skeleton
@@ -21,7 +21,7 @@ You can use the [Effect](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor Skeleton Pulse Effect](./images/Blazor-skeleton-pulse-effect.png)
+![Blazor Skeleton component with pulse Effect](./images/Blazor-skeleton-pulse-effect.png)
 
 Below example demonstrates a list with pulse effect skeleton.
 
@@ -73,4 +73,4 @@ Below example demonstrates a list with pulse effect skeleton.
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor Skeleton Pulse Effect](./images/Blazor-skeleton-Effect.png)
+![Blazor Skeleton with shimmer Effect](./images/Blazor-skeleton-Effect.png)

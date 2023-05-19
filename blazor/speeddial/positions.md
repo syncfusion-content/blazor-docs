@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Position in Blazor SpeedDial Component | Syncfusion
-description: Checkout and learn here all about different built in positions in Blazor SpeedDial component and much more.
+description: Checkout and learn about positions in syncfusion Blazor SpeedDial component and much more.
 platform: Blazor
 control: SpeedDial
 documentation: ug
 ---
 
-# Positions in Blazor Speed Dial Component
+# Positions in Blazor SpeedDial Component
 
 The Speed dial Component can be positioned anywhere on the [Target](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSpeedDial.html#Syncfusion_Blazor_Buttons_SfSpeedDial_Target) using the [Position](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSpeedDial.html#Syncfusion_Blazor_Buttons_SfSpeedDial_Position) property. If the `Target` is not defined, then Speed Dial is positioned based on the browser viewport.
 
@@ -36,7 +36,7 @@ The position values of Speed Dial are as follows:
 
 ```
 
-![Blazor Speed Dial Position](./images/Blazor-SpeedDial-Position.png)
+![Positions in Blazor SpeedDial component](./images/Blazor-SpeedDial-Position.png)
 
 ## Opens on hover
 
@@ -56,7 +56,7 @@ You can open the Speed Dial action items on mouse hover by setting the [OpensOnH
 
 ```
 
-![Blazor Speed Dial OpensOnHover](./images/Blazor-SpeedDial-Icon.png)
+![Blazor Speed Dial with Opens On Hover](./images/Blazor-SpeedDial-Icon.png)
 
 ## Programmatically show/hide
 
@@ -95,8 +95,8 @@ Below example demonstrates open/close action items on button click.
 
 ```
 
-![Blazor Speed Dial Show Items](./images/Blazor-SpeedDial-ShowItem.png)
-![Blazor Speed Dial Hide Items](./images/Blazor-SpeedDial-HideItem.png)
+![Blazor Speed Dial with Programmatically show/hide](./images/Blazor-SpeedDial-ShowItem.png)
+![Blazor Speed Dial with Programmatically show/hide](./images/Blazor-SpeedDial-HideItem.png)
 
 ## Programmatically refresh the position
 

@@ -23,4 +23,4 @@ N> Refer [here](https://blazor.syncfusion.com/documentation/common/localization/
 
 On successful configuration, the Sparkline will be rendered as following.
 
-![Localization in Blazor Sparkline Chart](./images/localization/blazor-sparkline-localization.png)
+![Globolization in Blazor Sparkline Chart](./images/localization/blazor-sparkline-localization.png)

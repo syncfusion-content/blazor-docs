@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Styles in Blazor SpeedDial Component | Syncfusion
-description: Checkout and learn here all about styles and icons in Syncfusion Speed Dial component and much more.
+description: Checkout and learn about styles in Syncfusion Blazor Speed Dial component and much more.
 platform: Blazor
 control: SpeedDial
 documentation: ug
@@ -101,7 +101,7 @@ You can enable or disable the Speed Dial Component using [Disabled](https://help
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor SpeedDial with Disabled](./images/Blazor-SpeedDial-Disabled.png)
+![Blazor SpeedDial when Disabled](./images/Blazor-SpeedDial-Disabled.png)
 
 ## CssClass
 
@@ -194,5 +194,5 @@ You can use [OpensOnHover](https://help.syncfusion.com/cr/blazor/Syncfusion.Blaz
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor SpeedDial with OpensOnHover](./images/Blazor-SpeedDial-OpensOnHover.png)
+![Blazor SpeedDial when Opens On hover](./images/Blazor-SpeedDial-OpensOnHover.png)
 

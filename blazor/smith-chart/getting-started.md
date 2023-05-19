@@ -273,7 +273,7 @@ N> Syncfusion recommends to reference scripts using [Static Web Assets](https://
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to run the application. Then, the Syncfusion `Blazor Smith Chart` component will be rendered in the default web browser.
 
-![Blazor Smith Chart Component](./images/blazor-smith-chart.png)
+![Add Blazor Smith Chart Component](./images/blazor-smith-chart.png)
 
 ## Adding series to Smith Chart
 
@@ -374,7 +374,7 @@ Title can be added to the Smith Chart to provide a quick information to the user
 
 N> Refer to the [code block](#adding-series-to-smith-chart) to know about the property value of `FirstTransmissionSeries` and `SecondTransmissionSeries`.
 
-![Blazor Smith Chart with Title](./images/blazor-smith-chart-with-title.png)
+![Adding Blazor Smith Chart with Title](./images/blazor-smith-chart-with-title.png)
 
 ## Enable Marker
 
@@ -404,7 +404,7 @@ To display marker for particular series, set the [Visible](https://help.syncfusi
 
 N> Refer to the [code block](#adding-series-to-smith-chart) to know about the property value of `FirstTransmissionSeries` and `SecondTransmissionSeries`.
 
-![Blazor Smith Chart with Marker](./images/blazor-smith-chart-marker.png)
+![Blazor Smith Chart with marker](./images/blazor-smith-chart-marker.png)
 
 ## Enable Data Label
 

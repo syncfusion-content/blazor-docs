@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Data Labels in Blazor Sparkline Component | Syncfusion
-description: Checkout and learn here all about Data Labels in Syncfusion Blazor Sparkline component and much more.
+title: Data Labels with Blazor Sparkline Component | Syncfusion
+description: Checkout and learn here all about Data Labels with Syncfusion Blazor Sparkline component and much more.
 platform: Blazor
 control: Sparkline Charts
 documentation: ug
 ---
 
-# Data Labels in Blazor Sparkline Component
+# Data Labels with Blazor Sparkline Component
 
 To improve readability, the Data Labels are used to display the value of data points.
 
@@ -60,7 +60,7 @@ The following properties can be used to customize the Sparkline Data Label:
 </SfSparkline>
 ```
 
-![Blazor Sparkline Chart with Custom Data Label](images/Datalabels/blazor-sparkline-custom-data-label.png)
+![Blazor Sparkline Chart with Data Label customization](images/Datalabels/blazor-sparkline-custom-data-label.png)
 
 ## Format
 
@@ -98,4 +98,4 @@ The Data Label text can be formatted by specifying the property name from the da
 }
 ```
 
-![Label Formatting in Blazor Sparkline Chart](images/Datalabels/blazor-sparkline-label-format.png)
+![Format in Blazor Sparkline Chart](images/Datalabels/blazor-sparkline-label-format.png)

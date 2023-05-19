@@ -1,13 +1,13 @@
 ---
 layout: post
-title: User Interaction in Blazor Sparkline Component | Syncfusion
-description: Checkout and learn here all about user interaction in Syncfusion Blazor Sparkline component and more.
+title: User Interaction in Blazor Sparkline charts Component | Syncfusion
+description: Checkout and learn all about user interaction in Syncfusion Blazor Sparkline charts component and more.
 platform: Blazor
 control: Sparkline Charts
 documentation: ug
 ---
 
-# User Interaction in Blazor Sparkline Component
+# User Interaction in Blazor Sparkline charts Component
 
 The Sparkline's user interaction features include the tooltip and the tracker line.
 
@@ -69,7 +69,7 @@ The following code example shows customizing tooltip format, text color and fill
 
 N> Refer to the [code block](#tooltip) to know about the property value of **WorkLogs**.
 
-![Blazor Sparkline Chart with Custom Tooltip](images/UserInteraction/blazor-sparkline-custom-tooltip.png)
+![Blazor Sparkline Chart with Tooltip customization](images/UserInteraction/blazor-sparkline-custom-tooltip.png)
 
 ### Tooltip Template
 
