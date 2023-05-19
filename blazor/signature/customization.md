@@ -7,7 +7,7 @@ control: Signature
 documentation: ug
 ---
 
-# Customization of Signature component
+# Customization in Blazor Signature component
 
 The [Blazor Signature](https://www.syncfusion.com/blazor-components/blazor-signature) component draws stroke/path to connect one or more points while drawing in canvas. This path is drawn with moveTo() and lineTo() method. We can able to customize the stroke by modifying its color and width. And the background of the signature also customizable by using its color and image.
 
@@ -23,7 +23,7 @@ In the following example, minimum stroke width is set as 0.5, maximum stroke wid
 <SfSignature MaxStrokeWidth="3" MinStrokeWidth="0.5" Velocity="0.7"></SfSignature>
 ```
 
-![Blazor Signature Component](./images/blazor-signature-stroke-width.png)
+![Blazor Signature Component with stroke width](./images/blazor-signature-stroke-width.png)
 
 ## Stroke Color
 
@@ -74,7 +74,7 @@ Specify [`StrokeColor`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 </style>
 ```
 
-![Blazor Signature Component](./images/blazor-signature-stroke-color.png)
+![Blazor Signature Component with stroke color](./images/blazor-signature-stroke-color.png)
 
 ## Background Color
 
@@ -125,7 +125,7 @@ Specify [`BackgroundColor`](https://help.syncfusion.com/cr/blazor/Syncfusion.Bla
 </style>
 ```
 
-![Blazor Signature Component](./images/blazor-signature-bg-color.png)
+![Blazor Signature Component with background color](./images/blazor-signature-bg-color.png)
 
 ## Background Image
 
@@ -192,7 +192,7 @@ N> To view the hosted images, you need to enable Directory Browsing option in II
 </configuration>
 ```
 
-![Blazor Signature Component](./images/blazor-signature-bg-image.png)
+![Blazor Signature Component with background image](./images/blazor-signature-bg-image.png)
 
 ## See Also
 
