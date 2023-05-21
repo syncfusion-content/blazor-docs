@@ -519,7 +519,7 @@ The following image represents how the parameters are passed using ODataV4 filte
 
 ### Web API adaptor
 
-You can bind Web API data to the scheduler using WebApiAdaptor. The following sample code demonstrates the way of binding remote services to the Scheduler component.
+You can bind Web API data to the scheduler using [WebApiAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors#web-api-adaptor). The following sample code demonstrates the way of binding remote services to the Scheduler component.
 
 ```cshtml
 @using Syncfusion.Blazor
@@ -555,6 +555,50 @@ You can bind Web API data to the scheduler using WebApiAdaptor. The following sa
             public string RecurrenceException { get; set; }
             public string StartTimezone { get; set; }
             public string EndTimezone { get; set; }
+    }
+}
+```
+
+### Url adaptor
+
+You can use the [UrlAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors#url-adaptor) of **SfDataManager** when binding data source for remote data. During the initial load of Scheduler, data are fetched from remote data and bound to the Scheduler using the Url property of **SfDataManager**.
+
+The following sample code demonstrates binding data to the Scheduler component through the SfDataManager using UrlAdaptor.
+
+```cshtml
+@using Syncfusion.Blazor
+@using Syncfusion.Blazor.Data;
+@using Syncfusion.Blazor.Schedule
+
+<SfSchedule TValue="AppointmentData" Height="550px" @bind-SelectedDate="@currentDate" Readonly="true">
+    <ScheduleEventSettings TValue="AppointmentData">
+        <SfDataManager Url="http://localhost:54738/Home/LoadData" CrudUrl="http://localhost:54738/Home/UpdateData" CrossDomain="true" Adaptor="Adaptors.UrlAdaptor">
+        </SfDataManager>
+    </ScheduleEventSettings>
+    <ScheduleViews>
+        <ScheduleView Option="View.Month"></ScheduleView>
+    </ScheduleViews>
+</SfSchedule>
+
+@code {
+    DateTime currentDate = new DateTime(2023, 5, 6);
+
+    public class AppointmentData
+    {
+        public int Id { get; set; }
+        public string Subject { get; set; }
+        public string Location { get; set; }
+        public string Description { get; set; }
+        public DateTime StartTime { get; set; }
+        public DateTime EndTime { get; set; }
+        public Nullable<bool> IsAllDay { get; set; }
+        public string CategoryColor { get; set; }
+        public string RecurrenceRule { get; set; }
+        public Nullable<int> RecurrenceID { get; set; }
+        public Nullable<int> FollowingID { get; set; }
+        public string RecurrenceException { get; set; }
+        public string StartTimezone { get; set; }
+        public string EndTimezone { get; set; }
     }
 }
 ```
