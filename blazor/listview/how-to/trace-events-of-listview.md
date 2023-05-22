@@ -17,7 +17,7 @@ The ListView control triggers events based on its actions. The events can be use
 
 3. Provide event log details for `OnActionBegin` and `OnActionComplete` events, and they will be displayed in the event trace panel when the ListView action starts and the dataSource bound successfully.
 
-4. Get the clicked item details from the `ClickEventArgs` in the select event, and display the clicked list item text in the event trace panel while selecting list items.
+4. Get the clicked item details from the `ClickEventArgs` in the Clicked event, and display the clicked list item text in the event trace panel while clicking list items.
 
 5. Use clear button to remove event trace information.
 
