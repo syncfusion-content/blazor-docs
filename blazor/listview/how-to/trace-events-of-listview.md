@@ -11,13 +11,13 @@ documentation: ug
 
 The ListView control triggers events based on its actions. The events can be used as extension points to perform custom operations. Refer to the following steps to trace the ListView events:
 
-1. Render the ListView with `DataSource`, and bind the `OnActionBegin`, `OnActionComplete`, and `Selected` events.
+1. Render the ListView with `DataSource`, and bind the `OnActionBegin`, `OnActionComplete`, and `Clicked` events.
 
-2. Perform custom operations in `OnActionBegin`, `OnActionComplete`, and `Selected` events.
+2. Perform custom operations in `OnActionBegin`, `OnActionComplete`, and `Clicked` events.
 
 3. Provide event log details for `OnActionBegin` and `OnActionComplete` events, and they will be displayed in the event trace panel when the ListView action starts and the dataSource bound successfully.
 
-4. Get the selected item details from the `SelectEventArgs` in the select event, and display the selected list item text in the event trace panel while selecting list items.
+4. Get the clicked item details from the `ClickEventArgs` in the select event, and display the clicked list item text in the event trace panel while selecting list items.
 
 5. Use clear button to remove event trace information.
 
@@ -30,7 +30,7 @@ The ListView control triggers events based on its actions. The events can be use
             <SfListView DataSource="@DataSource">
                 <ListViewFieldSettings TValue="ListDataModel" Id="Id" Text="Text"></ListViewFieldSettings>
                 <ListViewEvents TValue="ListDataModel"
-                                Clicked="@(e => Events.Add(e.Text +" is selected"))"
+                                Clicked="@(e => Events.Add(e.Text +" is clicked"))"
                                 OnActionBegin="@(e => Events.Add("OnActionBegin is triggered"))"
                                 OnActionComplete="@(e => Events.Add("OnActionComplete is triggered"))">
                 </ListViewEvents>
