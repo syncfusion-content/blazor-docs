@@ -241,11 +241,11 @@ public class TreeData
 
 ![Multiple Selection in Blazor TreeGrid](images/blazor-treegrid-multiple-selection.png)
 
-N> Cell selection requires the [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridSelectionSettings~Mode.html) to be **Cell** or **Both**, and **Type** should be **Multiple**.
+N> Cell selection requires the [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridSelectionSettings.html#Syncfusion_Blazor_TreeGrid_TreeGridSelectionSettings_Mode) to be **Cell** or **Both**, and **Type** should be **Multiple**.
 
 ## Checkbox selection
 
-Checkbox selection provides an option to select multiple tree grid records with the help of checkbox in each row. To render the checkbox in each tree grid row, use the checkbox column with type as **checkbox** using the column [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridColumn~Type.html) property.
+Checkbox selection provides an option to select multiple tree grid records with the help of checkbox in each row. To render the checkbox in each tree grid row, use the checkbox column with type as **checkbox** using the column [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridSelectionSettings.html#Syncfusion_Blazor_TreeGrid_TreeGridSelectionSettings_Mode) property.
 
 {% tabs %}
 
@@ -314,11 +314,11 @@ public class TreeData
 N> * By default, selection is allowed by clicking a tree grid row or checkbox in that row. To allow selection only through checkbox, set the
 [CheckboxOnly](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridSelectionSettings~CheckboxOnly.html) property of [TreeGridSelectionSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridSelectionSettings.html) to true.
 <br/>* Selection can be persisted in all the operations using the [PersistSelection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridSelectionSettings~PersistSelection.html) property of [TreeGridSelectionSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridSelectionSettings.html).
-For persisting selection on the tree grid, any one of the columns should be defined as a primary key using the [IsPrimaryKey](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridColumn~IsPrimaryKey.html) property of [TreeGridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridColumn.html).
+For persisting selection on the tree grid, any one of the columns should be defined as a primary key using the [IsPrimaryKey](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_IsPrimaryKey) property of [TreeGridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridColumn.html).
 
 ### Checkbox selection Mode
 
-In checkbox selection, selection can also be done by clicking on rows. This selection provides two types of Checkbox Selection mode which can be set by using the following API, [CheckboxMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridSelectionSettings~CheckboxMode.html) in [TreeGridSelectionSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridSelectionSettings.html). The modes are;
+In checkbox selection, selection can also be done by clicking on rows. This selection provides two types of Checkbox Selection mode which can be set by using the following API, [CheckboxMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridSelectionSettings.html#Syncfusion_Blazor_TreeGrid_TreeGridSelectionSettings_CheckboxMode) in [TreeGridSelectionSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridSelectionSettings.html). The modes are;
 
 * **Default**: This is the default value of the checkboxMode. In this mode, user can select multiple rows by clicking rows one by one.
 * **ResetOnRowClick**: In ResetOnRowClick mode, when user clicks on a row it will reset previously selected row. Also, multiple-selection can be performed in this mode by pressing and holding CTRL key, and clicking the desired rows. To select range of rows, press and hold the SHIFT key and click the rows.
