@@ -15,7 +15,7 @@ By default, the editor is initialized with the default items of the font family.
 
 To apply a different font style to a section of the content, select the text you would like to change and select a required font style from the drop-down to apply the changes to the selected text.
 
-### Buil-in font family
+### Built-in font family
 
 The following table lists the default font name and width of the `FontName` dropdown and the available list of font names.
 
@@ -27,12 +27,12 @@ The following table lists the default font name and width of the `FontName` drop
 {% tabs %}
 {% highlight razor %}
 
-{% include_relative code-snippet/build-in-font-family.razor %}
+{% include_relative code-snippet/built-in-font-family.razor %}
 
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor RichTextEditor changing build-in font family](../images/blazor-richtexteditor-buildin-font-name.png)
+![Blazor RichTextEditor changing built-in font family](../images/blazor-richtexteditor-buildin-font-name.png)
 
 ### Custom font family
 
@@ -112,7 +112,7 @@ By default, the editor is initialized with default items for font size. To chang
 
 To apply a different font style to a section of the content, select the text that you would like to change and select a required font style from the drop-down to apply the changes to the selected text.
 
-### Build-in font size
+### Built-in font size
 
 The following table lists the default font size and width of the [FontSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorFontSize.html) dropdown and the available list of the font size.
 
@@ -124,12 +124,12 @@ The following table lists the default font size and width of the [FontSize](http
 {% tabs %}
 {% highlight razor %}
 
-{% include_relative code-snippet/build-in-font-size.razor %}
+{% include_relative code-snippet/built-in-font-size.razor %}
 
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor RichTextEditor changing build-in font size](../images/blazor-richtexteditor-buildin-font-size.png)
+![Blazor RichTextEditor changing built-in font size](../images/blazor-richtexteditor-buildin-font-size.png)
 
 ### Custom font size
 
@@ -151,7 +151,7 @@ By default, the editor is initialized with default items of formats. To change i
 
 To apply different format styles for sections of the content, select the required format from the drop-down and then apply the changes to the selection.
 
-### Build-in formats
+### Built-in formats
 
 The following table list the default format name and width of the  [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorFormat.html#properties) dropdown and the available list of format names.
 
@@ -163,12 +163,12 @@ The following table list the default format name and width of the  [Format](http
 {% tabs %}
 {% highlight razor %}
 
-{% include_relative code-snippet/build-in-formats.razor %}
+{% include_relative code-snippet/built-in-formats.razor %}
 
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor RichTextEditor with build-in format](../images/blazor-richtexteditor-buildin-format.png)
+![Blazor RichTextEditor with built-in format](../images/blazor-richtexteditor-buildin-format.png)
 
 ### Custom format
 
@@ -204,7 +204,7 @@ The `RichTextEditorFontColor` and `RichTextEditorBackgroundColor` tag has two mo
 
 ![Blazor RichTextEditor displaying background color](../images/blazor-richtexteditor-background-color.png)
 
-## Build-in editor content styles
+## Built-in editor content styles
 
 By default, the content styles of the Rich Text Editor are not returned while retrieving the HTML value from the editor. So, the styles are not applied when using the HTML value outside the editor. To get the styles from the Rich Text Editor’s content for your application, copy and use the following styles directly in your application. The styles listed are used in the UI elements of the Rich Text Editor.
 
