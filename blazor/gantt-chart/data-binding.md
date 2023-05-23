@@ -575,7 +575,7 @@ You can use **WebApiAdaptor** to bind datagrid with Web API created using **ODat
 @using Syncfusion.Blazor.Gantt
 @using Syncfusion.Blazor.Data
 <SfGantt TValue="GanttRemoteData" Height="450px">
-    <SfDataManager Url="https://ej2services.syncfusion.com/production/web-services/api/GanttData" Adaptor="Adaptors.WebApiAdaptor" CrossDomain="true"></SfDataManager>
+    <SfDataManager Url="https://blazor.syncfusion.com/services/production/api/GanttData" Adaptor="Adaptors.WebApiAdaptor" CrossDomain="true"></SfDataManager>
     <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" Duration="Duration" Progress="Progress" Dependency="Predecessor" Child="SubTasks">
     </GanttTaskFields>
 </SfGantt>
