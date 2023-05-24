@@ -318,7 +318,7 @@ After initialization, populate the MultiSelect with data using the [DataSource](
 
 By default, the width of the popup list automatically adjusts according to the MultiSelect input element's width, and the height auto adjust's according to the height of the popup list items.
 
-The height and width of the popup list can also be customized using the [PopupHeight](https://help.syncfusion.com/cr/blazor#Syncfusion_Blazor_DropDowns_SfMultiSelect_1_PopupHeight/Syncfusion.Blazor.html) and [PopupWidth](https://help.syncfusion.com/cr/blazor#Syncfusion_Blazor_DropDowns_SfMultiSelect_1_PopupWidth/Syncfusion.Blazor.html) properties respectively.
+The height and width of the popup list can also be customized using the [PopupHeight](https://help.syncfusion.com/cr/blazor#Syncfusion_Blazor_DropDowns_SfMultiSelect_1_PopupHeight/Syncfusion.Blazor.html) and [PopupWidth](https://help.syncfusion.com/cr/blazor#Syncfusion_Blazor_DropDowns_SfMultiSelect_1_PopupWidth/Syncfusion.Blazor.html/Syncfusion.Blazor.html) properties respectively.
 
 {% tabs %}
 {% highlight razor %}
@@ -332,7 +332,7 @@ The height and width of the popup list can also be customized using the [PopupHe
 
 ![Configuring Popup List in Blazor MultiSelect DropDown](./images/blazor-multiselect-dropdown-configure-poup-list.png)
 
-N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/MultiSelectDropDown).
+N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/MultiSelectDropDownhttps://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/MultiSelectDropDown).
 
 ## See Also
 
