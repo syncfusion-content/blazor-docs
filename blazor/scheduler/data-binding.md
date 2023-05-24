@@ -723,7 +723,14 @@ The following sample code demonstrates notifying user when server-side exception
 ```
 ## Load on demand
 
-In the Scheduler, there is an option to implement data loading on demand, which helps minimize the amount of data transmitted over the network, especially when working with large volumes of data.This can be achieved by filtering appointments on the server side based on start date and end date.
+In the Scheduler, there is an option to implement data loading on demand, which helps minimize the amount of data transmitted over the network, especially when working with large volumes of data. This can be achieved by filtering appointments on the server side based on start date and end date.
+
+```cshtml
+        public async Task<List<AppointmentData>> Get(DateTime StartDate, DateTime EndDate)
+        {
+            return await _appointmentDataContext.AppointmentDatas.Where(evt => evt.StartTime >= StartDate && evt.EndTime <= EndDate).ToListAsync();
+        }
+```
 
 The following code example describes the behavior of the Load on demand using custom adaptor.
 
@@ -733,12 +740,9 @@ The following code example describes the behavior of the Load on demand using cu
 
 @using Syncfusion.Blazor.Schedule
 @using Syncfusion.Blazor.Data
-
 @using syncfusion_blazor_app.Data
 
-@inject IJSRuntime Js
-
-<SfSchedule @ref="AvailabilityScheduleRef" TValue="AppointmentData" Width="100%" Height="600px" @bind-SelectedDate="@SelectedDate">
+<SfSchedule TValue="AppointmentData" Width="100%" Height="600px" @bind-SelectedDate="@SelectedDate">
     <ScheduleViews>
         <ScheduleView Option="View.Day"></ScheduleView>
         <ScheduleView Option="View.Week"></ScheduleView>
@@ -746,16 +750,13 @@ The following code example describes the behavior of the Load on demand using cu
         <ScheduleView Option="View.Month"></ScheduleView>
         <ScheduleView Option="View.Agenda"></ScheduleView>
     </ScheduleViews>
-    <ScheduleEventSettings TValue="AppointmentData" Query="@QueryData">
+    <ScheduleEventSettings TValue="AppointmentData">
         <SfDataManager AdaptorInstance="@typeof(AppointmentDataAdaptor)" Adaptor="Adaptors.CustomAdaptor">
         </SfDataManager>
     </ScheduleEventSettings>
 </SfSchedule>
 
 @code {
-    public static string UserID = "1";
-    public Query QueryData = new Query().From("AppointmentDatas");
-    SfSchedule<AppointmentData>? AvailabilityScheduleRef;
     DateTime SelectedDate { get; set; } = new DateTime(2023, 5, 10);
 }
 
@@ -774,33 +775,28 @@ namespace syncfusion_blazor_app.Data {
         }
 
         List<AppointmentData>? EventData;
-        public override async Task<object> ReadAsync(DataManagerRequest dataManagerRequest, string key = null) {
-            await Task.Delay(100);//To mimic asynchronous operation, we delayed this operation using Task.Delay
+        public override async Task<object> ReadAsync(DataManagerRequest dataManagerRequest, string key = null) {           
             System.Collections.Generic.IDictionary<string, object> Params = dataManagerRequest.Params;
             DateTime start =  (DateTime)Params["StartDate"];
             DateTime end = (DateTime)Params["EndDate"];
             EventData = await _appService.Get(start, end);
             return dataManagerRequest.RequiresCounts ? new DataResult() { Result = EventData, Count = EventData.Count() } : EventData;
         }
-        public async override Task<object> InsertAsync(DataManager dataManager, object data, string key) {
-            await Task.Delay(100); //To mimic asynchronous operation, we delayed this operation using Task.Delay
+        public async override Task<object> InsertAsync(DataManager dataManager, object data, string key) {           
             await _appService.Insert(data as AppointmentData);
             return data;
         }
-        public async override Task<object> UpdateAsync(DataManager dataManager, object data, string keyField, string key) {
-            await Task.Delay(100); //To mimic asynchronous operation, we delayed this operation using Task.Delay
+        public async override Task<object> UpdateAsync(DataManager dataManager, object data, string keyField, string key) {            
             await _appService.Update(data as AppointmentData);
             return data;
         }
         public async override Task<object> RemoveAsync(DataManager dataManager, object data, string keyField, string key) //triggers on appointment deletion through public method DeleteEvent
         {
-            await Task.Delay(100); //To mimic asynchronous operation, we delayed this operation using Task.Delay
             var app = await _appService.GetByID((int)data);
             await _appService.Delete(app);
             return data;
         }
         public async override Task<object> BatchUpdateAsync(DataManager dataManager, object changedRecords, object addedRecords, object deletedRecords, string keyField, string key, int? dropIndex) {
-            await Task.Delay(100); //To mimic asynchronous operation, we delayed this operation using Task.Delay
             object records = deletedRecords;
             List<AppointmentData>? deleteData = deletedRecords as List<AppointmentData>;
             if(deleteData != null) {
@@ -929,13 +925,12 @@ The following examples demonstrate how to consume data from SQL Server using Mic
 
 Before the implementation, add required NuGet like **Microsoft.Data.SqlClient** and **Syncfusion.Blazor** in your application. In the following sample, Custom Adaptor can be created as a Component. In custom adaptor **Read** method, you can get filter appointments using **DataManagerRequest**.
 
-Based on the DataManagerRequest, you can form SQL query string (to perform paging) and execute the SQL query and retrieve the data from database using **SqlDataAdapter**. The Fill method of the **DataAdapter** is used to populate a **DataSet** with the results of the **SelectCommand** of the DataAdapter, then convert the DataSet into List and return **Result** and **Count** pair object in **Read** method to bind the data to Scheduler.
+Based on the DataManagerRequest, you can form SQL query string and execute the SQL query and retrieve the data from database using **SqlDataAdapter**. The Fill method of the **DataAdapter** is used to populate a **DataSet** with the results of the **SelectCommand** of the DataAdapter, then convert the DataSet into List and return **Result** and **Count** pair object in **Read** method to bind the data to Scheduler.
 
 ```cshtml
 @using Syncfusion.Blazor.Schedule
 @using Syncfusion.Blazor.Data
 @using syncfusion_blazor_app.Data
-@inject IJSRuntime Js
 @using syncfusion_blazor_app.Shared
 
 <SfSchedule TValue="AppointmentData" Width="100%" Height="600px" @bind-SelectedDate="@SelectedDate">
@@ -955,7 +950,6 @@ Based on the DataManagerRequest, you can form SQL query string (to perform pagin
 
 @code {
     DateTime SelectedDate { get; set; } = new DateTime(2023, 5, 10);
-    public static List<AppointmentData> Appointment { get; set; }
 }
 ```
 
