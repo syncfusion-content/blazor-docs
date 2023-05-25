@@ -1522,6 +1522,99 @@ The following code illustrates how to execute the FitToPage command.
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Commands)
 
+
+### How to bring smaller diagram into viewport
+
+The [CanZoomIn] property enables/disables zooming to fit the smaller content into a larger viewport.
+
+The following code illustrates how to execute the CanZoomIn command.
+
+```cshtml
+@using Syncfusion.Blazor.Diagram
+@using Node = Syncfusion.Blazor.Diagram.Node
+
+<SfDiagramComponent @ref="diagram" Width="1000px" Height="600px" Nodes="nodes" Connectors="connectors">
+</SfDiagramComponent>
+
+@code 
+{
+    //Initialize of all the variables, methods and classes.
+    public SfDiagramComponent diagram;
+    
+    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+    
+    FitOptions options = new FitOptions() 
+    {
+        Mode = FitMode.Height, 
+        Region = DiagramRegion.Content,
+        CanZoomIn = true
+    };
+    protected override void OnInitialized()
+    {
+        Node node1 = new Node()
+        {
+            ID = "node1",
+            OffsetX = 100,
+            OffsetY = 100,
+            Width = 100,
+            Height = 50,
+            Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "#6495ED" },
+        };
+        Node node2 = new Node()
+        {
+            ID = "node2",
+            OffsetX = 500,
+            OffsetY = 700,
+            Width = 100,
+            Height = 50,
+            Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "#6495ED" },
+        };
+        Node node3 = new Node()
+        {
+            ID = "node3",
+            OffsetX = 500,
+            OffsetY = 500,
+            Width = 100,
+            Height = 50,
+            Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "#6495ED" },
+        };
+            
+        nodes.Add(node1);
+        nodes.Add(node2);
+        nodes.Add(node3);   
+        
+        Connector connector1 = new Connector() 
+        { 
+            ID = "connector1", 
+            SourceID = "node1", 
+            TargetID = "node2", 
+            Type = ConnectorSegmentType.Straight 
+        }; 
+        Connector connector2 = new Connector() 
+        { 
+            ID = "connector2", 
+            SourceID = "node2", 
+            TargetID = "node3", 
+            Type = ConnectorSegmentType.Straight 
+        }; 
+
+        connectors.Add(connector1);
+        connectors.Add(connector2);   
+    }
+
+    //fit the smaller diagram to the viewport
+    private void ZoomIn()
+    {
+        diagram.FitToPage(options);
+    }
+
+}
+```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Commands)
+
+![Padding in Blazor Diagram](images/CanZoomIn.gif)
+
 ### FitToPage Parameter
 
 The [FitOptions](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.FitOptions.html) parameter is used to customize the FitToPage command behavior.
