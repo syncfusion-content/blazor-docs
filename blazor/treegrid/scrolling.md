@@ -420,16 +420,7 @@ This section shows you how to invoke a [ScrollIntoViewAsync](https://help.syncfu
     <input @bind-value="@RowIndex" />
     <SfButton @onclick="Scroll" Content="Scroll Vertically"></SfButton>
 </div>
-<div>
-    ColumnIndex :
-    <input @bind-value="@ColumnIndex" />
-</div>
-<div>
-    RowIndex :
-    <input @bind-value="@RowIndex" />
-    <SfButton @onclick="Scroll" Content="Scroll Vertically and Horizontally"></SfButton>
-</div>
-<SfTreeGrid @ref="TreeGrid" DataSource="@TreeData" RowHeight="35" IdMapping="TaskID" TreeColumnIndex="1" ParentIdMapping="ParentID" Height="350" Width="600">
+<SfTreeGrid @ref="TreeGrid" DataSource="@TreeData" RowHeight="35" IdMapping="TaskID" TreeColumnIndex="1" ParentIdMapping="ParentID" Height="400" Width="600">
     <TreeGridColumns>
         <TreeGridColumn Field="TaskID" HeaderText="Jersey No" TextAlign="TextAlign.Right" Width="150"></TreeGridColumn>
         <TreeGridColumn Field="FIELD1" HeaderText="Name" Width="150"></TreeGridColumn>
