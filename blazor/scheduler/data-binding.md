@@ -919,6 +919,8 @@ namespace syncfusion_blazor_app.Data
 
 {% endtabs %}
 
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/blazor-scheduler-load-appointments-on-demand)
+
 ## SQL Server data binding(SQL Client)
 
 The following examples demonstrate how to consume data from SQL Server using Microsoft SqlClient and bound it to Blazor Scheduler. You can achieve this requirement by using [Custom Adaptor](./custom-binding/#custom-adaptor-as-component).
@@ -1023,6 +1025,8 @@ Based on the DataManagerRequest, you can form SQL query string and execute the S
     }
 }
 ```
+
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/blazor-scheduler-sql-server-databinding).
 
 ## Performing CRUD using Entity Framework
 
