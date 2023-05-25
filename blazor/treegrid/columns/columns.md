@@ -629,6 +629,8 @@ Tree Grid column supports the following types:
 * boolean
 * date
 * datetime
+* DateOnly
+* TimeOnly
 
 N> If the `Type` is not defined, it will be determined from the first record of the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid%601~DataSource.html).
 
