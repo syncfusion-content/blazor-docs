@@ -28,7 +28,20 @@ The new toolbar button 'Custom' is added using the `ToolbarSettings` property. T
     </SfFileManager>
 
 @code {
-    public string[] Items =  new string[] {"NewFolder", "Upload", "Custom", "Delete", "Download", "Rename", "SortBy", "Refresh", "Selection", "View", "Details"};
+    public List<ToolBarItemModel> Items = new List<ToolBarItemModel>(){
+        new ToolBarItemModel() { Name = "NewFolder" },
+        new ToolBarItemModel() { Name = "Cut" },
+        new ToolBarItemModel() { Name = "Copy" },
+        new ToolBarItemModel() { Name = "Paste" },
+        new ToolBarItemModel() { Name = "Delete" },
+        new ToolBarItemModel() { Name = "Download" },
+        new ToolBarItemModel() { Name = "Rename" },
+        new ToolBarItemModel() { Name = "SortBy" },
+        new ToolBarItemModel() { Name = "Refresh" },
+        new ToolBarItemModel() { Name = "Selection" },
+        new ToolBarItemModel() { Name = "View" },
+        new ToolBarItemModel() { Name = "Details" },
+    };
 
     public void toolbarCreate( ToolbarCreateEventArgs args) {
         args.Items.Add(new ToolBarItemModel()
