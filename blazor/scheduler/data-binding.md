@@ -559,6 +559,149 @@ You can bind Web API data to the scheduler using [WebApiAdaptor](https://blazor.
 }
 ```
 
+### Url adaptor
+You can use the [UrlAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors#url-adaptor) of **SfDataManager** when binding data source for remote data. During the initial load of Scheduler, data are fetched from remote data and bound to the Scheduler using the [Url](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_Url) property of **SfDataManager**.
+
+CRUD operations in the Scheduler can be mapped to server-side controller actions by using the properties [InsertUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_InsertUrl), [RemoveUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_RemoveUrl), [UpdateUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_UpdateUrl), and [CrudUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_CrudUrl).
+
+* `InsertUrl` – You can perform a single insertion operation on the server-side.
+* `UpdateUrl` – You can update single data on the server-side.
+* `RemoveUrl` – You can remove single data on the server-side.
+* `CrudUrl` – You can perform bulk data operation on the server-side.
+
+The following sample code demonstrates binding data to the Scheduler component through the SfDataManager using UrlAdaptor.
+
+```cshtml
+@using Syncfusion.Blazor
+@using Syncfusion.Blazor.Data;
+@using Syncfusion.Blazor.Schedule
+@using Url_Adaptor.Data
+@using Url_Adaptor.Models
+@using Url_Adaptor.Pages
+
+<SfSchedule TValue="Event" Height="550px" @bind-SelectedDate="@currentDate" AllowMultiDrag="true">
+    <ScheduleEventSettings TValue="Event">
+        <SfDataManager Url="api/Default" UpdateUrl="/api/Default/Update" RemoveUrl="/api/Default/Delete" InsertUrl="/api/Default/Add" CrudUrl="/api/Default/Batch" Adaptor="Adaptors.UrlAdaptor">
+        </SfDataManager>
+    </ScheduleEventSettings>
+    <ScheduleViews>
+        <ScheduleView Option="View.Month"></ScheduleView>
+    </ScheduleViews>
+</SfSchedule>
+
+@code {
+    DateTime currentDate = new DateTime(2022, 12, 6);
+}
+```
+
+The server-side controller code to handle the CRUD operations is as follows.
+
+```cshtml
+namespace Url_Adaptor.Controller
+{
+    [ApiController]
+    public class DefaultController : ControllerBase
+    {
+        private readonly EventsContext dbContext;
+
+
+        public DefaultController(EventsContext dbContext)
+        {
+            this.dbContext = dbContext;
+
+            if (this.dbContext.Events.Count() == 0)
+            {
+                foreach (var b in DataSource.GetEvents())
+                {
+                    dbContext.Events.Add(b);
+                }
+
+                dbContext.SaveChanges();
+            }
+        }
+
+        [HttpPost]
+        [Route("api/[controller]")]
+        public IActionResult Get()
+        {
+            var events = dbContext.Events.ToList();
+            return Ok(events);
+        }
+
+
+        [HttpPost]
+        [Route("api/Default/Add")]
+        public void Add([FromBody] CRUDModel<Event> args)
+        {
+            dbContext.Events.Add(args.Value);
+            dbContext.SaveChangesAsync();
+        }
+
+        [HttpPost]
+        [Route("api/Default/Update")]
+        public async Task Update(CRUDModel<Event> args)
+        {
+            var entity = await dbContext.Events.FindAsync(args.Value.Id);
+            if (entity != null)
+            {
+                dbContext.Entry(entity).CurrentValues.SetValues(args.Value);
+                await dbContext.SaveChangesAsync();
+            }
+        }
+
+        [HttpPost]
+        [Route("api/Default/Delete")]
+        public async Task Delete(CRUDModel<Event> args)
+        {
+            var key = Convert.ToInt32(Convert.ToString(args.Key));
+            var app = dbContext.Events.Find(key);
+            if (app != null)
+            {
+                dbContext.Events.Remove(app);
+                await dbContext.SaveChangesAsync();
+            }
+        }
+
+        [HttpPost]
+        [Route("api/Default/Batch")]
+        public async Task Batch([FromBody] CRUDModel<Event> args)
+        {
+            if (args.Changed.Count > 0)
+            {
+                foreach (Event appointment in args.Changed)
+                {
+                    var entity = await dbContext.Events.FindAsync(appointment.Id);
+                    if (entity != null)
+                    {
+                        dbContext.Entry(entity).CurrentValues.SetValues(appointment);
+                    }
+                }
+            }            
+            if (args.Added.Count > 0)
+            {
+                foreach (Event appointment in args.Added)
+                {
+                    dbContext.Events.Add(appointment);
+
+                }
+            }
+            if (args.Deleted.Count > 0)
+            {
+                foreach (Event appointment in args.Deleted)
+                {
+                    var app = dbContext.Events.Find(appointment.Id);
+                    if (app != null)
+                    {
+                        dbContext.Events.Remove(app);
+                    }
+                }
+            }
+            await dbContext.SaveChangesAsync();
+        }
+    }
+}
+```
+
 ### Sending additional parameters to the server
 
 To send an additional custom parameter to the server-side post, make use of the `AddParams` method of `Query`. Now, assign this `Query` object with additional parameters to the `Query` property of Scheduler.
