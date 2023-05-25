@@ -203,7 +203,7 @@ The following image represents complex data binding
 
 ### ExpandoObject Complex data binding
 
-Before proceeding this, learn about [ExpandoObject Binding](https://blazor.syncfusion.com/documentation/datagrid/data-binding/#expandoobject-binding). You can achieve ExpandoObject complex data binding in the DataGrid by using the dot(.) operator in the column.field. In the following examples, `CustomerID.Name` and `ShipCountry.Country` are complex data.
+Before proceeding this, learn about [ExpandoObject Binding](https://blazor.syncfusion.com/documentation/datagrid/data-binding#expandoobject-binding). You can achieve ExpandoObject complex data binding in the DataGrid by using the dot(.) operator in the column.field. In the following examples, `CustomerID.Name` and `ShipCountry.Country` are complex data.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -255,7 +255,7 @@ The following image represents ExpandoObject complex data binding
 
 ### DynamicObject Complex data binding
 
-Before proceeding this, learn about [DynamicObject Binding](https://blazor.syncfusion.com/documentation/datagrid/data-binding/#dynamicobject-binding). You can achieve DynamicObject complex data binding in the datagrid by using the dot(.) operator in the column.field. In the following examples, `CustomerID.Name` and `ShipCountry.Country` are complex data.
+Before proceeding this, learn about [DynamicObject Binding](https://blazor.syncfusion.com/documentation/datagrid/data-binding#dynamicobject-binding). You can achieve DynamicObject complex data binding in the datagrid by using the dot(.) operator in the column.field. In the following examples, `CustomerID.Name` and `ShipCountry.Country` are complex data.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -834,7 +834,7 @@ DataGrid column supports the following types:
 * The selection type of the [GridSelectionSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSelectionSettings.html) will be multiple when the GridColumn [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Type) is a checkbox. This is the default behavior.
 * When more than one column has the column type as a checkbox, the grid will automatically enable the other column's checkbox when selecting one column checkbox.
 
->See also section [Render boolean values as checkbox](https://blazor.syncfusion.com/documentation/datagrid/columns/#render-boolean-values-as-checkbox) to render boolean values as checkbox in GridColumn.
+>See also section [Render boolean values as checkbox](https://blazor.syncfusion.com/documentation/datagrid/columns#render-boolean-values-as-checkbox) to render boolean values as checkbox in GridColumn.
 
 ## Format
 
@@ -1527,6 +1527,6 @@ In the following sample, the columns **Order Date**, and **Freight** are grouped
 
 ## See also
 
-* [How to create a Custom Grid Column component](https://www.syncfusion.com/kb/12703/blazor-grid-how-to-create-a-custom-grid-column-component)
+* [How to create a Custom Grid Column component](https://support.syncfusion.com/kb/article/11220/blazor-grid-how-to-create-a-custom-grid-column-component)
 
 > You can refer to the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour page for its groundbreaking feature representations. You can also explore [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap4) to understand how to present and manipulate data.
