@@ -9,9 +9,11 @@ documentation: ug
 
 # Adding Custom Item to Toolbar in Blazor FileManager Component
 
-The custom toolbar items can be added and customized using the `ToolbarSettings` API and `ToolbarItems` property.
+The custom toolbar items can be added and customized using the `ToolbarSettings` API and `FileManagerCustomToolbarItem` property.
 
-The new toolbar button 'Custom' is added using the list of item. The prefix icon and tooltip are added to the newly added toolbar button.
+**Case1**: The 'Custom' button has been introduced to the toolbar using the list of items. To access the custom tool, you can utilize the PrefixIcon and Tooltip attributes, which have been incorporated into the newly added toolbar button.
+
+**Case2**:To include additional components in the toolbar, you need to utilize the template tag. This allows you to render other components seamlessly within the toolbar.
 
 ```cshtml
 
@@ -23,7 +25,13 @@ The new toolbar button 'Custom' is added using the list of item. The prefix icon
                                  DownloadUrl="/api/SampleData/Download"
                                  GetImageUrl="/api/SampleData/GetImage">
         </FileManagerAjaxSettings>
-        <FileManagerToolbarSettings ToolbarItems="@Items"></FileManagerToolbarSettings>
+        <FileManagerToolbarSettings ToolbarItems="@Items"> 
+            <FileManagerCustomToolbarItem Name="Zoomin">
+                <Template>
+                    <SfButton CssClass="e-tbar-btn-text e-tbar-ddb-text " Content="Zoom In" IconCss="e-icons e-zoom-in"></SfButton>
+                </Template>
+            </FileManagerCustomToolbarItem>
+        </FileManagerToolbarSettings>
     </SfFileManager>
 
 @code {
@@ -38,6 +46,7 @@ The new toolbar button 'Custom' is added using the list of item. The prefix icon
         new ToolBarItemModel() { Name = "SortBy" },
         new ToolBarItemModel() { Name = "Refresh" },
         new ToolBarItemModel() { Name = "Custom", Text="Custom", TooltipText="Test Tooltip", PrefixIcon="e-icons e-check"},
+        new ToolBarItemModel() {  Name = "Zoomin" , TooltipText ="Click to zoom in" },
         new ToolBarItemModel() { Name = "Selection" },
         new ToolBarItemModel() { Name = "View" },
         new ToolBarItemModel() { Name = "Details" },
