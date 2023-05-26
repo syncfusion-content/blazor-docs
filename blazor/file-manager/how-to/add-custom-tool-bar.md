@@ -9,11 +9,11 @@ documentation: ug
 
 # Adding Custom Item to Toolbar in Blazor FileManager Component
 
-The custom toolbar items can be added and customized using the `ToolbarSettings` API and `FileManagerCustomToolbarItem` property.
+To enhance the customization of custom toolbar items, the `ToolbarSettings` API and `FileManagerCustomToolbarItem` property can be utilized. These features allow for easy addition, appearance, modification of custom toolbar items.
 
-**Case 1**: The 'Custom' item has been introduced to the toolbar using the list of items. You can customize the icon and tooltip attributes for existing or custom items as shown in the below code example. 
+**Case 1**: To introduce the 'Custom' item to the toolbar using the list of items and customize the icon and tooltip attributes, you can refer to the below code example:
 
-**Case 2**: To render Blazor components in the File Manager toolbar, you can utilize the template tag. This allows you to render other components seamlessly within the toolbar. The template item can be ordered in required position of the toolbar by defining the toolbar items list with same `Name` property. 
+**Case 2**: To include Blazor components in the FileManager toolbar, you can use the template tag. This enables you to seamlessly render additional components within the toolbar. By assigning the same `Name` property in the toolbar items list, you can determine the desired position of the template item within the toolbar.
 
 ```cshtml
 
@@ -26,7 +26,7 @@ The custom toolbar items can be added and customized using the `ToolbarSettings`
                                  GetImageUrl="/api/SampleData/GetImage">
         </FileManagerAjaxSettings>
         <FileManagerToolbarSettings ToolbarItems="@Items"> 
-            </FileManagerCustomToolbarItems> 
+            <FileManagerCustomToolbarItems> 
                 <FileManagerCustomToolbarItem Name="Zoomin">
                     <Template>
                         <SfButton CssClass="e-tbar-btn-text e-tbar-ddb-text " Content="Zoom In" IconCss="e-icons e-zoom-in"></SfButton>
