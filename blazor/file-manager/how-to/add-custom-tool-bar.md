@@ -9,9 +9,9 @@ documentation: ug
 
 # Adding Custom Item to Toolbar in Blazor FileManager Component
 
-The custom toolbar items can be added and customized using the `ToolbarSettings` API and `ToolbarCreated` events.
+The custom toolbar items can be added and customized using the `ToolbarSettings` API and `ToolbarItems` property.
 
-The new toolbar button 'Custom' is added using the `ToolbarSettings` property. The prefix icon and tooltip are added to the newly added toolbar button using the `ToolbarCreated` event.
+The new toolbar button 'Custom' is added using the list of item. The prefix icon and tooltip are added to the newly added toolbar button.
 
 ```cshtml
 
@@ -24,7 +24,6 @@ The new toolbar button 'Custom' is added using the `ToolbarSettings` property. T
                                  GetImageUrl="/api/SampleData/GetImage">
         </FileManagerAjaxSettings>
         <FileManagerToolbarSettings ToolbarItems="@Items"></FileManagerToolbarSettings>
-        <FileManagerEvents TValue="FileManagerDirectoryContent" ToolbarCreated="toolbarCreate"></FileManagerEvents>
     </SfFileManager>
 
 @code {
@@ -38,19 +37,11 @@ The new toolbar button 'Custom' is added using the `ToolbarSettings` property. T
         new ToolBarItemModel() { Name = "Rename" },
         new ToolBarItemModel() { Name = "SortBy" },
         new ToolBarItemModel() { Name = "Refresh" },
+        new ToolBarItemModel() { Name = "Custom", Text="Custom", TooltipText="Test Tooltip", PrefixIcon="e-icons e-check"},
         new ToolBarItemModel() { Name = "Selection" },
         new ToolBarItemModel() { Name = "View" },
         new ToolBarItemModel() { Name = "Details" },
     };
-
-    public void toolbarCreate( ToolbarCreateEventArgs args) {
-        args.Items.Add(new ToolBarItemModel()
-            {
-                Text = "Custom",
-                PrefixIcon = "e-icons e-fe-tick",
-                TooltipText = "Test Tooltip"
-            });
-    }
 }
 
 ```
