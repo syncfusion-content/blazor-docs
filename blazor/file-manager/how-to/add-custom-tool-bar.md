@@ -11,9 +11,9 @@ documentation: ug
 
 The custom toolbar items can be added and customized using the `ToolbarSettings` API and `FileManagerCustomToolbarItem` property.
 
-**Case 1**: The 'Custom' button has been introduced to the toolbar using the list of items. You can customize the icon and tooltip attributes for existing or custom items as shown in the below code example. 
+**Case 1**: The 'Custom' item has been introduced to the toolbar using the list of items. You can customize the icon and tooltip attributes for existing or custom items as shown in the below code example. 
 
-**Case 2**: To render Blazor components in the File Manager toolbar, you can utilize the template tag. This allows you to render other components seamlessly within the toolbar. The template item can be ordered in required position of the toolbar by defining the toolbar items list with same `Name` property. .
+**Case 2**: To render Blazor components in the File Manager toolbar, you can utilize the template tag. This allows you to render other components seamlessly within the toolbar. The template item can be ordered in required position of the toolbar by defining the toolbar items list with same `Name` property. 
 
 ```cshtml
 
@@ -26,11 +26,13 @@ The custom toolbar items can be added and customized using the `ToolbarSettings`
                                  GetImageUrl="/api/SampleData/GetImage">
         </FileManagerAjaxSettings>
         <FileManagerToolbarSettings ToolbarItems="@Items"> 
-            <FileManagerCustomToolbarItem Name="Zoomin">
-                <Template>
-                    <SfButton CssClass="e-tbar-btn-text e-tbar-ddb-text " Content="Zoom In" IconCss="e-icons e-zoom-in"></SfButton>
-                </Template>
-            </FileManagerCustomToolbarItem>
+            </FileManagerCustomToolbarItems> 
+                <FileManagerCustomToolbarItem Name="Zoomin">
+                    <Template>
+                        <SfButton CssClass="e-tbar-btn-text e-tbar-ddb-text " Content="Zoom In" IconCss="e-icons e-zoom-in"></SfButton>
+                    </Template>
+                </FileManagerCustomToolbarItem>
+            </FileManagerCustomToolbarItems> 
         </FileManagerToolbarSettings>
     </SfFileManager>
 
