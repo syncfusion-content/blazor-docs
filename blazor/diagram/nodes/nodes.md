@@ -62,7 +62,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ![Adding Node from Node Collection in Blazor Diagram](../images/blazor-diagram-add-node-from-collection.png)
 
->**Note:** Do not use underscore(_) for node's id.
+>**Note:** Node's Id should not start with numbers or special characters and should not contain special characters such as underscore(_) or space.
 
 ## How to add nodes at runtime
 

@@ -400,6 +400,8 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ![Path Shape Node in Blazor Diagram](images/blazor-diagram-path-shape-node.png)
 
+>**Note:** Path node only supports svg path data and cannot set font icons as node's content.
+
 ## Flow shape node
 
 The [Flow](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.FlowShape.html) shapes are used to represent the process flow. It is used for analyzing, designing and managing the documentation process. To create a flow shape, specify the shape type as **Flow**. By default, it is considered as a **Process**. The following code example illustrates how to create a flow shape.
