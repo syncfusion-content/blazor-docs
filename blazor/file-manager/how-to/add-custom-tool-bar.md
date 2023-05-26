@@ -11,9 +11,9 @@ documentation: ug
 
 The custom toolbar items can be added and customized using the `ToolbarSettings` API and `FileManagerCustomToolbarItem` property.
 
-**Case1**: The 'Custom' button has been introduced to the toolbar using the list of items. To access the custom tool, you can utilize the PrefixIcon and Tooltip attributes, which have been incorporated into the newly added toolbar button.
+**Case 1**: The 'Custom' button has been introduced to the toolbar using the list of items. You can customize the icon and tooltip attributes for existing or custom items as shown in the below code example. 
 
-**Case2**:To include additional components in the toolbar, you need to utilize the template tag. This allows you to render other components seamlessly within the toolbar.
+**Case 2**: To render Blazor components in the File Manager toolbar, you can utilize the template tag. This allows you to render other components seamlessly within the toolbar. The template item can be ordered in required position of the toolbar by defining the toolbar items list with same `Name` property. .
 
 ```cshtml
 
