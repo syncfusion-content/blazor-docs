@@ -9,7 +9,7 @@ documentation: ug
 
 # Adding Custom Item to Toolbar in Blazor FileManager Component
 
-To enhance the customization of custom toolbar items, the `ToolbarSettings` API and `FileManagerCustomToolbarItem` property can be utilized. These features allow for easy addition, appearance, modification of custom toolbar items.
+To enhance the customization of toolbar items, the `ToolbarSettings` API and `FileManagerCustomToolbarItem` property can be utilized. These features allow for easy addition, appearance, modification of custom toolbar items.
 
 **Case 1**: To introduce the 'Custom' item to the toolbar using the list of items and customize the icon and tooltip attributes, you can refer to the below code example:
 
