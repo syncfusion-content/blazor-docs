@@ -48,7 +48,7 @@ To enhance the customization of toolbar items, the `ToolbarSettings` API and `Fi
         new ToolBarItemModel() { Name = "SortBy" },
         new ToolBarItemModel() { Name = "Refresh" },
         new ToolBarItemModel() { Name = "Custom", Text="Custom", TooltipText="Test Tooltip", PrefixIcon="e-icons e-check"},
-        new ToolBarItemModel() {  Name = "Zoomin" , TooltipText ="Click to zoom in" },
+        new ToolBarItemModel() { Name = "Zoomin" , TooltipText ="Click to zoom in" },
         new ToolBarItemModel() { Name = "Selection" },
         new ToolBarItemModel() { Name = "View" },
         new ToolBarItemModel() { Name = "Details" },
