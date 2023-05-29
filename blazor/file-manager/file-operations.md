@@ -36,7 +36,7 @@ To perform the directory(folder) upload in File Manager, set [DirectoryUpload](h
 * NodeJS file service provider.
 * Amazon file service provider.
 
-In the following example, directory upload is enabled/disabled on DropDownButton selection.
+In this example, you can enable or disable the ability to upload directories by selecting an option from the DropDownButton. The DropDownButton is created using the Template feature in FileManagerCustomToolbarItems. 
 
 {% tabs %}
 {% highlight razor %}
@@ -78,10 +78,10 @@ In the following example, directory upload is enabled/disabled on DropDownButton
         new ToolBarItemModel() { Name = "Download" },
         new ToolBarItemModel() { Name = "Rename" },
         new ToolBarItemModel() { Name = "SortBy" },
-        new ToolBarItemModel() {Name = "Refresh",PrefixIcon="fa fa-refresh"},
-        new ToolBarItemModel() {Name = "Selection" },
-        new ToolBarItemModel() {Name = "View" ,Disabled=true },
-        new ToolBarItemModel() {Name = "Details" },
+        new ToolBarItemModel() { Name = "Refresh",PrefixIcon="fa fa-refresh"},
+        new ToolBarItemModel() { Name = "Selection" },
+        new ToolBarItemModel() { Name = "View" ,Disabled=true },
+        new ToolBarItemModel() { Name = "Details" },
     };
     public bool IsDirectoryUpload = true;
     public async void ItemSelected(MenuEventArgs args)
