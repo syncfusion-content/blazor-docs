@@ -633,7 +633,7 @@ The following example demonstrates how to change a theme dynamically in Blazor S
 {% endhighlight %}
 {% endtabs %}
 
-2.Modify the **MainLayout.razor** page with the below code to implement a theme change dynamically using the dropdown by changing query string to change the theme in application.
+2.Modify the MainLayout.razor page with the code below to implement dynamic theme change using the dropdown by modifying the query string to change the theme in the application.
 
 ```cshtml
 @inherits LayoutComponentBase
