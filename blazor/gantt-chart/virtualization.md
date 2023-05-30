@@ -117,14 +117,14 @@ The number of records displayed in the Gantt chart is determined implicitly by t
 
 Column virtualization allows you to load more columns with high performance. It renders only the columns in the viewport, while other columns render on-demand during horizontal scrolling.
 
-To set up the column virtualization, set the [EnableVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_EnableVirtualization) and [EnableColumnVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_EnableColumnVirtualization) properties as **true**.
+To set up the column virtualization, set the [EnableRowVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_EnableRowVirtualization) and [EnableColumnVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_EnableColumnVirtualization) properties as **true**.
 
 ```csharp
 
 @using Syncfusion.Blazor.Gantt
 
 <SfGantt ID="Gantt" DataSource="@TaskCollection" 
-    EnableVirtualization="true" EnableColumnVirtualization="true"  Height="450px" Width="1000px">
+    EnableRowVirtualization="true" EnableColumnVirtualization="true"  Height="450px" Width="1000px">
     <GanttTaskFields Id="ProjectId" Name="ProjectName" StartDate="ProjectStartDate" EndDate="ProjectEndDate" Duration="ProjectDuration" Progress="ProjectProgress" Dependency="Predecessor" ParentID="ParentId">
     </GanttTaskFields>
      <GanttColumns>
