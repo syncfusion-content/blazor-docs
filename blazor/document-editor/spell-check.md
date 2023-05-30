@@ -15,8 +15,7 @@ Document Editor supports performing spell checking for any input text. You can p
 @using Syncfusion.Blazor.DocumentEditor 
 @using Syncfusion.EJ2.SpellChecker; 
 
-<SfDocumentEditorContainer @ref="container" EnableToolbar=true Height="590px"
-    EnableSpellCheck="true" ServiceUrl="http://localhost:62870/api/documenteditor/">
+<SfDocumentEditorContainer @ref="container" EnableToolbar=true Height="590px" EnableSpellCheck="true" ServiceUrl="http://localhost:62870/api/documenteditor/">
     <DocumentEditorContainerEvents Created="OnLoad"></DocumentEditorContainerEvents>
 </SfDocumentEditorContainer>
 
