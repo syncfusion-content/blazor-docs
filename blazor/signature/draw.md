@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Draw with Blazor Signature Component | Syncfusion
-description: Checkout how to draw text as a signature using Blazor Signature component in Blazor Server App and Blazor WebAssembly App.
+description: Checkout how to draw the text as a signature with Blazor Signature component in Blazor Server App and Blazor WebAssembly App.
 platform: Blazor
 control: Signature
 documentation: ug
@@ -99,4 +99,4 @@ The text can be drawn as [Blazor Signature](https://www.syncfusion.com/blazor-co
 </style>
 ```
 
-![Draw Blazor Signature Component](./images/blazor-signature-draw.png)
+![Blazor Signature Component](./images/blazor-signature-draw.png)

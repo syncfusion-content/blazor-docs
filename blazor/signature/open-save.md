@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Open and Save with Blazor Signature Component | Syncfusion
-description: Checkout and learn how to open and save a signature with Blazor Signature component in Blazor Server App and Blazor WebAssembly App.
+description: Checkout and learn about loading and saving the signature with Blazor Signature component in Blazor Server App and Blazor WebAssembly App.
 platform: Blazor
 control: Signature
 documentation: ug
 ---
 
-# Open and Save with Blazor Signature component
+# Open and Save Signature
 
 The [Blazor Signature](https://www.syncfusion.com/blazor-components/blazor-signature) component supports to open the signature by using hosted/online URL or base64. And it also supports various save options like image, base64, and blob.
 
@@ -60,7 +60,7 @@ The signature component opens a pre-drawn signature as either base64 or hosted/ 
 </style>
 ```
 
-![Open signature with Blazor Signature Component](./images/blazor-signature-open-image.png)
+![Blazor Signature Component](./images/blazor-signature-open-image.png)
 
 ## Save Signature
 
@@ -89,7 +89,7 @@ The Signature component gets the signature as base64 using the [`GetSignatureAsy
 }
 ```
 
-![Save as Base64 Blazor Signature Component](./images/blazor-signature-save-base.png)
+![Blazor Signature Component](./images/blazor-signature-save-base.png)
 
 ### Save as Blob
 
@@ -113,7 +113,7 @@ The signature component saves the signature as Blob using [`SaveAsBlobAsync`](ht
 }
 ```
 
-![Save as Blob Blazor Signature Component](./images/blazor-signature-save-blob.png)
+![Blazor Signature Component](./images/blazor-signature-save-blob.png)
 
 ### Save as Image
 
@@ -166,7 +166,7 @@ The Signature component saves the signature as an image using [`SaveAsync`](http
 }
 ```
 
-![Save as Image Blazor Signature Component](./images/blazor-signature-save-image.png)
+![Blazor Signature Component](./images/blazor-signature-save-image.png)
 
 ## Save with Background
 
@@ -221,4 +221,4 @@ In the following sample, the background color is set as ‘rgb(103, 58, 183)’ 
 }
 ```
 
-![Save with Background Blazor Signature Component](./images/blazor-signature-save-bg.png)
+![Blazor Signature Component](./images/blazor-signature-save-bg.png)
