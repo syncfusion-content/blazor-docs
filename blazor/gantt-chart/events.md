@@ -423,7 +423,7 @@ The events should be provided to the Gantt Chart using the GanttChartEvents comp
 
 ## TaskbarEditing
 
-[TaskbarEdited](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_TaskbarEditing) event triggers when the user starts editing the taskbar.
+[TaskbarEditing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_TaskbarEditing) event triggers when the user starts editing the taskbar.
 
 ```cshtml
 @using Syncfusion.Blazor.Gantt
