@@ -74,7 +74,7 @@ The number of records displayed in the Gantt chart is determined implicitly by t
                         Duration = "20",
                         Assignee = "Mark Bridges",
                         Reporter = "Kobe Bryant",
-                        Progress = rand.Next(100),
+                        Progress = 50,
                     };
                 DataCollection.Add(Parent);
                 for (var j = 1; j <= 4; j++)
@@ -90,7 +90,7 @@ The number of records displayed in the Gantt chart is determined implicitly by t
                             Duration = duration.ToString(),
                             Assignee = assignee[j - 1],
                             Reporter = reporter[j - 1],
-                            Progress = rand.Next(100),
+                            Progress = 50,
                             ParentId = Parent.ID,
                         });
                 }
@@ -170,7 +170,7 @@ To set up the column virtualization, set the [EnableRowVirtualization](https://h
                     ProjectStartDate = new DateTime(2022, 1, 9),
                     ProjectEndDate = new DateTime(2022, 1, 13),
                     ProjectDuration = "10",
-                    ProjectProgress = random.Next(100),
+                    ProjectProgress = 50,
                     ParentId = null,
                     Predecessor = null,
                 };
@@ -185,7 +185,7 @@ To set up the column virtualization, set the [EnableRowVirtualization](https://h
                         ProjectStartDate = new DateTime(2022, 1, 9),
                         ProjectEndDate = new DateTime(2022, 1, 13),
                         ProjectDuration = "10",
-                        ProjectProgress = random.Next(100),
+                        ProjectProgress = 50,
                         ParentId = Parent.ProjectId,
                         Predecessor = i + "FS",
                         Field1 = Names[name],
@@ -305,7 +305,7 @@ Timeline virtualization allows you to load data sources having a large timespan 
                     ProjectStartDate = new DateTime(2017, 1, 9),
                     ProjectEndDate = new DateTime(2017, 1, 13),
                     ProjectDuration = "10",
-                    ProjectProgress = random.Next(100),
+                    ProjectProgress = 50,
                     ParentId = null,
                     Predecessor = null,
                 };
@@ -320,7 +320,7 @@ Timeline virtualization allows you to load data sources having a large timespan 
                         ProjectStartDate = j <= 3 ? new DateTime(2000, 2, 10) : j > 3 && j <= 6 ? new DateTime(2031, 5, 1) : new DateTime(2061, 8, 1),
                         ProjectEndDate = new DateTime(2021, 1, 13),
                         ProjectDuration = "10650",
-                        ProjectProgress = random.Next(100),
+                        ProjectProgress = 50,
                         ParentId = Parent.ProjectId,
                         Field1 = Names[name],
                         FIELD2 = 1967 + random.Next(0, 10),
