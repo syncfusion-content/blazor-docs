@@ -238,7 +238,7 @@ N> Column's [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gant
 
 ## Timeline virtualization
 
-The `EnableTimelineVirtualization` property allows you to render only the timelines that are visible in the content viewport at load time. Timelines are loaded while scrolling horizontally, which optimizes memory usage by rendering only the timelines that are visible, resulting in faster rendering and scrolling and efficiently handling large datasets in your Gantt chart without sacrificing performance or user experience. To set up timeline virtualization using this API, simply set [EnableTimelineVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_EnableTimelineVirtualization) to true.
+Timeline virtualization allows you to load data sources having a large timespan with high performance. Initially, it renders the timeline with twice the width of the gantt element, while other timeline cells render on-demand during horizontal scrolling. To set up timeline virtualization using this API, simply set [EnableTimelineVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_EnableTimelineVirtualization) to true.
 
 ```csharp
 
