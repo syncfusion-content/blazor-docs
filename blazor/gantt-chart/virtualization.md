@@ -13,7 +13,7 @@ Gantt Chart allows you to load a large amount of data without performance degrad
 
 ## Row virtualization
 
-The `EnableRowVirtualization` property allows you to render only the rows that are visible in the content viewport at load time. Rows are loaded while scrolling vertically, which optimizing memory usage by rendering only the rows that are visible, resulting in faster rendering and scrolling and efficiently handling large datasets in your Gantt chart without sacrificing performance or user experience. To set up row virtualization using this API, simply set [EnableRowVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_EnableRowVirtualization) to true.
+The `EnableRowVirtualization` property allows you to render only the rows that are visible in the content viewport at load time. Rows are loaded while scrolling vertically, which optimizing memory usage by rendering only the rows that are visible, resulting in faster rendering and scrolling and efficiently handling large datasets in your Gantt chart without sacrificing performance or user experience. To enable row virtualization using this API, simply set [EnableRowVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_EnableRowVirtualization) to true.
 
 The number of records displayed in the Gantt chart is determined implicitly by the height of the content area.
 
@@ -117,7 +117,7 @@ The number of records displayed in the Gantt chart is determined implicitly by t
 
 Column virtualization allows you to load more columns with high performance. It renders only the columns in the viewport, while other columns render on-demand during horizontal scrolling.
 
-To set up the column virtualization, set the [EnableRowVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_EnableRowVirtualization) and [EnableColumnVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_EnableColumnVirtualization) properties as **true**.
+To enable the column virtualization, set the [EnableRowVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_EnableRowVirtualization) and [EnableColumnVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_EnableColumnVirtualization) properties as **true**.
 
 ```csharp
 
@@ -238,7 +238,7 @@ N> Column's [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gant
 
 ## Timeline virtualization
 
-Timeline virtualization allows you to load data sources having a large timespan with high performance. Initially, it renders the timeline with twice the width of the gantt element, while other timeline cells render on-demand during horizontal scrolling. To set up timeline virtualization using this API, simply set [EnableTimelineVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_EnableTimelineVirtualization) to true.
+Timeline virtualization allows you to load data sources having a large timespan with high performance. Initially, it renders the timeline with twice the width of the gantt element, while other timeline cells render on-demand during horizontal scrolling. To enable timeline virtualization using this API, simply set [EnableTimelineVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_EnableTimelineVirtualization) to true.
 
 ```csharp
 
