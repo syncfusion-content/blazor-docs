@@ -400,7 +400,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ![Path Shape Node in Blazor Diagram](images/blazor-diagram-path-shape-node.png)
 
->**Note:** Path node only supports svg path data and cannot set font icons as node's content.
+>**Note:** Path node only supports the SVG path data and cannot set font icons as the node's content.
 
 ## Flow shape node
 

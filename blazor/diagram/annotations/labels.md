@@ -76,7 +76,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 N>* [ID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Annotation.html#Syncfusion_Blazor_Diagram_Annotation_ID) for each annotation should be unique and so it is further used to find the annotation at runtime and do any customization.
 <br/>* By default, node’s annotation positioned in center point of the shape.
 <br/>* By default, connector’s path annotation positioned in center point of its path.
->**Note:** Annotations's Id should not start with numbers or special characters and should not contain special characters such as underscore(_) or space.
+>**Note:** Annotations' Id should not start with numbers or special characters and should not contain special characters such as underscore(_) or space.
 
 ## How to add annotation at runtime
 
