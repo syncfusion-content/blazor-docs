@@ -122,7 +122,7 @@ The following image represents DataGrid with external button for invoking print 
 
 ## Print the visible page
 
-By default, the datagrid prints all the pages. To print the current page alone, set the [PrintMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_DashArray) value as **CurrentPage**.
+By default, the datagrid prints all the pages. To print the current page alone, set the [PrintMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PdfViewer.PrintMode.html) value as **CurrentPage**.
 
 The below sample code demonstrates this,
 
