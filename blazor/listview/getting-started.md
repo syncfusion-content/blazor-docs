@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with Blazor ListView Component | Syncfusion
-description: Checkout and learn about getting started with Blazor ListView component in Blazor Server App and Blazor WebAssembly App.
+description: Checkout and learn about getting started with Syncfusion Blazor ListView component in Blazor Server App and Blazor WebAssembly App.
 platform: Blazor
 control: Listview
 documentation: ug

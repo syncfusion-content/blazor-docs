@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with Blazor HeatMap Chart Component | Syncfusion
-description: Checkout and learn about getting started with Blazor HeatMap Chart component in Blazor Server App and Blazor WebAssembly App.
+description: Checkout and learn about getting started with Syncfusion Blazor HeatMap Chart component in Blazor Server App and Blazor WebAssembly App.
 platform: Blazor
 control: HeatMap Chart
 documentation: ug
