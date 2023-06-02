@@ -333,7 +333,7 @@ Timeline virtualization allows you to load data sources having a large timespan 
                         Field9 = (int)Math.Floor(20 * 10),
                         Field10 = (int)Math.Floor(25 * 100),
                         Field11 = (int)Math.Floor(30 * 100),
-                        Field12 = (int)Math.Floor(35 * 1000),
+                        Field12 = (int)Math.Floor(35 * 1000), 
                     });
                 }
             }
