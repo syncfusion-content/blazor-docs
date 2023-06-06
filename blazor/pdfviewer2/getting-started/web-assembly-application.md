@@ -113,10 +113,12 @@ N> Syncfusion recommends to reference scripts using [Static Web Assets](https://
 
 ## Add Blazor SfPdfViewer2 Component
 
-* Add the Syncfusion SfPdfViewer2 component in razor file. Here, the SfPdfViewer2 component is added in the **~/Pages/Index.razor** file under the **~/Pages** folder.
+Add the Syncfusion SfPdfViewer2 component in razor file. Here, the SfPdfViewer2 component is added in the **~/Pages/Index.razor** file under the **~/Pages** folder.
 
 {% tabs %}
 {% highlight razor %}
+
+@page "/"
 
 <SfPdfViewer2 DocumentPath="@DocumentPath" ServiceUrl="https://ej2services.syncfusion.com/production/web-services/api/pdfviewer" Height="100%" Width="100%"></SfPdfViewer2>
 
