@@ -113,18 +113,7 @@ N> Syncfusion recommends to reference scripts using [Static Web Assets](https://
 
 ## Add Blazor SfPdfViewer2 Component
 
-* Open **~/_Imports.razor** file or any other page under the `~/Shared` folder where the component is to be added and import the **Syncfusion.Blazor.SfPdfViewer** namespace.
-
-{% tabs %}
-{% highlight razor tabtitle="~/Imports.razor" %}
-
-@using Syncfusion.Blazor
-@using Syncfusion.Blazor.SfPdfViewer
-
-{% endhighlight %}
-{% endtabs %}
-
-* Now, add the Syncfusion SfPdfViewer2 component in razor file. Here, the SfPdfViewer2 component is added in the **~/Pages/Index.razor** file under the **~/Pages** folder.
+* Add the Syncfusion SfPdfViewer2 component in razor file. Here, the SfPdfViewer2 component is added in the **~/Pages/Index.razor** file under the **~/Pages** folder.
 
 {% tabs %}
 {% highlight razor %}
