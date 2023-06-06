@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting Started with PDF Viewer in Blazor Server App | Syncfusion
-description: Learn how to getting started with PDF Viewer control in Blazor Server-side application. You can view and comment on PDFs in ease and also can fill fields. 
+title: Getting Started with PDF Viewer2 in Blazor Server App | Syncfusion
+description: Learn how to getting started with PDF Viewer2 control in Blazor Server-side application. You can view and comment on PDFs in ease and also can fill fields. 
 platform: Blazor
 control: PDF Viewer2
 documentation: ug
 ---
 
-# Getting Started with Blazor PDF Viewer Component in Blazor Server App
+# Getting Started with Blazor PDF Viewer2 Component in Blazor Server App
 
 This section briefly explains about how to integrate [Blazor PDF Viewer](https://www.syncfusion.com/blazor-components/blazor-pdf-viewer) component in your Blazor Server App using Visual Studio.
 
@@ -15,7 +15,7 @@ This section briefly explains about how to integrate [Blazor PDF Viewer](https:/
 
 * [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
 
-## Integrate PDF Viewer into Blazor Server App
+## Integrate PDF Viewer2 into Blazor Server App
 
 1. Start Visual Studio and select **Create a new project**.
 
@@ -28,9 +28,9 @@ This section briefly explains about how to integrate [Blazor PDF Viewer](https:/
 4. In the **Additional information** dialog, set the target framework. 
 ![Set-target-framework](GettingStarted_images/Additional_information.png)
 
-## Install Blazor PDF Viewer NuGet package in Blazor Server App
+## Install Blazor PDF Viewer2 NuGet package in Blazor Server App
 
-To add Blazor PDF Viewer component in Blazor Server App, use `SfPdfViewer` component and theme style sheet in corresponding NuGet based on the operating system of the server you intend to host, as shown below.
+To add Blazor PDF Viewer2 component in Blazor Server App, use `SfPdfViewer` component and theme style sheet in corresponding NuGet based on the operating system of the server you intend to host, as shown below.
 
 * For **Windows**, use [Syncfusion.Blazor.SfPdfViewer.Windows](https://www.nuget.org/packages/Syncfusion.Blazor.SfPdfViewer.Windows) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/)
 
@@ -85,7 +85,7 @@ Add the theme style sheet as below in the sever web app.
 {% highlight cshtml %}
 
 <head>
-    <!-- Syncfusion Blazor PDF Viewer controls theme style sheet -->
+    <!-- Syncfusion Blazor PDF Viewer2 controls theme style sheet -->
     <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
 </head>
 
@@ -106,9 +106,9 @@ Add the theme style sheet as below in the sever web app.
 {% highlight cshtml %}
 
 <head>
-    <!-- Syncfusion Blazor PDF Viewer controls theme style sheet -->
+    <!-- Syncfusion Blazor PDF Viewer2 controls theme style sheet -->
     <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
-    <!-- Syncfusion Blazor PDF Viewer controls scripts -->
+    <!-- Syncfusion Blazor PDF Viewer2 controls scripts -->
     <script src="_content/Syncfusion.Blazor.PdfViewer/scripts/syncfusion-blazor-pdfviewer.min.js" type="text/javascript"></script>
 </head>
 
@@ -119,9 +119,9 @@ Add the theme style sheet as below in the sever web app.
 
 > Syncfusion recommends to reference scripts using [Static Web Assets](https://blazor.syncfusion.com/documentation/common/adding-script-references#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/common/adding-script-references#cdn-reference) and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator) by [disabling JavaScript isolation](https://blazor.syncfusion.com/documentation/common/adding-script-references#disable-javascript-isolation) for better loading performance of the Blazor application.
 
-## Adding Blazor PDF Viewer Component
+## Adding Blazor PDF Viewer2 Component
 
-Add the Syncfusion PDF Viewer component in the **~/Pages/Index.razor** file.
+Add the Syncfusion PDF Viewer2 component in the **~/Pages/Index.razor** file.
 
 {% tabs %}
 {% highlight razor %}
@@ -133,9 +133,9 @@ Add the Syncfusion PDF Viewer component in the **~/Pages/Index.razor** file.
 {% endhighlight %}
 {% endtabs %}
 
-N> If the `DocumentPath` property value is not provided, the PDF Viewer component will be rendered without loading the PDF document. The users can then use the open option from the toolbar to browse and open the PDF as required.
+N> If the `DocumentPath` property value is not provided, the PDF Viewer2 component will be rendered without loading the PDF document. The users can then use the open option from the toolbar to browse and open the PDF as required.
 
-Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to run the application. Then, the Syncfusion `Blazor PDF Viewer` component will be rendered in the default web browser.
+Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to run the application. Then, the Syncfusion `Blazor PDF Viewer2` component will be rendered in the default web browser.
 
 ![Blazor PDFViewer Component](GettingStarted_images/blazor-pdfviewer.png)
 
