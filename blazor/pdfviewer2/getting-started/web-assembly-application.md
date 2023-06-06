@@ -45,7 +45,7 @@ To add Blazor `SfPdfViewer2` component in Blazor WebAssembly App,
 </ItemGroup>
 ```
 
-N> Install this wasm-tools and wasm-tools-net6 by using the "dotnet workload install wasm-tools" and "dotnet workload install wasm-tools-net6" commands in your command prompt respectively if you are facing issues related to Skiasharp during runtime.
+N> Install this `wasm-tools` and `wasm-tools-net6` by using the `dotnet workload install wasm-tools` and `dotnet workload install wasm-tools-net6` commands in your command prompt respectively if you are facing issues related to Skiasharp during runtime.
 
 * Enable the following property in the Blazor WebAssembly csproj file.
 
