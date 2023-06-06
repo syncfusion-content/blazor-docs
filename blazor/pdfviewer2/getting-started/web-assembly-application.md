@@ -120,7 +120,12 @@ Add the Syncfusion SfPdfViewer2 component in razor file. Here, the SfPdfViewer2 
 
 @page "/"
 
-<SfPdfViewer2 DocumentPath="@DocumentPath" ServiceUrl="https://ej2services.syncfusion.com/production/web-services/api/pdfviewer" Height="100%" Width="100%"></SfPdfViewer2>
+<SfPdfViewer2 
+    DocumentPath="@DocumentPath" 
+    ServiceUrl="https://ej2services.syncfusion.com/production/web-services/api/pdfviewer" 
+    Height="100%" 
+    Width="100%">
+</SfPdfViewer2>
 
 {% endhighlight %}
 {% endtabs %}
