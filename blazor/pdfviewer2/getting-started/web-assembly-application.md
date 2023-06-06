@@ -116,7 +116,7 @@ N> Syncfusion recommends to reference scripts using [Static Web Assets](https://
 Add the Syncfusion SfPdfViewer2 component in razor file. Here, the SfPdfViewer2 component is added in the **~/Pages/Index.razor** file under the **~/Pages** folder.
 
 {% tabs %}
-{% highlight razor %}
+{% highlight html tabtitle="~/index.razor" %}
 
 @page "/"
 
