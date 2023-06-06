@@ -32,9 +32,30 @@ This section briefly explains about how to include [Blazor SfPdfViewer2](https:/
 
 Syncfusion Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). To use Syncfusion Blazor components in the application, add reference to the corresponding NuGet. Refer to [NuGet packages topic](https://blazor.syncfusion.com/documentation/nuget-packages) for available NuGet packages list with component details and [Benefits of using individual NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages#benefits-of-using-individual-nuget-packages).
 
-To add Blazor `SfPdfViewer2` component in Blazor WebAssembly App, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search for [Syncfusion.Blazor.SfPdfViewer](https://www.nuget.org/packages/Syncfusion.Blazor.SfPdfViewer) and then install it. and also install [SkiaSharp.NativeAssets.WebAssembly](https://www.nuget.org/packages/SkiaSharp.NativeAssets.WebAssembly) to include the SkiaSharp assemblies in your project.
+To add Blazor `SfPdfViewer2` component in Blazor WebAssembly App, 
+* open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search for [Syncfusion.Blazor.SfPdfViewer](https://www.nuget.org/packages/Syncfusion.Blazor.SfPdfViewer) and then install it. 
 
-N> This component requires server-side processing to render the PDF files through web service
+* Install [SkiaSharp.NativeAssets.WebAssembly](https://www.nuget.org/packages/SkiaSharp.NativeAssets.WebAssembly) NuGet package as a reference to your Blazor application from NuGet.org.
+
+* Add the following ItemGroup tag in the Blazor WebAssembly csproj file.
+
+```
+<ItemGroup>
+    <NativeFileReference Include="$(SkiaSharpStaticLibraryPath)\2.0.23\*.a" />
+</ItemGroup>
+```
+
+N> Install this wasm-tools and wasm-tools-net6 by using the "dotnet workload install wasm-tools" and "dotnet workload install wasm-tools-net6" commands in your command prompt respectively if you are facing issues related to Skiasharp during runtime.
+
+* Enable the following property in the Blazor WebAssembly csproj file.
+
+```
+<PropertyGroup>
+	<WasmNativeStrip>true</WasmNativeStrip>
+	<WasmBuildNative>true</WasmBuildNative>
+</PropertyGroup>
+
+```
 
 ## Register Syncfusion Blazor Service
 
@@ -52,7 +73,7 @@ Open **~/_Imports.razor** file and import the **Syncfusion.Blazor** and **Syncfu
 * Open **~/Program.cs** file and register the Syncfusion Blazor Service in the client web application.
 
 {% tabs %}
-{% highlight C# tabtitle=".NET 6 & .NET 7 (~/Program.cs)" hl_lines="3 12" %}
+{% highlight C# tabtitle=".NET 6 & .NET 7 (~/Program.cs)" hl_lines="3 9 13" %}
 
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
@@ -62,11 +83,11 @@ var builder = WebAssemblyHostBuilder.CreateDefault(args);
 builder.RootComponents.Add<App>("#app");
 builder.RootComponents.Add<HeadOutlet>("head::after");
 
+builder.Services.AddMemoryCache();
 builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
 
 // Add Syncfusion Blazor service to the container.
 builder.Services.AddSyncfusionBlazor();
-builder.Services.AddMemoryCache();
 await builder.Build().RunAsync();
 
 {% endhighlight %}
@@ -121,27 +142,21 @@ Add the Syncfusion SfPdfViewer2 component in razor file. Here, the SfPdfViewer2 
 @page "/"
 
 <SfPdfViewer2 
-    DocumentPath="@DocumentPath" 
-    ServiceUrl="https://ej2services.syncfusion.com/production/web-services/api/pdfviewer" 
-    Height="100%" 
-    Width="100%">
+    DocumentPath="@DocumentPath" Height="100%" Width="100%">
 </SfPdfViewer2>
+
+@code {
+    private string DocumentPath { get; set; } = "wwwroot/Data/PDF Succinctly.pdf";
+    public SfPdfViewer2 PdfViewerServerRef { get; set; }
+}
 
 {% endhighlight %}
 {% endtabs %}
 
 N> If the `DocumentPath` property value is not provided, the SfPdfViewer2 component will be rendered without loading the PDF document. The users can then use the open option from the toolbar to browse and open the PDF as required.
 
-N> [View Sample in GitHub]().
-
-## Server side processing
-
-Since Syncfusion SfPdfViewer2 (Blazor WebAssembly) component depends on server-side processing to render the PDF files, it is mandatory to create a web service as mentioned [here](https://www.syncfusion.com/kb/10346/how-to-create-pdf-viewer-web-service-application-in-asp-net-core).
-
-N> [View web service sample in GitHub](https://github.com/SyncfusionExamples/EJ2-PDFViewer-WebServices)
-
 Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to run the application. Then, the Syncfusion `Blazor SfPdfViewer2` component will be rendered in the default web browser.
 
 ![Blazor SfPdfViewer2 Component](GettingStarted_images/blazor-pdfviewer.png)
 
-N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/PDFViewer).
+>[View Sample in GitHub]().
