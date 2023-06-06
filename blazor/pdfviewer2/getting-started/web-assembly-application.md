@@ -54,7 +54,6 @@ N> Install this wasm-tools and wasm-tools-net6 by using the "dotnet workload ins
 	<WasmNativeStrip>true</WasmNativeStrip>
 	<WasmBuildNative>true</WasmBuildNative>
 </PropertyGroup>
-
 ```
 
 ## Register Syncfusion Blazor Service
@@ -146,7 +145,7 @@ Add the Syncfusion SfPdfViewer2 component in razor file. Here, the SfPdfViewer2 
 </SfPdfViewer2>
 
 @code {
-    private string DocumentPath { get; set; } = "wwwroot/Data/PDF Succinctly.pdf";
+    private string DocumentPath { get; set; } = "PDF_Succinctly.pdf";
     public SfPdfViewer2 PdfViewerServerRef { get; set; }
 }
 
