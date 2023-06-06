@@ -49,7 +49,7 @@ Open **~/_Imports.razor** file and import the **Syncfusion.Blazor.SfPdfViewer** 
 * For **.NET 6 and .NET 7** app, open the **~/Program.cs** file and register the Syncfusion Blazor Service.
 
 {% tabs %}
-{% highlight c# tabtitle="~/Program.cs" hl_lines="3 11" %}
+{% highlight c# tabtitle="~/Program.cs" hl_lines="3 12" %}
 
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Web;
