@@ -321,6 +321,112 @@ The latitude and longitude values are used to determine the location of each mar
 
 ![Setting Value Path from DataSource in Blazor Maps Marker](./images/Marker/blazor-maps-marker.PNG)
 
+## Repositioning the marker using drag and drop
+
+The markers on the map can be dragged and dropped to change their position. To enable marker drag and drop, set the [EnableDrag]() property to true in the [MapsMarkerSettings]() property.
+
+```cshtml
+@using Syncfusion.Blazor.Maps
+
+<SfMaps>
+    <MapsLayers>
+        <MapsLayer ShapeData='new {dataOptions= "https://cdn.syncfusion.com/maps/map-data/world-map.json"}' TValue="string">
+            <MapsMarkerSettings>
+                <MapsMarker EnableDrag="true" Visible="true" DataSource="MarkerDataSource" Height="20" Width="20" TValue="City">
+                    <MapsMarkerBorder Width="2" Color="#285255"></MapsMarkerBorder>
+                    <MapsMarkerTooltipSettings Visible="true" ValuePath="Name"></MapsMarkerTooltipSettings>
+                </MapsMarker>
+            </MapsMarkerSettings>
+            <MapsShapeSettings Fill="#C3E6ED"></MapsShapeSettings>
+        </MapsLayer>
+    </MapsLayers>
+</SfMaps>
+@code {
+    public class City
+    {
+        public double Latitude { get; set; }
+        public double Longitude { get; set; }
+        public string Name { get; set; }
+    };
+    public List<City> MarkerDataSource = new List<City> {
+        new City {Latitude=49.95121990866204,Longitude=18.468749999999998, Name = "MarkerOne"},
+        new City {Latitude=59.88893689676585,Longitude= -109.3359375, Name = "MarkerTwo"},
+        new City {Latitude=-6.64607562172573,Longitude=-55.54687499999999, Name = "MarkerThree"},
+        new City {Latitude=23.644385824912135,Longitude=77.83189239539234, Name = "MarkerFour"},
+        new City {Latitude=63.66569332894224,Longitude= 98.2225173953924, Name = "MarkerFive"}
+    };
+   
+}
+```
+
+![Marker with drag and drop functionality in Blazor Maps Marker](./images/Marker/marker-drag-and-drop.gif)
+
+The data of the drag and dropped marker in the marker data source can be customized using the [MarkerDragStart]() and [MarkerDragEnd]() events. When you change the appropriate marker data, the tooltip and legend item text of that marker are automatically updated. The following properties are available in the event argument of the marker drag events.
+
+The following example shows how to use marker drag events to customize the data of the drag and dropped marker in the marker data source.
+
+|   Argument Name      |   Description                               |
+|----------------------| --------------------------------------------|
+|   DataIndex          |   It represents the index of the data of the dragged marker in the marker data source.                          |
+|   Latitude           |   It represents the latitude coordinate point of the dragged marker.                                            |
+|   Longitude          |   It represents the longitude coordinate point for the dragged marker.                                          |
+|   MarkerIndex        |   It represents the index of the marker setting.                                                                |
+|   LayerIndex         |   It represents the index of the layer in which the marker belongs.                                             |
+|   EventName          |   It represents the name of the event.                                                                     |
+|   X                  |   It represents the horizontal location of the mouse pointer on the map when the drag action is performed.      |
+|   Y                  |   It represents the vertical location of the mouse pointer on the map when the drag action is performed.        |
+
+```cshtml
+
+@using Syncfusion.Blazor.Maps
+
+<SfMaps>
+    <MapsEvents MarkerDragStart="MarkerDragStartEvent" MarkerDragEnd="MarkerDragEndEvent"></MapsEvents>
+    <MapsLegendSettings Visible="true" Type="LegendType.Markers" Shape="LegendShape.Circle" ShapeWidth="10" ShapeHeight="10" Fill="#FF471A">
+        <MapsLegendShapeBorder Width="2" Color="#285255"></MapsLegendShapeBorder>
+    </MapsLegendSettings>
+    <MapsLayers>
+        <MapsLayer ShapeData='new {dataOptions= "https://cdn.syncfusion.com/maps/map-data/world-map.json"}' TValue="string">
+            <MapsMarkerSettings>
+                <MapsMarker LegendText="Name" EnableDrag="true" Visible="true" DataSource="MarkerDataSource" Height="20" Width="20" TValue="City">
+                    <MapsMarkerBorder Width="2" Color="#285255"></MapsMarkerBorder>
+                    <MapsMarkerTooltipSettings Visible="true" ValuePath="Name"></MapsMarkerTooltipSettings>
+                </MapsMarker>
+            </MapsMarkerSettings>
+            <MapsShapeSettings Fill="#C3E6ED"></MapsShapeSettings>
+        </MapsLayer>
+    </MapsLayers>
+</SfMaps>
+@code {
+    public class City
+    {
+        public double Latitude { get; set; }
+        public double Longitude { get; set; }
+        public string Name { get; set; }
+    };
+    public List<City> MarkerDataSource = new List<City> {
+        new City {Latitude=49.95121990866204,Longitude=18.468749999999998, Name = "MarkerOne"},
+        new City {Latitude=59.88893689676585,Longitude= -109.3359375, Name = "MarkerTwo"},
+        new City {Latitude=-6.64607562172573,Longitude=-55.54687499999999, Name = "MarkerThree"},
+        new City {Latitude=23.644385824912135,Longitude=77.83189239539234, Name = "MarkerFour"},
+        new City {Latitude=63.66569332894224,Longitude= 98.2225173953924, Name = "MarkerFive"}
+    };
+
+    void MarkerDragStartEvent(MarkerDragStartEventArgs args)
+    {
+        // When the marker begins to move on the map, the event is triggered.
+    }
+
+    void MarkerDragEndEvent(MarkerDragEndEventArgs args)
+    {
+        // When the marker on the map stops dragging, the event is triggered.
+    }
+
+}
+```
+
+![Marker customization using marker drag events in Blazor Maps Marker](./images/Marker/marker-drag-events.gif)
+
 ## Marker zooming
 
 The Maps can be initially scaled to the center value based on the marker distance. This can be achieved by setting the [ShouldZoomInitially](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomSettings.html#Syncfusion_Blazor_Maps_MapsZoomSettings_ShouldZoomInitially) property in [MapsZoomSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomSettings.html) as **true**.

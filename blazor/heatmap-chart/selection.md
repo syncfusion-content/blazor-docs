@@ -49,3 +49,46 @@ In the [Blazor HeatMap Chart](https://www.syncfusion.com/blazor-components/blazo
 ```
 
 ![Selection in Blazor HeatMap Chart](images/blazor-heatmap-chart-selection.png)
+
+## Enable single cell selection
+
+In the HeatMap, the [EnableMultiSelect]() property is used to allow single cell selection. When you set the `EnableMultiSelect` property to **false**, only one cell is selected. By default, `EnableMultiSelect` property is set to **true**.
+
+```cshtml
+
+@using Syncfusion.Blazor.HeatMap
+
+<SfHeatMap @ref="Heatmap" Height="300px" DataSource="@DataSource"AllowSelection=true>
+   
+    <HeatMapTitleSettings Text="Top export products 2014-2018, Value in USD million"></HeatMapTitleSettings>
+    <HeatMapXAxis Labels="@XLabels"></HeatMapXAxis>
+    <HeatMapYAxis Labels="@YLabels"></HeatMapYAxis>
+    <HeatMapPaletteSettings>
+        <HeatMapPalettes>
+            <HeatMapPalette Color="#3C5E62"></HeatMapPalette>
+            <HeatMapPalette Color="#86C843"></HeatMapPalette>
+        </HeatMapPalettes>
+    </HeatMapPaletteSettings>
+    <HeatMapLegendSettings Visible=false></HeatMapLegendSettings>
+</SfHeatMap>
+
+@code{
+
+    public SfHeatMap<double[,]> Heatmap;
+    public int YIndex = 0;
+    public string[] XLabels = new string[] { "Cereals", "Meat", "Spices", "Tea", "Edible Oil", "Dairy Products", "Wheat" };
+    public string[] YLabels = new string[] { "2014", "2015", "2016", "2017", "2018" };
+    public double[,] DataSource = new double[,]
+           {
+        {2.9, 5.2, 3.4, 5.6, 4.4},
+        {6.6, 4.8, 8, 3.9, 6.5},
+        {5.1, 4.6, 5.4, 3.9, 4.3},
+        {5.2, 4.3, 3.9, 6.2, 6.4},
+        {7, 3, 1.9, 5.9, 3.5},
+        {7.8, 5.9, 3.9, 4.3, 4.3},
+        {6.5, 4.3, 3.9, 5.2, 3.9}
+    };
+}
+
+```
+
