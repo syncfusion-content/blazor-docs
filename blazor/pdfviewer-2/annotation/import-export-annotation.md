@@ -53,14 +53,16 @@ You can import annotations using JSON file or JSON object in code behind like th
 
 ```cshtml
 
-@using Syncfusion.Blazor.SfPdfViewer
 @using Syncfusion.Blazor.Buttons
+@using Syncfusion.Blazor.SfPdfViewer
 
 <SfButton OnClick="@OnImportAnnotationsClick">Import Annotation</SfButton>
+
 <SfPdfViewer2 Width="100%" Height="100%" DocumentPath="@DocumentPath" @ref="@Viewer" />
 
 @code {
     SfPdfViewer2 Viewer;
+    
     public string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
 
     public async void OnImportAnnotationsClick(MouseEventArgs args)
@@ -102,9 +104,11 @@ You can export annotations as JSON file in code behind like the following code s
 @using Syncfusion.Blazor.Buttons
 
 <SfButton OnClick="@OnExportAnnotationsClick">Export Annotation</SfButton>
+
 <SfPdfViewer2 Width="100%" Height="100%" DocumentPath="@DocumentPath" @ref="@Viewer" />
 
 @code {
+
     SfPdfViewer2 Viewer;
 
     public string DocumentPath { get; set; } = "wwwroot/data/PDF_Succinctly.pdf";

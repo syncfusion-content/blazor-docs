@@ -37,8 +37,9 @@ In the pan mode, if the shape annotation mode is entered, the SfPdfViewer contro
 
 
 ```cshtml
-@using Syncfusion.Blazor.SfPdfViewer
+
 @using Syncfusion.Blazor.Buttons
+@using Syncfusion.Blazor.SfPdfViewer
 
 <SfButton OnClick="OnClick">Circle Annotation</SfButton>
 
@@ -46,14 +47,17 @@ In the pan mode, if the shape annotation mode is entered, the SfPdfViewer contro
 </SfPdfViewer2>
 
 @code {
+
     SfPdfViewer2 viewer;
 
     public void OnClick(MouseEventArgs args)
     {
         viewer.SetAnnotationMode(AnnotationType.Circle);
     }
+
     private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
 }
+
 ```
 
 ## Editing the properties of the shape annotation
@@ -117,6 +121,7 @@ The properties of the shape annotations can be set before creating the control u
 
     PdfViewerPolygonSettings PolygonSettings = new PdfViewerPolygonSettings { FillColor = "pink", Opacity = 0.6, StrokeColor = "yellow" };
 }
+
 ```
 
 ## Customize annotation selector
@@ -132,7 +137,6 @@ The following code illustrates how to change the resizer shape of the shape anno
 <SfPdfViewer2 @ref="viewer" DocumentPath="@DocumentPath" Height="100" Width="100%" RectangleSettings=@rectangleSettings>
 </SfPdfViewer2>
 
-
 @code {
 
     //Sets the PDF document path for initial loading.
@@ -143,12 +147,12 @@ The following code illustrates how to change the resizer shape of the shape anno
     //Defines the settings of rectangle annotation.
     PdfViewerRectangleSettings rectangleSettings = new PdfViewerRectangleSettings
     {
-         //Defines the annotation selector settings for the annotation.
-         AnnotationSelectorSettings = new PdfViewerAnnotationSelectorSettings()
-         {
-             //Defines the shape of the resizer. By default it is square.
-             ResizerShape = AnnotationResizerShape.Circle
-         }
+        //Defines the annotation selector settings for the annotation.
+        AnnotationSelectorSettings = new PdfViewerAnnotationSelectorSettings()
+        {
+            //Defines the shape of the resizer. By default it is square.
+            ResizerShape = AnnotationResizerShape.Circle
+        }
     };
 }
 

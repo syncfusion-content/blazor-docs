@@ -97,15 +97,17 @@ The properties of the shape annotations can be set before creating the control u
 
 ```cshtml
 
-@using Syncfusion.Blazor.SfPdfViewer
 @using Syncfusion.Blazor.Buttons
+@using Syncfusion.Blazor.SfPdfViewer
 
 <SfPdfViewer2 @ref="@viewer" DocumentPath="@DocumentPath" Height="100%" Width="100%" DistanceSettings="@DistanceSettings" PerimeterSettings="@PerimeterSettings" AreaSettings="@AreaSettings" RadiusSettings="@RadiusSettings" VolumeSettings="@VolumeSettings">
 </SfPdfViewer2>
 
 @code {
     SfPdfViewer2 viewer;
+
     private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
+    
     PdfViewerDistanceSettings DistanceSettings = new PdfViewerDistanceSettings 
     {
         FillColor = "blue", Opacity = 0.6, StrokeColor = "green", LineHeadEndStyle = LineHeadStyle.Closed, LineHeadStartStyle = LineHeadStyle.Round 

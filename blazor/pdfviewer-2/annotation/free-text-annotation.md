@@ -26,20 +26,25 @@ In the pan mode, if the free text annotation mode is entered, the SfPdfViewer co
 ![Free Text Annotation in Blazor SfPdfViewer](../../pdfviewer/images/blazor-pdfviewer-free-text-annotation.png)
 
 ```cshtml
+
 @using Syncfusion.Blazor.Buttons
 @using Syncfusion.Blazor.SfPdfViewer
 
-<SfButton OnClick="OnClick">Click Here</SfButton>
+<SfButton OnClick="OnClick">Free Text</SfButton>
+
 <SfPdfViewer2 @ref="viewer" DocumentPath=@DocumentPath Height="100%" Width="100%" ></SfPdfViewer2>
 
 @code {
     SfPdfViewer2 viewer;
+
     private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
+
     public void OnClick(MouseEventArgs args)
     {
         viewer.SetAnnotationMode(AnnotationType.FreeText);
     }
 }
+
 ```
 
 ## Editing the properties of free text annotation
@@ -110,11 +115,14 @@ After editing the default values, they will be changed to the selected values.
 
 @using Syncfusion.Blazor.SfPdfViewer
 
-<SfPdfViewer2 @ref="viewer" DocumentPath=@DocumentPath Height="100%" Width="100%" FreeTextSettings=@FreeTextSettings></SfPdfViewer2>
+<SfPdfViewer2 @ref="viewer" DocumentPath=@DocumentPath Height="100%" Width="100%" 
+FreeTextSettings=@FreeTextSettings></SfPdfViewer2>
 
 @code {
     SfPdfViewer2 viewer;
+    
     private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
+    
     PdfViewerFreeTextSettings FreeTextSettings = new PdfViewerFreeTextSettings 
     { 
         FillColor = "green", 

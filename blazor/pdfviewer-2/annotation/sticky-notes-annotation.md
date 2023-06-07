@@ -68,6 +68,7 @@ After editing the default opacity using the Edit Opacity tool, they will be chan
 
 @code {
     SfPdfViewer2 viewer;
+    
     private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
 
     PdfViewerStickyNotesSettings StickyNotesSettings = new PdfViewerStickyNotesSettings { Author = "Syncfusion" };

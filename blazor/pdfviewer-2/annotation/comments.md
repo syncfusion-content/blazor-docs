@@ -114,17 +114,23 @@ The SfPdfViewer control provides an option to show or hide the Comment panel by 
 The following code snippet explains how to show the Comment panel.
 
 ```cshtml
-@using Syncfusion.Blazor.SfPdfViewer
+
 @using Syncfusion.Blazor.Buttons
+@using Syncfusion.Blazor.SfPdfViewer
+
 <SfButton OnClick="@OnClick">ShowOrHideCommentPanel</SfButton>
 <SfPdfViewer2 @ref="Viewer" @bind-CommentPanelVisible="@isOpen"  DocumentPath=@DocumentPath Height="100%" Width="100%"></SfPdfViewer2>
+
 @code
 {
     SfPdfViewer2 Viewer;
+
     //Sets the PDF document path for initial loading.
     private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
+
     private bool isOpen = true;
     //Method to update the visibility of the comment panel.
+
     public void OnClick()
     {
         if(isOpen)

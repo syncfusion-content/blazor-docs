@@ -147,6 +147,7 @@ In the pan mode, if the strikethrough mode is entered, the SfPdfViewer control w
 </SfPdfViewer2>
 
 @code {
+    
     SfPdfViewer2 viewer;
 
     public void OnClick(MouseEventArgs args)
@@ -189,9 +190,13 @@ N> After editing the default color and opacity using the Edit color tool and Edi
 
 @code {
     SfPdfViewer2 viewer;
+
     private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
+
     PdfViewerHighlightSettings HighlightSettings = new PdfViewerHighlightSettings { Color = "green", Opacity = 0.6 };
+
     PdfViewerUnderlineSettings UnderlineSettings = new PdfViewerUnderlineSettings { Color = "blue", Opacity = 0.6 };
+
     PdfViewerStrikethroughSettings StrikethroughSettings = new PdfViewerStrikethroughSettings { Color = "orange", Opacity = 0.6 };
 }
 
