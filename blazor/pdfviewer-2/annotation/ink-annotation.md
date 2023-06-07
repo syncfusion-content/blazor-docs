@@ -11,7 +11,7 @@ documentation: ug
 
 The SfPdfViewer control provides the options to add, edit, and delete the ink annotations.
 
-![InkAnnotation](../../pdfviewer-2/images/ink_annotation.png)
+![InkAnnotation](../../pdfviewer/images/ink_annotation.png)
 
 ## Adding an ink annotation to the PDF document
 
@@ -23,7 +23,7 @@ The ink annotations can be added to the PDF document using the annotation toolba
 
 * You can draw anything over the pages of the PDF document.
 
-![InkTool](../../pdfviewer-2/images/ink_tool.png)
+![InkTool](../../pdfviewer/images/ink_tool.png)
 
 ```csharp
 @using Syncfusion.Blazor.Buttons
@@ -51,19 +51,19 @@ The stroke color, thickness, and opacity of the ink annotation can be edited usi
 
 The stroke color of the annotation can be edited using the color palette provided in the Edit Stroke Color tool.
 
-![InkStrokeColor](../../pdfviewer-2/images/ink_strokecolor.png)
+![InkStrokeColor](../../pdfviewer/images/ink_strokecolor.png)
 
 ### Editing thickness
 
 The thickness of the border of the annotation can be edited using the range slider provided in the Edit Thickness tool.
 
-![InkThickness](../../pdfviewer-2/images/ink_thickness.png)
+![InkThickness](../../pdfviewer/images/ink_thickness.png)
 
 ### Editing opacity
 
 The opacity of the annotation can be edited using the range slider provided in the Edit Opacity tool.
 
-![InkOpacity](../../pdfviewer-2/images/ink_opacity.png)
+![InkOpacity](../../pdfviewer/images/ink_opacity.png)
 
 ## Setting default properties during the control initialization
 

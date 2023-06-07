@@ -17,7 +17,7 @@ The SfPdfViewer provides the options to add measurement annotations. The page an
 * Radius
 * Volume
 
-![Calibrate Annotation in Blazor SfPdfViewer](../../pdfviewer-2/images/blazor-pdfviewer-calibrate-annotation.png)
+![Calibrate Annotation in Blazor SfPdfViewer](../../pdfviewer/images/blazor-pdfviewer-calibrate-annotation.png)
 
 ## Adding measurement annotations to the PDF document
 
@@ -33,7 +33,7 @@ The measurement annotations can be added to the PDF document using the annotatio
 
 In the pan mode, if the measurement annotation mode is entered, the SfPdfViewer control will switch to text select mode.
 
-![Adding Calibrate in Blazor SfPdfViewer Toolbar](../../pdfviewer-2/images/blazor-pdfviewer-add-calibrate-in-toolbar.png)
+![Adding Calibrate in Blazor SfPdfViewer Toolbar](../../pdfviewer/images/blazor-pdfviewer-add-calibrate-in-toolbar.png)
 
 
 ```cshtml
@@ -65,31 +65,31 @@ The fill color, stroke color, thickness, and opacity of the measurement annotati
 
 The fill color of the annotation can be edited using the color palette provided in the Edit Color tool.
 
-![Editing Calibrate FillColor in Blazor SfPdfViewer](../../pdfviewer-2/images/blazor-pdfviewer-calibrate-fillcolor.png)
+![Editing Calibrate FillColor in Blazor SfPdfViewer](../../pdfviewer/images/blazor-pdfviewer-calibrate-fillcolor.png)
 
 ### Editing stroke color
 
 The stroke color of the annotation can be edited using the color palette provided in the Edit Stroke Color tool.
 
-![Editing Calibrate StrokeColor in Blazor SfPdfViewer](../../pdfviewer-2/images/blazor-pdfviewer-calibrate-stroke-color.png)
+![Editing Calibrate StrokeColor in Blazor SfPdfViewer](../../pdfviewer/images/blazor-pdfviewer-calibrate-stroke-color.png)
 
 ### Editing thickness
 
 The thickness of the border of the annotation can be edited using the range slider provided in the Edit thickness tool.
 
-![Editing Calibrate Thickness in Blazor SfPdfViewer](../../pdfviewer-2/images/blazor-pdfviewer-calibrate-thickness.png)
+![Editing Calibrate Thickness in Blazor SfPdfViewer](../../pdfviewer/images/blazor-pdfviewer-calibrate-thickness.png)
 
 ### Editing opacity
 
 The opacity of the annotation can be edited using the range slider provided in the Edit Opacity tool.
 
-![Editing Calibrate Opacity in Blazor SfPdfViewer](../../pdfviewer-2/images/blazor-pdfviewer-calibrate-opacity.png)
+![Editing Calibrate Opacity in Blazor SfPdfViewer](../../pdfviewer/images/blazor-pdfviewer-calibrate-opacity.png)
 
 ### Editing the line properties
 
 The properties of the line shapes such as distance and perimeter annotations can be edited using the Line properties window. It can be opened by selecting the Properties option in the context menu that appears on right-clicking the distance and perimeter annotations.
 
-![Editing Calibrate Property in Blazor SfPdfViewer](../../pdfviewer-2/images/blazor-pdfviewer-calibrate-property.png)
+![Editing Calibrate Property in Blazor SfPdfViewer](../../pdfviewer/images/blazor-pdfviewer-calibrate-property.png)
 
 ## Setting default properties during control initialization
 
@@ -134,7 +134,7 @@ The properties of the shape annotations can be set before creating the control u
 
 The scale ratio and unit of measurement can be modified using the scale ratio option provided in the context menu of the PDF Viewer control.
 
-![Editing Calibrate Scale Ratio in Blazor SfPdfViewer](../../pdfviewer-2/images/blazor-pdfviewer-calibrate-scaleratio.png)
+![Editing Calibrate Scale Ratio in Blazor SfPdfViewer](../../pdfviewer/images/blazor-pdfviewer-calibrate-scaleratio.png)
 
 The Units of measurements support for the measurement annotations in the PDF Viewer are
 
@@ -145,7 +145,7 @@ The Units of measurements support for the measurement annotations in the PDF Vie
 * Pica
 * Feet
 
-![Calibrate Scale Dialog in Blazor SfPdfViewer](../../pdfviewer-2/images/blazor-pdfviewer-calibrate-scale-dialog.png)
+![Calibrate Scale Dialog in Blazor SfPdfViewer](../../pdfviewer/images/blazor-pdfviewer-calibrate-scale-dialog.png)
 
 ## Setting default scale ratio settings during control initialization
 

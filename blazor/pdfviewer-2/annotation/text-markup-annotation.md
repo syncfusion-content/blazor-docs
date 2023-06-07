@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Text markup annotations in Blazor SfPdfViewer2 Component | Syncfusion
-description: Checkout and learn here all about text markup annotations in Syncfusion Blazor SfPdfViewer2 component and more.
+title: Text markup annotations in Blazor SfPdfViewer Component | Syncfusion
+description: Checkout and learn here all about text markup annotations in Syncfusion Blazor SfPdfViewer component and more.
 platform: Blazor
-control: SfPdfViewer2
+control: SfPdfViewer
 documentation: ug
 ---
 
-# Text markup annotations in Blazor SfPdfViewer2 Component
+# Text markup annotations in Blazor SfPdfViewer Component
 
-The SfPdfViewer2 control provides the options to add, edit, and delete text markup annotations such as highlight, underline, and strikethrough annotations in the PDF document.
+The SfPdfViewer control provides the options to add, edit, and delete text markup annotations such as highlight, underline, and strikethrough annotations in the PDF document.
 
-![Blazor SfPdfViewer2 with Text Markup Annotation](../../pdfviewer/images/blazor-pdfviewer-text-markup-annotation.png)
+![Blazor SfPdfViewer with Text Markup Annotation](../../pdfviewer/images/blazor-pdfviewer-text-markup-annotation.png)
 
 ## Adding text markup annotation to the PDF Document
 
@@ -27,11 +27,11 @@ There are two ways to highlight a text in the PDF document.
 
 * Select **Highlight** option in the context menu that appears
 
-![Highlighting Context in Blazor SfPdfViewer2](../../pdfviewer/images/blazor-pdfviewer-highlight-context.png)
+![Highlighting Context in Blazor SfPdfViewer](../../pdfviewer/images/blazor-pdfviewer-highlight-context.png)
 
 **Using the annotation toolbar.**
 
-* Click the **Edit Annotation** button in the SfPdfViewer2 toolbar. A toolbar appears below it.
+* Click the **Edit Annotation** button in the SfPdfViewer toolbar. A toolbar appears below it.
 
 * Select the **Highlight** button in the annotation toolbar. It enables the highlight mode.
 
@@ -39,9 +39,9 @@ There are two ways to highlight a text in the PDF document.
 
 * You can also select the text and apply the highlight annotation using the **Highlight** button.
 
-![Highlighting Text in Blazor SfPdfViewer2](../../pdfviewer/images/blazor-pdfviewer-highlight-text.png)
+![Highlighting Text in Blazor SfPdfViewer](../../pdfviewer/images/blazor-pdfviewer-highlight-text.png)
 
-In the pan mode, if the highlight mode is entered, the SfPdfViewer2 control will switch to text select mode to enable the text selection for highlighting the text.
+In the pan mode, if the highlight mode is entered, the SfPdfViewer control will switch to text select mode to enable the text selection for highlighting the text.
 
 ```cshtml
 
@@ -74,11 +74,11 @@ There are two ways to underline a text in the PDF document.
 
 * Select **Underline** option in the context menu that appears.
 
-![Displaying Underline in Blazor SfPdfViewer2 ContextMenu](../../pdfviewer/images/blazor-pdfviewer-underline-context-menu.png)
+![Displaying Underline in Blazor SfPdfViewer ContextMenu](../../pdfviewer/images/blazor-pdfviewer-underline-context-menu.png)
 
 **Using the annotation toolbar.**
 
-* Click the **Edit Annotation** button in the SfPdfViewer2 toolbar. A toolbar appears below it.
+* Click the **Edit Annotation** button in the SfPdfViewer toolbar. A toolbar appears below it.
 
 * Select the **Underline** button in the annotation toolbar. It enables the underline mode.
 
@@ -86,9 +86,9 @@ There are two ways to underline a text in the PDF document.
 
 * You can also select the text and apply the underline annotation using the **Underline** button.
 
-![Blazor SfPdfViewer2 with Underline Text](../../pdfviewer/images/blazor-pdfviewer-underline-text.png)
+![Blazor SfPdfViewer with Underline Text](../../pdfviewer/images/blazor-pdfviewer-underline-text.png)
 
-In the pan mode, if the underline mode is entered, the SfPdfViewer2 control will switch to text select mode to enable the text selection for underlining the text.
+In the pan mode, if the underline mode is entered, the SfPdfViewer control will switch to text select mode to enable the text selection for underlining the text.
 
 ```cshtml
 
@@ -121,11 +121,11 @@ Using the context menu.
 
 * Select **strikethrough** option in the context menu that appears.
 
-![Displaying Strike Through in Blazor SfPdfViewer2 ContextMenu](../../pdfviewer/images/blazor-pdfviewer-strike-through-in-contextmenu.png)
+![Displaying Strike Through in Blazor SfPdfViewer ContextMenu](../../pdfviewer/images/blazor-pdfviewer-strike-through-in-contextmenu.png)
 
 **Using the annotation toolbar.**
 
-* Click the **Edit Annotation** button in the SfPdfViewer2 toolbar. A toolbar appears below it.
+* Click the **Edit Annotation** button in the SfPdfViewer toolbar. A toolbar appears below it.
 
 * Select the **Strikethrough** button in the annotation toolbar. It enables the strikethrough mode.
 
@@ -135,7 +135,7 @@ Using the context menu.
 
 ![Blazor PDFViewer with StrikeThrough Text](../../pdfviewer/images/blazor-pdfviewer-strike-through-text.png)
 
-In the pan mode, if the strikethrough mode is entered, the SfPdfViewer2 control will switch to text select mode to enable the text selection to strike through the text.
+In the pan mode, if the strikethrough mode is entered, the SfPdfViewer control will switch to text select mode to enable the text selection to strike through the text.
 
 ```cshtml
 

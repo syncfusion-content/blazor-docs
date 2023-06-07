@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Sticky notes annotations in Blazor SfPdfViewer2 Component | Syncfusion
-description: Checkout and learn here all about sticky notes annotations in Syncfusion Blazor SfPdfViewer2 component and more.
+title: Sticky notes annotations in Blazor SfPdfViewer Component | Syncfusion
+description: Checkout and learn here all about sticky notes annotations in Syncfusion Blazor SfPdfViewer component and more.
 platform: Blazor
-control: SfPdfViewer2
+control: SfPdfViewer
 documentation: ug
 ---
 
-# Sticky notes annotations in Blazor SfPdfViewer2 Component
+# Sticky notes annotations in Blazor SfPdfViewer Component
 
-The SfPdfViewer2 control provides the options to add, edit, and delete the sticky note annotations in the PDF document.
+The SfPdfViewer control provides the options to add, edit, and delete the sticky note annotations in the PDF document.
 
 ![StickyNotes Annotation in Blazor PDFViewer](../../pdfviewer/images/blazor-pdfviewer-stickynotes-annotation.png)
 
@@ -17,7 +17,7 @@ The SfPdfViewer2 control provides the options to add, edit, and delete the stick
 
 Sticky note annotations can be added to the PDF document using the annotation toolbar.
 
-* Click the **Comments** button in the SfPdfViewer2 toolbar. A toolbar appears below it.
+* Click the **Comments** button in the SfPdfViewer toolbar. A toolbar appears below it.
 
 * Click the position, where you want to add sticky note annotation in the PDF document.
 

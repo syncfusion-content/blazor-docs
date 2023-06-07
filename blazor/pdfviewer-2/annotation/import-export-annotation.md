@@ -13,19 +13,19 @@ The SfPdfViewer control provides the support to import and export annotations us
 
 * Click the Add or Edit annotation button in the SfPdfViewer toolbar.
 
-![Blazor SfPdfViewer with Edit Button](../../pdfviewer-2/images/blazor-pdfviewer-edit-button.png)
+![Blazor SfPdfViewer with Edit Button](../../pdfviewer/images/blazor-pdfviewer-edit-button.png)
 
 * The annotation toolbar will appear.
 
 * Click the Comment Panel button in the annotation toolbar.
 
-![Blazor SfPdfViewer with Comment Panel](../../pdfviewer-2/images/blazor-pdfviewer-edit-sticknotes-comment.png)
+![Blazor SfPdfViewer with Comment Panel](../../pdfviewer/images/blazor-pdfviewer-edit-sticknotes-comment.png)
 
 * The comments panel will be displayed.
 
 * Click the **More Option** button in the comment panel container.
 
-![Displaying More Option in Blazor SfPdfViewer](../../pdfviewer-2/images/blazor-pdfviewer-show-more-option.png)
+![Displaying More Option in Blazor SfPdfViewer](../../pdfviewer/images/blazor-pdfviewer-show-more-option.png)
 
 ## Importing annotation to the PDF document
 
@@ -41,11 +41,11 @@ The SfPdfViewer control provides the support to import and export annotations us
 
 * Select the Import Annotations Option.
 
-![Importing Annotation in Blazor SfPdfViewer](../../pdfviewer-2/images/blazor-pdfviewer-import-annotation.png)
+![Importing Annotation in Blazor SfPdfViewer](../../pdfviewer/images/blazor-pdfviewer-import-annotation.png)
 
 * Then the file explorer dialog will be opened. Choose the JSON file to be imported into the loaded PDF document.
 
-![Blazor PDFViewer with Imported Annotation](../../pdfviewer-2/images/blazor-pdfviewer-imported-annotation.png)
+![Blazor PDFViewer with Imported Annotation](../../pdfviewer/images/blazor-pdfviewer-imported-annotation.png)
 
 ## Importing annotation using SfPdfViewer API
 
@@ -88,7 +88,7 @@ The SfPdfViewer control provides the support to export the annotations as JSON f
 * Click the **More Option** button in the comment panel container.
 * Select the Export Annotations Option.
 
-![Exporting Annotation in Blazor SfPdfViewer](../../pdfviewer-2/images/blazor-pdfviewer-export-annotation.png)
+![Exporting Annotation in Blazor SfPdfViewer](../../pdfviewer/images/blazor-pdfviewer-export-annotation.png)
 
 N>Export annotations will be in the disabled state when the loaded PDF document does not contain any annotations.
 
