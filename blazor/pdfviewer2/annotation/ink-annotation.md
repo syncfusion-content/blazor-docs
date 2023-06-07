@@ -18,7 +18,9 @@ The SfPdfViewer2 control provides the options to add, edit, and delete the ink a
 The ink annotations can be added to the PDF document using the annotation toolbar.
 
 * Click the **Edit Annotation** button in the SfPdfViewer2 toolbar. A toolbar appears below it.
+
 * Select the **Draw Ink** button in the annotation toolbar. It enables the ink annotation mode.
+
 * You can draw anything over the pages of the PDF document.
 
 ![InkTool](../../pdfviewer/images/ink_tool.png)

@@ -15,13 +15,15 @@ The SfPdfViewer2 control provides the options to add, edit and delete the free t
 
 The free text annotations can be added to the PDF document using the annotation toolbar.
 
-* Click the **Edit Annotation** button in the SfPdfViewer2 toolbar. A toolbar appears below it.
+* Click the **Edit Annotation** button in the SfPdfViewer2 toolbar. A toolbar appears below it. 
+
 * Select the **Free Text Annotation** button in the annotation toolbar. It enables the Free Text Annotation mode.
+
 * You can add the text over the pages of the PDF document.
 
 In the pan mode, if the free text annotation mode is entered, the SfPdfViewer2 control will switch to text select mode.
 
-![Free Text Annotation in Blazor PDFViewer](../../pdfviewer/images/blazor-pdfviewer-free-text-annotation.png)
+![Free Text Annotation in Blazor SfPdfViewer2](../../pdfviewer/images/blazor-pdfviewer-free-text-annotation.png)
 
 ```cshtml
 @using Syncfusion.Blazor.Buttons
@@ -48,55 +50,55 @@ The font family, font size, font styles, font color, text alignment, fill color,
 
 The font family of the annotation can be edited by selecting the desired font in the Font Family tool.
 
-![Editing Font Family of Blazor PDFViewer Text](../../pdfviewer/images/blazor-pdfviewer-edit-font-family.png)
+![Editing Font Family of Blazor SfPdfViewer2 Text](../../pdfviewer/images/blazor-pdfviewer-edit-font-family.png)
 
 ### Editing font size
 
 The font size of the annotation can be edited by selecting the desired size in the Font Size tool.
 
-![Editing Font Size of Blazor PDFViewer Text](../../pdfviewer/images/blazor-pdfviewer-edit-font-size.png)
+![Editing Font Size of Blazor SfPdfViewer2 Text](../../pdfviewer/images/blazor-pdfviewer-edit-font-size.png)
 
 ### Editing font color
 
 The font color of the annotation can be edited using the color palette provided in the Font Color tool.
 
-![Editing Font Color of Blazor PDFViewer Text](../../pdfviewer/images/fontcolor.png)
+![Editing Font Color of Blazor SfPdfViewer2 Text](../../pdfviewer/images/fontcolor.png)
 
 ### Editing the text alignment
 
 The text in the annotation can be aligned by selecting the desired styles in the dropdown pop-up in the Text Align tool.
 
-![Editing Free Text Annotation in Blazor PDFViewer](../../pdfviewer/images/blazor-pdfviewer-text-alignment.png)
+![Editing Free Text Annotation in Blazor SfPdfViewer2](../../pdfviewer/images/blazor-pdfviewer-text-alignment.png)
 
 ### Editing text styles
 
 The style of the text in the annotation can be edited by selecting the desired styles in the dropdown pop-up in the Font Style tool.
 
-![Editing Font Style in Blazor PDFViewer](../../pdfviewer/images/blazor-pdfviewer-edit-font-style.png)
+![Editing Font Style in Blazor SfPdfViewer2](../../pdfviewer/images/blazor-pdfviewer-edit-font-style.png)
 
 ### Editing fill color
 
 The fill color of the annotation can be edited using the color palette provided in the Edit Color tool.
 
-![Editing Fill Color in Blazor PDFViewer Text](../../pdfviewer/images/blazor-pdfviewer-text-fill-color.png)
+![Editing Fill Color in Blazor SfPdfViewer2 Text](../../pdfviewer/images/blazor-pdfviewer-text-fill-color.png)
 
 ### Editing stroke color
 
 The stroke color of the annotation can be edited using the color palette provided in the Edit Stroke Color tool.
 
-![Editing Stroke Color of Blazor PDFViewer Text](../../pdfviewer/images/blazor-pdfviewer-font-stroke.png)
+![Editing Stroke Color of Blazor SfPdfViewer2 Text](../../pdfviewer/images/blazor-pdfviewer-font-stroke.png)
 
 ### Editing thickness
 
 The thickness of the border of the annotation can be edited using the range slider provided in the Edit Thickness tool.
 
-![Editing Font Border Thickness of Blazor PDFViewer Text](../../pdfviewer/images/blazor-pdfviewer-font-border-thickness.png)
+![Editing Font Border Thickness of Blazor SfPdfViewer2 Text](../../pdfviewer/images/blazor-pdfviewer-font-border-thickness.png)
 
 ### Editing opacity
 
 The opacity of the annotation can be edited using the range slider provided in the Edit Opacity tool.
 
-![Editing Font Opacity in Blazor PDFViewer](../../pdfviewer/images/blazor-pdfviewer-font-opacity.png)
+![Editing Font Opacity in Blazor SfPdfViewer2](../../pdfviewer/images/blazor-pdfviewer-font-opacity.png)
 
 ## Setting default properties during control initialization
 
