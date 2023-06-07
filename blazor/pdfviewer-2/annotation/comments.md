@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Comments in Blazor SfPdfViewer2 Component | Syncfusion
-description: Checkout and learn here all about comments in Syncfusion Blazor SfPdfViewer2 component and much more details.
+title: Comments in Blazor SfPdfViewer Component | Syncfusion
+description: Checkout and learn here all about comments in Syncfusion Blazor SfPdfViewer component and much more details.
 platform: Blazor
-control: SfPdfViewer2
+control: SfPdfViewer
 documentation: ug
 ---
 
-# Comments in Blazor SfPdfViewer2 Component
+# Comments in Blazor SfPdfViewer Component
 
-The SfPdfViewer2 control provides options to add, edit, and delete the comments to the following annotation in the PDF documents:
+The SfPdfViewer control provides options to add, edit, and delete the comments to the following annotation in the PDF documents:
 
 * Shape annotation
 * Stamp annotation
@@ -18,7 +18,7 @@ The SfPdfViewer2 control provides options to add, edit, and delete the comments 
 * Text markup annotation
 * Free text annotation
 
-![Comments in Blazor PDFViewer](../../pdfviewer/images/blazor-pdfviewer-comments.png)
+![Comments in Blazor SfPdfViewer](../../pdfviewer-2/images/blazor-pdfviewer-comments.png)
 
 ## Adding a comment to the annotation
 
@@ -30,7 +30,7 @@ Annotation comments can be added to the PDF using the comment panel. Comment pan
 
 1. Using the annotation menu.
 
-    * Click the Edit Annotation button in the SfPdfViewer2 toolbar. A toolbar appears below it.
+    * Click the Edit Annotation button in the SfPdfViewer toolbar. A toolbar appears below it.
     * Click the Comment Panel button. A comment panel will appear.
 
 2. Using Context menu.
@@ -50,11 +50,11 @@ If the comment panel is already in open state, you can select the annotations an
 * Selected annotation comment container is highlighted in the comment panel.
 * Now, you can add comment and comment replies using comment panel.
 
-![Adding Comments in Blazor PDFViewer](../../pdfviewer/images/blazor-pdfviewer-add-new-comment.png)
+![Adding Comments in Blazor SfPdfViewer](../../pdfviewer-2/images/blazor-pdfviewer-add-new-comment.png)
 
 ### Adding Comment Replies
 
-* SfPdfViewer2 control provides an option to add multiple replies to the comment.
+* SfPdfViewer control provides an option to add multiple replies to the comment.
 * After adding the annotation comment, you can add reply to the comment.
 
 ### Adding Comment or Reply Status
@@ -64,7 +64,7 @@ If the comment panel is already in open state, you can select the annotations an
 * Select Set Status option in the context menu that appears.
 * Select the status of the annotation comment in the context menu that appears.
 
-![Blazor PDFViewer with Comment Status](../../pdfviewer/images/blazor-pdfviewer-comment-status.png)
+![Blazor PDFViewer with Comment Status](../../pdfviewer-2/images/blazor-pdfviewer-comment-status.png)
 
 ### Editing the comments and comments replies of the annotations
 
@@ -95,7 +95,7 @@ The annotation comment and comment replies can be edited by the following ways:
 * Select the status of the annotation comment in the context menu that appears.
 * Status ‘None’ is the default state. If status set to ‘None’, the comments or reply does not appear.
 
-![Editing Comment in Blazor PDFViewer](../../pdfviewer/images/blazor-pdfviewer-comment-editing.png)
+![Editing Comment in Blazor PDFViewer](../../pdfviewer-2/images/blazor-pdfviewer-comment-editing.png)
 
 ### Delete Comment or Comment Replies
 
@@ -103,13 +103,13 @@ The annotation comment and comment replies can be edited by the following ways:
 * Click the more options button shown in Comments or reply container.
 * Select Delete option in the context menu that appears.
 
-![Deleting Comment in Blazor PDFViewer](../../pdfviewer/images/blazor-pdfviewer-delete-comments.png)
+![Deleting Comment in Blazor PDFViewer](../../pdfviewer-2/images/blazor-pdfviewer-delete-comments.png)
 
 N> The annotation will be deleted on deleting the comment using comment panel.
 
 ### Show or hide the Comment panel
 
-The SfPdfViewer2 control provides an option to show or hide the Comment panel by using the `CommentPanelVisible` property of the SfPdfViewerServer class.
+The SfPdfViewer control provides an option to show or hide the Comment panel by using the `CommentPanelVisible` property of the SfPdfViewerServer class.
 
 The following code snippet explains how to show the Comment panel.
 

@@ -1,21 +1,21 @@
 ---
 layout: post
-title: Getting Started with SfPdfViewer2 in Blazor Server App | Syncfusion
-description: Learn how to getting started with SfPdfViewer2 control in Blazor Server-side application. You can view and comment on PDFs in ease and also can fill fields. 
+title: Getting Started with SfPdfViewer in Blazor Server App | Syncfusion
+description: Learn how to getting started with SfPdfViewer control in Blazor Server-side application. You can view and comment on PDFs in ease and also can fill fields. 
 platform: Blazor
-control: SfPdfViewer2
+control: SfPdfViewer
 documentation: ug
 ---
 
-# Getting Started with Blazor SfPdfViewer2 Component in Blazor Server App
+# Getting Started with Blazor SfPdfViewer Component in Blazor Server App
 
-This section briefly explains about how to integrate [Blazor SfPdfViewer2](https://www.syncfusion.com/blazor-components/blazor-pdf-viewer) component in your Blazor Server App using Visual Studio.
+This section briefly explains about how to integrate [Blazor SfPdfViewer](https://www.syncfusion.com/blazor-components/blazor-pdf-viewer) component in your Blazor Server App using Visual Studio.
 
 ## Prerequisites
 
 * [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
 
-## Integrate SfPdfViewer2 into Blazor Server App
+## Integrate SfPdfViewer into Blazor Server App
 
 1. Start Visual Studio and select **Create a new project**.
 
@@ -28,11 +28,13 @@ This section briefly explains about how to integrate [Blazor SfPdfViewer2](https
 4. In the **Additional information** dialog, set the target framework. 
 ![Set-target-framework](GettingStarted_images/Additional_information.png)
 
-## Install Blazor SfPdfViewer2 NuGet package in Blazor Server App
+N> `SfPdfViewer` component supports target framework version .NET 6 and higher versions
+
+## Install Blazor SfPdfViewer NuGet package in Blazor Server App
 
 Syncfusion Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). To use Syncfusion Blazor components in the application, add reference to the corresponding NuGet. Refer to [NuGet packages topic](https://blazor.syncfusion.com/documentation/nuget-packages) for available NuGet packages list with component details and [Benefits of using individual NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages#benefits-of-using-individual-nuget-packages).
 
-To add Blazor `SfPdfViewer2`, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search for [Syncfusion.Blazor.SfPdfViewer](https://www.nuget.org/packages/Syncfusion.Blazor.SfPdfViewer) and then install it.
+To add Blazor `SfPdfViewer`, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search for [Syncfusion.Blazor.SfPdfViewer](https://www.nuget.org/packages/Syncfusion.Blazor.SfPdfViewer) and then install it.
 
 ## Register Syncfusion Blazor Service
 
@@ -49,7 +51,7 @@ Open **~/_Imports.razor** file and import the **Syncfusion.Blazor.SfPdfViewer** 
 * For **.NET 6 and .NET 7** app, open the **~/Program.cs** file and register the Syncfusion Blazor Service.
 
 {% tabs %}
-{% highlight c# tabtitle="~/Program.cs" hl_lines="3 12" %}
+{% highlight c# tabtitle="~/Program.cs" hl_lines="3 9 12" %}
 
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Web;
@@ -81,7 +83,7 @@ Add the theme style sheet as below in the sever web app.
 {% highlight cshtml %}
 
 <head>
-    <!-- Syncfusion Blazor SfPdfViewer2 controls theme style sheet -->
+    <!-- Syncfusion Blazor SfPdfViewer controls theme style sheet -->
     <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
 </head>
 
@@ -102,9 +104,9 @@ Add the theme style sheet as below in the sever web app.
 {% highlight cshtml %}
 
 <head>
-    <!-- Syncfusion Blazor SfPdfViewer2 controls theme style sheet -->
+    <!-- Syncfusion Blazor SfPdfViewer controls theme style sheet -->
     <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
-    <!-- Syncfusion Blazor SfPdfViewer2 controls scripts -->
+    <!-- Syncfusion Blazor SfPdfViewer controls scripts -->
     <script src="_content/Syncfusion.Blazor.PdfViewer/scripts/syncfusion-blazor-sfpdfviewer.min.js" type="text/javascript"></script>
 </head>
 
@@ -115,9 +117,9 @@ Add the theme style sheet as below in the sever web app.
 
 > Syncfusion recommends to reference scripts using [Static Web Assets](https://blazor.syncfusion.com/documentation/common/adding-script-references#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/common/adding-script-references#cdn-reference) and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator) by [disabling JavaScript isolation](https://blazor.syncfusion.com/documentation/common/adding-script-references#disable-javascript-isolation) for better loading performance of the Blazor application.
 
-## Adding Blazor SfPdfViewer2 Component
+## Adding Blazor SfPdfViewer Component
 
-Add the Syncfusion SfPdfViewer2 component in the **~/Pages/Index.razor** file.
+Add the Syncfusion SfPdfViewer component in the **~/Pages/Index.razor** file.
 
 {% tabs %}
 {% highlight razor %}
@@ -126,13 +128,17 @@ Add the Syncfusion SfPdfViewer2 component in the **~/Pages/Index.razor** file.
 
 <SfPdfViewer2 DocumentPath="@DocumentPath" Height="100%" Width="100%"></SfPdfViewer2>
 
+@code {
+    private string DocumentPath { get; set; } = "PDF_Succinctly.pdf";
+}
+
 {% endhighlight %}
 {% endtabs %}
 
-N> If the `DocumentPath` property value is not provided, the SfPdfViewer2 component will be rendered without loading the PDF document. The users can then use the open option from the toolbar to browse and open the PDF as required.
+N> If the `DocumentPath` property value is not provided, the SfPdfViewer component will be rendered without loading the PDF document. The users can then use the open option from the toolbar to browse and open the PDF as required.
 
-Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to run the application. Then, the Syncfusion `Blazor SfPdfViewer2` component will be rendered in the default web browser.
+Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to run the application. Then, the Syncfusion `Blazor SfPdfViewer` component will be rendered in the default web browser.
 
-![Blazor SfPdfViewer2 Component](GettingStarted_images/blazor-pdfviewer.png)
+![Blazor SfPdfViewer Component](GettingStarted_images/blazor-pdfviewer.png)
 
 >[View Sample in GitHub]().
