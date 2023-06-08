@@ -30,67 +30,71 @@ The following code example illustrates how to align all the selected objects to 
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
+@using Syncfusion.Blazor.Buttons
 
-<input type="button" value="Left" @onclick="@OnAlignLeft" />
 
-<SfDiagramComponent @ref="diagram" Width="1000px" Height="500px" Nodes="@nodes" Connectors="@Connectors"/>
+<SfButton Content="Left" OnClick="@OnAlignLeft" />
+
+<SfDiagramComponent @ref="diagram" Width="1000px" Height="500px" Nodes="@nodes"  />
 
 @code
 {
+    //Reference the diagram
     SfDiagramComponent diagram;
+    // Initialize diagram's node collection
     DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
-    DiagramObjectCollection<Connector> Connectors = new DiagramObjectCollection<Connector>();
 
     protected override void OnInitialized()
     {
         Node node1 = new Node()
-        {
-            ID = "node1",
-            Width = 50,
-            Height = 30,
-            OffsetX = 500,
-            OffsetY = 100,
-            Shape = new BasicShape() { Type = NodeShapes.Basic, Shape = NodeBasicShapes.Rectangle }
-        };
+            {
+                ID = "node1",
+                Width = 50,
+                Height = 30,
+                OffsetX = 500,
+                OffsetY = 100,
+                Shape = new BasicShape() { Type = NodeShapes.Basic, Shape = NodeBasicShapes.Rectangle }
+            };
         nodes.Add(node1);
         Node node2 = new Node()
-        {
-            ID = "node2",
-            Width = 60,
-            Height = 40,
-            OffsetX = 500,
-            OffsetY = 300,
-            Shape = new BasicShape() { Type = NodeShapes.Basic, Shape = NodeBasicShapes.Rectangle }
-        };
+            {
+                ID = "node2",
+                Width = 60,
+                Height = 40,
+                OffsetX = 500,
+                OffsetY = 300,
+                Shape = new BasicShape() { Type = NodeShapes.Basic, Shape = NodeBasicShapes.Rectangle }
+            };
         nodes.Add(node2);
         Node node3 = new Node()
-        {
-            ID = "node3",
-            Width = 70,
-            Height = 50,
-            OffsetX = 500,
-            OffsetY = 500,
-            Shape = new BasicShape() { Type = NodeShapes.Basic, Shape = NodeBasicShapes.Rectangle }
-        };
+            {
+                ID = "node3",
+                Width = 70,
+                Height = 50,
+                OffsetX = 500,
+                OffsetY = 500,
+                Shape = new BasicShape() { Type = NodeShapes.Basic, Shape = NodeBasicShapes.Rectangle }
+            };
         nodes.Add(node3);
     }
-
+    //Method to align selected objects at left of the selection boundary.
     private void OnAlignLeft()
     {
-        //Aligns the selected objects to the left side of the selection boundary.
         diagram.SetAlign(AlignmentOptions.Left);
-    }      
+    }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Commands)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Commands/AlignLeft)
 ### How to align the selected objects to the right
 
 The following code example illustrates how to align all the selected objects at the right side of the selection boundary.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
+@using Syncfusion.Blazor.Buttons
 
-<input type="button" value="Right" @onclick="@OnAlignRight" />
+
+<SfButton Content="Right" OnClick="@OnAlignRight" />
 
 <SfDiagramComponent @ref="diagram" Width="1000px" Height="500px" Nodes="@nodes" Connectors="@Connectors"/>
 
@@ -141,15 +145,17 @@ The following code example illustrates how to align all the selected objects at 
     }     
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Commands)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Commands/AlignRight)
 ### How to align the selected objects to the top
 
 The following code example illustrates how to align all the selected objects at the top of the selection boundary.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
+@using Syncfusion.Blazor.Buttons
 
-<input type="button" value="Top" @onclick="@OnAlignTop" />
+
+<SfButton Content="Top" OnClick="@OnAlignTop" />
 
 <SfDiagramComponent @ref="diagram" Width="1000px" Height="500px" Nodes="@nodes" Connectors="@Connectors"/>
 
@@ -200,15 +206,17 @@ The following code example illustrates how to align all the selected objects at 
     }       
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Commands)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Commands/AlignTop)
 ### How to align the selected objects to the bottom
 
 The following code example illustrates how to align all the selected objects at the bottom of the selection boundary.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
+@using Syncfusion.Blazor.Buttons
 
-<input type="button" value="Bottom" @onclick="@OnAlignBottom" />
+
+<SfButton Content="Bottom" OnClick="@OnAlignBottom" />
 
 <SfDiagramComponent @ref="diagram" Width="1000px" Height="500px" Nodes="@nodes" Connectors="@Connectors"/>
 
@@ -259,15 +267,17 @@ The following code example illustrates how to align all the selected objects at 
     }     
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Commands)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Commands/AlignBottom)
 ### How to align the selected objects to the middle
 
 The following code example illustrates how to align all the selected objects at the middle of the selection boundary.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
+@using Syncfusion.Blazor.Buttons
 
-<input type="button" value="Middle" @onclick="@OnAlignMiddle" />
+
+<SfButton Content="Middle" OnClick="@OnAlignMiddle" />
 
 <SfDiagramComponent @ref="diagram" Width="1000px" Height="500px" Nodes="@nodes" Connectors="@Connectors"/>
 
@@ -318,15 +328,17 @@ The following code example illustrates how to align all the selected objects at 
     }         
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Commands)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Commands/AlignMiddle)
 ### How to align the selected objects to the center
 
 The following code example illustrates how to align all the selected objects at the center of the selection boundary.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
+@using Syncfusion.Blazor.Buttons
 
-<input type="button" value="Center" @onclick="@OnAlignCenter" />
+
+<SfButton Content="Center" OnClick="@OnAlignCenter" />
 
 <SfDiagramComponent @ref="diagram" Width="1000px" Height="500px" Nodes="@nodes" Connectors="@Connectors"/>
 
@@ -377,7 +389,7 @@ The following code example illustrates how to align all the selected objects at 
     }        
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Commands)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Commands/AlignCenter)
 ## Distribute
 
 The [SetDistribute](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_SetDistribute_Syncfusion_Blazor_Diagram_DistributeOptions_Syncfusion_Blazor_Diagram_DiagramObjectCollection_Syncfusion_Blazor_Diagram_NodeBase__) commands enable to place the selected objects on the page at equal intervals from each other. The selected objects are equally spaced within the selection boundary.
@@ -513,10 +525,11 @@ The following code example illustrates how to execute the size commands.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
+@using Syncfusion.Blazor.Buttons
 
-<input type="button" value="SameSize" @onclick="@OnSameSize" />
-<input type="button" value="SameWidth" @onclick="@OnSameWidth" />
-<input type="button" value="SameHeight" @onclick="@OnSameHeight" />
+<SfButton Content="SameSize" OnClick="@OnSameSize" />
+<SfButton Content="SameWidth" OnClick="@OnSameWidth" />
+<SfButton Content="SameHeight" OnClick="@OnSameHeight" />
 
 <SfDiagramComponent @ref="@diagram" Height="600px" Nodes="@nodes" Connectors="@connectors" />
 
@@ -583,7 +596,7 @@ The following code example illustrates how to execute the size commands.
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Commands)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Commands/SizingCommands)
 ## Clipboard commands
 
 Clipboard commands are used to cut, copy, or paste the selected elements.
@@ -598,11 +611,13 @@ The following code illustrates how to execute the clipboard commands.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
+@using Syncfusion.Blazor.Buttons
 
-<input type="button" value="Cut" @onclick="@OnCut" />
-<input type="button" value="Copy" @onclick="@OnCopy" />
-<input type="button" value="Paste" @onclick="@OnPaste" />
-<input type="button" value="PasteWithArgument" @OnClick="@PasteWithArgument"/>
+
+<SfButton Content="Cut" OnClick="@OnCut" />
+<SfButton Content="Copy" OnClick="@OnCopy" />
+<SfButton Content="Paste" OnClick="@OnPaste" />
+<SfButton Content="PasteWithArgument" OnClick="@PasteWithArgument"/>
 
 <SfDiagramComponent @ref="@diagram" Height="600px" Nodes="@nodes" Connectors="@Connectors"/>
 
@@ -668,7 +683,7 @@ The following code illustrates how to execute the clipboard commands.
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Commands)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Commands/ClipboardCommands)
 ## Grouping commands
 
 **Grouping commands** are used to group/ungroup the selected elements on the diagram. To group the elements, select the elements using select all command and group the selected elements using group command.
@@ -681,10 +696,11 @@ The following code illustrates how to execute the grouping commands.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
+@using Syncfusion.Blazor.Buttons
 
-<input type="button" value="Group" @onclick="@OnGroup" />
-<input type="button" value="Ungroup" @onclick="@OnUngroup" />
-<input type="button" value="SelectAll" @onclick="@OnSelectAll" />
+<SfButton Content="Group" OnClick="@OnGroup" />
+<SfButton Content="Ungroup" OnClick="@OnUngroup" />
+<SfButton Content="SelectAll" OnClick="@OnSelectAll" />
 
 <SfDiagramComponent @ref="@diagram" Height="600px" Nodes="@nodes" Connectors="@Connectors" />
 
@@ -740,7 +756,7 @@ The following code illustrates how to execute the grouping commands.
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Commands)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Commands/GroupingCommands)
 ## Z-Order commands
 
 Z – Order commands are used to control the stacking order (Z-Order) of the diagram elements such as nodes, connectors, and groups. Also, you can arrange the selected objects on the diagram page with its Z-order values by using Bring to front, Bring forward, Send to back, and Send backward features.
@@ -754,7 +770,9 @@ The following code illustrates how to execute the BringToFront command.
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 @using System.Collections.ObjectModel
-<input type="button" value="BringToFront" @onclick="@bringToFront"></input>
+@using Syncfusion.Blazor.Buttons
+
+<SfButton Content="bringToFront" OnClick="@bringToFront" />
 <SfDiagramComponent @ref="diagram"  Width="1000px" Height="500px" @bind-Nodes="@nodes">
 </SfDiagramComponent>
 @code{
@@ -803,7 +821,7 @@ The following code illustrates how to execute the BringToFront command.
     } 
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Commands/Z-OrderCommands)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Commands/Z-OrderCommands/BringToFront)
 
 
 ### SendToBack
@@ -815,7 +833,9 @@ The following code illustrates how to execute the SendToBack command.
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 @using System.Collections.ObjectModel
-<input type="button" value="SendToBack" @onclick="@sendToBack"></input>
+@using Syncfusion.Blazor.Buttons
+
+<SfButton Content="sendToBack" OnClick="@sendToBack" />
 <SfDiagramComponent @ref="diagram"  Width="1000px" Height="500px" @bind-Nodes="@nodes">
 </SfDiagramComponent>
 @code{
@@ -864,7 +884,7 @@ The following code illustrates how to execute the SendToBack command.
     } 
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Commands/Z-OrderCommands)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Commands/Z-OrderCommands/SendToBack)
 
 ### BringForward
 
@@ -875,7 +895,9 @@ The following code illustrates how to execute the BringForward command.
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 @using System.Collections.ObjectModel
-<input type="button" value="BringForward" @onclick="@bringForward"></input>
+@using Syncfusion.Blazor.Buttons
+
+<SfButton Content="bringForward" OnClick="@bringForward" />
 <SfDiagramComponent @ref="diagram"  Width="1000px" Height="500px" @bind-Nodes="@nodes">
 </SfDiagramComponent>
 @code{
@@ -924,7 +946,7 @@ The following code illustrates how to execute the BringForward command.
     } 
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Commands/Z-OrderCommands)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Commands/Z-OrderCommands/BringForward)
 
 ### SendBackward
 
@@ -935,7 +957,9 @@ The following code illustrates how to execute the SendBackward command.
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 @using System.Collections.ObjectModel
-<input type="button" value="SendBackward" @onclick="@sendBackward"></input>
+@using Syncfusion.Blazor.Buttons
+
+<SfButton Content="sendBackward" OnClick="@sendBackward" />
 <SfDiagramComponent @ref="diagram"  Width="1000px" Height="500px" @bind-Nodes="@nodes">
 </SfDiagramComponent>
 @code{
@@ -984,7 +1008,7 @@ The following code illustrates how to execute the SendBackward command.
     } 
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Commands/Z-OrderCommands)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Commands/Z-OrderCommands/SendBackward)
 
 The following gif illustrates how to perform z-order commands.
 
@@ -998,8 +1022,11 @@ The following code illustrates how to zoom-in/zoom out the diagram.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
+@using Syncfusion.Blazor.Buttons
 
-<input type="button" value="Zoom" @onclick="@OnZoom" />
+
+
+<SfButton Content="Zoom" OnClick="@OnZoom" />
 
 <SfDiagramComponent @ref="@diagram" Height="600px" Nodes="@nodes" Connectors="@Connectors"/>
 
@@ -1034,7 +1061,7 @@ The following code illustrates how to zoom-in/zoom out the diagram.
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Commands/ZoomingCommands/ZoomingCommands)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Commands/ZoomingCommands)
 
 ## Nudge command
 
@@ -1053,7 +1080,10 @@ The following code illustrates how to execute nudge command.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
+@using Syncfusion.Blazor.Buttons
 
+
+<SfButton Content="NudgeLeft" OnClick="@NudgeLeft" />
 <SfDiagramComponent @ref="diagram" Height="600px" />
 
 @code
@@ -1067,7 +1097,7 @@ The following code illustrates how to execute nudge command.
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Commands/NudgeCommand/NudgeCommand)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Commands/NudgeCommand)
 
 ## Nudge by using arrow keys
 
@@ -1083,7 +1113,10 @@ The [Undo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDia
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
+@using Syncfusion.Blazor.Buttons
 
+<SfButton Content="Undo" OnClick="@Undo" />
+<SfButton Content="Redo" OnClick="@Redo" />
 <SfDiagramComponent @ref="@diagram" Height="600px">
 </SfDiagramComponent>
 
@@ -1222,7 +1255,7 @@ The following code example shows how to define a custom command.
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Commands/CustomCommands/CustomCommands)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Commands/CustomCommands)
 
 
 ### Modify the existing command
@@ -1316,7 +1349,7 @@ The following code example shows how to disable a command and how to modify the 
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Commands/ModifyExistingCommands/ModifyExistingCommands)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Commands/ModifyExistingCommands)
 
 ### How to bring the specific element into the viewport of the diagram
 
@@ -1324,7 +1357,9 @@ The [BringIntoView](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diag
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
-<input type="button" value="BringIntoView" @onclick="BringIntoView"/>
+@using Syncfusion.Blazor.Buttons
+
+<SfButton Content="BringIntoView" OnClick="@BringIntoView" />
 <SfDiagramComponent @ref="diagram" Width="1000px" Height="500px" @bind-Nodes="@nodes"><PageSettings @bind-Orientation="@pageOrientation" @bind-MultiplePage="@IsMultiplePage"></PageSettings>
 </SfDiagramComponent>
 @code
@@ -1350,7 +1385,7 @@ protected override void OnInitialized()
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Commands)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Commands/BringInToView)
 
 ### How to bring the specific element into the center of the viewport of the diagram
 
@@ -1358,7 +1393,9 @@ The [BringIntoCenter](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Di
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
-<input type="button" value="BringIntoCenter" @onclick="BringIntoCenter"/>
+@using Syncfusion.Blazor.Buttons
+
+<SfButton Content="BringIntoCenter" OnClick="@BringIntoCenter" />
 <SfDiagramComponent @ref="diagram" Width="1000px" Height="500px" @bind-Nodes="@nodes"><PageSettings @bind-Orientation="@pageOrientation" @bind-MultiplePage="@IsMultiplePage"></PageSettings>
 </SfDiagramComponent>
 @code
@@ -1384,7 +1421,7 @@ protected override void OnInitialized()
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Commands)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Commands/BringintoCenter)
 
 ### FitToPage command in Blazor Diagram
 
@@ -1395,7 +1432,9 @@ The following code illustrates how to execute the FitToPage command.
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 @using Node = Syncfusion.Blazor.Diagram.Node
+@using Syncfusion.Blazor.Buttons
 
+<SfButton Content="FitToPage" OnClick="@FitToPage" />
 <SfDiagramComponent @ref="diagram" Width="1000px" Height="600px" Nodes="nodes" Connectors="connectors">
 </SfDiagramComponent>
 @code {
@@ -1520,7 +1559,7 @@ The following code illustrates how to execute the FitToPage command.
         }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Commands)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Commands/FittoPage)
 
 ### FitToPage Parameter
 

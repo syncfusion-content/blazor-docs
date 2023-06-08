@@ -19,31 +19,32 @@ Diagram provides support to export the diagram as an image/svg files. The follow
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
+@using Syncfusion.Blazor.Buttons
 
-<input type="button" @onclick="@ExportBase64" />
-<input type="button" @onclick="@ExportPng" />
+<SfButton Content="ExportBase64" OnClick="@ExportBase64" />
+<SfButton Content="ExportPng" OnClick="@ExportPng" />
 <SfDiagramComponent Height="600px" @ref="@diagram">
 </SfDiagramComponent>
 
-@code{
-     SfDiagramComponent diagram;
+@code {
+    SfDiagramComponent diagram;
 
-     //To export the diagram as base64 string.
-     private async Task ExportBase64()
-     {
-          DiagramExportSettings export = new DiagramExportSettings();         
-          string[] base64 = await diagram.ExportAsync(DiagramExportFormat.PNG, export);          
-     }
+    //To export the diagram as base64 string.
+    private async Task ExportBase64()
+    {
+        DiagramExportSettings export = new DiagramExportSettings();
+        string[] base64 = await diagram.ExportAsync(DiagramExportFormat.PNG, export);
+    }
 
-     //To export the diagram as png.
-     private async Task ExportPng()
-     {
-          DiagramExportSettings export = new DiagramExportSettings();                   
-          await diagram.ExportAsync("diagram",DiagramExportFormat.PNG, export);
-     }
+    //To export the diagram as png.
+    private async Task ExportPng()
+    {
+        DiagramExportSettings export = new DiagramExportSettings();
+        await diagram.ExportAsync("diagram", DiagramExportFormat.PNG, export);
+    }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Export)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Export/Export)
 
 ## Exporting options
 
@@ -59,23 +60,25 @@ Diagram provides support to export the desired region of the diagram to the desi
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
+@using Syncfusion.Blazor.Buttons
 
-<input type="button" @onclick="@Export" />
+<SfButton Content="Export" OnClick="@Export" />
 <SfDiagramComponent Height="600px" @ref="@diagram">
 </SfDiagramComponent>
 
-@code{
-     SfDiagramComponent diagram;
+@code {
+    //Reference the diagram
+    SfDiagramComponent diagram;
 
-     private async Task Export()
-     {
-          DiagramExportSettings export = new DiagramExportSettings();                  
-          //To export the diagram
-          await diagram.ExportAsync(DiagramExportFormat.SVG, export);
-     }
+    private async Task Export()
+    {
+        DiagramExportSettings export = new DiagramExportSettings();
+        //To export the diagram
+        await diagram.ExportAsync("Diagram", DiagramExportFormat.SVG, export);
+    }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Export)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Export/ExportOption)
 
 ### Page Size
 
@@ -83,25 +86,27 @@ Diagram provides support to change the page size. Page size can be changed by se
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
+@using Syncfusion.Blazor.Buttons
 
-<input type="button" @onclick="@Export" />
+<SfButton Content="Export" OnClick="@Export" />
 <SfDiagramComponent Height="600px" @ref="@diagram">
 </SfDiagramComponent>
 
-@code{
-     SfDiagramComponent diagram;
+@code {
+    //Reference the diagram
+    SfDiagramComponent diagram;
 
-     private async Task Export()
-     {
-          DiagramExportSettings export = new DiagramExportSettings();          
-          export.PageWidth = 816;
-          export.PageHeight = 1054;         
-          //To export the diagram
-          await diagram.ExportAsync(DiagramExportFormat.SVG, export);
-     }
+    private async Task Export()
+    {
+        DiagramExportSettings export = new DiagramExportSettings();
+        export.PageWidth = 816;
+        export.PageHeight = 1054;
+        //To export the diagram
+        await diagram.ExportAsync(DiagramExportFormat.SVG, export);
+    }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Export)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Export/ExportWithPageSize)
 
 ### How to add margin around exported image
 
@@ -110,25 +115,30 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
+@using Syncfusion.Blazor.Buttons
 
-<input type="button" @onclick="@Export" />
+<SfButton Content="Export" OnClick="@Export" />
 <SfDiagramComponent Height="600px" @ref="@diagram">
+    <PageSettings Height="1000" Width="800"></PageSettings>
 </SfDiagramComponent>
 
-@code{
-     SfDiagramComponent diagram;
+@code {
+    //Reference the diagram
+    SfDiagramComponent diagram;
 
-     private async Task Export()
-     {
-          DiagramExportSettings export = new DiagramExportSettings();
-          export.Region = DiagramPrintExportRegion.PageSettings;
-          export.Margin = new DiagramThickness() { Left = 10, Top = 10, Right = 10, Bottom = 10 };
-          //To export the diagram
-          await diagram.ExportAsync(DiagramExportFormat.PNG, export);
-     }
+    private async Task Export()
+    {
+        DiagramExportSettings export = new DiagramExportSettings();
+        export.Region = DiagramPrintExportRegion.PageSettings;
+        export.PageWidth = 816;
+        export.PageHeight = 1054;
+        export.Margin = new DiagramThickness() { Left = 10, Top = 10, Right = 10, Bottom = 10 };
+        //To export the diagram
+        await diagram.ExportAsync("diagram", DiagramExportFormat.PNG, export);
+    }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Export)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Export/ExportMargin)
 
 ### How to export the diagram based on region
 
@@ -144,27 +154,30 @@ The following code example illustrates how to export the diagram based on page s
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
+@using Syncfusion.Blazor.Buttons
 
-<input type="button" @onclick="@Export" />
+<SfButton Content="Export" OnClick="@Export" />
 <SfDiagramComponent Height="600px" @ref="@diagram">
+    <PageSettings Height="1000" Width="800"></PageSettings>
 </SfDiagramComponent>
 
-@code{
-     SfDiagramComponent diagram;
+@code {
+    //Reference the diagram
+    SfDiagramComponent diagram;
 
-     private async Task Export()
-     {
-          DiagramExportSettings export = new DiagramExportSettings();
-          export.Region = DiagramPrintExportRegion.PageSettings;
-          export.PageWidth = 816;
-          export.PageHeight = 1054;                
-          export.Margin = new DiagramThickness() { Left = 10, Top = 10, Right = 10, Bottom = 10 };          
-          //To export the diagram
-          await diagram.ExportAsync(DiagramExportFormat.PNG, export);
-     }
+    private async Task Export()
+    {
+        DiagramExportSettings export = new DiagramExportSettings();
+        export.Region = DiagramPrintExportRegion.PageSettings;
+        export.PageWidth = 816;
+        export.PageHeight = 1054;
+        export.Margin = new DiagramThickness() { Left = 10, Top = 10, Right = 10, Bottom = 10 };
+        //To export the diagram
+        await diagram.ExportAsync("Diagram", DiagramExportFormat.PNG, export);
+    }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Export)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Export/ExportRegion)
 
 ### Custom bounds
 
@@ -174,8 +187,9 @@ The following code example illustrates how to export the region specified in the
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
+@using Syncfusion.Blazor.Buttons
 
-<input type="button" @onclick="@Export" />
+<SfButton Content="Export" OnClick="@Export" />
 <SfDiagramComponent Height="600px" @ref="@diagram">
 </SfDiagramComponent>
 
@@ -191,11 +205,11 @@ The following code example illustrates how to export the region specified in the
           export.Margin = new DiagramThickness() { Left = 10, Top = 10, Right = 10, Bottom = 10 };
           export.ClipBounds = new DiagramRect() { X = 0, Y = 0, Width = 500, Height = 500 };
           //To export the diagram
-          await diagram.ExportAsync(DiagramExportFormat.PNG, export);
+          await diagram.ExportAsync("diagram",DiagramExportFormat.PNG, export);
      }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Export)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Export/ExportClipBounds)
 
 ### Export diagram as single or multiple page
 
@@ -208,30 +222,33 @@ The following code example illustrates how to export the diagram to a single pag
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
+@using Syncfusion.Blazor.Buttons
 
-<input type="button" @onclick="@Export" />
+<SfButton Content="Export" OnClick="@Export" />
 <SfDiagramComponent Height="600px" @ref="@diagram">
+    <PageSettings Height="1000" Width="800"></PageSettings>
 </SfDiagramComponent>
 
-@code{
-     SfDiagramComponent diagram;
+@code {
+    //Reference the diagram.
+    SfDiagramComponent diagram;
 
-     private async Task Export()
-     {
-          DiagramExportSettings export = new DiagramExportSettings();
-          export.Region = DiagramPrintExportRegion.PageSettings;
-          export.PageWidth = 816;
-          export.PageHeight = 1054;
-          //To export the diagram in single page.
-          export.FitToPage = true;         
-          export.Margin = new DiagramThickness() { Left = 10, Top = 10, Right = 10, Bottom = 10 };
-          export.ClipBounds = new DiagramRect() { X = 0, Y = 0, Width = 500, Height = 500 };
-          //To export the diagram
-          await diagram.ExportAsync(DiagramExportFormat.PNG, export);
-     }
+    private async Task Export()
+    {
+        DiagramExportSettings export = new DiagramExportSettings();
+        export.Region = DiagramPrintExportRegion.PageSettings;
+        export.PageWidth = 816;
+        export.PageHeight = 1054;
+        //To export the diagram in single page.
+        export.FitToPage = true;
+        export.Margin = new DiagramThickness() { Left = 10, Top = 10, Right = 10, Bottom = 10 };
+        export.ClipBounds = new DiagramRect() { X = 0, Y = 0, Width = 500, Height = 500 };
+        //To export the diagram
+        await diagram.ExportAsync("Diagram", DiagramExportFormat.PNG, export);
+    }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Export)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Export/ExportWithPage)
 
 ### How to change orientation at runtime
 
@@ -239,8 +256,9 @@ Diagram provides support to switch between [Portrait](https://help.syncfusion.co
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
+@using Syncfusion.Blazor.Buttons
 
-<input type="button" @onclick="@Export" />
+<SfButton Content="Export" OnClick="@Export" />
 <SfDiagramComponent Height="600px" @ref="@diagram">
 </SfDiagramComponent>
 
@@ -259,11 +277,11 @@ Diagram provides support to switch between [Portrait](https://help.syncfusion.co
           export.Margin = new DiagramThickness() { Left = 10, Top = 10, Right = 10, Bottom = 10 };
           export.ClipBounds = new DiagramRect() { X = 0, Y = 0, Width = 500, Height = 500 };
           //To export the diagram
-          await diagram.ExportAsync(DiagramExportFormat.PNG, export);
+          await diagram.ExportAsync("diagram", DiagramExportFormat.PNG, export);
      }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Export)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Export/ExportOrientation)
 
 ### How to export the diagram as PDF
 
@@ -272,31 +290,36 @@ Diagram does not have the built-in support to convert the diagram to a PDF file,
 The following code illustrates how to export the diagram as PDF file.
 
 ```cshtml
-@using Syncfusion.Blazor.Diagram
+@using Syncfusion.PdfExport;
 
-<input type="button" @onclick="@ExportPDF" />
+@using Syncfusion.Blazor.Diagram
+@using Syncfusion.Blazor.Buttons
+@inject IJSRuntime JS;
+
+<SfButton Content="ExportPDF" OnClick="@ExportPDF" />
 <SfDiagramComponent Height="600px" @ref="@diagram">
 </SfDiagramComponent>
 
 @code{
+    //Reference the diagram
     SfDiagramComponent diagram;
 
     private async void ExportPDF()
     {
         DiagramExportSettings print = new DiagramExportSettings();
-        print.Region = region;
-        print.PageWidth = pageWidth;
-        print.PageHeight = pageHeight;
-        print.Orientation = orientation;
-        print.FitToPage = multiplePage;
-        print.Margin = new DiagramThickness() { Left = left, Top = top, Right = right, Bottom = bottom };
-        print.ClipBounds = new DiagramRect() { X = double.Parse(x), Y = double.Parse(y), Width = double.Parse(cwidth), Height = double.Parse(cheight) };
+        print.Region = DiagramPrintExportRegion.PageSettings;
+        print.PageWidth = 500;
+        print.PageHeight = 800;
+        print.Orientation = PageOrientation.Portrait;
+        print.FitToPage = true;
+        print.Margin = new DiagramThickness() { Left = 30, Top = 20, Right = 10, Bottom = 10 };
+        print.ClipBounds = new DiagramRect() { X = 200, Y = 200, Width = 200, Height = 200 };
         //To export the diagram into base64
-        var images = await diagram.ExportAsync(format, print);
-        var pdforientation = orientation == PageOrientation.Landscape ? PdfPageOrientation.Landscape : PdfPageOrientation.Portrait;
+        var images = await diagram.ExportAsync(DiagramExportFormat.PNG, print);
+        var pdforientation = PageOrientation.Portrait == PageOrientation.Landscape ? PdfPageOrientation.Landscape : PdfPageOrientation.Portrait;
         await ExportToPdf("diagram", pdforientation, true, images);        
     }
-
+    //
     private async Task<string> ExportToPdf(string fileName, PdfPageOrientation orientation, bool allowDownload, string[] images)
     {
         PdfDocument document = new PdfDocument();
@@ -337,6 +360,8 @@ The following code illustrates how to export the diagram as PDF file.
         return base64String;
     }
 
+  }
+
     // Javascript methods to download file
     function downloadPdf(base64String, fileName) {
     var sliceSize = 512;
@@ -369,7 +394,7 @@ triggerDownload: function triggerDownload(type, fileName, url)
     anchorElement.click();
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Export)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Export/ExportToPDF)
 
 ## See Also
 
