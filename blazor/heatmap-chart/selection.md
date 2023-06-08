@@ -58,37 +58,32 @@ In the HeatMap, the [EnableMultiSelect]() property is used to allow single cell 
 
 @using Syncfusion.Blazor.HeatMap
 
-<SfHeatMap @ref="Heatmap" Height="300px" DataSource="@DataSource"AllowSelection=true>
-   
-    <HeatMapTitleSettings Text="Top export products 2014-2018, Value in USD million"></HeatMapTitleSettings>
+<SfHeatMap DataSource="@DataSource"AllowSelection="true" EnableMultiSelect="false">
+    <HeatMapTitleSettings Text="Sales Revenue per Employee (in 1000 US$)"></HeatMapTitleSettings>
     <HeatMapXAxis Labels="@XLabels"></HeatMapXAxis>
     <HeatMapYAxis Labels="@YLabels"></HeatMapYAxis>
-    <HeatMapPaletteSettings>
-        <HeatMapPalettes>
-            <HeatMapPalette Color="#3C5E62"></HeatMapPalette>
-            <HeatMapPalette Color="#86C843"></HeatMapPalette>
-        </HeatMapPalettes>
-    </HeatMapPaletteSettings>
-    <HeatMapLegendSettings Visible=false></HeatMapLegendSettings>
 </SfHeatMap>
 
 @code{
-
-    public SfHeatMap<double[,]> Heatmap;
     public int YIndex = 0;
-    public string[] XLabels = new string[] { "Cereals", "Meat", "Spices", "Tea", "Edible Oil", "Dairy Products", "Wheat" };
-    public string[] YLabels = new string[] { "2014", "2015", "2016", "2017", "2018" };
+    public string[] XLabels = new string[] { "Nancy", "Andrew", "Janet", "Margaret", "Steven", "Michael", "Robert", "Laura", "Anne", "Paul", "Karin", "Mario" };
+    public string[] YLabels = new string[] { "Mon", "Tues", "Wed", "Thurs", "Fri", "Sat" };
     public double[,] DataSource = new double[,]
-           {
-        {2.9, 5.2, 3.4, 5.6, 4.4},
-        {6.6, 4.8, 8, 3.9, 6.5},
-        {5.1, 4.6, 5.4, 3.9, 4.3},
-        {5.2, 4.3, 3.9, 6.2, 6.4},
-        {7, 3, 1.9, 5.9, 3.5},
-        {7.8, 5.9, 3.9, 4.3, 4.3},
-        {6.5, 4.3, 3.9, 5.2, 3.9}
+    {
+         { 73, 39, 26, 39, 94, 0 },
+         { 93, 58, 53, 38, 26, 68 },
+         { 99, 28, 22, 4, 66, 90 },
+         { 14, 26, 97, 69, 69, 3 },
+         { 7, 46, 47, 47, 88, 6 },
+         { 41, 55, 73, 23, 3, 79 },
+         { 56, 69, 21, 86, 3, 33 },
+         { 45, 7, 53, 81, 95, 79 },
+         { 60, 77, 74, 68, 88, 51 },
+         { 25, 25, 10, 12, 78, 14 },
+         { 25, 56, 55, 58, 12, 82 },
+         {74, 33, 88, 23, 86, 59 }
     };
 }
 
 ```
-
+![Single cell selection in Blazor HeatMap Chart](images/blazor-heatmap-chart-single-cell-selection.png)
