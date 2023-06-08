@@ -380,7 +380,8 @@ The following example shows how to use marker drag events to customize the data 
 
 @using Syncfusion.Blazor.Maps
 
-<SfMaps>
+
+<SfMaps @ref="maps">
     <MapsEvents MarkerDragStart="MarkerDragStartEvent" MarkerDragEnd="MarkerDragEndEvent"></MapsEvents>
     <MapsLegendSettings Visible="true" Type="LegendType.Markers" Shape="LegendShape.Circle" ShapeWidth="10" ShapeHeight="10" Fill="#FF471A">
         <MapsLegendShapeBorder Width="2" Color="#285255"></MapsLegendShapeBorder>
@@ -398,6 +399,7 @@ The following example shows how to use marker drag events to customize the data 
     </MapsLayers>
 </SfMaps>
 @code {
+    SfMaps maps;
     public class City
     {
         public double Latitude { get; set; }
@@ -420,6 +422,9 @@ The following example shows how to use marker drag events to customize the data 
     void MarkerDragEndEvent(MarkerDragEndEventArgs args)
     {
         // When the marker on the map stops dragging, the event is triggered.
+        MarkerDataSource[args.DataIndex].Name = "Dragged Marker " + (args.DataIndex + 1);
+        maps.Refresh();
+
     }
 
 }
