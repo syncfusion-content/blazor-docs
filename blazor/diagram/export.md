@@ -74,7 +74,7 @@ Diagram provides support to export the desired region of the diagram to the desi
     {
         DiagramExportSettings export = new DiagramExportSettings();
         //To export the diagram
-        await diagram.ExportAsync(DiagramExportFormat.SVG, export);
+        await diagram.ExportAsync("Diagram", DiagramExportFormat.SVG, export);
     }
 }
 ```
@@ -119,19 +119,23 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 <SfButton Content="Export" OnClick="@Export" />
 <SfDiagramComponent Height="600px" @ref="@diagram">
+    <PageSettings Height="1000" Width="800"></PageSettings>
 </SfDiagramComponent>
 
-@code{
-     SfDiagramComponent diagram;
+@code {
+    //Reference the diagram
+    SfDiagramComponent diagram;
 
-     private async Task Export()
-     {
-          DiagramExportSettings export = new DiagramExportSettings();
-          export.Region = DiagramPrintExportRegion.PageSettings;
-          export.Margin = new DiagramThickness() { Left = 10, Top = 10, Right = 10, Bottom = 10 };
-          //To export the diagram
-          await diagram.ExportAsync(DiagramExportFormat.PNG, export);
-     }
+    private async Task Export()
+    {
+        DiagramExportSettings export = new DiagramExportSettings();
+        export.Region = DiagramPrintExportRegion.PageSettings;
+        export.PageWidth = 816;
+        export.PageHeight = 1054;
+        export.Margin = new DiagramThickness() { Left = 10, Top = 10, Right = 10, Bottom = 10 };
+        //To export the diagram
+        await diagram.ExportAsync("diagram", DiagramExportFormat.PNG, export);
+    }
 }
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Export/ExportMargin)
@@ -154,21 +158,23 @@ The following code example illustrates how to export the diagram based on page s
 
 <SfButton Content="Export" OnClick="@Export" />
 <SfDiagramComponent Height="600px" @ref="@diagram">
+    <PageSettings Height="1000" Width="800"></PageSettings>
 </SfDiagramComponent>
 
-@code{
-     SfDiagramComponent diagram;
+@code {
+    //Reference the diagram
+    SfDiagramComponent diagram;
 
-     private async Task Export()
-     {
-          DiagramExportSettings export = new DiagramExportSettings();
-          export.Region = DiagramPrintExportRegion.PageSettings;
-          export.PageWidth = 816;
-          export.PageHeight = 1054;                
-          export.Margin = new DiagramThickness() { Left = 10, Top = 10, Right = 10, Bottom = 10 };          
-          //To export the diagram
-          await diagram.ExportAsync(DiagramExportFormat.PNG, export);
-     }
+    private async Task Export()
+    {
+        DiagramExportSettings export = new DiagramExportSettings();
+        export.Region = DiagramPrintExportRegion.PageSettings;
+        export.PageWidth = 816;
+        export.PageHeight = 1054;
+        export.Margin = new DiagramThickness() { Left = 10, Top = 10, Right = 10, Bottom = 10 };
+        //To export the diagram
+        await diagram.ExportAsync("Diagram", DiagramExportFormat.PNG, export);
+    }
 }
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Export/ExportRegion)
@@ -199,7 +205,7 @@ The following code example illustrates how to export the region specified in the
           export.Margin = new DiagramThickness() { Left = 10, Top = 10, Right = 10, Bottom = 10 };
           export.ClipBounds = new DiagramRect() { X = 0, Y = 0, Width = 500, Height = 500 };
           //To export the diagram
-          await diagram.ExportAsync(DiagramExportFormat.PNG, export);
+          await diagram.ExportAsync("diagram",DiagramExportFormat.PNG, export);
      }
 }
 ```
@@ -220,24 +226,26 @@ The following code example illustrates how to export the diagram to a single pag
 
 <SfButton Content="Export" OnClick="@Export" />
 <SfDiagramComponent Height="600px" @ref="@diagram">
+    <PageSettings Height="1000" Width="800"></PageSettings>
 </SfDiagramComponent>
 
-@code{
-     SfDiagramComponent diagram;
+@code {
+    //Reference the diagram.
+    SfDiagramComponent diagram;
 
-     private async Task Export()
-     {
-          DiagramExportSettings export = new DiagramExportSettings();
-          export.Region = DiagramPrintExportRegion.PageSettings;
-          export.PageWidth = 816;
-          export.PageHeight = 1054;
-          //To export the diagram in single page.
-          export.FitToPage = true;         
-          export.Margin = new DiagramThickness() { Left = 10, Top = 10, Right = 10, Bottom = 10 };
-          export.ClipBounds = new DiagramRect() { X = 0, Y = 0, Width = 500, Height = 500 };
-          //To export the diagram
-          await diagram.ExportAsync(DiagramExportFormat.PNG, export);
-     }
+    private async Task Export()
+    {
+        DiagramExportSettings export = new DiagramExportSettings();
+        export.Region = DiagramPrintExportRegion.PageSettings;
+        export.PageWidth = 816;
+        export.PageHeight = 1054;
+        //To export the diagram in single page.
+        export.FitToPage = true;
+        export.Margin = new DiagramThickness() { Left = 10, Top = 10, Right = 10, Bottom = 10 };
+        export.ClipBounds = new DiagramRect() { X = 0, Y = 0, Width = 500, Height = 500 };
+        //To export the diagram
+        await diagram.ExportAsync("Diagram", DiagramExportFormat.PNG, export);
+    }
 }
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Export/ExportWithPage)
@@ -269,7 +277,7 @@ Diagram provides support to switch between [Portrait](https://help.syncfusion.co
           export.Margin = new DiagramThickness() { Left = 10, Top = 10, Right = 10, Bottom = 10 };
           export.ClipBounds = new DiagramRect() { X = 0, Y = 0, Width = 500, Height = 500 };
           //To export the diagram
-          await diagram.ExportAsync(DiagramExportFormat.PNG, export);
+          await diagram.ExportAsync("diagram", DiagramExportFormat.PNG, export);
      }
 }
 ```
