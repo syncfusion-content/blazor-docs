@@ -42,7 +42,7 @@ To add Blazor `SfPdfViewer` component in Blazor WebAssembly App,
 * Add the following ItemGroup tag in the Blazor WebAssembly csproj file.
 
 {% tabs %}
-{% highlight hl_lines="2" %}
+{% highlight c# hl_lines="2" %}
 
 <ItemGroup>
     <NativeFileReference Include="$(SkiaSharpStaticLibraryPath)\2.0.23\*.a" />
@@ -56,7 +56,7 @@ N> Install this `wasm-tools` and `wasm-tools-net6` by using the `dotnet workload
 * Enable the following property in the Blazor WebAssembly csproj file.
 
 {% tabs %}
-{% highlight hl_lines="2 3" %}
+{% highlight c# hl_lines="2 3" %}
 
 <PropertyGroup>
 	<WasmNativeStrip>true</WasmNativeStrip>
