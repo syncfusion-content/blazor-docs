@@ -68,39 +68,6 @@ If the above result is not shown, please run the comments below
 ```
 **Step 4:** Run the sample in WSL (Windows Subsystem for Linux) mode and it will run our Blazor SfPdfViewer.
 
-N> If you encounter any issues while running in WSL (Windows Subsystem for Linux) mode, use the following instructions to resolve them.
-
-If the sample does not load the PDF file and throws an exception.
-
-![Create-new-blazor-wsl-app](GettingStarted_images/exception.png)
-
-To resolve the issue, use the following codes to install the dependencies required for our Blazor SfPdfViewer to run.
-
-Open the Ubuntu comment window and type the following comments.
-
-```
-    sudo cp -u /lib/x86_64-linux-gnu/libdl.so.2 /lib/x86_64-linux-gnu/libdl.so
-```
-Blazor SfPdfViewer uses libdl.so. It has a different name in different WSL Linux versions. To ensure its presence, check the following \wsl.localhost\Ubuntu\usr\lib\x86_64-linux-gnu location.
-
-![Create-new-blazor-wsl-app](GettingStarted_images/libdl.png)
-
-If it is in a different name like libdl.so.4, then change the comment as follows.
-
-```
-sudo cp -u /lib/x86_64-linux-gnu/libdl.so.4 /lib/x86_64-linux-gnu/libdl.so
-```
-
-Then, in the Ubuntu command window, run the following commands one by one to install all necessary Blazor SfPdfViewer dependencies for a Linux run.
-
-```
-    sudo apt-get install libfontconfig1
-    sudo apt-get update && apt-get install -y --allow-unauthenticated libgdiplus libc6-dev libx11-dev
-    sudo apt-get update
-    sudo apt install libgdiplus
-
-```
-
 Close the project, reopen it, and run it in WSL mode. It will run properly.
 
 ![Create-new-blazor-wsl-app](GettingStarted_images/final.png)
