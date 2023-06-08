@@ -89,4 +89,4 @@ The following code example explains the data loaded event in the diagram.
     }
 }
 ```
-
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Layout/DataLoadedEvent)

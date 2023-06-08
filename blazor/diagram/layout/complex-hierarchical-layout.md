@@ -153,7 +153,7 @@ The following code example illustrates how to create a complex hierarchical tree
 }
 
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Layout)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Layout/LineDistribution)
 
 ![Blazor Complex Hierarchical Diagram](../images/blazor-diagram-samepoint.png)
 
@@ -220,7 +220,7 @@ The following code illustrates how to arrange the nodes in non linear manner.
     };
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Layout)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Layout/LinearArrangementNonLinear)
 
 ![Blazor Complex Hierarchical Diagram](../images/blazor-diagram-non-linear.png)
 
@@ -285,6 +285,6 @@ The following code illustrates how to arrange the nodes in  linear manner.
     };
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Layout)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Layout/LinearArrangementLinear)
 
 ![Blazor Complex Hierarchical Diagram](../images/blazor-diagram-lineararrangement.png)
