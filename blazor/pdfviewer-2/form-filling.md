@@ -260,19 +260,23 @@ The following code shows how to export the form fields as a JSON data stream and
 ### Export and import as object
 
 ```cshtml
-@using Syncfusion.Blazor.PdfViewerServer
-@using Syncfusion.Blazor.PdfViewer
+
 @using Syncfusion.Blazor.Buttons
+@using Syncfusion.Blazor.SfPdfViewer;
 
 <SfButton OnClick="@OnExportFormFieldsClick">Export Data</SfButton>
 <SfButton OnClick="@OnImportFormFieldsClick">Import Data</SfButton>
-<SfPdfViewerServer @ref=Viewer Width="1060px" Height="500px" DocumentPath="@DocumentPath"/>
+
+<SfPdfViewer2 @ref="@Viewer" DocumentPath="@DocumentPath"  Height="100%" Width="100%">
+</SfPdfViewer2>
 
 @code
 {
-    SfPdfViewerServer Viewer;
-    public string DocumentPath { get; set; } = "wwwroot/Data/form-filling-document.pdf";
-    Dictionary<string,string> dictionary;
+    SfPdfViewer2 Viewer;
+
+    public string DocumentPath { get; set; } = "wwwroot/Data/FormFillingDocument.pdf";
+
+    Dictionary<string, string> dictionary;
 
     // Event triggers on Export Data button click.
     public async void OnExportFormFieldsClick(MouseEventArgs args)
@@ -288,4 +292,5 @@ The following code shows how to export the form fields as a JSON data stream and
         await Viewer.ImportFormFieldsAsync(dictionary);
     }
 }
+
 ```
