@@ -21,7 +21,7 @@ You might need to save the PDF file back to the server.
 @using System.IO
 
 <SfButton OnClick="OnClick">Save</SfButton>
-<SfPdfViewer2 DocumentPath="@DocumentPath" @ref="viewer" Width="1060px" Height="500px"></SfPdfViewer2>
+<SfPdfViewer2 DocumentPath="@DocumentPath" @ref="viewer" Height="100%" Width="100%"></SfPdfViewer2>
 
 @code{  
     SfPdfViewer2 viewer;
@@ -52,7 +52,7 @@ If you have plenty of PDF files stored in database and you want to save the upda
 @using System.Data.SqlClient
 
 <SfButton OnClick="OnClick">Save</SfButton>
-<SfPdfViewer2 DocumentPath="@DocumentPath" @ref="viewer" Width="1060px" Height="500px">
+<SfPdfViewer2 DocumentPath="@DocumentPath" @ref="viewer" Height="100%" Width="100%">
 </SfPdfViewer2>
 
 @code{
@@ -90,7 +90,7 @@ In the built-in toolbar, you have an option to download the updated PDF to the l
 @using Syncfusion.Blazor.SfPdfViewer
 
 <SfButton @onclick="OnClick">Download</SfButton>
-<SfPdfViewer2 @ref="@viewer" Height="500px" Width="1060px" DocumentPath="@DocumentPath" />
+<SfPdfViewer2 @ref="@viewer" Height="100%" Width="100%" DocumentPath="@DocumentPath" />
 
 @code{
 SfPdfViewer2 viewer;
