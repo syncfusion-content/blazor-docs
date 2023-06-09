@@ -280,6 +280,8 @@ N> Syncfusion recommends to reference scripts using [Static Web Assets](https://
 {% endhighlight %}
 {% endtabs %}
 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BthANxZOBWScywXn?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to run the application. Then, the Syncfusion `Blazor Accordion` component will be rendered in the default web browser.
 
 ![Blazor Accordion Component](images/blazor-accordion-component.png)
@@ -295,6 +297,8 @@ The following code explains how to initialize accordion using `Template`.
 {% include_relative code-snippet/getting-started.razor %}
 
 {% endhighlight %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VNrUtHZkBMYKQVce?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Accordion with Header Template](./images/blazor-accordion-header-template.png)
 

@@ -47,6 +47,8 @@ The [Pie Chart](https://www.syncfusion.com/blazor-components/blazor-charts/chart
 
 ```
 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VZhKXHNkhJbuBqwf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 ![Blazor Pie Chart](../images/pie-dough-nut/blazor-pie-chart.png)
 
 ## Radius customization
@@ -86,6 +88,8 @@ The radius of the pie series will be set to 80% of its size (minimum of chart wi
 }
 
 ```
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hDrAZRjuBoRxxPVJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Customizing Radius in Blazor Pie Chart](../images/pie-dough-nut/blazor-pie-chart-radius-customization.png)
 
@@ -127,6 +131,7 @@ The center x and center y can be used to change the pie's center position. The p
 }
 
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hNLUZnDkhxobNkpC?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Changing Blazor Pie Chart Center Position](../images/pie-dough-nut/blazor-pie-chart-center-position.png)
 
@@ -169,6 +174,7 @@ The [Radius](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Accu
 }
 
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hZVgZRtEBHZIImZo?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Pie Chart displays Various Radius](../images/pie-dough-nut/blazor-pie-chart-with-various-radius.png)
 
@@ -210,6 +216,8 @@ The doughnut chart can be created by setting the [InnerRadius](https://help.sync
 
 ```
 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hNVgtRtEzWsEAExk?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 ![Blazor Doughnut Chart](../images/pie-dough-nut/blazor-doughnut-chart.png)
 
 ## Start and end angles
@@ -250,6 +258,8 @@ The [StartAngle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.
 }
 
 ```
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VDVAtdZEfsywzqpF?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Customizing Start and End angles in Blazor Pie Chart](../images/pie-dough-nut/blazor-pie-chart-start-angle-customization.png)
 
@@ -293,6 +303,8 @@ The [StartAngle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.
 
 ```
 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hNVqNnXkfMwNUAVS?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 ![Blazor Pie Chart with Color and Text Mapping](../images/pie-dough-nut/blazor-pie-chart-text-mapping.png)
 
 ## Hide pie or doughnut border
@@ -331,6 +343,8 @@ When the mouse hovers over the pie/doughnut chart, the border appears by default
 }
 
 ```
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BNLKNRNazCvLPBNu?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Hiding Blazor Pie Chart Border](../images/pie-dough-nut/Blazor-pie-chart-disable-border.png)
 
