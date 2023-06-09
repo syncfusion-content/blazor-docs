@@ -101,5 +101,3 @@ public void OnClick(MouseEventArgs args)
 public string DocumentPath { get; set; } = "wwwroot/data/PDF_Succinctly.pdf";
 }
 ```
-
-N> You can refer to the [Blazor SfPdfViewer](https://www.syncfusion.com/blazor-components/blazor-pdf-viewer) feature tour page for its groundbreaking feature representations. You can also explore the [Blazor SfPdfViewer example](https://blazor.syncfusion.com/demos/pdf-viewer/default-functionalities?theme=bootstrap4) to understand how to explain core features of SfPdfViewer.
