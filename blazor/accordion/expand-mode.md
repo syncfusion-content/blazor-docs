@@ -32,7 +32,7 @@ This property enables to expand only one Accordion item at a time. If any new it
 
 ```
 
-
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hDhKtxjkBLKcWlBj?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Accordion Component with Single Expand Mode](./images/blazor-accordion-single-expand-mode.png)
 
@@ -58,7 +58,7 @@ The default [ExpandMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
 
 ```
 
-
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LXhUZnXuBrTcUMdH?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Accordion Component with Multiple Expand Mode](./images/blazor-accordion-multiple-expand-mode.png)
 
@@ -128,6 +128,6 @@ By default, accordion items were in collapsed state on initial load. To expand a
 
 ```
 
-
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BtrKNnZahBeRpBhM?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Accordion Component with Expanding Items](./images/blazor-accordion-expand-items.png)
