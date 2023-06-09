@@ -77,41 +77,6 @@ The following code example shows how to open and load the PDF file stored in Azu
 
 N> The **Azure.Storage.Blobs** NuGet package must be installed in your application to use the previous code example.
 
-```cshtml
-
-@using Azure.Storage.Files.Shares
-@using System.IO;
-@using Syncfusion.Blazor.SfPdfViewer
-
-<SfPdfViewer2 DocumentPath="@DocumentPath" Height="100%" Width="100%"></SfPdfViewer2>
-
-@code {
-    
-    public string DocumentPath { get; set; };
-
-    protected override void OnInitialized()
-    {
-        //Connection String of Storage Account
-        string connectionString = "Here Place Your Connection string";
-        string shareName = "pdfdocument";
-        //File Name to be loaded into Syncfusion SfPdfViewer
-        string filePath = "Hive_Succinctly.pdf";
-        ShareFileClient shareFileClient = new ShareFileClient(connectionString, shareName, filePath);
-        Stream stream = shareFileClient.OpenRead();
-        byte[] bytes;
-        using (var memoryStream = new MemoryStream())
-        {
-            stream.CopyTo(memoryStream);
-            bytes = memoryStream.ToArray();
-        }
-        DocumentPath = "data:application/pdf;base64," + Convert.ToBase64String(bytes);
-    }
-}
-
-```
-
-N> The **Azure.Storage.Files.Shares** NuGet package must be installed in your application to use the previous code example.
-
 ## Opening a PDF from file system
 
 There is an UI option in built-in toolbar to open the PDF file from local file system. If you want to achieve the same functionality while designing your own toolbar, you can use the following code example to load and open the PDF file. In this sample, the Syncfusion’s Uploader control is used for Blazor.
