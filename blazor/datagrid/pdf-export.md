@@ -1349,6 +1349,86 @@ In the following demo, the [DrawString](https://help.syncfusion.com/cr/file-form
 
 ![PDF Exported Grid Cell Customization in Blazor DataGrid](./images/blazor-datagrid-pdf-exported-grid-cell-customization.png)
 
+### Export image in PDF footer content
+
+You can render image in the Header or Footer of exported PDF document using [Header](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportProperties.html#Syncfusion_Blazor_Grids_PdfExportProperties_Header) and [Footer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportProperties.html#Syncfusion_Blazor_Grids_PdfExportProperties_Footer) properties of the [PdfExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportProperties.html) class.
+
+We need to define the [base64](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfHeaderFooterContent.html#Syncfusion_Blazor_Grids_PdfHeaderFooterContent_Src) string and content [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfHeaderFooterContent.html#Syncfusion_Blazor_Grids_PdfHeaderFooterContent_Type) for image content inside the [PDFHeaderFooterContent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfHeaderFooterContent.html).
+
+The following sample code demonstrates adding image in the Footer section of the exported document,
+
+
+
+```cshtml
+
+@using Syncfusion.Blazor.Grids
+@using System.Net.Http
+
+<SfGrid ID="Grid" @ref="DefaultGrid" DataSource="@Orders" Toolbar="@(new List<string>() { "PdfExport" })" AllowPdfExport="true" AllowPaging="true">
+    <GridEvents OnToolbarClick="ToolbarClickHandler" TValue="Order"></GridEvents>
+    <GridColumns>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code {
+    private SfGrid<Order> DefaultGrid;
+    public List<Order> Orders { get; set; }
+
+    public async Task ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
+    {
+        if (args.Item.Id == "Grid_pdfexport")  //Id is combination of Grid's ID and itemname
+        {
+            PdfExportProperties ExportProperties = new PdfExportProperties();
+            string filePath = "https://www.qbssoftware.com/image/cache/catalog/qbs/essentials-500x500w.png"; // Add the specified path to display the image
+            byte[] imageBytes;
+
+            using (HttpClient httpClient = new HttpClient())
+            {
+                imageBytes = await httpClient.GetByteArrayAsync(filePath);
+            }
+      
+            string base64Footer = Convert.ToBase64String(imageBytes); // Customize and display base64string as per your requirement
+            List<PdfHeaderFooterContent> FooterContent = new List<PdfHeaderFooterContent>
+        {
+            new PdfHeaderFooterContent() { Type = ContentType.Image, Src = base64Footer, Position = new PdfPosition() { X = 150, Y = 0 } },
+        };
+            PdfFooter Footer = new PdfFooter()
+                {
+                    FromBottom = 60,
+                    Height = 350,
+                    Contents = FooterContent
+                };
+          
+            ExportProperties.Footer = Footer;
+            await this.DefaultGrid.PdfExport(ExportProperties);
+        }
+    }
+    protected override void OnInitialized()
+    {
+        Orders = Enumerable.Range(1, 20).Select(x => new Order()
+            {
+                OrderID = 1000 + x,
+                CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
+                Freight = 2.1 * x,
+                OrderDate = DateTime.Now.AddDays(-x),
+            }).ToList();
+    }
+
+    public class Order
+    {
+        public int? OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public DateTime? OrderDate { get; set; }
+        public double? Freight { get; set; }
+    }
+}
+
+```
+
 <!-- Show or hide columns on exported pdf
 
 You can show a hidden column or hide a visible column while exporting the datagrid by customizing the visibility settings while exporting.
