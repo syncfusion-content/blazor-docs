@@ -45,7 +45,7 @@ The legend is available for accumulation charts, just like it is for charts, and
 
 ```
 
-![Legend in Blazor Accumulation Chart](images/legend/blazor-accumulation-chart-legend.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VjVKjnMrKVAFEhSQ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Position and alignment
 
@@ -85,7 +85,7 @@ The legend can be placed at [Left](https://help.syncfusion.com/cr/blazor/Syncfu
 
 ```
 
-![Changing Position and Alignment of Blazor Accumulation Chart](images/legend/blazor-accumulation-chart-position.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VDBADdiLqVydESJq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Legend Reverse
 
@@ -126,7 +126,7 @@ You can reverse the order of the legend items by using the [Reverse](https://hel
 
 ```
 
-![Changing Legend Reverse in Blazor Accumulation Chart](images/legend/blazor-accumulation-chart-legend-reverse.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDrAtRshAVxOoFol?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Legend shape
 
@@ -167,7 +167,7 @@ The [LegendShape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts
 
 ```
 
-![Changing Legend Shape in Blazor Accumulation Chart](images/legend/blazor-accumulation-chart-legend-shape.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/htrUtHsVULmlZDXx?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Legend size
 
@@ -209,7 +209,7 @@ The legend size can be customized by using the [Width](https://help.syncfusion.c
 
 ```
 
-![Changing Legend Size in Blazor Accumulation Chart](images/legend/blazor-accumulation-chart-legend-size.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/htLgjxCLKLkAFUBz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Legend shape size
 
@@ -250,7 +250,7 @@ The [ShapeHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts
 
 ```
 
-![Changing Legend Item Size in Blazor Accumulation Chart](images/legend/blazor-accumulation-chart-legend-item-size.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BtrUNHsBKKMpMpJB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Paging for Legend
 
@@ -291,7 +291,7 @@ When the legend items exceed legend bounds, paging will be enabled by default. E
 
 ```
 
-![Paging for Legend in Blazor Accumulation Chart](images/legend/blazor-accumulation-chart-legend-paging.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VZLUjHsLAKBJkCzJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Legend text wrap
 
@@ -330,7 +330,7 @@ When the legend text exceeds the container, the text can be wrapped by using [Te
 
 ```
 
-![Blazor Accumulation Chart Legend with Wrap](images/legend/blazor-accumulation-chart-legend-wrap.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNLqDxirgqyCxxsK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 
 N> Refer to the [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore the [Blazor Accumulation Chart Example](https://blazor.syncfusion.com/demos/chart/pie?theme=bootstrap4) to know about the various features of accumulation charts and how it is used to represent numeric proportional data.

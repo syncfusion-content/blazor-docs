@@ -92,5 +92,3 @@ The sample demonstrates the types of animation that suits Accordion. All the ani
 ```
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BDBqtnDEVAqhsPYR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Customize Accordion expand or collapse animation behavior](./images/blazor-accordion-animation.gif)

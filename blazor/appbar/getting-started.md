@@ -286,4 +286,4 @@ N> Syncfusion recommends to reference scripts using [Static Web Assets](https://
 </style>
 ```
 
-![Blazor AppBar Component](images/getting_started.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rXLUNdWLTZjNtheo?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}

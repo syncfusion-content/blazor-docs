@@ -90,6 +90,8 @@ The following properties are available in the [AccumulationTextRenderEventArgs](
 }
 ```
 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXhgNniLKFmooYiV?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 ## OnLegendItemRender
 
 [OnLegendItemRender](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartEvents.html#Syncfusion_Blazor_Charts_AccumulationChartEvents_OnLegendItemRender) event triggers, before legend getting rendered.
@@ -141,6 +143,9 @@ The following properties are available in the [AccumulationLegendRenderEventArgs
 }
 ```
 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hthKjdWrUvOXJeJJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+
 ## OnPointRender
 
 [OnPointRender](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartEvents.html#Syncfusion_Blazor_Charts_AccumulationChartEvents_OnPointRender) event triggers before each point for the accumulation chart is rendered.
@@ -188,6 +193,7 @@ The following properties are available in the [AccumulationPointRenderEventArgs]
 }
 ```
 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZVKXxWLAaXDbIfU?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 ## OnExportComplete
 
 [OnExportComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartEvents.html#Syncfusion_Blazor_Charts_AccumulationChartEvents_OnExportComplete) event triggers after exporting the accumulation chart.
@@ -241,6 +247,8 @@ The following field is available in the [ExportEventArgs](https://help.syncfusio
 }
 ```
 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hZLqjniBqkiHXgZK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 ## OnPrintComplete
 
 `OnPrintComplete` event triggers after printing the accumulation chart.
@@ -287,6 +295,7 @@ The following field is available in the [ExportEventArgs](https://help.syncfusio
 }
 ```
 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BNhANnWrUuVgntZl?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 ## SizeChanged
 
 [SizeChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartEvents.html#Syncfusion_Blazor_Charts_AccumulationChartEvents_SizeChanged) event is triggered when the accumulation chart is resized.
@@ -335,6 +344,7 @@ The following fields are available in the [AccumulationResizeEventArgs](https://
 }
 ```
 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDhqNdsLUuUtFRWc?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 ## Loaded
 
 `Loaded` event triggers after accumulation chart is loaded.
@@ -375,6 +385,7 @@ The following fields are available in the [AccumulationResizeEventArgs](https://
 }
 ```
 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZVADRMVqEzIjNvO?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 ## OnPointClick
 
 [OnPointClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartEvents.html#Syncfusion_Blazor_Charts_AccumulationChartEvents_OnPointClick) event triggers on point click.
@@ -428,6 +439,7 @@ The following fields are available in the [AccumulationPointEventArgs](https://h
 }
 ```
 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BDVKZxWrAOywvzUW?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 ## TooltipRender
 
 [TooltipRender](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartEvents.html#Syncfusion_Blazor_Charts_AccumulationChartEvents_TooltipRender) event triggers before the tooltip for series is rendered.
@@ -476,3 +488,4 @@ The following property is available in the [TooltipRenderEventArgs](https://help
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rjVKDxCVqkGfgIZb?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}

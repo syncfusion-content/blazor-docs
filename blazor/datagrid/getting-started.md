@@ -300,7 +300,6 @@ N> Syncfusion recommends to reference scripts using [Static Web Assets](https://
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hDLUDdjxJvxjQlaM?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-![Blazor DataGrid Component](images/blazor-datagrid-component.png)
 
 ## Defining Row Data
 

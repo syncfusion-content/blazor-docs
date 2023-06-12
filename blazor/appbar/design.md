@@ -30,7 +30,7 @@ The following example depicts the code to provide spacing between the home and p
 </div>
 ```
 
-![Blazor AppBar with Spacer](./images/spacer_appbar.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/htrgDRiBzMrkjHak?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Separator
 
@@ -66,7 +66,7 @@ The following example depicts the code to provide a vertical line between a grou
 </style>
 ```
 
-![Blazor AppBar with Separator](./images/separator_appbar.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rtVUDRMBzWAGMpEY?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Media Query
 
@@ -112,7 +112,7 @@ Media Query is used to adjusting the AppBar for different screen sizes. Resize t
 </style>
 ```
 
-![Blazor AppBar with Media Query](./images/media_appbar.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hNVgZdMLzszpZwgo?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Designing AppBar with Menu
 
@@ -171,7 +171,7 @@ Media Query is used to adjusting the AppBar for different screen sizes. Resize t
 </style>
 ```
 
-![Blazor AppBar with Menu](./images/menu_appbar.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BNVKDHiVJWSqgMaG?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Designing AppBar with Buttons
 
@@ -206,7 +206,7 @@ Media Query is used to adjusting the AppBar for different screen sizes. Resize t
 </style>
 ```
 
-![Blazor AppBar with Buttons](./images/buttons_appbar.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BDhUDRCLTixDlMCe?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Designing AppBar with SideBar
 
@@ -371,4 +371,4 @@ AppBar toggle button used to control the expand and collapse state of **SfSideba
 </style>
 ```
 
-![Blazor AppBar with SideBar](./images/sidebar_appbar.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZBANRWBfMEikVGe?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}

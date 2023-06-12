@@ -183,6 +183,5 @@ N> Syncfusion recommends to reference scripts using [Static Web Assets](https://
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VtrANxXHzvmTCeaD?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-![Blazor Calendar Component](images/core-hosted/browser-output.png)
 
 N> You need to include a valid license key (either paid or trial key) within your applications. Refer to this [help topic](https://blazor.syncfusion.com/documentation/getting-started/license-key/overview) for more information.

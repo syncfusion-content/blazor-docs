@@ -74,4 +74,3 @@ The following sample explains how to initialize accordion items through `templat
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rZrAZnNuVBDuFMjw?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-![Blazor Accordion Data Binding](./images/blazor-accordion-data-binding.png)

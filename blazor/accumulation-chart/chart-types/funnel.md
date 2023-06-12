@@ -44,8 +44,7 @@ documentation: ug
 }
 
 ```
-
-![Blazor Funnel Chart](../images/funnel/blazor-funnel-chart.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hjLqDdiLBiGqvzSf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Funnel Size
 
@@ -84,8 +83,8 @@ The size of the funnel chart can be customized by using the [Width](https://help
 }
 
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hZrqtRMVribgbPQO?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-![Customizing Funnel Size in Blazor Funnel Chart](../images/funnel/blazor-funnel-chart-size-customization.png)
 
 N> The [Blazor Funnel Chart](https://blazor.syncfusion.com/demos/chart/funnel) example can be explored to learn to render and configure the funnel chart.
 
@@ -126,8 +125,8 @@ The neck size of the funnel chart can be customized by using the [NeckWidth](htt
 }
 
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BNhqjxirriuBmrxu?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-![Customizing Funnel Neck Size in Blazor Funnel Chart](../images/funnel/blazor-funnel-chart-neck-size.png)
 
 ## Gap between funnel segments
 
@@ -166,8 +165,8 @@ The neck size of the funnel chart can be customized by using the [NeckWidth](htt
 }
 
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/htrgtxCrrKojytNQ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-![Blazor Funnel Chart with Gap](../images/funnel/blazor-funnel-chart-with-gap.png)
 
 ## Funnel explode
 
@@ -206,8 +205,8 @@ Points can be exploded on mouse click by setting the [Explode](https://help.sync
 }
 
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LjhAZnWLrLKRCdLr?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-![Explode in Blazor Funnel Chart](../images/funnel/blazor-funnel-chart-explode.png)
 
 ## Smart Data Label
 
@@ -259,8 +258,7 @@ Labels will be arranged automatically on the left side of the funnel and pyramid
 }
 
 ```
-
-![Blazor Funnel Chart with Smart Data Label](../images/funnel/blazor-funnel-chart-smart-data-label.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hNBgtRCrhrJTXLOp?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 N> Refer to the [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore the [Blazor Accumulation Chart Example](https://blazor.syncfusion.com/demos/chart/funnel?theme=bootstrap4) to know various features of accumulation charts and how it is used to represent numeric proportional data.
 

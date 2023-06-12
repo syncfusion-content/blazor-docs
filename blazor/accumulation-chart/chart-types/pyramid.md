@@ -44,9 +44,8 @@ The [Pyramid Chart](https://www.syncfusion.com/blazor-components/blazor-charts/c
 }
 
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BXrqjRChhCNOgCgq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-
-![Blazor Pyramid Chart](../images/pyramid/blazor-pyramid-chart.png)
 
 ## Pyramid mode
 
@@ -85,8 +84,8 @@ The Pyramid Chart can be rendered in both `Linear` or `Surface` modes by setting
 }
 
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hNrqjxMBrsrtRCbG?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-![Blazor Pyramid Chart with Surface Mode](../images/pyramid/blazor-pyramid-chart-with-surface-mode.png)
 
 ## Pyramid size
 
@@ -125,8 +124,8 @@ The size of the pyramid chart can be customized by using the [Width](https://hel
 }
 
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/htBqjnsVBWBkMeKW?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-![Customizing Pyramid Size in Blazor Pyramid Chart](../images/pyramid/blazor-pyramid-chart-size.png)
 
 ## Gap between pyramid segments
 
@@ -165,8 +164,8 @@ The [Pyramid Chart](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Char
 }
 
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/htBqjnsVBWBkMeKW?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-![Blazor Pyramid Chart with Gap](../images/pyramid/blazor-pyramid-chart-with-gap.png)
 
 ## Pyramid explode
 
@@ -205,8 +204,7 @@ By setting the [Explode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
 }
 
 ```
-
-![Explode in Blazor Pyramid Chart](../images/pyramid/blazor-pyramid-chart-explode.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VtBgXRMVVizPZNBf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 N> Refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor Accumulation Chart Example](https://blazor.syncfusion.com/demos/chart/pyramid?theme=bootstrap4) to know various features of accumulation charts and how it is used to represent numeric proportional data.
 

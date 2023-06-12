@@ -58,7 +58,7 @@ The `PrintAsync` method can be used to print a rendered chart directly from the 
 
 ```
 
-![Printing in Blazor Accumulation Chart](images/print/blazor-accumulation-chart-printing.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rjrqZxCrgfrAKsmn?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Export
 
@@ -113,6 +113,8 @@ The optional parameters for this method are,
 }
 
 ```
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LjVKXRMrgzxEpzGw?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 N> Refer to the [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore the [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/pie?theme=bootstrap4) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
 
