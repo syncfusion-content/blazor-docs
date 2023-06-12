@@ -660,7 +660,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ### Tooltip with constraints
 
-* To enable the tooltip for symbols in symbol palette by enable the tooltip constraints for node and connector. The tooltip can be customized for each node and connector in the symbol palette.
+* To enable the tooltip for symbols in the symbol palette, enable the tooltip constraints for node and connector. The tooltip can be customized for each node and connector in the symbol palette.
 
 * Enabling the constraints also preserves the tooltip in the diagram and symbol palette.
 
@@ -729,7 +729,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## How to provide different tooltip for Symbol palette and diagram elements.
 
-* To display a different tooltip for symbols in the symbol palette when the symbol has been dropped into the diagram using the DragDrop Event. The [DragDrop](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_DragDrop) event is triggered when a symbol is dragged and dropped from the symbol palette to the drawing area. We can able to customize the tooltip in DragDrop event.
+* To provide different tooltip for symbols in the symbol palette and the diagram, the DragDrop event can be utilized. The [DragDrop](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_DragDrop) event is triggered when a symbol is dragged and dropped from the symbol palette to the drawing area. We can able to customize the tooltip in DragDrop event.
 
 ```csharp
 @using Syncfusion.Blazor.Diagram
