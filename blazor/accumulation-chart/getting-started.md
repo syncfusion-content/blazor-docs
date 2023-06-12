@@ -300,8 +300,6 @@ N> Syncfusion recommends to reference scripts using [Static Web Assets](https://
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VjhUtdZuVUYtFTBL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-![Blazor Pie Chart](images/getting-started/blazor-pie-chart.png)
-
 ## Add title
 
 Using the [Title](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfAccumulationChart.html#Syncfusion_Blazor_Charts_SfAccumulationChart_Title) property, a title to the accumulation chart is added to provide the user with quick information about the data plotted in the chart.

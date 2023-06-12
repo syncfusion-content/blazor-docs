@@ -130,8 +130,10 @@ Refer script in the `<head>` of the **~/index.html** file.
 {% highlight html tabtitle="~/index.html" hl_lines="3" %}
 
 <head>
+    <!-- Syncfusion Blazor SfPdfViewer controls theme style sheet -->
     <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
-    <script src="_content/Syncfusion.Blazor.PdfViewer/scripts/syncfusion-blazor-sfpdfviewer.min.js" type="text/javascript"></script>
+    <!-- Syncfusion Blazor SfPdfViewer controls scripts -->
+    <script src="_content/Syncfusion.Blazor.SfPdfViewer/scripts/syncfusion-blazor-sfpdfviewer.min.js" type="text/javascript"></script>
 </head>
 
 {% endhighlight %}

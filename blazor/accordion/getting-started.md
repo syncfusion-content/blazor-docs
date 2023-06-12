@@ -298,7 +298,6 @@ The following code explains how to initialize accordion using `Template`.
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VNrUtHZkBMYKQVce?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-
 ## See Also
 
 1. [Getting Started with Syncfusion Blazor for client-side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-dotnet-cli)
