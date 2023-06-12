@@ -33,7 +33,10 @@ This property enables to expand only one Accordion item at a time. If any new it
 ```
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hDhKtxjkBLKcWlBj?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+<<<<<<< HEAD
 
+=======
+>>>>>>> fa158840c61fe72c8e5564858ea91bebfb95b6c0
 
 ## Multiple
 
@@ -58,7 +61,6 @@ The default [ExpandMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
 ```
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LXhUZnXuBrTcUMdH?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
 
 ## Expanding the items
 

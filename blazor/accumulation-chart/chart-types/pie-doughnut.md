@@ -49,6 +49,8 @@ The [Pie Chart](https://www.syncfusion.com/blazor-components/blazor-charts/chart
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VZhKXHNkhJbuBqwf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
+![Blazor Pie Chart](../images/pie-dough-nut/blazor-pie-chart.png)
+
 ## Radius customization
 
 The radius of the pie series will be set to 80% of its size (minimum of chart width and height) by default. The [Radius](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartSeries.html#Syncfusion_Blazor_Charts_AccumulationChartSeries_Radius) property of the series can be used to customize the radius of the pie chart.
