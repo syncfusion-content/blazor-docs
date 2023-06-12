@@ -486,9 +486,9 @@ The following sample code demonstrates the different **RequestType** parameters 
 
 ## Perform CRUD operation for complex object using EditTemplate
 
-Before performing CRUD operations with complex Objects, it is recommended to go through the [Complex DataBinding](https://blazor.syncfusion.com/documentation/datagrid/columns/#complex-data-binding) documentation.
+Before performing CRUD operations with complex Objects, it is recommended to go through the [Complex DataBinding](https://blazor.syncfusion.com/documentation/datagrid/columns#complex-data-binding) documentation.
 
-To customize the default Grid EditForm TextBox component, we will use [EditTemplate](https://blazor.syncfusion.com/documentation/datagrid/editing/#cell-edit-template) to customize the Grid EditForm.
+To customize the default Grid EditForm TextBox component, we will use [EditTemplate](https://blazor.syncfusion.com/documentation/datagrid/editing#cell-edit-template) to customize the Grid EditForm.
 
 You can edit the complex objects using EditTemplate inside the GridColumn component by defining two-way (**@bind-Value**) binding to reflect the changes in DataGrid.
 
