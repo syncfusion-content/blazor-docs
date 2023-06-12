@@ -380,8 +380,6 @@ When space constraints prevent from displaying the information using data labels
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "" %}
-
 ![Blazor Accumulation Chart displays Tooltip](images/getting-started/blazor-accumulation-chart-tooltip.png)
 
 ## Enable Legend
