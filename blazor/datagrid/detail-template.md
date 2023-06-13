@@ -421,7 +421,7 @@ The following code demonstrates how to invoke the [ExpandCollapseDetailRowAsync]
 
 ```
 
-N> For both collapsing and expand, same method is used. if record is in expanded state, calling this method will collpase viceversa.
+N> For both collapsing and expanding, same method is used. If a record is in an expanded state, calling this method will collapse it, and vice versa.
 
 In the above code, the **Expand** method is defined to expand or collapse the detail row of a specific employee when the "Expand/Collapse" button is clicked.
 
