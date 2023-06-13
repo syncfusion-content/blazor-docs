@@ -215,10 +215,9 @@ The following screenshots represent a datagrid with Built-in and custom items in
 
 Custom components can be rendered along with built-in toolbar items of DataGrid component. This can be achieved by defining the custom toolbar item with Template (Render Fragment) item.
 
-In the following example, we will demonstrate how to use built-in toolbar items like Add, Edit, Delete, Update, and Cancel, along with a custom toolbar item that uses a template.
+Following code example demonstrate how to use built-in toolbar items like Add, Edit, Delete, Update, and Cancel, along with a custom toolbar item that uses a template.
 
 Index.Razor 
-
 ```csharp
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Inputs
