@@ -1351,11 +1351,13 @@ In the following demo, the [DrawString](https://help.syncfusion.com/cr/file-form
 
 ### Export image in PDF footer content
 
-Image can be inserted in the footer of exported PDF document using [Footer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportProperties.html#Syncfusion_Blazor_Grids_PdfExportProperties_Footer) properties of the [PdfExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportProperties.html) class.
+To insert an image in the footer of an exported PDF document using Grid, you can utilize the [Footer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportProperties.html#Syncfusion_Blazor_Grids_PdfExportProperties_Footer) property of the [PdfExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportProperties.html) class. The Footer property allows you to specify the content to be displayed in the footer section of the PDF.   
 
-The [base64](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfHeaderFooterContent.html#Syncfusion_Blazor_Grids_PdfHeaderFooterContent_Src) string and content [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfHeaderFooterContent.html#Syncfusion_Blazor_Grids_PdfHeaderFooterContent_Type) for image content should be defined inside the [PDFHeaderFooterContent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfHeaderFooterContent.html).
+The [Src](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfHeaderFooterContent.html#Syncfusion_Blazor_Grids_PdfHeaderFooterContent_Src) property of the [PdfHeaderFooterContent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfHeaderFooterContent.html) class is used to specify the base64 string representing the image content for the header or footer.
 
-The following sample code demonstrates adding image in the Footer section of the exported document,
+The [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfHeaderFooterContent.html#Syncfusion_Blazor_Grids_PdfHeaderFooterContent_Type) property of the `PdfHeaderFooterContent` class is used to specify the content type of the image. It can be set to "Image" for image content.
+
+The following sample code demonstrates adding image in the footer section of the exported document,
 
 ```cshtml
 
