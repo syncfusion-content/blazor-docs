@@ -250,9 +250,9 @@ In the following sample, the `SfDropDownList` component is rendered in the [Filt
 
 > You can find the fully working sample [here](https://github.com/SyncfusionExamples/blazor-datagrid-filtering-enum-column).
 
-## Filter Multiple Values using FilterByColumnAsync
+## Filter multiple values using method
 
-To apply a filter to a column with multiple values, the [FilterByColumnAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_FilterByColumnAsync_System_String_System_String_System_Object_System_String_System_Nullable_System_Boolean__System_Nullable_System_Boolean__System_Object_System_Object_) method can be used along with an external button. Multiple values can be assigned as a list to FilterByColumnAsync to perform filtering actions in GridColumn.
+To apply a filter to a column with multiple values in the Grid, you can utilize the [FilterByColumnAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_FilterByColumnAsync_System_String_System_String_System_Object_System_String_System_Nullable_System_Boolean__System_Nullable_System_Boolean__System_Object_System_Object_) method. This method allows you to pass a list of multiple values as an argument to the `FilterByColumnAsync` method to perform filtering actions on a specific `GridColumn`.
 
 In the following example, this is demonstrated by filtering the CustomerID column using the "Contains" operator with multiple values.
 
@@ -304,7 +304,7 @@ In the following example, this is demonstrated by filtering the CustomerID colum
 }
 ```
 
-The following screenshot shows Multiple filtering values using FilterBycolumnAsync,
+The following screenshot shows filter multiple values using FilterBycolumnAsync method,
 ![Filter Multiple Values using FilterByColumnAsync in Blazor DataGrid](./images/blazor-datagrid-filter-multiplevalues.gif)
 
 
