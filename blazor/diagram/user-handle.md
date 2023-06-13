@@ -426,9 +426,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ### How to provide a template to userhandle
 
-The template will only be rendered if both the PathData and Source properties of the userhandle are null. However, if either PathData or Source is defined, the template will not be rendered as they take precedence.
-
-* You can define user handle style using template in [UserHandleTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramTemplates.html#Syncfusion_Blazor_Diagram_DiagramTemplates_UserHandleTemplate) at tag level. The following code explains how to define template for fixeduserhandle.
+You can define user handle style using template in [UserHandleTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramTemplates.html#Syncfusion_Blazor_Diagram_DiagramTemplates_UserHandleTemplate) at tag level. The template will be rendered when the PathData and Source properties of the userhandle are not defined. However, if either PathData or Source is defined, then template will not be rendered as they take precedence. The following code explains how to define template for fixeduserhandle.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
