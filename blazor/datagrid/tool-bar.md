@@ -224,7 +224,6 @@ Index.Razor
 @using Syncfusion.Blazor.Inputs
 
 <SfGrid @ref="Grid" TValue="Order" DataSource="@Orders" AllowPaging="true" AllowExcelExport="true" AllowPdfExport="true" ShowColumnChooser="true" Toolbar="Toolbaritems">
-    <GridEvents OnToolbarClick="ToolbarClickHandler" TValue="Order"></GridEvents>
     <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true" Mode="EditMode.Normal"></GridEditSettings>
     <GridColumns>
         <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" IsPrimaryKey="true" ValidationRules="new ValidationRules() { Required = true }" Width="120"></GridColumn>
@@ -273,10 +272,6 @@ Index.Razor
         }
     }
 
-    public void ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
-    {
-      
-    }
     public RenderFragment title
     {
         get
