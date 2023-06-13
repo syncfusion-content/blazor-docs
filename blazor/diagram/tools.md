@@ -378,3 +378,63 @@ The following code illustrates how to enable multiple interaction controllers,
 ```
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/DrawingTools)
+
+## Freehand Drawing
+
+Diagram has support for free-hand drawing to draw anything on the diagram page independently. Free-hand drawing will be enabled by using the DrawingObject property and setting its value to Freehand type of connector.
+
+The following code illustrates how to draw a freehand drawing.
+
+```cshtml
+@using Syncfusion.Blazor.Diagram
+<input Type="button" value="Freehand" @onclick="Freehand" />
+<SfDiagramComponent @ref="diagram" Nodes="@nodes" Height="600px">
+    <SnapSettings Constraints="SnapConstraints.None"></SnapSettings>
+</SfDiagramComponent>
+@code
+{
+    //Reference to the diagram.
+    SfDiagramComponent diagram;
+    //Define the diagram's nodes collection.
+    public DiagramObjectCollection<Node> nodes;
+    protected override void OnInitialized()
+    {
+        nodes = new DiagramObjectCollection<Node>();
+        Node node = new Node()
+        {
+            ID = "group",
+            OffsetX = 200,
+            OffsetY = 200,
+            Width = 100,
+            Height = 100,
+            Annotations = new DiagramObjectCollection<ShapeAnnotation>()
+            {
+                new ShapeAnnotation()
+                {
+                    Content = "Node",
+                    Style = new TextStyle()
+                    {
+                        Color = "white",
+                    }
+                }
+            },
+            Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "white" }
+        };
+        nodes.Add(node);
+    }
+    private void Freehand()
+    {
+        //Draw an object once and activate the draw once.
+        diagram.InteractionController = DiagramInteractions.DrawOnce;
+        //Initialize the drawing object to draw the freehand connector.
+        diagram.DrawingObject = new Connector()
+        {
+            ID = "connector1",
+            Type = ConnectorSegmentType.Freehand,            
+        };
+    }
+}
+```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/DrawingTools).
+
+![Freehand Drawing Tool in Blazor Diagram](images/blazor-diagram-freehand-drawing-tool.gif)
