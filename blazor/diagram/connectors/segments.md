@@ -266,7 +266,9 @@ By default, when there are no segments defined for a bezier connector, the bezie
 <SfDiagramComponent Width="1000px" Height="500px" Nodes="@nodes" Connectors="@connectors"></SfDiagramComponent>
 
 @code {
+    //Defines diagram's connector collection.
     DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+    //Defines diagram's node collection.
     DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
 
     protected override void OnInitialized()
@@ -306,7 +308,6 @@ By default, when there are no segments defined for a bezier connector, the bezie
                     },
                 }
             });
-
         Connector connector1 = new Connector()
             {
                 ID = "connector1",
@@ -344,7 +345,9 @@ While interacting with multiple bezier segments, maintain their control points a
 <SfDiagramComponent Width="1000px" Height="500px" Nodes="@nodes" Connectors="@connectors"></SfDiagramComponent>
 
 @code {
+    //Defines diagram's connector collection.
     DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+    //Defines diagram's node collection.
     DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
 
     protected override void OnInitialized()
@@ -384,7 +387,6 @@ While interacting with multiple bezier segments, maintain their control points a
                     },
                 }
             });
-
         Connector connector1 = new Connector()
             {
                 ID = "connector1",
