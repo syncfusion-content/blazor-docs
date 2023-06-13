@@ -1338,7 +1338,7 @@ The [Region](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Dia
 
 ![Region](./images/Region.gif)
 
-### CanZoomIn 
+#### CanZoomIn 
 
 The [CanZoomIn] property enables/disables zooming to fit the smaller content into a larger viewport.
 
