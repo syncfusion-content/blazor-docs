@@ -20,9 +20,9 @@ To have a quick glance on how to sort data in the Blazor Pivot Table, watch this
 
 Allows to order field members in rows and columns either in ascending or descending order. By default, field members in rows and columns are in ascending order.
 
-Member sorting can be enabled by setting the [EnableSorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.DataSourceSettingsModel-1.html#Syncfusion_Blazor_PivotView_DataSourceSettingsModel_1_EnableSorting) property in [PivotViewDataSourceSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html) class to **true**. After enabling this API, click the sort icon besides each field in row or column axis, available in the field list or grouping bar UI for re-arranging members either in ascending or descending order.
+Member sorting can be enabled by setting the [EnableSorting](https://help.syncfusion.com/cr/blazor#Syncfusion_Blazor_PivotView_DataSourceSettingsModel_1_EnableSorting/Syncfusion.Blazor.html) property in [PivotViewDataSourceSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html) class to **true**. After enabling this API, click the sort icon besides each field in row or column axis, available in the field list or grouping bar UI for re-arranging members either in ascending or descending order.
 
-N> By default the [EnableSorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.DataSourceSettingsModel-1.html#Syncfusion_Blazor_PivotView_DataSourceSettingsModel_1_EnableSorting) property in [PivotViewDataSourceSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html) class set as **true**. If it is set as **false**, then the field members arrange in pivot table as its data source order. And, the sort icons in grouping bar and field list buttons will be removed.
+N> By default the [EnableSorting](https://help.syncfusion.com/cr/blazor#Syncfusion_Blazor_PivotView_DataSourceSettingsModel_1_EnableSorting/Syncfusion.Blazor.html) property in [PivotViewDataSourceSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html) class set as **true**. If it is set as **false**, then the field members arrange in pivot table as its data source order. And, the sort icons in grouping bar and field list buttons will be removed.
 
 ![Sorting in Blazor PivotTable Field List](images/blazor-pivottable-sorting-in-field-list.png)
 <br/>
@@ -358,4 +358,4 @@ The event [OnActionFailure](https://help.syncfusion.com/cr/blazor/Syncfusion.Bla
 }
 ```
 
-N> You can refer to the [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) feature tour page for its groundbreaking feature representations. You can also explore the [Blazor Pivot Table example](https://blazor.syncfusion.com/demos/pivot-table/default-functionalities?theme=bootstrap4) to know how to render and configure the pivot table.
+N> You can refer to the [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) feature tour page for its groundbreaking feature representations. You can also explore the [Blazor Pivot Table example](https://blazor.syncfusion.com/demos/pivot-table/default-functionalities?theme=bootstrap5) to know how to render and configure the pivot table.
