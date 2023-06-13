@@ -19,7 +19,7 @@ This article provides a step-by-step instructions for building Blazor WebAssembl
 
 You can create **Blazor WebAssembly App** using Visual Studio in one of the following ways,
 
-* [Create a Project using Microsoft Templates](https://docs.microsoft.com/en-us/aspnet/core/blazor/tooling?pivots=windows)
+* [Create a Project using Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?pivots=windows&view=aspnetcore-7.0)
 
 * [Create a Project using Syncfusion Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project)
 
@@ -177,4 +177,4 @@ N> Syncfusion recommends to reference scripts using [Static Web Assets](https://
 
 ![Blazor Scheduler with Appointments](../images/blazor-scheduler-appointments.png)
 
-N> Refer to our [Blazor Scheduler](https://www.syncfusion.com/blazor-components/blazor-scheduler/) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Scheduler example](https://blazor.syncfusion.com/demos/scheduler/overview?theme=bootstrap4/) to understand how to manage appointments with multiple resources.
+N> Refer to our [Blazor Scheduler](https://www.syncfusion.com/blazor-components/blazor-scheduler) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Scheduler example](https://blazor.syncfusion.com/demos/scheduler/overview) to understand how to manage appointments with multiple resources.
