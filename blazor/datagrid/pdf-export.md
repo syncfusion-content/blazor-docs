@@ -1357,8 +1357,6 @@ The [base64](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfHe
 
 The following sample code demonstrates adding image in the Footer section of the exported document,
 
-
-
 ```cshtml
 
 @using Syncfusion.Blazor.Grids
