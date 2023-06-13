@@ -1351,9 +1351,9 @@ In the following demo, the [DrawString](https://help.syncfusion.com/cr/file-form
 
 ### Export image in PDF footer content
 
-You can render image in the Header or Footer of exported PDF document using [Header](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportProperties.html#Syncfusion_Blazor_Grids_PdfExportProperties_Header) and [Footer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportProperties.html#Syncfusion_Blazor_Grids_PdfExportProperties_Footer) properties of the [PdfExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportProperties.html) class.
+Image can be inserted in the footer of exported PDF document using [Footer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportProperties.html#Syncfusion_Blazor_Grids_PdfExportProperties_Footer) properties of the [PdfExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportProperties.html) class.
 
-We need to define the [base64](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfHeaderFooterContent.html#Syncfusion_Blazor_Grids_PdfHeaderFooterContent_Src) string and content [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfHeaderFooterContent.html#Syncfusion_Blazor_Grids_PdfHeaderFooterContent_Type) for image content inside the [PDFHeaderFooterContent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfHeaderFooterContent.html).
+The [base64](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfHeaderFooterContent.html#Syncfusion_Blazor_Grids_PdfHeaderFooterContent_Src) string and content [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfHeaderFooterContent.html#Syncfusion_Blazor_Grids_PdfHeaderFooterContent_Type) for image content should be defined inside the [PDFHeaderFooterContent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfHeaderFooterContent.html).
 
 The following sample code demonstrates adding image in the Footer section of the exported document,
 
@@ -1428,6 +1428,9 @@ The following sample code demonstrates adding image in the Footer section of the
 }
 
 ```
+The following image represents DataGrid with image exported in the PDF footer content,
+
+![PDF Exported Grid Cell Customization in Blazor DataGrid](./images/blazor-datagrid-pdf-export-image-in-footer.png)
 
 <!-- Show or hide columns on exported pdf
 
