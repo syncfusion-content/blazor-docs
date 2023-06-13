@@ -200,10 +200,13 @@ N> If you use individual component styles, you should install the styles of thei
   }
 ]
 
+{% endhighlight %}
+{% endtabs %}
+
 * The `SCSS` file has been compiled to the `CSS` file. Then, add the compiled CSS file to the `<head>` element of the Host page.
 
 {% tabs %}
-{% highlight c# tabtitle="~/_Layout.cshtml" %}
+{% highlight c# tabtitle="~/_Host.cshtml" %}
 
 <head>
     ...
@@ -211,8 +214,6 @@ N> If you use individual component styles, you should install the styles of thei
     <link href="~/themes/syncfusion/blazor-themes/scss-themes/bootstrap5.css" rel="stylesheet" />
 </head>
 
-{% endhighlight %}
-{% endtabs %}
 {% endhighlight %}
 {% endtabs %}
 
