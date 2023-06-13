@@ -330,11 +330,11 @@ By default, detail rows render in collapsed state. You can expand a detail row b
 N> * You can expand all the rows by using `ExpandAll` method.
 <br/> * If you want to expand all the rows at initial DataGrid rendering, then use `ExpandAll` method in [dataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event of the DataGrid.
 
-## Expand or collapse specific record in a Details Template Grid
+## Expand or collapse specific detail template row
 
-Specific record in details template can be expanded or collapsed suing the ExpandCollapseDetailRowAsync method of Grid.By utilizing the reference to the DataGrid component defined during component initialization, you can expand or collapse the detail template for specific row data. 
+To expand or collapse a specific row of a detail template in the Syncfusion Grid, you can use the [ExpandCollapseDetailRowAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExpandCollapseDetailRowAsync__0_) method. This method allows you to programmatically expand or collapse the detail template for a specific row of data by passing the data object representing that row.
 
-The following code demonstrates how to invoke the [ExpandCollapseDetailRowAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExpandCollapseDetailRowAsync__0_) method of the DataGrid component when a button is clicked, using the DataGrid reference.
+The following code demonstrates how to expand the first row using `ExpandCollapseDetailRowAsync` method of the DataGrid component when a button is clicked, using the DataGrid reference.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
