@@ -421,6 +421,8 @@ The following code demonstrates how to invoke the [ExpandCollapseDetailRowAsync]
 
 ```
 
+N> For both collapsing and expand, same method is used. if record is in expanded state, calling this method will collpase viceversa.
+
 In the above code, the **Expand** method is defined to expand or collapse the detail row of a specific employee when the "Expand/Collapse" button is clicked.
 
 ![Expand or collapse specific record in a Details Template Grid](.\images\blazor-datagrid-detail-template-expandcollapse.gif)
