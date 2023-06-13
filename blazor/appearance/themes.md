@@ -190,24 +190,32 @@ N> If you use individual component styles, you should install the styles of thei
 
 * The `compilerconfig.json` file is created by default as shown in the following code snippet.
 
-```json
+{% tabs %}
+{% highlight c# tabtitle="compilerconfig.json" %}
+
 [
   {
     "outputFile": "wwwroot/themes/syncfusion/blazor-themes/SCSS-Themes/bootstrap5.css",
     "inputFile": "wwwroot/themes/syncfusion/blazor-themes/SCSS-Themes/bootstrap5.scss"
   }
 ]
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 * The `SCSS` file has been compiled to the `CSS` file. Then, add the compiled CSS file to the `<head>` element of the Host page.
 
-```html
+{% tabs %}
+{% highlight c# tabtitle="~/_Host.cshtml" %}
+
 <head>
     ...
     <!-- Syncfusion Blazor components' styles -->
     <link href="~/themes/syncfusion/blazor-themes/scss-themes/bootstrap5.css" rel="stylesheet" />
 </head>
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 8.Run the application and see the bootstrap5 themes downloaded from LibMan were applied.
 
