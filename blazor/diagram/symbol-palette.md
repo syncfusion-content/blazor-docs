@@ -660,7 +660,7 @@ By default, the symbol's ID will be displayed as the tooltip for each symbol in 
 
 ### Custom tooltip for symbols
 
-You can provide custom tooltip for symbols in the symbol palette by assigning custom tooltip to Tooltip propety of nodes and connectors. Once custom tooltip is defined then enable the custom tooltip for symbols in the symbol palette by setting the Tooltip constraints for node and connector. This allows the custom tooltips to be displayed when hovering over symbols in the symbol palette.
+You can provide custom tooltip for symbols in the symbol palette by assigning custom tooltip to Tooltip property of nodes and connectors. Once custom tooltip is defined then enable the custom tooltip for symbols in the symbol palette by setting the Tooltip constraints for node and connector. This allows the custom tooltips to be displayed when hovering over symbols in the symbol palette.
 
 The following code example illustrates how to provide the custom tooltip for nodes.
 
