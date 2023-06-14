@@ -35,7 +35,7 @@ If you have your PDF files in the web, you can open it in the viewer using URL.
 }
 
 ```
-N> [View sample in GitHub]()
+N> [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Load%20and%20Save/Load%20PDF%20file%20from%20URL-SfPdfViewer)
 
 ## Opening a PDF from Cloud
 
@@ -135,7 +135,7 @@ The following code snippet explains how the PDF file can be loaded in SfPdfViewe
 
 ```
 
-N> [View sample in GitHub]()
+N> [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Load%20and%20Save/Load%20a%20PDF%20file%20from%20base%2064%20string-SfPdfViewer)
 
 ## Opening a PDF from stream
 
@@ -168,4 +168,4 @@ You can load a PDF file from stream in SfPdfViewer by converting the stream into
 
 ```
 
-N> [View sample in GitHub]()
+N> [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Load%20and%20Save/Load%20a%20PDF%20file%20from%20memory%20stream-SfPdfViewer)

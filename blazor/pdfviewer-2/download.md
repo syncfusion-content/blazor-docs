@@ -69,4 +69,4 @@ The following code example shows how to set default filename to the downloaded f
 }
 
 ```
-N> [View sample in GitHub]().
+N> [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Load%20and%20Save/Modify%20the%20file%20name-SfPdfViewer).
