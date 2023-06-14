@@ -179,7 +179,7 @@ The following code illustrates how to open thumbnail panel programmatically.
 
 ```
 
-N> [View sample in GitHub]().
+N> [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Thumbnail/Show%20thumbnail%20panel%20-%20SfPdfViewer).
 
 ## Hyperlink navigation
 

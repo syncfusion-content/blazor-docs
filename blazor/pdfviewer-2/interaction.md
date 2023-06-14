@@ -90,4 +90,4 @@ The following code illustrates how to disable the annotation interaction.
 
 ```
 
-N> [View sample in GitHub]()
+N> [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Annotations/FAQs/Lock_annotations%20-%20SfPdfViewer)
