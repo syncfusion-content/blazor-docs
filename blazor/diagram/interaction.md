@@ -60,7 +60,7 @@ An element can be selected by clicking that element. During single click, all pr
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Interaction)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Interaction/DiagramSelectionEvent)
 
 ## Selecting a group
 
@@ -95,7 +95,10 @@ Clone is a virtual method of the node that is used to create a copy of a diagram
 @using Syncfusion.Blazor.Diagram
 @using System.Collections.ObjectModel
 @inject IJSRuntime js
-<input type="button" id="add" value="Clone" @onclick="@Clone" />
+@using Syncfusion.Blazor.Buttons
+
+
+<SfButton Content="Clone" OnClick="@Clone" />
 <SfDiagramComponent @ref="diagram" Width="50%" Height="800px" @bind-Connectors="@Connectors" @bind-Nodes="NodeCollection"></SfDiagramComponent>
 @functions
 {
@@ -289,7 +292,7 @@ Clone is a virtual method of the node that is used to create a copy of a diagram
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Interaction)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Interaction/CloneSelectedItems)
 ![Grouping in Blazor Diagram](images/CloneSelection.gif)
 ## Drag
 
@@ -336,7 +339,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Interaction)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Interaction/DiagramPositionEvent)
 For more information about dragging, refer [Node Drag](https://blazor.syncfusion.com/documentation/diagram/nodes/interaction/#drag)
 
 ## Resize
@@ -386,7 +389,7 @@ For more information about dragging, refer [Node Drag](https://blazor.syncfusion
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Interaction)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Interaction/DiagramSizeEvent)
 
 For more information about resizing, refer [Node Resize](https://blazor.syncfusion.com/documentation/diagram/nodes/interaction/#resize)
 
@@ -440,7 +443,7 @@ N> While dragging and resizing, the objects are snapped towards the nearest obje
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Interaction)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Interaction/DiagramRotateEvent)
 
 For more information about resizing, refer [Node Rotate](https://blazor.syncfusion.com/documentation/diagram/nodes/interaction/#rotate)
 
@@ -534,7 +537,7 @@ For more information, refer [End Point Dragging](https://blazor.syncfusion.com/d
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Interaction)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Interaction/DiagramConnectionEvent)
 
 ## Straight segment editing
 
@@ -616,7 +619,7 @@ For more information about straight segment editing, refer [Straight Segment Edi
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Interaction)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Interaction/SegmentEditing)
 
 For more information about orthogonal segment editing, refer [Orthogonal Segment Editing](https://blazor.syncfusion.com/documentation/diagram/connectors/interactions/#orthogonal-segment-editing).
 
@@ -688,7 +691,7 @@ The diagram component notifies the mouse button clicked. For example, whenever t
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Interaction)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Interaction/MouseClick)
 
 ## Appearance of the user handle
 

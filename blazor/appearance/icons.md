@@ -221,4 +221,3 @@ The complete pack of Syncfusion Blazor icons is listed in the following table. T
 ### Fluent
 
 <iframe class="doc-sample-frame" src="https://ej2.syncfusion.com/products/icons/fluent/demo.html" style="height:1000px;width:100%;"></iframe>
-

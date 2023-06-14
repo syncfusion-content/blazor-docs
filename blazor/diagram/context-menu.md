@@ -25,7 +25,7 @@ The [Show](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Conte
     </ContextMenuSettings>
 </SfDiagramComponent>
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/ContextMenu)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/ContextMenu/DefaultContextMenu)
 ![Default Context Menu](images/ContextMenuDefault.gif)
 
 The following code shows how to disable the default context menu items.
@@ -148,7 +148,7 @@ The following code example shows how to add custom context menu items along with
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/ContextMenu)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/ContextMenu/CustomContextMenu)
 
 ### How to show custom context menu alone
 
@@ -164,7 +164,7 @@ The following code example shows how to show custom context menu items alone.
     </ContextMenuSettings>
 </SfDiagramComponent>
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/ContextMenu)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/ContextMenu/CustomContextMenuOnly)
 ![Custom Context Menu](images/ContextMenuCustomMenuOnly.gif)
 
 ## How to customize context menu items using template
@@ -217,7 +217,7 @@ Diagram provides template support for context menu. The context menu items can b
     }
 </style>
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/ContextMenu)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/ContextMenu/ContextMenuTemplate)
 ![Context Menu Template](images/ContextMenuTemplate.gif)
 
 ## Events
@@ -245,7 +245,7 @@ The Diagram control triggers the event [ContextMenuOpening](https://help.syncfus
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/ContextMenu/ContextMenuEvent)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/ContextMenu/ContextMenuEvent/ContextMenuOpenningEvent)
 
 ### ContextMenuItemClicked
 
@@ -268,7 +268,7 @@ The Diagram control triggers the event [ContextMenuItemClicked](https://help.syn
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/ContextMenu/ContextMenuEvent)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/ContextMenu/ContextMenuEvent/ContextMenuItemClickedEvent)
 The following code example shows how to add separate custom context menu items for nodes and connectors. In the following code, the node color context menu item only renders for the node and the connector color context menu item only renders for the connector.
 
 ```cshtml
@@ -378,4 +378,4 @@ The following code example shows how to add separate custom context menu items f
 }
 
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/ContextMenu/ContextMenuEvent)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/ContextMenu/ContextMenuEvent/ContextMenuEvents)
