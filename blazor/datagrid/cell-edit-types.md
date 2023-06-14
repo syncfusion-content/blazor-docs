@@ -889,7 +889,9 @@ The **SfMaskedTextBox** component in Syncfusion Blazor provides a masked input c
                 CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
                 Freight = 2.1 * x,
                 OrderDate = DateTime.Now.AddDays(-x),
-                ShipCountry = (new string[] { "USA", "UK", "CHINA", "RUSSIA", "INDIA" })[new Random().Next(5)]
+                ShipCountry = (new string[] { "USA", "UK", "CHINA", "RUSSIA", "INDIA" })[new Random().Next(5)],
+                PhoneNumber = 23333333 
+
             }).ToList();
     }
     public class Order
@@ -898,7 +900,7 @@ The **SfMaskedTextBox** component in Syncfusion Blazor provides a masked input c
         public string CustomerID { get; set; }
         public DateTime? OrderDate { get; set; }
         public double? Freight { get; set; }
-        public long PhoneNumber { get; set; }
+        public long PhoneNumber { get; set; } 
         public string ShipCountry { get; set; }
     }
     public List<Country> Countries { get; set; } = new List<Country>()
