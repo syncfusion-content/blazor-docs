@@ -24,7 +24,7 @@ The SfPdfViewer comes with a powerful built-in toolbar with the following import
 * Bookmark panel
 * Thumbnail panel
 
-![Blazor SfPdfViewer with Custom Toolbar](./images/blazor-pdfviewer-custom-toolbar.png)
+![Blazor SfPdfViewer with Custom Toolbar](../pdfviewer/images/blazor-pdfviewer-custom-toolbar.png)
 
 ## Show or hide toolbar
 
