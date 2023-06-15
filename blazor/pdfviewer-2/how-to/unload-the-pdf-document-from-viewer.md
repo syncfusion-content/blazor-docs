@@ -32,4 +32,4 @@ If you want to unload and clear the resources occupied by the PDF file programma
 
 ```
 
-N> [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Annotations/FAQs/Lock_annotations%20-%20SfPdfViewer)
+N> [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Common/Unload%20Pdf%20document%20from%20Viewer%20-%20SfPdfViewer)
