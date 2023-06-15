@@ -298,6 +298,8 @@ N> Syncfusion recommends to reference scripts using [Static Web Assets](https://
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to run the application. Then, the Syncfusion `Blazor DataGrid` component will be rendered in the default web browser.
 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hDLUDdjxJvxjQlaM?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 ![Blazor DataGrid Component](images/blazor-datagrid-component.png)
 
 ## Defining Row Data

@@ -296,7 +296,7 @@ N> Syncfusion recommends to reference scripts using [Static Web Assets](https://
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to run the application. Then, the Syncfusion `Blazor TreeMap` component will be rendered in the default web browser.
 
-![Blazor TreeMap Component](images/blazor-treemap.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDVKtnigLVTLlXhI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Adding labels in TreeMap items
 
@@ -316,7 +316,7 @@ Add label text to the leaf items in the TreeMap component by setting the field n
 
 N> Refer to the [code block](#adding-treemap-component) to know about the property value of the **GrowthReport**.
 
-![Blazor TreeMap with Label](images/blazor-treemap-with-label.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hXBqNHMArhnkEbRB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Adding title to TreeMap
 
@@ -337,7 +337,7 @@ Add a title using the [Text](https://help.syncfusion.com/cr/blazor/Syncfusion.Bl
 
 N> Refer to the [code block](#adding-treemap-component) to know the property value of the **GrowthReport**.
 
-![Blazor TreeMap with Title](images/blazor-treemap-with-title.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rthgZxiKVrajgsUA?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/TreeMap).
 
@@ -366,7 +366,7 @@ The color mapping supports customization of item colors based on the underlying 
 
 N> Refer to the [code block](#adding-treemap-component) to know about the property value of the **GrowthReport**.
 
-![Blazor TreeMap with Color Mapping](images/blazor-treemap-color-mapping.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hNhKDRCgLHcwYftI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Enable legend
 
@@ -394,7 +394,7 @@ Legend items are used to denote the color mapping categories and show the legend
 
 N> Refer to the [code block](#adding-treemap-component) to know about the property value of the **GrowthReport**.
 
-![Blazor TreeMap with Legend](images/blazor-treemap-legend.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hjhKDxiArnYzObhK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Enable tooltip
 
@@ -423,7 +423,7 @@ When space constraints prevents from displaying information using data labels, t
 
 N> Refer to the [code block](#adding-treemap-component) to know about the property value of the **GrowthReport**.
 
-![Blazor TreeMap with Tooltip](images/blazor-treemap-tooltip.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VNrgXxWAVGjgKFNK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 
 N> You can also explore our [Blazor TreeMap example](https://blazor.syncfusion.com/demos/treemap/default-functionalities?theme=bootstrap5) that shows you how to render and configure the treemap.
