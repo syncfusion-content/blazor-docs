@@ -280,7 +280,7 @@ N> Syncfusion recommends to reference scripts using [Static Web Assets](https://
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to run the application. Then, the Syncfusion `Blazor LinearGauge` component will be rendered in the default web browser.
 
-![Blazor LinearGauge Component](images/blazor-linear-gauge-component.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BDVAXdieLcrHJHeW?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Set pointer value
 
@@ -305,7 +305,7 @@ N> In LinearGauge, you can configure multiple axes. On each axis, you can add a 
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor LinearGauge with Pointer Value](images/blazor-linear-gauge-with-pointer.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rNLgjHiIrcUVbgdC?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Add a title for LinearGauge
 
@@ -327,7 +327,7 @@ The title can be added to the linear gauge to provide a piece of quick informati
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor LinearGauge with Title](images/blazor-linear-gauge-with-title.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rthqZdMSLcpZgTgI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Add ranges in the LinearGauge
 
@@ -357,7 +357,7 @@ The range is used to specify a group of scale values in the gauge. You can set t
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor LinearGauge with Range Bar](images/blazor-linear-gauge-with-ranges.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BtVKtxWyrwfwWKGp?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/LinearGauge).
 
