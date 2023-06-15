@@ -279,7 +279,7 @@ N> Syncfusion recommends to reference scripts using [Static Web Assets](https://
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to run the application. Then, the Syncfusion `Blazor DropDown List` component will be rendered in the default web browser.
 
-![Blazor DropDownList Component](./images/blazor-dropdownlist-component.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BNVADnCeqfxtMRlG?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Binding data source
 
@@ -315,7 +315,7 @@ After initialization, populate the DropDownList with data using the [DataSource]
 {% endhighlight %}
 {% endtabs %}
 
-![Data Binding in Blazor DropDownList](./images/blazor-dropdownlist-data-binding.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/htBUXxsegIUjyHQu?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Configure the popup list
 
@@ -351,7 +351,7 @@ By default, the width of the popup list automatically adjusts according to the D
 {% endhighlight %}
 {% endtabs %}
 
-![Changing Popup List Height in Blazor DropDownList](./images/blazor-dropdownlist-popup-height.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BDBKjnMoUSARKDrm?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Get selected value
 
@@ -373,10 +373,11 @@ Get the complete object list of the selected value in the [ValueChange](https://
 
 {% endhighlight %}
 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZBADniSqIyoNqsc?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/DropDownList).
 
-## See Also
+## See also
 
 * [Getting Started with Syncfusion Blazor for Client-Side in .NET Core CLI](../getting-started/blazor-webassembly-dotnet-cli)
 * [Getting Started with Syncfusion Blazor for Server-side in Visual Studio](../getting-started/blazor-server-side-visual-studio)
