@@ -24,7 +24,7 @@ The SfPdfViewer comes with a powerful built-in toolbar with the following import
 * Bookmark panel
 * Thumbnail panel
 
-![Blazor SfPdfViewer with Custom Toolbar](./images/blazor-pdfviewer-custom-toolbar.png)
+![Blazor SfPdfViewer with Custom Toolbar](../pdfviewer/images/blazor-pdfviewer-custom-toolbar.png)
 
 ## Show or hide toolbar
 
@@ -59,13 +59,13 @@ The following code snippet explains how to show or hide toolbar using the ShowTo
 
     public void OnClick(MouseEventArgs args)
     {
-        pdfViewer.ShowToolbar(false);
+        pdfViewer.ShowToolbarAsync(false);
     }
 }
 
 ```
 
-N> [View sample in GitHub]().
+N> [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Toolbar/Custom%20Toolbar/Custom%20Toolbar%20-%20%20SfPdfViewer).
 
 ## Show or hide navigation toolbar
 
@@ -172,7 +172,7 @@ The following code snippet explains how to show or hide annotation toolbar using
 }
 
 ```
-N> [View sample in GitHub]().
+N> [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Toolbar/Annotation%20Toolbar/Show%20or%20hide%20on%20loading%20-%20SfPdfViewer).
 
 ## How to create custom Toolbar with Save option
 
@@ -307,7 +307,7 @@ The following code represnts how to create custom toolbar with save and some cus
 </style>
 
 ```
-N> [View sample in GitHub]().
+N> [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Toolbar/Custom%20Toolbar/Custom%20toolbar%20with%20save%20option%20-%20SfPdfViewer).
 
 The following sample mimics all the options of the SfPdfViewer default toolbar in a custom toolbar along with the save button.
 
@@ -433,6 +433,6 @@ EnableToolbar="false" Height="100%" Width="100%"></SfPdfViewer2>
 
 ```
 
-N> [View sample in GitHub]().
+N> [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Toolbar/Custom%20Toolbar/Custom%20toolbar%20with%20PNG%20image%20-%20SfPdfViewer).
 
 N> This is applicable only for custom toolbar.
