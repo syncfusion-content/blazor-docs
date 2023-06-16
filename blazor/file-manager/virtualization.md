@@ -33,7 +33,7 @@ After successful compilation of your application, simply press `F5` to run the a
 
 
 
-![Virtualization in Blazor FileManager](images/blazor-filemanager-drag-and-drop.gif)
+![Virtualization in Blazor FileManager](images/blazor-filemanager-virtualization.gif)
 
 ## Limitations
 
