@@ -15,13 +15,23 @@ The Data Annotation can be enabled by referencing the **System.ComponentModel.Da
 
 The list of data annotation attributes that are supported in DataGrid component are provided below,
 
-| Attribute Name | Functionality |
-|-------|---------|
-| DisplayFormat | Sets 'DisplayFormat' property for the DataGrid column to be rendered.|
-| DisplayName | Sets the display name for the DataGrid column.|
-| ReadOnly | Sets `AllowEditing` for a particular column |
-| Key | Sets `PrimaryKey` in DataGrid Columns |
-| Validations are,<br><br>1. RequiredAttribute<br>2. StringLengthAttribute<br>3. RangeAttribute<br>4. RegularExpressionAttribute<br>5. MinLengthAttribute<br>6. MaxLengthAttribute<br>7. EmailAddressAttribute<br>8. CompareAttribute<br>| The data annotation validation attributes are used as `validation rules` in the DataGrid CRUD operations|
+| Attribute Name | Properties | Functionality |
+|-------|---------|---------|
+| Display | Name	| Sets `HeaderText` property of the Grid Column
+| Display |	ShortName |	Sets `HeaderText` property of the Grid Column
+| Display |	AutoGenerateField | Prevents the column from being auto generated
+| Display |	AutoGenerateFilter | Set `AllowFiltering` for a particular column
+| Display |	Description | Sets the text to be displayed for the tooltip when hovering over the ellipsis
+| Display |	Order |	Sets the priority order of the Grid Column
+| DisplayFormat | FormatString | Sets the `Format` for the DataGrid column
+| DisplayFormat	| ApplyFormatInEditMode |Sets a value indicating whether the column format should be applied in edit mode
+| DisplayFormat	| NullDisplayText | Sets the text to be displayed when the value of the property is null
+| DisplayFormat	| ConvertEmptyStringToNull | Sets a value indicating whether empty string values should be converted to null in UI
+| DisplayFormat | NeedsHtmlEncode | Sets `DisableHtmlEncode` for a particular column
+| ScaffoldColumnAttribute | Scaffold | Sets `Visible` for a particular column
+| EditableAttribute | ReadOnly | Sets `AllowEditing` for a particular column |
+| Key | Key | Sets `PrimaryKey` in DataGrid Columns |
+| Validations are,<br><br>1. RequiredAttribute<br>2. StringLengthAttribute<br>3. RangeAttribute<br>4. RegularExpressionAttribute<br>5. MinLengthAttribute<br>6. MaxLengthAttribute<br>7. EmailAddressAttribute<br>8. CompareAttribute<br>| | The data annotation validation attributes are used as `validation rules` in the DataGrid CRUD operations|
 
 N> DataGrid Property has more priority than Data Annotation. For Instance, if DisplayName Attribute is set to a Field in DataGrid Model class and also HeaderText is set to the same DataGrid column property, then the value of HeaderText property will be considered and shown in the DataGrid header.
 
@@ -60,21 +70,22 @@ The following sample code demonstrates data annotations implemented in the DataG
         // Sets column as primary key
         [Key]
         // Sets column as required and error message to be displayed when empty
-        [Required(ErrorMessage ="Order ID  should not be empty")]
+        [Required(ErrorMessage = "Order ID  should not be empty")]
         // Sets header text to the column
-        [Display(Name = "Order ID")]
+        [Display(ShortName = "Order ID")]
         public int? OrderID { get; set; }
         [Display(Name = "Customer Name")]
         // Sets column as required and error message to be displayed when empty
         [Required(ErrorMessage = "Field should not be empty")]
-        public string CustomerID { get; set; }
+        [DisplayFormat(NullDisplayText = "Blank", ConvertEmptyStringToNull = true)]
+        public string? CustomerID { get; set; }
         // Sets data type of column as Date
         [DataType(DataType.Date)]
         [Display(Name = "Order Date")]
         // Sets column as read only
         [Editable(false)]
         public DateTime? OrderDate { get; set; }
-        [Display(Name = "Freight")]
+        [Display(Name = "Freight", AutoGenerateFilter = false)]
         public double? Freight { get; set; }
     }
 }
