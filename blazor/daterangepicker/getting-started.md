@@ -276,7 +276,7 @@ N> Syncfusion recommends to reference scripts using [Static Web Assets](https://
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to run the application. Then, the Syncfusion `Blazor DateRangePicker` component will be rendered in the default web browser.
 
-![Blazor DateRangePicker Component](./images/blazor-daterangepicker-component.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VjrgtdCyTgFXYjSg?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Setting the Min and Max
 
@@ -295,11 +295,11 @@ The minimum and maximum date range can be defined with the help of [Min](https:/
 {% endhighlight %}
 {% endtabs %}
 
-![Setting Minimum and Maximum Date in Blazor DateRangePicker](./images/blazor-daterangepicker-min-max-date.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/htBgXHieJpirTHaM?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/DateRangePicker).
 
-## See Also
+## See also
 
 * [Getting Started with Syncfusion Blazor for Client-Side in .NET Core CLI](../getting-started/blazor-webassembly-dotnet-cli)
 * [Getting Started with Syncfusion Blazor for Server-side in Visual Studio](../getting-started/blazor-server-side-visual-studio)
