@@ -270,14 +270,14 @@ N> Syncfusion recommends to reference scripts using [Static Web Assets](https://
 {% tabs %}
 {% highlight razor %}
 
-<SfComboBox TValue="string" Placeholder="Select a game"></SfComboBox>
+<SfComboBox TValue="string" TItem="string" Placeholder="Select a game"></SfComboBox>
 
 {% endhighlight %}
 {% endtabs %}
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to run the application. Then, the Syncfusion `Blazor ComboBox` component will be rendered in the default web browser.
 
-![Blazor ComboBox Component](./images/blazor-combobox-component.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BXhqjnWdCFWGIvpw?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Binding data source
 
@@ -313,7 +313,7 @@ After initializing, populate the ComboBox with data using the [DataSource](https
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor ComboBox with Data Binding](./images/blazor-combobox-data-binding.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VjBUNHsnsvtLvhws?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Custom values
 
@@ -329,7 +329,7 @@ The ComboBox allows the users to give input as custom value, which is not requir
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor ComboBox with Custom Values](./images/blazor-combobox-custom-values.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VDhANnsRsvAikeIq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Configure the popup list
 
@@ -345,11 +345,11 @@ By default, the width of the popup list automatically adjusts according to the C
 {% endhighlight %}
 {% endtabs %}
 
-![Customizing Popup Height and Width in Blazor ComboBox](./images/blazor-combobox-popup-customization.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LZLgtdWRsvTzrMgd?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/ComboBox).
 
-## See Also
+## See also
 
 * [Getting Started with Syncfusion Blazor for Client-Side in .NET Core CLI](../getting-started/blazor-webassembly-dotnet-cli)
 * [Getting Started with Syncfusion Blazor for Server-side in Visual Studio](../getting-started/blazor-server-side-visual-studio)

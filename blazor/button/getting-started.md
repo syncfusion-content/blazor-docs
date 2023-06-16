@@ -278,13 +278,13 @@ N> Syncfusion recommends to reference scripts using [Static Web Assets](https://
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to run the application. Then, the Syncfusion `Blazor Button` component will be rendered in the default web browser.
 
-![Blazor Button Component](./images/blazor-button-component.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rtLgZdCHBQMDFdRp?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/Button).
 
 N> You can also explore our [Blazor Button example](https://blazor.syncfusion.com/demos/buttons/default-functionalities?) that shows how to render and configure the button.
 
-## See Also
+## See also
 
 * [Getting Started with Syncfusion Blazor for Client-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-dotnet-cli)
 * [Getting Started with Syncfusion Blazor for Server-Side in Visual Studio](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio)
