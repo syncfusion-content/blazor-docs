@@ -331,13 +331,14 @@ The Dashboard layout with simple content will be rendered in the web browser as 
 
 A dashboard layout can be rendered with the components like the chart, grids, maps, gauge, and more as a content of dashboard layout panel.
 
-These complex data (components) are placed as the panel content by assigning the corresponding component element as the `ContentTemplate` of the panel.
+These complex data (components) are placed as the panel content by assigning the corresponding component element as the `ContentTemplate` of the panel. 
 
 {% tabs %}
 {% highlight razor %}
 
 @using Syncfusion.Blazor.Charts
 @using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor.Layouts
 
 <div class="content">
     <SfDashboardLayout Columns="6" CellSpacing="@(new double[]{10 ,10 })">
@@ -435,16 +436,16 @@ These complex data (components) are placed as the panel content by assigning the
     private object[] Value = new object[] { new DateTime(2006, 01, 01), new DateTime(2008, 01, 01) };
     public class ChartData
     {
-        public DateTime XValue;
-        public double YValue;
-        public string X;
-        public double Y;
-        public string Country;
-        public string X1;
-        public double Y1;
-        public double Y2;
-        public double Y3;
-        public double Y4;
+        public DateTime XValue { get; set; }
+        public double YValue { get; set; }
+        public string X { get; set; }
+        public double Y { get; set; }
+        public string Country { get; set; }
+        public string X1 { get; set; }
+        public double Y1 { get; set; }
+        public double Y2 { get; set; }
+        public double Y3 { get; set; }
+        public double Y4 { get; set; }
     }
     public List<ChartData> DataSource = new List<ChartData>
 {
