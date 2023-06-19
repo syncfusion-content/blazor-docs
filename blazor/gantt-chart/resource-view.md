@@ -167,3 +167,8 @@ To highlight the range of overallocation dates with a square bracket, you can en
 
 * No support for multiple resource in single task Resource view Gantt Chart.
 * No support for resource records editing in Resource view Gantt Chart.
+
+
+Gantt Chart Resource view
+
+![Blazor Gantt Chart Resource view](images/blazor-gantt-chart-resource-view.png)
