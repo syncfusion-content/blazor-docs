@@ -614,7 +614,7 @@ The edited data is submitted to the server and you can see the new values gettin
 {% endhighlight %}
 {% endtabs %}
 
-![Refreshing Blazor In-place Editor Data](./images/blazor-inplace-editor-refresh-data.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXLqtxWupZYbWiua?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## See also
 
