@@ -738,24 +738,29 @@ This is demonstrated in the below sample code, where the [GetRowTaskModel](https
 ```cshtml
 @using Syncfusion.Blazor.Gantt
 @using Syncfusion.Blazor.Grids;
-
-<div style="font-weight:bold;">Row Model Properties:</div>
-<div style="display:flex;visibility:@Visible">
-    <div>
-        <span class="showhide">Level: @Level </span>
-        <span class="showhide">Expand: @ExpandStatus </span>
-        <span class="showhide">Child record: @ChildRecords </span>
+<div>
+    <div style="font-weight:bold;">Row Model Properties:</div>
+    <div style="display:flex;visibility:@Visible">
+        <div>
+            <span class="showhide">Level: @Level </span>
+            <span class="showhide">Expanded: @ExpandStatus </span>
+            <span class="showhide">HasChildRecord: @ChildRecords </span>
+            <span class="showhide">IsCritical: @IsCritical </span>
+            <span class="showhide">Slack: @Slack </span>
+            <span class="showhide">Progress width: @ProgressWidth </span>
+        </div>
     </div>
 </div>
-<SfGantt @ref=Gantt DataSource="@TaskCollection" Height="450px" Width="900px" TreeColumnIndex="1">
-    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress"
-                     ParentID="ParentId">
-    </GanttTaskFields>
-    <GanttEvents TValue="TaskData" RowSelected="RowSelect"></GanttEvents>
-</SfGantt>
+    <SfGantt @ref=Gantt DataSource="@TaskCollection" Height="450px" Width="900px" TreeColumnIndex="1" EnableCriticalPath="true">
+        <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress"
+                         ParentID="ParentId">
+        </GanttTaskFields>
+        <GanttEvents TValue="TaskData" RowSelected="RowSelect"></GanttEvents>
+    </SfGantt>
+
 <style>
     .showhide {
-        padding:10px;
+        padding: 10px;
     }
 </style>
 @code {
@@ -764,6 +769,9 @@ This is demonstrated in the below sample code, where the [GetRowTaskModel](https
     private int Level{ get; set; } 
     private bool ExpandStatus{ get; set; }
     private bool ChildRecords{ get; set; }
+    private bool IsCritical{ get; set; }
+    private double? Slack { get; set; }
+    private double ProgressWidth { get; set; }
     private string Visible { get; set; } = "hidden";
     protected override void OnInitialized()
     {
@@ -775,6 +783,9 @@ This is demonstrated in the below sample code, where the [GetRowTaskModel](https
         Level = ganttItem.Level;
         ExpandStatus = ganttItem.IsExpanded;
         ChildRecords = ganttItem.HasChildRecords;
+        IsCritical = ganttItem.IsCritical;
+        Slack = ganttItem.Slack;
+        ProgressWidth = ganttItem.ProgressWidth;
         Visible = "visible";
     }
     public class TaskData
@@ -797,9 +808,9 @@ This is demonstrated in the below sample code, where the [GetRowTaskModel](https
             new TaskData() { TaskId = 3, TaskName = "Perform soil test", StartDate = new DateTime(2022, 01, 04), Duration = "4", Progress = 40, ParentId = 1, },
             new TaskData() { TaskId = 4, TaskName = "Soil test approval", StartDate = new DateTime(2022, 01, 04), Duration = "0", Progress = 30, ParentId = 1, },
             new TaskData() { TaskId = 5, TaskName = "Project estimation", StartDate = new DateTime(2022, 01, 04), EndDate = new DateTime(2022, 01, 17), },
-            new TaskData() { TaskId = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2022, 01, 06), Duration = "3", Progress = 30, ParentId = 5, },
-            new TaskData() { TaskId = 7, TaskName = "List materials", StartDate = new DateTime(2022, 01, 06), Duration = "3", Progress = 40, ParentId = 5, },
-            new TaskData() { TaskId = 8, TaskName = "Estimation approval", StartDate = new DateTime(2022, 01, 06), Duration = "0", Progress = 30, ParentId = 5, }
+            new TaskData() { TaskId = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2022, 01, 14), Duration = "3", Progress = 30, ParentId = 5, },
+            new TaskData() { TaskId = 7, TaskName = "List materials", StartDate = new DateTime(2022, 01, 14), Duration = "3", Progress = 40, ParentId = 5, },
+            new TaskData() { TaskId = 8, TaskName = "Estimation approval", StartDate = new DateTime(2022, 01, 14), Duration = "0", Progress = 30, ParentId = 5, }
         };
         return Tasks;
     }
