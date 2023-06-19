@@ -46,7 +46,7 @@ In the below code, the SfPdfViewer is hidden at page load. Then, on clicking a b
 
     string Label => IsShowPDFViewer ? "Hide" : "Show";
 
-    //This method handles the visibility of the PDFViewer.
+    //This method handles the visibility of the SfPdfViewer.
     void ShowHidePdfViewer() => IsShowPDFViewer = !IsShowPDFViewer;
 
     public void LoadDocument1()

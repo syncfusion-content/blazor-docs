@@ -32,7 +32,7 @@ The following code example shows how to create PDF document and load that docume
     //Sets the PDF document path for initial loading.
     public string DocumentPath { get; set; }
 
-    //This event triggers when the PDFViewer is created.
+    //This event triggers when the SfPdfViewer is created.
     private void created()
     {
         var document = new PdfDocument();
