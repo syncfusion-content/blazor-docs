@@ -21,7 +21,7 @@ You can create **Blazor Server App** or **Blazor WebAssembly App** using Visual 
 
 * [Create a Project using Microsoft Templates](https://docs.microsoft.com/en-us/aspnet/core/blazor/tooling?pivots=windows)
 
-* [Create a Project using Syncfusion Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project)
+* [Create a Project using Syncfusion Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio)
 
 ## Install Syncfusion Blazor TreeMap NuGet in the App
 
@@ -355,8 +355,8 @@ The color mapping supports customization of item colors based on the underlying 
     <TreeMapTitleSettings Text="Top 10 countries by GDP Nominal - 2015"></TreeMapTitleSettings>
     <TreeMapLeafItemSettings LabelPath="Name" Fill="lightgray">
         <TreeMapLeafColorMappings>
-            <TreeMapLeafColorMapping From="0" To="3000" Color="@(new string[] { "Orange" })"></TreeMapLeafColorMapping>
-            <TreeMapLeafColorMapping From="3000" To="20000" Color="@(new string[] { "Green" })"></TreeMapLeafColorMapping>
+            <TreeMapLeafColorMapping StartRange="0" EndRange="3000" Color="@(new string[] { "Orange" })"></TreeMapLeafColorMapping>
+            <TreeMapLeafColorMapping StartRange="3000" EndRange="20000" Color="@(new string[] { "Green" })"></TreeMapLeafColorMapping>
         </TreeMapLeafColorMappings>
     </TreeMapLeafItemSettings>
 </SfTreeMap>
@@ -382,8 +382,8 @@ Legend items are used to denote the color mapping categories and show the legend
     <TreeMapTitleSettings Text="Top 10 countries by GDP Nominal - 2015"></TreeMapTitleSettings>
     <TreeMapLeafItemSettings LabelPath="Name" Fill="lightgray">
         <TreeMapLeafColorMappings>
-            <TreeMapLeafColorMapping From="0" To="3000" Color="@(new string[] { "Orange" })"></TreeMapLeafColorMapping>
-            <TreeMapLeafColorMapping From="3000" To="20000" Color="@(new string[] { "Green" })"></TreeMapLeafColorMapping>
+            <TreeMapLeafColorMapping StartRange="0" EndRange="3000" Color="@(new string[] { "Orange" })"></TreeMapLeafColorMapping>
+            <TreeMapLeafColorMapping StartRange="3000" EndRange="20000" Color="@(new string[] { "Green" })"></TreeMapLeafColorMapping>
         </TreeMapLeafColorMappings>
     </TreeMapLeafItemSettings>
     <TreeMapLegendSettings Visible="true"></TreeMapLegendSettings>
@@ -410,8 +410,8 @@ When space constraints prevents from displaying information using data labels, t
     <TreeMapTitleSettings Text="Top 10 countries by GDP Nominal - 2015"></TreeMapTitleSettings>
     <TreeMapLeafItemSettings LabelPath="Name" Fill="lightgray">
         <TreeMapLeafColorMappings>
-            <TreeMapLeafColorMapping From="0" To="3000" Color="@(new string[] { "Orange" })"></TreeMapLeafColorMapping>
-            <TreeMapLeafColorMapping From="3000" To="20000" Color="@(new string[] { "Green" })"></TreeMapLeafColorMapping>
+            <TreeMapLeafColorMapping StartRange="0" EndRange="3000" Color="@(new string[] { "Orange" })"></TreeMapLeafColorMapping>
+            <TreeMapLeafColorMapping StartRange="3000" EndRange="20000" Color="@(new string[] { "Green" })"></TreeMapLeafColorMapping>
         </TreeMapLeafColorMappings>
     </TreeMapLeafItemSettings>
     <TreeMapLegendSettings Visible="true"></TreeMapLegendSettings>
