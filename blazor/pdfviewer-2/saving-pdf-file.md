@@ -147,8 +147,6 @@ N> [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-view
 
 ### Download PDF file as a copy
 
-## Download PDF file as a copy
-
 In the built-in toolbar, you have an option to download the updated PDF to the local file system, you can use it to download the PDF file.
 
 ```cshtml
