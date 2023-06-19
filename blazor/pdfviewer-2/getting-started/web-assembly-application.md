@@ -39,6 +39,8 @@ To add Blazor `SfPdfViewer` component in Blazor WebAssembly App,
 
 * Install [SkiaSharp.NativeAssets.WebAssembly](https://www.nuget.org/packages/SkiaSharp.NativeAssets.WebAssembly) NuGet package as a reference to your Blazor application from NuGet.org.
 
+N> If you encounter issues while attempting to host the application in certain environments, such as Azure app services, install [SkiaSharp.Views.Blazor](https://www.nuget.org/packages/SkiaSharp.Views.Blazor) instead of [SkiaSharp.NativeAssets.WebAssembly](https://www.nuget.org/packages/SkiaSharp.NativeAssets.WebAssembly) Nuget package.
+
 * Add the following ItemGroup tag in the Blazor WebAssembly csproj file.
 
 {% tabs %}
