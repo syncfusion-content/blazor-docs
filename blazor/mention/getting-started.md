@@ -26,7 +26,7 @@ You can create **Blazor Server App** or **Blazor WebAssembly App** using Visual 
 
 * [Create a Project using Microsoft Templates](https://docs.microsoft.com/en-us/aspnet/core/blazor/tooling?pivots=windows)
 
-* [Create a Project using Syncfusion Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project)
+* [Create a Project using Syncfusion Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio)
 
 ## Install Syncfusion Blazor DropDowns NuGet in the App
 
@@ -308,7 +308,7 @@ For Blazor WebAssembly App, refer script in the `<head>` of the **~/index.html**
 
 * Press <kbd>ctrl</kbd>+<kbd>F5</kbd> or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to run the application. Then, the Syncfusion Blazor Mention component will be rendered in the default web browser.
 
-![Blazor Mention Component](images/blazor-mention.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BjrUjRMIVrVHmUsy?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Mention target
 
@@ -356,7 +356,7 @@ In the bellow example, the `Target` property of the Mention component is set to 
 
 {% endhighlight %}
 
-![Blazor Mention target](images/blazor-mention-target.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BjrgtdWyhrUEzpIQ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## See also
 

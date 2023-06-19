@@ -21,7 +21,7 @@ You can create **Blazor Server App** or **Blazor WebAssembly App** using Visual 
 
 * [Create a Project using Microsoft Templates](https://docs.microsoft.com/en-us/aspnet/core/blazor/tooling?pivots=windows)
 
-* [Create a Project using Syncfusion Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project)
+* [Create a Project using Syncfusion Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio)
 
 ## Install Syncfusion Blazor NuGet in the App
 
@@ -434,6 +434,6 @@ Through the navigation of the pager items, view the items in the list view page 
 
 ```
 
-![Blazor Pager with ListView](./images/blazor-pager-with-list-view.gif)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDrgZdszpqAeHLqp?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 N> [View Sample in GitHub.](https://github.com/SyncfusionExamples/blazor-pager-component)

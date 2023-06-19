@@ -21,7 +21,7 @@ You can create **Blazor Server App** or **Blazor WebAssembly App** using Visual 
 
 * [Create a Project using Microsoft Templates](https://docs.microsoft.com/en-us/aspnet/core/blazor/tooling?pivots=windows)
 
-* [Create a Project using Syncfusion Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project)
+* [Create a Project using Syncfusion Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio)
 
 ## Install Syncfusion Blazor Gantt NuGet in the App
 
@@ -369,6 +369,8 @@ The data source fields that are required to render the tasks are mapped to the G
 {% endhighlight %}
 {% endtabs %}
 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNrqtRioUWAQzZlf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 ## Defining columns
 
 Gantt Chart has an option to define columns as an array. You can customize the Gantt Chart columns using the following properties:
@@ -624,7 +626,7 @@ You can show the relationship in tasks by using the `Dependency` property as sho
 
 You can find the full information regarding Predecessors from [here](https://blazor.syncfusion.com/documentation/gantt-chart/task-dependencies/)
 
-![Blazor Gantt Chart](images/blazor-gantt-chart.gif)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LjrUDRMIgiwtaePG?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Handling exceptions 
 Exceptions that occur during Gantt actions can be handled without stopping the application. These error messages or exception details can be acquired using the [OnActionFailure](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_OnActionFailure) event.
@@ -682,11 +684,11 @@ The following sample code demonstrates notifying user when server-side exception
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor Gantt Chart](images/blazor-gantt-chart-handling-exception.PNG)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hjhUDdiIgCbUorUT?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/GanttChart).
 
-## See Also
+## See also
 
 * [Getting Started with Syncfusion Blazor for Client-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-dotnet-cli)
 * [Getting Started with Syncfusion Blazor for Server-Side in Visual Studio](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio)
