@@ -503,6 +503,8 @@ Gantt column supports the following types:
 
 N> If the `GanttColumn.Type` is not defined, it will be determined from the first record of the `DataSource`. If the first record of the `DataSource` is null/blank value for a column then it is necessary to define the `GanttColumn.Type` for that column.
 
+N> The `DateOnly` and `TimeOnly` formats are supported in custom columns in the Gantt Chart.
+
 ## Custom columns
 
 Using the `GanttColumns` property, you can define the Custom Columns in Gantt Chart. If custom columns are required, then you can generate columns that was not defined in the `GanttTaskFields` property. Refer to the following code example for defining the custom columns in Gantt Chart.
