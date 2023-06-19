@@ -31,7 +31,7 @@ Syncfusion Blazor components are available in CDN for each version. Make sure th
 </tr>
 
 <tr>
-<td><p>All components except PDF Viewer & Document Editor</p></td>
+<td><p>All components except PDF Viewer, PDF Viewer-2 & Document Editor</p></td>
 <td>
 
 {% highlight cshtml %}
@@ -62,6 +62,17 @@ https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/syncfusion-blazor-doc
 
 </td>
 </tr>
+
+<tr>
+<td><p>PDF Viewer-2</p></td>
+<td>
+
+{% highlight cshtml %}
+https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/syncfusion-blazor-sfpdfviewer.min.js
+{% endhighlight %}
+
+</td>
+</tr>
 </table>
 
 ```html
@@ -71,13 +82,14 @@ https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/syncfusion-blazor-doc
 </head>
 ```
 
-If you are using `PDFViewer` or `DocumentEditor`, ensure to add additional script references as follows,
+If you are using `PDFViewer`,`PDFViewer-2` or `DocumentEditor`, ensure to add additional script references as follows,
 
 ```html
 <head>
     ....
     <script src="https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/syncfusion-blazor-pdfviewer.min.js" type="text/javascript"></script>
     <script src="https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/syncfusion-blazor-documenteditor.min.js" type="text/javascript"></script>
+    <script src="https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/syncfusion-blazor-sfpdfviewer.min.js" type="text/javascript"></script>
 </head>
 ```
 
@@ -90,6 +102,9 @@ W> The un-versioned CDN links which always maintains latest version scripts are 
 |  All components except PDF Viewer & Document Editor | https://cdn.syncfusion.com/blazor/syncfusion-blazor.min.js |
 | PDF Viewer | https://cdn.syncfusion.com/blazor/syncfusion-blazor-pdfviewer.min.js |
 | Document Editor | https://cdn.syncfusion.com/blazor/syncfusion-blazor-documenteditor.min.js |
+| PDF Viewer-2 | https://cdn.syncfusion.com/blazor/syncfusion-blazor-sfpdfviewer.min.js |
+
+N> To add custom SfPdfViewer script file in your application, refer [How to refer SfPdfViewer script file in application](../pdfviewer-2/how%20to/refer-SfPdfViewer-script-in-application.md).
 
 ## Static web assets
 
@@ -124,6 +139,7 @@ N> For **Blazor WASM App**, call `UseStaticFiles` method in **Server project** o
         ...
        <script  src="_content/Syncfusion.Blazor.PdfViewer/scripts/syncfusion-blazor-pdfviewer.min.js"  type="text/javascript"></script>
        <script  src="_content/Syncfusion.Blazor.WordProcessor/scripts/syncfusion-blazor-documenteditor.min.js"  type="text/javascript"></script>
+       <script  src="_content/Syncfusion.Blazor.SfPdfViewer/scripts/syncfusion-blazor-sfpdfviewer.min.js"  type="text/javascript"></script>
     </head>
     ```
 
@@ -138,7 +154,7 @@ N> For **Blazor WASM App**, call `UseStaticFiles` method in **Server project** o
     </head>
     ```
 
-    N> The PDF Viewer and Document Editor component scripts are  available in static web assets from 19.3.* version. If you are using PDF Viewer or Document Editor component with 19.2.* version, it automatically switch to the JavaScript isolation in the application end.
+    N> The PDF Viewer,PDF Viewer-2 and Document Editor component scripts are  available in static web assets from 19.3.* version. If you are using PDF Viewer or Document Editor component with 19.2.* version, it automatically switch to the JavaScript isolation in the application end.
 
 
 ## JavaScript isolation
