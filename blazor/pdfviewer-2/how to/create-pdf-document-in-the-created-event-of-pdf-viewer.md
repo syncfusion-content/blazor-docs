@@ -1,36 +1,36 @@
 ---
 layout: post
-title: Create PDF document in the PDF Viewer created event | Syncfusion
-description: Learn here all about how to create PDF document in the created event of Syncfusion Blazor PDF Viewer component and more.
+title: Create PDF document in the SfPdfViewer created event | Syncfusion
+description: Learn here all about how to create PDF document in the created event of Syncfusion Blazor SfPdfViewer component and more.
 platform: Blazor
-control: PDF Viewer
+control: SfPdfViewer
 documentation: ug
 ---
 
-# Create PDF document in created event of Blazor PDF Viewer Component
+# Create PDF document in created event of Blazor SfPdfViewer Component
 
 You can create PDF document in the PDFViewer's created event and load the same document in the viewer.
 
 The following code example shows how to create PDF document and load that document in PDFViewer.
 
 ```cshtml
-@using Syncfusion.Blazor.PdfViewer
-@using Syncfusion.Blazor.PdfViewerServer
+@using Syncfusion.Blazor.SfPdfViewer
 @using Syncfusion.Pdf;
 @using Syncfusion.Pdf.Interactive;
 @using System.IO;
 @using Syncfusion.Drawing;
 
-<SfPdfViewerServer @ref="@PdfViewer" DocumentPath="@documentPath">
+<SfPdfViewer2 DocumentPath="@DocumentPath" Height="100%" Width="100%">
     <PdfViewerEvents Created="created"></PdfViewerEvents>
-</SfPdfViewerServer>
+</SfPdfViewer2>
+
 
 @code{
 
-    public SfPdfViewerServer PdfViewer { get; set; }
+    public SfPdfViewer2 PdfViewer { get; set; }
 
     //Sets the PDF document path for initial loading.
-    public string documentPath { get; set; }
+    public string DocumentPath { get; set; }
 
     //This event triggers when the PDFViewer is created.
     private void created()
@@ -51,11 +51,11 @@ The following code example shows how to create PDF document and load that docume
         bytes = stream.ToArray();
         string base64string = Convert.ToBase64String(bytes);
         //Sets the document path as base64 string.
-        documentPath = "data:application/pdf;base64," + base64string;
+        DocumentPath = "data:application/pdf;base64," + base64string;
         //close the document
         document.Close(true);
     }
 }
 ```
 
-N> [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Common/Create%20PDF%20using%20base%20library).
+N> [View sample in GitHub]().
