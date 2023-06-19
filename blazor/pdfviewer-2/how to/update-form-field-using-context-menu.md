@@ -12,7 +12,7 @@ documentation: ug
 You can update the form field's at runtime using the FormFieldClick event and UpdateFormFieldsAsync() method of SfPdfViewer. The following code example explains how to open Context menu when you click on the form field and how to update the menu item content as form field's value. In this example, the Syncfusion’s ContextMenu component is used to update form field.
 
 
-```cshtml
+```csharp
 
 @using Syncfusion.Blazor.Buttons
 @using Syncfusion.Blazor.SfPdfViewer
@@ -98,4 +98,4 @@ You can update the form field's at runtime using the FormFieldClick event and Up
 
 ```
 
-N> [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Common/Update%20form%20fileds%20using%20Context%20Menu).
+N> [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Common/Update%20form%20fileds%20using%20Context%20Menu%20-%20SfPdfViewer).

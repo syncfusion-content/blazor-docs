@@ -16,6 +16,7 @@ The following code example shows how to render the JS PDF Viewer component into 
 **Step 1:** Add a script file to your application and refer it to the head tag.
 
 ```cshtml
+
 <head>
     <script src="sample.js" type="text/javascript"></script>
 </head>
@@ -25,6 +26,7 @@ The following code example shows how to render the JS PDF Viewer component into 
 **Step 2:** Add the following code to render the Js component in the blazor to the newly added JS file.
 
 ```javascript
+
 window.renderJsPdfViewer = (id) => {
     // Render the PDF viewer control
     var viewer = new ej.pdfviewer.PdfViewer({
@@ -71,4 +73,4 @@ window.renderJsPdfViewer = (id) => {
 
 >N : you can’t able to use the API calls from C# side. You have to use a JS code snippet to use the PDF Viewer component API since we have rendered the JS component.
 
-[View Sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Common/Render%20JS%20PDF%20Viewer%20component%20in%20Blazor)
+[View Sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Common/Render%20JS%20PDF%20Viewer%20component%20in%20Blazor%20-%20SfPdfViewer)
