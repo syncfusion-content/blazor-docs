@@ -9,12 +9,10 @@ documentation: ug
 
 # Perform print in same window in Blazor SfPdfViewer Component
 
-`PrintMode` enum of SfPdfViewer2 allows you to decide whether perform print in same window or in a new window. 
+The `PrintMode` enum of SfPdfViewer2 allows you to decide whether to print in the same window or in a new window. The available enum values are `PrintMode.Default` and `PrintMode.NewWindow`.
 
-* **Default** - Represents the print action in same window.
-* **NewWindow** - Represents the print action in new window.
-
-Refer the following code to perform print in same window.
+* **Default** - If you set `PrintMode.Default`, printing will occur in the same window.
+* **NewWindow** - If you set `PrintMode.NewWindow`, printing will open in a new window.
 
 ```cshtml
 @using Syncfusion.Blazor.SfPdfViewer
@@ -28,3 +26,4 @@ Refer the following code to perform print in same window.
     private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
 }
 ```
+In the provided code, `PrintMode.Default` is used to specify printing in the same window.
