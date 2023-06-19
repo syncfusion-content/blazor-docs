@@ -25,4 +25,4 @@ The following code example shows how to suppress the error dialog.
 }
 ```
  
-Find the sample, [How to suppress the error dialog in the Blazor SfPdfViewer](https://www.syncfusion.com/downloads/support/directtrac/general/ze/BlazorWebAsssembly1506143488)
+[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Common/Supress%20the%20Error%20Dialog-SfPdfViewer)
