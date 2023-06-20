@@ -20,7 +20,7 @@ SfPdfViewer control is now available as a unified package for Windows, Mac, and 
 
 ### Nuget Package
 
-To initialize the PDF Viewer (NextGen) component, you need to add the following project references to your project
+To initialize the PDF Viewer (NextGen) component, need to add the following project references to your project
 
 <table>
 <tr>
@@ -29,10 +29,11 @@ To initialize the PDF Viewer (NextGen) component, you need to add the following 
 <tr>
 <td>
 {% tabs %}
-{% highlight C# tabtitle="csproj" hl_lines="2" %}
+{% highlight C# tabtitle=".csproj" hl_lines="2" %}
 
-Syncfusion.Blazor.PdfViewer
-Syncfusion.Blazor.PdfViewerServer
+<ItemGroup>
+    <PackageReference Include="Syncfusion.Blazor.PdfViewer"/>
+</ItemGroup>
 
 {% endhighlight %}
 {% endtabs %}
@@ -44,9 +45,11 @@ Syncfusion.Blazor.PdfViewerServer
 <tr>
 <td>
 {% tabs %}
-{% highlight C# tabtitle=".csproj" hl_lines="1" %}
+{% highlight C# tabtitle=".csproj" hl_lines="2" %}
 
-Syncfusion.Blazor.SfPdfViewer
+<ItemGroup>
+    <PackageReference Include="Syncfusion.Blazor.SfPdfViewer"/>
+</ItemGroup>
 
 {% endhighlight %}
 {% endtabs %}
@@ -56,9 +59,9 @@ Syncfusion.Blazor.SfPdfViewer
 
 ### Script File
 
-To utilize the PDF Viewer component in your project, you need to add the corresponding script file to the *Host.cshtml* or *Layout.cshtml* file based on your framework version.
+To utilize the PDF Viewer (NextGen) component in your project, need to add the corresponding script file to the *Host.cshtml* or *Layout.cshtml* file based on your framework version.
 
-N> The script file is same for `Server application` and `Web assembly application` for PDF Viewer component
+N> The script file is same for `Server application` and `Web assembly application` for PDF Viewer (NextGen) component
 
 <table>
 <tr>
@@ -103,7 +106,7 @@ N> The script file is same for `Server application` and `Web assembly applicatio
 
 ### Program.cs
 
-To use the PDF Viewer component in a Blazor project, add the following line to the *Program.cs* file:
+Add the following line to the *Program.cs* file to use the PDF Viewer (NextGen) component
 
 <table>
 <tr>
@@ -112,7 +115,7 @@ To use the PDF Viewer component in a Blazor project, add the following line to t
 <tr>
 <td>
 {% tabs %}
-{% highlight C# tabtitle=".NET 6 & .NET 7 (~/Program.cs)" %}
+{% highlight C# tabtitle=".NET 6 & .NET 7 (~/Program.cs)" hl_lines="1" %}
 
 builder.Services.AddSyncfusionBlazor();
 
@@ -127,9 +130,12 @@ builder.Services.AddSyncfusionBlazor();
 <tr>
 <td>
 {% tabs %}
-{% highlight C# tabtitle=".NET 6 & .NET 7 (~/Program.cs)" %}
+{% highlight C# tabtitle=".NET 6 & .NET 7 (~/Program.cs)" hl_lines="1 4" %}
 
 builder.Services.AddSyncfusionBlazor();
+
+// If you are using a WebAssembly application, include the following line in the Program.cs file
+builder.Services.AddMemoryCache();
 
 {% endhighlight %}
 {% endtabs %}
@@ -139,7 +145,7 @@ builder.Services.AddSyncfusionBlazor();
 
 ### Index.razor
 
-In the *Index.razor* file, you can use the following code to render the PDF Viewer component
+To render the PDF Viewer (NextGen) component, add the following code in the *Index.razor* file.
 
 <table>
 <tr>
@@ -148,12 +154,7 @@ In the *Index.razor* file, you can use the following code to render the PDF View
 <tr>
 <td>
 {% tabs %}
-{% highlight C# tabtitle="Index.razor(Server application)" %}
-
-<SfPdfViewerServer DocumentPath="PDF_Succinctly.pdf" Height="100%" Width="100%"></></SfPdfViewerServer>
-
-{% endhighlight %}
-{% highlight C# tabtitle="Index.razor(Web assembly application)" %}
+{% highlight C# tabtitle="Index.razor" %}
 
 <SfPdfViewer DocumentPath="PDF_Succinctly.pdf" ServiceUrl="api/pdfviewer" Height="100%" Width="100%"></SfPdfViewer>
 
@@ -178,13 +179,9 @@ In the *Index.razor* file, you can use the following code to render the PDF View
 </tr>
 </table>
 
-N> The Index.razor is same for `Server application` and `Web assembly application` for PDF Viewer (NextGen) component
-
 ### Project.cs
 
-If you are using `SfPdfViewer` with a WebAssembly application, you need to modify your *.csproj* file as follows
-
-In `SfPdfViewer` if we are using the Web assembly application need to add the below lines in the *.csproj* file 
+When using the PDF Viewer (NextGen) in a WebAssembly application, need to include the following lines in your .csproj file to ensure proper functionality and compatibility 
 
 <table>
 <tr>
@@ -193,7 +190,7 @@ In `SfPdfViewer` if we are using the Web assembly application need to add the be
 <td>
 
 {% tabs %}
-{% highlight C# tabtitle="csproj" %}
+{% highlight C# tabtitle="csproj" hl_lines="2 6 7" %}
 
 <ItemGroup>
     <NativeFileReference Include="$(SkiaSharpStaticLibraryPath)\2.0.23\*.a" />
