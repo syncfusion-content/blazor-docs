@@ -31,7 +31,7 @@ N> Need to add the **Syncfusion.Blazor.PdfViewer** for `Web assembly application
 <tr>
 <td>
 {% tabs %}
-{% highlight html tabtitle="csproj" hl_lines="2" %}
+{% highlight C# tabtitle="csproj" hl_lines="2" %}
 
 Syncfusion.Blazor.PdfViewer
 Syncfusion.Blazor.PdfViewerServer
