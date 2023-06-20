@@ -36,54 +36,28 @@ To perform the directory(folder) upload in File Manager, set [DirectoryUpload](h
 * NodeJS file service provider.
 * Amazon file service provider.
 
-In this example, you can enable or disable the ability to upload directories by selecting an option from the DropDownButton. The DropDownButton is created using the Template feature in FileManagerCustomToolbarItems. 
+In the following example, directory upload is enabled/disabled on DropDownButton selection.
 
 {% tabs %}
 {% highlight razor %}
 
 <SfFileManager TValue="FileManagerDirectoryContent">
-    <FileManagerAjaxSettings  Url="/api/SampleData/FileOperations"
-                                UploadUrl="/api/SampleData/Upload"
-                                DownloadUrl="/api/SampleData/Download"
-                                GetImageUrl="/api/SampleData/GetImage">
-    </FileManagerAjaxSettings>
-    <FileManagerUploadSettings DirectoryUpload="@IsDirectoryUpload"></FileManagerUploadSettings>
-    <FileManagerEvents TValue="FileManagerDirectoryContent" ToolbarItemClicked="ItemClicked"><FileManagerEvents>
-    <FileManagerToolbarSettings ToolbarItems="@Items">
-        <FileManagerCustomToolbarItems>
-            <FileManagerCustomToolbarItem Name="Upload">
-                <Template>
-                    <SfDropDownButton IconCss="e-icons e-fe-upload" CssClass=" e-tbar-btn e-tbtn-txt  e-fe-popup" @attributes="@(new Dictionary<string, object> { {"tabindex", -1 } })">
-                            <span class="e-tbar-btn-text e-tbar-ddb-text">Upload</span>
-                            <DropDownButtonEvents ItemSelected="@ItemSelected"></DropDownButtonEvents>
-                            <DropDownMenuItems>
-                                <DropDownMenuItem Id="Folder" Text="Folder"></DropDownMenuItem>
-                                <DropDownMenuItem Id="Files" Text="Files"></DropDownMenuItem>
-                            </DropDownMenuItems>
-                    </SfDropDownButton>
-                </Template>
-            </FileManagerCustomToolbarItem>
-        </FileManagerCustomToolbarItems>
-    </FileManagerToolbarSettings>
+        <FileManagerAjaxSettings Url="/api/SampleData/FileOperations"
+                                UploadUrl="/api/SampleData/Upload">
+        </FileManagerAjaxSettings>
+        <FileManagerUploadSettings DirectoryUpload="@IsDirectoryUpload" ></FileManagerUploadSettings>
+        <FileManagerEvents TValue="FileManagerDirectoryContent"  ToolbarCreated="Created" ToolbarItemClicked="ItemClicked"></FileManagerEvents>
 </SfFileManager>
+
 @code{
-    private List<ToolBarItemModel> Items = new List<ToolBarItemModel>()
-    {
-        new ToolBarItemModel() { Name="NewFolder" },
-        new ToolBarItemModel() { Name = "Upload" },
-        new ToolBarItemModel() { Name = "Cut" },
-        new ToolBarItemModel() { Name = "Copy" },
-        new ToolBarItemModel() { Name = "Paste" },
-        new ToolBarItemModel() { Name = "Delete" },
-        new ToolBarItemModel() { Name = "Download" },
-        new ToolBarItemModel() { Name = "Rename" },
-        new ToolBarItemModel() { Name = "SortBy" },
-        new ToolBarItemModel() { Name = "Refresh",PrefixIcon="fa fa-refresh"},
-        new ToolBarItemModel() { Name = "Selection" },
-        new ToolBarItemModel() { Name = "View" ,Disabled=true },
-        new ToolBarItemModel() { Name = "Details" },
-    };
     public bool IsDirectoryUpload = true;
+    public void ItemClicked(ToolbarClickEventArgs<FileManagerDirectoryContent> args)
+    {
+        if (args.Item.Text == "Upload")
+        {
+            args.Cancel = true;
+        }
+    }
     public async void ItemSelected(MenuEventArgs args)
     {
         if (args.Item.Id == "Folder")
@@ -97,21 +71,32 @@ In this example, you can enable or disable the ability to upload directories by 
         await Task.Delay(100);
         await JSRuntime.InvokeVoidAsync("uploadClick");
     }
-    public void ItemClicked(ToolbarClickEventArgs<FileManagerDirectoryContent> args)
+    public void Created(ToolbarCreateEventArgs args)
     {
-        if (args.Item.Text == "Upload")
+        foreach(var item in args.Items.ToArray())
         {
-            args.Cancel = true;
+            if(item.Text == "Upload")
+            {
+                item.Template = RenderDropdown();
+                break;
+            }
         }
     }
-}
-<style>
-    .fluent  .directory-upload,
-    .fluent-dark .directory-upload {
-        padding-right: 5px;
+    public RenderFragment RenderDropdown()
+    {
+        return
+        @<div class="directory-upload">
+            <SfDropDownButton IconCss="e-icons e-fe-upload" CssClass=" e-tbar-btn e-tbtn-txt  e-fe-popup" @attributes="@(new Dictionary<string, object> { {"tabindex", -1 } })" >
+            <span class="e-tbar-btn-text e-tbar-ddb-text">Upload</span>
+            <DropDownButtonEvents ItemSelected="@ItemSelected"></DropDownButtonEvents>
+            <DropDownMenuItems>
+                    <DropDownMenuItem Id="Folder" Text="Folder"></DropDownMenuItem>
+                    <DropDownMenuItem Id="Files" Text="Files"></DropDownMenuItem>
+            </DropDownMenuItems>
+            </SfDropDownButton>
+            </div>;
     }
-</style>
-
+}
 {% endhighlight %}
 {% endtabs %}
 

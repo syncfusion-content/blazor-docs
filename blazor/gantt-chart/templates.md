@@ -99,10 +99,11 @@ You can design your taskbars to view the tasks in Gantt Chart Chart by using `Ga
             }
         </TaskbarTemplate>
         <MilestoneTemplate>
-            <div style="margin-top:0px;">
-                <div style="position:absolute;left: 9px;top:-25px">
-                    <img class="moments" height="24" width="48" style="top: 30px !important;left: 0px !important;z-index:1" />
-                    <div class="e-gantt-milestone" style="width:41px;height:41px;transform: rotate(45deg);left: 8px;background-color: #7ab748 !important;border-color: #0d6efd !important"></div>
+            <div style="margin-top:-7px;">
+                <div class="e-gantt-milestone" style="position:absolute;">
+                    <img class="moments" height="24" width="48" />
+                    <div class="e-milestone-top" style="border-right-width:26px; margin-top: -24px;border-left-width:26px;border-bottom-width:26px;"></div>
+                    <div class="e-milestone-bottom" style="top:26px;border-right-width:26px; border-left-width:26px; border-top-width:26px;"></div>
                 </div>
             </div>
         </MilestoneTemplate>
@@ -182,6 +183,16 @@ You can design your taskbars to view the tasks in Gantt Chart Chart by using `Ga
         bottom: 2px;
         left: 5px;
         padding-right: 4px;
+    }
+
+    .e-milestone-top {
+        border-bottom-color: #7ab748 !important;
+        border-bottom: 1px solid #3f51b5;
+    }
+
+    .e-milestone-bottom {
+        border-top-color: #7ab748 !important;
+        border-top: 1px solid #3f51b5;
     }
 
     .oscar {

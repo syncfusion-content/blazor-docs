@@ -21,7 +21,7 @@ You can create **Blazor Server App** using Visual Studio in one of the following
 
 * [Create a Project using Microsoft Templates](https://docs.microsoft.com/en-us/aspnet/core/blazor/tooling?pivots=windows)
 
-* [Create a Project using Syncfusion Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio)
+* [Create a Project using Syncfusion Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project)
 
 ## Install Syncfusion Blazor Packages in the App
 
@@ -181,6 +181,6 @@ N> Syncfusion recommends to reference scripts using [Static Web Assets](https://
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to run the app. Then, the Syncfusion Blazor Calendar component will be rendered in the default web browser.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VtrANxXHzvmTCeaD?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Blazor Calendar Component](images/core-hosted/browser-output.png)
 
 N> You need to include a valid license key (either paid or trial key) within your applications. Refer to this [help topic](https://blazor.syncfusion.com/documentation/getting-started/license-key/overview) for more information.

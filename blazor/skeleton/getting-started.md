@@ -26,7 +26,7 @@ You can create **Blazor Server App** or **Blazor WebAssembly App** using Visual 
 
 * [Create a Project using Microsoft Templates](https://docs.microsoft.com/en-us/aspnet/core/blazor/tooling?pivots=windows)
 
-* [Create a Project using Syncfusion Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio)
+* [Create a Project using Syncfusion Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project)
 
 ## Install Syncfusion Blazor Notifications NuGet in the App
 
@@ -280,7 +280,7 @@ N> Syncfusion recommends to reference scripts using [Static Web Assets](https://
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to run the application. Then, the Syncfusion `Blazor Skeleton` component will be rendered in the default web browser.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BDrgDdspVKpxdzwX?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Blazor Skeleton Component](./images/blazor-skeleton-component.png)
 
 ## Skeleton Shapes
 
@@ -290,7 +290,7 @@ The [`Shape`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Notificati
 {% highlight razor %}
 
 <div style="width: 200px">
-    <SfSkeleton Shape="SkeletonType.Circle" Width="48px" CssClass="custom-css"></SfSkeleton>
+    <SfSkeleton Shape=SkeletonType.Circle Width="48px" CssClass="custom-css"></SfSkeleton>
     <SfSkeleton Shape="SkeletonType.Square" Width="48px"></SfSkeleton>
     <br/><br/>
     <SfSkeleton Shape="SkeletonType.Text" Height="15px"></SfSkeleton>
@@ -306,7 +306,7 @@ The [`Shape`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Notificati
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rXLUjHiJVASaKCYG?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Blazor Skeleton Component](./images/blazor-skeleton-shape-sample.png)
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/Skeleton).
 

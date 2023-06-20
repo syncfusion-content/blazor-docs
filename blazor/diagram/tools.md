@@ -19,9 +19,8 @@ To draw a [shape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagra
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
-@using Syncfusion.Blazor.Buttons
 
-<SfButton Content="addNode" OnClick="@AddNode" />
+<input Type="button" value="addNode" @onclick="AddNode" />
 <SfDiagramComponent @ref="diagram" Nodes="@nodes" Height="600px" />
 
 @code
@@ -81,10 +80,8 @@ To draw a [Connector](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Di
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
-@using Syncfusion.Blazor.Buttons
 
-
-<SfButton Content="AddConnector" OnClick="@AddConnector" />
+<input Type="button" value="AddConnector" @onclick="AddConnector" />
 <SfDiagramComponent @ref="diagram" Nodes="@nodes" Height="600px" />
 
 @code
@@ -134,7 +131,7 @@ To draw a [Connector](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Di
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/DrawingTools/ConnectorDrawTool)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/DrawingTools)
 
 ![Connector Tool in Blazor Diagram](images/blazor-diagram-connector-tool.gif)
 
@@ -144,10 +141,8 @@ Diagram allows you to create a text Node as soon as you click on the Diagram pag
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
-@using Syncfusion.Blazor.Buttons
 
-
-<SfButton Content="AddNode" OnClick="@AddNode" />
+<input Type="button" value="addNode" @onclick="AddNode" />
 <SfDiagramComponent @ref="diagram" Nodes="@nodes" Height="600px" />
 
 @code
@@ -197,7 +192,7 @@ Diagram allows you to create a text Node as soon as you click on the Diagram pag
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/DrawingTools/TextNodeDrawTool)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/DrawingTools)
 
 ![Text Tool in Blazor Diagram](./images/blazor-diagram-Text-drawingtool.gif)
 
@@ -209,10 +204,8 @@ The following code illustrates how to draw a polygon shape.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
-@using Syncfusion.Blazor.Buttons
 
-
-<SfButton Content="Polygon" OnClick="@Polygon" />
+<input Type="button" value="Polygon" @onclick="Polygon" />
 <SfDiagramComponent @ref="diagram" Nodes="@nodes" Height="600px">
     <SnapSettings Constraints="SnapConstraints.None"></SnapSettings>
 </SfDiagramComponent>
@@ -267,7 +260,7 @@ The following code illustrates how to draw a polygon shape.
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/DrawingTools/PolygonShapeTool)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/DrawingTools)
 
 ## How to draw polyline using a drawing tool
 
@@ -277,10 +270,7 @@ The following code illustrates how to draw a polyline connector.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
-@using Syncfusion.Blazor.Buttons
-
-
-<SfButton Content="Polyline" OnClick="@Polyline" />
+<input Type="button" value="Polyline" @onclick="Polyline" />
 <SfDiagramComponent @ref="diagram" Nodes="@nodes" Height="600px">
     <SnapSettings Constraints="SnapConstraints.None"></SnapSettings>
 </SfDiagramComponent>
@@ -328,7 +318,7 @@ The following code illustrates how to draw a polyline connector.
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/DrawingTools/PolylineDrawTool)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/DrawingTools)
 
 ## Tool selection
 
@@ -387,4 +377,4 @@ The following code illustrates how to enable multiple interaction controllers,
 }
 ```
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/DrawingTools/ToolSelection)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/DrawingTools)

@@ -250,65 +250,6 @@ In the following sample, the `SfDropDownList` component is rendered in the [Filt
 
 > You can find the fully working sample [here](https://github.com/SyncfusionExamples/blazor-datagrid-filtering-enum-column).
 
-## Filter multiple values using method
-
-To apply a filter to a column with multiple values in the Grid, you can utilize the [FilterByColumnAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_FilterByColumnAsync_System_String_System_String_System_Object_System_String_System_Nullable_System_Boolean__System_Nullable_System_Boolean__System_Object_System_Object_) method. This method allows you to pass a list of multiple values as an argument to the `FilterByColumnAsync` method to perform filtering actions on a specific `GridColumn`.
-
-In the following example, this is demonstrated by filtering the CustomerID column using the "Contains" operator with multiple values.
-
-```cshtml
-@using Syncfusion.Blazor.Buttons
-@using Syncfusion.Blazor.Grids
-
-<SfButton OnClick="FilterColumn" Content="FilterRecord"></SfButton>
-
-<SfGrid DataSource="@Orders" @ref="Grid" AllowFiltering="true" AllowPaging="true">
-    <GridColumns>
-        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
-        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-    </GridColumns>
-</SfGrid>
-
-@code {
-    public List<Order> Orders { get; set; }
-    public SfGrid<Order> Grid { get; set; }
-
-    protected override void OnInitialized()
-    {
-        Orders = Enumerable.Range(1, 75).Select(x => new Order()
-            {
-                OrderID = 1000 + x,
-                CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
-                Freight = 2.1 * x,
-                OrderDate = (new DateTime[] { new DateTime(2010, 5, 1), new DateTime(2010, 5, 2), new DateTime(2010, 5, 3), })[new Random().Next(3)]
-            }).ToList();
-    }
-
-    public class Order
-    {
-        public int? OrderID { get; set; }
-        public string? CustomerID { get; set; }
-        public DateTime? OrderDate { get; set; }
-        public double? Freight { get; set; }
-    }
-
-    private async Task FilterColumn()
-    {
-        
-        await Grid.FilterByColumnAsync("CustomerID", "equal", new List<string> { "BOLID", "BLONP" });
-
-    }
-
-}
-```
-
-The following screenshot shows filter multiple values using FilterBycolumnAsync method,
-![Filter Multiple Values using FilterByColumnAsync in Blazor DataGrid](./images/blazor-datagrid-filter-multiplevalues.gif)
-
-
-
 ## See Also
 
 * [How to Perform Multiple Value Filtering for Same Column in Grid](https://www.syncfusion.com/kb/12472/how-to-perform-multiple-value-filtering-for-same-column-in-grid)

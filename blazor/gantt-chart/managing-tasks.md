@@ -143,10 +143,7 @@ The following code example describes, how to define the Edit template for a part
         if (args.RequestType.Equals(Syncfusion.Blazor.Gantt.Action.BeforeSave))
         {
             var data = args.Data as TaskData;
-            if (dropdown != null && dropdown.Value != null)
-            {
-                data.TaskName = dropdown.Value.ToString();
-            }
+            data.TaskName = dropdown.Value.ToString();
         }
     }
     private List<TaskData> TaskCollection { get; set; }

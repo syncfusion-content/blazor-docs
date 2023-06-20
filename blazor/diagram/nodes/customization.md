@@ -47,7 +47,7 @@ The following code shows how to customize the appearance of the shape.
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/Appearance/NodeAppearance)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/Appearance)
 
 ![Node appearance in Blazor Diagram](../images/blazor-diagram-node-appearance.png)
 
@@ -111,7 +111,7 @@ The following code shows how to customize the appearance of the shape.
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/Appearance/NodeDefaultSample)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/Appearance)
 
 ## How to update template for the nodes
 
@@ -192,7 +192,7 @@ You can define node style using template in [NodeTemplate](https://help.syncfusi
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/Appearance/NodeTemplate)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/Appearance)
 
 N> In the above example, node's background color is updated using the click event of the button defined in the template.
 
@@ -309,7 +309,7 @@ The [SetNodeTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Di
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/Appearance/SetTemplate)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/Appearance)
 
 ![Blazor Diagram with SetNodeTemplate](../images/blazor-diagram-set-node-template.png)
 
@@ -349,7 +349,7 @@ Diagram provides support to add [Shadow](https://help.syncfusion.com/cr/blazor/S
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/Appearance/NodeShadow)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/Appearance)
 
 ![Blazor Diagram Node with shadow](../images/blazor-diagram-node-shadow.png)
 
@@ -397,7 +397,7 @@ The [Angle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Shad
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/Appearance/CustomShadow)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/Appearance)
 
 ![Blazor Diagram Node with Custom Shadow](../images/blazor-diagram-node-custom-shadow.png)
 
@@ -459,7 +459,7 @@ There are two types of gradients as follows:
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/Appearance/LinearGradientStyle)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/Appearance)
 
 ![Blazor Diagram Node with LinearGradient](../images/blazor-diagram-node-linear-gradient.png)
 
@@ -517,7 +517,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/Appearance/RadientGradientStyle)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/Appearance)
 
 ![Blazor Diagram Node with RadialGradient](../images/blazor-diagram-node-radial-gradient.png)
 
@@ -562,7 +562,7 @@ The following code shows how to set the AdditionalInfo value.
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/Appearance/CustomProperty)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/Appearance)
 
 **Note:** You can set any type of value for the AdditionalInfo property.
 
@@ -587,53 +587,37 @@ The following code illustrates how to render nodes based on the stack order.
     protected override void OnInitialized()
     {
         nodes = new DiagramObjectCollection<Node>();
-        // nodes are created and stored in nodes array.
-        Node node1 = new Node()
-            {
-                ID = "node1",
-                // Position of the node.
-                OffsetX = 250,
-                OffsetY = 250,
-                // Size of the node.
-                Width = 100,
-                Height = 100,
-                ZIndex = 2,
-                Style = new ShapeStyle()
-                {
-                    Fill = "#6495ED",
-                    StrokeColor = "white"
-                },
-            };
-        nodes.Add(node1);
-
-        Node node2 = new Node()
-            {
-                ID = "node2",
-                // Position of the node.
-                OffsetX = 300,
-                OffsetY = 300,
-                // Size of the node.
-                Width = 100,
-                Height = 100,
-                ZIndex = 1,
-                Style = new ShapeStyle()
-                {
-                    Fill = "#6495ED",
-                    StrokeColor = "white"
-                },
-            };
-        nodes.Add(node2);
+        // A node is created and stored in nodes array.
+        Node node = new Node()
+        {
+            ID = "node",
+            // Position of the node.
+            OffsetX = 250,
+            OffsetY = 250,
+            // Size of the node.
+            Width = 100,
+            Height = 100,
+            ZIndex = 2,
+            Style = new ShapeStyle() 
+            { 
+                Fill = "#6495ED", 
+                StrokeColor = "white" 
+            },
+            // Pivot of the node.
+            Pivot = new DiagramPoint() { X = 0, Y = 0 }
+        };
+        nodes.Add(node);
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/Appearance/ZIndexProperty)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/Appearance)
 
 ## How to set pivot property for node
 
 *  Node rotation angle will be based on [Pivot](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Node.html#Syncfusion_Blazor_Diagram_Node_Pivot) values which range from 0 to 1 like offset values. By default, the Pivot values are set to X= 0.5 and Y=0.5.
 
 
-The following code illustrates how to set the Pivot value.
+The following code illustrates how to render nodes based on the stack order.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -651,28 +635,28 @@ The following code illustrates how to set the Pivot value.
         nodes = new DiagramObjectCollection<Node>();
         // A node is created and stored in nodes array.
         Node node = new Node()
-            {
-                ID = "node",
-                // Position of the node.
-                OffsetX = 250,
-                OffsetY = 250,
-                // Size of the node.
-                Width = 100,
-                Height = 100,
-                ZIndex = 2,
-                Style = new ShapeStyle()
-                {
-                    Fill = "#6495ED",
-                    StrokeColor = "white"
-                },
-                // Pivot of the node.
-                Pivot = new DiagramPoint() { X = 0, Y = 0 }
-            };
+        {
+            ID = "node",
+            // Position of the node.
+            OffsetX = 250,
+            OffsetY = 250,
+            // Size of the node.
+            Width = 100,
+            Height = 100,
+            ZIndex = 2,
+            Style = new ShapeStyle() 
+            { 
+                Fill = "#6495ED", 
+                StrokeColor = "white" 
+            },
+            // Pivot of the node.
+           Pivot = new DiagramPoint() { X = 0, Y = 0.5 },
+        };
         nodes.Add(node);
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/Appearance/PivotProperty)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/Appearance)
 
 ## How to set background color for node
 
@@ -711,7 +695,7 @@ The following code illustrates how to set the background color for the node.
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/Appearance/BackgroundColor)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/Appearance)
 
 ## How to check  node is automatically positioned or not
 
@@ -789,7 +773,7 @@ The following code illustrates how to set the can auto layout property for the n
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/Appearance/CanAutoLayout)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/Appearance)
 
 ### How to get InEdges and OutEdges of node
 
@@ -797,49 +781,48 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ```csharp
 @using Syncfusion.Blazor.Diagram
-@using Syncfusion.Blazor.Buttons
 
-<SfButton Content="GetInEdges" OnClick="@GetInEdges" />
+<input type="button" value="GetInEdges" @onclick="@GetInEdges">
 <SfDiagramComponent @ref="diagram" Height="600px" Nodes="@nodes" Connectors="@connectors" />
 
 @code
 {
     SfDiagramComponent diagram;
-    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
-    DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+     DiagramObjectCollection<Node> nodes= new DiagramObjectCollection<Node>();
+    DiagramObjectCollection<Connector> connectors= new DiagramObjectCollection<Connector>();
 
     protected override void OnInitialized()
     {
         Node node1 = new Node()
-            {
-                ID = "node1",
-                Width = 100,
-                Height = 100,
-                OffsetX = 300,
-                OffsetY = 300,
-
-            };
+        {
+            ID = "node1",
+            Width = 100,
+            Height = 100,
+            OffsetX = 300,
+            OffsetY = 300,
+            
+        };
         nodes.Add(node1);
         Node node2 = new Node()
-            {
-                ID = "node2",
-                Width = 100,
-                Height = 100,
-                OffsetX = 300,
-                OffsetY = 500,
-            };
+        {
+            ID = "node2",
+            Width = 100,
+            Height = 100,
+            OffsetX = 300,
+            OffsetY = 500,
+        };
         nodes.Add(node2);
         Connector connector1 = new Connector()
-            {
-                ID = "connector1",
-                SourceID = "node1",
-                TargetID = "node2",
-            };
+        {
+            ID = "connector1",
+            SourceID = "node1",
+            TargetID = "node2",
+        };
         connectors.Add(connector1);
     }
     private void GetInEdges()
     {
-        List<string> Inedges = new List<string>();
+        List<string> Inedges= new List<string>();
         foreach (string inedge in diagram.Nodes[1].InEdges)
         {
             Inedges.Add(inedge);
@@ -847,7 +830,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/Appearance/InedgesOutedges)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/ExpandAndCollapse)
 
 ## How to get data source settings details
 
@@ -934,7 +917,7 @@ The following code illustrates how to get data source settings details.
     };
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/Appearance/DataProperty)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/Appearance)
 
 ## See also
 

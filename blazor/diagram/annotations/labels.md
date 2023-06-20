@@ -69,7 +69,7 @@ The following code explains how to create an annotation.
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Annotations/CreateAnnotation/CreateAnnotation)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Annotations)
 
 ![Blazor Diagram Node with Annotation](../images/blazor-diagram-node-with-annotation.png)
 
@@ -86,9 +86,8 @@ The following code explains how to add an annotation to a node at runtime by usi
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
-@using Syncfusion.Blazor.Buttons
 
-<SfButton Content="Addlabel" OnClick="@AddLabel" />
+<input value="AddLabel" type="button" @onclick="@AddLabel" name="AddLabel" />
 <SfDiagramComponent Height="600px" @ref="@diagram" Nodes="@nodes">
 </SfDiagramComponent>
 
@@ -122,7 +121,7 @@ The following code explains how to add an annotation to a node at runtime by usi
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Annotations/AddAnnotationAtRunTime)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Annotations)
 
 Also, the annotations can be added at runtime by using the [AddAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramObjectCollection-1.html#Syncfusion_Blazor_Diagram_DiagramObjectCollection_1_AddAsync__0_) method. The `await` operator suspends evaluation of the enclosing async method until the asynchronous operation represented by its operand completes.
 
@@ -146,10 +145,8 @@ A collection of annotations can be removed from the node by using the `RemoveAt`
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
-@using Syncfusion.Blazor.Buttons
 
-
-<SfButton Content="Removelabel" OnClick="@RemoveLabel" />
+<input value="RemoveLabel" type="button" @onclick="@RemoveLabel" name="RemoveLabel" />
 
 <SfDiagramComponent Height="600px" @ref="@diagram" Nodes="@nodes" />
 
@@ -186,7 +183,7 @@ A collection of annotations can be removed from the node by using the `RemoveAt`
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Annotations/RemoveAnnotation/RemoveAnnotation)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Annotations)
 
 Also, a collection of annotations can be removed from the node by using the `Remove` method.
 
@@ -210,10 +207,8 @@ The following code sample shows how the annotation of the node changed at runtim
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
-@using Syncfusion.Blazor.Buttons
 
-
-<SfButton Content="Updatelabel" OnClick="@UpdateLabel" />
+<input value="UpdateLabel" type="button" @onclick="@UpdateLabel" name="UpdateLabel" />
 
 <SfDiagramComponent Height="600px" @ref="@diagram" Nodes="@nodes" />
 
@@ -250,7 +245,7 @@ The following code sample shows how the annotation of the node changed at runtim
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Annotations/UpdateAnnotation/UpdateAnnotation)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Annotations)
 
 ## See also
 

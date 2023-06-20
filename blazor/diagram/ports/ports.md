@@ -71,9 +71,13 @@ To create and customize the ports in the Blazor Diagram, refer to the below vide
     }
 }
 ```
->**Note:** Port's Id should not start with numbers or special characters and should not contain special characters such as underscore(_) or space.
+>**Note:** Do not use underscore(_) for port's id.
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Ports/ActionofPorts/CreatePorts)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Ports)
+
+>**Note:** Do not use underscore(_) for port's id.
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Ports)
+
 
 ![Creating Port in Blazor Diagram](../images/blazor-diagram-create-port.png)
 
@@ -86,10 +90,8 @@ If **ID** is not set, then default **ID** is automatically set.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
-@using Syncfusion.Blazor.Buttons
 
-
-<SfButton Content="AddPorts" OnClick="@AddPorts" />
+<input type="button" value="AddPorts" @onclick="@AddPorts" />
 <SfDiagramComponent Height="600px" Nodes="@nodes" />
 
 @code
@@ -128,7 +130,7 @@ If **ID** is not set, then default **ID** is automatically set.
 }
 
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Ports/ActionofPorts/AddPort)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Ports)
 
 Also, the port can be added at runtime by using the `AddAsync` method. The `await` operator suspends evaluation of the enclosing async method until the asynchronous operation represented by its operand completes.
 
@@ -147,7 +149,7 @@ public async void AddPorts()
     await ((nodes[0].Ports) as DiagramObjectCollection<PointPort>).AddAsync(port);
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Ports/ActionofPorts/AddPortsAsync())
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Ports)
 
 ![Adding Port in Blazor Diagram](../images/blazor-diagram-add-port.png)
 
@@ -159,9 +161,8 @@ The port’s [ID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagra
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
-@using Syncfusion.Blazor.Buttons
 
-<SfButton Content="AddPorts" OnClick="@AddPorts" />
+<input type="button" value="AddPorts" @onclick="@AddPorts" />
 <SfDiagramComponent Height="600px" Nodes="@nodes" />
 
 @code
@@ -226,7 +227,7 @@ The port’s [ID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagra
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Ports/ActionofPorts/AddMultiplePorts)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Ports)
 
 ![Adding Multiple Ports in Blazor Diagram](../images/blazor-diagram-add-multiple-ports.png)
 
@@ -236,9 +237,8 @@ A collection of ports can be removed from the node by using the native `RemoveAt
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
-@using Syncfusion.Blazor.Buttons
 
-<SfButton Content="RemovePorts" OnClick="@RemovePorts" />
+<input type="button" value="RemovePorts" @onclick="@RemovePorts" />
 <SfDiagramComponent Height="600px" Nodes="@nodes" />
 
 @code
@@ -289,7 +289,7 @@ A collection of ports can be removed from the node by using the native `RemoveAt
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Ports/ActionofPorts/RemovePorts)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Ports)
 
 ## How to add update port at runtime
 
@@ -299,10 +299,8 @@ The following code example explains how to change the port properties at runtime
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
-@using Syncfusion.Blazor.Buttons
 
-
-<SfButton Content="Update Port" OnClick="@UpdatePort" />
+<input type="button" value="Update Port" @onclick="@UpdatePort" />
 <SfDiagramComponent @ref="diagram" Height="600px" Nodes="@nodes" />
 
 @code
@@ -350,7 +348,7 @@ protected override void OnInitialized()
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Ports/ActionofPorts/UpdatePorts)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Ports)
 
 
 ## How to get InEdges and OutEdges of ports
@@ -360,10 +358,8 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 The following code example how to get inedges and outedges of port.
 ```cshtml
 @using Syncfusion.Blazor.Diagram
-@using Syncfusion.Blazor.Buttons
 
-
-<SfButton Content="GetInEdges" OnClick="@GetInEdges" />
+<input type="button" value="GetInEdges" @onclick="@GetInEdges">
 <SfDiagramComponent @ref="diagram" Height="600px" Nodes="@nodes" Connectors="@connectors" />
 
 @code
@@ -455,7 +451,7 @@ The following code example how to get inedges and outedges of port.
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Ports/ActionofPorts/InedgesAndOutedges)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Ports)
 
 
 
