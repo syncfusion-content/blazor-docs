@@ -37,7 +37,11 @@ In the below code, word document is converted in to pdf document and return that
     <UploaderAsyncSettings SaveUrl="https://aspnetmvc.syncfusion.com/services/api/uploadbox/Save"
                            RemoveUrl="https://aspnetmvc.syncfusion.com/services/api/uploadbox/Remove"></UploaderAsyncSettings>
 </SfUploader>
-<SfPdfViewer2 @ref="viewerInstance" Height="500px" Width="1060px" ToolbarSettings="@ToolbarSettings"></SfPdfViewer2>
+<SfPdfViewer2 @ref="viewerInstance" 
+              Height="100%" 
+              Width="100%" 
+              ToolbarSettings="@ToolbarSettings">
+</SfPdfViewer2>
 
 @code {
     SfPdfViewer2 viewerInstance;
@@ -129,12 +133,12 @@ In the below code, word document is converted in to pdf document and return that
         }
     }
 
-    public void loadPDFdocument(byte[] bytes)
+    public async void loadPDFdocument(byte[] bytes)
     {
         // Convert a PDF document into a base64 string.
         string base64String = Convert.ToBase64String(bytes);
         // Load the base64 string in the SfPdfViewer.
-        viewerInstance.LoadAsync("data:application/pdf;base64," + base64String, null);
+        await viewerInstance.LoadAsync("data:application/pdf;base64," + base64String, null);
     }
 }
 ```
