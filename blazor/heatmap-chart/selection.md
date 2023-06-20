@@ -102,14 +102,13 @@ In the HeatMap, the [EnableMultiSelect]() property is used to allow single cell 
 
 ### ClearSelection Method
 
-The `ClearSelection` method is used to clear the cell selection in the HeatMap.
+The `ClearSelection` method is used to deselect the selected cells in the HeatMap. To clear the selection, reset the selected cells data structure to an empty state. The below example illustrates the same.
 
 ```cshtml
 
 @using Syncfusion.Blazor.HeatMap
 
 <button @onclick="ClearSelection"> Clear Selection</button>
-
 
 <SfHeatMap @ref="Heatmap" AllowSelection="true" DataSource="@dataSource">
     <HeatMapTitleSettings Text="Sales Revenue per Employee (in 1000 US$)">
@@ -123,18 +122,17 @@ The `ClearSelection` method is used to clear the cell selection in the HeatMap.
     SfHeatMap<int[,]> Heatmap;
    
     public int[,] dataSource = new int[,]
-        {
-            {73, 39, 26, 39, 94, 0},
-            {93, 58, 53, 38, 26, 68},
-            {99, 28, 22, 4, 66, 90},
-            {14, 26, 97, 69, 69, 3},
-            {7, 46, 47, 47, 88, 6},
-            {41, 55, 73, 23, 3, 79}
-        };
+    {
+        {73, 39, 26, 39, 94, 0},
+        {93, 58, 53, 38, 26, 68},
+        {99, 28, 22, 4, 66, 90},
+        {14, 26, 97, 69, 69, 3},
+        {7, 46, 47, 47, 88, 6},
+        {41, 55, 73, 23, 3, 79}
+    };
        
     string[] XAxisLabels = new string[] { "Nancy", "Andrew", "Janet", "Margaret", "Steven", "Michael" };
     string[] YAxisLabels = new string[] { "Mon", "Tue", "Wed", "Thu", "Fri", "Sat" };
-    
     
     public void ClearSelection()
     {
