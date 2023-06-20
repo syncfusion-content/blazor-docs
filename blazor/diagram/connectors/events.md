@@ -83,7 +83,7 @@ The following code example explains how to get the selection change event in the
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Events)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Events/SelectionChangeEvent)
 
 ## Position change event
 
@@ -156,7 +156,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Events)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Events/PositionChangeEvent)
 
 ## Connection change event
 
@@ -238,7 +238,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Events)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Events/ConnectionChangeEvent)
 
 ## Source point change event
 * While changing the source point  of the connector, the following events can be used to do the customization.
@@ -296,7 +296,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Events)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Events/SourcePointChanged)
 
 ## Target point change event
 * While changing the target point of the connector, the following events can be used to do the customization.
@@ -310,7 +310,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent @ref="Diagram" Width="1000px" TargetChanging="@OnTargetChanging" TargetPointChanged="@OnTargetPointChanged" Height="500px" Connectors="@connectors" Nodes="@nodes">
+<SfDiagramComponent @ref="Diagram" Width="1000px" TargetPointChanging="@OnTargetPointChanging" TargetPointChanged="@OnTargetPointChanged" Height="500px" Connectors="@connectors" Nodes="@nodes">
 </SfDiagramComponent>
 
 @code
@@ -325,37 +325,36 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
     protected override void OnInitialized()
     {
         Connector Connector = new Connector()
-        {
-            ID = "connector1",
-            SourcePoint = new DiagramPoint()
             {
-                X = 200,
-                Y = 200
-            },
-            TargetPoint = new DiagramPoint()
-            {
-                X = 300,
-                Y = 400,
-            }
-        };
+                ID = "connector1",
+                SourcePoint = new DiagramPoint()
+                {
+                    X = 200,
+                    Y = 200
+                },
+                TargetPoint = new DiagramPoint()
+                {
+                    X = 300,
+                    Y = 400,
+                }
+            };
         connectors.Add(Connector);
     }
 
-    //  Notify the target point changing event before the target point is change.
-    private void OnTargetChanging(EndPointChangingEventArgs args)
-    {
-        //Set true to cancel the target point change
-        args.Cancel = true;
-    }
 
+    // Notify the target point changed event before the target point has changed.
+    private void OnTargetPointChanging(EndPointChangingEventArgs args)
+    {
+        //Action to be performed.
+    }
     // Notify the target point changed event after the target point has changed.
-    private void OnTargetChanged(EndPointChangedEventArgs args)
+    private void OnTargetPointChanged(EndPointChangedEventArgs args)
     {
         //Action to be performed.
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Events)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Events/TargetPointChanged)
 
 ## ConnectorCreating event
 
@@ -403,8 +402,9 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
         connector.TargetDecorator.Style.Fill = "black";
         connector.TargetDecorator.Style.StrokeColor = "black";
     }
+}
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Events)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Events/ConnectorCreating)
 
 ## Segment collection change event
 
@@ -449,7 +449,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Events)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Events/SegmentCollectionChangeEvent)
 
 
 ## See also
