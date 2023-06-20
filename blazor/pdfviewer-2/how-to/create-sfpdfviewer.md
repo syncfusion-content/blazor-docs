@@ -13,9 +13,13 @@ The Syncfusion's Blazor SfPdfviewer component allows you to view the created PDF
 
 The following code example shows how to view the created PDF document.
 
-```csharp
+```cshtml
 
-<SfPdfViewer2 ID="pdfviewer" @ref="@PdfViewer" DocumentPath="@documentPath">
+<SfPdfViewer2 ID="pdfviewer" 
+              @ref="@PdfViewer" 
+              DocumentPath="@documentPath"
+              Height="100%"
+              Width="100%">
     <PdfViewerEvents Created="created"></PdfViewerEvents>
 </SfPdfViewer2>
 
