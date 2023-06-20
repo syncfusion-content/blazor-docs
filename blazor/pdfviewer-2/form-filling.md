@@ -82,7 +82,6 @@ The following code shows how to export the form fields as an XML data stream and
 @using Syncfusion.Blazor.Buttons
 
 <SfButton OnClick="@ExportAsStream">Export XML</SfButton>
-
 <SfButton OnClick="@ImportFromStream">Import XML</SfButton>
 
 <SfPdfViewer2 @ref=Viewer DocumentPath="@DocumentPath" Height="100%" Width="100%" />
@@ -90,9 +89,7 @@ The following code shows how to export the form fields as an XML data stream and
 @code 
 {
     SfPdfViewer2 Viewer;
-
     public string DocumentPath { get; set; } = "wwwroot/Data/FormFillingDocument.pdf";
-
     Stream stream;
 
     // Event triggers on Export XML button click.
@@ -129,9 +126,7 @@ The following code shows how to export the form fields as an FDF data stream and
 @code
 {
     SfPdfViewer2 Viewer;
-
     public string DocumentPath { get; set; } = "wwwroot/Data/FormFillingDocument.pdf";
-
     Stream stream;
 
     // Event triggers on Export FDF button click.
@@ -168,9 +163,7 @@ The following code shows how to export the form fields as an XFDF data stream an
 @code
 {
     SfPdfViewer2 Viewer;
-
     public string DocumentPath { get; set; } = "wwwroot/Data/FormFillingDocument.pdf";
-
     Stream stream;
 
     // Event triggers on Export XFDF button click.
@@ -207,9 +200,7 @@ The following code shows how to export the form fields as a JSON data stream and
 @code
 {
     SfPdfViewer2 Viewer;
-
     public string DocumentPath { get; set; } = "wwwroot/Data/FormFillingDocument.pdf";
-
     Stream stream;
 
     // Event triggers on Export JSON button click.
@@ -242,9 +233,7 @@ The following code shows how to export the form fields as a JSON data stream and
 <SfPdfViewer2 Height="100%" Width="100%" DocumentPath="@DocumentPath" @ref="@Viewer"/>
 
 @code {
-
     SfPdfViewer2 Viewer;
-
     public string DocumentPath { get; set; } = "wwwroot/Data/FormFillingDocument.pdf";
 
     // Event triggers on Export JSON button click.
@@ -273,9 +262,7 @@ The following code shows how to export the form fields as a JSON data stream and
 @code
 {
     SfPdfViewer2 Viewer;
-
     public string DocumentPath { get; set; } = "wwwroot/Data/FormFillingDocument.pdf";
-
     Dictionary<string, string> dictionary;
 
     // Event triggers on Export Data button click.

@@ -19,9 +19,10 @@ If you have your PDF files in the web, you can open it in the viewer using URL.
 
 @using Syncfusion.Blazor.SfPdfViewer
 
-<SfPdfViewer2 DocumentPath="@DocumentPath"  Height="100%" Width="100%">
+<SfPdfViewer2 DocumentPath="@DocumentPath"
+              Height="100%"
+              Width="100%">
 </SfPdfViewer2>
-
 
 @code {
     public string DocumentPath { get; set; }
@@ -35,7 +36,7 @@ If you have your PDF files in the web, you can open it in the viewer using URL.
 }
 
 ```
-N> [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Load%20and%20Save/Load%20PDF%20file%20from%20URL-SfPdfViewer)
+[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Load%20and%20Save/Load%20PDF%20file%20from%20URL-SfPdfViewer)
 
 ## Opening a PDF from Cloud
 
@@ -53,9 +54,7 @@ The following code example shows how to open and load the PDF file stored in Azu
 <SfPdfViewer2 DocumentPath="@DocumentPath" Height="100%" Width="100%"></SfPdfViewer2>
 
 @code {
-
     public string DocumentPath { get; set; }
-
     protected override void OnInitialized()
     {
         //Connection String of Storage Account
@@ -87,26 +86,23 @@ There is an UI option in built-in toolbar to open the PDF file from local file s
 @using Syncfusion.Blazor.SfPdfViewer
 
 <SfUploader ID="UploadFiles" AllowedExtensions=".pdf,.PDF">
-
     <UploaderEvents OnUploadStart="onsuccess"></UploaderEvents>
-
     <UploaderAsyncSettings SaveUrl="https://aspnetmvc.syncfusion.com/services/api/uploadbox/Save" 
-    RemoveUrl="https://aspnetmvc.syncfusion.com/services/api/uploadbox/Remove"></UploaderAsyncSettings>
-
+    RemoveUrl="https://aspnetmvc.syncfusion.com/services/api/uploadbox/Remove">
+    </UploaderAsyncSettings>
 </SfUploader>
 
-<SfPdfViewer2 @ref="@Viewer" Height="100%" Width="100%">
-
+<SfPdfViewer2 @ref="@Viewer"
+              Height="100%"
+              Width="100%">
 </SfPdfViewer2>
 
 @code {
-
     SfPdfViewer2 Viewer;
-
-    public void onsuccess(UploadingEventArgs action)
+    public async void onsuccess(UploadingEventArgs action)
     {
         string filePath = action.FileData.RawFile.ToString();
-        Viewer.Load(filePath, null);
+        await Viewer.LoadAsync(filePath, null);
     }
 }
 
@@ -120,39 +116,40 @@ The following code snippet explains how the PDF file can be loaded in SfPdfViewe
 
 @using Syncfusion.Blazor.SfPdfViewer
 
-<SfPdfViewer2 ID="viewer" DocumentPath="@DocumentPath" Height="100%" Width="100%">
+<SfPdfViewer2 ID="viewer"
+              DocumentPath="@DocumentPath"
+              Height="100%"
+              Width="100%">
 </SfPdfViewer2>
 
 @code {
-
     static byte[] byteArray = System.IO.File.ReadAllBytes("wwwroot/Data/PDF_Succinctly.pdf");
-
     static string base64String = Convert.ToBase64String(byteArray);
-
     public string DocumentPath { get; set; } = "data:application/pdf;base64," + base64String;
-
 }
 
 ```
 
-N> [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Load%20and%20Save/Load%20a%20PDF%20file%20from%20base%2064%20string-SfPdfViewer)
+[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Load%20and%20Save/Load%20a%20PDF%20file%20from%20base%2064%20string-SfPdfViewer)
 
 ## Opening a PDF from stream
 
 You can load a PDF file from stream in SfPdfViewer by converting the stream into a base64 string. The following code sample explains how the PDF file can be loaded in SfPdfViewer from stream.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.SfPdfViewer
 @using System.IO;
 
-<SfPdfViewer2 ID="viewer" DocumentPath="@DocumentPath" Height="100%" Width="100%">
+<SfPdfViewer2 ID="viewer"
+              DocumentPath="@DocumentPath"
+              Height="100%"
+              Width="100%">
 </SfPdfViewer2>
 
 @code{
 
     public string DocumentPath { get; set; }
-
     protected override void OnInitialized()
     {
         string filePath = "wwwroot/Data/PDF_Succinctly.pdf";
@@ -168,4 +165,4 @@ You can load a PDF file from stream in SfPdfViewer by converting the stream into
 
 ```
 
-N> [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Load%20and%20Save/Load%20a%20PDF%20file%20from%20memory%20stream-SfPdfViewer)
+[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Load%20and%20Save/Load%20a%20PDF%20file%20from%20memory%20stream-SfPdfViewer)

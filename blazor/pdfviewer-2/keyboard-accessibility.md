@@ -41,9 +41,7 @@ The Blazor SfPdfViewer supports the following keyboard interactions.
 <SfPdfViewer2 DocumentPath="@DocumentPath" Height="100%" Width="100%"></SfPdfViewer2>
 
 @code{
-
     public string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
-
 }
 
 ```

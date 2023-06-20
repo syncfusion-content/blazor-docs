@@ -24,7 +24,6 @@ There are two ways to highlight a text in the PDF document.
 **Using the context menu.**
 
 * Select a text in the PDF document and right-click it.
-
 * Select **Highlight** option in the context menu that appears
 
 ![Highlighting Context in Blazor SfPdfViewer](../../pdfviewer/images/blazor-pdfviewer-highlight-context.png)
@@ -32,11 +31,8 @@ There are two ways to highlight a text in the PDF document.
 **Using the annotation toolbar.**
 
 * Click the **Edit Annotation** button in the SfPdfViewer toolbar. A toolbar appears below it.
-
 * Select the **Highlight** button in the annotation toolbar. It enables the highlight mode.
-
 * Select the text and the highlight annotation will be added.
-
 * You can also select the text and apply the highlight annotation using the **Highlight** button.
 
 ![Highlighting Text in Blazor SfPdfViewer](../../pdfviewer/images/blazor-pdfviewer-highlight-text.png)
@@ -49,15 +45,18 @@ In the pan mode, if the highlight mode is entered, the SfPdfViewer control will 
 @using Syncfusion.Blazor.Buttons
 
 <SfButton OnClick="OnClick">Highlight</SfButton>
-<SfPdfViewer2 DocumentPath="@DocumentPath" @ref="viewer" Width="100%" Height="100%">
+<SfPdfViewer2 DocumentPath="@DocumentPath"
+              @ref="viewer"
+              Width="100%"
+              Height="100%">
 </SfPdfViewer2>
 
 @code {
     SfPdfViewer2 viewer;
 
-    public void OnClick(MouseEventArgs args)
+    public async void OnClick(MouseEventArgs args)
     {
-        viewer.SetAnnotationMode(AnnotationType.Highlight);
+        await viewer.SetAnnotationModeAsync(AnnotationType.Highlight);
     }
     private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
 }
@@ -71,7 +70,6 @@ There are two ways to underline a text in the PDF document.
 **Using the context menu.**
 
 * Select a text in the PDF document and right-click it.
-
 * Select **Underline** option in the context menu that appears.
 
 ![Displaying Underline in Blazor SfPdfViewer ContextMenu](../../pdfviewer/images/blazor-pdfviewer-underline-context-menu.png)
@@ -79,11 +77,8 @@ There are two ways to underline a text in the PDF document.
 **Using the annotation toolbar.**
 
 * Click the **Edit Annotation** button in the SfPdfViewer toolbar. A toolbar appears below it.
-
 * Select the **Underline** button in the annotation toolbar. It enables the underline mode.
-
 * Select the text and the underline annotation will be added.
-
 * You can also select the text and apply the underline annotation using the **Underline** button.
 
 ![Blazor SfPdfViewer with Underline Text](../../pdfviewer/images/blazor-pdfviewer-underline-text.png)
@@ -96,7 +91,10 @@ In the pan mode, if the underline mode is entered, the SfPdfViewer control will 
 @using Syncfusion.Blazor.Buttons
 
 <SfButton OnClick="OnClick">Underline</SfButton>
-<SfPdfViewer2 DocumentPath="@DocumentPath" @ref="viewer" Width="100%" Height="100%">
+<SfPdfViewer2 DocumentPath="@DocumentPath"
+              @ref="viewer"
+              Width="100%"
+              Height="100%">
 </SfPdfViewer2>
 
 @code {
@@ -104,7 +102,7 @@ In the pan mode, if the underline mode is entered, the SfPdfViewer control will 
 
     public void OnClick(MouseEventArgs args)
     {
-        viewer.SetAnnotationMode(AnnotationType.Underline);
+        viewer.SetAnnotationModeAsync(AnnotationType.Underline);
     }
     private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
 }
@@ -118,7 +116,6 @@ There are two ways to strikethrough a text in the PDF document:
 Using the context menu.
 
 * Select a text in the PDF document and right-click it.
-
 * Select **strikethrough** option in the context menu that appears.
 
 ![Displaying Strike Through in Blazor SfPdfViewer ContextMenu](../../pdfviewer/images/blazor-pdfviewer-strike-through-in-contextmenu.png)
@@ -126,11 +123,8 @@ Using the context menu.
 **Using the annotation toolbar.**
 
 * Click the **Edit Annotation** button in the SfPdfViewer toolbar. A toolbar appears below it.
-
 * Select the **Strikethrough** button in the annotation toolbar. It enables the strikethrough mode.
-
 * Select the text and the strikethrough annotation will be added.
-
 * You can also select the text and apply the strikethrough annotation using the **Strikethrough** button.
 
 ![Blazor PDFViewer with StrikeThrough Text](../../pdfviewer/images/blazor-pdfviewer-strike-through-text.png)
@@ -143,16 +137,18 @@ In the pan mode, if the strikethrough mode is entered, the SfPdfViewer control w
 @using Syncfusion.Blazor.Buttons
 
 <SfButton OnClick="OnClick">Strikethrough</SfButton>
-<SfPdfViewer2 DocumentPath="@DocumentPath" @ref="viewer" Width="100%" Height="100%">
+<SfPdfViewer2 DocumentPath="@DocumentPath"
+              @ref="viewer"
+              Width="100%"
+              Height="100%">
 </SfPdfViewer2>
 
 @code {
-    
     SfPdfViewer2 viewer;
 
     public void OnClick(MouseEventArgs args)
     {
-        viewer.SetAnnotationMode(AnnotationType.Strikethrough);
+        viewer.SetAnnotationModeAsync(AnnotationType.Strikethrough);
     }
     private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
 }
@@ -167,13 +163,13 @@ The color and the opacity of the text markup annotation can be edited using the 
 
 The color of the annotation can be edited using the color palette provided in the Edit Color tool.
 
-![Editing Text Color in Blazor PDFViewer](../../pdfviewer/images/blazor-pdfviewer-editing-text-color.png)
+![Editing Text Color in Blazor SfPdfViewer](../../pdfviewer/images/blazor-pdfviewer-editing-text-color.png)
 
 ### Editing opacity
 
 The opacity of the annotation can be edited using the range slider provided in the Edit Opacity tool.
 
-![Editing Text Opacity in Blazor PDFViewer](../../pdfviewer/images/blazor-pdfviewer-edit-text-opacity.png)
+![Editing Text Opacity in Blazor SfPdfViewer](../../pdfviewer/images/blazor-pdfviewer-edit-text-opacity.png)
 
 ## Text markup annotation settings
 
@@ -185,19 +181,26 @@ N> After editing the default color and opacity using the Edit color tool and Edi
 
 @using Syncfusion.Blazor.SfPdfViewer
 
-<SfPdfViewer2 @ref="@viewer" DocumentPath="@DocumentPath" HighlightSettings="@HighlightSettings" UnderlineSettings="@UnderlineSettings" 
-    StrikethroughSettings="@StrikethroughSettings" Height="100%" Width="100%"></SfPdfViewer2>
+<SfPdfViewer2 @ref="@viewer"
+              DocumentPath="@DocumentPath"
+              HighlightSettings="@HighlightSettings"
+              UnderlineSettings="@UnderlineSettings"
+              StrikethroughSettings="@StrikethroughSettings"
+              Height="100%"
+              Width="100%">
+</SfPdfViewer2>
 
 @code {
     SfPdfViewer2 viewer;
-
     private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
 
     PdfViewerHighlightSettings HighlightSettings = new PdfViewerHighlightSettings { Color = "green", Opacity = 0.6 };
 
-    PdfViewerUnderlineSettings UnderlineSettings = new PdfViewerUnderlineSettings { Color = "blue", Opacity = 0.6 };
+    PdfViewerUnderlineSettings UnderlineSettings = new PdfViewerUnderlineSettings { Color = "blue", 
+    Opacity = 0.6 };
 
-    PdfViewerStrikethroughSettings StrikethroughSettings = new PdfViewerStrikethroughSettings { Color = "orange", Opacity = 0.6 };
+    PdfViewerStrikethroughSettings StrikethroughSettings = new PdfViewerStrikethroughSettings { 
+    Color = "orange", Opacity = 0.6 };
 }
 
 ```

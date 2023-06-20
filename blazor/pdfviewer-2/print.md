@@ -18,9 +18,7 @@ The SfPdfViewer supports printing the loaded PDF file by default. You can enable
 <SfPdfViewer2 Height="100%" Width="100%" DocumentPath="@DocumentPath" EnablePrint="true" />
 
 @code{
-    
     public string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
-    
 }
 
 ```
@@ -37,14 +35,12 @@ The SfPdfViewer supports printing the loaded PDF file by default. You can enable
 <SfPdfViewerServer Width="1060px" Height="500px" DocumentPath="@DocumentPath" @ref="@Viewer"/>
 
 @code{
-
     SfPdfViewerServer Viewer;
-
     public string DocumentPath { get; set; } = "wwwroot/data/PDF_Succinctly.pdf";
 
-    public void OnClick(MouseEventArgs args)
+    public async void OnClick(MouseEventArgs args)
     {
-        Viewer.Print();
+        await Viewer.PrintAsync();
     }
 }
 
