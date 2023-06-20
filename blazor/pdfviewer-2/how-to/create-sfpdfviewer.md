@@ -15,7 +15,11 @@ The following code example shows how to view the created PDF document.
 
 ```cshtml
 
-<SfPdfViewer2 ID="pdfviewer" @ref="@PdfViewer" DocumentPath="@documentPath">
+<SfPdfViewer2 ID="pdfviewer" 
+              @ref="@PdfViewer" 
+              DocumentPath="@documentPath"
+              Height="100%"
+              Width="100%">
     <PdfViewerEvents Created="created"></PdfViewerEvents>
 </SfPdfViewer2>
 
