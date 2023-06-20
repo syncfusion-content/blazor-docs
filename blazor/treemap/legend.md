@@ -11,6 +11,11 @@ documentation: ug
 
 Legend is used to provide valuable information for interpreting what the TreeMap displays. The legends can be represented in various colors, shapes or other identifiers based on the data.
 
+The below video demonstrates the legend customization options in the Blazor TreeMap component.
+
+{% youtube
+"youtube:https://www.youtube.com/watch?v=2ilArsWz9u0"%}
+
 ## Types of legend
 
 TreeMap component supports two different types of legend mode as following.
@@ -486,7 +491,3 @@ Set the [EnableRtl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Tree
 ```
 
 ![Right to Left in Blazor TreeMap Legend](images/Internationalization/blazor-treemap-legend-right-to-left.png)
-
-To customize the legend in the Blazor TreeMap component, you can check on this video.
-{% youtube
-"youtube:https://www.youtube.com/watch?v=2ilArsWz9u0"%}
