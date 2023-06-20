@@ -100,8 +100,8 @@ The following options are available to customize the legend position:
 <SfTreeMap DataSource="Fruits" TValue="Fruit" WeightValuePath="Count" RangeColorValuePath="Count">
     <TreeMapLeafItemSettings LabelPath="FruitName">
         <TreeMapLeafColorMappings>
-            <TreeMapLeafColorMapping From="500" To="3000" Color='new string[] { "Orange" }'></TreeMapLeafColorMapping>
-            <TreeMapLeafColorMapping From="3000" To="5000" Color='new string[] { "Green" }'></TreeMapLeafColorMapping>
+            <TreeMapLeafColorMapping StartRange="500" EndRange="3000" Color='new string[] { "Orange" }'></TreeMapLeafColorMapping>
+            <TreeMapLeafColorMapping StartRange="3000" EndRange="5000" Color='new string[] { "Green" }'></TreeMapLeafColorMapping>
         </TreeMapLeafColorMappings>
     </TreeMapLeafItemSettings>
     <TreeMapLegendSettings Visible="true" Position="LegendPosition.Top"></TreeMapLegendSettings>
@@ -139,8 +139,8 @@ The legend alignment is used to align the legend items in a specific location. T
 <SfTreeMap DataSource="Fruits" TValue="Fruit" WeightValuePath="Count" RangeColorValuePath="Count">
     <TreeMapLeafItemSettings LabelPath="FruitName">
         <TreeMapLeafColorMappings>
-            <TreeMapLeafColorMapping From="500" To="3000" Color='new string[]{"Orange"}'></TreeMapLeafColorMapping>
-            <TreeMapLeafColorMapping From="3000" To="5000" Color='new string[]{"Green"}'></TreeMapLeafColorMapping>
+            <TreeMapLeafColorMapping StartRange="500" EndRange="3000" Color='new string[]{"Orange"}'></TreeMapLeafColorMapping>
+            <TreeMapLeafColorMapping StartRange="3000" EndRange="5000" Color='new string[]{"Green"}'></TreeMapLeafColorMapping>
         </TreeMapLeafColorMappings>
     </TreeMapLeafItemSettings>
     <TreeMapLegendSettings Visible="true" Alignment="Alignment.Far">
@@ -243,8 +243,8 @@ Based on the mapping ranges in the data source, get the excluded ranges from the
 <SfTreeMap DataSource="Fruits" TValue="Fruit" WeightValuePath="Count" RangeColorValuePath="Count">
     <TreeMapLeafItemSettings LabelPath="FruitName">
         <TreeMapLeafColorMappings>
-            <TreeMapLeafColorMapping From="500" To="3000" Color='new string[] { "Orange" }'></TreeMapLeafColorMapping>
-            <TreeMapLeafColorMapping From="3000" To="4000" Color='new string[] { "Green" }' ></TreeMapLeafColorMapping>
+            <TreeMapLeafColorMapping StartRange="500" EndRange="3000" Color='new string[] { "Orange" }'></TreeMapLeafColorMapping>
+            <TreeMapLeafColorMapping StartRange="3000" EndRange="4000" Color='new string[] { "Green" }' ></TreeMapLeafColorMapping>
             <TreeMapLeafColorMapping Color='new string[] { "red" }'></TreeMapLeafColorMapping>
         </TreeMapLeafColorMappings>
     </TreeMapLeafItemSettings>
@@ -282,8 +282,8 @@ To enable or disable the desired legend item for each color mapping, set the [Sh
 <SfTreeMap DataSource="Fruits" TValue="Fruit" WeightValuePath="Count" RangeColorValuePath="Count">
     <TreeMapLeafItemSettings LabelPath="FruitName">
         <TreeMapLeafColorMappings>
-            <TreeMapLeafColorMapping From="500" To="3000" Color='new string[] { "Orange" }'></TreeMapLeafColorMapping>
-            <TreeMapLeafColorMapping From="3000" To="4000" Color='new string[] { "Green" }' ShowLegend="false"></TreeMapLeafColorMapping>
+            <TreeMapLeafColorMapping StartRange="500" EndRange="3000" Color='new string[] { "Orange" }'></TreeMapLeafColorMapping>
+            <TreeMapLeafColorMapping StartRange="3000" EndRange="4000" Color='new string[] { "Green" }' ShowLegend="false"></TreeMapLeafColorMapping>
             <TreeMapLeafColorMapping Color='new string[] { "red" }'></TreeMapLeafColorMapping>
         </TreeMapLeafColorMappings>
     </TreeMapLeafItemSettings>
