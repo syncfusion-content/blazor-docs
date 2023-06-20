@@ -17,7 +17,7 @@ The chart can be zoomed in three different ways.
 * Mouse Wheel - By setting [EnableMouseWheelZooming](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartZoomSettings.html#Syncfusion_Blazor_Charts_ChartZoomSettings_EnableMouseWheelZooming) property to **true** in [ChartZoomSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartZoomSettings.html), the chart can be zoomed-in and zoomed-out by scrolling the mouse wheel.
 * Pinch - By setting [EnablePinchZooming](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartZoomSettings.html#Syncfusion_Blazor_Charts_ChartZoomSettings_EnablePinchZooming) property to **true** in [ChartZoomSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartZoomSettings.html), the chart can be zoomed through pinch gesture in touch enabled devices.
 
- > Pinch zooming is only usable in browsers that support multi-touch gestures.
+ N> Pinch zooming is only usable in browsers that support multi-touch gestures.
 
 ```cshtml
 
@@ -110,7 +110,7 @@ There are three types of modes.
 
 ## Toolbar
 
-By default, zoom in, zoom out, pan, and reset buttons are available in the toolbar for zoomed charts. The [ToolbarItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartZoomSettings.html#Syncfusion_Blazor_Charts_ChartZoomSettings_ToolbarItems) property specifies which tools should be displayed in the toolbar.
+By default, zoom in, zoom out, pan, and reset buttons are available in the toolbar for zoomed charts. The [ToolbarItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartZoomSettings.html#Syncfusion_Blazor_Charts_ChartZoomSettings_ToolbarItems) property specifies which tools should be displayed in the toolbar. 
 
 ```cshtml
 
@@ -153,6 +153,49 @@ By default, zoom in, zoom out, pan, and reset buttons are available in the toolb
 ```
 
 ![Zooming Option in Blazor Column Chart Toolbar](images/zoom/blazor-column-chart-zoom-in-toolbar.png)
+
+### Toolbar Display Mode
+
+By default, zooming tool bar will appear only when the chart is zoomed. Now we can display zooming tool bar for un zoomed charts by setting the ToolbarDisplayMode as ToolbarMode.Always.
+
+```cshtml
+
+@using Syncfusion.Blazor.Charts
+
+<SfChart Title="Sales History of Product X">
+    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
+
+    <ChartZoomSettings EnableSelectionZooming="true" EnableMouseWheelZooming="true"
+                       EnablePinchZooming="true"  ToolbarDisplayMode="ToolbarMode.Always">
+    </ChartZoomSettings>
+
+    <ChartSeriesCollection>
+        <ChartSeries DataSource="@SalesReports" XName="X" YName="YValue" Type="ChartSeriesType.Column"></ChartSeries>
+    </ChartSeriesCollection>
+</SfChart>
+
+@code {
+
+    public class ChartData
+    {
+        public string X { get; set; }
+        public double YValue { get; set; }
+    }
+
+    public List<ChartData> SalesReports = new List<ChartData>
+    {
+        new ChartData { X= "USA", YValue= 46 },
+        new ChartData { X= "GBR", YValue= 27 },
+        new ChartData { X= "CHN", YValue= 26 },
+        new ChartData { X= "UK", YValue= 26 },
+        new ChartData { X= "AUS", YValue= 26 },
+        new ChartData { X= "IND", YValue= 26 },
+        new ChartData { X= "DEN", YValue= 26 },
+        new ChartData { X= "MEX", YValue= 26 },
+    };
+}
+```
+![Toolbar display in Un-Zoomed chart](images/zoom/blazor-column-chart-zoom-toolbar-displaymode.png)
 
 ## Enable pan
 
@@ -326,7 +369,7 @@ The axis interval will be calculated automatically with respect to the zoomed ra
 
 ![Auto Interval on Zooming in Blazor Area Chart](images/zoom/blazor-area-chart-auto-interval-zooming.png)
 
-> Refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
+N> Refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
 
 ## See Also
 
