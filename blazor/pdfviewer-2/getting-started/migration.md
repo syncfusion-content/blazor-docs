@@ -200,6 +200,6 @@ When using the PDF Viewer (NextGen) in a WebAssembly application, need to includ
 </PropertyGroup>
 {% endhighlight %}
 {% endtabs %}
+
 </td>
-</tr>
 </table>
