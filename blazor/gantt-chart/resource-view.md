@@ -13,12 +13,12 @@ To visualize tasks assigned to each resource in a hierarchical manner, you can s
 
 ## Unassigned task
 
-Unassigned tasks in the Gantt Chart refer to tasks that have not been assigned to any particular resource. These tasks are categorized under the label `Unassigned Task` and appear at the bottom of the Gantt Chart's data collection. The Gantt Chart's default behavior is to validate unassigned tasks during record creation, based on the task's `Resources` mapping property in the data source. If a resource is subsequently assigned to an unassigned task, the task will be repositioned as a child task under the assigned resource.
+Unassigned tasks in the Gantt Chart refer to tasks that have not been assigned to any particular resource. These tasks are categorized under the label `Unassigned Task` and appear at the bottom of the Gantt Chart's data collection. The Gantt Chart's default behavior is to validate unassigned tasks during record creation, based on the task's [Resources](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttResourceFields-1.html#Syncfusion_Blazor_Gantt_GanttResourceFields_1_Resources) mapping property in the data source. If a resource is subsequently assigned to an unassigned task, the task will be repositioned as a child task under the assigned resource.
 
 ## Resource task
 A task assigned to a resource is termed a resource task and is displayed as a child task under the corresponding resource in the Gantt chart.
 
-N> There is not support for Indent/Oudent in Resource view Gantt Chart.
+N> There is not support for Indent/Oudent in resource view Gantt Chart.
 
 ```cshtml
 @using Syncfusion.Blazor.Gantt
@@ -165,8 +165,8 @@ To highlight the range of overallocation dates with a square bracket, you can en
 
 ## Limitations
 
-* No support for multiple resource in single task Resource view Gantt Chart.
-* No support for resource records editing in Resource view Gantt Chart.
+* The resource view in the Gantt Chart does not support assigning multiple resources to a single task.
+* Editing of resource records is not supported in the resource view of the Gantt Chart.
 
 
 Gantt Chart Resource view
