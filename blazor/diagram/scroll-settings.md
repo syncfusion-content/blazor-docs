@@ -115,15 +115,18 @@ The auto-scroll behavior in diagram can be enabled or disabled by using the [Ena
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
-<SfDiagramComponent Height="400px" Width="400px" Nodes="@nodes">
+<SfDiagramComponent Height="400px" Width="400px" Nodes="@nodes" Connectors="@connectors">
     @* Sets the ScrollSettings for the diagram *@
-    <ScrollSettings EnableAutoScroll=true @bind-ScrollLimit="@scrollLimit" >
+    <ScrollSettings EnableAutoScroll=true @bind-ScrollLimit="@scrollLimit">
     </ScrollSettings>
 </SfDiagramComponent>
 @code
 {
     ScrollLimitMode scrollLimit { get; set; } = ScrollLimitMode.Infinity;
+    //Defines diagram's node collection.
     DiagramObjectCollection<Node> nodes;
+    //Defines diagram's connector collection.
+    DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
     protected override void OnInitialized()
     {
         nodes = new DiagramObjectCollection<Node>();
@@ -145,6 +148,21 @@ The auto-scroll behavior in diagram can be enabled or disabled by using the [Ena
             };
         // Add node.
         nodes.Add(node);
+        Connector Connector = new Connector()
+            {
+                ID = "connector1",
+                // Set the source and target point of the connector.
+                SourcePoint = new DiagramPoint() { X = 100, Y = 100 },
+                TargetPoint = new DiagramPoint() { X = 100, Y = 200 },
+                // Type of the connector segments.
+                Type = ConnectorSegmentType.Straight,
+                Style = new ShapeStyle()
+                {
+                    StrokeColor = "#6495ED",
+                    StrokeWidth = 1
+                },
+            };
+        connectors.Add(Connector);
     }
 }
 ```
@@ -153,12 +171,12 @@ The auto-scrolling region is limited by the [ScrollLimit](https://help.syncfusio
 
 [OnAutoScrollChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_OnAutoScrollChange) gets triggered when the auto-scroll (scrollbars) is changed, and you can do your customization in this event. Please refer [OnAutoScrollChange](events#onautoscrollchange-event) page for more details about OnAutoScrollChange.
 
-|![AutoScroll support for node](images/Autoscroll.gif) | 
+|![AutoScroll support for node](images/AutoScroll.gif) | 
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/ScrollSettings)
 
 ## AutoScroll Padding
-The [AutoScrollPadding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ScrollSettings.html#Syncfusion_Blazor_Diagram_ScrollSettings_AutoScrollPadding) is used to specify the maximum distance between the object and the diagram's edge that will trigger auto-scrolling. When auto-scrolling is enabled, the diagram viewport will automatically scroll in the direction of the mouse movement when the user drags a diagram elements to the edge of the viewport. The padding to start the auto-scrolling at the edge can be controlled by setting the AutoScrollPadding property.
+The [AutoScrollPadding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ScrollSettings.html#Syncfusion_Blazor_Diagram_ScrollSettings_AutoScrollPadding) is used to specify the maximum distance between the object and the diagram's edge that will trigger auto-scrolling. When auto-scrolling is enabled, the diagram viewport will automatically scroll in the direction of the mouse movement when the user drags a node or connector to the edge of the viewport. The padding to start the auto-scrolling at the edge can be controlled by setting the AutoScrollPadding property.
 
 N> The default value is 20 pixels.
 
