@@ -729,17 +729,17 @@ You can use [GanttEvents](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
 
 ![Changing Row Style in Blazor Gantt Chart](images/blazor-gantt-chart-row-style.png)
 
-## Accessing row model information programmatically
+## Accessing row task model information programmatically
 
-The Blazor Gantt Chart Component provides a method called [GetRowTaskModel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_GetRowTaskModel) that can be used to obtain the values associated with row model details. These details include the level, expanded status, child record status, task width, left value, and critical state of the task. 
+The Blazor Gantt Chart Component provides a method called [GetRowTaskModel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_GetRowTaskModel) that can be used to obtain the values associated with task model details. These details include the level, expanded status, task width, task left, task progress width and more. 
 
-This is demonstrated in the below sample code, where the [GetRowTaskModel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_GetRowTaskModel) method is called on selecting the row, which returns the value of the row model details of the selected record.
+This is demonstrated in the below sample code, where the [GetRowTaskModel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_GetRowTaskModel) method is called on selecting the row, which returns the value of the task model details of the selected record.
 
 ```cshtml
 @using Syncfusion.Blazor.Gantt
 @using Syncfusion.Blazor.Grids;
 <div>
-    <div style="font-weight:bold;">Row Model Properties:</div>
+    <div style="font-weight:bold;">Task Model Properties:</div>
     <div style="display:flex;visibility:@Visible">
         <div>
             <span class="showhide">Level: @Level </span>
@@ -816,6 +816,6 @@ This is demonstrated in the below sample code, where the [GetRowTaskModel](https
     }
 }
 ```
-![Row Model Properties](images/blazor-gantt-chart-GetRowTaskModel.png)
+![Row Task Model Properties](images/blazor-gantt-chart-GetRowTaskModel.png)
 
 N> You can refer to our [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Gantt Chart example](https://blazor.syncfusion.com/demos/gantt-chart/default-functionalities?theme=bootstrap4) to know how to render and configure the Gantt.
