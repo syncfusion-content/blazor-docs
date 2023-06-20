@@ -11,7 +11,7 @@ documentation: ug
 
 You can stretch the PDF Viewer size to its container size while resizing the container at runtime. The following code snippet explains how to update the PDF Viewer size while resizing the Splitter at runtime. In this example, the Syncfusion’s Splitter component is used.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.SfPdfViewer
 @using Syncfusion.Blazor.Layouts
@@ -38,19 +38,19 @@ You can stretch the PDF Viewer size to its container size while resizing the con
 
 @code 
 {
-    SfPdfViewer2 viewer;
-    
+    SfPdfViewer2? viewer;
+
     //Sets the document path for initial loading.
     private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
 
     //This method will get invoked when the splitter is resized.
-    private void onresize()
+    private async void onresize()
     {
         //This method will update the PDF Viewer size when the container size is updated at runtime.
-        viewer.UpdateViewerContainerAsync();
+        await viewer!.UpdateViewerContainerAsync();
     }
 }
 
 ```
 
-N> [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Common/Resize%20the%20PDF%20Viewer%20to%20its%20parent%20element%20on%20Splitter%20-%20SfPdfViewer).
+[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Common/Resize%20the%20PDF%20Viewer%20to%20its%20parent%20element%20on%20Splitter%20-%20SfPdfViewer).

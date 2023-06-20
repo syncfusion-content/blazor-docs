@@ -13,7 +13,7 @@ Syncfusion's Blazor SfPdfViewer component allows you to identify if the SfPdfVie
 
 The following code example shows how to achieve this based on the Undo Redo actions.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.SfPdfViewer
 @using Syncfusion.Blazor.Buttons
@@ -34,33 +34,28 @@ else
 {
     <button @onclick="redo" disabled>Redo</button>
 }
-<SfPdfViewer2 @ref="@viewer"
-                   @bind-CanUndo="@canUndo"
-                   @bind-CanRedo="@canRedo"
-                   DocumentPath="@DocumentPath"
-                   Height="540px"
-                   Width="100%">
+<SfPdfViewer2 @ref="@viewer" @bind-CanUndo="@canUndo" @bind-CanRedo="@canRedo" DocumentPath="@DocumentPath" Height="100%" Width="100%">
 </SfPdfViewer2>
 
-@code 
+@code
 {
-    SfPdfViewer2 viewer;
+    SfPdfViewer2? viewer;
     bool canUndo = true;
     bool canRedo = true;
     private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
-    
+
     // Event triggers on Undo button click.
     private async Task undo()
     {
         // API to perform Undo action.
-        await viewer.UndoAsync();
+        await viewer!.UndoAsync();
     }
 
     // Event triggers on Redo button click.
     private async Task redo()
     {
         // API to perform Redo action.
-        await viewer.RedoAsync();
+        await viewer!.RedoAsync();
     }
 }
 

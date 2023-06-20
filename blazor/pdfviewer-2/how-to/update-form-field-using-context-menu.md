@@ -9,10 +9,10 @@ documentation: ug
 
 # Update form field using context menu in Blazor SfPdfViewer Component
 
-You can update the form field's at runtime using the FormFieldClick event and UpdateFormFieldsAsync() method of SfPdfViewer. The following code example explains how to open Context menu when you click on the form field and how to update the menu item content as form field's value. In this example, the Syncfusion’s ContextMenu component is used to update form field.
+You can update the form field's at runtime using the FormFieldClick event and `UpdateFormFieldsAsync()` method of SfPdfViewer. The following code example explains how to open Context menu when you click on the form field and how to update the menu item content as form field's value. In this example, the Syncfusion’s ContextMenu component is used to update form field.
 
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Buttons
 @using Syncfusion.Blazor.SfPdfViewer
@@ -31,12 +31,12 @@ You can update the form field's at runtime using the FormFieldClick event and Up
 
 @code {
     SfPdfViewer2? Viewer;
-    SfContextMenu<CustomItem> contextMenuObj;
-    
+    SfContextMenu<CustomItem>? contextMenuObj;
+
     private class CustomItem
     {
-        public string Content { get; set; }
-        public string Id { get; set; }
+        public string? Content { get; set; }
+        public string? Id { get; set; }
     }
 
     //Sets the PDF document path for initial loading.
@@ -44,8 +44,8 @@ You can update the form field's at runtime using the FormFieldClick event and Up
 
     double x = 0; double y = 0;
     private string feildId = "";
-    FormField formField;
-    private CustomItem SelectedItem;
+    FormField? formField;
+    private CustomItem? SelectedItem;
 
     private void mouseOver(MouseEventArgs args)
     {
@@ -54,14 +54,14 @@ You can update the form field's at runtime using the FormFieldClick event and Up
     }
 
     //This method will get invoked when the menu item is clicked.
-    private void selectedHandler(MenuEventArgs<CustomItem> args)
+    private async void selectedHandler(MenuEventArgs<CustomItem> args)
     {
         SelectedItem = args.Item;
         Dictionary<string, string> param = new Dictionary<string, string>();
-        param.Add(feildId, SelectedItem.Content);
-        formField.Value = SelectedItem.Content;
+        param.Add(feildId, SelectedItem.Content!);
+        formField!.Value = SelectedItem.Content;
         //This method is used to update the isReadOnly property of the form field.
-        Viewer.UpdateFormFieldsAsync(formField);
+        await Viewer!.UpdateFormFieldsAsync(formField);
     }
 
     //This method will get invoked when you click on the form field like name.
@@ -80,7 +80,7 @@ You can update the form field's at runtime using the FormFieldClick event and Up
     private async void documentLoad(LoadEventArgs args)
     {
         //Perform export annotations action in the PDF Viewer.
-        Dictionary<string, string> feilds = await Viewer.ExportFormFieldsAsObjectAsync();
+        Dictionary<string, string> feilds = await Viewer!.ExportFormFieldsAsObjectAsync();
         if (feilds.Keys.Count > 0)
         {
             foreach (KeyValuePair<string, string> feild in feilds)
@@ -98,4 +98,4 @@ You can update the form field's at runtime using the FormFieldClick event and Up
 
 ```
 
-N> [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Common/Update%20form%20fileds%20using%20Context%20Menu%20-%20SfPdfViewer).
+[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Common/Update%20form%20fileds%20using%20Context%20Menu%20-%20SfPdfViewer).

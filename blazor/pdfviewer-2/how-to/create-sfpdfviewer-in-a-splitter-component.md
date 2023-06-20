@@ -11,13 +11,13 @@ documentation: ug
 
 You can use Splitter to render the PDF Viewer while rendering more than one component. The following code snippet explains how to render the SfPdfViewer component inside a Splitter pane. In this example, the Syncfusion’s Splitter component is used to render SfPdfViewer.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.SfPdfViewer
 @using Syncfusion.Blazor.Layouts
 
 <!--This splitter layout holds two panes-->
-<SfSplitter Height="640px" Width="100%">    
+<SfSplitter Height="100%" Width="100%">    
     <!--Configures one or more panes to construct different layouts-->
     <SplitterPanes>
         <SplitterPane Size="200px">
@@ -37,10 +37,10 @@ You can use Splitter to render the PDF Viewer while rendering more than one comp
 
 @code 
 {
-    SfPdfViewer2 viewer;
+    SfPdfViewer2? viewer;
     private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
 }
 
 ```
 
-N> [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Common/Render%20the%20PDF%20Viewer%20on%20Splitter%20-%20SfPdfViewer).
+[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Common/Render%20the%20PDF%20Viewer%20on%20Splitter%20-%20SfPdfViewer).

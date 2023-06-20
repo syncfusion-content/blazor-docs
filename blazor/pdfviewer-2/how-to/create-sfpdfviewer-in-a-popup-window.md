@@ -7,11 +7,11 @@ control: SfPdfViewer
 documentation: ug
 ---
 
-# Create PDF Viewer in a popup window in Blazor PDF Viewer Component
+# Create PDF Viewer in a popup window in Blazor SfPdfViewer Component
 
 For quick view, you might need to display the PDF file in a dialog window. The following code snippet explains how to use the SfPdfViewer component inside a dialog window. In this example, the Syncfusion’s dialog component is used for Blazor.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Buttons
 @using Syncfusion.Blazor.Popups
@@ -19,7 +19,7 @@ For quick view, you might need to display the PDF file in a dialog window. The f
 
 <div id="target" style="width:800px;height:500px">
     <SfButton @onclick="OnClick">Open PDF Viewer</SfButton>
-    <SfDialog @ref="@Dialog" Target="#target" Width="1060px" Visible="false" IsModal="true" Header= "@Header" ShowCloseIcon="true">
+    <SfDialog @ref="@Dialog" Target="#target" Width="100%" Visible="false" IsModal="true" Header= "@Header" ShowCloseIcon="true">
         <DialogEvents OnOpen="OnOpen"></DialogEvents>
         <SfPdfViewer2 @ref="Viewer" />
     </SfDialog>
@@ -34,9 +34,9 @@ For quick view, you might need to display the PDF file in a dialog window. The f
         this.Dialog.Show();
     }
 
-    public void OnOpen(BeforeOpenEventArgs args)
+    public async void OnOpen(BeforeOpenEventArgs args)
     {
-        Viewer.LoadAsync(DocumentPath, null);
+        await Viewer!.LoadAsync(DocumentPath, null);
     }
     public string DocumentPath { get; set; } = "wwwroot/data/PDF_Succinctly.pdf";
     public string Header { get; set; } = "PDF Viewer";

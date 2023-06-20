@@ -9,9 +9,9 @@ documentation: ug
 
 # Load desired PDF for initial loading in Blazor SfPdfViewer Component
 
-You can load your own PDF document for initial loading as well as change document at run-time in SfPdfViewer hosted sample. To achieve that, you need to add your document in the server project and refer api/values as ServiceUrl in client project.
+You can load your own PDF document for initial loading as well as change document at run-time in SfPdfViewer hosted sample. To achieve that, you need to add your document in the server project and refer api/values in client project.
 
-```csharp
+```cshtml
 
 @inject HttpClient Http;
 @using Syncfusion.Blazor.Buttons;
@@ -38,4 +38,4 @@ You can load your own PDF document for initial loading as well as change documen
 
 ```
 
-N> [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Common/Load%20Desire%20PDF%20in%20Blazor%20-%20SfPdfViewer).
+[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Common/Load%20Desire%20PDF%20in%20Blazor%20-%20SfPdfViewer).
