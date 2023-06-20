@@ -259,7 +259,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 The [Padding] property of a group node defines the spacing between the group node’s edges and its children.
 
-The following code illustrates how to add Padding to node group.
+The following code illustrates how to add Padding to the node group.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -276,7 +276,7 @@ The following code illustrates how to add Padding to node group.
     {
         Node node1 = createNode("node1", 100, 100, "Node1");
         Node node2 = createNode("node2", 300, 100, "Node2");
-        // Grouping node 1 and node 2 into a single node-group.
+        // Grouping node one and node two into a single node-group.
         groupNode.Children = new string[] { "node1", "node2" };
         groupNode.Padding = new DiagramThickness() { Left=20, Right= 20, Top=20, Bottom=20 };
         nodes.Add(node1);
@@ -314,7 +314,7 @@ The following code illustrates how to add Padding to node group.
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Group)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Group/CreateGroup)
 
 ![Padding in Blazor Diagram](images/GroupPadding.png)
 

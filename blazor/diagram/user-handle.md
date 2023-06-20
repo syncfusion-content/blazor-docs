@@ -439,7 +439,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ### How to provide a template to userhandle
 
-You can define user handle style using template in [UserHandleTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramTemplates.html#Syncfusion_Blazor_Diagram_DiagramTemplates_UserHandleTemplate) at tag level. The template will be rendered when the PathData and Source properties of the userhandle are not defined. However, if either PathData or Source is defined, then template will not be rendered as they take precedence. The following code explains how to define template for fixeduserhandle.
+You can define user handle style using a template in the [UserHandleTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramTemplates.html#Syncfusion_Blazor_Diagram_DiagramTemplates_UserHandleTemplate) at the tag level. The template will be rendered when the PathData and ImageUrl properties of the userhandle are not defined. However, if either PathData or ImageUrl is defined, then template will not be rendered as they take precedence. The following code explains how to define a template for the fixeduserhandle.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -487,7 +487,7 @@ You can define user handle style using template in [UserHandleTemplate](https://
         };
         SelectedModel = new DiagramSelectionSettings()
             {
-                //Enable userhandle for selected model.
+                //Enable userhandle for the selected model.
                 Constraints = SelectorConstraints.UserHandle,
                 UserHandles = this.UserHandles
             };
@@ -515,7 +515,7 @@ You can define user handle style using template in [UserHandleTemplate](https://
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/UserHandle)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/UserHandle/CustomizeUserHandle)
 
 ![Template for UserHandle](images/UserHandleTemplate.gif)
 
@@ -799,6 +799,77 @@ The following code explains how to customize the connector fixed user handle.
 }
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/UserHandle/ConnectorFixedUserHandle)
+
+## How to provide a template to fixed userhandle
+
+You can define fixed user handle style using a template in the [FixedUserHandleTemplate] at the tag level. You can define separate templates for each node and connector by differentiating them based on their ID property. The template will be rendered when the PathData properties of the fixeduserhandle is not defined. However, if both path data and template are defined, the path data will take precedence, and the template will not be rendered. The following code explains how to define a template for the fixed user handle.
+
+```csharp
+@using Syncfusion.Blazor.Diagram
+<SfDiagramComponent @ref="@diagram" Height="600px" Nodes = "@nodes" Connectors="@connectors">
+    <DiagramTemplates>
+        <FixedUserHandleTemplate>
+            if ((context as FixedUserHandle).ID == "user1" || (context as FixedUserHandle).ID == "user2")
+            {
+                <div id="button" style="height: 100%; width: 100%;">
+                    <input type="button" value="Button1" />
+                </div>
+            }
+        </FixedUserHandleTemplate>
+    </DiagramTemplates>
+</SfDiagramComponent>
+@code
+{
+    public SfDiagramComponent diagram;
+    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+    protected override void OnInitialized()
+    {
+        Node node1 = new Node()
+        {
+            ID="node1",
+            OffsetX = 250,
+            OffsetY = 250,
+            Width = 100,
+            Height = 100,
+            Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "white" },
+            FixedUserHandles = new DiagramObjectCollection<NodeFixedUserHandle>()
+        {
+            new NodeFixedUserHandle()
+            {
+                ID = "user1",
+                    Height = 30,
+                    Width = 30,
+                    Visibility = true,
+                    Padding = new DiagramThickness() { Bottom = 1, Left = 1, Right = 1, Top = 1 },
+                    Margin = new DiagramThickness() { Left = 30 }, Offset = new DiagramPoint() { X = 1 , Y = 0 }
+                },
+             }
+            };
+        nodes.Add(node1);
+        Connector connector = new Connector
+        {
+            ID = "connector1",
+            Type = ConnectorSegmentType.Orthogonal,
+            SourcePoint = new DiagramPoint() { X = 600, Y = 200 },
+            TargetPoint = new DiagramPoint() { X = 800, Y = 400 },
+            FixedUserHandles = new DiagramObjectCollection<ConnectorFixedUserHandle>() { new ConnectorFixedUserHandle() { 
+                ID="user2",
+                Offset = 0.5, 
+                Alignment = FixedUserHandleAlignment.Center, 
+                Displacement = new DiagramPoint() { X = 10}, 
+                Padding = new DiagramThickness() { Bottom = 1, Left = 1, Right = 1, Top = 1 }, 
+                Width = 30, 
+                Height = 30, 
+            }
+            }
+        };
+        connectors.Add(connector);
+    }
+}
+```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/UserHandle/CustomizeFixedUserHandle)
+![Template for FixedUserHandle](images/FixedUserTemplate.png)
 
 ## FixedUserHandle event
 
