@@ -639,4 +639,4 @@ The [AutoScrollChangeEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion
 
 ![Speed Limit control in autoScroll support for node](images/SpeedLimitNodeConnector.gif) 
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Events)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Events/OnAutoScrollChange)
