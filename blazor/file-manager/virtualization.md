@@ -29,11 +29,7 @@ In the instance below, a sizable collection of files can be found in the folders
 
 ```
 
-## Output
-
-After successful compilation of your application, simply press `F5` to run the application.
-
-
+The below GIF demonstrates that the file loading when virtualization is enabled.
 
 ![Virtualization in Blazor FileManager](images/blazor-filemanager-virtualization.gif)
 
