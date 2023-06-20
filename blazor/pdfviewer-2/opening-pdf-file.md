@@ -76,6 +76,70 @@ The following code example shows how to open and load the PDF file stored in Azu
 
 N> The **Azure.Storage.Blobs** NuGet package must be installed in your application to use the previous code example.
 
+```cshtml
+@using Azure.Storage.Files.Shares
+@using System.IO;
+@using Syncfusion.Blazor.SfPdfViewer
+
+<SfPdfViewerServer DocumentPath="@DocumentPath" Width="100%" Height="100%" />
+
+@code {
+    public string DocumentPath { get; set; } = "wwwroot/data/PDF_Succinctly.pdf";
+    protected override void OnInitialized()
+    {
+        //Connection String of Storage Account
+        string connectionString = "Here Place Your Connection string";
+        string shareName = "pdfdocument";
+        //File Name to be loaded into Syncfusion SfPdfViewer
+        string filePath = "Hive_Succinctly.pdf";
+        ShareFileClient shareFileClient = new ShareFileClient(connectionString, shareName, filePath);
+        Stream stream = shareFileClient.OpenRead();
+        byte[] bytes;
+        using (var memoryStream = new MemoryStream())
+        {
+            stream.CopyTo(memoryStream);
+            bytes = memoryStream.ToArray();
+        }
+        DocumentPath = "data:application/pdf;base64," + Convert.ToBase64String(bytes);
+    }
+}
+```
+
+N> The **Azure.Storage.Files.Shares** NuGet package must be installed in your application to use the previous code example.
+
+
+## Opening a PDF from database
+
+The following code example shows how to open the PDF file in viewer from SQL Server database.
+
+```cshtml
+@using Syncfusion.Blazor.SfPdfViewer
+
+<SfPdfViewer2 DocumentPath="@DocumentPath" Width="100%" Height="100%" />
+
+@code {
+    public string DocumentPath { get; set; }
+    protected override void OnInitialized()
+    {
+        string documentID = "PDF Succinctly";
+        string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Database.mdf;";
+        System.Data.SqlClient.SqlConnection connection = new System.Data.SqlClient.SqlConnection(connectionString);
+        //Searches for the PDF document from the database
+        string query = "select Data from Table where DocumentName = '" + documentID + "'";
+        System.Data.SqlClient.SqlCommand command = new System.Data.SqlClient.SqlCommand(query, connection);
+        connection.Open();
+        System.Data.SqlClient.SqlDataReader read = command.ExecuteReader();
+        read.Read();
+        //Reads the PDF document data as byte array from the database
+        byte[] byteArray = (byte[])read["Data"];
+        DocumentPath = "data:application/pdf;base64," + Convert.ToBase64String(byteArray);
+    }
+}
+```
+
+N> The **System.Data.SqlClient** package must be installed in your application to use the previous code example. You need to modify the connectionString variable in the previous code example as per the connection string of your database.
+
+
 ## Opening a PDF from file system
 
 There is an UI option in built-in toolbar to open the PDF file from local file system. If you want to achieve the same functionality while designing your own toolbar, you can use the following code example to load and open the PDF file. In this sample, the Syncfusion’s Uploader control is used for Blazor.
