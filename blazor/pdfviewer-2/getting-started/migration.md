@@ -20,9 +20,7 @@ SfPdfViewer control is now available as a unified package for Windows, Mac, and 
 
 ### Nuget Package
 
-To initialize the PDF Viewer component, you need to add the following project references to your project
-
-N> Need to add the **Syncfusion.Blazor.PdfViewer** for `Web assembly application` and **Syncfusion.Blazor.PdfViewerServer** for `Server assembly application` for `PDF Viewer`component and **Syncfusion.Blazor.SfPdfViewer** for `SfPdfViewer` for both `Server and Web assembly application`.
+To initialize the PDF Viewer (NextGen) component, you need to add the following project references to your project
 
 <table>
 <tr>
@@ -37,13 +35,6 @@ Syncfusion.Blazor.PdfViewer
 Syncfusion.Blazor.PdfViewerServer
 
 {% endhighlight %}
-{% highlight C# tabtitle=".csproj" hl_lines="2" %}
-
-<ItemGroup>
-    <PackageReference Include="Syncfusion.Blazor.PdfViewerServer.Windows"/>
-</ItemGroup>
-
-{% endhighlight %}
 {% endtabs %}
 </td>
 </tr>
@@ -56,13 +47,6 @@ Syncfusion.Blazor.PdfViewerServer
 {% highlight C# tabtitle=".csproj" hl_lines="1" %}
 
 Syncfusion.Blazor.SfPdfViewer
-
-{% endhighlight %}
-{% highlight C# tabtitle="csproj" hl_lines="2" %}
-
-<ItemGroup>
-    <PackageReference Include="Syncfusion.Blazor.SfPdfViewer"/>
-</ItemGroup>
 
 {% endhighlight %}
 {% endtabs %}
