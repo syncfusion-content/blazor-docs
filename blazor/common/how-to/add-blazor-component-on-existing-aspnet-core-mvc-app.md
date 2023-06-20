@@ -17,7 +17,7 @@ This section explains how to add Syncfusion Blazor component on an existing ASP.
 
     ![Manage NuGet package on ASP.NET Core MVC app](images/asp-mvc-manage-nuget-package.png)
 
-3. Search for the NuGet packages `Syncfusion.Blazor.Grid` and `Syncfusion.Blazor.Themes` and install them.
+3. Search the `Syncfusion.Blazor.Grid` and `Syncfusion.Blazor.Themes` NuGet packages and install them.
 
     ![Installing Syncfusion Blazor Grid NuGet package](images/asp-mvc-install-nuget.png)
 
