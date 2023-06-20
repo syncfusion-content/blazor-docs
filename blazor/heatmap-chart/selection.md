@@ -60,7 +60,7 @@ To select multiple cells using different modes of interactions as shown in the b
 
 The image below illustrates the process of selecting multiple cells in the HeatMap by clicking and dragging the mouse across the specific cells.
 
-![Multiple Selection in Blazor HeatMap Chart](images/blazor-heatmap-chart-multiple-selection.png)
+![Multiple Selection in Blazor HeatMap Chart](images/blazor-heatmap-chart-multiple-selection.gif)
 
 ## Enable single cell selection
 
@@ -98,4 +98,50 @@ In the HeatMap, the [EnableMultiSelect]() property is used to allow single cell 
 }
 
 ```
-![Single cell selection in Blazor HeatMap Chart](images/blazor-heatmap-chart-single-cell-selection.png)
+![Single cell selection in Blazor HeatMap Chart](images/blazor-heatmap-chart-single-cell-selection.gif)
+
+### ClearSelection Method
+
+The `ClearSelection` method is used to clear the cell selection in the HeatMap.
+
+```cshtml
+
+@using Syncfusion.Blazor.HeatMap
+
+<button @onclick="ClearSelection"> Clear Selection</button>
+
+
+<SfHeatMap @ref="Heatmap" AllowSelection="true" DataSource="@dataSource">
+    <HeatMapTitleSettings Text="Sales Revenue per Employee (in 1000 US$)">
+    </HeatMapTitleSettings>
+    <HeatMapXAxis Labels="@XAxisLabels"></HeatMapXAxis>
+    <HeatMapYAxis Labels="@YAxisLabels"></HeatMapYAxis>
+    <HeatMapCellSettings ShowLabel="true" TileType="CellType.Rect"></HeatMapCellSettings>
+</SfHeatMap>
+
+@code {
+    SfHeatMap<int[,]> Heatmap;
+   
+    public int[,] dataSource = new int[,]
+        {
+            {73, 39, 26, 39, 94, 0},
+            {93, 58, 53, 38, 26, 68},
+            {99, 28, 22, 4, 66, 90},
+            {14, 26, 97, 69, 69, 3},
+            {7, 46, 47, 47, 88, 6},
+            {41, 55, 73, 23, 3, 79}
+        };
+       
+    string[] XAxisLabels = new string[] { "Nancy", "Andrew", "Janet", "Margaret", "Steven", "Michael" };
+    string[] YAxisLabels = new string[] { "Mon", "Tue", "Wed", "Thu", "Fri", "Sat" };
+    
+    
+    public void ClearSelection()
+    {
+        Heatmap.ClearSelection();
+    }
+}
+
+```
+
+![Clear cell selection method in Blazor HeatMap Chart](images/blazor-heatmap-chart-clear-selection-method.gif)
