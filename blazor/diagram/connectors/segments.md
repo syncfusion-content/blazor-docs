@@ -326,8 +326,6 @@ By default, when there are no segments defined for a bezier connector, the bezie
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Segments)
 
-Also, the intermediate point of two adjacent bezier segments can be edited interactively based on the BezierConnectorSettings.SegmentEditOrientation property of the Connector class.
-
 ### How to interact with the bezier segments efficiently
 
 While interacting with multiple bezier segments, maintain their control points at the same distance and angle by using the `BezierConnectorSettings.Smoothness` property of the Connector class.
