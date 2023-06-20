@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Print the SfPdfViewer inside the Dialog in Blazor | Syncfusion
+title: Print the SfPdfViewer inside the Dialog component | Syncfusion
 description: Learn here all about how to print the SfPdfViewer inside the Dialog in Syncfusion Blazor SfPdfViewer component and more.
 platform: Blazor
 control: SfPdfViewer
@@ -20,13 +20,23 @@ The following code illustrates how to perform print action once SfPdfViewer is l
 
 <div id="target" style="width:800px;height:100%">
     <SfButton @onclick="OnClick">Open PDF Viewer</SfButton>
-    <SfDialog @ref="@dialog" Target="#target" MinHeight="100%" Width="1060px" CloseOnEscape="true" AllowDragging="true" Visible="false"
-              IsModal="true" Header="@Header" ShowCloseIcon="false">
-        <SfButton @onclick="OnClickopen">Open PDF Document</SfButton>
+       <SfDialog @ref="@dialog" 
+                 Target="#target" 
+                 MinHeight="100%" 
+                 Width="100%" 
+                 CloseOnEscape="true" 
+                 AllowDragging="true" 
+                 Visible="false"
+                 IsModal="true" 
+                 Header="@Header" 
+                 ShowCloseIcon="false">
+    <SfButton @onclick="OnClickopen">Open PDF Document</SfButton>
         <SfPdfViewer2 @ref="viewer"
-                           Height="800px">
-            <PdfViewerEvents DocumentLoaded="@documentLoad"></PdfViewerEvents>
-        </SfPdfViewer2>
+              Width="100%"
+              Height="100%">
+    <PdfViewerEvents DocumentLoaded="@documentLoad">
+    </PdfViewerEvents>
+</SfPdfViewer2>
     </SfDialog>
 </div>
 
@@ -41,24 +51,24 @@ The following code illustrates how to perform print action once SfPdfViewer is l
     }
 
     //Triggers when the dialog is opened.
-    public void OnClickopen(MouseEventArgs args)
+    public async void OnClickopen(MouseEventArgs args)
     {
         //Reads the contents of the file into a byte array, and then closes the file.
         byte[] byteArray = System.IO.File.ReadAllBytes("wwwroot/data/HTTP Succinctly.pdf");
         //Converts the byte array in to base64 string.
         string base64String = Convert.ToBase64String(byteArray);
         //PDF document will get loaded from the base64 string.
-        viewer.Load("data:application/pdf;base64," + base64String, null);
+        await viewer.LoadAsync("data:application/pdf;base64," + base64String, null);
     }
 
-    private void documentLoad(LoadEventArgs args)
+    private async void documentLoad(LoadEventArgs args)
     {
         //Perform print action on the SfPdfViewer. 
-        viewer.PrintAsync();
+        await viewer.PrintAsync();
     }
 
     public string Header { get; set; } = "SfPdfViewer";
 }
 ```
 
-N> [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Print/PDF%20Viewer%20in%20a%20Dialog-SfPdfViewer).
+[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Print/PDF%20Viewer%20in%20a%20Dialog-SfPdfViewer).
