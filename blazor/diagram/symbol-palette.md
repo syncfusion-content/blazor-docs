@@ -721,7 +721,7 @@ The following code example illustrates how to provide the custom tooltip for nod
 }
 
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/SymbolPalette)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/SymbolPalette/SymbolPaletteTooltip)
 
 ![Tooltip in symbol palette](images/SymbolTooltip.gif)
 
@@ -817,7 +817,7 @@ When you define custom tooltip to the symbol then same tooltip will be displayed
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/SymbolPalette)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/SymbolPalette/SymbolPaletteTooltip)
 
 ![Tooltip in symbol palette](images/DifferentTooltip.gif)
 
