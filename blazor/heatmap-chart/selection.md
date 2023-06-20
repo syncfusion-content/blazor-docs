@@ -9,7 +9,15 @@ documentation: ug
 
 # Selection in Blazor HeatMap Chart Component
 
-In the [Blazor HeatMap Chart](https://www.syncfusion.com/blazor-components/blazor-heatmap-chart), the cell selection is used to select the single or multiple heat map cells at runtime and get the selected cell details using the `CellSelected`  event. You can enable this cell selection using the `AllowSelection` property.
+In the [Blazor HeatMap Chart](https://www.syncfusion.com/blazor-components/blazor-heatmap-chart), the cell selection is used to select the single or multiple HeatMap cells at runtime and get the selected cell details using the `CellSelected`  event. You can enable this cell selection using the `AllowSelection` property.
+
+To select multiple cells using different modes of interactions as shown in the below table.
+
+|   Modes of Interactions |   Description                                                                                                      |
+|------------------------ | -------------------------------------------------------------------------------------------------------------------|
+|   Mouse                 |  To select multiple cells, click and drag the mouse across the specific cells.                                     |
+|   Touch                 |  To select multiple cells, touch and drag the fingers across the specific cells.                                   |
+|   Keyboard              |  To select multiple cells, holding the Ctrl (Control) key on your keyboard and click on any other specific cells.  |
 
 ```cshtml
 
@@ -49,6 +57,10 @@ In the [Blazor HeatMap Chart](https://www.syncfusion.com/blazor-components/blazo
 ```
 
 ![Selection in Blazor HeatMap Chart](images/blazor-heatmap-chart-selection.png)
+
+The image below illustrates the process of selecting multiple cells in the HeatMap by clicking and dragging the mouse across the specific cells.
+
+![Multiple Selection in Blazor HeatMap Chart](images/blazor-heatmap-chart-multiple-selection.png)
 
 ## Enable single cell selection
 

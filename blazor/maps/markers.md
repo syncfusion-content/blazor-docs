@@ -323,7 +323,7 @@ The latitude and longitude values are used to determine the location of each mar
 
 ## Repositioning the marker using drag and drop
 
-The markers on the map can be dragged and dropped to change their position. To enable marker drag and drop, set the [EnableDrag]() property to true in the [MapsMarkerSettings]() property.
+The markers on the map can be dragged and dropped to change their position. To enable marker drag and drop, set the [EnableDrag]() property to **true** in the [MapsMarkerSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsMarkerSettings.html) property.
 
 ```cshtml
 @using Syncfusion.Blazor.Maps
@@ -363,8 +363,6 @@ The markers on the map can be dragged and dropped to change their position. To e
 
 The data of the drag and dropped marker in the marker data source can be customized using the [MarkerDragStart]() and [MarkerDragEnd]() events. When you change the appropriate marker data, the tooltip and legend item text of that marker are automatically updated. The following properties are available in the event argument of the marker drag events.
 
-The following example shows how to use marker drag events to customize the data of the drag and dropped marker in the marker data source.
-
 |   Argument Name      |   Description                               |
 |----------------------| --------------------------------------------|
 |   DataIndex          |   It represents the index of the data of the dragged marker in the marker data source.                          |
@@ -375,6 +373,8 @@ The following example shows how to use marker drag events to customize the data 
 |   EventName          |   It represents the name of the event.                                                                     |
 |   X                  |   It represents the horizontal location of the mouse pointer on the map when the drag action is performed.      |
 |   Y                  |   It represents the vertical location of the mouse pointer on the map when the drag action is performed.        |
+
+The following example shows how to use marker drag events to customize the data of the drag and dropped marker in the marker data source.
 
 ```cshtml
 
