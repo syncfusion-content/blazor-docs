@@ -7,7 +7,7 @@ control: SfPdfViewer
 documentation: ug
 ---
 
-# View DOCX file in Blazor application in Blazor SfPdfViewer Component
+# View DOCX file in Blazor application
 
 You can achieve this requirement of viewing DOCX file in two ways:.
 
