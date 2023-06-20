@@ -20,7 +20,7 @@ SfPdfViewer control is now available as a unified package for Windows, Mac, and 
 
 ### Nuget Package
 
-To initialize the PDF Viewer (NextGen) component, need to add the following project references to your project
+To initialize the PDF Viewer (NextGen) component, need to add the following project references to your project 
 
 <table>
 <tr>
@@ -188,10 +188,8 @@ When using the PDF Viewer (NextGen) in a WebAssembly application, need to includ
 <th>PDF Viewer(NextGen)</th>
 </tr>
 <td>
-
 {% tabs %}
 {% highlight C# tabtitle="csproj" hl_lines="2 6 7" %}
-
 <ItemGroup>
     <NativeFileReference Include="$(SkiaSharpStaticLibraryPath)\2.0.23\*.a" />
 </ItemGroup>
@@ -200,9 +198,8 @@ When using the PDF Viewer (NextGen) in a WebAssembly application, need to includ
 	<WasmNativeStrip>true</WasmNativeStrip>
 	<WasmBuildNative>true</WasmBuildNative>
 </PropertyGroup>
-
 {% endhighlight %}
 {% endtabs %}
-
 </td>
+</tr>
 </table>
