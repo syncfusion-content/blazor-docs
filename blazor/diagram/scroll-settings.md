@@ -220,6 +220,7 @@ The following code example illustrates how to set autoscroll padding.
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/ScrollSettings)
 
+
 ## Scroll limit
 
 The scroll limit allows you to define the scrollable region of the Diagram while scrolling the page with the mouse. The [ScrollLimit](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ScrollSettings.html#Syncfusion_Blazor_Diagram_ScrollSettings_ScrollLimit) property of scroll settings helps to limit the scrolling area. It includes the following options:
