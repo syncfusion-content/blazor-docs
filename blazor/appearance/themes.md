@@ -200,10 +200,13 @@ N> If you use individual component styles, you should install the styles of thei
   }
 ]
 
+{% endhighlight %}
+{% endtabs %}
+
 * The `SCSS` file has been compiled to the `CSS` file. Then, add the compiled CSS file to the `<head>` element of the Host page.
 
 {% tabs %}
-{% highlight c# tabtitle="~/_Layout.cshtml" %}
+{% highlight c# tabtitle="~/_Host.cshtml" %}
 
 <head>
     ...
@@ -211,8 +214,6 @@ N> If you use individual component styles, you should install the styles of thei
     <link href="~/themes/syncfusion/blazor-themes/scss-themes/bootstrap5.css" rel="stylesheet" />
 </head>
 
-{% endhighlight %}
-{% endtabs %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -297,6 +298,8 @@ You can add the `SCSS theme` for Blazor applications through NPM package and com
     ```
 
 * Run the application to see the customized Fluent theme applied.
+
+N> If you are using **Visual Studio 2019**, please use the `includePath` property instead of `loadPaths` as the latter does not support the Web Compiler for VS 2019. However, we highly recommend using the **Web Compiler 2022+** for **Visual Studio 2022**. For more information, please refer to the [discussion link here](https://github.com/failwyn/WebCompiler/issues/24).
 
 The following shows the importing theme path for the overall theme.
 

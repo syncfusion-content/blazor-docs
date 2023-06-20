@@ -23,6 +23,9 @@ The [TreeGridColumn.EditType](https://help.syncfusion.com/cr/blazor/Syncfusion.B
 
 * [Checkbox](../../check-box/getting-started) component for boolean type.
 
+* [TimePickerEdit](https://blazor.syncfusion.com/documentation/timepicker/getting-started)
+component for TimeOnly data type.
+
 Also, the model of the [TreeGridColumn.EditType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridColumn~EditType.html) component can be customized through the [TreeGridColumn.Edit.params](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridColumn~Edit.html).
 
 The following table describes cell edit type component and their corresponding edit params of the column.
@@ -35,6 +38,7 @@ Component |Example
 [DatePicker](../../datepicker/getting-started) | @(new { @params = new { format = "yyyy-MM-dd"} })
 [DateTimePicker](../../datetimepicker/getting-started) | @(new { @params = new { strictMode = true} })
 [Checkbox](../../check-box/getting-started) | @(new { @params = new { checked = true} })
+[TimePickerEdit](https://blazor.syncfusion.com/documentation/timepicker/getting-started) | @(new { @params = new { format = "HH:mm:ss"} })
 
 {% tabs %}
 

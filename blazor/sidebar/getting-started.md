@@ -23,7 +23,7 @@ You can create **Blazor Server App** or **Blazor WebAssembly App** using Visual 
 
 * [Create a Project using Microsoft Templates](https://docs.microsoft.com/en-us/aspnet/core/blazor/tooling?pivots=windows)
 
-* [Create a Project using Syncfusion Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project)
+* [Create a Project using Syncfusion Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio)
 
 ## Install Syncfusion Blazor Navigations NuGet in the App
 
@@ -299,7 +299,7 @@ N> Syncfusion recommends to reference scripts using [Static Web Assets](https://
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to run the application. Then, the Syncfusion `Blazor Sidebar` component will be rendered in the default web browser.
 
-![Blazor Sidebar Component](./images/blazor-sidebar.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LZLgDHsfhpRgoRmL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Enable backdrop
 
@@ -360,7 +360,7 @@ Here, the DOM elements will not get changed. It only closes the main content by 
 N> Class can be added to the sidebar element using `HtmlAttributes` property. In that class, you have to add new styles or override existing styles of sidebar element.
 
 
-![Enabling Backdrop in Blazor Sidebar](./images/blazor-sidebar-enable-backdrop.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BjhqjHWTrJGOEzBL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Enable Animation
 
@@ -417,7 +417,7 @@ Animation transitions can be set while expanding or collapsing the Sidebar using
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor Sidebar with Animation](./images/blazor-sidebar-animation.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VtLqDRiJhyjMqsJq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Navigation with Sidebar
 
@@ -590,7 +590,7 @@ In the following example, the Sidebar is rendered with Accordion component in it
 {% endhighlight %}
 {% endtabs %}
 
-![Navigation with Blazor Sidebar](./images/blazor-sidebar-navigation.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LXrADHWfhyWpDlip?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/Sidebar).
 

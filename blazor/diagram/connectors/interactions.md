@@ -18,9 +18,10 @@ A connector can be selected at runtime by using the [Select](https://help.syncfu
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 @using System.Collections.ObjectModel
+@using Syncfusion.Blazor.Buttons
 
-<input type="button" value="Select" @onclick="OnSelect">
-<input type="button" value="UnSelect" @onclick="@UnSelect" />
+<SfButton Content="Select" OnClick="@OnSelect" />
+<SfButton Content="UnSelect" OnClick="@UnSelect" />
 <SfDiagramComponent @ref="Diagram" Width="1000px" Height="500px" Connectors="@connectors">
 </SfDiagramComponent>
 
@@ -80,7 +81,7 @@ A connector can be selected at runtime by using the [Select](https://help.syncfu
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Interaction)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Interaction/Select)
 
 And also the selection can be enabled during the interaction.
 
@@ -95,8 +96,9 @@ A connector can be dragged at runtime by using the [Drag](https://help.syncfusio
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
+@using Syncfusion.Blazor.Buttons
 
-<input type="button" value="Drag" @onclick="OnDrag">
+<SfButton Content="Drag" OnClick="@OnDrag" />
 <SfDiagramComponent @ref="Diagram" Width="1000px" Height="500px" Connectors="@connectors">
 </SfDiagramComponent>
 
@@ -150,7 +152,7 @@ A connector can be dragged at runtime by using the [Drag](https://help.syncfusio
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Interaction)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Interaction/Drag)
 
 And also drag the connector during the interaction.
 
@@ -213,7 +215,7 @@ The connector can be selected by clicking it. When the connector is selected, ci
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Interaction)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Interaction/EndPointDragging)
 
 ![Dragging Connector End Point in Blazor Diagram](../images/blazor-diagram-drag-connector-end-point.gif)
 
