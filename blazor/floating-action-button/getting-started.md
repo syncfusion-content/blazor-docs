@@ -26,7 +26,7 @@ You can create **Blazor Server App** or **Blazor WebAssembly App** using Visual 
 
 * [Create a Project using Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?pivots=windows&view=aspnetcore-7.0)
 
-* [Create a Project using Syncfusion Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project)
+* [Create a Project using Syncfusion Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio)
 
 ## Install Syncfusion Blazor Buttons NuGet in the App
 
@@ -281,7 +281,7 @@ N> Syncfusion recommends to reference scripts using [Static Web Assets](https://
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to run the application. Then, the Syncfusion `Blazor Floating Action Button` component will be rendered in the default web browser.
 
-![Blazor Floating Action Button Component](./images/blazor-fab-component.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXLUXxMIgKNiBbES?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Event Click In Floating Action Button
 
@@ -304,7 +304,7 @@ The floating action button control triggers the [OnClick](https://help.syncfusio
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor Floating Action Button Component](./images/blazor-fab-event-click-sample.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LjrKXHWogKZuWLyn?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/FloatingActionButton).
 
