@@ -355,6 +355,10 @@ Range is used to specify a group of scale values in the gauge. You can set the r
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/CircularGauge).
 
+To customize the Blazor CircularGauge component, you can check on this video.
+{% youtube
+"youtube:https://www.youtube.com/watch?v=L3TyARQFY98"%}
+
 ## See also
 
 * [Getting Started with Syncfusion Blazor for Client-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-dotnet-cli)

@@ -486,3 +486,7 @@ Set the [EnableRtl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Tree
 ```
 
 ![Right to Left in Blazor TreeMap Legend](images/Internationalization/blazor-treemap-legend-right-to-left.png)
+
+To customize the legend in the Blazor TreeMap component, you can check on this video.
+{% youtube
+"youtube:https://www.youtube.com/watch?v=2ilArsWz9u0"%}

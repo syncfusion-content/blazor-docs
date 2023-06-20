@@ -428,6 +428,10 @@ N> Refer to the [code block](#adding-treemap-component) to know about the proper
 
 N> You can also explore our [Blazor TreeMap example](https://blazor.syncfusion.com/demos/treemap/default-functionalities?theme=bootstrap5) that shows you how to render and configure the treemap.
 
+To customize the Blazor TreeMap component, you can check on this video.
+{% youtube
+"youtube:https://www.youtube.com/watch?v=FOpV4mu9GH4"%}
+
 ## See also
 
 * [Getting Started with Syncfusion Blazor for Client-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-dotnet-cli)
