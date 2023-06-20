@@ -253,6 +253,71 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Group/CloneNodeGroup)
 ![Grouping in Blazor Diagram](images/CloneGroup.gif)
+
+
+### How to add Padding for nodeGroup
+
+The [Padding] property of a group node defines the spacing between the group node’s edges and its children.
+
+The following code illustrates how to add Padding to the node group.
+
+```cshtml
+@using Syncfusion.Blazor.Diagram
+
+@* Initialize the diagram with NodeCollection *@
+<SfDiagramComponent Height="500px" Nodes="@nodes" />
+
+@code
+{
+    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    NodeGroup groupNode = new NodeGroup();
+
+    protected override void OnInitialized()
+    {
+        Node node1 = createNode("node1", 100, 100, "Node1");
+        Node node2 = createNode("node2", 300, 100, "Node2");
+        // Grouping node one and node two into a single node-group.
+        groupNode.Children = new string[] { "node1", "node2" };
+        groupNode.Padding = new DiagramThickness() { Left=20, Right= 20, Top=20, Bottom=20 };
+        nodes.Add(node1);
+        nodes.Add(node2);
+        nodes.Add(groupNode);
+    }
+
+    public Node createNode(string id, double offsetX, double offsetY, string content)
+    {
+        Node node = new Node()
+        {
+            ID = id,
+            OffsetX = offsetX,
+            OffsetY = offsetY,
+            Height = 100,
+            Width = 100,
+            Style = new ShapeStyle() { Fill = "#6495ED" }
+        };
+        ShapeAnnotation annotation = new ShapeAnnotation()
+        {
+            ID = "annotation1",
+            Content = content,
+            Style = new TextStyle()
+            {
+                Color = "white",
+                Fill = "transparent",
+                StrokeColor = "None"
+            },
+        };
+        node.Annotations = new DiagramObjectCollection<ShapeAnnotation>()
+        {
+            annotation
+        };
+        return node;
+    }
+}
+```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Group/CreateGroup)
+
+![Padding in Blazor Diagram](images/GroupPadding.png)
+
 ## How to add nodeGroup at runtime
 
 A node group can be added at runtime by using Nodes collection of diagram.
