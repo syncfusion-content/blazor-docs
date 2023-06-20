@@ -20,12 +20,15 @@ SfPdfViewer control is now available as a unified package for Windows, Mac, and 
 
 ### Nuget Package
 
-To initialize the `PDF Viewer` component, need to add the **Syncfusion.Blazor.PdfViewerServer.Windows** project references in the *csproj* file of your project
+To initialize the PDF Viewer component, you need to add the following project references and NuGet packages to the *.csproj* file of your project
+
+N> Need to add the **Syncfusion.Blazor.PdfViewer** for `Web assembly application` and **Syncfusion.Blazor.PdfViewerServer** for `Server assembly application` for `PDF Viewer`component and **Syncfusion.Blazor.SfPdfViewer** for `SfPdfViewer` for both `Server and Web assembly application`.
 
 <table>
 <tr>
 <th>PDF Viewer</th>
 </tr>
+<tr>
 <td>
 {% tabs %}
 {% highlight html tabtitle="csproj" hl_lines="2" %}
@@ -34,7 +37,7 @@ Syncfusion.Blazor.PdfViewer
 Syncfusion.Blazor.PdfViewerServer
 
 {% endhighlight %}
-{% highlight html tabtitle="csproj" hl_lines="2" %}
+{% highlight C# tabtitle=".csproj" hl_lines="2" %}
 
 <ItemGroup>
     <PackageReference Include="Syncfusion.Blazor.PdfViewerServer.Windows"/>
@@ -42,124 +45,90 @@ Syncfusion.Blazor.PdfViewerServer
 
 {% endhighlight %}
 {% endtabs %}
-
 </td>
-</table>
-
-N> Need to add the **Syncfusion.Blazor.PdfViewer** for `Web assembly application` and **Syncfusion.Blazor.PdfViewerServer** for `Server assembly application`.
-
-To initialize the `SfPdfViewer` component, need to add the **Syncfusion.Blazor.SfPdfViewer** project references in the *csproj* file of your project
-
-<table>
+</tr>
 <tr>
 <th>PDF Viewer (NextGen)</th>
 </tr>
+<tr>
 <td>
 {% tabs %}
-{% highlight html tabtitle="csproj" hl_lines="1" %}
+{% highlight C# tabtitle=".csproj" hl_lines="1" %}
 
 Syncfusion.Blazor.SfPdfViewer
 
 {% endhighlight %}
-{% highlight html tabtitle="csproj" hl_lines="2" %}
+{% highlight C# tabtitle="csproj" hl_lines="2" %}
 
 <ItemGroup>
-    <PackageReference Include="Syncfusion.Blazor.PdfViewerServer.Windows"/>
+    <PackageReference Include="Syncfusion.Blazor.SfPdfViewer"/>
 </ItemGroup>
 
 {% endhighlight %}
 {% endtabs %}
-
 </td>
+</tr>
 </table>
 
 ### Script File
 
-To utilize the `PDF Viewer` component in your project, need to add the corresponding script file to the *Host.cshtml* or *Layout.cshtml* file based on your framework version.
-
-<table>
-<tr>
-<th>PDF Viewer</th>
-</tr>
-<td>
-
-{% tabs %}
-{% highlight html tabtitle=".NET 6 (~/Layout.cshtml)" hl_lines="5" %}
-
-<head>
-    <!-- Syncfusion Blazor PDF Viewer controls theme style sheet -->
-    <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
-<!-- Syncfusion Blazor PDF Viewer controls scripts -->
-    <script src="_content/Syncfusion.Blazor.PdfViewer/scripts/syncfusion-blazor-pdfviewer.min.js" type="text/javascript"></script>
-</head>
-
-{% endhighlight %}
-{% highlight html tabtitle=".NET 7 (~/Host.cshtml)" hl_lines="5" %}
-
-<head>
-    <!-- Syncfusion Blazor PDF Viewer controls theme style sheet -->
-    <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
-<!-- Syncfusion Blazor PDF Viewer controls scripts -->
-    <script src="_content/Syncfusion.Blazor.PdfViewer/scripts/syncfusion-blazor-pdfviewer.min.js" type="text/javascript"></script>
-</head>
-
-{% endhighlight %}
-{% endtabs %}
-
-</td>
-</table>
+To utilize the PDF Viewer component in your project, you need to add the corresponding script file to the *Host.cshtml* or *Layout.cshtml* file based on your framework version.
 
 N> The script file is same for `Server application` and `Web assembly application` for PDF Viewer component
 
-To utilize the `SfPdfViewer` component in your project, you need to add the corresponding script file to the *Host.cshtml* or *Layout.cshtml* file based on your framework version.
-
 <table>
 <tr>
-<th>PDF Viewer (NextGen)</th>
+<th>PDF Viewer</th>
 </tr>
+<tr>
 <td>
-
 {% tabs %}
-{% highlight html tabtitle=".NET 6 (~/Layout.cshtml)" hl_lines="5" %}
+{% highlight html tabtitle="(~/Layout.cshtml/Host.cshtml)" hl_lines="5" %}
 
 <head>
-    <!-- Syncfusion Blazor SfPdfViewer controls theme style sheet -->
+    <!-- Syncfusion Blazor PDF Viewer controls theme style sheet -->
     <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
-    <!-- Syncfusion Blazor SfPdfViewer controls scripts -->
-    <script src="_content/Syncfusion.Blazor.SfPdfViewer/scripts/syncfusion-blazor-sfpdfviewer.min.js" type="text/javascript"></script>
+    <!-- Syncfusion Blazor PDF Viewer controls scripts -->
+    <script src="_content/Syncfusion.Blazor.PdfViewer/scripts/syncfusion-blazor-pdfviewer.min.js" type="text/javascript"></script>
 </head>
-
-{% endhighlight %}
-{% highlight html tabtitle=".NET 7 (~/Host.cshtml)" hl_lines="5" %}
-
-<head>
-    <!-- Syncfusion Blazor SfPdfViewer controls theme style sheet -->
-    <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
-    <!-- Syncfusion Blazor SfPdfViewer controls scripts -->
-    <script src="_content/Syncfusion.Blazor.SfPdfViewer/scripts/syncfusion-blazor-sfpdfviewer.min.js" type="text/javascript"></script>
-</head>
-
 
 {% endhighlight %}
 {% endtabs %}
-
 </td>
-</table>
+</tr>
+<tr>
+<th>PDF Viewer (NextGen)</th>
+</tr>
+<tr>
+<td>
+{% tabs %}
+{% highlight html tabtitle="(~/Layout.cshtml/Host.cshtml)" hl_lines="5" %}
 
-N> The script file is same for `Server application` and `Web assembly application` for SfPdfViewer component
+<head>
+    <!-- Syncfusion Blazor SfPdfViewer controls theme style sheet -->
+    <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
+    <!-- Syncfusion Blazor SfPdfViewer controls scripts -->
+    <script src="_content/Syncfusion.Blazor.SfPdfViewer/scripts/syncfusion-blazor-sfpdfviewer.min.js" type="text/javascript"></script>
+</head>
+
+{% endhighlight %}
+{% endtabs %}
+</td>
+</tr>
+</table>
 
 ### Program.cs
 
-In `PDF Viewer` component have to add the following lines in the *program.cs* file to use the PDF Viewer component in a Blazor project
+To use the PDF Viewer component in a Blazor project, add the following line to the *Program.cs* file:
 
 <table>
 <tr>
 <th>PDF Viewer</th>
 </tr>
+<tr>
 <td>
-
 {% tabs %}
-{% highlight html tabtitle=".NET 6 & .NET 7 (~/Program.cs)" %}
+{% highlight C# tabtitle=".NET 6 & .NET 7 (~/Program.cs)" %}
 
 builder.Services.AddSyncfusionBlazor();
 
@@ -167,113 +136,70 @@ builder.Services.AddSyncfusionBlazor();
 {% endtabs %}
 
 </td>
-</table>
+</tr>
 
-In `SfPdfViewer` component have to add the following lines in the *program.cs* file to use the SfPdfViewer component in a Blazor project
-
-<table>
 <tr>
 <th>PDF Viewer (NextGen)</th>
 </tr>
+<tr>
 <td>
-
 {% tabs %}
-{% highlight html tabtitle=".NET 6 & .NET 7 (~/Program.cs)" %}
+{% highlight C# tabtitle=".NET 6 & .NET 7 (~/Program.cs)" %}
 
 builder.Services.AddSyncfusionBlazor();
 
 {% endhighlight %}
 {% endtabs %}
-
 </td>
-</table>
-
-### Imports.razor
-
-In `PDF Viewer` component have to add the following lines in the *Imports.razor*
-
-<table>
-<tr>
-<th>PDF Viewer</th>
 </tr>
-<td>
-{% tabs %}
-{% highlight html tabtitle="Imports.razor" %}
-
-@using Syncfusion.Blazor.PdfViewerServer
-
-{% endhighlight %}
-{% endtabs %}
-
-</td>
-</table>
-
-In `SfPdfViewer` component have to add the following lines in the *Imports.razor*
-
-<table>
-<tr>
-<th>PDF Viewer (NextGen)</th>
-</tr>
-<td>
-{% tabs %}
-{% highlight html tabtitle="Imports.razor" %}
-
-@using Syncfusion.Blazor.SfPdfViewer
-
-{% endhighlight %}
-{% endtabs %}
-
-</td>
 </table>
 
 ### Index.razor
 
-In the *Index.razor* file, you can use the following code to render the `PDF Viewer` components
+In the *Index.razor* file, you can use the following code to render the PDF Viewer components
 
 <table>
 <tr>
 <th>PDF Viewer</th>
 </tr>
+<tr>
 <td>
-
 {% tabs %}
-{% highlight html tabtitle="Index.razor(Server application)" %}
+{% highlight C# tabtitle="Index.razor(Server application)" %}
 
 <SfPdfViewerServer DocumentPath="PDF_Succinctly.pdf" Height="100%" Width="100%"></></SfPdfViewerServer>
 
 {% endhighlight %}
-{% highlight html tabtitle="Index.razor(Web assembly application)" %}
-
+{% highlight C# tabtitle="Index.razor(Web assembly application)" %}
 
 <SfPdfViewer DocumentPath="PDF_Succinctly.pdf" ServiceUrl="api/pdfviewer" Height="100%" Width="100%"></SfPdfViewer>
 
-
 {% endhighlight %}
 {% endtabs %}
 
 </td>
-</table>
-
-In the *Index.razor* file, you can use the following code to render the `SfPdfViewer` components:
-
-<table>
-<tr>
-<th>PDF Viewer(NextGen)</th>
 </tr>
+<tr>
+<th>PDF Viewer (NextGen)</th>
+</tr>
+<tr>
 <td>
-
 {% tabs %}
-{% highlight html tabtitle="Index.razor" %}
+{% highlight C# tabtitle="Index.razor" %}
 
-<SfPdfViewer2 DocumentPath="PDF_Succinctly.pdf" Height="100%" Width="100%"></SfPdfViewer2
+<SfPdfViewer2 DocumentPath="PDF_Succinctly.pdf" Height="100%" Width="100%"></SfPdfViewer2>
 
 {% endhighlight %}
 {% endtabs %}
-
 </td>
+</tr>
 </table>
+
+N> The Index.razor is same for `Server application` and `Web assembly application` for PDF Viewer (NextGen) component
 
 ### Project.cs
+
+If you are using `SfPdfViewer` with a WebAssembly application, you need to modify your *.csproj* file as follows
 
 In `SfPdfViewer` if we are using the Web assembly application need to add the below lines in the *.csproj* file 
 
@@ -284,7 +210,7 @@ In `SfPdfViewer` if we are using the Web assembly application need to add the be
 <td>
 
 {% tabs %}
-{% highlight html tabtitle="csproj" %}
+{% highlight C# tabtitle="csproj" %}
 
 <ItemGroup>
     <NativeFileReference Include="$(SkiaSharpStaticLibraryPath)\2.0.23\*.a" />
