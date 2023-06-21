@@ -53,3 +53,7 @@ The SfPdfViewer supports printing the loaded PDF file by default. You can enable
 ## See also
 
 * [Download in Blazor SfPdfViewer Component](./download)
+
+* [How to perform print in same window](./how-to/perform-print-in-same-window)
+
+* [How to print the SfPdfViewer inside the Dialog](./how-to/print-the-sfpdfiewer-inside-the-dialog-component)

@@ -46,3 +46,7 @@ The following code example shows how to import annotations as objects, that are 
 N> [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Annotations/Import-Export/Annotations%20as%20JSON%20object%20-%20SfPdfViewer).
 
 N> You can refer to our [Blazor SfPdfViewer](https://www.syncfusion.com/blazor-components/blazor-pdf-viewer) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor SfPdfViewer example](https://blazor.syncfusion.com/demos/pdf-viewer-2/default-functionalities?theme=bootstrap4) to understand how to explains core features of SfPdfViewer.
+
+## See also
+
+* [Import and Export annotations in Blazor SfPdfViewer Component](../annotation/import-export-annotation)

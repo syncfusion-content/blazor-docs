@@ -51,5 +51,3 @@ You can load your own PDF document for initial loading as well as change documen
 * [How to load PDF documents dynamically in Blazor SfPdfViewer Component](./load-pdf-document-dynamically)
 
 * [How to unload the PDF document from Viewer](./unload-the-pdf-document-from-viewer)
-
-* [How to show or hide the Component dynamically](../how-to/show-or-hide-sfpdfviewer-dynamically)
