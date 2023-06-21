@@ -103,24 +103,24 @@ By default, the chart marker shape is set to Auto. If chart marker is enabled, e
     <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.DateTimeCategory" Format="yyyy"></ChartPrimaryXAxis>
     <ChartSeriesCollection>
         <ChartSeries Name="Series1" DataSource="@ConsumerReports" XName="X" YName="Y1" Type="ChartSeriesType.Line">
-            <ChartMarker Visible="true" Height="10" Width="10" />
+            <ChartMarker Visible="true" Height="10" Width="10" IsFilled="true"/>
         </ChartSeries>
         <ChartSeries Name="Series2" DataSource="@ConsumerReports" XName="X" YName="Y2" Type="ChartSeriesType.Line">
-            <ChartMarker Visible="true" Height="10" Width="10" />
+            <ChartMarker Visible="true" Height="10" Width="10" IsFilled="true" />
         </ChartSeries>
         <ChartSeries Name="Series3" DataSource="@ConsumerReports" XName="X" YName="Y3" Type="ChartSeriesType.Line">
-            <ChartMarker Visible="true" Height="10" Width="10" />
+            <ChartMarker Visible="true" Height="10" Width="10" IsFilled="true" />
         </ChartSeries>
         <ChartSeries Name="Series4" DataSource="@ConsumerReports" XName="X" YName="Y4" Type="ChartSeriesType.Line">
-            <ChartMarker Visible="true" Height="10" Width="10" />
+            <ChartMarker Visible="true" Height="10" Width="10" IsFilled="true" />
         </ChartSeries>
         <ChartSeries Name="Series5" DataSource="@ConsumerReports" XName="X" YName="Y5" Type="ChartSeriesType.Line">
-            <ChartMarker Visible="true" Height="10" Width="10" />
+            <ChartMarker Visible="true" Height="10" Width="10" IsFilled="true" />
         </ChartSeries>
         <ChartSeries Name="Series6" DataSource="@ConsumerReports" XName="X" YName="Y6" Type="ChartSeriesType.Line">
-        <ChartMarker Visible="true" Height="10" Width="10" />
+            <ChartMarker Visible="true" Height="10" Width="10" IsFilled="true" />
         </ChartSeries>       
-    </ChartSeriesCollection>    
+    </ChartSeriesCollection>
 </SfChart>
 
 @code {
