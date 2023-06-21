@@ -769,7 +769,7 @@ SfInPlaceEditor
 
 ### Syncfusion.Blazor.ImageEditor
 
-The Blazor Image Editor component is load and modify the images by performing actions like cropping, rotating, resizing, applying filters, inserting text and shapes such as rectangles, circles, and arrows on top of an image, drawing free hand.
+The Blazor Image Editor component loads and modifies the images by performing actions like cropping, rotating, resizing, applying filters, inserting text and shapes such as rectangles, circles, and arrows on top of an image, and drawing freehand.
 
 <table>
 <tr>
