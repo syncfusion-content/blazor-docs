@@ -743,6 +743,39 @@ N> If the user does not configure the authentication, a default popup will appea
 
 ```
 
+### Roles
+
+SQL Server Analysis Services uses [`Roles`](https://learn.microsoft.com/en-us/analysis-services/multidimensional-models/roles-and-permissions-analysis-services?view=asallproducts-allversions) to limit data access within a cube. Each role defines a set of permissions that can be granted to a single user or groups of users. It is used to manage security by limiting access to sensitive data and determining who has access to and can change the cube. It can be configured using the [`Roles`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html#Syncfusion_Blazor_PivotView_PivotViewDataSourceSettings_1_Roles) property in [PivotViewDataSourceSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html).
+
+N> The [`Roles`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html#Syncfusion_Blazor_PivotView_PivotViewDataSourceSettings_1_Roles) property can be used to specify one or more roles to the OLAP cube, separated by commas.
+
+```cshtml
+
+@using Syncfusion.Blazor.PivotView
+
+<SfPivotView TValue="ExpandoObject"  Width="800" Height="350" >
+    <PivotViewDataSourceSettings TValue="ExpandoObject" ProviderType="ProviderType.SSAS" Catalog="Adventure Works DW 2008 SE" Cube="Adventure Works" Url="https://bi.syncfusion.com/olap/msmdpump.dll" Roles="Role1" LocaleIdentifier="1033" EnableSorting="true">
+        <PivotViewColumns>
+            <PivotViewColumn Name="[Product].[Product Categories]" Caption="Product Category"></PivotViewColumn>
+            <PivotViewColumn Name="[Measures]" Caption="Measure"></PivotViewColumn>
+        </PivotViewColumns>
+        <PivotViewRows>
+            <PivotViewRow Name="[Customer].[Customer Geography]" Caption="Customer Geography"></PivotViewRow>
+        </PivotViewRows>
+        <PivotViewValues>
+            <PivotViewValue Name="[Measures].[Customer Count]" Caption="Customer Count"></PivotViewValue>
+            <PivotViewValue Name="[Measures].[Internet Sales Amount]" Caption="Internet Sales Amount"></PivotViewValue>
+        </PivotViewValues>
+        <PivotViewFormatSettings>
+            <PivotViewFormatSetting Name="[Measures].[Internet Sales Amount]" Format="C0"></PivotViewFormatSetting>
+        </PivotViewFormatSettings>
+        <PivotViewAuthentication UserName="UserName" Password="Password"></PivotViewAuthentication>
+    </PivotViewDataSourceSettings>
+    <PivotViewGridSettings ColumnWidth="120"></PivotViewGridSettings>
+</SfPivotView>
+
+```
+
 ## OLAP Cube: Elements
 
 ### Field list

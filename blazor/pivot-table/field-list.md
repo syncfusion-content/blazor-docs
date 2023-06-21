@@ -126,6 +126,88 @@ N> To make a field list interact with pivot table, you need to use the [UpdateVi
 
 ![Blazor PivotTable with Static FieldList](images/blazor-pivottable-static-field-list.png)
 
+## Search desired field
+
+End user can search for desired field in the field list UI by typing the field name into the search box at runtime. It can be enabled by setting the [ShowFieldSearch](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotFieldList-1.html#Syncfusion_Blazor_PivotView_SfPivotFieldList_1_ShowFieldSearch) property to **true** via code-behind.
+
+> By default, field search option is disabled in the field list UI. Furthermore, this option is only available for relational data sources.
+
+To enable search box in the static field list UI, set the [ShowFieldSearch](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotFieldList-1.html#Syncfusion_Blazor_PivotView_SfPivotFieldList_1_ShowFieldSearch) property  to **true** in [SfPivotFieldList](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotFieldList-1.html).
+
+```cshtml
+<SfPivotFieldList TValue="ProductDetails" ID="fieldlist" @ref="fieldList" ShowFieldSearch="true" RenderMode="Mode.Fixed" >
+    <PivotFieldListDataSourceSettings DataSource="@data" EnableSorting=true>
+        <PivotFieldListColumns>
+            <PivotFieldListColumn Name="Year"></PivotFieldListColumn>
+            <PivotFieldListColumn Name="Quarter"></PivotFieldListColumn>
+        </PivotFieldListColumns>
+        <PivotFieldListRows>
+            <PivotFieldListRow Name="Country"></PivotFieldListRow>
+            <PivotFieldListRow Name="Products"></PivotFieldListRow>
+        </PivotFieldListRows>
+        <PivotFieldListValues>
+            <PivotFieldListValue Name="Sold" Caption="Unit Sold"></PivotFieldListValue>
+            <PivotFieldListValue Name="Amount" Caption="Sold Amount"></PivotFieldListValue>
+        </PivotFieldListValues>
+    </PivotFieldListDataSourceSettings>
+</SfPivotFieldList>
+<style>
+    #fieldlist {
+        width: 42%;
+        height: 100%;
+        float: right;
+    }
+</style>
+@code{
+    private SfPivotFieldList<ProductDetails> fieldList;
+    private List<ProductDetails> data { get; set; }
+    protected override void OnInitialized()
+    {
+        this.dataSource = ProductDetails.GetProductData();
+        //Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
+    }   
+}
+
+```
+![Static Field List with search in Blazor Pivot Table](images/blazor-pivottable-static-fieldlist-search.png)
+
+To enable search box in the pivot table's built-in popup field list UI, set the [ShowFieldSearch](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_ShowFieldSearch) property to **true** in [SfPivotView](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html).
+
+```cshtml
+@using Syncfusion.Blazor.PivotView
+
+<SfPivotView TValue="ProductDetails" ShowFieldList="true" ShowFieldSearch="true">
+     <PivotViewDataSourceSettings DataSource="@dataSource">
+        <PivotViewColumns>
+            <PivotViewColumn Name="Year"></PivotViewColumn>
+            <PivotViewColumn Name="Quarter"></PivotViewColumn>
+        </PivotViewColumns>
+        <PivotViewRows>
+            <PivotViewRow Name="Country"></PivotViewRow>
+            <PivotViewRow Name="Products"></PivotViewRow>
+        </PivotViewRows>
+        <PivotViewValues>
+            <PivotViewValue Name="Sold" Caption="Units Sold"></PivotViewValue>
+            <PivotViewValue Name="Amount" Caption="Sold Amount"></PivotViewValue>
+        </PivotViewValues>
+        <PivotViewFormatSettings>
+            <PivotViewFormatSetting Name="Amount" Format="C"></PivotViewFormatSetting>
+        </PivotViewFormatSettings>
+    </PivotViewDataSourceSettings>
+</SfPivotView>
+
+@code{
+    private List<ProductDetails> dataSource { get; set; }
+    protected override void OnInitialized()
+    {
+        this.dataSource = ProductDetails.GetProductData();
+        //Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
+    }
+}
+
+```
+![Popup Field List with search in Blazor Pivot Table](images/blazor-pivottable-popup-fieldlist-search.png)
+
 
 ## Add or remove fields
 
