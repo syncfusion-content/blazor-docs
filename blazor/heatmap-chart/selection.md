@@ -9,15 +9,15 @@ documentation: ug
 
 # Selection in Blazor HeatMap Chart Component
 
-In the [Blazor HeatMap Chart](https://www.syncfusion.com/blazor-components/blazor-heatmap-chart), the cell selection is used to select the single or multiple HeatMap cells at runtime and get the selected cell details using the [CellSelected](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapEvents.html#Syncfusion_Blazor_HeatMap_HeatMapEvents_CellSelected)  event. You can enable the cell selection using the [AllowSelection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.SfHeatMap-1.html#Syncfusion_Blazor_HeatMap_SfHeatMap_1_AllowSelection) property.
+In the [Blazor HeatMap Chart](https://www.syncfusion.com/blazor-components/blazor-heatmap-chart), the cell selection is used to select the single or multiple HeatMap cells at runtime and get the selected cell details using the [CellSelected](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapEvents.html#Syncfusion_Blazor_HeatMap_HeatMapEvents_CellSelected) event. You can enable the cell selection using the [AllowSelection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.SfHeatMap-1.html#Syncfusion_Blazor_HeatMap_SfHeatMap_1_AllowSelection) property.
 
 The HeatMap cells can be selected using the following interactions, as shown in the table below.
 
 |   Modes of Interactions |   Description                                                                                                      |
 |------------------------ | -------------------------------------------------------------------------------------------------------------------|
-|   Mouse                 |  HeatMap cells can be selected with a click or by dragging and dropping.                                           |
-|   Touch                 |  HeatMap cells can be selected by tapping or dragging and dropping.                                                |
-|   Keyboard              |  The Ctrl key on the keyboard can be used to enable multiple cell selection with mouse and touch interaction. The Ctrl key can only be used if the `EnableMultiSelect` property is set to **true** in order to enable multiple cell selection.                                                                                                                                     |
+|   Mouse                 |  HeatMap cells can be selected by clicking or dragging and dropping over them.                                     |
+|   Touch                 |  HeatMap cells can be selected by tapping or dragging and dropping over them.                                      |
+|   Keyboard              |  The **Ctrl** key on the keyboard can be used to enable multiple cell selection with mouse and touch interaction. The **Ctrl** key can only be used if the `EnableMultiSelect` property is set to **true** in order to enable multiple cell selection.                                                                                                                                     |
 
 ```cshtml
 
