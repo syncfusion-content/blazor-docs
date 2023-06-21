@@ -56,7 +56,7 @@ You can update the form field's at runtime using the FormFieldClick event and `U
 
     double x = 0; double y = 0;
     private string feildId = "";
-    FormField? formField;
+    FormField formField;
     private CustomItem SelectedItem;
 
     private void mouseOver(MouseEventArgs args)
