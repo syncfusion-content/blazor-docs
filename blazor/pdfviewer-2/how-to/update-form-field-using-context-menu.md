@@ -18,27 +18,37 @@ You can update the form field's at runtime using the FormFieldClick event and `U
 @using Syncfusion.Blazor.SfPdfViewer
 @using Syncfusion.Blazor.Navigations
 
-<div id="target" class="e-pdfviewer-signatureformfields" @onmousemove="mouseOver" style="position:absolute;left:0;right:0;top:0;bottom:0;z-index:100">
+<div id="target" class="e-pdfviewer-signatureformfields"
+     @onmousemove="mouseOver"
+     style="position:absolute;left:0;right:0;top:0;bottom:0;z-index:100">
 
-    <SfPdfViewer2 @ref="@Viewer" DocumentPath="@DocumentPath" Height="100%" Width="100%">
-        <PdfViewerEvents DocumentLoaded="@documentLoad" FormFieldClick="@formFeildClick"></PdfViewerEvents>
+    <SfPdfViewer2 @ref="@Viewer"
+                  DocumentPath="@DocumentPath"
+                  Height="100%"
+                  Width="100%">
+        <PdfViewerEvents DocumentLoaded="@documentLoad"
+                         FormFieldClick="@formFeildClick">
+        </PdfViewerEvents>
     </SfPdfViewer2>
-    
+
 </div>
 
-<SfContextMenu @ref="contextMenuObj" Target="#target" Items="@menuItems">
+<SfContextMenu @ref="contextMenuObj"
+               Target="#target"
+               Items="@menuItems">
     <MenuFieldSettings Text="Content"></MenuFieldSettings>
-    <MenuEvents TValue="CustomItem" ItemSelected="@selectedHandler"></MenuEvents>
+    <MenuEvents TValue="CustomItem"
+                ItemSelected="@selectedHandler"></MenuEvents>
 </SfContextMenu>
 
 @code {
-    SfPdfViewer2? Viewer;
-    SfContextMenu<CustomItem>? contextMenuObj;
+    SfPdfViewer2 Viewer;
+    SfContextMenu<CustomItem> contextMenuObj;
 
     private class CustomItem
     {
-        public string? Content { get; set; }
-        public string? Id { get; set; }
+        public string Content { get; set; }
+        public string Id { get; set; }
     }
 
     //Sets the PDF document path for initial loading.
@@ -47,7 +57,7 @@ You can update the form field's at runtime using the FormFieldClick event and `U
     double x = 0; double y = 0;
     private string feildId = "";
     FormField? formField;
-    private CustomItem? SelectedItem;
+    private CustomItem SelectedItem;
 
     private void mouseOver(MouseEventArgs args)
     {
@@ -60,10 +70,10 @@ You can update the form field's at runtime using the FormFieldClick event and `U
     {
         SelectedItem = args.Item;
         Dictionary<string, string> param = new Dictionary<string, string>();
-        param.Add(feildId, SelectedItem.Content!);
-        formField!.Value = SelectedItem.Content;
+        param.Add(feildId, SelectedItem.Content);
+        formField.Value = SelectedItem.Content;
         //This method is used to update the isReadOnly property of the form field.
-        await Viewer!.UpdateFormFieldsAsync(formField);
+        await Viewer.UpdateFormFieldsAsync(formField);
     }
 
     //This method will get invoked when you click on the form field like name.
@@ -78,11 +88,11 @@ You can update the form field's at runtime using the FormFieldClick event and `U
     //Represents the collection to hold the menu items.
     private List<CustomItem> menuItems = new List<CustomItem>();
 
-    //This method will get invoked once the PDF Viewer is loaded.
+    //This method will get invoked once the SfPdfViewer is loaded.
     private async void documentLoad(LoadEventArgs args)
     {
-        //Perform export annotations action in the PDF Viewer.
-        Dictionary<string, string> feilds = await Viewer!.ExportFormFieldsAsObjectAsync();
+        //Perform export annotations action in the SfPdfViewer.
+        Dictionary<string, string> feilds = await Viewer.ExportFormFieldsAsObjectAsync();
         if (feilds.Keys.Count > 0)
         {
             foreach (KeyValuePair<string, string> feild in feilds)

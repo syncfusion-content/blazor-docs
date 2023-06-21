@@ -1,15 +1,15 @@
 ---
 layout: post
 title: Create SfPdfViewer in a Splitter Component in Blazor | Syncfusion
-description: Learn here all about how to create PDF Viewer in a Splitter Component in Syncfusion Blazor SfPdfViewer component.
+description: Learn here all about how to create SfPdfViewer in a Splitter Component in Syncfusion Blazor SfPdfViewer component.
 platform: Blazor
 control: SfPdfViewer
 documentation: ug
 ---
 
-# Create PDF Viewer in Splitter Component in Blazor SfPdfViewer Component
+# Create SfPdfViewer in a Splitter Component in Blazor
 
-You can use Splitter to render the PDF Viewer while rendering more than one component. The following code snippet explains how to render the SfPdfViewer component inside a Splitter pane. In this example, the Syncfusion’s Splitter component is used to render SfPdfViewer.
+You can use Splitter to render the SfPdfViewer while rendering more than one component. The following code snippet explains how to render the SfPdfViewer component inside a Splitter pane. In this example, the Syncfusion’s Splitter component is used to render SfPdfViewer.
 
 ```cshtml
 
@@ -17,7 +17,7 @@ You can use Splitter to render the PDF Viewer while rendering more than one comp
 @using Syncfusion.Blazor.Layouts
 
 <!--This splitter layout holds two panes-->
-<SfSplitter Height="100%" Width="100%">    
+<SfSplitter Height="100%" Width="100%">
     <!--Configures one or more panes to construct different layouts-->
     <SplitterPanes>
 
@@ -31,18 +31,19 @@ You can use Splitter to render the PDF Viewer while rendering more than one comp
             <ContentTemplate>
 
                 <!--Build the PDF Viewer inside a splitter pane-->
-                <SfPdfViewer2 @ref="@viewer" DocumentPath="@DocumentPath">
+                <SfPdfViewer2 @ref="@viewer"
+                              DocumentPath="@DocumentPath">
                 </SfPdfViewer2>
 
             </ContentTemplate>
         </SplitterPane>
-        
+
     </SplitterPanes>
 </SfSplitter>
 
-@code 
+@code
 {
-    SfPdfViewer2? viewer;
+    SfPdfViewer2 viewer;
     private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
 }
 

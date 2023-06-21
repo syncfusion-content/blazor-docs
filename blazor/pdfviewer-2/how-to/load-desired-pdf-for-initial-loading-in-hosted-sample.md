@@ -19,14 +19,16 @@ You can load your own PDF document for initial loading as well as change documen
 
 <SfButton OnClick="LoadAnotherDocument">Load Another Document</SfButton>
 
-<SfPdfViewer2 Height="100%" Width="100%" DocumentPath="@DocumentPath">
+<SfPdfViewer2 Height="100%"
+              Width="100%"
+              DocumentPath="@DocumentPath">
 </SfPdfViewer2>
 
 
 @code
 {
     public String DocumentPath = "Data/PDF_Succinctly.pdf";
-    
+
     private async Task LoadAnotherDocument()
     {
         //Sends a GET request to a specified Uri and return the response body as a byte array.

@@ -38,17 +38,17 @@ else
     <button @onclick="redo" disabled>Redo</button>
 }
 
-<SfPdfViewer2 @ref="@viewer" 
-              @bind-CanUndo="@canUndo" 
-              @bind-CanRedo="@canRedo" 
-              DocumentPath="@DocumentPath" 
-              Height="100%" 
+<SfPdfViewer2 @ref="@viewer"
+              @bind-CanUndo="@canUndo"
+              @bind-CanRedo="@canRedo"
+              DocumentPath="@DocumentPath"
+              Height="100%"
               Width="100%">
 </SfPdfViewer2>
 
 @code
 {
-    SfPdfViewer2? viewer;
+    SfPdfViewer2 viewer;
     bool canUndo = true;
     bool canRedo = true;
     private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
@@ -57,14 +57,14 @@ else
     private async Task undo()
     {
         // API to perform Undo action.
-        await viewer!.UndoAsync();
+        await viewer.UndoAsync();
     }
 
     // Event triggers on Redo button click.
     private async Task redo()
     {
         // API to perform Redo action.
-        await viewer!.RedoAsync();
+        await viewer.RedoAsync();
     }
 }
 

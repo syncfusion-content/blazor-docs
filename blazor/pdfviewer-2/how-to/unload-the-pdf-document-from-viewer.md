@@ -20,16 +20,19 @@ If you want to unload and clear the resources occupied by the PDF file programma
 
 <SfButton @onclick="OnClick">Unload Document</SfButton>
 
-<SfPdfViewer2 @ref="@Viewer" Height="100%" Width="100%" DocumentPath="@DocumentPath" />
+<SfPdfViewer2 @ref="@Viewer"
+              Height="100%"
+              Width="100%"
+              DocumentPath="@DocumentPath" />
 
 @code {
-    SfPdfViewer2? Viewer;
+    SfPdfViewer2 Viewer;
 
     public async void OnClick(MouseEventArgs args)
     {
-        await Viewer!.UnloadAsync();
+        await Viewer.UnloadAsync();
     }
-    
+
     public string DocumentPath { get; set; } = "wwwroot/data/PDF_Succinctly.pdf";
 }
 

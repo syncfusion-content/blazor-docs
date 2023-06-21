@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Update the PDF Viewer size to its container in SfPdfViewer | Syncfusion
+title: Update the Viewer size to its container in SfPdfViewer | Syncfusion
 description: Learn here all about how to stretch the PDF Viewer size to its container in Syncfusion Blazor SfPdfViewer component.
 platform: Blazor
 control: SfPdfViewer
 documentation: ug
 ---
 
-# Update PDF Viewer size at run-time in Blazor SfPdfViewer Component
+# Update Viewer size at run-time in Blazor SfPdfViewer Component
 
-You can stretch the PDF Viewer size to its container size while resizing the container at runtime. The following code snippet explains how to update the PDF Viewer size while resizing the Splitter at runtime. In this example, the Syncfusion’s Splitter component is used.
+You can stretch the SfPdfViewer size to its container size while resizing the container at runtime. The following code snippet explains how to update the PDF Viewer size while resizing the Splitter at runtime. In this example, the Syncfusion’s Splitter component is used.
 
 ```cshtml
 
@@ -32,18 +32,19 @@ You can stretch the PDF Viewer size to its container size while resizing the con
             <ContentTemplate>
 
                 <!--Build the PDF Viewer inside a splitter pane-->
-                <SfPdfViewer2 @ref="@viewer" DocumentPath="@DocumentPath">
+                <SfPdfViewer2 @ref="@viewer"
+                              DocumentPath="@DocumentPath">
                 </SfPdfViewer2>
-            
+
             </ContentTemplate>
         </SplitterPane>
-        
+
     </SplitterPanes>
 </SfSplitter>
 
-@code 
+@code
 {
-    SfPdfViewer2? viewer;
+    SfPdfViewer2 viewer;
 
     //Sets the document path for initial loading.
     private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
@@ -52,7 +53,7 @@ You can stretch the PDF Viewer size to its container size while resizing the con
     private async void onresize()
     {
         //This method will update the PDF Viewer size when the container size is updated at runtime.
-        await viewer!.UpdateViewerContainerAsync();
+        await viewer.UpdateViewerContainerAsync();
     }
 }
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Create PDF Viewer in a popup window in Blazor SfPdfViewer | Syncfusion
-description: Learn here all about Create PDF Viewer in a popup window in Syncfusion Blazor SfPdfViewer component and more.
+title: Create an SfPdfViewer within a popup window in Blazor | Syncfusion
+description: Learn here all about Create SfPdfViewer in a popup window in Syncfusion Blazor SfPdfViewer component and more.
 platform: Blazor
 control: SfPdfViewer
 documentation: ug
 ---
 
-# Create PDF Viewer in a popup window in Blazor SfPdfViewer Component
+# Create an SfPdfViewer within a popup window in Blazor
 
 For quick view, you might need to display the PDF file in a dialog window. The following code snippet explains how to use the SfPdfViewer component inside a dialog window. In this example, the Syncfusion’s dialog component is used for Blazor.
 
@@ -21,17 +21,23 @@ For quick view, you might need to display the PDF file in a dialog window. The f
 
     <SfButton @onclick="OnClick">Open PDF Viewer</SfButton>
 
-    <SfDialog @ref="@Dialog" Target="#target" Width="100%" Visible="false" IsModal="true" Header= "@Header" ShowCloseIcon="true">
+    <SfDialog @ref="@Dialog"
+              Target="#target"
+              Width="100%"
+              Visible="false"
+              IsModal="true"
+              Header="@Header"
+              ShowCloseIcon="true">
         <DialogEvents OnOpen="OnOpen"></DialogEvents>
         <SfPdfViewer2 @ref="Viewer" />
     </SfDialog>
-    
+
 </div>
 
 @code {
-    public SfPdfViewer2? Viewer { get; set; }
-    SfDialog? Dialog;
-    
+    public SfPdfViewer2 Viewer { get; set; }
+    SfDialog Dialog;
+
     public void OnClick(MouseEventArgs args)
     {
         this.Dialog.Show();
@@ -39,7 +45,7 @@ For quick view, you might need to display the PDF file in a dialog window. The f
 
     public async void OnOpen(BeforeOpenEventArgs args)
     {
-        await Viewer!.LoadAsync(DocumentPath, null);
+        await Viewer.LoadAsync(DocumentPath, null);
     }
 
     public string DocumentPath { get; set; } = "wwwroot/data/PDF_Succinctly.pdf";

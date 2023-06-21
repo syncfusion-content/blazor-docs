@@ -22,12 +22,15 @@ The following code example shows how to get the loaded/edited document data and 
 
 <SfButton @onclick="load">ReloadRetrievedDocument</SfButton>
 
-<SfPdfViewer2 @ref="@viewer" DocumentPath="@DocumentPath" Height="100%" Width="100%">
+<SfPdfViewer2 @ref="@viewer"
+              DocumentPath="@DocumentPath"
+              Height="100%"
+              Width="100%">
 </SfPdfViewer2>
 
 @code
 {
-    SfPdfViewer2? viewer;
+    SfPdfViewer2 viewer;
     private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
 
     byte[]? save;
@@ -35,7 +38,7 @@ The following code example shows how to get the loaded/edited document data and 
     public async void retrieve()
     {
         //Gets the loaded PDF document
-        save = await viewer!.GetDocumentAsync();
+        save = await viewer.GetDocumentAsync();
     }
 
     public async void load()
@@ -43,7 +46,7 @@ The following code example shows how to get the loaded/edited document data and 
         //Converts the byte array into base64 string.
         string base64String = Convert.ToBase64String(save);
         //Loads the PDF document from the specified base64 string.
-        await viewer!.LoadAsync("data:application/pdf;base64," + base64String, null);
+        await viewer.LoadAsync("data:application/pdf;base64," + base64String, null);
     }
 }
 
