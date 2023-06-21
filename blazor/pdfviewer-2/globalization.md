@@ -33,3 +33,7 @@ By setting EnableRtl to `true`, the control will adjust its layout and appearanc
 }
 
 ```
+
+## See also
+
+* [Events in Blazor SfPdfViewer Component](./events)

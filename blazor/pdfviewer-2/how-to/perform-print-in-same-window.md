@@ -27,3 +27,9 @@ The `PrintMode` enum of SfPdfViewer2 allows you to decide whether to print in th
 }
 ```
 In the provided code, `PrintMode.Default` is used to specify printing in the same window.
+
+## See also
+
+* [Print in Blazor SfPdfViewer Component](./print)
+
+* [How to print the SfPdfViewer inside the Dialog](./print-the-sfpdfiewer-inside-the-dialog-component)

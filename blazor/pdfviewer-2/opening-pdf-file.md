@@ -234,3 +234,7 @@ You can load a PDF file from stream in SfPdfViewer by converting the stream into
 ```
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Load%20and%20Save/Load%20a%20PDF%20file%20from%20memory%20stream-SfPdfViewer)
+
+## See also
+
+* [How to save PDF file](./saving-pdf-file)

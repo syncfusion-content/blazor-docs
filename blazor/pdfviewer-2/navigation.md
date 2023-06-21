@@ -224,3 +224,7 @@ You can set the target attribute for a hyperlink in SfPdfViewer using the `Hyper
     public string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
 }
 ```
+
+## See also
+
+* [Magnification in Blazor SfPdfViewer Component](./magnification)

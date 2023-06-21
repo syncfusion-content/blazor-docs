@@ -22,3 +22,7 @@ To learn more about the [Word Processor component](https://www.syncfusion.com/bl
 You can convert [Word document to PDF](https://help.syncfusion.com/file-formats/docio/word-to-pdf) using the Syncfusion’s Word (DocIO) server-side library and view the resultant PDF file using SfPdfViewer component.
 
 N> You can refer to our [Blazor SfPdfViewer](https://www.syncfusion.com/blazor-components/blazor-pdf-viewer) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor SfPdfViewer example](https://blazor.syncfusion.com/demos/pdf-viewer-2/default-functionalities?theme=bootstrap4) to understand how to explains core features of SfPdfViewer.
+
+## See also
+
+* [How to load Microsoft Office files in Blazor SfPdfViewer Component](./load-office-files)

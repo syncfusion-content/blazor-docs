@@ -302,3 +302,7 @@ The following code shows how to export the form fields as a JSON data stream and
 }
 
 ```
+
+## See also
+
+* [Handwritten Signature in Blazor SfPdfViewer Component](./hand-written-signature)

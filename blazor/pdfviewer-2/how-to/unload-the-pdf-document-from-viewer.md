@@ -39,3 +39,9 @@ If you want to unload and clear the resources occupied by the PDF file programma
 ```
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Common/Unload%20Pdf%20document%20from%20Viewer%20-%20SfPdfViewer)
+
+## See also
+
+* [How to show or hide the Component dynamically](../how-to/show-or-hide-sfpdfviewer-dynamically)
+
+* [How to load PDF documents dynamically](../how-to/load-pdf-document-dynamically)
