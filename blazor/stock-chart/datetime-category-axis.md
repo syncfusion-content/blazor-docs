@@ -7,10 +7,9 @@ control: Stock Chart
 documentation: ug
 ---
 
-# Date Time Category Axis in Blazor Stock Chart Component 
+# DateTimeCategory Axis in Blazor Stock Chart Component 
 
-Date Time Category Axis in Stock chart is used to display the minimum number of labels without any overlap on various business days.
-The below sample demonstrate the AAPL Stock using Date time category axis. To represent the X axis label in date time category set the [ValueType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ValueType.html) as [DateTimeCategory](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ValueType.html#Syncfusion_Blazor_Charts_ValueType_DateTimeCategory)
+DateTimeCategory Axis in Stock chart is used to display the minimum number of labels without any overlap on various business days.To use the date time category axis set the [ValueType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ValueType.html) as [DateTimeCategory](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ValueType.html#Syncfusion_Blazor_Charts_ValueType_DateTimeCategory) 
 
 ```cshtml
 @using Syncfusion.Blazor.Charts
