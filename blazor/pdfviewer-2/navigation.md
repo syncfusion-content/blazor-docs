@@ -35,7 +35,10 @@ You can enable or disable the page navigation option in SfPdfViewer default tool
 
 @using Syncfusion.Blazor.SfPdfViewer
 
-<SfPdfViewer2 Width="100%" Height="100%" DocumentPath="@DocumentPath" EnableNavigation="false" />
+<SfPdfViewer2 Width="100%"
+              Height="100%"
+              DocumentPath="@DocumentPath"
+              EnableNavigation="false" />
 
 @code{
     public string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
@@ -78,37 +81,34 @@ Also, you can programmatically perform page navigation as follows.
 <SfPdfViewer2 Width="100%" Height="100%" DocumentPath="@DocumentPath" @ref="@Viewer" />
 
 @code{
-
     SfPdfViewer2 Viewer;
-
     SfTextBox TextBox;
-
     public string DocumentPath { get; set; } = "wwwroot/data/PDF_Succinctly.pdf";
 
-    public void OnFirstPageClick(MouseEventArgs args)
+    public async void OnFirstPageClick(MouseEventArgs args)
     {
-        Viewer.GoToFirstPage();
+        await Viewer.GoToFirstPageAsync();
     }
 
-    public void OnLastPageClick(MouseEventArgs args)
+    public async void OnLastPageClick(MouseEventArgs args)
     {
-        Viewer.GoToLastPage();
+        await Viewer.GoToLastPageAsync();
     }
 
-    public void OnNextPageClick(MouseEventArgs args)
+    public async void OnNextPageClick(MouseEventArgs args)
     {
-        Viewer.GoToNextPage();
+        await Viewer.GoToNextPageAsync();
     }
 
-    public void OnPageClick(MouseEventArgs args)
+    public async void OnPageClick(MouseEventArgs args)
     {
         int pageIndex =  int.Parse(TextBox.Value.ToString());
-        Viewer.GoToPage(pageIndex);
+        await Viewer.GoToPageAsync(pageIndex);
     }
 
-    public void OnPreviousPageClick(MouseEventArgs args)
+    public async void OnPreviousPageClick(MouseEventArgs args)
     {
-        Viewer.GoToPreviousPage();
+        await Viewer.GoToPreviousPageAsync();
     }
 }
 
@@ -129,7 +129,6 @@ You can enable or disable the bookmark navigation pane by setting the `EnableBoo
 <SfPdfViewer2 Height="100%" Width="100%" DocumentPath="@DocumentPath" EnableBookmarkPanel="true" />
 
 @code{
-
     public string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
 }
 
@@ -150,7 +149,6 @@ You can enable or disable the thumbnail navigation pane by setting the `EnableTh
 <SfPdfViewer2 Height="100%" Width="100%" DocumentPath="@DocumentPath" EnableThumbnailPanel="true"/>
 
 @code{
-
     public string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
 }
 
@@ -167,19 +165,23 @@ The following code illustrates how to open thumbnail panel programmatically.
 @using Syncfusion.Blazor.SfPdfViewer
 
 <!--IsThumbnailPanelOpen property will enable the thumbnail panel on initial rendering itself-->
-<SfPdfViewer2 @ref="@SfPdfViewer" DocumentPath="@DocumentPath" IsThumbnailPanelOpen="true" Height="100%" Width="100%"> </SfPdfViewer2>
+<SfPdfViewer2 @ref="@SfPdfViewer"
+              DocumentPath="@DocumentPath"
+              IsThumbnailPanelOpen="true"
+              Height="100%"
+              Width="100%">
+</SfPdfViewer2>
 
 @code {
 
     public SfPdfViewer2 SfPdfViewer { get; set; }
-
     //Sets the PDF document path for initial loading.
     private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
 }
 
 ```
 
-N> [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Thumbnail/Show%20thumbnail%20panel%20-%20SfPdfViewer).
+[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Thumbnail/Show%20thumbnail%20panel%20-%20SfPdfViewer).
 
 ## Hyperlink navigation
 
@@ -213,11 +215,12 @@ You can set the target attribute for a hyperlink in SfPdfViewer using the `Hyper
 
 @using Syncfusion.Blazor.SfPdfViewer
 
-<SfPdfViewer2 Height="100%" Width="100%" DocumentPath="@DocumentPath" EnableHyperlink="true" HyperlinkOpenState="LinkTarget.NewTab" />
+<SfPdfViewer2 Height="100%"
+              Width="100%" DocumentPath="@DocumentPath"
+              EnableHyperlink="true"
+              HyperlinkOpenState="LinkTarget.NewTab" />
 
 @code{
-
     public string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
-
 }
 ```

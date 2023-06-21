@@ -16,21 +16,20 @@ The SfPdfViewer control provides options to add, edit, delete and rotate the fol
 * Standard Business
 * Custom Stamp
 
-![Stamp Annotation in Blazor PDFViewer](../../pdfviewer/images/blazor-pdfviewer-stamp-annotation.png)
+![Stamp Annotation in Blazor SfPdfViewer](../../pdfviewer/images/blazor-pdfviewer-stamp-annotation.png)
 
 ## Adding stamp annotations to the PDF document
 
 The stamp annotations can be added to the PDF document using the annotation toolbar.
 
 * Click the **Edit Annotation** button in the SfPdfViewer toolbar. A toolbar appears below it.
-
 * Click the **Stamp Annotation** dropdown button. A dropdown pop-up will appear and shows the stamp annotations to be added.
 
-![Adding Stamp in Blazor PDFViewer Toolbar](../../pdfviewer/images/blazor-pdfviewer-add-stamp-in-toolbar.png)
+![Adding Stamp in Blazor SfPdfViewer Toolbar](../../pdfviewer/images/blazor-pdfviewer-add-stamp-in-toolbar.png)
 
 * Select the annotation type to be added to the page in the pop-up.
 
-![Selecting Annotation from Stamp Popup in Blazor PDFViewer](../../pdfviewer/images/blazor-pdfviewer-select-stamp-annotation.png)
+![Selecting Annotation from Stamp Popup in Blazor SfPdfViewer](../../pdfviewer/images/blazor-pdfviewer-select-stamp-annotation.png)
 
 * You can add the annotation over the pages of the PDF document.
 
@@ -39,12 +38,10 @@ In the pan mode, if the stamp annotation mode is entered, the SfPdfViewer contro
 ## Adding custom stamp to the PDF document through interaction
 
 * Click the **Edit Annotation** button in the SfPdfViewer toolbar. A toolbar appears below it.
-
 * Click the **Stamp Annotation** dropdown button. A dropdown pop-up will appear and shows the stamp annotations to be added.
-
 * Click the Custom Stamp button.
 
-![Custom Stamp in Blazor PDFViewer](../../pdfviewer/images/blazor-pdfviewer-custom-stamp.png)
+![Custom Stamp in Blazor SfPdfViewer](../../pdfviewer/images/blazor-pdfviewer-custom-stamp.png)
 
 * The file explorer dialog will appear, choose the image and then add the image in the PDF page.
 
@@ -60,18 +57,25 @@ After editing the default opacity using the Edit Opacity tool, they will be chan
 
 @using Syncfusion.Blazor.SfPdfViewer
 
-<SfPdfViewer2 @ref="viewer" DocumentPath="@DocumentPath" Height="100" Width="100%" StampSettings=@StampSettings>
+<SfPdfViewer2 @ref="viewer"
+              DocumentPath="@DocumentPath"
+              Height="100"
+              Width="100%"
+              StampSettings=@StampSettings>
 </SfPdfViewer2>
 
 @code {
-
     //Sets the PDF document path for initial loading.
     private string DocumentPath { get; set; } = "wwwroot/data/PDF_Succinctly.pdf";
-
     SfPdfViewer2 viewer;
 
     //Defines the settings of rectangle annotation.
-    PdfViewerStampSettings StampSettings = new PdfViewerStampSettings { Opacity = 0.3, Author = "Blazor" };
+    PdfViewerStampSettings StampSettings = new PdfViewerStampSettings
+        {
+            Opacity = 0.3,
+            Author = "Blazor"
+        };
+}
 }
 ```
 
@@ -87,24 +91,47 @@ The following code illustrates how to add the image as a stamp annotation in the
 @using Syncfusion.Blazor.SfPdfViewer
 
 <SfToolbar>
-    <ToolbarItems>
-        <ToolbarItem PrefixIcon="e-pv-previous-page-navigation-icon" TooltipText="Previous Page" id="previousPage" OnClick="@previousClicked" Align=@Syncfusion.Blazor.Navigations.ItemAlign.Left></ToolbarItem>
-        <ToolbarItem PrefixIcon="e-pv-next-page-navigation-icon" TooltipText="Next Page" id="nextPage" OnClick="@nextClicked" Align=@Syncfusion.Blazor.Navigations.ItemAlign.Left></ToolbarItem>       
-        <ToolbarItem PrefixIcon="e-pv-download-document-icon" TooltipText="Download" id="Download" OnClick="@downloadDocument" Align=@Syncfusion.Blazor.Navigations.ItemAlign.Right></ToolbarItem>
-        <ToolbarItem PrefixIcon="e-pv-stamp-icon" TooltipText="AddCustomStamp" id="AddCustomStamp" OnClick="@stampClicked" Align=@Syncfusion.Blazor.Navigations.ItemAlign.Right></ToolbarItem>
-    </ToolbarItems>
-</SfToolbar>
+        <ToolbarItems>
+            <ToolbarItem PrefixIcon="e-pv-previous-page-navigation-icon"
+                         TooltipText="Previous Page"
+                         id="previousPage"
+                         OnClick="@previousClicked"
+                         Align="@Syncfusion.Blazor.Navigations.ItemAlign.Left">
+            </ToolbarItem>
+            <ToolbarItem PrefixIcon="e-pv-next-page-navigation-icon"
+                         TooltipText="Next Page"
+                         id="nextPage"
+                         OnClick="@nextClicked"
+                         Align="@Syncfusion.Blazor.Navigations.ItemAlign.Left">
+            </ToolbarItem>
+            <ToolbarItem PrefixIcon="e-pv-download-document-icon"
+                         TooltipText="Download"
+                         id="Download"
+                         OnClick="@downloadDocument"
+                         Align="@Syncfusion.Blazor.Navigations.ItemAlign.Right">
+            </ToolbarItem>
+            <ToolbarItem PrefixIcon="e-pv-stamp-icon"
+                         TooltipText="AddCustomStamp"
+                         id="AddCustomStamp"
+                         OnClick="@stampClicked"
+                         Align="@Syncfusion.Blazor.Navigations.ItemAlign.Right">
+            </ToolbarItem>
+        </ToolbarItems>
+    </SfToolbar>
 
-<SfPdfViewer2 EnableToolbar="false" EnableAnnotationToolbar="false" EnableNavigationToolbar="false" @ref="viewer" DocumentPath="@DocumentPath"     Height="100%" Width="100%">
-    <PdfViewerCustomStampSettings CustomStamps="@pdfViewerCustomStamps"></PdfViewerCustomStampSettings>
-</SfPdfViewer2>
+<SfPdfViewer2 EnableToolbar="false"
+              EnableAnnotationToolbar="false"
+              EnableNavigationToolbar="false" @ref="viewer"
+              DocumentPath="@DocumentPath"
+              Height="100%"
+              Width="100%">
+    <PdfViewerCustomStampSettings CustomStamps="@pdfViewerCustomStamps">
+    </PdfViewerCustomStampSettings>
 
 @code
 {
     SfPdfViewer2 viewer;
-
     public List<PdfViewerCustomStamp> pdfViewerCustomStamps { get; set; }
-
     private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
 
     public void stampClicked(ClickEventArgs args)
@@ -122,22 +149,22 @@ The following code illustrates how to add the image as a stamp annotation in the
 
     }
 
-    public void previousClicked(ClickEventArgs args)
+    public async void previousClicked(ClickEventArgs args)
     {
         //Navigate to previous page of the PDF document.
-        viewer.GoToPreviousPageAsync();
+        await viewer.GoToPreviousPageAsync();
     }
 
-    public void nextClicked(ClickEventArgs args)
+    public async void nextClicked(ClickEventArgs args)
     {
         //Navigate to next page of the PDF document loaded in the SfPdfViewer.
-        viewer.GoToNextPageAsync();
+        await viewer.GoToNextPageAsync();
     }
 
-    public void downloadDocument(ClickEventArgs args)
+    public async void downloadDocument(ClickEventArgs args)
     {
         //Downloads the PDF document being loaded in the SfPdfViewer.
-        viewer.DownloadAsync();
+        await viewer.DownloadAsync();
     }
 }
 
@@ -159,4 +186,4 @@ The following code illustrates how to add the image as a stamp annotation in the
 </style>
 
 ```
-N> [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Annotations/Stamp/Add%20a%20custom%20stamp%20-%20SfPdfViewer)
+[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Annotations/Stamp/Add%20a%20custom%20stamp%20-%20SfPdfViewer)

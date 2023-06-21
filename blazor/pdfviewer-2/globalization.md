@@ -23,12 +23,13 @@ By setting EnableRtl to `true`, the control will adjust its layout and appearanc
 
 @using Syncfusion.Blazor.SfPdfViewer
 
-<SfPdfViewer2 Height="100%" Width="100%" DocumentPath="@DocumentPath" EnableRtl="true" />
+<SfPdfViewer2 Height="100%"
+              Width="100%"
+              DocumentPath="@DocumentPath"
+              EnableRtl="true" />
 
 @code {
-
     public string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
-
 }
 
 ```
