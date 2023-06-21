@@ -9,7 +9,7 @@ documentation: ug
 
 # Row Template in Blazor DataGrid Component
 
-> Before adding row template to the datagrid, it is recommended to go through the [template](./templates/#templates) section topic to configure the template.
+N> Before adding row template to the datagrid, it is recommended to go through the [template](./templates/#templates) section topic to configure the template.
 
 To know about **Row Template** in Blazor DataGrid Component, you can check this video.
 

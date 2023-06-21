@@ -39,4 +39,4 @@ The following sample code demonstrates enabling offline mode for the [SfDataMana
 }
 ```
 
-> Return the complete list from server-side when using `Offline` property.
+N> Return the complete list from server-side when using `Offline` property.

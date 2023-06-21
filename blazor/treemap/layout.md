@@ -66,7 +66,7 @@ The [SliceAndDiceVertical](https://help.syncfusion.com/cr/aspnetcore-blazor/Sync
 </SfTreeMap>
 ```
 
-> Refer to the [code block](#squarified) to know about the property value of the **GrowthReports**.
+N> Refer to the [code block](#squarified) to know about the property value of the **GrowthReports**.
 
 ![Blazor TreeMap with Slice and DiceVertical Layout](images/Layout/blazor-treemap-slice-and-dicevertical-layout.png)
 
@@ -81,7 +81,7 @@ The [SliceAndDiceHorizontal](https://help.syncfusion.com/cr/aspnetcore-blazor/Sy
 </SfTreeMap>
 ```
 
-> Refer to the [code block](#squarified) to know about the property value of the **GrowthReports**.
+N> Refer to the [code block](#squarified) to know about the property value of the **GrowthReports**.
 
 ![Blazor TreeMap with Slice and DiceHorizontal Layout](images/Layout/blazor-treemap-slice-and-dicehorizontal.png)
 
@@ -96,7 +96,7 @@ The [SliceAndDiceAuto](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusi
 </SfTreeMap>
 ```
 
-> Refer to the [code block](#squarified) to know about the property value of the **GrowthReports**.
+N> Refer to the [code block](#squarified) to know about the property value of the **GrowthReports**.
 
 ![Blazor TreeMap with Slice and DiceAuto Layout](images/Layout/blazor-treemap-slice-and-diceauto.png)
 
@@ -156,7 +156,7 @@ The following example shows, how to render the TreeMap in the RTL direction with
 </SfTreeMap>
 ```
 
-> Refer to the [code block](#rendering-direction) to know about the property value of **Fruits**.
+N> Refer to the [code block](#rendering-direction) to know about the property value of **Fruits**.
 
 ![Blazor TreeMap in TopRightBottomLeft Direction](images/Internationalization/blazor-treemap-top-right-bottom-left-direction.png)
 
@@ -173,7 +173,7 @@ The following example shows, how to render the TreeMap in the RTL direction with
 </SfTreeMap>
 ```
 
-> Refer to the [code block](#rendering-direction) to know about the property value of **Fruits**.
+N> Refer to the [code block](#rendering-direction) to know about the property value of **Fruits**.
 
 ![Blazor TreeMap with BottomRightTopLeft Direction](images/Internationalization/blazor-treemap-bottom-right-top-left-direction.png)
 
@@ -190,6 +190,6 @@ The following example shows, how to render the TreeMap in the RTL direction with
 </SfTreeMap>
 ```
 
-> Refer to the [code block](#rendering-direction) to know about the property value of **Fruits**.
+N> Refer to the [code block](#rendering-direction) to know about the property value of **Fruits**.
 
 ![Blazor TreeMap with BottomLeftTopRight Direction](images/Internationalization/blazor-treemap-bottom-left-top-right-direction.png)

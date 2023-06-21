@@ -37,7 +37,7 @@ Keyboard accessibility is one of the most important aspects of web accessibility
 
 The TimePicker component has built-in keyboard accessibility support by following the [WAI-ARIA practices](https://www.w3.org/TR/wai-aria-practices/).
 
-> It supports the following list of shortcut keys to interact with the TimePicker component:
+N> It supports the following list of shortcut keys to interact with the TimePicker component:
 
 | **Keys** | **Description** |
 | --- | --- |
@@ -52,7 +52,7 @@ The TimePicker component has built-in keyboard accessibility support by followin
 | <kbd>Alt + Down Arrow</kbd> | Opens the popup. |
 | <kbd>Esc</kbd> | Closes the popup. |
 
-> To focusout the TimePicker component, use the `t` keys. For additional information about native event, [click](./native-events/) here.
+N> To focusout the TimePicker component, use the `t` keys. For additional information about native event, [click](./native-events/) here.
 
 ```cshtml
 @using Syncfusion.Blazor.Calendars

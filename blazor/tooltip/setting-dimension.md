@@ -57,4 +57,4 @@ When `Height` is specified with a certain pixel value and the Tooltip content ov
 
 ![Scrolling in Blazor Tooltip](images/blazor-tooltip-scrolling.gif)
 
-> The scrolling mode can best be seen when the sticky mode of the Tooltip is enabled. To enable sticky mode, set the `IsSticky` property to true.
+N> The scrolling mode can best be seen when the sticky mode of the Tooltip is enabled. To enable sticky mode, set the `IsSticky` property to true.

@@ -101,7 +101,7 @@ The following screenshot represents a DataGrid with initial searching.
 
 ![Blazor DataGrid with Initial Search](./images/blazor-datagrid-initial-search.png)
 
-> By default, datagrid searches all the bound column values. To customize this behavior, define the [Fields](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSearchSettings.html#Syncfusion_Blazor_Grids_GridSearchSettings_Fields) property of **GridSearchSettings** component.
+N> By default, datagrid searches all the bound column values. To customize this behavior, define the [Fields](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSearchSettings.html#Syncfusion_Blazor_Grids_GridSearchSettings_Fields) property of **GridSearchSettings** component.
 
 ## Search operators
 
@@ -117,7 +117,7 @@ Contains |Checks whether a value contains the specified value.
 Equal |Checks whether a value is equal to the specified value.
 NotEqual |Checks for values not equal to the specified value.
 
-> By default, the [Operator](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSearchSettings.html#Syncfusion_Blazor_Grids_GridSearchSettings_Operator) value is **Contains**.
+N> By default, the [Operator](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSearchSettings.html#Syncfusion_Blazor_Grids_GridSearchSettings_Operator) value is **Contains**.
 
 ## Search by external button
 
@@ -259,7 +259,7 @@ In the below code example, the **Order ID** column search functionality is disab
 }
 ```
 
-> You can refer to our [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap4) to understand how to present and manipulate data.
+N> You can refer to our [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap4) to understand how to present and manipulate data.
 
 ## Immediate searching
 

@@ -129,7 +129,7 @@ namespace TreeGridComponent.Data {
 
 ![Footer Aggregate in Blazor TreeGrid](images/blazor-treegrid-footer-aggregate.png)
 
-> The aggregate values must be accessed inside the template using their corresponding `AggregateType`.
+N> The aggregate values must be accessed inside the template using their corresponding `AggregateType`.
 
 ## How to format aggregate value
 

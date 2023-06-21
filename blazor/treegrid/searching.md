@@ -146,7 +146,7 @@ namespace TreeGridComponent.Data {
 
 ![Blazor TreeGri with Initial Search](images/blazor-treegrid-initial-search.png)
 
-> By default, tree grid searches all the bound column values. To customize this behavior define the [TreeGridSearchSettings.Fields](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridSearchSettings~Fields.html) property.
+N> By default, tree grid searches all the bound column values. To customize this behavior define the [TreeGridSearchSettings.Fields](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridSearchSettings~Fields.html) property.
 
 ## Search operators
 
@@ -162,7 +162,7 @@ contains |Checks whether a value contains the specified value.
 equal |Checks whether a value is equal to the specified value.
 notEqual |Checks for values not equal to the specified value.
 
-> By default, the [Operators](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridSearchSettings~Operators.html) value is **contains**.
+N> By default, the [Operators](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridSearchSettings~Operators.html) value is **contains**.
 
 ## Search by external button
 

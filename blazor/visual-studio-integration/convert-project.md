@@ -13,7 +13,7 @@ Syncfusion Blazor conversion is a Visual Studio add-in that converts an existing
 
 The steps below help you to convert the **Blazor application** to the **Syncfusion Blazor application** via the **Visual Studio 2019 or Visual Studio 2022**:
 
-> Before use the Syncfusion Blazor Project Conversion, check whether the Syncfusion Blazor Template Studio Extension installed or not in Visual Studio Extension Manager by clicking on the Extensions -> Manage Extensions -> Installed. If this extension not installed, install the extension by follow the steps from the [download and installation](download-and-installation) help topic.
+N> Before use the Syncfusion Blazor Project Conversion, check whether the Syncfusion Blazor Template Studio Extension installed or not in Visual Studio Extension Manager by clicking on the Extensions -> Manage Extensions -> Installed. If this extension not installed, install the extension by follow the steps from the [download and installation](download-and-installation) help topic.
 
 1. Open your existing Blazor application or create a new Blazor application in Visual Studio 2019 or Visual Studio 2022.
 
@@ -35,7 +35,7 @@ The steps below help you to convert the **Blazor application** to the **Syncfusi
 
     ![ConversionWizard](images/Conversion.png)
 
-    > The versions are loaded from the Syncfusion Blazor NuGet packages published in [`NuGet.org`](https://www.nuget.org/packages?q=Tags%3A%22blazor%22syncfusion) and it requires internet connectivity.
+    N> The versions are loaded from the Syncfusion Blazor NuGet packages published in [`NuGet.org`](https://www.nuget.org/packages?q=Tags%3A%22blazor%22syncfusion) and it requires internet connectivity.
 
 4. Check the **“Enable a backup before converting”** checkbox if you want to take the project backup and choose the location.
 

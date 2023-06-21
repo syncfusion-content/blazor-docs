@@ -25,7 +25,7 @@ The maximum size of row and column is limited to 32767 and 63 respectively.
 
 ## Insert rows
 
-You can add a row (or several rows) above or below the row at cursor position by using the `InsertRow` method. This method accepts the following parameters:
+You can add a row (or several rows) above or below the row at cursor position by using the [`InsertRowAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.EditorModule.html#Syncfusion_Blazor_DocumentEditor_EditorModule_InsertRowAsync_System_Boolean_System_Nullable_System_Double__) method. This method accepts the following parameters:
 
 Parameter | Type | Description
 ----------|------|-------------
@@ -45,7 +45,7 @@ documentEditor.Editor.InsertRowAsync(true, 3);
 
 ## Insert columns
 
-You can add a column (or several columns) to the left or right of the column at cursor position by using the `InsertColumn` method. This method accepts the following parameters:
+You can add a column (or several columns) to the left or right of the column at cursor position by using the [`InsertColumnAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.EditorModule.html#Syncfusion_Blazor_DocumentEditor_EditorModule_InsertColumnAsync_System_Boolean_System_Nullable_System_Double__) method. This method accepts the following parameters:
 
 Parameter | Type | Description
 ----------|------|-------------
@@ -101,7 +101,7 @@ documentEditor.Selection.SelectCellAsync();
 
 ## Delete table
 
-Document editor allows you to delete the entire table. You can use the `DeleteTable()` method of editor instance, if selection is in table. Refer to the following sample code.
+Document editor allows you to delete the entire table. You can use the [`DeleteTableAsync()`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.EditorModule.html#Syncfusion_Blazor_DocumentEditor_EditorModule_DeleteTableAsync) method of editor instance, if selection is in table. Refer to the following sample code.
 
 ```csharp
 documentEditor.Editor.DeleteTableAsync();
@@ -109,7 +109,7 @@ documentEditor.Editor.DeleteTableAsync();
 
 ## Delete row
 
-Document editor allows you to delete the selected number of rows. You can use the `DeleteRow()` method of editor instance to delete the selected number of rows, if selection is in table. Refer to the following sample code.
+Document editor allows you to delete the selected number of rows. You can use the [`DeleteRowAsync()`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.EditorModule.html#Syncfusion_Blazor_DocumentEditor_EditorModule_DeleteRowAsync) method of editor instance to delete the selected number of rows, if selection is in table. Refer to the following sample code.
 
 ```csharp
 documentEditor.Editor.DeleteRowAsync();
@@ -117,7 +117,7 @@ documentEditor.Editor.DeleteRowAsync();
 
 ## Delete column
 
-Document editor allows you to delete the selected number of columns. You can use the `DeleteColumn()` method of editor instance to delete the selected number of columns, if selection is in table. Refer to the following sample code.
+Document editor allows you to delete the selected number of columns. You can use the [`DeleteColumnAsync()`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.EditorModule.html#Syncfusion_Blazor_DocumentEditor_EditorModule_DeleteColumnAsync) method of editor instance to delete the selected number of columns, if selection is in table. Refer to the following sample code.
 
 ```csharp
 documentEditor.Editor.DeleteColumnAsync();

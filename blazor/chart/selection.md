@@ -13,7 +13,7 @@ documentation: ug
 
 The chart provides selection support for the series and its data points on mouse or touch action.
 
-> When clicked on the data points, the corresponding series legend will also be selected.
+N> When clicked on the data points, the corresponding series legend will also be selected.
 
 The chart offers a variety of selection mode for selecting the data. They are,
 
@@ -478,7 +478,7 @@ The custom style can be applied to selected points or series using the [Selectio
 
 ![Blazor Column Chart with Custom Style Selection](images/selection/blazor-chart-custom-style-selection.png)
 
-> Refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
+N> Refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
 
 ## See Also
 

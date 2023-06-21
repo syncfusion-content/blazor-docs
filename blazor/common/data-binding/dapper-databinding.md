@@ -148,7 +148,7 @@ public class BugDataAccessLayer
 Now, register `BugDataAccessLayer` as scoped service in the `Startup.cs` file in .NET 5 and .NET 3.X application, in `Program.cs` file in .NET 6 application as follows.
 
 {% tabs %}
-{% highlight c# tabtitle=".NET 6 (~/Program.cs)" %}
+{% highlight c# tabtitle=".NET 6 & .NET 7 (~/Program.cs)" %}
 
 builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
@@ -181,7 +181,7 @@ Now, in the `Browse` tab, search and install the `Syncfusion.Blazor.Grid` NuGet 
 
 ![Install Syncfusion Blazor Grid NuGet](../images/install-blazor-grid-nuget.png)
 
-> For this demo, `Syncfusion.Blazor`(19.1.0.65) NuGet package is used.  A new `Syncfusion.Blazor` NuGet package with new enhancement will be released in our every-week release and main release. So, you can check and update to the [latest versions](https://www.nuget.org/packages/Syncfusion.Blazor).
+N> For this demo, `Syncfusion.Blazor`(19.1.0.65) NuGet package is used.  A new `Syncfusion.Blazor` NuGet package with new enhancement will be released in our every-week release and main release. So, you can check and update to the [latest versions](https://www.nuget.org/packages/Syncfusion.Blazor).
 
 ## Adding Syncfusion Blazor DataGrid component
 
@@ -198,7 +198,7 @@ Open `_Import.razor` file and add the following namespaces which are required to
 Open `Startup.cs` file in .NET 5 and .NET 3.X applications, `Program.cs` file in .NET 6 application and register the Syncfusion service in the `ConfigureServices` method as follows.
 
 {% tabs %}
-{% highlight c# tabtitle=".NET 6 (~/Program.cs)" %}
+{% highlight c# tabtitle=".NET 6 & .NET 7 (~/Program.cs)" %}
 
 builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
@@ -286,7 +286,7 @@ public class BugDataAdaptor: DataAdaptor
 Now, Open the `Startup.cs` file in .NET 5 and .NET 3.X application, in `Program.cs` file in .NET 6 application and register the `BugDataAdaptor` class in the `ConfigureServices` method as follows.
 
 {% tabs %}
-{% highlight c# tabtitle=".NET 6 (~/Program.cs)" %}
+{% highlight c# tabtitle=".NET 6 & .NET 7 (~/Program.cs)" %}
 
 builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
@@ -354,7 +354,7 @@ You can enable editing in the grid component using the [GridEditSettings](https:
 
 [Grid Editing in Blazor](https://blazor.syncfusion.com/documentation/datagrid/editing/#editing)
 
-> Normal editing is the default edit mode for the DataGrid component. You need to set the IsPrimaryKey property of Column as True for a particular column, whose value is a unique value for editing purposes.
+N> Normal editing is the default edit mode for the DataGrid component. You need to set the IsPrimaryKey property of Column as True for a particular column, whose value is a unique value for editing purposes.
 
 Here, we are using inline edit mode and the [Toolbar](https://blazor.syncfusion.com/documentation/datagrid/tool-bar) property to show toolbar items for editing.
 
@@ -436,7 +436,7 @@ public override async Task<object> RemoveAsync(DataManager dataManager, object p
 
 To delete a row, select any row and click the `Delete` toolbar button. Clicking the `Delete` toolbar button will call the `RemoveAsync` method of our `BugDataAdaptor` to update the record in the `Bug` table.
 
-> Find the sample from this [Github](https://github.com/SyncfusionExamples/blazor-datagrid-dapper-crud) location.
+N> Find the sample from this [Github](https://github.com/SyncfusionExamples/blazor-datagrid-dapper-crud) location.
     
 ## See also
     

@@ -87,7 +87,7 @@ The [GroupGap](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.T
 </SfTreeMap>
 ```
 
-> Refer to the [code block](#group-path) to know about the property value of the **Employees**.
+N> Refer to the [code block](#group-path) to know about the property value of the **Employees**.
 
 ![Blazor TreeMap Levels with Group Gap](images/Levels/blazor-treemap-levels-with-group-gap.png)
 
@@ -119,7 +119,7 @@ Customize the font color, family, weight, opacity and size using the [TreeMapHea
 </SfTreeMap>
 ```
 
-> Refer to the [code block](#group-path) to know about the property value of **Employees**.
+N> Refer to the [code block](#group-path) to know about the property value of **Employees**.
 
 ![Blazor TreeMap with Custom Header Height and Style](images/Levels/blazor-treemap-custom-header-height.png)
 
@@ -154,6 +154,6 @@ The following properties are available to customize the header content in the [T
 </SfTreeMap>
 ```
 
-> Refer to the [code block](#group-path) to know about the property value of `Employees`.
+N> Refer to the [code block](#group-path) to know about the property value of `Employees`.
 
 ![Customizing Header Alignment in Blazor TreeMap](images/Levels/blazor-treemap-header-alignment.png)

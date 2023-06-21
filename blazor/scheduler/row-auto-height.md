@@ -13,7 +13,7 @@ By default, the height of the Scheduler rows in Timeline views are static and th
 
 To enable auto row height adjustments on Scheduler Timeline views and Month view, set `true` to the `EnableAutoRowHeight` property whose default value is `false`.
 
-> This auto row height adjustment is applicable only on all the Timeline views as well as on the calendar Month view.
+N> This auto row height adjustment is applicable only on all the Timeline views as well as on the calendar Month view.
 
 Now, let's see how it works on those applicable views with examples.
 
@@ -24,12 +24,21 @@ When the feature `EnableAutoRowHeight` is enabled, the row height gets auto-adju
 
 <SfSchedule TValue="AppointmentData" Height="650px" EnableAutoRowHeight="true">
     <ScheduleViews>
+        <ScheduleEventSettings DataSource="@DataSource"></ScheduleEventSettings>
         <ScheduleView Option="View.Month"></ScheduleView>
         <ScheduleView Option="View.TimelineWeek"></ScheduleView>
         <ScheduleView Option="View.TimelineMonth"></ScheduleView>
     </ScheduleViews>
 </SfSchedule>
 @code{
+    DateTime CurrentDate = new DateTime(2023, 1, 8);
+    List<AppointmentData> DataSource = new List<AppointmentData>
+    {
+        new AppointmentData { Id = 1, Subject = "Meeting", StartTime = new DateTime(2023, 1, 9, 10, 30, 0) , EndTime = new DateTime(2023, 1, 9, 11, 0, 0) },
+        new AppointmentData { Id = 2, Subject = "Conference", StartTime = new DateTime(2023, 1, 9, 9, 30, 0) , EndTime = new DateTime(2023, 1, 9, 11, 0, 0) },
+        new AppointmentData { Id = 3, Subject = "Seminar", StartTime = new DateTime(2023, 1, 9, 9, 30, 0) , EndTime = new DateTime(2023, 1, 9, 11, 0, 0) },
+        new AppointmentData { Id = 4, Subject = "Sprint Planning", StartTime = new DateTime(2023, 1, 9, 11, 30, 0) , EndTime = new DateTime(2023, 1, 9, 12, 0, 0) }
+    };
     public class AppointmentData
     {
         public int Id { get; set; }
@@ -60,6 +69,7 @@ When the feature `EnableAutoRowHeight` is enabled, the row height gets auto-adju
     <ScheduleResources>
         <ScheduleResource TItem="ResourceData" TValue="int" DataSource="@OwnerData" Field="OwnerId" Title="Owner" Name="Owner" TextField="Text" IdField="Id" ColorField="Color"></ScheduleResource>
     </ScheduleResources>
+    <ScheduleEventSettings DataSource="@DataSource"></ScheduleEventSettings>
     <ScheduleViews>
         <ScheduleView Option="View.TimelineWeek"></ScheduleView>
         <ScheduleView Option="View.TimelineMonth"></ScheduleView>
@@ -67,11 +77,19 @@ When the feature `EnableAutoRowHeight` is enabled, the row height gets auto-adju
 </SfSchedule>
 
 @code{
+    DateTime CurrentDate = new DateTime(2023, 1, 9);
     public string[] Resources { get; set; } = { "Owner" };
     private List<ResourceData> OwnerData { get; set; } = new List<ResourceData> {
         new ResourceData { Text = "Nancy", Id= 1, Color = "#df5286" },
         new ResourceData { Text = "Steven", Id= 2, Color = "#7fa900" },
         new ResourceData { Text = "Robert", Id= 3, Color = "#ea7a57" }
+    };
+    List<AppointmentData> DataSource = new List<AppointmentData>
+    {
+        new AppointmentData { Id = 1, OwnerId = 2,Subject = "Meeting", StartTime = new DateTime(2023, 1, 9, 10, 30, 0) , EndTime = new DateTime(2023, 1, 9, 11, 0, 0) },
+        new AppointmentData { Id = 2, OwnerId = 2,Subject = "Conference", StartTime = new DateTime(2023, 1, 9, 9, 30, 0) , EndTime = new DateTime(2023, 1, 9, 11, 0, 0) },
+        new AppointmentData { Id = 3, OwnerId = 2,Subject = "Seminar", StartTime = new DateTime(2023, 1, 9, 9, 30, 0) , EndTime = new DateTime(2023, 1, 9, 11, 0, 0) },
+        new AppointmentData { Id = 4, OwnerId = 2, Subject = "Sprint Planning", StartTime = new DateTime(2023, 1, 9, 10, 30, 0) , EndTime = new DateTime(2023, 1, 9, 12, 0, 0) }
     };
     public class ResourceData
     {
@@ -119,7 +137,7 @@ By default, with the feature `EnableAutoRowHeight`, there will be a space in the
 </SfSchedule>
 
 @code{
-    DateTime CurrentDate = new DateTime(2020, 12, 30);
+    DateTime CurrentDate = new DateTime(2023, 1, 30);
     public string[] Resources { get; set; } = { "Owner" };
     private List<ResourceData> OwnerData { get; set; } = new List<ResourceData>
 {
@@ -131,9 +149,9 @@ By default, with the feature `EnableAutoRowHeight`, there will be a space in the
     };
     private List<AppointmentData> DataSource = new List<AppointmentData>
 {
-        new AppointmentData {  Id = 1, Subject = "Board Meeting", StartTime = new DateTime(2020, 12, 30, 9, 0, 0), EndTime = new DateTime(2020, 12, 30, 11, 0, 0), OwnerId = 1},
-        new AppointmentData {  Id = 2, Subject = "Sprint Meeting", StartTime = new DateTime(2020, 12, 30, 9, 30, 0), EndTime = new DateTime(2020, 12, 30, 11, 30, 0), OwnerId = 2},
-        new AppointmentData {  Id = 3, Subject = "Scrum Meeting", StartTime = new DateTime(2020, 12, 30, 10, 0, 0), EndTime = new DateTime(2020, 12, 30, 12, 0, 0), OwnerId = 3}
+        new AppointmentData {  Id = 1, Subject = "Board Meeting", StartTime = new DateTime(2023, 1, 30, 9, 0, 0), EndTime = new DateTime(2023, 1, 30, 11, 0, 0), OwnerId = 1},
+        new AppointmentData {  Id = 2, Subject = "Sprint Meeting", StartTime = new DateTime(2023, 1, 30, 9, 30, 0), EndTime = new DateTime(2023, 1, 30, 11, 30, 0), OwnerId = 2},
+        new AppointmentData {  Id = 3, Subject = "Scrum Meeting", StartTime = new DateTime(2023, 1, 30, 10, 0, 0), EndTime = new DateTime(2023, 1, 30, 12, 0, 0), OwnerId = 3}
     };
     public class ResourceData
     {
@@ -160,4 +178,4 @@ By default, with the feature `EnableAutoRowHeight`, there will be a space in the
 
 ![Ignoring Whitespace in Blazor Scheduler](images/blazor-scheduler-ignore-whitespace.png)
 
-> The property `IgnoreWhitespace` will be applicable only when `EnableAutoRowHeight` feature is enabled in the Scheduler.
+N> The property `IgnoreWhitespace` will be applicable only when `EnableAutoRowHeight` feature is enabled in the Scheduler.

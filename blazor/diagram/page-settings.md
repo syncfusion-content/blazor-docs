@@ -22,21 +22,44 @@ By default, Diagram’s page size is decided based on the position of its diagra
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Height="600px">
+<SfDiagramComponent Height="600px" Nodes="nodes">
     @*Initialize the page settings with page orientation and break lines*@
-    <PageSettings Height="300" 
-                  Width="300" 
-                  Orientation="@orientation" 
+    <PageSettings Height="300"
+                  Width="300"
+                  Orientation="@orientation"
+                  MultiplePage="true"
                   ShowPageBreaks="true">
+        @*Set the page background color*@
+        <BackgroundStyle Background="LightGreen" />
+        <PageMargin Left="10" Top="10" Bottom="10" />
     </PageSettings>
 </SfDiagramComponent>
 
 @code
 {
-    //Sets the page orientation as landscape.
+    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    protected override void OnInitialized()
+    {
+        Node node = new Node()
+            {
+                ID = "node6",
+                Width = 50,
+                Height = 50,
+                OffsetX = 150,
+                OffsetY = 100,
+                Style = new ShapeStyle()
+                {
+                    Fill = "#6495ED",
+                    StrokeColor = "white"
+                }
+            };
+        nodes.Add(node);
+    }
+    //Set the page orientation as landscape.
     public PageOrientation orientation = PageOrientation.Landscape;
 }
 ```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/PageSettings/PageAppearance)
 
 |Orientation|Output|
 |-------|-------|
@@ -84,6 +107,8 @@ Based on the diagramming element position, the size of the page dynamically incr
     }
 }
 ```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/PageSettings/MultiplePage)
+
 ![Multiple Page](./images/MultiplePage.png)
 
 ## How to change the page appearance
@@ -136,6 +161,8 @@ The appearance of the pages can be customized using the following properties of 
     public PageOrientation orientation = PageOrientation.Landscape;
 }
 ```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/PageSettings/PageAppearance)
+
 ![PageBackground Color](./images/PageBackground.png)
 
 ### How to customize the appearance of the page break
@@ -167,11 +194,13 @@ Refer to the following code example on how to change the stroke, stroke-dasharra
     </PageSettings>
 </SfDiagramComponent>
 ```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/PageSettings/PageBreak)
+
 ![Pagebreak Color](./images/Pagebreak.png)
 
 ## How to change the margin around the pages
 
-The area between the main content of a page and the page edges can be changed by using the PageMargin property. The default values for the margin are set to 25 on all sides.
+The area between the maintain content of a page and the page edges can be changed by using the PageMargin property. The default values for the margin are set to 25 on all sides.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -187,6 +216,7 @@ The area between the main content of a page and the page edges can be changed by
     </PageSettings>
 </SfDiagramComponent>
 ```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/PageSettings/Margin)
 
 ## Boundary constraints
 
@@ -254,6 +284,7 @@ The following code example illustrates how to define boundary constraints with r
     }
 }
 ```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/PageSettings/BoundaryConstraints)
 
 ## Responsive with parent container
 
@@ -283,6 +314,36 @@ The following code example illustrates how to set width and height in percentage
             Height = 100,
             Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "white" }
         });
+    }
+}
+```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/PageSettings/ResponsiveWithParentContainer)
+
+## CallBack Methods
+
+* BackgroundChanged : Specifies the callback to trigger when the Background value changes.
+* BoundaryConstraintsChanged : Specifies the callback to trigger when the BoundaryConstraints value changes.
+* HeightChanged : Specifies the callback to trigger when the height value changes.
+* MarginChanged : Specifies the callback to trigger when the Margin value changes.
+* MultiplePageChanged :Specifies the callback to trigger when the MultiplePage value changes.
+* OrientationChanged : Specifies the callback to trigger when the Orientation value changes.
+* ShowPageBreaksChanged : Specifies the callback to trigger when the ShowPageBreaks value changes.
+* WidthChanged : Specifies the callback to trigger when the width value changes.
+
+
+```cshtml
+@using Syncfusion.Blazor.Diagram
+
+<SfDiagramComponent Height="600px">
+    @* Sets the ScrollLimit of scroll settings *@
+     <PageSettings BackgroundChanged="OnBackgroundChanged"></PageSettings>
+</SfDiagramComponent>
+
+@code
+{
+    private void OnBackgroundChanged()
+    {
+       // Enter your code.
     }
 }
 ```

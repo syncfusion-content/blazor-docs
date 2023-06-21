@@ -1185,7 +1185,7 @@ To apply theme in exported PDF, define the **theme** in export properties.
 }
 ```
 
-> By default, material theme is applied to exported PDF document.
+N> By default, material theme is applied to exported PDF document.
 
 ### Customize column width in exported PDF document
 
@@ -1244,7 +1244,7 @@ In the following code sample, we have customized the column width for the PDF ex
 
 ```
 
-> You can find the fully working sample [here](https://github.com/SyncfusionExamples/blazor-datagrid-customize-column-in-pdf-exported-document).
+N> You can find the fully working sample [here](https://github.com/SyncfusionExamples/blazor-datagrid-customize-column-in-pdf-exported-document).
 
 ### Grid cell customization in PDF export
 
@@ -1469,4 +1469,4 @@ The following sample code demonstrates dynamically modifying the data source bef
 * [Export Blazor Datagrid with Barcode to PDF](https://www.syncfusion.com/forums/175315/export-datagrid-with-barcode)
 
 
-> You can refer to our [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap4) to understand how to present and manipulate data.
+N> You can refer to our [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap4) to understand how to present and manipulate data.

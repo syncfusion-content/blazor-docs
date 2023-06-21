@@ -11,7 +11,7 @@ documentation: ug
 
 The Syncfusion Blazor code snippet utility for Visual Studio Code includes snippets for inserting a Syncfusion Blazor component with various features into the Blazor Application's Razor code editor.
 
-   > The Syncfusion Blazor code snippet is available from Essential Studio 2021 Volume 1 (`v19.1.0.54`).
+   N> The Syncfusion Blazor code snippet is available from Essential Studio 2021 Volume 1 (`v19.1.0.54`).
 
 ## Add a Syncfusion Blazor component
 
@@ -47,7 +47,7 @@ The Syncfusion Blazor snippet simply inserts the code into the razor file. You m
 
     ![NuGet Package](images/NuGet-Snippet.png)
 
-    > Starting with Volume 4, 2020 (v18.4.0.30) release, Syncfusion provides [individual NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) for our Syncfusion Blazor components. We highly recommend this new standard for your Blazor production applications.
+    N> Starting with Volume 4, 2020 (v18.4.0.30) release, Syncfusion provides [individual NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) for our Syncfusion Blazor components. We highly recommend this new standard for your Blazor production applications.
 
 2. To render the Syncfusion components in your application, open the **~/_Imports.razor** file and add the required Syncfusion Blazor namespace entries.
 
@@ -61,4 +61,4 @@ The Syncfusion Blazor snippet simply inserts the code into the razor file. You m
 
     ![Syncfusion Configuration](images/Configuration-Snippet.png)
 
-5. If you installed the trial setup or NuGet packages from nuget.org you must register the Syncfusion license key to your application since Syncfusion introduced the licensing system from 2018 Volume 2 (v16.2.0.41) Essential Studio release. Navigate to the [help topic](https://help.syncfusion.com/common/essential-studio/licensing/license-key#how-to-generate-syncfusion-license-key) to generate and register the Syncfusion license key to your application. Refer to this [blog](https://blog.syncfusion.com/post/Whats-New-in-2018-Volume-2-Licensing-Changes-in-the-1620x-Version-of-Essential-Studio.aspx?_ga=2.11237684.1233358434.1587355730-230058891.1567654773) post for understanding the licensing changes introduced in Essential Studio.
+5. If you installed the trial setup or NuGet packages from nuget.org you must register the Syncfusion license key to your application since Syncfusion introduced the licensing system from 2018 Volume 2 (v16.2.0.41) Essential Studio release. Navigate to the [help topic](https://help.syncfusion.com/common/essential-studio/licensing/license-key#how-to-generate-syncfusion-license-key) to generate and register the Syncfusion license key to your application. Refer to this [UG](https://blazor.syncfusion.com/documentation/getting-started/license-key/overview) topic for understanding the licensing details in Essential Studio for Blazor.

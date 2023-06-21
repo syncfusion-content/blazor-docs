@@ -1,0 +1,27 @@
+@using Syncfusion.Blazor.DropDowns
+
+<SfMention TItem="string" DataSource="@data">
+    <TargetComponent>
+        <div id="commentsMention" placeholder="Type @@ and tag user" ></div>
+    </TargetComponent>
+</SfMention>
+
+<style>
+    #commentsMention {
+        min-height: 100px;
+        border: 1px solid #D7D7D7;
+        border-radius: 4px;
+        padding: 8px;
+        font-size: 14px;
+        width: 600px;
+    }
+    div#commentsMention[placeholder]:empty:before {
+        content: attr(placeholder);
+        color: #555;
+    }
+</style>
+
+@code {
+
+    List<string> data = new List<string>() {"Selma Rose", "Garth", "Robert", "William", "Joseph"};
+}

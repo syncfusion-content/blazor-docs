@@ -15,7 +15,7 @@ Azure Maps is yet another online Maps provider, owned by Microsoft. As like OSM 
 
 The Azure Maps can be rendered by setting the [UrlTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html#Syncfusion_Blazor_Maps_MapsLayer_1_UrlTemplate) property with the tile server URL provided by online map providers. In the meantime, a subscription key is required for Azure Maps. Follow the steps in this [link](https://docs.microsoft.com/en-us/azure/search/search-security-api-keys) to generate an API key, and then added the key to the URL.
 
->Refer to [Azure Maps Licensing](https://azure.microsoft.com/en-in/support/legal/).
+N>Refer to [Azure Maps Licensing](https://azure.microsoft.com/en-in/support/legal/).
 
 ```cshtml
 @using Syncfusion.Blazor.Maps

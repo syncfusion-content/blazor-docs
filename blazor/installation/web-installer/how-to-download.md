@@ -49,7 +49,7 @@ You should initiate an evaluation if you have already obtained our components th
 
 3. Begin your trial by selecting the Blazor product.
 
-   > **Note** <br /> If you’ve already used the trial products and they haven’t expired, you won’t be able to start the trial for the same product again.
+   N> If you’ve already used the trial products and they haven’t expired, you won’t be able to start the trial for the same product again.
 
 4. After you’ve started the trial, go to the [Trials & Downloads](https://www.syncfusion.com/account/manage-trials/downloads) page to get the latest version trial installer. You can generate the [unlock key](https://www.syncfusion.com/kb/8069/how-to-generate-unlock-key-for-essentials-studio-products) and [license key](https://blazor.syncfusion.com/documentation/getting-started/license-key/how-to-generate) here at any time before the trial period expires. (as shown in below screenshot.)
 
@@ -73,6 +73,6 @@ You should initiate an evaluation if you have already obtained our components th
 
 5. After downloading, the Syncfusion Blazor web installer can be unlocked using Syncfusion registered login credential.
 
-> **Note** <br /> For Syncfusion trial and licensed products, there is no separate web installer. Based on your account license, Syncfusion trial or licensed products will be installed via web installer.
+N> For Syncfusion trial and licensed products, there is no separate web installer. Based on your account license, Syncfusion trial or licensed products will be installed via web installer.
 
 You can also refer to the [web installer](https://blazor.syncfusion.com/documentation/installation/web-installer/how-to-install)  links for step-by-step installation guidelines.

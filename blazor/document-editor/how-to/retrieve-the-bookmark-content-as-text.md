@@ -89,7 +89,6 @@ The following example code illustrates how to get the whole document content as 
 </SfDocumentEditorContainer>
 
 @code {
-
     SfDocumentEditorContainer container;
 
     public async void OnCreated(object args)
@@ -116,7 +115,6 @@ The following example code illustrates how to get the header content as plain te
 </SfDocumentEditorContainer>
 
 @code {
-
     SfDocumentEditorContainer container;
 
     public async void OnCreated(object args)

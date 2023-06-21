@@ -17,16 +17,18 @@ The stock chart can be zoomed in three different ways.
 * Mouse Wheel - By setting [EnableMouseWheelZooming](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartZoomSettings.html#Syncfusion_Blazor_Charts_StockChartZoomSettings_EnableMouseWheelZooming) property to **true** in [StockChartZoomSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartZoomSettings.html), the stock chart can be zoomed-in and zoomed-out by scrolling the mouse wheel.
 * Pinch - By setting [EnablePinchZooming](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartZoomSettings.html#Syncfusion_Blazor_Charts_StockChartZoomSettings_EnablePinchZooming) property to **true** in [StockChartZoomSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartZoomSettings.html), the stock chart can be zoomed through pinch gesture in touch enabled devices.
 
- > Pinch zooming is only usable in browsers that support multi-touch gestures.
+ N> Pinch zooming is only usable in browsers that support multi-touch gestures.
 
 ```cshtml
 
 @using Syncfusion.Blazor.Charts
-@using Newtonsoft.Json
 @using System.IO
-@using System.Net.Http.Json
-
-   <SfStockChart Title="AAPL Stock Price">
+@using System.Runtime.Serialization
+@inject NavigationManager NavigationManager
+@inject HttpClient Http
+@if (DataSource != null)
+{
+    <SfStockChart Title="AAPL Stock Price">
        <StockChartZoomSettings EnableMouseWheelZooming="true" EnablePinchZooming="true" EnableSelectionZooming="true"></StockChartZoomSettings>
             <StockChartPrimaryXAxis>
                 <StockChartAxisMajorGridLines Width="0"></StockChartAxisMajorGridLines>
@@ -41,7 +43,8 @@ The stock chart can be zoomed in three different ways.
             <StockChartChartArea>
                 <StockChartChartAreaBorder Width="0"></StockChartChartAreaBorder>
             </StockChartChartArea>
-        </SfStockChart>
+    </SfStockChart>
+}   
 
 @code {
     public ChartData[] DataSource{ get; set; }
@@ -55,14 +58,10 @@ The stock chart can be zoomed in three different ways.
         public double high { get; set; }
         public double volume { get; set; }
     }   
-
     protected override async Task OnInitializedAsync()
-    {
-        if (File.Exists("wwwroot/data/chart/chart-data.json"))
-        {
-            DataSource = JsonConvert.DeserializeObject<ChartData[]>(File.ReadAllText("wwwroot/data/chart/chart-data.json"));
-        }
-    }
+      {
+          DataSource = await Http.GetFromJsonAsync<ChartData[]>(NavigationManager.BaseUri +"./chart-data.json");
+      }
 }
 
 ```
@@ -84,8 +83,13 @@ There are three types of modes.
 ```cshtml
 
 @using Syncfusion.Blazor.Charts
-
-<SfStockChart Title="AAPL Stock Price">
+@using System.IO
+@using System.Runtime.Serialization
+@inject NavigationManager NavigationManager
+@inject HttpClient Http
+@if (DataSource != null)
+{
+    <SfStockChart Title="AAPL Stock Price">
        <StockChartZoomSettings EnableSelectionZooming="true" Mode="ZoomMode.X"></StockChartZoomSettings>
             <StockChartPrimaryXAxis>
                 <StockChartAxisMajorGridLines Width="0"></StockChartAxisMajorGridLines>
@@ -101,7 +105,8 @@ There are three types of modes.
             <StockChartChartArea>
                 <StockChartChartAreaBorder Width="0"></StockChartChartAreaBorder>
             </StockChartChartArea>
-        </SfStockChart>
+    </SfStockChart>
+}    
 
 @code {
     public ChartData[] DataSource{ get; set; }
@@ -114,15 +119,12 @@ There are three types of modes.
         public double close { get; set; }
         public double high { get; set; }
         public double volume { get; set; }
-    }   
+    }  
 
     protected override async Task OnInitializedAsync()
-    {
-        if (File.Exists("wwwroot/data/chart/chart-data.json"))
-        {
-            DataSource = JsonConvert.DeserializeObject<ChartData[]>(File.ReadAllText("wwwroot/data/chart/chart-data.json"));
-        }
-    }
+      {
+          DataSource = await Http.GetFromJsonAsync<ChartData[]>(NavigationManager.BaseUri +"./chart-data.json");
+      }
 }
 
 ```
@@ -136,8 +138,13 @@ By default, zoom in, zoom out, pan, and reset buttons are available in the toolb
 ```cshtml
 
 @using Syncfusion.Blazor.Charts
-
-<SfStockChart Title="AAPL Stock Price">
+@using System.IO
+@using System.Runtime.Serialization
+@inject NavigationManager NavigationManager
+@inject HttpClient Http
+@if (DataSource != null)
+{
+    <SfStockChart Title="AAPL Stock Price">
        <StockChartZoomSettings EnableSelectionZooming="true" EnableMouseWheelZooming="true"
                        EnablePinchZooming="true" ToolbarItems="@ToolbarItem"></StockChartZoomSettings>
             <StockChartPrimaryXAxis>
@@ -154,7 +161,8 @@ By default, zoom in, zoom out, pan, and reset buttons are available in the toolb
             <StockChartChartArea>
                 <StockChartChartAreaBorder Width="0"></StockChartChartAreaBorder>
             </StockChartChartArea>
-        </SfStockChart>
+    </SfStockChart>
+}
 
 @code {
     public List<ToolbarItems> ToolbarItem = new List<ToolbarItems>() { ToolbarItems.Zoom, ToolbarItems.Reset, ToolbarItems.Pan };
@@ -171,13 +179,9 @@ By default, zoom in, zoom out, pan, and reset buttons are available in the toolb
     }   
 
     protected override async Task OnInitializedAsync()
-    {
-        if (File.Exists("wwwroot/data/chart/chart-data.json"))
-        {
-            DataSource = JsonConvert.DeserializeObject<ChartData[]>(File.ReadAllText("wwwroot/data/chart/chart-data.json"));
-        }
-
-    }
+      {
+          DataSource = await Http.GetFromJsonAsync<ChartData[]>(NavigationManager.BaseUri +"./chart-data.json");
+      }
 }
 
 ```
@@ -191,8 +195,13 @@ By using the [EnablePan](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
 ```cshtml
 
 @using Syncfusion.Blazor.Charts
-
-<SfStockChart Title="AAPL Stock Price">
+@using System.IO
+@using System.Runtime.Serialization
+@inject NavigationManager NavigationManager
+@inject HttpClient Http
+@if (DataSource != null)
+{
+    <SfStockChart Title="AAPL Stock Price">
        <StockChartZoomSettings EnableSelectionZooming="true" EnablePan="true"></StockChartZoomSettings>
             <StockChartPrimaryXAxis ZoomFactor="0.2" ZoomPosition="0.6">
                 <StockChartAxisMajorGridLines Width="0"></StockChartAxisMajorGridLines>
@@ -207,9 +216,9 @@ By using the [EnablePan](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
             </StockChartSeriesCollection>
             <StockChartChartArea>
                 <StockChartChartAreaBorder Width="0"></StockChartChartAreaBorder>
-            </StockChartChartArea>
-        </SfStockChart>
-
+        </StockChartChartArea>
+    </SfStockChart>
+}    
 
 @code {
     
@@ -226,13 +235,9 @@ By using the [EnablePan](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
     }   
 
     protected override async Task OnInitializedAsync()
-    {
-        if (File.Exists("wwwroot/data/chart/chart-data.json"))
-        {
-            DataSource = JsonConvert.DeserializeObject<ChartData[]>(File.ReadAllText("wwwroot/data/chart/chart-data.json"));
-        }
-
-    }
+      {
+          DataSource = await Http.GetFromJsonAsync<ChartData[]>(NavigationManager.BaseUri +"./chart-data.json");
+      }
 }
 
 ```
@@ -246,8 +251,13 @@ The [EnableScrollbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ch
 ```cshtml
 
 @using Syncfusion.Blazor.Charts
-
-<SfStockChart Title="AAPL Stock Price">
+@using System.IO
+@using System.Runtime.Serialization
+@inject NavigationManager NavigationManager
+@inject HttpClient Http
+@if (DataSource != null)
+{
+    <SfStockChart Title="AAPL Stock Price">
        <StockChartZoomSettings EnableMouseWheelZooming="true" EnableScrollbar="true" EnablePinchZooming="true"
                        EnableSelectionZooming="true"></StockChartZoomSettings>
             <StockChartPrimaryXAxis>
@@ -263,8 +273,9 @@ The [EnableScrollbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ch
             </StockChartSeriesCollection>
             <StockChartChartArea>
                 <StockChartChartAreaBorder Width="0"></StockChartChartAreaBorder>
-            </StockChartChartArea>
-        </SfStockChart>
+        </StockChartChartArea>
+    </SfStockChart>
+}
 
 @code {
     
@@ -281,13 +292,9 @@ The [EnableScrollbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ch
     }   
 
     protected override async Task OnInitializedAsync()
-    {
-        if (File.Exists("wwwroot/data/chart/chart-data.json"))
-        {
-            DataSource = JsonConvert.DeserializeObject<ChartData[]>(File.ReadAllText("wwwroot/data/chart/chart-data.json"));
-        }
-
-    }
+      {
+          DataSource = await Http.GetFromJsonAsync<ChartData[]>(NavigationManager.BaseUri +"./chart-data.json");
+      }
 }
 
 ```
@@ -301,8 +308,13 @@ The axis interval will be calculated automatically with respect to the zoomed ra
 ```cshtml
 
 @using Syncfusion.Blazor.Charts
-
-<SfStockChart Title="AAPL Stock Price">
+@using System.IO
+@using System.Runtime.Serialization
+@inject NavigationManager NavigationManager
+@inject HttpClient Http
+@if (DataSource != null)
+{
+    <SfStockChart Title="AAPL Stock Price">
        <StockChartZoomSettings EnableMouseWheelZooming="true" EnablePinchZooming="true"
                        EnableSelectionZooming="true"></StockChartZoomSettings>
             <StockChartPrimaryXAxis EnableAutoIntervalOnZooming="true">
@@ -319,8 +331,8 @@ The axis interval will be calculated automatically with respect to the zoomed ra
             <StockChartChartArea>
                 <StockChartChartAreaBorder Width="0"></StockChartChartAreaBorder>
             </StockChartChartArea>
-        </SfStockChart>
-
+    </SfStockChart>
+}
 
 @code {
     
@@ -337,16 +349,13 @@ The axis interval will be calculated automatically with respect to the zoomed ra
     }   
 
     protected override async Task OnInitializedAsync()
-    {
-        if (File.Exists("wwwroot/data/chart/chart-data.json"))
-        {
-            DataSource = JsonConvert.DeserializeObject<ChartData[]>(File.ReadAllText("wwwroot/data/chart/chart-data.json"));
-        }
-    }
+      {
+          DataSource = await Http.GetFromJsonAsync<ChartData[]>(NavigationManager.BaseUri +"./chart-data.json");
+      }
 }
 
 ```
 
 ![Auto Interval on Zooming in Blazor Area Chart](images/zooming/stock-chart-autointerval.PNG)
 
-> Refer to our [Blazor Stock Charts](https://www.syncfusion.com/blazor-components/blazor-stock-chart) feature tour page for its groundbreaking feature representations and also explore our [Blazor Stock Chart Example](https://blazor.syncfusion.com/demos/stock-chart/stock-chart?theme=bootstrap4) to know various stock chart types and how to represent time-dependent data, showing trends at equal intervals.
+N> Refer to our [Blazor Stock Charts](https://www.syncfusion.com/blazor-components/blazor-stock-chart) feature tour page for its groundbreaking feature representations and also explore our [Blazor Stock Chart Example](https://blazor.syncfusion.com/demos/stock-chart/stock-chart?theme=bootstrap4) to know various stock chart types and how to represent time-dependent data, showing trends at equal intervals.

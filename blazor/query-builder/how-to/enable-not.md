@@ -11,7 +11,7 @@ documentation: ug
 
 The QueryBuilder provides `Not` operator along with AND, OR operators to filter records based on more than one condition. You can enable this feature by setting the [EnableNotCondition](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder-1.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_1_EnableNotCondition) property to `true`.
 
-> By default `EnableNotCondition` set as false.
+N> By default `EnableNotCondition` set as false.
 
 ```cshtml
 

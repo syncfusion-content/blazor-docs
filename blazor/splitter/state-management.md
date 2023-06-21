@@ -24,7 +24,7 @@ Size |
 
 State persistence allows the Splitter to retain the current splitter panes state in the browser local storage for state maintenance. This action is handled through the `EnablePersistence` property which is set to false by default. When it is set to true, some properties of the `SplitterPane` will be retained even after refreshing the page.
 
-> The state will be persisted based on **ID** property. So, it is recommended to explicitly set the **ID** property for Splitter.
+N> The state will be persisted based on **ID** property. So, it is recommended to explicitly set the **ID** property for Splitter.
 
 ```cshtml
 

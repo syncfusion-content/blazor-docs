@@ -52,7 +52,7 @@ To enable single selection in the ListBox, [Mode](https://help.syncfusion.com/cr
 
 To enable multiple selection in the ListBox, `Mode` should be set as `Multiple` in `SelectionSettings` property. To select multiple items, use the SHIFT, CTRL, and arrow keys to make selections.
 
-> By default, the selection mode is set as `Multiple`.
+N> By default, the selection mode is set as `Multiple`.
 
 ```cshtml
 @using Syncfusion.Blazor.DropDowns

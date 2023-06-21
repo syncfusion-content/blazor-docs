@@ -21,7 +21,7 @@ The [Blazor Tab](https://www.syncfusion.com/blazor-components/blazor-tabs) compo
 
 In the following sample, the `AllowDragAndDrop` property is enabled.
 
-> External drag and drop is not possible in blazor Tabs.
+N> External drag and drop is not possible in blazor Tabs.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations

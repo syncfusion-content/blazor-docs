@@ -76,15 +76,65 @@ The [HistoryChangedEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.B
     }
 }
 ```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Undo-Redo/HistoryChange)
 
-## Track custom entry
+## How to set stack limit
+
+The [StackLimit](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramHistoryManager.html#Syncfusion_Blazor_Diagram_DiagramHistoryManager_StackLimit) property of the history manager is used to restrict the number of history entries that can be stored on the history list to limit undo and redo action.
+
+```cshtml
+@using Syncfusion.Blazor.Diagram
+
+@* Initialize Diagram *@
+
+<SfDiagramComponent @ref="@diagram" Height="600px" Nodes="@nodes">
+<DiagramHistoryManager StackLimit="@stackLimit"></DiagramHistoryManager>
+</SfDiagramComponent>
+
+@code
+{
+    SfDiagramComponent diagram;
+    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+
+    int stackLimit = 3;
+
+    protected override void OnInitialized()
+    {
+        Node diagramNode = new Node()
+        {
+            ID = "node1",
+            OffsetX = 300,
+            OffsetY = 140,
+            Width = 145,
+            Height = 60,
+            Style = new ShapeStyle()
+            {
+                Fill = "#357BD2",
+                StrokeColor = "White"
+            },
+            Shape = new FlowShape()
+            {
+                Type = NodeShapes.Flow,
+                Shape = NodeFlowShapes.Terminator
+            }
+        };
+        nodes.Add(diagramNode);
+    }
+}
+```
+Download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Undo-Redo/StackLimit)
+
+![StackLimit in Blazor Diagram](images/stackLimitGIF.gif)
+
+## How to track custom entry
 
 [Diagram](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html) provides options to track the changes that are made to custom properties. The following example illustrates how to track such custom property changes.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
+@using Syncfusion.Blazor.Buttons
 
-<input value="CustomEntry" type="button" @onclick="@OnCustomEntry" name="CustomEntry" />
+<SfButton Content="CustomEntry" OnClick="@OnCustomEntry" />
 
 @* Initialize Diagram *@
 <SfDiagramComponent @ref="@diagram" Height="600px" Nodes="@nodes">    
@@ -125,6 +175,7 @@ The [HistoryChangedEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.B
     }
 }
 ```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Undo-Redo/CustomEntry)
 
 ### HistoryAdding Event
 
@@ -169,6 +220,7 @@ The [HistoryChangedEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.B
     }
 }
 ```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Undo-Redo/HistoryAdding)
 
 ### Custom undo redo
 
@@ -178,36 +230,43 @@ The purpose of custom undo redo process is to store actions which are not done t
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
+@using Syncfusion.Blazor.Buttons
 
-<input value="CustomEntry" type="button" @onclick="@OnCustomEntry" name="CustomEntry" />
 
-@* Initialize Diagram *@
+<SfButton Content="CustomEntry" OnClick="@OnCustomEntry" />
+
 <SfDiagramComponent @ref="@diagram" Height="600px" Nodes="@nodes">
-    <DiagramHistoryManager Undo="@onCustomUndo" Redo="@onCustomRedo"/>
+    <DiagramHistoryManager StackLimit="@stackLimit" HistoryAdding="@OnHistoryAdding" Undo="@onCustomUndo" Redo="@onCustomRedo" />
 </SfDiagramComponent>
 
 @code
 {
+    //Reference the diagram
     SfDiagramComponent diagram;
+    //Intialize diagram's nodes collection
     DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
     string EventValue = string.Empty;
 
+    int stackLimit = 3;
+
     protected override void OnInitialized()
     {
-        nodes = new DiagramObjectCollection<Node>();
+        Dictionary<string, object> NodeInfo = new Dictionary<string, object>();
+        NodeInfo.Add("nodeInfo", "Central Node");
         // A node is created and stored in the nodes collection.
         Node node = new Node()
-        {
-            ID = "node1",
-            // Position of the node.
-            OffsetX = 250,
-            OffsetY = 250,
-            // Size of the node.
-            Width = 100,
-            Height = 100,
-            Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "white" }
-        };
-        // Add node.
+            {
+                ID = "node1",
+                // Position of the node
+                OffsetX = 250,
+                OffsetY = 250,
+                // Size of the node
+                Width = 100,
+                Height = 100,
+                Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "white" },
+                AdditionalInfo = NodeInfo
+            };
+        // Add node
         nodes.Add(node);
     }
 
@@ -216,6 +275,12 @@ The purpose of custom undo redo process is to store actions which are not done t
         HistoryEntry entry = new HistoryEntry();
         entry.UndoObject = diagram.Nodes[0];
         diagram.AddHistoryEntry(entry);
+    }
+
+    private void OnHistoryAdding(HistoryAddingEventArgs entry)
+    {
+        // Sets true to cancel undo/redo action.
+        entry.Cancel = false;
     }
 
     private void onCustomUndo(HistoryEntryBase entry)
@@ -228,9 +293,10 @@ The purpose of custom undo redo process is to store actions which are not done t
     private void onCustomRedo(HistoryEntryBase entry)
     {
         EventValue += "RedoObject:" + (entry.RedoObject as Node).AdditionalInfo[(entry.RedoObject as Node).ID];
-        Node current = entry.UndoObject.Clone() as Node;
+        var current = entry.UndoObject.Clone() as Node;
         (entry.UndoObject as Node).AdditionalInfo[(entry.UndoObject as Node).ID] = "Description";
         entry.RedoObject = current;
     }
 }
 ```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Undo-Redo/CustomUndoRedo)

@@ -36,7 +36,7 @@ Syncfusion Blazor themes can be used in your Blazor application by referencing t
 
 * For **Blazor WebAssembly application**, refer style sheet inside the `<head>` of **wwwroot/index.html** file.
 * For **Blazor Server application**, refer style sheet inside the `<head>` of 
-    * **~/Pages/_Host.cshtml** file for .NET 3 and .NET 5.
+    * **~/Pages/_Host.cshtml** file for .NET 3, .NET 5 and .NET 7.
     * **~/Pages/_Layout.cshtml** for .NET 6.
 
 Using the below approaches the themes can be referenced in the Blazor application,
@@ -55,10 +55,10 @@ Instead of using [Static Web assets](#static-web-assets) or a [CDN reference](#c
 
 To use static web assets, ensure [UseStaticFiles](https://docs.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.builder.staticfileextensions.usestaticfiles) method is called as follows,
 
-* For **.NET 6** app, open the **~/Program.cs** file and call `UseStaticFiles` method.
+* For **.NET 6 and .NET 7** app, open the **~/Program.cs** file and call `UseStaticFiles` method.
 * For **.NET 5 and .NET 3.X** app, open the **~/Startup.cs** file and call `UseStaticFiles` method.
 
-> For **Blazor WASM App**, call `UseStaticFiles` method in **Server project** in the above mentioned file. 
+N> For **Blazor WASM App**, call `UseStaticFiles` method in **Server project** in the above mentioned file. 
 
 ### Refer theme style sheet from static web assets
 
@@ -66,7 +66,7 @@ Syncfusion Blazor themes are available as static web assets in the [Syncfusion.B
 
 * For **Blazor WebAssembly application**, refer style sheet inside the `<head>` element of **wwwroot/index.html** file.
 * For **Blazor Server application**, refer style sheet inside the `<head>` element of 
-    * **~/Pages/_Host.cshtml** file for .NET 3 and .NET 5.
+    * **~/Pages/_Host.cshtml** file for .NET 3, .NET 5 and .NET 7.
     * **~/Pages/_Layout.cshtml** for .NET 6.
 
 When using individual NuGet packages in your application, add [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet Package and reference style sheet as below,
@@ -113,6 +113,113 @@ Syncfusion Blazor Themes are available in the CDN. Make sure that the version in
 | Microsoft Office Fabric  | https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/fabric.css |
 | Microsoft Office Fabric Dark | https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/fabric-dark.css |
 | High Contrast  | https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/highcontrast.css |
+
+## LibMan
+
+Library Manager ([LibMan](https://learn.microsoft.com/en-us/aspnet/core/client-side/libman/libman-vs?view=aspnetcore-7.0)) is a client-side library acquisition tool that is simple to use. LibMan is a program that downloads popular libraries and frameworks from a file system or a content delivery network (CDN).
+
+LibMan offers the following advantages,
+
+1. Only the library files you need are downloaded.
+2. Additional tooling, such as Node.js, npm, and WebPack, isn't necessary to acquire a subset of files in a library.
+3. Files can be placed in a specific location without resorting to build tasks or manual file copying.
+
+### Client-Side Library dialog
+
+1.Right-click the project folder where the files should be added. Select **Add** -> **Client-Side Library**. Then Add Client-Side Library dialog appears like below.
+
+![Client side library dialog](images/theme-client-side.png)
+
+2.Select the **unpkg** in the provider dropdown to get the Syncfusion control themes.
+
+![Select unpkg provider](images/client-library-unpkg.png)
+
+3.You can refer the combined component styles by using `@syncfusion/blazor-themes@{{ site.ej2version }}` in the library textbox.
+
+![Specify Syncfusion library](images/library-unpkg.png)
+
+4.You can choose to select specific files or include all library files, as shown below.
+
+For example, select specific files and choose the Bootstrap 5 theme in the dialog.
+
+![Choose themes](images/library-unpkg-theme.png)
+
+5.By using the target location textbox, you can specify the location of where files will be stored in the application.
+
+For example, the default location `wwwroot/lib/syncfusion/blazor-themes/` has been modified to `wwwroot/themes/syncfusion/blazor-themes/`.
+
+![Modified the target location](images/client-side-target-unpkg.png)
+
+6.Click the install button then `libman.json` file is added to the root application with the following content.
+
+{% tabs %}
+{% highlight cshtml tabtitle="libman.json" %}
+
+{
+  "version": "1.0",
+  "defaultProvider": "unpkg",
+  "libraries": [
+    {
+      "library": "@syncfusion/blazor-themes@{{ site.ej2version }}",
+      "destination": "wwwroot/themes/syncfusion/blazor-themes/",
+      "files": [
+        "SCSS-Themes/bootstrap5.scss"
+      ]
+    }
+  ]
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+N> If you use individual component styles, you should install the styles of their dependent components as well. Refer to [this](https://blazor.syncfusion.com/documentation/nuget-packages#available-nuget-packages) to find the dependent components.
+
+7.You can add the `SCSS theme` for Blazor applications through LibMan and compile it by using the [Web Compiler 2022+](https://marketplace.visualstudio.com/items?itemName=Failwyn.WebCompiler64) by following steps.
+
+* Open Visual Studio 2022 and click the Extensions in the toolbar.
+
+    ![VS Extension](images/VS_Extension.png)
+
+* Search the `Web Compiler 2022+` in search box and download the extension.
+
+    ![Web Compiler 2022+](images/Web_Compiler.png)
+
+* Right-click the `SCSS` file and click the Web Compiler to compile the file.
+
+![Themes-libman-compile](images/themes-libman-compile.png) 
+
+* The `compilerconfig.json` file is created by default as shown in the following code snippet.
+
+{% tabs %}
+{% highlight c# tabtitle="compilerconfig.json" %}
+
+[
+  {
+    "outputFile": "wwwroot/themes/syncfusion/blazor-themes/SCSS-Themes/bootstrap5.css",
+    "inputFile": "wwwroot/themes/syncfusion/blazor-themes/SCSS-Themes/bootstrap5.scss"
+  }
+]
+
+{% endhighlight %}
+{% endtabs %}
+
+* The `SCSS` file has been compiled to the `CSS` file. Then, add the compiled CSS file to the `<head>` element of the Host page.
+
+{% tabs %}
+{% highlight c# tabtitle="~/_Host.cshtml" %}
+
+<head>
+    ...
+    <!-- Syncfusion Blazor components' styles -->
+    <link href="~/themes/syncfusion/blazor-themes/scss-themes/bootstrap5.css" rel="stylesheet" />
+</head>
+
+{% endhighlight %}
+{% endtabs %}
+
+8.Run the application and see the bootstrap5 themes downloaded from LibMan were applied.
+
+N> [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-libman)
 
 ## NPM package reference
 
@@ -166,7 +273,7 @@ You can add the `SCSS theme` for Blazor applications through NPM package and com
 
     ![Web Compiler Option](images/Web_Compiler_Option.png)
 
-* The `compilerconfig.json` file is created by defualt. Then, provide the location of the compiled CSS file and include a path in `compilerconfig.json` as shown in the following code snippet.
+* The `compilerconfig.json` file is created by default. Then, provide the location of the compiled CSS file and include a path in `compilerconfig.json` as shown in the following code snippet.
 
     ```json
     [
@@ -192,6 +299,8 @@ You can add the `SCSS theme` for Blazor applications through NPM package and com
 
 * Run the application to see the customized Fluent theme applied.
 
+N> If you are using **Visual Studio 2019**, please use the `includePath` property instead of `loadPaths` as the latter does not support the Web Compiler for VS 2019. However, we highly recommend using the **Web Compiler 2022+** for **Visual Studio 2022**. For more information, please refer to the [discussion link here](https://github.com/failwyn/WebCompiler/issues/24).
+
 The following shows the importing theme path for the overall theme.
 
 ```css
@@ -208,10 +317,6 @@ Below table lists the importing theme path for the individual components.
     <tr>
         <td>Accordion</td>
         <td>@import 'blazor-themes/SCSS-Themes/navigations/accordion/{{THEME}}.scss'</td>
-    </tr>
-    <tr>
-        <td>Accumulation Chart</td>
-        <td>@import 'blazor-themes/SCSS-Themes/{{THEME}}.scss'</td>
     </tr>
     <tr>
         <td>AppBar</td>
@@ -238,10 +343,6 @@ Below table lists the importing theme path for the individual components.
         <td>@import 'blazor-themes/SCSS-Themes/navigations/breadcrumb/{{THEME}}.scss'</td>
     </tr>
     <tr>
-        <td>Bullet Chart</td>
-        <td>@import 'blazor-themes/SCSS-Themes/{{THEME}}.scss'</td>
-    </tr>
-    <tr>
         <td>Button</td>
         <td>@import 'blazor-themes/SCSS-Themes/buttons/button/{{THEME}}.scss'</td>
     </tr>
@@ -262,20 +363,12 @@ Below table lists the importing theme path for the individual components.
         <td>@import 'blazor-themes/SCSS-Themes/navigations/carousel/{{THEME}}.scss'</td>
     </tr>
     <tr>
-        <td>Charts</td>
-        <td>@import 'blazor-themes/SCSS-Themes/{{THEME}}.scss'</td>
-    </tr>
-    <tr>
         <td>CheckBox</td>
         <td>@import 'blazor-themes/SCSS-Themes/buttons/check-box/{{THEME}}.scss'</td>
     </tr>
     <tr>
         <td>Chip</td>
         <td>@import 'blazor-themes/SCSS-Themes/buttons/chips/{{THEME}}.scss'</td>
-    </tr>
-    <tr>
-        <td>Circular Gauge</td>
-        <td>@import 'blazor-themes/SCSS-Themes/{{THEME}}.scss'</td>
     </tr>
     <tr>
         <td>Color Picker</td>
@@ -350,10 +443,6 @@ Below table lists the importing theme path for the individual components.
         <td>@import 'blazor-themes/SCSS-Themes/gantt/gantt/{{THEME}}.scss'</td>
     </tr>
     <tr>
-        <td>HeatMap Chart</td>
-        <td>@import 'blazor-themes/SCSS-Themes/{{THEME}}.scss'</td>
-    </tr>
-    <tr>
         <td>In-place Editor</td>
         <td>@import 'blazor-themes/SCSS-Themes/inplace-editor/inplace-editor/{{THEME}}.scss'</td>
     </tr>
@@ -366,20 +455,12 @@ Below table lists the importing theme path for the individual components.
         <td>@import 'blazor-themes/SCSS-Themes/kanban/kanban/{{THEME}}.scss'</td>
     </tr>
     <tr>
-        <td>Linear Gauge</td>
-        <td>@import 'blazor-themes/SCSS-Themes/{{THEME}}.scss'</td>
-    </tr>
-    <tr>
         <td>ListBox</td>
         <td>@import 'blazor-themes/SCSS-Themes/dropdowns/list-box/{{THEME}}.scss'</td>
     </tr>
     <tr>
         <td>ListView</td>
         <td>@import 'blazor-themes/SCSS-Themes/lists/list-view/{{THEME}}.scss'</td>
-    </tr>
-    <tr>
-        <td>Maps</td>
-        <td>@import 'blazor-themes/SCSS-Themes/{{THEME}}.scss'</td>
     </tr>
     <tr>
         <td>Menu Bar</td>
@@ -410,10 +491,6 @@ Below table lists the importing theme path for the individual components.
         <td>@import 'blazor-themes/SCSS-Themes/pivotview/pivotview/{{THEME}}.scss'</td>
     </tr>
     <tr>
-        <td>ProgressBar</td>
-        <td>@import 'blazor-themes/SCSS-Themes/splitbuttons/progress-button/{{THEME}}.scss'</td>
-    </tr>
-    <tr>
         <td>ProgressButton</td>
         <td>@import 'blazor-themes/SCSS-Themes/splitbuttons/progress-button/{{THEME}}.scss'</td>
     </tr>
@@ -424,10 +501,6 @@ Below table lists the importing theme path for the individual components.
     <tr>
         <td>RadioButton</td>
         <td>@import 'blazor-themes/SCSS-Themes/buttons/radio-button/{{THEME}}.scss'</td>
-    </tr>
-    <tr>
-        <td>Range Selector</td>
-        <td>@import 'blazor-themes/SCSS-Themes/inputs/slider/{{THEME}}.scss'</td>
     </tr>
     <tr>
         <td>Range Slider</td>
@@ -447,19 +520,11 @@ Below table lists the importing theme path for the individual components.
     </tr>
     <tr>
         <td>Signature</td>
-        <td>@import 'blazor-themes/SCSS-Themes/inputs/ignature/{{THEME}}.scss'</td>
+        <td>@import 'blazor-themes/SCSS-Themes/inputs/signature/{{THEME}}.scss'</td>
     </tr>
     <tr>
         <td>Skeleton</td>
         <td>@import 'blazor-themes/SCSS-Themes/notification/skeleton/{{THEME}}.scss'</td>
-    </tr>
-    <tr>
-        <td>Smith Chart</td>
-        <td>@import 'blazor-themes/SCSS-Themes/{{THEME}}.scss'</td>
-    </tr>
-    <tr>
-        <td>Sparkline</td>
-        <td>@import 'blazor-themes/SCSS-Themes/{{THEME}}.scss'</td>
     </tr>
     <tr>
         <td>Speed Dial</td>
@@ -470,16 +535,12 @@ Below table lists the importing theme path for the individual components.
         <td>@import 'blazor-themes/SCSS-Themes/popups/spinner/{{THEME}}.scss'</td>
     </tr>
     <tr>
-        <td>Stock Chart</td>
-        <td>@import 'blazor-themes/SCSS-Themes/{{THEME}}.scss'</td>
-    </tr>
-    <tr>
         <td>Tabs</td>
         <td>@import 'blazor-themes/SCSS-Themes/navigations/tab/{{THEME}}.scss'</td>
     </tr>
     <tr>
         <td>TextBox</td>
-        <td>@import 'blazor-themes/SCSS-Themes/inputs/texbox/{{THEME}}.scss'</td>
+        <td>@import 'blazor-themes/SCSS-Themes/inputs/textbox/{{THEME}}.scss'</td>
     </tr>
     <tr>
         <td>TimePicker</td>
@@ -506,10 +567,6 @@ Below table lists the importing theme path for the individual components.
         <td>@import 'blazor-themes/SCSS-Themes/treegrid/treegrid/{{THEME}}.scss'</td>
     </tr>
     <tr>
-        <td>TreeMap</td>
-        <td>@import 'blazor-themes/SCSS-Themes/{{THEME}}.scss'</td>
-    </tr>
-    <tr>
         <td>TreeView</td>
         <td>@import 'blazor-themes/SCSS-Themes/navigations/treeview/{{THEME}}.scss'</td>
     </tr>
@@ -530,7 +587,7 @@ The following example demonstrates how to change a theme dynamically in Blazor S
 1.Below step shows how to reference style sheet in the way to change at dynamically.
 
 * For **.NET6 Blazor Server Application**, In the **_Layout.cshtml** the theme is changed dynamically using `id` in `setTheme` method.
-* For **.NET5 & 3.1 Blazor Server Application**, In **_Host.cshtml**, the theme is changed based on query string. 
+* For **.NET 3.1, .NET 5 and .NET 7 Blazor Server Application**, In **_Host.cshtml**, the theme is changed based on query string. 
 
 {% tabs %}
 {% highlight c# tabtitle=".NET 6 (~/_Layout.cshtml)" %}
@@ -551,7 +608,7 @@ The following example demonstrates how to change a theme dynamically in Blazor S
 ...
 
 {% endhighlight %}
-{% highlight c# tabtitle=".NET 5 & 3.1 (~/_Host.cshtml)" %}
+{% highlight c# tabtitle=".NET 3.1, .NET 5 & .NET 7 (~/_Host.cshtml)" %}
 
 @page "/"
 @namespace BlazorThemeSwitcher.Pages
@@ -746,7 +803,7 @@ The following example demonstrates how to change a theme dynamically in Blazor S
 
    ![Change theme dynamically in blazor server app](images/blazor-dynamic-theme-switching.gif) 
     
-   > [View sample in GitHub](https://github.com/SyncfusionExamples/theme-switching-in-blazor-server-app) 
+   N> [View sample in GitHub](https://github.com/SyncfusionExamples/theme-switching-in-blazor-server-app) 
 
 ### Change theme dynamically in blazor WebAssembly (WASM) app
 
@@ -846,25 +903,25 @@ The following example demonstrates how to change a theme dynamically in Blazor W
     ```
     ![Change theme dynamically in blazor WASM app](images/blazor-dynamic-theme-switching-wasm.gif) 
     
-    > [View sample in GitHub](https://github.com/SyncfusionExamples/theme-switching-in-blazor-WASM-app)
+    N> [View sample in GitHub](https://github.com/SyncfusionExamples/theme-switching-in-blazor-WASM-app)
   
 ## Render Syncfusion Components in offline with Material and Tailwind Themes
 
-Material and Tailwind Themes uses online roboto font. If your app is designed to work in a local network without internet connection, follow the below steps to use offline fonts to work in offlince scenarios.
+Material and Tailwind Themes uses online roboto font. If your app is designed to work in a local network without internet connection, follow the below steps to use offline fonts to work in offline scenarios.
    
 1. Download the minified styles for the required components from [CRG](https://blazor.syncfusion.com/crg/) site. Learn more about CRG in [help documentation](https://blazor.syncfusion.com/documentation/common/custom-resource-generator).
 2. Unzip the file and it contains the styles of the selected components and an `import.json` file, which stores the current settings.
    ![Select styles folder](images/crg-styles.png)
 3. The styles folder of material and tailwind theme contains css files and a **customized** folder. The CSS files under **customized** folder doesn't contain the online google font dependencies.
    ![Open customized folder](images/customized-folder-crg.png)
-4. Open the **customized** folder which contains CSS files without online dependecies of google fonts.
+4. Open the **customized** folder which contains CSS files without online dependencies of google fonts.
    ![Customized CSS](images/custom-css-crg.png)
 5. Copy the files under the **customized** folder to Blazor application `~/wwwroot` folder.
 6. Now, manually add the custom styles in the Blazor App to render the components without any issues on the machines that contains no internet access.
     * For **Blazor WASM App**, reference custom interop script in `~/wwwroot/index.html` file. 
     * For **Blazor Server App**, reference custom interop script in 
         * `~/Pages/_Layout.cshtml` file for `.NET 6` project
-        * `~/Pages/_Host.cshtml` file for `.NET 5 and .NET Core 3.X` project.
+        * `~/Pages/_Host.cshtml` file for `.NET Core 3.X, .NET 5 and .NET 7` project.
 
     ```html
     <head>

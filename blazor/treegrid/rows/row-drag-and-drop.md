@@ -532,9 +532,9 @@ public class WrapData
 
 ![Drag and Drop within Blazor Tree Grid Rows](../images/blazor-treegrid-drag-and-drop-rows.png)
 
-> Selection feature must be enabled for row drag and drop.
-> For multiple row selection, the type property must be set to multiple.
->[IsPrimaryKey](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridColumn~IsPrimaryKey.html) is necessary to perform row drag and drop operation.
+N> Selection feature must be enabled for row drag and drop.
+<br/> For multiple row selection, the type property must be set to multiple.
+<br/>[IsPrimaryKey](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridColumn~IsPrimaryKey.html) is necessary to perform row drag and drop operation.
 
 ## Drag and drop to another Tree Grid
 
@@ -1068,7 +1068,7 @@ public class WrapData
 
 ![Drag and Drop Row between Different Blazor Tree Grid](../images/blazor-treegrid-drag-drop-row.png)
 
-> [IsPrimaryKey](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_IsPrimaryKey) is necessary to perform RowDragandDrop operations.
+N> [IsPrimaryKey](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_IsPrimaryKey) is necessary to perform RowDragandDrop operations.
 
 ## Drag and drop events
 

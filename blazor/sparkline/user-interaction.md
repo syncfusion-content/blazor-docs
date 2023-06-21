@@ -67,7 +67,7 @@ The following code example shows customizing tooltip format, text color and fill
 </SfSparkline>
 ```
 
-> Refer to the [code block](#tooltip) to know about the property value of **WorkLogs**.
+N> Refer to the [code block](#tooltip) to know about the property value of **WorkLogs**.
 
 ![Blazor Sparkline Chart with Custom Tooltip](images/UserInteraction/blazor-sparkline-custom-tooltip.png)
 
@@ -101,7 +101,7 @@ The tooltip can be rendered as a custom component by specifying the [Template](h
 </SfSparkline>
 ```
 
-> Refer to the [code block](#tooltip) to know about the property value of the **WorkLogs**.
+N> Refer to the [code block](#tooltip) to know about the property value of the **WorkLogs**.
 
 ![Blazor Sparkline Chart with Tooltip Template](images/UserInteraction/blazor-sparkline-tooltip-template.png)
 

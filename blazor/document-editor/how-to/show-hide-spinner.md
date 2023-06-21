@@ -45,7 +45,6 @@ Refer to the following example.
 @code {
     private bool VisibleProperty { get; set; } = false;
     SfDocumentEditorContainer container;
-
     string sfdtString;
 
     protected override void OnInitialized()
@@ -78,9 +77,7 @@ Refer to the following example.
         sfdtString = null;
 
     }
-
 }
-
 ```
 
->Note: In above example, we have used Delay to hide spinner, just for demo purpose.
+N> In above example, we have used Delay to hide spinner, just for demo purpose.

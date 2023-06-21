@@ -133,3 +133,5 @@ The diagram provides support to save and load the diagram using file stream. The
     document.getElementById('UploadFiles').click();
     }
 ```
+
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Serialization/SaveAndLoad)

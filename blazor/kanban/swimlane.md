@@ -81,7 +81,7 @@ Cards can be grouped based on `KeyField` and displayed in rows, which are separa
 
 Customize the swimlane row header text by using the `TextField` property mapped from datasource.
 
-> It is not mandatory to define the `TextField` to `KanbanSwimlaneSettings`. It will automatically consider the `KeyField` to swimlane row header text. If the mapping `TextField` key is not present in the datasource, it will consider the swimlane `KeyField` as swimlane row header text.
+N> It is not mandatory to define the `TextField` to `KanbanSwimlaneSettings`. It will automatically consider the `KeyField` to swimlane row header text. If the mapping `TextField` key is not present in the datasource, it will consider the swimlane `KeyField` as swimlane row header text.
 
 ```cshtml
 
@@ -251,7 +251,7 @@ To get start quickly with Blazor Kanban component using Templates, you can check
 
 Kanban support to sort the swimlane rows in kanban board based on the [TextField](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Kanban.SwimlaneSettingsModel.html#Syncfusion_Blazor_Kanban_SwimlaneSettingsModel_TextField) property by setting [SortDirection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Kanban.SwimlaneSettingsModel.html#Syncfusion_Blazor_Kanban_SwimlaneSettingsModel_SortDirection) property.
 
-> If the [TextField](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Kanban.SwimlaneSettingsModel.html#Syncfusion_Blazor_Kanban_SwimlaneSettingsModel_TextField) property is not provided, sorting will be performed based on the [KeyField](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Kanban.SwimlaneSettingsModel.html#Syncfusion_Blazor_Kanban_SwimlaneSettingsModel_KeyField) property.
+N> If the [TextField](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Kanban.SwimlaneSettingsModel.html#Syncfusion_Blazor_Kanban_SwimlaneSettingsModel_TextField) property is not provided, sorting will be performed based on the [KeyField](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Kanban.SwimlaneSettingsModel.html#Syncfusion_Blazor_Kanban_SwimlaneSettingsModel_KeyField) property.
 
 ```cshtml
 
@@ -298,7 +298,7 @@ Kanban supports to sort the swimlane rows using custom sort logic by handling [S
 
 In this event, you can get the argument of SwimlaneRows which contains the list of SwimlaneSettingsModel and it will align based on the SortDirection property. You can change the List of SwimlaneSettingsModel as per your wish and assign the changed list to it.
 
-> When you refresh the page, the [SwimlaneSorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Kanban.KanbanEvents-1.html#Syncfusion_Blazor_Kanban_KanbanEvents_1_SwimlaneSorting) event will be triggered before Kanban elements append to the DOM element.
+N> When you refresh the page, the [SwimlaneSorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Kanban.KanbanEvents-1.html#Syncfusion_Blazor_Kanban_KanbanEvents_1_SwimlaneSorting) event will be triggered before Kanban elements append to the DOM element.
 
 In the following code, changed the order of the swimlane rows at positions 2, 0, 1, 3 and assigned to the argument of [SwimlaneRows](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Kanban.SwimlaneSortEventArgs.html#Syncfusion_Blazor_Kanban_SwimlaneSortEventArgs_SwimlaneRows).
 
@@ -355,7 +355,7 @@ In the following code, changed the order of the swimlane rows at positions 2, 0,
 
 Users can show or hide the cards count by swimlane row in header when enabling the `ShowItemCount` property, which is enabled by default on the Kanban board.
 
-> Provided localization support for **Items** text.
+N> Provided localization support for **Items** text.
 
 In below demo, disabled on `ShowItemCount` property on rendering swimlane row without total count.
 
@@ -426,7 +426,7 @@ Frozen rows provide an option to make the current swimlane row header text alway
 
 By default, the `EnableFrozenRows` property is set as `false`. If you wish to show the swimlane frozen rows, you can enable the `EnableFrozenRows` property.
 
-> This feature support only when using Kanban content scrolling. The Expand/collapse swimlane icon does not work on frozen rows.
+N> This feature support only when using Kanban content scrolling. The Expand/collapse swimlane icon does not work on frozen rows.
 
 ```cshtml
 

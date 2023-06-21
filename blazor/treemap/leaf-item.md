@@ -75,7 +75,7 @@ Positioning the leaf item label using the [LabelPosition](https://help.syncfusio
 </SfTreeMap>
 ```
 
-> Refer to the [code block](#customization) to know about the property value of the **GrowthReports**.
+N> Refer to the [code block](#customization) to know about the property value of the **GrowthReports**.
 
 ![Changing Label Position and Format in Blazor TreeMap](images/LeafItem/blazor-treemap-change-label-position-format.png)
 
@@ -92,6 +92,6 @@ The [Gap](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMa
 </SfTreeMap>
 ```
 
-> Refer to the [code block](#customization) to know about the property value of the **GrowthReports**.
+N> Refer to the [code block](#customization) to know about the property value of the **GrowthReports**.
 
 ![Gap in Blazor TreeMap Items](images/LeafItem/blazor-treemap-gap-between-item.png)

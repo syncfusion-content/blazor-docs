@@ -17,13 +17,13 @@ The editor window usually opens on the Scheduler, when a cell or event is double
 
 In mobile devices, the detailed editor window can be opened in edit mode by clicking the edit icon on the popup, that opens on single tapping an event. You can also open it in add mode by single tapping a cell, which will display a `+` indication, clicking on it again will open the editor window.
 
-> You can also prevent the editor window from opening, by rendering Scheduler in a `Readonly` mode or by doing code customization within the `OnPopupOpen` event.
+N> You can also prevent the editor window from opening, by rendering Scheduler in a `Readonly` mode or by doing code customization within the `OnPopupOpen` event.
 
 ### How to change the editor window header title and text of footer buttons
 
 You can change the header title and the text of buttons displayed at the footer of the editor window by changing the appropriate localized word collection in the resx file of your culture file available in the following directory `Project root folder > Resources > SfResources-en-US.resx` like the below image.
 
-![Customizing Local Words in resx file of Blazor Scheduler](images/blazor-scheduler-custom-word-in-resx-file.png)
+![Customizing Local Words in resx file of Blazor Scheduler](images/blazor-scheduler-custom-word-in-resx.png)
 
 The editor window opening for creating new event will be displayed as in the following image after changing the localized words.
 
@@ -59,10 +59,10 @@ To change the default labels such as Title, Location and other field names in th
 </SfSchedule>
 
 @code{
-    DateTime CurrentDate = new DateTime(2020, 1, 31);
+    DateTime CurrentDate = new DateTime(2023, 1, 31);
     List<AppointmentData> DataSource = new List<AppointmentData>
     {
-        new AppointmentData { Id = 1, Subject = "Meeting", StartTime = new DateTime(2020, 1, 31, 9, 30, 0) , EndTime = new DateTime(2020, 1, 31, 11, 0, 0) }
+        new AppointmentData { Id = 1, Subject = "Meeting", StartTime = new DateTime(2023, 1, 31, 9, 30, 0) , EndTime = new DateTime(2023, 1, 31, 11, 0, 0) }
     };
     public class AppointmentData
     {
@@ -107,14 +107,14 @@ It is possible to validate the required fields of the editor window before submi
 </SfSchedule>
 
 @code{
-    DateTime CurrentDate = new DateTime(2020, 1, 6);
+    DateTime CurrentDate = new DateTime(2023, 1, 6);
     static Dictionary<string, object> ValidationMessages = new Dictionary<string, object>() { { "regex", "Special character(s) not allowed in this field" } };
     ValidationRules ValidationRules = new ValidationRules { Required = true };
     ValidationRules LocationValidationRules = new ValidationRules { Required = true, RegexPattern = "^[a-zA-Z0-9- ]*$", Messages = ValidationMessages };
     ValidationRules DescriptionValidationRules = new ValidationRules { Required = true, MinLength = 5, MaxLength = 500 };
     List<AppointmentData> DataSource = new List<AppointmentData>
     {
-        new AppointmentData { Id = 1, Subject = "Meeting", StartTime = new DateTime(2020, 1, 6, 9, 30, 0) , EndTime = new DateTime(2020, 1, 6, 11, 0, 0) }
+        new AppointmentData { Id = 1, Subject = "Meeting", StartTime = new DateTime(2023, 1, 6, 9, 30, 0) , EndTime = new DateTime(2023, 1, 6, 11, 0, 0) }
     };
 
     public class AppointmentData
@@ -245,7 +245,7 @@ In case, in order to prevent only specific popups on Scheduler, check the condit
 
 It is possible to open the editor window manually for a specific time or certain events by using the `OpenEditorAsync` method which allows the [TValue](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_OpenEditor__0_Syncfusion_Blazor_Schedule_CurrentAction_) or [CellClickEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_OpenEditor_Syncfusion_Blazor_Schedule_CellClickEventArgs_Syncfusion_Blazor_Schedule_CurrentAction_System_Nullable_Syncfusion_Blazor_Schedule_RepeatType__) and `CurrentAction` as parameters.
 
-> [Here](https://blazor.syncfusion.com/documentation/scheduler/how-to/open-editor-window-on-single-click/) is the example to open the editor window on a single click.
+N> [Here](https://blazor.syncfusion.com/documentation/scheduler/how-to/open-editor-window-on-single-click/) is the example to open the editor window on a single click.
 
 ## Customizing event editor using template
 
@@ -408,7 +408,7 @@ The resource field can be added within editor template with the following code e
 </SfSchedule>
 
 @code{
-    DateTime CurrentDate = new DateTime(2020, 1, 31);
+    DateTime CurrentDate = new DateTime(2023, 1, 31);
     public string[] Resources { get; set; } = { "Owners" };
     public List<ResourceData> OwnersData { get; set; } = new List<ResourceData>
     {
@@ -418,7 +418,7 @@ The resource field can be added within editor template with the following code e
     };
     List<AppointmentData> DataSource = new List<AppointmentData>
     {
-        new AppointmentData { Id = 1, Subject = "Meeting", StartTime = new DateTime(2020, 1, 31, 9, 30, 0) , EndTime = new DateTime(2020, 1, 31, 11, 0, 0), OwnerId = 1 }
+        new AppointmentData { Id = 1, Subject = "Meeting", StartTime = new DateTime(2023, 1, 31, 9, 30, 0) , EndTime = new DateTime(2023, 1, 31, 11, 0, 0), OwnerId = 1 }
     };
     public class AppointmentData
     {
@@ -438,7 +438,9 @@ The resource field can be added within editor template with the following code e
 }
 ```
 
-> EditorTemplate is not applicable when we set `AllowMutiple` as true without enabling `AllowGroupEdit`, so in that case use custom editor window.
+![Add Resource Options within Editor Template in Blazor Scheduler](images/blazor-scheduler-custom-window-with-resource.png)
+
+N> EditorTemplate is not applicable when we set `AllowMutiple` as true without enabling `AllowGroupEdit`, so in that case use custom editor window.
 
 ## How to add recurrence options within editor template
 
@@ -506,7 +508,7 @@ The resource field can be added within editor template with the following code e
 </SfSchedule>
 
 @code{
-    private DateTime CurrentDate = new DateTime(2020, 1, 31);
+    private DateTime CurrentDate = new DateTime(2023, 1, 31);
     public class DDFields
     {
         public string Id { get; set; }
@@ -520,7 +522,7 @@ The resource field can be added within editor template with the following code e
     };
     List<AppointmentData> DataSource = new List<AppointmentData>
     {
-        new AppointmentData { Id = 1, Subject = "Meeting", StartTime = new DateTime(2020, 1, 31, 9, 30, 0) , EndTime = new DateTime(2020, 1, 31, 11, 0, 0), EventType = "Confirmed" }
+        new AppointmentData { Id = 1, Subject = "Meeting", StartTime = new DateTime(2023, 1, 31, 9, 30, 0) , EndTime = new DateTime(2023, 1, 31, 11, 0, 0), EventType = "Confirmed" }
     };
     public class AppointmentData
     {
@@ -537,6 +539,8 @@ The resource field can be added within editor template with the following code e
     }
 }
 ```
+
+![Add Recurrence Options within Editor Template in Blazor Scheduler](images/blazor-scheduler-custom-window-with-recurrence.png)
 
 ## Apply validations on editor template fields
 
@@ -608,7 +612,7 @@ In the following code example, validation has been added to the `EventType` fiel
 </SfSchedule>
 
 @code{
-    private DateTime CurrentDate = new DateTime(2020, 1, 31);
+    private DateTime CurrentDate = new DateTime(2023, 1, 31);
     public class DDFields
     {
         public string Id { get; set; }
@@ -625,7 +629,7 @@ In the following code example, validation has been added to the `EventType` fiel
     };
     List<AppointmentData> DataSource = new List<AppointmentData>
     {
-        new AppointmentData { Id = 1, Subject = "Meeting", StartTime = new DateTime(2020, 1, 31, 9, 30, 0) , EndTime = new DateTime(2020, 1, 31, 11, 0, 0), EventType = "Confirmed" }
+        new AppointmentData { Id = 1, Subject = "Meeting", StartTime = new DateTime(2023, 1, 31, 9, 30, 0) , EndTime = new DateTime(2023, 1, 31, 11, 0, 0), EventType = "Confirmed" }
     };
     public class AppointmentData
     {
@@ -643,6 +647,8 @@ In the following code example, validation has been added to the `EventType` fiel
     }
 }
 ```
+
+![Editor Template with Validation in Blazor Scheduler](images/blazor-scheduler-custom-window-validation.png)
 
 ## Quick popups
 
@@ -685,7 +691,7 @@ By default, these popups are displayed over cells and appointments of Scheduler 
 }
 ```
 
-> The quick popup that opens while single clicking on the cells are not applicable on mobile devices.
+N> The quick popup that opens while single clicking on the cells are not applicable on mobile devices.
 
 ### How to change the watermark text of quick popup subject
 
@@ -712,7 +718,7 @@ The quick popup accepts the template that customizes quick popup only on cell by
 @using Syncfusion.Blazor.DropDowns
 @using System.Globalization
 
-<SfSchedule TValue="AppointmentData" @ref="SheduleRef" CssClass="quick-info" Width="100%" Height="650px" SelectedDate="@(new DateTime(2020, 1, 9))">
+<SfSchedule TValue="AppointmentData" @ref="SheduleRef" CssClass="quick-info" Width="100%" Height="650px" SelectedDate="@(new DateTime(2023, 1, 9))">
     <ScheduleQuickInfoTemplates TemplateType="TemplateType.Cell">
         <HeaderTemplate>
             <div class="quick-info-header">
@@ -806,8 +812,8 @@ The quick popup accepts the template that customizes quick popup only on cell by
     }
     public List<AppointmentData> DataSource = new List<AppointmentData>
     {
-        new AppointmentData { Id = 1, Subject = "Board Meeting", Description = "Meeting to discuss business goal of 2020.", StartTime = new DateTime(2020, 1, 5, 9, 30, 0), EndTime = new DateTime(2020, 1, 5, 11, 0, 0), RoomId = 1},
-        new AppointmentData { Id = 2, Subject = "Training session on JSP", Description = "Knowledge sharing on JSP topics.", StartTime = new DateTime(2020, 1, 7, 9, 30, 0), EndTime = new DateTime(2020, 1, 7, 11, 0, 0), RoomId = 2}
+        new AppointmentData { Id = 1, Subject = "Board Meeting", Description = "Meeting to discuss business goal of 2023.", StartTime = new DateTime(2023, 1, 5, 9, 30, 0), EndTime = new DateTime(2023, 1, 5, 11, 0, 0), RoomId = 1},
+        new AppointmentData { Id = 2, Subject = "Training session on JSP", Description = "Knowledge sharing on JSP topics.", StartTime = new DateTime(2023, 1, 7, 9, 30, 0), EndTime = new DateTime(2023, 1, 7, 11, 0, 0), RoomId = 2}
     };
     private List<RoomsData> ResourceData { get; set; } = new List<RoomsData> {
         new RoomsData { Name = "Jammy", Id = 1, Color = "#ea7a57", Capacity = 20, Type = "Conference" },
@@ -905,7 +911,7 @@ The quick popup accepts the template that customizes quick popup only on event b
 @using Syncfusion.Blazor.Buttons
 @using System.Globalization
 
-<SfSchedule TValue="AppointmentData" @ref="SheduleRef" CssClass="quick-info" Width="100%" Height="650px" SelectedDate="@(new DateTime(2020, 1, 9))">
+<SfSchedule TValue="AppointmentData" @ref="SheduleRef" CssClass="quick-info" Width="100%" Height="650px" SelectedDate="@(new DateTime(2023, 1, 9))">
     <ScheduleQuickInfoTemplates TemplateType="TemplateType.Event">
         <HeaderTemplate>
             <div class="quick-info-header">
@@ -979,8 +985,8 @@ The quick popup accepts the template that customizes quick popup only on event b
     }
     public List<AppointmentData> DataSource = new List<AppointmentData>
     {
-        new AppointmentData { Id = 1, Subject = "Board Meeting", Description = "Meeting to discuss business goal of 2020.", StartTime = new DateTime(2020, 1, 5, 9, 30, 0), EndTime = new DateTime(2020, 1, 5, 11, 0, 0), RoomId = 1},
-        new AppointmentData { Id = 2, Subject = "Training session on JSP", Description = "Knowledge sharing on JSP topics.", StartTime = new DateTime(2020, 1, 7, 9, 30, 0), EndTime = new DateTime(2020, 1, 7, 11, 0, 0), RoomId = 2}
+        new AppointmentData { Id = 1, Subject = "Board Meeting", Description = "Meeting to discuss business goal of 2023.", StartTime = new DateTime(2023, 1, 5, 9, 30, 0), EndTime = new DateTime(2023, 1, 5, 11, 0, 0), RoomId = 1},
+        new AppointmentData { Id = 2, Subject = "Training session on JSP", Description = "Knowledge sharing on JSP topics.", StartTime = new DateTime(2023, 1, 7, 9, 30, 0), EndTime = new DateTime(2023, 1, 7, 11, 0, 0), RoomId = 2}
     };
     private List<RoomsData> ResourceData { get; set; } = new List<RoomsData> {
         new RoomsData { Name = "Jammy", Id = 1, Color = "#ea7a57", Capacity = 20, Type = "Conference" },
@@ -1088,7 +1094,7 @@ The quick popup accepts the template that customizes only event click quick popu
 @using Syncfusion.Blazor.DropDowns
 @using System.Globalization
 
-<SfSchedule TValue="AppointmentData" @ref="SheduleRef" CssClass="quick-info" Width="100%" Height="650px" SelectedDate="@(new DateTime(2020, 1, 9))">
+<SfSchedule TValue="AppointmentData" @ref="SheduleRef" CssClass="quick-info" Width="100%" Height="650px" SelectedDate="@(new DateTime(2023, 1, 9))">
     <ScheduleQuickInfoTemplates>
         <HeaderTemplate>
             <div class="quick-info-header">
@@ -1248,8 +1254,8 @@ The quick popup accepts the template that customizes only event click quick popu
     }
     public List<AppointmentData> DataSource = new List<AppointmentData>
 {
-    new AppointmentData { Id = 1, Subject = "Board Meeting", Description = "Meeting to discuss business goal of 2020.", StartTime = new DateTime(2020, 1, 5, 9, 30, 0), EndTime = new DateTime(2020, 1, 5, 11, 0, 0), RoomId = 1},
-    new AppointmentData { Id = 2, Subject = "Training session on JSP", Description = "Knowledge sharing on JSP topics.", StartTime = new DateTime(2020, 1, 7, 9, 30, 0), EndTime = new DateTime(2020, 1, 7, 11, 0, 0), RoomId = 2}
+    new AppointmentData { Id = 1, Subject = "Board Meeting", Description = "Meeting to discuss business goal of 2023.", StartTime = new DateTime(2023, 1, 5, 9, 30, 0), EndTime = new DateTime(2023, 1, 5, 11, 0, 0), RoomId = 1},
+    new AppointmentData { Id = 2, Subject = "Training session on JSP", Description = "Knowledge sharing on JSP topics.", StartTime = new DateTime(2023, 1, 7, 9, 30, 0), EndTime = new DateTime(2023, 1, 7, 11, 0, 0), RoomId = 2}
 };
     private List<RoomsData> ResourceData { get; set; } = new List<RoomsData> {
     new RoomsData { Name = "Jammy", Id = 1, Color = "#ea7a57", Capacity = 20, Type = "Conference" },
@@ -1498,7 +1504,7 @@ The quick info popup can be closed in scheduler by using the `CloseQuickInfoPopu
 
 When the number of appointments count that lies on a particular time range * default appointment height exceeds the default height of a cell in month view and all other timeline views, a `+ more` text indicator will be displayed at the bottom of those cells. This indicator denotes that the cell contains few more appointments in it and clicking on that will display a popup displaying all the appointments present on that day.
 
-> To disable this option of showing popup with all hidden appointments, while clicking on the text indicator, you can do code customization within the `OnPopupOpen` event.
+N> To disable this option of showing popup with all hidden appointments, while clicking on the text indicator, you can do code customization within the `OnPopupOpen` event.
 
 The same indicator is displayed on all-day row in calendar views such as day, week and work week views alone, when the number of appointment count present in a cell exceeds three. Clicking on the text indicator here will not open a popup, but will allow the expand/collapse option for viewing the remaining appointments present in the all-day row.
 
@@ -1515,7 +1521,7 @@ The same indicator is displayed on all-day row in calendar views such as day, we
 </SfSchedule>
 
 @code{
-    DateTime CurrentDate = new DateTime(2020, 1, 9);
+    DateTime CurrentDate = new DateTime(2023, 1, 9);
     public void OnPopupOpen(PopupOpenEventArgs<AppointmentData> args)
     {
         if (args.Type == PopupType.EventContainer)
@@ -1525,9 +1531,9 @@ The same indicator is displayed on all-day row in calendar views such as day, we
     }
     List<AppointmentData> DataSource = new List<AppointmentData>
     {
-        new AppointmentData { Id = 1, Subject = "Meeting-1", StartTime = new DateTime(2020, 1, 9, 9, 30, 0) , EndTime = new DateTime(2020, 1, 9, 11, 0, 0) },
-        new AppointmentData { Id = 2, Subject = "Meeting-2", StartTime = new DateTime(2020, 1, 9, 9, 30, 0) , EndTime = new DateTime(2020, 1, 9, 11, 0, 0) },
-        new AppointmentData { Id = 3, Subject = "Meeting-3", StartTime = new DateTime(2020, 1, 9, 9, 30, 0) , EndTime = new DateTime(2020, 1, 9, 11, 0, 0) }
+        new AppointmentData { Id = 1, Subject = "Meeting-1", StartTime = new DateTime(2023, 1, 9, 9, 30, 0) , EndTime = new DateTime(2023, 1, 9, 11, 0, 0) },
+        new AppointmentData { Id = 2, Subject = "Meeting-2", StartTime = new DateTime(2023, 1, 9, 9, 30, 0) , EndTime = new DateTime(2023, 1, 9, 11, 0, 0) },
+        new AppointmentData { Id = 3, Subject = "Meeting-3", StartTime = new DateTime(2023, 1, 9, 9, 30, 0) , EndTime = new DateTime(2023, 1, 9, 11, 0, 0) }
     };
     public class AppointmentData
     {
@@ -1542,6 +1548,8 @@ The same indicator is displayed on all-day row in calendar views such as day, we
     }
 }
 ```
+
+![More Event Popup in Blazor Scheduler](images/blazor-scheduler-more-event-popup.png)
 
 ### How to prevent the display of popup when clicking on the more text indicator
 

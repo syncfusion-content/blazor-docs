@@ -95,7 +95,7 @@ Users can also view the underlying raw data though the pivot chart. By clicking 
 
 ## Maximum rows to retrieve
 
-> This property is applicable only for OLAP data sources.
+N> This property is applicable only for OLAP data sources.
 
 The [MaxRowsInDrillThrough](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewModel-1.html#Syncfusion_Blazor_PivotView_PivotViewModel_1_MaxRowsInDrillThrough) property allows to specify the maximum number of raw data to be returned during the drill through process. By default, this property is set to **"10000"** meaning that if you do not specify this property, you will get 10,000 or less raw data.
 
@@ -129,4 +129,4 @@ The [MaxRowsInDrillThrough](https://help.syncfusion.com/cr/blazor/Syncfusion.Bla
 
 ![Blazor PivotTable with Maximum Rows](images/blazor-pivottable-maximum-rows.png)
 
-> You can refer to the [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) feature tour page for its groundbreaking feature representations. You can also explore the [Blazor Pivot Table example](https://blazor.syncfusion.com/demos/pivot-table/default-functionalities?theme=bootstrap4) to know how to render and configure the pivot table.
+N> You can refer to the [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) feature tour page for its groundbreaking feature representations. You can also explore the [Blazor Pivot Table example](https://blazor.syncfusion.com/demos/pivot-table/default-functionalities?theme=bootstrap4) to know how to render and configure the pivot table.

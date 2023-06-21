@@ -72,7 +72,7 @@ The following properties can be used to customize the Bullet Chart tooltip.
 </SfBulletChart>
 ```
 
-> Refer to the [code block](#default-tooltip) to know about the property value of the **BulletChartData**.
+N> Refer to the [code block](#default-tooltip) to know about the property value of the **BulletChartData**.
 
 ![Customizing Blazor Bullet Chart ToolTip](images/blazor-bullet-chart-tooltip-customization.png)
 
@@ -109,6 +109,6 @@ The tooltip can be rendered as a custom component using the [Template](https://h
 </SfBulletChart>
 ```
 
-> Refer to the [code block](#default-tooltip) to know about the property value of the **BulletChartData**.
+N> Refer to the [code block](#default-tooltip) to know about the property value of the **BulletChartData**.
 
 ![Blazor Bullet Chart Tooltip with Template](images/blazor-bullet-chart-tooltip-template.png)

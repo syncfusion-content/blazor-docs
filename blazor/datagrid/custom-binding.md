@@ -157,12 +157,12 @@ The following sample code demonstrates implementing custom data binding using cu
 }
 ```
 
-> If the **DataManagerRequest.RequiresCounts** value is **true**, then the Read/ReadAsync return value must be of **DataResult** with properties **Result** whose value is a collection of records and **Count** whose value is the total number of records. If the **DataManagerRequest.RequiresCounts** is **false**, then simply send the collection of records.
+N> If the **DataManagerRequest.RequiresCounts** value is **true**, then the Read/ReadAsync return value must be of **DataResult** with properties **Result** whose value is a collection of records and **Count** whose value is the total number of records. If the **DataManagerRequest.RequiresCounts** is **false**, then simply send the collection of records.
 
 The following image shows the custom bound data displayed in the DataGrid component,
 ![Custom Binding in Blazor DataGrid](./images/blazor-datagrid-custom-binding.png)
 
-> If the Read/ReadAsync method is not overridden in the custom adaptor, then it will be handled by the default read handler.
+N> If the Read/ReadAsync method is not overridden in the custom adaptor, then it will be handled by the default read handler.
 
 ## Inject service into Custom Adaptor
 
@@ -415,7 +415,7 @@ The CRUD operations for the custom bound data in the DataGrid component can be i
 * **Update/UpdateAsync**
 * **BatchUpdate/BatchUpdateAsync**
 
-> While using batch editing in DataGrid, use BatchUpdate/BatchUpdateAsync method to handle the corresponding CRUD operation.
+N> While using batch editing in DataGrid, use BatchUpdate/BatchUpdateAsync method to handle the corresponding CRUD operation.
 
 The following sample code demonstrates implementing CRUD operations for the custom bound data,
 
@@ -556,7 +556,7 @@ The following sample code demonstrates implementing CRUD operations for the cust
 The following GIF displays the CRUD operations performed on the custom bound data displayed in the DataGrid component,
 ![Editing Custom Data in Blazor DataGrid](./images/blazor-datagrid-editing-custom-data.gif)
 
-> You can refer to the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour page for its groundbreaking feature representations. You can also explore [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap4) to understand how to present and manipulate data.
+N> You can refer to the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour page for its groundbreaking feature representations. You can also explore [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap4) to understand how to present and manipulate data.
 
 ## Handling Aggregates in Custom Adaptor
 
@@ -748,7 +748,7 @@ When using a custom adaptor, the filtering operation has to be handled by overri
 
 Based on these grid action details, a custom data source can be filtered using the built-in `PerformFiltering` method of the `DataOperations` class.
 
-> Also, you can use your own method to do the filtering operation and bind the resultant data to the grid.
+N> Also, you can use your own method to do the filtering operation and bind the resultant data to the grid.
 
 The following sample code demonstrates implementing the filtering operation for the custom bounded data,
 
@@ -817,7 +817,7 @@ The following sample code demonstrates implementing the filtering operation for 
 
 ```
 
-> [View Sample in GitHub.](https://github.com/SyncfusionExamples/blazor-datagrid-filtering-with-custom-adaptor)
+N> [View Sample in GitHub.](https://github.com/SyncfusionExamples/blazor-datagrid-filtering-with-custom-adaptor)
 
 ## Handling Sorting in Custom Adaptor
 
@@ -827,7 +827,7 @@ When using a custom adaptor, the sorting operation has to be handled by overridi
 
 Based on these grid action details, a custom data source can be sorted using the built-in `PerformSorting` method of the `DataOperations` class.
 
-> Also, you can use your own method to do the sorting operation and bind the resultant data to the grid.
+N> Also, you can use your own method to do the sorting operation and bind the resultant data to the grid.
 
 The following sample code demonstrates implementing the sorting operation for the custom bounded data,
 
@@ -895,7 +895,7 @@ The following sample code demonstrates implementing the sorting operation for th
 }
 ```
 
-> [View Sample in GitHub.](https://github.com/SyncfusionExamples/blazor-datagrid-sorting-with-custom-adaptor)
+N> [View Sample in GitHub.](https://github.com/SyncfusionExamples/blazor-datagrid-sorting-with-custom-adaptor)
 
 ## How to pass additional parameters to custom adaptor
 

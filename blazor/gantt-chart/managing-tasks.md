@@ -102,7 +102,7 @@ Component |Example
 }
 ```
 
-> If edit type is not defined in the column, then it will be considered as the **StringEdit** type (Textbox component).
+N> If edit type is not defined in the column, then it will be considered as the **StringEdit** type (Textbox component).
 
 ### Cell edit template
 
@@ -143,7 +143,10 @@ The following code example describes, how to define the Edit template for a part
         if (args.RequestType.Equals(Syncfusion.Blazor.Gantt.Action.BeforeSave))
         {
             var data = args.Data as TaskData;
-            data.TaskName = dropdown.Value.ToString();
+            if (dropdown != null && dropdown.Value != null)
+            {
+                data.TaskName = dropdown.Value.ToString();
+            }
         }
     }
     private List<TaskData> TaskCollection { get; set; }

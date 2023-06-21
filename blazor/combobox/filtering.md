@@ -87,3 +87,31 @@ The ComboBox component filter queries can be customized. You can also use your o
     }
 }
 ```
+
+## Prevent popup opening when filtering
+
+To prevent the ComboBox dropdown from opening when filtering is applied, you can use the [BeforeOpenEventArgs.Cancel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.BeforeOpenEventArgs.html#Syncfusion_Blazor_DropDowns_BeforeOpenEventArgs_Cancel) argument in the [BeforeOpenEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.BeforeOpenEventArgs.html). The `BeforeOpenEventArgs.Cancel` argument is a boolean value that can be set to true to cancel the dropdown opening, or false to allow the dropdown to open.
+
+In the following example, the isTyped flag is used to track whether the filtering action is taking place. The `OnFiltering` method sets the flag to true when the filtering action starts, and the `OnBeforeOpen` method cancels the dropdown opening if the flag is set to true. Finally, the `OnBeforeOpen` method resets the flag to false to prepare for the next filtering action.
+
+> This will prevent the ComboBox dropdown from opening when filtering is applied, while still allowing the user to filter the items using the input field in the ComboBox.
+
+{% highlight cshtml %}
+
+{% include_relative code-snippet/filtering/prevent-popupopen-in-filtering.razor %}
+
+{% endhighlight %}
+
+![Prevent Popup opening in filtering in Blazor ComboBox](./images/filtering/)
+
+## Autofill
+
+Specifies whether the input field of the control will automatically suggest and fill in the first matched item, as the user types based on the items in the control's data source. If no matches are found, the input field will not be filled and no action will occur. Default value of [Autofill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfComboBox-2.html#Syncfusion_Blazor_DropDowns_SfComboBox_2_Autofill) is `false`.
+
+{% highlight Razor %}
+
+{% include_relative code-snippet/filtering/autofill-property.razor %}
+
+{% endhighlight %} 
+
+![Blazor ComboBox with Autofill property](./images/filtering/blazor_combobox_with-autofill-property.png)

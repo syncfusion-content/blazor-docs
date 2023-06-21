@@ -7,7 +7,7 @@ control: Floating Action Button
 documentation: ug
 ---
 
-# Floating Action Button positions
+# Positions in Blazor Floating Action Button Component
 
 The floating action button can be positioned anywhere on the [Target](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfFab.html#Syncfusion_Blazor_Buttons_SfFab_Target) using the [Position](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfFab.html#Syncfusion_Blazor_Buttons_SfFab_Position) property. If the `Target` is not defined, then FAB is positioned based on the browser viewport.
 

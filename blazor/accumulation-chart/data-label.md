@@ -261,7 +261,48 @@ The [Name](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Accumu
 
 ![Text Mapping in Blazor Accumulation Chart](images/data-label/blazor-accumulation-chart-text-mapping.png)
 
-> Refer to the [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore the [Blazor Accumulation Chart Example](https://blazor.syncfusion.com/demos/chart/pie?theme=bootstrap4) to know various features of accumulation charts and how it is used to represent numeric proportional data.
+N> Refer to the [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore the [Blazor Accumulation Chart Example](https://blazor.syncfusion.com/demos/chart/pie?theme=bootstrap4) to know various features of accumulation charts and how it is used to represent numeric proportional data.
+
+## Format
+
+Data label for the accumulation chart can be formatted using [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDataLabel.html#Syncfusion_Blazor_Charts_ChartDataLabel_Format) property. You can use the global formatting options, such as 'N1', 'P1', and 'C1'.
+
+```cshtml
+
+@using Syncfusion.Blazor.Charts
+
+<SfAccumulationChart Title="Product Sales" EnableAnimation="false">
+    <AccumulationChartTooltipSettings Enable="true"></AccumulationChartTooltipSettings>
+
+    <AccumulationChartLegendSettings Visible="false"></AccumulationChartLegendSettings>
+
+    <AccumulationChartSeriesCollection>
+        <AccumulationChartSeries DataSource="@ChartValues" XName="XValue" YName="YValue" Name="Browser" Radius="80%" StartAngle="0" EndAngle="360"InnerRadius="0%">
+            <AccumulationDataLabelSettings Visible="true"  Format="C1" Position="AccumulationLabelPosition.Inside"></AccumulationDataLabelSettings>
+        </AccumulationChartSeries>
+    </AccumulationChartSeriesCollection>
+</SfAccumulationChart>
+
+@code{
+    public class ChartData
+    {
+        public string XValue { get; set; }
+        public double YValue { get; set; }
+    }
+
+    public List<ChartData> ChartValues = new List<ChartData>
+    {
+        new ChartData { XValue = "Apple", YValue = 26 },
+        new ChartData { XValue = "Redmi", YValue = 19 },
+        new ChartData { XValue = "Realme", YValue = 17 },
+        new ChartData { XValue = "Oneplus", YValue = 12 },
+        new ChartData { XValue = "Samsung", YValue = 15 },
+    };
+}
+
+```
+
+![Format in Blazor Accumulation Chart](images/data-label/blazor-accumulation-chart-with-data-label-format.png)
 
 ## See Also
 

@@ -7,7 +7,7 @@ control: Diagram
 documentation: ug
 ---
 
-> Syncfusion recommends using [Blazor Diagram Component](https://blazor.syncfusion.com/documentation/diagram/getting-started) which provides better performance than this diagram control. Blazor Diagram Component will be actively developed in the future.
+N> Syncfusion recommends using [Blazor Diagram Component](https://blazor.syncfusion.com/documentation/diagram/getting-started) which provides better performance than this diagram control. Blazor Diagram Component will be actively developed in the future.
 
 # Serialization in Blazor Diagram Component
 
@@ -49,7 +49,7 @@ string Data = await this.Diagram.SaveDiagram();
 this.Diagram.LoadDiagram(this.Data);
 ```
 
-> Before loading a new diagram, existing diagram is cleared.
+N> Before loading a new diagram, existing diagram is cleared.
 
 ## Prevent default values
 The diagram provides supports to simplify the saved JSON object without adding the default properties that are presented in the diagram. The following code illustrates how to simplify the JSON object.

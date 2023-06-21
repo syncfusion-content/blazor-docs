@@ -7,7 +7,7 @@ control: Diagram
 documentation: ug
 ---
 
-> Syncfusion recommends using [Blazor Diagram Component](https://blazor.syncfusion.com/documentation/diagram/getting-started) which provides better performance than this diagram control. Blazor Diagram Component will be actively developed in the future.
+N> Syncfusion recommends using [Blazor Diagram Component](https://blazor.syncfusion.com/documentation/diagram/getting-started) which provides better performance than this diagram control. Blazor Diagram Component will be actively developed in the future.
 
 # Appearance in Blazor Diagram Component
 
@@ -256,7 +256,7 @@ The following code sample shows how the different types of overflow property wor
 | Clip| Wrap | ![Label Wrap](../images/flowClip_wrap.png) |
 | Clip | WrapWithOverflow | ![Label WrapWith Overflow](../images/flowClip_wrapwithoverflow.png) |
 
-> All the customization over the overflow is also applicable to connector’s annotation.
+N> All the customization over the overflow is also applicable to connector’s annotation.
 
 ## Change the appearance of annotation
 
@@ -511,10 +511,10 @@ You can add any number of annotations to a node or connector. The following code
 
 ![Multiple Annotations](../images/Annotations.png)
 
->* Type of the annotation’s property of the node or connector was ObservableCollection.
->* Default value of the annotation will be null.
->* All the same customization can be applicable for the annotations.
->* Text Editing can be stated only the first annotation of the annotation collection when you double click the node or connector.
+N>* Type of the annotation’s property of the node or connector was ObservableCollection.
+<br/>* Default value of the annotation will be null.
+<br/>* All the same customization can be applicable for the annotations.
+<br/>* Text Editing can be stated only the first annotation of the annotation collection when you double click the node or connector.
 
 ## Constraints
 
@@ -532,7 +532,7 @@ AnnotationConstraints may have multiple behaviors as follows:
 | Interaction | Enables or disables select, drag, resize and rotate behaviors. |
 | None | Disables all behaviors of Annotation. |
 
->The default value is AnnotationConstraints.InheritReadOnly for constraints property of the annotation.
+N>The default value is AnnotationConstraints.InheritReadOnly for constraints property of the annotation.
 
 Refer to [Constraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.AnnotationConstraints.html) to learn about how to enable or disable the annotation constraints.
 
@@ -655,8 +655,8 @@ The following code explains how to define a template in node’s annotation. sim
 
 ![Annotation Template](../images/Annotation_Template.png)
 
->* You need to specify the width value by default, if the annotation has template.
->* The AnnotationTemplate property accepts the template string.
+N>* You need to specify the width value by default, if the annotation has template.
+<br/>* The AnnotationTemplate property accepts the template string.
 
 ## See also
 

@@ -61,7 +61,7 @@ A row can be added to the Gantt Chart component from the toolbar while the `Gant
 
 ![Adding New Task in Blazor Gantt Chart](images/blazor-gantt-chart-add-new-row.png)
 
-> By default, a new row will be added to the top most row in the Gantt Chart component.
+N> By default, a new row will be added to the top most row in the Gantt Chart component.
 
 ## Context menu
 

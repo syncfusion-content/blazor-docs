@@ -19,7 +19,7 @@ The [Rich Text Editor](https://www.syncfusion.com/blazor-components/blazor-wysiw
 
 Specify the direction of the Rich Text Editor component using the [EnableRtl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.SfRichTextEditor.html#Syncfusion_Blazor_RichTextEditor_SfRichTextEditor_EnableRtl) property. Writing systems will require Arabic, Hebrew, and more. The direction can be switched to right-to-left.
 
-> The `EnableRtl` property will not change based on the current culture.
+N> The `EnableRtl` property will not change based on the current culture.
 
 {% tabs %}
 {% highlight cshtml %}
@@ -33,4 +33,4 @@ Specify the direction of the Rich Text Editor component using the [EnableRtl](ht
 
 ![Blazor RichTextEditor right to left toolbar](./images/blazor-richtexteditor-right-to-left.png)
 
-> You can refer to our [Blazor Rich Text Editor](https://www.syncfusion.com/blazor-components/blazor-wysiwyg-rich-text-editor) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Rich Text Editor](https://blazor.syncfusion.com/demos/rich-text-editor/overview?theme=bootstrap4) example to know how to render and configure the rich text editor tools.
+N> You can refer to our [Blazor Rich Text Editor](https://www.syncfusion.com/blazor-components/blazor-wysiwyg-rich-text-editor) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Rich Text Editor](https://blazor.syncfusion.com/demos/rich-text-editor/overview?theme=bootstrap4) example to know how to render and configure the rich text editor tools.

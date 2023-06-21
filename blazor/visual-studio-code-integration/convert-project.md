@@ -10,7 +10,8 @@ documentation: ug
 # Converting Blazor application to Syncfusion Blazor application
 
 The Syncfusion Blazor conversion is an add-in for Visual Studio Code that converts an existing Blazor application into a Syncfusion Blazor Web Application by adding the required NuGet packages and themes.
-   > The Syncfusion Blazor Web Application Project Conversion utility is available from `v17.4.0.39`.
+
+N> The Syncfusion Blazor Web Application Project Conversion utility is available from `v17.4.0.39`.
 
 The steps below assist you to using the Syncfusion Project conversion in your existing Blazor Web Application:
 
@@ -30,7 +31,7 @@ The steps below assist you to using the Syncfusion Project conversion in your ex
 
 5. The application configured with Syncfusion Blazor required NuGet packages and themes.
 
-6. If you installed the trial setup or NuGet packages from nuget.org you must register the Syncfusion license key to your application since Syncfusion introduced the licensing system from 2018 Volume 2 (v16.2.0.41) Essential Studio release. Navigate to the [help topic](https://help.syncfusion.com/common/essential-studio/licensing/license-key#how-to-generate-syncfusion-license-key) to generate and register the Syncfusion license key to your application. Refer to this [blog](https://blog.syncfusion.com/post/Whats-New-in-2018-Volume-2-Licensing-Changes-in-the-1620x-Version-of-Essential-Studio.aspx?_ga=2.11237684.1233358434.1587355730-230058891.1567654773) post for understanding the licensing changes introduced in Essential Studio.
+6. If you installed the trial setup or NuGet packages from nuget.org you must register the Syncfusion license key to your application since Syncfusion introduced the licensing system from 2018 Volume 2 (v16.2.0.41) Essential Studio release. Navigate to the [help topic](https://help.syncfusion.com/common/essential-studio/licensing/license-key#how-to-generate-syncfusion-license-key) to generate and register the Syncfusion license key to your application. Refer to this [UG](https://blazor.syncfusion.com/documentation/getting-started/license-key/overview) topic for understanding the licensing details in Essential Studio for Blazor.
 
 ## NuGet Packages
 

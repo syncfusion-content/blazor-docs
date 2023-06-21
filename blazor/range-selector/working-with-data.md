@@ -58,7 +58,7 @@ To do list binding to the Range Selector, you can assign a IEnumerable object to
 
 ![Blazor Range Navigator with List](images/working-data/blazor-range-list-binding.png)
 
-> By default, [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) uses **BlazorAdaptor** for list data-binding.
+N> By default, [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) uses **BlazorAdaptor** for list data-binding.
 
 ### ExpandoObject binding
 
@@ -303,4 +303,4 @@ The [ObservableCollection](https://docs.microsoft.com/en-us/dotnet/api/system.co
 
 ![Blazor Chart with Web API Binding](images/working-data/blazor-range-observable-collection.png)
 
-> Refer to our [Blazor Range Selector](https://www.syncfusion.com/blazor-components/blazor-range-selector) feature tour page for its groundbreaking feature representations and also explore our [Blazor Range Selector Example](https://blazor.syncfusion.com/demos/range-selector/range-navigator?theme=fluent) to know various Range Selector types and how to represent time-dependent data, showing trends at equal intervals.
+N> Refer to our [Blazor Range Selector](https://www.syncfusion.com/blazor-components/blazor-range-selector) feature tour page for its groundbreaking feature representations and also explore our [Blazor Range Selector Example](https://blazor.syncfusion.com/demos/range-selector/range-navigator?theme=fluent) to know various Range Selector types and how to represent time-dependent data, showing trends at equal intervals.

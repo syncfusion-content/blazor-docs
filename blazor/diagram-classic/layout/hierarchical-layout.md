@@ -7,7 +7,7 @@ control: Diagram
 documentation: ug
 ---
 
-> Syncfusion recommends using [Blazor Diagram Component](https://blazor.syncfusion.com/documentation/diagram/getting-started) which provides better performance than this diagram control. Blazor Diagram Component will be actively developed in the future.
+N> Syncfusion recommends using [Blazor Diagram Component](https://blazor.syncfusion.com/documentation/diagram/getting-started) which provides better performance than this diagram control. Blazor Diagram Component will be actively developed in the future.
 
 # Hierarchical Layout in Blazor Diagram Component
 
@@ -233,7 +233,7 @@ Diagram allows to expand or collapse the subtrees of a layout. The node’s isEx
 
 ![Expand and Collapse Icon](../images/layout-expand-collapse-icon.png)
 
-> You can use the `EnableAnimation` property to enable or disable animation option when a node is expanded or collapsed.
+N> You can use the `EnableAnimation` property to enable or disable animation option when a node is expanded or collapsed.
 
 ## Complex hierarchical tree
 

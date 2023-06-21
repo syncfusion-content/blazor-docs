@@ -27,12 +27,15 @@ The available default edit types are,
 
 * [DateTimePickerEdit](https://blazor.syncfusion.com/documentation/datetime-picker/getting-started) component for date time data type.
 
+* [TimePickerEdit](https://blazor.syncfusion.com/documentation/timepicker/getting-started)
+component for TimeOnly data type.
+
 ## Customizing the default editor controls
 
 You can customize the behavior of the editor component through the [EditorSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) property of the [GridColumn](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Grids.GridColumn.html) component.
 
-> We have limited the properties of editor components that can be customized using [EditorSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) in Grid default editor components. Find the list of properties that can be customized the below topics.
-> If you want to customize other properties, refer to our [EditTemplate](https://blazor.syncfusion.com/documentation/datagrid/editing/#cell-edit-template) documentation to render the custom components in EditForm along with your customization.
+N> We have limited the properties of editor components that can be customized using [EditorSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) in Grid default editor components. Find the list of properties that can be customized the below topics.
+<br/> If you want to customize other properties, refer to our [EditTemplate](https://blazor.syncfusion.com/documentation/datagrid/editing/#cell-edit-template) documentation to render the custom components in EditForm along with your customization.
 
 ### DefaultEdit
 
@@ -110,6 +113,7 @@ The following sample code demonstrates the customization applied to TextBox comp
 | ShowClearButton | Specifies whether to show or hide the clear icon. |
 | ShowSpinButton | Specifies whether the up and down spin buttons should be displayed in NumericTextBox. |
 | ValidateDecimalOnType | Specifies whether the decimals length should be restricted during typing. |
+| Step | Specifies the incremental or decremental step size for the NumericTextBox. |
 
 The following sample code demonstrates the customization applied to NumericTextBox component set for the DataGrid columns,
 
@@ -181,7 +185,7 @@ The following sample code demonstrates the customization applied to NumericTextB
 | ActionFailureTemplate | Accepts the template and assigns it to the popup list content of the component when the data fetch request from the remote server fails |
 | DataSource | Accepts the list items either through local or remote service and binds it to the component. It can be an array of JSON Objects or an instance of `DataManager`. |
 
-> `IEnumerable<TItem>` is the type of [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListModel-2.html#Syncfusion_Blazor_DropDowns_DropDownListModel_2_DataSource) property in [DropDownListModel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListModel-2.html), so you should not bind `string[]` or `List<string>` type to the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListModel-2.html#Syncfusion_Blazor_DropDowns_DropDownListModel_2_DataSource) property.
+N> `IEnumerable<TItem>` is the type of [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListModel-2.html#Syncfusion_Blazor_DropDowns_DropDownListModel_2_DataSource) property in [DropDownListModel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListModel-2.html), so you should not bind `string[]` or `List<string>` type to the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListModel-2.html#Syncfusion_Blazor_DropDowns_DropDownListModel_2_DataSource) property.
 
 The following sample code demonstrates the customization applied to DropDownList component set for the DataGrid columns,
 
@@ -359,15 +363,78 @@ The following sample code demonstrates the customization applied to DatePicker c
 }
 ```
 
-> Similar way customization can be applied to default DateTimePicker Component using same `DateEditCellParams`
+N> Similar way customization can be applied to default DateTimePicker Component using same `DateEditCellParams`
+
+### TimePickerEdit
+
+`TimeEditCellParams` class helps to customize the default TimePicker component in Grid EditForm. The following table describes properties of TimePicker control that can be customized using `EditorSettings` of GridColumn editor component.
+
+| Component | Example |
+|--------|----------------|
+| CssClass | Specifies the root CSS class of the TimePicker that allows to customize the appearance by overriding the styles.   |
+| EnableRtl | Enable or disable rendering component in right to left direction.    |
+| ReadOnly | Specifies the component in readonly state. When the Component is readonly it does not allow user input.     |
+| ShowClearButton | Specifies whether to show or hide the clear icon in textbox. |
+| Step | Specifies the incremental or decremental step size for the TimePicker.   |
+| Format | Specifies the time format that indicates the display format for the value of the TimePicker.    |
+| Min | Specifies the the minimum time value that can be allowed to select in TimePicker.     |
+| Max | Specifies the maximum time value that can be allowed to select in TimePicker. |
+
+The following sample code demonstrates the customization applied to TimePicker component set for the DataGrid columns,
+
+```cshtml
+@using Syncfusion.Blazor.Calendars
+@using Syncfusion.Blazor.Grids
+<SfGrid DataSource="@OrderData" Toolbar=@ToolbarItems>
+    <GridEditSettings AllowEditing="true" AllowAdding="true" AllowDeleting="true"></GridEditSettings>
+    <GridColumns>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" IsPrimaryKey="true" TextAlign="TextAlign.Center" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer ID" TextAlign="TextAlign.Center" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" EditType="EditType.NumericEdit" TextAlign="TextAlign.Center" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderTime) EditorSettings="@TimeEditParams" EditType="EditType.TimePickerEdit" TextAlign="TextAlign.Right" Type="ColumnType.TimeOnly" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Order.ShipName) HeaderText="Ship Name" TextAlign="TextAlign.Center" EditType="EditType.DropDownEdit" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.Verified) HeaderText="Verified" EditType="EditType.BooleanEdit" TextAlign="TextAlign.Center" DisplayAsCheckBox="true" Width="120"></GridColumn>
+    </GridColumns>
+</SfGrid>
+@code {
+    public string[] ToolbarItems = new string[] { "Add", "Edit", "Delete", "Update", "Cancel" };
+    public IEditorSettings TimeEditParams = new TimeEditCellParams
+    {
+        Params = new TimePickerModel<object>() { ShowClearButton = true }
+    };
+    List<Order> OrderData = new List<Order>
+{
+        new Order() { OrderID = 10248, CustomerID = "VINET", Freight = 32.38, ShipName = "Vins et alcools Chevalier", Verified = true, OrderTime = new TimeOnly(1, 00) },
+        new Order() { OrderID = 10249, CustomerID = "TOMSP", Freight = 11.61, ShipName = "Toms Spezialitäten", Verified = false , OrderTime = new TimeOnly(2, 00) },
+        new Order() { OrderID = 10250, CustomerID = "HANAR", Freight = 65.83, ShipName = "Hanari Carnes", Verified = true, OrderTime = new TimeOnly(3, 00) },
+        new Order() { OrderID = 10251, CustomerID = "VICTE", Freight = 41.34, ShipName = "Victuailles en stock", Verified = false , OrderTime = new TimeOnly(4, 00) },
+        new Order() { OrderID = 10252, CustomerID = "SUPRD", Freight = 51.3, ShipName = "Suprêmes délices", Verified = false, OrderTime = new TimeOnly(5, 00) },
+        new Order() { OrderID = 10253, CustomerID = "HANAR", Freight = 58.17, ShipName = "Hanari Carnes", Verified = false , OrderTime = new TimeOnly(6, 00) },
+        new Order() { OrderID = 10254, CustomerID = "CHOPS", Freight = 22.98, ShipName = "Chop-suey Chinese", Verified = true , OrderTime = new TimeOnly(7, 00) },
+        new Order() { OrderID = 10255, CustomerID = "RICSU", Freight = 148.33, ShipName = "Richter Supermarket", Verified = true , OrderTime = new TimeOnly(8, 00) },
+        new Order() { OrderID = 10256, CustomerID = "WELLI", Freight = 13.97, ShipName = "Wellington Importadora", Verified = false , OrderTime = new TimeOnly(9, 00) },
+        new Order() { OrderID = 10257, CustomerID = "HILAA", Freight = 81.91, ShipName = "HILARION-Abastos", Verified = true, OrderTime = new TimeOnly(10, 00) }
+    };
+    public class Order
+    {
+        public int? OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public double Freight { get; set; }
+        public DateTime? OrderDate { get; set; } = DateTime.Now;
+        public TimeOnly? OrderTime { get; set; }
+        public string ShipName { get; set; }
+        public bool Verified { get; set; }
+    }
+}
+```
 
 ## Custom editors using template/Cell edit template
 
-> Before adding edit template to the datagrid, it is recommended to go through the [template](./templates/#templates) section topic to configure the template.
+N> Before adding edit template to the datagrid, it is recommended to go through the [template](./templates/#templates) section topic to configure the template.
 
 The cell edit template is used to add a custom component for a particular column. You can use the **EditTemplate** of the [GridColumn](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Grids.GridColumn.html) component to add the custom component. You can access the parameters passed to the templates using implicit parameter named **context**.
 
-> Custom components inside the EditTemplate must be specified with two-way (**@bind-Value**) binding to reflect the changes in DataGrid.
+N> Custom components inside the EditTemplate must be specified with two-way (**@bind-Value**) binding to reflect the changes in DataGrid.
 
 ### Using AutoComplete in EditTemplate
 
@@ -1050,7 +1117,7 @@ function editKeyDown(id) {
 }
 ```
 
-> [View Sample in GitHub.](https://github.com/SyncfusionExamples/blazor-datagrid-prevent-enter-key-functionality-in-multiline-textbox)
+N> [View Sample in GitHub.](https://github.com/SyncfusionExamples/blazor-datagrid-prevent-enter-key-functionality-in-multiline-textbox)
 
 ## See also
 

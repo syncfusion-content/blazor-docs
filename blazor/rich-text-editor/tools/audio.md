@@ -7,7 +7,7 @@ control: RichTextEditor
 documentation: ug
 ---
 
-# Insert Audio in RichTextEditor
+# Insert Audio in Blazor RichTextEditor Component
 
 The Rich Text Editor allows inserting audio files from online sources and the local computer where you want to insert the audio in your content. For inserting audio into the Rich Text Editor, the following list of options has been provided in the [RichTextEditorAudioSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorAudioSettings.html).
 
@@ -67,7 +67,7 @@ In the following illustration, the audio size has been validated before uploadin
 
 The selected audio can be uploaded to the required destination using the controller action below. Map this method name in [RichTextEditorMediaSettings.SaveUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorMediaSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorMediaSettings_SaveUrl) and provide the required destination path through [RichTextEditorMediaSettings.Path](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorMediaSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorMediaSettings_Path) properties.
 
-> If you want to insert lower-sized audio files in the editor and don't want a specific physical location for saving audio, you can opt to save the format as `Base64`.
+N> If you want to insert lower-sized audio files in the editor and don't want a specific physical location for saving audio, you can opt to save the format as `Base64`.
 
 {% tabs %}
 {% highlight cshtml %}
@@ -152,7 +152,7 @@ namespace AudioUpload.Controllers
 
 The audio files can be saved as `Blob` or `Base64` url by using the [RichTextEditorAudioSettings.SaveFormat](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorMediaSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorMediaSettings_SaveFormat) property, which is of enum type and the generated url will be set to the `src` attribute of the `<source>` tag.
 
-> By default, the files are saved in the `Blob` format.
+N> By default, the files are saved in the `Blob` format.
 
 ```cshtml
 
@@ -182,6 +182,8 @@ Once you select the audio from the local machine, the URL for the audio will be 
 ## Display Position
 
 Sets the default display for an audio file when it is inserted in the Rich Text Editor using the [RichTextEditorMediaSettings.layoutOption](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorMediaSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorMediaSettings_LayoutOption) property. The possible options are `inline` and `break.` It also updates the audio elements’ layout position when updating the display positions.
+
+N> The default `layoutOption` property is set to `Inline`.
 
 {% tabs %}
 {% highlight cshtml %}
@@ -295,7 +297,7 @@ namespace RenameAudio.Controllers
 
 The Rich Text Editor control allows you to add additional data with the File Upload, which can be received on the server side. By using the `FileUploading` event and its `CustomFormData` argument, you can pass parameters to the controller action. On the server side, you can fetch the custom headers by accessing the form collection from the current request, which retrieves the values sent using the POST method.
 
-> By default it doesn't support `UseDefaultCredentials` property, we need to manually append the default credentials with the upload request.
+N> By default it doesn't support `UseDefaultCredentials` property, we need to manually append the default credentials with the upload request.
 
 {% tabs %}
 {% highlight cshtml %}

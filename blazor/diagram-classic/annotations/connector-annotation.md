@@ -7,7 +7,7 @@ control: Diagram
 documentation: ug
 ---
 
-> Syncfusion recommends using [Blazor Diagram Component](https://blazor.syncfusion.com/documentation/diagram/getting-started) which provides better performance than this diagram control. Blazor Diagram Component will be actively developed in the future.
+N> Syncfusion recommends using [Blazor Diagram Component](https://blazor.syncfusion.com/documentation/diagram/getting-started) which provides better performance than this diagram control. Blazor Diagram Component will be actively developed in the future.
 
 # Annotation for Connector in Blazor Diagram Component
 
@@ -62,7 +62,7 @@ The following image shows the relationship between the annotation position and o
 
 ![Annotation](../images/ConnectorAnnotation_Offset.png)
 
-> By default, offset value of the connector annotation is 0.5.
+N> By default, offset value of the connector annotation is 0.5.
 
 ## Alignment
 
@@ -115,7 +115,7 @@ The following screenshot shows how the annotation of the connector aligned over 
 
 ![Annotation](../images/ConnectorAnnotation_Alignment.png)
 
-> By default, Alignment value of the connector annotation is `Center`.
+N> By default, Alignment value of the connector annotation is `Center`.
 
 ## Displacement
 
@@ -169,7 +169,7 @@ The following sample shows how the annotation of the displacement happens from i
 | | (20,20) | ![Center](../images/DispalcementAfter20.png) |
 | | (0,0) | ![Target](../images/DispalcementAfter0.png) |
 
-> By default, Offset value of the connector annotation is { 0.5, 0.5}.
+N> By default, Offset value of the connector annotation is { 0.5, 0.5}.
 
 ## Segment angle
 
@@ -221,7 +221,7 @@ The following code example shows how the connector annotation rotated in its pat
 | True | ![Source](../images/SegmentAngle_True.png) |
 | False | ![Center](../images/SegmentAngle_False.png) |
 
-> By default, the SegmentAngle will be disabled.
+N> By default, the SegmentAngle will be disabled.
 
 ## See also
 
