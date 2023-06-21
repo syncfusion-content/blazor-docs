@@ -110,7 +110,7 @@ There are three types of modes.
 
 ## Toolbar
 
-By default, zoom in, zoom out, pan, and reset buttons are available in the toolbar for zoomed charts. The [ToolbarItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartZoomSettings.html#Syncfusion_Blazor_Charts_ChartZoomSettings_ToolbarItems) property specifies which tools should be displayed in the toolbar.
+By default, zoom in, zoom out, pan, and reset buttons are available in the toolbar for zoomed charts. The [ToolbarItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartZoomSettings.html#Syncfusion_Blazor_Charts_ChartZoomSettings_ToolbarItems) property specifies which tools should be displayed in the toolbar. 
 
 ```cshtml
 
@@ -153,6 +153,49 @@ By default, zoom in, zoom out, pan, and reset buttons are available in the toolb
 ```
 
 ![Zooming Option in Blazor Column Chart Toolbar](images/zoom/blazor-column-chart-zoom-in-toolbar.png)
+
+### Toolbar Display Mode
+
+By default, zooming tool bar will appear only when the chart is zoomed. Now we can display zooming tool bar for un zoomed charts by setting the ToolbarDisplayMode as ToolbarMode.Always.
+
+```cshtml
+
+@using Syncfusion.Blazor.Charts
+
+<SfChart Title="Sales History of Product X">
+    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
+
+    <ChartZoomSettings EnableSelectionZooming="true" EnableMouseWheelZooming="true"
+                       EnablePinchZooming="true"  ToolbarDisplayMode="ToolbarMode.Always">
+    </ChartZoomSettings>
+
+    <ChartSeriesCollection>
+        <ChartSeries DataSource="@SalesReports" XName="X" YName="YValue" Type="ChartSeriesType.Column"></ChartSeries>
+    </ChartSeriesCollection>
+</SfChart>
+
+@code {
+
+    public class ChartData
+    {
+        public string X { get; set; }
+        public double YValue { get; set; }
+    }
+
+    public List<ChartData> SalesReports = new List<ChartData>
+    {
+        new ChartData { X= "USA", YValue= 46 },
+        new ChartData { X= "GBR", YValue= 27 },
+        new ChartData { X= "CHN", YValue= 26 },
+        new ChartData { X= "UK", YValue= 26 },
+        new ChartData { X= "AUS", YValue= 26 },
+        new ChartData { X= "IND", YValue= 26 },
+        new ChartData { X= "DEN", YValue= 26 },
+        new ChartData { X= "MEX", YValue= 26 },
+    };
+}
+```
+![Toolbar display in Un-Zoomed chart](images/zoom/blazor-column-chart-zoom-toolbar-displaymode.png)
 
 ## Enable pan
 
