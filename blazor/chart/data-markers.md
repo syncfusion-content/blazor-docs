@@ -93,9 +93,9 @@ Markers can be assigned with different shapes such as [Rectangle](https://help.s
 
 ![Blazor Line Chart with Diamond Marker](images/marker/blazor-line-chart-diamond-marker.png)
 
-## Display different markers for each chart series
+## Auto Marker Shape
 
-When more number of series availabale and the marker is enabled, then each chart series will display different marker shapes automatically.
+By default, the chart marker shape is set to Auto. If chart marker is enabled, each series will be rendered with a different marker shape.
 
 ```cshtml
 
