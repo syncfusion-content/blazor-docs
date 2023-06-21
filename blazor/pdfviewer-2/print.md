@@ -49,3 +49,7 @@ The SfPdfViewer supports printing the loaded PDF file by default. You can enable
 }
 
 ```
+
+## See also
+
+* [Download in Blazor SfPdfViewer Component](./download)

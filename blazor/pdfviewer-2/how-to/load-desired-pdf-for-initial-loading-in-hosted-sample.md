@@ -43,3 +43,13 @@ You can load your own PDF document for initial loading as well as change documen
 ```
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Common/Load%20Desire%20PDF%20in%20Blazor%20-%20SfPdfViewer).
+
+## See also
+
+* [How to load Microsoft Office files in Blazor SfPdfViewer Component](./load-office-files)
+
+* [How to load PDF documents dynamically in Blazor SfPdfViewer Component](./load-pdf-document-dynamically)
+
+* [How to unload the PDF document from Viewer](./unload-the-pdf-document-from-viewer)
+
+* [How to show or hide the Component dynamically](../how-to/show-or-hide-sfpdfviewer-dynamically)

@@ -108,3 +108,7 @@ Also, you can programmatically perform zooming operations as follows.
 ```
 
 N> SfPdfViewer  can support zoom value ranges from 50% to 400%.
+
+## See also
+
+* [Navigation in Blazor SfPdfViewer Component](./navigation)

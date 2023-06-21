@@ -71,3 +71,9 @@ If the above result is not shown, please run the comments below
 Close the project, reopen it, and run it in WSL mode. It will run properly.
 
 ![Create-new-blazor-wsl-app](GettingStarted_images/final.png)
+
+## See also
+
+* [Getting Started with Blazor SfPdfViewer Component in Blazor Server App](./server-side-application)
+
+* [Getting Started with Blazor SfPdfViewer Component in Blazor WASM App](./web-assembly-application)

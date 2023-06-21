@@ -55,3 +55,9 @@ For quick view, you might need to display the PDF file in a dialog window. The f
 ```
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Common/PdfViewer%20in%20Popup%20window%20-%20SfPdfViewer)
+
+## See also
+
+* [How to create SfPdfViewer Component in a Splitter Component](./create-sfpdfviewer-in-a-splitter-component)
+
+* [How to view the created PDF document](./create-pdf-viewer)

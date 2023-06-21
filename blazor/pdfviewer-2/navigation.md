@@ -221,3 +221,7 @@ You can set the target attribute for a hyperlink in SfPdfViewer using the `Hyper
 
 }
 ```
+
+## See also
+
+* [Magnification in Blazor SfPdfViewer Component](./magnification)

@@ -48,3 +48,13 @@ The following code example shows the review status of the annotation.
 }
 ```
 [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Annotations/Comment%20Panel/Retrieve%20the%20comment%20status%20-%20SfPdfViewer).
+
+## See also
+
+* [Free text annotations in Blazor SfPdfViewer Component](../annotation/free-text-annotation)
+
+* [Ink Annotation in the Blazor SfPdfViewer component](../annotation/ink-annotation)
+
+* [Stamp annotations in Blazor SfPdfViewer Component](../annotation/stamp-annotation)
+
+* [Comments in Blazor SfPdfViewer Component](../annotation/comments)
