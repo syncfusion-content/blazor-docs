@@ -184,4 +184,4 @@ public string DocumentPath { get; set; } = "wwwroot/data/PDF_Succinctly.pdf";
 
 ## See also
 
-* [Open PDF files in SfPdfViewer for Blazor from various storage location](./opening-pdf-file)
+* [How to open PDF files various storage location](./opening-pdf-file)

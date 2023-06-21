@@ -237,4 +237,4 @@ You can load a PDF file from stream in SfPdfViewer by converting the stream into
 
 ## See also
 
-* [Saving PDF file in Blazor SfPdfViewer Component](./saving-pdf-file)
+* [How to save PDF file](./saving-pdf-file)
