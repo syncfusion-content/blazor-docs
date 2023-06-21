@@ -11,7 +11,7 @@ documentation: ug
 
 This section briefly explains about how to include [Blazor CircularGauge](https://www.syncfusion.com/blazor-components/blazor-circular-gauge) component in your Blazor Server App and Blazor WebAssembly App using Visual Studio.
 
-The below video demonstrates the customization options and features within the Blazor Circular Gauge component.
+The below video demonstrates the customization of Blazor Circular Gauge component.
 
 {% youtube
 "youtube:https://www.youtube.com/watch?v=L3TyARQFY98"%}

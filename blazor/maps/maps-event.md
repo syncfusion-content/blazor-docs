@@ -831,7 +831,7 @@ The [OnRightClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.
 
 ## OnZoom
 
-The [OnZoom](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsEvents.html#Syncfusion_Blazor_Maps_MapsEvents_OnZoom) event will be triggered before zooming-in or zooming-out the Maps. This event is also triggered when the `ZoomByPosition` and `ZoomToCoordinates` methods are invoked in the Maps.To know more about the arguments of this event, refer [here](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapZoomEventArgs.html).
+The [OnZoom](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsEvents.html#Syncfusion_Blazor_Maps_MapsEvents_OnZoom) event will be triggered before zooming-in or zooming-out the Maps. This event is also triggered when the [ZoomByPosition](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.SfMaps.html#Syncfusion_Blazor_Maps_SfMaps_ZoomByPosition_Syncfusion_Blazor_Maps_MapsCenterPosition_System_Double_) and [ZoomToCoordinates](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.SfMaps.html#Syncfusion_Blazor_Maps_SfMaps_ZoomToCoordinates_System_Double_System_Double_System_Double_System_Double_) methods are called.To know more about the arguments of this event, refer [here](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapZoomEventArgs.html).
 
 ```cshtml
 @using Syncfusion.Blazor.Maps
@@ -856,7 +856,7 @@ The [OnZoom](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsEv
 
 ## OnZoomComplete
 
-The [OnZoomComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsEvents.html#Syncfusion_Blazor_Maps_MapsEvents_OnZoomComplete) event will be triggered after performing zooming operation. This event is also triggered when the `ZoomByPosition` and `ZoomToCoordinates` methods are invoked in the Maps. To know more about the arguments of this event, refer [here](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapZoomEventArgs.html).
+The [OnZoomComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsEvents.html#Syncfusion_Blazor_Maps_MapsEvents_OnZoomComplete) event will be triggered after performing zooming operation. This event is also triggered when the [ZoomByPosition](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.SfMaps.html#Syncfusion_Blazor_Maps_SfMaps_ZoomByPosition_Syncfusion_Blazor_Maps_MapsCenterPosition_System_Double_) and [ZoomToCoordinates](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.SfMaps.html#Syncfusion_Blazor_Maps_SfMaps_ZoomToCoordinates_System_Double_System_Double_System_Double_System_Double_) methods are called. To know more about the arguments of this event, refer [here](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapZoomEventArgs.html).
 
 ```cshtml
 @using Syncfusion.Blazor.Maps

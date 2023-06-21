@@ -11,7 +11,7 @@ documentation: ug
 
 Legend is used to provide valuable information for interpreting what the TreeMap displays. The legends can be represented in various colors, shapes or other identifiers based on the data.
 
-The below video demonstrates the legend customization options in the Blazor TreeMap component.
+The below video demonstrates the customization of legend in Blazor TreeMap component.
 
 {% youtube
 "youtube:https://www.youtube.com/watch?v=2ilArsWz9u0"%}
