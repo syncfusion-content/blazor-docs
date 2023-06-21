@@ -156,7 +156,7 @@ By default, zoom in, zoom out, pan, and reset buttons are available in the toolb
 
 ### Toolbar Display Mode
 
-By default, zooming tool bar will appear only when the chart is zoomed. Now we can display zooming tool bar for un zoomed charts by setting the ToolbarDisplayMode as ToolbarMode.Always.
+By default, the chart zooming toolbar only appears when the chart is zoomed. Now, we can display the zooming toolbar initially while the chart is loading by setting the ToolbarDisplayMode to ToolbarMode.Always.
 
 ```cshtml
 
@@ -195,7 +195,7 @@ By default, zooming tool bar will appear only when the chart is zoomed. Now we c
     };
 }
 ```
-![Toolbar display in Un-Zoomed chart](images/zoom/blazor-column-chart-zoom-toolbar-displaymode.png)
+![Toolbar display in the initial chart](images/zoom/blazor-column-chart-zoom-toolbar-displaymode.png)
 
 ## Enable pan
 
