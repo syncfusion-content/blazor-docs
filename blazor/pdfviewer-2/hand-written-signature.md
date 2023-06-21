@@ -16,7 +16,6 @@ The SfPdfViewer control supports adding handwritten signatures to a PDF document
 The handwritten signature can be added to the PDF document using the annotation toolbar.
 
 * Click the **Edit Annotation** button in the SfPdfViewer toolbar. A toolbar appears below it.
-
 * Select the **HandWritten Signature** button in the annotation toolbar. The signature panel will appear.
 
 ![HandWritten Signature in Blazor SfPdfViewer](../pdfviewer/images/blazor-pdfviewer-handwritten-sign.png)

@@ -24,11 +24,8 @@ The SfPdfViewer control provides the options to add, edit and delete the shape a
 Shape annotations can be added to the PDF document using the annotation toolbar.
 
 * Click the **Edit Annotation** button in the SfPdfViewer toolbar. A toolbar appears below it.
-
 * Click the **Shape Annotation** dropdown button. A dropdown pop-up will appear and shows the shape annotations to be added.
-
 * Select the shape types to be added to the page in the dropdown pop-up. It enables the selected shape annotation mode.
-
 * You can add the shapes over the pages of the PDF document.
 
 In the pan mode, if the shape annotation mode is entered, the SfPdfViewer control will switch to text select mode.
@@ -42,19 +39,18 @@ In the pan mode, if the shape annotation mode is entered, the SfPdfViewer contro
 @using Syncfusion.Blazor.SfPdfViewer
 
 <SfButton OnClick="OnClick">Circle Annotation</SfButton>
-
-<SfPdfViewer2 DocumentPath="@DocumentPath" @ref="viewer" Width="100%" Height="100%">
+<SfPdfViewer2 DocumentPath="@DocumentPath"
+              @ref="viewer"
+              Width="100%"
+              Height="100%">
 </SfPdfViewer2>
 
 @code {
-
     SfPdfViewer2 viewer;
-
-    public void OnClick(MouseEventArgs args)
+    public async void OnClick(MouseEventArgs args)
     {
-        viewer.SetAnnotationMode(AnnotationType.Circle);
+        await viewer.SetAnnotationModeAsync(AnnotationType.Circle);
     }
-
     private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
 }
 
@@ -103,30 +99,62 @@ The properties of the shape annotations can be set before creating the control u
 
 @using Syncfusion.Blazor.SfPdfViewer
 
-<SfPdfViewer2 @ref="@viewer" DocumentPath="@DocumentPath" LineSettings="@LineSettings" ArrowSettings="@ArrowSettings" RectangleSettings="@RectangleSettings" CircleSettings="@CircleSettings" PolygonSettings="@PolygonSettings"  Width="100%" Height="100%">
+<SfPdfViewer2 @ref="@viewer"
+              DocumentPath="@DocumentPath"
+              LineSettings="@LineSettings"
+              ArrowSettings="@ArrowSettings"
+              RectangleSettings="@RectangleSettings"
+              CircleSettings="@CircleSettings"
+              PolygonSettings="@PolygonSettings"
+              Width="100%"
+              Height="100%">
 </SfPdfViewer2>
 
 @code {
     SfPdfViewer2 viewer;
-
     private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
 
-    PdfViewerLineSettings LineSettings = new PdfViewerLineSettings { FillColor = "blue", Opacity = 0.6, StrokeColor = "green" };
+    PdfViewerLineSettings LineSettings = new PdfViewerLineSettings
+        {
+            FillColor = "blue",
+            Opacity = 0.6,
+            StrokeColor = "green"
+        };
 
-    PdfViewerArrowSettings ArrowSettings = new PdfViewerArrowSettings { FillColor = "green", Opacity = 0.6, StrokeColor = "blue" };
+     PdfViewerArrowSettings ArrowSettings = new PdfViewerArrowSettings
+        {
+            FillColor = "green",
+            Opacity = 0.6,
+            StrokeColor = "blue"
+        };
 
-    PdfViewerRectangleSettings RectangleSettings = new PdfViewerRectangleSettings { FillColor = "yellow", Opacity = 0.6, StrokeColor = "orange" };
+    PdfViewerRectangleSettings RectangleSettings = new PdfViewerRectangleSettings
+        {
+            FillColor = "yellow",
+            Opacity = 0.6,
+            StrokeColor = "orange"
+        };
 
-    PdfViewerCircleSettings CircleSettings = new PdfViewerCircleSettings { FillColor = "orange", Opacity = 0.6, StrokeColor = "pink" };
+    PdfViewerCircleSettings CircleSettings = new PdfViewerCircleSettings
+        {
+            FillColor = "orange",
+            Opacity = 0.6,
+            StrokeColor = "pink"
+        };
 
-    PdfViewerPolygonSettings PolygonSettings = new PdfViewerPolygonSettings { FillColor = "pink", Opacity = 0.6, StrokeColor = "yellow" };
+    PdfViewerPolygonSettings PolygonSettings = new PdfViewerPolygonSettings
+        {
+            FillColor = "pink",
+            Opacity = 0.6,
+            StrokeColor = "yellow"
+        };
 }
 
 ```
 
 ## Customize annotation selector
 
-You can customize the appearance of the annotation's selector using the [AnnotationSelectorSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PdfViewer.PdfViewerAnnotationSelectorSettings.html) property of the [PdfViewerRectangleSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PdfViewer.PdfViewerRectangleSettings.html) class.
+You can customize the appearance of the annotation's selector using the [AnnotationSelectorSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerAnnotationSelectorSettings.html) property of the [PdfViewerRectangleSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerRectangleSettings.html) class.
 
 The following code illustrates how to change the resizer shape of the shape annotation's selector.
 
@@ -134,14 +162,15 @@ The following code illustrates how to change the resizer shape of the shape anno
 
 @using Syncfusion.Blazor.SfPdfViewer
 
-<SfPdfViewer2 @ref="viewer" DocumentPath="@DocumentPath" Height="100" Width="100%" RectangleSettings=@rectangleSettings>
+<SfPdfViewer2 @ref="viewer"
+              DocumentPath="@DocumentPath"
+              Height="100" Width="100%"
+              RectangleSettings=@rectangleSettings>
 </SfPdfViewer2>
 
 @code {
-
     //Sets the PDF document path for initial loading.
     private string DocumentPath { get; set; } = "wwwroot/data/PDF_Succinctly.pdf";
-
     SfPdfViewer2 viewer;
 
     //Defines the settings of rectangle annotation.
@@ -160,4 +189,4 @@ The following code illustrates how to change the resizer shape of the shape anno
 
 ![Custom Selector in Blazor SfPdfViewer](../../pdfviewer/images/CustomSelector.png)
 
-N> [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Annotations/Selector/Customize%20Annotation%20%20Selector%20-%20SfPdfViewer).
+[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Annotations/Selector/Customize%20Annotation%20%20Selector%20-%20SfPdfViewer).

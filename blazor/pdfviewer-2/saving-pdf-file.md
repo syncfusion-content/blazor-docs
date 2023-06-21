@@ -21,7 +21,10 @@ You might need to save the PDF file back to the server.
 @using System.IO
 
 <SfButton OnClick="OnClick">Save</SfButton>
-<SfPdfViewer2 DocumentPath="@DocumentPath" @ref="viewer" Height="100%" Width="100%"></SfPdfViewer2>
+<SfPdfViewer2 DocumentPath="@DocumentPath"
+              @ref="viewer"
+              Height="100%"
+              Width="100%"></SfPdfViewer2>
 
 @code{  
     SfPdfViewer2 viewer;
@@ -52,7 +55,10 @@ If you have plenty of PDF files stored in database and you want to save the upda
 @using System.Data.SqlClient
 
 <SfButton OnClick="OnClick">Save</SfButton>
-<SfPdfViewer2 DocumentPath="@DocumentPath" @ref="viewer" Height="100%" Width="100%">
+<SfPdfViewer2 DocumentPath="@DocumentPath"
+              @ref="viewer"
+              Height="100%"
+              Width="100%">
 </SfPdfViewer2>
 
 @code{
@@ -88,11 +94,11 @@ The SfPdfViewer supports downloading the loaded PDF file from the toolbar by def
 ```cshtml
 
 @using Syncfusion.Blazor.SfPdfViewer
-
-<SfPdfViewer2 Width="100%" Height="100%" DocumentPath="@DocumentPath" EnableDownload="true" />
-
+<SfPdfViewer2 Width="100%"
+              Height="100%"
+              DocumentPath="@DocumentPath"
+              EnableDownload="true" />
 @code{
-
     public string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
 }
 
@@ -107,14 +113,17 @@ The SfPdfViewer supports downloading the loaded PDF file from the toolbar by def
 @using Syncfusion.Blazor.SfPdfViewer
 
 <SfButton OnClick="OnClick">Download</SfButton>
-<SfPdfViewer2 Width="100%" Height="100%" DocumentPath="@DocumentPath" @ref="@Viewer" />
+<SfPdfViewer2 Width="100%"
+              Height="100%"
+              DocumentPath="@DocumentPath"
+              @ref="@Viewer" />
 
 @code {
     SfPdfViewer2 Viewer;
     public string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
-    public void OnClick(MouseEventArgs args)
+    public async void OnClick(MouseEventArgs args)
     {
-        Viewer.Download();
+        await Viewer.DownloadAsync();
     }
 }
 
@@ -130,7 +139,11 @@ The following code example shows how to set default filename to the downloaded f
 
 @using Syncfusion.Blazor.SfPdfViewer
 
-<SfPdfViewer2 DocumentPath="@documentPath" DownloadFileName="@downloadFileName" Height="100%" Width="100%"></SfPdfViewer2>
+<SfPdfViewer2 DocumentPath="@documentPath"
+              DownloadFileName="@downloadFileName"
+              Height="100%"
+              Width="100%">
+</SfPdfViewer2>
 
 @code
 {
@@ -143,7 +156,7 @@ The following code example shows how to set default filename to the downloaded f
 }
 
 ```
-N> [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Load%20and%20Save/Modify%20the%20file%20name-SfPdfViewer).
+[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Load%20and%20Save/Modify%20the%20file%20name-SfPdfViewer).
 
 ### Download PDF file as a copy
 
@@ -154,13 +167,16 @@ In the built-in toolbar, you have an option to download the updated PDF to the l
 @using Syncfusion.Blazor.SfPdfViewer
 
 <SfButton @onclick="OnClick">Download</SfButton>
-<SfPdfViewer2 @ref="@viewer" Height="100%" Width="100%" DocumentPath="@DocumentPath" />
+<SfPdfViewer2 @ref="@viewer"
+              Height="100%"
+              Width="100%"
+              DocumentPath="@DocumentPath" />
 
 @code{
 SfPdfViewer2 viewer;
-public void OnClick(MouseEventArgs args)
+public async void OnClick(MouseEventArgs args)
 {
-    viewer.DownloadAsync();
+    await viewer.DownloadAsync();
 }
 public string DocumentPath { get; set; } = "wwwroot/data/PDF_Succinctly.pdf";
 }
