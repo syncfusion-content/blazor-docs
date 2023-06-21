@@ -37,10 +37,10 @@ To initialize the PDF Viewer (NextGen) component, need to add the following proj
 
 <ItemGroup>
 
-	<!-- If you are using a Server Assembly application, ensure to add the project references to your project -->
+	<!-- If you are using a Server Assembly application, include the following line in the .csproj file -->
 	<PackageReference Include="Syncfusion.Blazor.PdfViewerServer"/>
 
-	<!-- If you are using a Web Assembly application, ensure to add the project references to your project -->
+	<!-- If you are using a Web Assembly application, include the following line in the .csproj file -->
 	<!--<PackageReference Include="Syncfusion.Blazor.PdfViewer"/>-->
 		
 </ItemGroup>
