@@ -29,7 +29,7 @@ In the instance below, a sizable collection of files can be found in the folders
 
 ```
 
-The below GIF demonstrates that the file loading when virtualization is enabled.
+The below GIF demonstrates the file loading when virtualization is enabled.
 
 ![Virtualization in Blazor FileManager](images/blazor-filemanager-virtualization.gif)
 
