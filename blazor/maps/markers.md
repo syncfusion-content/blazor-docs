@@ -388,7 +388,7 @@ The following example shows how to use marker drag events to customize the data 
     <MapsLayers>
         <MapsLayer ShapeData='new {dataOptions= "https://cdn.syncfusion.com/maps/map-data/world-map.json"}' TValue="string">
             <MapsMarkerSettings>
-                <MapsMarker LegendText="Name" EnableDrag="true" Visible="true" DataSource="MarkerDataSource" Height="20" Width="20" TValue="City">
+                <MapsMarker LegendText="Name" EnableDrag="true" Visible="true" DataSource="MarkerDataSource" AnimationDuration="0" Height="20" Width="20" TValue="City">
                     <MapsMarkerBorder Width="2" Color="#285255"></MapsMarkerBorder>
                     <MapsMarkerTooltipSettings Visible="true" ValuePath="Name"></MapsMarkerTooltipSettings>
                 </MapsMarker>
