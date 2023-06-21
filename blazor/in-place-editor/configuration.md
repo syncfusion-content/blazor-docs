@@ -16,7 +16,7 @@ This section explains the supported rendering modes of the In-place Editor. The 
 * Popup
 * Inline
 
-> By default, `Inline` mode will be rendered when opening an editor.
+N> By default, `Inline` mode will be rendered when opening an editor.
 
 * For `Popup` mode, the editable container displays as like tooltip or popover above the element.
 
@@ -102,7 +102,7 @@ In-place Editor popup mode can be customized by using the `InPlaceEditorPopupSet
 
 Popup mode is rendered by using the Blazor Tooltip component, so you can use the tooltip properties and events to customize the behavior of popup via the `InPlaceEditorPopupSettings` by configuring tooltip properties.
 
-> For more details, refer to the tooltip documentation [section](../tooltip/).
+N> For more details, refer to the tooltip documentation [section](../tooltip/).
 
 ## Event actions for editing
 
@@ -113,7 +113,7 @@ The following options are also supported:
 * **DoubleClick**: The editor will be opened on double-click actions and it is not applicable for the edit icon.
 * **EditIconClick**: Disables the editing of event action of input and allows the users to edit only through edit icon.
 
-> In-place Editor gets focus by pressing the `tab` key from the previous focusable DOM element. The editor can be opened by pressing the `enter` key.
+N> In-place Editor gets focus by pressing the `tab` key from the previous focusable DOM element. The editor can be opened by pressing the `enter` key.
 
 In the following code block, when switching the drop-down item, the selected value is assigned to the `EditableOn` property. The editor will be opened when you double click on the input.
 

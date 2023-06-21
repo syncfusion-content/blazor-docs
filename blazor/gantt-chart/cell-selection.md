@@ -9,7 +9,7 @@ documentation: ug
 
 # Cell Selection in Blazor Gantt Chart Component
 
-You can select a cell in the Gantt Chart component by setting the `SelectionSettings.Mode` property to cell. 
+You can select a cell in the Gantt Chart component by setting the `SelectionSettings.Mode` property to cell. You can get the selected cell information using the `GetSelectedRowCellIndexes` method. This method returns the result as an object collection, which has `CellIndexes` and `RowIndex` information of the selected cells.
 
 Find the code example below to enable the cell selection in Gantt Chart.
 

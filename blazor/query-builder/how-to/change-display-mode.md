@@ -55,4 +55,4 @@ The QueryBuilder allows to view Vertically or Horizontally. To enable this featu
 
 ![Changing Display Mode in Blazor QueryBuilder](./../images/blazor-querybuilder-display-mode.png)
 
-> The default view in the desktop mode is Horizontal. The default view in the mobile mode is Vertical.
+N> The default view in the desktop mode is Horizontal. The default view in the mobile mode is Vertical.

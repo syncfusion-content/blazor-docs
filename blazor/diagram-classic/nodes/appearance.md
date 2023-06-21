@@ -7,7 +7,7 @@ control: Diagram
 documentation: ug
 ---
 
-> Syncfusion recommends using [Blazor Diagram Component](https://blazor.syncfusion.com/documentation/diagram/getting-started) which provides better performance than this diagram control. Blazor Diagram Component will be actively developed in the future.
+N> Syncfusion recommends using [Blazor Diagram Component](https://blazor.syncfusion.com/documentation/diagram/getting-started) which provides better performance than this diagram control. Blazor Diagram Component will be actively developed in the future.
 
 # Appearance in Blazor Diagram Component
 
@@ -276,7 +276,7 @@ The following code example illustrates how to customize shadow.
 
 Diagram provides support to describe the state of the node. i.e., the node is expanded or collapsed state.
 
-> Icon can be created only when the node has outEdges.
+N> Icon can be created only when the node has outEdges.
 
 * To explore the properties of expand and collapse icon, refer to [ExpandIcon](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramNode.html#Syncfusion_Blazor_Diagrams_DiagramNode_ExpandIcon) and [CollapseIcon](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramNode.html#Syncfusion_Blazor_Diagrams_DiagramNode_CollapseIcon).
 

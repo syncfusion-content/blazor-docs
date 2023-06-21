@@ -93,7 +93,7 @@ The following sample code demonstrates binding data to the DataGrid component th
 }
 ```
 
-> The above mentioned URL is given for reference purposes. In that place, you can provide your service URL.
+N> The above mentioned URL is given for reference purposes. In that place, you can provide your service URL.
 
 `UrlAdaptor` expects response as a JSON object with properties `result` and `count` which contains the collection of entities and the total number of records respectively.
 
@@ -136,7 +136,7 @@ The following sample code demonstrates binding remote data to the DataGrid compo
 }
 ```
 
-> By default, `ODataAdaptor` is used by DataManager.
+N> By default, `ODataAdaptor` is used by DataManager.
 
 ## ODataV4 adaptor
 
@@ -247,7 +247,7 @@ The following sample code demonstrates binding remote data to the DataGrid compo
 }
 ```
 
-> The above mentioned URL is given for reference purposes. In that place, you can provide your service URL.
+N> The above mentioned URL is given for reference purposes. In that place, you can provide your service URL.
 
 `WebMethodAdaptor` expects JSON response from the server and the response object should contain properties `result` and `count` whose values are collection of entities and total count of the entities respectively.
 
@@ -260,7 +260,7 @@ The sample response object should look like below.
 }
 ```
 
-> The controller method’s data parameter name must be `value`.
+N> The controller method’s data parameter name must be `value`.
 
 ## Writing custom adaptor
 

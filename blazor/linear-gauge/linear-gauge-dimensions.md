@@ -53,4 +53,4 @@ By setting value in percentage, Linear Gauge receives its dimension matching to 
 
 ![Changing Blazor Linear Gauge Size in Percentage](images/blazor-linear-gauge-size-in-percentage.png)
 
-> When the component's size is not specified, the height will be **450px** and the width will be the same as the parent element's width.
+N> When the component's size is not specified, the height will be **450px** and the width will be the same as the parent element's width.

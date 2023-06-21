@@ -11,7 +11,7 @@ documentation: ug
 
 Syncfusion provides **Visual Studio Code project templates** for creating Syncfusion Blazor application. Syncfusion Blazor generates application that include the necessary Syncfusion NuGet packages, namespaces, and component render code for the Calendar, Button, and DataGrid components, as well as the style for making Syncfusion component development easier.
 
-> Blazor project templates from `v17.4.0.39` are supported by the Syncfusion Visual Studio Code project template.
+N> Blazor project templates from `v17.4.0.39` are supported by the Syncfusion Visual Studio Code project template.
 
 The instructions below assist you in creating **Syncfusion Blazor Applications** using **Visual Studio Code**:
 
@@ -23,7 +23,9 @@ The instructions below assist you in creating **Syncfusion Blazor Applications**
 
     ![TemplateStudioWizard](images/ProjectLocationName.png)
 
-    > .NET 6.0 is available from v19.4.0.38 and support from Visual Studio 2022.
+    N> .NET 6.0 is available from v19.4.0.38 and support from Visual Studio 2022.
+
+    N> .NET 7.0 is available from v20.4.0.38 and support from Visual Studio 2022.
 
 3. Select either **Next** or the **Project Type** tab. Syncfusion Blazor Project Types will be displayed. Select one of the following Syncfusion Blazor project types:
    * Syncfusion Blazor Server App
@@ -37,7 +39,7 @@ The instructions below assist you in creating **Syncfusion Blazor Applications**
 
     ![Configuration](images/Configuration.png)
 
-    > ASP.NET Core hosted and Progressive Web Application options are only visible if Blazor Web Assembly App project type is selected.
+    N> ASP.NET Core hosted and Progressive Web Application options are only visible if Blazor Web Assembly App project type is selected.
 
 5. Click the **Create** button. The Syncfusion Blazor application has been created. The created Syncfusion Blazor app has the Syncfusion NuGet packages, styles, and the component render code for the Syncfusion component added to the Index, Counter, and FetchData pages.
 
@@ -45,7 +47,7 @@ The instructions below assist you in creating **Syncfusion Blazor Applications**
 
     ![Debug](images/Debug.png)
 
-7. If you installed the trial setup or NuGet packages from nuget.org you must register the Syncfusion license key to your application since Syncfusion introduced the licensing system from 2018 Volume 2 (v16.2.0.41) Essential Studio release. Navigate to the [help topic](https://help.syncfusion.com/common/essential-studio/licensing/license-key#how-to-generate-syncfusion-license-key) to generate and register the Syncfusion license key to your application. Refer to this [blog](https://blog.syncfusion.com/post/Whats-New-in-2018-Volume-2-Licensing-Changes-in-the-1620x-Version-of-Essential-Studio.aspx?_ga=2.11237684.1233358434.1587355730-230058891.1567654773) post for understanding the licensing changes introduced in Essential Studio.
+7. If you installed the trial setup or NuGet packages from nuget.org you must register the Syncfusion license key to your application since Syncfusion introduced the licensing system from 2018 Volume 2 (v16.2.0.41) Essential Studio release. Navigate to the [help topic](https://help.syncfusion.com/common/essential-studio/licensing/license-key#how-to-generate-syncfusion-license-key) to generate and register the Syncfusion license key to your application. Refer to this [UG](https://blazor.syncfusion.com/documentation/getting-started/license-key/overview) topic for understanding the licensing details in Essential Studio for Blazor.
 
 ## Syncfusion integration
 

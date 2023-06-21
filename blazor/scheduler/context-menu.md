@@ -15,7 +15,7 @@ On Scheduler cells, the menu items can be displayed such as `New Event`, `New Re
 
 The deletion of appointments can be done by using the [DeleteEventAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_DeleteEventAsync__1___0_System_Nullable_Syncfusion_Blazor_Schedule_CurrentAction__) public method. Also, the [SelectedDate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_SelectedDate) property can be used to navigate between different dates.
 
-> You can also display custom menu options on Scheduler cells and appointments. Context menu will open on tap-hold in responsive mode.
+N> You can also display custom menu options on Scheduler cells and appointments. Context menu will open on tap-hold in responsive mode.
 
 ```cshtml
 @using Syncfusion.Blazor.Schedule
@@ -58,7 +58,7 @@ The deletion of appointments can be done by using the [DeleteEventAsync](https:/
 </SfContextMenu>
 
 @code{
-    private DateTime SelectedDate { get; set; } = new DateTime(2020, 1, 8);
+    private DateTime SelectedDate { get; set; } = new DateTime(2023, 1, 8);
     private bool isCell;
     private bool isEvent;
     private bool isRecurrence;
@@ -82,8 +82,8 @@ The deletion of appointments can be done by using the [DeleteEventAsync](https:/
     }
     public List<AppointmentData> DataSource = new List<AppointmentData>
     {
-        new AppointmentData { Id = 1, Subject = "Workflow Analysis", StartTime = new DateTime(2020, 1, 8, 10, 30, 0) , EndTime = new DateTime(2020, 1, 8, 12, 30, 0) , IsAllDay = false, TaskId = 1},
-        new AppointmentData { Id = 2, Subject = "Requirement planning", StartTime = new DateTime(2020, 1, 8, 9, 30, 0) , EndTime = new DateTime(2020, 1, 8, 12, 30, 0) , IsAllDay = false, TaskId = 2},
+        new AppointmentData { Id = 1, Subject = "Workflow Analysis", StartTime = new DateTime(2023, 1, 8, 10, 30, 0) , EndTime = new DateTime(2023, 1, 8, 12, 30, 0) , IsAllDay = false, TaskId = 1},
+        new AppointmentData { Id = 2, Subject = "Requirement planning", StartTime = new DateTime(2023, 1, 8, 9, 30, 0) , EndTime = new DateTime(2023, 1, 8, 12, 30, 0) , IsAllDay = false, TaskId = 2},
     };
 
     public async Task OnOpen(BeforeOpenCloseMenuEventArgs<MenuItem> args)
@@ -196,3 +196,5 @@ The deletion of appointments can be done by using the [DeleteEventAsync](https:/
 }
 
 ```
+
+![Context Menu in Blazor Scheduler](images/blazor-scheduler-contextmenu.png)

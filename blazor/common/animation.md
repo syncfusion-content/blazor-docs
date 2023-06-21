@@ -22,7 +22,7 @@ You can enable or disable animation for all Syncfusion Blazor Component's global
 In the below code example animation is disabled.
 
 {% tabs %}
-{% highlight c# tabtitle=".NET 6 (~/Program.cs)" hl_lines="10" %}
+{% highlight c# tabtitle=".NET 6 & .NET 7 (~/Program.cs)" hl_lines="10" %}
 
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Web;
@@ -62,4 +62,4 @@ namespace BlazorApplication
 {% endtabs %}
 
 
-> [GlobalOptions.Animation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.GlobalOptions.html#Syncfusion_Blazor_GlobalOptions_Animation) property controls script level animations only and it is not applicable for direct CSS level animations (Animation defined from CSSs classes/properties).
+N> [GlobalOptions.Animation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.GlobalOptions.html#Syncfusion_Blazor_GlobalOptions_Animation) property controls script level animations only and it is not applicable for direct CSS level animations (Animation defined from CSSs classes/properties).

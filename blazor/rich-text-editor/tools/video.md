@@ -7,7 +7,7 @@ control: RichTextEditor
 documentation: ug
 ---
 
-# Insert Video in RichTextEditor
+# Insert Video in Blazor RichTextEditor Component
 
 Once a video file has been inserted, replace it using the Rich Text Editor [RichTextEditorQuickToolbarSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorQuickToolbarSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorQuickToolbarSettings_Audio) `Replace` option. Replace the video file either by using the embedded URL or the web URL and the browse option in the video dialog.
 
@@ -75,7 +75,7 @@ In the following example, the video size has been validated before uploading and
 
 The selected video can be uploaded to the required destination using the controller action below. Map this method name in [RichTextEditorMediaSettings.SaveUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorMediaSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorMediaSettings_SaveUrl) and provide required destination path through [RichTextEditorMediaSettings.Path](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorMediaSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorMediaSettings_Path) properties.
 
-> If you want to insert lower-sized video files in the editor and don't want a specific physical location for saving the video, you can save the format as `Base64`.
+N> If you want to insert lower-sized video files in the editor and don't want a specific physical location for saving the video, you can save the format as `Base64`.
 {% tabs %}
 {% highlight cshtml %}
 
@@ -164,7 +164,7 @@ namespace VideoUpload.Controllers
 
 The video files can be saved as `Blob` or `Base64` url by using the [RichTextEditorMediaSettings.saveFormat](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorMediaSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorMediaSettings_SaveFormat) property, which is of enum type and the generated url will be set to the `src` attribute of the `<source>` tag.
 
-> By default, the files are saved in the `Blob` format.
+N> By default, the files are saved in the `Blob` format.
 
 ```cshtml
 
@@ -205,6 +205,8 @@ Change the width and height of the [RichTextEditorQuickToolbarSettings](https://
 
 Sets the default display for an video when it is inserted in the Rich Text Editor using the [RichTextEditorMediaSettings.layoutOption](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorMediaSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorMediaSettings_LayoutOption). It has two possible options: `Inline` and `Break`. When updating the display positions, it updates the video elements’ layout position.
 
+N> The default `layoutOption` property is set to `Inline`.
+
 {% tabs %}
 {% highlight cshtml %}
 
@@ -219,7 +221,7 @@ The Rich Text Editor has built-in video resizing support, which is enabled for t
 
 You can disable the resize action by configuring `false` for the [RichTextEditorVideoSettings.EnableResize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorVideoSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorVideoSettings_EnableResize) property.
 
-> If the [RichTextEditorVideoSettings.MinWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorVideoSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorVideoSettings_MinWidth) and [RichTextEditorVideoSettings.MinHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorVideoSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorVideoSettings_MinHeight) properties are configured the video resizing does not shrink below the specified values.
+N> If the [RichTextEditorVideoSettings.MinWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorVideoSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorVideoSettings_MinWidth) and [RichTextEditorVideoSettings.MinHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorVideoSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorVideoSettings_MinHeight) properties are configured the video resizing does not shrink below the specified values.
 
 ![Blazor RichTextEditor video resize](../images/blazor-richtexteditor-video-resize.png)
 
@@ -327,7 +329,7 @@ namespace RenameVideo.Controllers
 
 The Rich Text Editor control allows you to add additional data with the File Upload, which can be received on the server side. By using the `FileUploading` event and its `CustomFormData` argument, you can pass parameters to the controller action. On the server side, you can fetch the custom headers by accessing the form collection from the current request, which retrieves the values sent using the POST method.
 
-> By default, it doesn't support the `UseDefaultCredentials` property, so you need to append the default credentials with the upload request manually.
+N> By default, it doesn't support the `UseDefaultCredentials` property, so you need to append the default credentials with the upload request manually.
 
 {% tabs %}
 {% highlight cshtml %}

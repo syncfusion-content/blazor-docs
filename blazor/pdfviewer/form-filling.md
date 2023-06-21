@@ -58,46 +58,198 @@ You can also delete the signature in the signature field by using Delete Option 
 
 ![Deleting Signature in Blazor PDFViewer](../pdfviewer/images/blazor-pdfviewer-delete-signature.png)
 
-## Import and export FormFields
+## Export and import form fields
 
-The PDF Viewer control provides the support to import and export form fields using a JSON object in the PDF document.
+The PDF Viewer control supports exporting and importing the form field data in the following formats using the `ImportFormFieldsAsync` and `ExportFormFieldsAsync` methods.
 
-## Importing FormFields using PDF Viewer API
+* XML
+* FDF
+* XFDF
+* JSON
+
+> N The form field data will be exported as stream, and that data from the stream will be imported into the current PDF document.
+
+### Export and import as XML
+
+The following code shows how to export the form fields as an XML data stream and import that data from the stream into the current PDF document via a button click.
 
 ```cshtml
-@using Syncfusion.Blazor.PdfViewerServer
-@using Syncfusion.Blazor.Buttons
+<SfButton OnClick="@ExportAsStream">Export XML</SfButton>
+<SfButton OnClick="@ImportFromStream">Import XML</SfButton>
+<SfPdfViewerServer @ref=Viewer DocumentPath="@DocumentPath" />
 
-<SfButton OnClick="@OnImportFormFieldsClick">Import FormFields</SfButton>
-<SfPdfViewerServer @ref=Viewer Width="1060px" Height="500px" DocumentPath="@DocumentPath" />
-@code{
-        SfPdfViewerServer Viewer;
-public string DocumentPath { get; set; } = "wwwroot/data/FormFillingDocument.pdf";
-    public void OnImportFormFieldsClick(MouseEventArgs args)
+@code 
+{
+    SfPdfViewerServer Viewer;
+    public string DocumentPath { get; set; } = "wwwroot/data/FormDesigner.pdf";
+    Stream stream;
+
+    // Event triggers on Export XML button click.
+    public async void ExportAsStream()
     {
-        Viewer.ImportFormFields("wwwroot/data/ImportedFormFields.json"); //The json file has been placed inside the data folder.
+        // Export the form field data to an XML format stream.
+        stream = await Viewer.ExportFormFieldsAsync(FormFieldDataFormat.Xml);
+    }
+
+    // Event triggers on Import XML button click.
+    public async void ImportFromStream()
+    {
+        // Import the form field data from the XML format stream into the current PDF document.
+        await Viewer.ImportFormFieldsAsync(stream, FormFieldDataFormat.Xml);
     }
 }
+
 ```
 
->The JSON file for importing the form fields should be placed in the desired location and the path should be provided correctly.
+### Export and import as FDF
 
-## Exporting FormFields from the PDF document using PDF Viewer API
+The following code shows how to export the form fields as an FDF data stream and import that data from the stream into the current PDF document via a button click.
+
+```cshtml
+<SfButton OnClick="@ExportAsStream">Export FDF</SfButton>
+<SfButton OnClick="@ImportFromStream">Import FDF</SfButton>
+<SfPdfViewerServer @ref=Viewer DocumentPath="@DocumentPath" />
+
+@code 
+{
+    SfPdfViewerServer Viewer;
+    public string DocumentPath { get; set; } = "wwwroot/data/FormDesigner.pdf";
+    Stream stream;
+
+    // Event triggers on Export FDF button click.
+    public async void ExportAsStream()
+    {
+        // Export the form field data to an FDF format stream.
+        stream = await Viewer.ExportFormFieldsAsync(FormFieldDataFormat.Fdf);
+    }
+
+    // Event triggers on Import FDF button click.
+    public async void ImportFromStream()
+    {
+        // Import the form field data from the FDF format stream into the current PDF document.
+        await Viewer.ImportFormFieldsAsync(stream, FormFieldDataFormat.Fdf);
+    }
+}
+
+```
+
+###  Export and import as XFDF
+
+The following code shows how to export the form fields as an XFDF data stream and import that data from the stream into the current PDF document via a button click.
+
+```cshtml
+<SfButton OnClick="@ExportAsStream">Export XFDF</SfButton>
+<SfButton OnClick="@ImportFromStream">Import XFDF</SfButton>
+<SfPdfViewerServer @ref=Viewer DocumentPath="@DocumentPath" />
+
+@code 
+{
+    SfPdfViewerServer Viewer;
+    public string DocumentPath { get; set; } = "wwwroot/data/FormDesigner.pdf";
+    Stream stream;
+
+    // Event triggers on Export XFDF button click.
+    public async void ExportAsStream()
+    {
+        // Export the form field data to XFDF format stream.
+        stream = await Viewer.ExportFormFieldsAsync(FormFieldDataFormat.Xfdf);
+    }
+
+    // Event triggers on Import XFDF button click.
+    public async void ImportFromStream()
+    {
+        // Import the form field data from the XFDF format stream into the current PDF document.
+        await Viewer.ImportFormFieldsAsync(stream, FormFieldDataFormat.Xfdf);
+    }
+}
+
+```
+
+### Export and import as JSON
+
+The following code shows how to export the form fields as a JSON data stream and import that data from the stream into the current PDF document via a button click.
+
+```cshtml
+<SfButton OnClick="@ExportAsStream">Export JSON</SfButton>
+<SfButton OnClick="@ImportFromStream">Import JSON</SfButton>
+<SfPdfViewerServer @ref=Viewer DocumentPath="@DocumentPath" />
+
+@code 
+{
+    SfPdfViewerServer Viewer;
+    public string DocumentPath { get; set; } = "wwwroot/data/FormDesigner.pdf";
+    Stream stream;
+
+    // Event triggers on Export JSON button click.
+    public async void ExportAsStream()
+    {
+        // Export the form field data to JSON format stream.
+        stream = await Viewer.ExportFormFieldsAsync(FormFieldDataFormat.Json);
+    }
+
+    // Event triggers on Import JSON button click.
+    public async void ImportFromStream()
+    {
+        // Import the form field data from the JSON format stream into the current PDF document.
+        await Viewer.ImportFormFieldsAsync(stream, FormFieldDataFormat.Json);
+    }
+}
+
+```
+
+### Export form fields as Json file
 
 ```cshtml
 @using Syncfusion.Blazor.PdfViewerServer
+@using Syncfusion.Blazor.PdfViewer
 @using Syncfusion.Blazor.Buttons
 
-<SfButton OnClick="@OnExportFormFieldsClick">Export FormFields</SfButton>
+<SfButton OnClick="@OnExportFormFieldsClick">Export JSON</SfButton>
 <SfPdfViewerServer Width="1060px" Height="500px" DocumentPath="@DocumentPath" @ref="@Viewer" />
 @code{
     SfPdfViewerServer Viewer;
     public string DocumentPath { get; set; } = "wwwroot/data/PDF_Succinctly.pdf";
-    public void OnExportFormFieldsClick(MouseEventArgs args)
+    
+    // Event triggers on Export JSON button click.
+    public async void OnExportFormFieldsClick(MouseEventArgs args)
     {
-        Viewer.ExportFormFields();
+        // Exports to a JSON file in the existing document name.
+        await Viewer.ExportFormFieldsAsync("");
     }
 }
 ```
 
-> You can refer to the [Blazor PDF Viewer](https://www.syncfusion.com/blazor-components/blazor-pdf-viewer) feature tour page for its groundbreaking feature representations. You can also explore the [Blazor PDF Viewer example](https://blazor.syncfusion.com/demos/pdf-viewer/default-functionalities?theme=bootstrap4) to understand how to explain core features of PDF Viewer.
+### Export and import as object
+
+```cshtml
+@using Syncfusion.Blazor.PdfViewerServer
+@using Syncfusion.Blazor.PdfViewer
+@using Syncfusion.Blazor.Buttons
+
+<SfButton OnClick="@OnExportFormFieldsClick">Export Data</SfButton>
+<SfButton OnClick="@OnImportFormFieldsClick">Import Data</SfButton>
+<SfPdfViewerServer @ref=Viewer Width="1060px" Height="500px" DocumentPath="@DocumentPath"/>
+
+@code
+{
+    SfPdfViewerServer Viewer;
+    public string DocumentPath { get; set; } = "wwwroot/Data/form-filling-document.pdf";
+    Dictionary<string,string> dictionary;
+
+    // Event triggers on Export Data button click.
+    public async void OnExportFormFieldsClick(MouseEventArgs args)
+    {
+        // Export the form field data to a dictionary.
+        dictionary = await Viewer.ExportFormFieldsAsObjectAsync();
+    }
+
+    // Event triggers on Import Data button click.
+    public async void OnImportFormFieldsClick(MouseEventArgs args)
+    {
+        // Import the form field data from the dictionary into the current PDF document.
+        await Viewer.ImportFormFieldsAsync(dictionary);
+    }
+}
+```
+
+N> You can refer to the [Blazor PDF Viewer](https://www.syncfusion.com/blazor-components/blazor-pdf-viewer) feature tour page for its groundbreaking feature representations. You can also explore the [Blazor PDF Viewer example](https://blazor.syncfusion.com/demos/pdf-viewer/default-functionalities?theme=bootstrap4) to understand how to explain core features of PDF Viewer.

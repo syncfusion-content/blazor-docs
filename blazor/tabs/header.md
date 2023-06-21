@@ -19,7 +19,7 @@ The header styles can be customized by adding predefined classes in the Tab root
 * **e-background**: Tab header has a solid fill background, and the selected header has a highlighted border.
 * **e-background e-accent**: Tab header has a solid fill background, and the selected header has a highlighted border with accent color.
 
-> If the above custom style classes are not included in the root element, the default style is applied to the Tab items.
+N> If the above custom style classes are not included in the root element, the default style is applied to the Tab items.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations

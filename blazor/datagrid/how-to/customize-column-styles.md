@@ -84,7 +84,7 @@ You can customize the column header using the **e-headercell** CSS class.
 
 In the following sample, you can override the default style for column headers using the **e-headercell** CSS class.
 
-> You can find the fully working sample [here](https://github.com/SyncfusionExamples/blazor-datagrid-customize-column-header).
+N> You can find the fully working sample [here](https://github.com/SyncfusionExamples/blazor-datagrid-customize-column-header).
 
 ```cshtml
 @using Syncfusion.Blazor

@@ -7,7 +7,7 @@ control: Diagram
 documentation: ug
 ---
 
-> Syncfusion recommends using [Blazor Diagram Component](https://blazor.syncfusion.com/documentation/diagram/getting-started) which provides better performance than this diagram control. Blazor Diagram Component will be actively developed in the future.
+N> Syncfusion recommends using [Blazor Diagram Component](https://blazor.syncfusion.com/documentation/diagram/getting-started) which provides better performance than this diagram control. Blazor Diagram Component will be actively developed in the future.
 
 # Segments in Blazor Diagram Component
 
@@ -178,7 +178,7 @@ The [Length](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.Or
 
 ![Connector Orthogonal Segment](../images/connector-orthogonal.png)
 
-> You need to mention the segment type as same as what you mentioned in connector type. There should be no contradiction between connector type and segment type.
+N> You need to mention the segment type as same as what you mentioned in connector type. There should be no contradiction between connector type and segment type.
 
 ## Avoid overlapping
 

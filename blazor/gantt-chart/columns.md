@@ -11,7 +11,7 @@ documentation: ug
 
 The column displays information from a bound data source, and you can edit the values of column to update the task details through Tree Grid. The operations such as sorting, filtering, and searching can be performed based on column definitions. To display a Gantt Chart column, the `Field` property should be mapped from the data source to the column.
 
-> If the column `Field` is not specified in the data source, the column values will be empty.
+N> If the column `Field` is not specified in the data source, the column values will be empty.
 
 The `TreeColumnIndex` property is used to define the expander column in the Gantt Chart component to expand and collapse the child rows.
 
@@ -71,7 +71,7 @@ Using the `GanttColumns` property, you can define the columns in Gantt Chart. If
 
 ## Header template
 
-> Before adding the header template to the Gantt Chart, it is strongly recommended to go through the [template](./templates/#templates) section topic to configure the template.
+N> Before adding the header template to the Gantt Chart, it is strongly recommended to go through the [template](./templates/#templates) section topic to configure the template.
 
 The Header Template has options to display custom element values or content in the header. You can use the [HeaderTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttColumn.html#Syncfusion_Blazor_Gantt_GanttColumn_HeaderTemplate) of the [GanttColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttColumn.html) component to specify the custom content.
 
@@ -240,7 +240,7 @@ To format the cell values based on a specific culture, use the `GanttColumn.Form
 
 ![Blazor Gantt Chart with Column Formatting](images/blazor-gantt-chart-format-column.png)
 
-> By default, the `number` and `date` values are formatted in `en-US` culture.
+N> By default, the `number` and `date` values are formatted in `en-US` culture.
 
 ### Number formatting
 
@@ -498,8 +498,12 @@ Gantt column supports the following types:
 * Boolean
 * Date
 * DateTime
+* DateOnly
+* TimeOnly
 
-> If the `GanttColumn.Type` is not defined, it will be determined from the first record of the `DataSource`. If the first record of the `DataSource` is null/blank value for a column then it is necessary to define the `GanttColumn.Type` for that column.
+N> If the `GanttColumn.Type` is not defined, it will be determined from the first record of the `DataSource`. If the first record of the `DataSource` is null/blank value for a column then it is necessary to define the `GanttColumn.Type` for that column.
+
+N> The `DateOnly` and `TimeOnly` formats are supported in custom columns in the Gantt Chart.
 
 ## Custom columns
 
@@ -518,6 +522,8 @@ Using the `GanttColumns` property, you can define the Custom Columns in Gantt Ch
         <GanttColumn Field="EndDate" HeaderText="End Date" Width="150"></GanttColumn>
         <GanttColumn Field="Duration" HeaderText="Duration" Width="150"></GanttColumn>
         <GanttColumn Field="Progress" HeaderText="Progress" Width="150"></GanttColumn>
+        <GanttColumn Field="StartDateOnly" HeaderText="Start Date Only" Format="d" Type="Syncfusion.Blazor.Grids.ColumnType.DateOnly" Width="152" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right"></GanttColumn>
+        <GanttColumn Field="StartTimeOnly" HeaderText="Start Time Only" Type="Syncfusion.Blazor.Grids.ColumnType.TimeOnly" Width="150" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right"></GanttColumn>
         <GanttColumn Field="Status" HeaderText="Status" Width="150" EditType=Syncfusion.Blazor.Grids.EditType.DefaultEdit></GanttColumn>
         <GanttColumn Field="WorkersCount" HeaderText="Workers Count" Width="150" EditType=Syncfusion.Blazor.Grids.EditType.NumericEdit></GanttColumn>
     </GanttColumns>
@@ -536,6 +542,8 @@ Using the `GanttColumns` property, you can define the Custom Columns in Gantt Ch
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
+        public DateOnly? StartDateOnly { get; set; }
+        public TimeOnly? StartTimeOnly { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
         public string Status { get; set; }
@@ -547,14 +555,14 @@ Using the `GanttColumns` property, you can define the Custom Columns in Gantt Ch
     {
         List<TaskData> Tasks = new List<TaskData>() 
         {
-            new TaskData() { TaskId = 1, TaskName = "Project initiation", StartDate = new DateTime(2022, 04, 05), EndDate = new DateTime(2022, 04, 21), Status="Progress", WorkersCount=20, },
-            new TaskData() { TaskId = 2, TaskName = "Identify Site location", StartDate = new DateTime(2022, 04, 05), Duration = "0", Progress = 5, Status="Progress", WorkersCount=10, ParentId = 1 },
-            new TaskData() { TaskId = 3, TaskName = "Perform soil test", StartDate = new DateTime(2022, 04, 05), Duration = "4", Progress = 10, Status="Hold", WorkersCount=15, ParentId = 1 },
-            new TaskData() { TaskId = 4, TaskName = "Soil test approval", StartDate = new DateTime(2022, 04, 05), Duration = "0", Progress = 30, Status="PostPoned", WorkersCount=5, ParentId = 1 },
-            new TaskData() { TaskId = 5, TaskName = "Project estimation", StartDate = new DateTime(2022, 04, 06), EndDate = new DateTime(2022, 04, 21), Status="Progress", WorkersCount=25, },
-            new TaskData() { TaskId = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2022, 04, 06), Duration = "3", Progress = 30, Status="PostPoned", WorkersCount=10, ParentId = 5 },
-            new TaskData() { TaskId = 7, TaskName = "List materials", StartDate = new DateTime(2022, 04, 06), Duration = "3", Progress = 40, Status="Progress", WorkersCount=5, ParentId = 5 },
-            new TaskData() { TaskId = 8, TaskName = "Estimation approval", StartDate = new DateTime(2022, 04, 06), Duration = "0", Progress = 30, Status="Progress", WorkersCount=10, ParentId = 5 }  
+             new TaskData() { TaskId = 1, TaskName = "Project initiation", StartDate = new DateTime(2022, 04, 05), EndDate = new DateTime(2022, 04, 21), Status="Progress", WorkersCount=20, StartDateOnly = new DateOnly(2021, 03, 02), StartTimeOnly = new TimeOnly(10, 00, 00)},
+            new TaskData() { TaskId = 2, TaskName = "Identify Site location", StartDate = new DateTime(2022, 04, 05), Duration = "0", Progress = 5, Status="Progress", WorkersCount=10, ParentId = 1, StartDateOnly = new DateOnly(2021, 03, 04), StartTimeOnly = new TimeOnly(11, 30, 00)},
+            new TaskData() { TaskId = 3, TaskName = "Perform soil test", StartDate = new DateTime(2022, 04, 05), Duration = "4", Progress = 10, Status="Hold", WorkersCount=15, ParentId = 1, StartDateOnly = new DateOnly(2021, 03, 06), StartTimeOnly = new TimeOnly(12, 00, 00)},
+            new TaskData() { TaskId = 4, TaskName = "Soil test approval", StartDate = new DateTime(2022, 04, 05), Duration = "0", Progress = 30, Status="PostPoned", WorkersCount=5, ParentId = 1, StartDateOnly = new DateOnly(2021, 03, 08), StartTimeOnly = new TimeOnly(13, 30, 00)},
+            new TaskData() { TaskId = 5, TaskName = "Project estimation", StartDate = new DateTime(2022, 04, 06), EndDate = new DateTime(2022, 04, 21), Status="Progress", WorkersCount=25,StartDateOnly = new DateOnly(2021, 07, 10), StartTimeOnly = new TimeOnly(14, 00, 00) },
+            new TaskData() { TaskId = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2022, 04, 06), Duration = "3", Progress = 30, Status="PostPoned", WorkersCount=10, ParentId = 5 , StartDateOnly = new DateOnly(2021, 10, 12), StartTimeOnly = new TimeOnly(16, 00, 00)},
+            new TaskData() { TaskId = 7, TaskName = "List materials", StartDate = new DateTime(2022, 04, 06), Duration = "3", Progress = 40, Status="Progress", WorkersCount=5, ParentId = 5, StartDateOnly = new DateOnly(2021, 10, 14), StartTimeOnly = new TimeOnly(17, 30, 00) },
+            new TaskData() { TaskId = 8, TaskName = "Estimation approval", StartDate = new DateTime(2022, 04, 06), Duration = "0", Progress = 30, Status="Progress", WorkersCount=10, ParentId = 5,StartDateOnly = new DateOnly(2021, 10, 16), StartTimeOnly = new TimeOnly(18, 00, 00) }
         };
         return Tasks;
     }
@@ -1107,126 +1115,3 @@ In the following demo, **Work 1**  cells have been spanned.
     }
 }
 ``` -->
-
-## Displaying the HTML element
-
-The HTML tags are displayed in the Tree Grid header and content by enabling the [DisableHTMLEncode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttColumn.html#Syncfusion_Blazor_Gantt_GanttColumn_DisableHtmlEncode) property.
-
-```cshtml
-@using Syncfusion.Blazor.Gantt
-<SfGantt DataSource="@TaskCollection" Height="450px" Width="700px" >
-    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" ParentID="ParentId">
-    </GanttTaskFields>
-    <GanttColumns>
-        <GanttColumn Field="TaskId"></GanttColumn>
-        <GanttColumn Field="TaskName" HeaderText="<span>Task name</span>"></GanttColumn>
-        <GanttColumn Field="StartDate"></GanttColumn>
-        <GanttColumn Field="EndDate"></GanttColumn>
-        <GanttColumn Field="Duration" HeaderText="<span>Duration</span>" DisableHtmlEncode="true"></GanttColumn>
-        <GanttColumn Field="Progress" HeaderText="<span>Progress </span>" DisableHtmlEncode="false"></GanttColumn>
-    </GanttColumns>
-</SfGantt>
-
-@code{
-    private List<TaskData> TaskCollection { get; set; }
-    protected override void OnInitialized()
-    {
-        this.TaskCollection = GetTaskCollection();
-    }
-
-    public class TaskData
-    {
-        public int TaskId { get; set; }
-        public string TaskName { get; set; }
-        public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
-        public string Duration { get; set; }
-        public int Progress { get; set; }
-        public int? ParentId { get; set; }
-    }
-
-    public static List <TaskData> GetTaskCollection() {
-    List <TaskData> Tasks = new List <TaskData> () {
-        new TaskData() { TaskId = 1, TaskName = "<div>Project initiation</div>", StartDate = new DateTime(2022, 04, 05), EndDate = new DateTime(2022, 04, 21) },
-        new TaskData() { TaskId = 2, TaskName = "Identify Site location", StartDate = new DateTime(2022, 04, 05), Duration = "0", Progress = 30, ParentId = 1 },
-        new TaskData() { TaskId = 3, TaskName = "Perform soil test", StartDate = new DateTime(2022, 04, 05), Duration = "4", Progress = 40, ParentId = 1 },
-        new TaskData() { TaskId = 4, TaskName = "Soil test approval", StartDate = new DateTime(2022, 04, 05), Duration = "0", Progress = 30, ParentId = 1 },
-        new TaskData() { TaskId = 5, TaskName = "Project estimation", StartDate = new DateTime(2022, 04, 06), EndDate = new DateTime(2022, 04, 21) },
-        new TaskData() { TaskId = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2022, 04, 06), Duration = "3", Progress = 30, ParentId = 5 },
-        new TaskData() { TaskId = 7, TaskName = "List materials", StartDate = new DateTime(2022, 04, 06), Duration = "3", Progress = 40, ParentId = 5 },
-        new TaskData() { TaskId = 8, TaskName = "Estimation approval", StartDate = new DateTime(2022, 04, 06), Duration = "0", Progress = 30, ParentId = 5 }
-    };
-    return Tasks;
-}
-}
-```
-![Disable HTML encoding in Blazor Gantt Chart](images/blazor-gantt-chart-disable-html-encode.png)
-
-## Customize cell styles
-
-The appearance of cells is customized by using the [QueryCellInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_QueryCellInfo). For more information, refer [here](https://blazor.syncfusion.com/documentation/gantt-chart/appearance-and-customization#customize-rows-and-cells).
-
-## Clip mode
-
-The clip mode provides options to display its overflow cell content, and the [ClipMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttColumn.html#Syncfusion_Blazor_Gantt_GanttColumn_ClipMode) property defines it.
-
-There are three types of [ClipMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ClipMode.html). They are:
-
-* **Clip**: Reduces the cell content when it overflows its area.
-* **Ellipsis**: Displays ellipsis when the cell content overflows its area.
-* **EllipsisWithTooltip**: Displays ellipsis when the cell content overflows its area. Also it will display the tooltip while hovering on ellipsis is applied.
-
-```cshtml
-@using Syncfusion.Blazor.Gantt
-
-<SfGantt DataSource="@TaskCollection" Height="502px" Width="650px">
-    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" ParentID="ParentId">
-    </GanttTaskFields>
-    <GanttColumns>
-        <GanttColumn Field="TaskId"></GanttColumn>
-        <GanttColumn Field="TaskName" HeaderText="Task name" ClipMode="Syncfusion.Blazor.Grids.ClipMode.EllipsisWithTooltip"></GanttColumn>
-        <GanttColumn Field="StartDate"></GanttColumn>
-        <GanttColumn Field="EndDate"></GanttColumn>
-        <GanttColumn Field="Duration" HeaderText="Duration"></GanttColumn>
-        <GanttColumn Field="Progress" HeaderText="Progress"></GanttColumn>
-    </GanttColumns>
-</SfGantt>
-
-@code {
-    private List<TaskData> TaskCollection { get; set; }
-    protected override void OnInitialized()
-    {
-        this.TaskCollection = GetTaskCollection();
-    }
-
-    public class TaskData
-    {
-        public int TaskId { get; set; }
-        public string TaskName { get; set; }
-        public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
-        public string Duration { get; set; }
-        public int Progress { get; set; }
-        public int? ParentId { get; set; }
-    }
-
-    public static List<TaskData> GetTaskCollection()
-    {
-        List<TaskData> Tasks = new List<TaskData>() {
-        new TaskData() { TaskId = 1, TaskName = "Project initiation", StartDate = new DateTime(2022, 04, 05), EndDate = new DateTime(2022, 04, 21) },
-        new TaskData() { TaskId = 2, TaskName = "Identify Site location", StartDate = new DateTime(2022, 04, 05), Duration = "0", Progress = 30, ParentId = 1 },
-        new TaskData() { TaskId = 3, TaskName = "Perform soil test", StartDate = new DateTime(2022, 04, 05), Duration = "4", Progress = 40, ParentId = 1 },
-        new TaskData() { TaskId = 4, TaskName = "Soil test approval", StartDate = new DateTime(2022, 04, 05), Duration = "0", Progress = 30, ParentId = 1 },
-        new TaskData() { TaskId = 5, TaskName = "Project estimation", StartDate = new DateTime(2022, 04, 06), EndDate = new DateTime(2022, 04, 21) },
-        new TaskData() { TaskId = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2022, 04, 06), Duration = "3", Progress = 30, ParentId = 5 },
-        new TaskData() { TaskId = 7, TaskName = "List materials", StartDate = new DateTime(2022, 04, 06), Duration = "3", Progress = 40, ParentId = 5 },
-        new TaskData() { TaskId = 8, TaskName = "Estimation approval", StartDate = new DateTime(2022, 04, 06), Duration = "0", Progress = 30, ParentId = 5 }
-    };
-        return Tasks;
-    }
-}
-```
-
-![Clip Mode in Blazor Gantt Chart](images/blazor-gantt-chart-clip-mode.png)
-
-> By default, the [ClipMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttColumn.html#Syncfusion_Blazor_Gantt_GanttColumn_ClipMode) value is **Ellipsis**.

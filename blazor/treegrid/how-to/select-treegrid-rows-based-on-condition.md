@@ -31,7 +31,6 @@ This is demonstrated in the below sample code where the index value of Tree Grid
         <TreeGridColumn Field="Priority" HeaderText="Priority" Width="60"></TreeGridColumn>
         <TreeGridColumn Field="Duration" HeaderText="Duration" Width="60" TextAlign="TextAlign.Right"></TreeGridColumn>
         <TreeGridColumn Field="Progress" HeaderText="Progress" Width="60" TextAlign="TextAlign.Right"></TreeGridColumn>
-        <TreeGridColumn Field="Resources" HeaderText="Resources" Width="70" TextAlign="TextAlign.Right"></TreeGridColumn>
     </TreeGridColumns>
 </SfTreeGrid>
 

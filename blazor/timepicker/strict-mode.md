@@ -53,4 +53,4 @@ The following example demonstrates the `StrictMode` as `false`. Here, it allows 
 
 ![Blazor TimePicker without Strict Mode](./images/blazor-timepicker-without-strict-mode.png)
 
-> If the value of `Min` or `Max` property is changed through code behind, update the `Value` property to set within the range.
+N> If the value of `Min` or `Max` property is changed through code behind, update the `Value` property to set within the range.

@@ -117,13 +117,13 @@ By setting value to `Orientation` API as `Vertical`, splitter will be rendered i
 
 ![Blazor Splitter with Vertical Orientation](./images/blazor-splitter-vertical-orientation.png)
 
-> Multiple panes can also be rendered in splitter with both `Horizontal/Vertical` orientations.
+N> Multiple panes can also be rendered in splitter with both `Horizontal/Vertical` orientations.
 
 ## Separator
 
 By default, pane separator will be rendered with `1px` width or height. The separator size can be customized by using `SeparatorSize` API.
 
-> For horizontal orientation, it will be considered as separator width. For vertical orientation, it will be considered as separator height.
+N> For horizontal orientation, it will be considered as separator width. For vertical orientation, it will be considered as separator height.
 
 ```cshtml
 
@@ -178,7 +178,7 @@ By default, pane separator will be rendered with `1px` width or height. The sepa
 
 Splitter provides support to render the nested pane to achieve the complex layouts. The same `SplitterPane` tag can be used for splitter pane and nested splitter.
 
-> Also the nested splitter can be rendered using direct child of the splitter pane. For this, nested splitter should have `100%` width and height to match with the parent pane dimensions.
+N> Also the nested splitter can be rendered using direct child of the splitter pane. For this, nested splitter should have `100%` width and height to match with the parent pane dimensions.
 
 ```cshtml
 

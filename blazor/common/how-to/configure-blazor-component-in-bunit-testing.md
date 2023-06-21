@@ -41,7 +41,7 @@ This section explains how to configure Syncfusion Blazor component in bUnit test
 
     ![Add existing Blazor project](images/bunit/xunit-add-existing-project.png)
 
-    > Refer to [Blazor Server Getting Started](../../getting-started/visual-studio-2019/#getting-started-with-blazor-server-application) documentation, if you don't have any existing application.
+    N> Refer to [Blazor Server Getting Started](../../getting-started/visual-studio-2019/#getting-started-with-blazor-server-application) documentation, if you don't have any existing application.
 
 2. Now, right-click on the xUnit project and select `Add -> Project Reference` and select the added project reference.
 
@@ -88,10 +88,8 @@ This section explains how to configure Syncfusion Blazor component in bUnit test
             {
                 using var testContext = new TestContext();
 
-                // Add Syncfusion Blazor service and Ignore script isolation.
-                testContext.Services.AddSyncfusionBlazor(options => {
-                    options.IgnoreScriptIsolation = true;
-                });
+                // Add Syncfusion Blazor service.
+                testContext.Services.AddSyncfusionBlazor();
                 testContext.Services.AddOptions();
 
                 // Rendering application Index component (~/Pages/Index.razor).
@@ -122,10 +120,8 @@ This section explains how to configure Syncfusion Blazor component in bUnit test
     ```c#
     using var testContext = new TestContext();
 
-    // Add Syncfusion Blazor service and Ignore script isolation.
-    testContext.Services.AddSyncfusionBlazor(options => {
-        options.IgnoreScriptIsolation = true;
-    });
+    // Add Syncfusion Blazor service.
+    testContext.Services.AddSyncfusionBlazor();
     testContext.Services.AddOptions();
     ```
 
@@ -195,7 +191,7 @@ This section explains how to configure Syncfusion Blazor component in bUnit test
 
     ![Add existing Blazor project](images/bunit/nunit-add-existing-project.png)
 
-    > Refer to [Blazor Server Getting Started](../../getting-started/visual-studio-2019/#getting-started-with-blazor-server-application) documentation, if you don't have any existing application.
+    N> Refer to [Blazor Server Getting Started](../../getting-started/visual-studio-2019/#getting-started-with-blazor-server-application) documentation, if you don't have any existing application.
 
 2. Now, right-click on the NUnit project and select `Add -> Project Reference` and select the added project reference.
 
@@ -243,10 +239,8 @@ This section explains how to configure Syncfusion Blazor component in bUnit test
                 // Arrange
                 using var testContext = new Bunit.TestContext();
 
-                // Add Syncfusion Blazor service and Ignore script Isolation.
-                testContext.Services.AddSyncfusionBlazor(options => {
-                    options.IgnoreScriptIsolation = true;
-                });
+                // Add Syncfusion Blazor service.
+                testContext.Services.AddSyncfusionBlazor();
                 testContext.Services.AddOptions();
 
                 // Rendering application Index component (~/Pages/Index.razor).
@@ -277,10 +271,8 @@ This section explains how to configure Syncfusion Blazor component in bUnit test
     ```c#
     using var testContext = new Bunit.TestContext();
 
-    // Add Syncfusion Blazor service and Ignore script isolation.
-    testContext.Services.AddSyncfusionBlazor(options => {
-        options.IgnoreScriptIsolation = true;
-    });
+    // Add Syncfusion Blazor service.
+    testContext.Services.AddSyncfusionBlazor();
     testContext.Services.AddOptions();
     ```
 
@@ -330,10 +322,8 @@ public void TestParameter()
 {
     using var testContext = new TestContext();
 
-    // Add Syncfusion Blazor service and Ignore script isolation.
-    testContext.Services.AddSyncfusionBlazor(options => {
-        options.IgnoreScriptIsolation = true;
-    });
+    // Add Syncfusion Blazor service.
+    testContext.Services.AddSyncfusionBlazor();
     testContext.Services.AddOptions();
 
     // Rendering application Index component (~/Pages/Index.razor).

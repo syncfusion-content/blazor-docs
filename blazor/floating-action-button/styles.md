@@ -7,7 +7,7 @@ control: Floating Action Button
 documentation: ug
 ---
 
-# Styles in Blazor Floating Action Button component
+# Styles in Blazor Floating Action Button Component
 
 This section explains the different styles of Floating Action Button.
 
@@ -33,11 +33,11 @@ The Blazor Floating Action Button supports the following predefined styles that 
 
 ![Blazor FAB Component with Styles](./images/Style.png)
 
-> Predefined Floating Action Button styles provide only the visual indication. So, Floating Action Button [Content](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfButton.html#Syncfusion_Blazor_Buttons_SfButton_Content) property should define the Floating Action Button style for the users of assistive technologies such as screen readers.
+N> Predefined Floating Action Button styles provide only the visual indication. So, Floating Action Button [Content](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfButton.html#Syncfusion_Blazor_Buttons_SfButton_Content) property should define the Floating Action Button style for the users of assistive technologies such as screen readers.
 
 ## Styles customization
 
-To modify the Floating Action Button appearance, you need to override the default CSS of Floating Action Button component. Find the list of CSS classes and its corresponding section in Floating Action Button component. Also, you have an option to create your own custom theme for the controls using our [Theme Studio](https://blazor.syncfusion.com/themestudio/).
+To modify the Floating Action Button appearance, you need to override the default CSS of Floating Action Button component. Please find the list of CSS classes and its corresponding section in Floating Action Button component. Also, you have an option to create your own custom theme for the controls using our [Theme Studio](https://blazor.syncfusion.com/themestudio/).
 
 | CSS Class | Purpose of Class |
 |-----|----- |

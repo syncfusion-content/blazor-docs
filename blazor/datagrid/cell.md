@@ -144,7 +144,7 @@ There are three types of [WrapMode](https://help.syncfusion.com/cr/blazor/Syncfu
 * **Header**: Auto wrap will be enabled only for the header.
 * **Content**: Auto wrap will be enabled only for the content.
 
-> When a column width is not specified, then auto wrap of columns will be adjusted with respect to the DataGrid's width.
+N> When a column width is not specified, then auto wrap of columns will be adjusted with respect to the DataGrid's width.
 
 In the following example, the [TextWrapSettings.WrapMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridTextWrapSettings.html#Syncfusion_Blazor_Grids_GridTextWrapSettings_WrapMode) is set to **Content**.
 
@@ -290,7 +290,7 @@ The available modes of DataGrid lines are:
 }
 ```
 
->By default, the DataGrid renders with **Default** mode.
+N>By default, the DataGrid renders with **Default** mode.
 
 ## Clip mode
 
@@ -302,7 +302,7 @@ There are three types of [ClipMode](https://help.syncfusion.com/cr/blazor/Syncfu
 * **Ellipsis**: Displays ellipsis when the cell content overflows its area.
 * **EllipsisWithTooltip**: Displays ellipsis when the cell content overflows its area, also it will display the tooltip while hover on ellipsis is applied.
 
-> By default, [Columns.ClipMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_ClipMode) value is **Ellipsis**.
+N> By default, [Columns.ClipMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_ClipMode) value is **Ellipsis**.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -347,4 +347,4 @@ The following screenshot represents a clip mode in DataGrid
 
 ![Clip Mode in Blazor DataGrid](./images/blazor-datagrid-clip-mode.png)
 
-> You can refer to the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour page for its groundbreaking feature representations. You can also explore [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap4) to understand how to present and manipulate data.
+N> You can refer to the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour page for its groundbreaking feature representations. You can also explore [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap4) to understand how to present and manipulate data.

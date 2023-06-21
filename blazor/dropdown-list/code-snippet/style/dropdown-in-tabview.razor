@@ -1,0 +1,75 @@
+
+@using Syncfusion.Blazor.Navigations
+@using Syncfusion.Blazor.DropDowns 
+@using Syncfusion.Blazor.Inputs
+
+<div class="col-lg-12 control-section">
+    <div class="e-sample-resize-container">
+        <SfTab CssClass="default-tab">
+            <TabItems>
+                <TabItem>
+                    <ChildContent>
+                        <TabHeader Text="Tab-1" ></TabHeader>
+                    </ChildContent>
+                    <ContentTemplate>
+                        <SfDropDownList ID="drop" EnablePersistence="true" TItem="GameFields" @bind-Value="@dropVal" TValue="string" PopupHeight="230px" Placeholder="Select a game" DataSource="@Games">
+                            <DropDownListEvents TItem="GameFields" TValue="string"></DropDownListEvents>
+                            <DropDownListFieldSettings Text="Text" Value="ID"></DropDownListFieldSettings>
+                        </SfDropDownList>
+                    </ContentTemplate>
+                </TabItem>
+                <TabItem>
+                    <ChildContent>
+                        <TabHeader Text="Tab-2" ></TabHeader>
+                    </ChildContent>
+                    <ContentTemplate>
+                        <SfDropDownList ID="drop1" EnablePersistence="true" TItem="GameFields" @bind-Value="@dropVal1" TValue="string" PopupHeight="230px" Placeholder="Select a game" DataSource="@Games">
+                            <DropDownListEvents TItem="GameFields"  TValue="string"></DropDownListEvents>
+                            <DropDownListFieldSettings Text="Text" Value="ID"></DropDownListFieldSettings>
+                        </SfDropDownList>
+                    </ContentTemplate>
+                </TabItem>
+                <TabItem>
+                    <ChildContent>
+                        <TabHeader Text="Tab-3" ></TabHeader>
+                    </ChildContent>
+                    <ContentTemplate>
+                        <SfDropDownList ID="drop2" EnablePersistence="true" TItem="GameFields" @bind-Value="@dropVal2" TValue="string" PopupHeight="230px" Placeholder="Select a game" DataSource="@Games">
+                            <DropDownListEvents TItem="GameFields" TValue="string"></DropDownListEvents>
+                            <DropDownListFieldSettings Text="Text" Value="ID"></DropDownListFieldSettings>
+                        </SfDropDownList>
+                    </ContentTemplate>
+                </TabItem>
+            </TabItems>
+        </SfTab>
+    </div>
+</div>
+@code{
+    private bool enablePersistence { get; set; } = true;
+
+    private string textValue { get; set; }
+
+    private string dropVal { get; set; }
+
+    private string dropVal1 { get; set; }
+
+    private string dropVal2 { get; set; }
+
+    public class GameFields
+    {
+        public string ID { get; set; }
+        public string Text { get; set; }
+    }
+    private List<GameFields> Games = new List<GameFields>() {
+        new GameFields(){ ID= "Game1", Text= "American Football" },
+        new GameFields(){ ID= "Game2", Text= "Badminton" },
+        new GameFields(){ ID= "Game3", Text= "Basketball" },
+        new GameFields(){ ID= "Game4", Text= "Cricket" },
+        new GameFields(){ ID= "Game5", Text= "Football" },
+        new GameFields(){ ID= "Game6", Text= "Golf" },
+        new GameFields(){ ID= "Game7", Text= "Hockey" },
+        new GameFields(){ ID= "Game8", Text= "Rugby"},
+        new GameFields(){ ID= "Game9", Text= "Snooker" },
+        new GameFields(){ ID= "Game10", Text= "Tennis"},
+     };
+}

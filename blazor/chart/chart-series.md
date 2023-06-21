@@ -60,7 +60,7 @@ The [ChartSeries](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts
 
 A chart can be created by combining several chart types such as line, column, and so on.
 
-> Bar series cannot be combined with any other series as the axis orientation is different from other series.
+N> Bar series cannot be combined with any other series as the axis orientation is different from other series.
 
 ```cshtml
 
@@ -115,7 +115,7 @@ A chart can be created by combining several chart types such as line, column, an
 
 ![Displaying Combination of Blazor Chart](images/multiple-series/blazor-chart-combination.png)
 
-> Refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
+N> Refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
 
 ## See Also
 

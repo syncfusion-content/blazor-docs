@@ -34,7 +34,6 @@ A template column value can be edited by defining the [Field](https://help.syncf
             </TreeGridColumn>
             <TreeGridColumn Field="Priority" HeaderText="Priority" Width="60"></TreeGridColumn>
             <TreeGridColumn Field="Duration" HeaderText="Duration" Width="70" Format="C2" TextAlign="TextAlign.Right"></TreeGridColumn>
-            <TreeGridColumn Field="Resources" HeaderText="Resource" Width="70" Format="C2" TextAlign="TextAlign.Right"></TreeGridColumn>
             <TreeGridColumn Field="Progress" HeaderText="Progress" Width="70" Format="C2" TextAlign="TextAlign.Right"></TreeGridColumn>
 
         </TreeGridColumns>

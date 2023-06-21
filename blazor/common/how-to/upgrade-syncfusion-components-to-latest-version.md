@@ -33,7 +33,7 @@ Ensure your CSS files have been properly configured in your application.
     <link href="_content/Syncfusion.Blazor.Themes/bootstrap4.css" rel="stylesheet" />
     ```
 
-> For production purpose and minimal requirement, Syncfusion provides an option to generate custom styles of selective components by using the ThemeStudio web application. Refer to this [link](http://ej2.syncfusion.com/themestudio/) for more details on ThemeStudio.
+N> For production purpose and minimal requirement, Syncfusion provides an option to generate custom styles of selective components by using the ThemeStudio web application. Refer to this [link](http://ej2.syncfusion.com/themestudio/) for more details on ThemeStudio.
 
 ## Breaking changes
 
@@ -55,7 +55,7 @@ In Blazor WebAssembly application, ensure if you have configured **Linker.xml** 
 
 Refer to this [KB article](https://www.syncfusion.com/kb/13439/syncfusion-components-doesnt-render-in-blazor-webassembly-application) for more information on Linker.xml file usage.
 
-> Linker.xml configuration is applicable only for the Blazor WebAssembly application.
+N> Linker.xml configuration is applicable only for the Blazor WebAssembly application.
 
 ## See Also
 

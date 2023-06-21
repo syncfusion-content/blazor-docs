@@ -315,7 +315,7 @@ public class TreeData
 
 ![Blazor TreeGrid with Grid Lines](images/blazor-treegrid-with-grid-lines.png)
 
-> By default, the tree grid renders with **Default** mode.
+N> By default, the tree grid renders with **Default** mode.
 
 ## Clip Mode
 
@@ -391,4 +391,4 @@ public class TreeData
 
 ![Clip Mode in Blazor TreeGrid](images/blazor-treegrid-clip-mode.png)
 
-> By default, [ClipMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridColumn~ClipMode.html) value is **Ellipsis**.
+N> By default, [ClipMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridColumn~ClipMode.html) value is **Ellipsis**.

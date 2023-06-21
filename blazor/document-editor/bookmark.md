@@ -13,8 +13,7 @@ Bookmark is a powerful tool that helps you to mark a place in the document to fi
 
 [`Blazor Word Processor`](https://www.syncfusion.com/blazor-components/blazor-word-processor) component (a.k.a Document Editor) component provides built-in dialog and using code to add, delete, and navigate bookmarks within the document. To add a bookmark, select a portion of text in the document. After that, jump to the location or add links to it within the document using built-in hyperlink dialog. You can also delete bookmarks from a document.
 
->Bookmark names need to begin with a letter. They can include both numbers and letters, but not spaces. To separate the words, use an underscore.
->Bookmark names starting with an underscore are called hidden bookmarks. For example, bookmarks generated for table of contents.
+N>Bookmark names need to begin with a letter. They can include both numbers and letters, but not spaces. To separate the words, use an underscore. Bookmark names starting with an underscore are called hidden bookmarks. For example, bookmarks generated for table of contents.
 
 You can open the bookmark dialog using Bookmark options in toolbar. You can also explore our [`Blazor Word Processor - Bookmark`](https://blazor.syncfusion.com/demos/document-editor/hyperlinks-and-bookmarks) example to know more about bookmark.
 
@@ -51,4 +50,4 @@ You can get all the bookmarks in the document using [`GetBookmarksAsync`](https:
 container.DocumentEditor.Selection.GetBookmarksAsync(false);
 ```
 
->Note: Parameter denotes is include hidden bookmarks. If false, ignore hidden bookmark.
+N> Parameter denotes is include hidden bookmarks. If false, ignore hidden bookmark.

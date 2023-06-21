@@ -7,7 +7,7 @@ control: Diagram
 documentation: ug
 ---
 
-> Syncfusion recommends using [Blazor Diagram Component](https://blazor.syncfusion.com/documentation/diagram/getting-started) which provides better performance than this diagram control. Blazor Diagram Component will be actively developed in the future.
+N> Syncfusion recommends using [Blazor Diagram Component](https://blazor.syncfusion.com/documentation/diagram/getting-started) which provides better performance than this diagram control. Blazor Diagram Component will be actively developed in the future.
 
 # Annotation for node in Blazor Diagram Component
 
@@ -76,8 +76,8 @@ The following code shows the relationship between the shape annotation position 
 | (1,0.5) | ![Left](../images/Offset1,5.png) |
 | (1,1) | ![Left](../images/Offset1,1.png) |
 
->* Type of the offset property for node’s shape annotation is NodeAnnotationOffset.
->* Type of the offset property for connector’s path annotation is double.
+N>* Type of the offset property for node’s shape annotation is NodeAnnotationOffset.
+<br/>* Type of the offset property for connector’s path annotation is double.
 
 ## Horizontal and vertical alignment
 
@@ -142,9 +142,9 @@ The following code explains how to align annotations.
 }
 ```
 
->* The value of the `HorizontalAlignment` is `Center` by default.
->* The value of the `VerticalAlignment` is `Center` by default.
->* Alignment positioned based on the offset value.
+N>* The value of the `HorizontalAlignment` is `Center` by default.
+<br/>* The value of the `VerticalAlignment` is `Center` by default.
+<br/>* Alignment positioned based on the offset value.
 
 ## Margin
 

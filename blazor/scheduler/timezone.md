@@ -18,9 +18,8 @@ The Scheduler renders events based on current system time zone of server in serv
 * You can also set the timezone for both the scheduler `Timezone` property and as well as the event's `StartTimezone` and `EndTimezone` properties. For more information, refer to the [section](#display-appointments-based-on-client’s-time-zone).
 
 
->**NOTE**
-* The given value for the Timezone property for both the Scheduler and the appointments should be in the [IANA](https://www.iana.org/time-zones) format(Windows time zone IDs is not compatible).
-* The WASM application has supported the limited [time zones](https://github.com/dotnet/runtime/issues/44840#issuecomment-764991667) in .Net5. But in .Net6, it supported all the [time zones](https://github.com/dotnet/runtime/pull/50650).
+N>* The given value for the Timezone property for both the Scheduler and the appointments should be in the [IANA](https://www.iana.org/time-zones) format(Windows time zone IDs is not compatible).
+<br/>* The WASM application has supported the limited [time zones](https://github.com/dotnet/runtime/issues/44840#issuecomment-764991667) in .Net5. But in .Net6, it supported all the [time zones](https://github.com/dotnet/runtime/pull/50650).
 
 ## Create appointments in different time zones
 
@@ -73,12 +72,11 @@ In the following code example, the appointments time zone is Europe Time (UTC+03
 }
 ```
 
->**NOTE**
-* If the recurring appointment is converted to another time zone, then the whole sequence will be recalculated according to the new time zone information.
-* If an all-day appointment is created, it's start time and end time will be set to 12 A.M. and 12 A.M. by default, so time zone is not applicable for all-day appointments.
-* Scheduler supports daylight saving time.
-* The time zone support is applicable for custom appointments too, so map the corresponding property.
-* Use [TimeZone](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_Timezone) for custom appointments by mapping the [StartTimeZone](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.FieldStartTimezone.html) and [EndTimeZone](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.FieldEndTimezone.html) custom properties.
+N>* If the recurring appointment is converted to another time zone, then the whole sequence will be recalculated according to the new time zone information.
+<br/>* If an all-day appointment is created, it's start time and end time will be set to 12 A.M. and 12 A.M. by default, so time zone is not applicable for all-day appointments.
+<br/>* Scheduler supports daylight saving time.
+<br/>* The time zone support is applicable for custom appointments too, so map the corresponding property.
+<br/>* Use [TimeZone](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_Timezone) for custom appointments by mapping the [StartTimeZone](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.FieldStartTimezone.html) and [EndTimeZone](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.FieldEndTimezone.html) custom properties.
 
 ## Display appointments based on Scheduler time zone
 

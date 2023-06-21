@@ -15,7 +15,7 @@ documentation: ug
 
 The Card supports to include images within the elements, you can add image as direct element anywhere inside card root by adding the `CardImage` component . Using the class defined, you can write CSS styles to load images to that element.
 
-> By default, card images occupies full width of its parent element.
+N> By default, card images occupies full width of its parent element.
 
 ```cshtml
 @using Syncfusion.Blazor.Cards

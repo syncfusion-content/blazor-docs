@@ -7,7 +7,7 @@ control: Diagram
 documentation: ug
 ---
 
-> Syncfusion recommends using [Blazor Diagram Component](https://blazor.syncfusion.com/documentation/diagram/getting-started) which provides better performance than this diagram control. Blazor Diagram Component will be actively developed in the future.
+N> Syncfusion recommends using [Blazor Diagram Component](https://blazor.syncfusion.com/documentation/diagram/getting-started) which provides better performance than this diagram control. Blazor Diagram Component will be actively developed in the future.
 
 # Interaction in Blazor Diagram Component
 
@@ -69,7 +69,7 @@ The server-side method [SelectAll](https://help.syncfusion.com/cr/blazor/Syncfus
 
 ![Resize](images/resize.gif)
 
->  While dragging and resizing, the objects are snapped towards the nearest objects to make better alignments. For better alignments, refer to `Snapping`.
+N>  While dragging and resizing, the objects are snapped towards the nearest objects to make better alignments. For better alignments, refer to `Snapping`.
 
 ## Rotate
 

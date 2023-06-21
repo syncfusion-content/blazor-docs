@@ -59,7 +59,7 @@ dotnet electronize init
 5.To integrate `Electron.NET` in the application add the below code in **~/Program.cs** file of the application.
 
 {% tabs %}
-{% highlight c# tabtitle=".NET 6 (~/Program.cs)" hl_lines="2 9 10" %}
+{% highlight c# tabtitle=".NET 6 & .NET 7 (~/Program.cs)" hl_lines="2 9 10" %}
 
 using Syncfusion.Blazor;
 using ElectronNET.API;
@@ -76,7 +76,7 @@ var app = builder.Build();
 ....
 
 {% endhighlight %}
-{% highlight c# tabtitle=".NET 5 and .NET 3.X (~/Program.cs)" hl_lines="1 12" %}
+{% highlight c# tabtitle=".NET 5 & .NET 3.X (~/Program.cs)" hl_lines="1 12" %}
 
 using ElectronNET.API;
 
@@ -97,10 +97,10 @@ public class Program
 {% endhighlight %}
 {% endtabs %}
 
-6.To open the Electron window add the below code in the **~/Startup.cs** file of .NET 3.X and .NET 5 applications, in **~/Program.cs** file of .NET 6 applications.
+6.To open the Electron window add the below code in the **~/Startup.cs** file of .NET 3.X and .NET 5 applications, in **~/Program.cs** file of .NET 6 and .NET 7 applications.
 
 {% tabs %}
-{% highlight c# tabtitle=".NET 6 (~/Program.cs)" hl_lines="9 10 12 13 14 15" %}
+{% highlight c# tabtitle=".NET 6 & .NET 7 (~/Program.cs)" hl_lines="9 10 12 13 14 15" %}
 
 using ElectronNET.API;
 
@@ -153,10 +153,10 @@ dotnet electronize start
 
 ![Electron app output](images\electron\electron-grid-output.png)
 
-> To close the electron app when closed the electron window add the below code in **//Open the Electron-Window** in step 6 in the **~/Startup.cs** file of .NET 3.X and .NET 5 applications, in **~/Program.cs** file of .NET 6 applications.
+N> To close the electron app when closed the electron window add the below code in **//Open the Electron-Window** in step 6 in the **~/Startup.cs** file of .NET 3.X and .NET 5 applications, in **~/Program.cs** file of .NET 6 and .NET 7 applications.
 
 {% tabs %}
-{% highlight c# tabtitle=".NET 6 (~/Program.cs)" hl_lines="14 15 16" %}
+{% highlight c# tabtitle=".NET 6 & .NET 7 (~/Program.cs)" hl_lines="14 15 16" %}
 
 using ElectronNET.API;
 
@@ -215,4 +215,4 @@ dotnet electronize build /target osx
 dotnet electronize build /target linux
 ```
 
-> [View the complete Blazor Server electron application with Syncfusion controls on GitHub](https://github.com/SyncfusionExamples/blazor-electron-app)
+N> [View the complete Blazor Server electron application with Syncfusion controls on GitHub](https://github.com/SyncfusionExamples/blazor-electron-app)

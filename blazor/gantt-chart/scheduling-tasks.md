@@ -17,7 +17,7 @@ The Gantt Chart component supports three types of modes. They are:
 * `Manual`: All the tasks will be manually validated by the user.
 * `Custom`: Tasks will be validated as Auto or Manual based on the value mapped in the data source.
 
-> The default value of `TaskMode` is `Auto`.
+N> The default value of `TaskMode` is `Auto`.
 
 ## Automatically scheduled tasks
 
@@ -239,7 +239,7 @@ You can define the various types of unscheduled tasks in the data source as foll
 
 ![Blazor Gantt Chart displays Unscheduled Task](images/blazor-gantt-chart-unscheduled-tasks.png)
 
-> If the [AllowUnscheduledTasks](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_AllowUnscheduledTasks) property is set to false, then the Gantt Chart component automatically calculates the scheduled date values with a default value of duration 1 and the project start date is considered as the start date for the task.
+N> If the [AllowUnscheduledTasks](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_AllowUnscheduledTasks) property is set to false, then the Gantt Chart component automatically calculates the scheduled date values with a default value of duration 1 and the project start date is considered as the start date for the task.
 
 ## Working time range
 
@@ -300,8 +300,8 @@ The following screenshot shows working time range in Gantt Chart component.
 
 ![Blazor Gantt Chart displays Working Time Range](images/blazor-gantt-chart-working-time-range.png)
 
->* Individual tasks can lie between any time within the defined working time range of the project.
->* The [GanttDayWorkingTime](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttDayWorkingTimeCollection.html#Syncfusion_Blazor_Gantt_GanttDayWorkingTimeCollection_DayWorkingTime) property is used to define the working time for the whole project.
+N>* Individual tasks can lie between any time within the defined working time range of the project.
+<br/>* The [GanttDayWorkingTime](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttDayWorkingTimeCollection.html#Syncfusion_Blazor_Gantt_GanttDayWorkingTimeCollection_DayWorkingTime) property is used to define the working time for the whole project.
 
 ## Weekend or non-working days
 
@@ -353,8 +353,8 @@ Non-working days/weekends are used to represent the non-productive days in a pro
 
 ![Changing Work Week Schedule in Blazor Gantt Chart](images/blazor-gantt-chart-change-work-week.png)
 
-> By default, Saturdays and Sundays are considered as non-working days/weekend in a project.
-> In the Gantt Chart component, you can make weekend as working day by setting the `IncludeWeekend` property to `true`.
+N> By default, Saturdays and Sundays are considered as non-working days/weekend in a project.
+<br/> In the Gantt Chart component, you can make weekend as working day by setting the `IncludeWeekend` property to `true`.
 
 
-> You can refer to our [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Gantt Chart example](https://blazor.syncfusion.com/demos/gantt-chart/default-functionalities?theme=bootstrap4) to know how to render and configure the Gantt.
+N> You can refer to our [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Gantt Chart example](https://blazor.syncfusion.com/demos/gantt-chart/default-functionalities?theme=bootstrap4) to know how to render and configure the Gantt.

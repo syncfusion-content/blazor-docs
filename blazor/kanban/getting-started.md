@@ -26,9 +26,9 @@ To get start quickly with Blazor Kanban component, you can check on this video.
 
 You can create **Blazor Server App** or **Blazor WebAssembly App** using Visual Studio in one of the following ways,
 
-* [Create a Project using Microsoft Templates](https://docs.microsoft.com/en-us/aspnet/core/blazor/tooling?pivots=windows)
+* [Create a Project using Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?pivots=windows&view=aspnetcore-7.0)
 
-* [Create a Project using Syncfusion Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project)
+* [Create a Project using Syncfusion Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio)
 
 ## Install Syncfusion Blazor Kanban NuGet in the App
 
@@ -50,16 +50,16 @@ Open **~/_Imports.razor** file and import the Syncfusion.Blazor namespace.
 
 Now, register the Syncfusion Blazor Service in the Blazor Server App or Blazor WebAssembly App. Here, Syncfusion Blazor Service is registered by setting [IgnoreScriptIsolation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.GlobalOptions.html#Syncfusion_Blazor_GlobalOptions_IgnoreScriptIsolation) property as true to load the scripts externally in the [next steps](#add-script-reference).
 
-> From 2022 Vol-1 (20.1) version, the default value of `IgnoreScriptIsolation` is changed to `true`. It is not necessary to set the `IgnoreScriptIsolation` property to refer scripts externally, since the default value has already been changed to true, and this property is obsolete.
+N> From 2022 Vol-1 (20.1) version, the default value of `IgnoreScriptIsolation` is changed to `true`. It is not necessary to set the `IgnoreScriptIsolation` property to refer scripts externally, since the default value has already been changed to true, and this property is obsolete.
 
 ### Blazor Server App
 
-* For **.NET 6** app, open the **~/Program.cs** file and register the Syncfusion Blazor Service.
+* For **.NET 6 and .NET 7** app, open the **~/Program.cs** file and register the Syncfusion Blazor Service.
 
 * For **.NET 5 and .NET 3.X** app, open the **~/Startup.cs** file and register the Syncfusion Blazor Service.
 
 {% tabs %}
-{% highlight c# tabtitle=".NET 6 (~/Program.cs)" hl_lines="3 10" %}
+{% highlight c# tabtitle=".NET 6 & .NET 7 (~/Program.cs)" hl_lines="3 10" %}
 
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Web;
@@ -104,7 +104,7 @@ namespace BlazorApplication
 Open **~/Program.cs** file and register the Syncfusion Blazor Service in the client web app.
 
 {% tabs %}
-{% highlight C# tabtitle=".NET 6 (~/Program.cs)" hl_lines="3 11" %}
+{% highlight C# tabtitle=".NET 6 & .NET 7 (~/Program.cs)" hl_lines="3 11" %}
 
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
@@ -122,7 +122,7 @@ await builder.Build().RunAsync();
 
 {% endhighlight %}
 
-{% highlight c# tabtitle=".NET 5 and .NET 3.X (~/Program.cs)" hl_lines="1 10" %}
+{% highlight c# tabtitle=".NET 5 & .NET 3.X (~/Program.cs)" hl_lines="1 10" %}
 
 using Syncfusion.Blazor;
 
@@ -148,13 +148,13 @@ Checkout the [Blazor Themes topic](https://blazor.syncfusion.com/documentation/a
 
 To add theme to the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search for [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) and then install it.
 
-> If you are using [Syncfusion.Blazor](https://www.nuget.org/packages/Syncfusion.Blazor/) single NuGet, you don't have to refer [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet. Since style sheets already inside the assets of `Syncfusion.Blazor` NuGet. 
+N> If you are using [Syncfusion.Blazor](https://www.nuget.org/packages/Syncfusion.Blazor/) single NuGet, you don't have to refer [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet. Since style sheets already inside the assets of `Syncfusion.Blazor` NuGet. 
 
 ### Blazor Server App
 
 * For .NET 6 app, add the Syncfusion bootstrap5 theme in the `<head>` of the **~/Pages/_Layout.cshtml** file.
 
-* For .NET 5 and .NET 3.X app, add the Syncfusion bootstrap5 theme in the `<head>` of the **~/Pages/_Host.cshtml** file.
+* For .NET 3.X, .NET 5 and .NET 7 app, add the Syncfusion bootstrap5 theme in the `<head>` of the **~/Pages/_Host.cshtml** file.
 
 {% tabs %}
 {% highlight cshtml tabtitle=".NET 6 (~/_Layout.cshtml)" hl_lines="3 4 5" %}
@@ -169,7 +169,7 @@ To add theme to the app, open the NuGet package manager in Visual Studio (*Tools
 
 {% endhighlight %}
 
-{% highlight cshtml tabtitle=".NET 5 and .NET 3.X (~/_Host.cshtml)" hl_lines="3 4 5" %}
+{% highlight cshtml tabtitle=".NET 3.X, .NET 5 & .NET 7 (~/_Host.cshtml)" hl_lines="3 4 5" %}
 
 <head>
     ...
@@ -208,7 +208,7 @@ Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/documenta
 
 * For **.NET 6** app, refer script in the `<head>` of the **~/Pages/_Layout.cshtml** file.
 
-* For **.NET 5 and .NET 3.X** app, refer script in the `<head>` of the **~/Pages/_Host.cshtml** file.
+* For **.NET 3.X, .NET 5 and .NET 7** app, refer script in the `<head>` of the **~/Pages/_Host.cshtml** file.
 
 {% tabs %}
 {% highlight cshtml tabtitle=".NET 6 (~/_Layout.cshtml)" hl_lines="4 5 6" %}
@@ -223,7 +223,7 @@ Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/documenta
 
 {% endhighlight %}
 
-{% highlight cshtml tabtitle=".NET 5 and .NET 3.X (~/_Host.cshtml)" hl_lines="4 5 6" %}
+{% highlight cshtml tabtitle=".NET 3.X, .NET 5 & .NET 7 (~/_Host.cshtml)" hl_lines="4 5 6" %}
 
 <head>
     ....
@@ -254,7 +254,7 @@ For Blazor WebAssembly App, refer script in the `<head>` of the **~/index.html**
 {% endhighlight %}
 {% endtabs %}
 
-> Syncfusion recommends to reference scripts using [Static Web Assets](https://blazor.syncfusion.com/documentation/common/adding-script-references#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/common/adding-script-references#cdn-reference) and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator) by [disabling JavaScript isolation](https://blazor.syncfusion.com/documentation/common/adding-script-references#disable-javascript-isolation) for better loading performance of the Blazor application.
+N> Syncfusion recommends to reference scripts using [Static Web Assets](https://blazor.syncfusion.com/documentation/common/adding-script-references#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/common/adding-script-references#cdn-reference) and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator) by [disabling JavaScript isolation](https://blazor.syncfusion.com/documentation/common/adding-script-references#disable-javascript-isolation) for better loading performance of the Blazor application.
 
 ## Add Blazor Kanban component
 
@@ -298,7 +298,7 @@ For Blazor WebAssembly App, refer script in the `<head>` of the **~/index.html**
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to run the application. Then, the Syncfusion `Blazor Kanban` component will be rendered in the default web browser.
 
-![Blazor Kanban Component](./images/blazor-kanban-component.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LXhqtxWIVwSuliMY?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Populating cards
 
@@ -342,7 +342,7 @@ To populate the empty Kanban with cards, define the Enumerable object or remote 
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor Kanban with Cards](./images/blazor-kanban-with-cards.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNBqjRiSLwnmipRH?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Enable Swimlane
 
@@ -407,14 +407,14 @@ To populate the empty Kanban with cards, define the Enumerable object or remote 
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor Kanban with Swimlane](./images/blazor-kanban-with-swimlane.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDhUZRsohGQnZgdL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/Kanban).
+N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/Kanban).
 
-> You can also explore our [Blazor Kanban Board example](https://blazor.syncfusion.com/demos/kanban/overview?theme=bootstrap5) that shows you how to render and configure the bullet chart.
+N> You can also explore our [Blazor Kanban Board example](https://blazor.syncfusion.com/demos/kanban/overview?theme=bootstrap5) that shows you how to render and configure the bullet chart.
 
 
-## See Also
+## See also
 
 * [Getting Started with Syncfusion Blazor for client-side in .NET Core CLI](../getting-started/blazor-webassembly-dotnet-cli)
 

@@ -75,8 +75,8 @@ public class TreeData
 
 ![Resizing Column in Blazor Tree Grid](../images/blazor-treegrid-column-resizing.gif)
 
-> You can disable resizing for a particular column by setting the `AllowResizing` property of the [TreeGridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridColumn.html) component to false.
-> In RTL mode, you can click and drag the left edge of the header cell to resize the column.
+N> You can disable resizing for a particular column by setting the `AllowResizing` property of the [TreeGridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridColumn.html) component to false.
+<br/> In RTL mode, you can click and drag the left edge of the header cell to resize the column.
 
 ## Min and max width
 

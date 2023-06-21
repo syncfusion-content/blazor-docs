@@ -37,10 +37,10 @@ public PdfViewerAjaxRequestSettings AjaxRequestSettings = new PdfViewerAjaxReque
 }
 ```
 
->`AjaxRequestSettings` is applicable for Web assembly blazor alone.
+N>`AjaxRequestSettings` is applicable for Web assembly blazor alone.
 
-> [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/AJAX/Authorization%20token%20viewer%20AJAX%20request).
+N> [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Common/Ajax%20Authorization%20token).
 
 Find the sample, [How to include the authorization token](https://www.syncfusion.com/downloads/support/directtrac/general/ze/BlazorWebAsssembly-493517519.zip)
 
-> You can refer to our [Blazor PDF Viewer](https://www.syncfusion.com/blazor-components/blazor-pdf-viewer) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor PDF Viewer example](https://blazor.syncfusion.com/demos/pdf-viewer/default-functionalities?theme=bootstrap4) to understand how to explains core features of PDF Viewer.
+N> You can refer to our [Blazor PDF Viewer](https://www.syncfusion.com/blazor-components/blazor-pdf-viewer) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor PDF Viewer example](https://blazor.syncfusion.com/demos/pdf-viewer/default-functionalities?theme=bootstrap4) to understand how to explains core features of PDF Viewer.

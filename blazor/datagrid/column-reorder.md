@@ -49,7 +49,7 @@ Reordering can be done by drag and drop of a particular column header from one i
 The following represents Reordering of columns
 ![Reordering Columns in Blazor DataGrid](images/blazor-datagrid-reorder-column.gif)
 
-> You can disable reordering a particular column by setting the [AllowReordering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_AllowReordering) property of **GridColumn** as false.
+N> You can disable reordering a particular column by setting the [AllowReordering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_AllowReordering) property of **GridColumn** as false.
 
 ## Reorder single column
 

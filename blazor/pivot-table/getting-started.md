@@ -19,7 +19,7 @@ This section briefly explains about how to include [Blazor Pivot Table](https://
 To get start quickly with Blazor Pivot Table component, you can check out this video.
 
 {% youtube
-"youtube:https://www.youtube.com/watch?v=1roaubxylGc"%}
+"youtube:https://www.youtube.com/watch?v=SUTN0oyVwPo&t=109s"%}
 
 ## Prerequisites
 
@@ -29,9 +29,9 @@ To get start quickly with Blazor Pivot Table component, you can check out this v
 
 You can create **Blazor Server App** or **Blazor WebAssembly App** using Visual Studio in one of the following ways,
 
-* [Create a Project using Microsoft Templates](https://docs.microsoft.com/en-us/aspnet/core/blazor/tooling?pivots=windows)
+* [Create a Project using Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?pivots=windows&view=aspnetcore-7.0)
 
-* [Create a Project using Syncfusion Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project)
+* [Create a Project using Syncfusion Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio)
 
 ## Install Syncfusion Blazor PivotTable NuGet in the App
 
@@ -53,16 +53,16 @@ Open **~/_Imports.razor** file and import the Syncfusion.Blazor namespace.
 
 Now, register the Syncfusion Blazor Service in the Blazor Server App or Blazor WebAssembly App. Here, Syncfusion Blazor Service is registered by setting [IgnoreScriptIsolation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.GlobalOptions.html#Syncfusion_Blazor_GlobalOptions_IgnoreScriptIsolation) property as true to load the scripts externally in the [next steps](#add-script-reference).
 
-> From 2022 Vol-1 (20.1) version, the default value of `IgnoreScriptIsolation` is changed to `true`. It is not necessary to set the `IgnoreScriptIsolation` property to refer scripts externally, since the default value has already been changed to true, and this property is obsolete.
+N> From 2022 Vol-1 (20.1) version, the default value of `IgnoreScriptIsolation` is changed to `true`. It is not necessary to set the `IgnoreScriptIsolation` property to refer scripts externally, since the default value has already been changed to true, and this property is obsolete.
 
 ### Blazor Server App
 
-* For **.NET 6** app, open the **~/Program.cs** file and register the Syncfusion Blazor Service.
+* For **.NET 6 and .NET 7** app, open the **~/Program.cs** file and register the Syncfusion Blazor Service.
 
 * For **.NET 5 and .NET 3.X** app, open the **~/Startup.cs** file and register the Syncfusion Blazor Service.
 
 {% tabs %}
-{% highlight c# tabtitle=".NET 6 (~/Program.cs)" hl_lines="3 10" %}
+{% highlight c# tabtitle=".NET 6 & .NET 7 (~/Program.cs)" hl_lines="3 10" %}
 
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Web;
@@ -107,7 +107,7 @@ namespace BlazorApplication
 Open **~/Program.cs** file and register the Syncfusion Blazor Service in the client web app.
 
 {% tabs %}
-{% highlight C# tabtitle=".NET 6 (~/Program.cs)" hl_lines="3 11" %}
+{% highlight C# tabtitle=".NET 6 & .NET 7 (~/Program.cs)" hl_lines="3 11" %}
 
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
@@ -125,7 +125,7 @@ await builder.Build().RunAsync();
 
 {% endhighlight %}
 
-{% highlight c# tabtitle=".NET 5 and .NET 3.X (~/Program.cs)" hl_lines="1 10" %}
+{% highlight c# tabtitle=".NET 5 & .NET 3.X (~/Program.cs)" hl_lines="1 10" %}
 
 using Syncfusion.Blazor;
 
@@ -151,13 +151,13 @@ Checkout the [Blazor Themes topic](https://blazor.syncfusion.com/documentation/a
 
 To add theme to the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search for [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) and then install it. Then, the theme style sheet from NuGet can be referred as follows,
 
-> If you are using [Syncfusion.Blazor](https://www.nuget.org/packages/Syncfusion.Blazor/) single NuGet, you don't have to refer [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet. Since style sheets already inside the assets of `Syncfusion.Blazor` NuGet. 
+N> If you are using [Syncfusion.Blazor](https://www.nuget.org/packages/Syncfusion.Blazor/) single NuGet, you don't have to refer [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet. Since style sheets already inside the assets of `Syncfusion.Blazor` NuGet. 
 
 ### Blazor Server App
 
 * For .NET 6 app, add the Syncfusion bootstrap5 theme in the `<head>` of the **~/Pages/_Layout.cshtml** file.
 
-* For .NET 5 and .NET 3.X app, add the Syncfusion bootstrap5 theme in the `<head>` of the **~/Pages/_Host.cshtml** file.
+* For .NET 3.X, .NET 5 and .NET 7 app, add the Syncfusion bootstrap5 theme in the `<head>` of the **~/Pages/_Host.cshtml** file.
 
 {% tabs %}
 {% highlight cshtml tabtitle=".NET 6 (~/_Layout.cshtml)" hl_lines="3 4 5" %}
@@ -171,7 +171,7 @@ To add theme to the app, open the NuGet package manager in Visual Studio (*Tools
 
 {% endhighlight %}
 
-{% highlight cshtml tabtitle=".NET 5 and .NET 3.X (~/_Host.cshtml)" hl_lines="3 4 5" %}
+{% highlight cshtml tabtitle=".NET 3.X, .NET 5 & .NET 7 (~/_Host.cshtml)" hl_lines="3 4 5" %}
 
 <head>
     ...
@@ -207,7 +207,7 @@ Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/documenta
 
 * For **.NET 6** app, Refer script in the `<head>` of the **~/Pages/_Layout.cshtml** file.
 
-* For **.NET 5 and .NET 3.X** app, Refer script in the `<head>` of the **~/Pages/_Host.cshtml** file.
+* For **.NET 3.X, .NET 5 and .NET 7** app, Refer script in the `<head>` of the **~/Pages/_Host.cshtml** file.
 
 {% tabs %}
 {% highlight cshtml tabtitle=".NET 6 (~/_Layout.cshtml)" hl_lines="4 5 6" %}
@@ -222,7 +222,7 @@ Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/documenta
 
 {% endhighlight %}
 
-{% highlight cshtml tabtitle=".NET 5 and .NET 3.X (~/_Host.cshtml)" hl_lines="4 5 6" %}
+{% highlight cshtml tabtitle=".NET 3.X, .NET 5 & .NET 7 (~/_Host.cshtml)" hl_lines="4 5 6" %}
 
 <head>
     ....
@@ -253,7 +253,7 @@ For Blazor WebAssembly App, Refer script in the `<head>` of the **~/index.html**
 {% endhighlight %}
 {% endtabs %}
 
-> Syncfusion recommends to reference scripts using [Static Web Assets](https://blazor.syncfusion.com/documentation/common/adding-script-references#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/common/adding-script-references#cdn-reference) and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator) by [disabling JavaScript isolation](https://blazor.syncfusion.com/documentation/common/adding-script-references#disable-javascript-isolation) for better loading performance of the Blazor application.
+N> Syncfusion recommends to reference scripts using [Static Web Assets](https://blazor.syncfusion.com/documentation/common/adding-script-references#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/common/adding-script-references#cdn-reference) and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator) by [disabling JavaScript isolation](https://blazor.syncfusion.com/documentation/common/adding-script-references#disable-javascript-isolation) for better loading performance of the Blazor application.
 
 ## Initializing Blazor pivot Table component
 
@@ -448,7 +448,7 @@ In-order to define each field in the respective axis, the following basic proper
 
 Formatting defines a way in which values should be displayed. For example, format **"C"** denotes the values should be displayed in currency pattern. To do so, define the [PivotViewFormatSetting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewFilterSetting.html) class with its [Name](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewFormatSetting.html#Syncfusion_Blazor_PivotView_PivotViewFormatSetting_Name) and [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewFormatSetting.html#Syncfusion_Blazor_PivotView_PivotViewFormatSetting_Format) properties and add it to [PivotViewFormatSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewFilterSettings.html). In this illustration, the [Name](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewFormatSetting.html#Syncfusion_Blazor_PivotView_PivotViewFormatSetting_Name) property is set as **Amount**, a field from value section and its format is set as currency. Likewise, we can set format for other value fields as well and add it to [PivotViewFormatSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewFilterSettings.html).
 
-> Only fields from value section, which is in the form of numeric data values are applicable for formatting.
+N> Only fields from value section, which is in the form of numeric data values are applicable for formatting.
 
 {% tabs %}
 {% highlight razor %}
@@ -487,7 +487,7 @@ Formatting defines a way in which values should be displayed. For example, forma
 
 After successful compilation of the application, simply press F5 to run the same. The pivot table component will render in the default web browser like below.
 
- ![Blazor PivotTable with Formatting](images/blazor-pivottable-formatting.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hXLgtHiTzseiPZGf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Enable Field List
 
@@ -528,9 +528,7 @@ The field list allows to add or remove fields and also rearrange the fields betw
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor PivotTable with FieldList Icon](images/blazor-pivottable-fieldlist-icon.png)
-<br/>
-![Blazor PivotTable with FieldList Dialog](images/blazor-pivottabel-fieldlist-dialog.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VDhUjxsJJCdviUXZ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Enable Grouping Bar
 
@@ -571,7 +569,7 @@ The grouping bar feature automatically populates fields from the bound data sour
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor PivotTable with Grouping Bar](images/blazor-pivottable-grouping-bar.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rXBANdWJziPAtWnx?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Exploring Filter Axis
 
@@ -614,11 +612,7 @@ The filter axis contains collection of fields that would act as master filter ov
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor PivotTable with FieldList](images/blazor-pivottable-fieldlist.png)
-<br/>
-<br/>
-<br/>
-![Blazor PivotTable with Formatting](images/blazor-pivottable-format.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZLqtdszfWaeKxjM?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Calculated Field
 
@@ -665,15 +659,11 @@ The calculated field feature allows user to insert or add a new calculated field
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor PivotTable with Caluclation Button](images/blazor-pivottable-calculate-button.png)
-<br/>
-![Blazor PivotTable with Calculate Dialog Field](images/blazor-pivottable-calculate-dialog.png)
-<br/>
-![Blazor PivotGrid with Calculation](images/blazor-pivotgrid-calculation.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDVAZdiTTVVgmjRE?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/PivotTable).
+N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/PivotTable).
 
-## See Also
+## See also
 
 * [Getting Started with Syncfusion Blazor for Client-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-dotnet-cli)
 * [Getting Started with Syncfusion Blazor for Client-side in Visual Studio](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-visual-studio)

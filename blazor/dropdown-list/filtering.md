@@ -9,7 +9,7 @@ documentation: ug
 
 # Filtering in Dropdown List
 
-The DropDownList has built-in support to filter data items when [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_AllowFiltering) is enabled. The filter operation starts as soon as you start typing characters in the search box.
+The DropDownList has built-in support to filter data items when [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_AllowFiltering) is enabled. The filter operation starts as soon as you start typing characters in the search box.  Default value of AllowFiltering is `false`.
 
 ## Local data
 
@@ -71,7 +71,7 @@ The following example shows how to perform case-sensitive filter.
 
 ## Filter textbox placeholder 
 
-You can use [FilterBarPlaceholder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_FilterBarPlaceholder) to accept the value to be displayed as a watermark text on the filter bar TextBox.
+You can use [FilterBarPlaceholder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_FilterBarPlaceholder) to accept the value to be displayed as a watermark text on the filter bar TextBox. `FilterBarPlaceholder` is applicable when [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_AllowFiltering) is used as true. `FilterBarPlaceholder` is depends on `AllowFiltering` property.
 
 {% highlight cshtml %}
 
@@ -132,3 +132,5 @@ In the following example, the remote request does not fetch the search data unti
 {% endhighlight %}
 
 ![Blazor DropdownList with Minimum filter length](./images/filtering/blazor_dropdown_minimum-filter-length.png)
+
+

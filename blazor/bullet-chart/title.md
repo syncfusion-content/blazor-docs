@@ -55,7 +55,7 @@ To show additional information about the data plotted, the Bullet Chart can also
 </SfBulletChart>
 ```
 
-> Refer to the [code block](#title) to know about the property value of the **BulletChartData**.
+N> Refer to the [code block](#title) to know about the property value of the **BulletChartData**.
 
 ![Blazor Bullet Chart with Subtitle](images/blazor-bullet-chart-subtitle.png)
 
@@ -99,7 +99,7 @@ The title and the subtitle positions can be customized using the [TitlePosition]
 </SfBulletChart>
 ```
 
-> Refer to the [code block](#title) to know about the property value of the **BulletChartData**.
+N> Refer to the [code block](#title) to know about the property value of the **BulletChartData**.
 
 ![Changing Title and Subtitle Position in Blazor Bullet Chart](images/blazor-bullet-chart-title-positions.png)
 
@@ -121,6 +121,6 @@ The title and the subtitle - color, opacity, font size, font family, font weight
 </SfBulletChart>
 ```
 
-> Refer to the [code block](#title) to know about the property value of the **BulletChartData**.
+N> Refer to the [code block](#title) to know about the property value of the **BulletChartData**.
 
 ![Customizing Title and Subtitle in Blazor Bullet Chart](images/blazor-bullet-chart-title-customization.png)

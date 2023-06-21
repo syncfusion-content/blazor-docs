@@ -27,12 +27,12 @@ Crosshair has a vertical and horizontal line to view the value of the axis at mo
 
     public class ChartData
     {
-        public DateTime Date;
-        public Double Open;
-        public Double Low;
-        public Double Close;
-        public Double High;
-        public Double Volume;
+        public DateTime Date { get; set; }
+        public Double Open { get; set; }
+        public Double Low { get; set; }
+        public Double Close { get; set; }
+        public Double High { get; set; }
+        public Double Volume { get; set; }
     }
 
     public List<ChartData> StockDetails = new List<ChartData>
@@ -84,12 +84,12 @@ Tooltip label for an axis can be enabled by using [Enable](https://help.syncfus
 
     public class ChartData
     {
-        public DateTime Date;
-        public Double Open;
-        public Double Low;
-        public Double Close;
-        public Double High;
-        public Double Volume;
+        public DateTime Date { get; set; }
+        public Double Open { get; set; }
+        public Double Low { get; set; }
+        public Double Close { get; set; }
+        public Double High { get; set; }
+        public Double Volume { get; set; }
     }
 
     public List<ChartData> StockDetails = new List<ChartData>
@@ -143,12 +143,12 @@ The `Fill` and `TextStyle` property of the `CrosshairTooltip` is used to customi
 
     public class ChartData
     {
-        public DateTime Date;
-        public Double Open;
-        public Double Low;
-        public Double Close;
-        public Double High;
-        public Double Volume;
+        public DateTime Date { get; set; }
+        public Double Open { get; set; }
+        public Double Low { get; set; }
+        public Double Close { get; set; }
+        public Double High { get; set; }
+        public Double Volume { get; set; }
     }
 
     public List<ChartData> StockDetails = new List<ChartData>
@@ -193,12 +193,12 @@ Trackball can be enabled by setting the [Enable](https://help.syncfusion.com/cr/
 
     public class ChartData
     {
-        public DateTime Date;
-        public Double Open;
-        public Double Low;
-        public Double Close;
-        public Double High;
-        public Double Volume;
+        public DateTime Date { get; set; }
+        public Double Open { get; set; }
+        public Double Low { get; set; }
+        public Double Close { get; set; }
+        public Double High { get; set; }
+        public Double Volume { get; set; }
     }
 
     public List<ChartData> StockDetails = new List<ChartData>

@@ -82,9 +82,9 @@ public class TreeData
 
 {% endtabs %}
 
-> * Tree Grid columns are sorted in the **Ascending** order. If you click the already sorted column, the sort direction toggles.
-> * Apply and clear sorting by invoking [SortByColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid~SortByColumn.html) and [ClearSorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid~ClearSorting.html) methods.
-> * To disable sorting for a particular column, set the [AllowSorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridColumn~AllowSorting.html) property of [Column](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridColumn.html) to **false**.
+N> * Tree Grid columns are sorted in the **Ascending** order. If you click the already sorted column, the sort direction toggles.
+<br/> * Apply and clear sorting by invoking [SortByColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid~SortByColumn.html) and [ClearSorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid~ClearSorting.html) methods.
+<br/> * To disable sorting for a particular column, set the [AllowSorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridColumn~AllowSorting.html) property of [Column](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridColumn.html) to **false**.
 
 ## Initial sort
 
@@ -241,7 +241,7 @@ public class TreeData
 
 {% endtabs %}
 
-> The **args.requestType** is the current action name. For example, in sorting the **args.requestType** value is *sorting*. 
+N> The **args.requestType** is the current action name. For example, in sorting the **args.requestType** value is *sorting*. 
 
 ## Touch interaction
 

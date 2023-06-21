@@ -26,13 +26,227 @@ The following table represents the basic operations available in the file manage
 |upload|Upload files to the current path or directory in the file system.|
 |download|Downloads the file from the server and the multiple files can be downloaded as ZIP files.|
 
-> The *CreateFolder*, *Remove*, and *Rename* actions will be reflected in the file manager only after the successful response from the server.
+N> The *CreateFolder*, *Remove*, and *Rename* actions will be reflected in the file manager only after the successful response from the server.
 
-## File operation request and response Parameters
+## Folder Upload support
 
-The default parameters available in file operation request from the file manager and the corresponding response parameters required by the file manager are listed as follows.
+To perform the directory(folder) upload in File Manager, set [DirectoryUpload](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerUploadSettings.html#Syncfusion_Blazor_FileManager_FileManagerUploadSettings_DirectoryUpload) as true within the FileManagerUploadSettings. The directory upload feature is supported for the following file service providers:
+* Physical file service provider.
+* Azure file service provider.
+* NodeJS file service provider.
+* Amazon file service provider.
 
-### Read
+In this example, you can enable or disable the ability to upload directories by selecting an option from the DropDownButton. The DropDownButton is created using the Template feature in FileManagerCustomToolbarItems. 
+
+{% tabs %}
+{% highlight razor %}
+
+<SfFileManager TValue="FileManagerDirectoryContent">
+    <FileManagerAjaxSettings  Url="/api/SampleData/FileOperations"
+                                UploadUrl="/api/SampleData/Upload"
+                                DownloadUrl="/api/SampleData/Download"
+                                GetImageUrl="/api/SampleData/GetImage">
+    </FileManagerAjaxSettings>
+    <FileManagerUploadSettings DirectoryUpload="@IsDirectoryUpload"></FileManagerUploadSettings>
+    <FileManagerEvents TValue="FileManagerDirectoryContent" ToolbarItemClicked="ItemClicked"><FileManagerEvents>
+    <FileManagerToolbarSettings ToolbarItems="@Items">
+        <FileManagerCustomToolbarItems>
+            <FileManagerCustomToolbarItem Name="Upload">
+                <Template>
+                    <SfDropDownButton IconCss="e-icons e-fe-upload" CssClass=" e-tbar-btn e-tbtn-txt  e-fe-popup" @attributes="@(new Dictionary<string, object> { {"tabindex", -1 } })">
+                            <span class="e-tbar-btn-text e-tbar-ddb-text">Upload</span>
+                            <DropDownButtonEvents ItemSelected="@ItemSelected"></DropDownButtonEvents>
+                            <DropDownMenuItems>
+                                <DropDownMenuItem Id="Folder" Text="Folder"></DropDownMenuItem>
+                                <DropDownMenuItem Id="Files" Text="Files"></DropDownMenuItem>
+                            </DropDownMenuItems>
+                    </SfDropDownButton>
+                </Template>
+            </FileManagerCustomToolbarItem>
+        </FileManagerCustomToolbarItems>
+    </FileManagerToolbarSettings>
+</SfFileManager>
+@code{
+    private List<ToolBarItemModel> Items = new List<ToolBarItemModel>()
+    {
+        new ToolBarItemModel() { Name="NewFolder" },
+        new ToolBarItemModel() { Name = "Upload" },
+        new ToolBarItemModel() { Name = "Cut" },
+        new ToolBarItemModel() { Name = "Copy" },
+        new ToolBarItemModel() { Name = "Paste" },
+        new ToolBarItemModel() { Name = "Delete" },
+        new ToolBarItemModel() { Name = "Download" },
+        new ToolBarItemModel() { Name = "Rename" },
+        new ToolBarItemModel() { Name = "SortBy" },
+        new ToolBarItemModel() { Name = "Refresh",PrefixIcon="fa fa-refresh"},
+        new ToolBarItemModel() { Name = "Selection" },
+        new ToolBarItemModel() { Name = "View" ,Disabled=true },
+        new ToolBarItemModel() { Name = "Details" },
+    };
+    public bool IsDirectoryUpload = true;
+    public async void ItemSelected(MenuEventArgs args)
+    {
+        if (args.Item.Id == "Folder")
+        {
+            IsDirectoryUpload = true;
+        }
+        else
+        {
+            IsDirectoryUpload = false;
+        }
+        await Task.Delay(100);
+        await JSRuntime.InvokeVoidAsync("uploadClick");
+    }
+    public void ItemClicked(ToolbarClickEventArgs<FileManagerDirectoryContent> args)
+    {
+        if (args.Item.Text == "Upload")
+        {
+            args.Cancel = true;
+        }
+    }
+}
+<style>
+    .fluent  .directory-upload,
+    .fluent-dark .directory-upload {
+        padding-right: 5px;
+    }
+</style>
+
+{% endhighlight %}
+{% endtabs %}
+
+![Folder Upload in Blazor FileManager](images/blazor-filemanager-folder-upload.gif)
+
+### Physical file service provider
+
+To achieve the directory upload in the physical file service provider, use the below code snippet in `IActionResult Upload` method in the `Controllers/FileManagerController.cs` file.
+
+```typescript
+[Route("Upload")]
+        public IActionResult Upload(string path, IList<IFormFile> uploadFiles, string action)
+        {
+            FileManagerResponse uploadResponse;
+            foreach (var file in uploadFiles)
+            {
+                var folders = (file.FileName).Split('/');
+                // checking the folder upload
+                if (folders.Length > 1)
+                {
+                    for (var i = 0; i < folders.Length - 1; i++)
+                    {
+                        string newDirectoryPath = Path.Combine(this.basePath + path, folders[i]);
+                        if (!Directory.Exists(newDirectoryPath))
+                        {
+                            this.operation.ToCamelCase(this.operation.Create(path, folders[i]));
+                        }
+                        path += folders[i] + "/";
+                    }
+                }
+            }
+            uploadResponse = operation.Upload(path, uploadFiles, action, null);
+            if (uploadResponse.Error != null)
+            {
+               Response.Clear();
+               Response.ContentType = "application/json; charset=utf-8";
+               Response.StatusCode = Convert.ToInt32(uploadResponse.Error.Code);
+               Response.HttpContext.Features.Get<IHttpResponseFeature>().ReasonPhrase = uploadResponse.Error.Message;
+            }
+            return Content("");
+        }
+```
+
+Refer to the [GitHub](https://github.com/SyncfusionExamples/ej2-aspcore-file-provider/blob/master/Controllers/FileManagerController.cs#L76) for more details
+
+And also add the below code snippet in `FileManagerResponse Upload` method in `Models/PhysicalFileProvider.cs` file.
+
+```typescript
+string[] folders = name.Split('/');
+string fileName = folders[folders.Length - 1];
+var fullName = Path.Combine((this.contentRootPath + path), fileName);
+```
+
+Refer to the [GitHub](https://github.com/SyncfusionExamples/ej2-aspcore-file-provider/blob/master/Models/PhysicalFileProvider.cs#L1185) for more details.
+
+### Azure file service provider
+
+For Azure file service provider, no customizations are needed for directory upload with server side and this will work with the below default upload method code.
+
+Refer to the [GitHub](https://github.com/SyncfusionExamples/azure-aspcore-file-provider/blob/master/Controllers/AzureProviderController.cs#L94) for more details.
+
+### NodeJS file service provider
+
+To perform the directory upload in the NodeJS file service provider, use the below code snippet in `app.post` method in the `filesystem-server.js` file.
+
+```typescript
+var folders = (req.body.filename).split('/');
+var filepath = req.body.path;
+var uploadedFileName = folders[folders.length - 1];
+// checking the folder upload
+if (folders.length > 1)
+   {
+     for (var i = 0; i < folders.length - 1; i++)
+       {
+          var newDirectoryPath = path.join(contentRootPath + filepath, folders[i]);
+          if (!fs.existsSync(newDirectoryPath)) {
+                fs.mkdirSync(newDirectoryPath);
+                (async () => {
+                           await FileManagerDirectoryContent(req, res, newDirectoryPath).then(data => {
+                                response = { files: data };
+                                response = JSON.stringify(response);
+                           });
+                        })();
+                    }
+                    filepath += folders[i] + "/";
+                }
+                fs.rename('./' + uploadedFileName, path.join(contentRootPath, filepath + uploadedFileName), function (err) {
+                    if (err) {
+                        if (err.code != 'EBUSY') {
+                            errorValue.message = err.message;
+                            errorValue.code = err.code;
+                        }
+                    }
+                });
+            }
+```
+
+Refer to the [GitHub](https://github.com/SyncfusionExamples/ej2-filemanager-node-filesystem/blob/master/filesystem-server.js#L788) for more details.
+
+### Amazon file service provider
+
+To perform the directory upload in the Amazon file service provider, use the below code snippet in `IActionResult AmazonS3Upload` method in the `Controllers/AmazonS3ProviderController.cs` file.
+
+```typescript
+foreach (var file in uploadFiles)
+            {
+                var folders = (file.FileName).Split('/');
+                // checking the folder upload
+                if (folders.Length > 1)
+                {
+                    for (var i = 0; i < folders.Length - 1; i++)
+                    {
+                        if (!this.operation.checkFileExist(path, folders[i]))
+                        {
+                            this.operation.ToCamelCase(this.operation.Create(path, folders[i], dataObject));
+                        }
+                        path += folders[i] + "/";
+                    }
+                }
+            }
+```
+
+Refer to the [GitHub](https://github.com/SyncfusionExamples/amazon-s3-aspcore-file-provider/blob/master/Controllers/AmazonS3ProviderController.cs#L83) for more details.
+
+And also add the below code snippet in `AsyncUpload` method in `Models/AmazonS3FileProvider.cs` file.
+
+```typescript
+string[] folders = file.FileName.Split('/');
+string name = folders[folders.Length - 1];
+```
+
+Refer to the [GitHub](https://github.com/SyncfusionExamples/amazon-s3-aspcore-file-provider/blob/master/Models/AmazonS3FileProvider.cs#L585) for more details.
+
+
+## Reading Files and Folders
 
 The following table represents the request parameters of *read* operations.
 
@@ -98,7 +312,17 @@ The following table represents the response parameters of *read* operations.
 }
 ```
 
-### Create
+Read operation triggers on the server side and find the related code details.
+
+```csharp
+
+case "read":
+    // reads the file(s) or folder(s) from the given path.
+    return this.operation.ToCamelCase(this.operation.GetFiles(args.Path, args.howHiddenItems));
+
+```
+
+## Creating Files and Folders
 
 The following table represents the request parameters of *create* operations.
 
@@ -165,7 +389,17 @@ The following table represents the response parameters of *create* operations.
 }
 ```
 
-### Rename
+Create operation triggers on the server side and find the related code details.
+
+```csharp
+
+case "create":
+    // creates a new folder in a given path.
+    return this.operation.ToCamelCase(this.operation.Create(args.Path, args.Name));
+
+```
+
+## Renaming Files and Folders
 
 The following table represents the request parameters of *rename* operations.
 
@@ -234,7 +468,18 @@ The following table represents the response parameters of *rename* operations.
 }
 ```
 
-### Delete
+Rename operation triggers on the server side and find the related code details.
+
+```csharp
+
+case "rename":
+    // renames a file or folder.
+    return this.operation.ToCamelCase(this.operation.Rename(args.Path, args.Name, 
+    args.newName, false, args.ShowFileExtension, args.Data));
+
+```
+
+## Deleting Files and Folders
 
 The following table represents the request parameters of *delete* operations.
 
@@ -289,7 +534,17 @@ The following table represents the response parameters of *delete* operations.
 }
 ```
 
-### Details
+Delete operation triggers on the server side and find the related code details.
+
+```csharp
+
+    case "delete":
+        // deletes the selected file(s) or folder(s) from the given path.
+        return this.operation.ToCamelCase(this.operation.Delete(args.Path, args.Names));
+
+```
+
+## Getting File Details
 
 The following table represents the request parameters of *details* operations.
 
@@ -342,7 +597,18 @@ The following table represents the response parameters of *details* operations.
 }
 ```
 
-### Search
+Details operation triggers on the server side and find the related code details.
+
+```csharp
+
+    case "details":
+        // gets the details of the selected file(s) or folder(s).
+        return this.operation.ToCamelCase(this.operation.Details(args.Path, args.Names, 
+        args.Data));
+
+```
+
+## Searching Files and Folders
 
 The following table represents the request parameters of *search* operations.
 
@@ -410,7 +676,18 @@ The following table represents the response parameters of *search* operations.
 }
 ```
 
-### Copy
+Searching operation triggers on the server side and find the related code details.
+
+```csharp
+
+case "search":
+    // gets the list of file(s) or folder(s) from a given path based on the searched key string
+    return this.operation.ToCamelCase(this.operation.Search(args.Path, args.SearchString, 
+    args.ShowHiddenItems, args.CaseSensitive));
+
+```
+
+## Copying Files and Folders
 
 The following table represents the request parameters of *copy* operations.
 
@@ -473,7 +750,18 @@ The following table represents the response parameters of *copy* operations.
 }
 ```
 
-### Move
+Copy operation triggers on the server side and find the related code details.
+
+```csharp
+
+    case "copy":
+        // copies the selected file(s) or folder(s) from a path and then pastes them into a given target path.
+        return this.operation.ToCamelCase(this.operation.Copy(args.Path, args.TargetPath, 
+        args.Names, args.RenameFiles, args.TargetData));
+
+```
+
+## Moving Files and Folders
 
 The following table represents the request parameters of *move* operations.
 
@@ -536,7 +824,45 @@ The following table represents the response parameters of *copy* operations.
 }
 ```
 
-### Upload
+Move operation triggers on the server side and find the related code details.
+
+```csharp
+
+    case "move":
+        // cuts the selected file(s) or folder(s) from a path and then pastes them into a given target path.
+        return this.operation.ToCamelCase(this.operation.Move(args.Path, args.TargetPath, 
+        args.Names, args.RenameFiles, args.TargetData));
+
+```
+
+## Sorting Files and Folders 
+
+In the Blazor FileManager component, you can perform sorting operations for both folders and files using the [SortBy](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.SfFileManager-1.html#Syncfusion_Blazor_FileManager_SfFileManager_1_SortBy) and [SortOrder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.SfFileManager-1.html#Syncfusion_Blazor_FileManager_SfFileManager_1_SortOrder) properties. Additionally, you can use the **Sort by** toolbar button available in the FileManager component to perform sorting operations.
+
+**SortBy** - A field name used to sort the folders and files in the FileManager component. The default value is Name.
+**SortOrder** - sort order for the files and folders in the FileManager component.
+
+The available options for the sort order are:
+
+* [None](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.SortOrder.html#Syncfusion_Blazor_FileManager_SortOrder_None): The folders and files are not sorted.
+* [Ascending](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.SortOrder.html#Syncfusion_Blazor_FileManager_SortOrder_Ascending): The folders and files are sorted in ascending order.
+* [Descending](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.SortOrder.html#Syncfusion_Blazor_FileManager_SortOrder_Descending): The folders and files are sorted in descending order.
+
+```cshtml
+
+@using Syncfusion.Blazor.FileManager
+
+<SfFileManager TValue="FileManagerDirectoryContent" SortBy="Size" SortOrder="SortOrder.Descending">
+    <FileManagerAjaxSettings Url="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/FileOperations"
+                             UploadUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Upload"
+                             DownloadUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Download"
+                             GetImageUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/GetImage">
+    </FileManagerAjaxSettings>
+</SfFileManager>
+
+```
+
+## Uploading Files
 
 The following table represents the request parameters of *Upload* operations.
 
@@ -586,7 +912,46 @@ data: {
 
 The upload response is an empty string.
 
-### Download
+The upload operation triggers on the server side and find the related code details.
+
+```csharp
+
+    // uploads the file(s) into a specified path
+    [Route("Upload")]
+    public IActionResult Upload(string path, IList<IFormFile> uploadFiles, string action)
+    {
+        FileManagerResponse uploadResponse;
+        foreach (var file in uploadFiles)
+        {
+            var folders = (file.FileName).Split('/');
+            // checking the folder upload
+            if (folders.Length > 1)
+            {
+                for (var i = 0; i < folders.Length - 1; i++)
+                {
+                    string newDirectoryPath = Path.Combine(this.basePath + path, folders[i]);
+                    if (!Directory.Exists(newDirectoryPath))
+                    {
+                        this.operation.ToCamelCase(this.operation.Create(path, folders[i]));
+                    }
+                    path += folders[i] + "/";
+                }
+            }
+        }
+        uploadResponse = operation.Upload(path, uploadFiles, action, null);
+        if (uploadResponse.Error != null)
+        {
+            Response.Clear();
+            Response.ContentType = "application/json; charset=utf-8";
+            Response.StatusCode = Convert.ToInt32(uploadResponse.Error.Code);
+            Response.HttpContext.Features.Get<IHttpResponseFeature>().ReasonPhrase = uploadResponse.Error.Message;
+        }
+        return Content("");
+    }
+
+```
+
+## Downloading Files
 
 The following table represents the request parameters of *download* operations.
 
@@ -656,19 +1021,114 @@ The following table represents the request parameters of *download* operations.
 
 Downloads the requested items from the file server in response.
 
-### GetImage
+Download operation triggers on the server side and find the related code details.
+
+```csharp
+
+    // downloads the selected file(s) and folder(s)
+    [Route("Download")]
+    public IActionResult Download(string downloadInput)
+    {
+        FileManagerDirectoryContent args = JsonConvert.DeserializeObject<FileManagerDirectoryContent>(downloadInput);
+        return operation.Download(args.Path, args.Names, args.Data);
+    }
+
+```
+
+In the Blazor FileManager component, you are able to download the selected files dynamically using our [DownloadFilesAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.SfFileManager-1.html#Syncfusion_Blazor_FileManager_SfFileManager_1_DownloadFilesAsync_System_String___) method instead of our default download toolbar button.
+
+To use this method, you need to pass the selected files or folders as parameters.
+
+```cshtml
+
+@using Syncfusion.Blazor.FileManager
+@using Syncfusion.Blazor.Buttons
+
+<SfButton OnClick="DownloadFiles">ClickToDownload</SfButton>
+<SfFileManager @ref="FileManager" TValue="FileManagerDirectoryContent">
+    <FileManagerAjaxSettings Url="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/FileOperations"
+                             UploadUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Upload"
+                             DownloadUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Download"
+                             GetImageUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/GetImage">
+    </FileManagerAjaxSettings>
+</SfFileManager>
+
+@code {
+    SfFileManager<FileManagerDirectoryContent>? FileManager;
+    public void DownloadFiles()
+    {
+        this.FileManager.DownloadFilesAsync(FileManager.SelectedItems);
+    }
+
+}
+
+```
+
+### Prevent Downloading File
+
+In the Blazor FileManager component, you are able to prevent the download action for any types of files or folders by setting the [Cancel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.BeforeDownloadEventArgs-1.html#Syncfusion_Blazor_FileManager_BeforeDownloadEventArgs_1_Cancel) argument to **true** of the [BeforeDownload](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerEvents-1.html#Syncfusion_Blazor_FileManager_FileManagerEvents_1_BeforeDownload) event. 
+
+The following example demonstrates how to prevent the download actions for all types of files in the Blazor FileManager component.
+
+```cshtml
+
+@using Syncfusion.Blazor.FileManager
+
+<SfFileManager @ref="FileManager" TValue="FileManagerDirectoryContent">
+    <FileManagerAjaxSettings Url="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/FileOperations"
+                                UploadUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Upload"
+                                DownloadUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Download"
+                                GetImageUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/GetImage">
+    </FileManagerAjaxSettings>
+    <FileManagerEvents TValue="FileManagerDirectoryContent" BeforeDownload="BeforeDownload">
+    </FileManagerEvents>
+</SfFileManager>
+
+@code {
+    public void BeforeDownload(BeforeDownloadEventArgs<FileManagerDirectoryContent>args)
+    {
+        for(int i=0; i < args.DownloadData.DownloadFileDetails.Count(); i++)
+        {
+            if (args.DownloadData.DownloadFileDetails[i].IsFile)
+            {
+                args.Cancel = true;
+            }
+        }
+    }
+
+}
+
+```
+
+## Getting Images
 
 The following table represents the request parameters of *GetImage* operations.
 
 |Parameter|Type|Default|Explanation|
 |----|----|----|----|
+|action|String|GetImage|Name of the file operation|
 |path|String|-|Relative path to the image file|
 
 Return the image as a file stream in response.
 
 The request from the file manager can be customized using the `OnSend` event. Additional information can be passed to the file manager in file operation response and can be used in customization.
 
-## File request and response contents
+GetImage operation triggers on the server side and find the related code details.
+
+```csharp
+
+    // gets the image(s) from the given path
+    [Route("GetImage")]
+    public IActionResult GetImage(FileManagerDirectoryContent args)
+    {
+        return this.operation.GetImage(args.Path, args.Id,false,null, null);
+    }
+
+```
+
+N> Refer to the [Providers](https://blazor.syncfusion.com/documentation/file-manager/file-system-provider) for more details.
+
+## Request and Response Contents Format
 
 The following table represents the contents of *data, cwd, and files* in the file manager request and response.
 
@@ -705,6 +1165,590 @@ The following table represents the contents of *details* in the file manager req
 |type|String|-|File extension|
 |multipleFiles|Boolean|-|Say whether the details are about single file or multiple files.|
 
+## Previewing Files
+
+In the Blazor FileManager component, you can preview PDF files using the PDF viewer component, docx files using the DocumentEditor component, and play videos within the dialog component.
+
+### Previewing PDF and Word File in Dialog
+
+In the Blazor FileManager component, you can view PDF files using the PDF viewer component and docx files using the DocumentEditor component by setting the proper file path in these components.
+
+The following example demonstrates how to preview PDF and docx files by utilizing the PDF viewer and DocumentEditor components within the Dialog component.
+
+```cshtml
+
+@using Syncfusion.Blazor.FileManager
+@using Syncfusion.Blazor.PdfViewerServer
+@using Syncfusion.Blazor.DocumentEditor
+
+<div class="controlregion">
+    <SfFileManager TValue="FileManagerDirectoryContent" ShowThumbnail="true" AllowMultiSelection="false">
+        <FileManagerAjaxSettings Url="/api/FileManager/FileOperations"
+                                 UploadUrl="/api/FileManager/Upload"
+                                 DownloadUrl="/api/FileManager/Download"
+                                 GetImageUrl="/api/FileManager/GetImage">
+        </FileManagerAjaxSettings>
+        <FileManagerEvents TValue="FileManagerDirectoryContent" OnFileOpen="OpenFilePreview"></FileManagerEvents>
+    </SfFileManager>
+
+    <SfDialog Width="100%" Height="100%" EnableResize="true" AllowDragging="true" ShowCloseIcon="true" AllowPrerender="true" Visible="@IsDialogVisible">
+        <DialogTemplates>
+            <Header> @DialogTitle </Header>
+            <Content>
+                <div style="display:@PdfVisible">
+                    <SfPdfViewerServer DocumentPath="@DocumentPath" Height="500px" Width="1060px"></SfPdfViewerServer>
+                </div>
+                <div style="display:@DocVisible">
+                    <SfDocumentEditorContainer @ref="documentEditorContainer" EnableToolbar="true">
+                    </SfDocumentEditorContainer>
+                </div>
+                @DialogContent
+            </Content>
+        </DialogTemplates>
+        <DialogEvents Opened="@DialogOpenedHandler"></DialogEvents>
+    </SfDialog>
+</div>
+@code
+{
+    private string DocumentPath { get; set; } = string.Empty;
+    private bool IsDialogVisible { get; set; } = false;
+    private string PdfVisible { get; set; } = "none";
+    private string DocVisible { get; set; } = "none";
+    private string DialogTitle { get; set; } = "Preview a File";
+    private string DialogContent { get; set; } = string.Empty;
+    SfDocumentEditorContainer? documentEditorContainer;
+
+    private void OpenFilePreview(FileOpenEventArgs<FileManagerDirectoryContent> args)
+    {
+        if (!string.IsNullOrEmpty(args.FileDetails.Type))
+            this.IsDialogVisible = true;
+        else
+            this.IsDialogVisible = false;
+        if (args.FileDetails.Type == ".pdf")
+        {
+            DialogTitle = "Preview PDF file : " + args.FileDetails.Name;
+            PdfVisible = "block";
+            DocVisible = "none";
+            DialogContent = string.Empty;
+            DocumentPath = "wwwroot\\Files" + args.FileDetails.FilterPath + args.FileDetails.Name;
+        }
+        else if (args.FileDetails.Type == ".docx")
+        {
+            DialogTitle = "Preview Word file : " + args.FileDetails.Name;
+            DocVisible = "block";
+            PdfVisible = "none";
+            DialogContent = string.Empty;
+            this.OpenDocumentEditor("wwwroot\\Files" + args.FileDetails.FilterPath + args.FileDetails.Name);
+        }
+        else
+        {
+            DocumentPath = string.Empty;
+            PdfVisible = "none";
+            DocVisible = "none";
+            DialogTitle = "Preview is unavailable";
+            DialogContent = "Preview is unavailable or not handled for this file type (" + args.FileDetails.Type + ")";
+        }
+    }
+
+    public void OpenDocumentEditor(string filePath)
+    {
+        if (documentEditorContainer != null)
+        {
+            using (FileStream fileStream = new FileStream(filePath, System.IO.FileMode.Open, System.IO.FileAccess.Read))
+            {
+                WordDocument document = WordDocument.Load(fileStream, ImportFormatType.Docx);
+                string json = JsonSerializer.Serialize(document);
+                document.Dispose();
+                //To observe the memory go down, null out the reference of document variable.
+                document = null;
+                //editor = documentEditorContainer.DocumentEditor;
+                documentEditorContainer.DocumentEditor.OpenAsync(json);
+                //To observe the memory go down, null out the reference of json variable.
+                json = null;
+            }
+        }
+    }
+
+    public async void DialogOpenedHandler(OpenEventArgs args)
+    {
+        if (DocVisible == "block" && documentEditorContainer != null)
+            await documentEditorContainer.ResizeAsync();
+    }
+}
+
+```
+
+N> The fully working sample can be found [here](https://github.com/SyncfusionExamples/Blazor-FileManager-Word-PDF).
+
+## Perform Custom Filtering
+
+In the Blazor FileManager component, filtering support is provided. When the [FilterFilesAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.SfFileManager-1.html#Syncfusion_Blazor_FileManager_SfFileManager_1_FilterFilesAsync_System_Collections_Generic_List__0__) method is called, it triggers a custom operation on the controller side. Using this method, you can perform search operations by passing the SearchString as a parameter. 
+
+In the following example, the SearchStringvalue **Downloads** is passed, and based on that, a search operation is performed in the Blazor FileManager using a button click.
+
+```cshtml
+
+@using Syncfusion.Blazor.FileManager
+@using Syncfusion.Blazor.Buttons
+
+<SfButton @onclick="CustomClick">ClickToPerformCustomFilter</SfButton>
+<SfFileManager @ref="FileManager" TValue="FileManagerDirectoryContent">
+    <FileManagerAjaxSettings Url="/api/FilemanagerSyncfusion/FileOperations"
+                            UploadUrl="/api/FilemanagerSyncfusion/Upload"
+                            DownloadUrl="/api/FilemanagerSyncfusion/Download"
+                            GetImageUrl="/api/FilemanagerSyncfusion/GetImage">
+    </FileManagerAjaxSettings>
+</SfFileManager>
+
+@code {
+    SfFileManager<FileManagerDirectoryContent>? FileManager;
+    public async Task CustomClick()
+    {
+        List<FileManagerDirectoryContent> Files = new List<FileManagerDirectoryContent>() {
+            new FileManagerDirectoryContent() { SearchString = "Downloads" }
+        };
+        await FileManager.FilterFilesAsync(Files);
+    }
+}
+
+```
+
+```csharp
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Http.Features;
+using Syncfusion.EJ2.FileManager.PhysicalFileProvider;
+using Syncfusion.EJ2.FileManager.Base;
+using Newtonsoft.Json;
+
+namespace BlazorFileManager.Controllers
+{
+    [Route("api/[controller]")]
+    public class FilemanagerSyncfusionController : Controller
+    {
+        ...
+
+        //[HttpPost]
+        [Route("FileOperations")]
+        public object FileOperations([FromBody] FileManagerDirectoryContent args)
+        {
+            if (args.Action == "delete" || args.Action == "rename")
+            {
+                if ((args.TargetPath == null) && (args.Path == ""))
+                {
+                    FileManagerResponse response = new FileManagerResponse();
+                    response.Error = new ErrorDetails { Code = "401", Message = "Restricted to modify the root folder." };
+                    return this.operation.ToCamelCase(response);
+                }
+            }
+            switch (args.Action)
+            {
+                ...
+
+                case "filter":
+                    if (args.Data[0].SearchString == "")
+                    {
+                        // Perform read operation while search string is empty.
+                        return this.operation.ToCamelCase(this.operation.GetFiles(args.Path, args.ShowHiddenItems));
+                    }
+                    else
+                    {
+                        // Perform Search operation while serach string has value.
+                        args.SearchString = args.Data[0].SearchString + "*";
+                        return this.operation.ToCamelCase(this.operation.Search(args.Path, args.SearchString, args.ShowHiddenItems, args.CaseSensitive));
+                    }
+            }
+            return null;
+        }
+        
+        ...
+    }
+}
+
+```
+
+## Events 
+
+The Blazor FileManager component has a list of events that can be triggered for certain actions. These events can be bound to the FileManager using the **FileManagerEvents**, which requires the **TValue** to be provided.
+
+N> All the events should be provided in a single **FileManagerEvents** component.
+
+### BeforeDownload
+
+The [BeforeDownload](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerEvents-1.html#Syncfusion_Blazor_FileManager_FileManagerEvents_1_BeforeDownload) event of the Blazor FileManager component is triggered before sending the download request to the server.
+
+```cshtml
+
+@using Syncfusion.Blazor.FileManager
+
+<SfFileManager TValue="FileManagerDirectoryContent">
+    <FileManagerAjaxSettings Url="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/FileOperations"
+                             UploadUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Upload"
+                             DownloadUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Download"
+                             GetImageUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/GetImage">
+    </FileManagerAjaxSettings>
+    <FileManagerEvents TValue="FileManagerDirectoryContent" BeforeDownload="BeforeDownload">
+    </FileManagerEvents>
+</SfFileManager>
+
+@code {
+    public void BeforeDownload(BeforeDownloadEventArgs<FileManagerDirectoryContent> args)
+    {
+        // Here, you can customize your code.
+    }
+}
+
+```
+
+### BeforeImageLoad
+
+The [BeforeImageLoad](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerEvents-1.html#Syncfusion_Blazor_FileManager_FileManagerEvents_1_BeforeImageLoad) event of the Blazor FileManager component is triggered before sending the image request to the server.
+
+```cshtml
+
+@using Syncfusion.Blazor.FileManager
+
+<SfFileManager TValue="FileManagerDirectoryContent">
+    <FileManagerAjaxSettings Url="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/FileOperations"
+                             UploadUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Upload"
+                             DownloadUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Download"
+                             GetImageUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/GetImage">
+    </FileManagerAjaxSettings>
+    <FileManagerEvents TValue="FileManagerDirectoryContent" BeforeImageLoad="BeforeImageLoad">
+    </FileManagerEvents>
+</SfFileManager>
+
+@code {
+    public void BeforeImageLoad(BeforeImageLoadEventArgs<FileManagerDirectoryContent> args)
+    {
+        // Here, you can customize your code.
+    }
+}
+
+```
+
+### BeforePopupClose
+
+The [BeforePopupClose](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerEvents-1.html#Syncfusion_Blazor_FileManager_FileManagerEvents_1_BeforePopupClose) event of the Blazor FileManager component is triggered before the dialog is closed.
+
+```cshtml
+
+@using Syncfusion.Blazor.FileManager
+
+<SfFileManager TValue="FileManagerDirectoryContent">
+    <FileManagerAjaxSettings Url="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/FileOperations"
+                             UploadUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Upload"
+                             DownloadUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Download"
+                             GetImageUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/GetImage">
+    </FileManagerAjaxSettings>
+    <FileManagerEvents TValue="FileManagerDirectoryContent" BeforePopupClose="BeforePopupClose">
+    </FileManagerEvents>
+</SfFileManager>
+
+@code {
+    public void BeforePopupClose(BeforePopupOpenCloseEventArgs args)
+    {
+        // Here, you can customize your code.
+    }
+}
+
+```
+
+### BeforePopupOpen
+
+The [BeforePopupOpen](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerEvents-1.html#Syncfusion_Blazor_FileManager_FileManagerEvents_1_BeforePopupOpen) event of the Blazor FileManager component is triggered before the dialog is opened.
+
+```cshtml
+
+@using Syncfusion.Blazor.FileManager
+
+<SfFileManager TValue="FileManagerDirectoryContent">
+    <FileManagerAjaxSettings Url="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/FileOperations"
+                             UploadUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Upload"
+                             DownloadUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Download"
+                             GetImageUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/GetImage">
+    </FileManagerAjaxSettings>
+    <FileManagerEvents TValue="FileManagerDirectoryContent" BeforePopupOpen="BeforePopupOpen">
+    </FileManagerEvents>
+</SfFileManager>
+
+@code {
+    public void BeforePopupOpen(BeforePopupOpenCloseEventArgs args)
+    {
+        // Here, you can customize your code.
+    }
+}
+
+```
+
+### Created
+
+The [Created](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerEvents-1.html#Syncfusion_Blazor_FileManager_FileManagerEvents_1_Created) event of the Blazor FileManager component is triggered when the FileManager component is created.
+
+```cshtml
+
+@using Syncfusion.Blazor.FileManager
+
+<SfFileManager TValue="FileManagerDirectoryContent">
+    <FileManagerAjaxSettings Url="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/FileOperations"
+                             UploadUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Upload"
+                             DownloadUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Download"
+                             GetImageUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/GetImage">
+    </FileManagerAjaxSettings>
+    <FileManagerEvents TValue="FileManagerDirectoryContent" Created="Created">
+    </FileManagerEvents>
+</SfFileManager>
+
+@code {
+    public void Created()
+    {
+        // Here, you can customize your code.
+    }
+}
+
+```
+
+### Destroyed
+
+The [Destroyed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerEvents-1.html#Syncfusion_Blazor_FileManager_FileManagerEvents_1_Destroyed) event of the Blazor FileManager component is triggered when the FileManager component is destroyed.
+
+```cshtml
+
+@using Syncfusion.Blazor.FileManager
+
+<SfFileManager TValue="FileManagerDirectoryContent">
+    <FileManagerAjaxSettings Url="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/FileOperations"
+                             UploadUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Upload"
+                             DownloadUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Download"
+                             GetImageUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/GetImage">
+    </FileManagerAjaxSettings>
+    <FileManagerEvents TValue="FileManagerDirectoryContent" Destroyed="Destroyed">
+    </FileManagerEvents>
+</SfFileManager>
+
+@code {
+    public void Destroyed()
+    {
+        // Here, you can customize your code.
+    }
+}
+
+```
+
+### OnError
+
+The [OnError](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerEvents-1.html#Syncfusion_Blazor_FileManager_FileManagerEvents_1_OnError) event of the Blazor FileManager component is triggered when the AJAX request fails.
+
+```cshtml
+
+@using Syncfusion.Blazor.FileManager
+
+<SfFileManager TValue="FileManagerDirectoryContent">
+    <FileManagerAjaxSettings Url="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/FileOperations"
+                             UploadUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Upload"
+                             DownloadUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Download"
+                             GetImageUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/GetImage">
+    </FileManagerAjaxSettings>
+    <FileManagerEvents TValue="FileManagerDirectoryContent" OnError="OnError">
+    </FileManagerEvents>
+</SfFileManager>
+
+@code {
+    public void OnError(FailureEventArgs args)
+    {
+        // Here, you can customize your code.
+    }
+}
+
+```
+
+### OnFileLoad
+
+The [OnFileLoad](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerEvents-1.html#Syncfusion_Blazor_FileManager_FileManagerEvents_1_OnFileLoad) event of the Blazor FileManager component is triggered before the file or folder is rendered.
+
+```cshtml
+
+@using Syncfusion.Blazor.FileManager
+
+<SfFileManager TValue="FileManagerDirectoryContent">
+    <FileManagerAjaxSettings Url="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/FileOperations"
+                             UploadUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Upload"
+                             DownloadUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Download"
+                             GetImageUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/GetImage">
+    </FileManagerAjaxSettings>
+    <FileManagerEvents TValue="FileManagerDirectoryContent" OnFileLoad="OnFileLoad">
+    </FileManagerEvents>
+</SfFileManager>
+
+@code {
+    public void OnFileLoad(FileLoadEventArgs<FileManagerDirectoryContent> args)
+    {
+        // Here, you can customize your code.
+    }
+}
+
+```
+
+### OnFileOpen
+
+The [OnFileOpen](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerEvents-1.html#Syncfusion_Blazor_FileManager_FileManagerEvents_1_OnFileOpen) event of the Blazor FileManager component is triggered before the file or folder is opened.
+
+```cshtml
+
+@using Syncfusion.Blazor.FileManager
+
+<SfFileManager TValue="FileManagerDirectoryContent">
+    <FileManagerAjaxSettings Url="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/FileOperations"
+                             UploadUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Upload"
+                             DownloadUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Download"
+                             GetImageUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/GetImage">
+    </FileManagerAjaxSettings>
+    <FileManagerEvents TValue="FileManagerDirectoryContent" OnFileOpen="OnFileOpen">
+    </FileManagerEvents>
+</SfFileManager>
+
+@code {
+    public void OnFileOpen(FileOpenEventArgs<FileManagerDirectoryContent> args)
+    {
+        // Here, you can customize your code.
+    }
+}
+
+```
+
+### OnSend
+
+The [OnSend](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerEvents-1.html#Syncfusion_Blazor_FileManager_FileManagerEvents_1_OnSend) event of the Blazor FileManager component is triggered before sending the HttpClient request to the server.
+
+```cshtml
+
+@using Syncfusion.Blazor.FileManager
+
+<SfFileManager TValue="FileManagerDirectoryContent">
+    <FileManagerAjaxSettings Url="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/FileOperations"
+                             UploadUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Upload"
+                             DownloadUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Download"
+                             GetImageUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/GetImage">
+    </FileManagerAjaxSettings>
+    <FileManagerEvents TValue="FileManagerDirectoryContent" OnSend="OnSend">
+    </FileManagerEvents>
+</SfFileManager>
+
+@code {
+    public void OnSend(BeforeSendEventArgs args)
+    {
+        // Here, you can customize your code.
+    }
+}
+
+```
+
+### OnSuccess
+
+The [OnSuccess](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerEvents-1.html#Syncfusion_Blazor_FileManager_FileManagerEvents_1_OnSuccess) event of the Blazor FileManager component is triggered when the HttpClient request is successful.
+
+```cshtml
+
+@using Syncfusion.Blazor.FileManager
+
+<SfFileManager TValue="FileManagerDirectoryContent">
+    <FileManagerAjaxSettings Url="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/FileOperations"
+                             UploadUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Upload"
+                             DownloadUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Download"
+                             GetImageUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/GetImage">
+    </FileManagerAjaxSettings>
+    <FileManagerEvents TValue="FileManagerDirectoryContent" OnSuccess="OnSuccess">
+    </FileManagerEvents>
+</SfFileManager>
+
+@code {
+    public void OnSuccess(SuccessEventArgs<FileManagerDirectoryContent> args)
+    {
+        // Here, you can customize your code.
+    }
+}
+
+```
+
+### PopupClosed
+
+The [PopupClosed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerEvents-1.html#Syncfusion_Blazor_FileManager_FileManagerEvents_1_PopupClosed) event of the Blazor FileManager component is triggered when the dialog is closed.
+
+```cshtml
+
+@using Syncfusion.Blazor.FileManager
+
+<SfFileManager TValue="FileManagerDirectoryContent">
+    <FileManagerAjaxSettings Url="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/FileOperations"
+                             UploadUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Upload"
+                             DownloadUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Download"
+                             GetImageUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/GetImage">
+    </FileManagerAjaxSettings>
+    <FileManagerEvents TValue="FileManagerDirectoryContent" PopupClosed="PopupClosed">
+    </FileManagerEvents>
+</SfFileManager>
+
+@code {
+    public void PopupClosed(PopupOpenCloseEventArgs args)
+    {
+        // Here, you can customize your code.
+    }
+}
+
+```
+
+### PopupOpened
+
+The [PopupOpened](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerEvents-1.html#Syncfusion_Blazor_FileManager_FileManagerEvents_1_PopupOpened) event of the Blazor FileManager component is triggered when the dialog is opened.
+
+```cshtml
+
+@using Syncfusion.Blazor.FileManager
+
+<SfFileManager TValue="FileManagerDirectoryContent">
+    <FileManagerAjaxSettings Url="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/FileOperations"
+                             UploadUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Upload"
+                             DownloadUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Download"
+                             GetImageUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/GetImage">
+    </FileManagerAjaxSettings>
+    <FileManagerEvents TValue="FileManagerDirectoryContent" PopupOpened="PopupOpened">
+    </FileManagerEvents>
+</SfFileManager>
+
+@code {
+    public void PopupOpened(PopupOpenCloseEventArgs args)
+    {
+        // Here, you can customize your code.
+    }
+}
+
+```
+
+### UploadListCreated
+
+The [UploadListCreated](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerEvents-1.html#Syncfusion_Blazor_FileManager_FileManagerEvents_1_UploadListCreated) event of the Blazor FileManager component is triggered before rendering each file item in the upload dialog box.
+
+```cshtml
+
+@using Syncfusion.Blazor.FileManager
+
+<SfFileManager TValue="FileManagerDirectoryContent">
+    <FileManagerAjaxSettings Url="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/FileOperations"
+                             UploadUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Upload"
+                             DownloadUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Download"
+                             GetImageUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/GetImage">
+    </FileManagerAjaxSettings>
+    <FileManagerEvents TValue="FileManagerDirectoryContent" UploadListCreated="UploadListCreated">
+    </FileManagerEvents>
+</SfFileManager>
+
+@code {
+    public void UploadListCreated(UploadListCreateArgs args)
+    {
+        // Here, you can customize your code.
+    }
+}
+
+```
 ## Action buttons
 
 The file manager has several menu buttons to access the file operations. The list of menu buttons available in the file manager is given in the following table.
@@ -797,77 +1841,6 @@ The following table provides the toolbar buttons that appear based on the select
 * Selected items count
 * View
 * Details
-
-</td>
-</tr>
-
-</table>
-
-### Context menu
-
-The following table provides the default context menu item and the corresponding target areas.
-
-<!-- markdownlint-disable MD033 -->
-<table>
-<tr>
-<td> <b>Menu Name</b> </td>
-<td> <b>Menu Items </b></td>
-<td> <b>Target </b></td>
-</tr>
-
-<tr>
-<td>Layout</td>
-<td>
-
-* SortBy
-* View
-* Refresh
-* NewFolder
-* Upload
-* Details
-* Select all
-
-</td>
-<td>
-
-* Empty space in the view section (details view and large icon view area).
-* Empty folder content.
-
-</td>
-</tr>
-
-<tr>
-<td>Folders</td>
-<td>
-
-* Open
-* Delete
-* Rename
-* Downloads
-* Details
-
-</td>
-<td>
-
-* Folders in treeview, details view, and large icon view.
-
-</td>
-</tr>
-
-<tr>
-<td>Files</td>
-<td>
-
-* Open
-* Delete
-* Rename
-* Downloads
-* Details
-
-</td>
-<td>
-
-* Files in details view and large icon view.
 
 </td>
 </tr>

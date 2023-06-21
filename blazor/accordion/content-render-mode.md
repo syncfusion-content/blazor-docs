@@ -11,7 +11,7 @@ documentation: ug
 
 [Blazor Accordion](https://www.syncfusion.com/blazor-components/blazor-accordion) provides support to render the content of all [AccordionItem](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.AccordionItem.html) at initial load which will be maintained in DOM. For that, disable the [LoadOnDemand](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfAccordion.html#Syncfusion_Blazor_Navigations_SfAccordion_LoadOnDemand) property to load all the contents.
 
-> The default value of the property `LoadOnDemand` is true.
+N> The default value of the property `LoadOnDemand` is true.
 
 ```cshtml
 

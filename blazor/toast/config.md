@@ -15,7 +15,7 @@ This section explains the steps required to customize the appearance of the toas
 
 Toast can be created with the notification message. The message contains `Title` and content of the toasts. The title and contents are adaptable in any resolution.
 
-> The Title or `Content` property can be given as HTML Element/element ID to a string that can be displayed as a toast.
+N> The Title or `Content` property can be given as HTML Element/element ID to a string that can be displayed as a toast.
 
 ```cshtml
 
@@ -169,7 +169,7 @@ The dimensions of the toast can be set using the `Width` and `Height` properties
 
 By default, the toast can be rendered with `300px` width with `auto` height.
 
-> In mobile devices, the default width of the toast gets '100%' width of the page. When the toast width is set as '100%', the toast occupies full width and will be displayed at the top or bottom based on the position `Y` property.
+N> In mobile devices, the default width of the toast gets '100%' width of the page. When the toast width is set as '100%', the toast occupies full width and will be displayed at the top or bottom based on the position `Y` property.
 
 Both the width and height properties allow setting pixels/numbers/percentage. The number value is considered as pixels.
 
@@ -445,5 +445,5 @@ app.Run();
 {% endhighlight %}
 {% endtabs %}
     
-> [View Sample in GitHub](https://github.com/SyncfusionExamples/Show-or-hide-toast-using-service-in-Blazor)
+N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Show-or-hide-toast-using-service-in-Blazor)
     

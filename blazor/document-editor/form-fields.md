@@ -28,7 +28,7 @@ container.DocumentEditor.Editor.InsertFormFieldAsync(FormFieldType.DropDown);
 
 ## Get form field names
 
-All the form fields names form current document can be retrieved using `GetFormFieldNamesAsync()`.
+All the form fields names form current document can be retrieved using [`GetFormFieldNamesAsync()`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.SfDocumentEditor.html#Syncfusion_Blazor_DocumentEditor_SfDocumentEditor_GetFormFieldNamesAsync).
 
 ```csharp
 Task<List<string>> formFieldsNames = container.DocumentEditor.GetFormFieldNamesAsync();
@@ -88,7 +88,6 @@ The following example code illustrates how to enforce and stop protection in Doc
 <SfDocumentEditorContainer @ref="container" EnableToolbar=true></SfDocumentEditorContainer>
 
 @code {
-
     SfDocumentEditorContainer container;
     protected void protectDocument(object args)
     {
@@ -100,4 +99,4 @@ The following example code illustrates how to enforce and stop protection in Doc
 }
 ```
 
->Note: In enforce Protection method, first parameter denotes password and second parameter denotes protection type. Possible values of protection type are `NoProtection |ReadOnly |FormFieldsOnly | CommentsOnly`. In stop protection method, parameter denotes the password.
+N> In enforce Protection method, first parameter denotes password and second parameter denotes protection type. Possible values of protection type are `NoProtection |ReadOnly |FormFieldsOnly | CommentsOnly`. In stop protection method, parameter denotes the password.

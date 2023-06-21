@@ -94,7 +94,7 @@ The [ShapePropertyPath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 </SfMaps>
 ```
 
->`world-map.json` file contains following data and its field **name** value is used to map the corresponding shape with the provided data source.
+N>`world-map.json` file contains following data and its field **name** value is used to map the corresponding shape with the provided data source.
 
 ```json
 [

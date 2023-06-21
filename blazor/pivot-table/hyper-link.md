@@ -20,9 +20,9 @@ The pivot table supports to show hyperlink option to link data for individual ce
 * [ConditionalSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewConditionalSetting.html): It allows to set the visibility of hyperlink based on specific condition.
 
 <!-- markdownlint-disable MD028 -->
-> By default, the hyperlink options are disabled for all cells in the pivot table.
+N> By default, the hyperlink options are disabled for all cells in the pivot table.
 
-> User defined style can be applied to hyperlink using [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewHyperlinkSettings.html#Syncfusion_Blazor_PivotView_PivotViewHyperlinkSettings_CssClass) property in [PivotViewHyperlinkSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewHyperlinkSettings.html) class.
+N> User defined style can be applied to hyperlink using [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewHyperlinkSettings.html#Syncfusion_Blazor_PivotView_PivotViewHyperlinkSettings_CssClass) property in [PivotViewHyperlinkSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewHyperlinkSettings.html) class.
 
 ## Hyperlink for all cells
 
@@ -427,4 +427,4 @@ It has following parameters - [Cancel](https://help.syncfusion.com/cr/blazor/Syn
 }
 ```
 
-> Refer to the [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) feature tour page for its groundbreaking feature representations. You can also explore the [Blazor Pivot Table example](https://blazor.syncfusion.com/demos/pivot-table/default-functionalities?theme=bootstrap4) to know how to render and configure the pivot table.
+N> Refer to the [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) feature tour page for its groundbreaking feature representations. You can also explore the [Blazor Pivot Table example](https://blazor.syncfusion.com/demos/pivot-table/default-functionalities?theme=bootstrap4) to know how to render and configure the pivot table.

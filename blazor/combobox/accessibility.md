@@ -46,7 +46,7 @@ You can use the following key shortcuts to access the ComboBox without interrupt
 | <kbd>Home</kbd>         | Cursor moves before the first character in input                                                                                                      |
 | <kbd>End</kbd>          | Cursor moves next to the last character in input                                                                                                         |
 
-> In the following sample, disable the ComboBox component using <kbd>t</kbd> keys.
+N> In the following sample, disable the ComboBox component using <kbd>t</kbd> keys.
 
 ```cshtml
 @using Syncfusion.Blazor.DropDowns
