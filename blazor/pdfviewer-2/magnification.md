@@ -25,7 +25,10 @@ You can enable or disable the magnification option in SfPdfViewer default toolba
 
 @using Syncfusion.Blazor.SfPdfViewer
 
-<SfPdfViewer2 Height="100%" Width="100%" DocumentPath="@DocumentPath" EnableMagnification="false" />
+<SfPdfViewer2 Height="100%"
+              Width="100%"
+              DocumentPath="@DocumentPath"
+              EnableMagnification="false" />
 
 @code{
     public string DocumentPath { get; set; } = "wwwroot/data/PDF_Succinctly.pdf";
@@ -65,7 +68,10 @@ Also, you can programmatically perform zooming operations as follows.
     <SfButton OnClick="OnFitWidthClick">Fit To Width</SfButton>
 </div>
 
-<SfPdfViewer2 Height="100%" Width="100%" DocumentPath="@DocumentPath" @ref="@Viewer" />
+<SfPdfViewer2 Height="100%"
+              Width="100%"
+              DocumentPath="@DocumentPath"
+              @ref="@Viewer" />
 
 @code {
     SfPdfViewer2 Viewer;

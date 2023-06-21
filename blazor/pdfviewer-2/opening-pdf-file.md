@@ -51,7 +51,9 @@ The following code example shows how to open and load the PDF file stored in Azu
 @using System.IO;
 @using Syncfusion.Blazor.SfPdfViewer
 
-<SfPdfViewer2 DocumentPath="@DocumentPath" Height="100%" Width="100%"></SfPdfViewer2>
+<SfPdfViewer2 DocumentPath="@DocumentPath"
+              Height="100%"
+              Width="100%"></SfPdfViewer2>
 
 @code {
     public string DocumentPath { get; set; }
@@ -81,7 +83,9 @@ N> The **Azure.Storage.Blobs** NuGet package must be installed in your applicati
 @using System.IO;
 @using Syncfusion.Blazor.SfPdfViewer
 
-<SfPdfViewerServer DocumentPath="@DocumentPath" Width="100%" Height="100%" />
+<SfPdfViewer2 DocumentPath="@DocumentPath"
+              Width="100%"
+              Height="100%" />
 
 @code {
     public string DocumentPath { get; set; } = "wwwroot/data/PDF_Succinctly.pdf";

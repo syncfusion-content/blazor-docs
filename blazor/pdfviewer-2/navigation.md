@@ -35,7 +35,10 @@ You can enable or disable the page navigation option in SfPdfViewer default tool
 
 @using Syncfusion.Blazor.SfPdfViewer
 
-<SfPdfViewer2 Width="100%" Height="100%" DocumentPath="@DocumentPath" EnableNavigation="false" />
+<SfPdfViewer2 Width="100%"
+              Height="100%"
+              DocumentPath="@DocumentPath"
+              EnableNavigation="false" />
 
 @code{
     public string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";

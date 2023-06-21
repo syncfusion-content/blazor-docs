@@ -91,17 +91,33 @@ The following code illustrates how to add the image as a stamp annotation in the
 @using Syncfusion.Blazor.SfPdfViewer
 
 <SfToolbar>
-    <ToolbarItems>
-        <ToolbarItem PrefixIcon="e-pv-previous-page-navigation-icon" TooltipText="Previous Page" id="previousPage" OnClick="@previousClicked" Align="@Syncfusion.Blazor.Navigations.ItemAlign.Left">
-        </ToolbarItem>
-        <ToolbarItem PrefixIcon="e-pv-next-page-navigation-icon" TooltipText="Next Page" id="nextPage"  OnClick="@nextClicked" Align="@Syncfusion.Blazor.Navigations.ItemAlign.Left">
-        </ToolbarItem>       
-        <ToolbarItem PrefixIcon="e-pv-download-document-icon" TooltipText="Download" id="Download"  OnClick="@downloadDocument" Align="@Syncfusion.Blazor.Navigations.ItemAlign.Right">
-        </ToolbarItem>
-        <ToolbarItem PrefixIcon="e-pv-stamp-icon" TooltipText="AddCustomStamp" id="AddCustomStamp"  OnClick="@stampClicked" Align="@Syncfusion.Blazor.Navigations.ItemAlign.Right">
-        </ToolbarItem>
-    </ToolbarItems>
-</SfToolbar>
+        <ToolbarItems>
+            <ToolbarItem PrefixIcon="e-pv-previous-page-navigation-icon"
+                         TooltipText="Previous Page"
+                         id="previousPage"
+                         OnClick="@previousClicked"
+                         Align="@Syncfusion.Blazor.Navigations.ItemAlign.Left">
+            </ToolbarItem>
+            <ToolbarItem PrefixIcon="e-pv-next-page-navigation-icon"
+                         TooltipText="Next Page"
+                         id="nextPage"
+                         OnClick="@nextClicked"
+                         Align="@Syncfusion.Blazor.Navigations.ItemAlign.Left">
+            </ToolbarItem>
+            <ToolbarItem PrefixIcon="e-pv-download-document-icon"
+                         TooltipText="Download"
+                         id="Download"
+                         OnClick="@downloadDocument"
+                         Align="@Syncfusion.Blazor.Navigations.ItemAlign.Right">
+            </ToolbarItem>
+            <ToolbarItem PrefixIcon="e-pv-stamp-icon"
+                         TooltipText="AddCustomStamp"
+                         id="AddCustomStamp"
+                         OnClick="@stampClicked"
+                         Align="@Syncfusion.Blazor.Navigations.ItemAlign.Right">
+            </ToolbarItem>
+        </ToolbarItems>
+    </SfToolbar>
 
 <SfPdfViewer2 EnableToolbar="false"
               EnableAnnotationToolbar="false"

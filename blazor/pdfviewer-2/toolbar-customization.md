@@ -194,29 +194,53 @@ The following code represnts how to create custom toolbar with save and some cus
 @using Syncfusion.Blazor.SfPdfViewer
 
 <SfToolbar>
-    <ToolbarItems>
-        <ToolbarItem PrefixIcon="e-icons e-chevron-up" TooltipText="Previous Page" id="previousPage"
-                     Align="@Syncfusion.Blazor.Navigations.ItemAlign.Left" OnClick="@previousClicked">
-        </ToolbarItem>
-        <ToolbarItem PrefixIcon="e-icons e-chevron-down" TooltipText="Next Page" id="nextPage"
-                     Align="@Syncfusion.Blazor.Navigations.ItemAlign.Left" OnClick="@nextClicked">
-        </ToolbarItem>
-        <ToolbarItem PrefixIcon="e-icons e-circle-add" TooltipText="Zoom in" id="zoomIn" OnClick="@zoomInClicked"></ToolbarItem>
-        <ToolbarItem PrefixIcon="e-icons e-circle-remove" TooltipText="Zoom out" id="zoomOut" OnClick="@zoomoutClicked"></ToolbarItem>
-        <ToolbarItem Text="Save" TooltipText="Save Document" id="save"
-                     Align="@Syncfusion.Blazor.Navigations.ItemAlign.Right" OnClick="@save">
-        </ToolbarItem>
-        <ToolbarItem Text="Edit Annotation" TooltipText="Annotation Toolbar" id="annotation"
-                     Align="@Syncfusion.Blazor.Navigations.ItemAlign.Right" OnClick="@annotations">
-        </ToolbarItem>
-        <ToolbarItem PrefixIcon="e-icons e-print" TooltipText="Print" id="print"
-                     Align="@Syncfusion.Blazor.Navigations.ItemAlign.Right" OnClick="@print">
-        </ToolbarItem>
-        <ToolbarItem PrefixIcon="e-icons e-download" TooltipText="Download" id="Download"
-                     Align="@Syncfusion.Blazor.Navigations.ItemAlign.Right" OnClick="@download">
-        </ToolbarItem>
-    </ToolbarItems>
-</SfToolbar>
+        <ToolbarItems>
+            <ToolbarItem PrefixIcon="e-icons e-chevron-up"
+                         TooltipText="Previous Page"
+                         id="previousPage"
+                         Align="@Syncfusion.Blazor.Navigations.ItemAlign.Left"
+                         OnClick="@previousClicked">
+            </ToolbarItem>
+            <ToolbarItem PrefixIcon="e-icons e-chevron-down"
+                         TooltipText="Next Page"
+                         id="nextPage"
+                         Align="@Syncfusion.Blazor.Navigations.ItemAlign.Left"
+                         OnClick="@nextClicked">
+            </ToolbarItem>
+            <ToolbarItem PrefixIcon="e-icons e-circle-add"
+                         TooltipText="Zoom in"
+                         id="zoomIn"
+                         OnClick="@zoomInClicked"></ToolbarItem>
+            <ToolbarItem PrefixIcon="e-icons e-circle-remove"
+                         TooltipText="Zoom out"
+                         id="zoomOut"
+                         OnClick="@zoomoutClicked">
+            </ToolbarItem>
+            <ToolbarItem Text="Save"
+                         TooltipText="Save Document"
+                         id="save"
+                         Align="@Syncfusion.Blazor.Navigations.ItemAlign.Right"
+                         OnClick="@save">
+            </ToolbarItem>
+            <ToolbarItem Text="Edit Annotation"
+                         TooltipText="Annotation Toolbar"
+                         id="annotation"
+                         Align="@Syncfusion.Blazor.Navigations.ItemAlign.Right"
+                         OnClick="@annotations">
+            </ToolbarItem>
+            <ToolbarItem PrefixIcon="e-icons e-print"
+                         TooltipText="Print" id="print"
+                         Align="@Syncfusion.Blazor.Navigations.ItemAlign.Right"
+                         OnClick="@print">
+            </ToolbarItem>
+            <ToolbarItem PrefixIcon="e-icons e-download"
+                         TooltipText="Download"
+                         id="Download"
+                         Align="@Syncfusion.Blazor.Navigations.ItemAlign.Right"
+                         OnClick="@download">
+            </ToolbarItem>
+        </ToolbarItems>
+    </SfToolbar>
 
 
 <SfPdfViewer2 @ref="PDFViewer"
@@ -334,30 +358,50 @@ You can customize the appearance of the toolbar icons by disabling the default t
 @using Syncfusion.Blazor.SfPdfViewer
 
 <SfToolbar>
-    <ToolbarItems>
-        <ToolbarItem PrefixIcon="e-icons e-chevron-up" TooltipText="Previous Page" id="previousPage"
-                     Align="@Syncfusion.Blazor.Navigations.ItemAlign.Left" OnClick="@previousClicked">
-        </ToolbarItem>
-        <ToolbarItem PrefixIcon="e-icons e-chevron-down" TooltipText="Next Page" id="nextPage"
-                     Align="@Syncfusion.Blazor.Navigations.ItemAlign.Left" OnClick="@nextClicked">
-        </ToolbarItem>
-        <ToolbarItem PrefixIcon="e-icons e-circle-add" TooltipText="Zoom in" id="zoomIn"
-                     OnClick="@zoomInClicked">
-        </ToolbarItem>
-        <ToolbarItem PrefixIcon="e-icons e-circle-remove" TooltipText="Zoom out" id="zoomOut"
-                     OnClick="@zoomoutClicked">
-        </ToolbarItem>
-        <ToolbarItem Text="Edit Annotation" TooltipText="Annotation Toolbar" id="annotation"
-                     Align="@Syncfusion.Blazor.Navigations.ItemAlign.Right" OnClick="@annotations">
-        </ToolbarItem>
-        <ToolbarItem PrefixIcon="e-icons e-print" TooltipText="Print" id="print"
-                     Align="@Syncfusion.Blazor.Navigations.ItemAlign.Right" CssClass="e-pv-print-document-container" OnClick="@print">
-        </ToolbarItem>
-        <ToolbarItem PrefixIcon="e-icons e-download" TooltipText="Download" id="Download"
-                     Align="@Syncfusion.Blazor.Navigations.ItemAlign.Right" CssClass="e-pv-download-document-container" OnClick="@download">
-        </ToolbarItem>
-    </ToolbarItems>
-</SfToolbar>
+        <ToolbarItems>
+            <ToolbarItem PrefixIcon="e-icons e-chevron-up"
+                         TooltipText="Previous Page"
+                         id="previousPage"
+                         Align="@Syncfusion.Blazor.Navigations.ItemAlign.Left"
+                         OnClick="@previousClicked">
+            </ToolbarItem>
+            <ToolbarItem PrefixIcon="e-icons e-chevron-down"
+                         TooltipText="Next Page"
+                         id="nextPage"
+                         Align="@Syncfusion.Blazor.Navigations.ItemAlign.Left"
+                         OnClick="@nextClicked">
+            </ToolbarItem>
+            <ToolbarItem PrefixIcon="e-icons e-circle-add"
+                         TooltipText="Zoom in"
+                         id="zoomIn"
+                         OnClick="@zoomInClicked">
+            </ToolbarItem>
+            <ToolbarItem PrefixIcon="e-icons e-circle-remove"
+                         TooltipText="Zoom out" id="zoomOut"
+                         OnClick="@zoomoutClicked">
+            </ToolbarItem>
+            <ToolbarItem Text="Edit Annotation"
+                         TooltipText="Annotation Toolbar"
+                         id="annotation"
+                         Align="@Syncfusion.Blazor.Navigations.ItemAlign.Right"
+                         OnClick="@annotations">
+            </ToolbarItem>
+            <ToolbarItem PrefixIcon="e-icons e-print"
+                         TooltipText="Print"
+                         id="print"
+                         Align="@Syncfusion.Blazor.Navigations.ItemAlign.Right"
+                         CssClass="e-pv-print-document-container"
+                         OnClick="@print">
+            </ToolbarItem>
+            <ToolbarItem PrefixIcon="e-icons e-download"
+                         TooltipText="Download"
+                         id="Download"
+                         Align="@Syncfusion.Blazor.Navigations.ItemAlign.Right"
+                         CssClass="e-pv-download-document-container"
+                         OnClick="@download">
+            </ToolbarItem>
+        </ToolbarItems>
+    </SfToolbar>
 
 
 <SfPdfViewer2 @ref="PDFViewer"
