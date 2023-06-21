@@ -3,13 +3,13 @@ layout: post
 title: Getting Started with Blazor Image Editor Component | Syncfusion
 description: Checkout and learn about getting started with Blazor Image Editor component in Blazor Server App and Blazor WebAssembly App.
 platform: Blazor
-control: ImageEditor
+control: Image Editor
 documentation: ug
 ---
 
-# Getting Started with Blazor ImageEditor Component
+# Getting Started with Blazor Image Editor Component
 
-This section briefly explains about how to include [Blazor ImageEditor](https://www.syncfusion.com/blazor-components/blazor-image-editor) component in your Blazor Server App and Blazor WebAssembly App using Visual Studio. 
+This section briefly explains about how to include [Blazor Image Editor](https://www.syncfusion.com/blazor-components/blazor-image-editor) component in your Blazor Server App and Blazor WebAssembly App using Visual Studio. 
 
 ## Prerequisites
 
@@ -27,7 +27,7 @@ You can create **Blazor Server App** or **Blazor WebAssembly App** using Visual 
 
 Syncfusion Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). In order to use Syncfusion Blazor components in the application, add reference to the corresponding NuGet. Refer to [NuGet packages topic](https://blazor.syncfusion.com/documentation/nuget-packages) for available NuGet packages list with component details and [Benefits of using individual NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages#benefits-of-using-individual-nuget-packages). 
 
-To add Blazor ImageEditor component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search for [Syncfusion.Blazor.ImageEditor](https://www.nuget.org/packages/Syncfusion.Blazor.ImageEditor/) and then install it.
+To add Blazor Image Editor component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search for [Syncfusion.Blazor.ImageEditor](https://www.nuget.org/packages/Syncfusion.Blazor.ImageEditor/) and then install it.
 
 ## Register Syncfusion Blazor Service
 
@@ -245,7 +245,7 @@ For Blazor WebAssembly App, Refer script in the `<head>` of the **~/index.html**
 
 N> Syncfusion recommends to reference scripts using [Static Web Assets](https://blazor.syncfusion.com/documentation/common/adding-script-references#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/common/adding-script-references#cdn-reference) and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator) by [disabling JavaScript isolation](https://blazor.syncfusion.com/documentation/common/adding-script-references#disable-javascript-isolation) for better loading performance of the Blazor application.
 
-## Add Syncfusion Blazor ImageEditor component
+## Add Syncfusion Blazor Image Editor component
 
 * Open **~/_Imports.razor** file or any razor page under the `~/Pages` folder where the component is to be added and import the `Syncfusion.Blazor.ImageEditor` namespace.
 
@@ -258,7 +258,7 @@ N> Syncfusion recommends to reference scripts using [Static Web Assets](https://
 {% endhighlight %}
 {% endtabs %}
 
-* Now, add the Syncfusion ImageEditor component in razor file. Here, the ImageEditor component is added in the **~/Pages/Index.razor** page under the `~/Pages` folder.
+* Now, add the Syncfusion Image Editor component in razor file. Here, the Image Editor component is added in the **~/Pages/Index.razor** page under the `~/Pages` folder.
 
 {% tabs %}
 {% highlight razor tabtitle="~/Index.razor" %}
@@ -268,11 +268,11 @@ N> Syncfusion recommends to reference scripts using [Static Web Assets](https://
 {% endhighlight %}
 {% endtabs %}
 
-* Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to run the app. Then, the Syncfusion Blazor ImageEditor component will be rendered in the default web browser.
+* Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to run the app. Then, the Syncfusion Blazor Image Editor component will be rendered in the default web browser.
 
-![Blazor ImageEditor Component](./images/blazor-image-editor-component.jpg)
+![Blazor Image Editor Component](./images/blazor-image-editor-component.jpg)
 
-N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/ImageEditor).
+N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/Image Editor).
 
 ## See Also
 
@@ -280,4 +280,4 @@ N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-
 * [Getting Started with Syncfusion Blazor for server side in Visual Studio](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio)
 * [Getting Started with Syncfusion Blazor for server side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-dotnet-cli)
 
-N> You can also explore our [Blazor ImageEditor example](https://blazor.syncfusion.com/demos/image-editor/default-functionalities?theme=bootstrap5) that shows you how to render and configure the ImageEditor.
+N> You can also explore our [Blazor Image Editor example](https://blazor.syncfusion.com/demos/image-editor/default-functionalities?theme=bootstrap5) that shows you how to render and configure the Image Editor.
