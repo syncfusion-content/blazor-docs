@@ -283,7 +283,7 @@ N> There is no need to assign default value for panels. Refer to the [Panels](./
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to run the application. Then, the Syncfusion `Blazor Dashboard Layout` component will be rendered in the default web browser.
 
-![Blazor DashboardLayout Component](images/blazor-dashboard-layout-component.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDrKNnWeToosqFyA?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Defining panels
 
@@ -325,7 +325,7 @@ A dashboard layout panel is rendered with simple data. The header of a panel is 
 
 The Dashboard layout with simple content will be rendered in the web browser as demonstrated in the following screenshot.
 
-![Blazor DashboardLayout with Single Data](images/blazor-dashboard-layout-single-content.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rXBUDdCoJoyPwUgz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ### Panels with components
 

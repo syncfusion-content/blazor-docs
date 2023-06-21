@@ -298,7 +298,7 @@ N> Syncfusion recommends to reference scripts using [Static Web Assets](https://
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to run the application. Then, the Syncfusion `Blazor Accumulation Chart` component will be rendered in the default web browser.
 
-![Blazor Pie Chart](images/getting-started/blazor-pie-chart.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BjhgtdsLffrMBosm?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Add title
 
@@ -336,7 +336,7 @@ Using the [Title](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts
 {% endhighlight %}
 {% endtabs %}
 
-![Adding Title in Blazor Accumulation Chart](images/getting-started/blazor-accumulation-chart-with-title.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rNhADnWBJyqeOCsB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Add data label
 

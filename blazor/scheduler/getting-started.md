@@ -299,7 +299,7 @@ N> Syncfusion recommends to reference scripts using [Static Web Assets](https://
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to run the application. Then, the Syncfusion `Blazor Scheduler` component will be rendered in the default web browser.
 
-![Blazor Scheduler Component](images/blazor-scheduler.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BXhAjdMJLRHimFLh?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Populating appointments
 
@@ -344,7 +344,7 @@ To populate the Scheduler with appointments, bind the event data to it by assign
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor Scheduler with Appointments](images/blazor-scheduler-appointments.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rtBKNdWTBRFZkCcc?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Setting date
 
@@ -381,6 +381,8 @@ The [Blazor Scheduler](https://www.syncfusion.com/blazor-components/blazor-sched
 
 {% endhighlight %}
 {% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VDBUtRszVwtXTtKT?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Setting view
 
@@ -431,6 +433,8 @@ The Scheduler displays `Week` view by default. To change the current view, defin
 {% endhighlight %}
 {% endtabs %}
 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXrUtRizrlWfmHQN?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 ## Individual view customization
 
 Each individual Scheduler views can be customized with its own options such as setting different start and end hour on Week and Work Week views, whereas hiding the weekend days on Month view alone which can be achieved by defining the `ScheduleView`.
@@ -464,6 +468,8 @@ Each individual Scheduler views can be customized with its own options such as s
 
 {% endhighlight %}
 {% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hNBqjdMpLbqwdzaj?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/Scheduler).
 
