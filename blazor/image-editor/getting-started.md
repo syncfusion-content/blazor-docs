@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with Blazor ImageEditor Component | Syncfusion
+title: Getting Started with Blazor Image Editor Component | Syncfusion
 description: Checkout and learn about getting started with Blazor ImageEditor component in Blazor Server App and Blazor WebAssembly App.
 platform: Blazor
 control: ImageEditor
