@@ -169,7 +169,7 @@ To enable search box in the static field list UI, set the [ShowFieldSearch](http
 }
 
 ```
-![Static Field List with search in Blazor Pivot Table](images/blazor-pivottable-static-fieldlist-search.png)
+![Static Field List with search in Blazor Pivot Table](images/blazor-pivottable-static-fieldlist-search.PNG)
 
 To enable search box in the pivot table's built-in popup field list UI, set the [ShowFieldSearch](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_ShowFieldSearch) property to **true** in [SfPivotView](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html).
 
@@ -206,7 +206,7 @@ To enable search box in the pivot table's built-in popup field list UI, set the 
 }
 
 ```
-![Popup Field List with search in Blazor Pivot Table](images/blazor-pivottable-popup-fieldlist-search.png)
+![Popup Field List with search in Blazor Pivot Table](images/blazor-pivottable-popup-fieldlist-search.PNG)
 
 
 ## Add or remove fields
