@@ -222,3 +222,9 @@ When using the PDF Viewer (NextGen) in a WebAssembly application, need to includ
 N> If you are WebAssembly application install [SkiaSharp.NativeAssets.WebAssembly](https://www.nuget.org/packages/SkiaSharp.NativeAssets.WebAssembly) NuGet package.
 
 N> If you encounter issues while attempting to host the application in certain environments, such as Azure app services, install [SkiaSharp.Views.Blazor](https://www.nuget.org/packages/SkiaSharp.Views.Blazor) instead of [SkiaSharp.NativeAssets.WebAssembly](https://www.nuget.org/packages/SkiaSharp.NativeAssets.WebAssembly) Nuget package.
+
+## See also
+
+* [Getting Started with Blazor SfPdfViewer Component in Blazor Server App](./getting-started/server-side-application)
+
+* [Getting Started with Blazor SfPdfViewer Component in Blazor WASM App](./getting-started/web-assembly-application)
