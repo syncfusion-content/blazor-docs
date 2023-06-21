@@ -102,7 +102,7 @@ In the HeatMap, the [EnableMultiSelect]() property is used to allow single cell 
 
 ### Clearing the selection
 
-The [ClearSelection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.SfHeatMap-1.html#Syncfusion_Blazor_HeatMap_SfHeatMap_1_ClearSelectionAsync) method can be used to clear the selected cells. The below example illustrates the same.
+The [ClearSelectionAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.SfHeatMap-1.html#Syncfusion_Blazor_HeatMap_SfHeatMap_1_ClearSelectionAsync) method can be used to clear the selected cells. The below example illustrates the same.
 
 ```cshtml
 
@@ -134,9 +134,9 @@ The [ClearSelection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Hea
     string[] XAxisLabels = new string[] { "Nancy", "Andrew", "Janet", "Margaret", "Steven", "Michael" };
     string[] YAxisLabels = new string[] { "Mon", "Tue", "Wed", "Thu", "Fri", "Sat" };
     
-    public void ClearSelection()
+    public async Task ClearSelection()
     {
-        Heatmap.ClearSelection();
+        Heatmap.ClearSelectionAsync();
     }
 }
 
