@@ -162,13 +162,14 @@ The [LegendRender](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Chart
 }
 
 ```
+## PointerClick
 
-The [PointerClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartEvents.html#Syncfusion_Blazor_Charts_BulletChartEvents_PointerClick) event triggers before each legend item rendering.
+The [PointerClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartEvents.html#Syncfusion_Blazor_Charts_BulletChartEvents_PointerClick) event triggers when pointer click.
 
 |   Argument name    |   Description                                          |
 |--------------------| -------------------------------------------------------|
 |   Target     |    Specifies the Target bar values.      |
-|   value     |    Specifies the Value bar data.      |
+|   Value     |    Specifies the Value bar data.      |
 |   CategoryName     |    Specifies the category name od selected point.      |
 |   Cancel             |   Specifies the event cancel status. |
 
