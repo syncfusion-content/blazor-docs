@@ -9,22 +9,26 @@ documentation: ug
 
 # Load desired PDF for initial loading in Blazor SfPdfViewer Component
 
-You can load your own PDF document for initial loading as well as change document at run-time in SfPdfViewer hosted sample. To achieve that, you need to add your document in the server project and refer api/values as ServiceUrl in client project.
+You can load your own PDF document for initial loading as well as change document at run-time in SfPdfViewer hosted sample. To achieve that, you need to add your document in the server project and refer api/values in client project.
 
-```csharp
+```cshtml
 
 @inject HttpClient Http;
 @using Syncfusion.Blazor.Buttons;
 @using Syncfusion.Blazor.SfPdfViewer
 
 <SfButton OnClick="LoadAnotherDocument">Load Another Document</SfButton>
-<SfPdfViewer2 Height="100%" Width="100%" DocumentPath="@DocumentPath">
+
+<SfPdfViewer2 Height="100%"
+              Width="100%"
+              DocumentPath="@DocumentPath">
 </SfPdfViewer2>
 
 
 @code
 {
     public String DocumentPath = "Data/PDF_Succinctly.pdf";
+
     private async Task LoadAnotherDocument()
     {
         //Sends a GET request to a specified Uri and return the response body as a byte array.
@@ -38,4 +42,12 @@ You can load your own PDF document for initial loading as well as change documen
 
 ```
 
-N> [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Common/Load%20Desire%20PDF%20in%20Blazor%20-%20SfPdfViewer).
+[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Common/Load%20Desire%20PDF%20in%20Blazor%20-%20SfPdfViewer).
+
+## See also
+
+* [How to load Microsoft Office files in Blazor SfPdfViewer Component](./load-office-files)
+
+* [How to load PDF documents dynamically in Blazor SfPdfViewer Component](./load-pdf-document-dynamically)
+
+* [How to unload the PDF document from Viewer](./unload-the-pdf-document-from-viewer)

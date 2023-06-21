@@ -9,13 +9,17 @@ documentation: ug
 
 # View the created PDF document
 
-The Syncfusion's Blazor SfPdfviewer component allows you to view the created PDF document using the [**Created**](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_PdfViewer_PdfViewerEvents_Created) event.
+The Syncfusion's Blazor SfPdfviewer component allows you to view the created PDF document using the [**Created**](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_Created) event.
 
 The following code example shows how to view the created PDF document.
 
-```csharp
+```cshtml
 
-<SfPdfViewer2 ID="pdfviewer" @ref="@PdfViewer" DocumentPath="@documentPath">
+<SfPdfViewer2 ID="pdfviewer" 
+              @ref="@PdfViewer" 
+              DocumentPath="@documentPath"
+              Height="100%"
+              Width="100%">
     <PdfViewerEvents Created="created"></PdfViewerEvents>
 </SfPdfViewer2>
 
@@ -49,3 +53,11 @@ The following code example shows how to view the created PDF document.
 ```
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Common/Create%20PDF%20using%20base%20library%20-%20SfPdfViewer)
+
+## See also
+
+* [How to create SfPdfViewer Component in a Splitter Component](./create-sfpdfviewer-in-a-splitter-component)
+
+* [How to create a SfPdfViewer within a popup window in Blazor](./create-sfpdfviewer-in-a-popup-window)
+
+* [How to get PDF document's data](./get-data-from-sfpdfviewer)

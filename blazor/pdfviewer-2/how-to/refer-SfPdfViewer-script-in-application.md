@@ -7,7 +7,7 @@ control: SfPdfViewer
 documentation: ug
 ---
 
-# Refer the SfPdfViewer script file in application
+# Refer the SfPdfViewer script file in Blazor application
 
 If you wish to add custom scripts to your application, please refer to the [Custom Resource Generator](https://blazor.syncfusion.com/documentation/common/custom-resource-generator) for generating the necessary resources. You need to include the [pdfium.js](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/blob/master/Common/Pdfium%20files/pdfium.js) and [pdfium.wasm](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/blob/master/Common/Pdfium%20files/pdfium.wasm) files in your application when referencing scripts externally.
 
