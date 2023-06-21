@@ -266,9 +266,9 @@ By default, when there are no segments defined for a bezier connector, the bezie
 <SfDiagramComponent Width="1000px" Height="500px" Nodes="@nodes" Connectors="@connectors"></SfDiagramComponent>
 
 @code {
-    //Defines diagram's connector collection.
+    //Define the diagram's connector collection.
     DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
-    //Defines diagram's node collection.
+    //Define the diagram's node collection.
     DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
 
     protected override void OnInitialized()
@@ -322,9 +322,9 @@ By default, when there are no segments defined for a bezier connector, the bezie
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Segments)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Segments).
 
-Also, if we provide segments on initial rendering, the segments collection will be updated dynamically when we move the connector ends. For static segments collection, `BezierConnectorSettings.AllowSegmentsReset` property of Connector class should be set to false.
+Also, if you provide segments on initial rendering, the segments collection will be updated dynamically when you move the connector ends. For static segments collection, the `BezierConnectorSettings.AllowSegmentsReset` property of the Connector class should be set to false.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -332,9 +332,9 @@ Also, if we provide segments on initial rendering, the segments collection will 
 <SfDiagramComponent Width="1000px" Height="500px" Nodes="@nodes" Connectors="@connectors"></SfDiagramComponent>
 
 @code {
-    //Defines diagram's connector collection.
+    //Define the diagram's connector collection.
     DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
-    //Defines diagram's node collection.
+    //Define the diagram's node collection.
     DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
 
     protected override void OnInitialized()
@@ -383,7 +383,7 @@ Also, if we provide segments on initial rendering, the segments collection will 
                 TargetPortID = "Port1",
                 Type = ConnectorSegmentType.Bezier,
                 Segments = new DiagramObjectCollection<ConnectorSegment>(){new BezierSegment(){Type = ConnectorSegmentType.Bezier}},
-                //Defines whether to reset current segments collection in response to change in the connector ends.
+                //Define whether to reset the current segments collection in response to change in the connector ends.
                 BezierConnectorSettings = new BezierConnectorSettings() { AllowSegmentsReset = false },
                 Constraints = ConnectorConstraints.Default | ConnectorConstraints.DragSegmentThumb
             };
@@ -391,7 +391,7 @@ Also, if we provide segments on initial rendering, the segments collection will 
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Segments)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Segments).
 
 ### How to interact with the bezier segments efficiently
 
@@ -399,17 +399,17 @@ While interacting with multiple bezier segments, maintain their control points a
 
 | BezierSmoothness value | Description |
 |-------- | -------- |
-| SymmetricDistance| Both control points of adjacent segments will be at the same distance when any one of them is editing. |
-| SymmetricAngle | Both control points of adjacent segments will be at the same angle when any one of them is editing. |
-| Both | Both control points of adjacent segments will be at the same angle and same distance when any one of them is editing. |
-| None | Segment’s control points are interacted independently from each other. |
+| SymmetricDistance| Both control points of adjacent segments will be at the same distance when one of them is editing. |
+| SymmetricAngle | Both control points of adjacent segments will be at the same angle when one of them is editing. |
+| Both | Both control points of adjacent segments will be at the same angle and same distance when one of them is editing. |
+| None | Segment’s control points interact independently from each other. |
 
 Also, the intermediate point of two adjacent bezier segments can be edited interactively based on the `BezierConnectorSettings.SegmentEditOrientation` property of the Connector class.
 
 | SegmentEditOrientation value | Description |
 |-------- | -------- |
-| Bidirectional | It allows the intermediate points to be dragged either vertical or horizontal directions.  |
-| Freeform | It allows the intermediate points to be dragged in any direction |
+| Bidirectional | It allows the intermediate points to be dragged in either vertical or horizontal directions.  |
+| Freeform | It allows the intermediate points to be dragged in any direction. |
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -417,9 +417,9 @@ Also, the intermediate point of two adjacent bezier segments can be edited inter
 <SfDiagramComponent Width="1000px" Height="500px" Nodes="@nodes" Connectors="@connectors"></SfDiagramComponent>
 
 @code {
-    //Defines diagram's connector collection.
+    //Define the diagram's connector collection.
     DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
-    //Defines diagram's node collection.
+    //Define the diagram's node collection.
     DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
 
     protected override void OnInitialized()
@@ -469,9 +469,9 @@ Also, the intermediate point of two adjacent bezier segments can be edited inter
                 Type = ConnectorSegmentType.Bezier,
                 BezierConnectorSettings = new BezierConnectorSettings() 
                 { 
-                    //Defines the smoothness for bezier connector
+                    //Define the smoothness for a bezier connector.
                     Smoothness = BezierSmoothness.SymmetricAngle,
-                    //Defines the orientation of the segment editing controls
+                    //Define the orientation of the segment editing controls.
                     SegmentEditOrientation = BezierSegmentEditOrientation.Freeform
                 },
                 Constraints = ConnectorConstraints.Default | ConnectorConstraints.DragSegmentThumb
@@ -480,11 +480,11 @@ Also, the intermediate point of two adjacent bezier segments can be edited inter
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Segments)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Segments).
 
 ### How to show or hide the bezier segment's control points
 
-By using the `BezierConnectorSettings.ControlPointsVisibility` property of the Connector class, you can enable or disable visibility of the bezier segment's control points.
+By using the `BezierConnectorSettings.ControlPointsVisibility` property of the Connector class, you can enable or disable the visibility of the bezier segment's control points.
 
 | ControlPointsVisibility value | Description |
 |-------- | -------- |
@@ -498,7 +498,7 @@ By using the `BezierConnectorSettings.ControlPointsVisibility` property of the C
 @using Syncfusion.Blazor.Diagram
 <SfDiagramComponent Width="1000px" Height="500px" Connectors="@connectors"></SfDiagramComponent>
 @code {
-    //Defines diagram's connector collection.
+    //Define the diagram's connector collection.
     DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
     protected override void OnInitialized()
     {
@@ -515,7 +515,7 @@ By using the `BezierConnectorSettings.ControlPointsVisibility` property of the C
             Type = ConnectorSegmentType.Bezier,
             BezierConnectorSettings = new BezierConnectorSettings() 
             {
-                //Defines the visibility of the control points 
+                //Define the visibility of the control points. 
                 ControlPointsVisibility = ControlPointsVisibility.Intermediate 
             },
         };
@@ -523,7 +523,7 @@ By using the `BezierConnectorSettings.ControlPointsVisibility` property of the C
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Segments)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Segments).
 
 ## How to create multiple segments
 
