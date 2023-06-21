@@ -323,7 +323,7 @@ The latitude and longitude values are used to determine the location of each mar
 
 ## Repositioning the marker using drag and drop
 
-The markers on the map can be dragged and dropped to change their position. To enable marker drag and drop, set the [EnableDrag]() property to **true** in the `MapsMarkerSettings` tag.
+The markers on the map can be dragged and dropped to change their position. To enable marker drag and drop, set the [EnableDrag]() property to **true** in the `MapsMarker` tag.
 
 ```cshtml
 @using Syncfusion.Blazor.Maps
