@@ -53,30 +53,28 @@ Also, you can programmatically perform search operation as given in the followin
 <SfPdfViewer2 Height="100%" Width="100%" DocumentPath="@DocumentPath" @ref="@Viewer" />
 
 @code {
-
     SfPdfViewer2 Viewer;
-
     public string DocumentPath { get; set; } = "wwwroot/data/PDF_Succinctly.pdf";
 
-    public void OnSearchClick(MouseEventArgs args)
+    public async void OnSearchClick(MouseEventArgs args)
     {
         //Here PDF is to be serached from the loaded document
-        Viewer.SearchText("pdf", false);
+        await Viewer.SearchTextAsync("pdf", false);
     }
 
-    public void OnSearchNext(MouseEventArgs args)
+    public async void OnSearchNext(MouseEventArgs args)
     {
-        Viewer.SearchNext();
+        await Viewer.SearchNextAsync();
     }
 
-    public void OnSearchPrevious(MouseEventArgs args)
+    public async void OnSearchPrevious(MouseEventArgs args)
     {
-        Viewer.SearchPrevious();
+        await Viewer.SearchPreviousAsync();
     }
 
-    public void OnCancelSearch(MouseEventArgs args)
+    public async void OnCancelSearch(MouseEventArgs args)
     {
-        Viewer.CancelTextSearch();
+        await Viewer.CancelTextSearchAsync();
     }
 
 }

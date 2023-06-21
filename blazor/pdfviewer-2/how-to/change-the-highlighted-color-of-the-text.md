@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Change the text highlight color in Blazor SfPdfViewer | Syncfusion
+title: Change the highlight color of the text in Blazor SfPdfViewer Component | Syncfusion
 description: Learn here all about how to change the highlighted color of the text in Syncfusion Blazor SfPdfViewer component.
 platform: Blazor
 control: SfPdfViewer
@@ -18,14 +18,14 @@ The following code illustrates how to change the highlight color of the text.
 @using Syncfusion.Blazor.SfPdfViewer
 
 <!--Render simple PDF Viewer with customized highlight options-->
-<SfPdfViewer2 @ref="PDFViewer" 
-             DocumentPath="@DocumentPath" >
-    <PdfViewerHighlightSettings Color="@highlightColor"></PdfViewerHighlightSettings>
+<SfPdfViewer2 @ref="PDFViewer"
+              DocumentPath="@DocumentPath">
+    <PdfViewerHighlightSettings Color="@highlightColor">
+    </PdfViewerHighlightSettings>
 </SfPdfViewer2>
 
 @code{
     SfPdfViewer2 PDFViewer;
-
     //Sets the PDF document path for initial loading.
     private string DocumentPath { get; set; } = "Data/PDF_Succinctly.pdf";
 
@@ -34,6 +34,6 @@ The following code illustrates how to change the highlight color of the text.
 
 }
 ```
-![Highlight Text in Blazor PDFViewer](../../pdfviewer-2/images/HighlightText.png)
+![Highlight Text in Blazor PDFViewer](../../pdfviewer/images/HighlightText.png)
 
-N> [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Annotations/Text%20Markup/Customize%20highlight%20annotation-SfPdfViewer).
+[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Annotations/Text%20Markup/Customize%20highlight%20annotation-SfPdfViewer).
