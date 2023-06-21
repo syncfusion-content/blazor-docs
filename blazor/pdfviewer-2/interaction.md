@@ -26,13 +26,14 @@ You can enable or disable text selection by setting the `EnableTextSelection` pr
 
 @using Syncfusion.Blazor.SfPdfViewer
 
-<SfPdfViewer2 DocumentPath="@DocumentPath" Height="100%" Width="100%" EnableTextSelection="true">
+<SfPdfViewer2 DocumentPath="@DocumentPath"
+              Height="100%"
+              Width="100%"
+              EnableTextSelection="true">
 </SfPdfViewer2>
 
 @code{
-
     public string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
-
 }
 ```
 
@@ -46,9 +47,11 @@ You can change the interaction mode of SfPdfViewer using the `InteractionMode` p
 
 @using Syncfusion.Blazor.SfPdfViewer
 
-<SfPdfViewer2 DocumentPath="@DocumentPath" Height="100%" Width="100%" InteractionMode="InteractionMode.Pan">
+<SfPdfViewer2 DocumentPath="@DocumentPath"
+              Height="100%"
+              Width="100%"
+              InteractionMode="InteractionMode.Pan">
 </SfPdfViewer2>
-
 @code{
     public string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
 }
@@ -66,12 +69,12 @@ The following code illustrates how to disable the annotation interaction.
 @using Syncfusion.Blazor.SfPdfViewer
 
 <SfButton OnClick="@OnClick">Lock Annotation</SfButton>
-<SfPdfViewer2 @ref="viewer" DocumentPath="@DocumentPath">
+<SfPdfViewer2 @ref="viewer"
+              DocumentPath="@DocumentPath">
 </SfPdfViewer2>
 
 @code {
     SfPdfViewer2 viewer;
-
     private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
 
     public async void OnClick(MouseEventArgs args)

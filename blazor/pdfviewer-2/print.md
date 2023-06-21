@@ -15,12 +15,13 @@ The SfPdfViewer supports printing the loaded PDF file by default. You can enable
 
 @using Syncfusion.Blazor.SfPdfViewer
 
-<SfPdfViewer2 Height="100%" Width="100%" DocumentPath="@DocumentPath" EnablePrint="true" />
+<SfPdfViewer2 Height="100%"
+              Width="100%"
+              DocumentPath="@DocumentPath"
+              EnablePrint="true" />
 
 @code{
-    
     public string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
-    
 }
 
 ```
@@ -30,21 +31,22 @@ The SfPdfViewer supports printing the loaded PDF file by default. You can enable
 
 ```cshtml
 
-@using Syncfusion.Blazor.PdfViewerServer
+@using Syncfusion.Blazor.SfPdfViewer
 @using Syncfusion.Blazor.Buttons
 
 <SfButton OnClick="OnClick">Print</SfButton>
-<SfPdfViewerServer Width="1060px" Height="500px" DocumentPath="@DocumentPath" @ref="@Viewer"/>
+<SfPdfViewer2 Width="100%"
+              Height="100%"
+              DocumentPath="@DocumentPath"
+              @ref="@Viewer" />
 
 @code{
-
-    SfPdfViewerServer Viewer;
-
+    SfPdfViewer2 Viewer;
     public string DocumentPath { get; set; } = "wwwroot/data/PDF_Succinctly.pdf";
 
-    public void OnClick(MouseEventArgs args)
+    public async void OnClick(MouseEventArgs args)
     {
-        Viewer.Print();
+        await Viewer.PrintAsync();
     }
 }
 
