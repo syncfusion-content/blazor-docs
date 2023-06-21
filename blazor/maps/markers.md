@@ -326,6 +326,7 @@ The latitude and longitude values are used to determine the location of each mar
 The markers on the map can be dragged and dropped to change their position. To enable marker drag and drop, set the [EnableDrag]() property to **true** in the `MapsMarker` setting.
 
 ```cshtml
+
 @using Syncfusion.Blazor.Maps
 
 <SfMaps>
@@ -341,6 +342,7 @@ The markers on the map can be dragged and dropped to change their position. To e
         </MapsLayer>
     </MapsLayers>
 </SfMaps>
+
 @code {
     public class City
     {
@@ -349,13 +351,12 @@ The markers on the map can be dragged and dropped to change their position. To e
         public string Name { get; set; }
     };
     public List<City> MarkerDataSource = new List<City> {
-        new City {Latitude=49.95121990866204,Longitude=18.468749999999998, Name = "MarkerOne"},
-        new City {Latitude=59.88893689676585,Longitude= -109.3359375, Name = "MarkerTwo"},
-        new City {Latitude=-6.64607562172573,Longitude=-55.54687499999999, Name = "MarkerThree"},
-        new City {Latitude=23.644385824912135,Longitude=77.83189239539234, Name = "MarkerFour"},
-        new City {Latitude=63.66569332894224,Longitude= 98.2225173953924, Name = "MarkerFive"}
+        new City {Latitude=49.95121990866204,Longitude=18.468749999999998, Name = "Marker 1"},
+        new City {Latitude=59.88893689676585,Longitude= -109.3359375, Name = "Marker 2"},
+        new City {Latitude=-6.64607562172573,Longitude=-55.54687499999999, Name = "Marker 3"},
+        new City {Latitude=23.644385824912135,Longitude=77.83189239539234, Name = "Marker 4"},
+        new City {Latitude=63.66569332894224,Longitude= 98.2225173953924, Name = "Marker 5"}
     };
-   
 }
 ```
 
