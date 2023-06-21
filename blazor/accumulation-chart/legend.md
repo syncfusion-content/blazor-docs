@@ -295,7 +295,7 @@ When the legend items exceed legend bounds, paging will be enabled by default. E
 
 ### Legend Paging Customization
 
-The Legend Page number can be cutomized by setting arrow size , text size and color.
+The Legend Page number Arrow Size can be customized by using ArrowSize API and the page number can be cutomized using TextStyle.
 
 ```cshtml 
 
