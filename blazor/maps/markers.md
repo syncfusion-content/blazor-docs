@@ -361,7 +361,7 @@ The markers on the map can be dragged and dropped to change their position. To e
 
 ![Marker with drag and drop functionality in Blazor Maps](./images/Marker/marker-drag-and-drop.gif)
 
-The data of the drag and dropped marker in the marker data source can be customized using the [MarkerDragStart]() and [MarkerDragEnd]() events. When you change the appropriate marker data, the tooltip and legend item text of that marker are automatically updated. The following properties are available in the event argument of the marker drag events.
+The data of the drag and dropped marker in the marker data source can be customized using the [OnMarkerDragStart]() and [OnMarkerDragEnd]() events. When you change the appropriate marker data, the tooltip and legend item text of that marker are automatically updated. The following properties are available in the event argument of the marker drag events.
 
 |   Argument Name      |   Description                               |
 |----------------------| --------------------------------------------|
@@ -380,11 +380,9 @@ The following example shows how to use marker drag events to customize the data 
 
 @using Syncfusion.Blazor.Maps
 
-
 <SfMaps @ref="maps">
-    <MapsEvents MarkerDragStart="MarkerDragStartEvent" MarkerDragEnd="MarkerDragEndEvent"></MapsEvents>
+    <MapsEvents OnMarkerDragStart="MarkerDragStartEvent" OnMarkerDragEnd="MarkerDragEndEvent"></MapsEvents>
     <MapsLegendSettings Visible="true" Type="LegendType.Markers" Shape="LegendShape.Circle" ShapeWidth="10" ShapeHeight="10" Fill="#FF471A">
-        <MapsLegendShapeBorder Width="2" Color="#285255"></MapsLegendShapeBorder>
     </MapsLegendSettings>
     <MapsLayers>
         <MapsLayer ShapeData='new {dataOptions= "https://cdn.syncfusion.com/maps/map-data/world-map.json"}' TValue="string">
@@ -407,11 +405,11 @@ The following example shows how to use marker drag events to customize the data 
         public string Name { get; set; }
     };
     public List<City> MarkerDataSource = new List<City> {
-        new City {Latitude=49.95121990866204,Longitude=18.468749999999998, Name = "MarkerOne"},
-        new City {Latitude=59.88893689676585,Longitude= -109.3359375, Name = "MarkerTwo"},
-        new City {Latitude=-6.64607562172573,Longitude=-55.54687499999999, Name = "MarkerThree"},
-        new City {Latitude=23.644385824912135,Longitude=77.83189239539234, Name = "MarkerFour"},
-        new City {Latitude=63.66569332894224,Longitude= 98.2225173953924, Name = "MarkerFive"}
+        new City {Latitude=49.95121990866204,Longitude=18.468749999999998, Name = "Europe"},
+        new City {Latitude=59.88893689676585,Longitude= -109.3359375, Name = "North America"},
+        new City {Latitude=-6.64607562172573,Longitude=-55.54687499999999, Name = "Sout America"},
+        new City {Latitude=23.644385824912135,Longitude=77.83189239539234, Name = "India"},
+        new City {Latitude=63.66569332894224,Longitude= 98.2225173953924, Name = "China"}
     };
 
     public void MarkerDragStartEvent(MarkerDragStartEventArgs args)
@@ -422,11 +420,10 @@ The following example shows how to use marker drag events to customize the data 
     public void MarkerDragEndEvent(MarkerDragEndEventArgs args)
     {
         // When the marker on the map stops dragging, the event is triggered.
-        MarkerDataSource[args.DataIndex].Name = "Dragged Marker " + (args.DataIndex + 1);
+        MarkerDataSource[args.DataIndex].Name = "Australia";
         maps.Refresh();
 
     }
-
 }
 ```
 

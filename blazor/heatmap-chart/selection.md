@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Selection in Blazor HeatMap Chart Component | Syncfusion
-description: Checkout and learn here all about Selection in Syncfusion Blazor HeatMap Chart component and much more.
+description: Checkout and learn here all about selection in Syncfusion Blazor HeatMap Chart component and much more.
 platform: Blazor
 control: HeatMap Chart
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Selection in Blazor HeatMap Chart Component
 
-In the [Blazor HeatMap Chart](https://www.syncfusion.com/blazor-components/blazor-heatmap-chart), the cell selection is used to select the single or multiple HeatMap cells at runtime and get the selected cell details using the [CellSelected](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapEvents.html#Syncfusion_Blazor_HeatMap_HeatMapEvents_CellSelected) event. You can enable the cell selection using the [AllowSelection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.SfHeatMap-1.html#Syncfusion_Blazor_HeatMap_SfHeatMap_1_AllowSelection) property.
+In the [Blazor HeatMap Chart](https://www.syncfusion.com/blazor-components/blazor-heatmap-chart), the cell selection is used to select single or multiple cells at runtime and get the selected cell details using the [CellSelected](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapEvents.html#Syncfusion_Blazor_HeatMap_HeatMapEvents_CellSelected) event. You can enable the cell selection using the [AllowSelection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.SfHeatMap-1.html#Syncfusion_Blazor_HeatMap_SfHeatMap_1_AllowSelection) property.
 
 The HeatMap cells can be selected using the following interactions, as shown in the table below.
 
@@ -64,7 +64,7 @@ The illustration below shows how to select multiple cells in the HeatMap by clic
 
 ## Enable single cell selection
 
-In the HeatMap, the [EnableMultiSelect]() property is used to allow single cell selection. When you set the `EnableMultiSelect` property to **false**, only one cell is selected. By default, `EnableMultiSelect` property is set to **true**.
+In the HeatMap, the [EnableMultiSelect]() property is used to enable and carry out single cell selection. When you set the `EnableMultiSelect` property to **false**, only one cell is selected at a time. By default, `EnableMultiSelect` property is set to **true**.
 
 ```cshtml
 
@@ -98,11 +98,11 @@ In the HeatMap, the [EnableMultiSelect]() property is used to allow single cell 
 }
 
 ```
-![Single cell selection in Blazor HeatMap chart](images/blazor-heatmap-chart-single-cell-selection.gif)
+![Single cell selection in Blazor HeatMap Chart](images/blazor-heatmap-chart-single-cell-selection.gif)
 
-### Clearing the selection
+### Clearing cell selection
 
-The [ClearSelectionAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.SfHeatMap-1.html#Syncfusion_Blazor_HeatMap_SfHeatMap_1_ClearSelectionAsync) method can be used to clear the selected cells. The below example illustrates the same.
+The [ClearSelectionAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.SfHeatMap-1.html#Syncfusion_Blazor_HeatMap_SfHeatMap_1_ClearSelectionAsync) method can be used to clear all the selected cells. The below example illustrates the same.
 
 ```cshtml
 
@@ -116,7 +116,7 @@ The [ClearSelectionAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
     <HeatMapCellSettings ShowLabel="true" TileType="CellType.Rect"></HeatMapCellSettings>
 </SfHeatMap>
 
-<button @onclick="ClearSelection"> Clear Selection</button>
+<button @onclick="ClearSelection">Clear Selection</button>
 
 @code {
     SfHeatMap<int[,]> Heatmap;
@@ -142,4 +142,4 @@ The [ClearSelectionAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
 
 ```
 
-![Clear cell selection method in Blazor HeatMap Chart](images/blazor-heatmap-chart-clear-selection-method.gif)
+![Clearing cell selection in Blazor HeatMap Chart](images/blazor-heatmap-chart-clear-selection-method.gif)
