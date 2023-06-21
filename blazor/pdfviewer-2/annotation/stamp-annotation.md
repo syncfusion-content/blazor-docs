@@ -70,8 +70,12 @@ After editing the default opacity using the Edit Opacity tool, they will be chan
     SfPdfViewer2 viewer;
 
     //Defines the settings of rectangle annotation.
-    PdfViewerStampSettings StampSettings = new PdfViewerStampSettings { Opacity = 0.3,
-    Author = "Blazor" };
+    PdfViewerStampSettings StampSettings = new PdfViewerStampSettings
+        {
+            Opacity = 0.3,
+            Author = "Blazor"
+        };
+}
 }
 ```
 
@@ -88,13 +92,13 @@ The following code illustrates how to add the image as a stamp annotation in the
 
 <SfToolbar>
     <ToolbarItems>
-        <ToolbarItem PrefixIcon="e-pv-previous-page-navigation-icon" TooltipText="Previous Page" id="previousPage" OnClick="@previousClicked" Align=@Syncfusion.Blazor.Navigations.ItemAlign.Left>
+        <ToolbarItem PrefixIcon="e-pv-previous-page-navigation-icon" TooltipText="Previous Page" id="previousPage" OnClick="@previousClicked" Align="@Syncfusion.Blazor.Navigations.ItemAlign.Left">
         </ToolbarItem>
-        <ToolbarItem PrefixIcon="e-pv-next-page-navigation-icon" TooltipText="Next Page" id="nextPage"  OnClick="@nextClicked" Align=@Syncfusion.Blazor.Navigations.ItemAlign.Left>
+        <ToolbarItem PrefixIcon="e-pv-next-page-navigation-icon" TooltipText="Next Page" id="nextPage"  OnClick="@nextClicked" Align="@Syncfusion.Blazor.Navigations.ItemAlign.Left">
         </ToolbarItem>       
-        <ToolbarItem PrefixIcon="e-pv-download-document-icon" TooltipText="Download" id="Download"  OnClick="@downloadDocument" Align=@Syncfusion.Blazor.Navigations.ItemAlign.Right>
+        <ToolbarItem PrefixIcon="e-pv-download-document-icon" TooltipText="Download" id="Download"  OnClick="@downloadDocument" Align="@Syncfusion.Blazor.Navigations.ItemAlign.Right">
         </ToolbarItem>
-        <ToolbarItem PrefixIcon="e-pv-stamp-icon" TooltipText="AddCustomStamp" id="AddCustomStamp"  OnClick="@stampClicked" Align=@Syncfusion.Blazor.Navigations.ItemAlign.Right>
+        <ToolbarItem PrefixIcon="e-pv-stamp-icon" TooltipText="AddCustomStamp" id="AddCustomStamp"  OnClick="@stampClicked" Align="@Syncfusion.Blazor.Navigations.ItemAlign.Right">
         </ToolbarItem>
     </ToolbarItems>
 </SfToolbar>

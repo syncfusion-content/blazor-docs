@@ -114,17 +114,40 @@ The properties of the shape annotations can be set before creating the control u
     SfPdfViewer2 viewer;
     private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
 
-    PdfViewerLineSettings LineSettings = new PdfViewerLineSettings { FillColor = "blue", Opacity = 0.6, StrokeColor = "green" };
+    PdfViewerLineSettings LineSettings = new PdfViewerLineSettings
+        {
+            FillColor = "blue",
+            Opacity = 0.6,
+            StrokeColor = "green"
+        };
 
-    PdfViewerArrowSettings ArrowSettings = new PdfViewerArrowSettings { FillColor = "green", Opacity = 0.6, StrokeColor = "blue" };
+     PdfViewerArrowSettings ArrowSettings = new PdfViewerArrowSettings
+        {
+            FillColor = "green",
+            Opacity = 0.6,
+            StrokeColor = "blue"
+        };
 
-    PdfViewerRectangleSettings RectangleSettings = new PdfViewerRectangleSettings { FillColor = "yellow", Opacity = 0.6, StrokeColor = "orange" };
+    PdfViewerRectangleSettings RectangleSettings = new PdfViewerRectangleSettings
+        {
+            FillColor = "yellow",
+            Opacity = 0.6,
+            StrokeColor = "orange"
+        };
 
-    PdfViewerCircleSettings CircleSettings = new PdfViewerCircleSettings { FillColor = "orange", 
-    Opacity = 0.6, StrokeColor = "pink" };
+    PdfViewerCircleSettings CircleSettings = new PdfViewerCircleSettings
+        {
+            FillColor = "orange",
+            Opacity = 0.6,
+            StrokeColor = "pink"
+        };
 
-    PdfViewerPolygonSettings PolygonSettings = new PdfViewerPolygonSettings { FillColor = "pink", 
-    Opacity = 0.6, StrokeColor = "yellow" };
+    PdfViewerPolygonSettings PolygonSettings = new PdfViewerPolygonSettings
+        {
+            FillColor = "pink",
+            Opacity = 0.6,
+            StrokeColor = "yellow"
+        };
 }
 
 ```

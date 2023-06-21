@@ -1272,13 +1272,13 @@ SfPdfViewer2
 <li><a href="#syncfusionblazornotifications">Syncfusion.Blazor.Notifications</a></li>
 <li><a href="#syncfusionblazorpopups">Syncfusion.Blazor.Popups</a></li>
 <li><a href="#syncfusionblazorsplitbuttons">Syncfusion.Blazor.SplitButtons</a></li>
-<li><a href="">Syncfusion.SfPdfViewer.AspNet.Core</li>
+<li><a href="https://www.nuget.org/packages/Syncfusion.SfPdfViewer.AspNet.Core/">Syncfusion.SfPdfViewer.AspNet.Core</li>
 </ul>
 </td>
 </tr>
 </table>
 
-N> For developing Linux or Mac (OSX) operating system, use the following library:
+N> For developing Linux or Mac (OSX) operating system, use the following common library:
 <br/> * Use [Syncfusion.Blazor.SfPdfViewer](https://www.nuget.org/packages/Syncfusion.Blazor.SfPdfViewer)
 
 ### Syncfusion.Blazor.PivotTable
