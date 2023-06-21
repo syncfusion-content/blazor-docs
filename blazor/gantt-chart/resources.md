@@ -13,7 +13,7 @@ In [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gant
 
 ## Resource collection
 
-The resource collection contains details about resources that are used in the project. Resources are a list of TResources objects that contain id, name, and unit of the resources, and this collection is mapped to the Gantt Chart component using the [GanttResourceFields.Resources](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttResourceFields-1.html#Syncfusion_Blazor_Gantt_GanttResourceFields_1_Resources) property. Id, name, and unit field of the resources are mapped by using the `GanttResourceFields.Id`, `GanttResourceFields.Name`, and `GanttResourceFields.Unit` properties. The following code snippets show resource collection and how it is assigned to the Gantt Chart component.
+The resource collection contains details about resources that are used in the project. Resources are a list of TResources objects that contain id, name, unit and group of the resources, and this collection is mapped to the Gantt Chart component using the [GanttResourceFields.Resources](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttResourceFields-1.html#Syncfusion_Blazor_Gantt_GanttResourceFields_1_Resources) property. Id, name, and unit field of the resources are mapped by using the `GanttResourceFields.Id`, `GanttResourceFields.Name`, `GanttResourceFields.Unit` and `GanttResourceFields.Group` properties. The following code snippets show resource collection and how it is assigned to the Gantt Chart component.
 
 ```cshtml
 @using Syncfusion.Blazor.Gantt
@@ -29,7 +29,7 @@ The resource collection contains details about resources that are used in the pr
         <GanttColumn Field="StartDate" HeaderText="Start Date"></GanttColumn>
         <GanttColumn Field="EndDate" HeaderText="End Date"></GanttColumn>
     </GanttColumns>
-    <GanttResourceFields Resources="@ResourceCollection" Id="ResourceId" Name="ResourceName" Unit="Unit" TResources="ResourceAlloacteData"></GanttResourceFields>
+    <GanttResourceFields Resources="@ResourceCollection" Id="ResourceId" Name="ResourceName" Unit="Unit" Group ="Group" TResources="ResourceAlloacteData"></GanttResourceFields>
     <GanttLabelSettings RightLabel="Resources" TValue="TaskData"></GanttLabelSettings>
 </SfGantt>
 
@@ -50,6 +50,7 @@ The resource collection contains details about resources that are used in the pr
         public int ResourceId { get; set; }
         public string ResourceName { get; set; }
         public double Unit { get; set; }
+        public string Group { get; set;}
     }
     public static List<ResourceAlloacteData> GetResources = new List<ResourceAlloacteData>()
     {
@@ -84,7 +85,7 @@ The resource collection contains details about resources that are used in the pr
             new TaskData() { TaskId = 1, TaskName = "Project initiation", StartDate = new DateTime(2022, 03, 28), EndDate = new DateTime(2022, 07, 28), Duration="4" },
             new TaskData() { TaskId = 2, TaskName = "Identify Site location", StartDate = new DateTime(2022, 03, 29), Progress = 30, ParentId = 1, Duration="2", Resources = new List<ResourceAlloacteData>(){ new ResourceAlloacteData() { ResourceId=1, Unit=70} ,new ResourceAlloacteData() { ResourceId=6} } },
             new TaskData() { TaskId = 3, TaskName = "Perform soil test", StartDate = new DateTime(2022, 03, 29), Resources = new List<ResourceAlloacteData>(){ new ResourceAlloacteData() { ResourceId=2} ,new ResourceAlloacteData() { ResourceId=3} }, ParentId = 1, Duration="4" },
-            new TaskData() { TaskId = 4, TaskName = "Soil test approval", StartDate = new DateTime(2022, 03, 29), Duration = "1", Progress = 30, ParentId = 1, Resources = new List<ResourceAlloacteData>(){ new ResourceAlloacteData() { ResourceId=8} ,new ResourceAlloacteData() { ResourceId=9} } },
+            new TaskData() { TaskId = 4, TaskName = "Soil test approval", StartDate = new DateTime(2022, 03, 29), Duration = "1", Progress = 30, ParentId = 1, Resources = new List<ResourceAlloacteData>(){ new ResourceAlloacteData() { ResourceId=8} ,new ResourceAlloacteData() { ResourceId=9, Group = "Rose Fuller"} } },
             new TaskData() { TaskId = 5, TaskName = "Project estimation", StartDate = new DateTime(2022, 03, 29), EndDate = new DateTime(2022, 04, 2), Duration="4" },
             new TaskData() { TaskId = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2022, 03, 29), Duration = "3", Progress = 30, ParentId = 5, Resources = new List<ResourceAlloacteData>(){ new ResourceAlloacteData() { ResourceId=4} } },
             new TaskData() { TaskId = 7, TaskName = "List materials", StartDate = new DateTime(2022, 04, 01), Duration = "3", Progress = 30, ParentId = 5, Resources = new List<ResourceAlloacteData>(){ new ResourceAlloacteData() { ResourceId=4},new ResourceAlloacteData() { ResourceId=8} }, },
@@ -139,7 +140,7 @@ The following code snippet shows how to assign the resource for each task and ma
         <GanttColumn Field="StartDate" HeaderText="Start Date"></GanttColumn>
         <GanttColumn Field="EndDate" HeaderText="End Date"></GanttColumn>
     </GanttColumns>
-    <GanttResourceFields Resources="@ResourceCollection" Id="ResourceId" Name="ResourceName" Unit="Unit" TResources="ResourceAlloacteData"></GanttResourceFields>
+    <GanttResourceFields Resources="@ResourceCollection" Id="ResourceId" Name="ResourceName" Unit="Unit"  Group="Group" TResources="ResourceAlloacteData"></GanttResourceFields>
     <GanttLabelSettings RightLabel="Resources" TValue="TaskData"></GanttLabelSettings>
 </SfGantt>
 
@@ -160,6 +161,7 @@ The following code snippet shows how to assign the resource for each task and ma
         public int ResourceId { get; set; }
         public string ResourceName { get; set; }
         public double Unit { get; set; }
+        public string Group { get; set; }
     }
     public static List<ResourceAlloacteData> GetResources = new List<ResourceAlloacteData>()
     {
@@ -228,7 +230,7 @@ By using cell editing or dialog editing, you can add/remove the resource for par
         <GanttColumn Field="EndDate" HeaderText="End Date"></GanttColumn>
     </GanttColumns>
     <GanttEditSettings AllowEditing="true"></GanttEditSettings>
-    <GanttResourceFields Resources="@ResourceCollection" Id="ResourceId" Name="ResourceName" Unit="Unit" TResources="ResourceAlloacteData"></GanttResourceFields>
+    <GanttResourceFields Resources="@ResourceCollection" Id="ResourceId" Name="ResourceName" Unit="Unit" Group="Group" TResources="ResourceAlloacteData"></GanttResourceFields>
     <GanttLabelSettings RightLabel="Resources" TValue="TaskData"></GanttLabelSettings>
 </SfGantt>
 
@@ -249,6 +251,7 @@ By using cell editing or dialog editing, you can add/remove the resource for par
         public int ResourceId { get; set; }
         public string ResourceName { get; set; }
         public double Unit { get; set; }
+        public string Group { get; set; }
     }
     public static List<ResourceAlloacteData> GetResources = new List<ResourceAlloacteData>()
     {

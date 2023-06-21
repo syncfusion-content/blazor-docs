@@ -29,7 +29,7 @@ You can create **Blazor Server App** or **Blazor WebAssembly App** using Visual 
 
 * [Create a Project using Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?pivots=windows&view=aspnetcore-7.0)
 
-* [Create a Project using Syncfusion Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project)
+* [Create a Project using Syncfusion Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio)
 
 ## Install Syncfusion Blazor RichTextEditor NuGet in the App
 
@@ -283,7 +283,7 @@ N> Syncfusion recommends to reference scripts using [Static Web Assets](https://
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to run the application. Then, the RichTextEditor component will be rendered in the default web browser.
 
-![Blazor RichTextEditor Component](./images/blazor-richtexteditor.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hNVgZnszBESzAdok?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Configure the Toolbar
 
@@ -350,7 +350,7 @@ Configure the toolbar with the tools using [RichTextEditorToolbarSettings.Items]
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor RichTextEditor with Toolbar](./images/blazor-richtexteditor-toolbar.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BXVAjRCJhEuXkIMV?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/RichTextEditor).
 

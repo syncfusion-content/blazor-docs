@@ -112,4 +112,4 @@ The following code illustrates how to load PDF document on created event.
 }
 
 ```
-N> [View sample in GitHub]()
+[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Load%20and%20Save/Load%20a%20PDF%20document%20using%20created%20event-SfPdfViewer)

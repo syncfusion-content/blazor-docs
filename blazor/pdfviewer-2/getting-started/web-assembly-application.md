@@ -39,6 +39,8 @@ To add Blazor `SfPdfViewer` component in Blazor WebAssembly App,
 
 * Install [SkiaSharp.NativeAssets.WebAssembly](https://www.nuget.org/packages/SkiaSharp.NativeAssets.WebAssembly) NuGet package as a reference to your Blazor application from NuGet.org.
 
+N> If you encounter issues while attempting to host the application in certain environments, such as Azure app services, install [SkiaSharp.Views.Blazor](https://www.nuget.org/packages/SkiaSharp.Views.Blazor) instead of [SkiaSharp.NativeAssets.WebAssembly](https://www.nuget.org/packages/SkiaSharp.NativeAssets.WebAssembly) Nuget package.
+
 * Add the following ItemGroup tag in the Blazor WebAssembly csproj file.
 
 {% tabs %}
@@ -130,8 +132,10 @@ Refer script in the `<head>` of the **~/index.html** file.
 {% highlight html tabtitle="~/index.html" hl_lines="3" %}
 
 <head>
+    <!-- Syncfusion Blazor SfPdfViewer controls theme style sheet -->
     <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
-    <script src="_content/Syncfusion.Blazor.PdfViewer/scripts/syncfusion-blazor-sfpdfviewer.min.js" type="text/javascript"></script>
+    <!-- Syncfusion Blazor SfPdfViewer controls scripts -->
+    <script src="_content/Syncfusion.Blazor.SfPdfViewer/scripts/syncfusion-blazor-sfpdfviewer.min.js" type="text/javascript"></script>
 </head>
 
 {% endhighlight %}
@@ -167,4 +171,10 @@ Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (m
 
 ![Blazor SfPdfViewer Component](GettingStarted_images/blazor-pdfviewer.png)
 
->[View Sample in GitHub]().
+>[View Sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Getting%20Started/Client-side%20application-SfPdfViewer).
+
+## See also
+
+* [Getting Started with Blazor SfPdfViewer Component in Blazor Server App](./server-side-application)
+
+* [Getting Started with Blazor SfPdfViewer Component in WSL mode](./wsl-application)
