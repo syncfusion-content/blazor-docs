@@ -127,7 +127,7 @@ In the following code example, there are two tabs. The first tab have a login pa
 }
 ```
 
-> In this mode, if you want to maintain the state, you have to handle it in application end.
+N> In this mode, if you want to maintain the state, you have to handle it in application end.
 
 ## On Demand rendering or lazy loading
 

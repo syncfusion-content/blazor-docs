@@ -7,7 +7,7 @@ control: Diagram
 documentation: ug
 ---
 
-> Syncfusion recommends using [Blazor Diagram Component](https://blazor.syncfusion.com/documentation/diagram/getting-started) which provides better performance than this diagram control. Blazor Diagram Component will be actively developed in the future.
+N> Syncfusion recommends using [Blazor Diagram Component](https://blazor.syncfusion.com/documentation/diagram/getting-started) which provides better performance than this diagram control. Blazor Diagram Component will be actively developed in the future.
 
 # Positioning in Blazor Diagram Component
 
@@ -127,7 +127,7 @@ The following code shows how to provide the mirror image of the original element
 
 ![Node Flip](../images/Vertical_Flip.png)
 
-> The flip is also applicable for group and BPMN shapes.
+N> The flip is also applicable for group and BPMN shapes.
 
 ## See also
 

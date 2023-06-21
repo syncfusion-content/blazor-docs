@@ -11,7 +11,7 @@ documentation: ug
 
 A column template is used to customize the column’s look. The following code example explains how to define the custom template in Gantt Chart using the `Template` property.
 
-> The column template feature is used to render the customized element value in the UI for a particular column. The data operations like filtering, sorting, etc., will not work based on the column template values. It will be handled based on the values you have provided to the particular column in the datasource.
+N> The column template feature is used to render the customized element value in the UI for a particular column. The data operations like filtering, sorting, etc., will not work based on the column template values. It will be handled based on the values you have provided to the particular column in the datasource.
 
 
 ```cshtml

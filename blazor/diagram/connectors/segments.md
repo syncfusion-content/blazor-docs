@@ -11,7 +11,7 @@ documentation: ug
 
 The path of the connector is defined with a collection of segments. There are three types of segments.
 
-## Straight
+## How to create straight segment
 
 To create a straight line, specify the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Connector.html#Syncfusion_Blazor_Diagram_Connector_Type) of the segment as [Straight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ConnectorSegmentType.html#Syncfusion_Blazor_Diagram_ConnectorSegmentType_Straight) and add a straight segment to [Segments](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Connector.html#Syncfusion_Blazor_Diagram_Connector_Segments) collection and need to specify Type for the connector. The following code example illustrates how to create a default straight segment.
 
@@ -55,10 +55,11 @@ To create a straight line, specify the [Type](https://help.syncfusion.com/cr/bla
     }
 }
 ```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Segments)
 
 ![Connector with Straight Segment in Blazor Diagram](../images/blazor-diagram-connector-with-straight-segment.png)
 
-## Orthogonal
+## How to create orthogonal segment
 
 Orthogonal segments are used to create segments that are perpendicular to each other. Set the segment Type as [Orthogonal](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ConnectorSegmentType.html#Syncfusion_Blazor_Diagram_ConnectorSegmentType_Orthogonal) to create a default orthogonal segment and need to specify Type. The following code example illustrates how to create a default orthogonal segment.
 
@@ -102,6 +103,7 @@ Orthogonal segments are used to create segments that are perpendicular to each o
     }
 }
 ```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Segments)
 
 The [Length](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.OrthogonalSegment.html#Syncfusion_Blazor_Diagram_OrthogonalSegment_Length) and [Direction](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.OrthogonalSegment.html#Syncfusion_Blazor_Diagram_OrthogonalSegment_Direction) properties allow to define the flow and length of segment. The following code example illustrates how to create customized orthogonal segments.
 
@@ -160,12 +162,13 @@ The [Length](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Ort
     }
 }
 ```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Segments)
 
 ![Connector with Orthogonal Segment in Blazor Diagram](../images/blazor-diagram-connector-with-orthogonal.png)
 
-> You need to mention the segment type as same as what you mentioned in connector type. There should be no contradiction between connector type and segment type.
+N> You need to mention the segment type as same as what you mentioned in connector type. There should be no contradiction between connector type and segment type.
 
-## Bezier
+## How to create bezier segment
 
 Bezier segments are used to create curve segments and the curves are configurable either with the control points or with vectors. To create a bezier segment, the Type of the segment is set as [Bezier](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ConnectorSegmentType.html#Syncfusion_Blazor_Diagram_ConnectorSegmentType_Bezier) and need to specify type for the connector. The following code example illustrates how to create a default bezier segment.
 
@@ -209,6 +212,7 @@ Bezier segments are used to create curve segments and the curves are configurabl
     }
 }
 ```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Segments)
 
 ![Connector with Bezier Segment in Blazor Diagram](../images/blazor-diagram-connector-with-bezier.png)
 
@@ -250,6 +254,7 @@ Connector Connector1 = new Connector()
             }
         };
 ```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Segments)
 
 ## How to create multiple segments
 
@@ -300,6 +305,7 @@ Multiple segments can be defined one after another. To create a connector with m
     }
 }
 ```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Segments)
 
 ![Blazor Diagram with Multiple Segment](../images/blazor-diagram-multiple-segment.png)
 
@@ -321,7 +327,9 @@ Multiple segments can be defined one after another. To create a connector with m
 
 @code
 {
+    //Reference the diagram.
     SfDiagramComponent Diagram;
+    //Initialize the diagram's nodes collection
     DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
 
     protected override void OnInitialized()
@@ -346,6 +354,7 @@ Multiple segments can be defined one after another. To create a connector with m
     }
 }
 ```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Segments)
 
 ![Editing Straight Segment in Blazor Diagram](../images/blazor-diagram-edit-straight-segment.gif)
 
@@ -362,7 +371,9 @@ Multiple segments can be defined one after another. To create a connector with m
 
 @code
 {
+    //Reference the diagram
     SfDiagramComponent Diagram;
+    //Initialize the diagram's node collection.
     DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
 
     protected override void OnInitialized()
@@ -380,6 +391,7 @@ Multiple segments can be defined one after another. To create a connector with m
     }
 }
 ```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Segments)
 
 ![Editing Orthogonal Segment in Blazor Diagram](../images/blazor-diagram-edit-orthogonal-segment.gif)
 

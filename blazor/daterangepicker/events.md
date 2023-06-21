@@ -13,7 +13,7 @@ This section explains the list of events of the DateRangePicker component which 
 
 The events should be provided to the DateRangePicker using **DateRangePickerEvents** component.
 
-> From `v17.2.*` added only the limited number of events for the DateRangePicker component. The event names are different from the previous releases and also removed several events. The following are the event name changes from `v17.1.*` to `v17.2.*`
+N> From `v17.2.*` added only the limited number of events for the DateRangePicker component. The event names are different from the previous releases and also removed several events. The following are the event name changes from `v17.1.*` to `v17.2.*`
 
 Event Name(`v17.1.*`) |Event Name(`v17.2.*`)
 -----|-----
@@ -218,4 +218,4 @@ select |[RangeSelected](events/#rangeselected)
 }
 ```
 
-> Datepicker will be limited with these events and new events will be added in future based on the user requests. If the event you are looking for is not in the list, then request [here](https://www.syncfusion.com/feedback/blazor-components).
+N> Datepicker will be limited with these events and new events will be added in future based on the user requests. If the event you are looking for is not in the list, then request [here](https://www.syncfusion.com/feedback/blazor-components).

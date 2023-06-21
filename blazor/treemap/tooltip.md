@@ -64,7 +64,7 @@ Customize the TreeMap tooltip using the following properties.
 </SfTreeMap>
 ```
 
-> Refer to the [code block](#default-tooltip) to know about the property value of **Fruits**.
+N> Refer to the [code block](#default-tooltip) to know about the property value of **Fruits**.
 
 ![Blazor TreeMap with Custom Tooltip](images/Tooltip/blazor-treemap-custom-tooltip.png)
 
@@ -81,7 +81,7 @@ The tooltip content is displayed by default based on the [WeightValuePath](https
 </SfTreeMap>
 ```
 
-> Refer to the [code block](#default-tooltip) to know about the property value of **Fruits**.
+N> Refer to the [code block](#default-tooltip) to know about the property value of **Fruits**.
 
 ![Changing Tooltip Format in Blazor TreeMap](images/Tooltip/blazor-treemap-tooltip-format.png)
 
@@ -110,6 +110,6 @@ Tooltip can be rendered as a custom component using the [TooltipTemplate](https:
 </SfTreeMap>
 ```
 
-> Refer to the [code block](#default-tooltip) to know about the property value of **Fruits**.
+N> Refer to the [code block](#default-tooltip) to know about the property value of **Fruits**.
 
 ![Blazor TreeMap with Tooltip Template](images/Tooltip/blazor-treemap-tooltip-template.png)

@@ -21,6 +21,7 @@ The [Blazor Toolbar](https://www.syncfusion.com/blazor-components/blazor-toolbar
 * ShowAlwaysInPopup
 * ShowTextOn
 * SuffixIcon
+* TabIndex
 * Template
 * Text
 * TooltipText
@@ -186,7 +187,12 @@ It defines single/multiple classes separated by space used to specify an icon fo
 
 ![Blazor Toolbar displays Icon in Suffix Item](./images/blazor-toolbar-icon-in-suffix-item.png)
 
->you can refer [here](https://blazor.syncfusion.com/documentation/appearance/icons#icon-integration-in-button-component) to integrate the syncfusion icons in toolbar component.
+N>you can refer [here](https://blazor.syncfusion.com/documentation/appearance/icons#icon-integration-in-button-component) to integrate the syncfusion icons in toolbar component.
+
+## TabIndex
+
+The Toolbar supports adding TabIndex commands using the  `TabIndex` property.TabIndex property can be given as the `HTML element`.
+Refer [Tab key navigation toolbar items ](https://blazor.syncfusion.com/documentation/toolbar/how-to/tab-key-navigation-toolbar-items/) for snippet and output. 
 
 ## Template
 
@@ -267,7 +273,7 @@ The `Separator` type adds a vertical separation between the Toolbar's Single/Mul
 </SfToolbar>
 ```
 
-> If `Separator` is added as the first or the last item, it will not be visible.
+N> If `Separator` is added as the first or the last item, it will not be visible.
 
 ![Blazor Toolbar Item with Separator](./images/blazor-toolbar-item-separator.png)
 

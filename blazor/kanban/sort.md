@@ -23,7 +23,7 @@ Initially, users can change the arrangement of cards in the columns and position
 
 The SortBy `DataSourceOrder` property does not require any `Field` mapping. In this behavior, cards are loaded based on the JSON data order, and also cards are dropped based on the JSON data order.
 
-> By default, the `SortBy` property is `DataSourceOrder`.
+N> By default, the `SortBy` property is `DataSourceOrder`.
 
 ```cshtml
 
@@ -91,7 +91,7 @@ SortBy `Index` property must require datasource `Field` mapping. In this behavio
 
 Cards are placed in a particular position in the columns where you can drop the cards by specifying the `Field` property, which is mapped from the data source. This property allows the users to drop the cards in the Kanban board where the dropped clone is created exactly. It is also helpful to render the cards based on the `Field` property value.
 
-> The `Field` property mapping key value must be in `number` format.
+N> The `Field` property mapping key value must be in `number` format.
 
 The following cases will dynamically change their `Field` value when dropping the cards.
 
@@ -260,7 +260,7 @@ The SortBy `Custom` property must require datasource `Field` mapping. In this be
 
 Kanban board also provides support for aligning the cards in the columns using the `Direction` property inside the `KanbanSortSettings` property. Based on this, cards can be aligned in the columns either in `Ascending` or `Descending` order. Sorting direction will be performed based on `SortBy` property.
 
-> By default, cards are aligned in the columns based on `Ascending` order.
+N> By default, cards are aligned in the columns based on `Ascending` order.
 
 In the following sample, cards are aligned in `Descending` order.
 

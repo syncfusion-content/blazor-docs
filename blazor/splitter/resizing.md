@@ -11,7 +11,7 @@ documentation: ug
 
 By default, resizing will be enabled for split panes. Resizing gripper element will be added to the separator to make the resize easy.
 
-> Horizontal splitter allows to resize in horizontal directions. Vertical splitter allows to resize in vertical directions.
+N> Horizontal splitter allows to resize in horizontal directions. Vertical splitter allows to resize in vertical directions.
 
 While resizing, previous and next panes will adjust its dimensions automatically.
 
@@ -72,7 +72,7 @@ Splitter allows to set the minimum and maximum sizes for each pane. Resizing wil
 
 The resizing for the pane can be disabled by setting `false` to the `Resizable` API within `SplitterPane`.
 
-> Splitter resizing will be enabled only when the target of the adjacent pane's `Resizable` api should also be in `true` state.
+N> Splitter resizing will be enabled only when the target of the adjacent pane's `Resizable` api should also be in `true` state.
 
 ```cshtml
 

@@ -24,7 +24,6 @@ You might need to save the document back to the server. The following code examp
 <SfDocumentEditorContainer @ref="container" EnableToolbar=true></SfDocumentEditorContainer>
 
 @code {
-
     SfDocumentEditorContainer container;
 
     public async void OnSave()
@@ -49,7 +48,6 @@ You might need to save the document back to the server. The following code examp
         stream = null;
     }
 }
-
 ```
 
 ## Save document to database
@@ -65,7 +63,6 @@ If you have plenty of documents stored in database and you want to save the comp
 <SfDocumentEditorContainer @ref="container" EnableToolbar="true"></SfDocumentEditorContainer>
 
 @code {
-
     SfDocumentEditorContainer container;
 
     public async void OnSave()

@@ -77,7 +77,7 @@ The legends can be made interactive with an arrow mark that indicates exact rang
 </SfTreeMap>
 ```
 
-> Refer to the [code block](#default-legend) to know about the property value of **Cars**.
+N> Refer to the [code block](#default-legend) to know about the property value of **Cars**.
 
 ![Blazor TreeMap with Interactive Legend](images/Legend/blazor-treemap-interactive-legend.png)
 
@@ -148,7 +148,7 @@ The legend alignment is used to align the legend items in a specific location. T
 </SfTreeMap>
 ```
 
-> Refer to the [code block](#position-and-alignment) to know about the property value of **Fruits**.
+N> Refer to the [code block](#position-and-alignment) to know about the property value of **Fruits**.
 
 ![Changing Legend Alignment in Blazor TreeMap](images/Legend/blazor-treemap-legend-alignment.png)
 

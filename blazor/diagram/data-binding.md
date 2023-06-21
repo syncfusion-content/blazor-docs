@@ -28,7 +28,7 @@ documentation: ug
     1. Local data
     2. Remote data
 
-## Local data
+## How to bind local data with diagram
 
 Diagram can be populated based on the user defined JSON data (Local Data) by mapping the relevant data source fields.
 
@@ -135,7 +135,9 @@ To map the user defined JSON data with diagram, configure the fields of `DataSou
     };
 }
 ```
-## Binding ExpandoObject
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/DataBinding)
+
+## How to bind expandoObject data with diagram
 
 Diagram is a generic component which is strongly bound to a model type. There are cases when the model type is unknown during compile time. In such circumstances data can be bound to the Diagram as a list of **ExpandoObjects**. 
 Diagram can also perform all kind of supported Layout operations in ExpandoObjects such as,
@@ -313,7 +315,9 @@ The following code example illustrates how to bind ExpandoObject data with the d
     }
 }
 ```
-## Binding DynamicObject
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/DataBinding)
+
+##  How to bind dynamicObject data with diagram
 
 Diagram is a generic component which is strongly bound to a model type. There are cases when the model type is unknown during compile time. In such circumstances data can be bound to the Diagram as a list of **DynamicObject**.
 Diagram can also perform all kind of supported Layout operations in DynamicObject such as,
@@ -511,8 +515,9 @@ The following code example illustrates how to bind DynamicObject data with the d
     }
 }
 ```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/DataBinding)
 
-## JSON Data
+## How to bind json data with diagram
 
 Local JSON data can be bound to the Diagram component by assigning the array of objects to the Json property of the SfDataManager component.
 
@@ -579,8 +584,9 @@ The following sample code demonstrates binding local data through the SfDataMana
     }
 }
 ```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/DataBinding)
 
-## Remote data
+## How to bind remote data with diagram
 
 To bind remote data to [Diagram component](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html), assign service data as an instance of [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) to the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DataSourceSettings.html#Syncfusion_Blazor_Diagram_DataSourceSettings_DataSource) property or by using SfDataManager component. To interact with remote data source, provide the endpoint Url.
 
@@ -687,6 +693,7 @@ The ODataV4 is an improved version of OData protocols, and the SfDataManager can
     }
 }
 ```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/DataBinding)
 
 ## See Also
 

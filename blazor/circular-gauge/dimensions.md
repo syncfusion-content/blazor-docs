@@ -39,4 +39,4 @@ By setting value in percentage, gauge gets its dimension with respect to its con
 
 ![Changing Blazor Circular Gauge Size in Percentage](./images/blazor-circulargauge-size.png)
 
-> When you do not specify the size, it takes `450` pixels as the height and window size as its width.
+N> When you do not specify the size, it takes `450` pixels as the height and window size as its width.

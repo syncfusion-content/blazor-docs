@@ -13,7 +13,7 @@ documentation: ug
 
 ## Create bullet list
 
-Bullets are usually used for unordered lists. To apply bulleted list for selected paragraphs, use `ApplyBullet(bullet, fontFamily)` method of `Editor` instance.
+Bullets are usually used for unordered lists. To apply bulleted list for selected paragraphs, use [`ApplyBulletAsync(bullet, fontFamily)`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.EditorModule.html#Syncfusion_Blazor_DocumentEditor_EditorModule_ApplyBulletAsync_System_String_System_String_) method of [`Editor`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.EditorModule.html) instance.
 
 |Parameter|Type|Description|
 |---------|----|-----------|
@@ -28,7 +28,7 @@ documentEditor.Editor.ApplyBulletAsync("\uf0b7", "Symbol");
 
 ## Create numbered list
 
-Numbered lists are usually used for ordered lists. To apply numbered list for selected paragraphs, use `ApplyNumbering(numberFormat,listLevelPattern)` method of `Editor` instance.
+Numbered lists are usually used for ordered lists. To apply numbered list for selected paragraphs, use [`ApplyNumberingAsync(numberFormat,listLevelPattern)`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.EditorModule.html#Syncfusion_Blazor_DocumentEditor_EditorModule_ApplyNumberingAsync_System_String_System_Nullable_Syncfusion_Blazor_DocumentEditor_ListLevelPattern__) method of [`Editor`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.EditorModule.html) instance.
 
 |Parameter|Type|Description|
 |---------|----|-----------|

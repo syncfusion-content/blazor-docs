@@ -77,7 +77,7 @@ The commands placed in the popup can be viewed by opening the popup using the dr
 
 ![Blazor Toolbar with Overflow Dropdown Popup](./images/blazor-toolbar-with-overflow-dropdown-popup.png)
 
-> If the popup content overflows the height of the page, then the rest of the commands will be hidden.
+N> If the popup content overflows the height of the page, then the rest of the commands will be hidden.
 
 ```cshtml
 
@@ -117,7 +117,7 @@ Property     | Description
 
 If primary priority commands also exceed the available space, they are moved to the popup container at the top order position and placed before the secondary priority commands.
 
-> The toolbar item can be maintained on popup always by using the [ShowAlwaysInPopup](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.ToolbarItem.html#Syncfusion_Blazor_Navigations_ToolbarItem_ShowAlwaysInPopup) property, and this behavior is not applicable for toolbar items with [Overflow](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.ToolbarItem.html#Syncfusion_Blazor_Navigations_ToolbarItem_Overflow) property as 'Show'.
+N> The toolbar item can be maintained on popup always by using the [ShowAlwaysInPopup](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.ToolbarItem.html#Syncfusion_Blazor_Navigations_ToolbarItem_ShowAlwaysInPopup) property, and this behavior is not applicable for toolbar items with [Overflow](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.ToolbarItem.html#Syncfusion_Blazor_Navigations_ToolbarItem_Overflow) property as 'Show'.
 
 ### Text mode for buttons
 

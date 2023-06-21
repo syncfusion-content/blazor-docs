@@ -29,7 +29,7 @@ The ValueChange event will trigger when switch state has been changed by user in
 
 ```
 
-> Toggle Switch Button has support for nullable boolean
+N> Toggle Switch Button has support for nullable boolean
 
 ## Native Events
 

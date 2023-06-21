@@ -16,7 +16,7 @@ To use checkbox, inject the `CheckBoxSelection` module in the MultiSelect.
 ```cshtml
 @using Syncfusion.Blazor.DropDowns
 
-<SfMultiSelect TValue="string[]" Placeholder="e.g. Australia" Mode="VisualMode.CheckBox" DataSource="@Countries">
+<SfMultiSelect TItem="Country" TValue="string[]" Placeholder="e.g. Australia" Mode="VisualMode.CheckBox" DataSource="@Countries">
     <MultiSelectFieldSettings Value="Code" Text="Name"></MultiSelectFieldSettings>
 </SfMultiSelect>
 
@@ -65,7 +65,7 @@ For the unSelect All option, by default unSelect All text will show. You can cus
 ```cshtml
 @using Syncfusion.Blazor.DropDowns
 
-<SfMultiSelect TValue="string[]" Placeholder="e.g. Australia" ShowSelectAll=true SelectAllText="Select All" UnSelectAllText="unSelect All" Mode="VisualMode.CheckBox" DataSource="@Countries">
+<SfMultiSelect TItem="Country" TValue="string[]" Placeholder="e.g. Australia" ShowSelectAll=true SelectAllText="Select All" UnSelectAllText="unSelect All" Mode="VisualMode.CheckBox" DataSource="@Countries">
     <MultiSelectFieldSettings Text="Name" Value="Code"></MultiSelectFieldSettings>
 </SfMultiSelect>
 
@@ -110,7 +110,7 @@ For the unSelect All option, by default unSelect All text will show. You can cus
 Defines the limit of the selected items using [MaximumSelectionLength](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMultiSelect-1.html#Syncfusion_Blazor_DropDowns_SfMultiSelect_1_MaximumSelectionLength).
 
 ```cshtml
-<SfMultiSelect TValue="string[]" Placeholder="e.g. Australia" MaximumSelectionLength=3 Mode="VisualMode.CheckBox" DataSource="@Countries">
+<SfMultiSelect TItem="Country" TValue="string[]" Placeholder="e.g. Australia" MaximumSelectionLength=3 Mode="VisualMode.CheckBox" DataSource="@Countries">
     <MultiSelectFieldSettings Text="Name" Value="Code"></MultiSelectFieldSettings>
 </SfMultiSelect>
 
@@ -155,7 +155,7 @@ Defines the limit of the selected items using [MaximumSelectionLength](https://h
 Using [EnableSelectionOrder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMultiSelect-1.html#Syncfusion_Blazor_DropDowns_SfMultiSelect_1_EnableSelectionOrder) to Reorder the selected items in popup visibility state.
 
 ```cshtml
-<SfMultiSelect TValue="string[]" Placeholder="e.g. Australia" EnableSelectionOrder=false  Mode="VisualMode.CheckBox" DataSource="@Countries">
+<SfMultiSelect TItem="Country" TValue="string[]" Placeholder="e.g. Australia" EnableSelectionOrder=false  Mode="VisualMode.CheckBox" DataSource="@Countries">
     <MultiSelectFieldSettings Text="Name" Value="Code"></MultiSelectFieldSettings>
 </SfMultiSelect>
 

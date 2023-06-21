@@ -220,25 +220,6 @@ This section explains the list of events of the File Upload component which will
 }
 ```
 
-## OnFailured
-
-`OnFailured` event triggers when the AJAX request fails on uploading or removing files.
-
-```cshtml
-@using Syncfusion.Blazor.Inputs
-
-<SfUploader>
-    <UploaderEvents OnFailured="@OnFailuredHandler"></UploaderEvents>
-</SfUploader>
-
-@code {
-    private void OnFailuredHandler(FailureEventArgs args)
-    {
-        // Here, you can customize your code.
-    }
-}
-```
-
 ## OnFileListRender
 
 `OnFileListRender` event triggers before rendering each file item from the file list in a page. It helps to customize specific file item structure.
@@ -391,4 +372,4 @@ This section explains the list of events of the File Upload component which will
 }
 ```
 
-> File Upload is limited with these events and new events will be added in the future based on the user requests. If the event you are looking for is not on the list, then request [here](https://www.syncfusion.com/feedback/blazor-components).
+N> File Upload is limited with these events and new events will be added in the future based on the user requests. If the event you are looking for is not on the list, then request [here](https://www.syncfusion.com/feedback/blazor-components).

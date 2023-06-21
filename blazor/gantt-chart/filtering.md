@@ -60,7 +60,7 @@ The [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gan
 
 ![Blazor Gantt Chart with Menu Filter](images/blazor-gantt-chart-menu-filter.png)
 
-> The `AllowFiltering` property should be set to `true` to enable the filter menu. Setting the `GanttColumn.AllowFiltering` property to `false` prevents rendering the filter menu for a particular column.
+N> The `AllowFiltering` property should be set to `true` to enable the filter menu. Setting the `GanttColumn.AllowFiltering` property to `false` prevents rendering the filter menu for a particular column.
 
 ### Filter hierarchy modes
 
@@ -193,7 +193,7 @@ greaterthanorequal|Checks whether the value is greater than or equal to the spec
 lessthan |Checks whether the value is less than the specified value. |Number &#124; Date
 lessthanorequal |Checks whether the value is less than or equal to the specified value. |Number &#124; Date
 
-> By default, the `GanttFilterSettings.Columns.Operator` value is `equal`
+N> By default, the `GanttFilterSettings.Columns.Operator` value is `equal`
 
 ### Diacritics
 

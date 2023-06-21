@@ -7,7 +7,7 @@ control: Diagram
 documentation: ug
 ---
 
-> Syncfusion recommends using [Blazor Diagram Component](https://blazor.syncfusion.com/documentation/diagram/getting-started) which provides better performance than this diagram control. Blazor Diagram Component will be actively developed in the future.
+N> Syncfusion recommends using [Blazor Diagram Component](https://blazor.syncfusion.com/documentation/diagram/getting-started) which provides better performance than this diagram control. Blazor Diagram Component will be actively developed in the future.
 
 # Shapes in Blazor Diagram Component
 
@@ -128,7 +128,7 @@ The following code illustrates how to add Base64 image into image node.
 
 ![Image node](images/base64.jpg)
 
-> Deploy your HTML file in the web application and export the diagram (image node) or else the image node will not be exported in the Chrome and Firefox due to security issues. Refer to the following link.
+N> Deploy your HTML file in the web application and export the diagram (image node) or else the image node will not be exported in the Chrome and Firefox due to security issues. Refer to the following link.
 
 Link 1: [http://stackoverflow.com/questions/4761711/local-image-in-canvas-in-chrome](http://stackoverflow.com/questions/4761711/local-image-in-canvas-in-chrome)
 
@@ -230,7 +230,7 @@ Html elements can be embedded in the diagram through `Html` type node. The shape
 
 ![HTML node](images/Htmlnode.png)
 
-> HTML node cannot be exported to image format, like JPEG, PNG and BMP. It is by design, while exporting the diagram is drawn in a canvas. Further, this canvas is exported into image formats. Currently, drawing in a canvas equivalent from all possible HTML is not feasible. Hence, this limitation.
+N> HTML node cannot be exported to image format, like JPEG, PNG and BMP. It is by design, while exporting the diagram is drawn in a canvas. Further, this canvas is exported into image formats. Currently, drawing in a canvas equivalent from all possible HTML is not feasible. Hence, this limitation.
 
 ## Basic shapes
 
@@ -268,11 +268,11 @@ The following code example illustrates how to create a basic shape.
 }
 ```
 
-> By default, the `Shape` property of the node is set as **basic**.
+N> By default, the `Shape` property of the node is set as **basic**.
 
 Default property for shape is Rectangle.
 
-> When the `Shape` is not set for a basic shape, it is considered as a **rectangle**.
+N> When the `Shape` is not set for a basic shape, it is considered as a **rectangle**.
 
 The list of basic shapes are as follows.
 

@@ -102,7 +102,7 @@ Component |Example
 }
 ```
 
-> If edit type is not defined in the column, then it will be considered as the **StringEdit** type (Textbox component).
+N> If edit type is not defined in the column, then it will be considered as the **StringEdit** type (Textbox component).
 
 ### Cell edit template
 

@@ -1,0 +1,10 @@
+﻿@using Syncfusion.Blazor.Calendars
+
+<p>Time : @Value</p>
+    
+<SfTimePicker TValue="TimeOnly" @bind-Value="@Value" ></SfTimePicker>
+
+@code
+{
+    public TimeOnly Value { get; set; } = new TimeOnly(12, 00, 00);
+}

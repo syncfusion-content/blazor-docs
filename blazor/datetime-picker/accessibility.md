@@ -75,7 +75,7 @@ Use the following shortcut keys to interact with the TimePicker after the TimePi
 | <kbd>Alt + Down Arrow</kbd> | Opens the popup. |
 | <kbd>Esc</kbd> | Closes the popup. |
 
-> To focus out the DateTimePicker component, use the `t` keys. For additional information about native event, [click](./native-events/) here.
+N> To focus out the DateTimePicker component, use the `t` keys. For additional information about native event, [click](./native-events/) here.
 
 ```cshtml
 @using Syncfusion.Blazor.Calendars

@@ -190,4 +190,4 @@ body .e-upload-drag-hover {
 
 ![Customizing Drop Area in Blazor FileUpload](./images/blazor-fileupload-drop-area-customization.png)
 
-> You can also explore our [Blazor File Upload example](https://blazor.syncfusion.com/demos/file-upload/default-functionalities/) to understand how to browse the files which you want to upload to the server.
+N> You can also explore our [Blazor File Upload example](https://blazor.syncfusion.com/demos/file-upload/default-functionalities/) to understand how to browse the files which you want to upload to the server.

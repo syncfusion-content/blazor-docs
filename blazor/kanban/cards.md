@@ -15,7 +15,7 @@ The cards are main elements in the [Blazor Kanban Board](https://www.syncfusion.
 
 The card header is achieved by mapping the `HeaderField` property, which is placed inside the `KanbanCardSettings` property. By default, the `ShowHeader` property is enabled by Kanban board that is used to show the header at the top of the card.
 
-> The `HeaderField` property must be a unique datasource value to avoid the duplication of card data.
+N> The `HeaderField` property must be a unique datasource value to avoid the duplication of card data.
 
 In the following demo, the `ShowHeader` property is disabled on Kanban board.
 
@@ -87,7 +87,7 @@ The card's content is fetched from data source using the `ContentField` property
 
 The card tags are used to display the tag text with the background color. Each tag text is separated and shown below the card content. It can be achieved by mapping the data key to the `TagsField` property, which is placed inside the `KanbanCardSettings` property.
 
-> The mapped datasource key value contains single or multiple tags. If it is multiple tags, each tag will be separated by a comma in the datasource.
+N> The mapped datasource key value contains single or multiple tags. If it is multiple tags, each tag will be separated by a comma in the datasource.
 
 ```cshtml
 
@@ -152,7 +152,7 @@ The card tags are used to display the tag text with the background color. Each t
 
 Kanban card supports to custom the left border color for all the cards. This can be achieved by mapping the data key value to the `GrabberField` property, which is placed inside the `KanbanCardSettings` property. The mapped data key value will be directly assigned to each card element border left color property.
 
-> By default, the card border left color width is `3px`.
+N> By default, the card border left color width is `3px`.
 
 ```cshtml
 

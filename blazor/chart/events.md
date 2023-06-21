@@ -13,7 +13,7 @@ In this section, we have provided a list of chart component events that will be 
 
 The events should be provided to the chart using [ChartEvents](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html) component.
 
-> From `v18.4.*`, we have added few additional events for the chart component.
+N> From `v18.4.*`, we have added few additional events for the chart component.
 
 Event Name|
 -----|
@@ -27,7 +27,7 @@ Event Name|
 [OnAxisActualRangeCalculated](events/#onaxisactualrangecalculated)|
 [OnAxisMultiLevelLabelRender](events/#onaxismultilevellabelrender)|
 
-> From `v18.4.*`, some event names are different from the previous releases. The following are the event name changes from `v18.3.*` to `v18.4.*`.
+N> From `v18.4.*`, some event names are different from the previous releases. The following are the event name changes from `v18.3.*` to `v18.4.*`.
 
 Event Name(`v18.3.*`) |Event Name(`v18.4.*`)
 -----|-----
@@ -44,7 +44,7 @@ MultiLevelLabelClick |[OnMultiLevelLabelClick](events/#onmultilevellabelclick)
 OnSelectionComplete |[OnSelectionChanged](events/#onselectionchanged)
 OnDragComplete |[OnSelectionChanged](events/#onselectionchanged)
 
-> From `v18.4.*`, We have removed the following previous release events from chart component.
+N> From `v18.4.*`, We have removed the following previous release events from chart component.
 
 Event Name|
 -----|
@@ -1506,4 +1506,4 @@ The following properties are available in the [SharedTooltipRenderEventArgs](htt
 
 ```
 
-> Refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
+N> Refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.

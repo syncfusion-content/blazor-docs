@@ -194,6 +194,42 @@ The color for each shape in the Maps can be set using the [ColorValuePath](https
 
 ![Blazor Maps with Custom Shape Color](./images/Customization/blazor-maps-custom-shape-color.PNG)
 
+## Applying border to individual shapes
+
+The border of each shape in the Maps can be customized using the [BorderColorValuePath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsShapeSettings.html#Syncfusion_Blazor_Maps_MapsShapeSettings_BorderColorValuePath) and [BorderWidthValuePath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsShapeSettings.html#Syncfusion_Blazor_Maps_MapsShapeSettings_BorderWidthValuePath) properties to modify the color and the width of the border respectively. The field name in the data source of the layer which contains the color and the width values must be set in the [BorderColorValuePath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsShapeSettings.html#Syncfusion_Blazor_Maps_MapsShapeSettings_BorderColorValuePath) and [BorderWidthValuePath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsShapeSettings.html#Syncfusion_Blazor_Maps_MapsShapeSettings_BorderWidthValuePath) properties respectively. If the values of [BorderColorValuePath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsShapeSettings.html#Syncfusion_Blazor_Maps_MapsShapeSettings_BorderColorValuePath) and [BorderWidthValuePath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsShapeSettings.html#Syncfusion_Blazor_Maps_MapsShapeSettings_BorderWidthValuePath) do not match with the field name from the data source, then the color and width of the border will be applied to the shapes using the border property in the shapeSettings.
+
+```cshtml
+@using Syncfusion.Blazor.Maps
+
+<SfMaps>
+    <MapsLayers>
+        <MapsLayer ShapeData='new {dataOptions ="https://cdn.syncfusion.com/maps/map-data/world-map.json"}' ShapeDataPath="Continent" ShapePropertyPath='new string[] {"continent"}' DataSource="ShapeColor" TValue="Data">
+            <MapsShapeSettings ColorValuePath="Color" BorderColorValuePath="BorderColor" BorderWidthValuePath="Width"></MapsShapeSettings>
+        </MapsLayer>
+    </MapsLayers>
+</SfMaps>
+
+@code {
+    public class Data
+    {
+        public string Continent { get; set; }
+        public string Color { get; set; }
+        public double Width { get; set; }
+        public string BorderColor { get; set; }
+    };
+    public List<Data> ShapeColor = new List<Data>{
+        new Data { Continent= "North America", Color= "#71B081", Width=2 , BorderColor="#CCFFE5"},
+        new Data { Continent= "South America", Color= "#5A9A77", Width=2 , BorderColor="red"},
+        new Data { Continent= "Africa", Color= "#498770", Width=2 , BorderColor="#FFCC99"},
+        new Data { Continent= "Europe", Color= "#39776C" , Width=2 , BorderColor="#66B2FF"},
+        new Data { Continent= "Asia", Color= "#266665", Width=2 , BorderColor="#999900"},
+        new Data { Continent= "Australia", Color= "#124F5E", Width=2 , BorderColor="blue"}
+    };
+}
+```
+
+![Blazor Maps with Custom Border Color and Width](./images/Customization/blazor-maps-custom-border-color-and-width.PNG)
+
 ## Projection type
 
 The Maps control supports the following projection types:

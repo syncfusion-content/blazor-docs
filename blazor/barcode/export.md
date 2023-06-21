@@ -53,6 +53,6 @@ Barcode provides support to export as an image in the specified image type and r
 
 ```
 
-> Format is to specify the type/format of the exported file. You can export Barcode to the following formats:
->* JPG.
->* PNG.
+N> Format is to specify the type/format of the exported file. You can export Barcode to the following formats:
+<br/>* JPG.
+<br/>* PNG.

@@ -31,8 +31,8 @@ Stock Chart can be given a title using [Title](https://help.syncfusion.com/cr/bl
 
     public class ChartData
     {
-        public DateTime XValue;
-        public double YValue;
+        public DateTime XValue {get; set;}
+        public double YValue {get; set;}
     }
 
     public List<ChartData> DataSource = new List<ChartData>
@@ -63,7 +63,7 @@ The `TextStyle` property of chart title provides options to customize the `Size`
 @using Syncfusion.Blazor.Charts
 
 <SfStockChart Title="AAPL Stock Price">
-    <StockChartTitleStyle FontFamily="Arial" FontStyle="Italic" FontWeight="Regular" Color="#E27F2D" Size="20px" TextOverfLow="TextOverflow.Wrap"></StockChartTitleStyle>
+    <StockChartTitleStyle FontFamily="Arial" FontStyle="Italic" FontWeight="Regular" Color="#E27F2D" Size="20px" TextOverflow="TextOverflow.Wrap"></StockChartTitleStyle>
     <StockChartSeriesCollection>
         <StockChartSeries DataSource="@DataSource" Type="ChartSeriesType.Line" XName="XValue" YName="YValue"></StockChartSeries>
     </StockChartSeriesCollection>
@@ -77,8 +77,8 @@ The `TextStyle` property of chart title provides options to customize the `Size`
 
     public class ChartData
     {
-        public DateTime XValue;
-        public double YValue;
+        public DateTime XValue {get; set;}
+        public double YValue {get; set;}
     }
 
     public List<ChartData> DataSource = new List<ChartData>
@@ -107,7 +107,7 @@ Stock chart is shipped with several built-in themes such as `Material`, `Fabric`
 
 @using Syncfusion.Blazor.Charts
 
-<SfStockChart Title="AAPL Stock Price" Theme="ChartTheme.HighContrast">
+<SfStockChart Title="AAPL Stock Price" Theme="Theme.HighContrast">
     <StockChartSeriesCollection>
         <StockChartSeries DataSource="@DataSource" Type="ChartSeriesType.Line" XName="XValue" YName="YValue"></StockChartSeries>
     </StockChartSeriesCollection>
@@ -121,8 +121,8 @@ Stock chart is shipped with several built-in themes such as `Material`, `Fabric`
 
     public class ChartData
     {
-        public DateTime XValue;
-        public double YValue;
+        public DateTime XValue {get; set;}
+        public double YValue {get; set;}
     }
 
     public List<ChartData> DataSource = new List<ChartData>

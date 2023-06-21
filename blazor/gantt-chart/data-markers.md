@@ -18,7 +18,7 @@ Data markers can be defined using the following properties:
 * `Name` : Defines the name of indicator.
 * `Tooltip` : Defines the tooltip of indicator.
 
-> Data Marker `Tooltip` will be rendered only if tooltip property has value.
+N> Data Marker `Tooltip` will be rendered only if tooltip property has value.
 
 The following code example demonstrates how to implement data markers in the Gantt chart.
 
@@ -75,4 +75,4 @@ The following code example demonstrates how to implement data markers in the Gan
 }
 ```
 
-> You can refer to our [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Gantt Chart example](https://blazor.syncfusion.com/demos/gantt-chart/default-functionalities?theme=bootstrap4) to know how to render and configure the Gantt.
+N> You can refer to our [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Gantt Chart example](https://blazor.syncfusion.com/demos/gantt-chart/default-functionalities?theme=bootstrap4) to know how to render and configure the Gantt.

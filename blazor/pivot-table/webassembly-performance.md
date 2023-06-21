@@ -11,7 +11,7 @@ documentation: ug
 
 This section provides performance guidelines for using the Syncfusion Pivot Table component efficiently in Blazor WebAssembly application. The best practice or guidelines for general framework Blazor WebAssembly performance can be found [here](https://docs.microsoft.com/en-us/aspnet/core/blazor/webassembly-performance-best-practices).
 
-> You can refer to our Getting Started with [Blazor Server-Side Pivot Table](https://blazor.syncfusion.com/documentation/pivot-table/getting-started#blazor-server-app) and [Blazor WebAssembly Pivot Table](https://blazor.syncfusion.com/documentation/pivot-table/getting-started#blazor-webassembly-app) documentation pages for configuration specifications.
+N> You can refer to our Getting Started with [Blazor Server-Side Pivot Table](https://blazor.syncfusion.com/documentation/pivot-table/getting-started#blazor-server-app) and [Blazor WebAssembly Pivot Table](https://blazor.syncfusion.com/documentation/pivot-table/getting-started#blazor-webassembly-app) documentation pages for configuration specifications.
 
 ## Avoid unnecessary component renders
 
@@ -73,7 +73,7 @@ In the following example:
 }
 ```
 
-> The **PreventRender** method takes a boolean argument that accepts **true** or **false** to disable or enable rendering respectively.<br /> This method can only be used after the Pivot Table component has completed its initial rendering. Calling this method during the initial rendering will have no effect.
+N> The **PreventRender** method takes a boolean argument that accepts **true** or **false** to disable or enable rendering respectively.<br /> This method can only be used after the Pivot Table component has completed its initial rendering. Calling this method during the initial rendering will have no effect.
 
 ## Avoid unnecessary component renders after Pivot Table events
 
@@ -121,6 +121,6 @@ In the following example, the **Drill** event is bound with a callback method. S
 
 ```
 
-> * The Pivot Table's **PreventRender** method internally overrides the component **ShouldRender** method to prevent rendering.
-> * For better performance, it is recommended to use the **PreventRender** method for user interactive events like Drill, BeforeColumnsRender, BeforeExport, DrillThrough, CellClick, ChartSeriesCreated, etc.
-> * For events without any argument such as **DataBound**, you can use **PreventRender** method of the Pivot Table to disable rendering.
+N> * The Pivot Table's **PreventRender** method internally overrides the component **ShouldRender** method to prevent rendering.
+<br/> * For better performance, it is recommended to use the **PreventRender** method for user interactive events like Drill, BeforeColumnsRender, BeforeExport, DrillThrough, CellClick, ChartSeriesCreated, etc.
+<br/> * For events without any argument such as **DataBound**, you can use **PreventRender** method of the Pivot Table to disable rendering.

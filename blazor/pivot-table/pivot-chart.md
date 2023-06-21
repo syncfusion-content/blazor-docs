@@ -231,7 +231,7 @@ In the accumulation charts, drill down and drill up operations can be performed 
 **Collapse** - It is to drill up the corresponding series until the first level.
 **Exit** - It is to close the context menu.
 
-> The drill operation in accumulation charts can be performed only for row headers.
+N> The drill operation in accumulation charts can be performed only for row headers.
 
 ```cshtml
 @using Syncfusion.Blazor.PivotView
@@ -477,7 +477,7 @@ User can draw pie and doughnut charts within the specified range using the `Star
 
 Users can get doughnut chart from pie chart and vice-versa using the `InnerRadius` property in [PivotChartSeries](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartSeries.html) class. If the property is greater than **0** percent, the doughnut chart will appear from the pie chart.
 
-> It takes the value only in percentage.
+N> It takes the value only in percentage.
 
 ```cshtml
 @using Syncfusion.Blazor.PivotView
@@ -617,7 +617,7 @@ By using this, user can customize the report dynamically and view the result in 
 
 User can enable the grouping bar by setting the property [ShowGroupingBar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_ShowGroupingBar) in [SfPivotView](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html) class as **true**. The grouping bar in pivot chart shows a dropdown list in value axis instead of buttons. The dropdown list holds list of value fields bounded in the [PivotViewDataSourceSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.DataSourceSettingsModel-1.html) and it can be switched to draw the pivot chart with the selected value field. This has been defined as the default behavior in the pivot chart component. For more information regarding the grouping bar, refer the [grouping bar](./grouping-bar) topic.
 
-> For multiple axis support, buttons will be placed in value axis instead of dropdown list.
+N> For multiple axis support, buttons will be placed in value axis instead of dropdown list.
 
 ```cshtml
 @using Syncfusion.Blazor.PivotView
@@ -750,7 +750,7 @@ By default, the pivot chart will be drawn with the value field (measure) which i
 
 User can draw the pivot chart with multiple value fields by setting the property [EnableMultiAxis](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartSettings.html#Syncfusion_Blazor_PivotView_PivotChartSettings_EnableMultiAxis) in [PivotChartSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartSettings.html) class as **true**. In the following code sample, the pivot chart will be drawn with both value fields "Sold" and "Amount" available in the [PivotViewDataSourceSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.DataSourceSettingsModel-1.html).
 
-> The multi axis support is not applicable for the accumulation chart types like pie, doughnut, pyramid, and funnel.
+N> The multi axis support is not applicable for the accumulation chart types like pie, doughnut, pyramid, and funnel.
 
 ```cshtml
 @using Syncfusion.Blazor.PivotView
@@ -968,7 +968,7 @@ You can customize data label of the pivot chart markers in terms of angle, align
 
 User can customize axis of the pivot chart using [PivotChartPrimaryXAxis](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartPrimaryXAxis.html) and [PivotChartPrimaryYAxis](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartPrimaryYAxis.html) properties in [PivotChartSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartSettings.html) class.
 
-> Axis customization is not applicable for the accumulation chart types like pie, doughnut, pyramid, and funnel.
+N> Axis customization is not applicable for the accumulation chart types like pie, doughnut, pyramid, and funnel.
 
 ```cshtml
 @using Syncfusion.Blazor.PivotView
@@ -1038,7 +1038,7 @@ Also user can set the position of the legend in pivot chart using the property [
 * Right: Displays the legend at the right of the pivot chart.
 * Custom: Displays the legend based on the given x and y values.
 
-> By default, the legend is not visible for the accumulation chart types like pie, doughnut, pyramid, and funnel.
+N> By default, the legend is not visible for the accumulation chart types like pie, doughnut, pyramid, and funnel.
 
 ```cshtml
 @using Syncfusion.Blazor.PivotView
@@ -1086,7 +1086,7 @@ User can enable and customize the marker and crosshair using [PivotChartMarkerSe
 
 Also user can enable and customize the crosshair tooltip for axes using [PivotChartPrimaryXAxisCrosshairTooltip](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartPrimaryXAxisCrosshairTooltip.html) and [PivotChartPrimaryYAxisCrosshairTooltip](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartPrimaryYAxisCrosshairTooltip.html) classes.
 
-> Marker and crosshair is not applicable for the accumulation chart types like pie, doughnut, pyramid, and funnel.
+N> Marker and crosshair is not applicable for the accumulation chart types like pie, doughnut, pyramid, and funnel.
 
 ```cshtml
 @using Syncfusion.Blazor.PivotView
@@ -1152,7 +1152,7 @@ Three modes of zooming direction specifies whether to zoom vertically or horizon
 
 This can be set using the property [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartZoomSettings.html#Syncfusion_Blazor_PivotView_PivotChartZoomSettings_Mode) in [PivotChartZoomSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartZoomSettings.html) class. By default, if the pivot chart is zoomed, a toolbar would display with the options - Zoom, ZoomIn, ZoomOut, Pan, and Reset. User can also customize its option using the property [ToolbarItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartZoomSettings.html#Syncfusion_Blazor_PivotView_PivotChartZoomSettings_ToolbarItems) in [PivotChartZoomSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartZoomSettings.html#Syncfusion_Blazor_PivotView_PivotChartZoomSettings_ToolbarItems) class.
 
-> Zooming and panning is not applicable for the accumulation chart types like pie, doughnut, pyramid, and funnel.
+N> Zooming and panning is not applicable for the accumulation chart types like pie, doughnut, pyramid, and funnel.
 
 ```cshtml
 @using Syncfusion.Blazor.PivotView
@@ -1203,7 +1203,7 @@ This can be set using the property [Mode](https://help.syncfusion.com/cr/blazor/
 
 By default, tooltip for the pivot chart is enabled. User can customize it by using the property [PivotChartTooltipSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartTooltipSettings.html) in [PivotChartSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartSettings.html) class.
 
-> The tooltip can be disabled by setting the property [Enable](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartTooltipSettings.html#Syncfusion_Blazor_PivotView_PivotChartTooltipSettings_Enable) in [PivotChartTooltipSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartTooltipSettings.html) class as **false**.
+N> The tooltip can be disabled by setting the property [Enable](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartTooltipSettings.html#Syncfusion_Blazor_PivotView_PivotChartTooltipSettings_Enable) in [PivotChartTooltipSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartTooltipSettings.html) class as **false**.
 
 ```cshtml
 @using Syncfusion.Blazor.PivotView
@@ -1359,4 +1359,4 @@ In the following code sample, printing can be done using an external button name
 
 ![Printing in Blazor PivotChart](images/blazor-pivotchart-printing.png)
 
-> You can also explore the [Blazor Pivot Table example](https://blazor.syncfusion.com/demos/pivot-table/default-functionalities?theme=bootstrap4) to know how to render and configure the pivot table.
+N> You can also explore the [Blazor Pivot Table example](https://blazor.syncfusion.com/demos/pivot-table/default-functionalities?theme=bootstrap4) to know how to render and configure the pivot table.

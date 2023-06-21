@@ -37,7 +37,7 @@ Using the [ToolbarCommand.CreateTable](https://help.syncfusion.com/cr/blazor/Syn
 
 The quick toolbar is opened by clicking the table. It has different sets of commands to be performed on the table, which increases the feasibility of editing the table easily.
 
-> For more details about quick toolbar, refer to this documentation [section](../toolbar#quick-toolbar).
+N> For more details about quick toolbar, refer to this documentation [section](../toolbar#quick-toolbar).
 
 ## Table properties
 
@@ -130,7 +130,7 @@ The background color can be set for each table cell through the [TableToolbarCom
 ![Blazor RichTextEditor changing table background color](../images/blazor-richtexteditor-table-background-color.png)
 
 
-> Refer to the [Blazor Rich Text Editor](https://www.syncfusion.com/blazor-components/blazor-wysiwyg-rich-text-editor) feature tour page for its groundbreaking feature representations. Also, explore the [Blazor Rich Text Editor](https://blazor.syncfusion.com/demos/rich-text-editor/overview?theme=bootstrap4) example to know how to render and configure the rich text editor tools.
+N> Refer to the [Blazor Rich Text Editor](https://www.syncfusion.com/blazor-components/blazor-wysiwyg-rich-text-editor) feature tour page for its groundbreaking feature representations. Also, explore the [Blazor Rich Text Editor](https://blazor.syncfusion.com/demos/rich-text-editor/overview?theme=bootstrap4) example to know how to render and configure the rich text editor tools.
 
 ## See also
 

@@ -17,7 +17,7 @@ By default, the `<p>` tag is created while pressing the <kbd>Enter</kbd> key. Th
 
 When the <kbd>Enter</kbd> key is customized with any of the above possible values, pressing the <kbd>Enter</kbd> key in the editor will create a new tag that is configured.
 
-> The **pre** tag will be inserted when code format is applied. If the editor content is inside the **pre** tag, the enter key press will creates `<br>` tag. Need to press enter key twice to come out of the **pre** tag.
+N> The **pre** tag will be inserted when code format is applied. If the editor content is inside the **pre** tag, the enter key press will creates `<br>` tag. Need to press enter key twice to come out of the **pre** tag.
 
 {% tabs %}
 {% highlight cshtml %}
@@ -29,7 +29,7 @@ When the <kbd>Enter</kbd> key is customized with any of the above possible value
 
 ![Blazor RichTextEditor enter key confuguration](./images/blazor-richtexteditor-enter-key.png)
 
-> [View Sample](https://blazor.syncfusion.com/demos/rich-text-editor/enterkeyconfiguration)
+N> [View Sample](https://blazor.syncfusion.com/demos/rich-text-editor/enterkeyconfiguration)
 
 ## Shift-Enter key customization
 

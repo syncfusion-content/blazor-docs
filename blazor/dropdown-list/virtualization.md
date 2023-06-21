@@ -46,6 +46,21 @@ In the following code, the remote data bound to the DropDownList component, but 
 
 ![Blazor DropDownList with virtualization of remote data](./images/virtualization/blazor_dropdown_virtualization-remote-data.gif)
 
+## ItemsCount     
+
+The data can be fetched in popup based on [ItemsCount](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_ItemsCount), when enabled the [EnableVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_EnableVirtualization). ItemsCount is applicable only when `EnableVirtualization` is used as true. ItemsCount is depends on `EnableVirtualization`
+
+Default value of `ItemsCount` is `5`.
+
+{% highlight cshtml %}
+
+{% include_relative code-snippet/virtualization/item-count.razor %}
+
+{% endhighlight %}
+
 ## Limitation of virtualization
 
 * Virtualization is not supported in the grouping feature.
+
+
+

@@ -22,8 +22,8 @@ The baseline feature enables users to view the deviation between the planned dat
 </SfGantt>
 
 @code{
-    private DateTime ProjectStart = new DateTime(2022, 04, 01);
-    private DateTime ProjectEnd = new DateTime(2022, 05, 30);
+    private DateTime ProjectStart = new DateTime(2019, 04, 01);
+    private DateTime ProjectEnd = new DateTime(2019, 04, 30);
     private List<TaskData> TaskCollection { get; set; }
     protected override void OnInitialized()
     {
@@ -64,4 +64,4 @@ The following screenshot shows the baselines in Gantt Chart component.
 
 ![Baselines in Blazor Gantt Chart](images/blazor-gantt-chart-with-baseline.png)
 
-> You can refer to our [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Gantt Chart example](https://blazor.syncfusion.com/demos/gantt-chart/default-functionalities) to know how to render and configure the gantt.
+N> You can refer to our [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Gantt Chart example](https://blazor.syncfusion.com/demos/gantt-chart/default-functionalities) to know how to render and configure the gantt.

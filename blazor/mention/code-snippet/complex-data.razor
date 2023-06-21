@@ -1,0 +1,58 @@
+@using Syncfusion.Blazor.DropDowns
+
+<SfMention TItem="CountryGroup" DataSource="@LocalData" PopupWidth="200px" >
+    <TargetComponent>
+        <div id="commentsMention" placeholder="Type @@ and tag country" ></div>
+    </TargetComponent>
+    <ChildContent>
+        <MentionFieldSettings Text="Country.CountryName" Value="CodeFormat.ID"></MentionFieldSettings>
+    </ChildContent>
+</SfMention>
+
+<style>
+    #commentsMention {
+        min-height: 100px;
+        border: 1px solid #D7D7D7;
+        border-radius: 4px;
+        padding: 8px;
+        font-size: 14px;
+        width: 600px;
+    }
+    div#commentsMention[placeholder]:empty:before {
+        content: attr(placeholder);
+        color: #555;
+    }
+</style>
+
+@code {
+    public IEnumerable<CountryGroup> LocalData { get; set; } = new CountryGroup().GetData();
+
+
+     public class Code
+    {
+        public string ID { get; set; }
+    }
+
+    public class Countries
+    {
+        public string CountryName { get; set; }
+    }
+
+    public class CountryGroup
+    {
+        public Countries Country { get; set; }
+        public Code CodeFormat { get; set; }
+        public List<CountryGroup> GetData()
+        {
+            List<CountryGroup> Data = new List<CountryGroup>();
+            Data.Add(new CountryGroup() { Country = new Countries() { CountryName = "Australia" }, CodeFormat = new Code() { ID = "AU" } });
+            Data.Add(new CountryGroup() { Country = new Countries() { CountryName = "Bermuda" }, CodeFormat = new Code() { ID = "BM" } });
+            Data.Add(new CountryGroup() { Country = new Countries() { CountryName = "Canada" }, CodeFormat = new Code() { ID = "CA" } });
+            Data.Add(new CountryGroup() { Country = new Countries() { CountryName = "Cameroon" }, CodeFormat = new Code() { ID = "CM" } });
+            Data.Add(new CountryGroup() { Country = new Countries() { CountryName = "Denmark" }, CodeFormat = new Code() { ID = "DK" } });
+            Data.Add(new CountryGroup() { Country = new Countries() { CountryName = "France" }, CodeFormat = new Code() { ID = "FR" } });
+            return Data;
+        }
+    }
+
+}

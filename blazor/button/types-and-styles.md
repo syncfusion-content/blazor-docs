@@ -40,7 +40,7 @@ The Blazor Button has the following predefined styles that can be defined using 
 
 ![Blazor Button Component with different Styles](./images/blazor-button-with-different-style.png)
 
-> Predefined Button styles provide only the visual indication. So, Button content should define the Button style for the users of assistive technologies such as screen readers.
+N> Predefined Button styles provide only the visual indication. So, Button content should define the Button style for the users of assistive technologies such as screen readers.
 
 ## Button types
 

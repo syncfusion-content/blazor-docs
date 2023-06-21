@@ -7,7 +7,7 @@ control: Diagram
 documentation: ug
 ---
 
-> Syncfusion recommends using [Blazor Diagram Component](https://blazor.syncfusion.com/documentation/diagram/getting-started) which provides better performance than this diagram control. Blazor Diagram Component will be actively developed in the future.
+N> Syncfusion recommends using [Blazor Diagram Component](https://blazor.syncfusion.com/documentation/diagram/getting-started) which provides better performance than this diagram control. Blazor Diagram Component will be actively developed in the future.
 
 # Customization in Blazor Diagram Component
 
@@ -184,7 +184,7 @@ The diagram provides support to flip the connector. The [Flip](https://help.sync
 
 * The Flip is also applicable for nodes.
 
-> The flip is not applicable when the connectors connect in nodes
+N> The flip is not applicable when the connectors connect in nodes
 
 The flip types are as follows:
 

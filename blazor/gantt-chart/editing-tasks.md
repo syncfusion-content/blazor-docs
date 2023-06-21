@@ -67,7 +67,7 @@ The following code example shows you how to enable the cell editing in Gantt Cha
 }
 ```
 
-> When the edit mode is set to `Auto`, double-clicking on the Tree Grid side changes the cells to editable mode. Double-clicking on the chart side opens the edit dialog for editing the task details.
+N> When the edit mode is set to `Auto`, double-clicking on the Tree Grid side changes the cells to editable mode. Double-clicking on the chart side opens the edit dialog for editing the task details.
 
 double click action on Tree Grid side
 
@@ -76,105 +76,6 @@ double click action on Tree Grid side
 double click action on chart side
 
 ![Blazor Gantt Chart displays Editing in Chart](images/blazor-gantt-chart-editing-in-chart.png)
-
-## Cell Edit Template
-
-The cell [edit template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttColumn.html#Syncfusion_Blazor_Gantt_GanttColumn_EditTemplate) is used to add a custom component for a particular column when the column is edited. In the following code example, the [SfDropDownList](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html) component is rendered for the TaskName column and the [SfMultiSelect](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMultiSelect-2.html) component for the Assignee column.
-
-```cshtml
-@using Syncfusion.Blazor.Gantt
-@using Syncfusion.Blazor.DropDowns
-
-<SfGantt DataSource="@TaskCollection" Height="450px" Width="700px">
-    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" ParentID="ParentId">
-    </GanttTaskFields>
-    <GanttColumns>
-        <GanttColumn Field="TaskId"></GanttColumn>
-        <GanttColumn Field="TaskName">
-            <EditTemplate>
-                @{
-                    var task = (context as TaskData);
-                }
-                <SfDropDownList DataSource="DropDownDataSource" ID="TaskName" @bind-Value="task.TaskName"></SfDropDownList>
-            </EditTemplate>
-        </GanttColumn>
-        <GanttColumn Field="StartDate"></GanttColumn>
-        <GanttColumn Field="EndDate"></GanttColumn>
-        <GanttColumn Field="Assignee">
-            <EditTemplate>
-            @{
-                    var task1 = (context as TaskData);
-             }
-            <SfMultiSelect TValue="string[]" TItem="Employee" Mode="VisualMode.CheckBox" @bind-Value="@task1.Assignee" DataSource="@Assignees">
-                <MultiSelectFieldSettings Value="Name"></MultiSelectFieldSettings>
-            </SfMultiSelect>
-            </EditTemplate>
-            <Template>
-                @{
-                    var d = (context as TaskData).Assignee;
-                    @if(d != null)
-                    {
-                        <span>@String.Join(",", d)</span>
-                    }
-                }
-            </Template>
-        </GanttColumn>
-        <GanttColumn Field="Duration"></GanttColumn>
-        <GanttColumn Field="Progress"></GanttColumn>
-    </GanttColumns>
-    <GanttEditSettings AllowEditing="true"></GanttEditSettings>
-</SfGantt>
-
-@code{
-    
-    private List<TaskData> TaskCollection { get; set; }
-    public List<string> DropDownDataSource { get; set; }
-    
-    public class Employee
-    {
-        public string ID { get; set; }
-        public string Name { get; set; }
-    }
-    List<Employee> Assignees = new List<Employee> {
-    new Employee() { ID= "1", Name= "Martin Tamer" },
-    new Employee() { ID= "2", Name= "Rose Fuller" },
-    new Employee() { ID= "3", Name= "Jack Davolio" },
-    new Employee(){ID="4", Name ="Van Jack"},
-    };
-    protected override void OnInitialized()
-    {
-        this.TaskCollection = GetTaskCollection();
-        this.DropDownDataSource = TaskCollection.Select(s => s.TaskName).Distinct().ToList();
-    }
-    
-    public class TaskData
-    {
-        public int TaskId { get; set; }
-        public string TaskName { get; set; }
-        public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
-        public string Duration { get; set; }
-        public int Progress { get; set; }
-        public string[] Assignee{ get; set; }
-        public int? ParentId { get; set; }
-    }
-
-    public static List <TaskData> GetTaskCollection() {
-    List <TaskData> Tasks = new List <TaskData> () {
-        new TaskData() { TaskId = 1, TaskName = "Project initiation", StartDate = new DateTime(2022, 04, 05), EndDate = new DateTime(2022, 04, 21) , Assignee= new string[]{"Van Jack"}},
-        new TaskData() { TaskId = 2, TaskName = "Identify Site location", StartDate = new DateTime(2022, 04, 05), Duration = "0", Progress = 30, ParentId = 1 },
-        new TaskData() { TaskId = 3, TaskName = "Perform soil test", StartDate = new DateTime(2022, 04, 05), Duration = "4", Progress = 40, ParentId = 1 },
-        new TaskData() { TaskId = 4, TaskName = "Soil test approval", StartDate = new DateTime(2022, 04, 05), Duration = "0", Progress = 30, ParentId = 1 },
-        new TaskData() { TaskId = 5, TaskName = "Project estimation", StartDate = new DateTime(2022, 04, 06), EndDate = new DateTime(2022, 04, 21) },
-        new TaskData() { TaskId = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2022, 04, 06), Duration = "3", Progress = 30, ParentId = 5 },
-        new TaskData() { TaskId = 7, TaskName = "List materials", StartDate = new DateTime(2022, 04, 06), Duration = "3", Progress = 40, ParentId = 5 , Assignee= new string[]{"Rose Fuller"}},
-        new TaskData() { TaskId = 8, TaskName = "Estimation approval", StartDate = new DateTime(2022, 04, 06), Duration = "0", Progress = 30, ParentId = 5 }
-    };
-    return Tasks;
-}
-}
-```
-![Cell edit template in Blazor Gantt Chart](images/blazor-gantt-chart-cell-edit-template.gif)
 
 ## Dialog editing
 
@@ -542,7 +443,7 @@ Updating with Dialog
 
 Tasks' value can be dynamically updated by using the [UpdateRecordByIDAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_UpdateRecordByIDAsync__0_) method. You can call this method on any custom action. The following code example shows how to use this method to update a task.
 
-> Using the `UpdateRecordByIDAsync` method, you cannot update the task ID value.
+N> Using the `UpdateRecordByIDAsync` method, you cannot update the task ID value.
 
 ```cshtml
 @using Syncfusion.Blazor.Gantt

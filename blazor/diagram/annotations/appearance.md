@@ -9,20 +9,17 @@ documentation: ug
 
 # Appearance in Blazor Diagram Component
 
-## Size for an annotation
+## How to update size of an annotation
 
 Diagram allows you to set size for annotations by using the Height and Width properties. The default value of the [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Annotation.html#Syncfusion_Blazor_Diagram_Annotation_Width) and [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Annotation.html#Syncfusion_Blazor_Diagram_Annotation_Height) properties is 0, and it takes the node or connector size as default. The following code example shows how the annotation size is customized.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
-
 <SfDiagramComponent Height="600px" Connectors="@connectors" />
-
 @code
 {
     // Defines diagram's connector collection.
     DiagramObjectCollection<Connector> connectors;
-
     protected override void OnInitialized()
     {
         connectors = new DiagramObjectCollection<Connector>();
@@ -47,6 +44,7 @@ Diagram allows you to set size for annotations by using the Height and Width pro
     }
 }
 ```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Annotations/Appearance)
 
 ![Changing Annotation Size in Blazor Diagram](../images/blazor-diagram-annotation-size.png)
 
@@ -92,10 +90,11 @@ Diagram provides support to add a [Hyperlink](https://help.syncfusion.com/cr/bla
     }
 }
 ```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Annotations/Appearance)
 
 ![Annotation with Hyperlink in Blazor Diagram](../images/blazor-diagram-annotation-with-hyperlink.png)
 
-### Hyperlink with content
+### How to update hyperlink with content
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -136,6 +135,7 @@ Diagram provides support to add a [Hyperlink](https://help.syncfusion.com/cr/bla
     }
 }
 ```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Annotations/Appearance)
 
 ![HyperLink with Content in Blazor Diagram](../images/blazor-diagram-hyperlink-content.png)
 
@@ -182,6 +182,7 @@ The [TextWrapping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagr
     }
 }
 ```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Annotations/Appearance)
 
 | TextWrapping | Description | Image |
 | -------- | -------- | -------- |
@@ -239,6 +240,7 @@ The following code sample shows how the different types of overflow property wor
     }
 }
 ```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Annotations/Appearance)
 
 | TextOverflow | Wrapping | Image |
 | -------- | -------- | -------- |
@@ -252,9 +254,9 @@ The following code sample shows how the different types of overflow property wor
 | Clip| Wrap | ![Blazor Diagram With Text Wrap in TextClipOverflow](../images/blazor-diagram-flowclip-wrap.png) |
 | Clip | WrapWithOverflow | ![Blazor Diagram Text Wrap with Overflow in TextClipOverflow](../images/blazor-diagram-flowclip-wrapwithoverflow.png) |
 
->**Note :** All the customization over the overflow is also applicable to connector’s annotation.
+N>**Note :** All the customization over the overflow is also applicable to connector’s annotation.
 
-## Customize the appearance of an annotation
+## How to customize the appearance of an annotation
 
 You can change the font style of the annotations with the font specific properties (FontSize, FontFamily, Color). The following code explains how to customize the appearance of the annotation.
 
@@ -310,10 +312,11 @@ The Fill, Border, and Opacity appearances of the text can also be customized wit
     }
 }
 ```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Annotations/Appearance)
 
 ![Blazor Diagram Label with Custom Annotation](../images/blazor-diagram-label-with-custom-annotation.png)
 
-## Update the annotation style at runtime
+## How to update the annotation style at runtime
 
 You can change the font style of the annotations with the font specific properties ([FontSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.TextStyle.html#Syncfusion_Blazor_Diagram_TextStyle_FontSize), [FontFamily](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.TextStyle.html#Syncfusion_Blazor_Diagram_TextStyle_FontFamily), and [Color](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.TextStyle.html#Syncfusion_Blazor_Diagram_TextStyle_Color)). The following code explains how to update the font style of the annotation.
 
@@ -375,8 +378,9 @@ You can change the font style of the annotations with the font specific properti
     }
 }
 ```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Annotations/Appearance)
 
-## Change the editing mode
+## How to change the editing mode
 
 Diagram provides support to edit an annotation at runtime, either programmatically or interactively. By default, the annotation is in view mode. However, it can be brought into edit mode in two ways.
 
@@ -387,7 +391,7 @@ Diagram provides support to edit an annotation at runtime, either programmatical
 
 Double-clicking any annotation will enable the editing and the node enables first annotation editing. When the focus of editor is lost, the annotation for the node is updated. 
 
-## Set Annotation to read only
+## How to set read only constraints for annotation
 
 Diagram allows to create read-only annotations. You have to set the read-only property of annotation to enable or disable the [ReadOnly](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.AnnotationConstraints.html#Syncfusion_Blazor_Diagram_AnnotationConstraints_ReadOnly) constraints. The following code explains how to enable read-only mode.
 
@@ -426,8 +430,9 @@ Diagram allows to create read-only annotations. You have to set the read-only pr
     }
 }
 ```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Annotations/Appearance)
 
-## Create multiple annotations
+## How to create multiple annotations
 
 You can add any number of annotations to a node or connector. The following code example shows how to add multiple annotations to a node. 
 
@@ -506,13 +511,14 @@ You can add any number of annotations to a node or connector. The following code
     }
 }
 ```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Annotations/Appearance)
 
 ![Blazor Diagram with Multiple Annotations](../images/blazor-diagram-multiple-annotations.png)
 
->* Type of the annotation’s property of the node or connector was ObservableCollection.
->* Default value of the annotation will be null.
->* All the same customization can be applicable for the annotations.
->* Text Editing can be stated only the first annotation of the annotation collection when you double click the node or connector.
+N>* Type of the annotation’s property of the node or connector was ObservableCollection.
+<br/>* Default value of the annotation will be null.
+<br/>* All the same customization can be applicable for the annotations.
+<br/>* Text Editing can be stated only the first annotation of the annotation collection when you double click the node or connector.
 
 ## How to update annotation constraints
 
@@ -526,7 +532,7 @@ AnnotationConstraints may have multiple behaviors as follows:
 | None | Disables all behaviors of Annotation. |
 |InheritReadOnly |Enables or disables to inherit the ReadOnly option from the parent object.|
 
-> The default value is [InheritReadOnly](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.AnnotationConstraints.html#Syncfusion_Blazor_Diagram_AnnotationConstraints_InheritReadOnly) for constraints property of the annotation.
+N> The default value is [InheritReadOnly](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.AnnotationConstraints.html#Syncfusion_Blazor_Diagram_AnnotationConstraints_InheritReadOnly) for constraints property of the annotation.
 
 Refer to [Constraints](https://blazor.syncfusion.com/documentation/diagram/constraints) to learn about how to enable or disable the annotation constraints.
 
