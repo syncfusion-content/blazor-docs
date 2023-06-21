@@ -293,9 +293,9 @@ When the legend items exceed legend bounds, paging will be enabled by default. E
 
 ![Paging for Legend in Blazor Accumulation Chart](images/legend/blazor-accumulation-chart-legend-paging.png)
 
-### Legend Paging Customization
+### Paging Customization
 
-The Legend Page number Arrow Size can be customized by using ArrowSize API and the page number can be cutomized using TextStyle.
+The legend paging arrow elements can be customized by using the ArrowSize property in the AccumulationChartLegendPageSettings, and the page numbers can be customized using AccumulationChartLegendPageSettingsTextStyle.
 
 ```cshtml 
 
