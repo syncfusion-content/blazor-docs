@@ -295,41 +295,59 @@ When the legend items exceed legend bounds, paging will be enabled by default. E
 
 ### Paging Customization
 
-The legend paging arrow elements can be customized by using the ArrowSize property in the AccumulationChartLegendPageSettings, and the page numbers can be customized using AccumulationChartLegendPageSettingsTextStyle.
+The legend paging arrow elements can be customized by using the ArrowSize property in the `AccumulationChartLegendPageSettings`, and the page numbers can be customized using `AccumulationChartLegendPageSettingsTextStyle`.
 
 ```cshtml 
 
 @using Syncfusion.Blazor.Charts
 
-<SfAccumulationChart Title="Mobile Browser Statistics">
-    <AccumulationChartSeriesCollection>
-        <AccumulationChartSeries DataSource="@StatisticsDetails" XName="Browser" YName="Users" Name="Browser">
-        </AccumulationChartSeries>
-    </AccumulationChartSeriesCollection>
-    <AccumulationChartLegendSettings Visible="true" Height="150" Width="100">
+<SfAccumulationChart ID="chart" Width="640px" Height="475px"  EnableBorderOnMouseMove="false" Title="@Content" SelectionMode="AccumulationSelectionMode.Point" Theme="@Theme">
+    <AccumulationChartTooltipSettings Enable="false"></AccumulationChartTooltipSettings>
+        <AccumulationChartLegendSettings ToggleVisibility=false TextWrap="@TextWrap.Wrap" MaximumLabelWidth="80" Position="@position" Height="@Height" Width="@Width">
         <AccumulationChartLegendPageSettings ArrowSize="10">
-            <AccumulationChartLegendPageSettingsTextStyle   Color="blue">
+            <AccumulationChartLegendPageSettingsTextStyle Color="blue">
             </AccumulationChartLegendPageSettingsTextStyle>
         </AccumulationChartLegendPageSettings>
-    </AccumulationChartLegendSettings>
-</SfAccumulationChart>
-
-@code {
-    public class Statistics
+            <AccumulationChartLegendBorder Color="darkblue" Width="1"></AccumulationChartLegendBorder>
+            <AccumulationChartLegendFont Size="12px"></AccumulationChartLegendFont>        
+        </AccumulationChartLegendSettings>
+    <AccumulationChartSeriesCollection>
+        <AccumulationChartSeries DataSource="@PieChartPoints" XName="ExpenseCategory" YName="ExpensePercentage" Radius="70%" Name="Revenue" InnerRadius="40%">
+            <AccumulationDataLabelSettings Name="DataLabelMappingName" Visible="false">
+                <AccumulationChartDataLabelFont Color="white"></AccumulationChartDataLabelFont>
+            </AccumulationDataLabelSettings>
+        </AccumulationChartSeries>
+    </AccumulationChartSeriesCollection>
+</SfAccumulationChart> 
+ 
+@code{
+    private Theme Theme { get; set; } = Theme.Bootstrap5;
+    private string Content { get; set; } = "";
+    public string Height { get; set; } = "30%";
+    public string Width { get; set; } = "33%";
+    public LegendPosition position { get; set; } = LegendPosition.Right;
+    public double MaxLabel { get; set; } = 100;
+    public List<PieData> PieChartPoints { get; set; } = new List<PieData>
     {
-        public string Browser { get; set; }
-        public double Users { get; set; }
-    }
-
-    public List<Statistics> StatisticsDetails = new List<Statistics>
-    {
-        new Statistics { Browser = "Chrome", Users = 37 },
-        new Statistics { Browser = "UC Browser", Users = 17 },
-        new Statistics { Browser = "iPhone", Users = 19 },
-        new Statistics { Browser = "Others", Users = 4  },
-        new Statistics { Browser = "Opera", Users = 11 },
-        new Statistics { Browser = "Android", Users = 12 },
+         new PieData { ExpenseCategory =  "IE", ExpensePercentage = 6.12, DataLabelMappingName = "6.12%" },
+         new PieData { ExpenseCategory =  "Chrome", ExpensePercentage = 37.28, DataLabelMappingName = "57.28%" },
+         new PieData { ExpenseCategory =  "Firefox", ExpensePercentage = 20, DataLabelMappingName = "57.28%" },
+         new PieData { ExpenseCategory =  "Safari", ExpensePercentage = 4.73, DataLabelMappingName = "4.73%" },
+         new PieData { ExpenseCategory =  "QQ", ExpensePercentage = 5.96, DataLabelMappingName = "5.96%" },
+         new PieData { ExpenseCategory =  "UC Browser", ExpensePercentage = 4.37, DataLabelMappingName = "4.37%" },
+         new PieData { ExpenseCategory =  "Edge", ExpensePercentage = 7.48, DataLabelMappingName = "7.48%" },
+         new PieData { ExpenseCategory =  "Opera", ExpensePercentage = 3.06, DataLabelMappingName = "14.06%" },
+         new PieData { ExpenseCategory =  "Brave", ExpensePercentage = 2.06, DataLabelMappingName = "14.06%" },
+         new PieData { ExpenseCategory =  "Maxthon", ExpensePercentage = 3.06, DataLabelMappingName = "14.06%" },
+         new PieData { ExpenseCategory =  "UC", ExpensePercentage = 3.06, DataLabelMappingName = "14.06%" },
+         new PieData { ExpenseCategory =  "Falkon", ExpensePercentage = 3.06, DataLabelMappingName = "14.06%" },
     };
+      public class PieData
+    {
+        public string ExpenseCategory { get; set; }
+        public double ExpensePercentage { get; set; }
+        public string DataLabelMappingName { get; set; }
+    }
 }
 ```
 ![Blazor Accumulation Chart Legend Paging Customization](images/legend/blazor-accumulation-chart-legend-paging-customization.png)
