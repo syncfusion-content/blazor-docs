@@ -48,3 +48,9 @@ The following code illustrates how to remove the starting arrow and end arrow fr
 ```
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Annotations/Shapes/Remove%20arrow%20annotation%20heads-SfPdfViewer).
+
+## See also
+
+* [Shape annotations in Blazor SfPdfViewer Component](../annotation/shape-annotation)
+
+* [Measurement annotations in Blazor SfPdfViewer Component](../annotation/measurement-annotation)

@@ -59,3 +59,7 @@ The following code example shows how to create PDF document and load that docume
 ```
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Common/Create%20PDF%20using%20base%20library%20-%20SfPdfViewer).
+
+## See also
+
+* [Events in Blazor SfPdfViewer Component](../events)

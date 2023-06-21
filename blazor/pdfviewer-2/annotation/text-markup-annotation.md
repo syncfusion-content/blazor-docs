@@ -214,3 +214,7 @@ N> After editing the default color and opacity using the Edit color tool and Edi
 }
 
 ```
+
+## See also
+
+* [How to change the highlight color of the text](../how-to/change-the-highlighted-color-of-the-text)

@@ -53,3 +53,11 @@ The following code example shows how to view the created PDF document.
 ```
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Common/Create%20PDF%20using%20base%20library%20-%20SfPdfViewer)
+
+## See also
+
+* [How to create SfPdfViewer Component in a Splitter Component](./create-sfpdfviewer-in-a-splitter-component)
+
+* [How to create a SfPdfViewer within a popup window in Blazor](./create-sfpdfviewer-in-a-popup-window)
+
+* [How to get PDF document's data](./get-data-from-sfpdfviewer)

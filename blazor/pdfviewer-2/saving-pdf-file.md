@@ -181,3 +181,7 @@ public async void OnClick(MouseEventArgs args)
 public string DocumentPath { get; set; } = "wwwroot/data/PDF_Succinctly.pdf";
 }
 ```
+
+## See also
+
+* [How to open PDF files various storage location](./opening-pdf-file)

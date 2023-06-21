@@ -52,3 +52,9 @@ The following code example shows how to get the loaded/edited document data and 
 
 ```
 [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Common/Get%20the%20PDF%20document%20as%20a%20byte%20array%20-%20SfPdfViewer).
+
+## See also
+
+* [How to create SfPdfViewer Component in a Splitter Component](./create-sfpdfviewer-in-a-splitter-component)
+
+* [How to create a SfPdfViewer within a popup window in Blazor](./create-sfpdfviewer-in-a-popup-window)
