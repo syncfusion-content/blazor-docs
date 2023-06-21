@@ -767,6 +767,49 @@ SfInPlaceEditor
 </tr>
 </table>
 
+### Syncfusion.Blazor.ImageEditor
+
+The Blazor Image Editor component loads and modifies the images by performing actions like cropping, rotating, resizing, applying filters, inserting text and shapes such as rectangles, circles, and arrows on top of an image, and drawing freehand.
+
+<table>
+<tr>
+<td>
+<b>NuGet package</b>
+</td>
+<td>
+<b>Components friendly name</b>
+</td>
+<td>
+<b>Components name</b>
+</td>
+<td>
+<b>Dependencies</b>
+</td>
+</tr>
+<tr>
+<td>
+<a href="https://www.nuget.org/packages/Syncfusion.Blazor.ImageEditor/">Syncfusion.Blazor.ImageEditor</a>
+</td>
+<td>
+<a href="https://blazor.syncfusion.com/documentation/image-editor">Image Editor</a>
+</td>
+<td>
+SfImageEditor
+</td>
+<td>
+<ul>
+<li><a href="#syncfusionblazorcore">Syncfusion.Blazor.Core</a></li>
+<li><a href="#syncfusionblazorbuttons">Syncfusion.Blazor.Buttons</a></li>
+<li><a href="#syncfusionblazorinputs">Syncfusion.Blazor.Inputs</a></li>
+<li><a href="#syncfusionblazorpopups">Syncfusion.Blazor.Popups</a></li>
+<li><a href="#syncfusionblazornavigations">Syncfusion.Blazor.Navigations</a></li>
+<li><a href="#syncfusionblazorsplitbuttons">Syncfusion.Blazor.SplitButtons</a></li>
+<li><a href="#syncfusionblazorspinner">Syncfusion.Blazor.Spinner</a></li>
+</ul>
+</td>
+</tr>
+</table>
+
 ### Syncfusion.Blazor.Inputs
 
 A package of Blazor input components comes with a collection of form components. They can be used to get different input values from the users such as text, numbers, patterns, color, and file inputs.

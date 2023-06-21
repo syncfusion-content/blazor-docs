@@ -7,26 +7,32 @@ control: SfPdfViewer
 documentation: ug
 ---
 
-# Unload the PDF document from Viewer in Blazor PDF Viewer Component
+# Unload the PDF document from Viewer in Blazor SfPdfViewer Component
 
 The SfPdfViewer component will automatically unload and clear the resources occupied by the PDF document when the control is disposed. Also, when loading another PDF file, the resources occupied by previous loaded file in viewer will be automatically unloaded and cleared.
 
-If you want to unload and clear the resources occupied by the PDF file programmatically, invoke the Unload() method as shown below.
+If you want to unload and clear the resources occupied by the PDF file programmatically, invoke the `Unload()` method as shown below.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Buttons
 @using Syncfusion.Blazor.SfPdfViewer
 
 <SfButton @onclick="OnClick">Unload Document</SfButton>
-<SfPdfViewer2 @ref="@Viewer" Height="500px" Width="1060px" DocumentPath="@DocumentPath" />
+
+<SfPdfViewer2 @ref="@Viewer"
+              Height="100%"
+              Width="100%"
+              DocumentPath="@DocumentPath" />
 
 @code {
     SfPdfViewer2 Viewer;
-    public void OnClick(MouseEventArgs args)
+
+    public async void OnClick(MouseEventArgs args)
     {
-        Viewer.UnloadAsync();
+        await Viewer.UnloadAsync();
     }
+
     public string DocumentPath { get; set; } = "wwwroot/data/PDF_Succinctly.pdf";
 }
 
