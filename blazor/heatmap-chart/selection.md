@@ -32,7 +32,7 @@ The HeatMap cells can be selected using the following interactions, as shown in 
 </SfHeatMap>
 
 @code{
-    int[,] GetDefaultData()
+    public int[,] GetDefaultData()
     {
         int[,] dataSource = new int[,]
         {
@@ -45,8 +45,8 @@ The HeatMap cells can be selected using the following interactions, as shown in 
         };
         return dataSource;
     }
-    string[] XAxisLabels = new string[] {"Nancy", "Andrew", "Janet", "Margaret", "Steven", "Michael" };
-    string[] YAxisLabels = new string[] { "Mon", "Tue", "Wed", "Thu", "Fri", "Sat" };
+    public string[] XAxisLabels = new string[] {"Nancy", "Andrew", "Janet", "Margaret", "Steven", "Michael" };
+    public string[] YAxisLabels = new string[] { "Mon", "Tue", "Wed", "Thu", "Fri", "Sat" };
     public object HeatMapData { get; set; }
     protected override void OnInitialized()
     {
@@ -60,11 +60,11 @@ The HeatMap cells can be selected using the following interactions, as shown in 
 
 The illustration below shows how to select multiple cells in the HeatMap by clicking and dragging the mouse across the cells.
 
-![Multiple selection in Blazor HeatMap chart](images/blazor-heatmap-chart-multiple-selection.gif)
+![Multiple selection in Blazor HeatMap Chart](images/blazor-heatmap-chart-multiple-selection.gif)
 
 ## Enable single cell selection
 
-In the HeatMap, the [EnableMultiSelect]() property is used to enable and carry out single cell selection. When you set the `EnableMultiSelect` property to **false**, only one cell is selected at a time. By default, `EnableMultiSelect` property is set to **true**.
+In the HeatMap, the [EnableMultiSelect](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.SfHeatMap-1.html#Syncfusion_Blazor_HeatMap_SfHeatMap_1_EnableMultiSelect) property is used to enable and carry out single cell selection. When you set the `EnableMultiSelect` property to **false**, only one cell is selected at a time. By default, `EnableMultiSelect` property is set to **true**.
 
 ```cshtml
 
@@ -119,7 +119,7 @@ The [ClearSelectionAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
 <button @onclick="ClearSelection">Clear Selection</button>
 
 @code {
-    SfHeatMap<int[,]> Heatmap;
+    public SfHeatMap<int[,]> Heatmap;
    
     public int[,] dataSource = new int[,]
     {
@@ -131,8 +131,8 @@ The [ClearSelectionAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
         {41, 55, 73, 23, 3, 79}
     };
        
-    string[] XAxisLabels = new string[] { "Nancy", "Andrew", "Janet", "Margaret", "Steven", "Michael" };
-    string[] YAxisLabels = new string[] { "Mon", "Tue", "Wed", "Thu", "Fri", "Sat" };
+    public string[] XAxisLabels = new string[] { "Nancy", "Andrew", "Janet", "Margaret", "Steven", "Michael" };
+    public string[] YAxisLabels = new string[] { "Mon", "Tue", "Wed", "Thu", "Fri", "Sat" };
     
     public async Task ClearSelection()
     {
