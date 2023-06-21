@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Render JS PDF Viewer in Blazor | Syncfusion
-description: Learn here all about how to render the JS PDF Viewer in Syncfusion Blazor SfPdfViewer component and more.
+title: Render JS PDF Viewer inside Blazor SfPdfViewer Component | Syncfusion
+description: Learn here all about how to render the JS SfPdfViewer in Syncfusion Blazor SfPdfViewer component and more.
 platform: Blazor
 control: SfPdfViewer
 documentation: ug
 ---
 
-# Render JS PDF Viewer inside Blazor component
+# Render JS PDF Viewer inside Blazor SfPdfViewer Component
 
 The Syncfusion's Blazor SfPdfViewer component allows you to render the JS PDF Viewer component inside the blazor component.
 
@@ -53,13 +53,13 @@ window.renderJsPdfViewer = (id) => {
 
 **Step 3:** Add the following code to the blazor component.
 
-```csharp
-@page "/"
+```cshtml
+
 @inject IJSRuntime JS
 
-  <div id="pdfViewer" style="height:640px; width:100%;"></div>
+<div id="pdfViewer" style="height:640px; width:100%;"></div>
 
-@code{ 
+@code {
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {
         if (firstRender)
