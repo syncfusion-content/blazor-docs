@@ -1,15 +1,15 @@
 ---
 layout: post
 title: Update the Viewer size to its container in SfPdfViewer | Syncfusion
-description: Learn here all about how to stretch the PDF Viewer size to its container in Syncfusion Blazor SfPdfViewer component.
+description: Learn here all about how to stretch the SfPdfViewer size to its container in Syncfusion Blazor SfPdfViewer component.
 platform: Blazor
 control: SfPdfViewer
 documentation: ug
 ---
 
-# Update Viewer size at run-time in Blazor SfPdfViewer Component
+# Update the viewer size at run-time in Blazor SfPdfViewer Component
 
-You can stretch the SfPdfViewer size to its container size while resizing the container at runtime. The following code snippet explains how to update the PDF Viewer size while resizing the Splitter at runtime. In this example, the Syncfusion’s Splitter component is used.
+You can stretch the SfPdfViewer size to its container size while resizing the container at runtime. The following code snippet explains how to update the SfPdfViewer size while resizing the Splitter at runtime. In this example, the Syncfusion’s Splitter component is used.
 
 ```cshtml
 
@@ -31,7 +31,7 @@ You can stretch the SfPdfViewer size to its container size while resizing the co
         <SplitterPane Size="200px">
             <ContentTemplate>
 
-                <!--Build the PDF Viewer inside a splitter pane-->
+                <!--Build the SfPdfViewer inside a splitter pane-->
                 <SfPdfViewer2 @ref="@viewer"
                               DocumentPath="@DocumentPath">
                 </SfPdfViewer2>
@@ -52,7 +52,7 @@ You can stretch the SfPdfViewer size to its container size while resizing the co
     //This method will get invoked when the splitter is resized.
     private async void onresize()
     {
-        //This method will update the PDF Viewer size when the container size is updated at runtime.
+        //This method will update the SfPdfViewer size when the container size is updated at runtime.
         await viewer.UpdateViewerContainerAsync();
     }
 }

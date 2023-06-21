@@ -7,7 +7,7 @@ control: SfPdfViewer
 documentation: ug
 ---
 
-# Create SfPdfViewer in a Splitter Component in Blazor
+# Create SfPdfViewer Component in a Splitter Component in Blazor
 
 You can use Splitter to render the SfPdfViewer while rendering more than one component. The following code snippet explains how to render the SfPdfViewer component inside a Splitter pane. In this example, the Syncfusion’s Splitter component is used to render SfPdfViewer.
 
