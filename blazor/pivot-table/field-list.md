@@ -130,7 +130,7 @@ N> To make a field list interact with pivot table, you need to use the [UpdateVi
 
 End user can search for desired field in the field list UI by typing the field name into the search box at runtime. It can be enabled by setting the [ShowFieldSearch](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotFieldList-1.html#Syncfusion_Blazor_PivotView_SfPivotFieldList_1_ShowFieldSearch) property to **true** via code-behind.
 
-> By default, field search option is disabled in the field list UI. Furthermore, this option is only available for relational data sources.
+N> By default, field search option is disabled in the field list UI. Furthermore, this option is only available for relational data sources.
 
 To enable search box in the static field list UI, set the [ShowFieldSearch](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotFieldList-1.html#Syncfusion_Blazor_PivotView_SfPivotFieldList_1_ShowFieldSearch) property  to **true** in [SfPivotFieldList](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotFieldList-1.html).
 
