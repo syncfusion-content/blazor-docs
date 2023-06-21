@@ -272,7 +272,7 @@ N> Syncfusion recommends to reference scripts using [Static Web Assets](https://
 
 ![Blazor Image Editor Component](./images/blazor-image-editor-component.jpg)
 
-N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/Image Editor).
+N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/ImageEditor).
 
 ## See Also
 
