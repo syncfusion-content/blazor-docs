@@ -17,8 +17,7 @@ The HeatMap cells can be selected using the following interactions, as shown in 
 |------------------------ | -------------------------------------------------------------------------------------------------------------------|
 |   Mouse                 |  HeatMap cells can be selected with a click or by dragging and dropping.                                           |
 |   Touch                 |  HeatMap cells can be selected by tapping or dragging and dropping.                                                |
-|   Keyboard              |  The Ctrl key on the keyboard can be used to enable multiple cell selection with mouse and touch interaction.      
-                             The Ctrl key can only be used if the `EnableMultiSelect` property is set to **true** in order to enable multiple cell selection.                                                                                                   |
+|   Keyboard              |  The Ctrl key on the keyboard can be used to enable multiple cell selection with mouse and touch interaction. The Ctrl key can only be used if the `EnableMultiSelect` property is set to **true** in order to enable multiple cell selection.                                                                                                                                     |
 
 ```cshtml
 
