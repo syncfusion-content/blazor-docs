@@ -37,11 +37,11 @@ To initialize the PDF Viewer (NextGen) component, need to add the following proj
 
 <ItemGroup>
 
-	<!-- If you are using a Server Assembly application, include the following line in the .csproj file -->
-	<PackageReference Include="Syncfusion.Blazor.PdfViewerServer"/>
-
 	<!-- If you are using a Web Assembly application, include the following line in the .csproj file -->
-	<!--<PackageReference Include="Syncfusion.Blazor.PdfViewer"/>-->
+	<PackageReference Include="Syncfusion.Blazor.PdfViewer"/>
+
+    <!-- If you are using a Server Assembly application, include the following line in the .csproj file -->
+	<!--<PackageReference Include="Syncfusion.Blazor.PdfViewerServer"/>-->
 		
 </ItemGroup>
 
@@ -166,11 +166,11 @@ To render the PDF Viewer (NextGen) component, add the following code in the **In
 {% tabs %}
 {% highlight C# tabtitle="Index.razor" hl_lines="2 5" %}
 
-@* If you are using a Server Assembly application, include the following line in the Index.razor file*@
-<SfPdfViewerServer DocumentPath="PDF_Succinctly.pdf" Height="100%" Width="100%"></SfPdfViewerServer>
-
 @* If you are using a Web Assembly application, include the following line in the Index.razor file*@
 <SfPdfViewer DocumentPath="PDF_Succinctly.pdf" ServiceUrl="api/pdfviewer" Height="100%" Width="100%"></SfPdfViewer>
+
+@* If you are using a Server Assembly application, include the following line in the Index.razor file
+<SfPdfViewerServer DocumentPath="PDF_Succinctly.pdf" Height="100%" Width="100%"></SfPdfViewerServer>*@
 
 {% endhighlight %}
 {% endtabs %}
@@ -218,5 +218,7 @@ When using the PDF Viewer (NextGen) in a WebAssembly application, need to includ
 </td>
 </tr>
 </table>
+
+N> If you are WebAssembly application install [SkiaSharp.NativeAssets.WebAssembly](https://www.nuget.org/packages/SkiaSharp.NativeAssets.WebAssembly) NuGet package.
 
 N> If you encounter issues while attempting to host the application in certain environments, such as Azure app services, install [SkiaSharp.Views.Blazor](https://www.nuget.org/packages/SkiaSharp.Views.Blazor) instead of [SkiaSharp.NativeAssets.WebAssembly](https://www.nuget.org/packages/SkiaSharp.NativeAssets.WebAssembly) Nuget package.
