@@ -17,8 +17,9 @@ You can stretch the PDF Viewer size to its container size while resizing the con
 @using Syncfusion.Blazor.Layouts
 
 <!--This splitter layout holds two panes-->
-<SfSplitter Height="640px" Width="100%">
+<SfSplitter Height="100%" Width="100%">
     <SplitterEvents Resizing="@onresize"></SplitterEvents>
+
     <!--Configures one or more panes to construct different layouts-->
     <SplitterPanes>
         <SplitterPane Size="200px">
@@ -26,13 +27,17 @@ You can stretch the PDF Viewer size to its container size while resizing the con
                 <div> Left pane </div>
             </ContentTemplate>
         </SplitterPane>
+
         <SplitterPane Size="200px">
             <ContentTemplate>
+
                 <!--Build the PDF Viewer inside a splitter pane-->
                 <SfPdfViewer2 @ref="@viewer" DocumentPath="@DocumentPath">
                 </SfPdfViewer2>
+            
             </ContentTemplate>
         </SplitterPane>
+        
     </SplitterPanes>
 </SfSplitter>
 

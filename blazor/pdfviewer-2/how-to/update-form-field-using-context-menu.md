@@ -19,9 +19,11 @@ You can update the form field's at runtime using the FormFieldClick event and `U
 @using Syncfusion.Blazor.Navigations
 
 <div id="target" class="e-pdfviewer-signatureformfields" @onmousemove="mouseOver" style="position:absolute;left:0;right:0;top:0;bottom:0;z-index:100">
+
     <SfPdfViewer2 @ref="@Viewer" DocumentPath="@DocumentPath" Height="100%" Width="100%">
         <PdfViewerEvents DocumentLoaded="@documentLoad" FormFieldClick="@formFeildClick"></PdfViewerEvents>
     </SfPdfViewer2>
+    
 </div>
 
 <SfContextMenu @ref="contextMenuObj" Target="#target" Items="@menuItems">

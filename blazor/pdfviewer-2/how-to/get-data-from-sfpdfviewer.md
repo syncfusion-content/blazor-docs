@@ -19,8 +19,10 @@ The following code example shows how to get the loaded/edited document data and 
 @using Syncfusion.Blazor.Buttons
 
 <SfButton @onclick="retrieve">Retrieve Document</SfButton>
+
 <SfButton @onclick="load">ReloadRetrievedDocument</SfButton>
-<SfPdfViewer2 @ref="@viewer" DocumentPath="@DocumentPath" Height="540px" Width="100%">
+
+<SfPdfViewer2 @ref="@viewer" DocumentPath="@DocumentPath" Height="100%" Width="100%">
 </SfPdfViewer2>
 
 @code

@@ -22,19 +22,28 @@ The following code example shows how to achieve this based on the Undo Redo acti
 {
     <button @onclick="undo">Undo</button>
 }
+
 else
 {
     <button @onclick="undo" disabled>Undo</button>
 }
+
 @if (canRedo)
 {
     <button @onclick="redo">Redo</button>
 }
+
 else
 {
     <button @onclick="redo" disabled>Redo</button>
 }
-<SfPdfViewer2 @ref="@viewer" @bind-CanUndo="@canUndo" @bind-CanRedo="@canRedo" DocumentPath="@DocumentPath" Height="100%" Width="100%">
+
+<SfPdfViewer2 @ref="@viewer" 
+              @bind-CanUndo="@canUndo" 
+              @bind-CanRedo="@canRedo" 
+              DocumentPath="@DocumentPath" 
+              Height="100%" 
+              Width="100%">
 </SfPdfViewer2>
 
 @code

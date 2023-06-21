@@ -19,14 +19,17 @@ If you want to unload and clear the resources occupied by the PDF file programma
 @using Syncfusion.Blazor.SfPdfViewer
 
 <SfButton @onclick="OnClick">Unload Document</SfButton>
-<SfPdfViewer2 @ref="@Viewer" Height="500px" Width="1060px" DocumentPath="@DocumentPath" />
+
+<SfPdfViewer2 @ref="@Viewer" Height="100%" Width="100%" DocumentPath="@DocumentPath" />
 
 @code {
     SfPdfViewer2? Viewer;
+
     public async void OnClick(MouseEventArgs args)
     {
         await Viewer!.UnloadAsync();
     }
+    
     public string DocumentPath { get; set; } = "wwwroot/data/PDF_Succinctly.pdf";
 }
 

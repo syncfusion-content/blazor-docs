@@ -20,18 +20,23 @@ You can use Splitter to render the PDF Viewer while rendering more than one comp
 <SfSplitter Height="100%" Width="100%">    
     <!--Configures one or more panes to construct different layouts-->
     <SplitterPanes>
+
         <SplitterPane Size="200px">
             <ContentTemplate>
                 <div> Left pane </div>
             </ContentTemplate>
         </SplitterPane>
+
         <SplitterPane Size="200px">
             <ContentTemplate>
+
                 <!--Build the PDF Viewer inside a splitter pane-->
                 <SfPdfViewer2 @ref="@viewer" DocumentPath="@DocumentPath">
                 </SfPdfViewer2>
+
             </ContentTemplate>
         </SplitterPane>
+        
     </SplitterPanes>
 </SfSplitter>
 

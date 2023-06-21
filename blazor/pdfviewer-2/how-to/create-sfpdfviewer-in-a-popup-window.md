@@ -18,11 +18,14 @@ For quick view, you might need to display the PDF file in a dialog window. The f
 @using Syncfusion.Blazor.SfPdfViewer
 
 <div id="target" style="width:800px;height:500px">
+
     <SfButton @onclick="OnClick">Open PDF Viewer</SfButton>
+
     <SfDialog @ref="@Dialog" Target="#target" Width="100%" Visible="false" IsModal="true" Header= "@Header" ShowCloseIcon="true">
         <DialogEvents OnOpen="OnOpen"></DialogEvents>
         <SfPdfViewer2 @ref="Viewer" />
     </SfDialog>
+    
 </div>
 
 @code {
@@ -38,6 +41,7 @@ For quick view, you might need to display the PDF file in a dialog window. The f
     {
         await Viewer!.LoadAsync(DocumentPath, null);
     }
+
     public string DocumentPath { get; set; } = "wwwroot/data/PDF_Succinctly.pdf";
     public string Header { get; set; } = "PDF Viewer";
 }
