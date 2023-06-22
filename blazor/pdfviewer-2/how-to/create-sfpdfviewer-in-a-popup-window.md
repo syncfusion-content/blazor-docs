@@ -60,4 +60,4 @@ For quick view, you might need to display the PDF file in a dialog window. The f
 
 * [How to create SfPdfViewer Component in a Splitter Component](./create-sfpdfviewer-in-a-splitter-component)
 
-* [How to view the created PDF document](./create-pdf-viewer)
+* [How to view the created PDF document](./create-sfpdfviewer)

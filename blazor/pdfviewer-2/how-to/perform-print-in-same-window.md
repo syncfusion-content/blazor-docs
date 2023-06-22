@@ -30,6 +30,6 @@ In the provided code, `PrintMode.Default` is used to specify printing in the sam
 
 ## See also
 
-* [Print in Blazor SfPdfViewer Component](./print)
+* [Print in Blazor SfPdfViewer Component](../print)
 
 * [How to print the SfPdfViewer inside the Dialog](./print-the-sfpdfiewer-inside-the-dialog-component)
