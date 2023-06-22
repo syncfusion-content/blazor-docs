@@ -257,7 +257,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ### How to add Padding for nodeGroup
 
-The [Padding] property of a group node defines the spacing between the group node’s edges and its children.
+The [Padding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeGroup.html#Syncfusion_Blazor_Diagram_NodeGroup_Padding) property of a group node defines the spacing between the group node’s edges and its children.
 
 The following code illustrates how to add Padding to the node group.
 
