@@ -156,7 +156,7 @@ By default, zoom in, zoom out, pan, and reset buttons are available in the toolb
 
 ### Toolbar Display Mode
 
-By default, zooming tool bar will appear only when the chart is zoomed. But you can display zooming tool bar on the chart on initial load itself by setting the ToolbarDisplayMode as ToolbarMode.Always.
+By default, zooming tool bar will appear only when the chart is zoomed. But you can display zooming tool bar on the chart on initial load itself by setting the [ToolbarDisplayMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartZoomSettings.html#Syncfusion_Blazor_Charts_ChartZoomSettings_ToolbarDisplayMode) as [ToolbarMode.Always](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ToolbarMode.html#Syncfusion_Blazor_Charts_ToolbarMode_Always).
 
 ```cshtml
 

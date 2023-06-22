@@ -95,7 +95,7 @@ Markers can be assigned with different shapes such as [Rectangle](https://help.s
 
 ## Auto Marker Shape
 
-By default, the chart marker shape is set to Auto. If chart marker is enabled, each series will be rendered with a different marker shape.
+By default, the [chart marker shape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartShape.html) is set to [Auto](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartShape.html#Syncfusion_Blazor_Charts_ChartShape_Auto). If chart marker is enabled, each series will be rendered with a different marker shape.
 
 ```cshtml
 

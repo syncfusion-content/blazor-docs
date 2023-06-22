@@ -295,7 +295,7 @@ When the legend items exceed legend bounds, paging will be enabled by default. E
 
 ### Paging Customization
 
-The legend paging arrow elements can be customized by using the `ArrowSize` property in the `AccumulationChartLegendPageSettings`, and the page numbers can be customized using `AccumulationChartLegendPageSettingsTextStyle`.
+The legend paging arrow elements can be customized by using the [ArrowSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartLegendPageSettings.html#Syncfusion_Blazor_Charts_AccumulationChartLegendPageSettings_ArrowSize) property in the [AccumulationChartLegendPageSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartLegendPageSettings.html), and the page numbers can be customized using [AccumulationChartLegendPageSettingsTextStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartLegendPageSettingsTextStyle.html).
 
 ```cshtml 
 
