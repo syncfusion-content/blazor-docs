@@ -26,7 +26,7 @@ You can create **Blazor Server App** or **Blazor WebAssembly App** using Visual 
 
 * [Create a Project using Microsoft Templates](https://docs.microsoft.com/en-us/aspnet/core/blazor/tooling?pivots=windows)
 
-* [Create a Project using Syncfusion Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project)
+* [Create a Project using Syncfusion Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio)
 
 ## Install Syncfusion Blazor Layouts NuGet in the App
 
@@ -283,7 +283,7 @@ N> There is no need to assign default value for panels. Refer to the [Panels](./
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to run the application. Then, the Syncfusion `Blazor Dashboard Layout` component will be rendered in the default web browser.
 
-![Blazor DashboardLayout Component](images/blazor-dashboard-layout-component.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDrKNnWeToosqFyA?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Defining panels
 
@@ -325,19 +325,20 @@ A dashboard layout panel is rendered with simple data. The header of a panel is 
 
 The Dashboard layout with simple content will be rendered in the web browser as demonstrated in the following screenshot.
 
-![Blazor DashboardLayout with Single Data](images/blazor-dashboard-layout-single-content.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rXBUDdCoJoyPwUgz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ### Panels with components
 
 A dashboard layout can be rendered with the components like the chart, grids, maps, gauge, and more as a content of dashboard layout panel.
 
-These complex data (components) are placed as the panel content by assigning the corresponding component element as the `ContentTemplate` of the panel.
+These complex data (components) are placed as the panel content by assigning the corresponding component element as the `ContentTemplate` of the panel. 
 
 {% tabs %}
 {% highlight razor %}
 
 @using Syncfusion.Blazor.Charts
 @using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor.Layouts
 
 <div class="content">
     <SfDashboardLayout Columns="6" CellSpacing="@(new double[]{10 ,10 })">
@@ -435,16 +436,16 @@ These complex data (components) are placed as the panel content by assigning the
     private object[] Value = new object[] { new DateTime(2006, 01, 01), new DateTime(2008, 01, 01) };
     public class ChartData
     {
-        public DateTime XValue;
-        public double YValue;
-        public string X;
-        public double Y;
-        public string Country;
-        public string X1;
-        public double Y1;
-        public double Y2;
-        public double Y3;
-        public double Y4;
+        public DateTime XValue { get; set; }
+        public double YValue { get; set; }
+        public string X { get; set; }
+        public double Y { get; set; }
+        public string Country { get; set; }
+        public string X1 { get; set; }
+        public double Y1 { get; set; }
+        public double Y2 { get; set; }
+        public double Y3 { get; set; }
+        public double Y4 { get; set; }
     }
     public List<ChartData> DataSource = new List<ChartData>
 {

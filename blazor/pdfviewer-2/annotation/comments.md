@@ -95,7 +95,7 @@ The annotation comment and comment replies can be edited by the following ways:
 * Select the status of the annotation comment in the context menu that appears.
 * Status ‘None’ is the default state. If status set to ‘None’, the comments or reply does not appear.
 
-![Editing Comment in Blazor PDFViewer](../../pdfviewer/images/blazor-pdfviewer-comment-editing.png)
+![Editing Comment in Blazor SfPdfViewer](../../pdfviewer/images/blazor-pdfviewer-comment-editing.png)
 
 ### Delete Comment or Comment Replies
 
@@ -103,7 +103,7 @@ The annotation comment and comment replies can be edited by the following ways:
 * Click the more options button shown in Comments or reply container.
 * Select Delete option in the context menu that appears.
 
-![Deleting Comment in Blazor PDFViewer](../../pdfviewer/images/blazor-pdfviewer-delete-comments.png)
+![Deleting Comment in Blazor SfPdfViewer](../../pdfviewer/images/blazor-pdfviewer-delete-comments.png)
 
 N> The annotation will be deleted on deleting the comment using comment panel.
 
@@ -119,12 +119,16 @@ The following code snippet explains how to show the Comment panel.
 @using Syncfusion.Blazor.SfPdfViewer
 
 <SfButton OnClick="@OnClick">ShowOrHideCommentPanel</SfButton>
-<SfPdfViewer2 @ref="Viewer" @bind-CommentPanelVisible="@isOpen"  DocumentPath=@DocumentPath Height="100%" Width="100%"></SfPdfViewer2>
+<SfPdfViewer2 @ref="Viewer"
+              @bind-CommentPanelVisible="@isOpen"
+              DocumentPath=@DocumentPath
+              Height="100%"
+              Width="100%">
+</SfPdfViewer2>
 
 @code
 {
     SfPdfViewer2 Viewer;
-
     //Sets the PDF document path for initial loading.
     private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
 
@@ -144,4 +148,4 @@ The following code snippet explains how to show the Comment panel.
     }
 }
 ```
-N> [View sample in GitHub]().
+[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Annotations/Comment%20Panel/Show%20or%20hide%20comment%20panel%20-%20SfPdfViewer).

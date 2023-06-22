@@ -107,7 +107,7 @@ Add the theme style sheet as below in the sever web app.
     <!-- Syncfusion Blazor SfPdfViewer controls theme style sheet -->
     <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
     <!-- Syncfusion Blazor SfPdfViewer controls scripts -->
-    <script src="_content/Syncfusion.Blazor.PdfViewer/scripts/syncfusion-blazor-sfpdfviewer.min.js" type="text/javascript"></script>
+    <script src="_content/Syncfusion.Blazor.SfPdfViewer/scripts/syncfusion-blazor-sfpdfviewer.min.js" type="text/javascript"></script>
 </head>
 
 {% endhighlight %}
@@ -141,4 +141,10 @@ Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (m
 
 ![Blazor SfPdfViewer Component](GettingStarted_images/blazor-pdfviewer.png)
 
->[View Sample in GitHub]().
+>[View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/PDFViewer/BlazorServerApp/PDFViewerSample-SfPdfViewer).
+
+## See also
+
+* [Getting Started with Blazor SfPdfViewer Component in Blazor WASM App](./web-assembly-application)
+
+* [Getting Started with Blazor SfPdfViewer Component in WSL mode](./wsl-application)

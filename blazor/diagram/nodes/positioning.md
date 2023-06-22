@@ -73,7 +73,7 @@ The following code shows how to change the Pivot value.
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/Position)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/Position/Positioning)
 
 ![Arranging Node Position in Blazor Diagram](../images/blazor-diagram-node-position.png)
 
@@ -114,7 +114,7 @@ Rotation of a node is controlled by using the [RotationAngle](https://help.syncf
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/Position)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/Position/NodeRotateAngle)
 
 ![Changing Node Rotation Angle in Blazor Diagram](../images/blazor-diagram-node-rotation-angle.png)
 
@@ -161,12 +161,12 @@ The [MinWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.N
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/Position)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/Position/MinMaxSize)
 
 ![Displaying Maximum and Minimum Size of Blazor Diagram Node](../images/blazor-diagram-show-max-min-size-node.gif)
 
 ## See also
 
-* [How to customize the node](./appearance)
+* [How to customize the node](./customization)
 
 * [How to get events when they interact with the node](./events)

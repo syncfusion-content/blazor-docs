@@ -82,7 +82,7 @@ The hierarchical tree layout arranges nodes in a tree-like structure, where the 
 }
 
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Layout)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Layout/HeirarchicalLayout)
 
 ![Blazor Hierarchical Diagram](../images/blazor-hierarchical-diagram.png)
 
@@ -159,7 +159,7 @@ You can create a hierarchical layout with DataSource. The following code demonst
     };
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Layout)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Layout/HierarchicalTreeWithDataSource)
 
 ## Customizing the properties
 
