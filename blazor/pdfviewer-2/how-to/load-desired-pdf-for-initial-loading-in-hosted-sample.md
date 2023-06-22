@@ -9,7 +9,7 @@ documentation: ug
 
 # Load desired PDF for initial loading in Blazor SfPdfViewer Component
 
-You can load your own PDF document for initial loading as well as change document at run-time in SfPdfViewer hosted sample. To achieve that, you need to add your document in the server project and refer api/values in client project.
+You can load your own PDF document for initial loading as well as change the document at runtime in the Blazor SfPdfViewer component.To load your desired PDF document for initial display, you need to set the `DocumentPath` property of the SfPdfViewer component to the path of your PDF file. 
 
 ```cshtml
 
@@ -41,6 +41,10 @@ You can load your own PDF document for initial loading as well as change documen
 }
 
 ```
+
+In the above code, When the `Load Another Document` button is clicked, the `LoadAnotherDocument` method is triggered. This method uses the HttpClient service to retrieve the desired PDF document as a `byte` array. The byte array is then converted to a `base64` string, and the `DocumentPath` property is updated with the new document path.
+
+With this implementation, users can click the `Load Another Document` button to dynamically change the PDF document displayed in the Blazor SfPdfViewer component.
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Common/Load%20Desire%20PDF%20in%20Blazor%20-%20SfPdfViewer).
 

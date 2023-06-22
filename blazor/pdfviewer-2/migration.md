@@ -145,7 +145,7 @@ builder.Services.AddSyncfusionBlazor();
 builder.Services.AddSyncfusionBlazor();
 
 // If you are using a WebAssembly application, include the following line in the Program.cs file
-builder.Services.AddMemoryCache();
+// builder.Services.AddMemoryCache();
 
 {% endhighlight %}
 {% endtabs %}
