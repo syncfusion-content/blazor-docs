@@ -295,7 +295,7 @@ When the legend items exceed legend bounds, paging will be enabled by default. E
 
 ### Paging Customization
 
-The legend paging arrow elements can be customized by using the ArrowSize property in the `AccumulationChartLegendPageSettings`, and the page numbers can be customized using `AccumulationChartLegendPageSettingsTextStyle`.
+The legend paging arrow elements can be customized by using the `ArrowSize` property in the `AccumulationChartLegendPageSettings`, and the page numbers can be customized using `AccumulationChartLegendPageSettingsTextStyle`.
 
 ```cshtml 
 
