@@ -42,7 +42,7 @@ You can load your own PDF document for initial loading as well as change the doc
 
 ```
 
-In the above code, the initial PDF document is set by assigning the path of the document to the DocumentPath variable. When the `Load Another Document` button is clicked, the `LoadAnotherDocument` method is triggered. This method uses the HttpClient service to retrieve the desired PDF document as a `byte` array. The byte array is then converted to a `base64` string, and the `DocumentPath` property is updated with the new document path.
+In the above code, When the `Load Another Document` button is clicked, the `LoadAnotherDocument` method is triggered. This method uses the HttpClient service to retrieve the desired PDF document as a `byte` array. The byte array is then converted to a `base64` string, and the `DocumentPath` property is updated with the new document path.
 
 With this implementation, users can click the `Load Another Document` button to dynamically change the PDF document displayed in the Blazor SfPdfViewer component.
 
