@@ -156,7 +156,7 @@ By default, zoom in, zoom out, pan, and reset buttons are available in the toolb
 
 ### Toolbar Display Mode
 
-By default, zooming tool bar will appear only when the chart is zoomed. Now we can display zooming tool bar for un zoomed charts by setting the ToolbarDisplayMode as ToolbarMode.Always.
+By default, zooming tool bar will appear only when the chart is zoomed. But you can display zooming tool bar on the chart on initial load itself by setting the ToolbarDisplayMode as ToolbarMode.Always.
 
 ```cshtml
 
@@ -184,14 +184,14 @@ By default, zooming tool bar will appear only when the chart is zoomed. Now we c
 
     public List<ChartData> SalesReports = new List<ChartData>
     {
-        new ChartData { X= "USA", YValue= 46 },
-        new ChartData { X= "GBR", YValue= 27 },
-        new ChartData { X= "CHN", YValue= 26 },
-        new ChartData { X= "UK", YValue= 26 },
-        new ChartData { X= "AUS", YValue= 26 },
-        new ChartData { X= "IND", YValue= 26 },
-        new ChartData { X= "DEN", YValue= 26 },
-        new ChartData { X= "MEX", YValue= 26 },
+       new ChartData1 { X= "USA", YValue= 50 },
+        new ChartData1 { X= "GBR", YValue= 20 },
+        new ChartData1 { X= "CHN", YValue= 26 },
+        new ChartData1 { X= "UK", YValue= 20 },
+        new ChartData1 { X= "AUS", YValue= 35 },
+        new ChartData1 { X= "IND", YValue= 15 },
+        new ChartData1 { X= "DEN", YValue= 40 },
+        new ChartData1 { X= "MEX", YValue= 30 },
     };
 }
 ```

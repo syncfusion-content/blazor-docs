@@ -11,7 +11,9 @@ documentation: ug
 
 ## Range Step Area
 
-[Range Step Area Chart](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/range-area-chart) shows variation in data values over time and fills the high and low range areas accordingly. To render a [Range Step Area Chart](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/range-area-chart), set the series [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Type) as [RangeStepArea](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesType.html#Syncfusion_Blazor_Charts_ChartSeriesType_SplineRangeArea).
+[Range Step Area Chart](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/range-step-area-chart) is same as range area chart except that the data points are connected as a step by horizontal and vertical lines.
+
+[Range Step Area Chart](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/range-step-area-chart) is used to display continuous data points as set os steps that vary between high and low values over intervals of the time across different categories. To render a [Range Step Area Chart](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/range-area-chart), set the series [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Type) as [RangeStepArea](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesType.html#Syncfusion_Blazor_Charts_ChartSeriesType_RangeStepArea).
 
 ```cshtml
  
@@ -34,7 +36,7 @@ documentation: ug
         <ChartAxisMajorTickLines Width="0"/>
     </ChartPrimaryYAxis>
     <ChartSeriesCollection>
-    <ChartSeries DataSource="@ChartPoints" XName="X" High="High" Low="Low" Fill="url(#gradient-chart1)" Opacity="0.5" Type="ChartSeriesType.RangeStepArea">
+    <ChartSeries DataSource="@ChartPoints" XName="X" High="High" Low="Low"  Opacity="0.5" Type="ChartSeriesType.RangeStepArea">
             <ChartMarker Visible="false"></ChartMarker>                 
         </ChartSeries>
     </ChartSeriesCollection>
@@ -42,10 +44,8 @@ documentation: ug
 </SfChart>
 
 @code{
-    
-    public string BorderColor { get; set; }
-    string valueUrl = "url";
-    public EdgeLabelPlacement EdgeLabelPlacement { get; set; } = EdgeLabelPlacement.Hide;
+
+    public string BorderColor { get; set; }    
     public ChartData[] ChartPoints { get; set; }
 
     protected async override Task OnInitializedAsync()
@@ -61,24 +61,7 @@ documentation: ug
         public double High { get; set; }
         public double Low { get; set; }
     }
-    }
-
-<svg style="height: 0">     
-
-    <defs>  
-
-        <linearGradient id="gradient-chart1" x1="0%" y1="0%" x2="0%" y2="100%">  
-
-            <stop offset="0%" style="stop-color:rgb(255,0,0);stop-opacity:1" />  
-
-            <stop offset="100%" style="stop-color:rgb(255,255,0);stop-opacity:1" />  
-
-        </linearGradient>  
-  
-
-    </defs>  
-
-</svg>  
+}
 
 ```
 
