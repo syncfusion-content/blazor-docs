@@ -391,7 +391,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Freehand Drawing
 
-The diagram supports an innovative feature called Freehand Drawing, empowering users to effortlessly create freeform curves (splines) directly on the diagram page. With this remarkable functionality, users can unlock their imagination and showcase their creativity by effortlessly sketching anything from simple drawings to elaborate artistic creations. To utilize this feature, users can access the [DrawingObject](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_DrawingObject) property and select the `Freehand` connector type, enabling them to express their ideas and concepts through fluid and natural hand-drawn lines.
+The diagram supports an innovative feature called Freehand Drawing, empowering users to effortlessly create freeform curves (splines) directly on the diagram page. With this remarkable functionality, users can unlock their imagination and showcase their creativity by effortlessly sketching anything from simple drawings to elaborate artistic creations. To utilize this feature, users can access the [DrawingObject](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_DrawingObject) property and select the [Freehand](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ConnectorSegmentType.html#Syncfusion_Blazor_Diagram_ConnectorSegmentType_Freehand) connector type, enabling them to express their ideas and concepts through fluid and natural hand-drawn lines.
 
 The following code illustrates how to draw a freehand drawing.
 

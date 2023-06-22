@@ -324,7 +324,7 @@ By default, when there are no segments defined for a bezier connector, the bezie
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Segments).
 
-Also, if you provide segments on initial rendering, the segments collection will be updated dynamically when you move the connector ends. For static segments collection, the `BezierConnectorSettings.AllowSegmentsReset` property of the Connector class should be set to false.
+Also, if you provide segments on initial rendering, the segments collection will be updated dynamically when you move the connector ends. For static segments collection, the [BezierConnectorSettings.AllowSegmentsReset](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BezierConnectorSettings.html#Syncfusion_Blazor_Diagram_BezierConnectorSettings_AllowSegmentsReset) property of the Connector class should be set to false.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -395,7 +395,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ### How to interact with the bezier segments efficiently
 
-While interacting with multiple bezier segments, maintain their control points at the same distance and angle by using the `BezierConnectorSettings.Smoothness` property of the Connector class.
+While interacting with multiple bezier segments, maintain their control points at the same distance and angle by using the [BezierConnectorSettings.Smoothness](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BezierConnectorSettings.html#Syncfusion_Blazor_Diagram_BezierConnectorSettings_Smoothness) property of the Connector class.
 
 | BezierSmoothness value | Description |
 |-------- | -------- |
@@ -404,7 +404,7 @@ While interacting with multiple bezier segments, maintain their control points a
 | Both | Both control points of adjacent segments will be at the same angle and same distance when one of them is editing. |
 | None | Segment’s control points interact independently from each other. |
 
-Also, the intermediate point of two adjacent bezier segments can be edited interactively based on the `BezierConnectorSettings.SegmentEditOrientation` property of the Connector class.
+Also, the intermediate point of two adjacent bezier segments can be edited interactively based on the [BezierConnectorSettings.SegmentEditOrientation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BezierConnectorSettings.html#Syncfusion_Blazor_Diagram_BezierConnectorSettings_SegmentEditOrientation) property of the Connector class.
 
 | SegmentEditOrientation value | Description |
 |-------- | -------- |
@@ -484,7 +484,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ### How to show or hide the bezier segment's control points
 
-By using the `BezierConnectorSettings.ControlPointsVisibility` property of the Connector class, you can enable or disable the visibility of the bezier segment's control points.
+By using the [BezierConnectorSettings.ControlPointsVisibility](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BezierConnectorSettings.html#Syncfusion_Blazor_Diagram_BezierConnectorSettings_ControlPointsVisibility) property of the Connector class, you can enable or disable the visibility of the bezier segment's control points.
 
 | ControlPointsVisibility value | Description |
 |-------- | -------- |
