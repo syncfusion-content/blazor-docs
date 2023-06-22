@@ -1317,7 +1317,7 @@ SfPdfViewer2
 <li><a href="#syncfusionblazorsplitbuttons">Syncfusion.Blazor.SplitButtons</a></li>
 <li><a href="https://www.nuget.org/packages/Syncfusion.SfPdfViewer.AspNet.Core/">Syncfusion.SfPdfViewer.AspNet.Core</li>
 </ul>
-
+</td>
 </tr>
 </table>
 
