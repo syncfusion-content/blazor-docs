@@ -11,16 +11,20 @@ documentation: ug
 
 ## Why PDF Viewer to PDF Viewer (NextGen) control
 
-* Migration to PDF Viewer (NextGen) control offers enhanced performance in scrolling, pagination, and printing. These operations will now be smoother and more efficient, providing a better user experience.
+The migration to the PDF Viewer (NextGen) control brings a host of benefits, including improved performance in scrolling, pagination, and printing. These enhancements result in a smoother and more efficient user experience. Additionally, this migration eliminates the need for a Web assembly service dependency, streamlining the system and enhancing maintainability.
 
-* Eliminates the need for a Web assembly service dependency. This consolidation reduces complexity and improves maintainability.
-SfPdfViewer control is now available as a unified package for Windows, Mac, and Linux platforms. This means that users can easily 
+* **Enhanced Performance**:
+With the PDF Viewer (NextGen) control, users can expect significant improvements in performance. Scrolling through documents, navigating pages, and printing operations are now optimized for efficiency. Users will experience seamless and fluid interactions, ensuring a more productive and satisfying workflow.
 
-* Install and use the software regardless of their operating system. The unified package simplifies distribution and deployment, making it more convenient for users to access and utilize the software on different platforms.
+* **Elimination of Web Assembly Service Dependency**:
+The migration to the PDF Viewer (NextGen) control removes the requirement for a Web assembly service dependency.
+
+* **Unified Package for Multiple Platforms**:
+The PDF Viewer (NextGen) control is now available as a unified package for Windows, Mac, and Linux platforms. This means that regardless of their operating system, users can effortlessly install and utilize the package.
 
 ### Nuget Package
 
-To initialize the PDF Viewer (NextGen) component, need to add the following project references to your project 
+To initialize the PDF Viewer (NextGen) component, need to add the following project references to your **.csproj** file
 
 <table>
 <tr>
@@ -29,10 +33,16 @@ To initialize the PDF Viewer (NextGen) component, need to add the following proj
 <tr>
 <td>
 {% tabs %}
-{% highlight C# tabtitle=".csproj" hl_lines="2" %}
+{% highlight C# tabtitle=".csproj" hl_lines="4 7" %}
 
 <ItemGroup>
-    <PackageReference Include="Syncfusion.Blazor.PdfViewer"/>
+
+	<!-- If you are using a Web Assembly application, include the following line in the .csproj file -->
+	<PackageReference Include="Syncfusion.Blazor.PdfViewer"/>
+
+    <!-- If you are using a Server Assembly application, include the following line in the .csproj file -->
+	<!--<PackageReference Include="Syncfusion.Blazor.PdfViewerServer"/>-->
+		
 </ItemGroup>
 
 {% endhighlight %}
@@ -59,7 +69,7 @@ To initialize the PDF Viewer (NextGen) component, need to add the following proj
 
 ### Script File
 
-To utilize the PDF Viewer (NextGen) component in your project, need to add the corresponding script file to the *Host.cshtml* or *Layout.cshtml* file based on your framework version.
+To utilize the PDF Viewer (NextGen) component in your project, need to add the corresponding script file to the **Host.cshtml** or **Layout.cshtml** file based on your framework version.
 
 N> The script file is same for `Server application` and `Web assembly application` for PDF Viewer (NextGen) component
 
@@ -106,7 +116,7 @@ N> The script file is same for `Server application` and `Web assembly applicatio
 
 ### Program.cs
 
-Add the following line to the *Program.cs* file to use the PDF Viewer (NextGen) component
+Add the following line to the **Program.cs** file to use the PDF Viewer (NextGen) component
 
 <table>
 <tr>
@@ -145,7 +155,7 @@ builder.Services.AddMemoryCache();
 
 ### Index.razor
 
-To render the PDF Viewer (NextGen) component, add the following code in the *Index.razor* file.
+To render the PDF Viewer (NextGen) component, add the following code in the **Index.razor** file.
 
 <table>
 <tr>
@@ -154,9 +164,13 @@ To render the PDF Viewer (NextGen) component, add the following code in the *Ind
 <tr>
 <td>
 {% tabs %}
-{% highlight C# tabtitle="Index.razor" %}
+{% highlight C# tabtitle="Index.razor" hl_lines="2 5" %}
 
+@* If you are using a Web Assembly application, include the following line in the Index.razor file*@
 <SfPdfViewer DocumentPath="PDF_Succinctly.pdf" ServiceUrl="api/pdfviewer" Height="100%" Width="100%"></SfPdfViewer>
+
+@* If you are using a Server Assembly application, include the following line in the Index.razor file
+<SfPdfViewerServer DocumentPath="PDF_Succinctly.pdf" Height="100%" Width="100%"></SfPdfViewerServer>*@
 
 {% endhighlight %}
 {% endtabs %}
@@ -181,12 +195,13 @@ To render the PDF Viewer (NextGen) component, add the following code in the *Ind
 
 ### Project.cs
 
-When using the PDF Viewer (NextGen) in a WebAssembly application, need to include the following lines in your .csproj file to ensure proper functionality and compatibility 
+When using the PDF Viewer (NextGen) in a WebAssembly application, need to include the following lines in your **.csproj** file to ensure proper functionality and compatibility 
 
 <table>
 <tr>
 <th>PDF Viewer(NextGen)</th>
 </tr>
+<tr>
 <td>
 {% tabs %}
 {% highlight C# tabtitle="csproj" hl_lines="2 6 7" %}
@@ -203,3 +218,13 @@ When using the PDF Viewer (NextGen) in a WebAssembly application, need to includ
 </td>
 </tr>
 </table>
+
+N> If you are WebAssembly application install [SkiaSharp.NativeAssets.WebAssembly](https://www.nuget.org/packages/SkiaSharp.NativeAssets.WebAssembly) NuGet package.
+
+N> If you encounter issues while attempting to host the application in certain environments, such as Azure app services, install [SkiaSharp.Views.Blazor](https://www.nuget.org/packages/SkiaSharp.Views.Blazor) instead of [SkiaSharp.NativeAssets.WebAssembly](https://www.nuget.org/packages/SkiaSharp.NativeAssets.WebAssembly) Nuget package.
+
+## See also
+
+* [Getting Started with Blazor SfPdfViewer Component in Blazor Server App](./getting-started/server-side-application)
+
+* [Getting Started with Blazor SfPdfViewer Component in Blazor WASM App](./getting-started/web-assembly-application)
