@@ -161,3 +161,46 @@ The [LegendRender](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Chart
     }
 }
 ```
+## PointerClick
+
+The [PointerClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartEvents.html#Syncfusion_Blazor_Charts_BulletChartEvents_PointerClick) event triggers when the mouse or touch pointer is clicked on either the feature measure value or the target elements.
+
+|   Argument name    |   Description                                          |
+|--------------------| -------------------------------------------------------|
+|   Target     |    Specifies the Target bar values.      |
+|   Value     |    Specifies the Value bar data.      |
+|   CategoryName     |    Specifies the category name od selected point.      |
+|   Cancel             |   Specifies the event cancel status. |
+
+```cshtml
+@using Syncfusion.Blazor.Charts
+
+<SfBulletChart DataSource="@BulletChartData" Height="300px" Title="Sales Rate" ValueField="FieldValue" TargetField="TargetValue" Minimum="0" Maximum="100" Interval="20">
+    <BulletChartEvents PointerClick="PointClickEvent"></BulletChartEvents>
+    <BulletChartLegendSettings Visible="true" Width="15%"></BulletChartLegendSettings>
+    <BulletChartRangeCollection>
+        <BulletChartRange End=35 Name="Apple"></BulletChartRange>
+        <BulletChartRange End=50 Name="Mango" Color="lightgreen" Shape="LegendShape.Pentagon"></BulletChartRange>
+        <BulletChartRange End=100 Name="Papaya"></BulletChartRange>
+    </BulletChartRangeCollection>
+</SfBulletChart>
+
+@code {
+    public class ChartData
+    {
+        public double FieldValue { get; set; }
+        public double TargetValue { get; set; }
+    }
+    public List<ChartData> BulletChartData = new List<ChartData>
+    {
+        new ChartData { FieldValue = 55, TargetValue = 75 },
+        new ChartData { FieldValue = 45, TargetValue = 15 },
+        new ChartData { FieldValue = 75, TargetValue = 35 }
+    };
+    public void PointClickEvent(BulletChartPointEventArgs args)
+    {
+        // Here, you can customize the code.         
+    }
+}
+
+```
