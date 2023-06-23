@@ -398,6 +398,202 @@ You can customize the indicators by showing the preview image of each slide usin
 
 ![Carousel Indicators](images/indicators_preview.png)
 
+### Indicator Types
+
+Choose different types of indicators available using the [`IndicatorsType`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfCarousel.html#Syncfusion_Blazor_Navigations_SfCarousel_IndicatorsType) property. The indicator types are categorized as follows:
+
+* [Default Indicator](#default-indicator-type)
+* [Dynamic Indicator](#dynamic-indicator-type)
+* [Fraction Indicator](#fraction-indicator-type)
+* [Progress Indicator](#progress-indicator-type)
+
+#### Default Indicator Type
+
+A default indicator in a carousel is a set of dots that indicate the current position of the slide in the carousel. The Default indicator can be achieved by setting the [`IndicatorsType`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfCarousel.html#Syncfusion_Blazor_Navigations_SfCarousel_IndicatorsType) to `Default`.
+
+```cshtml
+@using Syncfusion.Blazor.Navigations
+
+<div class="control-container">
+    <SfCarousel IndicatorsType="Default">
+        <CarouselItem>
+            <div class="slide-content">Slide 1</div>
+        </CarouselItem>
+        <CarouselItem>
+            <div class="slide-content">Slide 2</div>
+        </CarouselItem>
+        <CarouselItem>
+            <div class="slide-content">Slide 3</div>
+        </CarouselItem>
+        <CarouselItem>
+            <div class="slide-content">Slide 4</div>
+        </CarouselItem>
+        <CarouselItem>
+            <div class="slide-content">Slide 5</div>
+        </CarouselItem>
+    </SfCarousel>
+</div>
+
+<style>
+    .control-container {
+        background-color: #adb5bd;
+        height: 300px;
+        margin: 0 auto;
+        width: 500px;
+    }
+
+    .e-carousel .slide-content {
+        align-items: center;
+        display: flex;
+        font-size: 1.25rem;
+        height: 100%;
+        justify-content: center;
+    }
+</style>
+```
+
+![Carousel indicators type default](images/indicator-default.png)
+#### Dynamic Indicator Type
+
+A dynamic indicator in a carousel provides visual cues or markers that dynamically change or update to indicate the current position. The Dynamic indicator can be achieved by setting the [`IndicatorsType`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfCarousel.html#Syncfusion_Blazor_Navigations_SfCarousel_IndicatorsType) to `Dynamic`.
+
+```cshtml
+@using Syncfusion.Blazor.Navigations
+
+<div class="control-container">
+    <SfCarousel IndicatorsType="Dynamic">
+        <CarouselItem>
+            <div class="slide-content">Slide 1</div>
+        </CarouselItem>
+        <CarouselItem>
+            <div class="slide-content">Slide 2</div>
+        </CarouselItem>
+        <CarouselItem>
+            <div class="slide-content">Slide 3</div>
+        </CarouselItem>
+        <CarouselItem>
+            <div class="slide-content">Slide 4</div>
+        </CarouselItem>
+        <CarouselItem>
+            <div class="slide-content">Slide 5</div>
+        </CarouselItem>
+    </SfCarousel>
+</div>
+
+<style>
+    .control-container {
+        background-color: #adb5bd;
+        height: 300px;
+        margin: 0 auto;
+        width: 500px;
+    }
+
+    .e-carousel .slide-content {
+        align-items: center;
+        display: flex;
+        font-size: 1.25rem;
+        height: 100%;
+        justify-content: center;
+    }
+</style>
+```
+
+![Carousel indicators type dynamic](images/indicator-dynamic.png)
+
+#### Fraction Indicator Type
+
+The fraction indicator type displays the current slide index and total slide count as a fraction. The Fraction indicator can be achieved by setting the [`IndicatorsType`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfCarousel.html#Syncfusion_Blazor_Navigations_SfCarousel_IndicatorsType) to `Fraction`.
+
+```cshtml
+@using Syncfusion.Blazor.Navigations
+
+<div class="control-container">
+    <SfCarousel IndicatorsType="Fraction">
+        <CarouselItem>
+            <div class="slide-content">Slide 1</div>
+        </CarouselItem>
+        <CarouselItem>
+            <div class="slide-content">Slide 2</div>
+        </CarouselItem>
+        <CarouselItem>
+            <div class="slide-content">Slide 3</div>
+        </CarouselItem>
+        <CarouselItem>
+            <div class="slide-content">Slide 4</div>
+        </CarouselItem>
+        <CarouselItem>
+            <div class="slide-content">Slide 5</div>
+        </CarouselItem>
+    </SfCarousel>
+</div>
+
+<style>
+    .control-container {
+        background-color: #adb5bd;
+        height: 300px;
+        margin: 0 auto;
+        width: 500px;
+    }
+
+    .e-carousel .slide-content {
+        align-items: center;
+        display: flex;
+        font-size: 1.25rem;
+        height: 100%;
+        justify-content: center;
+    }
+</style>
+```
+
+![Carousel indicators type fraction](images/indicator-fraction.png)
+
+#### Progress Indicator Type
+
+The Progress Indicator type displays the current slide as a progress bar. The Progress indicator can be achieved by setting the [`IndicatorsType`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfCarousel.html#Syncfusion_Blazor_Navigations_SfCarousel_IndicatorsType) to `Progress`.
+
+```cshtml
+@using Syncfusion.Blazor.Navigations
+
+<div class="control-container">
+    <SfCarousel IndicatorsType="Progress">
+        <CarouselItem>
+            <div class="slide-content">Slide 1</div>
+        </CarouselItem>
+        <CarouselItem>
+            <div class="slide-content">Slide 2</div>
+        </CarouselItem>
+        <CarouselItem>
+            <div class="slide-content">Slide 3</div>
+        </CarouselItem>
+        <CarouselItem>
+            <div class="slide-content">Slide 4</div>
+        </CarouselItem>
+        <CarouselItem>
+            <div class="slide-content">Slide 5</div>
+        </CarouselItem>
+    </SfCarousel>
+</div>
+
+<style>
+    .control-container {
+        background-color: #adb5bd;
+        height: 300px;
+        margin: 0 auto;
+        width: 500px;
+    }
+
+    .e-carousel .slide-content {
+        align-items: center;
+        display: flex;
+        font-size: 1.25rem;
+        height: 100%;
+        justify-content: center;
+    }
+</style>
+```
+
+![Carousel indicators type progress](images/indicator-progress.png)
+
 ## Play button
 
 ### Show or hide the play button
