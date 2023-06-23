@@ -164,7 +164,7 @@ The [LegendRender](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Chart
 ```
 ## PointerClick
 
-The [PointerClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartEvents.html#Syncfusion_Blazor_Charts_BulletChartEvents_PointerClick) event triggers when the mouse or touch pointer is clicked on either the feature measure value or the target elements.
+The [PointerClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartEvents.html#Syncfusion_Blazor_Charts_BulletChartEvents_PointerClick) event is triggered when the mouse pointer or touch pointer is clicked on the target element or on the feature measure value.
 
 |   Argument name    |   Description                                          |
 |--------------------| -------------------------------------------------------|
