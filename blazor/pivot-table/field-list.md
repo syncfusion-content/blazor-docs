@@ -208,6 +208,13 @@ To enable search box in the pivot table's built-in popup field list UI, set the 
 ```
 ![Popup Field List with search in Blazor Pivot Table](images/blazor-pivottable-popup-fieldlist-search.PNG)
 
+## Option to sort fields
+
+End user can sort fields in the field list UI to ascending (or) descending (or) default order (as obtained from the data source) using the built-in sort icons.
+
+N> By default, fields are displayed in the default order.
+
+![Field list with sorting options in Blazor Pivot Table](images/blazor-pivottable-fieldlist-default-sort.PNG)
 
 ## Add or remove fields
 
