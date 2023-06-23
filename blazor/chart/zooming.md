@@ -184,7 +184,7 @@ By default, the zooming toolbar appears only when the chart is zoomed. However, 
 
     public List<ChartData1> SalesReports = new List<ChartData1>
     {
-       new ChartData1 { X= "USA", YValue= 50 },
+        new ChartData1 { X= "USA", YValue= 50 },
         new ChartData1 { X= "GBR", YValue= 20 },
         new ChartData1 { X= "CHN", YValue= 26 },
         new ChartData1 { X= "UK", YValue= 20 },
