@@ -18,7 +18,7 @@ N> All the events should be provided in a single **GridEvents** component.
 
 ## OnActionBegin
 
-[OnActionBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event triggers when DataGrid actions such as sorting, filtering, paging, grouping, [editing](https://blazor.syncfusion.com/documentation/datagrid/editing#event-trace-while-editing) etc., starts.
+[OnActionBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnActionBegin) event triggers when DataGrid actions such as sorting, filtering, paging, grouping, [editing](https://blazor.syncfusion.com/documentation/datagrid/editing#event-trace-while-editing) etc., starts.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -65,7 +65,7 @@ N> All the events should be provided in a single **GridEvents** component.
 
 ## OnActionComplete
 
-[OnActionComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event triggers when DataGrid actions such as sorting, filtering, paging, grouping, [editing](https://blazor.syncfusion.com/documentation/datagrid/editing#event-trace-while-editing), etc. are completed.
+[OnActionComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnActionComplete) event triggers when DataGrid actions such as sorting, filtering, paging, grouping, [editing](https://blazor.syncfusion.com/documentation/datagrid/editing#event-trace-while-editing), etc. are completed.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -110,7 +110,7 @@ N> All the events should be provided in a single **GridEvents** component.
 
 ## OnActionFailure
 
-[OnActionFailure](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event triggers when any DataGrid action failed to achieve the desired results. By using this event you can get the error details and its cause. In the below sample we have provided the wrong url so that it will throw the OnActionFailure event.
+[OnActionFailure](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnActionFailure) event triggers when any DataGrid action failed to achieve the desired results. By using this event you can get the error details and its cause. In the below sample we have provided the wrong url so that it will throw the OnActionFailure event.
 
 ```cshtml
 @using Syncfusion.Blazor
@@ -145,7 +145,7 @@ N> All the events should be provided in a single **GridEvents** component.
 
 ## BeforeOpenColumnChooser
 
-[BeforeOpenColumnChooser](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event triggers before ColumnChooser gets opened.
+[BeforeOpenColumnChooser](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_BeforeOpenColumnChooser) event triggers before ColumnChooser gets opened.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -196,7 +196,7 @@ N> All the events should be provided in a single **GridEvents** component.
 
 ## Created
 
-[Created](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event triggers when the datagrid component is created.
+[Created](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_Created) event triggers when the datagrid component is created.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -241,7 +241,7 @@ N> All the events should be provided in a single **GridEvents** component.
 
 ## OnLoad
 
-[OnLoad](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event triggers before the rendering process starts which allows customization of DataGrid properties before the DataGrid rendering.
+[OnLoad](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnLoad) event triggers before the rendering process starts which allows customization of DataGrid properties before the DataGrid rendering.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -286,7 +286,7 @@ N> All the events should be provided in a single **GridEvents** component.
 
 ## Destroyed
 
-[Destroyed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event triggers when the datagrid component is destroyed. By using this event you can confirm that the datagrid gets completely destroyed.
+[Destroyed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_Destroyed) event triggers when the datagrid component is destroyed. By using this event you can confirm that the datagrid gets completely destroyed.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -331,7 +331,7 @@ N> All the events should be provided in a single **GridEvents** component.
 
 ## OnDataBound
 
-[OnDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event triggers before data is bound to DataGrid.
+[OnDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnDataBound) event triggers before data is bound to DataGrid.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -376,7 +376,7 @@ N> All the events should be provided in a single **GridEvents** component.
 
 ## DataBound
 
-[DataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event triggers when data source is populated in the DataGrid.
+[DataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_DataBound) event triggers when data source is populated in the DataGrid.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -421,7 +421,7 @@ N> All the events should be provided in a single **GridEvents** component.
 
 ## RowDataBound
 
-[RowDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event triggers every time a request is made to access row information, element, or data and also before the row element is appended to the DataGrid element.
+[RowDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowDataBound) event triggers every time a request is made to access row information, element, or data and also before the row element is appended to the DataGrid element.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -466,7 +466,7 @@ N> All the events should be provided in a single **GridEvents** component.
 
 ## DetailDataBound
 
-[DetailDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event triggers after detail row expands.
+[DetailDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_DetailDataBound) event triggers after detail row expands.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -579,7 +579,7 @@ N> All the events should be provided in a single **GridEvents** component.
 
 ## QueryCellInfo
 
-[QueryCellInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event triggers every time a request is made to access cell information, element, or data and also before the cell element is appended to the DataGrid element.
+[QueryCellInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_QueryCellInfo) event triggers every time a request is made to access cell information, element, or data and also before the cell element is appended to the DataGrid element.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -624,7 +624,7 @@ N> All the events should be provided in a single **GridEvents** component.
 
 ## OnBeginEdit
 
-[OnBeginEdit](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event triggers before the record is to be edited.
+[OnBeginEdit](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnBeginEdit) event triggers before the record is to be edited.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -670,7 +670,7 @@ N> All the events should be provided in a single **GridEvents** component.
 
 ## OnBatchAdd
 
-[OnBatchAdd](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event triggers before records are added in batch mode.
+[OnBatchAdd](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnBatchAdd) event triggers before records are added in batch mode.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -716,7 +716,7 @@ N> All the events should be provided in a single **GridEvents** component.
 
 ## OnBatchSave
 
-[OnBatchSave](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event triggers before records are saved in batch mode.
+[OnBatchSave](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnBatchSave) event triggers before records are saved in batch mode.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -763,7 +763,7 @@ N> All the events should be provided in a single **GridEvents** component.
 
 ## OnBatchDelete
 
-[OnBatchDelete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event triggers before records are deleted in batch mode.
+[OnBatchDelete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnBatchDelete) event triggers before records are deleted in batch mode.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -809,7 +809,7 @@ N> All the events should be provided in a single **GridEvents** component.
 
 ## OnCellEdit
 
-[OnCellEdit](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event triggers when the cell is being edited.
+[OnCellEdit](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnCellEdit) event triggers when the cell is being edited.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -856,7 +856,7 @@ N> All the events should be provided in a single **GridEvents** component.
 
 ## OnCellSave
 
-[OnCellSave](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event triggers before saving the cell.
+[OnCellSave](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnCellSave) event triggers before saving the cell.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -903,7 +903,7 @@ N> All the events should be provided in a single **GridEvents** component.
 
 ## CellSaved
 
-[CellSaved](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event triggers when cell is saved.
+[CellSaved](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_CellSaved) event triggers when cell is saved.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -949,7 +949,7 @@ N> All the events should be provided in a single **GridEvents** component.
 
 ## RowSelecting
 
-[RowSelecting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event triggers before row selection occurs.
+[RowSelecting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowSelecting) event triggers before row selection occurs.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -994,7 +994,7 @@ N> All the events should be provided in a single **GridEvents** component.
 
 ## RowSelected
 
-[RowSelected](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event triggers when a row is selected.
+[RowSelected](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowSelected) event triggers when a row is selected.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -1039,7 +1039,7 @@ N> All the events should be provided in a single **GridEvents** component.
 
 ## RowDeselecting
 
-[RowDeselecting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event triggers before a selected row is being deselected.
+[RowDeselecting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowDeselecting) event triggers before a selected row is being deselected.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -1085,7 +1085,7 @@ N> All the events should be provided in a single **GridEvents** component.
 
 ## RowDeselected
 
-[RowDeselected](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event triggers when a selected row is deselected.
+[RowDeselected](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowDeselected) event triggers when a selected row is deselected.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -1130,7 +1130,7 @@ N> All the events should be provided in a single **GridEvents** component.
 
 ## CellSelecting
 
-[CellSelecting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event triggers before cell selection occurs.
+[CellSelecting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_CellSelecting) event triggers before cell selection occurs.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -1177,7 +1177,7 @@ N> All the events should be provided in a single **GridEvents** component.
 
 ## CellSelected
 
-[CellSelected](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event triggers after a cell is selected.
+[CellSelected](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_CellSelected) event triggers after a cell is selected.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -1223,7 +1223,7 @@ N> All the events should be provided in a single **GridEvents** component.
 
 ## CellDeselecting
 
-[CellDeselecting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event triggers before cell is deselected.
+[CellDeselecting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_CellDeselecting) event triggers before cell is deselected.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -1271,7 +1271,7 @@ N> All the events should be provided in a single **GridEvents** component.
 
 ## CellDeselected
 
-[CellDeselected](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event triggers after a cell is deselected.
+[CellDeselected](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_CellDeselected) event triggers after a cell is deselected.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -1319,7 +1319,7 @@ N> All the events should be provided in a single **GridEvents** component.
 
 ## OnRecordClick
 
-[OnRecordClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event triggers when record is clicked.
+[OnRecordClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnRecordClick) event triggers when record is clicked.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -1366,7 +1366,7 @@ N> All the events should be provided in a single **GridEvents** component.
 
 ## OnRecordDoubleClick
 
-[OnRecordDoubleClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event triggers when record is double clicked.
+[OnRecordDoubleClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnRecordDoubleClick) event triggers when record is double clicked.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -1412,7 +1412,7 @@ N> All the events should be provided in a single **GridEvents** component.
 
 ## OnToolbarClick
 
-[OnToolbarClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event triggers when toolbar item is clicked.
+[OnToolbarClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnToolbarClick) event triggers when toolbar item is clicked.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -1458,7 +1458,7 @@ N> All the events should be provided in a single **GridEvents** component.
 
 ## CommandClicked
 
-[CommandClicked](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event triggers when command button is clicked. It provides the row data of the currently clicked row.
+[CommandClicked](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_CommandClicked) event triggers when command button is clicked. It provides the row data of the currently clicked row.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -1515,7 +1515,7 @@ N> All the events should be provided in a single **GridEvents** component.
 
 ## ColumnMenuItemClicked
 
-[ColumnMenuItemClicked](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event triggers when clicking on the column menu.
+[ColumnMenuItemClicked](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_ColumnMenuItemClicked) event triggers when clicking on the column menu.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -1563,7 +1563,7 @@ N> All the events should be provided in a single **GridEvents** component.
 
 ## ContextMenuItemClicked
 
-[ContextMenuItemClicked](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event triggers when clicking on the context menu.
+[ContextMenuItemClicked](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_ContextMenuItemClicked) event triggers when clicking on the context menu.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -1611,7 +1611,7 @@ N> All the events should be provided in a single **GridEvents** component.
 
 ## ContextMenuOpen
 
-[ContextMenuOpen](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event triggers before opening the context menu.
+[ContextMenuOpen](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_ContextMenuOpen) event triggers before opening the context menu.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -1659,7 +1659,7 @@ N> All the events should be provided in a single **GridEvents** component.
 
 ## OnPdfExport
 
-[OnPdfExport](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event triggers before DataGrid data is exported to PDF document.
+[OnPdfExport](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnPdfExport) event triggers before DataGrid data is exported to PDF document.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -1712,7 +1712,7 @@ N> All the events should be provided in a single **GridEvents** component.
 
 ## PdfHeaderQueryCellInfoEvent
 
-[PdfHeaderQueryCellInfoEvent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event triggers before DataGrid data is exported to PDF document. It can be used to customize the header content in pdf document.
+[PdfHeaderQueryCellInfoEvent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_PdfHeaderQueryCellInfoEvent) event triggers before DataGrid data is exported to PDF document. It can be used to customize the header content in pdf document.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -1765,7 +1765,7 @@ N> All the events should be provided in a single **GridEvents** component.
 
 ## PdfQueryCellInfoEvent
 
-[PdfQueryCellInfoEvent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event triggers before DataGrid data is exported to PDF document. It can be used to customize the DataGrid content in pdf document.
+[PdfQueryCellInfoEvent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_PdfQueryCellInfoEvent) event triggers before DataGrid data is exported to PDF document. It can be used to customize the DataGrid content in pdf document.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -1818,7 +1818,7 @@ N> All the events should be provided in a single **GridEvents** component.
 
 ## PdfAggregateTemplateInfo
 
-[PdfAggregateTemplateInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event triggers before DataGrid data is exported to PDF document. It can be used to customize the DataGrid aggregate content in pdf document.
+[PdfAggregateTemplateInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_PdfAggregateTemplateInfo) event triggers before DataGrid data is exported to PDF document. It can be used to customize the DataGrid aggregate content in pdf document.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -1901,7 +1901,7 @@ N> All the events should be provided in a single **GridEvents** component.
 
 ## PdfGroupCaptionTemplateInfo
 
-[PdfGroupCaptionTemplateInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event triggers when exporting the group caption template of the PDF document. It can be used to customize the DataGrid group caption content in a PDF document.
+[PdfGroupCaptionTemplateInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_PdfGroupCaptionTemplateInfo) event triggers when exporting the group caption template of the PDF document. It can be used to customize the DataGrid group caption content in a PDF document.
 
 ```csharp
 @using Syncfusion.Blazor.Grids
@@ -1965,7 +1965,7 @@ N> All the events should be provided in a single **GridEvents** component.
 
 ## OnExcelExport
 
-[OnExcelExport](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event triggers before DataGrid data is exported to excel file.
+[OnExcelExport](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnExcelExport) event triggers before DataGrid data is exported to excel file.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -2018,7 +2018,7 @@ N> All the events should be provided in a single **GridEvents** component.
 
 ## ExcelHeaderQueryCellInfoEvent
 
-[ExcelHeaderQueryCellInfoEvent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event triggers before DataGrid data is exported to Excel file. It can be used to customize the header content in Excel file.
+[ExcelHeaderQueryCellInfoEvent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_ExcelHeaderQueryCellInfoEvent) event triggers before DataGrid data is exported to Excel file. It can be used to customize the header content in Excel file.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -2071,7 +2071,7 @@ N> All the events should be provided in a single **GridEvents** component.
 
 ## ExcelQueryCellInfoEvent
 
-[ExcelQueryCellInfoEvent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event triggers before DataGrid data is exported to Excel file. It can be used to customize the DataGrid content in Excel file.
+[ExcelQueryCellInfoEvent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_ExcelQueryCellInfoEvent) event triggers before DataGrid data is exported to Excel file. It can be used to customize the DataGrid content in Excel file.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -2124,7 +2124,7 @@ N> All the events should be provided in a single **GridEvents** component.
 
 ## ExcelAggregateTemplateInfo
 
-[ExcelAggregateTemplateInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event triggers before DataGrid data is exported to Excel file. It can be used to customize the DataGrid aggregate content in Excel File.
+[ExcelAggregateTemplateInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_ExcelAggregateTemplateInfo) event triggers before DataGrid data is exported to Excel file. It can be used to customize the DataGrid aggregate content in Excel File.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -2207,7 +2207,7 @@ N> All the events should be provided in a single **GridEvents** component.
 
 ## ExcelGroupCaptionTemplateInfo
 
-[ExcelGroupCaptionTemplateInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event triggers when exporting the group caption template of the Excel File. It can be used to customize the DataGrid group caption content in Excel File.
+[ExcelGroupCaptionTemplateInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_ExcelGroupCaptionTemplateInfo) event triggers when exporting the group caption template of the Excel File. It can be used to customize the DataGrid group caption content in Excel File.
 
 ```csharp
 @using Syncfusion.Blazor.Grids
@@ -2272,7 +2272,7 @@ N> All the events should be provided in a single **GridEvents** component.
 
 ## ExportComplete
 
-[ExportComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event triggers once DataGrid data is exported to file formats (Pdf, Excel and CSV).
+[ExportComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_ExportComplete) event triggers once DataGrid data is exported to file formats (Pdf, Excel and CSV).
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -2336,7 +2336,7 @@ N> All the events should be provided in a single **GridEvents** component.
 
 ## OnResizeStart
 
-[OnResizeStart](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event triggers when column resize starts.
+[OnResizeStart](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnResizeStart) event triggers when column resize starts.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -2382,7 +2382,7 @@ N> All the events should be provided in a single **GridEvents** component.
 
 ## ResizeStopped
 
-[ResizeStopped](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event triggers when column resize ends.
+[ResizeStopped](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_ResizeStopped) event triggers when column resize ends.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -2474,7 +2474,7 @@ N> All the events should be provided in a single **GridEvents** component.
 
 ## RowDropped
 
-[RowDropped](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event triggers when row is dropped.
+[RowDropped](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowDropped) event triggers when row is dropped.
 
 N> We are not going to limit datagrid with these events, we will be adding new events in future based on the user requests. If the event, you are looking for is not in the list, then request [here](https://www.syncfusion.com/feedback/blazor-components).
 
