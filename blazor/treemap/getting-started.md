@@ -11,6 +11,11 @@ documentation: ug
 
 This section briefly explains about how to include [Blazor TreeMap](https://www.syncfusion.com/blazor-components/blazor-treemap) component in your Blazor Server App and Blazor WebAssembly App using Visual Studio.
 
+The below video demonstrates the customization of Blazor TreeMap component.
+
+{% youtube
+"youtube:https://www.youtube.com/watch?v=FOpV4mu9GH4"%}
+
 ## Prerequisites
 
 * [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
