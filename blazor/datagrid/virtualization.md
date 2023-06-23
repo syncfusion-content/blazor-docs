@@ -173,7 +173,6 @@ In this demo, we have set [EnableColumnVirtualization](https://help.syncfusion.c
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@GridData" Height="400" Width="300" AllowPaging ="true" EnableColumnVirtualization="true">
-    <GridPageSettings PageSize="20"></GridPageSettings>
     <GridColumns>
         <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" IsPrimaryKey="true" Width="150"></GridColumn>
         <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
