@@ -1590,7 +1590,7 @@ The [Region](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Dia
 
 #### CanZoomIn 
 
-The [CanZoomIn] property enables/disables zooming to fit the smaller content into a larger viewport.
+The [CanZoomIn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.FitOptions.html#Syncfusion_Blazor_Diagram_FitOptions_CanZoomIn) property enables/disables zooming to fit the smaller content into a larger viewport.
 
 The following code illustrates how to execute the CanZoomIn command.
 
