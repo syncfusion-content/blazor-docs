@@ -731,9 +731,9 @@ You can use [GanttEvents](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
 
 ## Accessing row task model information programmatically
 
-The Blazor Gantt Chart Component provides a method called [GetRowTaskModel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_GetRowTaskModel) that can be used to obtain the values associated with task model details. These details include the level, expanded status, task width, task left, task progress width and more. 
+The Blazor Gantt Chart Component provides a method called [GetRowTaskModel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_GetRowTaskModel__0_) that can be used to obtain the values associated with task model details. These details include the level, expanded status, task width, task left, task progress width and more. 
 
-This is demonstrated in the below sample code, where the [GetRowTaskModel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_GetRowTaskModel) method is called on selecting the row, which returns the value of the task model details of the selected record.
+This is demonstrated in the below sample code, where the [GetRowTaskModel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_GetRowTaskModel__0_) method is called on selecting the row, which returns the value of the task model details of the selected record.
 
 ```cshtml
 @using Syncfusion.Blazor.Gantt
