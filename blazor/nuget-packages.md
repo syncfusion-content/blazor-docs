@@ -1321,9 +1321,6 @@ SfPdfViewer2
 </tr>
 </table>
 
-N> For developing Linux or Mac (OSX) operating system, use the following common library:
-<br/> * Use [Syncfusion.Blazor.SfPdfViewer](https://www.nuget.org/packages/Syncfusion.Blazor.SfPdfViewer)
-
 ### Syncfusion.Blazor.PivotTable
 
 The Blazor Pivot Table is a powerful control used to organize and summarize business data and display the result in a cross-table format. It includes major functionalities such as data binding, drilling up and down, Excel-like filtering and sorting, editing, Excel and PDF exporting, several built-in aggregations, pivot table field list, and calculated fields.
