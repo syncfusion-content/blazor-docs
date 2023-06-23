@@ -154,6 +154,50 @@ By default, zoom in, zoom out, pan, and reset buttons are available in the toolb
 
 ![Zooming Option in Blazor Column Chart Toolbar](images/zoom/blazor-column-chart-zoom-in-toolbar.png)
 
+### Toolbar Display Mode
+
+By default, the chart zooming toolbar only appears when the chart is zoomed. Now, we can display the zooming toolbar initially while the chart is loading by setting the `ToolbarDisplayMode` to `ToolbarMode.Always`.
+
+```cshtml
+
+@using Syncfusion.Blazor.Charts
+
+<SfChart Title="Sales History of Product X">
+    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
+
+    <ChartZoomSettings EnableSelectionZooming="true" EnableMouseWheelZooming="true"
+                       EnablePinchZooming="true" ToolbarDisplayMode="ToolbarMode.Always">
+    </ChartZoomSettings>
+
+    <ChartSeriesCollection>
+        <ChartSeries DataSource="@SalesReports" XName="X" YName="YValue" Type="ChartSeriesType.Column"></ChartSeries>
+    </ChartSeriesCollection>
+</SfChart>
+
+@code {
+
+    public class ChartData1
+    {
+        public string X { get; set; }
+        public double YValue { get; set; }
+    }
+
+    public List<ChartData1> SalesReports = new List<ChartData1>
+    {
+        new ChartData1 { X= "USA", YValue= 50 },
+        new ChartData1 { X= "GBR", YValue= 20 },
+        new ChartData1 { X= "CHN", YValue= 26 },
+        new ChartData1 { X= "UK", YValue= 20 },
+        new ChartData1 { X= "AUS", YValue= 35 },
+        new ChartData1 { X= "IND", YValue= 15 },
+        new ChartData1 { X= "DEN", YValue= 40 },
+        new ChartData1 { X= "MEX", YValue= 30 },
+    };
+}
+
+```
+![Toolbar display in the initial chart](images/zoom/blazor-column-chart-zoom-toolbar-displaymode.png)
+
 ## Enable pan
 
 By using the [EnablePan](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartZoomSettings.html#Syncfusion_Blazor_Charts_ChartZoomSettings_EnablePan) property, one can pan the zoomed chart without the help of toolbar items.
