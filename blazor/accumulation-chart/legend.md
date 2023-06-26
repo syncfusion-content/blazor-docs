@@ -301,32 +301,28 @@ In legend pager, the arrow elements can be customized by using the [ArrowSize](h
 
 @using Syncfusion.Blazor.Charts
 
-<SfAccumulationChart ID="chart" Width="640px" Height="475px"  EnableBorderOnMouseMove="false" SelectionMode="AccumulationSelectionMode.Point" Theme="@Theme">
-    <AccumulationChartTooltipSettings Enable="false"></AccumulationChartTooltipSettings>
-        <AccumulationChartLegendSettings ToggleVisibility=false TextWrap="@TextWrap.Wrap" MaximumLabelWidth="80" Position="@position" Height="@Height" Width="@Width">
+<SfAccumulationChart ID="chart" Width="640px" Height="475px" Theme="@Theme">     
+    <AccumulationChartLegendSettings ToggleVisibility=false TextWrap="@TextWrap.Wrap" MaximumLabelWidth="80" Position="@position" Height="@Height" Width="@Width">
         <AccumulationChartLegendPageSettings ArrowSize="10">
             <AccumulationChartLegendPageSettingsTextStyle Color="blue">
             </AccumulationChartLegendPageSettingsTextStyle>
         </AccumulationChartLegendPageSettings>
             <AccumulationChartLegendBorder Color="darkblue" Width="1"></AccumulationChartLegendBorder>
             <AccumulationChartLegendFont Size="12px"></AccumulationChartLegendFont>        
-        </AccumulationChartLegendSettings>
+    </AccumulationChartLegendSettings>
     <AccumulationChartSeriesCollection>
-        <AccumulationChartSeries DataSource="@PieChartPoints" XName="ExpenseCategory" YName="ExpensePercentage" Radius="70%" Name="Revenue" InnerRadius="40%">
-            <AccumulationDataLabelSettings Name="DataLabelMappingName" Visible="false">
-                <AccumulationChartDataLabelFont Color="white"></AccumulationChartDataLabelFont>
-            </AccumulationDataLabelSettings>
+        <AccumulationChartSeries DataSource="@PieChartPoints" XName="ExpenseCategory" YName="ExpensePercentage" Radius="70%" Name="Revenue" InnerRadius="40%">           
         </AccumulationChartSeries>
     </AccumulationChartSeriesCollection>
 </SfAccumulationChart> 
  
 @code{
-    private Theme Theme { get; set; } = Theme.Bootstrap5;    
+    private Theme Theme { get; set; } = Theme.Bootstrap5;     
     public string Height { get; set; } = "30%";
     public string Width { get; set; } = "33%";
     public LegendPosition position { get; set; } = LegendPosition.Right;
     public double MaxLabel { get; set; } = 100;
-
+    
     public List<PieData> PieChartPoints { get; set; } = new List<PieData>
     {
          new PieData { ExpenseCategory =  "IE", ExpensePercentage = 6.12, DataLabelMappingName = "6.12%" },
