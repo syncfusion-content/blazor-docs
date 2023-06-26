@@ -1659,7 +1659,7 @@ By default, the pivot table is displayed with the report bound at the code-behin
 
 @code {
     private SfPivotView<ProductDetails> pivot;
-    private bool onInit = true;
+    private bool onInit;
     private List<ProductDetails> data { get; set; }
     public List<string> report = new List<string>();
     public List<string> reportName = new List<string>();
@@ -1682,8 +1682,9 @@ By default, the pivot table is displayed with the report bound at the code-behin
     
     protected override void OnInitialized()
     {
+        onInit = true;
         this.data = ProductDetails.GetProductData().ToList();
-        // Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.        
+        // Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.               
     }    
 
     // Method to save current report.
