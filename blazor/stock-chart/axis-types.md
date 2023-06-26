@@ -59,7 +59,7 @@ DateTimeCategory axis in the stock chart is used to display only business days. 
 @using Syncfusion.Blazor.Charts
 @using System.Dynamic
 
-<SfStockChart Title="AAPL Stock Price">
+<SfStockChart>
     <StockChartEvents SharedTooltipRendering="@TooltipText"></StockChartEvents>
     <StockChartPrimaryXAxis ValueType="@Syncfusion.Blazor.Charts.ValueType.DateTimeCategory">
         <StockChartAxisMajorGridLines Width="0"></StockChartAxisMajorGridLines>
@@ -105,7 +105,7 @@ DateTimeCategory axis in the stock chart is used to display only business days. 
             return d;
         }).Cast<ExpandoObject>().ToList<ExpandoObject>();
     }
-    
+
     public void TooltipText(SharedTooltipRenderEventArgs args)
     {
         if (args.Text[0] != null)

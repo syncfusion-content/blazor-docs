@@ -21,7 +21,7 @@ documentation: ug
 @using System.IO
 @using System.Net.Http.Json
  
-<SfChart Title="Temperature Variation By Month">
+<SfChart>
     <ChartArea>
         <ChartAreaBorder Width="0"></ChartAreaBorder>
     </ChartArea>
@@ -50,7 +50,6 @@ documentation: ug
     {
         ChartPoints = new ChartData[] { };
         ChartPoints = await Http.GetFromJsonAsync<ChartData[]>(NavigationManager.BaseUri + "./range-data.json");
-
     }  
 
     public class ChartData
@@ -81,8 +80,7 @@ The following properties can be used to customize the [Range Step Area](https://
 @using Syncfusion.Blazor.Charts
 
 <SfChart>
-    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category" />
-	
+    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category" />	
     <ChartSeriesCollection>
         <ChartSeries DataSource="@WeatherReports" XName="X" High="High" Low="Low" Opacity="0.5"
                      DashArray="5,5" Fill="blue" Type="ChartSeriesType.RangeStepArea">
@@ -100,7 +98,7 @@ The following properties can be used to customize the [Range Step Area](https://
     }
 
     public List<ChartData> WeatherReports = new List<ChartData>
-	{
+    {
         new  ChartData { X=  "Sun", Low=  4.7, High=  9.8 },
         new  ChartData { X=  "Mon", Low=  4.7, High=  11.4 },
         new  ChartData { X=  "Tue", Low=  6.4, High=  14.4 },
