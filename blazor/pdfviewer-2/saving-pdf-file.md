@@ -87,7 +87,7 @@ If you have plenty of PDF files stored in database and you want to save the upda
 }
 ```
 
-## Download in Blazor SfPdfViewer Component
+## Download
 
 The SfPdfViewer supports downloading the loaded PDF file from the toolbar by default. You can enable or disable the download option by setting the `EnableDownload` API.
 
