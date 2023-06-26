@@ -295,7 +295,7 @@ When the legend items exceed legend bounds, paging will be enabled by default. E
 
 ### Paging customization
 
-The legend paging arrow elements can be customized by using the [ArrowSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartLegendPageSettings.html#Syncfusion_Blazor_Charts_AccumulationChartLegendPageSettings_ArrowSize) property in the [AccumulationChartLegendPageSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartLegendPageSettings.html), and the page numbers can be customized using the [AccumulationChartLegendPageSettingsTextStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartLegendPageSettingsTextStyle.html).
+In legend pager, the arrow elements can be customized by using the [ArrowSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartLegendPageSettings.html#Syncfusion_Blazor_Charts_AccumulationChartLegendPageSettings_ArrowSize) property in the [AccumulationChartLegendPageSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartLegendPageSettings.html) and the page numbers can be customized by using the [AccumulationChartLegendPageSettingsTextStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartLegendPageSettingsTextStyle.html).
 
 ```cshtml 
 
@@ -327,6 +327,7 @@ The legend paging arrow elements can be customized by using the [ArrowSize](http
     public string Width { get; set; } = "33%";
     public LegendPosition position { get; set; } = LegendPosition.Right;
     public double MaxLabel { get; set; } = 100;
+    
     public List<PieData> PieChartPoints { get; set; } = new List<PieData>
     {
          new PieData { ExpenseCategory =  "IE", ExpensePercentage = 6.12, DataLabelMappingName = "6.12%" },
@@ -342,6 +343,7 @@ The legend paging arrow elements can be customized by using the [ArrowSize](http
          new PieData { ExpenseCategory =  "UC", ExpensePercentage = 3.06, DataLabelMappingName = "14.06%" },
          new PieData { ExpenseCategory =  "Falkon", ExpensePercentage = 3.06, DataLabelMappingName = "14.06%" },
     };
+
       public class PieData
     {
         public string ExpenseCategory { get; set; }
@@ -350,7 +352,7 @@ The legend paging arrow elements can be customized by using the [ArrowSize](http
     }
 }
 ```
-![Blazor Accumulation Chart Legend Paging Customization](images/legend/blazor-accumulation-chart-legend-paging-customization.png)
+![Blazor Accumulation Chart: Legend Pager Customization](images/legend/blazor-accumulation-chart-legend-paging-customization.png)
 
 ## Legend text wrap
 

@@ -53,13 +53,13 @@ Date time axis uses date time scale and displays the date time values as axis la
 
 ## DateTimeCategory Axis
 
-DateTimeCategory axis in stock chart is used to display only business days. To use DateTimeCategory axis set the [ValueType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ValueType.html) as [DateTimeCategory](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ValueType.html#Syncfusion_Blazor_Charts_ValueType_DateTimeCategory) 
+DateTimeCategory axis in the stock chart is used to display only business days. To use DateTimeCategory axis, set the [ValueType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ValueType.html) as [DateTimeCategory](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ValueType.html#Syncfusion_Blazor_Charts_ValueType_DateTimeCategory).
 
 ```cshtml
 @using Syncfusion.Blazor.Charts
 @using System.Dynamic
 
-<SfStockChart Title="AAPL Stock Price">
+<SfStockChart>
     <StockChartEvents SharedTooltipRendering="@TooltipText"></StockChartEvents>
     <StockChartPrimaryXAxis ValueType="@Syncfusion.Blazor.Charts.ValueType.DateTimeCategory">
         <StockChartAxisMajorGridLines Width="0"></StockChartAxisMajorGridLines>
@@ -85,9 +85,11 @@ DateTimeCategory axis in stock chart is used to display only business days. To u
         new DateTime(2021, 06, 10),new DateTime(2021, 06, 11),new DateTime(2021, 06, 12),new DateTime(2021, 06, 13),new DateTime(2021, 06, 15),
         new DateTime(2021, 06, 16),new DateTime(2021, 06, 17),new DateTime(2021, 06, 18),new DateTime(2021, 06, 19),new DateTime(2021, 06, 20)
     };
+
     public DateTime[] Value = new DateTime[] { new DateTime(2021, 01, 01), new DateTime(2022, 01, 01) };
     public List<ExpandoObject> StockInfo { get; set; } = new List<ExpandoObject>();
     private Random randomNum = new Random();
+
     protected override void OnInitialized()
     {
         StockInfo = Enumerable.Range(0, 45).Select((x) =>
@@ -104,7 +106,6 @@ DateTimeCategory axis in stock chart is used to display only business days. To u
         }).Cast<ExpandoObject>().ToList<ExpandoObject>();
     }
 
-
     public void TooltipText(SharedTooltipRenderEventArgs args)
     {
         if (args.Text[0] != null)
@@ -112,7 +113,6 @@ DateTimeCategory axis in stock chart is used to display only business days. To u
             args.Text[0] = args.Text[0].Replace("00:00:00 AM", " ", StringComparison.InvariantCulture);
         }
     }
-
 }
 ```
 

@@ -168,10 +168,10 @@ The [PointerClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Chart
 
 |   Argument name    |   Description                                          |
 |--------------------| -------------------------------------------------------|
-|   Target     |    Specifies the Target bar values.      |
-|   Value     |    Specifies the Value bar data.      |
-|   CategoryName     |    Specifies the category name of selected point.      |
-|   Cancel             |   Specifies whether the event sholud continue or to be cancelled.|
+|   Target     |    Specifies the target bar values.
+|   Value     |    Specifies the value bar data.
+|   CategoryName     |    Specifies the category name of the selected point.
+|   Cancel             |   Specifies whether the event should continue or be cancelled.|
 
 ```cshtml
 @using Syncfusion.Blazor.Charts
@@ -192,12 +192,14 @@ The [PointerClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Chart
         public double FieldValue { get; set; }
         public double TargetValue { get; set; }
     }
+
     public List<ChartData> BulletChartData = new List<ChartData>
     {
         new ChartData { FieldValue = 55, TargetValue = 75 },
         new ChartData { FieldValue = 45, TargetValue = 15 },
         new ChartData { FieldValue = 75, TargetValue = 35 }
     };
+    
     public void PointClickEvent(BulletChartPointEventArgs args)
     {
         // Here, you can customize the code.         
