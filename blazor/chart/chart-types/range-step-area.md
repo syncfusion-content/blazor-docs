@@ -18,7 +18,6 @@ documentation: ug
 @using Syncfusion.Blazor.Charts
 @inject NavigationManager NavigationManager
 @inject HttpClient Http
-@using System.IO
 @using System.Net.Http.Json
  
 <SfChart>
