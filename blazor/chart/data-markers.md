@@ -93,7 +93,7 @@ Markers can be assigned with different shapes such as [Rectangle](https://help.s
 
 ![Blazor Line Chart with Diamond Marker](images/marker/blazor-line-chart-diamond-marker.png)
 
-## Auto Marker Shape
+## Auto marker shape
 
 By default, the chart [marker shape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonMarker.html#Syncfusion_Blazor_Charts_ChartCommonMarker_Shape) is set to [Auto](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartShape.html#Syncfusion_Blazor_Charts_ChartShape_Auto). When **Auto** is set and marker is enabled in the chart at the same time, each series is rendered with a unique marker shape.
 
@@ -148,7 +148,6 @@ By default, the chart [marker shape](https://help.syncfusion.com/cr/blazor/Syncf
 
 ```
 ![Blazor Chart with different marker shapes](images/marker/blazor-line-chart-with-different-marker.png)
-
 
 ## Images
 
