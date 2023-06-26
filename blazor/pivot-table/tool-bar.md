@@ -1659,6 +1659,7 @@ By default, the pivot table is displayed with the report bound at the code-behin
 
 @code {
     private SfPivotView<ProductDetails> pivot;
+    private bool onInit;
     private List<ProductDetails> data { get; set; }
     public List<string> report = new List<string>();
     public List<string> reportName = new List<string>();
@@ -1710,9 +1711,11 @@ By default, the pivot table is displayed with the report bound at the code-behin
     public void FetchReport(FetchReportArgs args)
     {
         args.ReportName = this.reportName.ToArray();
-        // Set the default report name to load it in the pivot table.
-        args.DefaultReportName = "Default Report";
-
+        // Set the default report name to load it in the pivot table on initial rendering.
+        if(onInit)
+        {
+            args.DefaultReportName = "Default Report";
+        }
     }
 
     // Method to load the selected report.
