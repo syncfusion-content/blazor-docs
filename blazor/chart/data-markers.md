@@ -147,7 +147,7 @@ By default, the chart [marker shape](https://help.syncfusion.com/cr/blazor/Syncf
 }
 
 ```
-![Blazor chart with different Marker Shapes](images/marker/blazor-line-chart-with-different-marker.png)
+![Blazor Chart with different marker shapes](images/marker/blazor-line-chart-with-different-marker.png)
 
 
 ## Images
