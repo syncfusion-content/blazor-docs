@@ -164,14 +164,14 @@ The [LegendRender](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Chart
 ```
 ## PointerClick
 
-The [PointerClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartEvents.html#Syncfusion_Blazor_Charts_BulletChartEvents_PointerClick) event triggers when the mouse or touch pointer is clicked on either the feature measure value or the target elements.
+The [PointerClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartEvents.html#Syncfusion_Blazor_Charts_BulletChartEvents_PointerClick) event is triggered when the mouse pointer or touch pointer is clicked on the target element or on the feature measure value.
 
 |   Argument name    |   Description                                          |
 |--------------------| -------------------------------------------------------|
 |   Target     |    Specifies the Target bar values.      |
 |   Value     |    Specifies the Value bar data.      |
 |   CategoryName     |    Specifies the category name of selected point.      |
-|   Cancel             |   Specifies whether the event should continue or to be cancelled. |
+|   Cancel             |   Specifies whether the event sholud continue or to be cancelled.|
 
 ```cshtml
 @using Syncfusion.Blazor.Charts
