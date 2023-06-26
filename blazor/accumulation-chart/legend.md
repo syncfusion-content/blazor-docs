@@ -343,7 +343,7 @@ In legend pager, the arrow elements can be customized by using the [ArrowSize](h
          new PieData { ExpenseCategory =  "Falkon", ExpensePercentage = 3.06, DataLabelMappingName = "14.06%" },
     };
 
-      public class PieData
+    public class PieData
     {
         public string ExpenseCategory { get; set; }
         public double ExpensePercentage { get; set; }
