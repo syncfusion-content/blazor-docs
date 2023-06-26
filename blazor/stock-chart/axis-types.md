@@ -85,9 +85,11 @@ DateTimeCategory axis in the stock chart is used to display only business days. 
         new DateTime(2021, 06, 10),new DateTime(2021, 06, 11),new DateTime(2021, 06, 12),new DateTime(2021, 06, 13),new DateTime(2021, 06, 15),
         new DateTime(2021, 06, 16),new DateTime(2021, 06, 17),new DateTime(2021, 06, 18),new DateTime(2021, 06, 19),new DateTime(2021, 06, 20)
     };
+
     public DateTime[] Value = new DateTime[] { new DateTime(2021, 01, 01), new DateTime(2022, 01, 01) };
     public List<ExpandoObject> StockInfo { get; set; } = new List<ExpandoObject>();
     private Random randomNum = new Random();
+
     protected override void OnInitialized()
     {
         StockInfo = Enumerable.Range(0, 45).Select((x) =>
@@ -103,8 +105,7 @@ DateTimeCategory axis in the stock chart is used to display only business days. 
             return d;
         }).Cast<ExpandoObject>().ToList<ExpandoObject>();
     }
-
-
+    
     public void TooltipText(SharedTooltipRenderEventArgs args)
     {
         if (args.Text[0] != null)
@@ -112,7 +113,6 @@ DateTimeCategory axis in the stock chart is used to display only business days. 
             args.Text[0] = args.Text[0].Replace("00:00:00 AM", " ", StringComparison.InvariantCulture);
         }
     }
-
 }
 ```
 

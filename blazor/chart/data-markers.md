@@ -99,6 +99,8 @@ By default, the chart [marker shape](https://help.syncfusion.com/cr/blazor/Syncf
 
 ```cshtml
 
+@using Syncfusion.Blazor.Charts
+
 <SfChart ID="container">    
     <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.DateTimeCategory" Format="yyyy"></ChartPrimaryXAxis>
     <ChartSeriesCollection>

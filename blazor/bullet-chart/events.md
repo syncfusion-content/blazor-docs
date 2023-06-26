@@ -192,12 +192,14 @@ The [PointerClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Chart
         public double FieldValue { get; set; }
         public double TargetValue { get; set; }
     }
+
     public List<ChartData> BulletChartData = new List<ChartData>
     {
         new ChartData { FieldValue = 55, TargetValue = 75 },
         new ChartData { FieldValue = 45, TargetValue = 15 },
         new ChartData { FieldValue = 75, TargetValue = 35 }
     };
+    
     public void PointClickEvent(BulletChartPointEventArgs args)
     {
         // Here, you can customize the code.         

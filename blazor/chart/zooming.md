@@ -164,11 +164,8 @@ By default, the zooming toolbar appears only when the chart is zoomed. However, 
 
 <SfChart Title="Sales History of Product X">
     <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
-
-    <ChartZoomSettings EnableSelectionZooming="true" EnableMouseWheelZooming="true"
-                       EnablePinchZooming="true"  ToolbarDisplayMode="ToolbarMode.Always">
+    <ChartZoomSettings EnableSelectionZooming="true" EnableMouseWheelZooming="true" EnablePinchZooming="true"  ToolbarDisplayMode="ToolbarMode.Always">
     </ChartZoomSettings>
-
     <ChartSeriesCollection>
         <ChartSeries DataSource="@SalesReports" XName="X" YName="YValue" Type="ChartSeriesType.Column"></ChartSeries>
     </ChartSeriesCollection>
