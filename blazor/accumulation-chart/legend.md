@@ -350,7 +350,7 @@ In legend pager, the arrow elements can be customized by using the [ArrowSize](h
     }
 }
 ```
-![Blazor Accumulation Chart Legend Paging Customization](images/legend/blazor-accumulation-chart-legend-paging-customization.png)
+![Blazor Accumulation Chart: Legend Pager Customization](images/legend/blazor-accumulation-chart-legend-paging-customization.png)
 
 ## Legend text wrap
 
