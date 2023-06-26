@@ -53,7 +53,7 @@ Date time axis uses date time scale and displays the date time values as axis la
 
 ## DateTimeCategory Axis
 
-DateTimeCategory axis in stock chart is used to display only business days. To use DateTimeCategory axis set the [ValueType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ValueType.html) as [DateTimeCategory](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ValueType.html#Syncfusion_Blazor_Charts_ValueType_DateTimeCategory) 
+DateTimeCategory axis in stock chart is used to display only business days. To use DateTimeCategory axis, set the [ValueType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ValueType.html) as [DateTimeCategory](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ValueType.html#Syncfusion_Blazor_Charts_ValueType_DateTimeCategory) 
 
 ```cshtml
 @using Syncfusion.Blazor.Charts
