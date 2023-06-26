@@ -301,7 +301,7 @@ In legend pager, the arrow elements can be customized by using the [ArrowSize](h
 
 @using Syncfusion.Blazor.Charts
 
-<SfAccumulationChart ID="chart" Width="640px" Height="475px"  EnableBorderOnMouseMove="false" Title="@Content" SelectionMode="AccumulationSelectionMode.Point" Theme="@Theme">
+<SfAccumulationChart ID="chart" Width="640px" Height="475px"  EnableBorderOnMouseMove="false" SelectionMode="AccumulationSelectionMode.Point" Theme="@Theme">
     <AccumulationChartTooltipSettings Enable="false"></AccumulationChartTooltipSettings>
         <AccumulationChartLegendSettings ToggleVisibility=false TextWrap="@TextWrap.Wrap" MaximumLabelWidth="80" Position="@position" Height="@Height" Width="@Width">
         <AccumulationChartLegendPageSettings ArrowSize="10">
@@ -321,13 +321,12 @@ In legend pager, the arrow elements can be customized by using the [ArrowSize](h
 </SfAccumulationChart> 
  
 @code{
-    private Theme Theme { get; set; } = Theme.Bootstrap5;
-    private string Content { get; set; } = "";
+    private Theme Theme { get; set; } = Theme.Bootstrap5;    
     public string Height { get; set; } = "30%";
     public string Width { get; set; } = "33%";
     public LegendPosition position { get; set; } = LegendPosition.Right;
     public double MaxLabel { get; set; } = 100;
-    
+
     public List<PieData> PieChartPoints { get; set; } = new List<PieData>
     {
          new PieData { ExpenseCategory =  "IE", ExpensePercentage = 6.12, DataLabelMappingName = "6.12%" },
