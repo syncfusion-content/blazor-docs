@@ -24,11 +24,8 @@ The SfPdfViewer provides the options to add measurement annotations. The page an
 The measurement annotations can be added to the PDF document using the annotation toolbar.
 
 * Click the **Edit Annotation** button in the SfPdfViewer toolbar. A toolbar appears below it.
-
 * Click the **measurement Annotation** dropdown button. A dropdown pop-up will appear and shows the measurement annotations to be added.
-
 * Select the measurement type to be added to the page in the dropdown pop-up. It enables the selected measurement annotation mode.
-
 * You can measure and add the annotation over the pages of the PDF document.
 
 In the pan mode, if the measurement annotation mode is entered, the SfPdfViewer control will switch to text select mode.
@@ -42,15 +39,18 @@ In the pan mode, if the measurement annotation mode is entered, the SfPdfViewer 
 @using Syncfusion.Blazor.Buttons
 
 <SfButton OnClick="OnClick">Measurement Annotation</SfButton>
-<SfPdfViewer2 DocumentPath="@DocumentPath" @ref="viewer" Width="100%" Height="100%">
+<SfPdfViewer2 DocumentPath="@DocumentPath"
+              @ref="viewer"
+              Width="100%"
+              Height="100%">
 </SfPdfViewer2>
 
 @code {
     SfPdfViewer2 viewer;
 
-    public void OnClick(MouseEventArgs args)
+    public async void OnClick(MouseEventArgs args)
     {
-        viewer.SetAnnotationMode(AnnotationType.Distance);
+        await viewer.SetAnnotationModeAsync(AnnotationType.Distance);
     }
     private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
 }
@@ -100,34 +100,52 @@ The properties of the shape annotations can be set before creating the control u
 @using Syncfusion.Blazor.Buttons
 @using Syncfusion.Blazor.SfPdfViewer
 
-<SfPdfViewer2 @ref="@viewer" DocumentPath="@DocumentPath" Height="100%" Width="100%" DistanceSettings="@DistanceSettings" PerimeterSettings="@PerimeterSettings" AreaSettings="@AreaSettings" RadiusSettings="@RadiusSettings" VolumeSettings="@VolumeSettings">
+<SfPdfViewer2 @ref="@viewer"
+              DocumentPath="@DocumentPath"
+              Height="100%" Width="100%"
+              DistanceSettings="@DistanceSettings"
+              PerimeterSettings="@PerimeterSettings"
+              AreaSettings="@AreaSettings"
+              RadiusSettings="@RadiusSettings"
+              VolumeSettings="@VolumeSettings">
 </SfPdfViewer2>
 
 @code {
     SfPdfViewer2 viewer;
-
     private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
     
-    PdfViewerDistanceSettings DistanceSettings = new PdfViewerDistanceSettings 
-    {
-        FillColor = "blue", Opacity = 0.6, StrokeColor = "green", LineHeadEndStyle = LineHeadStyle.Closed, LineHeadStartStyle = LineHeadStyle.Round 
-    };
-    PdfViewerPerimeterSettings PerimeterSettings = new PdfViewerPerimeterSettings 
-    { 
-        FillColor = "green", Opacity = 0.6, StrokeColor = "blue" 
-    };
-    PdfViewerAreaSettings AreaSettings = new PdfViewerAreaSettings 
-    { 
-        FillColor = "yellow", Opacity = 0.6, StrokeColor = "orange" 
-    };
-    PdfViewerVolumeSettings VolumeSettings = new PdfViewerVolumeSettings 
-    { 
-        FillColor = "orange", Opacity = 0.6, StrokeColor = "pink"
-    };
+    PdfViewerDistanceSettings DistanceSettings = new PdfViewerDistanceSettings
+        {
+            FillColor = "blue",
+            Opacity = 0.6,
+            StrokeColor = "green",
+            LineHeadEndStyle = LineHeadStyle.Closed,
+            LineHeadStartStyle = LineHeadStyle.Round
+        };
+    PdfViewerPerimeterSettings PerimeterSettings = new PdfViewerPerimeterSettings
+        {
+            FillColor = "green",
+            Opacity = 0.6,
+            StrokeColor = "blue"
+        };
+    PdfViewerAreaSettings AreaSettings = new PdfViewerAreaSettings
+        {
+            FillColor = "yellow",
+            Opacity = 0.6,
+            StrokeColor = "orange"
+        };
+    PdfViewerVolumeSettings VolumeSettings = new PdfViewerVolumeSettings
+        {
+            FillColor = "orange",
+            Opacity = 0.6,
+            StrokeColor = "pink"
+        };
     PdfViewerRadiusSettings RadiusSettings = new PdfViewerRadiusSettings
-    { 
-        FillColor = "pink", Opacity = 0.6, StrokeColor = "yellow" 
-    };
+        {
+            FillColor = "pink",
+            Opacity = 0.6,
+            StrokeColor = "yellow"
+        };
 }
 
 ```
@@ -157,8 +175,13 @@ The properties of scale ratio for measurement annotation can be set before creat
 
 @using Syncfusion.Blazor.SfPdfViewer
 
-<SfPdfViewer2 @ref="@viewer" DocumentPath="@DocumentPath" MeasurementSettings="@MeasurementSettings" Height="100%" Width="100%">
+<SfPdfViewer2 @ref="@viewer"
+              DocumentPath="@DocumentPath"
+              MeasurementSettings="@MeasurementSettings"
+              Height="100%"
+              Width="100%">
 </SfPdfViewer2>
+
 
 @code {
     SfPdfViewer2 viewer;
