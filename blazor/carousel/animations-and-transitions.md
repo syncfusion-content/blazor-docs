@@ -445,7 +445,7 @@ In the carousel, you can able to perform swipe the carousel slides using touch a
 
 ## Swipe Modes
 
-In the carousel, the [`swipeMode`](../api/carousel/#swipemode) property allows specifying whether the slide transition should occur while performing swiping via touch or mouse. The slide swiping is enabled or disabled using the bitwise operator.
+In the carousel, the [`swipeMode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfCarousel.html#Syncfusion_Blazor_Navigations_SfCarousel_SwipeMode) property allows specifying whether the slide transition should occur while performing swiping via touch or mouse. The slide swiping is enabled or disabled using the bitwise operator.
 
 The following are the different swipe modes available in the carousel:
 
