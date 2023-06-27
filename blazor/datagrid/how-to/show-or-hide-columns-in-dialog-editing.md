@@ -98,4 +98,4 @@ In the below example, we have rendered the datagrid columns [OrderDate`] as hidd
 }
 ```
 
-![Displaying Column Dialog in Blazor DataGrid](../images/blazor-datagrid-column-dialog.PNG)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LjVAjHBwLmcTnJXv?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
