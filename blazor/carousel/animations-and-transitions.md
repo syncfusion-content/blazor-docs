@@ -442,3 +442,65 @@ In the carousel, you can able to perform swipe the carousel slides using touch a
     }
 </style>
 ```
+
+## Swipe Modes
+
+In the carousel, the [`swipeMode`](../api/carousel/#swipemode) property allows specifying whether the slide transition should occur while performing swiping via touch or mouse. The slide swiping is enabled or disabled using the bitwise operator.
+
+The following are the different swipe modes available in the carousel:
+
+* CarouselSwipeMode.Touch - Allows the user to slide the slides using touch actions.
+* CarouselSwipeMode.Mouse - Allows the user to slide the slides using mouse actions.
+* CarouselSwipeMode.Touch & CarouselSwipeMode.Mouse - Allows the user to slide the slides using both touch and mouse actions.
+* ~CarouselSwipeMode.Touch & ~CarouselSwipeMode.Mouse - Disables both touch and mouse actions.
+
+
+```cshtml
+@using Syncfusion.Blazor.Navigations
+
+<div class="control-container">
+    <SfCarousel SwipeMode="CarouselSwipeMode.Mouse & CarouselSwipeMode.Touch">
+        <CarouselItem>
+            <figure class="img-container"><img src="https://ej2.syncfusion.com/products/images/carousel/cardinal.png" alt="cardinal" style="height:100%;width:100%;" /><figcaption class="img-caption">Cardinal</figcaption></figure>
+        </CarouselItem>
+        <CarouselItem>
+            <figure class="img-container"><img src="https://ej2.syncfusion.com/products/images/carousel/hunei.png" alt="kingfisher" style="height:100%;width:100%;" /><figcaption class="img-caption">Kingfisher</figcaption></figure>
+        </CarouselItem>
+        <CarouselItem>
+            <figure class="img-container"><img src="https://ej2.syncfusion.com/products/images/carousel/costa-rica.png" alt="keel-billed-toucan" style="height:100%;width:100%;" /><figcaption class="img-caption">Keel-billed-toucan</figcaption></figure>
+        </CarouselItem>
+        <CarouselItem>
+            <figure class="img-container"><img src="https://ej2.syncfusion.com/products/images/carousel/kaohsiung.png" alt="yellow-warbler" style="height:100%;width:100%;" /><figcaption class="img-caption">Yellow-warbler</figcaption></figure>
+        </CarouselItem>
+        <CarouselItem>
+           <figure class="img-container"><img src="https://ej2.syncfusion.com/products/images/carousel/bee-eater.png" alt="bee-eater" style="height:100%;width:100%;" /><figcaption class="img-caption">Bee-eater</figcaption></figure>
+        </CarouselItem>
+    </SfCarousel>
+</div>
+
+<style>
+    .control-container {
+        height: 300px;
+        margin: 0 auto;
+        width: 500px;
+    }
+
+    .img-container {
+        height: 100%;
+        margin: 0;
+    }
+
+    .img-caption {
+        color: #fff;
+        font-size: 1rem;
+        position: absolute;
+        bottom: 3rem;
+        width: 100%;
+        text-align: center;
+    }
+
+</style>
+```
+
+![Carousel Swipe Mode](images/swipe.gif)
+
