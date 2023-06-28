@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Check the document editing status in SfPdfViewer | Syncfusion
+title: Check the document's editing status in Blazor SfPdfViewer Component | Syncfusion
 description: Learn here all about how to check the editing status of the document in Syncfusion Blazor SfPdfViewer component.
 platform: Blazor
 control: SfPdfViewer
@@ -18,15 +18,14 @@ The following code represents how to check the editing status of the document.
 @using Syncfusion.Blazor.Buttons
 
 <SfButton @onclick="OnClick">Check</SfButton>
-<SfPdfViewer2 @ref="Viewer" 
-             DocumentPath="@DocumentPath" 
-             Height="640px" 
-             Width="100%" >
+<SfPdfViewer2 @ref="Viewer"
+              DocumentPath="@DocumentPath"
+              Height="100%"
+              Width="100%">
 </SfPdfViewer2>
 
 @code{
     public SfPdfViewer Viewer { get; set; }
-
     private string DocumentPath { get; set; } = "Data/PDF_Succinctly.pdf";
 
     //Prints the document's edited status in console window.
@@ -37,4 +36,4 @@ The following code represents how to check the editing status of the document.
 }
 ```
 
-N> [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Common/Document%20editing%20status-SfPdfViewer).
+[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Common/Document%20editing%20status-SfPdfViewer).

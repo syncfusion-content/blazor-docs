@@ -19,11 +19,17 @@ The `PrintMode` enum of SfPdfViewer2 allows you to decide whether to print in th
 
 <SfPdfViewer2 PrintMode="PrintMode.Default"
               DocumentPath="@DocumentPath"
-              Height="500px"
-              Width="1060px"></SfPdfViewer2>
+              Height="100%"
+              Width="100%"></SfPdfViewer2>
 
 @code {
     private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
 }
 ```
 In the provided code, `PrintMode.Default` is used to specify printing in the same window.
+
+## See also
+
+* [Print in Blazor SfPdfViewer Component](../print)
+
+* [How to print the SfPdfViewer inside the Dialog](./print-the-sfpdfiewer-inside-the-dialog-component)

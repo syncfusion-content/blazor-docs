@@ -16,8 +16,12 @@ The following code illustrates how to remove the starting arrow and end arrow fr
 ```cshtml
 @using Syncfusion.Blazor.SfPdfviewer
 
-<SfPdfViewer2 @ref="Viewer" DocumentPath="@DocumentPath" ArrowSettings="@ArrowSettings" Height="640px" Width="100%">
- <PdfViewerEvents DocumentLoaded="DocumentLoad"></PdfViewerEvents>
+<SfPdfViewer2 @ref="Viewer"
+              DocumentPath="@DocumentPath"
+              ArrowSettings="@ArrowSettings"
+              Height="100%"
+              Width="100%">
+    <PdfViewerEvents DocumentLoaded="DocumentLoad"></PdfViewerEvents>
 </SfPdfViewer2>
 
 @code
@@ -43,4 +47,10 @@ The following code illustrates how to remove the starting arrow and end arrow fr
 }
 ```
 
-N> [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Annotations/Shapes/Remove%20arrow%20annotation%20heads-SfPdfViewer).
+[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Annotations/Shapes/Remove%20arrow%20annotation%20heads-SfPdfViewer).
+
+## See also
+
+* [Shape annotations in Blazor SfPdfViewer Component](../annotation/shape-annotation)
+
+* [Measurement annotations in Blazor SfPdfViewer Component](../annotation/measurement-annotation)

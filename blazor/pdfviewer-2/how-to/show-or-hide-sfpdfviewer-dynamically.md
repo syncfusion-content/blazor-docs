@@ -7,9 +7,9 @@ control: SfPdfViewer
 documentation: ug
 ---
 
-# Show or hide the SfPdfViewer dynamically in Blazor SfPdfViewer Component
+# Show or hide the SfPdfViewer Component dynamically in Blazor 
 
-In the below code, the SfPdfViewer is hidden at page load. Then, on clicking a button, the PDFViewer container will be loaded. When the user clicks on a PDF file (here it is demonstrated with buttons), the SfPdfViewer already present on the same page will be updated to show the selected document. 
+In the below code, the SfPdfViewer is hidden at page load. Then, on clicking a button, the SfPdfViewer container will be loaded. When the user clicks on a PDF file (here it is demonstrated with buttons), the SfPdfViewer already present on the same page will be updated to show the selected document. 
 
 ```cshtml
 
@@ -70,4 +70,12 @@ In the below code, the SfPdfViewer is hidden at page load. Then, on clicking a b
 }
 ```
 
-N> [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Common/Render%20the%20PDF%20Viewer%20on%20a%20button%20click%20-%20SfPdfViewer).
+[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Common/Render%20the%20PDF%20Viewer%20on%20a%20button%20click%20-%20SfPdfViewer).
+
+## See also
+
+* [How to load Microsoft Office files in Blazor SfPdfViewer Component](./load-office-files)
+
+* [How to load PDF documents dynamically in Blazor SfPdfViewer Component](./load-pdf-document-dynamically)
+
+* [How to unload the PDF document from Viewer](./unload-the-pdf-document-from-viewer)

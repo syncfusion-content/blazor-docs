@@ -7,11 +7,11 @@ control: SfPdfViewer
 documentation: ug
 ---
 
-# Create PDF document in created event of Blazor SfPdfViewer Component
+# Create PDF document in the created event of Blazor SfPdfViewer Component
 
-You can create PDF document in the PDFViewer's created event and load the same document in the viewer.
+You can create PDF document in the SfPdfViewer's `Created` event and load the same document in the viewer.
 
-The following code example shows how to create PDF document and load that document in PDFViewer.
+The following code example shows how to create PDF document and load that document in SfPdfViewer.
 
 ```cshtml
 @using Syncfusion.Blazor.SfPdfViewer
@@ -58,4 +58,8 @@ The following code example shows how to create PDF document and load that docume
 }
 ```
 
-N> [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Common/Create%20PDF%20using%20base%20library%20-%20SfPdfViewer).
+[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Common/Create%20PDF%20using%20base%20library%20-%20SfPdfViewer).
+
+## See also
+
+* [Events in Blazor SfPdfViewer Component](../events)

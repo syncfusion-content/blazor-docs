@@ -7,9 +7,9 @@ control: SfPdfViewer
 documentation: ug
 ---
 
-# Check the status of annotations in Blazor SfPdfViewer Component
+# Check the status of annotations or comments in Blazor SfPdfViewer Component
 
-The Syncfusion's Blazor SfPdfViewer component allows to check the status of the annotations in the SfPdfViewer using the [Review](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PdfViewer.Review.html) property of the [PdfAnnotation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PdfViewer.PdfAnnotation.html) class.
+The Syncfusion's Blazor SfPdfViewer component allows to check the status of the annotations in the SfPdfViewer using the [Review](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.Review.html) property of the [PdfAnnotation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfAnnotation.html) class.
 
 The following code example shows the review status of the annotation.
 
@@ -19,9 +19,11 @@ The following code example shows the review status of the annotation.
 @inject IJSRuntime JsRuntime;
 
 <SfButton OnClick="reviewStatus">Review Status</SfButton>
-<SfPdfViewer2 @ref="pdfviewer" CommentPanelVisible="true" 
-                DocumentPath="@DocumentPath" 
-                Height="500px" Width="1060px"></SfPdfViewer2>
+<SfPdfViewer2 @ref="pdfviewer"
+              CommentPanelVisible="true"
+              DocumentPath="@DocumentPath"
+              Height="100%"
+              Width="100%"></SfPdfViewer2>
 
 @code{
     private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
@@ -45,4 +47,14 @@ The following code example shows the review status of the annotation.
     }
 }
 ```
-N> [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Annotations/Comment%20Panel/Retrieve%20the%20comment%20status%20-%20SfPdfViewer).
+[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Annotations/Comment%20Panel/Retrieve%20the%20comment%20status%20-%20SfPdfViewer).
+
+## See also
+
+* [Free text annotations in Blazor SfPdfViewer Component](../annotation/free-text-annotation)
+
+* [Ink Annotation in the Blazor SfPdfViewer component](../annotation/ink-annotation)
+
+* [Stamp annotations in Blazor SfPdfViewer Component](../annotation/stamp-annotation)
+
+* [Comments in Blazor SfPdfViewer Component](../annotation/comments)
