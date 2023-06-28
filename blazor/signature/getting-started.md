@@ -21,7 +21,7 @@ You can create **Blazor Server App** or **Blazor WebAssembly App** using Visual 
 
 * [Create a Project using Microsoft Templates](https://docs.microsoft.com/en-us/aspnet/core/blazor/tooling?pivots=windows)
 
-* [Create a Project using Syncfusion Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project)
+* [Create a Project using Syncfusion Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio)
 
 ## Install Syncfusion Blazor Inputs NuGet in the App
 
@@ -270,7 +270,7 @@ N> Syncfusion recommends to reference scripts using [Static Web Assets](https://
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to run the app. Then, the Syncfusion Blazor Signature component will be rendered in the default web browser.
 
-![Blazor Signature Component](./images/blazor-Signature-component.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDhqjRiphpWfeNAY?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 N> The Signature component will render default height and width of canvas (300 * 150), when the Signature height and width are not specified.
 

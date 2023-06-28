@@ -206,8 +206,7 @@ In the following sample, a datagrid component is rendered as custom component us
 }
 ```
 
-
-![Rendering Custom Component in Blazor DataGrid Row](./images/blazor-datagrid-row-with-custom-component.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BNLUNxLiBLVSefgI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Expand by external button
 
@@ -330,6 +329,103 @@ By default, detail rows render in collapsed state. You can expand a detail row b
 N> * You can expand all the rows by using `ExpandAll` method.
 <br/> * If you want to expand all the rows at initial DataGrid rendering, then use `ExpandAll` method in [dataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event of the DataGrid.
 
+## Expand or collapse specific detail template row
+
+To expand or collapse a specific row of a detail template in the Syncfusion Grid, you can use the [ExpandCollapseDetailRowAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExpandCollapseDetailRowAsync__0_) method. This method allows you to programmatically expand or collapse the detail template for a specific row of data by passing the data object representing that row.
+
+The following code demonstrates how to expand the first row using `ExpandCollapseDetailRowAsync` method of the DataGrid component when a button is clicked, using the DataGrid reference.
+
+```cshtml
+@using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor.Data
+@using Syncfusion.Blazor.Buttons
+
+<SfButton Content="Expand/Collapse" OnClick="Expand"></SfButton>
+
+<SfGrid @ref="Grid" DataSource="@Employees" TValue="EmployeeData" Height="315px">
+    <GridTemplates>
+        <DetailTemplate>
+            @{
+                var employee = (context as EmployeeData);
+                <SfGrid DataSource="@Orders" Query="@(new Query().Where("EmployeeID", "equal", employee.EmployeeID))">
+                    <GridColumns>
+                        <GridColumn Field=@nameof(Order.OrderID) HeaderText="First Name" Width="110"> </GridColumn>
+                        <GridColumn Field=@nameof(Order.CustomerName) HeaderText="Last Name" Width="110"></GridColumn>
+                        <GridColumn Field=@nameof(Order.ShipCountry) HeaderText="Title" Width="110"></GridColumn>
+                    </GridColumns>
+                </SfGrid>
+            }
+        </DetailTemplate>
+    </GridTemplates>
+    <GridColumns>
+        <GridColumn Field=@nameof(EmployeeData.FirstName) HeaderText="First Name" Width="110"> </GridColumn>
+        <GridColumn Field=@nameof(EmployeeData.LastName) HeaderText="Last Name" Width="110"></GridColumn>
+        <GridColumn Field=@nameof(EmployeeData.Title) HeaderText="Title" Width="110"></GridColumn>
+        <GridColumn Field=@nameof(EmployeeData.Country) HeaderText="Country" Width="110"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code {
+    public SfGrid<EmployeeData> Grid;
+
+    List<EmployeeData> Employees = new List<EmployeeData>
+{
+        new EmployeeData() {EmployeeID = 1001, FirstName="Nancy", LastName="Fuller", Title="Sales Representative", Country="USA"},
+        new EmployeeData() {EmployeeID = 1002, FirstName="Andrew", LastName="Davolio", Title="Vice President", Country="UK"},
+        new EmployeeData() {EmployeeID = 1003, FirstName="Janet", LastName="Leverling", Title="Sales", Country="UK"},
+        new EmployeeData() {EmployeeID = 1004, FirstName="Margaret", LastName="Peacock", Title="Sales Manager", Country="UAE"},
+        new EmployeeData() {EmployeeID = 1005, FirstName="Steven", LastName="Buchanan", Title="Inside Sales Coordinator", Country="USA"},
+        new EmployeeData() {EmployeeID = 1006, FirstName="Smith", LastName="Steven", Title="HR Manager", Country="UAE"},
+    };
+
+    List<Order> Orders = new List<Order> {
+        new Order() {EmployeeID = 1001, OrderID=001, CustomerName="Nancy", ShipCountry="USA"},
+        new Order() {EmployeeID = 1001, OrderID=002, CustomerName="Steven", ShipCountry="UR"},
+        new Order() {EmployeeID = 1002, OrderID=003, CustomerName="Smith", ShipCountry="UK"},
+        new Order() {EmployeeID = 1002, OrderID=004, CustomerName="Smith", ShipCountry="USA"},
+        new Order() {EmployeeID = 1003, OrderID=005, CustomerName="Nancy", ShipCountry="ITA"},
+        new Order() {EmployeeID = 1003, OrderID=006, CustomerName="Nancy", ShipCountry="UK"},
+        new Order() {EmployeeID = 1003, OrderID=007, CustomerName="Steven", ShipCountry="GER"},
+        new Order() {EmployeeID = 1004, OrderID=008, CustomerName="Andrew", ShipCountry="GER"},
+        new Order() {EmployeeID = 1005, OrderID=009, CustomerName="Fuller", ShipCountry="USA"},
+        new Order() {EmployeeID = 1006, OrderID=010, CustomerName="Leverling", ShipCountry="UAE"},
+        new Order() {EmployeeID = 1006, OrderID=011, CustomerName="Margaret", ShipCountry="KEN"},
+        new Order() {EmployeeID = 1007, OrderID=012, CustomerName="Buchanan", ShipCountry="GER"},
+        new Order() {EmployeeID = 1008, OrderID=013, CustomerName="Nancy", ShipCountry="USA"},
+        new Order() {EmployeeID = 1006, OrderID=014, CustomerName="Andrew", ShipCountry="UAE"},
+    };
+
+    public class EmployeeData
+    {
+        public int? EmployeeID { get; set; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public string Title { get; set; }
+        public string Country { get; set; }
+    }
+
+    public class Order
+    {
+        public int? EmployeeID { get; set; }
+        public int? OrderID { get; set; }
+        public string CustomerName { get; set; }
+        public string ShipCountry { get; set; }
+    }
+
+    public async Task Expand()
+    {
+        await this.Grid.ExpandCollapseDetailRowAsync(Employees[1]);
+    }
+}
+
+```
+
+N> For both collapsing and expanding, same method is used. If a record is in an expanded state, calling this method will collapse it, and vice versa.
+
+In the above code, the **Expand** method is defined to expand or collapse the detail row of a specific employee when the "Expand/Collapse" button is clicked.
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LZrgZdVWLBTXCuoP?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 ## How to access the child component in the detail template
 
 Using the detail template feature of the DataGrid component, a grid-like structure with hierarchical binding can be achieved by rendering a SfGrid component inside the DetailTemplate. By default, the @ref property of the Grid component will be of SfGrid<T>, which will carry a particular grid instance. But for the hierarchy grid, this scenario will be different and an instance for each child grid cannot be found directly. To access each child grid instance, the @ref property is defined using a dictionary object with a key and value pair. Where the values are of the SfGrid<T> type and the keys are unique within the dictionary object.
@@ -423,6 +519,8 @@ In the following sample, you can get the instance of that particular child gr
 }
 
 ```
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LtBUXdBMrrIqZoDa?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 N> [View Sample in GitHub.](https://github.com/SyncfusionExamples/blazor-datagrid-set-instance-for-child-component)
 

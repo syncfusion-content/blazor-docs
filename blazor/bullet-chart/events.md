@@ -160,4 +160,50 @@ The [LegendRender](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Chart
         // Here, you can customize the code.
     }
 }
+
+```
+## PointerClick
+
+The [PointerClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartEvents.html#Syncfusion_Blazor_Charts_BulletChartEvents_PointerClick) event is triggered when the mouse pointer or touch pointer is clicked on the target element or on the feature measure value.
+
+|   Argument name    |   Description                                          |
+|--------------------| -------------------------------------------------------|
+|   Target     |    Specifies the target bar values.
+|   Value     |    Specifies the value bar data. 
+|   CategoryName     |    Specifies the category name of the selected point.  
+|   Cancel             |   Specifies whether the event should continue or be cancelled.|
+
+```cshtml
+@using Syncfusion.Blazor.Charts
+
+<SfBulletChart DataSource="@BulletChartData" Height="300px" Title="Sales Rate" ValueField="FieldValue" TargetField="TargetValue" Minimum="0" Maximum="100" Interval="20">
+    <BulletChartEvents PointerClick="PointClickEvent"></BulletChartEvents>
+    <BulletChartLegendSettings Visible="true" Width="15%"></BulletChartLegendSettings>
+    <BulletChartRangeCollection>
+        <BulletChartRange End=35 Name="Apple"></BulletChartRange>
+        <BulletChartRange End=50 Name="Mango" Color="lightgreen" Shape="LegendShape.Pentagon"></BulletChartRange>
+        <BulletChartRange End=100 Name="Papaya"></BulletChartRange>
+    </BulletChartRangeCollection>
+</SfBulletChart>
+
+@code {
+    public class ChartData
+    {
+        public double FieldValue { get; set; }
+        public double TargetValue { get; set; }
+    }
+
+    public List<ChartData> BulletChartData = new List<ChartData>
+    {
+        new ChartData { FieldValue = 55, TargetValue = 75 },
+        new ChartData { FieldValue = 45, TargetValue = 15 },
+        new ChartData { FieldValue = 75, TargetValue = 35 }
+    };
+    
+    public void PointClickEvent(BulletChartPointEventArgs args)
+    {
+        // Here, you can customize the code.         
+    }
+}
+
 ```

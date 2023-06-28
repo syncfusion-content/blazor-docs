@@ -26,7 +26,7 @@ You can create **Blazor Server App** or **Blazor WebAssembly App** using Visual 
 
 * [Create a Project using Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?pivots=windows&view=aspnetcore-7.0)
 
-* [Create a Project using Syncfusion Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project)
+* [Create a Project using Syncfusion Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio)
 
 ## Install Syncfusion Blazor Calendars NuGet in the App
 
@@ -276,7 +276,7 @@ N> Syncfusion recommends to reference scripts using [Static Web Assets](https://
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to run the application. Then, the Syncfusion `Blazor Calendar` component will be rendered in the default web browser.
 
-![Blazor Calendar Component](./images/blazor-calendar-component.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDVqZRWRByOXxVqS?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Setting the Value, Min, and Max dates
 
@@ -299,11 +299,11 @@ Here, the Calendar allows you to select a date within the range from 5th to 27th
 {% endtabs %}
 
 
-![Selection in Blazor Calendar Component](./images/blazor-calendar-selection.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hZVUXRWxBxWLfGVQ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/Calendar).
 
-## See Also
+## See also
 
 * [Getting Started with Syncfusion Blazor for Client-Side in .NET Core CLI](../getting-started/blazor-webassembly-dotnet-cli)
 * [Getting Started with Syncfusion Blazor for Server-side in Visual Studio](../getting-started/blazor-server-side-visual-studio)

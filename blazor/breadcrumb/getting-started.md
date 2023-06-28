@@ -21,7 +21,7 @@ You can create **Blazor Server App** or **Blazor WebAssembly App** using Visual 
 
 * [Create a Project using Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?pivots=windows&view=aspnetcore-7.0)
 
-* [Create a Project using Syncfusion Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project)
+* [Create a Project using Syncfusion Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio)
 
 ## Install Syncfusion Blazor Navigations NuGet in the App
 
@@ -270,7 +270,7 @@ N> Syncfusion recommends to reference scripts using [Static Web Assets](https://
 
 * Press F5 to run the application. Then, the Syncfusion Blazor Breadcrumb component will be rendered in the default web browser.
 
-![Blazor Breadcrumb Component](./images/blazor-Breadcrumb-component.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LXrqZHCRqMCJrGIJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 N> The Breadcrumb component will render based on the current URL, when the Breadcrumb items are not specified.
 
@@ -296,7 +296,7 @@ To render Breadcrumb component with items use [BreadcrumbItem](https://help.sync
 
 N> Place list of [BreadcrumbItem](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.BreadcrumbItem.html) within [BreadcrumbItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.BreadcrumbItems.html) tag directive.
 
-![Blazor Breadcrumb Component](./images/blazor-Breadcrumb-items.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hZrgNHMHKCXorhEu?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Enable or disable navigation
 
@@ -304,7 +304,7 @@ Breadcrumb component enables or disables built-in URL navigation based on the [E
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/Breadcrumb)
 
-## See Also
+## See also
 
 * [Getting Started with Syncfusion Blazor for client side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-dotnet-cli)
 * [Getting Started with Syncfusion Blazor for server side in Visual Studio](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio)

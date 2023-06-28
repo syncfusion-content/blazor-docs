@@ -23,7 +23,7 @@ You can create **Blazor Server App** or **Blazor WebAssembly App** using Visual 
 
 * [Create a Project using Microsoft Templates](https://docs.microsoft.com/en-us/aspnet/core/blazor/tooling?pivots=windows)
 
-* [Create a Project using Syncfusion Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project)
+* [Create a Project using Syncfusion Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio)
 
 ## Install Syncfusion Blazor InPlaceEditor NuGet in the App
 
@@ -295,7 +295,7 @@ N> The type of component editor must be configured in the 'Type' Editor In-place
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to run the application. Then, the Syncfusion `Blazor In-place Editor` component will be rendered in the default web browser.
 
-![Blazor In-place Editor Component](images/blazor-inplace-editor-component.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LZLADRiILFbhTkoR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/InPlaceEditor).
 
@@ -349,9 +349,7 @@ The following code explains how to initialize a simple In-place Editor with popu
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor In-place Editor in Inline Mode](./images/blazor-inplace-editor-in-inline-mode.png)
-
-![Blazor In-place Editor in Popup Mode](./images/blazor-inplace-editor-in-popup-mode.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BNLKjRiSrvEtXrNE?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Configuring DropDownList
 
@@ -509,7 +507,7 @@ In the following code, it is configured to render the `DatePicker`, `DropDownLis
 {% endhighlight %}
 {% endtabs %}
 
-![Integrating DatePicker in Blazor In-place Editor](./images/blazor-inplace-editor-integrate-datepicker.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDVqjnCehYiIVxsI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Submitting data to the server (save)
 
@@ -616,9 +614,9 @@ The edited data is submitted to the server and you can see the new values gettin
 {% endhighlight %}
 {% endtabs %}
 
-![Refreshing Blazor In-place Editor Data](./images/blazor-inplace-editor-refresh-data.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXLqtxWupZYbWiua?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-## See Also
+## See also
 
 * [Getting Started with Syncfusion Blazor for client-side in .NET Core CLI](../getting-started/blazor-webassembly-dotnet-cli)
 

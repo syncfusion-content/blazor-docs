@@ -27,7 +27,7 @@ You can create **Blazor Server App** or **Blazor WebAssembly App** using Visual 
 
 * [Create a Project using Microsoft Templates](https://docs.microsoft.com/en-us/aspnet/core/blazor/tooling?pivots=windows)
 
-* [Create a Project using Syncfusion Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project)
+* [Create a Project using Syncfusion Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio)
 
 ## Install Syncfusion Blazor Card NuGet in the App
 
@@ -277,6 +277,8 @@ N> Syncfusion recommends to reference scripts using [Static Web Assets](https://
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to run the application. Then, the Syncfusion `Blazor Card` component will be rendered in the default web browser.
 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hZLKNxMnroCnOjGD?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5"}
+
 ## Add header and content
 
 You can add the header by using [CardHeader](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Cards.CardHeader.html) tag and add [Title](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Cards.CardHeader.html#Syncfusion_Blazor_Cards_CardHeader_Title) and [SubTitle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Cards.CardHeader.html#Syncfusion_Blazor_Cards_CardHeader_SubTitle) in that tag. You can also add the content by using [CardContent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Cards.CardContent.html) tag.
@@ -298,7 +300,7 @@ You can add the header by using [CardHeader](https://help.syncfusion.com/cr/blaz
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor Card Component](images/blazor-card-component.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hXVUZRMnLoKlvGdQ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/Card).
 

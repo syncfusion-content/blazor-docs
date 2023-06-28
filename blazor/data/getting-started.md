@@ -21,7 +21,7 @@ You can create **Blazor Server App** or **Blazor WebAssembly App** using Visual 
 
 * [Create a Project using Microsoft Templates](https://docs.microsoft.com/en-us/aspnet/core/blazor/tooling?pivots=windows)
 
-* [Create a Project using Syncfusion Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project)
+* [Create a Project using Syncfusion Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio)
 
 ## Install Syncfusion Blazor Data NuGet in the App
 
@@ -371,7 +371,7 @@ The following sample code demonstrates binding local data through the [SfDataMan
 {% endhighlight %}
 {% endtabs %}
 
-![Binding DropDownList Item in Blazor DataManager Component](./images/blazor-datamanager-binding-dropdown-item.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LXhqjniOrUDfNxNF?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ### Remote data binding
 
@@ -399,6 +399,6 @@ The following sample code demonstrates binding remote data through the [SfDataMa
 {% endhighlight %}
 {% endtabs %}
 
-![Data Binding in Blazor DataManager Component](./images/blazor-datamanager-data-binding.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDVgNdikLKAVWtcq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/DataManager).

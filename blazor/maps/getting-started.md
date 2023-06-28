@@ -21,7 +21,7 @@ You can create **Blazor Server App** or **Blazor WebAssembly App** using Visual 
 
 * [Create a Project using Microsoft Templates](https://docs.microsoft.com/en-us/aspnet/core/blazor/tooling?pivots=windows)
 
-* [Create a Project using Syncfusion Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project)
+* [Create a Project using Syncfusion Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio)
 
 ## Install Syncfusion Blazor Maps NuGet in the App
 
@@ -291,7 +291,7 @@ You can use the [ShapeData](https://help.syncfusion.com/cr/blazor/Syncfusion.Bla
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor Maps with GeoJSON Layer](./images/blazor-map.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LXhgtRsorAHMcKuX?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 N> The "world-map.json" file contains the World map GeoJSON data.
 
@@ -383,7 +383,7 @@ The color mapping supports customization of shape colors based on the underlying
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor Maps with Color Mapping](./images/blazor-map-color-mapping.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hDLADxCSrqcQCTto?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 N> Refer [code block](#bind-data-source) to know the property value of **SecurityCouncilDetails**.
 
@@ -417,7 +417,7 @@ Label provides information to users about the shapes, and you can enable label t
 
 N> Refer [code block](#bind-data-source) to know the property value of **SecurityCouncilDetails**.
 
-![Blazor Maps with Label](./images/blazor-map-label.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZhgtRMeVqvzGQFv?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Adding title for Maps
 
@@ -450,7 +450,7 @@ Title can be added to the Maps to provide quick information to the users about t
 
 N> Refer [code block](#bind-data-source) to know the property value of **SecurityCouncilDetails**.
 
-![Blazor Maps with Title](./images/blazor-map-title.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BthKZdWerzhGPbIo?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Enable legend
 
@@ -484,7 +484,7 @@ The legend items are used to denote color mapping categories, and you can show l
 
 N> Refer [code block](#bind-data-source) to know the property value of **SecurityCouncilDetails**.
 
-![Blazor Maps with Legend](./images/blazor-map-legend.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNLKXxWSLpKlAuKG?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Enable tooltip
 
@@ -519,7 +519,7 @@ The tooltip can be used when you cannot display information using the data label
 
 N> Refer [code block](#bind-data-source) to know the property value of **SecurityCouncilDetails**.
 
-![Blazor Maps with Tooltip](./images/blazor-map-tooltip.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDLqZRWorfJSjbKP?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/Maps).
 
