@@ -293,6 +293,62 @@ When the legend items exceed legend bounds, paging will be enabled by default. E
 
 ![Paging for Legend in Blazor Accumulation Chart](images/legend/blazor-accumulation-chart-legend-paging.png)
 
+### Paging customization
+
+In legend pager, the arrow elements can be customized by using the [ArrowSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartLegendPageSettings.html#Syncfusion_Blazor_Charts_AccumulationChartLegendPageSettings_ArrowSize) property in the [AccumulationChartLegendPageSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartLegendPageSettings.html) and the page numbers can be customized by using the [AccumulationChartLegendPageSettingsTextStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartLegendPageSettingsTextStyle.html).
+
+```cshtml 
+
+@using Syncfusion.Blazor.Charts
+
+<SfAccumulationChart ID="chart" Width="640px" Height="475px" Theme="@Theme">     
+    <AccumulationChartLegendSettings ToggleVisibility=false TextWrap="@TextWrap.Wrap" MaximumLabelWidth="80" Position="@position" Height="@Height" Width="@Width">
+        <AccumulationChartLegendPageSettings ArrowSize="10">
+            <AccumulationChartLegendPageSettingsTextStyle Color="blue">
+            </AccumulationChartLegendPageSettingsTextStyle>
+        </AccumulationChartLegendPageSettings>
+            <AccumulationChartLegendBorder Color="darkblue" Width="1"></AccumulationChartLegendBorder>
+            <AccumulationChartLegendFont Size="12px"></AccumulationChartLegendFont>        
+    </AccumulationChartLegendSettings>
+    <AccumulationChartSeriesCollection>
+        <AccumulationChartSeries DataSource="@PieChartPoints" XName="ExpenseCategory" YName="ExpensePercentage" Radius="70%" Name="Revenue" InnerRadius="40%">           
+        </AccumulationChartSeries>
+    </AccumulationChartSeriesCollection>
+</SfAccumulationChart> 
+ 
+@code{
+    private Theme Theme { get; set; } = Theme.Bootstrap5;     
+    public string Height { get; set; } = "30%";
+    public string Width { get; set; } = "33%";
+    public LegendPosition position { get; set; } = LegendPosition.Right;
+    public double MaxLabel { get; set; } = 100;
+    
+    public List<PieData> PieChartPoints { get; set; } = new List<PieData>
+    {
+         new PieData { ExpenseCategory =  "IE", ExpensePercentage = 6.12, DataLabelMappingName = "6.12%" },
+         new PieData { ExpenseCategory =  "Chrome", ExpensePercentage = 37.28, DataLabelMappingName = "57.28%" },
+         new PieData { ExpenseCategory =  "Firefox", ExpensePercentage = 20, DataLabelMappingName = "57.28%" },
+         new PieData { ExpenseCategory =  "Safari", ExpensePercentage = 4.73, DataLabelMappingName = "4.73%" },
+         new PieData { ExpenseCategory =  "QQ", ExpensePercentage = 5.96, DataLabelMappingName = "5.96%" },
+         new PieData { ExpenseCategory =  "UC Browser", ExpensePercentage = 4.37, DataLabelMappingName = "4.37%" },
+         new PieData { ExpenseCategory =  "Edge", ExpensePercentage = 7.48, DataLabelMappingName = "7.48%" },
+         new PieData { ExpenseCategory =  "Opera", ExpensePercentage = 3.06, DataLabelMappingName = "14.06%" },
+         new PieData { ExpenseCategory =  "Brave", ExpensePercentage = 2.06, DataLabelMappingName = "14.06%" },
+         new PieData { ExpenseCategory =  "Maxthon", ExpensePercentage = 3.06, DataLabelMappingName = "14.06%" },
+         new PieData { ExpenseCategory =  "UC", ExpensePercentage = 3.06, DataLabelMappingName = "14.06%" },
+         new PieData { ExpenseCategory =  "Falkon", ExpensePercentage = 3.06, DataLabelMappingName = "14.06%" },
+    };
+
+    public class PieData
+    {
+        public string ExpenseCategory { get; set; }
+        public double ExpensePercentage { get; set; }
+        public string DataLabelMappingName { get; set; }
+    }
+}
+```
+![Blazor Accumulation Chart: Legend Pager Customization](images/legend/blazor-accumulation-chart-legend-paging-customization.png)
+
 ## Legend text wrap
 
 When the legend text exceeds the container, the text can be wrapped by using [TextWrap](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartLegendSettings.html#Syncfusion_Blazor_Charts_AccumulationChartLegendSettings_TextWrap) Property. End user can also wrap the legend text based on the [MaximumLabelWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartLegendSettings.html#Syncfusion_Blazor_Charts_AccumulationChartLegendSettings_MaximumLabelWidth) property.
