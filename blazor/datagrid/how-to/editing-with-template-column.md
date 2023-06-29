@@ -54,3 +54,5 @@ In the following demo, the **CustomerID** column is rendered with the template.
     }
 }
 ```
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VtVUjHrGAEHMdMwR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
