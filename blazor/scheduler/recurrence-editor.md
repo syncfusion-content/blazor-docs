@@ -45,12 +45,11 @@ The other properties available in recurrence editor are tabulated below,
 | FirstDayOfWeek | number | Sets the first day of the week on recurrence editor.|
 | StartDate | Date | Sets the start date from which date the recurrence event starts. |
 | DateFormat | string | Sets the specific date format on recurrence editor.|
-| Locale | string | Sets the locale to be applied on recurrence editor.|
+| ChildContent | RenderFragment | sets the child content of Recurrence editor.|
 | CssClass | string | Allows styling to be applied on recurrence editor with custom class names.|
 | EnableRtl | boolean | Allows recurrence editor to render in RTL mode.|
 | MinDate | Date | Sets the minimum date on recurrence editor.|
 | MaxDate | Date | Sets the maximum date on recurrence editor.|
-| Value | string | Sets the recurrence rule value on recurrence editor. |
 | SelectedType | number | Sets the specific repeat type on the recurrence editor.|
 
 ## Customizing the End Type Option in Editor
@@ -106,7 +105,6 @@ There is a `ValueChanged` event available in recurrence editor, that triggers on
 
 @code {
     string RecurrenceRule { get; set; } = string.Empty;
-    ElementReference RuleOutputRef;
     async Task HandleRecurrenceEditorChange(string value)
     {
         RecurrenceRule = value;
