@@ -42,7 +42,7 @@ The other properties available in recurrence editor are tabulated below,
 
 | Properties | Type | Description |
 |------------|------|-------------|
-| FirstDayOfWeek | number | Sets the first day of the week on recurrence editor.|
+| FirstDayOfWeek | int | Sets the first day of the week on recurrence editor.|
 | StartDate | Date | Sets the start date from which date the recurrence event starts. |
 | DateFormat | string | Sets the specific date format on recurrence editor.|
 | ChildContent | RenderFragment | sets the child content of Recurrence editor.|
@@ -50,7 +50,7 @@ The other properties available in recurrence editor are tabulated below,
 | EnableRtl | boolean | Allows recurrence editor to render in RTL mode.|
 | MinDate | Date | Sets the minimum date on recurrence editor.|
 | MaxDate | Date | Sets the maximum date on recurrence editor.|
-| SelectedType | number | Sets the specific repeat type on the recurrence editor.|
+| SelectedType | RepeatType | Sets the specific repeat type on the recurrence editor.|
 
 ## Customizing the End Type Option in Editor
 
