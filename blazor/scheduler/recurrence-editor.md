@@ -38,19 +38,21 @@ It is possible to customize the recurrence editor to display only the specific r
 }
 ```
 
-The other properties available in recurrence editor are tabulated below,
+The other properties available in the recurrence editor are tabulated below,
 
 | Properties | Type | Description |
 |------------|------|-------------|
-| FirstDayOfWeek | int | Sets the first day of the week on recurrence editor.|
-| StartDate | Date | Sets the start date from which date the recurrence event starts. |
-| DateFormat | string | Sets the specific date format on recurrence editor.|
-| ChildContent | RenderFragment | sets the child content of Recurrence editor.|
-| CssClass | string | Allows styling to be applied on recurrence editor with custom class names.|
-| EnableRtl | boolean | Allows recurrence editor to render in RTL mode.|
-| MinDate | Date | Sets the minimum date on recurrence editor.|
-| MaxDate | Date | Sets the maximum date on recurrence editor.|
+| FirstDayOfWeek | int | Sets the first day of the week on the recurrence editor.|
+| StartDate | DateTime | Sets the start date from which date the recurrence event starts. |
+| DateFormat | string | Sets the specific date format on the recurrence editor.|
+| ChildContent | RenderFragment | sets the child content of the Recurrence editor.|
+| CssClass | string | Allows styling to be applied on the recurrence editor with custom class names.|
+| EnableRtl | bool | Allows recurrence editor to render in RTL mode.|
+| MinDate | DateTime | Sets the minimum date on the recurrence editor.|
+| MaxDate | DateTime | Sets the maximum date on the recurrence editor.|
 | SelectedType | RepeatType | Sets the specific repeat type on the recurrence editor.|
+| EndTypes | List<EndType> | Sets the types that can be used to define the end condition for a recurrence editor. |
+| Frequencies | List<RepeatType> | Sets the recurrence pattern on the editor. |
 
 ## Customizing the End Type Option in Editor
 
@@ -131,7 +133,7 @@ There is a `ValueChanged` event available in recurrence editor, that triggers on
 </style>
 ```
 
-## Set specific value on recurrence editor
+## Set a specific value on recurrence editor
 
 It is possible to display the recurrence editor with specific options loaded initially, based on the rule string that we provide. The fields of recurrence editor will change its values accordingly, when we provide a particular rule through the `SetRecurrenceRule` method.
 
@@ -199,11 +201,11 @@ You can parse the `RecurrenceRule` of an event to generate the date instances on
 
 | Field name | Type | Description |
 |------------|------|-------------|
-| `startDate` | Date| Appointment start date. |
-| `rule` | String| Recurrence rule present in an event object. |
-| `excludeDate` | String | Date collection (in ISO format) to be excluded. It is **optional**. |
-| `maximumCount` | Number | Number of date count to be generated. It is **optional**. |
-| `viewDate` | Date | Current view range's first date. It is **optional**. |
+| `startDate` | System.DateTime | Appointment start date. |
+| `rule` | System.String | Recurrence rule present in an event object. |
+| `excludeDate` | System.String | Date collection (in ISO format) to be excluded. It is **optional**. |
+| `maximumCount` | System.Nullable<System.Int32> | Number of date count to be generated. It is **optional**. |
+| `viewDate` | System.Nullable<System.DateTime> | Current view range's first date. It is **optional**. |
 
 ```cshtml
 @using Syncfusion.Blazor.Schedule
