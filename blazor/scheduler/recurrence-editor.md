@@ -201,11 +201,11 @@ You can parse the `RecurrenceRule` of an event to generate the date instances on
 
 | Field name | Type | Description |
 |------------|------|-------------|
-| `startDate` | System.DateTime | Appointment start date. |
-| `rule` | System.String | Recurrence rule present in an event object. |
-| `excludeDate` | System.String | Date collection (in ISO format) to be excluded. It is **optional**. |
-| `maximumCount` | System.Nullable<System.Int32> | Number of date count to be generated. It is **optional**. |
-| `viewDate` | System.Nullable<System.DateTime> | Current view range's first date. It is **optional**. |
+| `startDate` | DateTime | Appointment start date. |
+| `rule` | String | Recurrence rule present in an event object. |
+| `excludeDate` |String | Date collection (in ISO format) to be excluded. It is **optional**. |
+| `maximumCount` | Nullable<Int> | Number of date count to be generated. It is **optional**. |
+| `viewDate` | Nullable<DateTime> | Current view range's first date. It is **optional**. |
 
 ```cshtml
 @using Syncfusion.Blazor.Schedule
