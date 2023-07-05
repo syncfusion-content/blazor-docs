@@ -95,6 +95,8 @@ When the fields of event instances has the default mapping name, it is not manda
 }
 ```
 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXhKDmjefpHNjQMq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 N> The mapper field `Id` is of string type and has no additional validation options, whereas all other fields has additional options.
 
 ### Event field settings
@@ -153,6 +155,8 @@ In following example, the Subject field in event editor will display its appropr
 }
 ```
 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rNVUZmjezJbSFwxl?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 ### Adding Custom fields
 
 Apart from the default Scheduler fields, the user can include 'n' number of custom fields for appointments. The following code example shows how to include two custom fields namely **Status** and **Priority** within event collection. It is not necessary to bind the custom fields within the [EventSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ISchedule.html#Syncfusion_Blazor_Schedule_ISchedule_EventSettings). However, those additional fields can be accessed easily, for internal processing as well as from application end.
@@ -197,6 +201,8 @@ Apart from the default Scheduler fields, the user can include 'n' number of cust
 }
 ```
 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXrqXcXSzeJjbatX?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 ## Normal events
 
 Represents an appointment that is created for any specific time interval within a day.
@@ -234,6 +240,8 @@ The following example depicts how to define a normal event on the Scheduler, wit
     }
 }
 ```
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hXLKDcjITSFXbScP?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Spanned events
 
@@ -299,7 +307,7 @@ It is possible to block a set of dates or a particular time ranges on the Schedu
 }
 ```
 
-![Block Date and Time in Blazor Scheduler](images/blazor-scheduler-block-events.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BDhKNQNSzngHnfgR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 Block events can also be defined to repeat on several days as shown in the following code example.
 
@@ -341,7 +349,7 @@ Block events can also be defined to repeat on several days as shown in the follo
 }
 ```
 
-![Block Several Date and Time in Blazor Scheduler](images/blazor-scheduler-multiple-block-events.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXLAjwtSTHHIlytQ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Readonly
 
