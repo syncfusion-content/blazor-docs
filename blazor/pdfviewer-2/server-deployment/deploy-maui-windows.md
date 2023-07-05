@@ -1,21 +1,21 @@
 ---
 layout: post
-title: Deploy PDF Viewer in Blazor android MAUI | Syncfusion
-description: Checkout and learn here all about how to deploy PDF Viewer in Blazor android MAUI in Syncfusion Blazor SfPdfViewer component and much more details.
+title: Deploy PDF Viewer in Blazor MAUI in windows | Syncfusion
+description: Checkout and learn here all about how to deploy PDF Viewer in Blazor MAUI in windows in Syncfusion Blazor SfPdfViewer component and much more details.
 platform: Blazor
 control: SfPdfViewer
 documentation: ug
 ---
 
-# How To Deploy PDF Viewer in Blazor android MAUI
+# How To Deploy PDF Viewer in Blazor MAUI in windows
 
-This section briefly explains about how to deploy [Blazor SfPdfViewer](https://www.syncfusion.com/blazor-components/blazor-pdf-viewer) component in your blazor android MAUI App using Visual Studio.
+This section briefly explains about how to deploy [Blazor SfPdfViewer](https://www.syncfusion.com/blazor-components/blazor-pdf-viewer) component in your Blazor MAUI in windows App using Visual Studio.
 
 ## Prerequisites
 
 To use the MAUI project templates, install the Mobile development with .NET extension for Visual Studio. For more details, refer [here](https://docs.microsoft.com/en-us/dotnet/MAUI/get-started/installation).
 
-## Deploy SfPdfViewer into Blazor android MAUI application
+## Deploy SfPdfViewer into Blazor MAUI in windows application
 
 1. Start Visual Studio and select **Create a new project**.
 
@@ -28,7 +28,7 @@ To use the MAUI project templates, install the Mobile development with .NET exte
 4. In the **Additional information** dialog, set the target framework and create the project.
 ![Set-target-framework](images/Additional_information.png)
 
-## Install Blazor SfPdfViewer NuGet package in Blazor android MAUI application
+## Install Blazor SfPdfViewer NuGet package in Blazor MAUI in windows application
 
 Syncfusion Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). To use Syncfusion Blazor components in the application, add reference to the corresponding NuGet. Refer to [NuGet packages topic](https://blazor.syncfusion.com/documentation/nuget-packages) for available NuGet packages list with component details and [Benefits of using individual NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages#benefits-of-using-individual-nuget-packages).
 
@@ -43,15 +43,16 @@ Open **~/_Imports.razor** file and import the **Syncfusion.Blazor.SfPdfViewer** 
 {% tabs %}
 {% highlight razor tabtitle="~/_Imports.razor" %}
 
+@using Syncfusion.Blazor 
 @using Syncfusion.Blazor.SfPdfViewer
 
 {% endhighlight %}
 {% endtabs %}
 
-* Open the **~/Program.cs** file and register the Syncfusion Blazor Service.
+* Open the **~/MauiProgram.cs** file and register the Syncfusion Blazor Service.
 
 {% tabs %}
-{% highlight c# tabtitle="~/Program.cs" hl_lines="3 16 25" %}
+{% highlight c# tabtitle="~/MauiProgram.cs" hl_lines="3 16 25" %}
 
 using Microsoft.Extensions.Logging;
 using MAUIApp1.Data;
@@ -81,7 +82,6 @@ public static class MAUIProgram
         return builder.Build();
 	}
 }
-
 
 {% endhighlight %}
 {% endtabs %}
@@ -147,6 +147,12 @@ Add the Syncfusion SfPdfViewer component in the **~/Pages/Index.razor** file.
 {% endtabs %}
 
 N> If the `DocumentPath` property value is not provided, the SfPdfViewer component will be rendered without loading the PDF document. The users can then use the open option from the toolbar to browse and open the PDF as required.
+
+## Run the PDF Viewer in Blazor MAUI in windows
+
+Run the sample in Windows Machine mode and it will run Blazor MAUI in windows
+
+![Run Windows machine](images/windows-machine.png)
 
 Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to run the application. Then, the Syncfusion `Blazor SfPdfViewer` component will be rendered in the default web browser.
 
