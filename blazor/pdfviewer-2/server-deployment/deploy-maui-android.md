@@ -167,9 +167,7 @@ Add the Syncfusion SfPdfViewer component in the **~/Pages/Index.razor** file.
 {% endhighlight %}
 {% endtabs %}
 
-The constructed document path, which contains the base64-encoded PDF document, is then assigned to the DocumentPath property of the SfPdfViewer component. The SfPdfViewer component will use this path to load and display the PDF document within the Blazor Android MAUI application.
-
-N> If the `DocumentPath` property value is not provided, the SfPdfViewer component will be rendered without loading the PDF document. The users can then use the open option from the toolbar to browse and open the PDF as required.
+for Blazor android MAUI application we need to provide the DocumentPath as a base64 string
 
 ## Run the PDF Viewer in Blazor android MAUI application
 
