@@ -55,10 +55,10 @@ Open **~/_Imports.razor** file and import the **Syncfusion.Blazor.SfPdfViewer** 
 {% highlight c# tabtitle="~/MauiProgram.cs" hl_lines="3 16 25" %}
 
 using Microsoft.Extensions.Logging;
-using MAUIApp1.Data;
+using MauiBlazorApp.Data;
 using Syncfusion.Blazor;
 
-namespace MAUIApp1;
+namespace MauiBlazorApp;
 
 public static class MAUIProgram
 {
@@ -154,7 +154,7 @@ Run the sample in Windows Machine mode and it will run Blazor MAUI in windows
 
 ![Run Windows machine](images/windows-machine.png)
 
-Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to run the application. Then, the Syncfusion `Blazor SfPdfViewer` component will be rendered in the default web browser.
+Upon successfully launching the application, the PDF Viewer will seamlessly render the specified PDF document within its interface.
 
 ![Blazor SfPdfViewer Component](images/blazor-pdfviewer.png)
 

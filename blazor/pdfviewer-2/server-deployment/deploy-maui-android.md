@@ -43,6 +43,7 @@ Open **~/_Imports.razor** file and import the **Syncfusion.Blazor.SfPdfViewer** 
 {% tabs %}
 {% highlight razor tabtitle="~/_Imports.razor" %}
 
+@using Syncfusion.Blazor 
 @using Syncfusion.Blazor.SfPdfViewer
 
 {% endhighlight %}
@@ -54,10 +55,10 @@ Open **~/_Imports.razor** file and import the **Syncfusion.Blazor.SfPdfViewer** 
 {% highlight c# tabtitle="~/MauiProgram.cs" hl_lines="3 16 25" %}
 
 using Microsoft.Extensions.Logging;
-using MAUIApp1.Data;
+using MauiBlazorApp.Data;
 using Syncfusion.Blazor;
 
-namespace MAUIApp1;
+namespace MauiBlazorApp;
 
 public static class MAUIProgram
 {
@@ -81,7 +82,6 @@ public static class MAUIProgram
         return builder.Build();
 	}
 }
-
 
 {% endhighlight %}
 {% endtabs %}
@@ -167,7 +167,7 @@ Add the Syncfusion SfPdfViewer component in the **~/Pages/Index.razor** file.
 {% endhighlight %}
 {% endtabs %}
 
-for Blazor android MAUI application we need to provide the DocumentPath as a base64 string
+When developing a Blazor Android MAUI application, it is need to pass the `DocumentPath` to the PDF Viewer component as a `base64 string`. This ensures that the application can retrieve and render the PDF document correctly within the PDF Viewer.
 
 ## Run the PDF Viewer in Blazor android MAUI application
 
@@ -175,17 +175,17 @@ Run the sample in Android emulator mode and it will run Blazor android MAUI appl
 
 ![Run Windows machine](images/emulator.png)
 
-If you encounter any errors while launching the emulator, click on the error message and follow the prompts to install the required Android SDK licenses.
+If you encounter any errors while launching the emulator, it is possible that the required Android SDK licenses are not installed. In such cases, the error message displayed will usually provide a prompt or link to resolve the issue. Click on the error message, and follow the provided prompts or instructions to install the required Android SDK licenses.
 
 Ensure that you have set up the necessary dependencies, SDKs, and tools for Blazor Android MAUI.
 
 ![android-sdk-liscence](images/android-sdk-liscence.png)
 
+Install and launch the Android Device Manager, go to the "SDK Tools" tab in the Android SDK Manager, select the "Android Device Manager" checkbox, and click "Apply" or "OK"; after installation, you can access the Android Device Manager to create, manage, and launch Android Virtual Devices (AVDs) for testing and running Android applications.
+
 ![picxel emulator](images/pixcel-emulator.png)
 
 Now launch the project again in emulator mode it will render the SfPdfViewer using Blazor android MAUI application
-
-Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to run the application. Then, the Syncfusion `Blazor SfPdfViewer` component will be rendered in the default web browser.
 
 ![Blazor SfPdfViewer Component](images/blazor-pdfviewer.png)
 
