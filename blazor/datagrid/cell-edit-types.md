@@ -850,7 +850,7 @@ In the following image, **SfRichTextEditor** component is rendered with **EditTe
 
 ### Using SfMaskedTextBox in EditTemplate 
 
-The **SfMaskedTextBox** component in Syncfusion Blazor provides a masked input control that allows you to enforce specific input patterns for text values. This feature can be used within the Syncfusion Blazor Grid component to enable masked input for a specific column in the [EditTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_EditTemplate).
+The **SfMaskedTextBox** component in Syncfusion Blazor provides a masked input control that allows to enforce specific input patterns for text values. This feature can be used within the Syncfusion Blazor Grid component to enable masked input for a specific column in the [EditTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_EditTemplate).
 
 ```cshtml
 @page "/Counter"
