@@ -79,7 +79,7 @@ Refer to the following code example for remote Data binding using `OData` servic
 @using Syncfusion.Blazor.Data
 
 <SfQueryBuilder TValue="OrderDetails" Width="70%">
-    <SfDataManager Url="https://js.syncfusion.com/ejServices/Wcf/Northwind.svc/Orders" Adaptor="Syncfusion.Blazor.Adaptors.ODataAdaptor"></SfDataManager>
+    <SfDataManager Url="https://services.syncfusion.com/js/production/api/orders" Adaptor="Syncfusion.Blazor.Adaptors.ODataAdaptor"></SfDataManager>
 </SfQueryBuilder>
 
 @code {
