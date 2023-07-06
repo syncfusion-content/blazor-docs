@@ -853,8 +853,11 @@ In the following image, **SfRichTextEditor** component is rendered with **EditTe
 The **SfMaskedTextBox** component in Syncfusion Blazor provides a masked input control that allows you to enforce specific input patterns for text values. This feature can be used within the Syncfusion Blazor Grid component to enable masked input for a specific column in the [EditTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_EditTemplate).
 
 ```cshtml
+@page "/Counter"
+
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Inputs
+
 <SfGrid DataSource="@Orders" AllowPaging="true" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Cancel", "Update" })" Height="315">
     <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true" Mode="EditMode.Normal"></GridEditSettings>
     <GridColumns>
@@ -867,15 +870,19 @@ The **SfMaskedTextBox** component in Syncfusion Blazor provides a masked input c
                 @{
                     var data = context as Order;
                 }
-                <SfMaskedTextBox ID="PhoneNumber" Mask="###-###-####" Placeholder="PhoneNumber" ValueChange="@(args=>OnChanged(args,data))" Value="((context as Order).PhoneNumber.ToString())"></SfMaskedTextBox>
+
+                <SfMaskedTextBox ID="PhoneNumber" Mask="##-###-#####" Placeholder="PhoneNumber" ValueChange="@(args=>OnChanged(args,data))" Value="((context as Order).PhoneNumber.ToString())"></SfMaskedTextBox>
             </EditTemplate>
+
         </GridColumn>
         <GridColumn Field=@nameof(Order.ShipCountry) HeaderText="Ship Country" EditType="EditType.DropDownEdit" Width="150"></GridColumn>
     </GridColumns>
 </SfGrid>
+
 @code {
     public List<Order> Orders { get; set; }
     public string Maskedvalue { get; set; }
+
     protected override void OnInitialized()
     {
         Orders = Enumerable.Range(1, 75).Select(x => new Order()
@@ -884,8 +891,8 @@ The **SfMaskedTextBox** component in Syncfusion Blazor provides a masked input c
                 CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
                 Freight = 2.1 * x,
                 OrderDate = DateTime.Now.AddDays(-x),
-                ShipCountry = (new string[] { "USA", "UK", "CHINA", "RUSSIA", "INDIA" })[new Random().Next(5)],
-                PhoneNumber = 23333333 
+                PhoneNumber = 9876543210,
+                ShipCountry = (new string[] { "USA", "UK", "CHINA", "RUSSIA", "INDIA" })[new Random().Next(5)]
             }).ToList();
     }
     public class Order
@@ -894,7 +901,7 @@ The **SfMaskedTextBox** component in Syncfusion Blazor provides a masked input c
         public string CustomerID { get; set; }
         public DateTime? OrderDate { get; set; }
         public double? Freight { get; set; }
-        public long PhoneNumber { get; set; } 
+        public long PhoneNumber { get; set; }
         public string ShipCountry { get; set; }
     }
     public List<Country> Countries { get; set; } = new List<Country>()
@@ -917,6 +924,7 @@ The **SfMaskedTextBox** component in Syncfusion Blazor provides a masked input c
         }
     }
 }
+
 ```
 
 In the following image, **SfMaskedTextBox** component is rendered with **EditTemplate** in PhoneNumber column .
