@@ -391,6 +391,8 @@ An interaction with the appointments of Scheduler can be enabled/disabled using 
 }
 ```
 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hNLKXGZHiTJdYpKV?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 ## Make specific events readonly
 
 There are scenarios where you need to restrict the CRUD action on specific appointments alone based on certain conditions. In the following example, the events that has occurred on the past hours from the current date of the Scheduler are made as read-only and the CRUD actions has been prevented only on those appointments. This can be achieved by setting [IsReadonly](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleField.html#Syncfusion_Blazor_Schedule_ScheduleField_IsReadonly) field of read-only events to `true`.
@@ -433,6 +435,8 @@ There are scenarios where you need to restrict the CRUD action on specific appoi
     }
 }
 ```
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXBqNmtdMGhqJqdz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 N> By default, the event editor is prevented to open on the read-only events when `IsReadonly` field is set to **true**.
 
@@ -535,6 +539,8 @@ You can restrict the users to create and update more than one appointment on spe
 }
 ```
 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VZBgNQjRiFieEjkl?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 ## Differentiate the past time events
 
 To differentiate the appearance of the appointments based on specific criteria such as displaying the past hour appointments with different colors on Scheduler, [EventRendered](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleEvents-1.html#Syncfusion_Blazor_Schedule_ScheduleEvents_1_EventRendered) event can be used which triggers before the appointment renders on the Scheduler.
@@ -585,6 +591,8 @@ In the following code example, the appointments beyond current date of the sched
 </style>
 ```
 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VDrKZmZRWuVTXvbp?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 ## Appointments occupying entire cell
 
 The Scheduler allows the event to occupy the full height of the cell without its header part by setting `true` for [EnableMaxHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleEventSettings-1.html#Syncfusion_Blazor_Schedule_ScheduleEventSettings_1_EnableMaxHeight) Property.
@@ -626,7 +634,7 @@ More indicator can be shown if more than one appointment is available in a same 
 }
 ```
 
-![Differentiate Past Time Events in Blazor Scheduler](images/blazor-scheduler-appointments-entirecell.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VNhgNcZxMOxqqxdz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 N> The `EnableIndicator` property will work, only when the `EnableMaxHeight` property value is set to true.
 
@@ -677,7 +685,7 @@ The tooltip can be displayed for appointments by setting `true` to the [EnableTo
 }
 ```
 
-![Built-in Tooltip in Blazor Scheduler](images/blazor-scheduler-appointments-tooltip.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXVUZQZHCOafOCZZ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ### Customizing event tooltip using template
 
@@ -728,7 +736,7 @@ After enabling the default tooltip, it is possible to customize the display of n
 }
 ```
 
-![Tooltip in Blazor Scheduler](images/blazor-scheduler-appointments-tooltip-template.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LXhANQtxrXAZhEhF?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 N> All the field names that are mapped from the Scheduler dataSource to the appropriate field properties such as subject, description, location, startTime and endTime within the `ScheduleEventSettings` can be accessed within the template.
 
@@ -797,6 +805,8 @@ To retrieve the appointments present in the current view of the Scheduler, the [
 }
 ```
 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDVgNcNdBMbMggxJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 ## Get the entire appointment collections
 
 The entire collection of appointments rendered on the Scheduler can be accessed using the [GetEventsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_GetEventsAsync_System_Nullable_System_DateTime__System_Nullable_System_DateTime__System_Nullable_System_Boolean__) public method. In the following example, entire appointment collection rendered on the Scheduler has been traced in [DataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleEvents-1.html#Syncfusion_Blazor_Schedule_ScheduleEvents_1_DataBound) event.
@@ -843,6 +853,8 @@ The entire collection of appointments rendered on the Scheduler can be accessed 
     }
 }
 ```
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDVqXGtxBrZYvDcd?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 N> You can also get the specific range of appointments by passing the start and end time in the `GetEventsAsync` method. To get the block events, you can make use of the method `GetBlockEventsAsync`.
 
@@ -1055,6 +1067,8 @@ The appointments can be filtered by passing the predicate value to [Query](https
     }
 </style>
 ```
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VDrgDmjnhLGfcFeA?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Refresh appointments
 
