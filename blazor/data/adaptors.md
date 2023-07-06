@@ -213,7 +213,7 @@ The sample response object should look like below.
 }
 ```
 
-<!-- ## WebMethod adaptor
+## WebMethod adaptor
 
 You can use the `WebApiAdaptor` to interact with Web APIs created with OData endpoint. The `WebApiAdaptor` is extended from the `ODataAdaptor`. Hence to use `WebApiAdaptor`, the endpoint should understand the OData formatted queries sent along with request.
 
@@ -260,7 +260,7 @@ The sample response object should look like below.
 }
 ```
 
-N> The controller method’s data parameter name must be `value`. -->
+N> The controller method’s data parameter name must be `value`.
 
 ## Writing custom adaptor
 
