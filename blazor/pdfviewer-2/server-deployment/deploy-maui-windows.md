@@ -23,7 +23,7 @@ To use the MAUI project templates, install the Mobile development with .NET exte
 ![Create-new-blazor-server-app](images/start-window-create-new-project.png)
 
 3. Provide a **Project Name** and confirm that the *Location* is correct. Select Next. 
-![Set-project-name](images/Set-project-name.png)
+![Set-project-name](images/Set-project-name-window.png)
 
 4. In the **Additional information** dialog, set the target framework and create the project.
 ![Set-target-framework](images/Additional_information.png)
@@ -34,7 +34,7 @@ Syncfusion Blazor components are available in [nuget.org](https://www.nuget.org/
 
 Install the [Syncfusion.Blazor.SfPdfViewer](https://www.nuget.org/packages/Syncfusion.Blazor.SfPdfViewer) NuGet package as a reference to your project from the [NuGet.org](https://www.nuget.org/packages?q=syncfusion.blazor).
 
-![Install the PDF Syncfusion.Blazor.SfPdfViewer package](images/nuget-package.png)
+![Install the PDF Syncfusion.Blazor.SfPdfViewer package](images/nuget-package-windows.png)
 
 ## Register Syncfusion Blazor Service
 
@@ -52,32 +52,31 @@ Open **~/_Imports.razor** file and import the **Syncfusion.Blazor.SfPdfViewer** 
 * Open the **~/MauiProgram.cs** file and register the Syncfusion Blazor Service.
 
 {% tabs %}
-{% highlight c# tabtitle="~/MauiProgram.cs" hl_lines="3 16 25" %}
+{% highlight c# tabtitle="~/MauiProgram.cs" hl_lines="3 17 23" %}
 
 using Microsoft.Extensions.Logging;
-using MauiBlazorApp.Data;
+using MauiBlazorWindow.Data;
 using Syncfusion.Blazor;
 
-namespace MauiBlazorApp;
+namespace MauiBlazorWindow;
 
-public static class MAUIProgram
+public static class MauiProgram
 {
-	public static MAUIApp CreateMAUIApp()
+	public static MauiApp CreateMauiApp()
 	{
-		var builder = MAUIApp.CreateBuilder();
-		builder.UseMAUIApp<App>().ConfigureFonts(fonts =>
+		var builder = MauiApp.CreateBuilder();
+		builder.UseMauiApp<App>().ConfigureFonts(fonts =>
 			{
 				fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
 			});
+		builder.Services.AddMauiBlazorWebView();
         builder.Services.AddMemoryCache();
-        builder.Services.AddMAUIBlazorWebView();
 
 #if DEBUG
-		builder.Services.AddBlazorWebViewDeveloperTools();
+        builder.Services.AddBlazorWebViewDeveloperTools();
 		builder.Logging.AddDebug();
 #endif
 		builder.Services.AddSingleton<WeatherForecastService>();
-        // Add Syncfusion Blazor service to the container.
         builder.Services.AddSyncfusionBlazor();
         return builder.Build();
 	}
