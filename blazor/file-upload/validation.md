@@ -46,3 +46,75 @@ The uploader component allows you to validate the files based on its size. The v
 
 
 ![Validating File Size in Blazor FileUpload](./images/blazor-fileupload-size-validation.png)
+
+## File Validation within Edit Form
+
+The provided code snippet demonstrates a Blazor form for editing employee information, including uploader component. It incorporates data validation and displays error messages. Users can select files for upload, which are stored in the files property of the Employee model. The code handles file selection, changes, and removal through the use of the [FileSelect](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.UploaderEvents.html#Syncfusion_Blazor_Inputs_UploaderEvents_FileSelected), [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.UploaderEvents.html#Syncfusion_Blazor_Inputs_UploaderEvents_ValueChange), and [OnRemove](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.UploaderEvents.html#Syncfusion_Blazor_Inputs_UploaderEvents_OnRemove) events. Additionally, it enables manual file upload during form submission.
+
+```cshtml
+@using System.ComponentModel.DataAnnotations
+@using Syncfusion.Blazor.Inputs
+
+ <EditForm Model="@employee" OnValidSubmit="@HandleValidSubmit" OnInvalidSubmit="@HandleInvalidSubmit">  
+        <DataAnnotationsValidator />  
+        <div class="form-group">  
+           <SfTextBox @bind-Value="@employee.EmpID"></SfTextBox>  
+           <ValidationMessage For="() => employee.EmpID" /> 
+        </div>  
+        <div class="form-group">  
+            <SfUploader @ref="UploadObj" AllowMultiple=false AutoUpload="false" ID="UploadFiles">  
+                <UploaderEvents ValueChange="OnChange" OnRemove="OnRemove" FileSelected="OnSelect"></UploaderEvents>  
+            </SfUploader>  
+            <ValidationMessage For="() => employee.files" /> 
+        </div>  
+        <button type="submit" class="btn btn-primary">Submit</button>  
+    </EditForm>  
+  
+@code{
+    SfUploader UploadObj;  
+    public class Employee 
+    { 
+        [Required(ErrorMessage ="Please enter your name")] 
+        public string EmpID { get; set; } 
+
+        [Required(ErrorMessage = "Please upload a file")] 
+        public List<UploaderUploadedFiles> files { get; set; } 
+    } 
+    public Employee employee = new Employee();  
+
+    public void OnSelect(SelectedEventArgs args) 
+    {   
+        this.employee.files = new List<UploaderUploadedFiles>() { new UploaderUploadedFiles() { Name = args.FilesData[0].Name, Type = args.FilesData[0].Type, Size = args.FilesData[0].Size } }; 
+    } 
+    private async Task OnChange(UploadChangeEventArgs args)  
+    {  
+        foreach (var file in args.Files)  
+        {
+            if (file.FileInfo != null && file.File != null)
+            {
+                var path = @"D:\" + file.FileInfo.Name;
+
+                FileStream filestream = new FileStream(path, FileMode.Create, FileAccess.Write);
+
+                await file.File.OpenReadStream(long.MaxValue).CopyToAsync(filestream);
+
+                filestream.Close();
+            }
+        }  
+    }  
+    public void OnRemove() 
+    { 
+        this.employee.files = null; 
+    } 
+ 
+    public async Task HandleValidSubmit()  
+    {  
+        await this.UploadObj.Upload(); // Upload the selected file manually  
+ 
+    }   
+    public async Task HandleInvalidSubmit() 
+    { 
+         await this.UploadObj.Upload(); // Upload the selected file manually  
+    }  
+} 
+```
