@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Deploy PDF Viewer in Blazor MAUI in windows | Syncfusion
-description: Checkout and learn here all about how to deploy PDF Viewer in Blazor MAUI in windows in Syncfusion Blazor SfPdfViewer component and much more details.
+title: Deploy SfPdfViewer in Blazor MAUI in windows | Syncfusion
+description: Checkout and learn here all about how to deploy SfPdfViewer in Blazor MAUI in windows in Syncfusion Blazor SfPdfViewer component and much more details.
 platform: Blazor
 control: SfPdfViewer
 documentation: ug
 ---
 
-# How To Deploy PDF Viewer in Blazor MAUI in windows
+# How To Deploy SfPdfViewer in Blazor MAUI in windows
 
 This section briefly explains about how to deploy [Blazor SfPdfViewer](https://www.syncfusion.com/blazor-components/blazor-pdf-viewer) component in your Blazor MAUI in windows App using Visual Studio.
 
@@ -147,13 +147,13 @@ Add the Syncfusion SfPdfViewer component in the **~/Pages/Index.razor** file.
 
 N> If the `DocumentPath` property value is not provided, the SfPdfViewer component will be rendered without loading the PDF document. The users can then use the open option from the toolbar to browse and open the PDF as required.
 
-## Run the PDF Viewer in Blazor MAUI in windows
+## Run the SfPdfViewer in Blazor MAUI in windows
 
 Run the sample in Windows Machine mode and it will run Blazor MAUI in windows
 
 ![Run Windows machine](images/windows-machine.png)
 
-Upon successfully launching the application, the PDF Viewer will seamlessly render the specified PDF document within its interface.
+Upon successfully launching the application, the SfPdfViewer will seamlessly render the specified PDF document within its interface.
 
 ![Blazor SfPdfViewer Component](images/blazor-pdfviewer.png)
 
