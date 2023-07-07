@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Apply styles to specific grid when page has multiple DataGrid Component| Syncfusion
-description: Checkout and learn here all about Apply styles to specific grid when page has multiple grids in Syncfusion Blazor DataGrid component and more.
+title: Apply styles to the specific grid when the page has multiple DataGrid Component| Syncfusion
+description: Checkout and learn here all about Apply styles to the specific grid when page the has multiple grids in Syncfusion Blazor DataGrid component and more.
 platform: Blazor
 control: DataGrid
 documentation: ug
 ---
 
-# Apply styles to specific grid when page has multiple DataGrid Component
+# Apply styles to the specific grid when the page has multiple DataGrid Component
 
 To apply specific styles to a particular DataGrid component when a page contains multiple grids, define the **ID** property of the Grid or specify a custom class for the Grid component. Once the **ID** property or custom class name is assigned to Grid  using CSS selectors, the DataGrid component can be identified and styles can be applied to it.
 
@@ -90,7 +90,7 @@ Following a code example to demonstrate how to apply a specific style to a heade
 ```
 The following screenshots represent a specific style to apply to the header cell specific datagrid component.
 
-![Apply styles to specific grid when page has multiple DataGrid Component](../images/blazor-datagrid-apply-styles-to%20specific-grid-when-page-has-multiple-dataGrid.png)
+![Apply styles to the specific grid when the page has multiple DataGrid Component](../images/blazor-datagrid-apply-styles-to%20specific-grid-when-page-has-multiple-dataGrid.png)
 
 
 
