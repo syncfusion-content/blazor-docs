@@ -88,6 +88,8 @@ The following code example depicts how to bind the list of object collection to 
 }
 ```
 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXhAZQjmfgHKRzew?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 ### Binding ExpandoObject
 
 Scheduler is a generic component which is strongly bound to a model type. There are cases when the model type is unknown during compile type. In such cases data can be bound to the scheduler as list of [**ExpandoObject**](https://docs.microsoft.com/en-us/dotnet/api/system.dynamic.expandoobject?view=net-6.0).
@@ -150,6 +152,8 @@ Scheduler is a generic component which is strongly bound to a model type. There 
     }
 }
 ```
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VZhqXcNQzpCudJcR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Binding DynamicObject
 
@@ -231,6 +235,8 @@ N> The [`GetDynamicMemberNames`](https://docs.microsoft.com/en-us/dotnet/api/sys
     }
 }
 ```
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VZVgtGZcTJfXzkAS?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Binding ObservableCollection
 
@@ -446,7 +452,8 @@ To get start quickly about multiple resource on scheduler, you can check on this
 }
 ```
 The following image shows the appointment rendering on the multiple resource Scheduler.
-![Multiple Resources in Blazor Scheduler](images/blazor-scheduler-multipleresources.png)
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BDBqZQtQpoXwbRmt?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 N> Setting `AllowMultiple` to `true` in the above code example allows to select multiple resources from the event editor and also creates multiple copies of the same appointment in the Scheduler for each resources while rendering.
 
@@ -528,7 +535,7 @@ The following code example displays how the multiple resources are grouped and i
 }
 ```
 
-![Vertical Resource View in Blazor Scheduler](images/blazor-scheduler-resources-verticalview.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rNhgtmjGJIHcfqwt?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ### Timeline resource view
 
@@ -595,7 +602,8 @@ The following code example depicts how to group the multiple resources on Timeli
 }
 ```
 The following image shows the multiple resources rendering on the Timeline view Scheduler.
-![Timeline Resource view in Blazor Scheduler](images/blazor-scheduler-resource-timeline.png)
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hDhAZwjwzSktttMg?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ### Grouping single-level resources
 
@@ -658,7 +666,8 @@ This kind of grouping allows the Scheduler to display all the resources at a sin
 }
 ```
 The following image display the Scheduler with single level resource grouping.
-![Grouping single-level resources in Blazor Scheduler](images/blazor-scheduler-singlelevel.png)
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDBAZGDQzdUTBurQ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 N> The `Name` field defined in the **Resources** collection namely `Owners` will be mapped within the `Group` property, in order to enable the grouping option with those resource levels on the Scheduler.
 
@@ -741,7 +750,8 @@ It is possible to group the resources of Scheduler in multiple levels, by mappin
 }
 ```
 The following image displays the resources of Scheduler in multi levels.
-![Grouping multi-level resources in Blazor Scheduler](images/blazor-scheduler-multiplelevel.png)
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rtrgjQtmfQjLrPCR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ### One-to-One grouping
 
