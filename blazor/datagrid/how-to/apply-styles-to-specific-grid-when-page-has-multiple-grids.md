@@ -9,7 +9,7 @@ documentation: ug
 
 # Apply styles to the specific grid when the page has multiple DataGrid Component
 
-To apply specific styles to a particular DataGrid component when a page contains multiple grids, define the **ID** property of the Grid or specify a custom class for the Grid component. Once the **ID** property or custom class name is assigned to Grid  using CSS selectors, the DataGrid component can be identified and styles can be applied to it.
+To apply specific styles to a particular DataGrid component when a page contains multiple grids, define the **ID** property of the Grid or specify a custom class name for the Grid component. Once the **ID** property or custom class name is assigned to Grid using CSS selectors, the DataGrid component can be identified and styles can be applied to it.
 
 Following a code example to demonstrate how to apply a specific style to a header cell in a particular Grid component.
 
@@ -53,11 +53,12 @@ Following a code example to demonstrate how to apply a specific style to a heade
 </SfGrid>
 
 <style>
-
+    /*add style to the header cell with grid id  */
     #Grid .e-headercelldiv {
         color: red;
     }
-
+    
+    /*add style to the header cell with a custom class name*/
     .e-grid.custom-grid .e-headercelldiv {
         color: blue;
     }
