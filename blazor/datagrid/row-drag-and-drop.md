@@ -122,7 +122,7 @@ The grid row drag and drop allows you to drag and drop grid rows on the same gri
 
 ## Drag and Drop Between Two Grids with Different TValues
 
-The DataGrid row drag and drop feature allow to drag and drop grid rows between two grids that have different TValues. Specify the target component for grid row dropping using the TargetID property .When TargetID property of GridRowDropSettings is enabled, drag and drop within Grid cannot be performed. Handle the `RowDropped` event to perform operations when rows are dropped. In the RowDropped event handler, dropped records details can be accessed and manipulate the records as per the dropped Grid datatype.
+The DataGrid row drag and drop feature allow to drag and drop grid rows between two grids that have different TValues. Specify the target component for grid row dropping using the TargetID property .When TargetID property of GridRowDropSettings is defined, drag and drop within Grid cannot be performed. Handle the `RowDropped` event to perform operations when rows are dropped. In the RowDropped event handler, dropped records details can be accessed and manipulate the records as per the dropped Grid datatype.
 
 Following a code example to how to implement drag and drop between two grids with different TValues using the between two DataGrid component.
 
