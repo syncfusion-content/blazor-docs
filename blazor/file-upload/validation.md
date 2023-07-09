@@ -51,6 +51,8 @@ The uploader component allows you to validate the files based on its size. The v
 
 The provided code snippet demonstrates a Blazor form for editing employee information, including uploader component. It incorporates data validation and displays error messages. Users can select files for upload, which are stored in the files property of the Employee model. The code handles file selection, changes, and removal through the use of the [FileSelect](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.UploaderEvents.html#Syncfusion_Blazor_Inputs_UploaderEvents_FileSelected), [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.UploaderEvents.html#Syncfusion_Blazor_Inputs_UploaderEvents_ValueChange), and [OnRemove](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.UploaderEvents.html#Syncfusion_Blazor_Inputs_UploaderEvents_OnRemove) events. Additionally, it enables manual file upload during form submission.
 
+### Without server-side API endpoint
+
 ```cshtml
 @using System.ComponentModel.DataAnnotations
 @using Syncfusion.Blazor.Inputs
@@ -92,7 +94,7 @@ The provided code snippet demonstrates a Blazor form for editing employee inform
         {
             if (file.FileInfo != null && file.File != null)
             {
-                var path = @"D:\" + file.FileInfo.Name;
+                var path = @"" + file.FileInfo.Name;
 
                 FileStream filestream = new FileStream(path, FileMode.Create, FileAccess.Write);
 
@@ -102,6 +104,62 @@ The provided code snippet demonstrates a Blazor form for editing employee inform
             }
         }  
     }  
+    public void OnRemove() 
+    { 
+        this.employee.files = null; 
+    } 
+ 
+    public async Task HandleValidSubmit()  
+    {  
+        await this.UploadObj.Upload(); // Upload the selected file manually  
+ 
+    }   
+    public async Task HandleInvalidSubmit() 
+    { 
+         await this.UploadObj.Upload(); // Upload the selected file manually  
+    }  
+} 
+```
+
+### With server-side API endpoint
+
+```cshtml
+@using System.ComponentModel.DataAnnotations
+@using Syncfusion.Blazor.Inputs
+
+ <EditForm Model="@employee" OnValidSubmit="@HandleValidSubmit" OnInvalidSubmit="@HandleInvalidSubmit">  
+        <DataAnnotationsValidator />  
+        <div class="form-group">  
+           <SfTextBox @bind-Value="@employee.EmpID"></SfTextBox>  
+           <ValidationMessage For="() => employee.EmpID" /> 
+        </div>  
+        <div class="form-group">  
+            <SfUploader @ref="UploadObj" AllowMultiple=false AutoUpload="false" ID="UploadFiles"> 
+             <UploaderAsyncSettings SaveUrl="https://aspnetmvc.syncfusion.com/services/api/uploadbox/Save"
+                           RemoveUrl="https://aspnetmvc.syncfusion.com/services/api/uploadbox/Remove"></UploaderAsyncSettings> 
+                <UploaderEvents OnRemove="OnRemove" FileSelected="OnSelect"></UploaderEvents>  
+            </SfUploader>  
+            <ValidationMessage For="() => employee.files" /> 
+        </div>  
+        <button type="submit" class="btn btn-primary">Submit</button>  
+    </EditForm>  
+  
+@code{
+    SfUploader UploadObj;  
+    public class Employee 
+    { 
+        [Required(ErrorMessage ="Please enter your name")] 
+        public string EmpID { get; set; } 
+
+        [Required(ErrorMessage = "Please upload a file")] 
+        public List<UploaderUploadedFiles> files { get; set; } 
+    } 
+    public Employee employee = new Employee();  
+
+    public void OnSelect(SelectedEventArgs args) 
+    {   
+        this.employee.files = new List<UploaderUploadedFiles>() { new UploaderUploadedFiles() { Name = args.FilesData[0].Name, Type = args.FilesData[0].Type, Size = args.FilesData[0].Size } }; 
+    }
     public void OnRemove() 
     { 
         this.employee.files = null; 

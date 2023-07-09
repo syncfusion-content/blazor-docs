@@ -54,7 +54,7 @@ By Default, the uploader component allows you to select and upload multiple file
         {
             foreach (var file in args.Files)
             {
-                var path = @"D:\" + file.FileInfo.Name;
+                var path = @"" + file.FileInfo.Name;
                 FileStream filestream = new FileStream(path, FileMode.Create, FileAccess.Write);
                 await file.File.OpenReadStream(long.MaxValue).CopyToAsync(filestream);
                 filestream.Close();
@@ -105,7 +105,7 @@ The following example explains about single file upload settings.
         {
             foreach (var file in args.Files)
             {
-                var path = @"D:\" + file.FileInfo.Name;
+                var path = @"" + file.FileInfo.Name;
                 FileStream filestream = new FileStream(path, FileMode.Create, FileAccess.Write);
                 await file.File.OpenReadStream(long.MaxValue).CopyToAsync(filestream);
                 filestream.Close();
@@ -156,7 +156,7 @@ By default, the uploader processes the files to upload once the files are select
         {
             foreach (var file in args.Files)
             {
-                var path = @"D:\" + file.FileInfo.Name;
+                var path = @"" + file.FileInfo.Name;
                 FileStream filestream = new FileStream(path, FileMode.Create, FileAccess.Write);
                 await file.File.OpenReadStream(long.MaxValue).CopyToAsync(filestream);
                 filestream.Close();
@@ -210,7 +210,7 @@ By default, the uploader component process multiple files to upload simultaneous
         {
             foreach (var file in args.Files)
             {
-                var path = @"D:\" + file.FileInfo.Name;
+                var path = @"" + file.FileInfo.Name;
                 FileStream filestream = new FileStream(path, FileMode.Create, FileAccess.Write);
                 await file.File.OpenReadStream(long.MaxValue).CopyToAsync(filestream);
                 filestream.Close();
@@ -269,7 +269,7 @@ The uploader component allows you to pre-load the list of files that are uploade
         {
             foreach (var file in args.Files)
             {
-                var path = @"D:\" + file.FileInfo.Name;
+                var path = @"" + file.FileInfo.Name;
                 FileStream filestream = new FileStream(path, FileMode.Create, FileAccess.Write);
                 await file.File.OpenReadStream(long.MaxValue).CopyToAsync(filestream);
                 filestream.Close();

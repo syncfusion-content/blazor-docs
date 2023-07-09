@@ -169,7 +169,7 @@ You can get the uploaded files as file stream in the [ValueChange](https://help.
         {
             foreach (var file in args.Files)
             {
-                var path = @"D:\" + file.FileInfo.Name;
+                var path = @"" + file.FileInfo.Name;
                 FileStream filestream = new FileStream(path, FileMode.Create, FileAccess.Write);
                 await file.File.OpenReadStream(long.MaxValue).CopyToAsync(filestream);
                 filestream.Close();
