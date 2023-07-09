@@ -15,15 +15,7 @@ To resize an image before sending the uploaded file to the server, you can utili
 {% tabs %}
 {% highlight razor %}
 
-@using SixLabors.ImageSharp;
-@using SixLabors.ImageSharp.Processing;
-@using SixLabors.ImageSharp.Formats.Jpeg;
-@using System.IO;
-@using System.Threading.Tasks;
-@using Syncfusion.Blazor
 @using Syncfusion.Blazor.Inputs
-@using Microsoft.AspNetCore.Components.Forms
-@using JWT.Shared
 @inject HttpClient Http
 
 <div class="input-group">
@@ -55,6 +47,12 @@ To resize an image before sending the uploaded file to the server, you can utili
             filesBase64.Add(new ImageFile { base64data = Convert.ToBase64String(buf), contentType =file.File.ContentType, fileName = file.File.Name }); // convert to a base64 string!!
         }
         await Http.PostAsJsonAsync<List<ImageFile>>("/api/SampleData", filesBase64, System.Threading.CancellationToken.None);
+    }
+    public class ImageFile
+    {
+        public string base64data { get; set; }
+        public string contentType { get; set; }
+        public string fileName { get; set; }
     }
    
 }
