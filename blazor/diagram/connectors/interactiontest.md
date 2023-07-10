@@ -17,5 +17,4 @@ While interacting with multiple cubic bezier segments, you can maintain their co
 | SymmetricAngle |Both segments intersecting control points will be in same angle when any one them is editing| ![SymmetricAngle](../images/blazor-diagram-drag-connector-end-point.gif) | 
 | Symmetric | Both segments intersecting control points will be in same angle and same distance when any one them is editing|![Symmetric](../images/CloneConnector.gif) |
 | None | Segemnts control points are independent to each other | ![None](../images/CloneConnector.gif) |
-| None | Segemnts control points are independent to each other | ![None](../images/CloneConnector.gif) |
-| None | Segemnts control points are independent to each other | ![None](../images/CloneConnector.gif) |
+
