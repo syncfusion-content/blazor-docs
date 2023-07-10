@@ -190,9 +190,7 @@ The following code explains how to import the annotation data as XFDF.
 
 ### Export and import as Object
 
-Using the `ExportAnnotationAsync` method, the annotation data can be exported in the specified data format. 
-
-The SfPdfViewer control supports exporting the annotation data as an object, and the exported data will be imported into the current PDF document from the object.
+The SfPdfViewer control supports exporting the annotation data as an object, and the exported data will be imported into the current PDF document from the object. Using the `ExportAnnotationAsync` method, the annotation data can be exported in the specified data format. 
 
 The following code shows how to export the annotation data as an object and import the annotation data from that object into the current PDF document via a button click.
 
@@ -227,10 +225,6 @@ The following code shows how to export the annotation data as an object and impo
 }
 
 ```
-
-### Import as Base 64
-
-
 
 ## See also
 
