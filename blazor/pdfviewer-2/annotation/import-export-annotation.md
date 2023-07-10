@@ -225,6 +225,7 @@ The following code shows how to export the annotation data as an object and impo
 }
 
 ```
+
 ### Import as base64 string
 
 The following code snippet explains how the import annotation in SfPdfViewer as base64 string. 
@@ -279,7 +280,6 @@ The following code snippet explains how the import annotation in SfPdfViewer as 
 }
 
 ```
-
 
 ## See also
 
