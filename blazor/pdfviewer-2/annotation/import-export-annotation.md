@@ -225,6 +225,61 @@ The following code shows how to export the annotation data as an object and impo
 }
 
 ```
+### Import as base64 string
+
+The following code snippet explains how the import annotation in SfPdfViewer as base64 string. 
+
+```cshtml
+
+@using Syncfusion.Blazor.SfPdfViewer
+@using Syncfusion.Blazor.Buttons
+
+<SfButton OnClick="@ImportasBase64">Import as Base 64</SfButton>
+
+<SfPdfViewer2 Width="100%" Height="100%" DocumentPath="@DocumentPath" @ref="@Viewer" />
+
+@code {
+    SfPdfViewer2 Viewer;
+
+    public string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
+
+    // Event handler for import annotations button click
+    public async void ImportasBase64(MouseEventArgs args)
+    {
+        Stream stream = await GetDocumentAsStream("wwwroot/Data/PDF_Succinctly.json");
+        MemoryStream memoryStream = new MemoryStream();
+        await stream.CopyToAsync(memoryStream);
+        memoryStream.Position = 0;
+        string base64 = Convert.ToBase64String(memoryStream.ToArray());
+        await Viewer.ImportAnnotationAsync(base64);
+    }
+
+    private async Task<Stream> GetDocumentAsStream(string documentPath)
+    {
+        Stream stream = new MemoryStream();
+        try
+        {
+            string newDocumentPath = documentPath;
+            if (System.IO.File.Exists("wwwroot/" + documentPath))
+            {
+                FileStream fileStream = new FileStream("wwwroot/" + documentPath, FileMode.Open, FileAccess.Read);
+                MemoryStream memoryStream = new MemoryStream();
+                await fileStream.CopyToAsync(memoryStream);
+                memoryStream.Position = 0;
+                stream = memoryStream;
+                return stream;
+            }
+            return stream;
+        }
+        catch
+        {
+            return stream;
+        }
+    }
+}
+
+```
+
 
 ## See also
 
