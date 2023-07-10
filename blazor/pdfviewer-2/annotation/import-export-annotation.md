@@ -207,20 +207,20 @@ The following code shows how to export the annotation data as an object and impo
 
 @code {
     SfPdfViewer2 Viewer;
-    public object JSONObject;
+    public object ExportObject;
 
     public string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
 
     // Event handler for export annotations button click
     public async void ExportasObject(MouseEventArgs args)
     {
-        JSONObject = await Viewer.ExportAnnotationsAsObjectAsync();
+        ExportObject = await Viewer.ExportAnnotationsAsObjectAsync();
     }
 
     // Event handler for import annotations button click
     public async void ImportasObject(MouseEventArgs args)
     {
-        await Viewer.ImportAnnotationAsync(JSONObject);
+        await Viewer.ImportAnnotationAsync(ExportObject);
     }
 }
 
