@@ -821,7 +821,7 @@ In multi-level grouping, Scheduler usually groups the resources on the child lev
 
 The following image depicts how the scheduler will render when `ByGroupID` sets as false.
 
-![Grouping in Blazor Scheduler](images/blazor-scheduler-grouping.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rNBgXcMNMnJsdiil?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ### Grouping resources by date
 
@@ -883,7 +883,7 @@ It groups the number of resources under each date and is applicable only on the 
 }
 ```
 
-![Grouping Resources by Date in Blazor Scheduler](images/blazor-scheduler-resource-by-date.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VjBKDQCZMwsESOxS?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 N> This kind of grouping by date is not applicable on any of the **timeline views**.
 
@@ -949,7 +949,8 @@ N> Any actions such as create, edit or delete held on any one of the shared even
     }
 }
 ```
-![Grouping Resources as shared events in Blazor Scheduler](images/blazor-scheduler-sharedevents.png)
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BNLAtmCjsaChUKtG?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Simple resource header customization
 
@@ -1059,11 +1060,9 @@ It is possible to customize the resource header cells using built-in template op
 </style>
 ```
 
-![Customizing Resources Header in Desktop of Blazor Scheduler](images/blazor-scheduler-custom-resource-header.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rtBUjcsjMuSVqoPN?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 N> To customize the resource header in compact mode properly make use of the class `e-device` as in the code example.
-
-![Resource Header Template in Compact Mode of Blazor Scheduler](images/blazor-scheduler-header-template.png)
 
 ## Customizing resource header with multiple columns
 
@@ -1283,7 +1282,7 @@ It is possible to customize the resource headers to display with multiple column
 </style>
 ```
 
-![Blazor Scheduler with Multiple columns](images/blazor-scheduler-multiple-columns.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hZhgZGWXBXyfwxzI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Expand and collapse resource fields
 
@@ -1350,7 +1349,7 @@ It is possible to expand and collapse the resource field. By default, resource f
     }
 }
 ```
-![Blazor Scheduler expand and collapse resources](images/blazor-schedule-expand-collapse.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VtLgNGMjrXccsrGR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Displaying tooltip for resource headers
 
@@ -1423,7 +1422,8 @@ It is possible to display tooltip over the resource headers showing the resource
     }
 }
 ```
-![Blazor Scheduler tooltip for resource headers](images/blazor-schedule-tooltip.png)
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDrUZwCNLZusJndZ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Choosing between resource colors for appointments
 
@@ -1511,7 +1511,8 @@ By default, the colors defined on the top level resources collection will be app
     }
 }
 ```
-![Blazor Scheduler tooltip for resource headers](images/blazor-schedule-resource-color.png)
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hNBKjcCZLMMNpLvn?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 N> The value of the `ResourceColorField` field should be mapped with the `Name` value given within the `ScheduleResource`.
 
@@ -1575,7 +1576,7 @@ Different working days can be set for the resources of Scheduler using the `Work
 }
 ```
 
-![Resources with Different Workdays in Blazor Scheduler](images/blazor-scheduler-resource-workdays.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDVgtmsDhimeSMeh?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ### Set different work hours
 
@@ -1638,7 +1639,7 @@ Working hours indicates the work hour duration of a day, which is highlighted vi
 
 In this example, a resource named `Will Smith` is depicted with working hours ranging from 7.00 AM to 1.00 PM and is visually illustrated with active colors, whereas the other two resources have different working hours set.
 
-![Resources with Different Workhours in Blazor Scheduler](images/blazor-schedule-different-workhour.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BXLAXcCXLVsJMvYK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ### Hide non-working days when grouped by date
 
@@ -1720,7 +1721,9 @@ To use the `HideNonWorkingDays` property, you need to include it in the configur
     }
 }
 ```
-![Hide non-working days when grouped by date in Blazor Scheduler](images/blazor-scheduler-hide-non-working-days.png)
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hjrUZcstBBLmpOAn?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 N>  The [HideNonWorkingDays](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleGroup.html#Syncfusion_Blazor_Schedule_ScheduleGroup_HideNonWorkingDays) property only applies,
 when the Scheduler is grouped by [ByDate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleGroup.html#Syncfusion_Blazor_Schedule_ScheduleGroup_ByDate)
 
@@ -1808,7 +1811,7 @@ To use the `HideNonWorkingDays` property, you need to include it in the configur
 }
 ```
 
-![Hide non-working days when grouped by date in Blazor Scheduler](images/blazor-scheduler-hide-non-working-days.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rjVUjcsZLLfXPOIo?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 N>  The [HideNonWorkingDays](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleGroup.html#Syncfusion_Blazor_Schedule_ScheduleGroup_HideNonWorkingDays) property only applies,
 when the Scheduler is grouped by [ByDate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleGroup.html#Syncfusion_Blazor_Schedule_ScheduleGroup_ByDate)
@@ -1893,8 +1896,9 @@ Some of the default changes made for compact Scheduler to render in desktop devi
     }
 }
 ```
-![Blazor Scheduler Resources in Adaptive UI](images/blazor-schedule-adaptiveui.png)
 
-## See Also
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDLqXwiXLqilcRnW?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+## See also
 
 [How to expand or collapse a resource programmatically](./how-to/#expand-collapse-resource-programmatically)
