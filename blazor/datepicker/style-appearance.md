@@ -51,7 +51,7 @@ You can customize the background color of the container element for the DatePick
 
 ## Full Screen Mode: Enhancing the DatePicker Component (Mobile Support Only)
 
-We have introduced the full screen mode functionality in our DatePicker component, enabling users to see the DatePicker calendar element in full-screen mode for better visibility and an upgraded user experience. It is important to mention that this feature is exclusively available for mobile devices in both landscape and portrait orientations. To activate the full screen mode within the DatePicker component, simply set the [FullScreenMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfDatePicker-1.html#Syncfusion_Blazor_Calendars_SfDatePicker_1_FullScreenMode) API value to `true`. This action will extend the calendar element to occupy the entire screen on mobile devices.
+The full-screen mode feature in the DatePicker component allows you to view the DatePicker popup element in full-screen mode on mobile devices, enabling you to see the DatePicker calendar element with better visibility and an upgraded user experience. It is important to mention that this feature is exclusively available for mobile devices in both landscape and portrait orientations. To activate the full screen mode within the DatePicker component, simply set the [FullScreenMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfDatePicker-1.html#Syncfusion_Blazor_Calendars_SfDatePicker_1_FullScreenMode) API value to `true`. This action will extend the calendar element to occupy the entire screen on mobile devices.
 
 ```cshtml
 @using Syncfusion.Blazor.Calendars
