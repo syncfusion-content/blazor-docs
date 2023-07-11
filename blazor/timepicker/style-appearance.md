@@ -57,3 +57,16 @@ Use the following CSS to customize the TimePicker popup content
         font-size: 20px;
 }
 ```
+
+## Full Screen Mode: Enhancing the TimePicker Component (Mobile Support Only)
+
+We have introduced the full screen mode functionality in our TimePicker component, enabling users to see the TimePicker popup element in full-screen mode for better visibility and an upgraded user experience. It is important to mention that this feature is exclusively available for mobile devices in both landscape and portrait orientations. To activate the full screen mode within the TimePicker component, simply set the [FullScreenMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Calendars.SfTimePicker%601~FullScreenMode.html) API value to `true`. This action will extend the popup element to occupy the entire screen on mobile devices.
+
+```cshtml
+@using Syncfusion.Blazor.Calendars
+
+<SfTimePicker TValue="DateTime?" FullScreenMode=true></SfTimePicker>
+
+```
+
+![TimePickerFullScreen](./images/TimePickerFullScreen.gif)
