@@ -107,6 +107,7 @@ The [`Created`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEdi
 
 In the following example, the [`Created`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.ImageEditorEvents.html#Syncfusion_Blazor_ImageEditor_ImageEditorEvents_Created) event is used to load an image.
 
+```cshtml
 @using Syncfusion.Blazor.ImageEditor 
 
 <SfImageEditor @ref="ImageEditor" Toolbar="customToolbarItem" Height="400">
@@ -122,6 +123,7 @@ In the following example, the [`Created`](https://help.syncfusion.com/cr/blazor/
         await ImageEditor.OpenAsync("nature.png"); 
     } 
 }
+```
 
 ![Blazor Image Editor with Opening an image](./images/blazor-image-editor-open.png)
 
