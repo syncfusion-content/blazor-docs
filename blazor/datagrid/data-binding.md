@@ -371,7 +371,7 @@ The ODataV4 is an improved version of OData protocols, and the [SfDataManager](h
 ```
 ### Search operation in ODataV4 Adaptor
 
-The Global Search feature allows users to search for data across multiple columns in the Grid when using the ODataV4Adaptor. This feature provides a convenient way to filter and locate specific information within a large $search request is not supported in Microsoft. So to perform search operation in DataGrid component with ODataV4, $search queries were rewritten as $filter for available column and Request were sent to ODataV4 adaptor.To enable the search operation in the ODataV4Adaptor, define the EnableODataSearchFallback property to true. This property allows the Grid to perform a fallback search operation when the ODataV4 service does not provide built-in search functionality.
+The Global Search feature allows users to search for data across multiple columns in the Grid when using the ODataV4Adaptor. This feature provides a convenient way to filter and locate specific information within a large $search request is not supported in Microsoft. So to perform search operation in DataGrid component with ODataV4, $search queries were rewritten as $filter for available column and request were sent to ODataV4 adaptor.To enable the search operation in the ODataV4Adaptor, define the EnableODataSearchFallback property to true. This property allows the Grid to perform a fallback search operation when the ODataV4 service does not provide built-in search functionality.
 
 ```cshtml
 
