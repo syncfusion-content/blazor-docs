@@ -133,6 +133,36 @@ The [`Toolbar`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEdi
 
 Here is an example of disabling the custom toolbar item using [`Toolbar`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_Toolbar) property.
 
+```cshtml
+@using Syncfusion.Blazor.ImageEditor
+
+<SfImageEditor @ref="ImageEditor" Toolbar="customToolbarItem" Height="400">
+    <ImageEditorEvents Created="OpenAsync"></ImageEditorEvents>
+</SfImageEditor>
+
+@code {
+    SfImageEditor ImageEditor;
+    private List<ImageEditorToolbarItemModel> customToolbarItem = new List<ImageEditorToolbarItemModel>()
+    {
+        new ImageEditorToolbarItemModel { Name = "Zoom" },
+        new ImageEditorToolbarItemModel { Name = "Crop" },
+        new ImageEditorToolbarItemModel { Name = "Annotation", Disabled = true },
+        new ImageEditorToolbarItemModel { Name = "Finetune", Disabled = true },
+        new ImageEditorToolbarItemModel { Name = "Filter" },
+        new ImageEditorToolbarItemModel { Name = "Confirm" },
+        new ImageEditorToolbarItemModel { Name = "Reset" },
+        new ImageEditorToolbarItemModel { Name = "Save" }
+    };
+
+    private async void OpenAsync()
+    {
+        await ImageEditor.OpenAsync("nature.png");
+    }
+}
+```
+
+![Blazor Image Editor with Disable a Toolbar](./images/blazor-image-editor-disable-toolbar.png)
+
 ## Toolbar template
 
 The [`ToolbarTemplate`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.ImageEditorTemplates.html#Syncfusion_Blazor_ImageEditor_ImageEditorTemplates_ToolbarTemplate) property in the Image Editor provides the capability to fully customize the toolbar by supplying a custom template. This feature is valuable when you want to create a distinct and personalized image editing experience that goes beyond the default toolbar or the customizable toolbar options offered by the Image Editor. By defining a custom template for the toolbar, you have complete control over its layout, appearance, and functionality. This empowers you to design a unique and tailored toolbar that aligns perfectly with your specific requirements and desired user experience. 
