@@ -7,23 +7,21 @@ control: Image Editor
 documentation: ug
 ---
 
-# Finetune in Image editor control
+# Fine-tune in Image Editor component
 
 Fine-tuning involves making precise adjustments to the settings of an image filter in order to achieve a specific desired effect. It provides control over the intensity and specific aspects of the filter's impact on the image. For example, fine-tuning allows you to modify parameters like brightness, saturation, or other relevant properties to fine-tune the level or quality of the filter's effect. This level of control enables you to achieve the exact look or outcome you want for your image. 
 
-The [`FinetuneImageAsync`](Syncfusion_Blazor_ImageEditor_SfImageEditor_FinetuneImageAsync_Syncfusion_Blazor_ImageEditor_ImageFinetuneOption_System_Int32_) method which takes two parameters: the filter, and the value that adjusts the color of the image. The filter parameter specifies the type of filter as ImageFinetuneOption, such as brightness, saturation, or blur and the value parameter specifies the amount or intensity of the filter to be applied to an image. 
+## Adjust the brightness, contrast, or sharpness
 
-## Adjust the brightness, contrast, or sharpness 
+The [`FinetuneImageAsync`](Syncfusion_Blazor_ImageEditor_SfImageEditor_FinetuneImageAsync_Syncfusion_Blazor_ImageEditor_ImageFinetuneOption_System_Int32_) method is designed to facilitate fine-tuning operations on an image. It accepts two parameters: the first parameter is [`ImageFinetuneOption`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.ImageFinetuneOption.html) which determines the type of fine-tuning to be applied (brightness, contrast, or sharpness), and the second parameter represents the fine-tuning value, indicating the degree or intensity of the adjustment. This method allows for convenient adjustment of brightness, contrast, or sharpness by specifying the desired type and corresponding value.
 
-The [`FinetuneImageAsync`](Syncfusion_Blazor_ImageEditor_SfImageEditor_FinetuneImageAsync_Syncfusion_Blazor_ImageEditor_ImageFinetuneOption_System_Int32_) method is used to perform brightness, contrast, or sharpness finetuning by specifying this type as a first parameter and specifying the finetuning value as the second parameter of the method. 
+Here is an example of brightness, contrast, and sharpness fine-tuning using the [`FinetuneImageAsync`](Syncfusion_Blazor_ImageEditor_SfImageEditor_FinetuneImageAsync_Syncfusion_Blazor_ImageEditor_ImageFinetuneOption_System_Int32_) method. 
 
-Here is an example of brightness, contrast, and sharpness finetuning using the [`FinetuneImageAsync`](Syncfusion_Blazor_ImageEditor_SfImageEditor_FinetuneImageAsync_Syncfusion_Blazor_ImageEditor_ImageFinetuneOption_System_Int32_) method. 
+## Adjust the hue, exposure, blur, or opacity
 
-## Adjust the hue, exposure, blur, or opacity 
+The [`FinetuneImageAsync`](Syncfusion_Blazor_ImageEditor_SfImageEditor_FinetuneImageAsync_Syncfusion_Blazor_ImageEditor_ImageFinetuneOption_System_Int32_) method is designed to facilitate fine-tuning operations on an image. It accepts two parameters: the first parameter is [`ImageFinetuneOption`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.ImageFinetuneOption.html) which determines the type of fine-tuning to be applied (hue, exposure, or blur), and the second parameter represents the fine-tuning value, indicating the degree or intensity of the adjustment. This method allows for convenient adjustment of hue, exposure, or blur by specifying the desired type and corresponding value.
 
-The [`FinetuneImageAsync`](Syncfusion_Blazor_ImageEditor_SfImageEditor_FinetuneImageAsync_Syncfusion_Blazor_ImageEditor_ImageFinetuneOption_System_Int32_) method is used to perform hue, exposure, or blur finetuning by specifying this type as a first parameter and specifying the finetuning value as the second parameter of the method. 
-
-Here is an example of hue, exposure, and blur finetuning using the [`FinetuneImageAsync`](Syncfusion_Blazor_ImageEditor_SfImageEditor_FinetuneImageAsync_Syncfusion_Blazor_ImageEditor_ImageFinetuneOption_System_Int32_) method. 
+Here is an example of hue, exposure, and blur fine-tuning using the [`FinetuneImageAsync`](Syncfusion_Blazor_ImageEditor_SfImageEditor_FinetuneImageAsync_Syncfusion_Blazor_ImageEditor_ImageFinetuneOption_System_Int32_) method. 
 
 
 ```cshtml
@@ -88,12 +86,12 @@ Here is an example of hue, exposure, and blur finetuning using the [`FinetuneIma
 
 ## Finetune value changing event 
 
-The [`FinetuneValueChanging`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.ImageEditorEvents.html#Syncfusion_Blazor_ImageEditor_ImageEditorEvents_FinetuneValueChanging) event is triggered when performing finetuning on the image. This event is passed an object that contains information about the finetuning event, such as the type of fine-tuning and the value of fine-tuning performed. 
+The [`FinetuneValueChanging`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.ImageEditorEvents.html#Syncfusion_Blazor_ImageEditor_ImageEditorEvents_FinetuneValueChanging) event is triggered when performing fine-tuning on the image. This event is passed an object that contains information about the fine-tuning event, such as the type of fine-tuning and the value of fine-tuning performed. 
 
 The parameter available in the [`FinetuneValueChanging`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.ImageEditorEvents.html#Syncfusion_Blazor_ImageEditor_ImageEditorEvents_FinetuneValueChanging) event is, 
 
-FinetuneEventArgs.Finetune - The type of finetuning as ImageFinetuneOption to be applied in the image editor. 
+FinetuneEventArgs.Finetune - The type of fine-tuning as ImageFinetuneOption to be applied in the image editor. 
 
-FinetuneEventArgs.Value - The finetuning value to be applied in the image editor. 
+FinetuneEventArgs.Value - The fine-tuning value to be applied in the image editor. 
 
-FinetuneEventArgs.Cancel – Specifies a boolean value to cancel the finetuning action. 
+FinetuneEventArgs.Cancel – Specifies a boolean value to cancel the fine-tuning action. 
