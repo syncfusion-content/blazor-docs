@@ -33,6 +33,8 @@ To configure `Audio` toolbar item, refer to the below code.
 {% endhighlight %}
 {% endtabs %}
 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VDVqNmsrqHtSAPzH?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 ## Insert audio from web
 
 To insert audio from the hosted link or local machine, you should enable the audio tool on in the editor’s toolbar.
@@ -62,6 +64,8 @@ In the following illustration, the audio size has been validated before uploadin
 
 {% endhighlight %}
 {% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LXhqjmiLKcmuFOUB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ### Server-side action
 
@@ -192,6 +196,8 @@ N> The default `layoutOption` property is set to `Inline`.
 
 {% endhighlight %}
 {% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rjBqDQCBAlfYOSdh?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Rename audio before inserting
 
