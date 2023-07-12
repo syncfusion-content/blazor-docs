@@ -286,7 +286,7 @@ N> Syncfusion recommends to reference scripts using [Static Web Assets](https://
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to run the application. Then, the Syncfusion `Blazor SpeedDial` component will be rendered in the default web browser.
 
-![Blazor SpeedDial Component](./images/blazor-speeddial-component.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rjhKjxiJWnlvJDIx?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Linear and radial display modes
 
@@ -316,14 +316,11 @@ You can use the [`Mode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor SpeedDial Component](./images/blazor-speeddial-linear-sample.png)
-![Blazor SpeedDial Component](./images/blazor-speeddial-mode-radial-sample.png)
-
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VtrgXHiJsYIAXTZI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Item clicked event
 
-The speed dial control triggers the [`ItemClicked`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSpeedDial.html#Syncfusion_Blazor_Buttons_SfSpeedDial_ItemClicked) event with [`SpeedDialItemEventArgs`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SpeedDialItemEventArgs.html) argument when an action item is clicked.
-You can use this event to perform the required action.
+The speed dial control triggers the [`ItemClicked`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSpeedDial.html#Syncfusion_Blazor_Buttons_SfSpeedDial_ItemClicked) event with [`SpeedDialItemEventArgs`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SpeedDialItemEventArgs.html) argument when an action item is clicked. You can use this event to perform the required action.
 
 {% tabs %}
 {% highlight razor %}
@@ -347,7 +344,7 @@ You can use this event to perform the required action.
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor SpeedDial Component](./images/blazor-speeddial-event-sample.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BtLgtnsTMYHJTXDn?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/SpeedDial).
 

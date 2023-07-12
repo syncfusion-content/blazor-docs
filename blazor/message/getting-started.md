@@ -280,4 +280,4 @@ N> Syncfusion recommends to reference scripts using the [Static Web Assets](http
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to run the application. Then, the Syncfusion `Blazor Message` component will be rendered in the default web browser.
 
-![Blazor Message Component](./images/message-default.PNG)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BtrgtnWyCOaaxYIY?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}

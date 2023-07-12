@@ -437,6 +437,88 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ![VisibleTarget](Images/blazor-diagram-user-handle-visible-target.gif)
 
+### How to provide a template to userhandle
+
+You can define user handle style using a template in the [UserHandleTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramTemplates.html#Syncfusion_Blazor_Diagram_DiagramTemplates_UserHandleTemplate) at the tag level. The template will be rendered when the PathData and ImageUrl properties of the userhandle are not defined. However, if either PathData or ImageUrl is defined, then template will not be rendered as they take precedence. The following code explains how to define a template for the fixeduserhandle.
+
+```cshtml
+@using Syncfusion.Blazor.Diagram
+
+<SfDiagramComponent @ref="@Diagram" Width="1200px" Height="600px" Nodes="@nodes" Connectors="@connectors" SelectionSettings="@SelectedModel"> 
+<DiagramTemplates>
+        <UserHandleTemplate>
+            @{
+                if((context as UserHandle).Name=="user1")
+                {
+                    <div style="height: 100%; width: 100%">
+                        <input type="button" value="Button1" />
+                    </div>
+                       
+                }
+            }
+        </UserHandleTemplate>
+    </DiagramTemplates>
+</SfDiagramComponent>
+
+@code
+{
+    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+    // Defines diagram's SelectionSettings.
+    DiagramSelectionSettings SelectedModel = new DiagramSelectionSettings();
+    DiagramObjectCollection<UserHandle> UserHandles = new DiagramObjectCollection<UserHandle>();
+    protected override void OnInitialized()
+    {
+        //Creating the userhandle for cloning the objects.
+        UserHandle cloneHandle = new UserHandle()
+            {
+                Name = "user1",
+                Visible = true,
+                Offset = 0,
+                Size = 30,
+                Side = Direction.Right,
+                Margin = new DiagramThickness() { Top = 0, Bottom = 0, Left = 0, Right = 0 },
+                VisibleTarget=VisibleTarget.Node | VisibleTarget.Connector
+            };
+        //Add user handle to the collection.
+        UserHandles = new DiagramObjectCollection<UserHandle>()
+        {
+            cloneHandle
+        };
+        SelectedModel = new DiagramSelectionSettings()
+            {
+                //Enable userhandle for the selected model.
+                Constraints = SelectorConstraints.UserHandle,
+                UserHandles = this.UserHandles
+            };
+        nodes = new DiagramObjectCollection<Node>();
+        Node diagramNode = new Node()
+            {
+                ID = "node1",
+                OffsetX = 300,
+                OffsetY = 200,
+                Width = 130,
+                Height = 130,
+                Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "none" },
+                Annotations = new DiagramObjectCollection<ShapeAnnotation>() { new ShapeAnnotation { Content = "Node" } }
+            };
+        nodes.Add(diagramNode);
+
+        Connector connector1 = new Connector()
+        {
+            ID = "connector1",
+            SourcePoint = new DiagramPoint() { X = 600, Y = 120 },
+            TargetPoint = new DiagramPoint() { X = 750, Y = 270 },
+            Type = ConnectorSegmentType.Orthogonal
+        };
+        connectors.Add(connector1);
+    }
+}
+```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/UserHandle/CustomizeUserHandle)
+
+![Template for UserHandle](images/UserHandleTemplate.gif)
+
 ## Fixed user handles
 
 The [FixedUserHandle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.FixedUserHandle.html) is used to add some frequently used commands around the node and connector even without selecting it.
@@ -717,6 +799,77 @@ The following code explains how to customize the connector fixed user handle.
 }
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/UserHandle/ConnectorFixedUserHandle)
+
+## How to provide a template to fixed userhandle
+
+You can define fixed user handle style using a template in the [FixedUserHandleTemplate] at the tag level. You can define separate templates for each node and connector by differentiating them based on their ID property. The template will be rendered when the PathData properties of the fixeduserhandle is not defined. However, if both path data and template are defined, the path data will take precedence, and the template will not be rendered. The following code explains how to define a template for the fixed user handle.
+
+```csharp
+@using Syncfusion.Blazor.Diagram
+<SfDiagramComponent @ref="@diagram" Height="600px" Nodes = "@nodes" Connectors="@connectors">
+    <DiagramTemplates>
+        <FixedUserHandleTemplate>
+            if ((context as FixedUserHandle).ID == "user1" || (context as FixedUserHandle).ID == "user2")
+            {
+                <div id="button" style="height: 100%; width: 100%;">
+                    <input type="button" value="Button1" />
+                </div>
+            }
+        </FixedUserHandleTemplate>
+    </DiagramTemplates>
+</SfDiagramComponent>
+@code
+{
+    public SfDiagramComponent diagram;
+    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+    protected override void OnInitialized()
+    {
+        Node node1 = new Node()
+        {
+            ID="node1",
+            OffsetX = 250,
+            OffsetY = 250,
+            Width = 100,
+            Height = 100,
+            Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "white" },
+            FixedUserHandles = new DiagramObjectCollection<NodeFixedUserHandle>()
+        {
+            new NodeFixedUserHandle()
+            {
+                ID = "user1",
+                    Height = 30,
+                    Width = 30,
+                    Visibility = true,
+                    Padding = new DiagramThickness() { Bottom = 1, Left = 1, Right = 1, Top = 1 },
+                    Margin = new DiagramThickness() { Left = 30 }, Offset = new DiagramPoint() { X = 1 , Y = 0 }
+                },
+             }
+            };
+        nodes.Add(node1);
+        Connector connector = new Connector
+        {
+            ID = "connector1",
+            Type = ConnectorSegmentType.Orthogonal,
+            SourcePoint = new DiagramPoint() { X = 600, Y = 200 },
+            TargetPoint = new DiagramPoint() { X = 800, Y = 400 },
+            FixedUserHandles = new DiagramObjectCollection<ConnectorFixedUserHandle>() { new ConnectorFixedUserHandle() { 
+                ID="user2",
+                Offset = 0.5, 
+                Alignment = FixedUserHandleAlignment.Center, 
+                Displacement = new DiagramPoint() { X = 10}, 
+                Padding = new DiagramThickness() { Bottom = 1, Left = 1, Right = 1, Top = 1 }, 
+                Width = 30, 
+                Height = 30, 
+            }
+            }
+        };
+        connectors.Add(connector);
+    }
+}
+```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/UserHandle/CustomizeFixedUserHandle)
+![Template for FixedUserHandle](images/FixedUserTemplate.png)
 
 ## FixedUserHandle event
 
