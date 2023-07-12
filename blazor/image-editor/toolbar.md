@@ -7,7 +7,7 @@ control: Image Editor
 documentation: ug
 ---
 
-# Toolbar in Image editor component
+# Toolbar in the Blazor Image Editor Component
 
 The toolbars in the Blazor Image Editor are a key component for interacting with and editing images. They provide a range of tools and options that can be customized to suit the needs and preferences. Add or remove items from the toolbar to create a personalized set of tools, or they can even create their own custom toolbar from scratch. This flexibility and customization allow them to create a unique image editing experience that is tailored to their specific needs and workflow. 
 

@@ -7,7 +7,8 @@ control: Image Editor
 documentation: ug
 ---
 
-# Transform in Image Editor component
+# Transform in the Blazor Image Editor Component
+
 The [Blazor Image Editor](https://www.syncfusion.com/blazor-components/blazor-image-editor) component provides a range of transformation options for manipulating both the image and its annotations. These options include rotation, flipping, zooming, and panning. These transformations offer flexibility in adjusting the image and enhancing its visual appearance. 
 
 ## Rotate an image

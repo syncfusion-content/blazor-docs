@@ -8,7 +8,7 @@ documentation: ug
 ---
 
 
-# Selection cropping in Image editor component
+# Selection cropping in the Blazor Image Editor Component
 
 The cropping feature in the Blazor Image Editor allows you to select and crop specific regions of an image. It offers different selection options, including custom shapes, squares, circles, and various aspect ratios such as 3:2, 4:3, 5:4, 7:5, and 16:9. 
 

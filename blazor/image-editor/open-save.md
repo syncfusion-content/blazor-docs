@@ -8,7 +8,7 @@ documentation: ug
 ---
 
 
-# Open and Save in in Image Editor component
+# Open and Save in the Blazor Image Editor component
 
 The [Blazor Image Editor](https://www.syncfusion.com/blazor-components/blazor-image-editor) component supports to import an image into the canvas, it must first be converted into a blob object. The Uploader component can be used to facilitate the process of uploading an image from the user interface. Once the image has been uploaded, it can then be converted into a blob and drawn onto the canvas.
 
