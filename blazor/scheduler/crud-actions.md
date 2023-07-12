@@ -16,7 +16,7 @@ Events, a.k.a. Appointments, play an important role in Scheduler with which the 
 Any kind of appointments such as normal, all-day, spanned or recurring events can be easily added on Scheduler using any one of the following ways.
 
 * [Creation using editor window](#creation-using-editor-window)
-* [Creation using AddEventAsync method](#creation-using-addevent-method)
+* [Creation using AddEventAsync method](#creation-using-AddEventAsync-method)
 
 ### Creation using editor window
 
@@ -263,7 +263,7 @@ You can also dynamically prevent the creation of appointments on Scheduler. For 
 The same way the appointments such as normal, all-day, spanned or recurring events are created, it can be easily edited using any of the following ways.
 
 * [Update using editor window](#update-using-editor-window)
-* [Update using SaveEventAsync method](#update-using-saveevent-method)
+* [Update using SaveEventAsync method](#update-using-SaveEventAsync-method)
 
 ### Update using editor window
 
@@ -507,7 +507,7 @@ if (param.action == "remove" || (param.action == "batch" && param.deleted != nul
 }
 ```
 
-N> To know more about handling recurrence exceptions, refer the [Adding exceptions](./appointments/#adding-exceptions) topic.
+N> To know more about handling recurrence exceptions, refer the [Adding exceptions](./recurring-events/#adding-exceptions) topic.
 
 ### Restricting edit action based on specific criteria
 
