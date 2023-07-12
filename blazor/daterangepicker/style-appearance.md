@@ -154,3 +154,17 @@ Use the following CSS to customize the selected date cell grid in the DateRangeP
         
     }
 ```
+
+## Full Screen Mode: Enhancing the DateRangePicker Component (Mobile Support Only)
+
+The full-screen mode feature in the DateRangePicker component allows you to view the DateRangePicker popup element in full-screen mode on mobile devices, enabling you to see the DateRangePicker calendar and presets popup element with better visibility and an upgraded user experience. It is important to mention that this feature is exclusively available for mobile devices in both landscape and portrait orientations. To activate the full screen mode within the DateRangePicker component, simply set the [FullScreenMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.DateRangePickerModel-1.html#Syncfusion_Blazor_Calendars_DateRangePickerModel_1_FullScreenMode) API value to `true`. This action will extend the calendar and presets popup element to occupy the entire screen on mobile devices.
+
+```cshtml
+@using Syncfusion.Blazor.Calendars
+
+<SfDateRangePicker TValue="DateTime?" FullScreenMode=true></SfDateRangePicker>
+
+```
+
+![DateRangePickerDefaultFullScreen](./images/DateRangePickerDefaultFullScreen.gif)
+![DateRangePickerPresetsFullScreen](./images/DateRangePickerrPresetsFullScreen.gif)

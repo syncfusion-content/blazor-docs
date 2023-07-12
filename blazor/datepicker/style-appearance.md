@@ -49,23 +49,18 @@ You can customize the background color of the container element for the DatePick
 
 ![DatePicker with background color](./images/blazor-datepicker-background_color.png)
 
-## Customizing the Calendar popup of the DatePicker
+## Full Screen Mode: Enhancing the DatePicker Component (Mobile Support Only)
 
-### Mobile mode full screen calendar popup in material theme
+The full-screen mode feature in the DatePicker component allows you to view the DatePicker popup element in full-screen mode on mobile devices, enabling you to see the DatePicker calendar element with better visibility and an upgraded user experience. It is important to mention that this feature is exclusively available for mobile devices in both landscape and portrait orientations. To activate the full screen mode within the DatePicker component, simply set the [FullScreenMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfDatePicker-1.html#Syncfusion_Blazor_Calendars_SfDatePicker_1_FullScreenMode) API value to `true`. This action will extend the calendar element to occupy the entire screen on mobile devices.
 
-We can render the full screen calendar popup in mobile device(s) by adding `e-popup-expand` class to the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.DatePickerModel.html#Syncfusion_Blazor_Calendars_DatePickerModel_CssClass) property of DatePicker component, Which supports both landscape and portrait orientations.
+```cshtml
+@using Syncfusion.Blazor.Calendars
 
-{% tabs %}
-{% highlight razor %}
+<SfDatePicker TValue="DateTime?" FullScreenMode=true></SfDatePicker>
 
-{% include_relative code-snippet/full-screen-popup.razor %}
+```
 
-{% endhighlight %}
-{% endtabs %}
-
-![Landscape Mode](./images/blazor-datepicker-fullscreen-mode-landscape.gif)
-
-![Potrait Mode](./images/blazor-datepicker-fullscreen-mode-potrait.gif)
+![DatePickerFullScreen](./images/DatePickerFullScreen.gif)
 
 Also check the below section to customize the style and appearance of the Calendar component
 

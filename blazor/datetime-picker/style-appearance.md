@@ -46,6 +46,19 @@ Use the following CSS to customize the time picker popup in the Datetime Picker.
 }
 ```
 
+## Full Screen Mode: Enhancing the DateTimePicker Component (Mobile Support Only)
+
+The full-screen mode feature in the DateTimePicker component allows you to view the DateTimePicker popup element in full-screen mode on mobile devices, enabling you to see the DateTimePicker calendar and time popup element with better visibility and an upgraded user experience. It is important to mention that this feature is exclusively available for mobile devices in both landscape and portrait orientations. To activate the full screen mode within the DateTimePicker component, simply set the [FullScreenMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfDateTimePicker-1.html#Syncfusion_Blazor_Calendars_SfDateTimePicker_1_FullScreenMode) API value to `true`. This action will extend the calendar and time popup element to occupy the entire screen on mobile devices.
+
+```cshtml
+@using Syncfusion.Blazor.Calendars
+
+<SfDateTimePicker TValue="DateTime?" FullScreenMode=true></SfDateTimePicker>
+
+```
+
+![DateTimePickerFullScreen](./images/DateTimePickerFullScreen.gif)
+
 ## Customizing the Calendar popup of the Datetime Picker
 
 Check the below section to customize the style and appearance of the Calendar component in the Datetime Picker.
