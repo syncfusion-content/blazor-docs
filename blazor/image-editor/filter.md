@@ -7,7 +7,7 @@ control: Image Editor
 documentation: ug
 ---
 
-# Filter in Image Editor component
+# Filters in the Blazor Image Editor component
 
 Filters are pre-defined effects that can be applied to an image to alter its appearance or mood. Image filters can be used to add visual interest or to enhance certain features of the image. Some common types of image filters include cold, warm, chrome, sepia, and invert.
 ## Apply filter effect 
