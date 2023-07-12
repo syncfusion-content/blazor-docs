@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Deploy SfPdfViewer in Blazor MAUI in windows | Syncfusion
-Description: Learn how to deploy SfPdfViewer in Blazor MAUI in Windows in Syncfusion Blazor SfPdfViewer component and much more details.
+Description: Learn how to deploy SfPdfViewer in Blazor MAUI Application on Windows in Syncfusion Blazor SfPdfViewer component and much more details.
 platform: Blazor
 control: SfPdfViewer
 documentation: ug
@@ -52,7 +52,7 @@ Open the **~/_Imports.razor** file and import the **Syncfusion.Blazor.SfPdfViewe
 * Open the **~/MauiProgram.cs** file and register the Syncfusion Blazor Service.
 
 {% tabs %}
-{% highlight c# tabtitle="~/MauiProgram.cs" hl_lines="3 17 23" %}
+{% highlight c# tabtitle="~/MauiProgram.cs" hl_lines="3 20 28" %}
 
 using Microsoft.Extensions.Logging;
 using MauiBlazorWindow.Data;
@@ -62,24 +62,28 @@ namespace MauiBlazorWindow;
 
 public static class MauiProgram
 {
-	public static MauiApp CreateMauiApp()
-	{
-		var builder = MauiApp.CreateBuilder();
-		builder.UseMauiApp<App>().ConfigureFonts(fonts =>
-			{
-				fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
-			});
-		builder.Services.AddMauiBlazorWebView();
+    public static MauiApp CreateMauiApp()
+    {
+        var builder = MauiApp.CreateBuilder();
+        builder
+            .UseMauiApp<App>()
+            .ConfigureFonts(fonts =>
+            {
+                fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
+            });
+
+        builder.Services.AddMauiBlazorWebView();
         builder.Services.AddMemoryCache();
 
 #if DEBUG
         builder.Services.AddBlazorWebViewDeveloperTools();
-		builder.Logging.AddDebug();
+        builder.Logging.AddDebug();
 #endif
-		builder.Services.AddSingleton<WeatherForecastService>();
+
+        builder.Services.AddSingleton<WeatherForecastService>();
         builder.Services.AddSyncfusionBlazor();
         return builder.Build();
-	}
+    }
 }
 
 {% endhighlight %}

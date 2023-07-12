@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Deploy SfPdfViewer in Blazor android MAUI | Syncfusion
-description: Learn how to deploy SfPdfViewer in Blazor android MAUI in Syncfusion Blazor SfPdfViewer component and much more details.
+description: Learn how to deploy SfPdfViewer in Blazor Android MAUI Application on Windows in Syncfusion Blazor SfPdfViewer component and much more details.
 platform: Blazor
 control: SfPdfViewer
 documentation: ug
@@ -52,7 +52,7 @@ Open **~/_Imports.razor** file and import the **Syncfusion.Blazor.SfPdfViewer** 
 * Open the **~/MauiProgram.cs** file and register the Syncfusion Blazor Service.
 
 {% tabs %}
-{% highlight c# tabtitle="~/MauiProgram.cs" hl_lines="3 18 24" %}
+{% highlight c# tabtitle="~/MauiProgram.cs" hl_lines="3 20 28" %}
 
 using Microsoft.Extensions.Logging;
 using MauiBlazorAndroid.Data;
@@ -62,24 +62,28 @@ namespace MauiBlazorAndroid;
 
 public static class MauiProgram
 {
-	public static MauiApp CreateMauiApp()
-	{
-		var builder = MauiApp.CreateBuilder();
-		builder.UseMauiApp<App>().ConfigureFonts(fonts =>
-			{
-				fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
-			});
+    public static MauiApp CreateMauiApp()
+    {
+        var builder = MauiApp.CreateBuilder();
+        builder
+            .UseMauiApp<App>()
+            .ConfigureFonts(fonts =>
+            {
+                fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
+            });
 
-		builder.Services.AddMauiBlazorWebView();
+        builder.Services.AddMauiBlazorWebView();
         builder.Services.AddMemoryCache();
+
 #if DEBUG
-		builder.Services.AddBlazorWebViewDeveloperTools();
-		builder.Logging.AddDebug();
+        builder.Services.AddBlazorWebViewDeveloperTools();
+        builder.Logging.AddDebug();
 #endif
-		builder.Services.AddSingleton<WeatherForecastService>();
+
+        builder.Services.AddSingleton<WeatherForecastService>();
         builder.Services.AddSyncfusionBlazor();
-		return builder.Build();
-	}
+        return builder.Build();
+    }
 }
 
 {% endhighlight %}
@@ -145,7 +149,6 @@ Add the Syncfusion SfPdfViewer component in the **~/Pages/Index.razor** file.
     protected override void OnInitialized()
     {
         string basePath = "MauiBlazorAndroid.wwwroot.data.pdf_succinctly.pdf";
-
         Stream DocumentStream = this.GetType().Assembly.GetManifestResourceStream(basePath);
         DocumentStream.Position = 0;
         using (MemoryStream memoryStream = new MemoryStream())
