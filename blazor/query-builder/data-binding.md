@@ -111,7 +111,7 @@ The ODataV4 is an improved version of OData protocols, and the `SfDataManager` c
 @using Syncfusion.Blazor.Data
 
 <SfQueryBuilder TValue="OrderDetails" Width="70%">
-    <SfDataManager Url="https://services.odata.org/V4/Northwind/Northwind.svc/Orders" Adaptor="Syncfusion.Blazor.Adaptors.ODataV4Adaptor"></SfDataManager>
+    <SfDataManager Url="https://blazor.syncfusion.com/services/production/api/orders/" Adaptor="Syncfusion.Blazor.Adaptors.ODataV4Adaptor"></SfDataManager>
 </SfQueryBuilder>
 
 @code {
