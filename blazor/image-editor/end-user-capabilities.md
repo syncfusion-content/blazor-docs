@@ -7,7 +7,7 @@ control: Image Editor
 documentation: ug
 ---
 
-# End-user capabilities in Image Editor component
+# End-user capabilities in the Blazor Image Editor component
 
 The following operations are available for end-users and the same is explained briefly in these sections.
 

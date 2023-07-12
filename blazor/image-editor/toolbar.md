@@ -7,13 +7,13 @@ control: Image Editor
 documentation: ug
 ---
 
-# Toolbar in Image editor component
+# Toolbar in the Blazor Image Editor Component
 
 The toolbars in the Blazor Image Editor are a key component for interacting with and editing images. They provide a range of tools and options that can be customized to suit the needs and preferences. Add or remove items from the toolbar to create a personalized set of tools, or they can even create their own custom toolbar from scratch. This flexibility and customization allow them to create a unique image editing experience that is tailored to their specific needs and workflow. 
 
 In the Image Editor, the toolbar property provides the ability to customize the toolbar by adding or removing items, as well as defining a completely custom toolbar. This feature is valuable for creating a personalized image editing experience that aligns with specific requirements and workflows. 
 
-## Built-in Toolbar Items
+## Built-in toolbar items
 
 Specifies the toolbar items to perform UI interactions. Refer to the built-in toolbar items for the default value.
 
@@ -26,7 +26,7 @@ Specifies the toolbar items to perform UI interactions. Refer to the built-in to
 * Reset
 * Save
 
-## Add a Custom Toolbar items
+## Add a custom toolbar items
 
 The [`Toolbar`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_Toolbar) property in the Image Editor allows to add or remove toolbar items to include only the tools they frequently use, streamlining the editing process and reducing clutter. 
 
@@ -66,7 +66,7 @@ Here is an example of adding custom toolbar items to rotate and flip transformat
 
 ![Blazor Image Editor with Toolbar](./images/blazor-image-editor-custom-toolbar.png)
 
-## Show or Hide a toolbar 
+## Show or hide a toolbar 
 
 The [`Toolbar`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_Toolbar) property controls the visibility of the toolbar in the Image Editor. When the toolbar property is set to an empty list, the toolbar is hidden. Conversely, if the toolbar property contains a list of items, the toolbar is shown, displaying the specified items. This feature provides flexibility for users to personalize their image editing experience. 
 
@@ -92,7 +92,7 @@ Here is an example of hiding the toolbar of the image editor using [`Toolbar`](h
 
 ![Blazor Image Editor with Hide a Toolbar](./images/blazor-image-editor-hide-toolbar.png)
 
-## Show or Hide a toolbar item
+## Show or hide a toolbar item
 
 The [`Toolbar`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_Toolbar) property is utilized to control the visibility of toolbar items in the Image Editor. By default, the toolbar property includes the default toolbar items. So, if you wish to hide the default toolbar items then you need to explicitly define the required items using [`Toolbar`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_Toolbar) property. This allows you to customize the toolbar by displaying only the specific items you require, tailoring the editing experience to your preferences. 
 
@@ -132,6 +132,36 @@ Here is an example of hiding the cropping and selection toolbar items using [`To
 The [`Toolbar`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_Toolbar) property is employed to enable or disable toolbar items in the Image Editor. This provides the flexibility to control the availability and functionality of custom toolbar items based on your specific requirements.
 
 Here is an example of disabling the custom toolbar item using [`Toolbar`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_Toolbar) property.
+
+```cshtml
+@using Syncfusion.Blazor.ImageEditor
+
+<SfImageEditor @ref="ImageEditor" Toolbar="customToolbarItem" Height="400">
+    <ImageEditorEvents Created="OpenAsync"></ImageEditorEvents>
+</SfImageEditor>
+
+@code {
+    SfImageEditor ImageEditor;
+    private List<ImageEditorToolbarItemModel> customToolbarItem = new List<ImageEditorToolbarItemModel>()
+    {
+        new ImageEditorToolbarItemModel { Name = "Zoom" },
+        new ImageEditorToolbarItemModel { Name = "Crop" },
+        new ImageEditorToolbarItemModel { Name = "Annotation", Disabled = true },
+        new ImageEditorToolbarItemModel { Name = "Finetune", Disabled = true },
+        new ImageEditorToolbarItemModel { Name = "Filter" },
+        new ImageEditorToolbarItemModel { Name = "Confirm" },
+        new ImageEditorToolbarItemModel { Name = "Reset" },
+        new ImageEditorToolbarItemModel { Name = "Save" }
+    };
+
+    private async void OpenAsync()
+    {
+        await ImageEditor.OpenAsync("nature.png");
+    }
+}
+```
+
+![Blazor Image Editor with Disable a Toolbar](./images/blazor-image-editor-disable-toolbar.png)
 
 ## Toolbar template
 
