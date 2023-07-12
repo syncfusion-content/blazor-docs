@@ -123,7 +123,7 @@ The following sample displays the employee names from `Employee` table.
 @using Syncfusion.Blazor.Data
 
 <SfListBox TValue="string[]" TItem="OrderDetails" Query="@RemoteDataQuery">
-<SfDataManager Url="https://services.syncfusion.com/js/production/api/orders/" CrossDomain="true" Adaptor="Syncfusion.Blazor.Adaptors.ODataAdaptor"></SfDataManager>
+<SfDataManager Url="https://blazor.syncfusion.com/services/production/api/orders/" CrossDomain="true" Adaptor="Syncfusion.Blazor.Adaptors.ODataAdaptor"></SfDataManager>
 <ListBoxFieldSettings Text="CustomerID" Value="CustomerID" />
 </SfListBox>
 
