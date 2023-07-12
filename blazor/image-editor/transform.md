@@ -214,7 +214,7 @@ RotateEventArgs.Cancel – Specifies a boolean value to cancel the rotating acti
 
 The [`Flipping`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.ImageEditorEvents.html#Syncfusion_Blazor_ImageEditor_ImageEditorEvents_Flipping) event is triggered when performing flipping the image. This event is passed an object that contains information about the flipping event, such as the amount of flip performed. And this event uses [`FlipEventArgs`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.FlipEventArgs.html) to handle the action the panning action when the user starts dragging the image.
 
-The parameter available in the [`flipping`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.ImageEditorEvents.html#Syncfusion_Blazor_ImageEditor_ImageEditorEvents_Flipping) event is, 
+The parameter available in the [`Flipping`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.ImageEditorEvents.html#Syncfusion_Blazor_ImageEditor_ImageEditorEvents_Flipping) event is, 
 
 * FlipEventArgs.Direction - The flip direction as ImageEditorDirection to be applied in the image editor.
 
