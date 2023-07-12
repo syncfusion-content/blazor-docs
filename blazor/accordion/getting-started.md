@@ -26,7 +26,7 @@ You can create **Blazor Server App** or **Blazor WebAssembly App** using Visual 
 
 * [Create a Project using Microsoft Templates](https://docs.microsoft.com/en-us/aspnet/core/blazor/tooling?pivots=windows)
 
-* [Create a Project using Syncfusion Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project)
+* [Create a Project using Syncfusion Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio)
 
 ## Install Syncfusion Blazor Navigations NuGet in the App
 
@@ -282,7 +282,7 @@ N> Syncfusion recommends to reference scripts using [Static Web Assets](https://
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to run the application. Then, the Syncfusion `Blazor Accordion` component will be rendered in the default web browser.
 
-![Blazor Accordion Component](images/blazor-accordion-component.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rXLAjxChfgKmjtsB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/Accordion).
 
@@ -296,7 +296,7 @@ The following code explains how to initialize accordion using `Template`.
 
 {% endhighlight %}
 
-![Blazor Accordion with Header Template](./images/blazor-accordion-header-template.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VDhAjnWLTUCSIPex?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## See Also
 

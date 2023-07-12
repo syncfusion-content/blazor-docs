@@ -21,7 +21,7 @@ You can create **Blazor Server App** or **Blazor WebAssembly App** using Visual 
 
 * [Create a Project using Microsoft Templates](https://docs.microsoft.com/en-us/aspnet/core/blazor/tooling?pivots=windows)
 
-* [Create a Project using Syncfusion Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project)
+* [Create a Project using Syncfusion Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio)
 
 ## Install Syncfusion Blazor Inputs NuGet in the App
 
@@ -271,7 +271,7 @@ N> Syncfusion recommends to reference scripts using [Static Web Assets](https://
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to run the application. Then, the Syncfusion `Blazor File Upload` component will be rendered in the default web browser.
 
-![Blazor FileUpload Component](./images/blazor-fileupload-component.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hZVKNRWoAACaQsJs?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Without server-side API endpoint
 
@@ -284,23 +284,26 @@ You can get the uploaded files as file stream in the [ValueChange](https://help.
 {% tabs %}
 {% highlight cshtml %}
 
-@using System.IO
-
-<SfUploader AutoUpload="false">
-    <UploaderEvents ValueChange="OnChange"></UploaderEvents>
+@using Syncfusion.Blazor.Inputs
+<SfUploader AutoUpload="true">
+      <UploaderEvents ValueChange="@OnChange"></UploaderEvents>
 </SfUploader>
-
 @code {
-
-    private void OnChange(UploadChangeEventArgs args)
+    private async Task OnChange(UploadChangeEventArgs args)
     {
-        foreach (var file in args.Files)
+        try
         {
-            var path = @"path" + file.FileInfo.Name;
-            FileStream filestream = new FileStream(path, FileMode.Create, FileAccess.Write);
-            file.Stream.WriteTo(filestream);
-            filestream.Close();
-            file.Stream.Close();
+            foreach (var file in args.Files)
+            {
+                var path = @"" + file.FileInfo.Name;
+                FileStream filestream = new FileStream(path, FileMode.Create, FileAccess.Write);
+                await file.File.OpenReadStream(long.MaxValue).CopyToAsync(filestream);
+                filestream.Close();
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine(ex.Message);
         }
     }
 }
@@ -308,7 +311,7 @@ You can get the uploaded files as file stream in the [ValueChange](https://help.
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor FileUpload displays Updated Files](./images/blazor-fileupload-with-updated-files.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hXhqZRsIUgLvKHBG?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 While clicking on the remove icon in the file list, you will get the [OnRemove](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.UploaderEvents.html#Syncfusion_Blazor_Inputs_UploaderEvents_OnRemove) event with removing file name as argument. So, you can write the remove handler inside OnRemove event to remove the particular file from desired location. Find the remove action code below.
 
@@ -340,7 +343,7 @@ The save action handler upload the files that needs to be specified in the [Save
 
 The save handler receives the submitted files and manages the save process in server. After uploading the files to server location, the color of the selected file name changes to green and the remove icon is changed as bin icon.
 
-The remove action is optional. The remove action handler removes the files that needs to be specified in the [RemoveUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.UploaderAsyncSettings.html#Syncfusion_Blazor_Inputs_UploaderAsyncSettings_RemoveUrl) property.
+The remove action is optional. The remove action handler removes the files that needs to be specified in the [RemoveUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.UploaderAsyncSettings.html#Syncfusion_Blazor_Inputs_UploaderAsyncSettings_RemoveUrl) property. [OnActionComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.UploaderEvents.html#Syncfusion_Blazor_Inputs_UploaderEvents_OnActionComplete) event triggers after all the selected files have been processed to upload successfully or failed to server.
 
 {% tabs %}
 {% highlight cshtml %}
@@ -357,17 +360,11 @@ public SampleDataController(IHostingEnvironment env)
 [HttpPost("[action]")]
 public void Save(IList<IFormFile> UploadFiles)
 {
-    long size = 0;
     try
     {
         foreach (var file in UploadFiles)
         {
-            var filename = ContentDispositionHeaderValue
-                    .Parse(file.ContentDisposition)
-                    .FileName
-                    .Trim('"');
-                filename = hostingEnv.ContentRootPath + $@"\{filename}";
-                size += (int)file.Length;
+            var filename = hostingEnv.ContentRootPath + $@"\{file.FileName}";
             if (!System.IO.File.Exists(filename))
             {
                 using (FileStream fs = System.IO.File.Create(filename))
@@ -410,12 +407,25 @@ public void Remove(IList<IFormFile> UploadFiles)
 {% endhighlight %}
 {% endtabs %}
 
+The [OnFailure](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.UploaderEvents.html#Syncfusion_Blazor_Inputs_UploaderEvents_OnFailure) event is triggered when there is a failure in the AJAX request during the uploading or removing of files. It provides a way to handle and respond to any errors or issues that occur during the file upload or removal process.
+
 {% tabs %}
 {% highlight razor %}
 
 <SfUploader ID="UploadFiles">
     <UploaderAsyncSettings SaveUrl="api/SampleData/Save" RemoveUrl="api/SampleData/Remove"></UploaderAsyncSettings>
+    <UploaderEvents OnFailure="@OnFailureHandler" OnActionComplete="@OnActionCompleteHandler"></UploaderEvents>
 </SfUploader>
+@code {
+    private void OnFailureHandler(FailureEventArgs args)
+    {
+        // Here, you can customize your code.
+    }
+    private void OnActionCompleteHandler(ActionCompleteEventArgs args)
+    {
+        // Here, you can customize your code.
+    }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -432,11 +442,11 @@ You can allow the specific files alone to upload using the [AllowedExtensions](h
 {% endhighlight %}
 {% endtabs %}
 
-![Allowing Specific Files in Blazor FileUpload](./images/blazor-fileupload-allow-specific-file.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BNhgXRieKUKefIeU?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/FileUpload).
 
-## See Also
+## See also
 
 * [Getting Started with Syncfusion Blazor for Client-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-dotnet-cli)
 * [Getting Started with Syncfusion Blazor for Server-side in Visual Studio](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio)

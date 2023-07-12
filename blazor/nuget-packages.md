@@ -767,6 +767,49 @@ SfInPlaceEditor
 </tr>
 </table>
 
+### Syncfusion.Blazor.ImageEditor
+
+The Blazor Image Editor component loads and modifies the images by performing actions like cropping, rotating, resizing, applying filters, inserting text and shapes such as rectangles, circles, and arrows on top of an image, and drawing freehand.
+
+<table>
+<tr>
+<td>
+<b>NuGet package</b>
+</td>
+<td>
+<b>Components friendly name</b>
+</td>
+<td>
+<b>Components name</b>
+</td>
+<td>
+<b>Dependencies</b>
+</td>
+</tr>
+<tr>
+<td>
+<a href="https://www.nuget.org/packages/Syncfusion.Blazor.ImageEditor/">Syncfusion.Blazor.ImageEditor</a>
+</td>
+<td>
+<a href="https://blazor.syncfusion.com/documentation/image-editor">Image Editor</a>
+</td>
+<td>
+SfImageEditor
+</td>
+<td>
+<ul>
+<li><a href="#syncfusionblazorcore">Syncfusion.Blazor.Core</a></li>
+<li><a href="#syncfusionblazorbuttons">Syncfusion.Blazor.Buttons</a></li>
+<li><a href="#syncfusionblazorinputs">Syncfusion.Blazor.Inputs</a></li>
+<li><a href="#syncfusionblazorpopups">Syncfusion.Blazor.Popups</a></li>
+<li><a href="#syncfusionblazornavigations">Syncfusion.Blazor.Navigations</a></li>
+<li><a href="#syncfusionblazorsplitbuttons">Syncfusion.Blazor.SplitButtons</a></li>
+<li><a href="#syncfusionblazorspinner">Syncfusion.Blazor.Spinner</a></li>
+</ul>
+</td>
+</tr>
+</table>
+
 ### Syncfusion.Blazor.Inputs
 
 A package of Blazor input components comes with a collection of form components. They can be used to get different input values from the users such as text, numbers, patterns, color, and file inputs.
@@ -1227,6 +1270,56 @@ SfPdfViewerServer
 N> For developing Linux or Mac (OSX) operating system, use the following corresponding libraries:
 <br/> * For Linux, use [Syncfusion.Blazor.PdfViewerServer.Linux](https://www.nuget.org/packages/Syncfusion.Blazor.PdfViewerServer.Linux)
 <br/> * For Mac (OSX), use [Syncfusion.Blazor.PdfViewerServer.OSX](https://www.nuget.org/packages/Syncfusion.Blazor.PdfViewerServer.OSX)
+
+### Syncfusion.Blazor.SfPdfViewer
+
+The SfPdfViewer is designed to be independent of web services, allowing users to view, edit, print, and download PDF files directly within Blazor applications. It offers various features such as thumbnails, bookmarks, hyperlinks, and table of contents for easy navigation within and outside the PDF files. Additionally, it supports form-filling with AcroForms and ensures fast and responsive performance. Integration of the component into both Blazor Server and WASM applications is straightforward and requires minimal effort.
+
+#### For Blazor Server & WebAssembly application
+
+<table>
+<tr>
+<td>
+<b>NuGet package</b>
+</td>
+<td>
+<b>Components friendly name</b>
+</td>
+<td>
+<b>Components name</b>
+</td>
+<td>
+<b>Dependencies</b>
+</td>
+</tr>
+<tr>
+<td>
+<a href="https://www.nuget.org/packages/Syncfusion.Blazor.SfPdfViewer/">Syncfusion.Blazor.SfPdfViewer</a>
+</td>
+<td>
+<a href="https://blazor.syncfusion.com/documentation/pdfviewer-2/getting-started/web-assembly-application">PDF Viewer(Next-Gen)</a>
+</td>
+<td>
+SfPdfViewer2
+</td>
+<td>
+<ul>
+<li><a href="#syncfusionblazorcore">Syncfusion.Blazor.Core</a></li>
+<li><a href="#syncfusionblazorbuttons">Syncfusion.Blazor.Buttons</a></li>
+<li><a href="#syncfusionblazordata">Syncfusion.Blazor.Data</a></li>
+<li><a href="#syncfusionblazordropdowns">Syncfusion.Blazor.DropDowns</a></li>
+<li><a href="#syncfusionblazorinputs">Syncfusion.Blazor.Inputs</a></li>
+<li><a href="#syncfusionblazorinplaceeditor">Syncfusion.Blazor.InPlaceEditor</a></li>
+<li><a href="#syncfusionblazorlists">Syncfusion.Blazor.Lists</a></li>
+<li><a href="#syncfusionblazornavigations">Syncfusion.Blazor.Navigations</a></li>
+<li><a href="#syncfusionblazornotifications">Syncfusion.Blazor.Notifications</a></li>
+<li><a href="#syncfusionblazorpopups">Syncfusion.Blazor.Popups</a></li>
+<li><a href="#syncfusionblazorsplitbuttons">Syncfusion.Blazor.SplitButtons</a></li>
+<li><a href="https://www.nuget.org/packages/Syncfusion.SfPdfViewer.AspNet.Core/">Syncfusion.SfPdfViewer.AspNet.Core</a></li>
+</ul>
+</td>
+</tr>
+</table>
 
 ### Syncfusion.Blazor.PivotTable
 

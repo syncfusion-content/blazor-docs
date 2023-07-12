@@ -11,6 +11,11 @@ documentation: ug
 
 Toolbar option allows to access the frequently used features like switching between pivot table and pivot chart, changing chart types, conditional formatting, exporting, etc. with ease at runtime. This option can be enabled by setting the [ShowToolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_ShowToolbar) property in [SfPivotView](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html) class to **true**. The [Toolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_Toolbar) property in [SfPivotView](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html) class accepts the collection of built-in toolbar options.
 
+To have a quick glance on how to add and customize toolbar in the Blazor Pivot Table, watch this video:
+
+{% youtube
+"youtube:https://www.youtube.com/watch?v=X74nXMoJ8KQ"%}
+
 ## Built-in Toolbar Options
 
 The following table shows built-in toolbar options and its actions.
@@ -1620,6 +1625,147 @@ Below points need to be considered when saving the report to SQL Server database
 * **Data source**: Both raw data and aggregated data won't be saved and loaded from the database.
 * **Hyperlinks**: Option to link external facts via pivot table cells won't be saved and loaded from the database.
 * The pivot table should always load reports from the SQL database based on the data source that is currently bound to it.
+
+## Load desired report from the report list as default
+
+By default, the pivot table is displayed with the report bound at the code-behind. To load a desired report from the previously saved report collection during initial rendering, set the [DefaultReportName](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.FetchReportArgs.html#Syncfusion_Blazor_PivotView_FetchReportArgs_DefaultReportName) option in the [FetchReport](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewEvents-1.html#Syncfusion_Blazor_PivotView_PivotViewEvents_1_FetchReport) event.
+
+```cshtml
+@using Syncfusion.Blazor.PivotView
+@using Syncfusion.Blazor.Grids
+
+<SfPivotView @ref="pivot" TValue="ProductDetails" ShowFieldList="true" ShowToolbar="true" Toolbar="@toolbar" AllowNumberFormatting="true" AllowConditionalFormatting="true" AllowPdfExport="true" AllowExcelExport="true" Height="300" Width="800">
+    <PivotViewDisplayOption Primary=Primary.Table View=View.Both></PivotViewDisplayOption>
+        <PivotViewDataSourceSettings DataSource="@data" ShowGrandTotals="true" ShowSubTotals="true">
+            <PivotViewColumns>
+                <PivotViewColumn Name="Year"></PivotViewColumn>
+                <PivotViewColumn Name="Quarter"></PivotViewColumn>
+            </PivotViewColumns>
+            <PivotViewRows>
+                <PivotViewRow Name="Country"></PivotViewRow>
+                <PivotViewRow Name="Products"></PivotViewRow>
+            </PivotViewRows>
+            <PivotViewValues>
+                <PivotViewValue Name="Sold" Caption="Units Sold"></PivotViewValue>
+                <PivotViewValue Name="Amount" Caption="Sold Amount"></PivotViewValue>
+            </PivotViewValues>
+            <PivotViewFormatSettings>
+                <PivotViewFormatSetting Name="Amount" Format="C"></PivotViewFormatSetting>
+            </PivotViewFormatSettings>
+        </PivotViewDataSourceSettings>
+        <PivotViewEvents TValue="ProductDetails" RenameReport="RenameReport" RemoveReport="RemoveReport" SaveReport="SaveReport" LoadReport="LoadReport" FetchReport="FetchReport" ></PivotViewEvents>
+        <PivotViewGridSettings ColumnWidth="140"></PivotViewGridSettings>
+</SfPivotView>
+
+@code {
+    private SfPivotView<ProductDetails> pivot;
+    private bool onInit;
+    private List<ProductDetails> data { get; set; }
+    public List<string> report = new List<string>();
+    public List<string> reportName = new List<string>();
+    public List<ToolbarItems> toolbar = new List<ToolbarItems> {
+        ToolbarItems.New,
+        ToolbarItems.Load,
+        ToolbarItems.Remove,
+        ToolbarItems.Rename,
+        ToolbarItems.SaveAs,
+        ToolbarItems.Save,
+        ToolbarItems.Grid,
+        ToolbarItems.Chart,
+        ToolbarItems.Export,
+        ToolbarItems.SubTotal,
+        ToolbarItems.GrandTotal,
+        ToolbarItems.ConditionalFormatting,
+        ToolbarItems.NumberFormatting,
+        ToolbarItems.FieldList
+    };
+    
+    protected override void OnInitialized()
+    {
+        onInit = true;
+        this.data = ProductDetails.GetProductData().ToList();
+        // Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.               
+    }    
+
+    // Method to save current report.
+    public void SaveReport(SaveReportArgs args)
+    {
+        var i = 0;
+        bool isSaved = false;
+        for (i = 0; i < this.reportName.Count; i++)
+        {
+            if (this.reportName[i] == args.ReportName)
+            {
+                this.report[i] = args.Report;
+                isSaved = true;
+            }
+        }
+        if (args.Report != null && !(isSaved))
+        {
+            this.report.Add(args.Report);
+            this.reportName.Add(args.ReportName);
+        }
+
+    }
+
+    // Method for retrieving previously saved reports.
+    public void FetchReport(FetchReportArgs args)
+    {
+        args.ReportName = this.reportName.ToArray();
+        // Set the default report name to load it in the pivot table on initial rendering.
+        if(onInit)
+        {
+            args.DefaultReportName = "Default Report";
+        }
+        onInit = false;
+    }
+
+    // Method to load the selected report.
+    public void LoadReport(LoadReportArgs args)
+    {
+        var i = 0;
+        var j = 0;
+        for (i = 0; i < this.reportName.Count; i++)
+        {
+            if (this.reportName[i] == args.ReportName)
+            {
+                j = i;
+            }
+        }
+        this.pivot.LoadPersistDataAsync(this.report[j]);
+    }
+
+    // Method to delete current report.
+    public void RemoveReport(RemoveReportArgs args)
+    {
+        var i = 0;
+        for( i=0;i<this.reportName.Count; i++)
+        {
+            if(this.reportName[i] == args.ReportName)
+            {
+                this.reportName.RemoveAt(i);
+                this.report.RemoveAt(i);
+            }
+        }
+    }
+
+    // Method to rename current report.
+    public void RenameReport(RenameReportArgs args)
+    {
+        var i = 0;
+        for( i=0;i<=(this.reportName.Count - 1); i++)
+        {
+            if(this.reportName[i] == args.ReportName)
+            {
+                this.reportName.RemoveAt(i);
+                this.reportName.Add(args.Rename);
+            }
+        }
+    }
+}
+
+```
+![Blazor Pivot Table loaded with desired report from saved report collection](images/blazor-pivottable-load-default-report.PNG)
 
 ## Events
 
