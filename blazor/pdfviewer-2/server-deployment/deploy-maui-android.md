@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Deploy SfPdfViewer in Blazor android MAUI | Syncfusion
-description: Checkout and learn here all about how to deploy SfPdfViewer in Blazor android MAUI in Syncfusion Blazor SfPdfViewer component and much more details.
+description: Learn how to deploy SfPdfViewer in Blazor android MAUI in Syncfusion Blazor SfPdfViewer component and much more details.
 platform: Blazor
 control: SfPdfViewer
 documentation: ug
@@ -87,7 +87,7 @@ public static class MauiProgram
 
 ## Adding Style Sheet
 
-Add the theme style sheet as below in the sever web app.
+Add the theme style sheet as follows in the server web app.
 
 * Add the Syncfusion bootstrap5 theme in the `<head>` of the **~/wwwroot/index.html** file.
 
@@ -102,7 +102,7 @@ Add the theme style sheet as below in the sever web app.
 {% endhighlight %}
 {% endtabs %}
 
-> Checkout the [Blazor Themes topic](https://blazor.syncfusion.com/documentation/appearance/themes) to learn different ways ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference) and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)) to refer themes in Blazor application, and to have the expected appearance for Syncfusion Blazor components. Here, the theme is referred using [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Refer to [Enable static web assets usage](https://blazor.syncfusion.com/documentation/appearance/themes#enable-static-web-assets-usage) topic to use static assets in your project.
+> Check out the [Blazor Themes topic](https://blazor.syncfusion.com/documentation/appearance/themes) to learn different ways ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference) and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)) to refer themes in Blazor application, and to have the expected appearance for Syncfusion Blazor components. Here, the theme is referred using [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Refer to [Enable static web assets usage](https://blazor.syncfusion.com/documentation/appearance/themes#enable-static-web-assets-usage) topic to use static assets in your project.
 
 ## Adding Script Reference
 
@@ -123,7 +123,7 @@ Add the theme style sheet as below in the sever web app.
 {% endhighlight %}
 {% endtabs %}
 
-> Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/documentation/common/adding-script-references) to learn different ways to add script reference in Blazor Application. 
+> Check out [Adding Script Reference topic](https://blazor.syncfusion.com/documentation/common/adding-script-references) to learn different ways to add script reference in Blazor Application. 
 
 > Syncfusion recommends to reference scripts using [Static Web Assets](https://blazor.syncfusion.com/documentation/common/adding-script-references#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/common/adding-script-references#cdn-reference) and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator) by [disabling JavaScript isolation](https://blazor.syncfusion.com/documentation/common/adding-script-references#disable-javascript-isolation) for better loading performance of the Blazor application.
 
@@ -163,7 +163,7 @@ Add the Syncfusion SfPdfViewer component in the **~/Pages/Index.razor** file.
 {% endhighlight %}
 {% endtabs %}
 
-N> When developing a Blazor Android MAUI application, it is need to pass the `DocumentPath` to the SfPdfViewer component as a `base64 string`. This ensures that the application can retrieve and render the PDF document correctly within the SfPdfViewer.
+N> When developing a Blazor Android MAUI application, passing the `DocumentPath` to the SfPdfViewer component as a `base64 string` is needed. This ensures that the application can retrieve and render a PDF document correctly within the SfPdfViewer.
 
 ## Run the SfPdfViewer in Blazor android MAUI application
 
@@ -171,7 +171,7 @@ To run the SfPdfViewer in a Blazor Android MAUI application using the Android em
 
 ![Run Windows machine](images/emulator.png)
 
-**step 1** Set up the necessary dependencies, SDKs, and tools for Blazor Android MAUI on your Windows machine. Ensure that you have     installed the required `Android SDK licenses`. If any errors occur during installation, follow the provided prompts or instructions to resolve them.
+**step 1** Set up the necessary dependencies, SDKs, and tools for Blazor Android MAUI on your Windows machine. Ensure that you have installed the required `Android SDK licenses`. If any errors occur during installation, follow the provided prompts or instructions to resolve them.
 
 ![android-sdk-liscence](images/android-sdk-liscence.png)
 
@@ -179,12 +179,12 @@ To run the SfPdfViewer in a Blazor Android MAUI application using the Android em
 
 ![picxel emulator](images/pixcel-emulator.png)
 
-**step 3** Make sure the Android emulator is running. Launch the Android Device Manager and create or select an existing AVD to run the emulator.
+**step 3** Ensure the Android emulator is running. Launch the Android Device Manager and create or select an existing AVD to run the emulator.
 
-Now launch the project again in emulator mode it will render the SfPdfViewer using Blazor android MAUI application
+Now, relaunch the project in emulator mode. It will render the SfPdfViewer using the Blazor android MAUI application.
 
-N> If you encounter any errors while using the Android Emulator, you can refer to the following link for troubleshooting guidance[Troubleshooting Android Emulator](https://learn.microsoft.com/en-us/dotnet/maui/android/emulator/troubleshooting)
+N> If you encounter any errors while using the Android Emulator, refer to the following link for troubleshooting guidance[Troubleshooting Android Emulator](https://learn.microsoft.com/en-us/dotnet/maui/android/emulator/troubleshooting).
 
 ![Blazor SfPdfViewer Component](images/blazor-pdfviewer.png)
 
->[View Sample in GitHub]().
+>[View Sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Server%20Deployment/Maui/MauiBlazorAndroid%20-%20SfPdfViewer).

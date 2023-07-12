@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Deploy SfPdfViewer in Blazor MAUI in windows | Syncfusion
-description: Checkout and learn here all about how to deploy SfPdfViewer in Blazor MAUI in windows in Syncfusion Blazor SfPdfViewer component and much more details.
+Description: Learn how to deploy SfPdfViewer in Blazor MAUI in Windows in Syncfusion Blazor SfPdfViewer component and much more details.
 platform: Blazor
 control: SfPdfViewer
 documentation: ug
@@ -9,11 +9,11 @@ documentation: ug
 
 # How To Deploy SfPdfViewer in Blazor MAUI in windows
 
-This section briefly explains about how to deploy [Blazor SfPdfViewer](https://www.syncfusion.com/blazor-components/blazor-pdf-viewer) component in your Blazor MAUI in windows App using Visual Studio.
+This section briefly explains how to deploy the [Blazor SfPdfViewer](https://www.syncfusion.com/blazor-components/blazor-pdf-viewer) component in your Blazor MAUI in the windows App using Visual Studio.
 
 ## Prerequisites
 
-To use the MAUI project templates, install the Mobile development with .NET extension for Visual Studio. For more details, refer [here](https://docs.microsoft.com/en-us/dotnet/MAUI/get-started/installation).
+To use the MAUI project templates, install the Mobile development with the .NET extension for Visual Studio. For more details, refer to [here](https://docs.microsoft.com/en-us/dotnet/MAUI/get-started/installation).
 
 ## Deploy SfPdfViewer into Blazor MAUI in windows application
 
@@ -30,7 +30,7 @@ To use the MAUI project templates, install the Mobile development with .NET exte
 
 ## Install Blazor SfPdfViewer NuGet package in Blazor MAUI in windows application
 
-Syncfusion Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). To use Syncfusion Blazor components in the application, add reference to the corresponding NuGet. Refer to [NuGet packages topic](https://blazor.syncfusion.com/documentation/nuget-packages) for available NuGet packages list with component details and [Benefits of using individual NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages#benefits-of-using-individual-nuget-packages).
+Syncfusion Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). To use Syncfusion Blazor components in the application, add a reference to the corresponding NuGet. Refer to [NuGet packages topic](https://blazor.syncfusion.com/documentation/nuget-packages) for available NuGet packages list with component details and [Benefits of using individual NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages#benefits-of-using-individual-nuget-packages).
 
 Install the [Syncfusion.Blazor.SfPdfViewer](https://www.nuget.org/packages/Syncfusion.Blazor.SfPdfViewer) NuGet package as a reference to your project from the [NuGet.org](https://www.nuget.org/packages?q=syncfusion.blazor).
 
@@ -38,7 +38,7 @@ Install the [Syncfusion.Blazor.SfPdfViewer](https://www.nuget.org/packages/Syncf
 
 ## Register Syncfusion Blazor Service
 
-Open **~/_Imports.razor** file and import the **Syncfusion.Blazor.SfPdfViewer** namespaces.
+Open the **~/_Imports.razor** file and import the **Syncfusion.Blazor.SfPdfViewer** namespaces.
 
 {% tabs %}
 {% highlight razor tabtitle="~/_Imports.razor" %}
@@ -87,7 +87,7 @@ public static class MauiProgram
 
 ## Adding Style Sheet
 
-Add the theme style sheet as below in the sever web app.
+Add the theme style sheet as follows in the server web app.
 
 * Add the Syncfusion bootstrap5 theme in the `<head>` of the **~/wwwroot/index.html** file.
 
@@ -102,7 +102,7 @@ Add the theme style sheet as below in the sever web app.
 {% endhighlight %}
 {% endtabs %}
 
-> Checkout the [Blazor Themes topic](https://blazor.syncfusion.com/documentation/appearance/themes) to learn different ways ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference) and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)) to refer themes in Blazor application, and to have the expected appearance for Syncfusion Blazor components. Here, the theme is referred using [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Refer to [Enable static web assets usage](https://blazor.syncfusion.com/documentation/appearance/themes#enable-static-web-assets-usage) topic to use static assets in your project.
+> Check out the [Blazor Themes topic](https://blazor.syncfusion.com/documentation/appearance/themes) to learn different ways ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference) and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)) to refer themes in Blazor application, and to have the expected appearance for Syncfusion Blazor components. Here, the theme is referred using [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Refer to [Enable static web assets usage](https://blazor.syncfusion.com/documentation/appearance/themes#enable-static-web-assets-usage) topic to use static assets in your project.
 
 ## Adding Script Reference
 
@@ -123,7 +123,7 @@ Add the theme style sheet as below in the sever web app.
 {% endhighlight %}
 {% endtabs %}
 
-> Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/documentation/common/adding-script-references) to learn different ways to add script reference in Blazor Application. 
+> Check out [Adding Script Reference topic](https://blazor.syncfusion.com/documentation/common/adding-script-references) to learn different ways to add script references in Blazor Application. 
 
 > Syncfusion recommends to reference scripts using [Static Web Assets](https://blazor.syncfusion.com/documentation/common/adding-script-references#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/common/adding-script-references#cdn-reference) and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator) by [disabling JavaScript isolation](https://blazor.syncfusion.com/documentation/common/adding-script-references#disable-javascript-isolation) for better loading performance of the Blazor application.
 
@@ -145,11 +145,11 @@ Add the Syncfusion SfPdfViewer component in the **~/Pages/Index.razor** file.
 {% endhighlight %}
 {% endtabs %}
 
-N> If the `DocumentPath` property value is not provided, the SfPdfViewer component will be rendered without loading the PDF document. The users can then use the open option from the toolbar to browse and open the PDF as required.
+N> If the `DocumentPath` property value is not provided, the SfPdfViewer component will be rendered without loading a PDF document. Users can then use the open option from the toolbar to browse and open a PDF as required.
 
 ## Run the SfPdfViewer in Blazor MAUI in windows
 
-Run the sample in Windows Machine mode and it will run Blazor MAUI in windows
+Run the sample in Windows Machine mode, and it will run Blazor MAUI in Windows.
 
 ![Run Windows machine](images/windows-machine.png)
 
@@ -157,4 +157,4 @@ Upon successfully launching the application, the SfPdfViewer will seamlessly ren
 
 ![Blazor SfPdfViewer Component](images/blazor-pdfviewer.png)
 
->[View Sample in GitHub]().
+>[View Sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Server%20Deployment/Maui/MauiBlazorWindow%20-%20%20SfPdfViewer).
