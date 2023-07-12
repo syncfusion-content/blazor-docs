@@ -64,6 +64,8 @@ In the following example:
 }
 ```
 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VDLAZGCiBopEObLC?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 N> * **PreventRender** method accepts boolean argument that accepts true or false to disable or enable rendering respectively.
 <br/> * **PreventRender** method can be used only after Scheduler component completed initial rendering. Calling this method during initial rendering will not have any effect.
 
@@ -128,6 +130,8 @@ In the following example:
     }
 }
 ```
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LXhUNwMMhSQgYVjZ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 N> * **PreventRender** method internally overrides the **ShouldRender** method of the Scheduler to prevent rendering.
 <br/> * It is recommended to use **PreventRender** method for user interactive events such as OnCellClick, OnEventClick etc. for better performance.
