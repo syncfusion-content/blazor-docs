@@ -60,10 +60,11 @@ This package contains the base component, common classes, common functionalities
 <td>
 <ul>
 <li><a href="https://www.nuget.org/packages/Microsoft.AspNetCore.Components.Web/" target="_blank">Microsoft.AspNetCore.Components.Web</a></li>
-<li><a href="https://www.nuget.org/packages/Microsoft.CSharp/" target="_blank">Microsoft.CSharp</a></li>
-<li><a href="https://www.nuget.org/packages/Newtonsoft.Json/" target="_blank">Newtonsoft.Json</a></li>
-<li><a href="#syncfusionblazorthemes">Syncfusion.Blazor.Themes</a></li>
+<li><a href="https://www.nuget.org/packages/Microsoft.CSharp/" target="_blank">Microsoft.CSharp</a> (Used until v20.3.0.61)</li>
+<li><a href="https://www.nuget.org/packages/Newtonsoft.Json/" target="_blank">Newtonsoft.Json</a> (Used until v19.3.0.59)</li>
+<li><a href="#syncfusionblazorthemes">Syncfusion.Blazor.Themes</a> (Used until v19.4.0.56)</li>
 <li><a href="https://www.nuget.org/packages/Syncfusion.Licensing/" target="_blank">Syncfusion.Licensing</a></li>
+<li><a href="https://www.nuget.org/packages/System.Text.Json/" target="_blank">System.Text.Json</a> (Used since v19.4.0.38)</li>
 </ul>
 </td>
 </tr>
@@ -146,6 +147,7 @@ SfBulletChart
 <li><a href="#syncfusionblazorcore">Syncfusion.Blazor.Core</a></li>
 <li><a href="#syncfusionblazordata">Syncfusion.Blazor.Data</a></li>
 <li><a href="#syncfusionblazordatavizcommon">Syncfusion.Blazor.DataVizCommon</a></li>
+<li><a href="https://www.nuget.org/packages/Syncfusion.PdfExport.Net.Core/">Syncfusion.PdfExport.Net.Core</a> (Used since v19.1.0.54)</li>
 </ul>
 </td>
 </tr>
@@ -286,7 +288,10 @@ A Blazor Card is a small layout that shows a defined content in an organized str
 SfCard
 </td>
 <td>
-<a href="#syncfusionblazorcore">Syncfusion.Blazor.Core</a>
+<ul>
+<li><a href="#syncfusionblazorcore">Syncfusion.Blazor.Core</a></li>
+<li><a href="#syncfusionblazordata">Syncfusion.Blazor.Data</a> (Used since v19.1.0.54)</li>
+</ul>
 </td>
 </tr>
 </table>
@@ -478,6 +483,7 @@ The Blazor Diagram is used for visualization, design, and editing of interactive
 </td>
 <td>
 <ul>
+<li><a href="https://www.nuget.org/packages/Newtonsoft.Json/" target="_blank">Newtonsoft.Json</a> (Used since v19.4.0.38)</li>
 <li><a href="#syncfusionblazorcore">Syncfusion.Blazor.Core</a></li>
 <li><a href="#syncfusionblazordata">Syncfusion.Blazor.Data</a></li>
 <li><a href="#syncfusionblazornavigations">Syncfusion.Blazor.Navigations</a></li>
@@ -536,6 +542,7 @@ A package of Blazor Dropdown contains a collection of Dropdown components such a
 <li><a href="#syncfusionblazorbuttons">Syncfusion.Blazor.Buttons</a></li>
 <li><a href="#syncfusionblazordata">Syncfusion.Blazor.Data</a></li>
 <li><a href="#syncfusionblazorinputs">Syncfusion.Blazor.Inputs</a></li>
+<li><a href="#syncfusionblazornotifications">Syncfusion.Blazor.Notifications</a> (Used since v21.1.35)</li>
 <li><a href="#syncfusionblazorspinner">Syncfusion.Blazor.Spinner</a></li>
 </ul>
 </td>
@@ -625,7 +632,7 @@ SfGantt
 <li><a href="#syncfusionblazorcalendars">Syncfusion.Blazor.Calendars</a></li>
 <li><a href="#syncfusionblazordata">Syncfusion.Blazor.Data</a></li>
 <li><a href="#syncfusionblazordropdowns">Syncfusion.Blazor.DropDowns</a></li>
-<li><a href="#syncfusionblazorfilemanager">Syncfusion.Blazor.FileManager</a></li>
+<li><a href="#syncfusionblazorfilemanager">Syncfusion.Blazor.FileManager</a> (Used until v18.4.0.49)</li>
 <li><a href="#syncfusionblazorgrid">Syncfusion.Blazor.Grid</a></li>
 <li><a href="#syncfusionblazorinputs">Syncfusion.Blazor.Inputs</a></li>
 <li><a href="#syncfusionblazorlayouts">Syncfusion.Blazor.Layouts</a></li>
@@ -720,6 +727,9 @@ SfHeatMap
 <ul>
 <li><a href="#syncfusionblazorcore">Syncfusion.Blazor.Core</a></li>
 <li><a href="#syncfusionblazordata">Syncfusion.Blazor.Data</a></li>
+Syncfusion.Blazor.DataVizCommon
+<li><a href="#syncfusionblazordatavizcommon">Syncfusion.Blazor.DataVizCommon</a> (Used since v19.1.0.54)</li>
+<li><a href="https://www.nuget.org/packages/Syncfusion.PdfExport.Net.Core/" target="_blank">Syncfusion.PdfExport.Net.Core</a> (Used since v19.1.0.54)</li>
 </ul>
 </td>
 </tr>
@@ -905,7 +915,8 @@ SfKanban
 <li><a href="#syncfusionblazordata">Syncfusion.Blazor.Data</a></li>
 <li><a href="#syncfusionblazordropdowns">Syncfusion.Blazor.DropDowns</a></li>
 <li><a href="#syncfusionblazorinputs">Syncfusion.Blazor.Inputs</a></li>
-<li><a href="#syncfusionblazorlists">Syncfusion.Blazor.Lists</a></li>
+<li><a href="#syncfusionblazorlists">Syncfusion.Blazor.Lists</a> (Used until v19.2.0.62)</li>
+<li><a href="#syncfusionblazornavigations">Syncfusion.Blazor.Navigations</a> (Used until v19.3.0.43)</li>
 <li><a href="#syncfusionblazorpopups">Syncfusion.Blazor.Popups</a></li>
 <li><a href="#syncfusionblazorspinner">Syncfusion.Blazor.Spinner</a></li>
 </ul>
@@ -1129,9 +1140,11 @@ A package of Blazor navigation components such as Accordion, ContextMenu, Tabs, 
 <li><a href="#syncfusionblazorcore">Syncfusion.Blazor.Core</a></li>
 <li><a href="#syncfusionblazorbuttons">Syncfusion.Blazor.Buttons</a></li>
 <li><a href="#syncfusionblazordata">Syncfusion.Blazor.Data</a></li>
+<li><a href="#syncfusionblazordropdowns">Syncfusion.Blazor.DropDowns</a> (Used since v20.2.0.36)</li>
 <li><a href="#syncfusionblazorinputs">Syncfusion.Blazor.Inputs</a></li>
 <li><a href="#syncfusionblazorlists">Syncfusion.Blazor.Lists</a></li>
 <li><a href="#syncfusionblazorpopups">Syncfusion.Blazor.Popups</a></li>
+<li><a href="#syncfusionblazorspinner">Syncfusion.Blazor.Spinner</a> (Used since v19.3.0.43)</li> 
 </ul>
 </td>
 </tr>
@@ -1251,7 +1264,7 @@ SfPdfViewer
 </tr>
 <tr>
 <td>
-Syncfusion.Blazor.PdfViewerServer.Windows
+<a href="https://www.nuget.org/packages/Syncfusion.Blazor.PdfViewerServer.Windows">Syncfusion.Blazor.PdfViewerServer.Windows</a>
 </td>
 <td>
 <a href="https://blazor.syncfusion.com/documentation/pdfviewer/getting-started/server-side-application">PDF Viewer Server</a>
@@ -1261,7 +1274,9 @@ SfPdfViewerServer
 </td>
 <td>
 <ul>
+<li><a href="https://www.nuget.org/packages/Microsoft.Extensions.Caching.Memory/">Microsoft.Extensions.Caching.Memory</a></li>
 <li><a href="#syncfusionblazorpdfviewer">Syncfusion.Blazor.PdfViewer</a></li>
+<li><a href="https://www.nuget.org/packages/Syncfusion.PdfViewer.AspNet.Core.Windows/">Syncfusion.PdfViewer.AspNet.Core.Windows</a></li>
 </ul>
 </td>
 </tr>
@@ -1357,6 +1372,7 @@ The Blazor Pivot Table is a powerful control used to organize and summarize busi
 <ul>
 <li><a href="#syncfusionblazorcore">Syncfusion.Blazor.Core</a></li>
 <li><a href="#syncfusionblazorbuttons">Syncfusion.Blazor.Buttons</a></li>
+<li><a href="#syncfusionblazorcalendars">Syncfusion.Blazor.Calendars</a> (Used since v20.1.0.47)</li> 
 <li><a href="#syncfusionblazorcharts">Syncfusion.Blazor.Charts</a></li>
 <li><a href="#syncfusionblazordata">Syncfusion.Blazor.Data</a></li>
 <li><a href="#syncfusionblazordropdowns">Syncfusion.Blazor.DropDowns</a></li>
@@ -1669,6 +1685,8 @@ SfSmithChart
 <ul>
 <li><a href="#syncfusionblazorcore">Syncfusion.Blazor.Core</a></li>
 <li><a href="#syncfusionblazordata">Syncfusion.Blazor.Data</a></li>
+<li><a href="#syncfusionblazordatavizcommon">Syncfusion.Blazor.DataVizCommon</a> (Used since v19.1.0.54)</li>
+<li><a href="https://www.nuget.org/packages/Syncfusion.PdfExport.Net.Core/">Syncfusion.PdfExport.Net.Core</a> (Used since v19.1.0.54)</li>
 </ul>
 </td>
 </tr>
@@ -1707,6 +1725,8 @@ SfSparkline
 <ul>
 <li><a href="#syncfusionblazorcore">Syncfusion.Blazor.Core</a></li>
 <li><a href="#syncfusionblazordata">Syncfusion.Blazor.Data</a></li>
+<li><a href="#syncfusionblazordatavizcommon">Syncfusion.Blazor.DataVizCommon</a> (Used since v19.1.0.54)</li>
+<li><a href="#syncfusionblazorpopups">Syncfusion.Blazor.Popups</a> (Used since v19.2.0.48)</li>
 </ul>
 </td>
 </tr>
@@ -1828,11 +1848,11 @@ SfStockChart
 </td>
 <td>
 <ul>
-<li><a href="#syncfusionblazorcore">Syncfusion.Blazor.Core</a></li>
-<li><a href="#syncfusionblazorcalendars">Syncfusion.Blazor.Calendars</a></li>
-<li><a href="#syncfusionblazorcharts">Syncfusion.Blazor.Charts</a></li>
-<li><a href="#syncfusionblazornavigations">Syncfusion.Blazor.Navigations</a></li>
-<li><a href="#syncfusionblazorsplitbuttons">Syncfusion.Blazor.SplitButtons</a></li>
+<li><a href="#syncfusionblazorrangenavigator">Syncfusion.Blazor.RangeNavigator</a> (Used since v19.1.0.54)</li>
+<li><a href="#syncfusionblazorcalendars">Syncfusion.Blazor.Calendars</a> (Used until v18.4.0.49)</li>
+<li><a href="#syncfusionblazorcharts">Syncfusion.Blazor.Charts</a> (Used until v18.4.0.49)</li>
+<li><a href="#syncfusionblazornavigations">Syncfusion.Blazor.Navigations</a> (Used until v18.4.0.49)</li>
+<li><a href="#syncfusionblazorsplitbuttons">Syncfusion.Blazor.SplitButtons</a> (Used until v18.4.0.49)</li>
 </ul>
 </td>
 </tr>
@@ -1991,7 +2011,7 @@ The Blazor Word Processor (Document Editor) is a component with editing capabili
 </td>
 <td>
 <ul>
-<li><a href="https://www.nuget.org/packages/Newtonsoft.Json/" target="_blank">Newtonsoft.Json</a></li>
+<li><a href="https://www.nuget.org/packages/Newtonsoft.Json/" target="_blank">Newtonsoft.Json</a> (Used until v19.4.0.56)</li>
 <li><a href="#syncfusionblazorcore">Syncfusion.Blazor.Core</a></li>
 <li><a href="#syncfusionblazorcalendars">Syncfusion.Blazor.Calendars</a></li>
 <li><a href="#syncfusionblazorcharts">Syncfusion.Blazor.Charts</a></li>
@@ -1999,6 +2019,7 @@ The Blazor Word Processor (Document Editor) is a component with editing capabili
 <li><a href="#syncfusionblazordropdowns">Syncfusion.Blazor.DropDowns</a></li>
 <li><a href="#syncfusionblazornavigations">Syncfusion.Blazor.Navigations</a></li>
 <li><a href="https://www.nuget.org/packages/Syncfusion.WordProcessor.AspNet.Core/" target="_blank">Syncfusion.WordProcessor.AspNet.Core</a></li>
+<li><a href="https://www.nuget.org/packages/System.Text.Json/" target="_blank">System.Text.Json</a> (Used since v20.1.0.47)</li>
 </ul>
 </td>
 </tr>
