@@ -17,19 +17,19 @@ The Recurrence editor is integrated into Scheduler editor window by default, to 
 
 By default, there are 5 types of repeat options available in recurrence editor such as,
 
-* [Never](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.RepeatType.html#Syncfusion_Blazor_Schedule_RepeatType_None)
-* [Daily](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.RepeatType.html#Syncfusion_Blazor_Schedule_RepeatType_Daily)
-* [Weekly](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.RepeatType.html#Syncfusion_Blazor_Schedule_RepeatType_Weekly)
-* [Monthly](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.RepeatType.html#Syncfusion_Blazor_Schedule_RepeatType_Monthly)
-* [Yearly](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.RepeatType.html#Syncfusion_Blazor_Schedule_RepeatType_Yearly)
+* Never
+* Daily
+* Weekly
+* Monthly
+* Yearly
 
-It is possible to customize the recurrence editor to display only the specific repeat options such as `Daily` and `Weekly` options alone by setting the appropriate [Frequencies](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfRecurrenceEditor.html#Syncfusion_Blazor_Schedule_SfRecurrenceEditor_Frequencies) option.
+It is possible to customize the recurrence editor to display only the specific repeat options such as `Daily` and `Weekly` options alone by setting the appropriate `Frequencies` option.
 
 ```cshtml
 @using Syncfusion.Blazor.Schedule
-
+<div>
 <SfRecurrenceEditor Frequencies="@Repeats"></SfRecurrenceEditor>
-
+</div>
 @code {
     List<RepeatType> Repeats = new List<RepeatType>()
     {
@@ -54,21 +54,21 @@ The other properties available in the recurrence editor are tabulated below,
 | EndTypes | List<EndType> | Sets the types that can be used to define the end condition for a recurrence editor. |
 | Frequencies | List<RepeatType> | Sets the recurrence pattern on the editor. |
 
-## Customizing the end type option in Editor
+## Customizing the End Type Option in Editor
 
 By default, there are 3 types of end options available in the recurrence editor such as:
 
-* [Never](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.EndType.html#Syncfusion_Blazor_Schedule_EndType_Never)
-* [Until](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.EndType.html#Syncfusion_Blazor_Schedule_EndType_Until)
-* [Count](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.EndType.html#Syncfusion_Blazor_Schedule_EndType_Count)
+* Never
+* Until
+* Count
 
-It is possible to customize the recurrence editor to display only the specific end options, such as the `Until` and `Count` options alone, by setting the appropriate [EndTypes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfRecurrenceEditor.html#Syncfusion_Blazor_Schedule_SfRecurrenceEditor_EndTypes) option.
+It is possible to customize the recurrence editor to display only the specific end options, such as the `Until` and `Count` options alone, by setting the appropriate `EndTypes` option.
 
 ```cshtml
 @using Syncfusion.Blazor.Schedule
-
+<div>
 <SfRecurrenceEditor EndTypes="@Endtypes"></SfRecurrenceEditor>
-
+</div>
 @code {
     List<EndType> Endtypes = new List<EndType>()
     {
@@ -81,11 +81,24 @@ It is possible to customize the recurrence editor to display only the specific e
 
 The recurrence rule is usually generated based on the options selected from the recurrence editor and also it follows the [`iCalendar`](https://tools.ietf.org/html/rfc5545#section-3.3.10) specifications. The generated recurrence rule string is a valid one to be used with the Scheduler event’s recurrence rule field.
 
-There is a [ValueChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfRecurrenceEditor.html#Syncfusion_Blazor_Schedule_SfRecurrenceEditor_ValueChanged) event available in recurrence editor, that triggers on every time the fields of recurrence editor tends to change. Within this event argument, you can access the generated recurrence value through the [Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfRecurrenceEditor.html#Syncfusion_Blazor_Schedule_SfRecurrenceEditor_Value) option as shown in the following code example.
+There is a `ValueChanged` event available in recurrence editor, that triggers on every time the fields of recurrence editor tends to change. Within this event argument, you can access the generated recurrence value through the `value` option as shown in the following code example.
 
 ```cshtml
 <div class="recurrence-editor-wrap">
     <div style="padding-bottom: 15px;">
+        <label>Rule Output</label>
+        <div class="rule-output-container">
+            <div id="rule-output">
+                @if (RecurrenceRule == "")
+                {
+                    <text>Select Rule</text>
+                }
+                else
+                {
+                    <text>@RecurrenceRule</text>
+                }
+            </div>
+        </div>
     </div>
     <div>
         <SfRecurrenceEditor Value="@RecurrenceRule" ValueChanged="HandleRecurrenceEditorChange"></SfRecurrenceEditor>
@@ -104,12 +117,25 @@ There is a [ValueChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
     .recurrence-editor-wrap {
         margin: 0 25%;
     }
+
+    .rule-output-container {
+        height: auto;
+        border: 1px solid #969696;
+    }
+
+    #rule-output {
+        padding: 8px 4px;
+        text-align: center;
+        min-height: 20px;
+        overflow: hidden;
+        overflow-wrap: break-word;
+    }
 </style>
 ```
 
 ## Set a specific value on recurrence editor
 
-It is possible to display the recurrence editor with specific options loaded initially, based on the rule string that we provide. The fields of recurrence editor will change its values accordingly, when we provide a particular rule through the [SetRecurrenceRule](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfRecurrenceEditor.html#Syncfusion_Blazor_Schedule_SfRecurrenceEditor_SetRecurrenceRule_System_String_System_Nullable_System_DateTime__) method.
+It is possible to display the recurrence editor with specific options loaded initially, based on the rule string that we provide. The fields of recurrence editor will change its values accordingly, when we provide a particular rule through the `SetRecurrenceRule` method.
 
 ```cshtml
 @using Syncfusion.Blazor.Schedule
@@ -171,7 +197,7 @@ It is possible to display the recurrence editor with specific options loaded ini
 
 ## Recurrence date generation
 
-You can parse the `RecurrenceRule` of an event to generate the date instances on which that particular event is going to occur, using the [GetRecurrenceDates](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfRecurrenceEditor.html#Syncfusion_Blazor_Schedule_SfRecurrenceEditor_GetRecurrenceDates_System_DateTime_System_String_System_String_System_Nullable_System_Int32__System_Nullable_System_DateTime__) method. It generates the dates based on the `RecurrenceRule` that we provide. The parameters to be provided for `GetRecurrenceDates` method are as follows.
+You can parse the `RecurrenceRule` of an event to generate the date instances on which that particular event is going to occur, using the `GetRecurrenceDates` method. It generates the dates based on the `RecurrenceRule` that we provide. The parameters to be provided for `GetRecurrenceDates` method are as follows.
 
 | Field name | Type | Description |
 |------------|------|-------------|
@@ -214,7 +240,7 @@ You can parse the `RecurrenceRule` of an event to generate the date instances on
 
     private async Task GetRecurrenceDates()
     {
-        List < DateTime > dates = RecurrenceEditorRef.GetRecurrenceDates(new DateTime(2023, 7, 7, 10, 0, 0), "FREQ=DAILY;INTERVAL=1", "20230708T114224Z,20230710T114224Z", 4);
+        List < DateTime > dates = RecurrenceEditorRef.GetRecurrenceDates(new DateTime(2018, 1, 7, 10, 0, 0), "FREQ=DAILY;INTERVAL=1", "20180108T114224Z,20180110T114224Z", 4);
         RecurrenceDates = dates.ToList();
         StateHasChanged();
     }
@@ -239,15 +265,17 @@ You can parse the `RecurrenceRule` of an event to generate the date instances on
 ```
 
 
-> Above example will generate two dates July 7, 2023 & July 9 2023 by excluding the in between dates July 8 2018 & July 10 2018, since those dates were given in the exclusion list. Generated dates can then be utilised to create appointments.
+> Above example will generate two dates January 7, 2018 & January 9 2018 by excluding the in between dates January 8 2018 & January 10 2018, since those dates were given in the exclusion list. Generated dates can then be utilised to create appointments.
 
 ## Recurrence date generation in server-side
 
 It is also possible to generate recurrence date instances from server-side by manually referring the `RecurrenceHelper` class, which is specifically written and referred from application end to handle this date generation process.
 
+> Refer [here](https://www.syncfusion.com/kb/10009/how-to-parse-the-recurrencerule-at-server-side) for the step by step procedure to achieve date generation in server-side.
+
 ## Restrict date generation with specific count
 
-In case, if the rule is given in "NEVER ENDS" category, then you can mention the maximum count when you actually want to stop the date generation starting from the provided start date. To do so, provide the appropriate `maximumCount` value within the [GetRecurrenceDates](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfRecurrenceEditor.html#Syncfusion_Blazor_Schedule_SfRecurrenceEditor_GetRecurrenceDates_System_DateTime_System_String_System_String_System_Nullable_System_Int32__System_Nullable_System_DateTime__) method as shown in the following code example.
+In case, if the rule is given in "NEVER ENDS" category, then you can mention the maximum count when you actually want to stop the date generation starting from the provided start date. To do so, provide the appropriate `maximumCount` value within the `GetRecurrenceDates` method as shown in the following code example.
 
 ```cshtml
 @using Syncfusion.Blazor.Schedule
@@ -280,7 +308,7 @@ In case, if the rule is given in "NEVER ENDS" category, then you can mention the
     }
     private async Task GetRecurrenceDates()
     {
-        List < DateTime > dates = RecurrenceEditorRef.GetRecurrenceDates(new DateTime(2023, 7, 7, 10, 0, 0), "FREQ=DAILY;INTERVAL=1", "20230708T114224Z,20230710T114224Z", 10);
+        List < DateTime > dates = RecurrenceEditorRef.GetRecurrenceDates(new DateTime(2018, 1, 7, 10, 0, 0), "FREQ=DAILY;INTERVAL=1", "20180108T114224Z,20180110T114224Z", 10);
         RecurrenceDates = dates.ToList();
         StateHasChanged();
     }
