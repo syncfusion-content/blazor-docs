@@ -16,9 +16,7 @@ The SfPdfViewer control provides the options to add, edit and delete the free te
 The free text annotations can be added to the PDF document using the annotation toolbar.
 
 * Click the **Edit Annotation** button in the SfPdfViewer toolbar. A toolbar appears below it. 
-
 * Select the **Free Text Annotation** button in the annotation toolbar. It enables the Free Text Annotation mode.
-
 * You can add the text over the pages of the PDF document.
 
 In the pan mode, if the free text annotation mode is entered, the SfPdfViewer control will switch to text select mode.
@@ -31,17 +29,15 @@ In the pan mode, if the free text annotation mode is entered, the SfPdfViewer co
 @using Syncfusion.Blazor.SfPdfViewer
 
 <SfButton OnClick="OnClick">Free Text</SfButton>
-
 <SfPdfViewer2 @ref="viewer" DocumentPath=@DocumentPath Height="100%" Width="100%" ></SfPdfViewer2>
 
 @code {
     SfPdfViewer2 viewer;
-
     private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
 
-    public void OnClick(MouseEventArgs args)
+    public async void OnClick(MouseEventArgs args)
     {
-        viewer.SetAnnotationMode(AnnotationType.FreeText);
+        await viewer.SetAnnotationModeAsync(AnnotationType.FreeText);
     }
 }
 
@@ -120,7 +116,6 @@ FreeTextSettings=@FreeTextSettings></SfPdfViewer2>
 
 @code {
     SfPdfViewer2 viewer;
-    
     private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
     
     PdfViewerFreeTextSettings FreeTextSettings = new PdfViewerFreeTextSettings 
