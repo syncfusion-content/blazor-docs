@@ -727,7 +727,6 @@ SfHeatMap
 <ul>
 <li><a href="#syncfusionblazorcore">Syncfusion.Blazor.Core</a></li>
 <li><a href="#syncfusionblazordata">Syncfusion.Blazor.Data</a></li>
-Syncfusion.Blazor.DataVizCommon
 <li><a href="#syncfusionblazordatavizcommon">Syncfusion.Blazor.DataVizCommon</a> (Used since v19.1.0.54)</li>
 <li><a href="https://www.nuget.org/packages/Syncfusion.PdfExport.Net.Core/" target="_blank">Syncfusion.PdfExport.Net.Core</a> (Used since v19.1.0.54)</li>
 </ul>
