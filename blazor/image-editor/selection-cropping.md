@@ -8,9 +8,9 @@ documentation: ug
 ---
 
 
-# Selection cropping in Image editor component
+# Selection cropping in the Blazor Image Editor Component
 
-The cropping feature in the Image Editor allows you to select and crop specific regions of an image. It offers different selection options, including custom shapes, squares, circles, and various aspect ratios such as 3:2, 4:3, 5:4, 7:5, and 16:9. 
+The cropping feature in the Blazor Image Editor allows you to select and crop specific regions of an image. It offers different selection options, including custom shapes, squares, circles, and various aspect ratios such as 3:2, 4:3, 5:4, 7:5, and 16:9. 
 
 To perform a selection, you can use the [`SelectAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_SelectAsync_System_String_System_Nullable_System_Double__System_Nullable_System_Double__System_Nullable_System_Double__System_Nullable_System_Double__) method, which allows you to define the desired selection area within the image. Once the selection is made, you can then use the [`CropAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_CropAsync) method to crop the image based on the selected region. This enables you to extract and focus on specific parts of the image while discarding the rest.
 
@@ -100,6 +100,55 @@ Here is an example of ratio selection using the [`SelectAsync`](https://help.syn
 
 ![Blazor Image Editor with Ratio select](./images/blazor-image-editor-custom-ratio.png)
 
+## Resize selections
+
+The selection region can be changed programmatically by using [`OnSelectionResizeStart`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.ImageEditorEvents.html#Syncfusion_Blazor_ImageEditor_ImageEditorEvents_OnSelectionResizeStart) and [`OnSelectionResizeEnd`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.ImageEditorEvents.html#Syncfusion_Blazor_ImageEditor_ImageEditorEvents_OnSelectionResizeEnd) event. This event is activated during resizing the selection using mouse, and it allows for alterations to the selection region by adjusting the specified properties. 
+
+The [`SelectionChangeEventArgs`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SelectionChangeEventArgs.html) is used in these events to customize the selection and it has the following parameters.
+
+SelectionChangeEventArgs.Action - The type of action such as inserting or resizing 
+
+SelectionChangeEventArgs.Cancel - Specifies to cancel the selection. 
+
+SelectionChangeEventArgs.CurrentSelectionPoint - Represents all the details of the selection including its type, position, width, and height after the current action as [`CropSelectionSettings'](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.CropSelectionSettings.html). 
+
+SelectionChangeEventArgs.PreviousSelectionPoint - Represents all the details of the selection including its type, position, width, and height before this current action as [`CropSelectionSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.CropSelectionSettings.html) 
+
+Here is an example of changing the selection region using the [`SelectionChangeEventArgs`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SelectionChangeEventArgs.html) event.
+
+```cshtml
+@using Syncfusion.Blazor.ImageEditor
+
+<SfImageEditor @ref="ImageEditor" Height="400" Toolbar="customToolbarItem">
+    <ImageEditorEvents Created="OpenAsync" OnSelectionResizeStart="OnSelectionResizeStart"></ImageEditorEvents>
+</SfImageEditor>
+
+@code {
+    SfImageEditor ImageEditor;
+    private List<ImageEditorToolbarItemModel> customToolbarItem = new List<ImageEditorToolbarItemModel>()
+    {
+        new ImageEditorToolbarItemModel { Name = "Crop" },
+        new ImageEditorToolbarItemModel { Name = "Reset" },
+        new ImageEditorToolbarItemModel { Name = "Confirm" }
+    };
+
+    private async void OpenAsync()
+    {
+        await ImageEditor.OpenAsync("nature.png");
+    }
+
+    private void OnSelectionResizeStart(SelectionChangeEventArgs args)
+    {
+        if (args.CurrentSelectionSettings.Type == "Custom")
+        {
+            args.CurrentSelectionSettings.Height = 200;
+        }
+    }
+}
+```
+
+![Blazor Image Editor with Resize the custom selection](./images/blazor-image-editor-resize-selection.png)
+
 ## Crop an image
 
 The [`CropAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_CropAsync) method allows cropping based on the selected region. Here is an example of cropping the selection region using the [`CropAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_CropAsync) method. 
@@ -138,7 +187,7 @@ Here is an example of circle cropping using the [`SelectAsync`](https://help.syn
 
 ## Cropping event
 
-The [`Cropping`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.ImageEditorEvents.html#Syncfusion_Blazor_ImageEditor_ImageEditorEvents_Cropping) event is triggered when performing cropping on the image. This event is passed an object that contains information about the cropping event, such as the start and end point of the selection region. 
+The [`Cropping`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.ImageEditorEvents.html#Syncfusion_Blazor_ImageEditor_ImageEditorEvents_Cropping) event is triggered when performing cropping on the image. This event is passed an object that contains information about the cropping event, such as the start and end point of the selection region. And this event uses [`CropEventArgs`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.CropEventArgs.html) to handle the cropping action. 
 
 The parameter available in the [`Cropping`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.ImageEditorEvents.html#Syncfusion_Blazor_ImageEditor_ImageEditorEvents_Cropping) event is,
 

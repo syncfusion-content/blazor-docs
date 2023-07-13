@@ -7,7 +7,7 @@ control: Image Editor
 documentation: ug
 ---
 
-# End-user capabilities in Image Editor component
+# End-user capabilities in the Blazor Image Editor component
 
 The following operations are available for end-users and the same is explained briefly in these sections.
 
@@ -35,8 +35,6 @@ Image zooming can be performed in the following ways.
 
 * Using keyboard.
 
-![Blazor Image Editor with Zoom In/ Out an image showcase](./images/blazor-image-editor-zoom.gif)
-
 ### Using toolbar
 
 To zoom in or out the image in the image editor, do the following steps.
@@ -51,7 +49,7 @@ To zoom in or out the image in the image editor, do the following steps.
 
 * Zoom in and out controlled by touch gestures.
 
-### Using Mouse wheel
+### Using mouse wheel
 
 To zoom in or out the image in the image editor, do the following steps.
 
@@ -67,6 +65,8 @@ To zoom in or out the image in the image editor, do the following steps.
 
 * Press the ctrl key with ‘-’ button from the keyboard to zoom out an image.
 
+![Blazor Image Editor with Zoom In/ Out an image showcase](./images/blazor-image-editor-zoom.gif)
+
 ## Panning
 
 To pan an image in the image editor, do the following steps.
@@ -81,7 +81,7 @@ To pan an image in the image editor, do the following steps.
 
 ![Blazor Image Editor with Panning an image showcase](./images/blazor-image-editor-pan.gif)
 
-## Cropping and Image Transformation
+## Cropping and image transformation
 
 To crop an image in the image editor, do the following steps.
 
@@ -111,17 +111,17 @@ To add annotations to an image in the image editor, do the following steps.
 
 * Customize the annotations by changing their color, stroke width, font family, and font size through the contextual toolbar. The contextual toolbar will be enabled whenever the annotations are selected.
 
-* When annotations are selected in the Image Editor, the quick access toolbar becomes active, providing convenient access to various actions such as duplicating, deleting, or editing text associated with the selected annotation. This toolbar enables users to perform these common operations quickly and efficiently, streamlining their workflow and enhancing the overall editing experience.
+* When annotations are selected in the image editor, the quick access toolbar becomes active, providing convenient access to various actions such as duplicating, deleting, or editing text associated with the selected annotation. This toolbar enables users to perform these common operations quickly and efficiently, streamlining their workflow and enhancing the overall editing experience.
 
 ![Blazor Image Editor with annotation showcase](./images/blazor-image-editor-annotation.gif)
 
-## Filtering and fine tune
+## Filtering and fine-tune
 
-To perform finetuning on an image in the image editor, do the following steps.
+To perform fine-tuning on an image in the image editor, do the following steps.
 
-* Click the finetune button which displays the list of finetuning available in the image editor.
+* Click the fine-tune button which displays the list of fine-tuning available in the image editor.
 
-* Click one of the finetune options from the list of options which shows a slider to adjust the corresponding filter.
+* Click one of the fine-tune options from the list of options which shows a slider to adjust the corresponding filter.
 
 * Click on the canvas or tick icon at the right corner of the toolbar in the image editor to apply the modifications.
 
@@ -133,11 +133,11 @@ To apply filters on an image in the image editor, do the following steps.
 
 * Click on the canvas or tick icon at the right corner of the toolbar in the image editor to apply the modifications.
 
-![Blazor Image Editor with Filtering and finetune showcase](./images/blazor-image-editor-filter-finetune.gif)
-
 Note:
 
-The Filters and Finetunes feature are not accessible within Safari due to compatibility limitations.
+The Filters and Fine-tunes feature are not accessible within Safari due to compatibility limitations.
+
+![Blazor Image Editor with Filtering and finetune showcase](./images/blazor-image-editor-filter-finetune.gif)
 
 ## Undo and redo the operations
 
@@ -148,6 +148,8 @@ To undo and redo the actions performed in an image editor, do the following step
 * The redo button will be enabled once the undo action is performed in an image editor.
 
 * Click the undo or redo button at the left side of the toolbar to perform undo and redo operation.
+
+* Ctrl + Z and Ctrl + Y facilitates this process by allowing users to undo and redo actions, respectively.
 
 ![Blazor Image Editor with Undo and redo showcase](./images/blazor-image-editor-undo-redo.gif)
 
@@ -166,6 +168,8 @@ To revert all the changes done in an image editor, do the following steps.
 To save the modified image in an image editor, do the following steps.
 
 * Click the save button which is located on the right side of the toolbar.
+
+* Ctrl + S facilitates this process by providing users with the ability to save the image.
 
 * Select the type of file to be saved from the popup to save with current modification done in an image.
 

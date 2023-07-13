@@ -7,19 +7,19 @@ control: Image Editor
 documentation: ug
 ---
 
-# Annotation in Image editor component
+# Annotations in the Blazor Image Editor component
 
 The [Blazor Image Editor](https://www.syncfusion.com/blazor-components/blazor-image-editor) component allows adding annotations to the image, including text, freehand drawings, and shapes like rectangles, ellipses, arrows, paths, and lines. This gives the flexibility to mark up the image with notes, sketches, and other visual elements as needed. These annotation tools can help to communicate and share ideas more effectively.
 
 ## Text annotation
 
-The Text annotation feature in the Image Editor provides the capability to add and customize labels, captions, and other text elements directly onto the image. With this feature, you can easily insert text at specific locations within the image and customize various aspects of the text to meet your requirements.
+Text annotation feature in the Blazor Image Editor component provides the capability to add and customize labels, captions, and other text elements directly onto the image. With this feature, you can easily insert text at specific locations within the image and customize various aspects of the text to meet your requirements.
 
 You have control over the customization options including text content, font family, font style and font size for the text annotation.
 
 ### Add a text
 
-The [`DrawTextAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_DrawTextAsync_System_Nullable_System_Double__System_Nullable_System_Double__System_String_System_String_System_Nullable_System_Int32__System_Boolean_System_Boolean_System_String_) method in the Image Editor allows you to insert a text annotation into the image with specific customization options. This method accepts the following parameters:
+The [`DrawTextAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_DrawTextAsync_System_Nullable_System_Double__System_Nullable_System_Double__System_String_System_String_System_Nullable_System_Int32__System_Boolean_System_Boolean_System_String_) method in the Blazor Image Editor component allows you to insert a text annotation into the image with specific customization options. This method accepts the following parameters:
 
 * x - Specifies the x-coordinate of the text, determining its horizontal position within the image.
 
@@ -73,9 +73,9 @@ In the following example, you can using the DrawTextAsync method in the button c
 
 ![Blazor Image Editor with Draw text an image](./images/blazor-image-editor-draw-text.png)
 
-### Multiline Text
+### Multiline text
 
-The [`DrawTextAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_DrawTextAsync_System_Nullable_System_Double__System_Nullable_System_Double__System_String_System_String_System_Nullable_System_Int32__System_Boolean_System_Boolean_System_String_) method in the Image Editor component is commonly used to insert text annotations into an image. If the provided text parameter contains a newline character (\n), the text will be automatically split into multiple lines, with each line appearing on a separate line in the annotation. 
+The [`DrawTextAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_DrawTextAsync_System_Nullable_System_Double__System_Nullable_System_Double__System_String_System_String_System_Nullable_System_Int32__System_Boolean_System_Boolean_System_String_) method in the Blazor Image Editor component is commonly used to insert text annotations into an image. If the provided text parameter contains a newline character (\n), the text will be automatically split into multiple lines, with each line appearing on a separate line in the annotation. 
 
 Here is an example of adding a multiline text in a button click using [`DrawTextAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_DrawTextAsync_System_Nullable_System_Double__System_Nullable_System_Double__System_String_System_String_System_Nullable_System_Int32__System_Boolean_System_Boolean_System_String_) method.
 
@@ -109,11 +109,13 @@ Here is an example of adding a multiline text in a button click using [`DrawText
 
 ![Blazor Image Editor with Draw multiline text an image](./images/blazor-image-editor-draw-multiline-text.png)
 
-### Delete Text
+### Delete a text
 
-The Image Editor component provides the [`DeleteShapeAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_DeleteShapeAsync_System_String_) method, which allows you to remove a text annotation from the image editor. To use this method, you need to pass the shapeId of the annotation as a parameter. 
+The [`DeleteShapeAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_DeleteShapeAsync_System_String_) method allows you to remove a text annotation from the Blazor Image Editor component. To use this method, you need to pass the [`ID`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.ShapeSettings.html#Syncfusion_Blazor_ImageEditor_ShapeSettings_ID) of the annotation as a parameter. 
 
-The shapeId is a unique identifier assigned to each text annotation within the image editor. It serves as a reference to a specific annotation, enabling targeted deletion of the desired text element. By specifying the shapeId associated with the text annotation you want to remove, you can effectively delete it from the image editor. 
+The [`ID`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.ShapeSettings.html#Syncfusion_Blazor_ImageEditor_ShapeSettings_ID) is a unique identifier assigned to each text annotation within the Blazor Image Editor. It serves as a reference to a specific annotation, enabling targeted deletion of the desired text element. By specifying the [`ID`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.ShapeSettings.html#Syncfusion_Blazor_ImageEditor_ShapeSettings_ID) associated with the text annotation you want to remove, you can effectively delete it from the image editor.
+
+To retrieve the inserted text annotations, you can utilize the [`GetShapesAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_GetShapesAsync) method, which provides a collection of annotations represented by [`ShapeSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.ShapeSettings.html). This method allows you to access and work with the annotations that have been inserted into the image.
 
 Here is an example of deleting a text in a button click using [`DeleteShapeAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_DeleteShapeAsync_System_String_) method. 
 
@@ -153,13 +155,13 @@ Here is an example of deleting a text in a button click using [`DeleteShapeAsync
 
 ![Blazor Image Editor with Delete text an image](./images/blazor-image-editor-delete-text.png)
 
-### Customize font family and text color 
+### Customize a text color 
 
-The [ShapeChanging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.ImageEditorEvents.html#Syncfusion_Blazor_ImageEditor_ImageEditorEvents_ShapeChanging) event in the Image Editor component is triggered when a text annotation is being modified or changed through the toolbar interaction. This event provides an opportunity to make alterations to the text's color and font family by adjusting the relevant properties. 
+The [ShapeChanging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.ImageEditorEvents.html#Syncfusion_Blazor_ImageEditor_ImageEditorEvents_ShapeChanging) event in the Blazor Image Editor component is triggered when a text annotation is being modified or changed through the toolbar interaction. This event provides an opportunity to make alterations to the text's color and font family by adjusting the relevant properties. 
 
 By leveraging the [ShapeChanging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.ImageEditorEvents.html#Syncfusion_Blazor_ImageEditor_ImageEditorEvents_ShapeChanging) event, you can enhance the customization options for text annotations and provide a more tailored and interactive experience within the Image Editor component. 
 
-Here is an example of changing the text’s color and its font family using the [ShapeChanging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.ImageEditorEvents.html#Syncfusion_Blazor_ImageEditor_ImageEditorEvents_ShapeChanging) event.
+Here is an example of changing the text color using the [ShapeChanging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.ImageEditorEvents.html#Syncfusion_Blazor_ImageEditor_ImageEditorEvents_ShapeChanging) event.
 
 ```cshtml
 @using Syncfusion.Blazor.ImageEditor
@@ -196,13 +198,13 @@ Here is an example of changing the text’s color and its font family using the 
         
 ## Freehand drawing
 
-The [`EnableFreehandDrawAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_EnableFreehandDrawAsync_System_Boolean_) Draw annotation tool in the Image Editor component is a versatile feature that allows users to draw and sketch directly on the image using mouse or touch input. This tool provides a flexible and creative way to add freehand drawings or annotations to the image. 
+The Freehand Draw annotation tool in the Blazor Image Editor component is a versatile feature that allows users to draw and sketch directly on the image using mouse or touch input. This tool provides a flexible and creative way to add freehand drawings or annotations to the image. 
 
-To enable or disable the freehand drawing option, the Image Editor component provides two methods: 
+To enable or disable the freehand drawing option, the Blazor Image Editor component provides two methods: 
 
-EnableFreehandDrawAsync: This method is used to enable the freehand drawing option in the Image Editor. Once enabled, users can start drawing freely on the image using their mouse or touch input. 
+[`EnableFreehandDrawAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_EnableFreehandDrawAsync_System_Boolean_): This method is used to enable the freehand drawing option in the Image Editor. Once enabled, users can start drawing freely on the image using their mouse or touch input. 
 
-DisableFreehandDrawAsync: This method is used to disable the freehand drawing option in the Image Editor. When disabled, users will no longer be able to perform freehand drawings on the image. 
+[`DisableFreehandDrawAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_DisableFreehandDrawAsync_System_Boolean_): This method is used to disable the freehand drawing option in the Image Editor. When disabled, users will no longer be able to perform freehand drawings on the image. 
 
 Here is an example of using the [`EnableFreehandDrawAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_EnableFreehandDrawAsync_System_Boolean_) and [`DisableFreehandDrawAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_DisableFreehandDrawAsync_System_Boolean_) methods in a button click event. 
 
@@ -241,11 +243,11 @@ Here is an example of using the [`EnableFreehandDrawAsync`](https://help.syncfus
 
 ![Blazor Image Editor with Freehandraw](./images/blazor-image-editor-Freehanddraw.png)
 
-### Adjust the stroke width and color 
+### Adjust a stroke width and color
 
-The [ShapeChanging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.ImageEditorEvents.html#Syncfusion_Blazor_ImageEditor_ImageEditorEvents_ShapeChanging) event in the Image Editor component is triggered when a freehand annotation is being modified or changed through the toolbar interaction. This event provides an opportunity to make alterations to the freehand annotation’s color and stroke width by adjusting the relevant properties. 
+The [ShapeChanging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.ImageEditorEvents.html#Syncfusion_Blazor_ImageEditor_ImageEditorEvents_ShapeChanging) event in the Blazor Image Editor component is triggered when a freehand annotation is being modified or changed through the toolbar interaction. This event provides an opportunity to make alterations to the freehand annotation’s color and stroke width by adjusting the relevant properties.
 
-By leveraging the [ShapeChanging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.ImageEditorEvents.html#Syncfusion_Blazor_ImageEditor_ImageEditorEvents_ShapeChanging) event, you can enhance the customization options for freehand annotations and provide a more tailored and interactive experience within the Image Editor component. 
+By leveraging the [ShapeChanging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.ImageEditorEvents.html#Syncfusion_Blazor_ImageEditor_ImageEditorEvents_ShapeChanging) event, you can enhance the customization options for freehand annotations and provide a more tailored and interactive experience within the Blazor Image Editor component.
 
 Here is an example of changing the freehand draw stroke width and color using the [ShapeChanging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.ImageEditorEvents.html#Syncfusion_Blazor_ImageEditor_ImageEditorEvents_ShapeChanging) event.
 
@@ -284,11 +286,13 @@ Here is an example of changing the freehand draw stroke width and color using th
 
 ![Blazor Image Editor with Adjust the stroke width and color](./images/blazor-image-editor-adjust-stroke-color.png)
 
-### Delete Freehand drawing
+### Delete a freehand drawing
 
-The Image Editor component provides the [`DeleteShapeAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_DeleteShapeAsync_System_String_) method, which allows you to remove a freehand annotation from the image editor. To use this method, you need to pass the shapeId of the annotation as a parameter. 
+The [`DeleteShapeAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_DeleteShapeAsync_System_String_) method allows you to remove a freehand annotation from the Blazor Image Editor component. To use this method, you need to pass the [`ID`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.ShapeSettings.html#Syncfusion_Blazor_ImageEditor_ShapeSettings_ID) of the annotation as a parameter. 
 
-The shapeId is a unique identifier assigned to each freehand annotation within the image editor. It serves as a reference to a specific annotation, enabling targeted deletion of the desired annotation. By specifying the shapeId associated with the freehand annotation you want to remove, you can effectively delete it from the image editor. 
+The [`ID`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.ShapeSettings.html#Syncfusion_Blazor_ImageEditor_ShapeSettings_ID) is a unique identifier assigned to each freehand annotation within the Blazor Image Editor. It serves as a reference to a specific annotation, enabling targeted deletion of the desired text element. By specifying the [`ID`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.ShapeSettings.html#Syncfusion_Blazor_ImageEditor_ShapeSettings_ID) associated with the text annotation you want to remove, you can effectively delete it from the image editor.
+
+To retrieve the inserted freehand drawings, you can utilize the [`GetShapesAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_GetShapesAsync) method, which provides a collection of annotations represented by [`ShapeSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.ShapeSettings.html). This method allows you to access and work with the annotations that have been inserted into the image.
 
 Here is an example of deleting a freehand annotation in a button click using [`DeleteShapeAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_DeleteShapeAsync_System_String_) method. 
 
@@ -330,11 +334,11 @@ Here is an example of deleting a freehand annotation in a button click using [`D
 
 ## Shape Annotation
 
-The Image Editor component provides the ability to add shape annotations to an image. These shape annotations include rectangles, ellipses, arrows, paths, and lines, allowing you to highlight, emphasize, or mark specific areas or elements within the image. 
+The Blazor Image Editor component provides the ability to add shape annotations to an image. These shape annotations include rectangles, ellipses, arrows, paths, and lines, allowing you to highlight, emphasize, or mark specific areas or elements within the image.
 
 ### Add a rectangle /ellipse / line / arrow / path
 
-The Image Editor component provides two ways to add rectangle annotations to an image: using the toolbar or the [`DrawRectangleAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_DrawRectangleAsync_System_Nullable_System_Double__System_Nullable_System_Double__System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_System_Int32__System_String_System_String_) method. Rectangle annotations are valuable tools for highlighting, emphasizing, or marking specific areas of an image to draw attention or provide additional context. 
+The [`DrawRectangleAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_DrawRectangleAsync_System_Nullable_System_Double__System_Nullable_System_Double__System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_System_Int32__System_String_System_String_) method is used to draw rectangle in the Blazor Image Editor component. Rectangle annotations are valuable tools for highlighting, emphasizing, or marking specific areas of an image to draw attention or provide additional context.
 
 The [`DrawRectangleAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_DrawRectangleAsync_System_Nullable_System_Double__System_Nullable_System_Double__System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_System_Int32__System_String_System_String_) method in the Image Editor component takes seven parameters to define the properties of the rectangle annotation: 
 
@@ -352,7 +356,7 @@ The [`DrawRectangleAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blaz
 
 * fillColor: Specifies the fill color of the rectangle.
 
-The Image Editor component offers two methods to add ellipse annotations to an image: utilizing the toolbar or using the [`DrawEllipseAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_DrawEllipseAsync_System_Nullable_System_Double__System_Nullable_System_Double__System_Nullable_System_Double__System_Nullable_System_Double__System_Nullable_System_Double__System_String_System_String_) method. Ellipse annotations are valuable for highlighting, emphasizing, or marking specific areas of an image.
+The [`DrawEllipseAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_DrawEllipseAsync_System_Nullable_System_Double__System_Nullable_System_Double__System_Nullable_System_Double__System_Nullable_System_Double__System_Nullable_System_Double__System_String_System_String_) method in the Blazor Image Editor component is used to draw an ellipse. Ellipse annotations are valuable for highlighting, emphasizing, or marking specific areas of an image.
 
 The [`DrawEllipseAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_DrawEllipseAsync_System_Nullable_System_Double__System_Nullable_System_Double__System_Nullable_System_Double__System_Nullable_System_Double__System_Nullable_System_Double__System_String_System_String_) method in the Image Editor component takes seven parameters to define the properties of the ellipse annotation: 
 
@@ -370,52 +374,52 @@ The [`DrawEllipseAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
 
 * fillColor: Specifies the fill color of the ellipse. 
 
-The Image Editor component offers two methods to add line annotations to an image: utilizing the toolbar or using the [`DrawLineAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_DrawLineAsync_System_Nullable_System_Double__System_Nullable_System_Double__System_Nullable_System_Double__System_Nullable_System_Double__System_Nullable_System_Double__System_String_) method. Line annotations are valuable for highlighting, emphasizing, or marking specific areas of an image. 
+The [`DrawLineAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_DrawLineAsync_System_Nullable_System_Double__System_Nullable_System_Double__System_Nullable_System_Double__System_Nullable_System_Double__System_Nullable_System_Double__System_String_) method is used to draw line in the Blazor Image Editor component. Line annotations are valuable for highlighting, emphasizing, or marking specific areas of an image.
 
-The [`DrawLineAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_DrawLineAsync_System_Nullable_System_Double__System_Nullable_System_Double__System_Nullable_System_Double__System_Nullable_System_Double__System_Nullable_System_Double__System_String_) method in the Image Editor component takes seven parameters to define the properties of the ellipse annotation: 
+The [`DrawLineAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_DrawLineAsync_System_Nullable_System_Double__System_Nullable_System_Double__System_Nullable_System_Double__System_Nullable_System_Double__System_Nullable_System_Double__System_String_) method in the Image Editor component takes seven parameters to define the properties of the ellipse annotation:
 
-* startX - Specifies the x-coordinate of the start point. 
+* startX - Specifies the x-coordinate of the start point.
 
-* startY - Specifies the y-coordinate of the start point. 
+* startY - Specifies the y-coordinate of the start point.
 
-* endX - Specifies the x-coordinate of the end point. 
+* endX - Specifies the x-coordinate of the end point.
 
-* endY - Specifies the y-coordinate of the end point. 
+* endY - Specifies the y-coordinate of the end point.
 
-* strokeWidth - Specifies the stroke width of the line. 
+* strokeWidth - Specifies the stroke width of the line.
 
-* strokeColor - Specifies the stroke color of the line. 
+* strokeColor - Specifies the stroke color of the line.
 
 
-The Image Editor component offers two methods to add arrow annotations to an image: utilizing the toolbar or using the ['DrawArrowAsync'](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_DrawArrowAsync_System_Nullable_System_Double__System_Nullable_System_Double__System_Nullable_System_Double__System_Nullable_System_Double__System_Nullable_System_Double__System_String_Syncfusion_Blazor_ImageEditor_ImageEditorArrowHeadType_Syncfusion_Blazor_ImageEditor_ImageEditorArrowHeadType_) method. Arrow annotations are valuable for highlighting, emphasizing, or marking specific areas of an image.
+The ['DrawArrowAsync'](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_DrawArrowAsync_System_Nullable_System_Double__System_Nullable_System_Double__System_Nullable_System_Double__System_Nullable_System_Double__System_Nullable_System_Double__System_String_Syncfusion_Blazor_ImageEditor_ImageEditorArrowHeadType_Syncfusion_Blazor_ImageEditor_ImageEditorArrowHeadType_) method is used to draw arrow in the Blazor Image Editor component. Arrow annotations are valuable for highlighting, emphasizing, or marking specific areas of an image.
 
-The ['DrawArrowAsync'](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_DrawArrowAsync_System_Nullable_System_Double__System_Nullable_System_Double__System_Nullable_System_Double__System_Nullable_System_Double__System_Nullable_System_Double__System_String_Syncfusion_Blazor_ImageEditor_ImageEditorArrowHeadType_Syncfusion_Blazor_ImageEditor_ImageEditorArrowHeadType_) method in the Image Editor component takes seven parameters to define the properties of the ellipse annotation: 
+The ['DrawArrowAsync'](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_DrawArrowAsync_System_Nullable_System_Double__System_Nullable_System_Double__System_Nullable_System_Double__System_Nullable_System_Double__System_Nullable_System_Double__System_String_Syncfusion_Blazor_ImageEditor_ImageEditorArrowHeadType_Syncfusion_Blazor_ImageEditor_ImageEditorArrowHeadType_) method in the Image Editor component takes seven parameters to define the properties of the ellipse annotation:
 
-* startX - Specifies the x-coordinate of the start point. 
+* startX - Specifies the x-coordinate of the start point.
 
-* startY - Specifies the y-coordinate of the start point. 
+* startY - Specifies the y-coordinate of the start point.
 
-* endX - Specifies the x-coordinate of the end point. 
+* endX - Specifies the x-coordinate of the end point.
 
-* endY - Specifies the y-coordinate of the end point. 
+* endY - Specifies the y-coordinate of the end point.
 
-* strokeWidth - Specifies the stroke width of the arrow. 
+* strokeWidth - Specifies the stroke width of the arrow.
 
-* strokeColor - Specifies the stroke color of the arrow. 
+* strokeColor - Specifies the stroke color of the arrow.
 
 * arrowStart - Specifies the arrowhead as ImageEditorArrowHeadType at the start of arrow.
 
 * arrowEnd - Specifies the arrowhead as ImageEditorArrowHeadType at the end of the arrow.
 
-The Image Editor component offers two methods to add path annotations to an image: utilizing the toolbar or using the ['DrawPathAsync'](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_DrawPathAsync_Syncfusion_Blazor_ImageEditor_ImageEditorPoint___System_Nullable_System_Double__System_String_) method. Line annotations are valuable for highlighting, emphasizing, or marking specific areas of an image.
+The ['DrawPathAsync'](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_DrawPathAsync_Syncfusion_Blazor_ImageEditor_ImageEditorPoint___System_Nullable_System_Double__System_String_) method is used to draw path in the Blazor Image Editor component. Line annotations are valuable for highlighting, emphasizing, or marking specific areas of an image.
 
-The ['DrawPathAsync'](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_DrawPathAsync_Syncfusion_Blazor_ImageEditor_ImageEditorPoint___System_Nullable_System_Double__System_String_) method in the Image Editor component takes three parameters to define the properties of the ellipse annotation: 
+The ['DrawPathAsync'](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_DrawPathAsync_Syncfusion_Blazor_ImageEditor_ImageEditorPoint___System_Nullable_System_Double__System_String_) method in the Image Editor component takes three parameters to define the properties of the ellipse annotation:
 
-* points - Specifies collection of x and y coordinates as ImageEditorPoint to draw a path. 
+* points - Specifies collection of x and y coordinates as ImageEditorPoint to draw a path.
 
-* strokeWidth - Specifies the stroke width of the path. 
+* strokeWidth - Specifies the stroke width of the path.
 
-* strokeColor - Specifies the stroke color of the path. 
+* strokeColor - Specifies the stroke color of the path.
 
 Here is an example of inserting rectangle, ellipse, arrow, path, and line in a button click event.
 
@@ -476,11 +480,13 @@ Here is an example of inserting rectangle, ellipse, arrow, path, and line in a b
 
 ## Delete a shape 
 
-The Image Editor component provides the [`DeleteShapeAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_DeleteShapeAsync_System_String_) method, which allows you to remove a shape annotation from the image editor. To use this method, you need to pass the shapeId of the annotation as a parameter. 
+The [`DeleteShapeAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_DeleteShapeAsync_System_String_) method allows you to remove a shape annotation from the Blazor Image Editor component. To use this method, you need to pass the [`ID`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.ShapeSettings.html#Syncfusion_Blazor_ImageEditor_ShapeSettings_ID) of the annotation as a parameter. 
 
-The shapeId is a unique identifier assigned to each shape annotation within the image editor. It serves as a reference to a specific annotation, enabling targeted deletion of the desired annotation. By specifying the shapeId associated with the shape annotation you want to remove, you can effectively delete it from the image editor. 
+The [`ID`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.ShapeSettings.html#Syncfusion_Blazor_ImageEditor_ShapeSettings_ID) is a unique identifier assigned to each shape annotation within the Blazor Image Editor. It serves as a reference to a specific annotation, enabling targeted deletion of the desired text element. By specifying the [`ID`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.ShapeSettings.html#Syncfusion_Blazor_ImageEditor_ShapeSettings_ID) associated with the text annotation you want to remove, you can effectively delete it from the image editor.
 
-Here is an example of deleting rectangle, ellipse, arrow, path, and line in a button click event. 
+To retrieve the inserted shapes, you can utilize the [`GetShapesAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_GetShapesAsync) method, which provides a collection of annotations represented by [`ShapeSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.ShapeSettings.html). This method allows you to access and work with the annotations that have been inserted into the image.
+
+Here is an example of deleting rectangle, ellipse, arrow, path, and line in a button click event.
 
 ```cshtml
 @using Syncfusion.Blazor.ImageEditor

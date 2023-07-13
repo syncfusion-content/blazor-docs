@@ -8,7 +8,7 @@ documentation: ug
 ---
 
 
-# Localization in Blazor Image editor Component
+# Localization in the Blazor Image Editor component
 
 [Blazor Image editor](https://www.syncfusion.com/blazor-components/blazor-image-editor) component can be localized. Refer to [Blazor Localization](https://blazor.syncfusion.com/documentation/common/localization) topic to localize Syncfusion Blazor components.
 
