@@ -251,25 +251,33 @@ Type 1: Recurrence rule and start date value (Mandatory parameters).
 
 In this type, we need to pass two mandatory arguments such as recurrence rule and recurrence start date. 
 
+```cshtml
 var dateCollection = RecurrenceHelper.GetRecurrenceDateTimeCollection("FREQ = WEEKLY; BYDAY = FR,SA; INTERVAL = 1;", DateTime.Now);
+```
 
 Type 2: Maximum number of occurrences to retrieve. 
 
 In this type, we can pass the maximum occurrences count (ex: 60) to be retrieved when “Ends Never” option is present in the recurrence. By default, the Ends never maximum count is processed as 43.
 
+```cshtml
 var dateCollection = RecurrenceHelper.GetRecurrenceDateTimeCollection("FREQ = WEEKLY; BYDAY = FR,SA; INTERVAL = 1;", DateTime.Now, 60);
+```
 
 Type 3: RecurrenceException.
 
 In this type, we can pass the RecurrenceException date (ex: "20180610T040000Z") for excluding the dates along with mandatory arguments.
 
+```cshtml
 var dateCollection = RecurrenceHelper.GetRecurrenceDateTimeCollection("FREQ = WEEKLY; BYDAY = FR,SA; INTERVAL = 1;", DateTime.Now, "20180610T040000Z,20180602T040000Z");
+```
 
 Type 4: Maximum number of occurrences to retrieve and RecurrenceException.  
 
 In this type, we can pass the RecurrenceException for excluding the dates (ex: "20180610T040000Z") and the maximum occurrence count (ex: 60) for the “Ends Never” option, with the mandatory arguments.  
 
+```cshtml
 var dateCollection = RecurrenceHelper.GetRecurrenceDateTimeCollection("FREQ = WEEKLY; BYDAY = FR,SA; INTERVAL = 1;", DateTime.Now, "20180610T040000Z,20180602T040000Z", 60);
+```
 
 
 ## Restrict date generation with specific count
