@@ -188,6 +188,6 @@ Now, relaunch the project in emulator mode. It will render the SfPdfViewer using
 
 N> If you encounter any errors while using the Android Emulator, refer to the following link for troubleshooting guidance[Troubleshooting Android Emulator](https://learn.microsoft.com/en-us/dotnet/maui/android/emulator/troubleshooting).
 
-![Blazor SfPdfViewer Component](GettingStarted_images/blazor-pdfviewer_maui.png)
+![Blazor SfPdfViewer Component](GettingStarted_images/emulator.png)
 
 >[View Sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Server%20Deployment/Maui/MauiBlazorAndroid%20-%20SfPdfViewer).

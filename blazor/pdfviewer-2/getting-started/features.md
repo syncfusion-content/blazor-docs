@@ -52,6 +52,8 @@ The old PDF viewer component required numerous C# calls to retrieve document inf
 * [FormFilling](https://blazor.syncfusion.com/documentation/pdfviewer-2/form-filling)
 * [Handwritten Signature](https://blazor.syncfusion.com/documentation/pdfviewer-2/hand-written-signature)
 
+### Supported Features: Desktop vs Mobile
+
 The table below provides a list of supported and non-supported features on both desktop and mobile devices.
 
 |Feature|Desktop|Mobile Devices|
