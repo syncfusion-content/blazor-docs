@@ -44,7 +44,7 @@ The Rich Text Editor allows you to load an external HTML file in the editor's co
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "" %}
+![Blazor RichTextEditor import to HTML file](./images/blazor-richtexteditor-import-html.png)
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/import-html-file-to-blazor-rich-text-editor).
 
@@ -125,7 +125,7 @@ The Rich Text Editor allows you to load an external text file into the editor. R
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hNVUNGiAAviScmPF?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Blazor RichTextEditor import to text file](./images/blazor-richtexteditor-import-text.png)
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/import-text-file-to-blazor-rich-text-editor).
 
