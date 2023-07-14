@@ -13,7 +13,6 @@ The DropDownList component includes a virtual scrolling feature designed to enha
 
 This feature is applicable to both local and remote data scenarios, providing flexibility in its implementation. For instance, consider a case where the DropDownList is bound to a dataset containing 150 items. Upon opening the dropdown, only a few items are loaded initially, based on the height of the popup. As you scroll through the list, additional items are fetched and loaded on-demand, allowing you to effortlessly explore the complete dataset.
 
-To optimize the scrolling behavior, we have incorporated the 'skip' and 'take' mechanism. This means that for every scrolling action, a specific number of items are skipped, allowing the subsequent set of items to be loaded.
 
 {% highlight cshtml %}
 
@@ -40,3 +39,4 @@ Users can navigate through the scrollable content using keyboard actions. This f
 
 * Virtualization is not supported in the grouping feature.
 * Selected Value may or may not be present in the current view port.
+* Long-pressing of navigation keys is not intended for item navigation in the Dropdownlist component , It accepts single key action at a time.
