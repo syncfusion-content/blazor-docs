@@ -19,9 +19,7 @@ By using [TooltipRender](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
 
 ```cshtml
 
-@using Syncfusion.Blazor.Charts
- 
-                  
+@using Syncfusion.Blazor.Charts33             
 
 <SfChart>
     <ChartEvents TooltipRender="TooltipEvent"></ChartEvents>
@@ -55,6 +53,8 @@ By using [TooltipRender](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
     public void TooltipEvent(TooltipRenderEventArgs args)
     {
         args.HeaderText = "Year Wise Sales Data";
+        DateTime date = DateTime.Parse(args.Data.PointX.ToString());         
+        args.Text = date.ToString("M/d/yyyy");
     }
 }
 
