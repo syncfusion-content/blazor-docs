@@ -517,3 +517,69 @@ N> You can find the fully working sample [here](https://github.com/SyncfusionExa
 ```
 
 ![Display Validation in Blazor DataGrid Dialog Template](./images/blazor-datagrid-display-validation-in-dialog-template.png)
+
+## RegEx validation in Grid column 
+
+This section explains how to enable and integrate regex validation in a Grid column using Syncfusion Blazor components. Regex validation allows you to validate the input values in a grid column based on a regular expression pattern. The example provided demonstrates the implementation of regex validation in a Grid column along with other related functionalities.
+
+```cshtml
+
+@using Syncfusion.Blazor.Grids
+@using System.ComponentModel.DataAnnotations;
+@using Syncfusion.Blazor.Inputs
+
+<SfGrid DataSource="@Orders" AllowPaging="true" Toolbar="@(new List<string>() { "Add", "Delete", "Update", "Cancel" })">
+    <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true" Mode="EditMode.Dialog"></GridEditSettings>
+    <GridPageSettings PageSize="5"></GridPageSettings>
+    <GridColumns>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" ValidationRules="@(new ValidationRules{ Required=true})" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.EmailID) HeaderText="EmailID" Width="150">
+            <EditTemplate>
+                @{
+                    var OrderDetail = (context as Order);
+                    <label>Email</label>
+                    <SfTextBox ID="EmailID" Placeholder="Address" @bind-Value="@(OrderDetail.EmailID)"></SfTextBox>
+                }
+
+            </EditTemplate>
+        </GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText="Order Date" Format="d" Type="ColumnType.DateOnly" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field="ShipCountry" HeaderText="Ship Country" EditType="EditType.DropDownEdit" Width="150"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code {
+    public List<Order> Orders { get; set; }
+
+    protected override void OnInitialized()
+    {
+        Orders = Enumerable.Range(1, 10).Select(x => new Order()
+            {
+                OrderID = 1000 + x,
+                EmailID = (new string[] { "abc@gmail.com", "mnc@yahoo.com" })[new Random().Next(2)],
+                Freight = 2.1 * x,
+                OrderDate = DateTime.Now.AddDays(-x),
+
+                ShipCountry = (new string[] { "USA", "UK" })[new Random().Next(2)]
+            }).ToList();
+    }
+
+    public class Order
+    {
+        public int? OrderID { get; set; }
+
+        [Required(ErrorMessage = "This Email Address is not valid")]
+        [RegularExpression(@"(^[^@\s]+@[^@\s]+\.[^@\s]+$|^$)", ErrorMessage = "Not a valid Email Address Format")]
+        public string EmailID { get; set; }
+
+        public DateTime? OrderDate { get; set; }
+
+        public double? Freight { get; set; }
+
+        public string ShipCountry { get; set; }
+    }
+}
+
+```
+![Display Validation message by RegEx expression](./images/RegExvalidation.png)
