@@ -13,6 +13,8 @@ The following list of themes are included in the Syncfusion Blazor components li
 
 |Theme	|Style Sheet Name| 
 |--------|--------|
+|Material3 | material3.css |
+|Material3 Dark | material3-dark.css |
 |Bootstrap 5	| bootstrap5.css | 
 |Bootstrap 5 Dark	| bootstrap5-dark.css | 
 |Bootstrap 4	| bootstrap4.css |
@@ -99,6 +101,8 @@ Syncfusion Blazor Themes are available in the CDN. Make sure that the version in
 
 | Theme Name | CDN Reference |
 |--- | --- |
+| Material3 | https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/material3.css |
+| Material3 Dark | https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/material3-dark.css |
 | Bootstrap 5 | https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/bootstrap5.css |
 | Bootstrap 5 Dark| https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/bootstrap5-dark.css |
 | Bootstrap 4 | https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/bootstrap4.css |
