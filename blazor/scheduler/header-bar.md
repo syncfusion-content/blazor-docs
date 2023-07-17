@@ -46,7 +46,7 @@ By default, the header bar holds the date and view navigation options, through w
 }
 ```
 
-![Hide Header Bar in Blazor Scheduler](images/blazor-scheduler-hide-header-bar.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BXrgtGMthwdqxzee?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## How to display the view options within the header bar popup
 
@@ -90,7 +90,7 @@ By default, the header bar holds the view navigation options, through which the 
 
 The Scheduler with view options within the header bar popup will be rendered as shown in the following image.
 
-![Displaying Header Bar Popup in Blazor Scheduler](images/blazor-scheduler-header-bar-popup.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZhqXwMDLwvrUhLr?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 N> Refer [here](./resources/#adaptive-ui-in-desktop) to know more about adaptive UI in resources scheduler.
 
@@ -189,7 +189,7 @@ The Scheduler UI that displays the date text on all views are considered as the 
 </style>
 ```
 
-![Date Header Customization in Blazor Scheduler](images/blazor-scheduler-customize-dateheader.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hZhUDcstBvZGCNvO?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ### Customization using OnRenderCell event
 
@@ -245,6 +245,8 @@ The date header can be customized by using `OnRenderCell` event. In the `OnRende
     }
 }
 ```
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BNrAtmsXVvrxfSyV?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## TimelineYear header customization
 
@@ -307,6 +309,8 @@ The day header cells and month header cells can be customized in the TimelineYea
     }
 }
 ```
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BXVqDmWNBbzWyCAj?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Customizing header indent cells
 
@@ -427,3 +431,5 @@ It is possible to customize the header indent cells using the `HeaderIndentTempl
     }
 }
 ```
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hZhAjmMXhbesQgAi?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}

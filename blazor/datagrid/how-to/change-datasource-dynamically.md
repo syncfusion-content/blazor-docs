@@ -64,4 +64,5 @@ This is demonstrated in the following sample code where the [DataSource](https:/
 ```
 
 The following GIF represents DataGrid data source modified dynamically on button click,
-![Changing Datasource Dynamically in Blazor DataGrid](../images/blazor-datagrid-dynamic-datasource.gif)
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDLKjHrGraceMCqA?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
