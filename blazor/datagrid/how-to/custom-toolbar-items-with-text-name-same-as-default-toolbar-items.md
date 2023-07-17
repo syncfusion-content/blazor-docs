@@ -67,3 +67,5 @@ This is demonstrated in the following sample code where there are custom toolbar
     }
 }
 ```
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BjrADnLQKmlaqQFB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
