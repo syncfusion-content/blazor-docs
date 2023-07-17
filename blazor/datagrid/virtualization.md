@@ -313,7 +313,6 @@ To setup the enable cell placeholder during virtualization, you need to define [
 ```
 
 The following GIF represents a datagrid with Mask row virtualization:
-![Blazor DataGrid with Mask Row virtualization](./images/blazor-datagrid-mask-row-virtualization.gif)
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hjVAZxLAqPVNSJhE?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
