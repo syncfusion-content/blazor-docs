@@ -71,7 +71,7 @@ In the below example, axis, point and tooltip labels are globalized to EUR.
 
 ```
 
-![Globalization in Blazor Column Chart](images/blazor-column-chart-globalization.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BthUDwNJiTeXcfYF?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Label format
 
@@ -84,7 +84,7 @@ Learn more about axis label format in-relation to axis types from the pages belo
 
 N> Refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
 
-## See Also
+## See also
 
 * [Data label](./data-labels)
 * [Tooltip](./tool-tip)

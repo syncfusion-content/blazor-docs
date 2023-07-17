@@ -46,7 +46,7 @@ Inspect or target any data point on mouse move or touch with the help of crossha
 
 ```
 
-![Crosshair in Blazor Line Chart](images/crosshair/blazor-line-chart-with-crosshair.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rNBKNQZqLhbSnFDg?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Enable Tooltip
 
@@ -93,7 +93,7 @@ The [Enable](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Char
 
 ```
 
-![Crosshair with Tooltip in Blazor Line Chart](images/crosshair/blazor-line-chart-crosshair-with-tooltip.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BDVqZGXqLBYFgfWb?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Crosshair customization
 
@@ -146,7 +146,7 @@ The [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartC
 
 ```
 
-![Blazor Line Chart with Custom crosshair and Tooltip](images/crosshair/blazor-line-chart-custom-crosshair-and-tooltip.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VDrqtGZArTziDaVo?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Trackball
 
@@ -203,11 +203,11 @@ The trackball is used to track the data point that is closest to the mouse or to
 
 ```
 
-![Trackball in Blazor Line Chart](images/crosshair/blazor-line-chart-with-trackball.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rZLUZcjgVpRpmuIM?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 N> Refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
 
-## See Also
+## See also
 
 * [Data Label](./data-labels)
 * [Tooltip](./tool-tip)
