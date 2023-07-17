@@ -34,6 +34,7 @@ Here is an example of adding custom toolbar items to rotate and flip transformat
 
 ```cshtml
 @using Syncfusion.Blazor.ImageEditor
+@using Syncfusion.Blazor.Navigations
 
 <SfImageEditor @ref="ImageEditor" Toolbar="customToolbarItem" Height="400">
     <ImageEditorEvents Created="OpenAsync" ToolbarItemClicked="ToolbarItemClicked"></ImageEditorEvents>
