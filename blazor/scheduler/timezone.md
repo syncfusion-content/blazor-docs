@@ -11,11 +11,11 @@ documentation: ug
 
 The Scheduler renders events based on current system time zone of server in server side application and in WASM application the events are rendered based on UTC timezone by default.
 
-* You can change the timezone of the scheduler by setting [Timezone](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_Timezone) property. For more information, refer to the [section](#display-appointments-based-on-Scheduler-time-zone).
+* You can change the timezone of the scheduler by setting [Timezone](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_Timezone) property. For more information, refer to the [section](#display-appointments-based-on-scheduler-time-zone).
 
 * You can also set timezone for each appointment (events) through [StartTimezone](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.FieldStartTimezone.html) and [EndTimezone](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.FieldEndTimezone.html) properties which can be defined as separate fields within the event fields collection. For more information, refer to the [section](#create-appointments-in-different-time-zones).
 
-* You can also set the timezone for both the scheduler `Timezone` property and as well as the event's `StartTimezone` and `EndTimezone` properties. For more information, refer to the [section](#display-appointments-based-on-client’s-time-zone).
+* You can also set the timezone for both the scheduler `Timezone` property and as well as the event's `StartTimezone` and `EndTimezone` properties. For more information, refer to the [section](#display-appointments-based-on-clients-time-zone).
 
 
 N>* The given value for the Timezone property for both the Scheduler and the appointments should be in the [IANA](https://www.iana.org/time-zones) format(Windows time zone IDs is not compatible).
@@ -72,8 +72,6 @@ In the following code example, the appointments time zone is Europe Time (UTC+03
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LXrKDQtwqKzgedoR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
 N>* If the recurring appointment is converted to another time zone, then the whole sequence will be recalculated according to the new time zone information.
 <br/>* If an all-day appointment is created, it's start time and end time will be set to 12 A.M. and 12 A.M. by default, so time zone is not applicable for all-day appointments.
 <br/>* Scheduler supports daylight saving time.
@@ -124,9 +122,7 @@ In the following code example, the Scheduler time zone is Europe Time (UTC+03:00
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VZrUtctmgAPQgAHW?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-## Display Appointments based on client’s time zone
+## Display appointments based on client's time zone
 
 Display the appointments based on the client’s local time zone in scheduler. It can be achieved by getting browser's timezone and set it's value to the scheduler time zone and appointment’s time zone.
 
@@ -180,8 +176,6 @@ For example, consider a scenario that you are in North Carolina (America/New_Yor
     }
 }
 ```
-
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hjLUDGDcAUaGbdPP?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Display appointments at same time everywhere regardless of client’s time zone
 
