@@ -58,7 +58,7 @@ The [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gan
 }
 ```
 
-![Blazor Gantt Chart with Menu Filter](images/blazor-gantt-chart-menu-filter.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BXVqNcWcJjHxcwpK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 N> The `AllowFiltering` property should be set to `true` to enable the filter menu. Setting the `GanttColumn.AllowFiltering` property to `false` prevents rendering the filter menu for a particular column.
 
@@ -118,6 +118,8 @@ The Gantt Chart supports a set of filtering modes with the [GanttFilterSettings.
 }
 ```
 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BXVKjwMGfMAOODwp?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 ### Initial filter
 
 To apply the filter at initial rendering, set the filter `Predicate` collections in the [GanttFilterSettings.Columns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttFilterSettings.html#Syncfusion_Blazor_Gantt_GanttFilterSettings_Columns) property.
@@ -173,7 +175,7 @@ To apply the filter at initial rendering, set the filter `Predicate` collections
 }
 ```
 
-![Blazor Gantt Chart with Initial Filter](images/blazor-gantt-chart-initial-filter.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rjrqXGCmJVBxQRBZ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ### Filter operators
 
@@ -245,7 +247,7 @@ In the following sample, type **Perform** in the **TaskName** column to filter d
 }
 ```
 
-![Filtering Diacritic Characters in Blazor Gantt Chart](images/blazor-gantt-chart-filter-diacritic-charater.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VtBUjQiQfrqFbcfJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ### Filtering a specific column by method
 
@@ -302,7 +304,7 @@ You can filter the columns dynamically by using the [FilterByColumnAsync](https:
 }
 ```
 
-![Filtering Specific Column in Blazor Gantt Chart](images/blazor-gantt-chart-filter-column.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VDVgtwWcJrosVrFI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ### Clear filtered columns
 
@@ -370,5 +372,4 @@ The following code snippet explains the above behavior.
 }
 ```
 
-![Clearing Column Filter in Blazor Gantt Chart](images/blazor-gantt-chart-clear-filter.png)
-
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rZLKZGWQTVQswhdv?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
