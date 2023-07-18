@@ -52,7 +52,7 @@ documentation: ug
 
 ``` 
 
-![Blazor Spline Chart](../images/chart-types-images/blazor-spline-chart.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hDVANcNfBysOotwY?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 N> Refer to our [Blazor Spline Chart](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/spline-chart) feature tour page to know about its other groundbreaking feature representations. Explore our [Blazor Spline Chart Example](https://blazor.syncfusion.com/demos/chart/spline?theme=bootstrap4) to know how to connect the data points with smooth curves.
 
@@ -154,7 +154,7 @@ The following properties can be used to customize the [Spline](https://help.sync
 
 N> Refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
 
-## See Also
+## See also
 
 * [Data Label](../data-labels)
 * [Tooltip](../tool-tip)
