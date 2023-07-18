@@ -165,13 +165,19 @@ You can get the uploaded files as file stream in the [ValueChange](https://help.
 
     private void OnChange(UploadChangeEventArgs args)
     {
-        foreach (var file in args.Files)
+        try
         {
-            var path = @"path" + file.FileInfo.Name;
-            FileStream filestream = new FileStream(path, FileMode.Create, FileAccess.Write);
-            file.Stream.WriteTo(filestream);
-            filestream.Close();
-            file.Stream.Close();
+            foreach (var file in args.Files)
+            {
+                var path = @"" + file.FileInfo.Name;
+                FileStream filestream = new FileStream(path, FileMode.Create, FileAccess.Write);
+                await file.File.OpenReadStream(long.MaxValue).CopyToAsync(filestream);
+                filestream.Close();
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine(ex.Message);
         }
     }
 }
