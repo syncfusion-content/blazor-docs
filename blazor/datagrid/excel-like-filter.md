@@ -48,11 +48,7 @@ You can enable Excel like filter by defining [Type](https://help.syncfusion.com/
 
 ```
 
-The following screenshot represents Excel filter
-![Blazor DataGrid with Excel Filter](./images/blazor-datagrid-excel-filter.png)
-
-The following screenshot represents Custom filter in Excel filter
-![Blazor DataGrid Custom Excel Filter](./images/blazor-datagrid-custom-excel-filter.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rXrKNxBCzKrPtclV?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Filter item template
 
@@ -103,7 +99,7 @@ This **`FilterItemTemplate`** helps to customize each CheckBox list element or v
 }
 ```
 
-![Blazor DataGrid Filter with Item Template](./images/blazor-datagrid-filter-item-template.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hDBUjdhMfgSGMgCP?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Customize filter icon for filtered columns
 
@@ -153,7 +149,7 @@ After filtering the column, the DataGrid will display the in-built filtered icon
 
 ```
 
-![Blazor DataGrid Customized Filtered Icon](./images/blazor-datagrid-custom-filtered-icon.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VDhqjxhszTNJrpjp?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Customize the height and width of filter popup
 
@@ -240,7 +236,8 @@ Before opening a filter dialog for each column, the `OnActionBegin` event will b
 }
 
 ```
-![Customize the Height and Width of Filter Popup in Blazor DataGrid](./images/blazor-datagrid-customize-filter-popup.gif)
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BXLKNRrMppsQrAky?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 N> [View Sample in GitHub.](https://github.com/SyncfusionExamples/blazor-datagrid-customize-filter-popup-using-css)
 

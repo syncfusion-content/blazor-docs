@@ -58,7 +58,7 @@ The Scheduler allows to export all its events into an Excel format file by using
 }
 ```
 
-![Excel Exporting in Blazor Scheduler](images/blazor-scheduler-excel-export.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rZLUjcMMCTufhbhn?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ### Exporting with custom fields
 
@@ -103,7 +103,7 @@ By default, Scheduler exports all the default event fields that are mapped to it
 }
 ```
 
-![Excel Exporting with custom Fields in Blazor Scheduler](images/blazor-scheduler-excel-export-custom-fields.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LjVgDQiWCyQZIWdw?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ### Exporting individual occurrences of a recurring series
 
@@ -148,6 +148,8 @@ By default, the Scheduler exports recurring events as a single data by exporting
 }
 ```
 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/htVAXcCssRCUlpGf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 ### Exporting custom event data
 
 By default, the whole event collection bound to the Scheduler gets exported as an excel file. To export only specific events of Scheduler or some custom event collection, you need to pass those custom data collection as a parameter to the `ExportToExcelAsync` method as shown in this following example, through the `CustomData` option.
@@ -164,7 +166,7 @@ N> By default, the event data are taken from Scheduler dataSource.
     <ScheduleViews>
         <ScheduleView Option="View.Week"></ScheduleView>
     </ScheduleViews>
-</SfSchedule>s
+</SfSchedule>
 
 @code{
     DateTime CurrentDate = new DateTime(2020, 1, 10);
@@ -216,6 +218,8 @@ N> By default, the event data are taken from Scheduler dataSource.
     }
 }
 ```
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDBUtmMiCxmGhIkk?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ### Customizing the column header texts with custom fields exporting
 
@@ -271,7 +275,7 @@ You can change the field names of appointment in the column header when exportin
 }
 ```
 
-![Excel Exporting with custom header texts in Blazor Scheduler](images/blazor-scheduler-excel-export-custom-header.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rXLgXQsssQtgDHFK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ### Export with custom file name
 
@@ -321,6 +325,8 @@ By default, the Scheduler allows you to download the exported Excel file with a 
 }
 ```
 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BDVKDmWWWGaiFLls?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 ### Excel file formats
 
 By default, the Scheduler exports event data to an excel file in the `.xlsx` format. You can also export the Scheduler data in either of the file type such as `.xlsx` or `csv` formats, by defining the `ExportType` option as either `csv` or `xlsx`. By default, the `ExportType` is set to `xlsx`.
@@ -369,6 +375,8 @@ By default, the Scheduler exports event data to an excel file in the `.xlsx` for
 }
 ```
 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rNhUtcWMsEHBhETX?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 ### Export with specific date format
 
 You can export the Scheduler data with specific date format, by defining the `DateFormat` option which accepts the MSDN date format in string type. In the following code example, the scheduler appointments are exported in 24 hour date format.
@@ -416,7 +424,8 @@ You can export the Scheduler data with specific date format, by defining the `Da
     }
 }
 ```
-![Excel Exporting with Date Format in Blazor Scheduler](images/blazor-scheduler-excel-date-format.png)
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXVgjQiWMklSWzhQ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Exporting calendar events as ICS file
 
@@ -467,6 +476,8 @@ The following code example shows how the Scheduler events are exported to a cale
 }
 ```
 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDhANmsWLthyQvEG?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 ### Exporting calendar with custom file name
 
 By default, the calendar is exported with a file name `Calendar.ics`. To change this file name on export, pass the custom string value as `FileName` to the method argument so as to get the file downloaded with this provided name.
@@ -516,6 +527,8 @@ The following example downloads the iCal file with a name `ScheduleEvents.ics`.
 }
 ```
 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNhqtGsCrXcTryWF?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 ## Importing events from other calendars
 
 The events from external calendars (ICS files) can be imported into Scheduler by using the `ImportICalendarAsync` method. In the following code example events has been imported from an ICS file into Scheduler with the help of Uploader. In `ImportICalendarAsync` public method, ics file is passed as string format.
@@ -542,23 +555,23 @@ The events from external calendars (ICS files) can be imported into Scheduler by
 
 @code{
     SfSchedule<AppointmentData> ScheduleRef;
-    DateTime CurrentDate = new DateTime(2020, 1, 10);
+    DateTime CurrentDate = new DateTime(2023, 1, 10);
     public async Task OnChange(UploadChangeEventArgs args)
     {
         foreach (var file in args.Files)
         {
-            file.Stream.Position = 0;
-            StreamReader reader = new StreamReader(file.Stream);
-            await ScheduleRef.ImportICalendarAsync(reader.ReadToEnd());
+            StreamReader reader = new StreamReader(file.File.OpenReadStream(long.MaxValue));
+            string fileContent = await reader.ReadToEndAsync();
+            await ScheduleRef.ImportICalendarAsync(fileContent);
         }
     }
     List<AppointmentData> DataSource = new List<AppointmentData>
     {
-    new AppointmentData { Id = 1, Subject = "Explosion of Betelgeuse Star", Location = "Dallas",  StartTime = new DateTime(2020, 3, 10, 9, 30, 0), EndTime = new DateTime(2020, 3, 10, 11, 0, 0)  },
-    new AppointmentData { Id = 2, Subject = "Thule Air Crash Report", Location = "Texas", StartTime = new DateTime(2020, 3, 13, 12, 0, 0), EndTime = new DateTime(2020, 3, 13, 14, 0, 0)  },
-    new AppointmentData { Id = 3, Subject = "Blue Moon Eclipse", Location = "Australia", StartTime = new DateTime(2020, 3, 11, 10, 30, 0), EndTime = new DateTime(2020, 3, 11, 13, 0, 0)  },
-    new AppointmentData { Id = 4, Subject = "Meteor Showers in 2020", Location = "Canada", StartTime = new DateTime(2020, 3, 9, 13, 0, 0), EndTime = new DateTime(2020, 3, 9, 14, 30, 0)  },
-    new AppointmentData { Id = 5, Subject = "Milky Way as Melting pot", Location = "Mexico", StartTime = new DateTime(2020, 3, 12, 9, 0, 0), EndTime = new DateTime(2020, 3, 12, 10, 30, 0)  }
+    new AppointmentData { Id = 1, Subject = "Explosion of Betelgeuse Star", Location = "Dallas",  StartTime = new DateTime(2023, 3, 10, 9, 30, 0), EndTime = new DateTime(2023, 3, 10, 11, 0, 0)  },
+    new AppointmentData { Id = 2, Subject = "Thule Air Crash Report", Location = "Texas", StartTime = new DateTime(2023, 3, 13, 12, 0, 0), EndTime = new DateTime(2023, 3, 13, 14, 0, 0)  },
+    new AppointmentData { Id = 3, Subject = "Blue Moon Eclipse", Location = "Australia", StartTime = new DateTime(2023, 3, 11, 10, 30, 0), EndTime = new DateTime(2023, 3, 11, 13, 0, 0)  },
+    new AppointmentData { Id = 4, Subject = "Meteor Showers in 2020", Location = "Canada", StartTime = new DateTime(2023, 3, 9, 13, 0, 0), EndTime = new DateTime(2023, 3, 9, 14, 30, 0)  },
+    new AppointmentData { Id = 5, Subject = "Milky Way as Melting pot", Location = "Mexico", StartTime = new DateTime(2023, 3, 12, 9, 0, 0), EndTime = new DateTime(2023, 3, 12, 10, 30, 0)  }
     };
     public class AppointmentData
     {
@@ -588,6 +601,8 @@ The events from external calendars (ICS files) can be imported into Scheduler by
     }
 </style>
 ```
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hjVADmMCrCZdIios?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## How to print the Scheduler element
 
@@ -648,6 +663,8 @@ You can print the Schedule element with the current view by using the `PrintAsyn
 }
 ```
 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BjBAZGssBWVFAWeV?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 ### Using a PrintAsync method with options
 
 You can print the Schedule element with customized Width and Height using the `PrintAsync` method by passing the `PrintOptions` Height and Width options. The following example shows how to print the Scheduler using the `PrintAsync` method by passing the `PrintOptions` options.
@@ -700,3 +717,5 @@ You can print the Schedule element with customized Width and Height using the `P
     }
 }
 ```
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BDVKtGCshsaIrAeZ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
