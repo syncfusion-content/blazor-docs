@@ -191,3 +191,7 @@ N> If you encounter any errors while using the Android Emulator, refer to the fo
 ![Blazor SfPdfViewer Component](GettingStarted_images/emulator.png)
 
 >[View Sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Server%20Deployment/Maui/MauiBlazorAndroid%20-%20SfPdfViewer).
+
+## See also
+
+* [Supported Features: Desktop vs Mobile](./features#supported-features-desktop-vs-mobile).
