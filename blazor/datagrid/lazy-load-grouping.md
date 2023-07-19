@@ -215,3 +215,19 @@ The following code example describes the lazy load grouping handled at the serve
         }
     }
 ```
+
+## Limitations for lazy load grouping
+
+* Due to the element height limitation in browsers, the maximum number of records loaded by the grid is limited due to the browser capability.
+* Lazy load grouping is not compatible with the following features
+    * Batch editing
+    * Row template
+    * Print
+    * Row drag and drop in collapsed group
+    * ExpandAll method   
+    * Column virtualization
+    * Hierarchical Grid
+    * Detail Template
+* Programmatic selection is not supported  in lazy load grouping.
+* Drag selection, Cell selection (box and flow), Row Selection is not working in collapsed state.
+* Clipboard is not support when the groups are in collapsed state.
