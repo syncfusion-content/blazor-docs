@@ -74,7 +74,7 @@ The following example demonstrates how to set an initial grouping for the **Cust
     </GridColumns>
 </SfGrid>
 
-@code {
+@code{
     public List<Order> Orders { get; set; }
 
     protected override void OnInitialized()
@@ -208,7 +208,7 @@ In the following example, the [Blazor Toggle Switch Button](https://blazor.syncf
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Buttons
 
-<div class="container">
+<div style="display:flex;gap: 5px;">
     <label> Hide or show grouped columns</label>
     <SfSwitch OffLabel="OFF" OnLabel="ON" ValueChange="Change" TChecked="bool?"></SfSwitch>
 </div>
@@ -225,15 +225,7 @@ In the following example, the [Blazor Toggle Switch Button](https://blazor.syncf
         <GridColumn Field=@nameof(Order.ShipCountry) HeaderText="Ship Country" Width="150"></GridColumn>
     </GridColumns>
 </SfGrid>
-<style>
-    .container {
-        display: flex;
-    }
 
-        .container label {
-            margin-right: 10px; /* Add some space between the label and the switch */
-        }
-</style>
 @code {
 
     public SfGrid<Order>? Grid { get; set; }
@@ -662,63 +654,6 @@ The DataGrid component provides two events that are triggered during the group a
 > [args.RequestType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ActionEventArgs-1.html#Syncfusion_Blazor_Grids_ActionEventArgs_1_RequestType) property represents the name of the current action being performed. For instance, during grouping, the `args.RequestType` value will be **grouping**.
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BNLgDnhiBuxVmGDp?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-## Caption template
-
-You can customize the group caption by using the [CaptionTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridGroupSettings.html#Syncfusion_Blazor_Grids_GridGroupSettings_CaptionTemplate) of the [GridGroupSettings](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Grids.GridGroupSettings.html) component.
-
-The following sample code demonstrates the above,
-
-```cshtml
-@using Syncfusion.Blazor.Grids
-
-@{
-    var Template = (new string[] { "OrderID" });
-}
-<SfGrid  DataSource="@Orders" AllowGrouping="true" Height="400">
-    <GridColumns>
-        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
-        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-    </GridColumns>
-    <GridGroupSettings Columns=@Template>
-        <CaptionTemplate>
-            @{
-                var order = (context as CaptionTemplateContext);
-                <div>@order.Field - @order.Key</div>
-            }
-        </CaptionTemplate>
-    </GridGroupSettings>
-</SfGrid>
-
-@code{
-    public List<Order> Orders { get; set; }
-
-    protected override void OnInitialized()
-    {
-        Orders = Enumerable.Range(1, 75).Select(x => new Order()
-        {
-            OrderID = 1000 + x,
-            CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
-            Freight = 2.1 * x,
-            OrderDate = DateTime.Now.AddDays(-x),
-        }).ToList();
-    }
-
-    public class Order
-    {
-        public int OrderID { get; set; }
-        public string CustomerID { get; set; }
-        public DateTime? OrderDate { get; set; }
-        public double? Freight { get; set; }
-    }
-}
-```
-
-The following screenshot represents a DataGrid with customized group caption,
-
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rjLKjnhsADicMYLt?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## See Also
 
