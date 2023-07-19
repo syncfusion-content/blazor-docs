@@ -222,12 +222,9 @@ The following code example describes the lazy load grouping handled at the serve
 * Lazy load grouping is not compatible with the following features
     * Batch editing
     * Row template
-    * Print
-    * Row drag and drop in collapsed group
-    * ExpandAll method   
-    * Column virtualization
+    * Row drag and drop
     * Hierarchical Grid
     * Detail Template
-* Programmatic selection is not supported  in lazy load grouping.
+* Programmatic selection is not supported in lazy load grouping when groups are in a collapsed state.
 * Drag selection, Cell selection (box and flow), Row Selection is not working in collapsed state.
 * Clipboard is not support when the groups are in collapsed state.
