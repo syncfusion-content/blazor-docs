@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Data Range in Blazor Calendar Component | Syncfusion
-description: Checkout and learn here all about Data Range in the Syncfusion Blazor Calendar component and much more.
+title: Date Range in Blazor Calendar Component | Syncfusion
+description: Checkout and learn here all about Date Range in the Syncfusion Blazor Calendar component and much more.
 platform: Blazor
 control: Calendar
 documentation: ug
