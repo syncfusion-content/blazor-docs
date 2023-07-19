@@ -690,12 +690,14 @@ The following example demonstrates how to change a theme dynamically in Blazor S
     }
 
     private List<ThemeDetails> Themes = new List<ThemeDetails>() {
+        new ThemeDetails(){ ID = "material3", Text = "Material3" },
         new ThemeDetails(){ ID = "material", Text = "Material" },
         new ThemeDetails(){ ID = "bootstrap", Text = "Bootstrap" },
         new ThemeDetails(){ ID = "fabric", Text = "Fabric" },
         new ThemeDetails(){ ID = "bootstrap4", Text = "Bootstrap 4" },
         new ThemeDetails(){ ID = "tailwind", Text = "TailWind"},
         new ThemeDetails(){ ID = "tailwind-dark", Text = "TailWind Dark" },
+        new ThemeDetails(){ ID = "material3-dark", Text = "Material3 Dark" },
         new ThemeDetails(){ ID = "material-dark", Text = "Material Dark" },
         new ThemeDetails(){ ID = "bootstrap-dark", Text = "Bootstrap Dark" },
         new ThemeDetails(){ ID = "fabric-dark", Text = "Fabric Dark" },
@@ -761,12 +763,14 @@ The following example demonstrates how to change a theme dynamically in Blazor S
     }
     
     private List<ThemeDetails> Themes = new List<ThemeDetails>() {
+        new ThemeDetails(){ ID = "material3", Text = "Material3" },
         new ThemeDetails(){ ID = "material", Text = "Material" },
         new ThemeDetails(){ ID = "bootstrap", Text = "Bootstrap" },
         new ThemeDetails(){ ID = "fabric", Text = "Fabric" },
         new ThemeDetails(){ ID = "bootstrap4", Text = "Bootstrap 4" },
         new ThemeDetails(){ ID = "tailwind", Text = "TailWind"},
         new ThemeDetails(){ ID = "tailwind-dark", Text = "TailWind Dark" },
+        new ThemeDetails(){ ID = "material3-dark", Text = "Material3 Dark" },
         new ThemeDetails(){ ID = "material-dark", Text = "Material Dark" },
         new ThemeDetails(){ ID = "bootstrap-dark", Text = "Bootstrap Dark" },
         new ThemeDetails(){ ID = "fabric-dark", Text = "Fabric Dark" },
@@ -871,12 +875,14 @@ The following example demonstrates how to change a theme dynamically in Blazor W
         }
     
         private List<ThemeDetails> Themes = new List<ThemeDetails>() {
+            new ThemeDetails(){ ID = "material3", Text = "Material3" },
             new ThemeDetails(){ ID = "material", Text = "Material" },
             new ThemeDetails(){ ID = "bootstrap", Text = "Bootstrap" },
             new ThemeDetails(){ ID = "fabric", Text = "Fabric" },
             new ThemeDetails(){ ID = "bootstrap4", Text = "Bootstrap 4" },
             new ThemeDetails(){ ID = "tailwind", Text = "TailWind"},
             new ThemeDetails(){ ID = "tailwind-dark", Text = "TailWind Dark" },
+            new ThemeDetails(){ ID = "material3-dark", Text = "Material3 Dark" },
             new ThemeDetails(){ ID = "material-dark", Text = "Material Dark" },
             new ThemeDetails(){ ID = "bootstrap-dark", Text = "Bootstrap Dark" },
             new ThemeDetails(){ ID = "fabric-dark", Text = "Fabric Dark" },
