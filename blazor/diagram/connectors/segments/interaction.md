@@ -154,9 +154,9 @@ While interacting with multiple bezier segments, maintain their control points a
 | BezierSmoothness value | Description | Output |
 |-------- | -------- | -------- |
 | SymmetricDistance| Both control points of adjacent segments will be at the same distance when one of them is editing. | ![SymmetricDistance](../../images/SymmetricDistance.gif) |
-| SymmetricAngle | Both control points of adjacent segments will be at the same angle when one of them is editing. | ![SymmetricDistance](../../images/SymmetricAngle.gif) |
-| Both | Both control points of adjacent segments will be at the same angle and same distance when one of them is editing. | ![SymmetricDistance](../../images/SmoothnessBoth.png) |
-| None | Segment’s control points interact independently from each other. | ![SymmetricDistance](../../images/SymmetricNone.gif)
+| SymmetricAngle | Both control points of adjacent segments will be at the same angle when one of them is editing. | ![SymmetricAngle](../../images/SymmetricAngle.gif) |
+| Both | Both control points of adjacent segments will be at the same angle and same distance when one of them is editing. | ![Symmetric](../../images/SmoothnessBoth.gif) |
+| None | Segment’s control points interact independently from each other. | ![SymmetricNone](../../images/SymmetricNone.gif)
 
 Also, the intermediate point of two adjacent bezier segments can be edited interactively based on the [BezierConnectorSettings.SegmentEditOrientation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BezierConnectorSettings.html#Syncfusion_Blazor_Diagram_BezierConnectorSettings_SegmentEditOrientation) property of the Connector class.
 

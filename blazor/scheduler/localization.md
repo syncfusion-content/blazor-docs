@@ -44,7 +44,7 @@ Scheduler can be used with all valid date formats and by default it follows the 
 }
 ```
 
-![Date Format in Blazor Scheduler](images/blazor-scheduler-dateformat.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BXLgjcCMBUWyWuXv?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Time mode
 
@@ -80,7 +80,7 @@ The time mode of the Scheduler can be either 12 or 24 hours format which is comp
 }
 ```
 
-![Time Format in Blazor Scheduler](images/blazor-scheduler-timeformat.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LXVUZcMsLqSnywRs?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Displaying Scheduler in RTL mode
 
@@ -116,8 +116,8 @@ The Scheduler layout and its behavior can be changed as per the common RTL (Righ
 }
 ```
 
-![RTL Mode in Blazor Scheduler](images/blazor-scheduler-rtl.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hNhgNwiCLUEgaErG?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-## See Also
+## See also
 
 * [How to change first day of the week in the Scheduler](./working-hours/#setting-start-day-of-the-week)

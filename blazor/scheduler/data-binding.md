@@ -55,6 +55,8 @@ To bind list binding to the Scheduler, you can simply assign a list of datasourc
 }
 ```
 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rZVqXQDnpiDwMvBf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 N> By default, `DataManager` uses `BlazorAdaptor` for binding local data.
 
 You can also bind different field names to the default event fields as well as include additional custom fields to the event object collection which can be referred [here](./appointments/#event-fields).
@@ -104,6 +106,9 @@ To bind data to the Scheduler using ExpandoObject, you can create a list of Expa
     }
 }
 ```
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rXVqjQXxTrtGVSXf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 ### DynamicObject Binding 
 
 **DynamicObject** binding is another approach for binding data to the Scheduler when the model type is unknown at compile time. In this approach, you use the dynamic keyword to define variables that can hold objects of any type, including those with dynamically added properties.
@@ -169,6 +174,8 @@ N> The [`GetDynamicMemberNames`](https://learn.microsoft.com/en-us/dotnet/api/sy
     }
 }
 ```
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rNrUDmXHpBhfsQJE?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## ObservableCollection
 
@@ -268,6 +275,8 @@ Here, AppointmentData class implements the interface of **INotifyPropertyChanged
     }
 }
 ```
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXrgNwNHzBgeHdhX?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Custom binding
 
@@ -414,6 +423,8 @@ It is possible to create your own `CustomAdaptor` by extending the built-in avai
 }
 ```
 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VjLUDmXHphQJwYYU?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 N> You can find the complete procedures to perform CRUD actions with the Syncfusion Blazor Scheduler using CustomAdaptor [here](https://github.com/SyncfusionExamples/Blazor-Scheduler-CRUD-using-custom-adaptor).
 
 ## Remote data
@@ -515,7 +526,7 @@ This method greatly improves the component's performance by reducing the data th
 
 The following image represents how the parameters are passed using ODataV4 filter.
 
-![ODataV4 filter](images/blazor-odatav4-filter.jpg)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNrqZGZRJKsCKvWX?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ### Web API adaptor
 
@@ -558,6 +569,8 @@ You can bind Web API data to the scheduler using [WebApiAdaptor](https://blazor.
     }
 }
 ```
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VjhUXQtnTUTBWoFa?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ### Url adaptor
 You can use the [UrlAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors#url-adaptor) of **SfDataManager** when binding data source for remote data. During the initial load of Scheduler, data are fetched from remote data and bound to the Scheduler using the [Url](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_Url) property of **SfDataManager**.
@@ -803,6 +816,9 @@ The following sample code demonstrates adding custom headers to the `SfDataManag
     }
 }
 ```
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VtLqXmZHfgQQQAaq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 ### Handling HTTP error
 
 During server interaction from the Scheduler, sometimes server-side exceptions might occur. These error messages or exception details can be acquired in client-side using the [OnActionFailure](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleEvents-1.html#Syncfusion_Blazor_Schedule_ScheduleEvents_1_OnActionFailure) event.
@@ -1368,7 +1384,7 @@ We have to write our own service to connect retrieve the events from the Google 
 
 N> The runnable sample for the above code will be available [here](https://github.com/SyncfusionExamples/google-calendar-synchronization-with-blazor-scheduler).
 
-## See Also
+## See also
 
 * [How to Access Microsoft Graph Calendar Events with Syncfusion Blazor Scheduler](https://www.syncfusion.com/blogs/post/how-to-access-microsoft-graph-calendar-events-with-syncfusion-blazor-scheduler.aspx )
 * [Easy Steps to Synchronize JIRA Calendar Tasks with the Blazor Scheduler](https://www.syncfusion.com/blogs/post/easy-steps-to-synchronize-jira-calendar-tasks-with-the-blazor-scheduler.aspx)
