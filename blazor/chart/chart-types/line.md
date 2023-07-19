@@ -52,7 +52,7 @@ documentation: ug
 
 ``` 
 
-![Blazor Line Chart](../images/chart-types-images/blazor-line-chart.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VNrKtQDzMYBbeYNK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 N> Refer to our [Blazor Line Chart](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/line-chart) feature tour page to know about its other groundbreaking feature representations. Explore our [Blazor Line Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to know how to represent time-dependent data, showing trends at equal intervals.
 
@@ -94,7 +94,7 @@ To render a multicolored line series, specify the [Type](https://help.syncfusion
 
 ``` 
 
-![Blazor Multicolored Line Chart](../images/chart-types-images/blazor-multicolor-line-chart.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VDLUjctJiazHJQTb?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Series customization
 
@@ -145,11 +145,11 @@ The following properties can be used to customize the [Line](https://help.syncfu
 
 ``` 
 
-![Blazor Line Chart with Custom Series](../images/chart-types-images/blazor-line-chart-custom-series.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VjLUZQNzWOQWFaWO?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 N> Refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
 
-## See Also
+## See also
 
 * [Data Label](../data-labels)
 * [Tooltip](../tool-tip)
