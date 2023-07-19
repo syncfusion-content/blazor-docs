@@ -78,7 +78,7 @@ To change the default labels such as Title, Location and other field names in th
 }
 ```
 
-![Editor Window with Custom Label in Blazor Scheduler](images/blazor-scheduler-custom-label.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXrAXwZGhBHgbAdp?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ### Field validation
 
@@ -131,7 +131,7 @@ It is possible to validate the required fields of the editor window before submi
 }
 ```
 
-![Editor window with Validation in Blazor Scheduler](images/blazor-scheduler-validation.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rjrKjGtmBKdsswbO?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ### Customizing the default time duration in editor window
 
@@ -180,6 +180,8 @@ In default event editor window, start and end time duration are processed based 
 }
 ```
 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LthKNGDGVqmIAGyg?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 ### How to prevent the display of editor and quick popups
 
 It is possible to prevent the display of editor and quick popup windows by passing the value `true` to `cancel` option within the `OnPopupOpen` event.
@@ -226,6 +228,8 @@ It is possible to prevent the display of editor and quick popup windows by passi
     }
 }
 ```
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNrgDcDchpMsbwpV?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 In case, in order to prevent only specific popups on Scheduler, check the condition based on the popup type. The types of the popup that can be checked within the `OnPopupOpen` event are as follows.
 
@@ -342,6 +346,8 @@ To get start quickly on customizing editor window using template, you can check 
 }
 ```
 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VjhUZGNwrJHbxcXI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 ### How to add resource options within editor template
 
 The resource field can be added within editor template with the following code example.
@@ -438,7 +444,7 @@ The resource field can be added within editor template with the following code e
 }
 ```
 
-![Add Resource Options within Editor Template in Blazor Scheduler](images/blazor-scheduler-custom-window-with-resource.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rXVKjmDGBzFKCGPK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 N> EditorTemplate is not applicable when we set `AllowMutiple` as true without enabling `AllowGroupEdit`, so in that case use custom editor window.
 
@@ -540,7 +546,7 @@ N> EditorTemplate is not applicable when we set `AllowMutiple` as true without e
 }
 ```
 
-![Add Recurrence Options within Editor Template in Blazor Scheduler](images/blazor-scheduler-custom-window-with-recurrence.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BDhqjGtwheIHwbVc?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Apply validations on editor template fields
 
@@ -648,7 +654,7 @@ In the following code example, validation has been added to the `EventType` fiel
 }
 ```
 
-![Editor Template with Validation in Blazor Scheduler](images/blazor-scheduler-custom-window-validation.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LtrUNmXcBRVTKimS?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Quick popups
 
@@ -690,6 +696,8 @@ By default, these popups are displayed over cells and appointments of Scheduler 
     }
 }
 ```
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hXBgZwjwhHIABcES?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 N> The quick popup that opens while single clicking on the cells are not applicable on mobile devices.
 
@@ -1410,6 +1418,8 @@ By default, the `QuickInfoOnSelectionEnd` property is set to `false` to prevent 
 }
 ```
 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VNLqDGNmrbTngiVF?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 ### How to enable/disable the multiple days selection
 
 By default, the Scheduler allows the user to select multiple days. We can prevent this action by setting `false` to `AllowMultiRowSelection` property whereas its default value is `true`.
@@ -1450,6 +1460,8 @@ By default, the Scheduler allows the user to select multiple days. We can preven
     }
 }
 ```
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VjBKNQNwVbPBxxYs?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ### How to close quick info popup manually
 
@@ -1500,6 +1512,8 @@ The quick info popup can be closed in scheduler by using the `CloseQuickInfoPopu
 }
 ```
 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rXrgNGjGhuiNuVdi?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 ## More events indicator and popup
 
 When the number of appointments count that lies on a particular time range * default appointment height exceeds the default height of a cell in month view and all other timeline views, a `+ more` text indicator will be displayed at the bottom of those cells. This indicator denotes that the cell contains few more appointments in it and clicking on that will display a popup displaying all the appointments present on that day.
@@ -1549,7 +1563,7 @@ The same indicator is displayed on all-day row in calendar views such as day, we
 }
 ```
 
-![More Event Popup in Blazor Scheduler](images/blazor-scheduler-more-event-popup.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BtVKtmXGLOYdcLMB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ### How to prevent the display of popup when clicking on the more text indicator
 
@@ -1597,3 +1611,5 @@ It is possible to prevent the display of popup window by passing the value `true
     }
 }
 ```
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZrUNcNcqtZmSrSD?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
