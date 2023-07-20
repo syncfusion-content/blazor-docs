@@ -53,7 +53,7 @@ Instead of using [Static Web assets](#static-web-assets) or a [CDN reference](#c
 
 ### Enable static web assets usage
 
-To use static web assets, ensure [UseStaticFiles](https://docs.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.builder.staticfileextensions.usestaticfiles) method is called as follows,
+To use static web assets, ensure [UseStaticFiles](https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.builder.staticfileextensions.usestaticfiles?view=aspnetcore-7.0) method is called as follows,
 
 * For **.NET 6 and .NET 7** app, open the **~/Program.cs** file and call `UseStaticFiles` method.
 * For **.NET 5 and .NET 3.X** app, open the **~/Startup.cs** file and call `UseStaticFiles` method.
