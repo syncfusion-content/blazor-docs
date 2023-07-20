@@ -23,6 +23,7 @@ Customize the marker shape in each data point by using the [OnPointRender](https
 
 <SfChart>
     <ChartEvents OnPointRender="@PointRender"></ChartEvents>
+    <ChartPrimaryXAxis Interval="1" EdgeLabelPlacement="EdgeLabelPlacement.Shift"></ChartPrimaryXAxis>
     <ChartSeriesCollection>
         <ChartSeries DataSource="@ConsumerReports" XName="X" YName="Y" Type="ChartSeriesType.Line">
             <ChartMarker Visible="true"  Height="10" Width="10" />
@@ -56,5 +57,6 @@ Customize the marker shape in each data point by using the [OnPointRender](https
     }
 }
 ```
+![Blazor Chart With Marker Customization](../images/how-to/blazor-chart-marker-customization.png)
 
 N> Refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.

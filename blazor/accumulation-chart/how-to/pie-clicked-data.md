@@ -25,12 +25,30 @@ To show the clicked area data from the pie, follow the given steps:
     </AccumulationChartSeriesCollection>
 </SfAccumulationChart>
 
-<div style="white-space: pre-line;" >
-    @myMarkup 
+<style>
+    body, html {
+        height: 100%;
+        margin: 0;
+    }
+
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+    }
+
+    .centered-div {
+        white-space: pre-line;
+        text-align: left;
+    }
+</style>
+
+<div class="container">
+    <div class="centered-div">
+        @myMarkup
+    </div>
 </div>
-
-@*@((MarkupString)myMarkup)*@
-
 
 @code {
     string myMarkup;
@@ -59,6 +77,6 @@ To show the clicked area data from the pie, follow the given steps:
     }     
 }
 ```
-
+![Blazor Accumulation Chart with Display Clicked Data](../images/blazor-accumulation-chart-pie-clicked-data.png)
 
 N> Refer to the [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore the [Blazor Accumulation Chart Example](https://blazor.syncfusion.com/demos/chart/pie?theme=bootstrap4) to know about the various features of accumulation charts and how it is used to represent numeric proportional data.

@@ -24,6 +24,7 @@ Customize the Legend shape in each data point by using the [OnLegendItemRender](
 
 <SfChart>
     <ChartEvents OnLegendItemRender="@LegendRender"></ChartEvents>
+    <ChartPrimaryXAxis Interval="1" EdgeLabelPlacement="EdgeLabelPlacement.Shift"></ChartPrimaryXAxis>
     <ChartSeriesCollection>
         <ChartSeries DataSource="@ConsumerReports" XName="X" YName="Y1" Name="Television" Type="ChartSeriesType.StepArea">            
         </ChartSeries>
@@ -66,6 +67,7 @@ Customize the Legend shape in each data point by using the [OnLegendItemRender](
     }
 }
 ```
+![Blazor Chart With Legend Customization](../images/how-to/blazor-chart-legend-customization.png)
 
 N> Refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
 
