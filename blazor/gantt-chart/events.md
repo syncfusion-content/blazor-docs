@@ -304,7 +304,7 @@ The events should be provided to the Gantt Chart using the GanttChartEvents comp
 
 ## DataBound
 
-The [DataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_DataBound) event is raised when the current view data is populated on the Gantt Chart. This event occurs after the data binding process is completed, indicating that the Gantt Chart has been updated with the relevant data for the current view.
+[DataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_DataBound) event is raised when data source is populated on the Gantt Chart.
 
 ```cshtml
 @using Syncfusion.Blazor.Gantt
