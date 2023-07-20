@@ -80,7 +80,7 @@ If you need to change your application theme and UI design in the future, do not
 
 The following list of common variables is used in the Syncfusion Blazor library themes for all UI components. You can change these variables to customize the corresponding theme.
 
-### Syncfusion Material3 theme
+### Material 3 theme
 
 <table>
     <style>
