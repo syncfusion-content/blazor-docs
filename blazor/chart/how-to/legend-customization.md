@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Marker Customization in Blazor Charts Component | Syncfusion
-description: Checkout and learn here all about Marker Customization  in Syncfusion Blazor Charts component and more.
+title: Legend Customization in Blazor Charts Component | Syncfusion
+description: Checkout and learn here all about Legend Customization in Syncfusion Blazor Charts component and more.
 platform: Blazor
 control: Chart
 documentation: ug

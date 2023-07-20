@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Tooltip format in Blazor Charts Component | Syncfusion
-description: Checkout and learn here all about Tooltip format  in Syncfusion Blazor Charts component and more.
+description: Checkout and learn here all about Tooltip formatting in Syncfusion Blazor Charts component and more.
 platform: Blazor
 control: Chart
 documentation: ug
@@ -15,7 +15,7 @@ Using [TooltipRender](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ch
 To format the tooltip header text and text follow the following steps.
 
 **Step 1**
-By using [TooltipRender](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_TooltipRender) event we can able to get the header text and tooltip text and we can modify the text while rendering the tooltip.
+By using [TooltipRender](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_TooltipRender) event we can able to get the header text and tooltip text and we can modify them while tooltip rendering.
 
 ```cshtml
 
