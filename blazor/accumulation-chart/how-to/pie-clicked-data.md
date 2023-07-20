@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Pie Clicked Data in Blazor Accumulation Chart Component | Syncfusion
-description: Learn here all about Text placing center of the doughnut in Syncfusion Blazor Accumulation Chart component and more.
+description: Learn here all about how to display the clicked data in Syncfusion Blazor Accumulation Chart component and more.
 platform: Blazor
 control: Accumulation Chart
 documentation: ug
