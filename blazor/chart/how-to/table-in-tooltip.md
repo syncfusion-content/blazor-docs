@@ -16,7 +16,7 @@ Follow the given step to show the table tooltip,
 
 **Step 1:**
 
-Initialize the tooltip template as folows inside the ChartTooltipsettings. You can customize the table border width and border color using style.
+Initialize the tooltip template as folows inside the [ChartTooltipsettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTooltipSettings.html#Syncfusion_Blazor_Charts_ChartTooltipSettings__ctor). You can customize the table border width and border color using style.
 
 ```cshtml
 
