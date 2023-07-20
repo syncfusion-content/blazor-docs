@@ -25,7 +25,7 @@ To get start quickly with Blazor Card component, you can check on this video.
 
 You can create **Blazor Server App** or **Blazor WebAssembly App** using Visual Studio in one of the following ways,
 
-* [Create a Project using Microsoft Templates](https://docs.microsoft.com/en-us/aspnet/core/blazor/tooling?pivots=windows)
+* [Create a Project using Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0&pivots=windows)
 
 * [Create a Project using Syncfusion Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio)
 
@@ -302,4 +302,4 @@ You can add the header by using [CardHeader](https://help.syncfusion.com/cr/blaz
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/Card).
 
-N> You can also explore our [Blazor Card example](https://blazor.syncfusion.com/demos/card/basic-card?theme=fluent) that shows you how to render and configure the Card.
+N> You can also explore our [Blazor Card example](https://blazor.syncfusion.com/demos/card/basic-card?theme=bootstrap5) that shows you how to render and configure the Card.
