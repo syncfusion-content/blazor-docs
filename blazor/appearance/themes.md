@@ -13,8 +13,8 @@ The following list of themes are included in the Syncfusion Blazor components li
 
 |Theme	|Style Sheet Name| 
 |--------|--------|
-|Material3 | material3.css |
-|Material3 Dark | material3-dark.css |
+|Material 3 | material3.css |
+|Material 3 Dark | material3-dark.css |
 |Bootstrap 5	| bootstrap5.css | 
 |Bootstrap 5 Dark	| bootstrap5-dark.css | 
 |Bootstrap 4	| bootstrap4.css |
@@ -101,8 +101,8 @@ Syncfusion Blazor Themes are available in the CDN. Make sure that the version in
 
 | Theme Name | CDN Reference |
 |--- | --- |
-| Material3 | https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/material3.css |
-| Material3 Dark | https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/material3-dark.css |
+| Material 3 | https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/material3.css |
+| Material 3 Dark | https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/material3-dark.css |
 | Bootstrap 5 | https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/bootstrap5.css |
 | Bootstrap 5 Dark| https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/bootstrap5-dark.css |
 | Bootstrap 4 | https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/bootstrap4.css |
@@ -690,14 +690,14 @@ The following example demonstrates how to change a theme dynamically in Blazor S
     }
 
     private List<ThemeDetails> Themes = new List<ThemeDetails>() {
-        new ThemeDetails(){ ID = "material3", Text = "Material3" },
+        new ThemeDetails(){ ID = "material3", Text = "Material 3" },
         new ThemeDetails(){ ID = "material", Text = "Material" },
         new ThemeDetails(){ ID = "bootstrap", Text = "Bootstrap" },
         new ThemeDetails(){ ID = "fabric", Text = "Fabric" },
         new ThemeDetails(){ ID = "bootstrap4", Text = "Bootstrap 4" },
         new ThemeDetails(){ ID = "tailwind", Text = "TailWind"},
         new ThemeDetails(){ ID = "tailwind-dark", Text = "TailWind Dark" },
-        new ThemeDetails(){ ID = "material3-dark", Text = "Material3 Dark" },
+        new ThemeDetails(){ ID = "material3-dark", Text = "Material 3 Dark" },
         new ThemeDetails(){ ID = "material-dark", Text = "Material Dark" },
         new ThemeDetails(){ ID = "bootstrap-dark", Text = "Bootstrap Dark" },
         new ThemeDetails(){ ID = "fabric-dark", Text = "Fabric Dark" },
@@ -763,14 +763,14 @@ The following example demonstrates how to change a theme dynamically in Blazor S
     }
     
     private List<ThemeDetails> Themes = new List<ThemeDetails>() {
-        new ThemeDetails(){ ID = "material3", Text = "Material3" },
+        new ThemeDetails(){ ID = "material3", Text = "Material 3" },
         new ThemeDetails(){ ID = "material", Text = "Material" },
         new ThemeDetails(){ ID = "bootstrap", Text = "Bootstrap" },
         new ThemeDetails(){ ID = "fabric", Text = "Fabric" },
         new ThemeDetails(){ ID = "bootstrap4", Text = "Bootstrap 4" },
         new ThemeDetails(){ ID = "tailwind", Text = "TailWind"},
         new ThemeDetails(){ ID = "tailwind-dark", Text = "TailWind Dark" },
-        new ThemeDetails(){ ID = "material3-dark", Text = "Material3 Dark" },
+        new ThemeDetails(){ ID = "material3-dark", Text = "Material 3 Dark" },
         new ThemeDetails(){ ID = "material-dark", Text = "Material Dark" },
         new ThemeDetails(){ ID = "bootstrap-dark", Text = "Bootstrap Dark" },
         new ThemeDetails(){ ID = "fabric-dark", Text = "Fabric Dark" },
@@ -875,14 +875,14 @@ The following example demonstrates how to change a theme dynamically in Blazor W
         }
     
         private List<ThemeDetails> Themes = new List<ThemeDetails>() {
-            new ThemeDetails(){ ID = "material3", Text = "Material3" },
+            new ThemeDetails(){ ID = "material3", Text = "Material 3" },
             new ThemeDetails(){ ID = "material", Text = "Material" },
             new ThemeDetails(){ ID = "bootstrap", Text = "Bootstrap" },
             new ThemeDetails(){ ID = "fabric", Text = "Fabric" },
             new ThemeDetails(){ ID = "bootstrap4", Text = "Bootstrap 4" },
             new ThemeDetails(){ ID = "tailwind", Text = "TailWind"},
             new ThemeDetails(){ ID = "tailwind-dark", Text = "TailWind Dark" },
-            new ThemeDetails(){ ID = "material3-dark", Text = "Material3 Dark" },
+            new ThemeDetails(){ ID = "material3-dark", Text = "Material 3 Dark" },
             new ThemeDetails(){ ID = "material-dark", Text = "Material Dark" },
             new ThemeDetails(){ ID = "bootstrap-dark", Text = "Bootstrap Dark" },
             new ThemeDetails(){ ID = "fabric-dark", Text = "Fabric Dark" },
