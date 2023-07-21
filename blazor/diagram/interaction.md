@@ -340,7 +340,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 }
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Interaction/DiagramPositionEvent)
-For more information about dragging, refer [Node Drag](https://blazor.syncfusion.com/documentation/diagram/nodes/interaction/#drag)
+For more information about dragging, refer [Node Drag](https://blazor.syncfusion.com/documentation/diagram/nodes/interaction#drag)
 
 ## Resize
 
@@ -391,7 +391,7 @@ For more information about dragging, refer [Node Drag](https://blazor.syncfusion
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Interaction/DiagramSizeEvent)
 
-For more information about resizing, refer [Node Resize](https://blazor.syncfusion.com/documentation/diagram/nodes/interaction/#resize)
+For more information about resizing, refer [Node Resize](https://blazor.syncfusion.com/documentation/diagram/nodes/interaction#resize)
 
 N> While dragging and resizing, the objects are snapped towards the nearest objects to make better alignments. For better alignments, refer to [Snapping](https://blazor.syncfusion.com/documentation/diagram/grid-lines#snapping).
 
@@ -445,7 +445,7 @@ N> While dragging and resizing, the objects are snapped towards the nearest obje
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Interaction/DiagramRotateEvent)
 
-For more information about resizing, refer [Node Rotate](https://blazor.syncfusion.com/documentation/diagram/nodes/interaction/#rotate)
+For more information about resizing, refer [Node Rotate](https://blazor.syncfusion.com/documentation/diagram/nodes/interaction#rotate)
 
 ## Connection editing
 
@@ -455,7 +455,7 @@ For more information about resizing, refer [Node Rotate](https://blazor.syncfusi
 
 Source and target points of the selected connectors are represented with two handles. Clicking and dragging those handles help you to adjust the source and target points.
 
-For more information, refer [End Point Dragging](https://blazor.syncfusion.com/documentation/diagram/connectors/interactions/#end-point-dragging)
+For more information, refer [End Point Dragging](https://blazor.syncfusion.com/documentation/diagram/connectors/interactions#end-point-dragging)
 
 * If you drag the connector end points, then the following events can be used to do your customization.
 * When you connect connector with ports/node or disconnect from it, the following events are triggered.
@@ -545,7 +545,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 * Any number of new segments can be inserted into a straight line by clicking, when Shift and Ctrl keys are pressed (Ctrl+Shift+Click).
 * Straight segments can be removed by clicking the segment end point, when Ctrl and Shift keys are pressed (Ctrl+Shift+Click).
 
-For more information about straight segment editing, refer [Straight Segment Editing](https://blazor.syncfusion.com/documentation/diagram/connectors/interactions/#straight-segment-editing)
+For more information about straight segment editing, refer [Straight Segment Editing](https://blazor.syncfusion.com/documentation/diagram/connectors/interactions#straight-segment-editing)
 
 ## Orthogonal segment editing
 
@@ -621,7 +621,7 @@ For more information about straight segment editing, refer [Straight Segment Edi
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Interaction/SegmentEditing)
 
-For more information about orthogonal segment editing, refer [Orthogonal Segment Editing](https://blazor.syncfusion.com/documentation/diagram/connectors/interactions/#orthogonal-segment-editing).
+For more information about orthogonal segment editing, refer [Orthogonal Segment Editing](https://blazor.syncfusion.com/documentation/diagram/connectors/interactions#orthogonal-segment-editing).
 
 ## User handles
 
