@@ -49,7 +49,8 @@ An axis can be positioned in the chart area using [CrossesAt](https://help.syncf
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hNBAjRgDsyXAvZdZ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Blazor Column Chart with Cross Axis](images/axis-customization/blazor-column-chart-cross-axis.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/hNBAjRgDsyXAvZdZ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Title
 
@@ -91,7 +92,8 @@ A title can be added to the axis using [Title](https://help.syncfusion.com/cr/bl
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VjBUZHUNWegBiiGc?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Blazor Column Chart with Axis Title](images/axis-customization/blazor-column-chart-axis-title.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VjBUZHUNWegBiiGc?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Tick lines
 
@@ -135,7 +137,8 @@ The width, color, and size of the minor and major tick lines can be customi
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VDrqjRqXioTNNiff?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Blazor Column Chart with Custom Tick Lines](images/axis-customization/blazor-column-chart-custom-tick-lines.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VDrqjRqXioTNNiff?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Grid lines customization
 
@@ -178,7 +181,8 @@ The width, color, and dash array of the minor and major grid lines can be c
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hjrqXnKjWSJGhGAf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Blazor Column Chart with Custom GridLines](images/axis-customization/blazor-column-chart-custom-gridline.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/hjrqXnKjWSJGhGAf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Multiple Axis
 
@@ -224,7 +228,8 @@ The [ChartAxes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.C
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rDrqZxgjsSSyHafv?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Blazor Column Chart with Multiple Axes](images/axis-customization/blazor-column-chart-multiple-axes.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/rDrqZxgjsSSyHafv?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## See also
 
@@ -272,7 +277,8 @@ When an axis is inversed, the greatest value on the axis moves closer to the ori
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VDBUNxgZWSRIWeYU?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Blazor Column Chart with Inversed Axis](images/axis-customization/blazor-column-chart-inversed-axis.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VDBUNxgZWSRIWeYU?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Opposed position
 
@@ -314,7 +320,8 @@ To place an axis in the opposite position of its original position, set its [Opp
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VZBKZHAtWychbTfR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Blazor Column Chart Axis in Opposed Position](images/axis-customization/blazor-column-chart-axis-at-opposed-position.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VZBKZHAtWychbTfR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 N> Refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
 

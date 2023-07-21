@@ -166,7 +166,8 @@ N> Syncfusion recommends to reference scripts using [Static Web Assets](https://
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to run the app. Then, the Syncfusion Blazor DataGrid component will be rendered in the default web browser.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LDhKtxrGBdYHZqDD?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Blazor DataGrid Component](../images/blazor-datagrid-component.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LDhKtxrGBdYHZqDD?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 N> You need to include a valid license key (either paid or trial key) within your applications. Refer to this [help topic](https://blazor.syncfusion.com/documentation/getting-started/license-key/overview) for more information.
 
@@ -204,7 +205,7 @@ To bind data for the DataGrid component, you can assign a IEnumerable object to 
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LZBANRBQBwXIQmkH?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LZBANRBQBwXIQmkH?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Defining columns
 
@@ -234,7 +235,7 @@ Let’s check the properties used here:
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BXhgDnBGLAHwtqsk?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BXhgDnBGLAHwtqsk?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Enable paging
 
@@ -256,7 +257,7 @@ The paging feature enables users to view the datagrid record in a paged view. It
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BtLUjHBwVKFSrtaW?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BtLUjHBwVKFSrtaW?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Enable sorting
 
@@ -278,7 +279,7 @@ The sorting feature enables you to order the records. It can be enabled by setti
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LjBqNdrchAYGYcIV?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LjBqNdrchAYGYcIV?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Enable filtering
 
@@ -300,7 +301,7 @@ The filtering feature enables you to view reduced amount of records based on fil
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rZrqtHhGhzieWxRf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/rZrqtHhGhzieWxRf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Enable grouping
 
@@ -322,7 +323,8 @@ The grouping feature enables you to view the datagrid record in a grouped view. 
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BZrAXnrQVprOBYOy?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Blazor DataGrid Component](../images/blazor-datagrid.gif)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BZrAXnrQVprOBYOy?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## See also
 
