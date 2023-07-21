@@ -184,7 +184,7 @@ public class Employee
 
 ## TreeGridTemplates component
 
-If a component contains any `RenderFragment` type property then it does not allow any child components other than the render fragment property, which is [by design in Blazor](https://github.com/aspnet/AspNetCore/issues/10836).
+If a component contains any `RenderFragment` type property then it does not allow any child components other than the render fragment property, which is [by design in Blazor](https://github.com/dotnet/aspnetcore/issues/10836).
 
 This prevents us from directly specifying templates such as `RowTemplate` and `DetailTemplate` as descendant of the Tree Grid component. Hence the templates such as `RowTemplate` and `DetailTemplate` should be wrapped around a component named `TreeGridTemplates` as follows.
 
