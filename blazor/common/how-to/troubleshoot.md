@@ -154,7 +154,7 @@ documentation: ug
 
     **Solution**
 
-    The Syncfusion Blazor library provides [individual NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages/) from the 18.4.0.30 version. If you are using `individual NuGet Package` in your application, you have to modify the below static web assets (styles) reference from `Syncfusion.Blazor` to `Syncfusion.Blazor.Themes` in the application to resolve this issue.
+    The Syncfusion Blazor library provides [individual NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) from the 18.4.0.30 version. If you are using `individual NuGet Package` in your application, you have to modify the below static web assets (styles) reference from `Syncfusion.Blazor` to `Syncfusion.Blazor.Themes` in the application to resolve this issue.
 
     ```html
         <head>
