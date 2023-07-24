@@ -1,3 +1,11 @@
+---
+layout: post
+title: Overview of Blazor Playground | Syncfusion
+description: Syncfusion Blazor Playground offers a comprehensive playground within your browser, empowering you to write, edit, compile, and share your Blazor components effortlessly. Explore the capabilities of Blazor components in real-time without the need for complex setups or external tools.
+platform: Blazor
+component: Common
+documentation: ug
+---
 # Overview of Blazor Playground
 
 Blazor Playground is a web-based application designed to compile and test Blazor components. It offers a platform where developers can write, visualize, and experiment with Blazor components using C# and Razor syntax. The Playground's functionality allows users to quickly iterate and validate their code without the need for a local development environment. It serves as an efficient tool for learning Blazor, prototyping ideas, and sharing code snippets with others. The code compilation utilizes WebAssembly technology which gives a performance that closely resembles native execution.
