@@ -32,6 +32,16 @@ You can create **Blazor Server App** or **Blazor WebAssembly App** using Visual 
 
 To add Blazor Calendar component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search for [Syncfusion.Blazor.Calendars](https://www.nuget.org/packages/Syncfusion.Blazor.Calendars) and then install it.
 
+{% tabs %}
+{% highlight nuget tabtitle="Package Manager" hl_lines="1" %}
+
+PM> NuGet\Install-Package Syncfusion.Blazor.Calendars 
+
+{% endhighlight %}
+{% endtabs %}
+![image](https://github.com/syncfusion-content/blazor-docs/assets/102576531/1a7889d7-5115-469b-af6f-d3f355acef6a)
+
+
 N> Syncfusion Blazor components are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). To use Syncfusion Blazor components in your application, add a reference to the corresponding NuGet package.Please refer to the [NuGet packages topic](https://blazor.syncfusion.com/documentation/nuget-packages) for the list of available packages, which includes component details and [Benefits of using individual NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages#benefits-of-using-individual-nuget-packages).
 
 ## Register Syncfusion Blazor Service
@@ -101,6 +111,14 @@ await builder.Build().RunAsync();
 Checkout the [Blazor Themes topic](https://blazor.syncfusion.com/documentation/appearance/themes) to learn different ways ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference) and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)) to refer themes in Blazor application, and to have the expected appearance for Syncfusion Blazor components. Here, the theme is referred using [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Refer to [Enable static web assets usage](https://blazor.syncfusion.com/documentation/appearance/themes#enable-static-web-assets-usage) topic to use static assets in your project.
 
 To add theme to the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search for [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) and then install it. Then, the theme style sheet from NuGet can be referred as follows,
+
+{% tabs %}
+{% highlight nuget tabtitle="Package Manager" hl_lines="1" %}
+
+PM> NuGet\Install-Package Syncfusion.Blazor.Themes
+
+{% endhighlight %}
+{% endtabs %}
 
 N> If you are using [Syncfusion.Blazor](https://www.nuget.org/packages/Syncfusion.Blazor/) single NuGet, you don't have to refer [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet. Since style sheets already inside the assets of `Syncfusion.Blazor` NuGet.
 
