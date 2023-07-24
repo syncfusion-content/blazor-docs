@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Save Code Snippet in Blazor Playground | Syncfusion
-description: Getting Started with Blazor Playground to Write, Edit and Compile for Blazor Components
+description: Sharing code snippets with blazor components.
 platform: Blazor
 component: Common
 documentation: ug
