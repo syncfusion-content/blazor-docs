@@ -65,7 +65,8 @@ The height and width of the Scheduler cells can be customized either to increase
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rZBUNcWXUQWgenyy?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Cell Dimensions in Vertical Views in Blazor Scheduler](images/blazor-scheduler-celldimension-verticalviews.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/rZBUNcWXUQWgenyy?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Setting cell dimensions in Timeline Views
 
@@ -109,7 +110,8 @@ The height and width of the Scheduler cells can be customized either to increase
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hNrAZQiXAQAyYkAq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Cell Dimensions in Timeline Views in Blazor Scheduler](images/blazor-scheduler-celldimension-timelineviews.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/hNrAZQiXAQAyYkAq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Customizing cells using CellTemplate
 
@@ -199,7 +201,8 @@ The `CellTemplate` is used to customize the cell background with specific images
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VjrqZcWDAmcVeFzX?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Using CellTemplate in Blazor Scheduler](images/blazor-scheduler-celldimension-celltemplate.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VjrqZcWDAmcVeFzX?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Customizing cell header in month view
 
@@ -240,7 +243,8 @@ The month header of each date cell in the month view can be customized using the
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BNrKjwsXAcYBSOAg?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Customizing Cell Header in Blazor Scheduler](images/blazor-scheduler-celldimension-cellheader.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BNrKjwsXAcYBSOAg?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Customizing cells using OnRenderCell event
 
@@ -297,7 +301,7 @@ The cells can also be customized by using `OnRenderCell` event. In the `OnRender
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BZhUDwWjgvqHoVSc?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BZhUDwWjgvqHoVSc?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Customizing the minimum and maximum date values
 
@@ -328,7 +332,7 @@ Providing the `MinDate` and `MaxDate` property with some date values, allows the
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LtrqNmWtqPyndXXz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LtrqNmWtqPyndXXz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## How to disable multiple cell and row selection in Schedule
 

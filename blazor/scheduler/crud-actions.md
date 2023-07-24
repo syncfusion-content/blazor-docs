@@ -79,7 +79,7 @@ The appointments can be created dynamically by using `AddEventAsync` method.
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VjLgNGXcsoQREIxl?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VjLgNGXcsoQREIxl?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ### Inline creation
 
@@ -121,7 +121,7 @@ Another easier way to create the appointments is enabling the `AllowInline` prop
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BDBUXQXQiIPuDceA?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BDBUXQXQiIPuDceA?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ### Inserting events into database at server-side
 
@@ -209,7 +209,7 @@ Additionally, the regex condition has been added to the Location field, so that 
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LZLKNGjcCRMzAJVi?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LZLKNGjcCRMzAJVi?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 You can also dynamically prevent the creation of appointments on Scheduler. For example, say if you want to decline the creation of appointments on weekend days, you can check for its appropriate condition within the `OnActionBegin` event.
 
@@ -264,7 +264,7 @@ You can also dynamically prevent the creation of appointments on Scheduler. For 
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VXrKNcDmiHLLnEhP?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VXrKNcDmiHLLnEhP?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Edit
 
@@ -336,7 +336,7 @@ Here, an event with ID `1` is edited and its subject is changed with a new text.
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BNLUtwtwMcLvslgK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BNLUtwtwMcLvslgK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ### Inline editing
 
@@ -378,7 +378,7 @@ Another easier way to edit the appointments is enabling the `AllowInline` proper
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hXBAZmZwWbJernSP?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/hXBAZmZwWbJernSP?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ### Updating events in database at server-side
 
@@ -591,7 +591,7 @@ You can also dynamically prevent the editing of appointments on Scheduler. For e
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rDhKjwjcWlRlwuXm?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/rDhKjwjcWlRlwuXm?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Delete
 
@@ -658,7 +658,7 @@ The appointments can be removed manually using the `DeleteEventAsync` method. Th
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hZhgZwtQMvuPSSLf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/hZhgZwtQMvuPSSLf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 **Recurring Event** - The recurring events can be removed as an entire series or simply removing single occurrence by using the `DeleteEventAsync` method which takes in either the `DeleteSeries` or `DeleteOccurrence` parameters.
 
@@ -717,7 +717,7 @@ The appointments can be removed manually using the `DeleteEventAsync` method. Th
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BjhUjwjQCaLADEhq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BjhUjwjQCaLADEhq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ### Removing events from database at server-side
 
@@ -850,7 +850,7 @@ N> By default, when you drag a recurring instance, only the occurrence of the ev
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LNrKtQDQWOzeDMIm?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LNrKtQDQWOzeDMIm?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Resize
 
@@ -893,4 +893,4 @@ N> By default, when you resize a recurring instance, only the occurrence of the 
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rNLKXwtwWYQwKeYu?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/rNLKXwtwWYQwKeYu?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
