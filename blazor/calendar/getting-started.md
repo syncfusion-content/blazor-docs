@@ -120,8 +120,6 @@ PM> NuGet\Install-Package Syncfusion.Blazor.Themes
 {% endhighlight %}
 {% endtabs %}
 
-N> If you are using [Syncfusion.Blazor](https://www.nuget.org/packages/Syncfusion.Blazor/) single NuGet, you don't have to refer [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet. Since style sheets already inside the assets of `Syncfusion.Blazor` NuGet.
-
 ### Blazor Server App
 
 * For .NET 6 app, add the Syncfusion bootstrap5 theme in the `<head>` of the **~/Pages/_Layout.cshtml** file.
