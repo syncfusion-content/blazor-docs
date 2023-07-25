@@ -15,7 +15,7 @@ N> When the mask value is empty, the MaskedTextBox behaves as an input element w
 
 ## Standard mask elements
 
-The following table shows the list of mask elements and its behavior based on [MSDN](https://docs.microsoft.com/en-us/dotnet/api/system.windows.forms.maskedtextbox.mask?view=net-5.0) standard.
+The following table shows the list of mask elements and its behavior based on [MSDN](https://learn.microsoft.com/en-us/dotnet/api/system.windows.forms.maskedtextbox.mask?view=windowsdesktop-7.0&viewFallbackFrom=net-5.0) standard.
 
 The mask can be formed by combining any one or more of these mask elements.
 
