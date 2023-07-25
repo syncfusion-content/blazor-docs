@@ -21,7 +21,7 @@ This article provides a step-by-step instructions for building Blazor Server App
 
 You can create a **Blazor Server App** using Visual Studio for mac in the following way.
 
-* [Create a project using Microsoft Templates](https://docs.microsoft.com/en-us/aspnet/core/blazor/tooling?pivots=macos)
+* [Create a project using Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0&pivots=macos)
 
 ## Install Syncfusion Blazor packages in the App
 
