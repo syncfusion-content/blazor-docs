@@ -375,14 +375,172 @@ The DataGrid component in Syncfusion's Blazor suite allows you to customize the 
 
 ### Add sort columns
 
+To sort a column externally, you can utilize the [SortColumnAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_SortColumnAsync_System_String_Syncfusion_Blazor_Grids_SortDirection_System_Nullable_System_Boolean__) method with parameters **columnName**, **direction** and **isMultiSort** provided by the DataGrid component. This method allows you to programmatically sort a specific column based on your requirements.
+
+The following example demonstrates how to add sort columns to a grid. It utilizes the **DropDownList** component to select the column and sort direction. When an external button is clicked, the [SortColumnAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_SortColumnAsync_System_String_Syncfusion_Blazor_Grids_SortDirection_System_Nullable_System_Boolean__) method is called with the specified **columnName**, **direction**, and **isMultiSort** parameters. 
+
+```cshtml
+@using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor.DropDowns
+
+<div style="display:flex;">
+    <SfDropDownList TValue="string" TItem="Columns" Width="300px" Placeholder="Select a Column" DataSource="@LocalData" @bind-Value="@DropDownValue">
+        <DropDownListFieldSettings Value="ID" Text="Value"></DropDownListFieldSettings>
+    </SfDropDownList>
+</div>
+
+<div style="display:flex;">
+    <SfDropDownList TValue="Syncfusion.Blazor.Grids.SortDirection" TItem="string" DataSource="@EnumValues" @bind-Value="@DropDownDirection" Width="300px">
+    </SfDropDownList>
+</div>
+
+<div style="display:flex;">
+    <Syncfusion.Blazor.Buttons.SfButton OnClick="AddsortColumn">Add sort Column</Syncfusion.Blazor.Buttons.SfButton>
+</div>
+
+<SfGrid DataSource="@Orders" AllowMultiSorting="true" @ref="Grid" TValue="Order" AllowSorting="true" Height="270">
+    <GridColumns>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code {
+
+    SfGrid<Order>? Grid { get; set; }
+    public List<Order> Orders { get; set; }
+    public string DropDownValue { get; set; } = "OrderID";
+
+    public string[] EnumValues = Enum.GetNames(typeof(Syncfusion.Blazor.Grids.SortDirection));
+
+    public Syncfusion.Blazor.Grids.SortDirection DropDownDirection { get; set; } = SortDirection.Ascending;
+
+    protected override void OnInitialized()
+    {
+        Orders = Enumerable.Range(1, 75).Select(x => new Order()
+            {
+                OrderID = 1000 + x,
+                CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
+                Freight = 2.1 * x,
+                OrderDate = DateTime.Now.AddDays(-x),
+            }).ToList();
+    }
+
+    public class Order
+    {
+        public int? OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public DateTime? OrderDate { get; set; }
+        public double? Freight { get; set; }
+    }
+
+    List<Columns> LocalData = new List<Columns>
+    {
+        new Columns() { ID= "OrderID", Value= "OrderID" },
+        new Columns() { ID= "CustomerID", Value= "CustomerID" },
+        new Columns() { ID= "Freight", Value= "Freight" },
+        new Columns() { ID= "OrderDate", Value= "OrderDate" },
+    };
+
+    List<Direction> LocalData1 = new List<Direction>
+    {
+        new Direction() { ID= "Ascending", Value= "Ascending" },
+        new Direction() { ID= "Descending", Value= "Descending" },
+
+    };
 
 
+    public class Columns
+    {
+        public string ID { get; set; }
+        public string Value { get; set; }
+    }
 
+    public class Direction
+    {
+        public string ID { get; set; }
+        public string Value { get; set; }
+    }
 
+    public void AddsortColumn()
+    {
+
+        Grid.SortColumnAsync(DropDownValue, DropDownDirection, true);
+
+    }
+}
+```
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rXBKDGBIqkLSeSwE?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+### Clear sorting 
+
+To clear the sorting on an external button click, you can use the [ClearSortingAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ClearSortingAsync) method provided by the DataGrid component. This method clears the sorting applied to all columns in the grid. 
+
+The following example demonstrates how to clear the sorting using `ClearSortingAsync` method in the external button click.
+
+```cshtml
+@using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor.Buttons
+
+<div>
+    <SfButton OnClick="ClearSorting">Clear Sorting</SfButton>
+</div>
+
+<SfGrid @ref="Grid" TValue="Order" DataSource="@Orders" AllowSorting="true" Height="270">
+    <GridSortSettings>
+        <GridSortColumns>
+            <GridSortColumn Field="OrderDate" Direction="SortDirection.Ascending"></GridSortColumn>
+            <GridSortColumn Field="Freight" Direction="SortDirection.Descending"></GridSortColumn>
+        </GridSortColumns>
+    </GridSortSettings>
+    <GridColumns>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code {
+    public List<Order> Orders { get; set; }
+    public SfGrid<Order>? Grid { get; set; }
+    protected override void OnInitialized()
+    {
+        Orders = Enumerable.Range(1, 75).Select(x => new Order()
+            {
+                OrderID = 1000 + x,
+                CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
+                Freight = 2.1 * x,
+                OrderDate = DateTime.Now.AddDays(-x),
+            }).ToList();
+    }
+
+    public class Order
+    {
+        public int? OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public DateTime? OrderDate { get; set; }
+        public double? Freight { get; set; }
+    }
+
+    private async Task ClearSorting()
+    {
+        await Grid.ClearSortingAsync();
+    }
+}
+```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hjLqZQLygYvasMAs?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Sorting events
 
-During the sort action, the datagrid component triggers two events. The [OnActionBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event triggers before the sort action starts, and the [OnActionComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event triggers after the sort action is completed. Using these events you can perform the needed actions.
+The DataGrid component provides two events that are triggered during the sorting action such as  [OnActionBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) and [OnActionComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html). These events can be used to perform any custom actions before and after the sorting action is completed.
+
+1. **OnActionBegin**:  [OnActionBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event is triggered before the sorting action begins. It provides a way to perform any necessary operations before the sorting action takes place. This event provides a parameter that contains the current grid state, including the current sorting column, direction, and data.
+
+2. **OnActionComplete**: [OnActionComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event is triggered after the sorting action is completed. It provides a way to perform any necessary operations after the sorting action has taken place. This event provides a parameter that contains the current grid state, including the sorted data and column information.
 
 ```csharp
 
@@ -426,6 +584,8 @@ During the sort action, the datagrid component triggers two events. The [OnActio
     }
 }
 ```
+> [args.RequestType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ActionEventArgs-1.html#Syncfusion_Blazor_Grids_ActionEventArgs_1_RequestType) refers to the current action being performed. For example in sorting, the `args.RequestType` value is **Sorting**.
+
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rjLUZnrrCOiiKMSf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
