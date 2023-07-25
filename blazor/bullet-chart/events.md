@@ -169,8 +169,8 @@ The [PointerClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Chart
 |   Argument name    |   Description                                          |
 |--------------------| -------------------------------------------------------|
 |   Target     |    Specifies the target bar values.
-|   Value     |    Specifies the value bar data.
-|   CategoryName     |    Specifies the category name of the selected point.
+|   Value     |    Specifies the value bar data. 
+|   CategoryName     |    Specifies the category name of the selected point.  
 |   Cancel             |   Specifies whether the event should continue or be cancelled.|
 
 ```cshtml

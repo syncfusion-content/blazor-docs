@@ -16,8 +16,8 @@ The migration to the PDF Viewer (NextGen) control brings a host of benefits, inc
 * **Enhanced Performance**:
 With the PDF Viewer (NextGen) control, users can expect significant improvements in performance. Scrolling through documents, navigating pages, and printing operations are now optimized for efficiency. Users will experience seamless and fluid interactions, ensuring a more productive and satisfying workflow.
 
-* **Elimination of Web Service**:
-The migration to the PDF Viewer (NextGen) control removes the requirement for a web service dependency.
+* **Elimination of Web Assembly Service Dependency**:
+The migration to the PDF Viewer (NextGen) control removes the requirement for a Web assembly service dependency.
 
 * **Unified Package for Multiple Platforms**:
 The PDF Viewer (NextGen) control is now available as a unified package for Windows, Mac, and Linux platforms. This means that regardless of their operating system, users can effortlessly install and utilize the package.
