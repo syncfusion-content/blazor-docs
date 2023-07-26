@@ -76,7 +76,7 @@ documentation: ug
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LZLAtGXpBKXXDzhk?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-N> Refer to our [Blazor 100% Stacked Line Chart](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/100-stacked-line-chart) feature tour page to know about its other groundbreaking feature representations. Explore our [Blazor 100% Stacked Line Chart Example](https://blazor.syncfusion.com/demos/chart/percent-stacked-line?theme=bootstrap4) to know how to render and configure the 100% Stacked Line type chart.
+N> Refer to our [Blazor 100% Stacked Line Chart](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/100-stacked-line-chart) feature tour page to know about its other groundbreaking feature representations. Explore our [Blazor 100% Stacked Line Chart Example](https://blazor.syncfusion.com/demos/chart/percent-stacked-line?theme=bootstrap5) to know how to render and configure the 100% Stacked Line type chart.
 
 ## Series customization
 
@@ -150,7 +150,7 @@ The following properties can be used to customize the [100% Stacked Line](https:
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hZrKNQZzBUVYqdYC?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-N> Refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
+N> Refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap5) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
 
 ## See also
 
