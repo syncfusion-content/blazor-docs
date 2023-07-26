@@ -54,6 +54,8 @@ Modify the task details through user interaction, such as resizing and dragging 
 }
 ```
 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZhgXQMvLDZKeHsM?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 ## Creating taskbar on draw action
 
 A taskbar can be drawn in an empty row by drag and drop interaction. This can be achieved by enabling the [GanttEditSettings.AllowSchedulingOnDrag](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEditSettings.html#Syncfusion_Blazor_Gantt_GanttEditSettings_AllowSchedulingOnDrag) and [GanttEditSettings.AllowTaskbarEditing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEditSettings.html#Syncfusion_Blazor_Gantt_GanttEditSettings_AllowTaskbarEditing) property.
@@ -102,4 +104,4 @@ A taskbar can be drawn only when [AllowUnscheduledTasks](https://help.syncfusion
     }
 }
 ```
-![Taskbar draw in Blazor Gantt Chart](./images/taskbar_draw.gif)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZBAZmWFBZsBOvyC?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}

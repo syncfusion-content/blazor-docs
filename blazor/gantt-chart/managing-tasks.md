@@ -104,6 +104,8 @@ Component |Example
 
 N> If edit type is not defined in the column, then it will be considered as the **StringEdit** type (Textbox component).
 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BNBqDGCmpJYFVnqE?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 ### Cell edit template
 
 The cell edit template is used to add a custom component for a particular column when the column is edited.
@@ -186,6 +188,8 @@ The following code example describes, how to define the Edit template for a part
 }
 ```
 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LZrAjGWwJIrevQEB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 ## Disable editing for particular column
 
 You can disable editing for particular columns by using the [GanttColumn.AllowEditing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttColumn.html#Syncfusion_Blazor_Gantt_GanttColumn_AllowEditing) property.
@@ -242,6 +246,8 @@ In the following demo, editing is disabled for the `TaskName` column.
         }
 }
 ```
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LthUNQMGpIUIYEsf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Troubleshoot: Editing works only when primary key column is defined
 

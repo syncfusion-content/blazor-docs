@@ -39,7 +39,7 @@ Use the `e-rte-placeholder` class to define the custom font family, font color, 
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor RichTextEditor with placeholder](./images/blazor-richtexteditor-placeholder.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDBgjmCqAhHcdRfy?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Source code view 
 
@@ -53,7 +53,7 @@ The Rich Text Editor allows you to directly edit HTML code via `Source View` in 
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor RichTextEditor with code view](./images/blazor-richtexteditor-code-view.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNBADmiUUUDGFgnP?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Customizing editor content
 
@@ -121,7 +121,7 @@ While rendering the Rich Text Editor inside the dialog component, the dialog con
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor RichTextEditor with refresh editor](./images/blazor-richtexteditor-refresh-editor.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BNVKtwiAKAFPKkwn?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Highlight the specific lines
 
@@ -188,6 +188,6 @@ Now, add the Syncfusion RichTextEditor component in the razor file. The RichText
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor RichTextEditor with highlight the specific lines](./images/blazor-richtexteditor-highlight-line.gif)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LtrUXmWAAKOcSqcY?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 N> Refer to the [Blazor Rich Text Editor](https://www.syncfusion.com/blazor-components/blazor-wysiwyg-rich-text-editor) feature tour page for its groundbreaking feature representations. Also, explore [Blazor Rich Text Editor](https://blazor.syncfusion.com/demos/rich-text-editor/overview?theme=bootstrap4) example to know how to render and configure the rich text editor tools.

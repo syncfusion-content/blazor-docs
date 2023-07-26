@@ -59,6 +59,8 @@ In the following code, the image size has been validated before uploading and it
 {% endhighlight %}
 {% endtabs %}
 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BXLUZQiLqqFpbiVL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 N> You can't restrict while uploading an image as a hyperlink in the insert image dialog. When inserting images using the link, the editor does not allow you to limit the image size. You could not identify the image file size when the image was provided as a link.
 
 ### Server side action
@@ -297,6 +299,8 @@ N> It has two possible options: `Inline` and `Break`.
 
 {% endhighlight %}
 {% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LZBgDwChgJzjMPLr?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Image with link
 

@@ -244,6 +244,8 @@ private static List<TaskData> GetTaskCollection()
 {% endhighlight %}
 {% endtabs %}
 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZBAjQrZLXTgbnnU?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 ## Defining Columns
 
 Gantt Chart has an option to define columns as an array. You can customize the Gantt Chart columns using the following properties:
@@ -353,6 +355,8 @@ The editing feature enables you to edit the tasks in the Gantt Chart component. 
 {% endhighlight %}
 {% endtabs %}
 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VZrqtGBZBDHVCVyG?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 N> When the edit mode is set to `Auto`, you can change the cells to editable mode by double-clicking anywhere at the Tree Grid and edit the task details in the edit dialog by double-clicking anywhere at the chart.
 
 You can find the full information regarding Editing from [here](https://blazor.syncfusion.com/documentation/gantt-chart/managing-tasks)
@@ -402,6 +406,8 @@ The filtering feature enables you to view the reduced amount of records based on
 {% endhighlight %}
 {% endtabs %}
 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rjhqjchjLCiWAeGd?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 You can find the full information regarding Filtering from [here](https://blazor.syncfusion.com/documentation/gantt-chart/filtering)
 
 ## Enable Sorting
@@ -448,6 +454,8 @@ The sorting feature enables you to order the records. It can be enabled by setti
 
 {% endhighlight %}
 {% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDrUDmBDBCAqvoLz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 You can find the full information regarding Sorting from [here](https://blazor.syncfusion.com/documentation/gantt-chart/sorting)
 
@@ -503,6 +511,8 @@ You can show the relationship in tasks by using the `Dependency` property as sho
 
 {% endhighlight %}
 {% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZLUXQVXBCpEwKKB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 You can find the full information regarding Predecessors from [here](https://blazor.syncfusion.com/documentation/gantt-chart/task-dependencies)
 
