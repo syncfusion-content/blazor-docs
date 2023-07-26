@@ -57,7 +57,8 @@ Annotations are texts, shapes, or images that are used to highlight a specific r
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VXhAZdADhGQdFvkf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Annotation in Blazor Column chart](images/annotation/blazor-column-chart-annotation.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VXhAZdADhGQdFvkf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Region
 
@@ -109,7 +110,8 @@ The [Region](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Char
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VjBqZdUXBcFFllCF?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Inserting Annotations using Region in Blazor Column Chart](images/annotation/blazor-column-chart-annotation-using-region.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VjBqZdUXBcFFllCF?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Co-ordinate units
 
@@ -159,7 +161,8 @@ The [CoordinateUnits](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ch
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LNLKZRUthPLdEPOv?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Inserting Annotation using Coordinate in Blazor Column Chart](images/annotation/blazor-column-chart-coordinate-annotation.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LNLKZRUthPLdEPOv?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 N> Refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap5) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
 

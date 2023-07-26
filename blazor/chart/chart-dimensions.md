@@ -64,7 +64,8 @@ The chart can be scaled to fit the container. As shown below, the size can be s
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hDVgNHrbhrtVTlai?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Changing Blazor Chart Size as Fit to Container](images/chart-dimensions/blazor-chart-size-for-container.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/hDVgNHrbhrtVTlai?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Size for chart
 
@@ -109,7 +110,8 @@ The [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfCha
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rXBgXdVPBrcipXRB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Changing Blazor Chart Size in Pixel](images/chart-dimensions/blazor-chart-size-in-pixel.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/rXBgXdVPBrcipXRB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ### In percentage
 
@@ -150,7 +152,8 @@ By setting the values of [Width](https://help.syncfusion.com/cr/blazor/Syncfusio
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hZVgDnVPrUJTHAnj?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Changing Blazor Chart Size in Percentage](images/chart-dimensions/blazor-chart-size-in-percentage.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/hZVgDnVPrUJTHAnj?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 N> Refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap5) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
 

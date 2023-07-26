@@ -52,7 +52,8 @@ Markers can be added to the points by enabling the [Visible](https://help.syncf
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hNVUtnKNLCsmnQPk?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Data Markers in Blazor Line Chart](images/marker/blazor-line-chart-data-marker.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/hNVUtnKNLCsmnQPk?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Shape
 
@@ -91,7 +92,8 @@ Markers can be assigned with different shapes such as [Rectangle](https://help.s
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VDhgXHqNhWxJoGgK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Blazor Line Chart with Diamond Marker](images/marker/blazor-line-chart-diamond-marker.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VDhgXHqNhWxJoGgK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Auto marker shape
 
@@ -150,7 +152,8 @@ By default, the chart [marker shape](https://help.syncfusion.com/cr/blazor/Syncf
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BtrAXHKZLWPbDuUZ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Blazor Chart with different marker shapes](images/marker/blazor-line-chart-with-different-marker.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BtrAXHKZLWPbDuUZ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Images
 
@@ -190,7 +193,7 @@ Apart from shapes, one can also add custom images to mark the data point using t
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hZBAZHgZrhWgCziF?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/hZBAZHgZrhWgCziF?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Fill marker with series color
 
@@ -232,7 +235,8 @@ Marker can be filled with the series color by setting [IsFilled](https://help.sy
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VNVgNngjLLQoYpgV?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Blazor Line Chart with Custom Markers](images/marker/blazor-line-chart-filled-marker.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VNVgNngjLLQoYpgV?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Customization
 
@@ -276,7 +280,8 @@ Markers color can be customized using [Fill](https://help.syncfusion.com/cr/blaz
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rXhgjHgDrrFwqWor?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Blazor Line Chart with Custom Markers](images/marker/blazor-line-chart-custom-marker.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/rXhgjHgDrrFwqWor?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 N> Refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
 
