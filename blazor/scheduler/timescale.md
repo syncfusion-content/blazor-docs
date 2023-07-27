@@ -48,7 +48,8 @@ The `Interval` and `SlotCount` properties can be used together on the Scheduler 
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LXLANGMtrEFQcucf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Time Slot Duration in Blazor Scheduler](images/blazor-scheduler-timeslot.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LXLANGMtrEFQcucf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Customizing time cells using template
 
@@ -102,7 +103,8 @@ The template option is available to allow customization of time slots which are 
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hNrgZciDqjLDnOMK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Customizing Time Cells in Blazor Scheduler](images/blazor-scheduler-custom-timecell.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/hNrgZciDqjLDnOMK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Hide the timescale
 
@@ -136,7 +138,8 @@ The grid lines which indicates the exact time duration can be enabled or disable
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BDLUZGWjqjaBQYOb?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Hide Time Scale in Blazor Scheduler](images/blazor-scheduler-hide-timecell.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BDLUZGWjqjaBQYOb?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Highlighting current date and time
 
@@ -169,4 +172,5 @@ By default, Scheduler indicates current date with a highlighted date header on a
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BNBgNGWjAMCIBUXr?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Highlight current Time in Blazor Scheduler](images/blazor-scheduler-highlight.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BNBgNGWjAMCIBUXr?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->

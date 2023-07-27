@@ -78,7 +78,7 @@ In the following example:
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BXVKjRrwVZnmyvRh?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BXVKjRrwVZnmyvRh?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 N> * **PreventRender** method accepts boolean argument that accepts true or false to disable or enable rendering respectively.
 <br/> * **PreventRender** method can be used only after grid component completed initial rendering. Calling this method during initial rendering will not have any effect.
@@ -145,7 +145,7 @@ In the following example:
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BNLqDRBmVtwcoqJR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BNLqDRBmVtwcoqJR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 N> * **PreventRender** property internally overrides the **ShouldRender** method of the grid to prevent rendering.
 <br/> * It is recommended to set **PreventRender** as true for user interactive events such as RowSelected, RowSelecting etc. for better performance.

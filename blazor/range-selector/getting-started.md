@@ -316,7 +316,8 @@ Now map `Date` and `Close` fields from the datasource to [XName](https://help.sy
 
 Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to run the application. Then, the Syncfusion `Blazor Range Selector (RangeNavigator)` component will be rendered in the default web browser.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rXrqjRMzqQhyslkx?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Blazor RangeNavigator Component](images/blazor-range-navigator.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/rXrqjRMzqQhyslkx?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/RangeSelector).
 

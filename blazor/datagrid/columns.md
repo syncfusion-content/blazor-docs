@@ -48,7 +48,7 @@ The [Columns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.Colu
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rXBgNdLXVHcZpVKb?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/rXBgNdLXVHcZpVKb?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Dynamic column building
 
@@ -87,8 +87,8 @@ You can refer the following code example to achieve this.
 ```
 
 The following image represents DataGrid with dynamically build columns,
-
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BXLqZdLZLwieoVBr?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Blazor DataGrid with Dynamic Column](./images/blazor-datagrid-dynamic-column.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BXLqZdLZLwieoVBr?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Dynamic column binding using ExpandoObject
 
@@ -146,7 +146,7 @@ In the following sample, columns are built dynamically using the `ExpandoObject`
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BDhqXHrjBldvsODR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BDhqXHrjBldvsODR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Complex data binding
 
@@ -202,8 +202,8 @@ You can achieve complex data binding in the DataGrid by using the dot(.) operato
 ```
 
 The following image represents complex data binding,
-
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hNhKjRLjhvQYGrBK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Binding Complex Data in Blazor DataGrid](./images/blazor-datagrid-complex-data.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/hNhKjRLjhvQYGrBK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 >For OData and ODataV4 adaptors, you need to add expand query to the query property (of DataGrid) to load the complex data.
 
@@ -257,8 +257,8 @@ Before proceeding this, learn about [ExpandoObject Binding](https://blazor.syncf
 > * you can perform the Data operations and CRUD operations for Complex ExpandoObject binding fields too.
 
 The following image represents ExpandoObject complex data binding
-
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VXrgXRVXLFuZSlab?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Binding ExpandObject with Complex Data in Blazor DataGrid](./images/blazor-datagrid-expand-complex-data.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VXrgXRVXLFuZSlab?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ### DynamicObject Complex data binding
 
@@ -325,8 +325,8 @@ Before proceeding this, learn about [DynamicObject Binding](https://blazor.syncf
 > * you can perform the Data operations and CRUD operations for Complex DynamicObject binding fields too.
 
 The following image represents DynamicObject complex data binding
-
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BtBgNdrjLuIpsnpS?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Binding DynamicObject with Complex Data in Blazor DataGrid](./images/blazor-datagrid-dynamic-complex-data.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BtBgNdrjLuIpsnpS?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Foreign key column
 
@@ -389,7 +389,7 @@ In the following example, **Employee Name** is a foreign column which shows **Fi
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BNVKXdVDrYcRtxgH?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BNVKXdVDrYcRtxgH?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ### ForeignKey Column - Remote Data
 
@@ -519,7 +519,7 @@ In the following code sample, you can prevent default filter query generation us
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hXrgXxVXqtCMhOps?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/hXrgXxVXqtCMhOps?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 > You can find the fully working sample [here](https://github.com/SyncfusionExamples/blazor-datagrid-prevent-query-generation-for-foriegnkey-column).
 
@@ -588,7 +588,7 @@ The following sample demonstrates how to render the custom filter UI in the fore
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VXVqNRVZUZKLljyB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VXVqNRVZUZKLljyB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 > [View Sample in GitHub.](https://github.com/SyncfusionExamples/blazor-datagrid-customize-filter-ui-in-foreignkey-column)
 
@@ -631,8 +631,8 @@ By default, column header title is displayed from column [Field](https://help.sy
 }
 ```
 
-
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rNrAjdhjUNxVPmrk?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Blazor DataGrid with Header Text](./images/blazor-datagrid-header-text.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/rNrAjdhjUNxVPmrk?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 > * If both the [Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Field) and [HeaderText](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_HeaderText) are not defined in the column, the column renders with “empty” header text.
 
@@ -721,8 +721,8 @@ The Header Template has options to display custom element value or content in th
 ```
 
 The following screenshot represents the Header Template.
-
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BtBqNnLNAXlsRZuW?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Blazor DataGrid with Header Template](./images/blazor-datagrid-header-template.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BtBqNnLNAXlsRZuW?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Change the orientation of header text
 
@@ -817,8 +817,8 @@ This is demonstrated in the following sample:
     }
 }
 ```
-
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BZhAZnrXUVZLaksC?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Orientation of Header Text in Blazor DataGrid](./images/blazor-datagrid-header-text-orientation.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BZhAZnrXUVZLaksC?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 > [View Sample in GitHub.](https://github.com/SyncfusionExamples/blazor-datagrid-change-orientation-of-header-text)
 
@@ -891,7 +891,7 @@ values.
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hjVUtxrtgViFaMau?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/hjVUtxrtgViFaMau?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 > By default, the **number** and **date** values are formatted in **en-US** locale.
 
@@ -951,8 +951,8 @@ You can hide any particular column in DataGrid before rendering by defining the 
 ```
 
 The following screenshot represents the DataGrid with Freight column set to visible false.
-
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rtBgNRhXqBKXBGzJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Hiding Specific Column in Blazor DataGrid](./images/blazor-datagrid-hide-specific-column.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/rtBgNRhXqBKXBGzJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Width
 
@@ -1011,8 +1011,8 @@ You can auto fit a column interactively by double clicking the right border of t
 ```
 
 In the following Image, **Autofit** Property is set to true for CustomerName and OrderDate.
-
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VXVKZnVXAUKjoibu?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Blazor DataGrid with Autofit Columns](./images/blazor-datagrid-autofit-column.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VXVKZnVXAUKjoibu?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ### Autofit columns by method
 
@@ -1063,8 +1063,8 @@ The **AutoFitColumns** method resizes the column to fit the widest cell's conten
 ```
 
 The following image represents AutoFit column by method
-
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VNhqtnVNAUqGSBWC?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Blazor DataGrid with Autofit Columns](./images/blazor-datagrid-autofit-methods.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VNhqtnVNAUqGSBWC?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 > You can autofit all the columns by invoking the **AutoFitColumns** method without column names.
 
@@ -1126,7 +1126,7 @@ You can auto fit columns when the column visibility is changed using column choo
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hXVAjdLXAUTFiHoR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/hXVAjdLXAUTFiHoR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Responsive columns
 
@@ -1171,8 +1171,8 @@ In the following sample code, for OrderID column - HideAtMedia property value is
 ```
 
 The following GIF shows the responsive columns behavior when the window is resized,
-
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VtBAjxBNKURHrwJk?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Blazor DataGrid displays Responsive columns](images/blazor-datagrid-responsive-columns.gif)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VtBAjxBNKURHrwJk?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Controlling datagrid actions
 
@@ -1218,8 +1218,8 @@ The following sample code shows DataGrid actions disabled for particular columns
 ```
 
 The following GIF shows the DataGrid actions for different columns,
-
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VNhKZnrtUJjfjlOt?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Handling Blazor DataGrid Actions](images/blazor-datagrid-actions.gif)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VNhKZnrtUJjfjlOt?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Show/hide columns by external button
 
@@ -1283,8 +1283,8 @@ The following sample code demonstrates showing and hiding of columns using their
 ```
 
 The following GIF represents the showing/hiding DataGrid columns on button click,
-
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rZhKDxBXgJMeLhor?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Show or Hide Blazor DataGrid Columns](images/blazor-datagrid-show-hide-columns.gif)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/rZhKDxBXgJMeLhor?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 <!-- ValueAccessor
 
@@ -1491,8 +1491,8 @@ The following sample code demonstrates [DisplayAsCheckBox](https://help.syncfusi
 ```
 
 The following image represents the DisplayAsCheckBox enabled for a DataGrid column,
-
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LDrAjnrDqfqjflkD?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Displaying CheckBox in Blazor DataGrid Column](./images/blazor-datagrid-column-with-checkbox.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LDrAjnrDqfqjflkD?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Stacked column header
 
@@ -1548,8 +1548,8 @@ In the following sample, the columns **Order Date**, and **Freight** are grouped
 }
 
 ```
-
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VtLAXHLXKfSimBUC?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Stacked Column Header in Blazor DataGrid](./images/blazor-datagrid-stacked-column-header.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VtLAXHLXKfSimBUC?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## See also
 

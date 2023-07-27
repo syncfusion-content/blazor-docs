@@ -51,8 +51,8 @@ N> Validation in datagrid works based on the Microsoft Blazor EditForm behavior.
 ```
 
 The following screenshot represents the Column Validation in Normal Editing.
-
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rtVUNHrAVyftbpna?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Blazor DataGrid with Validation in Editing](./images/blazor-datagrid-validation-in-editing.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/rtVUNHrAVyftbpna?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Data annotation
 
@@ -219,8 +219,8 @@ In the following sample, you must use the `ValidateComplexType` attribute for th
     }
 }
 ```
-
-{% previewsample "https://blazorplayground.syncfusion.com/embed/htLAXHVqBnAPIddn?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Validate Complex Column Using Data Annotation Attribute in Blazor DataGrid](./images/blazor-datagrid-validate-complex-column-using-data-annotation-attribute.gif)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/htLAXHVqBnAPIddn?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Custom validator component
 
@@ -516,5 +516,5 @@ N> You can find the fully working sample [here](https://github.com/SyncfusionExa
 }
 
 ```
-
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rtVgtRVqhHcNiwOt?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Display Validation in Blazor DataGrid Dialog Template](./images/blazor-datagrid-display-validation-in-dialog-template.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/rtVgtRVqhHcNiwOt?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
