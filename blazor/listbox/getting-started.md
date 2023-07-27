@@ -309,7 +309,8 @@ N> `TValue` is the type of value in the datasource to resolve type inference. It
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to run the application. Then, the Syncfusion `Blazor ListBox` component will be rendered in the default web browser.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VtLgXHiSrHJiFJkp?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Blazor ListBox Component](./images/blazor-listbox.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VtLgXHiSrHJiFJkp?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/ListBox).
 

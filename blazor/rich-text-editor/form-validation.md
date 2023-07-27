@@ -22,6 +22,7 @@ N> [View Sample in GitHub.](https://github.com/SyncfusionExamples/rich_text_edit
 {% endtabs %}
 
 ![Blazor RichTextEditor form validation](./images/blazor-richtexteditor-form-validation.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VjBUjwsUrdbukfDR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Validation attributes
 
@@ -42,6 +43,7 @@ The Rich Text Editor provides the functionality of character counting and its va
 {% endtabs %}
 
 ![Blazor RichTextEditor char count validation](./images/blazor-richtexteditor-char-count-validation.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VZrqjmWUBcbhWzic?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Custom placement of validation message
 
@@ -56,5 +58,6 @@ The form validation error message can be moved from its default location to a de
 {% endtabs %}
 
 ![Blazor RichTextEditor validation in custom placement](./images/blazor-richtexteditor-validation-placement.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/hZLUtmCUhPttWLIj?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 N> You can refer to our [Blazor Rich Text Editor](https://www.syncfusion.com/blazor-components/blazor-wysiwyg-rich-text-editor) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Rich Text Editor](https://blazor.syncfusion.com/demos/rich-text-editor/overview?theme=bootstrap4) example to know how to render and configure the rich text editor tools.
