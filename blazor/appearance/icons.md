@@ -190,6 +190,10 @@ The complete pack of Syncfusion Blazor icons is listed in the following table. T
 
 <!-- markdownlint-disable MD033 -->
 
+### Material 3
+
+<iframe class="doc-sample-frame" src="https://ej2.syncfusion.com/products/icons/material3/demo.html" style="height:1000px;width:100%;"></iframe>
+
 ### Bootstrap 5
 
 <iframe class="doc-sample-frame" src="https://ej2.syncfusion.com/products/icons/bootstrap5/demo.html" style="height:1000px;width:100%;"></iframe>

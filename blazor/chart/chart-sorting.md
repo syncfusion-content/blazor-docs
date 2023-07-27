@@ -48,7 +48,8 @@ Sorting enables you to sort data in ascending or descending order. To sort the c
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BthAjwDKrrBqExqd?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Blazor Chart - Sorting by y-axis](images/sorting/sorting-yaxis-ascending.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BthAjwDKrrBqExqd?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Sorting order
 
@@ -90,7 +91,8 @@ By default, the sorting order will be from ascending to descending. The sorting 
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VDBAtmjKrhzUfXVJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Blazor Chart - Sort descending by y-axis](images/sorting/sorting-yaxis-descending.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VDBAtmjKrhzUfXVJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Sorting by custom value
 
@@ -133,7 +135,8 @@ Data can also be sorted based on any field in the data source by passing the fie
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hNLKjGjKhLSJKlwO?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Blazor Chart - Sorting by custom value](images/sorting/custom-sorting.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/hNLKjGjKhLSJKlwO?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## See also
 

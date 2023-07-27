@@ -278,7 +278,8 @@ N> Syncfusion recommends to reference scripts using [Static Web Assets](https://
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to run the application. Then, the Syncfusion `Blazor DateTimePicker` component will be rendered in the default web browser.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BZLAXRiyfVgXUrAS?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Blazor DateTimePicker Component](./images/blazor-datetimepicker-component.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BZLAXRiyfVgXUrAS?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Setting the Value, Min and Max
 
@@ -298,7 +299,8 @@ The minimum and maximum date time can be defined with the help of [Min](https://
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VjrAjRMofVgEEhUL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Setting Minimum and Maximum Value in Blazor DateTimePicker](./images/blazor-datetimepicker-min-max-value.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VjrAjRMofVgEEhUL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/DateTimePicker).
 

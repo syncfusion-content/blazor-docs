@@ -148,6 +148,7 @@ The DataGrid component provides the ability to prevent grouping for a particular
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hjBgtQsFrIHAbUoy?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
+
 ## Hide drop area
 
 By default, the DataGrid provides a drop area for grouping columns. This drop area allows you to drag and drop columns to group and ungroup them. However, in some cases, you may want to prevent ungrouping or further grouping a column after initial grouping.
