@@ -59,7 +59,7 @@ Height of child taskbars and parent taskbars can be customized by using [Taskbar
 }
 ```
 
-![Customizing Taskbar Height in Blazor Gantt Chart](images/blazor-gantt-chart-taskbar-height.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LZrgtGCOVsAvQHhu?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 N> The `TaskbarHeight` property accepts only pixel value.
 
@@ -203,7 +203,7 @@ The Gantt Chart component maps any data source fields to [GanttLabelSettings](ht
 </style>
 ```
 
-![Blazor Gantt Chart with Task Label](images/blazor-gantt-chart-task-label.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDLAZwCaLMlqfCyc?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Connector lines
 
@@ -255,7 +255,7 @@ The width and background color of connector lines in Gantt Chart can be customiz
 }
 ```
 
-![Customizing Connector Lines in Blazor Gantt Chart](images/blazor-gantt-chart-connector-line-customization.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BXhKjGMaBhDaeAwC?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Customize rows and cells
 
@@ -350,7 +350,7 @@ While rendering the Tree Grid part in Gantt Chart, the [RowDataBound](https://he
 }
 ```
 
-![Customizing Rows and Cells in Blazor Gantt Chart](images/blazor-gantt-chart-row-cell-customization.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BtrKjQCYhqZgyjnT?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Grid lines
 
@@ -411,7 +411,7 @@ N> By default, the `GridLines` property is set to `Horizontal` type.
 
 ```
 
-![Hiding Grid Lines in Blazor Gantt Chart](images/blazor-gantt-chart-hide-grid-lines.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDhANmsOBAiqCAKR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Splitter
 
@@ -470,7 +470,7 @@ Gantt Chart component consists of both Tree Grid part and Chart part. Splitter i
 
 ```
 
-![Changing Splitter Position in Blazor Gantt Chart](images/blazor-gantt-chart-splitter-position.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hZrUZwCkVKqEhTwc?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ### Change splitter position dynamically
 
@@ -566,6 +566,6 @@ The following code example shows how to use this method.
 
 ```
 
-![Changing Splitter Position in Blazor Gantt Chart](images/blazor-gantt-chart-with-splitter.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rtrAjwsuhUImZdKP?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 N> You can refer to our [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Gantt Chart example](https://blazor.syncfusion.com/demos/gantt-chart/default-functionalities) to know how to render and configure the gantt.

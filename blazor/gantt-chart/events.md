@@ -304,10 +304,11 @@ The events should be provided to the Gantt Chart using the GanttChartEvents comp
 
 ## DataBound
 
-The [DataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_DataBound) event is raised when the current view data is populated on the Gantt Chart. This event occurs after the data binding process is completed, indicating that the Gantt Chart has been updated with the relevant data for the current view.
+[DataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_DataBound) event is raised when data source is populated on the Gantt Chart.
 
 ```cshtml
 @using Syncfusion.Blazor.Gantt
+
 
 <SfGantt DataSource="@TaskCollection"  Height="450px" Width="900px">
     <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate"
@@ -315,13 +316,17 @@ The [DataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.Ga
     </GanttTaskFields>
     <GanttEvents TValue="TaskData" DataBound="DataBoundHandler"></GanttEvents>
 </SfGantt>
+
 @code{
+
     public SfGantt<TaskData> Gantt;
     private List<TaskData> TaskCollection { get; set; }
+
     protected override void OnInitialized()
     {
         this.TaskCollection = GetTaskCollection();
     }
+
     public void DataBoundHandler(object args)
     {
         // Here, you can customize your code.
@@ -337,6 +342,7 @@ The [DataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.Ga
         public int Progress { get; set; }
         public int? ParentId { get; set; }
     }
+
     private static List<TaskData> GetTaskCollection()
     {
         List<TaskData> Tasks = new List<TaskData>()
@@ -549,17 +555,22 @@ The [DataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.Ga
     <GanttEditSettings AllowTaskbarEditing="true"></GanttEditSettings>
     <GanttEvents RowDragStarting="RowDragStartHandler" TValue="TaskData"></GanttEvents>
 </SfGantt>
+
 @code{
+
     public SfGantt<TaskData> Gantt;
     private List<TaskData> TaskCollection { get; set; }
+
     protected override void OnInitialized()
     {
         this.TaskCollection = GetTaskCollection();
     }
+
     public void RowDragStartHandler(RowDragStartingEventArgs<TaskData> args)
     {
         // Here, you can customize your code.
     }
+
     public class TaskData
     {
         public int TaskId { get; set; }
@@ -570,6 +581,7 @@ The [DataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.Ga
         public int Progress { get; set; }
         public int? ParentId { get; set; }
     }
+
     private static List<TaskData> GetTaskCollection()
     {
         List<TaskData> Tasks = new List<TaskData>()

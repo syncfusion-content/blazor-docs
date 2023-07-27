@@ -19,8 +19,8 @@ The Scheduler groups the resources based on different criteria. It includes grou
 
 The default options available within the `Resources` collection are as follows,
 
-| Field name |   Type   |   Description   |
-|------------|----------|-----------------|
+| Field name | Type | Description |
+|-------|---------| --------------- |
 | `Field` | string | A value that binds to the resource field of event object. |
 | `Title` | string | It holds the title of the resource field to be displayed on the event editor window. |
 | `Name` | string | A unique resource name used for differentiating various resource objects while grouping. |
@@ -1723,6 +1723,95 @@ To use the `HideNonWorkingDays` property, you need to include it in the configur
 ```
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hjrUZcstBBLmpOAn?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+N>  The [HideNonWorkingDays](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleGroup.html#Syncfusion_Blazor_Schedule_ScheduleGroup_HideNonWorkingDays) property only applies,
+when the Scheduler is grouped by [ByDate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleGroup.html#Syncfusion_Blazor_Schedule_ScheduleGroup_ByDate)
+
+### Hide non-working days when grouped by date
+
+In Scheduler, you can set custom work days for each resource and group the Scheduler by date to display these work days. By default, the Scheduler will show all days when it is grouped by date, even if they are not included in the custom work days for the resources. However, you can use the [HideNonWorkingDays](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleGroup.html#Syncfusion_Blazor_Schedule_ScheduleGroup_HideNonWorkingDays) property to only display the custom work days in the Scheduler.
+
+To use the `HideNonWorkingDays` property, you need to include it in the configuration options for your Scheduler component. Set the value of `HideNonWorkingDays` to `true` to enable this feature.
+
+**Example:** To display the Scheduler with resources grouped by date for custom working days,
+ 
+```cshtml
+@using Syncfusion.Blazor.Schedule
+
+    <SfSchedule TValue="ResourceData" Width="100%" Height="650px">
+        <ScheduleGroup ByDate="true" HideNonWorkingDays="@HideNonWorkingDays" Resources="@groupData"></ScheduleGroup>
+        <ScheduleResources>
+            <ScheduleResource TItem="ResourceData" TValue="int[]" DataSource="@OwnersData" Field="TaskId" Title="Assignee" Name="Owners" TextField="Text" IdField="Id" ColorField="Color" WorkDaysField="WorkDays" AllowMultiple="true"></ScheduleResource>
+        </ScheduleResources>
+        <ScheduleEventSettings DataSource="@dataSource"></ScheduleEventSettings>
+    </SfSchedule>
+@code{
+    private bool HideNonWorkingDays { get; set; } = true;
+    private string[] groupData = new string[] { "Owners" };
+    private List<ResourceData> OwnersData { get; set; } = new List<ResourceData> {
+        new ResourceData { Text = "Alice", Id= 1, Color = "#df5286", WorkDays = new int[] { 1, 2, 3, 4} },
+        new ResourceData { Text = "Smith", Id= 2, Color = "#5978ee", WorkDays = new int[] { 2, 3, 5 } }
+    };
+    private List<ResourceData> dataSource = new List<ResourceData>()
+    {
+        new ResourceData
+        {
+            Id = 1,
+            Subject = "Workflow Analysis",
+            StartTime = new DateTime(DateTime.Today.Year, DateTime.Today.Month, DateTime.Today.Day, 9, 30, 0).AddDays(1),
+            EndTime = new DateTime(DateTime.Today.Year, DateTime.Today.Month,DateTime.Today.Day, 12, 0, 0).AddDays(1),
+            IsAllDay = false,
+            ProjectId = 1,
+            TaskId = 2
+        },
+        new ResourceData
+        {
+            Id = 2,
+            Subject = "Requirement planning",
+            StartTime = new DateTime(DateTime.Today.Year, DateTime.Today.Month, DateTime.Today.Day, 12, 30, 0),
+            EndTime = new DateTime(DateTime.Today.Year, DateTime.Today.Month, DateTime.Today.Day, 14, 45, 0),
+            IsAllDay = false,
+            ProjectId = 1,
+            TaskId = 1
+        },
+        new ResourceData
+        {
+            Id = 1,
+            Subject = "Quality Analysis",
+            StartTime = new DateTime(DateTime.Today.Year, DateTime.Today.Month, DateTime.Today.Day, 10, 0, 0).AddDays(1),
+            EndTime = new DateTime(DateTime.Today.Year, DateTime.Today.Month, DateTime.Today.Day, 12, 30, 0).AddDays(1),
+            IsAllDay = false,
+            ProjectId = 1,
+            TaskId = 1
+        },
+        new ResourceData
+        {
+            Id = 1,
+            Subject = "Release planing",
+            StartTime = new DateTime(DateTime.Today.Year, DateTime.Today.Month, DateTime.Today.Day, 10, 0, 0).AddDays(-1),
+            EndTime = new DateTime(DateTime.Today.Year, DateTime.Today.Month, DateTime.Today.Day, 12, 30, 0).AddDays(-1),
+            IsAllDay = false,
+            ProjectId = 1,
+            TaskId = 1
+        }
+    };
+    public class ResourceData
+    {
+        public string Text { get; set; }
+        public int Id { get; set; }
+        public string Color { get; set; }
+        public int[] WorkDays { get; set; }
+        public string Subject { get; set; }
+        public DateTime StartTime { get; set; }
+        public DateTime EndTime { get; set; }
+        public Nullable<bool> IsAllDay { get; set; }
+        public int ProjectId { get; set; }
+        public int TaskId { get; set; }
+    }
+}
+```
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rjVUjcsZLLfXPOIo?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 N>  The [HideNonWorkingDays](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleGroup.html#Syncfusion_Blazor_Schedule_ScheduleGroup_HideNonWorkingDays) property only applies,
 when the Scheduler is grouped by [ByDate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleGroup.html#Syncfusion_Blazor_Schedule_ScheduleGroup_ByDate)

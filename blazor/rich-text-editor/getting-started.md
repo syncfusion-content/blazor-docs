@@ -415,7 +415,7 @@ Specifies the items to be rendered in quick toolbar based on the target elements
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor RichTextEditor with Image](./images/blazor-richtexteditor-image.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rNLKXmiWfSUfaZms?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Retrieve the formatted content
 
@@ -466,6 +466,8 @@ To retrieve the editor contents in HTML format, use the [Value](https://help.s
 
 {% endhighlight %}
 {% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BXrgDwiCzoYIFZiM?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Retrieve the number of characters
 

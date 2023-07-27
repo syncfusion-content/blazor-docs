@@ -328,7 +328,7 @@ While the user clicks the overlay, the action can be handled through the [OnOver
 <SfButton @onclick="@OpenDialog">Open Modal Dialog</SfButton>
 
 <SfDialog Width="250px" IsModal="true" @bind-Visible="@IsVisible">
-    <DialogEvents OnOverlayClick="@OnOverlayclick">
+    <DialogEvents OnOverlayModalClick="@OnOverlayclick">
     </DialogEvents>
     <DialogTemplates>
         <Content> This is a modal dialog </Content>
@@ -343,7 +343,7 @@ While the user clicks the overlay, the action can be handled through the [OnOver
         this.IsVisible = true;
     }
 
-    private void OnOverlayclick(MouseEventArgs arg)
+    private void OnOverlayclick(OverlayModalClickEventArgs arg)
     {
         this.IsVisible = false;
     }
@@ -352,7 +352,7 @@ While the user clicks the overlay, the action can be handled through the [OnOver
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor Modal Dialog](./images/blazor-modal-dialog.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LjLqDHCaAKrXIxnU?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Enable header
 

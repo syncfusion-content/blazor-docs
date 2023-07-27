@@ -96,6 +96,8 @@ The resource collection contains details about resources that are used in the pr
 }
 ```
 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZVUXGsFTURUCsnb?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 ## Assign resource
 
 You can assign resources for a task at initial load by using the resource id value of the resources as a collection. This collection is mapped from the dataSource to the Gantt Chart component using the [GanttTaskFields.ResourceInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTaskFields.html#Syncfusion_Blazor_Gantt_GanttTaskFields_ResourceInfo) property.
@@ -209,7 +211,7 @@ The following code snippet shows how to assign the resource for each task and ma
 }
 ```
 
-![Assigning Resource in Blazor Gantt Chart](images/blazor-gantt-chart-assign-resource.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hNhAZQCPpqcdEkKI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Add/Edit resource collection
 
@@ -301,10 +303,6 @@ By using cell editing or dialog editing, you can add/remove the resource for par
 
 N> When the edit mode is set as `Auto`, on performing double-click action on Tree Grid side, the cells will be changed to editable mode, and on performing double-click action on chart side, the edit dialog will appear for editing the task details. By using this support, you can add/remove the resource for particular task using both cell and edit dialog.
 
-Editing resource with cell edit
+Editing resource with cell edit or dialog edit
 
-![Blazor Gantt Chart displays Editing Resource with Cell](images/blazor-gantt-chart-editing-resources-in-cell.png)
-
-Editing resource with edit dialog
-
-![Blazor Gantt Chart displays Editing Resource with Edit Dialog](images/blazor-gantt-chart-editing-resource-in-dialog.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rjBgZmCvzgEwaTOA?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}

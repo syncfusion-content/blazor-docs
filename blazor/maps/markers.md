@@ -408,7 +408,7 @@ The following example shows how to use marker drag events to customize the data 
     public List<City> MarkerDataSource = new List<City> {
         new City {Latitude=49.95121990866204,Longitude=18.468749999999998, Name = "Europe"},
         new City {Latitude=59.88893689676585,Longitude= -109.3359375, Name = "North America"},
-        new City {Latitude=-6.64607562172573,Longitude=-55.54687499999999, Name = "South America"},
+        new City {Latitude=-6.64607562172573,Longitude=-55.54687499999999, Name = "Sout America"},
         new City {Latitude=23.644385824912135,Longitude=77.83189239539234, Name = "India"},
         new City {Latitude=63.66569332894224,Longitude= 98.2225173953924, Name = "China"}
     };

@@ -27,7 +27,7 @@ N> The **pre** tag will be inserted when code format is applied. If the editor c
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor RichTextEditor enter key confuguration](./images/blazor-richtexteditor-enter-key.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BNVgZwsAWdnLbNvy?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 N> [View Sample](https://blazor.syncfusion.com/demos/rich-text-editor/enterkeyconfiguration)
 
@@ -45,4 +45,4 @@ When the <kbd>Shift</kbd> + <kbd>Enter</kbd> key is customized with any of the a
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor RichTextEditor shift + enter key confuguration](./images/blazor-richtexteditor-shift-enter-key.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LZLUDmiqMdmAnNTS?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
