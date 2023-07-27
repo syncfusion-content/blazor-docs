@@ -414,3 +414,64 @@ window.selectContent = function () {
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hNBgXRLKVBlMLmPL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 N> [View Sample in GitHub.](https://github.com/SyncfusionExamples/blazor-datagrid-select-text-in-a-cell-when-batch-editing)
+
+## Customizing Batch Edited Cells in the DataGrid using the Cell Saved Event
+
+To customize the appearance of batch edited cells in the DataGrid, utilize the [CellSaved](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_CellSaved) event. This event gets triggered whenever a cell is saved after editing. The `CellSaved` event handler receives a [CellSaveArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.CellSaveArgs-1.html) object containing details about the saved cell, which enables applying custom styles and attributes.
+
+Following a code example to Customize the edited cell belongs to the **CustomerID** column and then add a class, set a background style, and add a custom attribute to the cell using the CellInfo object available in the `CellSaveArgs`
+
+```cshtml
+@using Syncfusion.Blazor.Grids
+
+<SfGrid DataSource="@Orders" AllowPaging="true" Toolbar="@(new List<string>() { "Add", "Delete", "Update", "Cancel" })" Height="315">
+    <GridEvents CellSaved="CellSavedHandler" TValue="Order"></GridEvents>
+    <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true" Mode="EditMode.Batch"></GridEditSettings>
+    <GridColumns>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" IsPrimaryKey="true" TextAlign="TextAlign.Right" ValidationRules="@(new ValidationRules { Required = true })" Type="ColumnType.Number" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" ValidationRules="@(new ValidationRules{ Required=true})" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" EditType="EditType.DatePickerEdit" Format="d" TextAlign="TextAlign.Right" Width="130" Type="ColumnType.Date"></GridColumn>
+        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" EditType="EditType.NumericEdit" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.ShipCountry) HeaderText="Ship Country" EditType="EditType.DropDownEdit" Width="150"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code {
+    public List<Order> Orders { get; set; }
+
+    protected override void OnInitialized()
+    {
+        Orders = Enumerable.Range(1, 75).Select(x => new Order()
+            {
+                OrderID = 1000 + x,
+                CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
+                Freight = 2.1 * x,
+                OrderDate = DateTime.Now.AddDays(-x),
+                ShipCountry = (new string[] { "USA", "UK", "CHINA", "RUSSIA", "INDIA" })[new Random().Next(5)]
+            }).ToList();
+    }
+
+    public void CellSavedHandler(CellSaveArgs<Order> args)
+    {
+        if (args.Column.Field == "CustomerID")
+        {
+            args.CellInfo.AddClass(new string[] { "customer-class" });
+            args.CellInfo.AddStyle(new string[] { "background: yellow" });
+            args.CellInfo.SetAttribute(new Dictionary<string, object>() { { "attribute-test", "attribute-added" } });
+        }
+    }
+
+    public class Order
+    {
+        public int? OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public DateTime? OrderDate { get; set; }
+        public double? Freight { get; set; }
+        public string ShipCountry { get; set; }
+    }
+}
+```
+The following screenshots represent customizing batch edited cells in the data grid.
+
+![Customizing batch edited cells in the data grid](./images/blazor-datagrid-customizing-batch-edited-cells-in-the-data-grid.png)
+
