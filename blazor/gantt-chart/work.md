@@ -83,6 +83,8 @@ N> When the work field is mapped from the data source, the default task type wil
 }
 ```
 
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VDhKjcsusnfFcfZK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
+
 ## Task type
 
 The work, duration and resource unit fields of a task depends upon each other and will change automatically on editing any one of these fields. But you can also set these field’s values as constant using the [TaskType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTaskFields.html#Syncfusion_Blazor_Gantt_GanttTaskFields_TaskType) property. `FixedUnit` is the default `TaskType`. The following values can be set to the `TaskType` property.

@@ -90,6 +90,7 @@ Task relationship is defined in the data source as a string value, and this valu
 The following screenshot displays the output of the above code.
 
 ![Blazor Gantt Chart displays Task Relationship](images/blazor-gantt-chart-task-relationship.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VjhKtmCbhjbAPTkd?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Predecessor offset with duration units
 
@@ -146,6 +147,7 @@ You can define an offset with various offset duration units for predecessors by 
 The following screen shot depicts the duration unit support in the predecessor offset.
 
 ![Blazor Gantt Chart displays Predecessor Offset](images/blazor-gantt-chart-predecessor-with-offsets.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LNBKZwsvBMtVcsqK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Predecessor configuration
 
@@ -239,6 +241,7 @@ You can define the predecessor types in any order. The default order will be FS,
 The following screen shot depicts the predecessor configuration support.
 
 ![Blazor Gantt Chart with predecessor configuration](images/predecessor-configuration.gif)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/hDBUDGilBWhnlRGI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 N> Based on the types configured, respective connector points appear on hovering the taskbar. Also, the dropdown-data of the type column in the dependency tab of add or edit dialog populates based on the type configured.
 

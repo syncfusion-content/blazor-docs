@@ -284,7 +284,8 @@ N> Syncfusion recommends to reference scripts using [Static Web Assets](https://
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to run the application. Then, the Syncfusion `Blazor Toggle Switch Button` component will be rendered in the default web browser.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rjhADdiqUhAhomZG?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Blazor Toggle Switch Button Component](./images/blazor-toggle-switch-button.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/rjhADdiqUhAhomZG?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Setting On and Off Text
 
@@ -304,7 +305,8 @@ On and Off text can be set using [OnLabel](https://help.syncfusion.com/cr/blazor
 
 N> Switch does not have text support for material themes, and does not support long custom text.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/htrgDxMUgrsufeix?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Blazor Toggle Switch Button With Label Sample](./images/blazor-toggle-switch-button-label.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/htrgDxMUgrsufeix?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/ToggleSwitchButton).
 

@@ -56,7 +56,8 @@ The chart can be zoomed in three different ways.
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BZBqNmtAMIEECcUQ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Zooming in Blazor Column Chart](images/zoom/blazor-column-chart-zooming.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BZBqNmtAMIEECcUQ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 A zooming toolbar will show after zooming the chart, featuring options for **Zoom**, **Zoom In**, **Zoom Out**, **Pan**, and **Reset**. The **Pan** option allows you to pan the chart, while the **Reset** option allows you to reset the zoomed chart.
 
@@ -106,7 +107,8 @@ There are three types of modes.
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hXLgtwjKsxJabjtr?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Horizontal Zooming in Blazor Column Chart](images/zoom/blazor-column-chart-horizontal-zooming.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/hXLgtwjKsxJabjtr?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Toolbar
 
@@ -152,7 +154,8 @@ By default, zoom in, zoom out, pan, and reset buttons are available in the toolb
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LNVqjcZAWGwkylwu?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Zooming Option in Blazor Column Chart Toolbar](images/zoom/blazor-column-chart-zoom-in-toolbar.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LNVqjcZAWGwkylwu?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ### Toolbar display mode
 
@@ -193,7 +196,8 @@ By default, the zooming toolbar appears only when the chart is zoomed. However, 
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VZVUZmjAMGOaDUsu?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Toolbar displayed during the initial load](images/zoom/blazor-column-chart-zoom-toolbar-displaymode.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VZVUZmjAMGOaDUsu?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Enable pan
 
@@ -235,7 +239,8 @@ By using the [EnablePan](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VNBUjmZUWbXHBJci?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Zooming with Pan in Blazor Column Chart Toolbar](images/zoom/blazor-column-chart-zoom-pan.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VNBUjmZUWbXHBJci?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Enable scrollbar
 

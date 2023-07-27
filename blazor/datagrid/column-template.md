@@ -144,7 +144,7 @@ In the following sample, the `SfDropDownList` component is rendered in the First
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BNLgtxrXfrmsowDf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BNLgtxrXfrmsowDf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Using conditions inside template
 
@@ -212,8 +212,8 @@ In the following code, checkbox is rendered based on Discontinued field value in
 ```
 
 The following screenshot represents the Conditional Template.
-
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rjhqDxVXfrbAkjio?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Blazor DataGrid with Conditional Template](./images/blazor-datagrid-conditional-template.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/rjhqDxVXfrbAkjio?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Using image inside template
 

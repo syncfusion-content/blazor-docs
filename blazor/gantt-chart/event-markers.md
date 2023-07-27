@@ -67,6 +67,7 @@ The event markers in the Gantt Chart component is used to highlight the importan
 ```
 
 ![Blazor Gantt Chart with Event Markers](images/blazor-gantt-chart-event-markers.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/rZBKjcClfhohEaRV?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## See also
 
