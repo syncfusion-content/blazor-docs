@@ -58,7 +58,8 @@ The following example code depicts how to set the Scheduler to display Monday, W
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rDVgDQsjArEQIxuo?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Set Working Days in Blazor Scheduler](images/blazor-scheduler-workdays.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/rDVgDQsjArEQIxuo?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Hiding weekend days
 
@@ -96,7 +97,8 @@ Here, the working days are defined as [1, 3, 4, 5] on Scheduler and therefore th
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hDhAXcMjUqCBKQmF?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Hiding Weekend Days in Blazor Scheduler](images/blazor-scheduler-hide-weekend.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/hDhAXcMjUqCBKQmF?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Show week numbers
 
@@ -131,7 +133,8 @@ N> The `ShowWeekNumber` property is not applicable on Timeline views, as it has 
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hDBgDwWXqqQdZuJv?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Week Numbers in Blazor Scheduler](images/blazor-scheduler-weeknumber.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/hDBgDwWXqqQdZuJv?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ### Different options in showing week numbers
 
@@ -173,7 +176,7 @@ For more details refer to [this link](https://docs.microsoft.com/en-us/dotnet/ap
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LXhUXmWjgKlyrMBB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LXhUXmWjgKlyrMBB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Set working hours
 
@@ -210,7 +213,8 @@ Working hours indicates the work hour limit within the Scheduler, which is visua
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BDrqXmCZKgEyLgSd?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Set Working Hours in Blazor Scheduler](images/blazor-scheduler-workhours.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BDrqXmCZKgEyLgSd?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Scheduler displaying custom hours
 
@@ -244,7 +248,8 @@ The following code example displays the Scheduler starting from the time range 7
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rjrKNQWNApZTWizQ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Displaying Custom Hours in Blazor Scheduler](images/blazor-scheduler-displayhours.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/rjrKNQWNApZTWizQ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Setting start day of the week
 
@@ -279,7 +284,8 @@ N> Here, Sunday is always denoted as 0, Monday as 1 and so on.
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hjVgNGiDKzsBQzfq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Start Day of Week in Blazor Scheduler](images/blazor-scheduler-week-firstday.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/hjVgNGiDKzsBQzfq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Scroll to specific time and date
 
@@ -334,7 +340,7 @@ You can manually scroll to a specific time on Scheduler by making use of the `Sc
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hNLAjQMXATHSNsNN?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/hNLAjQMXATHSNsNN?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## See also
 

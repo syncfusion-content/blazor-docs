@@ -63,7 +63,7 @@ N> Multiple events drag and drop is not supported on mobile devices.
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BjhgNcXnUtsflTrr?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BjhgNcXnUtsflTrr?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Disable the drag action
 
@@ -105,7 +105,7 @@ By default, the events can be dragged and dropped within any of the applicable s
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LjhKZwtHUDkxeLGV?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LjhKZwtHUDkxeLGV?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Preventing drag and drop on specific targets
 
@@ -152,7 +152,7 @@ It is possible to prevent the drag action on particular target, by passing the t
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BjVqDmDRgihvMuBg?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BjVqDmDRgihvMuBg?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Disable scrolling on drag action
 
@@ -245,7 +245,7 @@ The speed of the scrolling action while dragging an appointment to the Scheduler
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VjhANmXdgiGCQoKN?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VjhANmXdgiGCQoKN?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Auto navigation of date ranges on dragging an event
 
@@ -295,7 +295,7 @@ By default, the navigation delay is set to 2000ms. The navigation delay decides 
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/htVAZmNxqBjJbNUb?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/htVAZmNxqBjJbNUb?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Setting drag time interval
 
@@ -342,7 +342,7 @@ By default, while dragging an appointment, it moves at an interval of 30 minutes
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hjLgNmjHgrWePzbK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/hjLgNmjHgrWePzbK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Drag and drop items from external source
 
@@ -454,7 +454,7 @@ In this example, the tree view control is used as an external source and the chi
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BjBUNcNHUVpaYxFP?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BjBUNcNHUVpaYxFP?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Drag and drop items to external source
 
@@ -525,7 +525,7 @@ You can drag and drop the events to external source by setting the target to the
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LtBgDQZRKAXoNLNU?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LtBgDQZRKAXoNLNU?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Opening the editor window on drag stop
 
@@ -574,4 +574,4 @@ There are scenarios where you want to open the editor filled with data on newly 
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LDhKXQtdqqoLpvXf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LDhKXQtdqqoLpvXf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
