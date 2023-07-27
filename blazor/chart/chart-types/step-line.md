@@ -52,6 +52,7 @@ documentation: ug
 ``` 
 
 ![Blazor Step Line Chart](../images/chart-types-images/blazor-step-line-chart.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BtrKNGDJVjPDEIic?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 N> Refer to our [Blazor Step Line Chart](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/stepline-chart) feature tour page to know about its other groundbreaking feature representations. Explore our [Blazor Step Line Chart Example](https://blazor.syncfusion.com/demos/chart/step-line?theme=bootstrap4) to know how to render and configure the Step Line type chart.
 
@@ -106,7 +107,7 @@ The following properties can be used to customize the [Step Line](https://help.s
 
 N> Refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
 
-## See Also
+## See also
 
 * [Data Label](../data-labels)
 * [Tooltip](../tool-tip)

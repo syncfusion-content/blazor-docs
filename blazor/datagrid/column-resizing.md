@@ -48,6 +48,7 @@ Column width can be resized by clicking and dragging the right edge of the colum
 
 The following GIF represents column resizing, 
 ![Resizing Column in Blazor DataGrid](images/blazor-datagrid-column-resizing.gif)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VZVgtdVjqdvYDSkc?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 N> You can disable resizing for a particular column by setting the [AllowResizing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_AllowResizing) property of **GridColumn** component to false.
 <br/> In RTL mode, you can click and drag the left edge of the header cell to resize the column.
@@ -92,6 +93,8 @@ In the following sample, minimum and maximum width are defined for **CustomerID*
     }
 }
 ```
+
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BDBqZnLjgGjZMowQ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Resize stacked column
 
@@ -138,6 +141,7 @@ Stacked columns can be resized by clicking and dragging the right edge of the st
 
 Resizing of stacked header is shown below
 ![Resizing Stacked Column in Blazor DataGrid](images/blazor-datagrid-resize-stacked-column.gif)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/rDLUjnhjUwMtMfBC?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Touch interaction
 

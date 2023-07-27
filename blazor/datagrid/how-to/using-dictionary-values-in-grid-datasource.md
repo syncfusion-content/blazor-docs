@@ -78,4 +78,5 @@ This is demonstrated in the following sample code, where **ShipName** is defined
 ```
 
 The following image represent the datagrid rendered using the above sample code,
-![Dictionary Values in Blazor DataGrid](../images/blazor-datagrid-dictionary-values.png)
+
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BZLqjdBmAdtMKBRS?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->

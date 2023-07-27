@@ -161,6 +161,7 @@ N> If the **DataManagerRequest.RequiresCounts** value is **true**, then the Read
 
 The following image shows the custom bound data displayed in the DataGrid component,
 ![Custom Binding in Blazor DataGrid](./images/blazor-datagrid-custom-binding.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/rZVUDxBDVBdyGymu?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 N> If the Read/ReadAsync method is not overridden in the custom adaptor, then it will be handled by the default read handler.
 
@@ -555,6 +556,7 @@ The following sample code demonstrates implementing CRUD operations for the cust
 
 The following GIF displays the CRUD operations performed on the custom bound data displayed in the DataGrid component,
 ![Editing Custom Data in Blazor DataGrid](./images/blazor-datagrid-editing-custom-data.gif)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/rDhUNxrDVKvbDDQW?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 N> You can refer to the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour page for its groundbreaking feature representations. You can also explore [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap4) to understand how to present and manipulate data.
 
@@ -662,6 +664,8 @@ The following sample code demonstrates implementing the aggregates for the custo
 }
 ```
 
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/rDVgZxrNBTtbSZmz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
+
 ## Handling Grouping in Custom Adaptor
 
 When using Custom Adaptor, the grouping operation has to be handled in the Read/ReadAsync method of Custom adaptor.
@@ -740,6 +744,8 @@ The following sample code demonstrates implementing the grouping operation for t
 }
 ```
 
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VtVqNxhNVTLmHKZt?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
+
 ## Handling Filtering in Custom Adaptor
 
 When using a custom adaptor, the filtering operation has to be handled by overriding the Read/ReadAsync method of the DataAdaptor abstract class. In the DataManagerRequest class, you can get the grid action details as shown in the below image.
@@ -816,6 +822,8 @@ The following sample code demonstrates implementing the filtering operation for 
 }
 
 ```
+
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/hDVANdBjrTSqYlYa?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 N> [View Sample in GitHub.](https://github.com/SyncfusionExamples/blazor-datagrid-filtering-with-custom-adaptor)
 
@@ -894,6 +902,8 @@ The following sample code demonstrates implementing the sorting operation for th
     }
 }
 ```
+
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/rNBUZdhtBeMxlaID?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 N> [View Sample in GitHub.](https://github.com/SyncfusionExamples/blazor-datagrid-sorting-with-custom-adaptor)
 
@@ -989,5 +999,5 @@ The following sample code demonstrates sending additional parameters to the cust
 }
 
 ```
-
 ![Passing Additional Parameters to Custom Adaptor in Blazor DataGrid](./images/blazor-datagrid-passing-additional-parameter-to-custom-adaptor.gif)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LtLUZnLXBSgMKMry?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->

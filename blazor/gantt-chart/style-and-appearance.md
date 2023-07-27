@@ -145,6 +145,7 @@ To modify the Gantt Chart appearance, you need to override the default CSS of Ga
 }
 ```
 ![Styles and appearance in Blazor Gantt Chart](images/stylesAndAppearance.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/hXrqXwBXClkjDwWc?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## See also
 

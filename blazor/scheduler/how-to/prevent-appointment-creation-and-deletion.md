@@ -47,3 +47,5 @@ By default, Scheduler allows the user to perform all the CRUD actions. The parti
     }
 }
 ```
+
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/hXhUXwMWKrWexPUS?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->

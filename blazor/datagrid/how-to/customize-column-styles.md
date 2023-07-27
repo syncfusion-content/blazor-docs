@@ -75,8 +75,8 @@ Add the custom CSS class to the specified column by using the [CustomAttributes]
 }
 ```
 
-
 ![Customizing Column Style in Blazor DataGrid](../images/blazor-datagrid-column-style-customization.PNG)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VjBAtRhwLPwGwVxV?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Customize column header style
 
@@ -132,3 +132,4 @@ N> You can find the fully working sample [here](https://github.com/SyncfusionExa
 ```
 
 ![Customizing Header Style in Blazor DataGrid](../images/blazor-datagrid-header-style-customization.PNG)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LDBqjxLwrFlTNMqJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->

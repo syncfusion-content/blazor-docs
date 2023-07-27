@@ -50,8 +50,8 @@ You can search records in a DataGrid, by using the **Search** method with search
 ```
 
 The following GIF image represents a DataGrid Searching.
-
 ![Searching in Blazor DataGrid](images/blazor-datagrid-searching.gif)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/hDVqNRLrhZVFKfZK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Initial search
 
@@ -98,8 +98,8 @@ To apply search at initial rendering, set the **Fields**, **Operator**, **Key**,
 ```
 
 The following screenshot represents a DataGrid with initial searching.
-
 ![Blazor DataGrid with Initial Search](./images/blazor-datagrid-initial-search.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LjVUtdVLBWxwcCcO?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 N> By default, datagrid searches all the bound column values. To customize this behavior, define the [Fields](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSearchSettings.html#Syncfusion_Blazor_Grids_GridSearchSettings_Fields) property of **GridSearchSettings** component.
 
@@ -170,6 +170,8 @@ To search datagrid records from an external button, invoke the **Search** method
 }
 ```
 
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BXVgDdVLhsPcyDOL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
+
 ## Search specific columns
 
 By default, datagrid searches all visible columns. You can search specific columns by defining the specific column's field names in the [Fields](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSearchSettings.html#Syncfusion_Blazor_Grids_GridSearchSettings_Fields) property of **GridSearchSettings** component.
@@ -217,6 +219,8 @@ By default, datagrid searches all visible columns. You can search specific colum
 }
 ```
 
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/rDhKZnBLhrqiRsez?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
+
 ## Disable search for particular column
 
 By default, DataGrid searches all visible columns. You can disable searching for a particular column by setting the [AllowSearching](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_AllowSearching) property of **GridColumn** as false.
@@ -258,6 +262,8 @@ In the below code example, the **Order ID** column search functionality is disab
     }
 }
 ```
+
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LNLKjnrLLLzpTgOm?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 N> You can refer to our [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap4) to understand how to present and manipulate data.
 
@@ -320,3 +326,5 @@ By default, the datagrid will initiate searching operation after the Enter key i
     }
 }
 ```
+
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BDBqZHVBLhoVitVH?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->

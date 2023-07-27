@@ -57,6 +57,7 @@ To display the legend for the chart, set the [Visible](https://help.syncfusion.c
 ```
 
 ![Blazor Column Chart with Legend](images/legend/blazor-column-chart-legend.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/hthgtHAjgphuEjLU?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Position and alignment
 
@@ -110,6 +111,7 @@ The legend can be placed at [Left](https://help.syncfusion.com/cr/blazor/Syncfu
 ```
 
 ![Changing Legend Position in Blazor Column Chart](images/legend/blazor-column-chart-legend-position.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LtrgDnAjKpdHIaPM?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 The [Custom](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.LegendPosition.html#Syncfusion_Blazor_Charts_LegendPosition_Custom) position helps to position the legend anywhere in the chart using x and y coordinates.
 
@@ -160,6 +162,7 @@ The [Custom](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Lege
 ```
 
 ![Blazor Column Chart Legend in Custom Position](images/legend/blazor-column-chart-legend-in-custom-position.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BDrADxKNqdAZWwys?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 <!-- markdownlint-disable MD036 -->
 
@@ -214,6 +217,7 @@ You can reverse the order of the legend items by using the [Reverse](https://hel
 ```
 
 ![Changing Blazor Column Chart Legend Reverse](images/legend/blazor-column-chart-legend-reverse.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/rDLKjRqXAwegFQcI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 **Legend Alignment**
 
@@ -268,6 +272,7 @@ Using the [Alignment](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ch
 ```
 
 ![Changing Blazor Column Chart Legend Alignment Position](images/legend/blazor-column-chart-legend-alignment-position.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LtLgtRqDKcmaRyGx?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Legend customization
 
@@ -317,6 +322,7 @@ The [LegendShape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts
 ```
 
 ![Changing Legend Shape in Blazor Column Chart](images/legend/blazor-column-chart-legend-shape.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/hXhgDHUjqbfPJgee?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ### Legend Size
 
@@ -369,6 +375,7 @@ When the legend is placed on the top or bottom of the chart, it takes up 20% - 2
 ```
 
 ![Blazor Column Chart Legend with Custom Size](images/legend/blazor-column-chart-legend-custom-size.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/rXrgtngDUlGcSBsM?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ### Legend Shape Size
 
@@ -420,6 +427,7 @@ The [ShapeHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts
 ```
 
 ![Blazor Column Chart Legend Shape with Custom Size](images/legend/blazor-column-chart-custom-legend-shape-size.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/hXBqXdAZAahbBOxZ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ### Legend Item Padding
 
@@ -469,7 +477,7 @@ The [ItemPadding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts
 ```
 
 ![Blazor Column Chart Legend Shape with Item Padding](images/legend/blazor-column-chart-legend-item-padding.png)
-
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/rXVqXdAjKkfOnELf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ### Legend Paging
 
@@ -523,6 +531,7 @@ When the legend items exceed legend bounds, paging will be enabled by default. E
 ```
 
 ![Blazor Column Chart Legend with Paging](images/legend/blazor-column-chart-legend-paging.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/hDrgDRgZKYGwsfiJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ### Legend Text Wrap
 
@@ -574,6 +583,7 @@ When the legend text exceeds the container, the text can be wrapped by using [Te
 ```
 
 ![Blazor Chart Legend with Wrap](images/legend/blazor-chart-legend-wrap.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/rNBUZHqZTDoIvGCL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Series selection based on legend
 
@@ -623,6 +633,7 @@ By default, when you click on the legend item, the appropriate series visibility
 ```
 
 ![Blazor Column Chart Legend with Series Selection](images/legend/blazor-column-chart-legend-series-selection.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LZrqXxKNzCMebLCt?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Hiding legend item
 
@@ -674,10 +685,11 @@ The series [Name](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts
 ```
 
 ![Hiding Legend Item in Blazor Column Chart](images/legend/blazor-column-chart-hide-legend-item.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/rXVgNdgtJsfhlsBM?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 N> Refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
 
-## See Also
+## See also
 
 * [Data label](./data-labels)
 * [Marker](./data-markers)

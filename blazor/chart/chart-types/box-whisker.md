@@ -51,6 +51,7 @@ documentation: ug
 ``` 
 
 ![Blazor Box and Whisker Charts](../images/othertypes/blazor-box-whisker-charts.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BjVAZQtSrHORWseI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 N> Refer to our [Blazor Box and Whisker Charts](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/box-and-whisker-chart) feature tour page to know about its other groundbreaking feature representations. Explore our [Blazor Box and Whisker Chart Example](https://blazor.syncfusion.com/demos/chart/box-and-whisker) to know how to render and configure the box and whisker type charts.
 
@@ -96,6 +97,7 @@ To change the rendering mode of the Box and Whisker series, use the [BoxPlotMode
 ``` 
 
 ![Blazor Box and Whisker Charts with Box Plot Mode](../images/othertypes/blazor-box-whisker-chart-with-box-plot-mode.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/rZVKtGDeBGBxBOVV?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Show mean
 
@@ -139,10 +141,11 @@ In Box and Whisker series, [ShowMean](https://help.syncfusion.com/cr/blazor/Sync
 ``` 
 
 ![Blazor Box and Whisker Charts with Average Value](../images/chart-types-images/blazor-box-whisker-chart-average-value.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VZLAZQZeBcUISdor?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 N> Refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
 
-## See Also
+## See also
 
 * [Data Label](../data-labels)
 * [Tooltip](../tool-tip)
