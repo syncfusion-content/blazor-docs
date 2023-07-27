@@ -51,7 +51,8 @@ documentation: ug
 
 ``` 
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BtrKNGDJVjPDEIic?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Blazor Step Line Chart](../images/chart-types-images/blazor-step-line-chart.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BtrKNGDJVjPDEIic?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 N> Refer to our [Blazor Step Line Chart](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/stepline-chart) feature tour page to know about its other groundbreaking feature representations. Explore our [Blazor Step Line Chart Example](https://blazor.syncfusion.com/demos/chart/step-line?theme=bootstrap4) to know how to render and configure the Step Line type chart.
 

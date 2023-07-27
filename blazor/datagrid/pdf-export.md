@@ -59,7 +59,7 @@ PDF export allows exporting DataGrid data to PDF document. You need to use the
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VthUtnLnVYYrugrO?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VthUtnLnVYYrugrO?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 <!-- Multiple exporting
 
@@ -189,7 +189,7 @@ You can assign the file name for the exported document by defining **fileName** 
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rXrKNHhHKDKMQXDl?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/rXrKNHhHKDKMQXDl?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 <!-- Default fonts for pdf exporting
 
@@ -420,7 +420,7 @@ The following sample code demonstrates adding text and customizing its styles in
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BDhqjHrRgZzKMOHx?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BDhqjHrRgZzKMOHx?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 #### How to draw a line in header/footer
 
@@ -495,7 +495,7 @@ The following sample code demonstrates adding line in the Header section of the 
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LNhAtdBngtIsKtVx?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LNhAtdBngtIsKtVx?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 #### How to add repeat headers in PDF Export
 
@@ -548,7 +548,7 @@ You can add headers for every page of PDF exported document by enabling [IsRepea
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LDrUDRVdqNHFXzez?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LDrUDRVdqNHFXzez?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 #### How to export the Grid with specific columns
 
@@ -681,7 +681,7 @@ The following sample code demonstrates adding page number in the Header section 
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BjBKXRVRqshJYDBb?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BjBKXRVRqshJYDBb?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 #### Insert an image in header/footer
 
@@ -748,7 +748,7 @@ The following sample code demonstrates inserting image in the Header section of 
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VthqZRLnqiUJpllv?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VthqZRLnqiUJpllv?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ### How to change page orientation
 
@@ -801,7 +801,7 @@ Page orientation can be changed Landscape(Default Portrait) for the exported doc
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BtVgjRrHUrPoQogp?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BtVgjRrHUrPoQogp?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ### How to change page size
 
@@ -884,7 +884,7 @@ Supported page sizes are:
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hZVKDRhdKUNTFoPh?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/hZVKDRhdKUNTFoPh?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ### Export current page
 
@@ -988,7 +988,7 @@ PDF export provides an option to export hidden columns of DataGrid by defining t
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hXBKZHrRUqfmLgpd?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/hXBKZHrRUqfmLgpd?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ### Export the selected records only
 
@@ -1053,7 +1053,7 @@ In the following sample, selected records will be gotten from the `GetSelectedRe
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hZVqtxrxKgljjltL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/hZVqtxrxKgljjltL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ### Export template columns
 
@@ -1120,7 +1120,7 @@ PDF export provides an option to export template columns of the DataGrid by defi
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LXBUtRrHqUEYKNiX?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LXBUtRrHqUEYKNiX?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ### Theme
 
@@ -1211,7 +1211,7 @@ To apply theme in exported PDF, define the **theme** in export properties.
 
 N> By default, material theme is applied to exported PDF document.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LXBgXnrnKeMXjwqC?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LXBgXnrnKeMXjwqC?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ### Customize column width in exported PDF document
 
@@ -1270,7 +1270,7 @@ In the following code sample, we have customized the column width for the PDF ex
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BXhUjnVxKIwQMdpZ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BXhUjnVxKIwQMdpZ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 N> You can find the fully working sample [here](https://github.com/SyncfusionExamples/blazor-datagrid-customize-column-in-pdf-exported-document).
 
@@ -1375,7 +1375,8 @@ In the following demo, the [DrawString](https://help.syncfusion.com/cr/file-form
 </style> 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rZrAZRVRUxseaVki?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![PDF Exported Grid Cell Customization in Blazor DataGrid](./images/blazor-datagrid-pdf-exported-grid-cell-customization.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/rZrAZRVRUxseaVki?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 <!-- Show or hide columns on exported pdf
 
@@ -1492,7 +1493,7 @@ The following sample code demonstrates dynamically modifying the data source bef
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BXBqXHVxAHgKBegX?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BXBqXHVxAHgKBegX?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## See also
 

@@ -66,7 +66,7 @@ In the following sample, [PageSize](https://help.syncfusion.com/cr/blazor/Syncfu
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LtBgtdLqBvDqiyVU?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LtBgtdLqBvDqiyVU?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 N> You can achieve better performance by using datagrid paging to fetch only a pre-defined number of records from the data source.
 
@@ -112,7 +112,7 @@ N> By default, dropdown list will show values as **new int[]{ 5, 10, 12, 20 }**.
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rDVqtRBgrlsxJopJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/rDVqtRBgrlsxJopJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 N> You can refer to our [Blazor Grid Paging](https://www.syncfusion.com/blazor-components/blazor-datagrid/paging) Feature tour page to know about paging and its feature representations.
 <br/> You can refer to our [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap5) to understand how to present and manipulate data.
@@ -162,7 +162,7 @@ This can be demonstrated in the following sample.
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rNBUNdVArPATcGcA?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/rNBUNdVArPATcGcA?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Pager template
 
@@ -447,7 +447,8 @@ In the following sample, the SfPager component is rendered on top of the grid. I
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LDrAjRVgVldTTuLs?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Render Pager at top of Blazor DataGrid ](./images/render-pager-at-top-of-blazor-datagrid.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LDrAjRVgVldTTuLs?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 N> Here, default pager action of the Grid component is disabled.
 
