@@ -147,7 +147,7 @@ Checkout the [Blazor Themes topic](https://blazor.syncfusion.com/documentation/a
 
 To add theme to the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search for [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) and then install it. Then, the theme style sheet from NuGet can be referred as follows,
 
-N> If you are using [Syncfusion.Blazor](https://www.nuget.org/packages/Syncfusion.Blazor/) single NuGet, you don't have to refer [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet. Since style sheets already inside the assets of `Syncfusion.Blazor` NuGet. 
+N> If you are using [Syncfusion.Blazor](https://www.nuget.org/packages/Syncfusion.Blazor/) single NuGet, you don't have to refer [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet. Since style sheets already inside the assets of `Syncfusion.Blazor` NuGet.
 
 ### Blazor Server App
 
@@ -286,7 +286,8 @@ N> Syncfusion recommends to reference scripts using [Static Web Assets](https://
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to run the application. Then, the Syncfusion `Blazor SpeedDial` component will be rendered in the default web browser.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rjhKjxiJWnlvJDIx?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Blazor SpeedDial Component](./images/blazor-speeddial-component.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/rjhKjxiJWnlvJDIx?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Linear and radial display modes
 
@@ -316,7 +317,10 @@ You can use the [`Mode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VtrgXHiJsYIAXTZI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Blazor SpeedDial Component](./images/blazor-speeddial-linear-sample.png)
+
+![Blazor SpeedDial Component](./images/blazor-speeddial-mode-radial-sample.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VtrgXHiJsYIAXTZI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Item clicked event
 
@@ -331,20 +335,21 @@ The speed dial control triggers the [`ItemClicked`](https://help.syncfusion.com/
             <SpeedDialItem IconCss="e-icons e-cut" Text="Cut"/>
             <SpeedDialItem IconCss="e-icons e-copy" Text="Copy"/>
             <SpeedDialItem IconCss="e-icons e-paste" Text="Paste"/>
-        </SpeedDialItems>        
+        </SpeedDialItems>
     </SfSpeedDial>
 </div>
 
 @code{
     public void ItemEventClick(SpeedDialItemEventArgs args)
     {
-        // Here, you can call your desired action.        
+        // Here, you can call your desired action.
     }
 }
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BtLgtnsTMYHJTXDn?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Blazor SpeedDial Component](./images/blazor-speeddial-event-sample.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BtLgtnsTMYHJTXDn?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/SpeedDial).
 
