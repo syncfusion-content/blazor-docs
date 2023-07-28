@@ -118,4 +118,4 @@ You can handle the grid's state manually by using in-built state persistence met
 
 <!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BXrqXHLxBojibiqa?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
-N> You can refer to our [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap4) to understand how to present and manipulate data.
+N> You can refer to our [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap5) to understand how to present and manipulate data.
