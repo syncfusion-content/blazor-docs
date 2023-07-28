@@ -246,7 +246,7 @@ During the group action, the datagrid component triggers two events. The [OnActi
 
 ## Caption template
 
-You can customize the group caption by using the [CaptionTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridGroupSettings.html#Syncfusion_Blazor_Grids_GridGroupSettings_CaptionTemplate) of the [GridGroupSettings](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Grids.GridGroupSettings.html) component.
+You can customize the group caption by using the [CaptionTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridGroupSettings.html#Syncfusion_Blazor_Grids_GridGroupSettings_CaptionTemplate) of the [GridGroupSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridGroupSettings.html) component.
 
 The following sample code demonstrates the above,
 
@@ -301,4 +301,4 @@ The following screenshot represents a DataGrid with customized group caption,
 ![Blazor DataGrid with Custom Group Caption](./images/blazor-datagrid-custom-group-caption.png)
 <!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/rjLKjnhsADicMYLt?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
-> You can refer to our [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap4) to understand how to present and manipulate data.
+> You can refer to our [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap5) to understand how to present and manipulate data.
