@@ -110,3 +110,4 @@ The expand and collapse of an accordion item can be prevented for a specific con
 
 
 ![Expanding or Collapsing Item in Blazor Accordion](../images/blazor-accordion-prevent-expand-collapse.gif)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/rDVUDQhGUsVdnIWI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
