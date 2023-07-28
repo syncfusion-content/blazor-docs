@@ -166,7 +166,7 @@ N> Syncfusion recommends to reference scripts using [Static Web Assets](https://
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rXrgXdshUmkPoOOo?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-N> When using a PDF viewer on macOS (ARM), we recommend our [NextGen PDF Viewer](https://blazor.syncfusion.com/documentation/pdfviewer-2/migration) since it is compatible with macOS (ARM).
+N> When utilizing a PDF viewer on macOS (ARM), we highly recommend opting for our [NextGen PDF Viewer](https://blazor.syncfusion.com/documentation/pdfviewer-2/migration) since it has excellent compatibility with macOS (ARM) architecture.
 
 N> You need to include a valid license key (either paid or trial key) within your applications. Refer to this [help topic](https://blazor.syncfusion.com/documentation/getting-started/license-key/overview) for more information.
 
