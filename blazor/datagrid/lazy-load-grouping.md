@@ -58,8 +58,6 @@ The following sample code demonstrates the above,
 }
 ```
 
-The following GIF represents the lazy load grouping functionality with paging in DataGrid
-
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VtBANnrMAZwHiySW?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Lazy load grouping with virtual scrolling
@@ -68,9 +66,9 @@ When you enable lazy load grouping with the virtual scrolling feature, the Grid 
 
 To enable lazy load grouping with virtual scrolling in the datagrid, you need to define the [EnableVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableVirtualization) property as true and the [EnableLazyLoading](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridGroupSettings.html#Syncfusion_Blazor_Grids_GridGroupSettings_EnableLazyLoading) property of the [GridGroupSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridGroupSettings.html) class as true.
 
-N> When `EnableLazyLoading` is enabled with `EnableVirtualization`, the [PageSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridPageSettings.html#Syncfusion_Blazor_Grids_GridPageSettings_PageSize) property of the [GridPageSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridPageSettings.html) class and the [RowHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_RowHeight) property must be defined.
+> When `EnableLazyLoading` is enabled with `EnableVirtualization`, the [PageSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridPageSettings.html#Syncfusion_Blazor_Grids_GridPageSettings_PageSize) property of the [GridPageSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridPageSettings.html) class and the [RowHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_RowHeight) property must be defined.
 
-N> When enabling lazy load grouping with virtual scrolling, the [EnableVirtualMaskRow](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableVirtualMaskRow) property is enabled by default. There is no need to use this property explicitly.
+> When enabling lazy load grouping with virtual scrolling, the [EnableVirtualMaskRow](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableVirtualMaskRow) property is enabled by default. There is no need to use this property explicitly.
 
 The following sample code demonstrates the above:
 
@@ -152,8 +150,6 @@ The following sample code demonstrates the above:
 }
 ```
 
-The following GIF represents the lazy load grouping functionality with virtualization in DataGrid
-
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BthKZnhCgiTPmtpF?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Lazy load grouping with custom adaptor
@@ -215,3 +211,16 @@ The following code example describes the lazy load grouping handled at the serve
         }
     }
 ```
+
+## Limitations for lazy load grouping
+
+* Due to the element height limitation in browsers, the maximum number of records loaded by the grid is limited due to the browser capability.
+* Lazy load grouping is not compatible with the following features
+    * Batch editing
+    * Row template
+    * Row drag and drop
+    * Hierarchical Grid
+    * Detail Template
+* Programmatic selection is not supported in lazy load grouping when groups are in a collapsed state.
+* Drag selection, Cell selection (box and flow), Row Selection is not working in collapsed state.
+* Clipboard is not support when the groups are in collapsed state.
