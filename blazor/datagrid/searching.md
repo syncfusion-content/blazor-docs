@@ -57,7 +57,7 @@ The following GIF image represents a DataGrid Searching.
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hDVqNRLrhZVFKfZK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-N> The clear icon is shown in the Data Grid search text box when it is focused on search text or after typing the single character in the search text box. A single click of the clear icon clears the text in the search box as well as the search results in the Grid.
+> The clear icon is shown in the Data Grid search text box when it is focused on search text or after typing the single character in the search text box. A single click of the clear icon clears the text in the search box as well as the search results in the Grid.
 
 ## Initial search
 
@@ -128,7 +128,7 @@ The following screenshot represents a DataGrid with initial searching.
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LjVUtdVLBWxwcCcO?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-N> By default, datagrid searches all the bound column values. To customize this behavior, define the [Fields](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSearchSettings.html#Syncfusion_Blazor_Grids_GridSearchSettings_Fields) property of **GridSearchSettings** component.
+> By default, datagrid searches all the bound column values. To customize this behavior, define the [Fields](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSearchSettings.html#Syncfusion_Blazor_Grids_GridSearchSettings_Fields) property of **GridSearchSettings** component.
 
 ## Search operators
 
@@ -156,10 +156,10 @@ The ```search``` method allows you to perform a search operation based on a sear
 
 1. Add a button element outside of the grid component.
 
-2.Attach a click event handler to the button.
+2. Attach a click event handler to the button.
 Inside the event handler, get the reference of the grid component.
 
-3.Invoke the ```search``` method of the grid by passing the search key as a parameter.
+3. Invoke the ```search``` method of the grid by passing the search key as a parameter.
 
 ```cshtml
 @using Syncfusion.Blazor.Buttons
@@ -390,7 +390,7 @@ In the below code example, the **Order ID** column search functionality is disab
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LNLKjnrLLLzpTgOm?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-N> You can refer to our [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap4) to understand how to present and manipulate data.
+> You can refer to our [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap4) to understand how to present and manipulate data.
 
 ## Immediate searching
 
