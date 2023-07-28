@@ -83,6 +83,6 @@ Here’s an example that demonstrates how to use the custom aggregate feature in
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VDBKjdhnWQHwbucf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-N> To access the custom aggregate value inside template, use the key as Custom
+> To access the custom aggregate value inside template, use the key as Custom
 
-N> You can refer to the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour page for its groundbreaking feature representations. You can also explore [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap4) to understand how to present and manipulate data.
+> You can refer to the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour page for its groundbreaking feature representations. You can also explore [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap4) to understand how to present and manipulate data.

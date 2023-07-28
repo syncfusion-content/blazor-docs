@@ -99,7 +99,7 @@ Here’s an example code snippet demonstrating how to auto update aggregate valu
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VjhqjnLdMmPzOYOi?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-N> Adding a new record to the grouped grid will not refresh the aggregate values.
+> Adding a new record to the grouped grid will not refresh the aggregate values.
 
 
 

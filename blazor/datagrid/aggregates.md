@@ -21,9 +21,9 @@ By default, the aggregate values are displayed in the footer, group, and caption
 
 * [groupCaptionTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridAggregateColumn.html#Syncfusion_Blazor_Grids_GridAggregateColumn_GroupCaptionTemplate): Use this property to display the aggregate value in the group caption cell. You can define a custom template to format the aggregate value.
 
-N> * When using local data, the total summary is calculated based on the entire dataset available in the grid. The aggregate values will reflect calculations across all the rows in the grid.
+> * When using local data, the total summary is calculated based on the entire dataset available in the grid. The aggregate values will reflect calculations across all the rows in the grid.
 
-N> * When working with remote data, the total summary is calculated based on the current page records. This means that if you have enabled pagination and are displaying data in pages, the aggregate values in the footer will represent calculations only for the visible page.
+>* When working with remote data, the total summary is calculated based on the current page records. This means that if you have enabled pagination and are displaying data in pages, the aggregate values in the footer will represent calculations only for the visible page.
 
 ## Built-in aggregate types
 
@@ -40,7 +40,7 @@ The available built-in aggregate types are :
 * **TrueCount:** Counts the number of true values in the column.
 * **FalseCount:** Counts the number of false values in the column
 
-N> * Multiple types for a column are supported only when one of the aggregate templates is used.
+> * Multiple types for a column are supported only when one of the aggregate templates is used.
 
 ## Multiple aggregates for a column
 

@@ -95,7 +95,6 @@ The following image represents the Group and Caption template with aggregates.
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BDBKtRLnWczkvWSd?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-N> When working with group aggregates in Syncfusion Grid, it is important to set the property allowGrouping of the column to true.
+> * When working with group aggregates in Syncfusion Grid, it is important to set the property allowGrouping of the column to true.
 To maintain grouped columns in the grid after grouping, set showGroupedColumn to true.
-
-N> The aggregate values must be accessed inside the template using their corresponding [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridAggregateColumn.html#Syncfusion_Blazor_Grids_GridAggregateColumn_Type) name.
+> * The aggregate values must be accessed inside the template using their corresponding [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridAggregateColumn.html#Syncfusion_Blazor_Grids_GridAggregateColumn_Type) name.
