@@ -199,6 +199,8 @@ The following example demonstrates how to set the `GridGroupSettings` component 
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BZVgXdrMhFNlisyU?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
+> By default, the group drop area will be shown only if there is at least one column available to group.
+
 ## Show the grouped column
 
 The Syncfusion Blazor DataGrid has a default behavior where the grouped column is hidden, to provide a cleaner and more focused view of your data. However, if you prefer to show the grouped column in the grid, you can achieve this by setting the `GridGroupSettings` component of the [ShowGroupedColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridGroupSettings.html#Syncfusion_Blazor_Grids_GridGroupSettings_ShowGroupedColumn) property to **true**.
