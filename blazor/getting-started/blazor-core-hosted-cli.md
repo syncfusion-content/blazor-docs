@@ -198,6 +198,7 @@ dotnet run
 {% endtabs %}
 
 ![Blazor Calendar Component](images/core-hosted/browser-output.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/rXrgXdshUmkPoOOo?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 N> For Blazor ASP.NET Core Hosted WebAssembly application, the **`Server`[BlazorApp.Server]** project should be the startup project.
 

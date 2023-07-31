@@ -271,6 +271,8 @@ N> Syncfusion recommends to reference scripts using [Static Web Assets](https://
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to run the application. Then, the Syncfusion `Blazor Diagram` component will be rendered in the default web browser.
 
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VXBANRCIpifcBxtS?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
+
 ## Basic Diagram elements
 * Node: Visualize any graphical object using nodes, which can be arranged and manipulated at the same time on a Blazor diagram page.
 * Connector: Represents the relationship between two nodes. Three types of connectors provided as follows:
@@ -412,6 +414,7 @@ Let us create and add a [Node](https://help.syncfusion.com/cr/blazor/Syncfusion.
 {% endtabs %}
 
 ![Blazor Diagram Component](images/blazor-diagram-component.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BDBKDniIzsxvMhIb?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/DiagramComponent).
 
@@ -495,8 +498,9 @@ A built-in automatic layout algorithm is specifically designed for organizationa
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Layout)
 
 ![Blazor Organization Diagram ChildNode in Vertical Right](images/blazor-diagram-childnode-at-vertical-right.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LNrgtdMSJMuWulHB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
-## See Also
+## See also
 
 * [Getting Started with Syncfusion Blazor for Client-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-dotnet-cli)
 * [Getting Started with Syncfusion Blazor for Server-Side in Visual Studio](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio)

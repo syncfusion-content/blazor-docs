@@ -275,6 +275,7 @@ N> Syncfusion recommends to reference scripts using [Static Web Assets](https://
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to run the application. Then, the Syncfusion `Blazor NumericTextBox` component will be rendered in the default web browser.
 
 ![Blazor NumericTextBox Component](./images/blazor-numerictextbox-component.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/hjhADnszTSpuUSjc?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Range validation
 
@@ -289,6 +290,7 @@ You can set the minimum and maximum range of values in the NumericTextBox using 
 {% endtabs %}
 
 ![Inputnumber Blazor with Range Value](./images/blazor-numerictextbox-range-value.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BZrUNnCzJoIpVhQL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Formatting the value
 
@@ -303,6 +305,7 @@ Users can set the format of the NumericTextBox component using the [Format](http
 {% endtabs %}
 
 ![Blazor NumericTextBox with Formatting Value](./images/blazor-numerictextbox-format-value.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/hjhUtnizTooYVUca?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Precision of numbers
 
@@ -321,10 +324,11 @@ If `ValidateDecimalOnType` is false, number of decimals will not be restricted. 
 {% endtabs %}
 
 ![Blazor NumericTextBox with Precision Value](./images/blazor-numerictextbox-precision-value.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VNLUXxizJSdGSIym?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/NumericTextBox).
 
-## See Also
+## See also
 
 * [Getting Started with Syncfusion Blazor for Client-Side in .NET Core CLI](../getting-started/blazor-webassembly-dotnet-cli)
 * [Getting Started with Syncfusion Blazor for Server-side in Visual Studio](../getting-started/blazor-server-side-visual-studio)

@@ -46,6 +46,7 @@ documentation: ug
 ```
 
 ![Blazor Chart with Data Label](images/data-label/blazor-chart-data-label.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BXVqXdgXrKISThqS?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Position
 
@@ -86,6 +87,7 @@ Using [Position](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.
 ```
 
 ![Changing Label Position in Blazor Chart](images/data-label/blazor-chart-label-position.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LXVUXxKjrfgmZbXs?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 N> The position `Outer` is applicable only for column and bar series.
 
@@ -133,6 +135,7 @@ The [Name](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartD
 ```
 
 ![Blazor Chart Label with Text Mapping](images/data-label/blazor-chart-label-with-text-mapping.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/rNLgtRqXhJTvKJDp?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Format
 
@@ -175,6 +178,7 @@ Data label for the chart can be formatted using [Format](https://help.syncfusion
 ```
 
 ![Blazor Chart Label with Format](images/data-label/blazor-chart-label-with-format.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BZhgXRqZBpHmlJml?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Margin
 
@@ -219,6 +223,7 @@ The [Margin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Char
 ```
 
 ![Blazor Chart Label with Margin](images/data-label/blazor-chart-label-with-margin.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VNVAXRqjBTbCqswS?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Customization
 
@@ -262,10 +267,11 @@ Data label can be customized using [Fill](https://help.syncfusion.com/cr/blazor/
 ```
 
 ![Blazor Chart with Custom Label](images/data-label/blazor-chart-custom-label.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BXBUjngjBzYMwaDE?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 N> Refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
 
-## See Also
+## See also
 
 * [Tooltip](./tool-tip)
 * [Legend](./legend)

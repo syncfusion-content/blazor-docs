@@ -271,10 +271,6 @@ N> Syncfusion recommends to reference scripts using [Static Web Assets](https://
 {% endhighlight %}
 {% endtabs %}
 
-* Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to run the application. Then, the Syncfusion `Blazor Smith Chart` component will be rendered in the default web browser.
-
-![Blazor Smith Chart Component](./images/blazor-smith-chart.png)
-
 ## Adding series to Smith Chart
 
 `Smith Chart` series can be added in two ways. Use either [Points](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartSeries.html#Syncfusion_Blazor_Charts_SmithChartSeries_Points) or [Datasource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartSeries.html#Syncfusion_Blazor_Charts_SmithChartSeries_DataSource) in the [SmithChartSeries](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartSeries.html).
@@ -345,7 +341,10 @@ The following sample demonstrates adding two series to Smith Chart in both ways.
 {% endhighlight %}
 {% endtabs %}
 
+Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to run the application. Then, the Syncfusion `Blazor Smith Chart` component will be rendered in the default web browser.
+
 ![Blazor Smith Chart with Transmission Series](./images/blazor-smith-chart-series.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VZhKDRMJLBSAbPXs?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Adding Title
 
@@ -375,6 +374,7 @@ Title can be added to the Smith Chart to provide a quick information to the user
 N> Refer to the [code block](#adding-series-to-smith-chart) to know about the property value of `FirstTransmissionSeries` and `SecondTransmissionSeries`.
 
 ![Blazor Smith Chart with Title](./images/blazor-smith-chart-with-title.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VDVAXxiJBVHQIfHY?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Enable Marker
 
@@ -405,6 +405,7 @@ To display marker for particular series, set the [Visible](https://help.syncfusi
 N> Refer to the [code block](#adding-series-to-smith-chart) to know about the property value of `FirstTransmissionSeries` and `SecondTransmissionSeries`.
 
 ![Blazor Smith Chart with Marker](./images/blazor-smith-chart-marker.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/rNLUjRCTBhmUOYBF?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Enable Data Label
 
@@ -437,6 +438,7 @@ To display data label for particular marker series, set the [Visible](https://he
 N> Refer to the [code block](#adding-series-to-smith-chart) to know the property value of `FirstTransmissionSeries` and `SecondTransmissionSeries`.
 
 ![Blazor Smith Chart with Data Label](./images/blazor-smith-chart-data-label.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LXBAZdipVBEuzIeb?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Enable Legend
 
@@ -469,6 +471,7 @@ Use legend for the Smith Chart by setting the [Visible](https://help.syncfusion.
 N> Refer to the [code block](#adding-series-to-smith-chart) to know the property value of the `FirstTransmissionSeries` and the `SecondTransmissionSeries`.
 
 ![Blazor Smith Chart with Legend](./images/blazor-smith-chart-legend.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BZVAtHWTBANvyxrt?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Enable Tooltip
 
@@ -503,6 +506,7 @@ When space constraints prevents from displaying information using data labels, t
 N> Refer to the [code block](#adding-series-to-smith-chart) to know about the property value of the `FirstTransmissionSeries` and the `SecondTransmissionSeries`.
 
 ![Blazor Smith Chart with Tooltip](./images/blazor-smith-chart-tooltip.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VjLqjHWfBACpwexA?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/SmithChart).
 

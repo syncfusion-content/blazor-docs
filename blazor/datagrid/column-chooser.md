@@ -57,6 +57,7 @@ N> You can hide the column names in column chooser by defining the [ShowInColumn
 
 The following GIF represents the column chooser functionality in DataGrid
 ![Show or Hide Columns in Blazor DataGrid](./images/blazor-datagrid-show-or-hide-column.gif)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/rtVgXnhtAIxzkPSw?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Open column chooser by external button
 
@@ -118,6 +119,7 @@ In this following example, we have opened column chooser using external button c
 
 The following GIF represents opening column chooser functionality in DataGrid using external button.
 ![Opening Column Chooser in Blazor DataGrid](./images/blazor-datagrid-open-column-chooser.gif)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/rDLqDnBtgIweBuUd?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Column chooser template
 
@@ -386,6 +388,7 @@ namespace Model
 ```
 
 ![Customizing Column Chooser Footer in Blazor DataGrid](./images/blazor-datagrid-footer-template.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BtBUXHrjAdKCqkdo?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Customize column chooser dialog size
 
@@ -461,6 +464,7 @@ This can be demonstrated in the following sample:
 ```
 
 ![Customize Column Chooser Dialog Size](./images/blazor-datagrid-customize-column-chooser-dialog.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/rDrKDHBDgxJBuYsb?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Change default search operator of the column chooser
 
@@ -510,3 +514,5 @@ In the following sample, the search box operator for the column chooser is set t
     }
 }
 ```
+
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BZBgXdLjARSZhmms?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->

@@ -57,6 +57,7 @@ The chart can be zoomed in three different ways.
 ```
 
 ![Zooming in Blazor Column Chart](images/zoom/blazor-column-chart-zooming.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BZBqNmtAMIEECcUQ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 A zooming toolbar will show after zooming the chart, featuring options for **Zoom**, **Zoom In**, **Zoom Out**, **Pan**, and **Reset**. The **Pan** option allows you to pan the chart, while the **Reset** option allows you to reset the zoomed chart.
 
@@ -107,6 +108,7 @@ There are three types of modes.
 ```
 
 ![Horizontal Zooming in Blazor Column Chart](images/zoom/blazor-column-chart-horizontal-zooming.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/hXLgtwjKsxJabjtr?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Toolbar
 
@@ -153,6 +155,49 @@ By default, zoom in, zoom out, pan, and reset buttons are available in the toolb
 ```
 
 ![Zooming Option in Blazor Column Chart Toolbar](images/zoom/blazor-column-chart-zoom-in-toolbar.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LNVqjcZAWGwkylwu?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
+
+### Toolbar display mode
+
+By default, the zooming toolbar appears only when the chart is zoomed. However, you can display a zooming toolbar in the chart during the initial load by setting the [ToolbarDisplayMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartZoomSettings.html#Syncfusion_Blazor_Charts_ChartZoomSettings_ToolbarDisplayMode) to [ToolbarMode.Always](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ToolbarMode.html#Syncfusion_Blazor_Charts_ToolbarMode_Always).
+
+```cshtml
+
+@using Syncfusion.Blazor.Charts
+
+<SfChart>
+    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
+    <ChartZoomSettings EnableSelectionZooming="true" EnableMouseWheelZooming="true" EnablePinchZooming="true"  ToolbarDisplayMode="ToolbarMode.Always">
+    </ChartZoomSettings>
+    <ChartSeriesCollection>
+        <ChartSeries DataSource="@SalesReports" XName="X" YName="YValue" Type="ChartSeriesType.Column"></ChartSeries>
+    </ChartSeriesCollection>
+</SfChart>
+
+@code {
+
+    public class ChartData1
+    {
+        public string X { get; set; }
+        public double YValue { get; set; }
+    }
+
+    public List<ChartData1> SalesReports = new List<ChartData1>
+    {
+        new ChartData1 { X= "USA", YValue= 50 },
+        new ChartData1 { X= "GBR", YValue= 20 },
+        new ChartData1 { X= "CHN", YValue= 26 },
+        new ChartData1 { X= "UK", YValue= 20 },
+        new ChartData1 { X= "AUS", YValue= 35 },
+        new ChartData1 { X= "IND", YValue= 15 },
+        new ChartData1 { X= "DEN", YValue= 40 },
+        new ChartData1 { X= "MEX", YValue= 30 },
+    };
+}
+```
+
+![Toolbar displayed during the initial load](images/zoom/blazor-column-chart-zoom-toolbar-displaymode.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VZVUZmjAMGOaDUsu?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Enable pan
 
@@ -195,6 +240,7 @@ By using the [EnablePan](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
 ```
 
 ![Zooming with Pan in Blazor Column Chart Toolbar](images/zoom/blazor-column-chart-zoom-pan.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VNBUjmZUWbXHBJci?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Enable scrollbar
 

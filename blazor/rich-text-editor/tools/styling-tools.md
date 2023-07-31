@@ -33,6 +33,7 @@ The following table lists the default font name and width of the `FontName` drop
 {% endtabs %}
 
 ![Blazor RichTextEditor changing built-in font family](../images/blazor-richtexteditor-buildin-font-name.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/rjBUNcWLBwyyLqFJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ### Custom font family
 
@@ -48,6 +49,7 @@ If you want to add additional font names and font sizes to the font drop-down, p
 {% endtabs %}
 
 ![Blazor RichTextEditor with custom fonts family](../images/blazor-richtexteditor-custom-font.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/rDhqjGirVlehHIYQ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ### Google font support
 
@@ -105,6 +107,7 @@ For Blazor WebAssembly App, refer style in the `<head>` of the **~/index.html** 
 {% endtabs %}
 
 ![Blazor RichTextEditor with Google font](../images/blazor-richtexteditor-google-font.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BZhgtcWhBFHxyfqB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Font size
 
@@ -130,6 +133,7 @@ The following table lists the default font size and width of the [FontSize](http
 {% endtabs %}
 
 ![Blazor RichTextEditor changing built-in font size](../images/blazor-richtexteditor-buildin-font-size.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/rZrKDGirrFcHOuUP?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ### Custom font size
 
@@ -144,6 +148,7 @@ The Rich Text Editor provides support for customizing the font size with the exi
 {% endtabs %}
 
 ![Blazor RichTextEditor with custom font size](../images/blazor-richtexteditor-custom-font-size.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VZVqDwMVLkxsgtVg?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Formats
 
@@ -169,6 +174,7 @@ The following table list the default format name and width of the  [Format](http
 {% endtabs %}
 
 ![Blazor RichTextEditor with built-in format](../images/blazor-richtexteditor-buildin-format.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/hNLqDQMhVulSYyDQ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ### Custom format
 
@@ -183,6 +189,7 @@ The Rich Text Editor provides support for custom formats with an existing list. 
 {% endtabs %}
 
 ![Blazor RichTextEditor with Custom Format](../images/blazor-richtexteditor-custom-format.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VDBgZwMVBEYGqYbx?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Font and background color
 
@@ -203,6 +210,8 @@ The `RichTextEditorFontColor` and `RichTextEditorBackgroundColor` tag has two mo
 ![Blazor RichTextEditor displaying font color](../images/blazor-richtexteditor-font-color.png)
 
 ![Blazor RichTextEditor displaying background color](../images/blazor-richtexteditor-background-color.png)
+
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LXhKZQirgNPpWyUH?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Built-in editor content styles
 
@@ -445,6 +454,8 @@ This feature allows users to change the appearance of the numbered and bulleted 
 
 ![Blazor RichTextEditor bullet format list](../images/blazor-richtexteditor-bullet-format.png)
 
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/hZrgDQihUWLCLrIB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
+
 ## Code block
 
 Configure code block formatting as a separate toolbar button by adding the `InsertCode` Command within the  [RichTextEditorToolbarSettings.Items](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorToolbarSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorToolbarSettings_Items) property. The `InsertCode` button has a toggle state to apply code block formatting to the editor and remove code block formatting from the editor. 
@@ -460,3 +471,4 @@ The following code will configure the InsertCode button in the toolbar and set t
 {% endtabs %}
 
 ![Blazor RichTextEditor format code block](../images/blazor-richtexteditor-format-code-block.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VtBKDcirAWIRejKK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->

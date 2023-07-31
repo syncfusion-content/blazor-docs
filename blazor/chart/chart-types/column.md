@@ -52,6 +52,8 @@ documentation: ug
 
 ```
 
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LtVAjmZJgcmhVLMn?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
+
 N> Refer to our [Blazor Column Charts](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/column-chart) feature tour page to know about its other groundbreaking feature representations. Explore our [Blazor Column Charts Example](https://blazor.syncfusion.com/demos/chart/column?theme=bootstrap4) to compare **Frequency**, **Count**, **Total**, or **Average** of data in different categories.
 
 ## Column space and width
@@ -98,6 +100,7 @@ The [ColumnSpacing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Char
 ```
 
 ![Blazor Column Chart with Space and Width](../images/chart-types-images/blazor-column-chart-space-and-width.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VtLgNGDfUFqKqRRA?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Grouped column
 
@@ -144,6 +147,7 @@ You can use the [GroupName](https://help.syncfusion.com/cr/blazor/Syncfusion.Bla
 ```
 
 ![Grouping in Blazor Grouped Column Chart](../images/chart-types-images/blazor-column-chart-grouped-column.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VXhgXwNpUlcsoMEl?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Series customization
 
@@ -164,6 +168,7 @@ The following properties can be used to customize the [Column](https://help.sync
     <ChartSeriesCollection>
         <ChartSeries DataSource="@MedalDetails" XName="X" YName="Y" Type="ChartSeriesType.Column" Opacity="0.5"
                      DashArray="5,5" Fill="blue" >
+        <ChartSeriesBorder Width="2" Color="red"></ChartSeriesBorder>
         </ChartSeries>
     </ChartSeriesCollection>
 </SfChart>
@@ -195,10 +200,11 @@ The following properties can be used to customize the [Column](https://help.sync
 ```
 
 ![Blazor Column Chart with Custom Series](../images/chart-types-images/blazor-column-chart-custom-series.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/hNhqDcXTUuiWvvLr?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 N> Refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
 
-## See Also
+## See also
 
 * [Data Label](../data-labels)
 * [Tooltip](../tool-tip)

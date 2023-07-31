@@ -53,6 +53,7 @@ In batch edit mode, when you double-click on the datagrid cell, the target cell 
 
 The following screenshot represents Editing in Batch mode.
 ![Blazor DataGrid with Batch Editing](./images/blazor-datagrid-batch-editing.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/hDLUtnVALMbRpuKB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Edit next row or previous row from the current row
 
@@ -102,6 +103,7 @@ Pressing `TAB` from the last cell of the current row allows editing the next row
 
 The following GIF represents Editing in Batch mode.
 ![Editing Next Row in Blazor DataGrid](./images/blazor-datagrid-next-row-edit.gif)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VjLKDHBqVhZdrPHR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Provide new item or edited item using events
 
@@ -223,6 +225,7 @@ The following sample code demonstrates enabling confirmation dialog for batch op
 
 The following GIF represents the confirmation dialog displayed while performing batch operations in DataGrid,
 ![Blazor DataGrid displays Update Confirmation Dialog](./images/blazor-datagrid-update-confirm-dialog.gif)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BDBKtxVAhrAyZghR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 N> Enabling [ShowConfirmDialog](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_ShowConfirmDialog) requires the [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_Mode) property value of the [GridEditSettings](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Grids.GridEditSettings.html) component to be **Batch**.
 <br/> If [ShowConfirmDialog](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_ShowConfirmDialog) is set to false, then confirmation dialog will not be displayed on batch editing.
@@ -340,6 +343,8 @@ Also, the add operation is handled while performing batch editing using the bool
 
 ```
 
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/hZrADnBKBrIPMkEs?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
+
 ## Select the entire text of the cell while editing in batch edit mode
 
 By default, while editing a particular cell in batch edit mode, the cursor will be placed at the end of the text once the cell is changed to an edited state. Instead of this behavior, the entire cell text is selected when the corresponding cell is in an edited state. This can be achieved by the [OnCellEdit](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnCellEdit) and [RowSelected](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowSelected)  events of the Grid.
@@ -405,5 +410,7 @@ window.selectContent = function () {
     }
 }
 ```
+
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/hNBgXRLKVBlMLmPL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 N> [View Sample in GitHub.](https://github.com/SyncfusionExamples/blazor-datagrid-select-text-in-a-cell-when-batch-editing)

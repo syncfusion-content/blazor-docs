@@ -56,6 +56,7 @@ An IEnumerable object can be assigned to the [DataSource](https://help.syncfusio
 ```
 
 ![Blazor Line Chart with Data Binding](images/working-data/blazor-chart-data-binding.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LXhqjRLPsmDqZYTI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 N> By default, [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) uses **BlazorAdaptor** for list data-binding.
 
@@ -93,6 +94,7 @@ Chart is a generic component which is strongly bound to a model type. There are 
 ```
 
 ![Blazor Chart with ExpandoObject Binding](images/working-data/blazor-chart-expando-object-binding.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/hjBANRLbswCmByXE?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ### DynamicObject binding
 
@@ -150,6 +152,7 @@ Chart supports **DynamicObject** data source when the model type is unknown. The
 ```
 
 ![Blazor Chart with DynamicObject Binding](images/working-data/blazor-chart-dynamic-object.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BtVAjdrliGHLXYXG?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Remote data
 
@@ -159,6 +162,7 @@ Assign service data as an instance of [SfDataManager](https://help.syncfusion.co
 
 @using Syncfusion.Blazor.Data
 @using Syncfusion.Blazor.Charts
+@using System.Dynamic
 
 <SfChart>
     <SfDataManager Url="https://services.odata.org/V4/Northwind/Northwind.svc/Orders" Adaptor="Adaptors.ODataV4Adaptor"></SfDataManager>
@@ -174,6 +178,7 @@ Assign service data as an instance of [SfDataManager](https://help.syncfusion.co
 ```
 
 ![Remote Data Binding in Blazor Chart](images/working-data/blazor-chart-remote-data-binding.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LtLAXRVFMuRNKdQj?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ### Binding with OData services
 
@@ -204,6 +209,7 @@ The [WebApiAdaptor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data
 ```
 
 ![Blazor Chart with Web API Binding](images/working-data/blazor-chart-web-api-binding.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/rZhKtxLbsYaQQUCW?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ### Sending additional parameters to the server
 
@@ -236,6 +242,8 @@ The following sample code shows how to send parameters using the Query property 
 
 }
 ```
+
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BNVgtdLPLjXuLDPU?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Entity Framework
 
@@ -506,6 +514,7 @@ The [ObservableCollection](https://docs.microsoft.com/en-us/dotnet/api/system.co
 ```
 
 ![Blazor Chart with Web API Binding](images/working-data/observable-collection.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VXrgNdVPVDyzeLKU?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Empty points
 
@@ -554,6 +563,8 @@ Empty points are defined as data points having NaN values. Empty points can be c
 }
 
 ```
+
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/rZhqDxrvVNFYpjqT?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 **Customizing empty point**
 
@@ -605,10 +616,11 @@ The [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartE
 ```
 
 ![Blazor Column Chart with Empty Points](images/working-data/blazor-chart-empty-point.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LXrAZdLFhsMkdGdb?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 N> Refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
 
-## See Also
+## See also
 
 * [Data label](./data-labels)
 * [Tooltip](./tool-tip)

@@ -284,6 +284,7 @@ N> Syncfusion recommends to reference scripts using [Static Web Assets](https://
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to run the application. Then, the RichTextEditor component will be rendered in the default web browser.
 
 ![Blazor RichTextEditor Component](./images/blazor-richtexteditor.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/hNVgZnszBESzAdok?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Configure the Toolbar
 
@@ -351,6 +352,7 @@ Configure the toolbar with the tools using [RichTextEditorToolbarSettings.Items]
 {% endtabs %}
 
 ![Blazor RichTextEditor with Toolbar](./images/blazor-richtexteditor-toolbar.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BXVAjRCJhEuXkIMV?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/RichTextEditor).
 
@@ -416,6 +418,7 @@ Specifies the items to be rendered in quick toolbar based on the target elements
 {% endtabs %}
 
 ![Blazor RichTextEditor with Image](./images/blazor-richtexteditor-image.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/rNLKXmiWfSUfaZms?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Retrieve the formatted content
 
@@ -466,6 +469,8 @@ To retrieve the editor contents in HTML format, use the [Value](https://help.s
 
 {% endhighlight %}
 {% endtabs %}
+
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BXrgDwiCzoYIFZiM?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Retrieve the number of characters
 

@@ -192,6 +192,7 @@ N> Syncfusion recommends to reference scripts using [Static Web Assets](https://
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to run the application. Then, the Syncfusion `Blazor Chart` component will be rendered in the default web browser.
 
 ![Blazor Chart Component](images/getting-started/blazor-chart.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LXBAXnsnrWIDYvuO?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Populate chart with data
 
@@ -256,6 +257,7 @@ Now, map the data fields  `Month` and `Sales` to the series [XName](https://help
 {% endtabs %}
 
 ![Blazor Column Chart](images/getting-started/blazor-chart-column.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BtBgDHMHLhGIvjVh?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Add titles
 
@@ -277,6 +279,7 @@ Using the [Title](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts
 {% endtabs %}
 
 ![Blazor Column Chart with Title](images/getting-started/blazor-chart-title.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/rtBKjRsRhKiqJzCY?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Add data label
 
@@ -301,6 +304,7 @@ You can add data labels to improve the readability of the chart. This can be ach
 {% endtabs %}
 
 ![Blazor Column Chart with DataLabel](images/getting-started/blazor-chart-data-label.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/rtVADHCdVgLLTaZH?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Enable tooltip
 
@@ -323,6 +327,7 @@ When space constraints prevent you from displaying information using data labels
 {% endtabs %}
 
 ![Blazor Column Chart with Tooltip](images/getting-started/blazor-chart-tooltip.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/rDVKtnsxVUfqskqx?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Enable legend
 
@@ -345,6 +350,7 @@ You can use legend for the chart by setting the [Visible](https://help.syncfusio
 {% endtabs %}
 
 ![Blazor Column Chart with Legend](images/getting-started/blazor-chart-legend.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LZBANRWxhAxMnwYu?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/Chart).
 

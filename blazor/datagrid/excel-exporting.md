@@ -61,6 +61,8 @@ The excel export allows exporting DataGrid data to Excel document. You need to u
 }
 ```
 
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/rtVKtRVRfZRfpimo?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
+
 ## To customize excel export
 
 The excel export provides an option to customize mapping of the datagrid to excel document.
@@ -118,6 +120,8 @@ The excel export provides an option to export the current page into excel. To ex
 }
 ```
 
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/rDBADdLnfZvbgnol?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
+
 ### Export hidden columns
 
 The excel export provides an option to export hidden columns of DataGrid by defining [IncludeHiddenColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelExportProperties.html#Syncfusion_Blazor_Grids_ExcelExportProperties_IncludeHiddenColumn) as **true**.
@@ -170,6 +174,8 @@ The excel export provides an option to export hidden columns of DataGrid by defi
     }
 }
 ```
+
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VjVqtnhRzWtUgrpa?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ### Export the selected records only
 
@@ -233,6 +239,8 @@ In the following sample, selected records will be gotten from the `GetSelectedRe
     }
 }
 ```
+
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/hNVUZdhdpWKzhGrr?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ### Add custom text in header/footer
 
@@ -304,8 +312,8 @@ The following sample code demonstrates adding custom text and customizing its st
     }
 }
 ```
-
 ![Adding custom text in header/footer in Blazor DataGrid](./images/blazor-datagrid-custom-text-in-header.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/hNrqjxVdJrVKhcnu?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ### Export template columns
 
@@ -371,6 +379,8 @@ The excel export provides an option to export template columns of the DataGrid b
     }
 }
 ```
+
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/rZBgZHVHJVbzLoEY?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 <!-- Show or hide columns on exported excel
 
@@ -502,6 +512,8 @@ To apply theme in exported Excel, define the **theme** in export properties.
 
 N> By default, material theme is applied to exported excel document.
 
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VDrgtnLnpUtXbUYm?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
+
 ### Customizing the background color for a Grid in an exported Excel document
 
 You can set the background color for a Grid in the exported document using the [Theme](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelExportProperties.html#Syncfusion_Blazor_Grids_ExcelExportProperties_Theme) property of [ExcelExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelExportProperties.html) class.
@@ -565,6 +577,7 @@ This can be demonstrated using the following sample:
 
 ```
 ![Customizing the background color for a Blazor DataGrid in an exported Excel document](./images/blazor-datagrid-customize-background-color.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VNrgXRVHfqUIAiYH?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 N> [View Sample in GitHub.](https://github.com/SyncfusionExamples/blazor-datagrid-customize-background-color-for-grid-exported-excel-file)
 
@@ -647,8 +660,8 @@ This can be demonstrated using the following sample:
 }
 
 ```
-
 ![Customizing the background color for a particular column in an exported Excel document](./images/blazor-datagrid-customize-background-color-for-particular-column.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VXhqNRrdfKebbmDq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 N> [View Sample in GitHub.](https://github.com/SyncfusionExamples/blazor-datagrid-customize-background-color-for-particular-column)
 
@@ -863,6 +876,8 @@ You can assign the file name for the exported document by defining **fileName** 
 }
 ```
 
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VjrgZdBRzoCLJiLy?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
+
 ### Add additional worksheets to excel file while exporting
 
 Additional worksheets can be added to the excel file while exporting using the [ExcelExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelExportProperties.html).
@@ -925,6 +940,8 @@ In the following sample, you can add the additional worksheets to excel file by 
 
 ```
 
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/hZrgXRhdzoITFNjh?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
+
 ## Exporting grouped records
 
 The excel export provides outline option for grouped records which hides the detailed data for better viewing.
@@ -977,6 +994,8 @@ In datagrid, we have provided the outline option for the exported document when 
     }
 }
 ```
+
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LZVKXRhdpSaCxfuy?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ### Limitations
 
@@ -1041,6 +1060,8 @@ You can export the Excel grid with specific columns instead of all columns which
     }
 }
 ```
+
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LNVKNdBRfnNBbTpH?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 <!-- Multiple datagrid exporting
 
@@ -1267,6 +1288,8 @@ The following sample code demonstrates dynamically modifying the data source bef
 }
 ```
 
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LtLKNRVdJxCtvVju?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
+
 ## Customizing columns
 
 Excel export provides an option to define the columns dynamically before exporting. You can define the dynamic columns using [Columns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelExportProperties.html#Syncfusion_Blazor_Grids_ExcelExportProperties_Columns) property of the [ExcelExportProperties](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Grids.ExcelExportProperties.html) class.
@@ -1324,6 +1347,8 @@ The following sample code demonstrates dynamically adding `ShipCountry` column i
     }
 }
 ```
+
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VtLKNRBnzHUXdGHR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 N> You can refer to our [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap4) to understand how to present and manipulate data.
 

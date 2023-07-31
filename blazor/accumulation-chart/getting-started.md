@@ -299,6 +299,7 @@ N> Syncfusion recommends to reference scripts using [Static Web Assets](https://
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to run the application. Then, the Syncfusion `Blazor Accumulation Chart` component will be rendered in the default web browser.
 
 ![Blazor Pie Chart](images/getting-started/blazor-pie-chart.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BjhgtdsLffrMBosm?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Add title
 
@@ -337,6 +338,7 @@ Using the [Title](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts
 {% endtabs %}
 
 ![Adding Title in Blazor Accumulation Chart](images/getting-started/blazor-accumulation-chart-with-title.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/rNhADnWBJyqeOCsB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Add data label
 
@@ -357,6 +359,7 @@ The data labels are added to improve the readability of the accumulation chart. 
 {% endtabs %}
 
 ![Adding Data Label in Blazor Accumulation Chart](images/getting-started/blazor-accumulation-chart-data-label.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BjBKjwLRWxvUVPhJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Enable Tooltip
 
@@ -377,6 +380,7 @@ When space constraints prevent from displaying the information using data labels
 {% endtabs %}
 
 ![Blazor Accumulation Chart displays Tooltip](images/getting-started/blazor-accumulation-chart-tooltip.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LDrUDwBHCwoKMlxj?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Enable Legend
 
@@ -399,6 +403,7 @@ Legend is used for the accumulation chart by setting the [Visible](https://help.
 {% endtabs %}
 
 ![Blazor Accumulation Chart with Legend](images/getting-started/blazor-accumulation-chart-legend.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LXhUjmVdWGGghQgU?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/Accumulation%20Chart).
 

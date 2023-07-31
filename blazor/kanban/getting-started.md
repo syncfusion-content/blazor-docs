@@ -299,6 +299,7 @@ N> Syncfusion recommends to reference scripts using [Static Web Assets](https://
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to run the application. Then, the Syncfusion `Blazor Kanban` component will be rendered in the default web browser.
 
 ![Blazor Kanban Component](./images/blazor-kanban-component.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LXhqtxWIVwSuliMY?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Populating cards
 
@@ -343,6 +344,7 @@ To populate the empty Kanban with cards, define the Enumerable object or remote 
 {% endtabs %}
 
 ![Blazor Kanban with Cards](./images/blazor-kanban-with-cards.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LNBqjRiSLwnmipRH?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Enable Swimlane
 
@@ -408,13 +410,14 @@ To populate the empty Kanban with cards, define the Enumerable object or remote 
 {% endtabs %}
 
 ![Blazor Kanban with Swimlane](./images/blazor-kanban-with-swimlane.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/rDhUZRsohGQnZgdL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/Kanban).
 
 N> You can also explore our [Blazor Kanban Board example](https://blazor.syncfusion.com/demos/kanban/overview?theme=bootstrap5) that shows you how to render and configure the bullet chart.
 
 
-## See Also
+## See also
 
 * [Getting Started with Syncfusion Blazor for client-side in .NET Core CLI](../getting-started/blazor-webassembly-dotnet-cli)
 

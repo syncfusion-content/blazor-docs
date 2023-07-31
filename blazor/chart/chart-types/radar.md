@@ -50,6 +50,7 @@ documentation: ug
 ``` 
 
 ![Blazor Radar Chart with Line Series](../images/polar-radar/blazor-radar-chart-line-series.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/rNhAXGXyhzXMHGtW?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 N> Refer to our [Blazor Radar Chart](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/radar-chart) feature tour page to know about its other groundbreaking feature representations. Explore our [Blazor Radar Chart Example](https://blazor.syncfusion.com/demos/chart/polar-line) to know how to render and configure the Radar type chart.
 
@@ -96,6 +97,7 @@ To customize the start angle of the [Radar Chart](https://help.syncfusion.com/cr
 ``` 
 
 ![Blazor Radar Chart with Start Angle](../images/polar-radar/blazor-radar-chart-start-angle.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VNVUZwZerfUGjDrN?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ### Coefficient in axis
   
@@ -138,10 +140,11 @@ To customize the radius of the [Radar Chart](https://help.syncfusion.com/cr/blaz
 ``` 
 
 ![Blazor Radar Chart with Radius](../images/polar-radar/blazor-radar-chart-radius.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VjBUXcDeLJdfQpfG?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 N> Refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
 
-## See Also
+## See also
 
 * [Data Label](../data-labels)
 * [Tooltip](../tool-tip)
