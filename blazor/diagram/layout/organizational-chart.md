@@ -386,6 +386,6 @@ diagram.DoLayout();
 
 * [How to create a connector](../connectors/connectors)
 
-* [How to create and render the Organization chart diagram by using SQL database](https://www.syncfusion.com/kb/13881/how-to-create-and-render-the-organization-chart-diagram-by-using-sql-database)
+* [How to create and render the Organization chart diagram by using SQL database](https://support.syncfusion.com/kb/article/12329/how-to-create-and-render-the-organization-chart-diagram-by-using-sql-database)
 
-* [How to create and render the Organization chart diagram by using MDF database](https://www.syncfusion.com/kb/13888/how-to-create-and-render-the-org-chart-diagram-by-using-mdf-database)
+* [How to create and render the Organization chart diagram by using MDF database](https://support.syncfusion.com/kb/article/12128/how-to-create-and-render-the-org-chart-diagram-by-using-mdf-database)
