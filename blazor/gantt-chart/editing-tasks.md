@@ -77,6 +77,8 @@ double click action on chart side
 
 ![Blazor Gantt Chart displays Editing in Chart](images/blazor-gantt-chart-editing-in-chart.png)
 
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VZrKZcibioUFqasP?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
+
 ## Dialog editing
 
 Modify the task details through the edit dialog by setting the `GanttEditSettings.Mode` as `Dialog`.
@@ -109,7 +111,7 @@ Modify the task details through the edit dialog by setting the `GanttEditSetting
 
     public static List<TaskData> GetTaskCollection()
     {
-        List<TaskData> Tasks = new List<TaskData>() 
+        List<TaskData> Tasks = new List<TaskData>()
         {
             new TaskData() { TaskId = 1, TaskName = "Project initiation", StartDate = new DateTime(2022, 04, 05), EndDate = new DateTime(2022, 04, 21), },
             new TaskData() { TaskId = 2, TaskName = "Identify Site location", StartDate = new DateTime(2022, 04, 05), Duration = "0", Progress = 30, ParentId = 1 },
@@ -125,9 +127,10 @@ Modify the task details through the edit dialog by setting the `GanttEditSetting
 }
 ```
 
-`Note:` In dialog editing mode, the edit dialog appears when the Tree Grid or Gantt chart sides are double-clicked.
+N> In dialog editing mode, the edit dialog appears when the Tree Grid or Gantt chart sides are double-clicked.
 
 ![Dialog Editing in Blazor Gantt Chart](images/blazor-gantt-chart-dialog-editing.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LtLUNmMlMSFGMURp?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ### Sections or tabs in Dialog
 
@@ -221,6 +224,8 @@ Tabs in Add Dialog
 
 ![Adding New DialogTabs in Blazor Gantt Chart](images/blazor-gantt-chart-add-dialogtab.png)
 
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/rjrqjcCbixMhewQb?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
+
 ### Limiting data fields in general tab
 
 In the Gantt Chart dialog, you can make only specific data source fields visible for editing by using the `GanttAddDialogFields` and `GanttEditDialogFields` properties. The data fields are defined with `GanttEditDialogField.Type` and `GanttEditDialogField.Fields` properties.
@@ -309,14 +314,14 @@ In the Gantt Chart dialog, you can make only specific data source fields visible
             new TaskData() { TaskId = 8, TaskName = "Estimation approval", StartDate = new DateTime(2022, 04, 06), Duration = "0", Predecessor = "7", ResourceId = new List<TaskResources>(){ new TaskResources() { ResourceId=1}, new TaskResources() { ResourceId=5} }, Notes = "", ParentId = 5 }
         };
         return Tasks;
-    }  
+    }
 }
 ```
 
 The following screenshot show the output of above code example.
 
 ![Blazor Gantt Chart with Custom Fields](images/blazor-gantt-chart-custom-fields.png)
-
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/rDBKZwCbsxJVWjhs?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 
 ## Prevent editing for specific tasks
@@ -376,6 +381,8 @@ For more information, refer to the following:
     }
 }
 ```
+
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BXBgXwCvixwGmaPR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Task dependencies
 
@@ -439,6 +446,8 @@ Updating with Dialog
 
 ![Dialog Editing in Blazor Gantt Chart](images/blazor-gantt-chart-edit-dialog.png)
 
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LNhKNGilsGWIOHHJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
+
 ## Update task values using method
 
 Tasks' value can be dynamically updated by using the [UpdateRecordByIDAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_UpdateRecordByIDAsync__0_) method. You can call this method on any custom action. The following code example shows how to use this method to update a task.
@@ -495,3 +504,4 @@ N> Using the `UpdateRecordByIDAsync` method, you cannot update the task ID value
 ```
 
 ![Updating Record in Blazor Gantt Chart](images/blazor-gantt-chart-update-record.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VZBqtwWFWwhSVSQj?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
