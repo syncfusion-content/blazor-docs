@@ -275,7 +275,8 @@ N> Syncfusion recommends to reference scripts using [Static Web Assets](https://
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to run the application. Then, the Syncfusion `Blazor MultiSelect DropDown` component will be rendered in the default web browser.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LNVKjRWeiGtGGCwJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Blazor MultiSelect DropDown Component](./images/blazing-fast-multiselect-dropdown-blazor.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LNVKjRWeiGtGGCwJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Binding data source
 
@@ -312,7 +313,8 @@ After initialization, populate the MultiSelect with data using the [DataSource](
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BNVKNHWoicfeuVeJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Data Binding in Blazor MultiSelect DropDown](./images/blazing-fast-multiselect-dropdown-data-binding.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BNVKNHWoicfeuVeJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Configure the popup list
 
@@ -330,7 +332,8 @@ The height and width of the popup list can also be customized using the [PopupHe
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hjrANdsSimxQCekL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Configuring Popup List in Blazor MultiSelect DropDown](./images/blazor-multiselect-dropdown-configure-poup-list.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/hjrANdsSimxQCekL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/MultiSelectDropDown).
 

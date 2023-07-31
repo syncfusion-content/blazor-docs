@@ -294,7 +294,8 @@ N> Syncfusion recommends to reference scripts using [Static Web Assets](https://
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to run the application. Then, the Syncfusion `Blazor Tabs` component will be rendered in the default web browser.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VXBgjdWgftzDbpHS?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Blazor Tabs Component](./images/blazor-tabs.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VXBgjdWgftzDbpHS?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Initialize Tab Content using Template
 
@@ -344,7 +345,8 @@ The following code explains how to initialize tab content using `ContentTemplate
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LZLgNnMgTCwWMywB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Blazor Tabs with Template](./images/blazor-tabs-template.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LZLgNnMgTCwWMywB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Two way binding of SelectedItem
 
@@ -396,7 +398,8 @@ Selected Tab
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BtrgDRCUzCuRxCoA?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Blazor Tabs with Data Binding](./images/blazor-tabs-data-binding.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BtrgDRCUzCuRxCoA?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/Tabs).
 

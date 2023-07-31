@@ -68,6 +68,7 @@ Using the `GanttColumns` property, you can define the columns in Gantt Chart. If
 ```
 
 ![Blazor Gantt Chart with Columns](images/blazor-gantt-chart-columns.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VDVqZwWzUiURheOH?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Header template
 
@@ -184,6 +185,7 @@ The Header Template has options to display custom element values or content in t
 ```
 
 ![Header Template in Blazor Gantt Chart](images/headerTemplate.png) 
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/hXLqDQWTKCRyvfWd?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Format
 
@@ -239,6 +241,7 @@ To format the cell values based on a specific culture, use the `GanttColumn.Form
 ```
 
 ![Blazor Gantt Chart with Column Formatting](images/blazor-gantt-chart-format-column.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VZBADmsfULojPkNz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 N> By default, the `number` and `date` values are formatted in `en-US` culture.
 
@@ -318,6 +321,7 @@ Format | Formatted value
 ```
 
 ![Blazor Gantt Chart with Date Format](images/blazor-gantt-chart-date-format.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LXLqDcMpUhdSwoUr?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Change tree/expander column
 
@@ -366,6 +370,7 @@ The tree/expander column is a column in the Gantt Chart component that has icons
 ```
 
 ![Changing Expander Column in Blazor Gantt Chart](images/blazor-gantt-chart-expander-column.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VZBUDQspqAVNBPzo?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Show or hide columns dynamically
 
@@ -431,6 +436,8 @@ You can show or hide gantt component columns dynamically using external buttons 
 }
 ```
 
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/hZVqDwWzAgmqmNxq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
+
 ## Controlling Gantt column actions
 
 You can enable or disable gantt component action for a particular column by setting the `AllowFiltering`, `AllowSorting`, `AllowReordering`, and `AllowEditing` properties.
@@ -486,6 +493,8 @@ You can enable or disable gantt component action for a particular column by sett
     }
 }
 ```
+
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LNhqDQiJgzKSaFbH?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Column type
 
@@ -570,6 +579,7 @@ Using the `GanttColumns` property, you can define the Custom Columns in Gantt Ch
 ```
 
 ![Blazor Gantt Chart with Custom Column](images/blazor-gantt-chart-custom-column.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/htLqjwipgTeCCIWa?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Column chooser
 
@@ -635,6 +645,7 @@ The column chooser has options to show or hide columns dynamically. It can be en
 `````````
 
 ![Blazor Gantt Chart with Custom Column](images/blazor-gantt-column-chooser.gif)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BDBANwMJKTQhTWIM?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Custom component in column chooser template
 

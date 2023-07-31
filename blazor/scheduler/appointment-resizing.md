@@ -56,7 +56,7 @@ By default, resizing of events is allowed on all Scheduler views except Agenda a
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hthAtwDRqIjmyBKt?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/hthAtwDRqIjmyBKt?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Disable scrolling on resize action
 
@@ -148,7 +148,7 @@ The speed of the scrolling action while resizing an appointment to the Scheduler
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BXLqNwDRKygMpWKZ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BXLqNwDRKygMpWKZ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Setting resize time interval
 
@@ -195,4 +195,4 @@ By default, while resizing an appointment, it extends or shrinks at an interval 
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LXVUjmNRAnKdUsub?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LXVUjmNRAnKdUsub?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->

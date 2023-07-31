@@ -63,7 +63,8 @@ The [Size](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartS
 
 ``` 
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LNBqZGDIMdSCSxOI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Blazor Bubble Chart with Size Mapping](../images/chart-types-images/blazor-bubble-chart-size-mapping.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LNBqZGDIMdSCSxOI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Series customization
 
@@ -117,7 +118,8 @@ The following properties can be used to customize the [Bubble](https://help.sync
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VtrUXGNSCRHKIIXm?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Blazor Bubble Chart with Custom Series](../images/chart-types-images/blazor-bubble-chart-custom-series.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VtrUXGNSCRHKIIXm?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 N> Refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
 

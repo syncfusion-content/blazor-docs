@@ -49,7 +49,7 @@ To enable sorting in the DataGrid, set the [AllowSorting](https://help.syncfusio
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BjhAtnLrCcWEZBCb?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BjhAtnLrCcWEZBCb?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 N> * DataGrid columns are sorted in the **Ascending** order. If you click the already sorted column, the sort direction toggles.
 <br/> * You can apply and clear sorting by invoking **SortColumn** and **ClearSorting** methods.
@@ -101,7 +101,7 @@ To sort at initial rendering, set the **Field** and **Direction** in [Columns](h
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LjhUNnrhicoBFLef?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LjhUNnrhicoBFLef?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Multi-column sorting
 
@@ -148,7 +148,7 @@ N> The [AllowSorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gr
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rXVqNRLVMlRgPzPB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/rXVqNRLVMlRgPzPB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Sort order
 
@@ -203,7 +203,7 @@ During the sort action, the datagrid component triggers two events. The [OnActio
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rjLUZnrrCOiiKMSf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/rjLUZnrrCOiiKMSf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Custom sort comparer
 
@@ -276,7 +276,8 @@ In the following code example, custom SortComparer class was defined in the Cust
 
 The following GIF represents custom SortComparer for CustomerID column. When the user clicks the CustomerID column's header, the custom SortComparer will sort the data according to the OrderID field value. So that custom SortComparer class sort the column data by using another column's value.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LthKDxVriaVxqpEP?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Custom sort comparer in Blazor DataGrid](./images/blazor-datagrid-custom-sort-comparer.gif)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LthKDxVriaVxqpEP?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 N> The SortComparer property will work only for local data.
 <br/> When using the column template to display data in a column, you will need to use the [Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Field) property of [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) to work with the [SortComparer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_SortComparer) property.
