@@ -101,4 +101,4 @@ The numeric formats such as currency, percentage and so on can be displayed in t
 
 ## See also
 
-* [Localization in Blazor Maps component](https://blazor.syncfusion.com/documentation/maps/localization/)
+* [Localization in Blazor Maps component](https://blazor.syncfusion.com/documentation/maps/localization)
