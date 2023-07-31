@@ -71,5 +71,5 @@ The steps below show how to install the Essential Studio Blazor Mac installer.
 
 You can also find the steps for getting started with Syncfusion Blazor components in Mac,
 
-* Getting started with Syncfusion Blazor Components in [Blazor Server Side App](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-mac/#getting-started-with-syncfusion-blazor-components-in-blazor-server-side-app-using-visual-studio-for-mac) using Visual Studio for Mac.
-* Getting started with Syncfusion Blazor Components in [Web Assembly App](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-visual-studio-mac/) using Visual Studio for Mac.
+* Getting started with Syncfusion Blazor Components in [Blazor Server Side App](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-mac#getting-started-with-syncfusion-blazor-components-in-blazor-server-side-app-using-visual-studio-for-mac) using Visual Studio for Mac.
+* Getting started with Syncfusion Blazor Components in [Web Assembly App](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-visual-studio-mac) using Visual Studio for Mac.
