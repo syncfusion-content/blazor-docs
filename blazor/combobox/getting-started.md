@@ -24,7 +24,7 @@ To get started quickly with Blazor ComboBox component, you can check out this vi
 
 You can create **Blazor Server App** or **Blazor WebAssembly App** using Visual Studio in one of the following ways,
 
-* [Create a Project using Microsoft Templates](https://docs.microsoft.com/en-us/aspnet/core/blazor/tooling?pivots=windows)
+* [Create a Project using Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0&pivots=windows)
 
 * [Create a Project using Syncfusion Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio)
 
@@ -143,7 +143,7 @@ namespace WebApplication1
 
 ## Add style sheet
 
-Checkout the [Blazor Themes topic](https://blazor.syncfusion.com/documentation/appearance/themes) to learn different ways ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference) and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)) to refer themes in Blazor application, and to have the expected appearance for Syncfusion Blazor components. Here, the theme is referred using [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Refer to [Enable static web assets usage](https://blazor.syncfusion.com/documentation/appearance/themes#enable-static-web-assets-usage) topic to use static assets in your project.
+Checkout the [Blazor Themes topic](https://blazor.syncfusion.com/documentation/appearance/themes) to learn different ways ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference) and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator) to refer themes in Blazor application, and to have the expected appearance for Syncfusion Blazor components. Here, the theme is referred using [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Refer to [Enable static web assets usage](https://blazor.syncfusion.com/documentation/appearance/themes#enable-static-web-assets-usage) topic to use static assets in your project.
 
 To add theme to the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search for [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) and then install it. Then, the theme style sheet from NuGet can be referred as follows,
 
@@ -270,14 +270,14 @@ N> Syncfusion recommends to reference scripts using [Static Web Assets](https://
 {% tabs %}
 {% highlight razor %}
 
-<SfComboBox TValue="string" TItem="string" Placeholder="Select a game"></SfComboBox>
+<SfComboBox TValue="string" Placeholder="Select a game"></SfComboBox>
 
 {% endhighlight %}
 {% endtabs %}
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to run the application. Then, the Syncfusion `Blazor ComboBox` component will be rendered in the default web browser.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BXhqjnWdCFWGIvpw?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Blazor ComboBox Component](./images/blazor-combobox-component.png)
 
 ## Binding data source
 
@@ -313,7 +313,7 @@ After initializing, populate the ComboBox with data using the [DataSource](https
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VjBUNHsnsvtLvhws?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Blazor ComboBox with Data Binding](./images/blazor-combobox-data-binding.png)
 
 ## Custom values
 
@@ -329,7 +329,7 @@ The ComboBox allows the users to give input as custom value, which is not requir
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VDhANnsRsvAikeIq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Blazor ComboBox with Custom Values](./images/blazor-combobox-custom-values.png)
 
 ## Configure the popup list
 
@@ -345,11 +345,11 @@ By default, the width of the popup list automatically adjusts according to the C
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LZLgtdWRsvTzrMgd?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Customizing Popup Height and Width in Blazor ComboBox](./images/blazor-combobox-popup-customization.png)
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/ComboBox).
 
-## See also
+## See Also
 
 * [Getting Started with Syncfusion Blazor for Client-Side in .NET Core CLI](../getting-started/blazor-webassembly-dotnet-cli)
 * [Getting Started with Syncfusion Blazor for Server-side in Visual Studio](../getting-started/blazor-server-side-visual-studio)
