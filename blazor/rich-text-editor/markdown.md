@@ -19,7 +19,8 @@ The Rich Text Editor supports to editing the markdown content by using the [Edit
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BXrAjQMALUICJhmp?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Blazor RichTextEditor markdown editor](./images/blazor-richtexteditor-markdown-editor.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BXrAjQMALUICJhmp?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Markdown  commands
 
@@ -68,7 +69,8 @@ To insert the table in the markdown editor, click the [Table](https://help.syncf
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VXBAZGsqhgklqqbm?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Blazor RichTextEditor markdown table](./images/blazor-richtexteditor-markdown-table.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VXBAZGsqhgklqqbm?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Insert image
 
@@ -82,7 +84,8 @@ To insert an image in the markdown editor, click the [Image](https://help.syncfu
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rZhKtmsgLTffydIS?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Blazor RichTextEditor markdown image](./images/blazor-richtexteditor-markdown-image.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/rZhKtmsgLTffydIS?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Insert link
 
@@ -101,7 +104,8 @@ To create the link for a text or an image in markdown editor, click the `HyperLi
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rtVqNQWqVoRLqRUA?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Blazor RichTextEditor markdown link](./images/blazor-richtexteditor-markdown-link.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/rtVqNQWqVoRLqRUA?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Custom format
 
@@ -115,7 +119,13 @@ The Rich Text Editor allows you to customize the markdown syntax by overriding i
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LDrUtwsgVykmHonv?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Blazor RichTextEditor markdown custom list](./images/blazor-richtexteditor-markdown-custom-list.png)
+
+![Blazor RichTextEditor markdown custom format](./images/blazor-richtexteditor-markdown-custom-formats.png)
+
+![Blazor RichTextEditor markdown custom selection](./images/blazor-richtexteditor-markdown-custom-bold.png)
+
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LDrUtwsgVykmHonv?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## See also
 

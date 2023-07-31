@@ -96,7 +96,7 @@ The resource collection contains details about resources that are used in the pr
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BZVUXGsFTURUCsnb?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BZVUXGsFTURUCsnb?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Assign resource
 
@@ -211,7 +211,8 @@ The following code snippet shows how to assign the resource for each task and ma
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hNhAZQCPpqcdEkKI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Assigning Resource in Blazor Gantt Chart](images/blazor-gantt-chart-assign-resource.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/hNhAZQCPpqcdEkKI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Add/Edit resource collection
 
@@ -305,4 +306,10 @@ N> When the edit mode is set as `Auto`, on performing double-click action on Tre
 
 Editing resource with cell edit or dialog edit
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rjBgZmCvzgEwaTOA?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Blazor Gantt Chart displays Editing Resource with Cell](images/blazor-gantt-chart-editing-resources-in-cell.png)
+
+Editing resource with edit dialog
+
+![Blazor Gantt Chart displays Editing Resource with Edit Dialog](images/blazor-gantt-chart-editing-resource-in-dialog.png)
+
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/rjBgZmCvzgEwaTOA?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->

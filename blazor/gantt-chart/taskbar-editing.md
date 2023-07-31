@@ -54,7 +54,7 @@ Modify the task details through user interaction, such as resizing and dragging 
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BZhgXQMvLDZKeHsM?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BZhgXQMvLDZKeHsM?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Creating taskbar on draw action
 
@@ -104,4 +104,5 @@ A taskbar can be drawn only when [AllowUnscheduledTasks](https://help.syncfusion
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BZBAZmWFBZsBOvyC?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Taskbar draw in Blazor Gantt Chart](./images/taskbar_draw.gif)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BZBAZmWFBZsBOvyC?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->

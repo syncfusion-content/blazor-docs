@@ -70,7 +70,8 @@ The following code snippet explains the mapping of duration unit data source fie
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LZhKNGsELThIaqlG?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Blazor Gantt Chart with Duration Unit](images/blazor-gantt-chart-duration-units.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LZhKNGsELThIaqlG?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 N> The default value of the `DurationUnit` property is `day`.
 
@@ -122,7 +123,8 @@ Duration units for the tasks can also be defined along with the duration values.
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BtLqjQMarpeIcZhy?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Blazor Gantt Chart with Duration Units](images/blazor-gantt-chart-duration-unit.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BtLqjQMarpeIcZhy?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 N> The edit type of the duration column in Gantt Chart is string, to support editing the duration field along with duration units.
 
