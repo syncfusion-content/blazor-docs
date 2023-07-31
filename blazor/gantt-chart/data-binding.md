@@ -611,7 +611,7 @@ The ODataV4 is an improved version of OData protocols, and the [SfDataManager](h
 
 <SfGantt TValue="TaskDatum" Height="450px" Width="100%" HighlightWeekends="true" AllowFiltering="true" AllowSorting="true" Toolbar="@(new List<string>(){ "Add", "Edit", "Update", "Delete", "Cancel", "ExpandAll", "CollapseAll","Indent","Outdent"})" AllowSelection="true" GridLines="GridLine.Both"
 TreeColumnIndex="1">
-    <SfDataManager Url="https://localhost:7160/odata/Gantt" Adaptor="Adaptors.ODataV4Adaptor"></SfDataManager>
+    <SfDataManager Url="odata/Gantt" Adaptor="Adaptors.ODataV4Adaptor"></SfDataManager>
     <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" ParentID="ParentId"></GanttTaskFields>
     <GanttEditSettings AllowAdding="true" AllowDeleting="true" AllowEditing="true" AllowTaskbarEditing="true" ShowDeleteConfirmDialog="true"></GanttEditSettings>
     <GanttColumns>
