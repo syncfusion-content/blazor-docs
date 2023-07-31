@@ -49,7 +49,7 @@ documentation: ug
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/htVgjGjereRdSpYF?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/htVgjGjereRdSpYF?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Series customization
 
@@ -91,7 +91,8 @@ In [HiloOpenClose](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Chart
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VXVqDmZShSvXhKVR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Blazor HiloOpenClose with Custom Series](../images/financial-types/blazor-hilo-open-close-custom-series.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VXVqDmZShSvXhKVR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 N> Refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
 

@@ -129,7 +129,7 @@ By default, the `EnableToggle` property is set to `false`.
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BtBqXwWJTzLUsyqD?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BtBqXwWJTzLUsyqD?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Drag selection
 
@@ -183,8 +183,8 @@ The Gantt Chart allows to select range of cells or rows by mouse or touch draggi
     }
 }
 ```
-
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VtVUjGMJpTqmGouW?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Blazor Gantt Chart Allow Drag Selection](images/gantt-allow-drag-selection.gif)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VtVUjGMJpTqmGouW?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Clear selection
 
@@ -303,4 +303,4 @@ You can get the selected row indexes by using the [GetSelectedRowIndexesAsync](h
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LtLqZwiJTpIlYRSK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LtLqZwiJTpIlYRSK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->

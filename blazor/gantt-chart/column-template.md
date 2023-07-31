@@ -75,4 +75,5 @@ N> The column template feature is used to render the customized element value in
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VDhUtGsJfilsjzda?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Blazor Gantt Chart with Column Template](images/blazor-gantt-chart-column-template.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VDhUtGsJfilsjzda?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->

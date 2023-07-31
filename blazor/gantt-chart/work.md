@@ -83,7 +83,7 @@ N> When the work field is mapped from the data source, the default task type wil
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VDhKjcsusnfFcfZK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VDhKjcsusnfFcfZK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Task type
 

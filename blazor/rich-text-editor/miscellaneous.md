@@ -39,7 +39,8 @@ The following sample demonstrates the placeholder option in Rich Text Editor.
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hDLqNcsUTtlIlpat?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Blazor RichTextEditor with Placeholder](./images/blazor-richtexteditor-placeholder.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/hDLqNcsUTtlIlpat?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Character count
 
@@ -68,7 +69,8 @@ The character count color will be modified based on the characters in the Rich T
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rtLUXmsUTsiOtrMA?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Displaying Character Count in Blazor RichTextEditor](./images/blazor-richtexteditor-char-count.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/rtLUXmsUTsiOtrMA?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Code view
 
@@ -89,7 +91,8 @@ Rich Text Editor includes the ability for users to directly edit HTML code via `
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rtrKjQCKzCfdmyBe?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Blazor RichTextEditor with Code View](./images/blazor-richtexteditor-code-view.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/rtrKjQCKzCfdmyBe?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Undo/Redo Manager
 
@@ -117,7 +120,8 @@ Customize the undo/redo step count using `UndoRedoSteps` property. By default, u
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VXLgDGCgpCRxqCQQ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Undo Redo Operation in Blazor RichTextEditor](./images/blazor-richtexteditor-undo-redo-operation.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VXLgDGCgpCRxqCQQ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Resizable support
 
@@ -137,7 +141,8 @@ To render the Rich Text Editor in the resizable mode, set the `EnableResize` pro
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LNLgjmWgTVhLGQLC?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Resizing in Blazor RichTextEditor](./images/blazor-richtexteditor-resizing.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LNLgjmWgTVhLGQLC?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ### Specifying the Minimum and Maximum width and height for Resize
 
@@ -186,4 +191,4 @@ This feature allows the user to change the appearance of the Numbered and Bullet
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rZLKtcWATrgWMLkn?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/rZLKtcWATrgWMLkn?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->

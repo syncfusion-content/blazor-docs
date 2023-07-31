@@ -113,7 +113,7 @@ The number of records displayed in the Gantt chart is determined implicitly by t
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hDLqNQsTrvgFpeGD?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/hDLqNQsTrvgFpeGD?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Column virtualization
 

@@ -71,7 +71,7 @@ To specify the [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BtLANQsFBHmenccQ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BtLANQsFBHmenccQ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Responsive with the parent container
 
@@ -132,7 +132,7 @@ Specify the [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gan
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rtBgNwibVnvfzFBS?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/rtBgNwibVnvfzFBS?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Auto scroll to taskbar
 
@@ -179,7 +179,8 @@ Taskbar that is not visible in the viewport can be auto scrolled to make it visi
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BtVANQiFBGXiyLKo?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Blazor Gantt Chart taskbar auto focus](images/scroll-to-taskbar-on-click.gif)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BtVANQiFBGXiyLKo?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Scroll the content by external button
 
@@ -310,6 +311,8 @@ RowIndex : <input @bind-value = "@RowIndex" />
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BNBqDwiFBGBVkoBA?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+![Blazor GanttChart with cloumn virtualization](./images/column-virtual-scroll.gif)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BNBqDwiFBGBVkoBA?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 * You can also programmatically scroll to the taskbar using  [ScrollToTaskbarAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_ScrollToTaskbarAsync_System_Int32_) method and scroll to the timeline using [ScrollToTimelineAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_ScrollToTimelineAsync_System_DateTime_).

@@ -61,7 +61,8 @@ It is possible to change the height of the row in Gantt Chart by setting row hei
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BjhqNQsaBGGDPqHn?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Changing Row Height in Blazor Gantt Chart](images/blazor-gantt-chart-row-height.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BjhqNQsaBGGDPqHn?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Expand or collapse row
 
@@ -117,7 +118,8 @@ All tasks available in Gantt Chart are rendered in collapsed state by setting th
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LZrgtwiarbjdKsDK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Blazor Gantt Chart with Collapsed Row](images/blazor-gantt-chart-with-collapse-row.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LZrgtwiarbjdKsDK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ### Define Expand/Collapse Status of Tasks
 
@@ -240,7 +242,7 @@ You can use [GanttEvents](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VthqtGskVldAZfVB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VthqtGskVldAZfVB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Drag and drop
 
@@ -308,7 +310,7 @@ You can dynamically rearrange the rows in the Gantt Chart component by using the
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VtBgjmiuBOgQjTMd?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VtBgjmiuBOgQjTMd?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ### Multiple row drag and drop
 
@@ -377,7 +379,7 @@ Gantt also supports dragging multiple rows at a time and dropping them on any ro
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BDBgZcWOrknhlxWj?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BDBgZcWOrknhlxWj?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ### Drag and drop events
 
@@ -554,7 +556,7 @@ The following code example shows how to drag and drop a row on button click acti
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LjhUXmWuKNUDGGVK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LjhUXmWuKNUDGGVK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Customize rows
 
@@ -625,7 +627,8 @@ You can use [GanttEvents](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LXBqDQMagDcXFrkZ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Customizing Rows in Blazor Gantt Chart](images/blazor-gantt-chart-row-customization.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LXBqDQMagDcXFrkZ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Styling alternate rows
 
@@ -686,6 +689,96 @@ You can use [GanttEvents](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hNBKjmsYUCxvmRCQ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Changing Row Style in Blazor Gantt Chart](images/blazor-gantt-chart-row-style.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/hNBKjmsYUCxvmRCQ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
+
+## Accessing row task model information programmatically
+
+The Blazor Gantt Chart Component provides a method called [GetRowTaskModel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_GetRowTaskModel__0_) that can be used to obtain the values associated with task model details. These details include the level, expanded status, task width, task left, task progress width and more. 
+
+This is demonstrated in the below sample code, where the [GetRowTaskModel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_GetRowTaskModel__0_) method is called on selecting the row, which returns the value of the task model details of the selected record. 
+
+```cshtml
+@using Syncfusion.Blazor.Gantt
+@using Syncfusion.Blazor.Grids;
+<div>
+    <div style="font-weight:bold;">Task Model Properties:</div>
+    <div style="display:flex;visibility:@Visible">
+        <div>
+            <span class="showhide">Level: @Level </span>
+            <span class="showhide">Expanded: @ExpandStatus </span>
+            <span class="showhide">HasChildRecord: @ChildRecords </span>
+            <span class="showhide">IsCritical: @IsCritical </span>
+            <span class="showhide">Slack: @Slack </span>
+            <span class="showhide">Progress width: @ProgressWidth </span>
+        </div>
+    </div>
+</div>
+    <SfGantt @ref=Gantt DataSource="@TaskCollection" Height="450px" Width="900px" TreeColumnIndex="1" EnableCriticalPath="true">
+        <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress"
+                         ParentID="ParentId">
+        </GanttTaskFields>
+        <GanttEvents TValue="TaskData" RowSelected="RowSelect"></GanttEvents>
+    </SfGantt>
+
+<style>
+    .showhide {
+        padding: 10px;
+    }
+</style>
+@code {
+    private SfGantt<TaskData> Gantt;
+    private List<TaskData> TaskCollection { get; set; }
+    private int Level{ get; set; } 
+    private bool ExpandStatus{ get; set; }
+    private bool ChildRecords{ get; set; }
+    private bool IsCritical{ get; set; }
+    private double? Slack { get; set; }
+    private double ProgressWidth { get; set; }
+    private string Visible { get; set; } = "hidden";
+    protected override void OnInitialized()
+    {
+        this.TaskCollection = GetTaskCollection();
+    }
+    public void RowSelect(RowSelectEventArgs<TaskData> args)
+    {
+        var ganttItem = Gantt.GetRowTaskModel(args.Data);
+        Level = ganttItem.Level;
+        ExpandStatus = ganttItem.IsExpanded;
+        ChildRecords = ganttItem.HasChildRecords;
+        IsCritical = ganttItem.IsCritical;
+        Slack = ganttItem.Slack;
+        ProgressWidth = ganttItem.ProgressWidth;
+        Visible = "visible";
+    }
+    public class TaskData
+    {
+        public int TaskId { get; set; }
+        public string TaskName { get; set; }
+        public DateTime StartDate { get; set; }
+        public DateTime EndDate { get; set; }
+        public string Duration { get; set; }
+        public int Progress { get; set; }
+        public int? ParentId { get; set; }
+    }
+
+    private static List<TaskData> GetTaskCollection()
+    {
+        List<TaskData> Tasks = new List<TaskData>()
+        {
+            new TaskData() { TaskId = 1, TaskName = "Project initiation", StartDate = new DateTime(2022, 01, 04), EndDate = new DateTime(2022, 01, 17), },
+            new TaskData() { TaskId = 2, TaskName = "Identify Site location", StartDate = new DateTime(2022, 01, 04), Duration = "0", Progress = 30, ParentId = 1, },
+            new TaskData() { TaskId = 3, TaskName = "Perform soil test", StartDate = new DateTime(2022, 01, 04), Duration = "4", Progress = 40, ParentId = 1, },
+            new TaskData() { TaskId = 4, TaskName = "Soil test approval", StartDate = new DateTime(2022, 01, 04), Duration = "0", Progress = 30, ParentId = 1, },
+            new TaskData() { TaskId = 5, TaskName = "Project estimation", StartDate = new DateTime(2022, 01, 04), EndDate = new DateTime(2022, 01, 17), },
+            new TaskData() { TaskId = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2022, 01, 14), Duration = "3", Progress = 30, ParentId = 5, },
+            new TaskData() { TaskId = 7, TaskName = "List materials", StartDate = new DateTime(2022, 01, 14), Duration = "3", Progress = 40, ParentId = 5, },
+            new TaskData() { TaskId = 8, TaskName = "Estimation approval", StartDate = new DateTime(2022, 01, 14), Duration = "0", Progress = 30, ParentId = 5, }
+        };
+        return Tasks;
+    }
+}
+```
+![Row Task Model Properties](images/blazor-gantt-chart-GetRowTaskModel.png)
 
 N> You can refer to our [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Gantt Chart example](https://blazor.syncfusion.com/demos/gantt-chart/default-functionalities?theme=bootstrap4) to know how to render and configure the Gantt.

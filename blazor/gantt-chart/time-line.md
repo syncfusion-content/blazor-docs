@@ -80,7 +80,8 @@ In the `Week` timeline mode, top tier of the schedule header displays the weeks,
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BXrqtQCPqzvQDhpi?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Blazor Gantt Chart with Week Mode](images/blazor-gantt-chart-week-mode.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BXrqtQCPqzvQDhpi?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ### Month timeline mode
 
@@ -130,7 +131,8 @@ In the `Month` timeline mode, top tier of the schedule header displays the month
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BXBUXGMvUyWKJRcz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Blazor Gantt Chart with Month Timeline Mode](images/blazor-gantt-chart-month-mode.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BXBUXGMvUyWKJRcz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ### Year timeline mode
 
@@ -181,7 +183,8 @@ In the `Year` timeline mode, top tier of the schedule header displays the years,
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rNBKZGMlAeGGCIWF?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Blazor Gantt Chart with Year Timeline Mode](images/blazor-gantt-chart-year-mode.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/rNBKZGMlAeGGCIWF?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ### Day timeline mode
 
@@ -232,7 +235,8 @@ In the `Day` timeline mode, top tier of the schedule header displays the days, w
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hNBUZGsbqdtsqNDL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Blazor Gantt Chart with Day Timeline Mode](images/blazor-gantt-chart-day-mode.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/hNBUZGsbqdtsqNDL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ### Hour timeline mode
 
@@ -282,7 +286,8 @@ An `Hour` timeline mode tracks the tasks in minutes scale. In this mode, the top
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hDLKZcilUwoFjkMH?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Blazor Gantt Chart with Hour Timeline Mode](images/blazor-gantt-chart-hour-mode.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/hDLKZcilUwoFjkMH?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Week start day customization
 
@@ -333,7 +338,8 @@ In the Gantt Chart component, you can customize the week start day using the `Ga
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LtrgZGMbAwlbMLPW?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Customizing Week Start Day in Blazor Gantt Chart](images/blazor-gantt-chart-week-start-day.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LtrgZGMbAwlbMLPW?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Customize automatic timescale update action
 
@@ -385,7 +391,7 @@ In the Gantt Chart component, the schedule timeline will be automatically update
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BZLANcMbAbCKYjUl?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BZLANcMbAbCKYjUl?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 <!-- ```cshtml
 @using Syncfusion.Blazor.Gantt

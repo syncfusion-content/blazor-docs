@@ -87,7 +87,7 @@ N> There is not support for Indent/Oudent in resource view Gantt Chart.
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LjhgjQMvzyAZTxLH?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LjhgjQMvzyAZTxLH?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Resource OverAllocation
 
@@ -165,7 +165,7 @@ To highlight the range of overallocation dates with a square bracket, you can en
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rXVqNQsPpofLwCPA?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/rXVqNQsPpofLwCPA?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Limitations
 

@@ -41,7 +41,7 @@ To configure `Video` toolbar item, refer to the below code.
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LXrUNmsBKulodZcQ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LXrUNmsBKulodZcQ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Insert video from web
 
@@ -73,7 +73,7 @@ In the following example, the video size has been validated before uploading and
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hZVUDciVTXOiBkRX?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/hZVUDciVTXOiBkRX?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ### Server-side action
 
@@ -219,7 +219,7 @@ N> The default `layoutOption` property is set to `Inline`.
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LDLKZwCVpMMxYTVP?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LDLKZwCVpMMxYTVP?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Resize video
 

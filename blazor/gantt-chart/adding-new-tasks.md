@@ -59,7 +59,8 @@ A row can be added to the Gantt Chart component from the toolbar while the `Gant
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BZLqXGCGTyJooioa?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Adding New Task in Blazor Gantt Chart](images/blazor-gantt-chart-add-new-row.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BZLqXGCGTyJooioa?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 N> By default, a new row will be added to the top most row in the Gantt Chart component.
 
@@ -110,7 +111,7 @@ A row can also be added above, below or child of the selected row by using conte
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BZLAtQWGzyoVKJSG?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BZLAtQWGzyoVKJSG?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Using method
 
@@ -173,4 +174,5 @@ You can add rows to the Gantt Chart component dynamically using the [AddRecordAs
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VtVqNwiGpIHNVRrj?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Adding New Record in Blazor Gantt Chart](images/blazor-gantt-chart-add-new-record.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VtVqNwiGpIHNVRrj?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->

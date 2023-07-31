@@ -51,8 +51,8 @@ You can filter the records with different operators.
 ```
 
 The following screenshot represents Menu filter
-
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LZhqXxrsTtHTirKm?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Blazor DataGrid with Menu Filter](./images/blazor-datagrid-menu-filter.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LZhqXxrsTtHTirKm?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 N> * [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowFiltering) must be set as true to enable filter menu.
 <br/> * Setting [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_AllowFiltering) property of **GridColumn** as false will prevent
@@ -109,8 +109,8 @@ In the following sample, the [FilterTemplate](https://help.syncfusion.com/cr/bla
 ```
 
 The following screenshot shows filter menu using custom component
-
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hDhUZnrsfXPsPCTk?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Blazor DataGrid with Custom Filter Menu](./images/blazor-datagrid-custom-filter-menu.PNG)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/hDhUZnrsfXPsPCTk?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Override default filter operators for menu filtering
 
@@ -177,7 +177,7 @@ The default filter operators for a GridColumn can be overridden by using the [On
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VDLgtnBifNkaxLCh?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VDLgtnBifNkaxLCh?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Enable different filter for a column
 
@@ -223,8 +223,8 @@ In the following sample, menu filter is enabled by default and checkbox filter i
 ```
 
 The following screenshot represents CheckBox filter
-
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BXLgjRrszWWmralf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Blazor DataGrid with CheckBox Filter](./images/blazor-datagrid-checkbox-filter.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BXLgjRrszWWmralf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ### Limitations of using different filter types in different columns
 
@@ -332,7 +332,7 @@ In the following sample, the `SfDateRangePicker` component is rendered in the fi
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/htLgtRBWpizXauju?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/htLgtRBWpizXauju?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 N> [View Sample in GitHub.](https://github.com/SyncfusionExamples/blazor-datagrid-filtering-using-date-range-picker)
 
@@ -431,6 +431,6 @@ In the following sample, the MultiSelect component is rendered in the filter men
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VjVAXnVspieTkSVy?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VjVAXnVspieTkSVy?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 N> [View Sample in GitHub.](https://github.com/SyncfusionExamples/blazor-datagrid-filter-by-multiple-keywords-using-filter-menu)

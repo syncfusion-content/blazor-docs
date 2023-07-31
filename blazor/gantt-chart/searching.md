@@ -56,7 +56,8 @@ You can search for records in the Gantt Chart component by using the [SearchAsyn
 
 The following screenshot shows the output of searching for string in Gantt Chart component.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hXrANwCmzTiFOpGH?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Searching in Blazor Gantt Chart](images/blazor-gantt-chart-searching.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/hXrANwCmzTiFOpGH?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Initial search
 
@@ -108,7 +109,8 @@ In the Gantt Chart component, you can load a task with some search criteria by u
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BNLUjwiczzopuAmy?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Blazor Gantt Chart with Initial Search](images/blazor-gantt-chart-initial-search.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BNLUjwiczzopuAmy?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Search operators
 
@@ -179,7 +181,8 @@ To search the Gantt Chart records from an external button, invoke the `SearchAsy
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hjhKDQWcTzHpQrvR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Searching in Blazor Gantt Chart](images/blazor-gantt-chart-search.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/hjhKDQWcTzHpQrvR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 N> You should set the `AllowFiltering` property to `true` for searching the content externally.
 
@@ -230,6 +233,8 @@ By default, the Gantt Chart component searches all the columns. You can search s
     }
 }
 ```
+
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VXhKjmicpzmLzyfA?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 N> In above sample, you can search only `TaskName` and `Duration` column values.
 
@@ -291,4 +296,4 @@ You can pass the `empty` string to the `SearchAsync` method to clear the searche
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hNBUXcWGJzcvHhjY?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/hNBUXcWGJzcvHhjY?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->

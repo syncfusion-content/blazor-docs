@@ -72,7 +72,7 @@ Items| Description
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LtBqZGMbKsgGeXvU?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LtBqZGMbKsgGeXvU?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Custom context menu items
 
@@ -135,7 +135,8 @@ The following sample code demonstrates defining a custom context menu item and i
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LXhKjmilghCdyZFF?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Custom context menu items in Blazor Gantt Chart](./images/gantt-custom-context-menu-items.gif)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LXhKjmilghCdyZFF?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Built-in and custom context menu items
 
@@ -196,7 +197,7 @@ The following sample code demonstrates defining built-in and custom context menu
     }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VXVgDQWFKBxdPZDh?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VXVgDQWFKBxdPZDh?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Sub context menu items
 
@@ -337,7 +338,7 @@ The following sample code demonstrates how to disable the context for specific c
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LZhqXQWvUgDtbTsG?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LZhqXQWvUgDtbTsG?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Disable context menu items dynamically 
 

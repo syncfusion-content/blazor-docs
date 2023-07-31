@@ -295,7 +295,8 @@ N> The type of component editor must be configured in the 'Type' Editor In-place
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to run the application. Then, the Syncfusion `Blazor In-place Editor` component will be rendered in the default web browser.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LZLADRiILFbhTkoR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Blazor In-place Editor Component](images/blazor-inplace-editor-component.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LZLADRiILFbhTkoR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/InPlaceEditor).
 
@@ -349,7 +350,10 @@ The following code explains how to initialize a simple In-place Editor with popu
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BNLKjRiSrvEtXrNE?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Blazor In-place Editor in Inline Mode](./images/blazor-inplace-editor-in-inline-mode.png)
+
+![Blazor In-place Editor in Popup Mode](./images/blazor-inplace-editor-in-popup-mode.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BNLKjRiSrvEtXrNE?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Configuring DropDownList
 
@@ -507,7 +511,8 @@ In the following code, it is configured to render the `DatePicker`, `DropDownLis
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LDVqjnCehYiIVxsI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Integrating DatePicker in Blazor In-place Editor](./images/blazor-inplace-editor-integrate-datepicker.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LDVqjnCehYiIVxsI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Submitting data to the server (save)
 
