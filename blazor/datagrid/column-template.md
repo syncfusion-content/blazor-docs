@@ -9,7 +9,7 @@ documentation: ug
 
 # Column Template in Blazor DataGrid
 
-N> Before adding column template to the DataGrid, it is recommended to go through the [template](./templates/#templates) section topic to configure the template.
+> Before adding column template to the DataGrid, it is recommended to go through the [template](./templates/#templates) section topic to configure the template.
 
 To know about **Column Template** in Blazor DataGrid Component, you can check this video.
 
@@ -18,7 +18,13 @@ To know about **Column Template** in Blazor DataGrid Component, you can check th
 
 The Column template has options to display custom element value or content in the column. You can use the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Template)  of the [GridColumn](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Grids.GridColumn.html) component to specify the custom content. Inside the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Template), you can access the data using the implicit named parameter **context**.
 
-N> The column template feature is used to render the customized element value in the UI for a particular column. The data operations like filtering, sorting, etc., will not work based on the column template values. It will be handled based on the values you have provided to the particular column in the datasource.
+> The column template feature is used to render the customized element value in the UI for a particular column. The data operations like filtering, sorting, etc., will not work based on the column template values. It will be handled based on the values you have provided to the particular column in the datasource.
+
+## Render image in a column
+
+To render an image in a grid column, you need to define a [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Template)  of the [GridColumn](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Grids.GridColumn.html) component.Template expects an HTML string or a function that returns an HTML string.Inside the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Template) , you can access the data using the implicit named parameter **context**.
+
+The following example demonstrates how to define a Template for the Employee Image field that displays an image element. Inside the Template, it is set to an HTML string that contains an image tag. You have utilized the src and alt attributes to the image tag.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -81,11 +87,16 @@ N> The column template feature is used to render the customized element value in
 The following screenshot represents the column Template.
 ![Blazor DataGrid with Column template](./images/blazor-datagrid-column-template.png)
 
+> The [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Template) option allows to define any HTML content within a column.
+
+
 ## Render other components in a column
 
-It is possible to render the other components in a column using the column template feature of the Grid.
+The column template has options to render a custom component in a DataGrid column instead of a field value.
 
-In the following sample, the `SfDropDownList` component is rendered in the First Name column using the column template.
+### Render DropDownList component in a column
+
+To render a custom component in a grid column, you need to define a [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Template) for the column using the column `Template` property. In the following code, we rendered the [DropDownList](https://ej2.syncfusion.com/angular/documentation/drop-down-list/getting-started) component in the **First Name** column by defining the `Template` property.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -146,11 +157,12 @@ In the following sample, the `SfDropDownList` component is rendered in the First
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BNLgtxrXfrmsowDf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-## Using conditions inside template
+## Using condition template
 
-Template elements can be rendered based on required conditions inside the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Template) of the [GridColumn](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Grids.GridColumn.html) component.
+The conditional column [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Template) allows you to display template elements based on specific conditions.
 
-In the following code, checkbox is rendered based on Discontinued field value in the datasource. This data can be accessed inside the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Template) using the implicit named parameter **context**.
+
+In the following code, checkbox is rendered based on **Discontinued** field value in the datasource. This data can be accessed inside the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Template) using the implicit named parameter **context**.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -215,68 +227,106 @@ The following screenshot represents the Conditional Template.
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rjhqDxVXfrbAkjio?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-## Using image inside template
+## How to get the row object by clicking on the template element
 
-This can be achieved using the Column template property as it has options to display custom elements like, image content in the column. You can use the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Template) of the [GridColumn](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Grids.GridColumn.html) component to specify the custom image content. Inside the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Template) , you can access the data using the implicit named parameter **context**.
+The DataGrid component allows you to retrieve the row 
+data can be accessed inside [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Template) using the implicit named parameter context.This feature can be useful when you need to perform custom actions based on the selected record.
+
+In the following code, the button element is rendered in the **Employee Data** column and `click` event binding is used to call the showDetails method when the template element is clicked. The showDetails method is passed the data object as an argument, which allows you to access the selected row object and display it in the dialog popup.
 
 ```cshtml
-@using Syncfusion.Blazor.Grids
+@page "/"
 
-<SfGrid  DataSource="@Employees">
+@using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor.Popups
+@using Syncfusion.Blazor.Buttons
+
+<SfGrid @ref="Grid" TValue="EmployeeData" DataSource="@Employees">
     <GridColumns>
-        <GridColumn HeaderText="Employee Image" TextAlign="TextAlign.Center" Width="120">
+        <GridColumn HeaderText="Employee Status" TextAlign="TextAlign.Center" Width="120">
             <Template>
                 @{
-                    var employee = (context as EmployeeData);
-                    <div class="image">
-                        <img src="@($"scripts/Images/Employees/{employee.EmployeeID}.png")" alt="@employee.EmployeeID" />
+                    var data = (context as EmployeeData);
+                    <div>
+                        <SfButton OnClick="showDetails">View</SfButton>
                     </div>
+                    
                 }
             </Template>
         </GridColumn>
-        <GridColumn Field=@nameof(EmployeeData.EmployeeID) TextAlign="TextAlign.Right" HeaderText="Employee ID" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(EmployeeData.FirstName) HeaderText="First Name" Width="130"></GridColumn>
-        <GridColumn Field=@nameof(EmployeeData.Title) HeaderText="Title" Format="C2" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(EmployeeData.HireDate) HeaderText="Hire Date" Format="d" TextAlign="TextAlign.Right" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(EmployeeData.EmployeeID) TextAlign="TextAlign.Center" HeaderText="Employee ID" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(EmployeeData.FirstName) HeaderText="Name" Width="130"></GridColumn>
     </GridColumns>
 </SfGrid>
 
-<style>
-    .image img {
-        height: 55px;
-        width: 55px;
-        border-radius: 50px;
-        box-shadow: inset 0 0 1px #e0e0e0, inset 0 0 14px rgba(0, 0, 0, 0.2);
-    }
-</style>
+<SfDialog Width="500px" @ref="Dialog"  IsModal="false" Visible=false>
 
-@code{
+    <DialogTemplates>
+        <Content>
+            @if(SelectedRecords != null && SelectedRecords.Count != 0)
+            {
+                <p><b>EmployeeID:@SelectedRecords[0].EmployeeID</b> </p>
+                <p><b>FirstName:@SelectedRecords[0].FirstName</b> </p>
+                <p><b>LastName:@SelectedRecords[0].LastName</b> </p>
+            }
+        </Content>
+
+    </DialogTemplates>
+    <DialogButtons>
+        <DialogButton Content="CloseDilog" OnClick="@CloseDilog" />
+    </DialogButtons>
+
+</SfDialog>
+
+
+
+@code {
     public List<EmployeeData> Employees { get; set; }
+
+    SfDialog? Dialog;
+
+    SfGrid<EmployeeData>? Grid { get; set; }
+
+    public List<EmployeeData> SelectedRecords { get; set; } = new List<EmployeeData>();
 
     protected override void OnInitialized()
     {
-        Employees = Enumerable.Range(1, 5).Select(x => new EmployeeData()
+        Employees = Enumerable.Range(1, 9).Select(x => new EmployeeData()
+            {
+                EmployeeID = x,
+                FirstName = (new string[] { "Nancy", "Andrew", "Janet", "Margaret", "Steven" })[new Random().Next(5)],
+                LastName = (new string[] { "Davolio", "Fuller", "Leverling", "Peacock", "Buchanan" })[new Random().Next(5)],
+            }).ToList();
+    }
+    private void CloseDilog()
+    {
+
+        Dialog.Hide();
+
+    }
+
+    public void  showDetails()
+    {
+
+        SelectedRecords = Grid.SelectedRecords;
+        if(SelectedRecords != null)
         {
-            EmployeeID = x,
-            FirstName = (new string[] { "Nancy", "Andrew", "Janet", "Margaret", "Steven" })[new Random().Next(5)],
-            Title = (new string[] { "Sales Representative", "Vice President, Sales", "Sales Manager",
-                                    "Inside Sales Coordinator" })[new Random().Next(4)],
-            HireDate = DateTime.Now.AddDays(-x),
-        }).ToList();
+            Dialog.Show();
+        }
+     
+        
+
     }
 
     public class EmployeeData
     {
         public int? EmployeeID { get; set; }
         public string FirstName { get; set; }
-        public string Title { get; set; }
-        public DateTime? HireDate { get; set; }
+        public string LastName { get; set; }
+    
     }
 }
 ```
-
-The following screenshot represents the Image Template.
-![Blazor DataGrid with Image Template](./images/blazor-datagrid-image-template.png)
 
 ## Using hyperlink column and performing routing on click
 
