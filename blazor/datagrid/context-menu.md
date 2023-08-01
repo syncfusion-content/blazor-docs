@@ -103,7 +103,7 @@ The following GIF represents the DataGrid enabled with default context menu item
 
 ## Custom context menu items
 
-The custom context menu items can be added by defining the [ContextMenuItems](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Grids.ContextMenuItemModel.html) as a collection of [ContextMenuItemModel](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Grids.ContextMenuItemModel.html). Actions for these customized items can be defined in the [ContextMenuItemClicked](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ContextMenuClickEventArgs-1.html) event.
+The custom context menu items can be added by defining the [ContextMenuItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ContextMenuItemModel.html) as a collection of [ContextMenuItemModel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ContextMenuItemModel.html). Actions for these customized items can be defined in the [ContextMenuItemClicked](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ContextMenuClickEventArgs-1.html) event.
 
 The following sample code demonstrates defining custom context menu item and its corresponding action in the [ContextMenuItemClicked](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ContextMenuClickEventArgs-1.html) event,
 
@@ -400,4 +400,4 @@ The following sample code demonstrates how to enable or disable context menu ite
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hZrUDRhmikRCSLtH?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-N> You can refer to [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour page for its groundbreaking feature representations. You can also explore [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap4) to understand how to present and manipulate data.
+N> You can refer to [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour page for its groundbreaking feature representations. You can also explore [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap5) to understand how to present and manipulate data.

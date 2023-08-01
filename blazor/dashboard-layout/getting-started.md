@@ -24,7 +24,7 @@ To get started quickly with Blazor Dashboard Layout component, you can check the
 
 You can create **Blazor Server App** or **Blazor WebAssembly App** using Visual Studio in one of the following ways,
 
-* [Create a Project using Microsoft Templates](https://docs.microsoft.com/en-us/aspnet/core/blazor/tooling?pivots=windows)
+* [Create a Project using Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0&pivots=windows)
 
 * [Create a Project using Syncfusion Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio)
 
@@ -283,7 +283,8 @@ N> There is no need to assign default value for panels. Refer to the [Panels](./
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to run the application. Then, the Syncfusion `Blazor Dashboard Layout` component will be rendered in the default web browser.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LDrKNnWeToosqFyA?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Blazor DashboardLayout Component](images/blazor-dashboard-layout-component.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LDrKNnWeToosqFyA?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Defining panels
 
@@ -324,8 +325,8 @@ A dashboard layout panel is rendered with simple data. The header of a panel is 
 {% endtabs %}
 
 The Dashboard layout with simple content will be rendered in the web browser as demonstrated in the following screenshot.
-
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rXBUDdCoJoyPwUgz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Blazor DashboardLayout with Single Data](images/blazor-dashboard-layout-single-content.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/rXBUDdCoJoyPwUgz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ### Panels with components
 
@@ -500,7 +501,7 @@ To get started quickly with designing a Blazor Dashboard Layout with UI Componen
 {% youtube
 "youtube:https://www.youtube.com/watch?v=KOetW4f6_v4" %}
 
-By default, the dashboard layout control is rendered with auto adjustable and [responsive](https://blazor.syncfusion.com/documentation/dashboard-layout/responsive-adaptive/) according to the parent dimensions.
+By default, the dashboard layout control is rendered with auto adjustable and [responsive](https://blazor.syncfusion.com/documentation/dashboard-layout/responsive-adaptive) according to the parent dimensions.
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/DashboardLayout).
 
