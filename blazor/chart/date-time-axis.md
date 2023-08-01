@@ -379,6 +379,47 @@ The table below shows the results of applying various popular date and time form
 </tr>
 </table>
 
+## Custom label format
+
+Axis also supports custom label format using placeholders such as {value}K, where the value represents the axis label, for example, 200K.
+
+```cshtml
+
+@using Syncfusion.Blazor.Charts
+
+<SfChart>
+    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.DateTime" />
+
+    <ChartPrimaryYAxis LabelFormat="${value}K"/>
+
+    <ChartSeriesCollection>
+        <ChartSeries DataSource="@Sales" XName="XValue" YName="YValue" />
+    </ChartSeriesCollection>
+</SfChart>
+
+@code {
+    public class ChartData
+    {
+        public DateTime XValue { get; set; }
+        public double YValue { get; set; }
+    }
+
+    public List<ChartData> Sales = new List<ChartData>
+    {
+        new ChartData { XValue = new DateTime(2005, 01, 01), YValue = 20 },
+        new ChartData { XValue = new DateTime(2006, 01, 01), YValue = 10 },
+        new ChartData { XValue = new DateTime(2007, 01, 01), YValue = 30 },
+        new ChartData { XValue = new DateTime(2008, 01, 01), YValue = 40 },
+        new ChartData { XValue = new DateTime(2009, 01, 01), YValue = 35 },
+        new ChartData { XValue = new DateTime(2010, 01, 01), YValue = 15 },
+        new ChartData { XValue = new DateTime(2011, 01, 01), YValue = 45 },
+    };
+}
+
+```
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hjBANRVvUPwMucgI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 <!-- markdownlint-disable MD033 -->
 
 N> Refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
