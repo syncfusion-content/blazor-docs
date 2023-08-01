@@ -11,6 +11,8 @@ documentation: ug
 
 # Change the update type from PATCH to PUT
 
+In ODataV4, the PATCH method is the preferred means of updating data, and it is used for partial updates of data. So, to update the entire data collection we can use PUT method.
+
 By using [SfDataManager](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Data.SfDataManager.html) instance, we can change the default UpdateType request from "PATCH" to "PUT.
 
 Here, in the below sample the update type is changed to PUT inside OnAfterRender method. So, the default **PATCH** request will be changed to **PUT**.
