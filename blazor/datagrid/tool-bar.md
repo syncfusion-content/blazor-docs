@@ -214,6 +214,100 @@ The following screenshots represent a datagrid with Built-in and custom items in
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LtVANnBdBcdqHNyk?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
+### Built-in and Custom components in Grid Toolbar
+
+Custom components can be rendered along with built-in toolbar items of DataGrid component. This can be achieved by defining the custom toolbar item as Template Render Fragment.
+
+Following code example demonstrate how to use built-in toolbar items like Add, Edit, Delete, Update, and Cancel, along with a custom toolbar item with a custom search textbox as a template (render fragment).
+
+Index.Razor 
+```cshtml
+@using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor.Inputs
+
+<SfGrid @ref="Grid" TValue="Order" DataSource="@Orders" AllowPaging="true" AllowExcelExport="true" AllowPdfExport="true" ShowColumnChooser="true" Toolbar="Toolbaritems">
+    <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true" Mode="EditMode.Normal"></GridEditSettings>
+    <GridColumns>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" IsPrimaryKey="true" ValidationRules="new ValidationRules() { Required = true }" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" ValidationRules="new ValidationRules() { Required = true }" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" EditType="EditType.NumericEdit" ValidationRules="new ValidationRules() { Required = true }" Width="120"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code {
+
+    public List<Order> Orders { get; set; }
+    SfGrid<Order>? Grid { get; set; }
+
+    private List<Object> Toolbaritems = new List<Object>() { "Add", "Edit", "Delete", "Update", "Cancel" };
+    protected override void OnInitialized()
+    {
+        Orders = Enumerable.Range(1, 75).Select(x => new Order()
+            {
+                OrderID = 1000 + x,
+                CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
+                Freight = 2.1 * x,
+                OrderDate = DateTime.Now.AddDays(-x),
+            }).ToList();
+        Toolbaritems.Add(new Syncfusion.Blazor.Navigations.ItemModel() { Type = Syncfusion.Blazor.Navigations.ItemType.Input, Template = title, Id = "CustomSearch" });
+    }
+
+    public class Order
+    {
+        public int? OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public DateTime? OrderDate { get; set; }
+        public double? Freight { get; set; }
+    }
+
+    public async Task OnInput (InputEventArgs eventArgs)
+    {
+        if (Grid != null)
+        {
+
+            if(eventArgs.Value != null)
+            {
+                await Grid.SearchAsync(eventArgs.Value.ToString());
+
+            }
+        }
+    }
+
+    public RenderFragment title
+    {
+        get
+        {
+            return@<SearchTextbox inputTextbox="OnInput"></SearchTextbox>;
+        }
+    }
+
+}
+
+
+```
+
+SearchTextbox.razor
+
+```cshtml
+
+@using Syncfusion.Blazor.Inputs
+
+<SfTextBox Placeholder="Custom Search" Input="inputTextbox"></SfTextBox>
+
+@code{
+
+
+    [Parameter]
+    public EventCallback<InputEventArgs> inputTextbox { get; set; }
+
+}
+
+```
+
+The following screenshots represent a datagrid with built-in and custom toolbar items using the template element,
+![Built-in and Custom components in Grid Toolbar](./images/blazor-datagrid-built-in-and-custom-components-in-grid-toolbar.png.png)
+
 ## Custom Toolbar
 
 Custom toolbar items can be added by defining the [Toolbar Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Toolbar). Custom toolbar can be placed inside datagrid using [ToolbarTemplate`] as below.
