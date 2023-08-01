@@ -13,7 +13,7 @@ documentation: ug
 
 ![Issue of two default validation messages shown in Grid default dialog editor](../images/blazor-grid-issue-of-two-default-validation-messages.png)
 
-By default, the DataGrid uses two validator components. This issue occurs because the DataGrid uses both data annotation enabled and the ValidationMessage property defined in DataGrid component, which can lead to the issue mentioned above. To resolve this issue, disable the built-in validator and achieve column validation solely using Data Annotations or wise versa.
+By default, the DataGrid uses two validator components. This issue occurs because the DataGrid uses both data annotation enabled and the ValidationMessage property defined in DataGrid component's Template. To resolve this issue, disable the built-in validator and achieve column validation solely using Data Annotations or wise versa.
 
 > For more detailed information about this topic [here](https://blazor.syncfusion.com/documentation/datagrid/column-validation#disable-in-built-validator-component).
 
