@@ -475,6 +475,70 @@ The following screenshots represent a datagrid with Enable/disable toolbar items
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BNBqjxLHrmYtbSdp?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
+### Enable/Disable Default Toolbar Items Based on Selected Row Data:
+
+The DataGrid provides the ability to disable and enable the default toolbar items (Add, Edit, and Delete) based on the selected row data. This can be achieved by using the **RowSelecting** event and the [EnableToolbarItemsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableToolbarItemsAsync_System_Collections_Generic_List_System_String__System_Boolean_) public method of the Grid instance.
+
+The following code example demonstrates how to disable and enable the default toolbar items based on the selected row data:
+
+```cshtml
+
+@using Syncfusion.Blazor.Grids
+
+<SfGrid ID="Grid" @ref="Grid" DataSource="@Orders" AllowPaging="true" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Cancel", "Update" })" Width="700" Height="315">
+    <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true" AllowEditOnDblClick="false" Mode="EditMode.Normal"></GridEditSettings>
+    <GridEvents RowSelecting="RowSelectingHandler" TValue="Order"></GridEvents>
+    <GridColumns>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" IsPrimaryKey="true" ValidationRules="@(new ValidationRules{ Required=true})" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" ValidationRules="@(new ValidationRules{ Required=true})" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" EditType="EditType.DatePickerEdit" Format="d" TextAlign="TextAlign.Right" Width="130" Type="ColumnType.Date"></GridColumn>
+        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" EditType="EditType.NumericEdit" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.ShipCountry) HeaderText="Ship Country" EditType="EditType.DropDownEdit" Width="150"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code {
+    SfGrid<Order> Grid;
+    public List<Order> Orders { get; set; }
+
+    public async Task RowSelectingHandler(RowSelectingEventArgs<Order> args)
+    {
+        if (args.Data.OrderID == 1002 || args.Data.OrderID == 1003 || args.Data.OrderID == 1004)
+        {
+            await this.Grid.EnableToolbarItemsAsync(new List<string>() { "Grid_Add", "Grid_Edit", "Grid_Delete" }, false);
+        }
+        else
+        {
+            await this.Grid.EnableToolbarItemsAsync(new List<string>() { "Grid_Add", "Grid_Edit", "Grid_Delete" }, true);
+        }
+    }
+
+    protected override void OnInitialized()
+    {
+        Orders = Enumerable.Range(1, 75).Select(x => new Order()
+            {
+                OrderID = 1000 + x,
+                CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
+                Freight = 2.1 * x,
+                OrderDate = DateTime.Now.AddDays(-x),
+                ShipCountry = (new string[] { "USA", "UK", "CHINA", "RUSSIA", "INDIA" })[new Random().Next(5)]
+            }).ToList();
+    }
+
+    public class Order
+    {
+        public int? OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public DateTime? OrderDate { get; set; }
+        public double? Freight { get; set; }
+        public string ShipCountry { get; set; }
+    }
+}
+
+```
+The following screenshots represent a datagrid with Enable/disable toolbar items,
+![ Enabling or Disabling Default Toolbar Items Based on Selected Row Data](./images/blazor-grid-enable-disable-default-toolbar-items-based-on-selected-row-data.gif)
+
 ## Customize Toolbar text
 
 You can able to customize the toolbar text by using the [ItemModel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.ItemModel.html#Syncfusion_Blazor_Navigations_ItemModel__ctor) properties.
