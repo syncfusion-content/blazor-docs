@@ -16,7 +16,6 @@ After checking the [IsHeaderCheckboxClicked](https://help.syncfusion.com/cr/blaz
 ```cshtml
 
 @using Syncfusion.Blazor.Grids
-@using Syncfusion.Blazor.Buttons
 
 <SfGrid DataSource="@Orders" @ref="Grid" TValue="Order" AllowSelection="true" AllowPaging="true">
      <GridPageSettings PageSize="100"></GridPageSettings>
