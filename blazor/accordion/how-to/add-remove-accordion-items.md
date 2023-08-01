@@ -88,3 +88,4 @@ In the following demo, initially there are three accordion items in the [Accordi
 
 
 ![Adding or Removing items in Blazor Accordion](../images/blazor-accordion-add-remove-item.gif)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/hNVKXQLmVkuyhypx?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->

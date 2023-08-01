@@ -49,3 +49,4 @@ In this sample, first check the option and click the submit button to post the s
 
 
 ![Model Binding in Blazor CheckBox](./../images/blazor-checkbox-model-binding.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VDVgNvNMqNQRqsHa?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->

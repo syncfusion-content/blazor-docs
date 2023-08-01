@@ -21,6 +21,7 @@ documentation: ug
 ```
 
 ![Data Matrix Generator in Blazor Barcode](images/blazor-barcode-with-datamatrix.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VjrAtmBlqhVsfMrN?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Customizing the Barcode color
 
@@ -34,6 +35,7 @@ A page or printed media with barcode often appears colorful in the background an
 ```
 
 ![Customizing Blazor Barcode Color in Data Matrix Generator](images/blazor-barcode-datamatrix-color-customization.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LjVqDQLlqrUKMyHj?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Customizing the Barcode dimension
 
@@ -60,6 +62,7 @@ In barcode generators, you can customize the barcode text by using the display [
 ```
 
 ![Customizing Blazor Barcode Text in Data Matrix Generator](images/blazor-barcode-text-in-datamatrix.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BXrqZGhlUVJArSRG?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Event
 
