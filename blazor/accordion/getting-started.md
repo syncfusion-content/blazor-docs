@@ -300,7 +300,7 @@ The following code explains how to initialize accordion using `Template`.
 ![Blazor Accordion with Header Template](./images/blazor-accordion-header-template.png)
 <!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VDhAjnWLTUCSIPex?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
-## See Also
+## See also
 
 1. [Getting Started with Syncfusion Blazor for client-side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-dotnet-cli)
 2. [Getting Started with Syncfusion Blazor for client-side in Visual Studio](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-visual-studio)

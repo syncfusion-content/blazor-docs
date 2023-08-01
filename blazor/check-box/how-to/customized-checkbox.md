@@ -79,6 +79,7 @@ The background and border color of the Checkbox is customized through the custom
 
 
 ![Customizing Appearance of Blazor CheckBox](./../images/blazor-checkbox-appearance-customization.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/rZBgtvjsAZXShpVe?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Customize width and height
 
@@ -122,6 +123,7 @@ The following section explains about how to customize the height and width of th
 
 
 ![Customizing Height and Width of Blazor CheckBox](./../images/blazor-checkbox-height-width-customization.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/htrgtPXiKNWnYcri?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Custom frame
 
@@ -181,6 +183,7 @@ In the following example, to-do list is displayed with round checkbox by changin
 
 
 ![Customizing Blazor CheckBox Frame](./../images/blazor-checkbox-frame-customization.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/rZVUZFXWUNqLGQWV?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Custom check icon
 

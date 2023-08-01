@@ -35,6 +35,7 @@ Input Chip holds information in compact form. It converts user input into chips.
 
 
 ![Blazor Chip with Input Items](./images/blazor-chip-input-items.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VthqjbjMqByicDIg?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Choice Chip
 
@@ -55,6 +56,7 @@ Choice Chip allows you to select a single chip from the set of Chip/ChipItems. I
 
 
 ![Single Selection in Blazor Chip](./images/blazor-chip-single-selection.gif)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/hNLAZPXsqVQCAyws?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Filter Chip
 
@@ -76,6 +78,7 @@ Filter Chip allows you to select a multiple chip from the set of Chip/ChipItems.
 
 
 ![Multiple Selection in Blazor Chip](./images/blazor-chip-multiple-selection.gif)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LZLqNFNCUUDtpcin?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Action Chip
 
@@ -109,6 +112,7 @@ The Action Chip triggers the event like click or delete, which helps to do actio
 
 
 ![Blazor Action Chip](./images/blazor-action-chip.gif)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/rZLKDPNiUKDvUitd?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ### Deletable Chip
 
@@ -127,4 +131,4 @@ Deletable Chip allows you to delete a chip from Chip/ChipItems. It can be enable
 
 ```
 
-
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LtBqZlZWqUWQViQg?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->

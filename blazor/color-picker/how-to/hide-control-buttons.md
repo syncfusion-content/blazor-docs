@@ -19,3 +19,4 @@ Color Picker can be rendered without control buttons (Apply/Cancel). In this cas
 ```
 
 ![Hide Control Buttons in Blazor ColorPicker](./../images/blazor-colorpicker-hide-control.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/rZVqZPXCpKrtHgKM?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->

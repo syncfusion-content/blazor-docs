@@ -32,6 +32,7 @@ You can modify the default value in `.res` file added to Resource folder. Enter 
 
 
 ![Localization in Blazor ColorPicker](./images/blazor-colorpicker-localization.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LDhqNbXWTWebTRHc?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## RTL
 
@@ -49,3 +50,4 @@ In the following example, Color Picker component is rendered in RTL mode with `a
 
 
 ![Right to Left in Blazor ColorPicker](./images/blazor-colorpicker-right-to-left.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/rXBAXPNWTsnIpUnr?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
