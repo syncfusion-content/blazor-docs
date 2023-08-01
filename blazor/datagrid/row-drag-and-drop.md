@@ -120,6 +120,100 @@ The grid row drag and drop allows you to drag and drop grid rows on the same gri
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hXBqXdBiVAjFZkeZ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
+## Drag and Drop Between Two Grids with Different TValues
+
+The DataGrid row drag and drop feature allow to drag and drop grid rows between two grids that have different TValues. When TargetID property of GridRowDropSettings is defined, drag and drop within Grid cannot be performed. Handle the `RowDropped` event to perform operations when rows are dropped. In the RowDropped event handler, dropped records details can be accessed and manipulate the records as per the dropped Grid datatype.
+
+Following a code example to how to implement drag and drop between two grids with different TValues using the between two DataGrid component.
+
+```cshtml
+@using Syncfusion.Blazor.Grids
+
+<SfGrid @ref="OriginGrid" DataSource="@OriginDataSource" ID="OriginGrid" AllowSelection="true" Width="700" AllowRowDragAndDrop="true">
+    <GridRowDropSettings TargetID="DestGrid"></GridRowDropSettings>
+    <GridEvents RowDropped="OrderDropped" TValue="Order"></GridEvents>
+    <GridSelectionSettings Type="Syncfusion.Blazor.Grids.SelectionType.Multiple"></GridSelectionSettings>
+    <GridColumns>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" Width="110" IsPrimaryKey="true"> </GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer ID" Width="110"></GridColumn>
+        <GridColumn Field=@nameof(Order.ShipCity) HeaderText="Ship City" Width="110"></GridColumn>
+        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" Width="110"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText="Order Date" Format="d" Width="110" Type="ColumnType.Date"></GridColumn>
+    </GridColumns>
+</SfGrid>
+<br>
+<SfGrid @ref="DestGrid" DataSource="@DestDataSource" ID="DestGrid" AllowRowDragAndDrop="true" Width="700" AllowSelection="true">
+    <GridRowDropSettings TargetID="OriginGrid"></GridRowDropSettings>
+    <GridEvents RowDropped="EmployeeDropped" TValue="OrdersDetails"></GridEvents>
+    <GridSelectionSettings Type="Syncfusion.Blazor.Grids.SelectionType.Multiple"></GridSelectionSettings>
+    <GridColumns>
+        <GridColumn Field=@nameof(OrdersDetails.ID) HeaderText="ID" Width="110" IsPrimaryKey="true"> </GridColumn>
+        <GridColumn Field=@nameof(OrdersDetails.Name) HeaderText="Name" Width="110"></GridColumn>
+        <GridColumn Field=@nameof(OrdersDetails.City) HeaderText="City" Width="110"></GridColumn>
+        <GridColumn Field=@nameof(OrdersDetails.Shipment) HeaderText="Shipment" Format="C2" Width="110"></GridColumn>
+        <GridColumn Field=@nameof(OrdersDetails.Date) HeaderText="Date" Format="d" Width="110" Type="ColumnType.Date"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+
+@code {
+
+    SfGrid<Order> OriginGrid { get; set; }
+    SfGrid<OrdersDetails> DestGrid { get; set; }
+
+    public List<Order> OriginDataSource { get; set; }
+    public List<OrdersDetails> DestDataSource { get; set; } = new List<OrdersDetails>();
+
+    public async Task OrderDropped(RowDroppedEventArgs<Order> Args)
+    {
+        foreach (var val in Args.Data)
+        {
+            DestDataSource.Add(new OrdersDetails() { ID = val.OrderID, Name = val.CustomerID, Shipment = val.Freight, Date = val.OrderDate, City = val.ShipCity });
+        }
+        await DestGrid.Refresh();
+    }
+
+    public async Task EmployeeDropped(RowDroppedEventArgs<OrdersDetails> Args)
+    {
+        foreach (var val in Args.Data)
+        {
+            OriginDataSource.Add(new Order() { OrderID = val.ID, CustomerID = val.Name, Freight = val.Shipment, OrderDate = val.Date, ShipCity = val.City });
+        }
+        await OriginGrid.Refresh();
+    }
+    protected override void OnInitialized()
+    {
+        OriginDataSource = Enumerable.Range(1, 8).Select(x => new Order()
+            {
+                OrderID = 1000 + x,
+                CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
+                ShipCity = (new string[] { "Berlin", "Madrid", "Cholchester", "Marseille", "Tsawassen" })[new Random().Next(5)],
+                Freight = 2.1 * x,
+                OrderDate = DateTime.Now.AddDays(-x),
+            }).ToList();
+    }
+
+    public class Order
+    {
+        public int? OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public string ShipCity { get; set; }
+        public DateTime? OrderDate { get; set; }
+        public double? Freight { get; set; }
+    }
+    public class OrdersDetails
+    {
+        public int? ID { get; set; }
+        public string Name { get; set; }
+        public string City { get; set; }
+        public DateTime? Date { get; set; }
+        public double? Shipment { get; set; }
+    }
+}
+
+```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXrAtbZMLeCLRLEK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 ## Drag and drop events
 
 The following events are triggered while drag and drop the grid rows.
