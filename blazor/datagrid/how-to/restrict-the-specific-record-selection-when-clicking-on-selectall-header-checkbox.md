@@ -77,7 +77,8 @@ After checking the [IsHeaderCheckboxClicked](https://help.syncfusion.com/cr/blaz
             flag = false; //reset flag
         }
     }
-
 }
 
 ```
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BjrUNPjChVYcBXnL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
