@@ -127,4 +127,4 @@ Following a code example to how to implement column validation using the DataAnn
 }
 ```
 
-![Resolve issue of two default validation messages shown in Grid default dialog editor](../images/blazor-grid-resolve-issue-of-two-default-validation-messages.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXBAtPXsLntXKwqz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
