@@ -19,7 +19,7 @@ This section briefly explains about how to include [Blazor Chip](https://www.syn
 
 You can create **Blazor Server App** or **Blazor WebAssembly App** using Visual Studio in one of the following ways,
 
-* [Create a Project using Microsoft Templates](https://docs.microsoft.com/en-us/aspnet/core/blazor/tooling?pivots=windows)
+* [Create a Project using Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0&pivots=windows)
 
 * [Create a Project using Syncfusion Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio)
 
@@ -276,7 +276,7 @@ N> Syncfusion recommends to reference scripts using [Static Web Assets](https://
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to run the application. Then, the Syncfusion `Blazor Chip` component will be rendered in the default web browser.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LDBgtdMdrZfWcvRZ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Blazor Chip Component](./images/blazor-chip-component.png)
 
 ## Render chip items from collection
 
@@ -334,11 +334,11 @@ You can render the chip items from collection using for loop in Blazor Chip comp
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rNLAjxCdhNTdxPzX?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Blazor Chip Component](./images/blazor-chip-sample.png)
 
 
 ## See also
-* [How to add chip items dynamically in the Blazor Chips component?](https://www.syncfusion.com/kb/13187/how-to-add-chip-items-dynamically-in-the-blazor-chips-component)
+* [How to add chip items dynamically in the Blazor Chips component?](https://support.syncfusion.com/kb/article/11788/how-to-add-chip-items-dynamically-in-the-blazor-chips-component)
 * [Getting Started with Syncfusion Blazor for Client-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-dotnet-cli)
 * [Getting Started with Syncfusion Blazor for Client-Side in Visual Studio 2019](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-visual-studio)
 * [Getting Started with Syncfusion Blazor for Server-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-dotnet-cli)

@@ -24,7 +24,7 @@ The below video demonstrates the customization of Blazor Circular Gauge componen
 
 You can create **Blazor Server App** or **Blazor WebAssembly App** using Visual Studio in one of the following ways,
 
-* [Create a Project using Microsoft Templates](https://docs.microsoft.com/en-us/aspnet/core/blazor/tooling?pivots=windows)
+* [Create a Project using Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0&pivots=windows)
 
 * [Create a Project using Syncfusion Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio)
 
@@ -284,7 +284,7 @@ N> Syncfusion recommends to reference scripts using [Static Web Assets](https://
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to run the application. Then, the Syncfusion `Blazor CircularGauge` component will be rendered in the default web browser.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LZrUtdixCYAPUzcM?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Blazor CircularGauge Component](./images/blazor-circulargauge-component.png)
 
 ## Set pointer value
 
@@ -309,7 +309,7 @@ N> In CircularGauge, you can configure multiple axes. On each axis, you can add 
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hNVADHiRskRtnDIR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Blazor CircularGauge with Pointer Value](./images/blazor-circulargauge-pointer-value.png)
 
 ## Adding title for CircularGauge
 
@@ -333,7 +333,7 @@ Title can be added to the CircularGauge to provide a quick information to the us
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LXrUDHCHsYRnauCs?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Blazor CircularGauge with Title](./images/blazor-circulargauge-title.png)
 
 ## Adding ranges in the CircularGauge
 
@@ -356,7 +356,7 @@ Range is used to specify a group of scale values in the gauge. You can set the r
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hthKNHiRsuENkQQd?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Blazor CircularGauge with Custom Range](./images/blazor-circulargauge-custom-range.png)
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/CircularGauge).
 
