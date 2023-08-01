@@ -536,8 +536,7 @@ The following code example demonstrates how to disable and enable the default to
 }
 
 ```
-The following screenshots represent a datagrid with Enable/disable toolbar items,
-![ Enabling or Disabling Default Toolbar Items Based on Selected Row Data](./images/blazor-grid-enable-disable-default-toolbar-items-based-on-selected-row-data.gif)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rZLqNvDWMFbMfoZE?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Customize Toolbar text
 
