@@ -44,21 +44,22 @@ Data binding can be achieved by using the `bind-Value` attribute and its support
 }
 ```
 
-## Array of Enum binding
+## Enum binding
 
-To bind an array of Enum types to the MultiSelect Dropdown component, you can convert the Enum data source into a list of strings and then bind it to the SfMultiSelect component.
+To bind Enum types to the MultiSelect Dropdown component, you can convert the Enum data into a list of strings and then bind it to the DataSource property of the SfMultiSelect component.
 
 ```cshtml
+
 @using Syncfusion.Blazor.DropDowns
 
-<SfMultiSelect TValue="List<string>" TItem="string" Placeholder="Select a color" DataSource="@EnumList"
-@bind-Value="SelectedStringColors">
+<SfMultiSelect TValue="List<string>" TItem="string" Placeholder="Select a color" DataSource="@MultiSelectDataSource"
+@bind-Value="Selectedvalues">
     <MultiSelectFieldSettings Value="Value" Text="Text"></MultiSelectFieldSettings>
 </SfMultiSelect>
 
-@if (SelectedStringColors != null)
+@if (Selectedvalues != null)
 {
-    <p>Selected Colors: @string.Join(", ", SelectedStringColors)</p>
+    <p>Selected Colors: @string.Join(", ", Selectedvalues)</p>
 }
 
 @code {
@@ -76,14 +77,13 @@ To bind an array of Enum types to the MultiSelect Dropdown component, you can co
         public string Text { get; set; }
     }
 
-    private List<string> EnumList { get; set; } = new();
-    private List<Color> SelectedColors { get; set; } = new();
-    private List<string> SelectedStringColors { get; set; }
+    private List<string> MultiSelectDataSource { get; set; } = new();
+    private List<string> Selectedvalues { get; set; }
 
     protected override void OnInitialized()
     {
-        this.EnumList = Enum.GetNames(typeof(Color)).ToList();
-        SelectedStringColors = new List<string> { Enum.GetName(typeof(Color), 2) };
+        MultiSelectDataSource = Enum.GetNames(typeof(Color)).ToList();
+        Selectedvalues = new List<string> { Enum.GetName(typeof(Color), 2) };
     }
 }
 
