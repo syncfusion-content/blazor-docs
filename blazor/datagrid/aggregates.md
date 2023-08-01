@@ -336,7 +336,7 @@ To use Custom aggregate, specify the **AggregateType** as **Custom** in **GridAg
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VDBKjdhnWQHwbucf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-N> You can refer to the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour page for its groundbreaking feature representations. You can also explore [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap4) to understand how to present and manipulate data.
+N> You can refer to the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour page for its groundbreaking feature representations. You can also explore [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap5) to understand how to present and manipulate data.
 
 ## Reactive aggregate
 
