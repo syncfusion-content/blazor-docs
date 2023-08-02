@@ -71,6 +71,14 @@ Syncfusion Blazor components are available in [nuget.org](https://www.nuget.org/
 
 To add Blazor Calendar component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search for [Syncfusion.Blazor.Calendars](https://www.nuget.org/packages/Syncfusion.Blazor.Calendars/) and then install it.
 
+{% tabs %}
+{% highlight nuget tabtitle="Package Manager" %}
+
+PM> NuGet\Install-Package Syncfusion.Blazor.Calendars -Version {{ site.releaseversion }}
+
+{% endhighlight %}
+{% endtabs %}
+
 ## Register Syncfusion Blazor Service
 
 Open `~/Imports.razor` file and add Syncfusion.Blazor namespace.
@@ -83,9 +91,7 @@ Open `~/Imports.razor` file and add Syncfusion.Blazor namespace.
 {% endhighlight %}
 {% endtabs %}
 
-Now, register the Syncfusion Blazor service in the MAUI Blazor App. Here, Syncfusion Blazor Service is registered by setting the [IgnoreScriptIsolation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.GlobalOptions.html#Syncfusion_Blazor_GlobalOptions_IgnoreScriptIsolation) property as `true` using `AddSyncfusionBlazor` service method in `~/MauiProgram.cs` file as follows,
-
-N> From 2022 Vol1 (20.1) version - The default value of `IgnoreScriptIsolation` is changed as `true`, so, you don't have to set `IgnoreScriptIsolation` property explicitly to refer scripts externally.
+Now, register the Syncfusion Blazor service in the MAUI Blazor App. 
 
 {% tabs %}
 {% highlight c# tabtitle="~/MauiProgram.cs" hl_lines="8 9" %}
@@ -109,6 +115,14 @@ N> From 2022 Vol1 (20.1) version - The default value of `IgnoreScriptIsolation` 
 Checkout the [Blazor Themes topic](https://blazor.syncfusion.com/documentation/appearance/themes) to learn different ways to refer themes in the application, and to have the expected appearance for Syncfusion Blazor components. Here, the theme is referred using [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets).
 
 To add theme to the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search for [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) and then install it. Then, theme stylesheet from NuGet can be referred inside the `<head>` of **wwwroot/index.html** file in the application as follows,
+
+{% tabs %}
+{% highlight nuget tabtitle="Package Manager" %}
+
+PM> NuGet\Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
+
+{% endhighlight %}
+{% endtabs %}
 
 {% tabs %}
 {% highlight cshtml tabtitle="~/index.html" %}
