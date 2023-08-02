@@ -65,6 +65,14 @@ dotnet restore
 {% endhighlight %}
 {% endtabs %}
 
+{% tabs %}
+{% highlight nuget tabtitle="Package Manager" %}
+
+PM> NuGet\Install-Package Syncfusion.Blazor.Calendars -Version {{ site.releaseversion }}
+
+{% endhighlight %}
+{% endtabs %}
+
 ## Register Syncfusion Blazor Service
 
 Open **~/_Imports.razor** file and import the `Syncfusion.Blazor` namespace.
