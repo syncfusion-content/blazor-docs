@@ -114,6 +114,14 @@ dotnet restore
 {% endhighlight %}
 {% endtabs %}
 
+{% tabs %}
+{% highlight nuget tabtitle="Package Manager" %}
+
+PM> NuGet\Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
+
+{% endhighlight %}
+{% endtabs %}
+
 Then the theme style from can be referred inside the `<head>` of the **wwwroot/index.html** file in client web app.
 
 {% tabs %}
