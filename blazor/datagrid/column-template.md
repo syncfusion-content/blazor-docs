@@ -235,32 +235,29 @@ data can be accessed inside [Template](https://help.syncfusion.com/cr/blazor/Syn
 In the following code, the button element is rendered in the **Employee Data** column and `click` event binding is used to call the showDetails method when the template element is clicked. The showDetails method is passed the data object as an argument, which allows you to access the selected row object and display it in the dialog popup.
 
 ```cshtml
-@page "/"
-
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Popups
 @using Syncfusion.Blazor.Buttons
 
 <SfGrid @ref="Grid" TValue="EmployeeData" DataSource="@Employees">
     <GridColumns>
+        <GridColumn Field=@nameof(EmployeeData.EmployeeID) TextAlign="TextAlign.Center" HeaderText="Employee ID" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(EmployeeData.FirstName) HeaderText="Name" Width="130"></GridColumn>
         <GridColumn HeaderText="Employee Status" TextAlign="TextAlign.Center" Width="120">
             <Template>
                 @{
                     var data = (context as EmployeeData);
                     <div>
-                        <SfButton OnClick="showDetails">View</SfButton>
+                        <SfButton OnClick="(() => showDetails(data))">View</SfButton>
                     </div>
-                    
+
                 }
             </Template>
         </GridColumn>
-        <GridColumn Field=@nameof(EmployeeData.EmployeeID) TextAlign="TextAlign.Center" HeaderText="Employee ID" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(EmployeeData.FirstName) HeaderText="Name" Width="130"></GridColumn>
     </GridColumns>
 </SfGrid>
 
 <SfDialog Width="500px" @ref="Dialog"  IsModal="false" Visible=false>
-
     <DialogTemplates>
         <Content>
             @if(SelectedRecords != null && SelectedRecords.Count != 0)
@@ -270,15 +267,11 @@ In the following code, the button element is rendered in the **Employee Data** c
                 <p><b>LastName:@SelectedRecords[0].LastName</b> </p>
             }
         </Content>
-
     </DialogTemplates>
     <DialogButtons>
         <DialogButton Content="CloseDilog" OnClick="@CloseDilog" />
     </DialogButtons>
-
 </SfDialog>
-
-
 
 @code {
     public List<EmployeeData> Employees { get; set; }
@@ -298,24 +291,24 @@ In the following code, the button element is rendered in the **Employee Data** c
                 LastName = (new string[] { "Davolio", "Fuller", "Leverling", "Peacock", "Buchanan" })[new Random().Next(5)],
             }).ToList();
     }
+
     private void CloseDilog()
     {
 
         Dialog.Hide();
+        SelectedRecords.Clear();
 
     }
 
-    public void  showDetails()
+    public void  showDetails(EmployeeData employeeData)
     {
 
-        SelectedRecords = Grid.SelectedRecords;
+        SelectedRecords.Add(employeeData);
         if(SelectedRecords != null)
         {
             Dialog.Show();
         }
      
-        
-
     }
 
     public class EmployeeData
@@ -323,7 +316,6 @@ In the following code, the button element is rendered in the **Employee Data** c
         public int? EmployeeID { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
-    
     }
 }
 ```
