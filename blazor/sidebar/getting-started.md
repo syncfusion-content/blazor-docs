@@ -21,7 +21,7 @@ This section briefly explains about how to include [Blazor Sidebar](https://www.
 
 You can create **Blazor Server App** or **Blazor WebAssembly App** using Visual Studio in one of the following ways,
 
-* [Create a Project using Microsoft Templates](https://docs.microsoft.com/en-us/aspnet/core/blazor/tooling?pivots=windows)
+* [Create a Project using Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0&pivots=windows)
 
 * [Create a Project using Syncfusion Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio)
 
@@ -601,9 +601,9 @@ N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-
 
 1. Simply customizable and responsive design.
 2. Different sliding types provides the user to adjust the main content by pushing, overlaying or sliding the content.
-3. Includes [docking](https://blazor.syncfusion.com/documentation/sidebar/docking-sidebar/) support.
+3. Includes [docking](https://blazor.syncfusion.com/documentation/sidebar/docking-sidebar) support.
 4. Provided with touch friendly gestures for easy interaction in mobile devices.
-5. Flexible option to initialize the sidebar to any HTML element as [target](https://blazor.syncfusion.com/documentation/sidebar/custom-context/) other than the body element.
+5. Flexible option to initialize the sidebar to any HTML element as [target](https://blazor.syncfusion.com/documentation/sidebar/custom-context) other than the body element.
 
 ## See Also
 
