@@ -7,7 +7,7 @@ component: Common
 documentation: ug
 ---
 
-# Blazor WebAssembly App using .NET CLI
+#  Getting Started with Blazor WebAssembly App in .NET CLI
 
 This article provides a step-by-step instructions for building Blazor WebAssembly App with `Blazor Calendar` component using the [.NET CLI](https://dotnet.microsoft.com/download/dotnet/).
 
