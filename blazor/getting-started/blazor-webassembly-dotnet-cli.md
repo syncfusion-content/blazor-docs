@@ -48,7 +48,7 @@ dotnet new blazorwasm -o BlazorApp -ho
 
 This command creates new Blazor WebAssembly app project and places it in a new directory called `BlazorApp` inside your current location. See [Create Blazor app topic](https://dotnet.microsoft.com/en-us/learn/aspnet/blazor-tutorial/create) and [dotnet new CLI command](https://docs.microsoft.com/en-us/dotnet/core/tools/dotnet-new) topics for more details.
 
-N> If you have installed multiple SDK versions and need any specific framework version (net5.0/netcoreapp3.1) project, then add `-f` flag along with `dotnet new blazorwasm` comment. Refer [here](https://docs.microsoft.com/en-us/dotnet/core/tools/dotnet-new#blazorwasm) for the available options.
+N> If you have installed multiple SDK versions and need any specific framework version (net6.0/net7.0) project, then add `-f` flag along with `dotnet new blazorwasm` comment. Refer [here](https://docs.microsoft.com/en-us/dotnet/core/tools/dotnet-new#blazorwasm) for the available options.
 
 ## Install Syncfusion Blazor packages in the App
 
@@ -77,9 +77,7 @@ Open **~/_Imports.razor** file and import the `Syncfusion.Blazor` namespace.
 {% endhighlight %}
 {% endtabs %}
 
-Now, Open **~/Program.cs** file and register the Syncfusion Blazor Service in the client web app. Here, Syncfusion Blazor Service is registered by setting [IgnoreScriptIsolation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.GlobalOptions.html#Syncfusion_Blazor_GlobalOptions_IgnoreScriptIsolation) property as `true` to load the scripts externally in the [next steps](#add-script-reference).
-
-N> From 2022 Vol-1 (20.1) version, the default value of `IgnoreScriptIsolation` is changed to `true`. It is not necessary to set the `IgnoreScriptIsolation` property to refer scripts externally, since the default value has already been changed to true, and this property is obsolete.
+Now, Open **~/Program.cs** file and register the Syncfusion Blazor Service in the client web app. 
 
 {% tabs %}
 {% highlight c# tabtitle=".NET 6 & .NET 7 (~/Program.cs)" hl_lines="3 11" %}
@@ -99,25 +97,6 @@ await builder.Build().RunAsync();
 ....
 
 {% endhighlight %}
-
-{% highlight c# tabtitle=".NET 5 & .NET 3.X (~/Program.cs)" hl_lines="1 10" %}
-
-using Syncfusion.Blazor;
-
-namespace BlazorApp
-{
-    public class Program
-    {
-        public static async Task Main(string[] args)
-        {
-            ....
-            builder.Services.AddSyncfusionBlazor();
-            await builder.Build().RunAsync();
-        }
-    }
-}
-
-{% endhighlight %}
 {% endtabs %}
 
 ## Add style sheet
@@ -125,8 +104,6 @@ namespace BlazorApp
 Checkout the [Blazor Themes topic](https://blazor.syncfusion.com/documentation/appearance/themes) to learn different ways ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference) and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)) to refer themes in Blazor application, and to have the expected appearance for Syncfusion Blazor components. Here, the theme is referred using [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Refer to [Enable static web assets usage](https://blazor.syncfusion.com/documentation/appearance/themes#enable-static-web-assets-usage) topic to use static assets in your project.
 
 To add theme to the app, Add `Syncfusion.Blazor.Themes` NuGet package to the application using the following command in the command prompt (Windows) or terminal (Linux and macOS) to install the NuGet package.
-
-N> If you are using [Syncfusion.Blazor](https://www.nuget.org/packages/Syncfusion.Blazor/) single NuGet, you don't have to refer [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet. Since style sheets already inside the assets of `Syncfusion.Blazor` NuGet. 
 
 {% tabs %}
 {% highlight c# tabtitle=".NET CLI" %}
@@ -140,12 +117,11 @@ dotnet restore
 Then the theme style from can be referred inside the `<head>` of the **wwwroot/index.html** file in client web app.
 
 {% tabs %}
-{% highlight html tabtitle="~/index.html" hl_lines="3 4 5" %}
+{% highlight html tabtitle="~/index.html" hl_lines="3" %}
 <head>
     ...
     <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
-    <!--Refer theme style sheet as below if you are using Syncfusion.Blazor Single NuGet-->
-    <!--<link href="_content/Syncfusion.Blazor/styles/bootstrap5.css" rel="stylesheet" />-->
+    
 </head>
 {% endhighlight %}
 {% endtabs %}
@@ -155,14 +131,13 @@ Then the theme style from can be referred inside the `<head>` of the **wwwroot/i
 Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/documentation/common/adding-script-references) to learn different ways to add script reference in Blazor Application. In this getting started walk-through, the required scripts are referred using [Static Web Assets](https://blazor.syncfusion.com/documentation/common/adding-script-references#static-web-assets) externally inside the `<head>` of **wwwroot/index.html** file in client web app. Refer to [Enable static web assets usage](https://blazor.syncfusion.com/documentation/common/adding-script-references#enable-static-web-assets-usage) topic to use static assets in your project.
 
 {% tabs %}
-{% highlight html tabtitle="~/index.html" hl_lines="4 5 6" %}
+{% highlight html tabtitle="~/index.html" hl_lines="4" %}
 
 <head>
     ...
     <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
     <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
-    <!--Use below script reference if you are using Syncfusion.Blazor Single NuGet-->
-    <!--<script  src="_content/Syncfusion.Blazor/scripts/syncfusion-blazor.min.js"  type="text/javascript"></script>-->
+  
 </head>
 
 {% endhighlight %}
