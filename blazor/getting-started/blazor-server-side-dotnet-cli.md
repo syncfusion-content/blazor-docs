@@ -55,6 +55,14 @@ dotnet restore
 {% endhighlight %}
 {% endtabs %}
 
+{% tabs %}
+{% highlight nuget tabtitle="Package Manager" %}
+
+PM> NuGet\Install-Package Syncfusion.Blazor.Calendars -Version {{ site.releaseversion }}
+
+{% endhighlight %}
+{% endtabs %}
+
 ## Register Syncfusion Blazor Service
 
 Open **~/_Imports.razor** file and import the `Syncfusion.Blazor` namespace.
@@ -102,6 +110,14 @@ To add theme to the app, Add `Syncfusion.Blazor.Themes` NuGet package to the app
 
 dotnet add package Syncfusion.Blazor.Themes --version {{ site.releaseversion }}
 dotnet restore
+
+{% endhighlight %}
+{% endtabs %}
+
+{% tabs %}
+{% highlight nuget tabtitle="Package Manager" %}
+
+PM> NuGet\Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
 
 {% endhighlight %}
 {% endtabs %}
