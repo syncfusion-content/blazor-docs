@@ -732,6 +732,68 @@ In the following sample, the third row is initially selected using the [Selected
 
 N> You can refer to our [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap4) to understand how to present and manipulate data.
 
+## Prevent the selection of records in the DataGrid after selecting a n number of records
+
+The Syncfusion Grid component provide support for single and multiple selection in Grid. By default, users can choose between single and multiple selection modes by utilizing the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSelectionSettings.html#Syncfusion_Blazor_Grids_GridSelectionSettings_Type) property of **GridSelectionSettings**. However, in multiple selection modes, to restrict the selection after selecting a n number of records. This can be achieved by utilizing the [RowSelecting](https://blazor.syncfusion.com/documentation/datagrid/events#rowselecting) event of the Grid.
+
+In the following example, this is demonstrated how to select two records in the grid. The [RowSelecting](https://blazor.syncfusion.com/documentation/datagrid/events#rowselecting)  event will be triggered whenever a row is selected. This event is useful to access the selected records and their count using the [GetSelectedRecordsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GetSelectedRecordsAsync) method. In the [RowSelecting](https://blazor.syncfusion.com/documentation/datagrid/events#rowselecting)  event, we have cancelled the selection action if the selected records count exceeds the specified n number.
+
+```cshtml
+@using Syncfusion.Blazor.Grids
+
+<SfGrid @ref="Grid" DataSource="@Orders">
+    <GridSelectionSettings Type="SelectionType.Multiple"></GridSelectionSettings>
+    <GridEvents RowSelecting="RowSelectingHandler" TValue="Order"></GridEvents>
+    <GridColumns>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+
+
+@code {
+    SfGrid<Order> Grid { get; set; }
+    public List<Order> Orders { get; set; }
+
+    protected override void OnInitialized()
+    {
+        Orders = Enumerable.Range(1, 75).Select(x => new Order()
+            {
+                OrderID = 1000 + x,
+                CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
+                Freight = 2.1 * x,
+                OrderDate = DateTime.Now.AddDays(-x),
+            }).ToList();
+    }
+
+
+    public class Order
+    {
+        public int? OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public DateTime? OrderDate { get; set; }
+        public double? Freight { get; set; }
+    }
+
+
+    public async Task RowSelectingHandler(RowSelectingEventArgs<Order> Args)
+    {
+        var SelectedRecord = await Grid.GetSelectedRecordsAsync();
+        if (SelectedRecord != null && SelectedRecord.Count > 1)
+        {
+            Args.Cancel = true;
+        }
+    }
+}
+```
+
+The following screenshot shows selecting a maximum of two rows only in a grid,
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/htVgXFtrAEatWdqn?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 ## See also
 
 * [How to use radio button instead of checkbox for row selection of grid](https://blazor.syncfusion.com/documentation/datagrid/how-to/use-radio-button-instead-of-checkbox)
