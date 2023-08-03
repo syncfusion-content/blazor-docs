@@ -58,3 +58,5 @@ To get started quickly with draggable in Blazor Dialog Component, you can check 
 }
 
 ```
+
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VNBKNvjArkpwyzDl?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->

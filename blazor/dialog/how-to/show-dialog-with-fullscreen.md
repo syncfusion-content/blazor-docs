@@ -44,3 +44,5 @@ You can show the dialog in full screen by passing `true` as argument to the dial
 }
 
 ```
+
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BDBUDbXqUxsZAhfP?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->

@@ -52,3 +52,5 @@ Bind the `Visible` property as mentioned below to show/hide the dialog on CheckB
 }
 
 ```
+
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LjrqXltKUzpeSVqv?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->

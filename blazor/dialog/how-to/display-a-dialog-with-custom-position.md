@@ -44,3 +44,4 @@ By default, the dialog is displayed in the center of the target container. The d
 
 
 ![Blazor Dialog with Custom Position](../images/blazor-dialog-custom-position.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BXBKjFDAglgWcSam?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->

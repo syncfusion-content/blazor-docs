@@ -36,6 +36,8 @@ You can bind the value to the DateTimePicker component directly for `Value` prop
 }
 ```
 
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BDhANPXAiYMbVQjg?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
+
 ## Two-way data binding
 
 Two-way binding can be achieved by using `bind-Value` attribute and it supports string, int, Enum, DateTime, bool types. If component value has been changed, it will affect all places where the variable is bound for the **bind-value** attribute.
@@ -51,6 +53,8 @@ Two-way binding can be achieved by using `bind-Value` attribute and it supports 
 public DateTime? DateValue { get; set; } = DateTime.Now;
 }
 ```
+
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LXLUtlNKWugeADry?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Dynamic value binding
 
@@ -79,3 +83,5 @@ private void onChange(Syncfusion.Blazor.Calendars.ChangedEventArgs<DateTime?> ar
     }
 }
 ```
+
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/rDVgtlNqsERixuLy?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->

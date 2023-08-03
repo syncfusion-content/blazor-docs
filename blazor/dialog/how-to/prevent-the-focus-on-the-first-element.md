@@ -61,3 +61,5 @@ Bind the Opened event and enable the PreventFocus argument within an event like 
 }
 
 ```
+
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VNBUtFZKAlRFeStz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->

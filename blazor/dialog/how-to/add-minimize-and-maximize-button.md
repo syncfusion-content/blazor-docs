@@ -228,3 +228,4 @@ window.Dialog = {
 The output will be as follows.
 
 ![Adding minimize and maximize buttons to Blazor Dialog header](../images/min-max.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BNhAjlZgzjwZQklu?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->

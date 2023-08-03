@@ -168,3 +168,4 @@ The DateRangePicker component's full-screen mode feature enables users to view t
 
 ![DateRangePickerDefaultFullScreen](./images/DateRangePickerDefaultFullScreen.gif)
 ![DateRangePickerPresetsFullScreen](./images/DateRangePickerrPresetsFullScreen.gif)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/hZrKtbNKimGzFBTz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->

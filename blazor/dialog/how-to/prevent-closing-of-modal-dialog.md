@@ -152,3 +152,4 @@ You can prevent closing of modal dialog by setting the `OnClose` event argument 
 
 
 ![Preventing Close Dialog in Blazor Dialog Component](../images/blazor-datagrid-prevent-dialog.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LXhgXlNqqPfVuZhP?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->

@@ -29,6 +29,8 @@ In the following example, the KeyPressed method is called every time the key is 
 }
 ```
 
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LtBAtvZUWnYrcggH?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
+
 Also, you can rewrite the above example code as follows using Lambda expressions.
 
 ```cshtml
@@ -65,6 +67,8 @@ In the following example, the KeyPressed method is called every time any key is 
     }
 }
 ```
+
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VjrqtvtKswNofVRa?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 Using Lambda expression also, you can pass the event data to the event handler.
 

@@ -58,6 +58,7 @@ The DateTimePicker component's full-screen mode feature enables users to view th
 ```
 
 ![DateTimePickerFullScreen](./images/DateTimePickerFullScreen.gif)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/hZVUXvXgrdipoRKD?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Customizing the Calendar popup of the Datetime Picker
 

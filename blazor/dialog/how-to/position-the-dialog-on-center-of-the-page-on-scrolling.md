@@ -60,3 +60,5 @@ By default, when you scroll the page/container, Dialog will also scroll along wi
 }
 
 ```
+
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VXVKZvDAqezXWJXD?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->

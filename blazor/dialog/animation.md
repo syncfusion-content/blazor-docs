@@ -76,3 +76,5 @@ In the following sample, `Zoom` effect is enabled. So, The Dialog will open with
 }
 
 ```
+
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LjrUNPjqAiIIuDrm?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->

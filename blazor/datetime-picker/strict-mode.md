@@ -32,6 +32,7 @@ The following code demonstrates the DateTimePicker with StrictMode `true`.
 ```
 
 ![Strict Mode in Blazor DateTimePicker](./images/blazor-datetimepicker-strictmode.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LtVqXltUBpmBCuXs?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 By default, the DateTimePicker act in `StrictMode` as `false` state, that allows you to enter the invalid or out-of-range datetime in text box.
 
@@ -56,5 +57,6 @@ If you are entering the out-of-range or invalid datetime value, then the model v
 
 
 ![Blazor DateTimePicker without StrictMode](./images/blazor-datetimepicker-without-strictmode.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/rZhKtPZghpmbhUNY?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 N> If the value of `Min` or `Max` properties changed through code behind, you have to update the `Value` property to set within the range.

@@ -17,6 +17,7 @@ The masking feature allows users to enter a date and time in the correct format,
 {% endhighlight %}
 
 ![Blazor DateTimePicker with EnableMask](./images/DateTimePickerMask.gif)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/rNrKXPZUBWapMETh?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## MaskPlaceholder
 
@@ -47,5 +48,6 @@ The `DateTimePicker` component uses placeholder text from the current culture's 
 {% endhighlight %}
 
 ![Blazor DateTimePicker Mask Support with MaskPlaceholder](./images/DateTimePickerMaskPlaceholder.gif)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VtrKZbDABBZhEhWj?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 > If you do not specify custom placeholder text for any segment of the date and time format, the component will use the default placeholder text from the current culture based resources file for not specified segments.

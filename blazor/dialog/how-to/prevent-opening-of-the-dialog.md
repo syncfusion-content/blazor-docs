@@ -159,3 +159,5 @@ You can prevent opening of the dialog by setting the `OnOpen` event argument can
 }
 
 ```
+
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/hjLADPjgKYBbSNrs?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
