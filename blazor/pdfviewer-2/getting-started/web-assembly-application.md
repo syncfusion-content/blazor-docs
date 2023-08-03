@@ -17,26 +17,21 @@ This section briefly explains about how to include [Blazor SfPdfViewer](https://
 
 ## Integrate SfPdfViewer into Blazor WebAssembly App
 
-1. Start Visual Studio and select **Create a new project**.
-
-2. For a Blazor WebAssembly experience, choose the **Blazor WebAssembly App** template and select **Next**. 
+1. Start Visual Studio and select **Create a new project**, then choose the **Blazor WebAssembly App** template and select **Next**. 
 ![Create-a-new-WASM-app](GettingStarted_images/Create-new-WASM-app.png)
 
-3. Provide a **Project name** and confirm that the *Location* is correct. Select **Next**.
-![Set-project-name](GettingStarted_images/Set-WASM-project-name.png)
-
-4. In **Additional information dialog**, set target framework.  
+2. In **Additional information dialog**, set target framework.  
 ![Addition-information-WASM](GettingStarted_images/Additional_information_WASM.png)
 
-N> `SfPdfViewer` component supports target framework version .NET 6 and higher versions
+N> The `SfPdfViewer` component supports target framework version .NET 6 and higher versions
 
 ## Install Blazor SfPdfViewer NuGet package in WASM App
 
 To add Blazor SfPdfViewer component in Blazor WebAssembly App, install the following Nuget packages in the application.
 
-* [Syncfusion.Blazor.SfPdfViewer](https://www.nuget.org/packages/Syncfusion.Blazor.SfPdfViewer) to use `SfPdfViewer' component.
+* [Syncfusion.Blazor.SfPdfViewer](https://www.nuget.org/packages/Syncfusion.Blazor.SfPdfViewer) NuGet package to use `SfPdfViewer' component.
 
-* [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) to add theme style sheet.
+* [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet package to add theme style sheet.
 
 * [SkiaSharp.NativeAssets.WebAssembly](https://www.nuget.org/packages/SkiaSharp.NativeAssets.WebAssembly) NuGet package as a reference to your Blazor application from NuGet.org.
 
@@ -106,8 +101,6 @@ await builder.Build().RunAsync();
 {% endtabs %}
 
 ## Add Style Sheet
-
-To add theme to the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search for [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) and then install it. Then, the theme style sheet from NuGet can be referred as follows,
 
 Refer the theme style sheet from NuGet in the `<head>` of **wwwroot/index.html** file in the client web app.
 

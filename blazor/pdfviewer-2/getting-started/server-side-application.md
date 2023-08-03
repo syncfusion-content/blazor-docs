@@ -70,7 +70,7 @@ var app = builder.Build();
 
 ## Adding Style Sheet
 
-Add the theme style sheet as below in the sever web app.
+Add the theme style sheet as below in the server app.
 
 * For **.NET 6** app, add the Syncfusion bootstrap5 theme in the `<head>` of the **~/Pages/_Layout.cshtml** file.
 
