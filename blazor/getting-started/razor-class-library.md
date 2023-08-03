@@ -78,7 +78,7 @@ PM> NuGet\Install-Package Syncfusion.Blazor.Calendars -Version {{ site.releaseve
 
 ## Create a Blazor Server project in Visual Studio with Razor Class Library (RCL)
 
-Refer to the [Blazor Tooling documentation](https://docs.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-5.0&pivots=windows) to create a new Blazor Server-Side Application using Visual Studio.
+Refer to the [Blazor Tooling documentation](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0&pivots=windows) to create a new Blazor Server-Side Application using Visual Studio.
 
 ### Configure the Razor Class Library and Blazor Server Application
 
