@@ -11,7 +11,7 @@ documentation: ug
 
 You can customize the series points with different color by using the ``PointColorMapping`` property.
 
-To customize the series points color, folloe the given steps.
+To customize the series points color, follow the given steps.
 
 **Step 1:**
 
