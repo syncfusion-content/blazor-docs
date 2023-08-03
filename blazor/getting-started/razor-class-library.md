@@ -13,37 +13,10 @@ This section provides information about creating Razor Class Library with the Sy
 
 ## Prerequisites
 
-* [Visual Studio 2019](https://visualstudio.microsoft.com/vs/) / [Visual Studio 2022 Preview](https://visualstudio.microsoft.com/vs/preview)
-* [.NET Core SDK 3.1.8](https://dotnet.microsoft.com/en-us/download/dotnet/3.1) / [.NET 5.0 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/5.0) / [.NET 6.0 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/6.0)
+* [Visual Studio 2022](https://visualstudio.microsoft.com/downloads/)
+* [.NET 6.0 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/6.0)/[.NET 7.0 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/7.0)
 
-N> **.NET Core SDK 3.1.8** requires Visual Studio 2019 16.7 or later. <br /> **.NET 5** requires Visual Studio 2019 16.8 or later. <br/> **.NET 6** requires Visual Studio 2022 Preview 4.1 or later.
-
-## Create a Razor Class Library using Syncfusion Blazor components in Visual Studio 2019
-
-1. Choose **Create a new project** from the Visual Studio dashboard.
-
-    ![new project in aspnetcore blazor](images/new-project.png)
-
-2. Select **Razor Class Library** from the template, and then click the **Next** button.
-
-    ![razor class template](images/razor-project-configuration.png)
-
-3. Now, the project configuration window will popup. Click **Create** button to create a new project with the default project configuration.
-
-    ![razor class project configuration](images/razor-class-template.png)
-
-4. Choose **Razor Class Library** from the dashboard and click **Create** button to create a new Razor Class Library Server application. Select the target framework **.NET Core 3.1**  or **.NET5.0** at the top based on your required target.
-
-    ![select framework](images/razor-class-server-template.png)
-
-    N> If existing .NET Standard version is 2.0 in `RazorClassLibrary.csproj`, then change it to **.NET Standard2.1** or above.
-
-    ```xml
-    <PropertyGroup>
-        <TargetFramework>netstandard2.1</TargetFramework>
-        ....
-    </PropertyGroup>
-    ```
+N>  **.NET 6 and .NET 7** requires Visual Studio 2022 or later.
 
 ## Create a Razor Class Library using Syncfusion Blazor components in Visual Studio 2022
 
@@ -73,6 +46,14 @@ N> Starting with Volume 4, 2020 (v18.4.0.30) release, Syncfusion provides [indiv
 
 1. Now, install **Syncfusion.Blazor.Calendars** NuGet package to the newly created RLC by using the `NuGet Package Manager`. For more details about the available NuGet packages, refer to the [Individual NuGet Packages](https://blazor.syncfusion.com/documentation/nuget-packages/) documentation.
 
+{% tabs %}
+{% highlight nuget tabtitle="Package Manager" %}
+
+PM> NuGet\Install-Package Syncfusion.Blazor.Calendars -Version {{ site.releaseversion }}
+
+{% endhighlight %}
+{% endtabs %}
+
 2. Right-click the project, and then select Manage NuGet Packages.
 
     ![nuget explorer](images/rcl-nuget-explorer.png)
@@ -82,38 +63,6 @@ N> Starting with Volume 4, 2020 (v18.4.0.30) release, Syncfusion provides [indiv
     ![select nuget](images/individual-nuget.png)
 
 4. The Syncfusion Blazor Calendars package will be included in the newly created project once the installation process is completed.
-
-5. Now, import and add the Syncfusion Blazor components in the `~/Component.razor` file. For example, the Calendar component is imported and added in the **~/Component.razor** page.
-
-    ```cshtml
-    @using Syncfusion.Blazor.Calendars
-
-    <div class="my-component">
-    This Blazor component is defined in the <strong>RazorClassLibrary</strong> package.
-    </div><br />
-
-    <SfCalendar TValue="DateTime"></SfCalendar>
-    ```
-
-#### Using Syncfusion.Blazor NuGet Package [Old standard]
-
-W> If you prefer the above new standard (individual NuGet packages), then skip this section. Using both old and new standards in the same application will throw ambiguous compilation errors.
-
-1. Now, install **Syncfusion.Blazor** NuGet package to the newly created RLC by using the `NuGet Package Manager`. Right-click the project and select Manage NuGet Packages.
-
-    ![nuget explorer](images/rcl-nuget-explorer.png)
-
-2. Search **Syncfusion.Blazor** keyword in the Browse tab and install **Syncfusion.Blazor** NuGet package in RLC.
-
-    ![select nuget](images/select-nuget.png)
-
-3. The Syncfusion Blazor package will be installed in the project once the installation process is completed.
-
-4. Open **~/_Imports.razor** file in RLC and import the `Syncfusion.Blazor`.
-
-    ```cshtml
-    @using Syncfusion.Blazor
-    ```
 
 5. Now, import and add the Syncfusion Blazor components in the `~/Component.razor` file. For example, the Calendar component is imported and added in the **~/Component.razor** page.
 
@@ -159,10 +108,10 @@ Refer to the [Blazor Tooling documentation](https://docs.microsoft.com/en-us/asp
 
 2. Now, register the Syncfusion Blazor Service to the Blazor Server App.
 
-    a) For **.NET 6** project, open the **~/Program.cs** file and register the Syncfusion Blazor Service.
+    a) For **.NET 6 & .NET 7** project, open the **~/Program.cs** file and register the Syncfusion Blazor Service.
 
     ```c#
-    // For .NET 6 project, add the Syncfusion Blazor Service in Program.cs file.
+    // For .NET 6 or .NET 7 project, add the Syncfusion Blazor Service in Program.cs file.
     using Microsoft.AspNetCore.Components;
     using Microsoft.AspNetCore.Components.Web;
     using Syncfusion.Blazor;
@@ -178,26 +127,6 @@ Refer to the [Blazor Tooling documentation](https://docs.microsoft.com/en-us/asp
     ....
     ```
 
-    b) For **.NET 5** or **.NET Core SDK 3.1** project, open the **~/Startup.cs** file and register the Syncfusion Blazor Service.
-
-    ```c#
-    // For .NET 5 or .NET Core SDK 3.1 project, add the Syncfusion Blazor Service in Startup.cs file.
-    using Syncfusion.Blazor;
-
-    namespace WebApplication1
-    {
-        public class Startup
-        {
-            public void ConfigureServices(IServiceCollection services)
-            {
-                ....
-                ....
-                services.AddSyncfusionBlazor();
-            }
-        }
-    }
-    ```
-
 3. Now, add the Syncfusion Blazor theme to the Blazor Server App.
 
     a) For **.NET 6** project, add the Syncfusion bootstrap4 theme in the `<head>` element of the **~/Pages/_Layout.cshtml** page.
@@ -208,15 +137,10 @@ Refer to the [Blazor Tooling documentation](https://docs.microsoft.com/en-us/asp
         ....
         // Using individual NuGet packages
         <link href="_content/Syncfusion.Blazor.Themes/bootstrap4.css" rel="stylesheet" />
-        
-        // (or)
-        
-        // Using overall NuGet package
-        <link href="_content/Syncfusion.Blazor/styles/bootstrap4.css" rel="stylesheet" />
     </head>
     ```
 
-    b) For **.NET 5** or **.NET Core SDK 3.1** project, add the Syncfusion bootstrap4 theme in the `<head>` element of the **~/Pages/_Host.cshtml** page.
+    b) For **.NET 7** project, add the Syncfusion bootstrap4 theme in the `<head>` element of the **~/Pages/_Host.cshtml** page.
 
     ```html
     <head>
@@ -224,11 +148,6 @@ Refer to the [Blazor Tooling documentation](https://docs.microsoft.com/en-us/asp
         ....
         // Using individual NuGet packages
         <link href="_content/Syncfusion.Blazor.Themes/bootstrap4.css" rel="stylesheet" />
-        
-        // (or)
-        
-        // Using overall NuGet package
-        <link href="_content/Syncfusion.Blazor/styles/bootstrap4.css" rel="stylesheet" />
     </head>
     ```
 
@@ -280,7 +199,7 @@ Refer to the [Blazor Tooling documentation](https://docs.microsoft.com/en-us/asp
 2. Open the **~/Program.cs** file and register the Syncfusion Blazor Service from RCL.
 
     ```c#
-    // For .NET 6 project.
+    // For .NET 6 and .NET 7 project.
     using Microsoft.AspNetCore.Components;
     using Microsoft.AspNetCore.Components.Web;
     using Syncfusion.Blazor;
@@ -297,24 +216,7 @@ Refer to the [Blazor Tooling documentation](https://docs.microsoft.com/en-us/asp
     ```
 
     ```c#
-    // For .NET 5 or .NET Core SDK 3.1 project.
-    using Syncfusion.Blazor;
-
-    namespace BlazorApp
-    {
-        public class Program
-        {
-            public static async Task Main(string[] args)
-            {
-                ....
-                ....
-                builder.Services.AddSyncfusionBlazor();
-                await builder.Build.RunAsync();
-            }
-        }
-    }
-    ```
-
+   
 3. Add the Syncfusion bootstrap4 theme in the `<head>` element of the **~/wwwroot/index.html** page.
 
     ```html
@@ -323,11 +225,6 @@ Refer to the [Blazor Tooling documentation](https://docs.microsoft.com/en-us/asp
         ....
         // Using individual NuGet packages
         <link href="_content/Syncfusion.Blazor.Themes/bootstrap4.css" rel="stylesheet" />
-        
-        // (or)
-        
-        // Using overall NuGet package
-        <link href="_content/Syncfusion.Blazor/styles/bootstrap4.css" rel="stylesheet" />
     </head>
     ```
 
