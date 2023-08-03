@@ -27,11 +27,11 @@ N> `SfPdfViewer` component supports target framework version .NET 6 and higher v
 
 ## Install Blazor SfPdfViewer NuGet package in Blazor Server App
 
-To add Blazor SfPdfViewer component in Blazor Server App, use SfPdfViewer component and theme style sheet from the following NuGet
+To add Blazor SfPdfViewer component in Blazor Server App, install the following NuGet packages in the application.
 
-* [Syncfusion.Blazor.SfPdfViewer](https://www.nuget.org/packages/Syncfusion.Blazor.SfPdfViewer).
+* [Syncfusion.Blazor.SfPdfViewer](https://www.nuget.org/packages/Syncfusion.Blazor.SfPdfViewer) to use `SfPdfViewer` component.
 
-* [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/).
+* [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) to add theme style sheet.
 
 ## Register Syncfusion Blazor Service
 
