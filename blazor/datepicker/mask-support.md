@@ -20,6 +20,7 @@ The masking feature allows users to enter a date in the correct format, as speci
 
 
 ![Blazor DatePicker with EnableMask](./images/DatePickerMask.gif)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VDLADlXhzhubfsnh?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## MaskPlaceholder
 
