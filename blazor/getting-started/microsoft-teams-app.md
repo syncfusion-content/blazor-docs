@@ -52,7 +52,7 @@ To add Blazor Calendar component in the app, open the NuGet package manager in V
 {% tabs %}
 {% highlight nuget tabtitle="Package Manager" %}
 
-PM> NuGet\Install-Package Syncfusion.Blazor.Calendars -Version {{ site.releaseversion }}
+PM> NuGet\Install-Package Syncfusion.Blazor.Kanban -Version {{ site.releaseversion }}
 
 {% endhighlight %}
 {% endtabs %}
