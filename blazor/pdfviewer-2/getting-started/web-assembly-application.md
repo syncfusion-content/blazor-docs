@@ -148,8 +148,9 @@ Add the Syncfusion SfPdfViewer component in razor file. Here, the SfPdfViewer co
 
 @page "/"
 
-<SfPdfViewer2 
-    DocumentPath="@DocumentPath" Height="100%" Width="100%">
+<SfPdfViewer2 DocumentPath="@DocumentPath"
+              Height="100%"
+              Width="100%">
 </SfPdfViewer2>
 
 @code {
