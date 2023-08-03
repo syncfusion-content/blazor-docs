@@ -17,16 +17,11 @@ To use the MAUI project templates, install the Mobile development with .NET exte
 
 ## Deploy SfPdfViewer into Blazor Android MAUI application
 
-1. Start Visual Studio and select **Create a new project**.
-
-2. For a Blazor MAUI application experience, choose the **.NET MAUI Blazor App** template. Select **Next**. 
+1. Start Visual Studio and select **Create a new project**, then choose the **.NET MAUI Blazor App** template. Select **Next**. 
 ![Create-new-blazor-server-app](GettingStarted_images/start-window-create-new-project_maui.png)
 
-3. Provide a **Project Name** and confirm that the *Location* is correct. Select Next. 
+2. Provide a **Project Name** and confirm that the *Location* is correct. Select Next to set the target framework and create the project.
 ![Set-project-name](GettingStarted_images/Set-project-name-andriod_maui.png)
-
-4. In the **Additional information** dialog, set the target framework and create the project.
-![Set-target-framework](GettingStarted_images/Additional_information_maui.png)
 
 ## Install Blazor SfPdfViewer NuGet package in Blazor Android MAUI application
 

@@ -20,8 +20,8 @@ This section briefly explains about how to integrate [Blazor SfPdfViewer](https:
 1. Start Visual Studio and select **Create a new project**, then choose the **Blazor Server App** template. Select **Next**. 
 ![Create-new-blazor-server-app](GettingStarted_images/start-window-create-new-project.png)
 
-2. In the **Additional information** dialog, set the target framework. 
-![Set-target-framework](GettingStarted_images/Additional_information.png)
+2. Provide a Project name and confirm that the Location is correct. Select Next to set the target framework and create the project.
+![Set-project-name](GettingStarted_images/Set-project-name.png)
 
 N> `SfPdfViewer` component supports target framework version .NET 6 and higher versions
 
@@ -126,7 +126,8 @@ Add the Syncfusion SfPdfViewer component in the **~/Pages/Index.razor** file.
 <SfPdfViewer2 DocumentPath="@DocumentPath" Height="100%" Width="100%"></SfPdfViewer2>
 
 @code {
-    private string DocumentPath { get; set; } = "PDF_Succinctly.pdf";
+    // Here, the 'wwwroot' folder is the web root directory and contains static files.
+    private string DocumentPath { get; set; } = "wwwroot/PDF_Succinctly.pdf";
 }
 
 {% endhighlight %}

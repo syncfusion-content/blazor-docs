@@ -20,8 +20,8 @@ This section briefly explains about how to include [Blazor SfPdfViewer](https://
 1. Start Visual Studio and select **Create a new project**, then choose the **Blazor WebAssembly App** template and select **Next**. 
 ![Create-a-new-WASM-app](GettingStarted_images/Create-new-WASM-app.png)
 
-2. In **Additional information dialog**, set target framework.  
-![Addition-information-WASM](GettingStarted_images/Additional_information_WASM.png)
+2. Provide a Project name and confirm that the Location is correct. Select Next to set the target framework and create the project.
+![Set-project-name](GettingStarted_images/Set-WASM-project-name.png)
 
 N> The `SfPdfViewer` component supports target framework version .NET 6 and higher versions
 
@@ -154,7 +154,8 @@ Add the Syncfusion SfPdfViewer component in razor file. Here, the SfPdfViewer co
 </SfPdfViewer2>
 
 @code {
-    private string DocumentPath { get; set; } = "PDF_Succinctly.pdf";
+    // Here, the 'wwwroot' folder is the web root directory and contains static files.
+    private string DocumentPath { get; set; } = "wwwroot/PDF_Succinctly.pdf";
 }
 
 {% endhighlight %}
