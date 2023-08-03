@@ -31,14 +31,14 @@ By using the [Content](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.C
 
     <ChartAnnotations>
         <ChartAnnotation X="@Country" Y="65" Region="Regions.Series" CoordinateUnits="Units.Point">
-            <ContentTemplate id="chart_title">
+            <ContentTemplate  >
                 <div style="font-size:450%; opacity: 0.3;" >Highest Medal Count</div>                
             </ContentTemplate>            
         </ChartAnnotation>
-        <ChartAnnotation CoordinateUnits="Units.Pixel" X="580" Y ="445" Region="Regions.Chart">
-            <ContentTemplate id="chart">
+        <ChartAnnotation  X="@Xloc" Y="@Yloc" Region="Regions.Chart">
+            <ContentTemplate>
                 <div>
-                    <a href="https://www.syncfusion.com" target="_blank">www.syncfusion.com</a>
+                    <div style="height:100px; font-size:large"  id="chart"> <a href="https://www.syncfusion.com" target="_blank">www.syncfusion.com</a></div>
                 </div>
             </ContentTemplate>
         </ChartAnnotation>
@@ -50,8 +50,17 @@ By using the [Content](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.C
     </ChartSeriesCollection>
 </SfChart>
 
+<style>
+    .e-chart {
+        overflow: visible !important;
+    }
+</style>
+
 @code {
     string Country = "Australia";
+
+    public string Xloc { get; set; } = "50%";
+    public string Yloc { get; set; } = "135%";
 
     public class ChartData
     {
@@ -71,6 +80,7 @@ By using the [Content](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.C
         new ChartData{ Country= "Sweden", Gold=30 }
     };
 }
+
 ```
 ![Blazor Chart With Footer And Watermark](../images/how-to/blazar-chart-footer-and-watermark.png)
 
