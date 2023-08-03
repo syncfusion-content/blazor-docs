@@ -167,7 +167,7 @@ Use the following command to install the NuGet package in an application.
 
 ```
 
-N> To learn more about file actions that can be performed with ASP.NET Core Azure cloud file system provider, refer to this [link](https://github.com/SyncfusionExamples/ej2-azure-aspcore-file-provider#key-features)
+N> To learn more about file actions that can be performed with ASP.NET Core Azure cloud file system provider, refer to this [link](https://github.com/SyncfusionExamples/azure-aspcore-file-provider#key-features)
 
 ## ASP.NET MVC 5 Azure cloud file system provider
 
@@ -219,7 +219,7 @@ N> To learn more about file actions that can be performed with ASP.NET MVC Azure
 
 ## ASP.NET Core Amazon S3 cloud file provider
 
-In ASP.NET Core, Amazon ***S3*** (*Simple Storage Service*) cloud file provider allows the users to access and manage a server hosted file system as collection of objects stored in the Amazon S3 Bucket. To get started, clone the [EJ2.ASP.NET Core Amazon S3 File Provider](https://github.com/SyncfusionExamples/ej2-amazon-s3-aspcore-file-provider) using the following command
+In ASP.NET Core, Amazon ***S3*** (*Simple Storage Service*) cloud file provider allows the users to access and manage a server hosted file system as collection of objects stored in the Amazon S3 Bucket. To get started, clone the [EJ2.ASP.NET Core Amazon S3 File Provider](https://github.com/SyncfusionExamples/amazon-s3-aspcore-file-provider) using the following command
 
 ```
 
@@ -255,7 +255,7 @@ After registering the Amazon client account details, just build and run the proj
 
 ```
 
-N> To learn more about the file actions that can be performed with Amazon S3 Cloud File provider, refer to this [link](https://github.com/SyncfusionExamples/ej2-amazon-s3-aspcore-file-provider.git#key-features)
+N> To learn more about the file actions that can be performed with Amazon S3 Cloud File provider, refer to this [link](https://github.com/SyncfusionExamples/amazon-s3-aspcore-file-provider#key-features)
 
 ## ASP.NET MVC Amazon S3 cloud file provider
 
@@ -333,7 +333,7 @@ After registering the File Transfer Protocol details, just build and run the pro
 
 ```
 
-N> To learn more about the file actions that can be performed with File Transfer Protocol file system provider, refer to this [link](https://github.com/SyncfusionExamples/ej2-ftp-aspcore-file-provider.git#key-features)
+N> To learn more about the file actions that can be performed with File Transfer Protocol file system provider, refer to this [link](https://github.com/SyncfusionExamples/ftp-aspcore-file-provider#key-features)
 
 ## SQL database file system provider
 
@@ -371,7 +371,7 @@ void SetSQLConnection(string name, string tableName, string tableID)\
 
 ```
 
-N> Refer to this [FileManager.mdf](https://github.com/SyncfusionExamples/ej2-sql-server-database-aspcore-file-provider/blob/master/App_Data/FileManager.mdf) to learn about the pre-defined file system SQL database for the Blazor File Manager.
+N> Refer to this [FileManager.mdf](https://github.com/SyncfusionExamples/sql-server-database-aspcore-file-provider/blob/master/App_Data/FileManager.mdf) to learn about the pre-defined file system SQL database for the Blazor File Manager.
 
 After configuring the connection, just build and run the project. Now, the project will be hosted in `http://localhost:{port}` and just mapping the ajaxSettings property of the FileManager component to the appropriate controller methods allows to manage the files in the SQL database table.
 
@@ -391,7 +391,7 @@ After configuring the connection, just build and run the project. Now, the proje
 
 ```
 
-N> To learn more about file actions that can be performed with SQL database file system provider, refer to this [link](https://github.com/SyncfusionExamples/ej2-sql-server-database-aspcore-file-provider#key-features)
+N> To learn more about file actions that can be performed with SQL database file system provider, refer to this [link](https://github.com/SyncfusionExamples/sql-server-database-aspcore-file-provider#key-features)
 
 ## Google Drive file system provider
 
@@ -405,7 +405,7 @@ cd ej2-google-drive-aspcore-file-provider
 
 ```
 
-Google Drive file system provider use the [Google Drive APIs](https://developers.google.com/drive/api/v3/reference/) to read the file in the file system and uses the [OAuth 2.0](https://developers.google.com/identity/protocols/OAuth2) protocol for authentication and authorization. To authenticate from the client end, have to obtain OAuth 2.0 client credentials from the `Google API Console`. To learn more about generating the client credentials from the from Google API Console, refer to this [link](https://developers.google.com/identity/protocols/OAuth2UserAgent).
+Google Drive file system provider use the [Google Drive APIs](https://developers.google.com/drive/api/reference/rest/v3) to read the file in the file system and uses the [OAuth 2.0](https://developers.google.com/identity/protocols/oauth2) protocol for authentication and authorization. To authenticate from the client end, have to obtain OAuth 2.0 client credentials from the `Google API Console`. To learn more about generating the client credentials from the from Google API Console, refer to this [link](https://developers.google.com/identity/protocols/oauth2/javascript-implicit-flow).
 
 After generating the client secret data, copy the JSON data to the following specified JSON files in the cloned location.
 
@@ -430,7 +430,7 @@ After updating the credentials, just build and run the project. Now, the project
 
 ```
 
-N> To learn more about file actions that can be performed with Google drive file system provider, refer to this [link](https://github.com/SyncfusionExamples/ej2-google-drive-aspcore-file-provider#key-features)
+N> To learn more about file actions that can be performed with Google drive file system provider, refer to this [link](https://github.com/SyncfusionExamples/google-drive-aspcore-file-provider#key-features)
 
 ## Node.js file system provider
 
@@ -507,7 +507,7 @@ The [Firebase Real time Database](https://firebase.google.com/) file system prov
 
 Follow the given steps to generate the secret access key:
 
-* Click this [link](https://console.firebase.google.com/u/0/?pli=1) to Firebase console and navigate to the project settings.
+* Click this [link](https://accounts.google.com/InteractiveLogin/signinchooser?continue=https%3A%2F%2Fconsole.firebase.google.com%2Fu%2F0%2F%3Fpli%3D1&followup=https%3A%2F%2Fconsole.firebase.google.com%2Fu%2F0%2F%3Fpli%3D1&osid=1&passive=1209600&ifkv=AXo7B7Wfmqs4sPNjUfKp05BKYs4EzOkJpWJl84MyR6Z451oGgVxjn2GnkinyXn6RpvCg1nxhSIgIag&flowName=GlifWebSignIn&flowEntry=ServiceLogin) to Firebase console and navigate to the project settings.
 
 * And then, navigate to the **Service Accounts** tab in the window.
 
@@ -582,7 +582,7 @@ Then, create a root node and add children to the root node. Refer to the followi
 
 Here, the `Files` denotes the `rootNode` and the subsequent object refers to the children of the root node. `rootNode` will be taken as the root folder of the file system loaded which will be loaded in File Manager component.
 
-After that, clone the [EJ2.ASP.NET Core Firebase Real Time Database File Provider](https://github.com/SyncfusionExamples/ej2-firebase-realtime-database-aspcore-file-provider) and just open the project in Visual Studio and restore the NuGet package.
+After that, clone the [EJ2.ASP.NET Core Firebase Real Time Database File Provider](https://github.com/SyncfusionExamples/firebase-realtime-database-aspcore-file-provider) and just open the project in Visual Studio and restore the NuGet package.
 
 Register the Firebase Real time Database by assigning *Firebase Real time Database REST API link*, *rootNode*, and *serviceAccountKeyPath* parameters in the `RegisterFirebaseRealtimeDB` method of class `FirebaseRealtimeDBFileProvider` in controller part of the ASP.NET Core application.
 
