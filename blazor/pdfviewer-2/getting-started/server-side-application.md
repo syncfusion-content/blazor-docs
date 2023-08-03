@@ -17,24 +17,21 @@ This section briefly explains about how to integrate [Blazor SfPdfViewer](https:
 
 ## Integrate SfPdfViewer into Blazor Server App
 
-1. Start Visual Studio and select **Create a new project**.
-
-2. For a Blazor Server experience, choose the **Blazor Server App** template. Select **Next**. 
+1. Start Visual Studio and select **Create a new project**, then choose the **Blazor Server App** template. Select **Next**. 
 ![Create-new-blazor-server-app](GettingStarted_images/start-window-create-new-project.png)
 
-3. Provide a **Project Name** and confirm that the *Location* is correct. Select Next. 
-![Set-project-name](GettingStarted_images/Set-project-name.png)
-
-4. In the **Additional information** dialog, set the target framework. 
+2. In the **Additional information** dialog, set the target framework. 
 ![Set-target-framework](GettingStarted_images/Additional_information.png)
 
 N> `SfPdfViewer` component supports target framework version .NET 6 and higher versions
 
 ## Install Blazor SfPdfViewer NuGet package in Blazor Server App
 
-Syncfusion Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). To use Syncfusion Blazor components in the application, add reference to the corresponding NuGet. Refer to [NuGet packages topic](https://blazor.syncfusion.com/documentation/nuget-packages) for available NuGet packages list with component details and [Benefits of using individual NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages#benefits-of-using-individual-nuget-packages).
+To add Blazor SfPdfViewer component in Blazor Server App, use SfPdfViewer component and theme style sheet from the following NuGet
 
-To add Blazor `SfPdfViewer`, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search for [Syncfusion.Blazor.SfPdfViewer](https://www.nuget.org/packages/Syncfusion.Blazor.SfPdfViewer) and then install it.
+* [Syncfusion.Blazor.SfPdfViewer](https://www.nuget.org/packages/Syncfusion.Blazor.SfPdfViewer).
+
+* [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/).
 
 ## Register Syncfusion Blazor Service
 
@@ -141,7 +138,7 @@ Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (m
 
 ![Blazor SfPdfViewer Component](GettingStarted_images/blazor-pdfviewer.png)
 
->[View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/PDFViewer/BlazorServerApp/PDFViewerSample-SfPdfViewer).
+>[View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/PDFViewer%20%202/BlazorServerApp/PDFViewerSample).
 
 ## See also
 
