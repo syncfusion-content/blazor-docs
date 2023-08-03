@@ -40,3 +40,4 @@ In the following demo, specified accordion item is enabled or disabled dynamical
 
 
 ![Enabling or Disabling Item in Blazor Accordion](../images/blazor-accordion-enable-disable-item.gif)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LDhqXwBGqjxQzYyi?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
