@@ -50,3 +50,4 @@ To bind the menu event in the context menu [ItemSelected](https://help.syncfusio
 
 
 ![Binding Blazor ContextMenu Events](./../images/blazor-contextmenu-component.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BDrKtPZBBbdHltgT?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
