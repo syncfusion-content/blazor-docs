@@ -31,6 +31,14 @@ Syncfusion Blazor components are available in [nuget.org](https://www.nuget.org/
 
 To add Blazor Chart component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search for [Syncfusion.Blazor.Charts](https://www.nuget.org/packages/Syncfusion.Blazor.Charts) and then install it.
 
+{% tabs %}
+{% highlight nuget tabtitle="Package Manager" %}
+
+PM> NuGet\Install-Package Syncfusion.Blazor.Charts -Version {{ site.releaseversion }}
+
+{% endhighlight %}
+{% endtabs %}
+
 ## Register Syncfusion Blazor Service
 
 Open **~/_Imports.razor** file and import the Syncfusion.Blazor namespace.
@@ -43,9 +51,7 @@ Open **~/_Imports.razor** file and import the Syncfusion.Blazor namespace.
 {% endhighlight %}
 {% endtabs %}
 
-Now, register the Syncfusion Blazor Service in the Blazor WebAssembly App. Here, Syncfusion Blazor Service is registered by setting [IgnoreScriptIsolation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.GlobalOptions.html#Syncfusion_Blazor_GlobalOptions_IgnoreScriptIsolation) property as true to load the scripts externally in the [next steps](#add-script-reference).
-
-N> From 2022 Vol-1 (20.1) version, the default value of `IgnoreScriptIsolation` is changed to `true`. It is not necessary to set the `IgnoreScriptIsolation` property to refer scripts externally, since the default value has already been changed to true, and this property is obsolete.
+Now, register the Syncfusion Blazor Service in the Blazor WebAssembly App.
 
 * Open **~/Program.cs** file and register the Syncfusion Blazor Service in the client web app.
 
@@ -67,25 +73,6 @@ await builder.Build().RunAsync();
 ....
 
 {% endhighlight %}
-
-{% highlight c# tabtitle=".NET 5 & .NET 3.X (~/Program.cs)" hl_lines="1 10" %}
-
-using Syncfusion.Blazor;
-
-namespace WebApplication1
-{
-    public class Program
-    {
-        public static async Task Main(string[] args)
-        {
-            ....
-            builder.Services.AddSyncfusionBlazor();
-            await builder.Build().RunAsync();
-        }
-    }
-}
-
-{% endhighlight %}
 {% endtabs %}
 
 ## Add style sheet
@@ -94,18 +81,22 @@ Checkout the [Blazor Themes topic](https://blazor.syncfusion.com/documentation/a
 
 To add theme to the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search for [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) and then install it. Then, the theme style sheet from NuGet can be referred as follows,
 
-N> If you are using [Syncfusion.Blazor](https://www.nuget.org/packages/Syncfusion.Blazor/) single NuGet, you don't have to refer [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet. Since style sheets already inside the assets of `Syncfusion.Blazor` NuGet. 
+{% tabs %}
+{% highlight nuget tabtitle="Package Manager" %}
+
+PM> NuGet\Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
+
+{% endhighlight %}
+{% endtabs %}
 
 Refer the theme style sheet from NuGet in the `<head>` of **wwwroot/index.html** file in the client web app.
 
 {% tabs %}
-{% highlight cshtml tabtitle="~/index.html" hl_lines="3 4 5" %}
+{% highlight cshtml tabtitle="~/index.html" hl_lines="3" %}
 
 <head>
     ...
     <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
-    <!--Refer theme style sheet as below if you are using Syncfusion.Blazor Single NuGet-->
-    <!--<link href="_content/Syncfusion.Blazor/styles/bootstrap5.css" rel="stylesheet" />-->
 </head>
 
 {% endhighlight %}
@@ -118,14 +109,12 @@ Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/documenta
 Refer script in the `<head>` of the **~/index.html** file.
 
 {% tabs %}
-{% highlight html tabtitle="~/index.html" hl_lines="4 5 6" %}
+{% highlight html tabtitle="~/index.html" hl_lines="4" %}
 
 <head>
     ....
     <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
     <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
-    <!--Use below script reference if you are using Syncfusion.Blazor Single NuGet-->
-    <!--<script  src="_content/Syncfusion.Blazor/scripts/syncfusion-blazor.min.js"  type="text/javascript"></script>-->
 </head>
 
 {% endhighlight %}
