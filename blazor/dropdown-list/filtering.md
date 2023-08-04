@@ -22,6 +22,7 @@ The following code demonstrates the filtering functionality with local data in t
 {% endhighlight %}
 
 ![Blazor DropdownList with local data filtering](./images/filtering/blazor_dropdown_local-data.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LNrqXFDJpjIYqLsN?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Remote data
 
@@ -36,6 +37,7 @@ The below code demonstrates the filtering functionality with [ODataAdaptor](http
 {% endhighlight %}
 
 ![Blazor DropdownList with Remote Data filtering](./images/filtering/blazor_dropdown_remote-data.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/rtVUjvDJpZHPzelD?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Filter type
 
@@ -56,6 +58,7 @@ In the following example, `EndsWith` filter type has been mapped to the `FilterT
 {% endhighlight %}
 
 ![Blazor DropdownList with Filter Type](./images/filtering/blazor_dropdown_filter-type.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/rthqDvZffMWLyPsp?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Case sensitive filtering
 
@@ -80,6 +83,7 @@ You can use [FilterBarPlaceholder](https://help.syncfusion.com/cr/blazor/Syncfus
 {% endhighlight %}
 
 ![Blazor DropdownList with Filter Textbox Placeholder](./images/filtering/blazor_dropdown_filter-textbox-placeholder.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LtLUXFXJpWrJhgoc?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Custom filtering
 
@@ -108,6 +112,7 @@ In the built-in Syncfusion Blazor theme files, support for multi column can be e
 {% endhighlight %}
 
 ![Blazor DropdownList with Multi Column filtering](./images/filtering/blazor_dropdown_multi-column.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VNVgDlNpTiAuVhaG?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 You can achieve multiple column(field) filtering by passing the List of [predicates](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.WhereFilter.html#Syncfusion_Blazor_Data_WhereFilter_predicates) to the [And](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.WhereFilter.html#Syncfusion_Blazor_Data_WhereFilter_And_Syncfusion_Blazor_Data_WhereFilter_) or [Or](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.WhereFilter.html#Syncfusion_Blazor_Data_WhereFilter_Or_Syncfusion_Blazor_Data_WhereFilter_) methods of [WhereFilters](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.WhereFilter.html#Syncfusion_Blazor_Data_WhereFilter__ctor).
 
@@ -118,6 +123,7 @@ You can achieve multiple column(field) filtering by passing the List of [predica
 {% endhighlight %}
 
 ![Blazor DropdownList with Multi Column filtering](./images/filtering/blazor_dropdown_multi-colum-filtering.gif)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BjrUNPDJzspwepAh?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Minimum filter length
 
@@ -132,5 +138,5 @@ In the following example, the remote request does not fetch the search data unti
 {% endhighlight %}
 
 ![Blazor DropdownList with Minimum filter length](./images/filtering/blazor_dropdown_minimum-filter-length.png)
-
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BDrqXFjzTiSSjXqu?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 

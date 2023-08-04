@@ -27,6 +27,8 @@ Get the complete object list of the selected value in the [ValueChange](https://
 
 {% endhighlight %}
 
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/rDVKjFDTLkPqjrMQ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
+
 ## Preselected value on OnInitializedAsync
 
 Bind the pre-selected value to the DropDownList component using the [@bind-Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_Value) attribute. Assign the value property inside the [OnInitializedAsync](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/lifecycle?view=aspnetcore-6.0#component-initialization-oninitializedasync) lifecycle. The following sample shows how to bind the value on the initial rendering of the component.
@@ -38,6 +40,7 @@ Bind the pre-selected value to the DropDownList component using the [@bind-Value
 {% endhighlight %}
 
 ![Blazor DropDownList with pre-select value](./images/selection/blazor_dropdown_preselect-value.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VtBUNlXJqNsXqcmE?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Programmatically change the selected value
 
@@ -50,6 +53,8 @@ Change the component value programmatically or externally by the component insta
 {% endhighlight %}
 
 ![Blazor DropDownList with pre-select value before](./images/selection/blazor_dropdown_changing-selected-value.gif)
+
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/hZBqXvNTAZqVHmtt?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 While changing  and selecting the value the following event get triggered.
 
@@ -88,6 +93,7 @@ The following sample shows how to bind the index on the initial rendering.
 {% endhighlight %}
 
 ![Blazor DropDownList with bind-index](./images/selection/blazor_dropdown_preselect-value-index.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/hXhqtbZpqCLoVWyZ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Get selected item by value
 
@@ -130,6 +136,7 @@ In order to trigger the `FocusAsync()` and `FocusOutAsync()` methods using the i
 {% endhighlight %}
 
 ![Blazor DropDownList with dynamic focus in and out](./images/selection/blazor_dropdown_focus-in-out.gif)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BZhgZPZfULIfFVVY?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 While focusing and focus out the following event get triggered.
 

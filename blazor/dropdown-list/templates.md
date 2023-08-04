@@ -24,6 +24,7 @@ In the following sample, the selected value is displayed as a combined text of b
 {% endhighlight %}
 
 ![Blazor DropDownList with ValueTemplate](./images/template/blazor-dropdownlist-value-template.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BZBgtvXJTzoKlXsa?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Item template
 
@@ -38,6 +39,7 @@ In the following sample, each list item is split into two columns to display rel
 {% endhighlight %}
 
 ![Blazor DropDownList with ItemTemplate](./images/template/blazor-dropdownlist-item-template.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VtrKDFXfTJHojUpp?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Group template
 
@@ -52,6 +54,7 @@ In the following sample, employees are grouped according to their cities.
 {% endhighlight %}
 
 ![Blazor DropDownList with GroupTemplate](./images/template/blazor-dropdownlist-group-template.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/rXBUjvZzpzlunleQ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Header template
 
@@ -66,6 +69,7 @@ In the following sample, the list items and its headers are designed and display
 {% endhighlight %}
 
 ![Blazor DropDownList with HeaderTemplate](./images/template/blazor-dropdownlist-header-template.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/rtrAjvNzTeZBiRKn?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Footer template
 
@@ -80,6 +84,7 @@ In the following sample, footer element displays the total number of list items 
 {% endhighlight %}
 
 ![Blazor DropDownList with Footer Template](./images/template/blazor-dropdownlist-footer-template.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/rZrqNvZfzSnxLkWC?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## No records template
 
@@ -94,6 +99,7 @@ In the following sample, popup list content displays the notification of no data
 {% endhighlight %}
 
 ![Blazor DropDownList without Data](./images/template/blazor-dropdownlist-without-data.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BjVqtFDfJIGGLRDM?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Action failure template
 
@@ -108,8 +114,9 @@ In the following sample, when the data fetch request fails, the DropDownList dis
 {% endhighlight %}
 
 ![Blazor DropDownList with Action Failure Template](./images/template/blazor-dropdownlist-action-failure-template.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/hDhUXFZJfybyqvIx?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
-## See Also
+## See also
 
 * [Select a value in Blazor DropDownList during bUnit test](https://www.syncfusion.com/forums/172141/how-can-i-select-a-value-in-an-sfdropdown-during-a-bunit-test)
 * [Client side validation in Blazor DropDownList](https://www.syncfusion.com/forums/172516/client-side-validation-on-dropdown-list)

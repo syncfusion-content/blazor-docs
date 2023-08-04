@@ -24,6 +24,7 @@ The DropDownList loads the data from local data sources through the [DataSource]
 {% endhighlight %}
 
 ![Blazor DropdownList with local data binding](./images/data-binding/blazor_dropdown_local-binding.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/rXVUDbNpUgPRkHqK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ### DataBound event
 
@@ -48,6 +49,7 @@ The following code demonstrates array of string values to the DropDownList compo
 {% endhighlight %}
 
 ![Blazor DropdownList with Primitive string type](./images/data-binding/blazor_dropdown_primitive-type-string.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LXLgtltfUAuchTOz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 The following code demonstrates array of integer values to the DropDownList component.
 
@@ -58,6 +60,7 @@ The following code demonstrates array of integer values to the DropDownList comp
 {% endhighlight %}
 
 ![Blazor DropdownList with Primitive int type](./images/data-binding/blazor_dropdown_primitive-type-int.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LXLgXbDpKzteCWwJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ### Complex data type
 
@@ -72,6 +75,7 @@ In the following example, the `Code.ID` column and `Country.CountryID` column fr
 {% endhighlight %}
 
 ![Blazor DropdownList with Complex data type](./images/data-binding/blazor_dropdown_complex-data-type.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VDrANFtzUJxFRpNs?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ### Expando object binding
 
@@ -84,6 +88,7 @@ Bind the [ExpandoObject](https://learn.microsoft.com/en-us/dotnet/api/system.dyn
 {% endhighlight %}
 
 ![Blazor DropdownList with Expando object binding](./images/data-binding/blazor_dropdown_expando-object-binding.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/hDhKZbjTATQPqOME?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ### Observable collection binding
 
@@ -96,6 +101,7 @@ Bind the [ObservableCollection](https://blazor.syncfusion.com/documentation/comm
 {% endhighlight %}
 
 ![Blazor DropdownList with Observable collection binding](./images/data-binding/blazor_dropdown_observable-collection-binding.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VZLUZFjfUoBBABeF?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ### Dynamic object binding
 
@@ -108,6 +114,7 @@ Bind the [DynamicObject](https://learn.microsoft.com/en-us/dotnet/api/system.dyn
 {% endhighlight %}
 
 ![Blazor DropdownList with Dynamic object binding](./images/data-binding/blazor_dropdown_dynamic-data-binding.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/hXLAjvNpgmqRQBKg?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ### Enum data binding
 
@@ -120,6 +127,7 @@ Bind the enum data to the DropDownList component. The following code helps you t
 {% endhighlight %}
 
 ![Blazor DropdownList with Enum data binding](./images/data-binding/blazor_dropdown_enum-data-binding.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LDVgZvXpgcTvQfsH?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ### ValueTuple data binding
 
@@ -132,6 +140,7 @@ Bind the [ValueTuple](https://learn.microsoft.com/en-us/dotnet/api/system.valuet
 {% endhighlight %}
 
 ![Blazor DropdownList with ValueTuple data binding](./images/data-binding/blazor_dropdown_value-tuple-data-binding.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LNhgXlZpgwmZNvJc?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Binding remote data 
 
@@ -184,6 +193,7 @@ The [OData v4 Adaptor](https://blazor.syncfusion.com/documentation/data/adaptors
 {% endhighlight %}
 
 ![Blazor DropdownList with OData v4 Adaptor](./images/data-binding/blazor_dropdown_odata-v4-services.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/hZrqZFjfUwEMlMMI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ### Web API adaptor
 

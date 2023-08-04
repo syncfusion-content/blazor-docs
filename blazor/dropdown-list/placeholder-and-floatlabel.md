@@ -20,6 +20,7 @@ Use the [Placeholder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Dr
 {% endhighlight %}
 
 ![Blazor DropdownList with placeholder](./images/placeholder-and-floatlabel/blazor_dropdown_placeholder.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/hDLUjvXJUFELwgRm?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Color of the placeholder text
 
@@ -32,6 +33,7 @@ You can change the color of the placeholder by targeting its CSS class `input.e-
 {% endhighlight %}
 
 ![Blazor DropdownList with color placeholder](./images/placeholder-and-floatlabel/blazor_dropdown_placeholder-with-color.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BXrgXFtzqEmxSLqM?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Add mandatory indicator using placeholder
 
@@ -44,6 +46,7 @@ The mandatory indicator `*` can be applied to the placeholder by targeting its C
 {% endhighlight %}
 
 ![Blazor DropdownList with mandatory indicator placeholder](./images/placeholder-and-floatlabel/blazor_dropdown_placeholder-with-mandatory.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BtrgXFDzgkYjDSyh?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## FloatLabel
 
@@ -66,6 +69,7 @@ The `FloatLabelType` as  `Auto` is demonstrated in the following code sample.
 {% endhighlight %}
 
 ![Blazor DropdownList with float label](./images/placeholder-and-floatlabel/blazor_dropdown_floatlabel.gif)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LDBgZFNpzXWxRGpw?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Customizing the float label element’s focusing color
 

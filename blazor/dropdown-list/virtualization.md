@@ -21,6 +21,7 @@ This feature is applicable to both local and remote data scenarios, providing fl
 {% endhighlight %}
 
 ![Blazor DropDownList with virtualization of local data](./images/virtualization/blazor_dropdownlist_virtualization-local-data.gif)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/hXVgNvtTzUQacWFK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Keyboard interaction
 

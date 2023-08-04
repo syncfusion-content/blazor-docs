@@ -27,6 +27,7 @@ The value binding can be achieved by using the [@bind-Value](https://help.syncfu
 {% endhighlight %}
 
 ![Blazor DropDownList with Bind Value](./images/value-binding/blazor_dropdown_bind-value.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VNrAjFZfLwKlAkTs?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Index value binding
 
@@ -39,6 +40,7 @@ The Index value binding is achieved by using the [@bind-Index](https://help.sync
 {% endhighlight %}
 
 ![Blazor DropDownList with Index Value](./images/value-binding/blazor_dropdown_index-value.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VjrUtPXJVQwGccqW?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Text and value
 
@@ -53,6 +55,7 @@ The following code demonstrates the Value and Text field of the DropDownList com
 {% endhighlight %}
 
 ![Blazor DropDownList with Text and Value](./images/value-binding/blazor_dropdown_text-and-value.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/hZrAXljThwkygUvN?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Primitive type binding
 
@@ -67,6 +70,7 @@ The following code demonstrates array of string as datasource to the DropDownLis
 {% endhighlight %}
 
 ![Blazor DropDownList with Primitive Type as string](./images/value-binding/blazor_dropdown_primitive-type-string.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/hjVgZFNfLbWrxlgy?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 The following code demonstrates array of int as datasource to the DropDownList component.
 
@@ -77,6 +81,7 @@ The following code demonstrates array of int as datasource to the DropDownList c
 {% endhighlight %}
 
 ![Blazor DropDownList with Primitive Type as int](./images/value-binding/blazor_dropdown_primitive-type-int.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VXVKDvZTVvqrTrGh?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Object binding
 
@@ -91,6 +96,7 @@ In the following example, the `Name` column has been mapped to the [DropDownList
 {% endhighlight %}
 
 ![Blazor DropDownList with object values](./images/value-binding/blazor_dropdown_object-binding.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BNLUNltJhlppRaBb?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Enum binding
 
@@ -103,6 +109,7 @@ Bind the enum data to the [@bind-Value](https://help.syncfusion.com/cr/blazor/Sy
 {% endhighlight %}
 
 ![Blazor DropDownList with Enum Data](./images/value-binding/blazor_dropdown_enum-binding.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LZBUtFjfLlSPSsKt?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Show or hide clear button
 
@@ -119,6 +126,7 @@ The following sample demonstrates the `string` used as `TValue`. So, if you clea
 {% endhighlight %}
 
 ![Blazor DropDownList with clear button](./images/value-binding/blazor_dropdown_show-hide-clear-button.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BDLUXvjpVFcTLAqi?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Dynamically change TItem
 
@@ -231,6 +239,7 @@ Two-way is having a bi-directional data flow, i.e., passing the value from the p
 {% endhighlight %}
 
 ![Blazor DropdownList with Two way binding](./images/value-binding/blazor_dropdown_two-way-binding.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/rZBKZlNzVaCdcOKH?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Programmatically clearing value
 
@@ -243,5 +252,5 @@ You can clear the value programmatically by accessing the `ClearAsync()` method 
 {% endhighlight %} 
 
 ![Blazor DropDownList with clear button](./images/value-binding/blazor_dropdown_with-clearAsync-method.gif)
-
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/rtBUNvXJhOVTyCgt?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
