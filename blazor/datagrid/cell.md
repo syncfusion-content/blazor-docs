@@ -352,3 +352,15 @@ The following screenshot represents a clip mode in DataGrid
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rZBKjxrWVIJFoNKz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 N> You can refer to the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour page for its groundbreaking feature representations. You can also explore [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap4) to understand how to present and manipulate data.
+
+##  To display the tooltip when using DataGrid inside the Dialog Component
+
+When rendering the DataGrid within a Dialog component, there is an issue where the tooltip appears beyond the dialog popup. To fix the tooltip positioning, add the following CSS code in your application.
+
+```css
+<style>
+    .e-tooltip-wrap {
+        z-index: 1002;
+    }
+</style>
+```
