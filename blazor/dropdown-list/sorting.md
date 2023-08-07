@@ -28,4 +28,3 @@ In the following demonstration sample, the items in the datasource are shuffled 
 {% endhighlight %}
 
 ![Blazor DropDownList with sortOrder descending](./images/sorting/blazor_dropdown_sorting.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VtBANvtpJWacNAjv?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->

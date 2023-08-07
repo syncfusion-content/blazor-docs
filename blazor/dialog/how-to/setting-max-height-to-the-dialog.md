@@ -18,5 +18,3 @@ By default, the MaxHeight for the Dialog is calculated based on the target. If t
 
 {% endhighlight %}
 {% endtabs %}
-
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BNhqNbtKJCjLFBwg?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->

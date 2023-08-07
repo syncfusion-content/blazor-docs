@@ -40,8 +40,6 @@ You can bind the value to the DateRangePicker component directly for `StartDate`
 }
 ```
 
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/rZLgjbNgCyJIaucp?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
-
 ## Two-way data binding
 
 Two-way binding can be achieved by using the `bind-StartDate` and `bind-EndDate` attributes and it supports string, int, Enum, DateTime, bool types. If the component value has been changed, it will affect all places where the variable is bound for the **bind-StartDate** and **bind-EndDate**attributes.
@@ -60,8 +58,6 @@ public DateTime? StartValue { get; set; } = DateTime.Now;
 public DateTime? EndValue { get; set; } = DateTime.Now;
 }
 ```
-
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BNhqDlZAsIyvqLVA?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Dynamic value binding
 
@@ -92,7 +88,5 @@ private void onChange(RangePickerEventArgs<DateTime?> args)
 }
 }
 ```
-
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LthqXvZgCIHlLdMB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 N> You can refer to our [Blazor Date Range Picker](https://www.syncfusion.com/blazor-components/blazor-daterangepicker) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Date Range Picker example](https://blazor.syncfusion.com/demos/daterangepicker/default-functionalities?theme=bootstrap4) to understand how to present and manipulate data.

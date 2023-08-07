@@ -129,4 +129,3 @@ You can customize the dialog appearance by providing dialog template as string o
 
 
 ![Customizing Blazor Dialog Appearance](../images/dialog-custom-apperance.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/hXVADbZKKaHGgOBf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->

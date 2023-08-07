@@ -77,4 +77,3 @@ Opens the popup</td></tr>
 
 
 ![Accessibility in Blazor DropDownMenu](./images/blazor-dropdownmenu-component.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VNhUtvXqzzLlPPpW?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->

@@ -33,7 +33,6 @@ In the following sample, you can select a range from 15th day of this month to 1
 
 
 ![Range Restriction in Blazor DateRangePicker](./images/blazor-daterangepicker-range-restriction.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BjVgXltUiSbOyCiS?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Range span
 
@@ -53,7 +52,6 @@ In the following sample, the range selection should be greater than 5 days and l
 
 
 ![Blazor DateRangePicker Selection in Span between Range](./images/blazor-daterangepicker-range-span.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/hZLKZbjAWxDXwNlE?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Strict mode
 
@@ -82,7 +80,6 @@ If StartDate is less than Min date, it will be updated with Min date. If EndDate
 
 
 ![Blazor DateRangePicker in Strict Mode](./images/blazor-daterangepicker-strict-mode.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/hXBqDbZACdMvuHvC?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 By default, the DatePicker acts in `StrictMode` false state that allows you to enter the invalid or out-of-range date in text box.
 
@@ -106,6 +103,5 @@ The following code demonstrates the `StrictMode` as false. Here, it allows you t
 
 
 ![Blazor DateRangePicker without Strict Mode](./images/blazor-daterangepicker-without-strict-mode.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LXVUtbjqMxKAKbEr?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 N> You can refer to our [Blazor Date Range Picker](https://www.syncfusion.com/blazor-components/blazor-daterangepicker) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Date Range Picker example](https://blazor.syncfusion.com/demos/daterangepicker/default-functionalities?theme=bootstrap4) to understand how to present and manipulate data.

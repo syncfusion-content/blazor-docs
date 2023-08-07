@@ -56,4 +56,3 @@ In the following code, the dialog header is rendered on a button click.
 
 
 ![Blazor Dialog without Header](../images/blazor-dialog-without-header.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VZhKXltgUSRBFSsp?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->

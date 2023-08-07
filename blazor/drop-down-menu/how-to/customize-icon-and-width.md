@@ -43,4 +43,3 @@ The following UI can be achieved by setting [IconPosition](https://help.syncfusi
 Output be like
 
 ![Customizing Blazor DropDownMenu Icon](./../images/blazor-dropdownmenu-icon-customization.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BNrqtFtfhhsSlcHF?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->

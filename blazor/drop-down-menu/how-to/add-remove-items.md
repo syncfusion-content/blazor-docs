@@ -59,4 +59,3 @@ The following example illustrates how to add and remove items in Dropdown Menu c
 
 
 ![Adding Items in Blazor DropDownMenu](./../images/blazor-dropdownmenu-add-items.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VjrANlXpVptWwaKn?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->

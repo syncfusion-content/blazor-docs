@@ -77,7 +77,6 @@ In the following sample, cut, copy, and paste popup items are grouped using the 
 
 
 ![Blazor DropDownMenu with Separator](./images/blazor-dropdownmenu-separator.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BtVKXbZgzKEDzilO?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Navigations
 
@@ -110,7 +109,6 @@ In the following sample, navigation URL for Flipkart, Amazon, and Snapdeal actio
 
 
 ![Blazor DropDownMenu Items with Navigation Link](./images/blazor-dropdownmenu-navigation.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VDVUtljqJgEwjpmb?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Template
 
@@ -143,7 +141,6 @@ Popup items can be customized using the `CssClass` property. We have customize t
 
 
 ![Blazor DropDownMenu with Popup Items](./images/blazor-dropdownmenu-with-popup-items.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BjhgNFDKzfZOELif?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Populate multilevel sub menu items
 
@@ -239,6 +236,5 @@ You can populate multilevel sub menu items in DropDown menu by using context men
 ```
 
 ![Blazor DropDownMenu with multilevel sub menu items](./images/blazor-dropdownmenu-submenu.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/hjBUtvXgfTMPiNet?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Populate-multilevel-sub-menu-items-in-Blazor-Dropdown-Menu)

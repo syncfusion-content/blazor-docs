@@ -20,7 +20,6 @@ You can enable WeekNumber in the DateTimePicker by using the [WeekNumber](https:
 ```
 
 ![Blazor DateTimePicker with week numbers](./images/blazor_datetimepicker_weeknumber.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BDhUXPXALezCBllp?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Week Rule
 

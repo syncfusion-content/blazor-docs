@@ -24,7 +24,6 @@ In the following sample, vegetables are grouped according to their category usin
 {% endhighlight %}
 
 ![Grouping in Blazor DropdownList](./images/grouping/blazor-dropdownlist-grouping.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/hNVUNPDfJVxhiMVW?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Fixed group header
 

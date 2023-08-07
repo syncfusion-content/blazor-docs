@@ -35,4 +35,3 @@ In the following example, `e-round-corner` class is defined with `5px` `border-r
 
 
 ![Blazor DropDownMenu with Rounded Corner](./../images/blazor-dropdownmenu-with-rounded-corner.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LNhgDlXUzSEooUsr?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
