@@ -9,7 +9,7 @@ documentation: ug
 
 # Searching in Blazor TreeGrid Component
 
-In a Tree Grid, the records are searched by using the [Search](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid~Search.html) method with search key as a parameter. This also provides an option to integrate search text box in tree grid's toolbar by adding **Search** item to the [Toolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid~Toolbar.html).
+In a Tree Grid, the records are searched by using the [Search](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_Search_System_String_) method with search key as a parameter. This also provides an option to integrate search text box in tree grid's toolbar by adding **Search** item to the [Toolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_Toolbar).
 
 {% tabs %}
 
@@ -146,7 +146,7 @@ namespace TreeGridComponent.Data {
 
 ![Blazor TreeGri with Initial Search](images/blazor-treegrid-initial-search.png)
 
-N> By default, tree grid searches all the bound column values. To customize this behavior define the [TreeGridSearchSettings.Fields](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridSearchSettings~Fields.html) property.
+N> By default, tree grid searches all the bound column values. To customize this behavior define the [TreeGridSearchSettings.Fields](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridSearchSettings.html#Syncfusion_Blazor_TreeGrid_TreeGridSearchSettings_Fields) property.
 
 ## Search operators
 
@@ -166,7 +166,7 @@ N> By default, the [Operators](https://help.syncfusion.com/cr/blazor/Syncfusion.
 
 ## Search by external button
 
-To search tree grid records from an external button, invoke the [Search](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid~Search.html) method.
+To search tree grid records from an external button, invoke the [Search](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_Search_System_String_) method.
 
 {% tabs %}
 
@@ -240,7 +240,7 @@ namespace TreeGridComponent.Data {
 
 ## Search specific columns
 
-By default, the tree grid searches all the visible columns. Specific columns can be searched by defining the specific column's field names in the [Fields](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridSearchSettings~Fields.html) property of the [TreeGridSearchSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridSearchSettings_members.html).
+By default, the tree grid searches all the visible columns. Specific columns can be searched by defining the specific column's field names in the [Fields](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridSearchSettings.html#Syncfusion_Blazor_TreeGrid_TreeGridSearchSettings_Fields) property of the [TreeGridSearchSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridSearchSettings_members.html).
 
 {% tabs %}
 
