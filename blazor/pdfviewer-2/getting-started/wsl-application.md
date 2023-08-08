@@ -66,7 +66,9 @@ If the above result is not shown, please run the comments below
     dotnet
     dotnet --info
 ```
-**Step 4:** Run the sample in WSL (Windows Subsystem for Linux) mode and it will run our Blazor SfPdfViewer.
+**Step 4:** Now, run the server or webassembly sample in WSL (Windows Subsystem for Linux) mode and it will run our Blazor SfPdfViewer.
+
+![WSL-Mode](GettingStarted_images/WSL-Mode.png)
 
 N> If you encounter any issues while running in WSL (Windows Subsystem for Linux) mode, use the following instructions to resolve them.
 
