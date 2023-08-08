@@ -279,7 +279,7 @@ N> Syncfusion recommends to reference scripts using [Static Web Assets](https://
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to run the application. Then, the Syncfusion `Blazor DropDown List` component will be rendered in the default web browser.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BNVADnCeqfxtMRlG?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Blazor DropDownList Component](./images/blazor-dropdownlist-component.png)
 
 ## Binding data source
 
@@ -315,7 +315,7 @@ After initialization, populate the DropDownList with data using the [DataSource]
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/htBUXxsegIUjyHQu?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Data Binding in Blazor DropDownList](./images/blazor-dropdownlist-data-binding.png)
 
 ## Configure the popup list
 
@@ -351,7 +351,7 @@ By default, the width of the popup list automatically adjusts according to the D
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BDBKjnMoUSARKDrm?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Changing Popup List Height in Blazor DropDownList](./images/blazor-dropdownlist-popup-height.png)
 
 ## Get selected value
 
@@ -372,8 +372,6 @@ Get the complete object list of the selected value in the [ValueChange](https://
 {% include_relative code-snippet/getting-started/item-data.razor %}
 
 {% endhighlight %}
-
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BZBADniSqIyoNqsc?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/DropDownList).
 
