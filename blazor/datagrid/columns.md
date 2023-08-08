@@ -844,7 +844,7 @@ For more information check on this [documentation](https://blazor.syncfusion.com
 
 ## Manipulating columns
 
-The Syncfusion DataGrid for Blazor provides powerful features for manipulating columns in a datagrid. This section explains how to access columns, and add/remove columns using Syncfusion DataGrid properties, methods, and events.
+The Syncfusion DataGrid for Blazor provides powerful features for manipulating columns in a datagrid. This section explains how to access columns and add/remove columns using Syncfusion DataGrid properties, methods, and events.
 
 ### Accessing Columns
 
