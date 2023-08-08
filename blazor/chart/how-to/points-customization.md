@@ -21,8 +21,7 @@ Define the color in each series and map the value to the series color using ``Po
 
 @using Syncfusion.Blazor.Charts                 
 
-<SfChart>
-    <ChartEvents TooltipRender="TooltipEvent"></ChartEvents>
+<SfChart>    
     <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.DateTime"></ChartPrimaryXAxis>
     <ChartSeriesCollection>
         <ChartSeries DataSource="@Sales" XName="XValue" PointColorMapping="Color" YName="YValue" Name="Sales" Type="ChartSeriesType.Column">
@@ -41,15 +40,14 @@ Define the color in each series and map the value to the series color using ``Po
 
     public List<ChartData> Sales = new List<ChartData>
     {
-        new ChartData { XValue = new DateTime(2005, 01, 01), YValue = 21, Color="red" },
-        new ChartData { XValue = new DateTime(2006, 01, 01), YValue = 24, Color="blue" },
-        new ChartData { XValue = new DateTime(2007, 01, 01), YValue = 36, Color="green" },
-        new ChartData { XValue = new DateTime(2008, 01, 01), YValue = 38, Color="pink" },
-        new ChartData { XValue = new DateTime(2009, 01, 01), YValue = 20, Color="yellow" },
-        new ChartData { XValue = new DateTime(2010, 01, 01), YValue = 30, Color="black" },
-        new ChartData { XValue = new DateTime(2011, 01, 01), YValue = 25, Color= "grey" },
-        new ChartData { XValue = new DateTime(2012, 01, 01), YValue = 40, Color="blue" },
-    };    
+        new ChartData { XValue = new DateTime(2005, 01, 01), YValue = 21, Color="#6355C7" },
+        new ChartData { XValue = new DateTime(2006, 01, 01), YValue = 24, Color="#FFB400" },
+        new ChartData { XValue = new DateTime(2007, 01, 01), YValue = 36, Color="#2196F5" },
+        new ChartData { XValue = new DateTime(2008, 01, 01), YValue = 38, Color="#F7523F" },
+        new ChartData { XValue = new DateTime(2009, 01, 01), YValue = 20, Color="#963C70" },
+        new ChartData { XValue = new DateTime(2010, 01, 01), YValue = 30, Color="#4BE0BC" },
+        new ChartData { XValue = new DateTime(2011, 01, 01), YValue = 25, Color="#FD7400" },
+        new ChartData { XValue = new DateTime(2012, 01, 01), YValue = 40, Color="#C9E422" },
 }
 ```
 ![Blazor Chart With Points Customization](../images/how-to/blazor-chart-points-customization.png)

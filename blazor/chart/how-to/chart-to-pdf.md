@@ -17,102 +17,54 @@ To convert chart into pdf follow the given steps.
 
 **Step 1:**
 
-Install the [Syncfusion.PDF.Net.Core](https://www.nuget.org/packages/Syncfusion.pdf.Net.Core) NuGet package as a reference to your Blazor application from [NuGet.org](https://www.nuget.org/).
-
-**Step 2:**
-
-Create a new cs file named ``ExportService`` under ``Data`` folder and include the following namespaces in the file.
+Create a ``MemoryStream`` to create and store the pdf document. Add the following code in ExportService.cs file under Data folder.
+To know more about ExportService.cs file, kindly refer [ExportService](https://help.syncfusion.com/file-formats/pdf/create-pdf-document-in-blazor#steps-to-create-pdf-document-in-blazor-server-side-application)
 
 ```cshtml
 
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Graphics;
-using Syncfusion.Pdf.Grid;
-using Syncfusion.Drawing;
-```
-
-**Step 3:**
-
-The [PdfDocument](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.PdfDocument.html) object represents an entire PDF document that is being created. The [PdfTextElement](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Graphics.PdfTextElement.html) is used to add text in a PDF document and which provides the layout result of the added text by using the location of the next element that decides to prevent content overlapping. The [PdfGrid](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Grid.PdfGrid.html) allows you to create table by entering data manually or from an external data sources.
-
-Add the following code sample in ``ExportService`` class which illustrates how to create a simple PDF document using ``PdfTextElement`` and ``PdfGrid``.
-
-```cshtml
-
-//Export weather data to PDF document.
-public static MemoryStream CreatePdf(WeatherForecast[] forecasts)
-{
-    if (forecasts == null)
+ public class ExportService
     {
-        throw new ArgumentNullException("Forecast cannot be null");
-    }
-    //Create a new PDF document.
-    using (PdfDocument pdfDocument = new PdfDocument())
-    {
-        int paragraphAfterSpacing = 8;
-        int cellMargin = 8;
-        //Add page to the PDF document.
-        PdfPage page = pdfDocument.Pages.Add();
-        //Create a new font.
-        PdfStandardFont font = new PdfStandardFont(PdfFontFamily.TimesRoman, 16);
-
-        //Create a text element to draw a text in PDF page.
-        PdfTextElement title = new PdfTextElement("Weather Forecast", font, PdfBrushes.Black);
-        PdfLayoutResult result = title.Draw(page, new PointF(0, 0));
-        PdfStandardFont contentFont = new PdfStandardFont(PdfFontFamily.TimesRoman, 12);
-        PdfTextElement content = new PdfTextElement("This component demonstrates fetching data from a service and Exporting the data to PDF document using Syncfusion .NET PDF library.", contentFont, PdfBrushes.Black);
-        PdfLayoutFormat format = new PdfLayoutFormat();
-        format.Layout = PdfLayoutType.Paginate;
-        //Draw a text to the PDF document.
-        result = content.Draw(page, new RectangleF(0, result.Bounds.Bottom + paragraphAfterSpacing, page.GetClientSize().Width, page.GetClientSize().Height), format);
-
-        //Create a PdfGrid.
-        PdfGrid pdfGrid = new PdfGrid();
-        pdfGrid.Style.CellPadding.Left = cellMargin;
-        pdfGrid.Style.CellPadding.Right = cellMargin;
-        //Applying built-in style to the PDF grid.
-        pdfGrid.ApplyBuiltinStyle(PdfGridBuiltinStyle.GridTable4Accent1);
-
-        //Assign data source.
-        pdfGrid.DataSource = forecasts
-        pdfGrid.Style.Font = contentFont;
-        //Draw PDF grid into the PDF page.
-        pdfGrid.Draw(page, new Syncfusion.Drawing.PointF(0, result.Bounds.Bottom + paragraphAfterSpacing));
-
-        using (MemoryStream stream = new MemoryStream())
+        //Export weather data to PDF document.
+        public static MemoryStream CreatePdf(WeatherForecast[] forecasts)
         {
-            //Saving the PDF document into the stream.
-            pdfDocument.Save(stream);
-            //Closing the PDF document.
-            pdfDocument.Close(true);
-            return stream;                
+            if (forecasts == null)
+            {
+                throw new ArgumentNullException("Forecast cannot be null");
+            }
+            //Create a new PDF document.
+            using (PdfDocument pdfDocument = new PdfDocument())
+            {
+                int paragraphAfterSpacing = 8;
+                int cellMargin = 8;
+
+                //Add page to the PDF document.
+                PdfPage page = pdfDocument.Pages.Add();
+                //Create a new font.
+                PdfStandardFont font = new PdfStandardFont(PdfFontFamily.TimesRoman, 16);
+
+                //Create a text element to draw a text in PDF page.
+                PdfTextElement title = new PdfTextElement("Weather Forecast", font, PdfBrushes.Black);
+                PdfLayoutResult result = title.Draw(page, new PointF(0, 0));
+                PdfStandardFont contentFont = new PdfStandardFont(PdfFontFamily.TimesRoman, 12);
+                PdfTextElement content = new PdfTextElement("This component demonstrates fetching data from a service and Exporting the data to PDF document using Syncfusion .NET PDF library.", contentFont, PdfBrushes.Black);
+                PdfLayoutFormat format = new PdfLayoutFormat();
+                format.Layout = PdfLayoutType.Paginate;
+
+                //Draw a text to the PDF document.
+                result = content.Draw(page, new RectangleF(0, result.Bounds.Bottom + paragraphAfterSpacing, page.GetClientSize().Width, page.GetClientSize().Height), format); 
+
+                //Memory stream to store the PDF document.
+                using (MemoryStream stream = new MemoryStream())
+                {
+                    //Saving the PDF document into the stream.
+                    pdfDocument.Save(stream);
+                    //Closing the PDF document.
+                    pdfDocument.Close(true);
+                    return stream;
+                }
+            }
         }
     }
-}
-```
-Register your service in the ``ConfigureServices`` method available in the ``program.cs`` class as follows.
-
-```cshtml
-
-var builder = WebApplication.CreateBuilder(args);
-
-builder.Services.AddRazorPages();
-builder.Services.AddServerSideBlazor().AddHubOptions(option => option.MaximumReceiveMessageSize = 1024 * 1000);
-builder.Services.AddSingleton<WeatherForecastService>();
-builder.Services.AddSingleton<ExportService>();
-builder.Services.AddSyncfusionBlazor();
-
-```
-
-**Step 4:**
-
-Inject ``ExportService`` into the razor file which you want to covert into pdf.
-```cshtml
-
-@inject ExportToFileService exportService
-@inject Microsoft.JSInterop.IJSRuntime JS
-@using  System.IO;
-
 ```
 Create a button in the razor file which you want to convert using the following code.
 
@@ -128,7 +80,7 @@ private async Task ExportToPDF(MouseEventArgs args)
 }
 ```
 
-**Step 5:**
+**Step 2:**
 
 Create a class file with ``FileUtil`` name and add the following code to invoke the JavaScript action to download the file in the browser.
 
@@ -142,7 +94,7 @@ public static class FileUtil
            Convert.ToBase64String(data));
 }
 ```
-**Step 6:**
+**Step 3:**
 
 Add the following JavaScript function in the ``_Host.cshtml`` available under the ``Pages`` folder.
 
@@ -261,5 +213,6 @@ Refer the following code snippet to create a complete razor page to convert Blaz
 }
 ```
 
+To know more about PDF document in Blazor, kindly refer [File Format](https://help.syncfusion.com/file-formats/pdf/create-pdf-document-in-blazor#steps-to-create-pdf-document-in-blazor-server-side-application)
 
 N> Refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
