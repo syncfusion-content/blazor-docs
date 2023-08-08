@@ -17,27 +17,23 @@ This section briefly explains about how to include [Blazor SfPdfViewer](https://
 
 ## Integrate SfPdfViewer into Blazor WebAssembly App
 
-1. Start Visual Studio and select **Create a new project**.
-
-2. For a Blazor WebAssembly experience, choose the **Blazor WebAssembly App** template and select **Next**. 
+1. Start Visual Studio and select **Create a new project**, then choose the **Blazor WebAssembly App** template and select **Next**. 
 ![Create-a-new-WASM-app](GettingStarted_images/Create-new-WASM-app.png)
 
-3. Provide a **Project name** and confirm that the *Location* is correct. Select **Next**.
+2. Provide a Project name and confirm that the Location is correct. Select Next to set the target framework and create the project.
 ![Set-project-name](GettingStarted_images/Set-WASM-project-name.png)
 
-4. In **Additional information dialog**, set target framework.  
-![Addition-information-WASM](GettingStarted_images/Additional_information_WASM.png)
-
-N> `SfPdfViewer` component supports target framework version .NET 6 and higher versions
+N> The `SfPdfViewer` component supports target framework version .NET 6 and higher versions
 
 ## Install Blazor SfPdfViewer NuGet package in WASM App
 
-Syncfusion Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). To use Syncfusion Blazor components in the application, add reference to the corresponding NuGet. Refer to [NuGet packages topic](https://blazor.syncfusion.com/documentation/nuget-packages) for available NuGet packages list with component details and [Benefits of using individual NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages#benefits-of-using-individual-nuget-packages).
+To add Blazor SfPdfViewer component in Blazor WebAssembly App, install the following Nuget packages in the application.
 
-To add Blazor `SfPdfViewer` component in Blazor WebAssembly App, 
-* Open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search for [Syncfusion.Blazor.SfPdfViewer](https://www.nuget.org/packages/Syncfusion.Blazor.SfPdfViewer) and then install it. 
+* [Syncfusion.Blazor.SfPdfViewer](https://www.nuget.org/packages/Syncfusion.Blazor.SfPdfViewer) NuGet package to use `SfPdfViewer' component.
 
-* Install [SkiaSharp.NativeAssets.WebAssembly](https://www.nuget.org/packages/SkiaSharp.NativeAssets.WebAssembly) NuGet package as a reference to your Blazor application from NuGet.org.
+* [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet package to add theme style sheet.
+
+* [SkiaSharp.NativeAssets.WebAssembly](https://www.nuget.org/packages/SkiaSharp.NativeAssets.WebAssembly) NuGet package as a reference to your Blazor application from NuGet.org.
 
 N> If you encounter issues while attempting to host the application in certain environments, such as Azure app services, install [SkiaSharp.Views.Blazor](https://www.nuget.org/packages/SkiaSharp.Views.Blazor) instead of [SkiaSharp.NativeAssets.WebAssembly](https://www.nuget.org/packages/SkiaSharp.NativeAssets.WebAssembly) Nuget package.
 
@@ -106,8 +102,6 @@ await builder.Build().RunAsync();
 
 ## Add Style Sheet
 
-To add theme to the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search for [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) and then install it. Then, the theme style sheet from NuGet can be referred as follows,
-
 Refer the theme style sheet from NuGet in the `<head>` of **wwwroot/index.html** file in the client web app.
 
 {% tabs %}
@@ -154,12 +148,14 @@ Add the Syncfusion SfPdfViewer component in razor file. Here, the SfPdfViewer co
 
 @page "/"
 
-<SfPdfViewer2 
-    DocumentPath="@DocumentPath" Height="100%" Width="100%">
+<SfPdfViewer2 DocumentPath="@DocumentPath"
+              Height="100%"
+              Width="100%">
 </SfPdfViewer2>
 
 @code {
-    private string DocumentPath { get; set; } = "PDF_Succinctly.pdf";
+    // Here, the 'wwwroot' folder is the web root directory and contains static files.
+    private string DocumentPath { get; set; } = "wwwroot/PDF_Succinctly.pdf";
 }
 
 {% endhighlight %}
