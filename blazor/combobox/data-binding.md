@@ -41,6 +41,8 @@ Data binding can be achieved by using the `bind-Value` attribute and it supports
 }
 ```
 
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VjLKZbNiffwAspZX?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
+
 ## Index value binding
 
 Index value binding can be achieved by using `bind-Index` attribute and it supports int and int nullable types. By using this attribute you can bind the values respective to its index.
@@ -72,3 +74,5 @@ Index value binding can be achieved by using `bind-Index` attribute and it suppo
     };
 }
 ```
+
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/rZrgNFNMTTlAvont?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->

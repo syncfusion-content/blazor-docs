@@ -50,6 +50,7 @@ The above sample demonstrates dragging and pushing of panels. For example, while
 The following output demonstrates the dragging functionality of dashboard component.
 
 ![Drag and Drop Panels in Blazor DashboardLayout](../images/blazor-dashboard-layout-drag-and-drop.gif)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LtrgjbNrgLjPprvx?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Customizing the dragging handler
 
@@ -92,3 +93,4 @@ The dragging handler for the panels can be customized using the `DraggableHandle
 The following output demonstrates customizing the dragging handler of the panels, where the dragging action of panel occurs only with the header of the panel.
 
 ![Customizing Dragging Handler of Panels in Blazor DashboardLayout](../images/blazor-dashboard-layout-drag-handler-of-panels.gif)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/rXBgZPNVABrtKsjf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
