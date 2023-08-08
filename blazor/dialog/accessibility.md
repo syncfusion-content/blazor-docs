@@ -110,6 +110,6 @@ to last focusable element</td></tr>
 
 ![Accessibility in Blazor Dialog](./images/blazor-dialog-accessibility.png)
 
-## See Also
+## See also
 
 * [Show dialog with fullscreen](./how-to/show-dialog-with-fullscreen)
