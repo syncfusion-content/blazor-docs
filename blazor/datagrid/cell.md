@@ -55,7 +55,7 @@ The following screenshot represents a DataGrid displaying the HTML content.
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/htLKZdLWVJLGycUz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-N> * The [DisableHtmlEncode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_DisableHtmlEncode)  property disables HTML encoding for the corresponding column in the grid.
+> * The [DisableHtmlEncode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_DisableHtmlEncode)  property disables HTML encoding for the corresponding column in the grid.
 <br/> * If the property is set to true, any HTML tags in the column’s data will be displayed.
 <br/> * If the property is set to false, the HTML tags will be removed and displayed as plain text.
 <br/> * Disabling HTML encoding can potentially introduce security vulnerabilities, so use caution when enabling this feature.
@@ -72,11 +72,11 @@ The auto wrap feature allows the cell content in the grid to wrap to the next li
 * **Header**- With this option, only the grid header text is wrapped.
 * **Content**- With this option, only the grid content is wrapped.
 
-N> * When a column width is not specified, then auto wrap of columns will be adjusted with respect to the DataGrid's width.
+> * When a column width is not specified, then auto wrap of columns will be adjusted with respect to the DataGrid's width.
 <br/> * If a column’s header text contains no white space, the text may not be wrapped.
 <br/> * If the content of a cell contains HTML tags, the Autowrap functionality may not work as expected. In such cases, you can use the **headerTemplate** and **template** properties of the column to customize the appearance of the header and cell content.
 
-The following example demonstrates how to set the allowTextWrap property to true and specify the wrap mode as Content by setting the [TextWrapSettings.WrapMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridTextWrapSettings.html#Syncfusion_Blazor_Grids_GridTextWrapSettings_WrapMode) property.
+The following example demonstrates how to set the allowTextWrap property to true and specify the wrap mode as Content by setting the `TextWrapSettings.WrapMode` property.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -131,7 +131,7 @@ Customizing the grid cell styles allows you to modify the appearance of cells in
 
 To customize the appearance of the grid cell, you can use the [QueryCellInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.QueryCellInfoEventArgs-1.html) event of the grid. This event is triggered when each header cell is rendered in the grid, and provides an object that contains information about the header cell. You can use this object to modify the styles of the header cell.
 
-The following example demonstrates how to add a [QueryCellInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.QueryCellInfoEventArgs-1.html) event handler to the grid. In the event handler, checked whether the current column is Freight field and then applied the appropriate CSS class to the cell based on its value.
+The following example demonstrates how to add a `QueryCellInfo` event handler to the grid. In the event handler, checked whether the current column is Freight field and then applied the appropriate CSS class to the cell based on its value.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -269,7 +269,7 @@ The following example demonstrates how to customize the appearance of a specific
 
 ### Using property
 
-To customize the style of grid cells, define [CustomAttributes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ColumnModel.html#Syncfusion_Blazor_Grids_ColumnModel_CustomAttributes)  property to the column definition object. The [CustomAttributes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ColumnModel.html#Syncfusion_Blazor_Grids_ColumnModel_CustomAttributes)  property takes an object with the name-value pair to customize the CSS properties for grid cells. You can also set multiple CSS properties to the custom class using the customAttributes property.
+To customize the style of grid cells, define [CustomAttributes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ColumnModel.html#Syncfusion_Blazor_Grids_ColumnModel_CustomAttributes)  property to the column definition object. The CustomAttributes property takes an object with the name-value pair to customize the CSS properties for grid cells. You can also set multiple CSS properties to the custom class using the customAttributes property.
 
 ```cshtml
 <style>
@@ -324,9 +324,9 @@ The following example demonstrates how to customize the appearance of the **Orde
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LtrKDdBCVfEITnUS?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-N> * Custom attributes can be used to customize any cell in the grid, including header and footer cells.
+> * Custom attributes can be used to customize any cell in the grid, including header and footer cells.
 
-## Clip mode
+## Clip Mode
 
 The clip mode feature is useful when you have a long text or content in a grid cell, which overflows the cell’s width or height. It provides options to display the overflow content by either truncating it, displaying an ellipsis or displaying an ellipsis with a tooltip. You can enable this feature by setting [Columns.ClipMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_ClipMode) property to one of the below available options.
 
@@ -336,7 +336,7 @@ There are three types of [ClipMode](https://help.syncfusion.com/cr/blazor/Syncfu
 * **Ellipsis**: Displays ellipsis when the cell content overflows its area.
 * **EllipsisWithTooltip**: Displays ellipsis when the cell content overflows its area, also it will display the tooltip while hover on ellipsis is applied. Also it will display the tooltip while hover on ellipsis is applied.
 
-The following example demonstrates, how to set the [ClipMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_ClipMode) property to **Clip** for the **Name of the Inventor** column, **Ellipsis** for the **Number of Patent Families** column, and **EllipsisWithTooltip** for the **Main Fields of Invention** column.
+The following example demonstrates, how to set the `ClipMode property` to **Clip** for the **Name of the Inventor** column, **Ellipsis** for the **Number of Patent Families** column, and **EllipsisWithTooltip** for the **Main Fields of Invention** column.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -381,7 +381,7 @@ The following screenshot represents a clip mode in DataGrid
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rZBKjxrWVIJFoNKz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-N> * By default, [Columns.ClipMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_ClipMode) value is **Ellipsis**.
+> * By default, [Columns.ClipMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_ClipMode) value is **Ellipsis**.
 <br/> * If you set the **width** property of a column, the clip mode feature will be automatically applied to that column if the content exceeds the specified width.
 <br/> * Be careful when using the Clip mode, as it may result in important information being cut off. It is generally recommended to use the Ellipsis or EllipsisWithTooltip modes instead.
 
@@ -395,7 +395,7 @@ The Grid provides a feature to display custom tooltips for its columns using the
 
 To enable custom tooltips for columns in the Grid,you can use the [Column Template](https://blazor.syncfusion.com/documentation/datagrid/columns/#column-template) feature by rendering the components inside the template
 
-This is demonstrated in the following sample code, where the tooltip for the **FirstName** column is rendered using [Column Template](https://blazor.syncfusion.com/documentation/datagrid/columns/#column-template).
+This is demonstrated in the following sample code, where the tooltip for the **FirstName** column is rendered using Column Template.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -458,7 +458,7 @@ This is demonstrated in the following sample code, where the tooltip for the **F
 
 ## Grid lines
 
-The [GridLines](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GridLines) in a grid are used to separate the cells with horizontal and vertical lines for better readability. You can enable the grid lines by setting the [GridLines](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GridLines)  property to one of the following values:
+The [GridLines](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GridLines) in a grid are used to separate the cells with horizontal and vertical lines for better readability. You can enable the grid lines by setting the GridLines property to one of the following values:
 
 | Modes | Actions |
 |-------|---------|
@@ -468,7 +468,7 @@ The [GridLines](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.Sf
 | Vertical | Displays the vertical DataGrid lines only.|
 | Default | Displays DataGrid lines based on the theme.|
 
-The following example demonstrates how to set the [GridLines](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GridLines)  property.
+The following example demonstrates how to set the GridLines property.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -510,4 +510,4 @@ The following example demonstrates how to set the [GridLines](https://help.syncf
 N>By default, the DataGrid renders with **Default** mode.
 
 
-N> You can refer to the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour page for its groundbreaking feature representations. You can also explore [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap4) to understand how to present and manipulate data.
+> You can refer to the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour page for its groundbreaking feature representations. You can also explore [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap4) to understand how to present and manipulate data.
