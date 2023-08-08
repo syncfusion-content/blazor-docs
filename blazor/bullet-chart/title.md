@@ -38,6 +38,7 @@ The title of the [Blazor Bullet Chart](https://www.syncfusion.com/blazor-compone
 ```
 
 ![Blazor Bullet Chart with Title](images/blazor-bullet-chart-with-title.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LtVqtGhcrAtDvosV?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Subtitle
 
@@ -58,6 +59,7 @@ To show additional information about the data plotted, the Bullet Chart can also
 N> Refer to the [code block](#title) to know about the property value of the **BulletChartData**.
 
 ![Blazor Bullet Chart with Subtitle](images/blazor-bullet-chart-subtitle.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VDrqDGhGVUtvZgVB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Title and subtitle position
 
@@ -102,6 +104,7 @@ The title and the subtitle positions can be customized using the [TitlePosition]
 N> Refer to the [code block](#title) to know about the property value of the **BulletChartData**.
 
 ![Changing Title and Subtitle Position in Blazor Bullet Chart](images/blazor-bullet-chart-title-positions.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BjrUNmrcrAhWKWrz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Title and subtitle customization
 
@@ -124,3 +127,4 @@ The title and the subtitle - color, opacity, font size, font family, font weight
 N> Refer to the [code block](#title) to know about the property value of the **BulletChartData**.
 
 ![Customizing Title and Subtitle in Blazor Bullet Chart](images/blazor-bullet-chart-title-customization.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/hZBqjQVmLUSXHFSW?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
