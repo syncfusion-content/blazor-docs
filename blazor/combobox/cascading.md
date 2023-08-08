@@ -22,7 +22,6 @@ In the following example, when a country is selected in the first ComboBox, the 
 {% endhighlight %}
 
 ![Cascading in Blazor ComboBox](./images/cascading/blazor_combobox_cascading.gif)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LjBUNbNriwrRiegx?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Cascading with other form field 
 
@@ -37,6 +36,5 @@ In the following example, the ComboBox displays a list of countries, and the tex
 {% endhighlight %}
 
 ![Cascading with other form field in Blazor ComboBox](./images/cascading/blazor_combobox_cascading-with-other-form-field.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/rNLKZbDrMFSYLNQB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 N> [View Sample in Demo](https://blazor.syncfusion.com/demos/combobox/cascading?theme=bootstrap5).

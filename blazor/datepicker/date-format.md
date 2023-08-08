@@ -26,4 +26,3 @@ By default, the DatePicker's format is based on the culture. You can also set th
 
 
 ![Date Format in Blazor DatePicker](./images/DatePicker.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VtBqjPDhfLwbTExD?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
