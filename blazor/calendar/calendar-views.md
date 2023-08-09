@@ -35,6 +35,7 @@ The following example demonstrates how to set the `Year` as the start view of th
 
 
 ![Changing Blazor Calendar View](./images/blazor-full-calendar-view.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VDBgtcAiApXjHbon?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## View restriction
 
@@ -57,3 +58,4 @@ N> Depth view should always be smaller than the Start view. If the `Depth` and `
 
 
 ![Restriction in Blazor Calendar](./images/blazor-calendar-restriction.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VNVAjmUiATjwdneh?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
