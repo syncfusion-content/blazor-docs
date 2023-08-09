@@ -45,7 +45,6 @@ The following properties can be used to customize [MajorTicklines](https://help.
 ```
 
 ![Customizing Major and Minor TickLines in Blazor Bullet Chart](images/blazor-bullet-chart-tick-line-customization.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LDVUDGBcWIQwgQMD?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Tick placement
 
@@ -66,7 +65,6 @@ The major and the minor ticks can be placed [Inside](https://help.syncfusion.com
 N> Refer to the [code block](#majorticklines-and-minorticklines-customization) to know about the property value of **BulletChartData**.
 
 ![Changing Tick Position in Blazor Bullet Chart](images/blazor-bullet-chart-tick-position.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/hDVqDGBmsGwjczZU?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Label format
 
@@ -87,7 +85,6 @@ The axis labels support all the globalize formats and can be changed using the [
 N> Refer to the [code block](#majorticklines-and-minorticklines-customization) to know about the property value of **BulletChartData**.
 
 ![Changing Label Format in Blazor Bullet Chart](images/blazor-bullet-chart-label-format.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BtrKDcLwivDZCnPS?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 The following table describes the result of applying some commonly used formats to numeric axis values.
 
@@ -178,7 +175,6 @@ To separate the groups of thousands, set the [EnableGroupSeparator](https://help
 ```
 
 ![Grouping in Blazor Bullet Chart](images/blazor-bullet-chart-grouping.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/htVgtQBcMvdJcXJu?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Custom label format
 
@@ -199,7 +195,6 @@ Using the [LabelFormat](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 N> Refer to the [code block](#grouping-separator) to know about the property value of **BulletChartData**.
 
 ![Blazor Bullet Chart with Custom Label Format](images/blazor-bullet-chart-custom-label-format.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/rjBqNcBQMkDUXLdi?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Label placement
 
@@ -220,7 +215,6 @@ Label can be placed [Inside](https://help.syncfusion.com/cr/blazor/Syncfusion.Bl
 N> Refer to the [code block](#grouping-separator) to know about the property value of **BulletChartData**.
 
 ![Changing Label Position in Blazor Bullet Chart](images/blazor-bullet-chart-labels-position.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/hDBUNwLcCYJpsljI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Opposed position
 
@@ -241,7 +235,6 @@ To place an axis opposite to its original position, set the [OpposedPosition](ht
 N> Refer to the [code block](#grouping-separator) to know about the property value of **BulletChartData**.
 
 ![Blazor Bullet Chart with Opposed Position](images/blazor-bullet-chart-opposed-position.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VZLANGhGWkQqytst?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Category label
 
@@ -273,7 +266,6 @@ The [Bullet Chart](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Chart
 ```
 
 ![Blazor Bullet Chart with Category Label](images/blazor-bullet-chart-category-label.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VXLgDmBQLtjfCwOz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Axis label and category label customization
 
@@ -296,4 +288,3 @@ The label color, opacity, font size, font family, font weight, and font style ca
 N> Refer to the [code block](#category-label) to know about the property value of **BulletChartData**.
 
 ![Customizing Axis and Category Label in Blazor Bullet Chart](images/blazor-bullet-chart-label-customization.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BDrKXQBcBjWHIvor?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
