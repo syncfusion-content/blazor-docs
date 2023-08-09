@@ -11,9 +11,31 @@ documentation: ug
 
 This section explains the list of events of the In-place Editor's component which will be triggered for appropriate In-place Editor's actions.
 
+## BeginEdit
+
+The [BeginEdit](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InPlaceEditor.InPlaceEditorEvents-1.html#Syncfusion_Blazor_InPlaceEditor_InPlaceEditorEvents_1_BeginEdit) event is triggered right before transitioning from the default view to the edit mode.
+
+
+```cshtml
+
+@using Syncfusion.Blazor.InPlaceEditor
+
+<SfInPlaceEditor TValue="string">
+    <InPlaceEditorEvents BeginEdit="@BeginEditHandler" TValue="string"></InPlaceEditorEvents>
+</SfInPlaceEditor>
+@code{
+
+    public void BeginEditHandler(BeginEditEventArgs args)
+    {
+        // Here, you can customize your code.
+    }
+}
+
+```
+
 ## Created
 
-`Created` event triggers once the component rendering is completed.
+[Created](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InPlaceEditor.InPlaceEditorEvents-1.html#Syncfusion_Blazor_InPlaceEditor_InPlaceEditorEvents_1_Created) event triggers once the component rendering is completed.
 
 ```cshtml
 
@@ -32,9 +54,31 @@ This section explains the list of events of the In-place Editor's component whic
 
 ```
 
+## EndEdit
+
+The [EndEdit](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InPlaceEditor.InPlaceEditorEvents-1.html#Syncfusion_Blazor_InPlaceEditor_InPlaceEditorEvents_1_EndEdit) event is triggered when the editing action is completed, and the process of submitting or canceling the current value begins.
+
+```cshtml
+
+@using Syncfusion.Blazor.InPlaceEditor
+
+<SfInPlaceEditor TValue="string">
+    <InPlaceEditorEvents EndEdit="@EndEditHandler" TValue="string"></InPlaceEditorEvents>
+</SfInPlaceEditor>
+@code{
+
+    public void EndEditHandler(EndEditEventArgs args)
+    {
+        // Here, you can customize your code.
+    }
+}
+
+```
+
+
 ## OnActionBegin
 
-`OnActionBegin` event triggers before the data submitted to the server.
+[OnActionBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InPlaceEditor.InPlaceEditorEvents-1.html#Syncfusion_Blazor_InPlaceEditor_InPlaceEditorEvents_1_OnActionBegin) event triggers before the data submitted to the server.
 
 ```cshtml
 
@@ -55,7 +99,7 @@ This section explains the list of events of the In-place Editor's component whic
 
 ## OnActionSuccess
 
-`OnActionSuccess` event triggers when data is submitted successfully to the server.
+[OnActionSuccess](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InPlaceEditor.InPlaceEditorEvents-1.html#Syncfusion_Blazor_InPlaceEditor_InPlaceEditorEvents_1_OnActionSuccess) event triggers when data is submitted successfully to the server.
 
 ```cshtml
 
@@ -76,7 +120,7 @@ This section explains the list of events of the In-place Editor's component whic
 
 ## OnActionFailure
 
-`OnActionFailure` event triggers when data submission failed.
+[OnActionFailure](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InPlaceEditor.InPlaceEditorEvents-1.html#Syncfusion_Blazor_InPlaceEditor_InPlaceEditorEvents_1_OnActionFailure) event triggers when data submission failed.
 
 ```cshtml
 
@@ -97,7 +141,7 @@ This section explains the list of events of the In-place Editor's component whic
 
 ## ValueChange
 
-`ValueChange` event triggers when the integrated component value has changed that render based on the `type` property in the In-place editor.
+[ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InPlaceEditor.InPlaceEditorEvents-1.html#Syncfusion_Blazor_InPlaceEditor_InPlaceEditorEvents_1_ValueChange) event triggers when the integrated component value has changed that render based on the [type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InPlaceEditor.SfInPlaceEditor-1.html#Syncfusion_Blazor_InPlaceEditor_SfInPlaceEditor_1_Type) property in the In-place editor.
 
 ```cshtml
 
@@ -118,7 +162,7 @@ This section explains the list of events of the In-place Editor's component whic
 
 ## Destroyed
 
-`Destroyed` event  triggers when the component gets destroyed.
+[Destroyed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InPlaceEditor.InPlaceEditorEvents-1.html#Syncfusion_Blazor_InPlaceEditor_InPlaceEditorEvents_1_Destroyed) event  triggers when the component gets destroyed.
 
 ```cshtml
 
