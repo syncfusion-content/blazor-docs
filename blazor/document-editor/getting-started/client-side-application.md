@@ -28,6 +28,14 @@ Syncfusion Blazor components are available in [nuget.org](https://www.nuget.org/
 
 To add Blazor DocumentEditor component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search for [Syncfusion.Blazor.WordProcessor](https://www.nuget.org/packages/Syncfusion.Blazor.WordProcessor) and then install it.
 
+{% tabs %}
+{% highlight nuget tabtitle="Package Manager" %}
+
+PM> NuGet\Install-Package Syncfusion.Blazor.WordProcessor -Version {{ site.releaseversion }}
+
+{% endhighlight %}
+{% endtabs %}
+
 ## Register Syncfusion Blazor Service
 
 Open **~/_Imports.razor** file and import the Syncfusion.Blazor namespace.
@@ -40,9 +48,7 @@ Open **~/_Imports.razor** file and import the Syncfusion.Blazor namespace.
 {% endhighlight %}
 {% endtabs %}
 
-Now, register the Syncfusion Blazor Service in the Blazor WebAssembly App. Here, Syncfusion Blazor Service is registered by setting [IgnoreScriptIsolation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.GlobalOptions.html#Syncfusion_Blazor_GlobalOptions_IgnoreScriptIsolation) property as true to load the scripts externally in the [next steps](#add-script-reference).
-
-N> From 2022 Vol-1 (20.1) version, the default value of `IgnoreScriptIsolation` is changed to `true`. It is not necessary to set the `IgnoreScriptIsolation` property to refer scripts externally, since the default value has already been changed to true, and this property is obsolete.
+Now, register the Syncfusion Blazor Service in the Blazor WebAssembly App.
 
 * Open **~/Program.cs** file and register the Syncfusion Blazor Service in the client web app.
 
@@ -64,25 +70,6 @@ await builder.Build().RunAsync();
 ....
 
 {% endhighlight %}
-
-{% highlight c# tabtitle=".NET 5 & .NET 3.X (~/Program.cs)" hl_lines="1 10" %}
-
-using Syncfusion.Blazor;
-
-namespace WebApplication1
-{
-    public class Program
-    {
-        public static async Task Main(string[] args)
-        {
-            ....
-            builder.Services.AddSyncfusionBlazor();
-            await builder.Build().RunAsync();
-        }
-    }
-}
-
-{% endhighlight %}
 {% endtabs %}
 
 ## Add Style Sheet
@@ -90,6 +77,14 @@ namespace WebApplication1
 Checkout the [Blazor Themes topic](https://blazor.syncfusion.com/documentation/appearance/themes) to learn different ways ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference) and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)) to refer themes in Blazor application, and to have the expected appearance for Syncfusion Blazor components. Here, the theme is referred using [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets).
 
 To add theme to the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search for [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) and then install it. Then, the theme style sheet from NuGet can be referred as follows,
+
+{% tabs %}
+{% highlight nuget tabtitle="Package Manager" %}
+
+PM> NuGet\Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
+
+{% endhighlight %}
+{% endtabs %}
 
 Refer the theme style sheet from NuGet in the `<head>` of **wwwroot/index.html** file in the client web app.
 
