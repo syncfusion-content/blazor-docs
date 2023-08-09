@@ -39,6 +39,4 @@ The following sample code demonstrates enabling offline mode for the [SfDataMana
 }
 ```
 
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VDVgjbtVKdTIeEOm?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
-
 N> Return the complete list from server-side when using `Offline` property.

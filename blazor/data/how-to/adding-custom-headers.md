@@ -48,5 +48,3 @@ The following sample code demonstrates adding custom headers to the [SfDataManag
     }
 }
 ```
-
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LtrqDlZVARAHnkYp?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->

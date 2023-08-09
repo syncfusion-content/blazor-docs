@@ -31,4 +31,3 @@ The following example demonstrates how to open the DatePicker popup when the inp
 
 
 ![Opening Blazor DatePicker Popup](../images/blazor-datepicker-popup.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/hNhKXvtBfxQqOXHt?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
