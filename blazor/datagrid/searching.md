@@ -67,9 +67,9 @@ To apply search at initial rendering, need to set the following properties in th
 
 Property|Description
 -----|-----
-fields |Specifies the [Fields](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSearchSettings.html#Syncfusion_Blazor_Grids_GridSearchSettings_Fields) in which the search operation needs to be performed.
-operator |Specifies the [Operator](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSearchSettings.html#Syncfusion_Blazor_Grids_GridSearchSettings_Operator) to be used for the search operation.
-key|Specifies the key value to be searched.
+Fields |Specifies the [Fields](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSearchSettings.html#Syncfusion_Blazor_Grids_GridSearchSettings_Fields) in which the search operation needs to be performed.
+Operator |Specifies the [Operator](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSearchSettings.html#Syncfusion_Blazor_Grids_GridSearchSettings_Operator) to be used for the search operation.
+Key|Specifies the key value to be searched.
 IgnoreCase |[IgnoreCase](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.WhereFilter.html#Syncfusion_Blazor_Data_WhereFilter_IgnoreCase) specifies whether the search operation needs to be case-sensitive or case-insensitive
 IgnoreAccent |[IgnoreAccent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.WhereFilter.html#Syncfusion_Blazor_Data_WhereFilter_IgnoreAccent) property will ignore the diacritic characters or accents in the text during a search operation.
 
@@ -150,16 +150,16 @@ These operators provide flexibility in defining the search behavior and allow yo
 
 ## Search by external button
 
-The Syncfusion Blazor Grid component allows you to perform searches programmatically, enabling you to search for records using an external button instead of relying solely on the built-in search bar. This feature provides flexibility and allows for custom search implementations within your application. To search for records using an external button, you can utilize the **search** method provided by the Grid component.
+The Syncfusion Blazor Grid component allows you to perform searches programmatically, enabling you to search for records using an external button instead of relying solely on the built-in search bar. This feature provides flexibility and allows for custom search implementations within your application. To search for records using an external button, you can utilize the **SearchAsync** method provided by the Grid component.
 
-The ```search``` method allows you to perform a search operation based on a search key or criteria. The following example demonstatres how to implement ```search``` by an external button using the following steps:
+The ```SearchAsync``` method allows you to perform a search operation based on a search key or criteria. The following example demonstatres how to implement ```SearchAsync``` by an external button using the following steps:
 
 1. Add a button element outside of the grid component.
 
 2. Attach a click event handler to the button.
 Inside the event handler, get the reference of the grid component.
 
-3. Invoke the ```search``` method of the grid by passing the search key as a parameter.
+3. Invoke the ```SearchAsync``` method of the grid by passing the search key as a parameter.
 
 ```cshtml
 @using Syncfusion.Blazor.Buttons
@@ -178,7 +178,7 @@ Inside the event handler, get the reference of the grid component.
     </GridColumns>
 </SfGrid>
 
-@code{
+@code {
     private SfGrid<Order> DefaultGrid;
 
     public List<Order> Orders { get; set; }
@@ -186,15 +186,16 @@ Inside the event handler, get the reference of the grid component.
     protected override void OnInitialized()
     {
         Orders = Enumerable.Range(1, 75).Select(x => new Order()
-        {
-            OrderID = 1000 + x,
-            CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
-            Freight = 2.1 * x,
-            OrderDate = DateTime.Now.AddDays(-x),
-        }).ToList();
+            {
+                OrderID = 1000 + x,
+                CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
+                Freight = 2.1 * x,
+                OrderDate = DateTime.Now.AddDays(-x),
+            }).ToList();
     }
 
-    public class Order {
+    public class Order
+    {
         public int? OrderID { get; set; }
         public string CustomerID { get; set; }
         public DateTime? OrderDate { get; set; }
@@ -203,12 +204,12 @@ Inside the event handler, get the reference of the grid component.
 
     public void SearchBtnHandler()
     {
-        this.DefaultGrid.Search("1001");
+        this.DefaultGrid.SearchAsync("1001");
     }
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BXVgDdVLhsPcyDOL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hZVUtFtuTqojMFfg?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Search specific columns
 
@@ -263,7 +264,7 @@ The following example demonstrates how to search specific columns such as **Cust
 
 ## Search on each key stroke
 
-By default, the datagrid will initiate searching operation after the Enter key is pressed. If you want to initiate the searching operation while typing the values in the search box, then you can invoke the Search method of the datagrid in the Input event of the SfTextBox.
+By default, the datagrid will initiate searching operation after the Enter key is pressed. If you want to initiate the searching operation while typing the values in the search box, then you can invoke the SearchAsync method of the datagrid in the Input event of the SfTextBox.
 
 ```cshtml
 @using Syncfusion.Blazor.Data
@@ -297,7 +298,7 @@ By default, the datagrid will initiate searching operation after the Enter key i
 
     public void OnInput(InputEventArgs args)
     {
-        this.DefaultGrid.Search(args.Value);
+        this.DefaultGrid.SearchAsync(args.Value);
     }
 
     public class Order
@@ -321,7 +322,7 @@ By default, the datagrid will initiate searching operation after the Enter key i
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BDBqZHVBLhoVitVH?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/htBUjFXapgvgSozQ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 
 ## Perform search operation in Grid using multiple keywords
@@ -331,8 +332,6 @@ In addition to searching with a single keyword, the Grid component offers the ca
 The following example demonstrates, how to perform a search with multiple keywords in the grid by using the ```query``` property .
 
 ```cshtml
-@page "/"
-
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Inputs
 @using Syncfusion.Blazor.Buttons
@@ -408,6 +407,7 @@ The following example demonstrates, how to perform a search with multiple keywor
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rjLqtvDkIGdYRHQb?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Disable search for particular column
 
