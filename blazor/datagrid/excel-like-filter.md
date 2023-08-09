@@ -239,6 +239,65 @@ Before opening a filter dialog for each column, the `OnActionBegin` event will b
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BXLKNRrMppsQrAky?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
+##  Customize the List Display within the Excel Filter Dialog in Excel
+
+To customize List inside the Excel filter dialog within the datagrid, use the [OnActionBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnActionBegin) event. This event uses Before opening a filter dialog, verify the [RequestType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ActionEventArgs-1.html#Syncfusion_Blazor_Grids_ActionEventArgs_1_RequestType) argument as `FilterBeforeOpen`. At that point, the [CheckboxListData](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ActionEventArgs-1.html#Syncfusion_Blazor_Grids_ActionEventArgs_1_CheckboxListData) argument is used to assign the custom data source for the checkbox list. This `CheckboxListData` is utilized to populate the customized list in the Excel filter dialog.
+
+
+The following code example demonstrate how to achieve this by displaying a customized list within the Excel filter dialog using the `OnActionBegin` event. The `CheckboxListData` argument is used to assign the data from the [GetCurrentViewRecordsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GetCurrentViewRecordsAsync) method of the datagrid.
+
+
+```cshtml
+@using Syncfusion.Blazor.Grids
+
+<SfGrid ID="Grid" @ref="Grid" TValue="Order" AllowPaging="true" DataSource="@Orders" AllowFiltering="true">
+    <GridEvents OnActionBegin="OnActionBegin" TValue="Order"></GridEvents>
+    <GridFilterSettings Type="Syncfusion.Blazor.Grids.FilterType.Excel"></GridFilterSettings>
+    <GridColumns>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+
+
+@code {
+    public List<Order> Orders { get; set; }
+    SfGrid<Order> Grid { get; set; }
+
+    public async Task OnActionBegin(ActionEventArgs<Order> Args)
+    {
+        if (Args.RequestType == Syncfusion.Blazor.Grids.Action.FilterBeforeOpen)
+        {
+            Args.CheckboxListData = await Grid.GetCurrentViewRecordsAsync(); //Assign custom checkbox data
+        }
+    }
+
+    protected override void OnInitialized()
+    {
+        Orders = Enumerable.Range(1, 75).Select(x => new Order()
+            {
+                OrderID = 1000 + x,
+                CustomerID = (new string[] { "ALFKII", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
+                Freight = 2.1 * x,
+                OrderDate = (new DateTime[] { new DateTime(2010, 5, 1), new DateTime(2010, 5, 2), new DateTime(2010, 5, 3), })[new Random().Next(3)],
+            }).ToList();
+    }
+
+    public class Order
+    {
+        public int? OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public DateTime? OrderDate { get; set; }
+        public double? Freight { get; set; }
+    }
+}
+```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hXrqZlXOVpOPQvbb?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+
 N> [View Sample in GitHub.](https://github.com/SyncfusionExamples/blazor-datagrid-customize-filter-popup-using-css)
 
 N> You can refer to our [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap4) to understand how to present and manipulate data.
