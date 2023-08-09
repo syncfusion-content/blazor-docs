@@ -1325,6 +1325,82 @@ N> [View Sample in GitHub.](https://github.com/SyncfusionExamples/blazor-datagri
 
 N> ASP.NET Core (Blazor) Web API with batch handling is not yet supported by ASP.NET Core v3+. Hence, it is not feasible for us to support batch mode CRUD operations until ASP.NET Core provides the support for the batch handler. Refer [here](https://github.com/dotnet/aspnetcore/issues/14722) for more details.
 
+
+## How to filter the column with multiple values using Query property of Grid
+
+The Syncfusion Blazor DataGrid component allows you to easily filter columns with multiple values using the [Query](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Query) property of the datagrid. The `Query` property allows you to pass multiple parameters in a query, generating predicates through the [WhereFilter](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.WhereFilter.html) class. This allows you to display specific data in the grid based on your defined filtering criteria. The WhereFilter class enables you to create custom filter predicates, which can be combined using logical operators like [AND](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.WhereFilter.html#Syncfusion_Blazor_Data_WhereFilter_And_Syncfusion_Blazor_Data_WhereFilter_) and [OR](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.WhereFilter.html#Syncfusion_Blazor_Data_WhereFilter_Or_Syncfusion_Blazor_Data_WhereFilter_) to build complex filtering logic.
+
+The following example demonstrates how to create a custom filter using the Syncfusion Blazor DataGrid. We will create age-based filters for the `FromAge` and `ToAge` columns. Using these predicates, we will create a custom query that will be applied to the DataGrid's `Query` property for filtering when the button's onClick event is triggered.
+
+```cshtml
+@using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor.Data
+@using Syncfusion.Blazor.Buttons
+
+<SfButton OnClick="CustomFilter">Custom Filter</SfButton>
+
+<SfGrid DataSource="@Orders" AllowPaging="true" Query="@CustomQuery">
+    <GridColumns>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" IsPrimaryKey="true" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.FromAge) Width="150" TextAlign="TextAlign.Right"></GridColumn>
+        <GridColumn Field=@nameof(Order.ToAge) Width="150" TextAlign="TextAlign.Right"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code {
+    public List<Order> Orders { get; set; }
+
+    public Query CustomQuery { get; set; }
+
+    protected override void OnInitialized()
+    {
+        Orders = Enumerable.Range(1, 7).Select(x => new Order()
+            {
+                OrderID = 1000 + x,
+                FromAge = (new int[] { 0, 3, 5, 8, 11, 12, 13, 14 })[x],
+                ToAge = (new int[] { 3, 5, 8, 11, 12, 13, 14, 17 })[x],
+                FirstName = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
+                Freight = 2.1 * x,
+                OrderDate = DateTime.Now.AddDays(-x),
+            }).ToList();
+    }
+
+    public void CustomFilter()
+    {
+        // Create filter predicates
+        var FirstPredicate = new WhereFilter();
+        var SecondPredicate = new WhereFilter();
+        List<WhereFilter> OrPredicate = new List<WhereFilter>();
+        List<WhereFilter> AndPredicate = new List<WhereFilter>();
+
+        // Define the filtering conditions
+        OrPredicate.Add(new WhereFilter() { Field = "FromAge", value = 0, Operator = "equal" });
+        FirstPredicate = WhereFilter.Or(OrPredicate);
+        AndPredicate.Add(new WhereFilter() { Field = "FromAge", value = 13, Operator = "lessthanorequal" });
+        AndPredicate.Add(new WhereFilter() { Field = "ToAge", value = 11, Operator = "greaterthanorequal" });
+        SecondPredicate = WhereFilter.And(AndPredicate);
+
+        //Build your custom query and assign to Grid's Query property
+        CustomQuery = new Query().Where(FirstPredicate.Or(SecondPredicate));
+    }
+   
+
+    public class Order
+    {
+        public int? OrderID { get; set; }
+        public int? FromAge { get; set; }
+        public int? ToAge { get; set; }
+        public string FirstName { get; set; }
+        public string Area { get; set; }
+        public DateTime? OrderDate { get; set; }
+        public double? Freight { get; set; }
+    }
+}
+```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BtLUjPZEgnenWQtq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 ## See also
 
 * [A Full-Stack Web App Using Blazor WebAssembly and GraphQL: Part 1](https://www.syncfusion.com/blogs/post/a-full-stack-web-app-using-blazor-webassembly-and-graphql-part-1.aspx)
