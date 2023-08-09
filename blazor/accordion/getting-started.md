@@ -30,8 +30,6 @@ You can create **Blazor Server App** or **Blazor WebAssembly App** using Visual 
 
 ## Install Syncfusion Blazor Navigations NuGet in the App
 
-Syncfusion Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to [NuGet packages topic](https://blazor.syncfusion.com/documentation/nuget-packages) for available NuGet packages list with component details. 
-
 To add Blazor Accordion component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search for [Syncfusion.Blazor.Navigations](https://www.nuget.org/packages/Syncfusion.Blazor.Navigations/) and then install it. Alternatively, you can utilize the following package manager command to achieve the same.
 
 {% tabs %}
@@ -42,6 +40,8 @@ PM> NuGet\Install-Package Syncfusion.Blazor.Navigations -Version {{ site.release
 {% endhighlight %}
 {% endtabs %}
 
+N> Syncfusion Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to [NuGet packages topic](https://blazor.syncfusion.com/documentation/nuget-packages) for available NuGet packages list with component details.
+
 ## Register Syncfusion Blazor Service
 
 Open **~/_Imports.razor** file and import the Syncfusion.Blazor namespace.
@@ -50,6 +50,7 @@ Open **~/_Imports.razor** file and import the Syncfusion.Blazor namespace.
 {% highlight razor tabtitle="~/_Imports.razor" %}
 
 @using Syncfusion.Blazor
+@using Syncfusion.Blazor.Navigations
 
 {% endhighlight %}
 {% endtabs %}
@@ -142,18 +143,7 @@ N> Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/docume
 
 ## Add Blazor Accordion component
 
-* Open **~/_Imports.razor** file or any other page under the `~/Pages` folder where the component is to be added and import the **Syncfusion.Blazor.Navigations** namespace.
-
-{% tabs %}
-{% highlight razor tabtitle="~/Imports.razor" %}
-
-@using Syncfusion.Blazor
-@using Syncfusion.Blazor.Navigations
-
-{% endhighlight %}
-{% endtabs %}
-
-* Now, add the Syncfusion Blazor Accordion component in razor file. Here, the Accordion component is added in the **~/Pages/Index.razor** file under the **~/Pages** folder.
+* Add the Syncfusion Blazor Accordion component in the **~/Pages/Index.razor** file under the **~/Pages** folder.
 
 {% tabs %}
 {% highlight razor %}
@@ -177,7 +167,7 @@ N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-
 
 ## Initialize Accordion using Template
 
-The following code explains how to initialize accordion using `Template`.
+The following code explains how to initialize Blazor Accordion using `Templates`.
 
 {% highlight cshtml %}
 
@@ -193,4 +183,4 @@ The following code explains how to initialize accordion using `Template`.
 2. [Getting Started with Syncfusion Blazor for client-side in Visual Studio](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-visual-studio)
 3. [Getting Started with Syncfusion Blazor for server-side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-dotnet-cli)
 
-N> You can also explore our [Blazor Accordion example](https://blazor.syncfusion.com/demos/accordion/default-functionalities?theme=bootstrap5) that shows you how to render and configure the accordion.
+N> You can also explore our [Blazor Accordion example](https://blazor.syncfusion.com/demos/accordion/default-functionalities?theme=bootstrap5) that shows you how to render and configure the Accordion.
