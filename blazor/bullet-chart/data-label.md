@@ -43,6 +43,8 @@ Data Labels are used to identify the value of actual bar in the [Blazor Bullet C
 }
 ```
 
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/rthqDmVmVyzCyIgn?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
+
 ## Data label customization
 
 Data Labels color, opacity, font size, font family, font weight, and font style can be customized using the [BulletChartDataLabelStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartDataLabelStyle.html).
@@ -66,3 +68,4 @@ Data Labels color, opacity, font size, font family, font weight, and font style 
 N> Refer to the [code block](#data-labels-in-blazor-bullet-chart-component) to know about the property value of the **BulletChartData**.
 
 ![Blazor Bullet Chart with Data Labels](images/blazor-bullet-chart-data-label.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LNhADGBwVyIWKUec?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
