@@ -1393,7 +1393,6 @@ The following example demonstrates how to create a custom filter using the Syncf
         public int? FromAge { get; set; }
         public int? ToAge { get; set; }
         public string FirstName { get; set; }
-        public string Area { get; set; }
         public DateTime? OrderDate { get; set; }
         public double? Freight { get; set; }
     }
