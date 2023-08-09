@@ -128,13 +128,13 @@ The following screenshot represents a DataGrid with initial searching.
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LjVUtdVLBWxwcCcO?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-> By default, datagrid searches all the bound column values. To customize this behavior, define the [Fields](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSearchSettings.html#Syncfusion_Blazor_Grids_GridSearchSettings_Fields) property of **GridSearchSettings** component.
+> By default, datagrid searches all the bound column values. To customize this behavior, define the `Fields` property of **GridSearchSettings** component.
 
 ## Search operators
 
 Search operators are symbols or keywords used to define the type of comparison or condition applied during a search operation. They help specify how the search key should match the data being searched. The [GridSearchSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSearchSettings.html).[Operator](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSearchSettings.html#Syncfusion_Blazor_Grids_GridSearchSettings_Operator)  property can be used to define the search operator in the grid.
 
-By default, the [GridSearchSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSearchSettings.html).[Operator](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSearchSettings.html#Syncfusion_Blazor_Grids_GridSearchSettings_Operator) is set to **contains**, which returns the values contains the search key. The following operators are supported in searching:
+By default, the `GridSearchSettings.Operator` is set to **contains**, which returns the values contains the search key. The following operators are supported in searching:
 
 The following operators are supported in searching:
 
@@ -260,6 +260,69 @@ The following example demonstrates how to search specific columns such as **Cust
 ```
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rDhKZnBLhrqiRsez?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+## Search on each key stroke
+
+By default, the datagrid will initiate searching operation after the Enter key is pressed. If you want to initiate the searching operation while typing the values in the search box, then you can invoke the Search method of the datagrid in the Input event of the SfTextBox.
+
+```cshtml
+@using Syncfusion.Blazor.Data
+@using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor.Inputs
+@using Syncfusion.Blazor.Navigations
+
+<SfGrid @ref="DefaultGrid" DataSource="@Orders" AllowSorting="true" AllowFiltering="true" AllowPaging="true">
+    <SfToolbar>
+        <ToolbarItems>
+            <ToolbarItem Type="ItemType.Input" Align="Syncfusion.Blazor.Navigations.ItemAlign.Right">
+                <Template>
+                    <SfTextBox Placeholder="Enter values to search" Input="OnInput"></SfTextBox>
+                    <span class="e-search-icon e-icons"></span>
+                </Template>
+            </ToolbarItem>
+        </ToolbarItems>
+    </SfToolbar>
+    <GridColumns>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" IsPrimaryKey="true" TextAlign="@TextAlign.Center" Width="140"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(Order.Verified) HeaderText="Freight" Width="150"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code{
+    private SfGrid<Order> DefaultGrid;
+
+    public List<Order> Orders { get; set; }
+
+    public void OnInput(InputEventArgs args)
+    {
+        this.DefaultGrid.Search(args.Value);
+    }
+
+    public class Order
+    {
+        public int OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public bool Verified { get; set; }
+        public double? Freight { get; set; }
+    }
+
+    protected override void OnInitialized()
+    {
+        Orders = Enumerable.Range(1, 75).Select(x => new Order()
+        {
+            OrderID = 1000 + x,
+            CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
+            Verified = (new bool[] { true, false })[new Random().Next(2)],
+            Freight = 2.1 * x,
+        }).ToList();
+    }
+}
+```
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BDBqZHVBLhoVitVH?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 
 ## Perform search operation in Grid using multiple keywords
 
@@ -392,64 +455,65 @@ In the below code example, the **Order ID** column search functionality is disab
 
 > You can refer to our [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap4) to understand how to present and manipulate data.
 
-## Immediate searching
 
-By default, the datagrid will initiate searching operation after the Enter key is pressed. If you want to initiate the searching operation while typing the values in the search box, then you can invoke the Search method of the datagrid in the Input event of the SfTextBox.
+## Clear search by external button
+
+The Syncfusion Grid component provides a capability to clear searched data in the grid. This functionality offers the ability to reset or clear any active search filters that have been applied to the grid’s data.
+
+To clear the searched grid records from an external button, you can set the [SearchSettings.key](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_SearchSettings) property to an empty string to clear the search text.
+
+The following example demonstrates how to clear the searched records using an external button.
 
 ```cshtml
-@using Syncfusion.Blazor.Data
-@using Syncfusion.Blazor.Grids
-@using Syncfusion.Blazor.Inputs
-@using Syncfusion.Blazor.Navigations
+@page "/counter"
 
-<SfGrid @ref="DefaultGrid" DataSource="@Orders" AllowSorting="true" AllowFiltering="true" AllowPaging="true">
-    <SfToolbar>
-        <ToolbarItems>
-            <ToolbarItem Type="ItemType.Input" Align="Syncfusion.Blazor.Navigations.ItemAlign.Right">
-                <Template>
-                    <SfTextBox Placeholder="Enter values to search" Input="OnInput"></SfTextBox>
-                    <span class="e-search-icon e-icons"></span>
-                </Template>
-            </ToolbarItem>
-        </ToolbarItems>
-    </SfToolbar>
+@using Syncfusion.Blazor.Buttons
+@using Syncfusion.Blazor.Grids
+
+@{
+    var Tool = (new List<string>() { "Search" });
+}
+<SfButton Content="ClearSearch" OnClick="clearSearchBtnHandler"></SfButton>
+<SfGrid @ref="DefaultGrid" DataSource="@Orders" AllowSorting="true" Toolbar=@Tool>
     <GridColumns>
-        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" IsPrimaryKey="true" TextAlign="@TextAlign.Center" Width="140"></GridColumn>
-        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.Verified) HeaderText="Freight" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" TextAlign="TextAlign.Right" Width="130" Type="ColumnType.Date"></GridColumn>
+        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
 
-@code{
+@code {
     private SfGrid<Order> DefaultGrid;
 
     public List<Order> Orders { get; set; }
 
-    public void OnInput(InputEventArgs args)
+    protected override void OnInitialized()
     {
-        this.DefaultGrid.Search(args.Value);
+        Orders = Enumerable.Range(1, 75).Select(x => new Order()
+            {
+                OrderID = 1000 + x,
+                CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
+                Freight = 2.1 * x,
+                OrderDate = DateTime.Now.AddDays(-x),
+            }).ToList();
     }
 
     public class Order
     {
-        public int OrderID { get; set; }
+        public int? OrderID { get; set; }
         public string CustomerID { get; set; }
-        public bool Verified { get; set; }
+        public DateTime? OrderDate { get; set; }
         public double? Freight { get; set; }
     }
 
-    protected override void OnInitialized()
+    public void clearSearchBtnHandler()
     {
-        Orders = Enumerable.Range(1, 75).Select(x => new Order()
-        {
-            OrderID = 1000 + x,
-            CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
-            Verified = (new bool[] { true, false })[new Random().Next(2)],
-            Freight = 2.1 * x,
-        }).ToList();
+        this.DefaultGrid.SearchSettings.Key = "";
+        DefaultGrid.Refresh();
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VtrqNlZYgKQjOpNz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BDBqZHVBLhoVitVH?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+> You can also clear the searched records by using the clear icon within the search input field.
