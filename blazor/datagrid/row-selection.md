@@ -54,7 +54,7 @@ To select a row at initial rendering, set the [SelectedRowIndex](https://help.sy
 
 ## Get selected row indexes
 
-You can get the selected row indexes by using [GetSelectedRowIndexes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GetSelectedRowIndexes) method.
+You can get the selected row indexes by using [GetSelectedRowIndexesAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GetSelectedRowIndexesAsync) method.
 
 ```cshtml
 @using Syncfusion.Blazor
@@ -94,7 +94,7 @@ You can get the selected row indexes by using [GetSelectedRowIndexes](https://he
 
     public async Task GetSelectedRecords(RowSelectEventArgs<Order> args)
     {
-        SelectedRowIndexes = await this.Grid.GetSelectedRowIndexes();
+        SelectedRowIndexes = await this.Grid.GetSelectedRowIndexesAsync();
         TotalValue = SelectedRowIndexes.ToArray();
         SelectedValue = "";
         foreach (var data in TotalValue)
@@ -114,7 +114,7 @@ You can get the selected row indexes by using [GetSelectedRowIndexes](https://he
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VtBgjQrmVChElqBg?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hjLAXvNOgkbKcFnw?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Simple multiple row selection
 
@@ -160,7 +160,7 @@ You can select multiple rows by clicking on rows one by one. This will not desel
 
 ## Multiple selection based on condition
 
-You can select multiple rows at the initial rendering of the datagrid by using [SelectRows](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_SelectRows_System_Double___) method. The initial selection is based on the given condition. Here the initial selection is based on the row with the **CustomerID** as **ALFKI**. We have used [GetCurrentViewRecords](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GetCurrentViewRecords) method to get current page records and applied the condition.
+You can select multiple rows at the initial rendering of the datagrid by using [SelectRowsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_SelectRowsAsync_System_Int32___) method. The initial selection is based on the given condition. Here the initial selection is based on the row with the **CustomerID** as **ALFKI**. We have used [GetCurrentViewRecordsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GetCurrentViewRecordsAsync) method to get current page records and applied the condition.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -195,7 +195,7 @@ You can select multiple rows at the initial rendering of the datagrid by using [
 
     public async Task Data(object args)
     {
-        var Source = await Grid.GetCurrentViewRecords();
+        var Source = await Grid.GetCurrentViewRecordsAsync();
         var IndexNum = 0;
         SelectIndex = new List<int>();
         foreach (var record in Source)
@@ -206,7 +206,7 @@ You can select multiple rows at the initial rendering of the datagrid by using [
             }
             IndexNum++;
         }
-        await Grid.SelectRows(SelectIndex.ToArray());
+        await Grid.SelectRowsAsync(SelectIndex.ToArray());
     }
 
     public class Order
@@ -219,7 +219,7 @@ You can select multiple rows at the initial rendering of the datagrid by using [
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BDrUZQrQhLGVGDIX?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hXhKXltkJNrgyFRD?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Toggle selection
 
