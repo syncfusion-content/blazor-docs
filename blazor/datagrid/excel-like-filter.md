@@ -239,7 +239,7 @@ Before opening a filter dialog for each column, the `OnActionBegin` event will b
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BXLKNRrMppsQrAky?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-##  Customize the List Display within the Excel Filter Dialog in Excel
+##  Customize how the list is displayed within the Excel Filter Dialog
 
 To customize List inside the Excel filter dialog within the datagrid, use the [OnActionBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnActionBegin) event. This event uses Before opening a filter dialog, verify the [RequestType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ActionEventArgs-1.html#Syncfusion_Blazor_Grids_ActionEventArgs_1_RequestType) argument as `FilterBeforeOpen`. At that point, the [CheckboxListData](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ActionEventArgs-1.html#Syncfusion_Blazor_Grids_ActionEventArgs_1_CheckboxListData) argument is used to assign the custom data source for the checkbox list. This `CheckboxListData` is utilized to populate the customized list in the Excel filter dialog.
 
