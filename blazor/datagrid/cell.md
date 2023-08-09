@@ -74,7 +74,7 @@ The auto wrap feature allows the cell content in the grid to wrap to the next li
 
 > * When a column width is not specified, then auto wrap of columns will be adjusted with respect to the DataGrid's width.
 <br/> * If a column’s header text contains no white space, the text may not be wrapped.
-<br/> * If the content of a cell contains HTML tags, the Autowrap functionality may not work as expected. In such cases, you can use the **headerTemplate** and **template** properties of the column to customize the appearance of the header and cell content.
+<br/> * If the content of a cell contains HTML tags, the Autowrap functionality may not work as expected. In such cases, you can use the [HeaderTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_HeaderTemplate) and [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_Template) properties of the column to customize the appearance of the header and cell content.
 
 The following example demonstrates how to set the allowTextWrap property to true and specify the wrap mode as Content by setting the [TextWrapSettings.WrapMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridTextWrapSettings.html#Syncfusion_Blazor_Grids_GridTextWrapSettings_WrapMode) property.
 
@@ -210,9 +210,11 @@ The following screenshot represents a DataGrid with customized cell styles.
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hDBgDRViBfQTdcDr?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
+> The  [QueryCellInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.QueryCellInfoEventArgs-1.html) event is triggered for every cell of the grid, so it may impact the performance of the grid whether used to modify a large number of cells.
+
 ### Using CSS
 
-You can apply styles to the cells using CSS selectors. The Grid provides a class name for each cell element, which you can use to apply styles to that specific cell or cells in a particular column. The e-rowcell class is used to style the row cells, and the e-selectionbackground class is used to change the background color of the selected row.
+You can apply styles to the cells using CSS selectors. The Grid provides a class name for each cell element, which you can use to apply styles to that specific cell or cells in a particular column. The `e-rowcell` class is used to style the row cells, and the `e-selectionbackground` class is used to change the background color of the selected row.
 
 ```cshtml
 <style>
@@ -267,9 +269,11 @@ The following example demonstrates how to customize the appearance of a specific
 }
 ```
 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNLANFtEpCOkMFqY?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 ### Using property
 
-To customize the style of grid cells, define [CustomAttributes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ColumnModel.html#Syncfusion_Blazor_Grids_ColumnModel_CustomAttributes)  property to the column definition object. The [CustomAttributes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ColumnModel.html#Syncfusion_Blazor_Grids_ColumnModel_CustomAttributes)  property takes an object with the name-value pair to customize the CSS properties for grid cells. You can also set multiple CSS properties to the custom class using the customAttributes property.
+To customize the style of grid cells, define [CustomAttributes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ColumnModel.html#Syncfusion_Blazor_Grids_ColumnModel_CustomAttributes)  property to the GridColumn  definition object. The [CustomAttributes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ColumnModel.html#Syncfusion_Blazor_Grids_ColumnModel_CustomAttributes)  property takes an object with the name-value pair to customize the CSS properties for grid cells. You can also set multiple CSS properties to the custom class using the customAttributes property.
 
 ```cshtml
 <style>
@@ -324,7 +328,7 @@ The following example demonstrates how to customize the appearance of the **Orde
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LtrKDdBCVfEITnUS?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-> * Custom attributes can be used to customize any cell in the grid, including header and footer cells.
+> Custom attributes can be used to customize any cell in the grid, including header and footer cells.
 
 ## Clip mode
 
