@@ -13,6 +13,8 @@ Group footer and caption aggregates in the Syncfusion Blazor Grid component allo
 
 > When working with group aggregates in Syncfusion Grid, it is important to set the property **AllowGrouping** of the column to true.
 
+To maintain grouped columns in the grid after grouping, set [showGroupedColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridGroupSettings.html#Syncfusion_Blazor_Grids_GridGroupSettings_ShowGroupedColumn) to true.
+
 ## Group footer aggregates
 
 Group footer aggregates are displayed in the footer cells of each group. These cells appear at the bottom of each group and provide aggregate values based on the grouped data. To display group footer aggregates, you need to provide a template using the `GroupFooterTemplate` property. The template will be used to render the aggregate values in the group footer cells.
