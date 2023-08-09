@@ -63,8 +63,6 @@ The following sample code demonstrates binding data to the DataGrid component th
 }
 ```
 
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/rtVgXlDLUTiyyLEI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
-
 ## Url adaptor
 
 The `UrlAdaptor` acts as the base adaptor for interacting with remote data services. Most of the built-in adaptors are derived from the `UrlAdaptor`.
@@ -94,8 +92,6 @@ The following sample code demonstrates binding data to the DataGrid component th
     }
 }
 ```
-
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BZBgDljBKpJnxNze?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 N> The above mentioned URL is given for reference purposes. In that place, you can provide your service URL.
 
@@ -139,8 +135,6 @@ The following sample code demonstrates binding remote data to the DataGrid compo
     }
 }
 ```
-
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LDrgXvNhAJSRbQAy?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 N> By default, `ODataAdaptor` is used by DataManager.
 
@@ -207,8 +201,6 @@ The following sample code demonstrates binding remote data to the DataGrid compo
     }
 }
 ```
-
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/rZVKXvXBqpcLOyLi?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 `WebApiAdaptor` expects JSON response from the server and the response object should contain properties `Items` and `Count` whose values are collection of entities and total count of the entities respectively.
 
