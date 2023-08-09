@@ -89,7 +89,7 @@ PM> NuGet\Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversi
 Refer the theme style sheet from NuGet in the `<head>` of **wwwroot/index.html** file in the client web app.
 
 {% tabs %}
-{% highlight cshtml tabtitle="~/index.html" %}
+{% highlight cshtml tabtitle="~/index.html" hl_lines="3" %}
 
 <head>
     ...
