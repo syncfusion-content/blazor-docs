@@ -17,7 +17,7 @@ In this section, we'll guide you through the process of adding Syncfusion's Blaz
 
 **Step 1:** Create a new Blazor Server app and name it **PDFViewerGettingStarted**.
 
-N> The SfPdfViewer2 component is supported from .NET 6.0 onwards.
+N> The PDF Viewer (Next Gen) component is supported from .NET 6.0 onwards.
 
 **Step 2:** Add the following NuGet packages into the Blazor Server app.
 * [Syncfusion.Blazor.SfPdfViewer](https://www.nuget.org/packages/Syncfusion.Blazor.SfPdfViewer) 
@@ -63,16 +63,16 @@ var app = builder.Build();
 {% highlight cshtml %}
 
 <head>
-    <!-- Syncfusion Blazor SfPdfViewer controls theme style sheet -->
+    <!-- Syncfusion Blazor PDF Viewer (Next Gen) control's theme style sheet -->
     <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
-    <!-- Syncfusion Blazor SfPdfViewer controls scripts -->
+    <!-- Syncfusion Blazor PDF Viewer (Next Gen) control's scripts -->
     <script src="_content/Syncfusion.Blazor.SfPdfViewer/scripts/syncfusion-blazor-sfpdfviewer.min.js" type="text/javascript"></script>
 </head>
 
 {% endhighlight %}
 {% endtabs %}
 
-**Step 6:** Add the Syncfusion SfPdfViewer component in the **~/Pages/Index.razor** file
+**Step 6:** Add the Syncfusion PDF Viewer (Next Gen) component in the **~/Pages/Index.razor** file
 
 {% tabs %}
 {% highlight razor %}
@@ -87,7 +87,7 @@ var app = builder.Build();
 {% endhighlight %}
 {% endtabs %}
 
-N> If you don't provide the `DocumentPath` property value, the SfPdfViewer component will be rendered without loading the PDF document. Users can then use the **open** option from the toolbar to browse and open the PDF as required.
+N> If you don't provide the `DocumentPath` property value, the PDF Viewer (Next Gen) component will be rendered without loading the PDF document. Users can then use the **open** option from the toolbar to browse and open the PDF as required.
 
 Run the application, and the PDF file will be displayed using Syncfusion's Blazor PDF Viewer (Next Gen) component in your browser.
 
@@ -95,8 +95,8 @@ Run the application, and the PDF file will be displayed using Syncfusion's Blazo
 
 ## See also
 
-* [Getting Started with Blazor SfPdfViewer Component in Blazor WASM App](./web-assembly-application)
+* [Getting Started with Blazor PDF Viewer (Next Gen) Component in Blazor WASM App](./web-assembly-application)
 
-* [Getting Started with Blazor SfPdfViewer Component in WSL mode](./wsl-application)
+* [Getting Started with Blazor PDF Viewer (Next Gen) Component in WSL mode](./wsl-application)
 
 * [Learn different ways to add script reference in Blazor Application](https://blazor.syncfusion.com/documentation/common/adding-script-references)
