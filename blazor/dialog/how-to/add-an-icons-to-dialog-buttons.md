@@ -66,6 +66,8 @@ In the following code, dialog footer buttons are customized with icons using the
 
 ```
 
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/hDhAtvDgTNLzExeG?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
+
 In the following code, dialog footer buttons are customized with icons using the `FooterTemplate` template property.
 
 ```cshtml
