@@ -89,7 +89,7 @@ This section explains the list of events of the Numeric TextBox component which 
 
 ## ValueChange
 
-`ValueChange` event triggers when the NumericTextBox got focus in.
+`ValueChange` event will only trigger when the component loses focus.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
