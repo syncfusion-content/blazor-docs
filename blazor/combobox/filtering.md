@@ -88,8 +88,6 @@ The ComboBox component filter queries can be customized. You can also use your o
 }
 ```
 
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LNhAZvNrMoOdAYDf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
-
 ## Prevent popup opening when filtering
 
 To prevent the ComboBox dropdown from opening when filtering is applied, you can use the [BeforeOpenEventArgs.Cancel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.BeforeOpenEventArgs.html#Syncfusion_Blazor_DropDowns_BeforeOpenEventArgs_Cancel) argument in the [BeforeOpenEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.BeforeOpenEventArgs.html). The `BeforeOpenEventArgs.Cancel` argument is a boolean value that can be set to true to cancel the dropdown opening, or false to allow the dropdown to open.
@@ -104,8 +102,6 @@ In the following example, the isTyped flag is used to track whether the filterin
 
 {% endhighlight %}
 
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LDVUXvNBWdtncbqX?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
-
 ## Autofill
 
 Specifies whether the input field of the control will automatically suggest and fill in the first matched item, as the user types based on the items in the control's data source. If no matches are found, the input field will not be filled and no action will occur. Default value of [Autofill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfComboBox-2.html#Syncfusion_Blazor_DropDowns_SfComboBox_2_Autofill) is `false`.
@@ -117,4 +113,3 @@ Specifies whether the input field of the control will automatically suggest and 
 {% endhighlight %} 
 
 ![Blazor ComboBox with Autofill property](./images/filtering/blazor_combobox_with-autofill-property.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/hjhAZvtBinCSSstt?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
