@@ -96,7 +96,7 @@ await builder.Build().RunAsync();
 
 ## Add style sheet
 
-To add theme to the app, open the NuGet package manager in Visual Studio (Tools → NuGet Package Manager → Manage NuGet Packages for Solution), search for [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) and then install it. Then, the theme style sheet from NuGet can be referred as follows using [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets),
+To add theme to the app, open the NuGet package manager in Visual Studio (Tools → NuGet Package Manager → Manage NuGet Packages for Solution), search for [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) and then install it. Alternatively, you can utilize the following package manager command to achieve the same.
 
 {% tabs %}
 {% highlight nuget tabtitle="Package Manager" %}
@@ -106,11 +106,13 @@ PM> NuGet\Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversi
 {% endhighlight %}
 {% endtabs %}
 
+The theme style sheet from NuGet can be referred as follows using [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets).
+
 * For .NET 6 Blazor Server App, add the Syncfusion bootstrap5 theme in the `<head>` of the **~/Pages/_Layout.cshtml** file.
 
 * For .NET 7 Blazor Server App, add the Syncfusion bootstrap5 theme in the `<head>` of the **~/Pages/_Host.cshtml** file.
 
-* For Blazor WebAssembly App, refer the theme style sheet from NuGet in the `<head>` of **wwwroot/index.html** file in the client web app.
+* For Blazor WebAssembly App, refer the theme style sheet from NuGet in the `<head>` of **wwwroot/index.html** file.
 
 ```cshtml
 <head>
@@ -125,9 +127,9 @@ N> Checkout the [Blazor Themes topic](https://blazor.syncfusion.com/documentatio
 
  In this getting started walk-through, the required scripts are referred using [Static Web Assets](https://blazor.syncfusion.com/documentation/common/adding-script-references#static-web-assets) externally inside the `<head>` as follows. 
 
-* For **.NET 6** app, refer script in the `<head>` of the **~/Pages/_Layout.cshtml** file.
+* For **.NET 6** Blazor Server app, refer script in the `<head>` of the **~/Pages/_Layout.cshtml** file.
 
-* For **.NET 7** app, refer script in the `<head>` of the **~/Pages/_Host.cshtml** file.
+* For **.NET 7** Blazor WebAssembly app, refer script in the `<head>` of the **~/Pages/_Host.cshtml** file.
 
 * For Blazor WebAssembly App, refer script in the `<head>` of the **~/index.html** file.
 
@@ -165,7 +167,7 @@ N> Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/docume
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/Accordion).
 
-## Initialize Accordion using Template
+## Initialize Blazor Accordion using Templates
 
 The following code explains how to initialize Blazor Accordion using `Templates`.
 
@@ -175,7 +177,7 @@ The following code explains how to initialize Blazor Accordion using `Templates`
 
 {% endhighlight %}
 
-![Blazor Accordion with Header Template](./images/blazor-accordion-header-template.png)
+![Blazor Accordion with Templates](./images/blazor-accordion-header-template.png)
 
 ## See also
 
