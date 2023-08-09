@@ -71,7 +71,6 @@ The panels within the layout can be easily positioned or ordered using the `Row`
 The following screenshot shows the positioning of panels within the dashboard layout using the row and column properties of the panels.
 
 ![Changing Panels Position in Blazor DashBoardLayout](../images/blazor-dashboard-layout-panel-position.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/rjLgNFNhgstVSRHF?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Sizing of panels
 
@@ -121,4 +120,3 @@ These properties are helpful in designing a dashboard, where the content of each
 The following screenshot shows the sizing of panels within the dashboard layout using the SizeX and SizeY properties of the panels.
 
 ![Changing Panel Size in Blazor DashboardLayout](../images/blazor-admin-template-layout-panel-size.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/hZhAjvNrAWXaKXer?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->

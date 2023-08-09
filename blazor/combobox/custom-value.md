@@ -79,4 +79,3 @@ You can add custom value to the ComboBox component. When the typed character(s) 
 
 
 ![Blazor ComboBox with custom value](./images/blazor-combobox-custom-value.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VXVUjlZLVUxvTCDA?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->

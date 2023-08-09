@@ -21,7 +21,6 @@ The [Blazor QR Code](https://www.syncfusion.com/blazor-components/blazor-barcode
 ```
 
 ![QR Code in Blazor Barcode Component](images/blazor-barcode-with-qrcode.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/hNVUXcBbqsBiOTzq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Customizing the Barcode color
 
@@ -35,7 +34,6 @@ A page or printed media containing a barcode often appears colorful in the backg
 ```
 
 ![Customizing QR Code Color in Blazor Barcode](images/blazor-barcode-qrcode-color-customization.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/hZhAZGLFUMHaEsIP?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Customizing the Barcode dimension
 
@@ -62,7 +60,6 @@ In barcode generators, you can customize the barcode text by using the display [
 ```
 
 ![Customizing the Text for QR Code in Blazor Barcode](images/blazor-barcode-qrcode-text-customization.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/rtVUZmLlqMlRhKUe?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Error Correction Level
 
@@ -82,8 +79,6 @@ Error Correction Level Table
     <QRCodeGeneratorDisplayText Visibility="false"></QRCodeGeneratorDisplayText>
 </SfQRCodeGenerator>
 ```
-
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/hXVUDmrPgiufWqEg?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Event
 
