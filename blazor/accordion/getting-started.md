@@ -30,9 +30,9 @@ You can create **Blazor Server App** or **Blazor WebAssembly App** using Visual 
 
 ## Install Syncfusion Blazor Navigations NuGet in the App
 
-Syncfusion Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). To use Syncfusion Blazor components in the application, add reference to the corresponding NuGet. Refer to [NuGet packages topic](https://blazor.syncfusion.com/documentation/nuget-packages) for available NuGet packages list with component details and [Benefits of using individual NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages#benefits-of-using-individual-nuget-packages). 
+Syncfusion Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to [NuGet packages topic](https://blazor.syncfusion.com/documentation/nuget-packages) for available NuGet packages list with component details. 
 
-To add Blazor Accordion component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search for [Syncfusion.Blazor.Navigations](https://www.nuget.org/packages/Syncfusion.Blazor.Navigations/) and then install it.
+To add Blazor Accordion component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search for [Syncfusion.Blazor.Navigations](https://www.nuget.org/packages/Syncfusion.Blazor.Navigations/) and then install it. Alternatively, you can utilize the following package manager command to achieve the same.
 
 {% tabs %}
 {% highlight nuget tabtitle="Package Manager" %}
@@ -40,7 +40,7 @@ To add Blazor Accordion component in the app, open the NuGet package manager in 
 PM> NuGet\Install-Package Syncfusion.Blazor.Navigations -Version {{ site.releaseversion }}
 
 {% endhighlight %}
-{% endtabs %}   
+{% endtabs %}
 
 ## Register Syncfusion Blazor Service
 
@@ -56,12 +56,8 @@ Open **~/_Imports.razor** file and import the Syncfusion.Blazor namespace.
 
 Now, register the Syncfusion Blazor Service in the Blazor Server App or Blazor WebAssembly App. 
 
-### Blazor Server App
-
-* For **.NET 6 and .NET 7** app, open the **~/Program.cs** file and register the Syncfusion Blazor Service.
-
 {% tabs %}
-{% highlight c# tabtitle=".NET 6 & .NET 7 (~/Program.cs)" hl_lines="3 10" %}
+{% highlight c# tabtitle="Blazor Server App (~/Program.cs)" hl_lines="3 10" %}
 
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Web;
@@ -78,14 +74,7 @@ var app = builder.Build();
 ....
 
 {% endhighlight %}
-{% endtabs %}
-
-### Blazor WebAssembly App
-
-Open **~/Program.cs** file and register the Syncfusion Blazor Service in the client web app.
-
-{% tabs %}
-{% highlight C# tabtitle=".NET 6 & .NET 7 (~/Program.cs)" hl_lines="3 11" %}
+{% highlight C# tabtitle="Blazor WebAssembly App (~/Program.cs)" hl_lines="3 11" %}
 
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
@@ -106,9 +95,7 @@ await builder.Build().RunAsync();
 
 ## Add style sheet
 
-Checkout the [Blazor Themes topic](https://blazor.syncfusion.com/documentation/appearance/themes) to learn different ways ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference) and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)) to refer themes in Blazor application, and to have the expected appearance for Syncfusion Blazor components. Here, the theme is referred using [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Refer to [Enable static web assets usage](https://blazor.syncfusion.com/documentation/appearance/themes#enable-static-web-assets-usage) topic to use static assets in your project.
-
-To add theme to the app, open the NuGet package manager in Visual Studio (Tools → NuGet Package Manager → Manage NuGet Packages for Solution), search for [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) and then install it. Then, the theme style sheet from NuGet can be referred as follows,
+To add theme to the app, open the NuGet package manager in Visual Studio (Tools → NuGet Package Manager → Manage NuGet Packages for Solution), search for [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) and then install it. Then, the theme style sheet from NuGet can be referred as follows using [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets),
 
 {% tabs %}
 {% highlight nuget tabtitle="Package Manager" %}
@@ -118,96 +105,40 @@ PM> NuGet\Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversi
 {% endhighlight %}
 {% endtabs %}
 
-### Blazor Server App
+* For .NET 6 Blazor Server App, add the Syncfusion bootstrap5 theme in the `<head>` of the **~/Pages/_Layout.cshtml** file.
 
-* For .NET 6 app, add the Syncfusion bootstrap5 theme in the `<head>` of the **~/Pages/_Layout.cshtml** file.
+* For .NET 7 Blazor Server App, add the Syncfusion bootstrap5 theme in the `<head>` of the **~/Pages/_Host.cshtml** file.
 
-* For .NET 7 app, add the Syncfusion bootstrap5 theme in the `<head>` of the **~/Pages/_Host.cshtml** file.
+* For Blazor WebAssembly App, refer the theme style sheet from NuGet in the `<head>` of **wwwroot/index.html** file in the client web app.
 
-{% tabs %}
-{% highlight cshtml tabtitle=".NET 6 (~/_Layout.cshtml)" hl_lines="3" %}
-
+```cshtml
 <head>
     ...
     <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
 </head>
+```
 
-{% endhighlight %}
-
-{% highlight cshtml tabtitle=".NET 7 (~/_Host.cshtml)" hl_lines="3" %}
-
-<head>
-    ...
-    <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
-</head>
-
-{% endhighlight %}
-{% endtabs %}
-
-### Blazor WebAssembly App
-
-For Blazor WebAssembly App, refer the theme style sheet from NuGet in the `<head>` of **wwwroot/index.html** file in the client web app.
-
-{% tabs %}
-{% highlight cshtml tabtitle="~/index.html" hl_lines="3" %}
-
-<head>
-    ...
-    <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
-</head>
-
-{% endhighlight %}
-{% endtabs %}
+N> Checkout the [Blazor Themes topic](https://blazor.syncfusion.com/documentation/appearance/themes) to learn different ways ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference) and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)) to refer themes in Blazor application.
 
 ## Add script reference
 
-Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/documentation/common/adding-script-references) to learn different ways to add script reference in Blazor Application. In this getting started walk-through, the required scripts are referred using [Static Web Assets](https://blazor.syncfusion.com/documentation/common/adding-script-references#static-web-assets) externally inside the `<head>` as follows. Refer to [Enable static web assets usage](https://blazor.syncfusion.com/documentation/common/adding-script-references#enable-static-web-assets-usage) topic to use static assets in your project.
-
-### Blazor Server App
+ In this getting started walk-through, the required scripts are referred using [Static Web Assets](https://blazor.syncfusion.com/documentation/common/adding-script-references#static-web-assets) externally inside the `<head>` as follows. 
 
 * For **.NET 6** app, refer script in the `<head>` of the **~/Pages/_Layout.cshtml** file.
 
 * For **.NET 7** app, refer script in the `<head>` of the **~/Pages/_Host.cshtml** file.
 
-{% tabs %}
-{% highlight cshtml tabtitle=".NET 6 (~/_Layout.cshtml)" hl_lines="4" %}
+* For Blazor WebAssembly App, refer script in the `<head>` of the **~/index.html** file.
 
+```
 <head>
     ....
     <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
     <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
 </head>
+```
 
-{% endhighlight %}
-
-{% highlight cshtml tabtitle=".NET 7 (~/_Host.cshtml)" hl_lines="4" %}
-
-<head>
-    ....
-    <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
-    <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
-</head>
-
-{% endhighlight %}
-{% endtabs %}
-
-### Blazor WebAssembly App
-
-For Blazor WebAssembly App, refer script in the `<head>` of the **~/index.html** file.
-
-{% tabs %}
-{% highlight html tabtitle="~/index.html" hl_lines="4" %}
-
-<head>
-    ....
-    <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
-    <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
-</head>
-
-{% endhighlight %}
-{% endtabs %}
-
-N> Syncfusion recommends to reference scripts using [Static Web Assets](https://blazor.syncfusion.com/documentation/common/adding-script-references#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/common/adding-script-references#cdn-reference) and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator) by [disabling JavaScript isolation](https://blazor.syncfusion.com/documentation/common/adding-script-references#disable-javascript-isolation) for better loading performance of the Blazor application.
+N> Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/documentation/common/adding-script-references) to learn different ways to add script reference in Blazor Application. Make sure to [enable static web assets usage](https://blazor.syncfusion.com/documentation/common/adding-script-references#enable-static-web-assets-usage) to use static assets in your project.
 
 ## Add Blazor Accordion component
 
@@ -241,7 +172,6 @@ N> Syncfusion recommends to reference scripts using [Static Web Assets](https://
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to run the application. Then, the Syncfusion `Blazor Accordion` component will be rendered in the default web browser.
 
 ![Blazor Accordion Component](images/blazor-accordion-component.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/rXLAjxChfgKmjtsB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/Accordion).
 
@@ -256,7 +186,6 @@ The following code explains how to initialize accordion using `Template`.
 {% endhighlight %}
 
 ![Blazor Accordion with Header Template](./images/blazor-accordion-header-template.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VDhAjnWLTUCSIPex?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## See also
 
