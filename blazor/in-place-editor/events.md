@@ -13,7 +13,7 @@ This section explains the list of events of the In-place Editor's component whic
 
 ## BeginEdit
 
-The [BeginEdit](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InPlaceEditor.InPlaceEditorEvents-1.html#Syncfusion_Blazor_InPlaceEditor_InPlaceEditorEvents_1_BeginEdit) event is triggered right before transitioning from the default view to the edit mode.
+The [BeginEdit](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InPlaceEditor.InPlaceEditorEvents-1.html#Syncfusion_Blazor_InPlaceEditor_InPlaceEditorEvents_1_BeginEdit) event is fired before switching from the default view to the edit mode.
 
 
 ```cshtml
