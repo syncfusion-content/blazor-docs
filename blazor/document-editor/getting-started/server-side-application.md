@@ -32,7 +32,7 @@ To add Blazor DocumentEditor component in the app, open the NuGet package manage
 {% tabs %}
 {% highlight nuget tabtitle="Package Manager" %}
 
-PM> NuGet\Install-Package Syncfusion.Blazor.Calendars -Version {{ site.releaseversion }}
+PM> NuGet\Install-Package Syncfusion.Blazor.WordProcessor -Version {{ site.releaseversion }}
 
 {% endhighlight %}
 {% endtabs %}
