@@ -126,5 +126,3 @@ Deletable Chip allows you to delete a chip from Chip/ChipItems. It can be enable
 </SfChip>
 
 ```
-
-

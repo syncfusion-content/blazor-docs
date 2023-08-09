@@ -276,7 +276,7 @@ N> Syncfusion recommends to reference scripts using [Static Web Assets](https://
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to run the application. Then, the Syncfusion `Blazor Calendar` component will be rendered in the default web browser.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rDVqZRWRByOXxVqS?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Blazor Calendar Component](./images/blazor-calendar-component.png)
 
 ## Setting the Value, Min, and Max dates
 
@@ -298,8 +298,7 @@ Here, the Calendar allows you to select a date within the range from 5th to 27th
 {% endhighlight %}
 {% endtabs %}
 
-
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hZVUXRWxBxWLfGVQ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Selection in Blazor Calendar Component](./images/blazor-calendar-selection.png)
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/Calendar).
 

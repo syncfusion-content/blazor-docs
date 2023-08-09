@@ -491,6 +491,10 @@ Below table lists the importing theme path for the individual components.
         <td>@import 'blazor-themes/SCSS-Themes/pdfviewer/pdfviewer/{THEME-NAME}.scss'</td>
     </tr>
     <tr>
+        <td>ImageEditor</td>
+        <td>@import 'blazor-themes/SCSS-Themes/image-editor/image-editor/{THEME-NAME}.scss'</td>
+    </tr>
+    <tr>
         <td>Pivot Table</td>
         <td>@import 'blazor-themes/SCSS-Themes/pivotview/pivotview/{THEME-NAME}.scss'</td>
     </tr>
