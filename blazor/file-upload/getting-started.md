@@ -271,7 +271,7 @@ N> Syncfusion recommends to reference scripts using [Static Web Assets](https://
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to run the application. Then, the Syncfusion `Blazor File Upload` component will be rendered in the default web browser.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hZVKNRWoAACaQsJs?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Blazor FileUpload Component](./images/blazor-fileupload-component.png)
 
 ## Without server-side API endpoint
 
@@ -311,7 +311,7 @@ You can get the uploaded files as file stream in the [ValueChange](https://help.
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hXhqZRsIUgLvKHBG?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Blazor FileUpload displays Updated Files](./images/blazor-fileupload-with-updated-files.png)
 
 While clicking on the remove icon in the file list, you will get the [OnRemove](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.UploaderEvents.html#Syncfusion_Blazor_Inputs_UploaderEvents_OnRemove) event with removing file name as argument. So, you can write the remove handler inside OnRemove event to remove the particular file from desired location. Find the remove action code below.
 
@@ -442,7 +442,7 @@ You can allow the specific files alone to upload using the [AllowedExtensions](h
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BNhgXRieKUKefIeU?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Allowing Specific Files in Blazor FileUpload](./images/blazor-fileupload-allow-specific-file.png)
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/FileUpload).
 
