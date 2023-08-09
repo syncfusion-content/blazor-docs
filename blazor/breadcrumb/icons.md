@@ -29,6 +29,7 @@ To place the font icon on the Breadcrumb item, set the [IconCss](https://help.sy
 ```
 
 ![Blazor Breadcrumb Component](./images/blazor-Breadcrumb-items.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VDrgXQVlAzbGQUsy?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 N> By default, the icon is positioned to the left side of the item.
 
@@ -105,6 +106,7 @@ In the following example, Breadcrumb items are demonstrated with only icons by p
 ```
 
 ![Breadcrumb Sample](./images/icon-only.PNG)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LXBgNchlgINAGUbx?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Show icon only for first item
 
@@ -124,3 +126,4 @@ To show icon only for the first item in the Breadcrumb component, add icons to t
 ```
 
 ![Blazor Breadcrumb Component](./images/blazor-Breadcrumb-items.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BjhAXGBFqyCfVpSC?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->

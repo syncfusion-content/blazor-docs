@@ -42,6 +42,8 @@ Card image is supported to include a `Title` property for the image. By default,
 </SfCard>
 ```
 
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/hDLKtbtCixerENbH?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
+
 ## Divider
 
 Divider used to separate the elements inside the card. You can add divider inside the card elements to separate it. Set `EnableSeparator` property to `true` in card content for adding a divider.
@@ -66,3 +68,5 @@ Divider used to separate the elements inside the card. You can add divider insid
 </SfCard>
 
 ```
+
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/hDhKtFjMCGCBSYoH?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
