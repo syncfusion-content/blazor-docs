@@ -54,7 +54,6 @@ The following examples shows data filtering is done with the `StartsWith` type
 
 
 ![Filtering in Blazor AutoComplete](./images/blazor-autocomplete-filter.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LjBgNQhlWdXgAgPC?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Filter item count
 
@@ -93,7 +92,6 @@ Refer to the following example to restrict the suggestion list item counts as 3.
 
 
 ![Filtering Blazor AutoComplete Items based on Count](./images/blazor-autocomplete-filter-item-count.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LDBANmBvMRzPojTm?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Limit the minimum filter character
 
@@ -170,8 +168,6 @@ The following sample depicts how to filter the data with case-sensitive.
 }
 ```
 
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BNBqtGVviatlJLaZ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
-
 ## Custom filtering
 
 The AutoComplete component filter queries can be customized. You can also use your own filter libraries to filter data like Fuzzy search.
@@ -229,7 +225,6 @@ You can highlight the search text in the suggested list items of the autocomplet
 {% endhighlight %} 
 
 ![Blazor AutoComplete with highlight property](./images/filtering/blazor_autocomplete_highlight-property.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LjLqXwBPCYidAszw?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ### Highlighting Search character using method
 
@@ -247,4 +242,3 @@ You can highlight the search text in the suggested list items of the autocomplet
 {% endhighlight %} 
 
 ![Blazor AutoComplete with HighLightSearch method](./images/filtering/blazor_dropdown_highLightSearch-method.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LjLqXwBPCYidAszw?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->

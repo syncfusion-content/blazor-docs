@@ -228,8 +228,9 @@ The following example demonstrates the usage of header and footer template in th
 
 
 ![Blazor Dialog with Header and Footer Template](./images/blazor-dialog-header-footer-template.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/rXhUXPtAUsLIPajM?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
-## See Also
+## See also
 
 * [How to add an icon to dialog buttons](./how-to/add-an-icons-to-dialog-buttons)
 * [How to customize the dialog appearance](./how-to/customize-the-dialog-appearance)

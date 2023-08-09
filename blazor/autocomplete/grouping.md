@@ -57,4 +57,3 @@ In the following sample, vegetables are grouped according on its category using 
 
 
 ![Blazor AutoComplete Grouping](./images/blazor-autocomplete-grouping.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/rZhqjwLQzIhutCMJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
