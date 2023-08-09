@@ -92,7 +92,7 @@ PM> NuGet\Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversi
 * For .NET 7 app, add the Syncfusion bootstrap5 theme in the `<head>` of the **~/Pages/_Host.cshtml** file.
 
 {% tabs %}
-{% highlight cshtml tabtitle=".NET 6 (~/_Layout.cshtml)" %}
+{% highlight cshtml tabtitle=".NET 6 (~/_Layout.cshtml)" hl_lines="3" %}
 
 <head>
     ...
@@ -101,7 +101,7 @@ PM> NuGet\Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversi
 
 {% endhighlight %}
 
-{% highlight cshtml tabtitle=".NET 7 (~/_Host.cshtml)" %}
+{% highlight cshtml tabtitle=".NET 7 (~/_Host.cshtml)" hl_lines="3" %}
 
 <head>
     ...
