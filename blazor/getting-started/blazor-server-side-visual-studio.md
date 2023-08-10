@@ -30,7 +30,7 @@ Syncfusion Blazor components are available in [nuget.org](https://www.nuget.org/
 To add Blazor Calendar component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search for [Syncfusion.Blazor.Calendars](https://www.nuget.org/packages/Syncfusion.Blazor.Calendars/) and then install it.
 
 {% tabs %}
-{% highlight nuget tabtitle="Package Manager" %}
+{% highlight c# tabtitle="Package Manager" %}
 
 PM> NuGet\Install-Package Syncfusion.Blazor.Calendars -Version {{ site.releaseversion }}
 
@@ -80,7 +80,7 @@ Checkout the [Blazor Themes topic](https://blazor.syncfusion.com/documentation/a
 To add theme to the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search for [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) and then install it. Then, the theme style sheet from NuGet can be referred inside the `<head>` as follows,
 
 {% tabs %}
-{% highlight nuget tabtitle="Package Manager" %}
+{% highlight c# tabtitle="Package Manager" %}
 
 PM> NuGet\Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
 
