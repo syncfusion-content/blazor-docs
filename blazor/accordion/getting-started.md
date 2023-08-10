@@ -33,7 +33,7 @@ You can create **Blazor Server App** or **Blazor WebAssembly App** using Visual 
 To add Blazor Accordion component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search for [Syncfusion.Blazor.Navigations](https://www.nuget.org/packages/Syncfusion.Blazor.Navigations/) and then install it. Alternatively, you can utilize the following package manager command to achieve the same.
 
 {% tabs %}
-{% highlight nuget tabtitle="Package Manager" %}
+{% highlight c# tabtitle="Package Manager" %}
 
 PM> NuGet\Install-Package Syncfusion.Blazor.Navigations -Version {{ site.releaseversion }}
 
@@ -99,7 +99,7 @@ await builder.Build().RunAsync();
 To add theme to the app, open the NuGet package manager in Visual Studio (Tools → NuGet Package Manager → Manage NuGet Packages for Solution), search for [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) and then install it. Alternatively, you can utilize the following package manager command to achieve the same.
 
 {% tabs %}
-{% highlight nuget tabtitle="Package Manager" %}
+{% highlight c# tabtitle="Package Manager" %}
 
 PM> NuGet\Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
 
