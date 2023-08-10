@@ -60,7 +60,8 @@ The following code example shows how to display the critical path in the Gantt c
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VZBAXcBjWdxxCvVg?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Blazor Gantt Chart with Critical Path](images/blazor-gantt-chart-critical-path.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VZBAXcBjWdxxCvVg?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Critical Path Settings in Gantt Chart Component
 
@@ -118,7 +119,8 @@ By adjusting the slackValue, you can control which tasks are critical and ensure
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hNrADGLNCRwYxGye?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Critical Path with slack value](images/blazor-gantt-chart-critical-path-with-slack-value.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/hNrADGLNCRwYxGye?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Customize taskbar in critical path
 
@@ -191,4 +193,5 @@ The following code example shows how to customize the critical path taskbar in t
     }
 </style>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VDLKDGhZCHYtznzW?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Customize taskbar](images/blazor-gantt-chart-critical-path-customize-taskbar.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VDLKDGhZCHYtznzW?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->

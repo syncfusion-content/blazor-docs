@@ -61,7 +61,7 @@ public static List<TaskData> GetTaskCollection()
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rDhKNQWzhsgNlLyB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/rDhKNQWzhsgNlLyB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 N> * Indent/Outdent is not supported for Hierarchy Data.
 <br/> * ExpandCollapse State maintenance is not supported for Hierarchy Data.
@@ -115,7 +115,7 @@ The Gantt Chart component can be bound with self-referential data by mapping the
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LDLUNmWTVVYXGgTK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LDLUNmWTVVYXGgTK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ### DynamicObject binding
 
@@ -220,7 +220,7 @@ N> The [GetDynamicMemberNames](https://docs.microsoft.com/en-us/dotnet/api/syste
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VNhADmCThqAVimHL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VNhADmCThqAVimHL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ### ExpandoObject Binding
 
@@ -303,7 +303,7 @@ ExpandoObject can be bound to Gantt by assigning to the `DataSource` property. G
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LjLAZmWpLgeTLgkx?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LjLAZmWpLgeTLgkx?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 N> Here, we have provided list of reserved properties and the purpose used in Gantt Chart. We recommend to avoid these reserved properties for Internal purpose(To get rid of conflicts).
 
@@ -448,7 +448,8 @@ The [ObservableCollection](https://docs.microsoft.com/en-us/dotnet/api/system.co
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hDBKDQCprgOOHkbc?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Observable collection in Blazor Gantt Chart](images/blazor-gantt-chart-observable-collection.PNG)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/hDBKDQCprgOOHkbc?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ### INotifyPropertyChanged
 
@@ -565,8 +566,8 @@ In the below example, `TaskData` implements `INotifyPropertyChanged` and it rais
     }
 }
 ```
-
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hXBqXcszLJOYOlJx?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Property changed in Blazor Gantt Chart](images/blazor-gantt-chart-observable-property-changed.PNG)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/hXBqXcszLJOYOlJx?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Remote Data
 
@@ -603,7 +604,172 @@ You can use **WebApiAdaptor** to bind datagrid with Web API created using **ODat
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VZBUtGMzhScJMaMi?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Data Binding in Blazor Gantt Chart](images/blazor-gantt-chart-data-binding.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VZBUtGMzhScJMaMi?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
+
+### Binding with OData v4 services
+
+The ODataV4 is an improved version of OData protocols, and the [SfDataManager](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Data.SfDataManager.html) can also retrieve and consume OData v4 services. For more details on OData v4 services, refer to the [OData documentation](http://docs.oasis-open.org/odata/odata/v4.0/errata03/os/complete/part1-protocol/odata-v4.0-errata03-os-part1-protocol-complete.html#_Toc453752197). To bind OData v4 service, use the **ODataV4Adaptor**.
+
+{% tabs %}
+
+{% highlight razor %}
+
+@using ODataAdap.Models
+@using Syncfusion.Blazor.Data
+@using Syncfusion.Blazor.Gantt
+@using Syncfusion.Blazor
+
+<SfGantt TValue="TaskDatum" Height="450px" Width="100%" HighlightWeekends="true" AllowFiltering="true" AllowSorting="true" Toolbar="@(new List<string>(){ "Add", "Edit", "Update", "Delete", "Cancel", "ExpandAll", "CollapseAll","Indent","Outdent"})" AllowSelection="true" GridLines="GridLine.Both"
+TreeColumnIndex="1">
+    <SfDataManager Url="odata/Gantt" Adaptor="Adaptors.ODataV4Adaptor"></SfDataManager>
+    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" ParentID="ParentId"></GanttTaskFields>
+    <GanttEditSettings AllowAdding="true" AllowDeleting="true" AllowEditing="true" AllowTaskbarEditing="true" ShowDeleteConfirmDialog="true"></GanttEditSettings>
+    <GanttColumns>
+        <GanttColumn Field="TaskId" Width="100"></GanttColumn>
+        <GanttColumn Field="TaskName" HeaderText="Job Name" Width="250" ClipMode="Syncfusion.Blazor.Grids.ClipMode.EllipsisWithTooltip"></GanttColumn>
+        <GanttColumn Field="StartDate" HeaderText="Start Date"></GanttColumn>
+        <GanttColumn Field="EndDate" HeaderText="End Date"></GanttColumn>
+        <GanttColumn Field="Duration" HeaderText="Duration"></GanttColumn>
+    </GanttColumns>
+    <GanttLabelSettings LeftLabel="TaskName" TValue="TaskDatum">
+    </GanttLabelSettings>
+    <GanttSplitterSettings Position="40%"> </GanttSplitterSettings>
+</SfGantt>
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="TaskDatum.cs" %}
+
+namespace ODataAdap.Models;
+
+public partial class TaskDatum
+{
+    public long Id { get; set; }
+    public int TaskId { get; set; }
+    public string? TaskName { get; set; }
+    public DateTime? StartDate { get; set; }
+    public DateTime? EndDate { get; set; }
+    public int? ParentId { get; set; }
+    public int? Progress { get; set; }
+    public int? Duration { get; set; }
+}
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="GanttController.cs" %}
+
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.OData.Deltas;
+using Microsoft.AspNetCore.OData.Formatter;
+using Microsoft.AspNetCore.OData.Query;
+using Microsoft.AspNetCore.OData.Routing.Controllers;
+using ODataAdap.Models;
+
+namespace ODataAdap.Controllers
+{
+    [Route("api/[controller]")]
+    public class GanttController : ODataController
+    {
+        private OdataContext _db;
+        public GanttController(OdataContext context)
+        {
+            _db = context;
+        }
+        [HttpGet]
+        [EnableQuery]
+        public IActionResult Get()
+        {
+            return Ok(_db.TaskData);
+        }
+        [EnableQuery]
+        public async Task<IActionResult> Post([FromBody] TaskDatum data)
+        {
+            _db.TaskData.Add(data);
+            _db.SaveChanges();
+            return Created(data);
+        }
+        [EnableQuery]
+        public async Task<IActionResult> Patch([FromODataUri] long key, [FromBody] Delta<TaskDatum> data)
+        {
+            var entity = await _db.TaskData.FindAsync(key);
+            data.Patch(entity);
+            await _db.SaveChangesAsync();
+            return Updated(entity);
+        }
+        [EnableQuery]
+        public long Delete([FromODataUri] long key)
+        {
+            var deleterow = _db.TaskData.Find(key);
+            _db.TaskData.Remove(deleterow);
+            _db.SaveChanges();
+            return key;
+        }
+    }
+}
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="Program.cs" %}
+
+using Microsoft.AspNetCore.OData;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.OData.Edm;
+using Microsoft.OData.ModelBuilder;
+using ODataAdap.Data;
+using ODataAdap.Models;
+using Syncfusion.Blazor;
+
+var builder = WebApplication.CreateBuilder(args);
+
+// Add services to the container.
+static IEdmModel GetEdmModel()
+{
+    ODataConventionModelBuilder builder = new ODataConventionModelBuilder();
+    var datas = builder.EntitySet<TaskDatum>("Gantt");
+    FunctionConfiguration myFirstFunction = datas.EntityType.Collection.Function("MyFirstFunction");
+    myFirstFunction.ReturnsCollectionFromEntitySet<TaskDatum>("Gantt");
+    return builder.GetEdmModel();
+}
+builder.Services.AddMvc(options => options.EnableEndpointRouting = false);
+builder.Services.AddRazorPages();
+builder.Services.AddServerSideBlazor();
+builder.Services.AddSyncfusionBlazor();
+
+builder.Services.AddDbContext<OdataContext>(option =>
+                option.UseSqlServer(builder.Configuration.GetConnectionString("GanttDatabase")));
+
+builder.Services.AddControllers().AddOData(opt => opt.AddRouteComponents("odata", GetEdmModel()).Count().Filter().OrderBy().Expand().Select().SetMaxTop(null));
+builder.Services.AddControllersWithViews();
+builder.Services.AddEndpointsApiExplorer();
+
+var app = builder.Build();
+
+// Configure the HTTP request pipeline.
+if (!app.Environment.IsDevelopment())
+{
+    app.UseExceptionHandler("/Error");
+    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
+    app.UseHsts();
+}
+
+app.UseHttpsRedirection();
+
+app.UseStaticFiles();
+
+app.UseRouting();
+app.MapControllers();
+app.UseMvcWithDefaultRoute();
+app.MapBlazorHub();
+app.MapFallbackToPage("/_Host");
+
+app.Run();
+
+{% endhighlight %}
+
+{% endtabs %}
+
+N>You can find the sample for load on demand [here](https://github.com/SyncfusionExamples/BlazorGantt-OData-Adaptor-sample).
 
 ### Load Child on Demand
 
@@ -994,4 +1160,4 @@ The following sample code demonstrates notifying user when server-side exception
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VtLAZGMJBmsvUpls?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VtLAZGMJBmsvUpls?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->

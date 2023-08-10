@@ -76,7 +76,7 @@ In the Gantt Chart component, you can enable or disable the mouse hover tooltip 
 </style>
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hjVgNwCYCbDYSzyz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/hjVgNwCYCbDYSzyz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 N> The default value of the `GanttTooltipSettings.ShowTooltip` property is true.
 
@@ -186,7 +186,7 @@ You can enable or disable the Grid cell tooltip using the [GanttColumn.ClipMode]
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VNhKDwMaWPKrJmHk?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VNhKDwMaWPKrJmHk?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ### Clip mode
 
@@ -310,7 +310,8 @@ The default tooltip in the Gantt Chart component can be customized using the [Ga
 
 The below screenshot shows the output of above code example.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BDLKDQsasvHTJdgR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Blazor Gantt Chart displays Taskbar Tooltip](images/blazor-gantt-chart-with-taskbar-tooltip.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BDLKDQsasvHTJdgR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ### Taskbar editing tooltip
 
@@ -392,7 +393,8 @@ The taskbar editing tooltip can be customized using the [GanttTooltipSettings.Ed
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LtLgXcCaiOsiQOTb?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Blazor Gantt Chart displays editing tooltip template](images/editing-tooltip-template.gif)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LtLgXcCaiOsiQOTb?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ### Baseline tooltip
 
@@ -453,7 +455,8 @@ A baseline tooltip can be customized using the [GanttTooltipSettings.BaselineTem
 
 The following screenshot shows the template for baseline in Gantt Chart.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VXVqDmMYsEBNbPfJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Customizing Baseline Tooltip in Blazor Gantt Chart](images/blazor-gantt-chart-baseline-tooltip-customization.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VXVqDmMYsEBNbPfJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ### Manual taskbar tooltip
 
@@ -585,7 +588,8 @@ Customizing the indicator tooltip in a Gantt Chart using [GanttTooltipSettings.I
 </style>
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VZrgjwCOiOgLcYvm?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Blazor Gantt Chart displays Manual Taskbar Tooltip](images/Indicator_Tolltip.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VZrgjwCOiOgLcYvm?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ### Timeline cell tooltip
 
@@ -677,4 +681,5 @@ Customizing the timeline cell tooltip in a Gantt Chart using [GanttTooltipSettin
 </style>
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LNhUXwMOWYqlafef?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Blazor Gantt Chart displays Manual Taskbar Tooltip](images/timeline-cell-tooltip.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LNhUXwMOWYqlafef?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->

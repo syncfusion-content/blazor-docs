@@ -59,7 +59,8 @@ Gantt Chart component contains two tier layout in timeline, you can customize th
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rXhqNmsPqlncCtZA?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Blazor Gantt Chart with Top and Bottom Tier](images/blazor-gantt-chart-top-bottom-tier.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/rXhqNmsPqlncCtZA?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Combining timeline cells
 
@@ -112,7 +113,8 @@ In Gantt Chart, timeline cells in top tier and bottom tier can be combined with 
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VZLgNwWvglbpAGLa?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Combining Timeline Cells in Blazor Gantt Chart](images/blazor-gantt-chart-combine-cells.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VZLgNwWvglbpAGLa?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Customize header timeline cells
 
@@ -185,7 +187,7 @@ In the Gantt Chart component, you can format the value of top and bottom timelin
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hNrANGMbUOfmvjaB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/hNrANGMbUOfmvjaB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Timeline cell width
 
@@ -236,4 +238,5 @@ In the Gantt Chart component, you can define the width value of timeline cell us
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BjVgZwilUaPyMQLi?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Customizing Timeline Width in Blazor Gantt Chart](images/blazor-gantt-chart-time-line-width.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BjVgZwilUaPyMQLi?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->

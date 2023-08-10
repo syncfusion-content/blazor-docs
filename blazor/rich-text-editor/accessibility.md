@@ -39,7 +39,8 @@ The Rich Text Editor element is assigned the role of application.
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LXhUDmCKgTvmyyaL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Blazor RichTextEditor with accessibility](./images/blazor-richtexteditor-accessibility.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LXhUDmCKgTvmyyaL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Keyboard support
 
@@ -116,7 +117,8 @@ You can use the following key shortcuts when the Rich Text Editor renders with `
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VZVUtQCgUyZhkaCv?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Blazor RichTextEditor with key configuration](./images/blazor-richtexteditor-key-configuration.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VZVUtQCgUyZhkaCv?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ### Custom key configuration
 
@@ -132,7 +134,7 @@ In the following code block, customize the bold and italic, toolbar actions with
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rtVgtmsUUIbCCiFa?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/rtVgtmsUUIbCCiFa?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 N> You can refer to our [Blazor Rich Text Editor](https://www.syncfusion.com/blazor-components/blazor-wysiwyg-rich-text-editor) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Rich Text Editor](https://blazor.syncfusion.com/demos/rich-text-editor/overview?theme=bootstrap4) example to knows how to render and configure the rich text editor tools.
 
