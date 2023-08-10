@@ -9,7 +9,7 @@ documentation: ug
 
 # How to Get Filter, Sort, and Group Column Details in the Grid using the OnActionComplete Event
 
-The [OnActionComplete](https://blazor.syncfusion.com/documentation/datagrid/events#onactioncomplete) event in Syncfusion Grid provides a convenient way to obtain filter, sort, and group column details after performing corresponding operations. By handling this event and accessing the event arguments, you can retrieve the necessary information about the performed actions.
+The [OnActionComplete](https://blazor.syncfusion.com/documentation/datagrid/events#onactioncomplete) event of Syncfusion DataGrid provides a convenient way to obtain filter, sort, and group column details after performing corresponding operations. The `OnActionComplete` event will be triggered once certain actions have been completed. By handling this event and accessing the event arguments, you can retrieve the necessary information about the performed actions.
 
 The RequestType parameter in the event arguments indicates the type of operation that has been performed. Here are the different RequestType values and when they occur:
 
