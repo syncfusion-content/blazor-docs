@@ -661,6 +661,10 @@ The following table lists components and its script reference.
         <td>sf-pdfviewer.min.js</td>
     </tr>
     <tr>
+        <td>ImageEditor</td>
+        <td>sf-image-editor.min.js</td>
+    </tr>
+    <tr>
         <td>DocumentEditor</td>
         <td>sf-documenteditor.min.js</td>
     </tr>

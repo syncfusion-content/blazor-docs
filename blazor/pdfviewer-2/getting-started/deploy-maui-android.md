@@ -7,32 +7,25 @@ control: SfPdfViewer
 documentation: ug
 ---
 
-# How to Deploy the SfPdfViewer Component in Blazor Android MAUI Application on Windows
+# How to Deploy the PDF Viewer (Next Gen) Component in Blazor Android MAUI Application on Windows
 
-This section briefly explains about how to deploy [Blazor SfPdfViewer](https://www.syncfusion.com/blazor-components/blazor-pdf-viewer) component in your blazor android MAUI App using Visual Studio.
+This section briefly explains about how to deploy [Blazor PDF Viewer (Next Gen)](https://www.syncfusion.com/blazor-components/blazor-pdf-viewer) component in your blazor android MAUI App using Visual Studio.
 
 ## Prerequisites
 
 To use the MAUI project templates, install the Mobile development with .NET extension for Visual Studio. For more details, refer [here](https://docs.microsoft.com/en-us/dotnet/MAUI/get-started/installation).
 
-## Deploy SfPdfViewer into Blazor Android MAUI application
+## Deploy PDF Viewer (Next Gen) into Blazor Android MAUI application
 
-1. Start Visual Studio and select **Create a new project**.
-
-2. For a Blazor MAUI application experience, choose the **.NET MAUI Blazor App** template. Select **Next**. 
+1. Start Visual Studio and select **Create a new project**, then choose the **.NET MAUI Blazor App** template. Select **Next**. 
 ![Create-new-blazor-server-app](GettingStarted_images/start-window-create-new-project_maui.png)
 
-3. Provide a **Project Name** and confirm that the *Location* is correct. Select Next. 
+2. Provide a **Project Name** and confirm that the *Location* is correct. Select Next to set the target framework and create the project.
 ![Set-project-name](GettingStarted_images/Set-project-name-andriod_maui.png)
-
-4. In the **Additional information** dialog, set the target framework and create the project.
-![Set-target-framework](GettingStarted_images/Additional_information_maui.png)
 
 ## Install Blazor SfPdfViewer NuGet package in Blazor Android MAUI application
 
-Syncfusion Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). To use Syncfusion Blazor components in the application, add reference to the corresponding NuGet. Refer to [NuGet packages topic](https://blazor.syncfusion.com/documentation/nuget-packages) for available NuGet packages list with component details and [Benefits of using individual NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages#benefits-of-using-individual-nuget-packages).
-
-Install the [Syncfusion.Blazor.SfPdfViewer](https://www.nuget.org/packages/Syncfusion.Blazor.SfPdfViewer) NuGet package as a reference to your project from the [NuGet.org](https://www.nuget.org/packages?q=syncfusion.blazor).
+To add Blazor PDF Viewer (Next Gen) component in Blazor MAUI App, install the [Syncfusion.Blazor.SfPdfViewer](https://www.nuget.org/packages/Syncfusion.Blazor.SfPdfViewer) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet packages as a reference to your project from the [NuGet.org](https://www.nuget.org/packages?q=syncfusion.blazor).
 
 ![Install the PDF Syncfusion.Blazor.SfPdfViewer package](GettingStarted_images/nuget-package-android_maui.png)
 
@@ -99,7 +92,7 @@ Add the theme style sheet as follows in the server web app.
 {% highlight html %}
 
 <head>
-    <!-- Syncfusion Blazor SfPdfViewer controls theme style sheet -->
+    <!-- Syncfusion Blazor PDF Viewer (Next Gen) control's theme style sheet -->
     <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
 </head>
 
@@ -118,9 +111,9 @@ Add the theme style sheet as follows in the server web app.
 {% highlight html %}
 
 <head>
-    <!-- Syncfusion Blazor SfPdfViewer controls theme style sheet -->
+    <!-- Syncfusion Blazor PDF Viewer (Next Gen) control's theme style sheet -->
     <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
-    <!-- Syncfusion Blazor SfPdfViewer controls scripts -->
+    <!-- Syncfusion Blazor PDF Viewer (Next Gen) control's scripts -->
     <script src="_content/Syncfusion.Blazor.SfPdfViewer/scripts/syncfusion-blazor-sfpdfviewer.min.js" type="text/javascript"></script>
 </head>
 
@@ -131,9 +124,9 @@ Add the theme style sheet as follows in the server web app.
 
 > Syncfusion recommends to reference scripts using [Static Web Assets](https://blazor.syncfusion.com/documentation/common/adding-script-references#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/common/adding-script-references#cdn-reference) and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator) by [disabling JavaScript isolation](https://blazor.syncfusion.com/documentation/common/adding-script-references#disable-javascript-isolation) for better loading performance of the Blazor application.
 
-## Adding Blazor SfPdfViewer Component
+## Adding Blazor PDF Viewer (Next Gen) Component
 
-Add the Syncfusion SfPdfViewer component in the **~/Pages/Index.razor** file.
+Add the Syncfusion PDF Viewer (Next Gen) component in the **~/Pages/Index.razor** file.
 
 {% tabs %}
 {% highlight razor %}
@@ -166,11 +159,11 @@ Add the Syncfusion SfPdfViewer component in the **~/Pages/Index.razor** file.
 {% endhighlight %}
 {% endtabs %}
 
-N> When developing a Blazor Android MAUI application, passing the `DocumentPath` to the SfPdfViewer component as a `base64 string` is needed. This ensures that the application can retrieve and render a PDF document correctly within the SfPdfViewer.
+N> When developing a Blazor Android MAUI application, passing the `DocumentPath` to the PDF Viewer (Next Gen) component as a `base64 string` is needed. This ensures that the application can retrieve and render a PDF document correctly within the PDF Viewer (Next Gen) component.
 
-## Run the SfPdfViewer in Blazor Android MAUI application
+## Run the PDF Viewer (Next Gen) in Blazor Android MAUI application
 
-To run the SfPdfViewer in a Blazor Android MAUI application using the Android emulator, follow these steps:
+To run the PDF Viewer (Next Gen) in a Blazor Android MAUI application using the Android emulator, follow these steps:
 
 ![Run Windows machine](GettingStarted_images/emulator_maui.png)
 
@@ -184,7 +177,7 @@ To run the SfPdfViewer in a Blazor Android MAUI application using the Android em
 
 **Step 3** Ensure the Android emulator is running. Launch the Android Device Manager and create or select an existing AVD to run the emulator.
 
-Now, relaunch the project in emulator mode. It will render the SfPdfViewer using the Blazor Android MAUI application.
+Now, relaunch the project in emulator mode. It will render the PDF Viewer (Next Gen) component using the Blazor Android MAUI application.
 
 N> If you encounter any errors while using the Android Emulator, refer to the following link for troubleshooting guidance[Troubleshooting Android Emulator](https://learn.microsoft.com/en-us/dotnet/maui/android/emulator/troubleshooting).
 

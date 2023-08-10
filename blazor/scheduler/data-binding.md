@@ -921,7 +921,7 @@ The following code example describes the behavior of the Load on demand using cu
 
 {% endhighlight %}
 
-{% highlight c# %}
+{% highlight AppointmentDataAdaptor.cs %}
 
 using Syncfusion.Blazor;
 using Syncfusion.Blazor.Data;
@@ -984,7 +984,7 @@ namespace syncfusion_blazor_app.Data {
 
 {% endhighlight %}
 
-{% highlight c# %}
+{% highlight AppointmentDataService.cs %}
 
 using System;
 using System.Collections.Generic;
