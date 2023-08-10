@@ -40,7 +40,6 @@ The Chip control has the following predefined styles that can be defined using t
 
 
 ![Customizing Blazor Chip Styles](./images/blazor-chip-style.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/rZVKXlNMqqruZcxI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Leading icon
 
@@ -79,7 +78,6 @@ You can add and customize the leading icon of chip using the `LeadingIconCss` pr
 
 
 ![Customizing LeadingIcon of Blazor Chip](./images/blazor-chip-leading-icon.gif)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VDLgNlNWqKIlOcxb?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Avatar
 
@@ -138,7 +136,6 @@ You can add and customize the avatar content of chip using the `LeadingText` pro
 
 
 ![Customizing Avatar Text of Blazor Chip](./images/blazor-chip-avatar-content.gif)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BtVUNPtiAJvNztTm?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Trailing icon
 
@@ -160,7 +157,6 @@ You can add and customize the trailing icon of chip using the `TrailingIconCss` 
 
 
 ![Customizing Blazor Chip TrailingIcon](./images/blazor-chip-trailing-icon.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LDVAjlNCKSjqOQwW?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Outline chip
 
@@ -182,4 +178,3 @@ Outline chip has the border with the background transparent. It can be set using
 
 
 ![Blazor Outline Chip with Transparent Background](./images/blazor-outline-chip-transparent-background.gif)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/hXhUtbXCAIMJoSTO?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
