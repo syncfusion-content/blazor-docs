@@ -33,7 +33,7 @@ You can create **Blazor Server App** or **Blazor WebAssembly App** using Visual 
 To add Blazor Accordion component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search for [Syncfusion.Blazor.Navigations](https://www.nuget.org/packages/Syncfusion.Blazor.Navigations/) and then install it. Alternatively, you can utilize the following package manager command to achieve the same.
 
 {% tabs %}
-{% highlight c# tabtitle="Package Manager" %}
+{% highlight C# tabtitle="Package Manager" %}
 
 PM> NuGet\Install-Package Syncfusion.Blazor.Navigations -Version {{ site.releaseversion }}
 
@@ -55,10 +55,10 @@ Open **~/_Imports.razor** file and import the Syncfusion.Blazor namespace.
 {% endhighlight %}
 {% endtabs %}
 
-Now, register the Syncfusion Blazor Service in the Blazor Server App or Blazor WebAssembly App. 
+Now, register the Syncfusion Blazor Service in the ~/Program.cs file of your Blazor Server App or Blazor WebAssembly App. 
 
 {% tabs %}
-{% highlight c# tabtitle="Blazor Server App (~/Program.cs)" hl_lines="3 10" %}
+{% highlight C# tabtitle="Blazor Server App" hl_lines="3 10" %}
 
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Web;
@@ -75,7 +75,7 @@ var app = builder.Build();
 ....
 
 {% endhighlight %}
-{% highlight C# tabtitle="Blazor WebAssembly App (~/Program.cs)" hl_lines="3 11" %}
+{% highlight C# tabtitle="Blazor WebAssembly App" hl_lines="3 11" %}
 
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
@@ -106,7 +106,7 @@ PM> NuGet\Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversi
 {% endhighlight %}
 {% endtabs %}
 
-The theme style sheet from NuGet can be referred as follows using [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets).
+The theme style sheet can be referred from NuGet using [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets) as follows.
 
 * For .NET 6 Blazor Server App, add the Syncfusion bootstrap5 theme in the `<head>` of the **~/Pages/_Layout.cshtml** file.
 
@@ -114,7 +114,7 @@ The theme style sheet from NuGet can be referred as follows using [Static Web As
 
 * For Blazor WebAssembly App, refer the theme style sheet from NuGet in the `<head>` of **wwwroot/index.html** file.
 
-```cshtml
+```html
 <head>
     ...
     <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
@@ -133,7 +133,7 @@ N> Checkout the [Blazor Themes topic](https://blazor.syncfusion.com/documentatio
 
 * For Blazor WebAssembly App, refer script in the `<head>` of the **~/index.html** file.
 
-```
+```html
 <head>
     ....
     <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
@@ -161,15 +161,15 @@ N> Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/docume
 {% endhighlight %}
 {% endtabs %}
 
-* Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to run the application. Then, the Syncfusion `Blazor Accordion` component will be rendered in the default web browser.
+Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion Blazor Accordion component in your default web browser.
 
 ![Blazor Accordion Component](images/blazor-accordion-component.png)
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/Accordion).
 
-## Initialize Blazor Accordion using Templates
+## Initialize Blazor Accordion using Template
 
-The following code explains how to initialize Blazor Accordion using `Templates`.
+The following code explains how to initialize Blazor Accordion using header and content template.
 
 {% highlight cshtml %}
 
@@ -177,7 +177,7 @@ The following code explains how to initialize Blazor Accordion using `Templates`
 
 {% endhighlight %}
 
-![Blazor Accordion with Templates](./images/blazor-accordion-header-template.png)
+![Blazor Accordion with header and content Template](./images/blazor-accordion-header-template.png)
 
 ## See also
 
