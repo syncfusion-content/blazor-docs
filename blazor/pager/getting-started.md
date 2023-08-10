@@ -172,7 +172,7 @@ Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/documenta
 
 {% endhighlight %}
 
-{% highlight cshtml tabtitle=".NET 3.X, .NET 5 & .NET 7 (~/_Host.cshtml)" hl_lines="4" %}
+{% highlight cshtml tabtitle=".NET 7 (~/_Host.cshtml)" hl_lines="4" %}
 
 <head>
     ....
