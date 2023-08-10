@@ -69,7 +69,7 @@ Refer to the following example.
         SfDocumentEditor editor = container.DocumentEditor;
         // It will make the spinner visible
         this.VisibleProperty = true;
-        editor.OpenAsync(sfdtString);
+        await editor.OpenAsync(sfdtString);
         await Task.Delay(1000);
         // It will make the spinner hide
         this.VisibleProperty = false;
