@@ -9,7 +9,9 @@ documentation: ug
 
 # Column Menu in Blazor DataGrid
 
-The column menu has options to integrate features like sorting, grouping, filtering, column chooser, and autofit in it. When the user clicks on multiple icon of the column this menu gets displayed. To enable column menu, you need to define the [ShowColumnMenu](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_ShowColumnMenu) property as true.
+The column menu in the Syncfusion Blazor Grid component provides options to enable features such as sorting, grouping, filtering, column chooser, and autofit. When users click on the column header’s menu icon, a menu will be displayed with these integrated features. To enable the column menu, you need to set the [ShowColumnMenu](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_ShowColumnMenu) property to true in the Grid configuration.
+
+
 
 The default menu items are displayed in the following table,
 
@@ -71,9 +73,9 @@ The following image represents DataGrid with column menu property enabled,
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BDVgNnBtTygLwktv?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-## Custom column menu
+## Add custom column menu item
 
-Custom column menu items can be added by defining [ColumnMenuItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ColumnMenuItems) as a collection of [ColumnMenuItemModel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ColumnMenuItemModel.html) class. Actions for the customized column menu item can be defined in the [ColumnMenuItemClicked](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_ColumnMenuItemClicked) event of the Grid.
+The custom column menu item feature allows you to add additional menu items to the column menu in the Syncfusion Grid. These custom menu items can be defined using the [ColumnMenuItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ColumnMenuItems) property, which accepts a collection of [ColumnMenuItemModel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ColumnMenuItemModel.html) class.You can define the actions for these custom items in the [ColumnMenuItemClicked](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_ColumnMenuItemClicked) event.
 
 In the following sample, Order ID, Order Date, and Freight columns are sorted at initial rendering. When clicking the custom column menu item in the OrderID column, sorting will be cleared using the [ClearSortingAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ClearSortingAsync_System_Collections_Generic_List_System_String__) method in the `ColumnMenuItemClicked` event.
 
@@ -129,6 +131,147 @@ In the following sample, Order ID, Order Date, and Freight columns are sorted at
 ```
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rXhUXdrXJoJxsVyK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+## Render nested column menu
+
+The nested column menu feature provides an extended menu option in the grid column headers, allows you to access additional actions and options related to the columns.
+
+To enable the nested column menu feature, you need to define the **ColumnMenuItems** property in your component. The `ColumnMenuItems` property is an array that contains the items for the column menu. Each item can be a string representing a built-in menu item or an object defining a custom menu item.
+
+Here is an example of how to configure the `ColumnMenuItems` property to include a nested menu:
+
+```cshtml
+@using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor.Navigations
+
+
+<SfGrid @ref="DefaultGrid" DataSource="@Orders" Height="315" AllowGrouping="true" ShowColumnChooser="true" ShowColumnMenu="true" ColumnMenuItems=@menuItem>
+    <GridEvents ColumnMenuItemClicked="ColumnMenuItemClickedHandler" TValue="Order"></GridEvents>
+    <GridFilterSettings Type="FilterType.CheckBox"></GridFilterSettings>
+    <GridGroupSettings ShowGroupedColumn="true"></GridGroupSettings>
+    <GridColumns>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Center" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150" TextAlign="TextAlign.Center" ShowColumnMenu="false"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText="Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Center" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Center" Width="120"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code {
+
+    private SfGrid<Order> DefaultGrid;
+
+    public List<Order> Orders { get; set; }
+
+    public List<ColumnMenuItemModel> menuItem = new List<ColumnMenuItemModel> { new ContextMenuItemModel { Text = "Group", Id = "group" }, new ContextMenuItemModel { Text = "UnGroup", Id = "UnGroup" }, new ContextMenuItemModel { Text = "ColumnChooser", Id = "ColumnChooser" }, new ContextMenuItemModel { Text = "SubMenu", Id = "SubMenu", Items = (new List<MenuItem> { new MenuItem { Text = "Option1", Id = "Uniq", Items = (new List<MenuItem> { new MenuItem { Text = "Nested", Id = "New" } }) } }) } };
+
+    protected override void OnInitialized() => Orders = Enumerable.Range(1, 75).Select(x => new Order()
+    {
+         OrderID = 1000 + x,
+         CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
+         Freight = 2.1 * x,
+         OrderDate = DateTime.Now.AddDays(-x),
+    }).ToList();
+
+
+    public class Order
+    {
+        public int? OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public DateTime? OrderDate { get; set; }
+        public double? Freight { get; set; }
+    }
+
+    public void ColumnMenuItemClickedHandler(ColumnMenuClickEventArgs args)
+    {
+        if (args.Item.Text== "Group")
+        {
+            DefaultGrid.GroupColumnAsync("CustomerID");
+
+        }
+        else if (args.Item.Text == "UnGroup")
+        {
+            DefaultGrid.UngroupColumnAsync("CustomerID");
+        }
+        else if(args.Item.Text=="ColumnChooser")
+        {
+            DefaultGrid.OpenColumnChooserAsync(10, 10);
+        }
+        else if (args.Item.Text == "Option1")
+        {
+            // Here, you can customize your code.
+        }
+        else 
+        {
+            // Here, you can customize your code.
+        }
+    }
+}
+```
+{% previewsample "" %}
+
+## Customize column menu icon in Blazor DataGrid Component
+
+To customize the column menu icon, you need to override the default grid class `.e-icons.e-columnmenu` with a custom CSS property called **content**. By specifying a Unicode character or an icon font’s CSS class, you can change the icon displayed in the column menu.
+
+1.Add the necessary CSS code to override the default grid class:
+
+```css
+.e-grid .e-columnheader .e-icons.e-columnmenu::before {
+    content: "\e941";
+}
+```
+
+Here is an example that demonstrates how to customize the column menu icon in the Syncfusion Grid:
+
+```cshtml
+@using Syncfusion.Blazor.Grids
+
+<SfGrid DataSource="@Orders" AllowPaging="true" ShowColumnMenu="true">
+    <GridPageSettings PageSize="8"></GridPageSettings>
+    <GridColumns>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Center" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" TextAlign="TextAlign.Center" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type=ColumnType.Date TextAlign="TextAlign.Center" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Center" Width="120"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code{
+
+    public List<Order> Orders { get; set; }
+
+    protected override void OnInitialized()
+    {
+        Orders = Enumerable.Range(1, 75).Select(x => new Order()
+        {
+            OrderID = 1000 + x,
+            CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
+            Freight = 2.5 * x,
+            OrderDate = DateTime.Now.AddDays(-x),
+        }).ToList();
+    }
+    public class Order
+    {
+        public int? OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public DateTime? OrderDate { get; set; }
+        public double? Freight { get; set; }
+    }
+}
+
+<style>
+    .e-grid .e-columnheader .e-icons.e-columnmenu::before {
+        .content: "\e84f";
+    }
+</style>
+```
+
+The following image represents datagrid with customized column menu icon
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BDLAZHLQgLLENvHI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+
 
 <!-- Column menu events
 

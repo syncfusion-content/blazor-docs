@@ -9,7 +9,7 @@ documentation: ug
 
 # Column Chooser in Blazor DataGrid
 
-The column chooser has options to show or hide columns dynamically. It can be enabled by defining the [ShowColumnChooser](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Fill) as true.
+The column chooser feature in the Syncfusion Angular Grid component allows you to dynamically show or hide columns. This feature can be enabled by defining the [ShowColumnChooser](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Fill) property as **true**.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -52,18 +52,70 @@ The column chooser has options to show or hide columns dynamically. It can be en
     }
 }
 ```
-
-N> You can hide the column names in column chooser by defining the [ShowInColumnChooser](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_ShowInColumnChooser) property as false.
+> The column chooser dialog displays the header text of each column by default. If the header text is not defined for a column, the corresponding column field name is displayed instead.
 
 The following GIF represents the column chooser functionality in DataGrid
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rtVgXnhtAIxzkPSw?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
+## Hide column in column chooser dialog
+
+You can hide the column names in column chooser by defining the [ShowInColumnChooser](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_ShowInColumnChooser) property as false. This feature is useful when working with a large number of columns or when you want to limit the number of columns that are available for selection in the column chooser dialog.
+
+In this example, the [ShowInColumnChooser](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_ShowInColumnChooser) property is set to false for the EmployeeID column. As a result, the EmployeeID column will not be displayed in the column chooser dialog.
+
+```cshtml
+
+@using Syncfusion.Blazor.Grids
+
+<SfGrid DataSource="@Employees" ShowColumnChooser="true" Toolbar=@ToolbarItems>
+    <GridColumns>
+        <GridColumn Field=@nameof(EmployeeData.EmployeeID) TextAlign="TextAlign.Center" ShowInColumnChooser="false" HeaderText="Employee ID" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(EmployeeData.FirstName) HeaderText="First Name" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(EmployeeData.LastName) HeaderText="Last Name" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(EmployeeData.Title) HeaderText="Title" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(EmployeeData.HireDate) HeaderText="Hire Date" Format="d" TextAlign="TextAlign.Right" Width="150"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code {
+    public string[] ToolbarItems = new string[] { "ColumnChooser" };
+
+    public List<EmployeeData> Employees { get; set; }
+
+    protected override void OnInitialized()
+    {
+        Employees = Enumerable.Range(1, 9).Select(x => new EmployeeData()
+            {
+                EmployeeID = x,
+                FirstName = (new string[] { "Nancy", "Andrew", "Janet", "Margaret", "Steven" })[new Random().Next(5)],
+                LastName = (new string[] { "Davolio", "Fuller", "Leverling", "Peacock", "Buchanan" })[new Random().Next(5)],
+                Title = (new string[] { "Sales Representative", "Vice President, Sales", "Sales Manager",
+                                    "Inside Sales Coordinator" })[new Random().Next(4)],
+                HireDate = DateTime.Now.AddDays(-x),
+            }).ToList();
+    }
+
+    public class EmployeeData
+    {
+        public int? EmployeeID { get; set; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public string Title { get; set; }
+        public DateTime? HireDate { get; set; }
+    }
+}
+```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LtBgZFtdUjASxqXP?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+> The `ShowInColumnChooser` property is applied to each element individually. By setting it to false, you can hide specific columns from the column chooser dialog.
+
+
 ## Open column chooser by external button
 
-The column chooser has options to show or hide columns dynamically. It can be enabled by defining the [ShowColumnChooser](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Fill) as true.
+The Syncfusion Blazor Grid provides the flexibility to open the column chooser dialog on a web page using an external button. By default, the column chooser button is displayed in the right corner of the grid component, and clicking the button opens the column chooser dialog below it. 
 
-In this following example, we have opened column chooser using external button click.
+Here’s an example of how to open the column chooser in the Grid using an external button:
 
 ```cshtml
 @using Syncfusion.Blazor.Buttons
@@ -120,6 +172,137 @@ In this following example, we have opened column chooser using external button c
 The following GIF represents opening column chooser functionality in DataGrid using external button.
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rDLqDnBtgIweBuUd?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+## Customize column chooser dialog size
+
+The column chooser dialog in Syncfusion Blazor Grid comes with default size, but you can modify its height and width as per your specific needs using CSS styles.
+
+To customize the column chooser dialog size, you can use the following CSS styles:
+
+```csharp
+<style> 
+    #Grid .e-dialog.e-ccdlg {         
+        max-height: 600px !important; 
+        width: 300px !important; 
+    } 
+    #Grid .e-ccdlg .e-cc-contentdiv { 
+        height: 250px !important; 
+        width: 250px !important;         
+    } 
+</style> 
+```
+N> Here, **!important** attribute is used to apply custom styles since the column chooser dialog position will be calculated dynamically based on content.
+
+This can be demonstrated in the following sample:
+
+```cshtml
+@using Syncfusion.Blazor.Grids
+
+<SfGrid DataSource="@Employees" ShowColumnChooser="true" Toolbar=@ToolbarItems ID="Grid">
+    <GridColumns>
+        <GridColumn Field=@nameof(EmployeeData.EmployeeID) TextAlign="TextAlign.Center" HeaderText="Employee ID" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(EmployeeData.FirstName) HeaderText="First Name" ShowInColumnChooser="false" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(EmployeeData.LastName) HeaderText="Last Name" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(EmployeeData.Title) HeaderText="Title" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(EmployeeData.HireDate) HeaderText="Hire Date" Format="d" TextAlign="TextAlign.Right" Width="150"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code{
+    public string[] ToolbarItems = new string[] { "ColumnChooser" };
+
+    public List<EmployeeData> Employees { get; set; }
+
+    protected override void OnInitialized()
+    {
+        Employees = Enumerable.Range(1, 9).Select(x => new EmployeeData()
+        {
+            EmployeeID = x,
+            FirstName = (new string[] { "Nancy", "Andrew", "Janet", "Margaret", "Steven" })[new Random().Next(5)],
+            LastName = (new string[] { "Davolio", "Fuller", "Leverling", "Peacock", "Buchanan" })[new Random().Next(5)],
+            Title = (new string[] { "Sales Representative", "Vice President, Sales", "Sales Manager",
+                                    "Inside Sales Coordinator" })[new Random().Next(4)],
+            HireDate = DateTime.Now.AddDays(-x),
+        }).ToList();
+    }
+
+    public class EmployeeData
+    {
+        public int? EmployeeID { get; set; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public string Title { get; set; }
+        public DateTime? HireDate { get; set; }
+    }
+}
+
+<style> 
+    #Grid .e-dialog.e-ccdlg {         
+        max-height: 600px !important; 
+        width: 300px !important; 
+    } 
+    #Grid .e-ccdlg .e-cc-contentdiv { 
+        height: 250px !important; 
+        width: 250px !important;         
+    } 
+</style> 
+```
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDrKDHBDgxJBuYsb?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+## Change default search operator of the column chooser
+
+The column chooser dialog in the Syncfusion Blazor Grid provides a search box that allows you to search for column names. By default, the search functionality uses the **StartsWith** operator to match columns and display the results in the column chooser dialog. However, there might be cases where you need to change the default search operator to achieve more precise data matching.
+
+To change the default search operator of the column chooser in Syncfusion Grid, you need to use the [Operator](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Operator.html) property of the [GridColumnChooserSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumnChooserSettings.html) class.
+
+Here’s an example of how to change the default search operator of the column chooser to **Contains** in the Blazor Grid:
+
+```cshtml
+@using Syncfusion.Blazor
+@using Syncfusion.Blazor.Grids
+
+<SfGrid DataSource="@Employees" ShowColumnChooser="true" Toolbar=@ToolbarItems>
+    <GridColumnChooserSettings Operator="Operator.Contains"></GridColumnChooserSettings>
+    <GridColumns>
+        <GridColumn Field=@nameof(EmployeeData.EmployeeID) TextAlign="TextAlign.Center" HeaderText="Employee ID" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(EmployeeData.FirstName) HeaderText="First Name" ShowInColumnChooser="false" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(EmployeeData.LastName) HeaderText="Last Name" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(EmployeeData.Title) HeaderText="Title" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(EmployeeData.HireDate) HeaderText="Hire Date" Format="d" TextAlign="TextAlign.Right" Width="150"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code{
+    public string[] ToolbarItems = new string[] { "ColumnChooser" };
+    public List<EmployeeData> Employees { get; set; }
+
+    protected override void OnInitialized()
+    {
+        Employees = Enumerable.Range(1, 9).Select(x => new EmployeeData()
+        {
+            EmployeeID = x,
+            FirstName = (new string[] { "Nancy", "Andrew", "Janet", "Margaret", "Steven" })[new Random().Next(5)],
+            LastName = (new string[] { "Davolio", "Fuller", "Leverling", "Peacock", "Buchanan" })[new Random().Next(5)],
+            Title = (new string[] { "Sales Representative", "Vice President, Sales", "Sales Manager",
+                                    "Inside Sales Coordinator" })[new Random().Next(4)],
+            HireDate = DateTime.Now.AddDays(-x),
+        }).ToList();
+    }
+
+    public class EmployeeData
+    {
+        public int? EmployeeID { get; set; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public string Title { get; set; }
+        public DateTime? HireDate { get; set; }
+    }
+}
+```
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZBgXdLjARSZhmms?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 
 ## Column chooser template
 
@@ -389,128 +572,4 @@ namespace Model
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BtBUXHrjAdKCqkdo?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-## Customize column chooser dialog size
 
-You can customize the height and width of the column chooser dialog by using the below CSS styles.
-
-```csharp
-<style> 
-    #Grid .e-dialog.e-ccdlg {         
-        max-height: 600px !important; 
-        width: 300px !important; 
-    } 
-    #Grid .e-ccdlg .e-cc-contentdiv { 
-        height: 250px !important; 
-        width: 250px !important;         
-    } 
-</style> 
-```
-N> Here, **!important** attribute is used to apply custom styles since the column chooser dialog position will be calculated dynamically based on content.
-
-This can be demonstrated in the following sample:
-
-```cshtml
-@using Syncfusion.Blazor.Grids
-
-<SfGrid DataSource="@Employees" ShowColumnChooser="true" Toolbar=@ToolbarItems ID="Grid">
-    <GridColumns>
-        <GridColumn Field=@nameof(EmployeeData.EmployeeID) TextAlign="TextAlign.Center" HeaderText="Employee ID" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(EmployeeData.FirstName) HeaderText="First Name" ShowInColumnChooser="false" Width="130"></GridColumn>
-        <GridColumn Field=@nameof(EmployeeData.LastName) HeaderText="Last Name" Width="130"></GridColumn>
-        <GridColumn Field=@nameof(EmployeeData.Title) HeaderText="Title" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(EmployeeData.HireDate) HeaderText="Hire Date" Format="d" TextAlign="TextAlign.Right" Width="150"></GridColumn>
-    </GridColumns>
-</SfGrid>
-
-@code{
-    public string[] ToolbarItems = new string[] { "ColumnChooser" };
-
-    public List<EmployeeData> Employees { get; set; }
-
-    protected override void OnInitialized()
-    {
-        Employees = Enumerable.Range(1, 9).Select(x => new EmployeeData()
-        {
-            EmployeeID = x,
-            FirstName = (new string[] { "Nancy", "Andrew", "Janet", "Margaret", "Steven" })[new Random().Next(5)],
-            LastName = (new string[] { "Davolio", "Fuller", "Leverling", "Peacock", "Buchanan" })[new Random().Next(5)],
-            Title = (new string[] { "Sales Representative", "Vice President, Sales", "Sales Manager",
-                                    "Inside Sales Coordinator" })[new Random().Next(4)],
-            HireDate = DateTime.Now.AddDays(-x),
-        }).ToList();
-    }
-
-    public class EmployeeData
-    {
-        public int? EmployeeID { get; set; }
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
-        public string Title { get; set; }
-        public DateTime? HireDate { get; set; }
-    }
-}
-
-<style> 
-    #Grid .e-dialog.e-ccdlg {         
-        max-height: 600px !important; 
-        width: 300px !important; 
-    } 
-    #Grid .e-ccdlg .e-cc-contentdiv { 
-        height: 250px !important; 
-        width: 250px !important;         
-    } 
-</style> 
-```
-
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rDrKDHBDgxJBuYsb?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-## Change default search operator of the column chooser
-
-The default operator for the search box in the column chooser is **StartsWith**. It is possible to change the default operator using the [Operator](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Operator.html) property of the [GridColumnChooserSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumnChooserSettings.html) class.
-
-In the following sample, the search box operator for the column chooser is set to **Contains** in the `GridColumnChooserSettings` class.
-
-```cshtml
-@using Syncfusion.Blazor
-@using Syncfusion.Blazor.Grids
-
-<SfGrid DataSource="@Employees" ShowColumnChooser="true" Toolbar=@ToolbarItems>
-    <GridColumnChooserSettings Operator="Operator.Contains"></GridColumnChooserSettings>
-    <GridColumns>
-        <GridColumn Field=@nameof(EmployeeData.EmployeeID) TextAlign="TextAlign.Center" HeaderText="Employee ID" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(EmployeeData.FirstName) HeaderText="First Name" ShowInColumnChooser="false" Width="130"></GridColumn>
-        <GridColumn Field=@nameof(EmployeeData.LastName) HeaderText="Last Name" Width="130"></GridColumn>
-        <GridColumn Field=@nameof(EmployeeData.Title) HeaderText="Title" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(EmployeeData.HireDate) HeaderText="Hire Date" Format="d" TextAlign="TextAlign.Right" Width="150"></GridColumn>
-    </GridColumns>
-</SfGrid>
-
-@code{
-    public string[] ToolbarItems = new string[] { "ColumnChooser" };
-    public List<EmployeeData> Employees { get; set; }
-
-    protected override void OnInitialized()
-    {
-        Employees = Enumerable.Range(1, 9).Select(x => new EmployeeData()
-        {
-            EmployeeID = x,
-            FirstName = (new string[] { "Nancy", "Andrew", "Janet", "Margaret", "Steven" })[new Random().Next(5)],
-            LastName = (new string[] { "Davolio", "Fuller", "Leverling", "Peacock", "Buchanan" })[new Random().Next(5)],
-            Title = (new string[] { "Sales Representative", "Vice President, Sales", "Sales Manager",
-                                    "Inside Sales Coordinator" })[new Random().Next(4)],
-            HireDate = DateTime.Now.AddDays(-x),
-        }).ToList();
-    }
-
-    public class EmployeeData
-    {
-        public int? EmployeeID { get; set; }
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
-        public string Title { get; set; }
-        public DateTime? HireDate { get; set; }
-    }
-}
-```
-
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BZBgXdLjARSZhmms?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
