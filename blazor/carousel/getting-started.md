@@ -324,6 +324,6 @@ N> Syncfusion recommends to reference scripts using [Static Web Assets](https://
 </style>
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hNrqjHWYrWfdhWoO?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Blazor Carousel Component](images/getting_started.png)
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/Carousel).

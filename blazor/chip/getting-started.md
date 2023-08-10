@@ -276,7 +276,7 @@ N> Syncfusion recommends to reference scripts using [Static Web Assets](https://
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to run the application. Then, the Syncfusion `Blazor Chip` component will be rendered in the default web browser.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LDBgtdMdrZfWcvRZ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Blazor Chip Component](./images/blazor-chip-component.png)
 
 ## Render chip items from collection
 
@@ -334,7 +334,7 @@ You can render the chip items from collection using for loop in Blazor Chip comp
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rNLAjxCdhNTdxPzX?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Blazor Chip Component](./images/blazor-chip-sample.png)
 
 
 ## See also
