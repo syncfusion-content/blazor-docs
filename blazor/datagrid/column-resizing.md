@@ -52,7 +52,7 @@ The following GIF represents column resizing,
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VZVgtdVjqdvYDSkc?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-N> You can disable resizing for a particular column by setting the [AllowResizing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_AllowResizing) property of **GridColumn** component to false.
+> You can disable resizing for a particular column by setting the [AllowResizing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_AllowResizing) property of **GridColumn** component to false.
 <br/> In RTL mode, you can click and drag the left edge of the header cell to resize the column.
 <br/>The width property of the column can be set initially to define the default width of the column. However, when column resizing is enabled, you can override the default width by manually resizing the columns.
 
@@ -101,9 +101,9 @@ In the below code, **CustomerID** and **Freight** columns are defined with minim
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BDBqZnLjgGjZMowQ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-> * The [MinWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_MinWidth) and [MaxWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_MaxWidth)     properties will be considered only when the user resizes the column. When resizing the window, these properties will not be considered. This is because columns cannot be re-rendered when resizing the window.
-<br/>  * When setting the MinWidth and MaxWidth properties, ensure that the values are appropriate for your data and layout requirements.
-<br/> * The specified MinWidth and MaxWidth values take precedence over any user-initiated resizing attempts that fall outside the defined range.
+>  The [MinWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_MinWidth) and [MaxWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_MaxWidth)     properties will be considered only when the user resizes the column. When resizing the window, these properties will not be considered. This is because columns cannot be re-rendered when resizing the window.
+<br/>  When setting the MinWidth and MaxWidth properties, ensure that the values are appropriate for your data and layout requirements.
+<br/> The specified MinWidth and MaxWidth values take precedence over any user-initiated resizing attempts that fall outside the defined range.
 
 ## Prevent resizing for particular column
 

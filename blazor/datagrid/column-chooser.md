@@ -191,7 +191,7 @@ To customize the column chooser dialog size, you can use the following CSS style
     } 
 </style> 
 ```
-N> Here, **!important** attribute is used to apply custom styles since the column chooser dialog position will be calculated dynamically based on content.
+> Here, **!important** attribute is used to apply custom styles since the column chooser dialog position will be calculated dynamically based on content.
 
 This can be demonstrated in the following sample:
 
@@ -377,8 +377,8 @@ Using the column chooser template, you can customize the column chooser dialog u
 
 ```
 
-N> * You can build reusable custom component based on your customization need as like above code example.
-<br/> * In the above example, Syncfusion [ListView](https://blazor.syncfusion.com/documentation/listview/getting-started) component is used as custom component in the content template to show/hide columns.
+> You can build reusable custom component based on your customization need as like above code example.
+<br/> In the above example, Syncfusion [ListView](https://blazor.syncfusion.com/documentation/listview/getting-started) component is used as custom component in the content template to show/hide columns.
 
 ```csharp
 @using Syncfusion.Blazor.Lists;
@@ -475,7 +475,7 @@ N> * You can build reusable custom component based on your customization need as
 }
 ```
 
-N> * The model class used in the above example is enclosed in the Model.cs file.
+> * The model class used in the above example is enclosed in the Model.cs file.
 
 ```csharp
 using System;
