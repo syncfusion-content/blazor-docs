@@ -101,3 +101,5 @@ CustomerColumn.razor
 
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LDLqtbZYpfMwjWpB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+N> While rendering the custom GridColumn in a separate razor page, the position or order of that specific column will not align properly unless if we extend or create the customized Grid column component by inheriting the GridColumn class in razor page.
