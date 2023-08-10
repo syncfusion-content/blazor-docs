@@ -282,11 +282,11 @@ The following example demonstrates how to make the DataGrid filter dialog fully 
 </SfSplitter>
 
 <style>
+    /* Custom CSS to ensure filter dialog visibility */
     #Splitter, .e-pane.e-pane-vertical.e-scrollable.e-resizable {
         overflow: unset;
     }
 </style>
-
 
 @code {
     public List<Order> Orders { get; set; }
