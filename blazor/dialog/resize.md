@@ -66,3 +66,4 @@ To get started quickly with resizing in Blazor Dialog Component, Refer the video
 
 
 ![Resizing in Blazor Dialog](./images/blazor-dialog-resizing.gif)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/rXLKDlZqrEuAaxqL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
