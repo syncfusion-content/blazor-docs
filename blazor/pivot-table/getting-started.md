@@ -39,6 +39,14 @@ Syncfusion Blazor components are available in [nuget.org](https://www.nuget.org/
 
 To add Blazor Pivot Table component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search for [Syncfusion.Blazor.PivotTable](https://www.nuget.org/packages/Syncfusion.Blazor.PivotTable) and then install it.
 
+{% tabs %}
+{% highlight c# tabtitle="Package Manager" %}
+
+PM> NuGet\Install-Package Syncfusion.Blazor.PivotTable -Version {{ site.releaseversion }}
+
+{% endhighlight %}
+{% endtabs %}
+
 ## Register Syncfusion Blazor Service
 
 Open **~/_Imports.razor** file and import the Syncfusion.Blazor namespace.
