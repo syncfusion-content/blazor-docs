@@ -17,11 +17,9 @@ Open the [Blazor Playground](https://blazorplayground.syncfusion.com/) in your b
 
 To create a child component, you can click the "+" button in the Blazor playground. This will add a new component to the project. You can then type the name for the child component in the input box.
 
-To view the outcome of the child component, you can refer to it in the index.razor file.
+The index.razor file is the main file for the Blazor playground app. To view the outcome of the child component, you can refer to it in the index.razor file.
 
 ![Adding child components in Blazor playgorund](images/ChildComponent.png)
-
-The index.razor file is the main file for the Blazor playground app. In the index.razor file, you can add a line of code that refers to the child component.
 
 ![Referring child component in index.razor](images/Refer_ChildComponent.png)
 
@@ -43,6 +41,8 @@ To generate a class file, click on the "+" icon and input the desired class name
 
 To remove a class file, click the delete icon corresponding to the specific component.
 
+N>Remember to include the ".cs" extension; otherwise, the file will be generated as a razor file.
+
 ## How to add/remove Static Assets
 
 Provided an option to enter the cdn link in Static Asset section for adding additional static files. After adding the desired asset, you can easily enable/disable it using the checkbox. 
@@ -51,21 +51,5 @@ Provided an option to enter the cdn link in Static Asset section for adding addi
 
 You have the option to remove any additional static assets that have been included.
 
-## Update configuration and add new services
-
-To add new services or modify the existing ones in your program, you can access the Services button located in the app bar.
-Then, go to the ConfigureServices method in the Program.cs file, where you can add new injectable services or override the existing service configuration to suit your requirements.
-
-For example, you can add the [C# file](#how-to-addremove-classes) and then click the "Services" button to configure the created class in the program.cs file.
-
-![Add new services](images/Configuring_Services.png)
-
-Then, register the services in ConfigureServices method.
-
-![Configuring Services](images/Services_Program.png)
-
-In this example, dependency injection is applied within the index.razor. You have the flexibility to inject the required dependencies according to your specific needs.
-
-![Injecting services](images/Inject_Services.png)
 
 
