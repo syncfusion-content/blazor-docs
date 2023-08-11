@@ -51,7 +51,7 @@ The HTML tags can be displayed in the DataGrid header and content by enabling th
 
 The following screenshot represents a DataGrid displaying the HTML content.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/htLKZdLWVJLGycUz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Displaying HTML Content in Blazor DataGrid](./images/blazor-datagrid-with-html-content.png)
 
 ## Customize cell styles
 
@@ -132,7 +132,7 @@ The appearance of cells can be customized by using the [QueryCellInfo](https://h
 
 The following screenshot represents a DataGrid with customized cell styles.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hDBgDRViBfQTdcDr?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Customizing Cell Styles in Blazor DataGrid](./images/blazor-datagrid-cell-style-customization.png)
 
 ## Auto wrap
 
@@ -190,7 +190,7 @@ In the following example, the [TextWrapSettings.WrapMode](https://help.syncfusio
 
 The following screenshot represents a DataGrid with auto wrap.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BNrgtxrihfvRzHnK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Blazor DataGrid with AutoWrap](./images/blazor-datagrid-autowrap.png)
 
 ## Custom attributes
 
@@ -239,8 +239,6 @@ In the following example, the cells of the **OrderID** and **ShipCity** columns 
     }
 </style>
 ```
-
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LtrKDdBCVfEITnUS?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## DataGrid lines
 
@@ -293,8 +291,6 @@ The available modes of DataGrid lines are:
 ```
 
 N>By default, the DataGrid renders with **Default** mode.
-
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LXVAtRBiBSsjNJsp?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Clip mode
 
@@ -349,6 +345,6 @@ N> By default, [Columns.ClipMode](https://help.syncfusion.com/cr/blazor/Syncfusi
 
 The following screenshot represents a clip mode in DataGrid
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rZBKjxrWVIJFoNKz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Clip Mode in Blazor DataGrid](./images/blazor-datagrid-clip-mode.png)
 
 N> You can refer to the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour page for its groundbreaking feature representations. You can also explore [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap4) to understand how to present and manipulate data.
