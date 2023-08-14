@@ -355,7 +355,7 @@ N> You can refer to the [Blazor DataGrid](https://www.syncfusion.com/blazor-comp
 
 ##  To display the tooltip when using DataGrid inside the Dialog Component
 
-When rendering the DataGrid within a Dialog component, there is an issue where the tooltip appears beyond the dialog popup. To fix the tooltip positioning, add the following CSS code in your application.
+When rendering the DataGrid within a Dialog component, the tooltip appears beyond the dialog popup. To fix the tooltip positioning, add the following CSS code in your application.
 
 ```css
 <style>
