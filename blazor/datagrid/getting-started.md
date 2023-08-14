@@ -298,7 +298,7 @@ N> Syncfusion recommends to reference scripts using [Static Web Assets](https://
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to run the application. Then, the Syncfusion `Blazor DataGrid` component will be rendered in the default web browser.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hDLUDdjxJvxjQlaM?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Blazor DataGrid Component](images/blazor-datagrid-component.png)
 
 ## Defining Row Data
 
@@ -334,8 +334,6 @@ To bind data for the DataGrid component, you can assign a IEnumerable object to 
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rtBqZdWufpSfzDnu?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
 ## Defining columns
 
 The columns are automatically generated when columns declaration is empty or undefined while initializing the datagrid.
@@ -363,8 +361,6 @@ Let’s check the properties used here:
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VZVKDnsETJOmycMz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
 ## Enable paging
 
 The paging feature enables users to view the datagrid record in a paged view. It can be enabled by setting the [AllowPaging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowPaging) property to true. Pager can be customized using the [GridPageSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_PageSettings) component.
@@ -384,8 +380,6 @@ The paging feature enables users to view the datagrid record in a paged view. It
 
 {% endhighlight %}
 {% endtabs %}
-
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VjhqjnCuTIWcpiYt?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Enable sorting
 
@@ -407,8 +401,6 @@ The sorting feature enables you to order the records. It can be enabled by setti
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hthKNxsOJoQDpVRp?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
 ## Enable filtering
 
 The filtering feature enables you to view reduced amount of records based on filter criteria. It can be enabled by setting the [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowFiltering) property as true. Filtering feature can be customized using the [GridFilterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_FilterSettings) component.
@@ -428,8 +420,6 @@ The filtering feature enables you to view reduced amount of records based on fil
 
 {% endhighlight %}
 {% endtabs %}
-
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VDBqDdCYJmWjngjI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Enable grouping
 
@@ -451,7 +441,7 @@ The grouping feature enables you to view the datagrid record in a grouped view. 
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BjBUZHiEpcpLLDat?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Blazor DataGrid Component](images/blazor-datagrid.gif)
 
 ## Handling exceptions
 
@@ -506,8 +496,6 @@ The following sample code demonstrates notifying user when server-side exception
 
 {% endhighlight %}
 {% endtabs %}
-
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VtBKtxWYTGdusrBc?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/DataGrid).
 

@@ -60,8 +60,6 @@ To bind list binding to the datagrid, you can assign a IEnumerable object to the
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BNVgXRBNsRFVklNC?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
 N> By default, [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) uses **BlazorAdaptor** for list data-binding.
 
 ### ExpandoObject binding
@@ -115,8 +113,6 @@ To know about **ExpandoObject** data binding in Blazor DataGrid component, you c
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BXBUNdhjCPUwujqG?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
 ### ExpandoObject Complex data binding
 
 You can achieve ExpandoObject complex data binding in the datagrid by using the dot(.) operator in the column.field. In the following examples, `CustomerID.Name` and `ShipCountry.Country` are complex data.
@@ -168,7 +164,7 @@ N> You can perform the Data operations and CRUD operations for Complex ExpandoOb
 
 The following image represents ExpandoObject complex data binding,
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rZVKDxLNWbSCBerg?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Binding ExpandObject with Complex Data in Blazor DataGrid](./images/blazor-datagrid-expand-complex-data.png)
 
 ### DynamicObject binding
 
@@ -238,8 +234,6 @@ N> The [GetDynamicMemberNames](https://learn.microsoft.com/en-us/dotnet/api/syst
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hjVKXRBjCbxPsmXr?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
 #### DynamicObject Complex data binding
 
 You can achieve DynamicObject complex data binding in the datagrid by using the dot(.) operator in the column.field. In the following examples, `CustomerID.Name` and `ShipCountry.Country` are complex data.
@@ -306,7 +300,7 @@ N> * you can perform the Data operations and CRUD operations for Complex Dynamic
 
 The following image represents DynamicObject complex data binding
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VXLKtdBDCvbCIhhb?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Binding DynamicObject with Complex Data in Blazor DataGrid](./images/blazor-datagrid-dynamic-complex-data.png)
 
 N> While binding the Grid DataSource dynamically in the form of a list of IEnumerable collections, you need to call the Refresh() method of the Grid to reflect the changes externally. Because tracking items of IEnumerable for changes made externally is avoided for performance considerations.
 
@@ -347,8 +341,6 @@ N> When using [SfDataManager](https://help.syncfusion.com/cr/aspnetcore-blazor/S
     }
 }
 ```
-
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LNBqXdVZsFazSfkU?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ### Binding with OData v4 services
 
@@ -409,8 +401,6 @@ You can use **WebApiAdaptor** to bind datagrid with Web API created using **ODat
 }
 
 ```
-
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VjhqDdVtikDrmLUr?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 The response object from the Web API should contain properties, **Items** and **Count**, whose values are a collection of entities and total count of the entities, respectively.
 
@@ -473,7 +463,7 @@ The following sample code demonstrates enabling data manager condition in the Da
 
 The following GIF represents dynamically rendering data manager in DataGrid,
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BXBADRhNiEJxnCVR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Dynamically Rendering Data Manager in Blazor DataGrid](./images/blazor-datagrid-dynamic-render-data-manager.gif)
 
 ### Sending additional parameters to the server
 
@@ -514,8 +504,6 @@ The following sample code demonstrates sending additional parameters using the Q
     }
 }
 ```
-
-{% previewsample "https://blazorplayground.syncfusion.com/embed/htLKXxLjrjsBTYee?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ### Configuring HttpClient
 
@@ -578,8 +566,6 @@ The following sample code demonstrates notifying user when server-side exception
     }
 }
 ```
-
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hZBKtHVZVtJCRQNt?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ### Authorization and Authentication
 
@@ -691,7 +677,7 @@ The following sample code demonstrates achieving this,
 
 The following GIF represents dynamically modifying the query property in DataGrid,
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hNrqZdLNrDdCyQFF?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Changing Query Dynamically in Blazor DataGrid](./images/blazor-datagrid-query-update.gif)
 
 ## SQL Server data binding(SQL Client)
 
@@ -1151,7 +1137,7 @@ Here, Order class implements the interface of **INotifyPropertyChanged** and it 
 
 The following screenshot represents the DataGrid with **Observable Collection**.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BtrAtxLXBCPoTsNR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Blazor DataGrid with ObservableCollection](./images/blazor-datagrid-observable-collection.PNG)
 
 N> While using an Observable collection, the added, removed, and changed records are reflected in the UI. But while updating the Observable collection using external actions like timers, events, and other notifications, you need to call the StateHasChanged method to reflect the changes in the UI.
 
@@ -1225,8 +1211,6 @@ The following sample code demonstrates notifying user when server-side exception
     }
 }
 ```
-
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rXhgZRLjBWgXcTdW?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Perform data operation in WebAPI service
 
