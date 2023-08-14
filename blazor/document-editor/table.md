@@ -18,7 +18,7 @@ You can create and insert a table at cursor position by specifying the required 
 Refer to the following sample code.
 
 ```csharp
- documentEditor.Editor.InsertTableAsync(3, 3);
+await documentEditor.Editor.InsertTableAsync(3, 3);
 ```
 
 The maximum size of row and column is limited to 32767 and 63 respectively.
@@ -36,11 +36,11 @@ Refer to the following sample code.
 
 ```csharp
 //Inserts a row below the row at cursor position
-documentEditor.Editor.InsertRowAsync();
+await documentEditor.Editor.InsertRowAsync();
 //Inserts a row above the row at cursor position
-documentEditor.Editor.InsertRowAsync(false);
+await documentEditor.Editor.InsertRowAsync(false);
 //Inserts three rows below the row at cursor position
-documentEditor.Editor.InsertRowAsync(true, 3);
+await documentEditor.Editor.InsertRowAsync(true, 3);
 ```
 
 ## Insert columns
@@ -56,11 +56,11 @@ Refer to the following sample code.
 
 ```csharp
 //Insert a column to the right of the column at cursor position.
-documentEditor.Editor.InsertColumnAsync();
+await documentEditor.Editor.InsertColumnAsync();
 //Insert a column to the left of the column at cursor position.
-documentEditor.Editor.InsertColumnAsync(false);
+await documentEditor.Editor.InsertColumnAsync(false);
 //Insert two columns to the left of the column at cursor position.
-documentEditor.Editor.InsertColumnAsync(false, 2);
+await documentEditor.Editor.InsertColumnAsync(false, 2);
 ```
 
 ### Select an entire table
@@ -68,7 +68,7 @@ documentEditor.Editor.InsertColumnAsync(false, 2);
 If the cursor position is inside a table, you can select the entire table by using the following sample code.
 
 ```csharp
-documentEditor.Selection.SelectTableAsync();
+await documentEditor.Selection.SelectTableAsync();
 ```
 
 ### Select row
@@ -76,7 +76,7 @@ documentEditor.Selection.SelectTableAsync();
 You can select the entire row at cursor position by using the following sample code.
 
 ```csharp
-documentEditor.Selection.SelectRowAsync();
+await documentEditor.Selection.SelectRowAsync();
 ```
 
 If current selection spans across cells of different rows, all these rows will be selected.
@@ -86,7 +86,7 @@ If current selection spans across cells of different rows, all these rows will b
 You can select the entire column at cursor position by using the following sample code.
 
 ```csharp
-documentEditor.Selection.SelectColumnAsync();
+await documentEditor.Selection.SelectColumnAsync();
 ```
 
 If current selection spans across cells of different columns, all these columns will be selected.
@@ -96,7 +96,7 @@ If current selection spans across cells of different columns, all these columns 
 You can select the cell at cursor position by using the following sample code.
 
 ```csharp
-documentEditor.Selection.SelectCellAsync();
+await documentEditor.Selection.SelectCellAsync();
 ```
 
 ## Delete table
@@ -104,7 +104,7 @@ documentEditor.Selection.SelectCellAsync();
 Document editor allows you to delete the entire table. You can use the [`DeleteTableAsync()`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.EditorModule.html#Syncfusion_Blazor_DocumentEditor_EditorModule_DeleteTableAsync) method of editor instance, if selection is in table. Refer to the following sample code.
 
 ```csharp
-documentEditor.Editor.DeleteTableAsync();
+await documentEditor.Editor.DeleteTableAsync();
 ```
 
 ## Delete row
@@ -112,7 +112,7 @@ documentEditor.Editor.DeleteTableAsync();
 Document editor allows you to delete the selected number of rows. You can use the [`DeleteRowAsync()`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.EditorModule.html#Syncfusion_Blazor_DocumentEditor_EditorModule_DeleteRowAsync) method of editor instance to delete the selected number of rows, if selection is in table. Refer to the following sample code.
 
 ```csharp
-documentEditor.Editor.DeleteRowAsync();
+await documentEditor.Editor.DeleteRowAsync();
 ```
 
 ## Delete column
@@ -120,7 +120,7 @@ documentEditor.Editor.DeleteRowAsync();
 Document editor allows you to delete the selected number of columns. You can use the [`DeleteColumnAsync()`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.EditorModule.html#Syncfusion_Blazor_DocumentEditor_EditorModule_DeleteColumnAsync) method of editor instance to delete the selected number of columns, if selection is in table. Refer to the following sample code.
 
 ```csharp
-documentEditor.Editor.DeleteColumnAsync();
+await documentEditor.Editor.DeleteColumnAsync();
 ```
 
 ## Merge cells
@@ -129,7 +129,7 @@ You can merge cells vertically, horizontally, or combination of both to a single
 Refer to the following sample code.
 
 ```csharp
-documentEditor.Editor.MergeCellsAsync();
+await documentEditor.Editor.MergeCellsAsync();
 ```
 
 You can also explore our [Blazor Word Processor](https://blazor.syncfusion.com/demos/document-editor/default-functionalities) example to know how to render and configure the document editor.
