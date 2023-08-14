@@ -507,7 +507,7 @@ The [Firebase Real time Database](https://firebase.google.com/) file system prov
 
 Follow the given steps to generate the secret access key:
 
-* Click this [link](https://accounts.google.com/InteractiveLogin/signinchooser?continue=https%3A%2F%2Fconsole.firebase.google.com%2Fu%2F0%2F%3Fpli%3D1&followup=https%3A%2F%2Fconsole.firebase.google.com%2Fu%2F0%2F%3Fpli%3D1&osid=1&passive=1209600&ifkv=AXo7B7Wfmqs4sPNjUfKp05BKYs4EzOkJpWJl84MyR6Z451oGgVxjn2GnkinyXn6RpvCg1nxhSIgIag&flowName=GlifWebSignIn&flowEntry=ServiceLogin) to Firebase console and navigate to the project settings.
+* Click this [link](https://console.firebase.google.com/u/0/?pli=1) to Firebase console and navigate to the project settings.
 
 * And then, navigate to the **Service Accounts** tab in the window.
 
