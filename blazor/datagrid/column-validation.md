@@ -552,7 +552,6 @@ This section explains how to enable and integrate regex validation in a Grid col
                 EmailID = (new string[] { "abc@gmail.com", "mnc@yahoo.com" })[new Random().Next(2)],
                 Freight = 2.1 * x,
                 OrderDate = DateTime.Now.AddDays(-x),
-
                 ShipCountry = (new string[] { "USA", "UK" })[new Random().Next(2)]
             }).ToList();
     }
