@@ -254,7 +254,6 @@ N> Syncfusion recommends to reference scripts using [Static Web Assets](https://
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to run the application. Then, the Syncfusion `Blazor AutoComplete` component will be rendered in the default web browser.
 
 ![Blazor AutoComplete Component](./images/blazor-autocomplete-component.png)
-<!-- https://blazorplayground.syncfusion.com/embed/LZLgXGhwJjGCbqvu?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5 -->
 
 ## Binding data source
 
@@ -302,7 +301,6 @@ After initialization, populate the AutoComplete with data using the [DataSource]
 {% endtabs %}
 
 ![Blazor AutoComplete with Data Binding](./images/blazor-autocomplete-data-binding.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/rDLgXQrczjvlrPbW?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Custom values
 
@@ -333,7 +331,6 @@ By default, suggestion list width automatically adjusts according to the AutoCom
 {% endtabs %}
 
 ![Customizing Popup Height and Width in Blazor AutoComplete](./images/blazor-autocomplete-popup-customization.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VXrAZmBwfWNdoHpM?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/AutoComplete).
 

@@ -371,7 +371,7 @@ The following sample code demonstrates binding local data through the [SfDataMan
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LXhqjniOrUDfNxNF?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Binding DropDownList Item in Blazor DataManager Component](./images/blazor-datamanager-binding-dropdown-item.png)
 
 ### Remote data binding
 
@@ -399,6 +399,6 @@ The following sample code demonstrates binding remote data through the [SfDataMa
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LDVgNdikLKAVWtcq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Data Binding in Blazor DataManager Component](./images/blazor-datamanager-data-binding.png)
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/DataManager).
