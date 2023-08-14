@@ -114,7 +114,7 @@ N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/app
 
 ## Add Blazor AppBar component
 
-Add the Syncfusion Blazor AppBar component in the **~/Pages/Index.razor** file under the **~/Pages** folder.
+Add the Syncfusion Blazor AppBar component in the **~/Pages/Index.razor** file.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
