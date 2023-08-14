@@ -282,7 +282,7 @@ N> Syncfusion recommends to reference scripts using [Static Web Assets](https://
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/Button).
 
-N> You can also explore our [Blazor Button example](https://blazor.syncfusion.com/demos/buttons/default-functionalities?) that shows how to render and configure the button.
+N> You can also explore our [Blazor Button example](https://blazor.syncfusion.com/demos/buttons/default-functionalities) that shows how to render and configure the button.
 
 ## See also
 
@@ -290,4 +290,4 @@ N> You can also explore our [Blazor Button example](https://blazor.syncfusion.co
 * [Getting Started with Syncfusion Blazor for Server-Side in Visual Studio](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio)
 * [Getting Started with Syncfusion Blazor for Server-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-dotnet-cli)
 
-N> You can also explore our [Blazor Button example](https://blazor.syncfusion.com/demos/buttons/default-functionalities?) that shows you how to render and configure the button.
+N> You can also explore our [Blazor Button example](https://blazor.syncfusion.com/demos/buttons/default-functionalities) that shows you how to render and configure the button.
