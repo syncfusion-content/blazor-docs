@@ -113,7 +113,7 @@ N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/app
 
 ## Add Blazor Accordion component
 
-Add the Syncfusion Blazor Accordion component in the **~/Pages/Index.razor** file under the **~/Pages** folder.
+Add the Syncfusion Blazor Accordion component in the **~/Pages/Index.razor** file.
 
 {% tabs %}
 {% highlight razor %}
