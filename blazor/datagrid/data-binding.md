@@ -417,6 +417,8 @@ The Global Search feature allows users to search for data across multiple column
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hXVKZliTqLgIFqFv?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 **Limitations :**
 
 Please find the following limitations applied for implementing this feature in your application.
