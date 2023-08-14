@@ -228,6 +228,8 @@ The **DatePicker** component can be rendered in the FilterBar using the [FilterT
 }
 
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BjBgNbiJKmAZawwI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 In the following image, SfDatePicker component is rendered with EditTemplate in OrderDate column.
 
 ![FilterBar with SfDatePicker Component in Blazor DataGrid](./images/filterbardatepicker.png)
