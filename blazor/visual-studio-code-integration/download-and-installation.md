@@ -19,9 +19,9 @@ The following software prerequisites must be installed to install the Syncfusion
 
 * [Visual Studio 2019 16.3 Preview 2](https://visualstudio.microsoft.com/vs/) or later
 
-* [.NET Core 3.1](https://dotnet.microsoft.com/download/dotnet-core/3.1) or later
+* [.NET Core 3.1](https://dotnet.microsoft.com/en-us/download/dotnet/3.1) or later
 
-* [C# Extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp)
+* [C# Extension](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp)
 
 ## Install through the Visual Studio Code Extensions
 
