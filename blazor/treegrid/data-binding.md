@@ -147,7 +147,7 @@ Tree Grid is a generic component which is strongly bound to a model type. There 
 
 **DynamicObject** can be bound to tree grid by assigning to the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_DataSource) property. Tree Grid can also perform all kind of supported data operations and editing in DynamicObject.
 
-N> The [GetDynamicMemberNames](https://docs.microsoft.com/en-us/dotnet/api/system.dynamic.dynamicobject.getdynamicmembernames?view=netcore-3.1) method of DynamicObject class must be overridden and return the property names to render and perform data operations, editing etc., while using DynamicObject.
+N> The [GetDynamicMemberNames](https://learn.microsoft.com/en-us/dotnet/api/system.dynamic.dynamicobject.getdynamicmembernames?view=netcore-3.1) method of DynamicObject class must be overridden and return the property names to render and perform data operations, editing etc., while using DynamicObject.
 
 ```cshtml
 @using Syncfusion.Blazor.TreeGrid
@@ -396,7 +396,7 @@ Similarly, if the user navigates to a new page, the root nodes of that specific 
 ```
 
 N> * By default, **SfDataManager** uses **ODataAdaptor** for remote data-binding.
-<br/> * Based on the RESTful web services, set the corresponding adaptor to SfDataManager. Refer [here](https://ej2.syncfusion.com/documentation/data/adaptors/?no-cache=1) for more details.
+<br/> * Based on the RESTful web services, set the corresponding adaptor to SfDataManager. Refer [here](https://ej2.syncfusion.com/documentation/data/adaptors?no-cache=1) for more details.
 <br/> * Filtering and searching server-side data operations are not supported in load on demand.
 <br/> * Only Self-Referential type data is supported with remote data binding in tree grid
 
