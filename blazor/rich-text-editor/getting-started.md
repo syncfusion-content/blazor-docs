@@ -17,7 +17,7 @@ To get start quickly with Blazor Rich Text Editor components, you can check on t
 {% youtube
 "youtube:https://www.youtube.com/watch?v=NvauE3z7W0k"%}
 
-N> You can also explore our [Blazor Rich Text Editor](https://blazor.syncfusion.com/demos/rich-text-editor/overview?theme=bootstrap4) example to knows how to render and configure the rich text editor tools.
+N> You can also explore our [Blazor Rich Text Editor](https://blazor.syncfusion.com/demos/rich-text-editor/overview?theme=bootstrap5) example to knows how to render and configure the rich text editor tools.
 
 ## Prerequisites
 
