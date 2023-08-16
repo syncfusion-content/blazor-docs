@@ -48,7 +48,6 @@ You can customize the background color of the container element for the DatePick
 {% endtabs %}
 
 ![DatePicker with background color](./images/blazor-datepicker-background_color.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LZrgZbtVfdUAeVbn?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Full screen mode support in mobiles and tablets
 
@@ -62,7 +61,6 @@ The DatePicker component's full-screen mode feature enables users to view the co
 ```
 
 ![DatePickerFullScreen](./images/DatePickerFullScreen.gif)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VXrKtPjVpRTqzpEJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 Also check the below section to customize the style and appearance of the Calendar component
 

@@ -57,7 +57,6 @@ The height of these cells will be 50px based on the CellAspectRatio value 100/50
 The following output demonstrates the setting of `cellAspectRatio` and `Columns` properties in the dashboard component.
 
 ![Changing Cell Size of Blazor Dashboard Layout](images/blazor-dashboard-layout-cell-size.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LXVqDvZVqNeQqezB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Setting cell spacing
 
@@ -96,7 +95,6 @@ The spacing between each panel in a row and column can be defined using the `Cel
 The following output demonstrates the neat and clear representation of data by setting the `cellSpacing` property in dashboard component.
 
 ![Blazor DashboardLayout with Cell Spacing](images/blazor-dashboard-layout-cell-space.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/rjBKtbZrqZGoAIrs?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Graphical representation of grid layout
 
@@ -135,4 +133,3 @@ These cells combinedly form a grid-structured layout, which will be hidden initi
 The following output demonstrates the gridlines indicating the cells split-up of the layout and the data containers placed over these cells are known as panels.
 
 ![Blazor DashboardLayout with GridLines](images/blazor-dashboard-layout-gridlines.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LtrgDvDrAtbAGHps?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->

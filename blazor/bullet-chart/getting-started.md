@@ -22,7 +22,7 @@ This section briefly explains about how to include [Blazor Bullet Chart](https:/
 
 You can create **Blazor Server App** or **Blazor WebAssembly App** using Visual Studio in one of the following ways,
 
-* [Create a Project using Microsoft Templates](https://docs.microsoft.com/en-us/aspnet/core/blazor/tooling?pivots=windows)
+* [Create a Project using Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0&pivots=windows)
 
 * [Create a Project using Syncfusion Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio)
 
@@ -287,7 +287,7 @@ N> Syncfusion recommends to reference scripts using [Static Web Assets](https://
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to run the application. Then, the Syncfusion `Blazor Bullet Chart` component will be rendered in the default web browser.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LXBKZdMRBYXrdkfL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Blazor Bullet Chart Component](images/blazor-bullet-chart-component.png)
 
 ## Adding title
 
@@ -302,7 +302,7 @@ Add a title by using the [Title](https://help.syncfusion.com/cr/blazor/Syncfusio
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VjhqXdiRVOTIIDlZ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Blazor Bullet Chart with Title](images/blazor-bullet-chart-title.png)
 
 ## Adding ranges
 
@@ -322,7 +322,7 @@ Add ranges by using the [BulletChartRangeCollection](https://help.syncfusion.com
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hXLAtdWxrYlElrGn?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Adding Range in Blazor Bullet Chart](images/blazor-bullet-chart-ranges.png)
 
 ## Adding tooltip
 
@@ -343,7 +343,7 @@ Use the tooltip to show the measured values by setting the [Enable](https://help
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VZrgjdiHqXhSCEVp?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Blazor Bullet Chart displays ToolTip](images/blazor-bullet-chart-tooltip.png)
 
 N> You can also explore our [Blazor Bullet Chart example](https://blazor.syncfusion.com/demos/bullet-chart/default-functionalities?theme=bootstrap5) that shows you how to render and configure the bullet chart.
 
