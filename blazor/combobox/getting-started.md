@@ -24,7 +24,7 @@ To get started quickly with Blazor ComboBox component, you can check out this vi
 
 You can create **Blazor Server App** or **Blazor WebAssembly App** using Visual Studio in one of the following ways,
 
-* [Create a Project using Microsoft Templates](https://docs.microsoft.com/en-us/aspnet/core/blazor/tooling?pivots=windows)
+* [Create a Project using Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0&pivots=windows)
 
 * [Create a Project using Syncfusion Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio)
 
@@ -278,7 +278,6 @@ N> Syncfusion recommends to reference scripts using [Static Web Assets](https://
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to run the application. Then, the Syncfusion `Blazor ComboBox` component will be rendered in the default web browser.
 
 ![Blazor ComboBox Component](./images/blazor-combobox-component.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BXhqjnWdCFWGIvpw?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Binding data source
 
@@ -315,7 +314,6 @@ After initializing, populate the ComboBox with data using the [DataSource](https
 {% endtabs %}
 
 ![Blazor ComboBox with Data Binding](./images/blazor-combobox-data-binding.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VjBUNHsnsvtLvhws?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Custom values
 
@@ -332,7 +330,6 @@ The ComboBox allows the users to give input as custom value, which is not requir
 {% endtabs %}
 
 ![Blazor ComboBox with Custom Values](./images/blazor-combobox-custom-values.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VDhANnsRsvAikeIq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Configure the popup list
 
@@ -349,7 +346,6 @@ By default, the width of the popup list automatically adjusts according to the C
 {% endtabs %}
 
 ![Customizing Popup Height and Width in Blazor ComboBox](./images/blazor-combobox-popup-customization.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LZLgtdWRsvTzrMgd?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/ComboBox).
 
