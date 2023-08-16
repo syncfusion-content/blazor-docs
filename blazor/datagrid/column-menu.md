@@ -69,7 +69,7 @@ N> * You can disable column menu for a particular column by defining the column'
 
 The following image represents DataGrid with column menu property enabled,
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BDVgNnBtTygLwktv?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Blazor DataGrid with Column Menu](images/blazor-datagrid-column-menu.gif)
 
 ## Custom column menu
 
@@ -128,7 +128,7 @@ In the following sample, Order ID, Order Date, and Freight columns are sorted at
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rXhUXdrXJoJxsVyK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Customize Column Menu in Blazor DataGrid](images/blazor-datagrid-custom-column-menu.gif)
 
 <!-- Column menu events
 

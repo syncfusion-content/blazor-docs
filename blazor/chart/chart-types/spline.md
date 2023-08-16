@@ -52,7 +52,7 @@ documentation: ug
 
 ``` 
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hDVANcNfBysOotwY?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Blazor Spline Chart](../images/chart-types-images/blazor-spline-chart.png)
 
 N> Refer to our [Blazor Spline Chart](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/spline-chart) feature tour page to know about its other groundbreaking feature representations. Explore our [Blazor Spline Chart Example](https://blazor.syncfusion.com/demos/chart/spline?theme=bootstrap4) to know how to connect the data points with smooth curves.
 
