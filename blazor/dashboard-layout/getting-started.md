@@ -283,7 +283,7 @@ N> There is no need to assign default value for panels. Refer to the [Panels](./
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to run the application. Then, the Syncfusion `Blazor Dashboard Layout` component will be rendered in the default web browser.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LDrKNnWeToosqFyA?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Blazor DashboardLayout Component](images/blazor-dashboard-layout-component.png)
 
 ## Defining panels
 
@@ -324,8 +324,7 @@ A dashboard layout panel is rendered with simple data. The header of a panel is 
 {% endtabs %}
 
 The Dashboard layout with simple content will be rendered in the web browser as demonstrated in the following screenshot.
-
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rXBUDdCoJoyPwUgz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Blazor DashboardLayout with Single Data](images/blazor-dashboard-layout-single-content.png)
 
 ### Panels with components
 
@@ -504,7 +503,7 @@ By default, the dashboard layout control is rendered with auto adjustable and [r
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/DashboardLayout).
 
-## See Also
+## See also
 
 * [Getting Started with Syncfusion Blazor for Client-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-dotnet-cli)
 

@@ -87,6 +87,8 @@ N> There is not support for Indent/Oudent in resource view Gantt Chart.
 }
 ```
 
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LjhgjQMvzyAZTxLH?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
+
 ## Resource OverAllocation
 
 When a resource is assigned more work than they can complete within their available time in a day, it is referred to as overallocation. The available working time for resources to complete tasks in a day is calculated based on the [GanttDayWorkingTime](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttDayWorkingTimeCollection.html#Syncfusion_Blazor_Gantt_GanttDayWorkingTimeCollection_DayWorkingTime) property and the resource unit.
@@ -163,12 +165,10 @@ To highlight the range of overallocation dates with a square bracket, you can en
 
 ```
 
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/rXVqNQsPpofLwCPA?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
+
 ## Limitations
 
 * The resource view in the Gantt Chart does not support assigning multiple resources to a single task.
 * Editing of resource records is not supported in the resource view of the Gantt Chart.
 
-
-Gantt Chart Resource view
-
-![Blazor Gantt Chart Resource view](images/blazor-gantt-chart-resource-view.png)

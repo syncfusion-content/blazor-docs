@@ -69,6 +69,8 @@ When the `TaskMode` property is set as `Auto`, the start date and end date of al
 }
 ```
 
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/rDrAtmiOLSMQCUwv?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
+
 ## Manually scheduled tasks
 
 When the `TaskMode` property is set as `Manual`, the start date and end date of all the tasks in the project will be the same as given in the data source. That is, dates will not be validated based on factors such as dependencies between tasks, holidays, weekends, working time. You can restrict this mode in predecessor validation alone. That is, you can automatically validate the dates based on predecessor values by enabling the [ValidateManualTasksOnLinking](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_ValidateManualTasksOnLinking) property.
@@ -118,6 +120,7 @@ When the `TaskMode` property is set as `Manual`, the start date and end date of 
 ```
 
 ![Blazor Gantt Chart displays Manual Schedule Task](images/blazor-gantt-chart-manual-schedule-task.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VtrUNwMOheqMdbYq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Custom
 
@@ -169,6 +172,7 @@ If you want to use some specific task mode for specific tasks, then you can set 
 ```
 
 ![Blazor Gantt Chart with Custom Scheduled Task](images/blazor-gantt-chart-custom-schedule-task.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/rNBADmskBIGaMEmj?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Unscheduled tasks
 
@@ -238,6 +242,7 @@ You can define the various types of unscheduled tasks in the data source as foll
 ```
 
 ![Blazor Gantt Chart displays Unscheduled Task](images/blazor-gantt-chart-unscheduled-tasks.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/rXrUXmskLnrztlRA?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 N> If the [AllowUnscheduledTasks](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_AllowUnscheduledTasks) property is set to false, then the Gantt Chart component automatically calculates the scheduled date values with a default value of duration 1 and the project start date is considered as the start date for the task.
 
@@ -299,6 +304,7 @@ The following code snippet explains how to define the working time range for the
 The following screenshot shows working time range in Gantt Chart component.
 
 ![Blazor Gantt Chart displays Working Time Range](images/blazor-gantt-chart-working-time-range.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BthgDQsYLnzdtDGe?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 N>* Individual tasks can lie between any time within the defined working time range of the project.
 <br/>* The [GanttDayWorkingTime](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttDayWorkingTimeCollection.html#Syncfusion_Blazor_Gantt_GanttDayWorkingTimeCollection_DayWorkingTime) property is used to define the working time for the whole project.
@@ -352,6 +358,7 @@ Non-working days/weekends are used to represent the non-productive days in a pro
 ```
 
 ![Changing Work Week Schedule in Blazor Gantt Chart](images/blazor-gantt-chart-change-work-week.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/hZLADmCELRnihaqz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 N> By default, Saturdays and Sundays are considered as non-working days/weekend in a project.
 <br/> In the Gantt Chart component, you can make weekend as working day by setting the `IncludeWeekend` property to `true`.

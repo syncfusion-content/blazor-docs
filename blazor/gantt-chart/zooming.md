@@ -69,6 +69,7 @@ This support is used to view all the tasks available in a project to specific ti
 ```
 
 ![Zooming in Blazor Gantt Chart](images/blazor-gantt-chart-zooming.png)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/hDrUjGWbpZfNEyhr?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Zoom action by methods
 
@@ -133,3 +134,4 @@ In the Gantt chart, the zoom-in and zoom-out actions are performed based on the 
 }
 ```
 ![Customizing zooming levels in Blazor Gantt Chart](images/blazor-gantt-chart-custom-zooming-levels.gif)
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/rDrqXQibzCycQoXw?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
