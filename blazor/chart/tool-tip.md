@@ -55,7 +55,7 @@ When space constraints prevent displaying information using data labels, the too
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rNLgjdqjzVSOpYTD?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Blazor Column Chart with Tooltip](images/tooltip/blazor-column-chart-tooltip.png)
 
 ## Tooltip format
 
@@ -99,7 +99,7 @@ By default, the tooltip displays information in points for the x and y values. I
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LNhKXdgjTAzREkTE?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Blazor Column Chart with Tooltip Format](images/tooltip/blazor-column-chart-tooltip-format.png)
 
 <!-- markdownlint-disable MD013 -->
 
@@ -155,7 +155,7 @@ Any HTML elements can be displayed within the tooltip by using the [Template](ht
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BjLUDHAZfTqkqDDu?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Blazor StepLine Chart with Tooltip Template](images/tooltip/blazor-step-chart-tooltip-template.png)
 
 ## Shared Tooltip template
 
@@ -232,7 +232,7 @@ Any HTML elements can be displayed within the tooltip by using the [Template](ht
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VXhqXdKNfIgoKmcJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Blazor StepLine Chart with Tooltip Template](images/tooltip/blazor-shared-tooltip-template.PNG)
 
 ## Tooltip customization
 
@@ -278,7 +278,7 @@ The [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartT
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/htLAjRUDpRsoLGqy?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Blazor Column Chart with Custom Tooltip](images/tooltip/blazor-column-chart-custom-tooltip.png)
 
 N> Refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
 
