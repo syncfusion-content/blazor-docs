@@ -227,7 +227,7 @@ In the following code, checkbox is rendered based on **Discontinued** field valu
 
 The following screenshot represents the Conditional Template.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rjhqDxVXfrbAkjio?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Blazor DataGrid with Conditional Template](./images/blazor-datagrid-conditional-template.png)
 
 ## Using hyperlink column and performing routing on click
 

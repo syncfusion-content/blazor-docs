@@ -373,7 +373,6 @@ Here is an example of using the `TextAlign` property to align the text of a Data
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rDhKjlNGUojBmUPG?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-
 >* The `TextAlign` property only changes the alignment content not the column header. If you want to align both the column header and content, you can use the [HeaderTextAlign](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_HeaderTextAlign) property.
 
 ## Render boolean values as checkbox
@@ -421,7 +420,6 @@ The following sample code demonstrates [DisplayAsCheckBox](https://help.syncfusi
     }
 }
 ```
-
 
 >* The `DisplayAsCheckBox` property is only applicable to boolean values in DataGrid columns.
 > * Need to define [EditType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ColumnModel.html#Syncfusion_Blazor_Grids_ColumnModel_EditType) as **EditType.BooleanEdit** to GridColumn to render checkbox while editing a boolean value.
@@ -483,7 +481,6 @@ The [AutoFitColumnsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
 ```
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hthqZbtwqRxjxDxk?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
 
 > You can autofit all the columns by invoking the `AutoFitColumnsAsync` method without specifying column names.
 
@@ -714,7 +711,6 @@ Here's an example of how to show or hide a column based on the HeaderText in the
 ```
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rZhKDxBXgJMeLhor?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
 
 **Based on field**
 
@@ -982,7 +978,6 @@ You can use the [RefreshColumnsAsync](https://help.syncfusion.com/cr/blazor/Sync
 ```csharp
 this.Grid.RefreshColumnsAsync();
 ```
-
 ## Responsive columns
 
 The Syncfusion Blazor DataGrid provides a built-in feature to toggle the visibility of columns based on Media Queries  using the [HideAtMedia](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_HideAtMedia) Column property. The `HideAtMedia` accepts valid [Media Queries](http://cssmediaqueries.com/what-are-css-media-queries.html). 
@@ -1026,7 +1021,6 @@ In this example, we have a DataGrid that displays data with three columns: **Ord
 ```
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VtBAjxBNKURHrwJk?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
 
 ## See also
 
