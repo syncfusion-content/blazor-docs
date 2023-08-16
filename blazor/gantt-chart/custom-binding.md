@@ -94,7 +94,7 @@ The following sample code demonstrates implementing custom data binding using cu
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
         public int Progress { get; set; }
-        public double Duration { get; set; }
+        public int Duration { get; set; }
         public int? ParentID { get; set; }
         public TaskData() { }
     }
@@ -220,7 +220,7 @@ The following sample code demonstrates injecting service into Custom Adaptor,
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
         public int Progress { get; set; }
-        public double Duration { get; set; }
+        public int Duration { get; set; }
         public int? ParentID { get; set; }
         public TaskData() { }
     }
@@ -342,7 +342,7 @@ The following sample code demonstrates implementing CRUD operations for the cust
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
         public int Progress { get; set; }
-        public double Duration { get; set; }
+        public int Duration { get; set; }
         public int? ParentID { get; set; }
         public TaskData() { }
     }
