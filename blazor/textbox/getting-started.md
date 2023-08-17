@@ -301,15 +301,14 @@ A TextBox can be created with icon as a group by creating the parent `div` eleme
 }
 
 .e-input-group-icon.e-input-calendar:before {
-  content: "";
+  content: "\e75e";
 }
 </style>
 
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor TextBox with Icon](./images/blazor-textbox-icons.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VDVUDdCKUaAltNGJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5 %} -->
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hNrADPWxVZBMIEwe?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Floating label
 
