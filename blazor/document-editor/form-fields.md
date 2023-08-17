@@ -19,11 +19,11 @@ Form fields can be inserted using [`InsertFormFieldAsync`](https://help.syncfusi
 
 ```csharp
 //Insert Text form field
-container.DocumentEditor.Editor.InsertFormFieldAsync(FormFieldType.Text);
+await container.DocumentEditor.Editor.InsertFormFieldAsync(FormFieldType.Text);
 //Insert Checkbox form field
-container.DocumentEditor.Editor.InsertFormFieldAsync(FormFieldType.CheckBox);
+await container.DocumentEditor.Editor.InsertFormFieldAsync(FormFieldType.CheckBox);
 //Insert Drop down form field
-container.DocumentEditor.Editor.InsertFormFieldAsync(FormFieldType.DropDown);
+await container.DocumentEditor.Editor.InsertFormFieldAsync(FormFieldType.DropDown);
 ```
 
 ## Get form field names
@@ -31,7 +31,7 @@ container.DocumentEditor.Editor.InsertFormFieldAsync(FormFieldType.DropDown);
 All the form fields names form current document can be retrieved using [`GetFormFieldNamesAsync()`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.SfDocumentEditor.html#Syncfusion_Blazor_DocumentEditor_SfDocumentEditor_GetFormFieldNamesAsync).
 
 ```csharp
-Task<List<string>> formFieldsNames = container.DocumentEditor.GetFormFieldNamesAsync();
+Task<List<string>> formFieldsNames = await container.DocumentEditor.GetFormFieldNamesAsync();
 ```
 
 ## Export form field data
@@ -39,7 +39,7 @@ Task<List<string>> formFieldsNames = container.DocumentEditor.GetFormFieldNamesA
 Data of the all the Form fields in the document can be exported using [`ExportFormDataAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.SfDocumentEditor.html#Syncfusion_Blazor_DocumentEditor_SfDocumentEditor_ExportFormDataAsync).
 
 ```csharp
-Task<List<FormFieldData>> formFieldDatas=container.DocumentEditor.ExportFormDataAsync();
+Task<List<FormFieldData>> formFieldDatas = await container.DocumentEditor.ExportFormDataAsync();
 ```
 
 ## Import form field data
@@ -62,7 +62,7 @@ formData.Add(textformField);
 formData.Add(checkformField);
 formData.Add(dropdownformField);
 //import form field data
-container.DocumentEditor.ImportFormDataAsync(formData);
+await container.DocumentEditor.ImportFormDataAsync(formData);
 ```
 
 ## Reset form fields
@@ -70,7 +70,7 @@ container.DocumentEditor.ImportFormDataAsync(formData);
 Reset all the form fields in current document to default value using [`ResetFormFieldsAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.SfDocumentEditor.html#Syncfusion_Blazor_DocumentEditor_SfDocumentEditor_ResetFormFieldsAsync_System_String_).
 
 ```csharp
-container.DocumentEditor.ResetFormFieldsAsync();
+await container.DocumentEditor.ResetFormFieldsAsync();
 ```
 
 ## Protect the document in form filling mode
@@ -89,12 +89,12 @@ The following example code illustrates how to enforce and stop protection in Doc
 
 @code {
     SfDocumentEditorContainer container;
-    protected void protectDocument(object args)
+    protected async void protectDocument(object args)
     {
         //enforce protection
-        container.DocumentEditor.Editor.EnforceProtectionAsync("123", ProtectionType.FormFieldsOnly);
+        await container.DocumentEditor.Editor.EnforceProtectionAsync("123", ProtectionType.FormFieldsOnly);
         //stop the document protection
-        container.DocumentEditor.Editor.StopProtectionAsync("123");
+        await container.DocumentEditor.Editor.StopProtectionAsync("123");
     }
 }
 ```

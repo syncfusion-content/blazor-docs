@@ -140,4 +140,3 @@ In the following demo, the specified accordion item shows or hides dynamically w
 
 
 ![Hiding or showing items in Blazor Accordion](../images/blazor-accordion-show-hide-item.gif)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BNBqtwBQqZTbsVtR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->

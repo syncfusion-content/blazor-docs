@@ -15,15 +15,22 @@ In this section, we'll guide you through the process of adding Syncfusion's Blaz
 
 * [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
 
-**Step 1:** Create a new Blazor Server app and name it **PDFViewerGettingStarted**.
+## Create a new Blazor App in Visual Studio
 
-N> The SfPdfViewer2 component is supported from .NET 6.0 onwards.
+Create a new Blazor Server app and name it **PDFViewerGettingStarted**.
 
-**Step 2:** Add the following NuGet packages into the Blazor Server app.
+N> The PDF Viewer (Next Gen) component is supported from .NET 6.0 onwards.
+
+## Install Blazor PDF Viewer NuGet package in Blazor Server App
+
+Add the following NuGet packages into the Blazor Server app.
+
 * [Syncfusion.Blazor.SfPdfViewer](https://www.nuget.org/packages/Syncfusion.Blazor.SfPdfViewer) 
 * [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes)
 
-**Step 3:** In the **~/_Imports.razor** file, add the following namespaces:
+## Register Syncfusion Blazor Service
+
+* In the **~/_Imports.razor** file, add the following namespaces:
 
 {% tabs %}
 {% highlight razor tabtitle="~/_Imports.razor" %}
@@ -34,7 +41,7 @@ N> The SfPdfViewer2 component is supported from .NET 6.0 onwards.
 {% endhighlight %}
 {% endtabs %}
 
-**Step 4:** Register the Syncfusion Blazor Service in the **~/Program.cs** file.
+* Register the Syncfusion Blazor Service in the **~/Program.cs** file.
 
 {% tabs %}
 {% highlight c# tabtitle="~/Program.cs" hl_lines="3 9 12" %}
@@ -57,22 +64,26 @@ var app = builder.Build();
 {% endhighlight %}
 {% endtabs %}
 
-**Step 5:** Add the following stylesheet and script to the head section of the **~/Pages/_Host.cshtml** file.
+## Adding stylesheet and script
+
+Add the following stylesheet and script to the head section of the **~/Pages/_Host.cshtml** file.
 
 {% tabs %}
 {% highlight cshtml %}
 
 <head>
-    <!-- Syncfusion Blazor SfPdfViewer controls theme style sheet -->
+    <!-- Syncfusion Blazor PDF Viewer (Next Gen) control's theme style sheet -->
     <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
-    <!-- Syncfusion Blazor SfPdfViewer controls scripts -->
+    <!-- Syncfusion Blazor PDF Viewer (Next Gen) control's scripts -->
     <script src="_content/Syncfusion.Blazor.SfPdfViewer/scripts/syncfusion-blazor-sfpdfviewer.min.js" type="text/javascript"></script>
 </head>
 
 {% endhighlight %}
 {% endtabs %}
 
-**Step 6:** Add the Syncfusion SfPdfViewer component in the **~/Pages/Index.razor** file
+## Adding Blazor PDF Viewer (Next Gen) Component
+
+Add the Syncfusion PDF Viewer (Next Gen) component in the **~/Pages/Index.razor** file
 
 {% tabs %}
 {% highlight razor %}
@@ -87,7 +98,9 @@ var app = builder.Build();
 {% endhighlight %}
 {% endtabs %}
 
-N> If you don't provide the `DocumentPath` property value, the SfPdfViewer component will be rendered without loading the PDF document. Users can then use the **open** option from the toolbar to browse and open the PDF as required.
+N> If you don't provide the `DocumentPath` property value, the PDF Viewer (Next Gen) component will be rendered without loading the PDF document. Users can then use the **open** option from the toolbar to browse and open the PDF as required.
+
+## Run the application
 
 Run the application, and the PDF file will be displayed using Syncfusion's Blazor PDF Viewer (Next Gen) component in your browser.
 
@@ -95,8 +108,8 @@ Run the application, and the PDF file will be displayed using Syncfusion's Blazo
 
 ## See also
 
-* [Getting Started with Blazor SfPdfViewer Component in Blazor WASM App](./web-assembly-application)
+* [Getting Started with Blazor PDF Viewer (Next Gen) Component in Blazor WASM App](./web-assembly-application)
 
-* [Getting Started with Blazor SfPdfViewer Component in WSL mode](./wsl-application)
+* [Getting Started with Blazor PDF Viewer (Next Gen) Component in WSL mode](./wsl-application)
 
 * [Learn different ways to add script reference in Blazor Application](https://blazor.syncfusion.com/documentation/common/adding-script-references)

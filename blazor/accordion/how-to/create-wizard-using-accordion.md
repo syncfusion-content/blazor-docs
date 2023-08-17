@@ -226,4 +226,3 @@ The following demo is designed for simple payment module that enable or disable 
 
 
 ![Blazor Accordion Component Wizard](../images/blazor-accordion-wizard.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BjhqtmBmUCeBZtjF?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
