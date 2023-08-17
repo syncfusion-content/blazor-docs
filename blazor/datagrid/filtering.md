@@ -49,7 +49,7 @@ Filtering allows you to view particular records based on filter criteria. To ena
 
 The following screenshot shows filtering using FilterBar
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LDhAjnrsKhPampar?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Filtering in Blazor DataGrid](./images/blazor-datagrid-filtering.png)
 
 > * You can apply and clear filtering by using **FilterByColumn** and **ClearFiltering** methods.
 > * To disable filtering for a particular column, set [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_AllowFiltering) property of **GridColumn** as false.
@@ -102,7 +102,7 @@ To apply the filter at initial rendering, set the filter **Predicate** object in
 
 The following screenshot shows Initial filtering using FilterBar
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VtVqXHhWgqbcVrdK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Blazor DataGrid with Initial Filter](./images/blazor-datagrid-initial-filtering.png)
 
 ## Filter operators
 
@@ -162,8 +162,6 @@ Use the [GetFilteredRecordsAsync](https://help.syncfusion.com/cr/blazor/Syncfusi
 }
 
 ```
-
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VXhKZnBMKpgxMCim?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Filter enum column
 
@@ -252,8 +250,6 @@ In the following sample, the `SfDropDownList` component is rendered in the [Filt
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rtLqDxBMUJuGhMBA?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
 > You can find the fully working sample [here](https://github.com/SyncfusionExamples/blazor-datagrid-filtering-enum-column).
 
 ## Filter multiple values using method
@@ -312,7 +308,7 @@ In the following example, this is demonstrated by filtering the CustomerID colum
 
 The following screenshot shows filter multiple values using FilterBycolumnAsync method,
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BjVgNHBiqSsaUnIh?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Filter Multiple Values using FilterByColumnAsync in Blazor DataGrid](./images/blazor-datagrid-filter-multiplevalues.gif)
 
 
 ## See also
