@@ -9,13 +9,17 @@ documentation: ug
 
 # Row in Blazor DataGrid Component
 
-The row represents record details fetched from data source.
+Each row typically represents a single record or item from a data source. Rows in a grid are used to present data in a tabular format. Each row displays a set of values representing the fields of an individual data record. Rows allow users to interact with the data in the grid. Users can select rows, edit cell values, perform sorting or filtering operations, and trigger events based on actions.
 
-## Row customization
+## Customize row styles
+
+Customizing the styles of rows in a Syncfusion Grid allows you to modify the appearance of rows to meet your design requirements. This feature is useful when you want to highlight certain rows or change the font style, background color, and other properties of the row to enhance the visual appeal of the grid. To customize the row styles in the grid, you can use CSS, properties, methods, or event support provided by the Syncfusion Blazor Grid component.
 
 ### Using event
 
-You can customize the appearance of a row by using the [RowDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event. The [RowDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event triggers for every row. In the event handler, you can get the **RowDataBoundEventArgs** that contains details of the row.
+You can customize the appearance of the rows by using the [RowDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event. This event triggers for every row when it is bound to the data source. In the event handler, you can get the **RowDataBoundEventArgs** object, which contains details of the row. You can use this object to modify the row’s appearance, add custom elements, or perform any other customization.
+
+Here’s an example of how you can use the `RowDataBound` event to customize the styles of rows based on the value of the Freight column. This example involves checking the value of the Freight column for each row and adding a CSS class to the row based on the value. The CSS classes below-25,below-35, and above-35 can then be defined in your stylesheet to apply the desired styles to the rows.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -90,9 +94,17 @@ You can customize the appearance of a row by using the [RowDataBound](https://he
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rNLUNxViMOVPHtVB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
+> The [QueryCellInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_QueryCellInfo) event can also be used to customize cells and is triggered for every cell in the grid. It can be useful when you need to customize cells based on certain conditions or criteria.
+
 ### Using CSS customize alternate rows
 
-You can change the datagrid's alternative rows background color by overriding the **.e-altrow** class.
+You can apply styles to the rows using CSS selectors. The Grid provides a class name for each row element, which you can use to apply styles to that specific row.
+
+**Customize alternate rows**
+
+You can customize the appearance of the alternate rows using CSS. This can be useful for improving the readability of the data and making it easier to distinguish between rows. By default, Syncfusion Grid provides the CSS class **.e-altrow** to style the alternate rows. You can customize this default style by overriding the **.e-altrow** class with your custom CSS styles.
+
+To change the background color of the alternate rows, you can add the following CSS code to your application’s stylesheet:
 
 ```css
 .e-grid .e-altrow {
@@ -100,7 +112,7 @@ You can change the datagrid's alternative rows background color by overriding th
 }
 ```
 
-Refer to the following example.
+Here’s an example of how to use the **.e-altrow** class to style alternate rows:
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -149,6 +161,221 @@ Refer to the following example.
 ```
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LDLUtnLiCORYLWHV?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+**Customize selected row**
+
+You can customize the appearance of the selected row using CSS. This is useful when you want to highlight the currently selected row for improve the visual appeal of the Grid. By default, the Grid provides the CSS class **.e-selectionbackground** to style the selected row. You can customize this default style by overriding the **.e-selectionbackground** class with your own custom CSS styles.
+
+To change the background color of the selected row, you can add the following CSS code to your application:
+
+```css
+ .e-grid .e-row .e-selectionbackground {
+        background-color: #f9920b;
+    }
+```
+Here’s an example of how to use the .e-selectionbackground class to style the selected row:
+
+```cshtml
+@using Syncfusion.Blazor.Grids
+
+<SfGrid DataSource="@Orders" Height="280" AllowSelection="true">
+    <GridSelectionSettings Mode="SelectionMode.Row"></GridSelectionSettings>
+    <GridColumns>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" Width="110"> </GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer ID" Width="110"></GridColumn>
+        <GridColumn Field=@nameof(Order.ShipCity) HeaderText="Ship City" Width="110"></GridColumn>
+        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" Width="110"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText="Order Date" Format="d" Width="110" Type="ColumnType.Date"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+<style type="text/css" class="cssStyles">
+    .e-grid .e-row .e-selectionbackground {
+        background-color: #f9920b;
+    }
+</style>
+
+@code {
+
+    public List<Order> Orders { get; set; }
+
+    protected override void OnInitialized()
+    {
+        Orders = Enumerable.Range(1, 75).Select(x => new Order()
+            {
+                OrderID = 1000 + x,
+                CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
+                ShipCity = (new string[] { "Berlin", "Madrid", "Cholchester", "Marseille", "Tsawassen" })[new Random().Next(5)],
+                Freight = 2.1 * x,
+                OrderDate = DateTime.Now.AddDays(-x),
+            }).ToList();
+    }
+
+    public class Order
+    {
+        public int? OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public string ShipCity { get; set; }
+        public DateTime? OrderDate { get; set; }
+        public double? Freight { get; set; }
+    }
+}
+```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXBKDFMXVsvFHiJY?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+## Row Height 
+
+The Syncfusion Grid allows you to customize the height of rows based on your needs. This feature can be useful when you need to display more content in a row or when you want to reduce the height of rows to fit its content. You can achieve this by using the [RowHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_RowHeight) property of the Grid component. This property allows you to change the height of the entire grid row to your desired value.
+
+In the below example, we will demonstrate how to dynamically change the height of the rows using the `RowHeight` property.
+
+```cshtml
+@using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor.Buttons
+
+<SfButton Content="CHANGE HEIGHT 20PX" OnClick="ChangeHeight20PX" ></SfButton>
+<SfButton Content="CHANGE HEIGHT 42PX" OnClick="ChangeHeight42PX" ></SfButton>
+<SfButton Content="CHANGE HEIGHT 60PX" OnClick="ChangeHeight60PX" ></SfButton>
+
+<SfGrid DataSource="@Orders" Height="280" RowHeight="@IsVar">
+    <GridColumns>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" Width="110"> </GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer ID" Width="110"></GridColumn>
+        <GridColumn Field=@nameof(Order.ShipCity) HeaderText="Ship City" Width="110"></GridColumn>
+        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" Width="110"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText="Order Date" Format="d" Width="110" Type="Syncfusion.Blazor.Grids.ColumnType.Date"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code {
+
+    public List<Order> Orders { get; set; }
+    public double IsVar { get; set; }
+
+    protected override void OnInitialized()
+    {
+        Orders = Enumerable.Range(1, 75).Select(x => new Order()
+            {
+                OrderID = 1000 + x,
+                CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
+                ShipCity = (new string[] { "Berlin", "Madrid", "Cholchester", "Marseille", "Tsawassen" })[new Random().Next(5)],
+                Freight = 2.1 * x,
+                OrderDate = DateTime.Now.AddDays(-x),
+            }).ToList();
+    }
+
+    public class Order
+    {
+        public int? OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public string ShipCity { get; set; }
+        public DateTime? OrderDate { get; set; }
+        public double? Freight { get; set; }
+    }
+
+    public void ChangeHeight20PX()
+    {
+        IsVar = 20;
+    }
+    public void ChangeHeight42PX()
+    {
+        IsVar = 42;
+    }
+    public void ChangeHeight60PX()
+    {
+        IsVar = 60;
+    }
+}
+```
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hXVAtbCjBfotEWRe?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+> The `RowHeight` property can only be used to set the height of the entire grid row. It cannot be used to set the height of individual cells within a row.
+<br/> The `RowHeight` property applies the height to all rows in the grid, including the header and footer rows.
+<br/> You can also set the height for a specific row using the `RowHeight` property of the corresponding row object in the `RowDataBound` event.
+
+## Customize row height for particular row
+
+Customizing the row height for a particular row can be useful when you want to display more content in a particular row, reduce the height of a row to fit its content, or make a specific row stand out from the other rows in the grid. This can be achieved by using the [RowHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_RowHeight) property of the Grid component along with the [RowDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowDataBound) event.
+
+The `RowHeight` property of the Grid component allows you to set the height of all rows in the grid to a specific value. However, if you want to customize the row height for a specific row based on the row data, you can use the `RowDataBound` event. This event is triggered every time a request is made to access row information, element, or data, and before the row element is appended to the Grid element.
+
+In the below example, the row height for the row with OrderID as '1003' is set as '90px' using the `RowDataBound` event.
+
+```cshtml
+@using Syncfusion.Blazor.Grids
+
+<SfGrid DataSource="@Orders" Height="280">
+    <GridEvents TValue="Order" RowDataBound="RowBound"></GridEvents>
+    <GridColumns>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" Width="110"> </GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer ID" Width="110"></GridColumn>
+        <GridColumn Field=@nameof(Order.ShipCity) HeaderText="Ship City" Width="110"></GridColumn>
+        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" Width="110"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText="Order Date" Format="d" Width="110" Type="ColumnType.Date"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+<style>
+    .row-height {
+        height: 90px;
+    }
+</style>
+
+@code {
+
+    public List<Order> Orders { get; set; }
+
+    protected override void OnInitialized()
+    {
+        Orders = Enumerable.Range(1, 75).Select(x => new Order()
+        {
+            OrderID = 1000 + x,
+            CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
+            ShipCity = (new string[] { "Berlin", "Madrid", "Cholchester", "Marseille", "Tsawassen" })[new Random().Next(5)],
+            Freight = 2.1 * x,
+            OrderDate = DateTime.Now.AddDays(-x),
+        }).ToList();
+    }
+
+    public class Order
+    {
+        public int? OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public string ShipCity { get; set; }
+        public DateTime? OrderDate { get; set; }
+        public double? Freight { get; set; }
+    }
+
+    public void RowBound(RowDataBoundEventArgs<Order> args)
+    {
+        if (args.Data.OrderID == 1003)
+        {
+            args.Row.AddClass(new string[] { "row-height" });
+        }
+    }
+}
+```
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LjrKtdhshtqkCytp?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+> In virtual scrolling mode, it is not applicable to set different row heights.
+<br/> You can customize the row height of multiple rows by checking the relevant criteria in the `RowDataBound` event and setting the `RowHeight` property accordingly.
+<br/> In the `RowDataBound` event handler, you can access the current row using the **args.row** property and set the `RowHeight` property for that row using the setAttribute method.
+
+## How to get the row data and element
+
+Grid provides several methods to retrieve row data and elements. This feature is useful when you need to access specific rows, perform custom operations, or manipulate the data displayed in the grid.
+
+1.[GetRowIndexByPrimaryKeyAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GetRowIndexByPrimaryKeyAsync_System_Object_): The method allows you to retrieve the row index based on a specific primary key value or row data.
+```cshtml
+var rowIndex =this.Grid.GetRowIndexByPrimaryKeyAsync(primaryKey);
+```
+2.[GetSelectedRowIndexesAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GetSelectedRowIndexesAsync):This method returns an array of HTML elements representing the selected rows in the grid.By iterating over this array, you can access each row element.This way, you can access both the row elements and their associated data for the selected rows.
+```cshtml
+var selectedRowElements = this.Grid.GetSelectedRowIndexesAsync();
+```
+
 
 ## Master Detail DataGrid
 
