@@ -51,7 +51,7 @@ documentation: ug
 
 ``` 
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hjhgNwDzpnCjQkJN?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Blazor Stacked Bar100 Chart](../images/chart-types-images/blazor-stacked-bar-100-chart.png)
 
 N> Refer to our [Blazor 100% Stacked Bar Chart](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/100-stacked-bar-chart) feature tour page to know about its other groundbreaking feature representations. You can also explore our [Blazor 100% Stacked Bar Chart Example](https://blazor.syncfusion.com/demos/chart/percent-stacked-bar?theme=bootstrap4) to know how to render and configure the 100% Stacked Bar type chart.
 
@@ -104,7 +104,7 @@ The following properties can be used to customize the [100% Stacked Bar](https:/
 
 ``` 
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VjBKZQjffnrhERyA?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Blazor Stacked Bar100 Chart with Custom Series](../images/chart-types-images/blazor-stacked-bar-100-chart-custom-series.png)
 
 N> Refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
 

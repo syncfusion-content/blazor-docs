@@ -48,7 +48,7 @@ Reordering can be done by drag and drop of a particular column header from one i
 
 The following represents Reordering of columns
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rtrKtxLjTzJWyLDb?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Reordering Columns in Blazor DataGrid](images/blazor-datagrid-reorder-column.gif)
 
 N> You can disable reordering a particular column by setting the [AllowReordering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_AllowReordering) property of **GridColumn** as false.
 
@@ -103,7 +103,7 @@ DataGrid has option to reorder single column either by Interaction or by using t
 
 The following GIF represents Reordering column **Freight** by using method,
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LtLAjxBNzzyeCTSP?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Reordering Single Column in Blazor DataGrid](images/blazor-datagrid-reorder-single-column.gif)
 
 ## Reorder multiple columns
 
@@ -157,7 +157,7 @@ In the following sample, **Customer Name** and **Freight** columns are reordered
 
 The following GIF represents Reordering Columns **Freight** and **OrderDate** by using method
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VjhgDxBjTJRRSHPz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Reordering Multiple Columns in Blazor DataGrid](images/blazor-datagrid-reorder-multiple-columns.gif)
 
 <!-- Reorder events
 
