@@ -45,8 +45,6 @@ In the following example, the keyPressed method is called every time the key is 
 }
 ```
 
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LjBqNmBvLGgTDteD?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
-
 Also, you can rewrite the above example code as follows using Lambda expressions.
 
 ```cshtml
