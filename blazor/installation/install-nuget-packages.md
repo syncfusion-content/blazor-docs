@@ -14,7 +14,7 @@ documentation: ug
 **NuGet** is a Package management system for Visual Studio. It makes it easy to add, update and remove external libraries in our application. Syncfusion publishing all Blazor NuGet packages in [nuget.org](https://www.nuget.org/packages?q=Tag%3A%22Blazor%22+Syncfusion). The Syncfusion Blazor NuGet packages can be used without installing the Syncfusion installation. You can simply exploit the Syncfusion Blazor NuGet packages in your Blazor application to develop with the Syncfusion Blazor components.
 
 N> The Syncfusion Blazor NuGet package, which contains all Syncfusion Blazor components in a single package, is available beginning with v17.4.0.39 (Essential Studio 2019 Volume 4).
-<br/> The Syncfusion Blazor UI components are available separately as [Individual NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages/) beginning with v18.4.0.30 (Essential Studio 2020 Volume 4). The NuGet packages are segregated based on the component usage and its namespace.
+<br/> The Syncfusion Blazor UI components are available separately as [Individual NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) beginning with v18.4.0.30 (Essential Studio 2020 Volume 4). The NuGet packages are segregated based on the component usage and its namespace.
 
 ## Installation using Package Manager UI
 
@@ -28,7 +28,7 @@ The NuGet **Package Manager UI** allows you to search, install, uninstall, and u
 
 2. The Manage NuGet Packages window will open. Navigate to the **Browse** tab, then search for the Syncfusion Blazor NuGet packages using a term like **"Syncfusion Blazor"** and select the appropriate Syncfusion Blazor NuGet package for your development.
 
-    N> The [nuget.org](https://api.nuget.org/v3/index.json) package source is selected by default in the Package source drop-down. If your Visual Studio does not have nuget.org configured, follow the instructions in the [Microsoft documents](https://docs.microsoft.com/en-us/nuget/tools/package-manager-ui#package-sources) to set up the nuget.org feed URL.
+    N> The [nuget.org](https://api.nuget.org/v3/index.json) package source is selected by default in the Package source drop-down. If your Visual Studio does not have nuget.org configured, follow the instructions in the [Microsoft documents](https://learn.microsoft.com/en-us/nuget/consume-packages/install-use-packages-visual-studio#package-sources) to set up the nuget.org feed URL.
 
     ![Blazor NuGet Packages Search](images/NuGetsearch.png)
 
@@ -38,11 +38,11 @@ The NuGet **Package Manager UI** allows you to search, install, uninstall, and u
 
     ![Blazor NuGet Packages Install](images/InstallNuGet.png)
 
-5. At this point, your application has all the required Syncfusion assemblies, and you will be ready to start building high-performance, responsive app with [Syncfusion Blazor components](https://www.syncfusion.com/blazor-components). Also, you can refer to the [Blazor help document](https://blazor.syncfusion.com/documentation/introduction/) for development.
+5. At this point, your application has all the required Syncfusion assemblies, and you will be ready to start building high-performance, responsive app with [Syncfusion Blazor components](https://www.syncfusion.com/blazor-components). Also, you can refer to the [Blazor help document](https://blazor.syncfusion.com/documentation/introduction) for development.
 
 ## Installation using Dotnet (.NET) CLI
 
-The [dotnet Command Line Interface (CLI)](https://docs.microsoft.com/en-us/nuget/consume-packages/install-use-packages-dotnet-cli), allows you to add, restore, pack, publish, and manage packages without making any changes to your application files. [Dotnet add package](https://docs.microsoft.com/en-us/dotnet/core/tools/dotnet-add-package?tabs=netcore2x) adds a package reference to the application file, then runs [dotnet restore](https://docs.microsoft.com/en-us/dotnet/core/tools/dotnet-restore?tabs=netcore2x) to install the package.
+The [dotnet Command Line Interface (CLI)](https://learn.microsoft.com/en-us/nuget/consume-packages/install-use-packages-dotnet-cli), allows you to add, restore, pack, publish, and manage packages without making any changes to your application files. [Dotnet add package](https://learn.microsoft.com/en-us/dotnet/core/tools/dotnet-add-package?tabs=netcore2x) adds a package reference to the application file, then runs [dotnet restore](https://learn.microsoft.com/en-us/dotnet/core/tools/dotnet-restore?tabs=netcore2x) to install the package.
 
 Follow the below instructions to use the dotnet CLI command to install the Syncfusion Blazor NuGet packages.
 
@@ -60,11 +60,11 @@ Follow the below instructions to use the dotnet CLI command to install the Syncf
 
     ![Blazor Package Entry ](images/packageentry.png)
 
-4. Then, run  [dotnet restore](https://docs.microsoft.com/en-us/dotnet/core/tools/dotnet-restore?tabs=netcore2x) command to restore all the packages listed in the application file.
+4. Then, run  [dotnet restore](https://learn.microsoft.com/en-us/dotnet/core/tools/dotnet-restore?tabs=netcore2x) command to restore all the packages listed in the application file.
 
     N> Restoring is done automatically with **dotnet build** and **dotnet run** in .NET Core 2.0 and later.
 
-5. At this point, your application has all the required Syncfusion assemblies, and you will be ready to start building high-performance, responsive app with [Syncfusion Blazor components](https://www.syncfusion.com/blazor-components). Also, you can refer to the [Blazor help document](https://blazor.syncfusion.com/documentation/introduction/) for development.
+5. At this point, your application has all the required Syncfusion assemblies, and you will be ready to start building high-performance, responsive app with [Syncfusion Blazor components](https://www.syncfusion.com/blazor-components). Also, you can refer to the [Blazor help document](https://blazor.syncfusion.com/documentation/introduction) for development.
 
 ## Installation using Package Manager Console
 
@@ -102,4 +102,4 @@ The **Package Manager Console** saves NuGet packages installation time since you
 
 4. The NuGet package manager console will install the Syncfusion Blazor NuGet package as well as the dependencies it has. When the installation is complete, the console will show that your Syncfusion Blazor package has been successfully added to the application.
 
-5. At this point, your application has all the required Syncfusion assemblies, and you will be ready to start building high-performance, responsive app with [Syncfusion Blazor components](https://www.syncfusion.com/blazor-components). Also, you can refer to the [Blazor help document](https://blazor.syncfusion.com/documentation/introduction/) for development.
+5. At this point, your application has all the required Syncfusion assemblies, and you will be ready to start building high-performance, responsive app with [Syncfusion Blazor components](https://www.syncfusion.com/blazor-components). Also, you can refer to the [Blazor help document](https://blazor.syncfusion.com/documentation/introduction) for development.
