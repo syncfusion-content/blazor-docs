@@ -9,14 +9,14 @@ documentation: ug
 
 # Detail Template in Blazor DataGrid Component
 
-N> Before adding detail template to the datagrid, it is recommended to go through the [template](./templates/#templates) section topic to configure the template.
+The detail template in the Grid component allows you to display additional information about a specific row in the grid by expanding or collapsing detail content. This feature is useful when you need to show additional data or custom content that is specific to each row in the grid. You can use the [DetailTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridTemplates.html#Syncfusion_Blazor_Grids_GridTemplates_DetailTemplate) property to define an HTML template for the detail row. This template can include any HTML element or Blazor component that you want to display as detail content.
 
 To know about **Detail Template** in Blazor DataGrid Component, you can check this video.
 
 {% youtube
 "youtube:https://www.youtube.com/watch?v=Dft0kerEGUQ"%}
 
-The detail template provides additional information about a particular row by expanding or collapsing detail content. The **DetailTemplate** should be wrapped around a component named [GridTemplates](./templates/#gridtemplates-component) as follows.
+Here’s an example of using the `DetailTemplate` property in the grid component:
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -127,7 +127,9 @@ The detail template provides additional information about a particular row by ex
 
 ## Rendering custom component
 
-To render the custom component inside the detail row, define the template in the [DetailTemplate](./templates/#detailtemplates-component) and render the custom component in any of the detail row element.
+The Grid component provides a powerful feature that allows you to render custom components inside the detail row. This feature is helpful when you need to add additional information or functionality for a specific row in the grid.
+
+To render a custom component inside the detail row, you need to define a template using the [DetailTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridTemplates.html#Syncfusion_Blazor_Grids_GridTemplates_DetailTemplate) property and handle the [DetailDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_DetailDataBound) event.This template can include any HTML element or Blazor component that you want to display as the detail content.
 
 In the following sample, a datagrid component is rendered as custom component using detailed row details.
 
@@ -210,12 +212,13 @@ In the following sample, a datagrid component is rendered as custom component us
 
 ## Expand by external button
 
-By default, detail rows render in collapsed state. You can expand a detail row by invoking the `Expand` method using the external button.
+The Grid provides a feature that allows users to expand the detail row of a grid using an external button. By default, detail rows render in a collapsed state, but this feature enables users to view additional details associated with a particular row.
+
+To achieve expanding the detail row of a grid using an external button, you need to invoke the [ExpandAllDetailRowAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExpandAllDetailRowAsync) method provided by the DetailRowModule object of the Syncfusion Grid library. This method will expand the detail row of a specific grid row.
+
+Here is an example of how to use the `ExpandAllDetailRowAsync` method to expand a detail row:
 
 ```cshtml
-@using Syncfusion.Blazor.Buttons
-@using Syncfusion.Blazor.Grids
-
 <SfButton Content="Expand" OnClick="BtnClick"></SfButton>
 
 <SfGrid @ref="GridObj" DataSource="@Employees">
@@ -321,13 +324,141 @@ By default, detail rows render in collapsed state. You can expand a detail row b
 
     public void BtnClick()
     {
-        this.GridObj.DetailExpandAll();
+        this.GridObj.ExpandAllDetailRowAsync();
+    }
+}
+```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VNVgtvMXSdUfQONp?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+> * You can expand all the rows by using `ExpandAllDetailRowAsync` method.
+<br/> * If you want to expand all the rows at initial DataGrid rendering, then use `ExpandAllDetailRowAsync` method in [DataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event of the DataGrid.
+
+## Customize detail template icon
+
+The detail template icon in the Syncfusion Grid is used to expand or collapse the detail content of a row. By default, the icon represents a right arrow for the collapsed state and a down arrow for the expanded state. If you want to customize this icon, you can achieve it by overriding the following CSS styles:
+
+```cshtml
+.e-grid .e-icon-grightarrow::before {
+    content: "\e7a9";
+}
+
+.e-grid .e-icon-gdownarrow::before {
+    content: "\e7fe";
+}
+```
+
+Here is an example of how to customize the detail template icon:
+
+```cshtml
+@using Syncfusion.Blazor.Grids
+
+<SfGrid DataSource="@Employees">
+    <GridTemplates>
+        <DetailTemplate>
+            @{
+                var employee = (context as EmployeeData);
+                <table class="detailtable" width="100%">
+                    <colgroup>
+                        <col width="35%">
+                        <col width="35%">
+                        <col width="30%">
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <td rowspan="4" style="text-align: center;">
+                                <img class="photo" src="@($" scripts/Images/Employees/{employee.EmployeeID}.png")" alt="@employee.EmployeeID" />
+                            </td>
+                            <td>
+                                <span style="font-weight: 500;">Employee ID: </span> @employee.FirstName
+                            </td>
+                            <td>
+                                <span style="font-weight: 500;">Hire Date: </span> @employee.HireDate.Value.ToShortDateString()
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span style="font-weight: 500;">Last Name: </span> @employee.LastName
+                            </td>
+                            <td>
+                                <span style="font-weight: 500;">City: </span> @employee.City
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span style="font-weight: 500;">Title: </span> @employee.Title
+                            </td>
+                            <td>
+                                <span style="font-weight: 500;">Country: </span> @employee.Country
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            }
+        </DetailTemplate>
+    </GridTemplates>
+    <GridColumns>
+        <GridColumn Field=@nameof(EmployeeData.FirstName) HeaderText="First Name" Width="110"> </GridColumn>
+        <GridColumn Field=@nameof(EmployeeData.LastName) HeaderText="Last Name" Width="110"></GridColumn>
+        <GridColumn Field=@nameof(EmployeeData.Title) HeaderText="Title" Width="110"></GridColumn>
+        <GridColumn Field=@nameof(EmployeeData.Country) HeaderText="Country" Width="110"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+<style type="text/css" class="cssStyles">
+    .detailtable td {
+        font-size: 13px;
+        padding: 4px;
+        max-width: 0;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+    .photo {
+        width: 100px;
+        height: 100px;
+        border-radius: 50px;
+        box-shadow: inset 0 0 1px #e0e0e0, inset 0 0 14px rgba(0,0,0,0.2);
+    }
+    .e-grid .e-icon-grightarrow::before {
+        content: "\e7a9";
+    }
+    .e-grid .e-icon-gdownarrow::before {
+        content: "\e7fe";
+    }
+</style>
+
+@code{
+    public List<EmployeeData> Employees { get; set; }
+
+    protected override void OnInitialized()
+    {
+        Employees = Enumerable.Range(1, 9).Select(x => new EmployeeData()
+        {
+            EmployeeID = x,
+            FirstName = (new string[] { "Nancy", "Andrew", "Janet", "Margaret", "Steven" })[new Random().Next(5)],
+            LastName = (new string[] { "Davolio", "Fuller", "Leverling", "Peacock", "Buchanan" })[new Random().Next(5)],
+            Title = (new string[] { "Sales Representative", "Vice President, Sales", "Sales Manager",
+                                    "Inside Sales Coordinator" })[new Random().Next(4)],
+            HireDate = DateTime.Now.AddDays(-x),
+            City = (new string[] { "Seattle", "Tacoma", "Redmond", "Kirkland", "London" })[new Random().Next(5)],
+            Country = (new string[] { "USA", "UK" })[new Random().Next(2)],
+        }).ToList();
+    }
+
+    public class EmployeeData
+    {
+        public int? EmployeeID { get; set; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public string Title { get; set; }
+        public DateTime? HireDate { get; set; }
+        public string City { get; set; }
+        public string Country { get; set; }
     }
 }
 ```
 
-N> * You can expand all the rows by using `ExpandAll` method.
-<br/> * If you want to expand all the rows at initial DataGrid rendering, then use `ExpandAll` method in [dataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event of the DataGrid.
+![Blazor DataGrid with Detail Template icon](./images/blazor-datagrid-customize-detail-template-icon.png)
 
 ## Expand or collapse specific detail template row
 
@@ -522,129 +653,4 @@ In the following sample, you can get the instance of that particular child gr
 
 N> [View Sample in GitHub.](https://github.com/SyncfusionExamples/blazor-datagrid-set-instance-for-child-component)
 
-## Customize detail template icon
 
-The Detail template icon is used to expand or collapse the detail content. You can customize this icon through CSS itself. This can be achieved by overriding the two CSS styles listed below.
-
-```cshtml
-.e-grid .e-icon-grightarrow::before {
-    content: "\e7a9";
-}
-
-.e-grid .e-icon-gdownarrow::before {
-    content: "\e7fe";
-}
-```
-
-This is demonstrated in the following sample:
-
-```cshtml
-@using Syncfusion.Blazor.Grids
-
-<SfGrid DataSource="@Employees">
-    <GridTemplates>
-        <DetailTemplate>
-            @{
-                var employee = (context as EmployeeData);
-                <table class="detailtable" width="100%">
-                    <colgroup>
-                        <col width="35%">
-                        <col width="35%">
-                        <col width="30%">
-                    </colgroup>
-                    <tbody>
-                        <tr>
-                            <td rowspan="4" style="text-align: center;">
-                                <img class="photo" src="@($" scripts/Images/Employees/{employee.EmployeeID}.png")" alt="@employee.EmployeeID" />
-                            </td>
-                            <td>
-                                <span style="font-weight: 500;">Employee ID: </span> @employee.FirstName
-                            </td>
-                            <td>
-                                <span style="font-weight: 500;">Hire Date: </span> @employee.HireDate.Value.ToShortDateString()
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <span style="font-weight: 500;">Last Name: </span> @employee.LastName
-                            </td>
-                            <td>
-                                <span style="font-weight: 500;">City: </span> @employee.City
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <span style="font-weight: 500;">Title: </span> @employee.Title
-                            </td>
-                            <td>
-                                <span style="font-weight: 500;">Country: </span> @employee.Country
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            }
-        </DetailTemplate>
-    </GridTemplates>
-    <GridColumns>
-        <GridColumn Field=@nameof(EmployeeData.FirstName) HeaderText="First Name" Width="110"> </GridColumn>
-        <GridColumn Field=@nameof(EmployeeData.LastName) HeaderText="Last Name" Width="110"></GridColumn>
-        <GridColumn Field=@nameof(EmployeeData.Title) HeaderText="Title" Width="110"></GridColumn>
-        <GridColumn Field=@nameof(EmployeeData.Country) HeaderText="Country" Width="110"></GridColumn>
-    </GridColumns>
-</SfGrid>
-
-<style type="text/css" class="cssStyles">
-    .detailtable td {
-        font-size: 13px;
-        padding: 4px;
-        max-width: 0;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-    }
-    .photo {
-        width: 100px;
-        height: 100px;
-        border-radius: 50px;
-        box-shadow: inset 0 0 1px #e0e0e0, inset 0 0 14px rgba(0,0,0,0.2);
-    }
-    .e-grid .e-icon-grightarrow::before {
-        content: "\e7a9";
-    }
-    .e-grid .e-icon-gdownarrow::before {
-        content: "\e7fe";
-    }
-</style>
-
-@code{
-    public List<EmployeeData> Employees { get; set; }
-
-    protected override void OnInitialized()
-    {
-        Employees = Enumerable.Range(1, 9).Select(x => new EmployeeData()
-        {
-            EmployeeID = x,
-            FirstName = (new string[] { "Nancy", "Andrew", "Janet", "Margaret", "Steven" })[new Random().Next(5)],
-            LastName = (new string[] { "Davolio", "Fuller", "Leverling", "Peacock", "Buchanan" })[new Random().Next(5)],
-            Title = (new string[] { "Sales Representative", "Vice President, Sales", "Sales Manager",
-                                    "Inside Sales Coordinator" })[new Random().Next(4)],
-            HireDate = DateTime.Now.AddDays(-x),
-            City = (new string[] { "Seattle", "Tacoma", "Redmond", "Kirkland", "London" })[new Random().Next(5)],
-            Country = (new string[] { "USA", "UK" })[new Random().Next(2)],
-        }).ToList();
-    }
-
-    public class EmployeeData
-    {
-        public int? EmployeeID { get; set; }
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
-        public string Title { get; set; }
-        public DateTime? HireDate { get; set; }
-        public string City { get; set; }
-        public string Country { get; set; }
-    }
-}
-```
-
-![Blazor DataGrid with Detail Template icon](./images/blazor-datagrid-customize-detail-template-icon.png)
