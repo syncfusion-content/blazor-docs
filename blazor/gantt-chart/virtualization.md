@@ -113,8 +113,6 @@ The number of records displayed in the Gantt chart is determined implicitly by t
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hDLqNQsTrvgFpeGD?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
 ## Column virtualization
 
 Column virtualization allows you to load more columns with high performance. It renders only the columns in the viewport, while other columns render on-demand during horizontal scrolling.
