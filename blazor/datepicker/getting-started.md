@@ -123,7 +123,7 @@ Add the Syncfusion Blazor DatePicker component in the **~/Pages/Index.razor** fi
 {% endhighlight %}
 {% endtabs %}
 
-* Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion Blazor Accordion component in your default web browser.
+* Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion Blazor DatePicker component in your default web browser.
 
 ![Blazor DatePicker Component](./images/blazor-datepicker-component.png)
 
