@@ -13,7 +13,7 @@ In this section, we'll guide you through the process of adding Syncfusion's Blaz
 
 ## Prerequisites
 
-To use the MAUI project templates, install the Mobile development with the .NET extension for Visual Studio. For more details, refer to [here](https://docs.microsoft.com/en-us/dotnet/MAUI/get-started/installation).
+To use the MAUI project templates, install the Mobile development with the .NET extension for Visual Studio. For more details, refer to [here](https://learn.microsoft.com/en-us/dotnet/MAUI/get-started/installation?tabs=vswin).
 
 ## Create a new Blazor MAUI App in Visual Studio
 
