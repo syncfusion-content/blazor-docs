@@ -294,15 +294,15 @@ When a resource has multiple tasks scheduled on the same date, then the tasks wi
 
                 new TaskData() { TaskId = 24, TaskName = "Interior work",StartDate = new DateTime(2019, 04, 04),  Duration = "4",Work=60, Progress=50,TaskType="FixedWork", Resources = new List<ResourceAlloacteData>(){ new ResourceAlloacteData() { ResourceId=7} },Predecessor="23" },
 
-                new TaskData() { TaskId = 25, TaskName = "First floor tile work initation",StartDate = new DateTime(2019, 04, 10), Duration = "4", Work=60, Progress=50, TaskType="FixedWork", Resources = new List<ResourceAlloacteData>(){ new ResourceAlloacteData() { ResourceId=8} } },
+                new TaskData() { TaskId = 25, TaskName = "First floor tile work initiation",StartDate = new DateTime(2019, 04, 10), Duration = "4", Work=60, Progress=50, TaskType="FixedWork", Resources = new List<ResourceAlloacteData>(){ new ResourceAlloacteData() { ResourceId=8} } },
 
                 new TaskData() { TaskId = 26,TaskName = "Tile test",StartDate = new DateTime(2019, 04, 04),Duration = "4",Work=60,Progress=50,TaskType="FixedWork", Resources = new List<ResourceAlloacteData>(){ new ResourceAlloacteData() { ResourceId=8} } },
 
                 new TaskData() { TaskId = 27,TaskName = "Second floor initiation",StartDate = new DateTime(2019, 04, 10), Duration = "4",Work=60,Progress=50, TaskType="FixedWork", Resources = new List<ResourceAlloacteData>(){ new ResourceAlloacteData() { ResourceId=9} } },
 
-                new TaskData() { TaskId = 28, TaskName = "Second floor tile work initation",StartDate = new DateTime(2019, 04, 06), Duration = "4", Work=60, Progress=50,TaskType="FixedWork", Resources = new List<ResourceAlloacteData>(){ new ResourceAlloacteData() { ResourceId=9} },Predecessor="27FS - 1"},
+                new TaskData() { TaskId = 28, TaskName = "Second floor tile work initiation",StartDate = new DateTime(2019, 04, 06), Duration = "4", Work=60, Progress=50,TaskType="FixedWork", Resources = new List<ResourceAlloacteData>(){ new ResourceAlloacteData() { ResourceId=9} },Predecessor="27FS - 1"},
 
-                new TaskData() { TaskId = 29,TaskName = "Exterior work initation",StartDate = new DateTime(2019, 04, 12),Duration = "4",Work=60,Progress=50,TaskType="FixedWork",Resources = new List<ResourceAlloacteData>(){ new ResourceAlloacteData() { ResourceId=10} }},
+                new TaskData() { TaskId = 29,TaskName = "Exterior work initiation",StartDate = new DateTime(2019, 04, 12),Duration = "4",Work=60,Progress=50,TaskType="FixedWork",Resources = new List<ResourceAlloacteData>(){ new ResourceAlloacteData() { ResourceId=10} }},
 
                 new TaskData() { TaskId = 30,TaskName = "Building test",StartDate = new DateTime(2019, 04, 08),Duration = "4",Work=60, Progress=50,TaskType="FixedWork"},
             };
@@ -439,15 +439,15 @@ In Gantt, you can enable taskbar drag and drop between resources by using the [A
 
                 new TaskData() { TaskId = 24, TaskName = "Interior work",StartDate = new DateTime(2019, 04, 04),  Duration = "4",Work=60, Progress=50,TaskType="FixedWork", Resources = new List<ResourceAlloacteData>(){ new ResourceAlloacteData() { ResourceId=7} },Predecessor="23" },
 
-                new TaskData() { TaskId = 25, TaskName = "First floor tile work initation",StartDate = new DateTime(2019, 04, 10), Duration = "4", Work=60, Progress=50, TaskType="FixedWork", Resources = new List<ResourceAlloacteData>(){ new ResourceAlloacteData() { ResourceId=8} } },
+                new TaskData() { TaskId = 25, TaskName = "First floor tile work initiation",StartDate = new DateTime(2019, 04, 10), Duration = "4", Work=60, Progress=50, TaskType="FixedWork", Resources = new List<ResourceAlloacteData>(){ new ResourceAlloacteData() { ResourceId=8} } },
 
                 new TaskData() { TaskId = 26,TaskName = "Tile test",StartDate = new DateTime(2019, 04, 04),Duration = "4",Work=60,Progress=50,TaskType="FixedWork", Resources = new List<ResourceAlloacteData>(){ new ResourceAlloacteData() { ResourceId=8} } },
 
                 new TaskData() { TaskId = 27,TaskName = "Second floor initiation",StartDate = new DateTime(2019, 04, 10), Duration = "4",Work=60,Progress=50, TaskType="FixedWork", Resources = new List<ResourceAlloacteData>(){ new ResourceAlloacteData() { ResourceId=9} } },
 
-                new TaskData() { TaskId = 28, TaskName = "Second floor tile work initation",StartDate = new DateTime(2019, 04, 06), Duration = "4", Work=60, Progress=50,TaskType="FixedWork", Resources = new List<ResourceAlloacteData>(){ new ResourceAlloacteData() { ResourceId=9} },Predecessor="27FS - 1"},
+                new TaskData() { TaskId = 28, TaskName = "Second floor tile work initiation",StartDate = new DateTime(2019, 04, 06), Duration = "4", Work=60, Progress=50,TaskType="FixedWork", Resources = new List<ResourceAlloacteData>(){ new ResourceAlloacteData() { ResourceId=9} },Predecessor="27FS - 1"},
 
-                new TaskData() { TaskId = 29,TaskName = "Exterior work initation",StartDate = new DateTime(2019, 04, 12),Duration = "4",Work=60,Progress=50,TaskType="FixedWork",Resources = new List<ResourceAlloacteData>(){ new ResourceAlloacteData() { ResourceId=10} }},
+                new TaskData() { TaskId = 29,TaskName = "Exterior work initiation",StartDate = new DateTime(2019, 04, 12),Duration = "4",Work=60,Progress=50,TaskType="FixedWork",Resources = new List<ResourceAlloacteData>(){ new ResourceAlloacteData() { ResourceId=10} }},
 
                 new TaskData() { TaskId = 30,TaskName = "Building test",StartDate = new DateTime(2019, 04, 08),Duration = "4",Work=60, Progress=50,TaskType="FixedWork"},
             };
