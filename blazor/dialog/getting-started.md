@@ -129,7 +129,6 @@ Add the Syncfusion Blazor Dialog component in the **~/Pages/Index.razor** file.
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion Blazor Dialog component in your default web browser.
 
 ![Blazor Dialog](./images/blazor-dialog.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BDLqXxsSUEHKRhYl?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 N> * In the dialog control, max-height is calculated based on the dialog target element height. If the **Target** property is not configured, the **document.body** is considered as a target. Therefore, to show a dialog in proper height, you need to add min-height to the target element.
 
@@ -163,7 +162,6 @@ The dialog component is maintained in the DOM after hiding the dialog when the [
 {% endtabs %}
 
 ![Prerender Blazor Dialog](./images/blazor-prerender-dialog.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/khjVgNRiSTDAwnORV?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Modal Blazor dialog
 
@@ -203,8 +201,6 @@ While the user clicks the overlay, the action can be handled through the [OnOver
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LjLqDHCaAKrXIxnU?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
 ## Enable header
 
 The Dialog header can be enabled by adding the header content as text or HTML content using the [Header](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogTemplates.html#Syncfusion_Blazor_Popups_DialogTemplates_Header) template of the dialog.
@@ -236,7 +232,6 @@ The Dialog header can be enabled by adding the header content as text or HTML co
 {% endtabs %}
 
 ![Blazor Dialog with Header](./images/blazor-dialog-header.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BXrqXdCSpDcCTfdK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Render Blazor Dialog with buttons
 
@@ -294,7 +289,6 @@ By adding the [DialogButtons](https://help.syncfusion.com/cr/blazor/Syncfusion.B
 {% endtabs %}
 
 ![Blazor Dialog with Buttons](./images/blazor-dialog-buttons.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LNLKDdCoTDcxFlAD?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## See also
 
