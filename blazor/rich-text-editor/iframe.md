@@ -26,7 +26,7 @@ Basically, in an iframe mode, you have the entire document but only the editor c
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VZhKtmCVBelxDIvZ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Blazor RichTextEditor with iframe](./images/blazor-richtexteditor-iframe.png)
 
 ## IFrame attributes
 
@@ -40,7 +40,7 @@ You can add an additional attribute to the body tag of an `<iframe>` element by 
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BNLgtwWhhyYfpwaF?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Blazor RichTextEditor with iframe attribute](./images/blazor-richtexteditor-iframe-attribute.png)
 
 ## Adding external CSS/Script file
 
@@ -72,6 +72,6 @@ Similarly, add the external script file to the `<iframe>` element using the `Ric
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rtLqDciBhxieQRoI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Blazor RichTextEditor with external css/script](./images/blazor-richtexteditor-iframe-external-CSS-script.png)
 
 N> You can refer to our [Blazor Rich Text Editor](https://www.syncfusion.com/blazor-components/blazor-wysiwyg-rich-text-editor) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Rich Text Editor](https://blazor.syncfusion.com/demos/rich-text-editor/overview?theme=bootstrap4) example to knows how to render and configure the rich text editor tools.
