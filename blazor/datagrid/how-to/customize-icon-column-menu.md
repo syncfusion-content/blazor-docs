@@ -64,4 +64,4 @@ This is demonstrated in the following sample code,
 
 The following image represents datagrid with customized column menu icon
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BDLAZHLQgLLENvHI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Customizing Column Menu Icon in Blazor DataGrid](../images/blazor-datagrid-column-menu-icon.png)
