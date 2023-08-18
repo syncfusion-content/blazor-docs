@@ -169,7 +169,7 @@ To highlight the range of overallocation dates with a square bracket, you can en
 
 ## Resource Multi Taskbar
 
-To visualize multiple tasks assigned to each resource in a row when the records are in the collapsed state. It can be enabled by setting the [EnableMultiTaskbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTaskbarSettings.html#Syncfusion_Blazor_Gantt_GanttTaskbarSettings_EnableMultiTaskbar) property of [GanttTaskbarSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTaskbarSettings) to `true`.
+To visualize multiple tasks assigned to each resource in a row when the records are in the collapsed state. It can be enabled by setting the `EnableMultiTaskbar` property of `GanttTaskbarSettings` to `true`.
 
 When a resource has multiple tasks scheduled on the same date, then the tasks will be overlapped one another. Taskbar editing is also possible to change the task scheduling on the collapsed state.
 
@@ -316,7 +316,7 @@ When a resource has multiple tasks scheduled on the same date, then the tasks wi
 
 ### Enable taskbar drag and drop
 
-In Gantt, you can enable taskbar drag and drop between resources by using the [AllowTaskbarDragAndDrop](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTaskbarSettings.html#Syncfusion_Blazor_Gantt_GanttTaskbarSettings_AllowTaskbarDragAndDrop) property of [GanttTaskbarSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTaskbarSettings) to `true`. This allows you to move a taskbar from one resource to another vertically, making it easier to schedule tasks and manage resources.
+In Gantt, you can enable taskbar drag and drop between resources by using the `AllowTaskbarDragAndDrop` property of `GanttTaskbarSettings` to `true`. This allows you to move a taskbar from one resource to another vertically, making it easier to schedule tasks and manage resources.
 
 ```cshtml
 
