@@ -7,7 +7,7 @@ control: SfPdfViewer
 documentation: ug
 ---
 
-# Render PDF Viewer Component from embedded source in the MAUI app 
+# Render PDF Document from embedded source in the MAUI Android app 
 
 In this section, we'll guide you how to render PDF Viewer from embedded source in a MAUI app. We'll break it down into simple steps to make it easy to follow.
 
@@ -76,4 +76,6 @@ N> If you encounter any errors while using the Android Emulator, refer to the fo
 
 ## See also
 
-* [Supported Features: Desktop vs Mobile](./features#supported-features-desktop-vs-mobile).
+* [Supported Features: Desktop vs Mobile](https://blazor.syncfusion.com/documentation/pdfviewer-2/getting-started/features#supported-features-desktop-vs-mobile).
+
+* [Render PDF document from url in the MAUI app](https://blazor.syncfusion.com/documentation/pdfviewer-2/getting-started/deploy-maui-windows).

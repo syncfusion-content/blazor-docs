@@ -160,3 +160,5 @@ N> If you encounter any errors while using the Android Emulator, refer to the fo
 ## See also
 
 * [Supported Features: Desktop vs Mobile](./features#supported-features-desktop-vs-mobile).
+
+* [Render PDF Document from embedded source in the MAUI Android app](../how-to/deploy-maui-using-android-emulator).
