@@ -55,7 +55,7 @@ To perform the multi-selection, press and hold CTRL key and click the desired ro
 
 The following represents the multiple selected rows
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hNBgtxVKfhUuRnNu?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Multiple Selection in Blazor DataGrid Rows](./images/blazor-datagrid-multi-selection.png)
 
 ## Selection mode
 
@@ -104,7 +104,7 @@ the [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSel
 
 The following screenshot shows selection mode using both(row and cells selection)
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BZhADHBUfLyGnmGr?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Rows and Cells Selection in Blazor DataGrid](./images/blazor-datagrid-row-cell-selection.png)
 
 ## Cell selection
 
@@ -153,7 +153,7 @@ The datagrid supports two types of cell selection mode that can be set by using 
 
 The following screenshot shows selection mode using cell
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VXBUDRLAfhwyNgSH?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Cell Selection in Blazor DataGrid](./images/blazor-datagrid-cell-selection.png)
 
 N> Cell selection requires the [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSelectionSettings.html#Syncfusion_Blazor_Grids_GridSelectionSettings_Mode) to be **Cell** or **Both**, and [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSelectionSettings.html#Syncfusion_Blazor_Grids_GridSelectionSettings_Type) should be **Multiple**.
 
@@ -202,7 +202,7 @@ To render the checkbox in each datagrid row, you need to assign the type as **Ch
 
 The following screenshot shows CheckBox Selection
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BDBqtxVUJVuZsEZO?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![CheckBox Selection in Blazor DataGrid](./images/blazor-datagrid-checkbox-selection.png)
 
 N> By default, selection is allowed by clicking a datagrid row or checkbox in that row. To allow selection only through checkbox, you can set the [CheckboxOnly](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSelectionSettings.html#Syncfusion_Blazor_Grids_GridSelectionSettings_CheckboxOnly) property of **GridSelectionSettings** as true.
 
@@ -254,8 +254,6 @@ and hold CTRL key and click the desired rows. To select range of rows, press and
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rDLKDxVgpJfDNOoa?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
 ### Hide select all checkbox in column header
 
 By default, setting the type as "ColumnType.CheckBox" will render a column with checkboxes only for selection purpose. You can hide the "select all" checkbox in the column header.
@@ -304,8 +302,6 @@ In the following sample, you can hide the header checkbox by defining the empty 
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VXLUDdrqTzzkMYlP?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
 ## Toggle selection
 
 The Toggle selection allows to perform selection and unselection of the particular row or cell. To enable toggle selection, set [EnableToggle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSelectionSettings.html#Syncfusion_Blazor_Grids_GridSelectionSettings_EnableToggle) property of **GridSelectionSettings** as true. If you click on the selected row or cell then it will be unselected and vice versa.
@@ -348,7 +344,7 @@ The Toggle selection allows to perform selection and unselection of the particul
 
 The following shows selection and deselection of row
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LNhAtRVqffHNbvOz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Blazor DataGrid with Toggle Selection](images/blazor-datagrid-toggle-selection.gif)
 
 N> If multi selection is enabled, then first click on any selected row (without pressing Ctrl key), it will clear the multi selection and in second click on the same row, it will be unselected.
 
@@ -395,7 +391,7 @@ The DataGrid allows to select range of cells or rows by mouse or touch dragging.
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VjBKZHLqpTQWmlFB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Drag Selection in Blazor DataGrid ](images/drag-selection.gif)
 
 N> * Drag selection is not compatible with [AutoFill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableAutoFill) feature.
 
@@ -447,8 +443,6 @@ You can perform toggle selection programmatically by using the **SelectRowAsync*
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LNBUtRhqfplUllmM?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
 ## Select row at initial rendering
 
 To select a row at initial rendering, set the [SelectedRowIndex](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_SelectedRowIndex) value.
@@ -492,7 +486,7 @@ To select a row at initial rendering, set the [SelectedRowIndex](https://help.sy
 
 The following image will be displayed with row selected in initial Rendering  
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rXVUZRBAJfuwJCwP?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Blazor DataGrid with Initial Selection](./images/blazor-datagrid-initial-selection.png)
 
 ## Get selected row indexes
 
@@ -675,8 +669,6 @@ You can select multiple rows by clicking on rows one by one. This will not desel
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rZrUXRVKJyTBDjHg?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
 ## Clear selection programmatically
 
 It is possible to clear the grid selection programmatically by using the [ClearSelectionAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ClearSelectionAsync) method of the Grid.
@@ -727,8 +719,6 @@ In the following sample, the third row is initially selected using the [Selected
     }
 }
 ```
-
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BNBgjHBUpyfbfkyK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 N> You can refer to our [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap4) to understand how to present and manipulate data.
 
