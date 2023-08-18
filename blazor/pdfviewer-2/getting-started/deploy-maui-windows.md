@@ -21,7 +21,7 @@ Create a new Blazor MAUI app and name it **PDFViewerGettingStarted**.
 
 N> The PDF Viewer (Next Gen) component is supported from .NET 6.0 onwards.
 
-## Install Blazor PDF Viewer NuGet package in Blazor Maui App
+## Install PDF Viewer NuGet package in Blazor Maui App
 
 Add the following NuGet packages into the Blazor Maui app.
 
@@ -98,9 +98,7 @@ Add the following stylesheet and script to the head section of the **~/wwwroot/i
 {% endhighlight %}
 {% endtabs %}
 
-## Add and Run the MAUI app on Windows
-
-### Adding MAUI PDF Viewer (Next Gen) Component in Windows
+## Add PDF Viewer component
 
 Add the Syncfusion PDF Viewer (Next Gen) component in the **~/Pages/Index.razor** file.
 
@@ -109,11 +107,23 @@ Add the Syncfusion PDF Viewer (Next Gen) component in the **~/Pages/Index.razor*
 
 @page "/"
 
-<SfPdfViewer2 DocumentPath="@DocumentPath" Height="100%" Width="100%"></SfPdfViewer2>
+@using Syncfusion.Blazor.SfPdfViewer
+
+<SfPdfViewer2 DocumentPath="@DocumentPath"
+              Height="100%"
+              Width="100%">
+</SfPdfViewer2>
 
 @code {
-    // Here, the 'wwwroot' folder is the web root directory and contains static files.
-    private string DocumentPath { get; set; } = "wwwroot/PDF_Succinctly.pdf";
+    public string DocumentPath { get; set; }
+
+    protected override void OnInitialized()
+    {
+        string Url = "https://s3.amazonaws.com/ebooks.syncfusion.com/downloads/blazor_webassembly_succinctly/blazor_webassembly_succinctly.pdf";
+        System.Net.WebClient webClient = new System.Net.WebClient();
+        byte[] byteArray = webClient.DownloadData(Url);
+        DocumentPath = "data:application/pdf;base64," + Convert.ToBase64String(byteArray);
+    }
 }
 
 {% endhighlight %}
@@ -121,9 +131,9 @@ Add the Syncfusion PDF Viewer (Next Gen) component in the **~/Pages/Index.razor*
 
 N> If the `DocumentPath` property value is not provided, the PDF Viewer (Next Gen) component will be rendered without loading a PDF document. Users can then use the open option from the toolbar to browse and open a PDF as required.
 
-### Run the MAUI PDF Viewer (Next Gen) component in Windows
+## Run on Windows
 
-* Run the sample in Windows Machine mode, and it will run Blazor MAUI in Windows.
+Run the sample in Windows Machine mode, and it will run Blazor MAUI in Windows.
 
 ![Run Windows machine](GettingStarted_images/windows-machine_maui.png)
 
@@ -133,62 +143,13 @@ Upon successfully launching the application, the PDF Viewer (Next Gen) component
 
 >[View Sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Server%20Deployment/Maui/MauiBlazorWindow%20-%20%20SfPdfViewer).
 
-## Add and Run the MAUI app on Android
-
-### Adding MAUI PDF Viewer (Next Gen) Component
-
-Add the Syncfusion PDF Viewer (Next Gen) component in the **~/Pages/Index.razor** file.
-
-{% tabs %}
-{% highlight razor %}
-
-@page "/"
-
-<SfPdfViewer2 @ref="viewer" DocumentPath="@DocumentPath" Height="100%" Width="100%"></SfPdfViewer2>
-
-@code {
-    SfPdfViewer2 viewer;
-    private string DocumentPath { get; set; } = "";
-
-    protected override void OnInitialized()
-    {
-        string basePath = "MauiBlazorAndroid.wwwroot.data.pdf_succinctly.pdf";
-        Stream DocumentStream = this.GetType().Assembly.GetManifestResourceStream(basePath);
-        DocumentStream.Position = 0;
-        using (MemoryStream memoryStream = new MemoryStream())
-        {
-            DocumentStream.CopyTo(memoryStream);
-            byte[] bytes = memoryStream.ToArray();
-            string base64String = Convert.ToBase64String(bytes);
-            string base64prefix = "data:application/pdf;base64,";
-            //Assigned the base64 path to the PDF document path.
-            DocumentPath = $"{base64prefix}{base64String}";
-        }
-        base.OnInitialized();
-    }
-}
-{% endhighlight %}
-{% endtabs %}
-
-N> When developing a Blazor Android MAUI application, passing the `DocumentPath` to the PDF Viewer (Next Gen) component as a `base64 string` is needed. This ensures that the application can retrieve and render a PDF document correctly within the PDF Viewer (Next Gen) component.
-
-### Run the MAUI PDF Viewer (Next Gen) component using Android emulator
+## Run on Android
 
 To run the PDF Viewer (Next Gen) in a Blazor Android MAUI application using the Android emulator, follow these steps:
 
 ![Run Windows machine](GettingStarted_images/emulator_maui.png)
 
-**Step 1** Set up the necessary dependencies, SDKs, and tools for Blazor Android MAUI on your Windows machine. Ensure that you have installed the required `Android SDK licenses`. If any errors occur during installation, follow the provided prompts or instructions to resolve them.
-
-![android-sdk-liscence](GettingStarted_images/android-sdk-liscence_maui.png)
-
-**Step 2** Install and launch the Android Device Manager. Open the Android SDK Manager, go to the `SDK Tools` tab, select the `Android Device Manager` checkbox, and click `Apply` or `OK`. This will allow you to create, manage, and launch Android Virtual Devices (AVDs) for testing and running Android applications.
-
-![picxel emulator](GettingStarted_images/pixcel-emulator_maui.png)
-
-**Step 3** Ensure the Android emulator is running. Launch the Android Device Manager and create or select an existing AVD to run the emulator.
-
-Now, relaunch the project in emulator mode. It will render the PDF Viewer (Next Gen) component using the Blazor Android MAUI application.
+Refer [here](https://learn.microsoft.com/en-us/dotnet/maui/android/emulator/device-manager#android-device-manager-on-windows) to install and launch Android emulator.
 
 N> If you encounter any errors while using the Android Emulator, refer to the following link for troubleshooting guidance[Troubleshooting Android Emulator](https://learn.microsoft.com/en-us/dotnet/maui/android/emulator/troubleshooting).
 
