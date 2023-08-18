@@ -54,7 +54,7 @@ In dialog edit mode, when you start editing the currently selected row data will
 
 The following screenshot represents Editing in Dialog Mode.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LDVANxVrzfJpTeVM?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Blazor DataGrid with Dialog Editing](./images/blazor-datagrid-dialog-editing.png)
 
 ## Customize the edit dialog
 
@@ -136,8 +136,6 @@ In the below example we have changed the dialog's header text and footer button 
     }
 }
 ```
-
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hZrAZdhLJpkHrPcL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 N> You can refer to our [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap4) to understand how to present and manipulate data.
 
@@ -237,7 +235,5 @@ In the following sample, the `SfNumericTextBox` component is rendered inside the
 }
 
 ```
-
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BXBUXRhhToMiRQkG?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 N> You can find the fully working sample [here](https://github.com/SyncfusionExamples/blazor-datagrid-calculated-columns-inside-dialog-editing).

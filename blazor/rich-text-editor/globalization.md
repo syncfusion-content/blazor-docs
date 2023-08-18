@@ -31,6 +31,6 @@ N> The `EnableRtl` property will not change based on the current culture.
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VXBAXQiqATzlBnJi?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Blazor RichTextEditor right to left toolbar](./images/blazor-richtexteditor-right-to-left.png)
 
 N> You can refer to our [Blazor Rich Text Editor](https://www.syncfusion.com/blazor-components/blazor-wysiwyg-rich-text-editor) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Rich Text Editor](https://blazor.syncfusion.com/demos/rich-text-editor/overview?theme=bootstrap4) example to know how to render and configure the rich text editor tools.
