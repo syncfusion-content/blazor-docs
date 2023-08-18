@@ -7,7 +7,7 @@ control: SfPdfViewer
 documentation: ug
 ---
 
-# Render PDF Document from embedded source in the MAUI Android app 
+# Render PDF document from embedded source in the MAUI Android app 
 
 In this section, we'll guide you how to render PDF Viewer from embedded source in a MAUI app. We'll break it down into simple steps to make it easy to follow.
 
