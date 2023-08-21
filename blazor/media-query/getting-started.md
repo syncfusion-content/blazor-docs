@@ -21,46 +21,41 @@ To get started quickly with the Blazor Media Query component, you can check out 
 
 ## Create a new Blazor App in Visual Studio
 
-You can create **Blazor Server App** or **Blazor WebAssembly App** using Visual Studio in one of the following ways,
+You can create a **Blazor Server App** or **Blazor WebAssembly App** using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0) or the [Syncfusion Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
 
-* [Create a Project using Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0&pivots=windows)
+## Install Syncfusion Blazor Core and Theme NuGet in the App
 
-* [Create a Project using Syncfusion Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio)
-
-## Install Syncfusion Blazor Core NuGet in the App
-
-Syncfusion Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). In order to use Syncfusion Blazor components in the application, add reference to the corresponding NuGet. Refer to [NuGet packages topic](https://blazor.syncfusion.com/documentation/nuget-packages) for available NuGet packages list with component details and [Benefits of using individual NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages#benefits-of-using-individual-nuget-packages). 
-
-To add Blazor Media Query component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search for [Syncfusion.Blazor.Core](https://www.nuget.org/packages/Syncfusion.Blazor.Core) and then install it.
+To add Blazor Media Query component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install [Syncfusion.Blazor.Core](https://www.nuget.org/packages/Syncfusion.Blazor.Core) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/). Alternatively, you can utilize the following package manager command to achieve the same.
 
 {% tabs %}
-{% highlight c# tabtitle="Package Manager" %}
+{% highlight C# tabtitle="Package Manager" %}
 
-PM> NuGet\Install-Package Syncfusion.Blazor.Core -Version {{ site.releaseversion }}
+Install-Package Syncfusion.Blazor.Core  -Version {{ site.releaseversion }}
+
+Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
 
 {% endhighlight %}
 {% endtabs %}
+
+N> Syncfusion Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for available NuGet packages list with component details.
 
 ## Register Syncfusion Blazor Service
 
-Open **~/_Imports.razor** file and import the `Syncfusion.Blazor` namespace.
+Open **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Navigations` namespace.
 
 {% tabs %}
-{% highlight razor tabtitle="~/Imports.razor" %}
+{% highlight razor tabtitle="~/_Imports.razor" %}
 
 @using Syncfusion.Blazor
+@using Syncfusion.Blazor.Navigations
 
 {% endhighlight %}
 {% endtabs %}
 
-Now, register the Syncfusion Blazor Service in the Blazor Server App or Blazor WebAssembly App. 
-
-### Blazor Server App
-
-* For **.NET 6 and .NET 7** app, open the **~/Program.cs** file and register the Syncfusion Blazor Service.
+Now, register the Syncfusion Blazor Service in the **~/Program.cs** file of your Blazor Server App or Blazor WebAssembly App. 
 
 {% tabs %}
-{% highlight c# tabtitle=".NET 6 & .NET 7 (~/Program.cs)" hl_lines="3 10" %}
+{% highlight C# tabtitle="Blazor Server App" hl_lines="3 10" %}
 
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Web;
@@ -77,14 +72,7 @@ var app = builder.Build();
 ....
 
 {% endhighlight %}
-{% endtabs %}
-
-### Blazor WebAssembly App
-
-Open **~/Program.cs** file and register the Syncfusion Blazor Service in the client web app.
-
-{% tabs %}
-{% highlight c# tabtitle=".NET 6 & .NET 7 (~/Program.cs)" hl_lines="3 11" %}
+{% highlight C# tabtitle="Blazor WebAssembly App" hl_lines="3 11" %}
 
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
@@ -94,7 +82,7 @@ var builder = WebAssemblyHostBuilder.CreateDefault(args);
 builder.RootComponents.Add<App>("#app");
 builder.RootComponents.Add<HeadOutlet>("head::after");
 
-builder.Services.AddScoped(serviceProvider => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
+builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
 
 builder.Services.AddSyncfusionBlazor();
 await builder.Build().RunAsync();
