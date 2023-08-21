@@ -32,7 +32,7 @@ The following table lists the default font name and width of the `FontName` drop
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rjBUNcWLBwyyLqFJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Blazor RichTextEditor changing built-in font family](../images/blazor-richtexteditor-buildin-font-name.png)
 
 ### Custom font family
 
@@ -47,7 +47,7 @@ If you want to add additional font names and font sizes to the font drop-down, p
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rDhqjGirVlehHIYQ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Blazor RichTextEditor with custom fonts family](../images/blazor-richtexteditor-custom-font.png)
 
 ### Google font support
 
@@ -104,7 +104,7 @@ For Blazor WebAssembly App, refer style in the `<head>` of the **~/index.html** 
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BZhgtcWhBFHxyfqB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Blazor RichTextEditor with Google font](../images/blazor-richtexteditor-google-font.png)
 
 ## Font size
 
@@ -129,7 +129,7 @@ The following table lists the default font size and width of the [FontSize](http
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rZrKDGirrFcHOuUP?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Blazor RichTextEditor changing built-in font size](../images/blazor-richtexteditor-buildin-font-size.png)
 
 ### Custom font size
 
@@ -143,7 +143,7 @@ The Rich Text Editor provides support for customizing the font size with the exi
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VZVqDwMVLkxsgtVg?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Blazor RichTextEditor with custom font size](../images/blazor-richtexteditor-custom-font-size.png)
 
 ## Formats
 
@@ -168,7 +168,7 @@ The following table list the default format name and width of the  [Format](http
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hNLqDQMhVulSYyDQ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Blazor RichTextEditor with built-in format](../images/blazor-richtexteditor-buildin-format.png)
 
 ### Custom format
 
@@ -182,7 +182,7 @@ The Rich Text Editor provides support for custom formats with an existing list. 
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VDBgZwMVBEYGqYbx?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Blazor RichTextEditor with Custom Format](../images/blazor-richtexteditor-custom-format.png)
 
 ## Font and background color
 
@@ -200,7 +200,7 @@ The `RichTextEditorFontColor` and `RichTextEditorBackgroundColor` tag has two mo
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LXhKZQirgNPpWyUH?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Blazor RichTextEditor displaying background color](../images/blazor-richtexteditor-background-color.png)
 
 ## Built-in editor content styles
 
@@ -439,7 +439,7 @@ This feature allows users to change the appearance of the numbered and bulleted 
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hZrgDQihUWLCLrIB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Blazor RichTextEditor bullet format list](../images/blazor-richtexteditor-bullet-format.png)
 
 ## Code block
 
@@ -455,4 +455,4 @@ The following code will configure the InsertCode button in the toolbar and set t
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VtBKDcirAWIRejKK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Blazor RichTextEditor format code block](../images/blazor-richtexteditor-format-code-block.png)
