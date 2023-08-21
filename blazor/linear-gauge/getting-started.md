@@ -28,7 +28,7 @@ To add Blazor LinearGauge component in the app, open the NuGet package manager i
 {% tabs %}
 {% highlight C# tabtitle="Package Manager" %}
 
-Install-Package Syncfusion.Blazor.Navigations -Version {{ site.releaseversion }}
+Install-Package Syncfusion.Blazor.LinearGauge -Version {{ site.releaseversion }}
 
 Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
 
