@@ -11,7 +11,7 @@ documentation: ug
 
 ## Overview
 
-**NuGet** is a Package management system for Visual Studio. It makes it easy to add, update and remove external libraries in our application. Syncfusion publishing all Blazor NuGet packages in [nuget.org](https://www.nuget.org/packages?q=Tag%3A%22Blazor%22+Syncfusion). The Syncfusion Blazor NuGet packages can be used without installing the Syncfusion installation. You can simply exploit the Syncfusion Blazor NuGet packages in your Blazor application to develop with the Syncfusion Blazor components.
+**NuGet** is a Package management system for Visual Studio. It makes it easy to add, update and remove external libraries in our application. Syncfusion publishing all Blazor NuGet packages in [nuget.org](https://www.nuget.org/packages?q=Tag:%22Blazor%22+Syncfusion). The Syncfusion Blazor NuGet packages can be used without installing the Syncfusion installation. You can simply exploit the Syncfusion Blazor NuGet packages in your Blazor application to develop with the Syncfusion Blazor components.
 
 N> The Syncfusion Blazor NuGet package, which contains all Syncfusion Blazor components in a single package, is available beginning with v17.4.0.39 (Essential Studio 2019 Volume 4).
 <br/> The Syncfusion Blazor UI components are available separately as [Individual NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) beginning with v18.4.0.30 (Essential Studio 2020 Volume 4). The NuGet packages are segregated based on the component usage and its namespace.
@@ -84,7 +84,7 @@ The **Package Manager Console** saves NuGet packages installation time since you
 
     **For example:** Install-Package Syncfusion.Blazor.Grid
 
-    N> You can find the list of Syncfusion Blazor NuGet packages which are published in nuget.org from [here](https://www.nuget.org/packages?q=Tags%3A%22Blazor%22+syncfusion)
+    N> You can find the list of Syncfusion Blazor NuGet packages which are published in nuget.org from [here](https://www.nuget.org/packages?q=Tags:%22Blazor%22+syncfusion)
 
     ***Install specified Syncfusion Blazor NuGet package in specified Blazor application***
 
