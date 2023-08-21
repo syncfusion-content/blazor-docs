@@ -26,7 +26,7 @@ To add Blazor Maps component in the app, open the NuGet package manager in Visua
 {% tabs %}
 {% highlight C# tabtitle="Package Manager" %}
 
-Install-Package Syncfusion.Blazor.Navigations -Version {{ site.releaseversion }}
+Install-Package Syncfusion.Blazor.Maps -Version {{ site.releaseversion }}
 
 Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
 
