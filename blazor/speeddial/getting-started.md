@@ -286,7 +286,7 @@ N> Syncfusion recommends to reference scripts using [Static Web Assets](https://
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to run the application. Then, the Syncfusion `Blazor SpeedDial` component will be rendered in the default web browser.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rjhKjxiJWnlvJDIx?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Blazor SpeedDial Component](./images/blazor-speeddial-component.png)
 
 ## Linear and radial display modes
 
@@ -316,7 +316,9 @@ You can use the [`Mode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VtrgXHiJsYIAXTZI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Blazor SpeedDial Component](./images/blazor-speeddial-linear-sample.png)
+
+![Blazor SpeedDial Component](./images/blazor-speeddial-mode-radial-sample.png)
 
 ## Item clicked event
 
@@ -344,7 +346,7 @@ The speed dial control triggers the [`ItemClicked`](https://help.syncfusion.com/
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BtLgtnsTMYHJTXDn?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Blazor SpeedDial Component](./images/blazor-speeddial-event-sample.png)
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/SpeedDial).
 

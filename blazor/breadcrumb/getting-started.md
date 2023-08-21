@@ -122,7 +122,6 @@ Add the Syncfusion Blazor Breadcrumb component in the **~/Pages/Index.razor** fi
 * Press F5 to run the application. Then, the Syncfusion Blazor Breadcrumb component will be rendered in the default web browser.
 
 ![Blazor Breadcrumb Component](./images/blazor-Breadcrumb-component.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LXrqZHCRqMCJrGIJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 N> The Breadcrumb component will render based on the current URL, when the Breadcrumb items are not specified.
 
@@ -149,7 +148,6 @@ To render Breadcrumb component with items use [BreadcrumbItem](https://help.sync
 N> Place list of [BreadcrumbItem](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.BreadcrumbItem.html) within [BreadcrumbItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.BreadcrumbItems.html) tag directive.
 
 ![Blazor Breadcrumb Component](./images/blazor-Breadcrumb-items.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/hZrgNHMHKCXorhEu?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Enable or disable navigation
 
