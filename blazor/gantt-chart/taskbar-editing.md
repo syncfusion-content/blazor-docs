@@ -9,7 +9,7 @@ documentation: ug
 
 # Taskbar editing in Blazor Gantt Chart Component
 
-In the Gantt chart, you can modify task details through taskbar editing. This feature allows you to easily resize and drag the taskbar to make adjustments to the task. When you begin taskbar editing by clicking on a taskbar, a virtual taskbar appears over it. This virtual taskbar serves as a reference, helping you remember the original position of the task on the timeline before making any changes. With the virtual taskbar as a reference, you can make adjustments to the task, such as changing the duration by resizing the action and dragging the taskbar to the desired position on the timeline to adjust the task's start and end dates.
+In the Gantt chart, you can modify task details through taskbar editing. This feature allows you to easily resize and drag the taskbar to make adjustments to the task. When you begin taskbar editing by clicking on a taskbar, a virtual taskbar appears over it. This virtual taskbar serves as a reference, helping you remember the original position of the task on the timeline before making any changes. With the virtual taskbar as a reference, you can make adjustments to the task, such as changing the duration by resizing action and dragging the taskbar to the desired position on the timeline to adjust the task's start and end dates.
 
 ```cshtml
 @using Syncfusion.Blazor.Gantt
