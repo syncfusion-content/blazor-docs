@@ -9,9 +9,7 @@ documentation: ug
 
 # Taskbar editing in Blazor Gantt Chart Component
 
-Modify the task details through user interaction, such as resizing and dragging the taskbar, by enabling the `GanttEditSettings.AllowTaskbarEditing` property. 
-
-Furthermore, the user interaction extends to the virtual taskbar. Once alterations have been made to the original taskbar, any subsequent actions performed on the virtual taskbar mirror these changes. Whether the virtual taskbar is repositioned, resized, or its progress is adjusted, the effects resonate from the precise position where the virtual taskbar was last positioned.This integrated approach to task modification and virtual taskbar manipulation optimizes project tracking and ensures that every adjustment seamlessly contributes to the overall trajectory of the project.
+In the Gantt chart, you can modify task details through taskbar editing. This feature allows you to easily resize and drag the taskbar to make adjustments to the task. When you begin taskbar editing by clicking on a taskbar, a virtual taskbar appears over it. This virtual taskbar serves as a reference, helping you remember the original position of the task on the timeline before making any changes. With the virtual taskbar as a reference, you can make adjustments to the task, such as changing the duration by resizing the action and dragging the taskbar to the desired position on the timeline to adjust the task's start and end dates.
 
 ```cshtml
 @using Syncfusion.Blazor.Gantt
