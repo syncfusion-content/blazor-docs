@@ -24,7 +24,7 @@ To get started quickly with Blazor MaskedTextBox component, you can check on thi
 
 You can create **Blazor Server App** or **Blazor WebAssembly App** using Visual Studio in one of the following ways,
 
-* [Create a Project using Microsoft Templates](https://docs.microsoft.com/en-us/aspnet/core/blazor/tooling?pivots=windows)
+* [Create a Project using Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0&pivots=windows)
 
 * [Create a Project using Syncfusion Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio)
 
@@ -276,7 +276,7 @@ N> Syncfusion recommends to reference scripts using [Static Web Assets](https://
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to run the application. Then, the Syncfusion `Blazor MaskedTextBox` component will be rendered in the default web browser.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/htLqNnsermYKOHsQ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Blazor MaskedTextBox Component](./images/blazor-maskedtextbox-component.png)
 
 ## Set the mask
 
@@ -292,7 +292,7 @@ The following example demonstrates the usage of mask element `0` that allows any
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LNBgZHMyLmOvbmdx?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Blazor MaskedTextBox with Mask](./images/blazor-maskedtextbox-with-mask.png)
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/MaskedTextBox).
 

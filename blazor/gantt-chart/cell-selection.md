@@ -58,7 +58,7 @@ Find the code example below to enable the cell selection in Gantt Chart.
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BthADwCwhCPniEZI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Cell Selection in Blazor Gantt Chart](images/blazor-gantt-chart-cell-selection.png)
 
 ## Selecting multiple cells
 
@@ -109,7 +109,7 @@ You can select multiple cells by setting the `SelectionSettings.Type` property t
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rZLADmCGrrczWSCy?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Multiple Cell Selection in Blazor Gantt Chart](images/blazor-gantt-chart-multi-cell-selection.png)
 
 ## Selecting a cell dynamically
 
@@ -168,7 +168,7 @@ You can select a cell dynamically using the [SelectCellAsync](https://help.syncf
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/htVAZmiGLqNGvZYG?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Selecting Cells Dynamically in Blazor Gantt Chart](images/blazor-gantt-chart-single-cell-selection.png)
 
 ## Customize cell selection action
 
@@ -225,5 +225,3 @@ While selecting a cell in Gantt Chart, the `CellSelecting` and `CellSelected` ev
     }
 }
 ```
-
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VXhUDwCGrKSgWlrM?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}

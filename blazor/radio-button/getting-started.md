@@ -283,7 +283,7 @@ N> Syncfusion recommends to reference scripts using [Static Web Assets](https://
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to run the application. Then, the Syncfusion `Blazor RadioButton` component will be rendered in the default web browser.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hNVqXxspUmomswPi?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Blazor RadioButton Component](./images/blazor-radiobutton-component.png)
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/RadioButton).
 
@@ -293,4 +293,4 @@ N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-
 * [Getting Started with Syncfusion Blazor for Server-Side in Visual Studio](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio)
 * [Getting Started with Syncfusion Blazor for Server-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-dotnet-cli)
 
-N> You can also explore our [Blazor Radio Button Example](https://blazor.syncfusion.com/demos/buttons/radio-button?) that shows you how to render and configure the Radio Button.
+N> You can also explore our [Blazor Radio Button Example](https://blazor.syncfusion.com/demos/buttons/radio-button) that shows you how to render and configure the Radio Button.
