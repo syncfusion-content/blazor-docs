@@ -169,9 +169,9 @@ To highlight the range of overallocation dates with a square bracket, you can en
 
 ## Resource Multi Taskbar
 
-To visualize multiple tasks assigned to each resource in a row when the records are in the collapsed state. It can be enabled by setting the `EnableMultiTaskbar` property of `GanttTaskbarSettings` to `true`.
+To gain a clearer understanding of the task assignment process, especially when managing numerous tasks assigned to each resource, the incorporation of a 'multi-taskbar' proves essential. This feature serves as an invaluable visual aid, particularly when working with collapsed records, as it efficiently condenses task information for easy reference. To enable this feature, you simply need to set the `EnableMultiTaskbar` property within `GanttTaskbarSettings` to `true`.
 
-When a resource has multiple tasks scheduled on the same date, then the tasks will be overlapped one another. Taskbar editing is also possible to change the task scheduling on the collapsed state.
+Once this feature is turned on, it becomes particularly handy when a resource has multiple tasks scheduled for the same date. In such scenarios, these tasks will naturally overlap on the timeline, making it much simpler to identify their relationships and dependencies. Additionally, it's important to note that taskbar editing remains fully accessible even when in this collapsed view. This means you can conveniently adjust task schedules as needed, thus optimizing your project management efforts.
 
 ```cshtml
 
@@ -316,7 +316,9 @@ When a resource has multiple tasks scheduled on the same date, then the tasks wi
 
 ### Enable taskbar drag and drop
 
-In Gantt, you can enable taskbar drag and drop between resources by using the `AllowTaskbarDragAndDrop` property of `GanttTaskbarSettings` to `true`. This allows you to move a taskbar from one resource to another vertically, making it easier to schedule tasks and manage resources.
+Within the Gantt chart's resource multi-taskbar feature, you have the capability to seamlessly reposition taskbars among different resources. This functionality can be enabled by setting the `AllowTaskbarDragAndDrop` property within `GanttTaskbarSettings` to a value of `true`.
+
+This functionality, once activated, empowers you to effortlessly relocate taskbars vertically, allowing for the smooth transfer of tasks between different resources. This intuitive maneuver simplifies task scheduling and enhances the overall management of your resources. Whether you need to reassign tasks to different team members or optimize resource allocation, this feature provides a flexible and efficient solution, streamlining your project management within the Gantt chart interface.
 
 ```cshtml
 
