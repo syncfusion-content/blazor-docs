@@ -178,8 +178,8 @@ This allows you to effortlessly move taskbar vertically, allowing for the smooth
 
 @using Syncfusion.Blazor.Gantt
 
-<SfGantt @ref="Gantt" ShowOverallocation="true" TreeColumnIndex="1" RowHeight="38"  DataSource="@TaskCollection" Height="450px" Width="100%" ViewType="ViewType.ResourceView" CollapseAllParentTasks=true
-                     Toolbar="@(new List<Object>() { "Add", "Cancel", "Update" , "Delete", "Edit", "CollapseAll", "ExpandAll" })" AllowResizing="true">
+<SfGantt @ref="Gantt" ShowOverallocation="true" TreeColumnIndex="1" DataSource="@TaskCollection" Height="450px" Width="900px" ViewType="ViewType.ResourceView" CollapseAllParentTasks=true
+                     Toolbar="@(new List<Object>() { "Add", "Cancel", "Update" , "Delete", "Edit", "CollapseAll", "ExpandAll" })" >
                 <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" ParentID="ParentId" Work="Work" ResourceInfo="Resources" Dependency="Predecessor" >
                 </GanttTaskFields>
                 <GanttColumns>
@@ -192,7 +192,7 @@ This allows you to effortlessly move taskbar vertically, allowing for the smooth
                     <GanttColumn Field="StartDate" HeaderText="Start Date"></GanttColumn>
                     <GanttColumn Field="EndDate" HeaderText="End Date"></GanttColumn>
                 </GanttColumns>
-                <GanttResourceFields Group="ResourceGroup" Resources="@ResourceCollection" Id="ResourceId" Name="ResourceName" Unit="Unit" TResources="ResourceAlloacteData"></GanttResourceFields>
+                <GanttResourceFields Resources="@ResourceCollection" Id="ResourceId" Name="ResourceName" Unit="Unit" Group="ResourceGroup" TResources="ResourceAlloacteData"></GanttResourceFields>
                 <GanttLabelSettings TaskLabel="TaskName" TValue="TaskData"></GanttLabelSettings>
                 <GanttEditSettings AllowAdding="true" AllowDeleting="true" AllowEditing="true" AllowTaskbarEditing="true"></GanttEditSettings>
                 <GanttTaskbarSettings EnableMultiTaskbar="true" AllowTaskbarDragAndDrop="true"></GanttTaskbarSettings>
@@ -201,8 +201,6 @@ This allows you to effortlessly move taskbar vertically, allowing for the smooth
 
 @code {
     public SfGantt<TaskData> Gantt;
-    private DateTime ProjectStart = new DateTime(2022, 03, 25);
-    private DateTime ProjectEnd = new DateTime(2022, 05, 10);
     private List<TaskData> TaskCollection { get; set; }
     private List<ResourceAlloacteData> ResourceCollection { get; set; }
     protected override void OnInitialized()
