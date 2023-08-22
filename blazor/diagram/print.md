@@ -18,7 +18,7 @@ Some of the print options cannot be configured through JavaScript code. So the l
 * [Chrome](https://support.google.com/chrome/answer/1069693?hl=en&visit_id=1-636335333734668335-3165046395&rd=1)
 * [Firefox](https://support.mozilla.org/en-US/kb/how-print-web-pages-firefox)
 * [Safari](https://www.mintprintables.com/print-tips/adjust-margins-osx/)
-* [IE](http://www.helpteaching.com/help/print/index.htm)
+* [IE](https://www.helpteaching.com/help/print/index.htm)
 
 ## Printing Options
 
@@ -80,4 +80,4 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## See Also
 
-* [How to print or export the HTML and Native node into image format](https://www.syncfusion.com/kb/13993/how-to-print-or-export-the-html-and-native-node-into-image-format)
+* [How to print or export the HTML and Native node into image format](https://support.syncfusion.com/kb/article/12332/how-to-print-or-export-the-html-and-native-node-into-image-format-in-blazor-diagarm)

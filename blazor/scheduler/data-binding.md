@@ -57,7 +57,7 @@ To bind list binding to the Scheduler, you can simply assign a list of datasourc
 
 N> By default, `DataManager` uses `BlazorAdaptor` for binding local data.
 
-You can also bind different field names to the default event fields as well as include additional custom fields to the event object collection which can be referred [here](./appointments/#event-fields).
+You can also bind different field names to the default event fields as well as include additional custom fields to the event object collection which can be referred [here](./appointments#event-fields).
 
 ### ExpandoObject binding
 
@@ -113,7 +113,7 @@ To bind data to the Scheduler using **DynamicObject** binding, you can create a 
 
 **DynamicObject** implements the `IDynamicMetaObjectProvider` interface, which means you can override member access operations like `GetMember` and `SetMember` to provide your own custom logic.**DynamicObject** binding is that it allows you to create objects with dynamic behavior, which can be useful in scenarios where you need to work with objects whose behavior is not known at compile-time.
 
-N> The [`GetDynamicMemberNames`](https://docs.microsoft.com/en-us/dotnet/api/system.dynamic.dynamicobject.getdynamicmembernames?view=netcore-3.1) method of DynamicObject class must be overridden and return the property names to perform data operation and editing while using DynamicObject.
+N> The [`GetDynamicMemberNames`](https://learn.microsoft.com/en-us/dotnet/api/system.dynamic.dynamicobject.getdynamicmembernames?view=netcore-3.1) method of DynamicObject class must be overridden and return the property names to perform data operation and editing while using DynamicObject.
 
 ```csharp
 @using System.Dynamic
@@ -173,7 +173,7 @@ N> The [`GetDynamicMemberNames`](https://docs.microsoft.com/en-us/dotnet/api/sys
 
 ## ObservableCollection
 
-This [ObservableCollection](https://docs.microsoft.com/en-us/dotnet/api/system.collections.objectmodel.observablecollection-1?view=netframework-4.8) (dynamic data collection) provides notifications when items are added, removed and moved. The implement [INotifyCollectionChanged](https://docs.microsoft.com/en-us/dotnet/api/system.collections.specialized.inotifycollectionchanged?view=netframework-4.8) notifies when dynamic changes of add,remove, move and clear the collection. The implement [INotifyPropertyChanged](https://docs.microsoft.com/en-us/dotnet/api/system.componentmodel.inotifypropertychanged?view=netframework-4.8) notifies when property value has changed in client side.
+This [ObservableCollection](https://learn.microsoft.com/en-us/dotnet/api/system.collections.objectmodel.observablecollection-1?view=netframework-4.8) (dynamic data collection) provides notifications when items are added, removed and moved. The implement [INotifyCollectionChanged](https://learn.microsoft.com/en-us/dotnet/api/system.collections.specialized.inotifycollectionchanged?view=netframework-4.8) notifies when dynamic changes of add,remove, move and clear the collection. The implement [INotifyPropertyChanged](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.inotifypropertychanged?view=netframework-4.8) notifies when property value has changed in client side.
 Here, AppointmentData class implements the interface of **INotifyPropertyChanged** and it raises the event when Subject property value was changed.
 
 ```csharp
@@ -758,7 +758,7 @@ It is common to have authorization in the server of origin to prevent anonymous 
 
 * Setting the access token in the **Headers** property of the **SfDataManager**. See [here](#setting-custom-headers) for adding headers.
 
-Getting the bearer token may vary with access token providers. More information on configuring HttpClient with authentication can be found on the official page [here](https://docs.microsoft.com/en-us/aspnet/core/blazor/security/webassembly/additional-scenarios?view=aspnetcore-3.1).
+Getting the bearer token may vary with access token providers. More information on configuring HttpClient with authentication can be found on the official page [here](https://learn.microsoft.com/en-us/aspnet/core/blazor/security/webassembly/additional-scenarios?view=aspnetcore-3.1).
 
 ### Setting custom headers
 
@@ -1068,7 +1068,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## SQL Server data binding(SQL Client)
 
-The following examples demonstrate how to consume data from SQL Server using Microsoft SqlClient and bound it to Blazor Scheduler. You can achieve this requirement by using [Custom Adaptor](./custom-binding/#custom-adaptor-as-component).
+The following examples demonstrate how to consume data from SQL Server using Microsoft SqlClient and bound it to Blazor Scheduler. You can achieve this requirement by using [Custom Adaptor](./custom-binding#custom-adaptor-as-component).
 
 Before the implementation, add required NuGet like **Microsoft.Data.SqlClient** and **Syncfusion.Blazor** in your application. In the following sample, Custom Adaptor can be created as a Component. In custom adaptor **Read** method, you can get filter appointments using **DataManagerRequest**.
 
