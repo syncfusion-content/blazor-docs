@@ -18,7 +18,6 @@ Unassigned tasks in the Gantt Chart refer to tasks that have not been assigned t
 ## Resource task
 A task assigned to a resource is termed a resource task and is displayed as a child task under the corresponding resource in the Gantt chart.
 
-N> There is not support for Indent/Oudent in resource view Gantt Chart.
 
 ```cshtml
 @using Syncfusion.Blazor.Gantt
@@ -88,6 +87,8 @@ N> There is not support for Indent/Oudent in resource view Gantt Chart.
 ```
 
 <!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LjhgjQMvzyAZTxLH?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
+
+N> There is not support for Indent/Oudent in resource view Gantt Chart.
 
 ## Resource OverAllocation
 
@@ -167,158 +168,11 @@ To highlight the range of overallocation dates with a square bracket, you can en
 
 <!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/rXVqNQsPpofLwCPA?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
-## Resource Multi Taskbar
+## Enable taskbar drag and drop
 
-To gain a clearer understanding of the task assignment process, especially when managing numerous tasks assigned to each resource, the incorporation of a 'multi-taskbar' proves essential. This feature serves as an invaluable visual aid, particularly when working with collapsed records, as it efficiently condenses task information for easy reference. To enable this feature, you simply need to set the `EnableMultiTaskbar` property within `GanttTaskbarSettings` to `true`.
+Within the Gantt chart, you have the capability to reposition taskbar among different resources. This functionality can be enabled by setting the `AllowTaskbarDragAndDrop` property within `GanttTaskbarSettings` to a value of `true`.
 
-Once this feature is turned on, it becomes particularly handy when a resource has multiple tasks scheduled for the same date. In such scenarios, these tasks will naturally overlap on the timeline, making it much simpler to identify their relationships and dependencies. Additionally, it's important to note that taskbar editing remains fully accessible even when in this collapsed view. This means you can conveniently adjust task schedules as needed, thus optimizing your project management efforts.
-
-```cshtml
-
-@using Syncfusion.Blazor.Gantt
-
-<SfGantt @ref="Gantt" ShowOverallocation="true" TreeColumnIndex="1" RowHeight="38"  DataSource="@TaskCollection" Height="450px" Width="100%" ViewType="ViewType.ResourceView" CollapseAllParentTasks=true
-                     Toolbar="@(new List<Object>() { "Add", "Cancel", "Update" , "Delete", "Edit", "CollapseAll", "ExpandAll" })" AllowResizing="true">
-                <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" ParentID="ParentId" Work="Work" ResourceInfo="Resources" Dependency="Predecessor" >
-                </GanttTaskFields>
-                <GanttColumns>
-                    <GanttColumn Field="TaskId" Visible=false></GanttColumn>
-                    <GanttColumn Field="ResourceId" Visible=false></GanttColumn>
-                    <GanttColumn Field="TaskName" HeaderText="Name" Width="250"></GanttColumn>
-                    <GanttColumn Field="ResourceName" HeaderText="Name" Width="250"></GanttColumn>
-                    <GanttColumn Field="Work" HeaderText="Work"></GanttColumn>
-                    <GanttColumn Field="Progress"></GanttColumn>
-                    <GanttColumn Field="StartDate" HeaderText="Start Date"></GanttColumn>
-                    <GanttColumn Field="EndDate" HeaderText="End Date"></GanttColumn>
-                </GanttColumns>
-                <GanttResourceFields Group="ResourceGroup" Resources="@ResourceCollection" Id="ResourceId" Name="ResourceName" Unit="Unit" TResources="ResourceAlloacteData"></GanttResourceFields>
-                <GanttLabelSettings TaskLabel="TaskName" TValue="TaskData"></GanttLabelSettings>
-                <GanttEditSettings AllowAdding="true" AllowDeleting="true" AllowEditing="true" AllowTaskbarEditing="true"></GanttEditSettings>
-                <GanttTaskbarSettings EnableMultiTaskbar="true"></GanttTaskbarSettings>
-                <GanttSplitterSettings  Position="30%"></GanttSplitterSettings>
-            </SfGantt>
-
-@code {
-    public SfGantt<TaskData> Gantt;
-    private DateTime ProjectStart = new DateTime(2022, 03, 25);
-    private DateTime ProjectEnd = new DateTime(2022, 05, 10);
-    private List<TaskData> TaskCollection { get; set; }
-    private List<ResourceAlloacteData> ResourceCollection { get; set; }
-    protected override void OnInitialized()
-    {
-        this.TaskCollection = GetTaskCollection();
-        this.ResourceCollection = GetResources;
-    }
-    public class ResourceAlloacteData
-    {
-        public int ResourceId { get; set; }
-        public string ResourceName { get; set; }
-        public double Unit { get; set; }
-        public string? ResourceGroup { get; set; }
-    }
-    public static List<ResourceAlloacteData> GetResources = new List<ResourceAlloacteData>()
-    {
-        new ResourceAlloacteData() { ResourceId= 1, ResourceName= "Martin Tamer", ResourceGroup="Planning Team", },
-        new ResourceAlloacteData() { ResourceId= 3, ResourceName= "Margaret Buchanan", ResourceGroup="Approval Team", },
-        new ResourceAlloacteData() { ResourceId= 4, ResourceName= "Fuller King", ResourceGroup="Development Team",  },
-        new ResourceAlloacteData() { ResourceId= 5, ResourceName= "Davolio Fuller", ResourceGroup="Approval Team", },
-        new ResourceAlloacteData() { ResourceId= 6, ResourceName= "Fuller Buchanan", ResourceGroup="Development Team" },
-        new ResourceAlloacteData() { ResourceId= 7, ResourceName= "Jack Davolio", ResourceGroup="Planning Team" },
-        new ResourceAlloacteData() { ResourceId= 8, ResourceName= "Tamer Vinet", ResourceGroup="Testing Team" },
-        new ResourceAlloacteData() { ResourceId= 9, ResourceName= "Vinet Fuller", ResourceGroup="Development Team" },
-        new ResourceAlloacteData() { ResourceId= 10, ResourceName= "Bergs Anton", ResourceGroup="Testing Team" },
-    };
-    public class TaskData
-    {
-        public int TaskId { get; set; }
-        public string TaskName { get; set; }
-        public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
-        public string Duration { get; set; }
-        public int Progress { get; set; }
-        public int? ParentId { get; set; }
-        public string Predecessor { get; set; }
-        public string Notes { get; set; }
-        public double? Work { get; set; }
-        public string TaskType { get; set; }
-        public List<ResourceAlloacteData> Resources { get; set; }
-    }
-    public static List<TaskData> GetTaskCollection()
-    {
-        List<TaskData> Tasks = new List<TaskData>() {
-                new TaskData() { TaskId = 1, TaskName = "Project initiation", StartDate = new DateTime(2019, 03, 29), EndDate = new DateTime(2019, 04, 21),TaskType ="FixedDuration", Work=128, Duration="4" },
-
-                new TaskData() { TaskId = 2, TaskName = "Identify Site location", StartDate = new DateTime(2019, 03, 29), Progress = 30,ParentId = 1, Duration="3", Resources = new List<ResourceAlloacteData>(){ new ResourceAlloacteData() { ResourceId=1, Unit=70,} } },
-
-                new TaskData() { TaskId = 3, TaskName = "Perform soil test",StartDate = new DateTime(2019, 04, 03), Progress = 50, ParentId = 1, Duration="5",Work=16, Resources = new List<ResourceAlloacteData>(){ new ResourceAlloacteData() { ResourceId=1, Unit=70, } },Predecessor="2" },
-
-                new TaskData() { TaskId = 4,TaskName = "Soil test approval",StartDate = new DateTime(2019, 04, 09), Resources = new List<ResourceAlloacteData>(){ new ResourceAlloacteData() { ResourceId=1, } },ParentId = 1,Work=96,Duration="3",TaskType="FixedWork", Predecessor="3", Progress=40 },
-
-                new TaskData() { TaskId = 5, TaskName = "Project estimation",StartDate = new DateTime(2019, 03, 29),EndDate = new DateTime(2019,04,21), Progress = 30, Work=16,TaskType="FixedWork" },
-
-                new TaskData() { TaskId = 6,TaskName = "Develop floor plan for estimation",StartDate = new DateTime(2019, 04, 01),TaskType="FixedDuration",Duration="5",Resources = new List<ResourceAlloacteData>(){ new ResourceAlloacteData() { ResourceId=2,} },Progress=40,Work=50 },
-
-                new TaskData() { TaskId = 7,TaskName = "List materials",StartDate = new DateTime(2019, 04, 04),Duration = "4",Progress = 30,ParentId = 5, Resources = new List<ResourceAlloacteData>(){ new ResourceAlloacteData() { ResourceId=2, Unit=30} },Work=30, TaskType="FixedDuration",Predecessor= "6FS-2" },
-
-                new TaskData() { TaskId = 8, TaskName = "Estimation approval",StartDate = new DateTime(2019, 04, 09), Duration = "4",Progress = 30, ParentId = 5, TaskType="FixedWork", Work=48, Resources = new List<ResourceAlloacteData>(){new ResourceAlloacteData() { ResourceId=2} },Predecessor = "7FS-1" },
-
-                new TaskData() { TaskId = 9, TaskName = "Site work",Progress=30, StartDate = new DateTime(2019, 04, 04), EndDate = new DateTime(2019,04,21),Work=60, TaskType="FixedUnit" },
-
-                new TaskData() { TaskId = 10, TaskName = "Install temporary power service",StartDate = new DateTime(2019, 04, 01),Duration = "14",ParentId = 9, Work=60,Progress=50, TaskType="FixedWork",Resources = new List<ResourceAlloacteData>(){ new ResourceAlloacteData() { ResourceId=3, Unit=70} } },
-
-                new TaskData() { TaskId = 11, TaskName = "Clear the building site",StartDate = new DateTime(2019, 04, 08),Duration = "9",ParentId = 9,Work=60,Progress=40,Resources = new List<ResourceAlloacteData>(){ new ResourceAlloacteData() { ResourceId=3} },TaskType="FixedDuration",Predecessor = "10FS-9" },
-
-                new TaskData() { TaskId = 12, TaskName = "Sign contract",StartDate = new DateTime(2019, 04, 12), Duration = "5",  ParentId = 9, Work=60,Progress=40, TaskType="FixedDuration",Resources = new List<ResourceAlloacteData>(){ new ResourceAlloacteData() { ResourceId=3} },Predecessor = "11FS-5" },
-
-                new TaskData() { TaskId = 13,TaskName = "Foundation",StartDate = new DateTime(2022, 04, 04),EndDate = new DateTime(2019,04,28),Work=60,Progress=40,TaskType="FixedDuration" },
-                
-                new TaskData() { TaskId = 14, TaskName = "Excavate for foundations", StartDate = new DateTime(2019, 04, 01),Duration = "2", ParentId = 13, Work=60,Progress=40, TaskType="FixedDuration",Resources = new List<ResourceAlloacteData>(){ new ResourceAlloacteData() { ResourceId=4,} } },
-
-                new TaskData() { TaskId = 15, TaskName = "Dig footer",StartDate = new DateTime(2019, 04, 04), Duration = "2", ParentId = 13, Work=60,Progress=40, TaskType="FixedDuration",Resources = new List<ResourceAlloacteData>(){ new ResourceAlloacteData() { ResourceId=4} },Predecessor = "14FS + 1" },
-
-                new TaskData() { TaskId = 16, TaskName = "Install plumbing grounds",StartDate = new DateTime(2019, 04, 08), Duration = "2", ParentId = 13, Work=60,Progress=40,TaskType="FixedDuration",Resources = new List<ResourceAlloacteData>(){ new ResourceAlloacteData() { ResourceId=4} },Predecessor = "15FS" },
-
-                new TaskData() { TaskId = 17,TaskName = "Framing",StartDate = new DateTime(2019, 04, 04), EndDate = new DateTime(2019,04,28),Work=60,Progress=40,TaskType="FixedDuration" },
-
-                new TaskData() { TaskId = 18, TaskName = "Add load-bearing structure", StartDate = new DateTime(2019, 04, 03), Duration = "2",ParentId = 17,Work=60,Progress=20,TaskType="FixedDuration",Resources = new List<ResourceAlloacteData>(){ new ResourceAlloacteData() { ResourceId=5} } },
-
-                new TaskData() { TaskId = 19, TaskName = "Natural gas utilities",StartDate = new DateTime(2019, 04, 08),Duration = "5", ParentId = 17, Work=60, Progress=40, TaskType="FixedDuration",Resources = new List<ResourceAlloacteData>(){ new ResourceAlloacteData() { ResourceId=5} },Predecessor = "18" },
-
-                new TaskData() { TaskId = 20, TaskName = "Electrical utilities", StartDate = new DateTime(2022, 04, 01),Duration = "4",ParentId = 17,Work=60,Progress=50,TaskType="FixedWork",Resources = new List<ResourceAlloacteData>(){ new ResourceAlloacteData() { ResourceId=5} },Predecessor = "19FS + 1" },
-
-                new TaskData() { TaskId = 21, TaskName = "Plumbing test", StartDate = new DateTime(2019, 04, 04), Duration = "4", Work=60, Progress=50, TaskType="FixedWork",Resources = new List<ResourceAlloacteData>(){ new ResourceAlloacteData() { ResourceId=6} } },
-
-                new TaskData() { TaskId = 22, TaskName = "Electrical test",StartDate = new DateTime(2019, 04, 04),Duration = "4", Work=60, Progress=50, TaskType="FixedWork", Resources = new List<ResourceAlloacteData>(){ new ResourceAlloacteData() { ResourceId=6} },Predecessor = "21" },
-
-                new TaskData() { TaskId = 23,TaskName = "First floor initiation",StartDate = new DateTime(2019, 04, 06),Duration = "4",Work=60,Progress=50,TaskType="FixedWork",Resources = new List<ResourceAlloacteData>(){ new ResourceAlloacteData() { ResourceId=7} } },
-
-                new TaskData() { TaskId = 24, TaskName = "Interior work",StartDate = new DateTime(2019, 04, 04),  Duration = "4",Work=60, Progress=50,TaskType="FixedWork", Resources = new List<ResourceAlloacteData>(){ new ResourceAlloacteData() { ResourceId=7} },Predecessor="23" },
-
-                new TaskData() { TaskId = 25, TaskName = "First floor tile work initiation",StartDate = new DateTime(2019, 04, 10), Duration = "4", Work=60, Progress=50, TaskType="FixedWork", Resources = new List<ResourceAlloacteData>(){ new ResourceAlloacteData() { ResourceId=8} } },
-
-                new TaskData() { TaskId = 26,TaskName = "Tile test",StartDate = new DateTime(2019, 04, 04),Duration = "4",Work=60,Progress=50,TaskType="FixedWork", Resources = new List<ResourceAlloacteData>(){ new ResourceAlloacteData() { ResourceId=8} } },
-
-                new TaskData() { TaskId = 27,TaskName = "Second floor initiation",StartDate = new DateTime(2019, 04, 10), Duration = "4",Work=60,Progress=50, TaskType="FixedWork", Resources = new List<ResourceAlloacteData>(){ new ResourceAlloacteData() { ResourceId=9} } },
-
-                new TaskData() { TaskId = 28, TaskName = "Second floor tile work initiation",StartDate = new DateTime(2019, 04, 06), Duration = "4", Work=60, Progress=50,TaskType="FixedWork", Resources = new List<ResourceAlloacteData>(){ new ResourceAlloacteData() { ResourceId=9} },Predecessor="27FS - 1"},
-
-                new TaskData() { TaskId = 29,TaskName = "Exterior work initiation",StartDate = new DateTime(2019, 04, 12),Duration = "4",Work=60,Progress=50,TaskType="FixedWork",Resources = new List<ResourceAlloacteData>(){ new ResourceAlloacteData() { ResourceId=10} }},
-
-                new TaskData() { TaskId = 30,TaskName = "Building test",StartDate = new DateTime(2019, 04, 08),Duration = "4",Work=60, Progress=50,TaskType="FixedWork"},
-            };
-        return Tasks;
-    }
-}
-
-```
-
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/htrgNbsvgLcAiQsa?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %} -->
-
-### Enable taskbar drag and drop
-
-Within the Gantt chart's resource multi-taskbar feature, you have the capability to seamlessly reposition taskbars among different resources. This functionality can be enabled by setting the `AllowTaskbarDragAndDrop` property within `GanttTaskbarSettings` to a value of `true`.
-
-This functionality, once activated, empowers you to effortlessly relocate taskbars vertically, allowing for the smooth transfer of tasks between different resources. This intuitive maneuver simplifies task scheduling and enhances the overall management of your resources. Whether you need to reassign tasks to different team members or optimize resource allocation, this feature provides a flexible and efficient solution, streamlining your project management within the Gantt chart interface.
+This allows you to effortlessly move taskbar vertically, allowing for the smooth transfer of tasks between different resources. This intuitive maneuver simplifies task scheduling and enhances the overall management of your resources. Whether you need to reassign tasks to different resources or optimize resource allocation.
 
 ```cshtml
 
