@@ -55,8 +55,6 @@ To bind list binding to the Scheduler, you can simply assign a list of datasourc
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rZVqXQDnpiDwMvBf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
 N> By default, `DataManager` uses `BlazorAdaptor` for binding local data.
 
 You can also bind different field names to the default event fields as well as include additional custom fields to the event object collection which can be referred [here](./appointments/#event-fields).
@@ -106,8 +104,6 @@ To bind data to the Scheduler using ExpandoObject, you can create a list of Expa
     }
 }
 ```
-
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rXVqjQXxTrtGVSXf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ### DynamicObject Binding 
 
@@ -174,8 +170,6 @@ N> The [`GetDynamicMemberNames`](https://docs.microsoft.com/en-us/dotnet/api/sys
     }
 }
 ```
-
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rNrUDmXHpBhfsQJE?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## ObservableCollection
 
@@ -275,8 +269,6 @@ Here, AppointmentData class implements the interface of **INotifyPropertyChanged
     }
 }
 ```
-
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VXrgNwNHzBgeHdhX?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Custom binding
 
@@ -423,8 +415,6 @@ It is possible to create your own `CustomAdaptor` by extending the built-in avai
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VjLUDmXHphQJwYYU?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
 N> You can find the complete procedures to perform CRUD actions with the Syncfusion Blazor Scheduler using CustomAdaptor [here](https://github.com/SyncfusionExamples/Blazor-Scheduler-CRUD-using-custom-adaptor).
 
 ## Remote data
@@ -526,7 +516,7 @@ This method greatly improves the component's performance by reducing the data th
 
 The following image represents how the parameters are passed using ODataV4 filter.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LNrqZGZRJKsCKvWX?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![ODataV4 filter](images/blazor-odatav4-filter.jpg)
 
 ### Web API adaptor
 
@@ -569,8 +559,6 @@ You can bind Web API data to the scheduler using [WebApiAdaptor](https://blazor.
     }
 }
 ```
-
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VjhUXQtnTUTBWoFa?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ### Url adaptor
 You can use the [UrlAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors#url-adaptor) of **SfDataManager** when binding data source for remote data. During the initial load of Scheduler, data are fetched from remote data and bound to the Scheduler using the [Url](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_Url) property of **SfDataManager**.
@@ -817,8 +805,6 @@ The following sample code demonstrates adding custom headers to the `SfDataManag
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VtLqXmZHfgQQQAaq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
 ### Handling HTTP error
 
 During server interaction from the Scheduler, sometimes server-side exceptions might occur. These error messages or exception details can be acquired in client-side using the [OnActionFailure](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleEvents-1.html#Syncfusion_Blazor_Schedule_ScheduleEvents_1_OnActionFailure) event.
@@ -921,7 +907,7 @@ The following code example describes the behavior of the Load on demand using cu
 
 {% endhighlight %}
 
-{% highlight AppointmentDataAdaptor.cs %}
+{% highlight c# tabtitle="AppointmentDataAdaptor.cs" %}
 
 using Syncfusion.Blazor;
 using Syncfusion.Blazor.Data;
@@ -984,7 +970,7 @@ namespace syncfusion_blazor_app.Data {
 
 {% endhighlight %}
 
-{% highlight AppointmentDataService.cs %}
+{% highlight c# tabtitle="AppointmentDataService.cs" %}
 
 using System;
 using System.Collections.Generic;

@@ -23,7 +23,7 @@ To get started quickly with the Blazor Media Query component, you can check out 
 
 You can create **Blazor Server App** or **Blazor WebAssembly App** using Visual Studio in one of the following ways,
 
-* [Create a Project using Microsoft Templates](https://docs.microsoft.com/en-us/aspnet/core/blazor/tooling?pivots=windows)
+* [Create a Project using Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0&pivots=windows)
 
 * [Create a Project using Syncfusion Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio)
 
@@ -423,7 +423,7 @@ else
 
 * Press <kbd>ctrl</kbd>+<kbd>F5</kbd> or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to run the application. The Syncfusion Blazor Media Query component will then render the layout based on browser view size, as shown in the large device layout below.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VDVKjdCyBrnthmlV?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Blazor Media Query Component](images/blazor-media-query.png)
 
 ## See also
 

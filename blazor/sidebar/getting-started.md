@@ -21,7 +21,7 @@ This section briefly explains about how to include [Blazor Sidebar](https://www.
 
 You can create **Blazor Server App** or **Blazor WebAssembly App** using Visual Studio in one of the following ways,
 
-* [Create a Project using Microsoft Templates](https://docs.microsoft.com/en-us/aspnet/core/blazor/tooling?pivots=windows)
+* [Create a Project using Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0&pivots=windows)
 
 * [Create a Project using Syncfusion Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio)
 
@@ -299,7 +299,7 @@ N> Syncfusion recommends to reference scripts using [Static Web Assets](https://
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to run the application. Then, the Syncfusion `Blazor Sidebar` component will be rendered in the default web browser.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LZLgDHsfhpRgoRmL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Blazor Sidebar Component](./images/blazor-sidebar.png)
 
 ## Enable backdrop
 
@@ -360,7 +360,7 @@ Here, the DOM elements will not get changed. It only closes the main content by 
 N> Class can be added to the sidebar element using `HtmlAttributes` property. In that class, you have to add new styles or override existing styles of sidebar element.
 
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BjhqjHWTrJGOEzBL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Enabling Backdrop in Blazor Sidebar](./images/blazor-sidebar-enable-backdrop.png)
 
 ## Enable Animation
 
@@ -417,7 +417,7 @@ Animation transitions can be set while expanding or collapsing the Sidebar using
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VtLqDRiJhyjMqsJq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Blazor Sidebar with Animation](./images/blazor-sidebar-animation.png)
 
 ## Navigation with Sidebar
 
@@ -590,7 +590,7 @@ In the following example, the Sidebar is rendered with Accordion component in it
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LXrADHWfhyWpDlip?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Navigation with Blazor Sidebar](./images/blazor-sidebar-navigation.png)
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/Sidebar).
 
@@ -598,9 +598,9 @@ N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-
 
 1. Simply customizable and responsive design.
 2. Different sliding types provides the user to adjust the main content by pushing, overlaying or sliding the content.
-3. Includes [docking](https://blazor.syncfusion.com/documentation/sidebar/docking-sidebar/) support.
+3. Includes [docking](https://blazor.syncfusion.com/documentation/sidebar/docking-sidebar) support.
 4. Provided with touch friendly gestures for easy interaction in mobile devices.
-5. Flexible option to initialize the sidebar to any HTML element as [target](https://blazor.syncfusion.com/documentation/sidebar/custom-context/) other than the body element.
+5. Flexible option to initialize the sidebar to any HTML element as [target](https://blazor.syncfusion.com/documentation/sidebar/custom-context) other than the body element.
 
 ## See Also
 
