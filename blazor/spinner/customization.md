@@ -9,7 +9,7 @@ documentation: ug
 
 # Customize the Spinner in Blazor Spinner Component
 
-The Spinner component can be customized when initializing or after rendering it.
+The [Blazor Spinner](https://www.syncfusion.com/blazor-components/blazor-spinner)component can be customized when initializing or after rendering it.
 
 ## Customize when initializing the Spinner component
 
@@ -306,3 +306,5 @@ The following code explains how to dynamically add the `CssClass` property after
 ```
 
 ![Blazor Spinner with Custom Class](./images/blazor-spinner-with-custom-class.png)
+
+N> You can also explore our [Blazor Spinner Example](https://blazor.syncfusion.com/demos/spinner/overview) that shows you how to render and configure the Spinner.
