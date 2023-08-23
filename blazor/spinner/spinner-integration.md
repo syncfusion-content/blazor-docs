@@ -9,7 +9,7 @@ documentation: ug
 
 # Blazor Spinner Component Integration
 
-The Spinner component is rendered with other Blazor components. For example, rendered the Blazor Tab component with Spinner component. To render the spinner inside the Tab component, the Spinner is set as a child of the Tab component and show or hide the Spinner when Tab switching.
+The [Blazor Spinner](https://www.syncfusion.com/blazor-components/blazor-spinner) component is rendered with other Blazor components. For example, rendered the Blazor Tab component with Spinner component. To render the spinner inside the Tab component, the Spinner is set as a child of the Tab component and show or hide the Spinner when Tab switching.
 
 ```cshtml
 
@@ -91,3 +91,5 @@ The Spinner component is rendered with other Blazor components. For example, ren
 
 ## See also
 * [How to prevent focus on the controls beneath the overlay of the Blazor spinner?](https://www.syncfusion.com/kb/13139/how-to-prevent-focus-on-the-controls-beneath-the-overlay-of-the-blazor-spinner)
+
+N> You can also explore our [Blazor Spinner Example](https://blazor.syncfusion.com/demos/spinner/overview) that shows you how to render and configure the Spinner.
