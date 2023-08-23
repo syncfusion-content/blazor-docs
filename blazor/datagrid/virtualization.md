@@ -85,8 +85,6 @@ the [PageSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfG
 
 ```
 
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/rtVAZxVqqRRLvHwb?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
-
 ## Column virtualization
 
 Column virtualization allows you to virtualize columns. It will render columns which are in the viewport. You can scroll horizontally to view more columns.
@@ -162,8 +160,6 @@ In this demo, we have set [EnableColumnVirtualization](https://help.syncfusion.c
     }
 }
 ```
-
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/rNLqtRLgKQrPLIRY?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ### Column virtualization with paging
 
@@ -313,8 +309,8 @@ To setup the enable cell placeholder during virtualization, you need to define [
 ```
 
 The following GIF represents a datagrid with Mask row virtualization:
+
 ![Blazor DataGrid with Mask Row virtualization](./images/blazor-datagrid-mask-row-virtualization.gif)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/hjVAZxLAqPVNSJhE?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 N> For a better experience, the [PageSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridPageSettings.html#Syncfusion_Blazor_Grids_GridPageSettings_PageSize) property of the [GridPageSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridPageSettings.html) class and the [RowHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_RowHeight) property should be defined.
 
@@ -424,8 +420,8 @@ To setup the frozen right/left columns, you need to define Column property of **
 ```
 
 The following GIF represent a datagrid with Frozen columns/row virtualization.
+
 ![Blazor DataGrid with Frozen Column virtualization](./images/blazor-datagrid-frozen-column-virtualization.gif)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VDLUDnBUUkAqaOJS?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Scroll the content by external button
 
@@ -516,7 +512,6 @@ RowIndex : <input @bind-value = "@RowIndex" />
 ```
 
 ![Blazor DataGrid Scroll Virtualizationcontent](images/blazor-datagrid-scroll-virtualizationcontent.gif)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LZLKNnrKAuRJFkrx?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Refresh virtualized grid externally
 
@@ -591,8 +586,6 @@ To refresh virtualized grid externally, set the [`EnableVirtualization`](https:/
     }
 }
 ```
-
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/rXBqNnhgzDClpcAA?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 N> If <b>rowHeight</b> is given, then the page size is calculated by given row height. Otherwise, rowHeight will be considered from the offset height of the grid row element.
 

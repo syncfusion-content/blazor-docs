@@ -282,7 +282,6 @@ N> Syncfusion recommends to reference scripts using [Static Web Assets](https://
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to run the application. Then, the Syncfusion `Blazor Floating Action Button` component will be rendered in the default web browser.
 
 ![Blazor Floating Action Button Component](./images/blazor-fab-component.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VXLUXxMIgKNiBbES?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Event Click In Floating Action Button
 
@@ -306,7 +305,6 @@ The floating action button control triggers the [OnClick](https://help.syncfusio
 {% endtabs %}
 
 ![Blazor Floating Action Button Component](./images/blazor-fab-event-click-sample.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LjrKXHWogKZuWLyn?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/FloatingActionButton).
 
