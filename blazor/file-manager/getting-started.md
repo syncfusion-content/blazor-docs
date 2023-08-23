@@ -206,9 +206,24 @@ To access the above File Operations, you need some model class files that have f
 
 Add your required files and folders under the `wwwroot\Files` directory.
 
-* Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion Blazor FileManager component in your default web browser.
+N> For Server-side application, add the following code in your **Startup.cs** file.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LNLqNRiaKhRsiyGL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% tabs %}
+{% highlight cs tabtitle="Startup.cs" %}
+
+app.UseEndpoints(endpoints =>
+        {
+            ....
+            ....
+            endpoints.MapControllers();
+        });
+
+{% endhighlight %}
+{% endtabs %}
+
+* Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to run the application. Then, the Syncfusion `Blazor FileManager` component will be rendered in the default web browser.
+
+![Blazor FileManager Component](images/blazor-filemanager-component.png)
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/FileManager).
 
@@ -342,7 +357,7 @@ namespace filemanager.Server.Controllers
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LNLqNRiaKhRsiyGL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Blazor FileManager with Image Preview](images/blazor-filemanager-image-preview.png)
 
 Refer the sample [link](https://www.syncfusion.com/downloads/support/directtrac/general/ze/FileManager1055616812).
 
