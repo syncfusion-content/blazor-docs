@@ -13,7 +13,7 @@ The following content provides the exact CSS structure that can be used to modif
 
 ## Customizing the spinner
 
-Use the following CSS to customize the [Blazor spinner](https://www.syncfusion.com/blazor-components/blazor-spinner) stroke color.
+Use the following CSS to customize the spinner stroke color.
 
 ### Material theme
 
@@ -63,7 +63,5 @@ Use the following CSS to customize the [Blazor spinner](https://www.syncfusion.c
 .e-spinner-pane .e-spinner-inner .e-spin-high-contrast .e-path-arc {
     stroke: green;
 }
-
-N> You can also explore our [Blazor Spinner Example](https://blazor.syncfusion.com/demos/spinner/overview) that shows you how to render and configure the Spinner.
 
 ```
