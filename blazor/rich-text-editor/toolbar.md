@@ -29,7 +29,7 @@ The expand toolbar allows to hide the overflowing items in the next line by usin
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BXVgDGshhsroYefC?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Blazor RichTextEditor expand toolbar](./images/blazor-richtexteditor-expand-toolbar.png)
 
 ## Multi-row Toolbar
 
@@ -43,7 +43,7 @@ You can display the toolbar items in a row-wise format by using the [ToolbarType
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LZhAtcsLrBMhNzPD?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Blazor RichTextEditor multirow toolbar](./images/blazor-richtexteditor-multirow-toolbar.png)
 
 ## Scrollable Toolbar
 
@@ -57,7 +57,7 @@ You can display the toolbar items in a single line with horizontal scrolling by 
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LjhAjwiBLVICIhZJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Blazor RichTextEditor multirow toolbar](./images/blazor-richtexteditor-scrollable-toolbar.png)
 
 ## Floating Toolbar
 
@@ -78,7 +78,7 @@ You can enable or disable the floating toolbar using [RichTextEditorToolbarSetti
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LNVKXmsLrrbcsefc?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Blazor RichTextEditor floating toolbar](./images/blazor-richtexteditor-floating.toolbar.png)
 
 ## Quick Toolbar
 
@@ -115,7 +115,7 @@ You can customize the inserted image in the editor by using the [RichTextEditorQ
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LDhUZGiLBggzKoNu?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Blazor RichTextEditor image quick toolbar](./images/blazor-richtexteditor-image-toolbar.png)
 
 ### Link quick Toolbar
 
@@ -135,7 +135,7 @@ You can customize the selected link inside the editor through the quick toolbar 
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BtrKNQsLrfWgTOSs?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Blazor RichTextEditor link quick toolbar](./images/blazor-richtexteditor-link-toolbar.png)
 
 ### Table quick Toolbar
 
@@ -159,7 +159,7 @@ Quick toolbar is opened by clicking the table. You can customize the table by us
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LDVAXGMLLehrYKxT?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Blazor RichTextEditor table quick toolbar](./images/blazor-richtexteditor-quick-toolbar-table.png)
 
 ### Audio quick Toolbar
 
@@ -179,7 +179,7 @@ The Rich Text Editor allows you to customize the inserted audio by using the [Ri
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rZLqjmCVrIAnNaVm?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Blazor RichTextEditor audio quick toolbar](./images/blazor-richtexteditor-quick-toolbar-audio.png)
 
 ### Video quick Toolbar
 
@@ -201,7 +201,7 @@ The Rich Text Editor allows you to customize the inserted video by using the [Ri
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rZLgDGCVhIJpGlgj?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Blazor RichTextEditor video quick toolbar](./images/blazor-richtexteditor-quick-toolbar-video.png)
 
 N> You can refer to our [Blazor Rich Text Editor](https://www.syncfusion.com/blazor-components/blazor-wysiwyg-rich-text-editor) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Rich Text Editor](https://blazor.syncfusion.com/demos/rich-text-editor/overview?theme=bootstrap4) example to knows how to render and configure the rich text editor tools.
 
