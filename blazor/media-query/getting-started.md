@@ -21,42 +21,41 @@ To get started quickly with the Blazor Media Query component, you can check out 
 
 ## Create a new Blazor App in Visual Studio
 
-You can create **Blazor Server App** or **Blazor WebAssembly App** using Visual Studio in one of the following ways,
+You can create a **Blazor Server App** or **Blazor WebAssembly App** using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0) or the [Syncfusion Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
 
-* [Create a Project using Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0&pivots=windows)
+## Install Syncfusion Blazor Core and Theme NuGet in the App
 
-* [Create a Project using Syncfusion Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio)
-
-## Install Syncfusion Blazor Core NuGet in the App
-
-Syncfusion Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). In order to use Syncfusion Blazor components in the application, add reference to the corresponding NuGet. Refer to [NuGet packages topic](https://blazor.syncfusion.com/documentation/nuget-packages) for available NuGet packages list with component details and [Benefits of using individual NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages#benefits-of-using-individual-nuget-packages). 
-
-To add Blazor Media Query component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search for [Syncfusion.Blazor.Core](https://www.nuget.org/packages/Syncfusion.Blazor.Core) and then install it.
-
-## Register Syncfusion Blazor Service
-
-Open **~/_Imports.razor** file and import the `Syncfusion.Blazor` namespace.
+To add Blazor Media Query component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install [Syncfusion.Blazor.Core](https://www.nuget.org/packages/Syncfusion.Blazor.Core) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/). Alternatively, you can utilize the following package manager command to achieve the same.
 
 {% tabs %}
-{% highlight razor tabtitle="~/Imports.razor" %}
+{% highlight C# tabtitle="Package Manager" %}
 
-@using Syncfusion.Blazor
+Install-Package Syncfusion.Blazor.Core  -Version {{ site.releaseversion }}
+
+Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
 
 {% endhighlight %}
 {% endtabs %}
 
-Now, register the Syncfusion Blazor Service in the Blazor Server App or Blazor WebAssembly App. Here, Syncfusion Blazor Service is registered by setting [IgnoreScriptIsolation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.GlobalOptions.html#Syncfusion_Blazor_GlobalOptions_IgnoreScriptIsolation) property as `true` to load the scripts externally in the [next steps](#add-script-reference).
+N> Syncfusion Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for available NuGet packages list with component details.
 
-> From 2022 Vol-1 (20.1) version, the default value of `IgnoreScriptIsolation` is changed to `true`. It is not necessary to set the `IgnoreScriptIsolation` property to refer scripts externally, since the default value has already been changed to true, and this property is obsolete.
+## Register Syncfusion Blazor Service
 
-### Blazor Server App
-
-* For **.NET 6 and .NET 7** app, open the **~/Program.cs** file and register the Syncfusion Blazor Service.
-
-* For **.NET 5 and .NET 3.X** app, open the **~/Startup.cs** file and register the Syncfusion Blazor Service.
+Open **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Navigations` namespace.
 
 {% tabs %}
-{% highlight c# tabtitle=".NET 6 & .NET 7 (~/Program.cs)" hl_lines="3 10" %}
+{% highlight razor tabtitle="~/_Imports.razor" %}
+
+@using Syncfusion.Blazor
+@using Syncfusion.Blazor.Navigations
+
+{% endhighlight %}
+{% endtabs %}
+
+Now, register the Syncfusion Blazor Service in the **~/Program.cs** file of your Blazor Server App or Blazor WebAssembly App. 
+
+{% tabs %}
+{% highlight C# tabtitle="Blazor Server App" hl_lines="3 10" %}
 
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Web;
@@ -73,35 +72,7 @@ var app = builder.Build();
 ....
 
 {% endhighlight %}
-
-{% highlight c# tabtitle=".NET 5 and .NET 3.X (~/Startup.cs)" hl_lines="1 12" %}
-
-using Syncfusion.Blazor;
-
-namespace BlazorApplication
-{
-    public class Startup
-    {
-        ...
-        public void ConfigureServices(IServiceCollection services)
-        {
-            services.AddRazorPages();
-            services.AddServerSideBlazor();
-            services.AddSyncfusionBlazor();
-        }
-        ...
-    }
-}
-
-{% endhighlight %}
-{% endtabs %}
-
-### Blazor WebAssembly App
-
-Open **~/Program.cs** file and register the Syncfusion Blazor Service in the client web app.
-
-{% tabs %}
-{% highlight c# tabtitle=".NET 6 & .NET 7 (~/Program.cs)" hl_lines="3 11" %}
+{% highlight C# tabtitle="Blazor WebAssembly App" hl_lines="3 11" %}
 
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
@@ -111,30 +82,12 @@ var builder = WebAssemblyHostBuilder.CreateDefault(args);
 builder.RootComponents.Add<App>("#app");
 builder.RootComponents.Add<HeadOutlet>("head::after");
 
-builder.Services.AddScoped(serviceProvider => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
+builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
 
 builder.Services.AddSyncfusionBlazor();
 await builder.Build().RunAsync();
 ....
 
-{% endhighlight %}
-
-{% highlight c# tabtitle=".NET 5 & .NET 3.X (~/Program.cs)" hl_lines="1 10" %}
-
-using Syncfusion.Blazor;
-
-namespace WebApplication1
-{
-    public class Program
-    {
-        public static async Task Main(string[] args)
-        {
-            ....
-            builder.Services.AddSyncfusionBlazor();
-            await builder.Build().RunAsync();
-        }
-    }
-}
 {% endhighlight %}
 {% endtabs %}
 
@@ -146,27 +99,23 @@ Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/documenta
 
 * For **.NET 6** app, refer script in the `<head>` of the **~/Pages/_Layout.cshtml** file.
 
-* For **.NET 3.X, .NET 5 and .NET 7** app, refer script in the `<head>` of the **~/Pages/_Host.cshtml** file.
+* For **.NET 7** app, refer script in the `<head>` of the **~/Pages/_Host.cshtml** file.
 
 {% tabs %}
-{% highlight cshtml tabtitle=".NET 6 (~/_Layout.cshtml)" hl_lines="4 5 6" %}
+{% highlight cshtml tabtitle=".NET 6 (~/_Layout.cshtml)" hl_lines="4" %}
 
 <head>
     ....
     <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
-    <!--Use below script reference if you are using Syncfusion.Blazor Single NuGet-->
-    <!--<script  src="_content/Syncfusion.Blazor/scripts/syncfusion-blazor.min.js"  type="text/javascript"></script>-->
 </head>
 
 {% endhighlight %}
 
-{% highlight cshtml tabtitle=".NET 3.X, .NET 5 & .NET 7 (~/_Host.cshtml)" hl_lines="4 5 6" %}
+{% highlight cshtml tabtitle=".NET 7 (~/_Host.cshtml)" hl_lines="4" %}
 
 <head>
     ....
     <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
-    <!--Use below script reference if you are using Syncfusion.Blazor Single NuGet-->
-    <!--<script  src="_content/Syncfusion.Blazor/scripts/syncfusion-blazor.min.js"  type="text/javascript"></script>-->
 </head>
 
 {% endhighlight %}
@@ -177,13 +126,11 @@ Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/documenta
 For Blazor WebAssembly App, refer script in the `<head>` of the **~/index.html** file.
 
 {% tabs %}
-{% highlight html tabtitle="~/index.html" hl_lines="4 5 6" %}
+{% highlight html tabtitle="~/index.html" hl_lines="4" %}
 
 <head>
     ....
     <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
-    <!--Use below script reference if you are using Syncfusion.Blazor Single NuGet-->
-    <!--<script  src="_content/Syncfusion.Blazor/scripts/syncfusion-blazor.min.js"  type="text/javascript"></script>-->
 </head>
 
 {% endhighlight %}
