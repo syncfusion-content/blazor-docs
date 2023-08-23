@@ -170,9 +170,9 @@ To highlight the range of overallocation dates with a square bracket, you can en
 
 ## Enable taskbar drag and drop
 
-Within the Gantt chart, you have the capability to reposition taskbar among different resources. This functionality can be enabled by setting the `AllowTaskbarDragAndDrop` property within `GanttTaskbarSettings` to a value of `true`.
+Within the Gantt chart, you have the capability to reposition the taskbar among different resources. This functionality can be enabled by setting the `AllowTaskbarDragAndDrop` property within `GanttTaskbarSettings` to a value of `true`.
 
-This allows you to effortlessly move taskbar vertically, allowing for the smooth transfer of tasks between different resources. This intuitive maneuver simplifies task scheduling and enhances the overall management of your resources. Whether you need to reassign tasks to different resources or optimize resource allocation.
+This allows you to effortlessly move the taskbar vertically, allowing for the smooth transfer of tasks between different resources. This intuitive maneuver simplifies task scheduling and enhances the overall management of your resources. Whether you need to reassign tasks to different resources or optimize resource allocation.
 
 ```cshtml
 
