@@ -116,7 +116,7 @@ In the following example, `SfDataManager` is used with Blazor DataGrid component
 
 Local JSON data can be bound to the DataGrid component by assigning the array of objects to the [Json](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_Json) property of the [SfDataManager](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Data.SfDataManager.html) component.
 
-The following sample code demonstrates binding local data through the [SfDataManager](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Data.SfDataManager.html) to the DataGrid component,
+Explore the provided sample code below, which illustrates how to bind local data to the DataGrid component using [SfDataManager](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Data.SfDataManager.html). To get started with Blazor DataGrid, please refer to this [link](https://blazor.syncfusion.com/documentation/datagrid/getting-started) for more information.
 
 {% tabs %}
 {% highlight razor %}
@@ -199,7 +199,7 @@ In the below example, the `SfDataManager` is bound with DropDownList component t
 
 Local data can be bound to the DropDownList component by assigning the array of objects to the [Json](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_Json) property of the [SfDataManager](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Data.SfDataManager.html) component.
 
-The following sample code demonstrates binding local data through the [SfDataManager](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Data.SfDataManager.html) to the DropDownList component,
+The following sample code demonstrates binding local data through the [SfDataManager](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Data.SfDataManager.html) to the [DropDownList](https://blazor.syncfusion.com/documentation/dropdown-list/getting-started) component,
 
 {% tabs %}
 {% highlight razor %}
