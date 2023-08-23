@@ -128,7 +128,7 @@ Once you added `SfDialogService` and `SfDialogProvider`, you can open predefined
 
 An alert dialog box used to display an errors, warnings, and information alerts that needs user awareness. This can be achieved by using the [DialogService.AlertAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfDialogService.html#Syncfusion_Blazor_Popups_SfDialogService_AlertAsync_System_String_System_String_Syncfusion_Blazor_Popups_DialogOptions_) method. The alert dialog is displayed along with the `OK` button. When user clicks on `OK` button, alert dialog will get closed.
 
-In the below code example, alert dialog displayed on button click action.
+In the code example below, an alert dialog is displayed upon clicking the button using the Syncfusion Blazor [Button](https://blazor.syncfusion.com/documentation/button/getting-started) Component..
     
 {% tabs %}
 {% highlight razor %}
