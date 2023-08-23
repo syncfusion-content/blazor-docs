@@ -11,9 +11,7 @@ documentation: ug
 
 Resource Multi-Taskbar in a Gantt Chart is a feature that allows you to visualize multiple tasks assigned to each resource within a row when the records are collapsed. To enable this feature, set the `EnableMultiTaskbar` property within `GanttTaskbarSettings` to `true`.
 
-When a resource has multiple tasks scheduled on the same date, the taskbar for these tasks will overlap. Resource Multi-Taskbar not only helps with visualization but also allows you to edit the task scheduling, even in the collapsed state. Hover over the specific taskbar you want to edit. The taskbar you are interacting with will be brought to the forefront, making it clear which task you are working on. You can easily drag it to the desired position on the timeline to adjust the task's start and end dates and also change the duration of the task by resizing the taskbar. Resource Multi-Taskbar also
-supports overallocation.
-
+When a resource has multiple tasks scheduled on the same date, the taskbar for these tasks will overlap. Resource Multi-Taskbar not only helps with visualization but also allows you to edit the task scheduling, even in the collapsed state. Hover over the specific taskbar you want to edit. The taskbar you are interacting with will be brought to the forefront, making it clear which task you are working on. You can easily drag it to the desired position on the timeline to adjust the task's start and end dates and also change the duration of the task by resizing the taskbar. Resource Multi-Taskbar also supports overallocation.
 
 ```cshtml
 
