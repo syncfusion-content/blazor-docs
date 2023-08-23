@@ -126,7 +126,6 @@ Add the Syncfusion Blazor DateTimePicker component in the **~/Pages/Index.razor*
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion Blazor DateTimePicker component in your default web browser.
 
 ![Blazor DateTimePicker Component](./images/blazor-datetimepicker-component.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BZLAXRiyfVgXUrAS?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Setting the Value, Min and Max
 
@@ -147,7 +146,6 @@ The minimum and maximum date time can be defined with the help of [Min](https://
 {% endtabs %}
 
 ![Setting Minimum and Maximum Value in Blazor DateTimePicker](./images/blazor-datetimepicker-min-max-value.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VjrAjRMofVgEEhUL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## See Also
 
