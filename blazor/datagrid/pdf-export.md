@@ -1246,7 +1246,7 @@ In the following code sample, we have customized the column width for the PDF ex
 
 N> You can find the fully working sample [here](https://github.com/SyncfusionExamples/blazor-datagrid-customize-column-in-pdf-exported-document).
 
-### Grid cell customization in PDF export
+### DataGrid cell customization in PDF export using PdfHeaderQueryCellInfoHandler event
 
 DataGrid has support to customize the column header and content styles, such as changing text orientation, the font color, the width of the header and content text, and so on in the exported PDF file. To achieve this requirement, define the `BeginCellLayout` event of the [PdfExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportProperties.html) with an event handler to perform the required action.
 
@@ -1347,7 +1347,223 @@ In the following demo, the [DrawString](https://help.syncfusion.com/cr/file-form
 </style> 
 ```
 
-![PDF Exported Grid Cell Customization in Blazor DataGrid](./images/blazor-datagrid-pdf-exported-grid-cell-customization.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rZrAZRVRUxseaVki?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+### DataGrid Customization in PDF export using PdfQueryCellInfoHandler event
+
+Grid has support to achieve advanced customization of grid cells using the [PdfQueryCellInfoHandler](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_PdfQueryCellInfoEvent) event. This feature allows you to dynamically customize the appearance and content of cells in a grid when exporting to PDF. 
+
+The following sample code demonstrates the grid customization using `PdfQueryCellInfoHandler` in PDF Export.
+
+```cshtml
+@using Syncfusion.Blazor.Grids
+
+<SfGrid @ref="Grid" DataSource="@Orders" AllowPdfExport="true" Toolbar="@(new List<string>() { "PdfExport" })">
+    <GridEvents PdfQueryCellInfoEvent="PdfQueryCellInfoHandler" OnToolbarClick="ToolbarClickHandler" TValue="Order"></GridEvents>
+    <GridColumns>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code {
+    private SfGrid<Order> Grid;
+
+    public List<Order> Orders { get; set; }
+
+    protected override void OnInitialized()
+    {
+        Orders = Enumerable.Range(1, 75).Select(x => new Order()
+            {
+                OrderID = 1000 + x,
+                CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
+                Freight = 2.1 * x,
+                OrderDate = DateTime.Now.AddDays(-x),
+            }).ToList();
+    }
+
+    public class Order
+    {
+        public int? OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public DateTime? OrderDate { get; set; }
+        public double? Freight { get; set; }
+    }
+
+    public async Task ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
+    {
+        await this.Grid.PdfExport();
+    }
+
+    public void PdfQueryCellInfoHandler(PdfQueryCellInfoEventArgs<Order> args)
+    {
+        if (args.Column.Field == "OrderID")
+        {
+            args.Cell.Value = "ID NO: " + args.Value;
+
+        }
+    }
+}
+```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXBgtvsenihNyAsa?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+### Aggregate content customization using PdfAggregateTemplateInfo event in PDF export
+
+ DataGrid control allows you to customize the appearance and content of aggregate data when exporting to a PDF document. The [PdfAggregateTemplateInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_PdfAggregateTemplateInfo) event provides a powerful way to achieve this customization. 
+
+ The following sample code demonstrates the process of using the `PdfAggregateTemplateInfo` event to customize the aggregate content in a PDF document generated from a DataGrid.
+
+ ```cshtml
+ @using Syncfusion.Blazor.Grids
+
+<SfGrid @ref="Grid" DataSource="@Orders" AllowPdfExport="true" Toolbar="@(new List<string>() { "PdfExport" })">
+    <GridEvents PdfAggregateTemplateInfo="PdfAggregateTemplateInfoHandler" OnToolbarClick="ToolbarClickHandler" TValue="Order"></GridEvents>
+    <GridAggregates>
+        <GridAggregate>
+            <GridAggregateColumns>
+                <GridAggregateColumn Field=@nameof(Order.Freight) Type="AggregateType.Sum" Format="C2">
+                    <FooterTemplate>
+                        @{
+                            var aggregate = (context as AggregateTemplateContext);
+                            <div>
+                                <p>Sum: @aggregate.Sum</p>
+                            </div>
+                        }
+                    </FooterTemplate>
+                </GridAggregateColumn>
+            </GridAggregateColumns>
+        </GridAggregate>
+        <GridAggregate>
+            <GridAggregateColumns>
+                <GridAggregateColumn Field=@nameof(Order.Freight) Type="AggregateType.Average" Format="C2">
+                    <FooterTemplate>
+                        @{
+                            var aggregate = (context as AggregateTemplateContext);
+                            <div>
+                                <p>Average: @aggregate.Average</p>
+                            </div>
+                        }
+                    </FooterTemplate>
+                </GridAggregateColumn>
+            </GridAggregateColumns>
+        </GridAggregate>
+    </GridAggregates>
+    <GridColumns>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code {
+  
+    private SfGrid<Order> Grid;
+
+    public List<Order> Orders { get; set; }
+
+    protected override void OnInitialized()
+    {
+        Orders = Enumerable.Range(1, 75).Select(x => new Order()
+            {
+                OrderID = 1000 + x,
+                CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
+                Freight = 2.1 * x,
+                OrderDate = DateTime.Now.AddDays(-x),
+            }).ToList();
+    }
+
+    public class Order
+    {
+        public int? OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public DateTime? OrderDate { get; set; }
+        public double? Freight { get; set; }
+    }
+
+    public async Task ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
+    {
+        await this.Grid.PdfExport();
+    }
+
+    public void PdfAggregateTemplateInfoHandler(PdfAggregateEventArgs args)
+    {
+       args.Cell.Value = "The value is :" + args.Value;
+    }
+}
+```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/htVANFCeHhDIIjRj?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+### Group caption Template customization using PdfGroupCaptionTemplateInfo event in PDF export
+
+DataGrid has support to customize the group caption template in the exported PDF file. To achieve this requirement, use the [PdfGroupCaptionTemplateInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_PdfGroupCaptionTemplateInfo) event.
+
+`PdfGroupCaptionTemplateInfo` event triggers when exporting the group caption template of the PDF document. It can be used to customize the DataGrid group caption content in a PDF document.
+
+The following sample code demonstrates the group caption template customization in PDF Export.
+
+```cshtml
+@using Syncfusion.Blazor.Grids
+
+<SfGrid ID="Grid" @ref="DefaultGrid" DataSource="@Orders" Toolbar="@(new List<string>() { "PdfExport" })" AllowPdfExport="true" AllowPaging="true" AllowGrouping="true">
+    <GridEvents PdfGroupCaptionTemplateInfo="PdfGroupCaptionHandler" OnToolbarClick="ToolbarClickHandler" TValue="Order"></GridEvents>
+    <GridGroupSettings Columns="@Initial">
+        <CaptionTemplate>
+            @{
+                var order = (context as CaptionTemplateContext);
+                <div>@order.Field - @order.Key</div>
+            }
+        </CaptionTemplate>
+    </GridGroupSettings>
+    <GridColumns>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code {
+    private SfGrid<Order> DefaultGrid;
+    public List<Order> Orders { get; set; }
+    string[] Initial = new string[] { "CustomerID" };
+
+    public void PdfGroupCaptionHandler(PdfCaptionTemplateArgs Args)
+    {
+        // Here, you can customize your code.
+        Args.Cell.Value = Args.Field + " - " + Args.Key;
+    }
+
+    public async Task ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
+    {
+        if (args.Item.Id == "Grid_pdfexport")  // Id is the combination of Grid's ID and item name.
+        {
+            await this.DefaultGrid.ExportToPdfAsync();
+        }
+    }
+    protected override void OnInitialized()
+    {
+        Orders = Enumerable.Range(1, 75).Select(x => new Order()
+            {
+                OrderID = 1000 + x,
+                CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
+                Freight = 2.1 * x,
+                OrderDate = DateTime.Now.AddDays(-x),
+            }).ToList();
+    }
+
+    public class Order
+    {
+        public int? OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public DateTime? OrderDate { get; set; }
+        public double? Freight { get; set; }
+    }
+}
+```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rNVqNlMJfrPIvYwb?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 <!-- Show or hide columns on exported pdf
 
