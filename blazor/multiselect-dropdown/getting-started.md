@@ -121,7 +121,7 @@ Add the Syncfusion Blazor MultiSelect DropDown component in the **~/Pages/Index.
 {% endhighlight %}
 {% endtabs %}
 
-* Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion Blazor Accordion component in your default web browser.
+* Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion Blazor MultiSelect DropDown component in your default web browser.
 
 ![Blazor MultiSelect DropDown Component](./images/blazing-fast-multiselect-dropdown-blazor.png)
 <!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LNVKjRWeiGtGGCwJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
