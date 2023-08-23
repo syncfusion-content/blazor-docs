@@ -19,16 +19,21 @@ In this section, we'll guide you through the process of adding Syncfusion's Blaz
     * dotnet workload install wasm-tools
     * dotnet workload install wasm-tools-net6
 
-**Step 1:** Create a new Blazor WebAssembly app and name it **PDFViewerGettingStarted**.
+## Create a new Blazor App in Visual Studio    
+
+Create a new Blazor WebAssembly app and name it **PDFViewerGettingStarted**.
 
 N> The PDF Viewer (Next Gen) component is supported from .NET 6.0 onwards.
 
-**Step 2:** Add the following NuGet packages into the Blazor WebAssembly app.
+## Install Blazor PDF Viewer NuGet package in Blazor WASM App
+
+Add the following NuGet packages into the Blazor WebAssembly app.
+
 * [Syncfusion.Blazor.SfPdfViewer](https://www.nuget.org/packages/Syncfusion.Blazor.SfPdfViewer) 
 * [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes)
 * [SkiaSharp.Views.Blazor](https://www.nuget.org/packages/SkiaSharp.Views.Blazor)
 
-**Step 3:** In your csproj file, add the following PropertyGroup and ItemGroup:
+## Add the following PropertyGroup and ItemGroup:
 
 {% tabs %}
 {% highlight c# hl_lines="2 3 7" %}
@@ -45,7 +50,9 @@ N> The PDF Viewer (Next Gen) component is supported from .NET 6.0 onwards.
 {% endhighlight %}
 {% endtabs %}
 
-**Step 4:** In the **~/_Imports.razor** file, add the following namespaces:
+## Register Syncfusion Blazor Service
+
+* In the **~/_Imports.razor** file, add the following namespaces:
 
 {% tabs %}
 {% highlight razor tabtitle="~/_Imports.razor" %}
@@ -56,7 +63,7 @@ N> The PDF Viewer (Next Gen) component is supported from .NET 6.0 onwards.
 {% endhighlight %}
 {% endtabs %}
 
-**Step 5:** Register the Syncfusion Blazor Service in the program.cs file.
+* Register the Syncfusion Blazor Service in the program.cs file.
 
 {% tabs %}
 {% highlight C# tabtitle=".NET 6 & .NET 7 (~/Program.cs)" hl_lines="3 9 13" %}
@@ -79,7 +86,9 @@ await builder.Build().RunAsync();
 {% endhighlight %}
 {% endtabs %}
 
-**Step 6:** Add the following stylesheet and script to the head section of the **wwwroot/index.html** file.
+## Adding stylesheet and script
+
+Add the following stylesheet and script to the head section of the **wwwroot/index.html** file.
 
 {% tabs %}
 {% highlight cshtml %}
@@ -94,7 +103,9 @@ await builder.Build().RunAsync();
 {% endhighlight %}
 {% endtabs %}
 
-**Step 7:** Add the Syncfusion PDF Viewer (Next Gen) component in the **~/Pages/Index.razor** file
+## Adding Blazor PDF Viewer (Next Gen) Component
+
+Add the Syncfusion PDF Viewer (Next Gen) component in the **~/Pages/Index.razor** file.
 
 {% tabs %}
 {% highlight razor %}
@@ -110,6 +121,8 @@ await builder.Build().RunAsync();
 {% endtabs %}
 
 N> If you don't provide the `DocumentPath` property value, the PDF Viewer (Next Gen) component will be rendered without loading the PDF document. Users can then use the **open** option from the toolbar to browse and open the PDF as required.
+
+## Run the application
 
 Run the application, and the PDF file will be displayed using Syncfusion's Blazor PDF Viewer (Next Gen) component in your browser.
 
