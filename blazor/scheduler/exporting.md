@@ -58,7 +58,7 @@ The Scheduler allows to export all its events into an Excel format file by using
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rZLUjcMMCTufhbhn?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Excel Exporting in Blazor Scheduler](images/blazor-scheduler-excel-export.png)
 
 ### Exporting with custom fields
 
@@ -103,7 +103,7 @@ By default, Scheduler exports all the default event fields that are mapped to it
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LjVgDQiWCyQZIWdw?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Excel Exporting with custom Fields in Blazor Scheduler](images/blazor-scheduler-excel-export-custom-fields.png)
 
 ### Exporting individual occurrences of a recurring series
 
@@ -147,8 +147,6 @@ By default, the Scheduler exports recurring events as a single data by exporting
     }
 }
 ```
-
-{% previewsample "https://blazorplayground.syncfusion.com/embed/htVAXcCssRCUlpGf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ### Exporting custom event data
 
@@ -219,8 +217,6 @@ N> By default, the event data are taken from Scheduler dataSource.
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rDBUtmMiCxmGhIkk?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
 ### Customizing the column header texts with custom fields exporting
 
 You can change the field names of appointment in the column header when exporting using the `FieldsInfo` option through the `ExportFieldInfo` class and pass it as an argument to the `ExportToExcelAsync` method as shown in the following code example.
@@ -275,7 +271,7 @@ You can change the field names of appointment in the column header when exportin
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rXLgXQsssQtgDHFK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Excel Exporting with custom header texts in Blazor Scheduler](images/blazor-scheduler-excel-export-custom-header.png)
 
 ### Export with custom file name
 
@@ -325,8 +321,6 @@ By default, the Scheduler allows you to download the exported Excel file with a 
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BDVKDmWWWGaiFLls?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
 ### Excel file formats
 
 By default, the Scheduler exports event data to an excel file in the `.xlsx` format. You can also export the Scheduler data in either of the file type such as `.xlsx` or `csv` formats, by defining the `ExportType` option as either `csv` or `xlsx`. By default, the `ExportType` is set to `xlsx`.
@@ -374,8 +368,6 @@ By default, the Scheduler exports event data to an excel file in the `.xlsx` for
     }
 }
 ```
-
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rNhUtcWMsEHBhETX?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ### Export with specific date format
 
@@ -425,7 +417,7 @@ You can export the Scheduler data with specific date format, by defining the `Da
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VXVgjQiWMklSWzhQ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Excel Exporting with Date Format in Blazor Scheduler](images/blazor-scheduler-excel-date-format.png)
 
 ## Exporting calendar events as ICS file
 
@@ -476,8 +468,6 @@ The following code example shows how the Scheduler events are exported to a cale
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rDhANmsWLthyQvEG?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
 ### Exporting calendar with custom file name
 
 By default, the calendar is exported with a file name `Calendar.ics`. To change this file name on export, pass the custom string value as `FileName` to the method argument so as to get the file downloaded with this provided name.
@@ -526,8 +516,6 @@ The following example downloads the iCal file with a name `ScheduleEvents.ics`.
     }
 }
 ```
-
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LNhqtGsCrXcTryWF?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Importing events from other calendars
 
@@ -602,8 +590,6 @@ The events from external calendars (ICS files) can be imported into Scheduler by
 </style>
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hjVADmMCrCZdIios?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
 ## How to print the Scheduler element
 
 The Scheduler allows to print the Scheduler element by using the `PrintAsync` method. The Print method works in two ways.
@@ -663,8 +649,6 @@ You can print the Schedule element with the current view by using the `PrintAsyn
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BjBAZGssBWVFAWeV?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
 ### Using a PrintAsync method with options
 
 You can print the Schedule element with customized Width and Height using the `PrintAsync` method by passing the `PrintOptions` Height and Width options. The following example shows how to print the Scheduler using the `PrintAsync` method by passing the `PrintOptions` options.
@@ -717,5 +701,3 @@ You can print the Schedule element with customized Width and Height using the `P
     }
 }
 ```
-
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BDVKtGCshsaIrAeZ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}

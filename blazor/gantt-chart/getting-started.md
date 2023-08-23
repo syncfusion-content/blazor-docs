@@ -369,8 +369,6 @@ The data source fields that are required to render the tasks are mapped to the G
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LNrqtRioUWAQzZlf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
 ## Defining columns
 
 Gantt Chart has an option to define columns as an array. You can customize the Gantt Chart columns using the following properties:
@@ -626,7 +624,7 @@ You can show the relationship in tasks by using the `Dependency` property as sho
 
 You can find the full information regarding Predecessors from [here](https://blazor.syncfusion.com/documentation/gantt-chart/task-dependencies)
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LjrUDRMIgiwtaePG?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Blazor Gantt Chart](images/blazor-gantt-chart.gif)
 
 ## Handling exceptions 
 Exceptions that occur during Gantt actions can be handled without stopping the application. These error messages or exception details can be acquired using the [OnActionFailure](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_OnActionFailure) event.
@@ -684,7 +682,7 @@ The following sample code demonstrates notifying user when server-side exception
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hjhUDdiIgCbUorUT?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Blazor Gantt Chart](images/blazor-gantt-chart-handling-exception.PNG)
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/GanttChart).
 

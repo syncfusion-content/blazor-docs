@@ -434,6 +434,6 @@ Through the navigation of the pager items, view the items in the list view page 
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rDrgZdszpqAeHLqp?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Blazor Pager with ListView](./images/blazor-pager-with-list-view.gif)
 
 N> [View Sample in GitHub.](https://github.com/SyncfusionExamples/blazor-pager-component)

@@ -68,8 +68,6 @@ In the following example, the Scheduler displays 2 views namely, Week and Timeli
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LZhUjmNmqpnrgTxp?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
 To configure Scheduler with different configurations on each view, refer the following code example. Here, the Week view displays the dates in `dd-MM-yyyy` format whereas the Month view hides the weekend days and also displays it in readonly mode.
 
 ```cshtml
@@ -98,8 +96,6 @@ To configure Scheduler with different configurations on each view, refer the fol
     }
 }
 ```
-
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BXhqZwjwUfcwOnWb?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## View specific configuration
 
@@ -166,7 +162,7 @@ Usually a day view displays a single day with all its related appointments. It i
 
 N> All the above defined properties can be accessed within Day view except `AllowVirtualScrolling` and `HeaderRows`.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hDLqDwZGUzEWCLKE?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Displaying Day View in Blazor Scheduler](images/blazor-scheduler-views-day.png)
 
 ### Week view
 
@@ -208,7 +204,7 @@ The Week view displays a count of 7 days (from Sunday to Saturday) with all its 
 
 N> All the above defined properties in the table can be accessed within Week and Work week views except `AllowVirtualScrolling` and `HeaderRows`.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BXhgjmNGUoDYXFuo?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Displaying Week View in Blazor Scheduler](images/blazor-scheduler-views-week.png)
 
 ### Work Week view
 
@@ -251,7 +247,7 @@ The following code example depicts how to change the start and end hours only on
 
 N> The Week, Work week and Day views can display the all-day row appointments in a separate all-day row with an expand or collapse option to view it.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rDVKNGNmgbrSjrVN?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Displaying Work week View in Blazor Scheduler](images/blazor-scheduler-views-workweek.png)
 
 ### Month view
 
@@ -295,7 +291,7 @@ By default, in month view, you can view single appointment on each day cell. If 
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VXhKNwXGgvKHUuwH?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Displaying Month View in Blazor Scheduler](images/blazor-scheduler-views-month.png)
 
 ### Agenda view
 
@@ -335,7 +331,7 @@ The following code example depicts how to display events of four days in Agenda 
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VNVUXcjcgbJRqCdI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Displaying Agenda View in Blazor Scheduler](images/blazor-scheduler-views-agenda.png)
 
 ### Month Agenda view
 
@@ -378,7 +374,7 @@ The following code example shows how to hide the weekend days on `MonthAgenda` v
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/htVADcjQqPynZwQU?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Displaying Month agenda View in Blazor Scheduler](images/blazor-scheduler-views-monthagenda.png)
 
 ### Timeline views – Day, Week, Work Week
 
@@ -422,7 +418,7 @@ Similar to the vertical day, week and work week views, the respective view shows
 
 N> Clicking on the dates in the date header bar of Timeline day, Timeline week and Timeline work week will allow to navigate to the Agenda view.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VNVgXmZcqbOnVUVe?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Displaying Timeline Week View in Blazor Scheduler](images/blazor-scheduler-views-timelineweek.png)
 
 ### Timeline Month view
 
@@ -464,7 +460,7 @@ A Timeline Month view displays the current month days along with its appointment
 
 N> Clicking on the dates in the date header bar of Timeline month allows to navigate to the Timeline day view.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LNBKjGXmzMXnmtgT?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Displaying Timeline Month View in Blazor Scheduler](images/blazor-scheduler-views-timelinemonth.png)
 
 ### Timeline Year view
 
@@ -506,7 +502,7 @@ By default, the timeline year view orientation is set to Horizontal view. In thi
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VDVqNcZmzMLtrdzB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Displaying Timeline Year View in Blazor Scheduler](images/blazor-scheduler-views-timelineyear.png)
 
 #### Setting the first month of timeline year
 
@@ -545,7 +541,7 @@ By default, months in timeline year view displayed from January to December. Use
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hjLUDmtcTMzyPHqu?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Displaying Timeline Year with First Month in Blazor Scheduler](images/blazor-scheduler-views-timelineyear-firstmonth.png)
 
 ### Year view
 
@@ -585,7 +581,7 @@ The Year view shows a year calendar, where clicking on a particular day will dis
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VNVUjQNGJWRLJGzS?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Displaying Year View in Blazor Scheduler](images/blazor-scheduler-year-view.png)
 
 ## Extending view intervals
 
@@ -627,6 +623,6 @@ You can provide the alternative display name for such customized views on the Sc
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VDVADQZQTiuCIODk?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Displaying Extending Intervals in Blazor Scheduler](images/blazor-scheduler-views-interval.png)
 
 N> The view intervals can be extended on all the Scheduler view modes except Agenda and Month-Agenda views.
