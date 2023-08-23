@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with Blazor DataGrid Component | Syncfusion
-description: Checkout and learn about getting started with Blazor DataGrid component in Blazor Server App and Blazor bAssembly App.
+description: Checkout and learn about getting started with Blazor DataGrid component in Blazor Server App and Blazor WebAssembly App.
 platform: Blazor
 control: DataGrid
 documentation: ug
@@ -11,7 +11,7 @@ documentation: ug
 
 # Getting Started with Blazor DataGrid Component
 
-This section briefly explains about how to include [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) component in your Blazor Server App and Blazor bAssembly App using Visual Studio.
+This section briefly explains about how to include [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) component in your Blazor Server App and Blazor WebAssembly App using Visual Studio.
 
 To get start quickly with Blazor DataGrid component, you can check on this video or [GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/DataGrid) sample.
 
@@ -24,7 +24,7 @@ To get start quickly with Blazor DataGrid component, you can check on this video
 
 ## Create a new Blazor App in Visual Studio
 
-You can create a **Blazor Server App** or **Blazor bAssembly App** using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0) or the [Syncfusion Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
+You can create a **Blazor Server App** or **Blazor WebAssembly App** using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0) or the [Syncfusion Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
 
 ## Install Syncfusion Blazor Grid and Theme NuGet in the App
 
@@ -56,7 +56,7 @@ Open **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusio
 {% endhighlight %}
 {% endtabs %}
 
-Now, register the Syncfusion Blazor Service in the **~/Program.cs** file of your Blazor Server App or Blazor bAssembly App. 
+Now, register the Syncfusion Blazor Service in the **~/Program.cs** file of your Blazor Server App or Blazor WebAssembly App. 
 
 {% tabs %}
 {% highlight C# tabtitle="Blazor Server App" hl_lines="3 10" %}
@@ -76,13 +76,13 @@ var app = builder.Build();
 ....
 
 {% endhighlight %}
-{% highlight C# tabtitle="Blazor bAssembly App" hl_lines="3 11" %}
+{% highlight C# tabtitle="Blazor WebAssembly App" hl_lines="3 11" %}
 
 using Microsoft.AspNetCore.Components.b;
-using Microsoft.AspNetCore.Components.bAssembly.Hosting;
+using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 using Syncfusion.Blazor;
 
-var builder = bAssemblyHostBuilder.CreateDefault(args);
+var builder = WebAssemblyHostBuilder.CreateDefault(args);
 builder.RootComponents.Add<App>("#app");
 builder.RootComponents.Add<HeadOutlet>("head::after");
 
@@ -103,7 +103,7 @@ The theme stylesheet and script can be accessed from NuGet through [Static b Ass
 
 * For **.NET 7** Blazor Server app, include it in the **~/Pages/_Host.cshtml** file.
 
-* For Blazor bAssembly app, include it in the **~/index.html** file.
+* For Blazor WebAssembly app, include it in the **~/index.html** file.
 
 ```html
 <head>
@@ -367,5 +367,5 @@ The following sample code demonstrates notifying user when server-side exception
 
 * [Getting Started with Syncfusion Blazor for Client-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-dotnet-cli)
 
-* [Getting Started with Syncfusion DataGrid in Blazor bAssembly using Visual Studio](./how-to/blazor-bassembly-datagrid-using-visual-studio)
+* [Getting Started with Syncfusion DataGrid in Blazor WebAssembly using Visual Studio](./how-to/blazor-WebAssembly-datagrid-using-visual-studio)
   
