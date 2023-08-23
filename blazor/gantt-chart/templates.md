@@ -12,8 +12,8 @@ documentation: ug
 Blazor has templated components thats accepts one or more UI segments as input that can be rendered as part of the component during component rendering. Gantt Chart is a templated razor component, that allows customizing various part of the UI using template parameters. It allows rendering custom components or content based on its logic.
 
 The available template options in Gantt Chart are as follows,
-* [Column template](./columns/#column-template) - Used to customize cell content.
-* [Header template](./columns/#header-template) - Used to customize header cell content.
+* [Column template](./columns/column-template) - Used to customize cell content.
+* [Header template](./columns/header-template) - Used to customize header cell content.
 
 ## Template context
 
@@ -24,7 +24,7 @@ For example, the data of the column template can be accessed using `context` as 
 
 ## GanttChartTemplates component
 
-If a component contains any `RenderFragment` type property then it does not allow any child components other than the render fragment property, which is [by design in Blazor](https://github.com/aspnet/AspNetCore/issues/10836).
+If a component contains any `RenderFragment` type property then it does not allow any child components other than the render fragment property, which is [by design in Blazor](https://github.com/dotnet/aspnetcore/issues/10836).
 
 This prevents from directly specifying templates such as `TaskbarTemplate` and `MilestoneTemplate` as descendant of the Gantt Chart component. Hence the templates such as `TaskbarTemplate` and `MilestoneTemplate` should be wrapped around a component named `GanttTemplates` as follows.
 
