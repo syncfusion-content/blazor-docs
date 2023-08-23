@@ -11,7 +11,7 @@ documentation: ug
 
 Resource Multi-Taskbar in a Gantt Chart is a feature that allows you to visualize multiple tasks assigned to each resource within a row when the records are collapsed. To enable this feature, set the `EnableMultiTaskbar` property within `GanttTaskbarSettings` to `true`.
 
-When a resource has multiple tasks scheduled on the same date, the taskbar for these tasks will overlap. Resource Multi-Taskbar not only helps with visualization but also allows you to edit the task scheduling, even in the collapsed state. Hover over the specific taskbar you want to edit. The taskbar you are interacting with will be brought to the forefront, making it clear which task you are working on. You can easily drag it to the desired position on the timeline to adjust the task's start and end dates and also change the duration of the task by resizing the taskbar. Resource Multi-Taskbar also supports overallocation.
+ Resource Multi-Taskbar not only helps with visualization but also allows you to edit the task scheduling, even in the collapsed state. Hover over the specific taskbar you want to edit. The taskbar you are interacting with will be brought to the forefront, making it clear which task you are working on. You can easily drag it to the desired position on the timeline to adjust the task's start and end dates and also change the duration of the task by resizing the taskbar. Resource Multi-Taskbar also supports [overallocation](https://blazor.syncfusion.com/documentation/gantt-chart/resource-view#resource-overallocation).
 
 ```cshtml
 
@@ -103,46 +103,6 @@ When a resource has multiple tasks scheduled on the same date, the taskbar for t
                 new TaskData() { TaskId = 9, TaskName = "Site work",Progress=30, StartDate = new DateTime(2019, 04, 04), EndDate = new DateTime(2019,04,21),Work=60, TaskType="FixedUnit" },
 
                 new TaskData() { TaskId = 10, TaskName = "Install temporary power service",StartDate = new DateTime(2019, 04, 01),Duration = "14",ParentId = 9, Work=60,Progress=50, TaskType="FixedWork",Resources = new List<ResourceAlloacteData>(){ new ResourceAlloacteData() { ResourceId=3, Unit=70} } },
-
-                new TaskData() { TaskId = 11, TaskName = "Clear the building site",StartDate = new DateTime(2019, 04, 08),Duration = "9",ParentId = 9,Work=60,Progress=40,Resources = new List<ResourceAlloacteData>(){ new ResourceAlloacteData() { ResourceId=3} },TaskType="FixedDuration",Predecessor = "10FS-9" },
-
-                new TaskData() { TaskId = 12, TaskName = "Sign contract",StartDate = new DateTime(2019, 04, 12), Duration = "5",  ParentId = 9, Work=60,Progress=40, TaskType="FixedDuration",Resources = new List<ResourceAlloacteData>(){ new ResourceAlloacteData() { ResourceId=3} },Predecessor = "11FS-5" },
-
-                new TaskData() { TaskId = 13,TaskName = "Foundation",StartDate = new DateTime(2022, 04, 04),EndDate = new DateTime(2019,04,28),Work=60,Progress=40,TaskType="FixedDuration" },
-                
-                new TaskData() { TaskId = 14, TaskName = "Excavate for foundations", StartDate = new DateTime(2019, 04, 01),Duration = "2", ParentId = 13, Work=60,Progress=40, TaskType="FixedDuration",Resources = new List<ResourceAlloacteData>(){ new ResourceAlloacteData() { ResourceId=4,} } },
-
-                new TaskData() { TaskId = 15, TaskName = "Dig footer",StartDate = new DateTime(2019, 04, 04), Duration = "2", ParentId = 13, Work=60,Progress=40, TaskType="FixedDuration",Resources = new List<ResourceAlloacteData>(){ new ResourceAlloacteData() { ResourceId=4} },Predecessor = "14FS + 1" },
-
-                new TaskData() { TaskId = 16, TaskName = "Install plumbing grounds",StartDate = new DateTime(2019, 04, 08), Duration = "2", ParentId = 13, Work=60,Progress=40,TaskType="FixedDuration",Resources = new List<ResourceAlloacteData>(){ new ResourceAlloacteData() { ResourceId=4} },Predecessor = "15FS" },
-
-                new TaskData() { TaskId = 17,TaskName = "Framing",StartDate = new DateTime(2019, 04, 04), EndDate = new DateTime(2019,04,28),Work=60,Progress=40,TaskType="FixedDuration" },
-
-                new TaskData() { TaskId = 18, TaskName = "Add load-bearing structure", StartDate = new DateTime(2019, 04, 03), Duration = "2",ParentId = 17,Work=60,Progress=20,TaskType="FixedDuration",Resources = new List<ResourceAlloacteData>(){ new ResourceAlloacteData() { ResourceId=5} } },
-
-                new TaskData() { TaskId = 19, TaskName = "Natural gas utilities",StartDate = new DateTime(2019, 04, 08),Duration = "5", ParentId = 17, Work=60, Progress=40, TaskType="FixedDuration",Resources = new List<ResourceAlloacteData>(){ new ResourceAlloacteData() { ResourceId=5} },Predecessor = "18" },
-
-                new TaskData() { TaskId = 20, TaskName = "Electrical utilities", StartDate = new DateTime(2022, 04, 01),Duration = "4",ParentId = 17,Work=60,Progress=50,TaskType="FixedWork",Resources = new List<ResourceAlloacteData>(){ new ResourceAlloacteData() { ResourceId=5} },Predecessor = "19FS + 1" },
-
-                new TaskData() { TaskId = 21, TaskName = "Plumbing test", StartDate = new DateTime(2019, 04, 04), Duration = "4", Work=60, Progress=50, TaskType="FixedWork",Resources = new List<ResourceAlloacteData>(){ new ResourceAlloacteData() { ResourceId=6} } },
-
-                new TaskData() { TaskId = 22, TaskName = "Electrical test",StartDate = new DateTime(2019, 04, 04),Duration = "4", Work=60, Progress=50, TaskType="FixedWork", Resources = new List<ResourceAlloacteData>(){ new ResourceAlloacteData() { ResourceId=6} },Predecessor = "21" },
-
-                new TaskData() { TaskId = 23,TaskName = "First floor initiation",StartDate = new DateTime(2019, 04, 06),Duration = "4",Work=60,Progress=50,TaskType="FixedWork",Resources = new List<ResourceAlloacteData>(){ new ResourceAlloacteData() { ResourceId=7} } },
-
-                new TaskData() { TaskId = 24, TaskName = "Interior work",StartDate = new DateTime(2019, 04, 04),  Duration = "4",Work=60, Progress=50,TaskType="FixedWork", Resources = new List<ResourceAlloacteData>(){ new ResourceAlloacteData() { ResourceId=7} },Predecessor="23" },
-
-                new TaskData() { TaskId = 25, TaskName = "First floor tile work initiation",StartDate = new DateTime(2019, 04, 10), Duration = "4", Work=60, Progress=50, TaskType="FixedWork", Resources = new List<ResourceAlloacteData>(){ new ResourceAlloacteData() { ResourceId=8} } },
-
-                new TaskData() { TaskId = 26,TaskName = "Tile test",StartDate = new DateTime(2019, 04, 04),Duration = "4",Work=60,Progress=50,TaskType="FixedWork", Resources = new List<ResourceAlloacteData>(){ new ResourceAlloacteData() { ResourceId=8} } },
-
-                new TaskData() { TaskId = 27,TaskName = "Second floor initiation",StartDate = new DateTime(2019, 04, 10), Duration = "4",Work=60,Progress=50, TaskType="FixedWork", Resources = new List<ResourceAlloacteData>(){ new ResourceAlloacteData() { ResourceId=9} } },
-
-                new TaskData() { TaskId = 28, TaskName = "Second floor tile work initiation",StartDate = new DateTime(2019, 04, 06), Duration = "4", Work=60, Progress=50,TaskType="FixedWork", Resources = new List<ResourceAlloacteData>(){ new ResourceAlloacteData() { ResourceId=9} },Predecessor="27FS - 1"},
-
-                new TaskData() { TaskId = 29,TaskName = "Exterior work initiation",StartDate = new DateTime(2019, 04, 12),Duration = "4",Work=60,Progress=50,TaskType="FixedWork",Resources = new List<ResourceAlloacteData>(){ new ResourceAlloacteData() { ResourceId=10} }},
-
-                new TaskData() { TaskId = 30,TaskName = "Building test",StartDate = new DateTime(2019, 04, 08),Duration = "4",Work=60, Progress=50,TaskType="FixedWork"},
             };
         return Tasks;
     }
