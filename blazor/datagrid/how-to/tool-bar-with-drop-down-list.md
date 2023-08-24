@@ -110,4 +110,4 @@ To render the DropDownList component, use the [DropDownListEvents](https://help.
 }
 ```
 
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/hjVAZnhwLborRIUA?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
+![Blazor DataGrid with Dropdown ToolBar](../images/blazor-datagrid-dropdown-toolbar.PNG)
