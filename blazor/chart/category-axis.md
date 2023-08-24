@@ -48,7 +48,6 @@ The category axis is used to represent string values instead of integers.
 ```
 
 ![Blazor Column Chart with Default Axis](images/category-axis/blazor-chart-default-axis.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BZrAtnhlVoAJHvme?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Labels placement
 
@@ -91,7 +90,6 @@ The category labels are positioned between ticks by default, but the [LabelPlace
 ```
 
 ![Changing Labels Position in Blazor Chart](images/category-axis/blazor-diagram-label-position.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BDhKtRBvBoxHhmGU?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Range and interval
 
@@ -134,7 +132,6 @@ The [Minimum](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Cha
 ```
 
 ![Changing Blazor Column Chart Axis based on Range and Interval](images/category-axis/blazor-chart-axis-range-and-interval.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/rDhUjdVbhePcgfcS?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Indexed category axis
 
@@ -185,7 +182,6 @@ The category axis can also be rendered using the data source index values. This 
 ```
 
 ![Blazor Chart with Indexed Category Axis](images/category-axis/blazor-chart-index-category-axis.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LNVAZxrlrxbdRcBc?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 N> Refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap5) to knows various chart types and how to represent time-dependent data, showing trends in data at equal intervals.
 

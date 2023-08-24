@@ -68,5 +68,3 @@ This is demonstrated in the following sample code,
     }
 }
 ```
-
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/hXVgNRhcgbPzoMuM?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
