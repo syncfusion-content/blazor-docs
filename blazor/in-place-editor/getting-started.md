@@ -145,7 +145,6 @@ N> The type of component editor must be configured in the 'Type' Editor In-place
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion Blazor In-place Editor component in your default web browser.
 
 ![Blazor In-place Editor Component](images/blazor-inplace-editor-component.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LZLADRiILFbhTkoR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/InPlaceEditor).
 
@@ -202,7 +201,6 @@ The following code explains how to initialize a simple In-place Editor with popu
 ![Blazor In-place Editor in Inline Mode](./images/blazor-inplace-editor-in-inline-mode.png)
 
 ![Blazor In-place Editor in Popup Mode](./images/blazor-inplace-editor-in-popup-mode.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BNLKjRiSrvEtXrNE?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Configuring DropDownList
 
@@ -361,7 +359,6 @@ In the following code, it is configured to render the `DatePicker`, `DropDownLis
 {% endtabs %}
 
 ![Integrating DatePicker in Blazor In-place Editor](./images/blazor-inplace-editor-integrate-datepicker.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LDVqjnCehYiIVxsI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Submitting data to the server (save)
 
@@ -468,7 +465,7 @@ The edited data is submitted to the server and you can see the new values gettin
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VXLqtxWupZYbWiua?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Refreshing Blazor In-place Editor Data](./images/blazor-inplace-editor-refresh-data.png)
 
 ## See also
 

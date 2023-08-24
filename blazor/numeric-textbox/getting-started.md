@@ -22,7 +22,7 @@ This section briefly explains about how to include [Blazor NumericTextBox](https
 
 You can create **Blazor Server App** or **Blazor WebAssembly App** using Visual Studio in one of the following ways,
 
-* [Create a Project using Microsoft Templates](https://docs.microsoft.com/en-us/aspnet/core/blazor/tooling?pivots=windows)
+* [Create a Project using Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0&pivots=windows)
 
 * [Create a Project using Syncfusion Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio)
 
@@ -275,7 +275,6 @@ N> Syncfusion recommends to reference scripts using [Static Web Assets](https://
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to run the application. Then, the Syncfusion `Blazor NumericTextBox` component will be rendered in the default web browser.
 
 ![Blazor NumericTextBox Component](./images/blazor-numerictextbox-component.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/hjhADnszTSpuUSjc?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Range validation
 
@@ -290,7 +289,6 @@ You can set the minimum and maximum range of values in the NumericTextBox using 
 {% endtabs %}
 
 ![Inputnumber Blazor with Range Value](./images/blazor-numerictextbox-range-value.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BZrUNnCzJoIpVhQL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Formatting the value
 
@@ -305,7 +303,6 @@ Users can set the format of the NumericTextBox component using the [Format](http
 {% endtabs %}
 
 ![Blazor NumericTextBox with Formatting Value](./images/blazor-numerictextbox-format-value.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/hjhUtnizTooYVUca?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Precision of numbers
 
@@ -324,7 +321,6 @@ If `ValidateDecimalOnType` is false, number of decimals will not be restricted. 
 {% endtabs %}
 
 ![Blazor NumericTextBox with Precision Value](./images/blazor-numerictextbox-precision-value.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VNLUXxizJSdGSIym?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/NumericTextBox).
 

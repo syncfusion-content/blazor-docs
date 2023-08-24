@@ -20,7 +20,6 @@ The Rich Text Editor provides an option to display a toolbar on demand by enabli
 {% endtabs %}
 
 ![Blazor RichTextEditor enabling inline mode](./images/blazor-richtexteditor-enable-inline.gif)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LNhgjcCLBdUTHOoJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Edit on select
 
@@ -35,7 +34,6 @@ The inline toolbar will appears only for the selected text by enabling the [Rich
 {% endtabs %}
 
 ![Blazor RichTextEditor enabling selection](./images/blazor-richtexteditor-enable-selection.gif)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LDBKjwshBdmenbIq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 N> You can refer to our [Blazor Rich Text Editor](https://www.syncfusion.com/blazor-components/blazor-wysiwyg-rich-text-editor) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Rich Text Editor](https://blazor.syncfusion.com/demos/rich-text-editor/overview?theme=bootstrap4) example to know how to render and configure the rich text editor tools.
 

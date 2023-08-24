@@ -58,7 +58,6 @@ N> The `Hour` row is not applicable for Timeline month view.
 ```
 
 ![Timeline Header Rows in Blazor Scheduler](images/blazor-scheduler-headerrow-default.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/rthqXQiZhAeyGvlQ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Display year and month rows in timeline views
 
@@ -94,7 +93,6 @@ To display the timeline Scheduler simply with year and month names alone, define
 ```
 
 ![Display Year and Month rows in Blazor Scheduler timeline views](images/blazor-scheduler-headerrow-month-year.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BXrAZQsZrUYjWHsA?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Display week numbers in timeline views
 
@@ -132,7 +130,6 @@ The week number can be displayed in a separate header row of the timeline Schedu
 ```
 
 ![Display Week numbers in Blazor Scheduler timeline views](images/blazor-scheduler-headerrow-weeknumber.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BDrAZGCZVptNOvCe?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Timeline view displaying dates of a complete year
 
@@ -168,7 +165,6 @@ It is possible to display a complete year in a timeline view by setting `Interva
 ```
 
 ![Display dates of a complete year in Blazor Scheduler timeline views](images/blazor-scheduler-headerrow-dates.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BjhgtQWDBfhOscwj?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Customizing the header rows using template
 
@@ -231,4 +227,3 @@ The text of the header rows can be customized and display any images or format t
 ```
 
 ![Display customize header rows using template in  Blazor Scheduler](images/blazor-scheduler-headerrow-custom-header.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LjVANcsXBpSmVbSL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->

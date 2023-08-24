@@ -84,5 +84,3 @@ This is demonstrated in the following sample code where the RowDataBound event i
     }
 }
 ```
-
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LDBUNHVcTUvXFOhe?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->

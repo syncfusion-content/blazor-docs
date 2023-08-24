@@ -19,7 +19,7 @@ This section briefly explains about how to include [Blazor Gantt Chart](https://
 
 You can create **Blazor Server App** or **Blazor WebAssembly App** using Visual Studio in one of the following ways,
 
-* [Create a Project using Microsoft Templates](https://docs.microsoft.com/en-us/aspnet/core/blazor/tooling?pivots=windows)
+* [Create a Project using Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0&pivots=windows)
 
 * [Create a Project using Syncfusion Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio)
 
@@ -369,8 +369,6 @@ The data source fields that are required to render the tasks are mapped to the G
 {% endhighlight %}
 {% endtabs %}
 
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LNrqtRioUWAQzZlf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
-
 ## Defining columns
 
 Gantt Chart has an option to define columns as an array. You can customize the Gantt Chart columns using the following properties:
@@ -430,7 +428,7 @@ Gantt Chart has an option to define columns as an array. You can customize the G
 {% endhighlight %}
 {% endtabs %}
 
-For further details regarding Columns, refer [here](https://blazor.syncfusion.com/documentation/gantt-chart/columns/).
+For further details regarding Columns, refer [here](https://blazor.syncfusion.com/documentation/gantt-chart/columns).
 
 ## Enable editing
 
@@ -479,7 +477,7 @@ The editing feature enables you to edit the tasks in the Gantt Chart component. 
 
 N> When the edit mode is set to `Auto`, you can change the cells to editable mode by double-clicking anywhere at the Tree Grid and edit the task details in the edit dialog by double-clicking anywhere at the chart.
 
-You can find the full information regarding Editing from [here](https://blazor.syncfusion.com/documentation/gantt-chart/managing-tasks/)
+You can find the full information regarding Editing from [here](https://blazor.syncfusion.com/documentation/gantt-chart/managing-tasks)
 
 ## Enable filtering
 
@@ -525,7 +523,7 @@ The filtering feature enables you to view the reduced amount of records based on
 {% endhighlight %}
 {% endtabs %}
 
-You can find the full information regarding Filtering from [here](https://blazor.syncfusion.com/documentation/gantt-chart/filtering/)
+You can find the full information regarding Filtering from [here](https://blazor.syncfusion.com/documentation/gantt-chart/filtering)
 
 ## Enable sorting
 
@@ -571,7 +569,7 @@ The sorting feature enables you to order the records. It can be enabled by setti
 {% endhighlight %}
 {% endtabs %}
 
-You can find the full information regarding Sorting from [here](https://blazor.syncfusion.com/documentation/gantt-chart/sorting/)
+You can find the full information regarding Sorting from [here](https://blazor.syncfusion.com/documentation/gantt-chart/sorting)
 
 ## Enabling Predecessors or Task Relationships
 
@@ -624,10 +622,9 @@ You can show the relationship in tasks by using the `Dependency` property as sho
 {% endhighlight %}
 {% endtabs %}
 
-You can find the full information regarding Predecessors from [here](https://blazor.syncfusion.com/documentation/gantt-chart/task-dependencies/)
+You can find the full information regarding Predecessors from [here](https://blazor.syncfusion.com/documentation/gantt-chart/task-dependencies)
 
 ![Blazor Gantt Chart](images/blazor-gantt-chart.gif)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LjrUDRMIgiwtaePG?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Handling exceptions 
 Exceptions that occur during Gantt actions can be handled without stopping the application. These error messages or exception details can be acquired using the [OnActionFailure](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_OnActionFailure) event.
@@ -686,7 +683,6 @@ The following sample code demonstrates notifying user when server-side exception
 {% endtabs %}
 
 ![Blazor Gantt Chart](images/blazor-gantt-chart-handling-exception.PNG)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/hjhUDdiIgCbUorUT?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/GanttChart).
 
