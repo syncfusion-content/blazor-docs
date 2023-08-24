@@ -277,7 +277,6 @@ N> Syncfusion recommends to reference scripts using [Static Web Assets](https://
 * Press <kbd>ctrl</kbd>+<kbd>F5</kbd> or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to run the application. Then, the Syncfusion Blazor Rating component will be rendered in the default web browser.
 
 ![Blazor Rating Component](images/blazor-rating-component.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BtLKZHWTAADgSQQO?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Value
 
@@ -292,4 +291,3 @@ You can set the rating value by using the [Value](https://help.syncfusion.com/cr
 {% endtabs %}
 
 ![Displaying Rating Value in Blazor Rating Component](images/blazor-rating-value.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/rNBKXRWzgKsnIJmv?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->

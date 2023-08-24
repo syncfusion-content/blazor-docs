@@ -37,7 +37,7 @@ N> Syncfusion Blazor components are available in [nuget.org](https://www.nuget.o
 
 ## Register Syncfusion Blazor Service
 
-Open **~/_Imports.razor** file and import the Syncfusion.Blazor namespace.
+Open **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Navigations` namespace.
 
 {% tabs %}
 {% highlight razor tabtitle="~/_Imports.razor" %}
@@ -174,6 +174,5 @@ Add the Syncfusion Blazor Carousel component in the **~/Pages/Index.razor** file
 ```
 
 ![Blazor Carousel Component](images/getting_started.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/hNrqjHWYrWfdhWoO?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/Carousel).
