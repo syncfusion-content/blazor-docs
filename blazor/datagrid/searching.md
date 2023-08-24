@@ -18,33 +18,33 @@ To further enhance the search functionality, you can integrate a search text box
 ```cshtml
 @using Syncfusion.Blazor.Grids
 
-@{
-    var Tool = (new List<string>() { "Search" });
-}
 <SfGrid DataSource="@Orders" Toolbar=@Tool>
     <GridColumns>
         <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
         <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
+         <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
         <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
-        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
 
-@code{
+@code {
+
     public List<Order> Orders { get; set; }
+    public List<string> Tool = new List<string>() { "Search" };
 
     protected override void OnInitialized()
     {
         Orders = Enumerable.Range(1, 75).Select(x => new Order()
-        {
-            OrderID = 1000 + x,
-            CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
-            Freight = 2.1 * x,
-            OrderDate = DateTime.Now.AddDays(-x),
-        }).ToList();
+            {
+                OrderID = 1000 + x,
+                CustomerID = (new string[] { "VINET", "TOMSP", "HANAR", "VICTE", "SUPRD" })[new Random().Next(5)],
+                Freight = 2.1 * x,
+                OrderDate = DateTime.Now.AddDays(-x),
+            }).ToList();
     }
 
-    public class Order {
+    public class Order
+    {
         public int? OrderID { get; set; }
         public string CustomerID { get; set; }
         public DateTime? OrderDate { get; set; }
@@ -52,10 +52,7 @@ To further enhance the search functionality, you can integrate a search text box
     }
 }
 ```
-
-The following GIF image represents a DataGrid Searching.
-
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hDVqNRLrhZVFKfZK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BtrUDvVJWxsVkdgD?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 > The clear icon is shown in the Data Grid search text box when it is focused on search text or after typing the single character in the search text box. A single click of the clear icon clears the text in the search box as well as the search results in the Grid.
 
@@ -86,36 +83,35 @@ The following example demonstrates how to set an initial search in the grid usin
 5.`IgnoreAccent`: **true** will ignores diacritic characters or accents during the search operation.
 ```cshtml
 @using Syncfusion.Blazor.Grids
-
-@{
-    var InitSearch = (new string[] { "CustomerID" });
-    var Tool = (new List<string>() { "Search" });
-}
+    
 <SfGrid DataSource="@Orders" Toolbar=@Tool>
-    <GridSearchSettings Fields=@InitSearch Operator=Syncfusion.Blazor.Operator.Contains Key="anton" IgnoreCase="true"></GridSearchSettings>
-            <GridColumns>
-                <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-                <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
-                <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
-                <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-            </GridColumns>
+    <GridSearchSettings Fields=@InitSearch Operator=Syncfusion.Blazor.Operator.Contains Key="Ha" IgnoreCase="true"></GridSearchSettings>
+    <GridColumns>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn> 
+    </GridColumns>
 </SfGrid>
 
-@code{
+@code {
     public List<Order> Orders { get; set; }
+    public List<string> Tool = new List<string>() { "Search" };
+    public string[] InitSearch = new string[] { "CustomerID" };
 
     protected override void OnInitialized()
     {
         Orders = Enumerable.Range(1, 75).Select(x => new Order()
-        {
-            OrderID = 1000 + x,
-            CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
-            Freight = 2.1 * x,
-            OrderDate = DateTime.Now.AddDays(-x),
-        }).ToList();
+            {
+                OrderID = 1000 + x,
+                CustomerID = (new string[] { "VINET", "TOMSP", "HANAR", "VICTE", "SUPRD" })[new Random().Next(5)],
+                Freight = 2.1 * x,
+                OrderDate = DateTime.Now.AddDays(-x),
+            }).ToList();
     }
 
-    public class Order {
+    public class Order
+    {
         public int? OrderID { get; set; }
         public string CustomerID { get; set; }
         public DateTime? OrderDate { get; set; }
@@ -123,10 +119,7 @@ The following example demonstrates how to set an initial search in the grid usin
     }
 }
 ```
-
-The following screenshot represents a DataGrid with initial searching.
-
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LjVUtdVLBWxwcCcO?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rNLUXlVpivoCqYQK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 > By default, datagrid searches all the bound column values. To customize this behavior, define the `Fields` property of **GridSearchSettings** component.
 
@@ -165,16 +158,13 @@ Inside the event handler, get the reference of the grid component.
 @using Syncfusion.Blazor.Buttons
 @using Syncfusion.Blazor.Grids
 
-@{
-    var Tool = (new List<string>() { "Search" });
-}
 <SfButton Content="Search" OnClick="SearchBtnHandler"></SfButton>
 <SfGrid @ref="DefaultGrid" DataSource="@Orders" AllowSorting="true" Toolbar=@Tool>
     <GridColumns>
         <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" TextAlign="TextAlign.Right" Width="130" Type="ColumnType.Date"></GridColumn>
-        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer ID" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.ShipCity) HeaderText="Ship City" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.ShipName) HeaderText="Ship Name" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
 
@@ -183,6 +173,61 @@ Inside the event handler, get the reference of the grid component.
 
     public List<Order> Orders { get; set; }
 
+    public List<string> Tool = new List<string>() { "Search" };
+
+    protected override void OnInitialized()
+    {
+        Orders = Enumerable.Range(1, 75).Select(x => new Order()
+            {
+                OrderID = 1000 + x,
+                CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
+                ShipCity = (new string[] { "Reims", "Münster", "Rio de Janeiro", "Lyon", "Charleroi" })[new Random().Next(5)],
+                ShipName = (new string[] { "Vins et alcools Chevali", "Toms Spezialitäten", "Hanari Carnes", "Victuailles en stock", "Suprêmes délices" })[new Random().Next(5)],
+            }).ToList();
+    }
+
+    public class Order
+    {
+        public int? OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public string ShipCity { get; set; }
+        public string ShipName { get; set; }
+    }
+
+    public void SearchBtnHandler()
+    {
+       
+        this.DefaultGrid.SearchAsync("1001");
+    }
+}
+```
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hNVgtPVzrpUOJNXc?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+## Search specific columns
+
+By default, the search functionality searches all visible columns. However, if you want to search only specific columns, you can define the specific column’s field names in the [GridSearchSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSearchSettings.html).[Fields](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSearchSettings.html#Syncfusion_Blazor_Grids_GridSearchSettings_Fields)  property. This allows you to narrow down the search to a targeted set of columns, which is particularly useful when dealing with large datasets or grids with numerous columns.
+
+The following example demonstrates how to search specific columns such as **CustomerID** and **ShipCity** by using the searchSettings.fields property.
+
+```cshtml
+@using Syncfusion.Blazor.Grids
+
+<SfGrid DataSource="@Orders" Toolbar=@Tool>
+    <GridSearchSettings Fields=@SpecificCols></GridSearchSettings>
+    <GridColumns>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer ID" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.ShipCity) HeaderText="Ship City" Width="120"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code {
+    public List<Order> Orders { get; set; }
+    public List<string> Tool = new List<string>() { "Search" };
+    public string[] SpecificCols = new string[] { "CustomerID", "ShipCity" };
+
     protected override void OnInitialized()
     {
         Orders = Enumerable.Range(1, 75).Select(x => new Order()
@@ -190,7 +235,7 @@ Inside the event handler, get the reference of the grid component.
                 OrderID = 1000 + x,
                 CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
                 Freight = 2.1 * x,
-                OrderDate = DateTime.Now.AddDays(-x),
+                ShipCity = (new string[] { "Reims", "Münster", "Rio de Janeiro", "Lyon", "Charleroi" })[new Random().Next(5)]
             }).ToList();
     }
 
@@ -200,67 +245,12 @@ Inside the event handler, get the reference of the grid component.
         public string CustomerID { get; set; }
         public DateTime? OrderDate { get; set; }
         public double? Freight { get; set; }
-    }
-
-    public void SearchBtnHandler()
-    {
-        this.DefaultGrid.SearchAsync("1001");
+        public string ShipCity { get; set; }
     }
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hZVUtFtuTqojMFfg?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-## Search specific columns
-
-By default, the search functionality searches all visible columns. However, if you want to search only specific columns, you can define the specific column’s field names in the [GridSearchSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSearchSettings.html).[Fields](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSearchSettings.html#Syncfusion_Blazor_Grids_GridSearchSettings_Fields)  property. This allows you to narrow down the search to a targeted set of columns, which is particularly useful when dealing with large datasets or grids with numerous columns.
-
-The following example demonstrates how to search specific columns such as **CustomerID** and **ShipCountry** by using the searchSettings.fields property.
-
-```cshtml
-@using Syncfusion.Blazor.Grids
-
-@{
-    var Tool = (new List<string>() { "Search" });
-    var SpecificCols = (new string[] { "CustomerID","ShipCountry"});
-}
-<SfGrid DataSource="@Orders" Toolbar=@Tool>
-    <GridSearchSettings Fields=@SpecificCols></GridSearchSettings>
-            <GridColumns>
-                <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-                <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
-                <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
-                <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-                <GridColumn Field=@nameof(Order.ShipCountry) HeaderText="Ship Country" Width="120"></GridColumn>
-            </GridColumns>
-</SfGrid>
-
-@code{
-    public List<Order> Orders { get; set; }
-
-    protected override void OnInitialized()
-    {
-        Orders = Enumerable.Range(1, 75).Select(x => new Order()
-        {
-            OrderID = 1000 + x,
-            CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
-            Freight = 2.1 * x,
-            OrderDate = DateTime.Now.AddDays(-x),
-            ShipCountry = (new string[] { "USA", "UK", "CHINA", "RUSSIA", "INDIA" })[new Random().Next(5)]
-        }).ToList();
-    }
-
-    public class Order {
-        public int? OrderID { get; set; }
-        public string CustomerID { get; set; }
-        public DateTime? OrderDate { get; set; }
-        public double? Freight { get; set; }
-        public string ShipCountry { get; set; }
-    }
-}
-```
-
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rDhKZnBLhrqiRsez?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDLgZbBThxJDmjCd?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Search on each key stroke
 
@@ -272,7 +262,7 @@ By default, the datagrid will initiate searching operation after the Enter key i
 @using Syncfusion.Blazor.Inputs
 @using Syncfusion.Blazor.Navigations
 
-<SfGrid @ref="DefaultGrid" DataSource="@Orders" AllowSorting="true" AllowFiltering="true" AllowPaging="true">
+<SfGrid @ref="DefaultGrid" DataSource="@Orders" AllowSorting="true" AllowPaging="true">
     <SfToolbar>
         <ToolbarItems>
             <ToolbarItem Type="ItemType.Input" Align="Syncfusion.Blazor.Navigations.ItemAlign.Right">
@@ -286,12 +276,14 @@ By default, the datagrid will initiate searching operation after the Enter key i
     <GridColumns>
         <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" IsPrimaryKey="true" TextAlign="@TextAlign.Center" Width="140"></GridColumn>
         <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.Verified) HeaderText="Freight" Width="150"></GridColumn>
-    </GridColumns>
+        <GridColumn Field=@nameof(Order.EmployeeID) HeaderText="Employee ID" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(Order.ShipCity) HeaderText="Ship City" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(Order.ShipCountry) HeaderText="Ship Country" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(Order.ShipName) HeaderText="Ship Name" Width="150"></GridColumn>   
+   </GridColumns>
 </SfGrid>
 
-@code{
+@code {
     private SfGrid<Order> DefaultGrid;
 
     public List<Order> Orders { get; set; }
@@ -305,24 +297,28 @@ By default, the datagrid will initiate searching operation after the Enter key i
     {
         public int OrderID { get; set; }
         public string CustomerID { get; set; }
-        public bool Verified { get; set; }
-        public double? Freight { get; set; }
+        public string EmployeeID { get; set; }
+        public string ShipCity { get; set; }
+        public string ShipCountry { get; set; }
+        public string ShipName { get; set; }
     }
 
     protected override void OnInitialized()
     {
         Orders = Enumerable.Range(1, 75).Select(x => new Order()
-        {
-            OrderID = 1000 + x,
-            CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
-            Verified = (new bool[] { true, false })[new Random().Next(2)],
-            Freight = 2.1 * x,
-        }).ToList();
+            {
+                OrderID = 1000 + x,
+                CustomerID = (new string[] { "VINET", "TOMSP", "HANAR", "VICTE", "SUPRD" })[new Random().Next(5)],
+                EmployeeID = (new string[] { "5", "6", "3", "4", "1" })[new Random().Next(5)],       
+                ShipCity = (new string[] { "Reims", "Münster", "Rio de Janeiro", "Lyon", "Charleroi" })[new Random().Next(5)],
+                ShipCountry = (new string[] { "France", "Germany", "Brazil", "Belgium", "Switzerland" })[new Random().Next(5)],
+                ShipName = (new string[] { "Vins et alcools Chevali", "Toms Spezialitäten", "Hanari Carnes", "Victuailles en stock", "Suprêmes délices" })[new Random().Next(5)],
+            }).ToList();
     }
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/htBUjFXapgvgSozQ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BDrgXFLzhbsDRpHF?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 
 ## Perform search operation in Grid using multiple keywords
@@ -465,26 +461,22 @@ To clear the searched grid records from an external button, you can set the [Sea
 The following example demonstrates how to clear the searched records using an external button.
 
 ```cshtml
-@page "/counter"
-
 @using Syncfusion.Blazor.Buttons
 @using Syncfusion.Blazor.Grids
 
-@{
-    var Tool = (new List<string>() { "Search" });
-}
 <SfButton Content="ClearSearch" OnClick="clearSearchBtnHandler"></SfButton>
 <SfGrid @ref="DefaultGrid" DataSource="@Orders" AllowSorting="true" Toolbar=@Tool>
     <GridColumns>
         <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" TextAlign="TextAlign.Right" Width="130" Type="ColumnType.Date"></GridColumn>
-        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer ID" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.ShipCity) HeaderText="Ship City" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.ShipName) HeaderText="Ship Name" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
 
 @code {
     private SfGrid<Order> DefaultGrid;
+    public List<string> Tool = new List<string>() { "Search" };
 
     public List<Order> Orders { get; set; }
 
@@ -493,9 +485,9 @@ The following example demonstrates how to clear the searched records using an ex
         Orders = Enumerable.Range(1, 75).Select(x => new Order()
             {
                 OrderID = 1000 + x,
-                CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
-                Freight = 2.1 * x,
-                OrderDate = DateTime.Now.AddDays(-x),
+                CustomerID = (new string[] { "VINET", "TOMSP", "HANAR", "VICTE", "SUPRD" })[new Random().Next(5)],
+                ShipCity = (new string[] { "Reims", "Münster", "Rio de Janeiro", "Lyon", "Charleroi" })[new Random().Next(5)],
+                ShipName = (new string[] { "Vins et alcools Chevali", "Toms Spezialitäten", "Hanari Carnes", "Victuailles en stock", "Suprêmes délices" })[new Random().Next(5)],
             }).ToList();
     }
 
@@ -503,8 +495,8 @@ The following example demonstrates how to clear the searched records using an ex
     {
         public int? OrderID { get; set; }
         public string CustomerID { get; set; }
-        public DateTime? OrderDate { get; set; }
-        public double? Freight { get; set; }
+        public string ShipCity { get; set; }
+        public string ShipName { get; set; }
     }
 
     public void clearSearchBtnHandler()
@@ -514,6 +506,6 @@ The following example demonstrates how to clear the searched records using an ex
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VtrqNlZYgKQjOpNz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hXVqDFrpgzbtiXsl?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 > You can also clear the searched records by using the clear icon within the search input field.
