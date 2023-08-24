@@ -163,4 +163,4 @@ Logarithmic axis uses logarithmic scale and it is very useful in visualizing dat
 
 ## See Also
 
-* [Axis Customization](./axis-customization/)
+* [Axis Customization](./axis-customization)
