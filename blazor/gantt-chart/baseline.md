@@ -23,7 +23,7 @@ The baseline feature enables users to view the deviation between the planned dat
 
 @code{
     private DateTime ProjectStart = new DateTime(2022, 04, 01);
-    private DateTime ProjectEnd = new DateTime(2022, 04, 30);
+    private DateTime ProjectEnd = new DateTime(2022, 04, 30); 
     private List<TaskData> TaskCollection { get; set; }
     protected override void OnInitialized()
     {
