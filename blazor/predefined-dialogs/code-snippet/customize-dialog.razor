@@ -11,7 +11,7 @@
         </span>
     </div>
 @code {
-    private string inputValue { get; set; }
+    private string InputValue { get; set; }
 
     private string DialogStatus { get; set; }
 
@@ -26,12 +26,12 @@
                                             <label>Enter your name: </label>
                                         </td>
                                         <td>
-                                            <SfTextBox Type="InputType.Text" @bind-Value="inputValue"></SfTextBox>
+                                            <SfTextBox Type="InputType.Text" @bind-Value="InputValue"></SfTextBox>
                                         </td>
                                     </tr>
                                 </tbody>
                             </table>
         });
-        this.DialogStatus = $"The user's input is returned as \"{inputValue}\".";
+        this.DialogStatus = $"The user's input is returned as \"{InputValue}\".";
     }
 }
