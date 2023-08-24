@@ -58,7 +58,6 @@ When the feature `EnableAutoRowHeight` is enabled, the row height gets auto-adju
 ![Row Auto Height in Blazor Scheduler](images/blazor-scheduler-row-auto-height.png)
 
 ![Blazor Scheduler in Timeleine Month View](images/blazor-scheduler-timeline-month.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LDBqXwsDLeyPkRdr?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Timeline views with multiple resources
 
@@ -116,7 +115,6 @@ When the feature `EnableAutoRowHeight` is enabled, the row height gets auto-adju
 ```
 
 ![Timeline Views with Multiple Resources in Blazor Scheduler](images/blazor-scheduler-timeline-resource.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LthgDGijrHBuRBKT?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Appointments occupying entire cell
 
@@ -179,6 +177,5 @@ By default, with the feature `EnableAutoRowHeight`, there will be a space in the
 ```
 
 ![Ignoring Whitespace in Blazor Scheduler](images/blazor-scheduler-ignore-whitespace.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BNhgZwiNrxTeQWBZ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 N> The property `IgnoreWhitespace` will be applicable only when `EnableAutoRowHeight` feature is enabled in the Scheduler.

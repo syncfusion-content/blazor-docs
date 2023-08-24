@@ -208,7 +208,7 @@ Add your required files and folders under the `wwwroot\Files` directory.
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion Blazor FileManager component in your default web browser.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LNLqNRiaKhRsiyGL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Blazor FileManager Component](images/blazor-filemanager-component.png)
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/FileManager).
 
@@ -342,7 +342,7 @@ namespace filemanager.Server.Controllers
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LNLqNRiaKhRsiyGL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Blazor FileManager with Image Preview](images/blazor-filemanager-image-preview.png)
 
 Refer the sample [link](https://www.syncfusion.com/downloads/support/directtrac/general/ze/FileManager1055616812).
 

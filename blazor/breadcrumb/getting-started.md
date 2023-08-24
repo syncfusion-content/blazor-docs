@@ -37,7 +37,7 @@ N> Syncfusion Blazor components are available in [nuget.org](https://www.nuget.o
 
 ## Register Syncfusion Blazor Service
 
-Open **~/_Imports.razor** file and import the `Syncfusion.Blazor` namespace.
+Open **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Navigations` namespace.
 
 {% tabs %}
 {% highlight razor tabtitle="~/Imports.razor" %}
@@ -51,7 +51,7 @@ Open **~/_Imports.razor** file and import the `Syncfusion.Blazor` namespace.
 Now, register the Syncfusion Blazor Service in the **~/Program.cs** file of your Blazor Server App or Blazor WebAssembly App. 
 
 {% tabs %}
-{% highlight c# tabtitle="Blazor Server App" hl_lines="3 10" %}
+{% highlight C# tabtitle="Blazor Server App" hl_lines="3 10" %}
 
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Web;
@@ -68,7 +68,7 @@ var app = builder.Build();
 ....
 
 {% endhighlight %}
-{% highlight c# tabtitle="Blazor WebAssembly App" hl_lines="3 11" %}
+{% highlight C# tabtitle="Blazor WebAssembly App" hl_lines="3 11" %}
 
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
@@ -122,7 +122,6 @@ Add the Syncfusion Blazor Breadcrumb component in the **~/Pages/Index.razor** fi
 * Press F5 to run the application. Then, the Syncfusion Blazor Breadcrumb component will be rendered in the default web browser.
 
 ![Blazor Breadcrumb Component](./images/blazor-Breadcrumb-component.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LXrqZHCRqMCJrGIJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 N> The Breadcrumb component will render based on the current URL, when the Breadcrumb items are not specified.
 
@@ -149,7 +148,6 @@ To render Breadcrumb component with items use [BreadcrumbItem](https://help.sync
 N> Place list of [BreadcrumbItem](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.BreadcrumbItem.html) within [BreadcrumbItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.BreadcrumbItems.html) tag directive.
 
 ![Blazor Breadcrumb Component](./images/blazor-Breadcrumb-items.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/hZrgNHMHKCXorhEu?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Enable or disable navigation
 

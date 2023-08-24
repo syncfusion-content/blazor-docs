@@ -35,4 +35,3 @@ The following code demonstrates how to show dates of other months. Using the sty
 
 
 ![Displaying other Month Dates in Blazor Calendar](../images/blazor-calendar-other-month-dates.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LtVAjwKMUpOtPTvt?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
