@@ -129,9 +129,6 @@ Add the Syncfusion Blazor LinearGauge component in the **~/Pages/Index.razor** f
 {% endtabs %}
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion Blazor LinearGauge component in your default web browser.
-  
-<!-- ![Blazor LinearGauge Component](images/blazor-linear-gauge-component.png) -->
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BDVAXdieLcrHJHeW?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Set pointer value
 
