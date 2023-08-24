@@ -94,4 +94,3 @@ This section explains the list of events of the [Blazor Spinner component](https
 }
 
 ```
-N> You can also explore our [Blazor Spinner Example](https://blazor.syncfusion.com/demos/spinner/overview) that shows you how to render and configure the Spinner.

@@ -306,5 +306,3 @@ The following code explains how to dynamically add the `CssClass` property after
 ```
 
 ![Blazor Spinner with Custom Class](./images/blazor-spinner-with-custom-class.png)
-
-N> You can also explore our [Blazor Spinner Example](https://blazor.syncfusion.com/demos/spinner/overview) that shows you how to render and configure the Spinner.
