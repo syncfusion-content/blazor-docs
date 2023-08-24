@@ -157,7 +157,6 @@ N> In LinearGauge, you can configure multiple axes. On each axis, you can add a 
 {% endtabs %}
 
 ![Blazor LinearGauge with Pointer Value](images/blazor-linear-gauge-with-pointer.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/rNLgjHiIrcUVbgdC?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Add a title for Blazor LinearGauge
 
@@ -180,7 +179,6 @@ The title can be added to the linear gauge to provide a piece of quick informati
 {% endtabs %}
 
 ![Blazor LinearGauge with Title](images/blazor-linear-gauge-with-title.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/rthqZdMSLcpZgTgI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Add ranges in the Blazor LinearGauge
 
@@ -211,7 +209,6 @@ The range is used to specify a group of scale values in the gauge. You can set t
 {% endtabs %}
 
 ![Blazor LinearGauge with Range Bar](images/blazor-linear-gauge-with-ranges.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BtVKtxWyrwfwWKGp?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/LinearGauge).
 

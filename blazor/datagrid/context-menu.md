@@ -98,8 +98,8 @@ The following sample code demonstrates enabling context menu with its default it
 ```
 
 The following GIF represents the DataGrid enabled with default context menu items,
+
 ![Blazor DataGrid with Context Menu](images/blazor-datagrid-context-menu.gif)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VXhAZdBGiboLVdTC?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Custom context menu items
 
@@ -156,8 +156,8 @@ The following sample code demonstrates defining custom context menu item and its
 ```
 
 The following image represents the DataGrid enabled with custom context menu item,
+
 ![Blazor DataGrid with Custom Context Menu item](images/blazor-datagrid-custom-context-menu.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/rXBAZRVGCvlEmQrg?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Built-in and Custom context menu items
 
@@ -213,7 +213,6 @@ The following sample code demonstrates defining built-in and custom context menu
 }
 ```
 
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LNhKtxVGWkjwVmZp?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Sub context menu items in DataGrid
 
@@ -337,8 +336,6 @@ The following sample code demonstrates how to disable the context for specific c
 }
 ```
 
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BZBqjxBmskIKEkpT?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
-
 ## Disable context menu items dynamically in DataGrid
 
 You can enable or disable context menu items using the **Disabled** property. Here, you can enable and disable the **Edit** context menu items in [ContextMenuOpen](https://blazor.syncfusion.com/documentation/datagrid/events/#contextmenuopen) event of DataGrid. This event will be triggered before opening the ContextMenu. You can disable the context menu item by defining the corresponding context menu items **Disabled** property as **true**.
@@ -397,7 +394,5 @@ The following sample code demonstrates how to enable or disable context menu ite
     }
 }
 ```
-
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/hZrUDRhmikRCSLtH?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 N> You can refer to [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour page for its groundbreaking feature representations. You can also explore [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap4) to understand how to present and manipulate data.
