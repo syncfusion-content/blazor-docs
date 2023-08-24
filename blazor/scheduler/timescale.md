@@ -52,6 +52,47 @@ The `Interval` and `SlotCount` properties can be used together on the Scheduler 
 
 ![Time Slot Duration in Blazor Scheduler](images/blazor-scheduler-timeslot.png)
 
+## Setting different time slot duration for each view
+
+The `Interval` and `SlotCount` properties within the `ScheduleView` tag as child content of the `ScheduleViewTimeScale` to establish distinct time slot durations for various views, as demonstrated in the provided code snippet. In this illustration, the `Day` view encompasses six time slots per hour, while the `Week` and `WorkWeek` views comprise two time slots per hour.
+
+```cshtml
+@using Syncfusion.Blazor.Schedule
+
+<SfSchedule TValue="AppointmentData" Height="650px">
+    <ScheduleViews>
+        <ScheduleView Option="View.Day">
+            <ScheduleViewTimeScale Interval="10" SlotCount="1"></ScheduleViewTimeScale>
+        </ScheduleView>
+        <ScheduleView Option="View.Week">
+            <ScheduleViewTimeScale Interval="60" SlotCount="2"></ScheduleViewTimeScale>
+        </ScheduleView>
+        <ScheduleView Option="View.WorkWeek">
+            <ScheduleViewTimeScale Interval="60" SlotCount="2"></ScheduleViewTimeScale>
+        </ScheduleView>
+    </ScheduleViews>
+</SfSchedule>
+
+@code{
+    public class AppointmentData
+    {
+        public int Id { get; set; }
+        public string Subject { get; set; }
+        public string Location { get; set; }
+        public DateTime StartTime { get; set; }
+        public DateTime EndTime { get; set; }
+        public string Description { get; set; }
+        public bool IsAllDay { get; set; }
+        public string RecurrenceRule { get; set; }
+        public string RecurrenceException { get; set; }
+        public Nullable<int> RecurrenceID { get; set; }
+    }
+}
+```
+
+![Time Slot Duration for Day View in Blazor Scheduler](images/blazor-scheduler-timeslot-day-view.png)
+![Time Slot Duration for Week and WorkWeek View in Blazor Scheduler](images/blazor-scheduler-timeslot-week-view.png)
+
 ## Customizing time cells using template
 
 The template option is available to allow customization of time slots which are as follows,
