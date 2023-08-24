@@ -84,7 +84,6 @@ The following table shows built-in toolbar items and its actions.
 ```
 
 ![Blazor Gantt Chart with Default Toolbar](images/blazor-gantt-chart-default-toolbar.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VjBKtcsaUAtrRaaE?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 N> The `Toolbar` has options to define both built-in and custom toolbar items.
 
@@ -157,7 +156,6 @@ N> * The `Toolbar` has options to define both built-in and custom toolbar items.
 <br/> * If a toolbar item does not match the built-in items, it will be treated as a custom toolbar item.
 
 ![Alt text](images/customToolbar.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VDhKjGsuUAnUsYhw?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Built-in and custom items in toolbar
 
@@ -224,7 +222,6 @@ In the following example, the `ExpandAll` and `CollapseAll` are built-in toolbar
 ```
 
 ![Customizing Toolbar Items in Blazor Gantt Chart](images/blazor-gantt-chart-with-custom-toolbar.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VZhgNmCYApfQnkRL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Enable or disable toolbar items
 
@@ -302,6 +299,5 @@ You can enable or disable the toolbar items by using the `EnableItems` method.
 ```
 
 ![Enabling Toolbar Items in Blazor Gantt Chart](images/blazor-gantt-chart-enable-toolbar.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/hZBKZcCOqyMMkSiG?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 N> You can refer to our [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Gantt Chart example](https://blazor.syncfusion.com/demos/gantt-chart/default-functionalities?theme=bootstrap4) to know how to render and configure the Gantt.

@@ -86,8 +86,6 @@ A task assigned to a resource is termed a resource task and is displayed as a ch
 }
 ```
 
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LjhgjQMvzyAZTxLH?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
-
 N> There is not support for Indent/Oudent in resource view Gantt Chart.
 
 ## Resource OverAllocation
@@ -165,8 +163,6 @@ To highlight the range of overallocation dates with a square bracket, you can en
 }
 
 ```
-
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/rXVqNQsPpofLwCPA?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Enable taskbar drag and drop between resources
 
@@ -270,8 +266,6 @@ This allows you to effortlessly move the taskbar vertically, allowing for the sm
 }
 
 ```
-
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LjBKDvWFArPYJpHn?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %} -->
 
 ## Limitations
 

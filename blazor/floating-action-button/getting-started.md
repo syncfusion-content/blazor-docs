@@ -130,7 +130,6 @@ Add the Syncfusion Blazor Floating Action Button component in the **~/Pages/Inde
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion Blazor Floating Action Button component in your default web browser.
   
 ![Blazor Floating Action Button Component](./images/blazor-fab-component.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VXLUXxMIgKNiBbES?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Event Click In Blazor Floating Action Button
 
@@ -154,6 +153,5 @@ The floating action button control triggers the [OnClick](https://help.syncfusio
 {% endtabs %}
 
 ![Blazor Floating Action Button Component](./images/blazor-fab-event-click-sample.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LjrKXHWogKZuWLyn?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 N> You can also explore our [Blazor Floating Action Button example](https://blazor.syncfusion.com/demos/fab/overview) that shows how to render and configure the button.
