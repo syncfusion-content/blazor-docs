@@ -41,13 +41,12 @@ N> Syncfusion Blazor components are available in [nuget.org](https://www.nuget.o
 
 ## Register Syncfusion Blazor Service
 
-Open **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Navigations` namespace.
+Open **~/_Imports.razor** file and import the `Syncfusion.Blazor` namespace.
 
 {% tabs %}
 {% highlight razor tabtitle="~/_Imports.razor" %}
 
 @using Syncfusion.Blazor
-@using Syncfusion.Blazor.Navigations
 
 {% endhighlight %}
 {% endtabs %}
@@ -91,56 +90,28 @@ await builder.Build().RunAsync();
 {% endhighlight %}
 {% endtabs %}
 
-## Add script reference
+## Add stylesheet and script resources
 
-Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/documentation/common/adding-script-references) to learn different ways to add script reference in Blazor Application. In this getting started walk-through, the required scripts are referred using [Static Web Assets](https://blazor.syncfusion.com/documentation/common/adding-script-references#static-web-assets) externally inside the `<head>` as follows. Refer to [Enable static web assets usage](https://blazor.syncfusion.com/documentation/common/adding-script-references#enable-static-web-assets-usage) topic to use static assets in your project.
+The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Reference the stylesheet and script in the `<head>` of the main page as follows: 
 
-### Blazor Server App
+* For **.NET 6** Blazor Server app, include it in **~/Pages/_Layout.cshtml** file.
 
-* For **.NET 6** app, refer script in the `<head>` of the **~/Pages/_Layout.cshtml** file.
+* For **.NET 7** Blazor Server app, include it in the **~/Pages/_Host.cshtml** file.
 
-* For **.NET 7** app, refer script in the `<head>` of the **~/Pages/_Host.cshtml** file.
+* For Blazor WebAssembly app, include it in the **~/index.html** file.
 
-{% tabs %}
-{% highlight cshtml tabtitle=".NET 6 (~/_Layout.cshtml)" hl_lines="4" %}
-
+```html
 <head>
     ....
+    <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
     <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
 </head>
-
-{% endhighlight %}
-
-{% highlight cshtml tabtitle=".NET 7 (~/_Host.cshtml)" hl_lines="4" %}
-
-<head>
-    ....
-    <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
-</head>
-
-{% endhighlight %}
-{% endtabs %}
-
-### Blazor WebAssembly App
-
-For Blazor WebAssembly App, refer script in the `<head>` of the **~/index.html** file.
-
-{% tabs %}
-{% highlight html tabtitle="~/index.html" hl_lines="4" %}
-
-<head>
-    ....
-    <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
-</head>
-
-{% endhighlight %}
-{% endtabs %}
-
-> Syncfusion recommends to reference scripts using [Static Web Assets](https://blazor.syncfusion.com/documentation/common/adding-script-references#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/common/adding-script-references#cdn-reference) and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator) by [disabling JavaScript isolation](https://blazor.syncfusion.com/documentation/common/adding-script-references#disable-javascript-isolation) for better loading performance of the Blazor application.
+```
+N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic to discover various methods ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference), and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)) for referencing themes in your Blazor application. Also, check out the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic to learn different approaches for adding script references in your Blazor application.
 
 ## Add Syncfusion Blazor Media Query component
 
-* Now, add the Syncfusion Blazor Media Query component in razor file. Here, the Media Query component is added in the **~/Pages/Index.razor** page under the `~/Pages` folder.
+Add the Syncfusion Blazor Media Query component in the **~/Pages/Index.razor** file.
 
 {% tabs %}
 {% highlight razor %}
@@ -368,7 +339,7 @@ else
 {% endhighlight %}
 {% endtabs %}
 
-* Press <kbd>ctrl</kbd>+<kbd>F5</kbd> or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to run the application. The Syncfusion Blazor Media Query component will then render the layout based on browser view size, as shown in the large device layout below.
+* Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion Blazor Media Query component in your default web browser.
 
 ![Blazor Media Query Component](images/blazor-media-query.png)
 <!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VDVKjdCyBrnthmlV?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
