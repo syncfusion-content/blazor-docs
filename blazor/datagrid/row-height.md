@@ -54,7 +54,6 @@ In the below example, the `RowHeight` is set as '60'.
 ```
 
 ![Customizing Row Height in Blazor DataGrid](./images/blazor-datagrid-row-height-customization.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LXVKDRBiLXAMkDsE?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Customize row height for particular row
 
@@ -118,6 +117,5 @@ In the below example, the row height for the row with OrderID as '1003' is set a
 ```
 
 ![Customizing Specific Row Height in Blazor DataGrid](./images/blazor-datagrid-specific-row-height-customization.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LjrKtdhshtqkCytp?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 N> You can refer to our [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap4) to understand how to present and manipulate data.
