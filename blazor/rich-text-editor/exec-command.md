@@ -270,7 +270,6 @@ The following code block demonstrates the usage of the `ExecuteCommand` in Rich 
 {% endtabs %}
 
 ![Blazor RichTextEditor execute command](./images/blazor-richtexteditor-execute-command.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/rXhqZQMUBbIxfJvq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Markdown editor commands  
 
@@ -410,6 +409,5 @@ await this.RteObj.ExecuteCommandAsync(CommandName.InsertImage, new ImageCommands
 {% endtabs %}
 
 ![Execute Command in Markdown Blazor RichTextEditor](./images/blazor-richtexteditor-execute-command-markdown.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/hZLKDciALbbXUjcC?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 N> You can refer to our [Blazor Rich Text Editor](https://www.syncfusion.com/blazor-components/blazor-wysiwyg-rich-text-editor) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Rich Text Editor](https://blazor.syncfusion.com/demos/rich-text-editor/overview?theme=bootstrap4) example to knows how to render and configure the rich text editor tools.

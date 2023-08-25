@@ -9,7 +9,7 @@ documentation: ug
 
 # Taskbar editing in Blazor Gantt Chart Component
 
-Modify the task details through user interaction, such as resizing and dragging the taskbar, by enabling the `GanttEditSettings.AllowTaskbarEditing` property.
+Modify the task details through user interaction, such as resizing and dragging the taskbar, by enabling the [GanttEditSettings.AllowTaskbarEditing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEditSettings.html#Syncfusion_Blazor_Gantt_GanttEditSettings_AllowTaskbarEditing) property. When you begin taskbar editing by clicking on a taskbar, a virtual taskbar appears over it. This virtual taskbar serves as a reference, helping you remember the original position of the task on the timeline before making any changes. With the virtual taskbar as a reference, you can make adjustments to the task, such as changing the duration by resizing the taskbar and dragging the taskbar to the desired position on the timeline to adjust the task's start and end dates.
 
 ```cshtml
 @using Syncfusion.Blazor.Gantt
@@ -53,8 +53,6 @@ Modify the task details through user interaction, such as resizing and dragging 
     }
 }
 ```
-
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BZhgXQMvLDZKeHsM?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Creating taskbar on draw action
 
@@ -105,4 +103,3 @@ A taskbar can be drawn only when [AllowUnscheduledTasks](https://help.syncfusion
 }
 ```
 ![Taskbar draw in Blazor Gantt Chart](./images/taskbar_draw.gif)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BZBAZmWFBZsBOvyC?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->

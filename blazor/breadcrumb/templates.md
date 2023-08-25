@@ -49,7 +49,6 @@ In the following example, shopping cart details are used as Breadcrumb items and
 ```
 
 ![Blazor Breadcrumb Component](./images/blazor-Breadcrumb-item-template.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VZLAjGVPfjJBubLi?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Separator template
 
@@ -81,7 +80,6 @@ In the following example, the separators are customized with icons using [Separa
 ```
 
 ![Blazor Breadcrumb Component](./images/blazor-breadcrumb-separator-temp.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BNrgXmLlJtvlIlDw?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Customize Specific Item Template
 
@@ -150,4 +148,3 @@ The specific breadcrumb item can be customizable by adding the custom element as
 ```
 
 ![Blazor Breadcrumb Component](./images/breadcrumb-specific-item-template.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VXVqZwVPpDumMACD?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
