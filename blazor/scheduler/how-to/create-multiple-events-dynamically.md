@@ -82,5 +82,3 @@ In Blazor Scheduler, we can select the different time slots (10:00 - 10:30, 8:00
     }
 }
 ```
-
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VjhgDQCsqCizEQDB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->

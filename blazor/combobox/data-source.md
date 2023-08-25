@@ -9,9 +9,9 @@ documentation: ug
 
 # Data Source in Blazor ComboBox Component
 
-The ComboBox loads the data either from local data sources or remote data services using the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_DataSource) property. It supports the data type of `array` or [DataManager](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.DataManager.html).
+The ComboBox loads the data either from local data sources or remote data services using the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_DataSource) property. It supports the data type of `array` or [DataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html).
 
-The ComboBox also supports different kinds of data services such as OData, OData V4, and Web API, and data formats such as XML, JSON, and JSONP with the help of [DataManager](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.DataManager.html) adaptors.
+The ComboBox also supports different kinds of data services such as OData, OData V4, and Web API, and data formats such as XML, JSON, and JSONP with the help of [DataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html) adaptors.
 
 | Fields | Type | Description |
 |------|------|-------------|
@@ -193,7 +193,7 @@ Use the `WebApiAdaptor` to bind ComboBox with Web API created using OData.
 
 ### Custom adaptor
 
-The [SfDataManager](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Data.SfDataManager.html) has custom adaptor support which allows you to perform manual operations on the data. This can be utilized for implementing custom data binding and editing operations in the ComboBox component.
+The [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html) has custom adaptor support which allows you to perform manual operations on the data. This can be utilized for implementing custom data binding and editing operations in the ComboBox component.
 
 For implementing custom data binding in ComboBox, the `DataAdaptor` class is used. This abstract class acts as a base class for the custom adaptor.
 
@@ -275,7 +275,7 @@ The following sample code demonstrates implementing custom data binding using cu
 
 ### Offline mode
 
-To avoid post back for every action, set the ComboBox to load all data on initialization and make the actions process in client-side. To enable this behavior, use the `Offline` property of [DataManager](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.DataManager.html).
+To avoid post back for every action, set the ComboBox to load all data on initialization and make the actions process in client-side. To enable this behavior, use the `Offline` property of [DataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html).
 
 The following example for remote data binding and enabled offline mode,
 

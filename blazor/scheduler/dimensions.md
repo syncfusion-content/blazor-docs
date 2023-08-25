@@ -48,8 +48,6 @@ When height and width of the Scheduler are set to `auto`, it will try hard to ke
 }
 ```
 
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BXrKXwMNpVELYDcJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
-
 ## Height and Width in pixel
 
 The Scheduler height and width will be rendered exactly as per the given pixel values. It accepts both string and number values.
@@ -115,8 +113,6 @@ When height and width of the Scheduler are given as percentage, it will make the
     }
 }
 ```
-
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VjLqZGiXfKLpXWrP?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## How to set the full height of the view port
 

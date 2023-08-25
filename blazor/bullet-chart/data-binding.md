@@ -43,4 +43,3 @@ The [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.
 ```
 
 ![Data Binding in Blazor Bullet Chart](images/blazor-bullet-chart-data-binding.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VNBqNmLcVDkRgqdV?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
