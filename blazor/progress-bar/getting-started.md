@@ -275,7 +275,7 @@ N> Syncfusion recommends to reference scripts using [Static Web Assets](https://
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to run the application. Then, the Syncfusion `Blazor ProgressBar` component will be rendered in the default web browser.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rXBgNdMJqYoJAMtS?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Blazor Linear ProgressBar](images/blazor-linear-progressbar.png)
 
 ## Circular Progress Bar Type
 
@@ -290,7 +290,7 @@ Change the type of the ProgressBar by using the [Type](https://help.syncfusion.c
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LDrgNniTKEHZqOWl?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Blazor Circular ProgressBar](images/blazor-circular-progressbar.png)
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/ProgressBar).
 

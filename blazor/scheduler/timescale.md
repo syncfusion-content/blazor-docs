@@ -15,6 +15,8 @@ The time slots are usually the time cells that are displayed on the Day, Week an
 * `Interval` – Defines the time duration on which the time axis to be displayed either in 1 hour or 30 minutes interval and so on. It accepts the values in minutes and defaults to 60.
 * `SlotCount` – Decides the number of slot count to be split for the specified time interval duration. It defaults to 2, thus displaying two slots to represent an hour(each slot depicting 30 minutes duration).
 
+>Note: The upper limit for rendering slots within a single day, utilizing the **Interval** and **SlotCount** properties of the **ScheduleTimeScale**, stands at 1000. This constraint aligns with the maximum **colspan** value permissible for the **table** element, also capped at 1000. This particular restriction is relevant exclusively to the `TimelineDay`, `TimelineWeek` and `TimelineWorkWeek` views.
+
 ## Setting different time slot duration
 
 The `Interval` and `SlotCount` properties can be used together on the Scheduler to set different time slot duration which is depicted in the following code example. Here, six time slots together represents an hour.
@@ -48,7 +50,7 @@ The `Interval` and `SlotCount` properties can be used together on the Scheduler 
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LXLANGMtrEFQcucf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Time Slot Duration in Blazor Scheduler](images/blazor-scheduler-timeslot.png)
 
 ## Customizing time cells using template
 
@@ -102,7 +104,7 @@ The template option is available to allow customization of time slots which are 
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hNrgZciDqjLDnOMK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Customizing Time Cells in Blazor Scheduler](images/blazor-scheduler-custom-timecell.png)
 
 ## Hide the timescale
 
@@ -136,7 +138,7 @@ The grid lines which indicates the exact time duration can be enabled or disable
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BDLUZGWjqjaBQYOb?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Hide Time Scale in Blazor Scheduler](images/blazor-scheduler-hide-timecell.png)
 
 ## Highlighting current date and time
 
@@ -169,4 +171,4 @@ By default, Scheduler indicates current date with a highlighted date header on a
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BNBgNGWjAMCIBUXr?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Highlight current Time in Blazor Scheduler](images/blazor-scheduler-highlight.png)
