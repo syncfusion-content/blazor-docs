@@ -126,8 +126,6 @@ Add the Syncfusion Blazor Card component in the **~/Pages/Index.razor** file.
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion Blazor Card component in your default web browser.
 
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/hZLKNxMnroCnOjGD?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
-
 ## Add header and content
 
 You can add the header by using [CardHeader](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Cards.CardHeader.html) tag and add [Title](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Cards.CardHeader.html#Syncfusion_Blazor_Cards_CardHeader_Title) and [SubTitle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Cards.CardHeader.html#Syncfusion_Blazor_Cards_CardHeader_SubTitle) in that tag. You can also add the content by using [CardContent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Cards.CardContent.html) tag.
@@ -150,6 +148,5 @@ You can add the header by using [CardHeader](https://help.syncfusion.com/cr/blaz
 {% endtabs %}
 
 ![Blazor Card Component](images/blazor-card-component.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/hXVUZRMnLoKlvGdQ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 N> You can also explore our [Blazor Card example](https://blazor.syncfusion.com/demos/card/basic-card?theme=fluent) that shows you how to render and configure the Card.
