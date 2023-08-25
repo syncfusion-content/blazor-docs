@@ -50,7 +50,6 @@ The Rich Text Editor saves its content automatically when you focus out the edit
 {% endhighlight %}
 {% endtabs %}
 
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LXhqtQCrWOwQExFC?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Get editor content
 
@@ -65,7 +64,5 @@ When the user changes the content, the `ValueChange` event is invoked on every [
 
 {% endhighlight %}
 {% endtabs %}
-
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BZhgNcCLBZLvozFf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 N> You can refer to our [Blazor Rich Text Editor](https://www.syncfusion.com/blazor-components/blazor-wysiwyg-rich-text-editor) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Rich Text Editor](https://blazor.syncfusion.com/demos/rich-text-editor/overview?theme=bootstrap4) example to know how to render and configure the rich text editor tools.

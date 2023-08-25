@@ -87,8 +87,6 @@ The following example depicts how to create a recurring event on Scheduler with 
 }
 ```
 
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/rtLqtmjRrqwCGcBo?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
-
 ## Adding exceptions
 
 A few instance of the recurrence series can be excluded on specific dates, by adding those exceptional dates to the `RecurrenceException` field. These date values should be given in the ISO date time format with no hyphens(-) separating the date elements.
@@ -129,8 +127,6 @@ For example, 7th January 2020 can be represented as 20200107. Also, the time par
     }
 }
 ```
-
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/hXLqZQNRLKuSkuEw?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Editing an occurrence from a series
 
@@ -173,8 +169,6 @@ In this example, a recurring instance that displays on the date 30th January 202
     }
 }
 ```
-
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BtVqXQtRrJIcZtFR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Edit/Delete following recurrence events
 
@@ -219,7 +213,6 @@ N>To edit/delete following recurrence events into the scheduler, set `AllowEditF
 ```
 
 ![Editing Events in Blazor Scheduler](images/blazor-scheduler-editing-events.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VXhqDcZHBmgIqGFT?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Daily Frequency
 
