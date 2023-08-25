@@ -104,7 +104,7 @@ To access the aggregate values inside the **FooterTemplate**, you can use the im
 The following image represents the FooterTemplate with aggregates
 ![Blazor DataGrid displays Footer with Aggregates](./images/blazor-datagrid-footer-aggregate.png)
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BDhANxBRMecokdgM?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Blazor DataGrid displays Footer with Aggregates](./images/blazor-datagrid-footer-aggregate.png)
 
 N> The aggregate values must be accessed inside the template using their corresponding [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridAggregateColumn.html#Syncfusion_Blazor_Grids_GridAggregateColumn_Type) name.
 
@@ -180,8 +180,6 @@ To access the aggregate values inside the **FooterTemplate**, you can use the im
     }
 }
 ```
-
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/hXVADxVnCdfikQac?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Group and caption aggregate
 
@@ -266,8 +264,9 @@ To access the aggregate values inside the **GroupFooterTemplate** and **GroupCap
 ```
 
 The following image represents the Group and Caption template with aggregates.
+
 ![Blazor DataGrid displays Caption with Aggregates](./images/blazor-datagrid-caption-aggregate.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BDBKtRLnWczkvWSd?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
+
 
 N> The aggregate values must be accessed inside the template using their corresponding [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridAggregateColumn.html#Syncfusion_Blazor_Grids_GridAggregateColumn_Type) name.
 
@@ -334,8 +333,6 @@ To use Custom aggregate, specify the **AggregateType** as **Custom** in **GridAg
     }
 }
 ```
-
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VDBKjdhnWQHwbucf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 N> You can refer to the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour page for its groundbreaking feature representations. You can also explore [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap4) to understand how to present and manipulate data.
 
@@ -426,7 +423,6 @@ N> Adding a new record to the grouped DataGrid will not refresh the group summar
 ```
 
 ![Reactive Aggregate in Blazor DataGrid](./images/blazor-datagrid-reactive-aggregate.gif)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VjhqjnLdMmPzOYOi?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## See also
 
