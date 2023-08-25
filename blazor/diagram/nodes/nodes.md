@@ -32,6 +32,7 @@ To create a node, define the [Node](https://help.syncfusion.com/cr/blazor/Syncfu
 
 @code
 {
+    //Define diagram's nodes collection
     DiagramObjectCollection<Node> nodes;
 
     protected override void OnInitialized()
@@ -39,21 +40,17 @@ To create a node, define the [Node](https://help.syncfusion.com/cr/blazor/Syncfu
         nodes = new DiagramObjectCollection<Node>();
         // A node is created and stored in the nodes collection.
         Node node = new Node()
-        {
-            ID = "node1",
-            // Position of the node.
-            OffsetX = 250,
-            OffsetY = 250,
-            // Size of the node.
-            Width = 100,
-            Height = 100,
-            Style = new ShapeStyle() 
-            { 
-                Fill = "#6495ED", 
-                StrokeColor = "white" 
-            }
-        };
-        // Add node.
+            {
+                ID = "node1",
+                // Position of the node
+                OffsetX = 250,
+                OffsetY = 250,
+                // Size of the node
+                Width = 100,
+                Height = 100,
+                Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "white" }
+            };
+        // Add node
         nodes.Add(node);
     }
 }
@@ -204,7 +201,7 @@ For more information about drawing node, refer to the `Draw Nodes`.
 
 ## How to create node through datasource
 
-Nodes can be generated automatically with the information provided through data source. The default properties for these nodes are fetched from default settings. For more information about datasource, refer to the [DataSource](../layout/hierarchical-layout).
+Nodes can be generated automatically with the information provided through data source. The default properties for these nodes are fetched from default settings. For more information about datasource, refer to the [DataSource](../data-binding).
 
 ## How to remove nodes at runtime
 
@@ -222,7 +219,7 @@ The following code shows how to remove a node at runtime.
 
 @code
 {
-    //Defines diagram's connector collection
+    //Defines diagram's Node collection
     DiagramObjectCollection<Node> nodes;
 
     protected override void OnInitialized()
@@ -310,10 +307,8 @@ public void RemoveNodes()
     {
         Random random = new Random();
         const string chars = "ABCDEFGHIJKLMNOPQRSTUVWXTZabcdefghiklmnopqrstuvwxyz";
-#pragma warning disable CA5394 // Do not use insecure randomness
         return new string(Enumerable.Repeat(chars, 5)
           .Select(s => s[random.Next(s.Length)]).ToArray());
-#pragma warning restore CA5394 // Do not use insecure randomness
     }
 
 }

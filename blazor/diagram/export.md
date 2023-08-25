@@ -8,6 +8,9 @@ documentation: ug
 ---
 
 # Exporting in Blazor Diagram Component
+To save and export blazor diagram, refer to the below video link,
+
+{% youtube "youtube:https://www.youtube.com/watch?v=2hhl00gMObc" %}
 
 Diagram provides support to export the diagram as an image/svg files. The following methods helps to export the diagram in the desired formats.
 
