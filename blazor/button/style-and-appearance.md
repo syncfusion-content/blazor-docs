@@ -45,4 +45,3 @@ Use the following CSS to customize the background color of button while clicking
 ```
 
 ![Blazor Button with Style and Appearance](./images/blazor-button-style-and-appearance.gif)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LjBgtQrPfoTedmMw?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
