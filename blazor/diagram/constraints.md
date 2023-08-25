@@ -762,7 +762,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 Bitwise operations are used to manipulate the flagged enumerations `enum`. In this section, Bitwise operations are shown by using the node constraints. The same is applicable when working with node constraints, connector constraints, or port constraints.
 
-## Add operation
+### Add operation
 
 You can add or enable multiple values at a time by using the Bitwise `|` (OR) operator.
 
@@ -780,7 +780,7 @@ The following code shows how to add bridging constraints into the default diagra
 }
 ```
 
-## Remove operation
+### Remove operation
 
 You can remove or disable values by using the Bitwise ‘&~’ (XOR) operator.
 
@@ -799,7 +799,7 @@ The following code shows to remove zoom and pan constraints from the default con
 }
 ```
 
-## Check operation
+### Check operation
 
 You can check any value by using the Bitwise ‘&’ (AND) operator.
 
