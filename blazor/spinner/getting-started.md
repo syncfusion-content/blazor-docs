@@ -297,4 +297,4 @@ N> Syncfusion recommends to reference scripts using [Static Web Assets](https://
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/Spinner).
 
-N> You can also explore our [Blazor Spinner Example](https://blazor.syncfusion.com/demos/spinner/overview) that shows you how to render and configure the Spinner.
+N> You can also explore our [Blazor Spinner Example](https://blazor.syncfusion.com/demos/spinner/overview?theme=bootstrap5) that shows you how to render and configure the Spinner.
