@@ -19,6 +19,10 @@ Diagram allows you to customize the connector appearances. The following topics 
 
 * To create custom shape for source decorator, use [PathData](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DecoratorSettings.html#Syncfusion_Blazor_Diagram_DecoratorSettings_PathData) property. Similarly, to create custom shape for target decorator, use PathData property.
 
+To learn more about customization of connectors, refer to the below video link.
+
+{% youtube "youtube:https://www.youtube.com/watch?v=iKuBSy8mOpE&t=519s" %}
+
 * The following code example illustrates how to create decorators of various shapes.
 
 ```cshtml
@@ -217,7 +221,13 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## How to enable bridging
 
-Line bridging creates a bridge for lines to smartly cross over the other lines, at points of intersection. By default, [BridgeDirection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_BridgeDirection) is set to [Top](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Direction.html#Syncfusion_Blazor_Diagram_Direction_Top). Depending upon the direction given bridging direction appears. Bridging can be enabled/disabled either with the [Connector.Constraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ConnectorConstraints.html) or [Diagram.Constraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramConstraints.html). The following code example illustrates how to enable line bridging.
+Line bridging creates a bridge for lines to smartly cross over the other lines, at points of intersection. By default, [BridgeDirection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_BridgeDirection) is set to [Top](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Direction.html#Syncfusion_Blazor_Diagram_Direction_Top). Depending upon the direction given bridging direction appears. Bridging can be enabled/disabled either with the [Connector.Constraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ConnectorConstraints.html) or [Diagram.Constraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramConstraints.html). 
+
+To learn more about connector bridging, refer to the below video link,
+
+{% youtube "https://www.youtube.com/watch?v=iKuBSy8mOpE&t=732s" %}
+
+The following code example illustrates how to enable line bridging.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -584,6 +594,9 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 *The [HitPadding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Connector.html#Syncfusion_Blazor_Diagram_Connector_HitPadding) refers to the space around the connector's edges. To make it easy to select, selecting when the mouse comes near its vicinity area should be possible. The HitPadding property allows you to customize the vicinity area while selecting. The default value is 10px. Within the hit padding region, the connector can be selected and deselected.
 
+To learn more about connector HitPadding, refer to the below video link,
+
+{% youtube "https://www.youtube.com/watch?v=iKuBSy8mOpE&t=651s" %}
 
 The following code illustrates how to set the HitPadding for the connector.
 
