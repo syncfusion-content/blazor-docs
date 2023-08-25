@@ -441,7 +441,7 @@ The Blazor DataVizCommon is the base package for the svg elements used in the vi
 
 ### Syncfusion.Blazor.Diagram
 
-The Blazor Diagram is used for visualization, design, and editing of interactive diagrams such as flowcharts, BPMN diagrams, and mind maps. It has seamless interaction and editing capabilities.
+The Blazor Diagram component is a high-speed, robust library for crafting, editing, and interacting with dynamic diagrams. Unleash your creativity with flowcharts, org charts, mind maps, and more. Seamlessly edit and engage with intuitive interactions.
 
 <table>
 <tr>
