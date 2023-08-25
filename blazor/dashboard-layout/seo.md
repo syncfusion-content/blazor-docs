@@ -314,14 +314,6 @@ The Blazor DashboardLayout component is used for creating dynamic and responsive
         position: relative;
     }
 
-    .bootstrap5-dark .header {
-        background: #343a40;
-    }
-
-    .tailwind-dark .header {
-        background: #4b5563;
-    }
-
     .e-dashboardlayout.e-control .e-panel .e-panel-container .e-panel-header {
         padding: 10px;
         border-bottom: 2px solid #e6e9ed !important;
@@ -329,30 +321,9 @@ The Blazor DashboardLayout component is used for creating dynamic and responsive
         margin: 0 15px 0 15px;
     }
 
-    .bootstrap5 .e-dashboardlayout.e-control .e-panel .e-panel-container .e-panel-header {
-        padding: 5px 18px;
-        margin: 0px;
-    }
-
     #sidebar-section {
         padding: 0px !important;
         border: 1px solid rgba(0, 0, 0, 0.12);
-    }
-
-    .tailwind-dark .e-dashboardlayout.e-control .e-panel .e-panel-container .e-panel-header,
-    .tailwind .e-dashboardlayout.e-control .e-panel .e-panel-container .e-panel-header {
-        margin: 0px;
-    }
-
-    .bootstrap5-dark .e-dashboardlayout.e-control .e-panel .e-panel-container .e-panel-header {
-        padding: 5px;
-        border-bottom: 2px solid #444c54 !important;
-        height: 35px;
-        margin: 0px;
-    }
-
-    .tailwind-dark .e-dashboardlayout.e-control .e-panel .e-panel-container .e-panel-header {
-        border-bottom: 2px solid #4b5563 !important;
     }
 
     .e-bigger #search {
@@ -533,23 +504,10 @@ The Blazor DashboardLayout component is used for creating dynamic and responsive
         font-size: 13px;
         text-align: center;
     }
-    .sf-license-warning {
-        display: none
-    } 
     .card-content.text {
         font-size: 15px;
         text-align: right;
         color: #66696b;
-    }
-
-    .bootstrap5-dark .card-content.text {
-        font-size: 15px;
-        text-align: right;
-        color: #ced4da;
-    }
-
-    .tailwind-dark .card-content.text {
-        color: #e5e7eb;
     }
 
     .card {
@@ -577,14 +535,6 @@ The Blazor DashboardLayout component is used for creating dynamic and responsive
 
     #target {
         background: linear-gradient(-141deg, #eef5f7 14%, #eef2fb 100%);
-    }
-
-    .tailwind-dark #target,
-    .bootstrap5-dark #target,
-    .bootstrap-dark #target,
-    .fabric-dark #target,
-    .highcontrast #target {
-        background: inherit;
     }
 
     .markerTemplate {
@@ -627,9 +577,9 @@ The Blazor DashboardLayout component is used for creating dynamic and responsive
         position: absolute;
     }
 
-        .information span {
-            float: left;
-        }
+    .information span {
+        float: left;
+    }
 
     .text-content {
         font-size: 17px;
@@ -659,22 +609,6 @@ The Blazor DashboardLayout component is used for creating dynamic and responsive
     .dashboardParent {
         width: 100%;
     }
-    /* styles for highcontrast theme */
-    body.highcontrast #sidebar-section {
-        border: 1px solid #969696;
-    }
-
-    body.highcontrast .header {
-        border-bottom: 1px solid #969696;
-    }
-
-    body.highcontrast #dockSidebar .e-icons::before {
-        color: #fff;
-    }
-
-    body.highcontrast #dockSidebar li.sidebar-item.filterHover, body.highcontrast #dockSidebar {
-        background: #000;
-    }
 
     .mobile .e-control.e-lib.e-dashboardlayout.e-responsive {
         z-index: 999;
@@ -685,14 +619,6 @@ The Blazor DashboardLayout component is used for creating dynamic and responsive
         top: 32%;
         width: 30%;
         height: 30%;
-    }
-
-    .bootstrap-dark li.sidebar-item.filterHover,
-    .material-dark li.sidebar-item.filterHover,
-    .fabric-dark li.sidebar-item.filterHover,
-    .tailwind-dark li.sidebar-item.filterHover,
-    .bootstrap5-dark li.sidebar-item.filterHover {
-        background: inherit;
     }
 
     .mobile .e-dashboardlayout .card .e-icons::before {
