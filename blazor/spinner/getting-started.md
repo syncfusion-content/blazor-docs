@@ -118,6 +118,7 @@ Add the Syncfusion Blazor Spinner component with Syncfusion Blazor [Button](http
 {% tabs %}
 {% highlight cshtml %}
 
+@using Syncfusion.Blazor.Buttons
 <div>
     <SfButton @onclick="@ClickHandler">Show/Hide Spinner</SfButton>
     <div id="container">
