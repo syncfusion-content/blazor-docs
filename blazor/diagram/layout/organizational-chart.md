@@ -268,7 +268,6 @@ The following code illustrates how to arrange the nodes in a BottomToTop orienta
     LayoutOrientation orientation = LayoutOrientation.TopToBottom;
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Layout)
 
 ### Fixed node
 

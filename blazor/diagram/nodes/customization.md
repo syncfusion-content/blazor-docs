@@ -20,6 +20,7 @@ The following code shows how to customize the appearance of the shape.
 
 @code
 {
+    //Define diagram's nodes collection
     DiagramObjectCollection<Node> nodes;
 
     protected override void OnInitialized()
@@ -27,22 +28,17 @@ The following code shows how to customize the appearance of the shape.
         nodes = new DiagramObjectCollection<Node>();
         // A node is created and stored in nodes array.
         Node node = new Node()
-        {
-            // Position of the node.
-            OffsetX = 250,
-            OffsetY = 250,
-            // Size of the node.
-            Width = 100,
-            Height = 100,
-            // Add node.
-            Style = new ShapeStyle() 
-            { 
-                Fill = "Green", 
-                StrokeDashArray = "5,5", 
-                StrokeColor = "red", 
-                StrokeWidth = 2 
-            },
-        };
+            {
+                // Position of the node
+                OffsetX = 250,
+                OffsetY = 250,
+                // Size of the node
+                Width = 100,
+                Height = 100,
+                //Sets the style for the node
+                Style = new ShapeStyle() { Fill = "Green", StrokeDashArray = "5,5", StrokeColor = "red", StrokeWidth = 2 },
+            };
+        // Add node
         nodes.Add(node);
     }
 }
@@ -66,7 +62,9 @@ The following code shows how to customize the appearance of the shape.
 
 @code
 {
+    //Reference the diagram
     SfDiagramComponent diagram;
+    //Define diagram's nodes collection
     DiagramObjectCollection<Node> nodes;
 
     protected override void OnInitialized()
@@ -74,38 +72,30 @@ The following code shows how to customize the appearance of the shape.
         nodes = new DiagramObjectCollection<Node>();
         // A node is created and stored in nodes array.
         Node node1 = new Node()
-        {
-            // Position of the node.
-            OffsetX = 250,
-            OffsetY = 250,
-            // Shape of the Node.
-            Shape = new BasicShape() 
-            { 
-                Type = NodeShapes.Basic, 
-                Shape = NodeBasicShapes.Rectangle 
-            }
-        };
+            {
+                // Position of the node
+                OffsetX = 250,
+                OffsetY = 250,
+                // Shape of the Node
+                Shape = new BasicShape() { Type = NodeShapes.Basic, Shape = NodeBasicShapes.Rectangle }
+            };
         Node node2 = new Node()
-        {
-            // Position of the node.
-            OffsetX = 100,
-            OffsetY = 100,
-            // Shape of the Node.
-            Shape = new BasicShape() 
-            { 
-                Type = NodeShapes.Basic, 
-                Shape = NodeBasicShapes.Ellipse 
-            }
-        };
+            {
+                // Position of the node
+                OffsetX = 100,
+                OffsetY = 100,
+                // Shape of the Node
+                Shape = new BasicShape() { Type = NodeShapes.Basic, Shape = NodeBasicShapes.Ellipse }
+            };
         nodes.Add(node1);
         nodes.Add(node2);
     }
-
+    //Method to define nodecreating event
     private void NodeCreating(IDiagramObject obj)
     {
         Node node = obj as Node;
         node.Style = new ShapeStyle() { Fill = "#6495ED" };
-        // Size of the node.
+        // Size of the node
         node.Width = 100;
         node.Height = 100;
     }
@@ -324,6 +314,7 @@ Diagram provides support to add [Shadow](https://help.syncfusion.com/cr/blazor/S
 
 @code
 {
+    //Define diagram's nodes collection
     DiagramObjectCollection<Node> nodes;
 
     protected override void OnInitialized()
@@ -331,20 +322,23 @@ Diagram provides support to add [Shadow](https://help.syncfusion.com/cr/blazor/S
         nodes = new DiagramObjectCollection<Node>();
         // A node is created and stored in nodes array.
         Node node = new Node()
-        {
-            // Position of the node.
-            OffsetX = 250,
-            OffsetY = 250,
-            // Size of the node.
-            Width = 100,
-            Height = 100,
-            Style = new ShapeStyle() 
-            { 
-                Fill = "#6495ED", 
-                StrokeColor = "white" 
-            },
-            Constraints = NodeConstraints.Default | NodeConstraints.Shadow
-        };
+            {
+                // Position of the node
+                OffsetX = 250,
+                OffsetY = 250,
+                // Size of the node
+                Width = 100,
+                Height = 100,
+                Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "white" },
+                Constraints = NodeConstraints.Default | NodeConstraints.Shadow,
+                Shadow = new Shadow()
+                {
+                    Angle = 50,
+                    Color = "gray",
+                    Opacity = 0.8,
+                    Distance = 10
+                }
+            };
         nodes.Add(node);
     }
 }
@@ -697,16 +691,17 @@ The following code illustrates how to set the background color for the node.
         nodes = new DiagramObjectCollection<Node>();
         // A node is created and stored in nodes array.
         Node node = new Node()
-        {
-            ID = "node",
-            // Position of the node.
-            OffsetX = 250,
-            OffsetY = 250,
-            // Size of the node.
-            Width = 100,
-            Height = 100,
-             BackgroundColor = "red",
-        };
+            {
+                ID = "node",
+                // Position of the node.
+                OffsetX = 250,
+                OffsetY = 250,
+                // Size of the node.
+                Width = 100,
+                Height = 100,
+                BackgroundColor = "red",
+                Shape = new BasicShape(){Shape = NodeBasicShapes.Star}
+            };
         nodes.Add(node);
     }
 }
