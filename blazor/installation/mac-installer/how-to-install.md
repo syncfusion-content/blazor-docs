@@ -69,6 +69,13 @@ The steps below show how to install the Essential Studio Blazor Mac installer.
 
    ![Installation complete](images/install_location.PNG)
 
+## License key registration in samples
+
+After the installation, the license key is required to register the demo source that is included in the Mac installer. To learn about the steps for license registration for the Blazor Mac installer, please refer to this.
+
+* For server side application register the license key in Configure method of [Startup.cs](https://blazor.syncfusion.com/documentation/getting-started/license-key/how-to-register-in-an-application#blazor-server-app)
+* For client side application register the license key in main method of [Program.cs](https://blazor.syncfusion.com/documentation/getting-started/license-key/how-to-register-in-an-application#blazor-webassembly-app)
+
 You can also find the steps for getting started with Syncfusion Blazor components in Mac,
 
 * Getting started with Syncfusion Blazor Components in [Blazor Server Side App](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-mac/#getting-started-with-syncfusion-blazor-components-in-blazor-server-side-app-using-visual-studio-for-mac) using Visual Studio for Mac.

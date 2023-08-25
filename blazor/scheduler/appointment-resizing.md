@@ -56,8 +56,6 @@ By default, resizing of events is allowed on all Scheduler views except Agenda a
 }
 ```
 
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/hthAtwDRqIjmyBKt?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
-
 ## Disable scrolling on resize action
 
 By default, while resizing an appointment, when its handler reaches the extreme edges of the Scheduler, scrolling action will takes place along with event resizing. To prevent this scrolling action, set false to `Scroll` value within the [OnResizeStart](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleEvents-1.html#Syncfusion_Blazor_Schedule_ScheduleEvents_1_OnResizeStart) event.
@@ -148,8 +146,6 @@ The speed of the scrolling action while resizing an appointment to the Scheduler
 }
 ```
 
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BXLqNwDRKygMpWKZ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
-
 ## Setting resize time interval
 
 By default, while resizing an appointment, it extends or shrinks at an interval of 30 minutes. To change this default resize interval, set appropriate values to `Interval` option within the [OnResizeStart](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleEvents-1.html#Syncfusion_Blazor_Schedule_ScheduleEvents_1_OnResizeStart) event.
@@ -194,5 +190,3 @@ By default, while resizing an appointment, it extends or shrinks at an interval 
     }
 }
 ```
-
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LXVUjmNRAnKdUsub?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->

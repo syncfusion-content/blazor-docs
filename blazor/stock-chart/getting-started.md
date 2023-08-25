@@ -328,7 +328,6 @@ Now set the `StockDetails` to [DataSource](https://help.syncfusion.com/cr/blazor
 Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to run the application. Then, the Syncfusion `Blazor Stock Chart` component will be rendered in the default web browser.
 
 ![Blazor Stock Chart Component](images/blazor-stock-chart.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VZhgjHsKpUSXwmOe?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Adding Title
 
@@ -372,7 +371,6 @@ A title using [Title](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ch
 {% endtabs %}
 
 ![Blazor Stock Chart with Title](images/blazor-stock-chart-title.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VjVgNxWATzWoNFpq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Adding Crosshair
 
@@ -413,7 +411,6 @@ The crosshair is a vertical and horizontal line on the view that shows the value
 {% endtabs %}
 
 ![Blazor Stock Chart with Crosshair](images/blazor-stock-chart-with-crosshair.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VZhKtHCqfTVYnsqy?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Adding Trackball
 
@@ -457,7 +454,6 @@ The trackball is used to track a closest data point to the mouse or touch positi
 {% endtabs %}
 
 ![Blazor Stock Chart with Trackball](images/blazor-stock-chart-trackball.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LjVAXRsAfTesvqtC?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/StockChart).
 
