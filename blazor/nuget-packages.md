@@ -439,7 +439,7 @@ The Blazor DataVizCommon is the base package for the svg elements used in the vi
 </tr>
 </table>
 
-### Syncfusion.Blazor.Diagrams
+### Syncfusion.Blazor.Diagram
 
 The Blazor Diagram is used for visualization, design, and editing of interactive diagrams such as flowcharts, BPMN diagrams, and mind maps. It has seamless interaction and editing capabilities.
 
@@ -460,7 +460,7 @@ The Blazor Diagram is used for visualization, design, and editing of interactive
 </tr>
 <tr>
 <td>
-<a href="https://www.nuget.org/packages/Syncfusion.Blazor.Diagrams/">Syncfusion.Blazor.Diagrams</a>
+<a href="https://www.nuget.org/packages/Syncfusion.Blazor.Diagram/">Syncfusion.Blazor.Diagram</a>
 </td>
 <td>
 <ul>
@@ -471,9 +471,9 @@ The Blazor Diagram is used for visualization, design, and editing of interactive
 </td>
 <td>
 <ul>
-<li>SfDiagram</li>
-<li>SfOverview</li>
-<li>SfSymbolPalette</li>
+<li>SfDiagramComponent</li>
+<li>SfDiagramOverviewComponent </li>
+<li>SfSymbolPaletteComponent </li>
 </ul>
 </td>
 <td>

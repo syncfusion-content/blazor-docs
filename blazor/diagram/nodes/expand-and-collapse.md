@@ -180,8 +180,11 @@ The following code example illustrates how to create an icon of various shapes i
             Node node = obj as Node;
             if ((node.Data as HierarchicalDetails).Role == "General Manager")
             {
-                options.Assistants.Add(options.Children[0]);
-                options.Children.RemoveAt(0);
+                if (options.Children.Count > 0)
+                {
+                    options.Assistants.Add(options.Children[0]);
+                    options.Children.RemoveAt(0);
+                }
             }
             if (!options.HasSubTree)
             {
@@ -442,7 +445,7 @@ The following code explains how to change the appearance of the Icon using [Fill
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/ExpandAndCollapse/CornerRadius)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/ExpandAndCollapse/Appearance)
 
 ![Displaying DiagramIcon in Blazor Diagram layout](../images/blazor-diagram-DiagramIcon1.png)
 
@@ -538,7 +541,7 @@ The following code explains how to change the appearance of the Icon using [Corn
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/ExpandAndCollapse)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/ExpandAndCollapse/CornerRadius)
 
 ![Displaying DiagramIcon in Blazor Diagram layout](../images/blazor-diagram-ExpandCollapse-Shape-CornerRadius.png)
 
