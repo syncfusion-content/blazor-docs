@@ -455,7 +455,7 @@ The OData V4 is an improved version of OData protocols, and the [SfDataManager](
 
 ### Web API
 
-User can use [WebApiAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors?no-cache=1#web-api-adaptor) to bind the pivot table with Web API created using OData endpoint.
+User can use [WebApiAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors#web-api-adaptor) to bind the pivot table with Web API created using OData endpoint.
 
 ```cshtml
 @using Syncfusion.Blazor.PivotView
