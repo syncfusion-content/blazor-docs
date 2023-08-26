@@ -77,7 +77,7 @@ The Menu Bar component supports horizontal and vertical scrolling to render larg
 
 ## Hamburger Menu
 
-The following example demonstrates the use case of [HamburgerMenu](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Navigations.SfMenu~HamburgerMode.html) mode.
+The following example demonstrates the use case of [HamburgerMenu](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfMenu-1.html#Syncfusion_Blazor_Navigations_SfMenu_1_HamburgerMode) mode.
 
 ```cshtml
 
