@@ -280,7 +280,7 @@ N> Syncfusion recommends to reference scripts using [Static Web Assets](https://
 
 ## Set the mask
 
-You can set the mask to the MaskedTextBox to validate the user input by using the [Mask](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.MaskedTextBoxModel.html#Syncfusion_Blazor_Inputs_MaskedTextBoxModel_Mask) property.
+You can set the mask to the MaskedTextBox to validate the user input by using the [Mask](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfMaskedTextBox.html#Syncfusion_Blazor_Inputs_SfMaskedTextBox_Mask) property.
 
 The following example demonstrates the usage of mask element `0` that allows any single digit from `0` to `9`.
 
