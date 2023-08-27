@@ -145,7 +145,6 @@ Add the Syncfusion Blazor HeatMap Chart component in the **~/Pages/Index.razor**
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion Blazor HeatMap Chart component in your default web browser.
 
 ![Blazor HeatMap Chart](images/blazor-heatmap-chart.gif)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BNVgtxCeKCZXbPvT?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/HeatMapChart).
 

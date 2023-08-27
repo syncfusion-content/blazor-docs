@@ -42,7 +42,7 @@ N> Syncfusion Blazor components are available in [nuget.org](https://www.nuget.o
 
 ## Register Syncfusion Blazor Service
 
-Open **~/_Imports.razor** file and import the Syncfusion.Blazor and Syncfusion.Blazor.CircularGauge namespace.
+Open **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.CircularGauge` namespace.
 
 {% tabs %}
 {% highlight razor tabtitle="~/_Imports.razor" %}
@@ -134,7 +134,6 @@ Add the Syncfusion Blazor CircularGauge component in the **~/Pages/Index.razor**
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion Blazor CircularGauge component in your default web browser.
 
 ![Blazor CircularGauge Component](./images/blazor-circulargauge-component.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LZrUtdixCYAPUzcM?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Set pointer value
 
@@ -160,7 +159,6 @@ N> In CircularGauge, you can configure multiple axes. On each axis, you can add 
 {% endtabs %}
 
 ![Blazor CircularGauge with Pointer Value](./images/blazor-circulargauge-pointer-value.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/hNVADHiRskRtnDIR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Adding title for Blazor CircularGauge
 
@@ -185,7 +183,6 @@ Title can be added to the CircularGauge to provide a quick information to the us
 {% endtabs %}
 
 ![Blazor CircularGauge with Title](./images/blazor-circulargauge-title.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LXrUDHCHsYRnauCs?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Adding ranges in the Blazor CircularGauge
 
@@ -209,7 +206,6 @@ Range is used to specify a group of scale values in the gauge. You can set the r
 {% endtabs %}
 
 ![Blazor CircularGauge with Custom Range](./images/blazor-circulargauge-custom-range.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/hthKNHiRsuENkQQd?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/CircularGauge).
 

@@ -131,4 +131,3 @@ The following code example demonstrates the default column chooser items as grou
 ```
 
 ![Group column chooser items in Blazor DataGrid](../images/blazor-datagrid-group-items.gif)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/rNBUjdBmUzwqoomS?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->

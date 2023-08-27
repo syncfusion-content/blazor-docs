@@ -59,7 +59,6 @@ To enable sorting in the Gantt Chart component, set the [AllowSorting](https://h
 The following screenshot shows the output of multicolumn sorting in Gantt Chart component.
 
 ![MultiColumn Sorting in Blazor Gantt Chart](images/blazor-gantt-chart-multi-column-sorting.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/rjhKXGsPLfjLdFCB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 N> * Gantt Chart columns are sorted in the ascending order. If you click the already sorted column, the sort direction toggles.
 <br/> * To disable sorting for a particular column, set the `GanttColumn.AllowSorting` property to false.
@@ -118,8 +117,6 @@ The [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gan
 }
 ```
 
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/rjrgDcsFhJcsDFbR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
-
 ## Sorting column dynamically
 
 Columns in the Gantt Chart component can be sorted dynamically using the [SortByColumnAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_SortByColumnAsync_System_String_Syncfusion_Blazor_Grids_SortDirection_System_Nullable_System_Boolean__) method. The following code example demonstrates how to invoke the `SortByColumnAsync` method by clicking the custom button.
@@ -174,7 +171,6 @@ Columns in the Gantt Chart component can be sorted dynamically using the [SortBy
 ```
 
 ![Sorting in Blazor Gantt Chart](images/blazor-gantt-chart-sorting.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VZBKZGilLSXqrcyq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Clear all the sorted columns dynamically
 
@@ -236,7 +232,6 @@ In the Gantt Chart component, you can clear all the sorted columns and return to
 ```
 
 ![Clear Sorting in Blazor Gantt Chart](images/blazor-gantt-chart-clear-sorting.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/rZrgtwWPrnCeTlQb?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Sorting events
 
@@ -293,8 +288,6 @@ During the sort action, the Gantt Chart component triggers two events. The [OnAc
     }
 }
 ```
-
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/htrgjQsFBRLATSVN?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 N> The `args.RequestType` is the current action name. For example, for sorting the `args.RequestType`, value is **Sorting**.
 
@@ -360,5 +353,3 @@ The following code snippets explains how to achieve this.
     }
 }
 ```
-
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VDBAZGibrRgwCXOF?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
