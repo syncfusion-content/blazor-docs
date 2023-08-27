@@ -120,9 +120,8 @@ Add the Syncfusion Blazor Diagram component in the **~/Pages/Index.razor** file.
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion Blazor Diagram component in your default web browser.
 
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VXBANRCIpifcBxtS?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
-
 ## Basic Blazor Diagram elements
+
 * Node: Visualize any graphical object using nodes, which can be arranged and manipulated at the same time on a Blazor diagram page.
 * Connector: Represents the relationship between two nodes. Three types of connectors provided as follows:
  1) Orthogonal
@@ -263,7 +262,6 @@ Let us create and add a [Node](https://help.syncfusion.com/cr/blazor/Syncfusion.
 {% endtabs %}
 
 ![Blazor Diagram Component](images/blazor-diagram-component.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BDBKDniIzsxvMhIb?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/DiagramComponent).
 
@@ -344,10 +342,9 @@ A built-in automatic layout algorithm is specifically designed for organizationa
 {% endhighlight %}
 {% endtabs %}
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Layout)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Layout/OrganizationLayout2)
 
 ![Blazor Organization Diagram ChildNode in Vertical Right](images/blazor-diagram-childnode-at-vertical-right.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LNrgtdMSJMuWulHB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## See also
 

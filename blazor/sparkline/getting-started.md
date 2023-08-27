@@ -323,7 +323,6 @@ Now map the `Month` and the `Celsius` fields from the datasource to [XName](http
 Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to run the application. Then, the Syncfusion `Blazor Sparkline` component will be rendered in the default web browser.
 
 ![Blazor Sparkline Chart](./images/blazor-sparkline.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/rZrKNRMJBXtybSBE?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Sparkline chart types
 
@@ -346,7 +345,6 @@ Change the Sparkline type using the [Type](https://help.syncfusion.com/cr/blazor
 {% endtabs %}
 
 ![Blazor Sparkline Area Chart](./images/blazor-area-sparkline.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LtrUDHiTVjomitKE?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 N> Refer to [code block](#populate-sparkline-with-data) to know about the property value of **ClimateData**.
 
@@ -383,7 +381,6 @@ Available types are:
 N> Refer to the [code block](#populate-sparkline-with-data) to know about the property value of **ClimateData**.
 
 ![Blazor Sparkline Chart with Data Label](./images/blazor-sparkline-data-label.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VZLqjdiprXQcUSbK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Enable tooltip
 
@@ -410,7 +407,6 @@ When space constraints prevent from displaying information using Data Labels, th
 N> Refer to the [code block](#populate-sparkline-with-data) to know about the property value of the **ClimateData**.
 
 ![Blazor Sparkline Chart with Tooltip](./images/blazor-sparkline-tooltip.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LjrUtnMpBWjWYDiw?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/Sparkline).
 

@@ -71,7 +71,7 @@ To draw a [shape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagra
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/DrawingTools)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/DrawingTools/NodeDrawTool)
 
 ![Node Tool in Blazor Diagram](images/blazor-diagram-node-tool.gif)
 
@@ -445,6 +445,6 @@ The following code illustrates how to draw a freehand drawing.
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/DrawingTools).
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/DrawingTools/FreehandDrawTool).
 
 ![Freehand Drawing Tool in Blazor Diagram](images/blazor-diagram-freehand-drawing-tool.gif)
