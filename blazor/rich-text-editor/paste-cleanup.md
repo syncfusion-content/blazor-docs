@@ -43,7 +43,6 @@ N> When the `Prompt` value is set to true, the API properties [PlainText](#paste
 {% endtabs %}
 
 ![Blazor RichTextEditor with prompt](./images/blazor-richtexteditor-paste-prompt.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/hDLqZQiKMRYKtFyP?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Paste as plain text
 
@@ -60,7 +59,6 @@ N> When `PlainText` value is set true, the API property [Prompt](#prompt-dialog)
 {% endtabs %}
 
 ![Blazor RichTextEditor with plain text](./images/blazor-richtexteditor-paste-plain-text.gif)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/hDLgjGsKiQpONvcs?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Keep format
 
@@ -79,7 +77,6 @@ N> When the `KeepFormat` value is set to true, the API properties [Prompt](#prom
 {% endtabs %}
 
 ![Blazor RichTextEditor with keep format](./images/blazor-richtexteditor-paste-keep-format.gif)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/hNVUNcsKsGYmYqmp?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Denied tags
 
@@ -98,7 +95,6 @@ The [DeniedTags](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTe
 {% endtabs %}
 
 ![Blazor RichTextEditor with denied tags](./images/blazor-richtexteditor-paste-denied-tag.gif)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/rXVKZGCUsuyALGwF?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Denied attributes
 
@@ -113,7 +109,6 @@ The [DeniedAttributes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.R
 {% endtabs %}
 
 ![Blazor RichTextEditor with denied attribute](./images/blazor-richtexteditor-paste-denied-attribute.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/rNVgjGMUhjTIxlkn?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Allowed style properties
 
@@ -130,7 +125,6 @@ For Example, **public string[] AllowedStyles = new string[] { "color", "margin" 
 {% endtabs %}
 
 ![Blazor RichTextEditor with allowed styles](./images/blazor-richtexteditor-paste-allowed-style.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/rXVKNmCghtYZnVny?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Pasting large text content
 

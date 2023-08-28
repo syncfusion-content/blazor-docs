@@ -129,4 +129,3 @@ Add the Syncfusion Blazor Message component in the **~/Pages/Index.razor** file.
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion Blazor Message component in your default web browser.
 
 ![Blazor Message Component](./images/message-default.PNG)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BtrgtnWyCOaaxYIY?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->

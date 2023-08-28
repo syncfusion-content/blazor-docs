@@ -371,7 +371,6 @@ else
 * Press <kbd>ctrl</kbd>+<kbd>F5</kbd> or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to run the application. The Syncfusion Blazor Media Query component will then render the layout based on browser view size, as shown in the large device layout below.
 
 ![Blazor Media Query Component](images/blazor-media-query.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VDVKjdCyBrnthmlV?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## See also
 
