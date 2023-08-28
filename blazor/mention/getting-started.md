@@ -308,7 +308,7 @@ For Blazor WebAssembly App, refer script in the `<head>` of the **~/index.html**
 
 * Press <kbd>ctrl</kbd>+<kbd>F5</kbd> or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to run the application. Then, the Syncfusion Blazor Mention component will be rendered in the default web browser.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BjrUjRMIVrVHmUsy?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Blazor Mention Component](images/blazor-mention.png)
 
 ## Mention target
 
@@ -356,7 +356,7 @@ In the bellow example, the `Target` property of the Mention component is set to 
 
 {% endhighlight %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BjrgtdWyhrUEzpIQ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Blazor Mention target](images/blazor-mention-target.png)
 
 ## See also
 
