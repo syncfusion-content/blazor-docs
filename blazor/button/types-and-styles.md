@@ -39,7 +39,6 @@ The Blazor Button has the following predefined styles that can be defined using 
 
 
 ![Blazor Button Component with different Styles](./images/blazor-button-with-different-style.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BZVKNmrvzUotrvwj?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 N> Predefined Button styles provide only the visual indication. So, Button content should define the Button style for the users of assistive technologies such as screen readers.
 
@@ -82,7 +81,6 @@ A Round Button is circular in shape. Usually, it contains an icon representing i
 
 
 ![Blazor Button with different Types](./images/blazor-button-types.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LDrKXcBlpAGZVYFh?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ### Primary Button
 
@@ -97,7 +95,6 @@ The primary button is styled with background color and it is used to represent a
 
 
 ![Blazor Primary Button](./images/blazor-primary-button.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/rZhKjGBFpqbXwmTl?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ### Toggle Button
 
@@ -145,7 +142,6 @@ A toggle Button allows you to change between the two states. The Button is activ
 
 
 ![Blazor Toggle Button](./images/blazor-toggle-button.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/rXLUjmrPzKbQFeXL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Icons
 
@@ -173,7 +169,6 @@ The Button can have an icon to provide the visual representation of the action. 
 
 
 ![Blazor Button with Icon](./images/blazor-button-icon.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VjBAjQrPfzWuHFgD?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Button size
 
@@ -190,4 +185,3 @@ The two types of Button sizes are default and small. To change the size of the d
 
 
 ![Blazor Button with different Size](./images/blazor-button-with-different-size.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BNVgXcLPfzgUCdIn?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->

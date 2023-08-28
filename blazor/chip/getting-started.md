@@ -125,7 +125,6 @@ Add the Syncfusion Blazor Chip component in the **~/Pages/Index.razor** file.
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion Blazor Chip component in your default web browser.
 
 ![Blazor Chip Component](./images/blazor-chip-component.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LDBgtdMdrZfWcvRZ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Render chip items from collection
 
@@ -184,7 +183,6 @@ You can render the chip items from collection using for loop in Blazor Chip comp
 ```
 
 ![Blazor Chip Component](./images/blazor-chip-sample.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/rNLAjxCdhNTdxPzX?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## See also
 * [How to add chip items dynamically in the Blazor Chips component?](https://www.syncfusion.com/kb/13187/how-to-add-chip-items-dynamically-in-the-blazor-chips-component)
