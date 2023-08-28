@@ -61,8 +61,6 @@ public static List<TaskData> GetTaskCollection()
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rDhKNQWzhsgNlLyB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
 N> * Indent/Outdent is not supported for Hierarchy Data.
 <br/> * ExpandCollapse State maintenance is not supported for Hierarchy Data.
 <br/> * Row Drag and Drop feature is not supported for Hierarchy Data.
@@ -114,8 +112,6 @@ The Gantt Chart component can be bound with self-referential data by mapping the
 }
 }
 ```
-
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LDLUNmWTVVYXGgTK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ### DynamicObject binding
 
@@ -220,8 +216,6 @@ N> The [GetDynamicMemberNames](https://docs.microsoft.com/en-us/dotnet/api/syste
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VNhADmCThqAVimHL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
 ### ExpandoObject Binding
 
 Gantt is a generic component which is strongly bound to a model type. There are cases when the model type is unknown during compile type. In such cases you can bound data to the Gantt as list of ExpandoObject.
@@ -302,8 +296,6 @@ ExpandoObject can be bound to Gantt by assigning to the `DataSource` property. G
     }
 }
 ```
-
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LjLAZmWpLgeTLgkx?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 N> Here, we have provided list of reserved properties and the purpose used in Gantt Chart. We recommend to avoid these reserved properties for Internal purpose(To get rid of conflicts).
 
@@ -448,8 +440,6 @@ The [ObservableCollection](https://docs.microsoft.com/en-us/dotnet/api/system.co
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hDBKDQCprgOOHkbc?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
 ### INotifyPropertyChanged
 
 The Gantt chart provides support to update its data without any additional refresh call when changing property value of item if an item implements [INotifyPropertyChanged](https://docs.microsoft.com/en-us/dotnet/api/system.componentmodel.inotifypropertychanged?view=net-6.0) interface. `INotifyPropertyChanged` interface is used to notify, that a property value has changed.
@@ -566,8 +556,6 @@ In the below example, `TaskData` implements `INotifyPropertyChanged` and it rais
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hXBqXcszLJOYOlJx?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
 ## Remote Data
 
 To bind remote data to Gantt component, assign service data as an instance of [SfDataManager](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Data.SfDataManager.html) to the `DataSource` property or by using `SfDataManager` component. To interact with remote data source, provide the endpoint **Url**.
@@ -602,8 +590,6 @@ You can use **WebApiAdaptor** to bind datagrid with Web API created using **ODat
     }
 }
 ```
-
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VZBUtGMzhScJMaMi?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ### Load Child on Demand
 
@@ -993,5 +979,3 @@ The following sample code demonstrates notifying user when server-side exception
     }
 }
 ```
-
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VtLAZGMJBmsvUpls?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}

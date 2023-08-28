@@ -56,8 +56,6 @@ The row selection in the Gantt Chart component can be enabled or disabled using 
 
 N> `Row` selection is the default type of Gantt Chart selection mode.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hZLqtQMmswOUvTmA?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
 ## Selecting a row on initial load
 
 You can select a row at the time of loading by setting the index of the row to the [SelectedRowIndex](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_SelectedRowIndex) property. Find the following code example for details.
@@ -105,7 +103,7 @@ You can select a row at the time of loading by setting the index of the row to t
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hXLqNcCwsaQgZUCG?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Initial Selection in Blazor Gantt Chart](images/blazor-gantt-chart-initial-selection.png)
 
 ## Selecting a row dynamically
 
@@ -162,7 +160,7 @@ You can also select a row dynamically using the [SelectRowAsync](https://help.sy
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LjBgZQswrNUvNydb?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Row Selection in Blazor Gantt Chart](images/blazor-gantt-chart-row-selection.png)
 
 ## Multiple row selection
 
@@ -213,7 +211,7 @@ You can select multiple rows by setting the `SelectionSettings.Type` property to
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BNhqjwCcLDROvFTc?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Multiple Row Selection in Blazor Gantt Chart](images/blazor-gantt-chart-multi-row-selection.png)
 
 ## Selecting multiple rows dynamically
 
@@ -272,4 +270,4 @@ You can also select rows dynamically using the [SelectRowsAsync](https://help.sy
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hXhKtGMQBMCvifVp?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Selecting Multiple Rows Dynamically in Blazor Gantt Chart](images/blazor-gantt-chart-multiple-row-selection.png)

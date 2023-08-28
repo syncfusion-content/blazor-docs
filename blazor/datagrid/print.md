@@ -55,7 +55,7 @@ The below sample code demonstrates DataGrid with print option added in the toolb
 
 The following image represents DataGrid with print toolbar item,
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LtVqDRVxMbrmVLnn?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Printing in Blazor DataGrid](./images/blazor-datagrid-printing.png)
 
 ## Page setup
 
@@ -120,7 +120,7 @@ The below sample code demonstrates invoking print using an external button,
 
 The following image represents DataGrid with external button for invoking print operation,
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VDrADRhnWPJzJFHn?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Blazor DataGrid displays Print Option in External Button](./images/blazor-datagrid-print-external-button.png)
 
 ## Print the visible page
 
@@ -165,8 +165,6 @@ The below sample code demonstrates this,
     }
 }
 ```
-
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rDBAXHrRsbGjhbfE?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 <!-- Print the hierarchy datagrid
 
