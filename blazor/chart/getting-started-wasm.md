@@ -21,16 +21,14 @@ This section briefly explains about how to include [Blazor Charts](https://www.s
 
 You can create a **Blazor WebAssembly App** using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0) or the [Syncfusion Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
 
-## Install Syncfusion Blazor Charts and Theme NuGet in the App
+## Install Syncfusion Blazor Charts NuGet in the App
 
-To add Blazor Chart component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install [Syncfusion.Blazor.Charts](https://www.nuget.org/packages/Syncfusion.Blazor.Charts) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/). Alternatively, you can utilize the following package manager command to achieve the same.
+To add Blazor Chart component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install [Syncfusion.Blazor.Charts](https://www.nuget.org/packages/Syncfusion.Blazor.Charts). Alternatively, you can utilize the following package manager command to achieve the same.
 
 {% tabs %}
 {% highlight C# tabtitle="Package Manager" %}
 
 Install-Package Syncfusion.Blazor.Charts -Version {{ site.releaseversion }}
-
-Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
 
 {% endhighlight %}
 {% endtabs %}
@@ -74,18 +72,17 @@ await builder.Build().RunAsync();
 
 ## Add stylesheet and script resources
 
-The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Reference the stylesheet and script in the `<head>` of the main page as follows: 
+The script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Reference the script in the `<head>` of the main page as follows: 
 
 * For Blazor WebAssembly app, include it in the **~/index.html** file.
 
 ```html
 <head>
     ....
-    <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
     <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
 </head>
 ```
-N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic to discover various methods ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference), and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)) for referencing themes in your Blazor application. Also, check out the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic to learn different approaches for adding script references in your Blazor application.
+N> Check out the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic to learn different approaches for adding script references in your Blazor application.
 
 ## Add Blazor Chart Component
 
