@@ -121,7 +121,6 @@ Add the Syncfusion Blazor Signature component in the **~/Pages/Index.razor** fil
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion Blazor Signature component in your default web browser.
 
 ![Blazor Signature Component](./images/blazor-Signature-component.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LDhqjRiphpWfeNAY?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 N> The Signature component will render default height and width of canvas (300 * 150), when the Signature height and width are not specified.
 

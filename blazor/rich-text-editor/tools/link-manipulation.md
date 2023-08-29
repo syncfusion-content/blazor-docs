@@ -35,7 +35,6 @@ N> The Rich Text Editor link tool validates the URLs as you type them in the web
 {% endtabs %}
 
 ![Blazor RichTextEditor displaying link icon](../images/blazor-richtexteditor-link-icon.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VDhgDQMhfhmNWMRW?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Auto link
 
@@ -60,7 +59,6 @@ Add the custom tools on the selected link inside the Rich Text Editor through th
 {% endtabs %}
 
 ![Blazor RichTextEditor link quick toolbar](../images/blazor-richtexteditor-quick-link.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BXBAjmsBzqguABrE?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## See also
 

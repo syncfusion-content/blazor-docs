@@ -64,7 +64,6 @@ A task delete option in the Gantt Chart component can be enabled by enabling the
 ```
 
 ![Deleting Record in Blazor Gantt Chart](images/blazor-gantt-chart-delete-record.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BDhKDmWvsvgKovLz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 N> You should set the `AllowDeleting` value to `true` to delete the record dynamically.
 
@@ -119,4 +118,3 @@ The following code snippet explains how to enable the delete confirmation messag
 ```
 
 ![Blazor Gantt Chart displays Delete Confirmation Dialog](images/blazor-gantt-chart-delete-confirmation-dialog.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/hjhgXwWPsFfCdMeU?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
