@@ -24,70 +24,61 @@ Here’s an example that demonstrates how to use group footer aggregates in the 
 ```cshtml
 @using Syncfusion.Blazor.Grids
 
-<SfGrid DataSource="@Products" AllowGrouping="true" AllowPaging="true">
+<SfGrid DataSource="@Orders" AllowPaging="true" AllowGrouping="true">
+    <GridPageSettings PageSize="5"></GridPageSettings>
     <GridGroupSettings Columns=@Units></GridGroupSettings>
-    <GridAggregates>
+     <GridAggregates>
         <GridAggregate>
             <GridAggregateColumns>
-                <GridAggregateColumn Field=@nameof(Product.UnitsInStock) Type="AggregateType.Sum">
+                <GridAggregateColumn Field=@nameof(Order.Freight) Type="AggregateType.Sum">
                     <GroupFooterTemplate>
                         @{
                             var aggregate = (context as AggregateTemplateContext);
                             <div>
-                                <p>Total units: @aggregate.Sum</p>
-                            </div>
-                        }
-                    </GroupFooterTemplate>
-                </GridAggregateColumn>
-                <GridAggregateColumn Field=@nameof(Product.Discontinued) Type="AggregateType.TrueCount">
-                    <GroupFooterTemplate>
-                        @{
-                            var aggregate = (context as AggregateTemplateContext);
-                            <div>
-                                <p>Truecount: @aggregate.TrueCount</p>
+                                <p>Sum: @aggregate.Sum</p>
                             </div>
                         }
                     </GroupFooterTemplate>
                 </GridAggregateColumn>
             </GridAggregateColumns>
         </GridAggregate>
-    </GridAggregates>
+     </GridAggregates>
     <GridColumns>
-        <GridColumn Field=@nameof(Product.ProductName) HeaderText="Product Name" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Product.QuantityPerUnit) HeaderText="Quantity Per Unit" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Product.UnitsInStock) HeaderText="Units In Stock" TextAlign="TextAlign.Right" Width="130"></GridColumn>
-        <GridColumn Field=@nameof(Product.Discontinued) HeaderText="Discontinued" TextAlign="TextAlign.Right" DisplayAsCheckBox="true" Type="ColumnType.Boolean"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText="Order Date" Format="d" Type="ColumnType.DateOnly" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.ShipCoutry) HeaderText="Ship Coutry" Width="150"></GridColumn>
     </GridColumns>
 </SfGrid>
 
-@code{
+@code {
+    public List<Order> Orders { get; set; }
+    private string[] Units = (new string[] { "ShipCoutry" });
 
-    public List<Product> Products { get; set; }
-    private string[] Units = (new string[] { "QuantityPerUnit" });
     protected override void OnInitialized()
     {
-        Products = Enumerable.Range(1, 10).Select(x => new Product
-        {
-            ProductName = (new string[] { "Chai", "Chang", "Aniseed Syrup", "Chef Anton's Cajun Seasoning", "Chef Anton's Gumbo Mix" })[new Random().Next(5)],
-            QuantityPerUnit = (new string[] { "10 boxes x 20 bags", "24 - 12 oz bottles", "12 - 550 ml bottles", "48 - 6 oz jars", "36 boxes" })[new Random().Next(5)],
-            UnitsInStock = x,
-            Discontinued = (new bool[] { true, false})[new Random().Next(2)]
-        }).ToList();
+        Orders = Enumerable.Range(1, 10).Select(x => new Order()
+            {
+                OrderID = 1000 + x,
+                CustomerID = (new string[] { "HANAR", "WELLI", "QUEDE", "VINET", "VICTE" })[new Random().Next(5)],
+                Freight = 2.1 * x,
+                OrderDate = new DateOnly(2023, 2, x),
+                ShipCoutry=(new string[]{"France","Germany","US","Belgium","Australia"})[new Random().Next(5)]
+            }).ToList();
     }
 
-    public class Product
+    public class Order
     {
-        public string ProductName { get; set; }
-        public string QuantityPerUnit { get; set; }
-        public int UnitsInStock { get; set; }
-        public bool Discontinued { get; set; }
+        public int? OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public DateOnly? OrderDate { get; set; }
+        public string ShipCoutry { get; set; }
+        public double? Freight { get; set; }
     }
 }
 ```
-
-The following image represents the Group and Caption template with aggregates.
-
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VZBqXvZvHAPgoKxN?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDhUDbLeUVuCRFWL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 > * Use the template reference variable name as #GroupFooterTemplate to specify the group footer template and as #GroupCaptionTemplate to specify the group caption template.
 
@@ -102,56 +93,60 @@ Here’s an example that demonstrates how to use group and caption aggregates in
 ```cshtml
 @using Syncfusion.Blazor.Grids
 
-<SfGrid DataSource="@Products" AllowGrouping="true" AllowPaging="true">
+<SfGrid DataSource="@Orders" AllowPaging="true" AllowGrouping="true">
+    <GridPageSettings PageSize="5"></GridPageSettings>
     <GridGroupSettings Columns=@Units></GridGroupSettings>
-    <GridAggregates>
+     <GridAggregates>
         <GridAggregate>
             <GridAggregateColumns>
-                <GridAggregateColumn Field=@nameof(Product.UnitsInStock) Type="AggregateType.Max">
+                <GridAggregateColumn Field=@nameof(Order.Freight) Type="AggregateType.Max">
                     <GroupCaptionTemplate>
                         @{
                             var aggregate = (context as AggregateTemplateContext);
                             <div>
-                                <p>Maximum: @aggregate.Max</p>
+                                <p>Max: @aggregate.Max</p>
                             </div>
                         }
                     </GroupCaptionTemplate>
                 </GridAggregateColumn>
             </GridAggregateColumns>
         </GridAggregate>
-    </GridAggregates>
+     </GridAggregates>
     <GridColumns>
-        <GridColumn Field=@nameof(Product.ProductName) HeaderText="Product Name" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Product.QuantityPerUnit) HeaderText="Quantity Per Unit" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Product.UnitsInStock) HeaderText="Units In Stock" TextAlign="TextAlign.Right" Width="130"></GridColumn>
-        <GridColumn Field=@nameof(Product.Discontinued) HeaderText="Discontinued" TextAlign="TextAlign.Right" DisplayAsCheckBox="true" Type="ColumnType.Boolean"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText="Order Date" Format="d" Type="ColumnType.DateOnly" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.ShipCoutry) HeaderText="Ship Coutry" Width="150"></GridColumn>
     </GridColumns>
 </SfGrid>
 
 @code {
+    public List<Order> Orders { get; set; }
+    private string[] Units = (new string[] { "ShipCoutry" });
 
-    public List<Product> Products { get; set; }
-    private string[] Units = (new string[] { "QuantityPerUnit" });
     protected override void OnInitialized()
     {
-        Products = Enumerable.Range(1, 10).Select(x => new Product
+        Orders = Enumerable.Range(1, 10).Select(x => new Order()
             {
-                ProductName = (new string[] { "Chai", "Chang", "Aniseed Syrup", "Chef Anton's Cajun Seasoning", "Chef Anton's Gumbo Mix" })[new Random().Next(5)],
-                QuantityPerUnit = (new string[] { "10 boxes x 20 bags", "24 - 12 oz bottles", "12 - 550 ml bottles", "48 - 6 oz jars", "36 boxes" })[new Random().Next(5)],
-                UnitsInStock = x,
-                Discontinued = (new bool[] { true, false })[new Random().Next(2)]
+                OrderID = 1000 + x,
+                CustomerID = (new string[] { "HANAR", "WELLI", "QUEDE", "VINET", "VICTE" })[new Random().Next(5)],
+                Freight = 2.1 * x,
+                OrderDate = new DateOnly(2023, 2, x),
+                ShipCoutry=(new string[]{"France","Germany","US","Belgium","Australia"})[new Random().Next(5)]
             }).ToList();
     }
 
-    public class Product
+    public class Order
     {
-        public string ProductName { get; set; }
-        public string QuantityPerUnit { get; set; }
-        public int UnitsInStock { get; set; }
-        public bool Discontinued { get; set; }
+        public int? OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public DateOnly? OrderDate { get; set; }
+        public string ShipCoutry { get; set; }
+        public double? Freight { get; set; }
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hNrgNvZvRUHRUSQq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hXVgDbLSqzxvvitG?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 > The group total summary in Syncfusion Grid is calculated based on the current page records for each group by default.

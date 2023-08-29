@@ -35,12 +35,12 @@ To access the aggregate values inside the **FooterTemplate**, you can use the im
         </GridAggregate>
         <GridAggregate>
             <GridAggregateColumns>
-                <GridAggregateColumn Field=@nameof(Order.Freight) Type="AggregateType.Average" Format="C2">
+                <GridAggregateColumn Field=@nameof(Order.Freight) Type="AggregateType.Max" Format="C2">
                     <FooterTemplate>
                         @{
                             var aggregate = (context as AggregateTemplateContext);
                             <div>
-                                <p>Average: @aggregate.Average</p>
+                                <p>Max: @aggregate.Max</p>
                             </div>
                         }
                     </FooterTemplate>
@@ -50,39 +50,36 @@ To access the aggregate values inside the **FooterTemplate**, you can use the im
     </GridAggregates>
     <GridColumns>
         <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer ID" Width="150"></GridColumn>
         <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.ShipName) HeaderText="Ship Name" Width="150"></GridColumn>
     </GridColumns>
 </SfGrid>
 
-@code{
+@code {
     public List<Order> Orders { get; set; }
 
     protected override void OnInitialized()
     {
         Orders = Enumerable.Range(1, 75).Select(x => new Order()
-        {
-            OrderID = 1000 + x,
-            CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
-            Freight = 2.1 * x,
-            OrderDate = DateTime.Now.AddDays(-x),
-        }).ToList();
+            {
+                OrderID = 1000 + x,
+                CustomerID = (new string[] { "VINET", "TOMSP", "HANAR", "VICTE", "SUPRD" })[new Random().Next(5)],
+                Freight = 2.1 * x,
+                ShipName = (new string[] { "Vins et alcools Cheval", "Toms Spezialitäten", "Hanari Carnes", "Victuailles en stock", "Suprêmes délices" })[new Random().Next(5)]
+            }).ToList();
     }
 
     public class Order
     {
         public int? OrderID { get; set; }
         public string CustomerID { get; set; }
-        public DateTime? OrderDate { get; set; }
+        public string ShipName { get; set; }     
         public double? Freight { get; set; }
     }
 }
 ```
-
-The following image represents the FooterTemplate with aggregates
-
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BDhANxBRMecokdgM?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LjrAZPLeiwEIikGx?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 > * Use the template reference variable name **#footerTemplate** to specify the footer template.   
 > * Inside the template, access the aggregate values using their corresponding [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridAggregateColumn.html#Syncfusion_Blazor_Grids_GridAggregateColumn_Type) name. For example, to access the sum aggregate value, use data.sum.
@@ -101,7 +98,7 @@ To access the aggregate values inside the **FooterTemplate**, you can use the im
     <GridAggregates>
         <GridAggregate>
             <GridAggregateColumns>
-                <GridAggregateColumn Field=@nameof(Order.Freight) Type="AggregateType.Sum" Format="C2">
+                <GridAggregateColumn Field=@nameof(Order.Freight) Type="AggregateType.Sum" Format="N0">
                     <FooterTemplate>
                         @{
                             var aggregate = (context as AggregateTemplateContext);
@@ -115,7 +112,7 @@ To access the aggregate values inside the **FooterTemplate**, you can use the im
         </GridAggregate>
         <GridAggregate>
             <GridAggregateColumns>
-                <GridAggregateColumn Field=@nameof(Order.Freight) Type="AggregateType.Average" Format="C2">
+                <GridAggregateColumn Field=@nameof(Order.Freight) Type="AggregateType.Average" Format="N0">
                     <FooterTemplate>
                         @{
                             var aggregate = (context as AggregateTemplateContext);
@@ -130,36 +127,36 @@ To access the aggregate values inside the **FooterTemplate**, you can use the im
     </GridAggregates>
     <GridColumns>
         <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
-        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>    
+        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.ShipName) HeaderText="Ship Name" Width="150"></GridColumn>
     </GridColumns>
 </SfGrid>
 
-@code{
+@code {
     public List<Order> Orders { get; set; }
 
     protected override void OnInitialized()
     {
         Orders = Enumerable.Range(1, 75).Select(x => new Order()
-        {
-            OrderID = 1000 + x,
-            CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
-            Freight = 2.1 * x,
-            OrderDate = DateTime.Now.AddDays(-x),
-        }).ToList();
+            {
+                OrderID = 1000 + x,
+                CustomerID = (new string[] { "VINET", "TOMSP", "HANAR", "VICTE", "SUPRD" })[new Random().Next(5)],
+                Freight = 2.1 * x,
+                ShipName = (new string[] { "Vins et alcools Cheval", "Toms Spezialitäten", "Hanari Carnes", "Victuailles en stock", "Suprêmes délices" })[new Random().Next(5)]
+            }).ToList();
     }
 
     public class Order
     {
         public int? OrderID { get; set; }
         public string CustomerID { get; set; }
-        public DateTime? OrderDate { get; set; }
+        public string ShipName { get; set; }       
         public double? Freight { get; set; }
     }
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hXVADxVnCdfikQac?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VjVgDlheWOUYtCov?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 

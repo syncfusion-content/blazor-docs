@@ -74,12 +74,26 @@ Here’s an example of how to use multiple aggregates in the Syncfusion Blazor G
         </GridAggregate>
         <GridAggregate>
             <GridAggregateColumns>
-                <GridAggregateColumn Field=@nameof(Order.Freight) Type="AggregateType.Average" Format="C2">
+                <GridAggregateColumn Field=@nameof(Order.Freight) Type="AggregateType.Min" Format="C2">
                     <FooterTemplate>
                         @{
                             var aggregate = (context as AggregateTemplateContext);
                             <div>
-                                <p>Average: @aggregate.Average</p>
+                                <p>Min: @aggregate.Min</p>
+                            </div>
+                        }
+                    </FooterTemplate>
+                </GridAggregateColumn>
+            </GridAggregateColumns>
+        </GridAggregate>
+        <GridAggregate>
+            <GridAggregateColumns>
+                <GridAggregateColumn Field=@nameof(Order.Freight) Type="AggregateType.Max" Format="C2">
+                    <FooterTemplate>
+                        @{
+                            var aggregate = (context as AggregateTemplateContext);
+                            <div>
+                                <p>Max: @aggregate.Max</p>
                             </div>
                         }
                     </FooterTemplate>
@@ -89,9 +103,9 @@ Here’s an example of how to use multiple aggregates in the Syncfusion Blazor G
     </GridAggregates>
     <GridColumns>
         <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer ID" Width="150"></GridColumn>
         <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.ShipCountry) HeaderText="Ship Country" Width="150"></GridColumn>
     </GridColumns>
 </SfGrid>
 
@@ -103,9 +117,9 @@ Here’s an example of how to use multiple aggregates in the Syncfusion Blazor G
         Orders = Enumerable.Range(1, 75).Select(x => new Order()
             {
                 OrderID = 1000 + x,
-                CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
+                CustomerID = (new string[] { "VINET", "TOMSP", "HANAR", "VICTE", "SUPRD" })[new Random().Next(5)],
                 Freight = 2.1 * x,
-                OrderDate = DateTime.Now.AddDays(-x),
+                ShipCountry = (new string[] { "France", "Germany", "Brazil", "Belgium", "Switzerland" })[new Random().Next(5)],
             }).ToList();
     }
 
@@ -113,12 +127,13 @@ Here’s an example of how to use multiple aggregates in the Syncfusion Blazor G
     {
         public int? OrderID { get; set; }
         public string CustomerID { get; set; }
-        public DateTime? OrderDate { get; set; }
+        public string ShipCountry { get; set; }
         public double? Freight { get; set; }
     }
 }
 ```
 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXhKjvLfzKMhiwkL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 ## See also
 
 * [Handling Aggregates in Custom Adaptor](https://blazor.syncfusion.com/documentation/datagrid/custom-binding#handling-aggregates-in-custom-adaptor)

@@ -26,63 +26,136 @@ Here’s an example that demonstrates how to use the custom aggregate feature in
 ```cshtml
 @using Syncfusion.Blazor.Grids
 
-<SfGrid @ref="Grid" DataSource="@Products" AllowPaging="true">
-    <GridAggregates>
-        <GridAggregate>
+<SfGrid @ref="Grid" DataSource="@Orders" AllowPaging="true">
+   <GridAggregates>
+    <GridAggregate>
             <GridAggregateColumns>
-                <GridAggregateColumn Field=@nameof(Product.TotalSales) Type="AggregateType.Custom">
+                <GridAggregateColumn Field=@nameof(Order.ShipCountry) Type="AggregateType.Custom" >
                     <FooterTemplate>
                         @{
-                            <div>
-                                <p>Custom: @GetWeightedAggregate()</p>
-                            </div>
+
+                                <div>
+                                    <p>Brazil Count: @CustomAggregateFunction()</p>
+                                </div>
                         }
                     </FooterTemplate>
                 </GridAggregateColumn>
             </GridAggregateColumns>
         </GridAggregate>
     </GridAggregates>
+    
     <GridColumns>
-        <GridColumn Field=@nameof(Product.ProductName) HeaderText="Product Name" TextAlign="TextAlign.Right" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Product.QuantityPerUnit) HeaderText="Quantity Per Unit" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Product.TotalSales) HeaderText="TotalSales" TextAlign="TextAlign.Right" Width="130"></GridColumn>
-        <GridColumn Field=@nameof(Product.TotalCosts) HeaderText="TotalCosts" TextAlign="TextAlign.Right" Width="180"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer ID" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.ShipCountry) HeaderText="Ship Country" Width="150"></GridColumn>
     </GridColumns>
 </SfGrid>
 
-@code{
-    SfGrid<Product> Grid { get; set; }
-    public List<Product> Products { get; set; }
-    public string GetWeightedAggregate()
+@code {
+    SfGrid<Order> Grid { get; set; }
+    public List<Order> Orders { get; set; }
+
+    private int CustomAggregateFunction()
     {
-        // Here, you can calculate custom aggregate operations and return the result.
-        return Queryable.Sum(Products.Select(x => (x.TotalSales + x.TotalCosts) / x.TotalSales).AsQueryable()).ToString();
-    }
-    protected override void OnInitialized()
-    {
-        Products = Enumerable.Range(1, 5).Select(x => new Product
-        {
-            ProductName = (new string[] { "Chai", "Chang", "Aniseed Syrup", "Chef Anton's Cajun Seasoning", "Chef Anton's Gumbo Mix" })[new Random().Next(5)],
-            QuantityPerUnit = (new string[] { "10 boxes x 20 bags", "24 - 12 oz bottles", "12 - 550 ml bottles", "48 - 6 oz jars", "36 boxes" })[new Random().Next(5)],
-            TotalSales = 100 * x,
-            TotalCosts = 200 * x,
-            Discontinued = (new bool[] { true, false })[new Random().Next(2)]
-        }).ToList();
+        int Count = Queryable.Count(Orders.Where(x => x.ShipCountry.Contains("Brazil")).AsQueryable());
+        return Count;
     }
 
-    public class Product
+    protected override void OnInitialized()
     {
-        public string ProductName { get; set; }
-        public string QuantityPerUnit { get; set; }
-        public int TotalSales { get; set; }
-        public int TotalCosts { get; set; }
-        public bool Discontinued { get; set; }
+        Orders = Enumerable.Range(1, 12).Select(x => new Order()
+            {
+                OrderID = 10255 + x,
+                CustomerID = (new string[] { "WELLI", "HILAA", "ERNSH", "CENTC", "OTTIK" })[new Random().Next(5)],
+                Freight = 2.1 * x,
+                ShipCountry = (new string[] { "Brazil", "Venezuela", "Austria", "Mexico", "Germany" })[new Random().Next(5)],
+            }).ToList();
+    }
+
+    public class Order
+    {
+        public int? OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public string ShipCountry { get; set; }
+        public double? Freight { get; set; }
     }
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VDBKjdhnWQHwbucf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VNVgXvBErgMHWvUW?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-> To access the custom aggregate value inside template, use the key as Custom
+> To access the custom aggregate value inside template, use the key as **Custom**
+
+**Show the count of distinct values in aggregate row**
+
+You can calculate the count of distinct values in an aggregate row by using custom aggregate functions. By specifying the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridAggregateColumn.html#Syncfusion_Blazor_Grids_GridAggregateColumn_Type) as **Custom** and providing a custom aggregate function in the `CustomAggregate` property, you can achieve this behavior.
+
+Here’s an example that demonstrates how to show the count of distinct values for the **ShipCountry** column using a custom aggregate.
+
+```cshtml
+@using Syncfusion.Blazor.Grids
+
+<SfGrid @ref="Grid" DataSource="@Orders" AllowPaging="true">
+   <GridAggregates>
+    <GridAggregate>
+            <GridAggregateColumns>
+                <GridAggregateColumn Field=@nameof(Order.ShipCountry) Type="AggregateType.Custom" >
+                    <FooterTemplate>
+                        @{
+
+                                <div>
+                                    <p>Distinct Count: @CustomAggregateFunction()</p>
+                                </div>
+                        }
+                    </FooterTemplate>
+                </GridAggregateColumn>
+            </GridAggregateColumns>
+        </GridAggregate>
+    </GridAggregates>
+    
+    <GridColumns>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer ID" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.ShipCountry) HeaderText="Ship Country" Width="150"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code {
+    SfGrid<Order> Grid { get; set; }
+    public List<Order> Orders { get; set; }
+
+    private int CustomAggregateFunction()
+    {
+        int Count = Orders.Where(item => item.ShipCountry != null).Select(item => item.ShipCountry).Distinct().Count();
+        return Count;
+    }
+
+    protected override void OnInitialized()
+    {
+        Orders = Enumerable.Range(1, 12).Select(x => new Order()
+            {
+                OrderID = 10255 + x,
+                CustomerID = (new string[] { "WELLI", "HILAA", "ERNSH", "CENTC", "OTTIK" })[new Random().Next(5)],
+                Freight = 2.1 * x,
+                ShipCountry = (new string[] { "Brazil", "Venezuela", "Austria", "Mexico", "Germany" })[new Random().Next(5)],
+            }).ToList();
+    }
+
+    public class Order
+    {
+        public int? OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public string ShipCountry { get; set; }
+        public double? Freight { get; set; }
+    }
+}
+
+```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZVUDvBkVInESEoB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+> To display the aggregate value of the current column in another column, you can use the [ColumnName](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridAggregateColumn.html#Syncfusion_Blazor_Grids_GridAggregateColumn_ColumnName) property. If the `ColumnName` property is not defined, the field name value will be assigned to the `ColumnName` property.
+
 
 > You can refer to the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour page for its groundbreaking feature representations. You can also explore [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap4) to understand how to present and manipulate data.
