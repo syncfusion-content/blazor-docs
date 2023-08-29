@@ -111,7 +111,6 @@ Using the [SelectedIndex](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
 ```
 
 ![Carousel selected slide](images/selected_index.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/hXVqZvNWhMjVBKBa?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ### Select an item using the method
 
@@ -182,8 +181,6 @@ Using the [PreviousAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
 </style>
 ```
 
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/htVKXFjiVMgWAIoe?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
-
 ## Partial visible slides
 
 The Carousel component supports to show one complete slide and a partial view of adjacent (previous and next) slides at the same time. You can enable or disable the partial slides using the [`partialVisible`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfCarousel.html#Syncfusion_Blazor_Navigations_SfCarousel_PartialVisible) property.
@@ -239,7 +236,6 @@ The Carousel component supports to show one complete slide and a partial view of
 ```
 
 ![Carousel partial visible slide](images/partial-visible.jpg)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LXLqXPjsBCJVQYMd?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 N> Slide animation only applicable if the `partialVisible` is enabled. 
 
@@ -300,7 +296,6 @@ The following example code depicts the functionality of `partialVisible` and wit
 ```
 
 ![Carousel partial visible slide](images/without-loop.jpg)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BDBUNPtsBWIijmnZ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## See also
 

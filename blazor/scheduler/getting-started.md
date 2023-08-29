@@ -149,7 +149,6 @@ Add the Syncfusion Blazor Scheduler component in the **~/Pages/Index.razor** fil
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion Blazor Scheduler component in your default web browser.
 
 ![Blazor Scheduler Component](images/blazor-scheduler.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BXhAjdMJLRHimFLh?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Populating appointments
 
@@ -195,7 +194,6 @@ To populate the Scheduler with appointments, bind the event data to it by assign
 {% endtabs %}
 
 ![Blazor Scheduler with Appointments](images/blazor-scheduler-appointments.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/rtBKNdWTBRFZkCcc?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Setting date
 
@@ -232,8 +230,6 @@ The [Blazor Scheduler](https://www.syncfusion.com/blazor-components/blazor-sched
 
 {% endhighlight %}
 {% endtabs %}
-
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VDBUtRszVwtXTtKT?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Setting view
 
@@ -283,8 +279,6 @@ The Scheduler displays `Week` view by default. To change the current view, defin
 
 {% endhighlight %}
 {% endtabs %}
-
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VXrUtRizrlWfmHQN?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Individual view customization
 

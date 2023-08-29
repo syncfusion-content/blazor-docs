@@ -93,7 +93,7 @@ Use the following code snippet for **alert.razor**, **confirm.razor** and **prom
 
 You can load custom content in predefined dialogs using the [DialogOptions.ChildContent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogOptions.html#Syncfusion_Blazor_Popups_DialogOptions_ChildContent) property. 
 
-Use the following code to customize the dialog content to render the custom TextBox component inside the prompt dialog to get the username from the user.
+Use the following code to customize the dialog content and render the custom TextBox component inside the prompt dialog to obtain the username from the user using the `@bind-Value` property.
 
 {% tabs %}
 {% highlight razor %}
