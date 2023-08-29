@@ -48,7 +48,7 @@ Open **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusio
 {% endhighlight %}
 {% endtabs %}
 
-Now, register the Syncfusion Blazor Service in the **~/Program.cs** file of your Blazor Server App or Blazor WebAssembly App. 
+Now, register the Syncfusion Blazor Service in the **~/Program.cs** file of your Blazor Server App or Blazor WebAssembly App.
 
 {% tabs %}
 {% highlight C# tabtitle="Blazor Server App" hl_lines="1 2 7 8" %}
@@ -84,7 +84,7 @@ await builder.Build().RunAsync();
 
 ## Add stylesheet and script resources
 
-The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Reference the stylesheet and script in the `<head>` of the main page as follows: 
+The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Reference the stylesheet and script in the `<head>` of the main page as follows:
 
 * For **.NET 6** Blazor Server app, include it in **~/Pages/_Layout.cshtml** file.
 
@@ -104,7 +104,7 @@ N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/app
 ## Add Blazor Dialog Provider
 
 `SfDialogProvider` allows to open predefined dialogs based on `SfDialogService` settings from any where in application. You can add `SfDialogProvider` in `MainLayout.razor` or any page. But it should be added only once in the app. If you add in `MainLayout.razor`, you can open predefined dialogs from any where in application. If you add in particular page, you can open dialogs only within the page.
-    
+
 * Now, add `SfDialogProvider` in the **~/_MainLayout.razor** file.
 
 {% tabs %}
@@ -123,8 +123,8 @@ Once you added `SfDialogService` and `SfDialogProvider`, you can open predefined
 
 An alert dialog box used to display an errors, warnings, and information alerts that needs user awareness. This can be achieved by using the [DialogService.AlertAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfDialogService.html#Syncfusion_Blazor_Popups_SfDialogService_AlertAsync_System_String_System_String_Syncfusion_Blazor_Popups_DialogOptions_) method. The alert dialog is displayed along with the `OK` button. When user clicks on `OK` button, alert dialog will get closed.
 
-In the code example below, an alert dialog is displayed upon clicking the button using the Syncfusion Blazor [Button](https://blazor.syncfusion.com/documentation/button/getting-started) Component..
-    
+In the code example below, an alert dialog is displayed upon clicking the button using the Syncfusion Blazor [Button](https://blazor.syncfusion.com/documentation/button/getting-started) Component.
+
 {% tabs %}
 {% highlight razor %}
 
@@ -140,7 +140,7 @@ In the code example below, an alert dialog is displayed upon clicking the button
 A confirm dialog box used to displays a specified message along with the `OK` and `Cancel` buttons, which returns a boolean value according to the user's click action. When the user clicks the `OK` button, the `true` value is returned otherwise it will returns the `false` value. This can be achieved by using the [DialogService.ConfirmAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfDialogService.html#Syncfusion_Blazor_Popups_SfDialogService_ConfirmAsync_System_String_System_String_Syncfusion_Blazor_Popups_DialogOptions_) method. It is used to get approval from the user, and it appears before any critical action. After get approval from the user the dialog will disappear automatically.
 
 In the below code example, the confirm dialog displayed on `OK` and `Cancel` button click action.
- 
+
 {% tabs %}
 {% highlight razor %}
 
