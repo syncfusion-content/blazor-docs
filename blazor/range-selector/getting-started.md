@@ -97,7 +97,6 @@ The script can be accessed from NuGet through [Static Web Assets](https://blazor
 ```html
 <head>
     ....
-    <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
     <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
 </head>
 ```
