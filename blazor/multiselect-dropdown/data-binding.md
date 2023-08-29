@@ -46,7 +46,7 @@ Data binding can be achieved by using the `bind-Value` attribute and its support
 
 ## Enum binding
 
-To bind Enum types to the MultiSelect Dropdown component, you can convert the Enum data into a list of strings and then bind it to the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_DataSource) property of the SfMultiSelect component.
+Convert the Enum data into a list of strings and bind it to the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_DataSource) property of the SfMultiSelect component to bind Enum types to the MultiSelect Dropdown component.
 
 ```cshtml
 
@@ -91,7 +91,7 @@ To bind Enum types to the MultiSelect Dropdown component, you can convert the En
 
 ## Customizing the Change Event
 
-MultiSelect component by default fires the `Change event` when the component loses focus. However, if you want the Change event to be fired every time a value is selected or removed, you can disable the [EnabledChangeOnBlur](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMultiSelect-2.html#Syncfusion_Blazor_DropDowns_SfMultiSelect_2_EnableChangeOnBlur) property. This will make the Change event to be fired on every value selection and removal instead of just when the component loses focus. Default value of `EnableChangeOnBlur` is `true`.
+MultiSelect component by default fires the `Change event` when the component loses focus. However, if you want the Change event to be fired every time a value is selected or removed, disable the [EnabledChangeOnBlur](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMultiSelect-2.html#Syncfusion_Blazor_DropDowns_SfMultiSelect_2_EnableChangeOnBlur) property. This will make the Change event be fired on every value selection and removal instead of just when the component loses focus. The default value of `EnableChangeOnBlur` is `true.`
 
 {% highlight Razor %}
 
