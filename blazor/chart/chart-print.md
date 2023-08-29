@@ -242,6 +242,7 @@ Using the `ExportAsync` method, the rendered chart can be exported to [JPEG](htt
 The optional parameters for this method are,
 * `Orientation` - Specifies the portrait or landscape orientation in the PDF document.
 * `AllowDownload` - Specifies whether to download or not. If not, base64 string will be returned.
+* `IsBase64` - Specifies whether to export chart as base64 string or not.
 
 ```cshtml
 
@@ -288,6 +289,164 @@ The optional parameters for this method are,
     };
 }
 
+```
+
+### Export Chart as base64 string
+
+Sometimes, you may encounter situations where sending images in standard formats like [JPEG](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ExportType.html#Syncfusion_Blazor_Charts_ExportType_JPEG), [PNG](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ExportType.html#Syncfusion_Blazor_Charts_ExportType_PNG), [SVG](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ExportType.html#Syncfusion_Blazor_Charts_ExportType_SVG), or [PDF](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ExportType.html#Syncfusion_Blazor_Charts_ExportType_PDF) might not be feasible. In such cases, Syncfusion provide support to export the rendered chart as `base64` string, which can then be easily embedded or transmitted in various contexts. 
+
+This can be achieved using the `ExportAsync` method by made the `allowDownload` boolean as false and `isBase64` as true. The exported Base64 string can be get by using [OnExportComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnExportComplete) event.
+
+The following code shows how to pass parameters to the `ExportAsync` method to get `base64` string.
+
+In this method, you'll need to specify the following parameters:
+
+* [Export Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ExportType.html): The desired export format (e.g., Png, Jpeg, Svg, Pdf).
+* `fileName`: A name for the exported file (this is not used when exporting as base64).
+* `allowDownload`: Set this parameter to false to prevent the browser's download prompt.
+* `isBase64`: Set this parameter to true to indicate that you want to receive the exported content as a base64 string.
+
+```cshtml
+
+sfChart.ExportAsync(ExportFileType, FileName, null, false, true);
+
+```
+
+The following code shows the complete demonstration of exporting chart image of standard formats like [JPEG](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ExportType.html#Syncfusion_Blazor_Charts_ExportType_JPEG), [PNG](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ExportType.html#Syncfusion_Blazor_Charts_ExportType_PNG), [SVG](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ExportType.html#Syncfusion_Blazor_Charts_ExportType_SVG), or [PDF](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ExportType.html#Syncfusion_Blazor_Charts_ExportType_PDF) as `base64` string.
+
+```cshtml
+ 
+@using Syncfusion.Blazor.Inputs
+@using Syncfusion.Blazor.Charts
+@using Syncfusion.Blazor.Buttons
+@using Syncfusion.Blazor.DropDowns
+
+<SfChart @ref="ChartObj">
+    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category">
+    </ChartPrimaryXAxis>
+    <ChartSeriesCollection>
+        <ChartSeries DataSource="@ConsumerDetails" XName="X" YName="YValue" Type="ChartSeriesType.Column">
+        </ChartSeries>
+    </ChartSeriesCollection>
+    <ChartEvents OnExportComplete="ExportComplete"></ChartEvents>
+</SfChart>
+
+<div class="col-lg-3 property-section"> 
+    <table style="width: 100%">
+        <tbody>
+            <tr style="height: 50px">
+                <td style="width: 40%">
+                    <div style="margin-top:-3%">
+                        Export Type
+                    </div>
+                </td>
+                <td style="width: 100%;margin-top:4%;">
+                    <div style="width:100%;margin-left:5%">
+                        <SfDropDownList TValue="string" TItem="FileFormatType" DataSource="@ExportTypes" @bind-Value="@ChartExportType" Width="95%">
+                            <DropDownListEvents TValue="string" TItem="FileFormatType" ValueChange="ChartFileValueChange" />
+                            <DropDownListFieldSettings Text="Text" Value="Text" />
+                        </SfDropDownList>
+                    </div>
+                </td>
+            </tr>
+            <tr style="height: 50px">
+                <td style="width: 40%">
+                    <div>File Name</div>
+                </td>
+                <td style="width: 40%;">
+                    <div class="e-float-input" style='margin-top:5%;width:95%;margin-left:5%'>
+                        <SfTextBox Value="@FileName" ValueChange="@NameChange" />
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <br />
+    <div style="height: 45px; text-transform:none !important;width:100%;margin-left:40%">
+        <SfButton OnClick="ExportChart" IsToggle="true" IsPrimary="true">Export</SfButton>
+    </div>
+</div>
+@code {
+
+    SfChart ChartObj;
+
+    public class FileFormatType
+    {
+        public string Id { get; set; }
+        public string Text { get; set; }
+    }
+
+    private List<FileFormatType> ExportTypes = new List<FileFormatType>() {
+        new FileFormatType(){ Id= "JPEG", Text= "JPEG" },
+        new FileFormatType(){ Id= "PNG", Text= "PNG" },
+        new FileFormatType(){ Id= "SVG", Text= "SVG" },
+        new FileFormatType(){ Id= "PDF", Text= "PDF" },
+    };
+
+    private void NameChange(Syncfusion.Blazor.Inputs.ChangedEventArgs args)
+    {
+        FileName = args.Value;
+    }
+    private void ChartFileValueChange(Syncfusion.Blazor.DropDowns.ChangeEventArgs<string, FileFormatType> args)
+    {
+        ChartExportType = args.Value;
+    }
+
+    public string ChartExportType { get; set; } = "JPEG";
+    public string FileName { get; set; } = "Charts";
+    public string Format { get; set; } = "{value}GW";
+    public bool Rotate { get; set; } = false;
+    public double AngleRotate { get; set; } = 0;
+
+    private async Task Export(MouseEventArgs args)
+    {
+        await ChartObj.ExportAsync(ExportType.PNG, "pngImage");
+    }
+
+    public class ChartData
+    {
+        public string X { get; set; }
+        public double YValue { get; set; }
+    }
+
+    public List<ChartData> ConsumerDetails = new List<ChartData>
+    {
+        new ChartData { X= "USA", YValue= 46 },
+        new ChartData { X= "GBR", YValue= 27 },
+        new ChartData { X= "CHN", YValue= 26 },
+        new ChartData { X= "UK", YValue= 36 },
+        new ChartData { X= "AUS", YValue= 15 },
+        new ChartData { X= "IND", YValue= 55 },
+        new ChartData { X= "DEN", YValue= 40 },
+        new ChartData { X= "MEX", YValue= 30 }
+    };
+
+    public async Task ExportChart(Microsoft.AspNetCore.Components.Web.MouseEventArgs args)
+    {
+        ExportType ExportFileType = ExportType.JPEG;
+        switch (ChartExportType)
+        {
+            case "JPEG":
+                ExportFileType = ExportType.JPEG;
+                break;
+            case "PNG":
+                ExportFileType = ExportType.PNG;
+                break;
+            case "SVG":
+                ExportFileType = ExportType.SVG;
+                break;
+            case "PDF":
+                ExportFileType = ExportType.PDF;
+                break;
+        }
+        await ChartObj.ExportAsync(ExportFileType, FileName, null, false, true);
+    }
+
+    public void ExportComplete(ExportEventArgs exportEventArgs)
+    {
+        string base64 = exportEventArgs.Base64;
+    }
+}
 ```
 
 N> Refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.

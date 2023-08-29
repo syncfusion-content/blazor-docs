@@ -158,3 +158,70 @@ The [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockC
 ```
 
 ![Blazor Stock Chart with Custom Tooltip](images/common/blazor-stock-chart-custom-tooltip.png)
+
+## Moving Tooltip
+
+Enabling moving tooltips empowers users to effortlessly explore the data points on the Stock Chart. As they move the mouse pointer across the chart, the tooltip dynamically updates its position, staying in sync with the cursor. This real-time interaction ensures that users can seamlessly access information about different data points without the need to constantly reposition the cursor or interact with the chart excessively.
+
+By default tooltip is not moving along with mouse in stock chart. Enable `Moving Tooltip` by setting the `TooltipPosition` as `TooltipPosition.Nearest` in the [StockChartTooltipSetting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartTooltipSettings.html#Syncfusion_Blazor_Charts_StockChartTooltipSettings__ctor), to move tooltip along with the mouse pointer when we move the cursor across data points.
+
+```cshtml
+@using Syncfusion.Blazor
+@using Syncfusion.Blazor.Charts
+@inject NavigationManager NavigationManager
+@using System.Net.Http.Json
+@inject HttpClient Http
+@if (DataSource == null)
+{
+    <div class="stockchartloader">
+    </div>
+}
+else
+{ 
+    <SfStockChart>          
+        <StockChartPrimaryXAxis>
+            <StockChartAxisMajorGridLines Width="0"></StockChartAxisMajorGridLines>
+            <StockChartAxisCrosshairTooltip Enable="true"></StockChartAxisCrosshairTooltip>
+        </StockChartPrimaryXAxis>
+        <StockChartPrimaryYAxis>
+            <StockChartAxisLineStyle Width="0"></StockChartAxisLineStyle>
+            <StockChartAxisMajorTickLines Width="0"></StockChartAxisMajorTickLines>
+        </StockChartPrimaryYAxis>
+        <StockChartTooltipSettings Enable="true" TooltipPosition="TooltipPosition.Nearest"></StockChartTooltipSettings>
+        <StockChartCrosshairSettings Enable="true"></StockChartCrosshairSettings>
+        <StockChartSeriesCollection>
+            <StockChartSeries DataSource="@DataSource" Type="ChartSeriesType.HiloOpenClose" XName="x"></StockChartSeries>
+        </StockChartSeriesCollection>
+        <StockChartChartArea>
+            <StockChartChartAreaBorder Width="0"></StockChartChartAreaBorder>
+        </StockChartChartArea>
+    </SfStockChart>
+    
+}
+@code{
+    private ChartData[] DataSource;
+    protected override async Task OnInitializedAsync()
+    {      
+        DataSource = await Http.GetFromJsonAsync<ChartData[]>(NavigationManager.BaseUri + "./googl.json");
+    }
+    public class ChartData
+    {
+        public DateTime x { get; set; }
+        public double open { get; set; }
+        public double low { get; set; }
+        public double close { get; set; }
+        public double high { get; set; }
+        public double volume { get; set; }
+    }
+    string loadClass = "stockchartloader";
+    string loadDiv = "stockchartdiv";   
+    
+}
+
+```
+
+![Blazor Stock Chart with Moving Tooltip](images/common/blazor-stock-chart-moving-tooltip.png)
+
+
+
+
