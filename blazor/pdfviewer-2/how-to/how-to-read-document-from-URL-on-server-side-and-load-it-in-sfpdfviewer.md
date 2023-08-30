@@ -1,0 +1,35 @@
+---
+layout: post
+title: How to read a document from a URL on the server side and load it into a PDF viewer. | Syncfusion
+description: Learn here all about load pdf document using the URL in the web.
+platform: Blazor
+control: SfPdfViewer
+documentation: ug
+---
+
+## How to read a document from a URL on the server side and load it into a PDF viewer.
+
+We already support loading PDF documents from remote URLs. However, you can also load a document from a URL on the server side using the code provided below.
+
+```cshtml
+
+@using Syncfusion.Blazor.SfPdfViewer
+
+<SfPdfViewer2 DocumentPath="@DocumentPath"
+              Height="100%"
+              Width="100%">
+</SfPdfViewer2>
+
+@code {
+    public string DocumentPath { get; set; }
+    protected override void OnInitialized()
+    {
+        string Url = "https://s3.amazonaws.com/files2.syncfusion.com/dtsupport/directtrac/general/pd/HTTP_Succinctly-1719682472.pdf";
+        System.Net.WebClient webClient = new System.Net.WebClient();
+        byte[] byteArray = webClient.DownloadData(Url);
+        DocumentPath = "data:application/pdf;base64," + Convert.ToBase64String(byteArray);
+    }
+}
+
+```
+[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Load%20and%20Save/Load%20PDF%20file%20from%20URL-SfPdfViewer)
