@@ -129,7 +129,6 @@ Add the Syncfusion Blazor Rating component in the **~/Pages/Index.razor** file.
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion Blazor Rating component in your default web browser.
 
 ![Blazor Rating Component](images/blazor-rating-component.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BtLKZHWTAADgSQQO?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Value
 
@@ -144,4 +143,3 @@ You can set the rating value by using the [Value](https://help.syncfusion.com/cr
 {% endtabs %}
 
 ![Displaying Rating Value in Blazor Rating Component](images/blazor-rating-value.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/rNBKXRWzgKsnIJmv?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->

@@ -92,4 +92,3 @@ You can customize specific dates in a [Blazor Calendar](https://www.syncfusion.c
 
 
 ![Blazor Calendar with special dates](./images/blazor_calendar_special_dates.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LtrKXwAsAzhxrCMr?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
