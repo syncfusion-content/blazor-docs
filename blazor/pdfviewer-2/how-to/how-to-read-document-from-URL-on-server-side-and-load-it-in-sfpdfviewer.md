@@ -9,7 +9,7 @@ documentation: ug
 
 ## How to read a document from a URL on the server side and load it into a PDF viewer.
 
-We already support loading PDF documents from remote URLs. However, you can also load a document from a URL on the server side using the code provided below.
+We already support loading PDF documents from [remote URLs](https://blazor.syncfusion.com/documentation/pdfviewer-2/opening-pdf-file). However, you can also load a document from a URL on the server side using the code provided below.
 
 ```cshtml
 
