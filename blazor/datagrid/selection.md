@@ -509,23 +509,23 @@ You can get the selected row indexes by using [GetSelectedRowIndexes](https://he
     </GridColumns>
 </SfGrid>
 
-@code{
+@code {
 
     SfGrid<Order> Grid;
     public List<Order> Orders { get; set; }
-    public List<double> SelectedRowIndexes { get; set; }
-    public double[] TotalValue { get; set; }
+    public List<int> SelectedRowIndexes { get; set; }
+    public int[] TotalValue { get; set; }
     public string SelectedValue;
 
     protected override void OnInitialized()
     {
         Orders = Enumerable.Range(1, 75).Select(x => new Order()
-        {
-            OrderID = 1000 + x,
-            CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
-            Freight = 2.1 * x,
-            OrderDate = DateTime.Now.AddDays(-x),
-        }).ToList();
+            {
+                OrderID = 1000 + x,
+                CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
+                Freight = 2.1 * x,
+                OrderDate = DateTime.Now.AddDays(-x),
+            }).ToList();
     }
 
     public async Task GetSelectedRecords(RowSelectEventArgs<Order> args)
@@ -583,28 +583,28 @@ You can select multiple rows at the initial rendering of the datagrid by using [
     </GridColumns>
 </SfGrid>
 
-@code{
+@code {
 
     SfGrid<Order> Grid;
     public List<Order> Orders { get; set; }
-    List<double> SelectIndex { get; set; }
+    List<int> SelectIndex { get; set; }
 
     protected override void OnInitialized()
     {
         Orders = Enumerable.Range(1, 75).Select(x => new Order()
-        {
-            OrderID = 1000 + x,
-            CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
-            Freight = 2.1 * x,
-            OrderDate = DateTime.Now.AddDays(-x),
-        }).ToList();
+            {
+                OrderID = 1000 + x,
+                CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
+                Freight = 2.1 * x,
+                OrderDate = DateTime.Now.AddDays(-x),
+            }).ToList();
     }
 
     public async Task Data(object args)
     {
         var Source = await Grid.GetCurrentViewRecords();
         var IndexNum = 0;
-        SelectIndex = new List<double>();
+        SelectIndex = new List<int>();
         foreach (var record in Source)
         {
             if (record.CustomerID == "ALFKI")

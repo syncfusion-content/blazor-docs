@@ -167,6 +167,7 @@ N> Inside the **Template** RenderFragment, you can access the parameters passed 
 In the below sample, we have customized the Pager component in DataGrid control with custom button and input element to navigate between Grid pages. We have used **GotoPageAsync** method of Grid to navigate to specific page in DataGrid control.
 
 ```cshtml
+
 @using Syncfusion.Blazor.Grids
 
 <SfGrid @ref="defaultGrid" DataSource="students" AllowPaging="true">
@@ -249,7 +250,7 @@ In the below sample, we have customized the Pager component in DataGrid control 
     </GridColumns>
 </SfGrid>
 
-@code{
+@code {
     public SfGrid<Order> defaultGrid;
     public List<Order> students { get; set; }
     public int pageNo { get; set; }
@@ -262,13 +263,13 @@ In the below sample, we have customized the Pager component in DataGrid control 
     {
         base.OnInitialized();
         students = Enumerable.Range(1, 100).Select((x) => new Order()
-        {
-            OrderID = x,
-            CustomerID = (new string[] { "ALFKI", "ANATR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
-            Freight = 2.1 * x,
-            ShipCountry = new string[] { "Denmark", "Germany", "Austria", "Brazil", "Switzerland" }[new Random().Next(5)],
-            OrderDate = new DateTime[] { new DateTime(2010, 12, 19), new DateTime(2005, 08, 20), new DateTime(1991, 01, 10), new DateTime(1992, 10, 11), new DateTime(1999, 12, 14) }[new Random().Next(5)]
-        }).ToList();
+            {
+                OrderID = x,
+                CustomerID = (new string[] { "ALFKI", "ANATR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
+                Freight = 2.1 * x,
+                ShipCountry = new string[] { "Denmark", "Germany", "Austria", "Brazil", "Switzerland" }[new Random().Next(5)],
+                OrderDate = new DateTime[] { new DateTime(2010, 12, 19), new DateTime(2005, 08, 20), new DateTime(1991, 01, 10), new DateTime(1992, 10, 11), new DateTime(1999, 12, 14) }[new Random().Next(5)]
+            }).ToList();
     }
     protected override void OnAfterRender(bool firstRender)
     {
@@ -364,7 +365,7 @@ In the below sample, we have customized the Pager component in DataGrid control 
         }
         else
         {
-            double enteredPage = Convert.ToDouble(page.Value);
+            int enteredPage = Convert.ToInt32(page.Value);
             if (enteredPage <= totalPages)
                 defaultGrid.GoToPageAsync(enteredPage);
         }

@@ -512,7 +512,7 @@ The following sample code demonstrates the CRUD operation for complex objects wi
     <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true" Mode="EditMode.Normal"></GridEditSettings>
     <GridColumns>
         <GridColumn Field=@nameof(EmployeeData.CustomerID) HeaderText="CustomerID" IsPrimaryKey="true" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-        <GridColumn Field="Data.EmployeeID" HeaderText="EmployeeID" ValidationRules="@(new ValidationRules{ Required=true, Number=true, Range = new double[]{1, 2000}})" Width="130">
+        <GridColumn Field="Data.EmployeeID" HeaderText="EmployeeID" ValidationRules="@(new ValidationRules{ Required=true, Number=true, Range = new object[]{1, 2000}})" Width="130">
             <EditTemplate>
                 @{
                     <SfNumericTextBox ID="Data___EmployeeID" @bind-Value="@((context as EmployeeData).Data.EmployeeID)"></SfNumericTextBox>
@@ -525,30 +525,30 @@ The following sample code demonstrates the CRUD operation for complex objects wi
                 @{
                     <SfDropDownList ID="Data___FirstName" @bind-Value="@((context as EmployeeData).Data.FirstName)" TItem="EmployeeData" TValue="string" DataSource="@Employees">
                         <DropDownListFieldSettings Value="Data.FirstName" Text="Data.FirstName"></DropDownListFieldSettings>
-                        </SfDropDownList>
-                        }
-                </EditTemplate>
+                    </SfDropDownList>
+                }
+            </EditTemplate>
         </GridColumn>
         <GridColumn Field=@nameof(EmployeeData.Title) HeaderText="Title" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
 
-@code{
+@code {
     public List<EmployeeData> Employees { get; set; }
 
     protected override void OnInitialized()
     {
         Employees = Enumerable.Range(1, 9).Select(x => new EmployeeData()
-        {
-            CustomerID = x,
-            Data = new EmployeeName()
             {
-                FirstName = (new string[] { "Nancy", "Andrew", "Janet", "Margaret", "Steven" })[new Random().Next(5)],
-                EmployeeID = 1000 + x
-            },
-            Title = (new string[] { "Sales Representative", "Vice President, Sales", "Sales Manager",
+                CustomerID = x,
+                Data = new EmployeeName()
+                {
+                    FirstName = (new string[] { "Nancy", "Andrew", "Janet", "Margaret", "Steven" })[new Random().Next(5)],
+                    EmployeeID = 1000 + x
+                },
+                Title = (new string[] { "Sales Representative", "Vice President, Sales", "Sales Manager",
                                       "Inside Sales Coordinator" })[new Random().Next(4)],
-        }).ToList();
+            }).ToList();
     }
 
     public class EmployeeData

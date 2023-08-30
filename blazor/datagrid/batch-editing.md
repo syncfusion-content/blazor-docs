@@ -123,6 +123,7 @@ In the following example:
 * `OnCellEdit` event callback is assigned in which the `Data` property is assigned with a custom object for handling edit operation.
 
 ```csharp
+@using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Orders" Toolbar="@(new List<string>() { "Add", "Update", "Cancel" })">
     <GridEditSettings AllowEditing="true" AllowAdding="true" Mode="EditMode.Batch"></GridEditSettings>
@@ -142,13 +143,13 @@ In the following example:
     protected override void OnInitialized()
     {
         Orders = Enumerable.Range(1, 10).Select(x => new Order(1000 + x)
-        {
-            OrderID = 1000 + x,
-            CustomerID = (new string[] { "ALFKI",
+            {
+                OrderID = 1000 + x,
+                CustomerID = (new string[] { "ALFKI",
                 "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
-            Freight = (new double[] { 2, 1, 4, 5, 3 })[new Random().Next(5)] * x,
-            OrderDate = (new DateTime[] { new DateTime(2019, 01, 01), new DateTime(2019, 01, 02) })[new Random().Next(2)]
-        }).ToList();
+                Freight = (new double[] { 2, 1, 4, 5, 3 })[new Random().Next(5)] * x,
+                OrderDate = (new DateTime[] { new DateTime(2019, 01, 01), new DateTime(2019, 01, 02) })[new Random().Next(2)]
+            }).ToList();
     }
 
     public void BeforeAdd(BeforeBatchAddArgs<Order> arg)
@@ -160,24 +161,23 @@ In the following example:
     {
         //Return args.Data if it is not null, so previously edited data will not be lost.
         arg.Data = arg.Data ?? new Order(arg.RowData.OrderID)
-        {
-            CustomerID = arg.RowData.CustomerID,
-            Freight = arg.RowData.Freight,
-            OrderDate = arg.RowData.OrderDate
-        };
+            {
+                CustomerID = arg.RowData.CustomerID,
+                Freight = arg.RowData.Freight,
+                OrderDate = arg.RowData.OrderDate
+            };
     }
 
     // This class does not contain any parameter-less constructor, hence this cannot be instantiated using Activator.CreateInstance.
     public class Order
     {
         public Order(int orderid) => OrderID = orderid;
-        public int? OrderID { get; set; }
+        public int OrderID { get; set; }
         public string CustomerID { get; set; }
         public DateTime? OrderDate { get; set; }
         public double? Freight { get; set; }
     }
 }
-
 ```
 
 ## Confirmation dialog
