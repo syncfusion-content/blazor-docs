@@ -19,38 +19,45 @@ Once column resizing is enabled, columns width can be resized by clicking and dr
 <SfGrid DataSource="@Orders" AllowResizing="true">
     <GridColumns>
         <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.OrderDate) HeaderText="Order Date" Visible="false" Format="d" TextAlign="TextAlign.Right" Width="130" Type="ColumnType.Date"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer ID" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(Order.ShipCity) HeaderText="Ship City" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(Order.ShipName) HeaderText="Ship Name" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(Order.ShipCountry) HeaderText="Ship Country" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(Order.ShipAddress) HeaderText="Ship Address" Width="150"></GridColumn>
         <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
 
-@code{
+@code {
     public List<Order> Orders { get; set; }
 
     protected override void OnInitialized()
     {
         Orders = Enumerable.Range(1, 75).Select(x => new Order()
-        {
-            OrderID = 1000 + x,
-            CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
-            Freight = 2.1 * x,
-            OrderDate = DateTime.Now.AddDays(-x),
-        }).ToList();
+            {
+                OrderID = 1000 + x,
+                CustomerID = (new string[] { "VINET", "TOMSP", "HANAR", "VICTE", "SUPRD" })[new Random().Next(5)],
+                ShipCity = (new string[] { "Reims", "Münster", "Rio de Janeiro	Hanari Carnes", "Lyon", "Charleroi" })[new Random().Next(5)],
+                ShipName = (new string[] { "Vins et alcools Chevalier", "Toms Spezialitäten", "Hanari Carnes", "Victuailles en stock", "Suprêmes délices" })[new Random().Next(5)],
+                ShipCountry = (new string[] { "France", "Germany", "Brazil", "Belgium", "Venezuela" })[new Random().Next(5)],
+                ShipAddress = (new string[] { "59 rue de l Abbaye", "Luisenstr. 48", "Rua do Paço, 67", "2, rue du Commerce", "Boulevard Tirou, 255" })[new Random().Next(5)],
+                Freight = 2.1 * x,
+            }).ToList();
     }
 
-    public class Order {
+    public class Order
+    {
         public int? OrderID { get; set; }
         public string CustomerID { get; set; }
-        public DateTime? OrderDate { get; set; }
+        public string ShipCity { get; set; }
+        public string ShipName { get; set; }
+        public string ShipCountry { get; set; }
+        public string ShipAddress { get; set; }
         public double? Freight { get; set; }
     }
 }
 ```
-
-The following GIF represents column resizing, 
-
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VZVgtdVjqdvYDSkc?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VNhAjvKMizzuBlIe?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 > You can disable resizing for a particular column by setting the [AllowResizing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_AllowResizing) property of **GridColumn** component to false.
 <br/> In RTL mode, you can click and drag the left edge of the header cell to resize the column.
@@ -69,57 +76,12 @@ In the below code, **CustomerID** and **Freight** columns are defined with minim
 
 <SfGrid DataSource="@Orders" AllowResizing="true">
     <GridColumns>
-        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" MinWidth="10" Width="120" MaxWidth="200"></GridColumn>
-        <GridColumn Field=@nameof(Order.OrderDate) HeaderText="Order Date" Format="d" TextAlign="TextAlign.Right" Width="130" Type="ColumnType.Date"></GridColumn>
-        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" MinWidth="10" Width="120" MaxWidth="200"></GridColumn>  
-    </GridColumns>
-</SfGrid>
-
-@code{
-    public List<Order> Orders { get; set; }
-
-    protected override void OnInitialized()
-    {
-        Orders = Enumerable.Range(1, 75).Select(x => new Order()
-        {
-            OrderID = 1000 + x,
-            CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
-            Freight = 2.1 * x,
-            OrderDate = DateTime.Now.AddDays(-x),
-        }).ToList();
-    }
-
-    public class Order {
-        public int? OrderID { get; set; }
-        public string CustomerID { get; set; }
-        public DateTime? OrderDate { get; set; }
-        public double? Freight { get; set; }
-    }
-}
-```
-
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BDBqZnLjgGjZMowQ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
->  The [MinWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_MinWidth) and [MaxWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_MaxWidth)     properties will be considered only when the user resizes the column. When resizing the window, these properties will not be considered. This is because columns cannot be re-rendered when resizing the window.
-<br/>  When setting the MinWidth and MaxWidth properties, ensure that the values are appropriate for your data and layout requirements.
-<br/> The specified MinWidth and MaxWidth values take precedence over any user-initiated resizing attempts that fall outside the defined range.
-
-## Prevent resizing for particular column
-
-The Grid component provides the ability to prevent resizing for a particular column. This can be useful if you want to maintain a consistent column width or prevent users from changing the width of a column.
-
-You can disable resizing for a particular column by setting the [AllowResizing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_AllowResizing) property of the column to false. The following example demonstrates, how to disabled resize for Customer ID column.
-
-```cshtml
-
-@using Syncfusion.Blazor.Grids
-
-<SfGrid DataSource="@Orders" AllowResizing="true">
-    <GridColumns>
-        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" AllowResizing="false" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.OrderDate) HeaderText="Order Date" Visible="false" Format="d" TextAlign="TextAlign.Right" Width="130" Type="ColumnType.Date"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" MinWidth="100" MaxWidth="250" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer ID" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(Order.ShipCity) HeaderText="Ship City" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(Order.ShipName) HeaderText="Ship Name" MinWidth="150" MaxWidth="300" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(Order.ShipCountry) HeaderText="Ship Country" MinWidth="150" MaxWidth="280" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(Order.ShipAddress) HeaderText="Ship Address" Width="150"></GridColumn>
         <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
@@ -132,9 +94,12 @@ You can disable resizing for a particular column by setting the [AllowResizing](
         Orders = Enumerable.Range(1, 75).Select(x => new Order()
             {
                 OrderID = 1000 + x,
-                CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
+                CustomerID = (new string[] { "VINET", "TOMSP", "HANAR", "VICTE", "SUPRD" })[new Random().Next(5)],
+                ShipCity = (new string[] { "Reims", "Münster", "Rio de Janeiro	Hanari Carnes", "Lyon", "Charleroi" })[new Random().Next(5)],
+                ShipName = (new string[] { "Vins et alcools Chevalier", "Toms Spezialitäten", "Hanari Carnes", "Victuailles en stock", "Suprêmes délices" })[new Random().Next(5)],
+                ShipCountry = (new string[] { "France", "Germany", "Brazil", "Belgium", "Venezuela" })[new Random().Next(5)],
+                ShipAddress = (new string[] { "59 rue de l Abbaye", "Luisenstr. 48", "Rua do Paço, 67", "2, rue du Commerce", "Boulevard Tirou, 255" })[new Random().Next(5)],
                 Freight = 2.1 * x,
-                OrderDate = DateTime.Now.AddDays(-x),
             }).ToList();
     }
 
@@ -142,12 +107,63 @@ You can disable resizing for a particular column by setting the [AllowResizing](
     {
         public int? OrderID { get; set; }
         public string CustomerID { get; set; }
-        public DateTime? OrderDate { get; set; }
+        public string ShipCity { get; set; }
+        public string ShipName { get; set; }
+        public string ShipCountry { get; set; }
+        public string ShipAddress { get; set; }
         public double? Freight { get; set; }
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rXVKtvtpJCATAmMu?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hjrUXFgsifkHQlPe?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+>  The [MinWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_MinWidth) and [MaxWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_MaxWidth)     properties will be considered only when the user resizes the column. When resizing the window, these properties will not be considered. This is because columns cannot be re-rendered when resizing the window.
+<br/>  When setting the MinWidth and MaxWidth properties, ensure that the values are appropriate for your data and layout requirements.
+<br/> The specified MinWidth and MaxWidth values take precedence over any user-initiated resizing attempts that fall outside the defined range.
+
+## Prevent resizing for particular column
+
+The Grid component provides the ability to prevent resizing for a particular column. This can be useful if you want to maintain a consistent column width or prevent users from changing the width of a column.
+
+You can disable resizing for a particular column by setting the [AllowResizing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_AllowResizing) property of the column to false. The following example demonstrates, how to disabled resize for Customer ID column.
+
+```cshtml
+@using Syncfusion.Blazor.Grids
+
+<SfGrid DataSource="@Orders" AllowResizing="true">
+    <GridColumns>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" MinWidth="100" MaxWidth="250" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer ID" AllowResizing="false" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(Order.ShipCity) HeaderText="Ship City" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code {
+    public List<Order> Orders { get; set; }
+
+    protected override void OnInitialized()
+    {
+        Orders = Enumerable.Range(1, 75).Select(x => new Order()
+            {
+                OrderID = 1000 + x,
+                CustomerID = (new string[] { "VINET", "TOMSP", "HANAR", "VICTE", "SUPRD" })[new Random().Next(5)],
+                ShipCity = (new string[] { "Reims", "Münster", "Rio de Janeiro	Hanari Carnes", "Lyon", "Charleroi" })[new Random().Next(5)],
+                Freight = 2.1 * x,
+            }).ToList();
+    }
+
+    public class Order
+    {
+        public int? OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public string ShipCity { get; set; }
+        public double? Freight { get; set; }
+    }
+}
+```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hNhgXlKWWyIHyULH?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Resize stacked header column
 
@@ -163,25 +179,33 @@ In this below code, we have disabled resize for ShipCountry column.
         <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
         <GridColumn HeaderText=" Order Details">
             <GridColumns>
-                <GridColumn Field=@nameof(Order.OrderDate) Width="130" HeaderText="Order Date" Format="d" TextAlign="TextAlign.Right" MinWidth="10"></GridColumn>
+                <GridColumn Field=@nameof(Order.OrderDate) Width="130" HeaderText="Order Date" Format="d" TextAlign="TextAlign.Right" AllowResizing="false" MinWidth="10"></GridColumn>
                 <GridColumn Field=@nameof(Order.Freight) Width="135" HeaderText="Freight($)" Format="C2" TextAlign="TextAlign.Right" MinWidth="10" AllowResizing=false></GridColumn>
+            </GridColumns>
+        </GridColumn>
+        <GridColumn HeaderText=" Ship Details">
+            <GridColumns>
+                <GridColumn Field=@nameof(Order.ShipCity) Width="130" HeaderText="Ship City" TextAlign="TextAlign.Right"AllowResizing="false" MinWidth="10"></GridColumn>
+                <GridColumn Field=@nameof(Order.ShipCountry) Width="135" HeaderText="Ship Country"  TextAlign="TextAlign.Right" MinWidth="10" AllowResizing=false></GridColumn>
             </GridColumns>
         </GridColumn>
     </GridColumns>
 </SfGrid>
 
-@code{
+@code {
     public List<Order> Orders { get; set; }
 
     protected override void OnInitialized()
     {
         Orders = Enumerable.Range(1, 75).Select(x => new Order()
-        {
-            OrderID = 1000 + x,
-            CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
-            Freight = 2.1 * x,
-            OrderDate = DateTime.Now.AddDays(-x),
-        }).ToList();
+            {
+                OrderID = 1000 + x,
+                CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
+                ShipCity = (new string[] { "Reims", "Münster", "Rio de Janei", "Lyon", "Charleroi" })[new Random().Next(5)],
+                ShipCountry = (new string[] { "France", "Germany", "Brazil", "Belgium", "Switzerland" })[new Random().Next(5)],
+                Freight = 2.1 * x,
+                OrderDate = DateTime.Now.AddDays(-x),
+            }).ToList();
     }
 
     public class Order
@@ -190,13 +214,15 @@ In this below code, we have disabled resize for ShipCountry column.
         public string CustomerID { get; set; }
         public DateTime? OrderDate { get; set; }
         public double? Freight { get; set; }
+        public string ShipCity { get; set; }
+        public string ShipCountry { get; set; }
     }
 }
 ```
 
 Resizing of stacked header is shown below
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rDLUjnhjUwMtMfBC?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rXBqNvAsMRATxyUc?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Touch interaction
 

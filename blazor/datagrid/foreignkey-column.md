@@ -32,37 +32,37 @@ In this example, data is the local data source for the Grid, and **Employee Name
     <GridColumns>
         <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
         <GridForeignColumn Field=@nameof(Order.EmployeeID) HeaderText="Employee Name" ForeignKeyValue="FirstName" ForeignDataSource="@Employees" Width="150"></GridForeignColumn>
-        <GridColumn Field=@nameof(Order.OrderDate) HeaderText="Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
         <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.ShipCity) HeaderText="Ship City" TextAlign="TextAlign.Right" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
 
-@code{
+@code {
     public List<Order> Orders { get; set; }
     public List<EmployeeData> Employees { get; set; }
 
     protected override void OnInitialized()
     {
         Orders = Enumerable.Range(1, 75).Select(x => new Order()
-        {
-            OrderID = 1000 + x,
-            EmployeeID = x,
-            Freight = 2.1 * x,
-            OrderDate = DateTime.Now.AddDays(-x),
-        }).ToList();
+            {
+                OrderID = 1000 + x,
+                EmployeeID = x,
+                Freight = 2.1 * x,
+                ShipCity = (new string[] { "Reims", "Münster", "Rio de Janeiro", "Lyon", "Charleroi" })[new Random().Next(5)]
+            }).ToList();
 
         Employees = Enumerable.Range(1, 75).Select(x => new EmployeeData()
-        {
-            EmployeeID = x,
-            FirstName = (new string[] { "Nancy", "Andrew", "Janet", "Margaret", "Steven" })[new Random().Next(5)],
-        }).ToList();
+            {
+                EmployeeID = x,
+                FirstName = (new string[] { "Nancy", "Andrew", "Janet", "Margaret", "Steven" })[new Random().Next(5)],
+            }).ToList();
     }
 
     public class Order
     {
         public int? OrderID { get; set; }
         public int? EmployeeID { get; set; }
-        public DateTime? OrderDate { get; set; }
+        public string ShipCity { get; set; }
         public double? Freight { get; set; }
     }
 
@@ -73,8 +73,7 @@ In this example, data is the local data source for the Grid, and **Employee Name
     }
 }
 ```
-
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BNVKXdVDrYcRtxgH?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VjrqNPVEApFgHAZq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Binding remote data
 
@@ -83,6 +82,7 @@ The Foreign key column in Syncfusion Grid allows you to bind remote data for a f
 This example demonstrates how to use the foreign key column with remote data binding using the ```ODataAdaptor``` in the grid:
 
 ```cshtml
+
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Grids.Internal
@@ -94,32 +94,32 @@ This example demonstrates how to use the foreign key column with remote data bin
             <Syncfusion.Blazor.Data.SfDataManager Url="https://js.syncfusion.com/demos/ejServices/Wcf/Northwind.svc/Employees" CrossDomain="true" Adaptor="Adaptors.ODataAdaptor">
             </Syncfusion.Blazor.Data.SfDataManager>
         </GridForeignColumn>
-        <GridColumn Field=@nameof(Order.OrderDate) HeaderText="Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
         <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.ShipCity) HeaderText="Ship City" TextAlign="TextAlign.Right" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
 
 
-@code{
+@code {
 
     public List<Order> Orders { get; set; }
 
     protected override void OnInitialized()
     {
         Orders = Enumerable.Range(1, 75).Select(x => new Order()
-        {
-            OrderID = 1000 + x,
-            EmployeeID = x,
-            Freight = 2.1 * x,
-            OrderDate = DateTime.Now.AddDays(-x),
-        }).ToList();
+            {
+                OrderID = 1000 + x,
+                EmployeeID = x,
+                Freight = 2.1 * x,
+                ShipCity = (new string[] { "Reims", "Münster", "Rio de Janeiro", "Lyon", "Charleroi" })[new Random().Next(5)]
+            }).ToList();
     }
 
     public class Order
     {
         public int? OrderID { get; set; }
         public int? EmployeeID { get; set; }
-        public DateTime? OrderDate { get; set; }
+        public string ShipCity { get; set; }
         public double? Freight { get; set; }
     }
 
@@ -130,9 +130,7 @@ This example demonstrates how to use the foreign key column with remote data bin
     }
 }
 ```
-
-The following image represents foreign key column
-![Blazor DataGrid with Foreignkey Column](./images/blazor-datagrid-foreignkey-column.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BXLqNbLEUlFHrpgP?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 > * For remote data, the sorting and grouping is done based on [ForeignKeyField](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_ForeignKeyField) instead of [ForeignKeyValue](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_ForeignKeyValue).
 > * If [ForeignKeyField](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_ForeignKeyField) is not defined, then the column uses [Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_StackingGroup) property of **GridColumn** tag helper.
@@ -145,50 +143,50 @@ In the following code example, the Employee Name is a foreign key column. When e
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
-@using Syncfusion.Blazor.DropDowns 
+@using Syncfusion.Blazor.DropDowns
 
-<SfGrid DataSource="@Orders" Height="315" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Cancel", "Update" })" >
+<SfGrid DataSource="@Orders" Height="315" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Cancel", "Update" })">
     <GridEditSettings AllowAdding="true" AllowDeleting="true" AllowEditing="true"></GridEditSettings>
     <GridColumns>
         <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" IsPrimaryKey="true" Width="120"></GridColumn>
         <GridForeignColumn Field=@nameof(Order.EmployeeID) HeaderText="Employee Name" ForeignKeyValue="FirstName" ForeignDataSource="@Employees" Width="150">
             <EditTemplate>
-                <SfComboBox TValue="int?" TItem="EmployeeData"  @bind-Value="@((context as Order).EmployeeID)" DataSource="Employees">
+                <SfComboBox TValue="int?" TItem="EmployeeData" @bind-Value="@((context as Order).EmployeeID)" DataSource="Employees">
                     <ComboBoxFieldSettings Value="EmployeeID" Text="FirstName"></ComboBoxFieldSettings>
                 </SfComboBox>
             </EditTemplate>
         </GridForeignColumn>
-        <GridColumn Field=@nameof(Order.OrderDate) HeaderText="Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
-        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="N2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.ShipCity) HeaderText="Ship City"  TextAlign="TextAlign.Right" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
 
-@code{
+@code {
     public List<Order> Orders { get; set; }
     public List<EmployeeData> Employees { get; set; }
 
     protected override void OnInitialized()
     {
         Orders = Enumerable.Range(1, 75).Select(x => new Order()
-        {
-            OrderID = 1000 + x,
-            EmployeeID = x,
-            Freight = 2.1 * x,
-            OrderDate = DateTime.Now.AddDays(-x),
-        }).ToList();
+            {
+                OrderID = 1000 + x,
+                EmployeeID = x,
+                Freight = 2.1 * x,
+                ShipCity = (new string[] { "Reims", "Münster", "Rio de Janeiro", "Lyon", "Charleroi" })[new Random().Next(5)]
+            }).ToList();
 
         Employees = Enumerable.Range(1, 75).Select(x => new EmployeeData()
-        {
-            EmployeeID = x,
-            FirstName = (new string[] { "Nancy", "Andrew", "Janet", "Margaret", "Steven" })[new Random().Next(5)],
-        }).ToList();
+            {
+                EmployeeID = x,
+                FirstName = (new string[] { "Nancy", "Andrew", "Janet", "Margaret", "Steven" })[new Random().Next(5)],
+            }).ToList();
     }
 
     public class Order
     {
         public int? OrderID { get; set; }
         public int? EmployeeID { get; set; }
-        public DateTime? OrderDate { get; set; }
+        public string  ShipCity { get; set; }
         public double? Freight { get; set; }
     }
 
@@ -200,7 +198,7 @@ In the following code example, the Employee Name is a foreign key column. When e
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BjBqZRLVqZykQDXM?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LXhKZvhkJNtkLPiD?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Customize filter UI in foreignkey column
 
@@ -222,40 +220,40 @@ In this example, a DropDownList component is rendered as the filter UI for the *
             <FilterTemplate>
                 <SfDropDownList Placeholder="FirstName" ID="FirstName" @bind-Value="@((context as PredicateModel<string>).Value)" TItem="EmployeeData" TValue="string" DataSource="@Employees">
                     <DropDownListFieldSettings Value="FirstName" Text="FirstName"></DropDownListFieldSettings>
-                </SfDropDownList>                
+                </SfDropDownList>
             </FilterTemplate>
         </GridForeignColumn>
-        <GridColumn Field=@nameof(Order.OrderDate) HeaderText="Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
-        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+       <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.ShipCity) HeaderText="Ship City" TextAlign="TextAlign.Right" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
 
-@code{
+@code {
     public List<Order> Orders { get; set; }
     public List<EmployeeData> Employees { get; set; }
-   
+
     protected override void OnInitialized()
     {
         Orders = Enumerable.Range(1, 75).Select(x => new Order()
-        {
-            OrderID = 1000 + x,
-            EmployeeID = x,
-            Freight = 2.1 * x,
-            OrderDate = DateTime.Now.AddDays(-x),
-        }).ToList();
+            {
+                OrderID = 1000 + x,
+                EmployeeID = x,
+                Freight = 2.1 * x,
+                ShipCity = (new string[] { "Reims", "Münster", "Rio de Janeiro", "Lyon", "Charleroi" })[new Random().Next(5)]
+            }).ToList();
 
         Employees = Enumerable.Range(1, 75).Select(x => new EmployeeData()
-        {
-            EmployeeID = x,
-            FirstName = (new string[] { "Nancy", "Andrew", "Janet", "Margaret", "Steven" })[new Random().Next(5)],
-        }).ToList();
+            {
+                EmployeeID = x,
+                FirstName = (new string[] { "Nancy", "Andrew", "Janet", "Margaret", "Steven" })[new Random().Next(5)],
+            }).ToList();
     }
 
     public class Order
     {
         public int? OrderID { get; set; }
         public int? EmployeeID { get; set; }
-        public DateTime? OrderDate { get; set; }
+        public string ShipCity { get; set; }
         public double? Freight { get; set; }
     }
 
@@ -263,11 +261,11 @@ In this example, a DropDownList component is rendered as the filter UI for the *
     {
         public int? EmployeeID { get; set; }
         public string FirstName { get; set; }
-    }    
+    }
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VXVqNRVZUZKLljyB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXVANFhuJXacZjCR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 > [View Sample in GitHub.](https://github.com/SyncfusionExamples/blazor-datagrid-customize-filter-ui-in-foreignkey-column)
 
@@ -371,13 +369,13 @@ In the following example, Employee Name and Ship City are foreign key columns th
 ```cshtml
 @using Syncfusion.Blazor.Grids
 
-<SfGrid DataSource="@Orders" Height="315" AllowFiltering="true">
+<SfGrid DataSource="@Orders" Height="315" Toolbar="@(new List<string>() { "Add", "Delete", "Update", "Cancel" })">
+    <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true" Mode="EditMode.Batch"></GridEditSettings>
     <GridColumns>
-        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-        <GridForeignColumn Field=@nameof(Order.EmployeeID) HeaderText="Employee Name" ForeignKeyValue="FirstName" ForeignDataSource="@Employees" Width="150"></GridForeignColumn>
-        <GridColumn Field=@nameof(Order.OrderDate) HeaderText="Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
-        <GridForeignColumn Field=@nameof(Order.ShipID) HeaderText=" Ship City" ForeignKeyValue="ShipCity" ForeignDataSource="@Countries" Width="150"></GridForeignColumn>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" IsPrimaryKey="true" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridForeignColumn Field=@nameof(Order.EmployeeID) HeaderText="Customer Name" ForeignKeyValue="FirstName" ForeignDataSource="@Employees" Width="150"></GridForeignColumn>
         <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridForeignColumn Field=@nameof(Order.ShipID) HeaderText=" Ship City" ForeignKeyValue="ShipCity" ForeignDataSource="@Countries" Width="150"></GridForeignColumn>
     </GridColumns>
 </SfGrid>
 
@@ -392,9 +390,8 @@ In the following example, Employee Name and Ship City are foreign key columns th
             {
                 OrderID = 1000 + x,
                 EmployeeID = x,
-                ShipID=x,
+                ShipID = x,
                 Freight = 2.1 * x,
-                OrderDate = DateTime.Now.AddDays(-x),
             }).ToList();
 
         Employees = Enumerable.Range(1, 75).Select(x => new EmployeeData()
@@ -416,7 +413,6 @@ In the following example, Employee Name and Ship City are foreign key columns th
         public int? OrderID { get; set; }
         public int? EmployeeID { get; set; }
         public int? ShipID { get; set; }
-        public DateTime? OrderDate { get; set; }
         public double? Freight { get; set; }
     }
 
@@ -433,7 +429,7 @@ In the following example, Employee Name and Ship City are foreign key columns th
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rNLAXbDVAnRblrgO?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hDrqtlUtWegcarwv?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 
 ### Prevent filter query generation for foreignkey column

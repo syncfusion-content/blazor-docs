@@ -35,12 +35,12 @@ The default menu items are displayed in the following table,
     <GridColumns>
         <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Center" Width="120"></GridColumn>
         <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150" TextAlign="TextAlign.Center" ShowColumnMenu="false"></GridColumn>
-        <GridColumn Field=@nameof(Order.OrderDate) HeaderText="Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Center" Width="130"></GridColumn>
         <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Center" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.ShipCity) HeaderText="Ship City" TextAlign="TextAlign.Center" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
 
-@code{
+@code {
     public string[] MenuItems = new string[] { "Group", "Ungroup", "ColumnChooser", "Filter" };
 
     public List<Order> Orders { get; set; }
@@ -48,19 +48,19 @@ The default menu items are displayed in the following table,
     protected override void OnInitialized()
     {
         Orders = Enumerable.Range(1, 75).Select(x => new Order()
-        {
-            OrderID = 1000 + x,
-            CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
-            Freight = 2.1 * x,
-            OrderDate = DateTime.Now.AddDays(-x),
-        }).ToList();
+            {
+                OrderID = 1000 + x,
+                CustomerID = (new string[] { "VINET", "TOMSP", "HANAR", "VICTE", "SUPRD" })[new Random().Next(5)],
+                Freight = 2.1 * x,
+                ShipCity = (new string[] { "Reims", "Münster", "Rio de Janeiro", "Lyon", "Charleroi" })[new Random().Next(5)]
+            }).ToList();
     }
 
     public class Order
     {
         public int? OrderID { get; set; }
         public string CustomerID { get; set; }
-        public DateTime? OrderDate { get; set; }
+        public string ShipCity { get; set; }
         public double? Freight { get; set; }
     }
 }
@@ -71,7 +71,7 @@ The default menu items are displayed in the following table,
 
 The following image represents DataGrid with column menu property enabled,
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BDVgNnBtTygLwktv?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rtVgXlKWrHoasnhi?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Add custom column menu item
 
@@ -151,9 +151,9 @@ Here is an example of how to configure the `ColumnMenuItems` property to include
     <GridGroupSettings ShowGroupedColumn="true"></GridGroupSettings>
     <GridColumns>
         <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Center" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150" TextAlign="TextAlign.Center" ShowColumnMenu="false"></GridColumn>
-        <GridColumn Field=@nameof(Order.OrderDate) HeaderText="Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Center" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer ID" Width="150" TextAlign="TextAlign.Center" ShowColumnMenu="false"></GridColumn>
         <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Center" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.ShipCountry) HeaderText="Ship Country" TextAlign="TextAlign.Center" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
 
@@ -166,25 +166,25 @@ Here is an example of how to configure the `ColumnMenuItems` property to include
     public List<ColumnMenuItemModel> menuItem = new List<ColumnMenuItemModel> { new ContextMenuItemModel { Text = "Group", Id = "group" }, new ContextMenuItemModel { Text = "UnGroup", Id = "UnGroup" }, new ContextMenuItemModel { Text = "ColumnChooser", Id = "ColumnChooser" }, new ContextMenuItemModel { Text = "SubMenu", Id = "SubMenu", Items = (new List<MenuItem> { new MenuItem { Text = "Option1", Id = "Uniq", Items = (new List<MenuItem> { new MenuItem { Text = "Nested", Id = "New" } }) } }) } };
 
     protected override void OnInitialized() => Orders = Enumerable.Range(1, 75).Select(x => new Order()
-    {
-         OrderID = 1000 + x,
-         CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
-         Freight = 2.1 * x,
-         OrderDate = DateTime.Now.AddDays(-x),
-    }).ToList();
+        {
+            OrderID = 1000 + x,
+            CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
+            Freight = 2.1 * x,
+            ShipCountry = (new string[] { "France", "Germany", "Brazil", "Belgium", "Switzerland" })[new Random().Next(5)]
+        }).ToList();
 
 
     public class Order
     {
         public int? OrderID { get; set; }
         public string CustomerID { get; set; }
-        public DateTime? OrderDate { get; set; }
+        public string ShipCountry { get; set; }
         public double? Freight { get; set; }
     }
 
     public void ColumnMenuItemClickedHandler(ColumnMenuClickEventArgs args)
     {
-        if (args.Item.Text== "Group")
+        if (args.Item.Text == "Group")
         {
             DefaultGrid.GroupColumnAsync("CustomerID");
 
@@ -193,7 +193,7 @@ Here is an example of how to configure the `ColumnMenuItems` property to include
         {
             DefaultGrid.UngroupColumnAsync("CustomerID");
         }
-        else if(args.Item.Text=="ColumnChooser")
+        else if (args.Item.Text == "ColumnChooser")
         {
             DefaultGrid.OpenColumnChooserAsync(10, 10);
         }
@@ -201,15 +201,13 @@ Here is an example of how to configure the `ColumnMenuItems` property to include
         {
             // Here, you can customize your code.
         }
-        else 
+        else
         {
             // Here, you can customize your code.
         }
     }
 }
 ```
-{% previewsample "" %}
-
 ## Customize column menu icon in Blazor DataGrid Component
 
 To customize the column menu icon, you need to override the default grid class `.e-icons.e-columnmenu` with a custom CSS property called **content**. By specifying a Unicode character or an icon font’s CSS class, you can change the icon displayed in the column menu.
@@ -232,30 +230,30 @@ Here is an example that demonstrates how to customize the column menu icon in th
     <GridColumns>
         <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Center" Width="120"></GridColumn>
         <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" TextAlign="TextAlign.Center" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type=ColumnType.Date TextAlign="TextAlign.Center" Width="120"></GridColumn>
         <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Center" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.ShipName) HeaderText="Ship Name"  TextAlign="TextAlign.Center" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
 
-@code{
+@code {
 
     public List<Order> Orders { get; set; }
 
     protected override void OnInitialized()
     {
         Orders = Enumerable.Range(1, 75).Select(x => new Order()
-        {
-            OrderID = 1000 + x,
-            CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
-            Freight = 2.5 * x,
-            OrderDate = DateTime.Now.AddDays(-x),
-        }).ToList();
+            {
+                OrderID = 1000 + x,
+                CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
+                Freight = 2.5 * x,
+                ShipName = (new string[] { "Vins et alcools Cheva", "Toms Spezialitäten", "Hanari Carnes", "Victuailles en stock", "Suprêmes délices" })[new Random().Next(5)]
+            }).ToList();
     }
     public class Order
     {
         public int? OrderID { get; set; }
         public string CustomerID { get; set; }
-        public DateTime? OrderDate { get; set; }
+        public string ShipName { get; set; }
         public double? Freight { get; set; }
     }
 }
@@ -266,10 +264,7 @@ Here is an example that demonstrates how to customize the column menu icon in th
     }
 </style>
 ```
-
-The following image represents datagrid with customized column menu icon
-
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BDLAZHLQgLLENvHI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hXVgtFUWqeXuHAjQ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 
 
