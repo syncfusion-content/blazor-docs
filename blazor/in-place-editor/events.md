@@ -21,7 +21,7 @@ The [BeginEdit](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InPlaceE
 @using Syncfusion.Blazor.InPlaceEditor
 
 <SfInPlaceEditor TValue="string">
-    <InPlaceEditorEvents BeginEdit="@BeginEditHandler" TValue="string"></InPlaceEditorEvents>
+    <InPlaceEditorEvents TValue="string" BeginEdit="@BeginEditHandler"></InPlaceEditorEvents>
 </SfInPlaceEditor>
 @code{
 
@@ -63,7 +63,7 @@ The [EndEdit](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InPlaceEdi
 @using Syncfusion.Blazor.InPlaceEditor
 
 <SfInPlaceEditor TValue="string">
-    <InPlaceEditorEvents EndEdit="@EndEditHandler" TValue="string"></InPlaceEditorEvents>
+    <InPlaceEditorEvents TValue="string" EndEdit="@EndEditHandler"></InPlaceEditorEvents>
 </SfInPlaceEditor>
 @code{
 
