@@ -42,13 +42,13 @@ N> Syncfusion Blazor components are available in [nuget.org](https://www.nuget.o
 
 ## Register Syncfusion Blazor Service
 
-Open **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Navigations` namespace.
+Open **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Popups` namespace.
 
 {% tabs %}
 {% highlight razor tabtitle="~/_Imports.razor" %}
 
 @using Syncfusion.Blazor
-@using Syncfusion.Blazor.Navigations
+@using Syncfusion.Blazor.Popups
 
 {% endhighlight %}
 {% endtabs %}
@@ -113,10 +113,12 @@ N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/app
 
 ## Add Blazor Tooltip component
 
-Add the Syncfusion Blazor Tooltip component in the **~/Pages/Index.razor** file.
+Integrate the Syncfusion Blazor Tooltip component with the Syncfusion Blazor [Button](https://blazor.syncfusion.com/documentation/button/getting-started) component in the ~/Pages/Index.razor file.
 
 {% tabs %}
 {% highlight razor %}
+
+@using Syncfusion.Blazor.Buttons
 
 <SfTooltip ID="Tooltip" Target="#btn" Content="@Content">
     <SfButton ID="btn" Content="Show Tooltip"></SfButton>
