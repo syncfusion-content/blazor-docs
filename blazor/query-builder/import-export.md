@@ -121,7 +121,7 @@ Exporting allows to save or maintain the created conditions through the [Blazor 
 
 ## Exporting to SQL
 
-The defined conditions can be exported to the SQL query through the [GetSqlFromRules](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_GetSqlFromRules) method.
+The defined conditions can be exported to the SQL query through the [GetSqlFromRules](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder-1.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_1_GetSqlFromRules_Syncfusion_Blazor_QueryBuilder_RuleModel_System_Boolean_) method.
 
 ```cshtml
 @using Syncfusion.Blazor.QueryBuilder
