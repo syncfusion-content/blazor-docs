@@ -26,4 +26,3 @@ The following example illustrates how to enable right-to-left support in Checkbo
 
 
 ![Right to Left in Blazor CheckBox](./../images/blazor-checkbox-right-to-left.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LNrUZvNiqtafQqMh?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->

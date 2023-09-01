@@ -205,8 +205,8 @@ In the following sample, a datagrid component is rendered as custom component us
     }
 }
 ```
+
 ![Rendering Custom Component in Blazor DataGrid Row](./images/blazor-datagrid-row-with-custom-component.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BNLUNxLiBLVSefgI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Expand by external button
 
@@ -423,8 +423,8 @@ The following code demonstrates how to expand the first row using `ExpandCollaps
 N> For both collapsing and expanding, same method is used. If a record is in an expanded state, calling this method will collapse it, and vice versa.
 
 In the above code, the **Expand** method is defined to expand or collapse the detail row of a specific employee when the "Expand/Collapse" button is clicked.
+
 ![Expand or collapse specific record in a Details Template Grid](.\images\blazor-datagrid-detail-template-expandcollapse.gif)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LZrgZdVWLBTXCuoP?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## How to access the child component in the detail template
 
@@ -519,8 +519,6 @@ In the following sample, you can get the instance of that particular child gr
 }
 
 ```
-
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LtBUXdBMrrIqZoDa?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 N> [View Sample in GitHub.](https://github.com/SyncfusionExamples/blazor-datagrid-set-instance-for-child-component)
 
