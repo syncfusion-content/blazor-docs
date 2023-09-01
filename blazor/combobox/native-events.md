@@ -105,5 +105,5 @@ Using Lambda expression also, you can pass the event data to the event handler.
 | --- | --- | --- | --- |
 | onclick | onblur | onfocus | onfocusout |
 | onmousemove | onmouseover | onmouseout | onmousedown | onmouseup |
-| ondblclick | onkeydown | onkeyup | onkeypress |
+| ondblclick | onkeydown | oninput | onkeypress |
 | ontouchend | onfocusin | onmouseup | ontouchstart |
