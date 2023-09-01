@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Configuring Razor Pages as Main Content in Blazor Sidebar Component | Syncfusion
-description: Checkout and learn here all about how to open and close the Sidebar in Syncfusion Blazor Sidebar component and more.
+description: Checkout and learn here all about configuring razor pages as main content in Syncfusion Blazor Sidebar component and more.
 platform: Blazor
 control: Sidebar
 documentation: ug
