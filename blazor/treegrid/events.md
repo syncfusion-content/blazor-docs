@@ -347,7 +347,7 @@ The events should be provided to the Tree Grid using **TreeGridEvents** componen
 
 ## OnDataBound
 
-[OnDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_DataBound) event triggers before the data is bound to Tree Grid.
+[OnDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_OnDataBound) event triggers before the data is bound to Tree Grid.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids;
@@ -1652,7 +1652,7 @@ The [DetailDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Tr
 
 ## CommandClicked
 
-[CommandClicked](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_ContextMenuItemClicked) event triggers when the command button is clicked. It provides the row data of the currently clicked row.
+[CommandClicked](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_CommandClicked) event triggers when the command button is clicked. It provides the row data of the currently clicked row.
 
 ```cshtml
 @using Syncfusion.Blazor.TreeGrid;

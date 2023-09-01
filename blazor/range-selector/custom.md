@@ -96,7 +96,7 @@ The [RangeNavigatorThumbSettings](https://help.syncfusion.com/cr/blazor/Syncfusi
 
 ## Border
 
-Using the [RangeNavigatorBorder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorBorder.html), the [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BorderModel.html#Syncfusion_Blazor_Charts_BorderModel_Color) and the [Color](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BorderModel.html#Syncfusion_Blazor_Charts_BorderModel_Color) of the Range Selector border can be customized.
+Using the [RangeNavigatorBorder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorBorder.html), the [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BorderModel.html#Syncfusion_Blazor_Charts_BorderModel_Width) and the [Color](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BorderModel.html#Syncfusion_Blazor_Charts_BorderModel_Color) of the Range Selector border can be customized.
 
 ```cshtml
 
