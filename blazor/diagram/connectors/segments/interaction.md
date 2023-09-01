@@ -7,6 +7,8 @@ control: Diagram Component
 documentation: ug
 ---
 
+# Segments interaction in Blazor Diagram Component
+
 ## Avoid overlapping with bezier
 
 By default, when there are no segments defined for a bezier connector, the bezier segments will be created automatically and routed in such a way that avoids overlapping with the source and target nodes.
