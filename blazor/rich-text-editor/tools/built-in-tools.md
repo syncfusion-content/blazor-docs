@@ -215,4 +215,3 @@ Remove the build-in tools from the toolbar by using the [RichTextEditorToolbarSe
 {% endtabs %}
 
 ![Blazor RichTextEditor removed default toolbar items](../images/blazor-richtexteditor-removed-default-toolbar-items.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BZBgDciVLcVDLjdk?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->

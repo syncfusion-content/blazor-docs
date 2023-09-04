@@ -9,7 +9,7 @@ documentation: ug
 
 # Data Source in Blazor AutoComplete Component
 
-The AutoComplete loads the data either from local data sources or remote data services using the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_DataSource) property. It supports the data type of array or [DataManager](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.DataManager.html).
+The AutoComplete loads the data either from local data sources or remote data services using the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_DataSource) property. It supports the data type of array or [DataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html).
 
 The AutoComplete also supports different kinds of data services such as OData, OData V4, and Web API and data formats such as XML, JSON, JSONP with the help of DataManager Adaptors.
 
@@ -75,7 +75,6 @@ In the following example, `Name` column from complex data have been mapped to 
 
 
 ![Binding Blazor AutoComplete Component Items](./images/blazor-aurocomplete-binding-items.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/rjrqjwVcJKUKUZdf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ### Array of complex object
 
@@ -126,7 +125,6 @@ In the following example, `Country.CountryID` column from complex data have be
 
 
 ![Binding Complex Items with Blazor AutoComplete](./images/blazor-autocomplete-binding-complex-items.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LDLUjcBGzAptbzoc?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Bind to remote data
 
@@ -170,7 +168,6 @@ The following sample displays the first 6 contacts from the **Customers** table 
 
 
 ![Blazor AutoComplete with Data Binding](./images/blazor-autocomplete-remote-data.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VtLgDwLQzUplvbfm?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ### Web API Adaptor
 
@@ -207,11 +204,10 @@ Use the `WebApiAdaptor` to bind autocomplete with Web API created using OData.
 
 
 ![Blazor AutoComplete with Web API Adaptor](./images/blazor-autocomplete-remote-data.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LtVANwVQfJNZnFUm?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ### Custom adaptor
 
-The [SfDataManager](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Data.SfDataManager.html) has custom adaptor support which allows you to perform manual operations on the data. This can be utilized for implementing custom data binding and editing operations in the AutoComplete component.
+The [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) has custom adaptor support which allows you to perform manual operations on the data. This can be utilized for implementing custom data binding and editing operations in the AutoComplete component.
 
 For implementing custom data binding in AutoComplete, the `DataAdaptor` class is used. This abstract class acts as a base class for the custom adaptor.
 
@@ -319,11 +315,10 @@ Refer to the following example for remote data binding and enabled offline mode.
 
 
 ![Blazor AutoComplete Component in Offline Mode](./images/blazor-autocomplete-remote-data.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/rthAtQhcfzBtHgSt?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ### ValueTuple data binding
 
-You can bind [ValueTuple](https://docs.microsoft.com/en-us/dotnet/api/system.valuetuple-2?view=net-5.0) data to AutoComplete component. The following code helps you get a string value from the enumeration data by using [ValueTuple](https://docs.microsoft.com/en-us/dotnet/api/system.valuetuple-2?view=net-5.0).
+You can bind [ValueTuple](https://learn.microsoft.com/en-us/dotnet/api/system.valuetuple-2?view=net-5.0) data to AutoComplete component. The following code helps you get a string value from the enumeration data by using [ValueTuple](https://learn.microsoft.com/en-us/dotnet/api/system.valuetuple-2?view=net-5.0).
 
 ```csharp
 
@@ -339,11 +334,10 @@ You can bind [ValueTuple](https://docs.microsoft.com/en-us/dotnet/api/system.val
 
 
 ![Blazor AutoComplete ValueTuple Data](./images/blazor_autocomplete_valuetuple.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/rjVADQhwfJpdWvnY?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Binding ExpandoObject
 
-You can bind [ExpandoObject](https://docs.microsoft.com/en-us/dotnet/api/system.dynamic.expandoobject?view=net-5.0) data to the AutoComplete component. The following example `ExpandoObject` is bound to the collection of vehicles data.
+You can bind [ExpandoObject](https://learn.microsoft.com/en-us/dotnet/api/system.dynamic.expandoobject?view=net-5.0) data to the AutoComplete component. The following example `ExpandoObject` is bound to the collection of vehicles data.
 
 ```csharp
 
@@ -373,11 +367,10 @@ You can bind [ExpandoObject](https://docs.microsoft.com/en-us/dotnet/api/system.
 
 
 ![Blazor AutoComplete with expando object data binding](./images/blazor_autocomplete_expando-object.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BthqXQhQJTuTcUqM?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Binding DynamicObject
 
-You can bind [DynamicObject](https://docs.microsoft.com/en-us/dotnet/api/system.dynamic.dynamicobject?view=net-5.0) data to the AutoComplete component. The following example `DynamicObject` is bound to the collection of customers data.
+You can bind [DynamicObject](https://learn.microsoft.com/en-us/dotnet/api/system.dynamic.dynamicobject?view=net-5.0) data to the AutoComplete component. The following example `DynamicObject` is bound to the collection of customers data.
 
 ```csharp
 
@@ -426,11 +419,10 @@ You can bind [DynamicObject](https://docs.microsoft.com/en-us/dotnet/api/system.
 
 
 ![Blazor AutoComplete with dynamic object data binding](./images/blazor_autocomplete_dynamic-object.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VXBgZQLwpejJvoWX?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Binding ObservableCollection
 
-You can bind [ObservableCollection](https://docs.microsoft.com/en-us/dotnet/api/system.collections.objectmodel.observablecollection-1?view=net-5.0) data to the AutoComplete component. The following example `Observable Data` is bound to a collection of colors data.
+You can bind [ObservableCollection](https://learn.microsoft.com/en-us/dotnet/api/system.collections.objectmodel.observablecollection-1?view=net-5.0) data to the AutoComplete component. The following example `Observable Data` is bound to a collection of colors data.
 
 ```csharp
 
@@ -471,7 +463,6 @@ You can bind [ObservableCollection](https://docs.microsoft.com/en-us/dotnet/api/
 
 
 ![Blazor AutoComplete with observable collection data binding](./images/blazor_autocomplete_observable-collection.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/rNVqDmrGzosTIHJg?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Entity Framework
 
