@@ -52,9 +52,6 @@ dotnet add package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
 dotnet restore
 
 {% endhighlight %}
-{% endtabs %}
-
-{% tabs %}
 {% highlight C# tabtitle="Package Manager" %}
 
 Install-Package Syncfusion.Blazor.Calendars -Version {{ site.releaseversion }}
