@@ -31,7 +31,7 @@ Using the [ToolbarCommand.CreateTable](https://help.syncfusion.com/cr/blazor/Syn
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LZrqXQsVTfUyirol?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Inserting Table in Blazor RichTextEditor](../images/blazor-richtexteditor-insert-table.png)
 
 ## Quick Toolbar
 
@@ -121,7 +121,7 @@ The Rich Text Editor provides support to custom styles for tables. If you want t
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hZVqtQsVzznhdhmR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Blazor RichTextEditor with custom table styles](../images/blazor-richtexteditor-custom-table-styles.png)
 
 ## Cell Color
 

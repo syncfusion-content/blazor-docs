@@ -13,7 +13,7 @@ The uploader component allows you to upload the files asynchronously. The upload
 *  The save action is necessary to handle the upload operation.
 *  The remove action is optional, one can handle the removed files from server.
 
-N>The name attribute must match the name of a parameter in the POST method. For more information, refer [here](https://docs.microsoft.com/en-us/aspnet/core/mvc/models/file-uploads?view=aspnetcore-3.1#match-name-attribute-value-to-parameter-name-of-post-method). The name attribute is automatically generated from the control’s ID property. If the name attribute differs from the ID property, then you can use the htmlAttributes property to set the name attribute directly to the input element. For more information refer [here](./how-to/html-attributes).
+N>The name attribute must match the name of a parameter in the POST method. For more information, refer [here](https://learn.microsoft.com/en-us/aspnet/core/mvc/models/file-uploads?view=aspnetcore-3.1#match-name-attribute-value-to-parameter-name-of-post-method). The name attribute is automatically generated from the control’s ID property. If the name attribute differs from the ID property, then you can use the htmlAttributes property to set the name attribute directly to the input element. For more information refer [here](./how-to/html-attributes).
 
 The file can be uploaded automatically or manually. For more information, you can refer to the [Auto Upload](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfUploader.html#Syncfusion_Blazor_Inputs_SfUploader_AutoUpload) section from the documentation.
 
@@ -23,7 +23,7 @@ By Default, the uploader component allows you to select and upload multiple file
 
 ### With server-side API endpoint
 
-`SaveUrl` and `RemoveUrl` actions are explained in this [link](./chunk-upload/#save-and-remove-action-for-blazor-aspnet-core-hosted-application).
+`SaveUrl` and `RemoveUrl` actions are explained in this [link](./chunk-upload#save-and-remove-action-for-blazor-aspnet-core-hosted-application).
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
@@ -80,7 +80,7 @@ The following example explains about single file upload settings.
 
 ### With server-side API endpoint
 
-`SaveUrl` and `RemoveUrl` actions are explained in this [link](./chunk-upload/#save-and-remove-action-for-blazor-aspnet-core-hosted-application).
+`SaveUrl` and `RemoveUrl` actions are explained in this [link](./chunk-upload#save-and-remove-action-for-blazor-aspnet-core-hosted-application).
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
@@ -125,7 +125,7 @@ By default, the uploader processes the files to upload once the files are select
 
 ### With server-side API endpoint
 
-`SaveUrl` and `RemoveUrl` actions are explained in this [link](./chunk-upload/#save-and-remove-action-for-blazor-aspnet-core-hosted-application).
+`SaveUrl` and `RemoveUrl` actions are explained in this [link](./chunk-upload#save-and-remove-action-for-blazor-aspnet-core-hosted-application).
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
@@ -185,7 +185,7 @@ By default, the uploader component process multiple files to upload simultaneous
 
 ### With server-side API endpoint
 
-`SaveUrl` and `RemoveUrl` actions are explained in this [link](./chunk-upload/#save-and-remove-action-for-blazor-aspnet-core-hosted-application).
+`SaveUrl` and `RemoveUrl` actions are explained in this [link](./chunk-upload#save-and-remove-action-for-blazor-aspnet-core-hosted-application).
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
@@ -234,7 +234,7 @@ The uploader component allows you to pre-load the list of files that are uploade
 
 ### With server-side API endpoint
 
-`SaveUrl` and `RemoveUrl` actions are explained in this [link](./chunk-upload/#save-and-remove-action-for-blazor-aspnet-core-hosted-application).
+`SaveUrl` and `RemoveUrl` actions are explained in this [link](./chunk-upload#save-and-remove-action-for-blazor-aspnet-core-hosted-application).
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs

@@ -60,7 +60,7 @@ The following sample code demonstrates the above,
 
 The following GIF represents the lazy load grouping functionality with paging in DataGrid
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VtBANnrMAZwHiySW?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Blazor DataGrid with Lazy Load Grouping](./images/blazor-datagrid-lazy-load-grouping.gif)
 
 ## Lazy load grouping with virtual scrolling
 
@@ -154,7 +154,7 @@ The following sample code demonstrates the above:
 
 The following GIF represents the lazy load grouping functionality with virtualization in DataGrid
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BthKZnhCgiTPmtpF?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Virtual Scrolling with Lazy Load Grouping in Blazor DataGrid](./images/blazor-datagrid-virtual-lazy-load-grouping.gif)
 
 ## Lazy load grouping with custom adaptor
 
