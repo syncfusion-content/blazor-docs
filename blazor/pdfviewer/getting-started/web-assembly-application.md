@@ -159,7 +159,7 @@ N> [View Sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-view
 
 ## Server side processing
 
-Since Syncfusion PDF Viewer (Blazor WebAssembly) component depends on server-side processing to render the PDF files, it is mandatory to create a web service as mentioned [here](https://www.syncfusion.com/kb/10346/how-to-create-pdf-viewer-web-service-application-in-asp-net-core).
+Since Syncfusion PDF Viewer (Blazor WebAssembly) component depends on server-side processing to render the PDF files, it is mandatory to create a web service as mentioned [here](https://support.syncfusion.com/kb/article/8997/how-to-create-pdf-viewer-web-service-application-in-aspnet-core).
 
 N> [View web service sample in GitHub](https://github.com/SyncfusionExamples/EJ2-PDFViewer-WebServices)
 
