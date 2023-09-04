@@ -77,4 +77,4 @@ In the following sample, the `SfRadioButton` is rendered: Using the [ValueChange
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VDhgDHVwfSsKowUT?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Enable or Disable the Blazor DataGrid](../images/enable-or-disable-the-blazor-datagrid.gif)

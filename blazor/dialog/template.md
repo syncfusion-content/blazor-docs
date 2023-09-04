@@ -228,7 +228,6 @@ The following example demonstrates the usage of header and footer template in th
 
 
 ![Blazor Dialog with Header and Footer Template](./images/blazor-dialog-header-footer-template.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/rXhUXPtAUsLIPajM?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## See also
 

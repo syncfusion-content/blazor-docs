@@ -26,7 +26,7 @@ Using the [UndoRedoSteps](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VXrKtcigVardQxlz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Blazor RichTextEditor undo/redo operation](./images/blazor-richtexteditor-undo-redo-operation.png)
 
 ## Disable undo redo
 
@@ -40,7 +40,7 @@ You can disable the undo and redo tools from the toolbar menu by using the [Undo
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rDLKDQWgrawFnUWC?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Blazor RichTextEditor disable undo/redo operation](./images/blazor-richtexteditor-disable-undo-redo.gif)
 
 ## Remove undo redo toolbar item
 
@@ -97,4 +97,4 @@ In the following code example, remove the undo and redo tools from the toolbar.
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BjrADwCqqZZurTMd?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Blazor RichTextEditor remove undo/redo tools](./images/blazor-richtexteditor-remove-undo-redo.png)
