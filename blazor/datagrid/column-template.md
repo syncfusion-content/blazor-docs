@@ -144,8 +144,6 @@ In the following sample, the `SfDropDownList` component is rendered in the First
 }
 ```
 
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BNLgtxrXfrmsowDf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
-
 ## Using conditions inside template
 
 Template elements can be rendered based on required conditions inside the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Template) of the [GridColumn](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Grids.GridColumn.html) component.
@@ -212,8 +210,8 @@ In the following code, checkbox is rendered based on Discontinued field value in
 ```
 
 The following screenshot represents the Conditional Template.
+
 ![Blazor DataGrid with Conditional Template](./images/blazor-datagrid-conditional-template.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/rjhqDxVXfrbAkjio?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Using image inside template
 

@@ -45,7 +45,6 @@ This feature is applicable to both local and remote data scenarios, providing fl
 
 
 ![Blazor AutoComplete with virtualization](./images/blazor_autocomplete_virtualization.gif)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BjBgXwVvLQXJYRsn?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Keyboard interaction
 

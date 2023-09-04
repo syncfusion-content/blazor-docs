@@ -243,5 +243,3 @@ You can clear the value programmatically by accessing the `ClearAsync()` method 
 {% endhighlight %} 
 
 ![Blazor DropDownList with clear button](./images/value-binding/blazor_dropdown_with-clearAsync-method.gif)
-
-
