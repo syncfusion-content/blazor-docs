@@ -7,6 +7,8 @@ control: PDF Viewer
 documentation: ug
 ---
 
+N> Syncfusion recommends using Blazor PDF Viewer (NextGen) Component which provides fast rendering of pages and improved performance. Also, there is no need of external Web service for processing the files and ease out the deployment complexity. It can be used in Blazor Server, WASM and MAUI applications without any changes.
+
 # Getting Started with Blazor PDF Viewer Component in Blazor WASM App
 
 This section briefly explains about how to include [Blazor PDF Viewer](https://www.syncfusion.com/blazor-components/blazor-pdf-viewer) component in your Blazor WebAssembly (WASM) App using Visual Studio.

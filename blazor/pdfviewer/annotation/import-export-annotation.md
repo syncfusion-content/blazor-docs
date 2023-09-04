@@ -7,6 +7,8 @@ control: PDF Viewer
 documentation: ug
 ---
 
+N> Syncfusion recommends using Blazor PDF Viewer (NextGen) Component which provides fast rendering of pages and improved performance. Also, there is no need of external Web service for processing the files and ease out the deployment complexity. It can be used in Blazor Server, WASM and MAUI applications without any changes.
+
 # Import and Export annotations in Blazor PDF Viewer Component
 
 The PDF Viewer control provides the support to import and export annotations using JSON object in the PDF document.

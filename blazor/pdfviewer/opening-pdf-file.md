@@ -7,6 +7,8 @@ control: PDF Viewer
 documentation: ug
 ---
 
+N> Syncfusion recommends using Blazor PDF Viewer (NextGen) Component which provides fast rendering of pages and improved performance. Also, there is no need of external Web service for processing the files and ease out the deployment complexity. It can be used in Blazor Server, WASM and MAUI applications without any changes.
+
 # Open PDF files in PDF Viewer for Blazor from various storage location
 
 You might need to open and view the PDF files from various location. In this section, you can find the information about how to open PDF files from URL, Cloud, database, local file system, and as base64 string.
