@@ -1537,6 +1537,23 @@ In the following sample, the columns **Order Date**, and **Freight** are grouped
 
 ![Stacked Column Header in Blazor DataGrid](./images/blazor-datagrid-stacked-column-header.png)
 
+
+## ColumnQueryMode
+
+
+The [ColumnQueryMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ColumnQueryMode) determines the way that the grid fetches data from the underlying data source. It is used to retrieve the data based on the application requirement and it is particularly useful when dealing with larger datasets.
+
+To enable and configure the Column Query Mode, use the ColumnQueryMode property of the grid. This property accepts values of the [ColumnQueryModeType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ColumnQueryModeType.html) enumeration. This mode retrieves data only for visible columns of the grid from the data source.
+
+### Available Options
+
+The ColumnQueryModeType enumeration offers the following options:
+
+*	**All**: This is the default mode. It retrieves the entire data source.
+*	**Schema**: This mode retrieves data for all the defined columns in the grid from the data source.
+*	**ExcludeHidden**: This mode retrieves data only for visible columns of the grid from the data source.
+
+
 ## See also
 
 * [How to create a Custom Grid Column component](https://support.syncfusion.com/kb/article/11220/blazor-grid-how-to-create-a-custom-grid-column-component)
