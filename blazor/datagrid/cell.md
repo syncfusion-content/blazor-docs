@@ -13,52 +13,71 @@ documentation: ug
 
 Displaying HTML content in a Grid can be useful in scenarios where you want to display formatted content, such as images, links, or tables, in a tabular format. Grid component allows you to display HTML tags in the Grid header and content. By default, the HTML content is encoded to prevent potential security vulnerabilities. However, you can enable the [DisableHtmlEncode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_DisableHtmlEncode) property by setting the value as false to display HTML tags without encoding. This feature is useful when you want to display HTML content in a grid cell.
 
-
+In the following example, the [Blazor Toggle Switch](https://www.syncfusion.com/blazor-components/blazor-toggle-switch-button) Button component is added to enable and disable the `DisableHtmlEncode` property. When the switch is toggled, the [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSwitch-1.html#Syncfusion_Blazor_Buttons_SfSwitch_1_ValueChange) event is triggered and the `DisableHtmlEncode` property of the column is updated accordingly. The [Refresh](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Refresh) method is called to Refresh the grid and display the updated content.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor.Buttons
 
-<SfGrid DataSource="@Orders" Height="315">
+<label> Enable or disable HTML Encode</label>
+<SfSwitch ValueChange="Change" TChecked="bool"></SfSwitch>
+
+<SfGrid @ref="Grid" DataSource="@Orders" Height="315">
     <GridColumns>
-        <GridColumn Field=@nameof(Order.OrderID) HeaderText="<span> Order ID </span>" DisableHtmlEncode="false" TextAlign="TextAlign.Right" Width="140"></GridColumn>
-        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="<span> Customer ID </span>" DisableHtmlEncode="true" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.OrderDate) HeaderText="Order Date" Format="d" Type="ColumnType.Date" Width="100"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="140"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="<span> Customer ID </span>" DisableHtmlEncode="@IsVar" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" Width="100"></GridColumn>
         <GridColumn Field=@nameof(Order.ShipCity) HeaderText="Ship City" Width="100"></GridColumn>
     </GridColumns>
 </SfGrid>
 
-@code{
+@code {
+    public bool IsVar { get; set; } = true;
+    private SfGrid<Order> Grid;
     public List<Order> Orders { get; set; }
 
     protected override void OnInitialized()
     {
         Orders = Enumerable.Range(1, 75).Select(x => new Order()
-        {
-            OrderID = 1000 + x,
-            CustomerID = (new string[] { "ALFKI", "<span>ANANTR</span>", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
-            ShipCity = (new string[] { "Seattle", "Tacoma", "Redmond", "Kirkland", "London" })[new Random().Next(5)],
-            OrderDate = DateTime.Now.AddDays(-x),
-        }).ToList();
+            {
+                OrderID = 1000 + x,
+                CustomerID = (new string[] { "ALFKI", "<span>ANANTR</span>", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
+                ShipCity = (new string[] { "Seattle", "Tacoma", "Redmond", "Kirkland", "London" })[new Random().Next(5)],
+                Freight = 6.2 * x,
+            }).ToList();
     }
 
     public class Order
     {
         public int? OrderID { get; set; }
         public string CustomerID { get; set; }
-        public DateTime? OrderDate { get; set; }
+        public double? Freight { get; set; }
         public string ShipCity { get; set; }
+    }
+    private void Change(Syncfusion.Blazor.Buttons.ChangeEventArgs<bool> args)
+    {
+        if(args.Checked)
+        {
+            IsVar = false;
+            Grid.Refresh();
+        }
+        else
+        {
+            IsVar = true;
+            Grid.Refresh();
+        }
     }
 }
 ```
 
 The following screenshot represents a DataGrid displaying the HTML content.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/htLKZdLWVJLGycUz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VDhgZbMvAWBCLJJH?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 > * The [DisableHtmlEncode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_DisableHtmlEncode)  property disables HTML encoding for the corresponding column in the grid.
-<br/> * If the property is set to true, any HTML tags in the column’s data will be displayed.
-<br/> * If the property is set to false, the HTML tags will be removed and displayed as plain text.
-<br/> * Disabling HTML encoding can potentially introduce security vulnerabilities, so use caution when enabling this feature.
+<br/> If the property is set to true, any HTML tags in the column’s data will be displayed.
+<br/> If the property is set to false, the HTML tags will be removed and displayed as plain text.
+<br/> Disabling HTML encoding can potentially introduce security vulnerabilities, so use caution when enabling this feature.
 
 ## Autowrap the grid content
 
@@ -73,15 +92,22 @@ The auto wrap feature allows the cell content in the grid to wrap to the next li
 * **Content**- With this option, only the grid content is wrapped.
 
 > * When a column width is not specified, then auto wrap of columns will be adjusted with respect to the DataGrid's width.
-<br/> * If a column’s header text contains no white space, the text may not be wrapped.
-<br/> * If the content of a cell contains HTML tags, the Autowrap functionality may not work as expected. In such cases, you can use the [HeaderTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_HeaderTemplate) and [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_Template) properties of the column to customize the appearance of the header and cell content.
+<br/> If a column’s header text contains no white space, the text may not be wrapped.
+<br/> If the content of a cell contains HTML tags, the Autowrap functionality may not work as expected. In such cases, you can use the [HeaderTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_HeaderTemplate) and [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_Template) features of the column to customize the appearance of the header and cell content.
 
-The following example demonstrates how to set the allowTextWrap property to true and specify the wrap mode as Content by setting the [TextWrapSettings.WrapMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridTextWrapSettings.html#Syncfusion_Blazor_Grids_GridTextWrapSettings_WrapMode) property.
+The following example demonstrates how to set the `AllowTextWrap` property to true and specify the wrap mode as Content by setting the `TextWrapSettings.WrapMode` property.Also change the `TextWrapSettings.wrapMode` property to **Content** and **Both** on changing the dropdown value using the [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSwitch-1.html#Syncfusion_Blazor_Buttons_SfSwitch_1_ValueChange) event of the DropDownList component.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor.DropDowns
 
-<SfGrid DataSource="@Orders" GridLines="GridLine.Default" AllowTextWrap="true" Height="315">
+<label>Change the wrapmode of auto wrap feature:</label>
+<SfDropDownList  Width="100px" TValue="string" TItem="ddlOrder" DataSource="@LocalData">
+    <DropDownListFieldSettings Value="Text" Text="Text"></DropDownListFieldSettings>
+    <DropDownListEvents TValue="string" TItem="ddlOrder" ValueChange="OnValueChange"></DropDownListEvents>
+</SfDropDownList>
+
+<SfGrid @ref="Grid" DataSource="@Orders" GridLines="GridLine.Default" AllowTextWrap="true" Height="315">
     <GridTextWrapSettings WrapMode="WrapMode.Content"></GridTextWrapSettings>
     <GridColumns>
         <GridColumn Field=@nameof(Order.RollNo) HeaderText="Roll No" Width="140"></GridColumn>
@@ -92,19 +118,20 @@ The following example demonstrates how to set the allowTextWrap property to true
     </GridColumns>
 </SfGrid>
 
-@code{
+@code {
+    private SfGrid<Order> Grid;
     public List<Order> Orders { get; set; }
 
     protected override void OnInitialized()
     {
         Orders = Enumerable.Range(1, 75).Select(x => new Order()
-        {
-            RollNo = 1000 + x,
-            Name = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
-            PatentFamilies = 1000 + x * 5,
-            Country = (new string[] { "Australia", "Japan", "Canada", "India", "USA" })[new Random().Next(5)],
-            MainFields = (new string[] { "Printing, Digital paper, Internet, Electronics,Lab-on-a-chip, MEMS, Mechanical, VLSI", "Various", "Printing, Digital paper, Internet, Electronics, CGI, VLSI", "Automotive, Stainless steel products", "Gaming machines" })[new Random().Next(5)],
-        }).ToList();
+            {
+                RollNo = 1000 + x,
+                Name = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
+                PatentFamilies = 1000 + x * 5,
+                Country = (new string[] { "Australia", "Japan", "Canada", "India", "USA" })[new Random().Next(5)],
+                MainFields = (new string[] { "Printing, Digital paper, Internet, Electronics,Lab-on-a-chip, MEMS, Mechanical, VLSI", "Various", "Printing, Digital paper, Internet, Electronics, CGI, VLSI", "Automotive, Stainless steel products", "Gaming machines" })[new Random().Next(5)],
+            }).ToList();
     }
 
     public class Order
@@ -115,23 +142,45 @@ The following example demonstrates how to set the allowTextWrap property to true
         public string Country { get; set; }
         public string MainFields { get; set; }
     }
+    public class ddlOrder
+    {
+        public string Text { get; set; }
+        public string Value { get; set; }
+    }
+    List<ddlOrder> LocalData = new List<ddlOrder>
+    {
+        new ddlOrder(){Text="Both",Value="Both"},
+        new ddlOrder(){Text="Content",Value="Content"},
+        new ddlOrder(){Text="Header",Value="Header"},
+    };
+    public void OnValueChange(ChangeEventArgs<string, ddlOrder> args)
+    {
+        if(args.Value=="Both")
+        {
+            this.Grid.TextWrapSettings.WrapMode = WrapMode.Both;
+        }
+        else if(args.Value=="Content")
+        {
+            this.Grid.TextWrapSettings.WrapMode = WrapMode.Content;
+        }
+        else
+        {
+            this.Grid.TextWrapSettings.WrapMode = WrapMode.Header;
+        }
+    }
 }
 ```
-
-The following screenshot represents a DataGrid with auto wrap.
-
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BNrgtxrihfvRzHnK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VZhUDlCvAfzGErtz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Customize cell styles
 
-Customizing the grid cell styles allows you to modify the appearance of cells in the Grid control to meet your design requirements. You can customize the font, background color, and other styles of the cells. To customize the cell styles in the grid, you can use grid event, css, property or method support.
+Customizing the grid cell styles allows you to modify the appearance of cells in the Grid control to meet your design requirements. You can customize the font, background color, and other styles of the cells. To customize the cell styles in the grid, you can use grid event, css or property support.
 
 ### Using event
 
-To customize the appearance of the grid cell, you can use the [QueryCellInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.QueryCellInfoEventArgs-1.html) event of the grid. This event is triggered when each header cell is rendered in the grid, and provides an object that contains information about the header cell. You can use this object to modify the styles of the header cell.
+To customize the appearance of the grid cell, you can use the [QueryCellInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.QueryCellInfoEventArgs-1.html) event of the grid. This event is triggered when each cell is rendered in the grid, and provides an object that contains information about the cell. You can use this object to modify the styles of the cell.
 
-The following example demonstrates how to add a [QueryCellInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.QueryCellInfoEventArgs-1.html) event handler to the grid. In the event handler, checked whether the current column is Freight field and then applied the appropriate CSS class to the cell based on its value.
+The following example demonstrates how to add a `QueryCellInfo` event handler to the grid. In the event handler, checked whether the current column is **Freight** field and then applied the appropriate CSS class to the cell based on its value.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -147,19 +196,19 @@ The following example demonstrates how to add a [QueryCellInfo](https://help.syn
     </GridColumns>
 </SfGrid>
 
-@code{
+@code {
     public List<Order> Orders { get; set; }
 
     protected override void OnInitialized()
     {
         Orders = Enumerable.Range(1, 75).Select(x => new Order()
-        {
-            OrderID = 1000 + x,
-            CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
-            ShipCity = (new string[] { "Seattle", "Tacoma", "Redmond", "Kirkland", "London" })[new Random().Next(5)],
-            OrderDate = DateTime.Now.AddDays(-x),
-            Freight = 6.2 * x,
-        }).ToList();
+            {
+                OrderID = 1000 + x,
+                CustomerID = (new string[] { "VINET", "TOMSP", "HANAR", "VICTE", "SUPRD", "HANAR", "CHOPS" })[new Random().Next(7)],
+                ShipCity = (new string[] { "Reims", "Münster", "Rio de Janeiro", "Lyon", "Charleroi" })[new Random().Next(5)],
+                OrderDate = DateTime.Now.AddDays(-x),
+                Freight = 6.2 * x,
+            }).ToList();
     }
 
     public class Order
@@ -205,10 +254,7 @@ The following example demonstrates how to add a [QueryCellInfo](https://help.syn
     }
 </style>
 ```
-
-The following screenshot represents a DataGrid with customized cell styles.
-
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hDBgDRViBfQTdcDr?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDLgjvivAmfpAZcD?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 > The  [QueryCellInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.QueryCellInfoEventArgs-1.html) event is triggered for every cell of the grid, so it may impact the performance of the grid whether used to modify a large number of cells.
 
@@ -234,8 +280,8 @@ The following example demonstrates how to customize the appearance of a specific
     <GridColumns>
         <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
         <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
-        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.ShipCity) HeaderText="Ship City" Width="100"></GridColumn>
+        <GridColumn Field=@nameof(Order.ShipName) HeaderText="Ship City" Width="100"></GridColumn>
     </GridColumns>
 </SfGrid>
 <style>
@@ -253,9 +299,9 @@ The following example demonstrates how to customize the appearance of a specific
         Orders = Enumerable.Range(1, 75).Select(x => new Order()
             {
                 OrderID = 1000 + x,
-                CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
-                Freight = 2.1 * x,
-                OrderDate = DateTime.Now.AddDays(-x),
+                CustomerID = (new string[] { "VINET", "TOMSP", "HANAR", "VICTE", "SUPRD" })[new Random().Next(5)],                
+                ShipCity = (new string[] { "Reims", "Münster", "Rio de Janeiro", "Lyon", "Charleroi" })[new Random().Next(5)],
+                ShipName = (new string[] { "Around the Horn", "Berglunds snabbköp", "Blondel père et fils", "Ernst Handel" })[new Random().Next(4)],
             }).ToList();
     }
 
@@ -263,17 +309,17 @@ The following example demonstrates how to customize the appearance of a specific
     {
         public int? OrderID { get; set; }
         public string CustomerID { get; set; }
-        public DateTime? OrderDate { get; set; }
-        public double? Freight { get; set; }
+        public string ShipCity { get; set; }
+        public string ShipName { get; set; }
+       
     }
 }
 ```
-
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LNLANFtEpCOkMFqY?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LjVgjFsvqbeONlFV?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ### Using property
 
-To customize the style of grid cells, define [CustomAttributes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ColumnModel.html#Syncfusion_Blazor_Grids_ColumnModel_CustomAttributes)  property to the GridColumn  definition object. The [CustomAttributes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ColumnModel.html#Syncfusion_Blazor_Grids_ColumnModel_CustomAttributes)  property takes an object with the name-value pair to customize the CSS properties for grid cells. You can also set multiple CSS properties to the custom class using the customAttributes property.
+To customize the style of grid cells, define [CustomAttributes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ColumnModel.html#Syncfusion_Blazor_Grids_ColumnModel_CustomAttributes)  property to the GridColumn  definition object. The `CustomAttributes` property takes an object with the name-value pair to customize the CSS properties for grid cells. You can also set multiple CSS properties to the custom class using the CustomAttributes property.
 
 ```cshtml
 <style>
@@ -282,6 +328,12 @@ To customize the style of grid cells, define [CustomAttributes](https://help.syn
     }
 </style>
 ```
+Here, setting the CustomAttributes property of the **ShipCity** column to an object that contains the CSS class ‘e-attr’. This CSS class will be applied to all the cells in the **ShipCity** column of the grid.
+
+```cshtml
+<GridColumn Field=@nameof(Order.ShipCity) HeaderText="Ship City" CustomAttributes="@(new Dictionary<string, object>(){ { "class", "e-attr" }})" Width="100"></GridColumn>
+```
+
 The following example demonstrates how to customize the appearance of the **OrderID** and **ShipCity** columns using custom attributes.
 
 ```cshtml
@@ -292,30 +344,30 @@ The following example demonstrates how to customize the appearance of the **Orde
         <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" CustomAttributes="@(new Dictionary<string, object>(){ { "class", "e-attr" }})" TextAlign="TextAlign.Right" Width="140"></GridColumn>
         <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer ID" Width="120"></GridColumn>
         <GridColumn Field=@nameof(Order.ShipCity) HeaderText="Ship City" CustomAttributes="@(new Dictionary<string, object>(){ { "class", "e-attr" }})" Width="100"></GridColumn>
-        <GridColumn Field=@nameof(Order.OrderDate) HeaderText="Order Date" Format="d" Type="ColumnType.Date" Width="100"></GridColumn>
+        <GridColumn Field=@nameof(Order.ShipName) HeaderText="Ship Name"  Width="100"></GridColumn>
     </GridColumns>
 </SfGrid>
 
-@code{
+@code {
     public List<Order> Orders { get; set; }
 
     protected override void OnInitialized()
     {
         Orders = Enumerable.Range(1, 75).Select(x => new Order()
-        {
-            OrderID = 1000 + x,
-            CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
-            ShipCity = (new string[] { "Seattle", "Tacoma", "Redmond", "Kirkland", "London" })[new Random().Next(5)],
-            OrderDate = DateTime.Now.AddDays(-x),
-        }).ToList();
+            {
+                OrderID = 1000 + x,
+                CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
+                ShipCity = (new string[] { "Seattle", "Tacoma", "Redmond", "Kirkland", "London" })[new Random().Next(5)],
+                ShipName = (new string[] { "Around the Horn", "Berglunds snabbköp", "Blondel père et fils", "Ernst Handel" })[new Random().Next(4)],
+            }).ToList();
     }
 
     public class Order
     {
         public int? OrderID { get; set; }
         public string CustomerID { get; set; }
-        public DateTime? OrderDate { get; set; }
         public string ShipCity { get; set; }
+        public string ShipName { get; set; }
     }
 }
 
@@ -326,7 +378,7 @@ The following example demonstrates how to customize the appearance of the **Orde
 </style>
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LtrKDdBCVfEITnUS?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hDhqZPivKuVnDjkq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 > Custom attributes can be used to customize any cell in the grid, including header and footer cells.
 
@@ -386,8 +438,8 @@ The following screenshot represents a clip mode in DataGrid
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rZBKjxrWVIJFoNKz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 > * By default, [Columns.ClipMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_ClipMode) value is **Ellipsis**.
-<br/> * If you set the **width** property of a column, the clip mode feature will be automatically applied to that column if the content exceeds the specified width.
-<br/> * Be careful when using the Clip mode, as it may result in important information being cut off. It is generally recommended to use the Ellipsis or EllipsisWithTooltip modes instead.
+<br/> If you set the **width** property of a column, the clip mode feature will be automatically applied to that column if the content exceeds the specified width.
+<br/> Be careful when using the Clip mode, as it may result in important information being cut off. It is generally recommended to use the Ellipsis or EllipsisWithTooltip modes instead.
 
 ## Tooltip
 
@@ -399,7 +451,7 @@ The Grid provides a feature to display custom tooltips for its columns using the
 
 To enable custom tooltips for columns in the Grid,you can use the [Column Template](https://blazor.syncfusion.com/documentation/datagrid/columns/#column-template) feature by rendering the components inside the template
 
-This is demonstrated in the following sample code, where the tooltip for the **FirstName** column is rendered using [Column Template](https://blazor.syncfusion.com/documentation/datagrid/columns/#column-template).
+This is demonstrated in the following sample code, where the tooltip for the **FirstName** column is rendered using `Column Template`.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -460,7 +512,7 @@ This is demonstrated in the following sample code, where the tooltip for the **F
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hDBUXxhczXWCAKzo?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-## DataGrid lines
+## Grid lines
 
 The [GridLines](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GridLines) in a grid are used to separate the cells with horizontal and vertical lines for better readability. You can enable the grid lines by setting the [GridLines](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GridLines)  property to one of the following values:
 
@@ -511,7 +563,7 @@ The following example demonstrates how to set the [GridLines](https://help.syncf
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LXVAtRBiBSsjNJsp?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-N>By default, the DataGrid renders with **Default** mode.
+> By default, the DataGrid renders with **Default** mode.
 
 
 > You can refer to the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour page for its groundbreaking feature representations. You can also explore [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap4) to understand how to present and manipulate data.
