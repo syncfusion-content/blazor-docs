@@ -52,9 +52,9 @@ The `Interval` and `SlotCount` properties can be used together on the Scheduler 
 
 ![Time Slot Duration in Blazor Scheduler](images/blazor-scheduler-timeslot.png)
 
-## Setting different time slot duration for each view
+## Adjusting the time slot duration for various views
 
-The `Interval` and `SlotCount` properties within the `ScheduleView` tag as child content of the `ScheduleViewTimeScale` to establish distinct time slot durations for various views, as demonstrated in the provided code snippet. In this illustration, the `Day` view encompasses six time slots per hour, while the `Week` and `WorkWeek` views comprise two time slots per hour.
+By using the [Interval](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleViewTimeScale.html#Syncfusion_Blazor_Schedule_ScheduleViewTimeScale_Interval) and [SlotCount](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleViewTimeScale.html#Syncfusion_Blazor_Schedule_ScheduleViewTimeScale_SlotCount) properties, within the [ScheduleViewTimescale](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleViewTimeScale.html) as a child element of `ScheduleView` you can customize the duration of time slots for views. Take a look at the code snippet to see how it's done. In this example, the `Day` view has six-time slots per hour while the `Week` and `WorkWeek` views have two-time slots per hour.
 
 ```cshtml
 @using Syncfusion.Blazor.Schedule
