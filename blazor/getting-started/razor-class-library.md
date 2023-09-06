@@ -42,29 +42,21 @@ You can use any one of the below standards to install the Syncfusion Blazor libr
 
 #### Using Syncfusion Blazor individual NuGet Packages 
 
-N> Starting with Volume 4, 2020 (v18.4.0.30) release, Syncfusion provides [individual NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages/) for our Syncfusion Blazor components. We highly recommend this new standard for your Blazor production applications. Refer to [this section](https://blazor.syncfusion.com/documentation/nuget-packages/#benefits-of-using-individual-nuget-packages) to know the benefits of the individual NuGet packages.
-
-1. Now, install **Syncfusion.Blazor.Calendars** NuGet package to the newly created RLC by using the `NuGet Package Manager`. For more details about the available NuGet packages, refer to the [Individual NuGet Packages](https://blazor.syncfusion.com/documentation/nuget-packages/) documentation.
+To add Blazor Accordion component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install [Syncfusion.Blazor.Navigations](https://www.nuget.org/packages/Syncfusion.Blazor.Navigations/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/). Alternatively, you can utilize the following package manager command to achieve the same.
 
 {% tabs %}
-{% highlight nuget tabtitle="Package Manager" %}
+{% highlight C# tabtitle="Package Manager" %}
 
-PM> NuGet\Install-Package Syncfusion.Blazor.Calendars -Version {{ site.releaseversion }}
+Install-Package Syncfusion.Blazor.Navigations -Version {{ site.releaseversion }}
+
+Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
 
 {% endhighlight %}
 {% endtabs %}
 
-2. Right-click the project, and then select Manage NuGet Packages.
+N> Syncfusion Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for available NuGet packages list with component details.
 
-    ![nuget explorer](images/rcl-nuget-explorer.png)
-
-3. Search **Syncfusion.Blazor.Calendars** keyword in the Browse tab and install **Syncfusion.Blazor.Calendars** NuGet package in RLC.
-
-    ![select nuget](images/individual-nuget.png)
-
-4. The Syncfusion Blazor Calendars package will be included in the newly created project once the installation process is completed.
-
-5. Now, import and add the Syncfusion Blazor components in the `~/Component.razor` file. For example, the Calendar component is imported and added in the **~/Component.razor** page.
+Now, import and add the Syncfusion Blazor components in the `~/Component.razor` file. For example, the Calendar component is imported and added in the **~/Component.razor** page.
 
     ```cshtml
     @using Syncfusion.Blazor.Calendars
@@ -144,13 +136,13 @@ Refer to the [Blazor Tooling documentation](https://learn.microsoft.com/en-us/as
     N> Also, you can refer to the themes through the CDN version by using the following link instead of package theme reference.
     [https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/bootstrap4.css](https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/bootstrap4.css).
 
-5. Now, add the created custom component in the **~/Pages/Index.razor** file.
+4. Now, add the created custom component in the **~/Pages/Index.razor** file.
 
     ```cshtml
     <Component></Component>
     ```
 
-6. Run the application, The Syncfusion Blazor Calendar component will be rendered in the default web browser.
+5. Run the application, The Syncfusion Blazor Calendar component will be rendered in the default web browser.
 
     ![RCL output](images/RCL-output.png)
 
@@ -220,12 +212,12 @@ Refer to the [Blazor Tooling documentation](https://learn.microsoft.com/en-us/as
     N> Also, you can refer to the themes through the CDN version by using the following link instead of package theme reference.
     [https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/bootstrap4.css](https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/bootstrap4.css).
 
-5. Now, add the created custom component in the **~/Pages/Index.razor** file.
+4. Now, add the created custom component in the **~/Pages/Index.razor** file.
    
     ```cshtml
     <Component></Component>
     ```
 
-7. Run the application, The Syncfusion Blazor Calendar component will be rendered in the default web browser.
+5. Run the application, The Syncfusion Blazor Calendar component will be rendered in the default web browser.
 
     ![RCL output](images/RCL-output.png)
