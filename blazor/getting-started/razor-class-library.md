@@ -40,7 +40,7 @@ N>  **.NET 6 and .NET 7** requires Visual Studio 2022 or later.
 
 You can use any one of the below standards to install the Syncfusion Blazor library in your Razor Class Library Server application.
 
-#### Using Syncfusion Blazor individual NuGet Packages [New standard]
+#### Using Syncfusion Blazor individual NuGet Packages 
 
 N> Starting with Volume 4, 2020 (v18.4.0.30) release, Syncfusion provides [individual NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages/) for our Syncfusion Blazor components. We highly recommend this new standard for your Blazor production applications. Refer to [this section](https://blazor.syncfusion.com/documentation/nuget-packages/#benefits-of-using-individual-nuget-packages) to know the benefits of the individual NuGet packages.
 
