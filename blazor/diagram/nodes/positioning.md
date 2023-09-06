@@ -35,30 +35,30 @@ The following code shows how to change the Pivot value.
 
 @code
 {
+    //Reference the diagram
     SfDiagramComponent diagram;
+    //Define diagram's nodes collection
     DiagramObjectCollection<Node> nodes;
 
     protected override void OnInitialized()
     {
+        //Intialize diagram's nodes collection
+
         nodes = new DiagramObjectCollection<Node>();
         // A node is created and stored in nodes array.
         Node node = new Node()
-        {
-            ID = "node",
-            // Position of the node.
-            OffsetX = 250,
-            OffsetY = 250,
-            // Size of the node.
-            Width = 100,
-            Height = 100,
-            Style = new ShapeStyle() 
-            { 
-                Fill = "#6495ED", 
-                StrokeColor = "white" 
-            },
-            // Pivot of the node.
-            Pivot = new DiagramPoint() { X = 0, Y = 0 }
-        };
+            {
+                ID = "node",
+                // Position of the node
+                OffsetX = 250,
+                OffsetY = 250,
+                // Size of the node
+                Width = 100,
+                Height = 100,
+                Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "white" },
+                // Pivot of the node
+                Pivot = new DiagramPoint() { X = 0, Y = 0 }
+            };
         nodes.Add(node);
     }
 

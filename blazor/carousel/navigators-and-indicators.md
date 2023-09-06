@@ -65,7 +65,6 @@ The following example depicts the code to hide the navigators in the carousel.
 ```
 
 ![Carousel Navigators](images/navigators_hidden.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/htLAtPZsBqbXFmAy?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ### Show previous and next button on hover
 
@@ -113,7 +112,6 @@ In the carousel, you can show the previous and next buttons only on mouse hover 
 ```
 
 ![Carousel Navigators OnHover](images/navigators_onhover.gif)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/rjBAZPXCBfCszAwU?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ### Previous and next button template
 
@@ -197,7 +195,6 @@ Template options are provided to customize the previous button using [PreviousBu
 ```
 
 ![Carousel Navigators Template](images/navigators_template.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/rZVgNbNiBfzmIsRp?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Indicators
 
@@ -247,7 +244,6 @@ In indicators, the total slides and current slide state have been depicted. You 
 ```
 
 ![Carousel Indicators](images/indicators_hidden.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LjrqtFDWrpREEEkd?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ### Indicators template
 
@@ -325,7 +321,6 @@ Template option is provided to customize the indicators by using the [Indicators
 ```
 
 ![Carousel Indicators](images/indicators_template.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LZVAjPtiroJUSzcA?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ### Showing preview of slide in indicator
 
@@ -402,7 +397,6 @@ You can customize the indicators by showing the preview image of each slide usin
 ```
 
 ![Carousel Indicators](images/indicators_preview.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LDBgNPtsVyvHIKTW?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ### Indicators Types
 
@@ -649,7 +643,6 @@ In the carousel, [AutoPlay](https://help.syncfusion.com/cr/blazor/Syncfusion.Bla
 ```
 
 ![Carousel Indicators](images/play_button.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/rDBqtvjiBHiTSovU?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ### Play button template
 
@@ -730,4 +723,3 @@ Template option is provided to customize the play button by using the [PlayButto
 ```
 
 ![Carousel Indicators](images/play_button_template.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BjhqXlXCBRqWZbyr?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->

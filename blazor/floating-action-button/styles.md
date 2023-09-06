@@ -45,7 +45,7 @@ To modify the Floating Action Button appearance, you need to override the defaul
 |.e-fab.e-btn:hover|To customize the FAB on hover.|
 |.e-fab.e-btn:focus|To customize the FAB on focus.|
 |.e-fab.e-btn:active|To customize the FAB on active.|
-|.e-fab.e-btn-icon|To customize the style of FAB icon.|
+|.e-fab .e-btn-icon|To customize the style of FAB icon.|
 
 ## Show text on hover
 

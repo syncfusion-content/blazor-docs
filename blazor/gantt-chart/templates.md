@@ -55,7 +55,7 @@ You can design your taskbars to view the tasks in Gantt Chart Chart by using `Ga
             @if ((context as TaskbarTemplateData.TaskbarData).TaskName == "Oscar moments")
             {
                 <div class="e-gantt-child-taskbar e-custom-moments" style="height:50px;border-radius:5px;">
-                    @if (Convert.ToInt64((context as TaskbarTemplateData.TaskbarData).Duration) < 4)
+                    @if (Convert.ToDouble((context as TaskbarTemplateData.TaskbarData).Duration) < 4)
                     {
                         <img class="moments" height="32" width="44" />
                     }
@@ -64,7 +64,7 @@ You can design your taskbars to view the tasks in Gantt Chart Chart by using `Ga
             else if ((context as TaskbarTemplateData.TaskbarData).TaskName == "Oscar performance")
             {
                 <div class="e-gantt-child-taskbar e-custom-performance" style="height:50px;border-radius:5px;">
-                    @if (Convert.ToInt64((context as TaskbarTemplateData.TaskbarData).Duration) <= 5)
+                    @if (Convert.ToDouble((context as TaskbarTemplateData.TaskbarData).Duration) <= 5)
                     {
                         <img class="face-mask" height="32" width="32" />
                     }
@@ -73,7 +73,7 @@ You can design your taskbars to view the tasks in Gantt Chart Chart by using `Ga
             else
             {
                 <div class="e-gantt-parent-taskbar e-custom-parent" style="height:50px;border-radius:5px;text-overflow:ellipsis;">
-                    @if (Convert.ToInt64((context as TaskbarTemplateData.TaskbarData).Duration) < 4)
+                    @if (Convert.ToDouble((context as TaskbarTemplateData.TaskbarData).Duration) < 4)
                     {
                         <img class="oscar" height="32" width="32" />
                     }
@@ -199,7 +199,6 @@ You can design your taskbars to view the tasks in Gantt Chart Chart by using `Ga
 ```
 
 ![Blazor Gantt Chart with Taskbar Template](images/blazor-gantt-chart-taskbar-template.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/rZrUZQMaBNGrnAsx?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## See also
 

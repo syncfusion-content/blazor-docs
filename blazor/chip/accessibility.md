@@ -51,4 +51,3 @@ The following shortcut keys are used to access the Chip control without any inte
 
 
 ![Accessibility in Blazor Chip](./images/blazor-chip-accessibility.gif)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/rjVUZbZCgQqnYAAO?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
