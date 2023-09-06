@@ -50,7 +50,7 @@ Open **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusio
 {% endhighlight %}
 {% endtabs %}
 
-Now, register the Syncfusion Blazor Service in the **~/Program.cs** file of your Blazor ASP.NET Core Hosted WebAssembly app. 
+Now, Open the **~/Program.cs** file and register the Syncfusion Blazor Service in the client web app. 
 
 {% tabs %}
 {% highlight C# tabtitle="Blazor WebAssembly App" hl_lines="3 10" %}
