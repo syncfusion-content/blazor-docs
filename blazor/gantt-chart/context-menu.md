@@ -292,7 +292,7 @@ The following sample code demonstrates how to disable the context for specific c
     };
     public void OnContextMenuOpen(ContextMenuOpenEventArgs<TaskData> Args)
     {
-        if (Args.Column.Field == "Duration")
+        if (Args.Column != null && Args.Column.Field == "Duration")
         {
             Args.Cancel = true; // To prevent the context menu from opening
         }
