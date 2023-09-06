@@ -377,7 +377,6 @@ The following example demonstrates how to customize the appearance of the **Orde
     }
 </style>
 ```
-
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hDhqZPivKuVnDjkq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 > Custom attributes can be used to customize any cell in the grid, including header and footer cells.
@@ -396,46 +395,72 @@ The following example demonstrates, how to set the [ClipMode](https://help.syncf
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor.DropDowns
 
-<SfGrid DataSource="@Orders" AllowPaging="true" Height="315">
+ <label > Change the clip mode: </label>
+ <SfDropDownList TValue="ClipMode" TItem="DdlClass" DataSource="@DdlData" Width="100px">
+      <DropDownListFieldSettings Text="Text" Value="Value"></DropDownListFieldSettings>
+      <DropDownListEvents ValueChange="OnChange" TValue="ClipMode" TItem="DdlClass"></DropDownListEvents>
+ </SfDropDownList>
+
+
+<SfGrid @ref="Grid" DataSource="@Orders" AllowPaging="true" Height="315">
     <GridColumns>
-        <GridColumn Field=@nameof(Order.RollNo) HeaderText="Roll No" Width="140"></GridColumn>
-        <GridColumn Field=@nameof(Order.Name) HeaderText="Name of the inventor" ClipMode="ClipMode.Clip" Width="70"></GridColumn>
-        <GridColumn Field=@nameof(Order.PatentFamilies) HeaderText="No of patent families" ClipMode="ClipMode.Ellipsis" Width="80"></GridColumn>
-        <GridColumn Field=@nameof(Order.Country) HeaderText="Country" Width="100"></GridColumn>
-        <GridColumn Field=@nameof(Order.MainFields) HeaderText="Main fields of Invention" ClipMode="ClipMode.EllipsisWithTooltip" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.Inventor) HeaderText="Name of the inventor" Width="80"></GridColumn>
+        <GridColumn Field=@nameof(Order.PatentFamilies) HeaderText="No of patent families" Width="100"></GridColumn>
+        <GridColumn Field=@nameof(Order.Country) HeaderText="Country" Width="80"></GridColumn>
+        <GridColumn Field=@nameof(Order.NumberofINPADOCpatents) HeaderText="Number of INPADOC patents" Width="100"></GridColumn>
+        <GridColumn Field=@nameof(Order.MainFields) HeaderText="Main fields of Invention" ClipMode="@ClipVal" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
 
-@code{
+@code {
+    public SfGrid<Order> Grid { get; set; }
+
     public List<Order> Orders { get; set; }
 
+    public ClipMode ClipVal { get; set; } = ClipMode.Clip;
+
+    public void OnChange(ChangeEventArgs<ClipMode, DdlClass> Args)
+    {
+        ClipVal = Args.Value;
+        Grid.Refresh();
+    }
+
+    List<DdlClass> DdlData = new List<DdlClass>
+{
+        new DdlClass() { Text = "Clip", Value =ClipMode.Clip },
+        new DdlClass() { Text = "Ellipsis", Value = ClipMode.Ellipsis},
+        new DdlClass() { Text = "Ellipsis With Tooltip", Value = ClipMode.EllipsisWithTooltip }
+};
     protected override void OnInitialized()
     {
         Orders = Enumerable.Range(1, 75).Select(x => new Order()
-        {
-            RollNo = 1000 + x,
-            Name = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
-            PatentFamilies = 1000 + x * 5,
-            Country = (new string[] { "Australia", "Japan", "Canada", "India", "USA" })[new Random().Next(5)],
-            MainFields = (new string[] { "Printing, Digital paper, Internet, Electronics,Lab-on-a-chip, MEMS, Mechanical, VLSI", "Various", "Printing, Digital paper, Internet, Electronics, CGI, VLSI", "Automotive, Stainless steel products", "Gaming machines" })[new Random().Next(5)],
-        }).ToList();
+            {
+                Inventor = (new string[] { "Kia Silverb", "Shunpei Yamazaki", "Lowell L. Wood, Jr.", "Paul Lap", "Gurtej Sandhu" })[new Random().Next(5)],
+                PatentFamilies = 1000 + x * 5,
+                NumberofINPADOCpatents = 9839 + x ,
+                Country = (new string[] { "Australia", "Japan", "Canada", "India", "USA" })[new Random().Next(5)],
+                MainFields = (new string[] { "Printing, Digital paper, Internet, Electronics,Lab-on-a-chip, MEMS, Mechanical, VLSI", "Various", "Printing, Digital paper, Internet, Electronics, CGI, VLSI", "Automotive, Stainless steel products", "Gaming machines" })[new Random().Next(5)],
+            }).ToList();
+    }
+    public class DdlClass
+    {
+        public string Text { get; set; }
+        public ClipMode Value { get; set; }
     }
 
     public class Order
     {
-        public int? RollNo { get; set; }
-        public string Name { get; set; }
+        public string Inventor { get; set; }
         public int? PatentFamilies { get; set; }
+        public int? NumberofINPADOCpatents { get; set; }
         public string Country { get; set; }
         public string MainFields { get; set; }
     }
 }
 ```
-
-The following screenshot represents a clip mode in DataGrid
-
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rZBKjxrWVIJFoNKz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hjBUNkZdWxzwuxNo?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 > * By default, [Columns.ClipMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_ClipMode) value is **Ellipsis**.
 <br/> If you set the **width** property of a column, the clip mode feature will be automatically applied to that column if the content exceeds the specified width.
@@ -509,7 +534,6 @@ This is demonstrated in the following sample code, where the tooltip for the **F
     }
 }
 ```
-
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hDBUXxhczXWCAKzo?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Grid lines
@@ -528,40 +552,74 @@ The following example demonstrates how to set the [GridLines](https://help.syncf
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor.DropDowns
 
-<SfGrid DataSource="@Orders" GridLines="GridLine.Both" Height="315">
+<label > Change the grid lines: </label>
+<SfDropDownList TValue="GridLine" TItem="DdlClass" DataSource="@DdlData" Width="100px">
+   <DropDownListFieldSettings Text="Text" Value="Value"></DropDownListFieldSettings>
+   <DropDownListEvents ValueChange="OnChange" TValue="GridLine" TItem="DdlClass"></DropDownListEvents>
+</SfDropDownList>
+
+
+<SfGrid DataSource="@Orders" GridLines="@GridLineVal" Height="315">
     <GridColumns>
-        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="140"></GridColumn>
-        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer ID" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.ShipCity) HeaderText="Ship City" Width="100"></GridColumn>
-        <GridColumn Field=@nameof(Order.OrderDate) HeaderText="Order Date" Format="d" Type="ColumnType.Date" Width="100"></GridColumn>
+        <GridColumn Field=@nameof(Order.Inventor) HeaderText="Name of the inventor" Width="180"></GridColumn>
+        <GridColumn Field=@nameof(Order.PatentFamilies) HeaderText="No of patent families" Width="180"></GridColumn>
+        <GridColumn Field=@nameof(Order.Country) HeaderText="Country" Width="140"></GridColumn>
+        <GridColumn Field=@nameof(Order.Active) HeaderText="Active" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.MainFields) HeaderText="Main fields of Invention" Width="200"></GridColumn>
     </GridColumns>
 </SfGrid>
 
-@code{
+@code {
+    public SfGrid<Order> Grid { get; set; }
+
     public List<Order> Orders { get; set; }
 
+    public GridLine GridLineVal { get; set; } = GridLine.Both;
+
+    public void OnChange(ChangeEventArgs<GridLine, DdlClass> Args)
+    {
+        GridLineVal = Args.Value;
+    }
+
+    List<DdlClass> DdlData = new List<DdlClass>
+{
+        new DdlClass() { Text = "Default", Value =GridLine.Default },
+        new DdlClass() { Text = "Horizontal", Value = GridLine.Horizontal},
+        new DdlClass() { Text = "Vertical", Value = GridLine.Vertical },
+        new DdlClass() { Text = "Both", Value = GridLine.Both },
+        new DdlClass() { Text = "None", Value = GridLine.None }
+};
     protected override void OnInitialized()
     {
         Orders = Enumerable.Range(1, 75).Select(x => new Order()
-        {
-            OrderID = 1000 + x,
-            CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
-            ShipCity = (new string[] { "Seattle", "Tacoma", "Redmond", "Kirkland", "London" })[new Random().Next(5)],
-            OrderDate = DateTime.Now.AddDays(-x),
-        }).ToList();
+            {
+
+                Inventor = (new string[] { "Kia Silverb", "Shunpei Yamazaki", "Lowell L. Wood, Jr.", "Paul Lap", "Gurtej Sandhu" })[new Random().Next(5)],
+                PatentFamilies = 1000 + x * 5,
+                Active = (new string[] { "1888(b)-1965", "1976-2010", "1998-2016", "1976-2016", "1922(b)-2012" })[new Random().Next(5)],
+                Country = (new string[] { "Australia", "Japan", "Canada", "India", "USA" })[new Random().Next(5)],
+                MainFields = (new string[] { "Printing, Digital paper, Internet, Electronics,Lab-on-a-chip, MEMS, Mechanical, VLSI", "Various", "Printing, Digital paper, Internet, Electronics, CGI, VLSI", "Automotive, Stainless steel products", "Gaming machines" })[new Random().Next(5)],
+            }).ToList();
+    }
+    public class DdlClass
+    {
+        public string Text { get; set; }
+        public GridLine Value { get; set; }
     }
 
     public class Order
     {
-        public int? OrderID { get; set; }
-        public string CustomerID { get; set; }
-        public string ShipCity { get; set; }
-        public DateTime? OrderDate { get; set; }
+        public string Inventor { get; set; }
+        public int? PatentFamilies { get; set; }
+        public string Active { get; set; }
+        public string Country { get; set; }
+        public string MainFields { get; set; }
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LXVAtRBiBSsjNJsp?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNhgjYDHsYMePtHJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 > By default, the DataGrid renders with **Default** mode.
 
