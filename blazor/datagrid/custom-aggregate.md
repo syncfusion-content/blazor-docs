@@ -7,7 +7,7 @@ control: DataGrid
 documentation: ug
 ---
 
-# Custom aggregate
+# Custom aggregate in Blazor Grid component
 
 The custom aggregate feature in Syncfusion’s Blazor Grid component allows you to calculate aggregate values using your own aggregate function. This feature can be useful in scenarios where the built-in aggregate functions do not meet your specific requirements. To use the custom aggregate option, follow the steps below:
 
