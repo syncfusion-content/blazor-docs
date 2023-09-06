@@ -61,7 +61,6 @@ In the following sample, each list item is split into two columns to display rel
 
 
 ![Blazor AutoComplete with ItemTemplate](./images/blazor-autocomplete-item-template.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/htrUXGLPrMrmLFrS?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Group template
 
@@ -111,7 +110,6 @@ In the following sample, employees are grouped according to their country.
 
 
 ![Blazor AutoComplete with GroupTemplate](./images/blazor-autocomplete-group-template.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/rjhqDmhbhMUmlSqu?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Header template
 
@@ -183,7 +181,6 @@ In the following sample, the list items and its headers are designed and display
 
 
 ![Blazor AutoComplete with HeaderTemplate](./images/blazor-autocomplete-header-template.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/hDrqNGVPrCeNdVkv?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Footer template
 
@@ -236,7 +233,6 @@ In the following sample, footer element displays the total number of list items 
 
 
 ![Blazor AutoComplete with FooterTemplate](./images/blazor-autocomplete-footer-template.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LZrAZGrPhWHbSxtK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## No records template
 
@@ -326,5 +322,3 @@ In the following sample, when the data fetch request fails, the AutoComplete dis
     }
 }
 ```
-
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LXVqjQVFrMPrMsVt?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
