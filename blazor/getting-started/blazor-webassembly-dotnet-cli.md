@@ -9,7 +9,7 @@ documentation: ug
 
 #  Getting Started with Blazor WebAssembly App in .NET CLI
 
-This article provides a step-by-step instructions for building Blazor WebAssembly App with `Blazor Calendar` component using the [.NET CLI](https://dotnet.microsoft.com/download/dotnet/).
+This article provides a step-by-step instructions for building Blazor WebAssembly App with `Blazor Calendar` component using the [.NET CLI](https://dotnet.microsoft.com/en-us/download/dotnet).
 
 ## Prerequisites
 
@@ -46,9 +46,9 @@ dotnet new blazorwasm -o BlazorApp -ho
 {% endhighlight %}
 {% endtabs %}
 
-This command creates new Blazor WebAssembly app project and places it in a new directory called `BlazorApp` inside your current location. See [Create Blazor app topic](https://dotnet.microsoft.com/en-us/learn/aspnet/blazor-tutorial/create) and [dotnet new CLI command](https://docs.microsoft.com/en-us/dotnet/core/tools/dotnet-new) topics for more details.
+This command creates new Blazor WebAssembly app project and places it in a new directory called `BlazorApp` inside your current location. See [Create Blazor app topic](https://dotnet.microsoft.com/en-us/learn/aspnet/blazor-tutorial/create) and [dotnet new CLI command](https://learn.microsoft.com/en-us/dotnet/core/tools/dotnet-new) topics for more details.
 
-N> If you have installed multiple SDK versions and need any specific framework version (net6.0/net7.0) project, then add `-f` flag along with `dotnet new blazorwasm` comment. Refer [here](https://docs.microsoft.com/en-us/dotnet/core/tools/dotnet-new#blazorwasm) for the available options.
+N> If you have installed multiple SDK versions and need any specific framework version (net6.0/net7.0) project, then add `-f` flag along with `dotnet new blazorwasm` comment. Refer [here](https://learn.microsoft.com/en-us/dotnet/core/tools/dotnet-new#blazorwasm) for the available options.
 
 ## Install Syncfusion Blazor Calendars and Theme NuGet in the App
 
