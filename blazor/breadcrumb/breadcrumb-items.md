@@ -33,7 +33,6 @@ The [Blazor Breadcrumb](https://www.syncfusion.com/blazor-components/blazor-brea
 ```
 
 ![Blazor Breadcrumb Component](./images/blazor-Breadcrumb-tag.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LDLgDGhFgzVThsSv?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Items based on current URL
 
@@ -61,4 +60,3 @@ You can generate the Breadcrumb items by providing the [Url](https://help.syncfu
 ```
 
 ![Blazor Breadcrumb Component](./images/blazor-Breadcrumb-static-url.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BNrAtQLvAfAdvRFa?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->

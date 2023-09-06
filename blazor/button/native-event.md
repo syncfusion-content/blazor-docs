@@ -59,4 +59,3 @@ The `onclick` attribute is used to bind the click event for button. Here, we hav
 
 
 ![Blazor Native Event Button](./images/blazor-native-event-button.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/rXBKZGrbTggKEBwN?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->

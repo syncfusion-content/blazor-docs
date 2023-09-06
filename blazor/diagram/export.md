@@ -8,6 +8,9 @@ documentation: ug
 ---
 
 # Exporting in Blazor Diagram Component
+To save and export blazor diagram, refer to the below video link,
+
+{% youtube "youtube:https://www.youtube.com/watch?v=2hhl00gMObc" %}
 
 Diagram provides support to export the diagram as an image/svg files. The following methods helps to export the diagram in the desired formats.
 
@@ -398,4 +401,4 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## See Also
 
-* [How to print or export the HTML and Native node into image format](https://www.syncfusion.com/kb/13993/how-to-print-or-export-the-html-and-native-node-into-image-format)
+* [How to print or export the HTML and Native node into image format](https://support.syncfusion.com/kb/article/12332/how-to-print-or-export-the-html-and-native-node-into-image-format-in-blazor-diagarm)

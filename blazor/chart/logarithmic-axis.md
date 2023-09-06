@@ -49,7 +49,6 @@ When data contains numeric values in both the lower order of magnitude (eg: 10<s
 ```
 
 ![Blazor Chart with Logarithmic Axis](images/logarithmic-axis/blazor-chart-logarithmic-axis.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VjLUXnBbUIjRuEJY?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Range
 
@@ -91,7 +90,6 @@ The axis range will be calculated automatically based on the provided data; howe
 ```
 
 ![Changing Blazor Line Chart Logarithmic Axis based on Range](images/logarithmic-axis/blazor-line-chart-axis-based-on-range.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BthUjRLlAGOqOwif?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Logarithmic base
 
@@ -133,7 +131,6 @@ Logarithmic base can be customized using the [LogBase](https://help.syncfusion.
 ```
 
 ![Blazor Line Chart Logarithmic Axis with Base](images/logarithmic-axis/blazor-line-chart-logarithmic-axis-with-base.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LNrAXnVvUFstsDlm?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Logarithmic interval
 
@@ -175,7 +172,6 @@ The interval can be customized using the [Interval](https://help.syncfusion.com/
 ```
 
 ![Changing Blazor Line Chart Logarithmic Axis based on Interval](images/logarithmic-axis/blazor-line-chart-axis-based-on-range.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BNVgXRhvKFKmSxeB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Label format
 
@@ -217,7 +213,6 @@ Using the [LabelFormat](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 ```
 
 ![Blazor Line Chart Logarithmic Axis with Label Format](images/logarithmic-axis/blazor-line-chart-axis-with-label-format.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LZrAtnrvUvfoyyms?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 The table below shows the results of applying some commonly used label formats to logarithmic values.
 
@@ -318,7 +313,6 @@ Axis also supports custom label format using placeholders such as {value}K, wher
 ```
 
 ![Blazor Line Chart Logarithmic Axis with Custom Label Format](images/logarithmic-axis/blazor-line-chart-axis-custom-label-format.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/hjBANRVvUPwMucgI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 N> Refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
 
