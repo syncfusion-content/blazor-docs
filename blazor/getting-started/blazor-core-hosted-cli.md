@@ -40,123 +40,32 @@ This command creates new Blazor WebAssembly App project and places it in a new d
 
 N> If you have installed multiple SDK versions and need any specific framework version (.net6.0/.net7.0) project, then add `-f` flag along with `dotnet new blazorwasm` comment. Refer [here](https://docs.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-5.0&pivots=windows) for the available options.
 
-## Install Syncfusion Blazor packages in the App
+## Install Syncfusion Blazor Calendars and Theme NuGet in the App
 
-Syncfusion Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). To use Syncfusion Blazor components in the application, add reference to the corresponding NuGet. Refer to [NuGet packages topic](https://blazor.syncfusion.com/documentation/nuget-packages) for available NuGet packages list with component details and [Benefits of using individual NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages#benefits-of-using-individual-nuget-packages).
-
-Add `Syncfusion.Blazor.Calendars` NuGet package to the application using the following command in the command prompt (Windows) or terminal (Linux and macOS) to install a NuGet package. See [Install and manage packages using the dotnet CLI](https://docs.microsoft.com/en-us/nuget/consume-packages/install-use-packages-dotnet-cli) topics for more details.
+Here's an example of how to add `Calendars` Component in the application using the following command in the command prompt (Windows) or terminal (Linux and macOS) to install a [Syncfusion.Blazor.Calendars](https://www.nuget.org/packages/Syncfusion.Blazor.Calendars/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet package. See [Install and manage packages using the dotnet CLI](https://learn.microsoft.com/en-us/nuget/consume-packages/install-use-packages-dotnet-cli) topics for more details. Alternatively, you can utilize the following package manager command to achieve the same. 
 
 {% tabs %}
 {% highlight c# tabtitle=".NET CLI" %}
 
-cd client
 dotnet add package Syncfusion.Blazor.Calendars --version {{ site.releaseversion }}
+dotnet add package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
 dotnet restore
 
 {% endhighlight %}
-{% endtabs %}
+{% highlight C# tabtitle="Package Manager" %}
 
-{% tabs %}
-{% highlight nuget tabtitle="Package Manager" %}
+Install-Package Syncfusion.Blazor.Calendars -Version {{ site.releaseversion }}
 
-PM> NuGet\Install-Package Syncfusion.Blazor.Calendars -Version {{ site.releaseversion }}
+Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
 
 {% endhighlight %}
 {% endtabs %}
+
+N> Syncfusion Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for available NuGet packages list with component details.
 
 ## Register Syncfusion Blazor Service
 
-Open **~/_Imports.razor** file and import the `Syncfusion.Blazor` namespace.
-
-{% tabs %}
-{% highlight razor tabtitle="~/_Imports.razor" %}
-
-@using Syncfusion.Blazor
-
-{% endhighlight %}
-{% endtabs %}
-
-Now, Open the **~/Program.cs** file and register the Syncfusion Blazor Service in the client web app. 
-
-{% tabs %}
-{% highlight c# tabtitle=".NET 6 & .NET 7 (~/Program.cs)" hl_lines="3 10" %}
-
-using Microsoft.AspNetCore.Components;
-using Microsoft.AspNetCore.Components.Web;
-using Syncfusion.Blazor;
-
-var builder = WebApplication.CreateBuilder(args);
-
-// Add services to the container.
-builder.Services.AddRazorPages();
-builder.Services.AddServerSideBlazor();
-builder.Services.AddSyncfusionBlazor();
-
-var app = builder.Build();
-....
-
-{% endhighlight %}
-{% endtabs %}
-
-## Add style sheet
-
-Checkout the [Blazor Themes topic](https://blazor.syncfusion.com/documentation/appearance/themes) to learn different ways ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference) and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)) to refer themes in Blazor application, and to have the expected appearance for Syncfusion Blazor components. Here, the theme is referred using [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Refer to [Enable static web assets usage](https://blazor.syncfusion.com/documentation/appearance/themes#enable-static-web-assets-usage) topic to use static assets in your project.
-
-To add theme to the app, Add `Syncfusion.Blazor.Themes` NuGet package to the application using the following command in the command prompt (Windows) or terminal (Linux and macOS) to install the NuGet package.
-
-{% tabs %}
-{% highlight c# tabtitle=".NET CLI" %}
-
-dotnet add package Syncfusion.Blazor.Themes --version {{ site.releaseversion }}
-dotnet restore
-
-{% endhighlight %}
-{% endtabs %}
-
-{% tabs %}
-{% highlight nuget tabtitle="Package Manager" %}
-
-PM> NuGet\Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
-
-{% endhighlight %}
-{% endtabs %}
-
-Then the theme style from can be referred inside the `<head>` of the **wwwroot/index.html** file in client web app.
-
-{% tabs %}
-{% highlight html tabtitle="~/index.html" hl_lines="3"  %}
-
-<head>
-    ...
-    <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
-    
-</head>
-
-{% endhighlight %}
-{% endtabs %}
-
-## Add script reference
-
-Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/documentation/common/adding-script-references) to learn different ways to add script reference in Blazor Application. In this getting started walk-through, the required scripts are referred using [Static Web Assets](https://blazor.syncfusion.com/documentation/common/adding-script-references#static-web-assets) externally inside the `<head>`  of **wwwroot/index.html** file in client web app. Refer to [Enable static web assets usage](https://blazor.syncfusion.com/documentation/common/adding-script-references#enable-static-web-assets-usage) topic to use static assets in your project.
-
-{% tabs %}
-{% highlight html tabtitle="~/index.html" hl_lines="4" %}
-
-<head>
-    ...
-    <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
-    <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
-
-</head>
-
-{% endhighlight %}
-{% endtabs %}
-
-N> Syncfusion recommends to reference scripts using [Static Web Assets](https://blazor.syncfusion.com/documentation/common/adding-script-references#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/common/adding-script-references#cdn-reference) and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator) by [disabling JavaScript isolation](https://blazor.syncfusion.com/documentation/common/adding-script-references#disable-javascript-isolation) for better loading performance of the Blazor application.
-
-## Add Syncfusion Blazor component
-
-* Open **~/_Imports.razor** file or any razor page under the `~/Pages` folder where the component is to be added and import the `Syncfusion.Blazor.Calendars` namespace.
+Open **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Calendars` namespace.
 
 {% tabs %}
 {% highlight razor tabtitle="~/_Imports.razor" %}
@@ -167,7 +76,46 @@ N> Syncfusion recommends to reference scripts using [Static Web Assets](https://
 {% endhighlight %}
 {% endtabs %}
 
-* Now, add the Syncfusion Calendar component in razor file. Here, the Calendar component is added in the **~/Pages/Index.razor** page under the `~Pages` folder.
+Now, Open the **~/Program.cs** file and register the Syncfusion Blazor Service in the client web app. 
+
+{% tabs %}
+{% highlight C# tabtitle="Blazor WebAssembly App" hl_lines="3 11" %}
+
+using Microsoft.AspNetCore.Components.Web;
+using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
+using Syncfusion.Blazor;
+
+var builder = WebAssemblyHostBuilder.CreateDefault(args);
+builder.RootComponents.Add<App>("#app");
+builder.RootComponents.Add<HeadOutlet>("head::after");
+
+builder.Services.AddScoped(serviceProvider => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
+
+builder.Services.AddSyncfusionBlazor();
+await builder.Build().RunAsync();
+....
+
+{% endhighlight %}
+{% endtabs %}
+
+## Add stylesheet and script resources
+
+The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Reference the stylesheet and script in the `<head>` of the main page as follows: 
+
+* For Blazor WebAssembly app, include it in the **~/index.html** file.
+
+```html
+<head>
+    ....
+    <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
+    <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
+</head>
+```
+N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic to discover various methods ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference), and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)) for referencing themes in your Blazor application. Also, check out the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic to learn different approaches for adding script references in your Blazor application.
+
+## Add Syncfusion Blazor component
+
+Add the Syncfusion Blazor Calendar component in the **~/Pages/Index.razor** file.
 
 {% tabs %}
 {% highlight razor %}
@@ -196,4 +144,4 @@ N> You need to include a valid license key (either paid or trial key) within you
 
 ## See also
 
-* [ASP.NET Core Blazor hosting models](https://docs.microsoft.com/en-us/aspnet/core/blazor/hosting-models?view=aspnetcore-5.0)
+* [ASP.NET Core Blazor hosting models](https://learn.microsoft.com/en-us/aspnet/core/blazor/hosting-models?view=aspnetcore-7.0)
