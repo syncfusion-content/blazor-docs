@@ -43,19 +43,21 @@ This section explains how to create and run the first Microsoft Teams applicatio
 5. On clicking on "Add" the new Microsfot application with personal Tab is created.
 ![New Teams application with Personal Tab](images\MSTeams\new-app-personal-tab.png)
 
-## Install Syncfusion Blazor Packages in the App
+## Install Syncfusion Blazor Kanban and Theme NuGet in the App
 
-Syncfusion Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). In order to use Syncfusion Blazor components in the application, add reference to the corresponding NuGet. Refer to [NuGet packages topic](https://blazor.syncfusion.com/documentation/nuget-packages) for available NuGet packages list with component details and [Benefits of using individual NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages#benefits-of-using-individual-nuget-packages). 
-
-To add Blazor Calendar component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search for [Syncfusion.Blazor.Kanban](https://www.nuget.org/packages/Syncfusion.Blazor.Kanban) and then install it.
+Here's an example of how to add Blazor Kanban component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install [Syncfusion.Blazor.Kanban](https://www.nuget.org/packages/Syncfusion.Blazor.Kanban) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/). Alternatively, you can utilize the following package manager command to achieve the same.
 
 {% tabs %}
-{% highlight nuget tabtitle="Package Manager" %}
+{% highlight C# tabtitle="Package Manager" %}
 
-PM> NuGet\Install-Package Syncfusion.Blazor.Kanban -Version {{ site.releaseversion }}
+Install-Package Syncfusion.Blazor.Kanban -Version {{ site.releaseversion }}
+
+Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
 
 {% endhighlight %}
 {% endtabs %}
+
+N> Syncfusion Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for available NuGet packages list with component details.
 
 ## Register Syncfusion Blazor Service
 
