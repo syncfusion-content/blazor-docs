@@ -76,25 +76,6 @@ var app = builder.Build();
 ....
 
 {% endhighlight %}
-{% highlight c# tabtitle=".NET 5 & .NET 3.X (~/Program.cs)" hl_lines="1 12" %}
-
-using ElectronNET.API;
-
-public class Program
-{
-    .....
-    .....
-
-    public static IHostBuilder CreateHostBuilder(string[] args) =>
-    Host.CreateDefaultBuilder(args)
-    .ConfigureWebHostDefaults(webBuilder =>
-    {
-        webBuilder.UseElectron(args);
-        webBuilder.UseStartup<Startup>();
-    });
-}
-
-{% endhighlight %}
 {% endtabs %}
 
 6.To open the Electron window add the below code in the **~/Program.cs** file of .NET 6 and .NET 7 applications.
