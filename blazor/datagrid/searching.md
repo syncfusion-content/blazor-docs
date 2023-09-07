@@ -13,7 +13,7 @@ The Syncfusion Blazor Grid includes a powerful built-in searching feature that a
 
 Set the  [AllowSearching](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_AllowSearching) property to true to enable the searching feature in the grid.
 
-To further enhance the search functionality, you can integrate a search text box directly into the grid’s toolbar. This allows users to enter search criteria conveniently within the grid interface. To add the search item to the grid’s toolbar, use the  [Toolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Toolbar) property and add Search item.
+To further enhance the search functionality, you can integrate a search text box directly into the grid’s toolbar. This allows users to enter search criteria conveniently within the grid interface. To add the search item to the grid’s toolbar, use the  [Toolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Toolbar) property and add **Search** item.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -74,9 +74,9 @@ The following example demonstrates how to set an initial search in the grid usin
 
 1.`Field`: **CustomerID** specifies that the search should be performed only in the ‘CustomerID’ field.
 
-2.`operator`: **contains** indicates that the search should find records that contain the specified search key.
+2.`Operator`: **contains** indicates that the search should find records that contain the specified search key.
 
-3.`key`: **Ha** is the initial search key that will be applied when the grid is rendered.
+3.`Key`: **Ha** is the initial search key that will be applied when the grid is rendered.
 
 4.`IgnoreCase`: **true** makes the search case-insensitive.
 
