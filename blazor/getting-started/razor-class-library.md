@@ -153,12 +153,12 @@ Refer to the [Blazor Tooling documentation](https://learn.microsoft.com/en-us/as
     N> Also, you can refer to the themes through the CDN version by using the following link instead of package theme reference.
     [https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/bootstrap4.css](https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/bootstrap4.css).
 
-5. Now, add the created custom component in the **~/Pages/Index.razor** file.
+4. Now, add the created custom component in the **~/Pages/Index.razor** file.
 
     ```cshtml
     <Component></Component>
     ```
 
-6. Run the application, The Syncfusion Blazor Calendar component will be rendered in the default web browser.
+5. Run the application, The Syncfusion Blazor Calendar component will be rendered in the default web browser.
 
     ![RCL output](images/RCL-output.png)
