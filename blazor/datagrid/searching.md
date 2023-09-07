@@ -143,29 +143,31 @@ These operators provide flexibility in defining the search behavior and allow yo
 The following example demonstrates how to set the `SearchSettings.Operator` property based on changing the dropdown value using the [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSwitch-1.html#Syncfusion_Blazor_Buttons_SfSwitch_1_ValueChange) event of the [DropDownList](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2__ctor) component.
 
 ```cshtml
+@using Syncfusion.Blazor
 @using Syncfusion.Blazor.Grids
-@using Syncfusion.Blazor.DropDowns
+@using Syncfusion.Blazor.DropDowns 
 
 <label>Change the search operators: </label>
-<SfDropDownList Width="100px" TValue="string" TItem="ddlOrder" DataSource="@LocalData">
-    <DropDownListFieldSettings Value="Text" Text="Text"></DropDownListFieldSettings>
-    <DropDownListEvents TValue="string" TItem="ddlOrder" ValueChange="OnValueChange"></DropDownListEvents>
-</SfDropDownList>
+<SfDropDownList Width="100px" TValue="Operator" TItem="ddlOrder" Value="@SearchOperator" DataSource="@LocalData">
+<DropDownListFieldSettings Value="Value" Text="Text"></DropDownListFieldSettings>
+<DropDownListEvents TValue="Operator" TItem="ddlOrder" ValueChange="OnValueChange"></DropDownListEvents>
+</SfDropDownList> 
 
 <SfGrid @ref="Grid" DataSource="@Orders" Toolbar=@Tool>
-    <GridColumns>
-        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
-    </GridColumns>
+<GridSearchSettings Operator="@SearchOperator"></GridSearchSettings>
+<GridColumns>
+<GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+<GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
+<GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+<GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+</GridColumns>
 </SfGrid>
 
 @code {
     private SfGrid<Order> Grid;
     public List<Order> Orders { get; set; }
     public List<string> Tool = new List<string>() { "Search" };
-
+    public Operator SearchOperator { get; set; } = Operator.StartsWith;
     protected override void OnInitialized()
     {
         Orders = Enumerable.Range(1, 75).Select(x => new Order()
@@ -183,41 +185,29 @@ The following example demonstrates how to set the `SearchSettings.Operator` prop
         public string CustomerID { get; set; }
         public DateTime? OrderDate { get; set; }
         public double? Freight { get; set; }
-    }
+    } 
+
     public class ddlOrder
     {
         public string Text { get; set; }
-        public string Value { get; set; }
-    }
+        public Operator Value { get; set; }
+    } 
+
     List<ddlOrder> LocalData = new List<ddlOrder>
     {
-        new ddlOrder(){Text="StartsWith",Value="StartsWith"},
-        new ddlOrder(){Text="EndsWith",Value="EndsWith"},
-        new ddlOrder(){Text="Contains",Value="Contains"},
-        new ddlOrder(){Text="Equal",Value="Equal"},
-    };
-    public void OnValueChange(ChangeEventArgs<string, ddlOrder> args)
+        new ddlOrder(){Text="StartsWith",Value= Operator.StartsWith },
+        new ddlOrder(){Text="EndsWith",Value=Operator.EndsWith},
+        new ddlOrder(){Text="Contains",Value=Operator.Contains},
+        new ddlOrder(){Text="Equal",Value=Operator.Equal}
+    }; 
+
+    public void OnValueChange(ChangeEventArgs<Operator, ddlOrder> args)
     {
-        if (args.Value == "StartsWith")
-        {
-            this.Grid.SearchSettings.Operator = Operator.StartsWith;
-        }
-        else if (args.Value == "EndsWith")
-        {
-            this.Grid.SearchSettings.Operator = Operator.EndsWith;
-        }
-        else if(args.Value=="Contains")
-        {
-            this.Grid.SearchSettings.Operator = Operator.Contains;
-        }
-        else
-        {
-            this.Grid.SearchSettings.Operator = Operator.Equal;
-        }
+        SearchOperator = args.Value;
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LDLANateWmdQMmro?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDrAZYDGCGRANpWu?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Search by external button
 
