@@ -25,14 +25,14 @@ In the following example, the [Blazor Toggle Switch](https://www.syncfusion.com/
 <SfGrid @ref="Grid" DataSource="@Orders" Height="315">
     <GridColumns>
         <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="140"></GridColumn>
-        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="<span> Customer ID </span>" DisableHtmlEncode="@IsVar" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="<span> Customer ID </span>" DisableHtmlEncode="@IsEncode" Width="120"></GridColumn>
         <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" Width="100"></GridColumn>
         <GridColumn Field=@nameof(Order.ShipCity) HeaderText="Ship City" Width="100"></GridColumn>
     </GridColumns>
 </SfGrid>
 
 @code {
-    public bool IsVar { get; set; } = true;
+    public bool IsEncode { get; set; } = true;
     private SfGrid<Order> Grid;
     public List<Order> Orders { get; set; }
 
@@ -58,57 +58,53 @@ In the following example, the [Blazor Toggle Switch](https://www.syncfusion.com/
     {
         if(args.Checked)
         {
-            IsVar = false;
-            Grid.Refresh();
+            IsEncode = false;
         }
         else
         {
-            IsVar = true;
-            Grid.Refresh();
+            IsEncode = true;
         }
+        Grid.Refresh();
     }
 }
 ```
-
-The following screenshot represents a DataGrid displaying the HTML content.
-
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VDhgZbMvAWBCLJJH?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 > * The [DisableHtmlEncode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_DisableHtmlEncode)  property disables HTML encoding for the corresponding column in the grid.
-<br/> If the property is set to true, any HTML tags in the column’s data will be displayed.
-<br/> If the property is set to false, the HTML tags will be removed and displayed as plain text.
-<br/> Disabling HTML encoding can potentially introduce security vulnerabilities, so use caution when enabling this feature.
+> * If the property is set to **true**, any HTML tags in the column’s data will be displayed.
+> * If the property is set to **false**, the HTML tags will be removed and displayed as plain text.
+> * Disabling HTML encoding can potentially introduce security vulnerabilities, so use caution when enabling this feature.
 
 ## Autowrap the grid content
 
 The auto wrap feature allows the cell content in the grid to wrap to the next line when it exceeds the boundary of the specified cell width. The cell content wrapping works based on the position of white space between words. To support the Autowrap functionality in Syncfusion Grid, you should set the appropriate width for the columns. The column width defines the maximum width of a column and helps to wrap the content automatically.
 
- To enable auto wrap, set the [AllowTextWrap](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowTextWrap) property to `true`. You can configure the auto wrap mode by setting the [TextWrapSettings.WrapMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Type) property.
+ To enable auto wrap, set the [AllowTextWrap](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowTextWrap) property to **true**. You can configure the auto wrap mode by setting the [TextWrapSettings.WrapMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Type) property.
 
  Grid provides the below three options for configuring:
 
-* **Both**-This is the default value for wrapMode. With this option, both the grid **Header** and **Content** text is wrapped.
-* **Header**- With this option, only the grid header text is wrapped.
-* **Content**- With this option, only the grid content is wrapped.
+* **Both** - This is the default value for wrapMode. With this option, both the grid **Header** and **Content** text is wrapped.
+* **Header** -  With this option, only the grid header text is wrapped.
+* **Content** -  With this option, only the grid content is wrapped.
 
 > * When a column width is not specified, then auto wrap of columns will be adjusted with respect to the DataGrid's width.
-<br/> If a column’s header text contains no white space, the text may not be wrapped.
-<br/> If the content of a cell contains HTML tags, the Autowrap functionality may not work as expected. In such cases, you can use the [HeaderTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_HeaderTemplate) and [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_Template) features of the column to customize the appearance of the header and cell content.
+> * If a column’s header text contains no white space, the text may not be wrapped.
+> *  If the content of a cell contains HTML tags, the Autowrap functionality may not work as expected. In such cases, you can use the [HeaderTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_HeaderTemplate) and [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_Template) features of the column to customize the appearance of the header and cell content.
 
-The following example demonstrates how to set the `AllowTextWrap` property to true and specify the wrap mode as Content by setting the `TextWrapSettings.WrapMode` property.Also change the `TextWrapSettings.wrapMode` property to **Content** and **Both** on changing the dropdown value using the [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSwitch-1.html#Syncfusion_Blazor_Buttons_SfSwitch_1_ValueChange) event of the DropDownList component.
+The following example demonstrates how to set the `AllowTextWrap` property to **true** and specify the wrap mode as **Content** by setting the `TextWrapSettings.WrapMode` property.Also change the `TextWrapSettings.wrapMode` property to **Content**,**Header** and **Both** on changing the dropdown value using the [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSwitch-1.html#Syncfusion_Blazor_Buttons_SfSwitch_1_ValueChange) event of the DropDownList component.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.DropDowns
 
 <label>Change the wrapmode of auto wrap feature:</label>
-<SfDropDownList  Width="100px" TValue="string" TItem="ddlOrder" DataSource="@LocalData">
-    <DropDownListFieldSettings Value="Text" Text="Text"></DropDownListFieldSettings>
-    <DropDownListEvents TValue="string" TItem="ddlOrder" ValueChange="OnValueChange"></DropDownListEvents>
+<SfDropDownList TValue="WrapMode" TItem="ddlOrder" @bind-Value="@DropVal" DataSource="@LocalData" Width="100px">
+    <DropDownListFieldSettings Text="Text" Value="Value"></DropDownListFieldSettings>
+    <DropDownListEvents ValueChange="OnValueChange" TValue="WrapMode" TItem="ddlOrder"></DropDownListEvents>
 </SfDropDownList>
 
 <SfGrid @ref="Grid" DataSource="@Orders" GridLines="GridLine.Default" AllowTextWrap="true" Height="315">
-    <GridTextWrapSettings WrapMode="WrapMode.Content"></GridTextWrapSettings>
+    <GridTextWrapSettings WrapMode="@DropVal"></GridTextWrapSettings>
     <GridColumns>
         <GridColumn Field=@nameof(Order.RollNo) HeaderText="Roll No" Width="140"></GridColumn>
         <GridColumn Field=@nameof(Order.Name) HeaderText="Name of the inventor" Width="70"></GridColumn>
@@ -120,6 +116,9 @@ The following example demonstrates how to set the `AllowTextWrap` property to tr
 
 @code {
     private SfGrid<Order> Grid;
+
+    public WrapMode DropVal { get; set; } = WrapMode.Content;
+
     public List<Order> Orders { get; set; }
 
     protected override void OnInitialized()
@@ -145,32 +144,22 @@ The following example demonstrates how to set the `AllowTextWrap` property to tr
     public class ddlOrder
     {
         public string Text { get; set; }
-        public string Value { get; set; }
+        public WrapMode Value { get; set; }
     }
     List<ddlOrder> LocalData = new List<ddlOrder>
     {
-        new ddlOrder(){Text="Both",Value="Both"},
-        new ddlOrder(){Text="Content",Value="Content"},
-        new ddlOrder(){Text="Header",Value="Header"},
+        new ddlOrder() { Text = "Both", Value = WrapMode.Both },
+        new ddlOrder() { Text = "Content", Value = WrapMode.Content },
+        new ddlOrder() { Text = "Header", Value = WrapMode.Header }
     };
-    public void OnValueChange(ChangeEventArgs<string, ddlOrder> args)
+    public void OnValueChange(ChangeEventArgs<WrapMode, ddlOrder> Args)
     {
-        if(args.Value=="Both")
-        {
-            this.Grid.TextWrapSettings.WrapMode = WrapMode.Both;
-        }
-        else if(args.Value=="Content")
-        {
-            this.Grid.TextWrapSettings.WrapMode = WrapMode.Content;
-        }
-        else
-        {
-            this.Grid.TextWrapSettings.WrapMode = WrapMode.Header;
-        }
+        DropVal = Args.Value;
+        Grid.Refresh();
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VZhUDlCvAfzGErtz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VNBAtuDxfZcysamd?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Customize cell styles
 
@@ -323,15 +312,17 @@ To customize the style of grid cells, define [CustomAttributes](https://help.syn
 
 ```cshtml
 <style>
-    .e-attr {
+    .custom-css {
         background: #d7f0f4;
+        font-style: italic;
+        color:navy
     }
 </style>
 ```
-Here, setting the CustomAttributes property of the **ShipCity** column to an object that contains the CSS class ‘e-attr’. This CSS class will be applied to all the cells in the **ShipCity** column of the grid.
+Here, setting the CustomAttributes property of the **ShipCity** column to an object that contains the CSS class ‘custom-css’. This CSS class will be applied to all the cells in the **ShipCity** column of the grid.
 
 ```cshtml
-<GridColumn Field=@nameof(Order.ShipCity) HeaderText="Ship City" CustomAttributes="@(new Dictionary<string, object>(){ { "class", "e-attr" }})" Width="100"></GridColumn>
+<GridColumn Field=@nameof(Order.ShipCity) HeaderText="Ship City" CustomAttributes="@(new Dictionary<string, object>(){ { "class", "custom-css" }})" Width="100"></GridColumn>
 ```
 
 The following example demonstrates how to customize the appearance of the **OrderID** and **ShipCity** columns using custom attributes.
@@ -341,9 +332,9 @@ The following example demonstrates how to customize the appearance of the **Orde
 
 <SfGrid DataSource="@Orders" Height="315">
     <GridColumns>
-        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" CustomAttributes="@(new Dictionary<string, object>(){ { "class", "e-attr" }})" TextAlign="TextAlign.Right" Width="140"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" CustomAttributes="@(new Dictionary<string, object>(){ { "class", "custom-css" }})" TextAlign="TextAlign.Right" Width="140"></GridColumn>
         <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer ID" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.ShipCity) HeaderText="Ship City" CustomAttributes="@(new Dictionary<string, object>(){ { "class", "e-attr" }})" Width="100"></GridColumn>
+        <GridColumn Field=@nameof(Order.ShipCity) HeaderText="Ship City" CustomAttributes="@(new Dictionary<string, object>(){ { "class", "custom-css" }})" Width="100"></GridColumn>
         <GridColumn Field=@nameof(Order.ShipName) HeaderText="Ship Name"  Width="100"></GridColumn>
     </GridColumns>
 </SfGrid>
@@ -372,12 +363,14 @@ The following example demonstrates how to customize the appearance of the **Orde
 }
 
 <style>
-    .e-attr {
+    .custom-css {
         background: #d7f0f4;
+        font-style: italic;
+        color:navy
     }
 </style>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hDhqZPivKuVnDjkq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LtVKDuDnTisVMfBa?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 > Custom attributes can be used to customize any cell in the grid, including header and footer cells.
 
@@ -391,7 +384,7 @@ There are three types of [ClipMode](https://help.syncfusion.com/cr/blazor/Syncfu
 * **Ellipsis**: Displays ellipsis when the cell content overflows its area.
 * **EllipsisWithTooltip**: Displays ellipsis when the cell content overflows its area, also it will display the tooltip while hover on ellipsis is applied. Also it will display the tooltip while hover on ellipsis is applied.
 
-The following example demonstrates, how to set the [ClipMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_ClipMode) property to **Clip** for the **Name of the Inventor** column, **Ellipsis** for the **Number of Patent Families** column, and **EllipsisWithTooltip** for the **Main Fields of Invention** column.
+The following example demonstrates, how to set the [ClipMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_ClipMode) property for the **Main Fields of Invention** column .Also change the `ClipMode` property to **Clip**,**Ellipsis** and **EllipsisWithTooltip** on changing the dropdown value using the [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSwitch-1.html#Syncfusion_Blazor_Buttons_SfSwitch_1_ValueChange) event of the DropDownList component
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -402,7 +395,6 @@ The following example demonstrates, how to set the [ClipMode](https://help.syncf
       <DropDownListFieldSettings Text="Text" Value="Value"></DropDownListFieldSettings>
       <DropDownListEvents ValueChange="OnChange" TValue="ClipMode" TItem="DdlClass"></DropDownListEvents>
  </SfDropDownList>
-
 
 <SfGrid @ref="Grid" DataSource="@Orders" AllowPaging="true" Height="315">
     <GridColumns>
@@ -463,8 +455,8 @@ The following example demonstrates, how to set the [ClipMode](https://help.syncf
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hjBUNkZdWxzwuxNo?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 > * By default, [Columns.ClipMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_ClipMode) value is **Ellipsis**.
-<br/> If you set the **width** property of a column, the clip mode feature will be automatically applied to that column if the content exceeds the specified width.
-<br/> Be careful when using the Clip mode, as it may result in important information being cut off. It is generally recommended to use the Ellipsis or EllipsisWithTooltip modes instead.
+> * If you set the **width** property of a column, the clip mode feature will be automatically applied to that column if the content exceeds the specified width.
+> * Be careful when using the Clip mode, as it may result in important information being cut off. It is generally recommended to use the Ellipsis or EllipsisWithTooltip modes instead.
 
 ## Tooltip
 
