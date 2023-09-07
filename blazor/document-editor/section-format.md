@@ -16,8 +16,8 @@ documentation: ug
 You can get or set the size of a section at cursor position by using the following sample code.
 
 ```csharp
-documentEditor.Selection.SectionFormat.SetPageWidth(500);
-documentEditor.Selection.SectionFormat.SetPageHeight(600);
+await documentEditor.Selection.SectionFormat.SetPageWidthAsync(500);
+await documentEditor.Selection.SectionFormat.SetPageHeightAsync(600);
 ```
 
 You can change the orientation of the page by swapping the values of page width and height respectively.
@@ -28,10 +28,10 @@ Left and right page margin defines the gap between the document content from lef
 Refer to the following sample code.
 
 ```csharp
-documentEditor.Selection.SectionFormat.SetLeftMargin(10);
-documentEditor.Selection.SectionFormat.SetRightMargin(10);
-documentEditor.Selection.SectionFormat.SetTopMargin(10);
-documentEditor.Selection.SectionFormat.SetBottomMargin(10);
+await documentEditor.Selection.SectionFormat.SetLeftMarginAsync(10);
+await documentEditor.Selection.SectionFormat.SetRightMarginAsync(10);
+await documentEditor.Selection.SectionFormat.SetTopMarginAsync(10);
+await documentEditor.Selection.SectionFormat.SetBottomMarginAsync(10);
 ```
 
 ## Header distance
@@ -39,7 +39,7 @@ documentEditor.Selection.SectionFormat.SetBottomMargin(10);
 You can define the distance of header content from the top of the page by using the following sample code.
 
 ```csharp
-documentEditor.Selection.SectionFormat.SetHeaderDistance(72);
+await documentEditor.Selection.SectionFormat.SetHeaderDistanceAsync(72);
 ```
 
 ## Footer distance
@@ -47,7 +47,7 @@ documentEditor.Selection.SectionFormat.SetHeaderDistance(72);
 You can define the distance of footer content from the bottom of the page by using the following sample code.
 
 ```csharp
-documentEditor.Selection.SectionFormat.SetFooterDistance(72);
+await documentEditor.Selection.SectionFormat.SetFooterDistanceAsync(72);
 ```
 
 You can also explore our [Blazor Word Processor](https://blazor.syncfusion.com/demos/document-editor/default-functionalities) example to know how to render and configure the document editor.

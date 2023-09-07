@@ -80,7 +80,7 @@ Complex hierarchical tree layout arranges nodes in a tree-like structure, where 
 }
 
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Layout)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Layout/ComplexHierarchicalTree)
 
 ![Blazor Complex Hierarchical Diagram](../images/blazor-diagram-complex.png)
 
