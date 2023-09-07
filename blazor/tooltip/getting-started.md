@@ -11,7 +11,7 @@ documentation: ug
 
 This section briefly explains about how to include [Blazor Tooltip](https://www.syncfusion.com/blazor-components/blazor-tooltip) component in your Blazor Server App and Blazor WebAssembly App using Visual Studio.
 
-To get start quickly with the Blazor Tooltip, check on this video.
+To get start quickly with the Blazor Tooltip, check on this video or or [GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/Tooltip) sample.
 
 {% youtube
 "youtube:https://www.youtube.com/watch?v=Lzpm6x6TXO8"%}
@@ -136,7 +136,7 @@ Integrate the Syncfusion Blazor Tooltip component with the Syncfusion Blazor [Bu
 
 ![Blazor Tooltip Component](./images/blazor-tooltip.gif)
 
-N> The Tooltip component in our system uses the HTML element's id or class name to identify the target for the tooltip. However, when using a GUID as the target ID, it is not able to recognize IDs that start with a digit. <br/>[View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/Tooltip).
+N> The Tooltip component in our system uses the HTML element's id or class name to identify the target for the tooltip. However, when using a GUID as the target ID, it is not able to recognize IDs that start with a digit.
 
 ## See also
 
