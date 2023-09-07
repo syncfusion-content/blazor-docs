@@ -83,7 +83,7 @@ To access the aggregate values inside the **FooterTemplate**, you can use the im
 
 ## Format the aggregate value
 
-To format the aggregate value result in the Syncfusion Blazor Grid component, you can use the  [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridAggregateColumn.html#Syncfusion_Blazor_Grids_GridAggregateColumn_Format) property of the **AggregateColumnDirective**. The `Format` property allows you to specify a format string that determines how the aggregate value will be displayed.
+To format the aggregate value result in the Syncfusion Blazor Grid component, you can use the  [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridAggregateColumn.html#Syncfusion_Blazor_Grids_GridAggregateColumn_Format) property of the **AggregateColumn**. The `Format` property allows you to specify a format string that determines how the aggregate value will be displayed.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids

@@ -94,8 +94,7 @@ By default, the aggregate values are displayed in the footer, group, and caption
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VXhqZuDypsoZfCyy?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 > * When using local data, the total summary is calculated based on the entire dataset available in the grid. The aggregate values will reflect calculations across all the rows in the grid.
-
->* When working with remote data, the total summary is calculated based on the current page records. This means that if you have enabled pagination and are displaying data in pages, the aggregate values in the footer will represent calculations only for the visible page.
+> * When working with remote data, the total summary is calculated based on the current page records. This means that if you have enabled pagination and are displaying data in pages, the aggregate values in the footer will represent calculations only for the visible page.
 
 ## Built-in aggregate types
 
