@@ -61,89 +61,66 @@ N> Syncfusion Blazor components are available in [nuget.org](https://www.nuget.o
 
 ## Register Syncfusion Blazor Service
 
-Open `~/Imports.razor` file and add Syncfusion.Blazor namespace.
+Open **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Kanban` namespace.
 
 {% tabs %}
 {% highlight razor tabtitle="~/_Imports.razor" %}
 
 @using Syncfusion.Blazor
+@using Syncfusion.Blazor.Kanban
 
 {% endhighlight %}
 {% endtabs %}
 
-Now, register the Syncfusion Blazor Service in the Blazor Server App. Open the `~/Program.cs` file and register the Syncfusion Blazor service as follows
+Now, register the Syncfusion Blazor Service in the created Microsoft teams app. Open the `~/Program.cs` file and register the Syncfusion Blazor service as follows
 
 {% tabs %}
-{% highlight c# tabtitle="~/Program.cs" hl_lines="3 10" %}
+{% highlight c# tabtitle="~/Program.cs" hl_lines="2 16" %}
 
-using Microsoft.AspNetCore.Components;
-using Microsoft.AspNetCore.Components.Web;
+....
 using Syncfusion.Blazor;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
 builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
-builder.Services.AddSyncfusionBlazor();
 
+var config = builder.Configuration.Get<ConfigOptions>();
+builder.Services.AddTeamsFx(config.TeamsFx.Authentication);
+builder.Services.AddScoped<MicrosoftTeams>();
+
+builder.Services.AddControllers();
+builder.Services.AddHttpClient("WebClient", client => client.Timeout = TimeSpan.FromSeconds(600));
+builder.Services.AddHttpContextAccessor();
+builder.Services.AddSyncfusionBlazor();
 var app = builder.Build();
 ....
 
 {% endhighlight %}
 {% endtabs %}
 
-## Add style sheet
+## Add stylesheet and script resources
 
-Checkout the [Blazor Themes topic](https://blazor.syncfusion.com/documentation/appearance/themes) to learn different ways ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference) and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)) to refer themes in Blazor application, and to have the expected appearance for Syncfusion Blazor components. Here, the theme is referred using [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Refer to [Enable static web assets usage](https://blazor.syncfusion.com/documentation/appearance/themes#enable-static-web-assets-usage) topic to use static assets in your project.
+The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Reference the stylesheet and script in the `<head>` of the main page as follows: 
 
-To add theme to the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search for [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) and then install it. Then, the theme style sheet from NuGet can be referred inside the `<head>` of **~/Pages/_Host.cshtml** file as follows,
+* For **.NET 6** Microsoft teams app, include it in the **~/Pages/_Host.cshtml** file.
 
-{% tabs %}
-{% highlight nuget tabtitle="Package Manager" %}
-
-PM> NuGet\Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
-
-{% endhighlight %}
-{% endtabs %}
-
-{% tabs %}
-{% highlight cshtml tabtitle="~/_Host.cshtml" hl_lines="3" %}
-
-<head>
-    ...
-    <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
-</head>
-
-{% endhighlight %}
-{% endtabs %}
-
-## Add script reference
-
-Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/documentation/common/adding-script-references) to learn different ways to add script reference in Blazor Application. In this getting started walk-through, the required scripts are referred using [Static Web Assets](https://sfblazor.azurewebsites.net/staging/documentation/common/adding-script-references#static-web-assets) externally inside the `<head>` of **~/Pages/_Host.cshtml** file as follows.
-
-{% tabs %}
-{% highlight cshtml tabtitle="~/_Host.cshtml" hl_lines="4" %}
-
+```html
 <head>
     ....
     <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
     <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
 </head>
-
-{% endhighlight %}
-{% endtabs %} 
-
-N> Syncfusion recommends to reference scripts using [Static Web Assets](https://blazor.syncfusion.com/documentation/common/adding-script-references#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/common/adding-script-references#cdn-reference) and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator) by [disabling JavaScript isolation](https://blazor.syncfusion.com/documentation/common/adding-script-references#disable-javascript-isolation) for better loading performance of the application. 
+```
+N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic to discover various methods ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference), and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)) for referencing themes in your Blazor application. Also, check out the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic to learn different approaches for adding script references in your Blazor application.
 
 ## Add Syncfusion Blazor component
 
-Now add Syncfusion Blazor component in any razor file. Here, the Kanban component is added in `Tab.razor` page under the `~/Pages` folder.
+Now, add the Syncfusion Blazor Kanban component in the `Tab.razor` page under the `~/Pages` folder.
 
 {% tabs %}
 {% highlight razor tabtitle="~/Tab.razor" %}
 
-@using Syncfusion.Blazor.Kanban
 @using System.Collections.ObjectModel;
 @using System.ComponentModel;
 
