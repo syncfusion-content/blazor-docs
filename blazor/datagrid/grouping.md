@@ -15,38 +15,40 @@ The grouping feature in the Syncfusion Blazor DataGrid allows you to organize da
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Orders" AllowGrouping="true" Height="400">
-   <GridColumns>
-     <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-     <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
-     <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
-     <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-   </GridColumns>
+    <GridColumns>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="90"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer ID" Width="100"></GridColumn>
+        <GridColumn Field=@nameof(Order.ShipCity) HeaderText="Ship City" Width="100"></GridColumn>
+        <GridColumn Field=@nameof(Order.ShipName) HeaderText="Ship Name" Width="120"></GridColumn>
+    </GridColumns>
 </SfGrid>
 
-@code{
+@code {
     public List<Order> Orders { get; set; }
 
     protected override void OnInitialized()
     {
         Orders = Enumerable.Range(1, 75).Select(x => new Order()
-        {
-            OrderID = 1000 + x,
-            CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
-            Freight = 2.1 * x,
-            OrderDate = DateTime.Now.AddDays(-x),
-        }).ToList();
+            {
+                OrderID = 1000 + x,
+                CustomerID = (new string[] { "VINET", "TOMSP", "HANAR", "VICTE", "SUPRD" })[new Random().Next(5)],
+                ShipCity = (new string[] { "Reims", "Lyon", "Charleroi", "Rio de Janeiro", "Münster" })[new Random().Next(5)],
+                ShipName = (new string[] { "Centro comercial Moctezuma", "Chop-suey Chinese", "Ernst Handel", "Hanari Carnes", "HILARION-Abastos" })[new Random().Next(5)],
+            }).ToList();
     }
 
-    public class Order {
+    public class Order
+    {
         public int? OrderID { get; set; }
         public string CustomerID { get; set; }
-        public DateTime? OrderDate { get; set; }
-        public double? Freight { get; set; }
+        public string? ShipCity { get; set; }
+        public string? ShipName { get; set; }
     }
 }
+
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hjLgDxhChQSxbQyx?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hNVUjEZoVSlfpvSO?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 > * You can group and ungroup columns by using the **GroupColumn** and **UngroupColumn** methods.
 > * To disable grouping for a particular column, set the [AllowGrouping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_AllowGrouping) to false in **GridColumn** component.
@@ -55,37 +57,34 @@ The grouping feature in the Syncfusion Blazor DataGrid allows you to organize da
 
 To enable initial grouping in the DataGrid, you can use the [GridGroupSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridGroupSettings.html) component and set the GridGroupSettings [Columns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridGroupSettings.html#Syncfusion_Blazor_Grids_GridGroupSettings_Columns) property to a string array of column names(field of the column) that you want to group by. This feature is particularly useful when working with large datasets, as it allows you to quickly organize and analyze the data based on specific criteria.
 
-The following example demonstrates how to set an initial grouping for the **CustomerID** and **ShipCountry** columns during the initial rendering grid, by using the `GridGroupSettings` component of the `Columns` property.
+The following example demonstrates how to set an initial grouping for the **CustomerID** and **ShipCity** columns during the initial rendering grid, by using the `GridGroupSettings` component of the `Columns` property.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
-
-@{
-    var Initial = (new string[] { "OrderID", "ShipCountry" });
-}
+ 
 <SfGrid DataSource="@Orders" AllowGrouping="true" Height="400">
     <GridGroupSettings Columns="@Initial"></GridGroupSettings>
     <GridColumns>
-        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
-        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.ShipCountry) HeaderText="Ship Country" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="90"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer ID" Width="100"></GridColumn>
+        <GridColumn Field=@nameof(Order.ShipCity) HeaderText="Ship City" Width="100"></GridColumn>
+        <GridColumn Field=@nameof(Order.ShipName) HeaderText="Ship Name" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
 
-@code{
+@code {
     public List<Order> Orders { get; set; }
+
+    public string[] Initial = (new string[] { "CustomerID", "ShipCity" });
 
     protected override void OnInitialized()
     {
         Orders = Enumerable.Range(1, 75).Select(x => new Order()
             {
                 OrderID = 1000 + x,
-                CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
-                Freight = 2.1 * x,
-                OrderDate = DateTime.Now.AddDays(-x),
-                ShipCountry = (new string[] { "USA", "UK", "JAPAN" })[new Random().Next(3)],
+                CustomerID = (new string[] { "VINET", "TOMSP", "HANAR", "VICTE", "SUPRD" })[new Random().Next(5)],
+                ShipCity = (new string[] { "Reims", "Lyon", "Charleroi", "Rio de Janeiro", "Münster" })[new Random().Next(5)],
+                ShipName = (new string[] { "Centro comercial Moctezuma", "Chop-suey Chinese", "Ernst Handel", "Hanari Carnes", "HILARION-Abastos" })[new Random().Next(5)],
             }).ToList();
     }
 
@@ -93,14 +92,13 @@ The following example demonstrates how to set an initial grouping for the **Cust
     {
         public int? OrderID { get; set; }
         public string CustomerID { get; set; }
-        public DateTime? OrderDate { get; set; }
-        public double? Freight { get; set; }
-        public string? ShipCountry { get; set; }
+        public string? ShipCity { get; set; }
+        public string? ShipName { get; set; }
     }
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VZVgZmsvrThKRsiL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rNhADuDILdsYIqKZ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 > You can group by multiple columns by specifying a string array of column names in the columns property of the `GridGroupSettings` component.
 
@@ -113,11 +111,10 @@ The DataGrid component provides the ability to prevent grouping for a particular
 
 <SfGrid DataSource="@Orders" AllowGrouping="true" Height="400">
     <GridColumns>
-        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer ID" AllowGrouping="false" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
-        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.ShipCountry) HeaderText="Ship Country" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="90"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer ID" AllowGrouping="false" Width="100"></GridColumn>
+        <GridColumn Field=@nameof(Order.ShipCity) HeaderText="Ship City" Width="100"></GridColumn>
+        <GridColumn Field=@nameof(Order.ShipName) HeaderText="Ship Name" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
 
@@ -129,10 +126,9 @@ The DataGrid component provides the ability to prevent grouping for a particular
         Orders = Enumerable.Range(1, 75).Select(x => new Order()
             {
                 OrderID = 1000 + x,
-                CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
-                Freight = 2.1 * x,
-                OrderDate = DateTime.Now.AddDays(-x),
-                ShipCountry = (new string[] { "USA", "UK", "JAPAN" })[new Random().Next(3)],
+                CustomerID = (new string[] { "VINET", "TOMSP", "HANAR", "VICTE", "SUPRD" })[new Random().Next(5)],
+                ShipCity = (new string[] { "Reims", "Lyon", "Charleroi", "Rio de Janeiro", "Münster" })[new Random().Next(5)],
+                ShipName = (new string[] { "Centro comercial Moctezuma", "Chop-suey Chinese", "Ernst Handel", "Hanari Carnes", "HILARION-Abastos" })[new Random().Next(5)],
             }).ToList();
     }
 
@@ -140,13 +136,12 @@ The DataGrid component provides the ability to prevent grouping for a particular
     {
         public int? OrderID { get; set; }
         public string CustomerID { get; set; }
-        public DateTime? OrderDate { get; set; }
-        public double? Freight { get; set; }
-        public string? ShipCountry { get; set; }
+        public string? ShipCity { get; set; }
+        public string? ShipName { get; set; }
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hjBgtQsFrIHAbUoy?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BtVgXODeUBdWjyzW?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 
 ## Hide drop area
@@ -155,49 +150,75 @@ By default, the DataGrid provides a drop area for grouping columns. This drop ar
 
 To hide the drop area in the Syncfusion Blazor Grid, you can set the `GridGroupSettings` component of the [ShowDropArea](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridGroupSettings.html#Syncfusion_Blazor_Grids_GridGroupSettings_ShowDropArea) property to **false**. 
 
-The following example demonstrates how to set the `GridGroupSettings` component of the `ShowDropArea` property to **false** to hide the drop area.
+
+The following example, the [Blazor Toggle Switch Button](https://blazor.syncfusion.com/documentation/toggle-switch-button/getting-started) component is added to hide or show the drop area. When the switch is toggled, the [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.ChangeEventArgs-1.html) event is triggered and the `GridGroupSettings` component of the `ShowDropArea` property of the grid is updated accordingly.
 
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
-
-@{
-    var Hide = (new string[] {"Freight"});
-}
+@using Syncfusion.Blazor.Buttons
+<div style="display:flex;gap: 5px;">
+    <label> Hide or show drop area</label>
+<SfSwitch @bind-Checked="isChecked" OffLabel="OFF" OnLabel="ON" ValueChange="Change" TChecked="bool?"></SfSwitch>
+</div>
+ 
 <SfGrid DataSource="@Orders" AllowGrouping="true" Height="400">
-    <GridGroupSettings ShowDropArea="false" Columns=@Hide></GridGroupSettings>
+    <GridGroupSettings ShowDropArea="@show" Columns="@Initial"></GridGroupSettings>
     <GridColumns>
-        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
-        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="90"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer ID" Width="100"></GridColumn>
+        <GridColumn Field=@nameof(Order.ShipCity) HeaderText="Ship City" Width="100"></GridColumn>
+        <GridColumn Field=@nameof(Order.ShipName) HeaderText="Ship Name" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
 
-@code{
+@code {
     public List<Order> Orders { get; set; }
+   
+
+    public bool show { get; set; } = false;
+
+    public string[] Initial = (new string[] { "CustomerID", "ShipCity" });
 
     protected override void OnInitialized()
     {
         Orders = Enumerable.Range(1, 75).Select(x => new Order()
-        {
-            OrderID = 1000 + x,
-            CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
-            Freight = 2.1 * x,
-            OrderDate = DateTime.Now.AddDays(-x),
-        }).ToList();
+            {
+                OrderID = 1000 + x,
+                CustomerID = (new string[] { "VINET", "TOMSP", "HANAR", "VICTE", "SUPRD" })[new Random().Next(5)],
+                ShipCity = (new string[] { "Reims", "Lyon", "Charleroi", "Rio de Janeiro", "Münster" })[new Random().Next(5)],
+                ShipName = (new string[] { "Centro comercial Moctezuma", "Chop-suey Chinese", "Ernst Handel", "Hanari Carnes", "HILARION-Abastos" })[new Random().Next(5)],
+            }).ToList();
     }
 
-    public class Order {
+    private bool? isChecked = null;
+
+    
+    private void Change(Syncfusion.Blazor.Buttons.ChangeEventArgs<bool?> args)
+    {
+        if(args.Checked == true)
+        {
+           
+
+            show = true;
+        }
+        else
+        {
+            show = false;
+        }
+    }
+
+    public class Order
+    {
         public int? OrderID { get; set; }
         public string CustomerID { get; set; }
-        public DateTime? OrderDate { get; set; }
-        public double? Freight { get; set; }
+        public string? ShipCity { get; set; }
+        public string? ShipName { get; set; }
     }
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BZVgXdrMhFNlisyU?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LXVgZYtIzsakmrOv?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 > By default, the group drop area will be shown only if there is at least one column available to group.
 
@@ -284,53 +305,52 @@ The following example demonstrates how to sort the **CustomerID** column by sett
 ```cshtml
 @using Syncfusion.Blazor.Grids
 
-@{
-    var columns = (new string[] { "CustomerID" });
-}
-<SfGrid  DataSource="@Orders" AllowGrouping="true" AllowSorting="true" Height="400">
-    <GridGroupSettings Columns="@columns"></GridGroupSettings>
+ 
+<SfGrid DataSource="@Orders" AllowSorting="true" AllowGrouping="true" Height="400">
+    <GridGroupSettings  Columns="@Initial"></GridGroupSettings>
     <GridSortSettings>
         <GridSortColumns>
             <GridSortColumn Field="CustomerID" Direction="SortDirection.Descending"></GridSortColumn>
         </GridSortColumns>
     </GridSortSettings>
     <GridColumns>
-        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer ID" AllowGrouping="false" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
-        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.ShipCountry) HeaderText="Ship Country" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="90"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer ID" Width="100"></GridColumn>
+        <GridColumn Field=@nameof(Order.ShipCity) HeaderText="Ship City" Width="100"></GridColumn>
+        <GridColumn Field=@nameof(Order.ShipName) HeaderText="Ship Name" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
 
 @code {
-
     public List<Order> Orders { get; set; }
+
+
+    public string[] Initial = (new string[] { "CustomerID" });
 
     protected override void OnInitialized()
     {
         Orders = Enumerable.Range(1, 75).Select(x => new Order()
             {
                 OrderID = 1000 + x,
-                CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
-                Freight = 2.1 * x,
-                OrderDate = DateTime.Now.AddDays(-x),
-                ShipCountry = (new string[] { "USA", "UK", "JAPAN" })[new Random().Next(3)],
+                CustomerID = (new string[] { "VINET", "TOMSP", "HANAR", "VICTE", "SUPRD" })[new Random().Next(5)],
+                ShipCity = (new string[] { "Reims", "Lyon", "Charleroi", "Rio de Janeiro", "Münster" })[new Random().Next(5)],
+                ShipName = (new string[] { "Centro comercial Moctezuma", "Chop-suey Chinese", "Ernst Handel", "Hanari Carnes", "HILARION-Abastos" })[new Random().Next(5)],
             }).ToList();
     }
+
+
 
     public class Order
     {
         public int? OrderID { get; set; }
         public string CustomerID { get; set; }
-        public DateTime? OrderDate { get; set; }
-        public double? Freight { get; set; }
-        public string? ShipCountry { get; set; }
+        public string? ShipCity { get; set; }
+        public string? ShipName { get; set; }
     }
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VXVUXGCFgfnvgMZk?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDVAjaXypHVKLMgi?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Group by format
 
@@ -342,9 +362,6 @@ The following example demonstrates how to perform a group action using the `Enab
 ```cshtml
 @using Syncfusion.Blazor.Grids
 
-@{
-    var Format = (new string[] {"OrderDate", "Freight" });
-}
 <SfGrid DataSource="@Orders" AllowGrouping="true" Height="400">
     <GridGroupSettings ShowDropArea="false" Columns=@Format></GridGroupSettings>
     <GridColumns>
@@ -355,15 +372,17 @@ The following example demonstrates how to perform a group action using the `Enab
     </GridColumns>
 </SfGrid>
 
-@code{
+@code {
     public List<Order> Orders { get; set; }
+
+    public string[] Format = (new string[] { "OrderDate", "Freight" });
 
     protected override void OnInitialized()
     {
         Orders = Enumerable.Range(1, 75).Select(x => new Order()
             {
                 OrderID = 1000 + x,
-                CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
+                CustomerID = (new string[] { "VINET", "TOMSP", "HANAR", "VICTE", "SUPRD" })[new Random().Next(5)],
                 Freight = 2.1 * x,
                 OrderDate = DateTime.Now.AddDays(-x),
             }).ToList();
@@ -379,7 +398,7 @@ The following example demonstrates how to perform a group action using the `Enab
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BNBUXwsvUFqMNGGB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNhgDatHMzntLXbO?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 > Numeric columns can be grouped based on formats such as currency or percentage, while datetime columns can be grouped based on specific date or time formats.
 
@@ -396,35 +415,37 @@ The following example demonstrates how to group and upgroup the columns in a gri
 
 <div style="display:flex;gap: 5px;">
     <label> Column name :</label>
-<SfDropDownList TValue="string" TItem="Columns" Width="300px" Placeholder="Select a Column" DataSource="@LocalData" @bind-Value="@DropDownValue">
-    <DropDownListFieldSettings Value="ID" Text="Value"></DropDownListFieldSettings>
-</SfDropDownList>
+    <SfDropDownList TValue="string" TItem="Columns" Width="300px" Placeholder="Select a Column" DataSource="@LocalData" @bind-Value="@DropDownValue">
+        <DropDownListFieldSettings Value="ID" Text="Value"></DropDownListFieldSettings>
+    </SfDropDownList>
 
-<SfButton OnClick="GroupColumn">Group column</SfButton>
+    <SfButton OnClick="GroupColumn">Group column</SfButton>
 
-<SfButton OnClick="UnGroupColumn">UnGroup column</SfButton>
+    <SfButton OnClick="UnGroupColumn">UnGroup column</SfButton>
 </div>
 
-<SfGrid @ref="Grid"  TValue="Order" DataSource="@Orders" AllowGrouping="true" Height="400">
+<SfGrid @ref="Grid" TValue="Order" DataSource="@Orders" AllowGrouping="true" Height="400">
+    <GridGroupSettings ShowDropArea="false" Columns="@Initial"></GridGroupSettings>
     <GridColumns>
         <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date"  TextAlign="TextAlign.Right" Width="130"></GridColumn>
-        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right"  Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer ID" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(Order.ShipCity) HeaderText="Ship City" Width="100"></GridColumn>
+        <GridColumn Field=@nameof(Order.ShipName) HeaderText="Ship Name" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
 @code {
     public List<Order> Orders { get; set; }
     SfGrid<Order>? Grid { get; set; }
-    public string DropDownValue { get; set; } = "OrderID";
+    public string DropDownValue { get; set; } = "CustomerID";
+    public string[] Initial = (new string[] { "CustomerID", "ShipCity" });
     protected override void OnInitialized()
     {
         Orders = Enumerable.Range(1, 75).Select(x => new Order()
             {
                 OrderID = 1000 + x,
-                CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
-                Freight = 2.1 * x,
-                OrderDate = DateTime.Now.AddDays(-x),
+                CustomerID = (new string[] { "VINET", "TOMSP", "HANAR", "VICTE", "SUPRD" })[new Random().Next(5)],
+                ShipCity = (new string[] { "Reims", "Lyon", "Charleroi", "Rio de Janeiro", "Münster" })[new Random().Next(5)],
+                ShipName = (new string[] { "Centro comercial Moctezuma", "Chop-suey Chinese", "Ernst Handel", "Hanari Carnes", "HILARION-Abastos" })[new Random().Next(5)],
             }).ToList();
 
     }
@@ -432,16 +453,16 @@ The following example demonstrates how to group and upgroup the columns in a gri
     {
         new Columns() { ID= "OrderID", Value= "OrderID" },
         new Columns() { ID= "CustomerID", Value= "CustomerID" },
-        new Columns() { ID= "Freight", Value= "Freight" },
-        new Columns() { ID= "OrderDate", Value= "OrderDate" },
+        new Columns() { ID= "ShipCity", Value= "ShipCity" },
+        new Columns() { ID= "ShipName", Value= "ShipName" },
     };
 
     public class Order
     {
         public int? OrderID { get; set; }
         public string CustomerID { get; set; }
-        public DateTime? OrderDate { get; set; }
-        public double? Freight { get; set; }
+        public string? ShipCity { get; set; }
+        public string? ShipName { get; set; }
     }
     public class Columns
     {
@@ -452,17 +473,17 @@ The following example demonstrates how to group and upgroup the columns in a gri
     public async Task GroupColumn()
     {
         await Grid.GroupColumnAsync(DropDownValue);
-        
+
     }
 
-    public async Task  UnGroupColumn()
+    public async Task UnGroupColumn()
     {
-       await Grid.UngroupColumnAsync(DropDownValue);
+        await Grid.UngroupColumnAsync(DropDownValue);
     }
 
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rNLKZcsFfhSXRSPK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VjLKXaXFCIGRqkiL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Expand or collapse externally
 
@@ -483,17 +504,14 @@ In the following example, the [Blazor Toggle Switch Button](https://blazor.syncf
     <SfSwitch OffLabel="OFF" OnLabel="ON" ValueChange="Change" TChecked="bool?"></SfSwitch>
 </div>
 
-@{
-    var columns = (new string[] { "OrderID", "ShipCountry" });
-}
+
 <SfGrid @ref="Grid" DataSource="@Orders" AllowGrouping="true" Height="400">
-    <GridGroupSettings Columns="@columns"></GridGroupSettings>
+    <GridGroupSettings ShowDropArea="false" Columns="@columns"></GridGroupSettings>
     <GridColumns>
         <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer ID" AllowGrouping="false" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
-        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.ShipCountry) HeaderText="Ship Country" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer ID" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(Order.ShipCity) HeaderText="Ship City" Width="100"></GridColumn>
+        <GridColumn Field=@nameof(Order.ShipName) HeaderText="Ship Name" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
 
@@ -501,7 +519,7 @@ In the following example, the [Blazor Toggle Switch Button](https://blazor.syncf
 
     public SfGrid<Order>? Grid { get; set; }
     public List<Order> Orders { get; set; }
-
+    public string[] columns = (new string[] { "CustomerID", "ShipCity" });
     public bool IsShow { get; set; } = true;
 
     protected override void OnInitialized()
@@ -509,10 +527,10 @@ In the following example, the [Blazor Toggle Switch Button](https://blazor.syncf
         Orders = Enumerable.Range(1, 75).Select(x => new Order()
             {
                 OrderID = 1000 + x,
-                CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
-                Freight = 2.1 * x,
-                OrderDate = DateTime.Now.AddDays(-x),
-                ShipCountry = (new string[] { "USA", "UK", "JAPAN" })[new Random().Next(3)],
+                CustomerID = (new string[] { "VINET", "TOMSP", "HANAR", "VICTE", "SUPRD" })[new Random().Next(5)],
+
+                ShipCity = (new string[] { "Reims", "Lyon", "Charleroi", "Rio de Janeiro", "Münster" })[new Random().Next(5)],
+                ShipName = (new string[] { "Centro comercial Moctezuma", "Chop-suey Chinese", "Ernst Handel", "Hanari Carnes", "HILARION-Abastos" })[new Random().Next(5)],
             }).ToList();
     }
 
@@ -520,9 +538,8 @@ In the following example, the [Blazor Toggle Switch Button](https://blazor.syncf
     {
         public int? OrderID { get; set; }
         public string CustomerID { get; set; }
-        public DateTime? OrderDate { get; set; }
-        public double? Freight { get; set; }
-        public string? ShipCountry { get; set; }
+        public string? ShipCity { get; set; }
+        public string? ShipName { get; set; }
     }
 
     private void Change(Syncfusion.Blazor.Buttons.ChangeEventArgs<bool?> args)
@@ -539,7 +556,7 @@ In the following example, the [Blazor Toggle Switch Button](https://blazor.syncf
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rXhqZQMFpzMFbRMT?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hZVADaXliHMXfWvf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Clear grouping 
 
@@ -554,17 +571,14 @@ The following example demonstrates how to clear the grouping using `ClearGroupin
 @using Syncfusion.Blazor.Buttons
 
 <SfButton OnClick="ClearGrouping"> Clear Grouping</SfButton>
-@{
-    var columns = (new string[] { "OrderID", "ShipCountry" });
-}
+
 <SfGrid @ref="Grid" DataSource="@Orders" AllowGrouping="true" Height="400">
     <GridGroupSettings Columns="@columns"></GridGroupSettings>
     <GridColumns>
         <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer ID" AllowGrouping="false" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
-        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.ShipCountry) HeaderText="Ship Country" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer ID" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(Order.ShipCity) HeaderText="Ship City" Width="100"></GridColumn>
+        <GridColumn Field=@nameof(Order.ShipName) HeaderText="Ship Name" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
 
@@ -573,17 +587,18 @@ The following example demonstrates how to clear the grouping using `ClearGroupin
     public SfGrid<Order>? Grid { get; set; }
     public List<Order> Orders { get; set; }
 
-    public bool IsShow { get; set; } = true;
+
+    public string[] columns = (new string[] { "CustomerID", "ShipCity" });
+
 
     protected override void OnInitialized()
     {
         Orders = Enumerable.Range(1, 75).Select(x => new Order()
             {
                 OrderID = 1000 + x,
-                CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
-                Freight = 2.1 * x,
-                OrderDate = DateTime.Now.AddDays(-x),
-                ShipCountry = (new string[] { "USA", "UK", "JAPAN" })[new Random().Next(3)],
+                CustomerID = (new string[] { "VINET", "TOMSP", "HANAR", "VICTE", "SUPRD" })[new Random().Next(5)],
+                ShipCity = (new string[] { "Reims", "Lyon", "Charleroi", "Rio de Janeiro", "Münster" })[new Random().Next(5)],
+                ShipName = (new string[] { "Centro comercial Moctezuma", "Chop-suey Chinese", "Ernst Handel", "Hanari Carnes", "HILARION-Abastos" })[new Random().Next(5)],
             }).ToList();
     }
 
@@ -591,9 +606,8 @@ The following example demonstrates how to clear the grouping using `ClearGroupin
     {
         public int? OrderID { get; set; }
         public string CustomerID { get; set; }
-        public DateTime? OrderDate { get; set; }
-        public double? Freight { get; set; }
-        public string? ShipCountry { get; set; }
+        public string? ShipCity { get; set; }
+        public string? ShipName { get; set; }
     }
 
     private async Task ClearGrouping()
@@ -603,7 +617,7 @@ The following example demonstrates how to clear the grouping using `ClearGroupin
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hXVUNmsbfRMgYjJH?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BXhAtaXPMHIBpxQa?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Grouping events
 
@@ -613,50 +627,83 @@ The DataGrid component provides two events that are triggered during the group a
 
 2. **OnActionComplete Event**: `OnActionComplete` event is triggered after the group action is completed. It provides a way to perform any necessary operations after the group action has taken place. This event provides a parameter that contains the current grid state, including the grouped data and column information and etc.
 
+The following example demonstrates how the `actionBegin` and `actionComplete` events work when grouping is performed. The `actionBegin` event event is used to cancel the grouping of the **OrderID** column. The `actionComplete` event is used to display a message
+
 ```cshtml
 @using Syncfusion.Blazor.Grids
 
-<SfGrid DataSource="@Orders" AllowGrouping="true">
-    <GridEvents OnActionComplete="GroupActionHandler" OnActionBegin="GroupActionHandler" TValue="Order"></GridEvents>
+@if(show == true)
+{
+    <div style="text-align : center; color: red">
+        <span> @requesttype action completed for @columnName column</span>
+    </div>
+    
+    <br/>
+}
+
+<SfGrid DataSource="@Orders" AllowGrouping="true" Height="400">
+    <GridEvents OnActionComplete="ActionCompletedHandler" OnActionBegin="ActionBeginHandler" TValue="Order"></GridEvents>
     <GridColumns>
-        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
-        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.ShipCountry) HeaderText="Ship Country" Width="150"></GridColumn>
-        </GridColumns>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="90"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer ID" Width="100"></GridColumn>
+        <GridColumn Field=@nameof(Order.ShipCity) HeaderText="Ship City" Width="100"></GridColumn>
+        <GridColumn Field=@nameof(Order.ShipName) HeaderText="Ship Name" Width="120"></GridColumn>
+    </GridColumns>
 </SfGrid>
 
-@code{
+@code {
     public List<Order> Orders { get; set; }
+
+    public bool show {get; set; } = false;
+
+    public string columnName { get; set; }
+    public string requesttype { get; set; }
 
     protected override void OnInitialized()
     {
         Orders = Enumerable.Range(1, 75).Select(x => new Order()
-        {
-            OrderID = 1000 + x,
-            CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
-            Freight = 2.1 * x,
-            OrderDate = DateTime.Now.AddDays(-x),
-            ShipCountry = (new string[] { "USA", "UK", "JAPAN" })[new Random().Next(3)],
-        }).ToList();
+            {
+                OrderID = 1000 + x,
+                CustomerID = (new string[] { "VINET", "TOMSP", "HANAR", "VICTE", "SUPRD" })[new Random().Next(5)],
+                ShipCity = (new string[] { "Reims", "Lyon", "Charleroi", "Rio de Janeiro", "Münster" })[new Random().Next(5)],
+                ShipName = (new string[] { "Centro comercial Moctezuma", "Chop-suey Chinese", "Ernst Handel", "Hanari Carnes", "HILARION-Abastos" })[new Random().Next(5)],
+            }).ToList();
     }
 
-    public class Order {
+    public async Task ActionBeginHandler(ActionEventArgs<Order> args)
+    {
+        if (args.RequestType == Syncfusion.Blazor.Grids.Action.Grouping && args.ColumnName == "OrderID")
+        {
+            args.Cancel = true;
+        }
+    }
+
+    public async Task ActionCompletedHandler(ActionEventArgs<Order> args)
+    {
+        if (args.RequestType == Syncfusion.Blazor.Grids.Action.Grouping)
+        {
+            columnName = args.ColumnName;
+            requesttype = args.RequestType.ToString();
+            show = true;
+        }
+    }
+
+   
+    public class Order
+    {
         public int? OrderID { get; set; }
         public string CustomerID { get; set; }
-        public DateTime? OrderDate { get; set; }
-        public double? Freight { get; set; }
-        public string ShipCountry { get; set; }
-    }
-    public void GroupActionHandler(ActionEventArgs<Order> args){
-        // You can get args.RequestType and other details.
+        public string? ShipCity { get; set; }
+        public string? ShipName { get; set; }
     }
 }
 ```
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hXVgDYXxBwaOnYQm?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 > [args.RequestType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ActionEventArgs-1.html#Syncfusion_Blazor_Grids_ActionEventArgs_1_RequestType) property represents the name of the current action being performed. For instance, during grouping, the `args.RequestType` value will be **grouping**.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BNLgDnhiBuxVmGDp?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 
 ## See Also
 

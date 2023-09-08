@@ -17,52 +17,52 @@ The following example demonstrates how to customize the group header caption in 
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
-
-@{
-    var Template = (new string[] { "CustomerID" });
-}
-<SfGrid DataSource="@Orders" AllowGrouping="true" Height="400">
-    <GridColumns>
-        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
-        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-    </GridColumns>
-    <GridGroupSettings Columns=@Template>
+<SfGrid TValue="Order" DataSource="@Orders" AllowGrouping="true" Height="400">
+    <GridGroupSettings ShowDropArea="false" Columns="@Initial">
         <CaptionTemplate>
             @{
                 var data = (context as CaptionTemplateContext);
-                <span>@data.HeaderText-@data.Count-@data.Key</span>
+                <span>@data.HeaderText-@data.Key : @data.Count Items </span>
             }
         </CaptionTemplate>
-    </GridGroupSettings>
-</SfGrid>
 
+    </GridGroupSettings>
+    <GridColumns>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer ID" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(Order.ShipCity) HeaderText="Ship City" Width="100"></GridColumn>
+        <GridColumn Field=@nameof(Order.ShipName) HeaderText="Ship Name" Width="120"></GridColumn>
+    </GridColumns>
+</SfGrid>
 @code {
     public List<Order> Orders { get; set; }
 
+
+    public string[] Initial = (new string[] { "CustomerID", "ShipCity" });
     protected override void OnInitialized()
     {
         Orders = Enumerable.Range(1, 75).Select(x => new Order()
             {
                 OrderID = 1000 + x,
-                CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
-                Freight = 2.1 * x,
-                OrderDate = DateTime.Now.AddDays(-x),
+                CustomerID = (new string[] { "VINET", "TOMSP", "HANAR", "VICTE", "SUPRD" })[new Random().Next(5)],
+                ShipCity = (new string[] { "Reims", "Lyon", "Charleroi", "Rio de Janeiro", "Münster" })[new Random().Next(5)],
+                ShipName = (new string[] { "Centro comercial Moctezuma", "Chop-suey Chinese", "Ernst Handel", "Hanari Carnes", "HILARION-Abastos" })[new Random().Next(5)],
             }).ToList();
+
     }
+
 
     public class Order
     {
-        public int OrderID { get; set; }
+        public int? OrderID { get; set; }
         public string CustomerID { get; set; }
-        public DateTime? OrderDate { get; set; }
-        public double? Freight { get; set; }
+        public string? ShipCity { get; set; }
+        public string? ShipName { get; set; }
     }
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VXhUZwMuszaltLpV?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VZrqjONnUnmhpfYN?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Adding custom text in group caption
 
@@ -72,19 +72,15 @@ The following example demonstrates how to add a custom text to the group caption
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
-@using Syncfusion.Blazor.Buttons
 
-@{
-    var Template = (new string[] { "CustomerID" });
-}
 <SfGrid DataSource="@Orders" AllowGrouping="true" Height="400">
     <GridColumns>
-        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
-        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Name" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(Order.ShipCity) HeaderText="City" Width="100"></GridColumn>
+        <GridColumn Field=@nameof(Order.Freight) HeaderText="value"  Width="120"></GridColumn>
     </GridColumns>
-    <GridGroupSettings Columns=@Template>
+    <GridGroupSettings >
         <CaptionTemplate>
             @{
                 var order = (context as CaptionTemplateContext);
@@ -102,9 +98,9 @@ The following example demonstrates how to add a custom text to the group caption
         Orders = Enumerable.Range(1, 75).Select(x => new Order()
             {
                 OrderID = 1000 + x,
-                CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
+                CustomerID = (new string[] { "VINET", "TOMSP", "HANAR", "VICTE", "SUPRD" })[new Random().Next(5)],
                 Freight = 2.1 * x,
-                OrderDate = DateTime.Now.AddDays(-x),
+                ShipCity = (new string[] { "Reims", "Lyon", "Charleroi", "Rio de Janeiro", "Münster" })[new Random().Next(5)],
             }).ToList();
     }
 
@@ -112,13 +108,13 @@ The following example demonstrates how to add a custom text to the group caption
     {
         public int OrderID { get; set; }
         public string CustomerID { get; set; }
-        public DateTime? OrderDate { get; set; }
+        public string? ShipCity { get; set; }
         public double? Freight { get; set; }
     }
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VtVUNwiOCYEagkKF?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BtrqXutdqnicEMXL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Render custom component in group caption
 
@@ -132,17 +128,14 @@ The following example demonstrates how to add a custom component to the group ca
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Buttons
 
-@{
-    var Template = (new string[] { "CustomerID" });
-}
 <SfGrid DataSource="@Orders" AllowGrouping="true" Height="400">
     <GridColumns>
-        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
-        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Name" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(Order.ShipCity) HeaderText="City" Width="100"></GridColumn>
+        <GridColumn Field=@nameof(Order.Freight) HeaderText="value"  Width="120"></GridColumn>
     </GridColumns>
-    <GridGroupSettings Columns=@Template>
+    <GridGroupSettings >
         <CaptionTemplate>
             @{
                 var data = (context as CaptionTemplateContext);
@@ -165,9 +158,9 @@ The following example demonstrates how to add a custom component to the group ca
         Orders = Enumerable.Range(1, 75).Select(x => new Order()
             {
                 OrderID = 1000 + x,
-                CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
+                CustomerID = (new string[] { "VINET", "TOMSP", "HANAR", "VICTE", "SUPRD" })[new Random().Next(5)],
                 Freight = 2.1 * x,
-                OrderDate = DateTime.Now.AddDays(-x),
+                ShipCity = (new string[] { "Reims", "Lyon", "Charleroi", "Rio de Janeiro", "Münster" })[new Random().Next(5)],
             }).ToList();
     }
 
@@ -175,10 +168,10 @@ The following example demonstrates how to add a custom component to the group ca
     {
         public int OrderID { get; set; }
         public string CustomerID { get; set; }
-        public DateTime? OrderDate { get; set; }
+        public string? ShipCity { get; set; }
         public double? Freight { get; set; }
-    }
+  }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rZVqDGWaMmEsjBSl?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LtrADODnAPDwCOEa?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
