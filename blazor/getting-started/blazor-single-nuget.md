@@ -7,7 +7,7 @@ component: Common
 documentation: ug
 ---
 
-# Getting started with Blazor Component using Syncfusion.Blazor Single NuGet in Visual Studio
+# Getting started with Blazor Component using Syncfusion.Blazor Single NuGet
 
 This section briefly explains how to include a Blazor component with the Syncfusion.Blazor Single NuGet package in your Blazor Server App and Blazor WebAssembly App using Visual Studio. 
 
