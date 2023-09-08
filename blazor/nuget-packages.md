@@ -1999,6 +1999,6 @@ The Blazor Word Processor (Document Editor) is a component with editing capabili
 
 * While installing `Syncfusion.Blazor` NuGet package in a Blazor WebAssembly application, it will load the complete Syncfusion Blazor library in the web browser which takes more initial loading time. Whereas, the individual NuGet package installation will resolve this and load the required components assembly alone in the web browser.
 
-* The [Lazy load assemblies in Blazor WebAssembly](https://docs.microsoft.com/en-us/aspnet/core/blazor/webassembly-lazy-load-assemblies) functionality can be utilized with the Syncfusion Blazor individual NuGet packages.
+* The [Lazy load assemblies in Blazor WebAssembly](https://learn.microsoft.com/en-us/aspnet/core/blazor/webassembly-lazy-load-assemblies?view=aspnetcore-7.0) functionality can be utilized with the Syncfusion Blazor individual NuGet packages.
 
 * These individual NuGet packages can be used in the Blazor Server application to reduce the application deployment size in production.
