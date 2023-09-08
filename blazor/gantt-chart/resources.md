@@ -96,8 +96,6 @@ The resource collection contains details about resources that are used in the pr
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BZVUXGsFTURUCsnb?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
 ## Assign resource
 
 You can assign resources for a task at initial load by using the resource id value of the resources as a collection. This collection is mapped from the dataSource to the Gantt Chart component using the [GanttTaskFields.ResourceInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTaskFields.html#Syncfusion_Blazor_Gantt_GanttTaskFields_ResourceInfo) property.
@@ -211,7 +209,7 @@ The following code snippet shows how to assign the resource for each task and ma
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hNhAZQCPpqcdEkKI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Assigning Resource in Blazor Gantt Chart](images/blazor-gantt-chart-assign-resource.png)
 
 ## Add/Edit resource collection
 
@@ -305,4 +303,4 @@ N> When the edit mode is set as `Auto`, on performing double-click action on Tre
 
 Editing resource with cell edit or dialog edit
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rjBgZmCvzgEwaTOA?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Blazor Gantt Chart displays Editing Resource with Edit Dialog](images/blazor-gantt-chart-editing-resource-in-dialog.png)

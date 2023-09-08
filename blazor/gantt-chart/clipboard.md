@@ -63,8 +63,6 @@ Interaction keys |Description
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BthKDQsEpJNvXuQm?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
 ## Copy to clipboard by external buttons
 
 To copy the data of the selected rows or cells into the clipboard with the help of external buttons, invoke the [CopyAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_CopyAsync) method.
@@ -133,8 +131,6 @@ To copy the data of the selected rows or cells into the clipboard with the help 
     }
 }
 ```
-
-{% previewsample "https://blazorplayground.syncfusion.com/embed/htLqXGCYTzAKCgWn?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Copy Hierarchy Modes
 
@@ -250,8 +246,6 @@ Gantt Chart provides support for a set of copy modes with the [CopyHierarchyMode
     }
 }
 ```
-
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VXLADQMOposalYUy?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Paste
 
@@ -607,4 +601,4 @@ With this customization, users can easily and quickly update multiple cells in t
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VtVgjmiEpSHqdbsr?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Custom AutoFIll in Blazor Gantt Chart](./images/blazor-gantt-chart-autofill.gif)

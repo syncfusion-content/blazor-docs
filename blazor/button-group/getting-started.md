@@ -19,7 +19,7 @@ This section briefly explains about how to include [Blazor ButtonGroup](https://
 
 ## Create a new Blazor App in Visual Studio
 
-You can create a **Blazor Server App** or **Blazor WebAssembly App** using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0) or the [Syncfusion Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
+You can create a **Blazor Server App** or **Blazor WebAssembly App** using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0&pivots=windows) or the [Syncfusion Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
 
 ## Install Syncfusion Blazor SplitButtons and Theme NuGet in the App
 
@@ -127,7 +127,6 @@ Add the Syncfusion Blazor ButtonGroup component in the **~/Pages/Index.razor** f
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion Blazor ButtonGroup component in your default web browser.
 
 ![Blazor ButtonGroup Component](./images/blazor-button-group-component.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/hDLAtxWHhROlYLJd?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/ButtonGroup).
 
