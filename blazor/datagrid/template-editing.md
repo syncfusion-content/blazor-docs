@@ -420,7 +420,7 @@ This is demonstrated in the following sample code, where the first input element
                         </div>
                         <div class="form-group col-md-6">
                             <label class="e-float-text e-label-top">Customer Name</label>
-                            <SfAutoComplete ID="customerID" TItem="OrdersDetails" @bind-Value="@(Order.CustomerID)" TValue="string" DataSource="@GridData">
+                            <SfAutoComplete @ref="AutoComplete" ID="customerID" TItem="OrdersDetails" @bind-Value="@(Order.CustomerID)" TValue="string" DataSource="@GridData">
                                 <AutoCompleteFieldSettings Value="CustomerID"></AutoCompleteFieldSettings>
                                 <AutoCompleteEvents TValue="string" TItem="OrdersDetails" DataBound="FocusAutoComplete"></AutoCompleteEvents>
                             </SfAutoComplete>
@@ -469,7 +469,7 @@ This is demonstrated in the following sample code, where the first input element
     </GridColumns>
 </SfGrid>
 
-@code{
+@code {
     SfAutoComplete<string, OrdersDetails> AutoComplete { get; set; }
     public List<OrdersDetails> GridData = new List<OrdersDetails>
     {
@@ -496,7 +496,8 @@ This is demonstrated in the following sample code, where the first input element
         public string ShipCountry { get; set; }
         public string ShipAddress { get; set; }
     }
-    private async Task FocusAutoComplete() {
+    private async Task FocusAutoComplete()
+    {
         await this.AutoComplete.FocusIn();
     }
 }

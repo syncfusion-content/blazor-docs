@@ -157,7 +157,7 @@ You can change the default filter operator by extending `FilterSettings` propert
 In the following sample, we have changed the default operator for CustomerID column as **contains** from **startswith**
 
 ```cshtml
-@using Syncfusion.Blazor
+@using Syncfusion.Blazor.Grids
 
 <SfGrid @ref="@Grid" ID="Egrid" DataSource="@Orders" AllowFiltering="true" AllowPaging="true" Height="315">
     <GridColumns>
@@ -191,7 +191,6 @@ In the following sample, we have changed the default operator for CustomerID col
         public double? Freight { get; set; }
     }
 }
-
 ```
 
 The following screenshot represents Filter with change in default operator as contains

@@ -621,7 +621,6 @@ You can render the [SfComboBox](https://help.syncfusion.com/cr/blazor/Syncfusion
 You can render the [SfNumericTextBox](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfNumericTextBox-1.html) component in [EditTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_EditTemplate). In the following sample, the `SfNumericTextBox` component is rendered in the `EditTemplate` for the Freight column.
 
 ```cshtml
-
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Inputs
 
@@ -662,6 +661,7 @@ You can render the [SfNumericTextBox](https://help.syncfusion.com/cr/blazor/Sync
         public double? Freight { get; set; }
         public string ShipCountry { get; set; }
     }
+ }
 ```
 
 ### Using TimePicker in EditTemplate
