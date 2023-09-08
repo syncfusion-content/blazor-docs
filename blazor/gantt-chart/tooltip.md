@@ -88,7 +88,7 @@ In the Gantt Chart component, you can enable or disable the mouse hover tooltip 
 @using Syncfusion.Blazor.Gantt
 <SfGantt DataSource="@TaskCollection" Height="450px" Width="700px">
     <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate"
-                     Duration="Duration" Progress="Progress" ParentID="ParentId">
+                     Duration="Duration" Progress="Progress" ParentID="ParentId" Dependency="Predecessor" BaselineStartDate="BaselineStartDate" BaselineEndDate="BaselineEndDate">
     </GanttTaskFields>
     <GanttTimelineSettings ShowTooltip="true"></GanttTimelineSettings>
 </SfGantt>
@@ -109,6 +109,9 @@ In the Gantt Chart component, you can enable or disable the mouse hover tooltip 
         public string Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
+        public string Predecessor { get; set; }
+        public DateTime BaselineStartDate { get; set; }
+        public DateTime BaselineEndDate { get; set; }
     }
 
     private static List<TaskData> GetTaskCollection()
@@ -229,6 +232,7 @@ It is possible to enable or disable the tooltip while performing editing actions
         public string Duration { get; set; }
         public int Progress { get; set; }
         public string Predecessor { get; set; }
+        public string Notes { get; set; }
         public int? ParentId { get; set; }
     }
 
@@ -492,6 +496,7 @@ A manual taskbar tooltip can be customized using the [GanttTooltipSettings.Manua
         public string Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
+        public string Predecessor { get; set; }
     }
 
     private static List<TaskData> GetTaskCollection()
