@@ -9,9 +9,9 @@ documentation: ug
 
 # Draggable in Blazor Dialog Component
 
-The Dialog supports to `drag` within its target container by grabbing the Dialog header, which allows the user to reposition the Dialog dynamically.
+The [Blazor Dialog](https://www.syncfusion.com/blazor-components/blazor-modal-dialog) supports to `drag` within its target container by grabbing the Dialog header, which allows the user to reposition the Dialog dynamically.
 
-To get started quickly with draggable in [Blazor Dialog Component](https://www.syncfusion.com/blazor-components/blazor-modal-dialog), you can check the video below.
+To get started quickly with draggable in Blazor Dialog Component, you can check the video below.
 
 {% youtube "https://www.youtube.com/watch?v=qNW5d7C2L7g" %}
 
@@ -58,6 +58,3 @@ To get started quickly with draggable in [Blazor Dialog Component](https://www.s
 }
 
 ```
-## See also
-
-* [Dragging demo in Blazor Dialog Component](https://blazor.syncfusion.com/demos/dialog/draggable?theme=fluent)
