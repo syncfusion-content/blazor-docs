@@ -9,7 +9,7 @@ documentation: ug
 
 # Events in Blazor Spinner Component
 
-This section explains the list of events of the [Blazor Spinner component](https://www.syncfusion.com/blazor-components/blazor-spinner) which will be triggered for appropriate Spinner actions.
+This section explains the list of events of the [Blazor Spinner](https://www.syncfusion.com/blazor-components/blazor-spinner) component which will be triggered for appropriate Spinner actions.
 
 ## Created
 
@@ -94,4 +94,3 @@ This section explains the list of events of the [Blazor Spinner component](https
 }
 
 ```
-N> You can also explore our [Blazor Spinner Example](https://blazor.syncfusion.com/demos/spinner/overview) that shows you how to render and configure the Spinner.
