@@ -55,7 +55,7 @@ The content of each list item within the MultiSelect can be customized with the 
 
 ## Value template
 
-The currently selected value that is displayed by default on the MultiSelect input element can be customized using the [ValueTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.MultiSelectTemplates-1.html#Syncfusion_Blazor_DropDowns_MultiSelectTemplates_1_ValueTemplate) property.
+The currently selected value that is displayed by default on the MultiSelect input element can be customized using the [ValueTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.MultiSelectModel-1.html#Syncfusion_Blazor_DropDowns_MultiSelectModel_1_ValueTemplate) property.
 
 In the following sample, the selected value is displayed as a combined text of both `FirstName` and `Designation` in the MultiSelect input, which is separated by a hyphen.
 
