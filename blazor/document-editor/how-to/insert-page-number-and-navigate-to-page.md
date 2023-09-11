@@ -32,11 +32,11 @@ The following example code illustrates how to insert page number in header.
     public async void OnCreated(object args)
     {
         // To insert text in cursor position
-        container.DocumentEditor.Editor.InsertTextAsync("Document editor");
+        await container.DocumentEditor.Editor.InsertTextAsync("Document editor");
         // To move the selection to header
-        container.DocumentEditor.Selection.GoToHeaderAsync();
+        await container.DocumentEditor.Selection.GoToHeaderAsync();
         // Insert page number in the current cursor position
-        container.DocumentEditor.Editor.InsertFieldAsync("PAGE \\* MERGEFORMAT", "1");
+        await container.DocumentEditor.Editor.InsertFieldAsync("PAGE \\* MERGEFORMAT", "1");
     }
 }
 ```
@@ -60,7 +60,7 @@ The following example code illustrates how to get the number of pages in Documen
     public async void OnCreated(object args)
     {
         // To insert text in cursor position
-        container.DocumentEditor.Editor.InsertTextAsync("Document editor");
+        await container.DocumentEditor.Editor.InsertTextAsync("Document editor");
         // To get the total number of pages
         Task<int> pageCount = container.DocumentEditor.GetPageCountAsync();
     }
@@ -86,7 +86,7 @@ The following example code illustrates how to move selection to specific page.
     public async void OnCreated(object args)
     {
         // To move selection to page number 2
-        container.DocumentEditor.Selection.GoToPageAsync(2);
+        await container.DocumentEditor.Selection.GoToPageAsync(2);
     }
 }
 ```

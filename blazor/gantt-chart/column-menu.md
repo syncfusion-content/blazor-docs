@@ -67,6 +67,5 @@ The default items are displayed in the following table:
 ```
 
 ![Blazor Gantt Chart with Column Menu](images/blazor-gantt-chart-column-menu.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VNLgtmspzBqbrOAz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 N> You can disable the column menu for a particular column by setting the `GanttColumn.ShowColumnMenu` to `false`.

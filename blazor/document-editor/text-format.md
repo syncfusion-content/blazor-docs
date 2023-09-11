@@ -16,18 +16,16 @@ documentation: ug
 The bold formatting for selected text can be get or set by using the following sample code.
 
 ```csharp
-
 //Gets the value for bold formatting of selected text.
-bool bold = await documentEditor.Selection.CharacterFormat.GetBold();
+bool bold = await documentEditor.Selection.CharacterFormat.GetBoldAsync();
 //Sets bold formatting for selected text.
-documentEditor.Selection.CharacterFormat.SetBold(true);
-
+await documentEditor.Selection.CharacterFormat.SetBoldAsync(true);
 ```
 
 You can toggle the bold formatting based on existing value at selection. Refer to the following sample code.
 
 ```csharp
-documentEditor.Editor.ToggleBold();
+await documentEditor.Editor.ToggleBoldAsync();
 ```
 
 ## Italic
@@ -35,13 +33,16 @@ documentEditor.Editor.ToggleBold();
 The Italic formatting for selected text can be get or set by using the following sample code.
 
 ```csharp
-documentEditor.Selection.CharacterFormat.SetItalic(true);
+//Gets the value for italic formatting of selected text.
+bool italic = await documentEditor.Selection.CharacterFormat.GetItalicAsync();
+//Sets italic formatting for selected text.
+await documentEditor.Selection.CharacterFormat.SetItalicAsync(true);
 ```
 
 You can toggle the Italic formatting based on existing value at selection. Refer to the following sample code.
 
 ```csharp
-documentEditor.Editor.ToggleItalic();
+await documentEditor.Editor.ToggleItalicAsync();
 ```
 
 ## Underline property
@@ -49,13 +50,16 @@ documentEditor.Editor.ToggleItalic();
 The underline style for selected text can be get or set by using the following sample code.
 
 ```csharp
-documentEditor.Editor.ToggleUnderline(Underline.Single);
+//Gets the value for underline formatting of selected text.
+Underline underline = await documentEditor.Selection.CharacterFormat.GetUnderlineAsync();
+//Sets underline formatting for selected text.
+await documentEditor.Selection.CharacterFormat.SetUnderlineAsync(Underline.Single);
 ```
 
 You can toggle the underline style of selected text based on existing value at selection by specifying a value. Refer to the following sample code.
 
 ```csharp
-documenteditor.Editor.ToggleUnderline('Single');
+await documenteditor.Editor.ToggleUnderlineAsync(Underline.Single);
 ```
 
 ## Strikethrough property
@@ -63,13 +67,16 @@ documenteditor.Editor.ToggleUnderline('Single');
 The strikethrough style for selected text can be get or set by using the following sample code.
 
 ```csharp
-documentEditor.Editor.ToggleStrikethrough(Strikethrough.SingleStrike);
+//Gets the value for strikethrough formatting of selected text.
+Strikethrough strikethrough = await documentEditor.Selection.CharacterFormat.GetStrikethroughAsync();
+//Sets strikethrough formatting for selected text.
+await documentEditor.Selection.CharacterFormat.SetStrikethroughAsync(Strikethrough.SingleStrike);
 ```
 
 You can toggle the strikethrough style of selected text based on existing value at selection by specifying a value. Refer to the following sample code.
 
-```javascript
-documentEditor.Editor.ToggleStrikethrough(Strikethrough.SingleStrike);
+```csharp
+await documentEditor.Editor.ToggleStrikethroughAsync(Strikethrough.SingleStrike);
 ```
 
 ## Superscript property
@@ -77,13 +84,16 @@ documentEditor.Editor.ToggleStrikethrough(Strikethrough.SingleStrike);
 The selected text can be made superscript by using the following sample code.
 
 ```csharp
-documentEditor.Selection.CharacterFormat.SetBaselineAlignment(BaselineAlignment.Superscript);
+//Gets the value for baseline alignment formatting of selected text.
+BaselineAlignment baselineAlignment = await documentEditor.Selection.CharacterFormat.GetBaselineAlignmentAsync();
+//Sets baseline alignment formatting for selected text.
+documentEditor.Selection.CharacterFormat.SetBaselineAlignmentAsync(BaselineAlignment.Superscript);
 ```
 
 Toggle the selected text as superscript or normal using the following sample code.
 
-```javascript
-documentEditor.Editor.ToggleSuperscript();
+```csharp
+await documentEditor.Editor.ToggleSuperscriptAsync();
 ```
 
 ## Subscript property
@@ -91,19 +101,19 @@ documentEditor.Editor.ToggleSuperscript();
 The selected text can be made subscript by using the following sample code.
 
 ```csharp
-documentEditor.Selection.CharacterFormat.SetBaselineAlignment(BaselineAlignment.Subscript);
+documentEditor.Selection.CharacterFormat.SetBaselineAlignmentAsync(BaselineAlignment.Subscript);
 ```
 
 Toggle the selected text as subscript or normal using the following sample code.
 
 ```csharp
-documentEditor.Editor.ToggleSubscript();
+await documentEditor.Editor.ToggleSubscriptAsync();
 ```
 
 You can make a subscript or superscript text as normal using the following code.
 
 ```csharp
-documentEditor.Selection.CharacterFormat.SetBaselineAlignment(BaselineAlignment.Normal);
+await documentEditor.Selection.CharacterFormat.SetBaselineAlignmentAsync(BaselineAlignment.Normal);
 ```
 
 ## Size
@@ -111,7 +121,7 @@ documentEditor.Selection.CharacterFormat.SetBaselineAlignment(BaselineAlignment.
 The size of selected text can be get or set using the following code.
 
 ```csharp
-documentEditor.Selection.CharacterFormat.SetFontSize(32);
+await documentEditor.Selection.CharacterFormat.SetFontSizeAsync(32);
 ```
 
 ## Color
@@ -119,16 +129,16 @@ documentEditor.Selection.CharacterFormat.SetFontSize(32);
 The color of selected text can be get or set using the following code.
 
 ```csharp
-documentEditor.Selection.CharacterFormat.SetFontColor("Pink");
-documentEditor.Selection.CharacterFormat.SetFontColor("FFC0CB");
+await documentEditor.Selection.CharacterFormat.SetFontColorAsync("Pink");
+await documentEditor.Selection.CharacterFormat.SetFontColorAsync("FFC0CB");
 ```
 
 ## Font
 
 The font style of selected text can be get or set using the following sample code.
 
-```javascript
-documentEditor.Selection.CharacterFormat.SetFontFamily("Arial");
+```csharp
+await documentEditor.Selection.CharacterFormat.SetFontFamilyAsync("Arial");
 ```
 
 ## Highlight color
@@ -136,7 +146,7 @@ documentEditor.Selection.CharacterFormat.SetFontFamily("Arial");
 The highlight color of the selected text can be get or set using the following sample code.
 
 ```csharp
-documentEditor.Selection.CharacterFormat.SetHighlightColor(HighlightColor.Pink);
+await documentEditor.Selection.CharacterFormat.SetHighlightColorAsync(HighlightColor.Pink);
 ```
 
 You can also explore our [Blazor Word Processor](https://blazor.syncfusion.com/demos/document-editor/default-functionalities) example to know how to render and configure the document editor.

@@ -56,8 +56,6 @@ To enable frozen columns, use the [FrozenColumns](https://help.syncfusion.com/cr
 }
 ```
 
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BZrAtQWPVcwYFuig?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
-
 ## Freeze particular column
 
 To freeze a specific column in the Gantt Chart, you can use the [IsFrozen](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttColumn.html#Syncfusion_Blazor_Gantt_GanttColumn_IsFrozen) property of the [GanttColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttColumn.html) component.
@@ -115,7 +113,6 @@ In the following code snippet, the columns with the field names `TaskID` and `Ta
 }
 ```
 ![Blazor Gantt Chart with Frozen Column](./images/blazor-Gantt-chart-frozen-columns.gif)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/rXVqZcWFBwOTpwAr?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Freeze direction
 
@@ -178,7 +175,6 @@ The following is the sample code for using `FreezeDirection` in the Blazor Gantt
 }
 ```
 ![Freeze direction in Blazor Gantt chart](./images/blazor-Gantt-chart-freeze-direction.gif)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/rZBqNQWPBFNKGAPO?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Add or remove frozen columns by dragging the column separator
 
@@ -238,7 +234,6 @@ To enable this feature, you need to set the [AllowFreezeLineMoving](https://help
 ```
 
 ![Moving Freeze line in Blazor Gantt chart ](./images/blazor-Gantt-chart-freeze-line-moving.gif)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LNLqXQMFLFCvdgcn?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Change default frozen line color
 
@@ -301,7 +296,6 @@ The following code example shows how to change the color of the default frozen l
 }
 ```
 ![Changing freeze line color inBlazor Gantt Chart](./images/blazor-Gantt-chart-freezeline-color.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BXBqXmibrvgMMgso?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Limitations
 

@@ -72,8 +72,6 @@ Items| Description
 }
 ```
 
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LtBqZGMbKsgGeXvU?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
-
 ## Custom context menu items
 
 The custom context menu items can be added by defining the [ContextMenuItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_ContextMenuItems) as a collection of [ContextMenuItemModel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ContextMenuItemModel.html). Actions for these customized items can be defined in the [ContextMenuItemClicked](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_ContextMenuItemClicked) event.
@@ -136,7 +134,6 @@ The following sample code demonstrates defining a custom context menu item and i
 }
 ```
 ![Custom context menu items in Blazor Gantt Chart](./images/gantt-custom-context-menu-items.gif)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LXhKjmilghCdyZFF?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Built-in and custom context menu items
 
@@ -196,8 +193,6 @@ The following sample code demonstrates defining built-in and custom context menu
     }
     }
 ```
-
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VXVgDQWFKBxdPZDh?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Sub context menu items
 
@@ -271,9 +266,9 @@ The following sample code demonstrates defining the sub-context menu item and it
 ```
 ## Disable the context menu for specific columns
 
-Context Menu can be prevented for specific columns using [ContextMenuOpen](https://blazor.syncfusion.com/documentation/datagrid/events/#contextmenuopen) event of Gantt. This event will be triggered before opening the ContextMenu. You can prevent the context menu from opening by defining the **Cancel** arguments of [ContextMenuOpen](https://blazor.syncfusion.com/documentation/datagrid/events/#contextmenuopen) to **false**.
+Context Menu can be prevented for specific columns using [ContextMenuOpen](https://blazor.syncfusion.com/documentation/gantt-chart/events#contextmenuopen) event of Gantt. This event will be triggered before opening the ContextMenu. You can prevent the context menu from opening by defining the **Cancel** arguments of ContextMenuOpen to **false**.
 
-The following sample code demonstrates how to disable the context for specific column using event arguments of [ContextMenuOpen](https://blazor.syncfusion.com/documentation/datagrid/events/#contextmenuopen) event,
+The following sample code demonstrates how to disable the context for specific column using event arguments of ContextMenuOpen event,
 
 ```cshtml
 <SfGantt @ref="Gantt" DataSource="@TaskCollection" Height="450px" Width="700px" ContextMenuItems="@contextMenuItems">
@@ -297,7 +292,7 @@ The following sample code demonstrates how to disable the context for specific c
     };
     public void OnContextMenuOpen(ContextMenuOpenEventArgs<TaskData> Args)
     {
-        if (Args.Column.Field == "Duration")
+        if (Args.Column != null && Args.Column.Field == "Duration")
         {
             Args.Cancel = true; // To prevent the context menu from opening
         }
@@ -337,8 +332,6 @@ The following sample code demonstrates how to disable the context for specific c
     }
 }
 ```
-
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LZhqXQWvUgDtbTsG?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Disable context menu items dynamically 
 
