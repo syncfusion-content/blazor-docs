@@ -12,7 +12,6 @@ documentation: ug
 By default, panning is already enabled in the Stock Chart, ensuring that users can immediately start interacting with the chart upon rendering. This default behavior is controlled by the `EnablePan` API, which is set to **true** by default in the [StockChartZoomSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartZoomSettings.html). This means that when a Stock Chart is initially displayed, users can readily utilize the panning feature to move across the data. 
 
 ```cshtml 
-
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Charts
 @inject NavigationManager NavigationManager
@@ -20,34 +19,36 @@ By default, panning is already enabled in the Stock Chart, ensuring that users c
 @inject HttpClient Http
 @if (DataSource == null)
 {
-    <div class="stockchartloader">
+    <div>Loading...
     </div>
 }
 else
-{ 
-    <SfStockChart>          
+{
+    <SfStockChart>
         <StockChartPrimaryXAxis>
-            <StockChartAxisMajorGridLines Width="0"></StockChartAxisMajorGridLines>             
+            <StockChartAxisMajorGridLines Width="0"></StockChartAxisMajorGridLines>
         </StockChartPrimaryXAxis>
         <StockChartPrimaryYAxis>
             <StockChartAxisLineStyle Width="0"></StockChartAxisLineStyle>
             <StockChartAxisMajorTickLines Width="0"></StockChartAxisMajorTickLines>
-        </StockChartPrimaryYAxis>       
+        </StockChartPrimaryYAxis>
         <StockChartSeriesCollection>
-            <StockChartSeries DataSource="@DataSource" Type="ChartSeriesType.Candle" XName="x"></StockChartSeries>
+            <StockChartSeries DataSource="@DataSource" Type="ChartSeriesType.HiloOpenClose" XName="x"></StockChartSeries>
         </StockChartSeriesCollection>
         <StockChartChartArea>
             <StockChartChartAreaBorder Width="0"></StockChartChartAreaBorder>
         </StockChartChartArea>
     </SfStockChart>
-    
+
 }
-@code{
+@code {
     private ChartData[] DataSource;
+
     protected override async Task OnInitializedAsync()
-    {      
+    {
         DataSource = await Http.GetFromJsonAsync<ChartData[]>(NavigationManager.BaseUri + "./googl.json");
     }
+
     public class ChartData
     {
         public DateTime x { get; set; }
@@ -57,8 +58,6 @@ else
         public double high { get; set; }
         public double volume { get; set; }
     }
-    string loadClass = "stockchartloader";   
-    
 }
 
 ```

@@ -173,35 +173,38 @@ By default tooltip is positioned at the leftside of the stock chart. You can mov
 @inject HttpClient Http
 @if (DataSource == null)
 {
-    <div class="stockchartloader">
+    <div>Loading...
     </div>
 }
 else
 { 
-    <SfStockChart>          
+    <SfStockChart>         
         <StockChartPrimaryXAxis>
-            <StockChartAxisMajorGridLines Width="0"></StockChartAxisMajorGridLines>             
+            <StockChartAxisMajorGridLines Width="0"></StockChartAxisMajorGridLines>
+            <StockChartAxisCrosshairTooltip Enable="true"></StockChartAxisCrosshairTooltip>
         </StockChartPrimaryXAxis>
-        <StockChartPrimaryYAxis>
+        <StockChartPrimaryYAxis LabelFormat="n0">
             <StockChartAxisLineStyle Width="0"></StockChartAxisLineStyle>
             <StockChartAxisMajorTickLines Width="0"></StockChartAxisMajorTickLines>
         </StockChartPrimaryYAxis>
-        <StockChartTooltipSettings Enable="true" TooltipPosition="TooltipPosition.Nearest"></StockChartTooltipSettings>         
+        <StockChartTooltipSettings Enable="true" TooltipPosition="TooltipPosition.Nearest"></StockChartTooltipSettings>
+        <StockChartCrosshairSettings Enable="true"></StockChartCrosshairSettings>
         <StockChartSeriesCollection>
-            <StockChartSeries DataSource="@DataSource" Type="ChartSeriesType.Candle " XName="x"></StockChartSeries>
+            <StockChartSeries DataSource="@DataSource" Type="ChartSeriesType.HiloOpenClose" XName="x"></StockChartSeries>
         </StockChartSeriesCollection>
         <StockChartChartArea>
             <StockChartChartAreaBorder Width="0"></StockChartChartAreaBorder>
         </StockChartChartArea>
-    </SfStockChart>
-    
+    </SfStockChart>    
 }
 @code{
     private ChartData[] DataSource;
+
     protected override async Task OnInitializedAsync()
     {      
         DataSource = await Http.GetFromJsonAsync<ChartData[]>(NavigationManager.BaseUri + "./googl.json");
     }
+
     public class ChartData
     {
         public DateTime x { get; set; }
@@ -211,9 +214,6 @@ else
         public double high { get; set; }
         public double volume { get; set; }
     }
-    string loadClass = "stockchartloader";
-    string loadDiv = "stockchartdiv";   
-    
 }
 
 ```

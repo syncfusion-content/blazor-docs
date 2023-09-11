@@ -316,130 +316,75 @@ The following code shows the complete demonstration of exporting chart image of 
 
 ```cshtml
  
-@using Syncfusion.Blazor.Inputs
-@using Syncfusion.Blazor.Charts
-@using Syncfusion.Blazor.Buttons
-@using Syncfusion.Blazor.DropDowns
-
-<SfChart @ref="ChartObj">
-    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category">
-    </ChartPrimaryXAxis>
-    <ChartSeriesCollection>
-        <ChartSeries DataSource="@ConsumerDetails" XName="X" YName="YValue" Type="ChartSeriesType.Column">
-        </ChartSeries>
-    </ChartSeriesCollection>
-    <ChartEvents OnExportComplete="ExportComplete"></ChartEvents>
-</SfChart>
-
-<div class="col-lg-3 property-section"> 
-    <table style="width: 100%">
-        <tbody>
-            <tr style="height: 50px">
-                <td style="width: 40%">
-                    <div style="margin-top:-3%">
-                        Export Type
-                    </div>
-                </td>
-                <td style="width: 100%;margin-top:4%;">
-                    <div style="width:100%;margin-left:5%">
-                        <SfDropDownList TValue="string" TItem="FileFormatType" DataSource="@ExportTypes" @bind-Value="@ChartExportType" Width="95%">
-                            <DropDownListEvents TValue="string" TItem="FileFormatType" ValueChange="ChartFileValueChange" />
-                            <DropDownListFieldSettings Text="Text" Value="Text" />
-                        </SfDropDownList>
-                    </div>
-                </td>
-            </tr>
-            <tr style="height: 50px">
-                <td style="width: 40%">
-                    <div>File Name</div>
-                </td>
-                <td style="width: 40%;">
-                    <div class="e-float-input" style='margin-top:5%;width:95%;margin-left:5%'>
-                        <SfTextBox Value="@FileName" ValueChange="@NameChange" />
-                    </div>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-    <br />
-    <div style="height: 45px; text-transform:none !important;width:100%;margin-left:40%">
-        <SfButton OnClick="ExportChart" IsToggle="true" IsPrimary="true">Export</SfButton>
-    </div>
+@using Syncfusion.Blazor.Charts;
+ 
+<div id="button">
+    <button onclick="@ExportChart">
+        Export
+    </button>
 </div>
-@code {
 
-    SfChart ChartObj;
+<div id="chart">
+    <SfChart @ref="@chartInstance">
+        <ChartArea><ChartAreaBorder Width="0"></ChartAreaBorder></ChartArea>
+        <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category" Interval="1" LabelIntersectAction="@Label" LabelRotation="-45">
+            <ChartAxisMajorGridLines Width="0"></ChartAxisMajorGridLines>
+            <ChartAxisMajorTickLines Width="0"></ChartAxisMajorTickLines>
+        </ChartPrimaryXAxis>
+        <ChartPrimaryYAxis Minimum="0" Maximum="40" Interval="10" Title="Measurements (in Gigawatt)" LabelFormat="@Format">
+            <ChartAxisMajorGridLines Width="0"></ChartAxisMajorGridLines>
+            <ChartAxisLineStyle Width="0"></ChartAxisLineStyle>
+            <ChartAxisMajorGridLines Width="2"></ChartAxisMajorGridLines>
+            <ChartAxisMajorTickLines Width="0"></ChartAxisMajorTickLines>
+        </ChartPrimaryYAxis>
+        <ChartSeriesCollection>
+            <ChartSeries DataSource="@ChartPoints" XName="Country" YName="GigaWatts" Type="ChartSeriesType.Column">
+                <ChartMarker>
+                    <ChartDataLabel Visible="true" EnableRotation="@Rotate" Angle="@AngleRotate" Name=" DataLabelMappingName" Position="Syncfusion.Blazor.Charts.LabelPosition.Top">
+                        <ChartDataLabelFont FontWeight="600" Size="9px" Color="#ffffff"></ChartDataLabelFont>
+                    </ChartDataLabel>
+                </ChartMarker>
+            </ChartSeries>
+        </ChartSeriesCollection>
+        <ChartEvents OnExportComplete="ExportComplete"></ChartEvents>
+    </SfChart>
+</div>
 
-    public class FileFormatType
-    {
-        public string Id { get; set; }
-        public string Text { get; set; }
-    }
 
-    private List<FileFormatType> ExportTypes = new List<FileFormatType>() {
-        new FileFormatType(){ Id= "JPEG", Text= "JPEG" },
-        new FileFormatType(){ Id= "PNG", Text= "PNG" },
-        new FileFormatType(){ Id= "SVG", Text= "SVG" },
-        new FileFormatType(){ Id= "PDF", Text= "PDF" },
-    };
-
-    private void NameChange(Syncfusion.Blazor.Inputs.ChangedEventArgs args)
-    {
-        FileName = args.Value;
-    }
-    private void ChartFileValueChange(Syncfusion.Blazor.DropDowns.ChangeEventArgs<string, FileFormatType> args)
-    {
-        ChartExportType = args.Value;
-    }
-
-    public string ChartExportType { get; set; } = "JPEG";
+@code{
+    private SfChart chartInstance;    
     public string FileName { get; set; } = "Charts";
     public string Format { get; set; } = "{value}GW";
     public bool Rotate { get; set; } = false;
     public double AngleRotate { get; set; } = 0;
+    public LabelIntersectAction Label { get; set; } = LabelIntersectAction.Trim;
 
-    private async Task Export(MouseEventArgs args)
+    public List<ExportData> ChartPoints { get; set; } = new List<ExportData>
     {
-        await ChartObj.ExportAsync(ExportType.PNG, "pngImage");
-    }
-
-    public class ChartData
-    {
-        public string X { get; set; }
-        public double YValue { get; set; }
-    }
-
-    public List<ChartData> ConsumerDetails = new List<ChartData>
-    {
-        new ChartData { X= "USA", YValue= 46 },
-        new ChartData { X= "GBR", YValue= 27 },
-        new ChartData { X= "CHN", YValue= 26 },
-        new ChartData { X= "UK", YValue= 36 },
-        new ChartData { X= "AUS", YValue= 15 },
-        new ChartData { X= "IND", YValue= 55 },
-        new ChartData { X= "DEN", YValue= 40 },
-        new ChartData { X= "MEX", YValue= 30 }
+        new ExportData {Country="India", GigaWatts = 35.5, DataLabelMappingName="35.5"},
+        new ExportData {Country="China", GigaWatts = 18.3, DataLabelMappingName="18.3"},
+        new ExportData {Country="Italy", GigaWatts = 17.6, DataLabelMappingName="17.6"},
+        new ExportData {Country="Japan", GigaWatts = 13.6, DataLabelMappingName="13.6"},
+        new ExportData {Country="United state", GigaWatts = 12, DataLabelMappingName="12"},
+        new ExportData {Country="Spain", GigaWatts = 5.6, DataLabelMappingName="5.6"},
+        new ExportData {Country="France", GigaWatts = 4.6, DataLabelMappingName="4.6"},
+        new ExportData {Country="Australia", GigaWatts = 3.3, DataLabelMappingName="3.3"},
+        new ExportData {Country="Belgium", GigaWatts = 3, DataLabelMappingName="3"},
+        new ExportData {Country="United Kingdom", GigaWatts = 2.9, DataLabelMappingName="2.9"},
     };
 
     public async Task ExportChart(Microsoft.AspNetCore.Components.Web.MouseEventArgs args)
     {
-        ExportType ExportFileType = ExportType.JPEG;
-        switch (ChartExportType)
-        {
-            case "JPEG":
-                ExportFileType = ExportType.JPEG;
-                break;
-            case "PNG":
-                ExportFileType = ExportType.PNG;
-                break;
-            case "SVG":
-                ExportFileType = ExportType.SVG;
-                break;
-            case "PDF":
-                ExportFileType = ExportType.PDF;
-                break;
-        }
-        await ChartObj.ExportAsync(ExportFileType, FileName, null, false, true);
+        ExportType ExportFileType = ExportType.PDF;
+        
+        await chartInstance.ExportAsync(ExportFileType, FileName, null,false, true);
+    }
+
+    public class ExportData
+    {
+        public string Country { get; set; }
+        public double GigaWatts { get; set; }
+        public string DataLabelMappingName { get; set; }
     }
 
     public void ExportComplete(ExportEventArgs exportEventArgs)
@@ -447,6 +392,7 @@ The following code shows the complete demonstration of exporting chart image of 
         string base64 = exportEventArgs.Base64;
     }
 }
+
 
 ```
 
