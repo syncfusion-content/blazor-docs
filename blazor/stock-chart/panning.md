@@ -34,7 +34,7 @@ else
             <StockChartAxisMajorTickLines Width="0"></StockChartAxisMajorTickLines>
         </StockChartPrimaryYAxis>       
         <StockChartSeriesCollection>
-            <StockChartSeries DataSource="@DataSource" Type="ChartSeriesType.HiloOpenClose" XName="x"></StockChartSeries>
+            <StockChartSeries DataSource="@DataSource" Type="ChartSeriesType.Candle" XName="x"></StockChartSeries>
         </StockChartSeriesCollection>
         <StockChartChartArea>
             <StockChartChartAreaBorder Width="0"></StockChartChartAreaBorder>
@@ -62,4 +62,7 @@ else
 }
 
 ```
+
+![Blazor Stock Chart with Panning](images/panning.gif)
+
 N> Refer to our [Blazor Stock Charts](https://www.syncfusion.com/blazor-components/blazor-stock-chart) feature tour page for its groundbreaking feature representations and also explore our [Blazor Stock Chart Example](https://blazor.syncfusion.com/demos/stock-chart/stock-chart?theme=bootstrap4) to know various stock chart types and how to represent time-dependent data, showing trends at equal intervals.

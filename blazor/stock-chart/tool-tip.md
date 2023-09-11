@@ -163,7 +163,7 @@ The [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockC
 
 Enabling moving tooltips empowers users to effortlessly explore the data points on the Stock Chart. As they move the mouse pointer across the chart, the tooltip dynamically updates its position, staying in sync with the cursor. This real-time interaction ensures that users can seamlessly access information about different data points without the need to constantly reposition the cursor or interact with the chart excessively.
 
-By default tooltip is not moving along with mouse in stock chart. Enable `Moving Tooltip` by setting the `TooltipPosition` as `TooltipPosition.Nearest` in the [StockChartTooltipSetting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartTooltipSettings.html#Syncfusion_Blazor_Charts_StockChartTooltipSettings__ctor), to move tooltip along with the mouse pointer when we move the cursor across data points.
+By default tooltip is positioned at the leftside of the stock chart. You can move the tooltip along with the mouse by setting `Nearest` to the `TooltipPosition` property in the [StockChartTooltipSetting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartTooltipSettings.html#Syncfusion_Blazor_Charts_StockChartTooltipSettings__ctor), to move tooltip along with the mouse pointer when we move the cursor across data points.
 
 ```cshtml
 @using Syncfusion.Blazor
@@ -180,17 +180,15 @@ else
 { 
     <SfStockChart>          
         <StockChartPrimaryXAxis>
-            <StockChartAxisMajorGridLines Width="0"></StockChartAxisMajorGridLines>
-            <StockChartAxisCrosshairTooltip Enable="true"></StockChartAxisCrosshairTooltip>
+            <StockChartAxisMajorGridLines Width="0"></StockChartAxisMajorGridLines>             
         </StockChartPrimaryXAxis>
         <StockChartPrimaryYAxis>
             <StockChartAxisLineStyle Width="0"></StockChartAxisLineStyle>
             <StockChartAxisMajorTickLines Width="0"></StockChartAxisMajorTickLines>
         </StockChartPrimaryYAxis>
-        <StockChartTooltipSettings Enable="true" TooltipPosition="TooltipPosition.Nearest"></StockChartTooltipSettings>
-        <StockChartCrosshairSettings Enable="true"></StockChartCrosshairSettings>
+        <StockChartTooltipSettings Enable="true" TooltipPosition="TooltipPosition.Nearest"></StockChartTooltipSettings>         
         <StockChartSeriesCollection>
-            <StockChartSeries DataSource="@DataSource" Type="ChartSeriesType.HiloOpenClose" XName="x"></StockChartSeries>
+            <StockChartSeries DataSource="@DataSource" Type="ChartSeriesType.Candle " XName="x"></StockChartSeries>
         </StockChartSeriesCollection>
         <StockChartChartArea>
             <StockChartChartAreaBorder Width="0"></StockChartChartAreaBorder>
@@ -220,8 +218,6 @@ else
 
 ```
 
-![Blazor Stock Chart with Moving Tooltip](images/common/blazor-stock-chart-moving-tooltip.png)
+![Blazor Stock Chart with Moving Tooltip](images/common/blazor-stock-chart-moving-tooltip.gif)
 
-
-
-
+N> Refer to our [Blazor Stock Charts](https://www.syncfusion.com/blazor-components/blazor-stock-chart) feature tour page for its groundbreaking feature representations and also explore our [Blazor Stock Chart Example](https://blazor.syncfusion.com/demos/stock-chart/stock-chart?theme=bootstrap4) to know various stock chart types and how to represent time-dependent data, showing trends at equal intervals.
