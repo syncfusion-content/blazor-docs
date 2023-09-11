@@ -159,7 +159,7 @@ The [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockC
 
 ![Blazor Stock Chart with Custom Tooltip](images/common/blazor-stock-chart-custom-tooltip.png)
 
-## Moving Tooltip
+## Tooltip Position
 
 Enabling moving tooltips empowers users to effortlessly explore the data points on the Stock Chart. As they move the mouse pointer across the chart, the tooltip dynamically updates its position, staying in sync with the cursor. This real-time interaction ensures that users can seamlessly access information about different data points without the need to constantly reposition the cursor or interact with the chart excessively.
 

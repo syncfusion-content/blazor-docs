@@ -293,9 +293,7 @@ The optional parameters for this method are,
 
 ### Export Chart as base64 string
 
-Sometimes, you may encounter situations where sending images in standard formats like [JPEG](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ExportType.html#Syncfusion_Blazor_Charts_ExportType_JPEG), [PNG](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ExportType.html#Syncfusion_Blazor_Charts_ExportType_PNG), [SVG](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ExportType.html#Syncfusion_Blazor_Charts_ExportType_SVG), or [PDF](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ExportType.html#Syncfusion_Blazor_Charts_ExportType_PDF) might not be feasible. In such cases, We provide support to export the rendered chart as `base64` string, which can then be easily embedded or transmitted in various contexts. 
-
-This can be achieved using the `ExportAsync` method by made the `allowDownload` boolean as false and `isBase64` as true. The exported Base64 string can be get by using [OnExportComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnExportComplete) event.
+The image can be exported as base64 string for the JPEG, PNG and PDF formats. The rendered Chart can be exported to image as base64 string using the [OnExportComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnExportComplete) event. The arguments that are required for this method is image type, file name, orientation of the exported PDF document which must be set as null for image export and 0 or 1 for the PDF export and finally allowDownload which should be set as false to return base64 string. 
 
 The following code shows how to pass parameters to the `ExportAsync` method to get `base64` string.
 
