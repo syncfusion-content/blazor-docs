@@ -1,13 +1,13 @@
 ﻿---
 layout: post
-title: HTTP handler customization in Blazor Windows authenticated client FileManager | Syncfusion
+title: HTTP handler customization in FileManager Windows authenticated application | Syncfusion
 description: Learn here all about customizing HTTP hanlder in Blazor windows authenticated client FileManager application.
 platform: Blazor
 control: File Manager
 documentation: ug
 ---
 
-# HTTP handler customization in Blazor Windows authenticated client FileManager application
+# HTTP handler customization in FileManager Windows authenticated application
 
 This documentation provides step-by-step instructions on customizing the HTTP handler to access authenticated responses from the server in a Blazor FileManager application. This process is specifically tailored to use Windows authentication and involves passing generated user tokens from the client application through the FileManager component's HTTP client instance.
 
