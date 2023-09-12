@@ -83,7 +83,7 @@ You can prevent this re-rendering of the RichTextEditor component by calling the
 
 In the following example:
 
-* **OnToolbarClick** event is bound to a callback method, when the editor content gets changed every time the event is completed, the **StateHasChanged** will be invoked for the parent component.
+* **OnToolbarClick** event is bound to a callback method, when the editor content gets changed by toolbar action the event is completed, the **StateHasChanged** will be invoked for the parent component.
 
 ```cshtml
 @using Syncfusion.Blazor.RichTextEditor
