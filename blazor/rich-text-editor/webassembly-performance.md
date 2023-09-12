@@ -15,14 +15,14 @@ N> You can refer to our Getting Started with [Blazor Server-Side RichTextEditor]
 
 ## Avoid unnecessary component renders
 
-During Blazor Diffing Algorithm, every views of the RichTextEditor component and its child component will be checked for re-rendering. For instance, having **EventCallBack** on the application or RichTextEditor will check every child component, once event callback is completed.
+During the Blazor Diffing Algorithm, every view of the RichTextEditor component and its child component will be checked for re-rendering. For instance, having an **EventCallBack** on the application or RichTextEditor will check every child component once the event callback is completed.
 
-You can have fine-grained control over RichTextEditor component rendering. **PreventRender** method helps to avoid unnecessary re-rendering of the RichTextEditor component. This method internally overrides the **ShouldRender** method of the RichTextEditor to prevent rendering.
+You can have fine-grained control over the RichTextEditor component rendering. **PreventRender** method helps to avoid unnecessary re-rendering of the RichTextEditor component. This method internally overrides the **ShouldRender** method of the RichTextEditor to prevent rendering.
 
 In the following example:
 
 * **PreventRender** method is called in the **IncrementCount** method which is a click callback.
-* Now, RichTextEditor component will not be a part of the rendering which happens as result of the click event and **currentCount** alone will get updated.
+* Now, the RichTextEditor component will not be a part of the rendering, which happens as a result of the click event, and **currentCount** alone will get updated.
 
 ```cshtml
 @using Syncfusion.Blazor.RichTextEditor
@@ -72,18 +72,18 @@ In the following example:
 }
 ```
 
-N> * **PreventRender** method accepts boolean argument that accepts true or false to disable or enable rendering respectively.
-<br/> * **PreventRender** method can be used only after RichTextEditor component completed initial rendering. Calling this method during initial rendering will not have any effect.
+N> * **PreventRender** method accepts the boolean argument that accepts true or false to disable or enable rendering, respectively.
+<br/> * **PreventRender** method can be used only after the RichTextEditor component completes initial rendering. Calling this method during initial rendering will not have any effect.
 
 ## Avoid unnecessary component renders after RichTextEditor events
 
-When a callback method is assigned to the RichTextEditor events, then the **StateHasChanged** will be called in parent component of the RichTextEditor automatically once the event is completed.
+When a callback method is assigned to the RichTextEditor events, then the **StateHasChanged** will be called in the parent component of the RichTextEditor automatically once the event is completed.
 
 You can prevent this re-rendering of the RichTextEditor component by calling the **PreventRender** method.
 
 In the following example:
 
-* **ValueChange** event is bound with a callback method, when the editor content gets changed on every time the event is completed the **StateHasChanged** will be invoked for the parent component.
+* **ValueChange** event is bound to a callback method, when the editor content gets changed every time the event is completed, the **StateHasChanged** will be invoked for the parent component.
 
 ```cshtml
 @using Syncfusion.Blazor.RichTextEditor
@@ -128,5 +128,5 @@ In the following example:
 ```
 
 N> * **PreventRender** method internally overrides the **ShouldRender** method of the RichTextEditor to prevent rendering.
-<br/> * It is recommended to use **PreventRender** method for user interactive events such as OnCellClick, OnEventClick etc. for better performance.
-<br/> * For events without any argument such as **DataBound**, you can use **PreventRender** method of the RichTextEditor to disable rendering.
+<br/> * It is recommended to use the **PreventRender** method for user interactive events such as ValueChange, BeforePasteCleanup, etc., for better performance.
+<br/> * For events without any argument such as **DataBound**, you can use the **PreventRender** method of the RichTextEditor to disable rendering.
