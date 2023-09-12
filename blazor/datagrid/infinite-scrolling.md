@@ -74,7 +74,7 @@ The following GIF represents the infinite scrolling functionality in DataGrid
 
 ## Initial Blocks
 
-The number of blocks initially rendered when the Grid loads corresponds to the Grid's page size. This results in the rendering of a specific number of `tr` elements, calculated by multiplying the initial block size by the page size.
+The number of blocks initially rendered when the Grid loads corresponds to the Grid's page size. This results in the rendering of a specific number of `tr` elements.
 You can define the initial loading pages count by using [InitialBlocks](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridInfiniteScrollSettings.html) property of [GridInfiniteScrollSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridInfiniteScrollSettings.html) class. By default, this property loads three pages during the initial rendering. Subsequently, additional data is buffered and loaded based on either the page size or the number of rows rendered within the provided height.
 
 In the below demo, we have changed this property value to load four page records instead of three.
