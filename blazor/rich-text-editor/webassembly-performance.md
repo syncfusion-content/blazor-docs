@@ -1,8 +1,7 @@
 ---
 layout: post
 title: WebAssembly Performance in Blazor RichTextEditor | Syncfusion
-description: This topic helps you to improve the performance of Web Assembly Application when using Syncfusion Blazor RichTextEditor
-components with some tips.
+description: This topic helps you to improve the performance of Web Assembly Application when using Syncfusion Blazor RichTextEditor components with some tips.
 platform: Blazor
 control: RichTextEditor
 documentation: ug
