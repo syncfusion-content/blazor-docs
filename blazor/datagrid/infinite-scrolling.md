@@ -75,7 +75,7 @@ The following GIF represents the infinite scrolling functionality in DataGrid
 ## Initial Blocks
 
 The number of blocks initially rendered when the Grid loads corresponds to the Grid's page size. This results in the rendering of a specific number of `tr` elements, calculated by multiplying the initial block size by the page size.
-You can define the initial loading pages count by using [GridInfiniteScrollSettings.InitialBlocks](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridInfiniteScrollSettings.html#Syncfusion_Blazor_Grids_GridInfiniteScrollSettings_InitialBlocks). By default, this property loads three pages during the initial rendering. Subsequently, additional data is buffered and loaded based on either the page size or the number of rows rendered within the provided height.
+You can define the initial loading pages count by using [InitialBlocks](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridInfiniteScrollSettings.html#Syncfusion_Blazor_Grids_GridInfiniteScrollSettings_InitialBlocks) property of [GridInfiniteScrollSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridInfiniteScrollSettings.html#Syncfusion_Blazor_Grids_GridInfiniteScrollSettings) class. By default, this property loads three pages during the initial rendering. Subsequently, additional data is buffered and loaded based on either the page size or the number of rows rendered within the provided height.
 
 In the below demo, we have changed this property value to load four page records instead of three.
 ```csharp
@@ -132,11 +132,11 @@ In the below demo, we have changed this property value to load four page records
 
 ## Cache Mode
 
-In Grid Cache mode, visited data blocks are cached, enabling the reuse of previously loaded block data when revisiting the same block. This reduces the need for frequent data requests while navigating within the same block. Additionally, this mode manages row elements in the DOM based on the [GridInfiniteScrollSettings.MaximumBlocks](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridInfiniteScrollSettings.html#Syncfusion_Blazor_Grids_GridInfiniteScrollSettings_MaximumBlocks) count value. When this limit is exceeded, it will remove a block of row elements from the DOM to accommodate the generation of new rows.
+In Grid Cache mode, visited data blocks are cached, enabling the reuse of previously loaded block data when revisiting the same block. This reduces the need for frequent data requests while navigating within the same block. Additionally, this mode manages row elements in the DOM based on the [MaximumBlocks](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridInfiniteScrollSettings.html#Syncfusion_Blazor_Grids_GridInfiniteScrollSettings_MaximumBlocks) count value. When this limit is exceeded, it will remove a block of row elements from the DOM to accommodate the generation of new rows.
 To enable maximum blocks, you need to define
-[GridInfiniteScrollSettings.MaximumBlocks](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridInfiniteScrollSettings.html#Syncfusion_Blazor_Grids_GridInfiniteScrollSettings_MaximumBlocks) count, By default this property value is three.
+`MaximumBlocks` count of [GridInfiniteScrollSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridInfiniteScrollSettings.html#Syncfusion_Blazor_Grids_GridInfiniteScrollSettings) class, By default this property value is three.
 To enable cache mode, you need to define
-[GridInfiniteScrollSettings.EnableCache](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridInfiniteScrollSettings.html#Syncfusion_Blazor_Grids_GridInfiniteScrollSettings_EnableCache) property as true.
+[EnableCache](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridInfiniteScrollSettings.html#Syncfusion_Blazor_Grids_GridInfiniteScrollSettings_EnableCache) property of [GridInfiniteScrollSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridInfiniteScrollSettings.html#Syncfusion_Blazor_Grids_GridInfiniteScrollSettings) class as true.
 
 In the below demo, we have enabled `EnableCache` in `GridInfiniteScrollSettings`, here three pages of records get loaded for each request.
 ```csharp
