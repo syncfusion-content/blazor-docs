@@ -16,39 +16,40 @@ To sort a particular column in the DataGrid, click on its column header. Each ti
 ```cshtml
 @using Syncfusion.Blazor.Grids
 
-<SfGrid  DataSource="@Orders" AllowSorting="true" Height="270">
-   <GridColumns>
-     <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-     <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
-     <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
-     <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-   </GridColumns>
+<SfGrid DataSource="@Orders" AllowSorting="true" Height="315">
+    <GridColumns>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="90"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer ID" Width="100"></GridColumn>
+        <GridColumn Field=@nameof(Order.ShipCity) HeaderText="Ship City" Width="100"></GridColumn>
+        <GridColumn Field=@nameof(Order.ShipName) HeaderText="Ship Name" Width="120"></GridColumn>
+    </GridColumns>
 </SfGrid>
 
-@code{
+@code {
     public List<Order> Orders { get; set; }
 
     protected override void OnInitialized()
     {
         Orders = Enumerable.Range(1, 75).Select(x => new Order()
-        {
-            OrderID = 1000 + x,
-            CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
-            Freight = 2.1 * x,
-            OrderDate = DateTime.Now.AddDays(-x),
-        }).ToList();
+            {
+                OrderID = 1000 + x,
+                CustomerID = (new string[] { "VINET", "TOMSP", "HANAR", "VICTE", "SUPRD" })[new Random().Next(5)],
+                ShipCity = (new string[] { "Reims", "Lyon", "Charleroi", "Rio de Janeiro", "Münster" })[new Random().Next(5)],
+                ShipName = (new string[] { "Centro comercial Moctezuma", "Chop-suey Chinese", "Ernst Handel", "Hanari Carnes", "HILARION-Abastos" })[new Random().Next(5)],
+            }).ToList();
     }
 
-    public class Order {
+    public class Order
+    {
         public int? OrderID { get; set; }
         public string CustomerID { get; set; }
-        public DateTime? OrderDate { get; set; }
-        public double? Freight { get; set; }
+        public string? ShipCity { get; set; }
+        public string? ShipName { get; set; }
     }
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BjhAtnLrCcWEZBCb?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNhgXuNbKBAABhDS?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 > * DataGrid columns are sorted in the **Ascending** order. If you click the already sorted column, then toggles the sort direction..
 > * You can apply and clear sorting by using the [SortColumnAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_SortColumnAsync_System_String_Syncfusion_Blazor_Grids_SortDirection_System_Nullable_System_Boolean__) and [ClearSortingAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ClearSortingAsync) methods.
@@ -58,51 +59,52 @@ To sort a particular column in the DataGrid, click on its column header. Each ti
 
 By default, the DataGrid component does not apply any sorting to its records at initial rendering. However, you can set the [Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSortColumn.html#Syncfusion_Blazor_Grids_GridSortColumn_Field) and [Direction](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSortColumn.html#Syncfusion_Blazor_Grids_GridSortColumn_Direction) in [Columns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSortSettings.html#Syncfusion_Blazor_Grids_GridSortSettings_Columns) property of [GridSortSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSortSettings.html) component. This feature is helpful when you want to display your data in a specific order when the grid is first loaded.
 
-The following example demonstrates how to set the **GridSortSettings** component of the  `Columns` for **OrderDate** and **Freight** columns with a specified `Direction`.
+The following example demonstrates how to set the **GridSortSettings** component of the  `Columns` for **OrderID** and **ShipCity** columns with a specified `Direction`.
 
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
 
-<SfGrid DataSource="@Orders" AllowSorting="true" Height="270">
-     <GridSortSettings>
+<SfGrid DataSource="@Orders" AllowSorting="true" Height="315">
+    <GridSortSettings>
         <GridSortColumns>
-            <GridSortColumn Field="OrderDate" Direction="SortDirection.Ascending"></GridSortColumn>
-            <GridSortColumn Field="Freight" Direction="SortDirection.Descending"></GridSortColumn>
+            <GridSortColumn Field="OrderID" Direction="SortDirection.Ascending"></GridSortColumn>
+            <GridSortColumn Field="ShipCity" Direction="SortDirection.Descending"></GridSortColumn>
         </GridSortColumns>
     </GridSortSettings>
-   <GridColumns>
-     <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-     <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
-     <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
-     <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-   </GridColumns>
+    <GridColumns>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="90"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer ID" Width="100"></GridColumn>
+        <GridColumn Field=@nameof(Order.ShipCity) HeaderText="Ship City" Width="100"></GridColumn>
+        <GridColumn Field=@nameof(Order.ShipName) HeaderText="Ship Name" Width="120"></GridColumn>
+    </GridColumns>
 </SfGrid>
 
-@code{
+@code {
     public List<Order> Orders { get; set; }
 
     protected override void OnInitialized()
     {
         Orders = Enumerable.Range(1, 75).Select(x => new Order()
-        {
-            OrderID = 1000 + x,
-            CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
-            Freight = 2.1 * x,
-            OrderDate = DateTime.Now.AddDays(-x),
-        }).ToList();
+            {
+                OrderID = 1000 + x,
+                CustomerID = (new string[] { "VINET", "TOMSP", "HANAR", "VICTE", "SUPRD" })[new Random().Next(5)],
+                ShipCity = (new string[] { "Reims", "Lyon", "Charleroi", "Rio de Janeiro", "Münster" })[new Random().Next(5)],
+                ShipName = (new string[] { "Centro comercial Moctezuma", "Chop-suey Chinese", "Ernst Handel", "Hanari Carnes", "HILARION-Abastos" })[new Random().Next(5)],
+            }).ToList();
     }
 
-    public class Order {
+    public class Order
+    {
         public int? OrderID { get; set; }
         public string CustomerID { get; set; }
-        public DateTime? OrderDate { get; set; }
-        public double? Freight { get; set; }
+        public string? ShipCity { get; set; }
+        public string? ShipName { get; set; }
     }
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LjhUNnrhicoBFLef?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LZBKZEXFAAGxftaC?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 > The initial sorting defined in the `GridSortSettings` component of the  `Columns` will override any sorting applied through user interaction.
 
@@ -112,46 +114,46 @@ The DataGrid component allows to sort more than one column at a time using multi
 
 To clear multi-column sorting for a particular column, press the "Shift + mouse left click".
 
-> The `AllowSorting` must be **true** while enabling multi-column sort.
-> Set `AllowMultiSorting` property as **false** to disable multi-column sorting.
+> * The `AllowSorting` must be **true** while enabling multi-column sort.
+> * Set `AllowMultiSorting` property as **false** to disable multi-column sorting.
 
 ```csharp
-
 @using Syncfusion.Blazor.Grids
 
-<SfGrid DataSource="@Orders" AllowSorting="true" AllowMultiSorting="true" Height="270">
-   <GridColumns>
-     <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-     <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
-     <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
-     <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-   </GridColumns>
+<SfGrid DataSource="@Orders" AllowSorting="true" AllowMultiSorting="true" Height="315">
+    <GridColumns>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="90"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer ID" Width="100"></GridColumn>
+        <GridColumn Field=@nameof(Order.ShipCity) HeaderText="Ship City" Width="100"></GridColumn>
+        <GridColumn Field=@nameof(Order.ShipName) HeaderText="Ship Name" Width="120"></GridColumn>
+    </GridColumns>
 </SfGrid>
 
-@code{
+@code {
     public List<Order> Orders { get; set; }
 
     protected override void OnInitialized()
     {
         Orders = Enumerable.Range(1, 75).Select(x => new Order()
-        {
-            OrderID = 1000 + x,
-            CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
-            Freight = 2.1 * x,
-            OrderDate = DateTime.Now.AddDays(-x),
-        }).ToList();
+            {
+                OrderID = 1000 + x,
+                CustomerID = (new string[] { "VINET", "TOMSP", "HANAR", "VICTE", "SUPRD" })[new Random().Next(5)],
+                ShipCity = (new string[] { "Reims", "Lyon", "Charleroi", "Rio de Janeiro", "Münster" })[new Random().Next(5)],
+                ShipName = (new string[] { "Centro comercial Moctezuma", "Chop-suey Chinese", "Ernst Handel", "Hanari Carnes", "HILARION-Abastos" })[new Random().Next(5)],
+            }).ToList();
     }
 
-    public class Order {
+    public class Order
+    {
         public int? OrderID { get; set; }
         public string CustomerID { get; set; }
-        public DateTime? OrderDate { get; set; }
-        public double? Freight { get; set; }
+        public string? ShipCity { get; set; }
+        public string? ShipName { get; set; }
     }
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rXVqNRLVMlRgPzPB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BtLUDYDlAeFQtmOp?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Prevent sorting for particular column
 
@@ -164,12 +166,12 @@ The following example demonstrates, how to disable sorting for **CustomerID** co
 ```cshtml
 @using Syncfusion.Blazor.Grids
 
-<SfGrid DataSource="@Orders" AllowSorting="true" Height="270">
+<SfGrid DataSource="@Orders" AllowSorting="true"  Height="315">
     <GridColumns>
-        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" AllowSorting="false" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
-        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="90"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer ID" AllowSorting="false" Width="100"></GridColumn>
+        <GridColumn Field=@nameof(Order.ShipCity) HeaderText="Ship City" Width="100"></GridColumn>
+        <GridColumn Field=@nameof(Order.ShipName) HeaderText="Ship Name" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
 
@@ -181,9 +183,9 @@ The following example demonstrates, how to disable sorting for **CustomerID** co
         Orders = Enumerable.Range(1, 75).Select(x => new Order()
             {
                 OrderID = 1000 + x,
-                CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
-                Freight = 2.1 * x,
-                OrderDate = DateTime.Now.AddDays(-x),
+                CustomerID = (new string[] { "VINET", "TOMSP", "HANAR", "VICTE", "SUPRD" })[new Random().Next(5)],
+                ShipCity = (new string[] { "Reims", "Lyon", "Charleroi", "Rio de Janeiro", "Münster" })[new Random().Next(5)],
+                ShipName = (new string[] { "Centro comercial Moctezuma", "Chop-suey Chinese", "Ernst Handel", "Hanari Carnes", "HILARION-Abastos" })[new Random().Next(5)],
             }).ToList();
     }
 
@@ -191,13 +193,13 @@ The following example demonstrates, how to disable sorting for **CustomerID** co
     {
         public int? OrderID { get; set; }
         public string CustomerID { get; set; }
-        public DateTime? OrderDate { get; set; }
-        public double? Freight { get; set; }
+        public string? ShipCity { get; set; }
+        public string? ShipName { get; set; }
     }
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VXVqjPjbqEvgyBSP?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/htBKtatlAwqLLtsp?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Sort order
 
@@ -214,38 +216,35 @@ The following example demonstrates how to define custom sort comparer function f
 ```cshtml
 @using Syncfusion.Blazor.Grids
 
-<SfGrid DataSource="@Orders" AllowSorting="true" Width="600" Height="270">
+<SfGrid DataSource="@Orders" AllowSorting="true" Height="315">
     <GridColumns>
-        <GridColumn Field=@nameof(Order.OrderID) Visible="false" HeaderText="Order ID" Width="80"></GridColumn>
-        <GridColumn Field=@nameof(Order.CustomerID) SortComparer="new CustomComparer()" HeaderText="Customer Name" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date"  Width="100"></GridColumn>
-        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2"  Width="80"></GridColumn>
-        <GridColumn Field=@nameof(Order.ShipCountry) HeaderText="ShipCountry" Format="C2"  Width="100"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="80"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) SortComparer="new CustomComparer()" HeaderText="Customer ID" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" Width="80"></GridColumn>
+        <GridColumn Field=@nameof(Order.ShipName) HeaderText="Ship Name" Width="100"></GridColumn>
     </GridColumns>
 </SfGrid>
 
-@code{
+@code {
     public List<Order> Orders { get; set; }
 
     protected override void OnInitialized()
     {
         Orders = Enumerable.Range(1, 10).Select(x => new Order()
-        {
-            OrderID = 1000 + x,
-            CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
-            Freight = 2.1 * x,
-            OrderDate = DateTime.Now.AddDays(-x),
-            ShipCountry = (new string[] {"USA","UK","INDIA","CHINA","ENGLAND"})[new Random().Next(5)],
-        }).ToList();
+            {
+                OrderID = 1000 + x,
+                CustomerID = (new string[] { "VINET", "TOMSP", "HANAR", "VICTE", "SUPRD" })[new Random().Next(5)],
+                Freight = 2.1 * x,
+                ShipName = (new string[] { "Centro comercial Moctezuma", "Chop-suey Chinese", "Ernst Handel", "Hanari Carnes", "HILARION-Abastos" })[new Random().Next(5)],
+            }).ToList();
     }
 
     public class Order
     {
         public int? OrderID { get; set; }
         public string CustomerID { get; set; }
-        public DateTime? OrderDate { get; set; }
         public double? Freight { get; set; }
-        public string ShipCountry { get; set; }
+        public string ShipName { get; set; }
     }
 
     public class CustomComparer : IComparer<Object>
@@ -273,7 +272,7 @@ The following example demonstrates how to define custom sort comparer function f
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LthKDxVriaVxqpEP?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VZVgXuirUuHiorvM?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 > * The SortComparer function takes two parameters: a and b. The a and b parameters are the values to be compared. The function returns -1, 0, or 1, depending on the comparison result.
 > * The SortComparer property will work only for local data.
@@ -297,7 +296,7 @@ To perform sorting based on foreign key column, the `GridForeignColumn` column c
 
 In the case of local data in the grid, the sorting operation will be performed based on the [ForeignKeyValue](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html?_gl=1*vgn3lm*_ga*MTcyMDA4OTE2OS4xNjg3OTQzMDQ5*_ga_WC4JKKPHH0*MTY4OTc2NTA2MS44NC4xLjE2ODk3NjUyNDAuNjAuMC4w&_ga=2.195629932.1791817302.1689564530-1720089169.1687943049#Syncfusion_Blazor_Grids_GridColumn_ForeignKeyValue)  property of the column. The `ForeignKeyValue` property should be defined in the column definition with the corresponding foreign key value for each row. The grid will sort the foreign key column based on the text representation of the `ForeignKeyValue` property.
 
-The following example demonstrates how to perform sorting by enabling a foreign key column, where the **EmployeeID** column acts as a foreign column displaying the **FirstName** column from foreign data.
+The following example demonstrates how to perform sorting by enabling a foreign key column, where the **CustomerID** column acts as a foreign column displaying the **ContactName** column from foreign data.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -305,50 +304,51 @@ The following example demonstrates how to perform sorting by enabling a foreign 
 <SfGrid DataSource="@Orders" Height="315" AllowSorting="true">
     <GridColumns>
         <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-        <GridForeignColumn Field=@nameof(Order.EmployeeID)  HeaderText="Employee Name" ForeignKeyValue="FirstName" ForeignDataSource="@Employees" Width="150"></GridForeignColumn>
-        <GridColumn Field=@nameof(Order.OrderDate) HeaderText="Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
-        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridForeignColumn Field=@nameof(Order.CustomerID) HeaderText="Customer ID" ForeignKeyValue="ContactName" ForeignKeyField="CustomerID" ForeignDataSource="@customerData" Width="100"></GridForeignColumn>
+        <GridColumn Field=@nameof(Order.ShipCity) HeaderText="Ship City" Width="100"></GridColumn>
+        <GridColumn Field=@nameof(Order.ShipName) HeaderText="Ship Name" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
 
 @code {
     public List<Order> Orders { get; set; }
-    public List<EmployeeData> Employees { get; set; }
+    public List<EmployeeData> customerData { get; set; }
 
     protected override void OnInitialized()
     {
         Orders = Enumerable.Range(1, 75).Select(x => new Order()
             {
                 OrderID = 1000 + x,
-                EmployeeID = x,
-                Freight = 2.1 * x,
-                OrderDate = DateTime.Now.AddDays(-x),
+                CustomerID = x,
+                ShipCity = (new string[] { "Reims", "Lyon", "Charleroi", "Rio de Janeiro", "Münster" })[new Random().Next(5)],
+                ShipName = (new string[] { "Centro comercial Moctezuma", "Chop-suey Chinese", "Ernst Handel", "Hanari Carnes", "HILARION-Abastos" })[new Random().Next(5)],
             }).ToList();
 
-        Employees = Enumerable.Range(1, 75).Select(x => new EmployeeData()
+        customerData = Enumerable.Range(1, 75).Select(x => new EmployeeData()
             {
-                EmployeeID = x,
-                FirstName = (new string[] { "Nancy", "Andrew", "Janet", "Margaret", "Steven" })[new Random().Next(5)],
+                CustomerID = x,
+                ContactName = (new string[] { "Paul Henriot", "Rita Müller", "Karin Josephs", "Yang Wang", "Pedro Afonso" })[new Random().Next(5)],
             }).ToList();
     }
 
     public class Order
     {
         public int? OrderID { get; set; }
-        public int? EmployeeID { get; set; }
-        public DateTime? OrderDate { get; set; }
-        public double? Freight { get; set; }
+        public int? CustomerID { get; set; }
+        public string? ShipCity { get; set; }
+        public string? ShipName { get; set; }
+
     }
 
     public class EmployeeData
     {
-        public int? EmployeeID { get; set; }
-        public string FirstName { get; set; }
+        public int? CustomerID { get; set; }
+        public string ContactName { get; set; }
     }
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VZhKXQCaTsbNgtSD?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BjBKNOiBAGAqfOgk?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## How to customize sort icon
 
@@ -369,12 +369,18 @@ In the below sample, DataGrid is rendered with a customized sort icon.
 ```cshtml
 @using Syncfusion.Blazor.Grids
 
-<SfGrid DataSource="@Orders" AllowSorting="true" Height="270">
+<SfGrid DataSource="@Orders" AllowSorting="true" Height="315">
+    <GridSortSettings>
+        <GridSortColumns>
+            <GridSortColumn Field="ShipCity" Direction="SortDirection.Ascending"></GridSortColumn>
+            <GridSortColumn Field="CustomerID" Direction="SortDirection.Descending"></GridSortColumn>
+        </GridSortColumns>
+    </GridSortSettings>
     <GridColumns>
-        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
-        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="90"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer ID" Width="100"></GridColumn>
+        <GridColumn Field=@nameof(Order.ShipCity) HeaderText="Ship City" Width="100"></GridColumn>
+        <GridColumn Field=@nameof(Order.ShipName) HeaderText="Ship Name" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
 
@@ -396,9 +402,9 @@ In the below sample, DataGrid is rendered with a customized sort icon.
         Orders = Enumerable.Range(1, 75).Select(x => new Order()
             {
                 OrderID = 1000 + x,
-                CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
-                Freight = 2.1 * x,
-                OrderDate = DateTime.Now.AddDays(-x),
+                CustomerID = (new string[] { "VINET", "TOMSP", "HANAR", "VICTE", "SUPRD" })[new Random().Next(5)],
+                ShipCity = (new string[] { "Reims", "Lyon", "Charleroi", "Rio de Janeiro", "Münster" })[new Random().Next(5)],
+                ShipName = (new string[] { "Centro comercial Moctezuma", "Chop-suey Chinese", "Ernst Handel", "Hanari Carnes", "HILARION-Abastos" })[new Random().Next(5)],
             }).ToList();
     }
 
@@ -406,13 +412,13 @@ In the below sample, DataGrid is rendered with a customized sort icon.
     {
         public int? OrderID { get; set; }
         public string CustomerID { get; set; }
-        public DateTime? OrderDate { get; set; }
-        public double? Freight { get; set; }
+        public string? ShipCity { get; set; }
+        public string? ShipName { get; set; }
     }
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BDBUDmikzfjVcSTE?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZVAjYiVqMOIrMCw?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Sort columns externally
 
@@ -429,25 +435,35 @@ The following example demonstrates how to add sort columns to a grid. It utilize
 @using Syncfusion.Blazor.DropDowns
 
 <div style="display:flex;">
+    <label style="padding: 10px 20px 0 0"> Column name :</label>
     <SfDropDownList TValue="string" TItem="Columns" Width="300px" Placeholder="Select a Column" DataSource="@LocalData" @bind-Value="@DropDownValue">
         <DropDownListFieldSettings Value="ID" Text="Value"></DropDownListFieldSettings>
     </SfDropDownList>
 </div>
 
+<br/>
+
 <div style="display:flex;">
+    <label style="padding: 10px 17px 0 0"> Sorting direction :</label>
     <SfDropDownList TValue="Syncfusion.Blazor.Grids.SortDirection" TItem="string" DataSource="@EnumValues" @bind-Value="@DropDownDirection" Width="300px">
     </SfDropDownList>
 </div>
-
+<br/>
 <div style="display:flex;">
-    <Syncfusion.Blazor.Buttons.SfButton OnClick="AddsortColumn">Add sort Column</Syncfusion.Blazor.Buttons.SfButton>
+    <Syncfusion.Blazor.Buttons.SfButton OnClick="AddsortColumn">ADD SORT COLUMN</Syncfusion.Blazor.Buttons.SfButton>
 </div>
 
 <SfGrid DataSource="@Orders" AllowMultiSorting="true" @ref="Grid" TValue="Order" AllowSorting="true" Height="270">
+    <GridSortSettings>
+        <GridSortColumns>
+            <GridSortColumn Field="ShipName" Direction="SortDirection.Ascending"></GridSortColumn>
+        </GridSortColumns>
+    </GridSortSettings>
+
     <GridColumns>
         <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer ID" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(Order.ShipName) HeaderText="Ship Name" Width="120"></GridColumn>
         <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
@@ -469,7 +485,7 @@ The following example demonstrates how to add sort columns to a grid. It utilize
                 OrderID = 1000 + x,
                 CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
                 Freight = 2.1 * x,
-                OrderDate = DateTime.Now.AddDays(-x),
+                ShipName = (new string[] { "Centro comercial Moctezuma", "Chop-suey Chinese", "Ernst Handel", "Hanari Carnes", "HILARION-Abastos" })[new Random().Next(5)],
             }).ToList();
     }
 
@@ -477,7 +493,7 @@ The following example demonstrates how to add sort columns to a grid. It utilize
     {
         public int? OrderID { get; set; }
         public string CustomerID { get; set; }
-        public DateTime? OrderDate { get; set; }
+        public string? ShipName { get; set; }
         public double? Freight { get; set; }
     }
 
@@ -486,7 +502,6 @@ The following example demonstrates how to add sort columns to a grid. It utilize
         new Columns() { ID= "OrderID", Value= "OrderID" },
         new Columns() { ID= "CustomerID", Value= "CustomerID" },
         new Columns() { ID= "Freight", Value= "Freight" },
-        new Columns() { ID= "OrderDate", Value= "OrderDate" },
     };
 
     List<Direction> LocalData1 = new List<Direction>
@@ -518,7 +533,7 @@ The following example demonstrates how to add sort columns to a grid. It utilize
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rXBKDGBIqkLSeSwE?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hDVqZECLBHuqWtca?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ### Clear sorting 
 
@@ -527,25 +542,26 @@ To clear the sorting on an external button click, you can use the [ClearSortingA
 The following example demonstrates how to clear the sorting using `ClearSortingAsync` method in the external button click.
 
 ```cshtml
+
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Buttons
 
 <div>
-    <SfButton OnClick="ClearSorting">Clear Sorting</SfButton>
+    <SfButton OnClick="onExternalSort">Clear Sorting</SfButton>
 </div>
 
 <SfGrid @ref="Grid" TValue="Order" DataSource="@Orders" AllowSorting="true" Height="270">
     <GridSortSettings>
         <GridSortColumns>
-            <GridSortColumn Field="OrderDate" Direction="SortDirection.Ascending"></GridSortColumn>
-            <GridSortColumn Field="Freight" Direction="SortDirection.Descending"></GridSortColumn>
+            <GridSortColumn Field="CustomerID" Direction="SortDirection.Ascending"></GridSortColumn>
+            <GridSortColumn Field="ShipName" Direction="SortDirection.Descending"></GridSortColumn>
         </GridSortColumns>
     </GridSortSettings>
     <GridColumns>
-        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
-        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="90"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer ID" Width="100"></GridColumn>
+        <GridColumn Field=@nameof(Order.ShipCity) HeaderText="Ship City" Width="100"></GridColumn>
+        <GridColumn Field=@nameof(Order.ShipName) HeaderText="Ship Name" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
 
@@ -557,9 +573,9 @@ The following example demonstrates how to clear the sorting using `ClearSortingA
         Orders = Enumerable.Range(1, 75).Select(x => new Order()
             {
                 OrderID = 1000 + x,
-                CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
-                Freight = 2.1 * x,
-                OrderDate = DateTime.Now.AddDays(-x),
+                CustomerID = (new string[] { "VINET", "TOMSP", "HANAR", "VICTE", "SUPRD" })[new Random().Next(5)],
+                ShipCity = (new string[] { "Reims", "Lyon", "Charleroi", "Rio de Janeiro", "Münster" })[new Random().Next(5)],
+                ShipName = (new string[] { "Centro comercial Moctezuma", "Chop-suey Chinese", "Ernst Handel", "Hanari Carnes", "HILARION-Abastos" })[new Random().Next(5)],
             }).ToList();
     }
 
@@ -567,17 +583,18 @@ The following example demonstrates how to clear the sorting using `ClearSortingA
     {
         public int? OrderID { get; set; }
         public string CustomerID { get; set; }
-        public DateTime? OrderDate { get; set; }
-        public double? Freight { get; set; }
+        public string? ShipCity { get; set; }
+        public string? ShipName { get; set; }
     }
 
-    private async Task ClearSorting()
+
+    private async Task onExternalSort()
     {
         await Grid.ClearSortingAsync();
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hjLqZQLygYvasMAs?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rNVgZasBVqqpjDJB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Sorting events
 
@@ -587,52 +604,82 @@ The DataGrid component provides two events that are triggered during the sorting
 
 2. **OnActionComplete**: `OnActionComplete` event is triggered after the sorting action is completed. It provides a way to perform any necessary operations after the sorting action has taken place. This event provides a parameter that contains the current grid state, including the sorted data and column information.
 
-```csharp
+The following example demonstrates how the `actionBegin` and `actionComplete` events work when Sorting is performed. The `actionBegin` event event is used to cancel the sorting of the OrderID column. The `actionComplete` event is used to display a message
 
+```csharp
 @using Syncfusion.Blazor.Grids
 
-<SfGrid DataSource="@Orders" AllowSorting="true">
-    <GridEvents OnActionBegin="SortEvent"  OnActionComplete="SortEvent" TValue="Order"></GridEvents>
+
+@if(show == true)
+{
+    <div style="text-align : center; color: red">
+        <span> @requesttype action completed for @columnName column</span>
+    </div>
+    
+    <br/>
+}
+
+<SfGrid DataSource="@Orders" AllowSorting="true" Height="400">
+    <GridEvents OnActionComplete="ActionCompletedHandler" OnActionBegin="ActionBeginHandler" TValue="Order"></GridEvents>
     <GridColumns>
-        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" IsPrimaryKey="true" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" TextAlign="TextAlign.Right" Width="130" Type="ColumnType.Date"></GridColumn>
-        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" MinWidth="10" Width="120" MaxWidth="200"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="90"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer ID" Width="100"></GridColumn>
+        <GridColumn Field=@nameof(Order.ShipCity) HeaderText="Ship City" Width="100"></GridColumn>
+        <GridColumn Field=@nameof(Order.ShipName) HeaderText="Ship Name" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
 
-@code{
+@code {
     public List<Order> Orders { get; set; }
+
+    public bool show {get; set; } = false;
+
+    public string columnName { get; set; }
+    public string requesttype { get; set; }
 
     protected override void OnInitialized()
     {
         Orders = Enumerable.Range(1, 75).Select(x => new Order()
-        {
-            OrderID = 1000 + x,
-            CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
-            Freight = 2.1 * x,
-            OrderDate = DateTime.Now.AddDays(-x),
-        }).ToList();
+            {
+                OrderID = 1000 + x,
+                CustomerID = (new string[] { "VINET", "TOMSP", "HANAR", "VICTE", "SUPRD" })[new Random().Next(5)],
+                ShipCity = (new string[] { "Reims", "Lyon", "Charleroi", "Rio de Janeiro", "Münster" })[new Random().Next(5)],
+                ShipName = (new string[] { "Centro comercial Moctezuma", "Chop-suey Chinese", "Ernst Handel", "Hanari Carnes", "HILARION-Abastos" })[new Random().Next(5)],
+            }).ToList();
     }
 
-    public class Order {
+    public async Task ActionBeginHandler(ActionEventArgs<Order> args)
+    {
+        if (args.RequestType == Syncfusion.Blazor.Grids.Action.Sorting && args.ColumnName == "OrderID")
+        {
+            args.Cancel = true;
+        }
+    }
+
+    public async Task ActionCompletedHandler(ActionEventArgs<Order> args)
+    {
+        if (args.RequestType == Syncfusion.Blazor.Grids.Action.Sorting)
+        {
+            columnName = args.ColumnName;
+            requesttype = args.RequestType.ToString();
+            show = true;
+        }
+    }
+
+   
+    public class Order
+    {
         public int? OrderID { get; set; }
         public string CustomerID { get; set; }
-        public DateTime? OrderDate { get; set; }
-        public double? Freight { get; set; }
-    }
-
-    public void SortEvent(ActionEventArgs<Order> args) {
-        if (args.RequestType.Equals(Syncfusion.Blazor.Grids.Action.Sorting)){
-            // You can get action information from the argument.
-        }    
+        public string? ShipCity { get; set; }
+        public string? ShipName { get; set; }
     }
 }
 ```
 > [args.RequestType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ActionEventArgs-1.html#Syncfusion_Blazor_Grids_ActionEventArgs_1_RequestType) refers to the current action being performed. For example in sorting, the `args.RequestType` value is **Sorting**.
 
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rjLUZnrrCOiiKMSf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LZVgtaWhLLEiDgcJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 
 > You can refer to our [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap4) to understand how to present and manipulate data.
