@@ -32,7 +32,6 @@ In the following example:
 <button class="btn btn-primary" @onclick="IncrementCount">Click me</button>
 
 <SfRichTextEditor @ref="rteObj"> 
-    <RichTextEditorToolbarSettings Items="@Tools" Type="ToolbarType.Expand" />
     <p>The Rich Text Editor component is WYSIWYG ('what you see is what you get') editor that provides the best user experience to create and update the content. Users can format their content using standard toolbar commands.</p> 
 </SfRichTextEditor> 
 @code {
@@ -42,32 +41,6 @@ In the following example:
     {
         rteObj.PreventRender();
         currentCount++;
-    }
-    private List<ToolbarItemModel> Tools = new List<ToolbarItemModel>() 
-    { 
-        new ToolbarItemModel() { Command = ToolbarCommand.Bold }, 
-        new ToolbarItemModel() { Command = ToolbarCommand.Italic }, 
-        new ToolbarItemModel() { Command = ToolbarCommand.Underline }, 
-        new ToolbarItemModel() { Command = ToolbarCommand.StrikeThrough }, 
-        new ToolbarItemModel() { Command = ToolbarCommand.Separator }, 
-        new ToolbarItemModel() { Command = ToolbarCommand.FontColor }, 
-        new ToolbarItemModel() { Command = ToolbarCommand.BackgroundColor }, 
-        new ToolbarItemModel() { Command = ToolbarCommand.Separator }, 
-        new ToolbarItemModel() { Command = ToolbarCommand.Formats }, 
-        new ToolbarItemModel() { Command = ToolbarCommand.Alignments }, 
-        new ToolbarItemModel() { Command = ToolbarCommand.Separator }, 
-        new ToolbarItemModel() { Command = ToolbarCommand.OrderedList }, 
-        new ToolbarItemModel() { Command = ToolbarCommand.UnorderedList }, 
-        new ToolbarItemModel() { Command = ToolbarCommand.Separator }, 
-        new ToolbarItemModel() { Command = ToolbarCommand.Outdent }, 
-        new ToolbarItemModel() { Command = ToolbarCommand.Indent }, 
-        new ToolbarItemModel() { Command = ToolbarCommand.Separator },
-        new ToolbarItemModel() { Command = ToolbarCommand.CreateLink }, 
-        new ToolbarItemModel() { Command = ToolbarCommand.Image }, 
-        new ToolbarItemModel() { Command = ToolbarCommand.CreateTable }, 
-        new ToolbarItemModel() { Command = ToolbarCommand.Separator }, 
-        new ToolbarItemModel() { Command = ToolbarCommand.Undo }, 
-        new ToolbarItemModel() { Command = ToolbarCommand.Redo } 
     };
 }
 ```
@@ -136,4 +109,3 @@ In the following example:
 
 N> * **PreventRender** method internally overrides the **ShouldRender** method of the RichTextEditor to prevent rendering.
 <br/> * It is recommended to use the **PreventRender** method for user interactive events such as OnToolbarClick, UpdatedToolbarStatus, etc., for better performance.
-<br/> * For events without any argument such as **DataBound**, you can use the **PreventRender** method of the RichTextEditor to disable rendering.
