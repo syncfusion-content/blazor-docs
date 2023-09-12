@@ -1,7 +1,7 @@
 ﻿---
 layout: post
 title: Customize HTTP handler | Syncfusion
-description: Learn here all about customizing HTTP hanlder in Blazor authenticated FileManager application.
+description: Learn here all about customizing HTTP hanlder in Blazor windows authenticated client FileManager application.
 platform: Blazor
 control: File Manager
 documentation: ug
