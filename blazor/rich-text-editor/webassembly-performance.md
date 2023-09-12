@@ -62,14 +62,12 @@ In the following example:
 @using Syncfusion.Blazor.RichTextEditor
 
 <SfRichTextEditor @ref="rteObj">
-    <RichTextEditorToolbarSettings Items="@Tools" Type="ToolbarType.Expand" />
     <RichTextEditorEvents OnToolbarClick="@ToolbarClick"/>
 </SfRichTextEditor>
 <div>
     <span>@((MarkupString)Output)</span>
 </div>
     
-
 @code {
     SfRichTextEditor rteObj;
     private string Output = "";
@@ -77,33 +75,7 @@ In the following example:
     {
         rteObj.PreventRender();
         this.Output = this.Output + "<span><b>OnToolbarClick</b> event called<hr></span>";
-    }
-    private List<ToolbarItemModel> Tools = new List<ToolbarItemModel>() 
-    { 
-        new ToolbarItemModel() { Command = ToolbarCommand.Bold }, 
-        new ToolbarItemModel() { Command = ToolbarCommand.Italic }, 
-        new ToolbarItemModel() { Command = ToolbarCommand.Underline }, 
-        new ToolbarItemModel() { Command = ToolbarCommand.StrikeThrough }, 
-        new ToolbarItemModel() { Command = ToolbarCommand.Separator }, 
-        new ToolbarItemModel() { Command = ToolbarCommand.FontColor }, 
-        new ToolbarItemModel() { Command = ToolbarCommand.BackgroundColor }, 
-        new ToolbarItemModel() { Command = ToolbarCommand.Separator }, 
-        new ToolbarItemModel() { Command = ToolbarCommand.Formats }, 
-        new ToolbarItemModel() { Command = ToolbarCommand.Alignments }, 
-        new ToolbarItemModel() { Command = ToolbarCommand.Separator }, 
-        new ToolbarItemModel() { Command = ToolbarCommand.OrderedList }, 
-        new ToolbarItemModel() { Command = ToolbarCommand.UnorderedList }, 
-        new ToolbarItemModel() { Command = ToolbarCommand.Separator }, 
-        new ToolbarItemModel() { Command = ToolbarCommand.Outdent }, 
-        new ToolbarItemModel() { Command = ToolbarCommand.Indent }, 
-        new ToolbarItemModel() { Command = ToolbarCommand.Separator },
-        new ToolbarItemModel() { Command = ToolbarCommand.CreateLink }, 
-        new ToolbarItemModel() { Command = ToolbarCommand.Image }, 
-        new ToolbarItemModel() { Command = ToolbarCommand.CreateTable }, 
-        new ToolbarItemModel() { Command = ToolbarCommand.Separator }, 
-        new ToolbarItemModel() { Command = ToolbarCommand.Undo }, 
-        new ToolbarItemModel() { Command = ToolbarCommand.Redo } 
-    }; 
+    };
 }
 ```
 
