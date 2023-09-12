@@ -1443,6 +1443,65 @@ In the following example, the `SfTextBox` is rendered in the ShipCountry column 
 
 N> [View Sample in GitHub.](https://github.com/SyncfusionExamples/blazor-datagrid--always-editable-grid-column)
 
+### How to perform bulk changes using a method in batch mode
+
+You can update bulk changes such as adding, editing, and deleting records using ApplyBatchChangesAsync. This method facilitates the update of new, edited, and deleted records in the Grid UI.
+
+The edited and newly added records will be visually highlighted in the grid UI, giving you the option to either save or cancel the changes.
+
+```csharp
+
+@using Syncfusion.Blazor.Grids
+
+<button id="GetData" @onclick="SetData">Apply Batch Changes</button>
+
+<SfGrid DataSource="@Orders" @ref="Grid" AllowPaging="true" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Cancel", "Update" })" Height="315">
+    <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true" Mode="EditMode.Batch"></GridEditSettings>
+    <GridColumns>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" IsPrimaryKey="true" ValidationRules="@(new ValidationRules{ Required=true})" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" ValidationRules="@(new ValidationRules{ Required=true})" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" EditType="EditType.DatePickerEdit" Format="d" TextAlign="TextAlign.Right" Width="130" Type="ColumnType.Date"></GridColumn>
+        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" EditType="EditType.NumericEdit" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.ShipCountry) HeaderText="Ship Country" EditType="EditType.DropDownEdit" Width="150"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code{
+    public List<Order> Orders { get; set; }
+    SfGrid<Order> Grid;
+
+    private async Task SetData()
+    {
+        var batchChanges = new BatchChanges<Order>()
+            {
+                AddedRecords = new List<Order>() { new Order() { OrderID = 1, CustomerID = "ANTAR" } },
+                DeletedRecords = new List<Order>() { new Order() { OrderID = 1002 } },
+                ChangedRecords = new List<Order>() { new Order() { OrderID = 1001, CustomerID = "VINET" } }
+            };
+           await Grid.ApplyBatchChangesAsync(batchChanges);
+        }
+    protected override void OnInitialized()
+    {
+        Orders = Enumerable.Range(1, 75).Select(x => new Order()
+        {
+            OrderID = 1000 + x,
+            CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
+            Freight = 2.1 * x,
+            OrderDate = DateTime.Now.AddDays(-x),
+            ShipCountry = (new string[] { "USA", "UK", "CHINA", "RUSSIA", "INDIA" })[new Random().Next(5)]
+        }).ToList();
+    }
+    public class Order
+    {
+        public int? OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public DateTime? OrderDate { get; set; }
+        public double? Freight { get; set; }
+        public string ShipCountry { get; set; }
+    }
+}
+```
+
 ## See also
 
 * [Edit one column update the value in another column](https://www.syncfusion.com/forums/151238/edit-one-column-update-the-value-in-another-column)
