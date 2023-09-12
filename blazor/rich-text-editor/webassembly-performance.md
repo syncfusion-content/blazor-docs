@@ -42,7 +42,7 @@ In the following example:
     {
         rteObj.PreventRender();
         currentCount++;
-    };
+    }
     private List<ToolbarItemModel> Tools = new List<ToolbarItemModel>() 
     { 
         new ToolbarItemModel() { Command = ToolbarCommand.Bold }, 
@@ -83,21 +83,28 @@ You can prevent this re-rendering of the RichTextEditor component by calling the
 
 In the following example:
 
-* **ValueChange** event is bound to a callback method, when the editor content gets changed every time the event is completed, the **StateHasChanged** will be invoked for the parent component.
+* **OnToolbarClick** event is bound to a callback method, when the editor content gets changed every time the event is completed, the **StateHasChanged** will be invoked for the parent component.
 
 ```cshtml
 @using Syncfusion.Blazor.RichTextEditor
 
 <SfRichTextEditor @ref="rteObj">
     <RichTextEditorToolbarSettings Items="@Tools" Type="ToolbarType.Expand" />
-    <RichTextEditorEvents ValueChange="OnValueChange"/>
+    <RichTextEditorEvents OnToolbarClick="@ToolbarClick"/>
 </SfRichTextEditor>
+<div>
+    <span>@((MarkupString)Output)</span>
+</div>
+    
 
 @code {
-    SfRichTextEditor rteObj
-    public void OnValueChange(Syncfusion.Blazor.RichTextEditor.ChangeEventArgs args) {
+    SfRichTextEditor rteObj;
+    private string Output = "";
+    private void ToolbarClick(ToolbarClickEventArgs args)
+    {
         rteObj.PreventRender();
-    };
+        this.Output = this.Output + "<span><b>OnToolbarClick</b> event called<hr></span>";
+    }
     private List<ToolbarItemModel> Tools = new List<ToolbarItemModel>() 
     { 
         new ToolbarItemModel() { Command = ToolbarCommand.Bold }, 
@@ -128,5 +135,5 @@ In the following example:
 ```
 
 N> * **PreventRender** method internally overrides the **ShouldRender** method of the RichTextEditor to prevent rendering.
-<br/> * It is recommended to use the **PreventRender** method for user interactive events such as ValueChange, BeforePasteCleanup, etc., for better performance.
+<br/> * It is recommended to use the **PreventRender** method for user interactive events such as OnToolbarClick, UpdatedToolbarStatus, etc., for better performance.
 <br/> * For events without any argument such as **DataBound**, you can use the **PreventRender** method of the RichTextEditor to disable rendering.
