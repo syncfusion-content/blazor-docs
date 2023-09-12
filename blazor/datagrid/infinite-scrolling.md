@@ -162,6 +162,7 @@ In the below demo, we have enabled `EnableCache` in `GridInfiniteScrollSettings`
     {
         Orders = GetAllRecords();
     }
+    
     public List<Order> GetAllRecords()
     {
         List<Order> data = new List<Order>();
