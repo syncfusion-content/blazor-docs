@@ -1445,7 +1445,7 @@ N> [View Sample in GitHub.](https://github.com/SyncfusionExamples/blazor-datagri
 
 ### How to perform bulk changes using a method in batch mode
 
-You can update bulk changes such as adding, editing, and deleting records using ApplyBatchChangesAsync. This method facilitates the update of new, edited, and deleted records in the Grid UI.
+You can update bulk changes such as adding, editing, and deleting records using [ApplyBatchChangesAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ApplyBatchChangesAsync). This method facilitates the update of new, edited, and deleted records in the Grid UI.
 
 The edited and newly added records will be visually highlighted in the grid UI, giving you the option to either save or cancel the changes.
 
