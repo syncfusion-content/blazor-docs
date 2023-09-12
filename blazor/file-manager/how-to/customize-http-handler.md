@@ -1,7 +1,7 @@
 ﻿---
 layout: post
 title: Customize HTTP handler | Syncfusion
-description: Learn here all about customizing HTTP hanlder in Blazor windows authenticated client FileManager application.
+description: Learn here all about customizing the HTTP handler in the Windows authenticated client application for Blazor FileManager.
 platform: Blazor
 control: File Manager
 documentation: ug
@@ -13,11 +13,9 @@ In a Blazor FileManager component, you can customize the HTTP handler to access 
 
 ## Create client windows authenticated Blazor FileManager application
 
-Create a Blazor server application with Windows authentication.
+You can create a Blazor server application with Windows authentication using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0) or the [Syncfusion Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
 
 ![Authentication](../images/customize-http-handler.png)
-
-Initialize the FileManager component in the **~/Pages/Index.razor** file using the [Getting Started with Blazor FileManager Component](https://blazor.syncfusion.com/documentation/file-manager/getting-started) documentation.
 
 Include the [Microsoft.AspNetCore.Authentication.JwtBearer](https://www.nuget.org/packages/Microsoft.AspNetCore.Authentication.JwtBearer) package for generating user tokens.
 
@@ -26,6 +24,8 @@ Include the [Microsoft.AspNetCore.Authentication.JwtBearer](https://www.nuget.or
 <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="6.0.8" />
 
 {% endtabs %}
+
+Initialize the FileManager component in the **~/Pages/Index.razor** file using the [Getting Started with Blazor FileManager Component](https://blazor.syncfusion.com/documentation/file-manager/getting-started) documentation.
 
 To authorize the FileManager component server response, generate a user token in the **onInitialized** method based on the user's authentication state. Then, pass this user token as a header through the FileManager component's HTTP client instance in the component's [OnSend](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerEvents-1.html#Syncfusion_Blazor_FileManager_FileManagerEvents_1_OnSend) event.
 
@@ -91,7 +91,7 @@ To authorize the FileManager component server response, generate a user token in
 
 ```
 
-## Create service application for FileManager response
+## Create service application for FileManager action
 
 Create a new **ASP Core web application** with the required FileManager service models and controller, or clone the required service provider from the [file-system-provider](https://blazor.syncfusion.com/documentation/file-manager/file-system-provider) documentation that contains the available file service provider.
 
