@@ -31,7 +31,7 @@ Install-Package Syncfusion.Blazor -Version {{ site.releaseversion }}
 {% endhighlight %}
 {% endtabs %}
 
-N> Syncfusion Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for available NuGet packages list with component details. The Syncfusion.Blazor Single NuGet package is a large package that includes all components, except Syncfusion PDF and Document Editor.
+N> Syncfusion Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for available NuGet packages list with component details. The Syncfusion.Blazor Single NuGet package is a comprehensive package that includes all components, with the exception of PDF Viewer and Document Editor.
 
 ## Register Syncfusion Blazor Service
 
