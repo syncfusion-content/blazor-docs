@@ -19,7 +19,7 @@ Items| Description
 `AutoFitAll` | Auto-fits all columns.
 `SortAscending` | Sorts the current column in ascending order.
 `SortDescending` | Sorts the current column in descending order.
-`TaskInformation`| Edits the current task.
+`TaskInformation`| Display the current task.
 `Add` | Adds a new row to the Gantt.
 `Indent` | Indent the selected record to one level.
 `Outdent` | Outdent the selected record to one level.
