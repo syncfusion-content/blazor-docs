@@ -295,11 +295,11 @@ The optional parameters for this method are,
 
 Base64 strings for JPEG, PNG, and PDF images can be obtained using the [OnExportComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnExportComplete) event. The required arguments for this method include the image type, file name, orientation of the exported PDF document, and setting allowDownload to false in order to retrieve the base64 string.
 
-The following code demonstrates how to pass parameters to the ExportAsync method in order to obtain a base64 string.
+The following code demonstrates how to pass parameters to the [ExportAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfChart.html#Syncfusion_Blazor_Charts_SfChart_ExportAsync_Syncfusion_Blazor_Charts_ExportType_System_String_System_Nullable_Syncfusion_PdfExport_PdfPageOrientation__System_Boolean_) method in order to obtain a base64 string.
 
 In this method, you'll need to specify the following parameters:
 
-* [Export Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ExportType.html): The desired export format (e.g., Png, Jpeg, Svg, Pdf).
+* `exportType`: The desired export format (e.g., Png, Jpeg, Svg, Pdf).
 * `fileName`: A name for the exported file (this is not used when exporting as a base64 string).
 * `allowDownload`: Set this parameter to false to prevent the browser's download prompt.
 * `isBase64`: Set this parameter to true to indicate that you want to receive the exported content as a base64 string. 

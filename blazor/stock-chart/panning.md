@@ -9,7 +9,7 @@ documentation: ug
 
 # Panning in Blazor Stock Chart Component 
 
-By default, panning is already enabled in the Stock Chart, ensuring that users can immediately start interacting with the chart upon rendering. This default behavior is controlled by the `EnablePan` API, which is set to **true** by default in the [StockChartZoomSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartZoomSettings.html). This means that when a Stock Chart is initially displayed, users can readily utilize the panning feature to move across the data. 
+By default, panning is enabled in the Stock Chart, ensuring that users can immediately start interacting with the chart upon rendering. This default behavior is controlled by the [EnablePan](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartZoomSettings.html#Syncfusion_Blazor_Charts_StockChartZoomSettings_EnablePan) API, which is set to true by default in the [StockChartZoomSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartZoomSettings.html).
 
 ```cshtml 
 @using Syncfusion.Blazor
@@ -32,6 +32,7 @@ else
             <StockChartAxisLineStyle Width="0"></StockChartAxisLineStyle>
             <StockChartAxisMajorTickLines Width="0"></StockChartAxisMajorTickLines>
         </StockChartPrimaryYAxis>
+        <StockChartZoomSettings EnablePan=true></StockChartZoomSettings>
         <StockChartSeriesCollection>
             <StockChartSeries DataSource="@dataSource" Type="ChartSeriesType.HiloOpenClose" XName="x"></StockChartSeries>
         </StockChartSeriesCollection>

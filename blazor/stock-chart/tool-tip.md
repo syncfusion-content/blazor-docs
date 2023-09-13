@@ -161,8 +161,6 @@ The [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockC
 
 ## Tooltip Position
 
-Enabling moving tooltips empowers users to effortlessly explore the data points on the Stock Chart. As they move the mouse pointer across the chart, the tooltip dynamically updates its position, staying in sync with the cursor. This real-time interaction ensures that users can seamlessly access information about different data points without the need to constantly reposition the cursor or interact with the chart excessively.
-
 By default tooltip is positioned at the leftside of the stock chart. You can move the tooltip along with the mouse by setting `Nearest` to the `TooltipPosition` property in the [StockChartTooltipSetting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartTooltipSettings.html#Syncfusion_Blazor_Charts_StockChartTooltipSettings__ctor), to move tooltip along with the mouse pointer when we move the cursor across data points.
 
 ```cshtml
