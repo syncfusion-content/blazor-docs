@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Customize HTTP handler | Syncfusion
 description: Learn here all about customizing the HTTP handler in the Windows authenticated client application for Blazor FileManager.
