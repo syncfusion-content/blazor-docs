@@ -242,7 +242,7 @@ Using the `ExportAsync` method, the rendered chart can be exported to [JPEG](htt
 The optional parameters for this method are,
 * `Orientation` - Specifies the portrait or landscape orientation in the PDF document.
 * `AllowDownload` - Specifies whether to download or not. If not, base64 string will be returned.
-* `IsBase64` - Specifies whether to export chart as base64 string or not.
+* `IsBase64` - Specify whether to export the chart as a base64 string or not.
 
 ```cshtml
 
@@ -293,20 +293,20 @@ The optional parameters for this method are,
 
 ### Export Chart as base64 string
 
-The image can be exported as base64 string for the JPEG, PNG and PDF formats. The rendered Chart can be exported to image as base64 string using the [OnExportComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnExportComplete) event. The arguments that are required for this method is image type, file name, orientation of the exported PDF document which must be set as null for image export and 0 or 1 for the PDF export and finally allowDownload which should be set as false to return base64 string. 
+Base64 strings for JPEG, PNG, and PDF images can be obtained using the [OnExportComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnExportComplete) event. The required arguments for this method include the image type, file name, orientation of the exported PDF document, and setting allowDownload to false in order to retrieve the base64 string.
 
-The following code shows how to pass parameters to the `ExportAsync` method to get `base64` string.
+The following code demonstrates how to pass parameters to the ExportAsync method in order to obtain a base64 string.
 
 In this method, you'll need to specify the following parameters:
 
 * [Export Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ExportType.html): The desired export format (e.g., Png, Jpeg, Svg, Pdf).
-* `fileName`: A name for the exported file (this is not used when exporting as base64).
+* `fileName`: A name for the exported file (this is not used when exporting as a base64 string).
 * `allowDownload`: Set this parameter to false to prevent the browser's download prompt.
-* `isBase64`: Set this parameter to true to indicate that you want to receive the exported content as a base64 string.
+* `isBase64`: Set this parameter to true to indicate that you want to receive the exported content as a base64 string. 
 
 ```cshtml
 
-sfChart.ExportAsync(ExportFileType, FileName, null, false, true);
+await chartInstance.ExportAsync(ExportType.PDF, FileName, PdfPageOrientation.Landscape, false, true);
 
 ```
 
@@ -315,7 +315,9 @@ The following code shows the complete demonstration of exporting chart image of 
 ```cshtml
  
 @using Syncfusion.Blazor.Charts;
- 
+@using Microsoft.AspNetCore.Components.Web;
+@using Syncfusion.PdfExport;
+
 <div id="button">
     <button onclick="@ExportChart">
         Export
@@ -338,7 +340,7 @@ The following code shows the complete demonstration of exporting chart image of 
         <ChartSeriesCollection>
             <ChartSeries DataSource="@ChartPoints" XName="Country" YName="GigaWatts" Type="ChartSeriesType.Column">
                 <ChartMarker>
-                    <ChartDataLabel Visible="true" EnableRotation="@Rotate" Angle="@AngleRotate" Name=" DataLabelMappingName" Position="Syncfusion.Blazor.Charts.LabelPosition.Top">
+                    <ChartDataLabel Visible="true" Position="Syncfusion.Blazor.Charts.LabelPosition.Top">
                         <ChartDataLabelFont FontWeight="600" Size="9px" Color="#ffffff"></ChartDataLabelFont>
                     </ChartDataLabel>
                 </ChartMarker>
@@ -350,39 +352,34 @@ The following code shows the complete demonstration of exporting chart image of 
 
 
 @code{
-    private SfChart chartInstance;    
+    private SfChart chartInstance;
     public string FileName { get; set; } = "Charts";
     public string Format { get; set; } = "{value}GW";
-    public bool Rotate { get; set; } = false;
-    public double AngleRotate { get; set; } = 0;
     public LabelIntersectAction Label { get; set; } = LabelIntersectAction.Trim;
 
     public List<ExportData> ChartPoints { get; set; } = new List<ExportData>
     {
-        new ExportData {Country="India", GigaWatts = 35.5, DataLabelMappingName="35.5"},
-        new ExportData {Country="China", GigaWatts = 18.3, DataLabelMappingName="18.3"},
-        new ExportData {Country="Italy", GigaWatts = 17.6, DataLabelMappingName="17.6"},
-        new ExportData {Country="Japan", GigaWatts = 13.6, DataLabelMappingName="13.6"},
-        new ExportData {Country="United state", GigaWatts = 12, DataLabelMappingName="12"},
-        new ExportData {Country="Spain", GigaWatts = 5.6, DataLabelMappingName="5.6"},
-        new ExportData {Country="France", GigaWatts = 4.6, DataLabelMappingName="4.6"},
-        new ExportData {Country="Australia", GigaWatts = 3.3, DataLabelMappingName="3.3"},
-        new ExportData {Country="Belgium", GigaWatts = 3, DataLabelMappingName="3"},
-        new ExportData {Country="United Kingdom", GigaWatts = 2.9, DataLabelMappingName="2.9"},
+        new ExportData {Country="India", GigaWatts = 35.5 },
+        new ExportData {Country="China", GigaWatts = 18.3 },
+        new ExportData {Country="Italy", GigaWatts = 17.6 },
+        new ExportData {Country="Japan", GigaWatts = 13.6 },
+        new ExportData {Country="United state", GigaWatts = 12 },
+        new ExportData {Country="Spain", GigaWatts = 5.6 },
+        new ExportData {Country="France", GigaWatts = 4.6 },
+        new ExportData {Country="Australia", GigaWatts = 3.3 },
+        new ExportData {Country="Belgium", GigaWatts = 3 },
+        new ExportData {Country="United Kingdom", GigaWatts = 2.9 },
     };
 
-    public async Task ExportChart(Microsoft.AspNetCore.Components.Web.MouseEventArgs args)
+    public async Task ExportChart(MouseEventArgs args)
     {
-        ExportType ExportFileType = ExportType.PDF;
-        
-        await chartInstance.ExportAsync(ExportFileType, FileName, null,false, true);
+        await chartInstance.ExportAsync(ExportType.PDF, FileName, PdfPageOrientation.Landscape, false, true);
     }
 
     public class ExportData
     {
         public string Country { get; set; }
         public double GigaWatts { get; set; }
-        public string DataLabelMappingName { get; set; }
     }
 
     public void ExportComplete(ExportEventArgs exportEventArgs)

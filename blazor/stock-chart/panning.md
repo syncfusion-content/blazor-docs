@@ -17,10 +17,10 @@ By default, panning is already enabled in the Stock Chart, ensuring that users c
 @inject NavigationManager NavigationManager
 @using System.Net.Http.Json
 @inject HttpClient Http
-@if (DataSource == null)
+
+@if (dataSource == null)
 {
-    <div>Loading...
-    </div>
+    <div>Loading...</div>
 }
 else
 {
@@ -33,7 +33,7 @@ else
             <StockChartAxisMajorTickLines Width="0"></StockChartAxisMajorTickLines>
         </StockChartPrimaryYAxis>
         <StockChartSeriesCollection>
-            <StockChartSeries DataSource="@DataSource" Type="ChartSeriesType.HiloOpenClose" XName="x"></StockChartSeries>
+            <StockChartSeries DataSource="@dataSource" Type="ChartSeriesType.HiloOpenClose" XName="x"></StockChartSeries>
         </StockChartSeriesCollection>
         <StockChartChartArea>
             <StockChartChartAreaBorder Width="0"></StockChartChartAreaBorder>
@@ -42,11 +42,11 @@ else
 
 }
 @code {
-    private ChartData[] DataSource;
+    private ChartData[] dataSource;
 
     protected override async Task OnInitializedAsync()
     {
-        DataSource = await Http.GetFromJsonAsync<ChartData[]>(NavigationManager.BaseUri + "./googl.json");
+        dataSource = await Http.GetFromJsonAsync<ChartData[]>(NavigationManager.BaseUri + "./googl.json");
     }
 
     public class ChartData

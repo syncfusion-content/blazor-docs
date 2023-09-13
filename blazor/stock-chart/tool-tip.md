@@ -171,7 +171,8 @@ By default tooltip is positioned at the leftside of the stock chart. You can mov
 @inject NavigationManager NavigationManager
 @using System.Net.Http.Json
 @inject HttpClient Http
-@if (DataSource == null)
+
+@if (dataSource == null)
 {
     <div>Loading...
     </div>
@@ -190,7 +191,7 @@ else
         <StockChartTooltipSettings Enable="true" TooltipPosition="TooltipPosition.Nearest"></StockChartTooltipSettings>
         <StockChartCrosshairSettings Enable="true"></StockChartCrosshairSettings>
         <StockChartSeriesCollection>
-            <StockChartSeries DataSource="@DataSource" Type="ChartSeriesType.HiloOpenClose" XName="x"></StockChartSeries>
+            <StockChartSeries DataSource="@dataSource" Type="ChartSeriesType.HiloOpenClose" XName="x"></StockChartSeries>
         </StockChartSeriesCollection>
         <StockChartChartArea>
             <StockChartChartAreaBorder Width="0"></StockChartChartAreaBorder>
@@ -198,11 +199,11 @@ else
     </SfStockChart>    
 }
 @code{
-    private ChartData[] DataSource;
+    private ChartData[] dataSource;
 
     protected override async Task OnInitializedAsync()
     {      
-        DataSource = await Http.GetFromJsonAsync<ChartData[]>(NavigationManager.BaseUri + "./googl.json");
+        dataSource = await Http.GetFromJsonAsync<ChartData[]>(NavigationManager.BaseUri + "./googl.json");
     }
 
     public class ChartData
