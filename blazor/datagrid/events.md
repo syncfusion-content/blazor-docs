@@ -2616,5 +2616,1331 @@ The [OnBatchCancel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grid
     }
 }
 ```
+## PageChanging
+
+[PageChanging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_PageChanging) event triggers before paging action is performed in the grid.
+
+```cshtml
+@using Syncfusion.Blazor.Grids
+
+<SfGrid DataSource="@Orders" AllowPaging="true">
+    <GridEvents PageChanging="PageChangingHandler" TValue="Order"></GridEvents>
+    <GridColumns>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code{
+
+    public List<Order> Orders { get; set; }
+
+    protected override void OnInitialized()
+    {
+        Orders = Enumerable.Range(1, 75).Select(x => new Order()
+        {
+            OrderID = 1000 + x,
+            CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
+            Freight = 2.1 * x,
+            OrderDate = DateTime.Now.AddDays(-x),
+        }).ToList();
+    }
+
+    public void PageChangingHandler(GridPageChangingEventArgs args)
+    {
+        // Here, you can customize your code.
+    }
+
+    public class Order
+    {
+        public int? OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public DateTime? OrderDate { get; set; }
+        public double? Freight { get; set; }
+    }
+}
+```
+
+## PageChanged
+
+[PageChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_PageChanged) event triggers after paging action is performed in the grid.
+
+```cshtml
+@using Syncfusion.Blazor.Grids
+
+<SfGrid DataSource="@Orders" AllowPaging="true">
+    <GridEvents PageChanged="PageChangedHandler" TValue="Order"></GridEvents>
+    <GridColumns>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code{
+
+    public List<Order> Orders { get; set; }
+
+    protected override void OnInitialized()
+    {
+        Orders = Enumerable.Range(1, 75).Select(x => new Order()
+        {
+            OrderID = 1000 + x,
+            CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
+            Freight = 2.1 * x,
+            OrderDate = DateTime.Now.AddDays(-x),
+        }).ToList();
+    }
+
+    public void PageChangedHandler(GridPageChangedEventArgs args) 
+    {
+        // Here, you can customize your code.
+    }
+
+    public class Order
+    {
+        public int? OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public DateTime? OrderDate { get; set; }
+        public double? Freight { get; set; }
+    }
+}
+```
+
+## Sorting
+
+[Sorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_Sorting) event triggers before a sorting action is performed or a column is removed from sorting in the grid or when the sort column direction changes from Ascending to Descending or vice versa for the same column.
+
+```cshtml
+@using Syncfusion.Blazor.Grids
+
+<SfGrid DataSource="@Orders" AllowPaging="true" AllowSorting="true>
+    <GridEvents Sorting="SortingHandler" TValue="Order"></GridEvents>
+    <GridColumns>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" IsPrimaryKey="true" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code{
+
+    public List<Order> Orders { get; set; }
+
+    protected override void OnInitialized()
+    {
+        Orders = Enumerable.Range(1, 75).Select(x => new Order()
+        {
+            OrderID = 1000 + x,
+            CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
+            Freight = 2.1 * x,
+            OrderDate = DateTime.Now.AddDays(-x),
+        }).ToList();
+    }
+
+    public void SortingHandler(SortingEventArgs args)
+    {
+        // Here, you can customize your code.
+    }
+
+    public class Order
+    {
+        public int? OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public DateTime? OrderDate { get; set; }
+        public double? Freight { get; set; }
+    }
+}
+```
+
+## Sorted
+
+[Sorted](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_Sorted) event triggers after a sorting action is performed or a column is removed from sorting in the grid or when the sort column direction changes from Ascending to Descending or vice versa for the same column.
+
+```cshtml
+@using Syncfusion.Blazor.Grids
+
+<SfGrid DataSource="@Orders" AllowPaging="true" AllowSorting="true">
+    <GridEvents Sorted="SortedHandler" TValue="Order"></GridEvents>
+    <GridColumns>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" IsPrimaryKey="true" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code{
+
+    public List<Order> Orders { get; set; }
+
+    protected override void OnInitialized()
+    {
+        Orders = Enumerable.Range(1, 75).Select(x => new Order()
+        {
+            OrderID = 1000 + x,
+            CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
+            Freight = 2.1 * x,
+            OrderDate = DateTime.Now.AddDays(-x),
+        }).ToList();
+    }
+
+    public void SortedHandler(SortedEventArgs args)
+    {
+        // Here, you can customize your code.
+    }
+
+    public class Order
+    {
+        public int? OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public DateTime? OrderDate { get; set; }
+        public double? Freight { get; set; }
+    }
+}
+```
+
+## Grouping
+
+[Grouping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_Grouping) event triggers before grouping action or un-grouping action is performed in the grid.
+
+```cshtml
+@using Syncfusion.Blazor.Grids
+
+<SfGrid DataSource="@Orders" AllowPaging="true" AllowGrouping="true">
+    <GridEvents Grouping="GroupingHandler" TValue="Order"></GridEvents>
+    <GridColumns>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code{
+
+    public List<Order> Orders { get; set; }
+
+    protected override void OnInitialized()
+    {
+        Orders = Enumerable.Range(1, 75).Select(x => new Order()
+        {
+            OrderID = 1000 + x,
+            CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
+            Freight = 2.1 * x,
+            OrderDate = DateTime.Now.AddDays(-x),
+        }).ToList();
+    }
+
+    public void GroupingHandler(GroupingEventArgs args)
+    {
+        // Here, you can customize your code.
+    }
+
+    public class Order
+    {
+        public int? OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public DateTime? OrderDate { get; set; }
+        public double? Freight { get; set; }
+    }
+}
+```
+
+## Grouped
+
+[Grouped](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_Grouped) event triggers after grouping or ungrouping action is performed in the grid.
+
+```cshtml
+@using Syncfusion.Blazor.Grids
+
+<SfGrid DataSource="@Orders" AllowPaging="true" AllowGrouping="true">
+    <GridEvents Grouped="GroupedHandler" TValue="Order"></GridEvents>
+    <GridColumns>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code{
+
+    public List<Order> Orders { get; set; }
+
+    protected override void OnInitialized()
+    {
+        Orders = Enumerable.Range(1, 75).Select(x => new Order()
+        {
+            OrderID = 1000 + x,
+            CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
+            Freight = 2.1 * x,
+            OrderDate = DateTime.Now.AddDays(-x),
+        }).ToList();
+    }
+
+    public void GroupedHandler(GroupedEventArgs args)
+    {
+        // Here, you can customize your code.
+    }
+
+    public class Order
+    {
+        public int? OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public DateTime? OrderDate { get; set; }
+        public double? Freight { get; set; }
+    }
+}
+```
+
+## Searching
+
+[Searching](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_Searching) event triggers before the search action is performed in the grid.
+```cshtml
+@using Syncfusion.Blazor.Grids
+
+<SfGrid DataSource="@Orders" AllowPaging="true" Toolbar="@(new List<string>() { "Search" })" >
+    <GridEvents Searching="SearchingHandler" TValue="Order"></GridEvents>
+    <GridColumns>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code{
+
+    public List<Order> Orders { get; set; }
+
+    protected override void OnInitialized()
+    {
+        Orders = Enumerable.Range(1, 75).Select(x => new Order()
+        {
+            OrderID = 1000 + x,
+            CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
+            Freight = 2.1 * x,
+            OrderDate = DateTime.Now.AddDays(-x),
+        }).ToList();
+    }
+
+    public void SearchingHandler(SearchingEventArgs args)
+    {
+        // Here, you can customize your code.
+    }
+
+    public class Order
+    {
+        public int? OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public DateTime? OrderDate { get; set; }
+        public double? Freight { get; set; }
+    }
+}
+```
+
+## Searched
+
+[Searched](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_Searched) event triggers after the search action is performed in the grid.
+```cshtml
+@using Syncfusion.Blazor.Grids
+
+<SfGrid DataSource="@Orders" AllowPaging="true" Toolbar="@(new List<string>() { "Search" })" >
+    <GridEvents Searched="SearchedHandler" TValue="Order"></GridEvents>
+    <GridColumns>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code{
+
+    public List<Order> Orders { get; set; }
+
+    protected override void OnInitialized()
+    {
+        Orders = Enumerable.Range(1, 75).Select(x => new Order()
+        {
+            OrderID = 1000 + x,
+            CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
+            Freight = 2.1 * x,
+            OrderDate = DateTime.Now.AddDays(-x),
+        }).ToList();
+    }
+
+    public void SearchedHandler(SearchedEventArgs args)
+    {
+        // Here, you can customize your code.
+    }
+
+    public class Order
+    {
+        public int? OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public DateTime? OrderDate { get; set; }
+        public double? Freight { get; set; }
+    }
+}
+```
+
+## RowCreating
+
+[RowCreating](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowCreating) event triggers before the add action is performed in the grid.
+```cshtml
+@using Syncfusion.Blazor.Grids
+
+<SfGrid DataSource="@Orders" AllowPaging="true" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Cancel", "Update" })">
+    <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true" Mode="EditMode.Normal"></GridEditSettings>
+    <GridEvents RowCreating="RowCreatingHandler" TValue="Order"></GridEvents>
+    <GridColumns>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" IsPrimaryKey="true" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code{
+
+    public List<Order> Orders { get; set; }
+
+    protected override void OnInitialized()
+    {
+        Orders = Enumerable.Range(1, 75).Select(x => new Order()
+        {
+            OrderID = 1000 + x,
+            CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
+            Freight = 2.1 * x,
+            OrderDate = DateTime.Now.AddDays(-x),
+        }).ToList();
+    }
+
+    public void RowCreatingHandler(RowCreatingEventArgs<Order> args)
+    {
+        // Here, you can customize your code.
+    }
+
+    public class Order
+    {
+        public int? OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public DateTime? OrderDate { get; set; }
+        public double? Freight { get; set; }
+    }
+}
+```
+
+## RowCreated
+
+[RowCreated](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowCreated) event triggers after the add action is performed in the grid.
+
+```cshtml
+@using Syncfusion.Blazor.Grids
+
+<SfGrid DataSource="@Orders" AllowPaging="true" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Cancel", "Update" })">
+    <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true" Mode="EditMode.Normal"></GridEditSettings>
+    <GridEvents RowCreated="RowCreatedHandler" TValue="Order"></GridEvents>
+    <GridColumns>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" IsPrimaryKey="true" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code{
+
+    public List<Order> Orders { get; set; }
+
+    protected override void OnInitialized()
+    {
+        Orders = Enumerable.Range(1, 75).Select(x => new Order()
+        {
+            OrderID = 1000 + x,
+            CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
+            Freight = 2.1 * x,
+            OrderDate = DateTime.Now.AddDays(-x),
+        }).ToList();
+    }
+
+    public void RowCreatedHandler(RowCreatedEventArgs<Order> args) 
+    {
+        // Here, you can customize your code.
+    }
+
+    public class Order
+    {
+        public int? OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public DateTime? OrderDate { get; set; }
+        public double? Freight { get; set; }
+    }
+}
+```
+
+## RowUpdating
+
+[RowUpdating](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowUpdating) event triggers before before the save action is performed in the grid.
+
+```cshtml
+@using Syncfusion.Blazor.Grids
+
+<SfGrid DataSource="@Orders" AllowPaging="true" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Cancel", "Update" })">
+    <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true" Mode="EditMode.Normal"></GridEditSettings>
+    <GridEvents RowUpdating="RowUpdatingHandler" TValue="Order"></GridEvents>
+    <GridColumns>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" IsPrimaryKey="true" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code{
+
+    public List<Order> Orders { get; set; }
+
+    protected override void OnInitialized()
+    {
+        Orders = Enumerable.Range(1, 75).Select(x => new Order()
+        {
+            OrderID = 1000 + x,
+            CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
+            Freight = 2.1 * x,
+            OrderDate = DateTime.Now.AddDays(-x),
+        }).ToList();
+    }
+
+    public void RowUpdatingHandler(RowUpdatingEventArgs<Order> args)
+    {
+        // Here, you can customize your code.
+    }
+
+    public class Order
+    {
+        public int? OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public DateTime? OrderDate { get; set; }
+        public double? Freight { get; set; }
+    }
+}
+```
+
+## RowUpdated
+
+[RowUpdated](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowUpdated) event triggers after the save action is performed in the grid.
+
+```cshtml
+@using Syncfusion.Blazor.Grids
+
+<SfGrid DataSource="@Orders" AllowPaging="true" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Cancel", "Update" })">
+    <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true" Mode="EditMode.Normal"></GridEditSettings>
+    <GridEvents RowUpdated="RowUpdatedHandler" TValue="Order"></GridEvents>
+    <GridColumns>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" IsPrimaryKey="true" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code{
+
+    public List<Order> Orders { get; set; }
+
+    protected override void OnInitialized()
+    {
+        Orders = Enumerable.Range(1, 75).Select(x => new Order()
+        {
+            OrderID = 1000 + x,
+            CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
+            Freight = 2.1 * x,
+            OrderDate = DateTime.Now.AddDays(-x),
+        }).ToList();
+    }
+
+    public void RowUpdatedHandler(RowUpdatedEventArgs<Order> args)
+    {
+        // Here, you can customize your code.
+    }
+
+    public class Order
+    {
+        public int? OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public DateTime? OrderDate { get; set; }
+        public double? Freight { get; set; }
+    }
+}
+```
+
+## RowDeleting
+
+[RowDeleting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowDeleting) event triggers before the delete action is performed in the grid.
+```cshtml
+@using Syncfusion.Blazor.Grids
+
+<SfGrid DataSource="@Orders" AllowPaging="true" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Cancel", "Update" })">
+    <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true" Mode="EditMode.Normal"></GridEditSettings>
+    <GridEvents RowDeleting="RowDeletingHandler" TValue="Order"></GridEvents>
+    <GridColumns>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" IsPrimaryKey="true" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code{
+
+    public List<Order> Orders { get; set; }
+
+    protected override void OnInitialized()
+    {
+        Orders = Enumerable.Range(1, 75).Select(x => new Order()
+        {
+            OrderID = 1000 + x,
+            CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
+            Freight = 2.1 * x,
+            OrderDate = DateTime.Now.AddDays(-x),
+        }).ToList();
+    }
+
+    public void RowDeletingHandler(RowDeletingEventArgs<Order> args)
+    {
+        // Here, you can customize your code.
+    }
+
+    public class Order
+    {
+        public int? OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public DateTime? OrderDate { get; set; }
+        public double? Freight { get; set; }
+    }
+}
+```
+
+## RowDeleted
+
+[RowDeleted](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowDeleted) event triggers after the delete action is performed in the grid.
+```cshtml
+@using Syncfusion.Blazor.Grids
+
+<SfGrid DataSource="@Orders" AllowPaging="true" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Cancel", "Update" })">
+    <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true" Mode="EditMode.Normal"></GridEditSettings>
+    <GridEvents RowDeleted="RowDeletedHandler" TValue="Order"></GridEvents>
+    <GridColumns>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" IsPrimaryKey="true" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code{
+
+    public List<Order> Orders { get; set; }
+
+    protected override void OnInitialized()
+    {
+        Orders = Enumerable.Range(1, 75).Select(x => new Order()
+        {
+            OrderID = 1000 + x,
+            CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
+            Freight = 2.1 * x,
+            OrderDate = DateTime.Now.AddDays(-x),
+        }).ToList();
+    }
+
+    public void RowDeletedHandler(RowDeletedEventArgs<Order> args)
+    {
+        // Here, you can customize your code.
+    }
+
+    public class Order
+    {
+        public int? OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public DateTime? OrderDate { get; set; }
+        public double? Freight { get; set; }
+    }
+}
+```
+
+## EditCanceling
+
+[EditCanceling](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_EditCanceling) event triggers before the cancel action is performed in the grid, specifically when using [EditMode.Normal](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_Mode) and [EditMode.Dialog](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_Mode) edit modes.
+
+```cshtml
+@using Syncfusion.Blazor.Grids
+
+<SfGrid DataSource="@Orders" AllowPaging="true" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Cancel", "Update" })">
+    <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true" Mode="EditMode.Normal"></GridEditSettings>
+    <GridEvents EditCanceling="EditCancelingHandler" TValue="Order"></GridEvents>
+    <GridColumns>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" IsPrimaryKey="true" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code{
+
+    public List<Order> Orders { get; set; }
+
+    protected override void OnInitialized()
+    {
+        Orders = Enumerable.Range(1, 75).Select(x => new Order()
+        {
+            OrderID = 1000 + x,
+            CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
+            Freight = 2.1 * x,
+            OrderDate = DateTime.Now.AddDays(-x),
+        }).ToList();
+    }
+
+    public void EditCancelingHandler(EditCancelingEventArgs<Order> args)
+    {
+        // Here, you can customize your code.
+    }
+
+    public class Order
+    {
+        public int? OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public DateTime? OrderDate { get; set; }
+        public double? Freight { get; set; }
+    }
+}
+```
+
+## EditCanceled
+
+[EditCanceled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_EditCanceled) event triggers after the cancel action is performed in the grid, specifically when using [EditMode.Normal](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_Mode) and [EditMode.Dialog](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_Mode) edit modes.
+```cshtml
+@using Syncfusion.Blazor.Grids
+
+<SfGrid DataSource="@Orders" AllowPaging="true" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Cancel", "Update" })">
+    <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true" Mode="EditMode.Normal"></GridEditSettings>
+    <GridEvents EditCanceled="EditCanceledHandler" TValue="Order"></GridEvents>
+    <GridColumns>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" IsPrimaryKey="true" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code{
+
+    public List<Order> Orders { get; set; }
+
+    protected override void OnInitialized()
+    {
+        Orders = Enumerable.Range(1, 75).Select(x => new Order()
+        {
+            OrderID = 1000 + x,
+            CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
+            Freight = 2.1 * x,
+            OrderDate = DateTime.Now.AddDays(-x),
+        }).ToList();
+    }
+
+    public void EditCanceledHandler(EditCanceledEventArgs<Order> args)
+    {
+        // Here, you can customize your code.
+    }
+
+    public class Order
+    {
+        public int? OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public DateTime? OrderDate { get; set; }
+        public double? Freight { get; set; }
+    }
+}
+```
+
+## OnRowEditStart
+
+[OnRowEditStart](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnRowEditStart) event triggers before an editing action is performed in the grid.
+
+```cshtml
+@using Syncfusion.Blazor.Grids
+
+<SfGrid DataSource="@Orders" AllowPaging="true" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Cancel", "Update" })">
+    <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true" Mode="EditMode.Normal"></GridEditSettings>
+    <GridEvents OnRowEditStart="OnRowEditStartHandler" TValue="Order"></GridEvents>
+    <GridColumns>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" IsPrimaryKey="true" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code{
+
+    public List<Order> Orders { get; set; }
+
+    protected override void OnInitialized()
+    {
+        Orders = Enumerable.Range(1, 75).Select(x => new Order()
+        {
+            OrderID = 1000 + x,
+            CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
+            Freight = 2.1 * x,
+            OrderDate = DateTime.Now.AddDays(-x),
+        }).ToList();
+    }
+
+    public void OnRowEditStartHandler(OnRowEditStartEventArgs args)
+    {
+        // Here, you can customize your code.    
+    }
+
+    public class Order
+    {
+        public int? OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public DateTime? OrderDate { get; set; }
+        public double? Freight { get; set; }
+    }
+}
+```
+
+## RowEditing
+
+[RowEditing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowEditing) event triggers before the edit action is performed in the grid.
+
+```cshtml
+@using Syncfusion.Blazor.Grids
+
+<SfGrid DataSource="@Orders" AllowPaging="true" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Cancel", "Update" })">
+    <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true" Mode="EditMode.Normal"></GridEditSettings>
+    <GridEvents RowEditing="RowEditingHandler" TValue="Order"></GridEvents>
+    <GridColumns>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" IsPrimaryKey="true" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code{
+
+    public List<Order> Orders { get; set; }
+
+    protected override void OnInitialized()
+    {
+        Orders = Enumerable.Range(1, 75).Select(x => new Order()
+        {
+            OrderID = 1000 + x,
+            CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
+            Freight = 2.1 * x,
+            OrderDate = DateTime.Now.AddDays(-x),
+        }).ToList();
+    }
+
+    public void RowEditingHandler(RowEditingEventArgs<Order> args)
+    {
+        // Here, you can customize your code.
+    }
+
+    public class Order
+    {
+        public int? OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public DateTime? OrderDate { get; set; }
+        public double? Freight { get; set; }
+    }
+}
+```
+
+## RowEdited
+
+[RowEdited](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowEdited) event triggers after the edit action is performed in the grid.
+
+```cshtml
+@using Syncfusion.Blazor.Grids
+
+<SfGrid DataSource="@Orders" AllowPaging="true" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Cancel", "Update" })">
+    <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true" Mode="EditMode.Normal"></GridEditSettings>
+    <GridEvents RowEdited="RowEditedHandler" TValue="Order"></GridEvents>
+    <GridColumns>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" IsPrimaryKey="true" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code{
+
+    public List<Order> Orders { get; set; }
+
+    protected override void OnInitialized()
+    {
+        Orders = Enumerable.Range(1, 75).Select(x => new Order()
+        {
+            OrderID = 1000 + x,
+            CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
+            Freight = 2.1 * x,
+            OrderDate = DateTime.Now.AddDays(-x),
+        }).ToList();
+    }
+
+    public void RowEditedHandler(RowEditedEventArgs<Order> args)
+    {
+        // Here, you can customize your code.
+    }
+
+    public class Order
+    {
+        public int? OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public DateTime? OrderDate { get; set; }
+        public double? Freight { get; set; }
+    }
+}
+```
+
+## Filtering
+
+[Filtering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_Filtering) event triggers before the filtering or clear filtering action is performed in the grid.
+
+```cshtml
+@using Syncfusion.Blazor.Grids
+
+<SfGrid DataSource="@Orders" AllowPaging="true" AllowFiltering="true">
+    <GridEvents Filtering="FilteringHandler" TValue="Order"></GridEvents>
+    <GridColumns>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" IsPrimaryKey="true" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code{
+
+    public List<Order> Orders { get; set; }
+
+    protected override void OnInitialized()
+    {
+        Orders = Enumerable.Range(1, 75).Select(x => new Order()
+        {
+            OrderID = 1000 + x,
+            CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
+            Freight = 2.1 * x,
+            OrderDate = DateTime.Now.AddDays(-x),
+        }).ToList();
+    }
+
+    public void FilteringHandler(FilteringEventArgs args)
+    {
+        // Here, you can customize your code.   
+    }
+
+    public class Order
+    {
+        public int? OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public DateTime? OrderDate { get; set; }
+        public double? Freight { get; set; }
+    }
+}
+```
+
+## Filtering
+
+[Filtered](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_Filtered) event triggers after the filtering or clear filtering action is performed in the grid.
+
+```cshtml
+@using Syncfusion.Blazor.Grids
+
+<SfGrid DataSource="@Orders" AllowPaging="true" AllowFiltering="true">
+    <GridEvents Filtered="FilteredHandler" TValue="Order"></GridEvents>
+    <GridColumns>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" IsPrimaryKey="true" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code{
+
+    public List<Order> Orders { get; set; }
+
+    protected override void OnInitialized()
+    {
+        Orders = Enumerable.Range(1, 75).Select(x => new Order()
+        {
+            OrderID = 1000 + x,
+            CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
+            Freight = 2.1 * x,
+            OrderDate = DateTime.Now.AddDays(-x),
+        }).ToList();
+    }
+
+    public void FilteredHandler(FilteredEventArgs args)
+    {
+        // Here, you can customize your code.
+    }
+
+    public class Order
+    {
+        public int? OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public DateTime? OrderDate { get; set; }
+        public double? Freight { get; set; }
+    }
+}
+```
+
+## FilterDialogOpening
+
+[FilterDialogOpening](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_FilterDialogOpening) event triggers before the filter dialog is opened in the grid.
+
+```cshtml
+@using Syncfusion.Blazor.Grids
+
+<SfGrid DataSource="@Orders" AllowPaging="true" AllowFiltering="true">
+    <GridEvents FilterDialogOpening="FilterDialogOpeningHandler" TValue="Order"></GridEvents>
+    <GridFilterSettings Type="FilterType.Excel"></GridFilterSettings>
+    <GridColumns>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" IsPrimaryKey="true" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code{
+
+    public List<Order> Orders { get; set; }
+
+    protected override void OnInitialized()
+    {
+        Orders = Enumerable.Range(1, 75).Select(x => new Order()
+        {
+            OrderID = 1000 + x,
+            CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
+            Freight = 2.1 * x,
+            OrderDate = DateTime.Now.AddDays(-x),
+        }).ToList();
+    }
+
+    public void FilterDialogOpeningHandler(FilterDialogOpeningEventArgs args)
+    {
+        // Here, you can customize your code.
+    }
+
+    public class Order
+    {
+        public int? OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public DateTime? OrderDate { get; set; }
+        public double? Freight { get; set; }
+    }
+}
+```
+
+## FilterDialogOpened
+
+[FilterDialogOpened](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_FilterDialogOpened) event triggers after the filter dialog is opened in the grid.
+
+```cshtml
+@using Syncfusion.Blazor.Grids
+
+<SfGrid DataSource="@Orders" AllowPaging="true" AllowFiltering="true">
+    <GridEvents FilterDialogOpened="FilterDialogOpeneHandler" TValue="Order"></GridEvents>
+    <GridFilterSettings Type="FilterType.Excel"></GridFilterSettings>
+    <GridColumns>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" IsPrimaryKey="true" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code{
+
+    public List<Order> Orders { get; set; }
+
+    protected override void OnInitialized()
+    {
+        Orders = Enumerable.Range(1, 75).Select(x => new Order()
+        {
+            OrderID = 1000 + x,
+            CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
+            Freight = 2.1 * x,
+            OrderDate = DateTime.Now.AddDays(-x),
+        }).ToList();
+    }
+
+    public void FilterDialogOpeneHandler(FilterDialogOpenedEventArgs args)
+    {
+        // Here, you can customize your code.
+    }
+
+    public class Order
+    {
+        public int? OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public DateTime? OrderDate { get; set; }
+        public double? Freight { get; set; }
+    }
+}
+```
+
+## CheckboxFilterSearching
+
+[CheckboxFilterSearching](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_CheckboxFilterSearching) event triggers when values get filtered using search bar in [CheckBox](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridFilterSettings.html#Syncfusion_Blazor_Grids_GridFilterSettings_Type) and [Excel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridFilterSettings.html#Syncfusion_Blazor_Grids_GridFilterSettings_Type) filter.
+
+```cshtml
+@using Syncfusion.Blazor.Grids
+
+<SfGrid DataSource="@Orders" AllowPaging="true" AllowFiltering="true">
+    <GridEvents CheckboxFilterSearching="CheckboxFilterSearchingHandler" TValue="Order"></GridEvents>
+    <GridFilterSettings Type="Syncfusion.Blazor.Grids.FilterType.CheckBox"></GridFilterSettings>
+    <GridColumns>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" IsPrimaryKey="true" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code{
+
+    public List<Order> Orders { get; set; }
+
+    protected override void OnInitialized()
+    {
+        Orders = Enumerable.Range(1, 75).Select(x => new Order()
+        {
+            OrderID = 1000 + x,
+            CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
+            Freight = 2.1 * x,
+            OrderDate = DateTime.Now.AddDays(-x),
+        }).ToList();
+    }
+
+    public void CheckboxFilterSearchingHandler(CheckboxFilterSearchingEventArgs args)
+    {
+        // Here, you can customize your code.       
+    }
+
+    public class Order
+    {
+        public int? OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public DateTime? OrderDate { get; set; }
+        public double? Freight { get; set; }
+    }
+}
+```
+
+## ColumnReordering
+
+[ColumnReordering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_ColumnReordering) event triggers before when columns reordering action is performed in the grid.
+
+```cshtml
+@using Syncfusion.Blazor.Grids
+
+<SfGrid DataSource="@Orders" AllowPaging="true" AllowReordering="true">
+    <GridEvents ColumnReordering="ColumnReorderingHandler" TValue="Order"></GridEvents>
+    <GridFilterSettings Type="Syncfusion.Blazor.Grids.FilterType.CheckBox"></GridFilterSettings>
+    <GridColumns>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" IsPrimaryKey="true" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code{
+
+    public List<Order> Orders { get; set; }
+
+    protected override void OnInitialized()
+    {
+        Orders = Enumerable.Range(1, 75).Select(x => new Order()
+        {
+            OrderID = 1000 + x,
+            CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
+            Freight = 2.1 * x,
+            OrderDate = DateTime.Now.AddDays(-x),
+        }).ToList();
+    }
+
+    public void ColumnReorderingHandler(ColumnReorderingEventArgs args)
+    {
+        // Here, you can customize your code.
+    }
+
+    public class Order
+    {
+        public int? OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public DateTime? OrderDate { get; set; }
+        public double? Freight { get; set; }
+    }
+}
+```
+
+## ColumnReordered
+
+[ColumnReordered](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_ColumnReordered) event triggers after when columns are reordered in the grid.
+
+```cshtml
+@using Syncfusion.Blazor.Grids
+
+<SfGrid DataSource="@Orders" AllowPaging="true" AllowReordering="true">
+    <GridEvents ColumnReordered="ColumnReorderedHandler" TValue="Order"></GridEvents>
+    <GridFilterSettings Type="Syncfusion.Blazor.Grids.FilterType.CheckBox"></GridFilterSettings>
+    <GridColumns>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" IsPrimaryKey="true" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code{
+
+    public List<Order> Orders { get; set; }
+
+    protected override void OnInitialized()
+    {
+        Orders = Enumerable.Range(1, 75).Select(x => new Order()
+        {
+            OrderID = 1000 + x,
+            CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
+            Freight = 2.1 * x,
+            OrderDate = DateTime.Now.AddDays(-x),
+        }).ToList();
+    }
+
+    public void ColumnReorderedHandler(ColumnReorderedEventArgs args)
+    {
+        // Here, you can customize your code.
+    }
+
+    public class Order
+    {
+        public int? OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public DateTime? OrderDate { get; set; }
+        public double? Freight { get; set; }
+    }
+}
+```
+
+## ColumnVisibilityChanging
+
+[ColumnVisibilityChanging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_ColumnVisibilityChanging) event triggers before the grid's column visibility is changing.
+
+```cshtml
+@using Syncfusion.Blazor.Grids
+
+<SfGrid DataSource="@Orders" AllowPaging="true" AllowReordering="true">
+    <GridEvents ColumnVisibilityChanging="ColumnVisibilityChangingHandler" TValue="Order"></GridEvents>
+    <GridFilterSettings Type="Syncfusion.Blazor.Grids.FilterType.CheckBox"></GridFilterSettings>
+    <GridColumns>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" IsPrimaryKey="true" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code{
+
+    public List<Order> Orders { get; set; }
+
+    protected override void OnInitialized()
+    {
+        Orders = Enumerable.Range(1, 75).Select(x => new Order()
+        {
+            OrderID = 1000 + x,
+            CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
+            Freight = 2.1 * x,
+            OrderDate = DateTime.Now.AddDays(-x),
+        }).ToList();
+    }
+
+    public void ColumnVisibilityChangingHandler(ColumnVisibilityChangingEventArgs args)
+    {
+        // Here, you can customize your code.
+    }
+
+    public class Order
+    {
+        public int? OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public DateTime? OrderDate { get; set; }
+        public double? Freight { get; set; }
+    }
+}
+```
+
+## ColumnVisibilityChanged
+
+[ColumnVisibilityChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_ColumnVisibilityChanged) event triggers after the grid's column visibility is changed.
+
+```cshtml
+@using Syncfusion.Blazor.Grids
+
+<SfGrid DataSource="@Orders" AllowPaging="true" AllowReordering="true">
+    <GridEvents ColumnVisibilityChanged="ColumnVisibilityChangedHandler" TValue="Order"></GridEvents>
+    <GridColumns>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" IsPrimaryKey="true" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code{
+
+    public List<Order> Orders { get; set; }
+
+    protected override void OnInitialized()
+    {
+        Orders = Enumerable.Range(1, 75).Select(x => new Order()
+        {
+            OrderID = 1000 + x,
+            CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
+            Freight = 2.1 * x,
+            OrderDate = DateTime.Now.AddDays(-x),
+        }).ToList();
+    }
+
+    public void ColumnVisibilityChangedHandler(ColumnVisibilityChangedEventArgs args)
+    {
+        // Here, you can customize your code.
+    }
+
+    public class Order
+    {
+        public int? OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public DateTime? OrderDate { get; set; }
+        public double? Freight { get; set; }
+    }
+}
+```
 
 N> You can refer to our [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap4) to understand how to present and manipulate data.
