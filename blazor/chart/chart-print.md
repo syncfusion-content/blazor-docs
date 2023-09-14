@@ -241,7 +241,7 @@ Using the `ExportAsync` method, the rendered chart can be exported to [JPEG](htt
 
 The optional parameters for this method are,
 * `Orientation` - Specifies the portrait or landscape orientation in the PDF document.
-* `AllowDownload` - Specifies whether to download or not. If not, base64 string will be returned.
+* `AllowDownload` - Specifies whether to download or not. If not, DataUrl string will be returned.
 * `IsBase64` - Specify whether to export the chart as a base64 string or not.
 
 ```cshtml
@@ -291,24 +291,18 @@ The optional parameters for this method are,
 
 ```
 
-### Export Chart as base64 string
+### Export Chart as base64 string 
 
-Base64 strings for JPEG, PNG, and PDF images can be obtained using the [OnExportComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnExportComplete) event. The required arguments for this method include the image type, file name, orientation of the exported PDF document, and setting allowDownload to false in order to retrieve the base64 string.
+The image can be exported as a base64 string for the JPEG, PNG, SVG, and PDF formats. The rendered charts can be exported as an image using the [ExportAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfChart.html#Syncfusion_Blazor_Charts_SfChart_ExportAsync_Syncfusion_Blazor_Charts_ExportType_System_String_System_Nullable_Syncfusion_PdfExport_PdfPageOrientation__System_Boolean_) method.
 
-The following code demonstrates how to pass parameters to the [ExportAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfChart.html#Syncfusion_Blazor_Charts_SfChart_ExportAsync_Syncfusion_Blazor_Charts_ExportType_System_String_System_Nullable_Syncfusion_PdfExport_PdfPageOrientation__System_Boolean_) method in order to obtain a base64 string.
+In this method, you will need to specify the following parameters:
 
-In this method, you'll need to specify the following parameters:
+- `ExportType`: The desired export format (e.g., PNG, JPEG, SVG, PDF).
+- `FileName`: A name for the exported file (this is not used when downloading is prevented).
+- `AllowDownload`: Set this parameter to false to prevent the browser's image download prompt.
+- `IsBase64`: Set this parameter to true to indicate that you want to receive the exporting content as a base64 string. 
 
-* `exportType`: The desired export format (e.g., Png, Jpeg, Svg, Pdf).
-* `fileName`: A name for the exported file (this is not used when exporting as a base64 string).
-* `allowDownload`: Set this parameter to false to prevent the browser's download prompt.
-* `isBase64`: Set this parameter to true to indicate that you want to receive the exported content as a base64 string. 
-
-```cshtml
-
-await chartInstance.ExportAsync(ExportType.PDF, FileName, PdfPageOrientation.Landscape, false, true);
-
-```
+The chart can be converted into a base64 string if the required configuration is done while calling the [ExportAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfChart.html#Syncfusion_Blazor_Charts_SfChart_ExportAsync_Syncfusion_Blazor_Charts_ExportType_System_String_System_Nullable_Syncfusion_PdfExport_PdfPageOrientation__System_Boolean_) method, and you will be able to get the base64 string in the [OnExportComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnExportComplete) event argument. 
 
 The following code shows the complete demonstration of exporting chart image of standard formats like [JPEG](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ExportType.html#Syncfusion_Blazor_Charts_ExportType_JPEG), [PNG](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ExportType.html#Syncfusion_Blazor_Charts_ExportType_PNG), [SVG](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ExportType.html#Syncfusion_Blazor_Charts_ExportType_SVG), or [PDF](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ExportType.html#Syncfusion_Blazor_Charts_ExportType_PDF) as `base64` string.
 
