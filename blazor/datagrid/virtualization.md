@@ -235,7 +235,7 @@ N> Column's [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grid
 
 N> The collapsed/expanded state will persist only for local dataSource while scrolling.
 
-### Virtualization with Overscan
+### Render buffered data using Overscan count
 
 The [OverscanCount](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_OverscanCount) property plays a crucial role in optimizing scrolling performance. It allows for the rendering of extra items both before and after the currently visible items, effectively reducing the need for frequent rendering during scrolling. In this demonstration, we have configured OverscanCount to a value of 5, showcasing its impact on scroll efficiency.
 

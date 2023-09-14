@@ -207,7 +207,7 @@ The following sample code demonstrates enabling confirmation dialog for batch op
         Orders = Enumerable.Range(1, 75).Select(x => new Order()
         {
             OrderID = 1000 + x,
-            CustomerID = (new s]tring[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
+            CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
             Freight = 2.1 * x,
             OrderDate = DateTime.Now.AddDays(-x),
         }).ToList();
