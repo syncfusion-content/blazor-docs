@@ -23,8 +23,7 @@ In the Gantt Chart component, you can enable or disable the mouse hover tooltip 
 ```cshtml
 @using Syncfusion.Blazor.Gantt
 <SfGantt DataSource="@TaskCollection" RenderBaseline="true" BaselineColor="Red" Height="450px" Width="800px">
-    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress"
-Dependency="Predecessor" ParentID="ParentId"
+    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" Dependency="Predecessor" ParentID="ParentId"
                      BaselineStartDate="BaselineStartDate" BaselineEndDate="BaselineEndDate">
     </GanttTaskFields>
     <GanttEventMarkers>
