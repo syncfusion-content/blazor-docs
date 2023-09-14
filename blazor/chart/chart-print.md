@@ -240,9 +240,11 @@ Again, the [PrintAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 Using the `ExportAsync` method, the rendered chart can be exported to [JPEG](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ExportType.html#Syncfusion_Blazor_Charts_ExportType_JPEG), [PNG](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ExportType.html#Syncfusion_Blazor_Charts_ExportType_PNG), [SVG](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ExportType.html#Syncfusion_Blazor_Charts_ExportType_SVG), or [PDF](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ExportType.html#Syncfusion_Blazor_Charts_ExportType_PDF) format. The [Export Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ExportType.html) specifies the image format and `FileName` specifies the name of the exported file. Both of these parameters are required input parameters for this method.
 
 The optional parameters for this method are,
+- `ExportType`: The desired export format (e.g., PNG, JPEG, SVG, PDF).
+- `FileName`: A name for the exported file (this is not used when downloading is prevented).
 * `Orientation` - Specifies the portrait or landscape orientation in the PDF document.
-* `AllowDownload` - Specifies whether to download or not. If not, DataUrl string will be returned.
-* `IsBase64` - Specify whether to export the chart as a base64 string or not.
+* `AllowDownload`: Set this parameter to false to prevent the browser's image download prompt.
+* `IsBase64`: Set this parameter to true to indicate that you want to receive the exporting content as a base64 string. 
 
 ```cshtml
 
@@ -295,13 +297,6 @@ The optional parameters for this method are,
 
 The image can be exported as a base64 string for the JPEG, PNG, SVG, and PDF formats. The rendered charts can be exported as an image using the [ExportAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfChart.html#Syncfusion_Blazor_Charts_SfChart_ExportAsync_Syncfusion_Blazor_Charts_ExportType_System_String_System_Nullable_Syncfusion_PdfExport_PdfPageOrientation__System_Boolean_) method.
 
-In this method, you will need to specify the following parameters:
-
-- `ExportType`: The desired export format (e.g., PNG, JPEG, SVG, PDF).
-- `FileName`: A name for the exported file (this is not used when downloading is prevented).
-- `AllowDownload`: Set this parameter to false to prevent the browser's image download prompt.
-- `IsBase64`: Set this parameter to true to indicate that you want to receive the exporting content as a base64 string. 
-
 The chart can be converted into a base64 string if the required configuration is done while calling the [ExportAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfChart.html#Syncfusion_Blazor_Charts_SfChart_ExportAsync_Syncfusion_Blazor_Charts_ExportType_System_String_System_Nullable_Syncfusion_PdfExport_PdfPageOrientation__System_Boolean_) method, and you will be able to get the base64 string in the [OnExportComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnExportComplete) event argument. 
 
 The following code shows the complete demonstration of exporting chart image of standard formats like [JPEG](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ExportType.html#Syncfusion_Blazor_Charts_ExportType_JPEG), [PNG](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ExportType.html#Syncfusion_Blazor_Charts_ExportType_PNG), [SVG](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ExportType.html#Syncfusion_Blazor_Charts_ExportType_SVG), or [PDF](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ExportType.html#Syncfusion_Blazor_Charts_ExportType_PDF) as `base64` string.
@@ -353,16 +348,16 @@ The following code shows the complete demonstration of exporting chart image of 
 
     public List<ExportData> ChartPoints { get; set; } = new List<ExportData>
     {
-        new ExportData {Country="India", GigaWatts = 35.5 },
-        new ExportData {Country="China", GigaWatts = 18.3 },
-        new ExportData {Country="Italy", GigaWatts = 17.6 },
-        new ExportData {Country="Japan", GigaWatts = 13.6 },
-        new ExportData {Country="United state", GigaWatts = 12 },
-        new ExportData {Country="Spain", GigaWatts = 5.6 },
-        new ExportData {Country="France", GigaWatts = 4.6 },
-        new ExportData {Country="Australia", GigaWatts = 3.3 },
-        new ExportData {Country="Belgium", GigaWatts = 3 },
-        new ExportData {Country="United Kingdom", GigaWatts = 2.9 },
+        new ExportData { Country="India", GigaWatts = 35.5 },
+        new ExportData { Country="China", GigaWatts = 18.3 },
+        new ExportData { Country="Italy", GigaWatts = 17.6 },
+        new ExportData { Country="Japan", GigaWatts = 13.6 },
+        new ExportData { Country="United state", GigaWatts = 12 },
+        new ExportData { Country="Spain", GigaWatts = 5.6 },
+        new ExportData { Country="France", GigaWatts = 4.6 },
+        new ExportData { Country="Australia", GigaWatts = 3.3 },
+        new ExportData { Country="Belgium", GigaWatts = 3 },
+        new ExportData { Country="United Kingdom", GigaWatts = 2.9 },
     };
 
     public async Task ExportChart(MouseEventArgs args)
