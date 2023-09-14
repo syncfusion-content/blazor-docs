@@ -382,7 +382,7 @@ The following sample code demonstrates how to enable or disable context menu ite
     public void OnContextMenuOpen(ContextMenuOpenEventArgs<TaskData> Args)
     {
 #pragma warning disable BL0005
-        if (Args.Column.Field == "Duration")  // You can check condition based on your requirement
+        if (Args.Column != null && Args.Column.Field == "Duration")  // You can check condition based on your requirement
         {
             Args.ContextMenuObj.Items[0].Disabled = true; // To disable edit context menu item
         }
