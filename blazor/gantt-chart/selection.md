@@ -270,7 +270,7 @@ You can get the selected row indexes by using the [GetSelectedRowIndexesAsync](h
         var selectedRecords = await this.Gantt.GetSelectedRecordsAsync();
         foreach (var record in selectedRecords)
         {
-            Console.WriteLine(record);
+            Console.WriteLine(record.TaskId);
         }
     }
 
