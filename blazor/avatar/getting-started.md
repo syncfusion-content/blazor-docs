@@ -42,7 +42,7 @@ N> Syncfusion Blazor components are available in [nuget.org](https://www.nuget.o
 
 ## Add Stylesheet
 
-The theme stylesheet can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Reference the stylesheet in the `<head>` of the main page as follows: 
+The theme stylesheet can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Reference the stylesheet in the `<head>` of the main page as follows:
 
 * For **.NET 6** Blazor Server app, include it in **~/Pages/_Layout.cshtml** file.
 
@@ -79,38 +79,6 @@ Add the Syncfusion Blazor Avatar component in the **~/Pages/Index.razor** file.
 
 <!-- xLarge Avatar-->
 <div class="e-avatar e-avatar-xlarge image"></div>
-
-<style>
-
-    .e-avatar.e-avatar-xsmall {
-        font-size: 10px;
-        height: 24px;
-        line-height: 16px;
-        width: 24px;
-    }
-
-    .e-avatar.e-avatar-small {
-        font-size: 12px;
-        height: 32px;
-        line-height: 18px;
-        width: 32px;
-    }
-
-    .e-avatar.e-avatar-large {
-        font-size: 20px;
-        height: 48px;
-        line-height: 28px;
-        width: 48px;
-    }
-
-    .e-avatar.e-avatar-xlarge {
-        font-size: 24px;
-        height: 56px;
-        line-height: 28px;
-        width: 56px;
-    }
-
-</style>
 
 {% endhighlight %}
 {% endtabs %}
