@@ -109,6 +109,7 @@ The number of records displayed in the Gantt chart is determined implicitly by t
         public string Reporter { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
+        public string Predecessor { get; set; }
     }
 }
 ```
