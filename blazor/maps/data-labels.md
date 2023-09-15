@@ -105,6 +105,27 @@ The following properties and classes are available in the [MapsDataLabelSettings
 
 ![Blazor Maps with Custom Data Label](./images/DataLabel/blazor-maps-custom-data-label.PNG)
 
+## Label Animation
+
+The Data Label is animated on loading the Map. This can be handled using the [AnimationDuration](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsDataLabelSettings.html#Syncfusion_Blazor_Maps_MapsDataLabelSettings_AnimationDuration) property in the `MapsDataLabelSettings` of the Maps. The duration of the animation can be specified in milliseconds.
+
+```cshtml
+@using Syncfusion.Blazor.Maps
+
+<SfMaps>
+    <MapsLayers>
+        <MapsLayer ShapeData='new {dataOptions= "https://cdn.syncfusion.com/maps/map-data/usa.json"}' TValue="string">
+            @* To add data labels *@
+            <MapsDataLabelSettings Visible="true" LabelPath="name" AnimationDuration="2000"></MapsDataLabelSettings>
+            <MapsShapeSettings Autofill="true"></MapsShapeSettings>
+            <MapsLayerTooltipSettings Visible="true" ValuePath="name"></MapsLayerTooltipSettings>
+        </MapsLayer>
+    </MapsLayers>
+</SfMaps>
+```
+
+![Blazor Maps with Data Label Animation](./images/DataLabel/blazor-maps-data-label-animation.png)
+
 ## Smart labels
 
 The Maps component provides an option to handle the labels when they intersect with the corresponding shape borders using the [SmartLabelMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsDataLabelSettings.html#Syncfusion_Blazor_Maps_MapsDataLabelSettings_SmartLabelMode) property. The following options are available in the [SmartLabelMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsDataLabelSettings.html#Syncfusion_Blazor_Maps_MapsDataLabelSettings_SmartLabelMode) property.
