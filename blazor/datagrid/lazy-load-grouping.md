@@ -215,7 +215,7 @@ The following code example describes the lazy load grouping handled at the serve
         }
     }
 ```
-## Lazy Load grouping with infinite scrolling
+## Lazy load grouping with infinite scrolling
 
 When you enable lazy load grouping with infinite scrolling, the Grid initially renders only the caption rows in a collapsed state during grouping. This feature supports parent-level caption rows and fetches additional caption rows when the scrollbar reaches the end of the scroller.
 
