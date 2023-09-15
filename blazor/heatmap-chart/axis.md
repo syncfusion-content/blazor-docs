@@ -231,6 +231,42 @@ In heat map, you can place the axis label in an opposite position of its default
 
 ![Blazor HeatMap Chart with Opposed Axis](images/axis/blazor-heatmap-chart-opposed-axis.png)
 
+## Axis labels with line breaks
+
+Axis labels with line breaks are used to improve the readability of the HeatMap by breaking the text labels on an axis into multiple lines.
+
+```cshtml
+
+@using Syncfusion.Blazor.HeatMap
+
+<SfHeatMap DataSource="@HeatMapData" Width="500px" Height="500px">
+    <HeatMapXAxis Labels="@XAxisLabels"></HeatMapXAxis>
+    <HeatMapYAxis Labels="@YAxisLabels"></HeatMapYAxis>
+</SfHeatMap>
+
+@code {
+    int[,] GetDefaultData()
+    {
+        int[,] dataSource = new int[,]
+        {
+            {1, 76},
+            {19, 3}
+        };
+        return dataSource;
+    }
+    string[] XAxisLabels = new string[] { "Actual <br/> Accept", "Actual <br/> Reject" };
+    string[] YAxisLabels = new string[] { "Actual <br/> Accept", "Actual <br/> Reject" };
+    public object HeatMapData { get; set; }
+    protected override void OnInitialized()
+    {
+        HeatMapData = GetDefaultData();
+    }
+}
+
+```
+
+![Axis Labels with line breaks in Blazor HeatMap Chart](images/axis/blazor-heatmap-chart-label-with-line-breaks.png)
+
 ## Label formatting
 
 Heat map supports formatting the axis labels by using the `LabelFormat` property. Using this property, you can customize the axis label by global string format (‘P’, ‘C’, etc) or customized format like ‘{value}°C’.

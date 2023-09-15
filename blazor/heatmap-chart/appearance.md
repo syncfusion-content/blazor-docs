@@ -328,3 +328,62 @@ You can change the format of the data label, such as currency, decimal, percent,
 ```
 
 ![Formatting Data Label in Blazor HeatMap Chart](images/appearance/blazor-heatmap-chart-datalabel-format.png)
+
+## Adding data label as a template
+
+Any HTML elements can be added as a template in the data labels by using the `LabelTemplate` property of `HeatMapCellSettings` in the HeatMap.
+
+>Note: The properties of data label such as `HeatMapTextStyle` properties are not applicable to template property. The styles can be applied to the label template using the CSS styles of the HTML element.
+
+```cshtml
+
+@using Syncfusion.Blazor.HeatMap
+
+<SfHeatMap DataSource="@HeatMapData">
+    <HeatMapXAxis Labels="@XAxisLabels"></HeatMapXAxis>
+    <HeatMapYAxis Labels="@YAxisLabels"></HeatMapYAxis>
+    <HeatMapTitleSettings Text="Sales Revenue per Employee (in 1000 US$)">
+        <HeatMapTitleTextStyle Size="15px" FontWeight="500" FontStyle="Normal" FontFamily="inherit"></HeatMapTitleTextStyle>
+    </HeatMapTitleSettings>
+    <HeatMapCellSettings>
+        <LabelTemplate>
+            @{
+                var Template = (context as Dictionary<string, string>);
+                <div style="width:20px;height:20px;padding: 2px;background-color:#3498db; border: 1px solid #000000; border-radius:50%"> @Template["Value"]</div>
+            }
+        </LabelTemplate>
+    </HeatMapCellSettings>
+</SfHeatMap>
+
+@code {
+        int[,] GetDefaultData()
+        {
+            int[,] dataSource = new int[,]
+            {
+                {73, 39, 89, 39, 94, 55 },
+                {93, 58, 53, 38, 26, 68 },
+                {99, 28, 22, 0, 66, 90 },
+                {14, 46, 97, 69, 69, 3},
+                {7, 16, 47, 47, 88, 6 },
+                {41, 55, 73, 23, 3, 79},
+                {56, 69, 21, 86, 13, 33 },
+                {45, 7, 53, 81, 95, 79},
+                {60, 77, 74, 68, 88, 51 },
+                {25, 100, 10, 12, 78, 14},
+                {25, 56, 55, 58, 12, 82 },
+                {74, 33, 88, 23, 86, 59}
+        };
+        return dataSource;
+    }
+    string[] XAxisLabels = new string[] { "Nancy", "Andrew", "Janet", "Margaret", "Steven", "Michael", "Robert", "Laura", "Anne", "Paul", "Karin", "Mario" };
+    string[] YAxisLabels = new string[] { "Mon", "Tue", "Wed", "Thu", "Fri", "Sat" };
+    public object HeatMapData { get; set; }
+    protected override void OnInitialized()
+    {
+        HeatMapData = GetDefaultData();
+    }
+}
+
+```
+
+![Data Label Template in Blazor HeatMap Chart](images/appearance/blazor-heatmap-chart-datalabel-template.png)
