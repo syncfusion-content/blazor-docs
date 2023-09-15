@@ -144,6 +144,6 @@ The following code demonstrates the different Dialog positions.
 
 ![Blazor Dialog displays Different Position](./images/blazor-dialog-position.png)
 
-## See Also
+## See also
 
 * [Positioning in Blazor Dialog Component](https://blazor.syncfusion.com/demos/dialog/positioning)

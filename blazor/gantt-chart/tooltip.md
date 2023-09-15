@@ -76,20 +76,6 @@ In the Gantt Chart component, you can enable or disable the mouse hover tooltip 
 </style>
 ```
 
-Taskbar Tooltip
-
-![Blazor Gantt Chart displays Taskbar Tooltip](images/blazor-gantt-chart-taskbar-tooltip.png)
-
-Dependency Tooltip
-
-![Blazor Gantt Chart displays Dependency Tooltip](images/blazor-gantt-chart-dependency-tooltip.png)
-
-Baseline Tooltip
-
-![Blazor Gantt Chart displays Baseline Tooltip](images/blazor-gantt-chart-baseline-tooltip.png)
-
-Event Marker Tooltip
-
 ![Blazor Gantt Chart displays Event Marker Tooltip](images/blazor-gantt-chart-event-marker-tooltip.png)
 
 N> The default value of the `GanttTooltipSettings.ShowTooltip` property is true.
@@ -199,6 +185,7 @@ You can enable or disable the Grid cell tooltip using the [GanttColumn.ClipMode]
     }
 }
 ```
+
 
 ### Clip mode
 
@@ -357,7 +344,7 @@ The taskbar editing tooltip can be customized using the [GanttTooltipSettings.Ed
                     }
                     else if (TaskbarEditAction == "ProgressResizing")
                     {
-                        tr> <td style="padding:3px">@(template.Progress) %</td> </tr>
+                        <tr> <td style="padding:3px">@(template.Progress) %</td> </tr>
                     }
                 }
             </table>

@@ -63,7 +63,7 @@ The [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gan
             new TaskData() { TaskId = 5, TaskName = "Project estimation", StartDate = new DateTime(2022, 04, 06), EndDate = new DateTime(2022, 04, 21), },
             new TaskData() { TaskId = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2022, 04, 06), Duration = "3", Progress = 30, ParentId = 5 },
             new TaskData() { TaskId = 7, TaskName = "List materials", StartDate = new DateTime(2022, 04, 06), Duration = "3", Progress = 40, ParentId = 5 },
-            new TaskData() { TaskId = 8, TaskName = "Estimation approval", StartDate = new DateTime(2022, 04, 0), Duration = "0", Progress = 30, ParentId = 5 }
+            new TaskData() { TaskId = 8, TaskName = "Estimation approval", StartDate = new DateTime(2022, 04, 07), Duration = "0", Progress = 30, ParentId = 5 }
         };
         return Tasks;
     }
@@ -181,6 +181,7 @@ The Gantt Chart allows to select range of cells or rows by mouse or touch draggi
     }
 }
 ```
+
 ![Blazor Gantt Chart Allow Drag Selection](images/gantt-allow-drag-selection.gif)
 
 ## Clear selection
@@ -204,7 +205,7 @@ You can clear the selected cells and selected rows by using a method called [Cle
     public SfGantt<TaskData> Gantt;
     public void select()
     {
-        this.Gantt.SelectRowsAsync(new double[] {1,2,3});
+        this.Gantt.SelectRowsAsync(new int[] {1,2,3});
     }
     public void clear() {
         this.Gantt.ClearSelectionAsync();
@@ -259,10 +260,18 @@ You can get the selected row indexes by using the [GetSelectedRowIndexesAsync](h
 
 @code{
     public SfGantt<TaskData> Gantt;
-    public void rowSelect(RowSelectEventArgs<TaskData> args)
+    public async Task rowSelect(RowSelectEventArgs<TaskData> args)
     {
-        Console.WriteLine(this.Gantt.GetSelectedRowIndexesAsync());
-        Console.WriteLine(this.Gantt.GetSelectedRecordsAsync());
+        var selectedRowIndexes = await this.Gantt.GetSelectedRowIndexesAsync();
+        foreach (int rowIndex in selectedRowIndexes)
+        {
+            Console.WriteLine(rowIndex);
+        }
+        var selectedRecords = await this.Gantt.GetSelectedRecordsAsync();
+        foreach (var record in selectedRecords)
+        {
+            Console.WriteLine(record.TaskId);
+        }
     }
 
     private List<TaskData> TaskCollection { get; set; }
