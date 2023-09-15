@@ -9,9 +9,9 @@ documentation: ug
 
 # Panning in Blazor Stock Chart Component 
 
-To ensure that users can start interacting with the chart as soon as it renders, panning is enabled by default in the stock chart. The [EnablePan](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartZoomSettings.html#Syncfusion_Blazor_Charts_StockChartZoomSettings_EnablePan) property in the [StockChartZoomSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartZoomSettings.html), which by default has the value **true**, defines this default behavior.
+By default, panning is enabled in the Stock Chart, ensuring that users can immediately start interacting with the chart upon rendering. This default behavior is controlled by the [EnablePan](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartZoomSettings.html#Syncfusion_Blazor_Charts_StockChartZoomSettings_EnablePan) property, which is set to **true** by default in the [StockChartZoomSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartZoomSettings.html).
 
-```cshtml 
+```cshtml
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Charts
 @inject NavigationManager NavigationManager
