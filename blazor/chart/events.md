@@ -17,32 +17,32 @@ N> From `v18.4.*`, we have added few additional events for the chart component.
 
 Event Name|
 -----|
-[OnZoomStart](events/#onzoomstart)|
-[OnZoomEnd](events/#onzoomend)|
-[OnLegendItemRender](events/#onlegenditemrender)|
-[OnDataLabelRender](events/#ondatalabelrender)|
-[OnPointRender](events/#onpointrender)|
-[OnAxisLabelRender](events/#onaxislabelrender)|
-[OnAxisLabelClick](events/#onaxislabelclick)|
-[OnAxisActualRangeCalculated](events/#onaxisactualrangecalculated)|
-[OnAxisMultiLevelLabelRender](events/#onaxismultilevellabelrender)|
+[OnZoomStart](events#onzoomstart)|
+[OnZoomEnd](events#onzoomend)|
+[OnLegendItemRender](events#onlegenditemrender)|
+[OnDataLabelRender](events#ondatalabelrender)|
+[OnPointRender](events#onpointrender)|
+[OnAxisLabelRender](events#onaxislabelrender)|
+[OnAxisLabelClick](events#onaxislabelclick)|
+[OnAxisActualRangeCalculated](events#onaxisactualrangecalculated)|
+[OnAxisMultiLevelLabelRender](events#onaxismultilevellabelrender)|
 
 N> From `v18.4.*`, some event names are different from the previous releases. The following are the event name changes from `v18.3.*` to `v18.4.*`.
 
 Event Name(`v18.3.*`) |Event Name(`v18.4.*`)
 -----|-----
-Resized |[SizeChanged](events/#sizechanged)
-ScrollChanged |[OnScrollChanged](events/#onscrollchanged)
-OnScrollEnd |[OnScrollChanged](events/#onscrollchanged)
-OnScrollStart |[OnScrollChanged](events/#onscrollchanged)
-AfterExport |[OnExportComplete](events/#onexportcomplete)
-OnPrint | [OnPrintComplete](events/#onprintcomplete)
-DragStart |[OnDataEdit](events/#ondataedit)
-DragEnd |[OnDataEditCompleted](events/#ondataeditcompleted)
-LegendClick |[OnLegendClick](events/#onlegendclick)
-MultiLevelLabelClick |[OnMultiLevelLabelClick](events/#onmultilevellabelclick)
-OnSelectionComplete |[OnSelectionChanged](events/#onselectionchanged)
-OnDragComplete |[OnSelectionChanged](events/#onselectionchanged)
+Resized |[SizeChanged](events#sizechanged)
+ScrollChanged |[OnScrollChanged](events#onscrollchanged)
+OnScrollEnd |[OnScrollChanged](events#onscrollchanged)
+OnScrollStart |[OnScrollChanged](events#onscrollchanged)
+AfterExport |[OnExportComplete](events#onexportcomplete)
+OnPrint | [OnPrintComplete](events#onprintcomplete)
+DragStart |[OnDataEdit](events#ondataedit)
+DragEnd |[OnDataEditCompleted](events#ondataeditcompleted)
+LegendClick |[OnLegendClick](events#onlegendclick)
+MultiLevelLabelClick |[OnMultiLevelLabelClick](events#onmultilevellabelclick)
+OnSelectionComplete |[OnSelectionChanged](events#onselectionchanged)
+OnDragComplete |[OnSelectionChanged](events#onselectionchanged)
 
 N> From `v18.4.*`, We have removed the following previous release events from chart component.
 
