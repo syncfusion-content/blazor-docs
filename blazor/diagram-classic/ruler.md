@@ -61,6 +61,6 @@ The following code shows how the diagram ruler can be customized.
 }
 ```
 
-> The MarkerColor property can be customized using the [Marker](./style/#customizing-the-ruler) CSS style.
+> The MarkerColor property can be customized using the [Marker](./style#customizing-the-ruler) CSS style.
 
 ![Customize](images/CustomRuler.png)
