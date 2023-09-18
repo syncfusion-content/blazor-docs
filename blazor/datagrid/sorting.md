@@ -13,6 +13,11 @@ Sorting enables you to sort data in the **Ascending** or **Descending** order. T
 
 To enable sorting in the DataGrid, set the [AllowSorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowSorting) to true. Sorting options can be configured through the [GridSortSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_SortSettings) component.
 
+To get start quickly with How to Sort Data in the Blazor DataGrid Component,you can check on this video.
+
+{% youtube
+"youtube:https://www.youtube.com/watch?v=P3VO_vd0Ev0&t=2s" %}
+
 ```csharp
 
 @using Syncfusion.Blazor.Grids
