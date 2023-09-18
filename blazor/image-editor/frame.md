@@ -13,11 +13,11 @@ The frame feature in an Image Editor provides users with the capability to add d
 
 ## Apply frame to the Image
 
-The [`drawFrameAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_drawFrameAsync_Syncfusion_Blazor_ImageEditor_drawFrameAsync_) method is a function designed to enable the application of various frame options to an image. This method simplifies the process of adding decorative frames, such as mat, bevel, line, hook, and inset, to an image by allowing users to specify their desired frame type.
+The [`DrawFrameAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_DrawFrameAsync_Syncfusion_Blazor_ImageEditor_FrameType_System_String_System_String_System_Int32_System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_System_Int32__Syncfusion_Blazor_ImageEditor_FrameLineStyle_System_Nullable_System_Int32__) method is a function designed to enable the application of various frame options to an image. This method simplifies the process of adding decorative frames, such as mat, bevel, line, hook, and inset, to an image by allowing users to specify their desired frame type.
 
 Depending on the frame type selected, users may have additional customization options, such as adjusting the frame's thickness, color, texture, or other attributes. This allows for fine-tuning the appearance of the frame to match the image's theme or the user's preferences
 
-The [`drawFrameAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_drawFrameAsync_Syncfusion_Blazor_ImageEditor_drawFrameAsync_) method in the Image Editor control takes six parameters to define the properties of the rectangle annotation:
+The [`DrawFrameAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_DrawFrameAsync_Syncfusion_Blazor_ImageEditor_FrameType_System_String_System_String_System_Int32_System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_System_Int32__Syncfusion_Blazor_ImageEditor_FrameLineStyle_System_Nullable_System_Int32__) method in the Image Editor control takes six parameters to define the properties of the rectangle annotation:
 
 * frameType - Specified the image data or url of the image to be inserted.
 
@@ -37,7 +37,7 @@ The [`drawFrameAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.I
 
 * lineCount - Specifies the line count for the line type frame.
 
-Here is an example of Frame using the [`ApplyImageFilterAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_ApplyImageFilterAsync_Syncfusion_Blazor_ImageEditor_ImageFilterOption_) method.
+Here is an example of Frame using the [`DrawFrameAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_DrawFrameAsync_Syncfusion_Blazor_ImageEditor_FrameType_System_String_System_String_System_Int32_System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_System_Int32__Syncfusion_Blazor_ImageEditor_FrameLineStyle_System_Nullable_System_Int32__) method.
 
 ```cshtml
 @using Syncfusion.Blazor.ImageEditor
@@ -66,27 +66,27 @@ Here is an example of Frame using the [`ApplyImageFilterAsync`](https://help.syn
 
     private async void matClick()
     {
-        await ImageEditor.DrawFrameAsync(FrameType.Mat, 'red', 'blue', 20, 20, 20, 20, 'solid', 1);
+        await ImageEditor.DrawFrameAsync(FrameType.Mat, 'red', 'blue', 20, 20, 20, 20, FrameLineStyle.Solid, 1);
     }
 
     private async void bevelClick()
     {
-        await ImageEditor.DrawFrameAsync(FrameType.Bevel, 'red', 'blue', 20, 20, 20, 20, 'solid', 1);
+        await ImageEditor.DrawFrameAsync(FrameType.Bevel, 'red', 'blue', 20, 20, 20, 20, FrameLineStyle.Solid, 1);
     }
 
     private async void lineClick()
     {
-        await ImageEditor.DrawFrameAsync(FrameType.Line, 'red', 'blue', 20, 20, 20, 20, 'solid', 1);
+        await ImageEditor.DrawFrameAsync(FrameType.Line, 'red', 'blue', 20, 20, 20, 20, FrameLineStlyle.Solid, 1);
     }
 
     private async void insetClick()
     {
-        await ImageEditor.DrawFrameAsync(FrameType.Inset, 'red', 'blue', 20, 20, 20, 20, 'solid', 1);
+        await ImageEditor.DrawFrameAsync(FrameType.Inset, 'red', 'blue', 20, 20, 20, 20, FrameLineStyle.Solid, 1);
     }
 
     private async void hookClick()
     {
-        await ImageEditor.DrawFrameAsync(FrameType.Hook, 'red', 'blue', 20, 20, 20, 20, 'solid', 1);
+        await ImageEditor.DrawFrameAsync(FrameType.Hook, 'red', 'blue', 20, 20, 20, 20, FrameLineStyle.Solid, 1);
     }
 
 }
@@ -94,18 +94,18 @@ Here is an example of Frame using the [`ApplyImageFilterAsync`](https://help.syn
 
 ![Blazor Image Editor with Filter an image](./images/blazor-image-editor-filter.png)
 
-## Frame Changing event
+## Frame changing event
 
-The [`frameChanging`](https://ej2.syncfusion.com/vue/documentation/api/image-editor/#frameChanging) event is triggered when applying frame on the image. This event provides information encapsulated within an object, which includes details about the frame applied in an image. This information encompasses:
+The [`frameChanging`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.FrameChangeEventArgs.html) event is triggered when applying frame on the image. This event provides information encapsulated within an object, which includes details about the frame applied in an image. This information encompasses:
 
 Frame Type: This indicates the specific type of frame being applied, whether it's a mat, bevel, line, or hook.
 
 Customization Values: These values contain information about any adjustments or modifications made to the frame. For instance, if the frame can be customized with attributes like color, size, or style, these details are conveyed within the event object.
 
-The parameter available in the [`FrameChangeEventArgs`] is
+The parameter available in the [`FrameChangeEventArgs`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.FrameChangeEventArgs.html) is
 
-FrameChangeEventArgs.previousFrameSetting: The frame settings including size, color, inset, offset, gradient color which is applied before changing the frame.
+* [`FrameChangeEventArgs.previousFrameSetting`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.FrameChangeEventArgs.html#Syncfusion_Blazor_ImageEditor_FrameChangeEventArgs_PreviousFrameSetting) - The frame settings including size, color, inset, offset, gradient color which is applied before changing the frame.
 
-FrameChangeEventArgs.currentFrameSetting: The frame settings including size, color, inset, offset, gradient color which is going to apply after changing the frame.
+* [`FrameChangeEventArgs.currentFrameSetting`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.FrameChangeEventArgs.html#Syncfusion_Blazor_ImageEditor_FrameChangeEventArgs_CurrentFrameSetting) - The frame settings including size, color, inset, offset, gradient color which is going to apply after changing the frame.
 
-FrameChangeEventArgs.cancel: Specifies a boolean value to cancel the frame changing action.
+* [`FrameChangeEventArgs.cancel`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.FrameChangeEventArgs.html#Syncfusion_Blazor_ImageEditor_FrameChangeEventArgs_Cancel) - Specifies a boolean value to cancel the frame changing action.

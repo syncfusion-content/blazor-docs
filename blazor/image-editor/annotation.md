@@ -530,9 +530,9 @@ The image annotation feature in the Image Editor provides the capability to add 
 
 ### Add an image annotation.
 
-The [`drawImageAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_drawImageAsync_System_String_) method serves the purpose of inserting an image into the Image Editor control, allowing for image annotations to be added. These image annotations can be used for various purposes, such as adding logos, watermarks, or decorative elements to the image.
+The [`DrawImageAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_DrawImageAsync_System_String_System_Nullable_System_Double__System_Nullable_System_Double__System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_System_Boolean__System_Nullable_System_Int32__) method serves the purpose of inserting an image into the Image Editor control, allowing for image annotations to be added. These image annotations can be used for various purposes, such as adding logos, watermarks, or decorative elements to the image.
 
-The [`drawImageAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_drawImageAsync_System_String_) method in the Image Editor control takes six parameters to define the properties of the rectangle annotation:
+The [`DrawImageAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_DrawImageAsync_System_String_System_Nullable_System_Double__System_Nullable_System_Double__System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_System_Boolean__System_Nullable_System_Int32__) method in the Image Editor control takes six parameters to define the properties of the rectangle annotation:
 
 * data: Specified the image data or url of the image to be inserted.
 
@@ -546,14 +546,14 @@ The [`drawImageAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.I
 
 * isAspectRatio: Specifies whether the image is rendered with aspect ratio or not.
 
-In the following example, you can use the [`drawImageAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_drawImageAsync_System_String_) method in the button click event.
+In the following example, you can use the [`DrawImageAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_DrawImageAsync_System_String_System_Nullable_System_Double__System_Nullable_System_Double__System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_System_Boolean__System_Nullable_System_Int32__) method in the button click event.
 
 ```cshtml
 @using Syncfusion.Blazor.ImageEditor
 @using Syncfusion.Blazor.Buttons
 
 <div style="padding-bottom: 15px">
-    <SfButton OnClick="DrawTextAsync">Add Image</SfButton>
+    <SfButton OnClick="DrawImageAsync">Add Image</SfButton>
 </div>
 <SfImageEditor @ref="ImageEditor" Toolbar="customToolbarItem" Height="400">
     <ImageEditorEvents Created="OpenAsync"></ImageEditorEvents>
@@ -568,10 +568,10 @@ In the following example, you can use the [`drawImageAsync`](https://help.syncfu
         await ImageEditor.OpenAsync("nature.png"); 
     }
 
-    private async void DrawTextAsync()
+    private async void DrawImageAsync()
     {
         ImageDimension Dimension = await ImageEditor.GetImageDimensionAsync();
-        await ImageEditor.DrawImageAsync("nature.png", Dimension.X, Dimension.Y, 50, 80, true, 90);
+        await ImageEditor.DrawImageAsync("nature.png", Dimension.X, Dimension.Y, 100, 80, true, 90);
     }
 }
 ```
