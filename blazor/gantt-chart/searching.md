@@ -231,6 +231,8 @@ By default, the Gantt Chart component searches all the columns. You can search s
 }
 ```
 
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VXhKjmicpzmLzyfA?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
+
 N> In above sample, you can search only `TaskName` and `Duration` column values.
 
 ## Clear search by external button

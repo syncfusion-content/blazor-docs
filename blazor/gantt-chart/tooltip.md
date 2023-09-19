@@ -186,6 +186,7 @@ You can enable or disable the Grid cell tooltip using the [GanttColumn.ClipMode]
 }
 ```
 
+
 ### Clip mode
 
 The clip mode provides options to display its overflow cell content and it can be defined by the `GanttColumn.ClipMode` property.

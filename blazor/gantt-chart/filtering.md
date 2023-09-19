@@ -118,6 +118,7 @@ The Gantt Chart supports a set of filtering modes with the [GanttFilterSettings.
 }
 ```
 
+
 ### Initial filter
 
 To apply the filter at initial rendering, set the filter `Predicate` collections in the [GanttFilterSettings.Columns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttFilterSettings.html#Syncfusion_Blazor_Gantt_GanttFilterSettings_Columns) property.
