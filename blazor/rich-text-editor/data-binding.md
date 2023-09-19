@@ -50,6 +50,7 @@ The Rich Text Editor saves its content automatically when you focus out the edit
 {% endhighlight %}
 {% endtabs %}
 
+
 ## Get editor content
 
 You can get the RichTextEditor's edited content by using the [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorEvents.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorEvents_ValueChange) event.

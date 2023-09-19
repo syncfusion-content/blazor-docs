@@ -37,7 +37,7 @@ N> The state will be persisted based on the **ID** property. So, it is recommend
 <SfGantt ID="Persist" @ref="Gantt" DataSource="@TaskCollection" Width="750px" AllowReordering="true" AllowFiltering="true" AllowSorting="true"
                 AllowResizing="true" ShowColumnMenu="true" EnablePersistence="true">
     <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress"
-                    Dependency="Predecessor" ParentID="ParentId"></GanttTaskFields>
+                     ParentID="ParentId"></GanttTaskFields>
     
 </SfGantt>
 @code{
