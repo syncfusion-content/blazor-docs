@@ -403,8 +403,8 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## See also
 
-* [How to customize the connector properties](./customization)
+* [How to customize the connector properties](https://blazor.syncfusion.com/documentation/diagram/connectors/customization)
 
-* [How to interact with the connector](./interactions)
+* [How to interact with the connector](https://blazor.syncfusion.com/documentation/diagram/connectors/interactions)
 
-* [How to get the connector events](./events)
+* [How to get the connector events](https://blazor.syncfusion.com/documentation/diagram/connectors/events)

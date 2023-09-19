@@ -173,7 +173,6 @@ A dashboard layout panel is rendered with simple data. The header of a panel is 
 {% endtabs %}
 
 The Dashboard layout with simple content will be rendered in the web browser as demonstrated in the following screenshot.
-
 ![Blazor DashboardLayout with Single Data](images/blazor-dashboard-layout-single-content.png)
 
 ### Panels with components
