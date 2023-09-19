@@ -208,7 +208,6 @@ Here, the DOM elements will not get changed. It only closes the main content by 
 
 N> Class can be added to the sidebar element using `HtmlAttributes` property. In that class, you have to add new styles or override existing styles of sidebar element.
 
-
 ![Enabling Backdrop in Blazor Sidebar](./images/blazor-sidebar-enable-backdrop.png)
 
 ## Enable Animation

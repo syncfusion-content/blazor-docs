@@ -34,7 +34,6 @@ To add Blazor DataGrid component in the app, open the NuGet package manager in V
 {% highlight C# tabtitle="Package Manager" %}
 
 Install-Package Syncfusion.Blazor.Grid -Version {{ site.releaseversion }}
-
 Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
 
 {% endhighlight %}
@@ -55,7 +54,7 @@ Open **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusio
 {% endhighlight %}
 {% endtabs %}
 
-Now, register the Syncfusion Blazor Service in the **~/Program.cs** file of your Blazor Server App or Blazor WebAssembly App. 
+Now, register the Syncfusion Blazor Service in the **~/Program.cs** file of your Blazor Server App or Blazor WebAssembly App.
 
 {% tabs %}
 {% highlight C# tabtitle="Blazor Server App" hl_lines="3 10" %}
@@ -96,7 +95,7 @@ await builder.Build().RunAsync();
 
 ## Add stylesheet and script resources
 
-The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Reference the stylesheet and script in the `<head>` of the main page as follows: 
+The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Reference the stylesheet and script in the `<head>` of the main page as follows:
 
 * For **.NET 6** Blazor Server app, include it in **~/Pages/_Layout.cshtml** file.
 
@@ -182,6 +181,7 @@ To bind data for the DataGrid component, you can assign a IEnumerable object to 
 
 {% endhighlight %}
 {% endtabs %}
+
 
 ## Defining columns
 

@@ -112,7 +112,7 @@ Add the Syncfusion PDF Viewer (Next Gen) component in the **~/Pages/Index.razor*
 
 @page "/"
 
-<SfPdfViewer2 DocumentPath="wwwroot/FileToBeLoaded.pdf"
+<SfPdfViewer2 DocumentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
               Height="100%"
               Width="100%">
 </SfPdfViewer2>
