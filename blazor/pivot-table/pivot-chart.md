@@ -526,6 +526,106 @@ N> It takes the value only in percentage.
 
 ![Blazor Pie Chart with Custom Radius](images/blazor-pie-chart-custom-radius.png)
 
+#### Radius customization
+
+You can easily customize the radius of the pie chart series using the  [Radius](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartSeries.html#Syncfusion_Blazor_PivotView_PivotChartSeries_Radius) property of the [PivotChartSeries](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartSeries.html). The pie chart series has a radius of 80% of its total size by default.
+
+The radius of the pie chart series is set to **70%** in the following code sample.
+
+```cshtml
+@using Syncfusion.Blazor.PivotView
+
+<SfPivotView TValue="ProductDetails">
+    <PivotViewDisplayOption View=View.Chart></PivotViewDisplayOption>
+    <PivotViewDataSourceSettings DataSource="@data">
+        <PivotViewColumns>
+            <PivotViewColumn Name="Year"></PivotViewColumn>
+            <PivotViewColumn Name="Quarter"></PivotViewColumn>
+        </PivotViewColumns>
+        <PivotViewRows>
+            <PivotViewRow Name="Country"></PivotViewRow>
+            <PivotViewRow Name="Products"></PivotViewRow>
+        </PivotViewRows>
+        <PivotViewValues>
+            <PivotViewValue Name="Amount" Caption="Sold Amount"></PivotViewValue>
+        </PivotViewValues>
+        <PivotViewFormatSettings>
+            <PivotViewFormatSetting Name="Amount" Format="C"></PivotViewFormatSetting>
+        </PivotViewFormatSettings>
+    </PivotViewDataSourceSettings>
+    <PivotChartSettings Title="Sales Analysis">
+        <PivotChartSeries Type="ChartSeriesType.Pie" Radius= "70%"></PivotChartSeries>
+    </PivotChartSettings>
+</SfPivotView>
+
+@code{
+
+    public List<ProductDetails> data { get; set; }
+    protected override void OnInitialized()
+    {
+        this.data = ProductDetails.GetProductData().ToList();
+        //Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
+    }
+}
+
+```
+
+![Blazor Pivot Chart with radius customization](images/blazor-pivotChart-with-customize-radius.png)
+
+You can also change the radius of each slice (i.e., data point) within the chart series. This can be accomplished by using the [ChartSeriesCreated](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewEvents-1.html#Syncfusion_Blazor_PivotView_PivotViewEvents_1_ChartSeriesCreated) event, which is triggered whenever a series is rendered in the chart area. Within this event, you can set the [Radius](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartData.html#Syncfusion_Blazor_PivotView_PivotChartData_Radius) property for each data object from the datasource, allowing the display of pie chart slices with different radii to meet your requirements.
+
+In the [ChartSeriesCreated](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewEvents-1.html#Syncfusion_Blazor_PivotView_PivotViewEvents_1_ChartSeriesCreated) event, the radius for each slice in the pie chart series is set to different values: **80%**, **85%**, and **90%** in the following code sample. To effectively use these radius values, it's essential to configure the `args.Series[0].Radius` property as **Radius**.
+
+```cshtml
+@using Syncfusion.Blazor.PivotView
+
+<SfPivotView TValue="ProductDetails">
+    <PivotViewDisplayOption View=View.Chart></PivotViewDisplayOption>
+    <PivotViewDataSourceSettings DataSource="@data">
+        <PivotViewColumns>
+            <PivotViewColumn Name="Year"></PivotViewColumn>
+            <PivotViewColumn Name="Quarter"></PivotViewColumn>
+        </PivotViewColumns>
+        <PivotViewRows>
+            <PivotViewRow Name="Country"></PivotViewRow>
+            <PivotViewRow Name="Products"></PivotViewRow>
+        </PivotViewRows>
+        <PivotViewValues>
+            <PivotViewValue Name="Amount" Caption="Sold Amount"></PivotViewValue>
+        </PivotViewValues>
+        <PivotViewFormatSettings>
+            <PivotViewFormatSetting Name="Amount" Format="C"></PivotViewFormatSetting>
+        </PivotViewFormatSettings>
+    </PivotViewDataSourceSettings>
+    <PivotChartSettings Title="Sales Analysis">
+        <PivotChartSeries Type="ChartSeriesType.Pie"></PivotChartSeries>
+    </PivotChartSettings>
+    <PivotViewEvents TValue="ProductDetails" ChartSeriesCreated="ChartSeriesCreated"></PivotViewEvents>
+</SfPivotView>
+
+@code{
+
+    public List<ProductDetails> data { get; set; }
+    protected override void OnInitialized()
+    {
+        this.data = ProductDetails.GetProductData().ToList();
+        //Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
+    }
+
+    private void ChartSeriesCreated(ChartSeriesCreatedEventArgs args)
+    {
+        var Data = args.Series[0].DataSource;
+        Data[0].Radius = "80%";
+        Data[1].Radius = "85%";
+        Data[2].Radius = "90%";
+        args.Series[0].Radius = "Radius";
+    }
+}
+
+```
+
+![Blazor Pivot Chart series with different radius customization for each slice](images/blazor-pivotChart-slice-with-different-radius.png)
+
 ### Exploding Series Points
 
 Exploding can be enabled by setting the `Explode` property in [PivotChartSeries](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartSeries.html) class to **true**. The series points will be exploded either on mouse click or touch.
