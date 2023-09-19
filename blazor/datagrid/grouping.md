@@ -240,6 +240,7 @@ During the group action, the datagrid component triggers two events. The [OnActi
 
 > The **args.RequestType** is based on the current action name. For example, when grouping, the **args.RequestType** value will be 'grouping'.
 
+
 ## Caption template
 
 You can customize the group caption by using the [CaptionTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridGroupSettings.html#Syncfusion_Blazor_Grids_GridGroupSettings_CaptionTemplate) of the [GridGroupSettings](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Grids.GridGroupSettings.html) component.
