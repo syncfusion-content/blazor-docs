@@ -115,15 +115,7 @@ Add the Syncfusion PDF Viewer (Next Gen) component in the **~/Pages/Index.razor*
 </SfPdfViewer2>
 
 @code {
-    public string DocumentPath { get; set; }
-
-    protected override void OnInitialized()
-    {
-        string Url = "https://s3.amazonaws.com/ebooks.syncfusion.com/downloads/blazor_webassembly_succinctly/blazor_webassembly_succinctly.pdf";
-        System.Net.WebClient webClient = new System.Net.WebClient();
-        byte[] byteArray = webClient.DownloadData(Url);
-        DocumentPath = "data:application/pdf;base64," + Convert.ToBase64String(byteArray);
-    }
+    public string DocumentPath { get; set; } = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
 }
 
 {% endhighlight %}

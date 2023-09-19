@@ -89,7 +89,7 @@ await builder.Build().RunAsync();
 
 ## Add stylesheet and script resources
 
-The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Reference the stylesheet and script in the `<head>` of the main page as follows: 
+The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Reference the stylesheet and script in the `<head>` of the main page as follows:
 
 * For **.NET 6** Blazor Server app, include it in **~/Pages/_Layout.cshtml** file.
 
@@ -184,10 +184,9 @@ You can render the chip items from collection using for loop in Blazor Chip comp
 ```
 
 ![Blazor Chip Component](./images/blazor-chip-sample.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/rNLAjxCdhNTdxPzX?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## See also
-* [How to add chip items dynamically in the Blazor Chips component?](https://www.syncfusion.com/kb/13187/how-to-add-chip-items-dynamically-in-the-blazor-chips-component)
+* [How to add chip items dynamically in the Blazor Chips component?](https://support.syncfusion.com/kb/article/11788/how-to-add-chip-items-dynamically-in-the-blazor-chips-component)
 * [Getting Started with Syncfusion Blazor for Client-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-dotnet-cli)
 * [Getting Started with Syncfusion Blazor for Client-Side in Visual Studio 2019](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-visual-studio)
 * [Getting Started with Syncfusion Blazor for Server-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-dotnet-cli)

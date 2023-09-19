@@ -440,6 +440,8 @@ The [ObservableCollection](https://learn.microsoft.com/en-us/dotnet/api/system.c
 }
 ```
 
+![Observable collection in Blazor Gantt Chart](images/blazor-gantt-chart-observable-collection.PNG)
+
 ### INotifyPropertyChanged
 
 The Gantt chart provides support to update its data without any additional refresh call when changing property value of item if an item implements [INotifyPropertyChanged](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.inotifypropertychanged?view=net-6.0) interface. `INotifyPropertyChanged` interface is used to notify, that a property value has changed.
@@ -555,6 +557,7 @@ In the below example, `TaskData` implements `INotifyPropertyChanged` and it rais
     }
 }
 ```
+![Property changed in Blazor Gantt Chart](images/blazor-gantt-chart-observable-property-changed.PNG)
 
 ## Remote Data
 
@@ -590,6 +593,172 @@ You can use **WebApiAdaptor** to bind datagrid with Web API created using **ODat
     }
 }
 ```
+
+![Data Binding in Blazor Gantt Chart](images/blazor-gantt-chart-data-binding.png)
+
+### Binding with OData v4 services
+
+The ODataV4 is an improved version of OData protocols, and the [SfDataManager](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Data.SfDataManager.html) can also retrieve and consume OData v4 services. For more details on OData v4 services, refer to the [OData documentation](http://docs.oasis-open.org/odata/odata/v4.0/errata03/os/complete/part1-protocol/odata-v4.0-errata03-os-part1-protocol-complete.html#_Toc453752197). To bind OData v4 service, use the **ODataV4Adaptor**.
+
+{% tabs %}
+
+{% highlight razor %}
+
+@using ODataAdap.Models
+@using Syncfusion.Blazor.Data
+@using Syncfusion.Blazor.Gantt
+@using Syncfusion.Blazor
+
+<SfGantt TValue="TaskDatum" Height="450px" Width="100%" HighlightWeekends="true" AllowFiltering="true" AllowSorting="true" Toolbar="@(new List<string>(){ "Add", "Edit", "Update", "Delete", "Cancel", "ExpandAll", "CollapseAll","Indent","Outdent"})" AllowSelection="true" GridLines="GridLine.Both"
+TreeColumnIndex="1">
+    <SfDataManager Url="odata/Gantt" Adaptor="Adaptors.ODataV4Adaptor"></SfDataManager>
+    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" ParentID="ParentId"></GanttTaskFields>
+    <GanttEditSettings AllowAdding="true" AllowDeleting="true" AllowEditing="true" AllowTaskbarEditing="true" ShowDeleteConfirmDialog="true"></GanttEditSettings>
+    <GanttColumns>
+        <GanttColumn Field="TaskId" Width="100"></GanttColumn>
+        <GanttColumn Field="TaskName" HeaderText="Job Name" Width="250" ClipMode="Syncfusion.Blazor.Grids.ClipMode.EllipsisWithTooltip"></GanttColumn>
+        <GanttColumn Field="StartDate" HeaderText="Start Date"></GanttColumn>
+        <GanttColumn Field="EndDate" HeaderText="End Date"></GanttColumn>
+        <GanttColumn Field="Duration" HeaderText="Duration"></GanttColumn>
+    </GanttColumns>
+    <GanttLabelSettings LeftLabel="TaskName" TValue="TaskDatum">
+    </GanttLabelSettings>
+    <GanttSplitterSettings Position="40%"> </GanttSplitterSettings>
+</SfGantt>
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="TaskDatum.cs" %}
+
+namespace ODataAdap.Models;
+
+public partial class TaskDatum
+{
+    public long Id { get; set; }
+    public int TaskId { get; set; }
+    public string? TaskName { get; set; }
+    public DateTime? StartDate { get; set; }
+    public DateTime? EndDate { get; set; }
+    public int? ParentId { get; set; }
+    public int? Progress { get; set; }
+    public int? Duration { get; set; }
+}
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="GanttController.cs" %}
+
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.OData.Deltas;
+using Microsoft.AspNetCore.OData.Formatter;
+using Microsoft.AspNetCore.OData.Query;
+using Microsoft.AspNetCore.OData.Routing.Controllers;
+using ODataAdap.Models;
+
+namespace ODataAdap.Controllers
+{
+    [Route("api/[controller]")]
+    public class GanttController : ODataController
+    {
+        private OdataContext _db;
+        public GanttController(OdataContext context)
+        {
+            _db = context;
+        }
+        [HttpGet]
+        [EnableQuery]
+        public IActionResult Get()
+        {
+            return Ok(_db.TaskData);
+        }
+        [EnableQuery]
+        public async Task<IActionResult> Post([FromBody] TaskDatum data)
+        {
+            _db.TaskData.Add(data);
+            _db.SaveChanges();
+            return Created(data);
+        }
+        [EnableQuery]
+        public async Task<IActionResult> Patch([FromODataUri] long key, [FromBody] Delta<TaskDatum> data)
+        {
+            var entity = await _db.TaskData.FindAsync(key);
+            data.Patch(entity);
+            await _db.SaveChangesAsync();
+            return Updated(entity);
+        }
+        [EnableQuery]
+        public long Delete([FromODataUri] long key)
+        {
+            var deleterow = _db.TaskData.Find(key);
+            _db.TaskData.Remove(deleterow);
+            _db.SaveChanges();
+            return key;
+        }
+    }
+}
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="Program.cs" %}
+
+using Microsoft.AspNetCore.OData;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.OData.Edm;
+using Microsoft.OData.ModelBuilder;
+using ODataAdap.Data;
+using ODataAdap.Models;
+using Syncfusion.Blazor;
+
+var builder = WebApplication.CreateBuilder(args);
+
+// Add services to the container.
+static IEdmModel GetEdmModel()
+{
+    ODataConventionModelBuilder builder = new ODataConventionModelBuilder();
+    var datas = builder.EntitySet<TaskDatum>("Gantt");
+    FunctionConfiguration myFirstFunction = datas.EntityType.Collection.Function("MyFirstFunction");
+    myFirstFunction.ReturnsCollectionFromEntitySet<TaskDatum>("Gantt");
+    return builder.GetEdmModel();
+}
+builder.Services.AddMvc(options => options.EnableEndpointRouting = false);
+builder.Services.AddRazorPages();
+builder.Services.AddServerSideBlazor();
+builder.Services.AddSyncfusionBlazor();
+
+builder.Services.AddDbContext<OdataContext>(option =>
+                option.UseSqlServer(builder.Configuration.GetConnectionString("GanttDatabase")));
+
+builder.Services.AddControllers().AddOData(opt => opt.AddRouteComponents("odata", GetEdmModel()).Count().Filter().OrderBy().Expand().Select().SetMaxTop(null));
+builder.Services.AddControllersWithViews();
+builder.Services.AddEndpointsApiExplorer();
+
+var app = builder.Build();
+
+// Configure the HTTP request pipeline.
+if (!app.Environment.IsDevelopment())
+{
+    app.UseExceptionHandler("/Error");
+    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
+    app.UseHsts();
+}
+
+app.UseHttpsRedirection();
+
+app.UseStaticFiles();
+
+app.UseRouting();
+app.MapControllers();
+app.UseMvcWithDefaultRoute();
+app.MapBlazorHub();
+app.MapFallbackToPage("/_Host");
+
+app.Run();
+
+{% endhighlight %}
+
+{% endtabs %}
+
+N>You can find the sample for load on demand [here](https://github.com/SyncfusionExamples/BlazorGantt-OData-Adaptor-sample).
 
 ### Load Child on Demand
 

@@ -54,7 +54,6 @@ The below sample code demonstrates DataGrid with print option added in the toolb
 ```
 
 The following image represents DataGrid with print toolbar item,
-
 ![Printing in Blazor DataGrid](./images/blazor-datagrid-printing.png)
 
 ## Page setup
