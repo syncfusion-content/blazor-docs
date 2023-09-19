@@ -7,7 +7,7 @@ control: Image Editor
 documentation: ug
 ---
 
-# Frames
+# Frames in the Blazor Image Editor component
 
 The frame feature in an Image Editor provides users with the capability to add decorative borders or frames around their images. Frames are a visual design element that can enhance the overall appearance and appeal of an image.
 
