@@ -237,12 +237,12 @@ Again, the [PrintAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 
 ## Export
 
-Using the `ExportAsync` method, the rendered chart can be exported to [JPEG](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ExportType.html#Syncfusion_Blazor_Charts_ExportType_JPEG), [PNG](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ExportType.html#Syncfusion_Blazor_Charts_ExportType_PNG), [SVG](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ExportType.html#Syncfusion_Blazor_Charts_ExportType_SVG), or [PDF](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ExportType.html#Syncfusion_Blazor_Charts_ExportType_PDF) format. The [Export Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ExportType.html) specifies the image format and `FileName` specifies the name of the exported file. Both of these parameters are required input parameters for this method.
+Using the `ExportAsync` method, the rendered chart can be exported to [JPEG](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ExportType.html#Syncfusion_Blazor_Charts_ExportType_JPEG), [PNG](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ExportType.html#Syncfusion_Blazor_Charts_ExportType_PNG), [SVG](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ExportType.html#Syncfusion_Blazor_Charts_ExportType_SVG), or [PDF](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ExportType.html#Syncfusion_Blazor_Charts_ExportType_PDF) format. The [ExportType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ExportType.html) specifies the image format and `FileName` specifies the name of the exported file. Both of these parameters are required input parameters for this method.
 
 The optional parameters for this method are,
 * `Orientation`: Specifies the portrait or landscape orientation in the PDF document.
-* `AllowDownload`: Set this parameter to **false** to prevent the browser's image download prompt to get the `DataUrl` string.
-* `IsBase64`: Set this parameter to **true** to indicate that you want to receive the exporting content as a base64 string. 
+* `AllowDownload`: Set this parameter to **true** to enable the browser's download prompt to download the chart in the specified format, and **false** to get the chart as a `DataUrl` string.
+* `IsBase64`: Set this parameter to **true** to indicate that you want the exporting content in the form of a `base64` string. 
 
 ```cshtml
 
@@ -291,13 +291,9 @@ The optional parameters for this method are,
 
 ```
 
-### Export Chart as base64 string 
+### Export chart as base64 string
 
-The image can be exported as a base64 string for the JPEG, PNG, SVG, and PDF formats. The rendered charts can be exported as an image using the [ExportAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfChart.html#Syncfusion_Blazor_Charts_SfChart_ExportAsync_Syncfusion_Blazor_Charts_ExportType_System_String_System_Nullable_Syncfusion_PdfExport_PdfPageOrientation__System_Boolean_) method.
-
-The chart can be converted into a base64 string if the required configuration is done while calling the [ExportAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfChart.html#Syncfusion_Blazor_Charts_SfChart_ExportAsync_Syncfusion_Blazor_Charts_ExportType_System_String_System_Nullable_Syncfusion_PdfExport_PdfPageOrientation__System_Boolean_) method, and you will be able to get the base64 string in the [OnExportComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnExportComplete) event argument. 
-
-The following code shows the complete demonstration of exporting chart image of standard formats like [JPEG](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ExportType.html#Syncfusion_Blazor_Charts_ExportType_JPEG), [PNG](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ExportType.html#Syncfusion_Blazor_Charts_ExportType_PNG), [SVG](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ExportType.html#Syncfusion_Blazor_Charts_ExportType_SVG), or [PDF](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ExportType.html#Syncfusion_Blazor_Charts_ExportType_PDF) as `base64` string.
+If you set `IsBase64` parameter to **true** while calling the [ExportAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfChart.html#Syncfusion_Blazor_Charts_SfChart_ExportAsync_Syncfusion_Blazor_Charts_ExportType_System_String_System_Nullable_Syncfusion_PdfExport_PdfPageOrientation__System_Boolean_) method, the chart will be converted into a base64 string, and you will be able to get the `base64` string in the [OnExportComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnExportComplete) event argument.
 
 ```cshtml
  
@@ -341,7 +337,7 @@ The following code shows the complete demonstration of exporting chart image of 
 @code{
     private SfChart chartInstance;
     public string FileName { get; set; } = "Charts";
-    public string Format { get; set; } = "{value}GW";
+    public string Format { get; set; } = "{value} GW";
     public LabelIntersectAction Label { get; set; } = LabelIntersectAction.Trim;
 
     public List<ExportData> ChartPoints { get; set; } = new List<ExportData>
