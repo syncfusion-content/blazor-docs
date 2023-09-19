@@ -385,6 +385,7 @@ In the Gantt Chart component, the schedule timeline will be automatically update
 }
 ```
 
+
 <!-- ```cshtml
 @using Syncfusion.Blazor.Gantt
 <button @onclick="ZoomIn">Zoom In</button>

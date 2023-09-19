@@ -303,4 +303,8 @@ N> When the edit mode is set as `Auto`, on performing double-click action on Tre
 
 Editing resource with cell edit or dialog edit
 
+![Blazor Gantt Chart displays Editing Resource with Cell](images/blazor-gantt-chart-editing-resources-in-cell.png)
+
+Editing resource with edit dialog
+
 ![Blazor Gantt Chart displays Editing Resource with Edit Dialog](images/blazor-gantt-chart-editing-resource-in-dialog.png)
