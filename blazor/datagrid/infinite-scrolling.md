@@ -213,7 +213,7 @@ The following GIF represents the infinite scrolling with cache mode functionalit
 
 * The aggregated information and total group items are displayed based on the current view items.
 
-* In Lazy-Load Grouping with infinite scrolling, cache mode is not supported, and infinite scrolling mode is only available for parent-level caption rows in Lazy-Load Grouping with infinite scrolling.
+* In lazy load grouping with infinite scrolling, cache mode is not supported, and infinite scrolling mode is only available for parent-level caption rows in lazy load grouping with infinite scrolling.
 
 * Programmatic selection using the [SelectRowsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_SelectRowsAsync_System_Int32___) and [SelectRowAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_SelectRowAsync_System_Int32_System_Nullable_System_Boolean__)  method is not supported in infinite scrolling.
 
