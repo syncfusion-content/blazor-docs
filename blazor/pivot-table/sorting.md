@@ -78,7 +78,7 @@ N> By default the [Order](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
 
 ### Alphanumeric Sorting
 
-Usually string sorting is applied to field members even if it starts with numbers. But this kind of field members can also be sorted on the basis of the numbers that are placed at the beginning of the member name. This can be achieved by setting the [DataType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.FieldOptionsModel.html#Syncfusion_Blazor_PivotView_FieldOptionsModel_DataType) property as number to the desired field.
+Usually string sorting is applied to field members even if it starts with numbers. But this kind of field members can also be sorted on the basis of the numbers that are placed at the beginning of the member name. This can be achieved by setting the [DataType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.FieldOptions.html#Syncfusion_Blazor_PivotView_FieldOptions_DataType) property as number to the desired field.
 
 ```cshtml
 @using Syncfusion.Blazor.PivotView
