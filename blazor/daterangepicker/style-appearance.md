@@ -157,14 +157,13 @@ Use the following CSS to customize the selected date cell grid in the DateRangeP
 
 ## Full screen mode support in mobiles and tablets
 
-The DateRangePicker component's full-screen mode feature enables users to view the component popup element in full-screen mode on mobile devices with improved visibility and a better user experience. It is important to mention that this feature is exclusively available for mobile devices in both landscape and portrait orientations. To activate the full screen mode within the DateRangePicker component, simply set the [FullScreenMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.DateRangePickerModel-1.html#Syncfusion_Blazor_Calendars_DateRangePickerModel_1_FullScreenMode) API value to `true`. This action will extend the calendar and presets popup element to occupy the entire screen on mobile devices.
+The DateRangePicker component's full-screen mode feature enables users to view the component popup element in full-screen mode on mobile devices with improved visibility and a better user experience. It is important to mention that this feature is exclusively available for mobile devices in both landscape and portrait orientations. To activate the full screen mode within the DateRangePicker component, simply set the [FullScreen](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfDateRangePicker-1.html#Syncfusion_Blazor_Calendars_SfDateRangePicker_1_FullScreen) API value to `true`. This action will extend the calendar and presets popup element to occupy the entire screen on mobile devices.
 
 ```cshtml
 @using Syncfusion.Blazor.Calendars
 
-<SfDateRangePicker TValue="DateTime?" FullScreenMode=true></SfDateRangePicker>
+<SfDateRangePicker TValue="DateTime?" FullScreen=true></SfDateRangePicker>
 
 ```
 
-![DateRangePickerDefaultFullScreen](./images/DateRangePickerDefaultFullScreen.gif)
-![DateRangePickerPresetsFullScreen](./images/DateRangePickerrPresetsFullScreen.gif)
+![DateRangePickerDefaultFullScreen](./images/blazor-daterangepicker-full-screen-mode.gif)
