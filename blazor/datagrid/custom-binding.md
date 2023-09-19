@@ -819,6 +819,7 @@ The following sample code demonstrates implementing the filtering operation for 
 
 ```
 
+
 N> [View Sample in GitHub.](https://github.com/SyncfusionExamples/blazor-datagrid-filtering-with-custom-adaptor)
 
 ## Handling Sorting in Custom Adaptor
