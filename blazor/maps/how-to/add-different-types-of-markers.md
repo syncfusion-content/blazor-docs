@@ -13,7 +13,7 @@ You can add different types of markers in the Maps component using the [MapsMark
 
 <b>Step 1</b>
 
-Initialize the Maps component with marker settings. Here, a marker is added with specified latitude and longitude of California using the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfStockChart.html#Syncfusion_Blazor_Charts_SfStockChart_Crosshair) property. You can customize the shape of the marker using the [Shape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsMarker.html#Syncfusion_Blazor_Maps_MapsMarker_Shape) property and change the border color and width of the marker using the [MapsMarkerBorder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsMarkerBorder.html).
+Initialize the Maps component with marker settings. Here, a marker is added with specified latitude and longitude of California using the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfStockChart.html#Syncfusion_Blazor_Charts_SfStockChart_Crosshair) property. You can customize the shape of the marker using the [Shape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsMarker-1.html#Syncfusion_Blazor_Maps_MapsMarker_1_Shape) property and change the border color and width of the marker using the [MapsMarkerBorder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsMarkerBorder.html).
 
 ```cshtml
 @using Syncfusion.Blazor.Maps
