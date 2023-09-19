@@ -3,7 +3,7 @@ layout: post
 title: Getting Stared with Blazor ProgressBar Component | Syncfusion
 description: Learn here all about getting started with Syncfusion Blazor ProgressBar in Blazor Server App and Blazor WebAssembly App.
 platform: Blazor
-control: ProgressBar 
+control: ProgressBar
 documentation: ug
 ---
 
@@ -51,7 +51,7 @@ Open **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusio
 {% endhighlight %}
 {% endtabs %}
 
-Now, register the Syncfusion Blazor Service in the **~/Program.cs** file of your Blazor Server App or Blazor WebAssembly App. 
+Now, register the Syncfusion Blazor Service in the **~/Program.cs** file of your Blazor Server App or Blazor WebAssembly App.
 
 {% tabs %}
 {% highlight C# tabtitle="Blazor Server App" hl_lines="3 10" %}
@@ -92,7 +92,7 @@ await builder.Build().RunAsync();
 
 ## Add stylesheet and script resources
 
-The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Reference the stylesheet and script in the `<head>` of the main page as follows: 
+The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Reference the stylesheet and script in the `<head>` of the main page as follows:
 
 * For **.NET 6** Blazor Server app, include it in **~/Pages/_Layout.cshtml** file.
 
@@ -122,8 +122,8 @@ Add the Syncfusion Blazor ProgressBar component in the **~/Pages/Index.razor** f
 {% endhighlight %}
 {% endtabs %}
 
-*  Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion Blazor ProgressBar component in your default web browser.
-  
+* Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion Blazor ProgressBar component in your default web browser.
+
 ![Blazor Linear ProgressBar](images/blazor-linear-progressbar.png)
 
 ## Circular Progress Bar Type
@@ -140,5 +140,6 @@ Change the type of the ProgressBar by using the [Type](https://help.syncfusion.c
 {% endtabs %}
 
 ![Blazor Circular ProgressBar](images/blazor-circular-progressbar.png)
+ remotes/origin/hotfix/hotfix-v22.2.5
 
 N> You can also explore our [Blazor ProgressBar example](https://blazor.syncfusion.com/demos/progress-bar/linear?theme=fluent) that shows you how to render and configure the ProgressBar.
