@@ -363,6 +363,7 @@ The following sample code demonstrates the customization applied to DatePicker c
 }
 ```
 
+
 N> Similar way customization can be applied to default DateTimePicker Component using same `DateEditCellParams`
 
 ### TimePickerEdit
@@ -427,6 +428,7 @@ The following sample code demonstrates the customization applied to TimePicker c
     }
 }
 ```
+
 
 ## Custom editors using template/Cell edit template
 

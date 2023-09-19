@@ -9,7 +9,7 @@ documentation: ug
 
 # Customize the Spinner in Blazor Spinner Component
 
-The [Blazor Spinner](https://www.syncfusion.com/blazor-components/blazor-spinner) component can be customized when initializing or after rendering it.
+The Spinner component can be customized when initializing or after rendering it.
 
 ## Customize when initializing the Spinner component
 
