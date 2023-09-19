@@ -118,6 +118,8 @@ Integrate the Syncfusion Blazor Tooltip component with the Syncfusion Blazor [Bu
 {% tabs %}
 {% highlight razor %}
 
+@using Syncfusion.Blazor.Buttons
+
 <SfTooltip ID="Tooltip" Target="#btn" Content="@Content">
     <SfButton ID="btn" Content="Show Tooltip"></SfButton>
 </SfTooltip>
