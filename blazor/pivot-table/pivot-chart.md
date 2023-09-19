@@ -1131,69 +1131,6 @@ You can customize data label of the pivot chart markers in terms of angle, align
 
 ![Blazor PivotChart with Custom Data Label](images/blazor-pivotchart-custom-data-label.png)
 
-### Data Label Template
-
-The [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartMarkerDataLabel.html#Syncfusion_Blazor_PivotView_PivotChartMarkerDataLabel_Template) property in the [PivotChartMarkerDataLabel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartMarkerDataLabel.html) allows you to customize the appearance of data labels in the pivot chart series by using your own HTML elements for displaying the desired UI. The parameter named [ChartDataPointInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDataPointInfo.html) is always passed in as a context within the template, allowing it to access the data points such as x and y and display the associated data point within a customized UI, as shown in the code example below.
-
-```cshtml
-@using Syncfusion.Blazor.PivotView
-@using Syncfusion.Blazor.Charts
-
-<SfPivotView TValue="ProductDetails" Width="100%">
-    <PivotViewDisplayOption View=View.Chart></PivotViewDisplayOption>
-    <PivotViewDataSourceSettings DataSource="@data">
-        <PivotViewColumns>
-            <PivotViewColumn Name="Year"></PivotViewColumn>
-            <PivotViewColumn Name="Quarter"></PivotViewColumn>
-        </PivotViewColumns>
-        <PivotViewRows>
-            <PivotViewRow Name="Country"></PivotViewRow>
-            <PivotViewRow Name="Products"></PivotViewRow>
-        </PivotViewRows>
-        <PivotViewValues>
-            <PivotViewValue Name="Amount" Caption="Sold Amount"></PivotViewValue>
-        </PivotViewValues>
-        <PivotViewFormatSettings>
-            <PivotViewFormatSetting Name="Amount" Format="C"></PivotViewFormatSetting>
-        </PivotViewFormatSettings>
-    </PivotViewDataSourceSettings>
-    <PivotChartSettings Title="Sales Analysis">
-        <PivotChartSeries Type="Syncfusion.Blazor.PivotView.ChartSeriesType.Column">
-            <PivotChartPrimaryYAxis>
-                <PivotChartPrimaryYAxisBorder Width="0"></PivotChartPrimaryYAxisBorder>
-            </PivotChartPrimaryYAxis>
-            <PivotChartMarkerSettings>
-                <PivotChartMarkerDataLabel Visible="true" Fill="white" Position="Syncfusion.Blazor.PivotView.LabelPosition.Auto" Rx="5" Ry="5">
-                    <Template>
-                        @{
-                            var data = context as ChartDataPointInfo;
-                        }
-                        <table>
-                            <tr>
-                                <td align="center" style="background-color: #C1272D; font-size: 12px; color: whitesmoke; font-weight: bold; padding: 5px"> @data.X :</td>
-                                <td align="center" style="background-color: #C1272D; font-size: 12px; color: whitesmoke; font-weight: bold; padding: 5px"> @data.Y</td>
-                            </tr>
-                        </table>
-                    </Template>
-                </PivotChartMarkerDataLabel>
-            </PivotChartMarkerSettings>
-        </PivotChartSeries>
-    </PivotChartSettings>
-</SfPivotView>
-
-@code
-{
-    public List<ProductDetails> data { get; set; }
-    protected override void OnInitialized()
-    {
-        this.data = ProductDetails.GetProductData().ToList();
-        //Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
-    }
-}
-
-```
-
-![Blazor Pivot Chart with data label customization using template](images/blazor-pivotChart-dataLabel-customized-by-template.png)
 
 ## Axis Customization
 
