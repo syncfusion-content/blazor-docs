@@ -1131,7 +1131,6 @@ You can customize data label of the pivot chart markers in terms of angle, align
 
 ![Blazor PivotChart with Custom Data Label](images/blazor-pivotchart-custom-data-label.png)
 
-
 ## Axis Customization
 
 User can customize axis of the pivot chart using [PivotChartPrimaryXAxis](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartPrimaryXAxis.html) and [PivotChartPrimaryYAxis](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartPrimaryYAxis.html) properties in [PivotChartSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartSettings.html) class.
