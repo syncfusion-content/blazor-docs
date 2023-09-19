@@ -53,7 +53,7 @@ Open **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusio
 {% endhighlight %}
 {% endtabs %}
 
-Now, register the Syncfusion Blazor Service in the **~/Program.cs** file of your Blazor Server App or Blazor WebAssembly App. 
+Now, register the Syncfusion Blazor Service in the **~/Program.cs** file of your Blazor Server App or Blazor WebAssembly App.
 
 {% tabs %}
 {% highlight C# tabtitle="Blazor Server App" hl_lines="3 10" %}
@@ -94,7 +94,7 @@ await builder.Build().RunAsync();
 
 ## Add stylesheet and script resources
 
-The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Reference the stylesheet and script in the `<head>` of the main page as follows: 
+The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Reference the stylesheet and script in the `<head>` of the main page as follows:
 
 * For **.NET 6** Blazor Server app, include it in **~/Pages/_Layout.cshtml** file.
 
@@ -133,7 +133,7 @@ Add the Syncfusion Blazor SpeedDial component in the **~/Pages/Index.razor** fil
 {% endtabs %}
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion Blazor SpeedDial component in your default web browser.
-  
+
 ![Blazor SpeedDial Component](./images/blazor-speeddial-component.png)
 
 ## Linear and radial display modes
@@ -181,14 +181,14 @@ The speed dial control triggers the [`ItemClicked`](https://help.syncfusion.com/
             <SpeedDialItem IconCss="e-icons e-cut" Text="Cut"/>
             <SpeedDialItem IconCss="e-icons e-copy" Text="Copy"/>
             <SpeedDialItem IconCss="e-icons e-paste" Text="Paste"/>
-        </SpeedDialItems>        
+        </SpeedDialItems>
     </SfSpeedDial>
 </div>
 
 @code{
     public void ItemEventClick(SpeedDialItemEventArgs args)
     {
-        // Here, you can call your desired action.        
+        // Here, you can call your desired action.
     }
 }
 {% endhighlight %}
