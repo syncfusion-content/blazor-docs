@@ -233,7 +233,7 @@ You can also select rows dynamically using the [SelectRowsAsync](https://help.sy
     public SfGantt<TaskData> Gantt;
     public void SelectRows()
     {
-        this.Gantt.SelectRowsAsync(new double[] {1,2,3});
+        this.Gantt.SelectRowsAsync(new int[] {1,2,3});
     }
     private List<TaskData> TaskCollection { get; set; }
     protected override void OnInitialized()
