@@ -66,7 +66,7 @@ The following sample displays the pivot chart component based on the pivot repor
 ## Data Binding
 
 End user can bind both local and remote data binding options available in the component to feed the data. The [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.DataSourceSettingsModel-1.html#Syncfusion_Blazor_PivotView_DataSourceSettingsModel_1_DataSource) property can be assigned either with an instance of [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html) or list of object.
-<!-- For more information [refer](./data-binding) here. -->
+For more information [refer](./data-binding) here.
 
 ## Chart Types
 
