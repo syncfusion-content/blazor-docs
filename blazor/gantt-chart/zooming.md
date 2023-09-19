@@ -132,4 +132,5 @@ In the Gantt chart, the zoom-in and zoom-out actions are performed based on the 
     }
 }
 ```
+
 ![Customizing zooming levels in Blazor Gantt Chart](images/blazor-gantt-chart-custom-zooming-levels.gif)

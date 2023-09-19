@@ -15,6 +15,10 @@ To get started quickly with the Blazor Rating component, you can check out this 
 
 {% youtube "youtube:https://www.youtube.com/watch?v=yWhINyylnTU"%}
 
+To get started quickly with Blazor Rating, check on the following video:
+
+{% youtube "youtube:https://www.youtube.com/watch?v=yWhINyylnTU"%}
+
 ## Prerequisites
 
 * [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)

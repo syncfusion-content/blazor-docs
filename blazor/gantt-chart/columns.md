@@ -569,6 +569,8 @@ Using the `GanttColumns` property, you can define the Custom Columns in Gantt Ch
 }
 ```
 
+![Blazor Gantt Chart with Custom Column](images/blazor-gantt-chart-custom-column.png)
+
 ## Column chooser
 
 The column chooser has options to show or hide columns dynamically. It can be enabled by defining the [ShowColumnChooser](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_ShowColumnChooser) as true.
@@ -631,6 +633,8 @@ The column chooser has options to show or hide columns dynamically. It can be en
     }
 }
 `````````
+
+![Blazor Gantt Chart with Custom Column](images/blazor-gantt-column-chooser.gif)
 
 ## Custom component in column chooser template
 

@@ -567,6 +567,7 @@ The following sample code demonstrates notifying user when server-side exception
 }
 ```
 
+
 ### Authorization and Authentication
 
 It is common to have authorization in the server of origin to prevent anonymous access to the data services. **SfDataManager** can consume data from such protected remote data services with the proper bearer token. The access token or bearer token can be used by **SfDataManager** in one of the following ways.
