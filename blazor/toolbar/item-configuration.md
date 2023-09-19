@@ -58,7 +58,7 @@ It specifies the location for aligning Toolbar items on the Toolbar. Each comman
 
 ## CssClass
 
-Single or multiple CSS classes can be added to the Toolbar commands using the Toolbar item `CssClass` property. Refer [Set command customization](https://blazor.syncfusion.com/documentation/toolbar/how-to/set-command-customization/) for snippet and output.
+Single or multiple CSS classes can be added to the Toolbar commands using the Toolbar item `CssClass` property. Refer [Set command customization](https://blazor.syncfusion.com/documentation/toolbar/how-to/set-command-customization) for snippet and output.
 
 ## Disabled
 
