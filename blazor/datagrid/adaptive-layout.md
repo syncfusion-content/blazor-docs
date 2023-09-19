@@ -11,6 +11,11 @@ documentation: ug
 
 The DataGrid user interface (UI) was redesigned to provide an optimal viewing experience and improve usability on small screens. This interface will render the filter, sort, and edit dialogs adaptively and have an option to render the DataGrid row elements in the vertical direction.
 
+To get start quickly with How to Enable an Adaptive Layout in Blazor DataGrid Component,you can check on this video.
+
+{% youtube
+"youtube:https://www.youtube.com/watch?v=RFMGdOyEWFo&t=2s" %}
+
 ## Render adaptive dialog
 
 To render adaptive dialog UI in the DataGrid, set the [EnableAdaptiveUI](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableAdaptiveUI) property to true. The DataGrid will render the filter, sort, and edit dialogs in full screen for a better user experience.
