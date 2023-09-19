@@ -466,7 +466,7 @@ The Syncfusion Grid allows you to display information about the grid columns to 
 
 The Grid provides a feature to display custom tooltips for its columns using the [SfTooltip](https://blazor.syncfusion.com/documentation/tooltip/getting-started) component. This allows you to provide additional information about the columns when the user hovers over them.
 
-To enable custom tooltips for columns in the Grid,you can use the [Column Template](https://blazor.syncfusion.com/documentation/datagrid/columns/#column-template) feature by rendering the components inside the template
+To enable custom tooltips for columns in the Grid,you can use the [Column Template](https://blazor.syncfusion.com/documentation/datagrid/column-template) feature by rendering the components inside the template
 
 This is demonstrated in the following sample code, where the tooltip for the **FirstName** column is rendered using `Column Template`.
 
