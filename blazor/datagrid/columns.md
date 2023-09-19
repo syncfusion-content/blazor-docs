@@ -621,7 +621,6 @@ By default, column header title is displayed from column [Field](https://help.sy
 }
 ```
 
-
 ![Blazor DataGrid with Header Text](./images/blazor-datagrid-header-text.png)
 
 > * If both the [Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Field) and [HeaderText](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_HeaderText) are not defined in the column, the column renders with “empty” header text.

@@ -13,19 +13,7 @@ Starting with v18.4.0.30 (Volume 4, 2020), the Syncfusion Blazor UI components a
 
 W> Do not use both `Syncfusion.Blazor` and individual NuGet packages in the same application. It will throw ambiguous errors while compiling the project.
 
-## Benefits of using individual NuGet packages
-
-* These individual NuGet packages are extremely useful while rendering Syncfusion Blazor components in Blazor WebAssembly applications. These packages will reduce the initial loading time in Blazor WebAssembly applications.
-
-* While installing `Syncfusion.Blazor` NuGet package in a Blazor WebAssembly application, it will load the complete Syncfusion Blazor library in the web browser which takes more initial loading time. Whereas, the individual NuGet package installation will resolve this and load the required components assembly alone in the web browser.
-
-* The [Lazy load assemblies in Blazor WebAssembly](https://docs.microsoft.com/en-us/aspnet/core/blazor/webassembly-lazy-load-assemblies) functionality can be utilized with the Syncfusion Blazor individual NuGet packages.
-
-* These individual NuGet packages can be used in the Blazor Server application to reduce the application deployment size in production.
-
-## Available NuGet packages
-
-### Syncfusion.Blazor.Core
+## Syncfusion.Blazor.Core
 
 This package contains the base component, common classes, common functionalities, and interfaces for the entire Syncfusion Blazor UI components.
 
@@ -69,7 +57,7 @@ This package contains the base component, common classes, common functionalities
 </tr>
 </table>
 
-### Syncfusion.Blazor.BarcodeGenerator
+## Syncfusion.Blazor.BarcodeGenerator
 
 The Blazor BarcodeGenerator supports the most common 1D and 2D barcode, and complete customization of its appearance.
 
@@ -112,7 +100,7 @@ The Blazor BarcodeGenerator supports the most common 1D and 2D barcode, and comp
 </tr>
 </table>
 
-### Syncfusion.Blazor.BulletChart
+## Syncfusion.Blazor.BulletChart
 
 The Blazor Bullet Chart is used to visually compare measures, similar to the commonly used bar chart. A bullet chart displays one or more measures, and compares them with a target value. The measures can be displayed in a range of performance such as poor, satisfactory, and good.
 
@@ -151,7 +139,7 @@ SfBulletChart
 </tr>
 </table>
 
-### Syncfusion.Blazor.Buttons
+## Syncfusion.Blazor.Buttons
 
 The Blazor buttons package contains UI components such as Button, Checkbox, RadioButton, Switch, and Chip component. It is easy to use and integrate within the form.
 
@@ -204,7 +192,7 @@ The Blazor buttons package contains UI components such as Button, Checkbox, Radi
 </tr>
 </table>
 
-### Syncfusion.Blazor.Calendars
+## Syncfusion.Blazor.Calendars
 
 The Calendars package contains date and time components such as Calendar, DatePicker, DateRangePicker, DateTimePicker, and TimePicker. These components come with options to disable dates, restrict selection, and show custom events.
 
@@ -256,7 +244,7 @@ The Calendars package contains date and time components such as Calendar, DatePi
 </tr>
 </table>
 
-### Syncfusion.Blazor.Cards
+## Syncfusion.Blazor.Cards
 
 A Blazor Card is a small layout that shows a defined content in an organized structure.
 
@@ -291,7 +279,7 @@ SfCard
 </tr>
 </table>
 
-### Syncfusion.Blazor.Charts
+## Syncfusion.Blazor.Charts
 
 The Blazor Chart is a well-crafted charting component to visualize data. It contains a rich gallery of 30+ charts and graphs, ranging from line to financial that cater to all charting scenarios. Its high performance helps to render large amounts of data quickly. It also comes with features such as zooming, panning, tooltip, crosshair, trackball, highlight, and selection.
 
@@ -337,7 +325,7 @@ The Blazor Chart is a well-crafted charting component to visualize data. It cont
 </tr>
 </table>
 
-### Syncfusion.Blazor.CircularGauge
+## Syncfusion.Blazor.CircularGauge
 
 The Blazor Circular Gauge is used for visualizing numeric values on a circular scale with features like multiple axes, rounded corners, and more. The appearance of the gauge can be completely customized to simulate a speedometer, meter gauge, analog clock, etc.
 
@@ -375,7 +363,7 @@ SfCircularGauge
 </tr>
 </table>
 
-### Syncfusion.Blazor.Data
+## Syncfusion.Blazor.Data
 
 The SfDataManager is a data management package to perform data operations such as grouping, sorting in Blazor applications. It will act as an abstraction for using local data sources like IEnumerable, Observable collections, and remote data sources like web services returning JSON, JSONP, OData.
 
@@ -410,7 +398,7 @@ SfDataManager
 </tr>
 </table>
 
-### Syncfusion.Blazor.DataVizCommon
+## Syncfusion.Blazor.DataVizCommon
 
 The Blazor DataVizCommon is the base package for the svg elements used in the visualization components like charts and range selector.
 
@@ -439,7 +427,7 @@ The Blazor DataVizCommon is the base package for the svg elements used in the vi
 </tr>
 </table>
 
-### Syncfusion.Blazor.Diagram
+## Syncfusion.Blazor.Diagram
 
 The Blazor Diagram component is a high-speed, robust library for crafting, editing, and interacting with dynamic diagrams. Unleash your creativity with flowcharts, org charts, mind maps, and more. Seamlessly edit and engage with intuitive interactions.
 
@@ -487,7 +475,7 @@ The Blazor Diagram component is a high-speed, robust library for crafting, editi
 </tr>
 </table>
 
-### Syncfusion.Blazor.DropDowns
+## Syncfusion.Blazor.DropDowns
 
 A package of Blazor Dropdown contains a collection of Dropdown components such as Dropdown List, Combo Box, AutoComplete, Multiselect Dropdown, and List Box. Dropdown components contain specific features such as data binding, grouping, sorting, filtering, and templates.
 
@@ -542,7 +530,7 @@ A package of Blazor Dropdown contains a collection of Dropdown components such a
 </tr>
 </table>
 
-### Syncfusion.Blazor.FileManager
+## Syncfusion.Blazor.FileManager
 
 Blazor File Manager is a graphical user interface component used to manage the file system. It enables the user to perform common file operations such as accessing, editing, uploading, downloading, and sorting files and folders. This component also allows easy navigation for browsing or selecting a file or folder from the file system.
 
@@ -589,7 +577,7 @@ SfFileManager
 </tr>
 </table>
 
-### Syncfusion.Blazor.Gantt
+## Syncfusion.Blazor.Gantt
 
 The Blazor Gantt is designed to visualize and edit the project schedule, and track the project progress. It helps to organize and schedule the projects, and also the project schedule can be updated through interactions like editing, dragging, and resizing.
 
@@ -640,7 +628,7 @@ SfGantt
 </tr>
 </table>
 
-### Syncfusion.Blazor.Grid
+## Syncfusion.Blazor.Grid
 
 Blazor DataGrid component is used to display and manipulate the tabular data with configuration options to control the way the data is presented. It can pull data from data sources such as IEnumerable, ObservableCollection, OData web services, or DataManager and binding data fields to columns. It also displays the column header to identify the field with support for grouped records.
 
@@ -687,7 +675,7 @@ SfGrid
 </tr>
 </table>
 
-### Syncfusion.Blazor.HeatMap
+## Syncfusion.Blazor.HeatMap
 
 Blazor HeatMap Chart is used to visualize two-dimensional data in which the values are represented in gradient or fixed colors.
 
@@ -725,7 +713,7 @@ SfHeatMap
 </tr>
 </table>
 
-### Syncfusion.Blazor.InPlaceEditor
+## Syncfusion.Blazor.InPlaceEditor
 
 The Blazor In-place Editor component is most useful for editing a value dynamically within its context (in-place). Its features include inline and pop-up modes, and customizable user interface (UI) and events.
 
@@ -767,7 +755,7 @@ SfInPlaceEditor
 </tr>
 </table>
 
-### Syncfusion.Blazor.ImageEditor
+## Syncfusion.Blazor.ImageEditor
 
 The Blazor Image Editor component loads and modifies the images by performing actions like cropping, rotating, resizing, applying filters, inserting text and shapes such as rectangles, circles, and arrows on top of an image, and drawing freehand.
 
@@ -810,7 +798,7 @@ SfImageEditor
 </tr>
 </table>
 
-### Syncfusion.Blazor.Inputs
+## Syncfusion.Blazor.Inputs
 
 A package of Blazor input components comes with a collection of form components. They can be used to get different input values from the users such as text, numbers, patterns, color, and file inputs.
 
@@ -869,7 +857,7 @@ A package of Blazor input components comes with a collection of form components.
 </tr>
 </table>
 
-### Syncfusion.Blazor.Kanban
+## Syncfusion.Blazor.Kanban
 
 The Blazor Kanban board visually depicts work at various stages of a process using columns, cards, and swimlane.
 
@@ -913,7 +901,7 @@ SfKanban
 </tr>
 </table>
 
-### Syncfusion.Blazor.Layouts
+## Syncfusion.Blazor.Layouts
 
 The layout package contains Splitter and Dashboard Layout components. The Blazor DashboardLayout is a grid structured layout control that helps to create a dashboard with panels. The splitter is a layout component used to construct different layouts using multiple and nested panes that are resizable and expandable.
 
@@ -957,7 +945,7 @@ The layout package contains Splitter and Dashboard Layout components. The Blazor
 </tr>
 </table>
 
-### Syncfusion.Blazor.LinearGauge
+## Syncfusion.Blazor.LinearGauge
 
 The Blazor Linear Gauge is used for visualizing numeric values in a linear scale with features like multiple axes, different orientations, and more. The appearance of the gauge can be completely customized to simulate a thermometer, pressure gauge, ruler, etc.
 
@@ -995,7 +983,7 @@ SfLinearGauge
 </tr>
 </table>
 
-### Syncfusion.Blazor.Lists
+## Syncfusion.Blazor.Lists
 
 Blazor ListView component allows to select an item or multiple items from a list-like interface and represents the data in an interactive hierarchical structure across different layouts or views. Lists are used for displaying data, data navigation, and data entry.
 
@@ -1034,7 +1022,7 @@ SfListView
 </tr>
 </table>
 
-### Syncfusion.Blazor.Maps
+## Syncfusion.Blazor.Maps
 
 The Blazor Maps component is used for rendering maps from GeoJSON data or other map providers like OpenStreetMap, Google Maps, and Bing Maps. Its rich feature set includes markers, labels, bubbles, navigation lines, legends, tooltips, zooming, panning, drill down, and much more.
 
@@ -1073,7 +1061,7 @@ SfMaps
 </tr>
 </table>
 
-### Syncfusion.Blazor.Navigations
+## Syncfusion.Blazor.Navigations
 
 A package of Blazor navigation components such as Accordion, ContextMenu, Tabs, Toolbar, TreeView, and Sidebar.
 
@@ -1137,7 +1125,7 @@ A package of Blazor navigation components such as Accordion, ContextMenu, Tabs, 
 </tr>
 </table>
 
-### Syncfusion.Blazor.Notifications
+## Syncfusion.Blazor.Notifications
 
 The notification component Toast is used to notify status or summary information to the end-users.
 
@@ -1183,7 +1171,7 @@ The notification component Toast is used to notify status or summary information
 </tr>
 </table>
 
-### Syncfusion.Blazor.PdfViewer
+## Syncfusion.Blazor.PdfViewer
 
 The Blazor PDF Viewer supports viewing and reviewing PDF files in web applications and also printing them. The thumbnail, bookmark, hyperlink, and table of contents supports provide easy navigation within and outside the PDF files. The form-filling support provides a platform to fill and print with AcroForms. The PDF files can be reviewed with the available annotation tools.
 
@@ -1321,7 +1309,7 @@ SfPdfViewer2
 </tr>
 </table>
 
-### Syncfusion.Blazor.PivotTable
+## Syncfusion.Blazor.PivotTable
 
 The Blazor Pivot Table is a powerful control used to organize and summarize business data and display the result in a cross-table format. It includes major functionalities such as data binding, drilling up and down, Excel-like filtering and sorting, editing, Excel and PDF exporting, several built-in aggregations, pivot table field list, and calculated fields.
 
@@ -1373,7 +1361,7 @@ The Blazor Pivot Table is a powerful control used to organize and summarize busi
 </tr>
 </table>
 
-### Syncfusion.Blazor.Popups
+## Syncfusion.Blazor.Popups
 
 A package of Blazor popup components Dialog and Tooltip are used to display information or to get input from the users in a popup.
 
@@ -1417,7 +1405,7 @@ A package of Blazor popup components Dialog and Tooltip are used to display info
 </tr>
 </table>
 
-### Syncfusion.Blazor.ProgressBar
+## Syncfusion.Blazor.ProgressBar
 
 The Progress Bar control can be used to visualize the changing status of an extended operation such as a download, file transfer, or installation. All the progress bar elements are rendered using scalable vector graphics (SVG) to ensure the quality of the visual experience.
 
@@ -1455,7 +1443,7 @@ SfProgressBar
 </tr>
 </table>
 
-### Syncfusion.Blazor.QueryBuilder
+## Syncfusion.Blazor.QueryBuilder
 
 The Blazor QueryBuilder package contains the QueryBuilder component that allows the users to create and edit filters. It supports data binding, templates, validation, and horizontal and vertical orientation.
 
@@ -1499,7 +1487,7 @@ SfQueryBuilder
 </tr>
 </table>
 
-### Syncfusion.Blazor.RangeNavigator
+## Syncfusion.Blazor.RangeNavigator
 
 The Blazor Range Navigator is an interface for selecting a small range from a larger collection. It is commonly used in financial dashboards to filter a date range for data that needs to be visualized.
 
@@ -1542,7 +1530,7 @@ SfRangeNavigator
 </tr>
 </table>
 
-### Syncfusion.Blazor.RichTextEditor
+## Syncfusion.Blazor.RichTextEditor
 
 The Rich Text Editor component is the HTML and markdown editor that provides the best user experience for creating, updating, and formatting the content.
 
@@ -1584,7 +1572,7 @@ SfRichTextEditor
 </tr>
 </table>
 
-### Syncfusion.Blazor.Schedule
+## Syncfusion.Blazor.Schedule
 
 The Blazor Scheduler component is an event calendar that facilitates users with the common Outlook-calendar features, thus allowing them to plan and manage their events/appointments and their time in an efficient way.
 
@@ -1636,7 +1624,7 @@ The Blazor Scheduler component is an event calendar that facilitates users with 
 </tr>
 </table>
 
-### Syncfusion.Blazor.SmithChart
+## Syncfusion.Blazor.SmithChart
 
 The Blazor Smith Chart is a control for showing the parameters of transmission lines in high-frequency circuit applications. Its rich feature set includes features like legends, markers, tooltips, and data labels.
 
@@ -1674,7 +1662,7 @@ SfSmithChart
 </tr>
 </table>
 
-### Syncfusion.Blazor.Sparkline
+## Syncfusion.Blazor.Sparkline
 
 The Blazor Sparkline Charts is a replacement for normal charts to display trends in a very small area. Customize sparklines completely by changing the series or axis type and by adding markers, data labels, range bands, and more.
 
@@ -1712,7 +1700,7 @@ SfSparkline
 </tr>
 </table>
 
-### Syncfusion.Blazor.Spinner
+## Syncfusion.Blazor.Spinner
 
 The Blazor Spinner is a loading indicator that denotes long-running tasks with no information about their progress. The component provides circular progress indicators without any interaction capabilities.
 
@@ -1747,7 +1735,7 @@ SfSpinner
 </tr>
 </table>
 
-### Syncfusion.Blazor.SplitButtons
+## Syncfusion.Blazor.SplitButtons
 
 The Blazor SplitButtons package contains UI components such as DropDownButton, SplitButton, ProgressButton, and ButtonGroup components. DropDownButton and SplitButton component display a list of items when a button is clicked and the ButtonGroup can be used for easy navigation.
 
@@ -1797,7 +1785,7 @@ The Blazor SplitButtons package contains UI components such as DropDownButton, S
 </tr>
 </table>
 
-### Syncfusion.Blazor.StockChart
+## Syncfusion.Blazor.StockChart
 
 The Blazor Stock Chart is an easy-to-use financial charting package to track and visualize the stock price of any company over a specific period using charting and range tools. It also comes with a lot of features such as zooming, panning, tooltip, crosshair, trackball, period selector, range selector, and events to make the stock charts more interactive.
 
@@ -1876,7 +1864,7 @@ None
 </tr>
 </table>
 
-### Syncfusion.Blazor.TreeGrid
+## Syncfusion.Blazor.TreeGrid
 
 Blazor Tree Grid is a feature-rich control used to visualize self-referential and hierarchical data effectively in a tabular format. It can pull data from data sources such as an enumerable collection of records, RESTful services, OData services, WCF services, or DataManager. It also expands or collapses child data using the tree column.
 
@@ -1918,7 +1906,7 @@ SfTreeGrid
 </tr>
 </table>
 
-### Syncfusion.Blazor.TreeMap
+## Syncfusion.Blazor.TreeMap
 
 Blazor TreeMap is a feature-rich component used to visualize both hierarchical and flat data.  The look and feel of the treemaps can be customized by using the built-in features like color mapping, legends, and label templates.
 
@@ -1957,7 +1945,7 @@ SfTreeMap
 </tr>
 </table>
 
-### Syncfusion.Blazor.WordProcessor
+## Syncfusion.Blazor.WordProcessor
 
 The Blazor Word Processor (Document Editor) is a component with editing capabilities like Microsoft Word. It is used to create, edit, view, and print Word documents. It provides all the common Word processing features including editing text, formatting contents, resizing images and tables, finding and replacing text, bookmarks, tables of contents, printing, and importing and exporting Word documents.
 
@@ -2004,3 +1992,13 @@ The Blazor Word Processor (Document Editor) is a component with editing capabili
 </tr>
 </table>
 <!-- markdownlint-enable MD033 -->
+
+## Benefits of using individual NuGet packages
+
+* These individual NuGet packages are extremely useful while rendering Syncfusion Blazor components in Blazor WebAssembly applications. These packages will reduce the initial loading time in Blazor WebAssembly applications.
+
+* While installing `Syncfusion.Blazor` NuGet package in a Blazor WebAssembly application, it will load the complete Syncfusion Blazor library in the web browser which takes more initial loading time. Whereas, the individual NuGet package installation will resolve this and load the required components assembly alone in the web browser.
+
+* The [Lazy load assemblies in Blazor WebAssembly](https://learn.microsoft.com/en-us/aspnet/core/blazor/webassembly-lazy-load-assemblies?view=aspnetcore-7.0) functionality can be utilized with the Syncfusion Blazor individual NuGet packages.
+
+* These individual NuGet packages can be used in the Blazor Server application to reduce the application deployment size in production.
