@@ -571,7 +571,9 @@ In the following example, you can use the [`DrawImageAsync`](https://help.syncfu
     private async void DrawImageAsync()
     {
         ImageDimension Dimension = await ImageEditor.GetImageDimensionAsync();
-        await ImageEditor.DrawImageAsync("nature.png", Dimension.X, Dimension.Y, 100, 80, true, 90);
+        await ImageEditor.DrawImageAsync("bridge.png", Dimension.X, Dimension.Y, 200, 200, true);
     }
 }
 ```
+
+![Blazor Image Editor with Add Image an image](./images/blazor-image-editor-add-image.png)

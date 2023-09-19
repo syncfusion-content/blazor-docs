@@ -66,33 +66,33 @@ Here is an example of Frame using the [`DrawFrameAsync`](https://help.syncfusion
 
     private async void matClick()
     {
-        await ImageEditor.DrawFrameAsync(FrameType.Mat, 'red', 'blue', 20, 20, 20, 20, FrameLineStyle.Solid, 1);
+        await ImageEditor.DrawFrameAsync(FrameType.Mat, "red", "blue", 20, 20, 20, 20, FrameLineStyle.Solid, 1);
     }
 
     private async void bevelClick()
     {
-        await ImageEditor.DrawFrameAsync(FrameType.Bevel, 'red', 'blue', 20, 20, 20, 20, FrameLineStyle.Solid, 1);
+        await ImageEditor.DrawFrameAsync(FrameType.Bevel, "red", "blue", 20, 20, 20, 20, FrameLineStyle.Solid, 1);
     }
 
     private async void lineClick()
     {
-        await ImageEditor.DrawFrameAsync(FrameType.Line, 'red', 'blue', 20, 20, 20, 20, FrameLineStlyle.Solid, 1);
+        await ImageEditor.DrawFrameAsync(FrameType.Line, "red", "blue", 20, 20, 20, 20, FrameLineStyle.Solid, 1);
     }
 
     private async void insetClick()
     {
-        await ImageEditor.DrawFrameAsync(FrameType.Inset, 'red', 'blue', 20, 20, 20, 20, FrameLineStyle.Solid, 1);
+        await ImageEditor.DrawFrameAsync(FrameType.Inset, "red", "blue", 20, 20, 20, 20, FrameLineStyle.Solid, 1);
     }
 
     private async void hookClick()
     {
-        await ImageEditor.DrawFrameAsync(FrameType.Hook, 'red', 'blue', 20, 20, 20, 20, FrameLineStyle.Solid, 1);
+        await ImageEditor.DrawFrameAsync(FrameType.Hook, "red", "blue", 20, 20, 20, 20, FrameLineStyle.Solid, 1);
     }
 
 }
 ```
 
-![Blazor Image Editor with Filter an image](./images/blazor-image-editor-filter.png)
+![Blazor Image Editor with Frame an image](./images/blazor-image-editor-frame.png)
 
 ## Frame changing event
 
