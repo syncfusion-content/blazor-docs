@@ -135,7 +135,7 @@ Using the [RangeNavigatorBorder](https://help.syncfusion.com/cr/blazor/Syncfusio
 
 ## Snapping
 
-The [AllowSnapping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfRangeNavigator.html#Syncfusion_Blazor_Charts_SfRangeNavigator_AllowSnapping) property toggles the placement of the slider exactly to the left or right at the nearest interval.
+The [AllowSnapping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorModel.html#Syncfusion_Blazor_Charts_RangeNavigatorModel_AllowSnapping) property toggles the placement of the slider exactly to the left or right at the nearest interval.
 
 ```cshtml
 
