@@ -2616,6 +2616,55 @@ The [OnBatchCancel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grid
     }
 }
 ```
+## OnColumnMenuOpen
+
+The [OnColumnMenuOpen](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ColumnMenuOpenEventArgs.html) event triggers before opening the column menu and its submenu items.
+> The column menu rendering action can be cancelled by setting the `Cancel` argument of the `OnColumnMenuOpen` event to true.
+
+```cshtml
+@using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor.Navigations;
+
+<SfGrid DataSource="@Orders" Height="315" AllowGrouping="true"  AllowFiltering="true" ShowColumnMenu="true" AllowPaging="true" AllowSorting=true>
+    <GridFilterSettings Type="FilterType.CheckBox"></GridFilterSettings>
+    <GridGroupSettings ShowGroupedColumn="true"></GridGroupSettings>
+    <GridEvents OnColumnMenuOpen="ColumnMenuOpenHandler" TValue="Order"></GridEvents>
+    <GridColumns>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Center" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150" TextAlign="TextAlign.Center" ShowColumnMenu="false"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText="Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Center" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Center" Width="120"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code{
+    public List<Order> Orders { get; set; }
+
+    protected override void OnInitialized()
+    {
+        Orders = Enumerable.Range(1, 75).Select(x => new Order()
+        {
+            OrderID = 1000 + x,
+            CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
+            Freight = 2.1 * x,
+            OrderDate = DateTime.Now.AddDays(-x),
+        }).ToList();
+    }
+
+    public class Order
+    {
+        public int? OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public DateTime? OrderDate { get; set; }
+        public double? Freight { get; set; }
+    }
+
+    public void ColumnMenuOpenHandler(ColumnMenuOpenEventArgs args)
+    {
+        // Here, you can customize your code.
+    }
+}
+```
 
 ## PageChanging
 
@@ -2635,7 +2684,6 @@ The [OnBatchCancel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grid
 </SfGrid>
 
 @code{
-
     public List<Order> Orders { get; set; }
 
     protected override void OnInitialized()
@@ -4240,3 +4288,4 @@ N> This event is raised specifically for the `Menu`, `CheckBox` and `Excel` [Fil
 ```
 
 N> You can refer to our [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap4) to understand how to present and manipulate data.
+
