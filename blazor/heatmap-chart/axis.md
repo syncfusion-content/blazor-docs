@@ -301,9 +301,9 @@ The text style of the axis labels can be customized using the following options 
 
 ![Customizing the text style for the axis labels in Blazor HeatMap Chart](images/axis/blazor-heatmap-chart-label-with-text-style-customization.png)
 
-### Axis labels with line breaks
+### Providing line breaks
 
-Axis labels with line breaks are used to improve the readability of the HeatMap by breaking the text labels on an axis into multiple lines.
+By dividing the text labels on an axis into multiple lines, axis labels with line breaks improve the readability of the HeatMap. Line breaks are added to the axis labels by including the < br> character in the axis label content.
 
 ```cshtml
 

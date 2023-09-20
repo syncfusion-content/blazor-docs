@@ -329,19 +329,19 @@ You can change the format of the data label, such as currency, decimal, percent,
 
 ![Formatting Data Label in Blazor HeatMap Chart](images/appearance/blazor-heatmap-chart-datalabel-format.png)
 
-## Adding data label as a template
+## Data label template
 
 Any HTML elements can be added as a template in the data labels by using the `LabelTemplate` property of `HeatMapCellSettings` in the HeatMap.
 
-The following examples demonstrate different data binding with the `LabelTemplate` property in the HeatMap.
+The following examples show various data binding methods in the HeatMap using the `LabelTemplate` property.
 
 ### Array binding
 
-When an array of numbers is specified as the data source, you can add a template in the data label by using the `LabelTemplate` property, and its value should be set as **@Template["Value"]**. This allows the cell value to be displayed as the template for the labels.
+By including **@Template["Value"]** in the template content, the value from the data source for the corresponding cell can be displayed in the HeatMap cell as data label template content. Additionally, the x-axis and y-axis label values can be displayed by including **@Template["XLabel"]** and **@Template["YLabel"]** in the template content.
 
 **Table**
 
-The following example illustrates how to add a template in the data label using array table binding.
+The following example demonstrates how to add a data label template for array table binding.
 
 ```cshtml
 
@@ -389,7 +389,7 @@ The following example illustrates how to add a template in the data label using 
 
 **Cell**
 
-The following example illustrates how to add a template in the data label using array cell binding.
+The following example demonstrates how to add a data label template for array cell binding.
 
 ```cshtml
 
@@ -439,11 +439,11 @@ The following example illustrates how to add a template in the data label using 
 
 ### JSON binding
 
-When a list of JSON objects are specified as data source, you can add a template in the data label by using the `LabelTemplate` property, and its value should be bound to the field value from the data source. This allows the specified feild value to be displayed as the template for the labels.
+By including the desired field name in the template content, such as **@Template["Value"]**, the value from the data source for the corresponding cell can be displayed in the HeatMap cell as data label template content.
 
 **Table**
 
-The following example illustrates how to add a template in the data label using JSON table binding.
+The following example demonstrates how to add a data label template for JSON table binding.
 
 ```cshtml
 
@@ -498,7 +498,7 @@ The following example illustrates how to add a template in the data label using 
 
 **Cell**
 
-The following example illustrates how to add a template in the data label using JSON cell binding.
+The following example demonstrates how to add a data label template for JSON cell binding.
 
 ```cshtml
 
@@ -558,7 +558,5 @@ The following example illustrates how to add a template in the data label using 
 }
 
 ```
-
->Note: The properties of data label such as `HeatMapXAxisTextStyle` and `HeatMapYAxisTextStyle` properties are not applicable to template property. The styles can be applied to the label template using the CSS styles of the HTML element.
 
 ![Data Label Template with JSON cell in Blazor HeatMap Chart](images/appearance/blazor-heatmap-chart-datalabel-template-with-JSON_cell.png)
