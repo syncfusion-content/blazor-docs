@@ -464,19 +464,6 @@ In this demo, we tailor the editor's header according to the appointment's subje
         padding: 0 20px;
     }
 
-    #text {
-        cursor: pointer;
-        display: inline-block;
-        font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", sans-serif;
-        font-size: 14px;
-        font-weight: normal;
-        line-height: 14px;
-        user-select: none;
-        margin-left: 8px;
-        vertical-align: middle;
-        white-space: normal;
-    }
-
     #right-button {
         padding: 0 10px;
     }
