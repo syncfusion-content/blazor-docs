@@ -333,50 +333,99 @@ You can change the format of the data label, such as currency, decimal, percent,
 
 Any HTML elements can be added as a template in the data labels by using the `LabelTemplate` property of `HeatMapCellSettings` in the HeatMap.
 
->Note: The properties of data label such as `HeatMapTextStyle` properties are not applicable to template property. The styles can be applied to the label template using the CSS styles of the HTML element.
+The following examples demonstrate different data binding with the `LabelTemplate` property in the HeatMap.
+
+### Array binding
+
+When an array of numbers is specified as the data source, you can add a template in the data label by using the `LabelTemplate` property, and its value should be set as **@Template["Value"]**. This allows the cell value to be displayed as the template for the labels.
+
+**Table**
+
+The following example illustrates how to add a template in the data label using array table binding.
 
 ```cshtml
 
-@using Syncfusion.Blazor.HeatMap
+@using Syncfusion.Blazor.HeatMap;
 
 <SfHeatMap DataSource="@HeatMapData">
+    <HeatMapTitleSettings Text="GDP Growth Rate for Major Economies (in Percentage)">
+        <HeatMapTitleTextStyle Size="15px" FontWeight="500" FontStyle="Normal" FontFamily="Segoe UI"></HeatMapTitleTextStyle>
+    </HeatMapTitleSettings>
     <HeatMapXAxis Labels="@XAxisLabels"></HeatMapXAxis>
     <HeatMapYAxis Labels="@YAxisLabels"></HeatMapYAxis>
-    <HeatMapTitleSettings Text="Sales Revenue per Employee (in 1000 US$)">
-        <HeatMapTitleTextStyle Size="15px" FontWeight="500" FontStyle="Normal" FontFamily="inherit"></HeatMapTitleTextStyle>
+    <HeatMapCellSettings ShowLabel="true">
+         <LabelTemplate>
+            @{
+                var Template = (context as Dictionary<string, string>);
+                <div style="width:20px;height:20px;padding-left: 4px;background-color:#3498db; border: 1px solid #000000; border-radius:50%"> @Template["Value"]</div>
+            }
+        </LabelTemplate>
+    </HeatMapCellSettings>
+    <HeatMapDataSourceSettings IsJsonData="false" AdaptorType="AdaptorType.Table"></HeatMapDataSourceSettings>
+</SfHeatMap>
+
+@code {
+    double[,] GetDefaultData()
+    {
+        double[,] dataSource = new double[,]
+        {
+            {4, 39, 3, 8, 1, 3 },
+            {4, 28, 5, 92, 5, 73 },
+            {4, 45, 5, 152, 0, 44 }
+        };
+        return dataSource;
+    }
+    string[] XAxisLabels = new string[] { "2017", "2016", "2015" };
+    string[] YAxisLabels = new string[] { "Jan-Feb", "Mar-Apr", "May-Jun", "Jul-Aug", "Sep-Oct", "Nov-Dec" };
+    public object HeatMapData { get; set; }
+    protected override void OnInitialized()
+    {
+        HeatMapData = GetDefaultData();
+    }
+}
+
+```
+![Data Label Template with array table in Blazor HeatMap Chart](images/appearance/blazor-heatmap-chart-datalabel-template-with-array_table.png)
+
+**Cell**
+
+The following example illustrates how to add a template in the data label using array cell binding.
+
+```cshtml
+
+@using Syncfusion.Blazor.HeatMap;
+
+<SfHeatMap DataSource="@HeatMapData">
+    <HeatMapTitleSettings Text="Commercial Aviation Accidents and Fatalities by year 2012 - 2017">
+        <HeatMapTitleTextStyle Size="15px" FontWeight="500" FontStyle="Normal" FontFamily="Segoe UI"></HeatMapTitleTextStyle>
     </HeatMapTitleSettings>
+    <HeatMapXAxis Labels="@XAxisLabels"></HeatMapXAxis>
+    <HeatMapYAxis Labels="@YAxisLabels"></HeatMapYAxis>
+    <HeatMapLegendSettings Visible="false"></HeatMapLegendSettings>
     <HeatMapCellSettings>
         <LabelTemplate>
             @{
                 var Template = (context as Dictionary<string, string>);
-                <div style="width:20px;height:20px;padding: 2px;background-color:#3498db; border: 1px solid #000000; border-radius:50%"> @Template["Value"]</div>
+                <div style="width:20px;height:20px;padding-left: 4px;background-color:#3498db; border: 1px solid #000000; border-radius:50%"> @Template["Value"]</div>
             }
         </LabelTemplate>
     </HeatMapCellSettings>
+    <HeatMapDataSourceSettings IsJsonData="false" AdaptorType="AdaptorType.Cell"></HeatMapDataSourceSettings>
 </SfHeatMap>
 
 @code {
-        int[,] GetDefaultData()
-        {
-            int[,] dataSource = new int[,]
+    double[,] GetDefaultData()
+    {
+        double[,] dataSource = new double[,]
             {
-                {73, 39, 89, 39, 94, 55 },
-                {93, 58, 53, 38, 26, 68 },
-                {99, 28, 22, 0, 66, 90 },
-                {14, 46, 97, 69, 69, 3},
-                {7, 16, 47, 47, 88, 6 },
-                {41, 55, 73, 23, 3, 79},
-                {56, 69, 21, 86, 13, 33 },
-                {45, 7, 53, 81, 95, 79},
-                {60, 77, 74, 68, 88, 51 },
-                {25, 100, 10, 12, 78, 14},
-                {25, 56, 55, 58, 12, 82 },
-                {74, 33, 88, 23, 86, 59}
-        };
+                {0, 0, 4, 39}, {0, 1, 3, 8}, {0, 2, 1, 3}, {0, 3, 1, 10}, {0, 4, 4, 4}, {0, 5, 2, 15},
+                {1, 0, 4, 28}, {1, 1, 5, 92}, {1, 2, 5, 73}, {1, 3, 3, 1}, {1, 4, 3, 4}, {1, 5, 4, 126},
+                {2, 0, 4, 45}, {2, 1, 5, 152}, {2, 2, 0, 44}, {2, 3, 4, 54}, {2, 4, 5, 243}, {2, 5, 2, 45}
+            };
         return dataSource;
     }
-    string[] XAxisLabels = new string[] { "Nancy", "Andrew", "Janet", "Margaret", "Steven", "Michael", "Robert", "Laura", "Anne", "Paul", "Karin", "Mario" };
-    string[] YAxisLabels = new string[] { "Mon", "Tue", "Wed", "Thu", "Fri", "Sat" };
+    string[] XAxisLabels = new string[] { "2017", "2016", "2015" };
+    string[] YAxisLabels = new string[] { "Jan-Feb", "Mar-Apr", "May-Jun", "Jul-Aug", "Sep-Oct", "Nov-Dec" };
     public object HeatMapData { get; set; }
     protected override void OnInitialized()
     {
@@ -386,4 +435,130 @@ Any HTML elements can be added as a template in the data labels by using the `La
 
 ```
 
-![Data Label Template in Blazor HeatMap Chart](images/appearance/blazor-heatmap-chart-datalabel-template.png)
+![Data Label Template with array cell in Blazor HeatMap Chart](images/appearance/blazor-heatmap-chart-datalabel-template-with-array_cell.png)
+
+### JSON binding
+
+When a list of JSON objects are specified as data source, you can add a template in the data label by using the `LabelTemplate` property, and its value should be bound to the field value from the data source. This allows the specified feild value to be displayed as the template for the labels.
+
+**Table**
+
+The following example illustrates how to add a template in the data label using JSON table binding.
+
+```cshtml
+
+<SfHeatMap DataSource="@HeatMapData" Width="600" Height="600">
+    <HeatMapTitleSettings Text="Olympic Medal Achievements of most Successful Countries">
+        <HeatMapTitleTextStyle Size="15px" FontWeight="500" FontStyle="Normal" FontFamily="Segoe UI"></HeatMapTitleTextStyle>
+    </HeatMapTitleSettings>
+    <HeatMapDataSourceSettings IsJsonData="true" AdaptorType="AdaptorType.Table" XDataMapping="Region"></HeatMapDataSourceSettings>
+    <HeatMapXAxis Labels="@XLabels"></HeatMapXAxis>
+    <HeatMapYAxis Labels="@YLabels"></HeatMapYAxis>
+    <HeatMapCellSettings>
+        <LabelTemplate>
+            @{
+                var content = (context as RegionalData);
+                if (content != null)
+                {
+                    <div>@content.Region - @content.Jan_2000 - @content.Jan_2004 - @content.Jan_2008 - @content.Jan_2012</div>
+                }
+            }
+        </LabelTemplate>
+    </HeatMapCellSettings>
+</SfHeatMap>
+
+@code
+{
+    public string[] XLabels = new string[] { "China", "France", "GBR", "Germany", "Italy", "Japan", "KOR", "Russia", "USA" };
+    public string[] YLabels = new string[] { "Jan_2000", "Jan_2004", "Jan_2008", "Jan_2012", "Jan_2016" };
+    public class RegionalData
+    {
+        public string Region { get; set; }
+        public int? Jan_2000 { get; set; }
+        public int? Jan_2004 { get; set; }
+        public int? Jan_2008 { get; set; }
+        public int? Jan_2012 { get; set; }
+        public int? Jan_2016 { get; set; }
+    }
+    public RegionalData[] HeatMapData = new RegionalData[]{
+        new RegionalData {Region = "USA", Jan_2000 = 93,Jan_2004 = 101,Jan_2008 = 112,Jan_2012 = 103,Jan_2016 = 121 },
+        new RegionalData {Region = "GBR", Jan_2000 = 28,Jan_2004 = 30,Jan_2008 = 49,Jan_2012 = 65,Jan_2016 = 67 },
+        new RegionalData {Region = "China", Jan_2000 = 58,Jan_2004 = 63,Jan_2008 = 100,Jan_2012 = 91,Jan_2016 = 70 },
+        new RegionalData {Region = "Russia", Jan_2000 = 89,Jan_2004 = 90,Jan_2008 = 60,Jan_2012 = 69,Jan_2016 = 55 },
+        new RegionalData {Region = "Germany", Jan_2000 = 56,Jan_2004 = 49,Jan_2008 = 41,Jan_2012 = 44,Jan_2016 = 42 },
+        new RegionalData {Region = "Japan", Jan_2000 = 18,Jan_2004 = 37,Jan_2008 = 25,Jan_2012 = 38,Jan_2016 = 41 },
+        new RegionalData {Region = "France", Jan_2000 = 38,Jan_2004 = 33,Jan_2008 = 43,Jan_2012 = 35,Jan_2016 = 42 },
+        new RegionalData {Region = "KOR", Jan_2000 = 28,Jan_2004 = 30,Jan_2008 = 32,Jan_2012 = 30,Jan_2016 = 21 },
+        new RegionalData {Region = "Italy", Jan_2000 = 34,Jan_2004 = 32,Jan_2008 = 27,Jan_2012 = 28,Jan_2016 = 28 }
+    };
+}
+
+```
+![Data Label Template with JSON Table in Blazor HeatMap Chart](images/appearance/blazor-heatmap-chart-datalabel-template-with-JSON_table.png)
+
+**Cell**
+
+The following example illustrates how to add a template in the data label using JSON cell binding.
+
+```cshtml
+
+@using Syncfusion.Blazor.HeatMap
+
+<SfHeatMap DataSource="@HeatMapData">
+    <HeatMapTitleSettings Text="Commercial Aviation Accidents and Fatalities by year 2012 - 2017">
+        <HeatMapTitleTextStyle Size="15px" FontWeight="500" FontStyle="Normal" FontFamily="Segoe UI"></HeatMapTitleTextStyle>
+    </HeatMapTitleSettings>
+    <HeatMapDataSourceSettings IsJsonData="true" AdaptorType="AdaptorType.Cell" XDataMapping="Year" YDataMapping="Months" ValueMapping="Fatalities"></HeatMapDataSourceSettings>
+    <HeatMapXAxis Labels="@XLabels"></HeatMapXAxis>
+    <HeatMapYAxis Labels="@YLabels"></HeatMapYAxis>
+    <HeatMapCellSettings>
+        <LabelTemplate>
+            @{
+                var content = (context as SampleData);
+                if(content != null)
+                {
+                    <div>@content.Year - @content.Months - @content.Accidents - @content.Fatalities</div>
+                }
+            }
+        </LabelTemplate>
+    </HeatMapCellSettings>
+</SfHeatMap>
+
+@code {
+    public string[] XLabels = new string[] { "2017", "2016", "2015" };
+    public string[] YLabels = new string[] { "Jan-Feb", "Mar-Apr", "May-Jun", "Jul-Aug", "Sep-Oct", "Nov-Dec" };
+    public class SampleData
+    {
+        public string Year { get; set; }
+        public string Months { get; set; }
+        public int? Accidents { get; set; }
+        public int? Fatalities { get; set; }
+    }
+    public SampleData[] HeatMapData = new SampleData[] {
+        new SampleData  { Year= "2017", Months= "Jan-Feb", Accidents= 4,  Fatalities = 39 },
+        new SampleData  { Year= "2017", Months= "Mar-Apr", Accidents= 3,  Fatalities = 8 },
+        new SampleData  { Year= "2017", Months= "May-Jun", Accidents= 1,  Fatalities = 3 },
+        new SampleData  { Year= "2017", Months= "Jul-Aug", Accidents= 1,  Fatalities = 10 },
+        new SampleData  { Year= "2017", Months= "Sep-Oct", Accidents= 4,  Fatalities = 4 },
+        new SampleData  { Year= "2017", Months= "Nov-Dec", Accidents= 2,  Fatalities = 15 },
+        new SampleData  { Year= "2016", Months= "Jan-Feb", Accidents= 4,  Fatalities = 28 },
+        new SampleData  { Year= "2016", Months= "Mar-Apr", Accidents= 5,  Fatalities = 92 },
+        new SampleData  { Year= "2016", Months= "May-Jun", Accidents= 5,  Fatalities = 73 },
+        new SampleData  { Year= "2016", Months= "Jul-Aug", Accidents= 3,  Fatalities = 1 },
+        new SampleData  { Year= "2016", Months= "Sep-Oct", Accidents= 3,  Fatalities = 4 },
+        new SampleData  { Year= "2016", Months= "Nov-Dec", Accidents= 4,  Fatalities = 126 },
+        new SampleData  { Year= "2015", Months= "Jan-Feb", Accidents= 4,  Fatalities = 45 },
+        new SampleData  { Year= "2015", Months= "Mar-Apr", Accidents= 5,  Fatalities = 152 },
+        new SampleData  { Year= "2015", Months= "May-Jun", Accidents= 0,  Fatalities = 0 },
+        new SampleData  { Year= "2015", Months= "Jul-Aug", Accidents= 4,  Fatalities = 54 },
+        new SampleData  { Year= "2015", Months= "Sep-Oct", Accidents= 5,  Fatalities = 243 },
+        new SampleData  { Year= "2015", Months= "Nov-Dec", Accidents= 2,  Fatalities = 45 }
+        
+    };
+}
+
+```
+
+>Note: The properties of data label such as `HeatMapXAxisTextStyle` and `HeatMapYAxisTextStyle` properties are not applicable to template property. The styles can be applied to the label template using the CSS styles of the HTML element.
+
+![Data Label Template with JSON cell in Blazor HeatMap Chart](images/appearance/blazor-heatmap-chart-datalabel-template-with-JSON_cell.png)
