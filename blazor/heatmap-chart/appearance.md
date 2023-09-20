@@ -331,13 +331,13 @@ You can change the format of the data label, such as currency, decimal, percent,
 
 ## Data label template
 
-Any HTML elements can be added as a template in the data labels by using the `LabelTemplate` property of `HeatMapCellSettings` in the HeatMap.
+Any HTML elements can be added as a template in the data labels by using the [LabelTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapCellSettings.html#Syncfusion_Blazor_HeatMap_HeatMapCellSettings_LabelTemplate) property of [HeatMapCellSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapCellSettings.html) in the HeatMap.
 
 The following examples show various data binding methods in the HeatMap using the `LabelTemplate` property.
 
 ### Array binding
 
-By including **@Template["Value"]** in the template content, the value from the data source for the corresponding cell can be displayed in the HeatMap cell as data label template content. Additionally, the x-axis and y-axis label values can be displayed by including **@Template["XLabel"]** and **@Template["YLabel"]** in the template content.
+By including **Template["Value"]** in the template content, the value from the data source for the corresponding cell can be displayed in the HeatMap cell as data label template content. Additionally, the x-axis and y-axis label values can be displayed by including **Template["XLabel"]** and **Template["YLabel"]** in the template content.
 
 **Table**
 
@@ -439,7 +439,7 @@ The following example demonstrates how to add a data label template for array ce
 
 ### JSON binding
 
-By including the desired field name in the template content, such as **@Template["Value"]**, the value from the data source for the corresponding cell can be displayed in the HeatMap cell as data label template content.
+The value from the data source for the corresponding cell can be displayed in the HeatMap cell as data label template content by including the desired field name from the class object, set in the `DataSource`, in the template content.
 
 **Table**
 
