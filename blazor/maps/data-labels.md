@@ -124,7 +124,7 @@ The Data Label is animated on loading the Map. This can be handled using the [An
 </SfMaps>
 ```
 
-![Blazor Maps with Data Label Animation](./images/DataLabel/blazor-maps-data-label-animation.png)
+![Blazor Maps with Data Label Animation](./images/DataLabel/blazor-maps-data-label-animation.gif)
 
 ## Smart labels
 
