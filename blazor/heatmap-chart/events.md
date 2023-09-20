@@ -1,0 +1,45 @@
+---
+layout: post
+title: Events in Blazor HeatMap Component | Syncfusion
+description: Checkout and learn here all about events in Syncfusion Blazor HeatMap component and much more.
+platform: Blazor
+control: HeatMap Chart
+documentation: ug
+---
+
+# Events in Blazor HeatMap chart Component
+ 
+This section explains the list of events that will be triggered for appropriate actions in HeatMap. The events should be provided to the HeatMap using the [HeatMapEvents](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapEvents.html).
+
+## CellRender
+
+When the [CellRendering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapEvents.html#Syncfusion_Blazor_HeatMap_HeatMapEvents_CellRendering) event is triggered on rendering for each cell in the Heatmap component. To know more about the arguments of this event, refer [here](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapCellRenderEventArgs.html).
+
+```cshtml
+@using Syncfusion.Blazor.HeatMap
+
+<SfHeatMap DataSource="@dataSource" Width="600" Height="600">
+    <HeatMapEvents CellRendering="@CellRender"/>
+    <HeatMapTitleSettings Text="GDP Growth Rate for Major Economies (in Percentage)"/>
+    <HeatMapXAxis Labels="@xAxisLabels"/>
+    <HeatMapYAxis Labels="@yAxisLabels"/>
+</SfHeatMap>
+@code{
+    private void CellRender(HeatMapCellRenderEventArgs args)
+    {
+        if (args.CellValue == "2.2")
+        {
+            args.CellValue = "UPFRONT TEXT";
+            args.CellColor = "#EEEEEE";
+        }
+    }
+    double[,] dataSource = new double[2, 2]
+    {
+            {9.5, 2.2 },
+            {4.3, 8.9 }
+    };
+    string[] xAxisLabels = new string[] { "China", "India" };
+    string[] yAxisLabels = new string[] { "2008", "2009" };
+}
+```
+![CellRender event in Blazor HeatMap Chart](images/events/blazor-heatmap-chart-cell-rendering-event.png)
