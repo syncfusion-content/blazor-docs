@@ -237,7 +237,9 @@ N> The collapsed/expanded state will persist only for local dataSource while scr
 
 ### Render buffered data using Overscan count
 
-The [OverscanCount](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_OverscanCount) property plays a crucial role in optimizing scrolling performance. It allows for the rendering of extra items both before and after the currently visible items, effectively reducing the need for frequent rendering during scrolling. In this demonstration, we have configured OverscanCount to a value of 5, showcasing its impact on scroll efficiency.
+The [OverscanCount](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_OverscanCount) property plays a crucial role in optimizing scrolling performance. It allows for the rendering of extra records before and after the viewport of the grid. It effectively reduce the frequency of data fetch requests while scrolling vertically. 
+
+In the following demonstration, the `OverscanCount` property value is set as 5, showcasing its impact on scroll efficiency.
 
 ```csharp
 
@@ -304,7 +306,7 @@ The [OverscanCount](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grid
     }
 }
 ```
-N> The **OverscanCount** property supports both local and remote data.
+N> The `OverscanCount` property supports both local and remote data.
 
 ## Enable Cell placeholder during Virtualization
 
