@@ -13,9 +13,9 @@ The lazy load grouping allows you to load grouped records to the Grid through th
 
 When you enable this feature, the Grid will render only the initial level caption rows in the collapsed state at grouping. The child rows of each caption will be fetched from the server and render in the Grid when you expand the caption row.
 
-The caption row expand/collapse state will be persisted on paging and Grid pages count will be determined based on the caption and child rows.
+The caption row expand/collapse state will be persisted on paging and grid pages count will be determined based on the caption and child rows.
 
-To enable lazy load grouping in the datagrid, set the **EnableLazyLoading** as true in [GridGroupSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GroupSettings) component.
+To enable lazy load grouping in the datagrid, set the `EnableLazyLoading` as true in [GridGroupSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GroupSettings) component.
 
 The following sample code demonstrates the above,
 
@@ -66,7 +66,7 @@ The following GIF represents the lazy load grouping functionality with paging in
 
 When you enable lazy load grouping with the virtual scrolling feature, the Grid will render only the initial level caption rows in the collapsed state at grouping. The child rows of each caption will be fetched from the server and rendered in the Grid when you expand the caption row. The caption row expand/collapse state will be persisted while scrolling. In addition, for great performance, a loading placeholder indicator(masked row) is shown between the time of fetching the new data and binding it to the grid. Also, the same set of DOM elements is reused to improve performance.
 
-To enable lazy load grouping with virtual scrolling in the datagrid, you need to define the [EnableVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableVirtualization) property as true and the [EnableLazyLoading](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridGroupSettings.html#Syncfusion_Blazor_Grids_GridGroupSettings_EnableLazyLoading) property of the [GridGroupSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridGroupSettings.html) class as true.
+To enable lazy load grouping with virtual scrolling in the datagrid, you need to define the [EnableVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableVirtualization) property as **true** and the [EnableLazyLoading](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridGroupSettings.html#Syncfusion_Blazor_Grids_GridGroupSettings_EnableLazyLoading) property of the [GridGroupSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridGroupSettings.html) class as **true**.
 
 N> When `EnableLazyLoading` is enabled with `EnableVirtualization`, the [PageSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridPageSettings.html#Syncfusion_Blazor_Grids_GridPageSettings_PageSize) property of the [GridPageSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridPageSettings.html) class and the [RowHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_RowHeight) property must be defined.
 
@@ -158,7 +158,7 @@ The following GIF represents the lazy load grouping functionality with virtualiz
 
 ## Lazy load grouping with custom adaptor
 
-You can use the Custom Adaptor of DataManager when binding the remote data. Along with the default server request, this feature will additionally send the below details to handle the lazy load grouping. In the server end, these details are bound with the **LazyLoad** and **LazyExpandAllGroup** parameters in the DataManagerRequest model.
+You can use the Custom Adaptor of `SfDataManager` when binding the remote data. Along with the default server request, this feature will additionally send the below details to handle the lazy load grouping. In the server end, these details are bound with the **LazyLoad** and **LazyExpandAllGroup** parameters in the `DataManagerRequest` model.
 
 | Property Name | Description |
 |-------|---------|
@@ -217,12 +217,11 @@ The following code example describes the lazy load grouping handled at the serve
 ```
 ## Lazy load grouping with infinite scrolling
 
-When you enable lazy load grouping with infinite scrolling, the Grid initially renders only the caption rows in a collapsed state during grouping. This feature supports parent-level caption rows and fetches additional caption rows when the scrollbar reaches the end of the scroller. For child items, it fetches data for the expanded caption rows using the row virtualization concept while performing a light scroll. In addition, for better performance, a loading placeholder indicator (masked row) is shown between the time of fetching the new data and binding it to the grid for rendering child items.
+When you enable lazy load grouping with infinite scrolling, the Grid initially renders only the caption rows in a collapsed state during grouping. This feature supports parent-level caption rows and fetches additional caption rows when the scrollbar reaches the end of the scroller. For child items, it fetches data for the expanded caption rows using the row virtualization concept while performing a vertical scroll. In addition, for better performance, a loading placeholder indicator (masked row) is shown between the time of fetching the new data and binding it to the grid for rendering child items.
 
-To enable lazy load grouping with infinite scrolling in the datagrid, you need to define the [EnableInfiniteScrolling](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableInfiniteScrolling) property as true and the [EnableLazyLoading](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridGroupSettings.html#Syncfusion_Blazor_Grids_GridGroupSettings_EnableLazyLoading) property of the [GridGroupSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridGroupSettings.html) class as true.
+To enable lazy load grouping with infinite scrolling in the datagrid, you need to define the [EnableInfiniteScrolling](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableInfiniteScrolling) property as **true** and the [EnableLazyLoading](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridGroupSettings.html#Syncfusion_Blazor_Grids_GridGroupSettings_EnableLazyLoading) property of the [GridGroupSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridGroupSettings.html) class as **true**.
 
 N> When `EnableLazyLoading` is enabled with `EnableInfiniteScrolling`, the [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Height) and the [RowHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_RowHeight) property must be defined.
-
 
 The following sample code demonstrates the above:
 
