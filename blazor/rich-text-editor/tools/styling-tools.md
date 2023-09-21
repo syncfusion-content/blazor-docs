@@ -202,6 +202,8 @@ The `RichTextEditorFontColor` and `RichTextEditorBackgroundColor` tag has two mo
 
 ![Blazor RichTextEditor displaying background color](../images/blazor-richtexteditor-background-color.png)
 
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LXhKZQirgNPpWyUH?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
+
 ## Built-in editor content styles
 
 By default, the content styles of the Rich Text Editor are not returned while retrieving the HTML value from the editor. So, the styles are not applied when using the HTML value outside the editor. To get the styles from the Rich Text Editor’s content for your application, copy and use the following styles directly in your application. The styles listed are used in the UI elements of the Rich Text Editor.
@@ -440,6 +442,8 @@ This feature allows users to change the appearance of the numbered and bulleted 
 {% endtabs %}
 
 ![Blazor RichTextEditor bullet format list](../images/blazor-richtexteditor-bullet-format.png)
+
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/hZrgDQihUWLCLrIB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Code block
 

@@ -121,6 +121,7 @@ Add the Syncfusion Blazor Diagram component in the **~/Pages/Index.razor** file.
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion Blazor Diagram component in your default web browser.
 
 ## Basic Blazor Diagram elements
+
 * Node: Visualize any graphical object using nodes, which can be arranged and manipulated at the same time on a Blazor diagram page.
 * Connector: Represents the relationship between two nodes. Three types of connectors provided as follows:
  1) Orthogonal
@@ -350,4 +351,3 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 * [Getting Started with Syncfusion Blazor for Client-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-dotnet-cli)
 * [Getting Started with Syncfusion Blazor for Server-Side in Visual Studio](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio)
 * [Getting Started with Syncfusion Blazor for Server-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-dotnet-cli)
-  

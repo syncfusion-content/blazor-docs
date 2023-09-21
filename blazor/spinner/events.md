@@ -9,7 +9,7 @@ documentation: ug
 
 # Events in Blazor Spinner Component
 
-This section explains the list of events of the [Blazor Spinner](https://www.syncfusion.com/blazor-components/blazor-spinner) component which will be triggered for appropriate Spinner actions.
+This section explains the list of events of the Spinner component which will be triggered for appropriate Spinner actions.
 
 ## Created
 
