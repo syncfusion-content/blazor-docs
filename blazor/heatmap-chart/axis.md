@@ -299,11 +299,11 @@ The text style of the axis labels can be customized using the following options 
 
 ```
 
-![Customizing the text style for the axis labels in Blazor HeatMap Chart](images/axis/blazor-heatmap-chart-label-with-text-style-customization.png)
+![Text style customization for the axis labels in Blazor HeatMap chart](images/axis/blazor-heatmap-chart-label-with-text-style-customization.png)
 
 ### Providing line breaks
 
-Axis labels with line breaks improve the readability of the HeatMap by dividing the text labels on an axis into multiple lines. Line breaks are added to the axis labels by including the < br> character in the axis label content.
+Axis labels with line breaks improve the readability of the HeatMap by splitting the text on an axis into multiple lines. The **"\<br>"** character is used to add line breaks to the axis labels.
 
 ```cshtml
 
@@ -311,7 +311,7 @@ Axis labels with line breaks improve the readability of the HeatMap by dividing 
 
 <SfHeatMap DataSource="@HeatMapData">
     <HeatMapXAxis Labels="@XAxisLabels"></HeatMapXAxis>
-    <HeatMapYAxis Labels="@YAxisLabels"></HeatMapYAxis>
+    <HeatMapYAxis Labels="@YAxisLabels" MaxLabelLength="60"></HeatMapYAxis>
 </SfHeatMap>
 
 @code {
@@ -324,8 +324,8 @@ Axis labels with line breaks improve the readability of the HeatMap by dividing 
         };
         return dataSource;
     }
-    string[] XAxisLabels = new string[] { "Actual <br/> Accept", "Actual <br/> Reject" };
-    string[] YAxisLabels = new string[] { "Actual <br/> Accept", "Actual <br/> Reject" };
+    string[] XAxisLabels = new string[] { "Actual<br>Accept", "Actual<br>Reject" };
+    string[] YAxisLabels = new string[] { "Actual<br>Accept", "Actual<br>Reject" };
     public object HeatMapData { get; set; }
     protected override void OnInitialized()
     {
@@ -335,7 +335,7 @@ Axis labels with line breaks improve the readability of the HeatMap by dividing 
 
 ```
 
-![Axis Labels with line breaks in Blazor HeatMap Chart](images/axis/blazor-heatmap-chart-label-with-line-breaks.png)
+![Axis Labels with line breaks in Blazor HeatMap chart](images/axis/blazor-heatmap-chart-axis-labels-with-line-breaks.png)
 
 ### Customizing labels when intersecting with other labels
 
@@ -402,7 +402,7 @@ The below example demonstrates to trim the axis labels by using the `LabelInters
 
 ```
 
-![Customizing the labels when intersecting with other labels in Blazor HeatMap Chart](images/axis/blazor-heatmap-chart-label-when-intersecting-with-other-labels.png)
+![Label customization when intersecting with other labels in Blazor HeatMap chart](images/axis/blazor-heatmap-chart-label-when-intersecting-with-other-labels.png)
 
 ### Rotating labels
 
@@ -412,7 +412,7 @@ The axis labels can be rotated to the desired angles by using the `LabelRotation
 
 @using Syncfusion.Blazor.HeatMap
 
-<SfHeatMap DataSource="@HeatMapData" Width="600" Height="600">
+<SfHeatMap DataSource="@HeatMapData">
     <HeatMapTitleSettings Text="Product wise Monthly sales revenue for a e-commerce website">
         <HeatMapTitleTextStyle Size="15px" FontWeight="500" FontStyle="Normal" FontFamily="Segoe UI"></HeatMapTitleTextStyle>
     </HeatMapTitleSettings>
@@ -460,7 +460,7 @@ The axis labels can be rotated to the desired angles by using the `LabelRotation
 
 ```
 
-![Label Rotation in Blazor HeatMap Chart](images/axis/blazor-heatmap-chart-label-rotation.png)
+![Label rotation in Blazor HeatMap chart](images/axis/blazor-heatmap-chart-label-rotation.png)
 
 ### Label formatting
 
