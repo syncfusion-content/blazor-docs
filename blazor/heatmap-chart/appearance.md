@@ -467,6 +467,13 @@ The following example demonstrates how to add a data label template for JSON tab
             }
         </LabelTemplate>
     </HeatMapCellSettings>
+    <HeatMapPaletteSettings Type="PaletteType.Gradient">
+        <HeatMapPalettes>
+            <HeatMapPalette Color="#C06C84"></HeatMapPalette>
+            <HeatMapPalette Color="#6C5B7B"></HeatMapPalette>
+            <HeatMapPalette Color="#355C7D"></HeatMapPalette>
+        </HeatMapPalettes>
+    </HeatMapPaletteSettings>
 </SfHeatMap>
 
 @code
