@@ -205,7 +205,7 @@ The following GIF represents the infinite scrolling with cache mode functionalit
 
 * The combined height of the initially loaded rows must exceed the height of the viewport.
 
-* Infinite scrolling is not compatible with batch editing, detail template and hierarchy features.
+* Infinite scrolling is not compatible with drag selection, batch editing, detail template and hierarchy features.
 
 * Cell selection will not be persisted in cache mode.
 
