@@ -32,6 +32,62 @@ To modify the Grid appearance, you need to override the default CSS of grid. Fin
 | |e-summaryrow|This class is added to rows of grid summary.|
 | |e-summarycell|This class is added to cells of summary row. This is to override background color of summary.|
 
+## How to customize the color of grid lines
+
+The Syncfusion Blazor Grid component allows you to customize the color of grid lines to match your application's design and style. To customize the color of grid lines, use the GridLines property along with CSS styling to achieve this customization.
+
+```cshtml
+@using Syncfusion.Blazor.Grids
+
+<SfGrid DataSource="@Orders" AllowPaging="true" GridLines="GridLine.Both">
+    <GridPageSettings PageSize="5"></GridPageSettings>
+    <GridColumns>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText="Order Date" Format="d" Type="ColumnType.DateOnly" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderTime) HeaderText="Order Time" Type="ColumnType.TimeOnly" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+<style>
+    .e-grid .e-gridheader, .e-grid .e-headercell, .e-grid .e-rowcell, .e-grid {
+        border-color: yellow;
+        border-style: solid;
+        border-width: 2px;
+        
+    }
+</style>
+
+@code {
+    public List<Order> Orders { get; set; }
+
+    protected override void OnInitialized()
+    {
+        Orders = Enumerable.Range(1, 10).Select(x => new Order()
+            {
+                OrderID = 1000 + x,
+                CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
+                Freight = 2.1 * x,
+                OrderDate = new DateOnly(2023, 2, x),
+                OrderTime = new TimeOnly(x, 00)
+            }).ToList();
+    }
+
+    public class Order
+    {
+        public int? OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public DateOnly? OrderDate { get; set; }
+        public TimeOnly? OrderTime { get; set; }
+        public double? Freight { get; set; }
+    }
+}
+```
+The following image represents customized DataGrid lines,
+
+![Customized Grid lines](../images/GridLines.png)
+
 ## Icons
 
 CSS class|Purpose of CSS class
