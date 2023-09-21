@@ -116,7 +116,7 @@ The data labels can be animated during the initial rendering of the Maps. This c
     <MapsLayers>
         <MapsLayer ShapeData='new {dataOptions= "https://cdn.syncfusion.com/maps/map-data/usa.json"}' TValue="string">
             @* To add data labels *@
-            <MapsDataLabelSettings Visible="true" LabelPath="name" AnimationDuration="2000"></MapsDataLabelSettings>
+            <MapsDataLabelSettings Visible="true" LabelPath="name" AnimationDuration="5000"></MapsDataLabelSettings>
             <MapsShapeSettings Autofill="true"></MapsShapeSettings>
             <MapsLayerTooltipSettings Visible="true" ValuePath="name"></MapsLayerTooltipSettings>
         </MapsLayer>
