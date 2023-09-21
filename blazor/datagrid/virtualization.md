@@ -11,6 +11,11 @@ documentation: ug
 
 DataGrid allows you to load large amount of data without [performance](https://www.syncfusion.com/blazor-components/blazor-datagrid/performance) degradation.
 
+To get start quickly with Virtualization in Blazor DataGrid Component ,you can check on this video.
+
+{% youtube
+"youtube:https://www.youtube.com/watch?v=GrxmYYQPJPE&t=2s" %}
+
 ## Row virtualization
 
 Row virtualization allows you to load and render rows only in the content viewport. It is an alternative way of paging in which the data will be loaded while scrolling vertically. To setup the row virtualization, you need to define
@@ -602,7 +607,5 @@ N> If <b>rowHeight</b> is given, then the page size is calculated by given row h
 * Programmatic selection using the **SelectRows** method is not supported in virtual scrolling.
 
 ## See also
-
-* [Row virtualization with Lazy load grouping in DataGrid](https://blazor.syncfusion.com/documentation/datagrid/grouping/#lazy-load-grouping-with-row-virtualization)
 
 N> You can refer to our [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap4) to understand how to present and manipulate data.

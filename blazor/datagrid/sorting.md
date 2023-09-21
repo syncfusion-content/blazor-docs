@@ -13,6 +13,11 @@ Sorting enables you to sort data in the **Ascending** or **Descending** order. T
 
 To enable sorting in the DataGrid, set the [AllowSorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowSorting) to true. Sorting options can be configured through the [GridSortSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_SortSettings) component.
 
+To get start quickly with How to Sort Data in the Blazor DataGrid Component,you can check on this video.
+
+{% youtube
+"youtube:https://www.youtube.com/watch?v=P3VO_vd0Ev0&t=2s" %}
+
 ```csharp
 
 @using Syncfusion.Blazor.Grids
@@ -199,7 +204,7 @@ During the sort action, the datagrid component triggers two events. The [OnActio
 
 ## Custom sort comparer
 
-You can customize the default sort action for a specific Grid column by defining the [SortComparer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ColumnModel.html#Syncfusion_Blazor_Grids_ColumnModel_SortComparer) property of GridColumn Directive. The SortComparer data type was the IComparer interface, so the custom sort comparer class should be implemented in the interface [IComparer](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.icomparer-1?view=net-5).
+You can customize the default sort action for a specific Grid column by defining the [SortComparer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ColumnModel.html#Syncfusion_Blazor_Grids_ColumnModel_SortComparer) property of GridColumn Directive. The SortComparer data type was the IComparer interface, so the custom sort comparer class should be implemented in the interface [IComparer](https://learn.microsoft.com/en-us/dotnet/api/system.collections.generic.icomparer-1?view=net-7.0).
 
 In the following code example, custom SortComparer class was defined in the CustomerID Column.
 

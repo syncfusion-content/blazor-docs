@@ -9,7 +9,7 @@ documentation: ug
 
 # Custom Binding in Blazor DataGrid Component
 
-The [SfDataManager](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Data.SfDataManager.html) has custom adaptor support which allows you to perform manual operations on the data. This can be utilized for implementing custom data binding and editing operations in the DataGrid component.
+The [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) has custom adaptor support which allows you to perform manual operations on the data. This can be utilized for implementing custom data binding and editing operations in the DataGrid component.
 
 For implementing custom data binding in DataGrid, the **DataAdaptor** class is used. This abstract class acts as a base class for the custom adaptor.
 
@@ -72,6 +72,11 @@ public abstract class DataAdaptor
 ## Data binding
 
 The custom data binding can be performed in the DataGrid component by providing the custom adaptor class and overriding the **Read** or **ReadAsync** method of the **DataAdaptor** abstract class.
+
+To get start quickly with Custom Data Binding in Blazor DataGrid Component,you can check on this video.
+
+{% youtube
+"youtube:https://www.youtube.com/watch?v=LmdUGJBUJqE&t=2s" %}
 
 The following sample code demonstrates implementing custom data binding using custom adaptor,
 
