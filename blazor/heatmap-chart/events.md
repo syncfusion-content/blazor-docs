@@ -9,16 +9,16 @@ documentation: ug
 
 # Events in Blazor HeatMap chart Component
  
-This section explains the list of events that will be triggered for appropriate actions in HeatMap. The events should be provided to the HeatMap using the [HeatMapEvents](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapEvents.html).
+This section explains the list of events that will be triggered for appropriate actions in HeatMap. The events should be declared in the HeatMap component using the [HeatMapEvents](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapEvents.html).
 
-## CellRender
+## CellRendering
 
-When the [CellRendering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapEvents.html#Syncfusion_Blazor_HeatMap_HeatMapEvents_CellRendering) event is triggered on rendering for each cell in the Heatmap component. To know more about the arguments of this event, refer [here](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapCellRenderEventArgs.html).
+The [CellRendering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapEvents.html#Syncfusion_Blazor_HeatMap_HeatMapEvents_CellRendering) event will be triggered before each HeatMap cell is rendered. To know more about arguments of this event, refer [here](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapCellRenderEventArgs.html).
 
 ```cshtml
 @using Syncfusion.Blazor.HeatMap
 
-<SfHeatMap DataSource="@dataSource" Width="600" Height="600">
+<SfHeatMap DataSource="@dataSource">
     <HeatMapEvents CellRendering="@CellRender"/>
     <HeatMapTitleSettings Text="GDP Growth Rate for Major Economies (in Percentage)"/>
     <HeatMapXAxis Labels="@xAxisLabels"/>
