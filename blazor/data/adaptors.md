@@ -217,7 +217,7 @@ The sample response object should look like below.
 
 The GraphQLAdaptor provides an option to retrieve data from the GraphQL server. It performs CRUD and data operations such as paging, sorting, filtering etc by sending the required arguments to the server.
 
-You can provide the GraphQL query string by using the Query property of the GraphQLAdaptorOptions. Also you need to set the ResolverName property of GraphQLAdaptorOptions to map the response. The GraphQLAdaptor expects response as a JSON object with properties of Result, Count and Aggregates which contains the collection of entities, total number of records and value of aggregates respectively. The GraphQL response should be returned in JSON format like { “data”: { … }} with query name as field.
+You can provide the GraphQL query string by using the `Query` property of the `GraphQLAdaptorOptions`. Also you need to set the `ResolverName` property of `GraphQLAdaptorOptions` to map the response. The GraphQLAdaptor expects response as a JSON object with properties of Result, Count and Aggregates which contains the collection of entities, total number of records and value of aggregates respectively. The GraphQL response should be returned in JSON format like { “data”: { … }} with query name as field.
 
 ```cshtml
 @using Syncfusion.Blazor
@@ -416,7 +416,7 @@ Below is the resolver function in the GraphQL server used to bind data.
 
 ```
 
-Below is the DataManagerRequest class which is passed as an argument to the resolver function.
+Below is the `DataManagerRequest` class which is passed as an argument to the resolver function.
 
 ```cshtml
     public class DataManagerRequest
@@ -548,7 +548,7 @@ Below is the DataManagerRequest class which is passed as an argument to the reso
 
 ### Performing CRUD action with GraphQLAdaptor
 
-You can perform the CRUD operations by setting the mutation queries in the Mutation property of GraphQLAdaptorOptions.
+You can perform the CRUD operations by setting the mutation queries in the `Mutation` property of `GraphQLAdaptorOptions`.
 
 ```cshtml
 @using Syncfusion.Blazor
@@ -822,7 +822,7 @@ Below is the resolver function in the GraphQL server used to bind data.
 
 ```
 
-Below is code for DataManagerRequest class which is passed as an argument to the resolver function.
+Below is code for `DataManagerRequest` class which is passed as an argument to the resolver function.
 
 ```cshtml
     public class DataManagerRequest
