@@ -58,15 +58,15 @@ It specifies the location for aligning Toolbar items on the Toolbar. Each comman
 
 ## CssClass
 
-Single or multiple CSS classes can be added to the Toolbar commands using the Toolbar item `CssClass` property. Refer [Set command customization](https://blazor.syncfusion.com/documentation/toolbar/how-to/set-command-customization/) for snippet and output.
+Single or multiple CSS classes can be added to the Toolbar commands using the Toolbar item `CssClass` property. Refer [Set command customization](https://blazor.syncfusion.com/documentation/toolbar/how-to/set-command-customization) for snippet and output.
 
 ## Disabled
 
-It specifies whether an item should be disabled or not. Refer [Enable/Disable Toolbar item](https://blazor.syncfusion.com/documentation/toolbar/how-to/enable-or-disable-toolbar-item/) for snippet and output.
+It specifies whether an item should be disabled or not. Refer [Enable/Disable Toolbar item](https://blazor.syncfusion.com/documentation/toolbar/how-to/enable-or-disable-toolbar-item) for snippet and output.
 
 ## HtmlAttributes
 
-It is used to add custom attributes to the Toolbar command. Supports HTML attributes such as style, class, etc. Refer [Set command customization](https://blazor.syncfusion.com/documentation/toolbar/how-to/set-command-customization/) for snippet and output.
+It is used to add custom attributes to the Toolbar command. Supports HTML attributes such as style, class, etc. Refer [Set command customization](https://blazor.syncfusion.com/documentation/toolbar/how-to/set-command-customization) for snippet and output.
 
 ## Id
 
@@ -99,11 +99,11 @@ It Specifies the Toolbar command display area when an element’s content is too
 
 3. **None**: No priority for display, and as per normal order moves to popup when content exceeds.
 
-Refer [Responsive Mode](https://blazor.syncfusion.com/documentation/toolbar/responsive-mode/#text-mode-for-buttons) for snippet and output.
+Refer [Responsive Mode](https://blazor.syncfusion.com/documentation/toolbar/responsive-mode#text-mode-for-buttons) for snippet and output.
 
 ## PrefixIcon
 
-It defines single or multiple classes separated by space used to specify an icon for the button. The icon will be positioned before the text content if the text is available, otherwise the icon alone will be rendered. Refer [Customize the Scrolling distance](https://blazor.syncfusion.com/documentation/toolbar/how-to/customize-the-scrolling-distance/) for snippet and output.
+It defines single or multiple classes separated by space used to specify an icon for the button. The icon will be positioned before the text content if the text is available, otherwise the icon alone will be rendered. Refer [Customize the Scrolling distance](https://blazor.syncfusion.com/documentation/toolbar/how-to/customize-the-scrolling-distance) for snippet and output.
 
 ## ShowAlwaysInPopup
 
@@ -145,7 +145,7 @@ It specifies where the button text will be displayed on popup mode of the Toolba
 
 3. **Both**: Text will be displayed on popup and Toolbar.
 
-Refer [Responsive Mode](https://blazor.syncfusion.com/documentation/toolbar/responsive-mode/#text-mode-for-buttons) for snippet and output.
+Refer [Responsive Mode](https://blazor.syncfusion.com/documentation/toolbar/responsive-mode#text-mode-for-buttons) for snippet and output.
 
 ## SuffixIcon
 
@@ -192,15 +192,15 @@ N>you can refer [here](https://blazor.syncfusion.com/documentation/appearance/ic
 ## TabIndex
 
 The Toolbar supports adding TabIndex commands using the  `TabIndex` property.TabIndex property can be given as the `HTML element`.
-Refer [Tab key navigation toolbar items ](https://blazor.syncfusion.com/documentation/toolbar/how-to/tab-key-navigation-toolbar-items/) for snippet and output. 
+Refer [Tab key navigation toolbar items ](https://blazor.syncfusion.com/documentation/toolbar/how-to/tab-key-navigation-toolbar-items) for snippet and output. 
 
 ## Template
 
-The Toolbar supports adding template commands using the  `Template` property. Template property can be given as the `HTML element` or `RenderFragment`. Refer [Set item-wise custom template](https://blazor.syncfusion.com/documentation/toolbar/how-to/set-item-wise-custom-template/) for snippet and output.
+The Toolbar supports adding template commands using the  `Template` property. Template property can be given as the `HTML element` or `RenderFragment`. Refer [Set item-wise custom template](https://blazor.syncfusion.com/documentation/toolbar/how-to/set-item-wise-custom-template) for snippet and output.
 
 ## Text
 
-It is used to specify the text to be displayed on the Toolbar button. Refer [Getting Started](https://blazor.syncfusion.com/documentation/toolbar/getting-started/#adding-toolbar-component-to-the-application) for the snippet and output.
+It is used to specify the text to be displayed on the Toolbar button. Refer [Getting Started](https://blazor.syncfusion.com/documentation/toolbar/getting-started#adding-toolbar-component-to-the-application) for the snippet and output.
 
 ## TooltipText
 
@@ -251,7 +251,7 @@ Properties of the button command type:
 SuffixIcon | Defines the class used to specify an icon for the button. The icon is `positioned after` the text if text is available. If both [PrefixIcon](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.ToolbarItem.html#Syncfusion_Blazor_Navigations_ToolbarItem_PrefixIcon) and [SuffixIcon](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.ToolbarItem.html#Syncfusion_Blazor_Navigations_ToolbarItem_SuffixIcon) are specified, only the `PrefixIcon` is considered.
   Width      | Used to set the width of the button.
 
-Refer [Set Blazor Tooltip to the commands](https://blazor.syncfusion.com/documentation/toolbar/how-to/set-tool-tip-to-the-commands/) for snippet and output.
+Refer [Set Blazor Tooltip to the commands](https://blazor.syncfusion.com/documentation/toolbar/how-to/set-tool-tip-to-the-commands) for snippet and output.
 
 ### Separator
 
