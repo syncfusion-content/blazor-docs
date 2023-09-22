@@ -365,7 +365,7 @@ The following example demonstrates how to add a data label template for array ta
 </SfHeatMap>
 
 @code {
-    double[,] GetDefaultData()
+    public double[,] GetDefaultData()
     {
         double[,] dataSource = new double[,]
         {
@@ -375,8 +375,8 @@ The following example demonstrates how to add a data label template for array ta
         };
         return dataSource;
     }
-    string[] XAxisLabels = new string[] { "2015", "2016", "2017" };
-    string[] YAxisLabels = new string[] { "Jan-Feb", "Mar-Apr", "May-Jun", "Jul-Aug", "Sep-Oct", "Nov-Dec" };
+    public string[] XAxisLabels = new string[] { "2015", "2016", "2017" };
+    public string[] YAxisLabels = new string[] { "Jan-Feb", "Mar-Apr", "May-Jun", "Jul-Aug", "Sep-Oct", "Nov-Dec" };
     public object HeatMapData { get; set; }
     protected override void OnInitialized()
     {
@@ -414,7 +414,7 @@ The following example demonstrates how to add a data label template for array ce
 </SfHeatMap>
 
 @code {
-    double[,] GetDefaultData()
+    public double[,] GetDefaultData()
     {
         double[,] dataSource = new double[,]
             {
@@ -424,8 +424,8 @@ The following example demonstrates how to add a data label template for array ce
             };
         return dataSource;
     }
-    string[] XAxisLabels = new string[] { "2015", "2016", "2017" };
-    string[] YAxisLabels = new string[] { "Jan-Feb", "Mar-Apr", "May-Jun", "Jul-Aug", "Sep-Oct", "Nov-Dec" };
+    public string[] XAxisLabels = new string[] { "2015", "2016", "2017" };
+    public string[] YAxisLabels = new string[] { "Jan-Feb", "Mar-Apr", "May-Jun", "Jul-Aug", "Sep-Oct", "Nov-Dec" };
     public object HeatMapData { get; set; }
     protected override void OnInitialized()
     {
