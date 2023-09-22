@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Events in Blazor HeatMap Component | Syncfusion
-description: Checkout and learn here all about events in Syncfusion Blazor HeatMap component and much more.
+description: Checkout and learn here all about events in Syncfusion Blazor HeatMap component and much more details.
 platform: Blazor
 control: HeatMap Chart
 documentation: ug
