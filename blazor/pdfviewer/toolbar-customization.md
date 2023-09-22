@@ -279,8 +279,6 @@ The following code represnts how to create custom toolbar with save and some cus
 ```
 ![Blazor PDFViewer with Custom Toolbar](./images/toolbar-customization.png)
 
-![Blazor PDFViewer with Custom Toolbar](./images/customization-final.png)
-
 N> [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Toolbar/Custom%20Toolbar/Custom%20toolbar%20with%20save%20option).
 
 The following sample mimics all the options of the PDF Viewer default toolbar in a custom toolbar along with the save button.
@@ -359,6 +357,7 @@ You can customize the appearance of the toolbar icons by disabling the default t
 </style>
 Footer
 ```
+![Blazor PDFViewer with Custom Toolbar](./images/customization-final.png)
 
 N> [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Toolbar/Custom%20Toolbar/Custom%20toolbar%20with%20PNG%20image).
 
