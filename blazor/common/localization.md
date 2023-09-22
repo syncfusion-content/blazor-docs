@@ -646,8 +646,8 @@ N> [View Sample in GitHub](https://github.com/SyncfusionExamples/blazor-localiza
 * [How to perform localization using database instead of resource files in Blazor?](https://www.syncfusion.com/kb/13012)
 
 ## See also
-* [Statically set the culture in Blazor WASM App](https://docs.microsoft.com/en-us/aspnet/core/blazor/globalization-localization?pivots=webassembly&view=aspnetcore-6.0#statically-set-the-culture)
-* [Statically set the culture in Blazor Server App](https://docs.microsoft.com/en-us/aspnet/core/blazor/globalization-localization?pivots=server&view=aspnetcore-6.0#statically-set-the-culture)
-* [Dynamically set the culture by user preference in WASM App](https://docs.microsoft.com/en-us/aspnet/core/blazor/globalization-localization?pivots=webassembly&view=aspnetcore-6.0#dynamically-set-the-culture-by-user-preference)
-* [Dynamically set the culture by user preference in Server App](https://docs.microsoft.com/en-us/aspnet/core/blazor/globalization-localization?pivots=server&view=aspnetcore-6.0#dynamically-set-the-culture-by-user-preference)
+* [Statically set the culture in Blazor WASM App](https://learn.microsoft.com/en-us/aspnet/core/blazor/globalization-localization?pivots=webassembly&view=aspnetcore-6.0#statically-set-the-culture)
+* [Statically set the culture in Blazor Server App](https://learn.microsoft.com/en-us/aspnet/core/blazor/globalization-localization?pivots=server&view=aspnetcore-6.0#statically-set-the-culture)
+* [Dynamically set the culture by user preference in WASM App](https://learn.microsoft.com/en-us/aspnet/core/blazor/globalization-localization?pivots=webassembly&view=aspnetcore-6.0#dynamically-set-the-culture-by-user-preference)
+* [Dynamically set the culture by user preference in Server App](https://learn.microsoft.com/en-us/aspnet/core/blazor/globalization-localization?pivots=server&view=aspnetcore-6.0#dynamically-set-the-culture-by-user-preference)
 
