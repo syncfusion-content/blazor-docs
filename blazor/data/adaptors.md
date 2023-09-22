@@ -213,7 +213,7 @@ The sample response object should look like below.
 }
 ```
 
-## GraphQL adaptor
+## GraphQL service binding
 
 The GraphQLAdaptor provides an option to retrieve data from the GraphQL server. It performs CRUD and data operations such as paging, sorting, filtering etc by sending the required arguments to the server.
 
@@ -290,89 +290,19 @@ Below is the resolver function in the GraphQL server used to bind data.
             if (dataManager.Search != null)
             {
                 //Handle Searching here
-                result = result.Where(order =>
-                    order.OrderID.ToString().Contains(dataManager.Search.FirstOrDefault().Key) ||
-                    order.CustomerID.Contains(dataManager.Search.FirstOrDefault().Key) ||
-                    order.Freight.ToString().Contains(dataManager.Search.FirstOrDefault().Key) ||
-                    order.OrderDate.ToString().Contains(dataManager.Search.FirstOrDefault().Key)
-                ).ToList();
             }
             if (dataManager.Sorted != null)
             {
                 //Handle Sorting here
-                if (dataManager.Sorted.FirstOrDefault().Name == "OrderID")
-                {
-                    if (dataManager.Sorted.FirstOrDefault().Direction == "ascending")
-                    {
-                        result = result.OrderBy(order => order.OrderID).ToList();
-                    }
-                    else
-                    {
-                        result = result.OrderByDescending(order => order.OrderID).ToList();
-                    }
-                }
-                if (dataManager.Sorted.FirstOrDefault().Name == "CustomerID")
-                {
-                    if (dataManager.Sorted.FirstOrDefault().Direction == "ascending")
-                    {
-                        result = result.OrderBy(order => order.CustomerID).ToList();
-                    }
-                    else
-                    {
-                        result = result.OrderByDescending(order => order.CustomerID).ToList();
-                    }
-                }
-                if (dataManager.Sorted.FirstOrDefault().Name == "Freight")
-                {
-                    if (dataManager.Sorted.FirstOrDefault().Direction == "ascending")
-                    {
-                        result = result.OrderBy(order => order.Freight).ToList();
-                    }
-                    else
-                    {
-                        result = result.OrderByDescending(order => order.Freight).ToList();
-                    }
-                }
-                if (dataManager.Sorted.FirstOrDefault().Name == "OrderDate")
-                {
-                    if (dataManager.Sorted.FirstOrDefault().Direction == "ascending")
-                    {
-                        result = result.OrderBy(order => order.OrderDate).ToList();
-                    }
-                    else
-                    {
-                        result = result.OrderByDescending(order => order.OrderDate).ToList();
-                    }
-                }
             }
             if (dataManager.Where != null)
             {
                 //Handle filtering here
-                IDictionary<string, object> keyValuePair = GetValue(dataManager.Where, new Dictionary<string, object>());
-                string field = keyValuePair.FirstOrDefault().Key;
-                object value = keyValuePair.FirstOrDefault().Value;
-                if (field == "OrderID")
-                {
-                    result = result.Where(order => order.OrderID.Equals(value)).ToList();
-                }
-                else if (field == "CustomerID")
-                {
-                    result = result.Where(order => order.CustomerID.ToString().Contains((string)value)).ToList();
-                }
-                else if (field == "Freight")
-                {
-                    result = result.Where(order => order.Freight.ToString() == value.ToString()).ToList();
-                }                
-                else if (field == "OrderDate")
-                {
-                    result = result.Where(order => order.OrderDate.ToString().Contains((string)value)).ToList();
-                }
             }
             int count = result.Count;
             if (dataManager.Skip > 0 || dataManager.Take > 0)
             {
                 //Handle paging here
-                result = result.Skip(dataManager.Skip).Take(dataManager.Take).ToList();
             }
             if (dataManager.Aggregates != null)
             {
@@ -383,25 +313,6 @@ Below is the resolver function in the GraphQL server used to bind data.
             return new ReturnType<Order>() { Count = count, Result = result };
         }
 
-
-        private IDictionary<string, object> GetValue(List<WhereFilter> whereFilters, IDictionary<string, object> result)
-        {
-            foreach (var filter in whereFilters)
-            {
-                if ((bool)filter.IsComplex)
-                {
-                    if (filter.value == null)
-                    {
-                        result = GetValue(filter.predicates, result);
-                    }
-                }
-                else
-                {
-                    result.Add(filter.Field, filter.value);
-                }
-            }
-            return result;
-        }
     }
 
     public class ReturnType<T>
@@ -624,62 +535,26 @@ Below is the mutation methods in the GraphQL server used for CRUD operation
         public Order CreateBook(Order order, int index, string action,
             [GraphQLType(typeof(AnyType))] IDictionary<string, object> additionalParameters)
         {
-            GraphQLQuery.Orders.Insert(index, order);
+            //Perform insert operation here
             return order;
         }
         public Order UpdateBook(Order order, string action, string primaryColumnName, int primaryColumnValue,
             [GraphQLType(typeof(AnyType))] IDictionary<string, object> additionalParameters)
         {
-            Order updatedOrder = GraphQLQuery.Orders.Where(x => x.OrderID == primaryColumnValue).FirstOrDefault();
-            updatedOrder.OrderID = order.OrderID;
-            updatedOrder.CustomerID = order.CustomerID;
-            updatedOrder.Freight = order.Freight;
-            updatedOrder.OrderDate = order.OrderDate;
+            //Perform update operation here
             return updatedOrder;
         }
         public Order DeleteBook(int primaryColumnValue, string action, string primaryColumnName,
             [GraphQLType(typeof(AnyType))] IDictionary<string, object> additionalParameters)
         {
-            Order deletedOrder = GraphQLQuery.Orders.Where(x => x.OrderID == primaryColumnValue).FirstOrDefault();
-            GraphQLQuery.Orders.Remove(deletedOrder);
+            //Perform delete operation here
             return deletedOrder;
         }
         public List<Order> BatchUpdate(List<Order>? changed, List<Order>? added,
             List<Order>? deleted, string action, String primaryColumnName,
             [GraphQLType(typeof(AnyType))] IDictionary<string, object> additionalParameters, int? dropIndex)
         {
-            if (changed != null && changed.Count > 0)
-            {
-                foreach (var changedOrder in (IEnumerable<Order>)changed)
-                {
-                    Order order = GraphQLQuery.Orders.Where(e => e.OrderID == changedOrder.OrderID).FirstOrDefault();
-                    order.OrderID = changedOrder.OrderID;
-                    order.CustomerID = changedOrder.CustomerID;
-                    order.OrderDate = changedOrder.OrderDate;
-                    order.Freight = changedOrder.Freight;
-                }
-            }
-            if (added != null && added.Count > 0)
-            {
-                if (dropIndex != null)
-                {
-                    //for Drag and Drop feature in Grid
-                    GraphQLQuery.Orders.InsertRange((int)dropIndex, added);
-                }
-                else {
-                    foreach (var newOrder in (IEnumerable<Order>)added)
-                    {
-                        GraphQLQuery.Orders.Add(newOrder);
-                    }
-                }                
-            }
-            if (deleted != null && deleted.Count > 0)
-            {
-                foreach (var deletedOrder in (IEnumerable<Order>)deleted)
-                {
-                    GraphQLQuery.Orders.Remove(GraphQLQuery.Orders.Where(e => e.OrderID == deletedOrder.OrderID).FirstOrDefault());
-                }
-            }
+            //Perform batch update operation here
             return GraphQLQuery.Orders;
         }
 
@@ -696,89 +571,19 @@ Below is the resolver function in the GraphQL server used to bind data.
             if (dataManager.Search != null)
             {
                 //Handle Searching here
-                result = result.Where(order =>
-                    order.OrderID.ToString().Contains(dataManager.Search.FirstOrDefault().Key) ||
-                    order.CustomerID.Contains(dataManager.Search.FirstOrDefault().Key) ||
-                    order.Freight.ToString().Contains(dataManager.Search.FirstOrDefault().Key) ||
-                    order.OrderDate.ToString().Contains(dataManager.Search.FirstOrDefault().Key)
-                ).ToList();
             }
             if (dataManager.Sorted != null)
             {
                 //Handle Sorting here
-                if (dataManager.Sorted.FirstOrDefault().Name == "OrderID")
-                {
-                    if (dataManager.Sorted.FirstOrDefault().Direction == "ascending")
-                    {
-                        result = result.OrderBy(order => order.OrderID).ToList();
-                    }
-                    else
-                    {
-                        result = result.OrderByDescending(order => order.OrderID).ToList();
-                    }
-                }
-                if (dataManager.Sorted.FirstOrDefault().Name == "CustomerID")
-                {
-                    if (dataManager.Sorted.FirstOrDefault().Direction == "ascending")
-                    {
-                        result = result.OrderBy(order => order.CustomerID).ToList();
-                    }
-                    else
-                    {
-                        result = result.OrderByDescending(order => order.CustomerID).ToList();
-                    }
-                }
-                if (dataManager.Sorted.FirstOrDefault().Name == "Freight")
-                {
-                    if (dataManager.Sorted.FirstOrDefault().Direction == "ascending")
-                    {
-                        result = result.OrderBy(order => order.Freight).ToList();
-                    }
-                    else
-                    {
-                        result = result.OrderByDescending(order => order.Freight).ToList();
-                    }
-                }
-                if (dataManager.Sorted.FirstOrDefault().Name == "OrderDate")
-                {
-                    if (dataManager.Sorted.FirstOrDefault().Direction == "ascending")
-                    {
-                        result = result.OrderBy(order => order.OrderDate).ToList();
-                    }
-                    else
-                    {
-                        result = result.OrderByDescending(order => order.OrderDate).ToList();
-                    }
-                }
             }
             if (dataManager.Where != null)
             {
                 //Handle filtering here
-                IDictionary<string, object> keyValuePair = GetValue(dataManager.Where, new Dictionary<string, object>());
-                string field = keyValuePair.FirstOrDefault().Key;
-                object value = keyValuePair.FirstOrDefault().Value;
-                if (field == "OrderID")
-                {
-                    result = result.Where(order => order.OrderID.Equals(value)).ToList();
-                }
-                else if (field == "CustomerID")
-                {
-                    result = result.Where(order => order.CustomerID.ToString().Contains((string)value)).ToList();
-                }
-                else if (field == "Freight")
-                {
-                    result = result.Where(order => order.Freight.ToString() == value.ToString()).ToList();
-                }                
-                else if (field == "OrderDate")
-                {
-                    result = result.Where(order => order.OrderDate.ToString().Contains((string)value)).ToList();
-                }
             }
             int count = result.Count;
             if (dataManager.Skip > 0 || dataManager.Take > 0)
             {
                 //Handle paging here
-                result = result.Skip(dataManager.Skip).Take(dataManager.Take).ToList();
             }
             if (dataManager.Aggregates != null)
             {
@@ -789,25 +594,6 @@ Below is the resolver function in the GraphQL server used to bind data.
             return new ReturnType<Order>() { Count = count, Result = result };
         }
 
-
-        private IDictionary<string, object> GetValue(List<WhereFilter> whereFilters, IDictionary<string, object> result)
-        {
-            foreach (var filter in whereFilters)
-            {
-                if ((bool)filter.IsComplex)
-                {
-                    if (filter.value == null)
-                    {
-                        result = GetValue(filter.predicates, result);
-                    }
-                }
-                else
-                {
-                    result.Add(filter.Field, filter.value);
-                }
-            }
-            return result;
-        }
     }
 
     public class ReturnType<T>
