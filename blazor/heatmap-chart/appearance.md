@@ -337,7 +337,7 @@ The following examples show various data binding methods in the HeatMap using th
 
 #### Array binding
 
-By including **Template["Value"]** in the template content, the value from the data source for the corresponding cell can be displayed in the HeatMap cell as data label template content. Additionally, the x-axis and y-axis label values can be displayed by including **Template["XLabel"]** and **Template["YLabel"]** in the template content.
+The data for the corresponding cell from the data source can be received as a **Dictionary<string, string>** type. The **XLabel**, **YLabel**, and **Value** keys can be used to retrieve the x-axis label, y-axis label, and cell value from the dictionary, respectively.
 
 **Table**
 
