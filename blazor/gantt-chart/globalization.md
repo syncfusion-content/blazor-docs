@@ -124,6 +124,95 @@ Gantt_TimelineCell | Timeline-Zelle
 Gantt_ConfirmPredecessorDelete | Möchten Sie den Abhängigkeitslink wirklich entfernen?
 Gantt_Indent | Einzug
 Gantt_Outdent | Outdent
+Grid_EmptyRecord | Keine Datensätze zum Anzeigen
+Grid_True | wahr
+Grid_False | falsch
+Grid_InvalidFilterMessage | Ungültige Filterdaten
+Grid_FilterbarTitle | Filterleistenzelle
+Grid_EmptyDataSourceError | DataSource darf beim ersten Laden nicht leer sein, da Spalten aus dataSource in AutoGenerate Column Grid generiert werden
+Grid_Add | Hinzufügen
+Grid_Edit | Bearbeiten
+Grid_Cancel | Abbrechen
+Grid_Update | Aktualisieren
+Grid_Delete | Löschen
+Grid_Print | Drucken
+Grid_Pdfexport | PDF-Export
+Grid_Excelexport | Excel Export
+Grid_Wordexport | Word Export
+Grid_Csvexport | CSV Export
+Grid_Search | Suche
+Grid_Columnchooser | Spalten
+Grid_Save | Speichern
+Grid_Item | Eintrag
+Grid_Items | Einträge
+Grid_EditOperationAlert | Keine Datensätze zum Bearbeiten ausgewählt
+Grid_DeleteOperationAlert | Keine Datensätze zum Löschen ausgewählt
+Grid_SaveButton | Speichern
+Grid_OKButton | Ok
+Grid_CancelButton | Abbrechen
+Grid_EditFormTitle | Details von
+Grid_AddFormTitle | Neuen Datensatz hinzufügen
+Grid_ConfirmDelete | Möchten Sie den Datensatz wirklich löschen?
+Grid_CancelEdit | Möchten Sie die Änderungen wirklich verwerfen?
+Grid_ChooseColumns | Spalte auswählen
+Grid_SearchColumns | Spalten durchsuchen
+Grid_Matchs | Keine Treffer gefunden
+Grid_FilterButton | Filter
+Grid_ClearButton | Zurücksetzen
+Grid_StartsWith | Beginnt mit
+Grid_EndsWith | Endet mit
+Grid_Contains | Enthält
+Grid_Equal | Gleich
+Grid_NotEqual | Nicht gleich
+Grid_LessThan | Weniger als
+Grid_LessThanOrEqual | Weniger als oder gleich
+Grid_GreaterThan | Größer als
+Grid_GreaterThanOrEqual | Größer als oder gleich
+Grid_ChooseDate | Wählen Sie ein Datum
+Grid_EnterValue | Geben Sie den Wert ein
+Grid_Copy | Kopieren
+Grid_AutoFitAll | Automatisch alle Spalten anpassen
+Grid_AutoFit | Diese Spalte automatisch anpassen
+Grid_Export | Export
+Grid_SortAscending | Aufsteigend sortieren
+Grid_SortDescending | Absteigend sortieren
+Grid_EditRecord | Datensatz bearbeiten
+Grid_DeleteRecord | Aufzeichnung löschen
+Grid_FilterMenu | Filter
+Grid_SelectAll | Wählen Sie Alle
+Grid_FilterTrue | Wahr
+Grid_FilterFalse | Falsch
+Grid_NoResult | Keine Treffer gefunden
+Grid_ClearFilter | Filter zurücksetzen
+Grid_NumberFilter | Anzahl Filter
+Grid_TextFilter | Textfilter
+Grid_DateFilter | Datumsfilter
+Grid_DateTimeFilter | Datum-Uhrzeit-Filter
+Grid_MatchCase | Groß-/Kleinschreibung beachten
+Grid_Between | Zwischen
+Grid_CustomFilter | Benutzerdefinierte Filter
+Grid_CustomFilterPlaceHolder | Geben Sie den Wert ein
+Grid_CustomFilterDatePlaceHolder | Wählen Sie ein Datum
+Grid_AND | UND
+Grid_OR | ODER
+Grid_RowSelectionCheckBoxARIA | Kontrollkästchen Zeile
+Grid_FilterMenuIconARIA | Filtersymbol
+Grid_ColumnMenuIconARIA | Spaltenmenüsymbol
+Grid_ColumnHeaderARIA | Spaltenüberschrift
+Grid_FilterCheckboxARIA | Kontrollkästchen Filter
+Grid_Ascending | Aufsteigend
+Grid_Descending | Absteigend
+Grid_None | Keiner
+Grid_Sort | Sortieren
+Grid_TemplateColumnARIA | Ist Vorlage
+Grid_FilterDescription | Drücken Sie Alt Down, um das Filtermenü zu öffnen
+Grid_SortDescription | DRÜCKE ENTER, UM ZU CHATEN
+Grid_ColumnMenuDescription | Drücken Sie Alt Down, um das Spaltenmenü zu öffnen
+Grid_ColumnHeaderUndefinedARIA | spaltenkopf undefiniert
+Grid_EmptyColumnHeaderUndefinedARIA | leere Spaltenüberschrift undefiniert
+Grid_Close | schliessen
+Grid_FilterOperator | FILTERBEDIENER
+Grid_FilterValue | Filterwert
 
 ### Blazor server-side
 
