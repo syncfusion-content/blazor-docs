@@ -9,7 +9,9 @@ documentation: ug
 # Getting Started with Blazor playground
 
 This section briefly explains about how to use the blazor playground.
-Open the [Blazor Playground](https://blazorplayground.syncfusion.com/) in your browser. Use the code editor to create your desired  .razor format code. Once you are done writing your code, press the run button or <kbd>Ctrl</kbd>+<kbd>R</kbd> to execute the code. The output of the executed code will appear in the result view.
+1. Open the [Blazor Playground](https://blazorplayground.syncfusion.com/) in your browser. 
+2. Use the code editor to create your desired  .razor format code. 
+3. Once you are done writing your code, press the run button or <kbd>Ctrl</kbd>+<kbd>R</kbd> to execute the code. The output of the executed code will appear in the result view.
 
 ![Getting Started with Blazor playground](images/getting_started.png)
 
@@ -17,7 +19,7 @@ Open the [Blazor Playground](https://blazorplayground.syncfusion.com/) in your b
 
 To create a child component, you can click the "+" button in the Blazor playground. This will add a new component to the project. You can then type the name for the child component in the input box.
 
-The index.razor file is the main file for the Blazor playground app. To view the outcome of the child component, you can refer to it in the index.razor file.
+The index.razor file is the main file for the Blazor playground app. To view the outcome of the child component, you can refer to it in the index.razor file and press run button to execute the code.
 
 ![Adding child components in Blazor playgorund](images/ChildComponent.png)
 

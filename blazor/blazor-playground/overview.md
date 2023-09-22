@@ -19,23 +19,37 @@ The Syncfusion Blazor Playground for Blazor application interface comprises the 
 
 ## Appbar
 The appbar of Syncfusion Blazor playground allows you to access the following functionalities: 
+
 ![Appbar](images/Appbar.png)
 ## Run
 The code from the editor is compiled, and the output is displayed in the Result View.
+
+![Run](images/Run_Button.png)
 ## Share
-you can obtain a URL link to exchange your code snippets.
-There are two ways to share the code snippet
+You can obtain a URL link to exchange your code snippets.
+There are two ways to share the code snippet.
+
+![Share](images/Share_Snippet.png)
 ### Shared Link:
 A shared link is useful if you want to allow others to customize the code snippet.
+
+![ShareLink](images/Shared_link.png)
 ### Embed Link:
 Creates a hyperlink that allows you to integrate the code snippet into blog entries and various web pages. You can customize the embed link through different options, such as display code editor, display result view, display error console and display app bar.
+
+![EmbedLink](images/Embed_link.png)
 ## Services
 You can add new injectable services or override the existing service configuration to suit your requirements.
+
+![Services](images/Services.png)
 ## Output theme:
 In the output section, we offer the option to customize the themes for Syncfusion Blazor components. By clicking the "Output Theme" button, a dropdown will appear displaying all the available Syncfusion Blazor themes. You can select any desired theme for Syncfusion Blazor components to personalize their appearance.
 
+![OutputTheme](images/Output_theme.png)
+
 ## SideBar
 Blazor Playground offers a user-friendly side bar that houses essential tools, such as the Package Manager and Static Assets Manager.
+
 ![SideBar](images/SideBar.png)
 
 ### Package Manager
@@ -50,8 +64,12 @@ If you want to add additional scripts/styles to the application, you can click t
 ## Code Editor
 The editor provides an environment for type, copy , cut, paste and edit. There is a default index.razor and also provides an option to add .razor and .cs files.
 
+![CodeEditor](images/Code_Editor.png)
+
 ## Result View
 Once you click the run button, the code within the code editor gets compiled. If there are no errors, the result view will show the output.
+
+![ResultView](images/Result_View.png)
 
 ## Error Console
 During compile time, any errors and warnings in the code are displayed, along with their corresponding line numbers, helps you to identify and address issues effectively.

@@ -6,7 +6,7 @@ platform: Blazor
 component: Common
 documentation: ug
 ---
-## Save Code Snippet and share
+# Save Code Snippet and share
 
 In Blazor Playground, you can share your code snippets using unique URLs. This feature is divided into two sections for ease of use. Each snippet gets its own distinct URL, making it simple to showcase and discuss your code with others.
 
@@ -14,13 +14,13 @@ In Blazor Playground, you can share your code snippets using unique URLs. This f
 
 N> The Share button becomes active only once you've clicked the Run button to compile and run your code.
 
-### Shared Link
+## Shared Link
 
 A shared link is useful if you want to allow others to customize the code snippet and package versions. You can share a unique URL that provides access to the code snippet and allows others to modify it according to their needs.
 
 ![Shared Link](images/Shared_link.png)
 
-### Embed Link
+## Embed Link
 
 An embed link is useful if you want to share the code snippet but don't want others to customize the installed packages. Based on that embed support, we can embed our work anywhere by providing the values in URL query params. 
 
