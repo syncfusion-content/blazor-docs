@@ -787,7 +787,7 @@ To enable the highlight for markers in Maps, set the [MapsMarkerHighlightSetting
 
 The polygon shapes can be highlighted with mouse hover interaction if the [Enable](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsPolygonHighlightSettings.html#Syncfusion_Blazor_Maps_MapsPolygonHighlightSettings_Enable) property of [MapsPolygonHighlightSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsPolygonHighlightSettings.html) is set to **true**. The following properties and a class are available in `MapsPolygonHighlightSettings` to customize the polygon shape when it is highlighted.
 
-[Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsPolygonHighlightSettings.html#Syncfusion_Blazor_Maps_MapsPolygonHighlightSettings_Fill) -  It is used to change the color of the highlighted polygon shape.
+[Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsPolygonHighlightSettings.html#Syncfusion_Blazor_Maps_MapsPolygonHighlightSettings_Fill) - It is used to change the color of the highlighted polygon shape.
 [Opacity](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsPolygonHighlightSettings.html#Syncfusion_Blazor_Maps_MapsPolygonHighlightSettings_Opacity) - It is used to change the opacity of the highlighted polygon shape.
 [MapsPolygonHighlightBorder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsPolygonHighlightBorder.html) - This class is used to change the color, width, and opacity of the border of the highlighted border shape.
 
