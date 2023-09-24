@@ -15,7 +15,7 @@ This section explains the list of events that will be triggered for appropriate 
 
 The [CellRendering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapEvents.html#Syncfusion_Blazor_HeatMap_HeatMapEvents_CellRendering) event will be triggered before each HeatMap cell is rendered. To know more about arguments of this event, refer [here](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapCellRenderEventArgs.html).
 
-The following example demonstrates how to customize the cell value, color and border color of the Heatmap component using the `CellRendering` event.
+The following example demonstrates how to customize the data label, color and border color of the cells using the `CellRendering` event.
 
 ```cshtml
 @using Syncfusion.Blazor.HeatMap
@@ -45,4 +45,4 @@ The following example demonstrates how to customize the cell value, color and bo
     string[] yAxisLabels = new string[] { "2008", "2009" };
 }
 ```
-![CellRender event in Blazor HeatMap Chart](images/events/blazor-heatmap-chart-cell-rendering-event.png)
+![CellRendering event in Blazor HeatMap chart](images/events/blazor-heatmap-chart-cell-rendering-event.png)
