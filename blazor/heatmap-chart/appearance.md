@@ -439,7 +439,7 @@ The following example demonstrates how to add a data label template for array ce
 
 #### JSON binding
 
-The value from the data source for the corresponding cell can be displayed in the HeatMap cell as data label template content by including the desired field name from the class object, set in the `DataSource`, in the template content.
+The value from the data source for the corresponding cell can be displayed in the HeatMap cell as data label template content by including the desired field name from the class object, set in the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.SfHeatMap-1.html#Syncfusion_Blazor_HeatMap_SfHeatMap_1_DataSource), in the template content.
 
 **Table**
 
