@@ -385,7 +385,7 @@ The following example demonstrates how to add a data label template for array ta
 }
 
 ```
-![Data label template with array table binding in Blazor HeatMap chart](images/appearance/blazor-heatmap-chart-datalabel-template-with-array-table-binding.png)
+![Data label template with array table binding in Blazor HeatMap Chart](images/appearance/blazor-heatmap-chart-datalabel-template-with-array-table-binding.png)
 
 **Cell**
 
@@ -435,7 +435,7 @@ The following example demonstrates how to add a data label template for array ce
 
 ```
 
-![Data label template with array cell binding in Blazor HeatMap chart](images/appearance/blazor-heatmap-chart-datalabel-template-with-array-cell-binding.png)
+![Data label template with array cell binding in Blazor HeatMap Chart](images/appearance/blazor-heatmap-chart-datalabel-template-with-array-cell-binding.png)
 
 #### JSON binding
 
@@ -504,7 +504,7 @@ The following example demonstrates how to add a data label template for JSON tab
 }
 
 ```
-![Data label template with JSON table binding in Blazor HeatMap chart](images/appearance/blazor-heatmap-chart-datalabel-template-with-JSON-table-binding.png)
+![Data label template with JSON table binding in Blazor HeatMap Chart](images/appearance/blazor-heatmap-chart-datalabel-template-with-JSON-table-binding.png)
 
 **Cell**
 
@@ -569,4 +569,4 @@ The following example demonstrates how to add a data label template for JSON cel
 
 ```
 
-![Data label template with JSON cell binding in Blazor HeatMap chart](images/appearance/blazor-heatmap-chart-datalabel-template-with-JSON-cell-binding.png)
+![Data label template with JSON cell binding in Blazor HeatMap Chart](images/appearance/blazor-heatmap-chart-datalabel-template-with-JSON-cell-binding.png)

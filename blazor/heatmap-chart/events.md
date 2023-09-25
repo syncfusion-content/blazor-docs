@@ -7,15 +7,15 @@ control: HeatMap Chart
 documentation: ug
 ---
 
-# Events in Blazor HeatMap chart Component
- 
-This section explains the list of events that will be triggered for appropriate actions in HeatMap. The events should be declared in the HeatMap component using the [HeatMapEvents](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapEvents.html).
+# Events in Blazor HeatMap Chart Component
+
+This section describes the events that will be triggered for appropriate actions in HeatMap. The events should be declared in the HeatMap component using the [HeatMapEvents](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapEvents.html).
 
 ## CellRendering
 
-The [CellRendering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapEvents.html#Syncfusion_Blazor_HeatMap_HeatMapEvents_CellRendering) event will be triggered before each HeatMap cell is rendered. To know more about arguments of this event, refer [here](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapCellRenderEventArgs.html).
+The [CellRendering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapEvents.html#Syncfusion_Blazor_HeatMap_HeatMapEvents_CellRendering) event will be triggered before each HeatMap cell is rendered. More information about this event's arguments can be found [here](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapCellRenderEventArgs.html).
 
-The following example demonstrates how to customize the data label, color and border color of the cells using the `CellRendering` event.
+The following example shows how to use the `CellRendering` event to customize the data label, color, and border color of cells.
 
 ```cshtml
 @using Syncfusion.Blazor.HeatMap

@@ -235,14 +235,14 @@ In heat map, you can place the axis label in an opposite position of its default
 
 ### Customizing the text style
 
-The text style of the axis labels can be customized using the following options available in the [HeatMapXAxisTextStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapXAxisTextStyle.html) tag for x-axis and [HeatMapYAxisTextStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapYAxisTextStyle.html) for y-axis.
+The text style of the axis labels can be customized using the following options available in the [HeatMapXAxisTextStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapXAxisTextStyle.html) for x-axis and [HeatMapYAxisTextStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapYAxisTextStyle.html) for y-axis.
 
 * `Color` - It is used to change the text color of the axis labels.
 * `FontFamily` - It is used to change the font family of the axis labels.
 * `FontStyle` - It is used to change the font style of the axis labels.
 * `FontWeight` - It is used to change the font weight of the axis labels.
 * `Size` - It is used to change the font size of the axis labels.
-* `TextAlignment` - It is used to position and align the axis labels. This property allows you to specify values such as **Near**, **Center**, and **Far**.
+* `TextAlignment` - It is used to position and align the axis labels. This property takes values such as **Near**, **Center**, and **Far**.
 * `TextOverflow` - When the axis label exceeds the intended space, this property is used to trim or wrap it. This property takes values such as **None**, **Trim**, and **Wrap**.
 
 ```cshtml
@@ -299,7 +299,7 @@ The text style of the axis labels can be customized using the following options 
 
 ```
 
-![Text style customization for the axis labels in Blazor HeatMap chart](images/axis/blazor-heatmap-chart-label-with-text-style-customization.png)
+![Text style customization for the axis labels in Blazor HeatMap Chart](images/axis/blazor-heatmap-chart-label-with-text-style-customization.png)
 
 ### Providing line breaks
 
@@ -335,11 +335,11 @@ Axis labels with line breaks improve the readability of the HeatMap by splitting
 
 ```
 
-![Axis Labels with line breaks in Blazor HeatMap chart](images/axis/blazor-heatmap-chart-axis-labels-with-line-breaks.png)
+![Axis Labels with line breaks in Blazor HeatMap Chart](images/axis/blazor-heatmap-chart-axis-labels-with-line-breaks.png)
 
-### Customizing labels when intersecting with other labels
+### Customizing axis labels when intersecting
 
-When the axis labels intersect, `LabelIntersectAction` property is used to handle the intersection. The `LabelIntersectAction` property can take the following values.
+When the axis labels intersect, [LabelIntersectAction](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapCommonAxis.html#Syncfusion_Blazor_HeatMap_HeatMapCommonAxis_LabelIntersectAction) property is used to handle the intersection. The `LabelIntersectAction` property can take the following values.
 
 * **None** - It specifies that no action is taken when the axis labels intersect.
 * **Trim** - It specifies to trim the axis labels when they intersect.
@@ -402,11 +402,11 @@ The below example demonstrates to trim the axis labels by using the `LabelInters
 
 ```
 
-![Label customization when intersecting with other labels in Blazor HeatMap chart](images/axis/blazor-heatmap-chart-label-when-intersecting-with-other-labels.png)
+![Label customization when intersecting with other labels in Blazor HeatMap Chart](images/axis/blazor-heatmap-chart-label-when-intersecting-with-other-labels.png)
 
-### Rotating labels
+### Rotating axis labels
 
-The axis labels can be rotated to the desired angles by using the `LabelRotation` property.
+The axis labels can be rotated to a desired angle by using the [LabelRotation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapCommonAxis.html#Syncfusion_Blazor_HeatMap_HeatMapCommonAxis_LabelRotation) property.
 
 ```cshtml
 
@@ -460,11 +460,11 @@ The axis labels can be rotated to the desired angles by using the `LabelRotation
 
 ```
 
-![Label rotation in Blazor HeatMap chart](images/axis/blazor-heatmap-chart-label-rotation.png)
+![Label rotation in Blazor HeatMap Chart](images/axis/blazor-heatmap-chart-label-rotation.png)
 
 ### Label formatting
 
-Heat map supports formatting the axis labels by using the `LabelFormat` property. Using this property, you can customize the axis label by global string format (‘P’, ‘C’, etc) or customized format like ‘{value}°C’.
+The HeatMap supports formatting the axis labels by using the [LabelFormat](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapCommonAxis.html#Syncfusion_Blazor_HeatMap_HeatMapCommonAxis_LabelFormat) property. Using this property, you can customize the axis label by global string format (‘P’, ‘C’, etc) or customized format like ‘{value}°C’.
 
 ```cshtml
 
