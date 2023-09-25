@@ -45,4 +45,4 @@ The following example demonstrates how to customize the data label, color and bo
     string[] yAxisLabels = new string[] { "2008", "2009" };
 }
 ```
-![CellRender event in Blazor HeatMap Chart](images/events/blazor-heatmap-chart-cell-rendering-event.png)
+![CellRendering event in Blazor HeatMap chart](images/events/blazor-heatmap-chart-cell-rendering-event.png)

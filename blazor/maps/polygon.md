@@ -13,23 +13,19 @@ The Maps component allows users to add polygon shapes to a geometry map or an on
 
 ## Adding polygon
 
-To add a geographical coordinate with specific longitude and latitude values within the `Points` property of the `MapsPolygon`, you can use a list of objects that holds data for polygons. This property enables the addition of multiple polygons to the layers of the Maps component. Each point within this list should contain the following set of properties.
-
-* Latitude - Specifies the position of the polygon in latitude co-ordinate.
-* Longitude - Specifies the position of the polygon in longitude co-ordinate.
+The polygon shapes can be rendered over the map layer by defining the [Points](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsPolygon.html#Syncfusion_Blazor_Maps_MapsPolygon_Points) property in the [MapsPolygon](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsPolygon.html) tag in the Maps component. The `Points` property uses a collection of latitude and longitude values to define the polygon shape.
 
 ## Customization
 
-The following properties are available in MapsPolygon to customize the polygon shape of the Maps component.
+`MapsPolygon` provides the following properties for customizing the polygon shape of the Maps component.
 
-[Points](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsPolygon.html#Syncfusion_Blazor_Maps_MapsPolygon_Points) - It defines the coordinates of the polygon shape. 
-[Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsPolygon.html#Syncfusion_Blazor_Maps_MapsPolygon_Fill) - It is used to customize the color of the polygon shape.
-[Opacity](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsPolygon.html#Syncfusion_Blazor_Maps_MapsPolygon_Opacity) - It is used to customize the opacity of the polygon shape.
-[BorderColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsPolygon.html#Syncfusion_Blazor_Maps_MapsPolygon_BorderColor) - It is used to customize the color of the border in the polygon shape.
-[BorderWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsPolygon.html#Syncfusion_Blazor_Maps_MapsPolygon_BorderWidth) - It is used to customize the width of the border in the polygon shape.
-[BorderOpacity](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsPolygon.html#Syncfusion_Blazor_Maps_MapsPolygon_BorderOpacity) - It is used to customize the opacity of the border in the polygon shape.
+* [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsPolygon.html#Syncfusion_Blazor_Maps_MapsPolygon_Fill) - It is used to change the color of the polygon shape.
+* [Opacity](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsPolygon.html#Syncfusion_Blazor_Maps_MapsPolygon_Opacity) - It is used to change the opacity of the polygon shape.
+* [BorderColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsPolygon.html#Syncfusion_Blazor_Maps_MapsPolygon_BorderColor) - It is used to change the color of the border in the polygon shape.
+* [BorderWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsPolygon.html#Syncfusion_Blazor_Maps_MapsPolygon_BorderWidth) - It is used to change the width of the border in the polygon shape.
+* [BorderOpacity](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsPolygon.html#Syncfusion_Blazor_Maps_MapsPolygon_BorderOpacity) - It is used to change the opacity of the border in the polygon shape.
 
-The following example shows the customization of the polygon shape over the geometry map.
+The following example shows how to customize the polygon shape over the geometry map.
 
 ```cshtml
 @using Syncfusion.Blazor.Maps
@@ -97,5 +93,4 @@ The following example shows the customization of the polygon shape over the geom
     }
 }
 ```
-![Blazor Maps with polygon shape on Maps layer](./images/Polygon/blazor-map-polygon-shape-on-maps-layer.png)
-
+![Blazor Maps with polygon shape in the geometry layer](./images/Polygon/blazor-map-polygon-shape-on-maps-layer.png)

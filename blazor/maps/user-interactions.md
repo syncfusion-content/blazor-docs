@@ -463,15 +463,14 @@ To enable the selection for markers in Maps, set the [MapsMarkerSelectionSetting
 
 ### Enable selection for polygons
 
-The selection of polygon shape's can be customized by using the [MapsPolygonSelectionSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsPolygonSelectionSettings.html) tag. The following properties are available in  MapsPolygonSelectionSettings to customize the polygon shape when it is selected.
+When the [Enable](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsPolygonSelectionSettings.html#Syncfusion_Blazor_Maps_MapsPolygonSelectionSettings_Enable) property of [MapsPolygonSelectionSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsPolygonSelectionSettings.html) is set to **true**, the polygon shapes can be selected with user interaction. The following properties and a class are available in  `MapsPolygonSelectionSettings` to customize the polygon shape when it is selected.
 
-[Enable] - It is used to enable selection for polygon shapes.
-[EnableMultiSelect] - It is used to select multiple polygon shapes.
-[Fill] -  It is used to customize the selection color for polygon shapes.
-[Opacity] - It is used to customize the selection opacity for polygon shapes.
-[MapsPolygonSelectionBorder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsPolygonSelectionBorder.html) - The attributes of `Color`, `Width` and `Opacity` are used to customize the polygon border when it is selected.
+* [EnableMultiSelect](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsPolygonSelectionSettings.html#Syncfusion_Blazor_Maps_MapsPolygonSelectionSettings_EnableMultiSelect) - It is used to enable multiple selection of polygon shapes.
+* [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsPolygonSelectionSettings.html#Syncfusion_Blazor_Maps_MapsPolygonSelectionSettings_Fill) - It is used to change the color of the selected polygon shape.
+* [Opacity](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsPolygonSelectionSettings.html#Syncfusion_Blazor_Maps_MapsPolygonSelectionSettings_Opacity) - It is used to change the opacity of the selected polygon shape.
+* [MapsPolygonSelectionBorder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsPolygonSelectionBorder.html) - This class is used to change the color, width, and opacity of the border of the selected border shape.
 
-The following example shows how to select the polygon shape over the geometry map.
+The following example shows how to select the polygon shape in the geometry map.
 
 ```cshtml
 @using Syncfusion.Blazor.Maps
@@ -531,8 +530,7 @@ The following example shows how to select the polygon shape over the geometry ma
     }
 }
 ```
-
-![Blazor Maps with selected polygon shape on Maps layer](./images/Polygon/blazor-map-polygon-shape-selected.gif)
+![Blazor Maps with selected polygon shape in the geometry layer](./images/Polygon/blazor-map-polygon-shape-selected.gif)
 
 ### Public method for the shape selection
 
@@ -787,14 +785,13 @@ To enable the highlight for markers in Maps, set the [MapsMarkerHighlightSetting
 
 ### Enable highlight for polygons
 
-The highlight of polygon shape's can be customized by using the [MapsPolygonHighlightSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsPolygonHighlightSettings.html) tag. The following properties and a class variables are available in MapsPolygonHighlightSettings to customize the polygon shape when it is highlighted.
+The polygon shapes can be highlighted with mouse hover interaction if the [Enable](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsPolygonHighlightSettings.html#Syncfusion_Blazor_Maps_MapsPolygonHighlightSettings_Enable) property of [MapsPolygonHighlightSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsPolygonHighlightSettings.html) is set to **true**. The following properties and a class are available in `MapsPolygonHighlightSettings` to customize the polygon shape when it is highlighted.
 
-[Enable] - It is used to enable highlight for polygon shapes.
-[Fill] -  It is used to customize the highlight color for polygon shapes.
-[Opacity] - It is used to customize the highlight opacity for polygon shapes.
-[MapsPolygonHighlightBorder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsPolygonHighlightBorder.html) - The attributes of `Color`, `Width` and `Opacity` are used to customize the polygon border when it is highlighted.
+* [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsPolygonHighlightSettings.html#Syncfusion_Blazor_Maps_MapsPolygonHighlightSettings_Fill) - It is used to change the color of the highlighted polygon shape.
+* [Opacity](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsPolygonHighlightSettings.html#Syncfusion_Blazor_Maps_MapsPolygonHighlightSettings_Opacity) - It is used to change the opacity of the highlighted polygon shape.
+* [MapsPolygonHighlightBorder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsPolygonHighlightBorder.html) - This class is used to change the color, width, and opacity of the border of the highlighted border shape.
 
-The following example shows how to highlight the polygon shape over the geometry map.
+The following example shows how to highlight a polygon shape on a geometry map.
 
 ```cshtml
 @using Syncfusion.Blazor.Maps
@@ -854,7 +851,7 @@ The following example shows how to highlight the polygon shape over the geometry
     }
 }
 ```
-![Blazor Maps with highlighted polygon shape on Maps layer](./images/Polygon/blazor-map-polygon-shape-highlight.gif)
+![Blazor Maps with highlighted polygon shape in the geometry layer](./images/Polygon/blazor-map-polygon-shape-highlight.gif)
 
 ## Tooltip
 

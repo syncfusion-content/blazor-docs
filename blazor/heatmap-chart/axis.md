@@ -235,7 +235,7 @@ In heat map, you can place the axis label in an opposite position of its default
 
 ### Customizing the text style
 
-The text style of the axis labels can be customized using the following options available in the `HeatMapXAxisTextStyle`(https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapXAxisTextStyle.html) tag for x-axis and `HeatMapYAxisTextStyle`(https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapYAxisTextStyle.html) for y-axis.
+The text style of the axis labels can be customized using the following options available in the [HeatMapXAxisTextStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapXAxisTextStyle.html) tag for x-axis and [HeatMapYAxisTextStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapYAxisTextStyle.html) for y-axis.
 
 * `Color` - It is used to change the text color of the axis labels.
 * `FontFamily` - It is used to change the font family of the axis labels.
