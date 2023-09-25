@@ -9,7 +9,7 @@ documentation: ug
 
 # Positioning in Blazor Dialog Component
 
-The Dialog can be positioned using the `DialogPositionData` property by providing the X and Y coordinates. It can be positioned inside the target of the `container` or `<body>` of the element based on the given X and Y values.
+The [Blazor Dialog](https://www.syncfusion.com/blazor-components/blazor-modal-dialog) can be positioned using the `DialogPositionData` property by providing the X and Y coordinates. It can be positioned inside the target of the `container` or `<body>` of the element based on the given X and Y values.
 
 For X is: left, center, right (or) any offset value
 For Y is: top, center, bottom (or) any offset value
