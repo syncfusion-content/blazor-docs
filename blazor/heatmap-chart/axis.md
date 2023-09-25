@@ -339,7 +339,7 @@ Axis labels with line breaks improve the readability of the HeatMap by splitting
 
 ### Customizing axis labels when intersecting
 
-When the axis labels intersect, `LabelIntersectAction` property is used to handle the intersection. The `LabelIntersectAction` property can take the following values.
+When the axis labels intersect, [LabelIntersectAction](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapCommonAxis.html#Syncfusion_Blazor_HeatMap_HeatMapCommonAxis_LabelIntersectAction) property is used to handle the intersection. The `LabelIntersectAction` property can take the following values.
 
 * **None** - It specifies that no action is taken when the axis labels intersect.
 * **Trim** - It specifies to trim the axis labels when they intersect.
@@ -406,7 +406,7 @@ The below example demonstrates to trim the axis labels by using the `LabelInters
 
 ### Rotating axis labels
 
-The axis labels can be rotated to a desired angle by using the `LabelRotation` property.
+The axis labels can be rotated to a desired angle by using the [LabelRotation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapCommonAxis.html#Syncfusion_Blazor_HeatMap_HeatMapCommonAxis_LabelRotation) property.
 
 ```cshtml
 
@@ -464,7 +464,7 @@ The axis labels can be rotated to a desired angle by using the `LabelRotation` p
 
 ### Label formatting
 
-HeatMap supports formatting the axis labels by using the `LabelFormat` property. Using this property, you can customize the axis label by global string format (‘P’, ‘C’, etc) or customized format like ‘{value}°C’.
+HeatMap supports formatting the axis labels by using the [LabelFormat](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapCommonAxis.html#Syncfusion_Blazor_HeatMap_HeatMapCommonAxis_LabelFormat) property. Using this property, you can customize the axis label by global string format (‘P’, ‘C’, etc) or customized format like ‘{value}°C’.
 
 ```cshtml
 
