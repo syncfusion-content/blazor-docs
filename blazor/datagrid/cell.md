@@ -482,13 +482,16 @@ This is demonstrated in the following sample code, where the tooltip for the **F
                 @{
                     var employee = (context as EmployeeData);
                     Count++;
-                    <SfTooltip @key="@Count" Position="Position.BottomLeft">
-                        <TooltipTemplates>
-                            <Content>
-                                This is value "@employee.FirstName"
-                            </Content>
-                        </TooltipTemplates>
-                        <span>@employee.FirstName</span>
+                     <SfTooltip @key="@Count" Position="Position.BottomLeft">
+                        <ContentTemplate>
+                            
+                                @employee.FirstName
+                            
+                        </ContentTemplate>
+                        <ChildContent>
+                            <span>@employee.FirstName</span>
+                        </ChildContent>
+                      
                     </SfTooltip>
                 }
             </Template>
@@ -530,7 +533,7 @@ This is demonstrated in the following sample code, where the tooltip for the **F
 
 ## Grid lines
 
-The [GridLines](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GridLines) in a grid are used to separate the cells with horizontal and vertical lines for better readability. You can enable the grid lines by setting the [GridLines](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GridLines)  property to one of the following values:
+The [GridLines](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GridLines) in a grid are used to separate the cells with horizontal and vertical lines for better readability. You can enable the grid lines by setting the `GridLines`  property to one of the following values:
 
 | Modes | Actions |
 |-------|---------|
@@ -540,7 +543,7 @@ The [GridLines](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.Sf
 | Vertical | Displays the vertical DataGrid lines only.|
 | Default | Displays DataGrid lines based on the theme.|
 
-The following example demonstrates how to set the [GridLines](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GridLines)  property.
+The following example demonstrates how to set the `GridLines` property based on changing the dropdown value using the [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSwitch-1.html#Syncfusion_Blazor_Buttons_SfSwitch_1_ValueChange) event of the DropDownList component.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
