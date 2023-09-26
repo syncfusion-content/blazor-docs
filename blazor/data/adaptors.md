@@ -716,7 +716,7 @@ The following code demonstrates the **DataManagerRequest** class which is passed
 
 ### Note
 
-You can get the entire codes in the [github]() sample.
+You can get the entire code in the [github](https://github.com/SyncfusionExamples/GraphQLAdaptor-Binding-Blazor-DataGrid) sample.
 
 ## WebMethod adaptor
 

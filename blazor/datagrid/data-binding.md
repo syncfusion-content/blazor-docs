@@ -809,7 +809,7 @@ The following code demonstrates the resolver function used in the GraphQL server
 
 #### Note
 
-The implementation for PerformSearching, PerformSorting, PerformFiltering, PerformSkip, PerformTake, PerformAggregation methods can be found in the [github sample]().
+The implementation for PerformSearching, PerformSorting, PerformFiltering, PerformSkip, PerformTake, PerformAggregation methods can be found in the [github sample](https://github.com/SyncfusionExamples/GraphQLAdaptor-Binding-Blazor-DataGrid).
 
 ### Performing CRUD operation using mutation
 
@@ -1211,7 +1211,7 @@ The following code demonstrates the **DataManagerRequest** class which is passed
 
 ### Note
 
-You can get the entire codes in the [github]() sample.
+You can get the entire code in the [github](https://github.com/SyncfusionExamples/GraphQLAdaptor-Binding-Blazor-DataGrid) sample.
 
 ## SQL Server data binding(SQL Client)
 
