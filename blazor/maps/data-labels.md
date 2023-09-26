@@ -105,6 +105,27 @@ The following properties and classes are available in the [MapsDataLabelSettings
 
 ![Blazor Maps with Custom Data Label](./images/DataLabel/blazor-maps-custom-data-label.PNG)
 
+## Label animation
+
+The data labels can be animated during the initial rendering of the Maps. This can be enabled by setting the [AnimationDuration](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsDataLabelSettings.html#Syncfusion_Blazor_Maps_MapsDataLabelSettings_AnimationDuration) property in the `MapsDataLabelSettings` of the Maps. The duration of the animation is specified in milliseconds.
+
+```cshtml
+@using Syncfusion.Blazor.Maps
+
+<SfMaps>
+    <MapsLayers>
+        <MapsLayer ShapeData='new {dataOptions= "https://cdn.syncfusion.com/maps/map-data/usa.json"}' TValue="string">
+            @* To add data labels *@
+            <MapsDataLabelSettings Visible="true" LabelPath="name" AnimationDuration="5000"></MapsDataLabelSettings>
+            <MapsShapeSettings Autofill="true"></MapsShapeSettings>
+            <MapsLayerTooltipSettings Visible="true" ValuePath="name"></MapsLayerTooltipSettings>
+        </MapsLayer>
+    </MapsLayers>
+</SfMaps>
+```
+
+![Blazor Maps with data label animation](./images/DataLabel/blazor-maps-data-label-animation.gif)
+
 ## Smart labels
 
 The Maps component provides an option to handle the labels when they intersect with the corresponding shape borders using the [SmartLabelMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsDataLabelSettings.html#Syncfusion_Blazor_Maps_MapsDataLabelSettings_SmartLabelMode) property. The following options are available in the [SmartLabelMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsDataLabelSettings.html#Syncfusion_Blazor_Maps_MapsDataLabelSettings_SmartLabelMode) property.
@@ -159,7 +180,7 @@ The Maps component provides an option to handle the labels when a label intersec
 
 The data label can be added as a template in the Maps component. The [LabelTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsDataLabelSettings.html#Syncfusion_Blazor_Maps_MapsDataLabelSettings_LabelTemplate) property of [MapsDataLabelSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsDataLabelSettings.html) is used to set the data label as a template. Any text or HTML element can be added as the template in data labels.
 
-N>The customization properties of data label, [SmartLabelMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsDataLabelSettings.html#Syncfusion_Blazor_Maps_MapsDataLabelSettings_SmartLabelMode) and [IntersectionAction](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsDataLabelSettings.html#Syncfusion_Blazor_Maps_MapsDataLabelSettings_IntersectionAction) properties are not applicable to [LabelTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsDataLabelSettings.html#Syncfusion_Blazor_Maps_MapsDataLabelSettings_LabelTemplate) property. The styles can be applied to the label template using the CSS styles of the template element.
+N>The customization properties of data label, [SmartLabelMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsDataLabelSettings.html#Syncfusion_Blazor_Maps_MapsDataLabelSettings_SmartLabelMode), [AnimationDuration](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsDataLabelSettings.html#Syncfusion_Blazor_Maps_MapsDataLabelSettings_AnimationDuration) and [IntersectionAction](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsDataLabelSettings.html#Syncfusion_Blazor_Maps_MapsDataLabelSettings_IntersectionAction) properties are not applicable to [LabelTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsDataLabelSettings.html#Syncfusion_Blazor_Maps_MapsDataLabelSettings_LabelTemplate) property. The styles can be applied to the label template using the CSS styles of the template element.
 
 ```cshtml
 @using Syncfusion.Blazor.Maps
