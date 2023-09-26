@@ -17,7 +17,7 @@ To use Syncfusion blazor components with strict CSP mode, the following directiv
 
 * `font-src data:` - This directive allows for the use of `base64` encoded font icons.
 * `style-src 'self' unsafe-inline` - This directive allows for the use of inline styles and external fonts.
-* `script-src 'self' unsafe-eval` - This directive allows for the use of the `new()` and `eval()` functions. Used in animation enabled Syncfusion components.
+* `script-src 'self' unsafe-eval blob:` - This directive allows for the use of the `new()` and `eval()` functions, as well as loading scripts from Blob URLs. Used in animation enabled Syncfusion components.
 
 These directives should be included in the `<head>` tag of the application's webpage, typically
 
