@@ -224,6 +224,6 @@ Here is an example that demonstrates how to use built-in aggregates types in the
 
 > * Multiple types for a column are supported only when one of the aggregate templates is used.
 
-## See also
+## See Also
 
 * [Handling Aggregates in Custom Adaptor](https://blazor.syncfusion.com/documentation/datagrid/custom-binding#handling-aggregates-in-custom-adaptor)
