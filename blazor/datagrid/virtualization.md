@@ -595,7 +595,6 @@ N> If <b>rowHeight</b> is given, then the page size is calculated by given row h
 * Due to the element height limitation in browsers, the maximum number of records loaded by the datagrid is limited by the browser capability.
 * Cell selection will not be persisted in both row and column virtualization.
 * Virtual scrolling is not compatible with detail template, and hierarchy features
-* Group expand and collapse state will not be persisted.
 * Since data is virtualized in datagrid, the aggregated information and total group items are displayed based on the current view items.
 * The page size provided must be two times larger than the number of visible rows in the datagrid. If the page size is failed to meet this condition then the size will be determined by datagrid.
 * The height of the datagrid content is calculated using the row height and total number of records in the data source and hence features which changes row height such as text wrapping are not supported. If you want to increase the row height to accommodate the content then you can specify the row height using **RowHeight** property to ensure all the table rows are in same height.
