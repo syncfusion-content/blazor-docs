@@ -11,7 +11,7 @@ documentation: ug
 
 Column validation allows you to validate the edited or added row data and it display errors for invalid fields before saving data. DataGrid uses **Form Validator** library for column validation. You can set validation rules by defining the [ValidationRules](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_ValidationRules).
 
-N> Validation in datagrid works based on the Microsoft Blazor EditForm behavior. So once the validation message is shown then it will be again validated only during the form submit or when you focus out from that particular field. Refer the [Microsoft Validation](https://docs.microsoft.com/en-us/aspnet/core/blazor/forms-validation?view=aspnetcore-5.0#data-annotations-validator-component-and-custom-validation) for further reference.
+N> Validation in datagrid works based on the Microsoft Blazor EditForm behavior. So once the validation message is shown then it will be again validated only during the form submit or when you focus out from that particular field. Refer the [Microsoft Validation](https://learn.microsoft.com/en-us/aspnet/core/blazor/forms-and-input-components?view=aspnetcore-5.0#data-annotations-validator-component-and-custom-validation) for further reference.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -167,7 +167,7 @@ The following sample code demonstrates custom validations implemented in the fie
 
 ### Validate complex column using data annotation attribute
 
-You can perform validation for complex data binding columns using the [ValidateComplexType](https://docs.microsoft.com/en-us/aspnet/core/blazor/forms-validation?view=aspnetcore-5.0#data-annotations-validator-component-and-custom-validation) attribute of data annotation.
+You can perform validation for complex data binding columns using the [ValidateComplexType](https://learn.microsoft.com/en-us/aspnet/core/blazor/forms-and-input-components?view=aspnetcore-5.0#data-annotations-validator-component-and-custom-validation) attribute of data annotation.
 
 In the following sample, you must use the `ValidateComplexType` attribute for the EmployeeName class and display custom message in the "First Name" column using the `RequiredAttribute` of data annotation.
 
@@ -226,7 +226,7 @@ In the following sample, you must use the `ValidateComplexType` attribute for th
 
 Apart from using default validation and custom validation, there are cases where you might want to use your validator component to validate the grid edit form. Such cases can be achieved using the **Validator** property of the **GridEditSettings** component which accepts a validation component and inject it inside the **EditForm** of the grid. Inside the **Validator**, you can access the data using the implicit named parameter context which is of type [ValidatorTemplateContext](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ValidatorTemplateContext.html).
 
-For creating a form validator component you can refer [here](https://docs.microsoft.com/en-us/aspnet/core/blazor/forms-validation?view=aspnetcore-5.0#validator-components).
+For creating a form validator component you can refer [here](https://learn.microsoft.com/en-us/aspnet/core/blazor/forms-and-input-components?view=aspnetcore-5.0#validator-components).
 
 In the below code example, the following things have been done.
 
@@ -516,5 +516,60 @@ N> You can find the fully working sample [here](https://github.com/SyncfusionExa
 }
 
 ```
-
 ![Display Validation in Blazor DataGrid Dialog Template](./images/blazor-datagrid-display-validation-in-dialog-template.png)
+
+## RegEx validation in Grid column 
+
+This section explains how to enable and integrate regex validation in a Grid column using Syncfusion Blazor components. Regex validation allows you to validate the input values in a grid column based on a regular expression pattern. The example provided demonstrates the implementation of regex validation in a Grid column along with other related functionalities.
+
+```cshtml
+
+@using Syncfusion.Blazor.Grids
+@using System.ComponentModel.DataAnnotations;
+@using Syncfusion.Blazor.Inputs
+
+<SfGrid DataSource="@Orders" AllowPaging="true" Toolbar="@(new List<string>() { "Add", "Delete", "Update", "Cancel" })">
+    <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true" Mode="EditMode.Dialog"></GridEditSettings>
+    <GridPageSettings PageSize="5"></GridPageSettings>
+    <GridColumns>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" ValidationRules="@(new ValidationRules{ Required=true})" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.EmailID) HeaderText="EmailID" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText="Order Date" Format="d" Type="ColumnType.DateOnly" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field="ShipCountry" HeaderText="Ship Country" EditType="EditType.DropDownEdit" Width="150"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code {
+    public List<Order> Orders { get; set; }
+
+    protected override void OnInitialized()
+    {
+        Orders = Enumerable.Range(1, 10).Select(x => new Order()
+            {
+                OrderID = 1000 + x,
+                EmailID = (new string[] { "abc@gmail.com", "mnc@yahoo.com" })[new Random().Next(2)],
+                Freight = 2.1 * x,
+                OrderDate = DateTime.Now.AddDays(-x),
+                ShipCountry = (new string[] { "USA", "UK" })[new Random().Next(2)]
+            }).ToList();
+    }
+
+    public class Order
+    {
+        public int? OrderID { get; set; }
+
+        [Required(ErrorMessage = "This Email Address is not valid")]
+        [RegularExpression(@"(^[^@\s]+@[^@\s]+\.[^@\s]+$|^$)", ErrorMessage = "Not a valid Email Address Format")]
+        public string EmailID { get; set; }
+
+        public DateTime? OrderDate { get; set; }
+
+        public double? Freight { get; set; }
+
+        public string ShipCountry { get; set; }
+    }
+}
+
+```
+![Display Validation message by RegEx expression](./images/RegExvalidation.png)
