@@ -9,7 +9,7 @@ documentation: ug
 
 # Context Menu in Blazor DataGrid Component
 
-The DataGrid has options to show the context menu when right clicked on it. To enable this feature, you need to define either default or custom item in the [ContextMenuItems](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Grids.ContextMenuItemModel.html) property.
+The DataGrid has options to show the context menu when right clicked on it. To enable this feature, you need to define either default or custom item in the [ContextMenuItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ContextMenuItemModel.html) property.
 
 The following table lists the default context menu items,
 
@@ -103,7 +103,7 @@ The following GIF represents the DataGrid enabled with default context menu item
 
 ## Custom context menu items
 
-The custom context menu items can be added by defining the [ContextMenuItems](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Grids.ContextMenuItemModel.html) as a collection of [ContextMenuItemModel](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Grids.ContextMenuItemModel.html). Actions for these customized items can be defined in the [ContextMenuItemClicked](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ContextMenuClickEventArgs-1.html) event.
+The custom context menu items can be added by defining the [ContextMenuItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ContextMenuItemModel.html) as a collection of [ContextMenuItemModel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ContextMenuItemModel.html#Syncfusion_Blazor_Grids_ContextMenuItemModel__ctor). Actions for these customized items can be defined in the [ContextMenuItemClicked](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ContextMenuClickEventArgs-1.html) event.
 
 The following sample code demonstrates defining custom context menu item and its corresponding action in the [ContextMenuItemClicked](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ContextMenuClickEventArgs-1.html) event,
 
@@ -276,9 +276,9 @@ The following sample code demonstrates defining sub context menu item and its co
 
 ## Disable the Context menu for specific columns in DataGrid
 
-Context Menu can be prevented for specific columns using [ContextMenuOpen](https://blazor.syncfusion.com/documentation/datagrid/events/#contextmenuopen) event of DataGrid. This event will be triggered before opening the ContextMenu. You can prevent the context menu from opening by defining the **Cancel** arguments of [ContextMenuOpen](https://blazor.syncfusion.com/documentation/datagrid/events/#contextmenuopen) to **false**.
+Context Menu can be prevented for specific columns using [ContextMenuOpen](https://blazor.syncfusion.com/documentation/datagrid/events#contextmenuopen) event of DataGrid. This event will be triggered before opening the ContextMenu. You can prevent the context menu from opening by defining the **Cancel** arguments of [ContextMenuOpen](https://blazor.syncfusion.com/documentation/datagrid/events#contextmenuopen) to **false**.
 
-The following sample code demonstrates how to disable the context for specific column using event arguments of [ContextMenuOpen](https://blazor.syncfusion.com/documentation/datagrid/events/#contextmenuopen) event,
+The following sample code demonstrates how to disable the context for specific column using event arguments of [ContextMenuOpen](https://blazor.syncfusion.com/documentation/datagrid/events#contextmenuopen) event,
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -338,9 +338,9 @@ The following sample code demonstrates how to disable the context for specific c
 
 ## Disable context menu items dynamically in DataGrid
 
-You can enable or disable context menu items using the **Disabled** property. Here, you can enable and disable the **Edit** context menu items in [ContextMenuOpen](https://blazor.syncfusion.com/documentation/datagrid/events/#contextmenuopen) event of DataGrid. This event will be triggered before opening the ContextMenu. You can disable the context menu item by defining the corresponding context menu items **Disabled** property as **true**.
+You can enable or disable context menu items using the **Disabled** property. Here, you can enable and disable the **Edit** context menu items in [ContextMenuOpen](https://blazor.syncfusion.com/documentation/datagrid/events#contextmenuopen) event of DataGrid. This event will be triggered before opening the ContextMenu. You can disable the context menu item by defining the corresponding context menu items **Disabled** property as **true**.
 
-The following sample code demonstrates how to enable or disable context menu items dynamically in Grid using event arguments of [ContextMenuOpen](https://blazor.syncfusion.com/documentation/datagrid/events/#contextmenuopen) event,
+The following sample code demonstrates how to enable or disable context menu items dynamically in Grid using event arguments of [ContextMenuOpen](https://blazor.syncfusion.com/documentation/datagrid/events#contextmenuopen) event,
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -396,3 +396,61 @@ The following sample code demonstrates how to enable or disable context menu ite
 ```
 
 N> You can refer to [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour page for its groundbreaking feature representations. You can also explore [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap4) to understand how to present and manipulate data.
+
+### Get specific row details in the contextmenu click event
+
+This section provides information on how to retrieve specific row details in the context menu click event using Syncfusion Grid properties, methods, and events.You can obtain the row details using the RowInfo argument of ContextMenuClicked event.
+
+The following sample code demonstrates defining custom context menu item and its corresponding action in the [ContextMenuItemClicked](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ContextMenuClickEventArgs-1.html) event.
+
+```cshtml
+@using Syncfusion.Blazor.Grids
+
+<SfGrid @ref="DefaultGrid" DataSource="@Orders" AllowPaging="true" ContextMenuItems="@(new List<ContextMenuItemModel>() { new ContextMenuItemModel { Text = "fetch data", Id = "fetch data" } })">
+    <GridEvents ContextMenuItemClicked="OnContextMenuClick" TValue="Order"></GridEvents>
+    <GridPageSettings PageSize="8"></GridPageSettings>
+    <GridColumns>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120" IsPrimaryKey="true"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+    </GridColumns>
+</SfGrid>
+ 
+@code {
+    public List<Order> Orders { get; set; }
+    private Order rowData { get; set; }
+ 
+ 
+    private SfGrid<Order> DefaultGrid;
+ 
+    protected override void OnInitialized()
+    {
+        Orders = Enumerable.Range(1, 75).Select(x => new Order()
+            {
+                OrderID = 1000 + x,
+                CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
+                Freight = 2.1 * x,
+                OrderDate = DateTime.Now.AddDays(-x),
+            }).ToList();
+    }
+ 
+    public class Order
+    {
+        public int? OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public DateTime? OrderDate { get; set; }
+        public double? Freight { get; set; }
+    }
+ 
+ 
+ 
+    public void OnContextMenuClick(ContextMenuClickEventArgs<Order> args)
+    {
+        if (args.Item.Id == "fetch data")
+        {
+            rowData = args.RowInfo.RowData;
+          }
+    }
+}
+```
