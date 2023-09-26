@@ -226,7 +226,7 @@ The following example, the [Blazor Toggle Switch Button](https://blazor.syncfusi
 
 The Syncfusion Blazor DataGrid has a default behavior where the grouped column is hidden, to provide a cleaner and more focused view of your data. However, if you prefer to show the grouped column in the grid, you can achieve this by setting the `GridGroupSettings` component of the [ShowGroupedColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridGroupSettings.html#Syncfusion_Blazor_Grids_GridGroupSettings_ShowGroupedColumn) property to **true**.
 
-In the following example, the [Blazor Toggle Switch Button](https://blazor.syncfusion.com/documentation/toggle-switch-button/getting-started) component is added to hide or show the grouped columns. When the switch is toggled, the [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.ChangeEventArgs-1.html) event is triggered and the `GridGroupSettings` component of the showGroupedColumn property of the grid is updated accordingly. 
+In the following example, the [Blazor Toggle Switch Button](https://blazor.syncfusion.com/documentation/toggle-switch-button/getting-started) component is added to hide or show the grouped columns. When the switch is toggled, the [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.ChangeEventArgs-1.html) event is triggered and the `GridGroupSettings` component of the showGroupedColumn property of the grid is updated accordingly.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids

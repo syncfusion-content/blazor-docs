@@ -118,7 +118,7 @@ The following example demonstrates how to add a custom text to the group caption
 
 ## Render custom component in group caption
 
-The Syncfusion Blazor DataGrid offers the flexibility to render a custom component in the group caption, providing advanced or interactive functionality within the group caption row. This feature allows you to display custom UI elements, like buttons, icons, or dropdowns, and handle user interactions directly within the group caption. 
+The Syncfusion Blazor DataGrid offers the flexibility to render a custom component in the group caption, providing advanced or interactive functionality within the group caption row. This feature allows you to display custom UI elements, like buttons, icons, or dropdowns, and handle user interactions directly within the group caption.
 
 To render custom component in the group caption, you can utilize the [CaptionTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridGroupSettings.html#Syncfusion_Blazor_Grids_GridGroupSettings_CaptionTemplate) property. This feature enables you to replace plain text with a custom component in the group caption, enhancing customization and interactivity.
 
