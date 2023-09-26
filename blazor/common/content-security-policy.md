@@ -34,7 +34,7 @@ These directives should be included in the `<head>` tag of the application's web
     <meta http-equiv="Content-Security-Policy" content="
         script-src 'self' 'unsafe-eval' blob:;
         style-src 'self' 'unsafe-inline';
-        img-src 'self' data: blob: https:;
+        img-src data: blob: https:;
         font-src 'self' data:;" />
     ...
 </head>
@@ -47,7 +47,7 @@ These directives should be included in the `<head>` tag of the application's web
     <meta http-equiv="Content-Security-Policy" content="
         script-src 'self' 'unsafe-eval' blob:;
         style-src 'self' 'unsafe-inline';
-        img-src 'self' data: blob: https:;
+        img-src data: blob: https:;
         font-src 'self' data:;" />
     ...
 </head>
@@ -64,7 +64,7 @@ These directives should be included in the `<head>` tag of the application's web
     <meta http-equiv="Content-Security-Policy" content="
         script-src 'self' 'unsafe-eval' blob:;
         style-src 'self' 'unsafe-inline';
-        img-src 'self' data: blob: https:;
+        img-src data: blob: https:;
         font-src 'self' data:;" />
     ...
 </head>
@@ -84,7 +84,7 @@ if you are referencing script and style references from CDN, then add CDN domain
     <meta http-equiv="Content-Security-Policy" content="
         script-src 'self' 'unsafe-eval' https://cdn.syncfusion.com blob:;
         style-src 'self' 'unsafe-inline' https://cdn.syncfusion.com;
-        img-src 'self' data: blob: https:;
+        img-src data: blob: https:;
         font-src 'self' data:;" />
     ...
 </head>
@@ -98,7 +98,7 @@ if you are referencing script and style references from CDN, then add CDN domain
     <meta http-equiv="Content-Security-Policy" content="
         script-src 'self' 'unsafe-eval' https://cdn.syncfusion.com blob:;
         style-src 'self' 'unsafe-inline' https://cdn.syncfusion.com;
-        img-src 'self' data: blob: https:;
+        img-src data: blob: https:;
         font-src 'self' data:;" />
     ...
 </head>
@@ -118,7 +118,7 @@ if you are referencing script and style references from CDN, then add CDN domain
     <meta http-equiv="Content-Security-Policy" content="
         script-src 'self' 'unsafe-eval' https://cdn.syncfusion.com blob:;
         style-src 'self' 'unsafe-inline' https://cdn.syncfusion.com;
-        img-src 'self' data: blob: https:;
+        img-src data: blob: https:;
         font-src 'self' data:;" />
     ...
 </head>
