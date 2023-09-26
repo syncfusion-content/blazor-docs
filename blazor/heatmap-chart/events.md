@@ -400,4 +400,4 @@ The following example demonstrates how to customize tooltips for specified cells
     public string[] yAxisLabels = new string[] { "Mon", "Tues", "Wed", "Thurs", "Fri", "Sat" };
 }
 ```
-![TooltipRender event in Blazor HeatMap chart](images/events/blazor-heatmap-chart-tooltip-render-event.png)
+![TooltipRendering event in Blazor HeatMap chart](images/events/blazor-heatmap-chart-tooltip-render-event.png)
