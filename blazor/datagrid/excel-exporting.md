@@ -643,8 +643,6 @@ This can be demonstrated using the following sample:
 }
 ```
 
-![Customizing the grid column header in an exported Excel document](./images/Customizing-grid-column-header-exported-Excel-document.png)
-
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BtLAjvCdlSskJeRS?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5 %}
 
 ### Customizing the DataGrid aggregate content in an exported Excel document
@@ -822,6 +820,7 @@ This can be demonstrated using the following sample:
 ```
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rZBqNvsdbnCGVrWd?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 
 ### Customizing the background color for a particular column in an exported Excel document
 
