@@ -344,6 +344,4 @@ In the provided sample, this demonstrates how to hide specific columns while edi
 }
 ```
 
-The following screenshot shows Hiding Columns During Dialog Editing,
-
-![Hiding Columns During Dialog Editing in Blazor DataGrid](./images/Hiding-Columns-During-Dialog-Editing.gif)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BNhUZaLGrJQbEugr?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
