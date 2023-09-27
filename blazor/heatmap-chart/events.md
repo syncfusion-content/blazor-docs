@@ -379,7 +379,7 @@ The following example demonstrates how to use the `TooltipRendering` event to cu
 @code {
     private void TooltipRendering(TooltipEventArgs args)
     {
-         args.Content = new string[] { $"In {args.YLabel}, the employee {args.XLabel} contributed to sales revenue of {args.Value * 1000:C0}" };
+        args.Content = new string[] { $"On {args.YLabel}, {args.XLabel} contributed {args.Value * 1000:C0} in sales revenue." };
     }
     public double[,] dataSource = new double[,]
     {
@@ -398,7 +398,7 @@ The following example demonstrates how to use the `TooltipRendering` event to cu
     };
     public string[] xAxisLabels = new string[] { "Nancy", "Andrew", "Janet", "Margaret", "Steven",
                  "Michael", "Robert", "Laura", "Anne", "Paul", "Karin", "Mario" };
-    public string[] yAxisLabels = new string[] { "Mon", "Tues", "Wed", "Thurs", "Fri", "Sat" };
+    public string[] yAxisLabels = new string[] { "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday" };
 }
 ```
 ![TooltipRendering event in Blazor HeatMap Chart](images/events/blazor-heatmap-chart-tooltip-render-event.png)
