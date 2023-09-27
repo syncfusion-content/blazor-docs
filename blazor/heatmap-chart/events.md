@@ -13,9 +13,9 @@ This section describes the events that will be triggered for appropriate actions
 
 ## CellClicked
 
-When you click on a HeatMap cell, the [CellClicked](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapEvents.html#Syncfusion_Blazor_HeatMap_HeatMapEvents_CellClicked) event is triggered. To know more about arguments of this event, refer [here](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.CellClickEventArgs.html).
+When you click on a HeatMap cell, the [CellClicked](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapEvents.html#Syncfusion_Blazor_HeatMap_HeatMapEvents_CellClicked) event is triggered. More information about the arguments in this event can be found [here](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.CellClickEventArgs.html).
 
-The following example demonstrates how to retrieve the values of the clicked cell and its x-label and y-label using the `CellClicked` event.
+The following example demonstrates how to use the `CellClicked` event to retrieve the value of the clicked cell as well as its x-axis and y-axis labels.
 
 ```cshtml
 @using Syncfusion.Blazor.HeatMap
@@ -67,14 +67,14 @@ The following example demonstrates how to retrieve the values of the clicked cel
     public string[] yAxisLabels = new string[] { "Mon", "Tues", "Wed", "Thurs", "Fri", "Sat" };
 }
 ```
-![CellClicked event in Blazor HeatMap chart](images/events/blazor-heatmap-chart-cell-clicked-event.png)
+![CellClicked event in Blazor HeatMap Chart](images/events/blazor-heatmap-chart-cell-clicked-event.png)
 
 
 ## CellRendering
 
-The [CellRendering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapEvents.html#Syncfusion_Blazor_HeatMap_HeatMapEvents_CellRendering) event will be triggered before each HeatMap cell is rendered. More information about this event's arguments can be found [here](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapCellRenderEventArgs.html).
+The [CellRendering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapEvents.html#Syncfusion_Blazor_HeatMap_HeatMapEvents_CellRendering) event will be triggered before each HeatMap cell is rendered. More information about the arguments in this event can be found [here](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapCellRenderEventArgs.html).
 
-The following example shows how to use the `CellRendering` event to customize the data label, color, and border color of cells.
+The following example demonstrates how to use the `CellRendering` event to customize the value, color, and border color of the cell.
 
 ```cshtml
 @using Syncfusion.Blazor.HeatMap
@@ -85,6 +85,7 @@ The following example shows how to use the `CellRendering` event to customize th
     <HeatMapXAxis Labels="@xAxisLabels"/>
     <HeatMapYAxis Labels="@yAxisLabels"/>
 </SfHeatMap>
+
 @code{
     private void CellRender(HeatMapCellRenderEventArgs args)
     {
@@ -104,14 +105,14 @@ The following example shows how to use the `CellRendering` event to customize th
     public string[] yAxisLabels = new string[] { "2008", "2009" };
 }
 ```
-![CellRendering event in Blazor HeatMap chart](images/events/blazor-heatmap-chart-cell-rendering-event.png)
+![CellRendering event in Blazor HeatMap Chart](images/events/blazor-heatmap-chart-cell-rendering-event.png)
 
 
 ## CellSelected
 
-When single or multiple cells in the HeatMap are selected, the [CellSelected](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapEvents.html#Syncfusion_Blazor_HeatMap_HeatMapEvents_CellSelected) event is triggered. To know more about arguments of this event, refer [here](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.SelectedEventArgs.html).
+When single or multiple cells in the HeatMap are selected, the [CellSelected](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapEvents.html#Syncfusion_Blazor_HeatMap_HeatMapEvents_CellSelected) event is triggered. More information about the arguments in this event can be found [here](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.SelectedEventArgs.html).
 
-The following example demonstrates how to obtain the selected cells using the `CellSelected` event.
+The following example demonstrates how to use the `CellSelected` event to obtain the count and details of the selected cells.
 
 ```cshtml
 @using Syncfusion.Blazor.HeatMap
@@ -155,13 +156,11 @@ The following example demonstrates how to obtain the selected cells using the `C
     public string[] yAxisLabels = new string[] { "Mon", "Tues", "Wed", "Thurs", "Fri", "Sat" };
 }
 ```
-![CellSelected event in Blazor HeatMap chart](images/events/blazor-heatmap-chart-cell-selected-event.png)
+![CellSelected event in Blazor HeatMap Chart](images/events/blazor-heatmap-chart-cell-selected-event.png)
 
 ## Created
 
-Once HeatMap has been completely rendered, the [Created](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapEvents.html#Syncfusion_Blazor_HeatMap_HeatMapEvents_Created) event is triggered.
-
-The following example demonstrates how to use the `Created` event.
+Once the HeatMap has been completely rendered, the [Created](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapEvents.html#Syncfusion_Blazor_HeatMap_HeatMapEvents_Created) event is triggered. The following example demonstrates how to use the `Created` event.
 
 ```cshtml
 @using Syncfusion.Blazor.HeatMap
@@ -205,11 +204,11 @@ The following example demonstrates how to use the `Created` event.
     public string[] yAxisLabels = new string[] { "Mon", "Tues", "Wed", "Thurs", "Fri", "Sat" };
 }
 ```
-![Created event in Blazor HeatMap chart](images/events/blazor-heatmap-chart-created-event.png)
+![Created event in Blazor HeatMap Chart](images/events/blazor-heatmap-chart-created-event.png)
 
 ## OnLoad
 
-The [OnLoad](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapEvents.html#Syncfusion_Blazor_HeatMap_HeatMapEvents_OnLoad) event is triggered before the HeatMap is rendered. To know more about arguments of this event, refer [here](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.LoadedEventArgs.html).
+The [OnLoad](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapEvents.html#Syncfusion_Blazor_HeatMap_HeatMapEvents_OnLoad) event is triggered before the HeatMap is rendered. More information about the arguments in this event can be found [here](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.LoadedEventArgs.html).
 
 The following example demonstrates how to use the `OnLoad` event.
 
@@ -256,11 +255,11 @@ The following example demonstrates how to use the `OnLoad` event.
     public string[] yAxisLabels = new string[] { "Mon", "Tues", "Wed", "Thurs", "Fri", "Sat" };
 }
 ```
-![OnLoad event in Blazor HeatMap chart](images/events/blazor-heatmap-chart-on-load-event.png)
+![OnLoad event in Blazor HeatMap Chart](images/events/blazor-heatmap-chart-on-load-event.png)
 
 ## Loaded
 
-Once HeatMap is [Loaded](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapEvents.html#Syncfusion_Blazor_HeatMap_HeatMapEvents_Loaded), the loaded event is triggered. To know more about arguments of this event, refer [here](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.LoadedEventArgs.html).
+Once HeatMap is loaded, the [Loaded](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapEvents.html#Syncfusion_Blazor_HeatMap_HeatMapEvents_Loaded) event is triggered. More information about the arguments in this event can be found [here](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.LoadedEventArgs.html).
 
 The following example demonstrates how to use the `Loaded` event.
 
@@ -306,12 +305,12 @@ The following example demonstrates how to use the `Loaded` event.
     public string[] yAxisLabels = new string[] { "Mon", "Tues", "Wed", "Thurs", "Fri", "Sat" };
 }
 ```
-![Loaded event in Blazor HeatMap chart](images/events/blazor-heatmap-chart-loaded-event.png)
+![Loaded event in Blazor HeatMap Chart](images/events/blazor-heatmap-chart-loaded-event.png)
 
 
 ## Resized
 
-When the window is [Resized](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapEvents.html#Syncfusion_Blazor_HeatMap_HeatMapEvents_Resized), the resized event is triggered to notify the resize of the HeatMap. To know more about arguments of this event, refer [here](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.ResizeEventArgs.html).
+When the window is resized, the [Resized](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapEvents.html#Syncfusion_Blazor_HeatMap_HeatMapEvents_Resized) event is triggered to notify the HeatMap's size change, making the component look responsive. More information about the arguments in this event can be found [here](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.ResizeEventArgs.html).
 
 The following example demonstrates how to use the `Resized` event.
 
@@ -357,13 +356,13 @@ The following example demonstrates how to use the `Resized` event.
     public string[] yAxisLabels = new string[] { "Mon", "Tues", "Wed", "Thurs", "Fri", "Sat" };
 }
 ```
-![Resized event in Blazor HeatMap chart](images/events/blazor-heatmap-chart-resized-event.png)
+![Resized event in Blazor HeatMap Chart](images/events/blazor-heatmap-chart-resized-event.png)
 
 ## TooltipRendering
 
-The [TooltipRendering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapEvents.html#Syncfusion_Blazor_HeatMap_HeatMapEvents_TooltipRendering) event is triggered before the tooltip is rendered on the HeatMap cell. To know more about arguments of this event, refer [here](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.TooltipEventArgs.html).
+The [TooltipRendering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapEvents.html#Syncfusion_Blazor_HeatMap_HeatMapEvents_TooltipRendering) event is triggered before the tooltip is rendered on the HeatMap cell. More information about the arguments in this event can be found [here](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.TooltipEventArgs.html).
 
-The following example demonstrates how to customize tooltips for specified cells when hovering over them using the `TooltipRendering` event.
+The following example demonstrates how to use the `TooltipRendering` event to customize tooltips for specific cells when hovering over them.
 
 ```cshtml
 @using Syncfusion.Blazor.HeatMap
@@ -400,4 +399,4 @@ The following example demonstrates how to customize tooltips for specified cells
     public string[] yAxisLabels = new string[] { "Mon", "Tues", "Wed", "Thurs", "Fri", "Sat" };
 }
 ```
-![TooltipRendering event in Blazor HeatMap chart](images/events/blazor-heatmap-chart-tooltip-render-event.png)
+![TooltipRendering event in Blazor HeatMap Chart](images/events/blazor-heatmap-chart-tooltip-render-event.png)
