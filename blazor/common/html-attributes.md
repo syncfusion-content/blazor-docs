@@ -9,7 +9,7 @@ documentation: ug
 
 # Default HTML Attributes and DOM Events
 
-The Syncfusion Blazor UI components provide the most useful [public API](https://help.syncfusion.com/cr/blazor/) for component implementation and customization. Apart from this public API, the Syncfusion Blazor UI components can support the use of default [HTML attributes](https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes) and [DOM events](https://docs.microsoft.com/en-us/aspnet/core/blazor/components/event-handling?view=aspnetcore-5.0) in the root element of its component.
+The Syncfusion Blazor UI components provide the most useful [public API](https://help.syncfusion.com/cr/blazor/) for component implementation and customization. Apart from this public API, the Syncfusion Blazor UI components can support the use of default [HTML attributes](https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes) and [DOM events](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/event-handling?view=aspnetcore-5.0) in the root element of its component.
 
 ## Using HTML attributes and DOM events in the input element
 
@@ -210,7 +210,7 @@ The textbox will be rendered with the following output.
 
 ### Input DOM events
 
-The Syncfusion Blazor UI component supports binding the native [DOM events](https://docs.microsoft.com/en-us/aspnet/core/blazor/components/event-handling?view=aspnetcore-5.0) on the input element.
+The Syncfusion Blazor UI component supports binding the native [DOM events](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/event-handling?view=aspnetcore-5.0) on the input element.
 
 ```cshtml
 <div class="form-group">
