@@ -160,7 +160,9 @@ The following example demonstrates how to use the `CellSelected` event to obtain
 
 ## Created
 
-Once the HeatMap has been completely rendered, the [Created](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapEvents.html#Syncfusion_Blazor_HeatMap_HeatMapEvents_Created) event is triggered. The following example demonstrates how to use the `Created` event.
+The [Created](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapEvents.html#Syncfusion_Blazor_HeatMap_HeatMapEvents_Created) event in the HeatMap component is triggered during the initial rendering process that occurs immediately after the HeatMap component has been initialized. This indicates that this event should only be executed once.
+
+The following example demonstrates how to use the `Created` event.
 
 ```cshtml
 @using Syncfusion.Blazor.HeatMap
@@ -259,7 +261,7 @@ The following example demonstrates how to use the `OnLoad` event.
 
 ## Loaded
 
-Once HeatMap is loaded, the [Loaded](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapEvents.html#Syncfusion_Blazor_HeatMap_HeatMapEvents_Loaded) event is triggered. More information about the arguments in this event can be found [here](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.LoadedEventArgs.html).
+The [Loaded](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapEvents.html#Syncfusion_Blazor_HeatMap_HeatMapEvents_Loaded) is triggered after the HeatMap component is rendered, which occurs following a browser resize. More information about the arguments in this event can be found [here](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.LoadedEventArgs.html).
 
 The following example demonstrates how to use the `Loaded` event.
 
@@ -310,7 +312,7 @@ The following example demonstrates how to use the `Loaded` event.
 
 ## Resized
 
-When the window is resized, the [Resized](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapEvents.html#Syncfusion_Blazor_HeatMap_HeatMapEvents_Resized) event is triggered to notify the HeatMap's size change, making the component look responsive. More information about the arguments in this event can be found [here](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.ResizeEventArgs.html).
+When the window is resized, the [Resized](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapEvents.html#Syncfusion_Blazor_HeatMap_HeatMapEvents_Resized) event is triggered to determine if the browser has been resized and allowing the HeatMap component to adjust and maintain a responsive appearance. More information about the arguments in this event can be found [here](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.ResizeEventArgs.html).
 
 The following example demonstrates how to use the `Resized` event.
 
