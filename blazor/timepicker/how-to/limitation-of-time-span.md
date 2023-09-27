@@ -25,7 +25,7 @@ This means that if you want to format a TimeSpan value with custom separators, y
 }
 
 ```
-![Blazor TimePicker with Time Span Format](../images/blazor-timepicker-time-span-custom-format.gif)
+![Blazor TimePicker with Time Span Format](../images/blazor-timepicker-time-span-format.gif)
 
 N> The TimeSpan will always show the time value in 24-hour format.
 
@@ -49,6 +49,9 @@ N>The Blazor TimePicker component does not support the `d` or `dd` format specif
 
 #### To display the backslashes (\\\\) in the format string, you need to escape them by doubling them. For example:
 
+This means that if you want to display a two backslash in the format string, you need to type four backslashes.
+
+#### Here is an example of how to use this in a Blazor TimePicker component:
 ```csharp
 
 @using Syncfusion.Blazor.Calendars
@@ -62,6 +65,6 @@ N>The Blazor TimePicker component does not support the `d` or `dd` format specif
 
 ```
 
-This will render a TimePicker component that displays the time in the `hh\\\\mm\\\\ss` format.
+This will render a TimePicker component that displays the time in the `hh\\mm\\ss` format.
 
 ![Blazor TimePicker with Time Span Format](../images/blazor-timepicker-time-span-format.gif)
