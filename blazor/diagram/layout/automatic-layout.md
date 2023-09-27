@@ -9,7 +9,7 @@ documentation: ug
 
 # Automatic Layout in Blazor Diagram Component
 
-[Blazor Diagram](https://www.syncfusion.com/blazor-components/blazor-diag) provides support to auto-arrange the nodes in the diagram area that is referred as [Layout](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html). It includes the following layout modes:
+[Blazor Diagram](https://www.syncfusion.com/blazor-components/blazor-diagram) provides support to auto-arrange the nodes in the diagram area that is referred as [Layout](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html). It includes the following layout modes:
 
 ## Layout modes
 
