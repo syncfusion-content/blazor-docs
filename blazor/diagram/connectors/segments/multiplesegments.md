@@ -1,21 +1,13 @@
 ---
 layout: post
-title: Segments in Blazor Diagram Component | Syncfusion
+title: Multiple Segments in Blazor Diagram Component | Syncfusion
 description: Checkout and learn here all about Segments in Syncfusion Blazor Diagram component and much more details.
 platform: Blazor
 control: Diagram Component
 documentation: ug
 ---
 
-# Segments in Blazor Diagram Component
-
-The path of the connector is defined with a collection of segments. There are three types of segments.
-
-
-
-
-
-
+# Multiple segments in Blazor Diagram Component
 
 ## How to create multiple segments
 
@@ -71,10 +63,6 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 ![Blazor Diagram with Multiple Segment](../../images/blazor-diagram-multiple-segment.png)
 
 * Similarly, you can create multiple segments for all the connector type.
-
-## Segment Editing
-
-
 
 
 
