@@ -9,7 +9,7 @@ documentation: ug
 
 # Limitations of TimeSpan DataType in Blazor TimePicker Component
 
-Based on [C# standard behavior](https://docs.microsoft.com/en-us/dotnet/standard/base-types/custom-timespan-format-strings), the custom TimeSpan format specifiers  do not include placeholder separator symbols, such as the symbols that separate days from hours, hours from minutes, or seconds from fractional seconds. Instead, these symbols must be included in the custom format string as string literals. For example, "hh\\:mm\\:ss" defines a colon (:) as a separator between hours, minutes, and seconds.
+Based on [C# standard behavior](https://learn.microsoft.com/en-us/dotnet/standard/base-types/custom-timespan-format-strings), the custom TimeSpan format specifiers  do not include placeholder separator symbols, such as the symbols that separate hours from minutes, or seconds from fractional seconds. Instead, these symbols must be included in the custom format string as string literals.
 
 This means that if you want to format a TimeSpan value with custom separators, you need to include the separators in the format string yourself. For example, to format a TimeSpan value with a hyphen (-) as a separator between hours, minutes, and seconds, you would use the following format string.
 
@@ -29,7 +29,7 @@ This means that if you want to format a TimeSpan value with custom separators, y
 
 N> The TimeSpan will always show the time value in 24-hour format.
 
-# Supported Format String with TimeSpan
+## Supported Format String with TimeSpan
 
 | List of TimeSpan custom formats supported in Blazor |  |  | |
 | --- | --- | --- | --- |
