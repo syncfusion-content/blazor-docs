@@ -570,7 +570,7 @@ In the below code example, the **Order ID** column search functionality is disab
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VtBgCNqtrMauFaPo?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+N> You can refer to our [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap5) to understand how to present and manipulate data.
 
 ## Search on each key stroke
 
