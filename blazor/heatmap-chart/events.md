@@ -67,7 +67,7 @@ The following example demonstrates how to use the `CellClicked` event to retriev
     public string[] yAxisLabels = new string[] { "Mon", "Tues", "Wed", "Thurs", "Fri", "Sat" };
 }
 ```
-![CellClicked event in Blazor HeatMap Chart](images/events/blazor-heatmap-chart-cell-clicked-event.png)
+![CellClicked event in Blazor HeatMap Chart](images/events/blazor-heatmap-chart-cell-clicked-event.gif)
 
 
 ## CellRendering
@@ -156,7 +156,7 @@ The following example demonstrates how to use the `CellSelected` event to obtain
     public string[] yAxisLabels = new string[] { "Mon", "Tues", "Wed", "Thurs", "Fri", "Sat" };
 }
 ```
-![CellSelected event in Blazor HeatMap Chart](images/events/blazor-heatmap-chart-cell-selected-event.png)
+![CellSelected event in Blazor HeatMap Chart](images/events/blazor-heatmap-chart-cell-selected-event.gif)
 
 ## Created
 
@@ -356,7 +356,7 @@ The following example demonstrates how to use the `Resized` event.
     public string[] yAxisLabels = new string[] { "Mon", "Tues", "Wed", "Thurs", "Fri", "Sat" };
 }
 ```
-![Resized event in Blazor HeatMap Chart](images/events/blazor-heatmap-chart-resized-event.png)
+![Resized event in Blazor HeatMap Chart](images/events/blazor-heatmap-chart-resized-event.gif)
 
 ## TooltipRendering
 
@@ -399,4 +399,4 @@ The following example demonstrates how to use the `TooltipRendering` event to cu
     public string[] yAxisLabels = new string[] { "Mon", "Tues", "Wed", "Thurs", "Fri", "Sat" };
 }
 ```
-![TooltipRendering event in Blazor HeatMap Chart](images/events/blazor-heatmap-chart-tooltip-render-event.png)
+![TooltipRendering event in Blazor HeatMap Chart](images/events/blazor-heatmap-chart-tooltip-render-event.gif)
