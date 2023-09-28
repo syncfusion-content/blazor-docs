@@ -697,4 +697,4 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## See Also
 
-* [How to arrange the diagram nodes and connectors using varies layout](./layout/automatic-layout/)
+* [How to arrange the diagram nodes and connectors using varies layout](./layout/automatic-layout)

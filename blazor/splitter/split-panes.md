@@ -380,7 +380,7 @@ The split panes can be removed dynamically by passing the pane index to `RemoveP
 
 ## See Also
 
-* [Resizable split panes](./resizing/)
-* [Collapsible panes](./expand-and-collapse/)
-* [Define size to a panes](./pane-sizing/)
-* [Specify content to a panes](./pane-content/)
+* [Resizable split panes](./resizing)
+* [Collapsible panes](./expand-and-collapse)
+* [Define size to a panes](./pane-sizing)
+* [Specify content to a panes](./pane-content)

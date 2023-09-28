@@ -9,9 +9,9 @@ documentation: ug
 
 # Edit-Form Validation
 
-The Rich Text Editor supports validation using the [EditForm]( https://docs.microsoft.com/en-us/aspnet/core/blazor/forms-validation?view=aspnetcore-6.0). The user-typed text content inside the editor is validated with [data annotations]( https://docs.microsoft.com/en-us/aspnet/core/mvc/models/validation?view=aspnetcore-5.0) attributes. In the following example, the `FormModel` class has the `Description` property marked required with the `RequiredAttribute` and `MinLengthAttribute` for minimum string length validation and an error message. The `Description` property is bound to the editor via the `@bind-Value` property, and validation works based on user input.
+The Rich Text Editor supports validation using the [EditForm](https://learn.microsoft.com/en-us/aspnet/core/blazor/forms-and-input-components?view=aspnetcore-6.0). The user-typed text content inside the editor is validated with [data annotations](https://learn.microsoft.com/en-us/aspnet/core/mvc/models/validation?view=aspnetcore-5.0) attributes. In the following example, the `FormModel` class has the `Description` property marked required with the `RequiredAttribute` and `MinLengthAttribute` for minimum string length validation and an error message. The `Description` property is bound to the editor via the `@bind-Value` property, and validation works based on user input.
 
-N> [View Sample in GitHub.](https://github.com/SyncfusionExamples/rich_text_editor_editform_validation)
+N> [View Sample in GitHub.](https://github.com/SyncfusionExamples/blazor-richtexteditor-editform-validation)
 
 {% tabs %}
 {% highlight cshtml %}
@@ -29,9 +29,9 @@ The Rich Text Editor provides the functionality of character counting and its va
 
 | Rules | Description |
 |----------------|---------|
-| [Required](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.requiredattribute) | Requires a value for the Rich Text Editor control.|
-| [MinLength](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.minlengthattribute) | Requires the value to be of a given minimum character count.|
-| [MaxLength](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.maxlengthattribute) | Requires the value to be of the given maximum character count.|
+| [Required](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.requiredattribute?view=net-7.0) | Requires a value for the Rich Text Editor control.|
+| [MinLength](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.minlengthattribute?view=net-7.0) | Requires the value to be of a given minimum character count.|
+| [MaxLength](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.maxlengthattribute?view=net-7.0) | Requires the value to be of the given maximum character count.|
 
 {% tabs %}
 {% highlight cshtml %}
