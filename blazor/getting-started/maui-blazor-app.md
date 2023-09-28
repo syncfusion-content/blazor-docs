@@ -220,6 +220,6 @@ Reference:
 
 ### MAUI Blazor Diagram
 
-* [How to create Diagram Builder in MAUI platform?](https://www.syncfusion.com/kb/13059/how-to-create-diagram-builder-in-maui-platform)
+* [How to create Diagram Builder in MAUI platform?](https://support.syncfusion.com/kb/article/11346/how-to-create-diagram-builder-in-maui-platform)
 
 N> [View MAUI Blazor Diagram Builder Source Code in GitHub](https://github.com/syncfusion/blazor-showcase-diagram-builder/tree/master/MAUI)
