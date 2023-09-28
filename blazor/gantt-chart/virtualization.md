@@ -194,12 +194,12 @@ To enable the column virtualization, set the [EnableRowVirtualization](https://h
                         FIELD4 = 87 + 250,
                         FIELD5 = 410 + 600,
                         FIELD6 = 67 + 250,
-                        Field7 = (int)Math.Floor(10 * 100),
-                        Field8 = (int)Math.Floor(15 * 10),
-                        Field9 = (int)Math.Floor(20 * 10),
-                        Field10 = (int)Math.Floor(25 * 100),
-                        Field11 = (int)Math.Floor(30 * 100),
-                        Field12 = (int)Math.Floor(35 * 1000),
+                        Field7 = (int)Math.Floor(10 * 100.0),
+                        Field8 = (int)Math.Floor(15 * 10.0),
+                        Field9 = (int)Math.Floor(20 * 10.0),
+                        Field10 = (int)Math.Floor(25 * 100.0),
+                        Field11 = (int)Math.Floor(30 * 100.0),
+                        Field12 = (int)Math.Floor(35 * 1000.0),
                     });
                 }
             }
@@ -328,12 +328,12 @@ Timeline virtualization allows you to load data sources having a large timespan 
                         FIELD4 = 87 + 250,
                         FIELD5 = 410 + 600,
                         FIELD6 = 67 + 250,
-                        Field7 = (int)Math.Floor(10 * 100),
-                        Field8 = (int)Math.Floor(15 * 10),
-                        Field9 = (int)Math.Floor(20 * 10),
-                        Field10 = (int)Math.Floor(25 * 100),
-                        Field11 = (int)Math.Floor(30 * 100),
-                        Field12 = (int)Math.Floor(35 * 1000),
+                        Field7 = (int)Math.Floor(10 * 100.0),
+                        Field8 = (int)Math.Floor(15 * 10.0),
+                        Field9 = (int)Math.Floor(20 * 10.0),
+                        Field10 = (int)Math.Floor(25 * 100.0),
+                        Field11 = (int)Math.Floor(30 * 100.0),
+                        Field12 = (int)Math.Floor(35 * 1000.0),
                     });
                 }
             }
