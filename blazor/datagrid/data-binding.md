@@ -1,4 +1,4 @@
-![image](https://github.com/syncfusion-content/blazor-docs/assets/30143756/fb86f86d-9df1-4d4f-9dcc-96c213afc303)---
+---
 layout: post
 title: Data Binding in Blazor DataGrid Component | Syncfusion
 description: Checkout and learn here all about Data Binding in Syncfusion Blazor DataGrid component and much more.
@@ -687,15 +687,6 @@ GraphQL is a query language for APIs with which you can get exactly what you nee
 ### Fetching data from GraphQL service and binding to grid
 
 To bind GraphQL service data to grid, you have to provide the GraphQL query string by using the [Query](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.GraphQLAdaptorOptions.html#Syncfusion_Blazor_Data_GraphQLAdaptorOptions_Query) property of the [GraphQLAdaptorOptions](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.GraphQLAdaptorOptions.html). Also you need to set the [ResolverName](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.GraphQLAdaptorOptions.html#Syncfusion_Blazor_Data_GraphQLAdaptorOptions_ResolverName) property of [GraphQLAdaptorOptions](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.GraphQLAdaptorOptions.html) to map the response. The GraphQLAdaptor expects response as a JSON object with properties of Result, Count and Aggregates which contains the collection of entities, total number of records and value of aggregates respectively. The GraphQL response should be returned in JSON format like { “data”: { … }} with query name as field.
-
-| Component | Description |
-|--------|----------------|
-| CssClass | Specifies the CSS class value that is appended to wrapper of Textbox. |
-| EnableRtl | Enable or disable rendering component in right to left direction.  |
-| ReadOnly | Specifies the boolean value that indicates whether the TextBox allows user to change the text.   |
-| ShowClearButton | Specifies a Boolean value that indicates whether the clear button is displayed in Textbox.   |
-| Multiline | Specifies a boolean value that enable or disable the multiline on the TextBox. The TextBox changes from single line to multiline when enable this multiline mode.   |
-
 
 ```cshtml
 @using Syncfusion.Blazor
