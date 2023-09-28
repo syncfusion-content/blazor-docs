@@ -32,23 +32,27 @@ Here is an example of resizing the image using the [`ImageResizeAsync`](https://
 
 @code {
     SfImageEditor ImageEditor;
-    private List<ImageEditorToolbarItemModel> customToolbarItem = new List<ImageEditorToolbarItemModel>()
-    {
-        new ImageEditorToolbarItemModel { Name = "Resize" },
-        new ImageEditorToolbarItemModel { Name = "Confirm" },
-        new ImageEditorToolbarItemModel { Name = "Reset" },
-        new ImageEditorToolbarItemModel { Name = "Save" }
-    };
+    private List<ImageEditorToolbarItemModel> customToolbarItem = new List<ImageEditorToolbarItemModel>() {};
 
     private async void OpenAsync()
     {
         await ImageEditor.OpenAsync("nature.png");
     }
 
+    private async void aspectClick()
+    {
+        await ImageEditor.ImageResizeAsync(300, 342, true);
+    }
+
+    private async void nonaspectClick()
+    {
+        await ImageEditor.ImageResizeAsync(400, 100, true);
+    }
+
 }
 ```
 
-![Blazor Image Editor with Filter an image](./images/blazor-image-editor-resize.png)
+![Blazor Image Editor with Resize an image](./images/blazor-image-editor-resize.png)
 
 ## Resizing event
 

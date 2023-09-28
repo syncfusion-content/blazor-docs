@@ -576,4 +576,4 @@ In the following example, you can use the [`DrawImageAsync`](https://help.syncfu
 }
 ```
 
-![Blazor Image Editor with Add Image an image](./images/blazor-image-editor-add-image.png)
+![Blazor Image Editor with Add Image in an image](./images/blazor-image-editor-add-image.png)
