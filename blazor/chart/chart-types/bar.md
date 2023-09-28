@@ -187,10 +187,10 @@ The following properties can be used to customize the [Bar](https://help.syncfus
 
 ![Blazor Bar Chart with Custom Series](../images/chart-types-images/blazor-bar-chart-custom-series.png)
 
-N> Refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
+N> Refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap5) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
 
 ## See also
 
-* [Creating stacked waterfall chart using Blazor bar chart](https://www.syncfusion.com/kb/13237/creating-stacked-waterfall-chart-using-blazor-bar-chart)
+* [Creating stacked waterfall chart using Blazor bar chart](https://support.syncfusion.com/kb/article/11589/creating-stacked-waterfall-chart-using-blazor-bar-chart?isInternalRefresh=False)
 * [Data Label](../data-labels)
 * [Tooltip](../tool-tip)
