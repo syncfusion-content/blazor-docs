@@ -11,7 +11,7 @@ documentation: ug
 
 ## Icons
 
-The menu item contains an icon/image in it to provide a visual representation of an action. To place the icon on a menu item, set the [IconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Navigations.MenuItem~IconCss.html) property with the required icon CSS. By default, the icon is positioned at the left of the menu item. In the following sample, the icons of `File` and `Edit` menu items and `Open`, `Save`, `Cut`, `Copy`,and `Paste` sub menu items are added using the [IconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Navigations.MenuItem~IconCss.html) property.
+The menu item contains an icon/image in it to provide a visual representation of an action. To place the icon on a menu item, set the [IconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.MenuItem.html#Syncfusion_Blazor_Navigations_MenuItem_IconCss) property with the required icon CSS. By default, the icon is positioned at the left of the menu item. In the following sample, the icons of `File` and `Edit` menu items and `Open`, `Save`, `Cut`, `Copy`,and `Paste` sub menu items are added using the [IconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.MenuItem.html#Syncfusion_Blazor_Navigations_MenuItem_IconCss) property.
 
 ```cshtml
 <SfMenu TValue="MenuItem">
@@ -96,7 +96,7 @@ The menu item contains an icon/image in it to provide a visual representation of
 
 ## Navigation
 
-Navigation in Menu Bar is used to navigate to the other web page when a Menu Bar item is clicked. It can be achieved by providing a link to the Menu Bar item using the [Url](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Navigations.MenuItem~Url.html) property. In the following sample, the Navigation URL is added to sub menu Bar items using the [Url](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Navigations.MenuItem~Url.html) property.
+Navigation in Menu Bar is used to navigate to the other web page when a Menu Bar item is clicked. It can be achieved by providing a link to the Menu Bar item using the [Url](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.MenuItem.html#Syncfusion_Blazor_Navigations_MenuItem_Url) property. In the following sample, the Navigation URL is added to sub menu Bar items using the [Url](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.MenuItem.html#Syncfusion_Blazor_Navigations_MenuItem_Url) property.
 
 ```cshtml
 
@@ -135,7 +135,7 @@ Navigation in Menu Bar is used to navigate to the other web page when a Menu Bar
 
 ## Multilevel nesting
 
-The Menu Bar supports multiple level nesting, and it can be achieved by mapping the [Items](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Navigations.MenuItem~Items.html) property inside the parent `MenuItems`.
+The Menu Bar supports multiple level nesting, and it can be achieved by mapping the [Items](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.MenuItem.html#Syncfusion_Blazor_Navigations_MenuItem_Items) property inside the parent `MenuItems`.
 
 ```cshtml
 
