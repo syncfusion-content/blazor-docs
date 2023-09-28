@@ -53,7 +53,7 @@ In Normal edit mode, when you start editing the currently selected record is cha
 
 The following screenshot represents Editing in Normal Mode.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VDhqNRhBzUgBiwGZ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Blazor DataGrid with Normal Editing](./images/blazor-datagrid-normal-editing.png)
 
 N> Normal edit mode is the default mode of editing.
 
@@ -134,8 +134,6 @@ In the following example:
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hZVADnBhzAwLhIPa?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
 ## Confirmation dialog
 
 The delete confirms dialog can be shown on deleting a record by setting the [ShowDeleteConfirmDialog](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_ShowDeleteConfirmDialog) property of the [GridEditSettings](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Grids.GridEditSettings.html) component as **true**.
@@ -181,6 +179,6 @@ The following sample code demonstrates enabling delete confirmation dialog in th
 
 The following GIF represents the delete confirmation dialog displayed while deleting a record in DataGrid,
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LZhKNRrLfzZePEyD?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Blazor DataGrid displays Delete Confirmation Dialog](./images/blazor-datagrid-delete-confirm-dialog.gif)
 
 N> The [ShowDeleteConfirmDialog](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_ShowDeleteConfirmDialog) supports all type of edit modes.

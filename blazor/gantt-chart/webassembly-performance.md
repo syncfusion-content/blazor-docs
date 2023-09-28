@@ -84,6 +84,7 @@ In the following example:
     }
 }
 ```
+
 N> The [PreventRender](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_PreventRender_System_Boolean_) method accepts the Boolean argument that accepts true or false to disable or enable rendering respectively.
 This method can be used only after the Gantt component completed the initial rendering. Calling this method during initial rendering will not have any effect.
 
@@ -140,4 +141,3 @@ The Blazor Gantt chart default scheduling is [auto-scheduling](https://blazor.sy
     }
 }
 ```
-

@@ -9,7 +9,7 @@ documentation: ug
 
 # Templates in Blazor Dialog Component
 
-In Dialog, the template support is provided to the header and footer sections. So any text or HTML content can be appended in these sections.
+In [Blazor Dialog](https://www.syncfusion.com/blazor-components/blazor-modal-dialog), the template support is provided to the header and footer sections. So any text or HTML content can be appended in these sections.
 
 To get started quickly with templates in Blazor Dialog Component, you can check the video below.
 
@@ -229,7 +229,7 @@ The following example demonstrates the usage of header and footer template in th
 
 ![Blazor Dialog with Header and Footer Template](./images/blazor-dialog-header-footer-template.png)
 
-## See Also
+## See also
 
 * [How to add an icon to dialog buttons](./how-to/add-an-icons-to-dialog-buttons)
 * [How to customize the dialog appearance](./how-to/customize-the-dialog-appearance)

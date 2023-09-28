@@ -115,12 +115,12 @@ The Rich Text Editor allows you to customize the markdown syntax by overriding i
 {% endhighlight %}
 {% endtabs %}
 
+
 ![Blazor RichTextEditor markdown custom list](./images/blazor-richtexteditor-markdown-custom-list.png)
 
 ![Blazor RichTextEditor markdown custom format](./images/blazor-richtexteditor-markdown-custom-formats.png)
 
 ![Blazor RichTextEditor markdown custom selection](./images/blazor-richtexteditor-markdown-custom-bold.png)
-
 
 ## See also
 
