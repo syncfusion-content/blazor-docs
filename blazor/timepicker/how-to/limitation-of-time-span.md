@@ -67,4 +67,4 @@ This means that if you want to display a two backslash in the format string, you
 
 This will render a TimePicker component that displays the time in the `hh\\mm\\ss` format.
 
-![Blazor TimePicker with Time Span Format](../images/blazor-timepicker-time-span-format.gif)
+![Blazor TimePicker with Time Span Format](../images/blazor-timepicker-time-span-custom-format.gif)
