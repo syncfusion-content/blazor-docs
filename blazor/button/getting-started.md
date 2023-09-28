@@ -129,7 +129,7 @@ Add the Syncfusion Blazor Button component in the **~/Pages/Index.razor** file.
 
 ![Blazor Button Component](./images/blazor-button-component.png)
 
-N> You can also explore our [Blazor Button example](https://blazor.syncfusion.com/demos/buttons/default-functionalities?) that shows how to render and configure the button.
+N> You can also explore our [Blazor Button example](https://blazor.syncfusion.com/demos/buttons/default-functionalities?theme=bootstrap5) that shows how to render and configure the button.
 
 ## See also
 
@@ -137,4 +137,4 @@ N> You can also explore our [Blazor Button example](https://blazor.syncfusion.co
 * [Getting Started with Syncfusion Blazor for Server-Side in Visual Studio](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio)
 * [Getting Started with Syncfusion Blazor for Server-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-dotnet-cli)
 
-N> You can also explore our [Blazor Button example](https://blazor.syncfusion.com/demos/buttons/default-functionalities?) that shows you how to render and configure the button.
+N> You can also explore our [Blazor Button example](https://blazor.syncfusion.com/demos/buttons/default-functionalities?theme=bootstrap5) that shows you how to render and configure the button.

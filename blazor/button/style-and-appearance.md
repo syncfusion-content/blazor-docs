@@ -9,7 +9,7 @@ documentation: ug
 
 # Styles and Appearances in Blazor Button Component
 
-To modify the Button appearance, you need to override the default CSS of Button component. Find the list of CSS classes and its corresponding section in Button component. Also, you have an option to create your own custom theme for the controls using our [Theme Studio](https://blazor.syncfusion.com/themestudio/?theme=material).
+To modify the Button appearance, you need to override the default CSS of Button component. Find the list of CSS classes and its corresponding section in Button component. Also, you have an option to create your own custom theme for the controls using our [Theme Studio](https://blazor.syncfusion.com/themestudio/?theme=bootstrap5).
 
 |CSS Class | Purpose of Class |
 |-----|----- |
