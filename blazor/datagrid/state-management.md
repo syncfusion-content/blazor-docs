@@ -115,3 +115,88 @@ You can handle the grid's state manually by using in-built state persistence met
 ```
 
 N> You can refer to our [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap4) to understand how to present and manipulate data.
+
+## Prevent certain grid state from persisting 
+
+When handle the grid's state manually by using in-built state persistence methods, the Grid properties such as Grouping, Paging, Filtering, Sorting, Searching and Columns will persist. Using JSON serialization and deserialization to remove the sortingsetting from the key list to prevent these Grid properties from persisting.
+
+The following example demonstrates how to prevent Grid sorting from persisting. 
+```csharp
+@using Syncfusion.Blazor
+@using Syncfusion.Blazor.Data
+@using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor.Buttons
+@using System.Text.Json
+@using System.Text.Json.Serialization
+
+<SfButton  @onclick="Save">save</SfButton>
+<SfButton  @onclick="Load">Load</SfButton>
+<SfButton @onclick="Reset">Reset</SfButton>
+
+<SfGrid TValue="Order" ID="Grid" @ref="Grid" DataSource="Orders" AllowReordering="true" AllowSorting="true" AllowFiltering="true" AllowPaging="true" >
+    <GridPageSettings PageSize="8"></GridPageSettings>
+    <GridEditSettings AllowEditing="true" AllowDeleting="true" AllowAdding="true" Mode="@EditMode.Normal"></GridEditSettings>
+    <GridColumns>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" IsPrimaryKey="true" TextAlign="@TextAlign.Center" Width="140"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Width="150"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code{
+    public static List<Order> Orders { get; set; }
+    SfGrid<Order> Grid;
+    public string _state;
+
+    protected override void OnInitialized()
+    {
+        Orders = Enumerable.Range(1, 15).Select(x => new Order()
+        {
+            OrderID = 1000 + x,
+            CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
+            Freight = 2.1 * x,
+        }).ToList();
+    }
+
+    public class Order
+    {
+        public int OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public double Freight { get; set; }
+    }
+    public async void Save()
+    {
+        _state = await Grid.GetPersistData();
+        dynamic PersistProp = JsonSerializer.Deserialize<Dictionary<string, object>>(_state.ToString());   
+        dynamic _statek = JsonSerializer.Deserialize<GridSearchSettings>(PersistProp["sortSettings"].ToString());    
+        _statek.Key = "";  //Set your custom search value   
+        PersistProp["sortSettings"] = JsonSerializer.Serialize(_statek).ToString();
+        _state = JsonSerializer.Serialize(PersistProp);
+
+       setGridState(_state);
+    }
+    public static string GridState { get; set; }
+    public void setGridState(string val)
+    {
+        GridState = val;
+    }
+    public string GetGridState()
+    {
+        return GridState;
+    }
+
+    public void Load()
+    {
+        string Griddata = GetGridState();
+        Grid.SetPersistData(Griddata);
+    }
+    public void Reset()
+    {
+        Grid.ResetPersistDataAsync();
+    }
+
+    
+}
+```
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hXBqjFLlNhwKmMtS?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
