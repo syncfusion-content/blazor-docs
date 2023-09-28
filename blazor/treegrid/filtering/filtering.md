@@ -82,12 +82,12 @@ namespace TreeGridComponent.Data {
 
 ![Filtering in Blazor Tree Grid](../images/blazor-treegrid-filtering.png)
 
-N> * Apply and clear filtering by using the [FilterByColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_FilterByColumnAsync_System_String_System_String_System_Object_System_String_System_Nullable_System_Boolean__System_Nullable_System_Boolean__System_String_System_String_) and [ClearFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_ClearFiltering) methods.
-<br/> * To disable filtering for a particular column, set the `AllowFiltering` property of [Column](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html) to false.
+N> * Apply and clear filtering by using the [FilterByColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_FilterByColumnAsync_System_String_System_String_System_Object_System_String_System_Nullable_System_Boolean__System_Nullable_System_Boolean__System_String_System_String_) and [ClearFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_ClearFilteringAsync) methods.
+<br/> * To disable filtering for a particular column, set the `AllowFiltering` property of [Column](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_Columns) to false.
 
 ## Filter hierarchy modes
 
-Tree Grid provides support for a set of filtering modes with [HierarchyMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridFilterSettings.html#Syncfusion_Blazor_TreeGrid_TreeGridFilterSettings_HierarchyMode) of [FilterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridFilterSettings.html) property. The below are the types of filter mode available in the Tree Grid.
+Tree Grid provides support for a set of filtering modes with [HierarchyMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_FilterSettings#Syncfusion_Blazor_TreeGrid_TreeGridFilterSettings_HierarchyMode) of [FilterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_FilterSettings) property. The below are the types of filter mode available in the Tree Grid.
 
 * **Parent** : This is the default filter hierarchy mode in the Tree Grid. The filtered records are displayed with its parent records, if the filtered records not have any parent record then the filtered records are only displayed.
 
@@ -99,7 +99,7 @@ Tree Grid provides support for a set of filtering modes with [HierarchyMode](htt
 
 ## Initial filter
 
-To apply the filter at initial rendering, set the filter **PredicateModel** in [Columns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridFilterSettings.html#Syncfusion_Blazor_TreeGrid_TreeGridFilterSettings_Columns) property of the [FilterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridFilterSettings.html).
+To apply the filter at initial rendering, set the filter **PredicateModel** in [Columns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_FilterSettings#Syncfusion_Blazor_TreeGrid_TreeGridFilterSettings_Columns) property of the [FilterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_FilterSettings).
 
 {% tabs %}
 
@@ -180,7 +180,7 @@ namespace TreeGridComponent.Data {
 
 ## Filter operators
 
-The filter operator for a column can be defined in the **Operator** property of the [Columns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridFilterSettings.html#Syncfusion_Blazor_TreeGrid_TreeGridFilterSettings_Columns) property of the [FilterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridFilterSettings.html#properties).
+The filter operator for a column can be defined in the **Operator** property of the [Columns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_FilterSettings#Syncfusion_Blazor_TreeGrid_TreeGridFilterSettings_Columns) property of the [FilterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_FilterSettings).
 
 The available operators and its supported data types are:
 
@@ -202,7 +202,7 @@ N> By default, the [Operator](https://help.syncfusion.com/cr/blazor/Syncfusion.B
 
 Filter the enum type data in the tree grid column using the Filter Template feature of the tree grid.
 
-In the following sample, the enumerated list data is bound to the Priority column and the `SfDropDownList` component is rendered in the [FilterTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_FilterTemplate) for the Priority column.  
+In the following sample, the enumerated list data is bound to the Priority column and the `SfDropDownList` component is rendered in the [FilterTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_Columns#Syncfusion_Blazor_TreeGrid_TreeGridColumn_FilterTemplate) for the Priority column.  
 
 In the [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListEvents-2.html#Syncfusion_Blazor_DropDowns_DropDownListEvents_2_ValueChange) event of the `SfDropDownList`, dynamically filter the Type column using the [FilterByColumnAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_FilterByColumnAsync_System_String_System_String_System_Object_System_String_System_Nullable_System_Boolean__System_Nullable_System_Boolean__System_String_System_String_) method of the tree grid.
 
