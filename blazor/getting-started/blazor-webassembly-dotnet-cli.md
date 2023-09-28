@@ -52,7 +52,7 @@ N> If you have installed multiple SDK versions and need any specific framework v
 
 ## Install Syncfusion Blazor Calendars and Theme NuGet in the App
 
-Here's an example of how to add `Calendars` Component in the application using the following command in the command prompt (Windows) or terminal (Linux and macOS) to install a [Syncfusion.Blazor.Calendars](https://www.nuget.org/packages/Syncfusion.Blazor.Calendars/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet package. See [Install and manage packages using the dotnet CLI](https://learn.microsoft.com/en-us/nuget/consume-packages/install-use-packages-dotnet-cli) topics for more details. Alternatively, you can utilize the following package manager command to achieve the same. 
+Here's an example of how to add **Blazor Calendar** component in the application using the following command in the command prompt (Windows) or terminal (Linux and macOS) to install a [Syncfusion.Blazor.Calendars](https://www.nuget.org/packages/Syncfusion.Blazor.Calendars/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet package. See [Install and manage packages using the dotnet CLI](https://learn.microsoft.com/en-us/nuget/consume-packages/install-use-packages-dotnet-cli) topics for more details.
 
 {% tabs %}
 {% highlight c# tabtitle=".NET CLI" %}
@@ -60,13 +60,6 @@ Here's an example of how to add `Calendars` Component in the application using t
 dotnet add package Syncfusion.Blazor.Calendars --version {{ site.releaseversion }}
 dotnet add package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
 dotnet restore
-
-{% endhighlight %}
-{% highlight C# tabtitle="Package Manager" %}
-
-Install-Package Syncfusion.Blazor.Calendars -Version {{ site.releaseversion }}
-
-Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
 
 {% endhighlight %}
 {% endtabs %}
@@ -77,19 +70,16 @@ N> Syncfusion Blazor components are available in [nuget.org](https://www.nuget.o
 
 Open **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Calendars` namespace.
 
-{% tabs %}
-{% highlight razor tabtitle="~/_Imports.razor" %}
+```cshtml
 
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Calendars
 
-{% endhighlight %}
-{% endtabs %}
+```
 
 Now, register the Syncfusion Blazor Service in the **~/Program.cs** file of your Blazor WebAssembly App.
 
-{% tabs %}
-{% highlight C# tabtitle="Blazor WebAssembly App" hl_lines="3 11" %}
+```cshtml
 
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
@@ -105,8 +95,7 @@ builder.Services.AddSyncfusionBlazor();
 await builder.Build().RunAsync();
 ....
 
-{% endhighlight %}
-{% endtabs %}
+```
 
 ## Add stylesheet and script resources
 
@@ -146,8 +135,6 @@ dotnet run
 {% endtabs %}
 
 ![Blazor Calendar Component](images/output-calendar-using-blazor-webassembly.png)
-
-N> You need to include a valid license key (either paid or trial key) within your applications. Refer to this [help topic](https://blazor.syncfusion.com/documentation/getting-started/license-key/overview) for more information.
 
 ## See Also
 
