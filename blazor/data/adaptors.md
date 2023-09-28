@@ -469,7 +469,6 @@ The following variables are passed as a parameter to the mutation method written
 | changed | Specifies the collection of record to be updated. |
 | added | Specifies the collection of record to be inserted.  |
 | deleted | Specifies the collection of record to be removed.   |
-| action | Indicates the type of operation being performed. |
 | primaryColumnName | Specifies the field name of the primary column.  |
 | additionalParameters | An optional parameter that can be used to perform any operations.   |
 | dropIndex | Specifies the record position, from which new records will be added while performing drag and drop.   |
