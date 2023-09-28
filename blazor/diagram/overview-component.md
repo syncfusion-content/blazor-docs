@@ -10,7 +10,6 @@ documentation: ug
 # Overview in Blazor Diagram Component
 
 [SfDiagramOverviewComponent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Overview.SfDiagramOverviewComponent.html) allows you to see a preview or an overall view of the entire content of a diagram. This helps you to look at the overall picture of a large diagram and to navigate, pan, or zoom on a particular position of the page.
-
 ## Usage Scenario
 
 When you work on a very large diagram, you may not know the part you are actually working on, or navigation from one part to another might be difficult. One solution for navigation is to zoom out the entire diagram and find where you are. Then, you can zoom in on a particular area you want. This solution is not suitable when you need some frequent navigation.
