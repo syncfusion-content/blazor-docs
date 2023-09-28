@@ -48,7 +48,8 @@ Open **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusio
 
 Now, register the Syncfusion Blazor Service in the **~/Program.cs** file of your Blazor WebAssembly App. 
 
-```cshtml
+{% tabs %}
+{% highlight c# tabtitle=".NET 6 & .NET 7 (~/Program.cs)" hl_lines="3 11" %}
 
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
@@ -64,7 +65,8 @@ builder.Services.AddSyncfusionBlazor();
 await builder.Build().RunAsync();
 ....
 
-```
+{% endhighlight %}
+{% endtabs %}
 
 ## Add stylesheet and script resources
 
