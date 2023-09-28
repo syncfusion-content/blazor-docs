@@ -21,7 +21,7 @@ The [`DrawFrameAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.I
 
 * frameType - Specified the image data or url of the image to be inserted.
 
-* Color - Specifies the color for the frame.
+* color - Specifies the color for the frame.
 
 * gradientColor - Specifies the gradient color for the frame.
 
@@ -96,7 +96,7 @@ Here is an example of Frame using the [`DrawFrameAsync`](https://help.syncfusion
 
 ## Frame changing event
 
-The [`frameChanging`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.FrameChangeEventArgs.html) event is triggered when applying frame on the image. This event provides information encapsulated within an object, which includes details about the frame applied in an image. This information encompasses:
+The [`FrameChanging`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.ImageEditorEvents.html#Syncfusion_Blazor_ImageEditor_ImageEditorEvents_FrameChanging) event is triggered when applying frame on the image. This event provides information encapsulated within an object, which includes details about the frame applied in an image. This information encompasses:
 
 Frame Type: This indicates the specific type of frame being applied, whether it's a mat, bevel, line, or hook.
 
@@ -104,8 +104,8 @@ Customization Values: These values contain information about any adjustments or 
 
 The parameter available in the [`FrameChangeEventArgs`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.FrameChangeEventArgs.html) is
 
-* [`FrameChangeEventArgs.previousFrameSetting`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.FrameChangeEventArgs.html#Syncfusion_Blazor_ImageEditor_FrameChangeEventArgs_PreviousFrameSetting) - The frame settings including size, color, inset, offset, gradient color which is applied before changing the frame.
+* [`FrameChangeEventArgs.PreviousFrameSetting`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.FrameChangeEventArgs.html#Syncfusion_Blazor_ImageEditor_FrameChangeEventArgs_PreviousFrameSetting) - The frame settings including size, color, inset, offset, gradient color which is applied before changing the frame.
 
-* [`FrameChangeEventArgs.currentFrameSetting`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.FrameChangeEventArgs.html#Syncfusion_Blazor_ImageEditor_FrameChangeEventArgs_CurrentFrameSetting) - The frame settings including size, color, inset, offset, gradient color which is going to apply after changing the frame.
+* [`FrameChangeEventArgs.CurrentFrameSetting`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.FrameChangeEventArgs.html#Syncfusion_Blazor_ImageEditor_FrameChangeEventArgs_CurrentFrameSetting) - The frame settings including size, color, inset, offset, gradient color which is going to apply after changing the frame.
 
-* [`FrameChangeEventArgs.cancel`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.FrameChangeEventArgs.html#Syncfusion_Blazor_ImageEditor_FrameChangeEventArgs_Cancel) - Specifies a boolean value to cancel the frame changing action.
+* [`FrameChangeEventArgs.Cancel`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.FrameChangeEventArgs.html#Syncfusion_Blazor_ImageEditor_FrameChangeEventArgs_Cancel) - Specifies a boolean value to cancel the frame changing action.
