@@ -821,6 +821,10 @@ DataGrid column supports the following types:
 
 * String
 * Number
+* Integer
+* Double
+* Long
+* Decimal
 * Boolean
 * Date
 * DateTime
