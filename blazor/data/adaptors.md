@@ -239,13 +239,13 @@ To bind GraphQL service data to grid, you have to provide the GraphQL query stri
 
     private async Task ClickHandler()
     {
-        // we can get the response here
+        // You can obtain the response here
         var data = await DataManager.ExecuteQueryAsync<Order>(query);
 
-        //we can get collection from result property
+        //You can obtain collection from Result property
         var result = (data as DataResult).Result;
 
-        //we can get count from Count property
+        //You can obtain count from Count property
         var count = (data as DataResult).Count;
     }
 
@@ -303,7 +303,7 @@ The following code demonstrates the resolver function used in the GraphQL server
             }
             if (dataManager.Aggregates != null)
             {
-                //Perform Aggregate here
+                //Perform Total Aggregate here
                 IDictionary<string, object> aggregates;
                 return new ReturnType<Order>() { Count = count, Result = result, Aggregates = aggregates };
             }
@@ -347,7 +347,7 @@ The following code demonstrates the resolver function used in the GraphQL server
 
 You can perform the CRUD operations by setting the mutation queries in the [Mutation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.GraphQLAdaptorOptions.html#Syncfusion_Blazor_Data_GraphQLAdaptorOptions_Mutation) property of [GraphQLAdaptorOptions](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.GraphQLAdaptorOptions.html).
 
-You have to set the Insert mutation query in [Insert](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.GraphQLMutation.html#Syncfusion_Blazor_Data_GraphQLMutation_Insert) property of Mutation in GraphQLAdaptorOptions. Similarly, you have to set the Update and Delete mutation queries in [Update](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.GraphQLMutation.html#Syncfusion_Blazor_Data_GraphQLMutation_Update) and [Delete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.GraphQLMutation.html#Syncfusion_Blazor_Data_GraphQLMutation_Delete) properties of Mutation in GraphQLAdaptorOptions respectively.
+You have to set the Insert mutation query in [Insert](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.GraphQLMutation.html#Syncfusion_Blazor_Data_GraphQLMutation_Insert) property of Mutation in GraphQLAdaptorOptions. Similarly, you have to set the Update and Delete mutation queries in [Update](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.GraphQLMutation.html#Syncfusion_Blazor_Data_GraphQLMutation_Update) and [Delete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.GraphQLMutation.html#Syncfusion_Blazor_Data_GraphQLMutation_Delete) properties of Mutation in `GraphQLAdaptorOptions` respectively.
 
 The following variables are passed as a parameter to the mutation method written for **Insert** operation in server side.
 
@@ -355,7 +355,7 @@ The following variables are passed as a parameter to the mutation method written
 |--------|----------------|
 | record | The new record which is need to be inserted. |
 | index | Specifies the index at which the newly added record will be inserted.  |
-| action | Indicates the type of operation being performed.   |
+| action | Indicates the type of operation being performed. When the same method is used for all CRUD actions, this argument serves to distinguish the action, such as **Add|Delete|Update** |
 | additionalParameters | An optional parameter that can be used to perform any operations.   |
 
 The following variables are passed as a parameter to the mutation method written for **Update** operation in server side.
@@ -363,7 +363,7 @@ The following variables are passed as a parameter to the mutation method written
 | Properties | Description |
 |--------|----------------|
 | record | The new record which is need to be updated. |
-| action | Indicates the type of operation being performed.   |
+| action | Indicates the type of operation being performed. When the same method is used for all CRUD actions, this argument serves to distinguish the action, such as **Add|Delete|Update**  |
 | primaryColumnName | Specifies the field name of the primary column. |
 | primaryColumnValue | Specifies the primary column value which is needs to be updated in the collection.   |
 | additionalParameters | An optional parameter that can be used to perform any operations.   |
@@ -373,7 +373,7 @@ The following variables are passed as a parameter to the mutation method written
 | Properties | Description |
 |--------|----------------|
 | primaryColumnValue | Specifies the primary column value which is needs to be removed from the collection. |
-| action | Indicates the type of operation being performed.   |
+| action | Indicates the type of operation being performed. When the same method is used for all CRUD actions, this argument serves to distinguish the action, such as **Add|Delete|Update**  |
 | primaryColumnName | specifies the field name of the primary column.  |
 | additionalParameters | An optional parameter that can be used to perform any operations.   |
 
@@ -460,7 +460,7 @@ The following code demonstrates the mutation methods used in the GraphQL server 
 
 #### Batch editing
 
-The following sample code demonstrates performing **Batch** operation. You have to set the Batch mutation query in [Batch](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.GraphQLMutation.html#Syncfusion_Blazor_Data_GraphQLMutation_Batch) property of Mutation in GraphQLAdaptorOptions.
+The following sample code demonstrates performing **Batch** operation. You have to set the Batch mutation query in [Batch](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.GraphQLMutation.html#Syncfusion_Blazor_Data_GraphQLMutation_Batch) property of Mutation in `GraphQLAdaptorOptions`.
 
 The following variables are passed as a parameter to the mutation method written for **Batch** operation in server side.
 
@@ -559,7 +559,7 @@ The following code demonstrates the mutation method used in the GraphQL server f
 
 ### Configuration in GraphQL server application
 
-The following code is the configuration in GraphQL server application to set GraphQL query and mutation type and to enable CORS.
+The following code is the configuration in GraphQL server application to set GraphQL query, mutation type and to enable CORS.
 
 Program.cs
 
