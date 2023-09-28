@@ -44,9 +44,6 @@ Open **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusio
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Calendars
 
-{% endhighlight %}
-{% endtabs %}
-
 ```
 Now, register the Syncfusion Blazor Service in the **~/Program.cs** file of your Blazor Server App. 
 
