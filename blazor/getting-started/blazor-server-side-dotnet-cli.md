@@ -69,7 +69,8 @@ Open **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusio
 
 Now, register the Syncfusion Blazor Service in the **~/Program.cs** file of your Blazor Server App. 
 
-```cshtml
+{% tabs %}
+{% highlight C# tabtitle="Blazor Server App" hl_lines="3 10" %}
 
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Web;
@@ -81,11 +82,11 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
 builder.Services.AddSyncfusionBlazor();
-
 var app = builder.Build();
 ....
 
-```
+{% endhighlight %}
+{% endtabs %}
 
 ## Add stylesheet and script resources
 
