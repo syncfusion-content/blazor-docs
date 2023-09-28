@@ -66,7 +66,7 @@ Open **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusio
 ```cshtml
 
 @using Syncfusion.Blazor
-@using Syncfusion.Blazor.Calendars
+@using Syncfusion.Blazor.Kanban
 
 ```
 
