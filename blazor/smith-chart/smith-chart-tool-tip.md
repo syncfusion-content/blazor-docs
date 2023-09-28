@@ -9,7 +9,7 @@ documentation: ug
 
 # Tooltip in Blazor Smith Chart Component
 
-When the mouse is moved over a point in the Smith Chart, a tooltip will appear displaying information about the point. By default, the tooltip is disabled. To enable the tooltip, set the [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartSeriesTooltip.html#Syncfusion_Blazor_Charts_SmithChartSeriesTooltip_Visible) property to **true** in the [SmithChartSeriesTooltip](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartSeriesTooltip.html#properties).
+When the mouse is moved over a point in the Smith Chart, a tooltip will appear displaying information about the point. By default, the tooltip is disabled. To enable the tooltip, set the [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartSeriesTooltip.html#Syncfusion_Blazor_Charts_SmithChartSeriesTooltip_Visible) property to **true** in the [SmithChartSeriesTooltip](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartSeriesTooltip.html).
 
 ```cshtml
 @using Syncfusion.Blazor.Charts
