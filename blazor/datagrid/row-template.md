@@ -154,7 +154,7 @@ The **RowTemplate** has an option to customize the look and behavior of the data
 
 If the [RowTemplate](./templates/#gridtemplates-component) is used, the value cannot be formatted inside the template using the [Columns.Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ColumnModel.html#Syncfusion_Blazor_Grids_ColumnModel_Format) property. In that case, C# custom formats can be used.
 
-Here [Custom DateTime](https://docs.microsoft.com/en-us/dotnet/standard/base-types/custom-date-and-time-format-strings) format is used for below sample.
+Here [Custom DateTime](https://learn.microsoft.com/en-us/dotnet/standard/base-types/custom-date-and-time-format-strings) format is used for below sample.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids

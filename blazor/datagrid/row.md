@@ -255,4 +255,4 @@ In the following sample, click the row in the master DataGrid, which shows the d
 
 ![Master Detail Blazor DataGrid](images/blazor-master-detail-datagrid.gif)
 
-> [View Sample.](https://blazor.syncfusion.com/demos/datagrid/master-details?theme=fluent)
+> [View Sample.](https://blazor.syncfusion.com/demos/datagrid/master-details?theme=bootstrap5)
