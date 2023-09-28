@@ -1131,7 +1131,7 @@ You can customize data label of the pivot chart markers in terms of angle, align
 
 ![Blazor PivotChart with Custom Data Label](images/blazor-pivotchart-custom-data-label.png)
 
-### Data Label Template
+## Data Label Template
 
 The [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartMarkerDataLabel.html#Syncfusion_Blazor_PivotView_PivotChartMarkerDataLabel_Template) property in the [PivotChartMarkerDataLabel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartMarkerDataLabel.html) allows you to customize the appearance of data labels in the pivot chart series by using your own HTML elements for displaying the desired UI. The parameter named [ChartDataPointInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDataPointInfo.html) is always passed in as a context within the template, allowing it to access the data points such as x and y and display the associated data point within a customized UI, as shown in the code example below.
 
