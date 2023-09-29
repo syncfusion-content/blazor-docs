@@ -38,12 +38,10 @@ In the following example, a custom style has been applied to the column header *
 </SfPivotView>
 
 <style>
-    .e-custom {
+    .e-pivotview .e-custom,
+    .e-pivotview .e-custom.e-headercell {
         font-family: 'Courier New', Courier, monospace;
         font-size: 12px !important;
-        background: pink !important;
-    }
-    .e-columnheader .e-headercell.e-custom {
         background: pink !important;
     }
 </style>
