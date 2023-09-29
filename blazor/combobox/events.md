@@ -530,5 +530,5 @@ This section explains the list of events of the ComboBox component which will be
 ## See also
 * [How to pass an extra parameter to Blazor ComboBox ValueChange handler?](https://support.syncfusion.com/kb/article/11554/how-to-pass-an-extra-parameter-to-blazor-combobox-valuechange-handler)
 
-N> ComboBox is limited with these events and new events will be added in the future based on the user requests. If the event you are looking for is not on the list, then request [here](https://www.syncfusion.com/feedback/blazor-components).
+N> ComboBox is limited with these events and new events will be added in the future based on the user requests. If the event you are looking for is not on the list, then request [here](https://www.syncfusion.com/feedback/blazor-components?control=combobox).
 
