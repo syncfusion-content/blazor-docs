@@ -7,7 +7,7 @@ control: DataGrid
 documentation: ug
 ---
 
-# Column Rendering
+# Column Rendering    
 
 ## Define columns manually 
 
