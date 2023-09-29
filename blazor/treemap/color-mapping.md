@@ -107,7 +107,7 @@ N> Refer to the [code block](#range-color-mapping) to know about the property va
 
 ## Desaturation with multiple colors
 
-Multiple colors are used to provide gradient effect to the TreeMap items based on the [TreeMapLeafColorMapping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapLeafColorMapping.html) ranges and specify the **n** number of colors in the [Color](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapLeafItemSettings.html#Syncfusion_Blazor_TreeMap_TreeMapLeafItemSettings_ColorMapping) property.
+Multiple colors are used to provide gradient effect to the TreeMap items based on the [TreeMapLeafColorMapping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapLeafColorMapping.html) ranges and specify the **n** number of colors in the [Color](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.ColorMapping.html#Syncfusion_Blazor_TreeMap_ColorMapping_Color) property.
 
 ```cshtml
 @using Syncfusion.Blazor.TreeMap

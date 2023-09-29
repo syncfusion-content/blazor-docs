@@ -279,7 +279,7 @@ Based on the mapping ranges in the data source, get the excluded ranges from the
 
 ## Hide desired legend items
 
-To enable or disable the desired legend item for each color mapping, set the [ShowLegend](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapLegendSettings.html) property to **true** in the [TreeMapLeafColorMappings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapLeafItemSettings.html#Syncfusion_Blazor_TreeMap_TreeMapLeafItemSettings_ColorMapping).
+To enable or disable the desired legend item for each color mapping, set the [ShowLegend](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.ColorMapping.html#Syncfusion_Blazor_TreeMap_ColorMapping_ShowLegend) property to **true** in the [TreeMapLeafColorMappings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapLeafColorMappings.html).
 
 ```cshtml
 @using Syncfusion.Blazor.TreeMap
@@ -425,7 +425,7 @@ To enable or disable the duplicate legend items, set the [RemoveDuplicateLegend]
 
 ## Positioning based on size
 
-Use a responsive legend that switches positions between the right and the bottom based on the available height and width. To enable the responsive legend, set the [Position](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.LegendPosition.html) property to [Auto](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.LegendPosition.html#Syncfusion_Blazor_TreeMap_LegendPosition_Auto) in the [TreeMapLegendSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapLegendSettings.html) and the legend position is changed based on the available height and width.
+Use a responsive legend that switches positions between the right and the bottom based on the available height and width. To enable the responsive legend, set the [Position](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapLegendSettings.html#Syncfusion_Blazor_TreeMap_TreeMapLegendSettings_Position) property to [Auto](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.LegendPosition.html#Syncfusion_Blazor_TreeMap_LegendPosition_Auto) in the [TreeMapLegendSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapLegendSettings.html) and the legend position is changed based on the available height and width.
 
 ```cshtml
 @using Syncfusion.Blazor.TreeMap
