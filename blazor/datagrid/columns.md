@@ -6,6 +6,7 @@ platform: Blazor
 control: DataGrid
 documentation: ug
 ---
+# Columns in Blazor DataGrid Component
 
 ## Column types
 

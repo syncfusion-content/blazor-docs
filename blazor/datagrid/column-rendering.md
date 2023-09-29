@@ -7,7 +7,7 @@ control: DataGrid
 documentation: ug
 ---
 
-# Column Rendering    
+# Column Rendering in Blazor DataGrid Component
 
 ## Define columns manually 
 
