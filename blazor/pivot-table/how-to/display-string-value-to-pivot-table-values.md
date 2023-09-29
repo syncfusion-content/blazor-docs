@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Display string value to pivot table values in Blazor Pivot Table | Syncfusion
+title: Display string value to pivot table values in Blazor Pivot Table
 description: Learn here all about Display string value to pivot table values in Syncfusion Blazor Pivot Table component and more.
 platform: Blazor
 control: Pivot Table
