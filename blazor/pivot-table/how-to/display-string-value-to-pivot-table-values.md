@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Display string value to pivot table values in Blazor Pivot Table
+title: Display string value to pivot table values in Blazor | Syncfusion
 description: Learn here all about Display string value to pivot table values in Syncfusion Blazor Pivot Table component and more.
 platform: Blazor
 control: Pivot Table
 documentation: ug
 ---
 
-# Display string value to pivot table values in Blazor Pivot Table Component
+# Display string value to pivot table values in Blazor Pivot Table
 
 End user can display string value to the pivot table's value cell by using the [CellTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewTemplates.html#Syncfusion_Blazor_PivotView_PivotViewTemplates_CellTemplate) property in [PivotViewTemplates](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewTemplates.html) class.
 
