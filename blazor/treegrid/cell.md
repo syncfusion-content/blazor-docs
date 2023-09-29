@@ -391,4 +391,4 @@ public class TreeData
 
 ![Clip Mode in Blazor TreeGrid](images/blazor-treegrid-clip-mode.png)
 
-N> By default, [ClipMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridColumn~ClipMode.html) value is **Ellipsis**.
+N> By default, [ClipMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_ClipMode) value is **Ellipsis**.
