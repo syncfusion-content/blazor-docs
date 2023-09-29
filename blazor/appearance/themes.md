@@ -592,27 +592,31 @@ In the Blazor application, the application theme can be changed dynamically by c
 
 The following example demonstrates how to change a theme dynamically in Blazor Server application using Syncfusion Blazor themes using Syncfusion Dropdown component.
 
-1.Below step shows how to reference style sheet in the way to change at dynamically.
-
-* For **.NET6 Blazor Server Application**, In the **_Layout.cshtml** the theme is changed dynamically using `id` in `setTheme` method.
-* For **.NET 3.1, .NET 5 and .NET 7 Blazor Server Application**, In **_Host.cshtml**, the theme is changed based on query string. 
+1. In **_Host.cshtml** or **_Layout.cshtml**, the theme is changed based on query string. 
 
 {% tabs %}
 {% highlight c# tabtitle=".NET 6 (~/_Layout.cshtml)" %}
 
+@using Microsoft.AspNetCore.Components.Web
+@using Microsoft.AspNetCore.Components;
+@using Microsoft.AspNetCore.WebUtilities;
+@namespace BlazorThemeSwitcher.Pages
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@inject NavigationManager UrlHelper;
+
+@{
+    Layout = null;
+    var uri = UrlHelper.ToAbsoluteUri(UrlHelper.Uri);
+    QueryHelpers.ParseQuery(uri.Query).TryGetValue("theme", out var themeName);
+    themeName = themeName.Count > 0 ? themeName.First() : "bootstrap4";
+}
+
+...
 <head>
-... 
-<link id="theme" href="_content/Syncfusion.Blazor.Themes/bootstrap4.css" rel="stylesheet" />
+...
+    @*Sets the selected theme name into styles*@
+    <link href=@("_content/Syncfusion.Blazor.Themes/" + themeName + ".css") rel="stylesheet" />
 </head>
-... 
-<script>
-    function setTheme(theme) {
-        document.getElementsByTagName('body')[0].style.display = 'none';
-        let synclink = document.getElementById('theme');
-        synclink.href = '_content/Syncfusion.Blazor.Themes/' + theme + '.css';
-        setTimeout(function () { document.getElementsByTagName('body')[0].style.display = 'block'; }, 200);
-    }
-</script>
 ...
 
 {% endhighlight %}
@@ -627,111 +631,20 @@ The following example demonstrates how to change a theme dynamically in Blazor S
     QueryHelpers.ParseQuery(Request.QueryString.Value).TryGetValue("theme", out var themeName);
     themeName = themeName.Count > 0 ? themeName.First() : "bootstrap4";
 }
-
-<!DOCTYPE html>
-<html lang="en">
+...
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>BlazorThemeSwitcher</title>
-    <base href="~/" />
-    <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css" />
-    <link href="css/site.css" rel="stylesheet" />
-    <link href="BlazorThemeSwitcher.styles.css" rel="stylesheet" />
+...
+    @*Sets the selected theme name into styles*@    
     <link href=@("_content/Syncfusion.Blazor.Themes/" + themeName + ".css")rel="stylesheet" />
 </head>
-
-<body>
-    <script src="_framework/blazor.server.js"></script>
-</ </body>
-</html>
+...
 
 {% endhighlight %}
 {% endtabs %}
 
-2.Below step shows changing style sheet dynamically.
+2.Modify the MainLayout.razor page with the code below to implement dynamic theme change using the dropdown by modifying the query string to change the theme in the application.
 
-* For **.NET5 Blazor Server Application**, in **MainLayout.razor** page add dropdown list with themes. In `ValueChange` event handler, the page is refreshed by changing query string to change the theme in application.
-
-* For **.NET6 Blazor Server Application**, modify the **MainLayout.razor** page add dropdown list with themes. In `ValueChange` event handler, the theme is changed by calling `setTheme` method defined in step `. 
-
-{% tabs %}
-{% highlight c# tabtitle=".NET 6 (~/MainLayout.razor)" %}
-
-@inherits LayoutComponentBase
-@inject NavigationManager UrlHelper;
-@inject IJSRuntime JSRuntime;
-@using Syncfusion.Blazor.DropDowns;
-@using Syncfusion.Blazor.Buttons;
-@using Microsoft.AspNetCore.WebUtilities;
-
-<div class="page">
-    <div class="main">
-        <div class="top-row px-4">
-            <div class="theme-switcher">
-                @*Theme switcher*@
-                <SfDropDownList TItem="ThemeDetails" TValue="string" @bind-Value="themeName" DataSource="@Themes">
-                    <DropDownListFieldSettings Text="Text" Value="ID"></DropDownListFieldSettings>
-                    <DropDownListEvents TItem="ThemeDetails" TValue="string" ValueChange="OnThemeChange"></DropDownListEvents>
-                </SfDropDownList>
-            </div>
-            <a href="http://blazor.net" target="_blank" class="ml-md-auto">About</a>
-        </div>
-
-        <div class="content px-4">
-            @Body
-        </div>
-    </div>
-</div>
-
-@code {
-    private string themeName;
-
-    public class ThemeDetails
-    {
-        public string ID { get; set; }
-        public string Text { get; set; }
-    }
-
-    private List<ThemeDetails> Themes = new List<ThemeDetails>() {
-        new ThemeDetails(){ ID = "material3", Text = "Material 3" },
-        new ThemeDetails(){ ID = "material", Text = "Material" },
-        new ThemeDetails(){ ID = "bootstrap", Text = "Bootstrap" },
-        new ThemeDetails(){ ID = "fabric", Text = "Fabric" },
-        new ThemeDetails(){ ID = "bootstrap4", Text = "Bootstrap 4" },
-        new ThemeDetails(){ ID = "tailwind", Text = "TailWind"},
-        new ThemeDetails(){ ID = "tailwind-dark", Text = "TailWind Dark" },
-        new ThemeDetails(){ ID = "material3-dark", Text = "Material 3 Dark" },
-        new ThemeDetails(){ ID = "material-dark", Text = "Material Dark" },
-        new ThemeDetails(){ ID = "bootstrap-dark", Text = "Bootstrap Dark" },
-        new ThemeDetails(){ ID = "fabric-dark", Text = "Fabric Dark" },
-        new ThemeDetails(){ ID = "highcontrast", Text = "High Contrast" }
-    };
-    
-
-    public void OnThemeChange(Syncfusion.Blazor.DropDowns.ChangeEventArgs<string, ThemeDetails> args)
-    {
-        JSRuntime.InvokeAsync<object>("setTheme", args.ItemData.ID);                
-    }
-    
-    private string GetThemeName()
-    {
-        var uri = UrlHelper.ToAbsoluteUri(UrlHelper.Uri);
-        QueryHelpers.ParseQuery(uri.Query).TryGetValue("theme", out var theme);
-        return theme.Count > 0 ? theme.First() : "bootstrap4";
-    }
-
-    protected override void OnInitialized()
-    {
-        var theme = GetThemeName();
-        themeName = theme.Contains("bootstrap4") ? "bootstrap4" : theme;
-    }
-
-}
-
-{% endhighlight %}
-{% highlight c# tabtitle=".NET 5 & 3.1 (~/MainLayout.razor)" %}
-
+```cshtml
 @inherits LayoutComponentBase
 @inject NavigationManager UrlHelper;
 @using Syncfusion.Blazor.DropDowns;
@@ -810,8 +723,7 @@ The following example demonstrates how to change a theme dynamically in Blazor S
     }
 }
 
-{% endhighlight %}
-{% endtabs %}
+```
 
    ![Change theme dynamically in blazor server app](images/blazor-dynamic-theme-switching.gif) 
     
@@ -834,7 +746,7 @@ The following example demonstrates how to change a theme dynamically in Blazor W
             document.getElementsByTagName('body')[0].style.display = 'none';
             let synclink = document.getElementById('theme');
             synclink.href = '_content/Syncfusion.Blazor.Themes/' + theme + '.css';
-            setTimeout(function () { document.getElementsByTagName('body')[0].style.display = 'block'; }, 200);
+            setTimeout(function () { document.getElementsByTagName('body')[0].style.display = 'block'; }, 300);
         }
     </script>
     ...
@@ -870,7 +782,7 @@ The following example demonstrates how to change a theme dynamically in Blazor W
     </div>
     
     @code {
-        private string themeName;
+        private string themeName = "bootstrap4";
     
         public class ThemeDetails
         {
@@ -892,24 +804,10 @@ The following example demonstrates how to change a theme dynamically in Blazor W
             new ThemeDetails(){ ID = "fabric-dark", Text = "Fabric Dark" },
             new ThemeDetails(){ ID = "highcontrast", Text = "High Contrast" }
         };
-        
-    
+            
         public void OnThemeChange(Syncfusion.Blazor.DropDowns.ChangeEventArgs<string, ThemeDetails> args)
         {
             JSRuntime.InvokeAsync<object>("setTheme", args.ItemData.ID);                
-        }
-     
-        private string GetThemeName()
-        {
-            var uri = UrlHelper.ToAbsoluteUri(UrlHelper.Uri);
-            QueryHelpers.ParseQuery(uri.Query).TryGetValue("theme", out var theme);
-            return theme.Count > 0 ? theme.First() : "bootstrap4";
-        }
-    
-        protected override void OnInitialized()
-        {
-            var theme = GetThemeName();
-            themeName = theme.Contains("bootstrap4") ? "bootstrap4" : theme;
         }
     
     }

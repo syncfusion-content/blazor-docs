@@ -17,7 +17,7 @@ This section explains how to enable prerendering to a Blazor WebAssembly applica
 
 ## Create a new project for Blazor WebAssembly ASP.NET Core Hosted application
 
-1. Create a new [Blazor WebAssembly ASP.NET Core Hosted application](../../visual-studio-2019/#create-a-new-project-for-blazor-webassembly-aspnet-core-hosted-application).
+1. Create a new [Blazor WebAssembly ASP.NET Core Hosted application](https://blazor.syncfusion.com/documentation/getting-started/blazor-core-hosted#create-a-blazor-aspnet-core-hosted-webassembly-app-in-visual-studio).
 
 2. Delete `~/wwwroot/index.html` file in the Client project.
 
