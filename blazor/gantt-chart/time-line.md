@@ -385,6 +385,59 @@ In the Gantt Chart component, the schedule timeline will be automatically update
 }
 ```
 
+## Render chart timeline within a datetime range
+
+In Blazor Gantt, there is an option to display your project timeline within a specific range by specifying the [ProjectStartDate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_ProjectStartDate) and [ProjectEndDate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_ProjectEndDate). If a task in your project falls outside of this range, the taskbar will be partially visible, either starting from the set ProjectStartDate or ending at the set ProjectEndDate, depending on the task's position.
+
+```cshtml
+@using Syncfusion.Blazor.Gantt
+<SfGantt DataSource="@TaskCollection" ProjectStartDate="StartDate" ProjectEndDate="EndDate" Height="450px" Width="700px">
+    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" ParentID="ParentId">
+    </GanttTaskFields>
+</SfGantt>
+
+@code{
+    private DateTime StartDate = new DateTime(2023, 01, 01);
+    private DateTime EndDate = new DateTime(2023, 12, 31 );
+    private List<TaskData> TaskCollection { get; set; }
+    protected override void OnInitialized()
+    {
+        this.TaskCollection = GetTaskCollection();
+    }
+
+    public class TaskData
+    {
+        public int TaskId { get; set; }
+        public string TaskName { get; set; }
+        public DateTime StartDate { get; set; }
+        public DateTime EndDate { get; set; }
+        public string Duration { get; set; }
+        public int Progress { get; set; }
+        public int? ParentId { get; set; }
+    }
+
+    public static List<TaskData> GetTaskCollection()
+    {
+        List<TaskData> Tasks = new List<TaskData>()
+    {
+        new TaskData() { TaskId = 1, TaskName = "Project initiation", StartDate = new DateTime(2022, 12, 29), EndDate = new DateTime(2023, 1, 6) },
+        new TaskData() { TaskId = 2, TaskName = "Identify Site location", StartDate = new DateTime(2022, 12, 29), Duration = "20", Progress = 30, ParentId = 1 },
+        new TaskData() { TaskId = 3, TaskName = "Feasibility Study", StartDate = new DateTime(2023, 1, 2), Duration = "17", Progress = 20, ParentId = 1 },
+        new TaskData() { TaskId = 4, TaskName = "Project Plan", StartDate = new DateTime(2023, 1, 9), Duration = "14", Progress = 10, ParentId = 1 },
+        new TaskData() { TaskId = 5, TaskName = "Permit Acquisition", StartDate = new DateTime(2023, 1, 23), Duration = "10", Progress = 5},
+        new TaskData() { TaskId = 6, TaskName = "Site Design", StartDate = new DateTime(2023, 2, 2), Duration = "20", Progress = 15, ParentId = 5 },
+        new TaskData() { TaskId = 7, TaskName = "Construction", StartDate = new DateTime(2023, 5, 1), Duration = "90", Progress = 25,ParentId=5 },
+        new TaskData() { TaskId = 8, TaskName = "Quality Assurance", StartDate = new DateTime(2023, 12, 01), EndDate = new DateTime(2024, 1, 5), Progress = 40, ParentId = 5 }
+    };
+
+        return Tasks;
+    }
+
+}
+
+```
+![Render chart timeline within a datetime range in Blazor Gantt Chart](images/project-start-date-project-end-date.png)
+
 
 <!-- ```cshtml
 @using Syncfusion.Blazor.Gantt
