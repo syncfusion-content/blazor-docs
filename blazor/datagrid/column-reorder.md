@@ -7,9 +7,13 @@ control: DataGrid
 documentation: ug
 ---
 
-# Column Reorder in Blazor DataGrid
+# Column Reorder in Blazor DataGrid component
 
-Reordering can be done by drag and drop of a particular column header from one index to another index within the DataGrid. To enable reordering, set the [AllowReordering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowReordering) property to true.
+The Syncfusion Blazor Grid component allows to reorder columns by drag and drop of a particular column header from one index to another index within the grid.
+
+To reorder the columns, set the [AllowReordering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowReordering) property to true in the grid.
+
+Here’s an example for column reordering in your Grid component:
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -17,147 +21,278 @@ Reordering can be done by drag and drop of a particular column header from one i
 <SfGrid DataSource="@Orders" Height="315" AllowReordering="true" AllowPaging="true">
     <GridColumns>
         <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.OrderDate) HeaderText="Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
-        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer ID" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(Order.ShipCity) HeaderText="Ship City" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.ShipName) HeaderText="Ship Name" TextAlign="TextAlign.Right" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
 
-@code{
+@code {
     public List<Order> Orders { get; set; }
 
     protected override void OnInitialized()
     {
         Orders = Enumerable.Range(1, 75).Select(x => new Order()
-        {
-            OrderID = 1000 + x,
-            CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
-            Freight = 2.1 * x,
-            OrderDate = DateTime.Now.AddDays(-x),
-        }).ToList();
+            {
+                OrderID = 1000 + x,
+                CustomerID = (new string[] { "VINET", "TOMSP", "HANAR", "VICTE", "SUPRD" })[new Random().Next(5)],
+                ShipCity = (new string[] { "Reims", "Münster", "Rio de Janeiro", "Lyon", "Charleroi" })[new Random().Next(5)],
+                ShipName = (new string[] { "Vins et alcool", "Toms Spezialitäten", "Hanari Carnes", "Victuailles en stock", "Suprêmes délices" })[new Random().Next(5)]
+            }).ToList();
     }
 
-    public class Order {
+    public class Order
+    {
         public int? OrderID { get; set; }
         public string CustomerID { get; set; }
-        public DateTime? OrderDate { get; set; }
-        public double? Freight { get; set; }
+        public string ShipCity { get; set; }
+        public string ShipName { get; set; }
     }
 }
 ```
 
 The following represents Reordering of columns
 
-![Reordering Columns in Blazor DataGrid](images/blazor-datagrid-reorder-column.gif)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hDrKjPqjiHRYBUgm?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-N> You can disable reordering a particular column by setting the [AllowReordering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_AllowReordering) property of **GridColumn** as false.
+> * You can disable reordering a particular column by setting the [AllowReordering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_AllowReordering) property of **GridColumn** as false.
+<br/> * When columns are reordered, the position of the corresponding column data will also be changed. As a result, you should ensure that any additional code or logic that relies on the order of the column data is updated accordingly.
 
-## Reorder single column
+## Prevent reordering for particular column
 
-DataGrid has option to reorder single column either by Interaction or by using the [ReorderColumns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ReorderColumns_System_Collections_Generic_List_System_String__System_String_) method. In the following sample, **Freight** column is reordered to last column position by using the method.
+By default, all columns in the Syncfusion Blazor Grid can be reordered by dragging and dropping their headers to another location within the grid. However, there may be certain columns that you do not want to be reordered. In such cases, you can set the [AllowReordering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_AllowReordering) property of that particular column to false. Here is an example that demonstrates how to prevent reordering for a specific column:
+
+In this example, the **ShipCity** column is prevented from being reordered by setting the `AllowReordering` property to **false**.
 
 ```cshtml
-@using Syncfusion.Blazor.Buttons
 @using Syncfusion.Blazor.Grids
 
-<SfButton OnClick="ReorderBtn" CssClass="e-primary" IsPrimary="true" Content="Reorder Freight"></SfButton>
-<SfGrid @ref="DefaultGrid" DataSource="@Orders" AllowReordering="true" AllowPaging="true" Height="315">
+<SfGrid DataSource="@Orders" Height="315" AllowReordering="true" AllowPaging="true">
     <GridColumns>
-        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" IsPrimaryKey="true" TextAlign="TextAlign.Center" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.CustomerName) TextAlign="TextAlign.Center" HeaderText="Customer Name" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Center" MinWidth="10" Width="120" MaxWidth="200"></GridColumn>
-        <GridColumn Field=@nameof(Order.OrderDate) HeaderText="Order Date" Format="d" TextAlign="TextAlign.Center" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer ID" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(Order.ShipCity) HeaderText="Ship City" AllowReordering="false" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.ShipName) HeaderText="Ship Name" TextAlign="TextAlign.Right" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
 
-@code{
-    private SfGrid<Order> DefaultGrid;
-
+@code {
     public List<Order> Orders { get; set; }
 
     protected override void OnInitialized()
     {
         Orders = Enumerable.Range(1, 75).Select(x => new Order()
-        {
-            OrderID = 1000 + x,
-            CustomerName = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
-            Freight = 2.1 * x,
-            OrderDate = DateTime.Now.AddDays(-x),
-        }).ToList();
-    }
-
-    public void ReorderBtn()
-    {
-        this.DefaultGrid.ReorderColumns("Freight", "OrderDate");
+            {
+                OrderID = 1000 + x,
+                CustomerID = (new string[] { "VINET", "TOMSP", "HANAR", "VICTE", "SUPRD" })[new Random().Next(5)],
+                ShipCity = (new string[] { "Reims", "Münster", "Rio de Janeiro", "Lyon", "Charleroi" })[new Random().Next(5)],
+                ShipName = (new string[] { "Vins et alcool", "Toms Spezialitäten", "Hanari Carnes", "Victuailles en stock", "Suprêmes délices" })[new Random().Next(5)]
+            }).ToList();
     }
 
     public class Order
     {
         public int? OrderID { get; set; }
-        public string CustomerName { get; set; }
-        public DateTime? OrderDate { get; set; }
-        public double? Freight { get; set; }
+        public string CustomerID { get; set; }
+        public string ShipCity { get; set; }
+        public string ShipName { get; set; }
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BNrAjPKtCQvJlPJv?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-The following GIF represents Reordering column **Freight** by using method,
+## Reorder columns externally
 
-![Reordering Single Column in Blazor DataGrid](images/blazor-datagrid-reorder-single-column.gif)
+The Syncfusion Blazor Grid allows you to reorder columns externally, which means that using methods you can programmatically move columns around within the grid, based on their index or target index, or by using their field name.
 
-## Reorder multiple columns
+### Reorder column based on index
 
-User can reorder a single column at a time by Interaction. Sometimes, you need to reorder multiple columns at the same time. This can be achieved programmatically by using the [ReorderColumns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ReorderColumns_System_Collections_Generic_List_System_String__System_String_) method.
+You can use the [ReorderColumnByIndexAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ReorderColumnByIndexAsync_System_Int32_System_Int32_) method to reorder columns based on their current index. This method takes two arguments:
 
-In the following sample, **Customer Name** and **Freight** columns are reordered to last column position by using this method on button click.
+* **fromIndex** : Current index of the column to be reordered.
+* **toIndex** : New index of the column after the reordering.
+
+Here is an example of how to use the `ReorderColumnByIndexAsync` method:
+
+In this example, we are moving the column at index 1 to index 2.
 
 ```cshtml
-@using Syncfusion.Blazor.Buttons
 @using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor.Buttons
 
-<SfButton OnClick="ReorderBtn" CssClass="e-primary" IsPrimary="true" Content="Reorder Customer Name and Freight"></SfButton>
-<SfGrid @ref="DefaultGrid" DataSource="@Orders" AllowReordering="true" AllowPaging="true" Height="315">
+<SfButton OnClick="reOrder">REORDER COLUMN BY INDEX</SfButton>
+
+<SfGrid @ref="Grid" DataSource="@Orders" Height="315" AllowReordering="true" AllowPaging="true">
     <GridColumns>
-        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" IsPrimaryKey="true" TextAlign="TextAlign.Center" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.CustomerName) TextAlign="TextAlign.Center" HeaderText="Customer Name" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Center" MinWidth="10" Width="120" MaxWidth="200"></GridColumn>
-        <GridColumn Field=@nameof(Order.OrderDate) HeaderText="Order Date" Format="d" TextAlign="TextAlign.Center" Width="130" Type="ColumnType.Date"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer ID" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(Order.ShipCity) HeaderText="Ship City" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Order.ShipRegion) HeaderText="Ship Region" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Order.ShipName) HeaderText="Ship Name" TextAlign="TextAlign.Right" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
 
-@code{
-    private SfGrid<Order> DefaultGrid;
-
+@code {
+    private SfGrid<Order> Grid;
     public List<Order> Orders { get; set; }
 
     protected override void OnInitialized()
     {
         Orders = Enumerable.Range(1, 75).Select(x => new Order()
-        {
-            OrderID = 1000 + x,
-            CustomerName = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
-            Freight = 2.1 * x,
-            OrderDate = DateTime.Now.AddDays(-x),
-        }).ToList();
+            {
+                OrderID = 1000 + x,
+                CustomerID = (new string[] { "VINET", "TOMSP", "HANAR", "VICTE", "SUPRD" })[new Random().Next(5)],
+                ShipCity = (new string[] { "Reims", "Münster", "Rio de Janeiro", "Lyon", "Charleroi" })[new Random().Next(5)],
+                ShipRegion = (new string[] { "CJ", "SP", "RJ", "Táchira", "NM" })[new Random().Next(5)],
+                ShipName = (new string[] { "Vins et alcool", "Toms Spezialitäten", "Hanari Carnes", "Victuailles en stock", "Suprêmes délices" })[new Random().Next(5)]
+            }).ToList();
     }
 
-    public void ReorderBtn()
+    public class Order
     {
-        this.DefaultGrid.ReorderColumns(new string[] {"CustomerName", "Freight"}, "OrderDate");
+        public int? OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public string ShipCity { get; set; }
+        public string ShipRegion { get; set; }
+        public string ShipName { get; set; }
     }
 
-    public class Order {
-        public int? OrderID { get; set; }
-        public string CustomerName { get; set; }
-        public DateTime? OrderDate { get; set; }
-        public double? Freight { get; set; }
+    public void reOrder()
+    {
+        this.Grid.ReorderColumnByIndexAsync(1, 2);
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hNLqXFUjMvoSvMXo?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-The following GIF represents Reordering Columns **Freight** and **OrderDate** by using method
+### Reorder column based on target index
 
-![Reordering Multiple Columns in Blazor DataGrid](images/blazor-datagrid-reorder-multiple-columns.gif)
+You can also use the [ReorderColumnByTargetIndexAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ReorderColumnByTargetIndexAsync_System_String_System_Int32_) method to reorder column columns based on the target index. This method takes two arguments:
+
+* **FieldName** : Field name of the column to be reordered
+* **toIndex** : New index of the column after the reordering
+
+Here is an example of how to use the `ReorderColumnByTargetIndexAsync` method to reorder column based on target index:
+
+```cshtml 
+@using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor.Buttons
+
+<SfButton OnClick="singleColumn">REORDER SINGLE COLUMN </SfButton>
+
+
+<SfGrid @ref="Grid" DataSource="@Orders" Height="315" AllowReordering="true" AllowPaging="true">
+    <GridColumns>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer ID" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(Order.ShipCity) HeaderText="Ship City" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Order.ShipRegion) HeaderText="Ship Region" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Order.ShipName) HeaderText="Ship Name" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code {
+    private SfGrid<Order> Grid;
+    public List<Order> Orders { get; set; }
+
+    protected override void OnInitialized()
+    {
+        Orders = Enumerable.Range(1, 75).Select(x => new Order()
+            {
+                OrderID = 1000 + x,
+                CustomerID = (new string[] { "VINET", "TOMSP", "HANAR", "VICTE", "SUPRD" })[new Random().Next(5)],
+                ShipCity = (new string[] { "Reims", "Münster", "Rio de Janeiro", "Lyon", "Charleroi" })[new Random().Next(5)],
+                ShipRegion = (new string[] { "CJ", "SP", "RJ", "Táchira", "NM" })[new Random().Next(5)],
+                ShipName = (new string[] { "Vins et alcool", "Toms Spezialitäten", "Hanari Carnes", "Victuailles en stock", "Suprêmes délices" })[new Random().Next(5)]
+            }).ToList();
+    }
+
+    public class Order
+    {
+        public int? OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public string ShipCity { get; set; }
+        public string ShipRegion { get; set; }
+        public string ShipName { get; set; }
+    }
+
+    public void singleColumn()
+    {
+        this.Grid.ReorderColumnByTargetIndexAsync("OrderID", 3);
+    }
+
+}
+```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hXLqDFqNMbELbJgC?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+### Reorder column based on field names
+
+The [ReorderColumnsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ReorderColumnAsync_System_String_System_String_) method of the Grid allows you to reorder list of columns based on their field names. This method takes two arguments:
+
+* **fromFieldName**: The field name of the column you want to move.
+* **toFieldName** : The field name of the column you want to move the column to.
+
+Here is an example of how to use the `ReorderColumnsAsync` method to reorder multiple columns based on field names:
+
+```cshtml
+@using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor.Buttons
+
+<SfButton OnClick="ReorderBtn" CssClass="e-primary" IsPrimary="true" Content="REORDER SINGLE COLUMN"></SfButton>
+<SfButton OnClick="multipleColumn" CssClass="e-primary" IsPrimary="true" Content="REORDER MULTIPLE COLUMN"></SfButton>
+
+
+<SfGrid @ref="Grid" DataSource="@Orders" Height="315" AllowReordering="true" AllowPaging="true">
+    <GridColumns>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer ID" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(Order.ShipCity) HeaderText="Ship City" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Order.ShipRegion) HeaderText="Ship Region" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Order.ShipName) HeaderText="Ship Name" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code {
+    public List<string> IsVar = (new List<string> { "ShipCity", "ShipRegion", "ShipName" });
+    private SfGrid<Order> Grid;
+    public List<Order> Orders { get; set; }
+
+    protected override void OnInitialized()
+    {
+        Orders = Enumerable.Range(1, 75).Select(x => new Order()
+            {
+                OrderID = 1000 + x,
+                CustomerID = (new string[] { "VINET", "TOMSP", "HANAR", "VICTE", "SUPRD" })[new Random().Next(5)],
+                ShipCity = (new string[] { "Reims", "Münster", "Rio de Janeiro", "Lyon", "Charleroi" })[new Random().Next(5)],
+                ShipRegion = (new string[] { "CJ", "SP", "RJ", "Táchira", "NM" })[new Random().Next(5)],
+                ShipName = (new string[] { "Vins et alcool", "Toms Spezialitäten", "Hanari Carnes", "Victuailles en stock", "Suprêmes délices" })[new Random().Next(5)]
+
+            }).ToList();
+    }
+
+    public class Order
+    {
+        public int? OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public string ShipCity { get; set; }
+        public string ShipRegion { get; set; }
+        public string ShipName { get; set; }
+    }
+    public void ReorderBtn()
+    {
+        this.Grid.ReorderColumns("ShipCity", "OrderID");
+    }
+
+
+    public void multipleColumn()
+    {
+
+        this.Grid.ReorderColumnsAsync(IsVar, "OrderID");
+    }
+
+}
+```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNVgDFUtBByNDPFg?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 <!-- Reorder events
 
