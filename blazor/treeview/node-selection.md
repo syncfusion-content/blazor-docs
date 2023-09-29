@@ -792,7 +792,7 @@ In the Blazor TreeView component, you can select particular TreeView nodes using
 </SfTreeView>
 
 @code {
-    public string[] selectedNodes = Array.Empty<string>();
+    public string[] SelectedNodes = Array.Empty<string>();
     public void SelectIndividualNode()
     {
         SelectedNodes = new string[] { "1" };
