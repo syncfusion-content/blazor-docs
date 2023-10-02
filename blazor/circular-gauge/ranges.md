@@ -9,7 +9,7 @@ documentation: ug
 
 # Ranges in Blazor Circular Gauge Component
 
-You can categorize certain interval on Circular Gauge axis using the [CircularGaugeRanges](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeRanges.html) tag.
+You can categorize certain interval on Circular Gauge axis using the [CircularGaugeRanges](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeRanges.html) tag.
 
 ## Range start and end
 
@@ -84,7 +84,7 @@ The color of a range can be customized using the [Color](https://help.syncfusion
 
 ## Range position
 
-The ranges can be placed either inside, outside or center of the axis using the [Position`] property in [CircularGaugeRange](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeRange.html). Its possible values are 'PointerRangePosition.Inside', 'PointerRangePosition.Outside' and 'PointerRangePosition.Cross'.
+The ranges can be placed either inside, outside or center of the axis using the [Position`] property in [CircularGaugeRange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeRange.html). Its possible values are 'PointerRangePosition.Inside', 'PointerRangePosition.Outside' and 'PointerRangePosition.Cross'.
 
 ```cshtml
 @using Syncfusion.Blazor.CircularGauge
@@ -105,7 +105,7 @@ The ranges can be placed either inside, outside or center of the axis using the 
 
 ## Rounded corners
 
-You can customize the corner radius using the [RoundedCornerRadius](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeRange.html#Syncfusion_Blazor_CircularGauge_CircularGaugeRange_RoundedCornerRadius) property in [CircularGaugeRange](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeRange.html).
+You can customize the corner radius using the [RoundedCornerRadius](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeRange.html#Syncfusion_Blazor_CircularGauge_CircularGaugeRange_RoundedCornerRadius) property in [CircularGaugeRange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeRange.html).
 
 ```cshtml
 @using Syncfusion.Blazor.CircularGauge
@@ -199,7 +199,7 @@ The ranges can be dragged over the axis line by clicking and dragging the same. 
 
 You can add multiple ranges to an axis with the above customization as demonstrated below.
 
-You can set the range color to ticks and labels of an axis by enabling the [UseRangeColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Fill) property in [CircularGaugeAxisMajorTicks](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeAxisMajorTicks.html), [CircularGaugeAxisMinorTicks](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeAxisMinorTicks.html) and [CircularGaugeAxisLabelStyle](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeAxisLabelStyle.html) tags.
+You can set the range color to ticks and labels of an axis by enabling the [UseRangeColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Fill) property in [CircularGaugeAxisMajorTicks](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeAxisMajorTicks.html), [CircularGaugeAxisMinorTicks](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeAxisMinorTicks.html) and [CircularGaugeAxisLabelStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeAxisLabelStyle.html) tags.
 
 ```cshtml
 @using Syncfusion.Blazor.CircularGauge
