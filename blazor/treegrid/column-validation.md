@@ -9,7 +9,7 @@ documentation: ug
 
 # Column validation in Blazor TreeGrid Component
 
-Column validation allows to validate the edited or added row data and it displays errors for invalid fields before saving data. Tree Grid uses **Form Validator** component for column validation. The validation rules can be set by defining the [TreeGridColumn. ValidationRules](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridColumn~ValidationRules.html).
+Column validation allows to validate the edited or added row data and it displays errors for invalid fields before saving data. Tree Grid uses **Form Validator** component for column validation. The validation rules can be set by defining the [TreeGridColumn. ValidationRules](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_ValidationRules).
 
 ```cshtml
 @using TreeGridComponent.Data; 
@@ -441,7 +441,7 @@ The output will be as follows.
 
 ## Disable in-built validator component
 
-`Validator` property can also be used to disable the in-built validator component used by the tree grid. For instance, by default, the tree grid uses two validator components, `DataAnnotationValidator` and an internal [ValidationRules](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_ValidationRules) property, for handling edit form validation. If you are willing to use only the `DataAnnotationValidator` component, then it could be simply achieved by using the `Validator` component inside [TreeGridEditSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridEditSettings.html).
+`Validator` property can also be used to disable the in-built validator component used by the tree grid. For instance, by default, the tree grid uses two validator components, `DataAnnotationValidator` and an internal [ValidationRules](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_ValidationRules) property, for handling edit form validation. If you are willing to use only the `DataAnnotationValidator` component, then it could be simply achieved by using the `Validator` component inside [TreeGridEditSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEditSettings.html).
 
 {% tabs %}
 
