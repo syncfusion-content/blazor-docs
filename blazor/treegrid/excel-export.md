@@ -304,7 +304,7 @@ In the following sample, selected records will be gotten from the `GetSelectedRe
         if (Args.Item.Text == "Excel Export")
         {
             Syncfusion.Blazor.Grids.ExcelExportProperties ExcelProperties = new Syncfusion.Blazor.Grids.ExcelExportProperties();
-            var selectedRecord = await TreeGrid.GetSelectedRecordsAsync();
+            var selectedRecord = TreeGrid.GetSelectedRecordsAsync();
             if (selectedRecord.Count() > 0)
             {
                 ExcelProperties.DataSource = selectedRecord;
@@ -313,7 +313,7 @@ In the following sample, selected records will be gotten from the `GetSelectedRe
             {
                 ExcelProperties.DataSource = this.TreeGridData;
             }
-            await this.TreeGrid.ExportToExcelAsync(ExcelProperties);
+            this.TreeGrid.ExportToExcelAsync(ExcelProperties);
         }
     }
 }
@@ -421,7 +421,7 @@ The following sample code demonstrates adding custom text and customizing its st
             };
             header.Rows = HeaderContent;
             ExportProperties.Header = header;
-            await this.TreeGrid.ExcelExport(ExportProperties);
+            this.TreeGrid.ExcelExport(ExportProperties);
         }
     }
 }
@@ -463,7 +463,7 @@ public class TreeData
 
 {% endtabs %}
 
-![Adding custom text in header/footer in Blazor DataGrid](./images/blazor-datagrid-custom-text-in-header.png)
+![Adding custom text in header/footer in Blazor DataGrid](./images/blazor-treegrid-custom-text-in-header.png)
 
 ### Export template columns
 
@@ -512,7 +512,7 @@ The excel export provides an option to export template columns of the TreeGrid b
         {
             ExcelExportProperties ExportProperties = new ExcelExportProperties();
             ExportProperties.IncludeTemplateColumn = true;
-            await this.TreeGrid.ExcelExport(ExportProperties);
+            this.TreeGrid.ExcelExport(ExportProperties);
         }
     }
     public void ExcelQueryCellInfoHandler(ExcelQueryCellInfoEventArgs<TreeData> args)
@@ -707,7 +707,7 @@ You can set the background color for a TreeGrid in the exported document using t
             Theme.Record = ThemeStyle;
             Theme.Caption = ThemeStyle;
             ExcelProperties.Theme = Theme;
-            await this.TreeGrid.ExcelExport(ExcelProperties);
+            this.TreeGrid.ExcelExport(ExcelProperties);
         }
     }
 }
@@ -749,7 +749,7 @@ public class TreeData
 
 {% endtabs %}
 
-![Customizing the background color for a particular column in an exported Excel document](./images/blazor-datagrid-customize-background-color-for-particular-column.png)
+![Customizing the background color for a particular column in an exported Excel document](./images/blazor-treegrid-customize-background-color-for-particular-column.png)
 
 ### File name for exported document
 
@@ -965,7 +965,7 @@ In the following sample, you can add the additional worksheets to excel file by 
             // Define the Gridsheet index where Grid data must be exported.
             ExportProperties.GridSheetIndex = 0;
             // Export the document.
-            await this.TreeGrid.ExcelExport(ExportProperties);
+            this.TreeGrid.ExcelExport(ExportProperties);
         }
     }
 }
@@ -1061,7 +1061,7 @@ You can export the Excel TreeGrid with specific columns instead of all columns w
             // Define the Gridsheet index where Grid data must be exported.
             ExportProperties.GridSheetIndex = 0;
             // Export the document.
-            await this.TreeGrid.ExcelExport(ExportProperties);
+            this.TreeGrid.ExcelExport(ExportProperties);
         }
     }
 }
