@@ -13,7 +13,7 @@ This section explains the methods used in the Maps component.
 
 ## ShapeSelectionAsync
 
-The [ShapeSelectionAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.SfMaps.html#methods) method can be used to select a shape dynamically in the shape layer of the Maps. The following are the arguments for this method.
+The [ShapeSelectionAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.SfMaps.html#Syncfusion_Blazor_Maps_SfMaps_ShapeSelectionAsync_System_Int32_System_String_System_String_System_Boolean_) method can be used to select a shape dynamically in the shape layer of the Maps. The following are the arguments for this method.
 
 |   Argument name      |   Description                            |
 |----------------------| -----------------------------------------|
