@@ -550,9 +550,9 @@ The following code example shows how to drag and drop a row on button click acti
 
 ### Dynamically hide rowdragdrop icons
 
-By default, it renders all records with a rowdragdrop icon. In this guide, we'll show you how to dynamically conditionally hide the rowdragdrop icon based on specific conditions using the [`RowDataBound`](https://blazor.syncfusion.com/documentation/gantt-chart/events#rowdatabound) event.
+In Syncfusion Gantt Chart, the default behavior is to render all records with a rowdragdrop icon. This guide demonstrates how to dynamically hide the rowdragdrop icon based on specific conditions using the [`RowDataBound`](https://blazor.syncfusion.com/documentation/gantt-chart/events#rowdatabound) event.
 
-#### Event handling
+**Step 1**:
 
 You can dynamically hide the rowdragdrop icon based on specific conditions using event handling. Here's how you can achieve this:
 
@@ -568,7 +568,7 @@ private async void DataBoundHandler(Syncfusion.Blazor.Grids.RowDataBoundEventArg
 
 ```
 
-#### CSS styling
+**Step 2**:
 
 To visually hide the rowdragdrop icon, you can apply CSS styles:
 
@@ -585,7 +585,7 @@ To visually hide the rowdragdrop icon, you can apply CSS styles:
 
 ```
 
-The following code snippet dynamically hide rowdragdrop icons in a Gantt control.
+The following code snippet dynamically hide rowdragdrop icons in a Gantt Chart control.
 
 ```cshtml
 @using Syncfusion.Blazor.Gantt
@@ -593,7 +593,7 @@ The following code snippet dynamically hide rowdragdrop icons in a Gantt control
           TreeColumnIndex="1" AllowRowDragAndDrop="true">
     <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress"
          ParentID="ParentId" Dependency="Predecessor"></GanttTaskFields>
-    <GanttEvents RowDataBound="DataBoundHandler" TValue="TaskData"></GanttEvents>
+    <GanttEvents RowDataBound="RowDataBound" TValue="TaskData"></GanttEvents>
 </SfGantt>
    
 <style>
@@ -608,7 +608,7 @@ The following code snippet dynamically hide rowdragdrop icons in a Gantt control
     SfGantt<TaskData> Gantt;
     private List<TaskData> TaskCollection { get; set; }
     
-    private async void DataBoundHandler(Syncfusion.Blazor.Grids.RowDataBoundEventArgs<TaskData> args)
+    private async void RowDataBound(Syncfusion.Blazor.Grids.RowDataBoundEventArgs<TaskData> args)
     {
         if (args.Data.TaskId >= 1 && args.Data.TaskId <= 3)
         {
@@ -655,7 +655,7 @@ The following code snippet dynamically hide rowdragdrop icons in a Gantt control
 }
 ```
 
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VXLqDEiqWkUHmegJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
+{% previewsample "https://blazorplayground.syncfusion.com/live-editor/embed/hjVKCZjApKNlvpYR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} 
 
 ## Customize rows
 
