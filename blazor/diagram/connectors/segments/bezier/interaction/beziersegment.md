@@ -9,7 +9,7 @@ documentation: ug
 
 # Bezier segments in Blazor Diagram Component
 
-## How to interact with the bezier segments efficiently
+## How to edit bezier segments based on bezier connector settings
 
 The intermediate point of two adjacent bezier segments can be edited interactively based on the [BezierConnectorSettings.SegmentEditOrientation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BezierConnectorSettings.html#Syncfusion_Blazor_Diagram_BezierConnectorSettings_SegmentEditOrientation) property of the Connector class.
 
