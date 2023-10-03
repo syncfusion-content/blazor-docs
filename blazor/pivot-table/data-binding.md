@@ -730,7 +730,7 @@ Here, **ProductDetails** class implements the interface of **INotifyPropertyChan
 
 ## See also
 
-* [How to convert complex data to flat data and assign it to the Blazor Pivot Table](https://blazor.syncfusion.com/documentation/pivot-table/how-to/bind-complex-data-to-the-pivot-table)
+* [How to convert complex data to flat data and assign it to the Blazor Pivot Table](https://blazor.syncfusion.com/documentation/pivot-table/how-to/apply-custom-styles-to-pivot-cells)
 
 ## Mapping
 
