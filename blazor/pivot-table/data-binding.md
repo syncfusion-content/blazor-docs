@@ -617,6 +617,117 @@ To have a quick glance on how to bind data to the Blazor Pivot Table using **Dyn
 
 ![Blazor PivotTable with Dynamic List Binding](images/blazor-pivottable-dynamic-list-binding.png)
 
+## Observable collection
+
+This [ObservableCollection](https://learn.microsoft.com/en-us/dotnet/api/system.collections.objectmodel.observablecollection-1?view=netframework-4.8)(dynamic data collection) provides notifications when items added, removed and moved. The implement [INotifyCollectionChanged](https://learn.microsoft.com/en-us/dotnet/api/system.collections.specialized.inotifycollectionchanged?view=netframework-4.8) notifies when dynamic changes of add, remove, move and clear the collection. The implement [INotifyPropertyChanged](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.inotifypropertychanged?view=netframework-4.8) notifies when property value has changed in client side.
+
+Here, **ProductDetails** class implements the interface of **INotifyPropertyChanged** and it raises the event when **Country** property value was changed.
+
+```csharp
+@using Syncfusion.Blazor.PivotView
+@using Syncfusion.Blazor.Buttons
+@using System.Collections.ObjectModel
+@using System.ComponentModel
+
+<SfButton @onclick="AddRecord">Add Data</SfButton>
+<SfButton @onclick="UpdateRecord">Update Data</SfButton>
+<SfButton @onclick="DeleteRecord">Delete Data</SfButton>
+
+<SfPivotView TValue="ProductDetails">
+    <PivotViewDataSourceSettings DataSource="@ObservableData">
+        <PivotViewColumns>
+            <PivotViewColumn Name="Year"></PivotViewColumn>
+        </PivotViewColumns>
+        <PivotViewRows>
+            <PivotViewRow Name="Country"></PivotViewRow>
+        </PivotViewRows>
+        <PivotViewValues>
+            <PivotViewValue Name="Price" Caption="Unit Price"></PivotViewValue>
+            <PivotViewValue Name="Sold" Caption="Units Sold"></PivotViewValue>
+        </PivotViewValues>
+        <PivotViewFormatSettings>
+            <PivotViewFormatSetting Name="Price" Format="C0"></PivotViewFormatSetting>
+        </PivotViewFormatSettings>
+    </PivotViewDataSourceSettings>
+</SfPivotView>
+
+@code {
+    public ObservableCollection<ProductDetails> ObservableData { get; set; }
+    protected override void OnInitialized()
+    {
+        this.ObservableData = ProductDetails.GetProductData();
+    }
+
+    public void AddRecord()
+    {
+        ObservableData.Add(new ProductDetails() { ProductID = "PRO-11", Year = "FY 2015", Country = "France", City = "New York", Price = 150, Sold = 50 });
+    }
+
+    public void DeleteRecord()
+    {
+        ObservableData.Remove(ObservableData.First());
+    }
+
+    public void UpdateRecord()
+    {
+        var data = ObservableData.First();
+        data.Country = "Update";
+    }
+
+    public class ProductDetails : INotifyPropertyChanged
+    {
+        public string ProductID { get; set; }
+        public string Year { get; set; }
+        private string country { get; set; }
+        public string Country
+        {
+            get { return country; }
+            set
+            {
+                this.country = value;
+                NotifyPropertyChanged("Country");
+            }
+        }
+        public string City { get; set; }
+        public double Price { get; set; }
+        public DateTime Date { get; set; }
+        public double Sold { get; set; }
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        private void NotifyPropertyChanged(String propertyName)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+            }
+        }
+
+        public static ObservableCollection<ProductDetails> GetProductData()
+        {
+            ObservableCollection<ProductDetails> productData = new ObservableCollection<ProductDetails>();
+            for (int i = 1; i <= 10; i++)
+            {
+                ProductDetails p = new ProductDetails
+                {
+                    ProductID = "PRO-" + i,
+                    Year = (new string[] { "FY 2015", "FY 2016", "FY 2017", "FY 2018", "FY 2019" })[new Random().Next(5)],
+                    Country = (new string[] { "France", "Italy", "Germany", "United States"})[new Random().Next(4)],
+                    City = "New York",
+                    Price = (3.4 * i) + 500,
+                    Sold = (i * 15) + 10
+                };
+                productData.Add(p);
+            }
+            return productData;
+        }
+    }
+}
+
+```
+
+![Blazor PivotTable with Observable Collection](images/blazor-pivottable-observable-collection.png)
+
 ## Mapping
 
 One can define field information like alias name (caption), data type, aggregation type, show and hide subtotals etc. using the [FieldMapping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.IPivotViewDataSourceSettings.html#Syncfusion_Blazor_PivotView_IPivotViewDataSourceSettings_FieldMapping) property under [PivotViewDataSourceSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html) class. The available options are,
