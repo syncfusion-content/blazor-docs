@@ -13,7 +13,6 @@ The following table represents the supported .NET and .NET Core versions by diff
 
 | Version | Syncfusion Blazor Components Version | 
 | ------------- | ------------- |
-| [.NET 8.0](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) (RC1) | 23.1.36 and above |
 | [.NET 7.0](https://devblogs.microsoft.com/dotnet/announcing-dotnet-7/) | 20.4.0.38 and above |
 | [.NET 6.0](https://devblogs.microsoft.com/dotnet/announcing-asp-net-core-in-net-6/) | 19.3.0.43 and above |
 | [.NET 5.0](https://devblogs.microsoft.com/dotnet/announcing-asp-net-core-in-net-5/) | 18.4.0.30 to 20.1.0.61  |
@@ -24,13 +23,14 @@ The following table represents the supported .NET and .NET Core versions by diff
 
 ## Syncfusion Version Information
 
-In a year, Syncfusion releases new volumes once every three months. Syncfusion Blazor components follows sequence-based identifiers to process software releases based on the **Major.Minor.Revision** format to track all the release changes. It helps developers to keep track of the changes in every release. 
+In a year, Syncfusion releases new volumes once every three months. Syncfusion Blazor components follows sequence-based identifiers to process software releases based on the **Major.Minor.Build.Revision** format to track all the release changes. It helps developers to keep track of the changes in every release. 
 
-For example, if the release a package version is `23.1.36`, the version number indicates the details as follows,
+For example, if the release a package version is `19.3.0.43`, the version number indicates the details as follows,
 
-* **23** denotes `Major release` version which changes every year.
-* **1** denotes `Volume release`. Syncfusion releases a new volume once every three months. Here `3` represents the third release of the year.
-* **36** denotes `Patch Number` also known as revision number which increases for each service pack release and weekly patch release.
+* **19** denotes `Major release` version which changes every year.
+* **3** denotes `Volume release`. Syncfusion releases a new volume once every three months. Here `3` represents the third release of the year.
+* **0** denotes `Build Number` and it will always zero for blazor.
+* **43** denotes `Patch Number` also known as revision number which increases for each service pack release and weekly patch release.
 
 ## See also
 

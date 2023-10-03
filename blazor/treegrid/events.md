@@ -15,7 +15,7 @@ The events should be provided to the Tree Grid using **TreeGridEvents** componen
 
 ## OnActionBegin
 
-[OnActionBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_OnActionBegin) event triggers when the Tree Grid actions such as sorting, filtering, paging etc., starts.
+[OnActionBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridEvents%601~OnActionBegin.html) event triggers when the Tree Grid actions such as sorting, filtering, paging etc., starts.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids;
@@ -70,7 +70,7 @@ The events should be provided to the Tree Grid using **TreeGridEvents** componen
 
 ## OnActionComplete
 
-[OnActionComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_OnActionComplete) event triggers when the Tree Grid actions such as sorting, filtering, paging etc. are completed.
+[OnActionComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridEvents%601~OnActionComplete.html) event triggers when the Tree Grid actions such as sorting, filtering, paging etc. are completed.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -127,7 +127,7 @@ The events should be provided to the Tree Grid using **TreeGridEvents** componen
 
 ## OnActionFailure
 
-[OnActionFailure](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_OnActionFailure) event triggers when any Tree Grid action fails to achieve the desired results. By using this event the error details and its cause are achieved. In the below sample, the wrong field name is provided for the IdMapping property. So that it will throw the OnActionFailure event.
+[OnActionFailure](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridEvents%601~OnActionFailure.html) event triggers when any Tree Grid action fails to achieve the desired results. By using this event the error details and its cause are achieved. In the below sample, the wrong field name is provided for the IdMapping property. So that it will throw the OnActionFailure event.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids;
@@ -182,7 +182,7 @@ The events should be provided to the Tree Grid using **TreeGridEvents** componen
 
 ## Created
 
-[Created](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_Created) event triggers when the Tree Grid component is created. The Tree Grid properties can be modified by using this event.
+[Created](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridEvents%601~Created.html) event triggers when the Tree Grid component is created. The Tree Grid properties can be modified by using this event.
 
 ```cshtml
 @using Syncfusion.Blazor.TreeGrid;
@@ -237,7 +237,7 @@ The events should be provided to the Tree Grid using **TreeGridEvents** componen
 
 ## OnLoad
 
-[OnLoad](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_OnLoad) event triggers before the rendering process starts which allows customization of the Tree Grid properties before the Tree Grid rendering.
+[OnLoad](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridEvents%601~OnLoad.html) event triggers before the rendering process starts which allows customization of the Tree Grid properties before the Tree Grid rendering.
 
 ```cshtml
 @using Syncfusion.Blazor.TreeGrid;
@@ -292,7 +292,7 @@ The events should be provided to the Tree Grid using **TreeGridEvents** componen
 
 ## Destroyed
 
-[Destroyed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_Destroyed) event triggers when the Tree Grid component is destroyed. By using this event, it is confirmed that the Tree Grid gets completely destroyed.
+[Destroyed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridEvents%601~Destroyed.html) event triggers when the Tree Grid component is destroyed. By using this event, it is confirmed that the Tree Grid gets completely destroyed.
 
 ```cshtml
 @using Syncfusion.Blazor.TreeGrid;
@@ -347,7 +347,7 @@ The events should be provided to the Tree Grid using **TreeGridEvents** componen
 
 ## OnDataBound
 
-[OnDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_OnDataBound) event triggers before the data is bound to Tree Grid.
+[OnDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridEvents%601~DataBound.html) event triggers before the data is bound to Tree Grid.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids;
@@ -403,7 +403,7 @@ The events should be provided to the Tree Grid using **TreeGridEvents** componen
 
 ## DataBound
 
-[DataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_DataBound) event triggers when the data source is populated in the Tree Grid. The code can be customized.
+[DataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridEvents%601~DataBound.html) event triggers when the data source is populated in the Tree Grid. The code can be customized.
 
 ```cshtml
 @using Syncfusion.Blazor.TreeGrid;
@@ -458,7 +458,7 @@ The events should be provided to the Tree Grid using **TreeGridEvents** componen
 
 ## RowDataBound
 
-[RowDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_RowDataBound) event triggers every time a request is made to access row information, element, or data and also before the row element is appended to the Tree Grid element.
+[RowDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridEvents%601~RowDataBound.html) event triggers every time a request is made to access row information, element, or data and also before the row element is appended to the Tree Grid element.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids;
@@ -514,7 +514,7 @@ The events should be provided to the Tree Grid using **TreeGridEvents** componen
 
 ## DetailDataBound
 
-The [DetailDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_DetailDataBound) event triggers after detail row expands.
+The [DetailDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridEvents%601~DetailDataBound.html) event triggers after detail row expands.
 
 ```cshtml
 @using Syncfusion.Blazor.TreeGrid
@@ -589,7 +589,7 @@ The [DetailDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Tr
 
 ## HeaderCellInfo
 
-[HeaderCellInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_HeaderCellInfo) event triggers during the rendering of every header cells in the Tree Grid so that the header cells can be customized.
+[HeaderCellInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridEvents%601~HeaderCellInfo.html) event triggers during the rendering of every header cells in the Tree Grid so that the header cells can be customized.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids;
@@ -645,7 +645,7 @@ The [DetailDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Tr
 
 ## QueryCellInfo
 
-[QueryCellInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_QueryCellInfo) event triggers every time a request is made to access cell information, element, or data and also before the cell element is appended to the Tree Grid element.
+[QueryCellInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridEvents%601~QueryCellInfo.html) event triggers every time a request is made to access cell information, element, or data and also before the cell element is appended to the Tree Grid element.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids;
@@ -701,7 +701,7 @@ The [DetailDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Tr
 
 ## OnBeginEdit
 
-[OnBeginEdit](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_OnBeginEdit) event triggers before the record is to be edit.
+[OnBeginEdit](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridEvents%601~OnBeginEdit.html) event triggers before the record is to be edit.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids;
@@ -758,7 +758,7 @@ The [DetailDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Tr
 
 ## OnBatchAdd
 
-[OnBatchAdd](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_OnBatchAdd) event triggers before the records are added in the batch mode.
+[OnBatchAdd](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridEvents%601~OnBatchAdd.html) event triggers before the records are added in the batch mode.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids;
@@ -815,7 +815,7 @@ The [DetailDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Tr
 
 ## OnBatchSave
 
-[OnBatchSave](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_OnBatchSave) event triggers before the records are saved in the batch mode.
+[OnBatchSave](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridEvents%601~OnBatchSave.html) event triggers before the records are saved in the batch mode.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids;
@@ -872,7 +872,7 @@ The [DetailDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Tr
 
 ## OnBatchDelete
 
-[OnBatchDelete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_OnBatchDelete) event triggers before the records are deleted in the batch mode.
+[OnBatchDelete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridEvents%601~OnBatchDelete.html) event triggers before the records are deleted in the batch mode.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids;
@@ -929,7 +929,7 @@ The [DetailDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Tr
 
 ## OnCellEdit
 
-[OnCellEdit](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_OnCellEdit) event triggers when the cell is being edited.
+[OnCellEdit](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridEvents%601~OnCellEdit.html) event triggers when the cell is being edited.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids;
@@ -986,7 +986,7 @@ The [DetailDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Tr
 
 ## OnCellSave
 
-[OnCellSave](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_OnCellSave) event triggers when the cell is saved.
+[OnCellSave](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridEvents%601~OnCellSave.html) event triggers when the cell is saved.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids;
@@ -1042,7 +1042,7 @@ The [DetailDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Tr
 
 ## CellSaved
 
-[CellSaved](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_CellSaved) event triggers when the cell is saved.
+[CellSaved](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridEvents%601~CellSaved.html) event triggers when the cell is saved.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids;
@@ -1098,7 +1098,7 @@ The [DetailDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Tr
 
 ## RowSelecting
 
-[RowSelecting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_RowSelecting) event triggers before the row selection occurs.
+[RowSelecting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridEvents%601~RowSelecting.html) event triggers before the row selection occurs.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids;
@@ -1153,7 +1153,7 @@ The [DetailDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Tr
 
 ## RowSelected
 
-[RowSelected](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_RowSelected) event triggers when a row is selected.
+[RowSelected](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridEvents%601~RowSelected.html) event triggers when a row is selected.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids;
@@ -1208,7 +1208,7 @@ The [DetailDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Tr
 
 ## RowDeselecting
 
-[RowDeselecting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_RowDeselecting) event triggers before a selected row is being deselected.
+[RowDeselecting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridEvents%601~RowDeselecting.html) event triggers before a selected row is being deselected.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids;
@@ -1263,7 +1263,7 @@ The [DetailDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Tr
 
 ## RowDeselected
 
-[RowDeselected](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_RowDeselected) event triggers when a selected row is deselected.
+[RowDeselected](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridEvents%601~RowDeselected.html) event triggers when a selected row is deselected.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids;
@@ -1318,7 +1318,7 @@ The [DetailDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Tr
 
 ## CellSelecting
 
-[CellSelecting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_CellSelecting) event triggers before the cell selection occurs.
+[CellSelecting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridEvents%601~CellSelecting.html) event triggers before the cell selection occurs.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids;
@@ -1374,7 +1374,7 @@ The [DetailDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Tr
 
 ## CellSelected
 
-[CellSelected](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_CellSelected) event triggers after a cell is selected.
+[CellSelected](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridEvents%601~CellSelected.html) event triggers after a cell is selected.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids;
@@ -1430,7 +1430,7 @@ The [DetailDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Tr
 
 ## CellDeselecting
 
-[CellDeselecting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_CellDeselecting) event triggers before a cell is deselected.
+[CellDeselecting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridEvents%601~CellDeselecting.html) event triggers before a cell is deselected.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids;
@@ -1486,7 +1486,7 @@ The [DetailDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Tr
 
 ## CellDeselected
 
-[CellDeselected](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_CellDeselected) event triggers after a cell is deselected.
+[CellDeselected](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridEvents%601~CellDeselected.html) event triggers after a cell is deselected.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids;
@@ -1542,7 +1542,7 @@ The [DetailDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Tr
 
 ## OnRecordDoubleClick
 
-[OnRecordDoubleClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_OnRecordDoubleClick) event triggers when a record is double clicked.
+[OnRecordDoubleClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridEvents%601~OnRecordDoubleClick.html) event triggers when a record is double clicked.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids;
@@ -1597,7 +1597,7 @@ The [DetailDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Tr
 
 ## OnToolbarClick
 
-[OnToolbarClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_OnToolbarClick) event triggers when a toolbar item is clicked.
+[OnToolbarClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridEvents%601~OnToolbarClick.html) event triggers when a toolbar item is clicked.
 
 ```cshtml
 @using Syncfusion.Blazor.TreeGrid;
@@ -1652,7 +1652,7 @@ The [DetailDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Tr
 
 ## CommandClicked
 
-[CommandClicked](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_CommandClicked) event triggers when the command button is clicked. It provides the row data of the currently clicked row.
+[CommandClicked](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.SfGrid~CommandClicked.html) event triggers when the command button is clicked. It provides the row data of the currently clicked row.
 
 ```cshtml
 @using Syncfusion.Blazor.TreeGrid;
@@ -1715,7 +1715,7 @@ The [DetailDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Tr
 
 ## ColumnMenuItemClicked
 
-[ColumnMenuItemClicked](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_ColumnMenuItemClicked) event triggers when the column menu is clicked.
+[ColumnMenuItemClicked](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridEvents%601~ColumnMenuItemClicked.html) event triggers when the column menu is clicked.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids;
@@ -1769,7 +1769,7 @@ The [DetailDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Tr
 
 ## ContextMenuItemClicked
 
-[ContextMenuItemClicked](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_ContextMenuItemClicked) event triggers when the context menu is clicked.
+[ContextMenuItemClicked](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridEvents%601~ContextMenuItemClicked.html) event triggers when the context menu is clicked.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids;
@@ -1824,7 +1824,7 @@ The [DetailDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Tr
 
 ## ContextMenuOpen
 
-[ContextMenuOpen](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_ContextMenuOpen) event triggers before opening the context menu.
+[ContextMenuOpen](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridEvents%601~ContextMenuOpen.html) event triggers before opening the context menu.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids;
@@ -1879,7 +1879,7 @@ The [DetailDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Tr
 
 ## OnPdfExport
 
-[OnPdfExport](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_OnPdfExport) event triggers before the Tree Grid data is exported to PDF document.
+[OnPdfExport](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridEvents%601~OnPdfExport.html) event triggers before the Tree Grid data is exported to PDF document.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids;
@@ -1941,7 +1941,7 @@ The [DetailDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Tr
 
 ## PdfQueryCellInfoEvent
 
-[PdfQueryCellInfoEvent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_PdfQueryCellInfoEvent) event triggers before the Tree Grid data is exported to PDF document. It can be used to customize the Tree Grid content in PDF document.
+[PdfQueryCellInfoEvent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridEvents%601~PdfQueryCellInfoEvent.html) event triggers before the Tree Grid data is exported to PDF document. It can be used to customize the Tree Grid content in PDF document.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids;
@@ -2003,7 +2003,7 @@ The [DetailDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Tr
 
 ## OnExcelExport
 
-[OnExcelExport](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_OnExcelExport) event triggers before the Tree Grid data is exported to the excel file.
+[OnExcelExport](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridEvents%601~OnExcelExport.html) event triggers before the Tree Grid data is exported to the excel file.
 
 ```cshtml
 @using Syncfusion.Blazor.TreeGrid;
@@ -2064,7 +2064,7 @@ The [DetailDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Tr
 
 ## ExcelQueryCellInfoEvent
 
-[ExcelQueryCellInfoEvent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_ExcelQueryCellInfoEvent) event triggers before the Tree Grid data is exported to the Excel file. It can be used to customize the Tree Grid content in Excel file.
+[ExcelQueryCellInfoEvent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridEvents%601~ExcelQueryCellInfoEvent.html) event triggers before the Tree Grid data is exported to the Excel file. It can be used to customize the Tree Grid content in Excel file.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids;
@@ -2126,7 +2126,7 @@ The [DetailDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Tr
 
 ## OnResizeStart
 
-[OnResizeStart](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_OnResizeStart) event triggers when the column resize starts.
+[OnResizeStart](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridEvents%601~OnResizeStart.html) event triggers when the column resize starts.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids;
@@ -2180,7 +2180,7 @@ The [DetailDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Tr
 
 ## ResizeStopped
 
-[ResizeStopped](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_ResizeStopped) event triggers when the column resize ends.
+[ResizeStopped](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridEvents%601~ResizeStopped.html) event triggers when the column resize ends.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids;
@@ -2234,7 +2234,7 @@ The [DetailDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Tr
 
 ## Expanding
 
-[Expanding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_Expanding) event triggers when a row is expanding.
+[Expanding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridEvents%601~Expanding.html) event triggers when a row is expanding.
 
 ```cshtml
 @using Syncfusion.Blazor.TreeGrid;
@@ -2287,7 +2287,7 @@ The [DetailDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Tr
 
 ## Expanded
 
-[Expanded](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_Expanded) event triggers when a row is expanded.
+[Expanded](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridEvents%601~Expanded.html) event triggers when a row is expanded.
 
 ```cshtml
 @using Syncfusion.Blazor.TreeGrid;
@@ -2340,7 +2340,7 @@ The [DetailDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Tr
 
 ## BeforeCopyPaste
 
-[BeforeCopyPaste](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_BeforeCopyPaste) event will trigger before the cell is copied or pasted in the tree grid cell and you can cancel this entire copy or paste action by using this event.
+[BeforeCopyPaste](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridEvents%601~BeforeCopyPaste.html) event will trigger before the cell is copied or pasted in the tree grid cell and you can cancel this entire copy or paste action by using this event.
 
 ```cshtml
 @using Syncfusion.Blazor.TreeGrid;
@@ -2400,7 +2400,7 @@ The [DetailDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Tr
 
 ## BeforeCellPaste
 
-[BeforeCellPaste](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_BeforeCellPaste) event will be trigger before pasting the copied cell value for each cell and you can cancel the pasting action for a particular cell or change the value by using this event.
+[BeforeCellPaste](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridEvents%601~BeforeCellPaste.html) event will be trigger before pasting the copied cell value for each cell and you can cancel the pasting action for a particular cell or change the value by using this event.
 
 ```cshtml
 @using Syncfusion.Blazor.TreeGrid;
@@ -2453,7 +2453,7 @@ The [DetailDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Tr
 
 ## RowDropping
 
-[RowDropping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_RowDropping) event triggers when the row elements are dropped on the target element.
+[RowDropping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridEvents%601~RowDropping.html) event triggers when the row elements are dropped on the target element.
 
 > The dropping action can be cancelled by setting the `Cancel` argument of the `RowDropping` event to true.
 
@@ -2509,7 +2509,7 @@ The [DetailDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Tr
 
 ## RowDropped
 
-[RowDropped](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_RowDropped) event triggers after the row elements are dragged and dropped on the TreeGrid. 
+[RowDropped](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridEvents%601~RowDropped.html) event triggers after the row elements are dragged and dropped on the TreeGrid. 
 
 ```cshtml
 @using Syncfusion.Blazor.Grids;
