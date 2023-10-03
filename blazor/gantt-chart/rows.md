@@ -550,11 +550,11 @@ The following code example shows how to drag and drop a row on button click acti
 
 ### Dynamically hide rowdragdrop icons
 
-In Syncfusion Gantt Chart, the default behavior is to render all records with a rowdragdrop icon. This guide demonstrates how to dynamically hide the rowdragdrop icon based on specific conditions using the [`RowDataBound`](https://blazor.syncfusion.com/documentation/gantt-chart/events#rowdatabound) event.
+By default, Gantt Chart renders all records with a rowdragdrop icon. This guide demonstrates how to dynamically hide the rowdragdrop icon based on specific conditions using the [`RowDataBound`](https://blazor.syncfusion.com/documentation/gantt-chart/events#rowdatabound) event.
 
 **Step 1**:
 
-You can dynamically hide the rowdragdrop icon based on specific conditions using event handling. Here's how you can achieve this:
+You can dynamically hide the rowdragdrop icon based on specific conditions using `RowDataBound` event handling. Here's how you can achieve this:
 
 ```csharp
 
