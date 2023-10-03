@@ -52,6 +52,47 @@ The `Interval` and `SlotCount` properties can be used together on the Scheduler 
 
 ![Time Slot Duration in Blazor Scheduler](images/blazor-scheduler-timeslot.png)
 
+## Adjusting the time slot duration for various views
+
+By using the [Interval](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleViewTimeScale.html#Syncfusion_Blazor_Schedule_ScheduleViewTimeScale_Interval) and [SlotCount](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleViewTimeScale.html#Syncfusion_Blazor_Schedule_ScheduleViewTimeScale_SlotCount) properties, within the [ScheduleViewTimescale](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleViewTimeScale.html) as a child element of `ScheduleView` you can customize the duration of time slots for views. Take a look at the code snippet to see how it's done. In this example, the `Day` view has six-time slots per hour while the `Week` and `WorkWeek` views have two-time slots per hour.
+
+```cshtml
+@using Syncfusion.Blazor.Schedule
+
+<SfSchedule TValue="AppointmentData" Height="650px">
+    <ScheduleViews>
+        <ScheduleView Option="View.Day">
+            <ScheduleViewTimeScale Interval="10" SlotCount="1"></ScheduleViewTimeScale>
+        </ScheduleView>
+        <ScheduleView Option="View.Week">
+            <ScheduleViewTimeScale Interval="60" SlotCount="2"></ScheduleViewTimeScale>
+        </ScheduleView>
+        <ScheduleView Option="View.WorkWeek">
+            <ScheduleViewTimeScale Interval="60" SlotCount="2"></ScheduleViewTimeScale>
+        </ScheduleView>
+    </ScheduleViews>
+</SfSchedule>
+
+@code{
+    public class AppointmentData
+    {
+        public int Id { get; set; }
+        public string Subject { get; set; }
+        public string Location { get; set; }
+        public DateTime StartTime { get; set; }
+        public DateTime EndTime { get; set; }
+        public string Description { get; set; }
+        public bool IsAllDay { get; set; }
+        public string RecurrenceRule { get; set; }
+        public string RecurrenceException { get; set; }
+        public Nullable<int> RecurrenceID { get; set; }
+    }
+}
+```
+
+![Time Slot Duration for Day View in Blazor Scheduler](images/blazor-scheduler-timeslot-day-view.png)
+![Time Slot Duration for Week and WorkWeek View in Blazor Scheduler](images/blazor-scheduler-timeslot-week-view.png)
+
 ## Customizing time cells using template
 
 The template option is available to allow customization of time slots which are as follows,
