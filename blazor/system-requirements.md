@@ -23,7 +23,7 @@ Blazor applications can be developed using one of the following IDEs. You can al
 
 One of the the following .NET SDK is required to develop and run the Blazor application.
 
-| .NET SDK | Syncfusion Blazor Components Version | 
+| .NET SDK | Syncfusion Blazor Components Version |
 | ------------- | ------------- |
 | [.NET 7.0](https://dotnet.microsoft.com/en-us/download/dotnet/7.0) | 20.4.0.38 and above |
 | [.NET 6.0](https://dotnet.microsoft.com/en-us/download/dotnet/6.0) | 19.3.0.43 and above |
@@ -32,9 +32,11 @@ One of the the following .NET SDK is required to develop and run the Blazor appl
 
 N> Not sure which SDK to download? See [recommended downloads for the latest version of .NET](https://dotnet.microsoft.com/en-us/download) and [version compatibility](https://blazor.syncfusion.com/documentation/common/how-to/version-compatibility).
 
-If you are planning to use Visual Studio to develop Blazor Applications. 
-* .NET Core SDK 3.1.8 requires Visual Studio 2019 16.7 or later.  
-* .NET 5.0 requires Visual Studio 2019 16.8 or later.
-* .NET 6.0 requires Visual Studio 2022 17.0 Preview 4.1 or later.
+If you are planning to use Visual Studio to develop Blazor Applications.
 * .NET 7.0 requires Visual Studio 2022 17.4.3 or later.
+* .NET 6.0 requires Visual Studio 2022 17.0 Preview 4.1 or later.
+* .NET 5.0 requires Visual Studio 2019 16.8 or later.
+* .NET Core SDK 3.1.8 requires Visual Studio 2019 16.7 or later.
+
+
 

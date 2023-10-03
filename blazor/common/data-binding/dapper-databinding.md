@@ -14,12 +14,12 @@ In this section, you can learn how to consume data from a database using [Dapper
 
 ## Prerequisite software
 
-* Visual Studio 2019.
+* Visual Studio 2019 or later.
 * MS SQL Server.
 
 ## Creating Blazor server-side application
 
-Open Visual Studio 2019 and follow the steps in the below documentation to create the Blazor Server Application.
+Open Visual Studio and follow the steps in the below documentation to create the Blazor Server Application.
 
 [Creating Blazor Server Application](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio)
 
@@ -54,13 +54,13 @@ Run the following commands in the Package Manager Console.
 * The following command enable us to use Dapper in our application.
 
     ```
-    Install-Package Dapper -Version 2.0.90
+    Install-Package Dapper -Version 2.1.4
     ```
 
 * The following command provide database access classes such as  `SqlConnection`, `SqlCommand`, etc. Also provides data provider for MS SQL Server.
 
     ```
-    Install-Package Microsoft.Data.SqlClient -Version 2.1.3
+    Install-Package Microsoft.Data.SqlClient -Version 5.1.1
     ```
 
 Most of the ORMs provide scaffolding options to create model classes. Dapper doesn’t have any in-built scaffolding option. So, we need to create model class manually. Here, we are creating a class named `Bug.cs` in the `Data` folder as follows.
@@ -145,7 +145,7 @@ public class BugDataAccessLayer
 
 {% endhighlight %}
 
-Now, register `BugDataAccessLayer` as scoped service in the `Startup.cs` file in .NET 5 and .NET 3.X application, in `Program.cs` file in .NET 6 application as follows.
+Now, register `BugDataAccessLayer` as scoped service in the `Program.cs` file in .NET 6 and .NET 7 application as follows.
 
 {% tabs %}
 {% highlight c# tabtitle=".NET 6 & .NET 7 (~/Program.cs)" %}
@@ -154,17 +154,6 @@ builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
 builder.Services.AddSingleton<WeatherForecastService>();
 builder.Services.AddScoped<BugDataAccessLayer>();
-
-{% endhighlight %}
-{% highlight c# tabtitle=".NET 5 and .NET 3.X (~/Startup.cs)" %}
-
-public void ConfigureServices(IServiceCollection services)
-{
-    services.AddRazorPages();
-    services.AddServerSideBlazor();
-    services.AddSingleton<WeatherForecastService>();
-    services.AddScoped<BugDataAccessLayer>();
-}
 
 {% endhighlight %}
 {% endtabs %}
@@ -181,7 +170,11 @@ Now, in the `Browse` tab, search and install the `Syncfusion.Blazor.Grid` NuGet 
 
 ![Install Syncfusion Blazor Grid NuGet](../images/install-blazor-grid-nuget.png)
 
-N> For this demo, `Syncfusion.Blazor`(19.1.0.65) NuGet package is used.  A new `Syncfusion.Blazor` NuGet package with new enhancement will be released in our every-week release and main release. So, you can check and update to the [latest versions](https://www.nuget.org/packages/Syncfusion.Blazor).
+Alternatively, you can utilize the following package manager command to achieve the same.
+
+```
+Install-Package Syncfusion.Blazor.Grid -Version {{ site.releaseversion }}
+```
 
 ## Adding Syncfusion Blazor DataGrid component
 
@@ -195,7 +188,7 @@ Open `_Import.razor` file and add the following namespaces which are required to
 
 {% endhighlight %}
 
-Open `Startup.cs` file in .NET 5 and .NET 3.X applications, `Program.cs` file in .NET 6 application and register the Syncfusion service in the `ConfigureServices` method as follows.
+Open `Program.cs` file in .NET 6 and .NET 7 application and register the Syncfusion service.
 
 {% tabs %}
 {% highlight c# tabtitle=".NET 6 & .NET 7 (~/Program.cs)" %}
@@ -205,18 +198,6 @@ builder.Services.AddServerSideBlazor();
 builder.Services.AddSingleton<WeatherForecastService>();
 builder.Services.AddScoped<BugDataAccessLayer>();
 builder.Services.AddSyncfusionBlazor();
-
-{% endhighlight %}
-{% highlight c# tabtitle=".NET 5 and .NET 3.X (~/Startup.cs)" %}
-
-public void ConfigureServices(IServiceCollection services)
-{
-    services.AddRazorPages();
-    services.AddServerSideBlazor();
-    services.AddSingleton<WeatherForecastService>();
-    services.AddScoped<BugDataAccessLayer>();
-    services.AddSyncfusionBlazor();
-}
 
 {% endhighlight %}
 {% endtabs %}
@@ -254,7 +235,7 @@ The following points must be considered for creating a custom adaptor.
 
 * Our custom adaptor must extend the `DataAdaptor` class.
 * Override available CRUD methods to handle data querying and manipulation.
-* Register our custom adaptor class as a service in the `Startup.cs`.
+* Register our custom adaptor class as a service in the `Program.cs`.
 
 Now, create a new class named `BugDataAdaptor.cs` under the `Data` folder and replace the following code in that class.
 
@@ -283,10 +264,10 @@ public class BugDataAdaptor: DataAdaptor
 
 {% endhighlight %}
 
-Now, Open the `Startup.cs` file in .NET 5 and .NET 3.X application, in `Program.cs` file in .NET 6 application and register the `BugDataAdaptor` class in the `ConfigureServices` method as follows.
+Now, Open the `Program.cs` file in .NET 6 and .NET 7 application and register the `BugDataAdaptor` class.
 
 {% tabs %}
-{% highlight c# tabtitle=".NET 6 & .NET 7 (~/Program.cs)" %}
+{% highlight c# tabtitle=".NET 6 & .NET 7 (~/Program.cs)" hl_lines="6"%}
 
 builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
@@ -294,19 +275,6 @@ builder.Services.AddSingleton<WeatherForecastService>();
 builder.Services.AddScoped<BugDataAccessLayer>();
 builder.Services.AddSyncfusionBlazor();
 builder.Services.AddScoped<BugDataAdaptor>();
-
-{% endhighlight %}
-{% highlight c# tabtitle=".NET 5 and .NET 3.X (~/Startup.cs)" %}
-
-public void ConfigureServices(IServiceCollection services)
-{
-    services.AddRazorPages();
-    services.AddServerSideBlazor();
-    services.AddSingleton<WeatherForecastService>();
-    services.AddScoped<BugDataAccessLayer>();
-    services.AddSyncfusionBlazor();
-    services.AddScoped<BugDataAdaptor>();
-}
 
 {% endhighlight %}
 {% endtabs %}
@@ -437,7 +405,7 @@ public override async Task<object> RemoveAsync(DataManager dataManager, object p
 To delete a row, select any row and click the `Delete` toolbar button. Clicking the `Delete` toolbar button will call the `RemoveAsync` method of our `BugDataAdaptor` to update the record in the `Bug` table.
 
 N> Find the sample from this [Github](https://github.com/SyncfusionExamples/blazor-datagrid-dapper-crud) location.
-    
+
 ## See also
-    
+
 * [Create Blazor CRUD Application with PostgreSQL and Dapper](https://www.syncfusion.com/blogs/post/create-blazor-crud-application-with-postgresql-and-dapper.aspx)
