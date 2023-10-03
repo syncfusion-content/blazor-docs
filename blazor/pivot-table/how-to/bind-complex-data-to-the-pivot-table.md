@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Convert complex data to flat data and assign it to the Blazor Pivot Table | Syncfusion
+title: Convert complex data to flat data and assign it to the Blazor | Syncfusion
 description: Learn here all about how to convert complex data to flat data and assign it to the Syncfusion Blazor Pivot Table component and more.
 platform: Blazor
 control: Pivot Table
 documentation: ug
 ---
 
-# Convert complex data to flat data and assign it to the Blazor Pivot Table Component
+# Convert complex data to flat data and assign it to the Blazor Pivot Table
 
 By default, flat data can only bind to the pivot table. However, using **ExpandoObject**, you can connect complex data to the pivot table by converting it to flat data via code-behind and binding it to the pivot table using the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html#Syncfusion_Blazor_PivotView_PivotViewDataSourceSettings_1_DataSource) property under [PivotViewDataSourceSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html).
 
