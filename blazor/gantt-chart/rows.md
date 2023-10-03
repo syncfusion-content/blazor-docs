@@ -558,7 +558,7 @@ You can dynamically hide the rowdragdrop icon based on specific conditions using
 
 ```csharp
 
-private async void DataBoundHandler(Syncfusion.Blazor.Grids.RowDataBoundEventArgs<TaskData> args)
+private async void RowDataBoundHandler(Syncfusion.Blazor.Grids.RowDataBoundEventArgs<TaskData> args)
 {
     if (args.Data.TaskId >= 1 && args.Data.TaskId <= 3)
     {
@@ -593,7 +593,7 @@ The following code snippet dynamically hide rowdragdrop icons in a Gantt Chart c
           TreeColumnIndex="1" AllowRowDragAndDrop="true">
     <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress"
          ParentID="ParentId" Dependency="Predecessor"></GanttTaskFields>
-    <GanttEvents RowDataBound="RowDataBound" TValue="TaskData"></GanttEvents>
+    <GanttEvents RowDataBound="RowDataBoundHandler" TValue="TaskData"></GanttEvents>
 </SfGantt>
    
 <style>
@@ -608,7 +608,7 @@ The following code snippet dynamically hide rowdragdrop icons in a Gantt Chart c
     SfGantt<TaskData> Gantt;
     private List<TaskData> TaskCollection { get; set; }
     
-    private async void RowDataBound(Syncfusion.Blazor.Grids.RowDataBoundEventArgs<TaskData> args)
+    private async void RowDataBoundHandler(Syncfusion.Blazor.Grids.RowDataBoundEventArgs<TaskData> args)
     {
         if (args.Data.TaskId >= 1 && args.Data.TaskId <= 3)
         {
