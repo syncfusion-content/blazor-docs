@@ -320,7 +320,7 @@ Now, the DataGrid will look like this while running the application. The display
 
 You can enable editing in the grid component using the [GridEditSettings](https://blazor.syncfusion.com/documentation/datagrid/editing) component. Grid provides various modes of editing options such as Inline/Normal, Dialog, and Batch editing. Refer to the following documentation for your reference.
 
-[Grid Editing in Blazor](https://blazor.syncfusion.com/documentation/datagrid/editing/#editing)
+[Grid Editing in Blazor](https://blazor.syncfusion.com/documentation/datagrid/editing#editing)
 
 N> Normal editing is the default edit mode for the DataGrid component. You need to set the IsPrimaryKey property of Column as True for a particular column, whose value is a unique value for editing purposes.
 

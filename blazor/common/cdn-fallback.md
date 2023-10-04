@@ -15,7 +15,7 @@ This section provides information about how to refer fallback [scripts](https://
 
 CDN links can be down by connection issues or some other problems. This will cause the site looks broken. Follow the below steps to resolve these issues in the Blazor application.
 
-If you are using CDN for style sheet references then you have to add style sheet fallback from [Static Web Assets](https://blazor.syncfusion.com/documentation/common/adding-script-references#static-web-assets) by using the [link tag helper](https://docs.microsoft.com/en-us/aspnet/core/mvc/views/tag-helpers/built-in/link-tag-helper). Syncfusion theme provides the `e-control` class. You can check the style from provided class by using link tag helper property.
+If you are using CDN for style sheet references then you have to add style sheet fallback from [Static Web Assets](https://blazor.syncfusion.com/documentation/common/adding-script-references#static-web-assets) by using the [link tag helper](https://learn.microsoft.com/en-us/aspnet/core/mvc/views/tag-helpers/built-in/link-tag-helper?view=aspnetcore-7.0). Syncfusion theme provides the `e-control` class. You can check the style from provided class by using link tag helper property.
 
 * **~/Pages/_Host.cshtml** file for **.NET 7**.
 * **~/Pages/_Layout.cshtml** for **.NET 6**.

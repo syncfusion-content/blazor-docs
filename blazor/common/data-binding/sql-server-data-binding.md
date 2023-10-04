@@ -23,7 +23,7 @@ The following software are needed:
 
 ## Create Blazor Server Application
 
-Open Visual Studio 2019 and follow the steps in the [documentation](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio) to create the Blazor Server Application.
+Open Visual Studio and follow the steps in the [documentation](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio) to create the Blazor Server Application.
 
 ## Add Syncfusion Blazor DataGrid package
 
@@ -37,7 +37,16 @@ Now, in the Browse tab, search and install the Syncfusion.Blazor.Grid NuGet pack
 
 ![Add Syncfusion Blazor DataGrid package](../images/SQLServer-BrowserGrid.png)
 
-N> For this demo, use Syncfusion.Blazor.Grid(19.1.0.66) NuGet package. A new Syncfusion.Blazor.Grid NuGet package with new enhancement will be released in our every-week release and main release. So, check and update to the [latest versions](https://www.nuget.org/packages/Syncfusion.Blazor.Grid).
+Alternatively, you can utilize the following package manager command to achieve the same.
+
+{% tabs %}
+{% highlight C# tabtitle="Package Manager" %}
+
+Install-Package Syncfusion.Blazor.Grid -Version {{ site.releaseversion }}
+
+{% endhighlight %}
+{% endtabs %}
+
 
 ## Adding Syncfusion Blazor DataGrid Component into the application
 
@@ -50,7 +59,7 @@ Open **_Import.razor** file and add the following namespaces which are required 
 
 {% endhighlight %}
 
-Open **Startup.cs** file in .NET 5 and .NET 3.X applications, **Program.cs** file in .NET 6 application and register the Syncfusion service in the **ConfigureServices** method as follows.
+Open **Program.cs** file in .NET 6 and .NET 7 application and register the Syncfusion service.
 
 {% tabs %}
 {% highlight c# tabtitle=".NET 6 & .NET 7 (~/Program.cs)" %}
@@ -59,17 +68,6 @@ builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
 builder.Services.AddSingleton<WeatherForecastService>();
 builder.Services.AddSyncfusionBlazor();
-
-{% endhighlight %}
-{% highlight c# tabtitle=".NET 5 and .NET 3.X (~/Startup.cs)" %}
-
-public void ConfigureServices(IServiceCollection services)
-{
-    services.AddRazorPages();
-    services.AddServerSideBlazor();
-    services.AddSingleton<WeatherForecastService>();
-    services.AddSyncfusionBlazor();
-}
 
 {% endhighlight %}
 {% endtabs %}
@@ -105,9 +103,8 @@ Now, get the SQL data from the SQL server and bind it to the DataGrid component 
 
 Grid columns can be defined using the [GridColumn](https://blazor.syncfusion.com/documentation/datagrid/columns) component. Create columns using the following code. The properties used and their usage are discussed below.
 
-{% highlight razor %}
-
-[Index.razor]
+{% tabs %}
+{% highlight razor tabtitle="~/Index.razor"%}
 
 <SfGrid @ref="Grid" TValue="Order" AllowPaging="true" >
     <SfDataManager Adaptor="Adaptors.CustomAdaptor">
@@ -131,6 +128,7 @@ Grid columns can be defined using the [GridColumn](https://blazor.syncfusion.com
 }
 
 {% endhighlight %}
+{% endtabs %}
 
 In the custom adaptor’s **Read** method, you can get the Grid action details like paging,filtering,sorting information, etc., using **DataManagerRequest**.
 

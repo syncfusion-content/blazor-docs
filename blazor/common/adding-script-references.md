@@ -108,7 +108,7 @@ You can refer the Syncfusion Blazor scripts through the NuGet package's static w
 
 ### Enable static web assets usage
 
-To use static web assets, ensure [UseStaticFiles](https://docs.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.builder.staticfileextensions.usestaticfiles) method is called as follows,
+To use static web assets, ensure [UseStaticFiles](https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.builder.staticfileextensions.usestaticfiles?view=aspnetcore-7.0) method is called as follows,
 
 * For **.NET 6 and .NET 7** app, open the **~/Program.cs** file and call `UseStaticFiles` method.
 
@@ -448,8 +448,8 @@ The following table lists components and its script reference.
 
 ## Custom Resource Generator
 
-The Syncfusion Blazor provides an option to generate a component's interop scripts using the [Custom Resource Generator](https://blazor.syncfusion.com/crg) (CRG) tool for the Blazor components. Refer [here to generate the component-wise scripts externally using CRG](./custom-resource-generator).
+The Syncfusion Blazor provides an option to generate a component's interop scripts using the [Custom Resource Generator](https://blazor.syncfusion.com/crg) (CRG) tool for the Blazor components. Refer [here to generate the component-wise scripts externally using CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator).
 
 ## See also
 
-* [CDN Fallback](./cdn-fallback)
+* [CDN Fallback](https://blazor.syncfusion.com/documentation/common/cdn-fallback)

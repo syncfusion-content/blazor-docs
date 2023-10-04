@@ -45,4 +45,4 @@ Find the following steps to add the polyfills in the Blazor server application.
 ## See Also
 
 * [Blazor Updated Browser Support](https://docs.microsoft.com/en-us/dotnet/core/compatibility/aspnet-core/5.0/blazor-browser-support-updated)
-* [Blazor Browser Support on .NET 5.0](https://docs.microsoft.com/en-us/aspnet/core/blazor/supported-platforms?view=aspnetcore-5.0)
+* [Blazor Browser Support on .NET 7.0](https://learn.microsoft.com/en-us/aspnet/core/blazor/supported-platforms?view=aspnetcore-7.0)

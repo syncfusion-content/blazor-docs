@@ -10,10 +10,10 @@ documentation: ug
 
 # Bind Data from RESTful Web Services to Syncfusion Blazor Components
 
-In this topic, you can learn how to retrieve data from RESTful web services, bind data to a Grid component, and perform CRUD operations. Here, data is fetched from the ODataV4 service using [ODataV4Adaptor](https://blazor.syncfusion.com/documentation/data/adaptors/#odatav4-adaptor) of `SfDataManger`.
+In this topic, you can learn how to retrieve data from RESTful web services, bind data to a Grid component, and perform CRUD operations. Here, data is fetched from the ODataV4 service using [ODataV4Adaptor](https://blazor.syncfusion.com/documentation/data/adaptors#odatav4-adaptor) of `SfDataManger`.
 
 It is recommended to choose the suitable adaptor based on the RESTful service which you are using to bind data for the Syncfusion Blazor component. Refer to the following documentation to know about the available Adaptors of SfDataManager.
- * [Adaptors](https://blazor.syncfusion.com/documentation/data/adaptors/)
+ * [Adaptors](https://blazor.syncfusion.com/documentation/data/adaptors)
 
 ## Prerequisite software
 
@@ -393,7 +393,7 @@ In previous steps, we have successfully configured the Syncfusion Blazor package
 
 To consume data from the OData Controller, you need to add the **SfDataManager** with **ODataV4Adaptor**. Refer to the following documentation for more details on ODataV4Adaptor.
 
-[ODataV4Adaptor](https://blazor.syncfusion.com/documentation/data/adaptors/#odatav4-adaptor)
+[ODataV4Adaptor](https://blazor.syncfusion.com/documentation/data/adaptors#odatav4-adaptor)
 
 {% tabs %}
 {% highlight razor %}
@@ -407,7 +407,7 @@ To consume data from the OData Controller, you need to add the **SfDataManager**
 
 N> In the above code example, we have used our localhost address from our application. Instead of localhost, you can give the exact URL of your OData service.
 
-Grid columns can be defined by using the [GridColumn](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Grids.GridColumn.html) component. We are going to create columns using the following code.
+Grid columns can be defined by using the [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) component. We are going to create columns using the following code.
 
 {% tabs %}
 {% highlight razor %}
@@ -452,7 +452,7 @@ public class OrdersController : ODataController
 
 ## Handling CRUD operations with our Syncfusion Blazor DataGrid component
 
-You can enable editing in the grid component using the [GridEditSettings](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Grids.GridEditSettings.html) component. Grid provides various modes of editing options such as [Inline/Normal](https://blazor.syncfusion.com/documentation/datagrid/editing/#normal), [Dialog](https://blazor.syncfusion.com/documentation/datagrid/editing/#dialog), and [Batch](https://blazor.syncfusion.com/documentation/datagrid/editing/#batch) editing.
+You can enable editing in the grid component using the [GridEditSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html) component. Grid provides various modes of editing options such as [Inline/Normal](https://blazor.syncfusion.com/documentation/datagrid/in-line-editing), [Dialog](https://blazor.syncfusion.com/documentation/datagrid/dialog-editing), and [Batch](https://blazor.syncfusion.com/documentation/datagrid/batch-editing) editing.
 
 Here, we are using **Inline** edit mode and used Toolbar property to show toolbar items for editing.
 We have added the DataGrid Editing and Toolbar code with previous Grid model.

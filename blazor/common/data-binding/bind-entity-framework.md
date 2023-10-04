@@ -9,7 +9,7 @@ documentation: ug
 
 # Bind Data from SQL Server to Syncfusion Blazor Components
 
-In this section, you can learn how to retrieve data from SQL database using [Entity Framework](https://docs.microsoft.com/en-us/ef/core/) to bind it to the Grid component and perform CRUD operations.
+In this section, you can learn how to retrieve data from SQL database using [Entity Framework](https://learn.microsoft.com/en-us/ef/core/) to bind it to the Grid component and perform CRUD operations.
 Entity Framework is an open-source object-relational mapper (O/RM) from Microsoft. Entity Framework works with many databases. But here, we are going to discuss the step-by-step procedure to create an Entity Framework using the [MS SQL Server](https://en.wikipedia.org/wiki/Microsoft_SQL_Server) database and connect it to the Syncfusion component to perform CRUD operations in a Blazor Server Application.
 
 ## Prerequisite software
@@ -61,10 +61,10 @@ Now, select Target Framework as (.NET 6.0 or .NET 7.0) in the project template a
 
 Now, scaffold DbContext and model classes from the existing Library database. To perform scaffolding and work with the SQL Server database in our application, you need to install the following NuGet packages.
 
-Run the following commands in the Package Manager Console.
-
 * [Microsoft.EntityFrameworkCore.Tools](https://www.nuget.org/packages/Microsoft.EntityFrameworkCore.Tools): This package creates database context and model classes from the database.
 * [Microsoft.EntityFrameworkCore.SqlServer](https://www.nuget.org/packages/Microsoft.EntityFrameworkCore.SqlServer/): The database provider that allows Entity Framework Core to work with SQL Server.
+
+Run the following commands in the Package Manager Console.
 
 {% tabs %}
 {% highlight C# tabtitle="Package Manager" %}
@@ -351,7 +351,7 @@ Now, the data from the SQL server is loaded into the DataGrid component. Refer t
 
 You can enable editing in the grid component using the **GridEditSettings** component. Grid provides various modes of editing options such as Inline/Normal, Dialog, and Batch editing. Refer to the following documentation for your reference.
 
-[Grid Editing in Blazor](https://blazor.syncfusion.com/documentation/datagrid/editing/#editing)
+[Grid Editing in Blazor](https://blazor.syncfusion.com/documentation/datagrid/editing#editing)
 
 Here, inline edit mode and **Toolbar** property are used to show toolbar items for editing.
 While using the DataSource property of Grid, changes will be reflected only in the Grid datasource. To reflect them in the database, handle the CRUD operations externally using the OnActionBegin and OnActionComplete events of Grid.
