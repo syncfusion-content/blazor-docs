@@ -61,7 +61,7 @@ When printing a webpage, some print options, such as layout, paper size, and mar
 * [Chrome](https://support.google.com/chrome/answer/1069693?hl=en&visit_id=1-636335333734668335-3165046395&rd=1)
 * [Firefox](https://support.mozilla.org/en-US/kb/how-print-web-pages-firefox)
 * [Safari](https://www.mintprintables.com/print-tips/adjust-margins-osx/)
-* [IE](https://www.helpteaching.com/help/print/index.htm)
+* [IE](https://www.helpteaching.com/)
 
 ## Print by external button
 
