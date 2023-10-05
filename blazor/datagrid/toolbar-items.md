@@ -19,16 +19,17 @@ These items can be added by defining the [Toolbar](https://help.syncfusion.com/c
 
 | Built-in Toolbar Items | Actions |
 |------------------------|---------|
-| Add | Adds a new record.|
-| Edit | Edits the selected record.|
-| Update | Updates the edited record.|
-| Delete | Deletes the selected record.|
-| Cancel | Cancels the edit state.|
-| Search | Searches the records by the given key.|
-| Print | Prints the datagrid.|
-| ExcelExport | Exports the datagrid to Excel.|
-| PdfExport | Exports the datagrid to PDF.|
-| CsvExport | Exports the datagrid to CSV.|
+| Add | Adds a new row to the Grid.|
+| Edit | Enables editing mode for the selected row in the Grid.|
+| Update | Saves the changes made during the editing mode.|
+| Delete | Deletes the selected record from the Grid.|
+| Cancel | Discards the changes made during the editing mode.|
+| Search | Displays a search box to filter the Grid records.|
+| Print | Print the Grid content.|
+| ColumnChooser | Choose the column’s visibility. |
+| PdfExport | Exports the Grid data to a PDF file.|
+| ExcelExport | Exports the Grid data to an Excel file.|
+| CsvExport | Exports the Grid data to a CSV file.|
 
 The following example demonstrates how to enable built-in Toolbar items such as **Print** and **Search** in the grid.
 
@@ -334,3 +335,126 @@ In the following sample, the **Collapse All** Toolbar item is positioned on the 
 }
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LXhKMNXKhRPOCyLS?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+## Customize Toolbar text
+
+You can able to customize the toolbar text by using the [ItemModel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.ItemModel.html#Syncfusion_Blazor_Navigations_ItemModel__ctor) properties.
+
+```csharp
+
+@using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor.Navigations
+
+<SfGrid ID="Grid" DataSource="@Orders" AllowPaging="true" Toolbar=@ToolbarItems>
+    <GridEditSettings AllowAdding="true" AllowDeleting="true" AllowEditing="true"></GridEditSettings>
+    <GridColumns>
+        <GridColumn Field=@nameof(Order.OrderID) IsPrimaryKey="true" HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code{
+    public List<Order> Orders { get; set; }
+    private List<object> ToolbarItems = new List<object>() {
+        new ItemModel() { Text = "Add Record", PrefixIcon = "e-add", Id = "Grid_add"},//Here Grid is SfGrid ID
+        new ItemModel(){ Text = "Edit Record", PrefixIcon= "e-edit", Id="Grid_edit"},
+        new ItemModel(){ Text = "Delete Record", PrefixIcon= "e-delete", Id="Grid_delete"},
+        new ItemModel(){ Text = "Update Record", PrefixIcon= "e-update", Id="Grid_update"},
+        new ItemModel(){ Text = "Cancel Changes", PrefixIcon= "e-cancel", Id="Grid_cancel"}
+    };
+    protected override void OnInitialized()
+    {
+        Orders = Enumerable.Range(1, 75).Select(x => new Order()
+        {
+            OrderID = 1000 + x,
+            CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
+            Freight = 2.1 * x,
+            OrderDate = DateTime.Now.AddDays(-x),
+        }).ToList();
+    }
+
+    public class Order
+    {
+        public int? OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public DateTime? OrderDate { get; set; }
+        public double? Freight { get; set; }
+    }
+}
+
+```
+
+The following screenshots represent a datagrid by customizing toolbar text.
+
+![Customize ToolBar Text in Blazor DataGrid](./images/blazor-datagrid-toolbar-text-customization.jpg)
+
+## Customizing the toolbar items tooltip text
+
+You can customize the toolbar items tooltip text by adding toolbar items externally by setting [ItemModel.TooltipText](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.ItemModel.html#Syncfusion_Blazor_Navigations_ItemModel__ctor) property.
+
+```csharp
+
+@using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor.Navigations
+
+<SfGrid ID="Grid" DataSource="@Orders" @ref="DefaultGrid" AllowPaging="true" ShowColumnChooser="true"  AllowExcelExport="true" AllowPdfExport="true" Toolbar=@ToolbarItems>
+    <GridEvents OnToolbarClick="ToolbarClickHandler" TValue="Order"></GridEvents>
+    <GridEditSettings AllowAdding="true" AllowDeleting="true" AllowEditing="true"></GridEditSettings>
+    <GridColumns>
+        <GridColumn Field=@nameof(Order.OrderID) IsPrimaryKey="true" HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code{
+    public List<Order> Orders { get; set; }
+    SfGrid<Order> DefaultGrid;
+    
+    private List<object> ToolbarItems = new List<object>() {
+        new ItemModel() { Text = "Excel",TooltipText="Export to Excel", PrefixIcon = "e-excelexport", Id = "Grid_excelexport"}, //Here Grid is SfGrid ID
+        new ItemModel(){ Text = "Pdf",TooltipText="Export to PDF", PrefixIcon= "e-pdfexport", Id="Grid_pdfexport"},
+        new ItemModel(){ Text = "CSV",TooltipText="Export to CSV", PrefixIcon= "e-csvexport", Id="Grid_csvexport"},
+    };
+    
+    public async Task ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
+    {
+        if (args.Item.Id == "Grid_excelexport") //Id is combination of Grid's ID and itemname
+        {
+            await this.DefaultGrid.ExcelExport();
+        }
+        else if (args.Item.Id == "Grid_pdfexport")  //Id is combination of Grid's ID and itemname
+        {
+            await this.DefaultGrid.PdfExport();
+        }
+        
+        else
+        {
+           await this.DefaultGrid.CsvExport();
+        }
+    }
+    
+    protected override void OnInitialized()
+    {
+        Orders = Enumerable.Range(1, 75).Select(x => new Order()
+        {
+            OrderID = 1000 + x,
+            CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
+            Freight = 2.1 * x,
+            OrderDate = DateTime.Now.AddDays(-x),
+        }).ToList();
+    }
+
+    public class Order
+    {
+        public int? OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public DateTime? OrderDate { get; set; }
+        public double? Freight { get; set; }
+    }
+```
+
+![Customizing Toolbar items tooltip text in Blazor DataGrid](./images/blazor-datagrid-toolbar-tooltip-customization.png)
