@@ -249,5 +249,5 @@ Refer to the below steps to resolve these issues and make the app running with H
 
 ## See Also
 
-* [Prerender on ASP.NET Core Razor Component](https://docs.microsoft.com/en-us/aspnet/core/blazor/components/prerendering-and-integration?view=aspnetcore-5.0&pivots=webassembly)
-* [Stateful Reconnection After Prerendering](https://docs.microsoft.com/en-us/aspnet/core/blazor/components/lifecycle?view=aspnetcore-5.0#stateful-reconnection-after-prerendering)
+* [Prerender on ASP.NET Core Razor Component](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/prerendering-and-integration?view=aspnetcore-7.0&pivots=webassembly)
+* [Stateful Reconnection After Prerendering](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/lifecycle?view=aspnetcore-7.0#stateful-reconnection-after-prerendering)

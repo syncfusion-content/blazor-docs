@@ -8,11 +8,11 @@ platform: Blazor
 
 # Bind data to Blazor components using WebApiAdaptor and perform CRUD
 
-In this topic, you can learn how to retrieve data from WebApi Controller, bind to Grid component using [WebApiAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors/#web-api-adaptor) of `SfDataManger`, and perform CRUD operations.
+In this topic, you can learn how to retrieve data from WebApi Controller, bind to Grid component using [WebApiAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors#web-api-adaptor) of `SfDataManger`, and perform CRUD operations.
 
 You can use the WebApiAdaptor of SfDataManager to interact with Web APIs created with OData endpoint. The WebApiAdaptor is extended from the ODataAdaptor. Hence, to use WebApiAdaptor, the endpoint should understand the OData formatted queries sent along with the request.
 
-To enable the OData query option for Web API, Refer to this [documentation](https://docs.microsoft.com/en-us/aspnet/web-api/overview/odata-support-in-aspnet-web-api/supporting-odata-query-options).
+To enable the OData query option for Web API, Refer to this [documentation](https://learn.microsoft.com/en-us/aspnet/web-api/overview/odata-support-in-aspnet-web-api/supporting-odata-query-options).
 
 ## Prerequisite software
 
@@ -338,7 +338,7 @@ In previous steps, we have successfully configured the Syncfusion Blazor package
 
 To consume data from the WebApi Controller, we need to add the **SfDataManager** with **WebApiAdaptor**. Refer to the following documentation for more details on WebApiAdaptor.
 
-[WebApiAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors/#web-api-adaptor)
+[WebApiAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors#web-api-adaptor)
 
 {% tabs %}
 {% highlight razor %}
@@ -350,7 +350,7 @@ To consume data from the WebApi Controller, we need to add the **SfDataManager**
 {% endhighlight %}
 {% endtabs %}
 
-Grid columns can be defined by using the [GridColumn](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Grids.GridColumn.html) component. We are going to create columns using the following code.
+Grid columns can be defined by using the [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) component. We are going to create columns using the following code.
 
 {% tabs %}
 {% highlight razor %}
