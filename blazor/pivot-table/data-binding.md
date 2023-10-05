@@ -623,7 +623,7 @@ This [ObservableCollection](https://learn.microsoft.com/en-us/dotnet/api/system.
 
 Here, **ProductDetails** class implements the interface of **INotifyPropertyChanged** and it raises the event when **Country** property value was changed.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.PivotView
 @using Syncfusion.Blazor.Buttons
 @using System.Collections.ObjectModel
@@ -1211,6 +1211,6 @@ The event [OnLoad](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Pivot
 
 ## See also
 
-* [How to convert complex data to flat data and assign it to the Blazor Pivot Table](https://blazor.syncfusion.com/documentation/pivot-table/how-to/apply-custom-styles-to-pivot-cells)
+* [How to convert complex data to flat data and assign it to the Blazor Pivot Table](https://blazor.syncfusion.com/documentation/pivot-table/how-to/bind-complex-data-to-the-pivot-table)
 
 N> You can also explore our [Blazor Pivot Table example](https://blazor.syncfusion.com/demos/pivot-table/default-functionalities?theme=bootstrap4) to know how to render and configure the pivot table.
