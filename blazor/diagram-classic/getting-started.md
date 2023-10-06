@@ -15,7 +15,7 @@ This section briefly explains about how to include a Diagram in your Blazor Serv
 
 ## Importing Syncfusion Blazor component in the application
 
- 1. Install **Syncfusion.Blazor.Diagrams** NuGet package to the application by using the **NuGet Package Manager**.
+ 1. Install [Syncfusion.Blazor.Diagrams](https://www.nuget.org/packages/Syncfusion.Blazor.Diagram/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet package to the application by using the **NuGet Package Manager**.
  2. You can add the client-side style resources through [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference) or from [NuGet](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets) package in the **HEAD** element of the **~/Pages/_Host.cshtml** page.
 
 ```cshtml
@@ -46,27 +46,14 @@ Open **~/_Imports.Blazor** file and import the **Syncfusion.Blazor.Diagrams** pa
 @using Syncfusion.Blazor.Diagrams
 ```
 
-## Add SyncfusionBlazor service in Startup.cs
+## Add SyncfusionBlazor service in Program.cs
 
-Open the **Startup.cs** file and add services required by Syncfusion components using  **services.AddSyncfusionBlazor()** method. Add this method in the **ConfigureServices** function as follows.
+Open the **Program.cs** file and add the `SyncfusionBlazor service` as follows.
 
 ```c#
 using Syncfusion.Blazor;
+builder.Services.AddSyncfusionBlazor();
 
-namespace BlazorApplication
-{
-    public class Startup
-    {
-        ....
-        ....
-        public void ConfigureServices(IServiceCollection services)
-        {
-            ....
-            ....
-            services.AddSyncfusionBlazor();
-        }
-    }
-}
 ```
 
 **Note**: To enable custom client side resource loading from CRG or CDN. You need to disable resource loading by `AddSyncfusionBlazor(true)` and load the scripts in the **HEAD** element of the **~/Pages/_Host.cshtml** page.

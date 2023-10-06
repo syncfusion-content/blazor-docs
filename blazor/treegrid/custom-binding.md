@@ -143,7 +143,7 @@ The following sample code demonstrates implementing custom data binding using cu
                 DataSource = DataOperations.PerformTake(DataSource, dm.Take);
             }
             return dm.RequiresCounts ? new DataResult() { Result = DataSource, Count = count } : (object)DataSource;
-        }        
+        }
     }
 }
 
@@ -217,16 +217,12 @@ N> If the **DataManagerRequest.RequiresCounts** value is **true**, then the Read
 
 If you want to inject some of your service into Custom Adaptor and use the service, then you can achieve your requirement by using below way.
 
-Initially, the CustomAdaptor class must be added as AddScoped in `StartUp.cs` file.
+Initially, the CustomAdaptor class must be added as AddScoped in `Program.cs` file.
 
 ```csharp
-public void ConfigureServices(IServiceCollection services)
-{
-    ...
-    services.AddSingleton<TaskDataAccessLayer>();
-    services.AddScoped<CustomAdaptor>();
-    services.AddScoped<ServiceClass>();
-}
+builder.Services.AddSingleton<TaskDataAccessLayer>();
+builder.Services.AddScoped<CustomAdaptor>();
+builder.Services.AddScoped<ServiceClass>();
 ```
 
 The following sample code demonstrates injecting service into Custom Adaptor,

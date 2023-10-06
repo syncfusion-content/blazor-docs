@@ -21,29 +21,16 @@ documentation: ug
 
     **Cause:**
 
-    This exception thrown because you missed registering the `SyncfusionBlazorService` in `Startup.cs`.
+    This exception thrown because you missed registering the `SyncfusionBlazorService` in `Program.cs`.
 
     **Solution:**
 
-    You can register the `SyncfusionBlazorService` in `Startup.cs` file to resolve the exception.
+    You can register the `SyncfusionBlazorService` in `Program.cs` file to resolve the exception.
 
     ```c#
     using Syncfusion.Blazor;
-    public class Startup
-    {
-        ....
-        ....
-
-        public void ConfigureServices(IServiceCollection services)
-        {
-            ....
-            ....
-            services.AddSyncfusionBlazor();
-        }
-
-        ....
-        ....
-    }
+    ....
+    builder.Services.AddSyncfusionBlazor();
     ```
 
 * **System.NullReferenceException: Object reference not set to an instance of an object**
@@ -202,7 +189,7 @@ documentation: ug
 
     E> GET `./<SUB-PATH>/<SUB-PATH>_content/Syncfusion.Blazor/<Scripts and CSSs references>` net::ERR_ABORTED 404
 
-    For this, we need to configure the Base path configuration in the root application's `startup.cs` and `_Host.cshtml`.
+    For this, we need to configure the Base path configuration in the root application's `Program.cs` and `_Host.cshtml`.
 
     **Cause:**
 
@@ -212,13 +199,13 @@ documentation: ug
 
     We need to configure the base path in our application when we are hosting the app as Sub-URL like below.
 
-    | In _Host.cshtml File | In Startup.cs File |
+    | In _Host.cshtml File | In Program.cs File |
     | ------------- | ------------- |
     | `<base href="/myblazorapp/" />`  | `app.UsePathBase("/myblazorapp");`|
 
     N> The trailing slash is must for '_Host.cshtml' base path configuration.
 
-    For further details, refer [Host and deploy ASP.NET Core Blazor](https://docs.microsoft.com/en-us/aspnet/core/blazor/host-and-deploy/?view=aspnetcore-5.0&tabs=visual-studio#app-base-path) topic.
+    For further details, refer [Host and deploy ASP.NET Core Blazor](https://learn.microsoft.com/en-us/aspnet/core/blazor/host-and-deploy/?view=aspnetcore-7.0&tabs=visual-studio#app-base-path) topic.
 
 ## See also
 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Code Snippets - Blazor Extension Visual Studio Code | Syncfusion
-description: Learn here all about how to use code snippet utility of Syncfusion Blazor Extension for Visual Studio Code and much more. 
+description: Learn here all about how to use code snippet utility of Syncfusion Blazor Extension for Visual Studio Code and much more.
 platform: Blazor
 component: Common
 documentation: ug
@@ -57,7 +57,7 @@ The Syncfusion Blazor snippet simply inserts the code into the razor file. You m
 
     ![Themes](images/Themes-Snippet.png)
 
-4. Open the **~/Startup.cs** file for server application and the **~/Program.cs** file for client application then register the Syncfusion Blazor Service.
+4. Open the **~/Program.cs** file for server application and client application then register the Syncfusion Blazor Service.
 
     ![Syncfusion Configuration](images/Configuration-Snippet.png)
 
