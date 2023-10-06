@@ -332,7 +332,7 @@ Here is an example of deleting a freehand annotation in a button click using [`D
 
 ![Blazor Image Editor with Delete Freehanddraw an image](./images/blazor-image-editor-delete-shape.png)
 
-## Shape Annotation
+## Shape annotation
 
 The Blazor Image Editor component provides the ability to add shape annotations to an image. These shape annotations include rectangles, ellipses, arrows, paths, and lines, allowing you to highlight, emphasize, or mark specific areas or elements within the image.
 
@@ -524,11 +524,11 @@ Here is an example of deleting rectangle, ellipse, arrow, path, and line in a bu
 
 ![Blazor Image Editor with Delete text an image](./images/blazor-image-editor-delete-text.png)
 
-## Image Annotation
+## Image annotation
 
 The image annotation feature in the Image Editor provides the capability to add and customize images directly onto the image. With this feature, you can easily insert image or icons at specific locations within the image and customize various aspects of the image to meet your requirements. You have control over the customization options including rotate, flip, transparency for the image annotation.
 
-### Add an Image Annotation
+### Add an image annotation
 
 The [`DrawImageAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_DrawImageAsync_System_String_System_Nullable_System_Double__System_Nullable_System_Double__System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_System_Boolean__System_Nullable_System_Int32__) method serves the purpose of inserting an image into the Image Editor control, allowing for image annotations to be added. These image annotations can be used for various purposes, such as adding logos, watermarks, or decorative elements to the image.
 
