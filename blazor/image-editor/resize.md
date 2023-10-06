@@ -33,14 +33,14 @@ Here is an example of resizing the image using the [`ImageResizeAsync`](https://
 </div>
 
 <SfImageEditor @ref="ImageEditor" Toolbar="customToolbarItem" Height="400">
-    <ImageEditorEvents Created="OpenAsync"></ImageEditorEvents>
+    <ImageEditorEvents Created="CreatedAsync"></ImageEditorEvents>
 </SfImageEditor>
 
 @code {
     SfImageEditor ImageEditor;
     private List<ImageEditorToolbarItemModel> customToolbarItem = new List<ImageEditorToolbarItemModel>() {};
 
-    private async void OpenAsync()
+    private async void CreatedAsync()
     {
         await ImageEditor.OpenAsync("nature.png");
     }
