@@ -16,8 +16,6 @@ This section provides information about creating Razor Class Library with the Sy
 * [Visual Studio 2022](https://visualstudio.microsoft.com/downloads/)
 * [.NET 6.0 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/6.0)/[.NET 7.0 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/7.0)
 
-N>  **.NET 6 and .NET 7** requires Visual Studio 2022 or later.
-
 ## Create a Razor Class Library using Syncfusion Blazor components in Visual Studio 2022
 
 1. Choose **Create a new project** from the Visual Studio dashboard.
@@ -32,13 +30,13 @@ N>  **.NET 6 and .NET 7** requires Visual Studio 2022 or later.
 
     ![razor class project configuration](images/VS2022/razor-class-template-2022.png)
 
-4. Select the target Framework **.NET 6** at the top of the Application based on your required target that you want and then click the **Create** button to create a new Razor Class Library application.
+4. Select the target Framework **.NET 7** at the top of the Application based on your required target that you want and then click the **Create** button to create a new Razor Class Library application.
 
     ![select framework](images/VS2022/blazor-select-template-rcl-2022.png)
 
-### Importing Syncfusion Blazor component in Razor Class Library
+## Install Syncfusion Blazor Calendars and Themes NuGet in the App
 
-To add Blazor Calendar component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install [Syncfusion.Blazor.Calendars](https://www.nuget.org/packages/Syncfusion.Blazor.Calendars) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/). Alternatively, you can utilize the following package manager command to achieve the same.
+To add **Blazor Calendar** component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install [Syncfusion.Blazor.Calendars](https://www.nuget.org/packages/Syncfusion.Blazor.Calendars) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/). Alternatively, you can utilize the following package manager command to achieve the same.
 
 {% tabs %}
 {% highlight C# tabtitle="Package Manager" %}
@@ -52,9 +50,12 @@ Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
 
 N> Syncfusion Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for available NuGet packages list with component details.
 
+## Importing Syncfusion Blazor component in Razor Class Library
+
 Now, import and add the Syncfusion Blazor components in the `~/Component.razor` file. For example, the Calendar component is imported and added in the **~/Component.razor** page.
 
-    ```cshtml
+    ```html
+    
     @using Syncfusion.Blazor.Calendars
 
     <div class="my-component">
@@ -62,13 +63,14 @@ Now, import and add the Syncfusion Blazor components in the `~/Component.razor` 
     </div><br />
 
     <SfCalendar TValue="DateTime"></SfCalendar>
+     
     ```
 
 ## Create a Blazor project in Visual Studio with Razor Class Library (RCL)
 
 Refer to the [Blazor Tooling documentation](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0&pivots=windows) to create a new **Blazor Server App** or **Blazor WebAssembly App** using Visual Studio.
 
-### Configure the Razor Class Library and Blazor Application
+## Configure the Razor Class Library and Blazor Application
 
 1. Now, Right-click the solution, and then select Add/Existing Project.
 
@@ -80,13 +82,13 @@ Refer to the [Blazor Tooling documentation](https://learn.microsoft.com/en-us/as
 
     N> Razor Class Library project is added to the existing Blazor Server Application.
 
-3. Right-click the Blazor App project, and then select Add/Project reference. Now, click the checkbox and configure the **Razor Class Library** and **Blazor Server App** or **Blazor WebAssembly App** .
+3. Right-click the Blazor App project, and then select Add/Project reference. Now, click the checkbox and configure the **Razor Class Library** in the **Blazor Server App** or **Blazor WebAssembly App** .
 
     ![reference manager in blazor app](images/reference-manager.png)
 
     ![select RCL to configure blazor app](images/configure-razor.png)
 
-### Importing Razor Class Library in the Blazor Application
+## Importing Razor Class Library in the Blazor Application
 
 1. Open **~/_Imports.razor** file in Blazor Server App or Blazor WebAssembly App and import the `RazorClassLibrary`.
 
