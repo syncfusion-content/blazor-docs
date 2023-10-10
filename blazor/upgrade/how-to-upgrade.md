@@ -21,7 +21,7 @@ The most recent version of Syncfusion Blazor can be downloaded and installed by 
 
 ![Web Installer Upgrade](images/installer-upgrade.png)
 
-You can also upgrade to the latest version just by downloading and installing the products you require from [this](https://www.syncfusion.com/account/login) link. The existing installed versions are not required to be uninstalled.
+You can also upgrade to the latest version just by downloading and installing the products you require from [this](https://www.syncfusion.com/downloads/latest-version) link. The existing installed versions are not required to be uninstalled.
 
 It is not required to install the Volume release before installing the Service Pack release. As releases for Volume and Service Packs work independently, you can install the latest version with major bug fixes directly.
 
@@ -29,7 +29,7 @@ It is not required to install the Volume release before installing the Service P
 
 To upgrade from trial version,
 
-* If you are using Syncfusion controls from [nuget.org](https://www.nuget.org/packages?q=Tags:%22blazor%22syncfusion), replace the currently used trial license key with a paid license key that can be generated from the [License & Downloads](https://www.syncfusion.com/account/downloads) section of our website. Refer to [this](https://blazor.syncfusion.com/documentation/getting-started/license-key/how-to-register-in-an-application) topic for more information regarding registering the license in the application.
+* If you are using Syncfusion controls from [nuget.org](https://www.nuget.org/packages?q=Tags%3A%22blazor%22syncfusion), replace the currently used trial license key with a paid license key that can be generated from the [License & Downloads](https://www.syncfusion.com/account/downloads) section of our website. Refer to [this](https://blazor.syncfusion.com/documentation/getting-started/license-key/how-to-register-in-an-application) topic for more information regarding registering the license in the application.
 
 N> Starting with 2022 Volume 1 v20.1.0.47, all Syncfusion customers (evaluators and paid customers) who use Syncfusion installers or nuget packages from [nuget.org](https://www.nuget.org/packages?q=Tags%3A%22blazor%22syncfusion) must generate and register the corresponding platform and version license key in your projects.<br>
 For more information, see [this](https://blazor.syncfusion.com/documentation/getting-started/license-key/overview) help topic.

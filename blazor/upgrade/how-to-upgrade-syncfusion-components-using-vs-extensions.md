@@ -23,7 +23,7 @@ N> Before use the Syncfusion Blazor Project Migration, check whether the Syncfus
 
 3. The Syncfusion Project Migration window will appear. You can choose the required version of Syncfusion Blazor to migrate.
 
-    N> The versions are loaded from the Syncfusion Blazor NuGet packages published in [`NuGet.org`](https://www.nuget.org/packages?q=Tags:%22blazor%22syncfusion) and it requires internet connectivity.
+    N> The versions are loaded from the Syncfusion Blazor NuGet packages published in [`NuGet.org`](https://www.nuget.org/packages?q=Tags%3A%22blazor%22syncfusion) and it requires internet connectivity.
 
     ![MigrationWizard](images/Migration.png)
 
