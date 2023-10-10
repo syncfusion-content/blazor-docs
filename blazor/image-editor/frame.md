@@ -17,7 +17,7 @@ The [`DrawFrameAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.I
 
 Depending on the frame type selected, users may have additional customization options, such as adjusting the frame's thickness, color, texture, or other attributes. This allows for fine-tuning the appearance of the frame to match the image's theme or the user's preferences
 
-The [`DrawFrameAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_DrawFrameAsync_Syncfusion_Blazor_ImageEditor_FrameType_System_String_System_String_System_Int32_System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_System_Int32__Syncfusion_Blazor_ImageEditor_FrameLineStyle_System_Nullable_System_Int32__) method in the Image Editor control takes six parameters to define the properties of the rectangle annotation:
+The [`DrawFrameAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_DrawFrameAsync_Syncfusion_Blazor_ImageEditor_FrameType_System_String_System_String_System_Int32_System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_System_Int32__Syncfusion_Blazor_ImageEditor_FrameLineStyle_System_Nullable_System_Int32__) method in the Image Editor control takes nine parameters to define the properties of the frame to the image:
 
 * frameType - Specified the image data or url of the image to be inserted.
 
@@ -52,14 +52,14 @@ Here is an example of Frame using the [`DrawFrameAsync`](https://help.syncfusion
 </div>
 
 <SfImageEditor @ref="ImageEditor" Toolbar="customToolbarItem" Height="400">
-    <ImageEditorEvents Created="OpenAsync"></ImageEditorEvents>
+    <ImageEditorEvents Created="CreatedAsync"></ImageEditorEvents>
 </SfImageEditor>
 
 @code {
     SfImageEditor ImageEditor;
     private List<ImageEditorToolbarItemModel> customToolbarItem = new List<ImageEditorToolbarItemModel>() { };
 
-    private async void OpenAsync()
+    private async void CreatedAsync()
     {
         await ImageEditor.OpenAsync("nature.png");
     }
