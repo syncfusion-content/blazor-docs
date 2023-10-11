@@ -123,7 +123,7 @@ Add the Syncfusion Blazor Toolbar component in the **~/Pages/Index.razor** file.
         <ToolbarItem Text="Cut"></ToolbarItem>
         <ToolbarItem Text="Copy"></ToolbarItem>
         <ToolbarItem Text="Paste"></ToolbarItem>
-        //To separate the Toolbar items
+        @* To separate the Toolbar items *@
         <ToolbarItem></ToolbarItem>
         <ToolbarItem Text="Bold"></ToolbarItem>
         <ToolbarItem Text="Underline"></ToolbarItem>
