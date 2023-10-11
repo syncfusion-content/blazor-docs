@@ -86,11 +86,11 @@ The Rich text editor has quick toolbars that are open as context-menu on clickin
 
 | Target Element | Default Quick Toolbar items |
 |----------------|---------|
-| [Image](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.ImageToolbarCommand.html#fields) | Replace, Align, Caption, Remove, InsertLink, Display, AltText, Dimension |
-| [Link](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.LinkToolbarCommand.html#fields) | Open, Edit, UnLink |
-| [Table](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.TableToolbarCommand.html#fields) | TableHeader, TableRows, TableColumns, BackgroundColor, TableRemove, Alignments, TableCellVerticalAlign, Styles |
-| [Audio](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.AudioToolbarCommand.html#fields) | AudioReplace, AudioRemove, AudioLayoutOption |
-| [Video](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.VideoToolbarCommand.html#fields) | VideoReplace, VideoAlign, VideoRemove, VideoLayoutOption, VideoDimension |
+| [Image](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorQuickToolbarSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorQuickToolbarSettings_Image) | Replace, Align, Caption, Remove, InsertLink, Display, AltText, Dimension |
+| [Link](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorQuickToolbarSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorQuickToolbarSettings_Link) | Open, Edit, UnLink |
+| [Table](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorQuickToolbarSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorQuickToolbarSettings_Table) | TableHeader, TableRows, TableColumns, BackgroundColor, TableRemove, Alignments, TableCellVerticalAlign, Styles |
+| [Audio](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorQuickToolbarSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorQuickToolbarSettings_Audio) | AudioReplace, AudioRemove, AudioLayoutOption |
+| [Video](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorQuickToolbarSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorQuickToolbarSettings_Video) | VideoReplace, VideoAlign, VideoRemove, VideoLayoutOption, VideoDimension |
 
 ### Image quick Toolbar
 
@@ -149,7 +149,7 @@ Quick toolbar is opened by clicking the table. You can customize the table by us
 | [BackgroundColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.TableToolbarCommand.html#Syncfusion_Blazor_RichTextEditor_TableToolbarCommand_BackgroundColor) | Can be set each table cell background color |
 | [TableRemove](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.TableToolbarCommand.html#Syncfusion_Blazor_RichTextEditor_TableToolbarCommand_TableRemove) | Can be delete the entire table from editor |
 | [Alignments](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.TableToolbarCommand.html#Syncfusion_Blazor_RichTextEditor_TableToolbarCommand_Alignments) |  Can be aligned the table content|
-| [Styles](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.TableToolbarCommand.html#Syncfusion_Blazor_RichTextEditor_TableToolbarCommand_Alignments) | Can be style the table border |
+| [Styles](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.TableToolbarCommand.html#Syncfusion_Blazor_RichTextEditor_TableToolbarCommand_Styles) | Can be style the table border |
 
 {% tabs %}
 {% highlight razor %}
