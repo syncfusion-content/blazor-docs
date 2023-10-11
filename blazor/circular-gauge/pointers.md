@@ -180,7 +180,7 @@ You can customize the range bar using the following properties.
 * [Color](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugePointer.html#Syncfusion_Blazor_CircularGauge_CircularGaugePointer_Color) - Specifies the color of the range bar.
 * [Radius](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugePointer.html#Syncfusion_Blazor_CircularGauge_CircularGaugePointer_Radius) - Specifies the range bar radius
 * [RoundedCornerRadius](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugePointer.html#Syncfusion_Blazor_CircularGauge_CircularGaugePointer_RoundedCornerRadius) - Specifies the rounded corner of the range bar.
-* [CircularGaugePointerBorder](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.CircularGauge.CircularGaugePointerBorder.html) - Specifies the border of the range bar.
+* [CircularGaugePointerBorder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugePointerBorder.html) - Specifies the border of the range bar.
 
 ```cshtml
 @using Syncfusion.Blazor.CircularGauge
@@ -268,7 +268,7 @@ You can customize the marker pointer using the following properties.
 * [MarkerWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugePointer.html#Syncfusion_Blazor_CircularGauge_CircularGaugePointer_MarkerWidth)  - specifies marker pointer width.
 * [MarkerHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugePointer.html#Syncfusion_Blazor_CircularGauge_CircularGaugePointer_MarkerHeight) - specifies marker pointer height.
 * [Radius](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugePointer.html#Syncfusion_Blazor_CircularGauge_CircularGaugePointer_Radius) - specifies marker pointer radius.
-* [CircularGaugePointerBorder](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.CircularGauge.CircularGaugePointerBorder.html) - specifies marker pointer's border color and width.
+* [CircularGaugePointerBorder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugePointerBorder.html) - specifies marker pointer's border color and width.
 
 ```cshtml
 @using Syncfusion.Blazor.CircularGauge
@@ -346,7 +346,7 @@ The pointers can be dragged over the axis values by clicking and dragging the sa
 
 ## Multiple pointers
 
-In addition to the default pointer, you can add n number of pointers to an axis using the [CircularGaugePointers](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.CircularGauge.CircularGaugePointers.html) tag.
+In addition to the default pointer, you can add n number of pointers to an axis using the [CircularGaugePointers](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugePointers.html) tag.
 
 ```cshtml
 @using Syncfusion.Blazor.CircularGauge
@@ -387,7 +387,7 @@ In addition to the default pointer, you can add n number of pointers to an axis 
 
 ## Pointer animation
 
-The pointers are animated on loading the gauge using the [CircularGaugePointerAnimation](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.CircularGauge.CircularGaugePointerAnimation.html) tag in pointer. The [Enable](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugePointerAnimation.html#Syncfusion_Blazor_CircularGauge_CircularGaugePointerAnimation_Enable) property in animation allows you to enable or disable the animation. The [Duration](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugePointerAnimation.html#Syncfusion_Blazor_CircularGauge_CircularGaugePointerAnimation_Duration) property specifies the duration of the animation in milliseconds.
+The pointers are animated on loading the gauge using the [CircularGaugePointerAnimation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugePointerAnimation.html) tag in pointer. The [Enable](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugePointerAnimation.html#Syncfusion_Blazor_CircularGauge_CircularGaugePointerAnimation_Enable) property in animation allows you to enable or disable the animation. The [Duration](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugePointerAnimation.html#Syncfusion_Blazor_CircularGauge_CircularGaugePointerAnimation_Duration) property specifies the duration of the animation in milliseconds.
 
 ```cshtml
 @using Syncfusion.Blazor.CircularGauge
