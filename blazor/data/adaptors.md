@@ -765,7 +765,7 @@ The sample response object should look like below.
 }
 ```
 
-N> The controller method’s data parameter name must be `value`.
+N> The controller method’s data parameter name must be `value`. -->
 
 ## Writing custom adaptor
 
