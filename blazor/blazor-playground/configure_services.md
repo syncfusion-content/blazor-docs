@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Configuration and new services in Blazor Playground | Syncfusion
-description: Blazor Playground supports configuration and new services, allowing you to configure your Blazor components and inject new services, making it easier to develop and maintain complex Blazor components.
+description: Blazor Playground supports configuration and new services, making it easier to develop and maintain complex Blazor components.
 platform: Blazor
 component: Common
 documentation: ug
