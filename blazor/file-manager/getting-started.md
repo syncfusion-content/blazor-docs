@@ -116,7 +116,10 @@ Add the Syncfusion Blazor FileManager component in the **~/Pages/Index.razor** f
 {% highlight razor %}
 
 <SfFileManager TValue="FileManagerDirectoryContent">
-    <FileManagerAjaxSettings Url="/api/SampleData/FileOperations">
+    <FileManagerAjaxSettings Url="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/FileOperations"
+                             UploadUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Upload"
+                             DownloadUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Download"
+                             GetImageUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/GetImage">
     </FileManagerAjaxSettings>
 </SfFileManager>
 
