@@ -151,6 +151,6 @@ N> * **PreventRender** property internally overrides the **ShouldRender** method
 
 Grid renders each row and cell as individual component and loading large number of rows and cells in view will have performance impact on both memory consumption and CPU processing.
 
-To use grid without such performance impacts, you can load reduced set of rows in the grid using [paging](./paging) and [virtualization](./virtual) features.
+To use grid without such performance impacts, you can load reduced set of rows in the grid using [paging](./paging) and [virtualization](./virtualization) features.
 
 N> Even though with paging or virtualization feature enabled, having hundreds of rows in single grid page will again introduce performance lag in the application, so you need to set reasonable page size.
