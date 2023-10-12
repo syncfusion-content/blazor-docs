@@ -1,12 +1,12 @@
 ---
 layout: post
 title: Configuration and new services in Blazor Playground | Syncfusion
-description: Blazor Playground provides support for configuration and new services
+description: Blazor Playground supports configuration and new services, allowing you to configure your Blazor components and inject new services, making it easier to develop and maintain complex Blazor components.
 platform: Blazor
 component: Common
 documentation: ug
 ---
-## Update configuration and add new services
+# Update configuration and add new services
 
 To add new services or modify the existing ones in your program, you can access the Services button located in the app bar.
 Then, go to the ConfigureServices method in the Program.cs file, where you can add new injectable services or override the existing service configuration to suit your requirements.

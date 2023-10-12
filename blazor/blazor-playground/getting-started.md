@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with Blazor Playground | Syncfusion
-description: Getting Started with Blazor Playground to Write, Edit and Compile for Blazor Components
+description: Syncfusion Blazor Playground is a powerful online code editor for building and editing Blazor components easily.
 platform: Blazor
 component: Common
 documentation: ug
