@@ -9,16 +9,22 @@ documentation: ug
 
 # Column Template in Blazor DataGrid
 
-N> Before adding column template to the DataGrid, it is recommended to go through the [template](./templates/#templates) section topic to configure the template.
+DataGrid component provides a [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Template) option that allows you to display custom elements in a column instead of the field value. This can be useful when you need to display images, buttons, or other custom content within a column.
+
+> Before adding column template to the DataGrid, it is recommended to go through the [template](./templates/#templates) section topic to configure the template.
 
 To know about **Column Template** in Blazor DataGrid Component, you can check this video.
 
 {% youtube
 "youtube:https://www.youtube.com/watch?v=9YF9HnFY5Ew"%}
 
-The Column template has options to display custom element value or content in the column. You can use the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Template)  of the [GridColumn](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Grids.GridColumn.html) component to specify the custom content. Inside the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Template), you can access the data using the implicit named parameter **context**.
+> When using template columns, they are primarily meant for rendering custom content and may not provide built-in support for datagrid actions like sorting, filtering, editing. It is must to define the `Field` property of the column to perform any datagrid actions.
 
-N> The column template feature is used to render the customized element value in the UI for a particular column. The data operations like filtering, sorting, etc., will not work based on the column template values. It will be handled based on the values you have provided to the particular column in the datasource.
+## Render image in a column
+
+To render an image in a grid column, you need to define a [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Template) for the column using the template property.The `Template` property expects an HTML string or a function that returns an HTML string.
+
+The following example demonstrates how to define a `Template` for the **Employee Image** field that displays an image element.The `Template` property is set to an HTML string that contains an image tag. You have utilized the `src` and `alt` attributes to the image tag.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -35,10 +41,9 @@ N> The column template feature is used to render the customized element value in
                 }
             </Template>
         </GridColumn>
-        <GridColumn Field=@nameof(EmployeeData.EmployeeID) HeaderText="Employee ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
         <GridColumn Field=@nameof(EmployeeData.FirstName) HeaderText="First Name" Width="130"></GridColumn>
-        <GridColumn Field=@nameof(EmployeeData.Title) HeaderText="Title" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(EmployeeData.HireDate) HeaderText="Hire Date" Format="d" TextAlign="TextAlign.Right" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(EmployeeData.LastName) HeaderText="Last Name" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(EmployeeData.City) HeaderText="City" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
 
@@ -51,111 +56,127 @@ N> The column template feature is used to render the customized element value in
     }
 </style>
 
-@code{
+@code {
     public List<EmployeeData> Employees { get; set; }
 
     protected override void OnInitialized()
     {
         Employees = Enumerable.Range(1, 9).Select(x => new EmployeeData()
-        {
-            EmployeeID = x,
-            FirstName = (new string[] { "Nancy", "Andrew", "Janet", "Margaret", "Steven" })[new Random().Next(5)],
-            LastName = (new string[] { "Davolio", "Fuller", "Leverling", "Peacock", "Buchanan" })[new Random().Next(5)],
-            Title = (new string[] { "Sales Representative", "Vice President, Sales", "Sales Manager",
-                                    "Inside Sales Coordinator" })[new Random().Next(4)],
-            HireDate = DateTime.Now.AddDays(-x),
-        }).ToList();
+            {
+                EmployeeID = x,
+                FirstName = (new string[] { "Nancy", "Andrew", "Janet", "Margaret", "Laura" })[new Random().Next(5)],
+                LastName = (new string[] { "Davolio", "Fuller", "Leverling", "Peacock", "Buchanan" })[new Random().Next(5)],
+                City = (new string[] { "Seattle", "Tacoma", "Kirkland",
+                                    "Redmond" })[new Random().Next(4)],
+                HireDate = DateTime.Now.AddDays(-x),
+            }).ToList();
     }
 
     public class EmployeeData
     {
-        public int? EmployeeID { get; set; }
+        public int EmployeeID { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
-        public string Title { get; set; }
+        public string City { get; set; }
         public DateTime? HireDate { get; set; }
     }
 }
 ```
 
-The following screenshot represents the column Template.
-![Blazor DataGrid with Column template](./images/blazor-datagrid-column-template.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rjVANuBbsFDShTfP?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+> The [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Template) option allows to define any HTML content within a column.
+
 
 ## Render other components in a column
 
-It is possible to render the other components in a column using the column template feature of the Grid.
+The column template has options to render a custom component in a DataGrid column instead of a field value.
 
-In the following sample, the `SfDropDownList` component is rendered in the First Name column using the column template.
+### Render DropDownList component in a column
+
+To render a custom component in a grid column, you need to define a [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Template) for the column using the column `Template` property. In the following code, we rendered the [DropDownList](https://ej2.syncfusion.com/angular/documentation/drop-down-list/getting-started) component in the **Order Status** column by defining the `Template` property.
+
+```csharp
+ <SfDropDownList TValue="string" Placeholder="Order Placed" PopupWidth="150" PopupHeight="150" TItem="EmployeeNames" DataSource="@EmployeeDetails">
+                    <DropDownListFieldSettings Value="Status"></DropDownListFieldSettings>
+ </SfDropDownList>
+```
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.DropDowns
 
-<SfGrid  DataSource="@Employees">
+<SfGrid DataSource="@Orders">
     <GridColumns>
-        <GridColumn Field=@nameof(EmployeeData.EmployeeID) TextAlign="TextAlign.Right" HeaderText="Employee ID" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(EmployeeData.FirstName) HeaderText="First Name">
+        <GridColumn Field=@nameof(Order.OrderID) TextAlign="TextAlign.Right" HeaderText="Employee ID" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer ID"></GridColumn>
+        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderStatus) HeaderText="Order Status" TextAlign="TextAlign.Right" Width="150">
             <Template>
-                <SfDropDownList TValue="string" Placeholder="Andrew" TItem="EmployeeNames" Width="300px"  DataSource="@EmployeeDetails">
-                    <DropDownListFieldSettings Value="Name"></DropDownListFieldSettings>
+                <SfDropDownList TValue="string" Placeholder="Order Placed" PopupWidth="150" PopupHeight="150" TItem="EmployeeNames" DataSource="@EmployeeDetails">
+                    <DropDownListFieldSettings Value="Status"></DropDownListFieldSettings>
                 </SfDropDownList>
             </Template>
         </GridColumn>
-        <GridColumn Field=@nameof(EmployeeData.Title) HeaderText="Title" Format="C2"></GridColumn>
-        <GridColumn Field=@nameof(EmployeeData.HireDate) HeaderText="Hire Date" Format="d" TextAlign="TextAlign.Right" Width="150"></GridColumn>
     </GridColumns>
 </SfGrid>
 
-@code{
-    public List<EmployeeData> Employees { get; set; }
+@code {
+    public List<Order> Orders { get; set; }
     public List<EmployeeNames> EmployeeDetails { get; set; }
+
 
     protected override void OnInitialized()
     {
-        Employees = Enumerable.Range(1, 5).Select(x => new EmployeeData()
-        {
-            EmployeeID = x,
-            FirstName = (new string[] { "Nancy", "Andrew", "Janet", "Margaret", "Steven" })[new Random().Next(5)],
-            Title = (new string[] { "Sales Representative", "Vice President, Sales", "Sales Manager",
+        Orders = Enumerable.Range(1, 5).Select(x => new Order()
+            {
+                OrderID = x,
+                CustomerID = (new string[] { "Nancy", "Andrew", "Janet", "Margaret", "Steven" })[new Random().Next(5)],
+                Freight=2.1*x,
+                Title = (new string[] { "Sales Representative", "Vice President, Sales", "Sales Manager",
                                     "Inside Sales Coordinator" })[new Random().Next(4)],
-            HireDate = DateTime.Now.AddDays(-x),
-        }).ToList();
+                OrderStatus = (new string[]{"Order Placed","Processing","Delivered"})[new Random().Next(3)]
+            }).ToList();
 
-        EmployeeDetails = Enumerable.Range(1, 5).Select(x => new EmployeeNames()
-        {
-            Id = x,
-            Name = (new string[] { "Nancy", "Andrew", "Janet", "Margaret", "Steven" })[new Random().Next(5)]
-        }).ToList();
+        EmployeeDetails = Enumerable.Range(1, 3).Select(x => new EmployeeNames()
+            {
+                Id = x,
+                Status = (new string[] { "Order Placed", "Processing", "Delivered" })[new Random().Next(3)]
+            }).ToList();
     }
 
-    public class EmployeeData
+    public class Order
     {
-        public int? EmployeeID { get; set; }
-        public string FirstName { get; set; }
+        public int? OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public double Freight { get; set; }
         public string Title { get; set; }
-        public DateTime? HireDate { get; set; }
+        public string OrderStatus { get; set; }
     }
 
     public class EmployeeNames
     {
         public int Id { get; set; }
-        public string Name { get; set; }
+        public string Status { get; set; }
     }
 }
 ```
 
-## Using conditions inside template
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VjhKNOVlVUAsxFps?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-Template elements can be rendered based on required conditions inside the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Template) of the [GridColumn](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Grids.GridColumn.html) component.
+## Using condition template
 
-In the following code, checkbox is rendered based on Discontinued field value in the datasource. This data can be accessed inside the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Template) using the implicit named parameter **context**.
+The conditional column [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Template) allows you to display template elements based on specific conditions.
+
+
+In the following code, checkbox is rendered based on **Discontinued** field value in the datasource. This data can be accessed inside the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Template) using the implicit named parameter **context**.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Employees">
     <GridColumns>
-        <GridColumn HeaderText="Employee Status" TextAlign="TextAlign.Center" Width="120">
+        <GridColumn HeaderText="Discontinued" TextAlign="TextAlign.Center" Width="120">
             <Template>
                 @{
                     var employee = (context as EmployeeData);
@@ -172,113 +193,41 @@ In the following code, checkbox is rendered based on Discontinued field value in
                 }
             </Template>
         </GridColumn>
-        <GridColumn Field=@nameof(EmployeeData.EmployeeID) TextAlign="TextAlign.Center" HeaderText="Employee ID" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(EmployeeData.FirstName) HeaderText="First Name" Width="130"></GridColumn>
-        <GridColumn Field=@nameof(EmployeeData.LastName) HeaderText="Last Name" Width="130"></GridColumn>
-        <GridColumn Field=@nameof(EmployeeData.Title) HeaderText="Title" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(EmployeeData.HireDate) HeaderText="Hire Date" Format="d" TextAlign="TextAlign.Right" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(EmployeeData.ProductID) TextAlign="TextAlign.Center" HeaderText="Employee ID" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(EmployeeData.CategoryName) HeaderText="Category Name" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(EmployeeData.ProductName) HeaderText="Product Name" Width="130"></GridColumn>
     </GridColumns>
 </SfGrid>
 
-@code{
+@code {
     public List<EmployeeData> Employees { get; set; }
 
     protected override void OnInitialized()
     {
         Employees = Enumerable.Range(1, 9).Select(x => new EmployeeData()
-        {
-            EmployeeID = x,
-            FirstName = (new string[] { "Nancy", "Andrew", "Janet", "Margaret", "Steven" })[new Random().Next(5)],
-            LastName = (new string[] { "Davolio", "Fuller", "Leverling", "Peacock", "Buchanan" })[new Random().Next(5)],
-            Title = (new string[] { "Sales Representative", "Vice President, Sales", "Sales Manager",
-                                    "Inside Sales Coordinator" })[new Random().Next(4)],
-            HireDate = DateTime.Now.AddDays(-x),
-            Discontinued = (new Boolean[] { true, false})[new Random().Next(2)]
-        }).ToList();
+            {
+                ProductID = x,
+                CategoryName = "Beverages",
+                ProductName = (new string[] { "Chai", "Chang", "Aniseed Syrup",
+                                    "Mishi Kobe Niku" })[new Random().Next(4)],
+                Discontinued = (new Boolean[] { true, false })[new Random().Next(2)]
+            }).ToList();
     }
 
     public class EmployeeData
     {
-        public int? EmployeeID { get; set; }
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
-        public string Title { get; set; }
-        public DateTime? HireDate { get; set; }
-        public Boolean Discontinued { get; set; }
+        public int? ProductID { get; set; }
+        public string CategoryName { get; set; }
+        public string ProductName { get; set; }
+       public Boolean Discontinued { get; set; }
     }
 }
 ```
-
-The following screenshot represents the Conditional Template.
-
-![Blazor DataGrid with Conditional Template](./images/blazor-datagrid-conditional-template.png)
-
-## Using image inside template
-
-This can be achieved using the Column template property as it has options to display custom elements like, image content in the column. You can use the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Template) of the [GridColumn](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Grids.GridColumn.html) component to specify the custom image content. Inside the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Template) , you can access the data using the implicit named parameter **context**.
-
-```cshtml
-@using Syncfusion.Blazor.Grids
-
-<SfGrid  DataSource="@Employees">
-    <GridColumns>
-        <GridColumn HeaderText="Employee Image" TextAlign="TextAlign.Center" Width="120">
-            <Template>
-                @{
-                    var employee = (context as EmployeeData);
-                    <div class="image">
-                        <img src="@($"scripts/Images/Employees/{employee.EmployeeID}.png")" alt="@employee.EmployeeID" />
-                    </div>
-                }
-            </Template>
-        </GridColumn>
-        <GridColumn Field=@nameof(EmployeeData.EmployeeID) TextAlign="TextAlign.Right" HeaderText="Employee ID" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(EmployeeData.FirstName) HeaderText="First Name" Width="130"></GridColumn>
-        <GridColumn Field=@nameof(EmployeeData.Title) HeaderText="Title" Format="C2" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(EmployeeData.HireDate) HeaderText="Hire Date" Format="d" TextAlign="TextAlign.Right" Width="150"></GridColumn>
-    </GridColumns>
-</SfGrid>
-
-<style>
-    .image img {
-        height: 55px;
-        width: 55px;
-        border-radius: 50px;
-        box-shadow: inset 0 0 1px #e0e0e0, inset 0 0 14px rgba(0, 0, 0, 0.2);
-    }
-</style>
-
-@code{
-    public List<EmployeeData> Employees { get; set; }
-
-    protected override void OnInitialized()
-    {
-        Employees = Enumerable.Range(1, 5).Select(x => new EmployeeData()
-        {
-            EmployeeID = x,
-            FirstName = (new string[] { "Nancy", "Andrew", "Janet", "Margaret", "Steven" })[new Random().Next(5)],
-            Title = (new string[] { "Sales Representative", "Vice President, Sales", "Sales Manager",
-                                    "Inside Sales Coordinator" })[new Random().Next(4)],
-            HireDate = DateTime.Now.AddDays(-x),
-        }).ToList();
-    }
-
-    public class EmployeeData
-    {
-        public int? EmployeeID { get; set; }
-        public string FirstName { get; set; }
-        public string Title { get; set; }
-        public DateTime? HireDate { get; set; }
-    }
-}
-```
-
-The following screenshot represents the Image Template.
-![Blazor DataGrid with Image Template](./images/blazor-datagrid-image-template.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BDrgjErPUrDqccPz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Using hyperlink column and performing routing on click
 
-The Column template property can be used to provide routing links inside the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Template) property of the [GridColumn](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Grids.GridColumn.html). For routing, [UriHelper](https://docs.microsoft.com/en-us/aspnet/core/blazor/routing?view=aspnetcore-3.0#uri-and-navigation-state-helpers) can be utilized.
+The Column template property can be used to provide routing links inside the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Template) property of the [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html). For routing, [UriHelper](https://learn.microsoft.com/en-us/aspnet/core/blazor/fundamentals/routing?view=aspnetcore-7.0&viewFallbackFrom=aspnetcore-3.0#uri-and-navigation-state-helpers) can be utilized.
 
 This can be achieved by initially defining an anchor tag inside the column template and binding click event to it. In this event, the DataGrid data **context** is passed on to its function.
 
