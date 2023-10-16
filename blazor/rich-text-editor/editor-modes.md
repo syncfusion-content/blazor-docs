@@ -72,6 +72,6 @@ For further details on Markdown editing, refer to the [Markdown](./markdown/) se
 
 N> You can also explore our [Blazor Rich Text Editor](https://blazor.syncfusion.com/demos/rich-text-editor/overview?theme=bootstrap4) example to know how to render and configure the rich text editor tools.
 
-## See Also
+## See also
 
 * [How to render the iframe](./iframe/)

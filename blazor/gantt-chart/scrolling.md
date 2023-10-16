@@ -70,6 +70,7 @@ To specify the [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
     }
 }
 ```
+
 ## Responsive with the parent container
 
 Specify the [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_Height) and [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_Width) as **100%** to make the Gantt element fill its parent container. Setting the `Height` to **100%** requires the Gantt parent element to have explicit height or you can use viewport height to set explicit height based on the browser layout.

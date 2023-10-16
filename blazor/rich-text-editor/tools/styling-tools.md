@@ -200,9 +200,9 @@ The `RichTextEditorFontColor` and `RichTextEditorBackgroundColor` tag has two mo
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor RichTextEditor displaying font color](../images/blazor-richtexteditor-font-color.png)
-
 ![Blazor RichTextEditor displaying background color](../images/blazor-richtexteditor-background-color.png)
+
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LXhKZQirgNPpWyUH?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Built-in editor content styles
 
@@ -441,9 +441,9 @@ This feature allows users to change the appearance of the numbered and bulleted 
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor RichTextEditor number format list](../images/blazor-richtexteditor-number-format.png)
-
 ![Blazor RichTextEditor bullet format list](../images/blazor-richtexteditor-bullet-format.png)
+
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/hZrgDQihUWLCLrIB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Code block
 

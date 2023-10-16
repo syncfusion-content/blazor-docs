@@ -203,7 +203,7 @@ Using the items property, you can set different intervals for each item to trans
 </style>
 ```
 
-**Note**: Interval property can accept value in terms of milliseconds.
+N> Interval property can accept value in terms of milliseconds.
 
 ## Auto play slides
 
@@ -443,16 +443,16 @@ In the carousel, you can able to perform swipe the carousel slides using touch a
 </style>
 ```
 
-## Swipe Modes
+## Swipe modes
 
-In the carousel, the [`swipeMode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfCarousel.html#Syncfusion_Blazor_Navigations_SfCarousel_SwipeMode) property allows specifying whether the slide transition should occur while performing swiping via touch or mouse. The slide swiping is enabled or disabled using the bitwise operator.
+In the carousel, the [`SwipeMode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfCarousel.html#Syncfusion_Blazor_Navigations_SfCarousel_SwipeMode) property allows specifying whether the slide transition should occur while performing swiping via touch or mouse. The slide swiping is enabled or disabled using the bitwise operator.
 
 The following are the different swipe modes available in the carousel:
 
-* CarouselSwipeMode.Touch - Allows the user to slide the slides using touch actions.
-* CarouselSwipeMode.Mouse - Allows the user to slide the slides using mouse actions.
-* CarouselSwipeMode.Touch & CarouselSwipeMode.Mouse - Allows the user to slide the slides using both touch and mouse actions.
-* ~CarouselSwipeMode.Touch & ~CarouselSwipeMode.Mouse - Disables both touch and mouse actions.
+* [`CarouselSwipeMode.Touch`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.CarouselSwipeMode.html) - Allows the user to slide the slides using touch actions.
+* [`CarouselSwipeMode.Mouse`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.CarouselSwipeMode.html) - Allows the user to slide the slides using mouse actions.
+* [`CarouselSwipeMode.Touch & CarouselSwipeMode.Mouse`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.CarouselSwipeMode.html) - Allows the user to slide the slides using both touch and mouse actions.
+* [`~CarouselSwipeMode.Touch & ~CarouselSwipeMode.Mouse`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.CarouselSwipeMode.html) - Disables both touch and mouse actions.
 
 
 ```cshtml
@@ -503,4 +503,3 @@ The following are the different swipe modes available in the carousel:
 ```
 
 ![Carousel Swipe Mode](images/swipe.gif)
-

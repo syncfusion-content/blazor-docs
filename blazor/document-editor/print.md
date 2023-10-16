@@ -21,9 +21,9 @@ Refer to the following example for print.
 
 @code {
     SfDocumentEditorContainer container;
-    protected void OnPrint(object args)
+    protected async void OnPrint(object args)
     {
-        container.DocumentEditor.PrintAsync();
+        await container.DocumentEditor.PrintAsync();
     }
 }
 ```

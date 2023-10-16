@@ -211,6 +211,7 @@ The Excel export also provides an option to include custom theme for exported Ex
 }
 ```
 
+
 N> By default, material theme is applied to the exported Excel document.
 
 ### File name for exported document
@@ -277,5 +278,6 @@ You can assign the file name for the exported document by defining **FileName** 
     }
 }
 ```
+
 
 N> You can refer to our [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Gantt Chart example](https://blazor.syncfusion.com/demos/gantt-chart/default-functionalities?theme=bootstrap4) to know how to render and configure the Gantt.

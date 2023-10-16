@@ -69,7 +69,7 @@ The available built-in command buttons are:
 
 The following screenshot represents the command column.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BDhKZRrqBTDLUMPn?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Blazor DataGrid with Command Column](./images/blazor-datagrid-command-column.png)
 
 ## Custom command column
 
@@ -129,6 +129,6 @@ The following sample code demonstrates adding custom command in the **Manage Rec
 
 The following image represents the custom command added in the **Manage Records** column of the DataGrid component,
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BXLqtnrgrJWyrLLx?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Blazor DataGrid with Custom Command](./images/blazor-datagrid-custom-command.png)
 
 N> The Grid component does not support adding a new record using the command column. Because, the command column, along with the command buttons, will be rendered only after the record is created. As a result, Grid only supported edit, delete, cancel, and update options in the command column.

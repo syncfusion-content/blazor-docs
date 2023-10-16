@@ -119,7 +119,7 @@ All tasks available in Gantt Chart are rendered in collapsed state by setting th
 
 ![Blazor Gantt Chart with Collapsed Row](images/blazor-gantt-chart-with-collapse-row.png)
 
-### Define expand/collapse status of tasks
+### Define Expand/Collapse Status of Tasks
 
 In Gantt Chart, you can render some tasks in collapsed state and some tasks in expanded state by defining expand status of the task in the data source. This value was mapped to Gantt Chart component by using [GanttTaskFields.ExpandState](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTaskFields.html#Syncfusion_Blazor_Gantt_GanttTaskFields_ExpandState) property. The following code example shows how to use this property.
 
@@ -680,8 +680,6 @@ You can use [GanttEvents](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
 
 ![Changing Row Style in Blazor Gantt Chart](images/blazor-gantt-chart-row-style.png)
 
-N> You can refer to our [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Gantt Chart example](https://blazor.syncfusion.com/demos/gantt-chart/default-functionalities?theme=bootstrap4) to know how to render and configure the Gantt.
-=======
 ## Accessing row task model information programmatically
 
 The Blazor Gantt Chart Component provides a method called [GetRowTaskModel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_GetRowTaskModel__0_) that can be used to obtain the values associated with task model details. These details include the level, expanded status, task width, task left, task progress width and more. 
@@ -770,3 +768,5 @@ This is demonstrated in the below sample code, where the [GetRowTaskModel](https
 }
 ```
 ![Row Task Model Properties](images/blazor-gantt-chart-GetRowTaskModel.png)
+
+N> You can refer to our [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Gantt Chart example](https://blazor.syncfusion.com/demos/gantt-chart/default-functionalities?theme=bootstrap4) to know how to render and configure the Gantt.
