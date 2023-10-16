@@ -126,21 +126,30 @@ Add the Syncfusion Blazor Splitter component in the **~/Pages/Index.razor** file
     <SplitterPanes>
         <SplitterPane>
             <ContentTemplate>
-                <div> Left Pane </div>
+                <div class="centered-content"> Left Pane </div>
             </ContentTemplate>
         </SplitterPane>
         <SplitterPane>
             <ContentTemplate>
-                <div> Middle Pane </div>
+                <div class="centered-content"> Middle Pane </div>
             </ContentTemplate>
         </SplitterPane>
         <SplitterPane>
             <ContentTemplate>
-                <div> Right Pane </div>
+                <div class="centered-content"> Right Pane </div>
             </ContentTemplate>
         </SplitterPane>
     </SplitterPanes>
 </SfSplitter>
+
+<style>
+    .centered-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+    }
+</style>
 
 {% endhighlight %}
 {% endtabs %}

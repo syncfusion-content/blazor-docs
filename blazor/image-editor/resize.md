@@ -25,26 +25,32 @@ Here is an example of resizing the image using the [`ImageResizeAsync`](https://
 
 ```cshtml
 @using Syncfusion.Blazor.ImageEditor
+@using Syncfusion.Blazor.Buttons
+
+<div style="padding-bottom: 15px">
+    <SfButton OnClick="AspectClick">Aspect Ratio</SfButton>
+    <SfButton OnClick="NonAspectClick">Non Aspect Ratio</SfButton>
+</div>
 
 <SfImageEditor @ref="ImageEditor" Toolbar="customToolbarItem" Height="400">
-    <ImageEditorEvents Created="OpenAsync"></ImageEditorEvents>
+    <ImageEditorEvents Created="CreatedAsync"></ImageEditorEvents>
 </SfImageEditor>
 
 @code {
     SfImageEditor ImageEditor;
     private List<ImageEditorToolbarItemModel> customToolbarItem = new List<ImageEditorToolbarItemModel>() {};
 
-    private async void OpenAsync()
+    private async void CreatedAsync()
     {
         await ImageEditor.OpenAsync("nature.png");
     }
 
-    private async void aspectClick()
+    private async void AspectClick()
     {
         await ImageEditor.ImageResizeAsync(300, 342, true);
     }
 
-    private async void nonaspectClick()
+    private async void NonAspectClick()
     {
         await ImageEditor.ImageResizeAsync(400, 100, true);
     }
