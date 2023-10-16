@@ -13,7 +13,7 @@ Starting with v18.4.0.30 (Volume 4, 2020), the Syncfusion Blazor UI components a
 
 W> Do not use both `Syncfusion.Blazor` and individual NuGet packages in the same application. It will throw ambiguous errors while compiling the project.
 
-### Syncfusion.Blazor.Core
+## Syncfusion.Blazor.Core
 
 This package contains the base component, common classes, common functionalities, and interfaces for the entire Syncfusion Blazor UI components.
 
@@ -330,7 +330,7 @@ The Blazor Chart is a well-crafted charting component to visualize data. It cont
 </tr>
 </table>
 
-### Syncfusion.Blazor.CircularGauge
+## Syncfusion.Blazor.CircularGauge
 
 The Blazor Circular Gauge is used for visualizing numeric values on a circular scale with features like multiple axes, rounded corners, and more. The appearance of the gauge can be completely customized to simulate a speedometer, meter gauge, analog clock, etc.
 
@@ -1420,7 +1420,7 @@ A package of Blazor popup components Dialog and Tooltip are used to display info
 </tr>
 </table>
 
-### Syncfusion.Blazor.ProgressBar
+## Syncfusion.Blazor.ProgressBar
 
 The Progress Bar control can be used to visualize the changing status of an extended operation such as a download, file transfer, or installation. All the progress bar elements are rendered using scalable vector graphics (SVG) to ensure the quality of the visual experience.
 
@@ -1639,7 +1639,7 @@ The Blazor Scheduler component is an event calendar that facilitates users with 
 </tr>
 </table>
 
-### Syncfusion.Blazor.SmithChart
+## Syncfusion.Blazor.SmithChart
 
 The Blazor Smith Chart is a control for showing the parameters of transmission lines in high-frequency circuit applications. Its rich feature set includes features like legends, markers, tooltips, and data labels.
 
