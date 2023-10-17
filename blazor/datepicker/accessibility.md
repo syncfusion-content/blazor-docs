@@ -13,7 +13,7 @@ The web accessibility defines a way to make web content and web applications mor
 
 The DatePicker provides built-in compliance with the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/) specifications. WAI-ARIA supports can be achieved through the attributes like `aria-expanded`, `aria-disabled`, and `aria-activedescendant` applied to the input element.
 
-To learn more about the accessibility of Calendar, refer to the Calendar's [Accessibility](../calendar/accessibility/) section.
+To learn more about the accessibility of Calendar, refer to the Calendar's [Accessibility](../calendar/accessibility) section.
 
 It provides information about the widget for assistive technology to the disabled person in screen reader.
 
