@@ -25,15 +25,15 @@ As a backward compatibility to create older format SFDT files, refer the followi
 <tr>
 <td>Client-side</td>
 <td>
-
-```csharp
+{% tabs %}
+{% highlight C# tabtitle="Index.razor" %}
 <SfDocumentEditorContainer @ref="container" Height="590px"></SfDocumentEditorContainer>
-```
-
+{% endhighlight %}
+{% endtabs %}
 </td>
 <td>
-
-```csharp
+{% tabs %}
+{% highlight C# tabtitle="Index.razor" %}
 <SfDocumentEditorContainer @ref="container" Height="590px" DocumentEditorSettings="settings">
 </SfDocumentEditorContainer>
 
@@ -41,27 +41,28 @@ As a backward compatibility to create older format SFDT files, refer the followi
     SfDocumentEditorContainer container;
     DocumentEditorSettingsModel settings = new DocumentEditorSettingsModel() { OptimizeSfdt = false };
 }
-```
+{% endhighlight %}
+{% endtabs %}
 </td>
 </tr>
 <tr>
 <td>Server-side C#</td>
 <td>
-
-```csharp
+{% tabs %}
+{% highlight C# tabtitle="C#" %}
 WordDocument sfdtDocument = WordDocument.Load(stream, formatType);
 string sfdt = JsonSerializer.Serialize(sfdtDocument);
-```
-
+{% endhighlight %}
+{% endtabs %}
 </td>
 <td>
-
-```csharp
+{% tabs %}
+{% highlight C# tabtitle="C#" %}
 WordDocument sfdtDocument = WordDocument.Load(stream, formatType);
 sfdtDocument.OptimizeSfdt = false;
 string sfdt = JsonSerializer.Serialize(sfdtDocument);
-```
-
+{% endhighlight %}
+{% endtabs %}
 </td>
 </tr>
 
@@ -76,8 +77,8 @@ To convert from older format SFDT from a new optimized SFDT file, refer the foll
 <tr>
 <td>Client-side</td>
 <td>
-
-```csharp
+{% tabs %}
+{% highlight C# tabtitle="Index.razor" %}
 <SfDocumentEditorContainer @ref="container" Height="590px" DocumentEditorSettings="settings">
 </SfDocumentEditorContainer>
 
@@ -85,22 +86,23 @@ To convert from older format SFDT from a new optimized SFDT file, refer the foll
     SfDocumentEditorContainer container;
     DocumentEditorSettingsModel settings = new DocumentEditorSettingsModel() { OptimizeSfdt = false };
 }
-```
-
+{% endhighlight %}
+{% endtabs %}
 </td>
 </tr>
 <tr>
 <td>Server-side C#</td>
 <td>
 
-```csharp
+{% tabs %}
+{% highlight C# tabtitle="C#" %}
 using(Syncfusion.DocIO.DLS.WordDocument docIODocument = WordDocument.Save(optimizedSfdt)) {
-sfdtDocument = WordDocument.Load(docIODocument);
-sfdtDocument.OptimizeSfdt = false;
-string oldSfdt = JsonSerializer.Serialize(sfdtDocument);
+    sfdtDocument = WordDocument.Load(docIODocument);
+    sfdtDocument.OptimizeSfdt = false;
+    string oldSfdt = JsonSerializer.Serialize(sfdtDocument);
 }
-```
-
+{% endhighlight %}
+{% endtabs %}
 </td>
 </tr>
 </table>
