@@ -57,7 +57,7 @@ To bind list binding to the Scheduler, you can simply assign a list of datasourc
 
 N> By default, `DataManager` uses `BlazorAdaptor` for binding local data.
 
-You can also bind different field names to the default event fields as well as include additional custom fields to the event object collection which can be referred [here](./appointments/#event-fields).
+You can also bind different field names to the default event fields as well as include additional custom fields to the event object collection which can be referred [here](./appointments#event-fields).
 
 ### ExpandoObject binding
 
@@ -1068,7 +1068,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## SQL Server data binding(SQL Client)
 
-The following examples demonstrate how to consume data from SQL Server using Microsoft SqlClient and bound it to Blazor Scheduler. You can achieve this requirement by using [Custom Adaptor](./custom-binding/#custom-adaptor-as-component).
+The following examples demonstrate how to consume data from SQL Server using Microsoft SqlClient and bound it to Blazor Scheduler. You can achieve this requirement by using [Custom Adaptor](./custom-binding#custom-adaptor-as-component).
 
 Before the implementation, add required NuGet like **Microsoft.Data.SqlClient** and **Syncfusion.Blazor** in your application. In the following sample, Custom Adaptor can be created as a Component. In custom adaptor **Read** method, you can get filter appointments using **DataManagerRequest**.
 

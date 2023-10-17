@@ -540,7 +540,7 @@ Refer to [Constraints](https://blazor.syncfusion.com/documentation/diagram/const
 
 ## See also
 
-* [How to add or remove annotation constraints](../constraints/#annotation-constraints)
+* [How to add or remove annotation constraints](../constraints#annotation-constraints)
 
 * [How to add annotation for Node](./node-annotation)
 
