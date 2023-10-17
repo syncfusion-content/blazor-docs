@@ -51,7 +51,6 @@ Here's an example of how to add **Blazor Kanban** component in the app, open the
 {% highlight C# tabtitle="Package Manager" %}
 
 Install-Package Syncfusion.Blazor.Kanban -Version {{ site.releaseversion }}
-
 Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
 
 {% endhighlight %}
@@ -97,7 +96,7 @@ var app = builder.Build();
 
 ## Add stylesheet and script resources
 
-The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Reference the stylesheet and script in the `<head>` of the main page as follows: 
+The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Reference the stylesheet and script in the `<head>` of the main page as follows:
 
 * For **.NET 6** Microsoft teams app, include it in the **~/Pages/_Host.cshtml** file.
 
@@ -122,7 +121,7 @@ Now, add the Syncfusion Blazor Kanban component in the `Tab.razor` page under th
 
 <div class="col-lg-12 control-section">
     <div class="content-wrapper" id="toast-kanban-observable">
-        <div class="row"> 
+        <div class="row">
             <SfKanban KeyField="Status" DataSource="@ObservableData">
                 <KanbanColumns>
                     @foreach (ColumnModel item in columnData)
@@ -147,7 +146,7 @@ Now, add the Syncfusion Blazor Kanban component in the `Tab.razor` page under th
         new ColumnModel(){ HeaderText= "Testing", KeyField= new List<string>() { "Testing" } },
         new ColumnModel(){ HeaderText= "Done", KeyField=new List<string>() { "Close" } }
     };
-    
+
     protected override void OnInitialized()
     {
         Tasks = Enumerable.Range(1, 20).Select(x => new ObservableDatas()
@@ -159,7 +158,7 @@ Now, add the Syncfusion Blazor Kanban component in the `Tab.razor` page under th
             }).ToList();
         ObservableData = new ObservableCollection<ObservableDatas>(Tasks);
     }
-    
+
     public class ObservableDatas : INotifyPropertyChanged
     {
         public string Id { get; set; }
@@ -188,7 +187,7 @@ Now, add the Syncfusion Blazor Kanban component in the `Tab.razor` page under th
 }
 
 {% endhighlight %}
-{% endtabs %} 
+{% endtabs %}
 
 ![Microsoft Teams Application with Syncfusion Blazor controls](images\MSTeams\output-msteams-syncfusion.png)
 
