@@ -865,6 +865,106 @@ In this example, TreeView's `NavigateUrl` is mapped to move one page to another 
 
 ![Navigation within Sidebar](./images/blazor-treeview-navigation-within-sidebar.png)
 
+## Tooltip in Blazor TreeView Component
+
+Implemented the functionality to display a Syncfusion Tooltip when hovering over nodes in the Blazor TreeView component. This was achieved by utilizing the Tooltip component's [OnRender](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfTooltip.html#Syncfusion_Blazor_Popups_SfTooltip_OnRender) event and performing a JavaScript interop call to dynamically update the [Content](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfTooltip.html#Syncfusion_Blazor_Popups_SfTooltip_Content) based on the node being hovered over.
+
+```cshtml
+
+@using Syncfusion.Blazor.Navigations
+@using Syncfusion.Blazor.Popups
+@inject IJSRuntime JSRuntime
+
+<div class="control_wrapper">
+    <SfTooltip Target=".e-text-content" Content="@content" OnRender="OnRender">
+        <SfTreeView TValue="MailItem" ShowCheckBox="true">
+            <TreeViewFieldsSettings  TValue="MailItem" Id="Id" DataSource="@MyFolder" Text="FolderName" ParentID="ParentId" HasChildren="HasSubFolders" Expanded="Expanded"></TreeViewFieldsSettings>
+        </SfTreeView>
+    </SfTooltip>
+</div>
+@code {
+    public string content = "...Loading";
+    public async Task OnRender(TooltipEventArgs args)
+    {
+        string returnValue = await JSRuntime.InvokeAsync<string>("content", args);
+        content = returnValue;
+    }
+    public class MailItem
+    {
+        public string Id { get; set; }
+        public string ParentId { get; set; }
+        public string FolderName { get; set; }
+        public bool Expanded { get; set; }
+        public bool HasSubFolders { get; set; }
+    }
+    List<MailItem> MyFolder = new List<MailItem>();
+    protected override void OnInitialized()
+    {
+        base.OnInitialized();
+        MyFolder.Add(new MailItem
+            {
+                Id = "1",
+                FolderName = "Inbox",
+                HasSubFolders = true,
+                Expanded = true
+            });
+        MyFolder.Add(new MailItem
+            {
+                Id = "2",
+                ParentId = "1",
+                FolderName = "Categories",
+                Expanded = true,
+                HasSubFolders = true
+            });
+        MyFolder.Add(new MailItem
+            {
+                Id = "3",
+                ParentId = "2",
+                FolderName = "Primary"
+            });
+        MyFolder.Add(new MailItem
+            {
+                Id = "4",
+                ParentId = "2",
+                FolderName = "Social"
+            });
+        MyFolder.Add(new MailItem
+            {
+                Id = "5",
+                ParentId = "2",
+                FolderName = "Promotions"
+            });
+    }
+
+}
+
+<style>
+    /* Sample specific styles */
+
+    .e-treeview.e-fullrow-wrap .e-text-content {
+        pointer-events: auto;
+    }
+
+    .control_wrapper {
+        max-width: 500px;
+        margin: auto;
+        border: 1px solid #dddddd;
+        border-radius: 3px;
+        max-height: 470px;
+        overflow: auto;
+    }
+</style>
+
+<script>
+    function content(args) {
+        var cellElement = document.elementFromPoint(args.left, args.top);
+        var content= cellElement.innerText;
+        return (content)
+    }
+</script>
+
+```
+
 ## Blazor Error Boundary
 
 The Blazor Error Boundary component is a tool for handling and recovering from runtime errors in Blazor applications, similar to the try-catch concept in traditional programming. The Error Boundary component envelops a piece of the Blazor component tree, capturing any exceptions that occur within that tree. When an error is detected, the Error Boundary component can opt to display a substitute user interface instead of the problematic component tree, maintaining the application's stability and avoiding the display of a "white screen of death".
