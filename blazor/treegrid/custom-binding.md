@@ -9,7 +9,7 @@ documentation: ug
 
 # Custom Binding in Blazor TreeGrid Component
 
-The [SfDataManager](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Data.SfDataManager.html) has custom adaptor support which allows to perform manual operations on the data. This can be utilized for implementing custom data binding and editing operations in the Tree Grid component.
+The [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) has custom adaptor support which allows to perform manual operations on the data. This can be utilized for implementing custom data binding and editing operations in the Tree Grid component.
 
 N> Only [Self-Referential type data](https://blazor.syncfusion.com/documentation/treegrid/data-binding#self-referential-data-bindingflat-data) is supported with custom binding in tree grid
 

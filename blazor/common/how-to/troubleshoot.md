@@ -50,7 +50,7 @@ documentation: ug
 
     Update your dotnet SDK/hosting bundle with the latest version in your production/hosting server machine.
 
-    Install the latest dotnet SDK/hosting bundle from [here](https://dotnet.microsoft.com/download/dotnet-core/) in your hosting machine to resolve this.
+    Install the latest dotnet SDK/hosting bundle from [here](https://dotnet.microsoft.com/en-us/download/dotnet) in your hosting machine to resolve this.
 
 * **The type name 'Shared' does not exist in the type 'SyncfusionBlazor'**
 
@@ -75,11 +75,11 @@ documentation: ug
 
     **Cause:**
 
-    You may have .NET Core SDK older than version 3.1.2, but Syncfusion Blazor components need the latest version of .NET Core SDK as stated in the [pre-requisite](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio-2019/?#prerequisites) documentation.
+    You may have .NET Core SDK older than version 3.1.2, but Syncfusion Blazor components need the latest version of .NET Core SDK as stated in the [pre-requisite](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio#prerequisites) documentation.
 
     **Solution:**
 
-    Check installed .NET Core SDK version and update to the latest version. You can also find/download the details of the latest .NET Core SDK version [here](https://dotnet.microsoft.com/download/dotnet-core/).
+    Check installed .NET Core SDK version and update to the latest version. You can also find/download the details of the latest .NET Core SDK version [here](https://dotnet.microsoft.com/en-us/download/dotnet).
 
 ## Compile-time errors
 
@@ -92,12 +92,12 @@ documentation: ug
     **Cause:**
 
     1. You may used `SfPdfViewer` or `SfDocumentEditor` components along with other Syncfusion Blazor components in your application.
-    2. You may installed both [Syncfusion.Blazor](https://www.nuget.org/packages/Syncfusion.Blazor/) and [individual NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages/) in the same application.
+    2. You may installed both [Syncfusion.Blazor](https://www.nuget.org/packages/Syncfusion.Blazor/) and [individual NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) in the same application.
 
     **Solution**
 
     1. Starts with Volume 4, 2020 (v18.4.0.30) release, The `SfPdfViewer` and `SfDocumentEditor` components changed its dependency structure.
-    2. We suggest you to use the [individual NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages/) to resolve this issue.
+    2. We suggest you to use the [individual NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) to resolve this issue.
 
 * **The type or namespace name 'EJ2' does not exist in the namespace 'Syncfusion' (are you missing an assembly reference?)**
 
@@ -141,7 +141,7 @@ documentation: ug
 
     **Solution**
 
-    The Syncfusion Blazor library provides [individual NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages/) from the 18.4.0.30 version. If you are using `individual NuGet Package` in your application, you have to modify the below static web assets (styles) reference from `Syncfusion.Blazor` to `Syncfusion.Blazor.Themes` in the application to resolve this issue.
+    The Syncfusion Blazor library provides [individual NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) from the 18.4.0.30 version. If you are using `individual NuGet Package` in your application, you have to modify the below static web assets (styles) reference from `Syncfusion.Blazor` to `Syncfusion.Blazor.Themes` in the application to resolve this issue.
 
     ```html
         <head>
@@ -210,4 +210,4 @@ documentation: ug
 ## See also
 
 * [How to solve AOT publish failure when using Syncfusion.Blazor](https://www.syncfusion.com/forums/169884/aot-publish-fails-for-syncfusion-blazor-dll)
-* [Syncfusion components doesn't render in Blazor WebAssembly application](https://www.syncfusion.com/kb/13439/syncfusion-components-doesnt-render-in-blazor-webassembly-application)
+* [Syncfusion components doesn't render in Blazor WebAssembly application](https://support.syncfusion.com/kb/article/12054/syncfusion-components-doesnt-render-in-blazor-webassembly-application?isInternalRefresh=False#problem)
