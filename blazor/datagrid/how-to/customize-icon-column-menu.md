@@ -57,7 +57,7 @@ This is demonstrated in the following sample code,
 
 <style>
     .e-grid .e-columnheader .e-icons.e-columnmenu::before {
-        .content: "\e84f";
+        content: "\e84f";
     }
 </style>
 ```
