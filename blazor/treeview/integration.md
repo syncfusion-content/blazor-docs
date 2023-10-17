@@ -877,7 +877,7 @@ Implemented the functionality to display a Syncfusion Tooltip when hovering over
 
 <div class="control_wrapper">
     <SfTooltip Target=".e-text-content" Content="@content" OnRender="OnRender">
-        <SfTreeView @ref="tree" ID="tree" TValue="MailItem" AllowDragAndDrop="true" ShowCheckBox="true">
+        <SfTreeView TValue="MailItem" ShowCheckBox="true">
             <TreeViewFieldsSettings  TValue="MailItem" Id="Id" DataSource="@MyFolder" Text="FolderName" ParentID="ParentId" HasChildren="HasSubFolders" Expanded="Expanded"></TreeViewFieldsSettings>
         </SfTreeView>
     </SfTooltip>
@@ -886,10 +886,9 @@ Implemented the functionality to display a Syncfusion Tooltip when hovering over
     public string content = "...Loading";
     public async Task OnRender(TooltipEventArgs args)
     {
-        string returnValue = await JSRuntime.InvokeAsync<string>("content", new object[] { "tree", args });
+        string returnValue = await JSRuntime.InvokeAsync<string>("content", args);
         content = returnValue;
     }
-    SfTreeView<MailItem>? tree;
     public class MailItem
     {
         public string Id { get; set; }
@@ -940,6 +939,8 @@ Implemented the functionality to display a Syncfusion Tooltip when hovering over
 }
 
 <style>
+    /* Sample specific styles */
+
     .e-treeview.e-fullrow-wrap .e-text-content {
         pointer-events: auto;
     }
@@ -955,10 +956,9 @@ Implemented the functionality to display a Syncfusion Tooltip when hovering over
 </style>
 
 <script>
-    function content(ID, args) {
-        var element = document.getElementById(ID);
+    function content(args) {
         var cellElement = document.elementFromPoint(args.left, args.top);
-        var content=cellElement.innerText;
+        var content= cellElement.innerText;
         return (content)
     }
 </script>
