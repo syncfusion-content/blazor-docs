@@ -298,13 +298,13 @@ The following code example shows how to drag and drop a row on button click acti
 }
 ```
 
-## Dynamically hide drag and drop icons
+## Dynamically hide row drag and drop icons
 
-By default, Gantt Chart renders all records with a drag and drop icon. This can be dynamically modified to hide the drag and drop icon based on specific conditions using the [`RowDataBound`](https://blazor.syncfusion.com/documentation/gantt-chart/events#rowdatabound) event.
+By default, Gantt Chart renders all records with a row drag and drop icon. This can be dynamically modified to hide the row drag and drop icon based on specific conditions using the [`RowDataBound`](https://blazor.syncfusion.com/documentation/gantt-chart/events#rowdatabound) event.
 
 **Step 1**:
 
-You can dynamically hide the drag and drop icon based on specific conditions using `RowDataBound` event handling. Here's how you can achieve this:
+You can dynamically hide the row drag and drop icon based on specific conditions using `RowDataBound` event handling. Here's how you can achieve this:
 
 ```csharp
 
@@ -320,7 +320,7 @@ private async void RowDataBoundHandler(Syncfusion.Blazor.Grids.RowDataBoundEvent
 
 **Step 2**:
 
-To visually hide the rowdragdrop icon, you can apply CSS styles:
+To visually hide the row and drag and drop icon, you can apply CSS styles:
 
 ```html
 
@@ -335,7 +335,7 @@ To visually hide the rowdragdrop icon, you can apply CSS styles:
 
 ```
 
-The following code snippet dynamically hide drag and drop icons in a Gantt Chart control.
+The following code snippet dynamically hide row drag and drop icons in a Gantt Chart control.
 
 ```cshtml
 @using Syncfusion.Blazor.Gantt
