@@ -43,7 +43,7 @@ The instructions below guide you the process of using the Syncfusion Blazor code
 
 The Syncfusion Blazor snippet simply inserts the code into the razor file. You must configure the Blazor application with Syncfusion by installing the Syncfusion Blazor NuGet package, namespace, themes, and registering the Syncfusion Blazor Service. To configure, follow the steps below:
 
-1. Open the Blazor application file and manually add the required Syncfusion Blazor individual NuGet package(s) for the Syncfusion Blazor components as a package reference. Refer to [this section](https://blazor.syncfusion.com/documentation/nuget-packages/#benefits-of-using-individual-nuget-packages) to learn about the advantages of the individual NuGet packages. This NuGet package will be automatically restored when building the application.
+1. Open the Blazor application file and manually add the required Syncfusion Blazor individual NuGet package(s) for the Syncfusion Blazor components as a package reference. Refer to [this section](https://blazor.syncfusion.com/documentation/nuget-packages#benefits-of-using-individual-nuget-packages) to learn about the advantages of the individual NuGet packages. This NuGet package will be automatically restored when building the application.
 
     ![NuGet Package](images/NuGet-Snippet.png)
 
