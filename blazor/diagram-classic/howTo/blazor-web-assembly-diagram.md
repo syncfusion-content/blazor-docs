@@ -9,15 +9,44 @@ documentation: ug
 
 # Blazor WebAssembly Diagram in Blazor Diagram Component
 
-This article provides a step-by-step instructions to configure Syncfusion Blazor Diagram in a simple Blazor WebAssembly application using [Visual Studio 2022](https://visualstudio.microsoft.com/vs/).
+This article provides a step-by-step instructions to configure Syncfusion Blazor Diagram in a simple Blazor WebAssembly application using [Visual Studio 2019](https://visualstudio.microsoft.com/vs/).
+
+**Note**: Starting with version 17.4.0.39 (2019 Volume 4), you need to include a valid license key (either paid or trial key) within your applications. Refer to this help topic for more information.
 
 ## Prerequisites
 
-* [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
+* [Visual Studio 2019](https://visualstudio.microsoft.com/vs/)
+* [.NET Core SDK 3.1.3](https://dotnet.microsoft.com/download/dotnet-core/3.1)
 
-## Create a new Blazor WebAssembly App in Visual Studio
+**Note**: .NET Core SDK 3.1.3 requires Visual Studio 2019 16.6 or later.
 
-You can create a **Blazor WebAssembly App** using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0) or the [Syncfusion Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
+Syncfusion Blazor components are compatible with .NET Core 5.0 Preview 6 and it requires Visual Studio 16.7 Preview 1 or later.
+
+## Create a Blazor WebAssembly project in Visual Studio 2019
+
+1. Install the essential project templates in the Visual Studio 2019 by running the below command line in the command prompt.
+
+    ```bash
+    dotnet new -i Microsoft.AspNetCore.Components.WebAssembly.Templates::3.2.0-rc1.20223.4
+    ```
+
+2. Choose **Create a new project** from the Visual Studio dashboard.
+
+   ![new project in aspnetcore blazor](../images/new-project.png)
+
+3. Select **Blazor App** from the template and click **Next** button.
+
+   ![blazor template](../images/blazor-template.png)
+
+4. Now, the project configuration window will popup. Click **Create** button to create a new project with the default project configuration.
+
+   ![asp.net core project configuration](../images/project-configuration.png)
+
+5. Choose **Blazor WebAssembly App** from the dashboard and click **Create** button to create a new Blazor WebAssembly application. Make sure **.NET Core** and **ASP.NET Core 3.1** is selected at the top.
+
+   ![wasm template](../images/blazor-client-template.png)
+
+**Note**: ASP.NET Core 3.1 is available in Visual Studio 2019 version.
 
 ## Importing Syncfusion Blazor component in the application
 
