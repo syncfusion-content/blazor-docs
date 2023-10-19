@@ -89,7 +89,7 @@ This section explains how to enable prerendering to a Blazor WebAssembly applica
 
 8. If you don't inject and use `HttpClient` DI on your index page, you can run the application and the component will render in the web browser with prerendering mode.
 
-    The created [Blazor WebAssembly ASP.NET Core Hosted application](../../visual-studio-2019/#create-a-new-project-for-blazor-webassembly-aspnet-core-hosted-application) has injected the `HttpClient` DI and fetch the data from server for SfGrid component data source. So, refer to the next topic to resolve the `HttpClient` error on prerendering mode.
+    The created [Blazor WebAssembly ASP.NET Core Hosted application](../introduction#create-a-new-project-for-blazor-webassembly-aspnet-core-hosted-application) has injected the `HttpClient` DI and fetch the data from server for SfGrid component data source. So, refer to the next topic to resolve the `HttpClient` error on prerendering mode.
 
 ### Resolving HttpClient errors on WebAssembly prerendering
 
@@ -251,3 +251,5 @@ Refer to the below steps to resolve these issues and make the app running with H
 
 * [Prerender on ASP.NET Core Razor Component](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/prerendering-and-integration?view=aspnetcore-7.0&pivots=webassembly)
 * [Stateful Reconnection After Prerendering](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/lifecycle?view=aspnetcore-7.0#stateful-reconnection-after-prerendering)
+
+

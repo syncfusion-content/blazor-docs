@@ -44,6 +44,7 @@ Open **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusio
 @using Syncfusion.Blazor.Calendars
 
 ```
+
 Now, register the Syncfusion Blazor Service in the **~/Program.cs** file of your Blazor Server App.
 
 {% tabs %}
@@ -98,5 +99,3 @@ Add the Syncfusion Blazor Calendar component in the **~/Pages/Index.razor** file
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion Blazor Calendar component in your default web browser.
 
 ![Blazor Calendar Component](images/core-hosted/browser-output.png)
-
-N> You need to include a valid license key (either paid or trial key) within your applications. Refer to this [help topic](https://blazor.syncfusion.com/documentation/getting-started/license-key/overview) for more information.
