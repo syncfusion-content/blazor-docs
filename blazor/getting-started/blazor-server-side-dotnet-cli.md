@@ -36,13 +36,13 @@ cd BlazorApp
 {% endhighlight %}
 {% endtabs %}
 
-This command creates new Blazor app project and places it in a new directory called `BlazorApp` inside your current location. See [Create Blazor app topic](https://dotnet.microsoft.com/en-us/learn/aspnet/blazor-tutorial/create) and [dotnet new CLI command](https://learn.microsoft.com/en-us/dotnet/core/tools/dotnet-new) topics for more details and [Benefits of using individual NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages#benefits-of-using-individual-nuget-packages).
+This command creates new Blazor app project and places it in a new directory called `BlazorApp` inside your current location. See [Create Blazor app topic](https://dotnet.microsoft.com/en-us/learn/aspnet/blazor-tutorial/create) and [dotnet new CLI command](https://learn.microsoft.com/en-us/dotnet/core/tools/dotnet-new) topics for more details.
 
 N> If you have installed multiple SDK versions and need any specific framework version (net6.0/net7.0) project, then add `-f` flag along with `dotnet new blazorserver` comment. Refer [here](https://learn.microsoft.com/en-us/dotnet/core/tools/dotnet-new) for the available options.
 
-## Install Syncfusion Blazor Calendars and Theme NuGet in the App
+## Install Syncfusion Blazor Calendars and Themes NuGet in the App
 
-Here's an example of how to add `Calendars` Component in the application using the following command in the command prompt (Windows) or terminal (Linux and macOS) to install a [Syncfusion.Blazor.Calendars](https://www.nuget.org/packages/Syncfusion.Blazor.Calendars/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet package. See [Install and manage packages using the dotnet CLI](https://learn.microsoft.com/en-us/nuget/consume-packages/install-use-packages-dotnet-cli) topics for more details. Alternatively, you can utilize the following package manager command to achieve the same. 
+Here's an example of how to add **Blazor Calendar** component in the application using the following command in the command prompt (Windows) or terminal (Linux and macOS) to install a [Syncfusion.Blazor.Calendars](https://www.nuget.org/packages/Syncfusion.Blazor.Calendars/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet package. See [Install and manage packages using the dotnet CLI](https://learn.microsoft.com/en-us/nuget/consume-packages/install-use-packages-dotnet-cli) topics for more details.
 
 {% tabs %}
 {% highlight c# tabtitle=".NET CLI" %}
@@ -50,13 +50,6 @@ Here's an example of how to add `Calendars` Component in the application using t
 dotnet add package Syncfusion.Blazor.Calendars --version {{ site.releaseversion }}
 dotnet add package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
 dotnet restore
-
-{% endhighlight %}
-{% highlight C# tabtitle="Package Manager" %}
-
-Install-Package Syncfusion.Blazor.Calendars -Version {{ site.releaseversion }}
-
-Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
 
 {% endhighlight %}
 {% endtabs %}
@@ -67,14 +60,12 @@ N> Syncfusion Blazor components are available in [nuget.org](https://www.nuget.o
 
 Open **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Calendars` namespace.
 
-{% tabs %}
-{% highlight razor tabtitle="~/_Imports.razor" %}
+```cshtml
 
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Calendars
 
-{% endhighlight %}
-{% endtabs %}
+```
 
 Now, register the Syncfusion Blazor Service in the **~/Program.cs** file of your Blazor Server App. 
 
@@ -91,7 +82,6 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
 builder.Services.AddSyncfusionBlazor();
-
 var app = builder.Build();
 ....
 
@@ -138,8 +128,6 @@ dotnet run
 {% endtabs %}
 
 ![Blazor Calendar Component](images/core-hosted/browser-output.png)
-
-N> You need to include a valid license key (either paid or trial key) within your applications. Refer to this [help topic](https://blazor.syncfusion.com/documentation/getting-started/license-key/overview) for more information.
 
 ## See Also
 
