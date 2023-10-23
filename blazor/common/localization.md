@@ -23,7 +23,7 @@ Syncfusion components can be localized using the Resource `.resx` files. You can
 
 N> You can get default and culture based resource files from [GitHub](https://github.com/syncfusion/blazor-locale).
 
-Copy default resx file (`SfResources.resx`) and the other required resx files based on the culture to be localized and add it into **Resources** folder. 
+Copy default resx file (`SfResources.resx`) and the other required resx files based on the culture to be localized and add it into **Resources** folder.
 
 ![Adding Resource Files in Blazor](images/localization-resource.png)
 
@@ -37,7 +37,7 @@ After adding the resource file in the application, double click default resx (`S
 
 [ISyncfusionStringLocalizer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ISyncfusionStringLocalizer.html) which acts as a middleware to connect the Syncfusion Blazor UI components and resource files, uses [ResourceManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ISyncfusionStringLocalizer.html#Syncfusion_Blazor_ISyncfusionStringLocalizer_ResourceManager) to provide culture specific resources at runtime. Create a class implementing `ISyncfusionStringLocalizer`. In the newly created class, return the `ResourceManager` created in the above step for [ResourceManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ISyncfusionStringLocalizer.html#Syncfusion_Blazor_ISyncfusionStringLocalizer_ResourceManager) property and change [GetText](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ISyncfusionStringLocalizer.html#Syncfusion_Blazor_ISyncfusionStringLocalizer_GetText_System_String_) method to return localized string using resource manager.
 
-In the following code, `SyncfusionLocalizer` class implements `ISyncfusionStringLocalizer` interface and `ResourceManager` configured to return the cached ResourceManager instance of default resource file created in **Adding culture based resx files** step. 
+In the following code, `SyncfusionLocalizer` class implements `ISyncfusionStringLocalizer` interface and `ResourceManager` configured to return the cached ResourceManager instance of default resource file created in **Adding culture based resx files** step.
 
 {% tabs %}
 
@@ -68,10 +68,7 @@ public class SyncfusionLocalizer : ISyncfusionStringLocalizer
 
 Register the `ISyncfusionStringLocalizer` implementation to localize the Syncfusion Blazor components based on resources files added in application.
 
-* For **Blazor Server App**, register the Syncfusion Blazor Service as follows,
-    * For **.NET 6 and .NET 7** app, open the **~/Program.cs** file and register the Syncfusion Blazor Service.
-    * For **.NET 5 and .NET 3.X** app, open the **~/Startup.cs** file and register the Syncfusion Blazor Service.
-* For **Blazor WebAssembly App**, register the Syncfusion Blazor Service in the client web app of **~/Program.cs** file.
+* For **Blazor WebAssembly App** or **Blazor Server App**, register the Syncfusion Blazor Service in the client web app of **~/Program.cs** file.
 
 {% tabs %}
 
@@ -89,12 +86,11 @@ builder.Services.AddSingleton(typeof(ISyncfusionStringLocalizer), typeof(Syncfus
 
 ## Statically set the culture
 
-If you don't want to change culture dynamically, you can set it statically by following the procedures below. 
+If you don't want to change culture dynamically, you can set it statically by following the procedures below.
 
 ### Blazor Server App
 
-* For **.NET 6** app, specify the static culture in **~/Program.cs** file.
-* For **.NET 5 and .NET 3.X** app, specify the static culture in **~/Startup.cs** file.
+* For **.NET 6 & .NET 7** app, specify the static culture in **~/Program.cs** file.
 
 {% tabs %}
 
@@ -104,17 +100,6 @@ If you don't want to change culture dynamically, you can set it statically by fo
 var app = builder.Build();
 app.UseRequestLocalization("de");
 ...
-
-{% endhighlight %}
-
-{% highlight c# tabtitle=".NET 5 and .NET 3.X (~/Startup.cs)" hl_lines="4" %}
-
-public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
-{
-    ...
-    app.UseRequestLocalization("de");
-    ...
-}
 
 {% endhighlight %}
 
@@ -144,7 +129,7 @@ The app's culture can be set in JavaScript by setting `applicationCulture` in Bl
 
 {% endtabs %}
 
-* Add the script block below Blazor's `<script>` tag and before the closing </body> tag to start blazor with specific culture. 
+* Add the script block below Blazor's `<script>` tag and before the closing </body> tag to start blazor with specific culture.
 
 {% tabs %}
 
@@ -190,7 +175,7 @@ The culture can be set dynamically based on user's preference. The following exa
 
 ### Blazor Server App
 
-Set the app's supported cultures. Also, ensure the app is configured to process controller actions by calling `AddControllers` and `MapControllers`. 
+Set the app's supported cultures. Also, ensure the app is configured to process controller actions by calling `AddControllers` and `MapControllers`.
 
 {% tabs %}
 
@@ -219,7 +204,7 @@ app.UseRequestLocalization(localizationOptions);
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
 {
-    app.UseExceptionHandler("/Error");   
+    app.UseExceptionHandler("/Error");
     // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
     app.UseHsts();
 }
@@ -234,94 +219,18 @@ app.Run();
 
 {% endhighlight %}
 
-{% highlight c# tabtitle=".NET 5 and .NET 3.X (~/Startup.cs)" hl_lines="7 12 13" %}
-
-public class Startup
-{
-    ...
-    public void ConfigureServices(IServiceCollection services)
-    {
-        services.AddRazorPages();
-        services.AddControllers();
-        services.AddServerSideBlazor();
-        services.AddSingleton<WeatherForecastService>();
-        services.AddSyncfusionBlazor();
-        //Register the Syncfusion locale service to localize Syncfusion Blazor components.
-        services.AddSingleton(typeof(ISyncfusionStringLocalizer), typeof(SyncfusionLocalizer));
-        services.Configure<RequestLocalizationOptions>(options =>
-        {
-            // Define the list of cultures your app will support
-            var supportedCultures = new List<CultureInfo>()
-            {
-                new CultureInfo("en-US"),
-                new CultureInfo("de"),
-                new CultureInfo("fr"),
-                new CultureInfo("ar"),
-                new CultureInfo("zh"),
-            };
-            // Set the default culture
-            options.DefaultRequestCulture = new RequestCulture("en-US");
-            options.SupportedCultures = supportedCultures;
-            options.SupportedUICultures = supportedCultures;
-        });
-    }
-
-    // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-    public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
-    {
-        app.UseRequestLocalization(app.ApplicationServices.GetService<IOptions<RequestLocalizationOptions>>().Value);
-        if (env.IsDevelopment())
-        {
-            app.UseDeveloperExceptionPage();
-        }
-        else
-        {
-            app.UseExceptionHandler("/Error");
-            // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
-            app.UseHsts();
-        }
-
-        app.UseHttpsRedirection();
-        app.UseStaticFiles();
-
-        app.UseRouting();
-
-        app.UseEndpoints(endpoints =>
-        {
-            endpoints.MapControllers();
-            endpoints.MapBlazorHub();
-            endpoints.MapFallbackToPage("/_Host");
-        });
-    }
-}
-{% endhighlight %}
-
 {% endtabs %}
 
 Set the current culture in a cookie immediately after opening <body> tag of `Pages/_Host.cshtml`.
 
 {% tabs %}
+{% highlight c# tabtitle=".NET 6 & .NET 7 (_Host.cshtml)" hl_lines="6 7 8 9 10 11" %}
 
-{% highlight c# tabtitle=".NET 6 (_Host.cshtml)" hl_lines="5 6 7 8 9 10" %}
-@using Microsoft.AspNetCore.Localization
-@using System.Globalization
-@{
-    Layout = "_Layout";
-    this.HttpContext.Response.Cookies.Append(
-        CookieRequestCultureProvider.DefaultCookieName,
-        CookieRequestCultureProvider.MakeCookieValue(
-            new RequestCulture(
-                CultureInfo.CurrentCulture,
-                CultureInfo.CurrentUICulture)));
-}
-{% endhighlight %}
-
-{% highlight c# tabtitle=".NET 3.X, .NET 5 and .NET 7 (_Host.cshtml)" hl_lines="6 7 8 9 10 11" %}
 @using Microsoft.AspNetCore.Http
 @using Microsoft.AspNetCore.Localization
 @using System.Globalization
 @{
-    Layout = null;
+
     HttpContext.Response.Cookies.Append(
                 CookieRequestCultureProvider.DefaultCookieName,
                 CookieRequestCultureProvider.MakeCookieValue(
@@ -363,7 +272,7 @@ public class CultureController : Controller
 
 {% endtabs %}
 
-Create `CultureSwitcher` component and place it inside shared folder to perform the initial redirection when the user selects a culture. 
+Create `CultureSwitcher` component and place it inside shared folder to perform the initial redirection when the user selects a culture.
 
 {% tabs %}
 
@@ -490,7 +399,7 @@ In `Program.cs` use JS interop to call above function and retrieve the user's cu
 
 {% tabs %}
 
-{% highlight c# tabtitle=".NET 6 (Program.cs)" hl_lines="9 13 14 15 16 17 1819 20 21 22 23 24 25 26 27" %}
+{% highlight c# tabtitle=".NET 6 & .NET 7 (Program.cs)" hl_lines="9 13 14 15 16 17 1819 20 21 22 23 24 25 26 27" %}
 
 using Microsoft.JSInterop;
 using System.Globalization;
@@ -521,47 +430,6 @@ CultureInfo.DefaultThreadCurrentCulture = culture;
 CultureInfo.DefaultThreadCurrentUICulture = culture;
 
 await builder.Build().RunAsync();
-
-{% endhighlight %}
-
-{% highlight c# tabtitle=".NET 5 and .NET 3.X (Program.cs)" hl_lines="13 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31" %}
-
-using Microsoft.JSInterop;
-using System.Globalization;
-
-namespace SyncfusionWasmLocalization
-{
-    public class Program
-    {
-        public static async Task Main(string[] args)
-        {
-            ...
-            builder.Services.AddSyncfusionBlazor();
-            //Register the Syncfusion locale service to localize Syncfusion Blazor components.
-            builder.Services.AddSingleton(typeof(ISyncfusionStringLocalizer), typeof(SyncfusionLocalizer));
-
-            var host = builder.Build();
-
-            //Setting culture of the application
-            var jsInterop = host.Services.GetRequiredService<IJSRuntime>();
-            var result = await jsInterop.InvokeAsync<string>("cultureInfo.get");
-            CultureInfo culture;
-            if (result != null)
-            {
-                culture = new CultureInfo(result);
-            }
-            else
-            {
-                culture = new CultureInfo("en-US");
-                await jsInterop.InvokeVoidAsync("cultureInfo.set", "en-US");
-            }
-            CultureInfo.DefaultThreadCurrentCulture = culture;
-            CultureInfo.DefaultThreadCurrentUICulture = culture;
-
-            await builder.Build().RunAsync();
-        }
-    }
-}
 
 {% endhighlight %}
 
@@ -643,7 +511,7 @@ N> [View Sample in GitHub](https://github.com/SyncfusionExamples/blazor-localiza
 
 ## Localization using database in Blazor
 
-* [How to perform localization using database instead of resource files in Blazor?](https://www.syncfusion.com/kb/13012)
+* [How to perform localization using database instead of resource files in Blazor?](https://support.syncfusion.com/kb/article/11465/how-to-perform-localization-using-database-instead-of-resource-files-in-blazor)
 
 ## See also
 * [Statically set the culture in Blazor WASM App](https://learn.microsoft.com/en-us/aspnet/core/blazor/globalization-localization?pivots=webassembly&view=aspnetcore-6.0#statically-set-the-culture)
