@@ -242,7 +242,7 @@ Let us create and add a `nodes` with specific position, size, label and shape. C
 
 ![Diagram](images/Diagram.png)
 
-N> You can refer to our [Blazor Diagram](https://www.syncfusion.com/blazor-components/blazor-diagram) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Diagram example](https://blazor.syncfusion.com/demos/diagram/flowchart?theme=bootstrap4/) to understand how to present and manipulate data.
+N> You can refer to our [Blazor Diagram](https://www.syncfusion.com/blazor-components/blazor-diagram) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Diagram example](https://blazor.syncfusion.com/demos/diagramcomponent/flowchart?theme=fluent) to understand how to present and manipulate data.
 
 ## See Also
 
