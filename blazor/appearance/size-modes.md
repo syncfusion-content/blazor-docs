@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Component Size Modes in Blazor - Syncfusion
-description: Check out and learn here all about component size mode for Syncfusion Blazor Components and much more. 
+description: Check out and learn here all about component size mode for Syncfusion Blazor Components and much more.
 platform: Blazor
 component: Appearance
 documentation: ug
@@ -15,8 +15,8 @@ Syncfusion Blazor components supports touch (bigger theme) and normal size modes
 
 You can enable touch mode (bigger theme) for an application by adding `.e-bigger` class in `~/wwwroot/css/site.css` file and assign to the `body` as follows,
 * For **Blazor WebAssembly application**, assign `.e-bigger` class to `body` element of **wwwroot/index.html** file.
-* For **Blazor Server application**, assign `.e-bigger` class to `body` element of 
-    * **~/Pages/_Host.cshtml** file for .NET 3 and .NET 5.
+* For **Blazor Server application**, assign `.e-bigger` class to `body` element of
+    * **~/Pages/_Host.cshtml** file for .NET 7.
     * **~/Pages/_Layout.cshtml** for .NET 6.
 
 ```css
@@ -33,7 +33,7 @@ You can enable touch mode (bigger theme) for an application by adding `.e-bigger
 
 ## Size mode for a control
 
-You can enable touch mode (bigger theme) for a control by adding `.e-bigger` class and assign to the `div` which contains the control. 
+You can enable touch mode (bigger theme) for a control by adding `.e-bigger` class and assign to the `div` which contains the control.
 
 ```cshtml
 
@@ -69,7 +69,7 @@ You can enable touch mode (bigger theme) for a control by adding `.e-bigger` cla
 
 ## Change size mode for application at runtime
 
-You can change the size mode of an application between touch and normal (mouse) mode at runtime by adding and removing `.e-bigger` using `JavaScriptInterop`. 
+You can change the size mode of an application between touch and normal (mouse) mode at runtime by adding and removing `.e-bigger` using `JavaScriptInterop`.
 
 Follow below steps to change the size mode for an application at runtime.
 
@@ -88,7 +88,7 @@ Follow below steps to change the size mode for an application at runtime.
         function onTouch() {
             document.body.classList.add('e-bigger');
         }
-        
+
         function onMouse() {
             document.body.classList.remove('e-bigger');
         }
@@ -96,32 +96,32 @@ Follow below steps to change the size mode for an application at runtime.
     ```
 
 2. To call JavaScript method from .NET, inject the `IJSRuntime` abstraction and call `InvokeAsync` method as given in the below code,
-    
+
     ```cshtml
     @page "/"
-    
+
     @using Syncfusion.Blazor.Calendars;
     @using Syncfusion.Blazor.Buttons;
     @using Syncfusion.Blazor.Popups
     @inject IJSRuntime jsRuntime;
-    
+
     <p> Size-modes for application </p>
     <p> This demo shows the Size-Modes applied for an entire application </p>
-    
+
     <button @onclick="callOnTouch">Touch Mode</button>
     <button @onclick="callOnMouse">Mouse Mode</button>
     <div>
         <SfCalendar TValue="DateTime?" Value="@DateValue"></SfCalendar>
     </div>
-    
+
     <div>
         <SfButton> Button </SfButton>
     </div>
-    
+
     <div>
         <SfCheckBox Label="checked" @bind-Checked="isChecked"></SfCheckBox>
      </div>
-    
+
     @code {
         private bool isChecked = true;
         private async void callOnTouch(MouseEventArgs args)
@@ -134,14 +134,14 @@ Follow below steps to change the size mode for an application at runtime.
         }
     }
     ```
-    
+
     ![change-size-mode-for-application-at-runtime](images/change-size-mode-for-application-at-runtime.gif)
-    
+
     N> [View sample in GitHub](https://github.com/SyncfusionExamples/size-mode-in-blazor-application)
 
 ## Change size mode for a control at runtime
 
-You can change the size mode of a control between touch and normal (mouse) mode at runtime by setting `.e-bigger` CSS class.  
+You can change the size mode of a control between touch and normal (mouse) mode at runtime by setting `.e-bigger` CSS class.
 
 Refer to the following code, in which the `e-bigger` class is added for enabling touch mode using the `check` variable.
 
@@ -155,7 +155,7 @@ Refer to the following code, in which the `e-bigger` class is added for enabling
 
 <h2>Syncfusion Component Size-Modes</h2>
 
-<button @onclick="OnTouch">Touch Mode</button> 
+<button @onclick="OnTouch">Touch Mode</button>
 <button @onclick="OnMouse">Mouse Mode</button>
 
 <div class="@touchCSS">
@@ -202,7 +202,7 @@ N> [View sample in GitHub](https://github.com/SyncfusionExamples/size-mode-in-bl
 
 ## Change font size and font-family for all components
 
-You can change the font-size and font-family for all the components by overriding the CSS for `e-control` class as follows. 
+You can change the font-size and font-family for all the components by overriding the CSS for `e-control` class as follows.
 
 ```css
 <style>
