@@ -20,16 +20,16 @@ This section briefly explains about how to include [Blazor PDF Viewer](https://w
 ## Integrate PDF Viewer into Blazor WebAssembly App
 
 1. Start Visual Studio and select **Create a new project**.
-2. For a Blazor WebAssembly experience, choose the **Blazor WebAssembly App** template and select **Next**. 
+2. For a Blazor WebAssembly experience, choose the **Blazor WebAssembly App** template and select **Next**.
 ![Create-a-new-WASM-app](GettingStarted_images/Create-new-WASM-app.png)
 3. Provide a **Project name** and confirm that the *Location* is correct. Select **Next**.
 ![Set-project-name](GettingStarted_images/Set-WASM-project-name.png)
-4. In **Additional information dialog**, set target framework.  
+4. In **Additional information dialog**, set target framework.
 ![Addition-information-WASM](GettingStarted_images/Additional_information_WASM.png)
 
 ## Install Blazor PDFViewer NuGet package in WASM App
 
-To add Blazor PDF Viewer component in Blazor WebAssembly App, use `SfPdfViewer` component in [Syncfusion.Blazor.PdfViewer](https://www.nuget.org/packages/Syncfusion.Blazor.PdfViewer) NuGet package. 
+To add Blazor PDF Viewer component in Blazor WebAssembly App, use `SfPdfViewer` component in [Syncfusion.Blazor.PdfViewer](https://www.nuget.org/packages/Syncfusion.Blazor.PdfViewer) NuGet package.
 
 N> This component requires server-side processing to render the PDF files through web service
 
@@ -128,7 +128,7 @@ Refer script in the `<head>` of the **~/index.html** file.
 {% endhighlight %}
 {% endtabs %}
 
-N> Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/documentation/common/adding-script-references) to learn different ways to add script reference in Blazor Application. 
+N> Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/documentation/common/adding-script-references) to learn different ways to add script reference in Blazor Application.
 
 N> Syncfusion recommends to reference scripts using [Static Web Assets](https://blazor.syncfusion.com/documentation/common/adding-script-references#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/common/adding-script-references#cdn-reference) and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator) by [disabling JavaScript isolation](https://blazor.syncfusion.com/documentation/common/adding-script-references#disable-javascript-isolation) for better loading performance of the Blazor application.
 
@@ -184,8 +184,8 @@ Refer,[How to create PDF Viewer Web Service](https://support.syncfusion.com/kb/a
 <SfButton OnClick="LoadAnotherDocument">Load Another Document</SfButton>
 
 <!--ServiceUrl must be the webservice output path and you have to run the webservice first to get the serviceurl. Also it should be in runnable state-->
-<SfPdfViewer DocumentPath="@DocumentPath" 
-             ServiceUrl="https://localhost:5001/pdfviewer" 
+<SfPdfViewer DocumentPath="@DocumentPath"
+             ServiceUrl="https://localhost:5001/pdfviewer"
              Height="500px" Width="1060px"></SfPdfViewer>
 
 @code
@@ -197,7 +197,7 @@ Refer,[How to create PDF Viewer Web Service](https://support.syncfusion.com/kb/a
 
     private async Task LoadAnotherDocument()
     {
-        //Sends a GET request to a specified Uri and return the response body as a byte array. 
+        //Sends a GET request to a specified Uri and return the response body as a byte array.
         byte[] byteArray = await Http.GetByteArrayAsync("Data/FormFillingDocument.pdf");
         //Converts the byte array into base64 string.
         string base64String = Convert.ToBase64String(byteArray);
