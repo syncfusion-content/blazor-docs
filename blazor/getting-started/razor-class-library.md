@@ -54,17 +54,17 @@ N> Syncfusion Blazor components are available in [nuget.org](https://www.nuget.o
 
 Now, import and add the Syncfusion Blazor components in the `~/Component.razor` file. For example, the Calendar component is imported and added in the **~/Component.razor** page.
 
-    ```html
+```html
     
-    @using Syncfusion.Blazor.Calendars
+@using Syncfusion.Blazor.Calendars
 
-    <div class="my-component">
-    This Blazor component is defined in the <strong>RazorClassLibrary</strong> package.
-    </div><br />
+<div class="my-component">
+This Blazor component is defined in the <strong>RazorClassLibrary</strong> package.
+</div><br />
 
-    <SfCalendar TValue="DateTime"></SfCalendar>
+<SfCalendar TValue="DateTime"></SfCalendar>
      
-    ```
+```
 
 ## Create a Blazor project in Visual Studio with Razor Class Library (RCL)
 
