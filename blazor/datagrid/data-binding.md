@@ -1670,7 +1670,7 @@ N> While using an Observable collection, the added, removed, and changed records
 
 In ASP.NET Core, by default the JSON results are returned in **camelCase** format. So datagrid field names are also changed in **camelCase**.
 
-To avoid this problem, you need to add [DefaultContractResolver](https://learn.microsoft.com/en-us/dotnet/api/system.runtime.serialization.datacontractresolver) in **Startup.cs** file.
+To avoid this problem, you need to add [DefaultContractResolver](https://learn.microsoft.com/en-us/dotnet/api/system.runtime.serialization.datacontractresolver?view=net-7.0) in **Startup.cs** file.
 
 ```csharp
 public void ConfigureServices(IServiceCollection services)
