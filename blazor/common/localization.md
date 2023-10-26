@@ -518,4 +518,3 @@ N> [View Sample in GitHub](https://github.com/SyncfusionExamples/blazor-localiza
 * [Statically set the culture in Blazor Server App](https://learn.microsoft.com/en-us/aspnet/core/blazor/globalization-localization?pivots=server&view=aspnetcore-6.0#statically-set-the-culture)
 * [Dynamically set the culture by user preference in WASM App](https://learn.microsoft.com/en-us/aspnet/core/blazor/globalization-localization?pivots=webassembly&view=aspnetcore-6.0#dynamically-set-the-culture-by-user-preference)
 * [Dynamically set the culture by user preference in Server App](https://learn.microsoft.com/en-us/aspnet/core/blazor/globalization-localization?pivots=server&view=aspnetcore-6.0#dynamically-set-the-culture-by-user-preference)
-
