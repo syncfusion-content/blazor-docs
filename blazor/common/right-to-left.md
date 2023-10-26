@@ -105,5 +105,3 @@ In the below code example, right to left enabled for `SfDropDownList` component 
 ```
 
 ![Blazor component is rendered from the right-to-left](images/rightToLeft.png)
-
-

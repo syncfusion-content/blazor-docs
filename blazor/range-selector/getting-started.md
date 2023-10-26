@@ -38,12 +38,16 @@ N> Syncfusion Blazor components are available in [nuget.org](https://www.nuget.o
 
 Open **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Charts` namespace.
 
-```
+{% tabs %}
+{% highlight c# tabtitle="~/_Imports.razor" %}
+
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Charts
-```
 
-Now, register the Syncfusion Blazor Service in the **~/Program.cs** file of your Blazor Server App or Blazor WebAssembly App. 
+{% endhighlight %}
+{% endtabs %}
+
+Now, register the Syncfusion Blazor Service in the **~/Program.cs** file of your Blazor Server App or Blazor WebAssembly App.
 
 {% tabs %}
 {% highlight C# tabtitle="Blazor Server App" hl_lines="3 10" %}
@@ -128,7 +132,7 @@ To bind the data for the Range Navigator component, assign a `IEnumerable` objec
         public DateTime Date { get; set; }
         public double Close { get; set; }
     }
-    
+
     public List<StockPrice> StockDetails = new List<StockPrice>
     {
         new StockPrice { Date = new DateTime(2005, 01, 01), Close = 21 },
