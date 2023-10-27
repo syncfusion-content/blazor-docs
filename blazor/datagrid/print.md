@@ -15,43 +15,92 @@ The printing feature in Syncfusion Grid allows you to easily generate and print 
 
 To add the printing option to the grid’s Toolbar, simply include the [Toolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Toolbar) property in your grid configuration and add the **Print** as Toolbar item. This will allow you to directly initiate the printing process while click on the Print item from the toolbar
 
-```cshtml
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids
+@using BlazorApp1.Data
 
-<SfGrid DataSource="@Orders" Toolbar="@(new List<object>() { "Print" })" AllowPaging="true">
-    <GridPageSettings PageSize="8"></GridPageSettings>
+<SfGrid DataSource="@Orders" Height="315">
     <GridColumns>
-        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.ShipCity) HeaderText="Ship City" TextAlign="TextAlign.Right" Width="130"></GridColumn>
-        <GridColumn Field=@nameof(Order.ShipName) HeaderText="Ship Name" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" CustomAttributes="@(new Dictionary<string, object>(){ { "class", "custom-css" }})" TextAlign="TextAlign.Right" Width="140"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer ID" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.ShipCity) HeaderText="Ship City" CustomAttributes="@(new Dictionary<string, object>(){ { "class", "custom-css" }})" Width="100"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.ShipName) HeaderText="Ship Name" Width="100"></GridColumn>
     </GridColumns>
 </SfGrid>
 
-@code {
+<style>
+    .e-grid td.e-cellselectionbackground {
+        background: #9ac5ee;
+        font-style: italic;
+    }
+</style>
 
-    public List<Order> Orders { get; set; }
+@code {
+  
+    public List<OrderData> Orders { get; set; }
 
     protected override void OnInitialized()
     {
-        Orders = Enumerable.Range(1, 75).Select(x => new Order()
-            {
-                OrderID = 10247 + x,
-                CustomerID = (new string[] { "VINET", "TOMSP", "HANAR", "SUPRD", "CHOPS" })[new Random().Next(5)],
-                ShipCity = (new string[] { "Reims", "Münster", "Rio de Janeiro", "Lyon", "Charleroi" })[new Random().Next(5)],
-                ShipName = (new string[] { "Vins et alcools Chev", "Toms Spezialitäten", "Hanari Carnes", "Victuailles en stock", "Suprêmes délices" })[new Random().Next(5)],
-            }).ToList();
-    }
+        Orders = OrderData.GetAllRecords();
+    }   
 
-    public class Order
+}
+<style>
+    .custom-css {
+        background: #d7f0f4;
+        font-style: italic;
+        color: navy
+    }
+</style>
+{% endhighlight %}
+{% highlight c# tabtitle="OrderData.cs" %}
+    public class OrderData
     {
+        public static List<OrderData> Orders = new List<OrderData>();
+        public OrderData()
+        {
+
+        }
+        public OrderData(int? OrderID,string CustomerID,string ShipCity,string ShipName)
+        {
+           this.OrderID = OrderID;
+           this.CustomerID = CustomerID;
+           this.ShipCity = ShipCity;
+           this.ShipName = ShipName;
+
+        }
+
+        public static List<OrderData> GetAllRecords()
+        {
+            if (Orders.Count() == 0)
+            {
+                int code = 10;
+                for (int i = 1; i < 2; i++)
+                {
+                    Orders.Add(new OrderData(10248, "VINET", "Reims", "Vins et alcools Cheval"));
+                    Orders.Add(new OrderData(10249, "TOMSP", "Münster", "Toms Spezialitäten"));
+                    Orders.Add(new OrderData(10250, "HANAR", "Rio de Janeiro", "Hanari Carnes"));
+                    Orders.Add(new OrderData(10251, "VICTE", "Lyon", "Victuailles en stock"));
+                    Orders.Add(new OrderData(10252, "SUPRD", "Charleroi", "Suprêmes délices"));
+                    Orders.Add(new OrderData(10253, "HANAR", "Rio de Janeiro", "Hanari Carnes"));
+                    Orders.Add(new OrderData(10254, "CHOPS", "Bern", "Chop-suey Chinese"));
+                    Orders.Add(new OrderData(10255, "RICSU", "Genève", "Richter Supermarkt"));
+                    Orders.Add(new OrderData(10256, "WELLI", "Resende", "Wellington Importado"));
+                    code += 5;
+                }
+            }
+            return Orders;
+        }
+
         public int? OrderID { get; set; }
         public string CustomerID { get; set; }
         public string ShipCity { get; set; }
         public string ShipName { get; set; }
     }
-}
-```
+{% endhighlight %}
+{% endtabs %}
+
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BDVACDDzLCOPwlKE?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Page setup
@@ -67,51 +116,80 @@ When printing a webpage, some print options, such as layout, paper size, and mar
 
 You can print the grid’s content using an external button by utilizing the [PrintAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_PrintAsync) method. This method allows you to trigger the printing process programmatically.
 
-```cshtml
-@using Syncfusion.Blazor.Buttons
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor.Buttons
+@using BlazorApp1.Data
 
 <SfButton Content="Print" OnClick="PrintContent"></SfButton>
-<SfGrid @ref="DefaultGrid" DataSource="@Orders" AllowPaging="true">
-    <GridPageSettings PageSize="8"></GridPageSettings>
+<SfGrid @ref="DefaultGrid" DataSource="@Orders" >
     <GridColumns>
-        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.ShipCity) HeaderText="Ship City" TextAlign="TextAlign.Right" Width="130" ></GridColumn>
-        <GridColumn Field=@nameof(Order.ShipName) HeaderText="Ship Name" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer Name" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.ShipCity) HeaderText="Ship City" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.ShipName) HeaderText="Ship Name" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
-
-@code {
-
-    public List<Order> Orders { get; set; }
-
-    private SfGrid<Order> DefaultGrid;
+@code 
+{
+    private SfGrid<OrderData> DefaultGrid;
+    public List<OrderData> Orders{ get; set; }
 
     protected override void OnInitialized()
     {
-        Orders = Enumerable.Range(1, 75).Select(x => new Order()
-            {
-                OrderID = 10247 + x,
-                CustomerID = (new string[] { "VINET", "TOMSP", "HANAR", "SUPRD", "WELLI" })[new Random().Next(5)],
-                ShipCity = (new string[] { "Reims", "Münster", "Rio de Janeiro", "Lyon", "Charleroi" })[new Random().Next(5)],
-                ShipName = (new string[] { "Vins et alcools Cheva", "Toms Spezialitäten", "	Hanari Carnes", "Suprêmes délices", "Ernst Handel" })[new Random().Next(5)],
-             }).ToList();
-    }
-
-    public class Order
-    {
-        public int? OrderID { get; set; }
-        public string CustomerID { get; set; }
-        public string ShipCity { get; set; }
-        public string ShipName { get; set; }
+        Orders = OrderData.GetAllRecords();
     }
     public void PrintContent()
     {
         this.DefaultGrid.PrintAsync();
     }
 }
-```
+{% endhighlight %}
+{% highlight c# tabtitle="OrderData.cs" %}
+    public class OrderData
+    {
+        public static List<OrderData> Orders = new List<OrderData>();
+        public OrderData()
+        {
+
+        }
+        public OrderData(int? OrderID,string CustomerID,string ShipCity,string ShipName)
+        {
+           this.OrderID = OrderID;
+           this.CustomerID = CustomerID;
+           this.ShipCity = ShipCity;
+           this.ShipName = ShipName;
+        }
+        public static List<OrderData> GetAllRecords()
+        {
+            if (Orders.Count() == 0)
+            {
+                int code = 10;
+                for (int i = 1; i < 2; i++)
+                {
+                    Orders.Add(new OrderData(10248, "VINET", "Reims", "Vins et alcools Cheval"));
+                    Orders.Add(new OrderData(10249, "TOMSP", "Münster", "Toms Spezialitäten"));
+                    Orders.Add(new OrderData(10250, "HANAR", "Rio de Janeiro", "Hanari Carnes"));
+                    Orders.Add(new OrderData(10251, "VICTE", "Lyon", "Victuailles en stock"));
+                    Orders.Add(new OrderData(10252, "SUPRD", "Charleroi", "Suprêmes délices"));
+                    Orders.Add(new OrderData(10253, "HANAR", "Rio de Janeiro", "Hanari Carnes"));
+                    Orders.Add(new OrderData(10254, "CHOPS", "Bern", "Chop-suey Chinese"));
+                    Orders.Add(new OrderData(10255, "RICSU", "Genève", "Richter Supermarkt"));
+                    Orders.Add(new OrderData(10256, "WELLI", "Resende", "Wellington Importado"));
+                    code += 5;
+                }
+            }
+            return Orders;
+        }
+        public int? OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public string ShipCity { get; set; }
+        public string ShipName { get; set; }
+    }
+{% endhighlight %}
+{% endtabs %}
+
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rXrgWXZTryODdbNo?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Print visible Page
@@ -123,52 +201,51 @@ By default, the Syncfusion Blazor Grid prints all the pages of the grid. The [Pr
 @using Syncfusion.Blazor.DropDowns
 
 <label>Select Print Mode: </label>
-<SfDropDownList TValue="PrintMode" TItem="ddlOrder" @bind-Value="@DropVal" DataSource="@LocalData" Width="130px">
+<SfDropDownList TValue="PrintMode" TItem="DropDownOrder" @bind-Value="@PrintMode" DataSource="@DropDownValue" Width="130px">
     <DropDownListFieldSettings Text="Text" Value="Value"></DropDownListFieldSettings>
-    <DropDownListEvents ValueChange="OnValueChange" TValue="PrintMode" TItem="ddlOrder"></DropDownListEvents>
+    <DropDownListEvents ValueChange="OnValueChange" TValue="PrintMode" TItem="DropDownOrder"></DropDownListEvents>
 </SfDropDownList>
 
-<SfGrid @ref="Grid" DataSource="@Orders" Toolbar="@(new List<object>() { "Print" })" PrintMode="@DropVal" AllowPaging="true">
-    <GridPageSettings PageSize="8"></GridPageSettings>
+<SfGrid @ref="Grid" DataSource="@Orders" Toolbar="@(new List<object>() { "Print" })" PrintMode="@PrintMode" AllowPaging="true">
+    <GridPageSettings PageSize="6"></GridPageSettings>
     <GridColumns>
         <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
         <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" TextAlign="TextAlign.Right" Width="130" Type="ColumnType.Date"></GridColumn>
-        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.ShipCity) HeaderText="Ship City" TextAlign="TextAlign.Right" Width="130" Type="ColumnType.Date"></GridColumn>
+        <GridColumn Field=@nameof(Order.ShipName) HeaderText="Ship Name" TextAlign="TextAlign.Right" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
 
 @code {
     private SfGrid<Order> Grid;
     public List<Order> Orders { get; set; }
+    public PrintMode PrintMode { get; set; } = PrintMode.AllPages;
 
-    public PrintMode DropVal { get; set; } = PrintMode.AllPages;
-
-    public class ddlOrder
+    public class DropDownOrder
     {
         public string Text { get; set; }
         public PrintMode Value { get; set; }
     }
-    List<ddlOrder> LocalData = new List<ddlOrder>
+    List<DropDownOrder> DropDownValue = new List<DropDownOrder>
     {
-        new ddlOrder() { Text = "All Pages", Value = PrintMode.AllPages },
-        new ddlOrder() { Text = "Current Page", Value = PrintMode.CurrentPage },
-  
+        new DropDownOrder() { Text = "All Pages", Value = PrintMode.AllPages },
+        new DropDownOrder() { Text = "Current Page", Value = PrintMode.CurrentPage },
+
     };
-    public void OnValueChange(ChangeEventArgs<PrintMode, ddlOrder> Args)
+    public void OnValueChange(ChangeEventArgs<PrintMode, DropDownOrder> Args)
     {
-        DropVal = Args.Value;
+        PrintMode = Args.Value;
         Grid.Refresh();
     }
 
     protected override void OnInitialized()
     {
-        Orders = Enumerable.Range(1, 75).Select(x => new Order()
+        Orders = Enumerable.Range(1, 15).Select(x => new Order()
             {
-                OrderID = 1000 + x,
-                CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
-                Freight = 2.1 * x,
-                OrderDate = DateTime.Now.AddDays(-x),
+                OrderID = 10247 + x,
+                CustomerID =(new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
+                ShipCity = (new string[] { "Reims", "Münster", "Rio de Janeiro", "Lyon", "Charleroi" })[new Random().Next(5)],
+                ShipName = (new string[] { "Vins et alcools Chev", "Toms Spezialitäten", "Hanari Carnes", "Victuailles en stock", "Suprêmes délices" })[new Random().Next(5)],
             }).ToList();
     }
 
@@ -176,8 +253,8 @@ By default, the Syncfusion Blazor Grid prints all the pages of the grid. The [Pr
     {
         public int? OrderID { get; set; }
         public string CustomerID { get; set; }
-        public DateTime? OrderDate { get; set; }
-        public double? Freight { get; set; }
+        public string ShipCity { get; set; }
+        public string ShipName { get; set; }
     }
 }
 ```
