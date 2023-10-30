@@ -21,15 +21,17 @@ By default, the aggregate values are displayed in the footer, group, and caption
 
 * [GroupCaptionTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridAggregateColumn.html#Syncfusion_Blazor_Grids_GridAggregateColumn_GroupCaptionTemplate): Use this property to display the aggregate value in the group caption cell. You can define a custom template to format the aggregate value.
 
-```cshtml
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids
+@using BlazorApp1.Data
 
 <SfGrid DataSource="@Orders" AllowPaging="true" AllowGrouping="true">
-    <GridGroupSettings Columns=@Units></GridGroupSettings>
+    <GridGroupSettings Columns=@GroupOption></GridGroupSettings>
     <GridAggregates>
         <GridAggregate>
             <GridAggregateColumns>
-                <GridAggregateColumn Field=@nameof(Order.Freight) Type="AggregateType.Sum" Format="C2">
+                <GridAggregateColumn Field=@nameof(OrderData.Freight) Type="AggregateType.Sum" Format="C2">
                     <GroupFooterTemplate>
                         @{
                             var aggregate = (context as AggregateTemplateContext);
@@ -40,10 +42,10 @@ By default, the aggregate values are displayed in the footer, group, and caption
                     </GroupFooterTemplate>
                 </GridAggregateColumn>
             </GridAggregateColumns>
-        </GridAggregate>  
+        </GridAggregate>
         <GridAggregate>
             <GridAggregateColumns>
-                <GridAggregateColumn Field=@nameof(Order.Freight) Type="AggregateType.Max" Format="C2">
+                <GridAggregateColumn Field=@nameof(OrderData.Freight) Type="AggregateType.Max" Format="C2">
                     <GroupCaptionTemplate>
                         @{
                             var aggregate = (context as AggregateTemplateContext);
@@ -57,41 +59,74 @@ By default, the aggregate values are displayed in the footer, group, and caption
         </GridAggregate>
     </GridAggregates>
     <GridColumns>
-        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer ID" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.OrderDate) HeaderText="Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.ShipCountry) HeaderText="Ship Country" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer ID" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.OrderDate) HeaderText="Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.ShipCountry) HeaderText="Ship Country" Width="150"></GridColumn>
     </GridColumns>
 </SfGrid>
 
 @code {
-    private string[] Units = (new string[] { "ShipCountry" });
-    public List<Order> Orders { get; set; }
-
+    private string[] GroupOption = (new string[] { "ShipCountry" });
+    public List<OrderData> Orders { get; set; }
+             
     protected override void OnInitialized()
     {
-        Orders = Enumerable.Range(1, 15).Select(x => new Order()
-            {
-                OrderID = 1000 + x,
-                CustomerID = (new string[] { "ERNSH", "SUPRD", "HANAR", "WELLI", "QUEDE" })[new Random().Next(5)],
-                Freight = 2.1 * x,
-                OrderDate = DateTime.Now.AddDays(-x),
-                ShipCountry = (new string[] { "France", "Germany", "Brazil", "Belgium", "Switzerland" })[new Random().Next(5)],
-            }).ToList();
-    }
-
-    public class Order
+        Orders = OrderData.GetAllRecords();
+    }  
+}
+{% endhighlight %}
+{% highlight c# tabtitle="OrderData.cs" %}
+    public class OrderData
     {
+        public static List<OrderData> Orders = new List<OrderData>();
+        public OrderData()
+        {
+
+        }
+        public OrderData(int? OrderID, string CustomerID, string ShipCountry,DateTime OrderDate, double Freight)
+        {
+            this.OrderID = OrderID;
+            this.CustomerID = CustomerID;
+            this.ShipCountry= ShipCountry;
+            this.OrderDate = OrderDate;
+            this.Freight = Freight;
+
+        }
+
+        public static List<OrderData> GetAllRecords()
+        {
+            if (Orders.Count() == 0)
+            {
+                int code = 10;
+                for (int i = 1; i < 2; i++)
+                {
+                    Orders.Add(new OrderData(10248, "ERNSH", "Austria",new DateTime(1996,07,17), 140.51));
+                    Orders.Add(new OrderData(10249, "SUPRD", "Belgium",new DateTime(1996,09,07), 51.30));
+                    Orders.Add(new OrderData(10250, "WELLI", "Brazil", new DateTime(1996,07,08), 65.83));
+                    Orders.Add(new OrderData(10251, "HANAR", "France", new DateTime(1996,07,10), 58.17));
+                    Orders.Add(new OrderData(10252, "WELLI", "Germany", new DateTime(1996,10,17), 13.97));
+                    Orders.Add(new OrderData(10253, "HANAR", "Mexico", new DateTime(1996,07,19), 3.05));
+                    Orders.Add(new OrderData(10254, "QUEDE", "Switzerland", new DateTime(1996,07,04), 32.38));
+                    Orders.Add(new OrderData(10255, "RICSU", "Austria", new DateTime(1996,07,08), 41.34));
+                    Orders.Add(new OrderData(10256, "WELLI", "Belgium", new DateTime(1996,07,05), 11.61));
+                    code += 5;
+                }
+            }
+            return Orders;
+        }
+
         public int? OrderID { get; set; }
         public string CustomerID { get; set; }
         public string ShipCountry { get; set; }
         public DateTime OrderDate { get; set; }
         public double? Freight { get; set; }
-    }
-}
-```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VXhqZuDypsoZfCyy?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+    }  
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hZrACXUDUeyrfGOs?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 > * When using local data, the total summary is calculated based on the entire dataset available in the grid. The aggregate values will reflect calculations across all the rows in the grid.
 > * When working with remote data, the total summary is calculated based on the current page records. This means that if you have enabled pagination and are displaying data in pages, the aggregate values in the footer will represent calculations only for the visible page.
@@ -113,15 +148,17 @@ The available built-in aggregate types are :
 
 Here is an example that demonstrates how to use built-in aggregates types in the Syncfusion Grid:
 
-```cshtml
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids
+@using BlazorApp1.Data
 
 <SfGrid DataSource="@Orders" AllowPaging="true" AllowGrouping="true">
-    <GridGroupSettings Columns=@Units></GridGroupSettings>
+    <GridGroupSettings Columns=@GroupOption></GridGroupSettings>
     <GridAggregates>
         <GridAggregate>
             <GridAggregateColumns>
-                <GridAggregateColumn Field=@nameof(Order.ShippedDate) Type="Syncfusion.Blazor.Grids.AggregateType.Max" Format="d" >
+                <GridAggregateColumn Field=@nameof(OrderData.ShippedDate) Type="Syncfusion.Blazor.Grids.AggregateType.Max" Format="d">
                     <FooterTemplate>
                         @{
                             var aggregate = (context as AggregateTemplateContext);
@@ -135,7 +172,7 @@ Here is an example that demonstrates how to use built-in aggregates types in the
         </GridAggregate>
         <GridAggregate>
             <GridAggregateColumns>
-                <GridAggregateColumn Field=@nameof(Order.OrderDate) Type="Syncfusion.Blazor.Grids.AggregateType.Min" Format="d" >
+                <GridAggregateColumn Field=@nameof(OrderData.OrderDate) Type="Syncfusion.Blazor.Grids.AggregateType.Min" Format="d">
                     <FooterTemplate>
                         @{
                             var aggregate = (context as AggregateTemplateContext);
@@ -149,7 +186,7 @@ Here is an example that demonstrates how to use built-in aggregates types in the
         </GridAggregate>
         <GridAggregate>
             <GridAggregateColumns>
-                <GridAggregateColumn Field=@nameof(Order.IsVerified) Type="Syncfusion.Blazor.Grids.AggregateType.TrueCount" >
+                <GridAggregateColumn Field=@nameof(OrderData.IsVerified) Type="Syncfusion.Blazor.Grids.AggregateType.TrueCount">
                     <FooterTemplate>
                         @{
                             var aggregate = (context as AggregateTemplateContext);
@@ -163,7 +200,7 @@ Here is an example that demonstrates how to use built-in aggregates types in the
         </GridAggregate>
         <GridAggregate>
             <GridAggregateColumns>
-                <GridAggregateColumn Field=@nameof(Order.Freight) Type="Syncfusion.Blazor.Grids.AggregateType.Max" Format="C2">
+                <GridAggregateColumn Field=@nameof(OrderData.Freight) Type="Syncfusion.Blazor.Grids.AggregateType.Max" Format="C2">
                     <FooterTemplate>
                         @{
                             var aggregate = (context as AggregateTemplateContext);
@@ -177,38 +214,71 @@ Here is an example that demonstrates how to use built-in aggregates types in the
         </GridAggregate>
     </GridAggregates>
     <GridColumns>
-        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer ID" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.OrderDate) HeaderText="Order Date" Format="d" Type="Syncfusion.Blazor.Grids.ColumnType.Date" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.ShippedDate) HeaderText="Shipped Date" Format="d" Type="Syncfusion.Blazor.Grids.ColumnType.Date" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.IsVerified) HeaderText="Verified" Width="150" Type="ColumnType.Boolean"></GridColumn>
-        <GridColumn Field=@nameof(Order.ShipCountry) HeaderText="Ship Country" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.ShipCity) HeaderText="Ship City" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer ID" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.OrderDate) HeaderText="Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.ShippedDate) HeaderText="Shipped Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" Format="C2" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.IsVerified) HeaderText="Verified" Width="150" Type="ColumnType.Boolean"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.ShipCountry) HeaderText="Ship Country" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.ShipCity) HeaderText="Ship City" Width="150"></GridColumn>
     </GridColumns>
 </SfGrid>
 
-@code {
-    private string[] Units = (new string[] { "ShipCountry" });
-    public List<Order> Orders { get; set; }
 
+@code {
+    private string[] GroupOption = (new string[] { "ShipCountry" });
+    public List<OrderData> Orders { get; set; }
+             
     protected override void OnInitialized()
     {
-        Orders = Enumerable.Range(1, 15).Select(x => new Order()
-            {
-                OrderID = 1000 + x,
-                CustomerID = (new string[] { "ERNSH", "SUPRD", "HANAR", "WELLI", "QUEDE" })[new Random().Next(5)],
-                Freight = 2.1 * x,
-                OrderDate = DateTime.Now.AddDays(-x),
-                ShippedDate = DateTime.Now.AddDays(x),
-                IsVerified=(new bool[]{true,false})[new Random().Next(2)],
-                ShipCountry = (new string[] { "France", "Germany", "Brazil", "Belgium", "Switzerland" })[new Random().Next(5)],
-                ShipCity = (new string[] { "Graz", "Charleroi", "Rio de Janeiro", "Resende", "	Lyon" })[new Random().Next(5)],
-            }).ToList();
-    }
-
-    public class Order
+        Orders = OrderData.GetAllRecords();
+    }     
+}
+{% endhighlight %}
+{% highlight c# tabtitle="OrderData.cs" %}
+ public class OrderData
     {
+        public static List<OrderData> Orders = new List<OrderData>();
+        public OrderData()
+        {
+
+        }
+        public OrderData(int? OrderID, string CustomerID, string ShipCountry,string ShipCity,DateTime OrderDate,DateTime ShippedDate,bool isVerified, double Freight)
+        {
+            this.OrderID = OrderID;
+            this.CustomerID = CustomerID;
+            this.ShipCountry= ShipCountry;
+            this.ShipCity = ShipCity;
+            this.OrderDate = OrderDate;
+            this.ShippedDate= ShippedDate;
+            this.IsVerified= isVerified;
+            this.Freight = Freight;
+
+        }
+
+        public static List<OrderData> GetAllRecords()
+        {
+            if (Orders.Count() == 0)
+            {
+                int code = 10;
+                for (int i = 1; i < 2; i++)
+                {
+                    Orders.Add(new OrderData(10248, "ERNSH", "Austria", "Graz", new DateTime(1996,07,17), new DateTime(1996, 08, 17),true, 140.51));
+                    Orders.Add(new OrderData(10249, "SUPRD", "Belgium", "Charleroi", new DateTime(1996,09,07), new DateTime(1996, 07, 19) ,false,51.30));
+                    Orders.Add(new OrderData(10250, "WELLI", "Brazil", "Rio de Janeiro", new DateTime(1996,07,08), new DateTime(1996, 06, 13), true, 65.83));
+                    Orders.Add(new OrderData(10251, "HANAR", "France", "Resende", new DateTime(1996,07,10), new DateTime(1996, 08, 18),false,58.17));
+                    Orders.Add(new OrderData(10252, "WELLI", "Germany", "Lyon", new DateTime(1996,10,17), new DateTime(1996, 09, 17), true, 13.97));
+                    Orders.Add(new OrderData(10253, "HANAR", "Mexico", "Graz", new DateTime(1996,07,19), new DateTime(1996, 07, 15),false, 3.05));
+                    Orders.Add(new OrderData(10254, "QUEDE", "Switzerland", "Resende", new DateTime(1996,07,04), new DateTime(1996, 09, 07), true, 32.38));
+                    Orders.Add(new OrderData(10255, "RICSU", "Austria", "Rio de Janeiro", new DateTime(1996,07,08), new DateTime(1996, 10, 08), false, 41.34));
+                    Orders.Add(new OrderData(10256, "WELLI", "Belgium", "Graz", new DateTime(1996,07,05), new DateTime(1996, 07, 06),true, 11.61));
+                    code += 5;
+                }
+            }
+            return Orders;
+        }
+
         public int? OrderID { get; set; }
         public string CustomerID { get; set; }
         public string ShipCountry { get; set; }
@@ -218,9 +288,10 @@ Here is an example that demonstrates how to use built-in aggregates types in the
         public bool IsVerified { get; set; }
         public double? Freight { get; set; }
     }
-}
-```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BDBAtOjITUNKaKqv?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNrgCDAjUmunNwOO?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 > * Multiple types for a column are supported only when one of the aggregate templates is used.
 

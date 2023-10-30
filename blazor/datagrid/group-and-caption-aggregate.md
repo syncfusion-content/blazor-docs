@@ -19,16 +19,18 @@ Group footer aggregates are displayed in the footer cells of each group. These c
 
 Here’s an example that demonstrates how to use group footer aggregates in the Syncfusion Blazor Grid component:
 
-```cshtml
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids
+@using BlazorApp1.Data
 
 <SfGrid DataSource="@Orders" AllowPaging="true" AllowGrouping="true">
     <GridPageSettings PageSize="5"></GridPageSettings>
-    <GridGroupSettings Columns=@Units></GridGroupSettings>
-     <GridAggregates>
+    <GridGroupSettings Columns=@GroupOptions></GridGroupSettings>
+    <GridAggregates>
         <GridAggregate>
             <GridAggregateColumns>
-                <GridAggregateColumn Field=@nameof(Order.Freight) Type="AggregateType.Sum">
+                <GridAggregateColumn Field=@nameof(OrderData.Freight) Type="AggregateType.Sum">
                     <GroupFooterTemplate>
                         @{
                             var aggregate = (context as AggregateTemplateContext);
@@ -40,43 +42,76 @@ Here’s an example that demonstrates how to use group footer aggregates in the 
                 </GridAggregateColumn>
             </GridAggregateColumns>
         </GridAggregate>
-     </GridAggregates>
+    </GridAggregates>
     <GridColumns>
-        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.OrderDate) HeaderText="Order Date" Format="d" Type="ColumnType.DateOnly" TextAlign="TextAlign.Right" Width="130"></GridColumn>
-        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.ShipCoutry) HeaderText="Ship Coutry" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.ShipCountry) HeaderText="Ship Coutry" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.OrderDate) HeaderText="Order Date" Format="d" Type="ColumnType.DateOnly" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+       
     </GridColumns>
 </SfGrid>
 
 @code {
-    public List<Order> Orders { get; set; }
-    private string[] Units = (new string[] { "ShipCoutry" });
+    public List<OrderData> Orders { get; set; }
+    private string[] GroupOptions = (new string[] { "ShipCountry" });
 
     protected override void OnInitialized()
     {
-        Orders = Enumerable.Range(1, 10).Select(x => new Order()
-            {
-                OrderID = 1000 + x,
-                CustomerID = (new string[] { "HANAR", "WELLI", "QUEDE", "VINET", "VICTE" })[new Random().Next(5)],
-                Freight = 2.1 * x,
-                OrderDate = new DateOnly(2023, 2, x),
-                ShipCoutry=(new string[]{"France","Germany","US","Belgium","Australia"})[new Random().Next(5)]
-            }).ToList();
-    }
-
-    public class Order
-    {
-        public int? OrderID { get; set; }
-        public string CustomerID { get; set; }
-        public DateOnly? OrderDate { get; set; }
-        public string ShipCoutry { get; set; }
-        public double? Freight { get; set; }
+        Orders = OrderData.GetAllRecords();
     }
 }
-```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LDhUDbLeUVuCRFWL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% endhighlight %}
+{% highlight c# tabtitle="OrderData.cs" %}
+    public class OrderData
+    {
+        public static List<OrderData> Orders = new List<OrderData>();
+        public OrderData()
+        {
+
+        }
+        public OrderData(int? OrderID, string CustomerID, string ShipCountry, DateTime OrderDate, double Freight)
+        {
+            this.OrderID = OrderID;
+            this.CustomerID = CustomerID;   
+            this.ShipCountry = ShipCountry;
+            this.OrderDate = OrderDate;
+            this.Freight = Freight;           
+        }
+
+        public static List<OrderData> GetAllRecords()
+        {
+            if (Orders.Count() == 0)
+            {
+                int code = 10;
+                for (int i = 1; i < 2; i++)
+                {
+                    Orders.Add(new OrderData(10248, "ERNSH", "Austria", new DateTime(1996, 07, 17), 140.51));
+                    Orders.Add(new OrderData(10249, "SUPRD", "Belgium", new DateTime(1996, 09, 07), 51.30));
+                    Orders.Add(new OrderData(10250, "WELLI", "Brazil", new DateTime(1996, 07, 08), 65.83));
+                    Orders.Add(new OrderData(10251, "HANAR", "France", new DateTime(1996, 07, 10), 58.17));
+                    Orders.Add(new OrderData(10252, "WELLI", "Germany", new DateTime(1996, 10, 17), 13.97));
+                    Orders.Add(new OrderData(10253, "HANAR", "Mexico", new DateTime(1996, 07, 19), 3.05));
+                    Orders.Add(new OrderData(10254, "QUEDE", "Switzerland", new DateTime(1996, 07, 04), 32.38));
+                    Orders.Add(new OrderData(10255, "RICSU", "Austria", new DateTime(1996, 07, 08), 41.34));
+                    Orders.Add(new OrderData(10256, "WELLI", "Belgium", new DateTime(1996, 07, 05), 11.61));
+                    code += 5;
+                }
+            }
+            return Orders;
+        }
+
+        public int? OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public DateTime OrderDate { get; set; }
+        public double Freight { get; set; }
+        public string ShipCountry { get; set; }
+    }
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDhKCXUDfMsXaMrj?appbar=true&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Group caption aggregates
 
@@ -84,16 +119,18 @@ Group caption aggregates are displayed in the caption cells of each group. These
 
 Here’s an example that demonstrates how to use group and caption aggregates in the Syncfusion Blazor Grid component:
 
-```cshtml
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids
+@using BlazorApp1.Data
 
 <SfGrid DataSource="@Orders" AllowPaging="true" AllowGrouping="true">
     <GridPageSettings PageSize="5"></GridPageSettings>
-    <GridGroupSettings Columns=@Units></GridGroupSettings>
-     <GridAggregates>
+    <GridGroupSettings Columns=@GroupOptions></GridGroupSettings>
+    <GridAggregates>
         <GridAggregate>
             <GridAggregateColumns>
-                <GridAggregateColumn Field=@nameof(Order.Freight) Type="AggregateType.Max">
+                <GridAggregateColumn Field=@nameof(OrderData.Freight) Type="AggregateType.Max">
                     <GroupCaptionTemplate>
                         @{
                             var aggregate = (context as AggregateTemplateContext);
@@ -105,42 +142,75 @@ Here’s an example that demonstrates how to use group and caption aggregates in
                 </GridAggregateColumn>
             </GridAggregateColumns>
         </GridAggregate>
-     </GridAggregates>
+    </GridAggregates>
     <GridColumns>
-        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.OrderDate) HeaderText="Order Date" Format="d" Type="ColumnType.DateOnly" TextAlign="TextAlign.Right" Width="130"></GridColumn>
-        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.ShipCoutry) HeaderText="Ship Coutry" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.OrderDate) HeaderText="Order Date" Format="d" Type="ColumnType.DateOnly" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.ShipCountry) HeaderText="Ship Coutry" Width="150"></GridColumn>
     </GridColumns>
 </SfGrid>
 
+
 @code {
-    public List<Order> Orders { get; set; }
-    private string[] Units = (new string[] { "ShipCoutry" });
+    public List<OrderData> Orders { get; set; }
+    private string[] GroupOptions = (new string[] { "ShipCountry" });
 
     protected override void OnInitialized()
     {
-        Orders = Enumerable.Range(1, 10).Select(x => new Order()
-            {
-                OrderID = 1000 + x,
-                CustomerID = (new string[] { "HANAR", "WELLI", "QUEDE", "VINET", "VICTE" })[new Random().Next(5)],
-                Freight = 2.1 * x,
-                OrderDate = new DateOnly(2023, 2, x),
-                ShipCoutry=(new string[]{"France","Germany","US","Belgium","Australia"})[new Random().Next(5)]
-            }).ToList();
-    }
-
-    public class Order
-    {
-        public int? OrderID { get; set; }
-        public string CustomerID { get; set; }
-        public DateOnly? OrderDate { get; set; }
-        public string ShipCoutry { get; set; }
-        public double? Freight { get; set; }
+        Orders = OrderData.GetAllRecords();
     }
 }
-```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hXVgDbLSqzxvvitG?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% endhighlight %}
+{% highlight c# tabtitle="OrderData.cs" %}
+    public class OrderData
+    {
+        public static List<OrderData> Orders = new List<OrderData>();
+        public OrderData()
+        {
+
+        }
+        public OrderData(int? OrderID, string CustomerID, string ShipCountry, DateTime OrderDate, double Freight)
+        {
+            this.OrderID = OrderID;
+            this.CustomerID = CustomerID;   
+            this.ShipCountry = ShipCountry;
+            this.OrderDate = OrderDate;
+            this.Freight = Freight;           
+        }
+
+        public static List<OrderData> GetAllRecords()
+        {
+            if (Orders.Count() == 0)
+            {
+                int code = 10;
+                for (int i = 1; i < 2; i++)
+                {
+                    Orders.Add(new OrderData(10248, "ERNSH", "Austria", new DateTime(1996, 07, 17), 140.51));
+                    Orders.Add(new OrderData(10249, "SUPRD", "Belgium", new DateTime(1996, 09, 07), 51.30));
+                    Orders.Add(new OrderData(10250, "WELLI", "Brazil", new DateTime(1996, 07, 08), 65.83));
+                    Orders.Add(new OrderData(10251, "HANAR", "France", new DateTime(1996, 07, 10), 58.17));
+                    Orders.Add(new OrderData(10252, "WELLI", "Germany", new DateTime(1996, 10, 17), 13.97));
+                    Orders.Add(new OrderData(10253, "HANAR", "Mexico", new DateTime(1996, 07, 19), 3.05));
+                    Orders.Add(new OrderData(10254, "QUEDE", "Switzerland", new DateTime(1996, 07, 04), 32.38));
+                    Orders.Add(new OrderData(10255, "RICSU", "Austria", new DateTime(1996, 07, 08), 41.34));
+                    Orders.Add(new OrderData(10256, "WELLI", "Belgium", new DateTime(1996, 07, 05), 11.61));
+                    code += 5;
+                }
+            }
+            return Orders;
+        }
+
+        public int? OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public DateTime OrderDate { get; set; }
+        public double Freight { get; set; }
+        public string ShipCountry { get; set; }
+    }
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LXLACtqtphnihusa?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 > The group total summary in Syncfusion Grid is calculated based on the current page records for each group by default.
