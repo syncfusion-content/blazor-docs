@@ -211,6 +211,6 @@ Here’s an example that demonstrates how to use group and caption aggregates in
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LXLACtqtphnihusa?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VZrAsjqWAiLCkcxM?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 > The group total summary in Syncfusion Grid is calculated based on the current page records for each group by default.
