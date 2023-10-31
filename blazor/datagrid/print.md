@@ -53,7 +53,6 @@ To add the printing option to the grid’s Toolbar, simply include the [Toolbar]
            this.CustomerID = CustomerID;
            this.ShipCity = ShipCity;
            this.ShipName = ShipName;
-
         }
 
         public static List<OrderData> GetAllRecords()
