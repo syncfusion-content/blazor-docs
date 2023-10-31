@@ -20,21 +20,14 @@ To add the printing option to the grid’s Toolbar, simply include the [Toolbar]
 @using Syncfusion.Blazor.Grids
 @using BlazorApp1.Data
 
-<SfGrid DataSource="@Orders" Height="315">
+<SfGrid DataSource="@Orders" Height="315" oolbar="@(new List<object>() { "Print" })">
     <GridColumns>
-        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" CustomAttributes="@(new Dictionary<string, object>(){ { "class", "custom-css" }})" TextAlign="TextAlign.Right" Width="140"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="140"></GridColumn>
         <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer ID" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(OrderData.ShipCity) HeaderText="Ship City" CustomAttributes="@(new Dictionary<string, object>(){ { "class", "custom-css" }})" Width="100"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.ShipCity) HeaderText="Ship City" Width="100"></GridColumn>
         <GridColumn Field=@nameof(OrderData.ShipName) HeaderText="Ship Name" Width="100"></GridColumn>
     </GridColumns>
 </SfGrid>
-
-<style>
-    .e-grid td.e-cellselectionbackground {
-        background: #9ac5ee;
-        font-style: italic;
-    }
-</style>
 
 @code {
   
@@ -44,15 +37,7 @@ To add the printing option to the grid’s Toolbar, simply include the [Toolbar]
     {
         Orders = OrderData.GetAllRecords();
     }   
-
 }
-<style>
-    .custom-css {
-        background: #d7f0f4;
-        font-style: italic;
-        color: navy
-    }
-</style>
 {% endhighlight %}
 {% highlight c# tabtitle="OrderData.cs" %}
     public class OrderData
