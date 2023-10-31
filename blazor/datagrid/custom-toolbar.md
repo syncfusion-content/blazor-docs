@@ -224,9 +224,9 @@ The following example demonstrates how to render an image in the Toolbar of the 
 
 > You can further customize the styles and layout of the image and text in the Custom Toolbar to suit your specific design requirements.
 
-## Render DropDownList in Custom Toolbar
+## Render SfDropDownList in Custom Toolbar
 
-Render DropDownList in Custom Toolbar in Syncfusion Blazor Grid enables you to extend the functionality of the Custom Toolbar by incorporating a [DropDownList](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html) component, allowing you to perform various actions within the DataGrid based on their selections.
+Render SfDropDownList in Custom Toolbar in Syncfusion Blazor Grid enables you to extend the functionality of the Custom Toolbar by incorporating a [DropDownList](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html) component, allowing you to perform various actions within the DataGrid based on their selections.
 
 This can be achieved by utilizing the `Template`. The example below demonstrates how to render the **SFDropDownList** component in the Custom Toolbar, where the Toolbar Template includes the its [ValueChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_ValueChanged) event is bound to the **OnChange** method.
 
@@ -353,6 +353,8 @@ In the **OnChange** method, the text of the selected item is checked to determin
     }
 {% endhighlight %}
 {% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDVgWDUiLWIJdsVg?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Render a component or element using the Toolbar Template
 
