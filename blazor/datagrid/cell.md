@@ -15,60 +15,89 @@ Displaying HTML content in a Grid can be useful in scenarios where you want to d
 
 In the following example, the [Blazor Toggle Switch](https://www.syncfusion.com/blazor-components/blazor-toggle-switch-button) Button component is added to enable and disable the `DisableHtmlEncode` property. When the switch is toggled, the [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSwitch-1.html#Syncfusion_Blazor_Buttons_SfSwitch_1_ValueChange) event is triggered and the `DisableHtmlEncode` property of the column is updated accordingly. The [Refresh](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Refresh) method is called to Refresh the grid and display the updated content.
 
-```cshtml
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Buttons
+@using BlazorApp1.Data
 
 <label> Enable or disable HTML Encode</label>
 <SfSwitch ValueChange="Change" TChecked="bool"></SfSwitch>
 
 <SfGrid @ref="Grid" DataSource="@Orders" Height="315">
     <GridColumns>
-        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="140"></GridColumn>
-        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="<span> Customer ID </span>" DisableHtmlEncode="@IsEncode" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" Width="100"></GridColumn>
-        <GridColumn Field=@nameof(Order.ShipCity) HeaderText="Ship City" Width="100"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="140"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="<span> Customer ID </span>" DisableHtmlEncode="@IsEncode" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" Format="C2" Width="100"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.ShipCity) HeaderText="Ship City" Width="100"></GridColumn>
     </GridColumns>
 </SfGrid>
 
 @code {
+    private SfGrid<OrderData> Grid;
     public bool IsEncode { get; set; } = true;
-    private SfGrid<Order> Grid;
-    public List<Order> Orders { get; set; }
+    public List<OrderData> Orders { get; set; }
 
     protected override void OnInitialized()
     {
-        Orders = Enumerable.Range(1, 75).Select(x => new Order()
-            {
-                OrderID = 1000 + x,
-                CustomerID = (new string[] { "ALFKI", "<span>ANANTR</span>", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
-                ShipCity = (new string[] { "Seattle", "Tacoma", "Redmond", "Kirkland", "London" })[new Random().Next(5)],
-                Freight = 6.2 * x,
-            }).ToList();
+        Orders = OrderData.GetAllRecords();
+    }
+    private void Change(Syncfusion.Blazor.Buttons.ChangeEventArgs<bool> args)
+    {
+        IsEncode = !args.Checked;
+        Grid.Refresh();
     }
 
-    public class Order
+}
+{% endhighlight %}
+{% highlight c# tabtitle="OrderData.cs" %}
+
+ public class OrderData
     {
+        public static List<OrderData> Orders = new List<OrderData>();
+        public OrderData()
+        {
+
+        }
+        public OrderData(int? OrderID, string CustomerId, double? Freight, string ShipCity)
+        {
+            this.OrderID = OrderID;
+            this.CustomerID = CustomerId;
+            this.Freight = Freight;
+            this.ShipCity= ShipCity;
+        }
+
+        public static List<OrderData> GetAllRecords()
+        {
+            if (Orders.Count() == 0)
+            {
+                int code = 10;
+                for (int i = 1; i < 2; i++)
+                {
+                    Orders.Add(new OrderData(10248, "<b>VINET</b>",32.38, "Reims"));
+                    Orders.Add(new OrderData(10249, "<b>TOMSP</b>", 11.61, "Münster"));
+                    Orders.Add(new OrderData(10250, "<b>HANAR</b>", 65.83, "Rio de Janeiro"));
+                    Orders.Add(new OrderData(10251, "<b>VICTE</b>", 41.34, "Lyon"));
+                    Orders.Add(new OrderData(10252, "<b>SUPRD</b>", 51.30, "Charleroi"));
+                    Orders.Add(new OrderData(10253, "<b>CHOPS</b>", 58.17, "Bern"));
+                    Orders.Add(new OrderData(10254, "<b>RICSU</b>", 22.98, "Genève"));
+                    Orders.Add(new OrderData(10255, "<b>WELLI</b>", 13.97, "San Cristóbal"));
+                    Orders.Add(new OrderData(10256, "<b>HILAA</b>", 81.91, "Graz"));
+                    code += 5;
+                }
+            }
+            return Orders;
+        }
+
         public int? OrderID { get; set; }
         public string CustomerID { get; set; }
         public double? Freight { get; set; }
         public string ShipCity { get; set; }
     }
-    private void Change(Syncfusion.Blazor.Buttons.ChangeEventArgs<bool> args)
-    {
-        if(args.Checked)
-        {
-            IsEncode = false;
-        }
-        else
-        {
-            IsEncode = true;
-        }
-        Grid.Refresh();
-    }
-}
-```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VDhgZbMvAWBCLJJH?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+    {% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LtBAMZDRBetNXSsV?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 > * The [DisableHtmlEncode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_DisableHtmlEncode)  property disables HTML encoding for the corresponding column in the grid.
 > * If the property is set to **true**, any HTML tags in the column’s data will be displayed.
@@ -93,73 +122,82 @@ The auto wrap feature allows the cell content in the grid to wrap to the next li
 
 The following example demonstrates how to set the `AllowTextWrap` property to **true** and specify the wrap mode as **Content** by setting the `TextWrapSettings.WrapMode` property.Also change the `TextWrapSettings.wrapMode` property to **Content**,**Header** and **Both** on changing the dropdown value using the [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSwitch-1.html#Syncfusion_Blazor_Buttons_SfSwitch_1_ValueChange) event of the DropDownList component.
 
-```cshtml
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids
-@using Syncfusion.Blazor.DropDowns
-
-<label>Change the wrapmode of auto wrap feature:</label>
-<SfDropDownList TValue="WrapMode" TItem="ddlOrder" @bind-Value="@DropVal" DataSource="@LocalData" Width="100px">
-    <DropDownListFieldSettings Text="Text" Value="Value"></DropDownListFieldSettings>
-    <DropDownListEvents ValueChange="OnValueChange" TValue="WrapMode" TItem="ddlOrder"></DropDownListEvents>
-</SfDropDownList>
+@using BlazorApp1.Data
 
 <SfGrid @ref="Grid" DataSource="@Orders" GridLines="GridLine.Default" AllowTextWrap="true" Height="315">
-    <GridTextWrapSettings WrapMode="@DropVal"></GridTextWrapSettings>
+    <GridTextWrapSettings WrapMode="WrapMode.Content"></GridTextWrapSettings>
     <GridColumns>
-        <GridColumn Field=@nameof(Order.RollNo) HeaderText="Roll No" Width="140"></GridColumn>
-        <GridColumn Field=@nameof(Order.Name) HeaderText="Name of the inventor" Width="70"></GridColumn>
-        <GridColumn Field=@nameof(Order.PatentFamilies) HeaderText="No of patentfamilies" Width="80"></GridColumn>
-        <GridColumn Field=@nameof(Order.Country) HeaderText="Country" Width="100"></GridColumn>
-        <GridColumn Field=@nameof(Order.MainFields) HeaderText="Main fields of Invention" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.Name) HeaderText="Name of the inventor" Width="70"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.PatentFamilies) HeaderText="No of patentfamilies" Width="80"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.Country) HeaderText="Country" Width="100"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.Active) HeaderText="Active" Width="100"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.MainFields) HeaderText="Main fields of Invention" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
 
 @code {
-    private SfGrid<Order> Grid;
-
-    public WrapMode DropVal { get; set; } = WrapMode.Content;
-
-    public List<Order> Orders { get; set; }
-
+    private SfGrid<OrderData> Grid;
+    public List<OrderData> Orders { get; set; }
+      
     protected override void OnInitialized()
     {
-        Orders = Enumerable.Range(1, 75).Select(x => new Order()
-            {
-                RollNo = 1000 + x,
-                Name = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
-                PatentFamilies = 1000 + x * 5,
-                Country = (new string[] { "Australia", "Japan", "Canada", "India", "USA" })[new Random().Next(5)],
-                MainFields = (new string[] { "Printing, Digital paper, Internet, Electronics,Lab-on-a-chip, MEMS, Mechanical, VLSI", "Various", "Printing, Digital paper, Internet, Electronics, CGI, VLSI", "Automotive, Stainless steel products", "Gaming machines" })[new Random().Next(5)],
-            }).ToList();
-    }
-
-    public class Order
+        Orders = OrderData.GetAllRecords();
+    }    
+}
+{% endhighlight %}
+{% highlight c# tabtitle="OrderData.cs" %}
+public class OrderData
     {
-        public int? RollNo { get; set; }
+        public static List<OrderData> Orders = new List<OrderData>();
+        public OrderData()
+        {
+
+        }
+        public OrderData(string Name, int? PatentFamilies,string NumberofINPADOCpatents, string Country, string MainFields, string active)
+        {
+            this.Name = Name;
+            this.PatentFamilies = PatentFamilies;
+            this.NumberofINPADOCpatents = NumberofINPADOCpatents;
+            this.Country = Country;
+            this.MainFields = MainFields;
+            this.Active = active;
+        }
+
+        public static List<OrderData> GetAllRecords()
+        {
+            if (Orders.Count() == 0)
+            {
+                int code = 10;
+                for (int i = 1; i < 2; i++)
+                {
+                    Orders.Add(new OrderData("Kia Silverb", 4737, "9839", "Australia", "Printing, Digital paper, Internet, Electronics,Lab-on-a-chip, MEMS, Mechanical, VLSI", "1994-2016"));
+                    Orders.Add(new OrderData("Shunpei Yamazaki", 4677, "10000+", "Japan", "Various", "1976-2016"));
+                    Orders.Add(new OrderData("Lowell L. Wood, Jr.",13197, "1332", "Canada", "Printing, Digital paper, Internet, Electronics, CGI, VLSI", "1977-2016"));
+                    Orders.Add(new OrderData("Paul Lap", 1255, "3099", "India", "Automotive, Stainless steel products", "2000-2016"));
+                    Orders.Add(new OrderData("Gurtej Sandhu", 1240, "2038", "USA", "Gaming machines", "1991-2016"));
+                    Orders.Add(new OrderData("Shunpei Yamazaki", 1240, "4126", "Canada", "Printing, Digital paper, Internet, Electronics, CGI, VLSI", "2000-2016"));
+                    Orders.Add(new OrderData("Paul Lap", 1093, "3360", "USA", "Automotive, Stainless steel products", "1977 - 2016"));
+                    Orders.Add(new OrderData("Gurtej Sandhu", 993, "1398", "Japan", "Various", "1976-2016"));
+                    Orders.Add(new OrderData("Kia Silverb", 949,"NA", "India", "Printing, Digital paper, Internet, Electronics, CGI, VLSI", "1994-2016"));                  
+                    code += 5;
+                }
+            }
+            return Orders;
+        }
         public string Name { get; set; }
         public int? PatentFamilies { get; set; }
+        public string NumberofINPADOCpatents { get; set; }
         public string Country { get; set; }
         public string MainFields { get; set; }
+        public string Active { get; set; }
     }
-    public class ddlOrder
-    {
-        public string Text { get; set; }
-        public WrapMode Value { get; set; }
-    }
-    List<ddlOrder> LocalData = new List<ddlOrder>
-    {
-        new ddlOrder() { Text = "Both", Value = WrapMode.Both },
-        new ddlOrder() { Text = "Content", Value = WrapMode.Content },
-        new ddlOrder() { Text = "Header", Value = WrapMode.Header }
-    };
-    public void OnValueChange(ChangeEventArgs<WrapMode, ddlOrder> Args)
-    {
-        DropVal = Args.Value;
-        Grid.Refresh();
-    }
-}
-```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VNBAtuDxfZcysamd?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BtVAWZAMBpZNVRFf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Customize cell styles
 
@@ -171,45 +209,29 @@ To customize the appearance of the grid cell, you can use the [QueryCellInfo](ht
 
 The following example demonstrates how to add a `QueryCellInfo` event handler to the grid. In the event handler, checked whether the current column is **Freight** field and then applied the appropriate CSS class to the cell based on its value.
 
-```cshtml
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids
+@using BlazorApp1.Data
 
 <SfGrid DataSource="@Orders" AllowSelection="false" EnableHover="false" Height="315">
-    <GridEvents QueryCellInfo="CustomizeCell" TValue="Order"></GridEvents>
+    <GridEvents QueryCellInfo="CustomizeCell" TValue="OrderData"></GridEvents>
     <GridColumns>
-        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="140"></GridColumn>
-        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer ID" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.OrderDate) HeaderText="Order Date" Format="d" Type="ColumnType.Date" Width="140"></GridColumn>
-        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" Width="100"></GridColumn>
-        <GridColumn Field=@nameof(Order.ShipCity) HeaderText="Ship City" Width="100"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="140"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer ID" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" Format="C2" Width="100"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.ShipCity) HeaderText="Ship City" Width="100"></GridColumn>
     </GridColumns>
-</SfGrid>
-
-@code {
-    public List<Order> Orders { get; set; }
+</SfGrid> 
+@code {  
+    public List<OrderData> Orders { get; set; }
 
     protected override void OnInitialized()
     {
-        Orders = Enumerable.Range(1, 75).Select(x => new Order()
-            {
-                OrderID = 1000 + x,
-                CustomerID = (new string[] { "VINET", "TOMSP", "HANAR", "VICTE", "SUPRD", "HANAR", "CHOPS" })[new Random().Next(7)],
-                ShipCity = (new string[] { "Reims", "Münster", "Rio de Janeiro", "Lyon", "Charleroi" })[new Random().Next(5)],
-                OrderDate = DateTime.Now.AddDays(-x),
-                Freight = 6.2 * x,
-            }).ToList();
+        Orders = OrderData.GetAllRecords();
     }
-
-    public class Order
-    {
-        public int? OrderID { get; set; }
-        public string CustomerID { get; set; }
-        public DateTime? OrderDate { get; set; }
-        public double? Freight { get; set; }
-        public string ShipCity { get; set; }
-    }
-
-    public void CustomizeCell(QueryCellInfoEventArgs<Order> args)
+    
+    public void CustomizeCell(QueryCellInfoEventArgs<OrderData> args)
     {
         if (args.Column.Field == "Freight")
         {
@@ -227,22 +249,66 @@ The following example demonstrates how to add a `QueryCellInfo` event handler to
             }
         }
     }
-}
 
+}
 <style>
     .below-30 {
         background-color: orangered;
     }
-
     .below-80 {
         background-color: yellow;
     }
-
     .above-80 {
         background-color: greenyellow
     }
 </style>
-```
+{% endhighlight %}
+{% highlight c# tabtitle="OrderData.cs" %}
+    public class OrderData
+    {
+        public static List<OrderData> Orders = new List<OrderData>();
+        public OrderData()
+        {
+
+        }
+        public OrderData(int? OrderID,string CustomerID,double? Freight,string ShipCity)
+        {
+            this.OrderID = OrderID;
+            this.CustomerID = CustomerID;
+            this.Freight = Freight;
+            this.ShipCity = ShipCity;
+        }
+
+        public static List<OrderData> GetAllRecords()
+        {
+            if (Orders.Count() == 0)
+            {
+                int code = 10;
+                for (int i = 1; i < 2; i++)
+                {
+                    Orders.Add(new OrderData(10248, "VINET", 32.38, "Reims"));
+                    Orders.Add(new OrderData(10249, "TOMSP", 11.61, "Münster"));
+                    Orders.Add(new OrderData(10250, "HANAR", 65.83, "Rio de Janeiro"));
+                    Orders.Add(new OrderData(10251, "VICTE", 41.34, "Lyon"));
+                    Orders.Add(new OrderData(10252, "SUPRD", 51.30, "Charleroi"));
+                    Orders.Add(new OrderData(10253, "HANAR", 58.17, "Rio de Janeiro"));
+                    Orders.Add(new OrderData(10254, "CHOPS", 22.98, "Bern"));
+                    Orders.Add(new OrderData(10255, "RICSU", 148.33, "Genève"));
+                    Orders.Add(new OrderData(10256, "WELLI", 13.97, "Resende"));
+                    code += 5;
+                }
+            }
+            return Orders;
+        }
+
+        public int? OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public double? Freight { get; set; }
+        public string ShipCity { get; set; }
+    }
+{% endhighlight %}
+{% endtabs %}
+
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LDLgjvivAmfpAZcD?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 > The  [QueryCellInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.QueryCellInfoEventArgs-1.html) event is triggered for every cell of the grid, so it may impact the performance of the grid whether used to modify a large number of cells.
@@ -261,16 +327,18 @@ You can apply styles to the cells using CSS selectors. The Grid provides a class
 ```
 The following example demonstrates how to customize the appearance of a specific row in the grid on selection using ```className```.
 
-```cshtml
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids
+@using BlazorApp1.Data
 
 <SfGrid DataSource="@Orders" AllowSelection="true" AllowPaging="true">
     <GridSelectionSettings CellSelectionMode="CellSelectionMode.Box" Mode="SelectionMode.Cell" Type="SelectionType.Multiple"></GridSelectionSettings>
     <GridColumns>
-        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.ShipCity) HeaderText="Ship City" Width="100"></GridColumn>
-        <GridColumn Field=@nameof(Order.ShipName) HeaderText="Ship City" Width="100"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.ShipCity) HeaderText="Ship City" Width="100"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.ShipName) HeaderText="Ship City" Width="100"></GridColumn>
     </GridColumns>
 </SfGrid>
 <style>
@@ -281,29 +349,63 @@ The following example demonstrates how to customize the appearance of a specific
 </style>
 
 @code {
-    public List<Order> Orders { get; set; }
+  
+    public List<OrderData> Orders { get; set; }
 
     protected override void OnInitialized()
     {
-        Orders = Enumerable.Range(1, 75).Select(x => new Order()
-            {
-                OrderID = 1000 + x,
-                CustomerID = (new string[] { "VINET", "TOMSP", "HANAR", "VICTE", "SUPRD" })[new Random().Next(5)],                
-                ShipCity = (new string[] { "Reims", "Münster", "Rio de Janeiro", "Lyon", "Charleroi" })[new Random().Next(5)],
-                ShipName = (new string[] { "Around the Horn", "Berglunds snabbköp", "Blondel père et fils", "Ernst Handel" })[new Random().Next(4)],
-            }).ToList();
-    }
+        Orders = OrderData.GetAllRecords();
+    }   
 
-    public class Order
+}
+{% endhighlight %}
+{% highlight c# tabtitle="OrderData.cs" %}
+   public class OrderData
     {
+        public static List<OrderData> Orders = new List<OrderData>();
+        public OrderData()
+        {
+
+        }
+        public OrderData(int? OrderID,string CustomerID,string ShipCity,string ShipName)
+        {
+            this.OrderID = OrderID;
+            this.CustomerID = CustomerID;
+            this.ShipCity = ShipCity;
+            this.ShipName = ShipName;
+
+        }
+
+        public static List<OrderData> GetAllRecords()
+        {
+            if (Orders.Count() == 0)
+            {
+                int code = 10;
+                for (int i = 1; i < 2; i++)
+                {
+                    Orders.Add(new OrderData(10248, "VINET", "Reims", "Vins et alcol"));
+                    Orders.Add(new OrderData(10249, "TOMSP", "Münster", "Toms Spezialitäten"));
+                    Orders.Add(new OrderData(10250, "HANAR", "Rio de Janeiro", "Hanari Carnes"));
+                    Orders.Add(new OrderData(10251, "VICTE", "Lyon", "Victuailles en stock"));
+                    Orders.Add(new OrderData(10252, "SUPRD", "Charleroi", "Suprêmes délices"));
+                    Orders.Add(new OrderData(10253, "HANAR", "Rio de Janeiro", "Chop-suey Chinese"));
+                    Orders.Add(new OrderData(10254, "CHOPS", "Bern", "Richter Supermarkt"));
+                    Orders.Add(new OrderData(10255, "RICSU", "Genève", "Wellington Importadora"));
+                    Orders.Add(new OrderData(10256, "WELLI", "Resende", "HILARION-Abastos"));
+                    code += 5;
+                }
+            }
+            return Orders;
+        }
+
         public int? OrderID { get; set; }
         public string CustomerID { get; set; }
         public string ShipCity { get; set; }
         public string ShipName { get; set; }
-       
     }
-}
-```
+{% endhighlight %}
+{% endtabs %}
+
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LjVgjFsvqbeONlFV?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ### Using property
@@ -327,49 +429,85 @@ Here, setting the CustomAttributes property of the **ShipCity** column to an obj
 
 The following example demonstrates how to customize the appearance of the **OrderID** and **ShipCity** columns using custom attributes.
 
-```cshtml
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids
+@using BlazorApp1.Data
 
 <SfGrid DataSource="@Orders" Height="315">
     <GridColumns>
-        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" CustomAttributes="@(new Dictionary<string, object>(){ { "class", "custom-css" }})" TextAlign="TextAlign.Right" Width="140"></GridColumn>
-        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer ID" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.ShipCity) HeaderText="Ship City" CustomAttributes="@(new Dictionary<string, object>(){ { "class", "custom-css" }})" Width="100"></GridColumn>
-        <GridColumn Field=@nameof(Order.ShipName) HeaderText="Ship Name"  Width="100"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" CustomAttributes="@(new Dictionary<string, object>(){ { "class", "custom-css" }})" TextAlign="TextAlign.Right" Width="140"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer ID" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.ShipCity) HeaderText="Ship City" CustomAttributes="@(new Dictionary<string, object>(){ { "class", "custom-css" }})" Width="100"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.ShipName) HeaderText="Ship Name" Width="100"></GridColumn>
     </GridColumns>
 </SfGrid>
 
 @code {
-    public List<Order> Orders { get; set; }
+  
+    public List<OrderData> Orders { get; set; }
 
     protected override void OnInitialized()
     {
-        Orders = Enumerable.Range(1, 75).Select(x => new Order()
-            {
-                OrderID = 1000 + x,
-                CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
-                ShipCity = (new string[] { "Seattle", "Tacoma", "Redmond", "Kirkland", "London" })[new Random().Next(5)],
-                ShipName = (new string[] { "Around the Horn", "Berglunds snabbköp", "Blondel père et fils", "Ernst Handel" })[new Random().Next(4)],
-            }).ToList();
-    }
+        Orders = OrderData.GetAllRecords();
+    }   
 
-    public class Order
+}
+<style>
+    .custom-css {
+        background: #d7f0f4;
+        font-style: italic;
+        color: navy
+    }
+</style>
+{% endhighlight %}
+{% highlight c# tabtitle="OrderData.cs" %}
+   public class OrderData
     {
+        public static List<OrderData> Orders = new List<OrderData>();
+        public OrderData()
+        {
+
+        }
+        public OrderData(int? OrderID,string CustomerID,string ShipCity,string ShipName)
+        {
+            this.OrderID = OrderID;
+            this.CustomerID = CustomerID;
+            this.ShipCity = ShipCity;
+            this.ShipName = ShipName;
+
+        }
+
+        public static List<OrderData> GetAllRecords()
+        {
+            if (Orders.Count() == 0)
+            {
+                int code = 10;
+                for (int i = 1; i < 2; i++)
+                {
+                    Orders.Add(new OrderData(10248, "VINET", "Reims", "Vins et alcol"));
+                    Orders.Add(new OrderData(10249, "TOMSP", "Münster", "Toms Spezialitäten"));
+                    Orders.Add(new OrderData(10250, "HANAR", "Rio de Janeiro", "Hanari Carnes"));
+                    Orders.Add(new OrderData(10251, "VICTE", "Lyon", "Victuailles en stock"));
+                    Orders.Add(new OrderData(10252, "SUPRD", "Charleroi", "Suprêmes délices"));
+                    Orders.Add(new OrderData(10253, "HANAR", "Rio de Janeiro", "Chop-suey Chinese"));
+                    Orders.Add(new OrderData(10254, "CHOPS", "Bern", "Richter Supermarkt"));
+                    Orders.Add(new OrderData(10255, "RICSU", "Genève", "Wellington Importadora"));
+                    Orders.Add(new OrderData(10256, "WELLI", "Resende", "HILARION-Abastos"));
+                    code += 5;
+                }
+            }
+            return Orders;
+        }
+
         public int? OrderID { get; set; }
         public string CustomerID { get; set; }
         public string ShipCity { get; set; }
         public string ShipName { get; set; }
     }
-}
+{% endhighlight %}
+{% endtabs %}
 
-<style>
-    .custom-css {
-        background: #d7f0f4;
-        font-style: italic;
-        color:navy
-    }
-</style>
-```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LtVKDuDnTisVMfBa?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 > Custom attributes can be used to customize any cell in the grid, including header and footer cells.
@@ -386,73 +524,82 @@ There are three types of [ClipMode](https://help.syncfusion.com/cr/blazor/Syncfu
 
 The following example demonstrates, how to set the [ClipMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_ClipMode) property for the **Main Fields of Invention** column .Also change the `ClipMode` property to **Clip**,**Ellipsis** and **EllipsisWithTooltip** on changing the dropdown value using the [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSwitch-1.html#Syncfusion_Blazor_Buttons_SfSwitch_1_ValueChange) event of the DropDownList component
 
-```cshtml
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids
-@using Syncfusion.Blazor.DropDowns
-
- <label > Change the clip mode: </label>
- <SfDropDownList TValue="ClipMode" TItem="DdlClass" DataSource="@DdlData" Width="100px">
-      <DropDownListFieldSettings Text="Text" Value="Value"></DropDownListFieldSettings>
-      <DropDownListEvents ValueChange="OnChange" TValue="ClipMode" TItem="DdlClass"></DropDownListEvents>
- </SfDropDownList>
+@using BlazorApp1.Data
 
 <SfGrid @ref="Grid" DataSource="@Orders" AllowPaging="true" Height="315">
     <GridColumns>
-        <GridColumn Field=@nameof(Order.Inventor) HeaderText="Name of the inventor" Width="80"></GridColumn>
-        <GridColumn Field=@nameof(Order.PatentFamilies) HeaderText="No of patent families" Width="100"></GridColumn>
-        <GridColumn Field=@nameof(Order.Country) HeaderText="Country" Width="80"></GridColumn>
-        <GridColumn Field=@nameof(Order.NumberofINPADOCpatents) HeaderText="Number of INPADOC patents" Width="100"></GridColumn>
-        <GridColumn Field=@nameof(Order.MainFields) HeaderText="Main fields of Invention" ClipMode="@ClipVal" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.Inventor) HeaderText="Name of the inventor" ClipMode="ClipMode.Clip" Width="0"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.PatentFamilies) HeaderText="No of patent families" ClipMode="ClipMode.Ellipsis" Width="80"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.Country) HeaderText="Country" Width="80"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.NumberofINPADOCpatents) HeaderText="Number of INPADOC patents" Width="100"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.MainFields) HeaderText="Main fields of Invention" ClipMode="ClipMode.EllipsisWithTooltip" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
 
 @code {
-    public SfGrid<Order> Grid { get; set; }
-
-    public List<Order> Orders { get; set; }
-
-    public ClipMode ClipVal { get; set; } = ClipMode.Clip;
-
-    public void OnChange(ChangeEventArgs<ClipMode, DdlClass> Args)
-    {
-        ClipVal = Args.Value;
-        Grid.Refresh();
-    }
-
-    List<DdlClass> DdlData = new List<DdlClass>
-{
-        new DdlClass() { Text = "Clip", Value =ClipMode.Clip },
-        new DdlClass() { Text = "Ellipsis", Value = ClipMode.Ellipsis},
-        new DdlClass() { Text = "Ellipsis With Tooltip", Value = ClipMode.EllipsisWithTooltip }
-};
+    private SfGrid<OrderData> Grid;
+    public List<OrderData> Orders { get; set; }
+      
     protected override void OnInitialized()
     {
-        Orders = Enumerable.Range(1, 75).Select(x => new Order()
-            {
-                Inventor = (new string[] { "Kia Silverb", "Shunpei Yamazaki", "Lowell L. Wood, Jr.", "Paul Lap", "Gurtej Sandhu" })[new Random().Next(5)],
-                PatentFamilies = 1000 + x * 5,
-                NumberofINPADOCpatents = 9839 + x ,
-                Country = (new string[] { "Australia", "Japan", "Canada", "India", "USA" })[new Random().Next(5)],
-                MainFields = (new string[] { "Printing, Digital paper, Internet, Electronics,Lab-on-a-chip, MEMS, Mechanical, VLSI", "Various", "Printing, Digital paper, Internet, Electronics, CGI, VLSI", "Automotive, Stainless steel products", "Gaming machines" })[new Random().Next(5)],
-            }).ToList();
-    }
-    public class DdlClass
+        Orders = OrderData.GetAllRecords();
+    }   
+}
+{% endhighlight %}
+{% highlight c# tabtitle="OrderData.cs" %}
+    public class OrderData
     {
-        public string Text { get; set; }
-        public ClipMode Value { get; set; }
-    }
+        public static List<OrderData> Orders = new List<OrderData>();
+        public OrderData()
+        {
 
-    public class Order
-    {
+        }
+        public OrderData(string Inventor,int? PatentFamilies,string NumberofINPADOCpatents,string Country,string MainFields)
+        {
+          this.Inventor= Inventor;
+          this.PatentFamilies= PatentFamilies;
+          this.NumberofINPADOCpatents= NumberofINPADOCpatents;
+          this.Country= Country;
+          this.MainFields= MainFields;
+
+        }
+
+        public static List<OrderData> GetAllRecords()
+        {
+            if (Orders.Count() == 0)
+            {
+                int code = 10;
+                for (int i = 1; i < 2; i++)
+                {
+                    Orders.Add(new OrderData("Kia Silverb", 4737, "9839", "Australia", "Printing, Digital paper, Internet, Electronics,Lab-on-a-chip, MEMS, Mechanical, VLSI"));
+                    Orders.Add(new OrderData("Shunpei Yamazaki", 4677, "10000+", "Japan", "Various"));
+                    Orders.Add(new OrderData("Lowell L. Wood, Jr.",13197, "1332", "Canada", "Printing, Digital paper, Internet, Electronics, CGI, VLSI"));
+                    Orders.Add(new OrderData("Paul Lap", 1255, "3099", "India", "Automotive, Stainless steel products"));
+                    Orders.Add(new OrderData("Gurtej Sandhu", 1240, "2038", "USA", "Gaming machines"));
+                    Orders.Add(new OrderData("Shunpei Yamazaki", 1240, "4126", "Canada", "Printing, Digital paper, Internet, Electronics, CGI, VLSI"));
+                    Orders.Add(new OrderData("Paul Lap", 1093, "3360", "USA", "Automotive, Stainless steel products"));
+                    Orders.Add(new OrderData("Gurtej Sandhu", 993, "1398", "Japan", "Various"));
+                    Orders.Add(new OrderData("Kia Silverb", 949,"NA", "India", "Printing, Digital paper, Internet, Electronics, CGI, VLSI"));                  
+                    code += 5;
+                }
+            }
+            return Orders;
+        }
+
         public string Inventor { get; set; }
         public int? PatentFamilies { get; set; }
-        public int? NumberofINPADOCpatents { get; set; }
+        public string NumberofINPADOCpatents { get; set; }
         public string Country { get; set; }
         public string MainFields { get; set; }
-    }
-}
-```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hjBUNkZdWxzwuxNo?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+    } 
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LXhgWZUiVUpmPDmz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 > * By default, [Columns.ClipMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_ClipMode) value is **Ellipsis**.
 > * If you set the **width** property of a column, the clip mode feature will be automatically applied to that column if the content exceeds the specified width.
@@ -470,65 +617,92 @@ To enable custom tooltips for columns in the Grid,you can use the [Column Templa
 
 This is demonstrated in the following sample code, where the tooltip for the **FirstName** column is rendered using `Column Template`.
 
-```cshtml
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Popups
+@using BlazorApp1.Data
 
-<SfGrid DataSource="@Employees">
+<SfGrid DataSource="@Orders">
     <GridColumns>
-        <GridColumn Field=@nameof(EmployeeData.EmployeeID) HeaderText="Employee ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(EmployeeData.FirstName) HeaderText="First Name" Width="130">
+        <GridColumn Field=@nameof(OrderData.EmployeeID) HeaderText="Employee ID" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.FirstName) HeaderText="First Name" Width="130">
             <Template>
                 @{
-                    var employee = (context as EmployeeData);
+                    var employee = (context as OrderData);
                     Count++;
-                     <SfTooltip @key="@Count" Position="Position.BottomLeft">
+                    <SfTooltip @key="@Count" Position="Position.BottomLeft">
                         <ContentTemplate>
-                            
-                                @employee.FirstName
-                            
+                            @employee.FirstName
                         </ContentTemplate>
                         <ChildContent>
                             <span>@employee.FirstName</span>
                         </ChildContent>
-                      
                     </SfTooltip>
                 }
             </Template>
         </GridColumn>
-        <GridColumn Field=@nameof(EmployeeData.Title) HeaderText="Title" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(EmployeeData.HireDate) HeaderText="Hire Date" Format="d" TextAlign="TextAlign.Right" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.Title) HeaderText="Title" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.HireDate) HeaderText="Hire Date" Format="d" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="150"></GridColumn>
     </GridColumns>
 </SfGrid>
 
-@code{
-    public List<EmployeeData> Employees { get; set; }
-
+@code {
     int Count { get; set; } = 0;
-
+    private SfGrid<OrderData> Grid;
+    public List<OrderData> Orders { get; set; }
+      
     protected override void OnInitialized()
     {
-        Employees = Enumerable.Range(1, 9).Select(x => new EmployeeData()
-        {
-            EmployeeID = x,
-            FirstName = (new string[] { "Nancy", "Andrew", "Janet", "Margaret", "Steven" })[new Random().Next(5)],
-            LastName = (new string[] { "Davolio", "Fuller", "Leverling", "Peacock", "Buchanan" })[new Random().Next(5)],
-            Title = (new string[] { "Sales Representative", "Vice President, Sales", "Sales Manager",
-                                    "Inside Sales Coordinator" })[new Random().Next(4)],
-            HireDate = DateTime.Now.AddDays(-x),
-        }).ToList();
-    }
-
-    public class EmployeeData
+        Orders = OrderData.GetAllRecords();
+    }     
+}
+{% endhighlight %}
+{% highlight c# tabtitle="OrderData.cs" %}
+public class OrderData
     {
+        public static List<OrderData> Orders = new List<OrderData>();
+        public OrderData()
+        {
+
+        }
+        public OrderData( int? EmployeeID,string FirstName,string Title,DateTime HireDate)
+        {
+            this.EmployeeID= EmployeeID;
+            this.FirstName= FirstName;
+            this.Title= Title;
+            this.HireDate = HireDate;
+        }
+
+        public static List<OrderData> GetAllRecords()
+        {
+            if (Orders.Count() == 0)
+            {
+                int code = 10;
+                for (int i = 1; i < 2; i++)
+                {
+                    Orders.Add(new OrderData(1, "Nancy","Sales Representative",new DateTime(1996,07,06 )));
+                    Orders.Add(new OrderData(2, "Andrew", "Vice President, Sales", new DateTime(1996, 07, 06)));
+                    Orders.Add(new OrderData(3, "Janet", "Sales Manager", new DateTime(1996, 07, 06)));
+                    Orders.Add(new OrderData(4, "Margaret", "Inside Sales Coordinator", new DateTime(1996, 07, 06)));
+                    Orders.Add(new OrderData(5, "Steven", "Sales Representative", new DateTime(1996, 07, 06)));
+                    Orders.Add(new OrderData(6, "Nancy", "Inside Sales Coordinator", new DateTime(1996, 07, 06)));
+                    Orders.Add(new OrderData(7, "Janet", "Vice President, Sales", new DateTime(1996, 07, 06)));
+                    Orders.Add(new OrderData(8, "Steven", "Inside Sales Coordinator", new DateTime(1996, 07, 06)));
+                    Orders.Add(new OrderData(9,"Andrew", "Sales Manager", new DateTime(1996, 07, 06)));                             
+                    code += 5;
+                }
+            }
+            return Orders;
+        }      
         public int? EmployeeID { get; set; }
         public string FirstName { get; set; }
-        public string LastName { get; set; }
         public string Title { get; set; }
-        public DateTime? HireDate { get; set; }
-    }
-}
-```
+        public DateTime HireDate { get; set; }
+    }  
+{% endhighlight %}
+{% endtabs %}
+
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hDBUXxhczXWCAKzo?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Grid lines
@@ -545,75 +719,103 @@ The [GridLines](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.Sf
 
 The following example demonstrates how to set the `GridLines` property based on changing the dropdown value using the [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSwitch-1.html#Syncfusion_Blazor_Buttons_SfSwitch_1_ValueChange) event of the DropDownList component.
 
-```cshtml
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.DropDowns
+@using BlazorApp1.Data
 
-<label > Change the grid lines: </label>
-<SfDropDownList TValue="GridLine" TItem="DdlClass" DataSource="@DdlData" Width="100px">
-   <DropDownListFieldSettings Text="Text" Value="Value"></DropDownListFieldSettings>
-   <DropDownListEvents ValueChange="OnChange" TValue="GridLine" TItem="DdlClass"></DropDownListEvents>
+<label> Change the grid lines: </label>
+<SfDropDownList TValue="GridLine" TItem="DropDownOrder" DataSource="@DropDownValue" Width="100px">
+    <DropDownListFieldSettings Text="Text" Value="Value"></DropDownListFieldSettings>
+    <DropDownListEvents ValueChange="OnChange" TValue="GridLine" TItem="DropDownOrder"></DropDownListEvents>
 </SfDropDownList>
-
-
-<SfGrid DataSource="@Orders" GridLines="@GridLineVal" Height="315">
+<SfGrid DataSource="@Orders" GridLines="@GridLineValue" Height="315">
     <GridColumns>
-        <GridColumn Field=@nameof(Order.Inventor) HeaderText="Name of the inventor" Width="180"></GridColumn>
-        <GridColumn Field=@nameof(Order.PatentFamilies) HeaderText="No of patent families" Width="180"></GridColumn>
-        <GridColumn Field=@nameof(Order.Country) HeaderText="Country" Width="140"></GridColumn>
-        <GridColumn Field=@nameof(Order.Active) HeaderText="Active" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.MainFields) HeaderText="Main fields of Invention" Width="200"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.Inventor) HeaderText="Name of the inventor" Width="180"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.PatentFamilies) HeaderText="No of patent families" Width="180"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.Country) HeaderText="Country" Width="140"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.Active) HeaderText="Active" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.MainFields) HeaderText="Main fields of Invention" Width="200"></GridColumn>
     </GridColumns>
 </SfGrid>
 
-@code {
-    public SfGrid<Order> Grid { get; set; }
+@code {   
+    public List<OrderData> Orders { get; set; }
+    public GridLine GridLineValue { get; set; } = GridLine.Both;
 
-    public List<Order> Orders { get; set; }
-
-    public GridLine GridLineVal { get; set; } = GridLine.Both;
-
-    public void OnChange(ChangeEventArgs<GridLine, DdlClass> Args)
-    {
-        GridLineVal = Args.Value;
-    }
-
-    List<DdlClass> DdlData = new List<DdlClass>
-{
-        new DdlClass() { Text = "Default", Value =GridLine.Default },
-        new DdlClass() { Text = "Horizontal", Value = GridLine.Horizontal},
-        new DdlClass() { Text = "Vertical", Value = GridLine.Vertical },
-        new DdlClass() { Text = "Both", Value = GridLine.Both },
-        new DdlClass() { Text = "None", Value = GridLine.None }
-};
     protected override void OnInitialized()
     {
-        Orders = Enumerable.Range(1, 75).Select(x => new Order()
-            {
-
-                Inventor = (new string[] { "Kia Silverb", "Shunpei Yamazaki", "Lowell L. Wood, Jr.", "Paul Lap", "Gurtej Sandhu" })[new Random().Next(5)],
-                PatentFamilies = 1000 + x * 5,
-                Active = (new string[] { "1888(b)-1965", "1976-2010", "1998-2016", "1976-2016", "1922(b)-2012" })[new Random().Next(5)],
-                Country = (new string[] { "Australia", "Japan", "Canada", "India", "USA" })[new Random().Next(5)],
-                MainFields = (new string[] { "Printing, Digital paper, Internet, Electronics,Lab-on-a-chip, MEMS, Mechanical, VLSI", "Various", "Printing, Digital paper, Internet, Electronics, CGI, VLSI", "Automotive, Stainless steel products", "Gaming machines" })[new Random().Next(5)],
-            }).ToList();
+        Orders = OrderData.GetAllRecords();
     }
-    public class DdlClass
+    public class DropDownOrder
     {
         public string Text { get; set; }
         public GridLine Value { get; set; }
     }
-
-    public class Order
+    List<DropDownOrder> DropDownValue = new List<DropDownOrder>
     {
+        new DropDownOrder() { Text = "Default", Value =GridLine.Default },
+        new DropDownOrder() { Text = "Horizontal", Value = GridLine.Horizontal},
+        new DropDownOrder() { Text = "Vertical", Value = GridLine.Vertical },
+        new DropDownOrder() { Text = "Both", Value = GridLine.Both },
+        new DropDownOrder() { Text = "None", Value = GridLine.None }
+    };
+    public void OnChange(ChangeEventArgs<GridLine, DropDownOrder> Args)
+    {
+        GridLineValue = Args.Value;
+    }
+}
+{% endhighlight %}
+{% highlight c# tabtitle="OrderData.cs" %}
+   public class OrderData
+    {
+        public static List<OrderData> Orders = new List<OrderData>();
+        public OrderData()
+        {
+
+        }
+        public OrderData(string Inventor,int? PatentFamilies,string Active,string Country,string MainFields)
+        {
+           this.Inventor = Inventor;
+            this.PatentFamilies = PatentFamilies;
+            this.Active = Active;
+            this.Country = Country;
+            this.MainFields = MainFields;
+
+        }
+
+        public static List<OrderData> GetAllRecords()
+        {
+            if (Orders.Count() == 0)
+            {
+                int code = 10;
+                for (int i = 1; i < 2; i++)
+                {
+                    Orders.Add(new OrderData("Kia Silverbrook", 4737, "1994-2016", "Australia","Printing, Digital paper, Internet, Electronics,Lab-on-a-chip, MEMS, Mechanical"));
+                    Orders.Add(new OrderData("Shunpei Yamazaki", 4677, "1976-2016", "Japan", "Thin film transistors, Liquid crystal displays, Solar cells, Flash memory, OLED"));
+                    Orders.Add(new OrderData("Lowell L. Wood, Jr.", 1419, "1977-2016", "USA", "Mosquito laser, Nuclear weapons"));
+                    Orders.Add(new OrderData("Paul Lapstun", 1281, "2000-2016", "Australia", "Printing, Digital paper, Internet, Electronics, CGI, VLSI"));
+                    Orders.Add(new OrderData("Gurtej Sandhu", 1255, "1991-2016","India", "Thin film processes and materials, VLSI, Semiconductor device fabrication"));
+                    Orders.Add(new OrderData("Jun Koyama", 1240, "1991-2016", "Japan", "Thin film transistors, Liquid crystal displays, OLED"));
+                    Orders.Add(new OrderData("Roderick A. Hyde", 1240, "2001-2016", "USA", "Various"));
+                    Orders.Add(new OrderData("Leonard Forbes", 1093, "1991-2016", "Canada", "Semiconductor Memories, CCDs, Thin film processes and materials, VLSI"));
+                    Orders.Add(new OrderData("Thomas Edison", 1084, "1847(b)-1931(d)", "USA", "Electric power, Lighting, Batteries, Phonograph, Cement, Telegraphy, Mining"));
+                    code += 5;
+                }
+            }
+            return Orders;
+        }
+
         public string Inventor { get; set; }
         public int? PatentFamilies { get; set; }
         public string Active { get; set; }
         public string Country { get; set; }
         public string MainFields { get; set; }
     }
-}
-```
+{% endhighlight %}
+{% endtabs %}
+
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LNhgjYDHsYMePtHJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 > By default, the DataGrid renders with **Default** mode.
