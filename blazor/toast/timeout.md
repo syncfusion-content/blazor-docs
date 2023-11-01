@@ -11,7 +11,7 @@ documentation: ug
 
 The toast can be expired based on the `Timeout` property. The toast can live till the time out reaches without user interaction, a time out value is considered as a millisecond.
 
-* The `Timeout` delay can be visually represented using [Progress Bar](./config/#progress-bar).
+* The `Timeout` delay can be visually represented using [Progress Bar](./config#progress-bar).
 
 * The `ExtendedTimeOut` property determines how long the toast should be displayed after a user hovers over it.
 

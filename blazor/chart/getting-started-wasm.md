@@ -23,7 +23,7 @@ You can create a **Blazor WebAssembly App** using Visual Studio via [Microsoft T
 
 ## Install Syncfusion Blazor Charts NuGet in the App
 
-To add Blazor Chart component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install [Syncfusion.Blazor.Charts](https://www.nuget.org/packages/Syncfusion.Blazor.Charts). Alternatively, you can utilize the following package manager command to achieve the same.
+To add **Blazor Chart** component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install [Syncfusion.Blazor.Charts](https://www.nuget.org/packages/Syncfusion.Blazor.Charts). Alternatively, you can utilize the following package manager command to achieve the same.
 
 {% tabs %}
 {% highlight C# tabtitle="Package Manager" %}
@@ -72,7 +72,7 @@ await builder.Build().RunAsync();
 
 ## Add script resources
 
-The script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Reference the script in the `<head>` of the main page as follows: 
+The script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Reference the script in the `<head>` of the main page as follows:
 
 * For Blazor WebAssembly app, include it in the **~/index.html** file.
 
@@ -148,7 +148,7 @@ Now, map the data fields  `Month` and `Sales` to the series [XName](https://help
         public string Month { get; set;}
         public double SalesValue { get; set;}
     }
-    
+
     public List<SalesInfo> Sales = new List<SalesInfo>
     {
         new SalesInfo { Month = "Jan", SalesValue = 35 },
