@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Apply styles to the specific grid when the page has multiple DataGrid Component| Syncfusion
-description: Checkout and learn here all about Apply styles to the specific grid when page the has multiple grids in Syncfusion Blazor DataGrid component and more.
+description: Checkout and learn here all about apply styles to the specific grid in Syncfusion Blazor DataGrid component and more.
 platform: Blazor
 control: DataGrid
 documentation: ug
@@ -111,6 +111,5 @@ Following a code example to demonstrate how to apply a specific style to a heade
     } 
 {% endhighlight %}
 {% endtabs %}
-
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rDBqCWNBqXzfsRIR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
