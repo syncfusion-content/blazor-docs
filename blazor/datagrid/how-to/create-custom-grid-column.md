@@ -15,8 +15,6 @@ In the following sample code, there are two custom columns defined inside the Gr
 
 Extend the GridColumn components in the below way and define your custom columns and their properties. These properties could include header text alignment, column type, text alignment, width, and more.
 
-
-
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids
