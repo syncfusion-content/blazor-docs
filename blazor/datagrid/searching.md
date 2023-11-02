@@ -276,8 +276,7 @@ By default, the datagrid will initiate searching operation after the Enter key i
         <ToolbarItems>
             <ToolbarItem Type="ItemType.Input" Align="Syncfusion.Blazor.Navigations.ItemAlign.Right">
                 <Template>
-                    <SfTextBox Placeholder="Enter values to search" Input="OnInput"></SfTextBox>
-                    <span class="e-search-icon e-icons"></span>
+                    <SfTextBox @ref="SearchBoxObj" Placeholder="Enter values to search" Input="OnInput" Created="AddSearchIcon"></SfTextBox>
                 </Template>
             </ToolbarItem>
         </ToolbarItems>
@@ -291,6 +290,8 @@ By default, the datagrid will initiate searching operation after the Enter key i
 </SfGrid>
 
 @code{
+    SfTextBox SearchBoxObj;
+
     private SfGrid<Order> DefaultGrid;
 
     public List<Order> Orders { get; set; }
@@ -298,6 +299,11 @@ By default, the datagrid will initiate searching operation after the Enter key i
     public void OnInput(InputEventArgs args)
     {
         this.DefaultGrid.Search(args.Value);
+    }
+
+    public void AddSearchIcon()
+    {
+        this.SearchBoxObj.AddIconAsync("append", "e-icons e-search-icon");
     }
 
     public class Order
