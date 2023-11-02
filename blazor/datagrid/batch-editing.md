@@ -478,3 +478,97 @@ window.selectContent = function () {
 ```
 
 N> [View Sample in GitHub.](https://github.com/SyncfusionExamples/blazor-datagrid-select-text-in-a-cell-when-batch-editing)
+## Customizing Batch Edited Cells in the DataGrid using the Cell Saved Event
+
+To customize the appearance of batch-edited cells in the DataGrid, you can use the [CellInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.CellSaveArgs-1.html#Syncfusion_Blazor_Grids_CellSaveArgs_1_CellInfo) property within the [CellSaveArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.CellSaveArgs-1.html) arguments in the [CellSaved](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_CellSaved) event. This event is triggered whenever a cell is saved after being edited. The `CellSaved` event handler receives a `CellSaveArgs` object that contains details about the saved cell, allowing you to apply custom styles and attributes using the `CellInfo` property.
+
+Following a code example to Customize the edited cell belongs to the **CustomerID** column and then add a class, set a background style, and add a custom attribute to the cell using the `CellInfo` object available in the `CellSaveArgs`
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+@using Syncfusion.Blazor.Grids
+
+
+<SfGrid @ref="grid" TValue="OrderData" DataSource="@GridData" AllowPaging="true" Toolbar="@(new List<string>() { "Add", "Delete", "Update", "Cancel" })" Height="315">
+    <GridEvents CellSaved="CellSavedHandler" TValue="OrderData"></GridEvents>
+    <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true" Mode="EditMode.Batch"></GridEditSettings>
+    <GridColumns>
+        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" IsPrimaryKey="true" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.OrderDate) HeaderText="Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.ShippedDate) HeaderText="Shipped Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.ShipCountry) HeaderText="Ship Country" Visible="false" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.ShipCity) HeaderText="Ship City" Visible="false" Width="150"></GridColumn>
+    </GridColumns>
+</SfGrid>
+@code {
+    public List<OrderData> GridData { get; set; }
+    SfGrid<OrderData> grid { get; set; }
+
+    protected override void OnInitialized()
+    {
+        GridData = OrderData.GetAllRecords();
+    }
+
+    public void CellSavedHandler(CellSaveArgs<OrderData> args)
+    {
+        if (args.Column.Field == "CustomerID")
+        {
+            args.CellInfo.AddClass(new string[] { "customer-class" });
+            args.CellInfo.AddStyle(new string[] { "background: yellow" });
+            args.CellInfo.SetAttribute(new Dictionary<string, object>() { { "attribute-test", "attribute-added" } });
+        }
+    }
+}
+{% endhighlight %}
+{% highlight c# tabtitle="OrderData.cs" %}
+ public class OrderData
+ {
+     public static List<OrderData> Orders = new List<OrderData>();
+     public OrderData()
+     {
+
+     }
+     public OrderData(int? OrderID, string CustomerID, string ShipCountry, double Freight, DateTime OrderDate, DateTime ShippedDate, string ShipCity)
+     {
+         this.OrderID = OrderID;
+         this.CustomerID = CustomerID;
+         this.ShipCountry = ShipCountry;
+         this.Freight = Freight;
+         this.OrderDate = OrderDate;
+         this.ShippedDate = ShippedDate;
+         this.ShipCity = ShipCity;
+     }
+     public static List<OrderData> GetAllRecords()
+     {
+         if (Orders.Count() == 0)
+         {
+             int code = 10;
+             for (int i = 1; i < 2; i++)
+             {
+                 Orders.Add(new OrderData(10248, "ALFKI", "France", 33.33, new DateTime(1996, 07, 07), new DateTime(1996, 08, 07), "Reims"));
+                 Orders.Add(new OrderData(10249, "ANANTR", "Germany", 89.76, new DateTime(1996, 07, 12), new DateTime(1996, 08, 08), "Münster"));
+                 Orders.Add(new OrderData(10250, "ANTON", "Brazil", 78.67, new DateTime(1996, 07, 13), new DateTime(1996, 08, 09), "Rio de Janeiro"));
+                 Orders.Add(new OrderData(10251, "BLONP", "Belgium", 55.65, new DateTime(1996, 07, 14), new DateTime(1996, 08, 10), "Lyon"));
+                 Orders.Add(new OrderData(10252, "BOLID", "Venezuela", 11.09, new DateTime(1996, 07, 15), new DateTime(1996, 08, 11), "Charleroi"));
+                 Orders.Add(new OrderData(10253, "BLONP", "Venezuela", 98.98, new DateTime(1996, 07, 16), new DateTime(1996, 08, 12), "Lyon"));
+                 Orders.Add(new OrderData(10254, "ANTON", "Belgium", 78.75, new DateTime(1996, 07, 17), new DateTime(1996, 08, 13), "Rio de Janeiro"));
+                 Orders.Add(new OrderData(10255, "ANANTR", "Germany", 44.07, new DateTime(1996, 07, 18), new DateTime(1996, 08, 14), "Münster"));
+                 Orders.Add(new OrderData(10256, "ALFKI", "France", 67.74, new DateTime(1996, 07, 19), new DateTime(1996, 08, 15), "Reims"));
+                 code += 5;
+             }
+         }
+         return Orders;
+     }
+     public int? OrderID { get; set; }
+     public string CustomerID { get; set; }
+     public DateTime OrderDate { get; set; }
+     public DateTime ShippedDate { get; set; }
+     public string ShipCountry { get; set; }
+     public double Freight { get; set; }
+     public string ShipCity { get; set; }
+
+ }
+{% endhighlight %}
+{% endtabs %}
