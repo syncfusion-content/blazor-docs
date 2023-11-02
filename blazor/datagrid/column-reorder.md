@@ -15,45 +15,78 @@ To reorder the columns, set the [AllowReordering](https://help.syncfusion.com/cr
 
 Here’s an example for column reordering in your Grid component:
 
-```cshtml
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids
+@using BlazorApp1.Data
 
-<SfGrid DataSource="@Orders" Height="315" AllowReordering="true" AllowPaging="true">
+<SfGrid DataSource="@Orders" Height="315" AllowResizing="true" Width="800">
     <GridColumns>
-        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer ID" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.ShipCity) HeaderText="Ship City" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.ShipName) HeaderText="Ship Name" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" MinWidth="100" MaxWidth="200" AutoFit=true TextAlign="TextAlign.Right" Width="200"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer ID" MinWidth="8" Width="150" AutoFit=true></GridColumn>
+        <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" MinWidth="10" AutoFit=true Width="150"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.ShipCity) HeaderText="Ship City" MinWidth="8" AutoFit=true Width="180"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.ShipCountry) HeaderText="Ship Country" MinWidth="8" Width="150" AutoFit=true></GridColumn>
     </GridColumns>
 </SfGrid>
 
 @code {
-    public List<Order> Orders { get; set; }
-
+    public List<OrderData> Orders { get; set; }
+   
     protected override void OnInitialized()
     {
-        Orders = Enumerable.Range(1, 75).Select(x => new Order()
-            {
-                OrderID = 1000 + x,
-                CustomerID = (new string[] { "VINET", "TOMSP", "HANAR", "VICTE", "SUPRD" })[new Random().Next(5)],
-                ShipCity = (new string[] { "Reims", "Münster", "Rio de Janeiro", "Lyon", "Charleroi" })[new Random().Next(5)],
-                ShipName = (new string[] { "Vins et alcool", "Toms Spezialitäten", "Hanari Carnes", "Victuailles en stock", "Suprêmes délices" })[new Random().Next(5)]
-            }).ToList();
-    }
-
-    public class Order
+        Orders = OrderData.GetAllRecords();
+    }    
+}
+{% endhighlight %}
+{% highlight c# tabtitle="OrderData.cs" %}
+   public class OrderData
     {
+        public static List<OrderData> Orders = new List<OrderData>();      
+        public OrderData()
+        {
+
+        }
+        public OrderData(int? OrderID,string CustomerID, string ShipCity, string ShipName)
+        {
+           this.OrderID = OrderID;
+           this.CustomerID = CustomerID;
+           this.ShipCity = ShipCity;   
+           this.ShipName = ShipName;            
+        }
+        public static List<OrderData> GetAllRecords()
+        {
+            if (Orders.Count() == 0)
+            {
+                int code = 10;
+                for (int i = 1; i < 2; i++)
+                {
+                    Orders.Add(new OrderData(10248, "VINET", "Reims", "Vins et alcool"));
+                    Orders.Add(new OrderData(10249, "TOMSP", "Münster", "Toms Spezialitäten"));
+                    Orders.Add(new OrderData(10250, "HANAR", "Rio de Janeiro", "Hanari Carnes"));
+                    Orders.Add(new OrderData(10251, "VICTE", "Lyon", "Victuailles en stock"));
+                    Orders.Add(new OrderData(10252, "SUPRD", "Charleroi", "Suprêmes délices"));
+                    Orders.Add(new OrderData(10253, "HANAR", "Rio de Janeiro", "Hanari Carnes"));
+                    Orders.Add(new OrderData(10254, "VINET", "Reims", "Vins et alcool"));
+                    Orders.Add(new OrderData(10255,"TOMSP", "Münster", "Toms Spezialitäten"));
+                    Orders.Add(new OrderData(10256, "TOMSP", "Münster", "Toms Spezialitäten"));
+                    code += 5;
+                }
+            }
+            return Orders;
+        }
         public int? OrderID { get; set; }
         public string CustomerID { get; set; }
         public string ShipCity { get; set; }
         public string ShipName { get; set; }
     }
-}
-```
+{% endhighlight %}
+{% endtabs %}
+
 
 The following represents Reordering of columns
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hDrKjPqjiHRYBUgm?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LjVqWMNCpGBNEsbF?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 > * You can disable reordering a particular column by setting the [AllowReordering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_AllowReordering) property of **GridColumn** as false.
 <br/> * When columns are reordered, the position of the corresponding column data will also be changed. As a result, you should ensure that any additional code or logic that relies on the order of the column data is updated accordingly.
@@ -64,42 +97,74 @@ By default, all columns in the Syncfusion Blazor Grid can be reordered by draggi
 
 In this example, the **ShipCity** column is prevented from being reordered by setting the `AllowReordering` property to **false**.
 
-```cshtml
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids
+@using BlazorApp1.Data
 
 <SfGrid DataSource="@Orders" Height="315" AllowReordering="true" AllowPaging="true">
     <GridColumns>
-        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer ID" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.ShipCity) HeaderText="Ship City" AllowReordering="false" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.ShipName) HeaderText="Ship Name" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer ID" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.ShipCity) HeaderText="Ship City" TextAlign="TextAlign.Right" AllowReordering="false" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.ShipName) HeaderText="Ship Name" TextAlign="TextAlign.Right" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
-
-@code {
-    public List<Order> Orders { get; set; }
-
+@code {    
+    public List<OrderData> Orders { get; set; }   
     protected override void OnInitialized()
     {
-        Orders = Enumerable.Range(1, 75).Select(x => new Order()
-            {
-                OrderID = 1000 + x,
-                CustomerID = (new string[] { "VINET", "TOMSP", "HANAR", "VICTE", "SUPRD" })[new Random().Next(5)],
-                ShipCity = (new string[] { "Reims", "Münster", "Rio de Janeiro", "Lyon", "Charleroi" })[new Random().Next(5)],
-                ShipName = (new string[] { "Vins et alcool", "Toms Spezialitäten", "Hanari Carnes", "Victuailles en stock", "Suprêmes délices" })[new Random().Next(5)]
-            }).ToList();
+        Orders = OrderData.GetAllRecords();       
     }
-
-    public class Order
+}
+{% endhighlight %}
+{% highlight c# tabtitle="OrderData.cs" %}
+    public class OrderData
     {
+        public static List<OrderData> Orders = new List<OrderData>();
+        
+       
+        public OrderData()
+        {
+
+        }
+        public OrderData(int? OrderID,string CustomerID, string ShipCity, string ShipName)
+        {
+           this.OrderID = OrderID;
+           this.CustomerID = CustomerID;
+           this.ShipCity = ShipCity;   
+           this.ShipName = ShipName;            
+        }
+        public static List<OrderData> GetAllRecords()
+        {
+            if (Orders.Count() == 0)
+            {
+                int code = 10;
+                for (int i = 1; i < 2; i++)
+                {
+                    Orders.Add(new OrderData(10248, "VINET", "Reims", "Vins et alcool"));
+                    Orders.Add(new OrderData(10249, "TOMSP", "Münster", "Toms Spezialitäten"));
+                    Orders.Add(new OrderData(10250, "HANAR", "Rio de Janeiro", "Hanari Carnes"));
+                    Orders.Add(new OrderData(10251, "VICTE", "Lyon", "Victuailles en stock"));
+                    Orders.Add(new OrderData(10252, "SUPRD", "Charleroi", "Suprêmes délices"));
+                    Orders.Add(new OrderData(10253, "HANAR", "Rio de Janeiro", "Hanari Carnes"));
+                    Orders.Add(new OrderData(10254, "VINET", "Reims", "Vins et alcool"));
+                    Orders.Add(new OrderData(10255,"TOMSP", "Münster", "Toms Spezialitäten"));
+                    Orders.Add(new OrderData(10256, "TOMSP", "Münster", "Toms Spezialitäten"));
+                    code += 5;
+                }
+            }
+            return Orders;
+        }
         public int? OrderID { get; set; }
         public string CustomerID { get; set; }
         public string ShipCity { get; set; }
         public string ShipName { get; set; }
-    }
-}
-```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BNrAjPKtCQvJlPJv?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+    } 
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LXrqWiZWTmfFUyGc?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Reorder columns externally
 
@@ -116,53 +181,82 @@ Here is an example of how to use the `ReorderColumnByIndexAsync` method:
 
 In this example, we are moving the column at index 1 to index 2.
 
-```cshtml
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Buttons
+@using BlazorApp1.Data
 
-<SfButton OnClick="reOrder">REORDER COLUMN BY INDEX</SfButton>
-
+<SfButton OnClick="ReOrder">REORDER COLUMN BY INDEX</SfButton>
 <SfGrid @ref="Grid" DataSource="@Orders" Height="315" AllowReordering="true" AllowPaging="true">
     <GridColumns>
-        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer ID" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.ShipCity) HeaderText="Ship City" TextAlign="TextAlign.Right" Width="130"></GridColumn>
-        <GridColumn Field=@nameof(Order.ShipRegion) HeaderText="Ship Region" TextAlign="TextAlign.Right" Width="130"></GridColumn>
-        <GridColumn Field=@nameof(Order.ShipName) HeaderText="Ship Name" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer ID" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.ShipCity) HeaderText="Ship City" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.ShipRegion) HeaderText="Ship Region" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.ShipName) HeaderText="Ship Name" TextAlign="TextAlign.Right" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
 
 @code {
-    private SfGrid<Order> Grid;
-    public List<Order> Orders { get; set; }
-
+    private SfGrid<OrderData> Grid;
+    public List<OrderData> Orders { get; set; }   
     protected override void OnInitialized()
     {
-        Orders = Enumerable.Range(1, 75).Select(x => new Order()
-            {
-                OrderID = 1000 + x,
-                CustomerID = (new string[] { "VINET", "TOMSP", "HANAR", "VICTE", "SUPRD" })[new Random().Next(5)],
-                ShipCity = (new string[] { "Reims", "Münster", "Rio de Janeiro", "Lyon", "Charleroi" })[new Random().Next(5)],
-                ShipRegion = (new string[] { "CJ", "SP", "RJ", "Táchira", "NM" })[new Random().Next(5)],
-                ShipName = (new string[] { "Vins et alcool", "Toms Spezialitäten", "Hanari Carnes", "Victuailles en stock", "Suprêmes délices" })[new Random().Next(5)]
-            }).ToList();
+        Orders = OrderData.GetAllRecords();       
     }
-
-    public class Order
-    {
-        public int? OrderID { get; set; }
-        public string CustomerID { get; set; }
-        public string ShipCity { get; set; }
-        public string ShipRegion { get; set; }
-        public string ShipName { get; set; }
-    }
-
-    public void reOrder()
+    public void ReOrder()
     {
         this.Grid.ReorderColumnByIndexAsync(1, 2);
     }
 }
-```
+{% endhighlight %}
+{% highlight c# tabtitle="OrderData.cs" %}
+    public class OrderData
+    {
+        public static List<OrderData> Orders = new List<OrderData>();      
+        public OrderData()
+        {
+
+        }
+        public OrderData(int? OrderID,string CustomerID, string ShipCity, string ShipName,string ShipRegion)
+        {
+           this.OrderID = OrderID;
+           this.CustomerID = CustomerID;
+           this.ShipCity = ShipCity;   
+           this.ShipName = ShipName;
+           this.ShipRegion = ShipRegion;            
+        }
+        public static List<OrderData> GetAllRecords()
+        {
+            if (Orders.Count() == 0)
+            {
+                int code = 10;
+                for (int i = 1; i < 2; i++)
+                {
+                    Orders.Add(new OrderData(10248, "VINET", "Reims", "Vins et alcool", "CJ"));
+                    Orders.Add(new OrderData(10249, "TOMSP", "Münster", "Toms Spezialitäten", "SP"));
+                    Orders.Add(new OrderData(10250, "HANAR", "Rio de Janeiro", "Hanari Carnes", "RJ"));
+                    Orders.Add(new OrderData(10251, "VICTE", "Lyon", "Victuailles en stock", "Táchira"));
+                    Orders.Add(new OrderData(10252, "SUPRD", "Charleroi", "Suprêmes délices", "Táchira"));
+                    Orders.Add(new OrderData(10253, "HANAR", "Rio de Janeiro", "Hanari Carnes", "NM"));
+                    Orders.Add(new OrderData(10254, "VINET", "Reims", "Vins et alcool", "SP"));
+                    Orders.Add(new OrderData(10255,"TOMSP", "Münster", "Toms Spezialitäten", "NM"));
+                    Orders.Add(new OrderData(10256, "TOMSP", "Münster", "Toms Spezialitäten","CJ"));
+                    code += 5;
+                }
+            }
+            return Orders;
+        }
+        public int? OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public string ShipCity { get; set; }
+        public string ShipName { get; set; }
+        public string ShipRegion { get; set; }
+    }
+{% endhighlight %}
+{% endtabs %}
+
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hNLqXFUjMvoSvMXo?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ### Reorder column based on target index
@@ -174,56 +268,83 @@ You can also use the [ReorderColumnByTargetIndexAsync](https://help.syncfusion.c
 
 Here is an example of how to use the `ReorderColumnByTargetIndexAsync` method to reorder column based on target index:
 
-```cshtml 
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Buttons
+@using BlazorApp1.Data
 
-<SfButton OnClick="singleColumn">REORDER SINGLE COLUMN </SfButton>
-
-
+<SfButton OnClick="SingleColumn">REORDER SINGLE COLUMN </SfButton>
 <SfGrid @ref="Grid" DataSource="@Orders" Height="315" AllowReordering="true" AllowPaging="true">
     <GridColumns>
-        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer ID" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.ShipCity) HeaderText="Ship City" TextAlign="TextAlign.Right" Width="130"></GridColumn>
-        <GridColumn Field=@nameof(Order.ShipRegion) HeaderText="Ship Region" TextAlign="TextAlign.Right" Width="130"></GridColumn>
-        <GridColumn Field=@nameof(Order.ShipName) HeaderText="Ship Name" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer ID" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.ShipCity) HeaderText="Ship City" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.ShipRegion) HeaderText="Ship Region" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.ShipName) HeaderText="Ship Name" TextAlign="TextAlign.Right" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
-
 @code {
-    private SfGrid<Order> Grid;
-    public List<Order> Orders { get; set; }
-
+    private SfGrid<OrderData> Grid;
+    public List<OrderData> Orders { get; set; }
+   
     protected override void OnInitialized()
     {
-        Orders = Enumerable.Range(1, 75).Select(x => new Order()
-            {
-                OrderID = 1000 + x,
-                CustomerID = (new string[] { "VINET", "TOMSP", "HANAR", "VICTE", "SUPRD" })[new Random().Next(5)],
-                ShipCity = (new string[] { "Reims", "Münster", "Rio de Janeiro", "Lyon", "Charleroi" })[new Random().Next(5)],
-                ShipRegion = (new string[] { "CJ", "SP", "RJ", "Táchira", "NM" })[new Random().Next(5)],
-                ShipName = (new string[] { "Vins et alcool", "Toms Spezialitäten", "Hanari Carnes", "Victuailles en stock", "Suprêmes délices" })[new Random().Next(5)]
-            }).ToList();
+        Orders = OrderData.GetAllRecords();       
     }
-
-    public class Order
-    {
-        public int? OrderID { get; set; }
-        public string CustomerID { get; set; }
-        public string ShipCity { get; set; }
-        public string ShipRegion { get; set; }
-        public string ShipName { get; set; }
-    }
-
-    public void singleColumn()
+    public void SingleColumn()
     {
         this.Grid.ReorderColumnByTargetIndexAsync("OrderID", 3);
     }
-
 }
-```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hXLqDFqNMbELbJgC?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% endhighlight %}
+{% highlight c# tabtitle="OrderData.cs" %}
+    public class OrderData
+    {
+        public static List<OrderData> Orders = new List<OrderData>();      
+        public OrderData()
+        {
+
+        }
+        public OrderData(int? OrderID,string CustomerID, string ShipCity, string ShipName,string ShipRegion)
+        {
+           this.OrderID = OrderID;
+           this.CustomerID = CustomerID;
+           this.ShipCity = ShipCity;   
+           this.ShipName = ShipName;
+           this.ShipRegion = ShipRegion;            
+        }
+        public static List<OrderData> GetAllRecords()
+        {
+            if (Orders.Count() == 0)
+            {
+                int code = 10;
+                for (int i = 1; i < 2; i++)
+                {
+                    Orders.Add(new OrderData(10248, "VINET", "Reims", "Vins et alcool", "CJ"));
+                    Orders.Add(new OrderData(10249, "TOMSP", "Münster", "Toms Spezialitäten", "SP"));
+                    Orders.Add(new OrderData(10250, "HANAR", "Rio de Janeiro", "Hanari Carnes", "RJ"));
+                    Orders.Add(new OrderData(10251, "VICTE", "Lyon", "Victuailles en stock", "Táchira"));
+                    Orders.Add(new OrderData(10252, "SUPRD", "Charleroi", "Suprêmes délices", "Táchira"));
+                    Orders.Add(new OrderData(10253, "HANAR", "Rio de Janeiro", "Hanari Carnes", "NM"));
+                    Orders.Add(new OrderData(10254, "VINET", "Reims", "Vins et alcool", "SP"));
+                    Orders.Add(new OrderData(10255,"TOMSP", "Münster", "Toms Spezialitäten", "NM"));
+                    Orders.Add(new OrderData(10256, "TOMSP", "Münster", "Toms Spezialitäten","CJ"));
+                    code += 5;
+                }
+            }
+            return Orders;
+        }
+        public int? OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public string ShipCity { get; set; }
+        public string ShipName { get; set; }
+        public string ShipRegion { get; set; }
+    }
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/htVUMWjiJlVlesGN?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ### Reorder column based on field names
 
@@ -234,65 +355,88 @@ The [ReorderColumnsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
 
 Here is an example of how to use the `ReorderColumnsAsync` method to reorder multiple columns based on field names:
 
-```cshtml
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Buttons
+@using BlazorApp1.Data
 
-<SfButton OnClick="ReorderBtn" CssClass="e-primary" IsPrimary="true" Content="REORDER SINGLE COLUMN"></SfButton>
-<SfButton OnClick="multipleColumn" CssClass="e-primary" IsPrimary="true" Content="REORDER MULTIPLE COLUMN"></SfButton>
-
-
+<SfButton OnClick="ReorderSingleColumn" CssClass="e-primary" IsPrimary="true" Content="REORDER SINGLE COLUMN"></SfButton>
+<SfButton OnClick="ReorderMultipleColumn" CssClass="e-primary" IsPrimary="true" Content="REORDER MULTIPLE COLUMN"></SfButton>
 <SfGrid @ref="Grid" DataSource="@Orders" Height="315" AllowReordering="true" AllowPaging="true">
     <GridColumns>
-        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer ID" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.ShipCity) HeaderText="Ship City" TextAlign="TextAlign.Right" Width="130"></GridColumn>
-        <GridColumn Field=@nameof(Order.ShipRegion) HeaderText="Ship Region" TextAlign="TextAlign.Right" Width="130"></GridColumn>
-        <GridColumn Field=@nameof(Order.ShipName) HeaderText="Ship Name" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer ID" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.ShipCity) HeaderText="Ship City" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.ShipRegion) HeaderText="Ship Region" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.ShipName) HeaderText="Ship Name" TextAlign="TextAlign.Right" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
-
 @code {
-    public List<string> IsVar = (new List<string> { "ShipCity", "ShipRegion", "ShipName" });
-    private SfGrid<Order> Grid;
-    public List<Order> Orders { get; set; }
-
+    public List<string> ColumnName = (new List<string> { "ShipCity", "ShipRegion", "ShipName" });
+    private SfGrid<OrderData> Grid;
+    public List<OrderData> Orders { get; set; }   
     protected override void OnInitialized()
     {
-        Orders = Enumerable.Range(1, 75).Select(x => new Order()
-            {
-                OrderID = 1000 + x,
-                CustomerID = (new string[] { "VINET", "TOMSP", "HANAR", "VICTE", "SUPRD" })[new Random().Next(5)],
-                ShipCity = (new string[] { "Reims", "Münster", "Rio de Janeiro", "Lyon", "Charleroi" })[new Random().Next(5)],
-                ShipRegion = (new string[] { "CJ", "SP", "RJ", "Táchira", "NM" })[new Random().Next(5)],
-                ShipName = (new string[] { "Vins et alcool", "Toms Spezialitäten", "Hanari Carnes", "Victuailles en stock", "Suprêmes délices" })[new Random().Next(5)]
-
-            }).ToList();
+        Orders = OrderData.GetAllRecords();
     }
-
-    public class Order
-    {
-        public int? OrderID { get; set; }
-        public string CustomerID { get; set; }
-        public string ShipCity { get; set; }
-        public string ShipRegion { get; set; }
-        public string ShipName { get; set; }
-    }
-    public void ReorderBtn()
+    public void ReorderSingleColumn()
     {
         this.Grid.ReorderColumns("ShipCity", "OrderID");
     }
-
-
-    public void multipleColumn()
+    public void ReorderMultipleColumn()
     {
-
-        this.Grid.ReorderColumnsAsync(IsVar, "OrderID");
+        this.Grid.ReorderColumnsAsync(ColumnName, "OrderID");
     }
-
 }
-```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LNVgDFUtBByNDPFg?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% endhighlight %}
+{% highlight c# tabtitle="OrderData.cs" %}
+    public class OrderData
+    {
+        public static List<OrderData> Orders = new List<OrderData>();   
+        public OrderData()
+        {
+
+        }
+        public OrderData(int? OrderID,string CustomerID, string ShipCity, string ShipName,string ShipRegion)
+        {
+           this.OrderID = OrderID;
+           this.CustomerID = CustomerID;
+           this.ShipCity = ShipCity;   
+           this.ShipName = ShipName;
+           this.ShipRegion = ShipRegion;            
+        }
+        public static List<OrderData> GetAllRecords()
+        {
+            if (Orders.Count() == 0)
+            {
+                int code = 10;
+                for (int i = 1; i < 2; i++)
+                {
+                    Orders.Add(new OrderData(10248, "VINET", "Reims", "Vins et alcool", "CJ"));
+                    Orders.Add(new OrderData(10249, "TOMSP", "Münster", "Toms Spezialitäten", "SP"));
+                    Orders.Add(new OrderData(10250, "HANAR", "Rio de Janeiro", "Hanari Carnes", "RJ"));
+                    Orders.Add(new OrderData(10251, "VICTE", "Lyon", "Victuailles en stock", "Táchira"));
+                    Orders.Add(new OrderData(10252, "SUPRD", "Charleroi", "Suprêmes délices", "Táchira"));
+                    Orders.Add(new OrderData(10253, "HANAR", "Rio de Janeiro", "Hanari Carnes", "NM"));
+                    Orders.Add(new OrderData(10254, "VINET", "Reims", "Vins et alcool", "SP"));
+                    Orders.Add(new OrderData(10255,"TOMSP", "Münster", "Toms Spezialitäten", "NM"));
+                    Orders.Add(new OrderData(10256, "TOMSP", "Münster", "Toms Spezialitäten","CJ"));
+                    code += 5;
+                }
+            }
+            return Orders;
+        }
+        public int? OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public string ShipCity { get; set; }
+        public string ShipName { get; set; }
+        public string ShipRegion { get; set; }
+    }
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LZhKWMZMfPbIjSKF?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 <!-- Reorder events
 

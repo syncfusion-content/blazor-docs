@@ -15,43 +15,77 @@ By default, the header text of a column in DataGrid is displayed from the column
 
 To enable the `HeaderText` property, you simply need to define it in the **GridColumn** component. The following example demonstrates how to enable header text for a  Grid column.
 
-```cshtml
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids
+@using BlazorApp1.Data
 
 <SfGrid DataSource="@Orders" Height="315">
     <GridColumns>
-        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer ID" Width="120"></GridColumn>       
-        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.OrderDate) HeaderText="Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer ID" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.OrderDate) HeaderText="Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
     </GridColumns>
 </SfGrid>
-
 @code {
-    public List<Order> Orders { get; set; }
-
+    private SfGrid<OrderData> Grid;
+    public List<OrderData> Orders { get; set; }
+       
     protected override void OnInitialized()
     {
-        Orders = Enumerable.Range(1, 75).Select(x => new Order()
-            {
-                OrderID = 10247 + x,
-                CustomerID = (new string[] { "VINET", "TOMSP", "HANAR", "SUPRD", "CHOPS" })[new Random().Next(5)],
-                Freight = 2.1 * x,
-                OrderDate = DateTime.Now.AddDays(-x),
-            }).ToList();
-    }
-
-    public class Order
+        Orders = OrderData.GetAllRecords();
+    }   
+}
+{% endhighlight %}
+{% endtabs %}
+{% tabs %}
+{% highlight c# tabtitle="Order.cs" %}
+    public class OrderData
     {
+        public static List<OrderData> Orders = new List<OrderData>();
+        public OrderData()
+        {
+
+        }
+        public OrderData( int? OrderID, string CustomerID, DateTime? OrderDate,double? Freight)
+        {
+           this.OrderID = OrderID;
+           this.CustomerID = CustomerID;
+           this.OrderDate = OrderDate;   
+           this.Freight = Freight;
+        }
+
+        public static List<OrderData> GetAllRecords()
+        {
+            if (Orders.Count() == 0)
+            {
+                int code = 10;
+                for (int i = 1; i < 2; i++)
+                {
+                    Orders.Add(new OrderData(10248, "VINET", new DateTime(1996,07,08), 32.38));
+                    Orders.Add(new OrderData(10249, "TOMSP", new DateTime(1996, 07, 08),66.98));
+                    Orders.Add(new OrderData(10248, "HANAR", new DateTime(1996, 07, 08),56.08));
+                    Orders.Add(new OrderData(10248, "VICTE", new DateTime(1996, 07, 08),21.78));
+                    Orders.Add(new OrderData(10248, "SUPRD", new DateTime(1996, 07, 08),87.56));
+                    Orders.Add(new OrderData(10248, "HANAR", new DateTime(1996, 07, 08),32.56));
+                    Orders.Add(new OrderData(10248, "CHOPS", new DateTime(1996, 07, 08),12.76));
+                    Orders.Add(new OrderData(10248, "RICSU", new DateTime(1996, 07, 08),55.45));
+                    Orders.Add(new OrderData(10248, "VINET", new DateTime(1996, 07, 08),11.94));                                                                                    
+                    code += 5;
+                }
+            }
+            return Orders;
+        }
         public int? OrderID { get; set; }
         public string CustomerID { get; set; }
         public DateTime? OrderDate { get; set; }
         public double? Freight { get; set; }
     }
-}
-```
+{% endhighlight %}
+{% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BjrqtkCTKFoXhkQg?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNrUMtACJAAfwAum?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 
 >* The `HeaderText` property is optional, and if it is not defined, then the corresponding column's field value is set as header text for that column.  
@@ -68,33 +102,34 @@ To know about **Header Template** in Blazor DataGrid Component, you can check th
 
 In this demo, the custom element is rendered for both **EmployeeID** and **OrderDate** column headers.
 
-```cshtml
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Buttons
+@using BlazorApp1.Data
 
-<SfGrid @ref="Grid" DataSource="@Employees" AllowPaging="true" Height="315">
+<SfGrid @ref="Grid" DataSource="@Orders" AllowPaging="true" Height="315">
     <GridColumns>
-        <GridColumn Field=@nameof(EmployeeData.OrderID) TextAlign="TextAlign.Right" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(EmployeeData.CustomerID)  Width="130">
-              <HeaderTemplate>
+        <GridColumn Field=@nameof(OrderData.OrderID) TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.CustomerID) Width="130">
+            <HeaderTemplate>
                 <div>
                     <span class="e-icon-userlogin e-icons employee"></span> Customer ID
                 </div>
             </HeaderTemplate>
         </GridColumn>
-        <GridColumn Field=@nameof(EmployeeData.Freight) HeaderText="Freight" Format="C2" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(EmployeeData.OrderDate)  Format="d" TextAlign="TextAlign.Right" Width="140">
+        <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" Format="C2" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.OrderDate) Format="d" TextAlign="TextAlign.Right" Width="140">
             <HeaderTemplate>
-                <div><SfSwitch ValueChange="Change" TChecked="bool"></SfSwitch>@HeaderValue 
-                  </div>               
+                <div >
+                    <SfSwitch ValueChange="Change" TChecked="bool"></SfSwitch>@HeaderValue
+                </div>
             </HeaderTemplate>
-        </GridColumn>       
+        </GridColumn>
     </GridColumns>
 </SfGrid>
-
 <style>
-
-    @@font-face {
+      @@font-face {
         font-family: 'ej2-headertemplate';
         src: url(data:application/x-font-ttf;charset=utf-8;base64,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) format('truetype');
         font-weight: normal;
@@ -107,11 +142,10 @@ In this demo, the custom element is rendered for both **EmployeeID** and **Order
         content: '\e702';
     }
 
-    
 </style>
-
 @code {
-   private SfGrid<EmployeeData> Grid;
+    private SfGrid<OrderData> Grid;
+    public List<OrderData> Orders { get; set; }
     public string HeaderValue { get; set; } = "Order Date";
     private void Change(Syncfusion.Blazor.Buttons.ChangeEventArgs<bool> args)
     {
@@ -125,29 +159,61 @@ In this demo, the custom element is rendered for both **EmployeeID** and **Order
         }
         Grid.Refresh();
     }
-    public List<EmployeeData> Employees { get; set; }
-
+       
     protected override void OnInitialized()
     {
-        Employees = Enumerable.Range(1, 9).Select(x => new EmployeeData()
-            {
-                OrderID = 10247 + x,
-                CustomerID = (new string[] { "VINET", "TOMSP", "HANAR", "SUPRD", "CHOPS" })[new Random().Next(5)],
-                OrderDate = DateTime.Now.AddDays(-x),
-                Freight=2.1*x,
-            }).ToList();
-    }
-
-    public class EmployeeData
+        Orders = OrderData.GetAllRecords();
+    }   
+}
+{% endhighlight %}
+{% endtabs %}
+{% tabs %}
+{% highlight c# tabtitle="OrderData.cs" %}
+  public class OrderData
     {
+        public static List<OrderData> Orders = new List<OrderData>();
+        public OrderData()
+        {
+
+        }
+        public OrderData( int? OrderID, string CustomerID, DateTime? OrderDate,double? Freight)
+        {
+           this.OrderID = OrderID;
+           this.CustomerID = CustomerID;
+           this.OrderDate = OrderDate;   
+           this.Freight = Freight;
+        }
+
+        public static List<OrderData> GetAllRecords()
+        {
+            if (Orders.Count() == 0)
+            {
+                int code = 10;
+                for (int i = 1; i < 2; i++)
+                {
+                    Orders.Add(new OrderData(10248, "VINET", new DateTime(1996,07,08), 32.38));
+                    Orders.Add(new OrderData(10249, "TOMSP", new DateTime(1996, 07, 08),66.98));
+                    Orders.Add(new OrderData(10248, "HANAR", new DateTime(1996, 07, 08),56.08));
+                    Orders.Add(new OrderData(10248, "VICTE", new DateTime(1996, 07, 08),21.78));
+                    Orders.Add(new OrderData(10248, "SUPRD", new DateTime(1996, 07, 08),87.56));
+                    Orders.Add(new OrderData(10248, "HANAR", new DateTime(1996, 07, 08),32.56));
+                    Orders.Add(new OrderData(10248, "CHOPS", new DateTime(1996, 07, 08),12.76));
+                    Orders.Add(new OrderData(10248, "RICSU", new DateTime(1996, 07, 08),55.45));
+                    Orders.Add(new OrderData(10248, "VINET", new DateTime(1996, 07, 08),11.94));                                                                                    
+                    code += 5;
+                }
+            }
+            return Orders;
+        }
+
+
         public int? OrderID { get; set; }
         public string CustomerID { get; set; }
-        public double Freight { get; set; }
         public DateTime? OrderDate { get; set; }
-        
+        public double? Freight { get; set; }
     }
-}
-```
+{% endhighlight %}
+{% endtabs %}
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hDLqXarRxgGevNlF?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
@@ -160,13 +226,15 @@ In DataGrid, you can group multiple levels of column headers by stacking the Gri
 
 In the following sample, the columns **Order Date**, and **Freight** are grouped under **Order Details** and the columns **Shipped Date**, and **Ship Country** are grouped under **Shipped Details**.
 
-```cshtml
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.DropDowns
+@using BlazorApp1.Data
 
 <SfGrid DataSource="@Orders" AllowPaging="true">
     <GridColumns>
-        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" IsPrimaryKey="true" Width="120">
+        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" IsPrimaryKey="true" Width="120">
             <HeaderTemplate>
                 <a href="#">Order ID</a>
             </HeaderTemplate>
@@ -174,7 +242,7 @@ In the following sample, the columns **Order Date**, and **Freight** are grouped
         <GridColumn HeaderText="Order Details" TextAlign="TextAlign.Center">
             <GridColumns>
                 <GridColumn Field="OrderDate" Width="130" HeaderText="Order Date" Format="d" TextAlign="TextAlign.Right" MinWidth="10"></GridColumn>
-                <GridColumn Field="Freight ($)" Width="135" Format="C2" TextAlign="TextAlign.Right" MinWidth="10">
+                <GridColumn Field="Freight" HeaderText="Freight ($)" Width="135" Format="C2" TextAlign="TextAlign.Right" MinWidth="10">
                 </GridColumn>
             </GridColumns>
         </GridColumn>
@@ -182,6 +250,7 @@ In the following sample, the columns **Order Date**, and **Freight** are grouped
             <ChildContent>
                 <GridColumns>
                     <GridColumn Field="ShippedDate" Width="140" HeaderText="Shipped Date" Format="d" TextAlign="TextAlign.Right" MinWidth="10"></GridColumn>
+                    <GridColumn Field="ShipCountry" Width="140" HeaderText="Ship Country" Format="d" TextAlign="TextAlign.Right" MinWidth="10"></GridColumn>
                 </GridColumns>
             </ChildContent>
             <HeaderTemplate>
@@ -196,34 +265,65 @@ In the following sample, the columns **Order Date**, and **Freight** are grouped
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     }
 </style>
+
 @code {
-    public List<Order> Orders { get; set; }
-
-
+    public List<OrderData> Orders { get; set; }          
     protected override void OnInitialized()
     {
-        Orders = Enumerable.Range(1, 75).Select(x => new Order()
-            {
-                OrderID = 1000 + x,
-                Freight = 2.1 * x,
-                OrderDate = DateTime.Now.AddDays(-x),
-                ShipCountry = (new string[] { "Denmark", "Brazil", "Germany", "Austria", "Switzerland" })[new Random().Next(5)],
-                ShippedDate = DateTime.Now.AddDays(+x),
-            }).ToList();
-    }
-
-
-    public class Order
+        Orders = OrderData.GetAllRecords();
+    }   
+}
+{% endhighlight %}
+{% endtabs %}
+{% tabs %}
+{% highlight c# tabtitle="OrderData.cs" %}
+    public class OrderData
     {
+        public static List<OrderData> Orders = new List<OrderData>();
+        public OrderData()
+        {
+
+        }
+        public OrderData( int? OrderID,DateTime? OrderDate,double? Freight,string ShipCountry,DateTime? ShippedDate)
+        {
+           this.OrderID = OrderID;
+           this.OrderDate = OrderDate;   
+           this.Freight = Freight;
+           this.ShipCountry = ShipCountry;
+           this.ShippedDate = ShippedDate;
+        }
+
+        public static List<OrderData> GetAllRecords()
+        {
+            if (Orders.Count() == 0)
+            {
+                int code = 10;
+                for (int i = 1; i < 2; i++)
+                {
+                    Orders.Add(new OrderData(10248, new DateTime(1996,07,08), 32.38, "France",new DateTime(1996,07,16)));
+                    Orders.Add(new OrderData(10249, new DateTime(1996, 07, 08),66.98, "Germany", new DateTime(1996, 07, 10)));
+                    Orders.Add(new OrderData(10248, new DateTime(1996, 07, 08),56.08, "Brazil", new DateTime(1996, 07, 26)));
+                    Orders.Add(new OrderData(10248, new DateTime(1996, 07, 08),21.78, "France", new DateTime(1996, 07, 24)));
+                    Orders.Add(new OrderData(10248, new DateTime(1996, 07, 08),87.56, "Belgium", new DateTime(1996, 07, 01)));
+                    Orders.Add(new OrderData(10248, new DateTime(1996, 07, 08),32.56, "Brazil", new DateTime(1996, 07, 06)));
+                    Orders.Add(new OrderData(10248, new DateTime(1996, 07, 08),12.76, "Switzerland", new DateTime(1996, 07, 18)));
+                    Orders.Add(new OrderData(10248, new DateTime(1996, 07, 08),55.45, "Switzerland", new DateTime(1996, 07, 19)));
+                    Orders.Add(new OrderData(10248, new DateTime(1996, 07, 08),11.94, "Brazil", new DateTime(1996, 07, 17)));                                                                                    
+                    code += 5;
+                }
+            }
+            return Orders;
+        }
         public int? OrderID { get; set; }
         public DateTime? OrderDate { get; set; }
         public double? Freight { get; set; }
         public string ShipCountry { get; set; }
         public DateTime? ShippedDate { get; set; }
     }
-}
-```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rNhgXaVcJuqWnKKy?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNrUsCZiiuVewxQD?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Align the text of header text
 
@@ -236,44 +336,76 @@ You can horizontally align the text in column headers of the DataGrid component 
 
 Here is an example of using the `HeaderTextAlign` property to align the text of a Grid column header:
 
-```cshtml
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids
+@using BlazorApp1.Data
 
 <SfGrid DataSource="@Orders" AllowPaging="true">
     <GridColumns>
-        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" HeaderTextAlign="TextAlign.Right"  Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" HeaderTextAlign="TextAlign.Center"  Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" HeaderTextAlign="TextAlign.Left"  Format="d" Type="ColumnType.Date" Width="130"></GridColumn>
-        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" HeaderTextAlign="TextAlign.Right" Format="C2" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" HeaderTextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer Name" HeaderTextAlign="TextAlign.Center" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.OrderDate) HeaderText=" Order Date" HeaderTextAlign="TextAlign.Left" Format="d" Type="ColumnType.Date" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" HeaderTextAlign="TextAlign.Right" Format="C2" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
 
 @code {
-    public List<Order> Orders { get; set; }
-
+    public List<OrderData> Orders { get; set; }
+    
     protected override void OnInitialized()
     {
-        Orders = Enumerable.Range(1, 75).Select(x => new Order()
-            {
-                OrderID = 1000 + x,
-                CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
-                Freight = 2.1 * x,
-                OrderDate = (new DateTime[] { new DateTime(2010, 5, 1), new DateTime(2010, 5, 2), new DateTime(2010, 5, 3), })[new Random().Next(3)],
-            }).ToList();
-    }
-
-    public class Order
+        Orders = OrderData.GetAllRecords();
+    }   
+}
+{% endhighlight %}
+{% endtabs %}
+{% tabs %}
+{% highlight c# tabtitle="OrderData.cs" %}
+    public class OrderData
     {
+        public static List<OrderData> Orders = new List<OrderData>();
+        public OrderData()
+        {
+
+        }
+        public OrderData( int? OrderID,DateTime? OrderDate,double? Freight,string CustomerID)
+        {
+           this.OrderID = OrderID;
+           this.OrderDate = OrderDate;   
+           this.Freight = Freight;
+           this.CustomerID = CustomerID;          
+        }
+        public static List<OrderData> GetAllRecords()
+        {
+            if (Orders.Count() == 0)
+            {
+                int code = 10;
+                for (int i = 1; i < 2; i++)
+                {
+                    Orders.Add(new OrderData(10248, new DateTime(1996,07,08), 32.38, "VINET"));
+                    Orders.Add(new OrderData(10249, new DateTime(1996, 07, 08),66.98, "TOMSP"));
+                    Orders.Add(new OrderData(10248, new DateTime(1996, 07, 08),56.08, "HANAR"));
+                    Orders.Add(new OrderData(10248, new DateTime(1996, 07, 08),21.78, "SUPRD"));
+                    Orders.Add(new OrderData(10248, new DateTime(1996, 07, 08),87.56, "VICTE"));
+                    Orders.Add(new OrderData(10248, new DateTime(1996, 07, 08),32.56, "HANAR"));
+                    Orders.Add(new OrderData(10248, new DateTime(1996, 07, 08),12.76, "CHOPS"));
+                    Orders.Add(new OrderData(10248, new DateTime(1996, 07, 08),55.45, "RICSU"));
+                    Orders.Add(new OrderData(10248, new DateTime(1996, 07, 08),11.94, "WELLI"));                                                                                    
+                    code += 5;
+                }
+            }
+            return Orders;
+        }
         public int? OrderID { get; set; }
-        public string CustomerID { get; set; }
         public DateTime? OrderDate { get; set; }
         public double? Freight { get; set; }
+        public string CustomerID { get; set; }    
     }
+{% endhighlight %}
+{% endtabs %}
 
-}
-```
-
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LZhKjFNLLnvQIMpI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BNLqWMjsrtUyIcLO?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 >* The `HeaderTextAlign` property only changes the alignment of the text in the column header, and not the content of the column. If you want to align both the column header and content, you can use the [TextAlign](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_TextAlign) property.
 >* You can also use the `HeaderTextAlign` property with the stacked header feature in Syncfusion DataGrid. The property will align the header text in the sub-headers as well.
@@ -292,73 +424,80 @@ DataGrid provides the below three options for configuring:
 
 In the following example, the [TextWrapSettings.WrapMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridTextWrapSettings.html#Syncfusion_Blazor_Grids_GridTextWrapSettings_WrapMode) is set to **Content**.
 
-```cshtml
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids
-@using Syncfusion.Blazor.DropDowns
+@using BlazorApp1.Data
 
-<label>Autowrap for header column :</label>
-<SfDropDownList TValue="WrapMode" TItem="ddlOrder" @bind-Value="@DropVal" DataSource="@LocalData" Width="100px">
-    <DropDownListFieldSettings Text="Text" Value="Value"></DropDownListFieldSettings>
-    <DropDownListEvents ValueChange="OnValueChange" TValue="WrapMode" TItem="ddlOrder"></DropDownListEvents>
-</SfDropDownList>
-
-<SfGrid @ref="Grid" DataSource="@Orders" GridLines="GridLine.Default" AllowTextWrap="true" Height="315">
-    <GridTextWrapSettings WrapMode="@DropVal"></GridTextWrapSettings>
+<SfGrid  DataSource="@Orders" GridLines="GridLine.Default" AllowTextWrap="true" Height="315">
+    <GridTextWrapSettings WrapMode="WrapMode.Header"></GridTextWrapSettings>
     <GridColumns>
-        <GridColumn Field=@nameof(Order.Inventor) HeaderText="Inventor Name" Width="70"></GridColumn>
-        <GridColumn Field=@nameof(Order.NumberofPatentFamilies) HeaderText="Number of Patent Families" Width="80"></GridColumn>
-        <GridColumn Field=@nameof(Order.Country) HeaderText="Country" Width="100"></GridColumn>
-        <GridColumn Field=@nameof(Order.Mainfieldsofinvention) HeaderText="Main Fields Of Invention" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.Inventor) HeaderText="Inventor Name" Width="70"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.NumberofPatentFamilies) HeaderText="Number of Patent Families" Width="80"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.Country) HeaderText="Country" Width="100"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.Mainfieldsofinvention) HeaderText="Main Fields Of Invention" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
 
 @code {
-    private SfGrid<Order> Grid;
-    public List<Order> Orders { get; set; }
-    public WrapMode DropVal { get; set; } = WrapMode.Header;
-
+    public List<OrderData> Orders { get; set; }    
     protected override void OnInitialized()
     {
-        Orders = Enumerable.Range(1, 75).Select(x => new Order()
+        Orders = OrderData.GetAllRecords();
+    }   
+}
+{% endhighlight %}
+{% endtabs %}
+{% tabs %}
+{% highlight c# tabtitle="OrderData.cs" %}
+    public class OrderData
+    {
+        public static List<OrderData> Orders = new List<OrderData>();
+        public OrderData()
+        {
+
+        }
+        public OrderData(string Inventor, int? PatentFamilies, string Country, string MainFields)
+        {
+            this.Inventor = Inventor;
+            this.NumberofPatentFamilies = PatentFamilies;
+            this.Country = Country;
+            this.Mainfieldsofinvention = MainFields;          
+        }
+        public static List<OrderData> GetAllRecords()
+        {
+            if (Orders.Count() == 0)
             {
-                Inventor = (new string[] { "Kia Silverbrook", "Shunpei Yamazaki", "Lowell L. Wood, Jr.", "Paul Lapstun", "Gurtej Sandhu" })[new Random().Next(5)],
-                NumberofPatentFamilies = 4737 + x ,
-                Country = (new string[] { "Australia", "Japan", "Canada", "India", "USA" })[new Random().Next(5)],
-                Mainfieldsofinvention = (new string[] { "Printing, Digital paper, Internet, Electronics,Lab-on-a-chip, MEMS, Mechanical, VLSI", "Various", "Printing, Digital paper, Internet, Electronics, CGI, VLSI", "Automotive, Stainless steel products", "Gaming machines" })[new Random().Next(5)],
-            }).ToList();
-    }
-
-    public class ddlOrder
-    {
-        public string Text { get; set; }
-        public WrapMode Value { get; set; }
-    }
-    List<ddlOrder> LocalData = new List<ddlOrder>
-    {
-        new ddlOrder() { Text = "Header", Value = WrapMode.Header },
-        new ddlOrder() { Text = "Both", Value = WrapMode.Both },
-        new ddlOrder() { Text = "Content", Value = WrapMode.Content }
-    };
-    public void OnValueChange(ChangeEventArgs<WrapMode, ddlOrder> Args)
-    {
-        DropVal = Args.Value;
-        
-    }
-
-    public class Order
-    {
+                int code = 10;
+                for (int i = 1; i < 2; i++)
+                {
+                    Orders.Add(new OrderData("Kia Silverb", 4737, "Australia", "Printing, Digital paper, Internet, Electronics,Lab-on-a-chip, MEMS, Mechanical, VLSI"));
+                    Orders.Add(new OrderData("Shunpei Yamazaki", 4677, "Japan", "Various"));
+                    Orders.Add(new OrderData("Lowell L. Wood, Jr.", 13197, "Canada", "Printing, Digital paper, Internet, Electronics, CGI, VLSI"));
+                    Orders.Add(new OrderData("Paul Lap", 1255, "India", "Automotive, Stainless steel products"));
+                    Orders.Add(new OrderData("Gurtej Sandhu", 1240, "USA", "Gaming machines"));
+                    Orders.Add(new OrderData("Shunpei Yamazaki", 1240, "Canada", "Printing, Digital paper, Internet, Electronics, CGI, VLSI"));
+                    Orders.Add(new OrderData("Paul Lap", 1093, "USA", "Automotive, Stainless steel products"));
+                    Orders.Add(new OrderData("Gurtej Sandhu", 993, "Japan", "Various"));
+                    Orders.Add(new OrderData("Kia Silverb", 949, "India", "Printing, Digital paper, Internet, Electronics, CGI, VLSI"));
+                    code += 5;
+                }
+            }
+            return Orders;
+        }
         public string Inventor { get; set; }
         public int? NumberofPatentFamilies { get; set; }
         public string Country { get; set; }
         public string Mainfieldsofinvention { get; set; }
     }
-}
-```
+{% endhighlight %}
+{% endtabs %}
+
 >* If a column width is not specified, then the Autowrap of columns will be adjusted with respect to the DataGrid's width.
 >* If a column's header text contains no white space, the text may not be wrapped.
 >* If the content of a cell contains HTML tags, the Autowrap functionality may not work as expected. In such cases, you can use the [HeaderTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_HeaderTemplate) and [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Template) properties of the column to customize the appearance of the header and cell content.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BtrUtOBQemnUrCyK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BtVKWMjirseyNsmj?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 
 ## Change the height of header
@@ -417,17 +556,19 @@ function setHeaderHeight(args) {
 
 This is demonstrated in the following sample:
 
-```cshtml
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids
+@using BlazorApp1.Data
 @inject IJSRuntime IJSRuntime
 
 <SfGrid DataSource="@Orders" Height="240" RowHeight="60">
-    <GridEvents DataBound="DataBound" Created="Created" TValue="Order"></GridEvents>
+    <GridEvents DataBound="DataBound" Created="Created" TValue="OrderData"></GridEvents>
     <GridColumns>
-        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Center" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" TextAlign="TextAlign.Center" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" CustomAttributes="@(new Dictionary<string, object>(){ { "class", "textorientationclass" }})" TextAlign="TextAlign.Center" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.ShipCity) HeaderText="Ship City" TextAlign="TextAlign.Center" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Center" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer Name" TextAlign="TextAlign.Center" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" Format="C2" CustomAttributes="@(new Dictionary<string, object>(){ { "class", "textorientationclass" }})" TextAlign="TextAlign.Center" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.ShipCity) HeaderText="Ship City" TextAlign="TextAlign.Center" Width="130"></GridColumn>
     </GridColumns>
 </SfGrid>
 <style>
@@ -436,7 +577,7 @@ This is demonstrated in the following sample:
     }
 </style>
 @code {
-    public List<Order> Orders { get; set; }
+    public List<OrderData> Orders { get; set; }
     public bool InitialRender = false;
     public void Created()
     {
@@ -452,26 +593,58 @@ This is demonstrated in the following sample:
     }
     protected override void OnInitialized()
     {
-        Orders = Enumerable.Range(1, 75).Select(x => new Order()
-            {
-                OrderID = 10247 + x,
-                CustomerID = (new string[] { "VINET", "TOMSP", "HANAR", "SUPRD", "CHOPS" })[new Random().Next(5)],
-                Freight = 2.1 * x,
-                ShipCity = (new string[] { "Reims", "Münster", "Rio de Janeiro", "Lyon", "Charleroi" })[new Random().Next(5)]
-            }).ToList();
+        Orders = OrderData.GetAllRecords();
     }
-
-    public class Order
+}
+{% endhighlight %}
+{% endtabs %}
+{% tabs %}
+{% highlight c# tabtitle="OrderData.cs" %}
+    public class OrderData
     {
+        public static List<OrderData> Orders = new List<OrderData>();
+        public OrderData()
+        {
+
+        }
+        public OrderData(int? OrderID, string CustomerID, double Freight, string ShipCity)
+        {
+            this.OrderID = OrderID;
+            this.CustomerID = CustomerID;
+            this.Freight = Freight;
+            this.ShipCity = ShipCity;            
+        }
+
+        public static List<OrderData> GetAllRecords()
+        {
+            if (Orders.Count() == 0)
+            {
+                int code = 10;
+                for (int i = 1; i < 2; i++)
+                {
+                    Orders.Add(new OrderData(10248, "VINET", 32.38, "Reims"));
+                    Orders.Add(new OrderData(10249, "TOMSP", 11.61, "Münster"));
+                    Orders.Add(new OrderData(10250, "HANAR", 65.83, "Rio de Janei"));
+                    Orders.Add(new OrderData(10251, "VINET", 41.34, "Lyon"));
+                    Orders.Add(new OrderData(10252, "SUPRD", 51.30, "Charleroi"));
+                    Orders.Add(new OrderData(10253, "HANAR", 58.17, "Rio de Janei"));
+                    Orders.Add(new OrderData(10254, "CHOPS", 22.98, "Bern"));
+                    Orders.Add(new OrderData(10255, "VINET", 148.53, "Genève"));
+                    Orders.Add(new OrderData(10256, "HANAR", 13.97, "Resende"));
+                    code += 5;
+                }
+            }
+            return Orders;
+        }
         public int? OrderID { get; set; }
         public string CustomerID { get; set; }
         public double Freight { get; set; }
         public string ShipCity { get; set; }
     }
-}
-```
+{% endhighlight %}
+{% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LjLqtYBGRNsTyIhc?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VZBKiiDMrraFxmkh?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 > [View Sample in GitHub.](https://github.com/SyncfusionExamples/blazor-datagrid-change-orientation-of-header-text)
 
@@ -491,15 +664,17 @@ You can apply styles to the header cells using CSS selectors. The DataGrid provi
 ```
 Here's an example that demonstrates how to customize the appearance of a specific column header in the DataGrid using **className**.
 
-```cshtml
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids
+@using BlazorApp1.Data
 
 <SfGrid DataSource="@Orders" AllowPaging="true">
     <GridColumns>
-        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer ID" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" Width="130"></GridColumn>
-        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer ID" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" Format="C2" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
 <style>
@@ -508,34 +683,61 @@ Here's an example that demonstrates how to customize the appearance of a specifi
         color: rgb(3, 2, 2);
     }
 </style>
-
-
 @code {
-    public List<Order> Orders { get; set; }
-
+    public List<OrderData> Orders { get; set; }    
     protected override void OnInitialized()
     {
-        Orders = Enumerable.Range(1, 75).Select(x => new Order()
-            {
-                OrderID = 1000 + x,
-                CustomerID = (new string[] { "VINET", "TOMSP", "HANAR", "VICTE", "SUPRD" })[new Random().Next(5)],
-                Freight = 2.1 * x,
-                OrderDate = (new DateTime[] { new DateTime(2010, 5, 1), new DateTime(2010, 5, 2), new DateTime(2010, 5, 3), })[new Random().Next(3)],
-            }).ToList();
+        Orders = OrderData.GetAllRecords();
     }
-
-    public class Order
+}
+{% endhighlight %}
+{% endtabs %}
+{% tabs %}
+{% highlight c# tabtitle="OrderData.cs" %}
+    public class OrderData
     {
+        public static List<OrderData> Orders = new List<OrderData>();
+        public OrderData()
+        {
+
+        }
+        public OrderData(int? OrderID, string CustomerID, double Freight, DateTime? OrderDate)
+        {
+            this.OrderID = OrderID;
+            this.CustomerID = CustomerID;
+            this.Freight = Freight;
+            this.OrderDate = OrderDate;            
+        }
+        public static List<OrderData> GetAllRecords()
+        {
+            if (Orders.Count() == 0)
+            {
+                int code = 10;
+                for (int i = 1; i < 2; i++)
+                {
+                    Orders.Add(new OrderData(10248, "VINET", 32.38, new DateTime(1996,07,08)));
+                    Orders.Add(new OrderData(10249, "TOMSP", 11.61, new DateTime(1996, 07, 18)));
+                    Orders.Add(new OrderData(10250, "HANAR", 65.83, new DateTime(1996, 07, 05)));
+                    Orders.Add(new OrderData(10251, "VINET", 41.34, new DateTime(1996, 07, 23)));
+                    Orders.Add(new OrderData(10252, "SUPRD", 51.30, new DateTime(1996, 07, 16)));
+                    Orders.Add(new OrderData(10253, "HANAR", 58.17, new DateTime(1996, 07, 12)));
+                    Orders.Add(new OrderData(10254, "CHOPS", 22.98, new DateTime(1996, 07, 18)));
+                    Orders.Add(new OrderData(10255, "VINET", 148.53, new DateTime(1996, 07, 05)));
+                    Orders.Add(new OrderData(10256, "HANAR", 13.97, new DateTime(1996, 07, 01)));
+                    code += 5;
+                }
+            }
+            return Orders;
+        }
         public int? OrderID { get; set; }
         public string CustomerID { get; set; }
+        public double Freight { get; set; }
         public DateTime? OrderDate { get; set; }
-        public double? Freight { get; set; }
-    }
+    } 
+{% endhighlight %}
+{% endtabs %}
 
-}
-```
-
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hXhqNvtBKRgOdlSe?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rZLUsMjiVUSAIviT?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ### Using property 
 
@@ -561,15 +763,17 @@ Step 2: Set the **CustomAttributes** property of the desired column to an object
 
 The following example demonstrates how to customize the appearance of the **OrderID** and **Freight** columns using custom attributes.
 
-```cshtml
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids
+@using BlazorApp1.Data
 
 <SfGrid DataSource="@Orders" AllowPaging="true">
     <GridColumns>
-        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" CustomAttributes="@(new Dictionary<string, object>(){ { "class", "customcss" }})" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" CustomAttributes="@(new Dictionary<string, object>(){ { "class", "customcss" }})" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" Width="130"></GridColumn>
-        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" CustomAttributes="@(new Dictionary<string, object>(){ { "class", "customcss" }})" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer Name" CustomAttributes="@(new Dictionary<string, object>(){ { "class", "customcss" }})" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" Format="C2" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
 <style>
@@ -578,33 +782,62 @@ The following example demonstrates how to customize the appearance of the **Orde
         color: black;
     }
 </style>
-
-
 @code {
-    public List<Order> Orders { get; set; }
-
+    public List<OrderData> Orders { get; set; }
+    
     protected override void OnInitialized()
     {
-        Orders = Enumerable.Range(1, 75).Select(x => new Order()
-            {
-                OrderID = 1000 + x,
-                CustomerID = (new string[] { "Paul Henriot", "Karin Josephs	", "Mario Pontes", "Mary Saveley", "Yang Wang" })[new Random().Next(5)],
-                Freight = 2.1 * x,
-                OrderDate = (new DateTime[] { new DateTime(2010, 5, 1), new DateTime(2010, 5, 2), new DateTime(2010, 5, 3), })[new Random().Next(3)],
-            }).ToList();
+        Orders = OrderData.GetAllRecords();
     }
-
-    public class Order
+}
+{% endhighlight %}
+{% endtabs %}
+{% tabs %}
+{% highlight c# tabtitle="OrderData.cs" %}
+    public class OrderData
     {
+        public static List<OrderData> Orders = new List<OrderData>();
+        public OrderData()
+        {
+
+        }
+        public OrderData(int? OrderID, string CustomerID, double Freight, DateTime? OrderDate)
+        {
+            this.OrderID = OrderID;
+            this.CustomerID = CustomerID;
+            this.Freight = Freight;
+            this.OrderDate = OrderDate;            
+        }
+        public static List<OrderData> GetAllRecords()
+        {
+            if (Orders.Count() == 0)
+            {
+                int code = 10;
+                for (int i = 1; i < 2; i++)
+                {
+                    Orders.Add(new OrderData(10248, "VINET", 32.38, new DateTime(1996,07,08)));
+                    Orders.Add(new OrderData(10249, "TOMSP", 11.61, new DateTime(1996, 07, 18)));
+                    Orders.Add(new OrderData(10250, "HANAR", 65.83, new DateTime(1996, 07, 05)));
+                    Orders.Add(new OrderData(10251, "VINET", 41.34, new DateTime(1996, 07, 23)));
+                    Orders.Add(new OrderData(10252, "SUPRD", 51.30, new DateTime(1996, 07, 16)));
+                    Orders.Add(new OrderData(10253, "HANAR", 58.17, new DateTime(1996, 07, 12)));
+                    Orders.Add(new OrderData(10254, "CHOPS", 22.98, new DateTime(1996, 07, 18)));
+                    Orders.Add(new OrderData(10255, "VINET", 148.53, new DateTime(1996, 07, 05)));
+                    Orders.Add(new OrderData(10256, "HANAR", 13.97, new DateTime(1996, 07, 01)));
+                    code += 5;
+                }
+            }
+            return Orders;
+        }
         public int? OrderID { get; set; }
         public string CustomerID { get; set; }
+        public double Freight { get; set; }
         public DateTime? OrderDate { get; set; }
-        public double? Freight { get; set; }
-    }
+    } 
+{% endhighlight %}
+{% endtabs %}
 
-}
-```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hNrKXuhQxDvzqWtY?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LZLqCMNiLfcCJPPZ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 
 

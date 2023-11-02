@@ -19,43 +19,75 @@ To define columns manually in DataGrid, you can use the `GridColumn` component t
 
 Here's an example code snippet that demonstrates how to define columns manually in the Syncfusion Blazor DataGrid:
 
-```cshtml
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids
+@using BlazorApp1.Data
 
-<SfGrid DataSource="@Orders" >
+<SfGrid DataSource="@Orders">
     <GridColumns>
-        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer ID" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.OrderDate) HeaderText="Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer ID" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.OrderDate) HeaderText="Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
     </GridColumns>
 </SfGrid>
 
 @code {
-    public List<Order> Orders { get; set; }
-
+   private SfGrid<OrderData> Grid;
+    public List<OrderData> Orders { get; set; }
+       
     protected override void OnInitialized()
     {
-        Orders = Enumerable.Range(1, 75).Select(x => new Order()
-            {
-                OrderID = 1000 + x,
-                CustomerID = (new string[] { "VINET", "TOMSP", "HANAR", "CHOPS", "RICSU" })[new Random().Next(5)],
-                Freight = 2.1 * x,
-                OrderDate = DateTime.Now.AddDays(-x),
-            }).ToList();
-    }
-
-    public class Order
+        Orders = OrderData.GetAllRecords();
+    }       
+}
+{% endhighlight %}
+{% highlight c# tabtitle="OrderData.cs" %}
+    public class OrderData
     {
+        public static List<OrderData> Orders = new List<OrderData>();
+        public OrderData()
+        {
+
+        }
+        public OrderData( int? OrderID, string CustomerID, DateTime? OrderDate, double? Freight)
+        {
+           this.OrderID = OrderID;
+            this.CustomerID = CustomerID;
+            this.OrderDate = OrderDate;
+            this.Freight = Freight;
+        }
+        public static List<OrderData> GetAllRecords()
+        {
+            if (Orders.Count() == 0)
+            {
+                int code = 10;
+                for (int i = 1; i < 2; i++)
+                {
+                    Orders.Add(new OrderData(10248, "VINET",new DateTime(1996,07,07), 32.38));
+                    Orders.Add(new OrderData(10249, "TOMSP", new DateTime(1996, 07, 07), 92.38));
+                    Orders.Add(new OrderData(10248, "HANAR", new DateTime(1996, 07, 07), 62.77));
+                    Orders.Add(new OrderData(10248, "VICTE", new DateTime(1996, 07, 07), 12.38));
+                    Orders.Add(new OrderData(10248, "SUPRD", new DateTime(1996, 07, 07), 82.38));
+                    Orders.Add(new OrderData(10248, "CHOPS", new DateTime(1996, 07, 07), 31.31));
+                    Orders.Add(new OrderData(10248, "RICSU", new DateTime(1996, 07, 07), 22.37));
+                    Orders.Add(new OrderData(10248, "WELLI", new DateTime(1996, 07, 07), 44.34));
+                    Orders.Add(new OrderData(10248, "RICSU", new DateTime(1996, 07, 07), 31.33));                                                                                    
+                    code += 5;
+                }
+            }
+            return Orders;
+        }
         public int? OrderID { get; set; }
         public string CustomerID { get; set; }
         public DateTime? OrderDate { get; set; }
         public double? Freight { get; set; }
-    }
-}
-```
+    } 
+{% endhighlight %}
+{% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hjLqXECTBoQUKxMQ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BtLUCtUsAFUGBxTY?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Auto generated columns
 
@@ -63,37 +95,67 @@ The DataGrid automatically generates columns when the  [Columns](https://help.sy
 
 You can use the following code snippet to enable auto-generated columns in the Syncfusion DataGrid:
 
-```cshtml
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids
+@using BlazorApp1.Data
 
 <SfGrid DataSource="@Orders"></SfGrid>
 
 @code {
-    public List<Order> Orders { get; set; }
-
+    public List<OrderData> Orders { get; set; }
+       
     protected override void OnInitialized()
     {
-        Orders = Enumerable.Range(1, 75).Select(x => new Order()
-            {
-                OrderID = 10247 + x,
-                EmployeeID=x,
-                CustomerID = (new string[] { "VINET", "TOMSP", "HANAR", "SUPRD", "CHOPS" })[new Random().Next(5)],
-                ShipCountry = (new string[] { "France", "Germany", "Brazil", "Venezuela", "Switzerland" })[new Random().Next(5)],
-                Freight = 2.1 * x,
-             }).ToList();
-    }
-
-    public class Order
-    {
-        public int? OrderID { get; set; }
-        public int? EmployeeID { get; set; }
-        public string CustomerID { get; set; }
-        public string ShipCountry { get; set; }
-        public double? Freight { get; set; }
-    }
+        Orders = OrderData.GetAllRecords();
+    }   
 }
-```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BtVgDkizBnqOpLgY?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% endhighlight %}
+{% highlight c# tabtitle="OrderData.cs" %}
+    public class OrderData
+    {
+        public static List<OrderData> Orders = new List<OrderData>();
+        public OrderData()
+        {
+
+        }
+        public OrderData( int? OrderID, string CustomerID, DateTime? OrderDate, double? Freight)
+        {
+           this.OrderID = OrderID;
+            this.CustomerID = CustomerID;
+            this.OrderDate = OrderDate;
+            this.Freight = Freight;
+        }
+        public static List<OrderData> GetAllRecords()
+        {
+            if (Orders.Count() == 0)
+            {
+                int code = 10;
+                for (int i = 1; i < 2; i++)
+                {
+                    Orders.Add(new OrderData(10248, "VINET",new DateTime(1996,07,07), 32.38));
+                    Orders.Add(new OrderData(10249, "TOMSP", new DateTime(1996, 07, 07), 92.38));
+                    Orders.Add(new OrderData(10248, "HANAR", new DateTime(1996, 07, 07), 62.77));
+                    Orders.Add(new OrderData(10248, "VICTE", new DateTime(1996, 07, 07), 12.38));
+                    Orders.Add(new OrderData(10248, "SUPRD", new DateTime(1996, 07, 07), 82.38));
+                    Orders.Add(new OrderData(10248, "CHOPS", new DateTime(1996, 07, 07), 31.31));
+                    Orders.Add(new OrderData(10248, "RICSU", new DateTime(1996, 07, 07), 22.37));
+                    Orders.Add(new OrderData(10248, "WELLI", new DateTime(1996, 07, 07), 44.34));
+                    Orders.Add(new OrderData(10248, "RICSU", new DateTime(1996, 07, 07), 31.33));                                                                                    
+                    code += 5;
+                }
+            }
+            return Orders;
+        }
+        public int? OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public DateTime? OrderDate { get; set; }
+        public double? Freight { get; set; }
+    } 
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rXVAsjKMKldpCMYT?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 
 >* When the columns are auto-generated, the column [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Type) is determined from the first record of the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_DataSource).
@@ -107,47 +169,75 @@ By setting `IsPrimaryKey` to **true** for an auto-generated column in the Syncfu
 
 Here is an example code snippet that shows how to set a primary key for an auto-generated column when editing is enabled:
 
-```cshtml
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids
+@using BlazorApp1.Data
 
-<SfGrid @ref="Grid" TValue="Order" DataSource="@Orders">
-    <GridEvents OnDataBound="DataBoundHandler" TValue="Order"></GridEvents>
+<SfGrid @ref="Grid" TValue="OrderData" DataSource="@Orders">
+    <GridEvents OnDataBound="DataBoundHandler" TValue="OrderData"></GridEvents>
     <GridEditSettings AllowEditing="true" AllowAdding="true" AllowDeleting="true"></GridEditSettings>
 </SfGrid>
 
 @code {
-    public List<Order> Orders { get; set; }
-    SfGrid<Order>? Grid { get; set; }
+    private SfGrid<OrderData> Grid;
+    public List<OrderData> Orders { get; set; }
+       
     protected override void OnInitialized()
     {
-        Orders = Enumerable.Range(1, 75).Select(x => new Order()
-            {
-                OrderID = 1000 + x,
-                EmployeeID=x,
-                CustomerID = (new string[] { "VINET", "TOMSP", "HANAR", "VICTE", "SUPRD" })[new Random().Next(5)],
-                ShipCountry = (new string[] { "France", "Germany", "Brazil", "Venezuela", "Switzerland" })[new Random().Next(5)],
-                Freight = 2.1 * x,
-               
-            }).ToList();
-    }
-
-    public class Order
-    {
-        public int? OrderID { get; set; }
-        public string CustomerID { get; set; }
-        public int? EmployeeID { get; set; }
-        public string ShipCountry { get; set; }
-        public double? Freight { get; set; }
-    }
-
-    public void DataBoundHandler(BeforeDataBoundArgs<Order> args)
+        Orders = OrderData.GetAllRecords();
+    }   
+    public void DataBoundHandler(BeforeDataBoundArgs<OrderData> args)
     {
         Grid.Columns[0].IsPrimaryKey = true;
     }
 }
-```
+{% endhighlight %}
+{% highlight c# tabtitle="OrderData.cs" %}
+    public class OrderData
+    {
+        public static List<OrderData> Orders = new List<OrderData>();
+        public OrderData()
+        {
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hXhAZkWpgVUxtFDp?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+        }
+        public OrderData( int? OrderID, string CustomerID, DateTime? OrderDate, double? Freight)
+        {
+           this.OrderID = OrderID;
+            this.CustomerID = CustomerID;
+            this.OrderDate = OrderDate;
+            this.Freight = Freight;
+        }
+        public static List<OrderData> GetAllRecords()
+        {
+            if (Orders.Count() == 0)
+            {
+                int code = 10;
+                for (int i = 1; i < 2; i++)
+                {
+                    Orders.Add(new OrderData(10248, "VINET",new DateTime(1996,07,07), 32.38));
+                    Orders.Add(new OrderData(10249, "TOMSP", new DateTime(1996, 07, 07), 92.38));
+                    Orders.Add(new OrderData(10248, "HANAR", new DateTime(1996, 07, 07), 62.77));
+                    Orders.Add(new OrderData(10248, "VICTE", new DateTime(1996, 07, 07), 12.38));
+                    Orders.Add(new OrderData(10248, "SUPRD", new DateTime(1996, 07, 07), 82.38));
+                    Orders.Add(new OrderData(10248, "CHOPS", new DateTime(1996, 07, 07), 31.31));
+                    Orders.Add(new OrderData(10248, "RICSU", new DateTime(1996, 07, 07), 22.37));
+                    Orders.Add(new OrderData(10248, "WELLI", new DateTime(1996, 07, 07), 44.34));
+                    Orders.Add(new OrderData(10248, "RICSU", new DateTime(1996, 07, 07), 31.33));                                                                                    
+                    code += 5;
+                }
+            }
+            return Orders;
+        }
+        public int? OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public DateTime? OrderDate { get; set; }
+        public double? Freight { get; set; }
+    }
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hZVUijqCqvmcyEpn?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ### Set column options to auto generated columns
 
@@ -157,38 +247,25 @@ Here's an example of how you can set column options for auto-generated columns u
 
 In the below example, `Width` is set for **OrderID** column, **date** `Type` is set for **OrderDate** column and `Format` is set for **Freight** and **OrderDate** column.
 
-```cshtml
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids
+@using BlazorApp1.Data
 
-<SfGrid @ref="Grid" TValue="Order" DataSource="@Orders">
-    <GridEvents OnDataBound="DataBoundHandler" TValue="Order"></GridEvents>
+<SfGrid @ref="Grid" TValue="OrderData" DataSource="@Orders">
+    <GridEvents OnDataBound="DataBoundHandler" TValue="OrderData"></GridEvents>
+    <GridEditSettings AllowEditing="true" AllowAdding="true" AllowDeleting="true"></GridEditSettings>
 </SfGrid>
 
 @code {
-    public List<Order> Orders { get; set; }
-    SfGrid<Order>? Grid { get; set; }
+    private SfGrid<OrderData> Grid;
+    public List<OrderData> Orders { get; set; }
+       
     protected override void OnInitialized()
     {
-        Orders = Enumerable.Range(1, 75).Select(x => new Order()
-            {
-                OrderID = 1000 + x,
-                EmployeeID=x,
-                CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
-                Freight = 2.1 * x,
-                OrderDate = DateTime.Now.AddDays(-x),
-            }).ToList();
-    }
-
-    public class Order
-    {
-        public int? OrderID { get; set; }
-        public string CustomerID { get; set; }
-        public int? EmployeeID { get; set; }
-        public DateTime? OrderDate { get; set; }
-        public double? Freight { get; set; }
-    }
-
-    public void DataBoundHandler(BeforeDataBoundArgs<Order> args)
+        Orders = OrderData.GetAllRecords();
+    }   
+    public void DataBoundHandler(BeforeDataBoundArgs<OrderData> args)
     {
         var GridColumns = Grid.Columns;
 
@@ -210,7 +287,51 @@ In the below example, `Width` is set for **OrderID** column, **date** `Type` is 
         }
     }
 }
-```
+{% endhighlight %}
+{% highlight c# tabtitle="OrderData.cs" %}
+    public class OrderData
+    {
+        public static List<OrderData> Orders = new List<OrderData>();
+        public OrderData()
+        {
+
+        }
+        public OrderData( int? OrderID, string CustomerID, DateTime? OrderDate, double? Freight)
+        {
+           this.OrderID = OrderID;
+            this.CustomerID = CustomerID;
+            this.OrderDate = OrderDate;
+            this.Freight = Freight;
+        }
+        public static List<OrderData> GetAllRecords()
+        {
+            if (Orders.Count() == 0)
+            {
+                int code = 10;
+                for (int i = 1; i < 2; i++)
+                {
+                    Orders.Add(new OrderData(10248, "VINET",new DateTime(1996,07,07), 32.38));
+                    Orders.Add(new OrderData(10249, "TOMSP", new DateTime(1996, 07, 07), 92.38));
+                    Orders.Add(new OrderData(10248, "HANAR", new DateTime(1996, 07, 07), 62.77));
+                    Orders.Add(new OrderData(10248, "VICTE", new DateTime(1996, 07, 07), 12.38));
+                    Orders.Add(new OrderData(10248, "SUPRD", new DateTime(1996, 07, 07), 82.38));
+                    Orders.Add(new OrderData(10248, "CHOPS", new DateTime(1996, 07, 07), 31.31));
+                    Orders.Add(new OrderData(10248, "RICSU", new DateTime(1996, 07, 07), 22.37));
+                    Orders.Add(new OrderData(10248, "WELLI", new DateTime(1996, 07, 07), 44.34));
+                    Orders.Add(new OrderData(10248, "RICSU", new DateTime(1996, 07, 07), 31.33));                                                                                    
+                    code += 5;
+                }
+            }
+            return Orders;
+        }
+        public int? OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public DateTime? OrderDate { get; set; }
+        public double? Freight { get; set; }
+    }
+{% endhighlight %}
+{% endtabs %}
+
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LjBKXuWzApShKrJf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Dynamic column building
@@ -219,37 +340,76 @@ It is possible to dynamically build and customize each of the DataGrid column us
 
 You can refer the following code example to achieve this.
 
-```cshtml
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids
+@using BlazorApp1.Data
 
-<SfGrid DataSource="@OrderData">
+<SfGrid DataSource="@Orders">
     <GridEditSettings AllowEditing="true" AllowAdding="true" AllowDeleting="true"></GridEditSettings>
     <GridColumns>
-        @foreach (var prop in typeof(Order).GetProperties())
+        @foreach (var prop in typeof(OrderData).GetProperties())
         {
             <GridColumn Field="@prop.Name" IsPrimaryKey="@(prop.Name == "OrderID")" AllowEditing="@prop.CanWrite"></GridColumn>
         }
     </GridColumns>
 </SfGrid>
 
-@code{
-    public List<Order> OrderData = new List<Order>
+@code {
+    private SfGrid<OrderData> Grid;
+    public List<OrderData> Orders { get; set; }
+       
+    protected override void OnInitialized()
     {
-        new Order() { OrderID = 10248, CustomerID = "VINET", EmployeeID = 4 },
-        new Order() { OrderID = 10249, CustomerID = "TOMSP", EmployeeID = 5 },
-        new Order() { OrderID = 10250, CustomerID = "HANAR", EmployeeID = 6 }
-    };
+        Orders = OrderData.GetAllRecords();
+    }   
+}
+{% endhighlight %}
+{% highlight c# tabtitle="OrderData.cs" %}
+    public class OrderData
+    {
+        public static List<OrderData> Orders = new List<OrderData>();
+        public OrderData()
+        {
 
-    public class Order
-    {
+        }
+        public OrderData( int? OrderID, string CustomerID, DateTime? OrderDate, double? Freight)
+        {
+           this.OrderID = OrderID;
+            this.CustomerID = CustomerID;
+            this.OrderDate = OrderDate;
+            this.Freight = Freight;
+        }
+        public static List<OrderData> GetAllRecords()
+        {
+            if (Orders.Count() == 0)
+            {
+                int code = 10;
+                for (int i = 1; i < 2; i++)
+                {
+                    Orders.Add(new OrderData(10248, "VINET",new DateTime(1996,07,07), 32.38));
+                    Orders.Add(new OrderData(10249, "TOMSP", new DateTime(1996, 07, 07), 92.38));
+                    Orders.Add(new OrderData(10248, "HANAR", new DateTime(1996, 07, 07), 62.77));
+                    Orders.Add(new OrderData(10248, "VICTE", new DateTime(1996, 07, 07), 12.38));
+                    Orders.Add(new OrderData(10248, "SUPRD", new DateTime(1996, 07, 07), 82.38));
+                    Orders.Add(new OrderData(10248, "CHOPS", new DateTime(1996, 07, 07), 31.31));
+                    Orders.Add(new OrderData(10248, "RICSU", new DateTime(1996, 07, 07), 22.37));
+                    Orders.Add(new OrderData(10248, "WELLI", new DateTime(1996, 07, 07), 44.34));
+                    Orders.Add(new OrderData(10248, "RICSU", new DateTime(1996, 07, 07), 31.33));                                                                                    
+                    code += 5;
+                }
+            }
+            return Orders;
+        }
         public int? OrderID { get; set; }
         public string CustomerID { get; set; }
-        public int? EmployeeID { get; set; }
+        public DateTime? OrderDate { get; set; }
+        public double? Freight { get; set; }
     }
-}
-```
+{% endhighlight %}
+{% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BXLqZdLZLwieoVBr?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hjLKMXgsAuxEBpEC?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Dynamic column binding using ExpandoObject
 
@@ -257,7 +417,8 @@ It is possible to build a column dynamically without knowing the model type duri
 
 In the following sample, columns are built dynamically using the `ExpandoObject`.
 
-```cshtml
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
 @using System.Dynamic
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Buttons
@@ -304,8 +465,8 @@ In the following sample, columns are built dynamically using the `ExpandoObject`
         return data;
     }
 }
-
-```
+{% endhighlight %}
+{% endtabs %}
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BDhqXHrjBldvsODR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
@@ -376,7 +537,8 @@ To enable complex data binding in the DataGrid component using remote data, add 
 
 In the below example, we have used the `Expand` query to load the nested Employee object's **City** property using the dot (.) operator.
 
-```cshtml
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Data
 @using Syncfusion.Blazor.Grids
@@ -408,7 +570,8 @@ In the below example, we have used the `Expand` query to load the nested Employe
         public string City { get; set; }
     }
 }
-```
+{% endhighlight %}
+{% endtabs %}
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rtLgNFNfqhJiGCNS?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
