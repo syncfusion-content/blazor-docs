@@ -244,4 +244,94 @@ Before opening a filter dialog for each column, the `OnActionBegin` event will b
 
 N> [View Sample in GitHub.](https://github.com/SyncfusionExamples/blazor-datagrid-customize-filter-popup-using-css)
 
+## Customize the CheckboxListData in filter Popup
+
+To customize the Checkbox/Excel list element **`FilterItemTemplate`** can also be used. But it is used only for display purpose and the default searching will perform based on the column's field value only. So to perform search operation, we have provided support to [CheckboxListData](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ActionEventArgs-1.html#Syncfusion_Blazor_Grids_ActionEventArgs_1_CheckboxListData) where custom data list can be passed to filter dialog. To pass custom datasource for the checkbox list data in a Grid column filter you can use  **`CheckBoxListData`** inside [OnActionBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnActionBegin) event of the Grid.
+
+Before opening a filter dialog for each column, the `OnActionBegin` event will be triggered with the [RequestType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ActionEventArgs-1.html#Syncfusion_Blazor_Grids_ActionEventArgs_1_RequestType) argument as `FilterBeforeOpen`. At that point, based on the column name, set the customized data to the filter popup.
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+@using Syncfusion.Blazor.Grids
+@using BlazorApp1.Data
+
+<SfGrid DataSource="@GridData" @ref="Grid" AllowFiltering="true" AllowPaging="true">
+    <GridFilterSettings Type="Syncfusion.Blazor.Grids.FilterType.Excel"></GridFilterSettings>
+    <GridEvents OnActionBegin="ActionBegin" TValue="OrderData"></GridEvents>
+    <GridColumns>
+        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+    </GridColumns>
+</SfGrid>
+@code{
+    public List<OrderData> GridData { get; set; }
+
+    public SfGrid<OrderData> Grid { get; set; }
+    public async Task ActionBegin(ActionEventArgs<OrderData> args)
+    {
+        if (args.RequestType == Syncfusion.Blazor.Grids.Action.FilterBeforeOpen)
+        {
+            if (args.ColumnName == "OrderID")
+                args.CheckboxListData = await Grid.GetCurrentViewRecordsAsync(); // Display only the current page records in the filter popup
+        }
+    }
+
+    protected override void OnInitialized()
+    {
+        GridData = OrderData.GetAllRecords();
+    }
+}
+{% endhighlight %}
+{% highlight c# tabtitle="OrderData.cs" %}
+     public class OrderData
+ {
+     public static List<OrderData> Orders = new List<OrderData>();
+     public OrderData()
+     {
+
+     }
+     public OrderData(int? OrderID,string CustomerID, DateTime OrderDate, double Freight)
+     {
+        this.OrderID = OrderID;    
+        this.CustomerID = CustomerID;         
+        this.OrderDate = OrderDate;
+        this.Freight = Freight;
+         
+     }
+     public static List<OrderData> GetAllRecords()
+     {
+         if (Orders.Count() == 0)
+         {
+             int code = 10;
+             for (int i = 1; i < 5; i++)
+             {
+                 Orders.Add(new OrderData(10248, "VINET", new DateTime(1996, 04, 17), 32.38));
+                 Orders.Add(new OrderData(10249, "TOMSP", new DateTime(1996, 05, 07), 11.61));
+                 Orders.Add(new OrderData(10250, "HANAR", new DateTime(1996, 08, 07), 65.83));
+                 Orders.Add(new OrderData(10251, "VICTE", new DateTime(1996, 08, 07), 41.34));
+                 Orders.Add(new OrderData(10252, "SUPRD", new DateTime(1996, 09, 07), 51.30));
+                 Orders.Add(new OrderData(10253, "HANAR", new DateTime(1996, 07, 10), 58.17));
+                 Orders.Add(new OrderData(10254, "CHOPS", new DateTime(1996, 07, 11), 22.98));
+                 Orders.Add(new OrderData(10255, "RICSU", new DateTime(1996, 07, 12), 148.33));
+                 Orders.Add(new OrderData(10256, "WELLI", new DateTime(1996, 07, 15), 13.97));
+                 code += 5;
+             }
+         }
+         return Orders;
+     }
+
+     public int? OrderID { get; set; }
+     public string CustomerID { get; set; }
+     public DateTime OrderDate { get; set; }
+     public double Freight { get; set; }
+     public string ShipCity { get; set; }
+
+ }
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rZLUCMDBqYCcoDPD?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 N> You can refer to our [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap4) to understand how to present and manipulate data.
