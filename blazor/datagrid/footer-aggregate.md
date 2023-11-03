@@ -23,7 +23,7 @@ To access the aggregate values inside the **FooterTemplate**, you can use the im
     <GridAggregates>
         <GridAggregate>
             <GridAggregateColumns>
-                <GridAggregateColumn Field=@nameof(OrderData.Freight) Type="AggregateType.Sum" Format="C2">
+                <GridAggregateColumn Field=@nameof(OrderData.Freight) Type="AggregateType.Sum" >
                     <FooterTemplate>
                         @{
                             var aggregate = (context as AggregateTemplateContext);
@@ -37,7 +37,7 @@ To access the aggregate values inside the **FooterTemplate**, you can use the im
         </GridAggregate>
         <GridAggregate>
             <GridAggregateColumns>
-                <GridAggregateColumn Field=@nameof(OrderData.Freight) Type="AggregateType.Max" Format="C2">
+                <GridAggregateColumn Field=@nameof(OrderData.Freight) Type="AggregateType.Max">
                     <FooterTemplate>
                         @{
                             var aggregate = (context as AggregateTemplateContext);
@@ -53,7 +53,7 @@ To access the aggregate values inside the **FooterTemplate**, you can use the im
     <GridColumns>
         <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
         <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer ID" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" TextAlign="TextAlign.Right" Width="120"></GridColumn>
         <GridColumn Field=@nameof(OrderData.ShipName) HeaderText="Ship Name" Width="150"></GridColumn>
     </GridColumns>
 </SfGrid>
@@ -114,7 +114,7 @@ To access the aggregate values inside the **FooterTemplate**, you can use the im
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hDBUstUjUunAOcXi?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BjLAMWXqUpZEyoPc?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Format the aggregate value
 
