@@ -180,9 +180,11 @@ You can print the grid’s content using an external button by utilizing the [Pr
 
 By default, the Syncfusion Blazor Grid prints all the pages of the grid. The [PrintMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_DashArray) property within the grid grants you control over the printing process. However, if you want to print only the current visible page, you can achieve this by setting the `PrintMode` property to **CurrentPage**.
 
-```cshtml
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.DropDowns
+@using BlazorApp1.Data
 
 <label>Select Print Mode: </label>
 <SfDropDownList TValue="PrintMode" TItem="DropDownOrder" @bind-Value="@PrintMode" DataSource="@DropDownValue" Width="130px">
@@ -193,18 +195,21 @@ By default, the Syncfusion Blazor Grid prints all the pages of the grid. The [Pr
 <SfGrid @ref="Grid" DataSource="@Orders" Toolbar="@(new List<object>() { "Print" })" PrintMode="@PrintMode" AllowPaging="true">
     <GridPageSettings PageSize="6"></GridPageSettings>
     <GridColumns>
-        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.ShipCity) HeaderText="Ship City" TextAlign="TextAlign.Right" Width="130" Type="ColumnType.Date"></GridColumn>
-        <GridColumn Field=@nameof(Order.ShipName) HeaderText="Ship Name" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer Name" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.ShipCity) HeaderText="Ship City" TextAlign="TextAlign.Right" Width="130" Type="ColumnType.Date"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.ShipName) HeaderText="Ship Name" TextAlign="TextAlign.Right" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
-
 @code {
-    private SfGrid<Order> Grid;
-    public List<Order> Orders { get; set; }
+    private SfGrid<OrderData> Grid;
+    public List<OrderData> Orders { get; set; }
     public PrintMode PrintMode { get; set; } = PrintMode.AllPages;
-
+   
+    protected override void OnInitialized()
+    {
+        Orders = OrderData.GetAllRecords();
+    }
     public class DropDownOrder
     {
         public string Text { get; set; }
@@ -221,28 +226,53 @@ By default, the Syncfusion Blazor Grid prints all the pages of the grid. The [Pr
         PrintMode = Args.Value;
         Grid.Refresh();
     }
-
-    protected override void OnInitialized()
+}
+{% endhighlight %}
+{% highlight c# tabtitle="OrderData.cs" %}
+public class OrderData
     {
-        Orders = Enumerable.Range(1, 15).Select(x => new Order()
+        public static List<OrderData> Orders = new List<OrderData>();   
+        public OrderData()
+        {
+
+        }
+        public OrderData(int? OrderID, string CustomerID, string ShipCity,string ShipName)
+        {
+            this.OrderID = OrderID;
+            this.CustomerID = CustomerID;
+            this.ShipCity = ShipCity;
+            this.ShipName= ShipName;         
+        }
+        public static List<OrderData> GetAllRecords()
+        {
+            if (Orders.Count() == 0)
             {
-                OrderID = 10247 + x,
-                CustomerID =(new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
-                ShipCity = (new string[] { "Reims", "Münster", "Rio de Janeiro", "Lyon", "Charleroi" })[new Random().Next(5)],
-                ShipName = (new string[] { "Vins et alcools Chev", "Toms Spezialitäten", "Hanari Carnes", "Victuailles en stock", "Suprêmes délices" })[new Random().Next(5)],
-            }).ToList();
-    }
-
-    public class Order
-    {
+                int code = 10;
+                for (int i = 1; i < 3; i++)
+                {
+                    Orders.Add(new OrderData(10248, "ALFKI", "Reims", "Vins et alcools Chev"));
+                    Orders.Add(new OrderData(10249, "ANANTR", "Münster", "Toms Spezialitäten"));
+                    Orders.Add(new OrderData(10250, "ANTON", "Rio de Janeiro", "Hanari Carnes"));
+                    Orders.Add(new OrderData(10251, "BLONP", "Lyon", "Victuailles en stock"));
+                    Orders.Add(new OrderData(10252, "BOLID", "Charleroi", "Suprêmes délices"));
+                    Orders.Add(new OrderData(10253, "ANTON", "Lyon", "Victuailles en stock"));
+                    Orders.Add(new OrderData(10254, "BLONP", "Rio de Janeiro", "Hanari Carnes"));
+                    Orders.Add(new OrderData(10255, "BOLID", "Münster", "Toms Spezialitäten"));
+                    Orders.Add(new OrderData(10256, "ALFKI", "Reims", "Vins et alcools Chev"));                   
+                    code += 5;
+                }
+            }
+            return Orders;
+        }
         public int? OrderID { get; set; }
         public string CustomerID { get; set; }
         public string ShipCity { get; set; }
         public string ShipName { get; set; }
     }
-}
-```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rjhAsZXfAWARnqzP?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BthAWMNUhrlcjXzc?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 <!-- Print the hierarchy datagrid
 
