@@ -120,7 +120,7 @@ The auto wrap feature allows the cell content in the grid to wrap to the next li
 > * If a column’s header text contains no white space, the text may not be wrapped.
 > *  If the content of a cell contains HTML tags, the Autowrap functionality may not work as expected. In such cases, you can use the [HeaderTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_HeaderTemplate) and [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_Template) features of the column to customize the appearance of the header and cell content.
 
-The following example demonstrates how to set the `AllowTextWrap` property to **true** and specify the wrap mode as **Content** by setting the `TextWrapSettings.WrapMode` property.Also change the `TextWrapSettings.wrapMode` property to **Content**,**Header** and **Both** on changing the dropdown value using the [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSwitch-1.html#Syncfusion_Blazor_Buttons_SfSwitch_1_ValueChange) event of the DropDownList component.
+The following example demonstrates how to set the `AllowTextWrap` property to **true** and specify the wrap mode as **Content** by setting the `TextWrapSettings.WrapMode` property.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -522,7 +522,7 @@ There are three types of [ClipMode](https://help.syncfusion.com/cr/blazor/Syncfu
 * **Ellipsis**: Displays ellipsis when the cell content overflows its area.
 * **EllipsisWithTooltip**: Displays ellipsis when the cell content overflows its area, also it will display the tooltip while hover on ellipsis is applied. Also it will display the tooltip while hover on ellipsis is applied.
 
-The following example demonstrates, how to set the [ClipMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_ClipMode) property for the **Main Fields of Invention** column .Also change the `ClipMode` property to **Clip**,**Ellipsis** and **EllipsisWithTooltip** on changing the dropdown value using the [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSwitch-1.html#Syncfusion_Blazor_Buttons_SfSwitch_1_ValueChange) event of the DropDownList component
+The following example demonstrates, how to set the [ClipMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_ClipMode) property for the Grid column .
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
