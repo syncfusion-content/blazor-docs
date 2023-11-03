@@ -334,9 +334,9 @@ In the below example, `Width` is set for **OrderID** column, **date** `Type` is 
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LjBKXuWzApShKrJf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-## Dynamic column building
+## Dynamic column generation
 
-It is possible to dynamically build and customize each of the DataGrid column using the type of the model.
+The Syncfusion Grid component allows you to dynamically generate columns at runtime, based on the data provided. This feature is useful when you need to display data with varying columns based on user requirements or dynamic data sources.
 
 You can refer the following code example to achieve this.
 
@@ -470,7 +470,7 @@ In the following sample, columns are built dynamically using the `ExpandoObject`
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BDhqXHrjBldvsODR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-## Complex data binding
+## Complex data generation
 
 The Syncfusion DataGrid component allows you to achieve complex data binding by using the dot (.) operator in the  column.field. This feature is particularly useful when dealing with nested or complex data structures.
 
@@ -485,7 +485,8 @@ In the below example, we have bound the nested **Employee** object’s **FirstNa
 > <GridColumn Field="@(nameof(EmployeeData.EmployeeName) + "." + nameof(EmployeeName.FirstName))" HeaderText="First Name" Width="150"></GridColumn>
 > ```
 
-```cshtml
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Employees" Height="315">
@@ -527,7 +528,8 @@ In the below example, we have bound the nested **Employee** object’s **FirstNa
         public string LastName { get; set; }
     }
 }
-```
+{% endhighlight %}
+{% endtabs %}
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hNhKjRLjhvQYGrBK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
@@ -575,11 +577,11 @@ In the below example, we have used the `Expand` query to load the nested Employe
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rtLgNFNfqhJiGCNS?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-### ExpandoObject Complex data binding
+### Complex data generation using ExpandoObject 
 
 Before proceeding this, learn about [ExpandoObject Binding](https://blazor.syncfusion.com/documentation/datagrid/data-binding#expandoobject-binding). You can achieve ExpandoObject complex data binding in the DataGrid by using the dot(.) operator in the column.field. In the following examples, `CustomerID.Name` and `ShipCountry.Country` are complex data.
-
-```cshtml
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids
 @using System.Dynamic
 
@@ -620,17 +622,19 @@ Before proceeding this, learn about [ExpandoObject Binding](https://blazor.syncf
 
     }
 }
-```
+{% endhighlight %}
+{% endtabs %}
 
 > * you can perform the Data operations and CRUD operations for Complex ExpandoObject binding fields too.
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VXrgXRVXLFuZSlab?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-### DynamicObject Complex data binding
+### Complex data generation using DynamicObject
 
 Before proceeding this, learn about [DynamicObject Binding](https://blazor.syncfusion.com/documentation/datagrid/data-binding#dynamicobject-binding). You can achieve DynamicObject complex data binding in the datagrid by using the dot(.) operator in the column.field. In the following examples, `CustomerID.Name` and `ShipCountry.Country` are complex data.
 
-```cshtml
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids
 @using System.Dynamic
 
@@ -686,7 +690,8 @@ Before proceeding this, learn about [DynamicObject Binding](https://blazor.syncf
         }
     }
 }
-```
+{% endhighlight %}
+{% endtabs %}
 
 > * you can perform the Data operations and CRUD operations for Complex DynamicObject binding fields too.
 

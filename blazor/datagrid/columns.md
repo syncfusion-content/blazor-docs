@@ -172,7 +172,6 @@ The column width is specified as an absolute pixel value. For example, a column 
  <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="100"></GridColumn>
   
 ```
-
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids
@@ -231,7 +230,6 @@ public class OrderData
             }
             return Orders;
         }
-
         public int? OrderID { get; set; }
         public string CustomerID { get; set; }
         public double? Freight { get; set; }
@@ -558,7 +556,6 @@ Here is an example of using the `TextAlign` property to align the text of a Data
             }
             return Orders;
         }
-
         public int? OrderID { get; set; }
         public string CustomerID { get; set; }
         public string ShipCountry { get; set; }
@@ -637,7 +634,6 @@ To enable the rendering of boolean values as checkboxes, you need to set the `Di
             }
             return Orders;
         }
-
         public int? OrderID { get; set; }
         public string CustomerID { get; set; }
         public double Freight { get; set; }

@@ -25,6 +25,111 @@ The Syncfusion Grid component provides a convenient way to bind local data to a 
 
 In this example, data is the local data source for the Grid, and **Employee Name** is the local data source for the foreign key column. The ForeignKeyValue property is set to **FirstName** which represents the field name in the  **Employee Name** that you want to display in the foreign key column.
 
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+@using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor.DropDowns
+@using BlazorApp1.Data
+
+<SfGrid DataSource="@Orders" Height="315" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Cancel", "Update" })">
+    <GridEditSettings AllowAdding="true" AllowDeleting="true" AllowEditing="true"></GridEditSettings>
+    <GridColumns>
+        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" IsPrimaryKey="true" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridForeignColumn Field=@nameof(OrderData.EmployeeID) HeaderText="Employee Name" ForeignKeyValue="FirstName" ForeignDataSource="@Employees" Width="150"></GridForeignColumn>
+        <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.ShipCity) HeaderText="Ship City" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+    </GridColumns>
+</SfGrid>
+@code {
+    public List<OrderData> Orders { get; set; }
+    public List<EmployeeData> Employees { get; set; }
+    protected override void OnInitialized()
+    {
+        Orders = OrderData.GetAllRecords();
+        Employees = EmployeeData.GetAllRecords();
+    }
+}
+{% endhighlight %}
+{% highlight c# tabtitle="OrderData.cs" %}
+    public class EmployeeData
+    {
+        public static List<EmployeeData> Employees = new List<EmployeeData>();
+        public EmployeeData() 
+        { 
+
+        }
+        public EmployeeData(int? employeeID, string firstName)
+        {
+            EmployeeID = employeeID;
+            FirstName = firstName;
+        }
+        public static List<EmployeeData> GetAllRecords()
+        {
+            if (Employees.Count() == 0)
+            {
+                int code = 10;
+                for (int i = 1; i < 2; i++)
+                {
+                    Employees.Add(new EmployeeData( 1, "Nancy"));
+                    Employees.Add(new EmployeeData( 2, "Andrew"));
+                    Employees.Add(new EmployeeData( 3, "Janet"));
+                    Employees.Add(new EmployeeData( 4, "Nancy"));
+                    Employees.Add(new EmployeeData( 5, "Margaret"));
+                    Employees.Add(new EmployeeData( 6, "Steven"));
+                    Employees.Add(new EmployeeData( 7, "Janet"));
+                    Employees.Add(new EmployeeData( 8, "Andrew"));
+                    Employees.Add(new EmployeeData(9, "Nancy"));
+                    code += 5;
+                }
+            }
+            return Employees;
+        }
+        public int? EmployeeID { get; set; }
+        public string FirstName { get; set; }
+    }
+    public class OrderData
+    {
+        public static List<OrderData> Orders = new List<OrderData>();        
+       
+        public OrderData()
+        {
+
+        }
+        public OrderData(int? OrderID, int? EmployeeID, string ShipCity, double? Freight)
+        {
+           this.OrderID = OrderID;
+           this.EmployeeID = EmployeeID;
+           this.ShipCity = ShipCity;
+           this.Freight = Freight;            
+        }
+        public static List<OrderData> GetAllRecords()
+        {
+            if (Orders.Count() == 0)
+            {
+                int code = 10;
+                for (int i = 1; i < 2; i++)
+                {
+                    Orders.Add(new OrderData(10248,1, "Reims", 32.18));
+                    Orders.Add(new OrderData(10249,2, "Münster",33.33));
+                    Orders.Add(new OrderData(10250,3, "Rio de Janeiro",12.35));
+                    Orders.Add(new OrderData(10251,4, "Reims", 22.65));
+                    Orders.Add(new OrderData(10252,5, "Lyon", 63.43));
+                    Orders.Add(new OrderData(10253,6, "Charleroi",56.98));
+                    Orders.Add(new OrderData(10254,7, "Rio de Janeiro", 45.65));
+                    Orders.Add(new OrderData(10255,8, "Münster", 11.13));
+                    Orders.Add(new OrderData(10256,9, "Reims", 87.59));
+                    code += 5;
+                }
+            }
+            return Orders;
+        }
+        public int? OrderID { get; set; }
+        public int? EmployeeID { get; set; }
+        public string ShipCity { get; set; }
+        public double? Freight { get; set; }
+    }
+{% endhighlight %}
+{% endtabs %}
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VjrqNPVEApFgHAZq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
@@ -278,8 +383,9 @@ In this example, a DropDownList component is rendered as the filter UI for the *
 @using Syncfusion.Blazor.DropDowns
 @using BlazorApp1.Data
 
-<SfGrid DataSource="@Orders" Height="315" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Cancel", "Update" })">
+<SfGrid DataSource="@Orders" Height="315" AllowFiltering="true" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Cancel", "Update" })">
     <GridEditSettings AllowAdding="true" AllowDeleting="true" AllowEditing="true"></GridEditSettings>
+    <GridFilterSettings Type="Syncfusion.Blazor.Grids.FilterType.Menu"></GridFilterSettings>
     <GridColumns>
         <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" IsPrimaryKey="true" TextAlign="TextAlign.Right" Width="120"></GridColumn>
         <GridForeignColumn Field=@nameof(OrderData.EmployeeID) HeaderText="Employee Name" ForeignKeyValue="FirstName" ForeignDataSource="@Employees" Width="150">
@@ -296,20 +402,19 @@ In this example, a DropDownList component is rendered as the filter UI for the *
 @code {
     public List<OrderData> Orders { get; set; }
     public List<EmployeeData> Employees { get; set; }
-
     protected override void OnInitialized()
     {
         Orders = OrderData.GetAllRecords();
         Employees = EmployeeData.GetAllRecords();
-    }
+    }   
 }
 {% endhighlight %}
 {% highlight c# tabtitle="OrderData.cs" %}
-    public class EmployeeData
+     public class EmployeeData
     {
         public static List<EmployeeData> Employees = new List<EmployeeData>();
-        public EmployeeData() 
-        { 
+        public EmployeeData()
+        {
 
         }
         public EmployeeData(int? employeeID, string firstName)
@@ -324,14 +429,14 @@ In this example, a DropDownList component is rendered as the filter UI for the *
                 int code = 10;
                 for (int i = 1; i < 2; i++)
                 {
-                    Employees.Add(new EmployeeData( 1, "Nancy"));
-                    Employees.Add(new EmployeeData( 2, "Andrew"));
-                    Employees.Add(new EmployeeData( 3, "Janet"));
-                    Employees.Add(new EmployeeData( 4, "Nancy"));
-                    Employees.Add(new EmployeeData( 5, "Margaret"));
-                    Employees.Add(new EmployeeData( 6, "Steven"));
-                    Employees.Add(new EmployeeData( 7, "Janet"));
-                    Employees.Add(new EmployeeData( 8, "Andrew"));
+                    Employees.Add(new EmployeeData(1, "Nancy"));
+                    Employees.Add(new EmployeeData(2, "Andrew"));
+                    Employees.Add(new EmployeeData(3, "Janet"));
+                    Employees.Add(new EmployeeData(4, "Nancy"));
+                    Employees.Add(new EmployeeData(5, "Margaret"));
+                    Employees.Add(new EmployeeData(6, "Steven"));
+                    Employees.Add(new EmployeeData(7, "Janet"));
+                    Employees.Add(new EmployeeData(8, "Andrew"));
                     Employees.Add(new EmployeeData(9, "Nancy"));
                     code += 5;
                 }
@@ -343,18 +448,18 @@ In this example, a DropDownList component is rendered as the filter UI for the *
     }
     public class OrderData
     {
-        public static List<OrderData> Orders = new List<OrderData>();        
-       
+        public static List<OrderData> Orders = new List<OrderData>();
+
         public OrderData()
         {
 
         }
         public OrderData(int? OrderID, int? EmployeeID, string ShipCity, double? Freight)
         {
-           this.OrderID = OrderID;
-           this.EmployeeID = EmployeeID;
-           this.ShipCity = ShipCity;
-           this.Freight = Freight;            
+            this.OrderID = OrderID;
+            this.EmployeeID = EmployeeID;
+            this.ShipCity = ShipCity;
+            this.Freight = Freight;
         }
         public static List<OrderData> GetAllRecords()
         {
@@ -363,15 +468,15 @@ In this example, a DropDownList component is rendered as the filter UI for the *
                 int code = 10;
                 for (int i = 1; i < 2; i++)
                 {
-                    Orders.Add(new OrderData(10248,1, "Reims", 32.18));
-                    Orders.Add(new OrderData(10249,2, "Münster",33.33));
-                    Orders.Add(new OrderData(10250,3, "Rio de Janeiro",12.35));
-                    Orders.Add(new OrderData(10251,4, "Reims", 22.65));
-                    Orders.Add(new OrderData(10252,5, "Lyon", 63.43));
-                    Orders.Add(new OrderData(10253,6, "Charleroi",56.98));
-                    Orders.Add(new OrderData(10254,7, "Rio de Janeiro", 45.65));
-                    Orders.Add(new OrderData(10255,8, "Münster", 11.13));
-                    Orders.Add(new OrderData(10256,9, "Reims", 87.59));
+                    Orders.Add(new OrderData(10248, 1, "Reims", 32.18));
+                    Orders.Add(new OrderData(10249, 2, "Münster", 33.33));
+                    Orders.Add(new OrderData(10250, 3, "Rio de Janeiro", 12.35));
+                    Orders.Add(new OrderData(10251, 4, "Reims", 22.65));
+                    Orders.Add(new OrderData(10252, 5, "Lyon", 63.43));
+                    Orders.Add(new OrderData(10253, 6, "Charleroi", 56.98));
+                    Orders.Add(new OrderData(10254, 7, "Rio de Janeiro", 45.65));
+                    Orders.Add(new OrderData(10255, 8, "Münster", 11.13));
+                    Orders.Add(new OrderData(10256, 9, "Reims", 87.59));
                     code += 5;
                 }
             }
@@ -533,6 +638,78 @@ In this example, the “EmployeeID” column is a foreign key column, and the fi
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rZLUtFDrTMbczudb?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
+## Prevent filter query generation for foreignkey column
+
+By default, a filter query for the foreignkey column will be generated based on the foreignkey value. You can prevent the default filter query generation for the foreignkey column and add the custom filter query. This can be achieved by setting the [PreventFilterQuery](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ActionEventArgs-1.html#Syncfusion_Blazor_Grids_ActionEventArgs_1_PreventFilterQuery) argument of the [OnActionBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnActionBegin) event to true.
+
+In the following code sample, you can prevent default filter query generation using the `PreventFilterQuery` property and generate a custom filter query to execute a filter operation.
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+@using System.ComponentModel.DataAnnotations;
+@using Syncfusion.Blazor.Data
+@using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor.DropDowns
+@using Newtonsoft.Json
+
+<SfGrid ID="Grid" @ref="Grid" Query="@currentQuery" TValue="Book" Toolbar="@ToolbarItems" Height="100%" AllowPaging="true" AllowSorting="true" AllowFiltering="true">
+    <GridPageSettings PageSize="10" PageSizes="true"></GridPageSettings>
+    <SfDataManager Url="http://localhost:64956/odata/books" Adaptor="Adaptors.ODataV4Adaptor"></SfDataManager>
+    <GridEvents TValue="Book" OnActionBegin="OnActionBegin"/>
+    <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true" Mode="@EditMode.Normal"></GridEditSettings>
+    <GridColumns>
+        <GridColumn Field=@nameof(Book.Id) IsPrimaryKey="true" Width="150"></GridColumn>
+        <GridForeignColumn TValue="Customer" Field=@nameof(Book.CustomerId)  AllowFiltering="true" ForeignKeyValue="Name" ForeignKeyField="Id" HeaderText="Name" Width="100" >
+            <SfDataManager Url="http://localhost:64956/odata/customers" Adaptor="Adaptors.ODataV4Adaptor"></SfDataManager>
+        </GridForeignColumn>
+        <GridColumn Field=@nameof(Book.CreditLimit) Width="200" EditType="EditType.NumericEdit"></GridColumn>
+        <GridColumn Field=@nameof(Book.Active) Width="200" EditType="EditType.BooleanEdit"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code{
+    SfGrid<Book> Grid { get; set; }
+    private Query currentQuery = new Query();
+    public List<string> ToolbarItems = new List<string>() { "Add", "Edit", "Delete", "Update", "Cancel", "Search" };
+ 
+    private void OnActionBegin(Syncfusion.Blazor.Grids.ActionEventArgs<Book> args)
+    {  
+        if (args.RequestType == Syncfusion.Blazor.Grids.Action.Filtering)
+        {
+            if (String.Equals(args.CurrentFilteringColumn, nameof(Book.CustomerId), StringComparison.OrdinalIgnoreCase))
+            {
+                args.PreventFilterQuery = true;
+                currentQuery = new Query().Where("Customer/Name", args.CurrentFilterObject.Operator.ToString().ToLower(), args.CurrentFilterObject.Value, true, true);
+            }
+        }
+    }
+
+    public class Book
+    {
+        [Key]
+        public Guid Id { get; set; }
+        public Guid CustomerId { get; set; }
+        public Guid CustomerId1 { get; set; }
+        public virtual Customer Customer { get; set; }
+        public int CreditLimit { get; set; }
+        public bool Active { get; set; }
+        public bool IsDeleted { get; set; }
+    }
+
+    public class Customer
+    {
+        [Key]
+        public Guid Id { get; set; }
+        public string Name { get; set; }      
+        [JsonIgnore]
+        public List<Book> CustomerBooks { get; set; }
+    }
+}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hXrgXxVXqtCMhOps?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 
 ## Enable multiple foreign key columns
 
@@ -688,80 +865,6 @@ In the following example, Employee Name and Ship City are foreign key columns th
 {% endtabs %}
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rDBKMWNMfqZSTTgr?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-
-### Prevent filter query generation for foreignkey column
-
-By default, a filter query for the foreignkey column will be generated based on the foreignkey value. You can prevent the default filter query generation for the foreignkey column and add the custom filter query. This can be achieved by setting the [PreventFilterQuery](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ActionEventArgs-1.html#Syncfusion_Blazor_Grids_ActionEventArgs_1_PreventFilterQuery) argument of the [OnActionBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnActionBegin) event to true.
-
-In the following code sample, you can prevent default filter query generation using the `PreventFilterQuery` property and generate a custom filter query to execute a filter operation.
-
-{% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
-@using System.ComponentModel.DataAnnotations;
-@using Syncfusion.Blazor.Data
-@using Syncfusion.Blazor.Grids
-@using Syncfusion.Blazor.DropDowns
-@using Newtonsoft.Json
-
-<SfGrid ID="Grid" @ref="Grid" Query="@currentQuery" TValue="Book" Toolbar="@ToolbarItems" Height="100%" AllowPaging="true" AllowSorting="true" AllowFiltering="true">
-    <GridPageSettings PageSize="10" PageSizes="true"></GridPageSettings>
-    <SfDataManager Url="http://localhost:64956/odata/books" Adaptor="Adaptors.ODataV4Adaptor"></SfDataManager>
-    <GridEvents TValue="Book" OnActionBegin="OnActionBegin"/>
-    <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true" Mode="@EditMode.Normal"></GridEditSettings>
-    <GridColumns>
-        <GridColumn Field=@nameof(Book.Id) IsPrimaryKey="true" Width="150"></GridColumn>
-        <GridForeignColumn TValue="Customer" Field=@nameof(Book.CustomerId)  AllowFiltering="true" ForeignKeyValue="Name" ForeignKeyField="Id" HeaderText="Name" Width="100" >
-            <SfDataManager Url="http://localhost:64956/odata/customers" Adaptor="Adaptors.ODataV4Adaptor"></SfDataManager>
-        </GridForeignColumn>
-        <GridColumn Field=@nameof(Book.CreditLimit) Width="200" EditType="EditType.NumericEdit"></GridColumn>
-        <GridColumn Field=@nameof(Book.Active) Width="200" EditType="EditType.BooleanEdit"></GridColumn>
-    </GridColumns>
-</SfGrid>
-
-@code{
-    SfGrid<Book> Grid { get; set; }
-    private Query currentQuery = new Query();
-    public List<string> ToolbarItems = new List<string>() { "Add", "Edit", "Delete", "Update", "Cancel", "Search" };
- 
-    private void OnActionBegin(Syncfusion.Blazor.Grids.ActionEventArgs<Book> args)
-    {  
-        if (args.RequestType == Syncfusion.Blazor.Grids.Action.Filtering)
-        {
-            if (String.Equals(args.CurrentFilteringColumn, nameof(Book.CustomerId), StringComparison.OrdinalIgnoreCase))
-            {
-                args.PreventFilterQuery = true;
-                currentQuery = new Query().Where("Customer/Name", args.CurrentFilterObject.Operator.ToString().ToLower(), args.CurrentFilterObject.Value, true, true);
-            }
-        }
-    }
-
-    public class Book
-    {
-        [Key]
-        public Guid Id { get; set; }
-        public Guid CustomerId { get; set; }
-        public Guid CustomerId1 { get; set; }
-        public virtual Customer Customer { get; set; }
-        public int CreditLimit { get; set; }
-        public bool Active { get; set; }
-        public bool IsDeleted { get; set; }
-    }
-
-    public class Customer
-    {
-        [Key]
-        public Guid Id { get; set; }
-        public string Name { get; set; }      
-        [JsonIgnore]
-        public List<Book> CustomerBooks { get; set; }
-    }
-}
-{% endhighlight %}
-{% endtabs %}
-
-
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hXrgXxVXqtCMhOps?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 > You can find the fully working sample [here](https://github.com/SyncfusionExamples/blazor-datagrid-prevent-query-generation-for-foriegnkey-column).
 
