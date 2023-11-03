@@ -125,10 +125,17 @@ The following example demonstrates how to set the `AllowTextWrap` property to **
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor.DropDowns
 @using BlazorApp1.Data
 
+<label>Change the wrapmode of auto wrap feature:</label>
+<SfDropDownList TValue="WrapMode" TItem="DropDownOrder" @bind-Value="@WrapModeValue" DataSource="@DropDownValue" Width="100px">
+    <DropDownListFieldSettings Text="Text" Value="Value"></DropDownListFieldSettings>
+    <DropDownListEvents ValueChange="OnValueChange" TValue="WrapMode" TItem="DropDownOrder"></DropDownListEvents>
+</SfDropDownList>
+
 <SfGrid @ref="Grid" DataSource="@Orders" GridLines="GridLine.Default" AllowTextWrap="true" Height="315">
-    <GridTextWrapSettings WrapMode="WrapMode.Content"></GridTextWrapSettings>
+    <GridTextWrapSettings WrapMode="@WrapModeValue"></GridTextWrapSettings>
     <GridColumns>
         <GridColumn Field=@nameof(OrderData.Name) HeaderText="Name of the inventor" Width="70"></GridColumn>
         <GridColumn Field=@nameof(OrderData.PatentFamilies) HeaderText="No of patentfamilies" Width="80"></GridColumn>
@@ -141,11 +148,27 @@ The following example demonstrates how to set the `AllowTextWrap` property to **
 @code {
     private SfGrid<OrderData> Grid;
     public List<OrderData> Orders { get; set; }
-      
+    public WrapMode WrapModeValue { get; set; } = WrapMode.Content;
     protected override void OnInitialized()
     {
         Orders = OrderData.GetAllRecords();
-    }    
+    }
+    public class DropDownOrder
+    {
+        public string Text { get; set; }
+        public WrapMode Value { get; set; }
+    }
+    List<DropDownOrder> DropDownValue = new List<DropDownOrder>
+    {
+        new DropDownOrder() { Text = "Both", Value = WrapMode.Both },
+        new DropDownOrder() { Text = "Content", Value = WrapMode.Content },
+        new DropDownOrder() { Text = "Header", Value = WrapMode.Header }
+    };
+    public void OnValueChange(ChangeEventArgs<WrapMode, DropDownOrder> Args)
+    {
+        WrapModeValue = Args.Value;
+        Grid.Refresh();
+    }
 }
 {% endhighlight %}
 {% highlight c# tabtitle="OrderData.cs" %}
@@ -197,7 +220,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BtVAWZAMBpZNVRFf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hXBgiiNgrTpwZLYn?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Customize cell styles
 
@@ -512,7 +535,7 @@ The following example demonstrates how to customize the appearance of the **Orde
 
 > Custom attributes can be used to customize any cell in the grid, including header and footer cells.
 
-## Clip mode
+## Clip Mode
 
 The clip mode feature is useful when you have a long text or content in a grid cell, which overflows the cell’s width or height. It provides options to display the overflow content by either truncating it, displaying an ellipsis or displaying an ellipsis with a tooltip. You can enable this feature by setting [Columns.ClipMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_ClipMode) property to one of the below available options.
 
@@ -527,26 +550,50 @@ The following example demonstrates, how to set the [ClipMode](https://help.syncf
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor.DropDowns
 @using BlazorApp1.Data
+
+<label> Change the clip mode: </label>
+<SfDropDownList TValue="ClipMode" TItem="DropDownOrder" DataSource="@DropDownValue" Width="100px">
+    <DropDownListFieldSettings Text="Text" Value="Value"></DropDownListFieldSettings>
+    <DropDownListEvents ValueChange="OnChange" TValue="ClipMode" TItem="DropDownOrder"></DropDownListEvents>
+</SfDropDownList>
 
 <SfGrid @ref="Grid" DataSource="@Orders" AllowPaging="true" Height="315">
     <GridColumns>
-        <GridColumn Field=@nameof(OrderData.Inventor) HeaderText="Name of the inventor" ClipMode="ClipMode.Clip" Width="0"></GridColumn>
-        <GridColumn Field=@nameof(OrderData.PatentFamilies) HeaderText="No of patent families" ClipMode="ClipMode.Ellipsis" Width="80"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.Inventor) HeaderText="Name of the inventor" Width="80"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.PatentFamilies) HeaderText="No of patent families" Width="100"></GridColumn>
         <GridColumn Field=@nameof(OrderData.Country) HeaderText="Country" Width="80"></GridColumn>
         <GridColumn Field=@nameof(OrderData.NumberofINPADOCpatents) HeaderText="Number of INPADOC patents" Width="100"></GridColumn>
-        <GridColumn Field=@nameof(OrderData.MainFields) HeaderText="Main fields of Invention" ClipMode="ClipMode.EllipsisWithTooltip" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.MainFields) HeaderText="Main fields of Invention" ClipMode="@ClipValue" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
 
 @code {
     private SfGrid<OrderData> Grid;
     public List<OrderData> Orders { get; set; }
+    public ClipMode ClipValue { get; set; } = ClipMode.Clip;
       
     protected override void OnInitialized()
     {
         Orders = OrderData.GetAllRecords();
     }   
+    public class DropDownOrder
+    {
+        public string Text { get; set; }
+        public ClipMode Value { get; set; }
+    }    
+    public void OnChange(ChangeEventArgs<ClipMode, DropDownOrder> Args)
+    {
+        ClipValue = Args.Value;
+        Grid.Refresh();
+    }
+    List<DropDownOrder> DropDownValue = new List<DropDownOrder>
+    {
+        new DropDownOrder() { Text = "Clip", Value =ClipMode.Clip },
+        new DropDownOrder() { Text = "Ellipsis", Value = ClipMode.Ellipsis},
+        new DropDownOrder() { Text = "Ellipsis With Tooltip", Value = ClipMode.EllipsisWithTooltip }
+    };
 }
 {% endhighlight %}
 {% highlight c# tabtitle="OrderData.cs" %}
@@ -564,9 +611,7 @@ The following example demonstrates, how to set the [ClipMode](https://help.syncf
           this.NumberofINPADOCpatents= NumberofINPADOCpatents;
           this.Country= Country;
           this.MainFields= MainFields;
-
         }
-
         public static List<OrderData> GetAllRecords()
         {
             if (Orders.Count() == 0)
@@ -588,18 +633,16 @@ The following example demonstrates, how to set the [ClipMode](https://help.syncf
             }
             return Orders;
         }
-
         public string Inventor { get; set; }
         public int? PatentFamilies { get; set; }
         public string NumberofINPADOCpatents { get; set; }
         public string Country { get; set; }
         public string MainFields { get; set; }
-
     } 
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LXhgWZUiVUpmPDmz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hjVAiMZUrUOzmfhI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 > * By default, [Columns.ClipMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_ClipMode) value is **Ellipsis**.
 > * If you set the **width** property of a column, the clip mode feature will be automatically applied to that column if the content exceeds the specified width.
