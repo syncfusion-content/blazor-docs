@@ -247,6 +247,7 @@ Here is an example of how to configure the `ColumnMenuItems` property to include
         }
         else if (args.Item.Text == "Option1")
         {
+             // custom function
             // Here, you can customize your code.
         }
         else
@@ -314,10 +315,15 @@ To customize the column menu icon, you need to override the default grid class `
 
 ```css
 .e-grid .e-columnheader .e-icons.e-columnmenu::before {
-    content: "\e941";
+   content: "\e99a";
 }
 ```
+2.Import the required icon stylesheets. You can use either the material or bootstrap5 style, depending on your preference. Add the following code to import the stylesheets:
 
+```css
+<link href="https://cdn.syncfusion.com/ej2/ej2-icons/styles/material.css" rel="stylesheet" />
+<link href="https://cdn.syncfusion.com/ej2/ej2-icons/styles/bootstrap5.css" rel="stylesheet" />
+```
 Here is an example that demonstrates how to customize the column menu icon in the Syncfusion Grid:
 
 {% tabs %}
@@ -338,7 +344,7 @@ Here is an example that demonstrates how to customize the column menu icon in th
 </SfGrid>
 <style>
     .e-grid .e-columnheader .e-icons.e-columnmenu::before {
-        .content: "\e84f";
+       content: "\e99a";
     }
 </style>
 @code {
@@ -397,7 +403,7 @@ Here is an example that demonstrates how to customize the column menu icon in th
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/htLUisNnKHQvjeez?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/htLUisNnKHQvjeez?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 
 
