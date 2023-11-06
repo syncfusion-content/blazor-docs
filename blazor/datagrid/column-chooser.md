@@ -170,7 +170,7 @@ In this example, the [ShowInColumnChooser](https://help.syncfusion.com/cr/blazor
 
 ## Open column chooser by external button
 
-The Syncfusion Blazor Grid provides the flexibility to open the column chooser dialog on a web page using an external button. By default, the column chooser button is displayed in the right corner of the grid component, and clicking the button opens the column chooser dialog below it. 
+The Syncfusion Blazor Grid provides the flexibility to open the column chooser dialog on a web page using an external button. By default, the column chooser button is displayed in the right corner of the grid component, and clicking the button opens the column chooser dialog below it. However, you can programmatically open the column chooser dialog at specific X and Y axis positions by using the [OpenColumnChooser](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_OpenColumnChooser_System_Nullable_System_Double__System_Nullable_System_Double__) method.
 
 Here’s an example of how to open the column chooser in the Grid using an external button:
 
@@ -260,11 +260,11 @@ To customize the column chooser dialog size, you can use the following CSS style
 
 ```csharp
 <style> 
-    #Grid .e-dialog.e-ccdlg {         
+    .e-grid .e-dialog.e-ccdlg {         
         max-height: 600px !important; 
         width: 300px !important; 
     } 
-    #Grid .e-ccdlg .e-cc-contentdiv { 
+    .e-grid .e-ccdlg .e-cc-contentdiv { 
         height: 250px !important; 
         width: 250px !important;         
     } 

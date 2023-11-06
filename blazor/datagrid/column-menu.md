@@ -306,7 +306,7 @@ Here is an example of how to configure the `ColumnMenuItems` property to include
 {% endhighlight %}
 {% endtabs %}
 
-## Customize column menu icon in Blazor DataGrid Component
+## Customize the icon of column menu
 
 To customize the column menu icon, you need to override the default grid class `.e-icons.e-columnmenu` with a custom CSS property called **content**. By specifying a Unicode character or an icon font’s CSS class, you can change the icon displayed in the column menu.
 

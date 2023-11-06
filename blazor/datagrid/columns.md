@@ -15,7 +15,6 @@ The Syncfusion Blazor DataGrid component allows you to specify the type of data 
 DataGrid supports the following column types:
 
 * **String**: Represents a column that binds to string data. This is the default type if the `Type` property is not defined.
-* **number**: Represents a column that binds to numeric data. It supports formatting options for displaying numbers.
 * **Boolean**: Represents a column that binds to boolean data. It displays checkboxes for boolean values.
 * **Date**: Represents a column that binds to date data. It supports formatting options for displaying dates.
 * **Datetime**: Represents a column that binds to date and time data. It supports formatting options for displaying date and time values.
@@ -145,8 +144,7 @@ To adjust the column width in a Grid, you can use the [Width](https://help.syncf
 
 **Supported types for column width**
 
-Syncfusion Data
-Grid supports the following three types of column width:
+Syncfusion DataGrid supports the following three types of column width:
 
 **1. Auto**
 
@@ -413,6 +411,15 @@ The following example code demonstrates the formatting of data for **Mark 1** an
 ### Date formatting
 
 Date formatting in datagrid columns allows you to customize how date values are displayed. You can use standard date format strings, such as **"d," "D," "MMM dd, yyyy,"** and more, or create your own custom format strings. To specify the desired date format, you can use the [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Format) property of the DataGrid columns. For example, you can set `Format` as a string like **"yyyy-MM-dd"** for a built-in date format. 
+
+Additionally, you can use custom format strings to format date values, and examples of custom formats and formatted date values are provided in the table below.
+
+Format|Formatted value 
+-----|-----
+Type="ColumnType.Date" Format="dd/MM/yyyy" | 04/07/1996
+Type="ColumnType.Date" Format="dd.MM.yyyy" | 04.07.1996
+Type="ColumnType.Date" Format="dMM/dd/yyyy hh:mm tt" | 04/07/1996 12:00 AM
+Type="ColumnType.Date" Format="dMM/dd/yyyy hh:mm:ss tt" | 04/07/1996 12:00 AM
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
