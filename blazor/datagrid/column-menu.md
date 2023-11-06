@@ -403,7 +403,7 @@ Here is an example that demonstrates how to customize the column menu icon in th
 {% endhighlight %}
 {% endtabs %}
 
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/htLUisNnKHQvjeez?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
+ {% previewsample "https://blazorplayground.syncfusion.com/embed/LXrgCMDHftqrDkea?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 
 
