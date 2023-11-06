@@ -147,73 +147,48 @@ This example demonstrates how to use the foreign key column with remote data bin
 <SfGrid DataSource="@Orders" Height="315">
     <GridColumns>
         <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-        <GridForeignColumn Field=@nameof(OrderData.EmployeeID) HeaderText="Employee Name" ForeignKeyValue="FirstName" ForeignDataSource="@Employees" Width="150"></GridForeignColumn>
+        <GridForeignColumn TValue="EmployeeData" Field=@nameof(Order.EmployeeID) HeaderText="Employee Name" ForeignKeyValue="FirstName" Width="150">
+            <Syncfusion.Blazor.Data.SfDataManager Url="https://js.syncfusion.com/demos/ejServices/Wcf/Northwind.svc/Employees" CrossDomain="true" Adaptor="Adaptors.ODataAdaptor">
+            </Syncfusion.Blazor.Data.SfDataManager>
+        </GridForeignColumn>
         <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
         <GridColumn Field=@nameof(OrderData.ShipCity) HeaderText="Ship City" TextAlign="TextAlign.Right" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
 @code {
-    public List<OrderData> Orders { get; set; }
-    public List<EmployeeData> Employees { get; set; }
-
+    public List<OrderData> Orders { get; set; }  
     protected override void OnInitialized()
     {
-        Orders = OrderData.GetAllRecords();
-        Employees = EmployeeData.GetAllRecords();
+        Orders = OrderData.GetAllRecords();      
     }
 }
 {% endhighlight %}
 {% highlight c# tabtitle="OrderData.cs" %}
-    public class EmployeeData
+      public class EmployeeData
     {
         public static List<EmployeeData> Employees = new List<EmployeeData>();
-        public EmployeeData() 
-        { 
+        public EmployeeData()
+        {
 
         }
-        public EmployeeData(int? employeeID, string firstName)
-        {
-            EmployeeID = employeeID;
-            FirstName = firstName;
-        }
-        public static List<EmployeeData> GetAllRecords()
-        {
-            if (Employees.Count() == 0)
-            {
-                int code = 10;
-                for (int i = 1; i < 2; i++)
-                {
-                    Employees.Add(new EmployeeData( 1, "Nancy"));
-                    Employees.Add(new EmployeeData( 2, "Andrew"));
-                    Employees.Add(new EmployeeData( 3, "Janet"));
-                    Employees.Add(new EmployeeData( 4, "Nancy"));
-                    Employees.Add(new EmployeeData( 5, "Margaret"));
-                    Employees.Add(new EmployeeData( 6, "Steven"));
-                    Employees.Add(new EmployeeData( 7, "Janet"));
-                    Employees.Add(new EmployeeData( 8, "Andrew"));
-                    Employees.Add(new EmployeeData(9, "Nancy"));
-                    code += 5;
-                }
-            }
-            return Employees;
-        }
+        
         public int? EmployeeID { get; set; }
         public string FirstName { get; set; }
     }
     public class OrderData
     {
-        public static List<OrderData> Orders = new List<OrderData>();        
-       
+        public static List<OrderData> Orders = new List<OrderData>();
+
         public OrderData()
         {
 
         }
         public OrderData(int? OrderID, int? EmployeeID, string ShipCity, double? Freight)
         {
-           this.OrderID = OrderID;
-           this.EmployeeID = EmployeeID;
-           this.ShipCity = ShipCity;
-           this.Freight = Freight;            
+            this.OrderID = OrderID;
+            this.EmployeeID = EmployeeID;
+            this.ShipCity = ShipCity;
+            this.Freight = Freight;
         }
         public static List<OrderData> GetAllRecords()
         {
@@ -222,15 +197,15 @@ This example demonstrates how to use the foreign key column with remote data bin
                 int code = 10;
                 for (int i = 1; i < 2; i++)
                 {
-                    Orders.Add(new OrderData(10248,1, "Reims", 32.18));
-                    Orders.Add(new OrderData(10249,2, "Münster",33.33));
-                    Orders.Add(new OrderData(10250,3, "Rio de Janeiro",12.35));
-                    Orders.Add(new OrderData(10251,4, "Reims", 22.65));
-                    Orders.Add(new OrderData(10252,5, "Lyon", 63.43));
-                    Orders.Add(new OrderData(10253,6, "Charleroi",56.98));
-                    Orders.Add(new OrderData(10254,7, "Rio de Janeiro", 45.65));
-                    Orders.Add(new OrderData(10255,8, "Münster", 11.13));
-                    Orders.Add(new OrderData(10256,9, "Reims", 87.59));
+                    Orders.Add(new OrderData(10248, 1, "Reims", 32.18));
+                    Orders.Add(new OrderData(10249, 2, "Münster", 33.33));
+                    Orders.Add(new OrderData(10250, 3, "Rio de Janeiro", 12.35));
+                    Orders.Add(new OrderData(10251, 4, "Reims", 22.65));
+                    Orders.Add(new OrderData(10252, 5, "Lyon", 63.43));
+                    Orders.Add(new OrderData(10253, 6, "Charleroi", 56.98));
+                    Orders.Add(new OrderData(10254, 7, "Rio de Janeiro", 45.65));
+                    Orders.Add(new OrderData(10255, 8, "Münster", 11.13));
+                    Orders.Add(new OrderData(10256, 9, "Reims", 87.59));
                     code += 5;
                 }
             }
@@ -244,7 +219,7 @@ This example demonstrates how to use the foreign key column with remote data bin
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LjLUCCNMqYLxRBjG?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+ {% previewsample "https://blazorplayground.syncfusion.com/embed/LDrKsWDxUlmfklqk?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} 
 
 > * For remote data, the sorting and grouping is done based on [ForeignKeyField](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_ForeignKeyField) instead of [ForeignKeyValue](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_ForeignKeyValue).
 > * If [ForeignKeyField](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_ForeignKeyField) is not defined, then the column uses [Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_StackingGroup) property of **GridColumn** tag helper.
@@ -367,7 +342,7 @@ In the following code example, the Employee Name is a foreign key column. When e
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VXrAsWDMKuxGenrb?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rthqiCZnKFZSBjXt?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Customize filter UI in foreignkey column
 
@@ -490,7 +465,7 @@ In this example, a DropDownList component is rendered as the filter UI for the *
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LZhgiWDCUkGayXTu?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hNhqWMXHAlMwnaCg?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 > [View Sample in GitHub.](https://github.com/SyncfusionExamples/blazor-datagrid-customize-filter-ui-in-foreignkey-column)
 
@@ -636,7 +611,7 @@ In this example, the “EmployeeID” column is a foreign key column, and the fi
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rZLUtFDrTMbczudb?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXBAiiZngvqDDFvZ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Prevent filter query generation for foreignkey column
 
@@ -723,7 +698,7 @@ In the following example, Employee Name and Ship City are foreign key columns th
 @using BlazorApp1.Data
 
 <SfGrid DataSource="@Orders" Height="315" Toolbar="@(new List<string>() { "Add", "Delete", "Update", "Cancel" })">
-    <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true" Mode="EditMode.Batch"></GridEditSettings>
+    <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true"></GridEditSettings>
     <GridColumns>
         <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" IsPrimaryKey="true" TextAlign="TextAlign.Right" Width="120"></GridColumn>
         <GridForeignColumn Field=@nameof(OrderData.EmployeeID) HeaderText="Customer Name" ForeignKeyValue="FirstName" ForeignDataSource="@Employees" Width="150"></GridForeignColumn>
@@ -864,7 +839,7 @@ In the following example, Employee Name and Ship City are foreign key columns th
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rDBKMWNMfqZSTTgr?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LXLUsWDnKvoInklv?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 > You can find the fully working sample [here](https://github.com/SyncfusionExamples/blazor-datagrid-prevent-query-generation-for-foriegnkey-column).
 

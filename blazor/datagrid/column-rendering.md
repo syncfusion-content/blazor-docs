@@ -67,13 +67,13 @@ Here's an example code snippet that demonstrates how to define columns manually 
                 {
                     Orders.Add(new OrderData(10248, "VINET",new DateTime(1996,07,07), 32.38));
                     Orders.Add(new OrderData(10249, "TOMSP", new DateTime(1996, 07, 07), 92.38));
-                    Orders.Add(new OrderData(10248, "HANAR", new DateTime(1996, 07, 07), 62.77));
-                    Orders.Add(new OrderData(10248, "VICTE", new DateTime(1996, 07, 07), 12.38));
-                    Orders.Add(new OrderData(10248, "SUPRD", new DateTime(1996, 07, 07), 82.38));
-                    Orders.Add(new OrderData(10248, "CHOPS", new DateTime(1996, 07, 07), 31.31));
-                    Orders.Add(new OrderData(10248, "RICSU", new DateTime(1996, 07, 07), 22.37));
-                    Orders.Add(new OrderData(10248, "WELLI", new DateTime(1996, 07, 07), 44.34));
-                    Orders.Add(new OrderData(10248, "RICSU", new DateTime(1996, 07, 07), 31.33));                                                                                    
+                    Orders.Add(new OrderData(10250, "HANAR", new DateTime(1996, 07, 07), 62.77));
+                    Orders.Add(new OrderData(10251, "VICTE", new DateTime(1996, 07, 07), 12.38));
+                    Orders.Add(new OrderData(10252, "SUPRD", new DateTime(1996, 07, 07), 82.38));
+                    Orders.Add(new OrderData(10253, "CHOPS", new DateTime(1996, 07, 07), 31.31));
+                    Orders.Add(new OrderData(10254, "RICSU", new DateTime(1996, 07, 07), 22.37));
+                    Orders.Add(new OrderData(10255, "WELLI", new DateTime(1996, 07, 07), 44.34));
+                    Orders.Add(new OrderData(10256, "RICSU", new DateTime(1996, 07, 07), 31.33));                                                                                    
                     code += 5;
                 }
             }
@@ -87,7 +87,7 @@ Here's an example code snippet that demonstrates how to define columns manually 
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BtLUCtUsAFUGBxTY?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDBqWMZdAcXwOxFl?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Auto generated columns
 
@@ -135,14 +135,13 @@ You can use the following code snippet to enable auto-generated columns in the S
                 {
                     Orders.Add(new OrderData(10248, "VINET",new DateTime(1996,07,07), 32.38));
                     Orders.Add(new OrderData(10249, "TOMSP", new DateTime(1996, 07, 07), 92.38));
-                    Orders.Add(new OrderData(10248, "HANAR", new DateTime(1996, 07, 07), 62.77));
-                    Orders.Add(new OrderData(10248, "VICTE", new DateTime(1996, 07, 07), 12.38));
-                    Orders.Add(new OrderData(10248, "SUPRD", new DateTime(1996, 07, 07), 82.38));
-                    Orders.Add(new OrderData(10248, "CHOPS", new DateTime(1996, 07, 07), 31.31));
-                    Orders.Add(new OrderData(10248, "RICSU", new DateTime(1996, 07, 07), 22.37));
-                    Orders.Add(new OrderData(10248, "WELLI", new DateTime(1996, 07, 07), 44.34));
-                    Orders.Add(new OrderData(10248, "RICSU", new DateTime(1996, 07, 07), 31.33));                                                                                    
-                    code += 5;
+                    Orders.Add(new OrderData(10250, "HANAR", new DateTime(1996, 07, 07), 62.77));
+                    Orders.Add(new OrderData(10251, "VICTE", new DateTime(1996, 07, 07), 12.38));
+                    Orders.Add(new OrderData(10252, "SUPRD", new DateTime(1996, 07, 07), 82.38));
+                    Orders.Add(new OrderData(10253, "CHOPS", new DateTime(1996, 07, 07), 31.31));
+                    Orders.Add(new OrderData(10254, "RICSU", new DateTime(1996, 07, 07), 22.37));
+                    Orders.Add(new OrderData(10255, "WELLI", new DateTime(1996, 07, 07), 44.34));
+                    Orders.Add(new OrderData(10256, "RICSU", new DateTime(1996, 07, 07), 31.33));                                                                                code += 5;
                 }
             }
             return Orders;
@@ -155,7 +154,7 @@ You can use the following code snippet to enable auto-generated columns in the S
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rXVAsjKMKldpCMYT?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rjBKWiXngmWUgDyz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 
 >* When the columns are auto-generated, the column [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Type) is determined from the first record of the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_DataSource).
@@ -215,15 +214,15 @@ Here is an example code snippet that shows how to set a primary key for an auto-
                 int code = 10;
                 for (int i = 1; i < 2; i++)
                 {
-                    Orders.Add(new OrderData(10248, "VINET",new DateTime(1996,07,07), 32.38));
+                     Orders.Add(new OrderData(10248, "VINET",new DateTime(1996,07,07), 32.38));
                     Orders.Add(new OrderData(10249, "TOMSP", new DateTime(1996, 07, 07), 92.38));
-                    Orders.Add(new OrderData(10248, "HANAR", new DateTime(1996, 07, 07), 62.77));
-                    Orders.Add(new OrderData(10248, "VICTE", new DateTime(1996, 07, 07), 12.38));
-                    Orders.Add(new OrderData(10248, "SUPRD", new DateTime(1996, 07, 07), 82.38));
-                    Orders.Add(new OrderData(10248, "CHOPS", new DateTime(1996, 07, 07), 31.31));
-                    Orders.Add(new OrderData(10248, "RICSU", new DateTime(1996, 07, 07), 22.37));
-                    Orders.Add(new OrderData(10248, "WELLI", new DateTime(1996, 07, 07), 44.34));
-                    Orders.Add(new OrderData(10248, "RICSU", new DateTime(1996, 07, 07), 31.33));                                                                                    
+                    Orders.Add(new OrderData(10250, "HANAR", new DateTime(1996, 07, 07), 62.77));
+                    Orders.Add(new OrderData(10251, "VICTE", new DateTime(1996, 07, 07), 12.38));
+                    Orders.Add(new OrderData(10252, "SUPRD", new DateTime(1996, 07, 07), 82.38));
+                    Orders.Add(new OrderData(10253, "CHOPS", new DateTime(1996, 07, 07), 31.31));
+                    Orders.Add(new OrderData(10254, "RICSU", new DateTime(1996, 07, 07), 22.37));
+                    Orders.Add(new OrderData(10255, "WELLI", new DateTime(1996, 07, 07), 44.34));
+                    Orders.Add(new OrderData(10256, "RICSU", new DateTime(1996, 07, 07), 31.33));                                                                   
                     code += 5;
                 }
             }
@@ -237,7 +236,7 @@ Here is an example code snippet that shows how to set a primary key for an auto-
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hZVUijqCqvmcyEpn?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BtLgsstnKwBBNbFo?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ### Set column options to auto generated columns
 
@@ -312,13 +311,13 @@ In the below example, `Width` is set for **OrderID** column, **date** `Type` is 
                 {
                     Orders.Add(new OrderData(10248, "VINET",new DateTime(1996,07,07), 32.38));
                     Orders.Add(new OrderData(10249, "TOMSP", new DateTime(1996, 07, 07), 92.38));
-                    Orders.Add(new OrderData(10248, "HANAR", new DateTime(1996, 07, 07), 62.77));
-                    Orders.Add(new OrderData(10248, "VICTE", new DateTime(1996, 07, 07), 12.38));
-                    Orders.Add(new OrderData(10248, "SUPRD", new DateTime(1996, 07, 07), 82.38));
-                    Orders.Add(new OrderData(10248, "CHOPS", new DateTime(1996, 07, 07), 31.31));
-                    Orders.Add(new OrderData(10248, "RICSU", new DateTime(1996, 07, 07), 22.37));
-                    Orders.Add(new OrderData(10248, "WELLI", new DateTime(1996, 07, 07), 44.34));
-                    Orders.Add(new OrderData(10248, "RICSU", new DateTime(1996, 07, 07), 31.33));                                                                                    
+                    Orders.Add(new OrderData(10250, "HANAR", new DateTime(1996, 07, 07), 62.77));
+                    Orders.Add(new OrderData(10251, "VICTE", new DateTime(1996, 07, 07), 12.38));
+                    Orders.Add(new OrderData(10252, "SUPRD", new DateTime(1996, 07, 07), 82.38));
+                    Orders.Add(new OrderData(10253, "CHOPS", new DateTime(1996, 07, 07), 31.31));
+                    Orders.Add(new OrderData(10254, "RICSU", new DateTime(1996, 07, 07), 22.37));
+                    Orders.Add(new OrderData(10255, "WELLI", new DateTime(1996, 07, 07), 44.34));
+                    Orders.Add(new OrderData(10256, "RICSU", new DateTime(1996, 07, 07), 31.33));                                                                   
                     code += 5;
                 }
             }
@@ -332,7 +331,7 @@ In the below example, `Width` is set for **OrderID** column, **date** `Type` is 
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LjBKXuWzApShKrJf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hXBgMiDRgQqNWGJe?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Dynamic column generation
 
@@ -356,7 +355,6 @@ You can refer the following code example to achieve this.
 </SfGrid>
 
 @code {
-    private SfGrid<OrderData> Grid;
     public List<OrderData> Orders { get; set; }
        
     protected override void OnInitialized()
@@ -389,13 +387,13 @@ You can refer the following code example to achieve this.
                 {
                     Orders.Add(new OrderData(10248, "VINET",new DateTime(1996,07,07), 32.38));
                     Orders.Add(new OrderData(10249, "TOMSP", new DateTime(1996, 07, 07), 92.38));
-                    Orders.Add(new OrderData(10248, "HANAR", new DateTime(1996, 07, 07), 62.77));
-                    Orders.Add(new OrderData(10248, "VICTE", new DateTime(1996, 07, 07), 12.38));
-                    Orders.Add(new OrderData(10248, "SUPRD", new DateTime(1996, 07, 07), 82.38));
-                    Orders.Add(new OrderData(10248, "CHOPS", new DateTime(1996, 07, 07), 31.31));
-                    Orders.Add(new OrderData(10248, "RICSU", new DateTime(1996, 07, 07), 22.37));
-                    Orders.Add(new OrderData(10248, "WELLI", new DateTime(1996, 07, 07), 44.34));
-                    Orders.Add(new OrderData(10248, "RICSU", new DateTime(1996, 07, 07), 31.33));                                                                                    
+                    Orders.Add(new OrderData(10250, "HANAR", new DateTime(1996, 07, 07), 62.77));
+                    Orders.Add(new OrderData(10251, "VICTE", new DateTime(1996, 07, 07), 12.38));
+                    Orders.Add(new OrderData(10252, "SUPRD", new DateTime(1996, 07, 07), 82.38));
+                    Orders.Add(new OrderData(10253, "CHOPS", new DateTime(1996, 07, 07), 31.31));
+                    Orders.Add(new OrderData(10254, "RICSU", new DateTime(1996, 07, 07), 22.37));
+                    Orders.Add(new OrderData(10255, "WELLI", new DateTime(1996, 07, 07), 44.34));
+                    Orders.Add(new OrderData(10256, "RICSU", new DateTime(1996, 07, 07), 31.33));                                                                   
                     code += 5;
                 }
             }
@@ -409,7 +407,7 @@ You can refer the following code example to achieve this.
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hjLKMXgsAuxEBpEC?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rjBUCCNHAcKJQkfY?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Dynamic column binding using ExpandoObject
 
@@ -552,7 +550,6 @@ In the below example, we have used the `Expand` query to load the nested Employe
         <GridColumn Field=@nameof(EmployeeData.CustomerID) TextAlign="TextAlign.Center" HeaderText="Customer Name" Width="130"></GridColumn>
         <GridColumn Field=@nameof(EmployeeData.ShipCity) TextAlign="TextAlign.Center" HeaderText="ShipCity" Width="120"></GridColumn>
         <GridColumn Field="Employee.City" TextAlign="TextAlign.Center" HeaderText="City" Width="120"></GridColumn>
-
     </GridColumns>
 </SfGrid>
 
