@@ -829,7 +829,7 @@ You can enable this feature by setting the [AutoFit](https://help.syncfusion.com
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BDLKiNKislriVlUg?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-> If any one of the column width is undefined, then the particular column will automatically adjust to fill the entire width of the datagrid table, even if you have enabled the `AutoFit` property of the grid .
+> If any one of the column width is undefined, then the particular column will automatically adjust to fill the entire width of the datagrid table, even if you have enabled the `AutoFit` property of the grid.
 
 ### Autofit columns when changing column visibility using column chooser
 
