@@ -409,7 +409,7 @@ You can refer the following code example to achieve this.
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rjBUCCNHAcKJQkfY?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-## Dynamic column binding using ExpandoObject
+### Dynamic column binding using ExpandoObject
 
 It is possible to build a column dynamically without knowing the model type during compile time. This can be achieved by binding data to the grid as a list of `ExpandoObject`.
 

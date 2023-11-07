@@ -20,11 +20,10 @@ Here’s an example for column reordering in your Grid component:
 @using Syncfusion.Blazor.Grids
 @using BlazorApp1.Data
 
-<SfGrid DataSource="@Orders" Height="315" AllowResizing="true" Width="800">
+<SfGrid DataSource="@Orders" Height="315" AllowReordering="true" Width="800">
     <GridColumns>
         <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" MinWidth="100" MaxWidth="200" AutoFit=true TextAlign="TextAlign.Right" Width="200"></GridColumn>
         <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer ID" MinWidth="8" Width="150" AutoFit=true></GridColumn>
-        <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" MinWidth="10" AutoFit=true Width="150"></GridColumn>
         <GridColumn Field=@nameof(OrderData.ShipCity) HeaderText="Ship City" MinWidth="8" AutoFit=true Width="180"></GridColumn>
         <GridColumn Field=@nameof(OrderData.ShipCountry) HeaderText="Ship Country" MinWidth="8" Width="150" AutoFit=true></GridColumn>
     </GridColumns>
@@ -47,12 +46,12 @@ Here’s an example for column reordering in your Grid component:
         {
 
         }
-        public OrderData(int? OrderID,string CustomerID, string ShipCity, string ShipName)
+        public OrderData(int? OrderID,string CustomerID, string ShipCity, string ShipCountry)
         {
            this.OrderID = OrderID;
            this.CustomerID = CustomerID;
            this.ShipCity = ShipCity;   
-           this.ShipName = ShipName;            
+           this.ShipCountry = ShipCountry;            
         }
         public static List<OrderData> GetAllRecords()
         {
@@ -78,15 +77,14 @@ Here’s an example for column reordering in your Grid component:
         public int? OrderID { get; set; }
         public string CustomerID { get; set; }
         public string ShipCity { get; set; }
-        public string ShipName { get; set; }
+        public string ShipCountry { get; set; }
     }
 {% endhighlight %}
 {% endtabs %}
 
-
 The following represents Reordering of columns
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LjVqWMNCpGBNEsbF?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BDBAWMDcfVpmiwJz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 > * You can disable reordering a particular column by setting the [AllowReordering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_AllowReordering) property of **GridColumn** as false.
 <br/> * When columns are reordered, the position of the corresponding column data will also be changed. As a result, you should ensure that any additional code or logic that relies on the order of the column data is updated accordingly.
