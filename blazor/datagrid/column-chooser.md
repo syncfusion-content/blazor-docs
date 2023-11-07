@@ -250,7 +250,7 @@ Here’s an example of how to open the column chooser in the Grid using an exter
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BDLgWMNMIHuMlAUe?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BDLgWMNMIHuMlAUe?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Customize column chooser dialog size
 

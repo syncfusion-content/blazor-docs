@@ -135,7 +135,7 @@ In this example, data is the local data source for the Grid, and **Employee Name
 
 ## Binding remote data
 
-The Foreign key column in Syncfusion Grid allows you to bind remote data for a foreign key column. You can assign the service data as an instance of ```SfDataManager```  to the ```DataSource```  property, and provide the endpoint ```Url``` as the data source **Url**.
+The Foreign key column in Syncfusion Grid allows you to bind remote data for a foreign key column. You can use  ```SfDataManager``` component instead of using ```DataSource```  property. 
 
 This example demonstrates how to use the foreign key column with remote data binding using the ```ODataAdaptor``` in the grid:
 
@@ -148,7 +148,7 @@ This example demonstrates how to use the foreign key column with remote data bin
     <GridColumns>
         <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
         <GridForeignColumn TValue="EmployeeData" Field=@nameof(Order.EmployeeID) HeaderText="Employee Name" ForeignKeyValue="FirstName" Width="150">
-            <Syncfusion.Blazor.Data.SfDataManager Url="https://js.syncfusion.com/demos/ejServices/Wcf/Northwind.svc/Employees" CrossDomain="true" Adaptor="Adaptors.ODataAdaptor">
+            <Syncfusion.Blazor.Data.SfDataManager Url="https://services.odata.org/V4/Northwind/Northwind.svc/Employees" CrossDomain="true" Adaptor="Adaptors.ODataV4Adaptor">
             </Syncfusion.Blazor.Data.SfDataManager>
         </GridForeignColumn>
         <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
@@ -511,12 +511,12 @@ In this example, the “EmployeeID” column is a foreign key column, and the fi
     {
         if (args.Value == "All")
         {
-            Grid.ClearFiltering();
-            Grid.Refresh();
+            Grid.ClearFilteringAsync();
+            Grid.RefreshAsync();
         }
         else
         {
-            Grid.FilterByColumn("EmployeeID", "contains", args.Value);
+            Grid.FilterByColumnAsync("EmployeeID", "contains", args.Value);
         }
     }
     List<EmployeeData> Dropdown = new List<EmployeeData>
