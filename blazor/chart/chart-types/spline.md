@@ -76,8 +76,8 @@ To specify the type of [Spline Chart](https://help.syncfusion.com/cr/blazor/Sync
 @code{
     public class ChartData
     {
-        public string X;
-        public double Y;
+        public string X { get; set; }
+        public double Y { get; set; }
     }
 	
     public List<ChartData> MedalDetails = new List<ChartData>
@@ -127,8 +127,8 @@ The following properties can be used to customize the [Spline](https://help.sync
 @code{
     public class ChartData
     {
-        public string X;
-        public double Y;
+       public string X { get; set; }
+       public double Y { get; set; }
     }
 	
     public List<ChartData> MedalDetails = new List<ChartData>

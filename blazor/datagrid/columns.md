@@ -831,6 +831,7 @@ You can enable this feature by setting the [AutoFit](https://help.syncfusion.com
 
 > If any one of the column width is undefined, then the particular column will automatically adjust to fill the entire width of the datagrid table, even if you have enabled the `AutoFit` property of the grid.
 
+
 ### Autofit columns when changing column visibility using column chooser
 
 In Syncfusion DataGrid, you can auto-fit columns when the column visibility is changed using the column chooser. This can be achieved by calling the [AutoFitColumnsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AutoFitColumnsAsync)  method in the [OnActionComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event. By using the **RequestType** property in the event arguments, you can differentiate between different actions, and then call the `AutoFitColumnsAsync` method when the request type is **ColumnState**.

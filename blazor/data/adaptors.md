@@ -355,7 +355,7 @@ The following variables are passed as a parameter to the mutation method written
 |--------|----------------|
 | record | The new record which is need to be inserted. |
 | index | Specifies the index at which the newly added record will be inserted.  |
-| action | Indicates the type of operation being performed. When the same method is used for all CRUD actions, this argument serves to distinguish the action, such as **Add|Delete|Update** |
+| action | Indicates the type of operation being performed. When the same method is used for all CRUD actions, this argument serves to distinguish the action, such as **Add, Delete and Update**  |
 | additionalParameters | An optional parameter that can be used to perform any operations.   |
 
 The following variables are passed as a parameter to the mutation method written for **Update** operation in server side.
@@ -363,7 +363,7 @@ The following variables are passed as a parameter to the mutation method written
 | Properties | Description |
 |--------|----------------|
 | record | The new record which is need to be updated. |
-| action | Indicates the type of operation being performed. When the same method is used for all CRUD actions, this argument serves to distinguish the action, such as **Add|Delete|Update**  |
+| action | Indicates the type of operation being performed. When the same method is used for all CRUD actions, this argument serves to distinguish the action, such as **Add, Delete and Update**  |
 | primaryColumnName | Specifies the field name of the primary column. |
 | primaryColumnValue | Specifies the primary column value which is needs to be updated in the collection.   |
 | additionalParameters | An optional parameter that can be used to perform any operations.   |
@@ -373,7 +373,7 @@ The following variables are passed as a parameter to the mutation method written
 | Properties | Description |
 |--------|----------------|
 | primaryColumnValue | Specifies the primary column value which is needs to be removed from the collection. |
-| action | Indicates the type of operation being performed. When the same method is used for all CRUD actions, this argument serves to distinguish the action, such as **Add|Delete|Update**  |
+| action | Indicates the type of operation being performed. When the same method is used for all CRUD actions, this argument serves to distinguish the action, such as **Add, Delete and Update**  |
 | primaryColumnName | specifies the field name of the primary column.  |
 | additionalParameters | An optional parameter that can be used to perform any operations.   |
 
@@ -397,19 +397,19 @@ The following variables are passed as a parameter to the mutation method written
         {
             Insert = @"
                 mutation create($record: OrderInput!, $index: Int!, $action: String!, $additionalParameters: Any) {
-                  createBook(order: $record, index: $index, action: $action, additionalParameters: $additionalParameters) {
+                  createOrder(order: $record, index: $index, action: $action, additionalParameters: $additionalParameters) {
                     OrderID, CustomerID, OrderDate, Freight
                   }
                 }",
             Update = @"
                 mutation update($record: OrderInput!, $action: String!, $primaryColumnName: String! , $primaryColumnValue: Int!, $additionalParameters: Any) {
-                  updateBook(order: $record, action: $action, primaryColumnName: $primaryColumnName, primaryColumnValue: $primaryColumnValue, additionalParameters: $additionalParameters) {
+                  updateOrder(order: $record, action: $action, primaryColumnName: $primaryColumnName, primaryColumnValue: $primaryColumnValue, additionalParameters: $additionalParameters) {
                     OrderID, CustomerID, OrderDate, Freight
                   }
                 }",
             Delete = @"
                 mutation delete($primaryColumnValue: Int!, $action: String!, $primaryColumnName: String!, $additionalParameters: Any) {
-                  deleteBook(primaryColumnValue: $primaryColumnValue, action: $action, primaryColumnName: $primaryColumnName, additionalParameters: $additionalParameters) {
+                  deleteOrder(primaryColumnValue: $primaryColumnValue, action: $action, primaryColumnName: $primaryColumnName, additionalParameters: $additionalParameters) {
                     OrderID, CustomerID, OrderDate, Freight
                   }
                 }"
@@ -432,13 +432,13 @@ The following code demonstrates the mutation methods used in the GraphQL server 
 ```cshtml
     public class GraphQLMutation
     {
-        public Order CreateBook(Order order, int index, string action,
+        public Order CreateOrder(Order order, int index, string action,
             [GraphQLType(typeof(AnyType))] IDictionary<string, object> additionalParameters)
         {
             GraphQLQuery.Orders.Insert(index, order);
             return order;
         }
-        public Order UpdateBook(Order order, string action, string primaryColumnName, int primaryColumnValue,
+        public Order UpdateOrder(Order order, string action, string primaryColumnName, int primaryColumnValue,
             [GraphQLType(typeof(AnyType))] IDictionary<string, object> additionalParameters)
         {
             Order updatedOrder = GraphQLQuery.Orders.Where(x => x.OrderID == primaryColumnValue).FirstOrDefault();
@@ -448,7 +448,7 @@ The following code demonstrates the mutation methods used in the GraphQL server 
             updatedOrder.OrderDate = order.OrderDate;
             return updatedOrder;
         }
-        public Order DeleteBook(int primaryColumnValue, string action, string primaryColumnName,
+        public Order DeleteOrder(int primaryColumnValue, string action, string primaryColumnName,
             [GraphQLType(typeof(AnyType))] IDictionary<string, object> additionalParameters)
         {
             Order deletedOrder = GraphQLQuery.Orders.Where(x => x.OrderID == primaryColumnValue).FirstOrDefault();
