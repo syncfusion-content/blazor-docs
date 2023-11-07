@@ -411,7 +411,7 @@ The following example code demonstrates the formatting of data for **Mark 1** an
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LZBgCZAsgcTiXKaN?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-> To learn more about number formatting, you can refer to the [Number](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.ColumnType.html#Syncfusion_Blazor_QueryBuilder_ColumnType_Number) section.
+> To learn more about number formatting, you can refer to the [Number](https://blazor.syncfusion.com/documentation/datagrid/columns#number-formatting) section.
 
 ### Date formatting
 
