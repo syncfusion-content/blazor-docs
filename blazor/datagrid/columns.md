@@ -489,7 +489,7 @@ Type="ColumnType.Date" Format="dMM/dd/yyyy hh:mm:ss tt" | 04/07/1996 12:00 AM
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rXhAMZKWitcsyBzO?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-> To learn more about date formatting, you can refer to [Date formatting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.ColumnType.html#Syncfusion_Blazor_QueryBuilder_ColumnType_Date).
+> To learn more about date formatting, you can refer to [Date formatting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ColumnType.html#Syncfusion_Blazor_Grids_ColumnType_Date).
 
 ## Align the text of content
 

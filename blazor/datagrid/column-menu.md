@@ -97,7 +97,7 @@ public class OrderData
 {% endtabs %}
 
 >  You can disable column menu for a particular column by defining the column's [ShowColumnMenu](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_ShowColumnMenu) property as false.
-<br/> You can customize the default menu items by defining the [ColumnMenuItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Type) with the required items.
+<br/> You can customize the default menu items by defining the [ColumnMenuItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ContextMenuItems) with the required items.
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VXrUsijhhkfMyNWj?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 

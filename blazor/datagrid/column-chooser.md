@@ -9,7 +9,7 @@ documentation: ug
 
 # Column Chooser in Blazor DataGrid
 
-The column chooser feature in the Syncfusion Blazor Grid component allows you to dynamically show or hide columns. This feature can be enabled by defining the [ShowColumnChooser](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Fill) property as **true**.
+The column chooser feature in the Syncfusion Blazor Grid component allows you to dynamically show or hide columns. This feature can be enabled by defining the [ShowColumnChooser](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ShowColumnChooser) property as **true**.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -289,12 +289,12 @@ This can be demonstrated in the following sample:
     </GridColumns>
 </SfGrid>
 <style>
-    #Grid .e-dialog.e-ccdlg {
+    .e-grid .e-dialog.e-ccdlg {
         max-height: 600px !important;
         width: 300px !important;
     }
 
-    #Grid .e-ccdlg .e-cc-contentdiv {
+    .e-grid .e-ccdlg .e-cc-contentdiv {
         height: 250px !important;
         width: 250px !important;
     }

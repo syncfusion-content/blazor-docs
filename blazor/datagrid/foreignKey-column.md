@@ -137,7 +137,7 @@ In this example, data is the local data source for the Grid, and **Employee Name
 
 The Foreign key column in Syncfusion Grid allows you to bind remote data for a foreign key column. You can use  ```SfDataManager``` component instead of using ```DataSource```  property. 
 
-This example demonstrates how to use the foreign key column with remote data binding using the ```ODataAdaptor``` in the grid:
+This example demonstrates how to use the foreign key column with remote data binding using the ```ODataV4Adaptor``` in the grid:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}

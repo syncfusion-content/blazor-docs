@@ -350,8 +350,8 @@ Here is an example of how to use the `ReorderColumnByTargetIndexAsync` method to
 
 The [ReorderColumnsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ReorderColumnAsync_System_String_System_String_) method of the Grid allows you to reorder list of columns based on their field names. This method takes two arguments:
 
-* **fromFieldName**: The field name of the column you want to move.
-* **toFieldName** : The field name of the column you want to move the column to.
+* **FromFieldName**: The field name of the column you want to move.
+* **ToFieldName** : The field name of the column you want to move the column to.
 
 Here is an example of how to use the `ReorderColumnsAsync` method to reorder multiple columns based on field names:
 
@@ -382,7 +382,7 @@ Here is an example of how to use the `ReorderColumnsAsync` method to reorder mul
     }
     public void ReorderSingleColumn()
     {
-        this.Grid.ReorderColumns("ShipCity", "OrderID");
+        this.Grid.ReorderColumnsAsync("ShipCity", "OrderID");
     }
     public void ReorderMultipleColumn()
     {
