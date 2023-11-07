@@ -101,7 +101,7 @@ The Grid component allows you to restrict the column width resizing between a mi
 
 To enable this feature, you can define the [MinWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_MinWidth) and [MaxWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_MaxWidth) properties of the columns directive for the respective column.
 
-In the below code, **CustomerID** and **Freight** columns are defined with minimum and maximum width. The CustomerID column is set to have a minimum width of 10 pixels and a maximum width of 200 pixels. Similarly, the Freight column is set to have a minimum width of 10 pixels and a maximum width of 200 pixels. 
+In the below code, **OrderID**, **Ship Name** and **Ship Country** columns are defined with minimum and maximum width. The **OrderID** column is set to have a minimum width of 100 pixels and a maximum width of 250 pixels. Similarly, the **ShipName** column is set to have a minimum width of 150 pixels and a maximum width of 300 pixels. The **ShipCountry** column is set to have a minimum width of 120 pixels and a maximum width of 280 pixels.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -114,7 +114,7 @@ In the below code, **CustomerID** and **Freight** columns are defined with minim
         <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer ID" Width="150"></GridColumn>
         <GridColumn Field=@nameof(OrderData.ShipCity) HeaderText="Ship City" Width="150"></GridColumn>
         <GridColumn Field=@nameof(OrderData.ShipName) HeaderText="Ship Name" MinWidth="150" MaxWidth="300" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(OrderData.ShipCountry) HeaderText="Ship Country" MinWidth="150" MaxWidth="280" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.ShipCountry) HeaderText="Ship Country" MinWidth="120" MaxWidth="280" Width="150"></GridColumn>
         <GridColumn Field=@nameof(OrderData.ShipAddress) HeaderText="Ship Address" Width="150"></GridColumn>
         <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
     </GridColumns>
@@ -201,11 +201,8 @@ You can disable resizing for a particular column by setting the [AllowResizing](
 <SfGrid DataSource="@Orders" AllowResizing="true">
     <GridColumns>
         <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" MinWidth="100" MaxWidth="250" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer ID" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer ID" AllowResizing="false" Width="150"></GridColumn>
         <GridColumn Field=@nameof(OrderData.ShipCity) HeaderText="Ship City" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(OrderData.ShipName) HeaderText="Ship Name" MinWidth="150" MaxWidth="300" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(OrderData.ShipCountry) HeaderText="Ship Country" MinWidth="150" MaxWidth="280" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(OrderData.ShipAddress) HeaderText="Ship Address" Width="150"></GridColumn>
         <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
@@ -258,15 +255,12 @@ You can disable resizing for a particular column by setting the [AllowResizing](
         public int? OrderID { get; set; }
         public string CustomerID { get; set; }
         public string ShipCity { get; set; }
-        public string ShipName { get; set; }
-        public string ShipCountry { get; set; }
-        public string ShipAddress { get; set; }
         public double Freight { get; set; }
     }
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VNhKiCNiSitfvnsD?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rjhqsiDQVjBIavlN?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Resize stacked header column
 

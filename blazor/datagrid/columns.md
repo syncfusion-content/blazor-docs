@@ -31,18 +31,17 @@ Here is an example of how to specify column types in a grid using the types ment
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids
-@using BlazorApp1.Data
 
 <SfGrid DataSource="@Orders" AllowPaging="true" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Cancel", "Update" })" Height="315">
     <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true"></GridEditSettings>
     <GridColumns>
         <GridColumn Type="ColumnType.CheckBox" Width="50"></GridColumn>
-        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" Type="ColumnType.Number" IsPrimaryKey="true" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer ID" Type="ColumnType.String" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" Format="C2" Type="ColumnType.Number" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(OrderData.OrderDate) HeaderText="Order Date" Format="d" Width="130" Type="ColumnType.Date"></GridColumn>
-        <GridColumn Field=@nameof(OrderData.ShippedDate) HeaderText="Shipped Date" Format="dd/MM/yyyy hh:mm" Width="130" Type="ColumnType.DateTime"></GridColumn>
-        <GridColumn Field=@nameof(OrderData.IsVerified) HeaderText="Verified" Width="130" DisplayAsCheckBox="true" Type="ColumnType.Boolean"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" Type="Syncfusion.Blazor.Grids.ColumnType.Integer" IsPrimaryKey="true" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer ID" Type="Syncfusion.Blazor.Grids.ColumnType.String" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" Format="C2" Type="Syncfusion.Blazor.Grids.ColumnType.Double" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.OrderDate) HeaderText="Order Date" Format="d" Width="130" Type="Syncfusion.Blazor.Grids.ColumnType.Date"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.ShippedDate) HeaderText="Shipped Date" Format="dd/MM/yyyy hh:mm" Width="130" Type="Syncfusion.Blazor.Grids.ColumnType.DateTime"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.IsVerified) HeaderText="Verified" Width="130" DisplayAsCheckBox="true" Type="Syncfusion.Blazor.Grids.ColumnType.Boolean"></GridColumn>
     </GridColumns>
 </SfGrid>
 @code {
@@ -104,7 +103,7 @@ Here is an example of how to specify column types in a grid using the types ment
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/htBAsjqDeabNVuJu?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hDLUiWZmBWcefthH?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 >* If the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Type) is not defined, then it will be determined from the first record of the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_DataSource).
 >* Incase if the first record of the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_DataSource) is null/blank value for a column then it is necessary to define the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Type) for that column. This is because the grid uses the column type to determine which filter dialog to display for that column
