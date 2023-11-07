@@ -866,7 +866,6 @@ Here's an example code snippet in Blazor that demonstrates how to auto fit colum
     {
         if (Args.RequestType == Syncfusion.Blazor.Grids.Action.ColumnState)
         {
-            await Task.Delay(200);
             await Grid.AutoFitColumnsAsync();
         }
     }
@@ -919,7 +918,7 @@ Here's an example code snippet in Blazor that demonstrates how to auto fit colum
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VZhgjutlAcMBSghb?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LtrUWCZmBqLMLrUr?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Show or hide columns
 
