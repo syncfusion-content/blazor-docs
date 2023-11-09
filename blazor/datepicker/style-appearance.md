@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Style and appearance in Blazor DatePicker Component | Syncfusion
-description: Checkout and learn here all about Style and appearance in Syncfusion Blazor DatePicker component and more.
+description: Checkout and learn here all about Style and appearance in Syncfusion Blazor DatePicker Component and more.
 platform: Blazor
 control: DatePicker
 documentation: ug
