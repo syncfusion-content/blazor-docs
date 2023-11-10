@@ -1131,7 +1131,7 @@ A package of Blazor navigation components such as Accordion, ContextMenu, Tabs, 
 <li><a href="#syncfusionblazorinputs">Syncfusion.Blazor.Inputs</a></li>
 <li><a href="#syncfusionblazorlists">Syncfusion.Blazor.Lists</a></li>
 <li><a href="#syncfusionblazorpopups">Syncfusion.Blazor.Popups</a></li>
-<li><a href="#syncfusionblazorspinner">Syncfusion.Blazor.Spinner</a> (Utilizing from v19.3.0.43)</li> 
+<li><a href="#syncfusionblazorspinner">Syncfusion.Blazor.Spinner</a> (Utilizing from v19.3.0.43)</li>
 </ul>
 </td>
 </tr>
@@ -1273,7 +1273,7 @@ N> For developing Linux or Mac (OSX) operating system, use the following corresp
 <br/> * For Linux, use [Syncfusion.Blazor.PdfViewerServer.Linux](https://www.nuget.org/packages/Syncfusion.Blazor.PdfViewerServer.Linux)
 <br/> * For Mac (OSX), use [Syncfusion.Blazor.PdfViewerServer.OSX](https://www.nuget.org/packages/Syncfusion.Blazor.PdfViewerServer.OSX)
 
-### Syncfusion.Blazor.SfPdfViewer
+## Syncfusion.Blazor.SfPdfViewer
 
 The SfPdfViewer is designed to be independent of web services, allowing users to view, edit, print, and download PDF files directly within Blazor applications. It offers various features such as thumbnails, bookmarks, hyperlinks, and table of contents for easy navigation within and outside the PDF files. Additionally, it supports form-filling with AcroForms and ensures fast and responsive performance. Integration of the component into both Blazor Server and WASM applications is straightforward and requires minimal effort.
 
@@ -1359,7 +1359,7 @@ The Blazor Pivot Table is a powerful control used to organize and summarize busi
 <ul>
 <li><a href="#syncfusionblazorcore">Syncfusion.Blazor.Core</a></li>
 <li><a href="#syncfusionblazorbuttons">Syncfusion.Blazor.Buttons</a></li>
-<li><a href="#syncfusionblazorcalendars">Syncfusion.Blazor.Calendars</a> (Utilizing from v20.1.0.47)</li> 
+<li><a href="#syncfusionblazorcalendars">Syncfusion.Blazor.Calendars</a> (Utilizing from v20.1.0.47)</li>
 <li><a href="#syncfusionblazorcharts">Syncfusion.Blazor.Charts</a></li>
 <li><a href="#syncfusionblazordata">Syncfusion.Blazor.Data</a></li>
 <li><a href="#syncfusionblazordropdowns">Syncfusion.Blazor.DropDowns</a></li>
@@ -1845,7 +1845,7 @@ SfStockChart
 </tr>
 </table>
 
-### Syncfusion.Blazor.Themes
+## Syncfusion.Blazor.Themes
 
 This package contains the Syncfusion Blazor UI components theme files.
 
