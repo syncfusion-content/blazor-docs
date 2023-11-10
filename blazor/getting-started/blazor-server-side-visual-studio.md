@@ -27,7 +27,6 @@ Here's an example of how to add **Blazor Calendar** component in the app, open t
 {% highlight C# tabtitle="Package Manager" %}
 
 Install-Package Syncfusion.Blazor.Calendars -Version {{ site.releaseversion }}
-
 Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
 
 {% endhighlight %}
