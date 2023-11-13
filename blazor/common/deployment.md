@@ -9,7 +9,7 @@ documentation: ug
 
 # Deployment in Blazor
 
-This section provides information about deploying Blazor applications with the Syncfusion Blazor components. 
+This section provides information about deploying Blazor applications with the Syncfusion Blazor Components. 
 
 Refer to [Host and deploy ASP.NET Core Blazor](https://learn.microsoft.com/en-us/aspnet/core/blazor/host-and-deploy/?view=aspnetcore-7.0&tabs=visual-studio) topic for more information.
 
