@@ -16,7 +16,7 @@ While interacting with multiple bezier segments, maintain their control points a
 |-------- | -------- | -------- |
 | SymmetricDistance| Both control points of adjacent segments will be at the same distance when one of them is editing. | ![SymmetricDistance](../../images/SymmetricDistance.gif) |
 | SymmetricAngle | Both control points of adjacent segments will be at the same angle when one of them is editing. | ![SymmetricAngle](../../images/SymmetricAngle.gif) |
-| Both | Both control points of adjacent segments will be at the same angle and same distance when one of them is editing. | ![Symmetric](../../images/SmoothnessBoth.gif) |
+| Both | Both control points of adjacent segments will be at the same angle and same distance when one of them is editing. | ![Symmetric](../../images/SmoothnessBoth.png) |
 | None | Segment’s control points interact independently from each other. | ![SymmetricNone](../../images/SymmetricNone.gif)
 
 
