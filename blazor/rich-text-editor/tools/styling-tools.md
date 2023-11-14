@@ -59,7 +59,7 @@ The following font style links are referred in the page.
 
 * For **.NET 6** app, refer style in the `<head>` of the **~/Pages/_Layout.cshtml** file.
 
-* For **.NET 3.X, .NET 5 and .NET 7** app, refer style in the `<head>` of the **~/Pages/_Host.cshtml** file.
+* For **.NET 7** app, refer style in the `<head>` of the **~/Pages/_Host.cshtml** file.
 
 {% tabs %}
 {% highlight cshtml tabtitle=".NET 6 (~/_Layout.cshtml)" %}
@@ -71,7 +71,7 @@ The following font style links are referred in the page.
 
 {% endhighlight %}
 
-{% highlight cshtml tabtitle=".NET 3.X, .NET 5 & .NET 7 (~/_Host.cshtml)" %}
+{% highlight cshtml tabtitle=".NET 7 (~/_Host.cshtml)" %}
 
 <head>
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto">
@@ -447,7 +447,7 @@ This feature allows users to change the appearance of the numbered and bulleted 
 
 ## Code block
 
-Configure code block formatting as a separate toolbar button by adding the `InsertCode` Command within the  [RichTextEditorToolbarSettings.Items](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorToolbarSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorToolbarSettings_Items) property. The `InsertCode` button has a toggle state to apply code block formatting to the editor and remove code block formatting from the editor. 
+Configure code block formatting as a separate toolbar button by adding the `InsertCode` Command within the  [RichTextEditorToolbarSettings.Items](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorToolbarSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorToolbarSettings_Items) property. The `InsertCode` button has a toggle state to apply code block formatting to the editor and remove code block formatting from the editor.
 
 The following code will configure the InsertCode button in the toolbar and set the background color to `pre` tag for highlighting the code block.
 

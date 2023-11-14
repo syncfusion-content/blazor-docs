@@ -17,14 +17,13 @@ To use Syncfusion blazor components with strict CSP mode, the following directiv
 
 * `font-src data:` - This directive allows for the use of `base64` encoded font icons.
 * `style-src 'self' unsafe-inline` - This directive allows for the use of inline styles and external fonts.
-* `connect-src 'self' https: wss:` - This directive enables web sockets.
-* `script-src 'self' unsafe-eval` - This directive allows for the use of the `new()` and `eval()` functions. Used in animation enabled Syncfusion components.
+* `script-src 'self' unsafe-eval blob:` - This directive allows for the use of the `new()` and `eval()` functions, as well as loading scripts from Blob URLs. Used in animation enabled Syncfusion components.
 
 These directives should be included in the `<head>` tag of the application's webpage, typically
 
-* For **Blazor Server application**, inside the `<head>` of 
+* For **Blazor Server application**, inside the `<head>` of
 
-    * **~/Pages/_Host.cshtml** file for .NET Core 3.X, .NET 5 and .NET 7.
+    * **~/Pages/_Host.cshtml** file for .NET 7.
     * **~/Pages/_Layout.cshtml** for .NET 6.
 
 {% tabs %}
@@ -32,34 +31,24 @@ These directives should be included in the `<head>` tag of the application's web
 
 <head>
     ...
-    <meta http-equiv="Content-Security-Policy"
-        content="base-uri 'self';
-        default-src 'self';
-        connect-src 'self' https: wss:;
-        img-src data: https:;
-        object-src 'none';
-        script-src 'self' 'unsafe-eval';
+    <meta http-equiv="Content-Security-Policy" content="
+        script-src 'self' 'unsafe-eval' blob:;
         style-src 'self' 'unsafe-inline';
-        font-src 'self' data:;
-        upgrade-insecure-requests;">
+        img-src data: blob: https:;
+        font-src 'self' data:;" />
     ...
 </head>
 
 {% endhighlight %}
-{% highlight cshtml tabtitle=".NET 3.X, .NET 5 and .NET 7 (~/_Host.cshtml)" hl_lines="9 10" %}
+{% highlight cshtml tabtitle=".NET 7 (~/_Host.cshtml)" hl_lines="9 10" %}
 
 <head>
     ...
-    <meta http-equiv="Content-Security-Policy"
-        content="base-uri 'self';
-        default-src 'self';
-        connect-src 'self' https: wss:;
-        img-src data: https:;
-        object-src 'none';
-        script-src 'self' 'unsafe-eval';
+    <meta http-equiv="Content-Security-Policy" content="
+        script-src 'self' 'unsafe-eval' blob:;
         style-src 'self' 'unsafe-inline';
-        font-src 'self' data:;
-        upgrade-insecure-requests;">
+        img-src data: blob: https:;
+        font-src 'self' data:;" />
     ...
 </head>
 
@@ -72,16 +61,11 @@ These directives should be included in the `<head>` tag of the application's web
 {% highlight html tabtitle="~/index.html" hl_lines="9 10" %}
 <head>
     ...
-    <meta http-equiv="Content-Security-Policy"
-        content="base-uri 'self';
-        default-src 'self';
-        connect-src 'self' https: wss:;
-        img-src data: https:;
-        object-src 'none';
-        script-src 'self' 'unsafe-eval';
+    <meta http-equiv="Content-Security-Policy" content="
+        script-src 'self' 'unsafe-eval' blob:;
         style-src 'self' 'unsafe-inline';
-        font-src 'self' data:;
-        upgrade-insecure-requests;">
+        img-src data: blob: https:;
+        font-src 'self' data:;" />
     ...
 </head>
 {% endhighlight %}
@@ -97,35 +81,25 @@ if you are referencing script and style references from CDN, then add CDN domain
 
 <head>
     ...
-    <meta http-equiv="Content-Security-Policy"
-        content="base-uri 'self';
-        default-src 'self';
-        connect-src 'self' https: wss:;
-        img-src data: https:;
-        object-src 'none';
-        script-src 'self' 'unsafe-eval' https://cdn.syncfusion.com/blazor/;
-        style-src 'self' 'unsafe-inline' https://cdn.syncfusion.com/blazor/;
-        font-src 'self' data:;
-        upgrade-insecure-requests;">
+    <meta http-equiv="Content-Security-Policy" content="
+        script-src 'self' 'unsafe-eval' https://cdn.syncfusion.com blob:;
+        style-src 'self' 'unsafe-inline' https://cdn.syncfusion.com;
+        img-src data: blob: https:;
+        font-src 'self' data:;" />
     ...
 </head>
 
 {% endhighlight %}
 
-{% highlight cshtml tabtitle=".NET 3.X, .NET 5 and .NET 7 (~/_Host.cshtml)" hl_lines="9 10" %}
+{% highlight cshtml tabtitle=".NET 7 (~/_Host.cshtml)" hl_lines="9 10" %}
 
 <head>
     ...
-    <meta http-equiv="Content-Security-Policy"
-        content="base-uri 'self';
-        default-src 'self';
-        connect-src 'self' https: wss:;
-        img-src data: https:;
-        object-src 'none';
-        script-src 'self' 'unsafe-eval' https://cdn.syncfusion.com/blazor/;
-        style-src 'self' 'unsafe-inline' https://cdn.syncfusion.com/blazor/;
-        font-src 'self' data:;
-        upgrade-insecure-requests;">
+    <meta http-equiv="Content-Security-Policy" content="
+        script-src 'self' 'unsafe-eval' https://cdn.syncfusion.com blob:;
+        style-src 'self' 'unsafe-inline' https://cdn.syncfusion.com;
+        img-src data: blob: https:;
+        font-src 'self' data:;" />
     ...
 </head>
 
@@ -141,16 +115,11 @@ if you are referencing script and style references from CDN, then add CDN domain
 
 <head>
     ...
-    <meta http-equiv="Content-Security-Policy"
-        content="base-uri 'self';
-        default-src 'self';
-        connect-src 'self' https: wss:;
-        img-src data: https:;
-        object-src 'none';
-        script-src 'self' 'unsafe-eval' https://cdn.syncfusion.com/blazor/;
-        style-src 'self' 'unsafe-inline' https://cdn.syncfusion.com/blazor/;
-        font-src 'self' data:;
-        upgrade-insecure-requests;">
+    <meta http-equiv="Content-Security-Policy" content="
+        script-src 'self' 'unsafe-eval' https://cdn.syncfusion.com blob:;
+        style-src 'self' 'unsafe-inline' https://cdn.syncfusion.com;
+        img-src data: blob: https:;
+        font-src 'self' data:;" />
     ...
 </head>
 

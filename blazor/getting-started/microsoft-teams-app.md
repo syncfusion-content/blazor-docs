@@ -43,15 +43,14 @@ This section explains how to create and run the first Microsoft Teams applicatio
 5. On clicking on "Add" the new Microsfot application with personal Tab is created.
 ![New Teams application with Personal Tab](images\MSTeams\new-app-personal-tab.png)
 
-## Install Syncfusion Blazor Kanban and Theme NuGet in the App
+## Install Syncfusion Blazor Kanban and Themes NuGet in the App
 
-Here's an example of how to add Blazor Kanban component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install [Syncfusion.Blazor.Kanban](https://www.nuget.org/packages/Syncfusion.Blazor.Kanban) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/). Alternatively, you can utilize the following package manager command to achieve the same.
+Here's an example of how to add **Blazor Kanban** component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install [Syncfusion.Blazor.Kanban](https://www.nuget.org/packages/Syncfusion.Blazor.Kanban) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/). Alternatively, you can utilize the following package manager command to achieve the same.
 
 {% tabs %}
 {% highlight C# tabtitle="Package Manager" %}
 
 Install-Package Syncfusion.Blazor.Kanban -Version {{ site.releaseversion }}
-
 Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
 
 {% endhighlight %}
@@ -63,19 +62,16 @@ N> Syncfusion Blazor components are available in [nuget.org](https://www.nuget.o
 
 Open **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Kanban` namespace.
 
-{% tabs %}
-{% highlight razor tabtitle="~/_Imports.razor" %}
+```cshtml
 
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Kanban
 
-{% endhighlight %}
-{% endtabs %}
+```
 
 Now, register the Syncfusion Blazor Service in the created Microsoft teams app. Open the `~/Program.cs` file and register the Syncfusion Blazor service as follows
 
-{% tabs %}
-{% highlight c# tabtitle="~/Program.cs" hl_lines="2 16" %}
+```cshtml
 
 ....
 using Syncfusion.Blazor;
@@ -96,12 +92,11 @@ builder.Services.AddSyncfusionBlazor();
 var app = builder.Build();
 ....
 
-{% endhighlight %}
-{% endtabs %}
+```
 
 ## Add stylesheet and script resources
 
-The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Reference the stylesheet and script in the `<head>` of the main page as follows: 
+The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Reference the stylesheet and script in the `<head>` of the main page as follows:
 
 * For **.NET 6** Microsoft teams app, include it in the **~/Pages/_Host.cshtml** file.
 
@@ -126,7 +121,7 @@ Now, add the Syncfusion Blazor Kanban component in the `Tab.razor` page under th
 
 <div class="col-lg-12 control-section">
     <div class="content-wrapper" id="toast-kanban-observable">
-        <div class="row"> 
+        <div class="row">
             <SfKanban KeyField="Status" DataSource="@ObservableData">
                 <KanbanColumns>
                     @foreach (ColumnModel item in columnData)
@@ -151,7 +146,7 @@ Now, add the Syncfusion Blazor Kanban component in the `Tab.razor` page under th
         new ColumnModel(){ HeaderText= "Testing", KeyField= new List<string>() { "Testing" } },
         new ColumnModel(){ HeaderText= "Done", KeyField=new List<string>() { "Close" } }
     };
-    
+
     protected override void OnInitialized()
     {
         Tasks = Enumerable.Range(1, 20).Select(x => new ObservableDatas()
@@ -163,7 +158,7 @@ Now, add the Syncfusion Blazor Kanban component in the `Tab.razor` page under th
             }).ToList();
         ObservableData = new ObservableCollection<ObservableDatas>(Tasks);
     }
-    
+
     public class ObservableDatas : INotifyPropertyChanged
     {
         public string Id { get; set; }
@@ -192,7 +187,7 @@ Now, add the Syncfusion Blazor Kanban component in the `Tab.razor` page under th
 }
 
 {% endhighlight %}
-{% endtabs %} 
+{% endtabs %}
 
 ![Microsoft Teams Application with Syncfusion Blazor controls](images\MSTeams\output-msteams-syncfusion.png)
 
