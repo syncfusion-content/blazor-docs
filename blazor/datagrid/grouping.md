@@ -11,44 +11,80 @@ documentation: ug
 
 The grouping feature in the Syncfusion Blazor DataGrid allows you to organize data into a hierarchical structure, making it easier to expand and collapse records. You can group the columns by simply dragging and dropping the column header to the group drop area. To enable grouping in the grid, you need to set the [AllowGrouping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowGrouping) property to **true**. Additionally, you can customize the grouping options using the [GridGroupSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GroupSettings) component.
 
-```cshtml
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids
 
-<SfGrid DataSource="@Orders" AllowGrouping="true" Height="400">
+<SfGrid DataSource="@GridData" AllowGrouping="true" Height="267px">
     <GridColumns>
-        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="90"></GridColumn>
-        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer ID" Width="100"></GridColumn>
-        <GridColumn Field=@nameof(Order.ShipCity) HeaderText="Ship City" Width="100"></GridColumn>
-        <GridColumn Field=@nameof(Order.ShipName) HeaderText="Ship Name" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="90"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer ID" Width="100"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.ShipCity) HeaderText="Ship City" Width="100"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.ShipName) HeaderText="Ship Name" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
 
+
 @code {
-    public List<Order> Orders { get; set; }
+    public List<OrderData> GridData { get; set; }
 
     protected override void OnInitialized()
     {
-        Orders = Enumerable.Range(1, 75).Select(x => new Order()
-            {
-                OrderID = 1000 + x,
-                CustomerID = (new string[] { "VINET", "TOMSP", "HANAR", "VICTE", "SUPRD" })[new Random().Next(5)],
-                ShipCity = (new string[] { "Reims", "Lyon", "Charleroi", "Rio de Janeiro", "Münster" })[new Random().Next(5)],
-                ShipName = (new string[] { "Centro comercial Moctezuma", "Chop-suey Chinese", "Ernst Handel", "Hanari Carnes", "HILARION-Abastos" })[new Random().Next(5)],
-            }).ToList();
+        GridData = OrderData.GetAllRecords();
     }
 
-    public class Order
+}
+{% endhighlight %}
+{% highlight c# tabtitle="OrderData.cs" %}
+ public class OrderData
     {
+        public static List<OrderData> Orders = new List<OrderData>();
+        
+       
+        public OrderData()
+        {
+
+        }
+        public OrderData(int? OrderID,string CustomerID,string ShipCity, string ShipName)
+        {
+           this.OrderID = OrderID;    
+           this.CustomerID = CustomerID;
+            this.ShipCity = ShipCity;
+            this.ShipName = ShipName;           
+           
+        }
+
+        public static List<OrderData> GetAllRecords()
+        {
+            if (Orders.Count() == 0)
+            {
+                int code = 10;
+                for (int i = 1; i < 2; i++)
+                {
+                    Orders.Add(new OrderData(10248, "VINET", "Reims", "Vins et alcools Chevali"));
+                    Orders.Add(new OrderData(10249, "TOMSP", "Münster", "Toms Spezialitäten"));
+                    Orders.Add(new OrderData(10250, "HANAR", "Rio de Janeiro", "Hanari Carnes"));
+                    Orders.Add(new OrderData(10251, "VICTE", "Lyon", "Victuailles en stock"));
+                    Orders.Add(new OrderData(10252, "SUPRD", "Charleroi", "Suprêmes délices"));
+                    Orders.Add(new OrderData(10253, "HANAR", "Lyon", "Hanari Carnes"));
+                    Orders.Add(new OrderData(10254, "CHOPS", "Rio de Janeiro", "Chop-suey Chinese"));
+                    Orders.Add(new OrderData(10255, "RICSU", "Münster", "Richter Supermarkt"));
+                    Orders.Add(new OrderData(10256, "WELLI", "Reims", "Wellington Import"));
+                    code += 5;
+                }
+            }
+            return Orders;
+        }
+
         public int? OrderID { get; set; }
         public string CustomerID { get; set; }
-        public string? ShipCity { get; set; }
-        public string? ShipName { get; set; }
-    }
-}
+        public string ShipCity { get; set; }
+        public string ShipName { get; set; }
+   }
+{% endhighlight %}
+{% endtabs %}
 
-```
-
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hNVUjEZoVSlfpvSO?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rNLqMCNQhjHRjNeQ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 > * You can group and ungroup columns by using the **GroupColumn** and **UngroupColumn** methods.
 > * To disable grouping for a particular column, set the [AllowGrouping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_AllowGrouping) to false in **GridColumn** component.
@@ -59,46 +95,86 @@ To enable initial grouping in the DataGrid, you can use the [GridGroupSettings](
 
 The following example demonstrates how to set an initial grouping for the **CustomerID** and **ShipCity** columns during the initial rendering grid, by using the `GridGroupSettings` component of the `Columns` property.
 
-```cshtml
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids
- 
-<SfGrid DataSource="@Orders" AllowGrouping="true" Height="400">
+
+<SfGrid DataSource="@GridData" AllowGrouping="true" Height="267px">
     <GridGroupSettings Columns="@Initial"></GridGroupSettings>
     <GridColumns>
-        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="90"></GridColumn>
-        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer ID" Width="100"></GridColumn>
-        <GridColumn Field=@nameof(Order.ShipCity) HeaderText="Ship City" Width="100"></GridColumn>
-        <GridColumn Field=@nameof(Order.ShipName) HeaderText="Ship Name" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="90"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer ID" Width="100"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.ShipCity) HeaderText="Ship City" Width="100"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.ShipName) HeaderText="Ship Name" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
 
+
 @code {
-    public List<Order> Orders { get; set; }
+    public List<OrderData> GridData { get; set; }
 
     public string[] Initial = (new string[] { "CustomerID", "ShipCity" });
 
     protected override void OnInitialized()
     {
-        Orders = Enumerable.Range(1, 75).Select(x => new Order()
-            {
-                OrderID = 1000 + x,
-                CustomerID = (new string[] { "VINET", "TOMSP", "HANAR", "VICTE", "SUPRD" })[new Random().Next(5)],
-                ShipCity = (new string[] { "Reims", "Lyon", "Charleroi", "Rio de Janeiro", "Münster" })[new Random().Next(5)],
-                ShipName = (new string[] { "Centro comercial Moctezuma", "Chop-suey Chinese", "Ernst Handel", "Hanari Carnes", "HILARION-Abastos" })[new Random().Next(5)],
-            }).ToList();
+        GridData = OrderData.GetAllRecords();
     }
 
-    public class Order
+}
+{% endhighlight %}
+{% highlight c# tabtitle="OrderData.cs" %}
+  public class OrderData
     {
+        public static List<OrderData> Orders = new List<OrderData>();
+        
+       
+        public OrderData()
+        {
+
+        }
+        public OrderData(int? OrderID,string CustomerID,string ShipCity, string ShipName)
+        {
+           this.OrderID = OrderID;    
+           this.CustomerID = CustomerID;
+            this.ShipCity = ShipCity;
+            this.ShipName = ShipName;           
+           
+        }
+
+        public static List<OrderData> GetAllRecords()
+        {
+            if (Orders.Count() == 0)
+            {
+                int code = 10;
+                for (int i = 1; i < 2; i++)
+                {
+                    Orders.Add(new OrderData(10248, "VINET", "Reims", "Vins et alcools Chevali"));
+                    Orders.Add(new OrderData(10249, "TOMSP", "Münster", "Toms Spezialitäten"));
+                    Orders.Add(new OrderData(10250, "HANAR", "Rio de Janeiro", "Hanari Carnes"));
+                    Orders.Add(new OrderData(10251, "VICTE", "Lyon", "Victuailles en stock"));
+                    Orders.Add(new OrderData(10252, "SUPRD", "Charleroi", "Suprêmes délices"));
+                    Orders.Add(new OrderData(10253, "HANAR", "Lyon", "Hanari Carnes"));
+                    Orders.Add(new OrderData(10254, "CHOPS", "Rio de Janeiro", "Chop-suey Chinese"));
+                    Orders.Add(new OrderData(10255, "RICSU", "Münster", "Richter Supermarkt"));
+                    Orders.Add(new OrderData(10256, "WELLI", "Reims", "Wellington Import"));
+                    code += 5;
+                }
+            }
+            return Orders;
+        }
+
         public int? OrderID { get; set; }
         public string CustomerID { get; set; }
-        public string? ShipCity { get; set; }
-        public string? ShipName { get; set; }
-    }
-}
-```
+        public string ShipCity { get; set; }
+        public string ShipName { get; set; }
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rNhADuDILdsYIqKZ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+       
+
+    }
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rXBKsCNQBXkOKmSa?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 > You can group by multiple columns by specifying a string array of column names in the columns property of the `GridGroupSettings` component.
 
@@ -106,42 +182,81 @@ The following example demonstrates how to set an initial grouping for the **Cust
 
 The DataGrid component provides the ability to prevent grouping for a particular column. This can be useful when you have certain columns that you do not want to be included in the grouping process. It can be achieved by setting the [AllowGrouping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowGrouping) property of the particular `Column` to **false**. The following example demonstrates, how to disable grouping for **CustomerID** column. 
 
-```cshtml
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids
 
-<SfGrid DataSource="@Orders" AllowGrouping="true" Height="400">
+<SfGrid DataSource="@GridData" AllowGrouping="true" Height="267px">
     <GridColumns>
-        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="90"></GridColumn>
-        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer ID" AllowGrouping="false" Width="100"></GridColumn>
-        <GridColumn Field=@nameof(Order.ShipCity) HeaderText="Ship City" Width="100"></GridColumn>
-        <GridColumn Field=@nameof(Order.ShipName) HeaderText="Ship Name" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="90"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer ID" AllowGrouping="false" Width="100"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.ShipCity) HeaderText="Ship City" Width="100"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.ShipName) HeaderText="Ship Name" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
 
+
 @code {
-    public List<Order> Orders { get; set; }
+    public List<OrderData> GridData { get; set; }
 
     protected override void OnInitialized()
     {
-        Orders = Enumerable.Range(1, 75).Select(x => new Order()
-            {
-                OrderID = 1000 + x,
-                CustomerID = (new string[] { "VINET", "TOMSP", "HANAR", "VICTE", "SUPRD" })[new Random().Next(5)],
-                ShipCity = (new string[] { "Reims", "Lyon", "Charleroi", "Rio de Janeiro", "Münster" })[new Random().Next(5)],
-                ShipName = (new string[] { "Centro comercial Moctezuma", "Chop-suey Chinese", "Ernst Handel", "Hanari Carnes", "HILARION-Abastos" })[new Random().Next(5)],
-            }).ToList();
+        GridData = OrderData.GetAllRecords();
     }
 
-    public class Order
+}
+{% endhighlight %}
+{% highlight c# tabtitle="OrderData.cs" %}
+  public class OrderData
     {
+        public static List<OrderData> Orders = new List<OrderData>();
+        
+       
+        public OrderData()
+        {
+
+        }
+        public OrderData(int? OrderID,string CustomerID,string ShipCity, string ShipName)
+        {
+           this.OrderID = OrderID;    
+           this.CustomerID = CustomerID;
+            this.ShipCity = ShipCity;
+            this.ShipName = ShipName;           
+           
+        }
+
+        public static List<OrderData> GetAllRecords()
+        {
+            if (Orders.Count() == 0)
+            {
+                int code = 10;
+                for (int i = 1; i < 2; i++)
+                {
+                    Orders.Add(new OrderData(10248, "VINET", "Reims", "Vins et alcools Chevali"));
+                    Orders.Add(new OrderData(10249, "TOMSP", "Münster", "Toms Spezialitäten"));
+                    Orders.Add(new OrderData(10250, "HANAR", "Rio de Janeiro", "Hanari Carnes"));
+                    Orders.Add(new OrderData(10251, "VICTE", "Lyon", "Victuailles en stock"));
+                    Orders.Add(new OrderData(10252, "SUPRD", "Charleroi", "Suprêmes délices"));
+                    Orders.Add(new OrderData(10253, "HANAR", "Lyon", "Hanari Carnes"));
+                    Orders.Add(new OrderData(10254, "CHOPS", "Rio de Janeiro", "Chop-suey Chinese"));
+                    Orders.Add(new OrderData(10255, "RICSU", "Münster", "Richter Supermarkt"));
+                    Orders.Add(new OrderData(10256, "WELLI", "Reims", "Wellington Import"));
+                    code += 5;
+                }
+            }
+            return Orders;
+        }
+
         public int? OrderID { get; set; }
         public string CustomerID { get; set; }
-        public string? ShipCity { get; set; }
-        public string? ShipName { get; set; }
-    }
-}
-```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BtVgXODeUBdWjyzW?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+        public string ShipCity { get; set; }
+        public string ShipName { get; set; }
+
+        }
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LthUWWNcBWKrghqe?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap55" %}
 
 
 ## Hide drop area
@@ -153,28 +268,30 @@ To hide the drop area in the Syncfusion Blazor Grid, you can set the `GridGroupS
 
 The following example, the [Blazor Toggle Switch Button](https://blazor.syncfusion.com/documentation/toggle-switch-button/getting-started) component is added to hide or show the drop area. When the switch is toggled, the [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.ChangeEventArgs-1.html) event is triggered and the `GridGroupSettings` component of the `ShowDropArea` property of the grid is updated accordingly.
 
-
-```cshtml
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Buttons
+
 <div style="display:flex;gap: 5px;">
     <label> Hide or show drop area</label>
-<SfSwitch @bind-Checked="isChecked" OffLabel="OFF" OnLabel="ON" ValueChange="Change" TChecked="bool?"></SfSwitch>
+    <SfSwitch @bind-Checked="isChecked" OffLabel="OFF" OnLabel="ON" ValueChange="Change" TChecked="bool?"></SfSwitch>
 </div>
- 
-<SfGrid DataSource="@Orders" AllowGrouping="true" Height="400">
+
+<SfGrid DataSource="@GridData" AllowGrouping="true" Height="267px">
     <GridGroupSettings ShowDropArea="@show" Columns="@Initial"></GridGroupSettings>
     <GridColumns>
-        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="90"></GridColumn>
-        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer ID" Width="100"></GridColumn>
-        <GridColumn Field=@nameof(Order.ShipCity) HeaderText="Ship City" Width="100"></GridColumn>
-        <GridColumn Field=@nameof(Order.ShipName) HeaderText="Ship Name" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="90"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer ID" Width="100"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.ShipCity) HeaderText="Ship City" Width="100"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.ShipName) HeaderText="Ship Name" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
 
+
 @code {
-    public List<Order> Orders { get; set; }
-   
+    public List<OrderData> GridData { get; set; }
+
 
     public bool show { get; set; } = false;
 
@@ -182,23 +299,17 @@ The following example, the [Blazor Toggle Switch Button](https://blazor.syncfusi
 
     protected override void OnInitialized()
     {
-        Orders = Enumerable.Range(1, 75).Select(x => new Order()
-            {
-                OrderID = 1000 + x,
-                CustomerID = (new string[] { "VINET", "TOMSP", "HANAR", "VICTE", "SUPRD" })[new Random().Next(5)],
-                ShipCity = (new string[] { "Reims", "Lyon", "Charleroi", "Rio de Janeiro", "Münster" })[new Random().Next(5)],
-                ShipName = (new string[] { "Centro comercial Moctezuma", "Chop-suey Chinese", "Ernst Handel", "Hanari Carnes", "HILARION-Abastos" })[new Random().Next(5)],
-            }).ToList();
+        GridData = OrderData.GetAllRecords();
     }
 
     private bool? isChecked = null;
 
-    
+
     private void Change(Syncfusion.Blazor.Buttons.ChangeEventArgs<bool?> args)
     {
-        if(args.Checked == true)
+        if (args.Checked == true)
         {
-           
+
 
             show = true;
         }
@@ -208,17 +319,59 @@ The following example, the [Blazor Toggle Switch Button](https://blazor.syncfusi
         }
     }
 
-    public class Order
+}
+{% endhighlight %}
+{% highlight c# tabtitle="OrderData.cs" %}
+  public class OrderData
     {
+        public static List<OrderData> Orders = new List<OrderData>();
+        
+       
+        public OrderData()
+        {
+
+        }
+        public OrderData(int? OrderID,string CustomerID,string ShipCity, string ShipName)
+        {
+           this.OrderID = OrderID;    
+           this.CustomerID = CustomerID;
+            this.ShipCity = ShipCity;
+            this.ShipName = ShipName;           
+           
+        }
+
+        public static List<OrderData> GetAllRecords()
+        {
+            if (Orders.Count() == 0)
+            {
+                int code = 10;
+                for (int i = 1; i < 2; i++)
+                {
+                    Orders.Add(new OrderData(10248, "VINET", "Reims", "Vins et alcools Chevali"));
+                    Orders.Add(new OrderData(10249, "TOMSP", "Münster", "Toms Spezialitäten"));
+                    Orders.Add(new OrderData(10250, "HANAR", "Rio de Janeiro", "Hanari Carnes"));
+                    Orders.Add(new OrderData(10251, "VICTE", "Lyon", "Victuailles en stock"));
+                    Orders.Add(new OrderData(10252, "SUPRD", "Charleroi", "Suprêmes délices"));
+                    Orders.Add(new OrderData(10253, "HANAR", "Lyon", "Hanari Carnes"));
+                    Orders.Add(new OrderData(10254, "CHOPS", "Rio de Janeiro", "Chop-suey Chinese"));
+                    Orders.Add(new OrderData(10255, "RICSU", "Münster", "Richter Supermarkt"));
+                    Orders.Add(new OrderData(10256, "WELLI", "Reims", "Wellington Import"));
+                    code += 5;
+                }
+            }
+            return Orders;
+        }
+
         public int? OrderID { get; set; }
         public string CustomerID { get; set; }
-        public string? ShipCity { get; set; }
-        public string? ShipName { get; set; }
-    }
-}
-```
+        public string ShipCity { get; set; }
+        public string ShipName { get; set; }
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LXVgZYtIzsakmrOv?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+    }
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VZhgiitwBBVMzKlC?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 > By default, the group drop area will be shown only if there is at least one column available to group.
 
@@ -302,55 +455,90 @@ By default, grouped columns are sorted in ascending order. However, you can sort
 
 The following example demonstrates how to sort the **CustomerID** column by setting the `GridSortSettings` component of the `Columns` property to **Descending** during the initial grouping of the Datagrid.
 
-```cshtml
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids
 
- 
-<SfGrid DataSource="@Orders" AllowSorting="true" AllowGrouping="true" Height="400">
-    <GridGroupSettings  Columns="@Initial"></GridGroupSettings>
+<SfGrid DataSource="@GridData" AllowSorting="true" AllowGrouping="true" Height="267px">
+    <GridGroupSettings Columns="@Initial"></GridGroupSettings>
     <GridSortSettings>
         <GridSortColumns>
             <GridSortColumn Field="CustomerID" Direction="SortDirection.Descending"></GridSortColumn>
         </GridSortColumns>
     </GridSortSettings>
     <GridColumns>
-        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="90"></GridColumn>
-        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer ID" Width="100"></GridColumn>
-        <GridColumn Field=@nameof(Order.ShipCity) HeaderText="Ship City" Width="100"></GridColumn>
-        <GridColumn Field=@nameof(Order.ShipName) HeaderText="Ship Name" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="90"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer ID" Width="100"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.ShipCity) HeaderText="Ship City" Width="100"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.ShipName) HeaderText="Ship Name" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
 
+
 @code {
-    public List<Order> Orders { get; set; }
+    public List<OrderData> GridData { get; set; }
 
 
     public string[] Initial = (new string[] { "CustomerID" });
 
     protected override void OnInitialized()
     {
-        Orders = Enumerable.Range(1, 75).Select(x => new Order()
-            {
-                OrderID = 1000 + x,
-                CustomerID = (new string[] { "VINET", "TOMSP", "HANAR", "VICTE", "SUPRD" })[new Random().Next(5)],
-                ShipCity = (new string[] { "Reims", "Lyon", "Charleroi", "Rio de Janeiro", "Münster" })[new Random().Next(5)],
-                ShipName = (new string[] { "Centro comercial Moctezuma", "Chop-suey Chinese", "Ernst Handel", "Hanari Carnes", "HILARION-Abastos" })[new Random().Next(5)],
-            }).ToList();
+        GridData = OrderData.GetAllRecords();
     }
 
-
-
-    public class Order
+}
+{% endhighlight %}
+{% highlight c# tabtitle="OrderData.cs" %}
+ public class OrderData
     {
+        public static List<OrderData> Orders = new List<OrderData>();
+        
+       
+        public OrderData()
+        {
+
+        }
+        public OrderData(int? OrderID,string CustomerID,string ShipCity, string ShipName)
+        {
+           this.OrderID = OrderID;    
+           this.CustomerID = CustomerID;
+            this.ShipCity = ShipCity;
+            this.ShipName = ShipName;           
+           
+        }
+
+        public static List<OrderData> GetAllRecords()
+        {
+            if (Orders.Count() == 0)
+            {
+                int code = 10;
+                for (int i = 1; i < 2; i++)
+                {
+                    Orders.Add(new OrderData(10248, "VINET", "Reims", "Vins et alcools Chevali"));
+                    Orders.Add(new OrderData(10249, "TOMSP", "Münster", "Toms Spezialitäten"));
+                    Orders.Add(new OrderData(10250, "HANAR", "Rio de Janeiro", "Hanari Carnes"));
+                    Orders.Add(new OrderData(10251, "VICTE", "Lyon", "Victuailles en stock"));
+                    Orders.Add(new OrderData(10252, "SUPRD", "Charleroi", "Suprêmes délices"));
+                    Orders.Add(new OrderData(10253, "HANAR", "Lyon", "Hanari Carnes"));
+                    Orders.Add(new OrderData(10254, "CHOPS", "Rio de Janeiro", "Chop-suey Chinese"));
+                    Orders.Add(new OrderData(10255, "RICSU", "Münster", "Richter Supermarkt"));
+                    Orders.Add(new OrderData(10256, "WELLI", "Reims", "Wellington Import"));
+                    code += 5;
+                }
+            }
+            return Orders;
+        }
+
         public int? OrderID { get; set; }
         public string CustomerID { get; set; }
-        public string? ShipCity { get; set; }
-        public string? ShipName { get; set; }
-    }
-}
-```
+        public string ShipCity { get; set; }
+        public string ShipName { get; set; } 
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LDVAjaXypHVKLMgi?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+    }
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hjhUCMZGLoABNhxp?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Group by format
 
@@ -359,46 +547,85 @@ property of the corresponding grid column. This feature allows you to group nume
 
 The following example demonstrates how to perform a group action using the `EnableGroupByFormat` property for the  **OrderDate** and **Freight** columns of the grid. 
 
-```cshtml
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids
 
-<SfGrid DataSource="@Orders" AllowGrouping="true" Height="400">
+<SfGrid @ref="Grid" DataSource="@GridData" AllowGrouping="true" Height="315px">
     <GridGroupSettings ShowDropArea="false" Columns=@Format></GridGroupSettings>
     <GridColumns>
-        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="yyyy/MMM" Type="ColumnType.Date" EnableGroupByFormat="true" TextAlign="TextAlign.Right" Width="130"></GridColumn>
-        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" EnableGroupByFormat="true" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="90"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer ID" Width="100"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.OrderDate) HeaderText=" Order Date" Format="yyyy/MMM" Type="ColumnType.Date" EnableGroupByFormat="true" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" Format="C2" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" EnableGroupByFormat="true" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
 
-@code {
-    public List<Order> Orders { get; set; }
 
+@code {
+    public List<OrderData> GridData { get; set; }
+    SfGrid<OrderData>? Grid { get; set; }
     public string[] Format = (new string[] { "OrderDate", "Freight" });
 
     protected override void OnInitialized()
     {
-        Orders = Enumerable.Range(1, 75).Select(x => new Order()
-            {
-                OrderID = 1000 + x,
-                CustomerID = (new string[] { "VINET", "TOMSP", "HANAR", "VICTE", "SUPRD" })[new Random().Next(5)],
-                Freight = 2.1 * x,
-                OrderDate = DateTime.Now.AddDays(-x),
-            }).ToList();
+        GridData = OrderData.GetAllRecords();
     }
 
-    public class Order
+}
+{% endhighlight %}
+{% highlight c# tabtitle="OrderData.cs" %}
+ public class OrderData
     {
+        public static List<OrderData> Orders = new List<OrderData>();
+        
+       
+        public OrderData()
+        {
+
+        }
+        public OrderData(int? OrderID,string CustomerID, DateTime? OrderDate, double? Freight)
+        {
+           this.OrderID = OrderID;    
+           this.CustomerID = CustomerID;
+            this.OrderDate = OrderDate;
+            this.Freight = Freight;           
+           
+        }
+
+        public static List<OrderData> GetAllRecords()
+        {
+            if (Orders.Count() == 0)
+            {
+                int code = 10;
+                for (int i = 1; i < 2; i++)
+                {
+                    Orders.Add(new OrderData(10248, "VINET", new DateTime(1996, 07, 06), 32.38));
+                    Orders.Add(new OrderData(10249, "TOMSP", new DateTime(1996, 07, 06), 11.61));
+                    Orders.Add(new OrderData(10250, "HANAR", new DateTime(1996, 07, 06), 65.83));
+                    Orders.Add(new OrderData(10251, "VICTE", new DateTime(1996, 07, 06), 45.78));
+                    Orders.Add(new OrderData(10252, "SUPRD", new DateTime(1996, 07, 06), 98.6));
+                    Orders.Add(new OrderData(10253, "HANAR", new DateTime(1996, 07, 06), 103.45));
+                    Orders.Add(new OrderData(10254, "CHOPS", new DateTime(1996, 07, 06), 103.45));
+                    Orders.Add(new OrderData(10255, "RICSU", new DateTime(1996, 07, 06), 112.48));
+                    Orders.Add(new OrderData(10256, "WELLI", new DateTime(1996, 07, 06), 33.45));
+                    code += 5;
+                }
+            }
+            return Orders;
+        }
+
         public int? OrderID { get; set; }
         public string CustomerID { get; set; }
         public DateTime? OrderDate { get; set; }
         public double? Freight { get; set; }
-    }
-}
-```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LNhgDatHMzntLXbO?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+    }
+{% endhighlight %}
+{% endtabs %}
+
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDLUisZcqcKfqGvJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 > Numeric columns can be grouped based on formats such as currency or percentage, while datetime columns can be grouped based on specific date or time formats.
 
@@ -408,47 +635,49 @@ By default, the Syncfusion DataGrid supports interaction-oriented column groupin
 
 The following example demonstrates how to group and upgroup the columns in a grid. It utilizes the [DropDownList](https://blazor.syncfusion.com/documentation/dropdown-list/getting-started) component to select the column. When an external button is clicked, the `GroupColumnAsync` and `UngroupColumnAsync` methods are called to group or ungroup the selected column.
 
-```cshtml
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Buttons
 @using Syncfusion.Blazor.DropDowns
 
-<div style="display:flex;gap: 5px;">
-    <label> Column name :</label>
-    <SfDropDownList TValue="string" TItem="Columns" Width="300px" Placeholder="Select a Column" DataSource="@LocalData" @bind-Value="@DropDownValue">
-        <DropDownListFieldSettings Value="ID" Text="Value"></DropDownListFieldSettings>
-    </SfDropDownList>
+<div style="display: flex; flex-direction: column; ">
+    <div style="display: flex; gap: 5px;">
+        <label>Column name:</label>
+        <SfDropDownList TValue="string" TItem="Columns" Width="120px" Placeholder="Select a Column" DataSource="@LocalData" @bind-Value="@DropDownValue">
+            <DropDownListFieldSettings Value="ID" Text="Value"></DropDownListFieldSettings>
+        </SfDropDownList>
+    </div>
 
-    <SfButton OnClick="GroupColumn">Group column</SfButton>
-
-    <SfButton OnClick="UnGroupColumn">UnGroup column</SfButton>
+    <div style="display: flex; gap: 5px; margin-top: 10px; margin-bottom: 10px">
+        <SfButton OnClick="GroupColumn">Group column</SfButton>
+        <SfButton OnClick="UnGroupColumn">UnGroup column</SfButton>
+    </div>
 </div>
 
-<SfGrid @ref="Grid" TValue="Order" DataSource="@Orders" AllowGrouping="true" Height="400">
+<SfGrid @ref="Grid" DataSource="@GridData"  AllowGrouping="true" Height="315px">
     <GridGroupSettings ShowDropArea="false" Columns="@Initial"></GridGroupSettings>
     <GridColumns>
-        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer ID" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.ShipCity) HeaderText="Ship City" Width="100"></GridColumn>
-        <GridColumn Field=@nameof(Order.ShipName) HeaderText="Ship Name" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="90"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer ID" Width="100"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.ShipCity) HeaderText="Ship City" Width="100"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.ShipName) HeaderText="Ship Name" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
+
+
 @code {
-    public List<Order> Orders { get; set; }
-    SfGrid<Order>? Grid { get; set; }
+    public List<OrderData> GridData { get; set; }
+    SfGrid<OrderData>? Grid { get; set; }
     public string DropDownValue { get; set; } = "CustomerID";
     public string[] Initial = (new string[] { "CustomerID", "ShipCity" });
+
+
     protected override void OnInitialized()
     {
-        Orders = Enumerable.Range(1, 75).Select(x => new Order()
-            {
-                OrderID = 1000 + x,
-                CustomerID = (new string[] { "VINET", "TOMSP", "HANAR", "VICTE", "SUPRD" })[new Random().Next(5)],
-                ShipCity = (new string[] { "Reims", "Lyon", "Charleroi", "Rio de Janeiro", "Münster" })[new Random().Next(5)],
-                ShipName = (new string[] { "Centro comercial Moctezuma", "Chop-suey Chinese", "Ernst Handel", "Hanari Carnes", "HILARION-Abastos" })[new Random().Next(5)],
-            }).ToList();
-
+        GridData = OrderData.GetAllRecords();
     }
+
     List<Columns> LocalData = new List<Columns>
     {
         new Columns() { ID= "OrderID", Value= "OrderID" },
@@ -457,13 +686,6 @@ The following example demonstrates how to group and upgroup the columns in a gri
         new Columns() { ID= "ShipName", Value= "ShipName" },
     };
 
-    public class Order
-    {
-        public int? OrderID { get; set; }
-        public string CustomerID { get; set; }
-        public string? ShipCity { get; set; }
-        public string? ShipName { get; set; }
-    }
     public class Columns
     {
         public string ID { get; set; }
@@ -480,10 +702,59 @@ The following example demonstrates how to group and upgroup the columns in a gri
     {
         await Grid.UngroupColumnAsync(DropDownValue);
     }
-
 }
-```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VjLKXaXFCIGRqkiL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% endhighlight %}
+{% highlight c# tabtitle="OrderData.cs" %}
+ public class OrderData
+    {
+        public static List<OrderData> Orders = new List<OrderData>();
+        
+       
+        public OrderData()
+        {
+
+        }
+        public OrderData(int? OrderID,string CustomerID,string ShipCity, string ShipName)
+        {
+           this.OrderID = OrderID;    
+           this.CustomerID = CustomerID;
+            this.ShipCity = ShipCity;
+            this.ShipName = ShipName;           
+           
+        }
+
+        public static List<OrderData> GetAllRecords()
+        {
+            if (Orders.Count() == 0)
+            {
+                int code = 10;
+                for (int i = 1; i < 2; i++)
+                {
+                    Orders.Add(new OrderData(10248, "VINET", "Reims", "Vins et alcools Chevali"));
+                    Orders.Add(new OrderData(10249, "TOMSP", "Münster", "Toms Spezialitäten"));
+                    Orders.Add(new OrderData(10250, "HANAR", "Rio de Janeiro", "Hanari Carnes"));
+                    Orders.Add(new OrderData(10251, "VICTE", "Lyon", "Victuailles en stock"));
+                    Orders.Add(new OrderData(10252, "SUPRD", "Charleroi", "Suprêmes délices"));
+                    Orders.Add(new OrderData(10253, "HANAR", "Lyon", "Hanari Carnes"));
+                    Orders.Add(new OrderData(10254, "CHOPS", "Rio de Janeiro", "Chop-suey Chinese"));
+                    Orders.Add(new OrderData(10255, "RICSU", "Münster", "Richter Supermarkt"));
+                    Orders.Add(new OrderData(10256, "WELLI", "Reims", "Wellington Import"));
+                    code += 5;
+                }
+            }
+            return Orders;
+        }
+
+        public int? OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public string ShipCity { get; set; }
+        public string ShipName { get; set; } 
+
+    }
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/htBgCiNGTssPWSDl?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Expand or collapse externally
 
@@ -493,9 +764,10 @@ The Syncfusion Blazor DataGrid offers a convenient feature to expand or collapse
 
 DataGrid provides an ability to expand or collapse grouped rows using [ExpandAllGroupAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExpandAllGroupAsync) and [CollapseAllGroupAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_CollapseAllGroupAsync) methods respectively.
 
-In the following example, the [Blazor Toggle Switch Button](https://blazor.syncfusion.com/documentation/toggle-switch-button/getting-started) component is added to expand or collapse grouped rows. When the switch is toggled, the [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.ChangeEventArgs-1.html) event is triggered and the `ExpandAllGroupAsync` and `CollapseAllGroupAsync` methods are called to expand or collapse grouped rows. 
+In the following example, the [Blazor Toggle Switch Button](https://blazor.syncfusion.com/documentation/toggle-switch-button/getting-started) component is added to expand or collapse grouped rows. When the switch is toggled, the [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.ChangeEventArgs-1.html) event is triggered and the `ExpandAllGroupAsync` and `CollapseAllGroupAsync` methods are called to expand or collapse grouped rows.
 
-```cshtml
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Buttons
 
@@ -504,42 +776,27 @@ In the following example, the [Blazor Toggle Switch Button](https://blazor.syncf
     <SfSwitch OffLabel="OFF" OnLabel="ON" ValueChange="Change" TChecked="bool?"></SfSwitch>
 </div>
 
-
-<SfGrid @ref="Grid" DataSource="@Orders" AllowGrouping="true" Height="400">
+<SfGrid @ref="Grid" DataSource="@GridData"  AllowGrouping="true" Height="315px">
     <GridGroupSettings ShowDropArea="false" Columns="@columns"></GridGroupSettings>
     <GridColumns>
-        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer ID" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.ShipCity) HeaderText="Ship City" Width="100"></GridColumn>
-        <GridColumn Field=@nameof(Order.ShipName) HeaderText="Ship Name" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="90"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer ID" Width="100"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.ShipCity) HeaderText="Ship City" Width="100"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.ShipName) HeaderText="Ship Name" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
 
-@code {
 
-    public SfGrid<Order>? Grid { get; set; }
-    public List<Order> Orders { get; set; }
+@code {
+    public List<OrderData> GridData { get; set; }
+    SfGrid<OrderData>? Grid { get; set; }
     public string[] columns = (new string[] { "CustomerID", "ShipCity" });
     public bool IsShow { get; set; } = true;
 
+
     protected override void OnInitialized()
     {
-        Orders = Enumerable.Range(1, 75).Select(x => new Order()
-            {
-                OrderID = 1000 + x,
-                CustomerID = (new string[] { "VINET", "TOMSP", "HANAR", "VICTE", "SUPRD" })[new Random().Next(5)],
-
-                ShipCity = (new string[] { "Reims", "Lyon", "Charleroi", "Rio de Janeiro", "Münster" })[new Random().Next(5)],
-                ShipName = (new string[] { "Centro comercial Moctezuma", "Chop-suey Chinese", "Ernst Handel", "Hanari Carnes", "HILARION-Abastos" })[new Random().Next(5)],
-            }).ToList();
-    }
-
-    public class Order
-    {
-        public int? OrderID { get; set; }
-        public string CustomerID { get; set; }
-        public string? ShipCity { get; set; }
-        public string? ShipName { get; set; }
+        GridData = OrderData.GetAllRecords();
     }
 
     private void Change(Syncfusion.Blazor.Buttons.ChangeEventArgs<bool?> args)
@@ -554,9 +811,58 @@ In the following example, the [Blazor Toggle Switch Button](https://blazor.syncf
         }
     }
 }
-```
+{% endhighlight %}
+{% highlight c# tabtitle="OrderData.cs" %}
+ public class OrderData
+    {
+        public static List<OrderData> Orders = new List<OrderData>();
+        
+       
+        public OrderData()
+        {
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hZVADaXliHMXfWvf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+        }
+        public OrderData(int? OrderID,string CustomerID,string ShipCity, string ShipName)
+        {
+           this.OrderID = OrderID;    
+           this.CustomerID = CustomerID;
+            this.ShipCity = ShipCity;
+            this.ShipName = ShipName;           
+           
+        }
+
+        public static List<OrderData> GetAllRecords()
+        {
+            if (Orders.Count() == 0)
+            {
+                int code = 10;
+                for (int i = 1; i < 2; i++)
+                {
+                    Orders.Add(new OrderData(10248, "VINET", "Reims", "Vins et alcools Chevali"));
+                    Orders.Add(new OrderData(10249, "TOMSP", "Münster", "Toms Spezialitäten"));
+                    Orders.Add(new OrderData(10250, "HANAR", "Rio de Janeiro", "Hanari Carnes"));
+                    Orders.Add(new OrderData(10251, "VICTE", "Lyon", "Victuailles en stock"));
+                    Orders.Add(new OrderData(10252, "SUPRD", "Charleroi", "Suprêmes délices"));
+                    Orders.Add(new OrderData(10253, "HANAR", "Lyon", "Hanari Carnes"));
+                    Orders.Add(new OrderData(10254, "CHOPS", "Rio de Janeiro", "Chop-suey Chinese"));
+                    Orders.Add(new OrderData(10255, "RICSU", "Münster", "Richter Supermarkt"));
+                    Orders.Add(new OrderData(10256, "WELLI", "Reims", "Wellington Import"));
+                    code += 5;
+                }
+            }
+            return Orders;
+        }
+
+        public int? OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public string ShipCity { get; set; }
+        public string ShipName { get; set; } 
+
+    }
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZVgMWDwTMzdeJff?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Clear grouping 
 
@@ -566,48 +872,33 @@ To clear all the grouped columns in the Grid, you can utilize the [ClearGrouping
 
 The following example demonstrates how to clear the grouping using `ClearGroupingAsync` method in the external button click.
 
-```cshtml
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Buttons
 
 <SfButton OnClick="ClearGrouping"> Clear Grouping</SfButton>
 
-<SfGrid @ref="Grid" DataSource="@Orders" AllowGrouping="true" Height="400">
+<SfGrid @ref="Grid" DataSource="@GridData"  AllowGrouping="true" Height="315px">
     <GridGroupSettings Columns="@columns"></GridGroupSettings>
     <GridColumns>
-        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer ID" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.ShipCity) HeaderText="Ship City" Width="100"></GridColumn>
-        <GridColumn Field=@nameof(Order.ShipName) HeaderText="Ship Name" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="90"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer ID" Width="100"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.ShipCity) HeaderText="Ship City" Width="100"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.ShipName) HeaderText="Ship Name" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
 
+
 @code {
-
-    public SfGrid<Order>? Grid { get; set; }
-    public List<Order> Orders { get; set; }
-
-
+    public List<OrderData> GridData { get; set; }
+    SfGrid<OrderData>? Grid { get; set; }
     public string[] columns = (new string[] { "CustomerID", "ShipCity" });
-
 
     protected override void OnInitialized()
     {
-        Orders = Enumerable.Range(1, 75).Select(x => new Order()
-            {
-                OrderID = 1000 + x,
-                CustomerID = (new string[] { "VINET", "TOMSP", "HANAR", "VICTE", "SUPRD" })[new Random().Next(5)],
-                ShipCity = (new string[] { "Reims", "Lyon", "Charleroi", "Rio de Janeiro", "Münster" })[new Random().Next(5)],
-                ShipName = (new string[] { "Centro comercial Moctezuma", "Chop-suey Chinese", "Ernst Handel", "Hanari Carnes", "HILARION-Abastos" })[new Random().Next(5)],
-            }).ToList();
-    }
-
-    public class Order
-    {
-        public int? OrderID { get; set; }
-        public string CustomerID { get; set; }
-        public string? ShipCity { get; set; }
-        public string? ShipName { get; set; }
+        GridData = OrderData.GetAllRecords();
     }
 
     private async Task ClearGrouping()
@@ -615,9 +906,58 @@ The following example demonstrates how to clear the grouping using `ClearGroupin
         await Grid.ClearGroupingAsync();
     }
 }
-```
+{% endhighlight %}
+{% highlight c# tabtitle="OrderData.cs" %}
+ public class OrderData
+    {
+        public static List<OrderData> Orders = new List<OrderData>();
+        
+       
+        public OrderData()
+        {
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BXhAtaXPMHIBpxQa?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+        }
+        public OrderData(int? OrderID,string CustomerID,string ShipCity, string ShipName)
+        {
+           this.OrderID = OrderID;    
+           this.CustomerID = CustomerID;
+            this.ShipCity = ShipCity;
+            this.ShipName = ShipName;           
+           
+        }
+
+        public static List<OrderData> GetAllRecords()
+        {
+            if (Orders.Count() == 0)
+            {
+                int code = 10;
+                for (int i = 1; i < 2; i++)
+                {
+                    Orders.Add(new OrderData(10248, "VINET", "Reims", "Vins et alcools Chevali"));
+                    Orders.Add(new OrderData(10249, "TOMSP", "Münster", "Toms Spezialitäten"));
+                    Orders.Add(new OrderData(10250, "HANAR", "Rio de Janeiro", "Hanari Carnes"));
+                    Orders.Add(new OrderData(10251, "VICTE", "Lyon", "Victuailles en stock"));
+                    Orders.Add(new OrderData(10252, "SUPRD", "Charleroi", "Suprêmes délices"));
+                    Orders.Add(new OrderData(10253, "HANAR", "Lyon", "Hanari Carnes"));
+                    Orders.Add(new OrderData(10254, "CHOPS", "Rio de Janeiro", "Chop-suey Chinese"));
+                    Orders.Add(new OrderData(10255, "RICSU", "Münster", "Richter Supermarkt"));
+                    Orders.Add(new OrderData(10256, "WELLI", "Reims", "Wellington Import"));
+                    code += 5;
+                }
+            }
+            return Orders;
+        }
+
+        public int? OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public string ShipCity { get; set; }
+        public string ShipName { get; set; } 
+
+    }
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VNhKsMDwJCOGDhcq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Grouping events
 
@@ -629,48 +969,45 @@ The DataGrid component provides two events that are triggered during the group a
 
 The following example demonstrates how the `actionBegin` and `actionComplete` events work when grouping is performed. The `actionBegin` event event is used to cancel the grouping of the **OrderID** column. The `actionComplete` event is used to display a message
 
-```cshtml
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids
 
-@if(show == true)
+@if (show == true)
 {
     <div style="text-align : center; color: red">
         <span> @requesttype action completed for @columnName column</span>
     </div>
-    
-    <br/>
+
+    <br />
 }
 
-<SfGrid DataSource="@Orders" AllowGrouping="true" Height="400">
-    <GridEvents OnActionComplete="ActionCompletedHandler" OnActionBegin="ActionBeginHandler" TValue="Order"></GridEvents>
+<SfGrid @ref="Grid" DataSource="@GridData"  AllowGrouping="true" Height="315px">
+    <GridEvents OnActionComplete="ActionCompletedHandler" OnActionBegin="ActionBeginHandler" TValue="OrderData"></GridEvents>
     <GridColumns>
-        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="90"></GridColumn>
-        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer ID" Width="100"></GridColumn>
-        <GridColumn Field=@nameof(Order.ShipCity) HeaderText="Ship City" Width="100"></GridColumn>
-        <GridColumn Field=@nameof(Order.ShipName) HeaderText="Ship Name" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="90"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer ID" Width="100"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.ShipCity) HeaderText="Ship City" Width="100"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.ShipName) HeaderText="Ship Name" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
 
-@code {
-    public List<Order> Orders { get; set; }
 
-    public bool show {get; set; } = false;
+@code {
+    public List<OrderData> GridData { get; set; }
+    SfGrid<OrderData>? Grid { get; set; }
+    public bool show { get; set; } = false;
 
     public string columnName { get; set; }
     public string requesttype { get; set; }
 
+
     protected override void OnInitialized()
     {
-        Orders = Enumerable.Range(1, 75).Select(x => new Order()
-            {
-                OrderID = 1000 + x,
-                CustomerID = (new string[] { "VINET", "TOMSP", "HANAR", "VICTE", "SUPRD" })[new Random().Next(5)],
-                ShipCity = (new string[] { "Reims", "Lyon", "Charleroi", "Rio de Janeiro", "Münster" })[new Random().Next(5)],
-                ShipName = (new string[] { "Centro comercial Moctezuma", "Chop-suey Chinese", "Ernst Handel", "Hanari Carnes", "HILARION-Abastos" })[new Random().Next(5)],
-            }).ToList();
+        GridData = OrderData.GetAllRecords();
     }
 
-    public async Task ActionBeginHandler(ActionEventArgs<Order> args)
+    public async Task ActionBeginHandler(ActionEventArgs<OrderData> args)
     {
         if (args.RequestType == Syncfusion.Blazor.Grids.Action.Grouping && args.ColumnName == "OrderID")
         {
@@ -678,7 +1015,7 @@ The following example demonstrates how the `actionBegin` and `actionComplete` ev
         }
     }
 
-    public async Task ActionCompletedHandler(ActionEventArgs<Order> args)
+    public async Task ActionCompletedHandler(ActionEventArgs<OrderData> args)
     {
         if (args.RequestType == Syncfusion.Blazor.Grids.Action.Grouping)
         {
@@ -687,22 +1024,61 @@ The following example demonstrates how the `actionBegin` and `actionComplete` ev
             show = true;
         }
     }
-
-   
-    public class Order
+}
+{% endhighlight %}
+{% highlight c# tabtitle="OrderData.cs" %}
+ public class OrderData
     {
+        public static List<OrderData> Orders = new List<OrderData>();
+        
+       
+        public OrderData()
+        {
+
+        }
+        public OrderData(int? OrderID,string CustomerID,string ShipCity, string ShipName)
+        {
+           this.OrderID = OrderID;    
+           this.CustomerID = CustomerID;
+            this.ShipCity = ShipCity;
+            this.ShipName = ShipName;           
+           
+        }
+
+        public static List<OrderData> GetAllRecords()
+        {
+            if (Orders.Count() == 0)
+            {
+                int code = 10;
+                for (int i = 1; i < 2; i++)
+                {
+                    Orders.Add(new OrderData(10248, "VINET", "Reims", "Vins et alcools Chevali"));
+                    Orders.Add(new OrderData(10249, "TOMSP", "Münster", "Toms Spezialitäten"));
+                    Orders.Add(new OrderData(10250, "HANAR", "Rio de Janeiro", "Hanari Carnes"));
+                    Orders.Add(new OrderData(10251, "VICTE", "Lyon", "Victuailles en stock"));
+                    Orders.Add(new OrderData(10252, "SUPRD", "Charleroi", "Suprêmes délices"));
+                    Orders.Add(new OrderData(10253, "HANAR", "Lyon", "Hanari Carnes"));
+                    Orders.Add(new OrderData(10254, "CHOPS", "Rio de Janeiro", "Chop-suey Chinese"));
+                    Orders.Add(new OrderData(10255, "RICSU", "Münster", "Richter Supermarkt"));
+                    Orders.Add(new OrderData(10256, "WELLI", "Reims", "Wellington Import"));
+                    code += 5;
+                }
+            }
+            return Orders;
+        }
+
         public int? OrderID { get; set; }
         public string CustomerID { get; set; }
-        public string? ShipCity { get; set; }
-        public string? ShipName { get; set; }
-    }
-}
-```
+        public string ShipCity { get; set; }
+        public string ShipName { get; set; } 
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hXVgDYXxBwaOnYQm?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+    }
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BtLAMMXwJBKJUNlp?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 > [args.RequestType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ActionEventArgs-1.html#Syncfusion_Blazor_Grids_ActionEventArgs_1_RequestType) property represents the name of the current action being performed. For instance, during grouping, the `args.RequestType` value will be **grouping**.
-
 
 
 ## See Also

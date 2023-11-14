@@ -15,9 +15,11 @@ To achieve this customization, you can utilize the  [CaptionTemplate](https://he
 
 The following example demonstrates how to customize the group header caption in the Grid by utilizing  the `CaptionTemplate` property. It displays the **HeaderText**, **Key** and **Count** of the grouped columns.
 
-```cshtml
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids
-<SfGrid TValue="Order" DataSource="@Orders" AllowGrouping="true" Height="400">
+
+<SfGrid  DataSource="@GridData" AllowGrouping="true" Height="315px">
     <GridGroupSettings ShowDropArea="false" Columns="@Initial">
         <CaptionTemplate>
             @{
@@ -25,44 +27,78 @@ The following example demonstrates how to customize the group header caption in 
                 <span>@data.HeaderText-@data.Key : @data.Count Items </span>
             }
         </CaptionTemplate>
-
     </GridGroupSettings>
     <GridColumns>
-        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer ID" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.ShipCity) HeaderText="Ship City" Width="100"></GridColumn>
-        <GridColumn Field=@nameof(Order.ShipName) HeaderText="Ship Name" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="90"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer ID" Width="100"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.ShipCity) HeaderText="Ship City" Width="100"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.ShipName) HeaderText="Ship Name" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
+
+
 @code {
-    public List<Order> Orders { get; set; }
-
-
+    public List<OrderData> GridData { get; set; }
     public string[] Initial = (new string[] { "CustomerID", "ShipCity" });
+
     protected override void OnInitialized()
     {
-        Orders = Enumerable.Range(1, 75).Select(x => new Order()
-            {
-                OrderID = 1000 + x,
-                CustomerID = (new string[] { "VINET", "TOMSP", "HANAR", "VICTE", "SUPRD" })[new Random().Next(5)],
-                ShipCity = (new string[] { "Reims", "Lyon", "Charleroi", "Rio de Janeiro", "Münster" })[new Random().Next(5)],
-                ShipName = (new string[] { "Centro comercial Moctezuma", "Chop-suey Chinese", "Ernst Handel", "Hanari Carnes", "HILARION-Abastos" })[new Random().Next(5)],
-            }).ToList();
-
+        GridData = OrderData.GetAllRecords();
     }
 
-
-    public class Order
+}
+{% endhighlight %}
+{% highlight c# tabtitle="OrderData.cs" %}
+  public class OrderData
     {
+        public static List<OrderData> Orders = new List<OrderData>();
+        
+       
+        public OrderData()
+        {
+
+        }
+        public OrderData(int? OrderID,string CustomerID,string ShipCity, string ShipName)
+        {
+           this.OrderID = OrderID;    
+           this.CustomerID = CustomerID;
+            this.ShipCity = ShipCity;
+            this.ShipName = ShipName;           
+           
+        }
+
+        public static List<OrderData> GetAllRecords()
+        {
+            if (Orders.Count() == 0)
+            {
+                int code = 10;
+                for (int i = 1; i < 2; i++)
+                {
+                    Orders.Add(new OrderData(10248, "VINET", "Reims", "Vins et alcools Chevali"));
+                    Orders.Add(new OrderData(10249, "TOMSP", "Münster", "Toms Spezialitäten"));
+                    Orders.Add(new OrderData(10250, "HANAR", "Rio de Janeiro", "Hanari Carnes"));
+                    Orders.Add(new OrderData(10251, "VICTE", "Lyon", "Victuailles en stock"));
+                    Orders.Add(new OrderData(10252, "SUPRD", "Charleroi", "Suprêmes délices"));
+                    Orders.Add(new OrderData(10253, "HANAR", "Lyon", "Hanari Carnes"));
+                    Orders.Add(new OrderData(10254, "CHOPS", "Rio de Janeiro", "Chop-suey Chinese"));
+                    Orders.Add(new OrderData(10255, "RICSU", "Münster", "Richter Supermarkt"));
+                    Orders.Add(new OrderData(10256, "WELLI", "Reims", "Wellington Import"));
+                    code += 5;
+                }
+            }
+            return Orders;
+        }
+
         public int? OrderID { get; set; }
         public string CustomerID { get; set; }
-        public string? ShipCity { get; set; }
-        public string? ShipName { get; set; }
+        public string ShipCity { get; set; }
+        public string ShipName { get; set; }
+ 
     }
-}
-```
+{% endhighlight %}
+{% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VZrqjONnUnmhpfYN?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LXhUWCNmQMWuuKST?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Adding custom text in group caption
 
@@ -70,17 +106,18 @@ The Syncfusion Blazor DataGrid allows you to enhance the group captions by addin
 
 The following example demonstrates how to add a custom text to the group caption using the `CaptionTemplate` property. You can type cast the context as [CaptionTemplateContext](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.CaptionTemplateContext.html#properties) to get the data used to display the key, count and headerText of the grouped columns along with the custom text.
 
-```cshtml
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids
 
-<SfGrid DataSource="@Orders" AllowGrouping="true" Height="400">
+<SfGrid  DataSource="@GridData" AllowGrouping="true" Height="315px">
     <GridColumns>
-        <GridColumn Field=@nameof(Order.OrderID) HeaderText="ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Name" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.ShipCity) HeaderText="City" Width="100"></GridColumn>
-        <GridColumn Field=@nameof(Order.Freight) HeaderText="value"  Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="ID" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="90"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Name" Width="100"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.ShipCity) HeaderText="City" Width="100"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.Freight) HeaderText="value" Width="120"></GridColumn>
     </GridColumns>
-    <GridGroupSettings >
+    <GridGroupSettings>
         <CaptionTemplate>
             @{
                 var order = (context as CaptionTemplateContext);
@@ -90,31 +127,68 @@ The following example demonstrates how to add a custom text to the group caption
     </GridGroupSettings>
 </SfGrid>
 
-@code {
-    public List<Order> Orders { get; set; }
 
+@code {
+    public List<OrderData> GridData { get; set; }
+   
     protected override void OnInitialized()
     {
-        Orders = Enumerable.Range(1, 75).Select(x => new Order()
-            {
-                OrderID = 1000 + x,
-                CustomerID = (new string[] { "VINET", "TOMSP", "HANAR", "VICTE", "SUPRD" })[new Random().Next(5)],
-                Freight = 2.1 * x,
-                ShipCity = (new string[] { "Reims", "Lyon", "Charleroi", "Rio de Janeiro", "Münster" })[new Random().Next(5)],
-            }).ToList();
+        GridData = OrderData.GetAllRecords();
     }
 
-    public class Order
-    {
-        public int OrderID { get; set; }
-        public string CustomerID { get; set; }
-        public string? ShipCity { get; set; }
-        public double? Freight { get; set; }
-    }
 }
-```
+{% endhighlight %}
+{% highlight c# tabtitle="OrderData.cs" %}
+    public class OrderData
+    {
+        public static List<OrderData> Orders = new List<OrderData>();
+        
+       
+        public OrderData()
+        {
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BtrqXutdqnicEMXL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+        }
+        public OrderData(int? OrderID,string CustomerID,string ShipCity, double? Freight)
+        {
+           this.OrderID = OrderID;    
+           this.CustomerID = CustomerID;
+            this.ShipCity = ShipCity;
+            this.Freight = Freight;           
+           
+        }
+
+        public static List<OrderData> GetAllRecords()
+        {
+            if (Orders.Count() == 0)
+            {
+                int code = 10;
+                for (int i = 1; i < 2; i++)
+                {
+                    Orders.Add(new OrderData(10248, "VINET", "Reims", 3.25));
+                    Orders.Add(new OrderData(10249, "TOMSP", "Münster", 22.98));
+                    Orders.Add(new OrderData(10250, "HANAR", "Rio de Janeiro", 140.51));
+                    Orders.Add(new OrderData(10251, "VICTE", "Lyon", 65.83));
+                    Orders.Add(new OrderData(10252, "SUPRD", "Charleroi", 58.17));
+                    Orders.Add(new OrderData(10253, "HANAR", "Lyon", 81.91));
+                    Orders.Add(new OrderData(10254, "CHOPS", "Rio de Janeiro", 3.05));
+                    Orders.Add(new OrderData(10255, "RICSU", "Münster", 55.09));
+                    Orders.Add(new OrderData(10256, "WELLI", "Reims", 48.29));
+                    code += 5;
+                }
+            }
+            return Orders;
+        }
+
+        public int? OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public string ShipCity { get; set; }
+        public double? Freight { get; set; }
+
+    }
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDhAWsZONigdARCE?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Render custom component in group caption
 
@@ -124,18 +198,21 @@ To render custom component in the group caption, you can utilize the [CaptionTem
 
 The following example demonstrates how to add a custom component to the group caption using the `CaptionTemplate` property. In the template, the [Chips](https://ej2.syncfusion.com/angular/documentation/chips/getting-started) component is utilized, with the text content set as the group key.
 
-```cshtml
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Buttons
 
-<SfGrid DataSource="@Orders" AllowGrouping="true" Height="400">
+<SfGrid  DataSource="@GridData" AllowGrouping="true" Height="315px">
     <GridColumns>
-        <GridColumn Field=@nameof(Order.OrderID) HeaderText="ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Name" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.ShipCity) HeaderText="City" Width="100"></GridColumn>
-        <GridColumn Field=@nameof(Order.Freight) HeaderText="value"  Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="ID" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="90"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Name" Width="100"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.ShipCity) HeaderText="City" Width="100"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.Freight) HeaderText="value" Width="120"></GridColumn>
     </GridColumns>
-    <GridGroupSettings >
+   <GridGroupSettings>
         <CaptionTemplate>
             @{
                 var data = (context as CaptionTemplateContext);
@@ -150,28 +227,66 @@ The following example demonstrates how to add a custom component to the group ca
     </GridGroupSettings>
 </SfGrid>
 
-@code {
-    public List<Order> Orders { get; set; }
 
+@code {
+    public List<OrderData> GridData { get; set; }
+   
     protected override void OnInitialized()
     {
-        Orders = Enumerable.Range(1, 75).Select(x => new Order()
-            {
-                OrderID = 1000 + x,
-                CustomerID = (new string[] { "VINET", "TOMSP", "HANAR", "VICTE", "SUPRD" })[new Random().Next(5)],
-                Freight = 2.1 * x,
-                ShipCity = (new string[] { "Reims", "Lyon", "Charleroi", "Rio de Janeiro", "Münster" })[new Random().Next(5)],
-            }).ToList();
+        GridData = OrderData.GetAllRecords();
     }
 
-    public class Order
-    {
-        public int OrderID { get; set; }
-        public string CustomerID { get; set; }
-        public string? ShipCity { get; set; }
-        public double? Freight { get; set; }
-  }
 }
-```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LtrADODnAPDwCOEa?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% endhighlight %}
+{% highlight c# tabtitle="OrderData.cs" %}
+ public class OrderData
+    {
+        public static List<OrderData> Orders = new List<OrderData>();
+        
+       
+        public OrderData()
+        {
+
+        }
+        public OrderData(int? OrderID,string CustomerID,string ShipCity, double? Freight)
+        {
+           this.OrderID = OrderID;    
+           this.CustomerID = CustomerID;
+            this.ShipCity = ShipCity;
+            this.Freight = Freight;           
+           
+        }
+
+        public static List<OrderData> GetAllRecords()
+        {
+            if (Orders.Count() == 0)
+            {
+                int code = 10;
+                for (int i = 1; i < 2; i++)
+                {
+                    Orders.Add(new OrderData(10248, "VINET", "Reims", 3.25));
+                    Orders.Add(new OrderData(10249, "TOMSP", "Münster", 22.98));
+                    Orders.Add(new OrderData(10250, "HANAR", "Rio de Janeiro", 140.51));
+                    Orders.Add(new OrderData(10251, "VICTE", "Lyon", 65.83));
+                    Orders.Add(new OrderData(10252, "SUPRD", "Charleroi", 58.17));
+                    Orders.Add(new OrderData(10253, "HANAR", "Lyon", 81.91));
+                    Orders.Add(new OrderData(10254, "CHOPS", "Rio de Janeiro", 3.05));
+                    Orders.Add(new OrderData(10255, "RICSU", "Münster", 55.09));
+                    Orders.Add(new OrderData(10256, "WELLI", "Reims", 48.29));
+                    code += 5;
+                }
+            }
+            return Orders;
+        }
+
+        public int? OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public string ShipCity { get; set; }
+        public double? Freight { get; set; }
+
+    }
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rXVqCsjEtWGsGdKj?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 

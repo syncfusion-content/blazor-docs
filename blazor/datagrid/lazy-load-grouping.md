@@ -18,46 +18,83 @@ To enable this feature, need to set the [EnableLazyLoading](https://help.syncfus
 
 The following example demonstrates how to enable the lazy load grouping feature by setting the `EnableLazyLoading` as **true** in `GridGroupSettings` component.
 
-```cshtml
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids
-<SfGrid TValue="Order" AllowPaging="true" DataSource="@Orders" AllowGrouping="true" >
+
+<SfGrid DataSource="@GridData" AllowPaging="true" AllowGrouping="true" Height="267px">
     <GridGroupSettings EnableLazyLoading="true" Columns="@Initial"></GridGroupSettings>
     <GridColumns>
-        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.ProductName) HeaderText="Product Name" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.ProductID) HeaderText="Product ID" Width="100"></GridColumn>
-        <GridColumn Field=@nameof(Order.CustomerName) HeaderText="Customer Name" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="90"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.ProductName) HeaderText="Product Name" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.ProductID) HeaderText="Product ID" Width="100"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.CustomerName) HeaderText="Customer Name" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
-@code {
-    public List<Order> Orders { get; set; }
 
+
+@code {
+    public List<OrderData> GridData { get; set; }
 
     public string[] Initial = (new string[] { "ProductName", "CustomerName" });
+
     protected override void OnInitialized()
     {
-        Orders = Enumerable.Range(1, 5000).Select(x => new Order()
-            {
-                OrderID = 1000 + x,
-                ProductName = (new string[] { "Côte de Blaye", "Wimmers gute Semmelknödel", "Mascarpone Fabioli", "Queso Manchego La Pastora", "Sasquatch Ale" })[new Random().Next(5)],
-                ProductID = x,
-                CustomerName = (new string[] { "Thomas Hardy", "Pascale Cartrain", "Patricia McKenna", "Karl Jablonski", "Paula Wilson" })[new Random().Next(5)],
-            }).ToList();
-
+        GridData = OrderData.GetAllRecords();
     }
 
-
-    public class Order
+}
+{% endhighlight %}
+{% highlight c# tabtitle="OrderData.cs" %}
+  public class OrderData
     {
+        public static List<OrderData> Orders = new List<OrderData>();
+        
+       
+        public OrderData()
+        {
+
+        }
+        public OrderData(int? OrderID,string ProductName, int? ProductID, string CustomerName)
+        {
+           this.OrderID = OrderID;    
+           this.ProductName = ProductName;
+            this.ProductID = ProductID;
+            this.CustomerName = CustomerName;           
+           
+        }
+
+        public static List<OrderData> GetAllRecords()
+        {
+            if (Orders.Count() == 0)
+            {
+                int code = 10;
+                for (int i = 1; i < 2; i++)
+                {
+                    Orders.Add(new OrderData(10248, "Gumbär Gummib", 0, "Marie Bertrand"));
+                    Orders.Add(new OrderData(10249, "Valkoinen suklaa", 1, "Paula Wilson"));
+                    Orders.Add(new OrderData(10250, "Chai", 2, "Giovanni Rovelli"));
+                    Orders.Add(new OrderData(10251, "Guaraná Fantástica", 3, "Yang Wang"));
+                    Orders.Add(new OrderData(10252, "Chef Anton's Cajun Seasoning", 4, "Martín Sommer"));
+                    Orders.Add(new OrderData(10253, "Gudbrandsdalsost", 5, "Laurence Lebihan"));
+                    Orders.Add(new OrderData(10254, "Jack's New England Clam Chowder", 6, "Frédérique Citeaux"));
+                    Orders.Add(new OrderData(10255, "Queso Cabrales", 7, "Philip Cramer"));
+                    Orders.Add(new OrderData(10256, "Tarte au sucre", 8, "Francisco Chang"));
+                    code += 5;
+                }
+            }
+            return Orders;
+        }
+
         public int? OrderID { get; set; }
         public string ProductName { get; set; }
         public int? ProductID { get; set; }
-        public string? CustomerName { get; set; }
+        public string CustomerName { get; set; }
     }
-}
-```
+{% endhighlight %}
+{% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VDrUZkjwhTNadxnJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LZLKWiWfBIFWicGq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Lazy load grouping with virtual scrolling
 
@@ -81,83 +118,85 @@ To enable this feature, you need to set the [EnableLazyLoading](https://help.syn
 
 The following example demonstrates how to enable the lazy load grouping with virtual scrolling feature using the `EnableLazyLoading` property of the `GridGroupSettings` component and `EnableVirtualization` property.
 
-```cshtml
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids
-@using Syncfusion.Blazor.Data
 
-<SfGrid TValue="Customer" DataSource="customers" ID="Grid" RowHeight="36" AllowGrouping="true" EnableVirtualization="true" Height="400">
-    <GridGroupSettings EnableLazyLoading="true" Columns="@GroupedColumns">  
-    </GridGroupSettings>
-    <GridPageSettings PageSize=40></GridPageSettings>
+<SfGrid DataSource="@GridData" ID="Grid" RowHeight="36" AllowGrouping="true" EnableVirtualization="true" Height="267px">
+    <GridGroupSettings EnableLazyLoading="true" Columns="@Initial"></GridGroupSettings>
     <GridColumns>
-        <GridColumn Field=@nameof(Customer.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Customer.ProductName) HeaderText="Product Name" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Customer.ProductID) HeaderText="Product ID" Width="100"></GridColumn>
-        <GridColumn Field=@nameof(Customer.CustomerName) HeaderText="Customer Name" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="90"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.ProductName) HeaderText="Product Name" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.ProductID) HeaderText="Product ID" Width="100"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.CustomerName) HeaderText="Customer Name" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
 
+
 @code {
-    public string[] GroupedColumns = new string[] { "ProductName", "CustomerName" };
-    public List<Customer> customers { get; set; } = Customer.GetAllRecords();
-    public class Customer
+    public List<OrderData> GridData { get; set; }
+
+    public string[] Initial = (new string[] { "ProductName", "CustomerName" });
+
+    protected override void OnInitialized()
     {
-        public int OrderID { get; set; }
-        public string CustomerName { get; set; }
-        public string ProductName { get; set; }
-        public int ProductID { get; set; }
-        public static List<Customer> GetAllRecords()
-        {
-            List<Customer> customers = new List<Customer>();
-            string[] Customername ={"Maria", "Ana Trujillo", "Antonio Moreno", "Thomas Hardy", "Christina Berglund", "Hanna Moos", "Frédérique Citeaux", "Martín Sommer", "Laurence Lebihan", "Elizabeth Lincoln",
-
-    "Victoria Ashworth", "Patricio Simpson", "Francisco Chang", "Yang Wang", "Pedro Afonso", "Elizabeth Brown", "Sven Ottlieb", "Janine Labrune", "Ann Devon", "Roland Mendel", "Aria Cruz", "Diego Roel",
-
-    "Martine Rancé", "Maria Larsson", "Peter Franken", "Carine Schmitt", "Paolo Accorti", "Lino Rodriguez", "Eduardo Saavedra", "José Pedro Freyre", "André Fonseca", "Howard Snyder", "Manuel Pereira",
-
-    "Mario Pontes", "Carlos Hernández", "Yoshi Latimer", "Patricia McKenna", "Helen Bennett", "Philip Cramer", "Daniel Tonini", "Annette Roulet", "Yoshi Tannamuri", "John Steel", "Renate Messner", "Jaime Yorres",
-
-    "Carlos González", "Felipe Izquierdo", "Fran Wilson", "Giovanni Rovelli", "Catherine Dewey", "Jean Fresnière", "Alexander Feuer", "Simon Crowther", "Yvonne Moncada", "Rene Phillips", "Henriette Pfalzheim",
-
-    "Marie Bertrand", "Guillermo Fernández", "Georg Pipps", "Isabel de Castro", "Bernardo Batista", "Lúcia Carvalho", "Horst Kloss", "Sergio Gutiérrez", "Paula Wilson", "Maurizio Moroni", "Janete Limeira", "Michael Holz",
-
-    "Alejandra Camino", "Jonas Bergulfsen", "Jose Pavarotti", "Hari Kumar", "Jytte Petersen", "Dominique Perrier", "Art Braunschweiger", "Pascale Cartrain", "Liz Nixon", "Liu Wong", "Karin Josephs", "Miguel Angel Paolino",
-
-    "Anabela Domingues", "Helvetius Nagy", "Palle Ibsen", "Mary Saveley", "Paul Henriot", "Rita Müller", "Pirkko Koskitalo", "Paula Parente", "Karl Jablonski", "Matti Karttunen", "Zbyszek Piestrzeniewicz" };
-
-            string[] Product = { "Chai", "Chang", "Syrup", "Corn Snacks", "Gumbo Mix", "Seeds",
-                "Dried Pears", "Sauce", "Mishi Kobe Niku", "Ikura", "Queso Cabrales", "Queso Manchego Pastora", "Konbu",
-                "Tofu", "Genen Shouyu", "Pavlova", "Alice Mutton", "Biscuits", "Teatime Chocolate Biscuits", "Sir Rodney\"s Marmalade", "Sir Rodney\"s Scones",
-                "Gustaf\"s Knäckebröd", "Tunnbröd", "Guaraná Fantástica", "Nougat-Creme", "Gumbär Gummibärchen", "Schoggi Schokolade", "Rössle Sauerkraut",
-                "Thüringer Rostbratwurst", "Nord-Ost Matjeshering", "Gorgonzola Telino", "Mascarpone Fabioli", "Geitost", "Sasquatch Ale", "Steeleye Stout", "Inlagd Sill",
-                "Gravad lax", "Nuts", "Chips", "Crab Meat", "Jack\"s Clam Chowder", "Singaporean Fried Mee", "Ipoh Coffee",
-                "Gula Malacca", "Rogede sild", "Spegesild", "Zaanse koeken", "Chocolade", "Maxilaku", "Valkoinen suklaa", "Manjimup Dried Apples", "Filo Mix", "Perth Pasties",
-                "Tourtičre", "Pâté chinois", "Ipoh Coffee", "Ravioli Angelo", "Escargots Bourgogne", "Raclette Courdavault", "Cake", "Sirop d\"érable",
-                "Tarte au sucre", "Vegie-spread", "Lakkalikri", "Louisiana Pepper Sauce", "Louisiana Hot Spiced Okra", "Lumberjack Lager", "Scottish Longbreads",
-                "Gudbrandsdalsost", "Outback Lager", "Flotemysost", "Mozzarella di Giovanni", "Röd Kaviar", "Longlife Tofu", "Rhönbräu Klosterbier", "Lakkalikööri", "Original Frankfurter" };
-            int OrderID = 1001;
-            int i = 0; int l = 0; 
-            for (int x = 0; x < 500000; x++)
-            {
-                i = i >= Customername.Length ? 0 : i;
-                l = l >= Product.Length ? 0 : l;
-                customers.Add(new Customer()
-                    {
-                        OrderID = OrderID + x,
-                        ProductName = Product[l],
-                        ProductID = x,
-                        CustomerName = Customername[i],
-                       
-                    });
-                i++;  l++; 
-            }
-            return customers;
-        }
+        GridData = OrderData.GetAllRecords();
     }
-}
-```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BXVqjaNmAVEUbngw?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+}
+{% endhighlight %}
+{% highlight c# tabtitle="OrderData.cs" %}
+ public class OrderData
+    {
+        public static List<OrderData> Orders = new List<OrderData>();
+        
+       
+        public OrderData()
+        {
+
+        }
+        public OrderData(int? OrderID,string ProductName, int? ProductID, string CustomerName)
+        {
+           this.OrderID = OrderID;    
+           this.ProductName = ProductName;
+            this.ProductID = ProductID;
+            this.CustomerName = CustomerName;           
+           
+        }
+
+        public static List<OrderData> GetAllRecords()
+        {
+            if (Orders.Count() == 0)
+            {
+                int? code = 10247;
+                for (int i = 1; i < 19999; i++)
+                {
+                    Orders.Add(new OrderData(code + 1, "Gumbär Gummib", i, "Marie Bertrand"));
+                    Orders.Add(new OrderData(code + 2, "Valkoinen suklaa", i+1, "Paula Wilson"));
+                    Orders.Add(new OrderData(code + 3, "Chai", i+2, "Giovanni Rovelli"));
+                    Orders.Add(new OrderData(code + 4, "Guaraná Fantástica", i+3, "Yang Wang"));
+                    Orders.Add(new OrderData(code + 5, "Chef Anton's Cajun Seasoning", i + 4, "Martín Sommer"));
+                    Orders.Add(new OrderData(code + 6, "Gudbrandsdalsost", i + 5, "Laurence Lebihan"));
+                    Orders.Add(new OrderData(code + 7, "Jack's New England Clam Chowder", i + 6, "Frédérique Citeaux"));
+                    Orders.Add(new OrderData(code + 8, "Queso Cabrales", i + 7, "Philip Cramer"));
+                    Orders.Add(new OrderData(code + 9, "Tarte au sucre", i + 8, "Francisco Chang"));
+                    code += 9;
+                    i += 8;
+                }
+            }
+            return Orders;
+        }
+
+        public int? OrderID { get; set; }
+        public string ProductName { get; set; }
+        public int? ProductID { get; set; }
+        public string CustomerName { get; set; }
+
+    }
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rNVUsCMzgHLDLmbm?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Lazy load grouping with custom adaptor
 
