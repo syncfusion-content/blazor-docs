@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Blazor Server Side App in Visual Studio
 
-This article provides a step-by-step instructions for building Blazor Server App with `Blazor Calendar` component using [Visual Studio](https://visualstudio.microsoft.com/vs/). 
+This article provides a step-by-step instructions for building Blazor Server App with `Blazor Calendar` component using [Visual Studio](https://visualstudio.microsoft.com/vs/).
 
 ## Prerequisites
 
@@ -19,15 +19,14 @@ This article provides a step-by-step instructions for building Blazor Server App
 
 You can create a **Blazor Server App** using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0) or the [Syncfusion Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
 
-## Install Syncfusion Blazor Calendar and Theme NuGet in the App
+## Install Syncfusion Blazor Calendars and Themes NuGet in the App
 
-Here's an example of how to add Blazor Calendar component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install [Syncfusion.Blazor.Calendars](https://www.nuget.org/packages/Syncfusion.Blazor.Calendars/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/). Alternatively, you can utilize the following package manager command to achieve the same.
+Here's an example of how to add **Blazor Calendar** component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install [Syncfusion.Blazor.Calendars](https://www.nuget.org/packages/Syncfusion.Blazor.Calendars/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/). Alternatively, you can utilize the following package manager command to achieve the same.
 
 {% tabs %}
 {% highlight C# tabtitle="Package Manager" %}
 
 Install-Package Syncfusion.Blazor.Calendars -Version {{ site.releaseversion }}
-
 Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
 
 {% endhighlight %}
@@ -39,16 +38,14 @@ N> Syncfusion Blazor components are available in [nuget.org](https://www.nuget.o
 
 Open **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Calendars` namespace.
 
-{% tabs %}
-{% highlight razor tabtitle="~/_Imports.razor" %}
+```cshtml
 
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Calendars
 
-{% endhighlight %}
-{% endtabs %}
+```
 
-Now, register the Syncfusion Blazor Service in the **~/Program.cs** file of your Blazor Server App. 
+Now, register the Syncfusion Blazor Service in the **~/Program.cs** file of your Blazor Server App.
 
 {% tabs %}
 {% highlight C# tabtitle="Blazor Server App" hl_lines="3 10" %}
@@ -72,7 +69,7 @@ var app = builder.Build();
 
 ## Add stylesheet and script resources
 
-The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Reference the stylesheet and script in the `<head>` of the main page as follows: 
+The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Reference the stylesheet and script in the `<head>` of the main page as follows:
 
 * For **.NET 6** Blazor Server app, include it in **~/Pages/_Layout.cshtml** file.
 
@@ -102,5 +99,3 @@ Add the Syncfusion Blazor Calendar component in the **~/Pages/Index.razor** file
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion Blazor Calendar component in your default web browser.
 
 ![Blazor Calendar Component](images/core-hosted/browser-output.png)
-
-N> You need to include a valid license key (either paid or trial key) within your applications. Refer to this [help topic](https://blazor.syncfusion.com/documentation/getting-started/license-key/overview) for more information.

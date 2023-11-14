@@ -26,9 +26,9 @@ To get start quickly with Blazor DataGrid component, you can check on this video
 
 You can create a **Blazor Server App** or **Blazor WebAssembly App** using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0) or the [Syncfusion Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
 
-## Install Syncfusion Blazor Grid and Theme NuGet in the App
+## Install Syncfusion Blazor Grid and Themes NuGet in the App
 
-To add Blazor DataGrid component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/). Alternatively, you can utilize the following package manager command to achieve the same.
+To add **Blazor DataGrid** component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/). Alternatively, you can utilize the following package manager command to achieve the same.
 
 {% tabs %}
 {% highlight C# tabtitle="Package Manager" %}
@@ -146,7 +146,7 @@ Add the Syncfusion Blazor DataGrid component in the **~/Pages/Index.razor** file
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion Blazor DataGrid component in your default web browser.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hDLUDdjxJvxjQlaM?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "images/blazor-datagrid-component.png" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hDLUDdjxJvxjQlaM?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor DataGrid Component](images/blazor-datagrid-component.png)" %}
 
 ## Defining Row Data
 
@@ -290,7 +290,7 @@ The grouping feature enables you to view the datagrid record in a grouped view. 
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BjBUZHiEpcpLLDat?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "images/blazor-datagrid.gif" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BjBUZHiEpcpLLDat?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor DataGrid Component](images/blazor-datagrid.gif)" %}
 
 ## Handling exceptions
 
