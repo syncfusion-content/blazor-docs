@@ -1116,7 +1116,7 @@ Refer to the following code example for how to bind the DataTable using custom a
 
 In the above example, DataTable is passed to the `ToQueryableCollection` method, which converts the DataTable datasource into an **IQueryable** collection datasource.
 
-You can perform data operations like **searching**, **sorting** and **filtering** using the `PerformDataOperation` method. This method takes a DataTable and a DataManagerRequest object as as parameters, processes the data operations, and then returns an IQueryable data source.
+You can perform data operations like **searching**, **sorting** and **filtering** using the `PerformDataOperation` method. This method takes a DataTable and a DataManagerRequest object as parameters, processes the data operations, and then returns an IQueryable data source.
 
 Refer to the following code example for how to implement **grouping** and **aggregates** in a DataTable using a custom adapter.
 
