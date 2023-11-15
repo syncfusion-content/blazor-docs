@@ -114,11 +114,16 @@ The number of records displayed in the Gantt chart is determined implicitly by t
 }
 ```
 
-### Render buffered data using Overscan count
+### Managing records count
 
-The [OverscanCount](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_OverscanCount) property is used to render additional items in the DOM before and after the visible items (based on pagesize) during virtual scrolling and initial rendering. This reduces the frequency of rendering during scrolling. In this sample pagesize is set as 15 and overscancount as 5 so totally 20 records will be rendered in DOM.
+By default, the number of records rendered will be twice the Gantt chart's height. You can customize the row rendering count using the `PageSize` and `OverscanCount` properties. Here's an explanation of these properties:
 
-When [PageSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_PageSize) is not enabled, the rendering of records depends on the gantt chart height and viewport count, including the OverscanCount. Based on these factors, records will be rendered.
+* `PageSize`:
+    •	The [PageSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_PageSize) property determines the number of rows rendered per page in the Gantt Chart.
+    •	It allows you to control how many rows are loaded and displayed at a time, helping to improve performance by reducing the number of DOM elements rendered.
+* `OverscanCount`:
+    •	The [OverscanCount](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_OverscanCount) property is used to render additional rows before and after the Gantt Chart's current page rows.
+    •	During both virtual scrolling and initial rendering, extra rows are rendered to provide a buffer around the visible area. This minimizes the need for frequent rendering during scrolling, providing a smoother user experience.
 
 ```csharp
 @using Syncfusion.Blazor.Gantt
