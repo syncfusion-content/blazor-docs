@@ -1012,7 +1012,7 @@ Refer to the following code example for how to bind the DataTable using custom a
     <GridColumns>
         <GridColumn Field="OrderID" HeaderText="Order ID" IsPrimaryKey="true"  Width="120"></GridColumn>
         <GridColumn Field="CustomerID" HeaderText="Customer Name" Width="150"></GridColumn>
-        <GridColumn Field="OrderDate" HeaderText="Order Date" Format="d" Type="ColumnType.DateTime" Width="130"></GridColumn>
+        <GridColumn Field="OrderDate" HeaderText="Order Date" Format="d" Type="ColumnType.Date" Width="130"></GridColumn>
         <GridColumn Field="EmployeeID" HeaderText="Employee ID"  Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
@@ -1194,7 +1194,7 @@ While using batch editing in DataGrid, use the BatchUpdate/BatchUpdateAsync meth
     <GridColumns>
         <GridColumn Field="OrderID" HeaderText="Order ID" IsPrimaryKey="true" Width="120"></GridColumn>
         <GridColumn Field="CustomerID" HeaderText="Customer Name" Width="150"></GridColumn>
-        <GridColumn Field="OrderDate" HeaderText="Order Date" Format="d" Type="ColumnType.DateTime" Width="130"></GridColumn>
+        <GridColumn Field="OrderDate" HeaderText="Order Date" Format="d" Type="ColumnType.Date" Width="130"></GridColumn>
         <GridColumn Field="EmployeeID" HeaderText="Employee ID" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
