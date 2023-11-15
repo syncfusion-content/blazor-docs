@@ -14,7 +14,7 @@ To know more about Row Template in the Blazor tree grid Component, you can check
 {% youtube
 "youtube:https://www.youtube.com/watch?v=cB4NjwFya_U"%}
 
-The [RowTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid~RowTemplate.html) has an option to customize the look and behavior of the tree grid rows. The `RowTemplate` property accepts either the **template** string or HTML elements.
+The [RowTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_RowTemplate) has an option to customize the look and behavior of the tree grid rows. The `RowTemplate` property accepts either the **template** string or HTML elements.
 
 {% tabs %}
 
@@ -116,7 +116,7 @@ public class Employee
 
 ## Row template with formatting
 
-If [RowTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid~RowTemplate.html) is used, the value cannot be  formatted  inside the template using the [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridColumn~Format.html) property. In that case, a function should be defined globally to format the value and invoke it inside the template.
+If [RowTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_RowTemplate) is used, the value cannot be  formatted  inside the template using the [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_Format) property. In that case, a function should be defined globally to format the value and invoke it inside the template.
 
 {% tabs %}
 

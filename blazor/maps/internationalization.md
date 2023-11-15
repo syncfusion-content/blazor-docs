@@ -16,7 +16,7 @@ Maps provide support for internationalization for the following elements.
 
 ## Globalization
 
-Globalization is the process of designing and developing a component that works in different cultures or locales. It can be provided to the Blazor server-side and client-side applications. Refer to [Blazor server-side](https://blazor.syncfusion.com/documentation/common/localization/#enable-localization-in-blazor-server-application) and [Blazor client-side](https://blazor.syncfusion.com/documentation/common/localization/#enable-localization-in-blazor-webassembly-application) sections for configuring the globalization for the Maps component. It is used to globalize number, date, time values in
+Globalization is the process of designing and developing a component that works in different cultures or locales. It can be provided to the Blazor server-side and client-side applications. Refer to [Blazor server-side](https://blazor.syncfusion.com/documentation/common/localization#enable-localization-in-blazor-server-application) and [Blazor client-side](https://blazor.syncfusion.com/documentation/common/localization#enable-localization-in-blazor-webassembly-application) sections for configuring the globalization for the Maps component. It is used to globalize number, date, time values in
 Maps component using [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.SfMaps.html#Syncfusion_Blazor_Maps_SfMaps_Format) property in the Maps component.
 
 ```cshtml
@@ -101,4 +101,4 @@ The numeric formats such as currency, percentage and so on can be displayed in t
 
 ## See also
 
-* [Localization in Blazor Maps component](https://blazor.syncfusion.com/documentation/maps/localization/)
+* [Localization in Blazor Maps component](https://blazor.syncfusion.com/documentation/maps/localization)
