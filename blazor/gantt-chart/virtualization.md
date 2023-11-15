@@ -114,6 +114,120 @@ The number of records displayed in the Gantt chart is determined implicitly by t
 }
 ```
 
+### Render buffered data using Overscan count
+
+The Blazor Gantt Chart component allows you to render only the rows and columns that are visible in the view-port without buffering the entire datasource, and a loading placeholder indicator was displayed while the new data was loaded. 
+
+The [OverscanCount](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_OverscanCount) property is used to render additional items in the DOM before and after the visible items (based on pagesize) during virtual scrolling and initial rendering. This reduces the frequency of rendering during scrolling. In this sample pagesize is set as 15 and overscancount as 5 so totally 20 records will be rendered in DOM.
+
+When [PageSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_PageSize) is not enabled, the rendering of records depends on the gantt chart height and viewport count, including the OverscanCount. Based on these factors, records will be rendered.
+
+```csharp
+@using Syncfusion.Blazor.Gantt
+
+<SfGantt @ref="GanttChart" PageSize="15" OverscanCount="5" ID="GanttContainer" EnableContextMenu="true" AllowFiltering="true" AllowSorting="true" DataSource="@TaskCollection" Height="450px" Width="100%" TreeColumnIndex="1" EnableRowVirtualization="true" EnableTimelineVirtualization="true" ProjectStartDate="ProjectStartDate" ProjectEndDate="ProjectEndDate"
+         Toolbar="@(new List<string>() { "Add", "Delete", "Edit","Cancel","ExpandAll","CollapseAll" })" ScrollToTaskbarOnClick="true">
+    <GanttLabelSettings LeftLabel="TaskName" TValue="TaskData"></GanttLabelSettings>
+    <GanttTaskFields ParentID="ParentId" Work="Work" Id="ID" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" TaskType="TaskType" Dependency="Predecessor">
+    </GanttTaskFields>
+    <GanttColumns>
+        <GanttColumn Field="ID" HeaderText="TaskId" Width="100" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Center"></GanttColumn>
+        <GanttColumn Field="TaskName" HeaderText="TaskName"></GanttColumn>
+        <GanttColumn Field="StartDate" HeaderText="Start Date"></GanttColumn>
+        <GanttColumn Field="EndDate" HeaderText="End Date"></GanttColumn>
+        <GanttColumn Field="Duration" HeaderText="Duration"></GanttColumn>
+        <GanttColumn Field="Assignee" HeaderText="Assignee"></GanttColumn>
+        <GanttColumn Field="Reporter" HeaderText="Reporter"></GanttColumn>
+        <GanttColumn Field="Progress" HeaderText="Progress" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Center"></GanttColumn>
+    </GanttColumns>
+    <GanttEditSettings AllowAdding="true" AllowDeleting="true" AllowEditing="true" Mode="Syncfusion.Blazor.Gantt.EditMode.Dialog" AllowTaskbarEditing="true" ShowDeleteConfirmDialog="true">
+    </GanttEditSettings>
+    <GanttSplitterSettings Position="40%"></GanttSplitterSettings>
+</SfGantt>       
+         
+ @code {
+    SfGantt<TaskData> GanttChart { get; set; }
+    private DateTime ProjectStartDate = new DateTime(2000, 1, 1);
+    private DateTime ProjectEndDate = new DateTime(2021, 12, 31);
+    public int Value { get; set; } = 1000;
+    private List<TaskData> TaskCollection { get; set; }
+    protected override void OnInitialized()
+    {
+        this.TaskCollection = VirtualData.GetTreeVirtualData(500);
+    }
+
+    public class VirtualData
+    {
+        public static List<TaskData> GetTreeVirtualData(int count)
+        {
+            List<TaskData> DataCollection = new List<TaskData>();
+            Random rand = new Random();
+            var x = 0;
+            int duration = 0;
+            DateTime startDate = new DateTime(2000, 1, 5);
+            DateTime endDate = new DateTime(2000, 1, 12);
+            string[] assignee = { "Allison Janney", "Bryan Fogel", "Richard King", "Alex Gibson" };
+            string[] reporter = { "James Ivory", "Jordan Peele", "Guillermo del Toro", "Gary Oldman" };
+            for (var i = 1; i <= count / 5; i++)
+            {
+                var name = rand.Next(0, 100);
+                TaskData Parent = new TaskData()
+                    {
+                        ID = ++x,
+                        TaskName = "Task " + x,
+                        StartDate = startDate,
+                        EndDate = startDate.AddDays(26),
+                        Duration = "20",
+                        Assignee = "Mark Bridges",
+                        Reporter = "Kobe Bryant",
+                        Progress = rand.Next(100),
+                        Predecessor = null
+                    };
+                DataCollection.Add(Parent);
+                for (var j = 1; j <= 4; j++)
+                {
+                    startDate = startDate.AddDays(j == 1 ? 0 : duration + 2);
+                    duration = 5;
+                    DataCollection.Add(new TaskData()
+                        {
+                            ID = ++x,
+                            TaskName = "Task " + x,
+                            StartDate = startDate,
+                            EndDate = startDate.AddDays(5),
+                            Duration = duration.ToString(),
+                            Assignee = assignee[j - 1],
+                            Reporter = reporter[j - 1],
+                            Progress = rand.Next(100),
+                            ParentId = Parent.ID,
+                            Predecessor = j > 1 ? (x - 1) + "FS" : ""
+                        });
+                }
+            }
+            return DataCollection;
+        }
+    }
+    public class TaskData
+    {
+        public int ID { get; set; }
+        public string TaskName { get; set; }
+        public DateTime StartDate { get; set; }
+        public DateTime EndDate { get; set; }
+        public string Duration { get; set; }
+        public string Assignee { get; set; }
+        public string Reporter { get; set; }
+        public int Progress { get; set; }
+        public int? ParentId { get; set; }
+        public string Predecessor { get; set; }
+    }
+}
+```
+
+### Limitations for OverscanCount
+
+* The OverscanCount functionality is applicable exclusively in virtualization scenarios.
+* When the OverscanCount property is enabled without PageSize, the rendering of records depends on the Gantt chart's height and viewport count, including the OverscanCount. Records will be rendered based on these factors.
+* If both PageSize and OverscanCount are enabled, the DOM element will render with the combined count of PageSize and OverscanCount.
+
 ## Column virtualization
 
 Column virtualization allows you to load more columns with high performance. It renders only the columns in the viewport, while other columns render on-demand during horizontal scrolling.
