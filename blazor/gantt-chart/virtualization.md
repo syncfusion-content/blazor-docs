@@ -116,8 +116,6 @@ The number of records displayed in the Gantt chart is determined implicitly by t
 
 ### Render buffered data using Overscan count
 
-The Blazor Gantt Chart component allows you to render only the rows and columns that are visible in the view-port without buffering the entire datasource, and a loading placeholder indicator was displayed while the new data was loaded. 
-
 The [OverscanCount](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_OverscanCount) property is used to render additional items in the DOM before and after the visible items (based on pagesize) during virtual scrolling and initial rendering. This reduces the frequency of rendering during scrolling. In this sample pagesize is set as 15 and overscancount as 5 so totally 20 records will be rendered in DOM.
 
 When [PageSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_PageSize) is not enabled, the rendering of records depends on the gantt chart height and viewport count, including the OverscanCount. Based on these factors, records will be rendered.
