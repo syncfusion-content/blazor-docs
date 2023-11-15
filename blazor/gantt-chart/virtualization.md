@@ -224,12 +224,6 @@ By default, the number of records rendered will be twice the Gantt chart's heigh
 }
 ```
 
-### Limitations for OverscanCount
-
-* The OverscanCount functionality is applicable exclusively in virtualization scenarios.
-* When the OverscanCount property is enabled without PageSize, the rendering of records depends on the Gantt chart's height and viewport count, including the OverscanCount. Records will be rendered based on these factors.
-* If both PageSize and OverscanCount are enabled, the DOM element will render with the combined count of PageSize and OverscanCount.
-
 ## Column virtualization
 
 Column virtualization allows you to load more columns with high performance. It renders only the columns in the viewport, while other columns render on-demand during horizontal scrolling.
