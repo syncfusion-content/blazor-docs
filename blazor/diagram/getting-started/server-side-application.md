@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with Diagram Component in Blazor Server App | Syncfusion
-description: Learn how to getting started with Diagram control in Blazor Server-side application.  
+description: Learn how to getting started with Diagram control in Blazor Server-side application
 platform: Blazor
 control: Diagram Component
 documentation: ug

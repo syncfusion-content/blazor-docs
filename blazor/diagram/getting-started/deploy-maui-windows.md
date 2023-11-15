@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Deploy Diagram Component in Blazor MAUI in windows | Syncfusion
-description: Learn how to getting started with Diagram control in Blazor MAUI application.  
+description: Learn how to getting started with Diagram control in Blazor MAUI application
 platform: Blazor
 control: Diagram Component
 documentation: ug
