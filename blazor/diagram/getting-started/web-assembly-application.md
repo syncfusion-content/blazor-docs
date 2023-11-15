@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Getting Started with Diagram Component in Blazor WASM App | Syncfusion
-description: Checkout and learn about getting started with Blazor Diagram Component component in Blazor WebAssembly (WASM) App using Visual Studio and more.
+description: Learn how to getting started with Diagram control in Blazor WASM application.  
 platform: Blazor
 control: Diagram Component
 documentation: ug
 ---
 
-# VGetting started with the Blazor Diagram Component in the Blazor WASM app
+# Getting started with Diagram Component in the Blazor WASM app
 
 In this section, we'll guide you through the process of adding Blazor Diagram component component to your Blazor WebAssembly (WASM) app. We'll break it down into simple steps to make it easy to follow. Additionally, you can find a fully functional example project on our [GitHub repository](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/DiagramComponent/BlazorWASMApp/DiagramSample).
 
@@ -20,7 +20,7 @@ In this section, we'll guide you through the process of adding Blazor Diagram co
 
 You can create a **Blazor WebAssembly App**  using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0) or the [Syncfusion Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
 
-# Install Syncfusion Blazor Diagram and Themes NuGet in the blazor webAssembly App
+## Install Syncfusion Blazor Diagram and Themes NuGet in the blazor webAssembly App
 
 To add **Blazor Diagram** component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install [Syncfusion.Blazor.Diagram](https://www.nuget.org/packages/Syncfusion.Blazor.Diagram) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/). Alternatively, you can utilize the following package manager command to achieve the same.
 
