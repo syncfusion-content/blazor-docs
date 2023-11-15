@@ -141,4 +141,4 @@ Refer [here](https://learn.microsoft.com/en-us/dotnet/maui/android/emulator/devi
 
 N> If you encounter any errors while using the Android Emulator, refer to the following link for troubleshooting guidance[Troubleshooting Android Emulator](https://learn.microsoft.com/en-us/dotnet/maui/android/emulator/troubleshooting).
 
-![Blazor Diagram Component](GettingStarted_images/android-emulator.png).
+![Blazor Diagram Component](../images/blazor-diagram-maui-emulator.png).
