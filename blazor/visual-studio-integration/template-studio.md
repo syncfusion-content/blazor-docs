@@ -101,7 +101,7 @@ We need to register the created application in Google Platform API Console for I
 
 1. Go to below credentials page for the Google cloud platform API console.
 
-    <https://console.cloud.google.com/apis/credentials?project=aerobic-furnace-244104>
+    <https://console.cloud.google.com/apis/credentials?project=aerobic-furnace-244104&pli=1>
 
 2. Click Create Credentials and OAuth Client Id.
 
@@ -135,7 +135,7 @@ We need to register the created application in Google Platform API Console for I
 
 1. Go to below Azure Active Directory App Registration page.
 
-    <https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps>
+    <https://portal.azure.com/#view/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/~/RegisteredApps>
 
 2. Click New Registration in App Registration page.
 
@@ -165,7 +165,7 @@ We need to register the created application in Google Platform API Console for I
 
 1. Go to below Azure Active Directory App Registration page.
 
-    <https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps>
+    <https://portal.azure.com/#view/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/~/RegisteredApps>
 
 2. Click New Registration in App Registration page.
 
@@ -203,7 +203,7 @@ We need to register the created application in Google Platform API Console for I
 
 1. Go to below Azure Active Directory App Registration page.
 
-    <https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps>
+    <https://portal.azure.com/#view/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/~/RegisteredApps>
 
 2. Click New Registration in App Registration page.
 
@@ -239,7 +239,7 @@ We need to register the created application in Google Platform API Console for I
 
 1. Go to below Azure Active Directory App Registration page.
 
-    <https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps>
+    <https://portal.azure.com/#view/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/~/RegisteredApps>
 
 2. Click New Registration in App Registration page.
 
