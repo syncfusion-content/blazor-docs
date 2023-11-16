@@ -43,6 +43,8 @@ N> Before use the Syncfusion Blazor Project Template, check whether the Syncfusi
 
      N> .NET 7.0 is available from v20.4.0.38 and support from Visual Studio 2022.
 
+     N> .NET 8.0 is available from v23.2.4 and support from Visual Studio 2022.
+
      **Project type section**
 
      Choose one of the Syncfusion Blazor application types:
@@ -71,7 +73,7 @@ N> Before use the Syncfusion Blazor Project Template, check whether the Syncfusi
 
 6. Click either **Next** or the **Features** tab, and you will see the features listed for the selected controls. You can choose the required features.
 
-7. Click either **Next** or the **Configuration** tab, and the Configuration section will be loaded. You can choose the required (.NET 7.0 and .NET 6.0), themes, https configuration, localization option, authentication type (None, Individual Accounts, Microsoft Identity Platform, and Windows), and Blazor Web Assembly application types (ASP.NET Core hosted and Progressive Web Application).
+7. Click either **Next** or the **Configuration** tab, and the Configuration section will be loaded. You can choose the required (.NET 8.0, .NET 7.0 and .NET 6.0), themes, https configuration, localization option, authentication type (None, Individual Accounts, Microsoft Identity Platform, and Windows), and Blazor Web Assembly application types (ASP.NET Core hosted and Progressive Web Application).
 
      N> **Note:** ASP.NET Core hosted and Progressive Web Application options are only visible for the Blazor Web Assembly App application type.
 
