@@ -27,17 +27,17 @@ Ensure your CSS files have been properly configured in your application.
     <link href="_content/Syncfusion.Blazor/styles/bootstrap4.css" rel="stylesheet" />
     ```
 
-    If you are using [individual NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) in your application, then use the below reference link.
+    If you are using [individual NuGet packages](http://blazor.syncfusion.com/documentation/nuget-packages/) in your application, then use the below reference link.
     
     ```html
     <link href="_content/Syncfusion.Blazor.Themes/bootstrap4.css" rel="stylesheet" />
     ```
 
-N> For production purpose and minimal requirement, Syncfusion provides an option to generate custom styles of selective components by using the ThemeStudio web application. Refer to this [link](https://ej2.syncfusion.com/themestudio/?theme=bootstrap5) for more details on ThemeStudio.
+N> For production purpose and minimal requirement, Syncfusion provides an option to generate custom styles of selective components by using the ThemeStudio web application. Refer to this [link](http://ej2.syncfusion.com/themestudio/) for more details on ThemeStudio.
 
 ## Breaking changes
 
-Some changes have been modified in our Blazor samples for each release. So, we suggest you to ensure the breaking changes. Refer to this [release notes](https://blazor.syncfusion.com/documentation/release-notes/23.1.36?type=all) for our Blazor components.
+Some changes have been modified in our Blazor samples for each release. So, we suggest you to ensure the breaking changes. Refer to this [release notes](https://blazor.syncfusion.com/documentation/release-notes/index/?type=breaking-changes) for our Blazor components.
 
 ## Cache problem
 
@@ -53,7 +53,7 @@ The following steps explain how to clean the cache:
 
 In Blazor WebAssembly application, ensure if you have configured **Linker.xml** file in your Syncfusion Blazor application. Missing this configuration may prevent the rendering of Syncfusion Blazor components in the application.
 
-Refer to this [KB article](https://support.syncfusion.com/kb/article/12054/syncfusion-components-doesnt-render-in-blazor-webassembly-application) for more information on Linker.xml file usage.
+Refer to this [KB article](https://www.syncfusion.com/kb/13439/syncfusion-components-doesnt-render-in-blazor-webassembly-application) for more information on Linker.xml file usage.
 
 N> Linker.xml configuration is applicable only for the Blazor WebAssembly application.
 
