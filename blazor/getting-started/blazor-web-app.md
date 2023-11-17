@@ -31,7 +31,7 @@ You can create a **Blazor Web App** using Visual Studio 2022 via [Microsoft Temp
 * `Global` - Opting for this setting configures interactivity globally, applying it to the entire app.
 * `Per page/component` - The default configuration establishes interactivity individually for each page or component.
 
-## Install Syncfusion Blazor Accordion and Themes NuGet in the Blazor Web App
+## Install Syncfusion Blazor Navigations and Themes NuGet in the Blazor Web App
 
 Here's an example of how to add **Blazor Accordion** component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install [Syncfusion.Blazor.Navigations](https://www.nuget.org/packages/Syncfusion.Blazor.Navigations/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/). Alternatively, you can utilize the following package manager command to achieve the same.
 
@@ -46,23 +46,25 @@ Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
 
 N> Syncfusion Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for available NuGet packages list with component details.
 
+N> In Blazor web app, if you choose `WebAssembly` or `Auto (Server and WebAssembly)` interactive render mode and install Syncfusion Blazor NuGet packages through the package manager command, please ensure that the default project is set to `{your App name}.Client` project in package manager console.
+
 ## Register Syncfusion Blazor Service
 
-Open **~/Components/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Navigations` namespace.
+Open **~/Components/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Navigations` namespace if the interactive render mode is `Server`.
 
 ```cshtml
 
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Navigations
-
 ```
+
+Here, if you choose `WebAssembly` or `Auto (Server and WebAssembly)` interactive render mode during web app creation, then import the above namspaces in the **~/_Imports.razor** file of `{Your App name}.Client` project
 
 Now, register the Syncfusion Blazor Service in the **~/Program.cs** file of your Blazor Server App.
 
 {% tabs %}
-{% highlight C# tabtitle="Blazor Web App" hl_lines="2 9" %}
+{% highlight C# tabtitle="Server Interactive mode" hl_lines="1 8" %}
 
-using BlazorNET8.Components;
 using Syncfusion.Blazor;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -76,7 +78,18 @@ var app = builder.Build();
 ....
 
 {% endhighlight %}
+{% highlight C# tabtitle=" WebAssembly (or) Auto (Server and WebAssembly) Interactive mode" %}
+
+....
+using Syncfusion.Blazor;
+....
+builder.Services.AddSyncfusionBlazor();
+....
+
+{% endhighlight %}
 {% endtabs %}
+
+N> In Blazor web app, if you choose `WebAssembly` or `Auto (Server and WebAssembly)` interactive render mode, Please register the Syncfusion Blazor Service in the **~/Program.cs** file of both `{Your App name}` & `{Your App name}.Client` projects.
 
 ## Add stylesheet and script resources
 
@@ -93,9 +106,23 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
     <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
 </body>
 ```
-## Add Syncfusion Blazor component
+
+N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic to discover various methods ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference), and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)) for referencing themes in your Blazor application. Also, check out the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic to learn different approaches for adding script references in your Blazor application.
+
+## Add Syncfusion Blazor Accordion component
 
 Add the Syncfusion Blazor Accordion component in the **~/Components/Pages/Home.razor** file.
+
+* If you choose any interactive render mode with `Per page/component` interactivity location in the web app, please define the render mode at the top of the Syncfusion Blazor component-included page as follows.
+
+{% tabs %}
+{% highlight razor %}
+
+@* desired render mode define here *@
+@rendermode InteractiveServer
+
+{% endhighlight %}
+{% endtabs %}
 
 {% tabs %}
 {% highlight razor %}
@@ -110,6 +137,8 @@ Add the Syncfusion Blazor Accordion component in the **~/Components/Pages/Home.r
 
 {% endhighlight %}
 {% endtabs %}
+
+N> If you choose `WebAssembly` or `Auto (Server and WebAssembly)` interactive render mode in the web app, please add the Syncfusion Blazor Accordion component in the `~Pages/*.razor` page of `{Your App name}.Client` project.
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion Blazor Accordion component in your default web browser.
 
