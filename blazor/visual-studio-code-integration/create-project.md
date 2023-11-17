@@ -27,8 +27,6 @@ The instructions below assist you in creating **Syncfusion Blazor Applications**
 
     N> .NET 7.0 is available from v20.4.0.38 and support from Visual Studio 2022.
 
-    N> .NET 8.0 is available from v23.2.4 and support from Visual Studio 2022.
-
 3. Select either **Next** or the **Project Type** tab. Syncfusion Blazor Project Types will be displayed. Select one of the following Syncfusion Blazor project types:
    * Syncfusion Blazor Server App
    * Syncfusion Blazor WebAssembly App
@@ -49,7 +47,7 @@ The instructions below assist you in creating **Syncfusion Blazor Applications**
 
     ![Debug](images/Debug.png)
 
-7. If you installed the trial setup or NuGet packages from nuget.org you must register the Syncfusion license key to your application since Syncfusion introduced the licensing system from 2018 Volume 2 (v16.2.0.41) Essential Studio release. Navigate to the [help topic](https://help.syncfusion.com/common/essential-studio/licensing/license-key#how-to-generate-syncfusion-license-key) to generate and register the Syncfusion license key to your application. Refer to this [UG](https://blazor.syncfusion.com/documentation/getting-started/license-key/overview) topic for understanding the licensing details in Essential Studio for Blazor.
+7. If you installed the trial setup or NuGet packages from nuget.org you must register the Syncfusion license key to your application since Syncfusion introduced the licensing system from 2018 Volume 2 (v16.2.0.41) Essential Studio release. Navigate to the [help topic](https://help.syncfusion.com/common/essential-studio/licensing/overview#how-to-generate-syncfusion-license-key) to generate and register the Syncfusion license key to your application. Refer to this [UG](https://blazor.syncfusion.com/documentation/getting-started/license-key/overview) topic for understanding the licensing details in Essential Studio for Blazor.
 
 ## Syncfusion integration
 

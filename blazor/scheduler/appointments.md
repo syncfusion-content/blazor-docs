@@ -628,7 +628,7 @@ The tooltip shows the Scheduler appointment's information in a formatted style b
 
 ### Show or hide built-in tooltip
 
-The tooltip can be displayed for appointments by setting `true` to the [EnableTooltip](https://help.syncfusion.com/cr/blazor/Syncfulsion.Blazor.Schedule.ScheduleEventSettings-1.html#Syncfusion_Blazor_Schedule_ScheduleEventSettings_1_EnableTooltip) option within the `ScheduleEventSettings` tag helper.
+The tooltip can be displayed for appointments by setting `true` to the [EnableTooltip](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleEventSettings-1.html#Syncfusion_Blazor_Schedule_ScheduleEventSettings_1_EnableTooltip) option within the `ScheduleEventSettings` tag helper.
 
 ```cshtml
 @using Syncfusion.Blazor.Schedule

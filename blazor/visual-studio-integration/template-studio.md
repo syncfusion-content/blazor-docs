@@ -43,8 +43,6 @@ N> Before use the Syncfusion Blazor Project Template, check whether the Syncfusi
 
      N> .NET 7.0 is available from v20.4.0.38 and support from Visual Studio 2022.
 
-     N> .NET 8.0 is available from v23.2.4 and support from Visual Studio 2022.
-
      **Project type section**
 
      Choose one of the Syncfusion Blazor application types:
@@ -73,7 +71,7 @@ N> Before use the Syncfusion Blazor Project Template, check whether the Syncfusi
 
 6. Click either **Next** or the **Features** tab, and you will see the features listed for the selected controls. You can choose the required features.
 
-7. Click either **Next** or the **Configuration** tab, and the Configuration section will be loaded. You can choose the required (.NET 8.0, .NET 7.0, and .NET 6.0), themes, https configuration, localization option, authentication type (None, Individual Accounts, Microsoft Identity Platform, and Windows), and Blazor Web Assembly application types (ASP.NET Core hosted and Progressive Web Application).
+7. Click either **Next** or the **Configuration** tab, and the Configuration section will be loaded. You can choose the required (.NET 7.0 and .NET 6.0), themes, https configuration, localization option, authentication type (None, Individual Accounts, Microsoft Identity Platform, and Windows), and Blazor Web Assembly application types (ASP.NET Core hosted and Progressive Web Application).
 
      N> **Note:** ASP.NET Core hosted and Progressive Web Application options are only visible for the Blazor Web Assembly App application type.
 
@@ -91,7 +89,7 @@ N> Before use the Syncfusion Blazor Project Template, check whether the Syncfusi
 
 9. The Syncfusion Blazor application configures with most recent Syncfusion Blazor NuGet packages version, selected style, namespaces, selected authentication, and component render code for Syncfusion components.
 
-10. If you installed the trial setup or NuGet packages from nuget.org you must register the Syncfusion license key to your application since Syncfusion introduced the licensing system from 2018 Volume 2 (v16.2.0.41) Essential Studio release. Navigate to the [help topic](https://help.syncfusion.com/common/essential-studio/licensing/license-key#how-to-generate-syncfusion-license-key) to generate and register the Syncfusion license key to your application. Refer to this [blog](https://blog.syncfusion.com/post/Whats-New-in-2018-Volume-2-Licensing-Changes-in-the-1620x-Version-of-Essential-Studio.aspx?_ga=2.11237684.1233358434.1587355730-230058891.1567654773) post for understanding the licensing changes introduced in Essential Studio.
+10. If you installed the trial setup or NuGet packages from nuget.org you must register the Syncfusion license key to your application since Syncfusion introduced the licensing system from 2018 Volume 2 (v16.2.0.41) Essential Studio release. Navigate to the [help topic](https://help.syncfusion.com/common/essential-studio/licensing/overview#how-to-generate-syncfusion-license-key) to generate and register the Syncfusion license key to your application. Refer to this [blog](https://www.syncfusion.com/blogs/post/whats-new-in-2018-volume-2.aspx) post for understanding the licensing changes introduced in Essential Studio.
 
 ## Authentication Configuration
 

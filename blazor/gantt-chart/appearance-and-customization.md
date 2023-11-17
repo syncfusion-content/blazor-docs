@@ -85,7 +85,7 @@ In the Gantt Chart component, the appearance can be customized based on the Hier
     private void GanttChartRowInfo(QueryChartRowInfoEventArgs<TaskData> args)
     {
         dynamic data = Gantt.GetHierarchicalData(args.Data.TaskId);
-        if (data.Level == 0 && data.HasChildRecords == true)
+        if (data.level == 0 && data.hasChildRecords == true)
         {
             args.Row.AddClass(new string[] { "customize-parent" });
         }
