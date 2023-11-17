@@ -17,9 +17,7 @@ This article provides a step-by-step instructions for building `Blazor Web App` 
 
 ## Create a new Blazor Web App
 
-You can create a **Blazor Web App** using Visual Studio 2022 via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0) or the [Syncfusion Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
-
-During Blazor Web App Creation, set the `Interactive render mode` and `Interactivity location`.
+You can create a **Blazor Web App** using Visual Studio 2022 via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0) or the [Syncfusion Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio). During Blazor Web App Creation, set the `Interactive render mode` and `Interactivity location`.
 
 ### Interactive render mode
 
