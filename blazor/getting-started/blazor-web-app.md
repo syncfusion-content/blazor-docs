@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting started with Syncfusion Blazor Web App in Visual Studio
-description: Check out the documentation for getting started with Syncfusion Blazor Components in Visual Studio with NET 8 and much more.
+description: Check out the documentation for getting started with Syncfusion Blazor Components in Blazor Web App.
 platform: Blazor
 component: Common
 documentation: ug
