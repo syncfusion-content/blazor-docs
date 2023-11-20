@@ -46,23 +46,7 @@ Open **~/Components/_Imports.razor** file and import the `Syncfusion.Blazor` and
 
 Now, register the Syncfusion Blazor Service in the **~/Program.cs** file of your Blazor Web App.In your app with `WebAssembly` or `Auto (Server and WebAssembly)` interactive render mode, you should register the Syncfusion Blazor service in both **~/Program.cs** files of the web app.
 
-{% tabs %}
-{% highlight C# tabtitle="Server Interactive mode" hl_lines="1 8" %}
-
-using Syncfusion.Blazor;
-
-var builder = WebApplication.CreateBuilder(args);
-
-// Add services to the container.
-builder.Services.AddRazorComponents()
-    .AddInteractiveServerComponents();
-builder.Services.AddSyncfusionBlazor();
-
-var app = builder.Build();
-....
-
-{% endhighlight %}
-{% highlight C# tabtitle=" WebAssembly (or) Auto (Server and WebAssembly) Interactive mode" %}
+```cshtml
 
 ....
 using Syncfusion.Blazor;
@@ -70,8 +54,7 @@ using Syncfusion.Blazor;
 builder.Services.AddSyncfusionBlazor();
 ....
 
-{% endhighlight %}
-{% endtabs %}
+```
 
 ## Add stylesheet and script resources
 
