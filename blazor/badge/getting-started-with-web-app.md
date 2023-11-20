@@ -1,0 +1,72 @@
+---
+layout: post
+title: Getting Started with Web App for Blazor Badge Component in Visual Studio
+description: Check out the documentation for getting started with Blazor Badge Component in Blazor Web App.
+platform: Blazor
+component: Badge
+documentation: ug
+---
+
+# Getting Started with Blazor Badge Component in Blazor Web App
+
+This article provides a step-by-step instructions for building `Blazor Web App` with `Blazor Badge` component using [Visual Studio](https://visualstudio.microsoft.com/vs/).
+
+## Prerequisites
+
+* [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
+
+## Create a new Blazor Web App
+
+You can create a **Blazor Web App** using Visual Studio 2022 via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0) or the [Syncfusion Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio). While creating a Blazor Web App, configure corresponding [Interactive render mode](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-8.0#render-modes) and [Interactivity location](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0&pivots=windows).
+
+## Themes NuGet in the Blazor Web App
+
+Here's an example of how to add **Blazor Badge** component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/). For a web app with 'WebAssembly' or 'Auto' interactive render mode, install the Syncfusion NuGet packages in the project where you intend to add the components.  Alternatively, you can utilize the following package manager command to achieve the same.
+
+{% tabs %}
+{% highlight C# tabtitle="Package Manager" %}
+
+Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
+
+{% endhighlight %}
+{% endtabs %}
+
+N> Syncfusion Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for available NuGet packages list with component details.
+
+## Add stylesheet
+
+The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the stylesheet reference in the `<head>` section in the **~/Components/App.razor** file as shown below:
+
+```html
+<head>
+    ....
+    <link href="_content/Syncfusion.Blazor.Themes/material.css" rel="stylesheet" />
+</head>
+```
+
+N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic to discover various methods ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference), and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)) for referencing themes in your Blazor application. 
+
+## Add Syncfusion Blazor Badge component
+
+Add the Syncfusion Blazor Badge component in the **~/Components/Pages/Home.razor** file. If you opt for an interactive location as Per page/component in the web app, define a render mode at the top of the ~Pages/*.razor component, as follows:
+
+{% tabs %}
+{% highlight razor %}
+
+@* desired render mode define here *@
+@rendermode InteractiveServer
+
+{% endhighlight %}
+{% endtabs %}
+
+{% tabs %}
+{% highlight razor %}
+
+<h1>Badge Component <span class="e-badge">New</span></h1>
+
+{% endhighlight %}
+{% endtabs %}
+
+* Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion Blazor Badge component in your default web browser.
+
+![Blazor Badge Component](images/blazor-badge-component.png)
