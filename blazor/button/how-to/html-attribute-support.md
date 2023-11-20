@@ -1,32 +1,27 @@
 ---
 layout: post
-title: HTML Attribute Support in Blazor Button Component | Syncfusion
-description: Checkout and learn here all about HTML Attribute Support in Syncfusion Blazor Button component and more.
+title: Tooltip for Button in Blazor Button Component | Syncfusion
+description: Checkout and learn here all about Tooltip for Button in Syncfusion Blazor Button component and more.
 platform: Blazor
 control: Button
 documentation: ug
 ---
 
-# HTML Attribute Support in Blazor Button Component
+# Tooltip for Button in Blazor Button Component
 
-HTML attribute support is given for button using [HtmlAttributes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfButton.html) property.
+Tooltip can be shown on Button hover and it can be achieved by title attribute.
 
 ```csharp
 
 @using Syncfusion.Blazor.Buttons
 
-<SfButton Content="@Content" HtmlAttributes="@submit"></SfButton>
+<SfButton Content="@Content" title="Primary Button" IsPrimary="true"></SfButton>
 
 @code {
-    public string Content = "Submit";
-    private Dictionary<string, object> submit = new Dictionary<string, object>()
-     {
-        { "type", "submit"},
-        { "title", "Primary Button" }
-    };
+    public string Content = "Button";
 }
 
 ```
 
 
-![Blazor Button with HTML Attribute](./../images/blazor-button-with-html.png)
+![Blazor Button displays ToolTip](./../images/blazor-button-tooltip.png)
