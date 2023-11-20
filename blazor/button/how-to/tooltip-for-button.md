@@ -9,20 +9,16 @@ documentation: ug
 
 # Tooltip for Button in Blazor Button Component
 
-Tooltip can be shown on Button hover and it can be achieved by HtmlAttributes.
+Tooltip can be shown on Button hover and it can be achieved by Title HtmlAttributes.
 
 ```csharp
 
 @using Syncfusion.Blazor.Buttons
 
-<SfButton Content="@Content" HtmlAttributes="@primButton" IsPrimary="true"></SfButton>
+<SfButton Content="@Content" Title="Primary Button" IsPrimary="true"></SfButton>
 
 @code {
     public string Content = "Button";
-    private Dictionary<string, object> primButton = new Dictionary<string, object>()
-    {
-        { "title", "Primary Button"}
-    };
 }
 
 ```
