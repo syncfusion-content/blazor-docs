@@ -115,14 +115,14 @@ The number of records displayed in the Gantt chart is determined implicitly by t
 
 ### Managing records count
 
-By default, the number of records rendered will be twice the Gantt chart's height. You can customize the row rendering count using the `PageSize` and `OverscanCount` properties. Here's an explanation of these properties:
+By default, the number of records per page rendered will be twice the Gantt chart's height. You can customize the row rendering count using the [PageSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_PageSize) and [OverscanCount](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_OverscanCount) properties. Here's an explanation of these properties:
 
 * `PageSize`:
-    •	The [PageSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_PageSize) property determines the number of rows rendered per page in the Gantt Chart.
-    •	It allows you to control how many rows are loaded and displayed at a time, helping to improve performance by reducing the number of DOM elements rendered.
+    •	The `PageSize` property determines the number of rows rendered per page in the Gantt Chart.
+    •	It allows you to control how many rows are loaded and displayed at initial rendering and also while scrolling a time, helping to improve performance by reducing the number of DOM elements rendered.
 * `OverscanCount`:
-    •	The [OverscanCount](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_OverscanCount) property is used to render additional rows before and after the Gantt Chart's current page rows.
-    •	During both virtual scrolling and initial rendering, extra rows are rendered to provide a buffer around the visible area. This minimizes the need for frequent rendering during scrolling, providing a smoother user experience.
+    •	The `OverscanCount` property is used to render additional rows before and after the Gantt Chart's current page rows.
+    •	During both virtual scrolling and initial rendering, extra rows are rendered to provide a buffer around the current page area. This minimizes the need for frequent rendering during scrolling, providing a smoother user experience.
 
 ```csharp
 @using Syncfusion.Blazor.Gantt
@@ -223,6 +223,8 @@ By default, the number of records rendered will be twice the Gantt chart's heigh
     }
 }
 ```
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VtLKWMBZrKaVXJhQ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Column virtualization
 
