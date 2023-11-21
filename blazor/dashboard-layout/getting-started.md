@@ -351,8 +351,6 @@ By default, the dashboard layout control is rendered with auto adjustable and [r
 
 ## See also
 
-*[Getting Started with Web App for Blazor Dashboard Layout Component in Visual Studio](https://blazor.syncfusion.com/documentation/dashboard-layout/getting-started-with-web-app)
-
 * [Getting Started with Syncfusion Blazor for Client-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-dotnet-cli)
 
 * [Getting Started with Syncfusion Blazor for Client-Side in Visual Studio](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-visual-studio)

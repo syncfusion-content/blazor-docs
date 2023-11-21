@@ -154,7 +154,3 @@ The floating action button control triggers the [OnClick](https://help.syncfusio
 ![Blazor Floating Action Button Component](./images/blazor-fab-event-click-sample.png)
 
 N> You can also explore our [Blazor Floating Action Button example](https://blazor.syncfusion.com/demos/fab/overview) that shows how to render and configure the button.
-
-## See also
-
-* [Getting Started with Web App for Blazor Floating Action Component in Visual Studio](https://blazor.syncfusion.com/documentation/floating-action-button/getting-started-with-web-app)

@@ -136,7 +136,6 @@ Add the Syncfusion Blazor DropDown Menu component in the **~/Pages/Index.razor**
 
 ## See also
 
-* [Getting Started with Web App for Blazor DropDownMenu Component in Visual Studio](https://blazor.syncfusion.com/documentation/drop-down-menu/getting-started-with-web-app)
 * [Getting Started with Syncfusion Blazor for Client-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-dotnet-cli)
 * [Getting Started with Syncfusion Blazor for Server-Side in Visual Studio](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio)
 * [Getting Started with Syncfusion Blazor for Server-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-dotnet-cli)

@@ -128,7 +128,6 @@ Add the Syncfusion Blazor ColorPicker component in the **~/Pages/Index.razor** f
 
 ## See also
 
-* [Getting Started with Web App for Blazor ColorPicker Component in Visual Studio](https://blazor.syncfusion.com/documentation/color-picker/getting-started-with-web-app)
 * [Getting Started with Syncfusion Blazor for Client-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-dotnet-cli)
 * [Getting Started with Syncfusion Blazor for Server-Side in Visual Studio](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio)
 * [Getting Started with Syncfusion Blazor for Server-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-dotnet-cli)

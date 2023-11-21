@@ -70,7 +70,3 @@ Add the Syncfusion Blazor Badge component in the **~/Pages/Index.razor** file.
 ![Blazor Badge Component](images/blazor-badge-component.png)
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/Badge).
-
-## See also
-
-1. [Getting Started with Web App for Blazor Badge Component in Visual Studio](https://blazor.syncfusion.com/documentation/badge/getting-started-with-web-app)

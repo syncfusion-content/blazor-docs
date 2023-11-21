@@ -261,7 +261,3 @@ The following sample code demonstrates binding remote data through the [SfDataMa
 ![Data Binding in Blazor DataManager Component](./images/blazor-datamanager-data-binding.png)
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/DataManager).
-
-## See also
-
-* [Getting Started with Web App for Blazor DataManager Component in Visual Studio](https://blazor.syncfusion.com/documentation/data/getting-started-with-web-app)

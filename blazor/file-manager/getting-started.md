@@ -350,8 +350,6 @@ Refer the sample [link](https://www.syncfusion.com/downloads/support/directtrac/
 
 ## See Also
 
-[Getting Started with Web App for Blazor FileManager Component in Visual Studio](https://blazor.syncfusion.com/documentation/file-manager/getting-started-with-web-app)
-
 [Getting Started with Syncfusion Blazor for Client-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-dotnet-cli)
 
 [Getting Started with Syncfusion Blazor for Client-Side in Visual Studio](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-visual-studio)

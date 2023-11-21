@@ -258,8 +258,6 @@ N> You can also explore our [Blazor Kanban Board example](https://blazor.syncfus
 
 ## See also
 
-* [Getting Started with Web App for Blazor Kanban Component in Visual Studio](https://blazor.syncfusion.com/documentation/kanban/getting-started-with-web-app) 
-
 * [Getting Started with Syncfusion Blazor for client-side in .NET Core CLI](../getting-started/blazor-webassembly-dotnet-cli)
 
 * [Getting Started with Syncfusion Blazor for server-side in Visual Studio](../getting-started/blazor-server-side-visual-studio)

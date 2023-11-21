@@ -348,7 +348,6 @@ The following sample code demonstrates notifying user when server-side exception
 
 ## See Also
 
-* [Getting Started with Web App for Blazor Data Grid Component in Visual Studio](https://blazor.syncfusion.com/documentation/datagrid/getting-started-with-web-app)
 * [Getting started with Syncfusion Data Grid in Blazor Server Side App using .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-dotnet-cli)
 
 * [Getting Started with Syncfusion Blazor for Client-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-dotnet-cli)

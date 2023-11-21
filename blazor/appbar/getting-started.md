@@ -137,6 +137,3 @@ Add the Syncfusion Blazor AppBar component in the **~/Pages/Index.razor** file.
 
 ![Blazor AppBar Component](images/getting_started.png)
 
-## See also
-
-1. [Getting Started with Web App for Blazor AppBar Component in Visual Studio](https://blazor.syncfusion.com/documentation/appbar/getting-started-with-web-app)
