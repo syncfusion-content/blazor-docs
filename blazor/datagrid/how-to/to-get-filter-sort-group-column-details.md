@@ -20,55 +20,43 @@ The RequestType parameter in the event arguments indicates the type of operation
 
 The following example demonstrates how to retrieve filter, sort, and group column details using the [OnActionComplete](https://blazor.syncfusion.com/documentation/datagrid/events#onactioncomplete) event by accessing the RequestType parameter,
 
-```cshtml
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids
 
-<SfGrid DataSource="@Orders" AllowPaging="true" AllowFiltering="true" AllowGrouping="true" AllowSorting="true"  Height="315">
-    <GridEvents  OnActionComplete="ActionComplete" TValue="Order"></GridEvents>
-    <GridColumns>
-        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" IsPrimaryKey="true" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" EditType="EditType.DatePickerEdit" Format="d" TextAlign="TextAlign.Right" Width="130" Type="ColumnType.Date"></GridColumn>
-        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+<SfGrid DataSource="@GridData" AllowFiltering="true" AllowGrouping="true" AllowSorting="true" Height="267px">
+    <GridEvents OnActionComplete="ActionComplete" TValue="OrderData"></GridEvents>
+      <GridColumns>
+        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="90"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer ID" Width="100"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.ShipCity) HeaderText="Ship City" Width="100"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.ShipName) HeaderText="Ship Name" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
 
+
 @code {
-    public List<Order> Orders { get; set; }
+    public List<OrderData> GridData { get; set; }
 
     protected override void OnInitialized()
     {
-        Orders = Enumerable.Range(1, 75).Select(x => new Order()
-            {
-                OrderID = 1000 + x,
-                CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
-                Freight = 2.1 * x,
-                OrderDate = DateTime.Now.AddDays(-x),
-            }).ToList();
+        GridData = OrderData.GetAllRecords();
     }
 
-    public class Order
+    public void ActionComplete(ActionEventArgs<OrderData> args)
     {
-        public int? OrderID { get; set; }
-        public string CustomerID { get; set; }
-        public DateTime? OrderDate { get; set; }
-        public double? Freight { get; set; }
-    }
-
-    public void ActionComplete(ActionEventArgs<Order> args)
-    {
-       if (args.RequestType == Syncfusion.Blazor.Grids.Action.Filtering)
+        if (args.RequestType == Syncfusion.Blazor.Grids.Action.Filtering)
         {
             // Here you can get the filtercolumn name
             var filtercolumn = args.CurrentFilteringColumn;
-            //Here you can get the filter column details 
+            //Here you can get the filter column details
             var filterdetails = args.CurrentFilterObject;
 
         }
         else if (args.RequestType == Syncfusion.Blazor.Grids.Action.Sorting)
         {
             // Here you can get the direction of sort column
-            var sortdirection =   args.Direction;
+            var sortdirection = args.Direction;
             //Here you can get the  sort column name
             var sortcolumn = args.ColumnName;
 
@@ -78,7 +66,58 @@ The following example demonstrates how to retrieve filter, sort, and group colum
             //Here you can get the groupcolumn name
             var groupcolumn = args.ColumnName;
 
-        }       
+        }
     }
+
 }
-```
+{% endhighlight %}
+{% highlight c# tabtitle="OrderData.cs" %}
+ public class OrderData
+    {
+        public static List<OrderData> Orders = new List<OrderData>();
+
+
+        public OrderData()
+        {
+
+        }
+        public OrderData(int? OrderID, string CustomerID, string ShipCity, string ShipName)
+        {
+            this.OrderID = OrderID;
+            this.CustomerID = CustomerID;
+            this.ShipCity = ShipCity;
+            this.ShipName = ShipName;
+
+        }
+
+        public static List<OrderData> GetAllRecords()
+        {
+            if (Orders.Count() == 0)
+            {
+                int code = 10;
+                for (int i = 1; i < 2; i++)
+                {
+                    Orders.Add(new OrderData(10248, "VINET", "Reims", "Vins et alcools Chevali"));
+                    Orders.Add(new OrderData(10249, "TOMSP", "Münster", "Toms Spezialitäten"));
+                    Orders.Add(new OrderData(10250, "HANAR", "Rio de Janeiro", "Hanari Carnes"));
+                    Orders.Add(new OrderData(10251, "VICTE", "Lyon", "Victuailles en stock"));
+                    Orders.Add(new OrderData(10252, "SUPRD", "Charleroi", "Suprêmes délices"));
+                    Orders.Add(new OrderData(10253, "HANAR", "Lyon", "Hanari Carnes"));
+                    Orders.Add(new OrderData(10254, "CHOPS", "Rio de Janeiro", "Chop-suey Chinese"));
+                    Orders.Add(new OrderData(10255, "RICSU", "Münster", "Richter Supermarkt"));
+                    Orders.Add(new OrderData(10256, "WELLI", "Reims", "Wellington Import"));
+                    code += 5;
+                }
+            }
+            return Orders;
+        }
+
+        public int? OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public string ShipCity { get; set; }
+        public string ShipName { get; set; }
+
+
+    }
+{% endhighlight %}
+{% endtabs %}
