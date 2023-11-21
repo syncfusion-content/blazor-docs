@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with Web App for Blazor DataManager Component | Syncfusion
+title: Getting Started with Syncfusion Blazor DataManager Component in WebApp
 description: Checkout and learn about the documentation for getting started with Blazor DataManager Component in Blazor Web App.
 platform: Blazor
 component: DataManager

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with Web App for Blazor Chip Component | Syncfusion
+title: Getting Started with Syncfusion Blazor Chip Component in Web App
 description: Checkout and learn about the documentation for getting started with Blazor Chip Component in Blazor Web App.
 platform: Blazor
 component: Chip

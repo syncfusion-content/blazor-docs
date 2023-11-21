@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with Web App for Blazor Image Editor Component | Syncfusion
+title: Getting Started with Syncfusion Blazor ImageEditor Component in WebApp
 description: Checkout and learn about the documentation for getting started with Blazor Image Editor Component in Blazor Web App.
 platform: Blazor
 component: Image Editor

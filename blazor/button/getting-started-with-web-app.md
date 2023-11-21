@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with Web App for Blazor Button Component | Syncfusion
+title: Getting Started with Syncfusion Blazor Button Component in Web App
 description: Checkout and learn about the documentation for getting started with Blazor Button Component in Blazor Web App.
 platform: Blazor
 component: Button

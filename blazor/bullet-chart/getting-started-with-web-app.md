@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with Web App for Blazor Bullet Chart Component | Syncfusion
+title: Getting Started with Syncfusion Blazor BulletChart Component in WebApp
 description: Checkout and learn about the documentation for getting started with Blazor Bullet Chart Component in Blazor Web App.
 platform: Blazor
 component: Bullet Chart

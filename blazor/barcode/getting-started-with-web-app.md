@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with Web App for Blazor Barcode Component | Syncfusion
+title: Getting Started with Syncfusion Blazor Barcode Component in Web App
 description: Checkout and learn about the documentation for getting started with Blazor Barcode Component in Blazor Web App.
 platform: Blazor
 component: Barcode

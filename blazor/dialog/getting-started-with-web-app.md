@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with Web App for Blazor Dialog Component | Syncfusion
+title: Getting Started with Syncfusion Blazor Dialog Component in Web App
 description: Checkout and learn about the documentation for getting started with Blazor Dialog Component in Blazor Web App.
 platform: Blazor
 component: Dialog

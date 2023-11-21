@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with Web App for Blazor Card Component | Syncfusion
+title: Getting Started with Syncfusion Blazor Card Component in Web App
 description: Checkout and learn about the documentation for getting started with Blazor Card Component in Blazor Web App.
 platform: Blazor
 component: Card
