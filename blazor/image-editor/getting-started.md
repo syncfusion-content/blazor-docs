@@ -123,6 +123,7 @@ Add the Syncfusion Blazor Image Editor component in the **~/Pages/Index.razor** 
 
 ## See Also
 
+* [Getting Started with Web App for Blazor Image Editor Component in Visual Studio](https://blazor.syncfusion.com/documentation/image-editor/getting-started-with-web-app)
 * [Getting Started with Syncfusion Blazor for client side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-dotnet-cli)
 * [Getting Started with Syncfusion Blazor for server side in Visual Studio](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio)
 * [Getting Started with Syncfusion Blazor for server side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-dotnet-cli)

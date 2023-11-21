@@ -175,3 +175,7 @@ Add the Syncfusion Blazor Carousel component in the **~/Pages/Index.razor** file
 ![Blazor Carousel Component](images/getting_started.png)
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/Carousel).
+
+## See also
+
+* [Getting Started with Web App for Blazor Accordion Carousel in Visual Studio](https://blazor.syncfusion.com/documentation/carousel/getting-started-with-web-app)

@@ -149,3 +149,7 @@ You can add the header by using [CardHeader](https://help.syncfusion.com/cr/blaz
 ![Blazor Card Component](images/blazor-card-component.png)
 
 N> You can also explore our [Blazor Card example](https://blazor.syncfusion.com/demos/card/basic-card?theme=fluent) that shows you how to render and configure the Card.
+
+## See also
+
+* [Getting Started with Web App for Blazor Card Component in Visual Studio](https://blazor.syncfusion.com/documentation/card/getting-started-with-web-app)
