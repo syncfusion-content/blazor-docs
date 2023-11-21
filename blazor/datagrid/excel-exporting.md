@@ -575,44 +575,31 @@ You can add custom text and customize its styles for a particular column header 
 
 This can be demonstrated using the following sample:
 
-```cshtml
-
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids
 
-<SfGrid @ref="Grid" DataSource="@Orders" AllowExcelExport="true" Toolbar="@(new List<string>() { "ExcelExport" })">
-    <GridEvents ExcelHeaderQueryCellInfoEvent="ExcelHeaderQueryCellInfoHandler" OnToolbarClick="ToolbarClickHandler" TValue="Order"></GridEvents>
+<SfGrid @ref="Grid" DataSource="@GridData" AllowExcelExport="true" Toolbar="@(new List<string>() { "ExcelExport" })">
+    <GridEvents ExcelHeaderQueryCellInfoEvent="ExcelHeaderQueryCellInfoHandler" OnToolbarClick="ToolbarClickHandler" TValue="OrderData"></GridEvents>
     <GridColumns>
-        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
-        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
 
 @code {
-    private SfGrid<Order> Grid;
+    private SfGrid<OrderData> Grid;
 
-    public List<Order> Orders { get; set; }
+    public List<OrderData> GridData { get; set; }
 
     protected override void OnInitialized()
     {
-        Orders = Enumerable.Range(1, 75).Select(x => new Order()
-            {
-                OrderID = 1000 + x,
-                CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
-                Freight = 2.1 * x,
-                OrderDate = DateTime.Now.AddDays(-x),
-            }).ToList();
+        GridData = OrderData.GetAllRecords();
     }
 
-    public class Order
-    {
-        public int? OrderID { get; set; }
-        public string CustomerID { get; set; }
-        public DateTime? OrderDate { get; set; }
-        public double? Freight { get; set; }
-    }
-
+ 
     public async Task ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
     {
         await this.Grid.ExcelExport();
@@ -624,7 +611,7 @@ This can be demonstrated using the following sample:
         {
 
             args.Cell.CellStyle.BackColor = "#DC143C";
-        }  
+        }
         else if (args.Value == "Freight")
         {
             args.Cell.CellStyle.BackColor = "#DC143C";
@@ -641,9 +628,56 @@ This can be demonstrated using the following sample:
         }
     }
 }
-```
+{% endhighlight %}
+{% highlight c# tabtitle="OrderData.cs" %}
+public class OrderData
+    {
+        
+            public static List<OrderData> Orders = new List<OrderData>();
+            public OrderData()
+            {
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BtLAjvCdlSskJeRS?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5 %}
+            }
+            public OrderData(int? OrderID, string CustomerID, DateTime? OrderDate, double Freight)
+            {
+                this.OrderID = OrderID;
+                this.CustomerID = CustomerID;
+                this.OrderDate = OrderDate;
+                this.Freight = Freight;
+            }
+
+            public static List<OrderData> GetAllRecords()
+            {
+                if (Orders.Count() == 0)
+                {
+                    int code = 10;
+                    for (int? i = 1; i < 2; i++)
+                    {
+                        Orders.Add(new OrderData(1, "Nancy", new DateTime(1993, 09, 15), 98));
+                        Orders.Add(new OrderData(2, "Andrew", new DateTime(1997, 06, 01), 46));
+                        Orders.Add(new OrderData(3, "Steven", new DateTime(2000, 04, 04), 56));
+                        Orders.Add(new OrderData(4, "Margaret", new DateTime(1895, 11, 11), 74));
+                        Orders.Add(new OrderData(5, "Janet", new DateTime(2001, 08, 04), 83));
+                        Orders.Add(new OrderData(6, "Andrew", new DateTime(2022, 04, 09), 51));
+                        Orders.Add(new OrderData(7, "Nancy", new DateTime(2023, 06, 06), 23));
+                        Orders.Add(new OrderData(8, "Margaret", new DateTime(2011, 12, 30), 87));
+                        Orders.Add(new OrderData(9, "Janet", new DateTime(2012, 07, 07), 34));
+                        code += 5;
+                    }
+                }
+                return Orders;
+            }
+
+            public int? OrderID { get; set; }
+            public string CustomerID { get; set; }
+            public DateTime? OrderDate { get; set; }
+            public double Freight { get; set; }
+        
+    }
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hXLqsMBjwBjyyIfv?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ### Customizing the DataGrid aggregate content in an exported Excel document
 
@@ -651,15 +685,17 @@ You can customize the DataGrid aggregate content in the exported document. This 
 
 This can be demonstrated using the following sample:
 
-```cshtml
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+
 @using Syncfusion.Blazor.Grids
 
-<SfGrid @ref="Grid" DataSource="@Orders" AllowExcelExport="true" Toolbar="@(new List<string>() { "ExcelExport" })">
-    <GridEvents ExcelAggregateTemplateInfo="ExcelAggregateTemplateInfoHandler" OnToolbarClick="ToolbarClickHandler" TValue="Order"></GridEvents>
+<SfGrid @ref="Grid" DataSource="@GridData" AllowExcelExport="true" Toolbar="@(new List<string>() { "ExcelExport" })">
+    <GridEvents ExcelAggregateTemplateInfo="ExcelAggregateTemplateInfoHandler" OnToolbarClick="ToolbarClickHandler" TValue="OrderData"></GridEvents>
     <GridAggregates>
         <GridAggregate>
             <GridAggregateColumns>
-                <GridAggregateColumn Field=@nameof(Order.Freight) Type="AggregateType.Sum" Format="C2">
+                <GridAggregateColumn Field=@nameof(OrderData.Freight) Type="AggregateType.Sum" Format="C2">
                     <FooterTemplate>
                         @{
                             var aggregate = (context as AggregateTemplateContext);
@@ -673,7 +709,7 @@ This can be demonstrated using the following sample:
         </GridAggregate>
         <GridAggregate>
             <GridAggregateColumns>
-                <GridAggregateColumn Field=@nameof(Order.CustomerID) Type="AggregateType.Count" Format="C2">
+                <GridAggregateColumn Field=@nameof(OrderData.CustomerID) Type="AggregateType.Count" Format="C2">
                     <FooterTemplate>
                         @{
                             var aggregate = (context as AggregateTemplateContext);
@@ -687,37 +723,23 @@ This can be demonstrated using the following sample:
         </GridAggregate>
     </GridAggregates>
     <GridColumns>
-        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
-        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
-
 @code {
-    private SfGrid<Order> Grid;
+    private SfGrid<OrderData> Grid;
 
-    public List<Order> Orders { get; set; }
+    public List<OrderData> GridData { get; set; }
 
     protected override void OnInitialized()
     {
-        Orders = Enumerable.Range(1, 75).Select(x => new Order()
-            {
-                OrderID = 1000 + x,
-                CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
-                Freight = 2.1 * x,
-                OrderDate = DateTime.Now.AddDays(-x),
-            }).ToList();
+        GridData = OrderData.GetAllRecords();
     }
 
-    public class Order
-    {
-        public int? OrderID { get; set; }
-        public string CustomerID { get; set; }
-        public DateTime? OrderDate { get; set; }
-        public double? Freight { get; set; }
-    }
-
+ 
     public async Task ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
     {
         await this.Grid.ExcelExport();
@@ -734,12 +756,59 @@ This can be demonstrated using the following sample:
             args.Style.BackColor = "#7CFC00";
         }
 
-       
+
     }
 }
-```
+{% endhighlight %}
+{% highlight c# tabtitle="OrderData.cs" %}
+public class OrderData
+    {
+        
+            public static List<OrderData> Orders = new List<OrderData>();
+            public OrderData()
+            {
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hXLANbidbeJaabHy?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+            }
+            public OrderData(int? OrderID, string CustomerID, DateTime? OrderDate, double Freight)
+            {
+                this.OrderID = OrderID;
+                this.CustomerID = CustomerID;
+                this.OrderDate = OrderDate;
+                this.Freight = Freight;
+            }
+
+            public static List<OrderData> GetAllRecords()
+            {
+                if (Orders.Count() == 0)
+                {
+                    int code = 10;
+                    for (int? i = 1; i < 2; i++)
+                    {
+                        Orders.Add(new OrderData(1, "Nancy", new DateTime(1993, 09, 15), 98));
+                        Orders.Add(new OrderData(2, "Andrew", new DateTime(1997, 06, 01), 46));
+                        Orders.Add(new OrderData(3, "Steven", new DateTime(2000, 04, 04), 56));
+                        Orders.Add(new OrderData(4, "Margaret", new DateTime(1895, 11, 11), 74));
+                        Orders.Add(new OrderData(5, "Janet", new DateTime(2001, 08, 04), 83));
+                        Orders.Add(new OrderData(6, "Andrew", new DateTime(2022, 04, 09), 51));
+                        Orders.Add(new OrderData(7, "Nancy", new DateTime(2023, 06, 06), 23));
+                        Orders.Add(new OrderData(8, "Margaret", new DateTime(2011, 12, 30), 87));
+                        Orders.Add(new OrderData(9, "Janet", new DateTime(2012, 07, 07), 34));
+                        code += 5;
+                    }
+                }
+                return Orders;
+            }
+
+            public int? OrderID { get; set; }
+            public string CustomerID { get; set; }
+            public DateTime? OrderDate { get; set; }
+            public double Freight { get; set; }
+        
+    }
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LZrUCiBXloodxJqV?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ### Customizing the DataGrid group caption content in an exported Excel document
 
@@ -747,12 +816,12 @@ You can customize the values and  its styles for a particular group caption cont
 
 This can be demonstrated using the following sample:
 
-```cshtml
-
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids
 
-<SfGrid ID="Grid" @ref="DefaultGrid" DataSource="@Orders" Toolbar="@(new List<string>() { "ExcelExport" })" AllowExcelExport="true" AllowPaging="true" AllowGrouping="true">
-    <GridEvents ExcelGroupCaptionTemplateInfo="ExcelGroupCaptionHandler" OnToolbarClick="ToolbarClickHandler" TValue="Order"></GridEvents>
+<SfGrid ID="Grid" @ref="DefaultGrid" DataSource="@GridData" AllowGrouping="true" AllowExcelExport="true" Toolbar="@(new List<string>() { "ExcelExport" })">
+    <GridEvents ExcelGroupCaptionTemplateInfo="ExcelGroupCaptionHandler" OnToolbarClick="ToolbarClickHandler" TValue="OrderData"></GridEvents>
     <GridGroupSettings Columns="@Initial">
         <CaptionTemplate>
             @{
@@ -762,16 +831,22 @@ This can be demonstrated using the following sample:
         </CaptionTemplate>
     </GridGroupSettings>
     <GridColumns>
-        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
-        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
-
 @code {
-    private SfGrid<Order> DefaultGrid;
-    public List<Order> Orders { get; set; }
+    private SfGrid<OrderData> DefaultGrid;
+
+    public List<OrderData> GridData { get; set; }
+
+    protected override void OnInitialized()
+    {
+        GridData = OrderData.GetAllRecords();
+    }
+
     string[] Initial = new string[] { "CustomerID" };
 
     public void ExcelGroupCaptionHandler(ExcelCaptionTemplateArgs Args)
@@ -780,16 +855,14 @@ This can be demonstrated using the following sample:
         {
             Args.Cell.Value = Args.Field + " - " + Args.Key;
         }
-        
+
         else if (Args.Field == "OrderID")
         {
             Args.Style.BackColor = "#DC143C";
 
         }
-        
+
     }
-
-
 
     public async Task ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
     {
@@ -798,28 +871,57 @@ This can be demonstrated using the following sample:
             await this.DefaultGrid.ExportToExcelAsync();
         }
     }
-    protected override void OnInitialized()
-    {
-        Orders = Enumerable.Range(1, 75).Select(x => new Order()
-            {
-                OrderID = 1000 + x,
-                CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
-                Freight = 2.1 * x,
-                OrderDate = DateTime.Now.AddDays(-x),
-            }).ToList();
-    }
-
-    public class Order
-    {
-        public int? OrderID { get; set; }
-        public string CustomerID { get; set; }
-        public DateTime? OrderDate { get; set; }
-        public double? Freight { get; set; }
-    }
 }
-```
+{% endhighlight %}
+{% highlight c# tabtitle="OrderData.cs" %}
+public class OrderData
+    {
+        
+            public static List<OrderData> Orders = new List<OrderData>();
+            public OrderData()
+            {
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rZBqNvsdbnCGVrWd?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+            }
+            public OrderData(int? OrderID, string CustomerID, DateTime? OrderDate, double Freight)
+            {
+                this.OrderID = OrderID;
+                this.CustomerID = CustomerID;
+                this.OrderDate = OrderDate;
+                this.Freight = Freight;
+            }
+
+            public static List<OrderData> GetAllRecords()
+            {
+                if (Orders.Count() == 0)
+                {
+                    int code = 10;
+                    for (int? i = 1; i < 2; i++)
+                    {
+                        Orders.Add(new OrderData(1, "Nancy", new DateTime(1993, 09, 15), 98));
+                        Orders.Add(new OrderData(2, "Andrew", new DateTime(1997, 06, 01), 46));
+                        Orders.Add(new OrderData(3, "Steven", new DateTime(2000, 04, 04), 56));
+                        Orders.Add(new OrderData(4, "Margaret", new DateTime(1895, 11, 11), 74));
+                        Orders.Add(new OrderData(5, "Janet", new DateTime(2001, 08, 04), 83));
+                        Orders.Add(new OrderData(6, "Andrew", new DateTime(2022, 04, 09), 51));
+                        Orders.Add(new OrderData(7, "Nancy", new DateTime(2023, 06, 06), 23));
+                        Orders.Add(new OrderData(8, "Margaret", new DateTime(2011, 12, 30), 87));
+                        Orders.Add(new OrderData(9, "Janet", new DateTime(2012, 07, 07), 34));
+                        code += 5;
+                    }
+                }
+                return Orders;
+            }
+
+            public int? OrderID { get; set; }
+            public string CustomerID { get; set; }
+            public DateTime? OrderDate { get; set; }
+            public double Freight { get; set; }
+        
+    }
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VjhgiWriXtQQSqSF?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 
 ### Customizing the background color for a particular column in an exported Excel document
