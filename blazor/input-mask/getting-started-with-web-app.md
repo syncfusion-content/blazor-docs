@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with Web App for Blazor Input Mask Component | Syncfusion
-description: Check out the documentation for getting started with Blazor Input Mask Component in Blazor Web App.
+description: Checkout and learn about the documentation for getting started with Blazor Input Mask Component in Blazor Web App.
 platform: Blazor
 component: Input Mask
 documentation: ug

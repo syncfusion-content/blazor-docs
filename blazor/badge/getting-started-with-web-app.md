@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Getting Started with Web App for Blazor Badge Component | Syncfusion
-description: Check out the documentation for getting started with Blazor Badge Component in Blazor Web App.
+description: Checkout and learn about the documentation for getting started with Blazor Badge Component in Blazor Web App.
 platform: Blazor
 component: Badge
 documentation: ug
 ---
 
-# Getting Started with Blazor Badge Component in Blazor Web App
+# Getting Started with Blazor Badge Component in Web App
 
 This article provides a step-by-step instructions for building `Blazor Web App` with `Blazor Badge` component using [Visual Studio](https://visualstudio.microsoft.com/vs/).
 

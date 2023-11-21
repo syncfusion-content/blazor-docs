@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with Web App for Blazor In-place Editor Component | Syncfusion
-description: Check out the documentation for getting started with Blazor In-place Editor Component in Blazor Web App.
+description: Checkout and learn about the documentation for getting started with Blazor In-place Editor Component in Blazor Web App.
 platform: Blazor
 component: In place Editor
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 <!-- markdownlint-disable MD024 -->
 
-# Getting Started with Blazor In-place Editor Component in Blazor Web App
+# Getting Started with Blazor In-place Editor Component in Web App
 
 This article provides a step-by-step instructions for building `Blazor Web App` with `Blazor In-place Editor` component using [Visual Studio](https://visualstudio.microsoft.com/vs/).
 
