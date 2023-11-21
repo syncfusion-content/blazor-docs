@@ -713,7 +713,7 @@ In the below sample, DataGrid is rendered with a customized sort icon.
        
 
 }
- % endhighlight %}
+ {% endhighlight %}
 {% endtabs %}
 
 
@@ -868,7 +868,7 @@ The following example demonstrates how to add sort columns to a grid. It utilize
 
 
     }
-% endhighlight %}
+{% endhighlight %}
 {% endtabs %}
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LtBgsWDKBXuYpcUi?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
