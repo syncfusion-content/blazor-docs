@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with Web App for Blazor ContextMenu Component in Visual Studio
+title: Getting Started with Web App for Blazor ContextMenu Component | Syncfusion
 description: Check out the documentation for getting started with Blazor ContextMenu Component in Blazor Web App.
 platform: Blazor
 component: ContextMenu

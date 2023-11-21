@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with Web App for Blazor Dashboard Layout Component in Visual Studio
+title: Getting Started with Web App for Blazor Dashboard Layout Component | Syncfusion
 description: Check out the documentation for getting started with Blazor Dashboard Layout Component in Blazor Web App.
 platform: Blazor
 component: Dashboard Layout

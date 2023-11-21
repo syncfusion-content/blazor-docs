@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with Web App for Blazor Calendar Component in Visual Studio
+title: Getting Started with Web App for Blazor Calendar Component | Syncfusion
 description: Check out the documentation for getting started with Blazor Calendar Component in Blazor Web App.
 platform: Blazor
 component: Calendar

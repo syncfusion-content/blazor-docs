@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with Web App for Blazor Breadcrumb Component in Visual Studio
+title: Getting Started with Web App for Blazor Breadcrumb Component | Syncfusion
 description: Check out the documentation for getting started with Blazor Breadcrumb Component in Blazor Web App.
 platform: Blazor
 component: Breadcrumb

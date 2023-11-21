@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with Web App for Blazor DatePicker Component in Visual Studio
+title: Getting Started with Web App for Blazor DatePicker Component | Syncfusion
 description: Check out the documentation for getting started with Blazor DatePicker Component in Blazor Web App.
 platform: Blazor
 component: DatePicker

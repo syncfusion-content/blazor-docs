@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with Web App for Blazor Card Component in Visual Studio
+title: Getting Started with Web App for Blazor Card Component | Syncfusion
 description: Check out the documentation for getting started with Blazor Card Component in Blazor Web App.
 platform: Blazor
 component: Card
