@@ -404,3 +404,5 @@ The taskbar editing tooltip can be customized using the [GanttTooltipSettings.Ed
 ```
 
 ![Blazor Gantt Chart displays editing tooltip template](images/editing-tooltip-template.gif)
+
+

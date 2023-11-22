@@ -612,5 +612,16 @@ You can enable or disable the Grid cell tooltip using the [GanttColumn.ClipMode]
 }
 ```
 
+### Clip mode
+
+The clip mode provides options to display its overflow cell content and it can be defined by the `GanttColumn.ClipMode` property.
+
+The following are three types of `ClipMode`:
+
+* `Clip`: Truncates the cell content when it overflows its area.
+* `Ellipsis`: Displays ellipsis when content of the cell overflows its area.
+* `EllipsisWithTooltip`: Displays ellipsis when content of the cell overflows its area; it displays the tooltip content when hover over ellipsis.
+
+N> By default, all the column's `ClipMode` property is defined as `EllipsisWithTooltip`.
 
 N> You can refer to our [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Gantt Chart example](https://blazor.syncfusion.com/demos/gantt-chart/default-functionalities?theme=bootstrap4) to know how to render and configure the Gantt.
