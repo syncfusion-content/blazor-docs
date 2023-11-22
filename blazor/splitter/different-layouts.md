@@ -426,4 +426,4 @@ Once the above configurations has been completed, the output will be displayed l
 
 ## See Also
 
-* [Multiple panes in Splitter](./split-panes)
+* [Multiple panes in Splitter](./split-panes/)
