@@ -102,8 +102,8 @@ The number of records displayed in the Gantt chart is determined implicitly by t
     {
         public int ID { get; set; }
         public string TaskName { get; set; }
-        public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
+        public DateTime? StartDate { get; set; }
+        public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public string Assignee { get; set; }
         public string Reporter { get; set; }
@@ -324,8 +324,8 @@ To enable the column virtualization, set the [EnableRowVirtualization](https://h
     {
         public int ProjectId { get; set; }
         public string ProjectName { get; set; }
-        public DateTime ProjectStartDate { get; set; }
-        public DateTime ProjectEndDate { get; set; }
+        public DateTime? ProjectStartDate { get; set; }
+        public DateTime? ProjectEndDate { get; set; }
         public string ProjectDuration { get; set; }
         public int ProjectProgress { get; set; }
         public int? ParentId { get; set; }
@@ -458,8 +458,8 @@ Timeline virtualization allows you to load data sources having a large timespan 
     {
         public int ProjectId { get; set; }
         public string ProjectName { get; set; }
-        public DateTime ProjectStartDate { get; set; }
-        public DateTime ProjectEndDate { get; set; }
+        public DateTime? ProjectStartDate { get; set; }
+        public DateTime? ProjectEndDate { get; set; }
         public string ProjectDuration { get; set; }
         public int ProjectProgress { get; set; }
         public int? ParentId { get; set; }
