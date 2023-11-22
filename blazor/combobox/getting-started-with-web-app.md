@@ -21,7 +21,7 @@ You can create a **Blazor Web App** using Visual Studio 2022 via [Microsoft Temp
 
 ## Install Syncfusion Blazor DropDownss and Themes NuGet in the Blazor Web App
 
-Here's an example of how to add **Blazor ComboBox** component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install [Syncfusion.Blazor.DropDownss](https://www.nuget.org/packages/Syncfusion.Blazor.DropDownss/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/). For a web app with 'WebAssembly' or 'Auto' interactive render mode, install the Syncfusion NuGet packages in the project where you intend to add the components.  Alternatively, you can utilize the following package manager command to achieve the same.
+Here's an example of how to add **Blazor ComboBox** component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install [Syncfusion.Blazor.DropDownss](https://www.nuget.org/packages/Syncfusion.Blazor.DropDowns/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/). For a web app with 'WebAssembly' or 'Auto' interactive render mode, install the Syncfusion NuGet packages in the project where you intend to add the components.  Alternatively, you can utilize the following package manager command to achieve the same.
 
 {% tabs %}
 {% highlight C# tabtitle="Package Manager" %}
