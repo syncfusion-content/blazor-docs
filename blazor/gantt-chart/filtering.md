@@ -34,7 +34,7 @@ The [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gan
         public int TaskId { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
+        public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
@@ -94,7 +94,7 @@ The Gantt Chart supports a set of filtering modes with the [GanttFilterSettings.
         public int TaskId { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
+        public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
@@ -150,7 +150,7 @@ To apply the filter at initial rendering, set the filter `Predicate` collections
         public int TaskId { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
+        public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
@@ -222,7 +222,7 @@ In the following sample, type **Perform** in the **TaskName** column to filter d
         public int TaskId { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
+        public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
@@ -279,7 +279,7 @@ You can filter the columns dynamically by using the [FilterByColumnAsync](https:
         public int TaskId { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
+        public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
@@ -347,7 +347,7 @@ The following code snippet explains the above behavior.
         public int TaskId { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
+        public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }

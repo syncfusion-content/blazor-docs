@@ -44,7 +44,7 @@ The events should be provided to the Gantt Chart using the GanttChartEvents comp
         public int TaskId { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
+        public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
@@ -99,7 +99,7 @@ The events should be provided to the Gantt Chart using the GanttChartEvents comp
         public int TaskId { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
+        public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
@@ -160,7 +160,7 @@ The events should be provided to the Gantt Chart using the GanttChartEvents comp
         public int TaskId { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
+        public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
@@ -219,7 +219,7 @@ The events should be provided to the Gantt Chart using the GanttChartEvents comp
         public int TaskId { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
+        public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
@@ -278,7 +278,7 @@ The events should be provided to the Gantt Chart using the GanttChartEvents comp
         public int TaskId { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
+        public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
@@ -337,7 +337,7 @@ The events should be provided to the Gantt Chart using the GanttChartEvents comp
         public int TaskId { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
+        public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
@@ -396,7 +396,7 @@ The events should be provided to the Gantt Chart using the GanttChartEvents comp
         public int TaskId { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
+        public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
@@ -455,7 +455,7 @@ The events should be provided to the Gantt Chart using the GanttChartEvents comp
         public int TaskId { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
+        public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
@@ -515,7 +515,7 @@ The events should be provided to the Gantt Chart using the GanttChartEvents comp
         public int TaskId { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
+        public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
@@ -576,7 +576,7 @@ The events should be provided to the Gantt Chart using the GanttChartEvents comp
         public int TaskId { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
+        public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
@@ -638,7 +638,7 @@ The events should be provided to the Gantt Chart using the GanttChartEvents comp
         public int TaskId { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
+        public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
@@ -698,7 +698,7 @@ The events should be provided to the Gantt Chart using the GanttChartEvents comp
         public int TaskId { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
+        public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
@@ -758,7 +758,7 @@ The events should be provided to the Gantt Chart using the GanttChartEvents comp
         public int TaskId { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
+        public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
@@ -818,7 +818,7 @@ The events should be provided to the Gantt Chart using the GanttChartEvents comp
         public int TaskId { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
+        public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
@@ -877,7 +877,7 @@ The events should be provided to the Gantt Chart using the GanttChartEvents comp
         public int TaskId { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
+        public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
@@ -939,7 +939,7 @@ The events should be provided to the Gantt Chart using the GanttChartEvents comp
         public int TaskId { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
+        public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
@@ -997,7 +997,7 @@ The events should be provided to the Gantt Chart using the GanttChartEvents comp
         public int TaskId { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
+        public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
@@ -1055,7 +1055,7 @@ The events should be provided to the Gantt Chart using the GanttChartEvents comp
         public int TaskId { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
+        public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
@@ -1114,7 +1114,7 @@ The events should be provided to the Gantt Chart using the GanttChartEvents comp
         public int TaskId { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
+        public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
@@ -1173,7 +1173,7 @@ The events should be provided to the Gantt Chart using the GanttChartEvents comp
         public int TaskId { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
+        public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
@@ -1233,7 +1233,7 @@ The events should be provided to the Gantt Chart using the GanttChartEvents comp
         public int TaskId { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
+        public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
@@ -1292,7 +1292,7 @@ The events should be provided to the Gantt Chart using the GanttChartEvents comp
         public int TaskId { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
+        public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
@@ -1352,7 +1352,7 @@ The events should be provided to the Gantt Chart using the GanttChartEvents comp
         public int TaskId { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
+        public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
@@ -1409,7 +1409,7 @@ The events should be provided to the Gantt Chart using the GanttChartEvents comp
         public int TaskId { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
+        public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
@@ -1469,7 +1469,7 @@ The events should be provided to the Gantt Chart using the GanttChartEvents comp
         public int TaskId { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
+        public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
@@ -1530,7 +1530,7 @@ The events should be provided to the Gantt Chart using the GanttChartEvents comp
         public int TaskId { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
+        public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
@@ -1586,7 +1586,7 @@ The events should be provided to the Gantt Chart using the GanttChartEvents comp
         public int TaskId { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
+        public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
@@ -1646,7 +1646,7 @@ The events should be provided to the Gantt Chart using the GanttChartEvents comp
         public int TaskId { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
+        public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
@@ -1707,7 +1707,7 @@ The events should be provided to the Gantt Chart using the GanttChartEvents comp
         public int TaskId { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
+        public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
@@ -1768,7 +1768,7 @@ The events should be provided to the Gantt Chart using the GanttChartEvents comp
         public int TaskId { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
+        public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
@@ -1827,7 +1827,7 @@ The events should be provided to the Gantt Chart using the GanttChartEvents comp
         public int TaskId { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
+        public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
@@ -1860,7 +1860,7 @@ The events should be provided to the Gantt Chart using the GanttChartEvents comp
 @using Syncfusion.Blazor.Grids
 
 
-<SfGantt DataSource="@TaskCollection"  Height="450px" Width="900px" EnableContextMenu="true">
+<SfGantt DataSource="@TaskCollection"  Height="450px" Width="900px" ShowColumnMenu="true">
     <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate"
                      Duration="Duration" Progress="Progress" ParentID="ParentId">
     </GanttTaskFields>
@@ -1886,7 +1886,7 @@ The events should be provided to the Gantt Chart using the GanttChartEvents comp
         public int TaskId { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
+        public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
@@ -1945,7 +1945,7 @@ The events should be provided to the Gantt Chart using the GanttChartEvents comp
         public int TaskId { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
+        public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
@@ -2004,7 +2004,7 @@ The events should be provided to the Gantt Chart using the GanttChartEvents comp
         public int TaskId { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
+        public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
@@ -2063,7 +2063,7 @@ The events should be provided to the Gantt Chart using the GanttChartEvents comp
         public int TaskId { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
+        public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
@@ -2122,7 +2122,7 @@ The events should be provided to the Gantt Chart using the GanttChartEvents comp
         public int TaskId { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
+        public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
@@ -2151,7 +2151,8 @@ The events should be provided to the Gantt Chart using the GanttChartEvents comp
 [Expanding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_Expanding) event triggers when a row expands.
 
 ```cshtml
-using Syncfusion.Blazor.Gantt
+@using Syncfusion.Blazor.Gantt
+@using Syncfusion.Blazor.TreeGrid
 
 <SfGantt DataSource="@TaskCollection" Height="450px" Width="900px">
     <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate"
@@ -2169,7 +2170,7 @@ using Syncfusion.Blazor.Gantt
         this.TaskCollection = GetTaskCollection();
     }
 
-    public void Expanding(Syncfusion.Blazor.TreeGrid.RowExpandingEventArgs<TaskData> args)
+    public void Expanding(RowExpandingEventArgs<TaskData> args)
     {
         // Here, you can customize your code.
     }
@@ -2179,7 +2180,7 @@ using Syncfusion.Blazor.Gantt
         public int TaskId { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
+        public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
@@ -2238,7 +2239,7 @@ using Syncfusion.Blazor.Gantt
         public int TaskId { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
+        public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
@@ -2297,7 +2298,7 @@ using Syncfusion.Blazor.Gantt
             public int TaskId { get; set; }
             public string TaskName { get; set; }
             public DateTime StartDate { get; set; }
-            public DateTime EndDate { get; set; }
+            public DateTime? EndDate { get; set; }
             public string Duration { get; set; }
             public int Progress { get; set; }
             public int? ParentId { get; set; }
@@ -2356,7 +2357,7 @@ using Syncfusion.Blazor.Gantt
         public int TaskId { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
+        public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
@@ -2416,7 +2417,7 @@ using Syncfusion.Blazor.Gantt
         public int TaskId { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
+        public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
@@ -2474,7 +2475,7 @@ using Syncfusion.Blazor.Gantt
         public int TaskId { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
+        public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
@@ -2529,7 +2530,7 @@ using Syncfusion.Blazor.Gantt
         public int TaskId { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
+        public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }

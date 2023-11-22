@@ -39,7 +39,7 @@ A task delete option in the Gantt Chart component can be enabled by enabling the
         public int TaskId { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
+        public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
@@ -93,7 +93,7 @@ The following code snippet explains how to enable the delete confirmation messag
         public int TaskId { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
+        public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }

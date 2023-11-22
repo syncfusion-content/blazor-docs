@@ -71,8 +71,7 @@ Open **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusio
 
 Now, register the Syncfusion Blazor Service in the created Microsoft teams app. Open the `~/Program.cs` file and register the Syncfusion Blazor service as follows
 
-{% tabs %}
-{% highlight c# tabtitle="~/Program.cs" hl_lines="2 16" %}
+```cshtml
 
 ....
 using Syncfusion.Blazor;
@@ -93,8 +92,7 @@ builder.Services.AddSyncfusionBlazor();
 var app = builder.Build();
 ....
 
-{% endhighlight %}
-{% endtabs %}
+```
 
 ## Add stylesheet and script resources
 

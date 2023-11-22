@@ -34,6 +34,7 @@ One of the the following .NET SDK is required to develop and run the Blazor appl
 N> Not sure which SDK to download? See [recommended downloads for the latest version of .NET](https://dotnet.microsoft.com/en-us/download) and [version compatibility](https://blazor.syncfusion.com/documentation/common/how-to/version-compatibility).
 
 If you are planning to use Visual Studio to develop Blazor Applications.
+
 * .NET 8.0 requires Visual Studio 2022 17.8.0 or later.
 * .NET 7.0 requires Visual Studio 2022 17.4.3 or later.
 * .NET 6.0 requires Visual Studio 2022 17.0 Preview 4.1 or later.

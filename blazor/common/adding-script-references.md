@@ -91,6 +91,16 @@ If you are using `PDF Viewer`,`PDF Viewer(NextGen)` or `DocumentEditor`, ensure 
 </head>
 ```
 
+In addition to above, Syncfusion Blazor components provides latest scripts in CDN without versioning. You can use this in development environment if you want to always use the latest version of scripts. It is not recommended to use this in production environment.
+
+| Component | CDN Script Reference |
+| --- | --- |
+|  All components except PDF Viewer, PDF Viewer(NextGen) & Document Editor | https://cdn.syncfusion.com/blazor/syncfusion-blazor.min.js |
+| PDF Viewer | https://cdn.syncfusion.com/blazor/syncfusion-blazor-pdfviewer.min.js |
+| Document Editor | https://cdn.syncfusion.com/blazor/syncfusion-blazor-documenteditor.min.js |
+| PDF Viewer(NextGen) | https://cdn.syncfusion.com/blazor/syncfusion-blazor-sfpdfviewer.min.js |
+
+
 N> To add custom PDF Viewer(NextGen) script file in your application, refer [How to refer SfPdfViewer script file in application](../pdfviewer-2/how-to/refer-sfpdfviewer-script-in-application).
 
 ## Static web assets

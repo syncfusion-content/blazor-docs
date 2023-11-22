@@ -35,7 +35,7 @@ A row can be added to the Gantt Chart component from the toolbar while the `Gant
         public int TaskId { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
+        public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
@@ -86,7 +86,7 @@ A row can also be added above, below or child of the selected row by using conte
         public int TaskId { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
+        public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public double Progress { get; set; }
         public string Predecessor { get; set; }
@@ -132,7 +132,7 @@ You can add rows to the Gantt Chart component dynamically using the [AddRecordAs
 
 @code{
     public SfGantt<TaskData> Gantt;
-    public TaskData record = new TaskData() { TaskId = 9, TaskName = "New Added Record", StartDate = new DateTime(2019, 04, 05), Duration = "3", Progress = 50};
+    public TaskData record = new TaskData() { TaskId = 9, TaskName = "New Added Record", StartDate = new DateTime(2022, 04, 05), Duration = "3", Progress = 50};
 
     public void AddRow()
     {
@@ -149,7 +149,7 @@ You can add rows to the Gantt Chart component dynamically using the [AddRecordAs
         public int TaskId { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
+        public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
