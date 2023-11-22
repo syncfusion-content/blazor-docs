@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Getting started with Syncfusion Blazor Web App in Visual Studio
-description: Check out the documentation for getting started with Syncfusion Blazor Components in Blazor Web App.
+title: Getting started with Syncfusion Blazor Menu Bar Web App
+description: Check out the documentation for getting started with Syncfusion Blazor Menu Bar Components in Web App.
 platform: Blazor
-component: Common
+control: Menu Bar
 documentation: ug
 ---
 
-# Getting Started with Blazor Web App
+# Getting Started with Blazor Menu Bar Web App
 
-This article provides a step-by-step instructions for building `Blazor Web App` with `Blazor Accordion` component using [Visual Studio](https://visualstudio.microsoft.com/vs/).
+This article provides a step-by-step instructions for building `Blazor Web App` with [Blazor Menu Bar](https://www.syncfusion.com/blazor-components/blazor-menu-bar) component using [Visual Studio](https://visualstudio.microsoft.com/vs/).
 
 ## Prerequisites
 
@@ -19,9 +19,9 @@ This article provides a step-by-step instructions for building `Blazor Web App` 
 
 You can create a **Blazor Web App** using Visual Studio 2022 via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0) or the [Syncfusion Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio). While creating a Blazor Web App, configure corresponding [Interactive render mode](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-8.0#render-modes) and [Interactivity location](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0&pivots=windows).
 
-## Install Syncfusion Blazor Navigations and Themes NuGet in the Blazor Web App
+## Install Syncfusion Blazor Navigations and Themes NuGet in the App
 
-Here's an example of how to add **Blazor Accordion** component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install [Syncfusion.Blazor.Navigations](https://www.nuget.org/packages/Syncfusion.Blazor.Navigations/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/). For a web app with `WebAssembly` or `Auto` interactive render mode, install the Syncfusion NuGet packages in the project where you intend to add the components.  Alternatively, you can utilize the following package manager command to achieve the same.
+To add **Blazor Menu Bar** component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install [Syncfusion.Blazor.Navigations](https://www.nuget.org/packages/Syncfusion.Blazor.Navigations/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/). For a web app with `WebAssembly` or `Auto` interactive render mode, install the Syncfusion NuGet packages in the project where you intend to add the components.  Alternatively, you can utilize the following package manager command to achieve the same.
 
 {% tabs %}
 {% highlight C# tabtitle="Package Manager" %}
@@ -73,9 +73,9 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 
 N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic to discover various methods ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference), and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)) for referencing themes in your Blazor application. Also, check out the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic to learn different approaches for adding script references in your Blazor application.
 
-## Add Syncfusion Blazor Accordion component
+## Add Syncfusion Blazor Menu Bar component
 
-Add the Syncfusion Blazor Accordion component in the **~/Components/Pages/*.razor** file. If an interactivity location as `Per page/component` in the web app, define a render mode at the top of the `~Pages/*.razor` component, as follows:
+Add the Syncfusion Blazor Menu Bar component in the **~/Components/Pages/*.razor** file. If an interactivity location as `Per page/component` in the web app, define a render mode at the top of the `~Pages/*.razor` component, as follows:
 
 {% tabs %}
 {% highlight razor %}
@@ -89,17 +89,47 @@ Add the Syncfusion Blazor Accordion component in the **~/Components/Pages/*.razo
 {% tabs %}
 {% highlight razor %}
 
-<SfAccordion>
-    <AccordionItems>
-        <AccordionItem Header="Margeret Peacock" Content="Margeret Peacock was born on Saturday , 01 December 1990. Now lives at Coventry House Miner Rd., London,UK. Margeret Peacock holds a position of Sales Coordinator in our WA department, (Seattle USA). Joined our company on Saturday , 01 May 2010"></AccordionItem>
-        <AccordionItem Header="Laura Callahan" Content="Laura Callahan was born on Tuesday , 06 November 1990. Now lives at Edgeham Hollow Winchester Way, London,UK. Laura Callahan holds a position of Sales Coordinator in our WA department, (Seattle USA). Joined our company on Saturday , 01 May 2010"></AccordionItem>
-        <AccordionItem Header="Albert Dodsworth" Content="Albert Dodsworth was born on Thursday , 19 October 1989. Now lives at 4726 - 11th Ave. N.E., Seattle,USA.Albert Dodsworth holds a position of Sales Representative in our WA department, (Seattle USA). Joined our company on Friday , 01 May 2009"></AccordionItem>
-    </AccordionItems>
-</SfAccordion>
+<SfMenu TValue="MenuItem">
+    <MenuItems>
+        <MenuItem Text="File">
+            <MenuItems>
+                <MenuItem Text="Open"></MenuItem>
+                <MenuItem Text="Save"></MenuItem>
+                <MenuItem Text="Exit"></MenuItem>
+            </MenuItems>
+        </MenuItem>
+        <MenuItem Text="Edit">
+            <MenuItems>
+                <MenuItem Text="Cut"></MenuItem>
+                <MenuItem Text="Copy"></MenuItem>
+                <MenuItem Text="Paste"></MenuItem>
+            </MenuItems>
+        </MenuItem>
+        <MenuItem Text="View">
+            <MenuItems>
+                <MenuItem Text="Toolbars"></MenuItem>
+                <MenuItem Text="Zoomr"></MenuItem>
+                <MenuItem Text="Full Screen"></MenuItem>
+            </MenuItems>
+        </MenuItem>
+        <MenuItem Text="Tools">
+            <MenuItems>
+                <MenuItem Text="Spelling & Grammar"></MenuItem>
+                <MenuItem Text="Customize"></MenuItem>
+                <MenuItem Text="Options"></MenuItem>
+            </MenuItems>
+        </MenuItem>
+        <MenuItem Text="Go"></MenuItem>
+        <MenuItem Text="Help"></MenuItem>
+    </MenuItems>
+</SfMenu>
 
 {% endhighlight %}
 {% endtabs %}
 
-* Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion Blazor Accordion component in your default web browser.
+* Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion Blazor Menu Bar component in your default web browser.
 
-![Blazor Accordion Component](images/blazor-accordion-component.png)
+![Blazor MenuBar Component](./images/blazor-menubar.png)
+
+N> `TValue` can be specified as either `MenuItemModel` or `MenuItem`. If the menu is generated using the `Items` property, then `TValue` is specified as `MenuItemModel`. However, if it is created using a tag directive, then `TValue` is specified as `MenuItem`.
+
