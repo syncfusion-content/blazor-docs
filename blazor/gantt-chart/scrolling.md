@@ -47,7 +47,7 @@ To specify the [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
         public int TaskId { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
+        public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
@@ -106,7 +106,7 @@ Specify the [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gan
         public int TaskId { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
+        public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
@@ -153,7 +153,7 @@ Taskbar that is not visible in the viewport can be auto scrolled to make it visi
         public int TaskId { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
+        public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
@@ -285,8 +285,8 @@ RowIndex : <input @bind-value = "@RowIndex" />
     {
         public int ProjectId { get; set; }
         public string ProjectName { get; set; }
-        public DateTime ProjectStartDate { get; set; }
-        public DateTime ProjectEndDate { get; set; }
+        public DateTime? ProjectStartDate { get; set; }
+        public DateTime? ProjectEndDate { get; set; }
         public string ProjectDuration { get; set; }
         public int ProjectProgress { get; set; }
         public int? ParentId { get; set; }

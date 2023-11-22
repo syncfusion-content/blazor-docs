@@ -58,8 +58,8 @@ A task assigned to a resource is termed a resource task and is displayed as a ch
     {
         public int TaskId { get; set; }
         public string TaskName { get; set; }
-        public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
+        public DateTime? StartDate { get; set; }
+        public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
@@ -135,8 +135,8 @@ To highlight the range of overallocation dates with a square bracket, you can en
     {
         public int TaskId { get; set; }
         public string TaskName { get; set; }
-        public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
+        public DateTime? StartDate { get; set; }
+        public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
@@ -174,7 +174,7 @@ This allows you to effortlessly move the taskbar vertically, allowing for the sm
 
 @using Syncfusion.Blazor.Gantt
 
-<SfGantt @ref="Gantt" ShowOverallocation="true" TreeColumnIndex="1" DataSource="@TaskCollection" Height="450px" Width="900px" ViewType="ViewType.ResourceView" CollapseAllParentTasks=true
+<SfGantt @ref="Gantt" ShowOverallocation="true" TreeColumnIndex="2" DataSource="@TaskCollection" Height="450px" Width="900px" ViewType="ViewType.ResourceView" CollapseAllParentTasks=true
                      Toolbar="@(new List<Object>() { "Add", "Cancel", "Update" , "Delete", "Edit", "CollapseAll", "ExpandAll" })" >
                 <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" ParentID="ParentId" Work="Work" ResourceInfo="Resources" Dependency="Predecessor" >
                 </GanttTaskFields>
@@ -182,7 +182,6 @@ This allows you to effortlessly move the taskbar vertically, allowing for the sm
                     <GanttColumn Field="TaskId" Visible=false></GanttColumn>
                     <GanttColumn Field="ResourceId" Visible=false></GanttColumn>
                     <GanttColumn Field="TaskName" HeaderText="Name" Width="250"></GanttColumn>
-                    <GanttColumn Field="ResourceName" HeaderText="Name" Width="250"></GanttColumn>
                     <GanttColumn Field="Work" HeaderText="Work"></GanttColumn>
                     <GanttColumn Field="Progress"></GanttColumn>
                     <GanttColumn Field="StartDate" HeaderText="Start Date"></GanttColumn>
@@ -227,8 +226,8 @@ This allows you to effortlessly move the taskbar vertically, allowing for the sm
     {
         public int TaskId { get; set; }
         public string TaskName { get; set; }
-        public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
+        public DateTime? StartDate { get; set; }
+        public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }

@@ -44,7 +44,7 @@ public class TaskData
     public int TaskId { get; set; }
     public string TaskName { get; set; }
     public DateTime StartDate { get; set; }
-    public DateTime EndDate { get; set; }
+    public DateTime? EndDate { get; set; }
     public string Duration { get; set; }
     public int Progress { get; set; }
     public List<TaskData> SubTasks { get; set; }
@@ -283,16 +283,6 @@ ExpandoObject can be bound to Gantt by assigning to the `DataSource` property. G
             ChildRecord.ParentID = ParentId;
             Data.Add(ChildRecord);
         }
-    }
-    public class ExpandoObject
-    {
-        public int TaskID { get; set; }
-        public string TaskName { get; set; }
-        public DateTime? StartDate { get; set; }
-        public DateTime? EndDate { get; set; }
-        public int Progress { get; set; }
-        public string Duration { get; set; }
-        public int? ParentID { get; set; }
     }
 }
 ```
@@ -585,8 +575,8 @@ You can use **WebApiAdaptor** to bind datagrid with Web API created using **ODat
     {
         public int TaskId { get; set; }
         public string TaskName { get; set; }
-        public DateTime StartDate { get; set; }
-        public int Duration { get; set; }
+        public DateTime? StartDate { get; set; }
+        public int? Duration { get; set; }
         public int Progress { get; set; }
         public string Predecessor { get; set; }
         public List<GanttRemoteData>SubTasks { get; set; }
