@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with Syncfusion Blazor AutoComplete Component in WebApp
+title: Getting Started with Syncfusion Blazor AutoComplete in WebApp
 description: Checkout and learn about the documentation for getting started with Blazor Accordion Component in Blazor Web App.
 platform: Blazor
 component: AutoComplete

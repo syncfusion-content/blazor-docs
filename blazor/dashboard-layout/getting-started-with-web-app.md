@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with Syncfusion Blazor Dashboard Layout Component in WebApp
+title: Getting Started with Syncfusion Blazor Dashboard Layout in WebApp
 description: Checkout and learn about the documentation for getting started with Blazor Dashboard Layout Component in Blazor Web App.
 platform: Blazor
 component: Dashboard Layout

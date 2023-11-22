@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with Syncfusion Blazor DateTimePicker Component in WebApp
+title: Getting Started with Syncfusion Blazor DateTimePicker in WebApp
 description: Checkout and learn about the documentation for getting started with Blazor DateTimePicker Component in Blazor Web App.
 platform: Blazor
 component: DateTimePicker

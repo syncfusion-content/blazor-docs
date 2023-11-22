@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with Syncfusion Blazor CircularGauge Component in WebApp
+title: Getting Started with Syncfusion Blazor CircularGauge in WebApp
 description: Checkout and learn about the documentation for getting started with Blazor CircularGauge Component in Blazor Web App.
 platform: Blazor
 component: CircularGauge
