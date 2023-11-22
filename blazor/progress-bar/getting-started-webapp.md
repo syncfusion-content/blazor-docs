@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting started with Syncfusion Blazor ProgressBar Web App in Visual Studio
+title: Getting started with Syncfusion Blazor ProgressBar Web App
 description: Check out the documentation for getting started with Syncfusion Blazor ProgressBar Components in Blazor Web App.
 platform: Blazor
 control: ProgressBar

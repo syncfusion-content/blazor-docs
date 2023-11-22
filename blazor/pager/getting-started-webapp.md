@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting started with Syncfusion Blazor Pager Web App in Visual Studio
-description: Check out the documentation for getting started with Syncfusion Blazor Pager Components in Web App.
+description: Check out the documentation for getting started with Syncfusion Blazor Pager Components in Blazor Web App.
 platform: Blazor
 control: Pager
 documentation: ug

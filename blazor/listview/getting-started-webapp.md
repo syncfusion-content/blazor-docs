@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting started with Syncfusion Blazor ListView Web App in Visual Studio
+title: Getting started with Syncfusion Blazor ListView Web App
 description: Check out the documentation for getting started with Syncfusion Blazor ListView Components in Blazor Web App.
 platform: Blazor
 control: Listview

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting started with Syncfusion Blazor Mention Web App in Visual Studio
+title: Getting started with Syncfusion Blazor Mention Web App
 description: Check out the documentation for getting started with Syncfusion Blazor Mention Components in Web App.
 platform: Blazor
 control: Mention

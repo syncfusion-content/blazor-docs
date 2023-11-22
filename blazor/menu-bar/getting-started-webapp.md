@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting started with Syncfusion Blazor Menu Bar Web App in Visual Studio
+title: Getting started with Syncfusion Blazor Menu Bar Web App
 description: Check out the documentation for getting started with Syncfusion Blazor Menu Bar Components in Web App.
 platform: Blazor
 control: Menu Bar
