@@ -10,6 +10,8 @@ documentation: ug
 
 # Splitter in Blazor Gantt Chart Component
 
+## Splitter
+
 Gantt Chart component consists of both Tree Grid part and Chart part. Splitter is used to resize the Tree Grid section from the Chart section. You can change the position of the Splitter when loading the Gantt Chart component using the [SplitterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttSelectionSettings.html) property. The following list defines possible values for this property:
 
 | **Splitter Properties** | **Description** |
@@ -67,7 +69,7 @@ Gantt Chart component consists of both Tree Grid part and Chart part. Splitter i
 
 ![Changing Splitter Position in Blazor Gantt Chart](images/blazor-gantt-chart-splitter-position.png)
 
-### Change splitter position dynamically
+## Change splitter position dynamically
 
 In Gantt Chart, you can change the splitter position dynamically by using `SetSplitterPositionAsync` method. You can change the splitter position by passing value and type parameter to `SetSplitterPositionAsync` method. Type parameter will accept one of the following values 'Position', 'ColumnIndex', 'ViewType'. 
 

@@ -180,9 +180,6 @@ You can design your taskbars to view the tasks in Gantt Chart Chart by using `Ga
 
 ![Blazor Gantt Chart with Taskbar Template](images/blazor-gantt-chart-taskbar-template.png)
 
-### See also
-
-* [Customizing the Blazor Gantt Chart’s Taskbar](https://www.syncfusion.com/blogs/post/customizing-the-blazor-gantt-charts-taskbar-an-overview.aspx)
 
 ## Taskbar customization
 
@@ -433,7 +430,7 @@ In the Gantt Chart component, you can enable or disable the mouse hover tooltip 
 
 N> The default value of the `GanttTooltipSettings.ShowTooltip` property is true.
 
-## Template
+## Tooltip template
 
 ### Taskbar tooltip
 
@@ -689,3 +686,7 @@ Customizing the indicator tooltip in a Gantt Chart using [GanttTooltipSettings.I
 ![Blazor Gantt Chart displays Manual Taskbar Tooltip](images/Indicator_Tolltip.png)
 
 
+
+## See also
+
+* [Customizing the Blazor Gantt Chart’s Taskbar](https://www.syncfusion.com/blogs/post/customizing-the-blazor-gantt-charts-taskbar-an-overview.aspx)

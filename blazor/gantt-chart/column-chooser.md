@@ -8,8 +8,9 @@ documentation: ug
 ---
 
 
-# Column chooser in Blazor Gantt Chart Component
+# Column Chooser in Blazor Gantt Chart Component
 
+## Column chooser
 The column chooser has options to show or hide columns dynamically. It can be enabled by defining the [ShowColumnChooser](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_ShowColumnChooser) as true.
 
 ```cshtml
@@ -69,9 +70,9 @@ The column chooser has options to show or hide columns dynamically. It can be en
         return Tasks;
     }
 }
-`````````
+```
 
-![Blazor Gantt Chart with Custom Column](images/blazor-gantt-column-chooser.gif)
+![Blazor Gantt Chart with Custom Column](./images/blazor-gantt-column-chooser.gif)
 
 ## Custom component in column chooser template
 
@@ -389,7 +390,7 @@ Model.cs
         public string Done { get; set; }
         public bool IsMilestone { get; set; }
     }
-````
+```
 
 The following output is displayed as a result of the above code example.
 

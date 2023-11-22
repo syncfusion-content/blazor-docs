@@ -115,7 +115,7 @@ In the following example, the minimum and maximum widths are defined for the `Du
 }
 ```
 
-## Touch Interaction 
+## Touch interaction 
 
 The Gantt Chart component supports to perform user interactions in mobile and tablet devices. This section explains how to interact with the Gantt features in touch-enabled devices.
 

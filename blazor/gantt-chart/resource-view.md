@@ -85,7 +85,7 @@ A task assigned to a resource is termed a resource task and is displayed as a ch
 
 N> There is not support for Indent/Oudent in resource view Gantt Chart.
 
-## Resource OverAllocation
+## Resource overallocation
 
 When a resource is assigned more work than they can complete within their available time in a day, it is referred to as overallocation. The available working time for resources to complete tasks in a day is calculated based on the [GanttDayWorkingTime](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttDayWorkingTimeCollection.html#Syncfusion_Blazor_Gantt_GanttDayWorkingTimeCollection_DayWorkingTime) property and the resource unit.
 

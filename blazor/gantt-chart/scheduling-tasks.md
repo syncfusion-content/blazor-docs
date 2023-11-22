@@ -356,7 +356,7 @@ Non-working days/weekends are used to represent the non-productive days in a pro
 N> By default, Saturdays and Sundays are considered as non-working days/weekend in a project.
 <br/> In the Gantt Chart component, you can make weekend as working day by setting the `IncludeWeekend` property to `true`.
 
-## Duration Unit 
+## Duration unit 
 
 In Gantt Chart, the tasks’ duration value can be measured by the following duration units,
 

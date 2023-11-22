@@ -107,7 +107,7 @@ You can select a row at the time of loading by setting the index of the row to t
 
 ## Selecting a row dynamically
 
-You can also select a row dynamically using the [SelectRowAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_SelectRowAsync_System_Double_System_Nullable_System_Boolean__) method. You can also select rows dynamically using the [SelectRowsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_SelectRowAsync_System_Double_System_Nullable_System_Boolean__) method. The following code demonstrates how to select a single or multiple rows dynamically by clicking the custom button.
+You can select a single row dynamically using the [SelectRowAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_SelectRowAsync_System_Double_System_Nullable_System_Boolean__) method. Similarly, you can use the [SelectRowsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_SelectRowAsync_System_Double_System_Nullable_System_Boolean__) method to dynamically select multiple rows. The following code demonstrates how to select a single or multiple rows dynamically by clicking the custom button.
 
 ```cshtml
 @using Syncfusion.Blazor.Gantt
@@ -221,14 +221,6 @@ You can select multiple rows by setting the `SelectionSettings.Type` property to
 
 ![Multiple Row Selection in Blazor Gantt Chart](images/blazor-gantt-chart-multi-row-selection.png)
 
-## Touch Interaction
 
-When you `tap` gantt row, tapped row will be selected.
-
-[Single selection](selection/#selection-mode) : To select a single row or cell, perform `single tap` on it.
-
-[Multiple selection](selection/#multiple-row-selection) : To perform multiple selection, `tap` on the multiple selection popup, and then tap the desired rows or cells.
-
-![Multiple selection in Blazor Gantt Chart](images/blazor-gantt-chart-multiple-selection.PNG)
 
 

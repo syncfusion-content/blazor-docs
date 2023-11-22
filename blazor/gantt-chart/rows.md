@@ -240,80 +240,9 @@ You can use [GanttEvents](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
 }
 ```
 
-## Customize rows
-
-You can use [GanttEvents](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html) to customize the appearance of a row on the grid side by using the `RowDataBound` event and on the chart side by using the `QueryChartRowInfo` event.
-
-```cshtml
-@using Syncfusion.Blazor.Gantt
-@using Syncfusion.Blazor.Grids
-
-<SfGantt DataSource="@TaskCollection" Height="450px" Width="900px" TreeColumnIndex="1">
-    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress"
-                     ParentID="ParentId">
-    </GanttTaskFields>
-    <GanttEvents RowDataBound="rowBound" QueryChartRowInfo="queryChart" TValue="TaskData"></GanttEvents>
-</SfGantt>
-<style>
-    .rowcustom {
-        background-color: orangered;
-    }
-</style>
-@code{
-    private List<TaskData> TaskCollection { get; set; }
-    protected override void OnInitialized()
-    {
-        this.TaskCollection = GetTaskCollection();
-    }
-    public void rowBound(RowDataBoundEventArgs<TaskData> args)
-    {
-        if (args.Data.TaskId == 4)
-        {
-            args.Row.AddClass(new string[] { "rowcustom" });
-        }
-    }
-    public void queryChart(QueryChartRowInfoEventArgs<TaskData> args)
-    {
-        if (args.Data.TaskId == 4)
-        {
-            args.Row.AddClass(new string[] { "rowcustom" });
-        }
-    }
-
-    public class TaskData
-    {
-        public int TaskId { get; set; }
-        public string TaskName { get; set; }
-        public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
-        public string Duration { get; set; }
-        public int Progress { get; set; }
-        public int? ParentId { get; set; }
-    }
-
-    private static List<TaskData> GetTaskCollection()
-    {
-        List<TaskData> Tasks = new List<TaskData>()
-        {
-            new TaskData() { TaskId = 1, TaskName = "Project initiation", StartDate = new DateTime(2022, 01, 04), EndDate = new DateTime(2022, 01, 17), },
-            new TaskData() { TaskId = 2, TaskName = "Identify Site location", StartDate = new DateTime(2022, 01, 04), Duration = "0", Progress = 30, ParentId = 1, },
-            new TaskData() { TaskId = 3, TaskName = "Perform soil test", StartDate = new DateTime(2022, 01, 04), Duration = "4", Progress = 40, ParentId = 1, },
-            new TaskData() { TaskId = 4, TaskName = "Soil test approval", StartDate = new DateTime(2022, 01, 04), Duration = "0", Progress = 30, ParentId = 1, },
-            new TaskData() { TaskId = 5, TaskName = "Project estimation", StartDate = new DateTime(2022, 01, 04), EndDate = new DateTime(2022, 01, 17), },
-            new TaskData() { TaskId = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2022, 01, 06), Duration = "3", Progress = 30, ParentId = 5, },
-            new TaskData() { TaskId = 7, TaskName = "List materials", StartDate = new DateTime(2022, 01, 06), Duration = "3", Progress = 40, ParentId = 5, },
-            new TaskData() { TaskId = 8, TaskName = "Estimation approval", StartDate = new DateTime(2022, 01, 06), Duration = "0", Progress = 30, ParentId = 5, }
-        };
-        return Tasks;
-    }
-}
-```
-
-![Customizing Rows in Blazor Gantt Chart](images/blazor-gantt-chart-row-customization.png)
-
 ## Customize rows and cells
 
-While rendering the Tree Grid part in Gantt Chart, the [RowDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_RowDataBound) and [QueryCellInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_QueryCellInfo) events trigger for every row and cell. Using these events, you can customize the rows and cells. The following code example shows how to customize the cell and row elements using these events.
+While rendering the Tree Grid part in Gantt Chart, the [RowDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_RowDataBound) and [QueryCellInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_QueryCellInfo) events trigger for every row and cell. Using these events, you can customize the rows and cells. To customize the appearance of a row on the chart side by using the [QueryChartRowInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_QueryChartRowInfo) event. The following code example shows how to customize the cell and row elements using these events.
 
 ```cshtml
 @using Syncfusion.Blazor.Gantt
@@ -331,7 +260,7 @@ While rendering the Tree Grid part in Gantt Chart, the [RowDataBound](https://he
         <GanttColumn Field="Duration" HeaderText="Duration" Width="150"></GanttColumn>
     </GanttColumns>
     <GanttSplitterSettings ColumnIndex=3></GanttSplitterSettings>
-    <GanttEvents QueryCellInfo="QueryCellInfo" RowDataBound="RowDataBound" TValue="TaskData"></GanttEvents>
+    <GanttEvents QueryCellInfo="QueryCellInfo" RowDataBound="RowDataBound" QueryChartRowInfo="queryChart" TValue="TaskData"></GanttEvents>
 </SfGantt>
 <style>
     .custom-row {
@@ -362,6 +291,13 @@ While rendering the Tree Grid part in Gantt Chart, the [RowDataBound](https://he
         }
     }
     public void RowDataBound(RowDataBoundEventArgs<TaskData> args)
+    {
+        if (args.Data.TaskId == 4)
+        {
+            args.Row.AddClass(new string[] { "custom-row" });
+        }
+    }
+    public void queryChart(QueryChartRowInfoEventArgs<TaskData> args)
     {
         if (args.Data.TaskId == 4)
         {
@@ -556,9 +492,21 @@ This is demonstrated in the below sample code, where the [GetRowTaskModel](https
 ```
 ![Row Task Model Properties](images/blazor-gantt-chart-GetRowTaskModel.png)
 
-## Cell tooltip
+## Clip mode
 
-You can enable or disable the Grid cell tooltip using the [GanttColumn.ClipMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttColumn.html#Syncfusion_Blazor_Gantt_GanttColumn_ClipMode) property.
+The clip mode provides options to display its overflow cell content and it can be defined by the `GanttColumn.ClipMode` property.
+
+The following are three types of `ClipMode`:
+
+* `Clip`: Truncates the cell content when it overflows its area.
+* `Ellipsis`: Displays ellipsis when content of the cell overflows its area.
+* `EllipsisWithTooltip`: Displays ellipsis when content of the cell overflows its area; it displays the tooltip content when hover over ellipsis.
+
+N> By default, all the column's `ClipMode` property is defined as `EllipsisWithTooltip`.
+
+### Cell tooltip
+
+You can enable the Grid cell tooltip by setting the [GanttColumn.ClipMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttColumn.html#Syncfusion_Blazor_Gantt_GanttColumn_ClipMode) property to `EllipsisWithTooltip`.
 
 ```cshtml
 @using Syncfusion.Blazor.Gantt
@@ -612,16 +560,6 @@ You can enable or disable the Grid cell tooltip using the [GanttColumn.ClipMode]
 }
 ```
 
-### Clip mode
 
-The clip mode provides options to display its overflow cell content and it can be defined by the `GanttColumn.ClipMode` property.
-
-The following are three types of `ClipMode`:
-
-* `Clip`: Truncates the cell content when it overflows its area.
-* `Ellipsis`: Displays ellipsis when content of the cell overflows its area.
-* `EllipsisWithTooltip`: Displays ellipsis when content of the cell overflows its area; it displays the tooltip content when hover over ellipsis.
-
-N> By default, all the column's `ClipMode` property is defined as `EllipsisWithTooltip`.
 
 N> You can refer to our [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Gantt Chart example](https://blazor.syncfusion.com/demos/gantt-chart/default-functionalities?theme=bootstrap4) to know how to render and configure the Gantt.
