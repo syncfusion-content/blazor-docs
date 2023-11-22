@@ -45,7 +45,7 @@ In the Gantt Chart component, you can enable or disable the mouse hover tooltip 
             public int TaskId { get; set; }
             public string TaskName { get; set; }
             public DateTime StartDate { get; set; }
-            public DateTime EndDate { get; set; }
+            public DateTime? EndDate { get; set; }
             public string Duration { get; set; }
             public int Progress { get; set; }
             public int? ParentId { get; set; }
@@ -87,8 +87,8 @@ In the Gantt Chart component, you can enable or disable the mouse hover tooltip 
 ```cshtml
 @using Syncfusion.Blazor.Gantt
 <SfGantt DataSource="@TaskCollection" Height="450px" Width="700px">
-    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate"
-                     Duration="Duration" Progress="Progress" ParentID="ParentId">
+    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Dependency="Predecessor"
+                     Duration="Duration" Progress="Progress" ParentID="ParentId" BaselineStartDate="BaselineStartDate" BaselineEndDate="BaselineEndDate">
     </GanttTaskFields>
     <GanttTimelineSettings ShowTooltip="true"></GanttTimelineSettings>
 </SfGantt>
@@ -105,10 +105,13 @@ In the Gantt Chart component, you can enable or disable the mouse hover tooltip 
         public int TaskId { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
+        public DateTime? EndDate { get; set; }
+        public DateTime? BaselineStartDate { get; set; }
+        public DateTime? BaselineEndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
+        public string Predecessor { get; set; }
     }
 
     private static List<TaskData> GetTaskCollection()
@@ -162,7 +165,7 @@ You can enable or disable the Grid cell tooltip using the [GanttColumn.ClipMode]
         public int TaskId { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
+        public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
@@ -225,7 +228,7 @@ It is possible to enable or disable the tooltip while performing editing actions
         public int TaskId { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
+        public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
         public string Predecessor { get; set; }
@@ -283,7 +286,7 @@ The default tooltip in the Gantt Chart component can be customized using the [Ga
         public int TaskId { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
+        public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
@@ -368,7 +371,7 @@ The taskbar editing tooltip can be customized using the [GanttTooltipSettings.Ed
         public int TaskId { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
+        public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
@@ -407,7 +410,7 @@ A baseline tooltip can be customized using the [GanttTooltipSettings.BaselineTem
     <GanttTooltipSettings ShowTooltip="true" TValue="TaskData">
         <BaselineTemplate>
             @{
-                <div>Baseline StartDate: @context.BaselineStartDate.ToShortDateString()</div>
+                <div>Baseline StartDate: @context.BaselineStartDate?.ToShortDateString()</div>
             }
         </BaselineTemplate>
     </GanttTooltipSettings>
@@ -425,12 +428,12 @@ A baseline tooltip can be customized using the [GanttTooltipSettings.BaselineTem
         public int TaskId { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
+        public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
-        public DateTime BaselineStartDate { get; set; }
-        public DateTime BaselineEndDate { get; set; }
+        public DateTime? BaselineStartDate { get; set; }
+        public DateTime? BaselineEndDate { get; set; }
         public string Predecessor { get; set; }
     }
 
@@ -488,7 +491,7 @@ A manual taskbar tooltip can be customized using the [GanttTooltipSettings.Manua
         public int TaskId { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
+        public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
@@ -523,7 +526,7 @@ Customizing the indicator tooltip in a Gantt Chart using [GanttTooltipSettings.I
 
 <SfGantt @ref="Gantt" DataSource="@TaskCollection" Height="450px" Width="1000px">
     <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration"
-                     Progress="Progress" ParentID="ParentId" Indicators="Indicators">
+                     Progress="Progress" ParentID="ParentId" Indicators="Indicators" >
     </GanttTaskFields>
     <GanttTooltipSettings ShowTooltip="true" TValue="TaskData">
        <IndicatorTemplate> 
