@@ -1358,7 +1358,7 @@ The [FitOptions](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram
 
 #### FitToPage
 
-The [FitToPage](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.FitMode.html) is used to enable or disable the fit to page behavior with respect to height or width.
+The [FitToPage](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramPrintSettings.html#Syncfusion_Blazor_Diagram_DiagramPrintSettings_FitToPage) is used to enable or disable the fit to page behavior with respect to height or width.
 
 |Values  | Description     |
 |---------|----------------|

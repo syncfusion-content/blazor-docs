@@ -211,7 +211,7 @@ The UML class diagram shapes are explained as follows.
 
 * The connector shape property defines the role or meaning of the connector.
 
-* The different types of connector shapes are `BPMN`, [UMLClassifier](https://help.syncfusion.com/cr/blazor) and [UMLActivity](https://help.syncfusion.com/cr/blazor) and can render these shapes by setting the connector shape type property.
+* The different types of connector shapes are `BPMN`, [UMLClassifier](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.ConnectionShapes.html#Syncfusion_Blazor_Diagrams_ConnectionShapes_UmlClassifier) and [UMLActivity](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.ConnectionShapes.html#Syncfusion_Blazor_Diagrams_ConnectionShapes_UmlActivity) and can render these shapes by setting the connector shape type property.
 
 * The type of flow shapes in a BPMN process are sequence, association, and message.
 
@@ -235,7 +235,7 @@ Association is basically a set of links that connects elements of an UML model. 
 1. Directional
 2. BiDirectional
 
-The association property allows you to define the type of association. The default value of association is [Directional](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.BpmnAssociationFlows.html). The following code example illustrates how to create an association.
+The association property allows you to define the type of association. The default value of association is [Directional](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.BpmnAssociationFlows.html#Syncfusion_Blazor_Diagrams_BpmnAssociationFlows_Directional). The following code example illustrates how to create an association.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagrams
