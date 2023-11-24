@@ -43,6 +43,8 @@ To achieve this, set [NoColor](https://help.syncfusion.com/cr/blazor/Syncfusion.
 
 ![Blazor ColorPicker with Default No Color](./../images/blazor-colorpicker-nocolor.png)
 
+>if the noColor property is set to true, ensure that the modeswitcher property is set to false.
+
 ## Custom no color
 
 The following sample shows the color palette with custom no color option.
