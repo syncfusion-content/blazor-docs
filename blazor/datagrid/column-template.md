@@ -221,7 +221,6 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hjhKiMZsUppLpTZe?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Using condition template
