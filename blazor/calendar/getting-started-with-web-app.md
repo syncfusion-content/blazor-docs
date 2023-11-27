@@ -25,7 +25,7 @@ You need to configure the corresponding [Interactive render mode](https://learn.
 
 To add **Blazor Calendar** component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install [Syncfusion.Blazor.Calendars](https://www.nuget.org/packages/Syncfusion.Blazor.Calendars/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/). 
 
-N> If you select an **Interactive render mode** as `WebAssembly` or `Auto`, you can install the NuGet package in the project any where to add component in Web App.
+If you select an **Interactive render mode** as `WebAssembly` or `Auto`, you can install the NuGet package in the project any where to add component in Web App.
 
 Alternatively, you can utilize the following package manager command to achieve the same.
 
@@ -42,23 +42,20 @@ N> Syncfusion Blazor components are available in [nuget.org](https://www.nuget.o
 
 ## Register Syncfusion Blazor Service
 
-Open **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Calendars` namespace .
+Open **~/_Imports.razor** file and import the Blazor namespace .
 
-{% tabs %}
-{% highlight c# tabtitle="~/_Imports.razor" %}
+``` cshtml
 
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Calendars
 
-{% endhighlight %}
-{% endtabs %}
+```
 
 Now, register the Syncfusion Blazor Service in the **~/Program.cs** file of your Blazor Web App.
 
-N> If you select an **Interactive render mode** as `WebAssembly` or `Auto`, you need to register the Syncfusion Blazor service in both **~/Program.cs** files of your Blazor Web App.
+If you select an **Interactive render mode** as `WebAssembly` or `Auto`, you need to register the Syncfusion Blazor service in both **~/Program.cs** files of your Blazor Web App.
 
-{% tabs %}
-{% highlight c# tabtitle="~/Program.cs" %}
+```cshtml
 
 ....
 using Syncfusion.Blazor;
@@ -66,12 +63,11 @@ using Syncfusion.Blazor;
 builder.Services.AddSyncfusionBlazor();
 ....
 
-{% endhighlight %}
-{% endtabs %}
+```
 
 ## Add stylesheet and script resources
 
-The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the stylesheet reference in the `<head>` section and the script reference in the `<body>` section of the **~/Components/App.razor** file as shown below:
+The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the stylesheet reference in the `<head>` section and the script reference at end of the `<body>` section in **~/Components/App.razor** file as shown below:
 
 ```html
 <head>
@@ -89,10 +85,13 @@ N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/app
 
 ## Add Blazor Calendar component
 
-Add the Syncfusion Blazor Calendar component in the **~/Pages/Index.razor** file.
+Add the Syncfusion Blazor Calendar component in `.razor` file inside the `Pages` folder. If an interactivity location as `Per page/component` in the web app, define a render mode at top of the component, as follows:
 
 {% tabs %}
 {% highlight razor %}
+
+@* desired render mode define here *@
+@rendermode InteractiveAuto
 
 <SfCalendar TValue="DateTime" Min='@MinDate' Value='@DateValue' Max='@MaxDate'></SfCalendar>
 
