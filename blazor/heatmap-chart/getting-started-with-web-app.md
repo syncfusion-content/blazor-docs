@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with Syncfusion Blazor HeatMapChart Component in WebApp
+title: Getting Started with Blazor HeatMapChart in Web App | Syncfusion
 description: Checkout and learn about the documentation for getting started with Blazor HeatMap Chart Component in Blazor Web App.
 platform: Blazor
 component: HeatMap Chart
@@ -50,7 +50,7 @@ Open **~/_Imports.razor** file and import the Blazor namespace.
 @using Syncfusion.Blazor.HeatMap
 ```
 
-Now, register the Syncfusion Blazor Service in the **~/Program.cs** file of your Blazor Web App. For a app with 'WebAssembly' or 'Auto (Server and WebAssembly)' interactive render mode, register the Syncfusion Blazor service in both **~/Program.cs** files of your web app.
+Now, register the Syncfusion Blazor Service in the **~/Program.cs** file of your Blazor Web App. For a app with `WebAssembly` or `Auto (Server and WebAssembly)` interactive render mode, register the Syncfusion Blazor service in both **~/Program.cs** files of your web app.
 ```cshtml
 
 ....

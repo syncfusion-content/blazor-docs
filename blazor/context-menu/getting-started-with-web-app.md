@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with Syncfusion Blazor ContextMenu Component in Web App
+title: Getting Started with Syncfusion Blazor ContextMenu Component in WebApp
 description: Checkout and learn about the documentation for getting started with Blazor ContextMenu Component in Blazor Web App.
 platform: Blazor
 component: ContextMenu
@@ -50,7 +50,7 @@ Open **~/_Imports.razor** file and import the Blazor namespace.
 @using Syncfusion.Blazor.Navigations
 ```
 
-Now, register the Syncfusion Blazor Service in the **~/Program.cs** file of your Blazor Web App. For a app with 'WebAssembly' or 'Auto (Server and WebAssembly)' interactive render mode, register the Syncfusion Blazor service in both **~/Program.cs** files of your web app.
+Now, register the Syncfusion Blazor Service in the **~/Program.cs** file of your Blazor Web App. For a app with `WebAssembly` or `Auto (Server and WebAssembly)` interactive render mode, register the Syncfusion Blazor service in both **~/Program.cs** files of your web app.
 ```cshtml
 
 ....

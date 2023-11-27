@@ -7,7 +7,7 @@ component: Floating Action Button
 documentation: ug
 ---
 
-# Getting Started with Blazor Floating Action Button Component in Web App
+# Getting Started with Blazor Floating Action Button Component in WebApp
 
 This section briefly explains about how to include [Blazor Floating Action Button](https://www.syncfusion.com/blazor-components/blazor-fab) component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/).
 
@@ -50,7 +50,7 @@ Open **~/_Imports.razor** file and import the Blazor namespace.
 @using Syncfusion.Blazor.Buttons
 ```
 
-Now, register the Syncfusion Blazor Service in the **~/Program.cs** file of your Blazor Web App. For a app with 'WebAssembly' or 'Auto (Server and WebAssembly)' interactive render mode, register the Syncfusion Blazor service in both **~/Program.cs** files of your web app.
+Now, register the Syncfusion Blazor Service in the **~/Program.cs** file of your Blazor Web App. For a app with `WebAssembly` or `Auto (Server and WebAssembly)` interactive render mode, register the Syncfusion Blazor service in both **~/Program.cs** files of your web app.
 ```cshtml
 
 ....
