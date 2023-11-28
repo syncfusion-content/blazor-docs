@@ -29,9 +29,7 @@ This is demonstrated in the following sample code, where the tooltip for the **F
                     Count++;
                     <SfTooltip @key="@Count" Position="Position.BottomLeft">
                         <ContentTemplate>
-
                             @employee.FirstName
-
                         </ContentTemplate>
                         <ChildContent>
                             <span>@employee.FirstName</span>
