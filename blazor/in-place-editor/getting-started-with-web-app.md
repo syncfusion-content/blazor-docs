@@ -83,7 +83,7 @@ Add the Syncfusion Blazor In-place Editor component in the **~/Components/Pages/
 {% highlight razor %}
 
 @* desired render mode define here *@
-@rendermode InteractiveServer
+@rendermode InteractiveAuto
 
 {% endhighlight %}
 {% endtabs %}

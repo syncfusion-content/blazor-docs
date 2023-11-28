@@ -81,7 +81,7 @@ Add the Syncfusion Blazor Image Editor component in the **~/Components/Pages/Hom
 {% highlight razor %}
 
 @* desired render mode define here *@
-@rendermode InteractiveServer
+@rendermode InteractiveAuto
 
 {% endhighlight %}
 {% endtabs %}

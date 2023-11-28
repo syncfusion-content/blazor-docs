@@ -76,7 +76,7 @@ Add the Syncfusion Blazor Chart component in the **~/Components/Pages/Home.razor
 {% highlight razor %}
 
 @* desired render mode define here *@
-@rendermode InteractiveServer
+@rendermode InteractiveAuto
 
 {% endhighlight %}
 {% endtabs %}

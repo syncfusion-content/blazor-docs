@@ -83,7 +83,7 @@ Add the Syncfusion Blazor DocumentEditor component in the **~/Components/Pages/H
 {% highlight razor %}
 
 @* desired render mode define here *@
-@rendermode InteractiveServer
+@rendermode InteractiveAuto
 
 {% endhighlight %}
 {% endtabs %}

@@ -81,7 +81,7 @@ Add the Syncfusion Blazor DatePicker component in the **~/Components/Pages/Home.
 {% highlight razor %}
 
 @* desired render mode define here *@
-@rendermode InteractiveServer
+@rendermode InteractiveAuto
 
 {% endhighlight %}
 {% endtabs %}

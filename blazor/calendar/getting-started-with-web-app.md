@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with Syncfusion Blazor Calendar Component in WebApp 
+title: Getting Started with Syncfusion Blazor Calendar Component in Web App
 description: Checkout and learn about the documentation for getting started with Blazor Calendar Component in Blazor Web App.
 platform: Blazor
 component: Calendar
@@ -81,7 +81,7 @@ Add the Syncfusion Blazor Calendar component in the **~/Components/Pages/Home.ra
 {% highlight razor %}
 
 @* desired render mode define here *@
-@rendermode InteractiveServer
+@rendermode InteractiveAuto
 
 {% endhighlight %}
 {% endtabs %}

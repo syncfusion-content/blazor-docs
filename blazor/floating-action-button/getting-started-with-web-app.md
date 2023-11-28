@@ -81,7 +81,7 @@ Add the Syncfusion Blazor Floating Action Button component in the **~/Components
 {% highlight razor %}
 
 @* desired render mode define here *@
-@rendermode InteractiveServer
+@rendermode InteractiveAuto
 
 {% endhighlight %}
 {% endtabs %}

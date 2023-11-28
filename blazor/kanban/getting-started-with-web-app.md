@@ -81,7 +81,7 @@ Add the Syncfusion Blazor Kanban component in the **~/Components/Pages/Home.razo
 {% highlight razor %}
 
 @* desired render mode define here *@
-@rendermode InteractiveServer
+@rendermode InteractiveAuto
 
 {% endhighlight %}
 {% endtabs %}

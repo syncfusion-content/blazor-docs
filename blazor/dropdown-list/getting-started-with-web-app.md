@@ -81,7 +81,7 @@ Add the Syncfusion Blazor DropDown List component in the **~/Components/Pages/Ho
 {% highlight razor %}
 
 @* desired render mode define here *@
-@rendermode InteractiveServer
+@rendermode InteractiveAuto
 
 {% endhighlight %}
 {% endtabs %}

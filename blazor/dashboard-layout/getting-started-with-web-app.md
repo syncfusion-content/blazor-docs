@@ -81,7 +81,7 @@ Add the Syncfusion Blazor Dashboard Layout component in the **~/Components/Pages
 {% highlight razor %}
 
 @* desired render mode define here *@
-@rendermode InteractiveServer
+@rendermode InteractiveAuto
 
 {% endhighlight %}
 {% endtabs %}

@@ -81,7 +81,7 @@ Add the Syncfusion Blazor CheckBox component in the **~/Components/Pages/Home.ra
 {% highlight razor %}
 
 @* desired render mode define here *@
-@rendermode InteractiveServer
+@rendermode InteractiveAuto
 
 {% endhighlight %}
 {% endtabs %}

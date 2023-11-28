@@ -81,7 +81,7 @@ Add the Syncfusion Blazor Chip component in the **~/Components/Pages/Home.razor*
 {% highlight razor %}
 
 @* desired render mode define here *@
-@rendermode InteractiveServer
+@rendermode InteractiveAuto
 
 {% endhighlight %}
 {% endtabs %}

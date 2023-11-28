@@ -81,7 +81,7 @@ Add the Syncfusion Blazor Diagram component in the **~/Components/Pages/Home.raz
 {% highlight razor %}
 
 @* desired render mode define here *@
-@rendermode InteractiveServer
+@rendermode InteractiveAuto
 
 {% endhighlight %}
 {% endtabs %}
