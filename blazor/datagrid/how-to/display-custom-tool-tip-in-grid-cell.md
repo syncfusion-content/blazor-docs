@@ -36,7 +36,6 @@ This is demonstrated in the following sample code, where the tooltip for the **F
                         <ChildContent>
                             <span>@employee.FirstName</span>
                         </ChildContent>
-
                     </SfTooltip>
                 }
             </Template>
@@ -74,4 +73,3 @@ This is demonstrated in the following sample code, where the tooltip for the **F
     }
 }
 ```
-
