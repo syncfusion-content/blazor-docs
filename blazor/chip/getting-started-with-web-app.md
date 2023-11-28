@@ -107,7 +107,6 @@ Add the Syncfusion Blazor Chip component in `.razor` file inside the `Pages` fol
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion Blazor Chip component in your default web browser.
 
 ![Blazor Chip Component](./images/blazor-chip-component.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LDBgtdMdrZfWcvRZ?Chip=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Render chip items from collection
 
