@@ -7,7 +7,7 @@ control: List Box
 documentation: ug
 ---
 
-# Getting started with Syncfusion Blazor ListBox in Blazor Web App
+# Getting started with Blazor ListBox in Blazor Web App
 
 This section briefly explains about how to include [Blazor ListBox](https://www.syncfusion.com/blazor-components/blazor-listbox) component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/).
 
