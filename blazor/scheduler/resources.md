@@ -9,7 +9,7 @@ documentation: ug
 
 # Resources and Grouping in Blazor Scheduler Component
 
-[Resources and grouping](https://www.syncfusion.com/blazor-components/blazor-scheduler/multiple-resources/) support allows the Scheduler to be shared by multiple resources. Also, the appointments of each resources are displayed under relevant resources. Each resource in the Scheduler is arranged in a column or row wise order, with individual spacing to display all its respective appointments on a single page. It also supports the multiple levels of grouping of resources, thus enabling the categorization of resources in a hierarchical structure and shows it either in expandable groups (Timeline views) or else vertical hierarchy one after the other (Calendar views).
+[Resources and grouping](https://www.syncfusion.com/blazor-components/blazor-scheduler/multiple-resources) support allows the Scheduler to be shared by multiple resources. Also, the appointments of each resources are displayed under relevant resources. Each resource in the Scheduler is arranged in a column or row wise order, with individual spacing to display all its respective appointments on a single page. It also supports the multiple levels of grouping of resources, thus enabling the categorization of resources in a hierarchical structure and shows it either in expandable groups (Timeline views) or else vertical hierarchy one after the other (Calendar views).
 
 It is also possible to assign one or more resources to the same appointment, by allowing multiple selection of resource options available in the event editor window.
 
