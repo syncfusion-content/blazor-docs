@@ -160,7 +160,7 @@ By using splitter control, the different layouts can be created with multiple an
 
 ```
 
-Once the above configurations has been completed, the output will be displayed like [this](https://blazor.syncfusion.com/demos/splitter/code-editor-layout?theme=bootstrap4)
+Once the above configurations has been completed, the output will be displayed like [this](https://blazor.syncfusion.com/demos/splitter/code-editor-layout?theme=bootstrap5)
 
 ## Outlook style layout
 
@@ -422,7 +422,7 @@ Once the above configurations has been completed, the output will be displayed l
 
 ```
 
-Once the above configurations has been completed, the output will be displayed like [this](https://blazor.syncfusion.com/demos/splitter/outlook?theme=bootstrap4).
+Once the above configurations has been completed, the output will be displayed like [this](https://blazor.syncfusion.com/demos/splitter/outlook?theme=bootstrap5).
 
 ## See Also
 
