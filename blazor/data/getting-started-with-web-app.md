@@ -42,7 +42,7 @@ N> Syncfusion Blazor components are available in [nuget.org](https://www.nuget.o
 
 ## Register Syncfusion Blazor Service
 
-Open **~/_Imports.razor** file and import the Blazor namespace.
+Open **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Data` namespace.
 
 ```cshtml
 
@@ -233,6 +233,8 @@ The following sample code demonstrates binding remote data through the [SfDataMa
 {% endtabs %}
 
 ![Data Binding in Blazor DataManager Component](./images/blazor-datamanager-data-binding.png)
+
+N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/DataManager).
 
 ## See also
 

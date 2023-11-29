@@ -42,7 +42,7 @@ N> Syncfusion Blazor components are available in [nuget.org](https://www.nuget.o
 
 ## Register Syncfusion Blazor Service
 
-Open **~/_Imports.razor** file and import the Blazor namespace.
+Open **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Kanban` namespace.
 
 ```cshtml
 
@@ -120,6 +120,8 @@ Add the Syncfusion Blazor Kanban component in `.razor` file inside the `Pages` f
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion Blazor Kanban component in your default web browser.
 
 ![Blazor Kanban Component](./images/blazor-kanban-component.png)
+
+N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/Kanban).
 
 ## Populating cards
 

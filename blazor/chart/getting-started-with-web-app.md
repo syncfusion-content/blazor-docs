@@ -42,7 +42,7 @@ N> Syncfusion Blazor components are available in [nuget.org](https://www.nuget.o
 
 ## Register Syncfusion Blazor Service
 
-Open **~/_Imports.razor** file and import the Blazor namespace .
+Open **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Charts` namespace.
 
 ```cshtml
 
@@ -221,6 +221,8 @@ You can use legend for the chart by setting the [Visible](https://help.syncfusio
 {% endtabs %}
 
 ![Blazor Column Chart with Legend](images/getting-started/blazor-chart-legend.png)
+
+N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/Chart).
 
 ## See also
 
