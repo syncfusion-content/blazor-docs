@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Getting started with Syncfusion Blazor TreeMap Component Web App
+title: Getting started with Syncfusion TreeMap Component in Blazor Web App
 description: Check out the documentation for getting started with Syncfusion Blazor TreeMap Component Components in Blazor Web App.
 platform: Blazor
 control: TreeMap
 documentation: ug
 ---
 
-# Getting Started with Blazor TreeMap Component Web App
+# Getting Started with Blazor TreeMap in Blazor Web App
 
-This article provides a step-by-step instructions for building `Blazor Web App` with [Blazor TreeMap](https://www.syncfusion.com/blazor-components/blazor-treemap) component using [Visual Studio](https://visualstudio.microsoft.com/vs/).
+This section briefly explains about how to include [Blazor TreeMap](https://www.syncfusion.com/blazor-components/blazor-treemap) component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/).
 
 ## Prerequisites
 
@@ -17,11 +17,17 @@ This article provides a step-by-step instructions for building `Blazor Web App` 
 
 ## Create a new Blazor Web App
 
-You can create a **Blazor Web App** using Visual Studio 2022 via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0) or the [Syncfusion Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio). While creating a Blazor Web App, configure corresponding [Interactive render mode](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-8.0#render-modes) and [Interactivity location](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0&pivots=windows).
+You can create a **Blazor Web App** using Visual Studio 2022 via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0) or the [Syncfusion Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
+
+You need to configure the corresponding [Interactive render mode](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-8.0#render-modes) and [Interactivity location](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0&pivots=windows) while creating a Blazor Web Application.
 
 ## Install Syncfusion Blazor TreeMap NuGet in the App
 
-To add **Blazor TreeMap** component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install [Syncfusion.Blazor.TreeMap](https://www.nuget.org/packages/Syncfusion.Blazor.TreeMap). For a web app with `WebAssembly` or `Auto` interactive render mode, install the Syncfusion NuGet packages in the project where you intend to add the components.  Alternatively, you can utilize the following package manager command to achieve the same.
+To add **Blazor TreeMap** component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install [Syncfusion.Blazor.TreeMap](https://www.nuget.org/packages/Syncfusion.Blazor.TreeMap).
+
+If you select an **Interactive render mode** as `WebAssembly` or `Auto`, you can install the NuGet package in the project any where to add component in Web App.
+
+Alternatively, you can utilize the following package manager command to achieve the same.
 
 {% tabs %}
 {% highlight C# tabtitle="Package Manager" %}
@@ -41,9 +47,12 @@ Open **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusio
 
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.TreeMap
+
 ```
 
-Now, register the Syncfusion Blazor Service in the **~/Program.cs** file of your Blazor Web App. For a app with `WebAssembly` or `Auto (Server and WebAssembly)` interactive render mode, register the Syncfusion Blazor service in both **~/Program.cs** files of your web app.
+Now, register the Syncfusion Blazor Service in the **~/Program.cs** file of your Blazor Web App.
+
+If you select an **Interactive render mode** as `WebAssembly` or `Auto`, you need to register the Syncfusion Blazor service in both **~/Program.cs** files of your Blazor Web App.
 
 ```cshtml
 
@@ -57,7 +66,7 @@ builder.Services.AddSyncfusionBlazor();
 
 ## Add script resources
 
-The script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the script reference at the end of the `<body>` in the ~/Components/App.razor file as shown below:
+The script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the script reference at the end of the `<body>` in the **~/Components/App.razor** file as shown below:
 
 ```html
 <body>
@@ -70,13 +79,13 @@ N> Check out the [Adding Script Reference](https://blazor.syncfusion.com/documen
 
 ## Add Syncfusion Blazor TreeMap component
 
-Add the Syncfusion Blazor TreeMap component in the **~/Components/Pages/*.razor** file. If an interactivity location as `Per page/component` in the web app, define a render mode at the top of the `~Pages/*.razor` component, as follows:
+Add the Syncfusion Blazor TreeMap component in the **~Pages/.razor** file. If an interactivity location as `Per page/component` in the web app, define a render mode at the top of the `~Pages/.razor` component, as follows:
 
 {% tabs %}
 {% highlight razor %}
 
 @* desired render mode define here *@
-@rendermode InteractiveServer
+@rendermode InteractiveAuto
 
 {% endhighlight %}
 {% endtabs %}
@@ -117,3 +126,142 @@ Add the Syncfusion Blazor TreeMap component in the **~/Components/Pages/*.razor*
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion Blazor TreeMap component in your default web browser.
 
 ![Blazor TreeMap Component](images/blazor-treemap.png)
+
+N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/TreeMap/BlazorWebApp).
+
+## Adding labels in Blazor TreeMap items
+
+Add label text to the leaf items in the TreeMap component by setting the field name from data source in the [LabelPath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapLeafItemSettings.html#Syncfusion_Blazor_TreeMap_TreeMapLeafItemSettings_LabelPath) property in the [TreeMapLeafItemSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapLeafItemSettings.html), and it provides information to the user about the leaf items.
+
+{% tabs %}
+{% highlight razor %}
+
+<SfTreeMap DataSource="GrowthReport"
+            WeightValuePath="GDP"
+            TValue="Country">
+    <TreeMapLeafItemSettings LabelPath="Name" Fill="lightgray"></TreeMapLeafItemSettings>
+</SfTreeMap>
+
+{% endhighlight %}
+{% endtabs %}
+
+N> Refer to the [code block](#adding-treemap-component) to know about the property value of the **GrowthReport**.
+
+![Blazor TreeMap with Label](images/blazor-treemap-with-label.png)
+
+## Adding title to Blazor TreeMap
+
+Add a title using the [Text](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapTitleSettings.html#Syncfusion_Blazor_TreeMap_TreeMapTitleSettings_Text) property in the [TreeMapTitleSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapTitleSettings.html) to provide quick information to the user about the items rendered in the TreeMap.
+
+{% tabs %}
+{% highlight razor %}
+
+<SfTreeMap DataSource="GrowthReport"
+            WeightValuePath="GDP"
+            TValue="Country">
+    <TreeMapTitleSettings Text="Top 10 countries by GDP Nominal - 2015"></TreeMapTitleSettings>
+    <TreeMapLeafItemSettings LabelPath="Name" Fill="lightgray"></TreeMapLeafItemSettings>
+</SfTreeMap>
+
+{% endhighlight %}
+{% endtabs %}
+
+N> Refer to the [code block](#adding-treemap-component) to know the property value of the **GrowthReport**.
+
+![Blazor TreeMap with Title](images/blazor-treemap-with-title.png)
+
+N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/TreeMap).
+
+## Apply color mapping
+
+The color mapping supports customization of item colors based on the underlying value received from the bound data source. Specify the field name from which the values have to be compared for the items in the [RangeColorValuePath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.SfTreeMap-1.html#Syncfusion_Blazor_TreeMap_SfTreeMap_1_RangeColorValuePath) property in [SfTreeMap](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.SfTreeMap-1.html). Also, specify range value and color in the [TreeMapLeafColorMapping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapLeafColorMapping.html). Here, in this example, **"Orange"** is specified for the range **"0 - 3000"** and **"Green"** is specified for the range **"3000 - 20000"**.
+
+{% tabs %}
+{% highlight razor %}
+
+<SfTreeMap DataSource="GrowthReport"
+            WeightValuePath="GDP"
+            TValue="Country"
+            RangeColorValuePath="GDP">
+    <TreeMapTitleSettings Text="Top 10 countries by GDP Nominal - 2015"></TreeMapTitleSettings>
+    <TreeMapLeafItemSettings LabelPath="Name" Fill="lightgray">
+        <TreeMapLeafColorMappings>
+            <TreeMapLeafColorMapping StartRange="0" EndRange="3000" Color="@(new string[] { "Orange" })"></TreeMapLeafColorMapping>
+            <TreeMapLeafColorMapping StartRange="3000" EndRange="20000" Color="@(new string[] { "Green" })"></TreeMapLeafColorMapping>
+        </TreeMapLeafColorMappings>
+    </TreeMapLeafItemSettings>
+</SfTreeMap>
+
+{% endhighlight %}
+{% endtabs %}
+
+N> Refer to the [code block](#adding-treemap-component) to know about the property value of the **GrowthReport**.
+
+![Blazor TreeMap with Color Mapping](images/blazor-treemap-color-mapping.png)
+
+## Enable legend
+
+Legend items are used to denote the color mapping categories and show the legend for the TreeMap by setting the [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapLegendSettings.html#Syncfusion_Blazor_TreeMap_TreeMapLegendSettings_Visible) property to **true** in the [TreeMapLegendSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapLegendSettings.html).
+
+{% tabs %}
+{% highlight razor %}
+
+<SfTreeMap DataSource="GrowthReport"
+            WeightValuePath="GDP"
+            TValue="Country"
+            RangeColorValuePath="GDP">
+    <TreeMapTitleSettings Text="Top 10 countries by GDP Nominal - 2015"></TreeMapTitleSettings>
+    <TreeMapLeafItemSettings LabelPath="Name" Fill="lightgray">
+        <TreeMapLeafColorMappings>
+            <TreeMapLeafColorMapping StartRange="0" EndRange="3000" Color="@(new string[] { "Orange" })"></TreeMapLeafColorMapping>
+            <TreeMapLeafColorMapping StartRange="3000" EndRange="20000" Color="@(new string[] { "Green" })"></TreeMapLeafColorMapping>
+        </TreeMapLeafColorMappings>
+    </TreeMapLeafItemSettings>
+    <TreeMapLegendSettings Visible="true"></TreeMapLegendSettings>
+</SfTreeMap>
+
+{% endhighlight %}
+{% endtabs %}
+
+N> Refer to the [code block](#adding-treemap-component) to know about the property value of the **GrowthReport**.
+
+![Blazor TreeMap with Legend](images/blazor-treemap-legend.png)
+
+## Enable tooltip
+
+When space constraints prevents from displaying information using data labels, the tooltip comes in handy. The tooltip can be enabled by setting the [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapTooltipSettings.html#Syncfusion_Blazor_TreeMap_TreeMapTooltipSettings_Visible) property to **true** in the [TreeMapTooltipSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapTooltipSettings.html).
+
+{% tabs %}
+{% highlight razor %}
+
+<SfTreeMap DataSource="GrowthReport"
+            WeightValuePath="GDP"
+            TValue="Country"
+            RangeColorValuePath="GDP">
+    <TreeMapTitleSettings Text="Top 10 countries by GDP Nominal - 2015"></TreeMapTitleSettings>
+    <TreeMapLeafItemSettings LabelPath="Name" Fill="lightgray">
+        <TreeMapLeafColorMappings>
+            <TreeMapLeafColorMapping StartRange="0" EndRange="3000" Color="@(new string[] { "Orange" })"></TreeMapLeafColorMapping>
+            <TreeMapLeafColorMapping StartRange="3000" EndRange="20000" Color="@(new string[] { "Green" })"></TreeMapLeafColorMapping>
+        </TreeMapLeafColorMappings>
+    </TreeMapLeafItemSettings>
+    <TreeMapLegendSettings Visible="true"></TreeMapLegendSettings>
+    <TreeMapTooltipSettings Visible="true"></TreeMapTooltipSettings>
+</SfTreeMap>
+
+{% endhighlight %}
+{% endtabs %}
+
+N> Refer to the [code block](#adding-treemap-component) to know about the property value of the **GrowthReport**.
+
+![Blazor TreeMap with Tooltip](images/blazor-treemap-tooltip.png)
+
+N> You can also explore our [Blazor TreeMap example](https://blazor.syncfusion.com/demos/treemap/default-functionalities?theme=bootstrap5) that shows you how to render and configure the treemap.
+
+## See also
+
+* [Getting Started with Syncfusion Blazor for Client-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-dotnet-cli)
+
+* [Getting Started with Syncfusion Blazor for Server-Side in Visual Studio](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio)
+
+* [Getting Started with Syncfusion Blazor for Server-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-dotnet-cli)

@@ -81,7 +81,7 @@ Add the Syncfusion Blazor Accordion component in the **~/Components/Pages/*.razo
 {% highlight razor %}
 
 @* desired render mode define here *@
-@rendermode InteractiveServer
+@rendermode InteractiveAuto
 
 {% endhighlight %}
 {% endtabs %}

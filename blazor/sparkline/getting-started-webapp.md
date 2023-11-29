@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Getting started with Syncfusion Blazor Sparkline Component Web App
+title: Getting started with Syncfusion Sparkline Component in Blazor Web App
 description: Check out the documentation for getting started with Syncfusion Blazor Sparkline Component Components in Blazor Web App.
 platform: Blazor
 control: Sparkline Charts
 documentation: ug
 ---
 
-# Getting Started with Blazor Sparkline Component Web App
+# Getting Started with Blazor Sparkline in Blazor Web App
 
-This article provides a step-by-step instructions for building `Blazor Web App` with [Blazor Sparkline](https://www.syncfusion.com/blazor-components/blazor-sparkline) component using [Visual Studio](https://visualstudio.microsoft.com/vs/).
+This section briefly explains about how to include [Blazor Sparkline](https://www.syncfusion.com/blazor-components/blazor-sparkline) component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/).
 
 ## Prerequisites
 
@@ -17,11 +17,17 @@ This article provides a step-by-step instructions for building `Blazor Web App` 
 
 ## Create a new Blazor Web App
 
-You can create a **Blazor Web App** using Visual Studio 2022 via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0) or the [Syncfusion Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio). While creating a Blazor Web App, configure corresponding [Interactive render mode](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-8.0#render-modes) and [Interactivity location](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0&pivots=windows).
+You can create a **Blazor Web App** using Visual Studio 2022 via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0) or the [Syncfusion Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
+
+You need to configure the corresponding [Interactive render mode](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-8.0#render-modes) and [Interactivity location](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0&pivots=windows) while creating a Blazor Web Application.
 
 ## Install Syncfusion Blazor Sparkline NuGet in the App
 
-To add **Blazor Sparkline** component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install [Syncfusion.Blazor.Sparkline](https://www.nuget.org/packages/Syncfusion.Blazor.Sparkline). For a web app with `WebAssembly` or `Auto` interactive render mode, install the Syncfusion NuGet packages in the project where you intend to add the components.  Alternatively, you can utilize the following package manager command to achieve the same.
+To add **Blazor Sparkline** component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install [Syncfusion.Blazor.Sparkline](https://www.nuget.org/packages/Syncfusion.Blazor.Sparkline).
+
+If you select an **Interactive render mode** as `WebAssembly` or `Auto`, you can install the NuGet package in the project any where to add component in Web App.
+
+Alternatively, you can utilize the following package manager command to achieve the same.
 
 {% tabs %}
 {% highlight C# tabtitle="Package Manager" %}
@@ -41,9 +47,12 @@ Open **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusio
 
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Charts
+
 ```
 
-Now, register the Syncfusion Blazor Service in the **~/Program.cs** file of your Blazor Web App. For a app with `WebAssembly` or `Auto (Server and WebAssembly)` interactive render mode, register the Syncfusion Blazor service in both **~/Program.cs** files of your web app.
+Now, register the Syncfusion Blazor Service in the **~/Program.cs** file of your Blazor Web App.
+
+If you select an **Interactive render mode** as `WebAssembly` or `Auto`, you need to register the Syncfusion Blazor service in both **~/Program.cs** files of your Blazor Web App.
 
 ```cshtml
 
@@ -70,13 +79,13 @@ N> Check out the [Adding Script Reference](https://blazor.syncfusion.com/documen
 
 ## Add Syncfusion Blazor Sparkline component
 
-Add the Syncfusion Blazor Sparkline component in the **~/Components/Pages/*.razor** file. If an interactivity location as `Per page/component` in the web app, define a render mode at the top of the `~Pages/*.razor` component, as follows:
+Add the Syncfusion Blazor Sparkline component in the **~Pages/.razor** file. If an interactivity location as `Per page/component` in the web app, define a render mode at the top of the `~Pages/.razor` component, as follows:
 
 {% tabs %}
 {% highlight razor %}
 
 @* desired render mode define here *@
-@rendermode InteractiveServer
+@rendermode InteractiveAuto
 
 {% endhighlight %}
 {% endtabs %}
@@ -143,3 +152,99 @@ Now map the `Month` and the `Celsius` fields from the datasource to [XName](http
 Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion Blazor Sparkline component in your default web browser.
 
 ![Blazor Sparkline Chart](./images/blazor-sparkline.png)
+
+N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/Sparkline/BlazorWebApp).
+
+## Blazor Sparkline chart types
+
+Change the Sparkline type using the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfSparkline-1.html#Syncfusion_Blazor_Charts_SfSparkline_1_Type) property set to **Line**, **Column**, **WinLoss**, **Pie** or **Area**. Here, the Sparkline type is set to **Area**.
+
+{% tabs %}
+{% highlight razor %}
+
+<SfSparkline XName="Month"
+             YName="Celsius"
+             ValueType="SparklineValueType.Category"
+             Type="SparklineType.Area"
+             TValue="WeatherReport"
+             DataSource="ClimateData"
+             Height="80px"
+             Width="150px">
+</SfSparkline>
+
+{% endhighlight %}
+{% endtabs %}
+
+![Blazor Sparkline Area Chart](./images/blazor-area-sparkline.png)
+
+N> Refer to [code block](#populate-sparkline-with-data) to know about the property value of **ClimateData**.
+
+## Adding Data Label
+
+Add the Data Labels to improve the readability of the Sparkline component. This can be achieved by setting the [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineDataLabelSettings.html#Syncfusion_Blazor_Charts_SparklineDataLabelSettings_Visible) property to **true** in the [SparklineDataLabelSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineDataLabelSettings.html).
+
+Available types are:
+
+* Start
+* End
+* All
+* High
+* Low
+* Negative
+
+{% tabs %}
+{% highlight razor %}
+
+<SfSparkline DataSource="ClimateData"
+              TValue="WeatherReport"
+              XName="Month"
+              YName="Celsius"
+              ValueType="SparklineValueType.Category"
+              Height="80px"
+              Width="150px">
+    <SparklineDataLabelSettings Visible="new List<VisibleType> { VisibleType.Start, VisibleType.End }"></SparklineDataLabelSettings>
+    <SparklinePadding Left="10" Right="10"></SparklinePadding>
+</SfSparkline>
+
+{% endhighlight %}
+{% endtabs %}
+
+N> Refer to the [code block](#populate-sparkline-with-data) to know about the property value of **ClimateData**.
+
+![Blazor Sparkline Chart with Data Label](./images/blazor-sparkline-data-label.png)
+
+## Enable tooltip
+
+When space constraints prevent from displaying information using Data Labels, the tooltip comes in handy. The tooltip can be enabled by setting the [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineTooltipSettings-1.html#Syncfusion_Blazor_Charts_SparklineTooltipSettings_1_Visible) property to **true** in the [SparklineTooltipSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineTooltipSettings-1.html).
+
+{% tabs %}
+{% highlight razor %}
+
+<SfSparkline DataSource="ClimateData"
+             TValue="WeatherReport"
+             XName="Month"
+             YName="Celsius"
+             ValueType="SparklineValueType.Category"
+             Height="80px"
+             Width="150px">
+    <SparklineDataLabelSettings Visible="new List<VisibleType> { VisibleType.Start, VisibleType.End }"></SparklineDataLabelSettings>
+    <SparklinePadding Left="10" Right="10"></SparklinePadding>
+    <SparklineTooltipSettings TValue="WeatherReport" Visible="true"></SparklineTooltipSettings>
+</SfSparkline>
+
+{% endhighlight %}
+{% endtabs %}
+
+N> Refer to the [code block](#populate-sparkline-with-data) to know about the property value of the **ClimateData**.
+
+![Blazor Sparkline Chart with Tooltip](./images/blazor-sparkline-tooltip.png)
+
+## See also
+
+* [Getting Started with Syncfusion Blazor for Client-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-dotnet-cli)
+
+* [Getting Started with Syncfusion Blazor for Server-Side in Visual Studio](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio)
+
+* [Getting Started with Syncfusion Blazor for Server-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-dotnet-cli)
+
+N> You can also explore our [Blazor Sparkline Chart example](https://blazor.syncfusion.com/demos/sparkline/default-functionalities?theme=bootstrap5) that shows you how to render and configure the sparkline chart.
