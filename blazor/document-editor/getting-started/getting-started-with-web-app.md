@@ -42,7 +42,7 @@ N> Syncfusion Blazor components are available in [nuget.org](https://www.nuget.o
 
 ## Register Syncfusion Blazor Service
 
-Open **~/_Imports.razor** file and import the Blazor namespace.
+Open **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.WordProcessor` namespace.
 
 ```cshtml
 
