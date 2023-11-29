@@ -108,6 +108,8 @@ Add the Syncfusion Blazor Calendar component in `.razor` file inside the `Pages`
 
 ![Selection in Blazor Calendar Component](./images/blazor-calendar-selection.png)
 
+N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/Calendar).
+
 ## See also
 
 * [Getting Started with Syncfusion Blazor for Client-Side in .NET Core CLI](../getting-started/blazor-webassembly-dotnet-cli)

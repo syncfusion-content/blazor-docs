@@ -172,6 +172,8 @@ By default, the width of the popup list automatically adjusts according to the C
 
 ![Customizing Popup Height and Width in Blazor ComboBox](./images/blazor-combobox-popup-customization.png)
 
+N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/ComboBox).
+
 ## See also
 
 1. [Getting Started with Syncfusion Blazor for client-side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-dotnet-cli)

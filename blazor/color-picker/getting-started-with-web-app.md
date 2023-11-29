@@ -104,6 +104,8 @@ Add the Syncfusion Blazor ColorPicker component in `.razor` file inside the `Pag
 
 ![Blazor ColorPicker Component](./images/blazor-colorpicker-component.png)
 
+N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/ColorPicker).
+
 ## See also
 
 1. [Getting Started with Syncfusion Blazor for client-side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-dotnet-cli)

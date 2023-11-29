@@ -222,6 +222,8 @@ You can use legend for the chart by setting the [Visible](https://help.syncfusio
 
 ![Blazor Column Chart with Legend](images/getting-started/blazor-chart-legend.png)
 
+N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/Chart).
+
 ## See also
 
 1. [Getting Started with Syncfusion Blazor for client-side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-dotnet-cli)

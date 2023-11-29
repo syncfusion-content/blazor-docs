@@ -120,6 +120,8 @@ The following example demonstrates the usage of mask element `0` that allows any
 
 ![Blazor MaskedTextBox with Mask](./images/blazor-maskedtextbox-with-mask.png)
 
+N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/MaskedTextBox).
+
 ## See also
 
 1. [Getting Started with Syncfusion Blazor for client-side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-dotnet-cli)

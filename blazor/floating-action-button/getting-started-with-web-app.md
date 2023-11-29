@@ -108,6 +108,8 @@ Add the Syncfusion Blazor Floating Action Button component in `.razor` file insi
 
 ![Blazor Floating Action Button Component](./images/blazor-fab-component.png)
 
+N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/FloatingActionButton).
+
 ## Event Click In Blazor Floating Action Button
 
 The floating action button control triggers the [OnClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfButton.html#Syncfusion_Blazor_Buttons_SfButton_OnClick) event when you click on the floating action button. You can use this event to perform the required action.

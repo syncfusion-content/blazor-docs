@@ -121,6 +121,8 @@ Add the Syncfusion Blazor Kanban component in `.razor` file inside the `Pages` f
 
 ![Blazor Kanban Component](./images/blazor-kanban-component.png)
 
+N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/Kanban).
+
 ## Populating cards
 
 To populate the empty Kanban with cards, define the Enumerable object or remote data using the `DataSource` property. To define `DataSource`, the mandatory fields in object or remote data should be relevant to `KeyField`. In the following example, you can see the cards defined with default fields such as ID, Summary, and Status.

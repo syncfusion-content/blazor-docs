@@ -402,6 +402,8 @@ The sorting feature enables you to order the records. It can be enabled by setti
 
 You can find the full information regarding Sorting from [here](https://blazor.syncfusion.com/documentation/gantt-chart/sorting)
 
+N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/GanttChart).
+
 ## Enabling Predecessors or Task Relationships
 
 Predecessor or task dependency in the Gantt Chart component is used to depict the relationship between the tasks.
