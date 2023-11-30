@@ -30,4 +30,4 @@ If you're using a Blazor WebAssembly App, consider implementing lazy loading to 
 In a Blazor WebAssembly App, leverage the PreventRender option to avoid unnecessary re-rendering of Syncfusion Blazor components. This ensures optimal performance. For reference, we have provided the links below for the DataGrid and PivotTable:
 
 * DataGrid: [Link to WebAssembly Performance Documentation](https://blazor.syncfusion.com/documentation/datagrid/webassembly-performance)
-* PivotTable: [Link to WebAssembly Performance Documentation](https://blazor.syncfusion.com/documentation/pivot-table/webassembly-performance)![image](https://github.com/syncfusion-content/blazor-docs/assets/103921986/9e8cffdc-1e3b-4a59-8d40-1a49d1b17351)
+* PivotTable: [Link to WebAssembly Performance Documentation](https://blazor.syncfusion.com/documentation/pivot-table/webassembly-performance)
