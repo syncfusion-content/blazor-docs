@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting started with Syncfusion Blazor Predefined Dialogs Web App
+title: Getting started with Syncfusion Predefined Dialogs in Blazor Web App
 description: Check out the documentation for getting started with Syncfusion Blazor Predefined Dialogs Components in Blazor Web App.
 platform: Blazor
 control: Predefined Dialogs
 documentation: ug
 ---
 
-# Getting Started with Blazor Predefined Dialogs Web App
+# Getting Started with Blazor Predefined Dialogs in Blazor Web App
 
 This section briefly explains about how to include `Blazor Predefined Dialogs` component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/).
 
@@ -48,15 +48,21 @@ Open **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusio
 
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Popups
+
 ```
 
-Now, register the Syncfusion Blazor Service in the **~/Program.cs** file of your Blazor Web App. For a app with `WebAssembly` or `Auto (Server and WebAssembly)` interactive render mode, register the Syncfusion Blazor service in both **~/Program.cs** files of your web app.
+Now, register the Syncfusion Blazor Service in the **~/Program.cs** file of your Blazor Web App.
+
+If you select an **Interactive render mode** as `WebAssembly` or `Auto`, you need to register the Syncfusion Blazor service in both **~/Program.cs** files of your Blazor Web App.
+
 ```cshtml
 
 ....
 using Syncfusion.Blazor;
+using Syncfusion.Blazor.Popups;
 ....
 builder.Services.AddSyncfusionBlazor();
+builder.Services.AddScoped<SfDialogService>();
 ....
 
 ```
