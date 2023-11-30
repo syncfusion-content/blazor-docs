@@ -247,18 +247,12 @@ The following code example shows how to change the color of the default frozen l
     <GanttSplitterSettings Position="60%"></GanttSplitterSettings>
 </SfGantt>
 <style>
-    .e-grid .e-frozenheader > .e-table,
-    .e-grid .e-frozencontent > .e-table,
-    .e-grid .e-frozencontent .e-virtualtable > .e-table,
-    .e-grid .e-frozenheader .e-virtualtable > .e-table {
-        border-right-color: blue;
+    .e-grid .e-frozenrow-border {
+        background-color: blue;
     }
 
-    .e-grid .e-frozenhdrcont .e-headercontent > .e-table,
-    .e-grid .e-frozenhdrcont .e-frozenheader > .e-table,
-    .e-grid .e-frozenhdrcont .e-movableheader > .e-table,
-    .e-grid .e-frozenhdrcont .e-headercontent .e-virtualtable > .e-table {
-        border-bottom-color: blue;
+    .e-grid .e-leftfreeze.e-freezeleftborder {
+        border-right-color: blue;
     }
 </style>
 @code {
