@@ -256,8 +256,6 @@ N> Refer to the [code block](#adding-treemap-component) to know about the proper
 
 ![Blazor TreeMap with Tooltip](images/blazor-treemap-tooltip.png)
 
-N> You can also explore our [Blazor TreeMap example](https://blazor.syncfusion.com/demos/treemap/default-functionalities?theme=bootstrap5) that shows you how to render and configure the treemap.
-
 ## See also
 
 * [Getting Started with Syncfusion Blazor for Client-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-dotnet-cli)

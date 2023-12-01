@@ -125,6 +125,3 @@ Change the type of the ProgressBar by using the [Type](https://help.syncfusion.c
 {% endtabs %}
 
 ![Blazor Circular ProgressBar](images/blazor-circular-progressbar.png)
- remotes/origin/hotfix/hotfix-v22.2.5
-
-N> You can also explore our [Blazor ProgressBar example](https://blazor.syncfusion.com/demos/progress-bar/linear?theme=fluent) that shows you how to render and configure the ProgressBar.
