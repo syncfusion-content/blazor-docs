@@ -8,11 +8,11 @@ platform: Blazor
 
 # Bind data to Blazor components using WebApiAdaptor and perform CRUD
 
-In this topic, you can learn how to retrieve data from WebApi Controller, bind to Grid component using [WebApiAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors/#web-api-adaptor) of `SfDataManger`, and perform CRUD operations.
+In this topic, you can learn how to retrieve data from WebApi Controller, bind to Grid component using [WebApiAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors#web-api-adaptor) of `SfDataManger`, and perform CRUD operations.
 
 You can use the WebApiAdaptor of SfDataManager to interact with Web APIs created with OData endpoint. The WebApiAdaptor is extended from the ODataAdaptor. Hence, to use WebApiAdaptor, the endpoint should understand the OData formatted queries sent along with the request.
 
-To enable the OData query option for Web API, Refer to this [documentation](https://docs.microsoft.com/en-us/aspnet/web-api/overview/odata-support-in-aspnet-web-api/supporting-odata-query-options).
+To enable the OData query option for Web API, Refer to this [documentation](https://learn.microsoft.com/en-us/aspnet/web-api/overview/odata-support-in-aspnet-web-api/supporting-odata-query-options).
 
 ## Prerequisite software
 
@@ -22,7 +22,7 @@ The following software are needed
 
 ## Create the database
 
-Open Visual Studio 2019 Preview, select **View -> SQL Server Object Explorer**. Right-click on the Databases folder to create a new Database and name it as OrdersDetails.
+Open Visual Studio , select **View -> SQL Server Object Explorer**. Right-click on the Databases folder to create a new Database and name it as OrdersDetails.
 
 ![Add new database in Blazor](../images/odata-add-db.png)
 ![Adding database name and location in Blazor](../images/odata-db-name.png)
@@ -52,7 +52,7 @@ Now, click on **Update Database**.
 
 ## Create Blazor Server Application
 
-Open Visual Studio 2019 and follow the steps in the below documentation to create the Blazor Server Application.
+Open Visual Studio and follow the steps in the below documentation to create the Blazor Server Application.
 
 [Getting Started](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio)
 
@@ -60,12 +60,20 @@ Open Visual Studio 2019 and follow the steps in the below documentation to creat
 
 Now, you need to scaffold **DbContext** and **model classes** from the existing **OrdersDetails** database. To perform scaffolding and work with the SQL Server database in our application, install the following NuGet packages.
 
-Run the following commands in the **Package Manager Console**.
+* [Microsoft.EntityFrameworkCore.Tools](https://www.nuget.org/packages/Microsoft.EntityFrameworkCore.Tools): This package creates database context and model classes from the database.
+* [Microsoft.EntityFrameworkCore.SqlServer](https://www.nuget.org/packages/Microsoft.EntityFrameworkCore.SqlServer/): The database provider that allows Entity Framework Core to work with SQL Server.
 
-* **Install-Package Microsoft.EntityFrameworkCore.Tools -Version 3.0.0**: This package creates database context and model classes from the database.
-* **Install-Package Microsoft.EntityFrameworkCore.SqlServer -Version 3.0.0**: The database provider that allows Entity Framework Core to work with SQL Server.
+Run the following commands in the Package Manager Console.
 
-Once the above packages are installed, you can scaffold DbContext and Model classes. Run the following command in the **Package Manager Console**.
+{% tabs %}
+{% highlight C# tabtitle="Package Manager" %}
+
+Install-Package Microsoft.EntityFrameworkCore.Tools -Version 7.0.11
+
+Install-Package Microsoft.EntityFrameworkCore.SqlServer -Version 7.0.11
+
+{% endhighlight %}
+{% endtabs %}
 
 ```
 Scaffold-DbContext “Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=OrdersDetails;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False” Microsoft.EntityFrameworkCore.SqlServer -OutputDir Data
@@ -141,40 +149,13 @@ It is not recommended to have a connection string with sensitive information in 
 {% endhighlight %}
 {% endtabs %}
 
-Now, the DbContext must be configured using connection string and registered as scoped service using the AddDbContext method in **Startup.cs** for .NET 5 and .NET 3.X application and in **Program.cs** file in .NET 6 application.
+Now, the DbContext must be configured using connection string and registered as scoped service using the AddDbContext method in **Program.cs** file in .NET 6 and .NET 7 application.
 
 {% tabs %}
 {% highlight c# tabtitle=".NET 6 & .NET 7 (~/Program.cs)" %}
 
 builder.Services.AddDbContext<OrdersDetailsContext>(option =>
                 option.UseSqlServer(builder.Configuration.GetConnectionString("OrdersDetailsDatabase")));
-
-{% endhighlight %}
-{% highlight c# tabtitle=".NET 5 and .NET 3.X (~/Startup.cs)" %}
-
-namespace ODataServiceProject
-{
-    public class Startup
-    {
-        public Startup(IConfiguration configuration)
-        {
-            Configuration = configuration;
-        }
-
-        public IConfiguration Configuration { get; }
-        // This method gets called by the runtime. Use this method to add services to the container.
-        // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
-        public void ConfigureServices(IServiceCollection services)
-        {
-            
-            services.AddDbContext<OrdersDetailsContext>(option => 
-                option.UseSqlServer(Configuration.GetConnectionString("OrdersDetailsDatabase")));
-            ...
-        }
-        ....
-        ....
-    }
-}
 
 {% endhighlight %}
 {% endtabs %}
@@ -245,8 +226,7 @@ namespace WebAPICRUDServerApp
 {% endhighlight %}
 {% endtabs %}
 
-* For **.NET 6 and .NET 7** applications open **Program.cs** file and add **MapDefaultControllerRoute** in **Configure** method as follows.
-* For **.NET 5 and .NET 3.X** applications open **Startup.cs** file and add **MapDefaultControllerRoute** in **Configure** method as follows.
+* For **.NET 6 and .NET 7** applications open **Program.cs** file and add **MapDefaultControllerRoute** method as follows.
 
 {% tabs %}
 {% highlight c# tabtitle=".NET 6 & .NET 7 (~/Program.cs)" %}
@@ -262,20 +242,6 @@ app.MapFallbackToPage("/_Host");
 app.Run();
 
 {% endhighlight %}
-{% highlight c# tabtitle=".NET 5 and .NET 3.X (~/Startup.cs)" %}
-
-public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
-{
-    ...
-    app.UseEndpoints(endpoints =>
-    {
-        endpoints.MapDefaultControllerRoute();
-        endpoints.MapBlazorHub();
-        endpoints.MapFallbackToPage("/_Host");
-    });
-}
-
-{% endhighlight %}
 {% endtabs %}
 
 ### Add Syncfusion Blazor DataGrid package
@@ -288,7 +254,15 @@ Now, in the **Browse** tab, search and install the Syncfusion.Blazor.Grid NuGet 
 
 ![Add Syncfusion package in Blazor](../images/odata-syncfusion-package.png)
 
-N> For this demo, Syncfusion.Blazor(**19.1.0.66**) NuGet package is used. A new **Syncfusion.Blazor** NuGet package with new enhancement has been released in our every-week release and main release. So, you can check and update to the latest versions by using this [link](https://www.nuget.org/packages/Syncfusion.Blazor).
+Alternatively, you can utilize the following package manager command to achieve the same.
+
+{% tabs %}
+{% highlight C# tabtitle="Package Manager" %}
+
+Install-Package Syncfusion.Blazor.Grid -Version {{ site.releaseversion }}
+
+{% endhighlight %}
+{% endtabs %}
 
 Open **_Import.razor** file and add the following namespaces which are required to use Syncfusion Blazor components in this application.
 
@@ -303,7 +277,7 @@ Open **_Import.razor** file and add the following namespaces which are required 
 {% endhighlight %}
 {% endtabs %}
 
-Open **Startup.cs** file in **.NET 3.X and .NET 5** applications, **Program.cs** file in **.NET 6 and .NET 7** application and register the Syncfusion service in the **ConfigureServices** method as follows.
+Open **Program.cs** file in **.NET 6 and .NET 7** application and register the Syncfusion service.
 
 {% tabs %}
 {% highlight c# tabtitle=".NET 6 & .NET 7 (~/Program.cs)" %}
@@ -316,18 +290,6 @@ builder.Services.AddSingleton<WeatherForecastService>();
 builder.Services.AddSyncfusionBlazor();
 
 {% endhighlight %}
-{% highlight c# tabtitle=".NET 5 and .NET 3.X (~/Startup.cs)" %}
-
-public void ConfigureServices(IServiceCollection services)
-{
-    services.AddDbContext<OrdersDetailsContext>(option => option.UseSqlServer(Configuration.GetConnectionString("OrdersDetailsDatabase")));
-    services.AddRazorPages();
-    services.AddServerSideBlazor();
-    services.AddSingleton<WeatherForecastService>();
-    services.AddSyncfusionBlazor();
-}
-
-{% endhighlight %}
 {% endtabs %}
 
 Themes provide life to components. Syncfusion Blazor has different themes. They are:
@@ -338,11 +300,11 @@ Themes provide life to components. Syncfusion Blazor has different themes. They 
 * Bootstrap
 * High Contrast
 
-In this demo application, the **Bootstrap4** theme will be used. 
+In this demo application, the **Bootstrap4** theme will be used.
 
 * For **.NET 6** app, add theme in the `<head>` of the **~/Pages/_Layout.cshtml** file.
 
-* For **.NET 3.X, .NET 5 and .NET 7** app, add theme in the `<head>` of the **~/Pages/_Host.cshtml** file.
+* For **.NET 7** app, add theme in the `<head>` of the **~/Pages/_Host.cshtml** file.
 
 {% tabs %}
 
@@ -352,7 +314,7 @@ In this demo application, the **Bootstrap4** theme will be used.
 
 {% endhighlight %}
 
-{% highlight cshtml tabtitle=".NET 3.X, .NET 5 and .NET 7 (~/_Host.cshtml)" %}
+{% highlight cshtml tabtitle=".NET 7 (~/_Host.cshtml)" %}
 
 <link href="_content/Syncfusion.Blazor.Themes/fabric.css" rel="stylesheet" />
 
@@ -376,7 +338,7 @@ In previous steps, we have successfully configured the Syncfusion Blazor package
 
 To consume data from the WebApi Controller, we need to add the **SfDataManager** with **WebApiAdaptor**. Refer to the following documentation for more details on WebApiAdaptor.
 
-[WebApiAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors/#web-api-adaptor)
+[WebApiAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors#web-api-adaptor)
 
 {% tabs %}
 {% highlight razor %}
@@ -388,7 +350,7 @@ To consume data from the WebApi Controller, we need to add the **SfDataManager**
 {% endhighlight %}
 {% endtabs %}
 
-Grid columns can be defined by using the [GridColumn](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Grids.GridColumn.html) component. We are going to create columns using the following code.
+Grid columns can be defined by using the [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) component. We are going to create columns using the following code.
 
 {% tabs %}
 {% highlight razor %}
@@ -453,7 +415,7 @@ The sample response object should look like this:
 
 ## Handling CRUD operations with our Syncfusion Blazor DataGrid component
 
-You can enable editing in the grid component using the [GridEditSettings](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Grids.GridEditSettings.html) component. Grid provides various modes of editing options such as [Inline/Normal](https://blazor.syncfusion.com/documentation/datagrid/editing/#normal), [Dialog](https://blazor.syncfusion.com/documentation/datagrid/editing/#dialog), and [Batch](https://blazor.syncfusion.com/documentation/datagrid/editing/#batch) editing.
+You can enable editing in the grid component using the [GridEditSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html) component. Grid provides various modes of editing options such as [Inline/Normal](https://blazor.syncfusion.com/documentation/datagrid/in-line-editing), [Dialog](https://blazor.syncfusion.com/documentation/datagrid/dialog-editing), and [Batch](https://blazor.syncfusion.com/documentation/datagrid/batch-editing) editing.
 
 Here, we are using **Inline** edit mode and used Toolbar property to show toolbar items for editing.
 We have added the DataGrid Editing and Toolbar code with previous Grid model.

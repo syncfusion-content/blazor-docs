@@ -9,29 +9,16 @@ documentation: ug
 
 # Globalization in Blazor Gantt Chart Component
 
-Add **UseRequestLocalization** middle-ware in Configure method in **Startup.cs** file to get browser Culture Info.
+Add **UseRequestLocalization** middle-ware in the **Program.cs** file to get browser Culture Info.
 
-Refer the following code to add configuration in Startup.cs file
+Refer the following code to add configuration in Program.cs file
 
 ```csharp
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Localization;
 
-namespace BlazorApplication
-{
-    public class Startup
-    {
-        ....
-        ....
+app.UseRequestLocalization();
 
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
-        {
-            app.UseRequestLocalization();
-            ....
-            ....
-        }
-    }
-}
 ```
 
 ## Localization
@@ -40,9 +27,10 @@ The **Localization** library allows you to localize default text content of the 
 
 Resource file (**.resx**) is used to translate the static text of the Gantt.
 
-The Resource file is an XML file which contains the strings(key and value pairs) that you want to translate into different languages. You can also refer [Localization](https://learn.microsoft.com/en-us/aspnet/core/fundamentals/localization?view=aspnetcore-7.0&viewFallbackFrom=aspnetcore-3.0) link to know more about how to configure and use localization in the ASP.NET Core application framework.
+The Resource file is an XML file which contains the strings(key and value pairs) that you want to translate into different languages. You can also refer [Localization](https://learn.microsoft.com/en-us/aspnet/core/fundamentals/localization?view=aspnetcore-7.0) link to know more about how to configure and use localization in the ASP.NET Core application framework.
 
-* Add **.resx** file to [Resources](https://learn.microsoft.com/en-us/aspnet/core/fundamentals/localization?view=aspnetcore-7.0&viewFallbackFrom=aspnetcore-3.0#resource-files) folder and enter the key value (Locale Keywords) in the **Name** column and the translated string in the **Value** column as follows.
+* Add **.resx** file to [Resources](https://learn.microsoft.com/en-us/aspnet/core/fundamentals/localization?view=aspnetcore-7.0) folder and enter the key value (Locale Keywords) in the **Name** column and the translated string in the **Value** column as follows.
+
 
 Name |Value (in Deutsch culture)
 -----|-----
@@ -52,7 +40,7 @@ Gantt_Name | Name
 Gantt_StartDate | Anfangsdatum
 Gantt_EndDate | Endtermin
 Gantt_Duration | Dauer
-Gantt_Progress | Fortschritt  
+Gantt_Progress | Fortschritt
 Gantt_Dependency | Abhängigkeit
 Gantt_Notes | Anmerkungen
 Gantt_BaselineStartDate | Basisstartdatum
@@ -110,7 +98,7 @@ Gantt_TaskInformation | Aufgabeninformationen
 Gantt_DeleteTask | Aufgabe löschen
 Gantt_DeleteDependency | Abhängigkeit löschen
 Gantt_Convert | Konvertieren
-Gantt_Save | speichern  
+Gantt_Save | speichern
 Gantt_Above | Über
 Gantt_Below | Unten
 Gantt_Child | Kind
@@ -124,141 +112,41 @@ Gantt_TimelineCell | Timeline-Zelle
 Gantt_ConfirmPredecessorDelete | Möchten Sie den Abhängigkeitslink wirklich entfernen?
 Gantt_Indent | Einzug
 Gantt_Outdent | Outdent
-Grid_EmptyRecord | Keine Datensätze zum Anzeigen
-Grid_True | wahr
-Grid_False | falsch
-Grid_InvalidFilterMessage | Ungültige Filterdaten
-Grid_FilterbarTitle | Filterleistenzelle
-Grid_EmptyDataSourceError | DataSource darf beim ersten Laden nicht leer sein, da Spalten aus dataSource in AutoGenerate Column Grid generiert werden
-Grid_Add | Hinzufügen
-Grid_Edit | Bearbeiten
-Grid_Cancel | Abbrechen
-Grid_Update | Aktualisieren
-Grid_Delete | Löschen
-Grid_Print | Drucken
-Grid_Pdfexport | PDF-Export
-Grid_Excelexport | Excel Export
-Grid_Wordexport | Word Export
-Grid_Csvexport | CSV Export
-Grid_Search | Suche
-Grid_Columnchooser | Spalten
-Grid_Save | Speichern
-Grid_Item | Eintrag
-Grid_Items | Einträge
-Grid_EditOperationAlert | Keine Datensätze zum Bearbeiten ausgewählt
-Grid_DeleteOperationAlert | Keine Datensätze zum Löschen ausgewählt
-Grid_SaveButton | Speichern
-Grid_OKButton | Ok
-Grid_CancelButton | Abbrechen
-Grid_EditFormTitle | Details von
-Grid_AddFormTitle | Neuen Datensatz hinzufügen
-Grid_ConfirmDelete | Möchten Sie den Datensatz wirklich löschen?
-Grid_CancelEdit | Möchten Sie die Änderungen wirklich verwerfen?
-Grid_ChooseColumns | Spalte auswählen
-Grid_SearchColumns | Spalten durchsuchen
-Grid_Matchs | Keine Treffer gefunden
-Grid_FilterButton | Filter
-Grid_ClearButton | Zurücksetzen
-Grid_StartsWith | Beginnt mit
-Grid_EndsWith | Endet mit
-Grid_Contains | Enthält
-Grid_Equal | Gleich
-Grid_NotEqual | Nicht gleich
-Grid_LessThan | Weniger als
-Grid_LessThanOrEqual | Weniger als oder gleich
-Grid_GreaterThan | Größer als
-Grid_GreaterThanOrEqual | Größer als oder gleich
-Grid_ChooseDate | Wählen Sie ein Datum
-Grid_EnterValue | Geben Sie den Wert ein
-Grid_Copy | Kopieren
-Grid_AutoFitAll | Automatisch alle Spalten anpassen
-Grid_AutoFit | Diese Spalte automatisch anpassen
-Grid_Export | Export
-Grid_SortAscending | Aufsteigend sortieren
-Grid_SortDescending | Absteigend sortieren
-Grid_EditRecord | Datensatz bearbeiten
-Grid_DeleteRecord | Aufzeichnung löschen
-Grid_FilterMenu | Filter
-Grid_SelectAll | Wählen Sie Alle
-Grid_FilterTrue | Wahr
-Grid_FilterFalse | Falsch
-Grid_NoResult | Keine Treffer gefunden
-Grid_ClearFilter | Filter zurücksetzen
-Grid_NumberFilter | Anzahl Filter
-Grid_TextFilter | Textfilter
-Grid_DateFilter | Datumsfilter
-Grid_DateTimeFilter | Datum-Uhrzeit-Filter
-Grid_MatchCase | Groß-/Kleinschreibung beachten
-Grid_Between | Zwischen
-Grid_CustomFilter | Benutzerdefinierte Filter
-Grid_CustomFilterPlaceHolder | Geben Sie den Wert ein
-Grid_CustomFilterDatePlaceHolder | Wählen Sie ein Datum
-Grid_AND | UND
-Grid_OR | ODER
-Grid_RowSelectionCheckBoxARIA | Kontrollkästchen Zeile
-Grid_FilterMenuIconARIA | Filtersymbol
-Grid_ColumnMenuIconARIA | Spaltenmenüsymbol
-Grid_ColumnHeaderARIA | Spaltenüberschrift
-Grid_FilterCheckboxARIA | Kontrollkästchen Filter
-Grid_Ascending | Aufsteigend
-Grid_Descending | Absteigend
-Grid_None | Keiner
-Grid_Sort | Sortieren
-Grid_TemplateColumnARIA | Ist Vorlage
-Grid_FilterDescription | Drücken Sie Alt Down, um das Filtermenü zu öffnen
-Grid_SortDescription | DRÜCKE ENTER, UM ZU CHATEN
-Grid_ColumnMenuDescription | Drücken Sie Alt Down, um das Spaltenmenü zu öffnen
-Grid_ColumnHeaderUndefinedARIA | spaltenkopf undefiniert
-Grid_EmptyColumnHeaderUndefinedARIA | leere Spaltenüberschrift undefiniert
-Grid_Close | schliessen
-Grid_FilterOperator | FILTERBEDIENER
-Grid_FilterValue | Filterwert
 
 ### Blazor server-side
 
 The following examples demonstrate how to enable **Localization** for Gantt in server-side Blazor samples.
 
-* Open the **Startup.cs** file and add the below configuration in the **ConfigureServices** function as follows.
+* Open the **Program.cs** file and add the below configuration as follows.
 
 ```csharp
 using Syncfusion.Blazor;
 using System.Globalization;
 using Microsoft.AspNetCore.Localization;
 
-namespace BlazorApplication
+builder.Services.AddSyncfusionBlazor();
+builder.Services.AddLocalization(options => options.ResourcesPath = "Resources");
+builder.Services.Configure<RequestLocalizationOptions>(options =>
 {
-    public class Startup
-    {
-        ....
-        ....
-        public void ConfigureServices(IServiceCollection services)
-        {
-            ....
-            ....
-            services.AddSyncfusionBlazor();
-            services.AddLocalization(options => options.ResourcesPath = "Resources");
-            services.Configure<RequestLocalizationOptions>(options =>
-            {
-                // define the list of cultures your app will support
-                var supportedCultures = new List<CultureInfo>()
+    // define the list of cultures your app will support
+    var supportedCultures = new List<CultureInfo>()
                 {
                     new CultureInfo("de")
                 };
-                // set the default culture
-                options.DefaultRequestCulture = new RequestCulture("de");
-                options.SupportedCultures = supportedCultures;
-                options.SupportedUICultures = supportedCultures;
-                options.RequestCultureProviders = new List<IRequestCultureProvider>() {
+    // set the default culture
+    options.DefaultRequestCulture = new RequestCulture("de");
+    options.SupportedCultures = supportedCultures;
+    options.SupportedUICultures = supportedCultures;
+    options.RequestCultureProviders = new List<IRequestCultureProvider>() {
                  new QueryStringRequestCultureProvider() // Here, You can also use other localization provider
                 };
-            });
-            services.AddSingleton(typeof(ISyncfusionStringLocalizer), typeof(SampleLocalizer));
-        }
-    }
-}
+});
+builder.Services.AddSingleton(typeof(ISyncfusionStringLocalizer), typeof(SampleLocalizer));
+
 ```
 
-N> Add [UseRequestLocalization()](https://learn.microsoft.com/en-us/aspnet/core/fundamentals/localization?view=aspnetcore-7.0&viewFallbackFrom=aspnetcore-3.0#localization-middleware) middle-ware in Configure method in **Startup.cs** file to get browser Culture Information.
+N> Add [UseRequestLocalization()](https://learn.microsoft.com/en-us/aspnet/core/fundamentals/localization?view=aspnetcore-7.0#localization-middleware) middle-ware in Configure method in **Program.cs** file to get browser Culture Information.
+
 
 * Then, write a **class** by inheriting **ISyncfusionStringLocalizer** interface and override the Manager property to get the resource file details from the application end.
 
@@ -389,7 +277,7 @@ public class SyncfusionLocalizer : ISyncfusionStringLocalizer
     public string GetText(string key)
     {
         return this.ResourceManager.GetString(key);
-    }  
+    }
 
     // To access the resource file and get the exact value for locale key.
 
