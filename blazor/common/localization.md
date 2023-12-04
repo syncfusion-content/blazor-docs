@@ -23,7 +23,7 @@ Syncfusion components can be localized using the Resource `.resx` files. You can
 
 N> You can get default and culture based resource files from [GitHub](https://github.com/syncfusion/blazor-locale).
 
-Copy default resx file (`SfResources.resx`) and the other required resx files based on the culture to be localized and add it into **Resources** folder.
+Copy the default resx file (`SfResources.resx`) and the other required resx files based on the culture to be localized and add them to the **Resources** folder. If you are implementing in a .NET MAUI Blazor app, create a **LocalizationResources** folder and add them into it.
 
 ![Adding Resource Files in Blazor](images/localization-resource.png)
 
@@ -58,6 +58,10 @@ public class SyncfusionLocalizer : ISyncfusionStringLocalizer
         {
             // Replace the ApplicationNamespace with your application name.
             return ApplicationNamespace.Resources.SfResources.ResourceManager;
+
+            //For .Net Maui Blazor App
+            // Replace the ApplicationNamespace with your application name.
+            //return ApplicationNamespace.LocalizationResources.SfResources.ResourceManager;
         }
     }
 }
@@ -69,6 +73,7 @@ public class SyncfusionLocalizer : ISyncfusionStringLocalizer
 Register the `ISyncfusionStringLocalizer` implementation to localize the Syncfusion Blazor components based on resources files added in application.
 
 * For **Blazor WebAssembly App** or **Blazor Server App**, register the Syncfusion Blazor Service in the client web app of **~/Program.cs** file.
+* For **MAUI Blazor App**, register the Syncfusion Blazor Service in the **~/MauiProgram.cs** file.
 
 {% tabs %}
 
@@ -98,7 +103,7 @@ If you don't want to change culture dynamically, you can set it statically by fo
 
 ...
 var app = builder.Build();
-app.UseRequestLocalization("de");
+app.UseRequestLocalization("de-DE");
 ...
 
 {% endhighlight %}
@@ -140,7 +145,7 @@ The app's culture can be set in JavaScript by setting `applicationCulture` in Bl
     <script src="_framework/blazor.webassembly.js" autostart="false"></script>
     <script>
         Blazor.start({
-            applicationCulture: 'de'
+            applicationCulture: 'de-DE'
         });
     </script>
     ...
@@ -160,8 +165,25 @@ You can set culture in C# code alternative for setting the culture Blazor's star
 
 using System.Globalization;
 
-CultureInfo.DefaultThreadCurrentCulture = new CultureInfo("de");
-CultureInfo.DefaultThreadCurrentUICulture = new CultureInfo("de");
+CultureInfo.DefaultThreadCurrentCulture = new CultureInfo("de-DE");
+CultureInfo.DefaultThreadCurrentUICulture = new CultureInfo("de-DE");
+
+{% endhighlight %}
+
+{% endtabs %}
+
+### MAUI Blazor App
+
+In a MAUI Blazor app, you can set the culture in C# code by configuring the `CultureInfo.DefaultThreadCurrentCulture` and `CultureInfo.DefaultThreadCurrentUICulture` in `MauiProgram.cs` to the same culture. Ensure that this configuration is done before the line that builds and runs the `MauiApp.CreateBuilder()` (i.e., `return builder.Build();`).
+
+{% tabs %}
+
+{% highlight c# tabtitle="MauiProgram.cs" %}
+
+using System.Globalization;
+
+CultureInfo.DefaultThreadCurrentCulture = new CultureInfo("de-DE");
+CultureInfo.DefaultThreadCurrentUICulture = new CultureInfo("de-DE");
 
 {% endhighlight %}
 
@@ -193,7 +215,7 @@ builder.Services.AddSyncfusionBlazor();
 //Register the Syncfusion locale service to localize Syncfusion Blazor components.
 builder.Services.AddSingleton(typeof(ISyncfusionStringLocalizer), typeof(SyncfusionLocalizer));
 
-var supportedCultures = new[] { "en-US", "de", "fr", "ar", "zh" };
+var supportedCultures = new[] { "en-US", "de-DE", "fr-FR", "ar-AE", "zh-HK" };
 var localizationOptions = new RequestLocalizationOptions()
     .SetDefaultCulture(supportedCultures[0])
     .AddSupportedCultures(supportedCultures)
@@ -299,10 +321,10 @@ Create `CultureSwitcher` component and place it inside shared folder to perform 
     private CultureInfo[] supportedCultures = new[]
     {
         new CultureInfo("en-US"),
-        new CultureInfo("de"),
-        new CultureInfo("fr"),
-        new CultureInfo("ar"),
-        new CultureInfo("zh")
+        new CultureInfo("de-DE"),
+        new CultureInfo("fr-FR"),
+        new CultureInfo("ar-AE"),
+        new CultureInfo("zh-HK")
     };
 
     protected override void OnInitialized()
@@ -459,10 +481,10 @@ Create `CultureSwitcher` component to set the user's culture selection into brow
     private CultureInfo[] supportedCultures = new[]
     {
         new CultureInfo("en-US"),
-        new CultureInfo("de"),
-        new CultureInfo("fr"),
-        new CultureInfo("ar"),
-        new CultureInfo("zh")
+        new CultureInfo("de-DE"),
+        new CultureInfo("fr-FR"),
+        new CultureInfo("ar-AE"),
+        new CultureInfo("zh-HK")
     };
 
     private CultureInfo Culture
@@ -498,6 +520,111 @@ Add the `CultureSwitcher` component to `Shared/MainLayout.razor` to enable the c
             <CultureSwitcher />
             <a href="https://docs.microsoft.com/aspnet/" target="_blank">About</a>
         </div>
+    </main>
+</div>
+
+{% endhighlight %}
+
+{% endtabs %}
+
+### MAUI Blazor App
+
+In `App.xaml.cs`, use [Preferences](https://learn.microsoft.com/en-us/dotnet/maui/platform-integration/storage/preferences) to retrieve the user's stored culture selection. If the storage doesn't contain a culture for the user, the code sets a default value of United States English (en-US).
+
+{% tabs %}
+
+{% highlight c# tabtitle="App.xaml.cs)" %}
+
+using System.Globalization;
+
+namespace LocalizationMauiBlazor
+{
+    public partial class App : Application
+    {
+        public App()
+        {
+            InitializeComponent();
+            var language = Preferences.Get("language", "en-US");
+            var culture = new CultureInfo(language);
+            CultureInfo.DefaultThreadCurrentCulture = culture;
+            CultureInfo.DefaultThreadCurrentUICulture = culture;
+            MainPage = new MainPage();
+        }
+    }
+}
+
+{% endhighlight %}
+
+{% endtabs %}
+
+Create `CultureSwitcher` component to store the user's culture selection via [Preferences](https://learn.microsoft.com/en-us/dotnet/maui/platform-integration/storage/preferences) and to force reload the page using the updated culture.
+
+{% tabs %}
+
+{% highlight razor tabtitle="CultureSwitcher.razor" %}
+
+@using System.Globalization
+@inject NavigationManager NavigationManager
+
+<select @bind="Culture">
+    @foreach (var culture in supportedCultures)
+    {
+        <option value="@culture">@culture.DisplayName</option>
+    }
+</select>
+
+@code {
+    private CultureInfo[] supportedCultures = new[]
+    {
+        new CultureInfo("en-US"),
+        new CultureInfo("de-DE"),
+        new CultureInfo("fr-FR"),
+        new CultureInfo("ar-AE"),
+        new CultureInfo("zh-HK")
+    };
+
+    private CultureInfo Culture
+    {
+        get => CultureInfo.CurrentCulture;
+        set
+        {
+            if (CultureInfo.CurrentCulture != value)
+            {
+                CultureInfo.DefaultThreadCurrentCulture = value;
+                CultureInfo.DefaultThreadCurrentUICulture = value;
+                Preferences.Set("language", value.Name);
+                NavigationManager.NavigateTo(NavigationManager.Uri, forceLoad: true);
+            }
+        }
+    }
+}
+
+{% endhighlight %}
+
+{% endtabs %}
+
+Add the `CultureSwitcher` component to `Layout/MainLayout.razor` to enable the culture switcher on all pages.
+
+{% tabs %}
+
+{% highlight razor tabtitle="MainLayout.razor" %}
+
+@inherits LayoutComponentBase
+
+<div class="page">
+    <div class="sidebar">
+        <NavMenu />
+    </div>
+
+    <main>
+        <div class="top-row px-4">
+            <a href="https://learn.microsoft.com/aspnet/core/" target="_blank">About</a>
+        </div>
+
+        <article class="content px-4">
+            <CultureSwitcher />
+            @Body
+        </article>
     </main>
 </div>
 
