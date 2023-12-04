@@ -98,7 +98,7 @@ If you don't want to change culture dynamically, you can set it statically by fo
 
 ...
 var app = builder.Build();
-app.UseRequestLocalization("de");
+app.UseRequestLocalization("de-DE");
 ...
 
 {% endhighlight %}
@@ -140,7 +140,7 @@ The app's culture can be set in JavaScript by setting `applicationCulture` in Bl
     <script src="_framework/blazor.webassembly.js" autostart="false"></script>
     <script>
         Blazor.start({
-            applicationCulture: 'de'
+            applicationCulture: 'de-DE'
         });
     </script>
     ...
@@ -160,8 +160,8 @@ You can set culture in C# code alternative for setting the culture Blazor's star
 
 using System.Globalization;
 
-CultureInfo.DefaultThreadCurrentCulture = new CultureInfo("de");
-CultureInfo.DefaultThreadCurrentUICulture = new CultureInfo("de");
+CultureInfo.DefaultThreadCurrentCulture = new CultureInfo("de-DE");
+CultureInfo.DefaultThreadCurrentUICulture = new CultureInfo("de-DE");
 
 {% endhighlight %}
 
@@ -193,7 +193,7 @@ builder.Services.AddSyncfusionBlazor();
 //Register the Syncfusion locale service to localize Syncfusion Blazor components.
 builder.Services.AddSingleton(typeof(ISyncfusionStringLocalizer), typeof(SyncfusionLocalizer));
 
-var supportedCultures = new[] { "en-US", "de", "fr", "ar", "zh" };
+var supportedCultures = new[] { "en-US", "de-DE", "fr-FR", "ar-AE", "zh-HK" };
 var localizationOptions = new RequestLocalizationOptions()
     .SetDefaultCulture(supportedCultures[0])
     .AddSupportedCultures(supportedCultures)
@@ -299,10 +299,10 @@ Create `CultureSwitcher` component and place it inside shared folder to perform 
     private CultureInfo[] supportedCultures = new[]
     {
         new CultureInfo("en-US"),
-        new CultureInfo("de"),
-        new CultureInfo("fr"),
-        new CultureInfo("ar"),
-        new CultureInfo("zh")
+        new CultureInfo("de-DE"),
+        new CultureInfo("fr-FR"),
+        new CultureInfo("ar-AE"),
+        new CultureInfo("zh-HK")
     };
 
     protected override void OnInitialized()
@@ -459,10 +459,10 @@ Create `CultureSwitcher` component to set the user's culture selection into brow
     private CultureInfo[] supportedCultures = new[]
     {
         new CultureInfo("en-US"),
-        new CultureInfo("de"),
-        new CultureInfo("fr"),
-        new CultureInfo("ar"),
-        new CultureInfo("zh")
+        new CultureInfo("de-DE"),
+        new CultureInfo("fr-FR"),
+        new CultureInfo("ar-AE"),
+        new CultureInfo("zh-HK")
     };
 
     private CultureInfo Culture
