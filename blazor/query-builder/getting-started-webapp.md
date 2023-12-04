@@ -11,8 +11,6 @@ documentation: ug
 
 This section briefly explains about how to include [Blazor QueryBuilder](https://blazor.syncfusion.com/demos/query-builder/default-functionalities?theme=bootstrap4) component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/).
 
-N> You can also explore our [Blazor QueryBuilder example](https://blazor.syncfusion.com/demos/query-builder/default-functionalities?theme=bootstrap4) to know how to render and configure the query builder.
-
 ## Prerequisites
 
 * [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
