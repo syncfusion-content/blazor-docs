@@ -36,12 +36,12 @@ The Syncfusion Blazor Bootstrap Theme is designed based on Bootstrap v3, whereas
 
 Syncfusion Blazor themes can be used in your Blazor application by referencing the style sheet.
 
+*  For **Blazor Web application**, refer style sheet inside the `<head>` of
+    * **~/Components/App.razor** file for .NET 8.
 * For **Blazor WebAssembly application**, refer style sheet inside the `<head>` of **wwwroot/index.html** file.
 * For **Blazor Server application**, refer style sheet inside the `<head>` of
     * **~/Pages/_Host.cshtml** file for .NET 7.
     * **~/Pages/_Layout.cshtml** file for .NET 6.
-*  For **Blazor Web application**, refer style sheet inside the `<head>` of
-    * **~/Components/App.razor** file for .NET 8.
 
 Using the below approaches the themes can be referenced in the Blazor application,
 

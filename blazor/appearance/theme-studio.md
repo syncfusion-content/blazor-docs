@@ -51,12 +51,12 @@ You can directly use the customized CSS file in the web application.
 
 1. Copy and paste the customized CSS file from the download folder into any folder, e.g., `~/wwwroot/styles/{file-name}.css`.
 2. Refer the customized CSS file reference as follows,
+  *  For **Blazor Web application**,  refer style sheet inside the `<head>` of
+        * **~/Components/App.razor** file for .NET 8.
     * For **Blazor WebAssembly application**, refer style sheet inside the `<head>` of **wwwroot/index.html** file.
     * For **Blazor Server application**, refer style sheet inside the `<head>` of
         * **~/Pages/_Host.cshtml** file for .NET 7.
         * **~/Pages/_Layout.cshtml** for .NET 6.
-    *  For **Blazor Web application**,  refer style sheet inside the `<head>` of
-        * **~/Components/App.razor** file for .NET 8.
 
     ```html
     <head>
