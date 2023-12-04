@@ -111,7 +111,7 @@ N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/app
 
 ## Add Syncfusion Blazor component
 
-Add the Syncfusion Blazor Calendar component in the **~/Pages/Home.razor** file. If you create Blazor Wep App with interactivity location as `Per page/component`, define a `render mode` at top of the `~Pages/Home.razor` file, as follows:
+Add the Syncfusion Blazor Calendar component in the **~/Pages/Index.razor or Home.razor** file. If you create Blazor Wep App with interactivity location as `Per page/component`, define a `render mode` at top of the `~Pages/Home.razor` file, as follows:
 
 {% tabs %}
 {% highlight razor %}
