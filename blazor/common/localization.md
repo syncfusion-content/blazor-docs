@@ -527,6 +527,112 @@ Add the `CultureSwitcher` component to `Shared/MainLayout.razor` to enable the c
 
 {% endtabs %}
 
+### MAUI Blazor App
+
+In `App.xaml.cs`, use [Preferences](https://learn.microsoft.com/en-us/dotnet/maui/platform-integration/storage/preferences) to retrieve the user's stored culture selection. If the storage doesn't contain a culture for the user, the code sets a default value of United States English (en-US).
+
+{% tabs %}
+
+{% highlight c# tabtitle="App.xaml.cs)" %}
+
+using System.Globalization;
+
+namespace LocalizationMauiBlazor
+{
+    public partial class App : Application
+    {
+        public App()
+        {
+            InitializeComponent();
+            var language = Preferences.Get("language", "en-US");
+            var culture = new CultureInfo(language);
+            CultureInfo.DefaultThreadCurrentCulture = culture;
+            CultureInfo.DefaultThreadCurrentUICulture = culture;
+            MainPage = new MainPage();
+        }
+    }
+}
+
+{% endhighlight %}
+
+{% endtabs %}
+
+Create `CultureSwitcher` component to store the user's culture selection via [Preferences](https://learn.microsoft.com/en-us/dotnet/maui/platform-integration/storage/preferences) and to force reload the page using the updated culture.
+
+{% tabs %}
+
+{% highlight razor tabtitle="CultureSwitcher.razor" %}
+
+@using System.Globalization
+@inject NavigationManager NavigationManager
+
+<select @bind="Culture">
+    @foreach (var culture in supportedCultures)
+    {
+        <option value="@culture">@culture.DisplayName</option>
+    }
+</select>
+
+@code {
+    private CultureInfo[] supportedCultures = new[]
+    {
+        new CultureInfo("en-US"),
+        new CultureInfo("de-DE"),
+        new CultureInfo("fr-FR"),
+        new CultureInfo("ar-AE"),
+        new CultureInfo("zh-HK")
+    };
+
+    private CultureInfo Culture
+    {
+        get => CultureInfo.CurrentCulture;
+        set
+        {
+            if (CultureInfo.CurrentCulture != value)
+            {
+                CultureInfo.DefaultThreadCurrentCulture = value;
+                CultureInfo.DefaultThreadCurrentUICulture = value;
+                Preferences.Set("language", value.Name);
+                NavigationManager.NavigateTo(NavigationManager.Uri, forceLoad: true);
+            }
+        }
+    }
+}
+
+{% endhighlight %}
+
+{% endtabs %}
+
+Add the `CultureSwitcher` component to `Layout/MainLayout.razor` to enable the culture switcher on all pages.
+
+{% tabs %}
+
+{% highlight razor tabtitle="MainLayout.razor" %}
+
+@using System.Globalization
+@inherits LayoutComponentBase
+
+<div class="page">
+    <div class="sidebar">
+        <NavMenu />
+    </div>
+
+    <main>
+        <div class="top-row px-4">
+            <a href="https://learn.microsoft.com/aspnet/core/" target="_blank">About</a>
+        </div>
+
+        <article class="content px-4">
+            <CultureSwitcher />
+            @Body
+        </article>
+    </main>
+</div>
+
+{% endhighlight %}
+
+{% endtabs %}
+
 ![Dynamically set the culture in Blazor](images/blazor-localization-dynamic-change.png)
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/blazor-localization)
