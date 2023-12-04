@@ -55,6 +55,8 @@ You can directly use the customized CSS file in the web application.
     * For **Blazor Server application**, refer style sheet inside the `<head>` of
         * **~/Pages/_Host.cshtml** file for .NET 7.
         * **~/Pages/_Layout.cshtml** for .NET 6.
+    *  For **Blazor Web application**,  refer style sheet inside the `<head>` of
+        * **~/Components/App.razor** file for .NET 8.
 
     ```html
     <head>

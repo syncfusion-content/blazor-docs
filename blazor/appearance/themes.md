@@ -39,7 +39,9 @@ Syncfusion Blazor themes can be used in your Blazor application by referencing t
 * For **Blazor WebAssembly application**, refer style sheet inside the `<head>` of **wwwroot/index.html** file.
 * For **Blazor Server application**, refer style sheet inside the `<head>` of
     * **~/Pages/_Host.cshtml** file for .NET 7.
-    * **~/Pages/_Layout.cshtml** for .NET 6.
+    * **~/Pages/_Layout.cshtml** file for .NET 6.
+*  For **Blazor Web application**, refer style sheet inside the `<head>` of
+    * **~/Components/App.razor** file for .NET 8.
 
 Using the below approaches the themes can be referenced in the Blazor application,
 
@@ -69,6 +71,8 @@ Syncfusion Blazor themes are available as static web assets in the [Syncfusion.B
 * For **Blazor Server application**, refer style sheet inside the `<head>` element of
     * **~/Pages/_Host.cshtml** file for .NET 7.
     * **~/Pages/_Layout.cshtml** for .NET 6.
+*  For **Blazor Web application**,  refer style sheet inside the `<head>` of
+        * **~/Components/App.razor** file for .NET 8.
 
 When using individual NuGet packages in your application, add [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet Package and reference style sheet as below,
 
