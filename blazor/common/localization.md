@@ -609,7 +609,6 @@ Add the `CultureSwitcher` component to `Layout/MainLayout.razor` to enable the c
 
 {% highlight razor tabtitle="MainLayout.razor" %}
 
-@using System.Globalization
 @inherits LayoutComponentBase
 
 <div class="page">
