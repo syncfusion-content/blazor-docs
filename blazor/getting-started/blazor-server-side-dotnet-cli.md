@@ -28,15 +28,15 @@ dotnet --version
 Run the following command to create a new Blazor Server application in a command prompt (Windows) or terminal (macOS) or command shell (Linux).
 
 {% tabs %}
-{% highlight c# tabtitle=".NET CLI" %}
-
-dotnet new blazorserver -o BlazorApp
-cd BlazorApp
-
-{% endhighlight %}
 {% highlight c# tabtitle=".NET CLI(.NET 8)" %}
 
 dotnet new blazor -o BlazorApp
+cd BlazorApp
+
+{% endhighlight %}
+{% highlight c# tabtitle=".NET CLI" %}
+
+dotnet new blazorserver -o BlazorApp
 cd BlazorApp
 
 {% endhighlight %}
@@ -89,11 +89,11 @@ builder.Services.AddSyncfusionBlazor();
 
 The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Reference the stylesheet and script reference as follows:
 
-* For **.NET 6** Blazor Server app, include it in **~/Pages/_Layout.cshtml** file.
+* For **.NET 8** Blazor Web App, include it in the **~/Components/App.razor** file.
 
 * For **.NET 7** Blazor Server app, include it in the **~/Pages/_Host.cshtml** file.
 
-* For **.NET 8** Blazor Web App, include it in the **~/Components/App.razor** file.
+* For **.NET 6** Blazor Server app, include it in **~/Pages/_Layout.cshtml** file.
 
 ```html
 <head>
@@ -111,7 +111,7 @@ N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/app
 
 ## Add Syncfusion Blazor component
 
-Add the Syncfusion Blazor Calendar component in the **~/Pages/Index.razor or Home.razor** file. If you create Blazor Wep App with interactivity location as `Per page/component`, define a `render mode` at top of the `~Pages/Home.razor` file, as follows:
+Add the Syncfusion Blazor Calendar component in the **~/Pages/Home.razor or Index.razor** file. If an interactivity location as `Per page/component` in the web app, define a render mode at the top of the `~Pages/Home.razor` component, as follows:
 
 {% tabs %}
 {% highlight razor %}
