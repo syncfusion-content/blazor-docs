@@ -23,7 +23,7 @@ Syncfusion components can be localized using the Resource `.resx` files. You can
 
 N> You can get default and culture based resource files from [GitHub](https://github.com/syncfusion/blazor-locale).
 
-Copy default resx file (`SfResources.resx`) and the other required resx files based on the culture to be localized and add it into **Resources** folder.
+Copy the default resx file (`SfResources.resx`) and the other required resx files based on the culture to be localized and add them to the **Resources** folder. If you are implementing in a .NET MAUI Blazor app, create a **LocalizationResources** folder and add them into it.
 
 ![Adding Resource Files in Blazor](images/localization-resource.png)
 
@@ -58,6 +58,10 @@ public class SyncfusionLocalizer : ISyncfusionStringLocalizer
         {
             // Replace the ApplicationNamespace with your application name.
             return ApplicationNamespace.Resources.SfResources.ResourceManager;
+
+            //For .Net Maui Blazor App
+            // Replace the ApplicationNamespace with your application name.
+            //return ApplicationNamespace.LocalizationResources.SfResources.ResourceManager;
         }
     }
 }
@@ -69,6 +73,7 @@ public class SyncfusionLocalizer : ISyncfusionStringLocalizer
 Register the `ISyncfusionStringLocalizer` implementation to localize the Syncfusion Blazor components based on resources files added in application.
 
 * For **Blazor WebAssembly App** or **Blazor Server App**, register the Syncfusion Blazor Service in the client web app of **~/Program.cs** file.
+* For **MAUI Blazor App**, register the Syncfusion Blazor Service in the **~/MauiProgram.cs** file.
 
 {% tabs %}
 
@@ -157,6 +162,23 @@ You can set culture in C# code alternative for setting the culture Blazor's star
 {% tabs %}
 
 {% highlight c# tabtitle="Program.cs" %}
+
+using System.Globalization;
+
+CultureInfo.DefaultThreadCurrentCulture = new CultureInfo("de-DE");
+CultureInfo.DefaultThreadCurrentUICulture = new CultureInfo("de-DE");
+
+{% endhighlight %}
+
+{% endtabs %}
+
+### MAUI Blazor App
+
+In a MAUI Blazor app, you can set the culture in C# code by configuring the `CultureInfo.DefaultThreadCurrentCulture` and `CultureInfo.DefaultThreadCurrentUICulture` in `MauiProgram.cs` to the same culture. Ensure that this configuration is done before the line that builds and runs the `MauiApp.CreateBuilder()` (i.e., `return builder.Build();`).
+
+{% tabs %}
+
+{% highlight c# tabtitle="MauiProgram.cs" %}
 
 using System.Globalization;
 
