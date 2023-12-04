@@ -136,5 +136,3 @@ The [`Shape`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Notificati
 {% endtabs %}
 
 ![Blazor Skeleton Component](./images/blazor-skeleton-shape-sample.png)
-
-N> You can also explore our [Blazor Skeleton example](https://blazor.syncfusion.com/demos/skeleton/defaultfunctionalities) that shows how to render and configure the skeleton.
