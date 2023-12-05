@@ -231,7 +231,7 @@ Now, in the Browse tab, search and install the **Syncfusion.Blazor.Grid** NuGet 
 
 ![Install Syncfusion Blazor Grid NuGet](../images/grid-package.png)
 
-N> For this demo, **Syncfusion.Blazor.Grid(19.1.0.66)** NuGet package is used. A new Syncfusion.Blazor NuGet package with new enhancement has been released in our every-week release and main release. So, you can check and update to the latest versions by using the following link.
+N> For this demo, **Syncfusion.Blazor.Grid(19.1.0.66)** NuGet package is used. A new Syncfusion Blazor NuGet package with new enhancement has been released in our every-week release and main release. So, you can check and update to the latest versions by using the following link.
 
 [Grid Editing](https://www.nuget.org/packages/Syncfusion.Blazor.Grid/)
 

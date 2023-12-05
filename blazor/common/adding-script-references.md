@@ -110,11 +110,9 @@ You can refer the Syncfusion Blazor scripts through the NuGet package's static w
 
 ### Enable static web assets usage
 
-To use static web assets, ensure [UseStaticFiles](https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.builder.staticfileextensions.usestaticfiles?view=aspnetcore-7.0) method is called as follows,
+To use static web assets, ensure [UseStaticFiles](https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.builder.staticfileextensions.usestaticfiles?view=aspnetcore-8.0) method in the **~/Program.cs** file of your app.
 
-* For **.NET 6 and .NET 7** app, open the **~/Program.cs** file and call `UseStaticFiles` method.
-
-N> For **Blazor WASM App**, call `UseStaticFiles` method in **Server project** of the above mentioned file.
+N> For **Blazor Auto & WASM App**, call `UseStaticFiles` method in **Server project**.
 
 ### Refer script from static web assets
 

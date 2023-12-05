@@ -17,11 +17,11 @@ In this section, you can learn how to consume data from a database using [Dapper
 * Visual Studio 2019 or later.
 * MS SQL Server.
 
-## Creating Blazor server-side application
+## Creating Blazor application
 
-Open Visual Studio and follow the steps in the below documentation to create the Blazor Server Application.
+* Open Visual Studio and follow the steps in the [documentation](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0&pivots=windows) to create the Blazor Web Application.
 
-[Creating Blazor Server Application](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio)
+* Open Visual Studio and follow the steps in the [documentation](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio) to create the Blazor Server Application.
 
 ## Creating the database
 
@@ -145,18 +145,14 @@ public class BugDataAccessLayer
 
 {% endhighlight %}
 
-Now, register `BugDataAccessLayer` as scoped service in the `Program.cs` file in .NET 6 and .NET 7 application as follows.
+Now, register `BugDataAccessLayer` as scoped service in the `Program.cs` file in .NET 6, .NET 7 and .NET 8 application as follows.
 
-{% tabs %}
-{% highlight c# tabtitle=".NET 6 & .NET 7 (~/Program.cs)" %}
 
-builder.Services.AddRazorPages();
-builder.Services.AddServerSideBlazor();
-builder.Services.AddSingleton<WeatherForecastService>();
+```cshtml
+....
 builder.Services.AddScoped<BugDataAccessLayer>();
 
-{% endhighlight %}
-{% endtabs %}
+```
 
 ## Adding Syncfusion Blazor components Package
 
@@ -188,19 +184,17 @@ Open `_Import.razor` file and add the following namespaces which are required to
 
 {% endhighlight %}
 
-Open `Program.cs` file in .NET 6 and .NET 7 application and register the Syncfusion service.
+Open `Program.cs` file in your application and register the Syncfusion service. If you create Blazor Web App with an **Interactive render mode** as `WebAssembly` or `Auto`, you need to register the Syncfusion Blazor service in both **~/Program.cs** files.
 
-{% tabs %}
-{% highlight c# tabtitle=".NET 6 & .NET 7 (~/Program.cs)" %}
+```cshtml
 
-builder.Services.AddRazorPages();
-builder.Services.AddServerSideBlazor();
-builder.Services.AddSingleton<WeatherForecastService>();
-builder.Services.AddScoped<BugDataAccessLayer>();
+....
+using Syncfusion.Blazor;
+....
 builder.Services.AddSyncfusionBlazor();
+....
 
-{% endhighlight %}
-{% endtabs %}
+```
 
 Syncfusion Blazor provides different themes. They are:
 
@@ -210,7 +204,14 @@ Syncfusion Blazor provides different themes. They are:
 * Bootstrap
 * High Contrast
 
-In this demo application, the Bootstrap4 theme will be used. To add the theme, open the `Pages/_Host.cshtml` file and add the following CSS reference code.
+In this demo application, the Bootstrap4 theme will be used.
+
+* For **.NET 8** app, add theme in the `<head>` of the **~/Components/App.razor** file.
+
+* For **.NET 7** app, add theme in the `<head>` of the **~/Pages/_Host.cshtml** file.
+
+* For **.NET 6** app, add theme in the `<head>` of the **~/Pages/_Layout.cshtml** file.
+
 
 {% highlight cshtml %}
 
@@ -218,7 +219,7 @@ In this demo application, the Bootstrap4 theme will be used. To add the theme, o
 
 {% endhighlight %}
 
-In previous steps, we have successfully configured the Syncfusion Blazor package in the application. Now, we can add the DataGrid Component to the `Index.razor`.
+In previous steps, we have successfully configured the Syncfusion Blazor package in the application. Now, we can add the DataGrid Component to the `Home.razor or index.razor` or anoter razor page inside of pages folder.
 
 {% highlight cshtml %}
 
@@ -264,17 +265,16 @@ public class BugDataAdaptor: DataAdaptor
 
 {% endhighlight %}
 
-Now, Open the `Program.cs` file in .NET 6 and .NET 7 application and register the `BugDataAdaptor` class.
+Now, Open the `Program.cs` file in .NET 6, .NET 7 & .NET 8 application and register the `BugDataAdaptor` class.
 
 {% tabs %}
-{% highlight c# tabtitle=".NET 6 & .NET 7 (~/Program.cs)" hl_lines="6"%}
+{% highlight c# tabtitle="~/Program.cs" hl_lines="4"%}
 
-builder.Services.AddRazorPages();
-builder.Services.AddServerSideBlazor();
-builder.Services.AddSingleton<WeatherForecastService>();
+....
 builder.Services.AddScoped<BugDataAccessLayer>();
 builder.Services.AddSyncfusionBlazor();
 builder.Services.AddScoped<BugDataAdaptor>();
+.....
 
 {% endhighlight %}
 {% endtabs %}
