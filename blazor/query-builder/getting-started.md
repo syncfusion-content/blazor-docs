@@ -1,22 +1,22 @@
 ---
 layout: post
-title: Getting Started with Blazor QueryBuilder Component | Syncfusion
-description: Checkout and learn about getting started with Blazor QueryBuilder component in Blazor Server App and Blazor WebAssembly App.
+title: Getting Started with Blazor Query Builder Component | Syncfusion
+description: Checkout and learn about getting started with Blazor Query Builder component in Blazor Server App and Blazor WebAssembly App.
 platform: Blazor
-control: QueryBuilder
+control: Query Builder
 documentation: ug
 ---
 
-# Getting Started with Blazor QueryBuilder Component
+# Getting Started with Blazor Query Builder Component
 
-This section briefly explains about how to include [Blazor QueryBuilder](https://www.syncfusion.com/blazor-components/blazor-query-builder) component in your Blazor Server App and Blazor WebAssembly App using Visual Studio.
+This section briefly explains about how to include [Blazor Query Builder](https://www.syncfusion.com/blazor-components/blazor-query-builder) component in your Blazor Server App and Blazor WebAssembly App using Visual Studio.
 
-To get started quickly with Blazor QueryBuilder, check on the following video or [GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/QueryBuilder) sample:
+To get started quickly with Blazor Query Builder, check on the following video or [GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/Query Builder) sample:
 
 {% youtube
 "youtube:https://www.youtube.com/watch?v=jyWU7XSg3WI"%}
 
-N> You can also explore our [Blazor QueryBuilder example](https://blazor.syncfusion.com/demos/query-builder/default-functionalities?theme=bootstrap4) to know how to render and configure the query builder.
+N> You can also explore our [Blazor Query Builder example](https://blazor.syncfusion.com/demos/query-builder/default-functionalities?theme=bootstrap4) to know how to render and configure the query builder.
 
 ## Prerequisites
 
@@ -26,14 +26,14 @@ N> You can also explore our [Blazor QueryBuilder example](https://blazor.syncfus
 
 You can create a **Blazor Server App** or **Blazor WebAssembly App** using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0) or the [Syncfusion Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
 
-## Install Syncfusion Blazor QueryBuilder and Themes NuGet in the App
+## Install Syncfusion Blazor Query Builder and Themes NuGet in the App
 
-To add **Blazor QueryBuilder** component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install [Syncfusion.Blazor.QueryBuilder](https://www.nuget.org/packages/Syncfusion.Blazor.QueryBuilder) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/). Alternatively, you can utilize the following package manager command to achieve the same.
+To add **Blazor Query Builder** component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install [Syncfusion.Blazor.Query Builder](https://www.nuget.org/packages/Syncfusion.Blazor.Query Builder) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/). Alternatively, you can utilize the following package manager command to achieve the same.
 
 {% tabs %}
 {% highlight C# tabtitle="Package Manager" %}
 
-Install-Package Syncfusion.Blazor.QueryBuilder -Version {{ site.releaseversion }}
+Install-Package Syncfusion.Blazor.Query Builder -Version {{ site.releaseversion }}
 Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
 
 {% endhighlight %}
@@ -43,13 +43,13 @@ N> Syncfusion Blazor components are available in [nuget.org](https://www.nuget.o
 
 ## Register Syncfusion Blazor Service
 
-Open **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.QueryBuilder` namespace.
+Open **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Query Builder` namespace.
 
 {% tabs %}
 {% highlight razor tabtitle="~/_Imports.razor" %}
 
 @using Syncfusion.Blazor
-@using Syncfusion.Blazor.QueryBuilder
+@using Syncfusion.Blazor.Query Builder
 
 {% endhighlight %}
 {% endtabs %}
@@ -112,24 +112,24 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 ```
 N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic to discover various methods ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference), and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)) for referencing themes in your Blazor application. Also, check out the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic to learn different approaches for adding script references in your Blazor application.
 
-## Add Blazor QueryBuilder component
+## Add Blazor Query Builder component
 
-Add the Syncfusion Blazor QueryBuilder component in the **~/Pages/Index.razor** file.
+Add the Syncfusion Blazor Query Builder component in the **~/Pages/Index.razor** file.
 
 {% tabs %}
 {% highlight razor %}
 
-<SfQueryBuilder TValue="EmployeeDetails">
-    <QueryBuilderColumns>
-        <QueryBuilderColumn Field="EmployeeID" Label="Employee ID" Type="ColumnType.Number"></QueryBuilderColumn>
-        <QueryBuilderColumn Field="FirstName" Label="First Name" Type="ColumnType.String"></QueryBuilderColumn>
-        <QueryBuilderColumn Field="TitleOfCourtesy" Label="Title of Courtesy" Type="ColumnType.Boolean" Values="Values"></QueryBuilderColumn>
-        <QueryBuilderColumn Field="Title" Label="Title" Type="ColumnType.String"></QueryBuilderColumn>
-        <QueryBuilderColumn Field="HireDate" Label="Hire Date" Type="ColumnType.Date"></QueryBuilderColumn>
-        <QueryBuilderColumn Field="Country" Label="Country" Type="ColumnType.String"></QueryBuilderColumn>
-        <QueryBuilderColumn Field="City" Label="City" Type="ColumnType.String"></QueryBuilderColumn>
-    </QueryBuilderColumns>
-</SfQueryBuilder>
+<SfQuery Builder TValue="EmployeeDetails">
+    <Query BuilderColumns>
+        <Query BuilderColumn Field="EmployeeID" Label="Employee ID" Type="ColumnType.Number"></Query BuilderColumn>
+        <Query BuilderColumn Field="FirstName" Label="First Name" Type="ColumnType.String"></Query BuilderColumn>
+        <Query BuilderColumn Field="TitleOfCourtesy" Label="Title of Courtesy" Type="ColumnType.Boolean" Values="Values"></Query BuilderColumn>
+        <Query BuilderColumn Field="Title" Label="Title" Type="ColumnType.String"></Query BuilderColumn>
+        <Query BuilderColumn Field="HireDate" Label="Hire Date" Type="ColumnType.Date"></Query BuilderColumn>
+        <Query BuilderColumn Field="Country" Label="Country" Type="ColumnType.String"></Query BuilderColumn>
+        <Query BuilderColumn Field="City" Label="City" Type="ColumnType.String"></Query BuilderColumn>
+    </Query BuilderColumns>
+</SfQuery Builder>
 
 @code {
     private string[] Values = new string[] { "Mr.", "Mrs." };
@@ -148,9 +148,9 @@ Add the Syncfusion Blazor QueryBuilder component in the **~/Pages/Index.razor** 
 {% endhighlight %}
 {% endtabs %}
 
-* Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion Blazor QueryBuilder component in your default web browser.
+* Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion Blazor Query Builder component in your default web browser.
 
-![Blazor QueryBuilder Component](./images/blazor-querybuilder-component.png)
+![Blazor Query Builder Component.](./images/blazor-Query Builder-component.png)
 
 ## See also
 
