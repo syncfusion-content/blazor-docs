@@ -302,6 +302,19 @@ You can add the `SCSS theme` for Blazor applications through NPM package and com
 
 * Run the application to see the customized Fluent theme applied.
 
+It is important to note that the Material 3 theme uses CSS variables. To override its variables, you should import the Material 3 theme's SCSS file and then customize the [Material 3 variables](https://blazor.syncfusion.com/documentation/appearance/theme-studio#material-3-theme) like this:
+
+```scss
+// Import the Material 3 theme
+@import 'blazor-themes/SCSS-Themes/material3.scss';
+
+// Override Material 3 variables
+:root {
+    // Customize the primary color
+    --color-sf-primary: 26 26 192;
+}
+```
+
 N> If you are using **Visual Studio 2019**, please use the `includePath` property instead of `loadPaths` as the latter does not support the Web Compiler for VS 2019. However, we highly recommend using the **Web Compiler 2022+** for **Visual Studio 2022**. For more information, please refer to the [discussion link here](https://github.com/failwyn/WebCompiler/issues/24).
 
 N> If you come across the **'Can't find stylesheet to import'** error, ensure that you have installed the [Syncfusion Blazor Themes](https://www.npmjs.com/package/@syncfusion/blazor-themes) NPM package in the project's directory rather than the solution's directory.
