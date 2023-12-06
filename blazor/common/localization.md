@@ -72,12 +72,13 @@ public class SyncfusionLocalizer : ISyncfusionStringLocalizer
 
 Register the `ISyncfusionStringLocalizer` implementation to localize the Syncfusion Blazor components based on resources files added in application.
 
-* For **Blazor WebAssembly App** or **Blazor Server App**, register the Syncfusion Blazor Service in the client web app of **~/Program.cs** file.
+* Register the Syncfusion Blazor Service in the **~/Program.cs** file of your app.If you select an **Interactive render mode** as `WebAssembly` or `Auto`, you need to register the Syncfusion Blazor service in both **~/Program.cs** files of your Blazor Web App.
+
 * For **MAUI Blazor App**, register the Syncfusion Blazor Service in the **~/MauiProgram.cs** file.
 
 {% tabs %}
 
-{% highlight c# tabtitle="C#" hl_lines="4" %}
+{% highlight c# tabtitle="C#" hl_lines="2 4" %}
 
 ...
 builder.Services.AddSyncfusionBlazor();
@@ -92,6 +93,23 @@ builder.Services.AddSingleton(typeof(ISyncfusionStringLocalizer), typeof(Syncfus
 ## Statically set the culture
 
 If you don't want to change culture dynamically, you can set it statically by following the procedures below.
+
+### Blazor Web App
+
+* For Blazor Web app with `Server` interactive render mode, specify the static culture in **~/Program.cs** file.
+
+{% tabs %}
+
+{% highlight c# tabtitle="Blazor Web App" hl_lines="3" %}
+
+...
+var app = builder.Build();
+app.UseRequestLocalization("de-DE");
+...
+
+{% endhighlight %}
+
+{% endtabs %}
 
 ### Blazor Server App
 

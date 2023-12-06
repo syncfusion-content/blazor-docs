@@ -595,11 +595,10 @@ In the Blazor application, the application theme can be changed dynamically by c
 
 The following example demonstrates how to change a theme dynamically in Blazor application using Syncfusion Blazor themes using Syncfusion Dropdown component.
 
-1. For **Blazor Web App**, the theme is changed based on query string at the **~/Components/App.razor** file.
-   * For **Blazor WebAssembly application**, the theme is changed based on query string at the **wwwroot/index.html** file.
-   * For **Blazor Server application**, the theme is changed based on query string at the
+1. For **Blazor Server application**, the theme is changed based on query string at the
     * **~/Pages/_Host.cshtml** file for .NET 7.
     * **~/Pages/_Layout.cshtml** file for .NET 6.
+
 {% tabs %}
 {% highlight c# tabtitle=".NET 7 (~/_Host.cshtml)" %}
 
