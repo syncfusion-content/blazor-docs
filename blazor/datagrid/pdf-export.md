@@ -59,6 +59,8 @@ PDF export allows exporting DataGrid data to PDF document. You need to use the
 }
 ```
 
+N> For proper data export from the Grid, it is essential to explicitly specify the **ID** property within the Grid.
+
 <!-- Multiple exporting
 
 PDF export provides an option for exporting multiple grids to same file. In this exported document, each datagrid will be exported to new page of document in same file.
