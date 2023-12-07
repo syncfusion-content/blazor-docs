@@ -61,7 +61,7 @@ The excel export allows exporting DataGrid data to Excel document. You need to u
 }
 ```
 
-N> For proper data export from the Grid, it is essential to explicitly specify the **ID** property within the Grid.
+N> Inside the OnToolbarClick event of the Grid, the clicked toolbar button must be identified using its **ID** value. It is essential to explicitly specify the **ID** property within the Grid.
 
 ## To customize excel export
 

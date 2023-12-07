@@ -59,7 +59,7 @@ PDF export allows exporting DataGrid data to PDF document. You need to use the
 }
 ```
 
-N> For proper data export from the Grid, it is essential to explicitly specify the **ID** property within the Grid.
+N> Inside the OnToolbarClick event of the Grid, the clicked toolbar button must be identified using its **ID** value. It is essential to explicitly specify the **ID** property within the Grid.
 
 <!-- Multiple exporting
 
