@@ -135,7 +135,7 @@ The following code example illustrates how to create a radial tree layout using 
     };
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Layout/RadialTreeDataSource)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Layout/)
 
 ![Blazor Radial Tree Diagram](../images/RadialTreeUG.png)
 
@@ -235,7 +235,7 @@ Also, you can render a radial tree layout without using Datasource. The followin
 }
 ```
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Layout/RadialTreeWithoutDataSource)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Layout/)
 
 ## See also
 
