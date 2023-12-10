@@ -62,7 +62,7 @@ The following code example shows how to display the critical path in the Gantt c
 ```
 ![Blazor Gantt Chart with Critical Path](images/blazor-gantt-chart-critical-path.png)
 
-## Critical Path Settings in Gantt Chart Component
+## Critical path settings in Gantt Chart Component
 
 The critical path settings in the Gantt Chart component determine the default slack value and validate it. Here is an example of how to add slack value to the Gantt Chart component.
 
