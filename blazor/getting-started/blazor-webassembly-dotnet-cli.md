@@ -58,7 +58,7 @@ Here's an example of how to add **Blazor Calendar** component in the application
 {% highlight c# tabtitle=".NET CLI" %}
 
 dotnet add package Syncfusion.Blazor.Calendars --version {{ site.releaseversion }}
-dotnet add package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
+dotnet add package Syncfusion.Blazor.Themes --version {{ site.releaseversion }}
 dotnet restore
 
 {% endhighlight %}
