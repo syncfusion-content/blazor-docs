@@ -51,7 +51,7 @@ Add `Syncfusion.Blazor.Grid` NuGet package to the application using the followin
 {% tabs %}
 {% highlight c# tabtitle=".NET CLI" %}
 
-dotnet add package Syncfusion.Blazor.Grid --version {{ site.releaseversion }}
+dotnet add package Syncfusion.Blazor.Grid -Version {{ site.releaseversion }}
 dotnet restore
 
 {% endhighlight %}

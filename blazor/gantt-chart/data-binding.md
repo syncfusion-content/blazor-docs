@@ -317,7 +317,7 @@ checkboxState | Specifies the checkbox state of a record
 
 The Gantt chart supports to automatically update data based on `INotifyCollectionChanged` and `INotifyPropertyChanged` interface.
 
-### Observable Collection
+### Observable collection
 
 The [ObservableCollection](https://learn.microsoft.com/en-us/dotnet/api/system.collections.objectmodel.observablecollection-1?view=net-6.0) (dynamic data collection) provides notifications when items are added, removed, and moved. The implemented [INotifyCollectionChanged](https://learn.microsoft.com/en-us/dotnet/api/system.collections.specialized.inotifycollectionchanged?view=net-6.0) provides notification when the dynamic changes of adding, removing, moving, and clearing the collection occur.
 
@@ -760,7 +760,7 @@ app.Run();
 
 N>You can find the sample for load on demand [here](https://github.com/SyncfusionExamples/BlazorGantt-OData-Adaptor-sample).
 
-### Load Child on Demand
+### Load child on demand
 
 To render child records on demand, assign a remote service URL in the instance of **SfDataManager** to the **Url** property. To interact with the remote data source,  provide the endpoint **URL** and also define the [GanttTaskFields.HasChildMapping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTaskFields.html#Syncfusion_Blazor_Gantt_GanttTaskFields_HasChildMapping) property of Gantt Chart.
 
