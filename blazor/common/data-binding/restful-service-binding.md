@@ -157,7 +157,7 @@ It is not recommended to have a connection string with sensitive information in 
 Now, the DbContext must be configured using connection string and registered as scoped service using the AddDbContext method in **Program.cs**.
 
 {% tabs %}
-{% highlight c# tabtitle=".NET 6 & .NET 7 & .NET 8 (~/Program.cs)" %}
+{% highlight c# tabtitle=".NET 6 & .NET 7 (~/Program.cs)" %}
 
 builder.Services.AddDbContext<OrdersDetailsContext>(option =>
                 option.UseSqlServer(builder.Configuration.GetConnectionString("OrdersDetailsDatabase")));
@@ -314,11 +314,11 @@ app.Run();
 {% endhighlight %}
 {% endtabs %}
 
-## Create Blazor Application
+## Create Blazor Server Application
 
-* Open Visual Studio and follow the steps in the [documentation](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0&pivots=windows) to create the Blazor Web Application.
+Open Visual Studio 2019 or Visual Studio 2022 and follow the steps in the below documentation to create the Blazor Server Application.
 
-* Open Visual Studio and follow the steps in the [documentation](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio) to create the Blazor Server Application.
+[Getting Started](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio)
 
 ### Add Syncfusion Blazor DataGrid package
 
@@ -357,17 +357,25 @@ Themes provide life to components. Syncfusion Blazor has different themes. They 
 
 In this demo application, the **Bootstrap4** theme will be used.
 
-* For **.NET 8** app, add theme in the `<head>` of the **~/Components/App.razor** file.
+* For **.NET 6** app, add theme in the `<head>` of the **~/Pages/_Layout.cshtml** file.
 
 * For **.NET 7** app, add theme in the `<head>` of the **~/Pages/_Host.cshtml** file.
 
-* For **.NET 6** app, add theme in the `<head>` of the **~/Pages/_Layout.cshtml** file.
+{% tabs %}
 
-```cshtml
+{% highlight cshtml tabtitle=".NET 6 (~/_Layout.cshtml)" %}
 
 <link href="_content/Syncfusion.Blazor.Themes/fabric.css" rel="stylesheet" />
 
-```
+{% endhighlight %}
+
+{% highlight cshtml tabtitle=".NET 7 (~/_Host.cshtml)" %}
+
+<link href="_content/Syncfusion.Blazor.Themes/fabric.css" rel="stylesheet" />
+
+{% endhighlight %}
+
+{% endtabs %}
 
 ## Add Syncfusion Blazor DataGrid component to an application
 

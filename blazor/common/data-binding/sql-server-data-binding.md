@@ -21,11 +21,9 @@ The following software are needed:
 * Visual Studio 2019 v16.9.0 or later
 * .NET SDK 5.0 or later.
 
-## Create Blazor Application
+## Create Blazor Server Application
 
-* Open Visual Studio and follow the steps in the [documentation](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0&pivots=windows) to create the Blazor Web Application.
-
-* Open Visual Studio and follow the steps in the [documentation](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio) to create the Blazor Server Application.
+Open Visual Studio and follow the steps in the [documentation](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio) to create the Blazor Server Application.
 
 ## Add Syncfusion Blazor DataGrid package
 
@@ -61,17 +59,18 @@ Open **_Import.razor** file and add the following namespaces which are required 
 
 {% endhighlight %}
 
-Open **Program.cs** file in your application and register the Syncfusion service.If you create Blazor Web App with an **Interactive render mode** as `WebAssembly` or `Auto`, you need to register the Syncfusion Blazor service in both **~/Program.cs** files.
+Open **Program.cs** file in .NET 6 and .NET 7 application and register the Syncfusion service.
 
-```cshtml
+{% tabs %}
+{% highlight c# tabtitle=".NET 6 & .NET 7 (~/Program.cs)" %}
 
-....
-using Syncfusion.Blazor;
-....
+builder.Services.AddRazorPages();
+builder.Services.AddServerSideBlazor();
+builder.Services.AddSingleton<WeatherForecastService>();
 builder.Services.AddSyncfusionBlazor();
-....
 
-```
+{% endhighlight %}
+{% endtabs %}
 
 Themes provide life to components. Syncfusion Blazor has different themes. They are as follows:
 
@@ -81,20 +80,15 @@ Themes provide life to components. Syncfusion Blazor has different themes. They 
 * Bootstrap
 * High Contrast
 
-* For **.NET 8** app, add theme in the `<head>` of the **~/Components/App.razor** file.
+To add the theme, open the **Pages/_Host.cshtml** file and add the following CSS reference code.
 
-* For **.NET 7** app, add theme in the `<head>` of the **~/Pages/_Host.cshtml** file.
-
-* For **.NET 6** app, add theme in the `<head>` of the **~/Pages/_Layout.cshtml** file.
-
-
-```cshtml
+{% highlight cshtml %}
 
 <link href="_content/Syncfusion.Blazor/styles/bootstrap4.css" rel="stylesheet" />
 
-```
+{% endhighlight %}
 
-In previous steps, Syncfusion Blazor DataGrid package is successfully configured in the application. Now, add the DataGrid Component to the `~Pages/.razor (or) Index.razor` page .
+In previous steps, Syncfusion Blazor DataGrid package is successfully configured in the application. Now, add the DataGrid Component to the **Index.razor**.
 
 {% highlight razor %}
 

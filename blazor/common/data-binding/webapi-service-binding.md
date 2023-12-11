@@ -50,11 +50,11 @@ Now, click on **Update Database**.
 
 ![Update database in Blazor](../images/odata-update-db.png)
 
-## Create Blazor Application
+## Create Blazor Server Application
 
-* Open Visual Studio and follow the steps in the [documentation](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0&pivots=windows) to create the Blazor Web Application.
+Open Visual Studio and follow the steps in the below documentation to create the Blazor Server Application.
 
-* Open Visual Studio and follow the steps in the [documentation](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio) to create the Blazor Server Application.
+[Getting Started](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio)
 
 ### Generate DbContext and model class from the database
 
@@ -149,10 +149,10 @@ It is not recommended to have a connection string with sensitive information in 
 {% endhighlight %}
 {% endtabs %}
 
-Now, the DbContext must be configured using connection string and registered as scoped service using the AddDbContext method in **Program.cs** file.
+Now, the DbContext must be configured using connection string and registered as scoped service using the AddDbContext method in **Program.cs** file in .NET 6 and .NET 7 application.
 
 {% tabs %}
-{% highlight c# tabtitle=".NET 6 & .NET 7 & .NET 8 (~/Program.cs)" %}
+{% highlight c# tabtitle=".NET 6 & .NET 7 (~/Program.cs)" %}
 
 builder.Services.AddDbContext<OrdersDetailsContext>(option =>
                 option.UseSqlServer(builder.Configuration.GetConnectionString("OrdersDetailsDatabase")));
@@ -277,17 +277,20 @@ Open **_Import.razor** file and add the following namespaces which are required 
 {% endhighlight %}
 {% endtabs %}
 
-Open **Program.cs** file in your application and register the Syncfusion service.If you create Blazor Web App with an **Interactive render mode** as `WebAssembly` or `Auto`, you need to register the Syncfusion Blazor service in both **~/Program.cs** files.
+Open **Program.cs** file in **.NET 6 and .NET 7** application and register the Syncfusion service.
 
-```cshtml
+{% tabs %}
+{% highlight c# tabtitle=".NET 6 & .NET 7 (~/Program.cs)" %}
 
-....
-using Syncfusion.Blazor;
-....
+builder.Services.AddDbContext<OrdersDetailsContext>(option =>
+                option.UseSqlServer(builder.Configuration.GetConnectionString("OrdersDetailsDatabase")));
+builder.Services.AddRazorPages();
+builder.Services.AddServerSideBlazor();
+builder.Services.AddSingleton<WeatherForecastService>();
 builder.Services.AddSyncfusionBlazor();
-....
 
-```
+{% endhighlight %}
+{% endtabs %}
 
 Themes provide life to components. Syncfusion Blazor has different themes. They are:
 
@@ -299,18 +302,26 @@ Themes provide life to components. Syncfusion Blazor has different themes. They 
 
 In this demo application, the **Bootstrap4** theme will be used.
 
-* For **.NET 8** app, add theme in the `<head>` of the **~/Components/App.razor** file.
+* For **.NET 6** app, add theme in the `<head>` of the **~/Pages/_Layout.cshtml** file.
 
 * For **.NET 7** app, add theme in the `<head>` of the **~/Pages/_Host.cshtml** file.
 
-* For **.NET 6** app, add theme in the `<head>` of the **~/Pages/_Layout.cshtml** file.
+{% tabs %}
 
+{% highlight cshtml tabtitle=".NET 6 (~/_Layout.cshtml)" %}
 
-```cshtml
+<link href="_content/Syncfusion.Blazor.Themes/fabric.css" rel="stylesheet" />
 
-<link href="_content/Syncfusion.Blazor.Themes/ bootstrap4.css" rel="stylesheet" />
+{% endhighlight %}
 
-```
+{% highlight cshtml tabtitle=".NET 7 (~/_Host.cshtml)" %}
+
+<link href="_content/Syncfusion.Blazor.Themes/fabric.css" rel="stylesheet" />
+
+{% endhighlight %}
+
+{% endtabs %}
+
 ## Add Syncfusion Blazor DataGrid component to an application
 
 In previous steps, we have successfully configured the Syncfusion Blazor package in the application. Now, we can add the grid component to the **Index.razor** page.

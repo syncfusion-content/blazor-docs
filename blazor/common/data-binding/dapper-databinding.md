@@ -47,7 +47,7 @@ Now, the table design will look like below.
 
 ## Adding Dapper package and creating a model class
 
-To use Dapper and access database in the application, you need to install the following `NuGet` packages. If you utilize WebAssembly or automatic render modes in the Blazor web App need to be constructed Blazor components within the client project.
+To use Dapper and access database in the application, you need to install the following `NuGet` packages.
 
 Run the following commands in the Package Manager Console.
 
@@ -185,7 +185,11 @@ builder.Services.AddScoped<BugDataAccessLayer>();
 
 ## Adding Syncfusion Blazor DataGrid component
 
-To add **Blazor DataGrid** component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/).Alternatively, you can utilize the following package manager command to achieve the same.
+To add **Blazor DataGrid** component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/).
+
+If you utilize WebAssembly or automatic render modes in the Blazor web App need to be constructed Syncfusion Blazor components within the client project.
+
+Alternatively, you can utilize the following package manager command to achieve the same.
 
 {% tabs %}
 {% highlight C# tabtitle="Package Manager" %}
