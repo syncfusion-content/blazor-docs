@@ -69,7 +69,7 @@ You can customize the text color of a disabled component by targeting its CSS cl
 
 ## Show the custom icon in dropdown icon
 
-You can customize the dropdown [icon](https://ej2.syncfusion.com/documentation/appearance/icons/#material) by targeting its CSS class `.e-ddl-icon::before`, which indicates the icon element displayed within the dropdown list component, and set the desired icon to the `content` property.
+You can customize the dropdown [icon](https://ej2.syncfusion.com/documentation/appearance/icons#material) by targeting its CSS class `.e-ddl-icon::before`, which indicates the icon element displayed within the dropdown list component, and set the desired icon to the `content` property.
 
 {% highlight cshtml %}
 
@@ -103,7 +103,7 @@ You can customize the appearance of the container element within the dropdown li
 
 ## Customizing the dropdown icon’s color
 
-You can customize the dropdown [icon](https://ej2.syncfusion.com/documentation/appearance/icons/#material) by targeting its CSS class `.e-ddl-icon.e-icons`, which indicates the icon element displayed within the dropdown list component, and setting the desired color to the `color` property.
+You can customize the dropdown [icon](https://ej2.syncfusion.com/documentation/appearance/icons#material) by targeting its CSS class `.e-ddl-icon.e-icons`, which indicates the icon element displayed within the dropdown list component, and setting the desired color to the `color` property.
 
 {% highlight cshtml %}
 

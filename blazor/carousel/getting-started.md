@@ -172,6 +172,6 @@ Add the Syncfusion Blazor Carousel component in the **~/Pages/Index.razor** file
 </style>
 ```
 
-![Blazor Carousel Component](images/getting_started.png)
+![Blazor Carousel Component.](images/blazor-carousel-getting-started.png)
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/Carousel).
