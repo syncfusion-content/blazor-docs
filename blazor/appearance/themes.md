@@ -36,7 +36,7 @@ The Syncfusion Blazor Bootstrap Theme is designed based on Bootstrap v3, whereas
 
 Syncfusion Blazor themes can be used in your Blazor application by referencing the style sheet.
 
-*  For **Blazor Web application**, refer style sheet inside the `<head>` of
+*  For **Blazor Web App**, refer style sheet inside the `<head>` of
     * **~/Components/App.razor** file for .NET 8.
 * For **Blazor WebAssembly application**, refer style sheet inside the `<head>` of **wwwroot/index.html** file.
 * For **Blazor Server application**, refer style sheet inside the `<head>` of
@@ -65,7 +65,7 @@ N> For **Blazor Auto & WASM App**, call `UseStaticFiles` method in **Server proj
 
 Syncfusion Blazor themes are available as static web assets in the [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/).
 
-*  For **Blazor Web application**,  refer style sheet inside the `<head>` of
+*  For **Blazor Web App**,  refer style sheet inside the `<head>` of
         * **~/Components/App.razor** file for .NET 8.
 * For **Blazor WebAssembly application**, refer style sheet inside the `<head>` element of **wwwroot/index.html** file.
 * For **Blazor Server application**, refer style sheet inside the `<head>` element of
@@ -595,7 +595,7 @@ In the Blazor application, the application theme can be changed dynamically by c
 
 The following example demonstrates how to change a theme dynamically in Blazor application using Syncfusion Blazor themes using Syncfusion Dropdown component.
 
-1. For **Blazor Web application**, the theme is changed based on query string at the **~/Components/App.razor** file
+1. For **Blazor Web App**, the theme is changed based on query string at the **~/Components/App.razor** file
 
 {% tabs %}
 {% highlight c# tabtitle=".NET 8 (~/App.razor)" %}
@@ -613,7 +613,7 @@ The following example demonstrates how to change a theme dynamically in Blazor a
 <head>
 ...
     @*Sets the selected theme name into styles*@
-    <link href=@("_content/Syncfusion.Blazor.Themes/" + themeName + ".css")rel="stylesheet" />
+    <link href=@("_content/Syncfusion.Blazor.Themes/" + themeName + ".css") rel="stylesheet" />
 </head>
 ...
 

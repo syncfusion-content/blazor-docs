@@ -17,7 +17,7 @@ N> The javascript interop files needs to be added to support the features that c
 
 You can refer the Syncfusion Blazor scripts through the CDN resources.
 
-* For **Blazor Web application**, reference scripts in `~/Components/App.razor` file.
+* For **Blazor Web App**, reference scripts in `~/Components/App.razor` file.
 * For **Blazor WASM App**, reference scripts in `~/wwwroot/index.html` file.
 * For **Blazor Server App**, reference scripts in `~/Pages/_Layout.cshtml` file for `.NET 6` project and in `~/Pages/_Host.cshtml` file for `.NET 7` project.
 

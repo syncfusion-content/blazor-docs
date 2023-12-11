@@ -14,12 +14,12 @@ In this section, you can learn how to consume data from a database using [Dapper
 
 ## Prerequisite software
 
-* Visual Studio 2022 or later.
+* Visual Studio 2019 or Visual Studio 2022.
 * MS SQL Server.
 
 ## Creating Blazor application
 
-* Open Visual Studio and follow the steps in the [documentation](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0&pivots=windows) to create the Blazor Web Application.
+* Open Visual Studio and follow the steps in the [documentation](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0&pivots=windows) to create the Blazor Web App.
 
 * Open Visual Studio and follow the steps in the [documentation](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio) to create the Blazor Server Application.
 

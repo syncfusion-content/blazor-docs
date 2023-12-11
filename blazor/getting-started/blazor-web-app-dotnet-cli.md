@@ -25,7 +25,7 @@ dotnet --version
 
 ## Create a Blazor Web project using .NET CLI
 
-Run the following command to create a new Blazor Web application in a command prompt (Windows) or terminal (macOS) or command shell (Linux).
+Run the following command to create a new Blazor Web App in a command prompt (Windows) or terminal (macOS) or command shell (Linux).
 
 For a Blazor Web App with `Server` interactive render mode & `Per page/component` interactivity location, use the following commands
 
