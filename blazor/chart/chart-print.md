@@ -374,6 +374,85 @@ If you set `IsBase64` parameter to **true** while calling the [ExportAsync](http
 
 ```
 
+### Export chart as Excel
+
+Using `ExportAsync` method we can export the rendered chart as Excel by specifing the format as [XLSX](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ExportType.html#Syncfusion_Blazor_Charts_ExportType_XLSX) using [ExportType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ExportType.html) and specify the name of the exported file by using `fileName`. Both of these parameters are required input parameters for this method.
+
+```cshtml
+
+@using Syncfusion.Blazor.Charts;
+@using Microsoft.AspNetCore.Components.Web;
+@using Syncfusion.PdfExport;
+
+<div id="button">
+    <button onclick="@ExportChart">
+        Export
+    </button>
+</div>
+
+<div id="chart">
+    <SfChart @ref="@chartInstance">
+        <ChartArea><ChartAreaBorder Width="0"></ChartAreaBorder></ChartArea>
+        <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category" Interval="1" LabelIntersectAction="@Label" LabelRotation="-45">
+            <ChartAxisMajorGridLines Width="0"></ChartAxisMajorGridLines>
+            <ChartAxisMajorTickLines Width="0"></ChartAxisMajorTickLines>
+        </ChartPrimaryXAxis>
+        <ChartPrimaryYAxis Minimum="0" Maximum="40" Interval="10" Title="Measurements (in Gigawatt)" LabelFormat="@Format">
+            <ChartAxisMajorGridLines Width="0"></ChartAxisMajorGridLines>
+            <ChartAxisLineStyle Width="0"></ChartAxisLineStyle>
+            <ChartAxisMajorGridLines Width="2"></ChartAxisMajorGridLines>
+            <ChartAxisMajorTickLines Width="0"></ChartAxisMajorTickLines>
+        </ChartPrimaryYAxis>
+        <ChartSeriesCollection>
+            <ChartSeries DataSource="@ChartPoints" XName="Country" YName="GigaWatts" Type="ChartSeriesType.Column">
+                <ChartMarker>
+                    <ChartDataLabel Visible="true" Position="Syncfusion.Blazor.Charts.LabelPosition.Top">
+                        <ChartDataLabelFont FontWeight="600" Size="9px" Color="#ffffff"></ChartDataLabelFont>
+                    </ChartDataLabel>
+                </ChartMarker>
+            </ChartSeries>
+        </ChartSeriesCollection>
+       
+    </SfChart>
+</div>
+
+
+@code{
+
+    private SfChart chartInstance;
+    public string FileName { get; set; } = "Charts";
+    public string Format { get; set; } = "{value} GW";
+    public LabelIntersectAction Label { get; set; } = LabelIntersectAction.Trim;
+
+    public List<ExportData> ChartPoints { get; set; } = new List<ExportData>
+    {
+        new ExportData { Country="India", GigaWatts = 35.5 },
+        new ExportData { Country="China", GigaWatts = 18.3 },
+        new ExportData { Country="Italy", GigaWatts = 17.6 },
+        new ExportData { Country="Japan", GigaWatts = 13.6 },
+        new ExportData { Country="United state", GigaWatts = 12 },
+        new ExportData { Country="Spain", GigaWatts = 5.6 },
+        new ExportData { Country="France", GigaWatts = 4.6 },
+        new ExportData { Country="Australia", GigaWatts = 3.3 },
+        new ExportData { Country="Belgium", GigaWatts = 3 },
+        new ExportData { Country="United Kingdom", GigaWatts = 2.9 },
+    };
+
+    public async Task ExportChart(MouseEventArgs args)
+    {
+        await chartInstance.ExportAsync(ExportType.XLSX, FileName);
+    }
+
+    public class ExportData
+    {
+        public string Country { get; set; }
+        public double GigaWatts { get; set; }
+    }     
+}
+
+```
+
+
 N> Refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
 
 ## See Also
