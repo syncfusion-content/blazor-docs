@@ -120,6 +120,54 @@ The grid row drag and drop allows you to drag and drop grid rows on the same gri
 
 ![Drag and Drop within Blazor DataGrid](./images/drag-and-drop-within-blazor-datagrid.gif)
 
+## Grouping via Drag and drop within Grid.
+
+The grid row drag and drop allows you to rearrange the rows from one group to another group on the same grid using drag icon. To enable Grouping feature within row drag and drop set the [AllowGrouping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowGrouping) to true.
+
+When dragging rows from one group and dropping them into another group, the rows are inserted at the last position of the dropped group, and the remaining rows are positioned based on the refreshed data rows.
+
+```cshtml
+@using Syncfusion.Blazor.Grids
+
+<SfGrid DataSource="@Orders" id="Grid" AllowSelection="true" AllowRowDragAndDrop="true" AllowGrouping="true" AllowSorting="true" Height="400">
+    <GridSelectionSettings Type="Syncfusion.Blazor.Grids.SelectionType.Multiple"></GridSelectionSettings>
+    <GridColumns>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" Width="110" IsPrimaryKey="true" AllowGrouping="false"> </GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer ID" Width="110"></GridColumn>
+        <GridColumn Field=@nameof(Order.ShipCity) HeaderText="Ship City" Width="110"></GridColumn>
+        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" Width="110"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText="Order Date" Format="d" Width="110" Type="ColumnType.Date"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code {
+
+    public List<Order> Orders { get; set; }
+    public List<Order> SecondGrid { get; set; } = new List<Order>();
+
+    protected override void OnInitialized()
+    {
+        Orders = Enumerable.Range(1, 75).Select(x => new Order()
+            {
+                OrderID = 1000 + x,
+                CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
+                ShipCity = (new string[] { "Berlin", "Madrid", "Cholchester", "Marseille", "Tsawassen" })[new Random().Next(5)],
+                Freight = 2.1 * x,
+                OrderDate = DateTime.Now.AddDays(-x),
+            }).ToList();
+    }
+
+    public class Order
+    {
+        public int? OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public string ShipCity { get; set; }
+        public DateTime? OrderDate { get; set; }
+        public double? Freight { get; set; }
+    }
+}
+```
+
 ## Drag and drop events
 
 The following events are triggered while drag and drop the grid rows.
@@ -135,3 +183,4 @@ N> For performing row drag and drop action on the datagrid, any one of the colum
 * Multiple rows can be drag and drop in the row selections basis.
 * Single row is able to drag and drop in same grid without enable the row selection.
 * Row drag and drop feature is not having built in support with sorting, filtering, hierarchy grid, row template and grouping features of grid.
+* Grouping via row drag-and-drop feature lacks support for lazyload grouping.
