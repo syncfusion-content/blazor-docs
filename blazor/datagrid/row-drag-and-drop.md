@@ -167,6 +167,7 @@ When dragging rows from one group and dropping them into another group, the rows
     }
 }
 ```
+![Drag and Drop within Blazor DataGrid](./images/blazor-datagrid-grouping-via-drag-and-drop-within-grid.gif)
 
 ## Drag and drop events
 
