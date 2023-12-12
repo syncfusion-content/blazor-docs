@@ -344,6 +344,7 @@ The event [`EditCompleted`](https://help.syncfusion.com/cr/blazor/Syncfusion.Bla
     }
 }
 ```
+
 ### OnActionBegin
 
 The event [OnActionBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewEvents-1.html#Syncfusion_Blazor_PivotView_PivotViewEvents_1_OnActionBegin) triggers when the UI actions such as CRUD operations (via dialog) and inline editing begin. This allows user to identify the current action being performed at runtime. It has the following parameters:
