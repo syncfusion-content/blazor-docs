@@ -9,9 +9,13 @@ documentation: ug
 
 # Radial Tree Layout in Blazor Diagram Component
 
-A radial tree layout is a diagram that presents information in a hierarchical structure, with a central node at the core of the diagram. The central node represents the main concept or topic, and branches extend outward in a radial fashion, creating a tree-like structure. The layout [Root](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_Root) property can be used to define the root node of the layout. When no root node is set, the algorithm automatically considers one of the diagram nodes as the root node. To create radial tree, the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_Type) of layout should be set as [RadialTree](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.LayoutType.html#Syncfusion_Blazor_Diagram_LayoutType_RadialTree).
+A [RadialTree](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.LayoutType.html#Syncfusion_Blazor_Diagram_LayoutType_RadialTree) layout is a diagram that presents information in a hierarchical structure, with a central node at the core of the diagram. The central node represents the main concept or topic, and branches extend outward in a radial fashion, creating a tree-like structure. The layout [Root](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_Root) property can be used to define the root node of the layout. When no root node is set, the algorithm automatically considers one of the diagram nodes as the root node. To create radial tree, the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_Type) of layout should be set as [RadialTree](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.LayoutType.html#Syncfusion_Blazor_Diagram_LayoutType_RadialTree).
 
-The following code example illustrates how to create a radial tree layout using data source.
+`RadialTree` Layout provides support to add space between the nodes. The [HorizontalSpacing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_HorizontalSpacing) and [VerticalSpacing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_VerticalSpacing) properties of the layout allow you to set the space between the nodes. The arrangement results in an ever-expanding concentric arrangement with radial proximity to the root node indicating the node level in the hierarchy.
+
+## How to create a RadialTree with DataSource
+
+You can create a radial tree layout with DataSource. The following code example illustrates how to create a radial tree layout using data source.
 
 ```csharp
 @using Syncfusion.Blazor.Diagram
@@ -139,7 +143,9 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ![Blazor Radial Tree Diagram](../images/RadialTreeUG.png)
 
-Also, you can render a radial tree layout without using Datasource. The following code demonstrates how to render a mind map layout without using DataSource.
+## How to create a RadialTree with nodes and connectors
+
+You can render a radial tree layout without using Datasource. The following code demonstrates how to render a radial tree layout without using DataSource.
 
 ```csharp
 @using Syncfusion.Blazor.Diagram
