@@ -358,7 +358,7 @@ Create `CultureSwitcher` component to set the user's culture selection into brow
 
 {% endtabs %}
 
-Add the `CultureSwitcher` component to `~/MainLayout.razor` to enable the culture switcher in all pages.
+Add the `CultureSwitcher` component to `~/MainLayout.razor` to enable the culture switcher in all pages. If you create a Blazor Web App with an interactivity location as `Per page/component`, you need to ensure the set a render mode at the `CultureSwitcher` component instance in the `~/MainLayout.razor` file.
 
 {% tabs %}
 {% highlight razor tabtitle="Blazor Web App" %}
@@ -367,8 +367,8 @@ Add the `CultureSwitcher` component to `~/MainLayout.razor` to enable the cultur
     ....
     <main>
         <div class="top-row px-4">
-            <CultureSwitcher />
-            <a href="https://docs.microsoft.com/aspnet/" target="_blank">About</a>
+            <CultureSwitcher @rendermode="@InteractiveAuto" />
+            ....
         </div>
     </main>
 </div>
