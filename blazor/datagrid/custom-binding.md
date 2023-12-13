@@ -1098,15 +1098,17 @@ Refer to the following code example for how to bind the DataTable using custom a
                                                     new DataColumn("OrderDate",typeof(DateTime))
     });
 
-        int code = 10000;
+        int code = 1000;
+        int id = 0;
         for (int i = 1; i <= 15; i++)
         {
-            dt.Rows.Add(code + 1, "ALFKI", i + 0, new DateTime(1991, 05, 15));
-            dt.Rows.Add(code + 2, "ANATR", i + 1, new DateTime(1990, 04, 04));
-            dt.Rows.Add(code + 3, "ANTON", i + 2, new DateTime(1957, 11, 30));
-            dt.Rows.Add(code + 4, "BLONP", i + 3, new DateTime(1930, 10, 22));
-            dt.Rows.Add(code + 5, "BOLID", i + 4, new DateTime(1953, 02, 18));
+            dt.Rows.Add(code + 1, "ALFKI", id + 1, new DateTime(1991, 05, 15));
+            dt.Rows.Add(code + 2, "ANATR", id + 2, new DateTime(1990, 04, 04));
+            dt.Rows.Add(code + 3, "ANTON", id + 3, new DateTime(1957, 11, 30));
+            dt.Rows.Add(code + 4, "BLONP", id + 4, new DateTime(1930, 10, 22));
+            dt.Rows.Add(code + 5, "BOLID", id + 5, new DateTime(1953, 02, 18));
             code += 5;
+            id += 5;
         }
         return dt;
     }
@@ -1138,13 +1140,14 @@ Refer to the following code example for how to implement **grouping** and **aggr
             {
                 DataSource = QueryableOperation.PerformTake<object>((IQueryable<object>)DataSource, dm.Take);
             }
+
             // Aggregation
             IDictionary<string, object> aggregates = new Dictionary<string, object>();
             if (dm.Aggregates != null)
             {
                 aggregates = DataUtil.PerformAggregation(DataSource, dm.Aggregates);
-
             }
+
             // Grouping
             DataResult DataObject = new DataResult();
             if (dm.Group != null)
@@ -1153,7 +1156,6 @@ Refer to the following code example for how to implement **grouping** and **aggr
                 foreach (var group in dm.Group)
                 {
                     result = DataUtil.Group<ExpandoObject>(result, group, dm.Aggregates, 0, dm.GroupByFormatter);
-
                 }
                 return dm.RequiresCounts ? new DataResult() { Result = result, Count = count, Aggregates = aggregates } : (object)DataSource;
             }
@@ -1296,7 +1298,6 @@ While using batch editing in DataGrid, use the BatchUpdate/BatchUpdateAsync meth
                             }
                         }
                     }
-
                 }
             }
 
@@ -1309,7 +1310,6 @@ While using batch editing in DataGrid, use the BatchUpdate/BatchUpdateAsync meth
                     DataRow newRow = dataTable.NewRow();
                     foreach (var item in record)
                     {
-
                         newRow[item.Key] = item.Value ?? DBNull.Value;
                     }
                     dataTable.Rows.Add(newRow);
@@ -1329,7 +1329,6 @@ While using batch editing in DataGrid, use the BatchUpdate/BatchUpdateAsync meth
                             rowsToRemove.Add(row);
                         }
                     }
-
                 }
                 foreach (DataRow rowToRemove in rowsToRemove)
                 {
@@ -1389,14 +1388,16 @@ While using batch editing in DataGrid, use the BatchUpdate/BatchUpdateAsync meth
     });
 
         int code = 1000;
+        int id = 0;
         for (int i = 1; i <= 15; i++)
         {
-            dt.Rows.Add(code + 1, "ALFKI", i + 0, new DateTime(1991, 05, 15));
-            dt.Rows.Add(code + 2, "ANATR", i + 1, new DateTime(1990, 04, 04));
-            dt.Rows.Add(code + 3, "ANTON", i + 2, new DateTime(1957, 11, 30));
-            dt.Rows.Add(code + 4, "BLONP", i + 3, new DateTime(1930, 10, 22));
-            dt.Rows.Add(code + 5, "BOLID", i + 4, new DateTime(1953, 02, 18));
+            dt.Rows.Add(code + 1, "ALFKI", id + 1, new DateTime(1991, 05, 15));
+            dt.Rows.Add(code + 2, "ANATR", id + 2, new DateTime(1990, 04, 04));
+            dt.Rows.Add(code + 3, "ANTON", id + 3, new DateTime(1957, 11, 30));
+            dt.Rows.Add(code + 4, "BLONP", id + 4, new DateTime(1930, 10, 22));
+            dt.Rows.Add(code + 5, "BOLID", id + 5, new DateTime(1953, 02, 18));
             code += 5;
+            id += 5;
         }
         return dt;
     }
