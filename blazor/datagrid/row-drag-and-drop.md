@@ -124,7 +124,7 @@ The grid row drag and drop allows you to drag and drop grid rows on the same gri
 
 The grid row drag and drop allows you to rearrange the rows from one group to another group on the same grid using drag icon. To enable Grouping feature within row drag and drop set the [AllowGrouping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowGrouping) to true.
 
-When dragging rows from one group and dropping them into another group, the rows are inserted at the last position of the dropped group, and the remaining rows are positioned based on the refreshed data rows.
+When dragging rows from one group and dropping them into another group, the rows are inserted into the dropped group based on the column sorting order.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
