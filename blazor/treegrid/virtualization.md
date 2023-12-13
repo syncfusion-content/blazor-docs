@@ -551,8 +551,7 @@ To set up the enable cell placeholder during virtualization, define the [EnableV
 }
 ```
 
-The following image represents a tree grid with the mask row virtualization.
-![Blazor Tree Grid with Mask Row virtualization](./images/blazor-treegrid-mask-row-virtualization.gif)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDVqCBiKKxvhUzUo?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 > For a better experience, the [PageSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridPageSettings.html#Syncfusion_Blazor_TreeGrid_TreeGridPageSettings_PageSize) property of the [TreeGridPageSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridPageSettings.html) class and the [RowHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_RowHeight) property should be defined.
 
