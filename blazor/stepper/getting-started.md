@@ -131,9 +131,9 @@ Add the Syncfusion Blazor Stepper component in the **~/Pages/Index.razor** file.
 
 ![Blazor Stepper Component](images/blazor-stepper-component.png)
 
-## Icon and Label
+## Configure Icon and Label
 
-You can set the stepper with icon and label by using the `IconCss` and `label` property.
+You can set the stepper `IconCss` and `Label` by using the `Steps` property.
 
 {% tabs %}
 {% highlight razor %}
