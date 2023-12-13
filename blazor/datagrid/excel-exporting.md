@@ -1451,7 +1451,6 @@ The given example illustrates the process of exporting the file as a memory stre
 
 @code{
     private SfGrid<Order> DefaultGrid;
-    private PdfDocument pdfDoc;
     public List<Order> Orders { get; set; }
 
     public async Task ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
