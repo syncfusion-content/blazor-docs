@@ -9,7 +9,9 @@ documentation: ug
 
 # HTML Attribute Support in Blazor Button Component
 
-HTML attribute support is given for button using [HtmlAttributes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfButton.html) property.
+You can add the additional [HtmlAttributes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfButton.html) such as disabled, value, name, and more to the element using the HtmlAttributes property. If you configure both the property and equivalent HTML attribute, then the component will consider the property value.
+
+The following example demonstrates how to set attributes in the [HtmlAttributes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfButton.html) property in the Button.
 
 ```csharp
 
@@ -22,7 +24,7 @@ HTML attribute support is given for button using [HtmlAttributes](https://help.s
     private Dictionary<string, object> submit = new Dictionary<string, object>()
      {
         { "type", "submit"},
-        { "title", "Primary Button" }
+        { "disabled","true" }
     };
 }
 
