@@ -24,7 +24,7 @@ The following example demonstrates how to set attributes in the [HtmlAttributes]
     private Dictionary<string, object> submit = new Dictionary<string, object>()
      {
         { "type", "submit"},
-        { "disabled","true" }
+        { "id", "Submit" }
     };
 }
 
