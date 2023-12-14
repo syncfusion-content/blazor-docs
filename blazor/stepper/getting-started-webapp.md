@@ -132,7 +132,7 @@ You can set the `IconCss` and `Label` in stepper by using `StepperStep` tag dire
         <StepperStep Label="Cart" IconCss="sf-icon-cart"></StepperStep>
         <StepperStep Label="Address" IconCss="sf-icon-user"></StepperStep>
         <StepperStep Label="Delivery" IconCss="sf-icon-transport"></StepperStep>
-        <StepperStep Label="Payment" IconCss="sf-icon-payment" Optional=true></StepperStep>
+        <StepperStep Label="Payment" IconCss="sf-icon-payment"></StepperStep>
         <StepperStep Label="Ordered" IconCss="sf-icon-success"></StepperStep>
     </StepperSteps>
 </SfStepper>
