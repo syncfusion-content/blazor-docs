@@ -9,7 +9,7 @@ documentation: ug
 
 # Custom Binding in Blazor TreeGrid Component
 
-The [SfDataManager](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Data.SfDataManager.html) has custom adaptor support which allows to perform manual operations on the data. This can be utilized for implementing custom data binding and editing operations in the Tree Grid component.
+The [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) has custom adaptor support which allows to perform manual operations on the data. This can be utilized for implementing custom data binding and editing operations in the Tree Grid component.
 
 N> Only [Self-Referential type data](https://blazor.syncfusion.com/documentation/treegrid/data-binding#self-referential-data-bindingflat-data) is supported with custom binding in tree grid
 
@@ -143,7 +143,7 @@ The following sample code demonstrates implementing custom data binding using cu
                 DataSource = DataOperations.PerformTake(DataSource, dm.Take);
             }
             return dm.RequiresCounts ? new DataResult() { Result = DataSource, Count = count } : (object)DataSource;
-        }        
+        }
     }
 }
 
@@ -217,16 +217,12 @@ N> If the **DataManagerRequest.RequiresCounts** value is **true**, then the Read
 
 If you want to inject some of your service into Custom Adaptor and use the service, then you can achieve your requirement by using below way.
 
-Initially, the CustomAdaptor class must be added as AddScoped in `StartUp.cs` file.
+Initially, the CustomAdaptor class must be added as AddScoped in `Program.cs` file.
 
 ```csharp
-public void ConfigureServices(IServiceCollection services)
-{
-    ...
-    services.AddSingleton<TaskDataAccessLayer>();
-    services.AddScoped<CustomAdaptor>();
-    services.AddScoped<ServiceClass>();
-}
+builder.Services.AddSingleton<TaskDataAccessLayer>();
+builder.Services.AddScoped<CustomAdaptor>();
+builder.Services.AddScoped<ServiceClass>();
 ```
 
 The following sample code demonstrates injecting service into Custom Adaptor,
