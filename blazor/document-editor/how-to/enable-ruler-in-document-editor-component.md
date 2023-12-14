@@ -1,7 +1,7 @@
 ---
 layout: post
-title: How to enable ruler in Document Edior
-description: Learn how to enable ruler in Angular Document Editor component.
+title: How to enable ruler in Document Editor
+description: Learn how to enable ruler in Blazor Document Editor component.
 platform: Blazor
 control: DocumentEditor
 documentation: ug
@@ -9,11 +9,11 @@ documentation: ug
 
 # Enable ruler
 
-## How to enable ruler in Document Editor component
+## How to enable ruler in Document Editor Container component
 
-Using ruler we can refer to setting specific margins, tab stops, or indentations within a document to ensure consistent formatting in Document Editor.
+Using ruler we can refer to setting specific margins, tab stops, or indentations within a document to ensure consistent formatting in Document Editor Container.
 
-Example code snippet to show/hide ruler
+The following example illustrates how to enable ruler in Document Editor Container.
 
 ```csharp
 <button @onclick="ClickHandler">Show/Hide Ruler</button>
@@ -25,11 +25,8 @@ Example code snippet to show/hide ruler
 
 @code {
     SfDocumentEditorContainer container;
-     public DocumentEditorSettingsModel settings = new DocumentEditorSettingsModel() { ShowRuler = true };
-    private bool VisibleProperty { get; set; } = false;
-    SfDocumentEditorContainer container;
-    string sfdtString;
-
+    public DocumentEditorSettingsModel settings = new DocumentEditorSettingsModel() { ShowRuler = true };   
+    
     private void ClickHandler()
     {
          container.DocumentEditorSettings.ShowRuler = !container.DocumentEditorSettings.ShowRuler;
