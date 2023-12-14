@@ -190,7 +190,6 @@ In this example, the selected value is obtained through two-way binding using th
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
-@using Syncfusion.Blazor.Buttons
 
 <SfDropDownTree TItem="EmployeeData" TValue="string" Placeholder="Select an employee" Width="500px" AllowMultiSelection="true" @bind-Value="@SelectedNode">
     <DropDownTreeField TItem="EmployeeData" DataSource="Data" ID="Id" Text="Name" HasChildren="HasChild" ParentID="PId"></DropDownTreeField>
