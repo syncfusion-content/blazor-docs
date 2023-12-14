@@ -9,8 +9,6 @@ documentation: ug
 
 # Getting Started with Dropdown Tree
 
-## Overview
-
 This section briefly explains about how to include `Blazor Dropdown Tree` component in your Blazor Server App and Blazor WebAssembly App using Visual Studio.
 
 ## Prerequisites
