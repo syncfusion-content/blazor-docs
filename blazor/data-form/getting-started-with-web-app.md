@@ -86,6 +86,15 @@ Add the Syncfusion Blazor DataForm component in `.razor` file inside the `Pages`
 {% tabs %}
 {% highlight razor %}
 
+@* desired render mode define here *@
+@rendermode InteractiveAuto
+
+{% endhighlight %}
+{% endtabs %}
+
+{% tabs %}
+{% highlight razor %}
+
 @using System.ComponentModel.DataAnnotations
 
 <SfDataForm ID="MyForm"
