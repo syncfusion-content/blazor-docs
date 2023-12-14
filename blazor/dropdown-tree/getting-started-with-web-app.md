@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with Blazor Dropdown Tree in Web App | Syncfusion
+title: Getting Started with Blazor Dropdown Tree component in Web App
 description: Checkout and learn about the documentation for getting started with Blazor Dropdown Tree Component in Blazor Web App.
 platform: Blazor
 component: Dropdown Tree
@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Blazor Dropdown Tree Component in Web App
 
-This section briefly explains about how to include Blazor Dropdown Tree component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/).
+This section briefly explains about how to include `Blazor Dropdown Tree` component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/).
 
 ## Prerequisites
 
@@ -123,13 +123,5 @@ Add the Syncfusion Blazor Dropdown Tree component in `.razor` file inside the `P
 {% endhighlight %}
 {% endtabs %}
 
-* Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion Blazor Dropdown Tree component in your default web browser.
-
 ![Blazor Dropdown Tree Component](./images/blazor-dropdowntree-component.png)
-
-## See also
-
-1. [Getting Started with Syncfusion Blazor for client-side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-dotnet-cli)
-2. [Getting Started with Syncfusion Blazor for client-side in Visual Studio](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-visual-studio)
-3. [Getting Started with Syncfusion Blazor for server-side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-dotnet-cli)
 
