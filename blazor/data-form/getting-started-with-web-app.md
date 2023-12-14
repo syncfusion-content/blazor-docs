@@ -23,7 +23,7 @@ You need to configure the corresponding [Interactive render mode](https://learn.
 
 ## Install Syncfusion Blazor DataForm and Themes NuGet in the Blazor Web App
 
-To add **Blazor DataForm** component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install `Syncfusion.Blazor.DataForm and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/).
+To add **Blazor DataForm** component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install `Syncfusion.Blazor.DataForm` and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/).
 
 If you select an **Interactive render mode** as `WebAssembly` or `Auto`, you can install the NuGet package in the project any where to add component in Web App.
 
@@ -81,30 +81,50 @@ N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/app
 
 ## Add Blazor DataForm component
 
-Add the Syncfusion Blazor DataForm component in the **~/Pages/Index.razor** file.
+Add the Syncfusion Blazor DataForm component in `.razor` file inside the `Pages` folder. If an interactivity location as Per `page/component` in the web app, define a render mode at top of the component, as follows:
 
 {% tabs %}
 {% highlight razor %}
 
+@using System.ComponentModel.DataAnnotations
+
 <SfDataForm ID="MyForm"
             Model="@EmployeeDetail">
+    <FormValidator>
+        <DataAnnotationsValidator></DataAnnotationsValidator>
+    </FormValidator>
     <FormItems>
         <FormAutoGenerateItems></FormAutoGenerateItems>
     </FormItems>
 </SfDataForm>
 
+
 @code {
+
     public class EmployeeDetails
     {
-        public int EmployeeId { get; set; }
-
+        [Required(ErrorMessage = "Please enter your first name.")]
+        [Display(Name = "First Name")]
         public string FirstName { get; set; }
+
+        [Required(ErrorMessage = "Please enter your last name.")]
+        [Display(Name = "Last Name")]
+        public string LastName { get; set; }
+
+        [Required(ErrorMessage = "Please enter your email address.")]
+        [EmailAddress(ErrorMessage = "Please enter a valid email address.")]
+        [Display(Name = "Email ID")]
+        public string Email { get; set; }
+
+        [Required]
+        [Display(Name = "Date of Birth")]
+        public DateTime? DOB { get; set; }
     }
     private EmployeeDetails EmployeeDetail = new EmployeeDetails()
-    {
-        EmployeeId = 1001,
-        FirstName = "Anne"
-    };
+        {
+            FirstName = "Anne",
+            LastName = "Lawsen"
+        };
 }
 
 {% endhighlight %}
