@@ -11,7 +11,7 @@ documentation: ug
 
 To Open the annotation toolbar, click on the **Edit Annotation** option in the mobile primary toolbar. The mobile annotation toolbar will open at bottom of the viewer.
 
-![Mobile Annotation Toolbar in Blazor SfPdfViewer](../../pdfviewer-2/images/open-annotation-toolbar.gif)
+![Mobile Annotation Toolbar in Blazor SfPdfViewer](../../pdfviewer-2/images/open-annotation.gif)
 
 ## To add sticky notes annotation
 
