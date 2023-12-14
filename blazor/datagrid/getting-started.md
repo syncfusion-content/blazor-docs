@@ -146,6 +146,8 @@ Add the Syncfusion Blazor DataGrid component in the **~/Pages/Index.razor** file
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion Blazor DataGrid component in your default web browser.
 
+{% previewsample "https://blazorplayground.syncfusion.com/live-editor/embed/rtLUsLszrHQwtnzu?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 ![Blazor DataGrid Component](images/blazor-datagrid-component.png)
 
 ## Defining Row Data
