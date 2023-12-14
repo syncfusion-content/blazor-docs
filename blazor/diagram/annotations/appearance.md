@@ -532,11 +532,11 @@ AnnotationConstraints may have multiple behaviors as follows:
 |---|---|
 | ReadOnly | Enables or disables whether the annotation to be read only or not. |
 | None | Disables all behaviors of Annotation. |
-|InheritReadOnly |Enables or disables to inherit the ReadOnly optionam/ from the parent object.|
+|InheritReadOnly |Enables or disables to inherit the ReadOnly option from the parent object.|
 
 N> The default value is [InheritReadOnly](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.AnnotationConstraints.html#Syncfusion_Blazor_Diagram_AnnotationConstraints_InheritReadOnly) for constraints property of the annotation.
 
-Refer to [Constraints](https://blazor.syncfusion.com/documentation/diagrconstraints) to learn about how to enable or disable the annotation constraints.
+Refer to [Constraints](https://blazor.syncfusion.com/documentation/diagram/constraints) to learn about how to enable or disable the annotation constraints.
 
 ## See also
 
