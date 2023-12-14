@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Deploy Diagram Component in Blazor MAUI in windows | Syncfusion
-description: Learn how to getting started with Diagram control in Blazor MAUI application
+description: description: Learn how to get started with Diagram control in the Blazor MAUI application.
 platform: Blazor
 control: Diagram Component
 documentation: ug
@@ -84,7 +84,7 @@ public static class MauiProgram
 
 Add the following stylesheet and script to the head section of the **~/wwwroot/index.html** file.
 
-If you are using Syncfusion.Blazor && Syncfusion.Blazor.Themes nuget package in your application you can refer below script.
+If you are using Syncfusion.Blazor && Syncfusion.Blazor.Themes NuGet package in your application, refer to the following script.
 ```html
 <head>
     ....
@@ -92,7 +92,7 @@ If you are using Syncfusion.Blazor && Syncfusion.Blazor.Themes nuget package in 
     <script src="_content/Syncfusion.Blazor/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
 </head>
 ```
-If you are using Syncfusion.Blazor.Diagram && Syncfusion.Blazor.Themes nuget package in your application you can refer below script.
+If you are using Syncfusion.Blazor.Diagram && Syncfusion.Blazor.Themes NuGet package in your application, refer to the following script.
 ```html
 <head>
     ....

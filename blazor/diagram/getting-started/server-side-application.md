@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with Diagram Component in Blazor Server App | Syncfusion
-description: Learn how to getting started with Diagram control in Blazor Server-side application
+description: Learn how to get started with Diagram control in the Blazor Server-side application.
 platform: Blazor
 control: Diagram Component
 documentation: ug
@@ -22,7 +22,7 @@ You can create a **Blazor Server App**  using Visual Studio via [Microsoft Templ
 
 ## Install Syncfusion Blazor Diagram and Themes NuGet in the blazor server App
 
-To add **Blazor Diagram** component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install [Syncfusion.Blazor.Diagram](https://www.nuget.org/packages/Syncfusion.Blazor.Diagram) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/). Alternatively, you can utilize the following package manager command to achieve the same.
+To add **Blazor Diagram** component in the app, open the NuGet package manager in Visual Studio (Tools → NuGet Package Manager → Manage NuGet Packages for Solution), search and install [Syncfusion.Blazor.Diagram](https://www.nuget.org/packages/Syncfusion.Blazor.Diagram) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/).Alternatively, you can utilize the following package manager command to achieve the same.
 
 {% tabs %}
 {% highlight C# tabtitle="Package Manager" %}
@@ -78,7 +78,7 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 
 * For **.NET 7** Blazor Server app, include it in the **~/Pages/_Host.cshtml** file.
 
-If you are using Syncfusion.Blazor && Syncfusion.Blazor.Themes nuget package in your application you can refer below script.
+If you are using Syncfusion.Blazor && Syncfusion.Blazor.Themes NuGet package in your application, refer to the following script.
 ```html
 <head>
     ....
@@ -86,7 +86,7 @@ If you are using Syncfusion.Blazor && Syncfusion.Blazor.Themes nuget package in 
     <script src="_content/Syncfusion.Blazor/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
 </head>
 ```
-If you are using Syncfusion.Blazor.Diagram && Syncfusion.Blazor.Themes nuget package in your application you can refer below script.
+If you are using Syncfusion.Blazor.Diagram && Syncfusion.Blazor.Themes NuGet package in your application, refer to the following script.
 ```html
 <head>
     ....
@@ -95,4 +95,4 @@ If you are using Syncfusion.Blazor.Diagram && Syncfusion.Blazor.Themes nuget pac
 </head>
 ```
 
-N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic to discover various methods ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference), and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)) for referencing themes in your Blazor application. Also, check out the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic to learn different approaches for adding script references in your Blazor application.
+N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic to discover various methods:  ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference), and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)) for referencing themes in your Blazor application. Also, check out the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic to learn different approaches for adding script references in your Blazor application.
