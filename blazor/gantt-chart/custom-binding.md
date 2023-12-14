@@ -9,7 +9,7 @@ documentation: ug
 
 # Custom Binding in Blazor Gantt Chart Component
 
-The [SfDataManager](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Data.SfDataManager.html) has custom adaptor support which allows you to perform manual operations on the data. This can be utilized for implementing custom data binding and editing operations in the Gantt component.
+The [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) has custom adaptor support which allows you to perform manual operations on the data. This can be utilized for implementing custom data binding and editing operations in the Gantt component.
 
 For implementing custom data binding in Gantt, the **DataAdaptor** class is used. This abstract class acts as a base class for the custom adaptor. The **DataAdaptor** abstract class has both synchronous and asynchronous method signatures which can be overridden in the custom adaptor. Following are the method signatures present in this class,
 
@@ -178,23 +178,19 @@ The following sample code demonstrates implementing custom data binding using cu
 }
 ```
 
-N> If the **DataManagerRequest.RequiresCounts** value is **true**, then the Read/ReadAsync return value must be of **DataResult** with properties **Result** whose value is a collection of records and **Count** whose value is the total number of records. If the **DataManagerRequest.RequiresCounts** is **false**, then simply send the collection of records. 
+N> If the **DataManagerRequest.RequiresCounts** value is **true**, then the Read/ReadAsync return value must be of **DataResult** with properties **Result** whose value is a collection of records and **Count** whose value is the total number of records. If the **DataManagerRequest.RequiresCounts** is **false**, then simply send the collection of records.
 <br/> <br /> If the Read/ReadAsync method is not overridden in the custom adaptor then it will be handled by the default read handler.
 
-## Inject service into Custom Adaptor
+## Inject service into custom adaptor
 
 If you want to inject some of your service into Custom Adaptor and use the service, then you can achieve your requirement by using below way.
 
-Initially you need to add CustomAdaptor class as AddScoped in `StartUp.cs` file.
+Initially you need to add CustomAdaptor class as AddScoped in `Program.cs` file.
 
 ```csharp
-public void ConfigureServices(IServiceCollection services)
-{
-    ...
-    services.AddSingleton<TaskDataAccessLayer>();
-    services.AddScoped<CustomAdaptor>();
-    services.AddScoped<ServiceClass>();
-}
+builder.Services.AddSingleton<TaskDataAccessLayer>();
+builder.Services.AddScoped<CustomAdaptor>();
+builder.Services.AddScoped<ServiceClass>();
 ```
 
 The following sample code demonstrates injecting service into Custom Adaptor,
