@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Customization of Blazor Rich Text Editor Dialog | Syncfusion
-description: Checkout and learn here all about DialogSettings in Syncfusion Blazor RichTextEditor component and more.
+description: Check out and learn about DialogSettings in Syncfusion Blazor RichTextEditor component and more.
 platform: Blazor
 control: RichTextEditor
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Customization of Blazor Rich Text Editor Dialog
 
-The integration of the [<RichTextEditorDialogSettings>]() child component allows for improved customization of the RichTextEditor in the Blazor component. With this, users can now directly control the RichTextEditor's dialogs.
+The integration of the child component allows for improved customization of the RichTextEditor in the Blazor component. With this, you can now directly control the RichTextEditor's dialogs.
 
 {% tabs %}
 {% highlight cshtml %}
