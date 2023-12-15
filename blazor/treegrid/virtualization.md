@@ -195,10 +195,10 @@ public class VirtualData
 
 By default, the number of records rendered per page will be twice the TreeGrid's height. You can customize the row rendering count using the [PageSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridPageSettings.html#Syncfusion_Blazor_TreeGrid_TreeGridPageSettings_PageSize) and [OverscanCount](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_OverscanCount) properties. Here's an explanation of these properties:
 
-* `PageSize`:
+* PageSize:
     •	The `PageSize` property determines the number of rows rendered per page in the  tree grid.
     •	It allows you to control how many rows are loaded and displayed at initial rendering and also while scrolling, helping to improve performance by reducing the number of DOM elements rendered.
-* `OverscanCount`:
+* OverscanCount:
     •	The `OverscanCount` property is used to render additional rows before and after the tree grid's current page rows.
     •	During both virtual scrolling and initial rendering, extra rows are rendered to provide a buffer around the current page area. This minimizes the need for frequent rendering during scrolling, providing a smoother user experience.
 
@@ -343,7 +343,7 @@ By default, the number of records rendered per page will be twice the TreeGrid's
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rDVqCBiKKxvhUzUo?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-N> The `OverscanCount` property supports both local and remote data. During initial rendering or bottom scrolling, it adds buffered data according to the overscan count following the viewport of the tree grid. Meanwhile, during in-between scrolling, it includes buffered data according to the overscan count in both preceding and following the viewport of the tree grid.
+N> For example, when the OverscanCount is set to 5, only 5 buffer rows are rendered on the first and last pages. However, on in-between pages, a total of 10 buffer rows are rendered, with 5 rows allocated for both before and after the current page's visible rows.
 
 ## Column Virtualization
 
