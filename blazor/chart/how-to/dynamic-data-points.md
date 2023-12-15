@@ -9,9 +9,76 @@ documentation: ug
 
 # Dynamic Data Points in Blazor Charts Component
 
-The ability to dynamically add and remove data points within the chart area provides users with a flexible and interactive way to manipulate datasets, empowering more efficient and precise data analysis and visualization. Syncfusion Blazor chart provides the support to add or remove data points dynamically by using mouse events.
+Dynamic point is the ability to add or remove points dynamically from the existing data source by clicking with mouse within the chart area. To create a Blazor chart dynamic points follow the below procedure.
 
-We can add data points to the existing dataset by clicking on the chart area. When we click inside the chart area the X and Y value of that point is taken by using [ChartMouseEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartMouseEventArgs.html) and added dynamically to data source using [ChartMouseClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_ChartMouseClick). If you want to remove the existing data points clink on the point that you want to remove from the series.
+**Step 1**
+
+Binding the method in [ChartMouseClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_ChartMouseClick) event, so that we can add or remove data points by clicking inside the chart area.
+
+``` cshtml
+<ChartEvents ChartMouseClick="MouseClick"></ChartEvents>
+```
+
+**Step 2**
+
+Create a method `MouseClick` to fetch the X axis and Y axis data of the currently clicked location from the [ChartMouseClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_ChartMouseClick) event arguments. A method `IsSamePoint` is created to check whether the point get from [ChartMouseClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_ChartMouseClick) is already exist in the data source, if the point is already exit means, we remove that point from the data source from its index using `RemoveAt` method or the points are added to the data source using `AddToDataSource` method.
+
+```cshtml
+
+public void MouseClick(ChartMouseEventArgs args)
+{
+    if (args.AxisData.Count > 0)
+    {
+        if (args.AxisData.TryGetValue("PrimaryXAxis", out object xValue) && args.AxisData.TryGetValue("PrimaryYAxis", out object yValue))
+        {
+            xPoint = Math.Round(Convert.ToDouble(xValue, null));
+            yPoint = Math.Round(Convert.ToDouble(yValue, null));
+            bool isSamePoint;
+            if (MouseClickPoints.Count >= 1)
+            {
+                index = -1;
+                isSamePoint = IsSamePoint();
+                if (isSamePoint && MouseClickPoints.Count >= 1)
+                {
+                    MouseClickPoints.RemoveAt(index);
+                }
+                else if (!isSamePoint)
+                {
+                    AddToDataSource(xPoint, yPoint);
+                }
+            }
+            else
+            {
+                AddToDataSource(xPoint, yPoint);
+            }
+            StateHasChanged();
+        }
+    }
+}
+
+public bool IsSamePoint()
+{
+    foreach (PointData item in MouseClickPoints)
+    {
+        index = index + 1;
+        if (item.X == Convert.ToDouble(xPoint, null) && item.Y == Convert.ToDouble(yPoint, null))
+        {
+            return true;
+        }
+    }
+    return false;
+}
+
+public void AddToDataSource(object xValue, object yValue)
+{
+    MouseClickPoints.Add(new PointData() { X = Convert.ToDouble(xValue, null), Y = Convert.ToDouble(yValue, null) });
+}
+
+``` 
+
+**Action**
+
+The below razor page illustrates a chart that allows users to add new data and update existing data source by clicking in the chart area. Additionally, clicking on an existing point will remove that data from the existing data source.
 
 ``` cshtml
 
