@@ -172,7 +172,8 @@ By default, when there are no segments defined for a bezier connector, the bezie
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Segments).
 
-Also, if you provide segments on initial rendering, the segment collection will be updated dynamically when you move the connector ends. For static segments collection, the[BezierConnectorSettings.AllowSegmentsReset](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BezierConnectorSettings.html#Syncfusion_Blazor_Diagram_BezierConnectorSettings_AllowSegmentsReset)property of the Connector class should be set to false.
+Also, if you provide segments during the initial rendering, the segment collection will be updated dynamically when you move the connector ends. If you do not want the segments to be updated dynamically when you move the connector end, you need to set [BezierConnectorSettings.AllowSegmentsReset](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BezierConnectorSettings.html#Syncfusion_Blazor_Diagram_BezierConnectorSettings_AllowSegmentsReset) as False.
+
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
