@@ -194,7 +194,7 @@ By default, a column will be grouped by the data or value present for the partic
 
 ## Grouping events
 
-During the group action, the datagrid component triggers two events. The [OnActionBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event triggers before the group action starts and the [OnActionComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event triggers after the group action is completed. Using these events you can perform any action.
+During the group action, the datagrid component triggers two events. The [OnActionBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnActionBegin) event triggers before the group action starts and the [OnActionComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnActionComplete) event triggers after the group action is completed. Using these events you can perform any action.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids

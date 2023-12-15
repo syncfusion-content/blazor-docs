@@ -13,10 +13,10 @@ Blazor has templated components that accept one or more UI segments as input and
 
 The available template options in datagrid are as follows,
 
-* [Column template](./columns/#column-template) - Used to customize cell content.
-* [Header template](./columns/#header-template) - Used to customize header cell content.
-* [Row template](./row/#row-template) - Used to customize row content.
-* [Detail template](./row/#detail-template) - Used to customize the detail cell content.
+* [Column template](./columns#column-template) - Used to customize cell content.
+* [Header template](./columns#header-template) - Used to customize header cell content.
+* [Row template](./row#row-template) - Used to customize row content.
+* [Detail template](./row#detail-template) - Used to customize the detail cell content.
 
 ## Template context
 
