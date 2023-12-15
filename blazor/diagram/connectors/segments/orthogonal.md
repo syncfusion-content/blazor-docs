@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Orthogonal Segment in Blazor Diagram Component | Syncfusion
-description: Checkout and learn here all about Orthogonal Segments in Syncfusion Blazor Diagram component and much more details.
+description: Check out and learn about Orthogonal Segments in Syncfusion Blazor Diagram component and much more details.
 platform: Blazor
 control: Diagram Component
 documentation: ug
 ---
  
-# Orthogonal segments in Blazor Diagram Component
+# Orthogonal Segments in Blazor Diagram Component
 
 ## How to create orthogonal segment
 
@@ -55,7 +55,7 @@ Orthogonal segments are used to create segments that are perpendicular to each o
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Segments/Orthogonal)
 
-The [Length](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.OrthogonalSegment.html#Syncfusion_Blazor_Diagram_OrthogonalSegment_Length) and [Direction](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.OrthogonalSegment.html#Syncfusion_Blazor_Diagram_OrthogonalSegment_Direction) properties allow to define the flow and length of segment. The following code example illustrates how to create customized orthogonal segments.
+The [Length](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.OrthogonalSegment.html#Syncfusion_Blazor_Diagram_OrthogonalSegment_Length) and [Direction](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.OrthogonalSegment.html#Syncfusion_Blazor_Diagram_OrthogonalSegment_Direction)properties allow defining the flow and length of the segment. The following code example illustrates how to create customized orthogonal segments.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -116,11 +116,11 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ![Connector with Orthogonal Segment in Blazor Diagram](../../images/blazor-diagram-connector-with-orthogonal.png)
 
-N> You need to mention the segment type as same as what you mentioned in connector type. There should be no contradiction between connector type and segment type.
+N> You need to mention the segment type as you mentioned in the connector type. There should be no contradiction between connector type and segment type.
 
 ### Orthogonal segment editing
 
-* Orthogonal thumbs allow you to adjust the length of adjacent segments by clicking and dragging it.
+* Orthogonal thumbs allow you to adjust the length of adjacent segments by clicking and dragging them.
 * When necessary, some segments are added or removed automatically, when dragging the segment. This is to maintain proper routing of orthogonality between segments.
 
 ```cshtml
