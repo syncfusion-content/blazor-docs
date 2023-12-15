@@ -158,10 +158,10 @@ In the showTooltip method, specify the following parameters programmatically to 
 
 The crosshair can be synchronized across multiple charts using the `ShowCrosshair` and `HideCrosshair` methods. When we hover over one chart, we call the `ShowCrosshair` method for the other charts to align with data points in other connected charts, simplifying data comparison and analysis.
 
-In the showCrosshair method, specify the following parameters programmatically to enable crosshair for a particular chart:
+In the ShowCrosshair method, specify the following parameters programmatically to enable crosshair for a particular chart:
 
-* x - x-value of point or x-coordinate value.
-* y - y-value of point or y-coordinate value.
+* x - x-coordinate value.
+* y - y-coordinate value.
 
 ```cshtml 
  
