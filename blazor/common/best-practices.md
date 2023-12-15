@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Best Practices for Improving Syncfusion Blazor App Performance | Syncfusion
-description: Checkout and learn here all about optimal strategies for enhancing Syncfusion Blazor App performance.
+description: Check out and learn here all about optimal strategies for enhancing Syncfusion Blazor App performance.
 platform: Blazor
 component: Common
 documentation: ug
