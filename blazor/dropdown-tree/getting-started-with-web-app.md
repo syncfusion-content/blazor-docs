@@ -81,7 +81,7 @@ N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/app
 
 ## Add Syncfusion Blazor Dropdown Tree component
 
-Add the Syncfusion Blazor Dropdown Tree component in `.razor` file inside the `Pages` folder. If an interactivity location as `Per page/component` in the web app, define a render mode at top of the component, as follows:
+Add the Syncfusion Blazor Dropdown Tree component in `.razor` file inside the `Pages` folder. The `TValue` parameter specifies the type for the `Value` property, while `TItem` specifies the model class for the `DataSource` property. If an interactivity location as `Per page/component` in the web app, define a render mode at top of the component, as follows:
 
 {% tabs %}
 {% highlight razor %}

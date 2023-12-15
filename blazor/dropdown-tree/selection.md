@@ -97,14 +97,16 @@ In the following example, the `AllowMultiSelection` property is enabled.
 
 ## Preselected value through API  
 
-The Blazor Dropdown Tree component provides the capability to select specific nodes during initialization or dynamically through the two-way binding provided by the `Value` property. This property allows for the selection of particular nodes by passing in an list collection of the corresponding node IDs as TValue. 
+The Blazor Dropdown Tree component provides the capability to select specific nodes during initialization or dynamically through the two-way binding provided by the `Value` property. This property allows for the selection of particular nodes by passing in an list collection of the corresponding node IDs as TValue. Also you can dynamically assign the node IDs using a button click.
 
 In the following example, the two nodes are preselected using `Value` property.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
+@using Syncfusion.Blazor.Buttons
 
-<SfDropDownTree TItem="EmployeeData" TValue="string" Placeholder="Select an employee" Width="500px" AllowMultiSelection="true" @bind-Value="SelectedNode">
+<SfButton OnClick="SelectANode">Select a node</SfButton>
+<SfDropDownTree TItem="EmployeeData" TValue="string" Placeholder="Select an employee" Width="500px" AllowMultiSelection="true" @bind-Value="@SelectedNode">
     <DropDownTreeField TItem="EmployeeData" DataSource="Data" ID="Id" Text="Name" HasChildren="HasChild" ParentID="PId"></DropDownTreeField>
 </SfDropDownTree>
 
@@ -124,52 +126,9 @@ In the following example, the two nodes are preselected using `Value` property.
         new EmployeeData() { Id = "9", PId = "1", Name = "Janet Leverling", Job = "HR"}
     };
 
-    class EmployeeData
-    {
-        public string Id { get; set; }
-        public string Name { get; set; }
-        public string Job { get; set; }
-        public bool HasChild { get; set; }
-        public bool Expanded { get; set; }
-        public string PId { get; set; }
-    }
-}
-```
-
-## Programmatically change the selected value  
-
-In the Blazor Dropdown Tree component, you can select a nodes using a button click. Based on the requirement, you can assign the needed nodes in an empty List that bound with the `Value` property.
-
-In the following example, the nodes is selected by button click.
-
-```cshtml
-@using Syncfusion.Blazor.Navigations
-@using Syncfusion.Blazor.Buttons
-
-<SfButton OnClick="SelectANode">Select a node</SfButton>
-<SfDropDownTree TItem="EmployeeData" TValue="string" Placeholder="Select an employee" Width="500px" AllowMultiSelection="true" Value="@SelectedNode">
-    <DropDownTreeField TItem="EmployeeData" DataSource="Data" ID="Id" Text="Name" HasChildren="HasChild" ParentID="PId"></DropDownTreeField>
-</SfDropDownTree>
-
-@code {
-    List<string> SelectedNode = new List<string>();
-    List<EmployeeData> Data = new List<EmployeeData>
-    {
-        new EmployeeData() { Id = "1", Name = "Steven Buchanan", Job = "General Manager", HasChild = true, Expanded = true },
-        new EmployeeData() { Id = "2", PId = "1", Name = "Laura Callahan", Job = "Product Manager", HasChild = true },
-        new EmployeeData() { Id = "3", PId = "2", Name = "Andrew Fuller", Job = "Team Lead", HasChild = true },
-        new EmployeeData() { Id = "4", PId = "3", Name = "Anne Dodsworth", Job = "Developer" },
-        new EmployeeData() { Id = "10", PId = "3", Name = "Lilly", Job = "Developer" },
-        new EmployeeData() { Id = "5", PId = "1", Name = "Nancy Davolio", Job = "Product Manager", HasChild = true },
-        new EmployeeData() { Id = "6", PId = "5", Name = "Michael Suyama", Job = "Team Lead", HasChild = true },
-        new EmployeeData() { Id = "7", PId = "6", Name = "Robert King", Job = "Developer" },
-        new EmployeeData() { Id = "11", PId = "6", Name = "Mary", Job = "Developer" },
-        new EmployeeData() { Id = "9", PId = "1", Name = "Janet Leverling", Job = "HR"}
-    };
-
     void SelectANode()
     {
-        SelectedNode = new List<string>() { "5" };
+        SelectedNode = new List<string>() { "9" };
     }
 
     class EmployeeData
