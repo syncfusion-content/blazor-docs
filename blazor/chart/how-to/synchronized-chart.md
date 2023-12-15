@@ -9,6 +9,8 @@ documentation: ug
 
 <!-- markdownlint-disable MD036 -->
 
+# Synchronized chart
+
 Synchronized chart has the ability to access and interact with two or more charts concurrently. This means that actions performed on one chart, such as placing a cursor, clicking on a specific point, or activating a tooltip are reflect simultaneously on corresponding positions or data points across other synchronized charts based on its X-Y coordinates. 
 
 ## Tooltip synchronization
