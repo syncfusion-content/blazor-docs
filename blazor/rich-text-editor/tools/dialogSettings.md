@@ -9,7 +9,12 @@ documentation: ug
 
 # Customization of Blazor Rich Text Editor Dialog
 
-The integration of the child component allows for improved customization of the RichTextEditor in the Blazor component. With this, you can now directly control the RichTextEditor's dialogs.
+The integration of the <RichTextEditorDialogSettings> child component allows for improved customization of the dialogs in the RichTextEditor Blazor component. This addition allows users to control the behavior and appearance of the underlying dialogs within the RichTextEditor.
+
+The child component exposes three essential properties:
+1. IsModel: Accepts a boolean value. Determines whether the dialog operates in modal or modeless mode.
+2. Target: Specifies the target element for the dialog component.
+3. ZIndex : Allows adjustment of the Z-index value for the dialog component.
 
 {% tabs %}
 {% highlight cshtml %}
@@ -20,11 +25,6 @@ The integration of the child component allows for improved customization of the 
 {% endtabs %}
 
 ![Blazor RichTextEditor DialogSettings](../images/dialog-settings.png)
-
-## The child component exposes three essential properties:
-1. IsModel: Accepts a Boolean value. Determines whether the dialog operates in modal or modeless mode.
-2. Target: Specifies the target element for the dialog component.
-3. ZIndex Property: Allows adjustment of the Z-index value for the dialog component.
 
 ## See also
 
