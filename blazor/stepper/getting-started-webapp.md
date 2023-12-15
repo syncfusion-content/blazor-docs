@@ -114,7 +114,7 @@ Add the Syncfusion Blazor Stepper component in the **~Pages/.razor** file. If an
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion Blazor Stepper component in your default web browser.
 
-![Blazor Stepper Component](images/blazor-stepper-component.png)
+![Blazor Stepper Component](images/Blazor-stepper-component.png)
 
 ## Configure icon and label
 
