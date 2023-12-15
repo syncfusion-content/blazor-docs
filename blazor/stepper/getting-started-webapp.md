@@ -42,7 +42,7 @@ N> Syncfusion Blazor components are available in [nuget.org](https://www.nuget.o
 
 ## Register Syncfusion Blazor Service
 
-Open **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Navigations` namespace .
+Open **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Navigations` namespace.
 
 ```cshtml
 
@@ -72,7 +72,7 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 ```html
 <head>
     ....
-    <link href="_content/Syncfusion.Blazor.Themes/material.css" rel="stylesheet" />
+    <link href="_content/Syncfusion.Blazor.Themes/material3.css" rel="stylesheet" />
 </head>
 
 <body>
@@ -99,8 +99,6 @@ Add the Syncfusion Blazor Stepper component in the **~Pages/.razor** file. If an
 {% tabs %}
 {% highlight razor %}
 
-@using Syncfusion.Blazor.Navigations
-
 <SfStepper>
     <StepperSteps>
         <StepperStep></StepperStep>
@@ -118,14 +116,12 @@ Add the Syncfusion Blazor Stepper component in the **~Pages/.razor** file. If an
 
 ![Blazor Stepper Component](images/blazor-stepper-component.png)
 
-## Configure Icon and Label
+## Configure icon and label
 
-You can set the `IconCss` and `Label` in stepper by using `StepperStep` tag directive.
+You can define the step icon and label by setting the `IconCss` and `Label` properties using `StepperStep` tag directive.
 
 {% tabs %}
 {% highlight razor %}
-
-@using Syncfusion.Blazor.Navigations
 
 <SfStepper ID="iconWithLabel">
     <StepperSteps>
@@ -177,4 +173,4 @@ You can set the `IconCss` and `Label` in stepper by using `StepperStep` tag dire
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor Stepper with IconAndLabel](./images/Blazor-iconWithLabel.png)
+![Blazor Stepper with Icon and Label](./images/Blazor-iconWithLabel.png)

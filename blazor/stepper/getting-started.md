@@ -99,7 +99,7 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 ```html
 <head>
     ....
-    <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
+    <link href="_content/Syncfusion.Blazor.Themes/material3.css" rel="stylesheet" />
     <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
 </head>
 ```
@@ -111,8 +111,6 @@ Add the Syncfusion Blazor Stepper component in the **~/Pages/Index.razor** file.
 
 {% tabs %}
 {% highlight razor %}
-
-@using Syncfusion.Blazor.Navigations
 
 <SfStepper>
     <StepperSteps>
@@ -131,14 +129,12 @@ Add the Syncfusion Blazor Stepper component in the **~/Pages/Index.razor** file.
 
 ![Blazor Stepper Component](images/blazor-stepper-component.png)
 
-## Configure Icon and Label
+## Configure icon and label
 
-You can set the `IconCss` and `Label` in stepper by using `StepperStep` tag directive.
+You can define the step icon and label by setting the `IconCss` and `Label` properties using `StepperStep` tag directive.
 
 {% tabs %}
 {% highlight razor %}
-
-@using Syncfusion.Blazor.Navigations
 
 <SfStepper ID="iconWithLabel">
     <StepperSteps>
