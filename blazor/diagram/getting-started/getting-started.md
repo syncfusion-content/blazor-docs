@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Getting Started with Diagram Component in Blazor | Syncfusion
-description: Checkout and learn about the documentation for getting started with Blazor Diagram Component.
+description: Check out and learn about Getting Started in Syncfusion Blazor Diagram component and much more details.
 platform: Blazor
 control: Diagram Component
 documentation: ug
 ---
 
-# Getting started with Diagram Component
+# Getting Started with Diagram Component
 
 In this section, we'll guide you through the process of adding Syncfusion's Blazor Diagram component to your Blazor Server app or Blazor WebAssembly or Blazor MAUI. We'll break it down into simple steps to make it easy to follow. you can create Balzor Server[../getting-started/server-side-application] or WeAssembly App[../getting-started/web-assembly-application] or MAUI app[../../getting-started/deploy-maui-windows]. 
 
