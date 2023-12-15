@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Customization of Blazor Rich Text Editor Dialog | Syncfusion
-description: Check out and learn about DialogSettings in Syncfusion Blazor RichTextEditor component and more.
+description: Check out and learn about DialogSettings option in Syncfusion Blazor RichTextEditor component and more.
 platform: Blazor
 control: RichTextEditor
 documentation: ug
