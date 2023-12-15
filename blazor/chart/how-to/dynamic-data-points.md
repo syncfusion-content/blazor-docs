@@ -101,31 +101,29 @@ The below code snippet illustrates a chart that allows users to add new data and
 ``` cshtml
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Charts
-@inject NavigationManager NavigationManager
-<div class="control-section" align='center'>
-    <SfChart @ref="Chart" Width="@Width" Height="450px" Theme="@Theme">
-        <ChartEvents ChartMouseClick="MouseClick"></ChartEvents>
-        <ChartArea><ChartAreaBorder Width="0"></ChartAreaBorder></ChartArea>
-        <ChartPrimaryXAxis @ref="XAxis" ValueType="Syncfusion.Blazor.Charts.ValueType.Double" RangePadding="ChartRangePadding.Additional" EdgeLabelPlacement="EdgeLabelPlacement.Shift">
-            <ChartAxisMajorGridLines Width="0"></ChartAxisMajorGridLines>
-        </ChartPrimaryXAxis>
-        <ChartPrimaryYAxis>
-            <ChartAxisMajorTickLines Width="0"></ChartAxisMajorTickLines>
-            <ChartAxisLineStyle Width="0"></ChartAxisLineStyle>
-        </ChartPrimaryYAxis>
-        <ChartTooltipSettings Enable="true" Format="${point.x} : <b>${point.y} </b>"></ChartTooltipSettings>
-        <ChartSeriesCollection>
-            <ChartSeries DataSource="@MouseClickPoints" XName="X" YName="Y" Opacity="1" Width="2" Type="ChartSeriesType.Line">
-                <ChartMarker Visible="true" Height="10" Width="10" />
-            </ChartSeries>
-        </ChartSeriesCollection>
-    </SfChart>
-</div>
+
+<SfChart @ref="Chart">
+    <ChartEvents ChartMouseClick="MouseClick"></ChartEvents>
+    <ChartArea><ChartAreaBorder Width="0"></ChartAreaBorder></ChartArea>
+    <ChartPrimaryXAxis @ref="XAxis" ValueType="Syncfusion.Blazor.Charts.ValueType.Double" RangePadding="ChartRangePadding.Additional" EdgeLabelPlacement="EdgeLabelPlacement.Shift">
+        <ChartAxisMajorGridLines Width="0"></ChartAxisMajorGridLines>
+    </ChartPrimaryXAxis>
+    <ChartPrimaryYAxis>
+        <ChartAxisMajorTickLines Width="0"></ChartAxisMajorTickLines>
+        <ChartAxisLineStyle Width="0"></ChartAxisLineStyle>
+    </ChartPrimaryYAxis>
+    <ChartTooltipSettings Enable="true" Format="${point.x} : <b>${point.y} </b>"></ChartTooltipSettings>
+    <ChartSeriesCollection>
+        <ChartSeries DataSource="@MouseClickPoints" XName="X" YName="Y" Opacity="1" Width="2" Type="ChartSeriesType.Line">
+            <ChartMarker Visible="true" Height="10" Width="10" />
+        </ChartSeries>
+    </ChartSeriesCollection>
+</SfChart>
 @code {
-#nullable enable
+
     SfChart? Chart;
     ChartPrimaryXAxis? XAxis;
-    private Theme Theme { get; set; }
+    Theme Theme { get; set; }
     public string Width { get; set; } = "90%";
     object xPoint, yPoint;
     int index;
