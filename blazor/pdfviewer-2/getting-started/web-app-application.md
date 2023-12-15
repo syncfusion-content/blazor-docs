@@ -33,7 +33,8 @@ Add the following NuGet packages into the Blazor Web app
 If you select an Interactive render mode as WebAssembly or Auto, you can install the NuGet package in the client-side project to add component in Web App.
 
 N> If you select an Interactive render mode as WebAssembly or Auto, you can install the NuGet package in the client-side project to add component in Web App.
-* [SkiaSharp.Views.Blazor](https://www.nuget.org/packages/SkiaSharp.Views.Blazor) 
+* [SkiaSharp.Views.Blazor](https://www.nuget.org/packages/SkiaSharp.Views.Blazor)
+
 ![SkiaSharp Views Blazor](GettingStarted_images/skia-sharp-image.png)
 
 ## Add the following PropertyGroup and ItemGroup
