@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with Diagram Component in Blazor WASM App | Syncfusion
-description: Learn how to get started with Diagram in the Blazor WASM application.
+description: Checkout and learn about the documentation for getting started with Blazor Diagram Component in Blazor WASM App.
 platform: Blazor
 control: Diagram Component
 documentation: ug

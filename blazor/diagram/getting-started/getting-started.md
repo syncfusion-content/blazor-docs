@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with Diagram Component| Syncfusion
+title: Getting Started with Diagram Component
 description: Learn how to getting started with Diagram control
 platform: Blazor
 control: Diagram Component

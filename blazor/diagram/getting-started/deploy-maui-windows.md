@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Deploy Diagram Component in Blazor MAUI in windows | Syncfusion
-description: description: Learn how to get started with Diagram in the Blazor MAUI application.
+description: description: Checkout and learn about the documentation for getting started with Blazor Diagram Component in Blazor MAUI App.
 platform: Blazor
 control: Diagram Component
 documentation: ug
@@ -240,10 +240,11 @@ Add the Syncfusion PDF Viewer (Next Gen) component in the **~/Pages/Index.razor*
 
 Run the sample in Windows Machine mode, and it will run Blazor MAUI in Windows.
 
-![Run Windows machine](../images/blazor-diagram-maui-page.png)
+![Run Windows machine](../images/blazor-diagram-maui.png)
 
 When the application is successfully launched, the Diagram component will seamlessly render the specified diagram page.
 
+![Run Windows machine](../images/blazor-diagram-maui-page.png)
 
 
 ## Run on Android
