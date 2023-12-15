@@ -30,6 +30,7 @@ Add the [ChartMouseClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
 ```
 
 **Step 2**
+
 Fetch the X-axis and Y-axis data of the currently clicked location from the [ChartMouseClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_ChartMouseClick) event arguments, and then points are added to the data source using the `AddToDataSource` method as shown below.
 
 
