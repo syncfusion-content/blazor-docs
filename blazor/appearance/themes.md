@@ -58,7 +58,7 @@ Instead of using [Static Web assets](#static-web-assets) or a [CDN reference](#c
 
 To use static web assets, ensure [UseStaticFiles](https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.builder.staticfileextensions.usestaticfiles?view=aspnetcore-8.0) method in the **~/Program.cs** file of your app.
 
-N> For **Blazor Auto & WASM App**, call `UseStaticFiles` method in **Server project**.
+N> For **Blazor Web App with interaction mode as  Auto & Blazor WASM App**, call `UseStaticFiles` method in **Server project**.
 
 ### Refer theme style sheet from static web assets
 
