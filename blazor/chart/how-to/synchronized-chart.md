@@ -17,7 +17,7 @@ Synchronized chart has the ability to access and interact with two or more chart
 
 The tooltip can be synchronized across multiple charts using the `ShowTooltip` and `HideTooltip` methods. When we hover over a data point in one chart, we call the `ShowTooltip` method for the other charts to display related information in other connected charts simultaneously.
 
-In the showTooltip method, specify the following parameters programmatically to enable tooltip for a particular chart:
+In the ShowTooltip method, specify the following parameters programmatically to enable tooltip for a particular chart:
 
 * x - x-value of point or x-coordinate value.
 * y - y-value of point or y-coordinate value.
