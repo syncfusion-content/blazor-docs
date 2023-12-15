@@ -9,7 +9,7 @@ documentation: ug
 
 # View PDF files using PDF Viewer Component in the Blazor Web app
 
-In this section, we’ll guide you through the process of adding Syncfusion’s Blazor PDF Viewer (Next Gen) component to your Blazor web app. We’ll break it down into simple steps to make it easy to follow.
+In this section, we’ll guide you through the process of adding Syncfusion’s Blazor PDF Viewer (Next Gen) component to your Blazor web app using [Visual Studio](https://visualstudio.microsoft.com/vs/). We’ll break it down into simple steps to make it easy to follow.
 
 ## Prerequisites
 
@@ -25,14 +25,14 @@ You need to configure the corresponding [Interactive render mode](https://learn.
 
 ## Install Blazor PDF Viewer NuGet package in Blazor Web App
 
-Add the following NuGet packages into the Blazor Web app
+To add **Blazor PDF Viewer (Next Gen)** component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install
 
 * [Syncfusion.Blazor.SfPdfViewer](https://www.nuget.org/packages/Syncfusion.Blazor.SfPdfViewer) 
 * [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes)
 
 If you select an Interactive render mode as WebAssembly or Auto, you can install the NuGet package in the client-side project to add component in Web App.
 
-N> If you select an Interactive render mode as WebAssembly or Auto, you can install the NuGet package in the client-side project to add component in Web App.
+N> If you select an Interactive render mode as `WebAssembly or Auto`, you can install the NuGet package in the client-side project to add component in Web App.
 * [SkiaSharp.Views.Blazor](https://www.nuget.org/packages/SkiaSharp.Views.Blazor)
 
 ![SkiaSharp Views Blazor](GettingStarted_images/skia-sharp-image.png)
@@ -71,7 +71,7 @@ Interactive render mode as WebAssembly or Auto, need to add the following proper
 
 * Register the Syncfusion Blazor Service in the program.cs file of your Blazor Web App.
 
-If you select an Interactive render mode as WebAssembly or Auto, you need to register the Syncfusion Blazor service in both **~/Program.cs** files of your Blazor Web App.
+If you select an Interactive render mode as `WebAssembly` or `Auto`, you need to register the Syncfusion Blazor service in both **~/Program.cs** files of your Blazor Web App.
 
 {% tabs %}
 {% highlight c# tabtitle=".NET 8 (~/Program.cs) Server" hl_lines="2 8 10 12" %}
@@ -196,10 +196,14 @@ Add the following stylesheet and script to the head section of the **~/Component
 
 Add the Syncfusion PDF Viewer (Next Gen) component in the **~Pages/.razor** file. If an interactivity location as `Per page/component` in the web app, define a render mode at the top of the **~Pages/.razor** component, as follows:
 
-```html
-@* desired render mode define here *@
-@rendermode InteractiveServer
-```
+{% tabs %}
+{% highlight razor %}
+
+@* Your App render mode define here *@
+@rendermode InteractiveAuto
+
+{% endhighlight %}
+{% endtabs %}
 
 N> If an interactivity location as Global no need to mention render mode. Set the interactivity mode for whole sample.
 
