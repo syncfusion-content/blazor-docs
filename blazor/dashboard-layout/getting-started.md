@@ -22,17 +22,16 @@ To get started quickly with Blazor Dashboard Layout component, check on the foll
 
 ## Create a new Blazor App in Visual Studio
 
-You can create a **Blazor Server App** or **Blazor WebAssembly App** using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0) or the [Syncfusion Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
+You can create a **Blazor Server App** or **Blazor WebAssembly App** using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0&pivots=windows) or the [Syncfusion Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
 
-## Install Syncfusion Blazor Layouts and Theme NuGet in the App
+## Install Syncfusion Blazor Layouts and Themes NuGet in the App
 
-To add Blazor Dashboard Layout component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install [Syncfusion.Blazor.Layouts](https://www.nuget.org/packages/Syncfusion.Blazor.Layouts) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/). Alternatively, you can utilize the following package manager command to achieve the same.
+To add **Blazor Dashboard Layout** component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install [Syncfusion.Blazor.Layouts](https://www.nuget.org/packages/Syncfusion.Blazor.Layouts) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/). Alternatively, you can utilize the following package manager command to achieve the same.
 
 {% tabs %}
 {% highlight C# tabtitle="Package Manager" %}
 
 Install-Package Syncfusion.Blazor.Layouts -Version {{ site.releaseversion }}
-
 Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
 
 {% endhighlight %}
@@ -53,7 +52,7 @@ Open **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusio
 {% endhighlight %}
 {% endtabs %}
 
-Now, register the Syncfusion Blazor Service in the **~/Program.cs** file of your Blazor Server App or Blazor WebAssembly App. 
+Now, register the Syncfusion Blazor Service in the **~/Program.cs** file of your Blazor Server App or Blazor WebAssembly App.
 
 {% tabs %}
 {% highlight C# tabtitle="Blazor Server App" hl_lines="3 10" %}
@@ -94,7 +93,7 @@ await builder.Build().RunAsync();
 
 ## Add stylesheet and script resources
 
-The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Reference the stylesheet and script in the `<head>` of the main page as follows: 
+The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Reference the stylesheet and script in the `<head>` of the main page as follows:
 
 * For **.NET 6** Blazor Server app, include it in **~/Pages/_Layout.cshtml** file.
 
@@ -128,7 +127,7 @@ Add the Syncfusion Blazor Dashboard Layout component in the **~/Pages/Index.razo
 {% endhighlight %}
 {% endtabs %}
 
-N> There is no need to assign default value for panels. Refer to the [Panels](./panels/position-sizing-of-panels/#panels) section to learn about default value.
+N> There is no need to assign default value for panels. Refer to the [Panels](./panels/position-sizing-of-panels#panels) section to learn about default value.
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion Blazor Dashboard Layout component in your default web browser.
 
@@ -179,7 +178,7 @@ The Dashboard layout with simple content will be rendered in the web browser as 
 
 A dashboard layout can be rendered with the components like the chart, grids, maps, gauge, and more as a content of dashboard layout panel.
 
-These complex data (components) are placed as the panel content by assigning the corresponding component element as the `ContentTemplate` of the panel. 
+These complex data (components) are placed as the panel content by assigning the corresponding component element as the `ContentTemplate` of the panel.
 
 {% tabs %}
 {% highlight razor %}
