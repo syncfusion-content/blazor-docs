@@ -32,9 +32,6 @@ Add the Syncfusion Blazor Diagram component in the **~/Pages/Index.razor** file.
 
 Run the application, and the diagram  will be displayed using Syncfusion's Blazor Diagram component in your browser.
 
-![Blazor SfDiagram Component](../images/blazor-diagram-page.png)
-
-
 ## Basic Blazor Diagram elements
 
 * Node: Visualize any graphical object using nodes, which can be arranged and manipulated at the same time on a Blazor diagram page.
