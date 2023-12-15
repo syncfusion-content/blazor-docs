@@ -142,6 +142,7 @@ Follow below steps to change the size mode for an application at runtime.
 
     @code {
         private bool isChecked = true;
+        public DateTime? DateValue { get; set; } = new DateTime(DateTime.Now.Year, DateTime.Now.Month, 28);
         private async void callOnTouch(MouseEventArgs args)
         {
            await jsRuntime.InvokeAsync<string>("onTouch");
@@ -161,7 +162,7 @@ Follow below steps to change the size mode for an application at runtime.
 
 You can change the size mode of a control between touch and normal (mouse) mode at runtime by setting `.e-bigger` CSS class.
 
-Refer to the following code, in which the `e-bigger` class is added for enabling touch mode using the `check` variable.
+Refer to the following code, where the e-bigger class is added to enable touch mode using the `OnTouch` method.
 
 ```cshtml
 
