@@ -20,6 +20,8 @@ You can use the following key shortcuts when the Rich Text Editor renders with `
 | Toolbar focus | <kbd>ALT</kbd> + <kbd>F10</kbd> |
 | Insert link | <kbd>CTRL</kbd> + <kbd>K</kbd> |
 | Insert image | <kbd>CTRL</kbd> + <kbd>SHIFT</kbd> + <kbd>I</kbd> |
+| Insert audio | <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>a</kbd> |
+| Insert video | <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>v</kbd> |
 | Insert table | <kbd>CTRL</kbd> + <kbd>SHIFT</kbd> + <kbd>E</kbd> |
 | Undo | <kbd>CTRL</kbd> + <kbd>Z</kbd> |
 | Redo | <kbd>CTRL</kbd> + <kbd>Y</kbd> |

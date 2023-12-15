@@ -111,7 +111,7 @@ documentation: ug
 
     **Solution**
 
-    The Syncfusion Blazor library has changed its namespace, NuGet package name, component name from v18.1.0.36. Refer this [documentation](./upgrade-syncfusion-components-to-18.1.0.36-version/#namespace-changes) to migrate your application with correct namespace. Example: `Syncfusion.EJ2.Blazor` is now modified as `Syncfusion.Blazor`.
+    The Syncfusion Blazor library has changed its namespace, NuGet package name, component name from v18.1.0.36. Refer this [documentation](./upgrade-syncfusion-components-to-18.1.0.36-version#namespace-changes) to migrate your application with correct namespace. Example: `Syncfusion.EJ2.Blazor` is now modified as `Syncfusion.Blazor`.
 
 * **Found markup element with unexpected name 'Ejs'. If this is intended to be a component, add a @using directive for its namespace**
 
@@ -125,7 +125,7 @@ documentation: ug
 
     **Solution**
 
-    The Syncfusion Blazor library has changed its namespace, NuGet package name and component name from v18.1.0.36. Refer this [documentation](./upgrade-syncfusion-components-to-18.1.0.36-version/#component-name-changes) to migrate your application with correct component name. Example: `EjsGrid` is now modified as `SfGrid`.
+    The Syncfusion Blazor library has changed its namespace, NuGet package name and component name from v18.1.0.36. Refer this [documentation](./upgrade-syncfusion-components-to-18.1.0.36-version#component-name-changes) to migrate your application with correct component name. Example: `EjsGrid` is now modified as `SfGrid`.
 
 ## Browser console errors
 
@@ -207,7 +207,10 @@ documentation: ug
 
     For further details, refer [Host and deploy ASP.NET Core Blazor](https://learn.microsoft.com/en-us/aspnet/core/blazor/host-and-deploy/?view=aspnetcore-7.0&tabs=visual-studio#app-base-path) topic.
 
+
 ## See also
 
 * [How to solve AOT publish failure when using Syncfusion.Blazor](https://www.syncfusion.com/forums/169884/aot-publish-fails-for-syncfusion-blazor-dll)
+
 * [Syncfusion components doesn't render in Blazor WebAssembly application](https://support.syncfusion.com/kb/article/12054/syncfusion-components-doesnt-render-in-blazor-webassembly-application?isInternalRefresh=False#problem)
+
