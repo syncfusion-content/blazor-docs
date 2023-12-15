@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Convert Project - Blazor Extension for Visual Studio Code | Syncfusion
-description: Learn here all about how to convert blazor application into syncfusion blazor application using Blazor Extension for Visual Studio Code. 
+description: Learn here all about how to convert blazor application into syncfusion blazor application using Blazor Extension for Visual Studio Code.
 platform: Blazor
 component: Common
 documentation: ug
@@ -39,7 +39,7 @@ Based on the application type, the following NuGet packages are added as NuGet r
 
 | Syncfusion Blazor NuGet packages  | Application type  |
 |---|---|
-| `Syncfusion.Blazor`  | Syncfusion Blazor Server App <br/> Syncfusion Blazor WebAssembly App <br/> Syncfusion Blazor WebAssembly App (ASPNET Core hosted) <br/> Syncfusion Blazor WebAssembly App (Progressive Web Application)|
+| `Syncfusion.Blazor`  | Syncfusion Blazor Web App <br/> Syncfusion Blazor Server App <br/> Syncfusion Blazor WebAssembly App <br/> Syncfusion Blazor WebAssembly App (ASPNET Core hosted) <br/> Syncfusion Blazor WebAssembly App (Progressive Web Application)|
 | `Syncfusion.Blazor.PdfViewerServer.Windows`  | Syncfusion Blazor Server App  |
 | `Syncfusion.Blazor.WordProcessor`  | Syncfusion Blazor Server App <br/> Syncfusion Blazor WebAssembly App <br/> Syncfusion Blazor WebAssembly App (ASPNET Core hosted) <br/> Syncfusion Blazor WebAssembly App (Progressive Web Application)|
 
@@ -53,6 +53,7 @@ While converting the application, the selected Syncfusion Blazor theme is added 
 
 | Application type  | File location  |
 |---|---|
+| Syncfusion Blazor Web App | ~/Components/App.razor |
 | Syncfusion Blazor Server App | {Project location}/Pages//_Host.cshtml |
 | Syncfusion Blazor WebAssembly App (ASPNET Core hosted) <br/> Syncfusion Blazor WebAssembly App (Progressive Web Application)| {Client Project location}/wwwroot/index.html  |
 | Syncfusion Blazor WebAssembly App  | {Project location}/wwwroot/index.html|
