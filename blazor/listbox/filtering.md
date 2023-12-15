@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Filtering in Blazor ListBox Component | Syncfusion
-description: Checkout and learn here all about Filtering in Syncfusion Blazor ListBox component and much more.
+description: Checkout and learn here all about Filtering in Syncfusion Blazor ListBox component in Blazor Server App and Blazor WebAssembly App.
 platform: Blazor
 control: ListBox
 documentation: ug
