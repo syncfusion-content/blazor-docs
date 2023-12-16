@@ -518,7 +518,7 @@ In the below example, `TaskData` implements `INotifyPropertyChanged` and it rais
     public class TaskData : INotifyPropertyChanged
     {
         public int TaskId { get; set; }
-        public string taskName { get; set; }
+        private string taskName { get; set; }
         public string TaskName
         {
             get { return taskName; }
