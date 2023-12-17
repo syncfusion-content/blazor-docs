@@ -59,7 +59,7 @@ The following table shows built-in toolbar items and its actions.
         public int TaskId { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
+        public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
@@ -128,7 +128,7 @@ By default, the custom toolbar items are at left position. You can change the po
         public int TaskId { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
+        public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
@@ -197,7 +197,7 @@ In the following example, the `ExpandAll` and `CollapseAll` are built-in toolbar
         public int TaskId { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
+        public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
@@ -274,7 +274,7 @@ You can enable or disable the toolbar items by using the `EnableItems` method.
         public int TaskId { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
+        public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }

@@ -61,7 +61,7 @@ N> When the work field is mapped from the data source, the default task type wil
         public string TaskName { get; set; }
         public string TaskType { get; set; }
         public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
+        public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
@@ -141,7 +141,7 @@ The work, duration and resource unit fields of a task depends upon each other an
         public string TaskName { get; set; }
         public TaskType TaskType { get; set; }
         public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
+        public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public double Progress { get; set; }
         public int? ParentId { get; set; }

@@ -178,3 +178,5 @@ The speed dial control triggers the [`ItemClicked`](https://help.syncfusion.com/
 {% endtabs %}
 
 ![Blazor SpeedDial Component](./images/blazor-speeddial-event-sample.png)
+
+N> You can also explore our [Blazor Speed Dial Button example](https://blazor.syncfusion.com/demos/speeddial/defaultfunctionalities) that shows how to render and configure the button.

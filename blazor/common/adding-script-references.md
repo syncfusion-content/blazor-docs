@@ -21,7 +21,7 @@ You can refer the Syncfusion Blazor scripts through the CDN resources.
 * For **Blazor WASM App**, reference scripts in `~/wwwroot/index.html` file.
 * For **Blazor Server App**, reference scripts in `~/Pages/_Layout.cshtml` file for `.NET 6` project and in `~/Pages/_Host.cshtml` file for `.NET 7` project.
 
-Syncfusion Blazor components are available in CDN for each version. Make sure that the version in the URLs matches the version of the Syncfusion Blazor Package you are using.
+Syncfusion Blazor components are available in CDN for each version. Make sure that the version in the URLs matches the version of the Syncfusion Blazor Package you are using .
 
 <table>
 <tr>
@@ -92,6 +92,16 @@ If you are using `PDF Viewer`,`PDF Viewer(NextGen)` or `DocumentEditor`, ensure 
 </head>
 ```
 
+In addition to above, Syncfusion Blazor components provides latest scripts in CDN without versioning. You can use this in development environment if you want to always use the latest version of scripts. It is not recommended to use this in production environment.
+
+| Component | CDN Script Reference |
+| --- | --- |
+|  All components except PDF Viewer, PDF Viewer(NextGen) & Document Editor | https://cdn.syncfusion.com/blazor/syncfusion-blazor.min.js |
+| PDF Viewer | https://cdn.syncfusion.com/blazor/syncfusion-blazor-pdfviewer.min.js |
+| Document Editor | https://cdn.syncfusion.com/blazor/syncfusion-blazor-documenteditor.min.js |
+| PDF Viewer(NextGen) | https://cdn.syncfusion.com/blazor/syncfusion-blazor-sfpdfviewer.min.js |
+
+
 N> To add custom PDF Viewer(NextGen) script file in your application, refer [How to refer SfPdfViewer script file in application](../pdfviewer-2/how-to/refer-sfpdfviewer-script-in-application).
 
 ## Static web assets
@@ -102,7 +112,7 @@ You can refer the Syncfusion Blazor scripts through the NuGet package's static w
 
 To use static web assets, ensure [UseStaticFiles](https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.builder.staticfileextensions.usestaticfiles?view=aspnetcore-8.0) method in the **~/Program.cs** file of your app.
 
-N> For **Blazor Web App with interaction mode as  Auto & Blazor WASM App**, call `UseStaticFiles` method in **Server project**.
+N> For **Blazor Auto & WASM App**, call `UseStaticFiles` method in **Server project**.
 
 ### Refer script from static web assets
 

@@ -22,14 +22,14 @@ The instructions below assist you in creating **Syncfusion Blazor Applications**
 2. Select **Syncfusion Blazor Template Studio: Launch**, then press **Enter** key. The Template Studio wizard for configuring the Syncfusion Blazor app will be launched. Provide the Project Name and Project Path.
 
     ![TemplateStudioWizard](images/ProjectLocationName.png)
-
-    N> .NET 6.0 is available from v19.4.0.38 and support from Visual Studio 2022.
+    N> .NET 8.0 is available from v23.2.4 and support from Visual Studio 2022.
 
     N> .NET 7.0 is available from v20.4.0.38 and support from Visual Studio 2022.
 
-     N> .NET 8.0 is available from v23.2.4 and support from Visual Studio 2022.
+    N> .NET 6.0 is available from v19.4.0.38 and support from Visual Studio 2022.
 
 3. Select either **Next** or the **Project Type** tab. Syncfusion Blazor Project Types will be displayed. Select one of the following Syncfusion Blazor project types:
+   * Syncfusion Blazor Web App
    * Syncfusion Blazor Server App
    * Syncfusion Blazor WebAssembly App
 
@@ -49,7 +49,7 @@ The instructions below assist you in creating **Syncfusion Blazor Applications**
 
     ![Debug](images/Debug.png)
 
-7. If you installed the trial setup or NuGet packages from nuget.org you must register the Syncfusion license key to your application since Syncfusion introduced the licensing system from 2018 Volume 2 (v16.2.0.41) Essential Studio release. Navigate to the [help topic](https://help.syncfusion.com/common/essential-studio/licensing/overview#how-to-generate-syncfusion-license-key) to generate and register the Syncfusion license key to your application. Refer to this [UG](https://blazor.syncfusion.com/documentation/getting-started/license-key/overview) topic for understanding the licensing details in Essential Studio for Blazor.
+7. If you installed the trial setup or NuGet packages from nuget.org you must register the Syncfusion license key to your application since Syncfusion introduced the licensing system from 2018 Volume 2 (v16.2.0.41) Essential Studio release. Navigate to the [help topic](https://help.syncfusion.com/common/essential-studio/licensing/license-key#how-to-generate-syncfusion-license-key) to generate and register the Syncfusion license key to your application. Refer to this [UG](https://blazor.syncfusion.com/documentation/getting-started/license-key/overview) topic for understanding the licensing details in Essential Studio for Blazor.
 
 ## Syncfusion integration
 
@@ -67,6 +67,7 @@ The selected theme is added from Syncfusion NuGet and its reference at these app
 
 | Application type  | File location  |
 |---|---|
+| Syncfusion Blazor Web App | ~/Components/App.razor |
 | Syncfusion Blazor Server App | {Project location}/Pages//_Host.cshtml |
 | Syncfusion Blazor WebAssembly App (ASPNET Core hosted) <br/> Syncfusion Blazor WebAssembly App (Progressive Web Application) | {Client Project location}/wwwroot/index.html  |
 | Syncfusion Blazor WebAssembly App  | {Project location}/wwwroot/index.html|
@@ -85,6 +86,6 @@ The Syncfusion Blazor Calendar, Button, and DataGrid component render code is in
 
 | File name  | Code snippet added |
 |---|---|
-| `~/Pages/Index.razor`  | ![IndexFileChange](images/IndexFileChange.png) |
+| `~/Pages/Home.razor or Index.razor`  | ![IndexFileChange](images/IndexFileChange.png) |
 | `~/Pages/Counter.razor` | ![CounterPageChange](images/CounterPageChange.png) |
 | `~/Pages/FetchData.razor`  | ![FetchDataPageChange](images/FetchDataPageChange.png) |
