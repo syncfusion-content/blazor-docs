@@ -131,7 +131,7 @@ Add the Syncfusion Blazor Gantt Chart component in the **~/Pages/Index.razor** f
 {% endhighlight %}
 {% endtabs %}
 
-## Binding Blazor Gantt Chart with Data
+### Binding Blazor Gantt Chart with Data
 
 Bind data with the Gantt Chart component by using the `DataSource` property. It accepts the list objects or the DataManager instance.
 
@@ -173,7 +173,7 @@ Bind data with the Gantt Chart component by using the `DataSource` property. It 
 {% endhighlight %}
 {% endtabs %}
 
-## Mapping task fields
+### Mapping task fields
 
 The data source fields that are required to render the tasks are mapped to the Gantt Chart component using the [GanttTaskFields](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTaskFields.html) property.
 
