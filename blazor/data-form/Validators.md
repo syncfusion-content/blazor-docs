@@ -172,34 +172,34 @@ The `ObjectGraphDataAnnotationsValidator` within the DataForm component ensures 
 @using Syncfusion.Blazor.Inputs
 @using Syncfusion.Blazor.Buttons
 @using Syncfusion.Blazor.Calendars;
-@using Syncfusion.Blazor.DropDowns
 @using FluentValidation
+@using Blazored.FluentValidation
 
 <SfDataForm ID="MyForm"
             Model="@PaymentDetailsModel"
             Width="50%">
     <FormValidator>
-        <Blazored.FluentValidation.FluentValidationValidator Validator="PaymentDetailsValidation" />
+        <FluentValidationValidator Validator="PaymentDetailsValidation" />
     </FormValidator>
     <FormItems>
-            <FormItem Field="@nameof(PaymentDetailsModel.Name)" LabelText="Full Name on Card"></FormItem>
-            <FormItem Field="@nameof(PaymentDetailsModel.CardNumber)" LabelText="Card Number"></FormItem>
-            <FormItem Field="@nameof(PaymentDetailsModel.ExpirationDate)" LabelText="Expiration Date">
-                <Template>
-                    <label class="e-form-label">Expiration Date</label>
-                    <SfDatePicker EnableMask="true" Format="MM/yy" @bind-Value="@PaymentDetailsModel.ExpirationDate">
-                    </SfDatePicker>
-                </Template>
-            </FormItem>
-            <FormItem Field="@nameof(PaymentDetailsModel.CVV)" >
-                <Template>
+        <FormItem Field="@nameof(PaymentDetailsModel.Name)" LabelText="Full Name on Card"></FormItem>
+        <FormItem Field="@nameof(PaymentDetailsModel.CardNumber)" LabelText="Card Number"></FormItem>
+        <FormItem Field="@nameof(PaymentDetailsModel.ExpirationDate)" LabelText="Expiration Date">
+            <Template>
+                <label class="e-form-label">Expiration Date</label>
+                <SfDatePicker EnableMask="true" Format="MM/yy" @bind-Value="@PaymentDetailsModel.ExpirationDate">
+                </SfDatePicker>
+            </Template>
+        </FormItem>
+        <FormItem Field="@nameof(PaymentDetailsModel.CVV)">
+            <Template>
                 <label class="e-form-label">CVV/CVC</label>
-                    <SfMaskedTextBox Mask="000" PromptChar="@promptCharacter" @bind-Value="@PaymentDetailsModel.CVV"></SfMaskedTextBox>
-                </Template>
-            </FormItem>
-            <FormItem Field="@nameof(PaymentDetailsModel.BillingAddress)" LabelText="Billing Address" EditorType="FormEditorType.TextArea"> 
-            </FormItem>
-            <FormItem Field="@nameof(PaymentDetailsModel.Accept)" EditorType="FormEditorType.Switch" LabelText="I agree to the terms and conditions"></FormItem>
+                <SfMaskedTextBox Mask="000" PromptChar="@PromptCharacter" @bind-Value="@PaymentDetailsModel.CVV"></SfMaskedTextBox>
+            </Template>
+        </FormItem>
+        <FormItem Field="@nameof(PaymentDetailsModel.BillingAddress)" LabelText="Billing Address" EditorType="FormEditorType.TextArea">
+        </FormItem>
+        <FormItem Field="@nameof(PaymentDetailsModel.Accept)" EditorType="FormEditorType.Switch" LabelText="I agree to the terms and conditions"></FormItem>
     </FormItems>
 
     <FormButtons>
@@ -210,7 +210,7 @@ The `ObjectGraphDataAnnotationsValidator` within the DataForm component ensures 
 
 @code {
 
-    char promptCharacter { get; set; } = ' ';
+    char PromptCharacter { get; set; } = ' ';
 
     public class PaymentDetails
     {
@@ -238,9 +238,7 @@ The `ObjectGraphDataAnnotationsValidator` within the DataForm component ensures 
     private PaymentDetails PaymentDetailsModel = new PaymentDetails();
 
     PaymentDetailsValidator PaymentDetailsValidation = new PaymentDetailsValidator();
-
 }
-
 
 {% endhighlight %}
 

@@ -16,11 +16,7 @@ The [FormItem](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataForm.
 
 @using Syncfusion.Blazor.DataForm
 @using System.ComponentModel.DataAnnotations
-@using Microsoft.AspNetCore.Components.Forms
-@using Syncfusion.Blazor.Inputs
-@using Syncfusion.Blazor.Buttons
-@using Syncfusion.Blazor.Calendars;
-@using Syncfusion.Blazor.Popups
+
 
 <SfDataForm ID="MyForm"
             Model="@EditorTypeModel"
@@ -32,7 +28,8 @@ The [FormItem](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataForm.
     </FormValidator>
 
     <FormItems>
-        <FormItem Field="@nameof(EditorTypeModel.TextBoxField)" ID="textbox" Placeholder="Enter the value" LabelText="TextBox Editor" ></FormItem>
+        <FormItem Field="@nameof(EditorTypeModel.NumericTextBoxField)" ID="numeric-textbox" Placeholder="Enter the value" LabelText="Numeric TextBox Editor"></FormItem>
+        <FormItem Field="@nameof(EditorTypeModel.TextBoxField)" ID="textbox" Placeholder="Enter the value" LabelText="TextBox Editor"></FormItem>
         <FormItem Field="@nameof(EditorTypeModel.DisabledTextBoxField)" ID="diabled" IsEnabled="false" Placeholder="Enter the value" LabelText="TextBox Editor"></FormItem>
         <FormItem Field="@nameof(EditorTypeModel.TextAreaField)" CssClass="e-warning" LabelText="TextArea Editor" Placeholder="Enter the value" EditorType="FormEditorType.TextArea"></FormItem>
         <FormItem Field="@nameof(EditorTypeModel.DropDownListField)" LabelText="DropDownList Editor" CssClass="e-warning" Placeholder="Select the value" EditorType="FormEditorType.DropDownList"></FormItem>
@@ -42,14 +39,9 @@ The [FormItem](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataForm.
         <FormItem Field="@nameof(EditorTypeModel.DateTimePickerField)" LabelText="DateTimePicker Editor" Placeholder="Enter the value" EditorType="FormEditorType.DateTimePicker"></FormItem>
         <FormItem Field="@nameof(EditorTypeModel.DatePickerField)" LabelText="DatePicker Editor" Placeholder="Enter the value" EditorType="FormEditorType.DatePicker"></FormItem>
         <FormItem Field="@nameof(EditorTypeModel.TimePickerField)" LabelText="TimePicker Editor" Placeholder="Enter the value" EditorType="FormEditorType.TimePicker"></FormItem>
-        <FormItem Field="@nameof(EditorTypeModel.CheckBoxField)" LabelText="Checkbox Editor" ></FormItem>
+        <FormItem Field="@nameof(EditorTypeModel.CheckBoxField)" LabelText="Checkbox Editor"></FormItem>
         <FormItem Field="@nameof(EditorTypeModel.SwitchField)" LabelText="Switch Editor" EditorType="FormEditorType.Switch"></FormItem>
     </FormItems>
-
-    <FormButtons>
-        <SfButton>Submit</SfButton>
-    </FormButtons>
-
 </SfDataForm>
 
 
@@ -64,6 +56,9 @@ The [FormItem](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataForm.
 
     public class EditorTypes
     {
+        [Required(ErrorMessage = "Please enter a value for NumericTextBoxField")]
+        public int? NumericTextBoxField { get; set; }
+
         [Required(ErrorMessage = "Please enter a value for TextBoxField")]
         public string TextBoxField { get; set; }
 
@@ -268,3 +263,5 @@ The `FormAutoGenerateItems` can be utilized independently, as demonstrated in th
 
 {% endhighlight %}
 {% endtabs %}
+
+In the given example, apart from `StringField`, `DateTimeField`, and `BoolField`, the remaining elements will be generated and placed automatically within the specified `FormItem` along with their corresponding editor types.

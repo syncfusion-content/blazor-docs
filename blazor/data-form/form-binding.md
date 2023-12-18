@@ -11,9 +11,9 @@ documentation: ug
 
 This segment provides a concise overview of the concepts involved in associating a [Model](https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.components.forms.editform.model?view=aspnetcore-7.0#microsoft-aspnetcore-components-forms-editform-model) or [EditContext](https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.components.forms.editform.editcontext?view=aspnetcore-7.0#microsoft-aspnetcore-components-forms-editform-editcontext) with a Data Form. Additionally, it covers how to apply the attributes of properties that are defined within the model class.
 
-## Model and EditContext binding 
+## Model binding 
 
-The following example illustrates how the `Model` or `EditContext` are bound to the DataForm component using the user-defined `EventRegistration` model class.
+The following example illustrates how the `Model` is bound to the DataForm component using the user-defined `EventRegistration` model class.
 
 {% tabs %}
 {% highlight razor tabtitle="Model" hl_lines="3 10" %}
@@ -58,7 +58,16 @@ The following example illustrates how the `Model` or `EditContext` are bound to 
 }
 
 {% endhighlight %}
-{% highlight razor tabtitle="Model" hl_lines="3 10" %}
+{% endtabs %}
+
+![Blazor DataForm Model Binding](images/blazor_dataform_formbinding.png)
+
+## EditContext binding 
+
+The following example illustrates how the `EditContext` is bound to the DataForm component using the user-defined `EventRegistration` model class.
+
+{% tabs %}
+{% highlight razor tabtitle="EditContext" hl_lines="3 10" %}
 
 @using Syncfusion.Blazor.DataForm
 @using Syncfusion.Blazor.Buttons
@@ -111,26 +120,20 @@ The following example illustrates how the `Model` or `EditContext` are bound to 
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor DataForm Model Binding](images/blazor_dataform_formbinding.png)
-
 ## Data Annotation Attributes
 
 The DataForm component enables users to define the data annotation attributes available from the instance of [System.ComponentModel.DataAnnotations](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations?view=net-5.0). For instance:
 
-`[Display(Name = "Custom field name")]` - This attribute is used to set a custom name for the field, which will be shown as its label.
+[Display(Name = "Custom field name")](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.displayattribute?view=net-5.0) - This attribute is used to set a custom name for the field, which will be shown as its label.
 
-`[Editable(false)]` - When this attribute is used, it renders the associated field uneditable, thus preventing users from changing its content.
+[Editable(false)](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.editableattribute?view=net-5.0) - When this attribute is used, it renders the associated field uneditable, thus preventing users from changing its content.
 
-`[EmailAddress]` - This attribute checks to ensure that the value entered in the field conforms to a valid email address format.
+[EmailAddress](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.emailaddressattribute?view=net-5.0) - This attribute checks to ensure that the value entered in the field conforms to a valid email address format.
 
 For guidance on how to use some of these attributes in DataForm component, see the example provided below.
 
 {% tabs %}
 {% highlight razor tabtitle="Attributes" hl_lines="3 10" %}
-
-@using Syncfusion.Blazor.DataForm
-@using Syncfusion.Blazor.Buttons
-@using System.ComponentModel.DataAnnotations
 
 @using Syncfusion.Blazor.DataForm
 @using Syncfusion.Blazor.Buttons
@@ -160,7 +163,7 @@ For guidance on how to use some of these attributes in DataForm component, see t
     public class EventRegistration
     {
         [Required(ErrorMessage = "Please enter your name.")]
-        [Display(Name = "Registration Id")]
+        [Display(Name = "Registration ID")]
         [Editable(false)]
         public int RegistrationId { get; set; }
 
@@ -190,7 +193,9 @@ For guidance on how to use some of these attributes in DataForm component, see t
 
 ### Custom Validation
 
-Custom validation attributes can also be applied to model properties to execute necessary checks. In the following example, we've implemented validations for the `Email` and `Password` fields, specifically to particular scenario. 
+A [custom validation attribute](https://learn.microsoft.com/en-us/previous-versions/aspnet/cc668224(v=vs.100)#creating-a-custom-validation-attribute) in .NET is a class that inherits from the [ValidationAttribute](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.validationattribute?view=net-8.0&redirectedfrom=MSDN) abstract class and overrides the [IsValid](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.validationattribute.isvalid?view=net-8.0#system-componentmodel-dataannotations-validationattribute-isvalid(system-object)) method. This method is called when the attribute is applied to a property and the property's value is being validated.
+
+In the `IsValid` method, you can define your custom validation logic. If the validation fails, you return a [ValidationResult](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.validationresult?view=net-8.0) object with an error message. If the validation passes, you return `ValidationResult.Success`.
 
 {% tabs %}
 {% highlight razor tabtitle="Custom Validation Attributes" hl_lines="3 10" %}
@@ -208,10 +213,10 @@ Custom validation attributes can also be applied to model properties to execute 
     </FormValidator>
     <FormItems>
         <FormGroup LabelText="Sign Up Details">
-            <FormItem Field="@nameof(EmployeeModel.Name)" LabelText="FirstName"></FormItem>
+            <FormItem Field="@nameof(EmployeeModel.Name)" LabelText="Name"></FormItem>
             <FormItem Field="@nameof(EmployeeModel.Email)" LabelText="Email Id"></FormItem>
-            <FormItem Field="@nameof(EmployeeModel.Password)" LabelText="Password"> </FormItem>
-            <FormItem Field="@nameof(EmployeeModel.ConfirmPassword)" LabelText="Confirm Password"> </FormItem>
+            <FormItem Field="@nameof(EmployeeModel.Password)" LabelText="Password" EditorType="FormEditorType.Password"> </FormItem>
+            <FormItem Field="@nameof(EmployeeModel.ConfirmPassword)" LabelText="Confirm Password" EditorType="FormEditorType.Password"> </FormItem>
         </FormGroup>
     </FormItems>
 </SfDataForm>
@@ -288,7 +293,10 @@ Custom validation attributes can also be applied to model properties to execute 
         }
     }
 }
+
 {% endhighlight %}
 {% endtabs %}
+
+ In the above example, In the `PasswordValidationAttribute` class, the `IsValid` method checks if the password meets certain criteria (length, contains uppercase letter, contains lowercase letter, contains special character). If it doesn't, it returns a `ValidationResult` with an appropriate error message.In the `EmailValidationAttribute` class, the IsValid method checks if the email is in a valid format. If it's not, it returns a `ValidationResult` with an error message. 
 
 ![Blazor DataForm Custom Validation](images/blazor_dataform_customvalidation.png)
