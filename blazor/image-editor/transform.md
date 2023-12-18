@@ -268,13 +268,13 @@ Here is an example of straightening the image using the [`StraightenImageAsync`]
     private async void StraightenRightAsync()
     {
         straighten += 3;
-        await ImageEditor.straightenImageAsync(straighten);
+        await ImageEditor.StraightenImageAsync(straighten);
     }
 
     private async void ResetAsync()
     {
         straighten = 0;
-        await ImageEditor.straightenImageAsync(straighten);
+        await ImageEditor.StraightenImageAsync(straighten);
     }
 }
 ```
