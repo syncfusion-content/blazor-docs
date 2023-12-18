@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Diagram Component
 
-In this section, we'll guide you through the process of adding Syncfusion's Blazor Diagram component to your Blazor Server app or Blazor WebAssembly or Blazor MAUI. We'll break it down into simple steps to make it easy to follow. you can create Balzor Server[../getting-started/server-side-application] or WeAssembly App[../getting-started/web-assembly-application] or MAUI app[../../getting-started/deploy-maui-windows]. 
+In this section, we'll guide you through the process of adding Syncfusion's Blazor Diagram component to your Blazor Server app or Blazor WebAssembly or Blazor MAUI. We'll break it down into simple steps to make it easy to follow. you can create [Balzor Server](../getting-started/server-side-application) or [WeAssembly App](../getting-started/web-assembly-application) or [MAUI app](../getting-started/deploy-maui-windows). 
 
 Additionally, you can find a fully functional example project on our [GitHub repository](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/DiagramComponent/BlazorServerApp/Diagramsample).
 
