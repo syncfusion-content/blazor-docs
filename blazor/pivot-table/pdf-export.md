@@ -333,75 +333,6 @@ The below code illustrates the PDF export customization options.
 }
 ```
 
-## Saving PDF document to stream
-
-Rather than exporting the Pivot Table as a downloadable file, user can save the PDF document as a memory stream. This is achieved by setting the **asBlob** option to **true** in the [ExportToPdfAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_ExportToPdfAsync_Syncfusion_Blazor_Grids_PdfExportProperties_System_Nullable_System_Boolean__System_Object_System_Nullable_System_Boolean__) method. The resulting memory stream can then be further processed and customized by the user before being exported as a document.
-
-N> This option is only available if virtualization is enabled in the pivot table.
-
-```cshtml
-@using Syncfusion.Blazor.PivotView
-@using Syncfusion.Blazor.Buttons
-@using Syncfusion.Blazor.Grids
-@inject IJSRuntime JSRuntime
-
-<SfButton OnClick="OnPdfExport" Content="Pdf Export"></SfButton>
-<SfPivotView @ref="@pivot" TValue="ProductDetails" AllowPdfExport=true EnableVirtualization="true">
-    <PivotViewDataSourceSettings DataSource="@dataSource" EnableSorting=true>
-        <PivotViewColumns>
-            <PivotViewColumn Name="Year"></PivotViewColumn>
-            <PivotViewColumn Name="Quarter"></PivotViewColumn>
-        </PivotViewColumns>
-        <PivotViewRows>
-            <PivotViewRow Name="Country"></PivotViewRow>
-            <PivotViewRow Name="Products"></PivotViewRow>
-        </PivotViewRows>
-        <PivotViewValues>
-            <PivotViewValue Name="Sold" Caption="Units Sold"></PivotViewValue>
-            <PivotViewValue Name="Amount" Caption="Sold Amount"></PivotViewValue>
-        </PivotViewValues>
-        <PivotViewDrilledMembers>
-            <PivotViewDrilledMember Name="Country" Items="@(new string[]{"France"})"></PivotViewDrilledMember>
-        </PivotViewDrilledMembers>
-        <PivotViewFormatSettings>
-            <PivotViewFormatSetting Name="Amount" Format="C0" UseGrouping=true></PivotViewFormatSetting>
-        </PivotViewFormatSettings>
-    </PivotViewDataSourceSettings>
-</SfPivotView>
-
-<script type="text/javascript">
-    function saveAsFile(filename, bytesBase64) {
-        var link = document.createElement("a");
-        link.download = filename;
-        link.href = "data:application/octet-stream;base64," + bytesBase64;
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
-    }
-</script>
-
-@code {
-    private SfPivotView<ProductDetails> pivot;
-    private List<ProductDetails> dataSource { get; set; }
-    protected override void OnInitialized()
-    {
-        this.dataSource = ProductDetails.GetProductData().ToList();
-        //Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
-    }
-    private async Task OnPdfExport(Microsoft.AspNetCore.Components.Web.MouseEventArgs args)
-    {
-        System.IO.MemoryStream memoryStream = new System.IO.MemoryStream();
-        // Here you can obtain the PDF document as a memory stream by setting the last parameter as "true" in the "ExportToPdfAsync" method.
-        memoryStream = await this.pivot.ExportToPdfAsync(null, false, true);
-        // You can then process the memory stream based on your needs and save it as mentioned in the last statement.
-        ......
-        ......
-        ......
-        await JSRuntime.InvokeVoidAsync("saveAsFile", new object[] { "default.pdf", Convert.ToBase64String(memoryStream.ToArray()) });
-    }
-}
-```
-
 ## Changing the pivot table style while exporting
 
 The PDF export provides an option to change colors for headers, caption and records in the pivot table before exporting. In-order to apply colors, define **theme** settings in **pdfExportProperties** object and pass it as a parameter to the [ExportToPdfAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_PdfExport_System_Object_System_Nullable_System_Boolean__System_Object_System_Nullable_System_Boolean__) method.
@@ -618,6 +549,75 @@ The PDF export provides an option to change page orientation of the document bef
 ```
 
 ![Changing Blazor PivotTable Page Orientation while Exporting](images/blazor-pivottable-change-pdf-orientation.png)
+
+## Saving PDF document to stream
+
+Rather than exporting the Pivot Table as a downloadable file, user can save the PDF document as a memory stream. This is achieved by setting the **asBlob** option to **true** in the [ExportToPdfAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_ExportToPdfAsync_Syncfusion_Blazor_Grids_PdfExportProperties_System_Nullable_System_Boolean__System_Object_System_Nullable_System_Boolean__) method. The resulting memory stream can then be further processed and customized by the user before being exported as a document.
+
+N> This option is only available if virtualization is enabled in the pivot table.
+
+```cshtml
+@using Syncfusion.Blazor.PivotView
+@using Syncfusion.Blazor.Buttons
+@using Syncfusion.Blazor.Grids
+@inject IJSRuntime JSRuntime
+
+<SfButton OnClick="OnPdfExport" Content="Pdf Export"></SfButton>
+<SfPivotView @ref="@pivot" TValue="ProductDetails" AllowPdfExport=true EnableVirtualization="true">
+    <PivotViewDataSourceSettings DataSource="@dataSource" EnableSorting=true>
+        <PivotViewColumns>
+            <PivotViewColumn Name="Year"></PivotViewColumn>
+            <PivotViewColumn Name="Quarter"></PivotViewColumn>
+        </PivotViewColumns>
+        <PivotViewRows>
+            <PivotViewRow Name="Country"></PivotViewRow>
+            <PivotViewRow Name="Products"></PivotViewRow>
+        </PivotViewRows>
+        <PivotViewValues>
+            <PivotViewValue Name="Sold" Caption="Units Sold"></PivotViewValue>
+            <PivotViewValue Name="Amount" Caption="Sold Amount"></PivotViewValue>
+        </PivotViewValues>
+        <PivotViewDrilledMembers>
+            <PivotViewDrilledMember Name="Country" Items="@(new string[]{"France"})"></PivotViewDrilledMember>
+        </PivotViewDrilledMembers>
+        <PivotViewFormatSettings>
+            <PivotViewFormatSetting Name="Amount" Format="C0" UseGrouping=true></PivotViewFormatSetting>
+        </PivotViewFormatSettings>
+    </PivotViewDataSourceSettings>
+</SfPivotView>
+
+<script type="text/javascript">
+    function saveAsFile(filename, bytesBase64) {
+        var link = document.createElement("a");
+        link.download = filename;
+        link.href = "data:application/octet-stream;base64," + bytesBase64;
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    }
+</script>
+
+@code {
+    private SfPivotView<ProductDetails> pivot;
+    private List<ProductDetails> dataSource { get; set; }
+    protected override void OnInitialized()
+    {
+        this.dataSource = ProductDetails.GetProductData().ToList();
+        //Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
+    }
+    private async Task OnPdfExport(Microsoft.AspNetCore.Components.Web.MouseEventArgs args)
+    {
+        System.IO.MemoryStream memoryStream = new System.IO.MemoryStream();
+        // Here you can obtain the PDF document as a memory stream by setting the last parameter as "true" in the "ExportToPdfAsync" method.
+        memoryStream = await this.pivot.ExportToPdfAsync(null, false, true);
+        // You can then process the memory stream based on your needs and save it as mentioned in the last statement.
+        ......
+        ......
+        ......
+        await JSRuntime.InvokeVoidAsync("saveAsFile", new object[] { "default.pdf", Convert.ToBase64String(memoryStream.ToArray()) });
+    }
+}
+```
 
 ## Events
 
