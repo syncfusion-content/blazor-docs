@@ -208,4 +208,4 @@ The below example shows an animated sequence that initiates with the axis line a
 
 ```
 
-![Blazor Linear Gauge animation for multiple elements ](./images/blazor-lineargauge-multiple-elements-animation.gif)
+![Blazor Linear Gauge animation for multiple elements ](images/blazor-lineargauge-multiple-elements-animation.gif)
