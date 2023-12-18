@@ -67,7 +67,7 @@ In Gantt, the task relationship link can be broken by editing the start date, en
 
 ### Validation mode
 
-When editing the tasks with predecessor links, then the [TaskbarEditing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_TaskbarEditing) event will be triggered. You can validate the editing action within the `TaskbarEditing` event using the [ValidateMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttActionEventArgs-1.html#Syncfusion_Blazor_Gantt_GanttActionEventArgs_1_ValidateMode) event argument. The `ValidateMode` event argument has the following properties:
+When editing the tasks with predecessor links, then the [TaskbarEditing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_TaskbarEditing) event will be triggered. You can validate the editing action within the `TaskbarEditing` event using the [ValidateMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.ValidateMode.html) event argument. The `ValidateMode` event argument has the following properties:
 
 Argument |Default value |Description
 -----|-----|-----
