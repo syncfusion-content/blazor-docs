@@ -167,7 +167,7 @@ namespace TreeGridComponent.Data {
 
 ## Override default filter operators for menu filtering
 
-The default filter operators for a GridColumn can be overridden by using the [OnActionBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_OnActionBegin) event of the tree grid. In the below code, we have overridden the filter operators for the **Task Name** column.
+The default filter operators for a GridColumn can be overridden by using the [FilterDialogOpening](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_FilterDialogOpening) event of the tree grid. In the below code, we have overridden the filter operators for the **Task Name** column.
 
 {% tabs %}
 
@@ -179,7 +179,7 @@ The default filter operators for a GridColumn can be overridden by using the [On
 @using  Syncfusion.Blazor.Data;
 
 <SfTreeGrid IdMapping="TaskId" DataSource="@TreeGridData" ParentIdMapping="ParentId" TreeColumnIndex="1" AllowFiltering="true">
-    <TreeGridEvents OnActionBegin="ActionBeginHandler" TValue="BusinessObject"></TreeGridEvents>
+    <TreeGridEvents FilterDialogOpening="FilterDialogOpeningHandler" TValue="BusinessObject"></TreeGridEvents>
     <TreeGridFilterSettings Type="Syncfusion.Blazor.TreeGrid.FilterType.Menu"></TreeGridFilterSettings>
     <TreeGridColumns>
         <TreeGridColumn Field="TaskId" HeaderText="Task ID" Width="80" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right"></TreeGridColumn>
@@ -194,14 +194,11 @@ The default filter operators for a GridColumn can be overridden by using the [On
 
     public List<BusinessObject> TreeGridData { get; set; }
 
-    public void ActionBeginHandler(ActionEventArgs<BusinessObject> Args)
+    public void FilterDialogOpeningHandler(FilterDialogOpeningEventArgs args)
     {
-        if (Args.RequestType == Syncfusion.Blazor.Grids.Action.FilterBeforeOpen)
+        if (Args.ColumnName == "TaskName")//Specify Field name
         {
-            if (Args.ColumnName == "TaskName")//Specify Field name
-            {
-                Args.FilterOperators = CustomerIDOperator;
-            }
+            Args.FilterOperators = CustomerIDOperator;
         }
     }
 
@@ -263,7 +260,7 @@ namespace TreeGridComponent.Data {
 @using  Syncfusion.Blazor.Data;
 
 <SfTreeGrid IdMapping="TaskId" DataSource="@TreeGridData" ParentIdMapping="ParentId" TreeColumnIndex="1" AllowFiltering="true">
-    <TreeGridEvents OnActionBegin="ActionBeginHandler" TValue="BusinessObject"></TreeGridEvents>
+    <TreeGridEvents FilterDialogOpening="FilterDialogOpeningHandler" TValue="BusinessObject"></TreeGridEvents>
     <TreeGridFilterSettings Type="Syncfusion.Blazor.TreeGrid.FilterType.Menu"></TreeGridFilterSettings>
     <TreeGridColumns>
         <TreeGridColumn Field="TaskId" HeaderText="Task ID" Width="80" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right"></TreeGridColumn>
@@ -277,14 +274,11 @@ namespace TreeGridComponent.Data {
 @code{
     public List<BusinessObject> TreeGridData { get; set; }
 
-    public void ActionBeginHandler(ActionEventArgs<BusinessObject> Args)
+    public void FilterDialogOpeningHandler(FilterDialogOpeningEventArgs args)
     {
-        if (Args.RequestType == Syncfusion.Blazor.Grids.Action.FilterBeforeOpen)
+        if (Args.ColumnName == "TaskName")//Specify Field name
         {
-            if (Args.ColumnName == "TaskName")//Specify Field name
-            {
-                Args.FilterOperators = CustomerIDOperator;
-            }
+            Args.FilterOperators = CustomerIDOperator;
         }
     }
 
