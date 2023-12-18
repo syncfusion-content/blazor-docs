@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Form Items in Blazor DataForm Component | Syncfusion
-description: Checkout and learn about Form items in Blazor DataForm component.
+description: Checkout and learn how to configure Form Item in Blazor DataForm component.
 platform: Blazor
 control: DataForm
 documentation: ug
 ---
 
-# FormItem
+# Configuring Form Item in DataForm Component
 
 The [FormItem](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataForm.FormItem.html)  can be utilized to set up various configuration for the editor component, including the unique identifier (id), the type of editor component used, any additional CSS classes to be applied to the editor, and whether the field is to be active (enabled) or inactive (disabled) upon being rendered.The below example showcases the different property usages.
 
@@ -106,7 +106,7 @@ The [FormItem](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataForm.
 
 ![Blazor DataForm Form Item](images/blazor_dataform_formitem.png)
 
-# FormAutoGenerateItems
+## FormAutoGenerateItems
 
 Blazor DataForm component generates the editors automatically based on the primitive property types if we use [FormAutoGenerateItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataForm.FormAutoGenerateItems.html) inside it.The types with its corresponding default editor components listed below for reference.
 

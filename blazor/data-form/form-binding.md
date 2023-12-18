@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Form Binding in Blazor DataForm Component | Syncfusion
-description: Checkout and learn about form binding with Blazor DataForm component.
+description: Checkout and learn here about Model ,EditContext and Custom Validation attributes binding with Blazor DataForm component.
 platform: Blazor
 control: DataForm
 documentation: ug

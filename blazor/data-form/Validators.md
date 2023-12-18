@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Validators in Blazor DataForm Component | Syncfusion
-description: Checkout and learn about types of validators can be used in Blazor DataForm component.
+description: Checkout and learn here about different types of validators that can be used in Blazor DataForm component.
 platform: Blazor
 control: DataForm
 documentation: ug
@@ -266,4 +266,4 @@ public class PaymentDetailsValidator : AbstractValidator<PaymentDetails>
 
 * Custom Validation
 
-    * [Custom Validation attributes](https://blazor.syncfusion.com/documentation/data-form/form-binding#custom-validation)
+    * [Custom Validation attributes](./form-binding.md)
