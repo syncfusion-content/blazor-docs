@@ -222,3 +222,61 @@ The parameter available in the [`Flipping`](https://help.syncfusion.com/cr/blazo
 * FlipEventArgs.PreviousDirection - The previous flip direction, represented as ImageEditorDirection, applied within the image editor.
 
 * FlipEventArgs.Cancel - Specifies a boolean value to cancel the flip action.
+
+# Straightening in the Blazor Image Editor control
+
+The straightening feature in an Image Editor allows users to adjust an image by rotating it clockwise or counter clockwise. The rotating degree value should be within the range of -45 to +45 degrees for accurate straightening. Positive values indicate clockwise rotation, while negative values indicate counter clockwise rotation.
+
+## Apply straightening to the image 
+
+The Image Editor control includes a [`StraightenImageAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_StraightenImageAsync_System_Int32_) method, which allows you to adjust the degree of an image. This method takes one parameter that define how the straightening should be carried out:
+
+* degree: Specifies the amount of rotation for straightening the image. Positive values indicate clockwise rotation, while negative values indicate counterclockwise rotation.
+
+Here is an example of straightening the image using the [`StraightenImageAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_StraightenImageAsync_System_Int32_) method.
+
+```cshtml
+@using Syncfusion.Blazor.ImageEditor
+@using Syncfusion.Blazor.Buttons
+
+<div style="padding-bottom: 15px">
+    <SfButton OnClick="StraightenLeftAsync">Straighten Left</SfButton>
+    <SfButton OnClick="StraightenRightAsync">Straighten Right</SfButton>
+    <SfButton OnClick="ResetAsync">Reset</SfButton>
+</div>
+
+<SfImageEditor @ref="ImageEditor" Toolbar="customToolbarItem" Height="400">
+    <ImageEditorEvents Created="OpenAsync"></ImageEditorEvents>
+</SfImageEditor>
+
+@code {
+    SfImageEditor ImageEditor;
+    double straighten = 0;
+    private List<ImageEditorToolbarItemModel> customToolbarItem = new List<ImageEditorToolbarItemModel>() { };
+
+    private async void OpenAsync()
+    {
+        await ImageEditor.OpenAsync("nature.png");
+    }
+
+    private async void StraightenLeftAsync()
+    {
+        straighten -= 3;
+        await ImageEditor.straightenImageAsync(straighten);
+    }
+
+    private async void StraightenRightAsync()
+    {
+        straighten += 3;
+        await ImageEditor.straightenImageAsync(straighten);
+    }
+
+    private async void ResetAsync()
+    {
+        straighten = 0;
+        await ImageEditor.straightenImageAsync(straighten);
+    }
+}
+```
+
+![Blazor Image Editor with Zoom](./images/blazor-image-editor-zoom.png)

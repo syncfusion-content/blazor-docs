@@ -195,6 +195,77 @@ Here is an example of changing the text color using the [ShapeChanging](https://
 ```
 
 ![Blazor Image Editor with Custom text an image](./images/blazor-image-editor-custom-text.png)
+
+### Add Additional font family
+
+The [`fontFamily`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.ImageEditorFontFamily.html) property in the Image Editor control provides the flexibility to incorporate supplementary font families, expanding your options for text styling and ensuring a broader range of fonts can be utilized within your design or content. The font value will be determined by the 'id' property.
+
+By leveraging the [`fontFamily`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.ImageEditorFontFamily.html) property, you can elevate the scope of customization for text annotations, enriching the user experience within the Image Editor control. This enhancement offers a more personalized and dynamic interaction, empowering users to tailor their text styles for a truly engaging editing experience.
+
+Here is an example of adding additional font family using the [`fontFamily`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.ImageEditorFontFamily.html) property.
+
+```cshtml
+@using Syncfusion.Blazor.ImageEditor
+@using Syncfusion.Blazor.Buttons
+
+<div style="padding-bottom: 15px">
+    <SfButton OnClick="BrushScriptMTAsync">Brush Script MT</SfButton>
+    <SfButton OnClick="PapyrusAsync"Papyrus</SfButton>
+    <SfButton OnClick="TimesNewRomanAsync">Times New Roman</SfButton>
+    <SfButton OnClick="CourierNewTextAsync">Courier New</SfButton>
+</div>
+<SfImageEditor @ref="ImageEditor" Toolbar="customToolbarItem" Height="400">
+    <ImageEditorEvents Created="OpenAsync" fileOpened="FileOpenAsync"></ImageEditorEvents>
+</SfImageEditor> 
+
+@code {
+    SfImageEditor ImageEditor; 
+    private List<ImageEditorToolbarItemModel> customToolbarItem = new List<ImageEditorToolbarItemModel>() { }; 
+    private List<ImageEditorDropDownItemModel> CustomItems = new List<ImageEditorDropDownItemModel>
+    {
+        new ImageEditorDropDownItemModel { id = "arial" Text = "Arial"},
+        new ImageEditorDropDownItemModel { id = "brush script mt" Text = "Brush Script MT"},
+        new ImageEditorDropDownItemModel { id = "papyrus" Text = "Papyrus"},
+        new ImageEditorDropDownItemModel { id = "times new roman" Text = "Times New Roman"},
+        new ImageEditorDropDownItemModel { id = "courier new" Text = "Courier New"}
+    };
+    private async void OpenAsync() 
+    { 
+        await ImageEditor.OpenAsync("nature.png"); 
+    }
+
+    private async void FileOpenAsync() 
+    { 
+        ImageDimension Dimension = await ImageEditor.GetImageDimensionAsync();
+        await ImageEditor.DrawTextAsync(Dimension.X, Dimension.Y, "Enter\nText", 'Arial');
+    }
+
+    private async void BrushScriptMTAsync()
+    {
+        ImageDimension Dimension = await ImageEditor.GetImageDimensionAsync();
+        await ImageEditor.DrawTextAsync(Dimension.X, Dimension.Y, "Enter\nText", 'Brush Script MT');
+    }
+
+    private async void PapyrusAsync()
+    {
+        ImageDimension Dimension = await ImageEditor.GetImageDimensionAsync();
+        await ImageEditor.DrawTextAsync(Dimension.X, Dimension.Y, "Enter\nText", 'Papyrus');
+    }
+
+    private async void TimesNewRomanAsync()
+    {
+        ImageDimension Dimension = await ImageEditor.GetImageDimensionAsync();
+        await ImageEditor.DrawTextAsync(Dimension.X, Dimension.Y, "Enter\nText", 'Times New Roman');
+    }
+
+    private async void CourierNewTextAsync()
+    {
+        ImageDimension Dimension = await ImageEditor.GetImageDimensionAsync();
+        await ImageEditor.DrawTextAsync(Dimension.X, Dimension.Y, "Enter\nText", 'Courier New');
+    }
+}
+```
+![Blazor Image Editor with Custom text an image](./images/blazor-image-editor-custom-text.png)
         
 ## Freehand drawing
 
