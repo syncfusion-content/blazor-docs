@@ -144,11 +144,7 @@ The following features are only supported in vertical row rendering:
 * Virtual scroll
 * Toolbar - Options like **Add**, **Filter**, **Sort**, **Edit**, **Delete**, **Search**, and **Toolbar template** are available when their respective features are enabled. The toolbar dynamically includes a three-dotted icon, containing additional features like **ColumnChooser**, **Print**, **PdfExport**, **ExcelExport**, or **CsvExport**, once these features are enabled. Please refer to the following snapshot.
 
-![VerticalmodeColumnMenu](./images/blazor-datagrid-adaptive-vertical-rendering-mode-column-menu.gif)
-
-A snapshot of the adaptive grid displaying enabled paging along with a pager dropdown.
-
-![AdaptivePagerDropdown](./images/blazor-datagrid-adaptive-vertical-rendering-mode-pager-dropdown.gif)
+![AdaptivePagerDropdown ColumnMenu](./images/blazor-datagrid-adaptive-vertical-rendering-pager-dropdown-column-menu.gif)
 
 ## Rendering an adaptive layout for smaller screens alone
 
