@@ -260,7 +260,7 @@ You can customize the background color and text color of list items within the D
 
 ## Customizing the appearance of pop-up element
 
-You can customize the appearance of the popup element within the Dropdown Tree component by targeting the CSS class `.e-list-item.e-item-focus`, which indicates the list item element when it is focused, and and allows you to apply any desired styles to the component.
+You can customize the appearance of the popup element within the Dropdown Tree component by targeting the CSS class `.e-ddt.e-popup`.
 
 ```cshtml
  .e-ddt.e-popup {
