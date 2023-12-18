@@ -97,7 +97,7 @@ Click anywhere in the viewer to place the signature. The toolbar will then switc
 
 ## To add ink annotation
 
-Click the **Ink Annotation** icon and draw anywhere in the viewer. 
+Click the **Ink Annotation** icon and draw anywhere in the viewer.
 
 ![Click ink in Blazor SfPdfViewer](../../pdfviewer-2/images/click-ink-annotation.png)
 
@@ -107,23 +107,15 @@ Once you’ve finished drawing, click the ink annotation displayed in the toolba
 
 ## Change annotation properties (Before adding)
 
-You can modify annotations properties before adding them. Click the rectangle shape annotation, which will display the toolbar with corresponding properties. 
+You can modify annotations properties before adding them. Click the rectangle shape annotation, which will display the toolbar with corresponding properties. You can be able to adjust these properties and then add the annotation by clicking and dragging it. The annotation will be added with the modified property.
 
-![Change Property in Blazor SfPdfViewer](../../pdfviewer-2/images/change-property-before-adding.png)
-
-You can be able to adjust these properties and then add the annotation by clicking and dragging it. The annotation will be added with the modified property.
-
-![complete Adding Annotation in Blazor SfPdfViewer](../../pdfviewer-2/images/complete-annotation-before-adding.png)
+![Property Change Before Adding in Blazor SfPdfViewer](../../pdfviewer-2/images/property-change-before-adding.gif)
 
 ## Change annotation properties (After adding)
 
-After adding the annotation, you can modify its properties. Select the added annotation, and it will display the corresponding properties. 
+After adding the annotation, you can modify its properties. Select the added annotation, and it will display the corresponding properties. Change the necessary property, and it will reflect in the added annotation.
 
-![Change Property in Blazor SfPdfViewer](../../pdfviewer-2/images/change-property-after-adding.png)
-
-Change the necessary property, and it will reflect in the added annotation.
-
-![complete Adding Annotation in Blazor SfPdfViewer](../../pdfviewer-2/images/complete-annotation-after-adding.png)
+![Property Change After Adding in Blazor SfPdfViewer](../../pdfviewer-2/images/property-change-after-adding.gif)
 
 ## Delete Annotation
 
