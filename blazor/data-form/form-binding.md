@@ -109,6 +109,7 @@ The following example illustrates how the `Model` or `EditContext` are bound to 
 }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Blazor DataForm Model Binding](images/blazor_dataform_formbinding.png)
 
