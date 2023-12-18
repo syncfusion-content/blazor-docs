@@ -22,20 +22,12 @@ You can enable or disable animation for all Syncfusion Blazor Component's global
 In the below code example animation is disabled.
 
 {% tabs %}
-{% highlight c# tabtitle=".NET 6 & .NET 7 (~/Program.cs)" hl_lines="10" %}
+{% highlight c# tabtitle="~/Program.cs" hl_lines="3" %}
 
-using Microsoft.AspNetCore.Components;
-using Microsoft.AspNetCore.Components.Web;
 using Syncfusion.Blazor;
-
-var builder = WebApplication.CreateBuilder(args);
-
-// Add services to the container.
-builder.Services.AddRazorPages();
+....
 builder.Services.AddSyncfusionBlazor(options => { options.Animation = GlobalAnimationMode.Disable; });
 
-var app = builder.Build();
-....
 
 {% endhighlight %}
 {% endtabs %}

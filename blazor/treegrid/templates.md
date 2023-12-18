@@ -14,7 +14,7 @@ Blazor has templated components which accepts one or more UI segments as input t
 The available template options in tree grid are as follows,
 
 * [Column template](./columns/column-template) - Used to customize cell content.
-* [Header template](./columns/header-template) - Used to customize header cell content.
+* [Header template](./columns/columns#header-template) - Used to customize header cell content.
 * [Row template](./rows/row-template) - Used to customize row content.
 * [Detail template](./rows/detail-template) - Used to customize the detail cell content.
 
