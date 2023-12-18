@@ -11,13 +11,13 @@ documentation: ug
 
 # Synchronized Chart in Blazor Charts Component
 
-Synchronized chart has the ability to access and interact with two or more charts concurrently. This means that actions performed on one chart, such as placing a cursor, clicking on a specific point, or activating a tooltip are reflect simultaneously on corresponding positions or data points across other synchronized charts based on its X-Y coordinates. 
+A synchronized chart has the ability to access and interact with two or more charts at the same time. This means that actions performed on one chart, such as positioning a cursor, clicking on a specific point, or activating a tooltip, are reflected simultaneously on corresponding positions or data points across other synchronized charts based on their X-Y coordinates. 
 
-## Tooltip Synchronization
+## Tooltip synchronization
 
 The tooltip can be synchronized across multiple charts using the `ShowTooltip` and `HideTooltip` methods. When we hover over a data point in one chart, we call the `ShowTooltip` method for the other charts to display related information in other connected charts simultaneously.
 
-In the ShowTooltip method, specify the following parameters programmatically to enable tooltip for a particular chart:
+In the `ShowTooltip` method, specify the following parameters programmatically to enable tooltip for a particular chart:
 
 * x - x-value of point or x-coordinate value.
 * y - y-value of point or y-coordinate value.
@@ -121,44 +121,44 @@ In the ShowTooltip method, specify the following parameters programmatically to 
     {
         Chart1.ShowTooltip(args.MouseX, args.MouseY, false);       
     }
+
     public void OnMouseLeaveChart1()
     {
         Chart2.HideTooltip();
     }
+
     public void OnMouseLeaveChart2()
     {
-        Chart1.HideTooltip();     
-
+        Chart1.HideTooltip();
     }
 
     public void OnMouseLeaveChart1(ChartMouseEventArgs args)
     {
-            isTapHold = false;
-            isTouch = false;
-            isMouseMoveUpDetected = true;
-            Chart2.HideTooltip();            
+        isTapHold = false;
+        isTouch = false;
+        isMouseMoveUpDetected = true;
+        Chart2.HideTooltip();            
 
     }
+
     public void OnMouseLeaveChart2(ChartMouseEventArgs args)
     {
-
-            isTapHold = false;
-            isTouch = false;
-            isMouseMoveUpDetected = true;
-            Chart1.HideTooltip();            
-
+        isTapHold = false;
+        isTouch = false;
+        isMouseMoveUpDetected = true;
+        Chart1.HideTooltip();
     }
 }
 
 ```
 
-![Tooltip Synchronization in Blazor Chart](../images/blazor-chart-tooltip-synchronization.gif)
+![Tooltip synchronization in Blazor Chart](../images/blazor-chart-tooltip-synchronization.gif)
 
-## Crosshair Synchronization
+## Crosshair synchronization
 
 The crosshair can be synchronized across multiple charts using the `ShowCrosshair` and `HideCrosshair` methods. When we hover over one chart, we call the `ShowCrosshair` method for the other charts to align with data points in other connected charts, simplifying data comparison and analysis.
 
-In the ShowCrosshair method, specify the following parameters programmatically to enable crosshair for a particular chart:
+In the `ShowCrosshair` method, specify the following parameters programmatically to enable crosshair for a particular chart:
 
 * x - x-coordinate value.
 * y - y-coordinate value.
@@ -251,6 +251,7 @@ In the ShowCrosshair method, specify the following parameters programmatically t
     {
         isTapHold = isMouseMoveUpDetected ? false : true;
     }
+
     public void ChartMouseDown(ChartMouseEventArgs changeEventArgs)
     {
         isMouseMoveUpDetected = false;
@@ -266,10 +267,12 @@ In the ShowCrosshair method, specify the following parameters programmatically t
     {       
         Chart1.ShowCrosshair(args.MouseX, args.MouseY);
     }
+
     public void OnMouseLeaveChart1()
     {     
         Chart2.HideCrosshair();
     }
+
     public void OnMouseLeaveChart2()
     {        
         Chart1.HideCrosshair();
@@ -282,6 +285,7 @@ In the ShowCrosshair method, specify the following parameters programmatically t
         isMouseMoveUpDetected = true;       
         Chart2.HideCrosshair();
     }
+
     public void OnMouseLeaveChart2(ChartMouseEventArgs args)
     {
         isTapHold = false;
@@ -293,9 +297,9 @@ In the ShowCrosshair method, specify the following parameters programmatically t
 
 ```
 
-![Crosshair Synchronization in Blazor Chart](../images/blazor-chart-crosshair-synchronization.gif)
+![Crosshair synchronization in Blazor Chart](../images/blazor-chart-crosshair-synchronization.gif)
 
-## Zooming Synchronization
+## Zooming synchronization
 
 You can maintain constant zoom levels across multiple charts using the [OnZoomEnd](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnZoomEnd) event. In the [OnZoomEnd](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnZoomEnd) event, obtain the `ZoomFactor` and `ZoomPosition` values of the particular chart, and then apply those values to the other charts.
 
@@ -400,6 +404,6 @@ You can maintain constant zoom levels across multiple charts using the [OnZoomEn
 
 Check out the JSON file used for the above samples from here [synchronized-data.json](https://www.syncfusion.com/downloads/support/directtrac/general/ze/synchronized-data641318336).
 
-![Zooming Synchronization in Blazor Chart](../images/blazor-chart-zooming-synchronization.gif)
+![Zooming synchronization in Blazor Chart](../images/blazor-chart-zooming-synchronization.gif)
 
 N> Refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
