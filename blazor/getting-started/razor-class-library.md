@@ -14,7 +14,7 @@ This section provides information about creating Razor Class Library with the Sy
 ## Prerequisites
 
 * [Visual Studio 2022](https://visualstudio.microsoft.com/downloads/)
-* [.NET 6.0 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/6.0)/[.NET 7.0 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/7.0)/[.NET 8.0 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0)
+* [.NET 8.0 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0)/[.NET 7.0 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/7.0)/[.NET 6.0 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/6.0)
 
 ## Create a Razor Class Library in Visual Studio 2022
 
@@ -115,11 +115,11 @@ This Blazor component is defined in the <strong>RazorClassLibrary</strong> packa
 
 3. For Blazor Web App, include the stylesheet reference in the `<head>` section and the script reference at the end of the `<body>` in the **~/Components/App.razor** file:
 
-    * For **.NET 6** project, include the stylesheet reference in the `<head>` section and the script reference at the end of the `<body>` in the **~/Pages/_Layout.cshtml** file.
-
-    * For **.NET 7** project, include the stylesheet reference in the `<head>` section and the script reference at the end of the `<body>` in the **~/Pages/_Host.cshtml** file.
-
     * For Blazor WebAssembly app, include the stylesheet reference in the `<head>` section and the script reference at the end of the `<body>` in the **~/wwwroot/index.html** file.
+
+    * For **.NET 7** project in Blazor Server App, include the stylesheet reference in the `<head>` section and the script reference at the end of the `<body>` in the **~/Pages/_Host.cshtml** file.
+
+    * For **.NET 6** project in Blazor Server App, include the stylesheet reference in the `<head>` section and the script reference at the end of the `<body>` in the **~/Pages/_Layout.cshtml** file.
 
     ```html
     <head>
@@ -138,7 +138,8 @@ This Blazor component is defined in the <strong>RazorClassLibrary</strong> packa
 4. Now, add the created custom component in the **~/Pages/.razor** file.
 
     ```cshtml
-    <Component></Component>
+    <Component1></Component1>
+
     ```
 
 5. Run the application, The Syncfusion Blazor Calendar component will be rendered in the default web browser.
