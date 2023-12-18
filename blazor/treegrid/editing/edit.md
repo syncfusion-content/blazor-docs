@@ -461,48 +461,6 @@ The Editing functionalities can be performed based upon the primary key value of
 
 ## Event trace while editing
 
-While the editing operation is getting executed, the following events are notified:
-
-* [RowCreating](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_RowCreating)
-* [RowCreated](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_RowCreated)
-* [RowDeleting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_RowDeleting)
-* [RowDeleted](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_RowDeleted)
-* [RowEditing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_RowEditing)
-* [RowEdited](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_RowEdited)
-* [Cancelling](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_Cancelling)
-* [Cancelled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_Cancelled)
-* [BeforeRowEditing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_BeforeRowEditing)
-
-In both events, the editing operation type is returned in the **RequestType** parameter of the event arguments. In addition, the event arguments return the edited row data.
-
-The **RequestType** values for the editing operations are listed in the below table.
-
-| RequestType | BeforeRowEditing |
-|----------|---------------|
-| BeginEdit | Before editing operation begins|
-
-| RequestType | RowCreating | RowCreated |
-|----------|---------------|---------------|
-| Add | Before add operation begins | After add operation is completed |
-
-| RequestType | RowEditing | RowEdited |
-|----------|---------------|---------------|
-| Edit | Before edit operation begins | After edit operation is completed |
-
-| RequestType | RowUpdating | RowUpdated |
-|----------|---------------|---------------|
-| Save | Before save operation begins | After save operation is completed |
-
-| RequestType | RowDeleting | RowDeleted |
-|----------|---------------|---------------|
-| Delete | Before delete operation begins | After delete operation is completed |
-
-| RequestType | Cancelling | Cancelled |
-|----------|---------------|---------------|
-| Cancel | Before cancel operation begins | After cancel operation is completed |
-
-The following sample code demonstrates the different **RequestType** parameters for events while performing editing operations.
-
 {% tabs %}
 
 {% highlight razor %}
