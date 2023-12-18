@@ -186,7 +186,7 @@ Supported line styles are,
 
 ### Add page number in header/footer
 
-You can add page number either in header or footer of exported PDF document like in the below code example.
+You can add page number either in header or footer of the exported PDF document like in the below code example.
 
 Supported page number types are,
 
