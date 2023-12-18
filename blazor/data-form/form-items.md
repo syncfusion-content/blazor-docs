@@ -1,4 +1,4 @@
- ---
+---
 layout: post
 title: Form Items in Blazor DataForm Component | Syncfusion
 description: Checkout and learn about Form items in Blazor DataForm component.
