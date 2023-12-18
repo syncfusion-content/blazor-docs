@@ -167,3 +167,45 @@ The Linear Gauge component is rendered with margin by default. To remove the mar
 ![Blazor Linear Gauge with Margin](images/blazor-linear-gauge-with-margin.png)
 
 N>To use this feature, set the [AllowMargin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.SfLinearGauge.html#Syncfusion_Blazor_LinearGauge_SfLinearGauge_AllowMargin) property to **false**, the [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.SfLinearGauge.html#Syncfusion_Blazor_LinearGauge_SfLinearGauge_Width) property to **100%** and the properties of [LinearGaugeMargin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugeMargin.html) to **0**.
+
+
+## Animating multiple elements simultaneously in Linear Gauge
+
+The Linear Gauge elements can be animated individually by using specific properties. Instead of that, you can animate all the elements such as axis lines, axis labels,  tick lines, pointers, ranges, and annotations simultaneously by using the [AnimationDuration]() property, which controls the smoother visual effect and makes it easier to animate the elements.
+
+
+The below example shows an animated sequence that initiates with the axis line, followed by animations for axis labels, ranges, pointers, and annotations.
+
+
+```cshtml
+
+@using Syncfusion.Blazor.LinearGauge;
+
+<SfLinearGauge Orientation="Orientation.Horizontal" AnimationDuration="3000" Background="transparent" Width="450px">
+        <LinearGaugeAxes>
+            <LinearGaugeAxis>
+                <LinearGaugeAxisLabelStyle Offset="48">
+                    <LinearGaugeAxisLabelFont FontFamily="inherit"></LinearGaugeAxisLabelFont>
+                </LinearGaugeAxisLabelStyle>
+                <LinearGaugeMajorTicks Color="#9E9E9E" Interval="10" Height="20" />
+                <LinearGaugeMinorTicks Color="#9E9E9E" Interval="2" Height="10" />
+                <LinearGaugeAnnotations>
+                    <LinearGaugeAnnotation AxisIndex="0" AxisValue="10" X="10" Y="-70" ZIndex="1">
+                        <ContentTemplate>
+                            <div style="width: 70px;margin-left: -53%;margin-top: 5%;font-size: 16px;">10 MPH</div>
+                        </ContentTemplate>
+                    </LinearGaugeAnnotation>
+                </LinearGaugeAnnotations>
+                <LinearGaugePointers>
+                    <LinearGaugePointer PointerValue="10" Height="15" Width="15" Placement="Placement.Near" Offset="-40" MarkerType="MarkerType.Triangle" />
+                </LinearGaugePointers>
+            <LinearGaugeRanges>
+                <LinearGaugeRange Start="0" End="50" StartWidth="10" EndWidth="10" Color="#F45656" Offset="35" />
+            </LinearGaugeRanges>
+            </LinearGaugeAxis>
+        </LinearGaugeAxes>
+    </SfLinearGauge>
+
+```
+
+![Blazor Linear Gauge animation for multiple elements ](./images/blazor-lineargauge-multiple-elements-animation.gif)

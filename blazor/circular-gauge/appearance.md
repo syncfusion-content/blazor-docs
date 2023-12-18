@@ -112,3 +112,65 @@ You can render semi or quarter Circular Gauge by modifying the start and end ang
 ```
 
 ![Blazor Circular Gauge with Custom Radius and Angle](./images/blazor-circulargauge-custom-radius-angle.png)
+
+## Animating multiple elements simultaneously in Circular Gauge
+
+The Circular Gauge elements can be animated individually by using specific properties. Instead of that, you can animate all the elements such as axis lines, axis labels,  tick lines, pointers, ranges, and annotations simultaneously by using the [AnimationDuration]() property, which controls the smoother visual effect and makes it easier to animate the elements.
+
+
+The below example shows an animated sequence that initiates with the axis line, followed by animations for axis labels, ranges, pointers, and annotations.
+
+
+```cshtml
+
+@using Syncfusion.Blazor.CircularGauge;
+
+<SfCircularGauge AnimationDuration="2000" Background="transparent">
+        <CircularGaugeAxes>
+            <CircularGaugeAxis Radius="80%" StartAngle="230" EndAngle="130">
+                <CircularGaugeAxisLabelStyle Offset="-1">
+                    <CircularGaugeAxisLabelFont FontFamily="inherit"></CircularGaugeAxisLabelFont>
+                </CircularGaugeAxisLabelStyle>
+                <CircularGaugeAxisLineStyle Width="8" Color="#E0E0E0" />
+                <CircularGaugeAxisMajorTicks Offset="5" />
+                <CircularGaugeAxisMinorTicks Offset="5" />
+                <CircularGaugePointers>
+                    <CircularGaugePointer Value=60 Radius="60%" PointerWidth="7" Color="#c06c84">
+                        <CircularGaugePointerAnimation Duration="500" />
+                        <CircularGaugeCap Radius="8" Color="#c06c84">
+                            <CircularGaugeCapBorder Width="0" />
+                        </CircularGaugeCap>
+                        <CircularGaugeNeedleTail Length="0%" />
+                    </CircularGaugePointer>
+                </CircularGaugePointers>
+            <CircularGaugeRanges>
+                <CircularGaugeRange Color="#E63B86" Start="0" End="30" StartWidth="22" EndWidth="22" Radius="60%">
+                    <LinearGradient StartValue="0%" EndValue="100%">
+                        <ColorStops>
+                            <ColorStop Opacity="1" Offset="0%" Color="#9e40dc" />
+                            <ColorStop Opacity="1" Offset="70%" Color="#d93c95" />
+                        </ColorStops>
+                    </LinearGradient>
+                </CircularGaugeRange>
+                <CircularGaugeRange Color="#E0E0E0" Start="30" End="60" StartWidth="22" EndWidth="22" Radius="60%" />
+            </CircularGaugeRanges>
+            <CircularGaugeAnnotations>
+                <CircularGaugeAnnotation Angle="165" Radius="35%" ZIndex="1">
+                    <ContentTemplate>
+                        <div style="font-size:18px;margin-left: -20px;margin-top: -12px; color:#9DD55A">@PointerValue</div>
+                    </ContentTemplate>
+                </CircularGaugeAnnotation>
+            </CircularGaugeAnnotations>
+            </CircularGaugeAxis>
+        </CircularGaugeAxes>
+    </SfCircularGauge>
+
+@code {
+    public double PointerValue = 60;
+}
+
+```
+
+![Blazor Circular Gauge animation for multiple elements ](./images/blazor-circulargauge-multiple-elements-animation.gif)
+
+
