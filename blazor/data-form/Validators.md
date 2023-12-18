@@ -266,3 +266,6 @@ public class PaymentDetailsValidator : AbstractValidator<PaymentDetails>
 
 ## See also
 
+* Custom Validation
+
+    * [Custom Validation attributes](https://blazor.syncfusion.com/documentation/data-form/form-binding#custom-validation)

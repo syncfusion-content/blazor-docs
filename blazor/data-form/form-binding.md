@@ -187,3 +187,108 @@ For guidance on how to use some of these attributes in DataForm component, see t
 {% endtabs %}
 
 ![Blazor DataForm Model Binding](images/blazor_dataform_attributes.png)
+
+### Custom Validation
+
+Custom validation attributes can also be applied to model properties to execute necessary checks. In the following example, we've implemented validations for the `Email` and `Password` fields, specifically to particular scenario. 
+
+{% tabs %}
+{% highlight razor tabtitle="Custom Validation Attributes" hl_lines="3 10" %}
+
+@using System;
+@using System.ComponentModel.DataAnnotations;
+@using Syncfusion.Blazor.DataForm;
+@using System.Text.RegularExpressions;
+
+<SfDataForm ID="MyForm"
+            Model="@EmployeeModel"
+            Width="50%">
+    <FormValidator>
+        <DataAnnotationsValidator></DataAnnotationsValidator>
+    </FormValidator>
+    <FormItems>
+        <FormGroup LabelText="Sign Up Details">
+            <FormItem Field="@nameof(EmployeeModel.Name)" LabelText="FirstName"></FormItem>
+            <FormItem Field="@nameof(EmployeeModel.Email)" LabelText="Email Id"></FormItem>
+            <FormItem Field="@nameof(EmployeeModel.Password)" LabelText="Password"> </FormItem>
+            <FormItem Field="@nameof(EmployeeModel.ConfirmPassword)" LabelText="Confirm Password"> </FormItem>
+        </FormGroup>
+    </FormItems>
+</SfDataForm>
+
+
+@code {
+    private EmployeeDetails EmployeeModel = new EmployeeDetails();
+
+    public class EmployeeDetails
+    {
+        [Required]
+        public string? Name { get; set; }
+
+        [Required]
+        [PasswordValidation(ErrorMessage = "This field should not be Empty")]
+        public string? Password { get; set; }
+
+        [Required]
+        [Compare("Password", ErrorMessage = "Confirm Password must match Password")]
+        public string? ConfirmPassword { get; set; }
+
+        [Required]
+        [EmailValidation(ErrorMessage = "This field should not be Empty")]
+        public string? Email { get; set; }
+    }
+
+    public class PasswordValidationAttribute : ValidationAttribute
+    {
+        protected override ValidationResult IsValid(object value, ValidationContext validationContext)
+        {
+            string fieldValue = value as string;
+
+            if (fieldValue.Length < 10)
+            {
+                return new ValidationResult("Password should have at least 10 characters", new[] { validationContext.MemberName });
+            }
+
+            if (!Regex.IsMatch(fieldValue, @"[A-Z]"))
+            {
+                return new ValidationResult("Password should contain at least one uppercase letter", new[] { validationContext.MemberName });
+            }
+
+            if (!Regex.IsMatch(fieldValue, @"[a-z]"))
+            {
+                return new ValidationResult("Password should contain at least one lowercase letter", new[] { validationContext.MemberName });
+            }
+
+            if (!Regex.IsMatch(fieldValue, @"[@#$%^&+=]"))
+            {
+                return new ValidationResult("Password should contain at least one special character", new[] { validationContext.MemberName });
+            }
+
+            return ValidationResult.Success;
+        }
+    }
+
+    public class EmailValidationAttribute : ValidationAttribute
+    {
+        protected override ValidationResult IsValid(object value, ValidationContext validationContext)
+        {
+            string email = value as string;
+
+            if (!IsValidEmail(email))
+            {
+                return new ValidationResult("Email address is not valid..", new[] { validationContext.MemberName });
+            }
+
+            return ValidationResult.Success;
+        }
+
+        private bool IsValidEmail(string email)
+        {
+            return Regex.IsMatch(email, @"^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$");
+        }
+    }
+}
+{% endhighlight %}
+{% endtabs %}
+
+![Blazor DataForm Custom Validation](images/blazor_dataform_customvalidation.png)
