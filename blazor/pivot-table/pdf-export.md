@@ -225,7 +225,7 @@ Supported page number types are,
 
 ### Add an image in header/footer
 
-You can add image (Base64 string) either in header or footer of exported PDF document like in the below code example.
+You can add image (Base64 string) either in header or footer of the exported PDF document like in the below code example.
 
 ```cshtml
 @code {
