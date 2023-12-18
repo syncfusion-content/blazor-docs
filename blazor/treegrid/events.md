@@ -3559,7 +3559,7 @@ N> This event is raised specifically for the `Menu` and `Excel` [FilterType](htt
 
 ## FilterDialogOpened
 
-[FilterDialogOpened](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents%601~FilterDialogOpened) event is raised after the filter dialog is opened in the grid.
+[FilterDialogOpened](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents%601~FilterDialogOpened) event is raised after the filter dialog is opened in the Tree Grid.
 
 ```cshtml
 @using Syncfusion.Blazor.TreeGrid;
