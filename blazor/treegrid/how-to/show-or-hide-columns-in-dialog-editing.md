@@ -23,7 +23,7 @@ The hidden columns can be shown or visible columns' editor can be hidden in the 
 @using Syncfusion.Blazor.Calendars
 
 <SfTreeGrid DataSource="@TreeGridData" AllowPaging="true" IdMapping="TaskId" ParentIdMapping="ParentId" TreeColumnIndex="1" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Update", "Cancel" })">
-    <TreeGridEvents TValue="TreeData" OnActionComplete="OnComplete"></TreeGridEvents>
+    <TreeGridEvents TValue="TreeData" RowCreated="RowCreatedHandler"></TreeGridEvents>
     <TreeGridEditSettings AllowEditing="true" AllowAdding="true" AllowDeleting="true" Mode="Syncfusion.Blazor.TreeGrid.EditMode.Dialog" NewRowPosition="RowPosition.Child">
         <Template>
             @{
@@ -71,16 +71,9 @@ The hidden columns can be shown or visible columns' editor can be hidden in the 
         this.TreeGridData = TreeData.GetSelfDataSource().ToList();
     }
 
-    private void OnComplete(ActionEventArgs<TreeData> args)
+    public void RowCreatedHandler(RowCreatedEventArgs<TreeData.BusinessObject> args)
     {
-        if (args.RequestType.ToString() == "Add")
-        {
-            Check = true;
-        }
-        else
-        {
-            Check = false;
-        }
+        Check = true;
     }
 
 }
