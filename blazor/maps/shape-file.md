@@ -71,7 +71,7 @@ Shapefile can be used to render vector shape maps in the Maps component by speci
 }
 ```
 
-![Blazor ShapeFile](./images/Shapefile/blazor-shapefile.png)
+![Shapefile rendered in Blazor Maps](./images/Shapefile/blazor-shapefile.png)
 
 ## Multilayer
 
@@ -99,40 +99,70 @@ The following example demonstrates how to display the shapefile as a sublayer.
 </SfMaps>
 
 ```
-![Blazor Multilayer](./images/Shapefile/blazor-multilayer.png)
+![Multilayer in Blazor Maps](./images/Shapefile/blazor-multilayer.png)
 
 ## Customizations
 
-You learned about some customizations in GeoJSON maps in the previous sections. However, above customizations are also relevant to shapefile maps. Please see [this section](shape-file) for additional details on the shapefile.
+The characteristics of the shapes, such as fill color, border, projection type, and so on, in the shapefile map can be changed. You can know more about customizing shapes in Maps component from [this link](https://blazor.syncfusion.com/documentation/maps/customization).
+
+> The JSON file will be used to describe each functionality in the URL above. If you want those functions, replace the JSON file path with the shapefile's file path.
 
 ## Color mapping
 
-You learned about color mapping in GeoJSON maps in the previous sections. However, color mapping and all of its supported functionalities are also relevant to shapefile maps. Please see [this section](shape-file) for additional details on the shapefile.
+The color mapping functionality is used for changing the shape colors based on data bound with the shapes. You can know more about the color mapping from [this link](https://blazor.syncfusion.com/documentation/maps/color-mapping).
+
+> The JSON file will be used to describe each functionality in the URL above. If you want those functions, replace the JSON file path with the shapefile's file path.
 
 ## Data labels
 
-You learned about data labels and their functions with GeoJSON maps in the previous sections. However, data labels and all of its supported functionalities are also relevant to shapefile maps. Please see [this section](shape-file) for additional details on the shapefile.
+Data labels provide information about the shapes rendered with shapefile. You can know more about the data labels from [this link](https://blazor.syncfusion.com/documentation/maps/data-labels).
+
+> The JSON file will be used to describe each functionality in the URL above. If you want those functions, replace the JSON file path with the shapefile's file path.
 
 ## Polygons
 
-To add the polygon shape over the shapefile in the Maps, following a similar approach as with GEOJSON format data. Instead of binding the GEOJSON format data, you can bind the shapefile format. For more information about the Shapefile, please refer to the link [How to add shapefile format data in the Maps](shape-file).
+Polygon shapes can be rendered over the shapefile maps. You can know more about the polygon shapes from [this link](https://blazor.syncfusion.com/documentation/maps/polygon)
+
+> The JSON file will be used to describe each functionality in the URL above. If you want those functions, replace the JSON file path with the shapefile's file path.
 
 ## Markers
 
-To add the markers over the shapefile in the Maps, following a similar approach as with GEOJSON format data. Instead of binding the GEOJSON format data, you can bind the shapefile format. For more information about the Shapefile, please refer to the link [How to add shapefile format data in the Maps](shape-file).
+Markers are used to indicate locations with desired symbols on the map. You can know more about the markers from [this link](https://blazor.syncfusion.com/documentation/maps/markers).
+
+> The JSON file will be used to describe each functionality in the URL above. If you want those functions, replace the JSON file path with the shapefile's file path.
 
 ## Bubbles
 
-You learned about bubbles and their functions with GeoJSON maps in the previous sections. However, bubbles and all of its supported functionalities are also relevant to shapefile maps. Please see [this section](shape-file) for additional details on the shapefile.
+Bubbles are used to represent underlying data values that are bound to the shapes in the map. You can know more about the bubbles from [this link](https://blazor.syncfusion.com/documentation/maps/bubble).
 
-## Legends
+> The JSON file will be used to describe each functionality in the URL above. If you want those functions, replace the JSON file path with the shapefile's file path.
 
-To add the legends for the shapes in the Maps shapefile, following a similar approach as with GEOJSON format data. Instead of binding the GEOJSON format data, you can bind the shapefile format. For more information about the Shapefile, please refer to the link [How to add shapefile format data in the Maps](shape-file).
+## Legend
+
+A legend is a graphical representation of the data that is associated with the map. To know more about the legends, you can follow [this link](https://blazor.syncfusion.com/documentation/maps/legend).
+
+> The JSON file will be used to describe each functionality in the URL above. If you want those functions, replace the JSON file path with the shapefile's file path.
 
 ## Navigation lines
 
-To add the navigation line over the shapefile in the Maps, following a similar approach as with GEOJSON format data. Instead of binding the GEOJSON format data, you can bind the shapefile format. For more information about the Shapefile, please refer to the link [How to add shapefile format data in the Maps](shape-file).
+In a shapefile map, navigation lines are used to indicate the path between two points. To know more about the navigation lines, you can follow [this link](https://blazor.syncfusion.com/documentation/maps/navigation-line).
+
+> The JSON file will be used to describe each functionality in the URL above. If you want those functions, replace the JSON file path with the shapefile's file path.
 
 ## Annotations
 
-You learned about annotations and their functions with GeoJSON maps in the previous sections. However, annotations and all of its supported functionalities are also relevant to shapefile maps. Please see [this section](shape-file) for additional details on the shapefile.
+Annotations are used to highlight a particular area of interest on a shapefile map. To know more about the annotations, you can follow [this link](https://blazor.syncfusion.com/documentation/maps/annotations).
+
+> The JSON file will be used to describe each functionality in the URL above. If you want those functions, replace the JSON file path with the shapefile's file path.
+
+## User interactions
+
+The shapefile map supports user interactions such as zooming, panning, selecting, highlight, and tooltip. To know more about the user interactions in the Maps, you can follow [this link](https://blazor.syncfusion.com/documentation/maps/user-interactions).
+
+> The JSON file will be used to describe each functionality in the URL above. If you want those functions, replace the JSON file path with the shapefile's file path.
+
+## Print and export
+
+The map displayed via shapefile can be exported or printed. To know more about the print and export functionalities in the Maps, you can see [this link](https://blazor.syncfusion.com/documentation/maps/print-and-export).
+
+> The JSON file will be used to describe each functionality in the URL above. If you want those functions, replace the JSON file path with the shapefile's file path.
