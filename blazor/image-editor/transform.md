@@ -238,43 +238,38 @@ Here is an example of straightening the image using the [`StraightenImageAsync`]
 ```cshtml
 @using Syncfusion.Blazor.ImageEditor
 @using Syncfusion.Blazor.Buttons
-
+ 
 <div style="padding-bottom: 15px">
-    <SfButton OnClick="StraightenLeftAsync">Straighten Left</SfButton>
-    <SfButton OnClick="StraightenRightAsync">Straighten Right</SfButton>
-    <SfButton OnClick="ResetAsync">Reset</SfButton>
+<SfButton OnClick="StraightenLeftAsync">Straighten Left</SfButton>
+<SfButton OnClick="StraightenRightAsync">Straighten Right</SfButton>
+<SfButton OnClick="ResetAsync">Reset</SfButton>
 </div>
-
+ 
 <SfImageEditor @ref="ImageEditor" Toolbar="customToolbarItem" Height="400">
-    <ImageEditorEvents Created="OpenAsync"></ImageEditorEvents>
+<ImageEditorEvents Created="OpenAsync"></ImageEditorEvents>
 </SfImageEditor>
-
+ 
 @code {
     SfImageEditor ImageEditor;
-    double straighten = 0;
+    int straighten = 0;
     private List<ImageEditorToolbarItemModel> customToolbarItem = new List<ImageEditorToolbarItemModel>() { };
-
     private async void OpenAsync()
     {
         await ImageEditor.OpenAsync("nature.png");
     }
-
     private async void StraightenLeftAsync()
     {
         straighten -= 3;
-        await ImageEditor.straightenImageAsync(straighten);
+        await ImageEditor.StraightenImageAsync(straighten);
     }
-
     private async void StraightenRightAsync()
     {
         straighten += 3;
         await ImageEditor.StraightenImageAsync(straighten);
     }
-
     private async void ResetAsync()
     {
-        straighten = 0;
-        await ImageEditor.StraightenImageAsync(straighten);
+        await ImageEditor.ResetAsync();
     }
 }
 ```
