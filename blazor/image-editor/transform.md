@@ -229,7 +229,7 @@ The straightening feature in an Image Editor allows users to adjust an image by 
 
 ## Apply straightening to the image 
 
-The Blazor Image Editor control includes a [`StraightenImageAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_StraightenImageAsync_System_Int32_) method, which allows you to adjust the degree of an image. This method takes one parameter that define how the straightening should be carried out:
+The Blazor Image Editor control includes a [`StraightenImageAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_StraightenImageAsync_System_Int32_) method that allows users to adjust an image by rotating it clockwise or counter clockwise. The rotating degree value should be within the range of -45 to +45 degrees for accurate straightening. Positive values indicate clockwise rotation, while negative values indicate counter clockwise rotation. Which allows you to adjust the degree of an image. This method takes one parameter that define how the straightening should be carried out:
 
 * degree: Specifies the amount of rotation for straightening the image. Positive values indicate clockwise rotation, while negative values indicate counterclockwise rotation.
 
