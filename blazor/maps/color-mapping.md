@@ -242,6 +242,6 @@ The color mapping types such as range color mapping, equal color mapping and des
 
 ![Blazor Maps with Bubbles Color Mapping](./images/Colormapping/blazor-maps-bubble-color-mapping.PNG)
 
-## Adding color mapping using shapefile
+## Applying color mapping for the shapes in the Maps shapefile
 
-To add the color mapping using shapefile in the Maps similarly as GEOJSON format data. Instead of binding the GEOJSON format data, you can bind the shapefile format. Please refer the link [How to add shapefile format data in the Maps](shape-file).
+To apply the color mapping for the shapes in the Maps shapefile, following a similar approach as with GEOJSON format data. Instead of binding the GEOJSON format data, you can bind the shapefile format. For more information about the Shapefile, please refer to the link [How to add shapefile format data in the Maps](shape-file).
