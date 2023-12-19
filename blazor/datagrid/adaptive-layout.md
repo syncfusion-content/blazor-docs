@@ -9,7 +9,7 @@ documentation: ug
 
 # Adaptive UI Layout in Blazor DataGrid Component
 
-The DataGrid user interface (UI) was redesigned to provide an optimal viewing experience and improve usability on small screens. This interface will render the filter, sort, column chooser, column menu(supports only when the `rowRenderingMode` as Horizontal) and edit dialogs adaptively and have an option to render the DataGrid row elements in the vertical direction.
+The DataGrid user interface (UI) was redesigned to provide an optimal viewing experience and improve usability on small screens. This interface will render the filter, sort, column chooser, column menu(supports only when the `RowRenderingMode` as Horizontal) and edit dialogs adaptively and have an option to render the DataGrid row elements in the vertical direction.
 
 ## Render adaptive dialog
 

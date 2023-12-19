@@ -17,17 +17,27 @@ WAI-ARIA (Accessibility Initiative – Accessible Rich Internet Applications) de
 
 The following ARIA attributes are used in the DataGrid:
 
-* grid (role)
-* row (role)
-* gridcell (role)
-* aria-selected (attribute)
-* aria-expanded (attribute)
-* aria-sort (attribute)
-* aria-busy (attribute)
-* aria-invalid (attribute)
-* aria-grabbed (attribute)
-* aria-owns (attribute)
-* aria-label (attribute)
+| Attributes | Purpose |
+| --- | --- |
+| `role=grid` | To represent the element containing the grid component. |
+| `role=row` | To represent the element containing the cells of the row in the grid. |
+| `role=rowgroup` | To represent the group of rows in the grid. |
+| `role=columnheader` | To represent the cell in a row contains header information for a column in the grid. |
+| `role=gridcell` | To represent a cell in the grid component. |
+| `role=button` | To represent the element that acts as a button in the grid. |
+| `role=searchbox` | To represent the element that acts as a search region in the grid. |
+| `role=presentation` | To represent the element to be not available for accessibility concerns. |
+| `role=navigation` | To represent the element containing pager elements to navigate from one page to another. |
+| `aria-colindex` | Defines the column index of the column with respect to the total number of columns within the grid. |
+| `aria-rowindex` | Defines row index of the row with respect to the total number of rows within the grid.  |
+| `rowspan` | Defines the number of rows spanned by a cell within the grid.  |
+| `colspan` | Defines the number of columns spanned by a cell within the grid. |
+| `aria-selected` | Indicates the current "selected" state of the rows and cells in the grid. |
+| `aria-expanded` | Indicate if the expand icon in the hierarchy grid or grouped grid or detail grid is expanded or collapsed |
+| `aria-sort` | Indicates whether the data in the grid are sorted in ascending or descending order. |
+| `aria-hidden` | Hides the element from accessibility concerns. |
+| `aria-labelledby` | Provides an accessible name for the checkbox labels in excel filter, checkbox filter and column chooser dialog.  |
+| `aria-describedby` | Provides an description about the features enabled in the header when the grid header cell is focused. |
 
 ## Keyboard navigation
 
