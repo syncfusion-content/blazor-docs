@@ -1,27 +1,25 @@
 ---
 layout: post
-title: Selection in Blazor Dropdown Tree Component | Syncfusion
-description: Checkout and learn here all about Selection in Syncfusion Blazor Dropdown Tree component and much more.
+title: Popup Setting in Blazor Dropdown Tree Component | Syncfusion
+description: Checkout and learn here all about Popup Setting in Syncfusion Blazor Dropdown Tree component and much more.
 platform: Blazor
 control: Dropdown Tree
 documentation: ug
 ---
 
-# Selection in Blazor Dropdown Tree Component
+# Popup Setting in Dropdown Tree
 
-The Dropdown Tree has been provided with single and multi-selection support. Selection provides an interactive support and highlights the node that is selected. Selection can be done through simple mouse down or keyboard interaction.
+## Change the popup width
 
-## Single Selection 
+Customize the width of the popup using the [PopupWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfDropDownTree-2.html#Syncfusion_Blazor_Navigations_SfDropDownTree_2_PopupWidth) property. The default value of the `PopupWidth` is `100%`. If popup width unspecified, it sets based on the width of the Dropdown Tree component.
 
-By default, you can only select a single node. When you select the node, the popup will close automatically, and the text of the selected node will appear in the input box.
-
-In the following example, you can select the single node only.
+In the following sample, the `PopupWidth` is set as `300px`.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
 
-<SfDropDownTree TItem="EmployeeData" TValue="string" Placeholder="Select an employee" Width="500px">
-        <DropDownTreeField TItem="EmployeeData" DataSource="Data" ID="Id" Text="Name" HasChildren="HasChild" ParentID="PId"></DropDownTreeField>
+<SfDropDownTree TItem="EmployeeData" TValue="string" Placeholder="Select an employee" PopupWidth="400px">
+    <DropDownTreeField TItem="EmployeeData" DataSource="Data" ID="Id" Text="Name" HasChildren="HasChild" ParentID="PId"></DropDownTreeField>
 </SfDropDownTree>
 
 @code {
@@ -38,7 +36,7 @@ In the following example, you can select the single node only.
         new EmployeeData() { Id = "11", PId = "6", Name = "Mary", Job = "Developer" },
         new EmployeeData() { Id = "9", PId = "1", Name = "Janet Leverling", Job = "HR"}
     };
-
+    
     class EmployeeData
     {
         public string Id { get; set; }
@@ -51,19 +49,17 @@ In the following example, you can select the single node only.
 }
 ```
 
-![Selection in Blazor DropDownTree](./images/selection/blazor-dropdowntree-single-selection.png)
+![Blazor Dropdown Tree with customizing popup width](./images/blazor-dropdowntree-component-popup-width.png)
 
-## Multi Selection 
+## Change the popup height
 
-The Dropdown Tree also supports selection of multiple nodes by setting [AllowMultiSelection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfDropDownTree-2.html#Syncfusion_Blazor_Navigations_SfDropDownTree_2_AllowMultiSelection)` to **true**. To multi-select, press and hold **CTRL** key and click the desired nodes. To select range of nodes, press and hold the **SHIFT** key and click the nodes.
-
-In the following example, the [AllowMultiSelection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfDropDownTree-2.html#Syncfusion_Blazor_Navigations_SfDropDownTree_2_AllowMultiSelection) property is enabled.
+Customize the height of the popup using the [PopupHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfDropDownTree-2.html#Syncfusion_Blazor_Navigations_SfDropDownTree_2_PopupHeight). The default value of the `PopupHeight` is `300px`.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
 
-<SfDropDownTree TItem="EmployeeData" TValue="string" Placeholder="Select an employee" Width="500px" AllowMultiSelection="true">
-        <DropDownTreeField TItem="EmployeeData" DataSource="Data" ID="Id" Text="Name" HasChildren="HasChild" ParentID="PId"></DropDownTreeField>
+<SfDropDownTree TItem="EmployeeData" TValue="string" Placeholder="Select an employee" Width="500px" PopupHeight="200px">
+    <DropDownTreeField TItem="EmployeeData" DataSource="Data" ID="Id" Text="Name" HasChildren="HasChild" ParentID="PId"></DropDownTreeField>
 </SfDropDownTree>
 
 @code {
@@ -80,7 +76,7 @@ In the following example, the [AllowMultiSelection](https://help.syncfusion.com/
         new EmployeeData() { Id = "11", PId = "6", Name = "Mary", Job = "Developer" },
         new EmployeeData() { Id = "9", PId = "1", Name = "Janet Leverling", Job = "HR"}
     };
-
+    
     class EmployeeData
     {
         public string Id { get; set; }
@@ -93,25 +89,90 @@ In the following example, the [AllowMultiSelection](https://help.syncfusion.com/
 }
 ```
 
-![MultiSelection in Blazor DropDownTree](./images/selection/blazor-dropdowntree-multi-selection.png)
+![Blazor Dropdown Tree with customizing popup height](./images/blazor-dropdowntree-component-popup-height.png)
 
-## Preselected value through API  
+## Change the popup ZIndex
 
-The Blazor Dropdown Tree component provides the capability to select specific nodes during initialization or dynamically through the two-way binding provided by the [Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfDropDownTree-2.html#Syncfusion_Blazor_Navigations_SfDropDownTree_2_Value)property. This property allows for the selection of particular nodes by passing in an list collection of the corresponding node IDs as TValue. Also you can dynamically assign the node IDs using a button click.
+Customize the [ZIndex](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfDropDownTree-2.html#Syncfusion_Blazor_Navigations_SfDropDownTree_2_ZIndex) value of the component popup element.
 
-In the following example, the two nodes are preselected using [Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfDropDownTree-2.html#Syncfusion_Blazor_Navigations_SfDropDownTree_2_Value) property.
+Defaults to `1000`
+
+## Popup height based on available space
+
+You can achieve this by binding the `resize` event in window and update the height of the popup based on the window height.
+
+```cshtml
+@using Syncfusion.Blazor.Navigations
+
+<SfDropDownTree TItem="EmployeeData" TValue="string" Placeholder="Select an employee" Width="500px" ID="dropdowntree">
+    <DropDownTreeField TItem="EmployeeData" DataSource="Data" ID="Id" Text="Name" HasChildren="HasChild" ParentID="PId"></DropDownTreeField>
+</SfDropDownTree>
+
+@code {
+    List<EmployeeData> Data = new List<EmployeeData>
+    {
+        new EmployeeData() { Id = "1", Name = "Steven Buchanan", Job = "General Manager", HasChild = true, Expanded = true },
+        new EmployeeData() { Id = "2", PId = "1", Name = "Laura Callahan", Job = "Product Manager", HasChild = true },
+        new EmployeeData() { Id = "3", PId = "2", Name = "Andrew Fuller", Job = "Team Lead", HasChild = true },
+        new EmployeeData() { Id = "4", PId = "3", Name = "Anne Dodsworth", Job = "Developer" },
+        new EmployeeData() { Id = "10", PId = "3", Name = "Lilly", Job = "Developer" },
+        new EmployeeData() { Id = "5", PId = "1", Name = "Nancy Davolio", Job = "Product Manager", HasChild = true },
+        new EmployeeData() { Id = "6", PId = "5", Name = "Michael Suyama", Job = "Team Lead", HasChild = true },
+        new EmployeeData() { Id = "7", PId = "6", Name = "Robert King", Job = "Developer" },
+        new EmployeeData() { Id = "11", PId = "6", Name = "Mary", Job = "Developer" },
+        new EmployeeData() { Id = "9", PId = "1", Name = "Janet Leverling", Job = "HR"}
+    };
+    
+    class EmployeeData
+    {
+        public string Id { get; set; }
+        public string Name { get; set; }
+        public string Job { get; set; }
+        public bool HasChild { get; set; }
+        public bool Expanded { get; set; }
+        public string PId { get; set; }
+    }
+}
+```
+{% tabs %}
+{% highlight razor tabtitle="Layout.razor" %}
+
+<script>
+    window.addEventListener("resize", function (e) {
+        var wrapper = document.getElementById("dropdowntree").parentElement;
+        var popupEle = document.querySelector(".e-ddt.e-popup");
+        var popupContent = document.querySelector(".e-ddt .e-popup-content");
+        var topVal = wrapper.getBoundingClientRect().top;
+        
+        if (popupEle && popupContent) {
+            popupEle.style.maxHeight = (window.innerHeight - topVal - 50) + "px";
+            popupContent.style.maxHeight = (window.innerHeight - topVal - 50) + "px";
+        }
+    })
+</script>
+
+{% endhighlight %}
+{% endtabs %}
+
+## Programmatically opening and closing popup
+
+You can programmatically open and close the popup by accessing the `ShowPopupAsync()` and `HidePopupAsync()` methods through an instance of the Dropdown Tree. Bind the click event of a button to these methods. When the button is clicked, it will trigger the respective method and open or close the popup.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
 @using Syncfusion.Blazor.Buttons
 
-<SfButton OnClick="SelectANode">Select a node</SfButton>
-<SfDropDownTree TItem="EmployeeData" TValue="string" Placeholder="Select an employee" Width="500px" AllowMultiSelection="true" @bind-Value="@SelectedNode">
+<SfButton OnClick="Open">Open Popup</SfButton>
+<SfButton OnClick="Close">Close Popup</SfButton>
+
+<div>
+    <SfDropDownTree @ref="sfDropDownTree" TItem="EmployeeData" TValue="string" Placeholder="Select an employee" Width="500px" ID="dropdowntree">
     <DropDownTreeField TItem="EmployeeData" DataSource="Data" ID="Id" Text="Name" HasChildren="HasChild" ParentID="PId"></DropDownTreeField>
 </SfDropDownTree>
+</div>
 
 @code {
-    List<string> SelectedNode = new List<string>() { "1", "5" };
+    SfDropDownTree<string, EmployeeData>? sfDropDownTree;
     List<EmployeeData> Data = new List<EmployeeData>
     {
         new EmployeeData() { Id = "1", Name = "Steven Buchanan", Job = "General Manager", HasChild = true, Expanded = true },
@@ -126,11 +187,15 @@ In the following example, the two nodes are preselected using [Value](https://he
         new EmployeeData() { Id = "9", PId = "1", Name = "Janet Leverling", Job = "HR"}
     };
 
-    void SelectANode()
+    async Task Open()
     {
-        SelectedNode = new List<string>() { "9" };
+       await sfDropDownTree.ShowPopupAsync();
+    } 
+    async Task Close()
+    {
+       await sfDropDownTree.HidePopupAsync();
+        
     }
-
     class EmployeeData
     {
         public string Id { get; set; }
@@ -143,61 +208,4 @@ In the following example, the two nodes are preselected using [Value](https://he
 }
 ```
 
-## Get selected value
-
-In this example, the selected value is obtained through two-way binding using the [Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfDropDownTree-2.html#Syncfusion_Blazor_Navigations_SfDropDownTree_2_Value) property.
-
-```cshtml
-@using Syncfusion.Blazor.Navigations
-
-<SfDropDownTree TItem="EmployeeData" TValue="string" Placeholder="Select an employee" Width="500px" AllowMultiSelection="true" @bind-Value="@SelectedNode">
-    <DropDownTreeField TItem="EmployeeData" DataSource="Data" ID="Id" Text="Name" HasChildren="HasChild" ParentID="PId"></DropDownTreeField>
-</SfDropDownTree>
-
-<table style="margin-left: 600px; margin-top: -50px;">
-    <thead>
-        <tr>
-            <th style="width: 50%">Id</th>
-        </tr>
-    </thead>
-    <tbody>
-        @for (int i = 0; i < SelectedNode?.Count; i++)
-        {
-            <tr>
-                <td style="width: 30%">
-                    <div>@SelectedNode[i]</div>
-                </td>
-            </tr>
-        }
-    </tbody>
-</table>
-
-@code {
-    List<string> SelectedNode = new List<string>() { "5" };
-    List<EmployeeData> Data = new List<EmployeeData>
-    {
-        new EmployeeData() { Id = "1", Name = "Steven Buchanan", Job = "General Manager", HasChild = true, Expanded = true },
-        new EmployeeData() { Id = "2", PId = "1", Name = "Laura Callahan", Job = "Product Manager", HasChild = true },
-        new EmployeeData() { Id = "3", PId = "2", Name = "Andrew Fuller", Job = "Team Lead", HasChild = true },
-        new EmployeeData() { Id = "4", PId = "3", Name = "Anne Dodsworth", Job = "Developer" },
-        new EmployeeData() { Id = "10", PId = "3", Name = "Lilly", Job = "Developer" },
-        new EmployeeData() { Id = "5", PId = "1", Name = "Nancy Davolio", Job = "Product Manager", HasChild = true },
-        new EmployeeData() { Id = "6", PId = "5", Name = "Michael Suyama", Job = "Team Lead", HasChild = true },
-        new EmployeeData() { Id = "7", PId = "6", Name = "Robert King", Job = "Developer" },
-        new EmployeeData() { Id = "11", PId = "6", Name = "Mary", Job = "Developer" },
-        new EmployeeData() { Id = "9", PId = "1", Name = "Janet Leverling", Job = "HR"}
-    };
-
-    class EmployeeData
-    {
-        public string Id { get; set; }
-        public string Name { get; set; }
-        public string Job { get; set; }
-        public bool HasChild { get; set; }
-        public bool Expanded { get; set; }
-        public string PId { get; set; }
-    }
-}
-```
-
-![Get selected value in Blazor DropDownTree](./images/selection/blazor-dropdowntree-get-selected-value.png)
+![Show or Hide Popup in Blazor Dropdown Tree](./images/blazor-dropdowntree-component-open.png)
