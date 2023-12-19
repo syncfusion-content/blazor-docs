@@ -70,7 +70,7 @@ The Geographic data can be rendered like the USA map when using the Shapefile in
 }
 ```
 
-![Blazor ShapeFile](../images/Shapefile/blazor-shapefile.png)
+![Blazor ShapeFile](./images/Shapefile/blazor-shapefile.png)
 
 ## Adding shapefile as sublayer
 
