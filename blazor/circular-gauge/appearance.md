@@ -115,7 +115,7 @@ You can render semi or quarter Circular Gauge by modifying the start and end ang
 
 ## Animating multiple elements simultaneously in Circular Gauge
 
-The Circular Gauge elements can be animated individually by using specific properties. Instead of that, you can animate all the elements such as axis lines, axis labels,  tick lines, pointers, ranges, and annotations simultaneously by using the [AnimationDuration]() property, which controls the smoother visual effect and makes it easier to animate the elements.
+The Circular Gauge elements can be animated individually by using specific properties. Instead of that, you can animate all the elements such as axis lines, axis labels,  tick lines, pointers, ranges, and annotations simultaneously by using the [AnimationDuration](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.SfCircularGauge.html#Syncfusion_Blazor_CircularGauge_SfCircularGauge_AnimationDuration) property, which controls the smoother visual effect and makes it easier to animate the elements.
 
 
 The below example shows an animated sequence that initiates with the axis line, followed by animations for axis labels, ranges, pointers, and annotations.

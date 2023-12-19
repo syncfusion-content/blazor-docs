@@ -171,7 +171,7 @@ N>To use this feature, set the [AllowMargin](https://help.syncfusion.com/cr/blaz
 
 ## Animating multiple elements simultaneously in Linear Gauge
 
-The Linear Gauge elements can be animated individually by using specific properties. Instead of that, you can animate all the elements such as axis lines, axis labels, tick lines, pointers, ranges, and annotations simultaneously by using the [AnimationDuration]() property, which controls the smoother visual effect and makes it easier to animate the elements.
+The Linear Gauge elements can be animated individually by using specific properties. Instead of that, you can animate all the elements such as axis lines, axis labels, tick lines, pointers, ranges, and annotations simultaneously by using the [AnimationDuration](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.SfLinearGauge.html#Syncfusion_Blazor_LinearGauge_SfLinearGauge_AnimationDuration) property, which controls the smoother visual effect and makes it easier to animate the elements.
 
 
 The below example shows an animated sequence that initiates with the axis line and axis labels, followed by animations for ranges, pointers, and annotations.
