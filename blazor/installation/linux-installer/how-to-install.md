@@ -11,7 +11,7 @@ documentation: ug
 
 ## Overview
 
-Syncfusion provides the Linux installer for the following Blazor products.
+Syncfusion provides the Linux installer for the following Essential Studio products.
 
 * Blazor
 * Flutter
