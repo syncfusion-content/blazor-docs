@@ -82,6 +82,25 @@ The shapefile can also be rendered in multilayer structure as explained in [this
 3. The GeoJSON map can be displayed as a sublayer over the shapefile map.
 4. Shapefiles can be provided as both main and sublayer layers.
 
+The following example demonstrates how to display the shapefile as a sublayer.
+
+```cshtml
+@using Syncfusion.Blazor.Maps;
+
+<SfMaps>
+    <MapsLayers>
+        <MapsLayer ShapeData='new {dataOptions= "https://cdn.syncfusion.com/maps/map-data/world-map.json"}' TValue="string">
+        </MapsLayer>
+        <MapsLayer ShapeData='new {dataOptions = "https://cdn.syncfusion.com/maps/map-data/usa-states.shp"}'
+                   Type="Syncfusion.Blazor.Maps.Type.SubLayer" TValue="string">
+            <MapsShapeSettings Fill="blue"></MapsShapeSettings>
+        </MapsLayer>
+    </MapsLayers>
+</SfMaps>
+
+```
+![Blazor Multilayer](./images/Shapefile/blazor-multilayer.png)
+
 ## Customizations
 
 You learned about some customizations in GeoJSON maps in the previous sections. However, above customizations are also relevant to shapefile maps. Please see [this section](shape-file) for additional details on the shapefile.
