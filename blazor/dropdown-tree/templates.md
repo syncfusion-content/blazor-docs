@@ -15,7 +15,7 @@ The Dropdown Tree has been provided with several options to customize each list 
 
 The content of each list item within the Dropdown Tree can be customized with the help of the `ItemTemplate` property.
 
-In the following sample, the Dropdown Tree list items are customized with employee information such as **name** and **job** using the **itemTemplate** property. 
+In the following sample, the Dropdown Tree list items are customized with employee information such as **name** and **job** using the **ItemTemplate** property. 
 The variable `context` holds the data of the current node.
 
 ```cshtml

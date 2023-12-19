@@ -9,13 +9,13 @@ documentation: ug
 
 # Sorting in Dropdown Tree
 
-The `SortOrder` property is used to sort the Dropdown Tree nodes in `Ascending` or `Descending` order in the Blazor Dropdown Tree component. The default value of `SortOrder` property is `None`.
+The [SortOrder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfDropDownTree-2.html#Syncfusion_Blazor_Navigations_SfDropDownTree_2_SortOrder) property is used to sort the Dropdown Tree nodes in `Ascending` or `Descending` order in the Blazor Dropdown Tree component. The default value of [SortOrder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfDropDownTree-2.html#Syncfusion_Blazor_Navigations_SfDropDownTree_2_SortOrder) property is `None`.
 
 * **Ascending** - specifies the Dropdown Tree nodes are sorted in the ascending order.
 * **Descending** - specifies the Dropdown Tree nodes are sorted in the descending order.
 * **None** - specifies the Dropdown Tree nodes are not sorted.
 
-In the following example, the `SortOrder` property is dynamically updated on the button click.
+In the following example, the [SortOrder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfDropDownTree-2.html#Syncfusion_Blazor_Navigations_SfDropDownTree_2_SortOrder) property is dynamically updated on the button click.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations

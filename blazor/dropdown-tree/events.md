@@ -13,7 +13,7 @@ The Blazor Dropdown Tree component has a list of events that can be triggered fo
 
 ## Created 
 
-The Blazor Dropdown Tree component's `Created` event is triggered once the Dropdown Tree has been successfully created
+The Blazor Dropdown Tree component's [Created](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfDropDownTree-2.html#Syncfusion_Blazor_Navigations_SfDropDownTree_2_Created) event is triggered once the Dropdown Tree has been successfully created
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -56,7 +56,7 @@ The Blazor Dropdown Tree component's `Created` event is triggered once the Dropd
 
 ## Destroyed
 
-The Blazor Dropdown Tree's `Destroyed` event is triggered when the Dropdown Tree component is completely destroyed, allowing you to confirm its destruction.
+The Blazor Dropdown Tree's [Destroyed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfDropDownTree-2.html#Syncfusion_Blazor_Navigations_SfDropDownTree_2_Destroyed) event is triggered when the Dropdown Tree component is completely destroyed, allowing you to confirm its destruction.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -99,7 +99,7 @@ The Blazor Dropdown Tree's `Destroyed` event is triggered when the Dropdown Tree
 
 ## OnPopupOpen
 
-The Blazor Dropdown Tree `OnPopupOpen` event is triggered whenever a Dropdown Tree popup is opened after animation.
+The Blazor Dropdown Tree [OnPopupOpen](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfDropDownTree-2.html#Syncfusion_Blazor_Navigations_SfDropDownTree_2_OnPopupOpen) event is triggered whenever a Dropdown Tree popup is opened after animation.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -143,7 +143,7 @@ The Blazor Dropdown Tree `OnPopupOpen` event is triggered whenever a Dropdown Tr
 
 ## OnPopupClose 
 
-The Blazor Dropdown Tree `OnPopupClose` event is triggered before a Dropdown Tree popup is closed after animation.
+The Blazor Dropdown Tree [OnPopupClose](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfDropDownTree-2.html#Syncfusion_Blazor_Navigations_SfDropDownTree_2_OnPopupClose) event is triggered before a Dropdown Tree popup is closed after animation.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -187,16 +187,50 @@ The Blazor Dropdown Tree `OnPopupClose` event is triggered before a Dropdown Tre
 
 ## ValueChanging 
 
-The Blazor Dropdown Tree component's `ValueChanging` event is triggered when an item in a popup is selected or when the model value is changed by user.
+The Blazor Dropdown Tree component's [ValueChanging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfDropDownTree-2.html#Syncfusion_Blazor_Navigations_SfDropDownTree_2_ValueChanging) event is triggered when an item in a popup is selected or when the model value is changed by user.
 
 ```cshtml
+@using Syncfusion.Blazor.Popups
+@using Syncfusion.Blazor.Buttons
 @using Syncfusion.Blazor.Navigations
 
-<SfDropDownTree TItem="EmployeeData" TValue="string" Placeholder="Select an employee" Width="500px" ValueChanging="ValueChanging">
-    <DropDownTreeField TItem="EmployeeData" DataSource="Data" ID="Id" Text="Name" HasChildren="HasChild" ParentID="PId"></DropDownTreeField>
-</SfDropDownTree>
+<div>
+    <SfDropDownTree TItem="EmployeeData" TValue="string" Placeholder="Select an employee" Width="500px" ValueChanging="ValueChanged">
+        <DropDownTreeField TItem="EmployeeData" DataSource="Data" ID="Id" Text="Name" HasChildren="HasChild" ParentID="PId"></DropDownTreeField>
+    </SfDropDownTree>
+</div>
+<SfDialog Width="335px" IsModal="true" @bind-Visible="Visibility">
+    <DialogTemplates>
+        <Header>Employee Details</Header>
+        <Content>
+            <p class="employee">Name - @Name</p>
+            <p class="employee">Role - @Role</p>
+        </Content>
+    </DialogTemplates>
+    <DialogButtons>
+        <DialogButton Content="OK" IsPrimary="true" OnClick="@DlgButtonClick" />
+    </DialogButtons>
+</SfDialog>
+
+<style>
+    .employee {
+        font-size: 18px;
+        margin-top: 10%;
+        margin-left: 20%;
+        font-weight: 500;
+    }
+</style>
 
 @code {
+    private string Name { get; set; } = string.Empty;
+    private string Role { get; set; } = string.Empty;
+    private bool Visibility { get; set; }
+
+    private void DlgButtonClick()
+    {
+        this.Visibility = false;
+    }
+
     List<EmployeeData> Data = new List<EmployeeData>
     {
         new EmployeeData() { Id = "1", Name = "Steven Buchanan", Job = "General Manager", HasChild = true, Expanded = true },
@@ -211,9 +245,12 @@ The Blazor Dropdown Tree component's `ValueChanging` event is triggered when an 
         new EmployeeData() { Id = "9", PId = "1", Name = "Janet Leverling", Job = "HR"}
     };
 
-    void ValueChanging(DdtChangeEventArgs<string> args)
+    void ValueChanged(DdtChangeEventArgs<string> args)
     {
-        // Here, you can customize your code.
+        EmployeeData currentData = Data?.Find((item) => item.Id == args.NodeData.Id);
+        Name = currentData?.Name;
+        Role = currentData?.Job;
+        this.Visibility = true;
     }
 
     class EmployeeData
@@ -228,9 +265,11 @@ The Blazor Dropdown Tree component's `ValueChanging` event is triggered when an 
 }
 ```
 
+![MultiSelection in Blazor DropDownTree](./images/blazor-dropdowntree-component-valuechanging.png)
+
 ## ValueChanged 
 
-The Blazor Dropdown Tree component's `ValueChanged` event is triggered  when the value changed in the Dropdown Tree component.
+The Blazor Dropdown Tree component's [ValueChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfDropDownTree-2.html#Syncfusion_Blazor_Navigations_SfDropDownTree_2_ValueChanged) event is triggered  when the value changed in the Dropdown Tree component.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -273,7 +312,7 @@ The Blazor Dropdown Tree component's `ValueChanged` event is triggered  when the
 
 ## Filtering
 
-The Blazor Dropdown Tree component's `Filtering` event is triggered when user types a text in search box.
+The Blazor Dropdown Tree component's [Filtering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfDropDownTree-2.html#Syncfusion_Blazor_Navigations_SfDropDownTree_2_Filtering) event is triggered when user types a text in search box.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -317,7 +356,7 @@ The Blazor Dropdown Tree component's `Filtering` event is triggered when user ty
 
 ## OnActionFailure
 
-The Blazor Dropdown Tree component's `OnActionFailure` event is triggered when any Dropdown Tree action fails to produce the desired outcome. By utilizing this event, one can obtain information about the error and its root cause. In the sample provided, an incorrect URL has been given, causing the `OnActionFailure` event to be thrown.
+The Blazor Dropdown Tree component's [OnActionFailure](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfDropDownTree-2.html#Syncfusion_Blazor_Navigations_SfDropDownTree_2_OnActionFailure) event is triggered when any Dropdown Tree action fails to produce the desired outcome. By utilizing this event, one can obtain information about the error and its root cause. In the sample provided, an incorrect URL has been given, causing the [OnActionFailure](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfDropDownTree-2.html#Syncfusion_Blazor_Navigations_SfDropDownTree_2_OnActionFailure) event to be thrown.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations

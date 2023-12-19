@@ -107,7 +107,7 @@ N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/app
 
 ## Add Blazor Dropdown Tree component
 
-Add the Syncfusion Blazor Dropdown Tree component in the **~/Pages/Index.razor** file. The `TValue` parameter specifies the type of the `Value` property, while `TItem` specifies the model class for the `DataSource` property.
+Add the Syncfusion Blazor Dropdown Tree component in the **~/Pages/Index.razor** file. The `TValue` parameter specifies the type of the [Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfDropDownTree-2.html#Syncfusion_Blazor_Navigations_SfDropDownTree_2_Value) property, while `TItem` specifies the model class for the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.DropDownTreeField-1.html#Syncfusion_Blazor_Navigations_DropDownTreeField_1_DataSource) property.
 
 {% tabs %}
 {% highlight razor %}

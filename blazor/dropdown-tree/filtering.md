@@ -9,9 +9,9 @@ documentation: ug
 
 # Filtering in Dropdown Tree
 
-The Dropdown Tree has built-in support to filter data items when `AllowFiltering` is enabled. The filter operation starts as soon as you start typing characters in the search box.  Default value of AllowFiltering is `false`.
+The Dropdown Tree has built-in support to filter data items when [AllowFiltering]https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfDropDownTree-2.html#Syncfusion_Blazor_Navigations_SfDropDownTree_2_AllowFiltering is enabled. The filter operation starts as soon as you start typing characters in the search box.  Default value of AllowFiltering is `false`.
 
-## Local data
+## List data
 
 The following code demonstrates the filtering functionality with local data in the Dropdown Tree component.
 
@@ -80,7 +80,7 @@ The following code demonstrates the filtering functionality with remote data in 
 
 ## Filter type
 
-You can use `FilterType` property to specify on which filter type needed to be considered on the search action of the component. The available `FilterType` and its supported data types are:
+You can use [FilterType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfDropDownTree-2.html#Syncfusion_Blazor_Navigations_SfDropDownTree_2_FilterType) property to specify on which filter type needed to be considered on the search action of the component. The available `FilterType` and its supported data types are:
 
 FilterType     | Description
 ------------ | -------------
@@ -88,7 +88,7 @@ FilterType     | Description
   [EndsWith](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.FilterType.html#Syncfusion_Blazor_DropDowns_FilterType_EndsWith)     | Checks whether a value ends with specified value.
   [Contains](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.FilterType.html#Syncfusion_Blazor_DropDowns_FilterType_Contains)      | Checks whether a value contained with specified value.
 
-In the following example, `Contains` filter type has been mapped to the `FilterType` property.
+In the following example, `Contains` filter type has been mapped to the [FilterType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfDropDownTree-2.html#Syncfusion_Blazor_Navigations_SfDropDownTree_2_FilterType) property.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -127,8 +127,10 @@ In the following example, `Contains` filter type has been mapped to the `FilterT
 
 ## Case sensitive filtering
 
-The Data items can be filtered with or without case sensitivity using the `IgnoreCase` property. By default, the `IgnoreCase` is set to false.
+The Data items can be filtered with or without case sensitivity using the [IgnoreCase](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfDropDownTree-2.html#Syncfusion_Blazor_Navigations_SfDropDownTree_2_IgnoreCase) property. By default, the `IgnoreCase` is set to false.
 
 ## Filter textbox placeholder 
 
-You can use `FilterBarPlaceholder` to accept the value to be displayed as a watermark text on the filter bar TextBox. `FilterBarPlaceholder` is applicable when `AllowFiltering` is used as true. `FilterBarPlaceholder` is depends on `AllowFiltering` property.
+You can use [FilterBarPlaceholder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfDropDownTree-2.html#Syncfusion_Blazor_Navigations_SfDropDownTree_2_FilterBarPlaceholder) to accept the value to be displayed as a watermark text on the filter bar TextBox. `FilterBarPlaceholder` is applicable when `AllowFiltering` is used as true. `FilterBarPlaceholder` is depends on `AllowFiltering` property.
+
+![Blazor Dropdown Tree with local data filtering](./images/filter/blazor-dropdowntree-placeholder.png)
