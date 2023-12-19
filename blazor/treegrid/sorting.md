@@ -163,7 +163,7 @@ public class TreeData
 
 ## Sorting events
 
-During the sort action, the tree grid component triggers two events. The [ActionBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridEvents%601~OnActionBegin.html) event triggers before the sort action starts, and the [ActionComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridEvents%601~OnActionComplete.html) event triggers after the sort action is completed. Using these events the needed actions can be performed.
+During the sort action, the tree grid component triggers two events. The [ActionBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridEvents%601~Sorting.html) event triggers before the sort action starts, and the [ActionComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridEvents%601~Sorted.html) event triggers after the sort action is completed. Using these events the needed actions can be performed.
 
 {% tabs %}
 
@@ -174,7 +174,7 @@ During the sort action, the tree grid component triggers two events. The [Action
 @inject IJSRuntime  JsRuntime;
 
 <SfTreeGrid DataSource="@TreeGridData" AllowSorting="true" IdMapping="TaskId" ParentIdMapping="ParentId" TreeColumnIndex="1">
-    <TreeGridEvents OnActionBegin="actionbegin" OnActionComplete="actioncomplete" TValue="TreeData"></TreeGridEvents>
+    <TreeGridEvents Sorting="SortingHandler" Sorted="SortedHandler" TValue="TreeData"></TreeGridEvents>
     <TreeGridColumns>
         <TreeGridColumn Field="TaskId" HeaderText="Task ID" Width="80" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right"></TreeGridColumn>
         <TreeGridColumn Field="TaskName" HeaderText="Task Name" Width="160"></TreeGridColumn>
@@ -184,7 +184,7 @@ During the sort action, the tree grid component triggers two events. The [Action
     </TreeGridColumns>
 </SfTreeGrid>
 
-@code{
+@code {
 
     public List<TreeData> TreeGridData { get; set; }
 
@@ -193,12 +193,12 @@ During the sort action, the tree grid component triggers two events. The [Action
         this.TreeGridData = TreeData.GetSelfDataSource().ToList();
     }
 
-    private void actionbegin(ActionEventArgs<TreeData> args)
+    private void SortingHandler(SortingEventArgs args)
     {
         JsRuntime.InvokeAsync<string>("window.alert", args.RequestType.ToString());
     }
 
-    private void actioncomplete(ActionEventArgs<TreeData> args)
+    private void SortedHandler(SortedEventArgs args)
     {
         JsRuntime.InvokeAsync<string>("window.alert", args.RequestType.ToString());
     }

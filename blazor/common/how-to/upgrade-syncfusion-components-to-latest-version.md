@@ -13,13 +13,13 @@ To upgrade Syncfusion Blazor Components to the latest version, you need to ensur
 
 ## Compatible .NET version
 
-Syncfusion Blazor components in the latest version `'{:nuget-version:}'` are compatible with the latest version of .NET Core 5.0 and .NET Core 3.1. Also, refer to [version compatibility](./version-compatibility) documentation for more information about version compatibility of Syncfusion Blazor components and .NET Core SDK.
+Syncfusion Blazor components in the latest version `'{:nuget-version:}'` are compatible with the latest version of [.NET 8.0](https://dotnet.microsoft.com/en-us/download/dotnet/8.0). Also, refer to [version compatibility](./version-compatibility) documentation for more information about version compatibility of Syncfusion Blazor components and .NET Core SDK.
 
 ## Client resource file references
 
 Ensure your CSS files have been properly configured in your application.
 
-* Add the following style file reference in the **~/Pages/_Host.cshtml** for Blazor Server app or add it in the **~/wwwroot/index.html** for Blazor WebAssembly app.
+* Add the following style file reference in the **~/Components/App.razor** for Blazor Web app or add it in the **~/Pages/_Host.cshtml** for Blazor Server app or add it in the **~/wwwroot/index.html** for Blazor WebAssembly app.
 
     If you are using `Syncfusion.Blazor` NuGet package in your application, then use the below reference link.
 
@@ -28,7 +28,7 @@ Ensure your CSS files have been properly configured in your application.
     ```
 
     If you are using [individual NuGet packages](http://blazor.syncfusion.com/documentation/nuget-packages/) in your application, then use the below reference link.
-    
+
     ```html
     <link href="_content/Syncfusion.Blazor.Themes/bootstrap4.css" rel="stylesheet" />
     ```
