@@ -198,31 +198,23 @@ Here is an example of changing the text color using the [ShapeChanging](https://
 
 ### Add Additional font family
 
-The [`FontFamily`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.ImageEditorFontFamily.html) property in the Blazor Image Editor control provides the flexibility to incorporate supplementary font families, expanding your options for text styling and ensuring a broader range of fonts can be utilized within your design or content.
+The [`ImageEditorFontFamily`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.ImageEditorFontFamily.html) option in the Blazor Image Editor component provides the flexibility to incorporate supplementary font families, expanding your options for text styling and ensuring a broader range of fonts can be utilized within your design or content.
 
-By leveraging the [`FontFamily`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.ImageEditorFontFamily.html) property in an image editor, you can elevate the scope of customization for text annotations, enriching the user experience within the Blazor Image Editor control. This enhancement offers a more personalized and dynamic interaction, empowering users to tailor their text styles for a truly engaging editing experience.
+This enhancement offers a more personalized and dynamic interaction, empowering users to tailor their text styles for a truly engaging editing experience.
 
-Here is an example of adding additional font family using the [`FontFamily`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.ImageEditorFontFamily.html) property in [`ImageEditorFontFamily`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.ImageEditorFontFamily.html) options in an image editor
+Here is an example of adding additional font family using the [`ImageEditorFontFamily`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.ImageEditorFontFamily.html) options in an image editor component.
 
 ```cshtml
 @using Syncfusion.Blazor.ImageEditor
 @using Syncfusion.Blazor.Buttons
  
-<div style="padding-bottom: 15px">
-    <SfButton OnClick="BrushScriptMTAsync">Brush Script MT</SfButton>
-    <SfButton OnClick="PapyrusAsync">Papyrus</SfButton>
-    <SfButton OnClick="TimesNewRomanAsync">Times New Roman</SfButton>
-<SfButton OnClick="CourierNewTextAsync">Courier New</SfButton>
-</div>
- 
-<SfImageEditor @ref="ImageEditor" Toolbar="customToolbarItem" Height="400">
+<SfImageEditor @ref="ImageEditor" Height="400">
     <ImageEditorFontFamily Items="@CustomItems" Default="Arial"></ImageEditorFontFamily>
     <ImageEditorEvents Created="OpenAsync" FileOpened="FileOpenAsync"></ImageEditorEvents>
 </SfImageEditor>
  
 @code {
-    SfImageEditor ImageEditor; 
-    private List<ImageEditorToolbarItemModel> customToolbarItem = new List<ImageEditorToolbarItemModel>() { }; 
+    SfImageEditor ImageEditor;
     private List<ImageEditorDropDownItemModel> CustomItems = new List<ImageEditorDropDownItemModel>
     {
         new ImageEditorDropDownItemModel { Text = "Arial", Value = "arial" },
@@ -240,33 +232,9 @@ Here is an example of adding additional font family using the [`FontFamily`](htt
         ImageDimension Dimension = await ImageEditor.GetImageDimensionAsync();
         await ImageEditor.DrawTextAsync((double)Dimension.X, (double)Dimension.Y, "Enter\nText", "Arial");
     }
-    private async void BrushScriptMTAsync()
-    {
-        await ImageEditor.ResetAsync();
-        ImageDimension Dimension = await ImageEditor.GetImageDimensionAsync();
-        await ImageEditor.DrawTextAsync((double)Dimension.X, (double)Dimension.Y, "Enter\nText", "Brush Script MT");
-    }
-    private async void PapyrusAsync()
-    {
-        await ImageEditor.ResetAsync();
-        ImageDimension Dimension = await ImageEditor.GetImageDimensionAsync();
-        await ImageEditor.DrawTextAsync((double)Dimension.X, (double)Dimension.Y, "Enter\nText", "Papyrus");
-    }
-    private async void TimesNewRomanAsync()
-    {
-        await ImageEditor.ResetAsync();
-        ImageDimension Dimension = await ImageEditor.GetImageDimensionAsync();
-        await ImageEditor.DrawTextAsync((double)Dimension.X, (double)Dimension.Y, "Enter\nText", "Times New Roman");
-    }
-    private async void CourierNewTextAsync()
-    {
-        await ImageEditor.ResetAsync();
-        ImageDimension Dimension = await ImageEditor.GetImageDimensionAsync();
-        await ImageEditor.DrawTextAsync((double)Dimension.X, (double)Dimension.Y, "Enter\nText", "Courier New");
-    }
 }
 ```
-![Blazor Image Editor with Custom text an image](./images/blazor-image-editor-font.png)
+![Blazor Image Editor with Custom font in an image](./images/blazor-image-editor-font.png)
         
 ## Freehand drawing
 
