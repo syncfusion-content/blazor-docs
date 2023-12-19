@@ -181,7 +181,7 @@ The following sample code demonstrates implementing custom data binding using cu
 N> If the **DataManagerRequest.RequiresCounts** value is **true**, then the Read/ReadAsync return value must be of **DataResult** with properties **Result** whose value is a collection of records and **Count** whose value is the total number of records. If the **DataManagerRequest.RequiresCounts** is **false**, then simply send the collection of records.
 <br/> <br /> If the Read/ReadAsync method is not overridden in the custom adaptor then it will be handled by the default read handler.
 
-## Inject service into Custom Adaptor
+## Inject service into custom adaptor
 
 If you want to inject some of your service into Custom Adaptor and use the service, then you can achieve your requirement by using below way.
 

@@ -308,3 +308,13 @@ You can get the selected row indexes by using the [GetSelectedRowIndexesAsync](h
     }
 }
 ```
+
+## Touch interaction
+
+When you `tap` gantt row, tapped row will be selected.
+
+[Single selection](selection/#selection-mode) : To select a single row or cell, perform `single tap` on it.
+
+[Multiple selection](selection/#multiple-row-selection) : To perform multiple selection, `tap` on the multiple selection popup, and then tap the desired rows or cells.
+
+![Multiple selection in Blazor Gantt Chart](images/blazor-gantt-chart-multiple-selection.PNG)
