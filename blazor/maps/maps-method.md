@@ -171,3 +171,66 @@ The [Refresh](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.SfMap
     }
 }
 ```
+
+## GetMinMaxLatitudeLongitude
+
+[GetMinMaxLatitudeLongitude](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.SfMaps.html#Syncfusion_Blazor_Maps_SfMaps_GetMinMaxLatitudeLongitude) method is used to determine the minimum and maximum latitude and longitude values.
+
+```cshtml
+@using Syncfusion.Blazor.Maps
+@using System.Collections.ObjectModel;
+
+<button @onclick="GetMinMaxLatitudeLongitude">GetMinMaxLatitudeLongitude</button>
+
+@if(mapBounds != null)
+{
+    <div>
+        MaximumLatitude = @mapBounds.MaxLatitude <br/>
+        MinimumLatitude = @mapBounds.MinLatitude  <br />
+        MaximumLongitude = @mapBounds.MaxLongitude <br />
+        MinimumLongitude = @mapBounds.MinLongitude
+    </div>
+}
+
+
+<SfMaps ID="maps" @ref="MapsRef">
+    <MapsZoomSettings Enable="true" ZoomFactor="@ZoomFactor"></MapsZoomSettings>
+    <MapsCenterPosition Latitude="@CenterLat" Longitude="@CenterLong"></MapsCenterPosition>
+    <MapsLayers>
+        <MapsLayer ShapeData='new {dataOptions= "https://cdn.syncfusion.com/maps/map-data/world-map.json"}' TValue="string">
+            <MapsMarkerSettings>
+                <MapsMarker Visible="true" DataSource="MarkerDataSource" Height="25" Width="25" TValue="MarkerData" Shape="MarkerType.Circle" AnimationDuration="1500">
+                </MapsMarker>
+            </MapsMarkerSettings>
+        </MapsLayer>
+    </MapsLayers>
+</SfMaps>
+
+
+@code {
+    SfMaps MapsRef;
+    public double ZoomFactor = 7;
+    public double CenterLat = 21.815447;
+    public double CenterLong = 80.1932;
+    public MinMaxLatitudeLongitude mapBounds;
+
+    public class MarkerData
+    {
+        public string Name{ get; set; }
+        public double Latitude { get; set; }
+        public double Longitude { get; set; }
+    }
+
+    public void GetMinMaxLatitudeLongitude()
+    {
+        mapBounds = MapsRef?.GetMinMaxLatitudeLongitude();
+    }
+
+    public ObservableCollection<MarkerData> MarkerDataSource = new ObservableCollection<MarkerData> {
+        new MarkerData {Latitude=22.572646,Longitude=88.363895},
+        new MarkerData {Latitude=25.0700428,Longitude=67.2847875}
+    };
+}
+```
+
+![Blazor Maps with GetMinMaxLatitudeLongitude Method](./images/Methods/blazor-maps-getminmaxlatitudelongitude.png)
