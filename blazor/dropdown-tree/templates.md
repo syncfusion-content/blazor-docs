@@ -15,7 +15,8 @@ The Dropdown Tree has been provided with several options to customize each list 
 
 The content of each list item within the Dropdown Tree can be customized with the help of the `ItemTemplate` property.
 
-In the following sample, the Dropdown Tree list items are customized with employee information such as **name** and **job** using the **itemTemplate** property.
+In the following sample, the Dropdown Tree list items are customized with employee information such as **name** and **job** using the **ItemTemplate** property. 
+The variable `context` holds the data of the current node.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -230,14 +231,14 @@ In the following sample, when the data fetch request fails, the Dropdown Tree di
 <SfDropDownTree TValue="int?" TItem="TreeData" ID="remote" Placeholder="Select a name" Width="500px">
     <ChildContent>
         <DropDownTreeField TItem="TreeData" Query="@employeeQuery" ID="EmployeeID" Text="FirstName" HasChildren="EmployeeID">
-            <SfDataManager Url="https://services.odata.org/V4/Northwind/Northwind.svs" Adaptor="Syncfusion.Blazor.Adaptors.ODataV4Adaptor" CrossDomain="true"></SfDataManager>
+            <SfDataManager Url="https://services.odata.org/V4/Northwind/Northwind.svc" Adaptor="Syncfusion.Blazor.Adaptors.ODataV4Adaptor" CrossDomain="true"></SfDataManager>
         </DropDownTreeField>
         <DropDownTreeField TItem="TreeData" Level="1" Query="@orderQuery" Id="OrderID" Text="ShipName" ParentID="EmployeeID">
             <SfDataManager Url="https://services.odata.org/V4/Northwind/Northwind.svs" Adaptor="Syncfusion.Blazor.Adaptors.ODataV4Adaptor" CrossDomain="true"></SfDataManager>
         </DropDownTreeField>
     </ChildContent>
     <ActionFailureTemplate>
-        <span> Data fetch request fails</span>
+        <span>A request to fetch data is failed.</span>
     </ActionFailureTemplate>
 </SfDropDownTree>
 
