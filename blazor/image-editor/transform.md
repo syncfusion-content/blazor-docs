@@ -43,7 +43,7 @@ The [`RotateAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Imag
 }
 ```
 
-![Blazor Image Editor with Rotate an image](./images/blazor-image-editor-rotate.png)
+![Blazor Image Editor with Rotate an image](./images/blazor-image-editor-rotate.jpg)
 
 ## Flip an image
 
