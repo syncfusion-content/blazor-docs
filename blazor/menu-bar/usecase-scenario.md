@@ -11,7 +11,7 @@ documentation: ug
 
 ## Scrollable Menu Bar
 
-The Menu Bar component supports horizontal and vertical scrolling to render large Menu Bars and sub menus in an adaptive way. This can be achieved by enabling the [EnableScrolling](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Navigations.SfMenu~EnableScrolling.html) property and by restricting the corresponding Menu Bar/Sub Menu Bar size.
+The Menu Bar component supports horizontal and vertical scrolling to render large Menu Bars and sub menus in an adaptive way. This can be achieved by enabling the [EnableScrolling](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfMenu-1.html) property and by restricting the corresponding Menu Bar/Sub Menu Bar size.
 
 ```cshtml
 
@@ -77,7 +77,7 @@ The Menu Bar component supports horizontal and vertical scrolling to render larg
 
 ## Hamburger Menu
 
-The following example demonstrates the use case of [HamburgerMenu](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Navigations.SfMenu~HamburgerMode.html) mode.
+The following example demonstrates the use case of [HamburgerMenu](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfMenu-1.html#Syncfusion_Blazor_Navigations_SfMenu_1_HamburgerMode) mode.
 
 ```cshtml
 
