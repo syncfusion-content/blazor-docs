@@ -207,61 +207,62 @@ Here is an example of adding additional font family using the [`fontFamily`](htt
 ```cshtml
 @using Syncfusion.Blazor.ImageEditor
 @using Syncfusion.Blazor.Buttons
-
+ 
 <div style="padding-bottom: 15px">
     <SfButton OnClick="BrushScriptMTAsync">Brush Script MT</SfButton>
-    <SfButton OnClick="PapyrusAsync"Papyrus</SfButton>
+    <SfButton OnClick="PapyrusAsync">Papyrus</SfButton>
     <SfButton OnClick="TimesNewRomanAsync">Times New Roman</SfButton>
     <SfButton OnClick="CourierNewTextAsync">Courier New</SfButton>
 </div>
+ 
 <SfImageEditor @ref="ImageEditor" Toolbar="customToolbarItem" Height="400">
-    <ImageEditorEvents Created="OpenAsync" fileOpened="FileOpenAsync"></ImageEditorEvents>
-</SfImageEditor> 
-
+    <ImageEditorFontFamily Items="@CustomItems" Default="Arial"></ImageEditorFontFamily>
+    <ImageEditorEvents Created="OpenAsync" FileOpened="FileOpenAsync"></ImageEditorEvents>
+</SfImageEditor>
+ 
 @code {
     SfImageEditor ImageEditor; 
     private List<ImageEditorToolbarItemModel> customToolbarItem = new List<ImageEditorToolbarItemModel>() { }; 
     private List<ImageEditorDropDownItemModel> CustomItems = new List<ImageEditorDropDownItemModel>
     {
-        new ImageEditorDropDownItemModel { id = "arial" Text = "Arial"},
-        new ImageEditorDropDownItemModel { id = "brush script mt" Text = "Brush Script MT"},
-        new ImageEditorDropDownItemModel { id = "papyrus" Text = "Papyrus"},
-        new ImageEditorDropDownItemModel { id = "times new roman" Text = "Times New Roman"},
-        new ImageEditorDropDownItemModel { id = "courier new" Text = "Courier New"}
+        new ImageEditorDropDownItemModel { Text = "Arial", Value = "arial" },
+        new ImageEditorDropDownItemModel { Text = "Brush Script MT", Value = "brush script mt"},
+        new ImageEditorDropDownItemModel { Text = "Papyrus", Value = "papyrus" },
+        new ImageEditorDropDownItemModel { Text = "Times New Roman", Value = "times new roman"},
+        new ImageEditorDropDownItemModel { Text = "Courier New", Value = "courier new" }
     };
     private async void OpenAsync() 
     { 
-        await ImageEditor.OpenAsync("nature.png"); 
+        await ImageEditor.OpenAsync("https://www.shutterstock.com/image-photo/linked-together-life-cropped-shot-600w-2149264221.jpg"); 
     }
-
     private async void FileOpenAsync() 
     { 
         ImageDimension Dimension = await ImageEditor.GetImageDimensionAsync();
-        await ImageEditor.DrawTextAsync(Dimension.X, Dimension.Y, "Enter\nText", 'Arial');
+        await ImageEditor.DrawTextAsync((double)Dimension.X, (double)Dimension.Y, "Enter\nText", "Arial");
     }
-
     private async void BrushScriptMTAsync()
     {
+        await ImageEditor.ResetAsync();
         ImageDimension Dimension = await ImageEditor.GetImageDimensionAsync();
-        await ImageEditor.DrawTextAsync(Dimension.X, Dimension.Y, "Enter\nText", 'Brush Script MT');
+        await ImageEditor.DrawTextAsync((double)Dimension.X, (double)Dimension.Y, "Enter\nText", "Brush Script MT");
     }
-
     private async void PapyrusAsync()
     {
+        await ImageEditor.ResetAsync();
         ImageDimension Dimension = await ImageEditor.GetImageDimensionAsync();
-        await ImageEditor.DrawTextAsync(Dimension.X, Dimension.Y, "Enter\nText", 'Papyrus');
+        await ImageEditor.DrawTextAsync((double)Dimension.X, (double)Dimension.Y, "Enter\nText", "Papyrus");
     }
-
     private async void TimesNewRomanAsync()
     {
+        await ImageEditor.ResetAsync();
         ImageDimension Dimension = await ImageEditor.GetImageDimensionAsync();
-        await ImageEditor.DrawTextAsync(Dimension.X, Dimension.Y, "Enter\nText", 'Times New Roman');
+        await ImageEditor.DrawTextAsync((double)Dimension.X, (double)Dimension.Y, "Enter\nText", "Times New Roman");
     }
-
     private async void CourierNewTextAsync()
     {
+        await ImageEditor.ResetAsync();
         ImageDimension Dimension = await ImageEditor.GetImageDimensionAsync();
-        await ImageEditor.DrawTextAsync(Dimension.X, Dimension.Y, "Enter\nText", 'Courier New');
+        await ImageEditor.DrawTextAsync((double)Dimension.X, (double)Dimension.Y, "Enter\nText", "Courier New");
     }
 }
 ```
