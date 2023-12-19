@@ -17,7 +17,7 @@ The Dropdown Tree component uses the `Combobox` role. The following `ARIA attrib
 
 | **Properties** | **Functionalities** |
 | --- | --- |
-| `aria-haspopup` | indicates the availability and type of interactive popup element |
+| `aria-haspopup` | Indicates the availability and type of interactive popup element |
 | `aria-expanded` | Indicates whether the popup list has expanded or not. |
 | `aria-selected` | Indicates the selected tree item. |
 | `aria-disabled` | Indicates whether the Dropdown Tree component is in a disabled state or not. |
