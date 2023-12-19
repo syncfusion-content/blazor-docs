@@ -65,7 +65,7 @@ When the [ShowSelectAll](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
 
 Also we can select all the tree items programmatically using the [SelectAllAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfDropDownTree-2.html#Syncfusion_Blazor_Navigations_SfDropDownTree_2_SelectAllAsync_System_Boolean_) method.
 
-we can Unselect all the tree items programmatically using the [SelectAllAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfDropDownTree-2.html#Syncfusion_Blazor_Navigations_SfDropDownTree_2_SelectAllAsync_System_Boolean_) method by passing the parameter as false.
+We can unselect all the tree items programmatically using the [SelectAllAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfDropDownTree-2.html#Syncfusion_Blazor_Navigations_SfDropDownTree_2_SelectAllAsync_System_Boolean_) method by passing the parameter as false.
 
 In the following example, the [ShowSelectAll](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfDropDownTree-2.html#Syncfusion_Blazor_Navigations_SfDropDownTree_2_ShowSelectAll) property is enabled and [SelectAllAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfDropDownTree-2.html#Syncfusion_Blazor_Navigations_SfDropDownTree_2_SelectAllAsync_System_Boolean_) method is used.
 
