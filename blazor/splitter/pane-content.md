@@ -55,7 +55,7 @@ Splitter is a layout based container component. The pane contents can be rendere
 
 Any Blazor components can be rendered along with their native and control events within splitter as pane content.
 
-Refer [Listview within splitter](https://blazor.syncfusion.com/demos/splitter/details-view?theme=bootstrap4) example.
+Refer [Listview within splitter](https://blazor.syncfusion.com/demos/splitter/details-view?theme=bootstrap5) example.
 
 ## Plain content
 

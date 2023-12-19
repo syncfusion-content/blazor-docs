@@ -151,4 +151,4 @@ N> The Tooltip component in our system uses the HTML element's id or class name 
 
 * [Getting Started with Syncfusion Blazor for Server-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-dotnet-cli)
 
-N> You can also explore our [Blazor Tooltip example](https://blazor.syncfusion.com/demos/tooltip/default?) that shows you how to render and configure the tooltip
+N> You can also explore our [Blazor Tooltip example](https://blazor.syncfusion.com/demos/tooltip/default?theme=bootstrap5) that shows you how to render and configure the tooltip
