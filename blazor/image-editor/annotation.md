@@ -266,7 +266,7 @@ Here is an example of adding additional font family using the [`fontFamily`](htt
     }
 }
 ```
-![Blazor Image Editor with Custom text an image](./images/blazor-image-editor-custom-text.png)
+![Blazor Image Editor with Custom text an image](./images/blazor-image-editor-font.png)
         
 ## Freehand drawing
 

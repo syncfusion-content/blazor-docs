@@ -274,4 +274,4 @@ Here is an example of straightening the image using the [`StraightenImageAsync`]
 }
 ```
 
-![Blazor Image Editor with Zoom](./images/blazor-image-editor-zoom.png)
+![Blazor Image Editor with Zoom](./images/blazor-image-editor-straighten.png)
