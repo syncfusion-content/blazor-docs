@@ -183,7 +183,7 @@ Here is an example of circle cropping using the [`SelectAsync`](https://help.syn
 }
 ```
 
-![Blazor Image Editor with Crop an image](./images/blazor-image-editor-crop.png)
+![Blazor Image Editor with Crop an image](./images/blazor-image-editor-crop.jpg)
 
 ## Cropping event
 
