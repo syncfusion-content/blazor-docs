@@ -262,7 +262,7 @@ We can also utilize the above `Template` combination with [FormAutoGenerateItems
 
 ![Blazor DataForm Form Item](images/blazor_dataform_template.png)
 
-We can also integrate the `FormTemplate` renderer along with `FormItem` like [FormAutoGenerateItem](./form-items) usage with it.
+We can also integrate the `FormTemplate` renderer along with `FormItem` as showcased in the below example.
 
 {% tabs %}
 {% highlight razor tabtitle="Form Template" hl_lines="3 10" %}
