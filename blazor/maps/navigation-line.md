@@ -70,3 +70,7 @@ To enable the arrow in the navigation line, set the [ShowArrow](https://help.syn
 ```
 
 ![Blazor Maps with Navigation Line Arrow](./images/NavigationLine/blazor-maps-navigation-line-arrow.PNG)
+
+## Adding navigation line using shapefile
+
+To add the navigation line using shapefile in the Maps similarly as GEOJSON format data. Instead of binding the GEOJSON format data, you can bind the shapefile format. Please refer the link [How to add shapefile format data in the Maps](shape-file).

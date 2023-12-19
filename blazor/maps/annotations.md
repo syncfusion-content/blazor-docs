@@ -154,3 +154,9 @@ Multiple annotations can be added to the Maps by adding multiple [MapsAnnotation
 ```
 
 ![Blazor Maps with Multiple Annotation](./images/Annotation/blazor-maps-multiple-annotation.PNG)
+
+## Adding annotation using shapefile
+
+To add the annotation shape using shapefile in the Maps similarly as GEOJSON format data. Instead of binding the GEOJSON format data, you can bind the shapefile format. Please refer the link [How to add shapefile format data in the Maps](shape-file).
+
+

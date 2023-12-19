@@ -92,3 +92,7 @@ The following example shows how to customize the polygon shape over the geometry
 }
 ```
 ![Blazor Maps with polygon shape](./images/Polygon/blazor-map-polygon-shape-on-maps-layer.png)
+
+## Adding polygon using shapefile
+
+To add the polygon shape using shapefile in the Maps similarly as GEOJSON format data. Instead of binding the GEOJSON format data, you can bind the shapefile format. Please refer the link [How to add shapefile format data in the Maps](shape-file).

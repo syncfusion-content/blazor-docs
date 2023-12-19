@@ -685,3 +685,7 @@ To imitate or map the marker shape with its legend item shape, set the [UseMarke
 ```
 
 ![Blazor Maps - Marker shape mapped to legend items shape](./images/Legend/blazor-maps-marker-legend-shape.png)
+
+## Adding legends using shapefile
+
+To add the legends using shapefile in the Maps similarly as GEOJSON format data. Instead of binding the GEOJSON format data, you can bind the shapefile format. Please refer the link [How to add shapefile format data in the Maps](shape-file).

@@ -352,3 +352,7 @@ The tooltip for the bubbles can be enabled by setting the [Visible](https://help
 ```
 
 ![Displaying Tooltip for Bubbles in Blazor Maps](./images/Bubble/blazor-maps-bubble-tooltip.PNG)
+
+## Adding bubbles using shapefile
+
+To display bubble using shapefile in the Maps similarly as GEOJSON format data. Instead of binding the GEOJSON format data, you can bind the shapefile format. Please refer the link [How to add shapefile format data in the Maps](shape-file).
