@@ -80,6 +80,9 @@ We can customize the particular field editor with required UI customization usin
 
 ![Blazor DataForm Form Item](images/blazor_dataform_template.png)
 
+We can also utilize the above `Template` combination with [FormAutoGenerateItems](./form-items.md) which will generate the items except the specified `Formitem`.
+
+
 ## FormTemplate
 
 `DataForm` have the ability to customize the entire structure of the form, incorporating necessary components within it, and we can also personalize the messages displayed for validation errors.
@@ -260,3 +263,45 @@ We can customize the particular field editor with required UI customization usin
 ![Blazor DataForm Form Item](images/blazor_dataform_template.png)
 
 We can also integrate the `FormTemplate` renderer along with `FormItem` like [FormAutoGenerateItem](./form-items) usage with it.
+
+{% tabs %}
+{% highlight razor tabtitle="Form Template" hl_lines="3 10" %}
+
+@using Syncfusion.Blazor.DataForm
+@using System.ComponentModel.DataAnnotations
+
+<SfDataForm Width="50%"
+            Model="@RegistrationDetailsModel">
+
+    <FormValidator>
+        <DataAnnotationsValidator></DataAnnotationsValidator>
+    </FormValidator>
+
+    <FormItems>
+        <FormItem Field="@nameof(RegistrationDetailsModel.Name)"></FormItem>
+    </FormItems>
+
+    <FormTemplate>
+         @* Insert your template layout code here to incorporate additional editor components corresponding to their respective fields *@
+    </FormTemplate>
+
+</SfDataForm>
+
+@code {
+
+    public class RegistrationDetails
+    {
+
+        [Required(ErrorMessage = "Please enter your name")]
+        public string Name { get; set; }
+
+        [Required(ErrorMessage = "Please enter your email address")]
+        [EmailAddress(ErrorMessage = "Please enter valid email address")]
+        public string Email { get; set; }
+    }
+
+    private RegistrationDetails RegistrationDetailsModel = new RegistrationDetails();
+}
+
+{% endhighlight %}
+{% endtabs %}
