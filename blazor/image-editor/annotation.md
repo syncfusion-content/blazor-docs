@@ -233,7 +233,7 @@ Here is an example of adding additional font family using the [`FontFamily`](htt
     };
     private async void OpenAsync() 
     { 
-        await ImageEditor.OpenAsync("https://www.shutterstock.com/image-photo/linked-together-life-cropped-shot-600w-2149264221.jpg"); 
+        await ImageEditor.OpenAsync("nature.png"); 
     }
     private async void FileOpenAsync() 
     { 
