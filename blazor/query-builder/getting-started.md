@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting Started with Blazor QueryBuilder Component | Syncfusion
-description: Checkout and learn about getting started with Blazor QueryBuilder component in Blazor Server App and Blazor WebAssembly App.
+title: Getting Started with Blazor Query Builder Component | Syncfusion
+description: Checkout and learn about getting started with Blazor Query Builder component in Blazor Server App and Blazor WebAssembly App.
 platform: Blazor
 control: QueryBuilder
 documentation: ug
 ---
 
-# Getting Started with Blazor QueryBuilder Component
+# Getting Started with Blazor Query Builder Component
 
 This section briefly explains about how to include [Blazor QueryBuilder](https://www.syncfusion.com/blazor-components/blazor-query-builder) component in your Blazor Server App and Blazor WebAssembly App using Visual Studio.
 
@@ -150,7 +150,7 @@ Add the Syncfusion Blazor QueryBuilder component in the **~/Pages/Index.razor** 
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion Blazor QueryBuilder component in your default web browser.
 
-![Blazor QueryBuilder Component](./images/blazor-querybuilder-component.png)
+![Blazor Query Builder Component.](./images/blazor-query-builder-component.png)
 
 ## See also
 
