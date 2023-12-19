@@ -125,7 +125,7 @@ The below example shows an animated sequence that initiates with the axis line, 
 
 @using Syncfusion.Blazor.CircularGauge;
 
-<SfCircularGauge AnimationDuration="2000" Background="transparent">
+<SfCircularGauge AnimationDuration="2000">
         <CircularGaugeAxes>
             <CircularGaugeAxis Radius="80%" StartAngle="230" EndAngle="130">
                 <CircularGaugeAxisLabelStyle Offset="-1">

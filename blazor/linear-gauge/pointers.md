@@ -51,6 +51,7 @@ By default, the marker shape for the pointer is **InvertedTriangle**. To change 
 * InvertedTriangle
 * Diamond
 * Image
+* Text
 
 An image can be rendered instead of rendering a shape as a pointer. It can be achieved by setting the [MarkerType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugePointer.html#Syncfusion_Blazor_LinearGauge_LinearGaugePointer_MarkerType) property to **Image** and setting the source URL of image to [ImageUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugePointer.html#Syncfusion_Blazor_LinearGauge_LinearGaugePointer_ImageUrl) property in [LinearGaugePointer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugePointer.html).
 
@@ -70,6 +71,50 @@ An image can be rendered instead of rendering a shape as a pointer. It can be ac
 ```
 
 ![Blazor Linear Gauge with Marker Pointer](images/blazor-linear-gauge-marker-pointer.png)
+
+The text can be added instead of rendering a shape as a pointer. It can be achieved by setting the [MarkerType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugePointer.html#Syncfusion_Blazor_LinearGauge_LinearGaugePointer_MarkerType) property to **Text** and the text value can be set using the [Text](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugePointer.html#Syncfusion_Blazor_LinearGauge_LinearGaugePointer_Text) property in [LinearGaugePointer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugePointer.html).
+
+The text style of the text pointer can be customized using the following options available in the [LinearGaugeMarkerTextStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugeMarkerTextStyle.html#properties) tag.
+
+* [FontFamily](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugeMarkerTextStyle.html#Syncfusion_Blazor_LinearGauge_LinearGaugeMarkerTextStyle_FontFamily) - It is used to change the font family of the text.
+* [FontStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugeMarkerTextStyle.html#Syncfusion_Blazor_LinearGauge_LinearGaugeMarkerTextStyle_FontStyle) - It is used to change the font style of the text.
+* [FontWeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugeMarkerTextStyle.html#Syncfusion_Blazor_LinearGauge_LinearGaugeMarkerTextStyle_FontWeight) - It is used to change the font weight of the text.
+* [Size](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugeMarkerTextStyle.html#Syncfusion_Blazor_LinearGauge_LinearGaugeMarkerTextStyle_Size) - It is used to change the font size of the text.
+
+```cshtml
+@using Syncfusion.Blazor.LinearGauge;
+
+<SfLinearGauge Orientation="Orientation.Horizontal">
+    <LinearGaugeAxes>
+        <LinearGaugeAxis Minimum="0" Maximum="100" OpposedPosition="true">
+            <LinearGaugeLine Width="5" />
+            <LinearGaugeMajorTicks Interval="20" Height="7" Width="1" Position="Position.Inside" />
+            <LinearGaugeMinorTicks Interval="10" Height="3" Position="Position.Inside" />
+            <LinearGaugeAxisLabelStyle Position="Position.Inside">
+                <LinearGaugeAxisLabelFont FontFamily="inherit" />
+            </LinearGaugeAxisLabelStyle>
+            <LinearGaugePointers>
+                <LinearGaugePointer PointerValue="13" MarkerType="MarkerType.Text" Text="Low" Color="Black" Offset="-55">
+                    <LinearGaugeMarkerTextStyle Size="18px" FontWeight="Bold"></LinearGaugeMarkerTextStyle>
+                </LinearGaugePointer>
+                <LinearGaugePointer PointerValue="48" MarkerType="MarkerType.Text" Text="Moderate" Color="Black" Offset="-55">
+                    <LinearGaugeMarkerTextStyle Size="18px" FontWeight="Bold"></LinearGaugeMarkerTextStyle>
+                </LinearGaugePointer>
+                <LinearGaugePointer PointerValue="83" MarkerType="MarkerType.Text" Text="High" Color="Black" Offset="-55">
+                    <LinearGaugeMarkerTextStyle Size="18px" FontWeight="Bold"></LinearGaugeMarkerTextStyle>
+                </LinearGaugePointer>
+            </LinearGaugePointers>
+            <LinearGaugeRanges>
+                <LinearGaugeRange Start="0" End="30" StartWidth="50" EndWidth="50" Color="#6FC78A" Position="Position.Inside" />
+                <LinearGaugeRange Start="30" End="65" StartWidth="50" EndWidth="50" Color="#ECC85B" Position="Position.Inside" />
+                <LinearGaugeRange Start="65" End="100" StartWidth="50" EndWidth="50" Color="#FB7D55" Position="Position.Inside" />
+            </LinearGaugeRanges>
+        </LinearGaugeAxis>
+    </LinearGaugeAxes>
+</SfLinearGauge>
+```
+
+![Blazor Linear Gauge with Text Pointer](images/blazor-linear-gauge-text-pointer.png)
 
 <b>Marker pointer customization</b>
 

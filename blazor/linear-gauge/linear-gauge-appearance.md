@@ -181,7 +181,7 @@ The below example shows an animated sequence that initiates with the axis line a
 
 @using Syncfusion.Blazor.LinearGauge;
 
-<SfLinearGauge Orientation="Orientation.Horizontal" AnimationDuration="3000" Background="transparent" Width="450px">
+<SfLinearGauge Orientation="Orientation.Horizontal" AnimationDuration="3000">
         <LinearGaugeAxes>
             <LinearGaugeAxis>
                 <LinearGaugeAxisLabelStyle Offset="48">
