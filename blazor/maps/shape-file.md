@@ -27,7 +27,7 @@ Shapefile can be used to render vector shape maps in the Maps component by speci
             <MapsLayer ShapeData='new {dataOptions = "https://cdn.syncfusion.com/maps/map-data/usa-states.shp"}' TValue="string">
                 <MapsMarkerClusterSettings AllowClustering="true" AllowClusterExpand="true" Shape="MarkerType.Circle" Height="40" Width="40">
                     <MapsLayerMarkerClusterLabelStyle Color="#FFFFFF" />
-                    <MapsLayerMarkerClusterConnectorLineSettings Color="@ConnectorLineColor" />
+                    <MapsLayerMarkerClusterConnectorLineSettings Color="#000000" />
                 </MapsMarkerClusterSettings>
                 <MapsMarkerSettings>
                     <MapsMarker Visible="true" TValue="TopUniversitiesDetails" Height=15 Width=15 DataSource="@TopUniversities" Shape="MarkerType.Circle" Fill="red" AnimationDuration="0">
@@ -41,13 +41,9 @@ Shapefile can be used to render vector shape maps in the Maps component by speci
         </MapsLayers>
         <MapsZoomSettings Enable="false" />
         <MapsLegendSettings Visible="false" />
-        <MapsTitleSettings Text="Top 10 Affordable Universities in the United States">
-            <MapsTitleTextStyle Size="16px" FontFamily="inherit" />
-        </MapsTitleSettings>
     </SfMaps>
 </div>
 @code {
-    public string ConnectorLineColor = "#000000";
     public class TopUniversitiesDetails
     {
         public double Latitude { get; set; }

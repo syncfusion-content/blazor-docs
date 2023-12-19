@@ -160,18 +160,14 @@ The animation of the Circular Gauge is demonstrated in the example below.
             <CircularGaugeAnnotations>
                 <CircularGaugeAnnotation Angle="165" Radius="35%" ZIndex="1">
                     <ContentTemplate>
-                        <div style="font-size:18px;margin-left: -20px;margin-top: -12px; color:#9DD55A">@PointerValue</div>
+                        <div style="font-size:18px;margin-left: -20px;margin-top: -12px; color:#9DD55A">60</div>
                     </ContentTemplate>
                 </CircularGaugeAnnotation>
             </CircularGaugeAnnotations>
             </CircularGaugeAxis>
         </CircularGaugeAxes>
     </SfCircularGauge>
-
-@code {
-    public double PointerValue = 60;
-}
-
+    
 ```
 
 ![Blazor Circular Gauge animation](./images/blazor-circulargauge-multiple-elements-animation.gif)

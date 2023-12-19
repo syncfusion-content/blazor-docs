@@ -182,13 +182,13 @@ The [Refresh](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.SfMap
 
 <button @onclick="GetMinMaxLatitudeLongitude">GetMinMaxLatitudeLongitude</button>
 
-@if(mapBounds != null)
+@if(MapBoundCoordinates != null)
 {
     <div>
-        MaximumLatitude = @mapBounds.MaxLatitude <br/>
-        MinimumLatitude = @mapBounds.MinLatitude  <br />
-        MaximumLongitude = @mapBounds.MaxLongitude <br />
-        MinimumLongitude = @mapBounds.MinLongitude
+        MaximumLatitude = @MapBoundCoordinates.MaxLatitude <br/>
+        MinimumLatitude = @MapBoundCoordinates.MinLatitude  <br />
+        MaximumLongitude = @MapBoundCoordinates.MaxLongitude <br />
+        MinimumLongitude = @MapBoundCoordinates.MinLongitude
     </div>
 }
 
@@ -212,7 +212,7 @@ The [Refresh](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.SfMap
     public double ZoomFactor = 7;
     public double CenterLat = 21.815447;
     public double CenterLong = 80.1932;
-    public MinMaxLatitudeLongitude mapBounds;
+    public MinMaxLatitudeLongitude MapBoundCoordinates;
 
     public class MarkerData
     {
@@ -223,7 +223,7 @@ The [Refresh](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.SfMap
 
     public void GetMinMaxLatitudeLongitude()
     {
-        mapBounds = MapsRef?.GetMinMaxLatitudeLongitude();
+        MapBoundCoordinates = MapsRef?.GetMinMaxLatitudeLongitude();
     }
 
     public ObservableCollection<MarkerData> MarkerDataSource = new ObservableCollection<MarkerData> {
