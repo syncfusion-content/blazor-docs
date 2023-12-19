@@ -87,7 +87,7 @@ You can manually handle the Gantt chart’s state by using built-in state persis
                 Toolbar="Toolbaritems" AllowReordering="true" AllowFiltering="true" AllowSorting="true"
                 AllowResizing="true" ShowColumnMenu="true" EnablePersistence="true">
     <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress"
-                    ParentID="ParentId"></GanttTaskFields>
+                    Dependency="Predecessor" ParentID="ParentId"></GanttTaskFields>
     <GanttEvents OnToolbarClick="ToolbarClickHandler" TValue="TaskData"></GanttEvents>
 </SfGantt>
 

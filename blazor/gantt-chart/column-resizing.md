@@ -114,3 +114,23 @@ In the following example, the minimum and maximum widths are defined for the `Du
     }
 }
 ```
+
+## Touch interaction 
+
+The Gantt Chart component supports to perform user interactions in mobile and tablet devices. This section explains how to interact with the Gantt features in touch-enabled devices.
+
+When the right edge of the column header cell is `tapped`, a floating handler will be visible over the right border of the column. To [Resize](columns/#column-resizing) the column, drag the floating handler as needed.
+
+The following screenshot represents the Gantt column resizing in touch device.
+
+![Resizing Column in Blazor Gantt Chart](images/blazor-gantt-chart-column-resizing.png)
+
+When you `tap` gantt row, tapped row will be selected.
+
+[Single selection](selection/#selection-mode) : To select a single row or cell, perform `single tap` on it.
+
+[Multiple selection](selection/#multiple-row-selection) : To perform multiple selection, `tap` on the multiple selection popup, and then tap the desired rows or cells.
+
+![Multiple selection in Blazor Gantt Chart](images/blazor-gantt-chart-multiple-selection.PNG)
+
+N> You can refer to our [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Gantt Chart example](https://blazor.syncfusion.com/demos/gantt-chart/default-functionalities?theme=bootstrap4) to know how to render and configure the Gantt.
