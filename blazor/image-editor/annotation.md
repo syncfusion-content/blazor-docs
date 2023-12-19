@@ -212,7 +212,7 @@ Here is an example of adding additional font family using the [`fontFamily`](htt
     <SfButton OnClick="BrushScriptMTAsync">Brush Script MT</SfButton>
     <SfButton OnClick="PapyrusAsync">Papyrus</SfButton>
     <SfButton OnClick="TimesNewRomanAsync">Times New Roman</SfButton>
-    <SfButton OnClick="CourierNewTextAsync">Courier New</SfButton>
+<SfButton OnClick="CourierNewTextAsync">Courier New</SfButton>
 </div>
  
 <SfImageEditor @ref="ImageEditor" Toolbar="customToolbarItem" Height="400">
