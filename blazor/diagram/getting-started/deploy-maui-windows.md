@@ -51,31 +51,28 @@ using Syncfusion.Blazor;
 
 namespace MauiBlazorWindow;
 
-public static class MauiProgram
-{
-    public static MauiApp CreateMauiApp()
+    public static class MauiProgram
     {
-        var builder = MauiApp.CreateBuilder();
-        builder
-            .UseMauiApp<App>()
-            .ConfigureFonts(fonts =>
-            {
-                fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
-            });
+        public static MauiApp CreateMauiApp()
+        {
+            var builder = MauiApp.CreateBuilder();
+            builder
+                .UseMauiApp<App>()
+                .ConfigureFonts(fonts =>
+                {
+                    fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
+                });
 
-        builder.Services.AddMauiBlazorWebView();
-        builder.Services.AddMemoryCache();
-
+            builder.Services.AddMauiBlazorWebView();
+            builder.Services.AddSyncfusionBlazor();
 #if DEBUG
-        builder.Services.AddBlazorWebViewDeveloperTools();
-        builder.Logging.AddDebug();
+            builder.Services.AddBlazorWebViewDeveloperTools();
+    		builder.Logging.AddDebug();
 #endif
 
-        builder.Services.AddSingleton<WeatherForecastService>();
-        builder.Services.AddSyncfusionBlazor();
-        return builder.Build();
+            return builder.Build();
+        }
     }
-}
 
 {% endhighlight %}
 {% endtabs %}
@@ -235,6 +232,8 @@ Add the Syncfusion PDF Viewer (Next Gen) component in the **~/Pages/Index.razor*
 
 {% endhighlight %}
 {% endtabs %}
+
+N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/DiagramComponent).
 
 ## Run on Windows
 
