@@ -240,13 +240,13 @@ Here is an example of straightening the image using the [`StraightenImageAsync`]
 @using Syncfusion.Blazor.Buttons
  
 <div style="padding-bottom: 15px">
-<SfButton OnClick="StraightenLeftAsync">Straighten Left</SfButton>
-<SfButton OnClick="StraightenRightAsync">Straighten Right</SfButton>
-<SfButton OnClick="ResetAsync">Reset</SfButton>
+    <SfButton OnClick="StraightenLeftAsync">Straighten Left</SfButton>
+    <SfButton OnClick="StraightenRightAsync">Straighten Right</SfButton>
+    <SfButton OnClick="ResetAsync">Reset</SfButton>
 </div>
  
 <SfImageEditor @ref="ImageEditor" Toolbar="customToolbarItem" Height="400">
-<ImageEditorEvents Created="OpenAsync"></ImageEditorEvents>
+    <ImageEditorEvents Created="OpenAsync"></ImageEditorEvents>
 </SfImageEditor>
  
 @code {
