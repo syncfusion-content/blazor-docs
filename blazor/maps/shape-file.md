@@ -1,20 +1,21 @@
 ---
 layout: post
-title: ShapeFile in Blazor Maps Component | Syncfusion
-description: Checkout and learn here all about ShapeFile in Syncfusion Blazor Maps component and much more details.
+title: Shapefile in Blazor Maps component | Syncfusion
+description: Checkout and learn here all about Shapefile in Syncfusion Blazor Maps component and much more details.
 platform: Blazor
 control: Maps
 documentation: ug
 ---
 
-# ShapeFile in Blazor Maps Component
+# Shapefile in Blazor Maps Component
 
-The shapefile format is a popular geospatial vector data format used to store location-based information, including shapes, spatial locations, and pertinent properties of geographic landmarks.
+Shapefile is a popular geospatial vector data format for storing location-based information such as shapes, spatial locations, and pertinent properties of geographic landmarks.
 
-## Adding ShapeFile
+## Adding shapefile
 
-The Geographic data can be rendered like the USA map when using the Shapefile in the Map component. You can accomplish this by using the `ShapeData` property of the [MapsLayer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html). For the purpose of visualizing the states, regions, and boundaries defined in the Shapefile on the Map interface, the `ShapeData` property effectively serves as a container for the provided Shapefile. The USA map borders and any other geographical data contained in the Shapefile can be appropriately shown by the Map component.
+Shapefile can be used to render vector shape maps in the Maps component by specifying the remotely hosted file path of the shapefile in the [MapsLayer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html)'s [ShapeData](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html#Syncfusion_Blazor_Maps_MapsLayer_1_ShapeData) property.
 
+> Only when the shapefile is hosted on a remote server it will be displayed in the Maps component.
 
 ```cshtml
 @using Syncfusion.Blazor.Maps
@@ -72,17 +73,47 @@ The Geographic data can be rendered like the USA map when using the Shapefile in
 
 ![Blazor ShapeFile](./images/Shapefile/blazor-shapefile.png)
 
-## Adding shapefile as sublayer
+## Multilayer
 
-The shapefile can be added in three possible ways.
+The shapefile can also be rendered in multilayer structure as explained in [this section](https://blazor.syncfusion.com/documentation/maps/layers#multilayer) for GeoJSON map. Shapefiles can be added as multilayers in the ways listed below.
 
-1. The shapefile can be rendered as sublayer on top of the online map providers.
-2. The shapefile can be rendered as sublayer on top of the GeoJSON data format shapes.
-3. The shapefile can be rendered as main layer and add the GEoJSON data format shapes as sublayer.
+1. On top of the online map providers, the shapefile can be shown as a sublayer.
+2. The shapefile can be shown as a sublayer above the GeoJSON map.
+3. The GeoJSON map can be displayed as a sublayer over the shapefile map.
+4. Shapefiles can be provided as both main and sublayer layers.
 
-The Shapefile format shapes can be rendered as a sublayer by specifying the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html#Syncfusion_Blazor_Maps_MapsLayer_1_Type) property of [MapsLayer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html) to **SubLayer**.
+## Customizations
 
+You learned about some customizations in GeoJSON maps in the previous sections. However, above customizations are also relevant to shapefile maps. Please see [this section](shape-file) for additional details on the shapefile.
 
+## Color mapping
 
+You learned about color mapping in GeoJSON maps in the previous sections. However, color mapping and all of its supported functionalities are also relevant to shapefile maps. Please see [this section](shape-file) for additional details on the shapefile.
 
+## Data labels
 
+You learned about data labels and their functions with GeoJSON maps in the previous sections. However, data labels and all of its supported functionalities are also relevant to shapefile maps. Please see [this section](shape-file) for additional details on the shapefile.
+
+## Polygons
+
+To add the polygon shape over the shapefile in the Maps, following a similar approach as with GEOJSON format data. Instead of binding the GEOJSON format data, you can bind the shapefile format. For more information about the Shapefile, please refer to the link [How to add shapefile format data in the Maps](shape-file).
+
+## Markers
+
+To add the markers over the shapefile in the Maps, following a similar approach as with GEOJSON format data. Instead of binding the GEOJSON format data, you can bind the shapefile format. For more information about the Shapefile, please refer to the link [How to add shapefile format data in the Maps](shape-file).
+
+## Bubbles
+
+You learned about bubbles and their functions with GeoJSON maps in the previous sections. However, bubbles and all of its supported functionalities are also relevant to shapefile maps. Please see [this section](shape-file) for additional details on the shapefile.
+
+## Legends
+
+To add the legends for the shapes in the Maps shapefile, following a similar approach as with GEOJSON format data. Instead of binding the GEOJSON format data, you can bind the shapefile format. For more information about the Shapefile, please refer to the link [How to add shapefile format data in the Maps](shape-file).
+
+## Navigation lines
+
+To add the navigation line over the shapefile in the Maps, following a similar approach as with GEOJSON format data. Instead of binding the GEOJSON format data, you can bind the shapefile format. For more information about the Shapefile, please refer to the link [How to add shapefile format data in the Maps](shape-file).
+
+## Annotations
+
+You learned about annotations and their functions with GeoJSON maps in the previous sections. However, annotations and all of its supported functionalities are also relevant to shapefile maps. Please see [this section](shape-file) for additional details on the shapefile.

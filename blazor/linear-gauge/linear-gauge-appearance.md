@@ -169,13 +169,15 @@ The Linear Gauge component is rendered with margin by default. To remove the mar
 N>To use this feature, set the [AllowMargin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.SfLinearGauge.html#Syncfusion_Blazor_LinearGauge_SfLinearGauge_AllowMargin) property to **false**, the [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.SfLinearGauge.html#Syncfusion_Blazor_LinearGauge_SfLinearGauge_Width) property to **100%** and the properties of [LinearGaugeMargin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugeMargin.html) to **0**.
 
 
-## Animating multiple elements simultaneously in Linear Gauge
+## Animating Linear Gauge completely
 
-The Linear Gauge elements can be animated individually by using specific properties. Instead of that, you can animate all the elements such as axis lines, axis labels, tick lines, pointers, ranges, and annotations simultaneously by using the [AnimationDuration](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.SfLinearGauge.html#Syncfusion_Blazor_LinearGauge_SfLinearGauge_AnimationDuration) property, which controls the smoother visual effect and makes it easier to animate the elements.
+By setting the [AnimationDuration](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.SfLinearGauge.html#Syncfusion_Blazor_LinearGauge_SfLinearGauge_AnimationDuration) property, all of the elements in the Linear Gauge, such as the axis lines, ticks, labels, ranges, pointers and annotations, can be animated sequentially. When the `AnimationDuration` property is set to a value in milliseconds, the animation for the Linear Gauge is started, providing a smooth rendering effect for the component. The animation effect will not be started if the property is set to **0**, which is the default value. If this animation is enabled, the component will exhibit the following behavior.
 
+1. At the same time, the axis line, ticks, labels, and ranges will be animated.
+2. Pointers will be animated next if they are available.
+3. Annotations will be animated if they are available.
 
-The below example shows an animated sequence that initiates with the axis line and axis labels, followed by animations for ranges, pointers, and annotations.
-
+The animation of the Linear Gauge is demonstrated in the example below.
 
 ```cshtml
 
@@ -208,4 +210,4 @@ The below example shows an animated sequence that initiates with the axis line a
 
 ```
 
-![Blazor Linear Gauge animation for multiple elements ](images/blazor-linear-gauge-multiple-elements-animation.gif)
+![Blazor Linear Gauge animation](images/blazor-linear-gauge-multiple-elements-animation.gif)

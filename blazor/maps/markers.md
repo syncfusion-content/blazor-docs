@@ -652,7 +652,3 @@ Tooltip is used to display more information about a marker on mouse over or touc
 ## See also
 
 * [Add different types of markers](how-to/add-different-types-of-markers)
-
-## Adding markers over the shapefile
-
-To add the markers over the shapefile in the Maps, following a similar approach as with GEOJSON format data. Instead of binding the GEOJSON format data, you can bind the shapefile format. For more information about the Shapefile, please refer to the link [How to add shapefile format data in the Maps](shape-file).

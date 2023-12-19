@@ -174,7 +174,7 @@ The [Refresh](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.SfMap
 
 ## GetMinMaxLatitudeLongitude
 
-[GetMinMaxLatitudeLongitude](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.SfMaps.html#Syncfusion_Blazor_Maps_SfMaps_GetMinMaxLatitudeLongitude) method is used to determine the minimum and maximum latitude and longitude values of the Maps bounds and return type can be specified as [MinMaxLatitudeLongitude](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MinMaxLatitudeLongitude.html), which contains the minimum and maximum latitude and longitude coordinates of the Maps bounds.
+[GetMinMaxLatitudeLongitude](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.SfMaps.html#Syncfusion_Blazor_Maps_SfMaps_GetMinMaxLatitudeLongitude) method is used to get the minimum and maximum latitude and longitude values of the visible area of the Maps. This method returns [MinMaxLatitudeLongitude](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MinMaxLatitudeLongitude.html), which provides the minimum and maximum latitude and longitude coordinates of the Maps.
 
 ```cshtml
 @using Syncfusion.Blazor.Maps
@@ -233,4 +233,4 @@ The [Refresh](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.SfMap
 }
 ```
 
-![Blazor Maps with GetMinMaxLatitudeLongitude Method](./images/Methods/blazor-maps-getminmaxlatitudelongitude.png)
+![Blazor Maps with GetMinMaxLatitudeLongitude method](./images/Methods/blazor-maps-getminmaxlatitudelongitude.png)

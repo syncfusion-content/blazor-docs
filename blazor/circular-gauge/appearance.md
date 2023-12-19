@@ -113,13 +113,16 @@ You can render semi or quarter Circular Gauge by modifying the start and end ang
 
 ![Blazor Circular Gauge with Custom Radius and Angle](./images/blazor-circulargauge-custom-radius-angle.png)
 
-## Animating multiple elements simultaneously in Circular Gauge
+## Animating Circular Gauge completely
 
-The Circular Gauge elements can be animated individually by using specific properties. Instead of that, you can animate all the elements such as axis lines, axis labels,  tick lines, pointers, ranges, and annotations simultaneously by using the [AnimationDuration](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.SfCircularGauge.html#Syncfusion_Blazor_CircularGauge_SfCircularGauge_AnimationDuration) property, which controls the smoother visual effect and makes it easier to animate the elements.
+By setting the [AnimationDuration](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.SfCircularGauge.html#Syncfusion_Blazor_CircularGauge_SfCircularGauge_AnimationDuration) property, all of the elements in the Circular Gauge, such as the axis lines, ticks, labels, ranges, pointers, and annotations, can be animated sequentially. When the `AnimationDuration` property is set to a value in milliseconds, the animation for the Circular Gauge is started, providing a smooth rendering effect for the component. The animation effect will not be started if the property is set to **0**, which is the default value. If this animation is enabled, the component will exhibit the following behavior.
+1. The axis line will be animated in the direction of rendering (clockwise or anticlockwise).
+2. After that, each tick line and label will be animated.
+3. Ranges will be animated if they are available.
+4. Pointers will be animated in the same way as [pointer animation](https://blazor.syncfusion.com/documentation/circular-gauge/pointers#pointer-animation) if they are available.
+5. Annotations will be animated if they are available.
 
-
-The below example shows an animated sequence that initiates with the axis line, followed by animations for axis labels, ranges, pointers, and annotations.
-
+The animation of the Circular Gauge is demonstrated in the example below.
 
 ```cshtml
 
@@ -171,6 +174,6 @@ The below example shows an animated sequence that initiates with the axis line, 
 
 ```
 
-![Blazor Circular Gauge animation for multiple elements ](./images/blazor-circulargauge-multiple-elements-animation.gif)
+![Blazor Circular Gauge animation](./images/blazor-circulargauge-multiple-elements-animation.gif)
 
 

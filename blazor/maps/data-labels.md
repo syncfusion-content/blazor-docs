@@ -201,7 +201,3 @@ N>The customization properties of data label, [SmartLabelMode](https://help.sync
 ```
 
 ![Blazor Maps with Data Label Template](./images/DataLabel/blazor-maps-data-label-template.PNG)
-
-## Adding data labels over the shapefile
-
-To display the data labels over the shapefile in the Maps, following a similar approach as with GEOJSON format data. Instead of binding the GEOJSON format data, you can bind the shapefile format. For more information about the Shapefile, please refer to the link [How to add shapefile format data in the Maps](shape-file).
