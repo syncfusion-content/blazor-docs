@@ -123,7 +123,7 @@ Add the Syncfusion Blazor DataGrid component in `.razor` file inside the `Pages`
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion Blazor DataGrid component in your default web browser.
 
 
-![Blazor DataGrid Component](images/blazor-datagrid-component.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hDLUDdjxJvxjQlaM?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor DataGrid Component](images/blazor-datagrid-component.png)" %}
 
 ## Defining Row Data
 
@@ -266,6 +266,8 @@ The grouping feature enables you to view the datagrid record in a grouped view. 
 
 {% endhighlight %}
 {% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BjBUZHiEpcpLLDat?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor DataGrid Component](images/blazor-datagrid.gif)" %}
 
 ## Handling exceptions
 

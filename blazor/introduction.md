@@ -195,13 +195,12 @@ padding-top: 20px;
     * [Product Development Life Cycle](https://www.syncfusion.com/support/product-lifecycle/estudio)
 
 * Visual Studio
-
     * [Getting started with Syncfusion Blazor Components in Web App](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app)
     * [Getting started with Syncfusion Blazor Components in Server App](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio)
     * [Getting started with Syncfusion Blazor Components in WebAssembly App](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-visual-studio)
 
 * .NET CLI
-
+    * [Getting started with Syncfusion Blazor Components in Web App](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app-dotnet-cli)
     * [Getting started with Syncfusion Blazor Components in Server App](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-dotnet-cli)
     * [Getting started with Syncfusion Blazor Components in WebAssembly App](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-dotnet-cli)
 

@@ -9,9 +9,9 @@ documentation: ug
 
 # Prevent default Tree Grid action in Blazor TreeGrid Component
 
-The default Tree Grid actions can be prevented by canceling them in the [OnActionBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_OnActionBegin) event.
+The default Tree Grid actions can be prevented by canceling them in the [RowCreating](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_RowCreating) event.
 
-This is demonstrated in the below sample code where the `Add` operation is prevented by setting `Cancel` argument value of the [OnActionBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_OnActionBegin) event to **false**.
+This is demonstrated in the below sample code where the `Add` operation is prevented by setting `Cancel` argument value of the [RowCreating](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_RowCreating) event to **false**.
 
 {% tabs %}
 
@@ -23,7 +23,7 @@ This is demonstrated in the below sample code where the `Add` operation is preve
 
 <SfTreeGrid @ref="TreeGrid" DataSource="@TreeGridData" IdMapping="TaskId" ParentIdMapping="ParentId"
             TreeColumnIndex="1" AllowPaging="true" Toolbar="@(new List<string>() { "Add", "Delete", "Edit","Update", "Cancel" })">
-    <TreeGridEvents OnActionBegin="OnActionBegin" TValue="TreeData"></TreeGridEvents>
+    <TreeGridEvents RowCreating="RowCreatingHandler" TValue="TreeData"></TreeGridEvents>
     <TreeGridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true"></TreeGridEditSettings>
     <TreeGridPageSettings PageSize="8"></TreeGridPageSettings>
     <TreeGridColumns>
@@ -47,12 +47,9 @@ This is demonstrated in the below sample code where the `Add` operation is preve
     {
         this.TreeGridData = TreeData.GetSelfDataSource().ToList();
     }
-    public void OnActionBegin(ActionEventArgs<TreeData> args)
+    public void RowCreatingHandler(RowCreatingEventArgs<TreeData.BusinessObject> args)
     {
-        if (args.RequestType == Syncfusion.Blazor.Grids.Action.Add)
-        {
-            args.Cancel = true;
-        }
+        args.Cancel = true;
     }
 }
 
