@@ -81,7 +81,7 @@ Here is an example of flipping an image in a button click event.
 }
 ```
 
-![Blazor Image Editor with Flip an image](./images/blazor-image-editor-flip.png)
+![Blazor Image Editor with Flip an image](./images/blazor-image-editor-flip.jpg)
 
 ## Straightening in the Blazor Image Editor
 
@@ -218,7 +218,7 @@ Here is an example of specifying [`MinZoomFactor`](https://help.syncfusion.com/c
 }
 ```
 
-![Blazor Image Editor with Zoom](./images/blazor-image-editor-zoom.png)
+![Blazor Image Editor with Zoom](./images/blazor-image-editor-zoom.jpg)
 
 ## Panning an image
 

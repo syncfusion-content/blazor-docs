@@ -57,7 +57,7 @@ Here is an example of square selection using the [`SelectAsync`](https://help.sy
 }
 ```
 
-![Blazor Image Editor with Square select](./images/blazor-image-editor-custom-square.png)
+![Blazor Image Editor with Square select](./images/blazor-image-editor-custom-square.jpg)
 
 ## Insert selection based on aspect ratio 
 
@@ -98,7 +98,7 @@ Here is an example of ratio selection using the [`SelectAsync`](https://help.syn
 }
 ```
 
-![Blazor Image Editor with Ratio select](./images/blazor-image-editor-custom-ratio.png)
+![Blazor Image Editor with Ratio select](./images/blazor-image-editor-custom-ratio.jpg)
 
 ## Resize selections
 
@@ -147,7 +147,7 @@ Here is an example of changing the selection region using the [`SelectionChangeE
 }
 ```
 
-![Blazor Image Editor with Resize the custom selection](./images/blazor-image-editor-resize-selection.png)
+![Blazor Image Editor with Resize the custom selection](./images/blazor-image-editor-resize-selection.jpg)
 
 ## Crop an image
 
