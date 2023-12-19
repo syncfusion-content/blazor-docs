@@ -38,8 +38,6 @@ To enable the `HeaderText` property, you simply need to define it in the **GridC
     }   
 }
 {% endhighlight %}
-{% endtabs %}
-{% tabs %}
 {% highlight c# tabtitle="Order.cs" %}
     public class OrderData
     {
@@ -166,8 +164,6 @@ In this demo, the custom element is rendered for both **EmployeeID** and **Order
     }   
 }
 {% endhighlight %}
-{% endtabs %}
-{% tabs %}
 {% highlight c# tabtitle="OrderData.cs" %}
   public class OrderData
     {
@@ -274,8 +270,6 @@ In the following sample, the columns **Order Date**, and **Freight** are grouped
     }   
 }
 {% endhighlight %}
-{% endtabs %}
-{% tabs %}
 {% highlight c# tabtitle="OrderData.cs" %}
     public class OrderData
     {
@@ -359,8 +353,6 @@ Here is an example of using the `HeaderTextAlign` property to align the text of 
     }   
 }
 {% endhighlight %}
-{% endtabs %}
-{% tabs %}
 {% highlight c# tabtitle="OrderData.cs" %}
     public class OrderData
     {
@@ -447,8 +439,6 @@ In the following example, the [TextWrapSettings.WrapMode](https://help.syncfusio
     }   
 }
 {% endhighlight %}
-{% endtabs %}
-{% tabs %}
 {% highlight c# tabtitle="OrderData.cs" %}
     public class OrderData
     {
@@ -597,8 +587,6 @@ This is demonstrated in the following sample:
     }
 }
 {% endhighlight %}
-{% endtabs %}
-{% tabs %}
 {% highlight c# tabtitle="OrderData.cs" %}
     public class OrderData
     {
@@ -689,8 +677,6 @@ Here's an example that demonstrates how to customize the appearance of a specifi
     }
 }
 {% endhighlight %}
-{% endtabs %}
-{% tabs %}
 {% highlight c# tabtitle="OrderData.cs" %}
     public class OrderData
     {
@@ -789,8 +775,6 @@ The following example demonstrates how to customize the appearance of the **Orde
     }
 }
 {% endhighlight %}
-{% endtabs %}
-{% tabs %}
 {% highlight c# tabtitle="OrderData.cs" %}
     public class OrderData
     {
