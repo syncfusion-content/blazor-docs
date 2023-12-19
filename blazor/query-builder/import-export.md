@@ -173,4 +173,64 @@ The defined conditions can be exported to the SQL query through the [GetSqlFromR
 
 ```
 
+## Importing and Exporting the Json data
+
+Importing and Exporting the Json data allows to save or set the conditions through the [Blazor Query Builder](https://www.syncfusion.com/blazor-components/blazor-query-builder).
+
+### Importing from Json
+
+You can set the conditions from the Json query through the [SetRules](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder-1.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_1_SetRules_System_Collections_Generic_List_Syncfusion_Blazor_QueryBuilder_RuleModel__System_String_System_Nullable_System_Boolean__) method and using the JsonConvert DeserializeObject method.
+
+### Exporting from Json
+
+The defined conditions can be exported to the Json query through the [GetRules](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder-1.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_1_GetRules) method and using the JsonConvert SerializeObject method.
+
+```cshtml
+@using Syncfusion.Blazor.Buttons
+@using Syncfusion.Blazor.QueryBuilder
+@using Newtonsoft.Json
+
+<SfQueryBuilder TValue="EmployeeDetails" @ref="QueryBuilderObj">
+    <QueryBuilderColumns>
+        <QueryBuilderColumn Field="EmployeeID" Label="Employee ID" Type="ColumnType.Number"></QueryBuilderColumn>
+        <QueryBuilderColumn Field="FirstName" Label="First Name" Type="ColumnType.String"></QueryBuilderColumn>
+        <QueryBuilderColumn Field="HireDate" Label="Hire Date" Type="ColumnType.Date" Format="yyyy-dd-MM" Operators="dateOpr"></QueryBuilderColumn>
+    </QueryBuilderColumns>
+</SfQueryBuilder>
+
+<SfButton id="open" CssClass="e-primary" @onclick="Get">Get</SfButton>
+<SfButton id="open" CssClass="e-primary" @onclick="Set">Set</SfButton>
+
+@code {
+    private SfQueryBuilder<EmployeeDetails> QueryBuilderObj;
+    private List<OperatorsModel> dateOpr = new List<OperatorsModel> {
+        new OperatorsModel {Text = "Between", Value = "between"},
+        new OperatorsModel {Text = "Not Between", Value = "notbetween"}
+    };
+    private string rule;
+    public class EmployeeDetails
+    {
+        public int EmployeeID { get; set; }
+        public string FirstName { get; set; }
+        public bool TitleOfCourtesy { get; set; }
+        public string Title { get; set; }
+        public DateTime HireDate { get; set; }
+        public string Country { get; set; }
+        public string City { get; set; }
+    }
+
+    private void Get() {
+        var d = QueryBuilderObj.GetRules();
+        rule = JsonConvert.SerializeObject(QueryBuilderObj.GetRules());
+    }
+
+    private void Set() {
+        RuleModel ruleModel = JsonConvert.DeserializeObject<RuleModel>(rule);
+        QueryBuilderObj.Reset();
+        QueryBuilderObj.SetRules(ruleModel.Rules,"and");
+    }
+}
+
+```
+
 N> You can also explore our [Blazor Query Builder example](https://blazor.syncfusion.com/demos/query-builder/default-functionalities?theme=bootstrap4) to know how to render and configure the query builder.

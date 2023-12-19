@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Customize Menu Bar Using Events in Blazor Menu Bar | Syncfusion
-description: Learn here all about how to customize menu bar using events in Syncfusion Blazor Menu Bar component and more.
+title: Menu Bar Events in Blazor Menu Bar | Syncfusion
+description: Learn here all about menu bar events in Syncfusion Blazor Menu Bar component and more.
 platform: Blazor
 control: Menu Bar 
 documentation: ug
 ---
 
-# Customize Menu Bar Using Events in Blazor Menu Bar Component
+# Menu Bar Events in Blazor Menu Bar Component
 
 The Menu Bar provides a set of events to enable users to customize it.
 
@@ -94,4 +94,4 @@ The available events are [OnOpen](https://help.syncfusion.com/cr/blazor/Syncfusi
 
 ```
 
-![Customizing Blazor MenuBar Items using Event](./../images/blazor-menubar-item-customization.png)
+![Customizing Blazor MenuBar Items using Event](./images/blazor-menubar-item-customization.png)
