@@ -1,9 +1,9 @@
 ---
 layout: post
 title: Installing Syncfusion Blazor Linux installer - Syncfusion
-description: Learn here about how to install Syncfusion Blazor Linux installer after downloading from our Syncfusion website.
-platform: common
-control: Blazor
+description: Learn here about how to install Syncfusion Blazor linux installer after downloading from our Syncfusion website. 
+platform: Blazor
+component: Common
 documentation: ug
 ---
 
@@ -43,9 +43,6 @@ The steps below show how to install Blazor Linux installer.
 4. You can launch the demo source and use the NuGet packages included in the Linux installer.
 
 
-5. Run the following command in linux machine to deploy the ASP.NET Core samples
- 
-  **dotnet restore projectname -s \nuget** in order to restore.
 
 ## License key registration in samples
 
