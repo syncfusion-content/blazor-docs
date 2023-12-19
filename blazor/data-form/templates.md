@@ -7,7 +7,7 @@ control: DataForm
 documentation: ug
 ---
 
-# Template 
+# Templates in DataForm component
 
 In DataForm component we can customize the specific editor field or the entire form components using template feature. 
 
