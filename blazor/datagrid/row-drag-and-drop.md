@@ -134,4 +134,7 @@ N> For performing row drag and drop action on the datagrid, any one of the colum
 
 * Multiple rows can be drag and drop in the row selections basis.
 * Single row is able to drag and drop in same grid without enable the row selection.
-* Row drag and drop feature is not having built in support with sorting, filtering, hierarchy grid, row template and grouping features of grid.
+* Row drag and drop feature is not having built in support with sorting, filtering, hierarchy grid and row template features of grid.
+* Grouping via row drag-and-drop feature lacks support for lazyload grouping.
+* Drag and drop within the same group key is not supported.
+* Multiple group row selections drag and drop is not supported.
