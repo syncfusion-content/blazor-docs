@@ -22,7 +22,7 @@ To get started quickly with Blazor Dashboard Layout component, check on the foll
 
 ## Create a new Blazor App in Visual Studio
 
-You can create a **Blazor Server App** or **Blazor WebAssembly App** using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0) or the [Syncfusion Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
+You can create a **Blazor Server App** or **Blazor WebAssembly App** using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0&pivots=windows) or the [Syncfusion Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
 
 ## Install Syncfusion Blazor Layouts and Themes NuGet in the App
 
@@ -127,7 +127,7 @@ Add the Syncfusion Blazor Dashboard Layout component in the **~/Pages/Index.razo
 {% endhighlight %}
 {% endtabs %}
 
-N> There is no need to assign default value for panels. Refer to the [Panels](./panels/position-sizing-of-panels/#panels) section to learn about default value.
+N> There is no need to assign default value for panels. Refer to the [Panels](./panels/position-sizing-of-panels#panels) section to learn about default value.
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion Blazor Dashboard Layout component in your default web browser.
 

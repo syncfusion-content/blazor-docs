@@ -22,7 +22,7 @@ Visual Studio provides **.NET MAUI Blazor app** template to create .NET MAUI Bla
 * .NET SDK 6.0 (Latest .NET SDK 6.0.101 or above)
 
 * The latest preview of Visual Studio 2022 17.1 or above, with required workloads:
-   * [Mobile development with .NET](https://docs.microsoft.com/en-us/dotnet/maui/get-started/installation)
+   * [Mobile development with .NET](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?tabs=vswin)
    * ASP.NET and web development 
 
 ## Create a new .NET MAUI Blazor App in Visual Studio
@@ -63,7 +63,7 @@ In `MainPage.xaml`, The `BlazorWebView` is added and points to the root of the B
 {% endhighlight %}
 {% endtabs %}
 
-For more details refer [Create a .NET MAUI Blazor app](https://docs.microsoft.com/en-us/dotnet/maui/user-interface/controls/blazorwebview#create-a-net-maui-blazor-app) topic. If you already have .NET MAUI app and want to convert use `BlazorWebView`, refer [Add a BlazorWebView to an existing app](https://docs.microsoft.com/en-us/dotnet/maui/user-interface/controls/blazorwebview#add-a-blazorwebview-to-an-existing-app) topic.
+For more details refer [Create a .NET MAUI Blazor app](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/blazorwebview#create-a-net-maui-blazor-app) topic. If you already have .NET MAUI app and want to convert use `BlazorWebView`, refer [Add a BlazorWebView to an existing app](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/blazorwebview#add-a-blazorwebview-to-an-existing-app) topic.
 
 ## Install Syncfusion Blazor Packages in the App
 
@@ -158,7 +158,7 @@ Before running the sample, make sure the mode is `Windows Machine`.
 
 ![Build and run MAUI Blazor App](images/maui/windows-machine-mode.png)
 
-N> If you want to run the application in Android or iOS refer [MAUI Getting Started](https://docs.microsoft.com/en-us/dotnet/maui/get-started/first-app) for the setup. 
+N> If you want to run the application in Android or iOS refer [MAUI Getting Started](https://learn.microsoft.com/en-us/dotnet/maui/get-started/first-app?tabs=vswin&pivots=devices-android) for the setup. 
 
 ![MAUI Blazor App with Syncfusion Blazor Components](images/maui/maui-blazor-calendar.png)
 
@@ -184,7 +184,7 @@ In the below code images are added under `images` folder in `wwwroot` folder.
 
 ### How to solve deployment errors in Windows?
 
-If you get error dialog like "There were deployment errors", Enable developer mode. For more details refer [Enable your device for development](https://docs.microsoft.com/en-us/windows/apps/get-started/enable-your-device-for-development).
+If you get error dialog like "There were deployment errors", Enable developer mode. For more details refer [Enable your device for development](https://learn.microsoft.com/en-us/windows/apps/get-started/enable-your-device-for-development).
 
 ![Enable developer mode in system settings](images/maui/enable-developer-mode.png)
 
@@ -220,6 +220,6 @@ Reference:
 
 ### MAUI Blazor Diagram
 
-* [How to create Diagram Builder in MAUI platform?](https://www.syncfusion.com/kb/13059/how-to-create-diagram-builder-in-maui-platform)
+* [How to create Diagram Builder in MAUI platform?](https://support.syncfusion.com/kb/article/11346/how-to-create-diagram-builder-in-maui-platform)
 
 N> [View MAUI Blazor Diagram Builder Source Code in GitHub](https://github.com/syncfusion/blazor-showcase-diagram-builder/tree/master/MAUI)
