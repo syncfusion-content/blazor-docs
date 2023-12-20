@@ -14,9 +14,9 @@ This section provides information about creating Razor Class Library with the Sy
 ## Prerequisites
 
 * [Visual Studio 2022](https://visualstudio.microsoft.com/downloads/)
-* [.NET 6.0 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/6.0)/[.NET 7.0 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/7.0)
+* [.NET 8.0 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0)/[.NET 7.0 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/7.0)/[.NET 6.0 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/6.0)
 
-## Create a Razor Class Library using Syncfusion Blazor components in Visual Studio 2022
+## Create a Razor Class Library in Visual Studio 2022
 
 1. Choose **Create a new project** from the Visual Studio dashboard.
 
@@ -30,7 +30,7 @@ This section provides information about creating Razor Class Library with the Sy
 
     ![razor class project configuration](images/VS2022/razor-class-template-2022.png)
 
-4. Select the target Framework **.NET 7** at the top of the Application based on your required target that you want and then click the **Create** button to create a new Razor Class Library application.
+4. Select the target Framework **.NET 8** at the top of the Application based on your required target that you want and then click the **Create** button to create a new Razor Class Library application.
 
     ![select framework](images/VS2022/blazor-select-template-rcl-2022.png)
 
@@ -52,10 +52,10 @@ N> Syncfusion Blazor components are available in [nuget.org](https://www.nuget.o
 
 ## Importing Syncfusion Blazor component in Razor Class Library
 
-Now, import and add the Syncfusion Blazor components in the `~/Component.razor` file. For example, the Calendar component is imported and added in the **~/Component.razor** page.
+Now, import and add the Syncfusion Blazor components in the `~/Component1.razor` file. For example, the Calendar component is imported and added in the **~/Component1.razor** page.
 
 ```html
-    
+
 @using Syncfusion.Blazor.Calendars
 
 <div class="my-component">
@@ -63,12 +63,14 @@ This Blazor component is defined in the <strong>RazorClassLibrary</strong> packa
 </div><br />
 
 <SfCalendar TValue="DateTime"></SfCalendar>
-     
+
 ```
 
-## Create a Blazor project in Visual Studio with Razor Class Library (RCL)
+## Create a Blazor project in Visual Studio
 
-Refer to the [Blazor Tooling documentation](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0&pivots=windows) to create a new **Blazor Server App** or **Blazor WebAssembly App** using Visual Studio.
+* Refer to the [Blazor Tooling documentation](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0&pivots=windows) to create a new **Blazor Web App** using Visual Studio.
+
+* Refer to the [Blazor Tooling documentation](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0&pivots=windows) to create a new **Blazor Server App** or **Blazor WebAssembly App** using Visual Studio.
 
 ## Configure the Razor Class Library and Blazor Application
 
@@ -80,9 +82,9 @@ Refer to the [Blazor Tooling documentation](https://learn.microsoft.com/en-us/as
 
     ![add RCL in blazor app](images/blazor-razor-configure.png)
 
-    N> Razor Class Library project is added to the existing Blazor Server Application.
+    N> Razor Class Library project is added to the existing Blazor Application.
 
-3. Right-click the Blazor App project, and then select Add/Project reference. Now, click the checkbox and configure the **Razor Class Library** and **Blazor Server App** or **Blazor WebAssembly App** .
+3. Right-click the Blazor App project, and then select Add/Project reference. Now, click the checkbox and configure the **Razor Class Library**.
 
     ![reference manager in blazor app](images/reference-manager.png)
 
@@ -90,75 +92,54 @@ Refer to the [Blazor Tooling documentation](https://learn.microsoft.com/en-us/as
 
 ## Importing Razor Class Library in the Blazor Application
 
-1. Open **~/_Imports.razor** file in Blazor Server App or Blazor WebAssembly App and import the `RazorClassLibrary`.
+1. Open **~/_Imports.razor** file in Blazor App and import the `RazorClassLibrary`.
 
     ```cshtml
     @using RazorClassLibrary
     ```
 
-2. Now, register the Syncfusion Blazor Service in the **~/Program.cs** file of your Blazor Server App or Blazor WebAssembly App. 
+2. Now, register the Syncfusion Blazor Service in the **~/Program.cs** file of your Blazor App.
 
-    {% tabs %}
-    {% highlight C# tabtitle="Blazor Server App" hl_lines="3 10" %}
-    
-    using Microsoft.AspNetCore.Components;
-    using Microsoft.AspNetCore.Components.Web;
-    using Syncfusion.Blazor;
-    
-    var builder = WebApplication.CreateBuilder(args);
-    
-    // Add services to the container.
-    builder.Services.AddRazorPages();
-    builder.Services.AddServerSideBlazor();
-    builder.Services.AddSyncfusionBlazor();
-    
-    var app = builder.Build();
+   * If you select an **Interactive render mode** as `WebAssembly` or `Auto`, you need to register the Syncfusion Blazor service in both **~/Program.cs** files of your Blazor Web App.
+
+    ```cshtml
+
     ....
-    
-    {% endhighlight %}
-    {% highlight C# tabtitle="Blazor WebAssembly App" hl_lines="3 11" %}
-    
-    using Microsoft.AspNetCore.Components.Web;
-    using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
     using Syncfusion.Blazor;
-    
-    var builder = WebAssemblyHostBuilder.CreateDefault(args);
-    builder.RootComponents.Add<App>("#app");
-    builder.RootComponents.Add<HeadOutlet>("head::after");
-    
-    builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
-    
-    builder.Services.AddSyncfusionBlazor();
-    await builder.Build().RunAsync();
     ....
-    
-    {% endhighlight %}
-    {% endtabs %}
+    builder.Services.AddSyncfusionBlazor();
+    ....
+
+    ```
 
 
-3. Now, add the Syncfusion Blazor theme and script resources to the Blazor Server App or Blazor WebAssembly App based on the requirements of Syncfusion Blazor components.
+3. For Blazor Web App, include the stylesheet reference in the `<head>` section and the script reference at the end of the `<body>` in the **~/Components/App.razor** file:
 
-    a) For **.NET 6** project, add the Syncfusion bootstrap4 theme in the `<head>` element of the **~/Pages/_Layout.cshtml** page.
+    * For Blazor WebAssembly app, include the stylesheet reference in the `<head>` section and the script reference at the end of the `<body>` in the **~/wwwroot/index.html** file.
 
-    b) For **.NET 7** project, add the Syncfusion bootstrap4 theme in the `<head>` element of the **~/Pages/_Host.cshtml** page.
+    * For **.NET 7** project in Blazor Server App, include the stylesheet reference in the `<head>` section and the script reference at the end of the `<body>` in the **~/Pages/_Host.cshtml** file.
 
-    c) For Blazor WebAssembly app, add the Syncfusion bootstrap4 theme in the `<head>` element of the **~/wwwroot/index.html** page.
-   
+    * For **.NET 6** project in Blazor Server App, include the stylesheet reference in the `<head>` section and the script reference at the end of the `<body>` in the **~/Pages/_Layout.cshtml** file.
+
     ```html
     <head>
         ....
         <link href="_content/Syncfusion.Blazor.Themes/bootstrap4.css" rel="stylesheet" />
-        <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
     </head>
+    ....
+    <body>
+        ....
+        <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
+    </body>
     ```
 
-    N> Also, you can refer to the themes through the CDN version by using the following link instead of package theme reference.
-    [https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/bootstrap4.css](https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/bootstrap4.css).
+    N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic to discover various methods ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference), and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)) for referencing themes in your Blazor application. Also, check out the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic to learn different approaches for adding script references in your Blazor application.
 
-4. Now, add the created custom component in the **~/Pages/Index.razor** file.
+4. Now, add the created custom component in the **~/Pages/.razor** file.
 
     ```cshtml
-    <Component></Component>
+    <Component1></Component1>
+
     ```
 
 5. Run the application, The Syncfusion Blazor Calendar component will be rendered in the default web browser.

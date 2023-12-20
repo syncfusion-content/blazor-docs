@@ -9,7 +9,7 @@ documentation: ug
 
 # Add and Remove Items in Blazor SplitButton Component
 
-Split Button component can dynamically add or remove items using  `AddItems`, `RemoveItems` method.
+Split Button component can dynamically add or remove items using  [AddItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SfSplitButton.html#Syncfusion_Blazor_SplitButtons_SfSplitButton_AddItems_System_Collections_Generic_List_Syncfusion_Blazor_SplitButtons_DropDownMenuItem__System_String_System_Boolean_), [RemoveItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SfSplitButton.html#Syncfusion_Blazor_SplitButtons_SfSplitButton_RemoveItems_System_Collections_Generic_List_System_String__System_Boolean_) method.
 
 ```cshtml
 @using Syncfusion.Blazor.SplitButtons
