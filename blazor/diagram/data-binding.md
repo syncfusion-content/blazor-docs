@@ -145,6 +145,7 @@ Diagram can also perform all kind of supported Layout operations in ExpandoObjec
 * Organization chart
 * Mind Map layout
 * Complex Hierarchical Tree layout
+* Radial Tree Layout
 
 The **ExpandoObject** can be bound to Diagram by assigning to the [DataSource] property of the [DataSourceSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DataSourceSettings.html).
 The following code example illustrates how to bind ExpandoObject data with the diagram.
@@ -325,6 +326,7 @@ Diagram can also perform all kind of supported Layout operations in DynamicObjec
 * Organization chart
 * Mind Map layout
 * Complex Hierarchical Tree layout
+* Radial Tree layout
 
  The **DynamicObject** can be bound to Diagram by assigning to the [DataSource] property of the [DataSourceSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DataSourceSettings.html).
 The following code example illustrates how to bind DynamicObject data with the diagram.
