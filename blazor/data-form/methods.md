@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Methods in Blazor DataForm Component | Syncfusion
-description: Checkout and learn here about inbuilt methods in Blazor DataForm component.
+description: Checkout and learn here about in-built functions along with their correct application within the Blazor DataForm component.
 platform: Blazor
 control: DataForm
 documentation: ug

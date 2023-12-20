@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Column and column span in Blazor DataForm Component | Syncfusion
-description: Checkout and learn here about column and column span  with Blazor DataForm component.
+description: Checkout and learn here about how to configure column and column span  with Blazor DataForm component.
 platform: Blazor
 control: DataForm
 documentation: ug
