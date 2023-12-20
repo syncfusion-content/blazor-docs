@@ -127,4 +127,4 @@ The following table lists the default keyboard shortcuts for formatting the para
 |Ctrl + D| Opens font dialog.|
 |Ctrl + K| Opens hyperlink dialog.|
 
-You can refer to our [Blazor Word Processor](https://www.syncfusion.com/blazor-components/blazor-word-processor) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Word Processor example](https://blazor.syncfusion.com/demos/document-editor/default-functionalities) to know how to render and configure the document editor.
+You can refer to our [Blazor Word Processor](https://www.syncfusion.com/blazor-components/blazor-word-processor) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Word Processor example](https://blazor.syncfusion.com/demos/document-editor/default-functionalities?theme=bootstrap5) to know how to render and configure the document editor.

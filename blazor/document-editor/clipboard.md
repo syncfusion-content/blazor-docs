@@ -77,4 +77,4 @@ The following code example shows how to perform the paste operation from the loc
 
 ```
 
-You can also explore our [Blazor Word Processor](https://blazor.syncfusion.com/demos/document-editor/default-functionalities) example to know how to render and configure the document editor.
+You can also explore our [Blazor Word Processor](https://blazor.syncfusion.com/demos/document-editor/default-functionalities?theme=bootstrap5) example to know how to render and configure the document editor.

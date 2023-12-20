@@ -11,9 +11,9 @@ documentation: ug
 
 The web accessibility defines a way to make web content and web applications more accessible to disabled people. It especially helps the dynamic content change and advanced user interface components developed with Ajax, HTML, JavaScript, and related technologies.
 
-DateTimePicker provides built-in compliance with the [WAI-ARIA](https://www.w3.org/TR/wai-aria-practices/) specifications. WAI-ARIA support is achieved through the attributes like `aria-expanded`, `aria-disabled`, `aria-activedescendant` applied to the input element.
+DateTimePicker provides built-in compliance with the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/) specifications. WAI-ARIA support is achieved through the attributes like `aria-expanded`, `aria-disabled`, `aria-activedescendant` applied to the input element.
 
-To learn about the accessibility of Calendar, refer to the Calendar's [Accessibility](../calendar/accessibility/) section.
+To learn about the accessibility of Calendar, refer to the Calendar's [Accessibility](../calendar/accessibility) section.
 
 It helps to provide information about the widget for assistive technology to the disabled person in screen reader.
 
@@ -25,7 +25,7 @@ It helps to provide information about the widget for assistive technology to the
 
 ## Keyboard interaction
 
-You can use the following keys to interact with the DateTimePicker. The component implements the keyboard navigation support by following the [WAI-ARIA practices](https://www.w3.org/TR/wai-aria-practices/).
+You can use the following keys to interact with the DateTimePicker. The component implements the keyboard navigation support by following the [WAI-ARIA practices](https://www.w3.org/WAI/ARIA/apg/).
 
 DateTimePicker supports the below list of shortcut keys:
 

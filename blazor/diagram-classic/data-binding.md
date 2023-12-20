@@ -140,4 +140,4 @@ To map the user defined JSON data with diagram, configure the fields of [DataSou
 
 ## See Also
 
-* [How to arrange the diagram nodes and connectors using varies layout](https://blazor.syncfusion.com/documentation/diagram-classic/layout/automatic-layout/)
+* [How to arrange the diagram nodes and connectors using varies layout](https://blazor.syncfusion.com/documentation/diagram-classic/layout/automatic-layout)
