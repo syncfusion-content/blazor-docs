@@ -351,21 +351,23 @@ The following screenshots represent a datagrid by customizing frozen line color.
 
 The following features are not supported in frozen rows and columns:
 
-* Grouping
 * Row Template
 * Detail Template
 * Hierarchy DataGrid
 
 ### Freeze direction
 
-You can freeze the Grid columns on the left or right side by using the [Freeze](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Freeze) property and the remaining columns will be movable. The grid will automatically move the columns to the left or right position based on the [Freeze](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Freeze) value and also [IsFrozen](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_IsFrozen) property should be true.
+You can freeze the Grid columns on the left, right or in a fixed position by using the [Freeze](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Freeze) property and the remaining columns to be horizontally movable. This feature is designed to optimize user experience by ensuring that critical information remains visible even during horizontal scrolling. By default, when you set the [FrozenColumns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_FrozenColumns) property of the grid or the [IsFrozen](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_IsFrozen) property of individual columns, it results in freezing those columns on the left side of the grid. This helps in keeping important data readily accessible as you navigate through your dataset.
+
+To achieve this, you can utilize the [Freeze](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Freeze)  property. This property is used to specify the freeze direction for individual columns. The grid will adjust the column positions based on the [Freeze](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Freeze) value.
 
 Types of the [Freeze](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Freeze) directions:
 
-* **`FreezeDirection.Left`**: Allows you to freeze the columns at the left.
-* **`FreezeDirection.Right`**: Allows you to freeze the columns at the right.
+* **`FreezeDirection.Left`**: Allows you to freeze the columns at the left side of the grid. The remaining columns will be movable.
+* **`FreezeDirection.Right`**: Allows you to freeze the columns at the right side of the grid. The remaining columns will be movable.
+* **`FreezeDirection.Fixed`**: The Fixed direction locks a column at a fixed position within the grid. This ensures that the column is always visible during horizontal scroll.
 
-In this demo, the **OrderID** column is frozen at the left and the **ShipCountry** column is frozen at the right side of the content table.
+In this demo, the **OrderID** column is frozen at the left side, the **ShipCountry** column is frozen at the right side and the **Location** column is frozen on the fixed of the content table.
 
 ```csharp
 
@@ -377,12 +379,12 @@ In this demo, the **OrderID** column is frozen at the left and the **ShipCountry
         <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="170"></GridColumn>
         <GridColumn Field=@nameof(Order.EmployeeID) HeaderText="Employee ID" TextAlign="TextAlign.Right" Width="150"></GridColumn>
         <GridColumn Field=@nameof(Order.ShipName) HeaderText="Ship Name" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(Order.Location) HeaderText="Location" Freeze="FreezeDirection.Fixed" IsFrozen="true" Width="150"></GridColumn>
         <GridColumn Field=@nameof(Order.ShipCity) HeaderText="Ship City" Width="150"></GridColumn>
         <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
         <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
         <GridColumn Field=@nameof(Order.ShipAddress) HeaderText="Ship Address" Width="170"></GridColumn>
         <GridColumn Field=@nameof(Order.Mail) HeaderText="Email" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.Location) HeaderText="Location" Width="150"></GridColumn>
         <GridColumn Field=@nameof(Order.ShipCountry) HeaderText="Ship Country" Freeze="FreezeDirection.Right" IsFrozen="true" Width="150"></GridColumn>
     </GridColumns>
 </SfGrid>
@@ -428,15 +430,14 @@ In this demo, the **OrderID** column is frozen at the left and the **ShipCountry
 
 ```
 
-The following screenshots represent a frozen direction.
+The following GIF represent a frozen direction.
 
-![Freezing Blazor DataGrid Columns on Right Side](./images/blazor-datagrid-frozen-right-side.png)
+![Freezing Blazor DataGrid Columns on Right Side](./images/blazor-datagrid-frozen-fixed-side.gif)
 
 ### Limitations of freeze direction
 
 This feature has the below limitations, along with the above mentioned Frozen Grid limitations.
 
-* Column virtualization
 * Infinite scroll cache mode
 * Freeze direction in the stacked header is not compatible with column reordering.
 * When using cell template/text wrap in any one of the panels will result in variable row height between the panels and this height will be re-calculated based on the DOM offset height and then applied to all the rows in all the panels to make it look even. This may result in a visual glitch. You can resolve this problem by setting static values to the RowHeight property in SfGrid.
