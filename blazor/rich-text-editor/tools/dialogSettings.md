@@ -9,7 +9,7 @@ documentation: ug
 
 # Customization of Blazor Rich Text Editor Dialog
 
-The Blazor Rich Text Editor allows for improved customization of the dialogs by configuring the RichTextEditorDialogSettings property. This addition enables users to control the behavior and appearance of the underlying dialogs within the RichTextEditor, the following list of options has been provided.
+The Blazor Rich Text Editor allows for improved customization of the dialogs by configuring the RichTextEditorDialogSettings property. This addition enables users to control the behavior and appearance of the underlying dialogs within the RichTextEditor. the following list of options has been provided.
 
 | Options | Description |
 |----------------|---------|
