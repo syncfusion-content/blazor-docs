@@ -357,7 +357,7 @@ The following features are not supported in frozen rows and columns:
 
 ### Freeze direction
 
-In the Syncfusion Blazor Grid, You can freeze the Grid columns on the left, right or in a fixed position by using the [Freeze](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Freeze) property and the remaining columns to be horizontally movable. This feature is designed to optimize user experience by ensuring that critical information remains visible even during horizontal scrolling. By default, when you set the [FrozenColumns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_FrozenColumns) property of the grid or the [IsFrozen](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_IsFrozen) property of individual columns, it results in freezing those columns on the left side of the grid. This helps in keeping important data readily accessible as you navigate through your dataset.
+You can freeze the Grid columns on the left, right or in a fixed position by using the [Freeze](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Freeze) property and the remaining columns to be horizontally movable. This feature is designed to optimize user experience by ensuring that critical information remains visible even during horizontal scrolling. By default, when you set the [FrozenColumns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_FrozenColumns) property of the grid or the [IsFrozen](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_IsFrozen) property of individual columns, it results in freezing those columns on the left side of the grid. This helps in keeping important data readily accessible as you navigate through your dataset.
 
 To achieve this, you can utilize the [Freeze](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Freeze)  property. This property is used to specify the freeze direction for individual columns. The grid will adjust the column positions based on the [Freeze](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Freeze) value.
 
@@ -438,7 +438,6 @@ The following GIF represent a frozen direction.
 
 This feature has the below limitations, along with the above mentioned Frozen Grid limitations.
 
-* Column virtualization
 * Infinite scroll cache mode
 * Freeze direction in the stacked header is not compatible with column reordering.
 * When using cell template/text wrap in any one of the panels will result in variable row height between the panels and this height will be re-calculated based on the DOM offset height and then applied to all the rows in all the panels to make it look even. This may result in a visual glitch. You can resolve this problem by setting static values to the RowHeight property in SfGrid.
