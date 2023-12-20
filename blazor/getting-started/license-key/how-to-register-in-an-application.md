@@ -22,6 +22,21 @@ Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR LICENSE KEY
 N> * Place the license key between double quotes.  Also, ensure that Syncfusion.Licensing.dll is referenced in your project where the license key is being registered.
 * Syncfusion license validation is done offline during application execution and does not require internet access.  Apps registered with a Syncfusion license key can be deployed on any system that does not have an internet connection.
 
+## Blazor Web App
+
+Open **~/Program.cs** file and register the Syncfusion Blazor license key in the Blazor web app.
+
+{% tabs %}
+
+{% highlight C# tabtitle="Blazor Web App" hl_lines="1 2" %}
+
+//Register Syncfusion license
+Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR LICENSE KEY");
+
+{% endhighlight %}
+
+{% endtabs %}
+
 ## Blazor Server App
 
 * For .NET 6 and .NET 7 app, open the **~/Program.cs** file and register the Syncfusion license key.
