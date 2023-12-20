@@ -16,7 +16,7 @@ DataForm provides the capability to utilize both standard and custom validators 
 `DataAnnotationsValidator` in DataForm component validates the fields based on the attributes bounded to the model properties. 
 
 {% tabs %}
-{% highlight razor tabtitle="DataAnnotationsValidator" hl_lines="3 10" %}
+{% highlight razor tabtitle="DataAnnotationsValidator"  %}
 
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.DataForm
@@ -86,7 +86,7 @@ DataForm provides the capability to utilize both standard and custom validators 
 The `ObjectGraphDataAnnotationsValidator` within the DataForm component ensures the validation of the entire object graph of the bound model, including both collection and complex-type properties.In the below example  `ValidateComplexType` attribute is used  to validate the properties declared in the nested classes such as `ChildModel` and `GrandChildModel`.
 
 {% tabs %}
-{% highlight razor tabtitle="ObjectGraphDataAnnotationsValidator" hl_lines="3 10" %}
+{% highlight razor tabtitle="ObjectGraphDataAnnotationsValidator"  %}
 
 @using System.ComponentModel.DataAnnotations
 @using Syncfusion.Blazor.DataForm
@@ -164,7 +164,7 @@ The `ObjectGraphDataAnnotationsValidator` within the DataForm component ensures 
 `FluentValidator` is a custom validator that validates beyond standard validation attributes. It allows for checking if field values conform to the credit card format, match a specific value, exceed or fall below a given value, or are equivalent to the value of another field within the same model.
 
 {% tabs %}
-{% highlight razor tabtitle="FluentValidator.razor" hl_lines="3 10" %}
+{% highlight razor tabtitle="FluentValidator.razor"  %}
 
 @using Syncfusion.Blazor.DataForm
 @using System.ComponentModel.DataAnnotations
@@ -242,7 +242,7 @@ The `ObjectGraphDataAnnotationsValidator` within the DataForm component ensures 
 
 {% endhighlight %}
 
-{% highlight razor tabtitle="PaymentDetailsValidator.cs" hl_lines="3 10" %}
+{% highlight razor tabtitle="PaymentDetailsValidator.cs"  %}
 
 public class PaymentDetailsValidator : AbstractValidator<PaymentDetails>
 {

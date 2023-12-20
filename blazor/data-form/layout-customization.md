@@ -25,7 +25,7 @@ The DataForm component provides the capability to position the button horizontal
 The below example portrays how to use the `ButtonsAlignment` property in DataForm component
 
 {% tabs %}
-{% highlight razor tabtitle="ButtonsAlignment" hl_lines="3 10" %}
+{% highlight razor tabtitle="ButtonsAlignment"  %}
 
 @using Syncfusion.Blazor.DataForm
 @using System.ComponentModel.DataAnnotations
@@ -71,7 +71,7 @@ It is possible to incorporate custom buttons along with other elements ,if neces
 In the provided code snippet, an extra button component is implemented to reset the input fields when pressed, by utilizing its [OnClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfButton.html) event handler of [SfButton](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfButton.html#Syncfusion_Blazor_Buttons_SfButton_OnClick).
 
 {% tabs %}
-{% highlight razor tabtitle="ButtonsAlignment" hl_lines="3 10" %}
+{% highlight razor tabtitle="ButtonsAlignment"  %}
 
 @using Syncfusion.Blazor.DataForm
 @using System.ComponentModel.DataAnnotations
@@ -147,7 +147,7 @@ DataForm component allows you to align the label either to the top or left to th
 The below code part explains how to configure the `LabelPosition` in DataForm component.
 
 {% tabs %}
-{% highlight razor tabtitle="Label Position" hl_lines="3 10" %}
+{% highlight razor tabtitle="Label Position"  %}
 
 @using Syncfusion.Blazor.DataForm
 @using System.ComponentModel.DataAnnotations
@@ -204,7 +204,7 @@ Within the DataForm component, we have the option to showcase validation message
 The below example demonstrate , how to configure validation message presentation with DataForm component
 
 {% tabs %}
-{% highlight razor tabtitle="Validation Message Display" hl_lines="3 10" %}
+{% highlight razor tabtitle="Validation Message Display"  %}
 
 @using Syncfusion.Blazor.DataForm
 @using System.ComponentModel.DataAnnotations

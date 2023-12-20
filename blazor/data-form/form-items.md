@@ -12,7 +12,7 @@ documentation: ug
 The [FormItem](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataForm.FormItem.html)  can be utilized to set up various configuration for the editor component, including the unique identifier (id), the type of editor component used, any additional CSS classes to be applied to the editor, and whether the field is to be active (enabled) or inactive (disabled) upon being rendered.The below example showcases the different property usages.
 
 {% tabs %}
-{% highlight razor tabtitle="FormItem" hl_lines="3 10" %}
+{% highlight razor tabtitle="FormItem"  %}
 
 @using Syncfusion.Blazor.DataForm
 @using System.ComponentModel.DataAnnotations
@@ -123,7 +123,7 @@ Blazor DataForm component generates the editors automatically based on the primi
 The below example demonstrates the auto generated items with possible types 
 
 {% tabs %}
-{% highlight razor tabtitle="FormAutoGenerateItems" hl_lines="3 10" %}
+{% highlight razor tabtitle="FormAutoGenerateItems"  %}
 
 @using Syncfusion.Blazor.DataForm
 @using System.ComponentModel.DataAnnotations
@@ -193,7 +193,7 @@ The below example demonstrates the auto generated items with possible types
 The `FormAutoGenerateItems` can be utilized independently, as demonstrated in the previous example, or placed in-between, above, or below multiple `FormItem` tags. This will create editors for all types except those explicitly defined using `FormItem`.
 
 {% tabs %}
-{% highlight razor tabtitle="FormAutoGenerateItems" hl_lines="3 10" %}
+{% highlight razor tabtitle="FormAutoGenerateItems"  %}
 
 @using Syncfusion.Blazor.DataForm
 @using System.ComponentModel.DataAnnotations
