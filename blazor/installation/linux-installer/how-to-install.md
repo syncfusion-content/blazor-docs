@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Installing Syncfusion Essential Studio Linux installer - Syncfusion
-description: Learn here about how to install Syncfusion Essential Studio Linux installer after downloading from our Syncfusion website.
-platform: common
-control: Essential Studio
+title: Installing Syncfusion Blazor Linux installer - Syncfusion
+description: Learn here about how to install Syncfusion Blazor linux installer after downloading from our Syncfusion website. 
+platform: Blazor
+component: Common
 documentation: ug
 ---
 
-# Installing Syncfusion Essential Studio Linux installer
+# Installing Syncfusion Blazor Linux installer
 
 ## Overview
 
@@ -26,9 +26,9 @@ Syncfusion provides the Linux installer for the following Essential Studio produ
 
 ## Step-by-Step Installation
 
-The steps below show how to install Essential Studio Linux installer.
+The steps below show how to install Blazor Linux installer.
 
-1. Extract the Syncfusion Essential Studio Linux installer(.zip) file. The files are extracted in your machine.
+1. Extract the Syncfusion Blazor Linux installer(.zip) file. The files are extracted in your machine.
 
    ![Welcome wizard](images/Linux_Installer1.png)
    
@@ -43,9 +43,6 @@ The steps below show how to install Essential Studio Linux installer.
 4. You can launch the demo source and use the NuGet packages included in the Linux installer.
 
 
-5. Run the following command in linux machine to deploy the ASP.NET Core samples
- 
-  **dotnet restore projectname -s \nuget** in order to restore.
 
 ## License key registration in samples
 
