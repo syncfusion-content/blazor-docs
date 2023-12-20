@@ -46,7 +46,7 @@ The [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gan
         public int TaskId { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
+        public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
@@ -105,7 +105,7 @@ By default, the `EnableToggle` property is set to `false`.
         public int TaskId { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
+        public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
@@ -158,7 +158,7 @@ The Gantt Chart allows to select range of cells or rows by mouse or touch draggi
         public int TaskId { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
+        public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
@@ -220,7 +220,7 @@ You can clear the selected cells and selected rows by using a method called [Cle
         public int TaskId { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
+        public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
          public int? ParentId { get; set; }
@@ -285,7 +285,7 @@ You can get the selected row indexes by using the [GetSelectedRowIndexesAsync](h
         public int TaskId { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
+        public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
@@ -308,3 +308,13 @@ You can get the selected row indexes by using the [GetSelectedRowIndexesAsync](h
     }
 }
 ```
+
+## Touch interaction
+
+When you `tap` gantt row, tapped row will be selected.
+
+[Single selection](selection/#selection-mode) : To select a single row or cell, perform `single tap` on it.
+
+[Multiple selection](selection/#multiple-row-selection) : To perform multiple selection, `tap` on the multiple selection popup, and then tap the desired rows or cells.
+
+![Multiple selection in Blazor Gantt Chart](images/blazor-gantt-chart-multiple-selection.PNG)

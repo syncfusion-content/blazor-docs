@@ -44,7 +44,7 @@ public class TaskData
     public int TaskId { get; set; }
     public string TaskName { get; set; }
     public DateTime StartDate { get; set; }
-    public DateTime EndDate { get; set; }
+    public DateTime? EndDate { get; set; }
     public string Duration { get; set; }
     public int Progress { get; set; }
     public List<TaskData> SubTasks { get; set; }
@@ -284,16 +284,6 @@ ExpandoObject can be bound to Gantt by assigning to the `DataSource` property. G
             Data.Add(ChildRecord);
         }
     }
-    public class ExpandoObject
-    {
-        public int TaskID { get; set; }
-        public string TaskName { get; set; }
-        public DateTime? StartDate { get; set; }
-        public DateTime? EndDate { get; set; }
-        public int Progress { get; set; }
-        public string Duration { get; set; }
-        public int? ParentID { get; set; }
-    }
 }
 ```
 
@@ -317,7 +307,7 @@ checkboxState | Specifies the checkbox state of a record
 
 The Gantt chart supports to automatically update data based on `INotifyCollectionChanged` and `INotifyPropertyChanged` interface.
 
-### Observable Collection
+### Observable collection
 
 The [ObservableCollection](https://learn.microsoft.com/en-us/dotnet/api/system.collections.objectmodel.observablecollection-1?view=net-6.0) (dynamic data collection) provides notifications when items are added, removed, and moved. The implemented [INotifyCollectionChanged](https://learn.microsoft.com/en-us/dotnet/api/system.collections.specialized.inotifycollectionchanged?view=net-6.0) provides notification when the dynamic changes of adding, removing, moving, and clearing the collection occur.
 
@@ -528,7 +518,7 @@ In the below example, `TaskData` implements `INotifyPropertyChanged` and it rais
     public class TaskData : INotifyPropertyChanged
     {
         public int TaskId { get; set; }
-        public string taskName { get; set; }
+        private string taskName { get; set; }
         public string TaskName
         {
             get { return taskName; }
@@ -585,8 +575,8 @@ You can use **WebApiAdaptor** to bind datagrid with Web API created using **ODat
     {
         public int TaskId { get; set; }
         public string TaskName { get; set; }
-        public DateTime StartDate { get; set; }
-        public int Duration { get; set; }
+        public DateTime? StartDate { get; set; }
+        public int? Duration { get; set; }
         public int Progress { get; set; }
         public string Predecessor { get; set; }
         public List<GanttRemoteData>SubTasks { get; set; }
@@ -760,7 +750,7 @@ app.Run();
 
 N>You can find the sample for load on demand [here](https://github.com/SyncfusionExamples/BlazorGantt-OData-Adaptor-sample).
 
-### Load Child on Demand
+### Load child on demand
 
 To render child records on demand, assign a remote service URL in the instance of **SfDataManager** to the **Url** property. To interact with the remote data source,  provide the endpoint **URL** and also define the [GanttTaskFields.HasChildMapping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTaskFields.html#Syncfusion_Blazor_Gantt_GanttTaskFields_HasChildMapping) property of Gantt Chart.
 
