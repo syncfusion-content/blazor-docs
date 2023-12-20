@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Blazor WebAssembly App in Visual Studio
 
-This article provides a step-by-step instructions for building Blazor WebAssembly App with `Blazor Calendar` component using [Visual Studio](https://visualstudio.microsoft.com/vs/).
+This article provides a step-by-step instructions for building Blazor WebAssembly App with `Blazor Calendar` component using [Visual Studio](https://visualstudio.microsoft.com/vs/). 
 
 ## Prerequisites
 
@@ -48,7 +48,7 @@ Open **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusio
 Now, register the Syncfusion Blazor Service in the **~/Program.cs** file of your Blazor WebAssembly App.
 
 {% tabs %}
-{% highlight c# tabtitle=".NET 6 & .NET 7 (~/Program.cs)" hl_lines="3 11" %}
+{% highlight c# tabtitle="Blazor WebAssembly App (~/Program.cs)" hl_lines="3 11" %}
 
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
@@ -97,5 +97,3 @@ Add the Syncfusion Blazor Calendar component in the **~/Pages/Index.razor** file
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion Blazor Calendar component in your default web browser.
 
 ![Blazor Calendar Component](images/output-calendar-using-blazor-webassembly.png)
-
-N> You need to include a valid license key (either paid or trial key) within your applications. Refer to this [help topic](https://blazor.syncfusion.com/documentation/getting-started/license-key/overview) for more information.

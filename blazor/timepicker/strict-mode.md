@@ -9,7 +9,7 @@ documentation: ug
 
 # Strict Mode in Blazor TimePicker Component
 
-The [StrictMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Calendars.SfTimePicker%601~StrictMode.html) is an act that allows to enter only valid time value within the specified Min/Max range in the textbox. If the value is invalid, the component value sets to the previous value. If the value is out of range, the component sets the time value to Min/Max value.
+The [StrictMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfTimePicker-1.html#Syncfusion_Blazor_Calendars_SfTimePicker_1_StrictMode) is an act that allows to enter only valid time value within the specified Min/Max range in the textbox. If the value is invalid, the component value sets to the previous value. If the value is out of range, the component sets the time value to Min/Max value.
 
 The following example demonstrates the TimePicker in `StrictMode` with `Min/Max` range of `10:00 AM` to `4:00 PM` . It allows to enter only valid time within the specified range.
 
