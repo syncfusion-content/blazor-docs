@@ -324,7 +324,6 @@ A built-in automatic layout algorithm is specifically designed for organizationa
 {% endhighlight %}
 {% endtabs %}
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Layout/OrganizationLayout2)
 
 ![Blazor Organization Diagram ChildNode in Vertical Right](../images/blazor-diagram-childnode-at-vertical-right.png)
 
