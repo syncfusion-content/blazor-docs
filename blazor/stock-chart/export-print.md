@@ -9,7 +9,7 @@ documentation: ug
 
 # Print and Export in Blazor Stock Chart Component
 
-The rendered stock chart can be exported to `JPEG`, `PNG`, `SVG`, or `PDF` format using the export dropdown button in the period selector toolbar. The required format can be chosen using the export dropdown button in stock-chart.
+The rendered stock chart can be exported to `JPEG`, `PNG`, `SVG`, `PDF`, `XLSX`, or `CSV` format using the export dropdown button in the period selector toolbar. The required format can be chosen using the export dropdown button in stock-chart.
 
 The rendered stock chart can be printed directly using print button in period selector toolbar.
 
