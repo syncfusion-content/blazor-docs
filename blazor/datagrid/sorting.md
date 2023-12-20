@@ -275,9 +275,9 @@ N> The SortComparer property will work only for local data.
 
 ## Touch interaction
 
-When you tap the datagrid header on touchscreen devices, the selected column header is sorted.To sort multiple columns, tap the desired datagrid headers.
+When you tap the datagrid header on touchscreen devices, the selected column header is sorted. To sort multiple columns, tap the desired datagrid headers.
 
-N> The [AllowSorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowSorting) must be **true** while enabling multi-column sort.
+N> The [AllowSorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowSorting) and  [AllowMultiSorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowMultiSorting) must be set to **true** to perform Multi sorting.
 <br/> Set [AllowMultiSorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowMultiSorting) property as **false** to disable multi-column sorting.
 
 The following screenshot shows datagrid touch sorting.

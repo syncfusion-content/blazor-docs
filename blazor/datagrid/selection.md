@@ -565,6 +565,10 @@ When you tap on a grid row using a touch screen, the tapped row is automatically
 
 To perform the multi-selection, touch and drag the range of rows to select. To enable drag selection, set the AllowDragSelection property as true.
 
+The following GIF represents a datagrid touch selection in the device.
+
+![Touch Selection in Blazor DataGrid](./images/blazor-datagrid-touch-selection.gif)
+
 ## Multiple selection based on condition
 
 You can select multiple rows at the initial rendering of the datagrid by using [SelectRows](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_SelectRows_System_Double___) method. The initial selection is based on the given condition. Here the initial selection is based on the row with the **CustomerID** as **ALFKI**. We have used [GetCurrentViewRecords](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GetCurrentViewRecords) method to get current page records and applied the condition.
