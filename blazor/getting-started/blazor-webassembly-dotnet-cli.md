@@ -57,8 +57,8 @@ Here's an example of how to add **Blazor Calendar** component in the application
 {% tabs %}
 {% highlight c# tabtitle=".NET CLI" %}
 
-dotnet add package Syncfusion.Blazor.Calendars --version {{ site.releaseversion }}
-dotnet add package Syncfusion.Blazor.Themes --version {{ site.releaseversion }}
+dotnet add package Syncfusion.Blazor.Calendars -Version {{ site.releaseversion }}
+dotnet add package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
 dotnet restore
 
 {% endhighlight %}
@@ -101,7 +101,7 @@ await builder.Build().RunAsync();
 
 ## Add stylesheet and script resources
 
-The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Reference the stylesheet and script in the `<head>` of the main page as follows: 
+The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Reference the stylesheet and script in the `<head>` of the main page as follows:
 
 * For Blazor WebAssembly app, include it in the **~/index.html** file.
 

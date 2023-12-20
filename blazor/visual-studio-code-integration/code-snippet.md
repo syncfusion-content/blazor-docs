@@ -53,11 +53,13 @@ The Syncfusion Blazor snippet simply inserts the code into the razor file. You m
 
     ![Namespace](images/Namespace-Snippet.png)
 
-3. Add the Syncfusion Blazor [theme](https://blazor.syncfusion.com/documentation/appearance/themes) in the `<head>` element of the **~/Pages/_Host.html** page for server application and **~/wwwroot/index.html** page for a client application.
+3. Add the Syncfusion Blazor [theme](https://blazor.syncfusion.com/documentation/appearance/themes) in the `<head>` element of the **~/Components/App.razor** page for Web App and `<head>` element of the **~/Pages/_Host.html** page for server application and **~/wwwroot/index.html** page for a client application.
 
     ![Themes](images/Themes-Snippet.png)
 
-4. Open the **~/Program.cs** file for server application and client application then register the Syncfusion Blazor Service.
+4. Open the **~/Program.cs** file for Web App and server application and client application then register the Syncfusion Blazor Service.
+
+If you select an **Interactive render mode** as `WebAssembly` or `Auto`, you need to register the Syncfusion Blazor service in both **~/Program.cs** files of your Blazor Web App.
 
     ![Syncfusion Configuration](images/Configuration-Snippet.png)
 

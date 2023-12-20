@@ -173,6 +173,8 @@ Use the tooltip to show the measured values by setting the [Enable](https://help
 
 ![Blazor Bullet Chart displays ToolTip](images/blazor-bullet-chart-tooltip.png)
 
+N> You can also explore our [Blazor Bullet Chart example](https://blazor.syncfusion.com/demos/bullet-chart/default-functionalities?theme=bootstrap5) that shows you how to render and configure the bullet chart.
+
 ## See also
 
 1. [Getting Started with Syncfusion Blazor for client-side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-dotnet-cli)

@@ -232,6 +232,8 @@ To populate the empty Kanban with cards, define the Enumerable object or remote 
 
 ![Blazor Kanban with Swimlane](./images/blazor-kanban-with-swimlane.png)
 
+N> You can also explore our [Blazor Kanban Board example](https://blazor.syncfusion.com/demos/kanban/overview?theme=bootstrap5) that shows you how to render and configure the bullet chart.
+
 ## See also
 
 1. [Getting Started with Syncfusion Blazor for client-side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-dotnet-cli)
