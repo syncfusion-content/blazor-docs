@@ -120,6 +120,7 @@ The grid row drag and drop allows you to drag and drop grid rows on the same gri
 
 ![Drag and Drop within Blazor DataGrid](./images/drag-and-drop-within-blazor-datagrid.gif)
 
+
 ## Drag and drop events
 
 The following events are triggered while drag and drop the grid rows.
@@ -134,4 +135,5 @@ N> For performing row drag and drop action on the datagrid, any one of the colum
 
 * Multiple rows can be drag and drop in the row selections basis.
 * Single row is able to drag and drop in same grid without enable the row selection.
-* Row drag and drop feature is not having built in support with sorting, filtering, hierarchy grid, row template and grouping features of grid.
+* Row drag and drop feature is not having built in support with sorting, filtering, hierarchy grid and row template features of grid.
+* Grouping via row drag-and-drop feature lacks support for lazyload grouping.
