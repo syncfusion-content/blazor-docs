@@ -65,8 +65,6 @@ The following example demonstrates how to define a `Template` for the **Employee
     }
 }
 {% endhighlight %}
-{% endtabs %}
-{% tabs %}
 {% highlight c# tabtitle="OrderData.cs" %}
     public class OrderData
     {
@@ -173,8 +171,6 @@ To render a custom component in a grid column, you need to define a [Template](h
     }
 }
 {% endhighlight %}
-{% endtabs %}
-{% tabs %}
 {% highlight c# tabtitle="OrderData.cs" %}
 public class OrderData
     {
@@ -268,8 +264,6 @@ In the following code, checkbox is rendered based on **Discontinued** field valu
     }  
 }
 {% endhighlight %}
-{% endtabs %}
-{% tabs %}
 {% highlight c# tabtitle="OrderData.cs" %}
     public class OrderData
     {
@@ -360,8 +354,6 @@ This can be achieved by initially defining an anchor tag inside the column templ
 
 }
 {% endhighlight %}
-{% endtabs %}
-{% tabs %}
 {% highlight c# tabtitle="OrderData.cs" %}
    public class OrderData
     {

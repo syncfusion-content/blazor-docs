@@ -43,7 +43,7 @@ Using the `GanttColumns` property, you can define the columns in Gantt Chart. If
         public int TaskId { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
+        public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
@@ -71,7 +71,7 @@ Using the `GanttColumns` property, you can define the columns in Gantt Chart. If
 
 ## Header template
 
-N> Before adding the header template to the Gantt Chart, it is strongly recommended to go through the [template](./templates#templates) section topic to configure the template.
+N> Before adding the header template to the Gantt Chart, it is strongly recommended to go through the [template](./templates/#templates) section topic to configure the template.
 
 The Header Template has options to display custom element values or content in the header. You can use the [HeaderTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttColumn.html#Syncfusion_Blazor_Gantt_GanttColumn_HeaderTemplate) of the [GanttColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttColumn.html) component to specify the custom content.
 
@@ -158,7 +158,7 @@ The Header Template has options to display custom element values or content in t
         public int TaskId { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
+        public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
         public int? Parent_Id { get; set; }
@@ -214,7 +214,7 @@ To format the cell values based on a specific culture, use the `GanttColumn.Form
         public int TaskId { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
+        public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
@@ -293,7 +293,7 @@ Format | Formatted value
         public int TaskId { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
+        public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
@@ -341,7 +341,7 @@ The tree/expander column is a column in the Gantt Chart component that has icons
         public int TaskId { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
+        public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
@@ -407,7 +407,7 @@ You can show or hide gantt component columns dynamically using external buttons 
         public int TaskId { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
+        public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
@@ -462,7 +462,7 @@ You can enable or disable gantt component action for a particular column by sett
         public int TaskId { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
+        public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
         public bool Verified { get; set; }
@@ -541,7 +541,7 @@ Using the `GanttColumns` property, you can define the Custom Columns in Gantt Ch
         public int TaskId { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
+        public DateTime? EndDate { get; set; }
         public DateOnly? StartDateOnly { get; set; }
         public TimeOnly? StartTimeOnly { get; set; }
         public string Duration { get; set; }
@@ -605,7 +605,7 @@ The column chooser has options to show or hide columns dynamically. It can be en
         public int TaskId { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
+        public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
         public string Predecessor { get; set; }
@@ -943,7 +943,7 @@ Model.cs
         public int TaskId { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
+        public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
         public string Predecessor { get; set; }
@@ -966,6 +966,7 @@ In the following demo, **Work 1**  cells have been spanned.
 
 ```cshtml
 @using Syncfusion.Blazor.Gantt
+@using Syncfusion.Blazor.Grids
 <SfGantt DataSource="@TaskCollection" Height="450px" Width="900px">
     <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress"
             ParentID="ParentId">
@@ -1025,7 +1026,7 @@ In the following demo, **Work 1**  cells have been spanned.
         public int TaskId { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
+        public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }

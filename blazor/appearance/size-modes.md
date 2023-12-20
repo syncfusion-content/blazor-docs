@@ -13,17 +13,23 @@ Syncfusion Blazor components supports touch (bigger theme) and normal size modes
 
 ## Size mode for application
 
-You can enable touch mode (bigger theme) for an application by adding `.e-bigger` class in `~/wwwroot/css/site.css` file and assign to the `body` as follows,
+You can enable touch mode (bigger theme) for an application by adding `.e-bigger` class in `~/wwwroot/css/app.css or site.css` file ou your Blazor App and assign to the `body` as follows,
+* For **Blazor Web App**, assign `.e-bigger` class to `body` element of **~/Components/App.razor** file.
 * For **Blazor WebAssembly application**, assign `.e-bigger` class to `body` element of **wwwroot/index.html** file.
 * For **Blazor Server application**, assign `.e-bigger` class to `body` element of
     * **~/Pages/_Host.cshtml** file for .NET 7.
-    * **~/Pages/_Layout.cshtml** for .NET 6.
+    * **~/Pages/_Layout.cshtml** file for .NET 6.
 
-```css
+{% tabs %}
+{% highlight C# tabtitle="~/wwwroot/css/app.css or site.css" %}
+
 .e-bigger {
     font-size: x-large;
 }
-```
+
+{% endhighlight %}
+{% endtabs %}
+
 
 ```cshtml
 <body class="e-bigger">
@@ -34,6 +40,17 @@ You can enable touch mode (bigger theme) for an application by adding `.e-bigger
 ## Size mode for a control
 
 You can enable touch mode (bigger theme) for a control by adding `.e-bigger` class and assign to the `div` which contains the control.
+
+If you create Blazor web App with interactivity location as `Per page/component`, make ensure the define a render mode at the top of the Syncfusion Blazor Component included page, as follows:
+
+{% tabs %}
+{% highlight razor %}
+
+@* Your app render mode define here *@
+@rendermode InteractiveAuto
+
+{% endhighlight %}
+{% endtabs %}
 
 ```cshtml
 
@@ -65,6 +82,7 @@ You can enable touch mode (bigger theme) for a control by adding `.e-bigger` cla
     private bool isChecked = true;
     public DateTime? DateValue { get; set; } = new DateTime(DateTime.Now.Year, DateTime.Now.Month, 28);
 }
+
 ```
 
 ## Change size mode for application at runtime
@@ -73,7 +91,7 @@ You can change the size mode of an application between touch and normal (mouse) 
 
 Follow below steps to change the size mode for an application at runtime.
 
-1. Add the `e-bigger` CSS class in the `~/wwwroot/css/site.css` file.
+1. Add the `e-bigger` CSS class in the `~/wwwroot/css/app.css or site.css` file.
 
     ```css
     .e-bigger {
@@ -81,7 +99,7 @@ Follow below steps to change the size mode for an application at runtime.
     }
     ```
 
-2. Add the following JavaScript methods inside the script tag of `wwwroot/index.html` (Blazor WebAssembly App) or `Pages/_Host.cshtml` (Blazor Server App) to switch between touch and mouse mode using `e-bigger` class.
+2. Add the following JavaScript methods inside the script tag of `~/Components/App.razor`(Blazor Web App) or `wwwroot/index.html` (Blazor WebAssembly App) or `Pages/_Host.cshtml` (Blazor Server App) to switch between touch and mouse mode using `e-bigger` class.
 
     ```cshtml
     <script>
@@ -124,6 +142,7 @@ Follow below steps to change the size mode for an application at runtime.
 
     @code {
         private bool isChecked = true;
+        public DateTime? DateValue { get; set; } = new DateTime(DateTime.Now.Year, DateTime.Now.Month, 28);
         private async void callOnTouch(MouseEventArgs args)
         {
            await jsRuntime.InvokeAsync<string>("onTouch");
@@ -143,7 +162,7 @@ Follow below steps to change the size mode for an application at runtime.
 
 You can change the size mode of a control between touch and normal (mouse) mode at runtime by setting `.e-bigger` CSS class.
 
-Refer to the following code, in which the `e-bigger` class is added for enabling touch mode using the `check` variable.
+Refer to the following code, where the e-bigger class is added to enable touch mode using the `OnTouch` method.
 
 ```cshtml
 

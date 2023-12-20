@@ -15,6 +15,23 @@ The right-to-left (RTL) support can be enabled for Syncfusion Blazor components 
 
 You can enable right to left (RTL) for all Syncfusion components used in the application by setting [EnableRtl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.GlobalOptions.html#Syncfusion_Blazor_GlobalOptions_EnableRtl) global option as `true` while adding Syncfusion Blazor service using `AddSyncfusionBlazor()`.
 
+### Blazor Web App
+
+* For  Blazor Web App, set [EnableRtl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.GlobalOptions.html#Syncfusion_Blazor_GlobalOptions_EnableRtl) property as `true` using `AddSyncfusionBlazor` service method in `~/Program.cs` file.
+
+{% tabs %}
+
+{% highlight c# tabtitle="~/Program.cs" hl_lines="3" %}
+
+using Syncfusion.Blazor;
+....
+builder.Services.AddSyncfusionBlazor(options => { options.EnableRtl = true; });
+
+
+{% endhighlight %}
+
+{% endtabs %}
+
 ### Blazor Server App
 
 * For `.NET 6 or .NET 7` Blazor Server App, set [EnableRtl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.GlobalOptions.html#Syncfusion_Blazor_GlobalOptions_EnableRtl) property as `true` using `AddSyncfusionBlazor` service method in `~/Program.cs` file.
