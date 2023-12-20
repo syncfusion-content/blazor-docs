@@ -210,7 +210,7 @@ Here is an example of adding additional font family using the [`ImageEditorFontF
  
 <SfImageEditor @ref="ImageEditor" Height="400">
     <ImageEditorFontFamily Items="@CustomItems" Default="Arial"></ImageEditorFontFamily>
-    <ImageEditorEvents Created="OpenAsync" FileOpened="FileOpenAsync"></ImageEditorEvents>
+    <ImageEditorEvents Created="OpenAsync"></ImageEditorEvents>
 </SfImageEditor>
  
 @code {
@@ -227,14 +227,9 @@ Here is an example of adding additional font family using the [`ImageEditorFontF
     { 
         await ImageEditor.OpenAsync("nature.png"); 
     }
-    private async void FileOpenAsync() 
-    { 
-        ImageDimension Dimension = await ImageEditor.GetImageDimensionAsync();
-        await ImageEditor.DrawTextAsync((double)Dimension.X, (double)Dimension.Y, "Enter\nText", "Arial");
-    }
 }
 ```
-![Blazor Image Editor with Custom font in an image](./images/blazor-image-editor-font.png)
+![Blazor Image Editor with Custom font family in an image](./images/blazor-image-editor-font.png)
         
 ## Freehand drawing
 

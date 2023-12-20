@@ -93,48 +93,26 @@ The Blazor Image Editor includes a [`StraightenImageAsync`](https://help.syncfus
 
 * degree: Specifies the amount of rotation for straightening the image. Positive values indicate clockwise rotation, while negative values indicate counterclockwise rotation.
 
-Here is an example of straightening the image using the [`StraightenImageAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_StraightenImageAsync_System_Int32_) method.
+Here is an example of straightening the image.
 
 ```cshtml
 @using Syncfusion.Blazor.ImageEditor
 @using Syncfusion.Blazor.Buttons
  
-<div style="padding-bottom: 15px">
-    <SfButton OnClick="StraightenLeftAsync">Straighten Left</SfButton>
-    <SfButton OnClick="StraightenRightAsync">Straighten Right</SfButton>
-    <SfButton OnClick="ResetAsync">Reset</SfButton>
-</div>
- 
-<SfImageEditor @ref="ImageEditor" Toolbar="customToolbarItem" Height="400">
+<SfImageEditor @ref="ImageEditor" Height="400">
     <ImageEditorEvents Created="OpenAsync"></ImageEditorEvents>
 </SfImageEditor>
  
 @code {
     SfImageEditor ImageEditor;
-    int straighten = 0;
-    private List<ImageEditorToolbarItemModel> customToolbarItem = new List<ImageEditorToolbarItemModel>() { };
     private async void OpenAsync()
     {
         await ImageEditor.OpenAsync("nature.png");
     }
-    private async void StraightenLeftAsync()
-    {
-        straighten -= 3;
-        await ImageEditor.StraightenImageAsync(straighten);
-    }
-    private async void StraightenRightAsync()
-    {
-        straighten += 3;
-        await ImageEditor.StraightenImageAsync(straighten);
-    }
-    private async void ResetAsync()
-    {
-        await ImageEditor.ResetAsync();
-    }
 }
 ```
 
-![Blazor Image Editor with Zoom](./images/blazor-image-editor-straighten.jpg)
+![Blazor Image Editor with Straighten](./images/blazor-image-editor-straighten.png)
 
 ## Zoom in or out an image 
 
