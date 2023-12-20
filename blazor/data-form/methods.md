@@ -126,7 +126,7 @@ The classification of methods that can be invoked by using the DataForm instance
 
     public void ClickHandler()
     {
-        // the below method can be invoked wherever neccessary to refresh the form.
+        // the below method can be invoked wherever necessary to refresh the form.
         DataFormInstance?.Refresh();
     }
 
