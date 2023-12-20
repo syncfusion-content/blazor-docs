@@ -16,7 +16,7 @@ In DataForm component we can customize the specific editor field or the entire f
 We can customize the particular field editor with required UI customization using the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataForm.Template.html) `RenderFragment` inside `FormItem` tag.
 
 {% tabs %}
-{% highlight razor tabtitle="Template" hl_lines="3 10" %}
+{% highlight razor tabtitle="Template"  %}
 
 @using Syncfusion.Blazor.DataForm
 @using System.ComponentModel.DataAnnotations
@@ -88,7 +88,7 @@ We can also utilize the above `Template` combination with [FormAutoGenerateItems
 `DataForm` have the ability to customize the entire structure of the form, incorporating necessary components within it, and we can also personalize the messages displayed for validation errors.
 
 {% tabs %}
-{% highlight razor tabtitle="Form Template" hl_lines="3 10" %}
+{% highlight razor tabtitle="Form Template"  %}
 
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.DataForm
@@ -265,7 +265,7 @@ We can also utilize the above `Template` combination with [FormAutoGenerateItems
 We can also integrate the `FormTemplate` renderer along with `FormItem` as showcased in the below example.
 
 {% tabs %}
-{% highlight razor tabtitle="Form Template" hl_lines="3 10" %}
+{% highlight razor tabtitle="Form Template"  %}
 
 @using Syncfusion.Blazor.DataForm
 @using System.ComponentModel.DataAnnotations
