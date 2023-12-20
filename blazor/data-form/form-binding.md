@@ -124,11 +124,11 @@ The following example illustrates how the `EditContext` is bound to the DataForm
 
 The DataForm component enables users to define the data annotation attributes available from the instance of [System.ComponentModel.DataAnnotations](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations?view=net-5.0). For instance:
 
-[Display(Name = "Custom field name")](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.displayattribute?view=net-5.0) - This attribute is used to set a custom name for the field, which will be shown as its label.
-
-[Editable(false)](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.editableattribute?view=net-5.0) - When this attribute is used, it renders the associated field uneditable, thus preventing users from changing its content.
-
-[EmailAddress](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.emailaddressattribute?view=net-5.0) - This attribute checks to ensure that the value entered in the field conforms to a valid email address format.
+| FormButtonsAlignment | Snapshot |
+| ------------ | ----------------------- |
+|[Display(Name = "Custom field name")](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.displayattribute?view=net-5.0)| This attribute is used to set a custom name for the field, which will be shown as its label.|
+|[Editable(false)](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.editableattribute?view=net-5.0) | When this attribute is used, it renders the associated field uneditable, thus preventing users from changing its content.|
+|[EmailAddress](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.emailaddressattribute?view=net-5.0) | This attribute checks to ensure that the value entered in the field conforms to a valid email address format.|
 
 For guidance on how to use some of these attributes in DataForm component, see the example provided below.
 
