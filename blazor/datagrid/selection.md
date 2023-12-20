@@ -555,15 +555,15 @@ The following image will be displayed with selected row and its indexes
 
 ## Touch interaction
 
-When you tap a datagrid row on touchscreen device, the tapped row is selected.
-It also shows a popup ![Multi Row selection](images/selection.jpg)  for multi-row selection.
-To select multiple rows or cells, tap the popup![Multi Row or Cells](images/mselection.jpg)  and then tap the desired rows or cells.
+The touch interaction feature in Grid allows you to easily interact with the grid on touch screen devices. This feature is particularly useful for improving the user experience on mobile devices and tablets, making it easier to navigate and interact with the grid’s content using touch gestures.
 
-N> Multi-selection requires the selection [type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSelectionSettings.html) to be `multiple`.
+#### Single Row Selection
 
-The following screenshot represents a datagrid touch selection in the device.
+When you tap on a grid row using a touch screen, the tapped row is automatically selected. This provides a straightforward way to select single rows with a touch interface.
 
-![Touch Selection in Blazor DataGrid](./images/blazor-datagrid-touch-selection.jpg)
+#### Multi-Row Selection
+
+To perform the multi-selection, touch and drag the range of rows to select. To enable drag selection, set the AllowDragSelection property as true.
 
 ## Multiple selection based on condition
 
