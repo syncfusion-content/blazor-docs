@@ -17,9 +17,9 @@ Opt for individual Syncfusion NuGet packages for specific components. This appro
 
 ## Reduce Script Reference Size
 
-The overall ‘syncfusion-blazor.min.js’ script reference may be redundant. Instead, consider employing the following solutions to include only the required scripts for rendering Syncfusion components.
-* [Individual reference](https://blazor.syncfusion.com/documentation/common/adding-script-references#individual-control-script-reference).
-* [Blazor custom resource generator](https://blazor.syncfusion.com/documentation/common/custom-resource-generator).
+The overall `syncfusion-blazor.min.js` script reference may be redundant. Instead, consider employing the following solutions to include only the required scripts for rendering Syncfusion components.
+* [Individual reference](https://blazor.syncfusion.com/documentation/common/adding-script-references#individual-control-script-reference)
+* [Blazor custom resource generator](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)
 
 ## Lazy Loading in Blazor WebAssembly App
 
