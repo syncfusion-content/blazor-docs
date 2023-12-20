@@ -160,15 +160,15 @@ The Syncfusion Blazor component can be implemented within another Blazor compone
 
 The following methods can be used to render the Syncfusion Blazor components dynamically:
 
-1. [RenderFragment](https://docs.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.components.renderfragment?view=aspnetcore-5.0) with [Razor Template Syntax](https://docs.microsoft.com/en-us/aspnet/core/blazor/components/?view=aspnetcore-5.0#razor-templates)
-2. [RenderFragment](https://docs.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.components.renderfragment?view=aspnetcore-5.0) with [RenderTreeBuilder](https://docs.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.components.rendering.rendertreebuilder?view=aspnetcore-5.0) methods
-3. [BuildRenderTree](https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.components.componentbase.buildrendertree) method
+1. [RenderFragment](https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.components.renderfragment?view=aspnetcore-5.0) with [Razor Template Syntax](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/?view=aspnetcore-5.0#razor-templates)
+2. [RenderFragment](https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.components.renderfragment?view=aspnetcore-5.0) with [RenderTreeBuilder](https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.components.rendering.rendertreebuilder?view=aspnetcore-5.0) methods
+3. [BuildRenderTree](https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.components.componentbase.buildrendertree?view=aspnetcore-7.0) method
 
 ### RenderFragment with Razor Syntax
 
 The `RenderFragment` represents the segments of UI content that can be reused in the view page based on the application logic.
 
-You can use [Razor Template Syntax](https://docs.microsoft.com/en-us/aspnet/core/blazor/components/?view=aspnetcore-5.0#razor-templates) to define the `RenderFragment` in the view page.
+You can use [Razor Template Syntax](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/?view=aspnetcore-5.0#razor-templates) to define the `RenderFragment` in the view page.
 
 The following code demonstrates the RenderFragment that renders the `SfButton` component.
 
@@ -212,9 +212,9 @@ The following code demonstrates the RenderFragment that renders the `SfGrid` com
 
 ## RenderFragment with RenderTreeBuilder methods
 
-You can define the RenderFragment delegate with [RenderTreeBuilder](https://docs.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.components.rendering.rendertreebuilder?view=aspnetcore-5.0)'s methods.
+You can define the RenderFragment delegate with [RenderTreeBuilder](https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.components.rendering.rendertreebuilder?view=aspnetcore-5.0)'s methods.
 
-N> Refer to [Manual RenderTreeBuilder logic](https://docs.microsoft.com/en-us/aspnet/core/blazor/advanced-scenarios?view=aspnetcore-5.0#manual-rendertreebuilder-logic) to know more about RenderTreeBuilder.
+N> Refer to [Manual RenderTreeBuilder logic](https://learn.microsoft.com/en-us/aspnet/core/blazor/advanced-scenarios?view=aspnetcore-5.0#manual-rendertreebuilder-logic) to know more about RenderTreeBuilder.
 
 ```cshtml
 @RenderSfButton()
@@ -295,7 +295,7 @@ You can create a simple Blazor component with the `BuildRenderTree` method and g
 
 1. Right-click on the `~/Pages` folder in the Visual Studio and select `Add -> Class` to create a new class file (SyncTextBox.cs).
 
-2. Inherit the newly created class with [ComponentBase](https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.components.componentbase) and override the [BuildRenderTree](https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.components.componentbase.buildrendertree) method to create the component.
+2. Inherit the newly created class with [ComponentBase](https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.components.componentbase?view=aspnetcore-7.0) and override the [BuildRenderTree](https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.components.componentbase.buildrendertree?view=aspnetcore-7.0) method to create the component.
 
     ```c#
     using Microsoft.AspNetCore.Components;

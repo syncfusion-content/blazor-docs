@@ -225,4 +225,4 @@ The [DisableRangeSelector](https://help.syncfusion.com/cr/blazor/Syncfusion.Blaz
 
 ## See Also
 
-* [Disable Range Selector](./light-weight/)
+* [Disable Range Selector](./light-weight)
