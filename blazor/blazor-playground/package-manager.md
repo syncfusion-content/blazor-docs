@@ -59,8 +59,6 @@ For example, Here the code snippet for the grid component.
 
 You can install nuget packages by clicking the nuget asset manager. Search for the necessary nuget package and install based on the available versions. The selected package also install its necessary dependency packages. So there is no need for installing the dependency packages.
 
-N>Blazor playground is a WASM application, so it can only install client-side packages. Server-side packages are cannot be installed.
-
 For example, Click the package section in the nuget asset manager. Search for Syncfusion.Blazor.Calendar and install the package based on available version. Add the necessary using statements. Here, the calendar component is added to Index.razor.
 
 ```csharp
@@ -79,6 +77,7 @@ You can also downgrade or upgrade the installed package by searching the same pa
 
 ![Upgrading Nuget Packages](images/Package_Upgrade.png)
 
+N>Blazor playground is a WASM application, so it can only install client-side packages. Server-side packages are cannot be installed.
 
 ## Adding Multiple nuget packages
 
@@ -94,7 +93,7 @@ Press the output theme button to access the dropdown menu containing the availab
 
 ![Output themes](images/Output_theme.png)
 
-## Add Static Asset as CDN
+## How to Add/Remove Static Assets
 
 Blazor playground provides an option to add external styles or javascript as CDN.
 

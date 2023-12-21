@@ -45,13 +45,6 @@ To remove a class file, click the delete icon corresponding to the specific comp
 
 N>Remember to include the ".cs" extension; otherwise, the file will be generated as a razor file.
 
-## How to add/remove Static Assets
-
-Provided an option to enter the cdn link in Static Asset section for adding additional static files. After adding the desired asset, you can easily enable/disable it using the checkbox. 
-
-![Adding/Removing static assets](images/Adding_StaticAssets.png)
-
-You have the option to remove any additional static assets that have been included.
 
 
 
