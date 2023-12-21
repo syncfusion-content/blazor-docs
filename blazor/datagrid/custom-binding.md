@@ -991,8 +991,7 @@ The following sample code demonstrates sending additional parameters to the cust
 
 ## DataTable Binding
 
-DataTable represents a table with data rows and columns.
-Data binding of the DataTable can be acheieved in the DataGrid component by providing the **CustomAdaptor** class and overriding the Read or ReadAsync method of the DataAdaptor abstract class.
+DataTable represents a table with data rows and columns. Data binding of the DataTable can be acheieved in the DataGrid component by providing the **CustomAdaptor** class and overriding the Read or ReadAsync method of the DataAdaptor abstract class.
 
 To bind DataTable to the datagrid, you can assign `TValue` to the **ExpandoObject**. 
 
@@ -1050,25 +1049,10 @@ Refer to the following code example for how to bind the DataTable using custom a
         }
     }
 
-    public static IQueryable ToQueryableCollection(DataTable dt)
-    {
-        List<ExpandoObject> expandoList = new List<ExpandoObject>();
-        foreach (DataRow row in dt.Rows)
-        {
-            var expandoDict = new ExpandoObject() as IDictionary<String, Object>;
-            foreach (DataColumn col in dt.Columns)
-            {
-                var colValue = row[col.ColumnName];
-                colValue = (colValue == DBNull.Value) ? null : colValue;
-                expandoDict.Add(col.ToString(), colValue);
-            }
-            expandoList.Add((ExpandoObject)expandoDict);
-        }
-        return expandoList.AsQueryable();
-    }
-
+    // Performs data operations like Searching, Sorting, and Filtering
     public static IQueryable PerformDataOperation(DataTable dt, DataManagerRequest dm)
     {
+        // Convert DataTable to IQueryable collection of datasource
         DataSource = ToQueryableCollection(dt);
         if (dm.Search != null && dm.Search.Count > 0)
         {
@@ -1089,13 +1073,31 @@ Refer to the following code example for how to bind the DataTable using custom a
         return DataSource;
     }
 
+    // This method converts the DataTable data source into an IQueryable collection data source.
+    public static IQueryable ToQueryableCollection(DataTable dt)
+    {
+        List<ExpandoObject> expandoList = new List<ExpandoObject>();
+        foreach (DataRow row in dt.Rows)
+        {
+            var expandoDict = new ExpandoObject() as IDictionary<String, Object>;
+            foreach (DataColumn col in dt.Columns)
+            {
+                var colValue = row[col.ColumnName];
+                colValue = (colValue == DBNull.Value) ? null : colValue;
+                expandoDict.Add(col.ToString(), colValue);
+            }
+            expandoList.Add((ExpandoObject)expandoDict);
+        }
+        return expandoList.AsQueryable();
+    }
+
     public DataTable GetData()
     {
         DataTable dt = new DataTable();
         dt.Columns.AddRange(new DataColumn[4] { new DataColumn("OrderID", typeof(long)),
-                                                    new DataColumn("CustomerID", typeof(string)),
-                                                    new DataColumn("EmployeeID",typeof(int)),
-                                                    new DataColumn("OrderDate",typeof(DateTime))
+                                                new DataColumn("CustomerID", typeof(string)),
+                                                new DataColumn("EmployeeID",typeof(int)),
+                                                new DataColumn("OrderDate",typeof(DateTime))
     });
 
         int code = 1000;
@@ -1339,8 +1341,10 @@ While using batch editing in DataGrid, use the BatchUpdate/BatchUpdateAsync meth
         }
     }
 
+    // Performs data operations like Searching, Sorting, and Filtering
     public static IQueryable PerformDataOperation(DataTable dt, DataManagerRequest dm)
     {
+        // Convert DataTable to IQueryable collection of datasource
         DataSource = ToQueryableCollection(dt);
         if (dm.Search != null && dm.Search.Count > 0)
         {
@@ -1361,6 +1365,7 @@ While using batch editing in DataGrid, use the BatchUpdate/BatchUpdateAsync meth
         return DataSource;
     }
 
+    // This method converts the DataTable data source into an IQueryable collection data source.
     public static IQueryable ToQueryableCollection(DataTable dt)
     {
         List<ExpandoObject> expandoList = new List<ExpandoObject>();
@@ -1382,9 +1387,9 @@ While using batch editing in DataGrid, use the BatchUpdate/BatchUpdateAsync meth
     {
         DataTable dt = new DataTable();
         dt.Columns.AddRange(new DataColumn[4] { new DataColumn("OrderID", typeof(long)),
-                                                    new DataColumn("CustomerID", typeof(string)),
-                                                    new DataColumn("EmployeeID",typeof(int)),
-                                                    new DataColumn("OrderDate",typeof(DateTime))
+                                                new DataColumn("CustomerID", typeof(string)),
+                                                new DataColumn("EmployeeID",typeof(int)),
+                                                new DataColumn("OrderDate",typeof(DateTime))
     });
 
         int code = 1000;
