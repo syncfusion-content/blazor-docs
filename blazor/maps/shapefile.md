@@ -9,7 +9,7 @@ documentation: ug
 
 # Shapefile in Blazor Maps Component
 
-Shapefile is a popular geospatial vector data format for storing location-based information such as shapes, spatial locations, and pertinent properties of geographic landmarks.
+The shapefile is a popular geospatial vector data format for storing location-based information such as shapes, spatial locations, and pertinent properties of geographic landmarks.
 
 ## Importing and viewing shapefile
 
