@@ -244,7 +244,7 @@ In this demo application, the Bootstrap4 theme will be used.
 {% highlight cshtml %}
 <head>
     ....
-    <link href="_content/Syncfusion.Blazor.Themes/bootstrap4.css" rel="stylesheet" />
+    <link href="_content/Syncfusion.Blazor.Themes/bootstrap4.css" rel="stylesheet" />
 </head>
 
 {% endhighlight %}
