@@ -232,5 +232,3 @@ The [Refresh](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.SfMap
     };
 }
 ```
-
-![Blazor Maps with GetMinMaxLatitudeLongitude method](./images/Methods/blazor-maps-getminmaxlatitudelongitude.png)
