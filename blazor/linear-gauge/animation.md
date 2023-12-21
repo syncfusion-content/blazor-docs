@@ -9,13 +9,13 @@ documentation: ug
 
 # Animation in Blazor Linear Gauge Component
 
-By setting the [AnimationDuration](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.SfLinearGauge.html#Syncfusion_Blazor_LinearGauge_SfLinearGauge_AnimationDuration) property, all of the elements in the Linear Gauge, such as the axis lines, ticks, labels, ranges, pointers and annotations, can be animated sequentially. When the `AnimationDuration` property is set to a value in milliseconds, the animation for the Linear Gauge is started, providing a smooth rendering effect for the component. The animation effect will not be started if the property is set to **0**, which is the default value. If this animation is enabled, the component will exhibit the following behavior.
+All of the elements in the Linear Gauge, such as the axis lines, ticks, labels, ranges, pointers, and annotations, can be animated sequentially by using the [AnimationDuration](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.SfLinearGauge.html#Syncfusion_Blazor_LinearGauge_SfLinearGauge_AnimationDuration) property. The animation for the Linear Gauge is enabled when the `AnimationDuration` property is set to an appropriate value in milliseconds, providing a smooth rendering effect for the component. If the `AnimationDuration` property is set to **0**, which is the default value, the animation effect is disabled. If the animation is enabled, the component will behave in the following order.
 
-1. At the same time, the axis line, ticks, labels, and ranges will be animated.
-2. Pointers will be animated next if they are available.
-3. Annotations will be animated if they are available.
+1. The axis line, ticks, labels, and ranges will all be animated at the same time.
+2. If pointers are available, they will be animated next.
+3. If available, annotations will be animated.
 
-The animation of the Linear Gauge is demonstrated in the example below.
+The animation of the Linear Gauge is demonstrated in the following example.
 
 ```cshtml
 
@@ -48,5 +48,5 @@ The animation of the Linear Gauge is demonstrated in the example below.
 
 ```
 
-![Blazor Linear Gauge animation](images/blazor-linear-gauge-multiple-elements-animation.gif)
+![Blazor Linear Gauge Animation](images/blazor-linear-gauge-multiple-elements-animation.gif)
 
