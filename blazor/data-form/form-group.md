@@ -80,7 +80,7 @@ In DataForm , [FormGroup](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
 }
 
 {% endhighlight %}
-{% endtabs % }
+{% endtabs %}
 
 ![Blazor DataForm Form Group](images/blazor_dataform_single_formgroup.png)
 
@@ -196,6 +196,6 @@ DataForm allows you to integrate multiple form groups with number of `FormItem` 
 
 
 {% endhighlight %}
-{% endtabs % }
+{% endtabs %}
 
 ![Blazor DataForm Form Group](images/blazor_dataform_multiple_formgroup.png)

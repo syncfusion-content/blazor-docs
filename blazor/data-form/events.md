@@ -116,7 +116,7 @@ The [OnSubmit](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataForm.
 }
 
 {% endhighlight %}
-{% endtabs % }
+{% endtabs %}
 
 ## OnValidSubmit
 
@@ -217,7 +217,7 @@ he [OnValidSubmit](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataF
 }
 
 {% endhighlight %}
-{% endtabs % }
+{% endtabs %}
 
 ## OnInvalidSubmit
 
@@ -316,7 +316,7 @@ The [OnInvalidSubmit](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Da
 }
 
 {% endhighlight %}
-{% endtabs % }
+{% endtabs %}
 
 ## OnUpdate
 
@@ -415,4 +415,4 @@ The [OnUpdate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataForm.
 }
 
 {% endhighlight %}
-{% endtabs % }
+{% endtabs %}
