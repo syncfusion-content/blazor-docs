@@ -16,4 +16,3 @@ documentation: ug
 ## RTL
 
 RTL provides an option to switch the text direction and layout of the Stepper component from right to left. It improves the user experiences and accessibility for users who use right-to-left languages. Refer to [Blazor RTL](https://blazor.syncfusion.com/documentation/common/right-to-left) topic to provide RTL support for the Syncfusion Blazor components.
-

@@ -22,3 +22,21 @@ The [Duration](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigatio
 ## Delay
 
 The [Delay](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.StepperAnimationSettings.html#Syncfusion_Blazor_Navigations_StepperAnimationSettings_Delay) property sets the animation delay. The default value is `0` milliseconds.
+
+```cshtml
+
+@using Syncfusion.Blazor.Navigations
+
+<SfStepper>
+    <StepperSteps>
+        <StepperStep></StepperStep>
+        <StepperStep></StepperStep>
+        <StepperStep></StepperStep>
+        <StepperStep></StepperStep>
+    </StepperSteps>
+    <StepperAnimationSettings Enable=true Delay="500" Duration="2000"></StepperAnimationSettings>
+</SfStepper>
+
+```
+
+![Blazor Stepper Component with Animation](./images/Blazor-animation.png)
