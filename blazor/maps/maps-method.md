@@ -185,10 +185,10 @@ The [GetMinMaxLatitudeLongitude](https://help.syncfusion.com/cr/blazor/Syncfusio
 @if(MapBoundCoordinates != null)
 {
     <div>
-        MaximumLatitude = @MapBoundCoordinates.MaxLatitude <br/>
-        MinimumLatitude = @MapBoundCoordinates.MinLatitude  <br />
-        MaximumLongitude = @MapBoundCoordinates.MaxLongitude <br />
-        MinimumLongitude = @MapBoundCoordinates.MinLongitude
+        Maximum Latitude = @MapBoundCoordinates.MaxLatitude <br/>
+        Minimum Latitude = @MapBoundCoordinates.MinLatitude  <br />
+        Maximum Longitude = @MapBoundCoordinates.MaxLongitude <br />
+        Minimum Longitude = @MapBoundCoordinates.MinLongitude
     </div>
 }
 
