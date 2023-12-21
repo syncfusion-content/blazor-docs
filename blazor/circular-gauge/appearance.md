@@ -112,6 +112,3 @@ You can render semi or quarter Circular Gauge by modifying the start and end ang
 ```
 
 ![Blazor Circular Gauge with Custom Radius and Angle](./images/blazor-circulargauge-custom-radius-angle.png)
-
-
-
