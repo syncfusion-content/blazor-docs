@@ -67,5 +67,5 @@ The animation of the Circular Gauge is demonstrated in the following example.
 
 ![Blazor Circular Gauge Animation](./images/blazor-circulargauge-multiple-elements-animation.gif)
 
-N>Only the pointer of the Circular Gauge can be animated individually, not the axis lines, ticks, labels, ranges, and annotations. You can refer this [link](https://blazor.syncfusion.com/documentation/circular-gauge/pointers#pointer-animation) to enable only pointer animation.
+N> Only the pointer of the Circular Gauge can be animated individually, not the axis lines, ticks, labels, ranges, and annotations. You can refer this [link](https://blazor.syncfusion.com/documentation/circular-gauge/pointers#pointer-animation) to enable only pointer animation.
 
