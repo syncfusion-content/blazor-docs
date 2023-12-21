@@ -73,7 +73,7 @@ The classification of methods that can be invoked by using the DataForm instance
 }
 
 {% endhighlight %}
-{% endtabs % }
+{% endtabs %}
 
 ## Refresh()
 
@@ -145,4 +145,4 @@ The classification of methods that can be invoked by using the DataForm instance
 }
 
 {% endhighlight %}
-{% endtabs % }
+{% endtabs %}
