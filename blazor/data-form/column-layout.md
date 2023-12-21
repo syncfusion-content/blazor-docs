@@ -79,7 +79,7 @@ The [ColumnCount](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataFo
 }
 
 {% endhighlight %}
-{% endtabs % }
+{% endtabs %}
 
 In the provided example, the layout of the DataForm is segmented into six equal columns, with the editor fields distributed accordingly, depending on the column span allocated to each one.
 
@@ -193,7 +193,7 @@ This section explains how to configure the DataForm component on dividing the co
 }
 
 {% endhighlight %}
-{% endtabs % }
+{% endtabs %}
 
 In the provided example, the DataForm is divided into two sections, with each section populating its respective `FormGroup`. The first group is further segmented into six subsections, with the elements within it distributed according to their assigned column span. In a similar manner, the second group is split into two columns, with its elements being divided accordingly.
 
