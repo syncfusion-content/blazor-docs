@@ -220,13 +220,11 @@ The defined conditions can be exported to the Json query through the [GetRules](
     }
 
     private void Get() {
-        var d = QueryBuilderObj.GetRules();
         rule = JsonConvert.SerializeObject(QueryBuilderObj.GetRules());
     }
 
     private void Set() {
         RuleModel ruleModel = JsonConvert.DeserializeObject<RuleModel>(rule);
-        QueryBuilderObj.Reset();
         QueryBuilderObj.SetRules(ruleModel.Rules,"and");
     }
 }
