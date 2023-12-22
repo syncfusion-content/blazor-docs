@@ -133,7 +133,6 @@ N> Syncfusion recommends to reference scripts using [Static Web Assets](https://
 
 ![Blazor Calendar Component](images/output-calendar-using-blazor-webassembly.png)
 
-{% previewsample "https://blazorplayground.syncfusion.com/live-editor/embed/LDBgirsJBGDheWFi?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 N> When using a PDF viewer on macOS (ARM), we recommend our [NextGen PDF Viewer](https://blazor.syncfusion.com/documentation/pdfviewer-2/migration) since it is compatible with macOS (ARM).
 

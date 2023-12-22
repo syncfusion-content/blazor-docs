@@ -87,7 +87,6 @@ N> In the following sample, disable the AutoComplete component using <kbd>t</kbd
     }
 }
 ```
-
-
+{% previewsample "https://blazorplayground.syncfusion.com/live-editor/embed/VtLUCrMzKHwTMpln?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Accessibility in Blazor AutoComplete](./images/blazor-autocomplete-accessibility.png)

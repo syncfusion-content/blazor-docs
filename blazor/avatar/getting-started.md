@@ -85,4 +85,6 @@ Add the Syncfusion Blazor Avatar component in the **~/Pages/Index.razor** file.
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion Blazor Avatar component in your default web browser.
 
+{% previewsample "https://blazorplayground.syncfusion.com/live-editor/embed/rNhqWLCJKbULEDxl?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 ![Blazor Avatar Component](./images/blazor-avatar-component.PNG)
