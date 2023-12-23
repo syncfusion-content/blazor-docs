@@ -229,6 +229,8 @@ Run the application, and the PDF file will be displayed using Syncfusion’s Bla
 
 ![Blazor SfPdfViewer Component](GettingStarted_images/blazor-pdfviewer.png)
 
+N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/PDFViewer%20%202/BlazorWebApp).
+
 ## See also
 
 * [Getting Started with Blazor PDF Viewer (Next Gen) Component in Blazor WASM App](./web-assembly-application)
