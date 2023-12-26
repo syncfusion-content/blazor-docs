@@ -47,7 +47,7 @@ The [DateTime](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Va
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/htBUtHhbAtRuicOv?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Blazor Chart with DateTime Axis](images/datetime/blazor-line-chart-datetime-axis.png)
 
 ## DateTime category axis
 
@@ -85,11 +85,11 @@ The [DateTime Category](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BtBADxrbKNmbYNxG?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Blazor Line Chart with DateTime Axis](images/datetime/blazor-line-chart-with-datetime-axis.png)
 
 ### Range
 
-The axis range will be calculated automatically based on the provided data; however, the axis range can also be customized using [Minimum](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonAxis.html#Syncfusion_Blazor_Charts_ChartCommonAxis_Minimum), [Maximum](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonAxis.html#Syncfusion_Blazor_Charts_ChartCommonAxis_Maximum), and [Interval](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonAxis.html#Syncfusion_Blazor_Charts_ChartCommonAxis_Interval) properties.
+The axis range will be calculated automatically based on the provided data; however, the axis range can also be customized using [Minimum](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAxis.html#Syncfusion_Blazor_Charts_ChartAxis_Minimum), [Maximum](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAxis.html#Syncfusion_Blazor_Charts_ChartAxis_Maximum), and [Interval](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAxis.html#Syncfusion_Blazor_Charts_ChartAxis_Interval) properties.
 
 ```cshtml
 
@@ -126,11 +126,11 @@ The axis range will be calculated automatically based on the provided data; howe
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LDBUjxLlqjbHbgPv?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Changing Blazor Line Chart DateTime Axis based on Range](images/datetime/blazor-line-chart-axis-based-on-range.png)
 
 ### Interval customization
 
-The [Interval](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonAxis.html#Syncfusion_Blazor_Charts_ChartCommonAxis_Interval) and [IntervalType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonAxis.html#Syncfusion_Blazor_Charts_ChartCommonAxis_IntervalType) properties of the [Axis](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAxis.html) can be used to customize date time intervals. When interval is set to **2** and interval type is set to **Years**, it considers 2 years to be the interval. The following interval types are supported by the DateTime axis:
+The [Interval](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAxis.html#Syncfusion_Blazor_Charts_ChartAxis_Interval) and [IntervalType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAxis.html#Syncfusion_Blazor_Charts_ChartAxis_IntervalType) properties of the [Axis](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAxis.html) can be used to customize date time intervals. When interval is set to **2** and interval type is set to **Years**, it considers 2 years to be the interval. The following interval types are supported by the DateTime axis:
 
 * Auto
 * Years
@@ -176,11 +176,11 @@ The [Interval](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Ch
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rZVgtRVlUXagblRs?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Changing Blazor Line Chart DateTime Axis based on Interval](images/datetime/blazor-line-chart-axis-based-on-interval.png)
 
 **Applying padding to the Range**
 
-The [RangePadding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonAxis.html#Syncfusion_Blazor_Charts_ChartCommonAxis_RangePadding) property can be used to apply padding to the minimum and maximum extremes of range. The following types of padding are supported by the DateTime axis:
+The [RangePadding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAxis.html#Syncfusion_Blazor_Charts_ChartAxis_RangePadding) property can be used to apply padding to the minimum and maximum extremes of range. The following types of padding are supported by the DateTime axis:
 
 * None
 * Round
@@ -188,7 +188,7 @@ The [RangePadding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Chart
 
 **DateTime - None**
 
-When the [RangePadding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonAxis.html#Syncfusion_Blazor_Charts_ChartCommonAxis_RangePadding) is set to **None**, the minimum and maximum of the axis is based on the data.
+When the [RangePadding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAxis.html#Syncfusion_Blazor_Charts_ChartAxis_RangePadding) is set to **None**, the minimum and maximum of the axis is based on the data.
 
 ```cshtml
 
@@ -222,11 +222,11 @@ When the [RangePadding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LZLKjdVFqsjpQjMK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Blazor Line Chart without RangePadding](images/datetime/blazor-line-chart-axis-based-on-range.png)
 
 **DateTime - Round**
 
-When the [RangePadding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonAxis.html#Syncfusion_Blazor_Charts_ChartCommonAxis_RangePadding) property is set to **Round**, the minimum and maximum will be rounded to the nearest possible value divisible by interval.
+When the [RangePadding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAxis.html#Syncfusion_Blazor_Charts_ChartAxis_RangePadding) property is set to **Round**, the minimum and maximum will be rounded to the nearest possible value divisible by interval.
 
 ```cshtml
 
@@ -260,11 +260,9 @@ When the [RangePadding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LNrKjnLlAiMgbdQZ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
 **DateTime - Additional**
 
-When the [RangePadding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonAxis.html#Syncfusion_Blazor_Charts_ChartCommonAxis_RangePadding) property is set to **Additional**, the interval of an axis will be padded to the minimum and maximum of the axis.
+When the [RangePadding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAxis.html#Syncfusion_Blazor_Charts_ChartAxis_RangePadding) property is set to **Additional**, the interval of an axis will be padded to the minimum and maximum of the axis.
 
 ```cshtml
 
@@ -297,11 +295,9 @@ When the [RangePadding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hNrqXxBPqWMbSxFM?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
 ## Label format
 
-Using the [LabelFormat](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonAxis.html#Syncfusion_Blazor_Charts_ChartCommonAxis_LabelFormat) property on an axis, it is possible to format and parse the date to all globalize formats.
+Using the [LabelFormat](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAxis.html#Syncfusion_Blazor_Charts_ChartAxis_LabelFormat) property on an axis, it is possible to format and parse the date to all globalize formats.
 
 ```cshtml
 
@@ -334,9 +330,9 @@ Using the [LabelFormat](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rjLAXRVvUiLHYCbt?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Axis Label Formatting in Blazor Line Chart](images/datetime/blazor-line-chart-axis-label-format.png)
 
-The table below shows the results of applying various popular date and time formats to the [LabelFormat](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonAxis.html#Syncfusion_Blazor_Charts_ChartCommonAxis_LabelFormat) property.
+The table below shows the results of applying various popular date and time formats to the [LabelFormat](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAxis.html#Syncfusion_Blazor_Charts_ChartAxis_LabelFormat) property.
 
 <!-- markdownlint-disable MD033 -->
 

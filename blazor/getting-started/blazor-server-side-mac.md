@@ -21,7 +21,7 @@ This article provides a step-by-step instructions for building Blazor Server App
 
 You can create a **Blazor Server App** using Visual Studio for mac in the following way.
 
-* [Create a project using Microsoft Templates](https://docs.microsoft.com/en-us/aspnet/core/blazor/tooling?pivots=macos)
+* [Create a project using Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0&pivots=macos)
 
 ## Install Syncfusion Blazor packages in the App
 
@@ -164,7 +164,9 @@ N> Syncfusion recommends to reference scripts using [Static Web Assets](https://
 
 * <kbd>⌘</kbd>+<kbd>F5</kbd> to run the app. Then, the Syncfusion Blazor Calendar component will be rendered in the default web browser.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rXrgXdshUmkPoOOo?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Blazor Calendar Component](images/mac-output.png)
+
+N> When utilizing a PDF viewer on macOS (ARM), we highly recommend opting for our [NextGen PDF Viewer](https://blazor.syncfusion.com/documentation/pdfviewer-2/migration) since it has excellent compatibility with macOS (ARM) architecture.
 
 N> You need to include a valid license key (either paid or trial key) within your applications. Refer to this [help topic](https://blazor.syncfusion.com/documentation/getting-started/license-key/overview) for more information.
 

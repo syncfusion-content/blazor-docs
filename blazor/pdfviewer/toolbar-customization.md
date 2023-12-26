@@ -7,6 +7,8 @@ control: PDF Viewer
 documentation: ug
 ---
 
+N> Syncfusion recommends using [Blazor PDF Viewer (NextGen)](https://blazor.syncfusion.com/documentation/pdfviewer-2/getting-started/server-side-application) Component which provides fast rendering of pages and improved performance. Also, there is no need of external Web service for processing the files and ease out the deployment complexity. It can be used in Blazor Server, WASM and MAUI applications without any changes.
+
 # Toolbar Customization in Blazor PDF Viewer Component
 
 The PDF Viewer comes with a powerful built-in toolbar with the following important options,
@@ -275,6 +277,8 @@ The following code represnts how to create custom toolbar with save and some cus
     }
 </style>
 ```
+![Blazor PDFViewer with Custom Toolbar](./images/toolbar-customization.png)
+
 N> [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Toolbar/Custom%20Toolbar/Custom%20toolbar%20with%20save%20option).
 
 The following sample mimics all the options of the PDF Viewer default toolbar in a custom toolbar along with the save button.
@@ -353,6 +357,7 @@ You can customize the appearance of the toolbar icons by disabling the default t
 </style>
 Footer
 ```
+![Blazor PDFViewer with Custom Toolbar](./images/customization-final.png)
 
 N> [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Toolbar/Custom%20Toolbar/Custom%20toolbar%20with%20PNG%20image).
 

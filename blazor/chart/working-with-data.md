@@ -55,7 +55,7 @@ An IEnumerable object can be assigned to the [DataSource](https://help.syncfusio
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LXhqjRLPsmDqZYTI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Blazor Line Chart with Data Binding](images/working-data/blazor-chart-data-binding.png)
 
 N> By default, [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) uses **BlazorAdaptor** for list data-binding.
 
@@ -92,7 +92,7 @@ Chart is a generic component which is strongly bound to a model type. There are 
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hjBANRLbswCmByXE?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Blazor Chart with ExpandoObject Binding](images/working-data/blazor-chart-expando-object-binding.png)
 
 ### DynamicObject binding
 
@@ -149,7 +149,7 @@ Chart supports **DynamicObject** data source when the model type is unknown. The
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BtVAjdrliGHLXYXG?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Blazor Chart with DynamicObject Binding](images/working-data/blazor-chart-dynamic-object.png)
 
 ## Remote data
 
@@ -174,19 +174,19 @@ Assign service data as an instance of [SfDataManager](https://help.syncfusion.co
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LtLAXRVFMuRNKdQj?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Remote Data Binding in Blazor Chart](images/working-data/blazor-chart-remote-data-binding.png)
 
 ### Binding with OData services
 
-[OData](http://www.odata.org/documentation/odata-version-3-0/) is a standardized data creation and consumption protocol. The [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) can be used to retrieve data from an [OData](http://www.odata.org/documentation/odata-version-3-0/) service. For remote data binding using the [OData](http://www.odata.org/documentation/odata-version-3-0/) service, see the code below.
+[OData](https://www.odata.org/documentation/odata-version-3-0/) is a standardized data creation and consumption protocol. The [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) can be used to retrieve data from an [OData](https://www.odata.org/documentation/odata-version-3-0/) service. For remote data binding using the [OData](https://www.odata.org/documentation/odata-version-3-0/) service, see the code below.
 
 ### Binding with OData v4 services
 
-The [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) can retrieve and consume OData v4 services, which is an upgraded version of OData protocols. Refer to the [OData documentation](http://docs.oasis-open.org/odata/odata/v4.0/errata03/os/complete/part1-protocol/odata-v4.0-errata03-os-part1-protocol-complete.html#_Toc453752197) for additional information on OData v4 services. To bind an OData v4 service, use the **ODataV4Adaptor**.
+The [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) can retrieve and consume OData v4 services, which is an upgraded version of OData protocols. Refer to the [OData documentation](https://docs.oasis-open.org/odata/odata/v4.0/errata03/os/complete/part1-protocol/odata-v4.0-errata03-os-part1-protocol-complete.html#_Toc453752197) for additional information on OData v4 services. To bind an OData v4 service, use the **ODataV4Adaptor**.
 
 ### Web API
 
-The [WebApiAdaptor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.WebApiAdaptor.html) can be used to bind a chart to a Web API created using an [OData](http://www.odata.org/documentation/odata-version-3-0/) endpoint.
+The [WebApiAdaptor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.WebApiAdaptor.html) can be used to bind a chart to a Web API created using an [OData](https://www.odata.org/documentation/odata-version-3-0/) endpoint.
 
 ```cshtml
 @using Syncfusion.Blazor.Data
@@ -204,7 +204,7 @@ The [WebApiAdaptor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data
 </SfChart>
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rZhKtxLbsYaQQUCW?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Blazor Chart with Web API Binding](images/working-data/blazor-chart-web-api-binding.png)
 
 ### Sending additional parameters to the server
 
@@ -237,8 +237,6 @@ The following sample code shows how to send parameters using the Query property 
 
 }
 ```
-
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BNVgtdLPLjXuLDPU?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Entity Framework
 
@@ -456,7 +454,7 @@ On the other hand, to configure the chart using Web API, provide the appropriate
 
 ## Observable collection
 
-The [ObservableCollection](https://docs.microsoft.com/en-us/dotnet/api/system.collections.objectmodel.observablecollection-1?view=net-6.0) (dynamic data collection) provides notifications when items are added, removed, and moved. The implemented [INotifyCollectionChanged](https://docs.microsoft.com/en-us/dotnet/api/system.collections.specialized.inotifycollectionchanged?view=net-6.0) provides notification when the dynamic changes of adding, removing, moving, and clearing the collection occur.
+The [ObservableCollection](https://learn.microsoft.com/en-us/dotnet/api/system.collections.objectmodel.observablecollection-1?view=net-6.0) (dynamic data collection) provides notifications when items are added, removed, and moved. The implemented [INotifyCollectionChanged](https://learn.microsoft.com/en-us/dotnet/api/system.collections.specialized.inotifycollectionchanged?view=net-6.0) provides notification when the dynamic changes of adding, removing, moving, and clearing the collection occur.
 
 ```cshtml
 
@@ -508,7 +506,7 @@ The [ObservableCollection](https://docs.microsoft.com/en-us/dotnet/api/system.co
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VXrgNdVPVDyzeLKU?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Blazor Chart with Web API Binding](images/working-data/observable-collection.png)
 
 ## Empty points
 
@@ -557,8 +555,6 @@ Empty points are defined as data points having NaN values. Empty points can be c
 }
 
 ```
-
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rZhqDxrvVNFYpjqT?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 **Customizing empty point**
 
@@ -609,7 +605,7 @@ The [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartE
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LXrAZdLFhsMkdGdb?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Blazor Column Chart with Empty Points](images/working-data/blazor-chart-empty-point.png)
 
 N> Refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
 

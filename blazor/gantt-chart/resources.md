@@ -73,7 +73,7 @@ The resource collection contains details about resources that are used in the pr
         public int TaskId { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
+        public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
@@ -185,7 +185,7 @@ The following code snippet shows how to assign the resource for each task and ma
         public string TaskName { get; set; }
         public string TaskType { get; set; }
         public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
+        public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
@@ -275,7 +275,7 @@ By using cell editing or dialog editing, you can add/remove the resource for par
         public string TaskName { get; set; }
         public string TaskType { get; set; }
         public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
+        public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
@@ -301,7 +301,7 @@ By using cell editing or dialog editing, you can add/remove the resource for par
 
 N> When the edit mode is set as `Auto`, on performing double-click action on Tree Grid side, the cells will be changed to editable mode, and on performing double-click action on chart side, the edit dialog will appear for editing the task details. By using this support, you can add/remove the resource for particular task using both cell and edit dialog.
 
-Editing resource with cell edit
+Editing resource with cell edit or dialog edit
 
 ![Blazor Gantt Chart displays Editing Resource with Cell](images/blazor-gantt-chart-editing-resources-in-cell.png)
 

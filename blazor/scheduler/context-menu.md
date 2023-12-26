@@ -197,4 +197,4 @@ N> You can also display custom menu options on Scheduler cells and appointments.
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VNVKZGCWhcbsYVkm?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Context Menu in Blazor Scheduler](images/blazor-scheduler-contextmenu.png)

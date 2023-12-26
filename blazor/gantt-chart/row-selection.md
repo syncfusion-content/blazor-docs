@@ -30,7 +30,7 @@ The row selection in the Gantt Chart component can be enabled or disabled using 
         public int TaskId { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
+        public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
@@ -79,7 +79,7 @@ You can select a row at the time of loading by setting the index of the row to t
         public int TaskId { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
+        public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
@@ -136,7 +136,7 @@ You can also select a row dynamically using the [SelectRowAsync](https://help.sy
         public int TaskId { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
+        public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
@@ -187,7 +187,7 @@ You can select multiple rows by setting the `SelectionSettings.Type` property to
         public int TaskId { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
+        public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
@@ -233,7 +233,7 @@ You can also select rows dynamically using the [SelectRowsAsync](https://help.sy
     public SfGantt<TaskData> Gantt;
     public void SelectRows()
     {
-        this.Gantt.SelectRowsAsync(new double[] {1,2,3});
+        this.Gantt.SelectRowsAsync(new int[] {1,2,3});
     }
     private List<TaskData> TaskCollection { get; set; }
     protected override void OnInitialized()
@@ -246,7 +246,7 @@ You can also select rows dynamically using the [SelectRowsAsync](https://help.sy
         public int TaskId { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
+        public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }

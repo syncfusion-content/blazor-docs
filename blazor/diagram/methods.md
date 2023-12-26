@@ -153,7 +153,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Methods/AddDiagramElements)
 
-### How to clear the nodes/connectors in the diagram
+## How to clear the nodes/connectors in the diagram
 
 [Clear](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Clear) method is used to remove all the elements such as nodes, connectors and groups from the diagram.
 
@@ -224,7 +224,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ![Diagram Clear](images/Clear.gif)
 
-### How to delete the diagram elements
+## How to delete the diagram elements
 
 The [Delete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Delete_Syncfusion_Blazor_Diagram_DiagramObjectCollection_Syncfusion_Blazor_Diagram_NodeBase__) method is used for deleting the diagram elements. It deletes the diagram elements such as nodes, connectors, and groups. When this method is called without any parameter or with a null parameter, the selected diagram elements are deleted. Otherwise, the collections of diagram elements passed in the parameter will be deleted. The following code example shows how to delete the diagram elements from the diagram.
 
@@ -329,7 +329,7 @@ The [Delete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfD
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Methods/Delete)
 
-### ResetZoom
+## ResetZoom
   The [ResetZoom](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_ResetZoom) method is used to reset the current zoom value of the diagram page to 100% when the diagram is either in a zoomed in or zoomed out state. The following code example shows how to reset the current zoom value of the diagram page.
 
 ```cshtml
@@ -356,7 +356,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 <div id="properties">
     <SfButton Content="ZoomIn" OnClick="@ZoomIn" />
     <SfButton Content="ZoomOut" OnClick="@ZoomOut" />
-    <SfButton Content="Reset" OnClick="@Reset" />
+    <SfButton Content="Reset" OnClick="@ResetZoom" />
 </div>
 
 @code {
@@ -432,7 +432,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ![Diagram Reset](images/ResetZoom-Method.gif)
 
-### How to clear the selection
+## How to clear the selection
   The [ClearSelection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_ClearSelection) method is used to clear the selected nodes/connectors in the diagram. 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -522,7 +522,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Methods/ClearSelection)
 
-### How to get object in the diagram
+## How to get object in the diagram
   The [GetObject](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_GetObject_System_String_) in SfDiagramComponent takes an ID as an argument and returns an IDiagramObject. By passing its id to this method, you can obtain a connector or node.
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -607,12 +607,13 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
     public void GetObjectMethod()
     {
         Node node = diagram.GetObject("node1") as Node;
+        diagram.Select(new System.Collections.ObjectModel.ObservableCollection<IDiagramObject> (){node});
     }
 }
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Methods/GetObjectMethod)
 
-### How to get page bounds of the diagram
+## How to get page bounds of the diagram
   The [GetPageBounds](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_GetPageBounds_System_Nullable_System_Double__System_Nullable_System_Double__) is used to get the bounds of the page. You can get page width and page height values etc.
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -702,7 +703,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Methods/GetPageBounds)
 
-### How to select all object in the diagram
+## How to select all object in the diagram
   The [SelectAll](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_SelectAll) is used to select all objects in the diagram.
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -793,7 +794,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Methods/SelectAllMethod)
 
-### How to scale the selected object
+## How to scale the selected object
   The [Scale](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Scale_Syncfusion_Blazor_Diagram_IDiagramObject_System_Double_System_Double_Syncfusion_Blazor_Diagram_DiagramPoint_) is used to scale the given objects by the given ratio.
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -883,7 +884,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Methods/ScaleMethod)
 
-### How to get custom cursor
+## How to get custom cursor
  The [GetCustomCursor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_GetCustomCursor) is used to create their cursor. You can customize the cursor style as you want.
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -947,7 +948,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
  ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Methods/GetCustomCursor)
 
-### BeginUpdate and EndUpdate
+## BeginUpdate and EndUpdate
  [Beginupdate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_BeginUpdate) prevents visual updates to the diagram until the EndUpdate() method is called. [Endupdate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_EndUpdate) means that the diagram is unlocked following a call to the BeginUpdate(Boolean) method, resulting in an immediate visual update.
 
 ```cshtml
@@ -1028,7 +1029,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Methods/BeginAndEndUpdate)
 
-### How to unselect the selected object
+## How to unselect the selected object
  [UnSelect](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_UnSelect_Syncfusion_Blazor_Diagram_IDiagramObject_) is used to unselect the selected objects in the diagram. 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -1118,7 +1119,8 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Methods/UnSelectMethod)
 
-### How to clone the diagram
+## How to clone the diagram
+
  [Clone](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Clone) helps to clone the diagram.
 
 ```cshtml
@@ -1209,7 +1211,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Methods/CloneMethod)
 
-### How to get custom tool
+## How to get custom tool
  The [GetCustomTool](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_GetCustomTool) allows the user to customize the tool.
 
 ```cshtml
@@ -1411,8 +1413,10 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
  ```
  You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Methods/GetCustomTool)
 
- ### How to zoom and pan the diagram
- [Zoom](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Zoom_System_Double_Syncfusion_Blazor_Diagram_DiagramPoint_) allows to user to zoom in and zoom out the diagram. [Pan](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Pan_System_Double_System_Double_Syncfusion_Blazor_Diagram_DiagramPoint_) is used to pan the diagram to the horizontal and vertical offset.
+
+ ## How to zoom and pan the diagram
+
+[Zoom](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Zoom_System_Double_Syncfusion_Blazor_Diagram_DiagramPoint_) allows to user to zoom in and zoom out the diagram. [Pan](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Pan_System_Double_System_Double_Syncfusion_Blazor_Diagram_DiagramPoint_) is used to pan the diagram to the horizontal and vertical offset.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -1510,7 +1514,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Methods/ZoomAndPan)
 
-### How to refresh the datasource
+## How to refresh the datasource
  [RefreshDataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_RefreshDataSource) will refresh the layout based on the changes in the data source.
 
 ```cshtml
@@ -1575,7 +1579,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
         new MindMapDetails() { Id= "10", Label= "Ideas", ParentId ="5", Branch = "subRight" },
         new MindMapDetails() { Id= "11", Label= "Engagement", ParentId ="5", Branch = "subRight" },
     };
-    private void RefreshDataSource()
+    private async Task RefreshDataSource()
     {
         DataSource = new List<object>()
     {
@@ -1585,7 +1589,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
         new MindMapDetails() { Id= "4",  Label="Sessions", ParentId ="2", Branch = "subRight" },
         new MindMapDetails() { Id= "5",  Label="Complementing", ParentId ="2", Branch = "subRight" },
         };
-        Diagram.RefreshDataSource();
+        await Diagram.RefreshDataSource();
     }
 }
 ```

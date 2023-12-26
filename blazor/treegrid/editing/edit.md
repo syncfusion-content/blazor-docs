@@ -9,14 +9,14 @@ documentation: ug
 
 # Editing in Blazor Tree Grid Component
 
-The Tree Grid component has options to dynamically insert, delete and update records. Editing feature is enabled by using the [TreeGridEditSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridEditSettings.html) property and it requires a primary key column for CRUD operations. 
+The Tree Grid component has options to dynamically insert, delete and update records. Editing feature is enabled by using the [TreeGridEditSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEditSettings.html) property and it requires a primary key column for CRUD operations. 
 
 To know more about editing feature in Blazor tree grid component, you can check on this video.
 
 {% youtube
 "youtube:https://www.youtube.com/watch?v=5_g3yr8ASys"%}
 
-To define the primary key, set the [TreeGridColumn.IsPrimaryKey](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridColumn~IsPrimaryKey.html) to **true** in particular column.
+To define the primary key, set the [TreeGridColumn.IsPrimaryKey](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_IsPrimaryKey) to **true** in particular column.
 
 {% tabs %}
 
@@ -83,7 +83,7 @@ public class TreeData
 
 {% endtabs %}
 
-The editing can be disabled for a particular column, by specifying [TreeGridColumn.AllowEditing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridColumn~AllowEditing.html) to **false**.
+The editing can be disabled for a particular column, by specifying [TreeGridColumn.AllowEditing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_AllowEditing) to **false**.
 
 N> To perform the editing operation in the Blazor Tree Grid, it is recommended to mention the respective model class type (List<TreeData.BusinessObject>), in the Tree Grid's dataSource property value.
 
@@ -101,7 +101,7 @@ N> To perform the editing operation in the Blazor Tree Grid, it is recommended t
 
 ## Toolbar with edit option
 
-The tree grid toolbar has the built-in items to execute Editing actions. It can be defined by using the [Toolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid%601~Toolbar.html) property.
+The tree grid toolbar has the built-in items to execute Editing actions. It can be defined by using the [Toolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_Toolbar) property.
 
 {% tabs %}
 
@@ -174,7 +174,7 @@ public class TreeData
 
 ## Default column values on add new
 
-The tree grid provides an option to set the default value for the columns when adding a new record in it. To set a default value for the particular column by defining the [TreeGridColumn.DefaultValue](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridColumn~DefaultValue.html).
+The tree grid provides an option to set the default value for the columns when adding a new record in it. To set a default value for the particular column by defining the [TreeGridColumn.DefaultValue](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_DefaultValue).
 
 {% tabs %}
 
@@ -244,7 +244,7 @@ public class TreeData
 
 ## Disable editing for particular column
 
-The editing can be disabled for particular columns by using the [TreeGridColumn.AllowEditing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridColumn~AllowEditing.html).
+The editing can be disabled for particular columns by using the [TreeGridColumn.AllowEditing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_AllowEditing).
 
 In the following demo, editing is disabled for the **Duration** column.
 
@@ -313,7 +313,7 @@ public class TreeData
 
 ## Adding row position
 
-The Tree Grid control provides the support to add the new row in the top, bottom, above selected row, below selected row and child position of tree grid content using the [TreeGridEditSettings.NewRowPosition](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridEditSettings~NewRowPosition.html) property. By default, a new row will be added at the top of the tree grid.
+The Tree Grid control provides the support to add the new row in the top, bottom, above selected row, below selected row and child position of tree grid content using the [TreeGridEditSettings.NewRowPosition](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEditSettings.html#Syncfusion_Blazor_TreeGrid_TreeGridEditSettings_NewRowPosition) property. By default, a new row will be added at the top of the tree grid.
 
 {% tabs %}
 
@@ -386,7 +386,7 @@ The following examples shows how to set new row position as **Child** in tree gr
 
 ### Delete confirmation
 
-The delete confirm dialog can be shown when deleting a record by defining the [ShowDeleteConfirmDialog](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridEditSettings~ShowDeleteConfirmDialog.html) as **true**
+The delete confirm dialog can be shown when deleting a record by defining the [ShowDeleteConfirmDialog](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEditSettings.html#Syncfusion_Blazor_TreeGrid_TreeGridEditSettings_ShowDeleteConfirmDialog) as **true**
 
 {% tabs %}
 
@@ -457,28 +457,9 @@ N> The **ShowDeleteConfirmDialog** supports all type of edit modes.
 
 ## Troubleshoot: Editing works only for first row
 
-The Editing functionalities can be performed based upon the primary key value of the selected row. If [IsPrimaryKey](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridColumn~IsPrimaryKey.html) is not defined in the tree grid, then edit or delete action take places the first row.
+The Editing functionalities can be performed based upon the primary key value of the selected row. If [IsPrimaryKey](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_IsPrimaryKey) is not defined in the tree grid, then edit or delete action take places the first row.
 
 ## Event trace while editing
-
-While the editing operation is getting executed, the following events are notified:
-
-* [OnActionBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_OnActionBegin)
-* [OnActionComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_OnActionComplete)
-
-In both events, the editing operation type is returned in the **RequestType** parameter of the event arguments. In addition, the event arguments return the edited row data.
-
-The **RequestType** values for the editing operations are listed in the below table.
-
-| RequestType | OnActionBegin | OnActionComplete |
-|----------|---------------|---------------|
-| BeginEdit | Before editing operation begins | After editing operation is completed |
-| Add | Before add operation begins | After add operation is completed |
-| Delete | Before delete operation begins | After delete operation is completed |
-| Save | Before save operation begins | After save operation is completed |
-| Cancel | Before cancel operation begins | After cancel operation is completed |
-
-The following sample code demonstrates the different **RequestType** parameters of OnActionBegin and OnActionComplete events while performing editing operations.
 
 {% tabs %}
 
@@ -488,9 +469,11 @@ The following sample code demonstrates the different **RequestType** parameters 
 @using Syncfusion.Blazor.TreeGrid;
 @using Syncfusion.Blazor.Grids;
 
-<SfTreeGrid DataSource="@TreeGridData" IdMapping="TaskId" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Cancel", "Update" })" ParentIdMapping="ParentId" TreeColumnIndex="1" >
+<SfTreeGrid DataSource="@TreeGridData" IdMapping="TaskId" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Cancel", "Update" })" ParentIdMapping="ParentId" TreeColumnIndex="1">
     <TreeGridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true"></TreeGridEditSettings>
-    <TreeGridEvents OnActionBegin="ActionBegin" OnActionComplete="ActionComplete" TValue="TreeData.BusinessObject"></TreeGridEvents>
+    <TreeGridEvents BeforeRowEditing="BeforeRowEditingHandler" RowCreating="RowCreatingHandler" RowDeleting="RowDeletingHandler" RowEditing="RowEditingHandler" Cancelling="CancellingHandler" RowUpdating="RowUpdatingHandler"
+                    RowEdited="RowEditedHandler" RowCreated="RowCreatedHandler" RowDeleted="RowDeletedHandler" Cancelled="CancelledHandler" RowUpdated="RowUpdatedHandler"
+        TValue="TreeData.BusinessObject"></TreeGridEvent>
     <TreeGridColumns>
         <TreeGridColumn Field="TaskId" HeaderText="Task ID" IsPrimaryKey="true" Width="80" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right"></TreeGridColumn>
         <TreeGridColumn Field="TaskName" HeaderText="Task Name" Width="160"></TreeGridColumn>
@@ -500,58 +483,66 @@ The following sample code demonstrates the different **RequestType** parameters 
     </TreeGridColumns>
 </SfTreeGrid>
 
-@code{
+@code {
     public List<TreeData.BusinessObject> TreeGridData { get; set; }
     protected override void OnInitialized()
     {
         this.TreeGridData = TreeData.GetSelfDataSource().ToList();
     }
-    public void ActionBegin(ActionEventArgs<TreeData.BusinessObject> args)
+
+    public void BeforeRowEditingHandler(OnRowEditStartEventArgs args)
     {
-        if (args.RequestType == Syncfusion.Blazor.Grids.Action.BeginEdit)
-        {
-            // Triggers before editing operation starts
-        }
-        else if (args.RequestType == Syncfusion.Blazor.Grids.Action.Add)
-        {
-            // Triggers before add operation starts
-        }
-        else if (args.RequestType == Syncfusion.Blazor.Grids.Action.Cancel)
-        {
-            // Triggers before cancel operation starts
-        }
-        else if (args.RequestType == Syncfusion.Blazor.Grids.Action.Save)
-        {
-            // Triggers before save operation starts
-        }
-        else if (args.RequestType == Syncfusion.Blazor.Grids.Action.Delete)
-        {
-            // Triggers before delete operation starts
-        }
+        // Triggers before editing operation starts        
     }
 
-    public void ActionComplete(ActionEventArgs<TreeData.BusinessObject> args)
+    public void RowCreatingHandler(RowCreatingEventArgs<TreeData.BusinessObject> args)
     {
-        if (args.RequestType == Syncfusion.Blazor.Grids.Action.BeginEdit)
-        {
-            // Triggers once editing operation completes
-        }
-        else if (args.RequestType == Syncfusion.Blazor.Grids.Action.Add)
-        {
-            // Triggers once add operation completes
-        }
-        else if (args.RequestType == Syncfusion.Blazor.Grids.Action.Cancel)
-        {
-            // Triggers once cancel operation completes
-        }
-        else if (args.RequestType == Syncfusion.Blazor.Grids.Action.Save)
-        {
-            // Triggers once save operation completes
-        }
-        else if (args.RequestType == Syncfusion.Blazor.Grids.Action.Delete)
-        {
-            // Triggers once delete operation completes
-        }
+        // Triggers before add operation starts        
+    }
+
+    public void RowDeletingHandler(RowDeletingEventArgs<TreeData.BusinessObject> args)
+    {
+        // Triggers before delete operation starts        
+    }
+
+    public void RowEditingHandler(RowEditingEventArgs<TreeData.BusinessObject> args)
+    {
+        // Triggers before save operation starts        
+    }
+
+    public void RowUpdatingHandler(RowUpdatingEventArgs<TreeData.BusinessObject> args)
+    {
+        // Triggers before row update operation starts
+    }
+
+    public void CancellingHandler(EditCancelingEventArgs<TreeData.BusinessObject> args)
+    {
+        // Triggers before cancel operation starts
+    }
+
+    public void RowEditedHandler(RowEditedEventArgs<TreeData.BusinessObject> args)
+    {
+        // Triggers after save operation starts
+    }
+
+    public void RowCreatedHandler(RowCreatedEventArgs<TreeData.BusinessObject> args)
+    {
+        // Triggers after add operation starts
+    }
+
+    public void RowDeletedHandler(RowDeletedEventArgs<TreeData.BusinessObject> args)
+    {
+        // Triggers after delete operation starts
+    }
+
+    public void RowUpdatedHandler(RowUpdatedEventArgs<TreeData.BusinessObject> args)
+    {
+        // Triggers after row update operation starts
+    }
+
+    public void CancelledHandler(EditCanceledEventArgs<TreeData.BusinessObject> args)
+    {
+        // Triggers after cancel operation starts
     }
 }
 
@@ -702,11 +693,11 @@ The following GIF represents the tree grid with Add, Update, and Delete items.
 
 ## Cancel CRUD operation by using condition
 
-Cancel the default CRUD operation by specifying the `Cancel` property as true based on the corresponding `RequestType` property values of the event argument.
+Cancel the default CRUD operation by using the `Canceling` event.
 
 ### Cancel CRUD operation for Row/Dialog edit mode
 
-For Row or Dialog edit mode, you have to specify the `Cancel` property as true based on the corresponding `RequestType` property values in the [OnActionBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_OnActionBegin) event.
+For Row or Dialog edit mode, you can use the [Canceling](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_Canceling) event.
 
 {% tabs %}
 
@@ -718,7 +709,7 @@ For Row or Dialog edit mode, you have to specify the `Cancel` property as true b
 
 <SfTreeGrid DataSource="@TreeGridData" IdMapping="TaskId" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Cancel", "Update" })" ParentIdMapping="ParentId" TreeColumnIndex="1" >
     <TreeGridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true" Mode="Syncfusion.Blazor.TreeGrid.EditMode.Row"></TreeGridEditSettings>
-    <TreeGridEvents OnActionBegin="ActionBeginHandler" TValue="TreeData.BusinessObject"></TreeGridEvents>
+    <TreeGridEvents BeforeRowEditing="BeforeRowEditingHandler" RowEditing="RowEditingHandler" RowCreating="RowCreatingHandler" RowDeleting="RowDeletingHandler" TValue="TreeData.BusinessObject"></TreeGridEvents>
     <TreeGridColumns>
         <TreeGridColumn Field="TaskId" HeaderText="Task ID" IsPrimaryKey="true" Width="80" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right"></TreeGridColumn>
         <TreeGridColumn Field="TaskName" HeaderText="Task Name" Width="160"></TreeGridColumn>
@@ -734,24 +725,34 @@ For Row or Dialog edit mode, you have to specify the `Cancel` property as true b
     {
         this.TreeGridData = TreeData.GetSelfDataSource().ToList();
     }
-    public void ActionBeginHandler(ActionEventArgs<TreeData.BusinessObject> args)
+
+    public void BeforeRowEditingHandler(OnRowEditStartEventArgs args)
     {
-        if (args.RequestType.Equals(Syncfusion.Blazor.Grids.Action.BeginEdit) && args.Data.TaskId > 5)
+        if (args.Data.TaskId > 5)
         {
             args.Cancel = true;
-        }
-        if (args.RequestType.Equals(Syncfusion.Blazor.Grids.Action.Save) && args.Action == "Edit" && args.Data.TaskId > 6)
+        }        
+    }
+
+    public void RowEditingHandler(RowEditingEventArgs<TreeData.BusinessObject> args)
+    {
+        if (args.Data.TaskId > 6)
         {
             args.Cancel = true;
-        }
-        if (args.RequestType.Equals(Syncfusion.Blazor.Grids.Action.Save) && args.Action == "Add" && args.Data.TaskId > 7)
+        }        
+    }
+
+    public void RowCreatingHandler(RowCreatingEventArgs<TreeData.BusinessObject> args)
+    {
+        if (args.Data.TaskId > 7)
         {
             args.Cancel = true;
-        }
-        if (args.RequestType.Equals(Syncfusion.Blazor.Grids.Action.Delete))
-        {
-            args.Cancel = true;
-        }
+        }        
+    }
+
+    public void RowDeletingHandler(RowDeletingEventArgs<TreeData.BusinessObject> args)
+    {
+        args.Cancel = true;        
     }
 }
 

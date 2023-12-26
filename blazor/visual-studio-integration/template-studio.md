@@ -11,7 +11,9 @@ documentation: ug
 
 Syncfusion provides the Blazor Template Studio, which allows you to create a Syncfusion Blazor application with Syncfusion components. The Syncfusion Blazor app is created with the required component Syncfusion NuGet references, namespaces, styles, and component render code. The Template Studio provides an easy-to-use project wizard that walks you through the process of creating an application with Syncfusion components.
 
-The steps below will assist you to create your **Syncfusion Blazor Application** through **Visual Studio 2019 or Visual Studio 2022**:
+The steps below will assist you to create your **Syncfusion Blazor Application** through **Visual Studio 2022**:
+
+> **Note:** The Syncfusion Blazor Extensions for Visual Studio 2019 are available on Essential Studio release "20.3.0.56" and below.
 
 N> Before use the Syncfusion Blazor Project Template, check whether the Syncfusion Blazor Template Studio Extension installed or not in Visual Studio Extension Manager by clicking on the Extensions -> Manage Extensions -> Installed. If this extension not installed, install the extension by follow the steps from the [download and installation](download-and-installation) help topic.
 
@@ -35,25 +37,50 @@ N> Before use the Syncfusion Blazor Project Template, check whether the Syncfusi
 
      ![CreateNewWizard](images/CreateNewWizard.png)
 
-4. The Syncfusion Blazor Template Studio wizard to configuring the Syncfusion Blazor app will be launched. Choose the Syncfusion Blazor application type.
+4. The Syncfusion Blazor Template Studio wizard will be launched to configure the Syncfusion Blazor app.
 
-     ![ProjectWizard](images/TemplateStudio.png)
-
-     N> .NET 6.0 is available from v19.4.0.38 and support from Visual Studio 2022.
-
-     N> .NET 7.0 is available from v20.4.0.38 and support from Visual Studio 2022.
+     > **Note:** Refer to the .NET SDK support for Syncfusion Blazor Components [here](https://blazor.syncfusion.com/documentation/system-requirements#net-sdk).
 
      **Project type section**
 
-     Choose one of the Syncfusion Blazor application types:
-     * Syncfusion Blazor Server App
-     * Syncfusion Blazor WebAssembly App
+     Choose one of the Syncfusion Blazor application types based on the version of the .NET SDK you are using.
 
-     In the Syncfusion Blazor WebAssembly App application type, we can choose **ASP.NET Core hosted**, **Progressive Web Application**, or both.
+    | .NET SDK version | Supported Syncfusion Blazor Application Type |
+    | ------------- | ------------- |
+    | [.NET 8.0](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) | Syncfusion Blazor Web App |
+    | [.NET 8.0](https://dotnet.microsoft.com/en-us/download/dotnet/8.0), [.NET 7.0](https://dotnet.microsoft.com/en-us/download/dotnet/7.0), [.NET 6.0](https://dotnet.microsoft.com/en-us/download/dotnet/6.0) | Syncfusion Blazor WebAssembly App |
+    | [.NET 7.0](https://dotnet.microsoft.com/en-us/download/dotnet/7.0), [.NET 6.0](https://dotnet.microsoft.com/en-us/download/dotnet/6.0) | Syncfusion Blazor Server App |
 
-     ![ProjectTypeWizard](images/ProjectTypeWizard.png)
+    In the **Syncfusion Blazor Web App** application type, you can configure the following options:
 
-     N> **Note:** The Progressive Web Application will be enabled if .NET 6.0 version or higher is installed.
+    <table>
+    <tbody>
+    <tr>
+    <td>
+    <a href="https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-8.0#render-modes" rel="nofollow">Interactivity type</a>
+    </td>
+    <td>
+    Server, WebAssembly, Auto (Server and WebAssembly)
+    </td>
+    </tr>
+    <tr>
+    <td>
+    <a href="https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0&pivots=windows" rel="nofollow">Interactivity location</a>
+    </td>
+    <td>
+    Global, Per page/component
+    </td>
+    </tr>
+    </tbody>
+    </table>
+
+    ![WebAppTemplate](images/WebAppTemplate.png)
+
+     In the **Syncfusion Blazor WebAssembly App** application type, you can choose ASP.NET Core hosted, Progressive Web Application, or both.
+
+     ![WASMTemplate](images/WASMTemplate.png)
+
+     > **Note:** The Progressive Web Application will be enabled if .NET 6.0 version or higher is installed.
 
 5. Click either **Next** or the **Controls** tab. The Syncfusion Blazor components you can add to the application are listed.
 
@@ -71,17 +98,29 @@ N> Before use the Syncfusion Blazor Project Template, check whether the Syncfusi
 
 6. Click either **Next** or the **Features** tab, and you will see the features listed for the selected controls. You can choose the required features.
 
-7. Click either **Next** or the **Configuration** tab, and the Configuration section will be loaded. You can choose the required (.NET 7.0 and .NET 6.0), themes, https configuration, localization option, authentication type (None, Individual Accounts, Microsoft Identity Platform, and Windows), and Blazor Web Assembly application types (ASP.NET Core hosted and Progressive Web Application).
+7. Click **Next** or the **Configuration** tab to load the Configuration section. You can choose the required (.NET 8.0, .NET 7.0, and .NET 6.0), themes, https configuration, localization option, authentication type, Blazor Web App, and Blazor Web Assembly application types.
 
-     N> **Note:** ASP.NET Core hosted and Progressive Web Application options are only visible for the Blazor Web Assembly App application type.
+     Depending on your Syncfusion Blazor Application Type, refer to the table below for supported authentication types.
 
-     ![Choose required Project Configuration](images/Configuration.png)
+     | Syncfusion Blazor Application Type | Supported Authentication Types |
+     | ------------- | ------------- |
+     | Syncfusion Blazor Web App | None and Individual Accounts |
+     | Syncfusion Blazor WebAssembly App | None, Individual Accounts and Microsoft Identity Platform |
+     | Syncfusion Blazor Server App | None, Individual Accounts, Microsoft Identity Platform, and Windows |
+
+     If you choose the **Blazor Web App** application type, you can customize the Interactivity type and Interactivity location options.
+
+     ![WebAppConfiguration](images/WebAppConfig.png)
+
+     If you choose the **Blazor Web Assembly App** application type, you can customize the ASP.NET Core hosted and Progressive Web Application options.
+
+     ![WASMConfiguration](images/WASMConfig.png)
 
      **Project details section**
 
-     You can change the application type, remove control(s) from the selected controls, or change the configurations in the Project Details section.
+     You can change the configuration details below in the Project Details section to change the application type, remove control(s) from the selected controls, or change the configurations.
 
-     ![Choose required Project Details](images/RightSideProjectDetails.png)
+     ![ProjectDetails](images/RightSideProjectDetails.png)
 
 8. Click **Create** button. The Syncfusion Blazor application has been created. The created Syncfusion Blazor app has the Syncfusion NuGet packages, styles, and the render code for the selected Syncfusion component.
 
@@ -89,7 +128,7 @@ N> Before use the Syncfusion Blazor Project Template, check whether the Syncfusi
 
 9. The Syncfusion Blazor application configures with most recent Syncfusion Blazor NuGet packages version, selected style, namespaces, selected authentication, and component render code for Syncfusion components.
 
-10. If you installed the trial setup or NuGet packages from nuget.org you must register the Syncfusion license key to your application since Syncfusion introduced the licensing system from 2018 Volume 2 (v16.2.0.41) Essential Studio release. Navigate to the [help topic](https://help.syncfusion.com/common/essential-studio/licensing/license-key#how-to-generate-syncfusion-license-key) to generate and register the Syncfusion license key to your application. Refer to this [blog](https://blog.syncfusion.com/post/Whats-New-in-2018-Volume-2-Licensing-Changes-in-the-1620x-Version-of-Essential-Studio.aspx?_ga=2.11237684.1233358434.1587355730-230058891.1567654773) post for understanding the licensing changes introduced in Essential Studio.
+10. If you installed the trial setup or NuGet packages from nuget.org you must register the Syncfusion license key to your application since Syncfusion introduced the licensing system from 2018 Volume 2 (v16.2.0.41) Essential Studio release. Navigate to the [help topic](https://help.syncfusion.com/common/essential-studio/licensing/overview#how-to-generate-syncfusion-license-key) to generate and register the Syncfusion license key to your application. Refer to this [blog](https://www.syncfusion.com/blogs/post/whats-new-in-2018-volume-2.aspx) post for understanding the licensing changes introduced in Essential Studio.
 
 ## Authentication Configuration
 
@@ -101,7 +140,7 @@ We need to register the created application in Google Platform API Console for I
 
 1. Go to below credentials page for the Google cloud platform API console.
 
-    <https://console.cloud.google.com/apis/credentials?project=aerobic-furnace-244104>
+    <https://console.cloud.google.com/apis/credentials?project=aerobic-furnace-244104&pli=1>
 
 2. Click Create Credentials and OAuth Client Id.
 
@@ -135,7 +174,7 @@ We need to register the created application in Google Platform API Console for I
 
 1. Go to below Azure Active Directory App Registration page.
 
-    <https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps>
+    <https://portal.azure.com/#view/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/~/RegisteredApps>
 
 2. Click New Registration in App Registration page.
 
@@ -165,7 +204,7 @@ We need to register the created application in Google Platform API Console for I
 
 1. Go to below Azure Active Directory App Registration page.
 
-    <https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps>
+    <https://portal.azure.com/#view/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/~/RegisteredApps>
 
 2. Click New Registration in App Registration page.
 
@@ -203,7 +242,7 @@ We need to register the created application in Google Platform API Console for I
 
 1. Go to below Azure Active Directory App Registration page.
 
-    <https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps>
+    <https://portal.azure.com/#view/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/~/RegisteredApps>
 
 2. Click New Registration in App Registration page.
 
@@ -239,7 +278,7 @@ We need to register the created application in Google Platform API Console for I
 
 1. Go to below Azure Active Directory App Registration page.
 
-    <https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps>
+    <https://portal.azure.com/#view/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/~/RegisteredApps>
 
 2. Click New Registration in App Registration page.
 
