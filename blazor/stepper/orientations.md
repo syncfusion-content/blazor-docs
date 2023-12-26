@@ -9,11 +9,11 @@ documentation: ug
 
 # Orientation
 
-The [Orientation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfStepper.html#Syncfusion_Blazor_Navigations_SfStepper_Orientation) property determines the order in which steps are displayed in the Stepper. The possible orientations are `Horizontal` and `Vertical` layouts. By default, the orientation is set to `Horizontal`.
+You can use the [Orientation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfStepper.html#Syncfusion_Blazor_Navigations_SfStepper_Orientation) property to set `Horizontal` or `Vertical` orientations, which controls the sequence order of the steps displayed in the Stepper. By default, the orientation is set to `Horizontal`.
 
 ## Horizontal
 
-The [Horizontal](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.StepperOrientation.html#Syncfusion_Blazor_Navigations_StepperOrientation_Horizontal) orientation results in presenting the stepper steps in a side-by-side fashion, progressing from left to right.
+The Stepper steps are arranged in a side-by-side manner, by setting the [Horizontal](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.StepperOrientation.html#Syncfusion_Blazor_Navigations_StepperOrientation_Horizontal) in the `Orientation` property.
 
 ```cshtml
 
@@ -61,7 +61,7 @@ The [Horizontal](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigat
 
 ## Vertical
 
-When the orientation is set to [Vertical](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.StepperOrientation.html#Syncfusion_Blazor_Navigations_StepperOrientation_Vertical), it organizes the steps one below the other following a top-to-bottom arrangement.
+To display the steps vertically, use the [Vertical](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.StepperOrientation.html#Syncfusion_Blazor_Navigations_StepperOrientation_Vertical) in the `Orientation` property, to arrange the steps one below the other.
 
 ```cshtml
 

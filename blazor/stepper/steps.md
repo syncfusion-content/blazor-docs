@@ -9,11 +9,11 @@ documentation: ug
 
 # Adding Stepper Steps
 
-The [StepperStep](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.StepperStep.html) tag directive can be used to add the Stepper steps. The steps collections represent the options for each step within the stepper.
+You can use the [StepperStep](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.StepperStep.html) tag directive to add the Stepper steps. The steps collections represent the options for each step within the stepper.
 
 ## Icon
 
-The [IconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.StepperStep.html#Syncfusion_Blazor_Navigations_StepperStep_IconCss) property allows us to specify and customize an icon for each step.
+You can use the [IconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.StepperStep.html#Syncfusion_Blazor_Navigations_StepperStep_IconCss) property to specify and customize an icon for each step.
 
 ```cshtml
 
@@ -61,7 +61,7 @@ The [IconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigation
 
 ## Text
 
-The [Text](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.StepperStep.html#Syncfusion_Blazor_Navigations_StepperStep_Text) property allows to specify the text content for each step.
+You can use the [Text](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.StepperStep.html#Syncfusion_Blazor_Navigations_StepperStep_Text) property to specify the text content for each step.
 
 ```cshtml
 
@@ -81,7 +81,7 @@ The [Text](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.S
 
 ## Label
 
-By using the [Label](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.StepperStep.html#Syncfusion_Blazor_Navigations_StepperStep_Label) property, additional information can be provided for each step.
+You can use the [Label](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.StepperStep.html#Syncfusion_Blazor_Navigations_StepperStep_Label) property to provide additional information for each step.
 
 ```cshtml
 
@@ -101,7 +101,7 @@ By using the [Label](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Nav
 
 ## Optional
 
-The [Optional](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.StepperStep.html#Syncfusion_Blazor_Navigations_StepperStep_Optional) property defines whether the step is optional to skip completion or not. By default the `Optional` property is false.
+You can use the [Optional](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.StepperStep.html#Syncfusion_Blazor_Navigations_StepperStep_Optional) property to determine whether the step can be skipped or not. By default the `Optional` property is false.
 
 ```cshtml
 
@@ -148,7 +148,7 @@ The [Optional](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigatio
 
 ## Disabled
 
-The [Disabled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.StepperStep.html#Syncfusion_Blazor_Navigations_StepperStep_Disabled) property can be used to disable any step. By default the `Disabled` property is false.
+You can use the [Disabled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.StepperStep.html#Syncfusion_Blazor_Navigations_StepperStep_Disabled) property to in-active any step. By default the `Disabled` property is false.
 
 ```cshtml
 
@@ -195,7 +195,9 @@ The [Disabled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigatio
 
 ## Validation
 
-Setting the [IsValid](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.StepperStep.html#Syncfusion_Blazor_Navigations_StepperStep_IsValid) property to true for valid completion otherwise, set it to false. Indicates whether a step has met its required criteria. The default value is `false`.
+You can toggle the [IsValid](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.StepperStep.html#Syncfusion_Blazor_Navigations_StepperStep_IsValid) property based on the application logic to success or error states. If the current step is invalid, it prevents the user from moving on to the next one. The default value is `null`.
+
+> Based on the stepper [StepType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfStepper.html#Syncfusion_Blazor_Navigations_SfStepper_StepType) the validation icons will be displayed either in the step indicator or as part of the step label/text.
 
 ```cshtml
 
@@ -243,11 +245,11 @@ Setting the [IsValid](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Na
 
 ## Status
 
-The [Status](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.StepperStep.html#Syncfusion_Blazor_Navigations_StepperStep_Status) property holds a [StepperStatus](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.StepperStatus.html) value representing the progress state of each step. You can set the status for the current active step ([NotStarted](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.StepperStatus.html#Syncfusion_Blazor_Navigations_StepperStatus_NotStarted), [InProgress](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.StepperStatus.html#Syncfusion_Blazor_Navigations_StepperStatus_InProgress), [Completed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.StepperStatus.html#Syncfusion_Blazor_Navigations_StepperStatus_Completed)). The default value is `NotStarted.`
+You can use the [Status](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.StepperStep.html#Syncfusion_Blazor_Navigations_StepperStep_Status) property to represent the progress states of each activeStep. The possible values are [NotStarted](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.StepperStatus.html#Syncfusion_Blazor_Navigations_StepperStatus_NotStarted), [InProgress](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.StepperStatus.html#Syncfusion_Blazor_Navigations_StepperStatus_InProgress), [Completed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.StepperStatus.html#Syncfusion_Blazor_Navigations_StepperStatus_Completed). By default, the value is `NotStarted.`
 
 ## CssClass
 
-The [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.StepperStep.html#Syncfusion_Blazor_Navigations_StepperStep_CssClass) property is used to set a custom CSS class for customizing the appearance of the step.
+You can use the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.StepperStep.html#Syncfusion_Blazor_Navigations_StepperStep_CssClass) property to customize the appearance of the step.
 
 ```cshtml
 

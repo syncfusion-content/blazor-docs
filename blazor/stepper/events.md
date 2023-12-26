@@ -24,6 +24,7 @@ The [Created](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigation
         <StepperStep></StepperStep>
         <StepperStep></StepperStep>
         <StepperStep></StepperStep>
+        <StepperStep></StepperStep>
     </StepperSteps>
 </SfStepper>
 
@@ -46,6 +47,7 @@ The [StepChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Naviga
 
 <SfStepper StepChanged="StepChanged">
     <StepperSteps>
+        <StepperStep></StepperStep>
         <StepperStep></StepperStep>
         <StepperStep></StepperStep>
         <StepperStep></StepperStep>
@@ -74,6 +76,7 @@ The [StepChanging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navig
         <StepperStep></StepperStep>
         <StepperStep></StepperStep>
         <StepperStep></StepperStep>
+        <StepperStep></StepperStep>
     </StepperSteps>
 </SfStepper>
 
@@ -99,6 +102,7 @@ The [StepClicked](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Naviga
         <StepperStep></StepperStep>
         <StepperStep></StepperStep>
         <StepperStep></StepperStep>
+        <StepperStep></StepperStep>
     </StepperSteps>
 </SfStepper>
 
@@ -121,6 +125,7 @@ The [StepRendered](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navig
 
 <SfStepper StepRendered="StepRendered">
     <StepperSteps>
+        <StepperStep></StepperStep>
         <StepperStep></StepperStep>
         <StepperStep></StepperStep>
         <StepperStep></StepperStep>

@@ -9,9 +9,9 @@ documentation: ug
 
 # Validating Steps
 
-The [IsValid](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.StepperStep.html#Syncfusion_Blazor_Navigations_StepperStep_IsValid) property in the Stepper determines the validation of a specific step in the process.
+Use the [IsValid](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.StepperStep.html#Syncfusion_Blazor_Navigations_StepperStep_IsValid) property in the Stepper to check the status of a specific step.
 
-When the `IsValid` property is set to `true`, it indicates that the step has successfully met the necessary criteria for completion. Conversely, if set to false, it suggests that the step requires additional attention or completion. It provides clear feedback on the status of individual steps within the Stepper, enhancing the user interaction.
+When `IsValid` is set to true, the step meets the required criteria. If set to `false`, the step needs attention or completion. It provides clear feedback on the status of individual steps within the Stepper, enhancing the user interaction.
 
 ```cshtml
 

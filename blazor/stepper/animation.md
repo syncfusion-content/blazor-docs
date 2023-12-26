@@ -9,11 +9,11 @@ documentation: ug
 
 # AnimationSettings
 
-The Stepper progress bar can be animated during each step transition. You can use the [StepperAnimationSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.StepperAnimationSettings.html) tag directive in the Stepper setting the `Enable` property to `true`. By default, it is `true`.
+The Stepper progress bar can be animated during each step transition. You can use the [StepperAnimationSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.StepperAnimationSettings.html) tag directive in the Stepper by setting the `Enable` property to `true`. By default, it is `true`.
 
 ## Enabling animation
 
-By using, the [Enable](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.StepperAnimationSettings.html#Syncfusion_Blazor_Navigations_StepperAnimationSettings_Enable) property to activate/deactivate an animation. The default value is true, indicating that animation is enabled.
+Using the [Enable](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.StepperAnimationSettings.html#Syncfusion_Blazor_Navigations_StepperAnimationSettings_Enable) property you can activate/deactivate an animation. The default value is true, indicating that animation is enabled.
 
 ## Duration
 

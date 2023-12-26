@@ -9,9 +9,7 @@ documentation: ug
 
 # Tooltips in Stepper
 
-Enhance user interaction and provide additional information with tooltips in the Stepper component. Can utilize the following properties for tooltip customization:
-
-Below are examples demonstrating the customization of Stepper steps using the template support:
+Improve user interaction and offer extra information with tooltips in the Stepper control. You can customize tooltips using the following properties:
 
 ## Show tooltip
 

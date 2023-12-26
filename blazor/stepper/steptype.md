@@ -17,27 +17,18 @@ Steps are displayed with icons and the labels when defined.
 
 ## Label
 
-Steps are displayed with only labels irrespective of the step model configured.
+Steps are displayed with their defined labels only.
 
 ### Label positions
 
-The [LabelPosition](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfStepper.html#Syncfusion_Blazor_Navigations_SfStepper_LabelPosition) property offers four positioning options: [Top](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.StepperLabelPosition.html#Syncfusion_Blazor_Navigations_StepperLabelPosition_Top), [Bottom](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.StepperLabelPosition.html#Syncfusion_Blazor_Navigations_StepperLabelPosition_Bottom), [Start](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.StepperLabelPosition.html#Syncfusion_Blazor_Navigations_StepperLabelPosition_Start), and [End](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.StepperLabelPosition.html#Syncfusion_Blazor_Navigations_StepperLabelPosition_End). This property indicated the placement of the labels, depending on the updated position. The labels can be positioned only when the icon and label is configured with the stepper step. The available positions are as follows:
+The Stepper control allows you to place the label on the top, bottom, left, or right side of the stepper using the [LabelPosition](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfStepper.html#Syncfusion_Blazor_Navigations_SfStepper_LabelPosition) property.
 
-#### Top
+The following label positions are supported in stepper:
 
-Positions the label at the top, regardless of the Stepper's orientation.
-
-#### Bottom
-
-Positions the label at the bottom, regardless of the Stepper's orientation.
-
-#### Start
-
-Positions the label to the left side, regardless of the Stepper's orientation.
-
-#### End
-
-Positions the label to the right side, regardless of the Stepper's orientation. By default `labelPosition` is set to `End`.
+* [Top](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.StepperLabelPosition.html#Syncfusion_Blazor_Navigations_StepperLabelPosition_Top): Positions the label at the top of the stepper.
+* [Bottom](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.StepperLabelPosition.html#Syncfusion_Blazor_Navigations_StepperLabelPosition_Bottom): Positions the label at the bottom of the stepper.
+* [Start](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.StepperLabelPosition.html#Syncfusion_Blazor_Navigations_StepperLabelPosition_Start): Positions the label to the left side of the stepper.
+* [End](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.StepperLabelPosition.html#Syncfusion_Blazor_Navigations_StepperLabelPosition_End): Positions the label to the right side of the stepper.
 
 ```cshtml
 
@@ -116,6 +107,8 @@ Positions the label to the right side, regardless of the Stepper's orientation. 
 ## Indicator
 
 Steps are displayed with only indicators.
+
+The example below showcases the various types of steps available in the stepper.
 
 ```cshtml
 

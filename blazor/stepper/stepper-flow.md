@@ -13,17 +13,17 @@ The Stepper component provides control over the flow of steps through the utiliz
 
 ## Linear flow
 
-When the `Linear` property is set to `true`, it enables a linear progression. In this mode, users move through steps sequentially, one after the other maintaining a fixed order. By default, the `Linear` property value is `false`.
+When the `Linear` property is set to `true`, it enables a linear progression. You can move through steps one after another. By default, the `Linear` property value is `false`.
 
 ## Non-Linear flow
 
-In non-liner flow, the users have the flexibility to skip or complete steps in any order they prefer.
+In non-liner flow, the users can skip or complete steps in any order they like.
 
 ## Configure ActiveStep
 
-The [ActiveStep](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfStepper.html#Syncfusion_Blazor_Navigations_SfStepper_ActiveStep) in the Stepper represents the step currently in the focus or selected by the user.
+The [ActiveStep](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfStepper.html#Syncfusion_Blazor_Navigations_SfStepper_ActiveStep) in the Stepper represents the step currently in the focus or selected by the user. You can set the `ActiveStep` of the stepper by assigning a value to the `ActiveStep` property. By default the `ActiveStep` is `0`.
 
-When users interact with the Stepper, the `ActiveStep` indicates the progress within the sequence of steps. The ActiveStep dynamically changes as users navigate through the steps, helping to maintain a user-centric and intuitive experience. By default the `ActiveStep` is `0`.
+The following example highlights the difference between linear and non-linear steppers, showcasing how to utilize the active step property.
 
 ```cshtml
 
