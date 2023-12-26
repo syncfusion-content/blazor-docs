@@ -24,6 +24,7 @@ N> By default, card images occupies full width of its parent element.
     <CardImage/>
 </SfCard>
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BXVgihBBLRBjgnKM?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ### Title
 
@@ -41,6 +42,7 @@ Card image is supported to include a `Title` property for the image. By default,
     </CardContent>
 </SfCard>
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDVUihLBhHVhadTB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Divider
 
@@ -66,3 +68,4 @@ Divider used to separate the elements inside the card. You can add divider insid
 </SfCard>
 
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hZhqsVBBLnBeVrnG?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
