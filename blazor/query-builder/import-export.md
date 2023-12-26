@@ -175,15 +175,15 @@ The defined conditions can be exported to the SQL query through the [GetSqlFromR
 
 ## Importing and Exporting the Json data
 
-Importing and Exporting the Json data allows to save or set the conditions through the [Blazor Query Builder](https://www.syncfusion.com/blazor-components/blazor-query-builder).
+Importing and exporting JSON data allows for the saving or setting of conditions through the [Blazor Query Builder](https://www.syncfusion.com/blazor-components/blazor-query-builder).
 
 ### Importing from Json
 
-You can set the conditions from the Json query through the [SetRules](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder-1.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_1_SetRules_System_Collections_Generic_List_Syncfusion_Blazor_QueryBuilder_RuleModel__System_String_System_Nullable_System_Boolean__) method and using the JsonConvert DeserializeObject method.
+You can set the conditions from the JSON query through the [SetRules](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder-1.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_1_SetRules_System_Collections_Generic_List_Syncfusion_Blazor_QueryBuilder_RuleModel__System_String_System_Nullable_System_Boolean__) method and by using the JsonConvert.DeserializeObject method.
 
 ### Exporting from Json
 
-The defined conditions can be exported to the Json query through the [GetRules](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder-1.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_1_GetRules) method and using the JsonConvert SerializeObject method.
+The defined conditions can be exported to the JSON query using the [GetRules](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder-1.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_1_GetRules) method and by using the JsonConvert.SerializeObject method.
 
 ```cshtml
 @using Syncfusion.Blazor.Buttons
