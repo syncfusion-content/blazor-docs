@@ -1492,7 +1492,7 @@ In the following code sample, exporting can be done using an external button nam
 @using Syncfusion.Blazor.Buttons
 
 <SfButton OnClick="OnChartExport" Content="Chart Export"></SfButton>
-<SfPivotView TValue="ProductDetails" @ref="@pivot" ShowFieldList="true">
+<SfPivotView TValue="ProductDetails" @ref="@pivot" ShowFieldList="true" AllowPdfExport=true>
      <PivotViewDataSourceSettings DataSource="@data">
         <PivotViewColumns>
             <PivotViewColumn Name="Country"></PivotViewColumn>
@@ -1526,9 +1526,9 @@ In the following code sample, exporting can be done using an external button nam
     }
     public void OnChartExport()
     {
-        this.pivot.ExportToChartAsync("PDF", "sample", "Landscape");
+        this.pivot.ExportToChartAsync(Syncfusion.Blazor.Charts.ExportType.PDF, "sample", Syncfusion.PdfExport.PdfPageOrientation.Landscape);
         //To export pivot chart to JPEG, SVG or PNG image formats, change the export type from "PDF" to JPEG, SVG or PNG.
-        //this.pivot.ExportToChartAsync("JPEG", "sample");
+        //this.pivot.ExportToChartAsync(Syncfusion.Blazor.Charts.ExportType.JPEG, "sample");
     }
 }
 
