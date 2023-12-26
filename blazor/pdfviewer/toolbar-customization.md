@@ -107,28 +107,27 @@ You can show or hide the toolbar items using the “PdfViewerToolbarSettings” 
 @using Syncfusion.Blazor.PdfViewerServer
 @using Syncfusion.Blazor.PdfViewer
 
-<SfPdfViewerServer Width="1060px" Height="500px" DocumentPath="@DocumentPath" ToolbarSettings="@ToolbarSettings">
+<SfPdfViewerServer Width="1060px" Height="500px" DocumentPath="@DocumentPath">
+    <PdfViewerToolbarSettings ToolbarItems="ToolbarItems"></PdfViewerToolbarSettings>
 </SfPdfViewerServer>
 
 @code{
 
     public string DocumentPath { get; set; } = "wwwroot/data/PDF_Succinctly.pdf";
 
-       public PdfViewerToolbarSettings ToolbarSettings = new PdfViewerToolbarSettings() {
-        ToolbarItems = new List<ToolbarItem>()
-           {
-                ToolbarItem.PageNavigationTool,
-                ToolbarItem.MagnificationTool,
-                ToolbarItem.CommentTool,
-                ToolbarItem.SelectionTool,
-                ToolbarItem.PanTool,
-                ToolbarItem.UndoRedoTool,
-                ToolbarItem.CommentTool,
-                ToolbarItem.AnnotationEditTool,
-                ToolbarItem.SearchOption,
-                ToolbarItem.PrintOption,
-                ToolbarItem.DownloadOption
-            }
+    List<ToolbarItem> ToolbarItems = new List<ToolbarItem>()
+    {
+        ToolbarItem.PageNavigationTool,
+        ToolbarItem.MagnificationTool,
+        ToolbarItem.CommentTool,
+        ToolbarItem.SelectionTool,
+        ToolbarItem.PanTool,
+        ToolbarItem.UndoRedoTool,
+        ToolbarItem.CommentTool,
+        ToolbarItem.AnnotationEditTool,
+        ToolbarItem.SearchOption,
+        ToolbarItem.PrintOption,
+        ToolbarItem.DownloadOption
     };
 }
 ```
