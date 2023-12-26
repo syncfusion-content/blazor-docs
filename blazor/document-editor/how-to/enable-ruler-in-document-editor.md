@@ -1,7 +1,7 @@
 ---
 layout: post
 title: How to enable Ruler in Blazor DocumentEditor Component | Syncfusion
-description: Learn how to enable ruler in Syncfusion Blazor Document Editor component and much more.
+description: Learn how to show or hide ruler component in Syncfusion Blazor Document Editor component and much more.
 platform: Blazor
 control: DocumentEditor
 documentation: ug
