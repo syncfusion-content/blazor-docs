@@ -484,7 +484,6 @@ The [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView
 
 @code
 {
-    public ChartSeriesType ChartType = ChartSeriesType.Doughnut;
     public List<ProductDetails> data { get; set; }
     protected override void OnInitialized()
     {
@@ -1477,7 +1476,7 @@ N> The tooltip can be disabled by setting the property [Enable](https://help.syn
 
 ## Export
 
-The pivot chart can be exported using the [ExportToChartAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_ChartExport_System_Object_System_String_System_Object_System_Nullable_System_Double__System_Nullable_System_Double__) method which holds parameters like export type, file name, PDF orientation, width, and height in the same order. The mandatory parameters for this method are export type and file name whereas other parameters are optional.
+The pivot chart can be exported using the [ExportToChartAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_ExportToChartAsync_Syncfusion_Blazor_Charts_ExportType_System_String_System_Nullable_Syncfusion_PdfExport_PdfPageOrientation__System_Nullable_System_Boolean__) method which holds parameters like export type, file name, PDF orientation, and base64 string in the same order. The mandatory parameters for this method are export type and file name whereas other parameters are optional.
 
 The following are the four export types:
 
