@@ -136,3 +136,4 @@ Add the Syncfusion Blazor AppBar component in the **~/Pages/Index.razor** file.
 ```
 
 ![Blazor AppBar Component](images/getting_started.png)
+

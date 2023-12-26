@@ -144,3 +144,5 @@ Add the Syncfusion Blazor Splitter component in the **~Pages/.razor** file. If a
 * [Getting Started with Syncfusion Blazor for server-side in Visual Studio](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio)
 
 * [Getting Started with Syncfusion Blazor for server-side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-dotnet-cli)
+
+N> You can also explore our [Blazor Splitter example](https://blazor.syncfusion.com/demos/splitter/default-functionalities?theme=fluent) that shows you how to render and configure the Splitter.

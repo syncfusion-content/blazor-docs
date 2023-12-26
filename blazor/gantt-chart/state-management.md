@@ -52,7 +52,7 @@ N> The state will be persisted based on the **ID** property. So, it is recommend
         public int TaskId { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
+        public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
@@ -87,7 +87,7 @@ You can manually handle the Gantt chart’s state by using built-in state persis
                 Toolbar="Toolbaritems" AllowReordering="true" AllowFiltering="true" AllowSorting="true"
                 AllowResizing="true" ShowColumnMenu="true" EnablePersistence="true">
     <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress"
-                    Dependency="Predecessor" ParentID="ParentId"></GanttTaskFields>
+                    ParentID="ParentId"></GanttTaskFields>
     <GanttEvents OnToolbarClick="ToolbarClickHandler" TValue="TaskData"></GanttEvents>
 </SfGantt>
 
@@ -105,7 +105,7 @@ You can manually handle the Gantt chart’s state by using built-in state persis
 @code{
     private SfGantt<TaskData> Gantt;
     private List<TaskData> TaskCollection { get; set; }
-        private string PersistedState = null; 
+    private string PersistedState = null; 
     private List<Object> Toolbaritems = new List<Object>() {
          "ZoomIn", "ZoomOut", "ZoomToFit",
          new ToolbarItem() { Text = "Save state", TooltipText = "Save state", Id = "GetPersistence", PrefixIcon= "e-savestate" },
@@ -136,7 +136,7 @@ You can manually handle the Gantt chart’s state by using built-in state persis
         public int TaskId { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
+        public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
