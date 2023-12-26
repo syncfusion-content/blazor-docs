@@ -125,6 +125,8 @@ Add the Syncfusion Blazor ButtonGroup component in the **~/Pages/Index.razor** f
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion Blazor ButtonGroup component in your default web browser.
 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rtrACLVVWPBgweXE?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 ![Blazor ButtonGroup Component](./images/blazor-button-group-component.png)
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/ButtonGroup).
