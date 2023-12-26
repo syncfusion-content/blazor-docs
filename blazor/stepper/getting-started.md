@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Blazor Stepper Component
 
-This section briefly explains about how to include `Blazor Stepper` component in your Blazor Server App and Blazor WebAssembly App using Visual Studio.
+This section briefly explains about how to include [Blazor Stepper](https://www.syncfusion.com/blazor-components/blazor-stepper) component in your Blazor Server App and Blazor WebAssembly App using Visual Studio.
 
 ## Prerequisites
 
@@ -188,3 +188,4 @@ You can define the step icon and label by setting the `IconCss` and `Label` prop
 
 ![Blazor Stepper with IconAndLabel](./images/Blazor-iconWithLabel.png)
 
+N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/Stepper).
