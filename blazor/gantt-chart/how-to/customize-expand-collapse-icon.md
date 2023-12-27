@@ -137,13 +137,13 @@ In the Gantt Chart component, you can customize the expand and collapse icons by
     }
 }
 <style>
-    .e-icons.e-treegridcollapse::before {
-        content: '\e87f' !important
-    }
+.e-gantt .e-treegridcollapse::before {
+    content: '\e87f' !important
+}
 
-    .e-icons.e-treegridexpand::before {
-        content: '\e805' !important
-    }
+.e-gantt .e-treegridexpand::before {
+    content: '\e805' !important
+}
 </style>
 ```
 
