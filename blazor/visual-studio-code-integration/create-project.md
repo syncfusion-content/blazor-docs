@@ -22,8 +22,8 @@ The instructions below assist you in creating **Syncfusion Blazor Applications**
 2. Select **Syncfusion Blazor Template Studio: Launch**, then press **Enter** key. The Template Studio wizard for configuring the Syncfusion Blazor app will be launched. Provide the Project Name and Project Path.
 
     ![TemplateStudioWizard](images/ProjectLocationName.png)
-    
-     > **Note:** Refer to the .NET SDK support for Syncfusion Blazor Components [here](https://blazor.syncfusion.com/documentation/system-requirements#net-sdk).
+
+N> Refer to the .NET SDK support for Syncfusion Blazor Components [here](https://blazor.syncfusion.com/documentation/system-requirements#net-sdk).
 
 3. Select either **Next** or the **Project Type** tab. Syncfusion Blazor project types will be displayed. Choose one of the following Syncfusion Blazor project types based on the version of the .NET SDK you are using.
 
