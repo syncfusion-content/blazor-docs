@@ -9,6 +9,8 @@ documentation: ug
 
 <!-- markdownlint-disable MD036 -->
 
+# Converting Chart to PDF in Blazor Chart Component
+
 The Syncfusion [Blazor PDF library](https://www.syncfusion.com/document-processing/pdf-framework/blazor/pdf-library) is used to create, read, and edit PDF documents. This library also offers functionality to merge, split, stamp, forms, and secure PDF files.
 
 To include the Syncfusion Blazor PDF library into your Blazor application, please refer to the [NuGet Package Required](https://help.syncfusion.com/file-formats/pdf/nuget-packages-required) or [Assemblies Required](https://help.syncfusion.com/file-formats/pdf/assemblies-required) documentation.

@@ -243,7 +243,7 @@ The [Animation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.C
     };
 }
 
-``` 
+```
 
 ## Chart title
 

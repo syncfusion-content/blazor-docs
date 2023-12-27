@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Dotted Line in Blazor Charts Component | Syncfusion
-description: Checkout and learn here all about Dotted Line in Syncfusion Blazor Charts component and more.
+description: Checkout and learn here all about Dotted Line in Syncfusion Blazor Charts component and much more details.
 platform: Blazor
 control: Chart
 documentation: ug
