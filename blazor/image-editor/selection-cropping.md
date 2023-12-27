@@ -10,7 +10,7 @@ documentation: ug
 
 # Selection cropping in the Blazor Image Editor Component
 
-The cropping feature in the Blazor Image Editor allows you to select and crop specific regions of an image. It offers different selection options, including custom shapes, squares, circles, and various aspect ratios such as 3:2, 4:3, 5:4, 7:5, and 16:9. 
+The cropping feature in the Blazor Image Editor allows you to select and crop specific regions of an image. It offers different selection options, including custom shapes, squares, circles, and various aspect ratios such as 2:3, 3:2, 3:4, 4:3, 4:5, 5:4, 5:7, 7:5, 9:16, and 16:9. 
 
 To perform a selection, you can use the [`SelectAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_SelectAsync_System_String_System_Nullable_System_Double__System_Nullable_System_Double__System_Nullable_System_Double__System_Nullable_System_Double__) method, which allows you to define the desired selection area within the image. Once the selection is made, you can then use the [`CropAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_CropAsync) method to crop the image based on the selected region. This enables you to extract and focus on specific parts of the image while discarding the rest.
 
@@ -57,11 +57,11 @@ Here is an example of square selection using the [`SelectAsync`](https://help.sy
 }
 ```
 
-![Blazor Image Editor with Square select](./images/blazor-image-editor-custom-square.png)
+![Blazor Image Editor with Square select](./images/blazor-image-editor-custom-square.jpg)
 
 ## Insert selection based on aspect ratio 
 
-The [`SelectAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_SelectAsync_System_String_System_Nullable_System_Double__System_Nullable_System_Double__System_Nullable_System_Double__System_Nullable_System_Double__) method is used to perform the selection with the various aspect ratios such as 3:2, 4:3, 5:4, 7:5, and 16:9. The selection region can also be customized using the [`SelectAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_SelectAsync_System_String_System_Nullable_System_Double__System_Nullable_System_Double__System_Nullable_System_Double__System_Nullable_System_Double__) method based on the parameters below. 
+The [`SelectAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_SelectAsync_System_String_System_Nullable_System_Double__System_Nullable_System_Double__System_Nullable_System_Double__System_Nullable_System_Double__) method is used to perform the selection with the various aspect ratios such as 2:3, 3:2, 3:4, 4:3, 4:5, 5:4, 5:7, 7:5, 9:16, and 16:9. The selection region can also be customized using the [`SelectAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_SelectAsync_System_String_System_Nullable_System_Double__System_Nullable_System_Double__System_Nullable_System_Double__System_Nullable_System_Double__) method based on the parameters below. 
 
 type - Specify the type of selection 
 
@@ -98,7 +98,7 @@ Here is an example of ratio selection using the [`SelectAsync`](https://help.syn
 }
 ```
 
-![Blazor Image Editor with Ratio select](./images/blazor-image-editor-custom-ratio.png)
+![Blazor Image Editor with Ratio select](./images/blazor-image-editor-custom-ratio.jpg)
 
 ## Resize selections
 
@@ -147,7 +147,7 @@ Here is an example of changing the selection region using the [`SelectionChangeE
 }
 ```
 
-![Blazor Image Editor with Resize the custom selection](./images/blazor-image-editor-resize-selection.png)
+![Blazor Image Editor with Resize the custom selection](./images/blazor-image-editor-resize-selection.jpg)
 
 ## Crop an image
 
@@ -183,7 +183,7 @@ Here is an example of circle cropping using the [`SelectAsync`](https://help.syn
 }
 ```
 
-![Blazor Image Editor with Crop an image](./images/blazor-image-editor-crop.png)
+![Blazor Image Editor with Crop an image](./images/blazor-image-editor-crop.jpg)
 
 ## Cropping event
 

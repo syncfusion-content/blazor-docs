@@ -1,10 +1,11 @@
 ---
 layout: post
 title: Downloading Syncfusion Blazor Linux installer - Syncfusion
-description: Learn here about the how to download Syncfusion Blazor Linux installer from our syncfusion website with license.
-platform: common
+description: Learn here about the how to download Syncfusion Blazor linux installer packages from syncfusion website.
+platform: Blazor
+component: Common
 documentation: ug
---- 
+---
 
 # Download Syncfusion Blazor Linux Installer
 
