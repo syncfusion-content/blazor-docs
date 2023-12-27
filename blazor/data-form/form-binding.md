@@ -16,7 +16,7 @@ This segment provides a concise overview of the concepts involved in associating
 The following example illustrates how the `Model` is bound to the DataForm component using the user-defined `EventRegistration` model class.
 
 {% tabs %}
-{% highlight razor tabtitle="Model" hl_lines="3 10" %}
+{% highlight razor tabtitle="Model"  %}
 
 @using Syncfusion.Blazor.DataForm
 @using Syncfusion.Blazor.Buttons
@@ -67,7 +67,7 @@ The following example illustrates how the `Model` is bound to the DataForm compo
 The following example illustrates how the `EditContext` is bound to the DataForm component using the user-defined `EventRegistration` model class.
 
 {% tabs %}
-{% highlight razor tabtitle="EditContext" hl_lines="3 10" %}
+{% highlight razor tabtitle="EditContext"  %}
 
 @using Syncfusion.Blazor.DataForm
 @using Syncfusion.Blazor.Buttons
@@ -124,16 +124,16 @@ The following example illustrates how the `EditContext` is bound to the DataForm
 
 The DataForm component enables users to define the data annotation attributes available from the instance of [System.ComponentModel.DataAnnotations](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations?view=net-5.0). For instance:
 
-[Display(Name = "Custom field name")](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.displayattribute?view=net-5.0) - This attribute is used to set a custom name for the field, which will be shown as its label.
-
-[Editable(false)](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.editableattribute?view=net-5.0) - When this attribute is used, it renders the associated field uneditable, thus preventing users from changing its content.
-
-[EmailAddress](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.emailaddressattribute?view=net-5.0) - This attribute checks to ensure that the value entered in the field conforms to a valid email address format.
+| FormButtonsAlignment | Snapshot |
+| ------------ | ----------------------- |
+|[Display(Name = "Custom field name")](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.displayattribute?view=net-5.0)| This attribute is used to set a custom name for the field, which will be shown as its label.|
+|[Editable(false)](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.editableattribute?view=net-5.0) | When this attribute is used, it renders the associated field uneditable, thus preventing users from changing its content.|
+|[EmailAddress](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.emailaddressattribute?view=net-5.0) | This attribute checks to ensure that the value entered in the field conforms to a valid email address format.|
 
 For guidance on how to use some of these attributes in DataForm component, see the example provided below.
 
 {% tabs %}
-{% highlight razor tabtitle="Attributes" hl_lines="3 10" %}
+{% highlight razor tabtitle="Attributes"  %}
 
 @using Syncfusion.Blazor.DataForm
 @using Syncfusion.Blazor.Buttons
@@ -198,7 +198,7 @@ A [custom validation attribute](https://learn.microsoft.com/en-us/previous-versi
 In the `IsValid` method, you can define your custom validation logic. If the validation fails, you return a [ValidationResult](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.validationresult?view=net-8.0) object with an error message. If the validation passes, you return `ValidationResult.Success`.
 
 {% tabs %}
-{% highlight razor tabtitle="Custom Validation Attributes" hl_lines="3 10" %}
+{% highlight razor tabtitle="Custom Validation Attributes"  %}
 
 @using System;
 @using System.ComponentModel.DataAnnotations;

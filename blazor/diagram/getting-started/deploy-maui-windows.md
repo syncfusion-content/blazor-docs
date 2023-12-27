@@ -7,9 +7,9 @@ control: Diagram Component
 documentation: ug
 ---
 
-# Getting started with Diagram Component in the Blazor MAUI app.
+# Getting Started with Diagram Component in the Blazor MAUI app.
 
-In this section, we'll guide you through the process of adding Syncfusion's Blazor Diagram Component to your Blazor Maui app. We'll break it down into simple steps to make it easy to follow.
+In this section, we'll guide you through the process of adding Syncfusion's Blazor Diagram Component to your Blazor Maui app. We'll break it down into simple steps to make it easy to follow. Additionally, you can find a fully functional example project on our [GitHub repository](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/DiagramComponent/BlazorMAUIApp/DiagramSample).
 
 ## Prerequisites
 
@@ -51,31 +51,28 @@ using Syncfusion.Blazor;
 
 namespace MauiBlazorWindow;
 
-public static class MauiProgram
-{
-    public static MauiApp CreateMauiApp()
+    public static class MauiProgram
     {
-        var builder = MauiApp.CreateBuilder();
-        builder
-            .UseMauiApp<App>()
-            .ConfigureFonts(fonts =>
-            {
-                fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
-            });
+        public static MauiApp CreateMauiApp()
+        {
+            var builder = MauiApp.CreateBuilder();
+            builder
+                .UseMauiApp<App>()
+                .ConfigureFonts(fonts =>
+                {
+                    fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
+                });
 
-        builder.Services.AddMauiBlazorWebView();
-        builder.Services.AddMemoryCache();
-
+            builder.Services.AddMauiBlazorWebView();
+            builder.Services.AddSyncfusionBlazor();
 #if DEBUG
-        builder.Services.AddBlazorWebViewDeveloperTools();
-        builder.Logging.AddDebug();
+            builder.Services.AddBlazorWebViewDeveloperTools();
+    		builder.Logging.AddDebug();
 #endif
 
-        builder.Services.AddSingleton<WeatherForecastService>();
-        builder.Services.AddSyncfusionBlazor();
-        return builder.Build();
+            return builder.Build();
+        }
     }
-}
 
 {% endhighlight %}
 {% endtabs %}
@@ -235,6 +232,8 @@ Add the Syncfusion PDF Viewer (Next Gen) component in the **~/Pages/Index.razor*
 
 {% endhighlight %}
 {% endtabs %}
+
+N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/DiagramComponent/BlazorMAUIApp/DiagramSample).
 
 ## Run on Windows
 
