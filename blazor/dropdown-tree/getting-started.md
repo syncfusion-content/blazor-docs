@@ -140,6 +140,6 @@ Add the Syncfusion Blazor Dropdown Tree component in the **~/Pages/Index.razor**
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor DropDownTree Component](./images/blazor-dropdowntree-component.png)
+![Blazor Dropdown Tree Component](./images/blazor-dropdowntree-component.png)
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/DropdownTree).
