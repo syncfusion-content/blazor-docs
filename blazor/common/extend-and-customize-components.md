@@ -72,7 +72,7 @@ The Syncfusion Blazor components can extend and customize the logic by creating 
 
     ```
 
-3. Render your new component in the view page `~/Pages/Index.razor` and run the application.
+3. Render your new component in the view page `~/Pages/Home.razor or Index.razor` and run the application.
 
     ```cshtml
     <SyncButton Content="Primary" IsPrimary="true" Disabled="true"></SyncButton>
@@ -148,7 +148,7 @@ The Syncfusion Blazor component can be implemented within another Blazor compone
 
     ```
 
-3. Render your new component in the view page `~/Pages/Index.razor` and run the application.
+3. Render your new component in the view page `~/Pages/Home.razor or Index.razor` and run the application.
 
     ```cshtml
     <TodoList></TodoList>
@@ -342,7 +342,7 @@ You can create a simple Blazor component with the `BuildRenderTree` method and g
     }
     ```
 
-3. Now, render the new reusable Blazor component in the `~/Pages/Index.razor` page and run the application.
+3. Now, render the new reusable Blazor component in the `~/Pages/Home.razor or Index.razor` page and run the application.
 
     ```cshtml
     <SyncTextBox ID="first-name" Label="First Name:" TextAttributes="@textAttributes"></SyncTextBox>
@@ -360,7 +360,7 @@ You can create a simple Blazor component with the `BuildRenderTree` method and g
                 { "Width" , "250px" },
                 { "ShowClearButton", true }
             };
-    } 
+    }
     ```
 
     N> The advantages of a reusable component are:

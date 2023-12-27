@@ -185,6 +185,7 @@ You can render the chip items from collection using for loop in Blazor Chip comp
 ![Blazor Chip Component](./images/blazor-chip-sample.png)
 
 ## See also
+
 * [How to add chip items dynamically in the Blazor Chips component?](https://support.syncfusion.com/kb/article/11788/how-to-add-chip-items-dynamically-in-the-blazor-chips-component)
 * [Getting Started with Syncfusion Blazor for Client-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-dotnet-cli)
 * [Getting Started with Syncfusion Blazor for Client-Side in Visual Studio 2019](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-visual-studio)
