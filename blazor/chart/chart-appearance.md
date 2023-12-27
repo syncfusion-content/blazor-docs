@@ -57,7 +57,7 @@ The default color of series or points can be changed by providing a custom color
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hZLKjHKZghpSHOBJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Blazor Column Chart with Custom Color Palette](images/appearance/blazor-column-chart-custom-color-palette.png)
 
 <!-- markdownlint-disable MD036 -->
 
@@ -108,7 +108,7 @@ The chart's background color can be customized using the [Background](https://he
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hNLANRKXUBSTgoHf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Blazor Column Chart with Custom Background and Border](images/appearance/blazor-column-chart-custom-background-and-border.png)
 
 ### Chart margin
 
@@ -154,7 +154,7 @@ The chart's margin from its container can be customized using the [ChartMargin](
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hjBUXHqZqrnphDbI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Blazor Column Chart with Custom Margin](images/appearance/blazor-column-chart-custom-margin.png)
 
 ### Chart area customization
 
@@ -200,7 +200,7 @@ Using [Background](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Chart
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/htVAZxKDKrbMYgQS?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Blazor Area Chart with Custom Background and Border](images/appearance/blazor-area-chart-custom-background-and-border.png)
 
 ## Animation
 
@@ -243,9 +243,7 @@ The [Animation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.C
     };
 }
 
-```
-
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BXLUZngDgVFanxgc?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+``` 
 
 ## Chart title
 
@@ -289,7 +287,7 @@ The [Title](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfCha
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BDVANdgNULaGowWu?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Blazor Column Chart with Title](images/appearance/blazor-column-chart-title.png)
 
 ### Chart title alignment
 
@@ -300,16 +298,20 @@ You can align the title to the near, far, or center of the chart using the ``Tex
 
 <SfChart Title="Olympic Medals">
 
-    <ChartTitleStyle TextAlignment="Alignment.Near" ></ChartTitleStyle>
-    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category">        
+    <ChartTitleStyle TextAlignment="Alignment.Far"></ChartTitleStyle>
+
+    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category">
     </ChartPrimaryXAxis>
-    
+
     <ChartSeriesCollection>
-        <ChartSeries DataSource="@MedalDetails" Name="Gold" XName="Country" Width="2" Opacity="1" YName="Gold" Type="ChartSeriesType.Column">
-            <ChartSeriesAnimation Enable="true" Duration="2000" Delay="200"></ChartSeriesAnimation>
-            <ChartSeriesBorder Width="3" Color="red"></ChartSeriesBorder>
+        <ChartSeries DataSource="@MedalDetails" Name="Gold" XName="Country" Width="2" Opacity="1" YName="Gold" Type="ChartSeriesType.Column">           
+        </ChartSeries>
+        <ChartSeries DataSource="@MedalDetails" Name="Silver" XName="Country" Width="2" Opacity="1" YName="Silver" Type="ChartSeriesType.Column">
+        </ChartSeries>
+        <ChartSeries DataSource="@MedalDetails" Name="Bronze" XName="Country" Width="2" Opacity="1" YName="Bronze" Type="ChartSeriesType.Column">
         </ChartSeries>
     </ChartSeriesCollection>
+
 </SfChart>
 
 @code {
@@ -333,28 +335,34 @@ You can align the title to the near, far, or center of the chart using the ``Tex
         new ChartData{ Country= "Sweden", Gold=30, Silver=25, Bronze=27 }
     };
 }
+
 ```
 
+![Blazor Column Chart Title Alignment](images/appearance/blazor-column-chart-title-alignment.png)
 
 ### Chart title wrap
 
-You can Customize the title to the none, trim, or wrap of the chart using the ``TextOverFlow`` property in [ChartTitleStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTitleStyle.html#Syncfusion_Blazor_Charts_ChartTitleStyle__ctor).
+You can customize the title to the none, trim, or wrap of the chart using the ``TextOverFlow`` property in [ChartTitleStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTitleStyle.html#Syncfusion_Blazor_Charts_ChartTitleStyle__ctor).
 
 ```cshtml
 @using Syncfusion.Blazor.Charts
 
-<SfChart Title="Olympic Medals">
+<SfChart Title="Comparison of Olympic Medals among the Top 3 Winning Countries at the Tokyo Olympics 2020" Width="600">
 
-    <ChartTitleStyle TextOverflow="TextOverflow.Wrap" ></ChartTitleStyle>
-    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category">        
+    <ChartTitleStyle TextOverflow="TextOverflow.Wrap"></ChartTitleStyle>
+
+    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category">
     </ChartPrimaryXAxis>
-    
+
     <ChartSeriesCollection>
-        <ChartSeries DataSource="@MedalDetails" Name="Gold" XName="Country" Width="2" Opacity="1" YName="Gold" Type="ChartSeriesType.Column">
-            <ChartSeriesAnimation Enable="true" Duration="2000" Delay="200"></ChartSeriesAnimation>
-            <ChartSeriesBorder Width="3" Color="red"></ChartSeriesBorder>
+        <ChartSeries DataSource="@MedalDetails" Name="Gold" XName="Country" Width="2" Opacity="1" YName="Gold" Type="ChartSeriesType.Column">           
+        </ChartSeries>
+        <ChartSeries DataSource="@MedalDetails" Name="Silver" XName="Country" Width="2" Opacity="1" YName="Silver" Type="ChartSeriesType.Column">
+        </ChartSeries>
+        <ChartSeries DataSource="@MedalDetails" Name="Bronze" XName="Country" Width="2" Opacity="1" YName="Bronze" Type="ChartSeriesType.Column">
         </ChartSeries>
     </ChartSeriesCollection>
+
 </SfChart>
 
 @code {
@@ -369,7 +377,7 @@ You can Customize the title to the none, trim, or wrap of the chart using the ``
     public List<ChartData> MedalDetails = new List<ChartData>
     {
         new ChartData{ Country= "USA", Gold=50, Silver=70, Bronze=45 },
-        new ChartData{ Country="China", Gold=40, Silver= 60, Bronze=55 },
+        new ChartData{ Country= "China", Gold=40, Silver= 60, Bronze=55 },
         new ChartData{ Country= "Japan", Gold=70, Silver= 60, Bronze=50 },
         new ChartData{ Country= "Australia", Gold=60, Silver= 56, Bronze=40 },
         new ChartData{ Country= "France", Gold=50, Silver= 45, Bronze=35 },
@@ -378,7 +386,10 @@ You can Customize the title to the none, trim, or wrap of the chart using the ``
         new ChartData{ Country= "Sweden", Gold=30, Silver=25, Bronze=27 }
     };
 }
+
 ```
+
+![Blazor Column Chart Title Wrap](images/appearance/blazor-column-chart-title-wrap.png)
 
 ## Chart subtitle
 
@@ -424,7 +435,7 @@ The [SubTitle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Sf
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BjBgXngjKAXyBHyA?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Blazor Column Chart with Subtitle](images/appearance/blazor-column-chart-with-subtitle.png)
 
 ## Data point customization
 
