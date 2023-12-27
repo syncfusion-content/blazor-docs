@@ -67,7 +67,7 @@ In Gantt, the task relationship link can be broken by editing the start date, en
 
 ### Validation mode
 
-When editing the tasks with predecessor links, then the [OnActionBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_OnActionBegin) event will be triggered with [RequestType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttActionEventArgs-1.html#Syncfusion_Blazor_Gantt_GanttActionEventArgs_1_RequestType) argument as `ValidateLinkedTask`. You can validate the editing action within the `OnActionBegin` event using the [ValidateMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttActionEventArgs-1.html#Syncfusion_Blazor_Gantt_GanttActionEventArgs_1_ValidateMode) event argument. The `ValidateMode` event argument has the following properties:
+When editing the tasks with predecessor links, then the [TaskbarEditing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_TaskbarEditing) event will be triggered. You can validate the editing action within the `TaskbarEditing` event using the [ValidateMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.ValidateMode.html) event argument. The `ValidateMode` event argument has the following properties:
 
 Argument |Default value |Description
 -----|-----|-----
@@ -78,26 +78,28 @@ By default, the `PreserveLinkWithEditing` validation mode will be enabled, so th
 
 ![Blazor Gantt Chart updating offset on edit actions](images/blazor-gantt-chart-preserve-link-with-editing.gif)
 
-The following code example explains enabling the `RespectLink` validation mode while editing the linked tasks in the `OnActionBegin` event.
+The following code example explains enabling the `RespectLink` validation mode while editing the linked tasks in the `TaskbarEditing` event.
 
 ```cshtml
 @using Syncfusion.Blazor.Gantt
 <SfGantt DataSource="@TaskCollection" Height="450px" Width="700px">
     <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress"
-        Dependency="Predecessor" ParentID="ParentId"></GanttTaskFields>
-    <GanttEditSettings AllowTaskbarEditing="true"></GanttEditSettings>
-    <GanttEvents TValue="TaskData" OnActionBegin="ActionBegin"></GanttEvents>
+                     Dependency="Predecessor" ParentID="ParentId"></GanttTaskFields>
+    <GanttEditSettings AllowTaskbarEditing="true" AllowEditing></GanttEditSettings>
+    <GanttEvents TValue="TaskData" TaskbarEditing="TaskbarEditing"></GanttEvents>
 </SfGantt>
 
-@code{
+@code {
     private List<TaskData> TaskCollection { get; set; }
     protected override void OnInitialized()
     {
         this.TaskCollection = GetTaskCollection();
     }
-    public void ActionBegin(GanttActionEventArgs<TaskData> args) {
-        if(args.RequestType.ToString() == "ValidateLinkedTask") {
-            args.ValidateMode.RespectLink = true;
+    public void TaskbarEditing(TaskbarEditingEventArgs<TaskData> args)
+    {
+        if (args.ValidationMode != null)
+        {
+            args.ValidationMode.RespectLink = true;
         }
     }
     public class TaskData
@@ -112,8 +114,9 @@ The following code example explains enabling the `RespectLink` validation mode w
         public int? ParentId { get; set; }
     }
 
-    public static List <TaskData> GetTaskCollection() {
-        List <TaskData> Tasks = new List <TaskData> () {
+    public static List<TaskData> GetTaskCollection()
+    {
+        List<TaskData> Tasks = new List<TaskData>() {
             new TaskData() { TaskId = 1, TaskName = "Project initiation", StartDate = new DateTime(2022, 04, 05), EndDate = new DateTime(2022, 04, 21) },
             new TaskData() { TaskId = 2, TaskName = "Identify Site location", StartDate = new DateTime(2022, 04, 05), Duration = "0", Progress = 30, ParentId = 1 },
             new TaskData() { TaskId = 3, TaskName = "Perform soil test", StartDate = new DateTime(2022, 04, 05), Duration = "4", Progress = 40, Predecessor = "2", ParentId = 1 },
