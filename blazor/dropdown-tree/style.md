@@ -49,7 +49,7 @@ Specify the boolean value to the [Disabled](https://help.syncfusion.com/cr/blazo
 }
 ```
 
-![Blazor DropDownTree with Disabled ](./images/styles/blazor-dropdowntree-component-disabled.png)
+![Blazor Dropdown Tree with Disabled ](./images/styles/blazor-dropdowntree-component-disabled.png)
 
 ## CssClass  
 
@@ -446,7 +446,6 @@ The following code demonstrates how to display a tooltip when hovering over the 
         public bool HasChild { get; set; }
         public bool Expanded { get; set; }
         public string PId { get; set; }
-    }
     }
 }
 ```
