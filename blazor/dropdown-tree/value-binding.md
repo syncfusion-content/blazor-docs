@@ -116,7 +116,7 @@ In this example, the selected value is obtained through two-way binding using th
 }
 ```
 
-![Get selected value in Blazor DropDownTree](./images/selection/blazor-dropdowntree-get-selected-value.png)
+![Get selected value in Blazor Dropdown Tree](./images/selection/blazor-dropdowntree-get-selected-value.png)
 
 ## Clear Selection
 
