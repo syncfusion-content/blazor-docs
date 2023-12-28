@@ -7,7 +7,7 @@ control: Stepper
 documentation: ug
 ---
 
-# StepType
+# StepType in Blazor Stepper Component
 
 The [StepType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfStepper.html#Syncfusion_Blazor_Navigations_SfStepper_StepType) property in the Stepper determines whether steps should be displayed using only with indicators, only labels, or a combination of both. The available values for this property are [Default](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.StepperType.html#Syncfusion_Blazor_Navigations_StepperType_Default), [Label](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.StepperType.html#Syncfusion_Blazor_Navigations_StepperType_Label), and [Indicator](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.StepperType.html#Syncfusion_Blazor_Navigations_StepperType_Indicator).
 

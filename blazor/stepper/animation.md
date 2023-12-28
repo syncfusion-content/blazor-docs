@@ -7,7 +7,7 @@ control: Stepper
 documentation: ug
 ---
 
-# AnimationSettings
+# AnimationSettings in Blazor Stepper Component
 
 The Stepper progress bar can be animated during each step transition. You can use the [StepperAnimationSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.StepperAnimationSettings.html) tag directive in the Stepper by setting the `Enable` property to `true`. By default, it is `true`.
 

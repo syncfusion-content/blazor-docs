@@ -7,7 +7,7 @@ control: Stepper
 documentation: ug
 ---
 
-# Orientation
+# Orientation in Blazor Stepper Component
 
 You can use the [Orientation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfStepper.html#Syncfusion_Blazor_Navigations_SfStepper_Orientation) property to set `Horizontal` or `Vertical` orientations, which controls the sequence order of the steps displayed in the Stepper. By default, the orientation is set to `Horizontal`.
 

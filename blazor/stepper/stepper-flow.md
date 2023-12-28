@@ -7,7 +7,7 @@ control: Stepper
 documentation: ug
 ---
 
-# Stepper Flow
+# Stepper Flow in Blazor Stepper Component
 
 The Stepper component provides control over the flow of steps through the utilization of the [Linear](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfStepper.html#Syncfusion_Blazor_Navigations_SfStepper_Linear) property.
 

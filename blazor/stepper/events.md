@@ -7,7 +7,7 @@ control: Stepper
 documentation: ug
 ---
 
-# Events
+# Events in Blazor Stepper Component
 
 This section describes the stepper events that will be triggered when appropriate actions are performed. The following events are available in the stepper component.
 

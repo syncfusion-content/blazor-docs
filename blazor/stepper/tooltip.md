@@ -7,7 +7,7 @@ control: Stepper
 documentation: ug
 ---
 
-# Tooltips in Stepper
+# Tooltips in Blazor Stepper Component
 
 Improve user interaction and offer extra information with tooltips in the Stepper control. You can customize tooltips using the following properties:
 

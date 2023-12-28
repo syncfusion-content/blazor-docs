@@ -7,7 +7,7 @@ control: Stepper
 documentation: ug
 ---
 
-# Validating Steps
+# Validating Steps in Blazor Stepper Component
 
 Use the [IsValid](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.StepperStep.html#Syncfusion_Blazor_Navigations_StepperStep_IsValid) property in the Stepper to check the status of a specific step.
 
