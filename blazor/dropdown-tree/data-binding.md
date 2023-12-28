@@ -141,7 +141,7 @@ To render the root level nodes, specify the ParentID as null or no need to speci
 }
 ```
 
-## Remote data
+## Binding Remote data
 
 Blazor Dropdown Tree can also be populated from a remote data service with the help of `DataManager` component and `Query` property. It supports different kinds of data services such as OData, OData V4, Web API, URL, and JSON with the help of `DataManager` adaptors. A service data can be assigned as an instance of `DataManager` to the `DataSource` property. To interact with remote data source, provide the endpoint `url`.
 
