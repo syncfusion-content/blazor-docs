@@ -40,9 +40,11 @@ This height limitation is not related to the Grid component. It fully depends on
 The Grid has an option to overcome this limitation of the browser in the following ways.
 
 **Solution 1: Using RowHeight property**
+
 You can reduce the row height using the rowHeight property of the Grid. It will reduce the overall height to accommodate more rows. But this approach optimizes the limitation, but if the height limit is reached after reducing row height also, you have to opt for the previous solution or use paging.
 
 **Solution 2: Using paging instead of virtual scrolling**
+
 Similar to virtual scrolling, the paging feature also loads the data in an on-demand concept. Pagination is also compatible with all the other features(Grouping, Editing, etc.) in Grid. So, use the paging feature instead of virtual scrolling to view a large number of records in the Grid without any kind of performance degradation or browser height limitation.
 
 ### How to prevent connection disconnected error when loading a large number of columns with enabled persistence
@@ -66,17 +68,17 @@ This section provides performance guidelines for using Syncfusion Data Grid comp
 1.	When binding data to the grid from a service, it's advisable to set the data source in the Grid [Created](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_Created) event instead of the `OnInitializedAsync` method. If you call the data-fetching method within `OnInitializedAsync`, the delay in fetching data from the service can impact the application's startup time and the rendering of the grid component. However, if you assign the data inside the `Created` event, the grid will have already been created/rendered. Since there are no service request calls inside the `Created` event, you are simply assigning the data already fetched from `OnInitializedAsync` to the Grid's [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_DataSource) property within the Created event handler.
 
 2.	When dealing with a service that returns a large dataset, there's a possibility that the `Created` event might be triggered before the completion of the `OnInitializedAsync`. In such scenarios, it is recommended to employ a custom binding approach for associating data with the grid. This method enables customization of the displayed data using the `Read/ReadAsync` method. Instead of relying on `OnInitializedAsync`, you can invoke your service within the `Read/ReadAsync` method and provide the data for display in the grid. For detailed information, you can check the below documentations
-o	[Custom binding](https://blazor.syncfusion.com/documentation/datagrid/custom-binding)
-o	[Injecting service into CustomAdaptor](https://blazor.syncfusion.com/documentation/datagrid/custom-binding#inject-service-into-custom-adaptor)
+* [Custom binding](https://blazor.syncfusion.com/documentation/datagrid/custom-binding)
+* [Injecting service into CustomAdaptor](https://blazor.syncfusion.com/documentation/datagrid/custom-binding#inject-service-into-custom-adaptor)
 
 ## How to improve loading performance by referring individual script and CSS
 To improve the performance of Syncfusion Blazor DataGrid component during the initial render as well as certain actions, suggested you to refer individual NuGet package (Syncfusion.Blazor.Grid) along with its specified script files. In the consolidated package (Syncfusion.Blazor) all the components will be defined and hence size of the package will be more. Along with its script file size will be more since scripts necessary for all the Syncfusion Blazor components will be defined inside it. 
 
 When package and script file size is more, there might be delay or performance lag in rendering the component in certain specification compared to Grid rendered using individual scripts and NuGet. Individual Nuget package will contain all the necessary and required dependent component sources along with its script reference. So it is not necessary to refer the dependent component externally while referring the Individual package.
 
-Refer the below documentation
-[Individual nuget package](https://blazor.syncfusion.com/documentation/datagrid/getting-started-with-web-app#install-syncfusion-blazor-grid-and-themes-nuget-in-the-blazor-web-app)
-[Adding script and CSS](https://blazor.syncfusion.com/documentation/datagrid/getting-started-with-web-app#add-stylesheet-and-script-resources)
+Refer the below documentations
+* [Individual nuget package](https://blazor.syncfusion.com/documentation/datagrid/getting-started-with-web-app#install-syncfusion-blazor-grid-and-themes-nuget-in-the-blazor-web-app)
+* [Adding script and CSS](https://blazor.syncfusion.com/documentation/datagrid/getting-started-with-web-app#add-stylesheet-and-script-resources)
 
 So to improve the performance of grid during the initial rendering, request you to refer Individual NuGet package and scripts.
 
@@ -94,11 +96,11 @@ public async Task OnClick()
 ## How to optimize server-side data operations with adaptors
 
 The Blazor DataGrid provides support for various adaptors (OData, ODataV4, WebAPI, URL, etc.) to facilitate server-side data operations and CRUD functionalities. By leveraging these adaptors along with the [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) component, you can seamlessly bind remote data sources to the grid and execute actions. During data operations like filtering, sorting, and paging, the corresponding action queries are generated as per the adaptor's requirements. It is crucial to handle these actions on the application end and return the processed data back to the grid. Refer to the documentation for comprehensive details. It's worth noting that for efficient data processing, the suggested order for returning processed data to the grid is as follows
-•	Filtering
-•	Sorting
-•	Aggregates
-•	Paging
-•	Grouping
+* Filtering
+* Sorting
+* Aggregates
+* Paging
+* Grouping
 
 ## Strategic approaches to addressing latency challenges
 
@@ -107,6 +109,7 @@ Understanding the concerns you are facing regarding the lagging responsiveness o
 Additionally, potential solutions to mitigate the delay are offered:
 
 **Network Latency**: When the server is in a different region, the increased distance between the client and server leads to higher latency, impacting the responsiveness of client-server communication.
+
 **Solution**: Host the server in a region closer to the majority of your users to reduce network latency. Choosing a server location nearer to your target audience can significantly improve response times.
 
 Considering these factors and implementing the suggested solutions can minimize the delay in client-to-server calls when hosting the server in a different region in your Blazor application. Testing and monitoring performance are crucial to ensuring optimal responsiveness for your users.
