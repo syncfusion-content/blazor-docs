@@ -117,7 +117,7 @@ Add the Syncfusion Blazor Barcode component in the **~/Pages/Index.razor** file.
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion Blazor Barcode component in your default web browser.
 
-{% previewsample "https://blazorplayground.syncfusion.com/live-editor/embed/rNLqiBipgvdGRkuW?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rNLqiBipgvdGRkuW?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Barcode Generator Component](images/blazor-barcode-generator-component.png)
 
@@ -135,7 +135,7 @@ You can add the QR code in our barcode generator component.
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/live-editor/embed/LtVqiViTUPcUXwxX?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LtVqiViTUPcUXwxX?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![QR Code Generator in Blazor Barcode Component](images/blazor-barcode-with-qr-code.png)
 
@@ -151,7 +151,7 @@ You can add the Data Matrix code in our barcode generator component.
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/live-editor/embed/hZVKChMTKFGevpYm?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hZVKChMTKFGevpYm?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Data Matrix Generator in Blazor Barcode Component](images/blazor-barcode-with-data-matrix.png)
 

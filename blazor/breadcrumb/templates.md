@@ -47,7 +47,7 @@ In the following example, shopping cart details are used as Breadcrumb items and
     </BreadcrumbTemplates>
 </SfBreadcrumb>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/live-editor/embed/BNhUsrippKxnwhYp?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BNhUsrippKxnwhYp?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Breadcrumb Component](./images/blazor-Breadcrumb-item-template.png)
 
@@ -79,7 +79,7 @@ In the following example, the separators are customized with icons using [Separa
     }
 </style>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/live-editor/embed/hjLUsrWzJARuZSHz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hjLUsrWzJARuZSHz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Breadcrumb Component](./images/blazor-breadcrumb-separator-temp.png)
 
@@ -148,6 +148,6 @@ The specific breadcrumb item can be customizable by adding the custom element as
     }
 </style>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/live-editor/embed/VZBgCrsTpAvZIhgB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VZBgCrsTpAvZIhgB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Breadcrumb Component](./images/breadcrumb-specific-item-template.png)

@@ -59,7 +59,7 @@ The top AppBar is the default one in which it positions the AppBar at the top of
 ```
 
 ![Blazor AppBar with Top Position](./images/top_appbar.png)
-{% previewsample "https://blazorplayground.syncfusion.com/live-editor/embed/LNVAsrWpLhLkmLRh?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNVAsrWpLhLkmLRh?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ### Bottom AppBar
 
@@ -105,7 +105,7 @@ This position can be set to the AppBar by setting `AppBarPosition.Bottom` to the
 ```
 
 ![Blazor AppBar with Bottom Position](./images/bottom_appbar.png)
-{% previewsample "https://blazorplayground.syncfusion.com/live-editor/embed/htBAMLMfLVArWgxb?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/htBAMLMfLVArWgxb?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ### Sticky AppBar
 
@@ -151,4 +151,4 @@ This position can be set to the AppBar by setting `true` to the property [IsStic
 ```
 
 ![Blazor AppBar with Sticky Position](./images/sticky_appbar.png)
-{% previewsample "https://blazorplayground.syncfusion.com/live-editor/embed/BXLKWVWzrBKSTUvH?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BXLKWVWzrBKSTUvH?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}

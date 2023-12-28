@@ -41,4 +41,4 @@ Data binding can be achieved by using the `bind-Value` attribute and it supports
     };
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/live-editor/embed/LthACrWfhUVNTdJG?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LthACrWfhUVNTdJG?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
