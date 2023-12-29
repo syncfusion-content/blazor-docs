@@ -66,7 +66,7 @@ In the following example, you can using the DrawTextAsync method in the button c
     private async void DrawTextAsync()
     {
         ImageDimension Dimension = await ImageEditor.GetImageDimensionAsync();
-        await ImageEditor.DrawTextAsync(Dimension.X, Dimension.Y, "Syncfusion");
+        await ImageEditor.DrawTextAsync(Dimension.X.Value + 100, Dimension.Y.Value + 100, "Syncfusion");
     }
 }
 ```
@@ -102,7 +102,7 @@ Here is an example of adding a multiline text in a button click using [`DrawText
     private async void DrawTextAsync()
     {
         ImageDimension Dimension = await ImageEditor.GetImageDimensionAsync();
-        await ImageEditor.DrawTextAsync(Dimension.X, Dimension.Y, "Enter\nText");
+        await ImageEditor.DrawTextAsync(Dimension.X.Value + 100, Dimension.Y.Value + 100, "Enter\nText");
     }
 }
 ```
@@ -143,7 +143,7 @@ Here is an example of deleting a text in a button click using [`DeleteShapeAsync
     private async void DrawTextAsync()
     {
         ImageDimension Dimension = await ImageEditor.GetImageDimensionAsync();
-        await ImageEditor.DrawTextAsync(Dimension.X, Dimension.Y, "Enter\nText");
+        await ImageEditor.DrawTextAsync(Dimension.X.Value + 100, Dimension.Y.Value + 100, "Enter\nText");
     }
 
     private async void DeleteShapeAsync()
@@ -547,7 +547,7 @@ Here is an example of deleting rectangle, ellipse, arrow, path, and line in a bu
     private async void DrawTextAsync()
     {
         ImageDimension Dimension = await ImageEditor.GetImageDimensionAsync();
-        await ImageEditor.DrawTextAsync(Dimension.X, Dimension.Y, "Enter\nText");
+        await ImageEditor.DrawTextAsync(Dimension.X.Value + 100, Dimension.Y.Value + 100, "Enter\nText");
     }
 
     private async void DeleteShapeAsync()
@@ -606,7 +606,7 @@ In the following example, you can use the [`DrawImageAsync`](https://help.syncfu
     private async void DrawImageAsync()
     {
         ImageDimension Dimension = await ImageEditor.GetImageDimensionAsync();
-        await ImageEditor.DrawImageAsync("bridge.png", Dimension.X, Dimension.Y, 200, 200, true);
+        await ImageEditor.DrawImageAsync("bridge.png", Dimension.X.Value + 100, Dimension.Y.Value + 100, 200, 200, true);
     }
 }
 ```
