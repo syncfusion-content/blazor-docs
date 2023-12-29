@@ -4,7 +4,7 @@ title: Annotation with Blazor Image Editor Component | Syncfusion
 description: Checkout the Annotation available in Blazor Image Editor component in Blazor Server App and Blazor WebAssembly App.
 platform: Blazor
 control: Image Editor
-documentation: ug 
+documentation: ug
 ---
 
 # Annotations in the Blazor Image Editor component
