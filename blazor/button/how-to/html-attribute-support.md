@@ -17,9 +17,7 @@ The following example demonstrates how to set type attribute in the [SfButton](h
 
 @using Syncfusion.Blazor.Buttons
 
-<SfButton Content="@Content" title="Primary Button"></SfButton>
-
-<SfButton Content="@Content" type="submit"></SfButton>
+<SfButton Content="@Content" title="Primary Button" type="submit"></SfButton>
 
 ```
 
