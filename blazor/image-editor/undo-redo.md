@@ -49,7 +49,7 @@ Here is an example of undoing and redoing the action using the [`UndoAsync`](htt
     private async void DrawTextAsync()
     {
         ImageDimension Dimension = await ImageEditor.GetImageDimensionAsync();
-        await ImageEditor.DrawTextAsync(Dimension.X, Dimension.Y);
+        await ImageEditor.DrawTextAsync(Dimension.X.Value + 100, Dimension.Y.Value + 100);
     }
 
     private async void UndoAsync()
