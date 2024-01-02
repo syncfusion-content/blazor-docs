@@ -9,11 +9,9 @@ documentation: ug
 
 # Tooltips in Blazor Stepper Component
 
-Improve user interaction and offer extra information with tooltips in the Stepper control. You can customize tooltips using the following properties:
+The Stepper component supports tooltip to show additional information in the steps by setting the [ShowTooltip](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfStepper.html#Syncfusion_Blazor_Navigations_SfStepper_ShowTooltip) property to `true`. 
 
-## Show tooltip
-
-The [ShowTooltip](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfStepper.html#Syncfusion_Blazor_Navigations_SfStepper_ShowTooltip) property allows you to control the visibility of tooltip within the Stepper.
+The tooltip appears when the user hovers over the step, providing the information such as the label or text. By default, the `showTooltip` property is `false`.
 
 ```cshtml
 
@@ -61,4 +59,6 @@ The [ShowTooltip](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Naviga
 
 ## Tooltip template
 
-The [TooltipTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfStepper.html#Syncfusion_Blazor_Navigations_SfStepper_TooltipTemplate) property enables you to customize the content and appearance of tooltips. It can be used based on your specific tooltip requirements.
+You can use the [TooltipTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfStepper.html#Syncfusion_Blazor_Navigations_SfStepper_TooltipTemplate) property to specify a custom template for the tooltips, providing detailed information about the steps.
+
+When hovering over the step, the current step model is passed in the template context, allowing you to include dynamic information about the step.

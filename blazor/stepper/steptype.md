@@ -7,21 +7,21 @@ control: Stepper
 documentation: ug
 ---
 
-# StepType in Blazor Stepper Component
+# Step types in Blazor Stepper Component
 
-The [StepType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfStepper.html#Syncfusion_Blazor_Navigations_SfStepper_StepType) property in the Stepper determines whether steps should be displayed using only with indicators, only labels, or a combination of both. The available values for this property are [Default](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.StepperType.html#Syncfusion_Blazor_Navigations_StepperType_Default), [Label](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.StepperType.html#Syncfusion_Blazor_Navigations_StepperType_Label), and [Indicator](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.StepperType.html#Syncfusion_Blazor_Navigations_StepperType_Indicator).
+The Stepper component can be displayed in `Default`, `Label`, and `Indicator` types by using the [StepType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfStepper.html#Syncfusion_Blazor_Navigations_SfStepper_StepType) property. By default, the property value is `Default`.
 
 ## Default
 
-Steps are displayed with icons and the labels when defined.
+In [Default](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.StepperType.html#Syncfusion_Blazor_Navigations_StepperType_Default) display mode, the Stepper will display both the icons and the labels when defined in the `StepperStep` tag directive.
 
 ## Label
 
-Steps are displayed with their defined labels only.
+In [Label](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.StepperType.html#Syncfusion_Blazor_Navigations_StepperType_Label) display mode, the Stepper will display only the labels regardless of the configured `StepperStep` tag directive options such as Text and IconCss.
 
 ### Label positions
 
-The Stepper control allows you to place the label on the top, bottom, left, or right side of the stepper using the [LabelPosition](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfStepper.html#Syncfusion_Blazor_Navigations_SfStepper_LabelPosition) property.
+The Stepper component allows you to place the label on the top, bottom, left, or right side of the Stepper using the [LabelPosition](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfStepper.html#Syncfusion_Blazor_Navigations_SfStepper_LabelPosition) property.
 
 The following label positions are supported in stepper:
 
@@ -106,9 +106,9 @@ The following label positions are supported in stepper:
 
 ## Indicator
 
-Steps are displayed with only indicators.
+In [Indicator](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.StepperType.html#Syncfusion_Blazor_Navigations_StepperType_Indicator) display mode, the Stepper will display only the icons irrespective of the `stepModel` options such as text and label.
 
-The example below showcases the various types of steps available in the stepper.
+The below example, showcases the various `StepType` available in the Stepper.
 
 ```cshtml
 

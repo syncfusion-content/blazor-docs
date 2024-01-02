@@ -9,11 +9,11 @@ documentation: ug
 
 # Events in Blazor Stepper Component
 
-This section describes the stepper events that will be triggered when appropriate actions are performed. The following events are available in the stepper component.
+This section describes the Stepper events that will be triggered when an appropriate actions are performed. The following events are available in the Stepper component.
 
 ## Created
 
-The [Created](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfStepper.html#Syncfusion_Blazor_Navigations_SfStepper_Created) event is triggered when the Stepper component is initially created.
+The Stepper component triggers the [Created](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfStepper.html#Syncfusion_Blazor_Navigations_SfStepper_Created) event when the component rendering is completed.
 
 ```cshtml
 
@@ -39,7 +39,7 @@ The [Created](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigation
 
 ## StepChanged
 
-The [StepChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfStepper.html#Syncfusion_Blazor_Navigations_SfStepper_StepChanged) event occurs when the active step in the Stepper changes. The [StepperChangedEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.StepperChangedEventArgs.html) passed as an event argument provides the information about StepChanged event callback.
+The Stepper component triggers the [StepChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfStepper.html#Syncfusion_Blazor_Navigations_SfStepper_StepChanged) event after the active step is changed.
 
 ```cshtml
 
@@ -65,7 +65,7 @@ The [StepChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Naviga
 
 ## StepChanging
 
-The [StepChanging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfStepper.html#Syncfusion_Blazor_Navigations_SfStepper_StepChanging) event is triggered before the active step changes in the Stepper. The [StepperChangeEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.StepperChangeEventArgs.html) passed as an event argument provides the information about StepChanging event callback.
+The Stepper component triggers the [StepChanging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfStepper.html#Syncfusion_Blazor_Navigations_SfStepper_StepChanging) event before the active step change.
 
 ```cshtml
 
@@ -91,7 +91,7 @@ The [StepChanging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navig
 
 ## StepClicked
 
-The [StepClicked](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfStepper.html#Syncfusion_Blazor_Navigations_SfStepper_StepClicked) event is triggered when a step in the Stepper is clicked. The [StepperClickedEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.StepperClickedEventArgs.html) passed as an event argument provides the information about StepClicked event callback.
+The Stepper component triggers the [StepClicked](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfStepper.html#Syncfusion_Blazor_Navigations_SfStepper_StepClicked) event when the step is clicked.
 
 ```cshtml
 
@@ -117,7 +117,7 @@ The [StepClicked](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Naviga
 
 ## StepRendered
 
-The [StepRendered](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfStepper.html#Syncfusion_Blazor_Navigations_SfStepper_StepRendered) event occurs when step is rendered in the Stepper. The [StepperRenderedEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.StepperRenderedEventArgs.html) passed as an event argument provides the information about StepRendered event callback.
+The Stepper component triggers the [StepRendered](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfStepper.html#Syncfusion_Blazor_Navigations_SfStepper_StepRendered) event after rendering of the each step.
 
 ```cshtml
 

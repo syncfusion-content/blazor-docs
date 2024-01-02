@@ -1,29 +1,17 @@
 ---
 layout: post
-title: Stepper Flow in Blazor Stepper Component | Syncfusion
-description: Checkout and learn here all about Stepper Flow with Syncfusion Blazor Stepper component in Blazor Server App and Blazor WebAssembly App.
+title: Linear Flow in Blazor Stepper Component | Syncfusion
+description: Checkout and learn here all about Linear Flow with Syncfusion Blazor Stepper component in Blazor Server App and Blazor WebAssembly App.
 platform: Blazor
 control: Stepper
 documentation: ug
 ---
 
-# Stepper Flow in Blazor Stepper Component
+# Linear Flow in Blazor Stepper Component
 
-The Stepper component provides control over the flow of steps through the utilization of the [Linear](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfStepper.html#Syncfusion_Blazor_Navigations_SfStepper_Linear) property.
+The Stepper component enables users to progress sequentially through each step, ensuring navigation from one step to the next in a linear way by setting the [Linear](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfStepper.html#Syncfusion_Blazor_Navigations_SfStepper_Linear) property to `true`. The default value is `false` allowing navigation between any steps and vice versa.
 
-## Linear flow
-
-When the `Linear` property is set to `true`, it enables a linear progression. You can move through steps one after another. By default, the `Linear` property value is `false`.
-
-## Non-Linear flow
-
-In non-liner flow, the users can skip or complete steps in any order they like.
-
-## Configure ActiveStep
-
-The [ActiveStep](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfStepper.html#Syncfusion_Blazor_Navigations_SfStepper_ActiveStep) in the Stepper represents the step currently in the focus or selected by the user. You can set the `ActiveStep` of the stepper by assigning a value to the `ActiveStep` property. By default the `ActiveStep` is `0`.
-
-The following example highlights the difference between linear and non-linear steppers, showcasing how to utilize the active step property.
+The example demonstrates the functionality of both linear and non-linear flow in the Stepper.
 
 ```cshtml
 

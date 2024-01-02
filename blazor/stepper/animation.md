@@ -7,21 +7,18 @@ control: Stepper
 documentation: ug
 ---
 
-# AnimationSettings in Blazor Stepper Component
+# Animation in Blazor Stepper Component
 
-The Stepper progress bar can be animated during each step transition. You can use the [StepperAnimationSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.StepperAnimationSettings.html) tag directive in the Stepper by setting the `Enable` property to `true`. By default, it is `true`.
+The Stepper progress state can be animated, smoothly transitioning from one step to another. You can customize the animation's `Duration` and `Delay` by using the [StepperAnimationSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.StepperAnimationSettings.html) tag directive.
 
-## Enabling animation
+You can disable the animation by setting the [Enable](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.StepperAnimationSettings.html#Syncfusion_Blazor_Navigations_StepperAnimationSettings_Enable) property to `false`. By default, the value is `true`.
 
-Using the [Enable](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.StepperAnimationSettings.html#Syncfusion_Blazor_Navigations_StepperAnimationSettings_Enable) property you can activate/deactivate an animation. The default value is true, indicating that animation is enabled.
+| Fields | Type | Description |
+|------|------|-------------|
+| [Duration](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.StepperAnimationSettings.html#Syncfusion_Blazor_Navigations_StepperAnimationSettings_Duration) | `number` | Specifies the duration of the animated transition for each step. The default value is `1000` milliseconds. |
+| [Delay](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.StepperAnimationSettings.html#Syncfusion_Blazor_Navigations_StepperAnimationSettings_Delay) | `number` | Specifies the delay to initiate the animated transition for each step in milliseconds. The default value is `0`. |
 
-## Duration
-
-The [Duration](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.StepperAnimationSettings.html#Syncfusion_Blazor_Navigations_StepperAnimationSettings_Duration) property specifies the duration of the animation. The default value is set to `1000` milliseconds.
-
-## Delay
-
-The [Delay](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.StepperAnimationSettings.html#Syncfusion_Blazor_Navigations_StepperAnimationSettings_Delay) property sets the animation delay. The default value is `0` milliseconds.
+The example demonstrates the animation `Duration` and `Delay` settings for the Stepper.
 
 ```cshtml
 

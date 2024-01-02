@@ -1,19 +1,23 @@
 ---
 layout: post
-title: Step in Blazor Stepper Component | Syncfusion
-description: Checkout and learn here all about Step with Syncfusion Blazor Stepper component in Blazor Server App and Blazor WebAssembly App.
+title: Steps in Blazor Stepper Component | Syncfusion
+description: Checkout and learn here all about Steps with Syncfusion Blazor Stepper component in Blazor Server App and Blazor WebAssembly App.
 platform: Blazor
 control: Stepper
 documentation: ug
 ---
 
-# Adding Stepper Steps
+# Steps in Blazor Stepper Component
 
-You can use the [StepperStep](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.StepperStep.html) tag directive to add the Stepper steps. The steps collections represent the options for each step within the stepper.
+The Blazor Stepper allows you to add steps using the [StepperStep](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.StepperStep.html) tag directive. Each step can be configured with options such as `IconCss`, `Text`, `Label`, `CssClass` and more.
 
-## Icon
+## Adding steps
 
-You can use the [IconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.StepperStep.html#Syncfusion_Blazor_Navigations_StepperStep_IconCss) property to specify and customize an icon for each step.
+You can define the icon and text content for each step using the `IconCss`, `Text` and `Label` properties.
+
+### Defining icon CSS
+
+You can define the CSS class to show the icon for each step using the [IconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.StepperStep.html#Syncfusion_Blazor_Navigations_StepperStep_IconCss) property.
 
 ```cshtml
 
@@ -59,35 +63,25 @@ You can use the [IconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
 
 ![Blazor Stepper Component with Icon](./images/Blazor-horizontal.png)
 
-## Text
+### Defining text content
 
-You can use the [Text](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.StepperStep.html#Syncfusion_Blazor_Navigations_StepperStep_Text) property to specify the text content for each step.
+You can define text instead of an icon by setting the [Text](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.StepperStep.html#Syncfusion_Blazor_Navigations_StepperStep_Text) property and display label content for a step using the [Label](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.StepperStep.html#Syncfusion_Blazor_Navigations_StepperStep_Label) property.
+
+> When both label and text are defined, the label takes priority for display based on the `StepType`.
 
 ```cshtml
 
 @using Syncfusion.Blazor.Navigations
 
-<SfStepper>
+<SfStepper StepType="StepperType.Indicator">
     <StepperSteps>
-        <StepperStep Text="Cart"></StepperStep>
-        <StepperStep Text="Delivery"></StepperStep>
-        <StepperStep Text="Payment"></StepperStep>
-        <StepperStep Text="Confirmation"></StepperStep>
+        <StepperStep Text="A"></StepperStep>
+        <StepperStep Text="B"></StepperStep>
+        <StepperStep Text="C"></StepperStep>
+        <StepperStep Text="D"></StepperStep>
     </StepperSteps>
 </SfStepper>
-
-```
-![Blazor Stepper Component with Text](./images/Blazor-text.png)
-
-## Label
-
-You can use the [Label](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.StepperStep.html#Syncfusion_Blazor_Navigations_StepperStep_Label) property to provide additional information for each step.
-
-```cshtml
-
-@using Syncfusion.Blazor.Navigations
-
-<SfStepper>
+<SfStepper ID="labelStepper">
     <StepperSteps>
         <StepperStep Label="Cart"></StepperStep>
         <StepperStep Label="Delivery"></StepperStep>
@@ -96,12 +90,18 @@ You can use the [Label](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
     </StepperSteps>
 </SfStepper>
 
+<style>
+    #labelStepper {
+        margin-top: 50px;
+    }
+</style>
+
 ```
-![Blazor Stepper Component with Label](./images/Blazor-text.png)
+![Blazor Stepper Component with text content](./images/Blazor-text-content.png)
 
-## Optional
+## Optional steps
 
-You can use the [Optional](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.StepperStep.html#Syncfusion_Blazor_Navigations_StepperStep_Optional) property to determine whether the step can be skipped or not. By default the `Optional` property is false.
+You can show whether the step is optional or not by using [Optional](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.StepperStep.html#Syncfusion_Blazor_Navigations_StepperStep_Optional) property. By default, the `Optional` property is false.
 
 ```cshtml
 
@@ -146,9 +146,9 @@ You can use the [Optional](https://help.syncfusion.com/cr/blazor/Syncfusion.Blaz
 ```
 ![Blazor Stepper Component with Optional](./images/Blazor-optional.png)
 
-## Disabled
+## Disabling steps
 
-You can use the [Disabled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.StepperStep.html#Syncfusion_Blazor_Navigations_StepperStep_Disabled) property to in-active any step. By default the `Disabled` property is false.
+You can use the [Disabled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.StepperStep.html#Syncfusion_Blazor_Navigations_StepperStep_Disabled) property to disable a step, preventing user interaction when set to true. By default, the value is false.
 
 ```cshtml
 
@@ -193,19 +193,17 @@ You can use the [Disabled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blaz
 ```
 ![Blazor Stepper Component with Disabled](./images/Blazor-disabled.png)
 
-## Validation
+## Setting active step
 
-You can toggle the [IsValid](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.StepperStep.html#Syncfusion_Blazor_Navigations_StepperStep_IsValid) property based on the application logic to success or error states. If the current step is invalid, it prevents the user from moving on to the next one. The default value is `null`.
-
-> Based on the stepper [StepType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfStepper.html#Syncfusion_Blazor_Navigations_SfStepper_StepType) the validation icons will be displayed either in the step indicator or as part of the step label/text.
+You can set the active step by specifying its index using the [ActiveStep](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfStepper.html#Syncfusion_Blazor_Navigations_SfStepper_ActiveStep) property. The default value is `0`.
 
 ```cshtml
 
 @using Syncfusion.Blazor.Navigations
 
-<SfStepper>
+<SfStepper ActiveStep="1">
     <StepperSteps>
-        <StepperStep IconCss="sf-icon-cart" IsValid="true"></StepperStep>        
+        <StepperStep IconCss="sf-icon-cart"></StepperStep>        
         <StepperStep IconCss="sf-icon-transport"></StepperStep>
         <StepperStep IconCss="sf-icon-payment"></StepperStep>
         <StepperStep IconCss="sf-icon-success"></StepperStep>
@@ -240,43 +238,67 @@ You can toggle the [IsValid](https://help.syncfusion.com/cr/blazor/Syncfusion.Bl
 </style>
 
 ```
+![Blazor Stepper Component with ActiveStep](./images/Blazor-activeStep.png)
 
-![Blazor Stepper Component with Validation](./images/Blazor-validation.png)
+## Step status
 
-## Status
+Each step's progress state can be specified using the [Status](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.StepperStep.html#Syncfusion_Blazor_Navigations_StepperStep_Status) property. The possible values are [NotStarted](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.StepperStatus.html#Syncfusion_Blazor_Navigations_StepperStatus_NotStarted), [InProgress](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.StepperStatus.html#Syncfusion_Blazor_Navigations_StepperStatus_InProgress) and [Completed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.StepperStatus.html#Syncfusion_Blazor_Navigations_StepperStatus_Completed). By default, the value is `NotStarted.`
 
-You can use the [Status](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.StepperStep.html#Syncfusion_Blazor_Navigations_StepperStep_Status) property to represent the progress states of each activeStep. The possible values are [NotStarted](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.StepperStatus.html#Syncfusion_Blazor_Navigations_StepperStatus_NotStarted), [InProgress](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.StepperStatus.html#Syncfusion_Blazor_Navigations_StepperStatus_InProgress), [Completed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.StepperStatus.html#Syncfusion_Blazor_Navigations_StepperStatus_Completed). By default, the value is `NotStarted.`
+## Step styling
 
-## CssClass
-
-You can use the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.StepperStep.html#Syncfusion_Blazor_Navigations_StepperStep_CssClass) property to customize the appearance of the step.
+You can use the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.StepperStep.html#Syncfusion_Blazor_Navigations_StepperStep_CssClass) property to customize the appearance of each step.
 
 ```cshtml
 
 @using Syncfusion.Blazor.Navigations
 
-<SfStepper CssClass="stepper-customize">
+<SfStepper>
     <StepperSteps>
-        <StepperStep></StepperStep>        
-        <StepperStep></StepperStep>
-        <StepperStep></StepperStep>
-        <StepperStep></StepperStep>
+        <StepperStep IconCss="sf-icon-cart" CssClass="stepper-customize"></StepperStep>        
+        <StepperStep IconCss="sf-icon-transport"></StepperStep>
+        <StepperStep IconCss="sf-icon-payment"></StepperStep>
+        <StepperStep IconCss="sf-icon-success"></StepperStep>
     </StepperSteps>
 </SfStepper>
 
 <style>
-    .e-stepper.stepper-customize .e-stepper-steps .e-step-container .e-step {
-        border-radius: 20%;
-        min-width: 40px;
-        min-height: 40px;
-        font-size: 20px;
+    @@font-face {
+        font-family: 'Default';
+        src:
+        url(data:application/x-font-ttf;charset=utf-8;base64,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) format('truetype');
+        font-weight: normal;
+        font-style: normal;
     }
 
-    .e-stepper.stepper-customize .e-stepper-progressbar {
-        height: 3px;
+    [class^="sf-icon-"], [class*=" sf-icon-"] {
+        font-family: 'Default' !important;
+        speak: none;
+        font-style: normal;
+        font-weight: normal;
+        font-variant: normal;
+        text-transform: none;
+        line-height: inherit;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+
+    .sf-icon-cart:before { content: "\e710"; }
+    .sf-icon-transport:before { content: "\e702"; }
+    .sf-icon-payment:before { content: "\e706"; }
+    .sf-icon-success:before { content: "\e715"; }
+
+    .e-stepper .e-step-container.stepper-customize .e-step {
+        border-radius: 20%;
+        font-size: 20px;
     }
 </style>
 
 ```
 
 ![Blazor Stepper Component with CssClass](./images/Blazor-cssclass.png)
+
+## Step validation
+
+You can set the validation state for each step to displaying a success or error icon by using [IsValid](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.StepperStep.html#Syncfusion_Blazor_Navigations_StepperStep_IsValid) property.
+
+> To know more about Stepper validation, please refer to the [Validation](./stepper-validation#validating-steps) section.

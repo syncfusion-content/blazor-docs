@@ -7,13 +7,11 @@ control: Stepper
 documentation: ug
 ---
 
-# Customizing Stepper steps with templates
+# Template in Blazor Stepper Component
 
-You can personalize the appearance of Stepper steps by using the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfStepper.html#Syncfusion_Blazor_Navigations_SfStepper_Template) property. It enables the customization feature for different progress states within the stepper, encompassing indicators and the progress bar.
+The Stepper component allows you to customize the default appearance and content of each step, creating a personalized experience for the user. You can use the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfStepper.html#Syncfusion_Blazor_Navigations_SfStepper_Template) property to set the template content for the steps.
 
-The Stepper component allows you to customize the appearance of the stepper steps using [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfStepper.html#Syncfusion_Blazor_Navigations_SfStepper_Template) property. You can use template to define a unique layout for the stepper. This allows you to create a more customized and interactive experience for the user. 
-
-The following example shows the customization of stepper with `icon` and `label` using `Template` property.
+The `StepperStep` tag directive options and current step index are passed as `step` and `currentStep` properties in the template context for customization.
 
 ```cshtml
 

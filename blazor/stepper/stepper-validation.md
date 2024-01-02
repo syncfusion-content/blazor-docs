@@ -7,11 +7,11 @@ control: Stepper
 documentation: ug
 ---
 
-# Validating Steps in Blazor Stepper Component
+# Steps validation in Blazor Stepper Component
 
-Use the [IsValid](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.StepperStep.html#Syncfusion_Blazor_Navigations_StepperStep_IsValid) property in the Stepper to check the status of a specific step.
+You can define the validation state of each step by setting the [IsValid](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.StepperStep.html#Syncfusion_Blazor_Navigations_StepperStep_IsValid) property. When `IsValid` is set to `true`, it indicates the success state for the steps; when set to `false`, it signifies the error state. The default value is `null`.
 
-When `IsValid` is set to true, the step meets the required criteria. If set to `false`, the step needs attention or completion. It provides clear feedback on the status of individual steps within the Stepper, enhancing the user interaction.
+> Based on the Stepper `StepType`, the validation icons will be displayed either as an indicator or as part of the step label/text.
 
 ```cshtml
 
@@ -21,8 +21,17 @@ When `IsValid` is set to true, the step meets the required criteria. If set to `
     <StepperSteps>
         <StepperStep IconCss="sf-icon-cart" IsValid="true"></StepperStep>        
         <StepperStep IconCss="sf-icon-transport"></StepperStep>
-        <StepperStep IconCss="sf-icon-payment"></StepperStep>
+        <StepperStep IconCss="sf-icon-payment" IsValid="false"></StepperStep>
         <StepperStep IconCss="sf-icon-success"></StepperStep>
+    </StepperSteps>
+</SfStepper>
+
+<SfStepper ID="labelStepper">
+    <StepperSteps>
+        <StepperStep Label="Cart" IsValid="true"></StepperStep>
+        <StepperStep Label="Address"></StepperStep>
+        <StepperStep Label="Payment" IsValid="false"></StepperStep>
+        <StepperStep Label="Confirmation"></StepperStep>
     </StepperSteps>
 </SfStepper>
 
@@ -51,6 +60,10 @@ When `IsValid` is set to true, the step meets the required criteria. If set to `
     .sf-icon-transport:before { content: "\e702"; }
     .sf-icon-payment:before { content: "\e706"; }
     .sf-icon-success:before { content: "\e715"; }
+
+    #labelStepper {
+        margin-top: 50px;
+    }
 </style>
 
 ```
