@@ -12,8 +12,8 @@ documentation: ug
 Blazor has templated components thats accepts one or more UI segments as input that can be rendered as part of the component during component rendering. Gantt Chart is a templated razor component, that allows customizing various part of the UI using template parameters. It allows rendering custom components or content based on its logic.
 
 The available template options in Gantt Chart are as follows,
-* [Column template](https://blazor.syncfusion.com/documentation/gantt-chart/column-template) - Used to customize cell content.
-* [Header template](https://blazor.syncfusion.com/documentation/gantt-chart/columns#header-template) - Used to customize header cell content.
+* [Column template](./columns/column-template) - Used to customize cell content.
+* [Header template](./columns/header-template) - Used to customize header cell content.
 
 ## Template context
 
