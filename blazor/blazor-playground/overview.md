@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Overview of Blazor Playground | Syncfusion
-description: Syncfusion Blazor Playground offers a comprehensive playground within your browser, empowering you to write, edit, compile, and share your Blazor components effortlessly. Explore the capabilities of Blazor components in real-time without the need for complex setups or external tools.
+description: Syncfusion Blazor Playground lets you effortlessly write, edit, compile, and share your Blazor components in your browser. Explore real-time Blazor component capabilities without complex setups or external tools.
 platform: Blazor
 component: Common
 documentation: ug
