@@ -9,7 +9,7 @@ documentation: ug
 
 # Accessibility in Blazor Accumulation Chart Component
 
-Accessibility is achieved in the accumulation chart component through WAI-ARIA standard and keyboard navigation. The accumulation chart features can be effectively accessed through assistive technologies such as screen readers.
+Accessibility is achieved in the accumulation chart component through WAI-ARIA standard. The accumulation chart features can be effectively accessed through assistive technologies such as screen readers.
 
 ## WAI-ARIA
 
@@ -24,4 +24,3 @@ Legend |Click to show or hide the series.
 Axis Title |Reads the axis title.
 Chart Title |Reads the chart title.
 Series Points |Reads the Point x: Point y value.
-

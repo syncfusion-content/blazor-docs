@@ -9,7 +9,7 @@ documentation: ug
 
 # Accessibility in Blazor Smith Chart Component
 
-Accessibility is achieved in the smith chart component through WAI-ARIA standard and keyboard navigation. The smith chart features can be effectively accessed through assistive technologies such as screen readers.
+Accessibility is achieved in the smith chart component through WAI-ARIA standard. The smith chart features can be effectively accessed through assistive technologies such as screen readers.
 
 ## WAI-ARIA
 
@@ -23,4 +23,3 @@ Title |Reads the smith chart's title.
 Legend |Reads the series name.
 Marker |Reads the location x : location y value. 
 Series Points |Reads the Point x : Point y value.
-

@@ -9,7 +9,7 @@ documentation: ug
 
 # Accessibility in Blazor Range Selector Component
 
-Accessibility is achieved in the range navigator component through WAI-ARIA standard and keyboard navigation. The range navigator features can be effectively accessed through assistive technologies such as screen readers.
+Accessibility is achieved in the range navigator component through WAI-ARIA standard. The range navigator features can be effectively accessed through assistive technologies such as screen readers.
 
 ## WAI-ARIA
 
@@ -20,4 +20,3 @@ The following ARIA attributes are used in the range navigator:
 Element |Default description
 -----|-----
 Selected Area |Reads the range selector data points length
-

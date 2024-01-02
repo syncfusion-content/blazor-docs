@@ -9,7 +9,7 @@ documentation: ug
 
 # Accessibility in Blazor Bullet Chart Component
 
-Accessibility is achieved in the bullet chart component through WAI-ARIA standard and keyboard navigation. The bullet chart features can be effectively accessed through assistive technologies such as screen readers.
+Accessibility is achieved in the bullet chart component through WAI-ARIA standard. The bullet chart features can be effectively accessed through assistive technologies such as screen readers.
 
 ## WAI-ARIA
 
@@ -21,5 +21,4 @@ Element |Default description
 -----|-----
 Title |Reads the bullet chart's title.
 Legend |Reads the range name.
-Feature Measure Bar |Reads the target width and value height. 
-
+Feature Measure Bar |Reads the target width and value height.
