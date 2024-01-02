@@ -72,6 +72,8 @@ Now, scaffold DbContext and model classes from the existing Library database. To
 1. Create the new project named as `BlazorWebApp.Shared` for DbContext and model class as shown below.
 ![Create Shared Project](../images/db-shared-project.png)
 
+Additionally, ensure that you have added a reference to the `BlazorWebApp.Shared` project in both the server-side and client-side projects of your web application.
+
 2. Then, open the NuGet Package Manager and install the following packages in both the shared and server-side projects of your Blazor Web App.
 
    * [Microsoft.EntityFrameworkCore.Tools](https://www.nuget.org/packages/Microsoft.EntityFrameworkCore.Tools): This package creates database context and model classes from the database.
@@ -282,6 +284,13 @@ public class ClientServices
 {% endhighlight %}
 {% endtabs %}
 
+Additionally, make sure to register the `ClientServices` class in both `Program.cs` files of your application.
+
+```
+....
+builder.Services.AddScoped<ClientServices>();
+
+```
 N> To ensure the using correct your's localhost portable number in code snippet.
 
 ### DbContext and model class in Blazor Server App
