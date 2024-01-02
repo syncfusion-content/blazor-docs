@@ -9,9 +9,9 @@ documentation: ug
 
 # Global level and Reuse of Blazor Media Query Component
 
-You can reuse the `Media Query` component across different parts of your application, which allows you to maintain a consistent and adaptive design. By reusing the Blazor Media Query component, you can maintain a consistent responsive design throughout your application.
+You can reuse the `Media Query` component across various sections of your applications which maintain a consistent and adaptive design.
 
-In the below example, the `Media Query` component defined in `ReusableMediaQuery.razor` file and used this tag in the `index.razor` file by changing built-in breakpoints as per requirement.
+In the below example, the `Media Query` component defined in the `ReusableMediaQuery.razor` file and the `<ReusableMediaQuery>` tag is used in the `index.razor` file by changing built-in breakpoints as per requirement.
 
 1. Right-click on the **~/Pages** folder in the Visual Studio and select **Add -> Razor Component** to create a new Razor component (ReusableMediaQuery.razor).
 
