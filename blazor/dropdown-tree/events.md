@@ -265,7 +265,7 @@ The Blazor Dropdown Tree component's [ValueChanging](https://help.syncfusion.com
 }
 ```
 
-![MultiSelection in Blazor DropDownTree](./images/blazor-dropdowntree-component-valuechanging.png)
+![MultiSelection in Blazor Dropdown Tree](./images/blazor-dropdowntree-component-valuechanging.png)
 
 ## ValueChanged 
 
