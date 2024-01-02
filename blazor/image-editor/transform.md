@@ -43,7 +43,7 @@ The [`RotateAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Imag
 }
 ```
 
-![Blazor Image Editor with Rotate an image](./images/blazor-image-editor-rotate.png)
+![Blazor Image Editor with Rotate an image](./images/blazor-image-editor-rotate.jpg)
 
 ## Flip an image
 
@@ -81,7 +81,38 @@ Here is an example of flipping an image in a button click event.
 }
 ```
 
-![Blazor Image Editor with Flip an image](./images/blazor-image-editor-flip.png)
+![Blazor Image Editor with Flip an image](./images/blazor-image-editor-flip.jpg)
+
+## Straightening in the Blazor Image Editor
+
+The straightening feature in an Image Editor allows users to adjust an image by rotating it clockwise or counter clockwise. The rotating degree value should be within the range of -45 to +45 degrees for accurate straightening. Positive values indicate clockwise rotation, while negative values indicate counter clockwise rotation.
+
+### Apply straightening to the image 
+
+The Blazor Image Editor includes a [`StraightenImageAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_StraightenImageAsync_System_Int32_) method that allows users to adjust an image by rotating it clockwise or counter clockwise. The rotating degree value should be within the range of -45 to +45 degrees for accurate straightening. Positive values indicate clockwise rotation, while negative values indicate counter clockwise rotation. Which allows you to adjust the degree of an image. This method takes one parameter that define how the straightening should be carried out:
+
+* degree: Specifies the amount of rotation for straightening the image. Positive values indicate clockwise rotation, while negative values indicate counterclockwise rotation.
+
+Here is an example of straightening the image.
+
+```cshtml
+@using Syncfusion.Blazor.ImageEditor
+@using Syncfusion.Blazor.Buttons
+ 
+<SfImageEditor @ref="ImageEditor" Height="400">
+    <ImageEditorEvents Created="OpenAsync"></ImageEditorEvents>
+</SfImageEditor>
+ 
+@code {
+    SfImageEditor ImageEditor;
+    private async void OpenAsync()
+    {
+        await ImageEditor.OpenAsync("nature.png");
+    }
+}
+```
+
+![Blazor Image Editor with Straighten](./images/blazor-image-editor-straighten.png)
 
 ## Zoom in or out an image 
 
@@ -165,7 +196,7 @@ Here is an example of specifying [`MinZoomFactor`](https://help.syncfusion.com/c
 }
 ```
 
-![Blazor Image Editor with Zoom](./images/blazor-image-editor-zoom.png)
+![Blazor Image Editor with Zoom](./images/blazor-image-editor-zoom.jpg)
 
 ## Panning an image
 
@@ -201,7 +232,7 @@ The parameter available in the [`Zooming`](https://help.syncfusion.com/cr/blazor
 
 ## Rotating event 
 
-The [`Rotating`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.ImageEditorEvents.html#Syncfusion_Blazor_ImageEditor_ImageEditorEvents_Rotating) event is triggered when performing rotating the image. This event is passed an object that contains information about the rotating event, such as the amount of rotation performed. And this event uses [`RotateEventArgs`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.RotateEventArgs.html) to handle the rotating action in the image.
+The [`Rotating`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.ImageEditorEvents.html#Syncfusion_Blazor_ImageEditor_ImageEditorEvents_Rotating) event is triggered when performing rotating / straightening the image. This event is passed an object that contains information about the rotating event, such as the amount of rotation performed. And this event uses [`RotateEventArgs`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.RotateEventArgs.html) to handle the rotating action in the image.
 
 The parameter available in the [`Rotating`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.ImageEditorEvents.html#Syncfusion_Blazor_ImageEditor_ImageEditorEvents_Rotating) event is, 
 
