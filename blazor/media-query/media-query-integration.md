@@ -9,13 +9,7 @@ documentation: ug
 
 # Integrate Media Query with other components
 
-The `Media Query` can be integrated with other components such as the Chart, Grid, Stepper and others. The Media Query component is used to enhance the responsiveness of the components placed inside.
-
-## Media Query integration in Chart
-
-By integrating the `Media Query` component with a `Chart`, you can dynamically adjust the chart's appearance in response to changes in the browser size. This ensures an optimal viewing experience across various devices and screen dimensions.
-
-The built-in breakpoint values of Media Query component are as follows:
+You can integrate any component inside the `Media Query` such as the Chart, Grid, Stepper, etc. In the example below, Chart component is placed inside the Media Query for showcasing the chart's responsiveness when the browser size is changed.
 
 ```cshtml
 

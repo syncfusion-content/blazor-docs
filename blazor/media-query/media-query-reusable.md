@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Reuse of Blazor Media Query Component | Syncfusion
-description: Checkout and learn here all about how to use the Media Query component at the global level and re-use on all pages and much more.
+title: Reuse of Blazor Media Query component | Syncfusion
+description: Checkout and learn here all about how to use the Media Query component at the global level reuse on all pages and much more.
 platform: Blazor
 control: Media Query
 documentation: ug
 ---
 
-# Global level and Reuse of Blazor Media Query Component
+# Global level reuse of Blazor Media Query component
 
 You can reuse the `Media Query` component across various sections of your applications which maintain a consistent and adaptive design.
 
-In the below example, the `Media Query` component defined in the `ReusableMediaQuery.razor` file and the `<ReusableMediaQuery>` tag is used in the `index.razor` file by changing built-in breakpoints as per requirement.
+The Syncfusion Media Query component can be reused by creating a new Blazor component:
 
 1. Right-click on the **~/Pages** folder in the Visual Studio and select **Add -> Razor Component** to create a new Razor component (ReusableMediaQuery.razor).
 
@@ -198,4 +198,4 @@ else
 {% endhighlight %}
 {% endtabs %}
 
-![Extended Blazor Media Query Component](images/blazor-media-query-reusable.png)
+![Reusable Blazor Media Query Component](images/blazor-media-query-reusable.png)
