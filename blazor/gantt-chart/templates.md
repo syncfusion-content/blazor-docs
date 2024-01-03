@@ -27,5 +27,3 @@ For example, the data of the column template can be accessed using `context` as 
 If a component contains any `RenderFragment` type property then it does not allow any child components other than the render fragment property, which is [by design in Blazor](https://github.com/dotnet/aspnetcore/issues/10836).
 
 This prevents from directly specifying templates such as `TaskbarTemplate` and `MilestoneTemplate` as descendant of the Gantt Chart component. Hence the templates such as `TaskbarTemplate` and `MilestoneTemplate` should be wrapped around a component named `GanttTemplates` as follows.
-
-

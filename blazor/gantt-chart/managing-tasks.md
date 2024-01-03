@@ -132,17 +132,21 @@ The following code example describes, how to define the Edit template for a part
         <GanttColumn Field="Progress"></GanttColumn>
     </GanttColumns>
     <GanttEditSettings AllowAdding="true" AllowEditing=true AllowTaskbarEditing=true></GanttEditSettings>
-    <GanttEvents OnCellSave="CellSaveHandler" TValue="TaskData"></GanttEvents>
+    <GanttEvents OnActionBegin="ActionBeginHandler" TValue="TaskData"></GanttEvents>
 </SfGantt>
 
 @code{
     SfDropDownList<string, string> dropdown;
 
-    private void CellSaveHandler(CellSaveArgs<TaskData> args)
+    public void ActionBeginHandler(GanttActionEventArgs<TaskData> args)
     {
-        if (args.ColumnName == "TaskName")
+        if (args.RequestType.Equals(Syncfusion.Blazor.Gantt.Action.BeforeSave))
         {
-            args.Value = dropdown.Value;
+            var data = args.Data as TaskData;
+            if (dropdown != null && dropdown.Value != null)
+            {
+                data.TaskName = dropdown.Value.ToString();
+            }
         }
     }
     private List<TaskData> TaskCollection { get; set; }
@@ -400,5 +404,3 @@ The taskbar editing tooltip can be customized using the [GanttTooltipSettings.Ed
 ```
 
 ![Blazor Gantt Chart displays editing tooltip template](images/editing-tooltip-template.gif)
-
-

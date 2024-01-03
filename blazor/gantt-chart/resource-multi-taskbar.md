@@ -113,4 +113,3 @@ Resource Multi-Taskbar in a Gantt Chart is a feature that allows you to visualiz
 <!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/htrgNbsvgLcAiQsa?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %} -->
 
 N> By default `EnableMultiTaskbar` property value is `true`.
-

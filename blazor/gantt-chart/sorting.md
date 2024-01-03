@@ -235,25 +235,24 @@ In the Gantt Chart component, you can clear all the sorted columns and return to
 
 ## Sorting events
 
-During the sort action, the Gantt Chart component triggers two events. The [Sorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_Sorting) event triggers before the sort action starts, and the [Sorted](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_Sorted) event triggers after the sort action is completed.
+During the sort action, the Gantt Chart component triggers two events. The [OnActionBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_OnActionBegin) event triggers before the sort action starts, and the [OnActionComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_OnActionComplete) event triggers after the sort action is completed.
 
 ```cshtml
 @using Syncfusion.Blazor.Gantt
-@using Syncfusion.Blazor.Grids
 <SfGantt DataSource="@TaskCollection" Height="450px" Width="700px" AllowSorting="true">
     <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" ParentID="ParentId">
     </GanttTaskFields>
-    <GanttEvents Sorting="SortingHandler" Sorted="SortedHandler" TValue="TaskData"></GanttEvents>
+    <GanttEvents OnActionBegin="OnActionBegin" OnActionComplete="OnActionComplete" TValue="TaskData"></GanttEvents>
 </SfGantt>
 
-@code {
-    public void SortingHandler(SortingEventArgs args)
+@code{
+    public void OnActionBegin(GanttActionEventArgs<TaskData> args)
     {
-        Console.WriteLine(args.ColumnName + " " + args.Direction);
+        Console.WriteLine(args.RequestType + " " + args.Type);
     }
-    public void SortedHandler(SortedEventArgs args)
+    public void OnActionComplete(GanttActionEventArgs<TaskData> args)
     {
-        Console.WriteLine(args.ColumnName + " " + args.Direction);
+        Console.WriteLine(args.RequestType + " " + args.Type);
     }
     private List<TaskData> TaskCollection { get; set; }
     protected override void OnInitialized()
@@ -289,6 +288,8 @@ During the sort action, the Gantt Chart component triggers two events. The [Sort
     }
 }
 ```
+
+N> The `args.RequestType` is the current action name. For example, for sorting the `args.RequestType`, value is **Sorting**.
 
 ## Sorting custom columns
 
