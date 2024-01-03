@@ -9,7 +9,7 @@ documentation: ug
 
 # Customize Expand and Collapse Icon in Blazor Gantt Chart Component
 
-In the Gantt Chart component, you can customize the expand and collapse icons by overriding the default icon classes `.e-icons.e-treegridexpand` and `.e-icons.e-treegridcollapse` with the `content` property. The below sample code demonstrates the customization of the expand and collapse icons.
+In the Gantt Chart component, you can customize the expand and collapse icons by overriding the default icon classes `.e-treegridexpand` and `.e-treegridcollapse` with the `content` property. The below sample code demonstrates the customization of the expand and collapse icons.
 
 ```cshtml
 @using Syncfusion.Blazor.Gantt
