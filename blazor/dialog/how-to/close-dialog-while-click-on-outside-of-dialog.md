@@ -22,7 +22,7 @@ In the following code, dialog is closed when clicking outside the dialog area us
 
 <div id="target">
     <SfDialog Target="#target" Width="300px" IsModal="true" ShowCloseIcon="true" CloseOnEscape="false" @bind-Visible="@IsVisible">
-        <DialogEvents OnOverlayClick="@OverlayClick"></DialogEvents>
+        <DialogEvents OnOverlayModalClick="@OverlayClick"></DialogEvents>
         <DialogTemplates>
             <Header> Delete Multiple Items</Header>
             <Content> Are you sure you want to permanently delete all of these items? </Content>
@@ -49,7 +49,7 @@ In the following code, dialog is closed when clicking outside the dialog area us
         this.IsVisible = true;
     }
 
-    private void OverlayClick(MouseEventArgs args)
+    private void OverlayClick(OverlayModalClickEventArgs  args)
     {
         this.IsVisible = false;
     }
