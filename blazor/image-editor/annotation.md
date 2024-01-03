@@ -66,7 +66,7 @@ In the following example, you can using the DrawTextAsync method in the button c
     private async void DrawTextAsync()
     {
         ImageDimension Dimension = await ImageEditor.GetImageDimensionAsync();
-        await ImageEditor.DrawTextAsync(Dimension.X, Dimension.Y, "Syncfusion");
+        await ImageEditor.DrawTextAsync(Dimension.X.Value + 100, Dimension.Y.Value + 100, "Syncfusion");
     }
 }
 ```
@@ -102,7 +102,7 @@ Here is an example of adding a multiline text in a button click using [`DrawText
     private async void DrawTextAsync()
     {
         ImageDimension Dimension = await ImageEditor.GetImageDimensionAsync();
-        await ImageEditor.DrawTextAsync(Dimension.X, Dimension.Y, "Enter\nText");
+        await ImageEditor.DrawTextAsync(Dimension.X.Value + 100, Dimension.Y.Value + 100, "Enter\nText");
     }
 }
 ```
@@ -143,7 +143,7 @@ Here is an example of deleting a text in a button click using [`DeleteShapeAsync
     private async void DrawTextAsync()
     {
         ImageDimension Dimension = await ImageEditor.GetImageDimensionAsync();
-        await ImageEditor.DrawTextAsync(Dimension.X, Dimension.Y, "Enter\nText");
+        await ImageEditor.DrawTextAsync(Dimension.X.Value + 100, Dimension.Y.Value + 100, "Enter\nText");
     }
 
     private async void DeleteShapeAsync()
@@ -195,6 +195,41 @@ Here is an example of changing the text color using the [ShapeChanging](https://
 ```
 
 ![Blazor Image Editor with Custom text an image](./images/blazor-image-editor-custom-text.png)
+
+### Add Additional font family
+
+The [`ImageEditorFontFamily`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.ImageEditorFontFamily.html) option in the Blazor Image Editor component provides the flexibility to incorporate supplementary font families, expanding your options for text styling and ensuring a broader range of fonts can be utilized within your design or content.
+
+This enhancement offers a more personalized and dynamic interaction, empowering users to tailor their text styles for a truly engaging editing experience.
+
+Here is an example of adding additional font family using the [`ImageEditorFontFamily`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.ImageEditorFontFamily.html) options in an image editor component.
+
+```cshtml
+@using Syncfusion.Blazor.ImageEditor
+@using Syncfusion.Blazor.Buttons
+ 
+<SfImageEditor @ref="ImageEditor" Height="400">
+    <ImageEditorFontFamily Items="@CustomItems" Default="Arial"></ImageEditorFontFamily>
+    <ImageEditorEvents Created="OpenAsync"></ImageEditorEvents>
+</SfImageEditor>
+ 
+@code {
+    SfImageEditor ImageEditor;
+    private List<ImageEditorDropDownItemModel> CustomItems = new List<ImageEditorDropDownItemModel>
+    {
+        new ImageEditorDropDownItemModel { Text = "Arial", Value = "arial" },
+        new ImageEditorDropDownItemModel { Text = "Brush Script MT", Value = "brush script mt"},
+        new ImageEditorDropDownItemModel { Text = "Papyrus", Value = "papyrus" },
+        new ImageEditorDropDownItemModel { Text = "Times New Roman", Value = "times new roman"},
+        new ImageEditorDropDownItemModel { Text = "Courier New", Value = "courier new" }
+    };
+    private async void OpenAsync() 
+    { 
+        await ImageEditor.OpenAsync("nature.png"); 
+    }
+}
+```
+![Blazor Image Editor with Custom font family in an image](./images/blazor-image-editor-font.png)
         
 ## Freehand drawing
 
@@ -512,7 +547,7 @@ Here is an example of deleting rectangle, ellipse, arrow, path, and line in a bu
     private async void DrawTextAsync()
     {
         ImageDimension Dimension = await ImageEditor.GetImageDimensionAsync();
-        await ImageEditor.DrawTextAsync(Dimension.X, Dimension.Y, "Enter\nText");
+        await ImageEditor.DrawTextAsync(Dimension.X.Value + 100, Dimension.Y.Value + 100, "Enter\nText");
     }
 
     private async void DeleteShapeAsync()
@@ -571,7 +606,7 @@ In the following example, you can use the [`DrawImageAsync`](https://help.syncfu
     private async void DrawImageAsync()
     {
         ImageDimension Dimension = await ImageEditor.GetImageDimensionAsync();
-        await ImageEditor.DrawImageAsync("bridge.png", Dimension.X, Dimension.Y, 200, 200, true);
+        await ImageEditor.DrawImageAsync("bridge.png", Dimension.X.Value + 100, Dimension.Y.Value + 100, 200, 200, true);
     }
 }
 ```
