@@ -290,8 +290,6 @@ During the sort action, the Gantt Chart component triggers two events. The [Sort
 }
 ```
 
-N> The `args.ColumnName` is the current sorting column name. For example, for sorting the TaskName column, the value of `args.ColumnName` is **TaskName**.
-
 ## Sorting custom columns
 
 In Gantt, you can sort custom columns of different types like string, numeric, etc., By adding the custom column in the column collection, you can perform initial sort using the `GanttSortSettings` or you can also sort the column dynamically by a button click.
