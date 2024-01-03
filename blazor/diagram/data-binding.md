@@ -709,8 +709,8 @@ GraphQL is a query language for APIs with which you can get exactly what you nee
 
 <div class="content-wrapper" style="width:100%">
     <div>
-        <SfDiagramComponent @ref="@diagram"  Height="400px" Created="OnCreated" InteractionController="@DiagramInteractions.ZoomPan" 
-                            NodeCreating="OnNodeCreating" ConnectorCreating="OnConnectorCreating" SetNodeTemplate="SetTemplate">
+        <SfDiagramComponent @ref="@diagram"  Height="400px" InteractionController="@DiagramInteractions.ZoomPan" 
+                            NodeCreating="OnNodeCreating" ConnectorCreating="OnConnectorCreating" >
             <DataSourceSettings Id="OrderID" ParentId="CustomerID">
             <SfDataManager Url="https://localhost:7131/graphql" GraphQLAdaptorOptions=@adaptorOptions Adaptor="Adaptors.GraphQLAdaptor"></SfDataManager>
             </DataSourceSettings>
@@ -739,7 +739,6 @@ GraphQL is a query language for APIs with which you can get exactly what you nee
         public int? OrderID { get; set; }
         public string CustomerID { get; set; }
         public string EmployeeID { get; set; } 
-        
     }
     private void OnNodeCreating(IDiagramObject obj)
     {
@@ -778,14 +777,6 @@ GraphQL is a query language for APIs with which you can get exactly what you nee
             };
       
     }
-     @*Hidden:Lines*@
-    private void OnCreated()
-    {
-             
-        FitOptions mobileoptions = new FitOptions() { Mode = FitMode.Both, Region = DiagramRegion.Content };
-        diagram.FitToPage(mobileoptions);
-       
-    }
     @*End:Hidden*@
     private void OnConnectorCreating(IDiagramObject obj)
     {
@@ -795,10 +786,6 @@ GraphQL is a query language for APIs with which you can get exactly what you nee
         connector.TargetDecorator.Shape = DecoratorShape.None;
         connector.SourceDecorator.Shape = DecoratorShape.None;
         connector.Style = new ShapeStyle() { StrokeColor = "#3A4857", Fill = "#3A4857" };
-    }
-    private CommonElement SetTemplate(IDiagramObject node)
-    {
-        return null;
     }
 }
 ```
