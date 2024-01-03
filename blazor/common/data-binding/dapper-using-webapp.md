@@ -72,7 +72,7 @@ Before creating a data access layer, you need to include the following code snip
 
 If you have created a Blazor Web App with the `Interactive render mode` set to `WebAssembly` or `Auto` ensure to follow these steps:
 
-1. Create a new project named `BlazorWebApp.Shared` for the database accessing purpose.
+1. Create a new project with Class Library template named `BlazorWebApp.Shared` for the database accessing purpose.
 
 To use Dapper and access database in the application, you need to install the following `NuGet` packages in server side & Shared projects .
 
@@ -184,14 +184,14 @@ namespace BlazorWebApp.Controller
         }
 
         [HttpPut]
-        public async Task<ActionResult<Bug>> Put ( Bug updatedBook )
+        public async Task<ActionResult<Bug>> Put ( Bug value )
         {
             using (IDbConnection db = new SqlConnection(Configuration.GetConnectionString(BUGTRACKER_DATABASE)))
             {
                 db.Open();
-                await db.ExecuteAsync("update bugs set Summary=@Summary, BugPriority=@BugPriority, Assignee=@Assignee, BugStatus=@BugStatus where id=@Id", updatedBook);
+                await db.ExecuteAsync("update bugs set Summary=@Summary, BugPriority=@BugPriority, Assignee=@Assignee, BugStatus=@BugStatus where id=@Id", value);
             }
-            return Ok(updatedBook);
+            return Ok(value);
         }
 
         [HttpDelete("{id}")]

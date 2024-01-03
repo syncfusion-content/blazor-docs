@@ -69,7 +69,7 @@ Now, select Target Framework as (.NET 6.0 or .NET 7.0) in the project template a
 
 Now, scaffold DbContext and model classes from the existing Library database. To perform scaffolding and work with the SQL Server database in our application, you need to install the following NuGet packages.If you have created a Blazor Web App with the `Interactive render mode` set to `WebAssembly` or `Auto` ensure to follow these steps:
 
-1. Create the new project named as `BlazorWebApp.Shared` for DbContext and model class as shown below.
+1. Create the new project with Class Library template named as `BlazorWebApp.Shared` for DbContext and model class as shown below.
 ![Create Shared Project](../images/db-shared-project.png)
 
 Additionally, ensure that you have added a reference to the `BlazorWebApp.Shared` project in both the server-side and client-side projects of your web application.
