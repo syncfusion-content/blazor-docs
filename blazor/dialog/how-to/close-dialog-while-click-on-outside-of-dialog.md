@@ -13,6 +13,8 @@ By default, dialog can be closed by pressing `Esc` key and clicking the close ic
 
 In the following code, dialog is closed when clicking outside the dialog area using `Visible` property.
 
+N> The `OnOverlayModalClick` event will only be triggered if the `IsModal` property is set to `true`.
+
 ```cshtml
 
 @using Syncfusion.Blazor.Popups
