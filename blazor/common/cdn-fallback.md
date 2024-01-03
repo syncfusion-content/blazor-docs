@@ -28,7 +28,7 @@ You can check the Syncfusion Blazor object for script fallback whether scripts a
     <script>
     if (!window.sfBlazor) { // the Syncfusion Blazor object is not present
         var fallbackScript = document.createElement("script");
-        fallbackScript.setAttribute("src", "_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js"); // path to static assets from the Syncfusion package
+        fallbackScript.setAttribute("src", "_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js"); // path to static assets from the individual NuGet packages
         document.getElementsByTagName("body")[0].appendChild(fallbackScript);
     }
     </script>
@@ -133,7 +133,7 @@ You can refer the theme style sheet inside the `<head>` of **wwwroot/index.html*
             var fallbackStyle = document.createElement("link");
             fallbackStyle.setAttribute("rel", "stylesheet");
             fallbackStyle.setAttribute("type", "text/css");
-            fallbackStyle.setAttribute("href", "_content/Syncfusion.Blazor/styles/bootstrap5.css"); // URL to the static asset from the Syncfusion package
+            fallbackStyle.setAttribute("href", "_content/Syncfusion.Blazor.Themes/bootstrap5.css"); // URL to the static asset from the individual NuGet packages
             document.getElementsByTagName("head")[0].appendChild(fallbackStyle);
             }
             document.body.removeChild(testElem);
