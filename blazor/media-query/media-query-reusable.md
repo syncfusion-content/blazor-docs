@@ -9,23 +9,58 @@ documentation: ug
 
 # Global level reuse of Blazor Media Query component
 
-You can reuse the `Media Query` component across various sections of your applications which maintain a consistent and adaptive design.
+You can globally reuse the `Media Query` component across various sections of your applications which maintain a consistent and adaptive design.
 
-The Syncfusion Media Query component can be reused by creating a new Blazor component:
+The Syncfusion Media Query component can be globally reused by defining it in `MainLayout.razor` razor:
 
-1. Right-click on the **~/Pages** folder in the Visual Studio and select **Add -> Razor Component** to create a new Razor component (ReusableMediaQuery.razor).
+1. Click on the **~/Shared** folder in Visual Studio and select **MainLayout.razor** to define the `Media Query` component globally.
 
-2. Add the Syncfusion Blazor Media Query component in the **~/Pages/ReusableMediaQuery.razor** file.
+2. Wrap the contents of `MainLayout.razor` into a `CascadingValue` component and include the Syncfusion Blazor Media Query component. Create a public variable named `activeBreakPoint` by using the parameters.
 
 {% tabs %}
 {% highlight razor %}
 
-<SfMediaQuery @bind-ActiveBreakPoint="activeBreakpoint"></SfMediaQuery>
-@if (activeBreakpoint == "Small")
+@inherits LayoutComponentBase
+
+<PageTitle>MediaQuery</PageTitle>
+<CascadingValue Value="@this"> 
+    <div class="page">
+        <SfMediaQuery @bind-ActiveBreakPoint="activeBreakPoint"></SfMediaQuery>
+        <div class="sidebar">
+            <NavMenu />
+        </div>
+        <main>
+            <div class="top-row px-4">
+                <a href="https://docs.microsoft.com/aspnet/" target="_blank">About</a>
+            </div>
+            <article class="content px-4">
+                @Body
+            </article>
+        </main>
+    </div>
+</CascadingValue>
+
+@code {
+    [Parameter]
+    public string activeBreakPoint { get; set; }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+3. Render the `MainLayout` component in the view page, such as **~/Pages/Home.razor or Index.razor**, and run the application.
+
+{% tabs %}
+{% highlight razor %}
+
+@using Syncfusion.Blazor
+@layout MainLayout
+
+@if (mainLayoutObj.activeBreakPoint == "Small")
 {
     deviceSize = "small-device";
 }
-else if (activeBreakpoint == "Medium")
+else if (mainLayoutObj.activeBreakPoint == "Medium")
 {
     deviceSize = "medium-device";
 }
@@ -52,8 +87,10 @@ else
 </div>
 
 @code {
-    public string deviceSize { get; set; }    
-    public string activeBreakpoint { get; set; }
+    [CascadingParameter]
+    public MainLayout mainLayoutObj { get; set; }
+
+    public string deviceSize { get; set; }
 }
 <style>
     .mediaquery-demo {
@@ -174,26 +211,6 @@ else
         height: 10%;
     }
 </style>
-
-{% endhighlight %}
-{% endtabs %}
-
-3. Render your new component in the view page **~/Pages/Home.razor or Index.razor** and run the application.
-
-{% tabs %}
-{% highlight razor %}
-
-<ReusableMediaQuery></ReusableMediaQuery>
-
-@code {
-    protected override void OnInitialized()
-    {
-        SfMediaQuery.Small.MediaQuery = "(max-width: 500px)";
-        SfMediaQuery.Medium.MediaQuery = "(min-width: 500px)";
-        SfMediaQuery.Large.MediaQuery = "(min-width: 1600px)";
-        base.OnInitialized();
-    }    
-}
 
 {% endhighlight %}
 {% endtabs %}
