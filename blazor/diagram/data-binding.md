@@ -792,7 +792,7 @@ GraphQL is a query language for APIs with which you can get exactly what you nee
 
 ![Binding with GraphQL service](images/GraphQLAdaptor.png) 
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/DataBinding/RemoteData)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/DataBinding/GraphQLAdaptor)
 
 
 ## See Also
