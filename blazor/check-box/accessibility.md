@@ -46,6 +46,5 @@ When the Checkbox has focus, pressing the Space key changes the state of the Che
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rZhqMBLchpQGyyAF?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Accessibility in Blazor CheckBox](./images/blazor-checkbox-accessibility.png)

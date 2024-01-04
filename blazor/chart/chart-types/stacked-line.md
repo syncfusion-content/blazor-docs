@@ -80,7 +80,6 @@ documentation: ug
 }
 
 ``` 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hNVKsVhdBSeqWaEP?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Stacked Line Chart](../images/chart-types-images/blazor-stacked-line-chart.png)
 
@@ -162,7 +161,6 @@ The following properties can be used to customize the [Stacked Line](https://hel
 }
 
 ``` 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BDBKWVLRBIeyYwAD?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Stacked Line Chart with Custom Series](../images/chart-types-images/blazor-stacked-line-chart-custom-series.png)
 

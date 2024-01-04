@@ -53,7 +53,6 @@ When rendering the Carousel component using items binding, you can assign templa
     }
 </style>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rDVAChhhVnHFuwlZ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Selection
 
@@ -110,7 +109,6 @@ Using the [SelectedIndex](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
     }
 </style>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rZLgiVVLhncMgRcW?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Carousel selected slide](images/selected_index.png)
 
@@ -182,7 +180,6 @@ Using the [PreviousAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
     }
 </style>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BZBKsrLhrHGAvIMH?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Partial visible slides
 
@@ -237,7 +234,6 @@ The Carousel component supports to show one complete slide and a partial view of
 
 </style>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hZhqMVVLVdwQwMNf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Carousel partial visible slide](images/partial-visible.jpg)
 
@@ -298,7 +294,6 @@ The following example code depicts the functionality of `partialVisible` and wit
 
 </style>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rjLqMrrLhHlMnUgO?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Carousel partial visible slide](images/without-loop.jpg)
 

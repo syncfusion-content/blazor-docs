@@ -73,7 +73,6 @@ documentation: ug
 }
 
 ``` 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hXBqMhLHByHWOhZr?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Stacked Line100 Chart](../images/chart-types-images/blazor-stacked-line-100-chart.png)
 
@@ -148,7 +147,6 @@ The following properties can be used to customize the [100% Stacked Line](https:
 }
 
 ``` 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BDhUsBrnVIxJdFqq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Stacked Line100 Chart with Custom Series](../images/chart-types-images/blazor-stacked-line-100-chart-custom-series.png)
 

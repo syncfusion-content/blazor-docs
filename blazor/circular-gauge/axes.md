@@ -27,7 +27,6 @@ You can customize the [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.B
     </CircularGaugeAxes>
 </SfCircularGauge>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BjhACVBmKWKyenGt?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Customizing Blazor Circular Gauge Axis](./images/blazor-circulargauge-axis-customization.png)
 
@@ -45,7 +44,6 @@ The [Minimum](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGa
     </CircularGaugeAxes>
 </SfCircularGauge>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hXVqWLVwgsAcbrhk?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Circular Gauge Axis with Custom Value](./images/blazor-circulargauge-custom-value.png)
 
@@ -63,7 +61,6 @@ You can sweep the Circular Gauge axis from 0 to 360 degrees. By default, the sta
     </CircularGaugeAxes>
 </SfCircularGauge>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LXrUWhLGKMTZNUsx?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Circular Gauge with Custom Angle](./images/blazor-circulargauge-custom-angle.png)
 
@@ -85,7 +82,6 @@ You can set the radius of the Circular Gauge in pixel as shown below.
     </CircularGaugeAxes>
 </SfCircularGauge>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rZBqMBLwUiJBVDaN?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Circular Gauge with Custom Radius](./images/blazor-circulargauge-custom-radius.png)
 
@@ -102,7 +98,6 @@ By setting value in percentage, Circular Gauge gets its dimension with respect t
     </CircularGaugeAxes>
 </SfCircularGauge>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BZrqWVhGAWzzitMZ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Changing Blazor Circular Gauge Radius in Percentage](./images/blazor-circulargauge-percentage-radius.png)
 
@@ -126,7 +121,6 @@ By default, [Interval](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.C
     </CircularGaugeAxes>
 </SfCircularGauge>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rZhgWhVmKsJHpAUv?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Customizing Major and Minor Ticks in Blazor Circular Gauge](./images/blazor-circulargauge-ticks-customization.png)
 
@@ -158,7 +152,6 @@ The minor ticks and major ticks can be positioned using the [Offset](https://hel
     </CircularGaugeAxes>
 </SfCircularGauge>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rNBgWVLQgCyNoNBa?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Circular Gauge with Custom Tick Position](./images/blazor-circulargauge-tick-position.png)
 
@@ -180,7 +173,6 @@ The labels of an axis can be customized using the [CircularGaugeAxisLabelFont](h
     </CircularGaugeAxes>
 </SfCircularGauge>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LDrgMVVGqsSBmTLZ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Customizing Blazor Circular Gauge Label](./images/blazor-circulargauge-label.png)
 
@@ -205,7 +197,6 @@ The labels can be moved using the [Offset](https://help.syncfusion.com/cr/blazor
     </CircularGaugeAxes>
 </SfCircularGauge>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rNhAWBrwAWyyrioJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Changing Label Position of Blazor Circular Gauge](./images/blazor-circulargauge-label-position.png)
 
@@ -224,7 +215,6 @@ The labels can be swept along the axis angle by enabling the [AutoAngle](https:/
     </CircularGaugeAxes>
 </SfCircularGauge>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LXLKsLhcgsewVlDw?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Circular Gauge Label in AutoAngle](./images/blazor-circulargauge-auto-angle.png)
 
@@ -256,7 +246,6 @@ When an axis makes a complete circle, then the first and last labels of the axis
     </CircularGaugeAxes>
 </SfCircularGauge>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rXLqMLVcqWSOwmqY?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Circular Gauge with Smart Labels](./images/blazor-circulargauge-smart-label.png)
 
@@ -275,7 +264,6 @@ The axis labels can be formatted using the [Format](https://help.syncfusion.com/
     </CircularGaugeAxes>
 </SfCircularGauge>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BZLgsrBGKCdWFyxB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Changing Label Format in Blazor Circular Gauge](./images/blazor-circulargauge-label-format.png)
 
@@ -354,7 +342,6 @@ Axis labels support custom label format using placeholder like {value}°C, in 
     </CircularGaugeAxes>
 </SfCircularGauge>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LZrgirrcgsdzgNwu?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Circular Gauge with Label in Degree Format](./images/blazor-circulargauge-label-in-degree-format.png)
 
@@ -374,7 +361,6 @@ If the maximum value does not enter the interval of major ticks, the last label 
     </CircularGaugeAxes>
 </SfCircularGauge>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BtLqsLVmKCRxmzgP?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Displaying Last Label of Blazor Circular Gauge](./images/blazor-circulargauge-last-label.png)
 
@@ -392,7 +378,6 @@ When the axis labels overlap with each other, you can hide the intersected label
     </CircularGaugeAxes>
 </SfCircularGauge>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LNhAMhrmUWnkrsge?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Hiding Intersecting Axis Labels in Blazor Circular Gauge](./images/blazor-circulargauge-hide-intersecting-label.PNG)
 
@@ -413,7 +398,6 @@ You can change the axis direction of the circular gauge using [Direction](https:
     </CircularGaugeAxes>
 </SfCircularGauge>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hNhqMVrmUWGVddDA?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Changing Axis Direction of Blazor Circular Gauge](./images/blazor-circulargauge-axis-direction.png)
 
@@ -452,6 +436,5 @@ In addition to the default axis, you can add n number of axis to a gauge. Each a
     </CircularGaugeAxes>
 </SfCircularGauge>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LNVgWhhcqiQyCvQy?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Circular Gauge with Multiple Axes](./images/blazor-circulargauge-multiple-axes.png)

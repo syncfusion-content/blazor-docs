@@ -76,7 +76,6 @@ By default, the Palette will be rendered with default colors. To load custom col
 </style>
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BDrKsLhcASTCtgHM?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor ColorPicker with Custom Palette](./../images/blazor-colorpicker-with-custom-palette.png)
 
@@ -92,7 +91,6 @@ In the following sample, the Color Picker is rendered without input area.
 <h4>Choose a color</h4>
 <SfColorPicker ModeSwitcher="false" CssClass="e-hide-value"></SfColorPicker>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LXhKMLLwqoJqULKi?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Hide Input Area in Blazor ColorPicker](./../images/blazor-colorpicker-hide-input.png)
 
@@ -126,6 +124,5 @@ The following sample shows the customized Color Picker handle.
 </style>
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hjhKWrLGKyTIhQGO?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Customizing Blazor ColorPicker Handle Shape](./../images/blazor-colorpicker-handle-customization.png)

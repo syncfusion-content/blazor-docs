@@ -31,7 +31,6 @@ The [Blazor Breadcrumb](https://www.syncfusion.com/blazor-components/blazor-brea
     </BreadcrumbItems>
 </SfBreadcrumb>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rjBqCLsJJBaogECl?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Breadcrumb Component](./images/blazor-Breadcrumb-tag.png)
 
@@ -44,7 +43,6 @@ The Breadcrumb items can be generated based on the current URL of the page when 
 
 <SfBreadcrumb></SfBreadcrumb>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rNhUWVWJzVObSwiI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Breadcrumb Component](./images/blazor-Breadcrumb-current-url.png)
 
@@ -60,6 +58,5 @@ You can generate the Breadcrumb items by providing the [Url](https://help.syncfu
 <SfBreadcrumb Url="https://blazor.syncfusion.com/demos/breadcrumb/navigation">
 </SfBreadcrumb>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LtLAMBWpzqZWfPfm?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Breadcrumb Component](./images/blazor-Breadcrumb-static-url.png)

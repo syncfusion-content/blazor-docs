@@ -40,7 +40,6 @@ Data binding can be achieved by using the `bind-Value` attribute and it supports
     };
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/htVgshVcqRXvAAyY?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Index value binding
 
@@ -73,4 +72,3 @@ Index value binding can be achieved by using `bind-Index` attribute and it suppo
     };
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LZhqshBGgdWoItJf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}

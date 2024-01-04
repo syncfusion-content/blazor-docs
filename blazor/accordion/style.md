@@ -130,7 +130,5 @@ You can customize each accordion item header by setting [AccordionItem.CssClass]
 </style>
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rZBqWBsAATytYBFq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
 
 ![Accordion Item Header Appearance Customization](./images/accordino-item-header-appearance.png)

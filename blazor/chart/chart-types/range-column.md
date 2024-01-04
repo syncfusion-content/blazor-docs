@@ -60,7 +60,6 @@ documentation: ug
 }
 
 ``` 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BDLgCLrnzdoaeqgs?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Range Column Chart](../images/chart-types-images/blazor-range-column-chart.png)
 
@@ -126,7 +125,6 @@ The following properties can be used to customize the [Range Column](https://hel
 }
 
 ``` 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BjLUWrrnTnRLsksm?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Range Column Chart with Custom Series](../images/chart-types-images/blazor-range-column-chart-custom-series.png)
 
