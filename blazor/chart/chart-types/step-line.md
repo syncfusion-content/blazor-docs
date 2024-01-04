@@ -50,6 +50,7 @@ documentation: ug
 }
 
 ``` 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDBAWrrnrIfBwgOR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Step Line Chart](../images/chart-types-images/blazor-step-line-chart.png)
 

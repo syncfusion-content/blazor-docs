@@ -145,6 +145,8 @@ Add the Syncfusion Blazor AutoComplete component in the **~/Pages/Index.razor** 
 
 ![Blazor AutoComplete Component](./images/blazor-autocomplete-component.png)
 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rXhUsVWzhqjBxRzZ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 ## Binding data source
 
 After initialization, populate the AutoComplete with data using the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_DataSource) property.
@@ -191,6 +193,7 @@ After initialization, populate the AutoComplete with data using the [DataSource]
 {% endtabs %}
 
 ![Blazor AutoComplete with Data Binding](./images/blazor-autocomplete-data-binding.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXBqCLspBKtRZgFL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Custom values
 
@@ -206,6 +209,7 @@ The AutoComplete allows the users to give input as custom value, which is not re
 {% endhighlight %}
 {% endtabs %}
 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hXVgiLsphqCZLIMx?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 ## Configure the suggestion list
 
 By default, suggestion list width automatically adjusts according to the AutoComplete input element's width, and the height of the suggestion list has `300px`. The height and width of the popup list can also be customized using the [PopupHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_PopupHeight) and [PopupWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_PopupWidth) properties respectively.
@@ -221,6 +225,8 @@ By default, suggestion list width automatically adjusts according to the AutoCom
 {% endtabs %}
 
 ![Customizing Popup Height and Width in Blazor AutoComplete](./images/blazor-autocomplete-popup-customization.png)
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BDVqiLWpVUCTTfIR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## See also
 

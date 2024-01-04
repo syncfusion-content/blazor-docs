@@ -146,6 +146,8 @@ Add the Syncfusion Blazor Accumulation Chart component in the **~/Pages/Index.ra
 
 Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion Blazor Accumulation Chart component in your default web browser.
 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VjBUCLWAKbiiNhwe?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 ![Blazor Pie Chart](images/getting-started/blazor-pie-chart.png)
 
 ## Add title
@@ -186,6 +188,8 @@ Using the [Title](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts
 
 ![Adding Title in Blazor Accumulation Chart](images/getting-started/blazor-accumulation-chart-with-title.png)
 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VDrUWLWUAyOkHSnV?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 ## Add data label
 
 The data labels are added to improve the readability of the accumulation chart. This can be achieved by setting the [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationDataLabelSettings.html#Syncfusion_Blazor_Charts_AccumulationDataLabelSettings_Visible) property to `true` in the [AccumulationDataLabelSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationDataLabelSettings.html).
@@ -206,6 +210,9 @@ The data labels are added to improve the readability of the accumulation chart. 
 
 ![Adding Data Label in Blazor Accumulation Chart](images/getting-started/blazor-accumulation-chart-data-label.png)
 
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/htBgMBWKKbyIPsKU?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 ## Enable Tooltip
 
 When space constraints prevent from displaying the information using data labels, the tooltip comes in handy. The tooltip can be enabled by setting the [Enable](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartTooltipSettings.html#Syncfusion_Blazor_Charts_AccumulationChartTooltipSettings_Enable) property in [AccumulationChartTooltipSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartTooltipSettings.html) to `true`.
@@ -225,6 +232,8 @@ When space constraints prevent from displaying the information using data labels
 {% endtabs %}
 
 ![Blazor Accumulation Chart displays Tooltip](images/getting-started/blazor-accumulation-chart-tooltip.png)
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rjVAiVigKlHLnyut?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Enable Legend
 
@@ -247,6 +256,8 @@ Legend is used for the accumulation chart by setting the [Visible](https://help.
 {% endtabs %}
 
 ![Blazor Accumulation Chart with Legend](images/getting-started/blazor-accumulation-chart-legend.png)
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXBKihWAUlRbpLYq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/Accumulation%20Chart).
 

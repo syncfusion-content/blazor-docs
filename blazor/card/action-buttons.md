@@ -23,6 +23,7 @@ For adding action buttons, you can create a  `CardFooterContent` component withi
     </CardFooter>
 </SfCard>
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDBgMrBLhHADhaVd?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Vertical
 
@@ -43,3 +44,4 @@ By default, action buttons are aligned horizontally. They can also be aligned ve
     </CardFooter>
 </SfCard>
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LZVUWVrhVdfXSDrA?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}

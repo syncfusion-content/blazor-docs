@@ -51,6 +51,7 @@ The following examples shows data filtering is done with the `StartsWith` type
 }
 ```
 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hjBKMhipBzHIgAvv?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 
 ![Filtering in Blazor AutoComplete](./images/blazor-autocomplete-filter.png)
@@ -88,6 +89,7 @@ Refer to the following example to restrict the suggestion list item counts as 3.
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNrgMVWTLTmOENnq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 
 
@@ -126,7 +128,7 @@ In the following example, the remote request doesn't fetch the search data until
     }
 }
 ```
-
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BDBUsBsJhzbSDGTo?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 
 ![Filtering Blazor AutoComplete Items based on Character Count](./images/blazor-autocomplete-filter-based-length.png)
@@ -167,6 +169,7 @@ The following sample depicts how to filter the data with case-sensitive.
     };
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BDVACVWJhzFwRqep?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Custom filtering
 
@@ -211,6 +214,7 @@ The AutoComplete component filter queries can be customized. You can also use yo
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rXhKsLiprJawVKuX?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Highlighting Search character
 
@@ -223,6 +227,8 @@ You can highlight the search text in the suggested list items of the autocomplet
 {% include_relative code-snippet/filtering/highlight-property.razor %}
 
 {% endhighlight %} 
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZLAMLszLyjsCNWA?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor AutoComplete with highlight property](./images/filtering/blazor_autocomplete_highlight-property.png)
 
@@ -242,3 +248,5 @@ You can highlight the search text in the suggested list items of the autocomplet
 {% endhighlight %} 
 
 ![Blazor AutoComplete with HighLightSearch method](./images/filtering/blazor_dropdown_highLightSearch-method.png)
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rthUsLsphSZYvuHw?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
