@@ -59,7 +59,6 @@ By default, the tooltip is not visible. You can enable the tooltip by setting th
     </CircularGaugeAxes>
 </SfCircularGauge>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hDLqsLVwAKXazbSU?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Circular Gauge displays ToolTip](./images/blazor-circulargauge-tooltip.png)
 
@@ -83,7 +82,6 @@ By default tooltip will be shown on the axis, you can show the tooltip at the cu
     </CircularGaugeAxes>
 </SfCircularGauge>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rXVqMhVcKqCWBJms?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Displaying Blazor Circular Gauge ToolTip at Cursor Position](./images/blazor-circulargauge-tooltip-at-cursor-position.png)
 
@@ -171,7 +169,6 @@ The following code example shows the tooltip for the pointers, ranges, and annot
 public string[] TooltipType = new string[] { "Range", "Annotation", "Pointer"};
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hDVAiBrwUAiKegWH?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Circular Gauge displays ToolTip for Annotation](./images/blazor-circulargauge-tooltip-annotation.gif)
 
@@ -193,7 +190,6 @@ The pointers can be dragged over the axis values by clicking and dragging the po
     </CircularGaugeAxes>
 </SfCircularGauge>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rDBAirVGgqWoeGGU?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Circular Gauge with Dragging Pointer](./images/blazor-circulargauge-dragging-pointer.gif)
 
@@ -219,6 +215,5 @@ The ranges can be dragged over the axis values by clicking and dragging the rang
     </CircularGaugeAxes>
 </SfCircularGauge>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rNVUihrmgKWmfaRi?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Circular Gauge with Dragging Range](./images/blazor-circulargauge-dragging-range.gif)

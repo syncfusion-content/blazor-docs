@@ -37,7 +37,6 @@ The Blazor Button has the following predefined styles that can be defined using 
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VNVgChrhiGfocEOi?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Button Component with different Styles](./images/blazor-button-with-different-style.png)
 
@@ -79,7 +78,7 @@ A Round Button is circular in shape. Usually, it contains an icon representing i
 </style>
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LXrUsBLBsQJYnPIv?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 
 ![Blazor Button with different Types](./images/blazor-button-types.png)
 
@@ -93,7 +92,7 @@ The primary button is styled with background color and it is used to represent a
 <SfButton IsPrimary="true">Primary</SfButton>
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rjhgCVrLWmyJUodV?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 
 ![Blazor Primary Button](./images/blazor-primary-button.png)
 
@@ -140,7 +139,7 @@ A toggle Button allows you to change between the two states. The Button is activ
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rZBAiVVrMGexGnCy?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 
 ![Blazor Toggle Button](./images/blazor-toggle-button.png)
 
@@ -167,7 +166,6 @@ The Button can have an icon to provide the visual representation of the action. 
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BDBUCVrVscdsTwUD?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 
 ![Blazor Button with Icon](./images/blazor-button-icon.png)
@@ -184,7 +182,6 @@ The two types of Button sizes are default and small. To change the size of the d
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rXLAWLVrWcxyVIJP?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 
 ![Blazor Button with different Size](./images/blazor-button-with-different-size.png)

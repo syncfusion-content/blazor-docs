@@ -175,8 +175,6 @@ On window resizing, the Circular Gauge component is not notified, so the Circula
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hDLAirBcqpadhlqd?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
 ![Blazor Circular Gauge inside Dashboard Layout component](../images/blazor-circulargauge-with-dashboard-layout.png)
 
 ## Circular Gauge component inside Tab
@@ -316,8 +314,6 @@ When the Circular Gauge component renders within the Tab component, its renderin
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hjVKMLhwUeZXVtLD?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
 ![Blazor Circular Gauge inside Tab component](../images/blazor-circulargauge-with-tab.png)
 
 
@@ -407,9 +403,6 @@ When you drag and resize the Dialog component, the Circular Gauge component is n
 }
 
 ```
-
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hZrUCrrwKojeelUv?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
 ![Blazor Circular Gauge inside Dialog component](../images/blazor-circulargauge-with-dialog.png)
 
 
@@ -588,6 +581,4 @@ When you expand the Accordion component, the Circular Gauge component is not not
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rNVAsVBGASDkmDes?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
 ![Blazor Circular Gauge inside Accordion component](../images/blazor-circulargauge-with-accordion.png)

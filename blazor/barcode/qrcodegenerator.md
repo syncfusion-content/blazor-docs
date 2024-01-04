@@ -19,7 +19,6 @@ The [Blazor QR Code](https://www.syncfusion.com/blazor-components/blazor-barcode
 <SfQRCodeGenerator Width="200px" Height="150px" Value="Syncfusion"></SfQRCodeGenerator>
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/htBqsLMJfZxnCqnf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![QR Code in Blazor Barcode Component](images/blazor-barcode-with-qrcode.png)
 
@@ -33,7 +32,6 @@ A page or printed media containing a barcode often appears colorful in the backg
 <SfQRCodeGenerator Width="200px" Height="150px" ForeColor="red" Value="Syncfusion"></SfQRCodeGenerator>
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hZBUiVMzfXduXXET?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Customizing QR Code Color in Blazor Barcode](images/blazor-barcode-qrcode-color-customization.png)
 
@@ -47,7 +45,6 @@ The dimension of the barcode can be changed using the [Height](https://help.sync
 <SfQRCodeGenerator Width="200px" Height="150px"  Value="Syncfusion"></SfQRCodeGenerator>
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rtrqsBCJpjmCuhGI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Customizing the text
 
@@ -61,7 +58,6 @@ In barcode generators, you can customize the barcode text by using the display [
 </SfQRCodeGenerator>
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LtrKMVCTTXGflLco?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Customizing the Text for QR Code in Blazor Barcode](images/blazor-barcode-qrcode-text-customization.png)
 
@@ -83,7 +79,6 @@ Error Correction Level Table
     <QRCodeGeneratorDisplayText Visibility="false"></QRCodeGeneratorDisplayText>
 </SfQRCodeGenerator>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LNBKCVCzzDcveinV?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Event
 

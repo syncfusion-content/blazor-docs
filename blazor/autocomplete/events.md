@@ -43,7 +43,6 @@ This section explains the list of events of the AutoComplete component which wil
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BDLUWBifAHaoYZgv?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## ValueChange
 
@@ -79,7 +78,6 @@ This section explains the list of events of the AutoComplete component which wil
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VDhUMrszKHuvYJof?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Closed
 
@@ -113,7 +111,6 @@ This section explains the list of events of the AutoComplete component which wil
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VthKWVipUQZCbocB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Created
 
@@ -147,7 +144,6 @@ This section explains the list of events of the AutoComplete component which wil
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VDrgCVWzgwZSNwtx?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Destroyed
 
@@ -181,7 +177,6 @@ This section explains the list of events of the AutoComplete component which wil
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VZrKWrCJAwMMVCHn?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Focus
 
@@ -215,7 +210,6 @@ This section explains the list of events of the AutoComplete component which wil
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VDLUsVMTUQsUbNIt?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## OnOpen
 
@@ -249,7 +243,6 @@ This section explains the list of events of the AutoComplete component which wil
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LtrUWVWJUcsHKlSD?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## OnClose
 
@@ -284,7 +277,6 @@ This section explains the list of events of the AutoComplete component which wil
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hNLAiriTAGsaheaU?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## DataBound
 
@@ -318,7 +310,6 @@ This section explains the list of events of the AutoComplete component which wil
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hDVUihMTqmLVLGDY?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Filtering
 
@@ -355,7 +346,6 @@ This section explains the list of events of the AutoComplete component which wil
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rZBAMhMJqwrTexBF?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## OnActionBegin
 
@@ -394,7 +384,6 @@ This section explains the list of events of the AutoComplete component which wil
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VtrKiBsTKmrEVfKV?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## OnActionFailure
 
@@ -433,7 +422,6 @@ This section explains the list of events of the AutoComplete component which wil
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LjLAiVszKGArhgsH?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## OnValueSelect
 
@@ -467,7 +455,6 @@ This section explains the list of events of the AutoComplete component which wil
     }
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VNhqsrMJAGqIsOVh?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Opened
 
@@ -502,6 +489,5 @@ This section explains the list of events of the AutoComplete component which wil
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LtVqsBCTAcAbJVPK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 N> AutoComplete is limited with these events and new events will be added in the future based on the user requests. If the event you are looking for is not on the list, then request [here](https://www.syncfusion.com/feedback/blazor-components).

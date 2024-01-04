@@ -25,7 +25,6 @@ Pointers are used to indicate values on an axis. The value of a pointer can be m
     </CircularGaugeAxes>
 </SfCircularGauge>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BtrqshBwUVzsUfys?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Circular Gauge with Pointer](./images/blazor-circulargauge-with-pointer.png)
 
@@ -49,7 +48,6 @@ The circular gauge's default pointer type will be needle. A needle point contain
     </CircularGaugeAxes>
 </SfCircularGauge>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hXLgCVhcghfqMkfw?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Circular Gauge with Needle Pointer](./images/blazor-circulargauge-needle-pointer.png)
 
@@ -98,7 +96,6 @@ The needle, tail and cap of the pointer can be customized with the following pro
     </CircularGaugeAxes>
 </SfCircularGauge>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LjBAMVBcgVpSKNFt?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Circular Gauge with Custom Pointer](./images/blazor-circulargauge-pointer-customization.png)
 
@@ -152,7 +149,6 @@ The appearance of the needle pointer can be customized by using [NeedleStartWidt
     }
 </style>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rDBKMrrwqBTQnLVR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Range bar pointer
 
@@ -173,7 +169,6 @@ The range bar pointer is like a range in an axis that can be placed on gauge to 
     </CircularGaugeAxes>
 </SfCircularGauge>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LXVgWLLQqLfubBRJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Circular Gauge with Range Bar Pointer](./images/blazor-circulargauge-range-bar-pointer.png)
 
@@ -208,7 +203,6 @@ You can customize the range bar using the following properties.
     </CircularGaugeAxes>
 </SfCircularGauge>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VXhUMhrwKBosYIXk?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Customizing Blazor Circular Gauge Range Bar](./images/blazor-circulargauge-range-customization.png)
 
@@ -232,7 +226,6 @@ The start and end pointers of a range bar in the Circular Gauge are rounded to f
     </CircularGaugeAxes>
 </SfCircularGauge>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BDhgsrVGUhIpRJzK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Circular Gauge Range Bar with Rounded Corner](./images/blazor-circulargauge-range-with-round-corner.png)
 
@@ -264,7 +257,6 @@ The different types of marker shapes can be used to mark the pointer value in an
     </CircularGaugeAxes>
 </SfCircularGauge>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BtBAshVGghyGCzzX?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Circular Gauge with Marker Pointer](./images/blazor-circulargauge-marker-pointer.png)
 
@@ -299,7 +291,6 @@ You can customize the marker pointer using the following properties.
     </CircularGaugeAxes>
 </SfCircularGauge>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BDhgCVhQUhRjXeXh?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Circular Gauge with Custom Marker Pointer](./images/blazor-circulargauge-custom-marker-pointer.png)
 
@@ -327,7 +318,6 @@ You can use image instead of rendering marker shape to denote the pointer value.
     </CircularGaugeAxes>
 </SfCircularGauge>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BXhUMLhmgVRVZgdx?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Circular Gauge with Image Pointer](./images/blazor-circulargauge-pointer-with-image.png)
 
@@ -351,7 +341,6 @@ The pointers can be dragged over the axis values by clicking and dragging the sa
     </CircularGaugeAxes>
 </SfCircularGauge>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hthgCLBcqhdAvjZX?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Circular Gauge with Dragging Pointer](./images/blazor-circulargauge-dragging-pointer.gif)
 
@@ -393,7 +382,6 @@ In addition to the default pointer, you can add n number of pointers to an axis 
     </CircularGaugeAxes>
 </SfCircularGauge>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rXrgMBrGKBnvQyWB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Circular Gauge with Multiple Pointers](./images/blazor-circulargauge-multiple-pointers.png)
 
@@ -417,7 +405,6 @@ The pointers are animated on loading the gauge using the [CircularGaugePointerAn
     </CircularGaugeAxes>
 </SfCircularGauge>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BDhUWhVmqBcsUFix?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Circular Gauge with Pointer Animation](./images/blazor-circulargauge-pointer-animation.gif)
 
@@ -492,7 +479,6 @@ The linear gradient can be applied to all pointer types like marker, range bar, 
     </CircularGaugeAxes>
 </SfCircularGauge>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BNLKMVVGKhQgPmGy?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ### Radial gradient
 
@@ -566,6 +552,5 @@ The radial gradient can be applied to all pointer types like marker, range bar, 
     </CircularGaugeAxes>
 </SfCircularGauge>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LjhAWhLmghQyveia?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 <!-- markdownlint-disable MD010 -->

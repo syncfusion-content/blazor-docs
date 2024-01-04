@@ -27,7 +27,6 @@ To place the font icon on the Breadcrumb item, set the [IconCss](https://help.sy
     </BreadcrumbItems>
 </SfBreadcrumb>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rDLgWLMTfUsCSUjG?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Breadcrumb Component](./images/blazor-Breadcrumb-items.png)
 
@@ -57,7 +56,6 @@ In the Breadcrumb component, you can add images to the items using [IconCss](htt
     }
 </style>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rjhgsLMppKsTBQHd?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Breadcrumb Component](./images/image.png)
 
@@ -85,7 +83,6 @@ In the Breadcrumb component, SVG image can be added for the items using the [Ico
     }
 </style>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BDrgsLCJfAixuNYA?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Breadcrumb Sample](./images/svg.PNG)
 
@@ -106,7 +103,6 @@ In the following example, Breadcrumb items are demonstrated with only icons by p
     </BreadcrumbItems>
 </SfBreadcrumb>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BNrgWrWTTqsOeruV?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Breadcrumb Sample](./images/icon-only.PNG)
 
@@ -126,6 +122,5 @@ To show icon only for the first item in the Breadcrumb component, add icons to t
     </BreadcrumbItems>
 </SfBreadcrumb>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LXLgChsTfKrhKYox?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Breadcrumb Component](./images/blazor-Breadcrumb-items.png)

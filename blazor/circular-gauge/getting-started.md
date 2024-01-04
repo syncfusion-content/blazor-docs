@@ -132,8 +132,6 @@ Add the Syncfusion Blazor CircularGauge component in the **~/Pages/Index.razor**
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion Blazor CircularGauge component in your default web browser.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rjVKCrhwUWXEAVdl?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
 ![Blazor CircularGauge Component](./images/blazor-circulargauge-component.png)
 
 ## Set pointer value
@@ -159,8 +157,6 @@ N> In CircularGauge, you can configure multiple axes. On each axis, you can add 
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hXLKsLhmgssiQWaH?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
 ![Blazor CircularGauge with Pointer Value](./images/blazor-circulargauge-pointer-value.png)
 
 ## Adding title for Blazor CircularGauge
@@ -185,8 +181,6 @@ Title can be added to the CircularGauge to provide a quick information to the us
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LXBAsBLGgMCpjUkn?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
 ![Blazor CircularGauge with Title](./images/blazor-circulargauge-title.png)
 
 ## Adding ranges in the Blazor CircularGauge
@@ -209,8 +203,6 @@ Range is used to specify a group of scale values in the gauge. You can set the r
 
 {% endhighlight %}
 {% endtabs %}
-
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rZrUirVGKWCHztBv?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor CircularGauge with Custom Range](./images/blazor-circulargauge-custom-range.png)
 
