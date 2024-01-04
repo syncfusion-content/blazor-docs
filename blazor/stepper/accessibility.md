@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Accessibility in Blazor Stepper Component | Syncfusion
-description: Checkout and learn about Accessibility with Blazor Stepper component and more details.
+description: Checkout and learn about Accessibility and Keyboard interaction with Blazor Stepper component and more details.
 platform: Blazor
 control: Stepper
 documentation: ug
