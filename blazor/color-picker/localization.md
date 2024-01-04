@@ -29,7 +29,7 @@ You can modify the default value in `.res` file added to Resource folder. Enter 
 <SfColorPicker></SfColorPicker>
 
 ```
-
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LZhKsVVwqSUTjofI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Localization in Blazor ColorPicker](./images/blazor-colorpicker-localization.png)
 
@@ -46,6 +46,6 @@ In the following example, Color Picker component is rendered in RTL mode with `a
 <SfColorPicker EnableRtl="true"></SfColorPicker>
 
 ```
-
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LZBUsrLmqSKnHwGP?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Right to Left in Blazor ColorPicker](./images/blazor-colorpicker-right-to-left.png)

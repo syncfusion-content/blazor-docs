@@ -63,6 +63,7 @@ The following demo depicts the example for `Fade` animation,
 
 </style>
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNrUMrhrhmDEXNND?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Carousel fade animation](images/fade_animation.gif)
 
@@ -155,6 +156,7 @@ The following demo depicts the example for `parallax` custom animation
 
 </style>
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VjhgWrBrLGWiDURZ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Carousel custom animation](images/custom_animation.gif)
 
@@ -202,6 +204,7 @@ Using the items property, you can set different intervals for each item to trans
     }
 </style>
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LZBAshBVVwCUQGvt?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} 
 
 N> Interval property can accept value in terms of milliseconds.
 
@@ -249,6 +252,7 @@ In the carousel, all slides transitions are performed continuously after the spe
     }
 </style>
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rZrAihLBhwCyYryK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Pause on hover
 
@@ -296,6 +300,7 @@ The following example depicts the code to play the slides when hovering the mous
     }
 </style>
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hXrKWLLhhGsvUQay?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Looping slides
 
@@ -341,6 +346,7 @@ In the carousel, slides transitions are repeated continuously when you reach the
     }
 </style>
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LXrgiVVhrwLArCWL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Carousel Looping Slides](images/looping_slides.png)
 
@@ -397,6 +403,7 @@ The following demo depicts the example for carousel events,
     }
 </style>
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rtLKCrLrrQLIIQtX?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Disable touch swiping
 
@@ -442,6 +449,7 @@ In the carousel, you can able to perform swipe the carousel slides using touch a
     }
 </style>
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VNBUMrhBVGVwHmZw?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Swipe modes
 
@@ -501,5 +509,6 @@ The following are the different swipe modes available in the carousel:
 
 </style>
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LZhgMVVVhQADiviB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Carousel Swipe Mode](images/swipe.gif)

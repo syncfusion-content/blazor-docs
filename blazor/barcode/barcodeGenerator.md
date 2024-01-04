@@ -19,6 +19,7 @@ The Code 39 character set includes the digits 0-9, the letters A-Z (upper case o
 <SfBarcodeGenerator Width="200px" Height="150px" Type="@BarcodeType.Code39" Value="SYNCFUSION"></SfBarcodeGenerator>
 
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BtLAWhWpKaDiwKIJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Code39 in Blazor Barcode](images/blazor-code39-barcode.png)
 
@@ -32,6 +33,7 @@ Code 39 Extended is an extended version of Code 39 that supports ASCII character
 <SfBarcodeGenerator Width="200px" Height="150px" Type="@BarcodeType.Code39Extension" Value="SYNCFUSION"></SfBarcodeGenerator>
 
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LXLAWBWTUEDJqMHY?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Code39 Extended in Blazor Barcode](images/blazor-code39-extended-barcode.png)
 
@@ -45,6 +47,7 @@ Code 11 is used primarily for labeling the telecommunication equipment’s. The 
 <SfBarcodeGenerator Width="200px" Height="150px" Type="@BarcodeType.Code11" Value="112"></SfBarcodeGenerator>
 
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VjhKMLWJKunSzaPB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Code11 in Blazor Barcode](images/blazor-code11-barcode.png)
 
@@ -62,6 +65,7 @@ The characters A, B, C and D are used as start and stop characters. Codabar is u
 <SfBarcodeGenerator Width="200px" Height="150px" Type="@BarcodeType.Codabar" Value="123456789"></SfBarcodeGenerator>
 
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNVUWrMfTZgKRrDa?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Codabar in Blazor Barcode](images/blazor-codebar-barcode.png)
 
@@ -81,6 +85,7 @@ The value to be encoded must be 8 digits Pharmacode (prefix it with ‘0’ if n
 <SfBarcodeGenerator Width="200px" Height="150px" Type="@BarcodeType.Code32" Value="01234567"></SfBarcodeGenerator>
 
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rNVgWBWJfDKHBhkK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Code32 in Blazor Barcode](images/blazor-code32-barcode.png)
 
@@ -94,6 +99,7 @@ Code 93 is designed to complement and improve Code 39. It can represent the enti
 <SfBarcodeGenerator Width="200px" Height="150px" Type="@BarcodeType.Code93" Value="01234567"></SfBarcodeGenerator>
 
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hjBgMhszJtgvyKlX?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Code 93 in Blazor Barcode](images/blazor-code93-barcode.png)
 
@@ -121,6 +127,7 @@ The last seven characters of Code Sets A and B (character values 96 - 102) and t
 <SfBarcodeGenerator Width="200px" Height="150px" Type="@BarcodeType.Code128" Value="SYNCFUSION"></SfBarcodeGenerator>
 
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BXhqMrsJfNTBcTKn?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Code 128 Special Characters in Blazor Barcode](images/blazor-code128-barcode.png)
 
@@ -134,6 +141,7 @@ A page or printed media with barcode often appears colorful in the background an
 <SfBarcodeGenerator Width="200px" Height="150px" Type="@BarcodeType.Code128" ForeColor="red" Value="SYNCFUSION"></SfBarcodeGenerator>
 
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VDLKCVMfpZpePoSk?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Customizing Blazor Barcode Color](images/blazor-barcode-color-customization.png)
 
@@ -147,6 +155,7 @@ The dimension of the barcode can be changed using the [Height](https://help.sync
 <SfBarcodeGenerator Width="300px" Height="300px" Type="@BarcodeType.Code128" Value="SYNCFUSION"></SfBarcodeGenerator>
 
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BjVACViTTDTFyxuE?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Customizing Blazor Barcode Dimension](images/blazor-barcode-dimension-customization.png)
 
@@ -162,6 +171,7 @@ In barcode generators, you can customize the barcode text by using display [Text
 </SfBarcodeGenerator>
 
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BtLqiVspptosptJA?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Customizing the Text in Blazor Barcode](images/blazor-barcode-text-customization.png)
 
@@ -179,6 +189,7 @@ The below code explains how to set the EnableCheckSum property to hide the extra
                     Value="SYNCFUSION">
 </SfBarcodeGenerator>
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hXBKWVCTzDoyJFrC?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Event
 

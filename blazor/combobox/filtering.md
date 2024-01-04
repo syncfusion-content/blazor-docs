@@ -32,7 +32,7 @@ The ComboBox has built-in support to filter data items when [AllowFiltering](htt
     }
 }
 ```
-
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hZBqMBrGKGJKmQZU?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Filtering in Blazor ComboBox](./images/blazor-combobox-filtering.png)
 
@@ -87,6 +87,7 @@ The ComboBox component filter queries can be customized. You can also use your o
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BXLKsLVmKwTcWkyh?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Prevent popup opening when filtering
 

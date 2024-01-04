@@ -58,6 +58,7 @@ By adding the [ChartStripline](https://help.syncfusion.com/cr/blazor/Syncfusion.
 }
 
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rNhKCVVRhJcQliSp?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Chart with Horizontal Striplines](images/strip-line/blazor-chart-horizontal-strip-line.png)
 
@@ -103,6 +104,7 @@ By adding the [ChartStripline](https://help.syncfusion.com/cr/blazor/Syncfusion.
 }
 
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rXLUsBBRLpbtIuIn?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Chart with Vertical Striplines](images/strip-line/blazor-chart-vertical-stripline.png)
 
@@ -148,6 +150,7 @@ The [Start](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Chart
 }
 
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDVUCVLxVfbqQNji?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Chart with Custom Striplines](images/strip-line/blazor-chart-custom-stripline.png)
 
@@ -196,6 +199,7 @@ The [Start](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Chart
 }
 
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rNVgWVLHBJlQDgKI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Chart with Custom Stripline Text](images/strip-line/blazor-chart-custom-strip-text.png)
 
@@ -250,6 +254,8 @@ To create a stripline in a specific region with respect to a segment (segmented 
     };
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rNLqMVhHrJGZtGLh?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 ![Blazor Chart With Segmented Stripline](../chart/images/strip-line/blazor-chart-segmented-stripline.png)
 
 N> Refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
