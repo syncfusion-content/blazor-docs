@@ -698,7 +698,7 @@ The ODataV4 is an improved version of OData protocols, and the SfDataManager can
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/DataBinding/RemoteData)
 
 ### Binding with GraphQL service
-GraphQL is a query language for APIs with which you can get exactly what you need and nothing more. The GraphQLAdaptor provides an option to retrieve data from the GraphQL server. For more details on  GraphQL service , refer to the [GraphQL documentation](https://blazor.syncfusion.com/documentation/data/adaptors#graphql-service-binding).
+GraphQL is a query language for APIs with which you can get exactly what you need and nothing more. The GraphQLAdaptor provides an option to retrieve data from the GraphQL server. For more details on GraphQL service, refer to the [GraphQL documentation](https://blazor.syncfusion.com/documentation/data/adaptors#graphql-service-binding).
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -762,7 +762,7 @@ GraphQL is a query language for APIs with which you can get exactly what you nee
         }
         node.Annotations = new DiagramObjectCollection<ShapeAnnotation>()
             {
-                // Annotation is created and stored in Annotations collection of Node.
+                // Annotation is created and stored in the Annotations collection of Node.
                 new ShapeAnnotation 
                 {
                     Content = content,
