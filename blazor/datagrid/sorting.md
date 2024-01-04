@@ -197,6 +197,84 @@ During the sort action, the datagrid component triggers two events. The [OnActio
 }
 ```
 
+## Sorting Behavior with AllowUnsort Property
+
+When the "AllowUnsort" property is set to false in GridSortSettings, the grid cannot be placed in an unsorted state by clicking on a sorted column header. This setting restricts the action of reverting the grid to its original unsorted layout through column header clicks.
+
+In the following example, this is demonstrated by preventing the grid from entering an unsorted state by setting "AllowUnsort" to false in GridSortSettings
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+@using Syncfusion.Blazor.Grids
+
+<SfGrid DataSource="@GridData" AllowSorting="true" Height="267px">
+    <GridSortSettings AllowUnsort="false"></GridSortSettings>
+    <GridColumns>
+        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="90"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer ID" Width="100"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.ShipCity) HeaderText="Ship City" Width="100"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.ShipName) HeaderText="Ship Name" Width="120"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code {
+    public List<OrderData> GridData { get; set; }
+
+    protected override void OnInitialized()
+    {
+        GridData = OrderData.GetAllRecords();
+    }
+
+}
+{% endhighlight %}
+{% highlight c# tabtitle="OrderData.cs" %}
+ public class OrderData
+    {
+        public static List<OrderData> Orders = new List<OrderData>();
+
+        public OrderData()
+        {
+
+        }
+        public OrderData(int? OrderID, string CustomerID, string ShipCity, string ShipName)
+        {
+            this.OrderID = OrderID;
+            this.CustomerID = CustomerID;
+            this.ShipCity = ShipCity;
+            this.ShipName = ShipName;
+        }
+
+        public static List<OrderData> GetAllRecords()
+        {
+            if (Orders.Count() == 0)
+            {
+                int code = 10;
+                for (int i = 1; i < 2; i++)
+                {
+                    Orders.Add(new OrderData(10248, "VINET", "Reims", "Vins et alcools Chevali"));
+                    Orders.Add(new OrderData(10249, "TOMSP", "Münster", "Toms Spezialitäten"));
+                    Orders.Add(new OrderData(10250, "HANAR", "Rio de Janeiro", "Hanari Carnes"));
+                    Orders.Add(new OrderData(10251, "VICTE", "Lyon", "Victuailles en stock"));
+                    Orders.Add(new OrderData(10252, "SUPRD", "Charleroi", "Suprêmes délices"));
+                    Orders.Add(new OrderData(10253, "HANAR", "Lyon", "Hanari Carnes"));
+                    Orders.Add(new OrderData(10254, "CHOPS", "Rio de Janeiro", "Chop-suey Chinese"));
+                    Orders.Add(new OrderData(10255, "RICSU", "Münster", "Richter Supermarkt"));
+                    Orders.Add(new OrderData(10256, "WELLI", "Reims", "Wellington Import"));
+                    code += 5;
+                }
+            }
+            return Orders;
+        }
+
+        public int? OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public string ShipCity { get; set; }
+        public string ShipName { get; set; }
+    }
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BjVUMsiJfaBVSChx?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 ## Custom sort comparer
 
 You can customize the default sort action for a specific Grid column by defining the [SortComparer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ColumnModel.html#Syncfusion_Blazor_Grids_ColumnModel_SortComparer) property of GridColumn Directive. The SortComparer data type was the IComparer interface, so the custom sort comparer class should be implemented in the interface [IComparer](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.icomparer-1?view=net-5).
