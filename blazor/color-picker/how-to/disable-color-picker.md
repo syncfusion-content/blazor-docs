@@ -19,5 +19,6 @@ The following example shows the `Disabled` state of Color Picker component.
 <h4>Choose a color</h4>
 <SfColorPicker Disabled="true"></SfColorPicker>
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/htLKsLrGgeJFrvZn?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Disable State in Blazor ColorPicker](./../images/blazor-colorpicker-disable-state.png)

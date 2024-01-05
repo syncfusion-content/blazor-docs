@@ -57,6 +57,7 @@ In the following sample, each list item is split into two columns to display rel
     }
 </style>
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VDrUWLCzKpNiSVjy?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 
 
@@ -106,6 +107,7 @@ In the following sample, employees are grouped according to their country.
     }
 </style>
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hjrqiVMzUfBbOtpn?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 
 
@@ -178,6 +180,7 @@ In the following sample, the list items and its headers are designed and display
 </style>
 ```
 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VNVKChCfATUBVrhy?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 
 ![Blazor AutoComplete with HeaderTemplate](./images/blazor-autocomplete-header-template.png)
@@ -230,6 +233,7 @@ In the following sample, footer element displays the total number of list items 
 </style>
 ```
 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rNVKChWpApASinEn?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 
 ![Blazor AutoComplete with FooterTemplate](./images/blazor-autocomplete-footer-template.png)
@@ -277,6 +281,7 @@ In the following sample, suggestion list content displays the notification of no
 }
 ```
 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VDVUWLCpKTJNdtaV?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 
 ![Blazor AutoComplete without Data](./images/blazor-autocomplete-without-data.png)
@@ -322,3 +327,4 @@ In the following sample, when the data fetch request fails, the AutoComplete dis
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rjLqWLCzUpfolFuq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}

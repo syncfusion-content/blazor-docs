@@ -40,7 +40,7 @@ The Blazor ButtonGroup has the following predefined styles that can be defined u
 </SfButtonGroup>
 
 ```
-
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BjrUWrVhsFgtTPNP?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor ButtonGroup with different Style](./images/blazor-buttongroup-style.png)
 
@@ -88,7 +88,7 @@ A round ButtonGroup is shaped like a circle. Usually, it contains an icon repres
 
 ```
 
-
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hthKWBVBCPUzgjog?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Displaying different Type of ButtonGroup Component](./images/blazor-buttongroup-type.png)
 
@@ -118,7 +118,7 @@ To create ButtonGroup with icons, [IconCss](https://help.syncfusion.com/cr/blazo
 </style>
 
 ```
-
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rjrUMBVBCbpNXWhK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 
 ![Blazor ButtonGroup with Icon](./images/blazor-buttongroup-icon.png)
@@ -142,7 +142,7 @@ The two types of ButtonGroup sizes are default and small. To change the size of 
 </SfButtonGroup>
 
 ```
-
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hjrgirVBMPpAJRYg?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 
 ![Changing Blazor ButtonGroup Size](./images/blazor-buttongroup-size.png)

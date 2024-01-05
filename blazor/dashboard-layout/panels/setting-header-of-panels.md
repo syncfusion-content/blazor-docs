@@ -51,6 +51,7 @@ Basically, Dashboard layout Component have two templates to render the data in p
 </style>
 
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hNLAMVLGpBoyKHBy?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 The following output demonstrates the Header and content of Panels using templates.
 

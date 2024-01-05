@@ -52,6 +52,7 @@ documentation: ug
 }
 
 ``` 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDhUsVLxzRMlYUSx?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Stacked Area Chart](../images/chart-types-images/blazor-stacked-area-chart.png)
 
@@ -111,6 +112,7 @@ The following properties can be used to customize the [Stacked Area](https://hel
 }
 
 ``` 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VjhKsrhdpxrCydRe?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Stacked Area with Custom Series](../images/chart-types-images/blazor-stacked-area-chart-custom-series.png)
 
