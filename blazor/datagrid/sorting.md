@@ -338,7 +338,6 @@ The following example demonstrates, how to disable sorting for **CustomerID** co
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LtVgWMDhqzLxBsoB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-
 ## Customizing Sorting Functionality with the AllowUnsort Property
 
 When the [AllowUnsort](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSortSettings.html#Syncfusion_Blazor_Grids_GridSortSettings_AllowUnsort) property is set to false in [GridSortSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSortSettings.html) component, the grid cannot be placed in an unsorted state by clicking on a sorted column header. This setting restricts the action of reverting the grid to its original unsorted layout through column header clicks.
@@ -906,6 +905,136 @@ The following example demonstrates how to add sort columns to a grid. It utilize
 {% endtabs %}
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LtBgsWDKBXuYpcUi?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+### Remove sort columns
+
+To remove a sort column externally, you can use the [ClearSortingAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ClearSortingAsync_System_Collections_Generic_List_System_String__) method provided by the Grid component. This method allows you to remove the sorting applied to a specific column.
+
+The following example demonstrates how to remove sort columns. It utilizes the **DropDownList** component to select the column. When an external button is clicked, the `ClearSortingAsync` method is called to remove the selected sort column.
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+@using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor.Buttons
+@using Syncfusion.Blazor.DropDowns
+
+<div style="display:flex;">
+    <label style="padding: 10px 20px 0 0"> Column name :</label>
+    <SfDropDownList TValue="string" TItem="Columns" Width="125px" Placeholder="Select a Column" DataSource="@LocalData" @bind-Value="@DropDownValue">
+        <DropDownListFieldSettings Value="ID" Text="Value"></DropDownListFieldSettings>
+    </SfDropDownList>
+</div>
+<br />
+
+<div style="display:flex;">
+    <Syncfusion.Blazor.Buttons.SfButton OnClick="RemoveSortColumn">REMOVE SORT COLUMN</Syncfusion.Blazor.Buttons.SfButton>
+</div>
+
+<SfGrid @ref="Grid" DataSource="@GridData" AllowSorting="true" Height="315">
+    <GridSortSettings>
+        <GridSortColumns>
+            <GridSortColumn Field="CustomerID" Direction="SortDirection.Ascending"></GridSortColumn>
+            <GridSortColumn Field="ShipName" Direction="SortDirection.Descending"></GridSortColumn>
+        </GridSortColumns>
+    </GridSortSettings>
+    <GridColumns>
+        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="90"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer ID" Width="100"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.ShipCity) HeaderText="Ship City" Width="100"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.ShipName) HeaderText="Ship Name" Width="120"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code {
+    public List<OrderData> GridData { get; set; }
+
+    public SfGrid<OrderData>? Grid { get; set; }
+
+    public string DropDownValue { get; set; } = "OrderID";
+
+
+    protected override void OnInitialized()
+    {
+        GridData = OrderData.GetAllRecords();
+    }
+
+    List<Columns> LocalData = new List<Columns>
+    {
+        new Columns() { ID= "OrderID", Value= "OrderID" },
+        new Columns() { ID= "CustomerID", Value= "CustomerID" },
+        new Columns() { ID= "ShipCity", Value= "ShipCity" },
+        new Columns() { ID= "ShipName", Value= "ShipName" },
+    };
+
+    public class Columns
+    {
+        public string ID { get; set; }
+        public string Value { get; set; }
+    }
+
+    public class Direction
+    {
+        public string ID { get; set; }
+        public string Value { get; set; }
+    }
+    List<string> listItems = new List<string>();
+    public async Task RemoveSortColumn()
+    {
+        listItems.Add(DropDownValue);
+        await Grid.ClearSortingAsync(listItems);
+
+    } 
+}
+{% endhighlight %}
+{% highlight c# tabtitle="OrderData.cs" %}
+  public class OrderData
+    {
+        public static List<OrderData> Orders = new List<OrderData>();
+        
+        public OrderData()
+        {
+
+        }
+        public OrderData(int? OrderID,string CustomerID,string ShipCity, string ShipName)
+        {
+           this.OrderID = OrderID;    
+           this.CustomerID = CustomerID;
+            this.ShipCity = ShipCity;
+            this.ShipName = ShipName;            
+        }
+
+        public static List<OrderData> GetAllRecords()
+        {
+            if (Orders.Count() == 0)
+            {
+                int code = 10;
+                for (int i = 1; i < 2; i++)
+                {
+                    Orders.Add(new OrderData(10248, "VINET", "Reims", "Vins et alcools Chevali"));
+                    Orders.Add(new OrderData(10249, "TOMSP", "Münster", "Toms Spezialitäten"));
+                    Orders.Add(new OrderData(10250, "HANAR", "Rio de Janeiro", "Hanari Carnes"));
+                    Orders.Add(new OrderData(10251, "VICTE", "Lyon", "Victuailles en stock"));
+                    Orders.Add(new OrderData(10252, "SUPRD", "Charleroi", "Suprêmes délices"));
+                    Orders.Add(new OrderData(10253, "HANAR", "Lyon", "Hanari Carnes"));
+                    Orders.Add(new OrderData(10254, "CHOPS", "Rio de Janeiro", "Chop-suey Chinese"));
+                    Orders.Add(new OrderData(10255, "RICSU", "Münster", "Richter Supermarkt"));
+                    Orders.Add(new OrderData(10256, "WELLI", "Reims", "Wellington Import"));
+                    code += 5;
+                }
+            }
+            return Orders;
+        }
+
+        public int? OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public string ShipCity { get; set; }
+        public string ShipName { get; set; }
+    }
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LXLTNMXogWMSEQTv?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 
 ### Clear sorting 
 
