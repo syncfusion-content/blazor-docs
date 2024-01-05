@@ -97,39 +97,60 @@ The following code explains how to draw the connector by using the port constrai
         public SfDiagramComponent diagram;
         nodes = new DiagramObjectCollection<Node>();
         // A node is created and stored in nodes array.
-        Node node = new Node()
+        Node node1 = new Node()
         {
-            // Position of the node.
+            // Position of the node
             OffsetX = 250,
             OffsetY = 250,
-            // Size of the node.
+            // Size of the node
             Width = 100,
             Height = 100,
             Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "white" },
-            // Initialize port collection.
+            // Initialize port collection
             Ports = new DiagramObjectCollection<PointPort>()
             {
                 new PointPort()
                 {
                     ID = "port1",
-                    Offset = new DiagramPoint() { X = 1, Y = 0.5 },
+                        Offset = new DiagramPoint() { X = 1, Y = 0.5 },
                     Visibility = PortVisibility.Visible,
-                    //Set the style for the port.
-                    Style = new ShapeStyle()
-                    { 
-                        Fill = "gray", 
-                        StrokeColor = "black"
-                     }, 
-                    Width = 12, 
-                    Height = 12, 
-                    // Sets the shape of the port as Square.
-                    Shape = PortShapes.Square,
-                    // Enable draw operation for Port
-                    Constraints = PortConstraints.Default | PortConstraints.Draw
+                    //Set the style for the port
+                    Style= new ShapeStyle(){ Fill = "gray", StrokeColor = "black"},
+                    // Sets the shape of the port as Circle
+                    Width = 12, Height = 12, Shape = PortShapes.Square,
+                    // Enable drag operation for Port
+                    Constraints = PortConstraints.Default|PortConstraints.Draw
                 }
             },
         };
-        nodes.Add(node);
+        nodes.Add(node1);
+        Node node2 = new Node()
+        {
+            // Position of the node
+            OffsetX = 500,
+            OffsetY = 350,
+            // Size of the node
+            Width = 100,
+            Height = 100,
+            Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "white" },
+            // Initialize port collection
+            Ports = new DiagramObjectCollection<PointPort>()
+            {
+                new PointPort()
+                {
+                    ID = "port1",
+                        Offset = new DiagramPoint() { X = 0, Y = 0.5 },
+                    Visibility = PortVisibility.Visible,
+                    //Set the style for the port
+                    Style= new ShapeStyle(){ Fill = "gray", StrokeColor = "black"},
+                    // Sets the shape of the port as Circle
+                    Width = 12, Height = 12, Shape = PortShapes.Square,
+                    // Enable drag operation for Port
+                    Constraints = PortConstraints.Default|PortConstraints.Draw
+                }
+            },
+        };
+        nodes.Add(node2);
         DrawingObject = new Connector()
         {
             ID = "connector1",
