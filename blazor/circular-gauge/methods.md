@@ -13,7 +13,7 @@ The following methods are available in the Circular Gauge component.
 
 ## SetAnnotationValueAsync
 
-To change the annotation content dynamically, use the [SetAnnotationValueAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.SfCircularGauge.html#methods) method in the Circular Gauge component. The following are the arguments for this method.
+To change the annotation content dynamically, use the [SetAnnotationValueAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.SfCircularGauge.html#Syncfusion_Blazor_CircularGauge_SfCircularGauge_SetAnnotationValueAsync_System_Int32_System_Int32_System_String_) method in the Circular Gauge component. The following are the arguments for this method.
 
 |   Argument name      |   Description                            |
 |----------------------| -----------------------------------------|
@@ -50,7 +50,7 @@ To change the annotation content dynamically, use the [SetAnnotationValueAsync](
 
 ## SetPointerValueAsync
 
-To change the pointer value dynamically, use the [SetPointerValueAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.SfCircularGauge.html#methods) method in the Circular Gauge component. The following are the arguments for this method.
+To change the pointer value dynamically, use the [SetPointerValueAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.SfCircularGauge.html#Syncfusion_Blazor_CircularGauge_SfCircularGauge_SetPointerValueAsync_System_Int32_System_Int32_System_Double_) method in the Circular Gauge component. The following are the arguments for this method.
 
 |   Argument name      |   Description                            |
 |----------------------| -----------------------------------------|
@@ -121,7 +121,7 @@ To change the start and end of a range in axis, use the [SetRangeValue](https://
 
 ## RefreshAsync
 
-The [RefreshAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.SfCircularGauge.html#methods) method can be used to change the state of the component and render it again.
+The [RefreshAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.SfCircularGauge.html#Syncfusion_Blazor_CircularGauge_SfCircularGauge_RefreshAsync) method can be used to change the state of the component and render it again.
 
 ```cshtml
 @using Syncfusion.Blazor.CircularGauge
