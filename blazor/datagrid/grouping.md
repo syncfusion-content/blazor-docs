@@ -191,7 +191,6 @@ The DataGrid component provides the ability to prevent grouping for a particular
     {
         GridData = OrderData.GetAllRecords();
     }
-
 }
 {% endhighlight %}
 {% highlight c# tabtitle="OrderData.cs" %}
@@ -263,7 +262,7 @@ The following example, the [Blazor Toggle Switch Button](https://blazor.syncfusi
     <SfSwitch @bind-Checked="isChecked" OffLabel="OFF" OnLabel="ON" ValueChange="Change" TChecked="bool?"></SfSwitch>
 </div>
 
-<SfGrid DataSource="@GridData" AllowGrouping="true" Height="267px">
+<SfGrid DataSource="@GridData" AllowGrouping="true" Height="315px">
     <GridGroupSettings ShowDropArea="@show" Columns="@Initial"></GridGroupSettings>
     <GridColumns>
         <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="90"></GridColumn>
@@ -287,7 +286,7 @@ The following example, the [Blazor Toggle Switch Button](https://blazor.syncfusi
 
     private bool? isChecked = null;
 
-    private void Change(Syncfusion.Blazor.Buttons.ChangeEventArgs<bool?> args)
+    private async Task Change(Syncfusion.Blazor.Buttons.ChangeEventArgs<bool?> args)
     {
         if (args.Checked == true)
         {
@@ -367,7 +366,7 @@ In the following example, the [Blazor Toggle Switch Button](https://blazor.syncf
     <SfSwitch @bind-Checked="isChecked" OffLabel="OFF" OnLabel="ON" ValueChange="Change" TChecked="bool?"></SfSwitch>
 </div>
 
-<SfGrid @ref="Grid" DataSource="@GridData" AllowGrouping="true" Height="267px">
+<SfGrid @ref="Grid" DataSource="@GridData" AllowGrouping="true" Height="315px">
     <GridGroupSettings Columns="@Initial" ShowGroupedColumn=@IsShow></GridGroupSettings>
     <GridColumns>
         <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="90"></GridColumn>
@@ -393,20 +392,19 @@ In the following example, the [Blazor Toggle Switch Button](https://blazor.syncf
     private bool? isChecked = null;
 
 
-    private void Change(Syncfusion.Blazor.Buttons.ChangeEventArgs<bool?> args)
+    private async Task Change(Syncfusion.Blazor.Buttons.ChangeEventArgs<bool?> args)
     {
         if (args.Checked == true)
         {
             IsShow = false;
-            Grid.Refresh();
+            await Grid.Refresh();
         }
         else
         {
             IsShow = true;
-            Grid.Refresh();
+            await Grid.Refresh();
         }
     }
-
 }
 {% endhighlight %}
 {% highlight c# tabtitle="OrderData.cs" %}
@@ -483,7 +481,6 @@ The following example demonstrates how to sort the **CustomerID** column by sett
     </GridColumns>
 </SfGrid>
 
-
 @code {
     public List<OrderData> GridData { get; set; }
 
@@ -539,7 +536,6 @@ The following example demonstrates how to sort the **CustomerID** column by sett
         public string CustomerID { get; set; }
         public string ShipCity { get; set; }
         public string ShipName { get; set; } 
-
     }
 {% endhighlight %}
 {% endtabs %}
@@ -562,8 +558,8 @@ The following example demonstrates how to perform a group action using the `Enab
     <GridColumns>
         <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="90"></GridColumn>
         <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer ID" Width="100"></GridColumn>
-        <GridColumn Field=@nameof(OrderData.OrderDate) HeaderText=" Order Date" Format="yyyy/MMM" Type="ColumnType.Date" EnableGroupByFormat="true" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="130"></GridColumn>
-        <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" Format="C2" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" EnableGroupByFormat="true" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.OrderDate) HeaderText=" Order Date" Format="yyyy/MMM" Type="ColumnType.Date" EnableGroupByFormat="true" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="100"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" Format="C2" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" EnableGroupByFormat="true" Width="80"></GridColumn>
     </GridColumns>
 </SfGrid>
 
@@ -576,7 +572,6 @@ The following example demonstrates how to perform a group action using the `Enab
     {
         GridData = OrderData.GetAllRecords();
     }
-
 }
 {% endhighlight %}
 {% highlight c# tabtitle="OrderData.cs" %}
@@ -629,6 +624,102 @@ The following example demonstrates how to perform a group action using the `Enab
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LDLUisZcqcKfqGvJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 > Numeric columns can be grouped based on formats such as currency or percentage, while datetime columns can be grouped based on specific date or time formats.
+
+## Collapse all grouped rows at initial rendering
+
+The Syncfusion Blazor Grid offers a convenient feature to expand or collapse grouped rows, allowing you to control the visibility of grouped data. The option is useful when dealing with a large dataset that contains many groups, and there is a need to provide a summarized view by initially hiding the details.
+
+To collapse all grouped rows at the initial rendering of the Grid using the [DataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_DataBound) event along with the  [CollapseAllGroupAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_CollapseAllGroupAsync) method.
+
+The following example demonstrates how to collapse all grouped rows at the initial rendering.
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+@using Syncfusion.Blazor.Grids
+
+<SfGrid DataSource="@GridData" @ref="Grid" AllowGrouping="true" Height="267px">
+    <GridGroupSettings Columns="@groupOptions"></GridGroupSettings>
+    <GridEvents DataBound="DataBoundHandler" TValue="OrderData"></GridEvents>
+    <GridColumns>
+        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="90"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer ID" Width="100"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.ShipCity) HeaderText="Ship City" Width="100"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.ShipName) HeaderText="Ship Name" Width="110"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code {
+    public List<OrderData> GridData { get; set; }
+
+    SfGrid<OrderData> Grid;
+
+    public bool initial = true;
+
+    public string[] groupOptions = (new string[] { "ShipCity" });
+
+    protected override void OnInitialized()
+    {
+        GridData = OrderData.GetAllRecords();
+    }
+
+    public async Task DataBoundHandler()
+    {
+        if(initial == true)
+        {
+            await Grid.CollapseAllGroupAsync();
+            initial = false;
+        }
+    }
+}
+{% endhighlight %}
+{% highlight c# tabtitle="OrderData.cs" %}
+  public class OrderData
+    {
+        public static List<OrderData> Orders = new List<OrderData>();
+        
+        public OrderData()
+        {
+
+        }
+        public OrderData(int? OrderID,string CustomerID,string ShipCity, string ShipName)
+        {
+           this.OrderID = OrderID;    
+           this.CustomerID = CustomerID;
+            this.ShipCity = ShipCity;
+            this.ShipName = ShipName;             
+        }
+
+        public static List<OrderData> GetAllRecords()
+        {
+            if (Orders.Count() == 0)
+            {
+                int code = 10;
+                for (int i = 1; i < 2; i++)
+                {
+                    Orders.Add(new OrderData(10248, "VINET", "Reims", "Vins et alcools Chevali"));
+                    Orders.Add(new OrderData(10249, "TOMSP", "Münster", "Toms Spezialitäten"));
+                    Orders.Add(new OrderData(10250, "HANAR", "Rio de Janeiro", "Hanari Carnes"));
+                    Orders.Add(new OrderData(10251, "VICTE", "Lyon", "Victuailles en stock"));
+                    Orders.Add(new OrderData(10252, "SUPRD", "Charleroi", "Suprêmes délices"));
+                    Orders.Add(new OrderData(10253, "HANAR", "Lyon", "Hanari Carnes"));
+                    Orders.Add(new OrderData(10254, "CHOPS", "Rio de Janeiro", "Chop-suey Chinese"));
+                    Orders.Add(new OrderData(10255, "RICSU", "Münster", "Richter Supermarkt"));
+                    Orders.Add(new OrderData(10256, "WELLI", "Reims", "Wellington Import"));
+                    code += 5;
+                }
+            }
+            return Orders;
+        }
+
+        public int? OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public string ShipCity { get; set; }
+        public string ShipName { get; set; }
+    }
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VjrfDsjKqkAfFfop?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Group or Ungroup column externally
 
@@ -793,15 +884,15 @@ In the following example, the [Blazor Toggle Switch Button](https://blazor.syncf
         GridData = OrderData.GetAllRecords();
     }
 
-    private void Change(Syncfusion.Blazor.Buttons.ChangeEventArgs<bool?> args)
+    private async Task Change(Syncfusion.Blazor.Buttons.ChangeEventArgs<bool?> args)
     {
         if (args.Checked == true)
         {
-            Grid.CollapseAllGroupAsync();
+            await Grid.CollapseAllGroupAsync();
         }
         else
         {
-            Grid.ExpandAllGroupAsync();
+           await Grid.ExpandAllGroupAsync();
         }
     }
 }
@@ -873,10 +964,10 @@ The following example demonstrates how to clear the grouping using `ClearGroupin
 <SfGrid @ref="Grid" DataSource="@GridData"  AllowGrouping="true" Height="315px">
     <GridGroupSettings Columns="@columns"></GridGroupSettings>
     <GridColumns>
-        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="90"></GridColumn>
-        <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer ID" Width="100"></GridColumn>
-        <GridColumn Field=@nameof(OrderData.ShipCity) HeaderText="Ship City" Width="100"></GridColumn>
-        <GridColumn Field=@nameof(OrderData.ShipName) HeaderText="Ship Name" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer ID" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.ShipCity) HeaderText="Ship City" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.ShipName) HeaderText="Ship Name" Width="150"></GridColumn>
     </GridColumns>
 </SfGrid>
 
@@ -949,13 +1040,13 @@ The following example demonstrates how to clear the grouping using `ClearGroupin
 
 ## Grouping events
 
-The DataGrid component provides two events that are triggered during the group action such as [OnActionBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) and [OnActionComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html). The `OnActionBegin` event is triggered before the group action starts, and the `OnActionComplete` event is triggered after the group action is completed. You can use these events to perform any custom action based on the grouping.
+The DataGrid component provides two events that are triggered during the group action such as [Grouping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_Grouping) and [Grouped](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_Grouped). The `Grouping` event is triggered before the group action starts, and the `Grouped` event is triggered after the group action is completed. You can use these events to perform any custom action based on the grouping.
 
-1. **OnActionBegin Event**: `OnActionBegin` event is triggered before the group action begins. It provides a way to perform any necessary operations before the group action takes place. This event provides a parameter that contains the current grid state, including the current group field name, requestType information and etc.
+1. **Grouping Event**: `Grouping` event is triggered before the grouping action or un-grouping action is performed in the grid. It provides a way to perform any necessary operations before the group action takes place. This event provides a parameter that contains the current sorting column name, and action.
 
-2. **OnActionComplete Event**: `OnActionComplete` event is triggered after the group action is completed. It provides a way to perform any necessary operations after the group action has taken place. This event provides a parameter that contains the current grid state, including the grouped data and column information and etc.
+2. **Grouped Event**: `Grouped` event is triggered after the grouping action or un-grouping action is performed in the grid. It provides a way to perform any necessary operations after the group action has taken place. This event provides a parameter that contains the current sorting column name, and action.
 
-The following example demonstrates how the `actionBegin` and `actionComplete` events work when grouping is performed. The `actionBegin` event event is used to cancel the grouping of the **OrderID** column. The `actionComplete` event is used to display a message
+The following example demonstrates how the `Grouping` and `Grouped` events work when grouping is performed. The `Grouping` event event is used to cancel the grouping of the **OrderID** column. The `Grouped` event is used to display a message
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -964,13 +1055,13 @@ The following example demonstrates how the `actionBegin` and `actionComplete` ev
 @if (show == true)
 {
     <div style="text-align : center; color: red">
-        <span> @requesttype action completed for @columnName column</span>
+        <span> Group action completed for @columnName column</span>
     </div>
     <br />
 }
 
-<SfGrid @ref="Grid" DataSource="@GridData"  AllowGrouping="true" Height="315px">
-    <GridEvents OnActionComplete="ActionCompletedHandler" OnActionBegin="ActionBeginHandler" TValue="OrderData"></GridEvents>
+<SfGrid @ref="Grid" DataSource="@GridData"  AllowGrouping="true" Height="260px">
+    <GridEvents Grouping="GroupingHandler" Grouped="GroupedHandler" TValue="OrderData"></GridEvents>
     <GridColumns>
         <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="90"></GridColumn>
         <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer ID" Width="100"></GridColumn>
@@ -988,28 +1079,23 @@ The following example demonstrates how the `actionBegin` and `actionComplete` ev
     public string columnName { get; set; }
     public string requesttype { get; set; }
 
-
     protected override void OnInitialized()
     {
         GridData = OrderData.GetAllRecords();
     }
 
-    public async Task ActionBeginHandler(ActionEventArgs<OrderData> args)
+    public async Task GroupingHandler(GroupingEventArgs args)
     {
-        if (args.RequestType == Syncfusion.Blazor.Grids.Action.Grouping && args.ColumnName == "OrderID")
+        if (args.ColumnName == "OrderID")
         {
             args.Cancel = true;
         }
     }
 
-    public async Task ActionCompletedHandler(ActionEventArgs<OrderData> args)
+    public async Task GroupedHandler(GroupedEventArgs args)
     {
-        if (args.RequestType == Syncfusion.Blazor.Grids.Action.Grouping)
-        {
-            columnName = args.ColumnName;
-            requesttype = args.RequestType.ToString();
-            show = true;
-        }
+        columnName = args.ColumnName;
+        show = true;
     }
 }
 {% endhighlight %}
@@ -1060,9 +1146,8 @@ The following example demonstrates how the `actionBegin` and `actionComplete` ev
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BtLAMMXwJBKJUNlp?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VDLpNCtffrjjtSYQ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-> [args.RequestType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ActionEventArgs-1.html#Syncfusion_Blazor_Grids_ActionEventArgs_1_RequestType) property represents the name of the current action being performed. For instance, during grouping, the `args.RequestType` value will be **grouping**.
 
 ## See Also
 

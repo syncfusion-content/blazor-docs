@@ -44,7 +44,6 @@ The following example demonstrates how to customize the group header caption in 
     {
         GridData = OrderData.GetAllRecords();
     }
-
 }
 {% endhighlight %}
 {% highlight c# tabtitle="OrderData.cs" %}
@@ -111,7 +110,7 @@ The following example demonstrates how to add a custom text to the group caption
         <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="ID" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="90"></GridColumn>
         <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Name" Width="100"></GridColumn>
         <GridColumn Field=@nameof(OrderData.ShipCity) HeaderText="City" Width="100"></GridColumn>
-        <GridColumn Field=@nameof(OrderData.Freight) HeaderText="value" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.Freight) HeaderText="value" Width="80"></GridColumn>
     </GridColumns>
     <GridGroupSettings>
         <CaptionTemplate>
@@ -199,7 +198,7 @@ The following example demonstrates how to add a custom component to the group ca
         <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="ID" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="90"></GridColumn>
         <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Name" Width="100"></GridColumn>
         <GridColumn Field=@nameof(OrderData.ShipCity) HeaderText="City" Width="100"></GridColumn>
-        <GridColumn Field=@nameof(OrderData.Freight) HeaderText="value" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.Freight) HeaderText="value" Width="80"></GridColumn>
     </GridColumns>
    <GridGroupSettings>
         <CaptionTemplate>
@@ -223,7 +222,6 @@ The following example demonstrates how to add a custom component to the group ca
     {
         GridData = OrderData.GetAllRecords();
     }
-
 }
 {% endhighlight %}
 {% highlight c# tabtitle="OrderData.cs" %}
