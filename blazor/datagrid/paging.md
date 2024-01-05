@@ -113,6 +113,102 @@ N> By default, dropdown list will show values as **new int[]{ 5, 10, 12, 20 }**.
 N> You can refer to our [Blazor Grid Paging](https://www.syncfusion.com/blazor-components/blazor-datagrid/paging) Feature tour page to know about paging and its feature representations.
 <br/> You can refer to our [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap4) to understand how to present and manipulate data.
 
+## Navigate to a specific page during the initial rendering
+
+Navigating to a Specific Page During Grid Initialization, you can utilize the [GoToPageAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GoToPageAsync_System_Int32_) method.
+
+In the following sample, navigate to a specific page during the initial rendering of a grid by utilizing the `GoToPageAsync` method within the [DataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_DataBound) event of the Grid.
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+@using Syncfusion.Blazor.Grids
+
+<SfGrid DataSource="@GridData" @ref="DefaultGrid" AllowPaging="true" Height="267px">
+    <GridEvents DataBound="DataBoundHandler" TValue="OrderData"></GridEvents>
+    <GridColumns>
+        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="90"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer ID" Width="100"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.ShipCity) HeaderText="Ship City" Width="100"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.ShipName) HeaderText="Ship Name" Width="120"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+
+@code {
+    public List<OrderData> GridData { get; set; }
+
+    public SfGrid<OrderData> DefaultGrid;
+
+    public bool flag = true;
+
+    protected override void OnInitialized()
+    {
+        GridData = OrderData.GetAllRecords();
+    }
+
+    public async Task DataBoundHandler()
+    {
+        if (flag == true)
+        {
+            await DefaultGrid.GoToPageAsync(3);
+            flag = false;
+        }
+
+    }
+
+}
+{% endhighlight %}
+{% highlight c# tabtitle="OrderData.cs" %}
+    public class OrderData
+    {
+        public static List<OrderData> Orders = new List<OrderData>();
+
+
+        public OrderData()
+        {
+
+        }
+        public OrderData(int? OrderID, string CustomerID, string ShipCity, string ShipName)
+        {
+            this.OrderID = OrderID;
+            this.CustomerID = CustomerID;
+            this.ShipCity = ShipCity;
+            this.ShipName = ShipName;
+
+        }
+
+        public static List<OrderData> GetAllRecords()
+        {
+            if (Orders.Count() == 0)
+            {
+                int code = 10248;
+                for (int i = 1; i < 6; i++)
+                {
+                    Orders.Add(new OrderData(code, "VINET", "Reims", "Vins et alcools Chevali"));
+                    Orders.Add(new OrderData(code+1, "TOMSP", "Münster", "Toms Spezialitäten"));
+                    Orders.Add(new OrderData(code+2, "HANAR", "Rio de Janeiro", "Hanari Carnes"));
+                    Orders.Add(new OrderData(code+3, "VICTE", "Lyon", "Victuailles en stock"));
+                    Orders.Add(new OrderData(code+4, "SUPRD", "Charleroi", "Suprêmes délices"));
+                    Orders.Add(new OrderData(code+5, "HANAR", "Lyon", "Hanari Carnes"));
+                    Orders.Add(new OrderData(code+6, "CHOPS", "Rio de Janeiro", "Chop-suey Chinese"));
+                    Orders.Add(new OrderData(code+7, "RICSU", "Münster", "Richter Supermarkt"));
+                    Orders.Add(new OrderData(code+8, "WELLI", "Reims", "Wellington Import"));
+                    code += 9;
+                }
+            }
+            return Orders;
+        }
+
+        public int? OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public string ShipCity { get; set; }
+        public string ShipName { get; set; }
+    }
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BthAMMMSsZCDkqog?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 ## Display All records through pager dropdown
 
 The Grid component has the option to show all the records through the pager dropdown during the initial rendering. This can be achieved by defining the total record count in the [PageSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridPageSettings.html#Syncfusion_Blazor_Grids_GridPageSettings_PageSize) property of the [GridPageSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridPageSettings.html) class and customizing the dropdown values using the [PageSizes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridPageSettings.html#Syncfusion_Blazor_Grids_GridPageSettings_PageSizes) property. This total count will select the "All" page size drop-down on initial rendering.
