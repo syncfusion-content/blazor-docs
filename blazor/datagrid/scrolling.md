@@ -280,7 +280,7 @@ The following demo shows how to change the default frozen line color.
 ```cshtml
 @using Syncfusion.Blazor.Grids
 
-<SfGrid DataSource="@Orders" AllowSelection="false" EnableHover="false" FrozenColumns="2" FrozenRows="3" Width="100%" Height="400">
+<SfGrid DataSource="@Orders" AllowSelection="false" EnableHover="false" FrozenColumns="2" FrozenRows="3" Width="600" Height="400">
     <GridColumns>
         <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
         <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
@@ -340,7 +340,7 @@ The following demo shows how to change the default frozen line color.
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LZrJtCtfqabYAuXj?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hZVJXsXSLrGWRalt?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ### Limitations
 
