@@ -51,6 +51,7 @@ documentation: ug
 }
 
 ``` 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rtrKiBLRVoGCXtGp?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Spline Chart](../images/chart-types-images/blazor-spline-chart.png)
 
@@ -98,6 +99,7 @@ To specify the type of [Spline Chart](https://help.syncfusion.com/cr/blazor/Sync
 }
 
 ``` 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hDrgshrHBIGUdhhV?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Cardinal Spline Chart](../images/chart-types-images/blazor-cardinal-spline-chart.png)
 
@@ -149,6 +151,7 @@ The following properties can be used to customize the [Spline](https://help.sync
 }
 
 ``` 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VNhUCrLRhowdrObM?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Spline Chart with Custom Series](../images/chart-types-images/blazor-spline-chart-custom-series.png)
 

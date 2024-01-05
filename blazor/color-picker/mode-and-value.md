@@ -22,6 +22,8 @@ In the following sample, it will render the `Palette` at initial load.
 <SfColorPicker Mode="ColorPickerMode.Palette"></SfColorPicker>
 ```
 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VZhgshBQKIhHYIMT?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 ![Blazor ColorPicker with Palette](./images/blazor-colorpicker-with-palette.png)
 
 ## Color value
@@ -36,6 +38,8 @@ In the following sample, the color value is set as `four` digit hex code, the la
 <h4>Choose a color</h4>
 <SfColorPicker Value="035a" ModeSwitcher="false"></SfColorPicker>
 ```
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VjVUCBBQUeLkCZYv?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Changing Blazor ColorPicker value](./images/blazor-colorpicker-value.png)
 

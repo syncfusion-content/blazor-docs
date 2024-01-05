@@ -96,4 +96,8 @@ Add the Syncfusion Blazor Calendar component in the **~/Pages/Index.razor** file
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion Blazor Calendar component in your default web browser.
 
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDBgirsJBGDheWFi?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+
 ![Blazor Calendar Component](images/output-calendar-using-blazor-webassembly.png)

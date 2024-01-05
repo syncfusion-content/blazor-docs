@@ -41,5 +41,6 @@ The [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.
     };
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VtVKshVizpSfJRvO?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Data Binding in Blazor Bullet Chart](images/blazor-bullet-chart-data-binding.png)
