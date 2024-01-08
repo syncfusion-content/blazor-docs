@@ -13,14 +13,20 @@ The port can be used to create connector by enabling the `Draw` in the [PortCons
 
 ## How to draw connector from the port
 
-Diagram provides the support to draw the connector in the port.
+Diagram provides the support to draw the connector in the port.The type of connector segment can be specified using the [DrawingObject](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_DrawingObject) property. This enables the drawing of ports with various connector types, including:
+* Staright
+* Bezier
+* Polyline
+* Orthagonal
+* Free Hand
+
 
 The following code explains how to draw the connector by using the port constraints.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Height="600px" Nodes="@nodes" />
+<SfDiagramComponent @ref="diagram" Height="600px" Nodes="@nodes" DrawingObject="DrawingObject"/>
 
 @code
 {
@@ -28,6 +34,7 @@ The following code explains how to draw the connector by using the port constrai
 
     protected override void OnInitialized()
     {
+        public SfDiagramComponent diagram;
         nodes = new DiagramObjectCollection<Node>();
         // A node is created and stored in nodes array.
         Node node = new Node()
@@ -63,12 +70,21 @@ The following code explains how to draw the connector by using the port constrai
             },
         };
         nodes.Add(node);
+        DrawingObject = new Connector()
+        {
+            ID = "connector1",
+            Type = ConnectorSegmentType.Straight,            
+        };
     }
 }
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Ports/Interaction)
 
-![Drawing Port Connection in Blazor Diagram](../images/blazor-diagram-draw-port-connection.gif)
+![Drawing Bezier Port Connection in Blazor Diagram](../images/blazor-diagram-draw-port-connection.gif)
+
+By default, the connector segment type is set to  [Orthogonal](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ConnectorSegmentType.html#Syncfusion_Blazor_Diagram_ConnectorSegmentType_Orthogonal)
+
+![Drawing Default Port Connection in Blazor Diagram](../images/blazor-diagram-draw-port-connection-default.gif)
 
 ## See also
 
