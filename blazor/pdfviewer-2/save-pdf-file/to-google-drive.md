@@ -44,8 +44,7 @@ Start by following the steps provided in this [link](https://blazor.syncfusion.c
 
 @code {
     private string DocumentPath { get; set; }
-    private <SfPdfViewer2 DocumentPath="@DocumentPath"
- viewer;
+    private SfPdfViewer2 viewer;
     private readonly string FolderId = "Your Google Drive Folder ID";
     private readonly string CredentialPath = "Your Path to the OAuth 2.0 Client IDs json file";
     private readonly string ApplicationName = "Your Application name";
