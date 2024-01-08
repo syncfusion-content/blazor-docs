@@ -267,10 +267,6 @@ The [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataForm.
 
 {% tabs %}
 {% highlight razor tabtitle="Razor"  %}
-
-
-{% tabs %}
-{% highlight razor tabtitle="Razor"  %}
 @using Syncfusion.Blazor.DataForm
 @using System.ComponentModel.DataAnnotations
 
