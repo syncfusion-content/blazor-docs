@@ -982,6 +982,7 @@ The following example demonstrates how to remove sort columns. It utilizes the *
     {
         listItems.Add(DropDownValue);
         await Grid.ClearSortingAsync(listItems);
+         listItems.Clear();
 
     } 
 }
@@ -1033,7 +1034,7 @@ The following example demonstrates how to remove sort columns. It utilizes the *
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LXLTNMXogWMSEQTv?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BjhJXWtlsYHkfUrY?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 
 ### Clear sorting 
