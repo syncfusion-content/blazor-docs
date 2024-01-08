@@ -24,7 +24,7 @@ The following example demonstrates how to customize the group header caption in 
         <CaptionTemplate>
             @{
                 var data = (context as CaptionTemplateContext);
-                <span>@data.HeaderText-@data.Key : @data.Count Items </span>
+                <span>@data.HeaderText - @data.Key : @data.Count Items </span>
             }
         </CaptionTemplate>
     </GridGroupSettings>
@@ -93,7 +93,7 @@ The following example demonstrates how to customize the group header caption in 
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LXhUWCNmQMWuuKST?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rtBzXMjlgozlWLsz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Adding custom text in group caption
 
@@ -116,7 +116,7 @@ The following example demonstrates how to add a custom text to the group caption
         <CaptionTemplate>
             @{
                 var order = (context as CaptionTemplateContext);
-                <span>@order.Key -@order.Count Records :@order.HeaderText</span>
+                <span>@order.Key - @order.Count Records : @order.HeaderText</span>
             }
         </CaptionTemplate>
     </GridGroupSettings>
@@ -178,7 +178,7 @@ The following example demonstrates how to add a custom text to the group caption
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rDhAWsZONigdARCE?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hXVzjiXvgoxRzKIb?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Render custom component in group caption
 

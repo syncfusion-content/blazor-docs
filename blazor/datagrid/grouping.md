@@ -169,7 +169,7 @@ The following example demonstrates how to set an initial grouping for the **Cust
 
 ## Prevent grouping for particular column
 
-The DataGrid component provides the ability to prevent grouping for a particular column. This can be useful when you have certain columns that you do not want to be included in the grouping process. It can be achieved by setting the [AllowGrouping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowGrouping) property of the particular `Column` to **false**. The following example demonstrates, how to disable grouping for **CustomerID** column. 
+The DataGrid component provides the ability to prevent grouping for a particular column. This can be useful when you have certain columns that you do not want to be included in the grouping process. It can be achieved by setting the [AllowGrouping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_AllowGrouping) property of the particular `Column` to **false**. The following example demonstrates, how to disable grouping for **CustomerID** column. 
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
