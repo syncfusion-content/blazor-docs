@@ -7,7 +7,7 @@ control: DataForm
 documentation: ug
 ---
 
-# Auto generation 
+# Configuring auto generation 
 
 Blazor DataForm component generates the editors automatically based on the primitive property types if we use [FormAutoGenerateItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataForm.FormAutoGenerateItems.html) inside it.The types with its corresponding default editor components listed below for reference.
 

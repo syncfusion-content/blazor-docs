@@ -13,7 +13,7 @@ The classification of methods that can be invoked by using the DataForm instance
 
 ## IsValid
 
- The [IsValid](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataForm.SfDataForm.html#Syncfusion_Blazor_DataForm_SfDataForm_IsValid)
+ The [IsValid](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataForm.SfDataForm.html#Syncfusion_Blazor_DataForm_SfDataForm_IsValid) method evaluates the form data against defined validation rules to determine its validity.
 
 
 {% tabs %}
