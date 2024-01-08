@@ -139,7 +139,7 @@ Add the Syncfusion Blazor Menu Bar component in the **~Pages/.razor** file. If a
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion Blazor Menu Bar component in your default web browser.
 
-![Blazor MenuBar Component](./images/blazor-menubar.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VNLzZiNFUpkeCWTU?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor MenuBar Component](./images/blazor-menubar.png)" %}
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/MenuBar/BlazorWebApp).
 

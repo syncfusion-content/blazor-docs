@@ -126,7 +126,7 @@ In the code example below, an alert dialog is displayed upon clicking the button
 {% endhighlight %}
 {% endtabs %}
 
-![Alert Dialog](./images/blazor-alert-dialog.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LtBJDijvWcTQrfmX?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Alert Dialog](./images/blazor-alert-dialog.png)" %}
 
 ### Show confirm dialog
 
@@ -142,7 +142,7 @@ In the below code example, the confirm dialog displayed on `OK` and `Cancel` but
 {% endhighlight %}
 {% endtabs %}
 
-![Confirm Dialog](./images/blazor-confirm-dialog.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LtrpZitvsGQQrlwh?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Confirm Dialog](./images/blazor-confirm-dialog.png)" %}
 
 ### Show prompt dialog
 
@@ -158,4 +158,4 @@ In the below code example, the prompt dialog displayed on `OK` and `Cancel` butt
 {% endhighlight %}
 {% endtabs %}
 
-![Prompt Dialog](./images/blazor-prompt-dialog.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDLJZWjlMwuMofhf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Prompt Dialog](./images/blazor-prompt-dialog.png)" %}

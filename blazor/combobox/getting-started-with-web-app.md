@@ -102,7 +102,7 @@ Add the Syncfusion Blazor ComboBox component in `.razor` file inside the `Pages`
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion Blazor ComboBox component in your default web browser.
 
-![Blazor ComboBox Component](./images/blazor-combobox-component.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VDVpjWZSLLfFDicu?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor ComboBox Component](./images/blazor-combobox-component.png)" %}
 
 ## Binding data source
 
@@ -138,7 +138,7 @@ After initializing, populate the ComboBox with data using the [DataSource](https
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor ComboBox with Data Binding](./images/blazor-combobox-data-binding.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VjrfNWXyLrQtVQHC?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor ComboBox with Data Binding](./images/blazor-combobox-data-binding.png)" %}
 
 ## Custom values
 
@@ -154,7 +154,7 @@ The ComboBox allows the users to give input as custom value, which is not requir
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor ComboBox with Custom Values](./images/blazor-combobox-custom-values.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNrpjiDSrgjGTmNP?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor ComboBox with Custom Values](./images/blazor-combobox-custom-values.png)" %}
 
 ## Configure the popup list
 
@@ -170,7 +170,7 @@ By default, the width of the popup list automatically adjusts according to the C
 {% endhighlight %}
 {% endtabs %}
 
-![Customizing Popup Height and Width in Blazor ComboBox](./images/blazor-combobox-popup-customization.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZLzNijyrALywiSv?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Customizing Popup Height and Width in Blazor ComboBox](./images/blazor-combobox-popup-customization.png)" %}
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/ComboBox).
 
