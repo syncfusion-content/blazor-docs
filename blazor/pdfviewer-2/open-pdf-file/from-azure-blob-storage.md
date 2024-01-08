@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Open PDF files from Azure Blob Storage in Blazor PDF Viewer Component | Syncfusion
+title: Open PDF files from Azure Storage in PDF Viewer Component | Syncfusion
 description: Learn here all about how to Open PDF files from Azure Blob Storage in Syncfusion Blazor PDF Viewer component and much more details.
 platform: Blazor
 control: PDF Viewer
