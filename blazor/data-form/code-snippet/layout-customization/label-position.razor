@@ -1,0 +1,37 @@
+@using Syncfusion.Blazor.DataForm
+@using System.ComponentModel.DataAnnotations
+
+
+<SfDataForm Model="@RegistrationDetailsModel"
+            LabelPosition="FormLabelPosition.Left">
+
+    <FormValidator>
+        <DataAnnotationsValidator></DataAnnotationsValidator>
+    </FormValidator>
+
+    <FormItems>
+        <FormAutoGenerateItems></FormAutoGenerateItems>
+    </FormItems>
+
+</SfDataForm>
+
+@code {
+
+    public class RegistrationDetails
+    {
+
+        [Required(ErrorMessage = "Please enter your name")]
+        public string Name { get; set; }
+
+        [Required(ErrorMessage = "Please enter your email address")]
+        [EmailAddress(ErrorMessage = "Please enter valid email address")]
+        public string Email { get; set; }
+
+        [Required(ErrorMessage = "You need to agree to the Terms and Conditions")]
+        [Range(typeof(bool), "true", "true", ErrorMessage = "You need to agree to the Terms and Conditions")]
+        [Display(Name="Agree to the terms")]
+        public bool Accept { get; set; }
+    }
+
+    private RegistrationDetails RegistrationDetailsModel = new RegistrationDetails();
+}
