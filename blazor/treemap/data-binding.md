@@ -265,13 +265,13 @@ else
 
 ## Remote data
 
-To interact with the remote data source, provide the endpoint [Url](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_Url) within the [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html) class along with an appropriate [Adaptor](https://blazor.syncfusion.com/documentation/data/adaptors). By default, the [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html) uses [ODataAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors/#odata-adaptor) for remote data-binding.
+To interact with the remote data source, provide the endpoint [Url](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_Url) within the [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html) class along with an appropriate [Adaptor](https://blazor.syncfusion.com/documentation/data/adaptors). By default, the [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html) uses [ODataAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors#odata-adaptor) for remote data-binding.
 
 N> If [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html) is used for data binding then the **TValue** must be provided explicitly to the TreeMap component.
 
 ### Binding with OData services
 
-[OData](https://blazor.syncfusion.com/documentation/data/adaptors/#odata-adaptor) is a standardized protocol for creating and consuming data. User can retrieve data from [OData](https://blazor.syncfusion.com/documentation/data/adaptors/#odata-adaptor) service using the [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html).
+[OData](https://blazor.syncfusion.com/documentation/data/adaptors#odata-adaptor) is a standardized protocol for creating and consuming data. User can retrieve data from [OData](https://blazor.syncfusion.com/documentation/data/adaptors#odata-adaptor) service using the [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html).
 
 ```cshtml
 @using Syncfusion.Blazor.TreeMap
@@ -307,9 +307,9 @@ N> If [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Da
 
 ### Binding with OData V4 services
 
-The [OData V4](https://blazor.syncfusion.com/documentation/data/adaptors/#odatav4-adaptor) is an improved version of [OData](https://blazor.syncfusion.com/documentation/data/adaptors/#odata-adaptor) protocols, and the [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html) can be used to retrieve and consume [OData V4](https://blazor.syncfusion.com/documentation/data/adaptors/#odatav4-adaptor) services.
+The [OData V4](https://blazor.syncfusion.com/documentation/data/adaptors#odatav4-adaptor) is an improved version of [OData](https://blazor.syncfusion.com/documentation/data/adaptors#odata-adaptor) protocols, and the [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html) can be used to retrieve and consume [OData V4](https://blazor.syncfusion.com/documentation/data/adaptors#odatav4-adaptor) services.
 
-N> For more details on OData V4 services, refer to the [OData documentation](https://blazor.syncfusion.com/documentation/data/adaptors/#odata-adaptor) to bind [OData V4](https://blazor.syncfusion.com/documentation/data/adaptors/#odatav4-adaptor) service using the [OData V4 Adaptor](https://blazor.syncfusion.com/documentation/data/adaptors/#odatav4-adaptor).
+N> For more details on OData V4 services, refer to the [OData documentation](https://blazor.syncfusion.com/documentation/data/adaptors#odata-adaptor) to bind [OData V4](https://blazor.syncfusion.com/documentation/data/adaptors#odatav4-adaptor) service using the [OData V4 Adaptor](https://blazor.syncfusion.com/documentation/data/adaptors#odatav4-adaptor).
 
 ```cshtml
 @using Syncfusion.Blazor.TreeMap
@@ -343,7 +343,7 @@ N> For more details on OData V4 services, refer to the [OData documentation](htt
 
 ### Web API
 
-Use [WebApiAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors/?no-cache=1#web-api-adaptor) to bind TreeMap with Web API, created using OData endpoint.
+Use [WebApiAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors?no-cache=1#web-api-adaptor) to bind TreeMap with Web API, created using OData endpoint.
 
 ```cshtml
 @using Syncfusion.Blazor.TreeMap
@@ -568,7 +568,7 @@ For instance, bind the data directly from the **OrderDataAccessLayer** class and
     }
 ```
 
-On the other hand, to configure the TreeMap using Web API, provide the appropriate endpoint URL in the [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html) along with [Adaptor](https://blazor.syncfusion.com/documentation/data/adaptors). Here, [WebApiAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors/?no-cache=1#web-api-adaptor) is used to interact with the Web API to consume data from the Entity Framework appropriately.
+On the other hand, to configure the TreeMap using Web API, provide the appropriate endpoint URL in the [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html) along with [Adaptor](https://blazor.syncfusion.com/documentation/data/adaptors). Here, [WebApiAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors?no-cache=1#web-api-adaptor) is used to interact with the Web API to consume data from the Entity Framework appropriately.
 
 ```cshtml
 @using Syncfusion.Blazor.TreeMap
