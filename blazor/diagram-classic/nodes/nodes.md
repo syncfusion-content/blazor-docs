@@ -130,13 +130,13 @@ public void AddNode()
 
 ## Add node from palette
 
-Nodes can be predefined and added to the palette, and can be dropped into the diagram when needed. For more information about adding nodes from symbol palette, refer to the [Symbol Palette](https://help.syncfusion.com/cr/blazor).
+Nodes can be predefined and added to the palette, and can be dropped into the diagram when needed. For more information about adding nodes from symbol palette, refer to the [Symbol Palette](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SymbolPalette.html).
 
 * Once you drag a node/connector from the palette to the diagram, the following events can be used to do the customization.
-* When a symbol is dragged into a diagram from symbol palette, the [DragEnter](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.IBlazorDragEnterEventArgs.html) event gets triggered.
+* When a symbol is dragged into a diagram from symbol palette, the [DragEnter](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramEvents.html#Syncfusion_Blazor_Diagrams_DiagramEvents_DragEnter) event gets triggered.
 * When a symbol is dragged over a diagram, the [DragOver](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.IDragOverEventArgs.html) event gets triggered.
 * When a symbol is dragged and dropped from symbol palette to diagram area, the [Drop](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.IBlazorDropEventArgs.html) event gets triggered.
-* When a symbol is dragged outside of the diagram, the [DragLeave](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.IBlazorDragLeaveEventArgs.html) event gets triggered.
+* When a symbol is dragged outside of the diagram, the [DragLeave](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramEvents.html#Syncfusion_Blazor_Diagrams_DiagramEvents_DragLeave) event gets triggered.
 
 For more information about adding nodes from symbol palette, refer to the [Symbol Palette](../symbol-palette).
 
