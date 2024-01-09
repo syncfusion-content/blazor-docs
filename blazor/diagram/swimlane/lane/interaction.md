@@ -30,8 +30,8 @@ The following image shows how resize the lane.
 ## Lane swapping
 
 * Lanes can be swapped by dragging the lanes over another lane.
-* The helper should indicate the insertion point when lane swapping. The following image shows how to swap lanes.
-The following image shows how swapping the lane. 
+* The helper should indicate the insertion point when lane swapping. 
+The following image shows how to swap lanes.
 
 ![Lane Swapping](../Swimlane-images/Lane_Swapping.gif)
 
