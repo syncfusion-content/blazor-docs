@@ -243,7 +243,7 @@ Let us create and add a [Node](https://help.syncfusion.com/cr/blazor/Syncfusion.
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor Diagram Component](../images/blazor-diagram-component.png)
+![Blazor Diagram Component](images/blazor-diagram-component.png)
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/DiagramComponent).
 
@@ -325,7 +325,7 @@ A built-in automatic layout algorithm is specifically designed for organizationa
 {% endtabs %}
 
 
-![Blazor Organization Diagram ChildNode in Vertical Right](../images/blazor-diagram-childnode-at-vertical-right.png)
+![Blazor Organization Diagram ChildNode in Vertical Right](images/blazor-diagram-childnode-at-vertical-right.png)
 
 ## See also
 
