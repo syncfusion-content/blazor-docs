@@ -19,101 +19,12 @@ The [OnSubmit](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataForm.
 {% tabs %}
 {% highlight razor tabtitle="Model" %}
 
-@using Syncfusion.Blazor.DataForm
-@using System.ComponentModel.DataAnnotations
-
-<SfDataForm Width="50%"
-            Model="@RegistrationDetailsModel"
-            OnSubmit="SubmitHandler">
-
-    <FormValidator>
-        <DataAnnotationsValidator></DataAnnotationsValidator>
-    </FormValidator>
-
-    <FormItems>
-        <FormAutoGenerateItems></FormAutoGenerateItems>
-    </FormItems>
-
-</SfDataForm>
-
-@code {
-
-    public void SubmitHandler()
-    {
-        // Here, you can include your required logic.
-    }
-
-    public class RegistrationDetails
-    {
-
-        [Required(ErrorMessage = "Please enter your name")]
-        public string Name { get; set; }
-
-        [Required(ErrorMessage = "Please enter your email address")]
-        [EmailAddress(ErrorMessage = "Please enter valid email address")]
-        public string Email { get; set; }
-    }
-
-    private RegistrationDetails RegistrationDetailsModel = new RegistrationDetails();
-}
+{% include_relative code-snippet\events\onsubmit.razor %}
 
 {% endhighlight %}
 {% highlight razor tabtitle="EditContext" %}
 
-@using Syncfusion.Blazor.DataForm
-@using System.ComponentModel.DataAnnotations
-
-<SfDataForm Width="50%"
-            EditContext="@RegistrationDetailsContext"
-            OnSubmit="SubmitHandler">
-
-    <FormValidator>
-        <DataAnnotationsValidator></DataAnnotationsValidator>
-    </FormValidator>
-
-    <FormItems>
-        <FormAutoGenerateItems></FormAutoGenerateItems>
-    </FormItems>
-
-</SfDataForm>
-
-@code {
-
-    EditContext RegistrationDetailsContext { get; set; }
-
-    public void SubmitHandler(EditContext editContext)
-    {
-        bool isValid = editContext.Validate();
-
-        if(isValid)
-        {
-            // Here you can handle logic when form submission is valid
-        }
-        else
-        {
-            // Here you can handle logic when form submission is invalid
-        }
-    }
-
-    protected override void OnInitialized()
-    {
-        RegistrationDetailsContext = new EditContext(RegistrationDetailsModel);
-        base.OnInitialized();
-    }
-
-    public class RegistrationDetails
-    {
-
-        [Required(ErrorMessage = "Please enter your name")]
-        public string Name { get; set; }
-
-        [Required(ErrorMessage = "Please enter your email address")]
-        [EmailAddress(ErrorMessage = "Please enter valid email address")]
-        public string Email { get; set; }
-    }
-
-    private RegistrationDetails RegistrationDetailsModel = new RegistrationDetails();
-}
+{% include_relative code-snippet\events\onsubmit-editcontext.razor %}
 
 {% endhighlight %}
 {% endtabs %}
@@ -127,94 +38,12 @@ he [OnValidSubmit](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataF
 {% tabs %}
 {% highlight razor tabtitle="Model" %}
 
-@using Syncfusion.Blazor.DataForm
-@using System.ComponentModel.DataAnnotations
-
-
-<SfDataForm Width="50%"
-            Model="@RegistrationDetailsModel"
-            OnValidSubmit="OnValidSubmitHandler">
-
-    <FormValidator>
-        <DataAnnotationsValidator></DataAnnotationsValidator>
-    </FormValidator>
-
-    <FormItems>
-        <FormAutoGenerateItems></FormAutoGenerateItems>
-    </FormItems>
-
-</SfDataForm>
-
-@code {
-
-    public void OnValidSubmitHandler()
-    {
-        // Here, you can include your required logic.
-    }
-
-    public class RegistrationDetails
-    {
-
-        [Required(ErrorMessage = "Please enter your name")]
-        public string Name { get; set; }
-
-        [Required(ErrorMessage = "Please enter your email address")]
-        [EmailAddress(ErrorMessage = "Please enter valid email address")]
-        public string Email { get; set; }
-    }
-
-    private RegistrationDetails RegistrationDetailsModel = new RegistrationDetails();
-}
+{% include_relative code-snippet\events\onvalidsubmit-model.razor %}
 
 {% endhighlight %}
 {% highlight razor tabtitle="EditContext" %}
 
-@using Syncfusion.Blazor.DataForm
-@using System.ComponentModel.DataAnnotations
-
-
-<SfDataForm Width="50%"
-            EditContext="@RegistrationDetailsContext"
-            OnValidSubmit="OnValidSubmitHandler">
-
-    <FormValidator>
-        <DataAnnotationsValidator></DataAnnotationsValidator>
-    </FormValidator>
-
-    <FormItems>
-        <FormAutoGenerateItems></FormAutoGenerateItems>
-    </FormItems>
-
-</SfDataForm>
-
-@code {
-
-    EditContext RegistrationDetailsContext { get; set; }
-
-    protected override void OnInitialized()
-    {
-        RegistrationDetailsContext = new EditContext(RegistrationDetailsModel);
-        base.OnInitialized();
-    }
-
-    public void OnValidSubmitHandler(EditContext editContext)
-    {
-        // Here, you can include your required logic.
-    }
-
-    public class RegistrationDetails
-    {
-
-        [Required(ErrorMessage = "Please enter your name")]
-        public string Name { get; set; }
-
-        [Required(ErrorMessage = "Please enter your email address")]
-        [EmailAddress(ErrorMessage = "Please enter valid email address")]
-        public string Email { get; set; }
-    }
-
-    private RegistrationDetails RegistrationDetailsModel = new RegistrationDetails();
-}
+{% include_relative code-snippet\events\onvalidsubmit-editcontext.razor %}
 
 {% endhighlight %}
 {% endtabs %}
@@ -226,94 +55,12 @@ The [OnInvalidSubmit](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Da
 {% tabs %}
 {% highlight razor tabtitle="Model" %}
 
-@using Syncfusion.Blazor.DataForm
-@using System.ComponentModel.DataAnnotations
-
-
-<SfDataForm Width="50%"
-            Model="@RegistrationDetailsModel"
-            OnInvalidSubmit="OnInvalidSubmitHandler">
-
-    <FormValidator>
-        <DataAnnotationsValidator></DataAnnotationsValidator>
-    </FormValidator>
-
-    <FormItems>
-        <FormAutoGenerateItems></FormAutoGenerateItems>
-    </FormItems>
-
-</SfDataForm>
-
-@code {
-
-    public void OnInvalidSubmitHandler()
-    {
-        // Here, you can include your required logic.
-    }
-
-    public class RegistrationDetails
-    {
-
-        [Required(ErrorMessage = "Please enter your name")]
-        public string Name { get; set; }
-
-        [Required(ErrorMessage = "Please enter your email address")]
-        [EmailAddress(ErrorMessage = "Please enter valid email address")]
-        public string Email { get; set; }
-    }
-
-    private RegistrationDetails RegistrationDetailsModel = new RegistrationDetails();
-}
+{% include_relative code-snippet\events\oninvalidsubmit-model.razor %}
 
 {% endhighlight %}
 {% highlight razor tabtitle="EditContext" %}
-@using Syncfusion.Blazor.DataForm
-@using System.ComponentModel.DataAnnotations
 
-
-<SfDataForm Width="50%"
-            EditContext="@RegistrationDetailsContext"
-            OnInvalidSubmit="OnInvalidSubmitHandler">
-
-    <FormValidator>
-        <DataAnnotationsValidator></DataAnnotationsValidator>
-    </FormValidator>
-
-    <FormItems>
-        <FormAutoGenerateItems></FormAutoGenerateItems>
-    </FormItems>
-
-</SfDataForm>
-
-@code {
-
-
-    EditContext RegistrationDetailsContext { get; set; }
-
-    protected override void OnInitialized()
-    {
-        RegistrationDetailsContext = new EditContext(RegistrationDetailsModel);
-        base.OnInitialized();
-    }
-
-    public void OnInvalidSubmitHandler(EditContext editContext)
-    {
-        // Here, you can include your required logic.
-    }
-
-    public class RegistrationDetails
-    {
-
-        [Required(ErrorMessage = "Please enter your name")]
-        public string Name { get; set; }
-
-        [Required(ErrorMessage = "Please enter your email address")]
-        [EmailAddress(ErrorMessage = "Please enter valid email address")]
-        public string Email { get; set; }
-    }
-
-    private RegistrationDetails RegistrationDetailsModel = new RegistrationDetails();
-}
+{% include_relative code-snippet\events\oninvalidsubmit-editcontext.razor %}
 
 {% endhighlight %}
 {% endtabs %}
@@ -325,94 +72,12 @@ The [OnUpdate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataForm.
 {% tabs %}
 {% highlight razor tabtitle="Model" %}
 
-@using Syncfusion.Blazor.DataForm
-@using System.ComponentModel.DataAnnotations
-
-
-<SfDataForm Width="50%"
-            Model="@RegistrationDetailsModel"
-            OnUpdate="OnUpdateHandler">
-
-    <FormValidator>
-        <DataAnnotationsValidator></DataAnnotationsValidator>
-    </FormValidator>
-
-    <FormItems>
-        <FormAutoGenerateItems></FormAutoGenerateItems>
-    </FormItems>
-
-</SfDataForm>
-
-@code {
-
-    public void OnUpdateHandler(FormUpdateEventArgs arguments)
-    {
-        // Here, you can include your required logic.
-    }
-
-    public class RegistrationDetails
-    {
-
-        [Required(ErrorMessage = "Please enter your name")]
-        public string Name { get; set; }
-
-        [Required(ErrorMessage = "Please enter your email address")]
-        [EmailAddress(ErrorMessage = "Please enter valid email address")]
-        public string Email { get; set; }
-    }
-
-    private RegistrationDetails RegistrationDetailsModel = new RegistrationDetails();
-}
+{% include_relative code-snippet\events\onupdate-model.razor %}
 
 {% endhighlight %}
 {% highlight razor tabtitle="EditContext" %}
 
-@using Syncfusion.Blazor.DataForm
-@using System.ComponentModel.DataAnnotations
-
-
-<SfDataForm Width="50%"
-            EditContext="@RegistrationDetailsContext"
-            OnUpdate="OnUpdateHandler">
-
-    <FormValidator>
-        <DataAnnotationsValidator></DataAnnotationsValidator>
-    </FormValidator>
-
-    <FormItems>
-        <FormAutoGenerateItems></FormAutoGenerateItems>
-    </FormItems>
-
-</SfDataForm>
-
-@code {
-
-    EditContext RegistrationDetailsContext { get; set; }
-
-    protected override void OnInitialized()
-    {
-        RegistrationDetailsContext = new EditContext(RegistrationDetailsModel);
-        base.OnInitialized();
-    }
-
-    public void OnUpdateHandler(FormUpdateEventArgs arguments)
-    {
-        // Here, you can include your required logic.
-    }
-
-    public class RegistrationDetails
-    {
-
-        [Required(ErrorMessage = "Please enter your name")]
-        public string Name { get; set; }
-
-        [Required(ErrorMessage = "Please enter your email address")]
-        [EmailAddress(ErrorMessage = "Please enter valid email address")]
-        public string Email { get; set; }
-    }
-
-    private RegistrationDetails RegistrationDetailsModel = new RegistrationDetails();
-}
+{% include_relative code-snippet\events\onupdate-editcontext.razor %}
 
 {% endhighlight %}
 {% endtabs %}

@@ -1,0 +1,56 @@
+@using Syncfusion.Blazor.DataForm
+@using System.ComponentModel.DataAnnotations
+@using Syncfusion.Blazor.Inputs
+@using Syncfusion.Blazor.Calendars
+
+
+<SfDataForm ID="MyForm"
+            Model="@CreditCardModel"
+            Width="50%">
+            
+    <FormValidator>
+        <DataAnnotationsValidator></DataAnnotationsValidator>
+    </FormValidator>
+
+    <FormItems>
+        <FormItem Field="@nameof(CreditCardModel.Name)" Placeholder="e.g. Andrew Fuller" LabelText="Name on card" ></FormItem>
+        <FormItem Field="@nameof(CreditCardModel.CardNumber)" LabelText="Card Number" >
+        </FormItem>
+        <FormItem Field="@nameof(CreditCardModel.CVV)">
+            <Template>
+                <label class="e-form-label">CVV*:</label>
+                <SfMaskedTextBox Mask="000" @bind-Value="CreditCardModel.CVV" ></SfMaskedTextBox>
+            </Template>
+        </FormItem>
+        <FormItem Field="@nameof(CreditCardModel.ExpiryDate)">
+            <Template>
+                <label class="e-form-label">Expiry Date*:</label>
+                <SfDatePicker TValue="DateTime?" Format="MM/yy" EnableMask="true"></SfDatePicker>
+            </Template>
+        </FormItem>
+    </FormItems>
+
+</SfDataForm>
+
+
+@code {
+    public char PromptCharacter { get; set; } = ' ';
+
+    public class CreditCard
+    {
+        [Required(ErrorMessage = "Please enter the name on card")]
+        public string Name { get; set; }
+
+        [Required(ErrorMessage = "Please enter the card number")]
+        [CreditCard]
+        public string CardNumber { get; set; }
+
+        [Required(ErrorMessage = "Please enter cvv number")]
+        public string CVV { get; set; }
+
+        [Required(ErrorMessage = "Please select/enter expiry date")]
+        public DateTime? ExpiryDate { get; set; }
+    }
+
+    private CreditCard CreditCardModel = new CreditCard();
+}

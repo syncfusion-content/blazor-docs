@@ -1,0 +1,73 @@
+@using Syncfusion.Blazor.DataForm
+@using System.ComponentModel.DataAnnotations
+@using Microsoft.AspNetCore.Components.Forms
+@using Syncfusion.Blazor.Inputs
+@using Syncfusion.Blazor.Buttons
+@using Syncfusion.Blazor.Calendars;
+@using FluentValidation
+@using Blazored.FluentValidation
+
+<SfDataForm ID="MyForm"
+            Model="@PaymentDetailsModel"
+            Width="50%">
+    <FormValidator>
+        <FluentValidationValidator Validator="PaymentDetailsValidation" />
+    </FormValidator>
+    <FormItems>
+        <FormItem Field="@nameof(PaymentDetailsModel.Name)" LabelText="Full Name on Card"></FormItem>
+        <FormItem Field="@nameof(PaymentDetailsModel.CardNumber)" LabelText="Card Number"></FormItem>
+        <FormItem Field="@nameof(PaymentDetailsModel.ExpirationDate)" LabelText="Expiration Date">
+            <Template>
+                <label class="e-form-label">Expiration Date</label>
+                <SfDatePicker EnableMask="true" Format="MM/yy" @bind-Value="@PaymentDetailsModel.ExpirationDate">
+                </SfDatePicker>
+            </Template>
+        </FormItem>
+        <FormItem Field="@nameof(PaymentDetailsModel.CVV)">
+            <Template>
+                <label class="e-form-label">CVV/CVC</label>
+                <SfMaskedTextBox Mask="000" PromptChar="@PromptCharacter" @bind-Value="@PaymentDetailsModel.CVV"></SfMaskedTextBox>
+            </Template>
+        </FormItem>
+        <FormItem Field="@nameof(PaymentDetailsModel.BillingAddress)" LabelText="Billing Address" EditorType="FormEditorType.TextArea">
+        </FormItem>
+        <FormItem Field="@nameof(PaymentDetailsModel.Accept)" EditorType="FormEditorType.Switch" LabelText="I agree to the terms and conditions"></FormItem>
+    </FormItems>
+
+    <FormButtons>
+        <SfButton>Pay</SfButton>
+    </FormButtons>
+
+</SfDataForm>
+
+@code {
+
+    char PromptCharacter { get; set; } = ' ';
+
+    public class PaymentDetails
+    {
+
+        [Required(ErrorMessage = "Enter Name on the card")]
+        public string Name { get; set; }
+
+        [Required(ErrorMessage = "Enter Billing Address")]
+        public string BillingAddress { get; set; }
+
+        [Required(ErrorMessage = "Enter Card number")]
+        public string CardNumber { get; set; }
+
+        [Required(ErrorMessage = "Enter Count here")]
+        public DateTime? ExpirationDate { get; set; }
+
+        [Required(ErrorMessage = "Enter CVV/CVC")]
+        public string CVV { get; set; }
+
+        [Required(ErrorMessage = "You need to agree to the Terms and Conditions")]
+        [Range(typeof(bool), "true", "true", ErrorMessage = "You need to agree to the Terms and Conditions")]
+        public bool Accept { get; set; }
+    }
+
+    private PaymentDetails PaymentDetailsModel = new PaymentDetails();
+
+    PaymentDetailsValidator PaymentDetailsValidation = new PaymentDetailsValidator();
+}
