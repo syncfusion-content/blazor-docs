@@ -106,7 +106,7 @@ Add the Syncfusion Blazor Button component in the **~Pages/.razor** file. If an 
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion Blazor Button component in your default web browser.
 
-![Blazor Button Component](./images/blazor-button-component.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VNVTXsjfpDNEbQKu?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Button Component](./images/blazor-button-component.png)" %}
 
 N> You can also explore our [Blazor Button example](https://blazor.syncfusion.com/demos/buttons/default-functionalities?) that shows how to render and configure the button.
 

@@ -222,7 +222,7 @@ The following demo is designed for simple payment module that enable or disable 
     }
 </style>
 ```
-
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VNBgWVMgUGQmZvwB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 
 ![Blazor Accordion Component Wizard](../images/blazor-accordion-wizard.png)

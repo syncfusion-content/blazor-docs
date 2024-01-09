@@ -48,6 +48,7 @@ The [Blazor Context Menu](https://www.syncfusion.com/blazor-components/blazor-co
 
 ```
 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rjrUsBrmqknfsARd?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor ContextMenu with Icon](./images/blazor-contextmenu-icon.png)
 
@@ -84,5 +85,6 @@ Navigation in Context Menu is used to navigate to the other web page when menu i
 
 ```
 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LtVACrLGKuddWNNk?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Navigation in Blazor ContextMenu](./images/blazor-contextmenu-navigation.png)
