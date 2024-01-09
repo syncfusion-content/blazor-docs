@@ -8,7 +8,7 @@ documentation: ug
 ---
 
 
-# Pager Component with Dropdown
+# Pager with Dropdown in Blazor Pager Component
 
 ## Page size list
 
@@ -28,4 +28,4 @@ In the following sample, the selected value in a dropdown will be set to the [Pa
 
 ```
 
-![Blazor Pager with Dropdown](./images/blazor-pager-with-drop-down.png)
+![Blazor Pager with Dropdown.](./images/blazor-pager-with-drop-down.png)
