@@ -11,11 +11,15 @@ documentation: ug
 
 To save a PDF file to Azure Blob Storage , you can follow the steps below
 
-**Step 1:** Create a Simple PDF Viewer Sample in blazor
+**Step 1:** Create the Azure Blob Storage account
+
+Log in to the Azure Portal. Create a new Storage Account with preferred settings. Note access keys during the setup. Within the Storage Account, create a Blob Container following the steps in this [link](https://learn.microsoft.com/en-us/azure/storage/common/storage-account-create?toc=%2Fazure%2Fstorage%2Fblobs%2Ftoc.json&tabs=azure-portal).
+
+**Step 2:** Create a Simple PDF Viewer Sample in blazor
 
 Start by following the steps provided in this [link](https://blazor.syncfusion.com/documentation/pdfviewer-2/getting-started/server-side-application) to create a simple PDF viewer sample in blazor. This will give you a basic setup of the PDF viewer component.
 
-**Step 2:** Include the following namespaces in the **Index.razor** file.
+**Step 3:** Include the following namespaces in the **Index.razor** file.
 
 1. Import the required namespaces at the top of the file:
 
@@ -26,7 +30,7 @@ Start by following the steps provided in this [link](https://blazor.syncfusion.c
 @using Syncfusion.Blazor.Buttons;
 ```
 
-**Step 3:** Add the below code example to save the downloaded PDF files to Azure Blob Storage container
+**Step 4:** Add the below code example to save the downloaded PDF files to Azure Blob Storage container
 
 ```csharp
 

@@ -10,11 +10,15 @@ documentation: ug
 
 To load a PDF file from Google Drive in a PDF Viewer, you can follow the steps below
 
-**Step 1:** Create a Simple PDF Viewer Sample in blazor
+**Step 1** Set up Google Drive API
+
+You must set up a project in the Google Developers Console and enable the Google Drive API. Obtain the necessary credentials to access the API. For more information, view the official [link](https://developers.google.com/drive/api/guides/enable-sdk).
+
+**Step 2:** Create a Simple PDF Viewer Sample in blazor
 
 Start by following the steps provided in this [link](https://blazor.syncfusion.com/documentation/pdfviewer-2/getting-started/server-side-application) to create a simple PDF viewer sample in blazor. This will give you a basic setup of the PDF viewer component.
 
-**Step 2:** Include the following namespaces in the **Index.razor** file.
+**Step 3:** Include the following namespaces in the **Index.razor** file.
 
 1. Import the required namespaces at the top of the file:
 
@@ -27,7 +31,7 @@ Start by following the steps provided in this [link](https://blazor.syncfusion.c
 @using Syncfusion.Blazor.SfPdfViewer;
 ```
 
-**Step 3:** Add the below code example to load a PDF from `Google drive` file.
+**Step 4:** Add the below code example to load a PDF from `Google drive` file.
 
 ```csharp
 @page "/"
