@@ -136,7 +136,7 @@ Add the Syncfusion Blazor Toolbar component in the **~/Pages/Index.razor** file.
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion Blazor Toolbar component in your default web browser.
 
-![Blazor Toolbar Component](./images/blazor-toolbar.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LjVJXMtOpLdLxAFM?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Toolbar Component](./images/blazor-toolbar.png)" %}
 
 ## See Also
 
