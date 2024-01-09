@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Lane interactions in Blazor Diagram Component | Syncfusion
-description: How to select, resize(with and without selection) and swap the lane and how to add the child element into lane?
+description: How to select, resize(with and without selection) and swap the lane and how to add the child element into lane?.
 platform: Blazor
 control: Diagram Component
 documentation: ug

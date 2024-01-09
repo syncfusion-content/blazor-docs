@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Phase in Blazor Diagram Component | Syncfusion
-description: Learn here all about Phase support in Syncfusion Blazor Diagram component, its elements and more.
+description: Checkout and learn here all about Phase support in Syncfusion Blazor Diagram component, its elements and more.
 platform: Blazor
 control: Diagram Component
 documentation: ug
