@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Swimlane in Blazor Diagram Component | Syncfusion
-description: Checkout and learn here all about swimlane in Syncfusion Blazor Diagram component and much more.
+description: Learn here all about swimlane in Syncfusion Blazor Diagram component.
 platform: Blazor
 control: Diagram Component
 documentation: ug
