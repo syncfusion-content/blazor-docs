@@ -7,7 +7,7 @@ control: Dropdown Tree
 documentation: ug
 ---
 
-# Templates in Dropdown Tree
+# Templates in Blazor Dropdown Tree Component
 
 The Dropdown Tree has been provided with several options to customize each list item, header, and footer elements.
 
@@ -60,7 +60,7 @@ The variable `context` holds the data of the current node.
 }
 ```
 
-![Blazor Dropdown Tree with ItemTemplate](./images/template/blazor-dropdowntree-item-template.png)
+![Blazor Dropdown Tree with ItemTemplate.](./images/template/blazor-dropdowntree-item-template.png)
 
 ## Header template
 
@@ -120,7 +120,7 @@ In the following sample, the header is customized with the custom element.
 </style>
 ```
 
-![Blazor Dropdown Tree with HeaderTemplate](./images/template/blazor-dropdowntree-header-template.png)
+![Blazor Dropdown Tree with HeaderTemplate.](./images/template/blazor-dropdowntree-header-template.png)
 
 ## Footer template
 
@@ -181,7 +181,7 @@ In the following sample, the footer element displays the total number of employe
 </style>
 ```
 
-![Blazor Dropdown Tree with Footer Template](./images/template/blazor-dropdowntree-footer-template.png)
+![Blazor Dropdown Tree with Footer Template.](./images/template/blazor-dropdowntree-footer-template.png)
 
 ## No records template
 
@@ -216,7 +216,7 @@ In the following sample, popup list content displays the notification of no data
 }
 ```
 
-![Blazor Dropdown Tree without Data](./images/template/blazor-dropdowntree-nodata-template.png)
+![Blazor Dropdown Tree without Data.](./images/template/blazor-dropdowntree-nodata-template.png)
 
 ## Action failure template
 
@@ -265,7 +265,7 @@ In the following sample, when the data fetch request fails, the Dropdown Tree di
 }
 ```
 
-![Blazor Dropdown Tree with Action Failure Template](./images/template/blazor-dropdowntree-failure-template.png)
+![Blazor Dropdown Tree with Action Failure Template.](./images/template/blazor-dropdowntree-failure-template.png)
 
 ## Placeholder
 
@@ -302,7 +302,7 @@ Use the [Placeholder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Na
 }
 ```
 
-![Blazor Dropdown Tree with place holder](./images/template/blazor-dropdowntree-placeholder.png)
+![Blazor Dropdown Tree with place holder.](./images/template/blazor-dropdowntree-placeholder.png)
 
 ## FloatLabel
 
@@ -350,4 +350,4 @@ The `FloatLabelType` as  `Auto` is demonstrated in the following code sample.
 }
 ```
 
-![Blazor Dropdown Tree with place holder](./images/template/blazor-dropdowntree-float-label.png)
+![Blazor Dropdown Tree with place holder.](./images/template/blazor-dropdowntree-float-label.png)

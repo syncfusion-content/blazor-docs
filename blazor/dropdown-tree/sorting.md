@@ -7,7 +7,7 @@ control: Dropdown Tree
 documentation: ug
 ---
 
-# Sorting in Dropdown Tree
+# Sorting in Blazor Dropdown Tree Component
 
 The [SortOrder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfDropDownTree-2.html#Syncfusion_Blazor_Navigations_SfDropDownTree_2_SortOrder) property is used to sort the Dropdown Tree nodes in `Ascending` or `Descending` order in the Blazor Dropdown Tree component. The default value of [SortOrder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfDropDownTree-2.html#Syncfusion_Blazor_Navigations_SfDropDownTree_2_SortOrder) property is `None`.
 
@@ -63,4 +63,4 @@ In the following example, the [SortOrder](https://help.syncfusion.com/cr/blazor/
 }
 ```
 
-![Blazor Dropdown Tree with sortOrder descending](./images/blazor-dropdowntree-component-sort-order.png)
+![Blazor Dropdown Tree with sortOrder descending.](./images/blazor-dropdowntree-component-sort-order.png)
