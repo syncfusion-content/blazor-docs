@@ -9,7 +9,7 @@ documentation: ug
 
 # Series in Blazor Smith Chart Component
 
-The [SmithChartSeries](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartSeries.html) is the visual representation of the data. Using the following options in the [SmithChartSeries](hhttps://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartSeries.html), each series can be customized in the Smith Chart.
+The [SmithChartSeries](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartSeries.html) is the visual representation of the data. Using the following options in the [SmithChartSeries](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartSeries.html), each series can be customized in the Smith Chart.
 
 * [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartSeries.html#Syncfusion_Blazor_Charts_SmithChartSeries_Fill) - Used to customize the fill color for the series.
 * [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartSeries.html#Syncfusion_Blazor_Charts_SmithChartSeries_Visible) - Used to handle the visibility of the series.
