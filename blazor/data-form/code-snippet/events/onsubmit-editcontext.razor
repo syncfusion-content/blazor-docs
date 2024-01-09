@@ -1,0 +1,54 @@
+@using Syncfusion.Blazor.DataForm
+@using System.ComponentModel.DataAnnotations
+
+<SfDataForm Width="50%"
+            EditContext="@RegistrationDetailsContext"
+            OnSubmit="SubmitHandler">
+
+    <FormValidator>
+        <DataAnnotationsValidator></DataAnnotationsValidator>
+    </FormValidator>
+
+    <FormItems>
+        <FormAutoGenerateItems></FormAutoGenerateItems>
+    </FormItems>
+
+</SfDataForm>
+
+@code {
+
+    EditContext RegistrationDetailsContext { get; set; }
+
+    public void SubmitHandler(EditContext editContext)
+    {
+        bool isValid = editContext.Validate();
+
+        if(isValid)
+        {
+            // Here you can handle logic when form submission is valid
+        }
+        else
+        {
+            // Here you can handle logic when form submission is invalid
+        }
+    }
+
+    protected override void OnInitialized()
+    {
+        RegistrationDetailsContext = new EditContext(RegistrationDetailsModel);
+        base.OnInitialized();
+    }
+
+    public class RegistrationDetails
+    {
+
+        [Required(ErrorMessage = "Please enter your name")]
+        public string Name { get; set; }
+
+        [Required(ErrorMessage = "Please enter your email address")]
+        [EmailAddress(ErrorMessage = "Please enter valid email address")]
+        public string Email { get; set; }
+    }
+
+    private RegistrationDetails RegistrationDetailsModel = new RegistrationDetails();
+}

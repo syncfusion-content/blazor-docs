@@ -1,0 +1,39 @@
+
+@using Syncfusion.Blazor.DataForm
+@using System.ComponentModel.DataAnnotations
+
+
+<SfDataForm Width="50%"
+            Model="@RegistrationDetailsModel"
+            OnUpdate="OnUpdateHandler">
+
+    <FormValidator>
+        <DataAnnotationsValidator></DataAnnotationsValidator>
+    </FormValidator>
+
+    <FormItems>
+        <FormAutoGenerateItems></FormAutoGenerateItems>
+    </FormItems>
+
+</SfDataForm>
+
+@code {
+
+    public void OnUpdateHandler(FormUpdateEventArgs arguments)
+    {
+        // Here, you can include your required logic.
+    }
+
+    public class RegistrationDetails
+    {
+
+        [Required(ErrorMessage = "Please enter your name")]
+        public string Name { get; set; }
+
+        [Required(ErrorMessage = "Please enter your email address")]
+        [EmailAddress(ErrorMessage = "Please enter valid email address")]
+        public string Email { get; set; }
+    }
+
+    private RegistrationDetails RegistrationDetailsModel = new RegistrationDetails();
+}
