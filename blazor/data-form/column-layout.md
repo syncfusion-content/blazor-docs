@@ -7,7 +7,7 @@ control: DataForm
 documentation: ug
 ---
 
-# Column layout in DataForm component
+# Column and column span in Blazor DataForm Component
 
 This segment provides guidance on dividing the form field editors inside the DataForm component into a column-based layout. The [ColumnCount](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataForm.SfDataForm.html#Syncfusion_Blazor_DataForm_SfDataForm_ColumnCount) property allows us to specify the number of columns into which the DataForm should be divided. 
 
@@ -35,9 +35,9 @@ Additionally, by utilizing the [ColumnSpan](https://help.syncfusion.com/cr/blazo
 
 In the provided example, the layout of the DataForm is segmented into six equal columns, with the editor fields distributed accordingly, depending on the column span allocated to each one.
 
-![Blazor DataForm Column Layout](images/blazor_dataform_column_span.png)
+![Blazor DataForm Column Layout.](images/blazor_dataform_button_column_span.png)
 
 
 ## See Also
 
-* [Adaptive Layout structure](https://blazor.syncfusion.com/demos/data-form/adaptive-layout?theme=fluent)
+* [Adaptive Layout structure](https://blazor.syncfusion.com/demos/data-form/adaptive-layout?theme=bootstrap5)

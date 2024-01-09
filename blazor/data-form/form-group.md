@@ -7,7 +7,7 @@ control: DataForm
 documentation: ug
 ---
 
-# Form group in DataForm component
+# Form Groups in Blazor DataForm Component
 
 In DataForm , [FormGroup](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataForm.FormGroup.html) feature provides a way to organize the `FormItem` and `FormAutoGenerateItems` with descriptive label text and a layout organized into columns.
 
@@ -23,7 +23,7 @@ The below example showcases how to configure `FormGroup` within  DataForm compon
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor DataForm Form Group](images/blazor_dataform_single_formgroup.png)
+![Blazor DataForm Form Group.](images/blazor_dataform_single_formgroup.png)
 
 ## Column layout for the group
 
@@ -42,7 +42,7 @@ The DataForm component provides the functionality to organize various form group
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor DataForm Form Group](images/blazor_dataform_multiple_formgroup.png)
+![Blazor DataForm Form Group.](images/blazor_dataform_multiple_formgroup.png)
 
 ## Configure the column spacing 
 
@@ -63,7 +63,7 @@ This section explains how to configure the DataForm component on dividing the co
 
 In the provided example, the DataForm is divided into two sections, with each section populating its respective `FormGroup`. The first group is further segmented into six subsections, with the elements within it distributed according to their assigned column span. In a similar manner, the second group is split into two columns, with its elements being divided accordingly.
 
-![Blazor DataForm Form Group Column Layout](images/blazor_dataform_formgroup_column_layout.png)
+![Blazor DataForm Form Group Column Layout.](images/blazor_dataform_formgroup_column_layout.png)
 
 ## Change the appearance of the form group
 
@@ -83,5 +83,5 @@ You can customize the appearance of the form group by using the [CssClass](https
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor DataForm Form Group Customization](images/blazor_dataform_formgroup_customization.png)
+![Blazor DataForm Form Group Customization.](images/blazor_dataform_formgroup_customization.png)
 
