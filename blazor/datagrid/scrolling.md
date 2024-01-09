@@ -280,7 +280,7 @@ The following demo shows how to change the default frozen line color.
 ```cshtml
 @using Syncfusion.Blazor.Grids
 
-<SfGrid DataSource="@Orders" AllowSelection="false" EnableHover="false" FrozenColumns="2" FrozenRows="3" Width="100%" Height="400">
+<SfGrid DataSource="@Orders" AllowSelection="false" EnableHover="false" FrozenColumns="2" FrozenRows="3" Width="600" Height="400">
     <GridColumns>
         <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
         <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
@@ -295,18 +295,15 @@ The following demo shows how to change the default frozen line color.
 </SfGrid>
 
 <style>
-    .e-grid .e-frozenheader > .e-table,
-    .e-grid .e-frozencontent > .e-table,
-    .e-grid .e-frozencontent .e-virtualtable > .e-table,
-    .e-grid .e-frozenheader .e-virtualtable > .e-table {
-        border-right-color: orangered;
+
+    .e-grid .e-frozenrow-border {
+        background-color: aqua;
     }
-    .e-grid .e-frozenhdrcont .e-headercontent > .e-table,
-    .e-grid .e-frozenhdrcont .e-frozenheader > .e-table,
-    .e-grid .e-frozenhdrcont .e-movableheader > .e-table,
-    .e-grid .e-frozenhdrcont .e-headercontent .e-virtualtable > .e-table {
-        border-bottom-color: orangered;
+
+    .e-grid .e-leftfreeze.e-freezeleftborder {
+        border-right-color: aqua;
     }
+
 </style>
 
 @code{
@@ -343,9 +340,7 @@ The following demo shows how to change the default frozen line color.
 }
 ```
 
-The following screenshots represent a datagrid by customizing frozen line color.
-
-![Changing Frozen Line Color in Blazor DataGrid](./images/blazor-datagrid-frozen-line-color.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hZVJXsXSLrGWRalt?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ### Limitations
 
