@@ -39,7 +39,7 @@ Start by following the steps provided in this [link](https://blazor.syncfusion.c
 
 @page "/"
 <SfButton @onclick="OnClick">Save file to google drive</SfButton>
-<SfPdfViewerServer @ref="@viewer" Height="500px" Width="1060px" DocumentPath="@DocumentPath" />
+<SfPdfViewerServer @ref="@viewer" DocumentPath="@DocumentPath" Height="500px" Width="1060px"></SfPdfViewerServer>
 
 @code {
     private string DocumentPath { get; set; }

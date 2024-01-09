@@ -27,6 +27,7 @@ Start by following the steps provided in this [link](https://blazor.syncfusion.c
 @using System.IO;
 @using Azure.Storage.Blobs;
 @using Azure.Storage.Blobs.Specialized;
+@using Syncfusion.Blazor.PdfViewerServer;
 @using Syncfusion.Blazor.Buttons;
 ```
 
@@ -35,19 +36,19 @@ Start by following the steps provided in this [link](https://blazor.syncfusion.c
 ```csharp
 
 @page "/"
-<SfButton @onclick="OnClick">Download</SfButton>
-<SfPdfViewerServer @ref="@viewer" Height="500px" Width="1060px" DocumentPath="@DocumentPath" />
+<SfButton @onclick="OnClick">Save file to Azure blob container</SfButton>
+<SfPdfViewerServer @ref="@viewer" DocumentPath="@DocumentPath" Height="500px" Width="1060px"></SfPdfViewerServer>
 
 @code {
     private string DocumentPath { get; set; }
-    SfPdfViewer2 viewer;
+    SfPdfViewerServer viewer;
     private readonly string connectionString = "Your Connection string from Azure";
     private readonly string containerName = "Your container name in Azure";
     private readonly string fileName = "File Name to be loaded into Syncfusion PDF Viewer";
 
     public async void OnClick(MouseEventArgs args)
     {
-        byte[] data = await viewer.GetDocumentAsync();
+        byte[] data = await viewer.GetDocument();
 
         BlobServiceClient blobServiceClient = new BlobServiceClient(connectionString);
 

@@ -28,6 +28,7 @@ Start by following the steps provided in this [link](https://blazor.syncfusion.c
 @using Azure.Storage.Blobs;
 @using Azure.Storage.Blobs.Specialized;
 @using Syncfusion.Blazor.Buttons;
+@using Syncfusion.Blazor.SfPdfViewer;
 ```
 
 **Step 4:** Add the below code example to save the downloaded PDF files to Azure Blob Storage container
@@ -35,7 +36,7 @@ Start by following the steps provided in this [link](https://blazor.syncfusion.c
 ```csharp
 
 @page "/"
-<SfButton @onclick="OnClick">Download</SfButton>
+<SfButton @onclick="OnClick">Save file to Azure Blob Storage</SfButton>
 <SfPdfViewer2 DocumentPath="@DocumentPath"
               @ref="viewer"
               Height="100%"

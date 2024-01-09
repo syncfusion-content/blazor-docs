@@ -34,13 +34,14 @@ Start by following the steps provided in this [link](https://blazor.syncfusion.c
 **Step 4:** Add the below code example to load a PDF from `Google drive` file.
 
 ```csharp
+
 @page "/"
 
-<SfPdfViewerServer Height="500px" Width="1060px" DocumentPath="@DocumentPath" />
+<SfPdfViewerServer DocumentPath="@DocumentPath" Height="500px" Width="1060px"></SfPdfViewerServer>
 
 @code {
     private string DocumentPath { get; set; }
-
+    
     private readonly string FolderId = "Your Google Drive Folder ID";
     private readonly string CredentialPath = "Your Path to the OAuth 2.0 Client IDs json file";
     private readonly string ApplicationName = "Your Application name";

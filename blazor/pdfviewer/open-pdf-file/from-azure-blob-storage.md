@@ -27,6 +27,7 @@ Start by following the steps provided in this [link](https://blazor.syncfusion.c
 @using System.IO;
 @using Azure.Storage.Blobs;
 @using Azure.Storage.Blobs.Specialized;
+@using Syncfusion.Blazor.PdfViewerServer;
 ```
 
 **Step 4:** Add the below code example to load a PDF from `Azure blob storage` container.
@@ -35,7 +36,7 @@ Start by following the steps provided in this [link](https://blazor.syncfusion.c
 
 @page "/"
 
-<SfPdfViewerServer Height="500px" Width="1060px" DocumentPath="@DocumentPath" />
+<SfPdfViewerServer DocumentPath="@DocumentPath" Height="500px" Width="1060px"></SfPdfViewerServer>
 
 @code {
     private SfPdfViewerServer viewer;

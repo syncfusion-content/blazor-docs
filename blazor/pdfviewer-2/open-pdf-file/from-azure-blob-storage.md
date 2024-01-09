@@ -7,7 +7,6 @@ control: PDF Viewer
 documentation: ug
 ---
 
-
 # Open PDF file from Azure Blob Storage 
 
 To load a PDF file from Azure Blob Storage  in a PDF Viewer, you can follow the steps below
@@ -28,6 +27,7 @@ Start by following the steps provided in this [link](https://blazor.syncfusion.c
 @using System.IO;
 @using Azure.Storage.Blobs;
 @using Azure.Storage.Blobs.Specialized;
+@using Syncfusion.Blazor.SfPdfViewer;
 ```
 
 **Step 4:** Add the below code example to load a PDF from `Azure blob storage` container.
