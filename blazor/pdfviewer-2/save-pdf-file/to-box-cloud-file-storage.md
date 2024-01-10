@@ -1,9 +1,9 @@
 ---
 layout: post
-title: Save PDF files to Box cloud storage in  PDF Viewer Component | Syncfusion
-description: Learn here all about how to save PDF files to Box cloud file storage in Syncfusion Blazor PDF Viewer component and much more details.
+title: Save PDF files to Box cloud storage in  SfPdfViewer Component | Syncfusion
+description: Learn here all about how to save PDF files to Box cloud file storage in Syncfusion Blazor SfPdfViewer component and much more details.
 platform: Blazor
-control: PDF Viewer
+control: SfPdfViewer
 documentation: ug
 ---
 
@@ -16,9 +16,9 @@ To save a PDF file to Box cloud file storage, you can follow the steps below
 
 To access Box storage programmatically, you'll need a developer account with Box. Go to the [Box Developer Console](https://developer.box.com/), sign in or create a new account, and then create a new Box application. This application will provide you with the necessary credentials Client ID and Client Secret to authenticate and access Box APIs. Before accessing files, you need to authenticate your application to access your Box account. Box API supports `OAuth 2.0 authentication` for this purpose.
 
-**Step 2:** Create a Simple PDF Viewer Sample in blazor
+**Step 2:** Create a Simple SfPdfViewer Sample in blazor
 
-Start by following the steps provided in this [link](https://blazor.syncfusion.com/documentation/pdfviewer-2/getting-started/server-side-application) to create a simple PDF viewer sample in blazor. This will give you a basic setup of the PDF viewer component.
+Start by following the steps provided in this [link](https://blazor.syncfusion.com/documentation/pdfviewer-2/getting-started/server-side-application) to create a simple SfPdfViewer sample in blazor. This will give you a basic setup of the SfPdfViewer component.
 
 **Step 3:** Include the following namespaces in the **Index.razor** file.
 
@@ -52,7 +52,7 @@ Start by following the steps provided in this [link](https://blazor.syncfusion.c
     private readonly string folderID = "Your Folder ID";
     private readonly string clientID = "Your Box Storage ClientID";
     private readonly string clientSecret = "Your Box Storage ClientSecret";
-    private readonly string fileName = "File Name to be loaded into Syncfusion PDF Viewer";
+    private readonly string fileName = "File Name to be loaded into Syncfusion SfPdfViewer";
 
     public async void OnClick(MouseEventArgs args)
     {
@@ -84,6 +84,6 @@ N> replace **Your_Box_Storage_Access_Token** with your actual box access token, 
 
 N> The **Box.V2.Core** NuGet package must be installed in your application to use the previous code example.
 
-N> Replace `PDF_Succinctly.pdf` with the actual document name that you want to load from Box cloud file storage. Make sure to pass the document name from the box folder to the `documentPath` property of the PDF viewer component
+N> Replace `PDF_Succinctly.pdf` with the actual document name that you want to load from Box cloud file storage. Make sure to pass the document name from the box folder to the `documentPath` property of the SfPdfViewer component
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/open-save-pdf-documents-in-box-cloud-file-storage)
