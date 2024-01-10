@@ -7,7 +7,7 @@ control: DataForm
 documentation: ug
 ---
 
-# Form binding
+# Form binding in DataForm component
 
 This segment provides a concise overview of the concepts involved in associating a [Model](https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.components.forms.editform.model?view=aspnetcore-7.0#microsoft-aspnetcore-components-forms-editform-model) or [EditContext](https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.components.forms.editform.editcontext?view=aspnetcore-7.0#microsoft-aspnetcore-components-forms-editform-editcontext) with a Data Form.
 
@@ -18,7 +18,7 @@ The following example illustrates how the `Model` is bound to the DataForm compo
 {% tabs %}
 {% highlight razor tabtitle="Model"  %}
 
-{% include_relative code-snippet\form-binding\model-binding.razor %}
+{% include_relative code-snippet/form-binding/model-binding.razor %}
 
 {% endhighlight %}
 {% endtabs %}
@@ -32,7 +32,7 @@ The following example illustrates how the `EditContext` is bound to the DataForm
 {% tabs %}
 {% highlight razor tabtitle="EditContext"  %}
 
-{% include_relative code-snippet\form-binding\edit-context-binding.razor %}
+{% include_relative code-snippet/form-binding/edit-context-binding.razor %}
 
 {% endhighlight %}
 {% endtabs %}

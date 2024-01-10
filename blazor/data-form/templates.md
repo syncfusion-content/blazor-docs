@@ -18,7 +18,7 @@ We can customize the particular field editor with required UI customization usin
 {% tabs %}
 {% highlight razor tabtitle="Template"  %}
 
-{% include_relative code-snippet\templates\specific-field-editor.razor %}
+{% include_relative code-snippet/templates/specific-field-editor.razor %}
 
 {% endhighlight %}
 {% endtabs %}
@@ -35,17 +35,17 @@ We can also utilize the above `Template` combination with [FormAutoGenerateItems
 {% tabs %}
 {% highlight razor tabtitle="Razor"  %}
 
-{% include_relative code-snippet\templates\customization-entire-form.razor %}
+{% include_relative code-snippet/templates/customization-entire-form.razor %}
 
 {% endhighlight %}
 {% highlight razor tabtitle="C#"  %}
 
-{% include_relative code-snippet\templates\customization-entire-form.cs %}
+{% include_relative code-snippet/templates/customization-entire-form.cs %}
 
 {% endhighlight %}
 {% highlight cshtml tabtitle="Css"  %}
 
-{% include_relative code-snippet\templates\customization-entire-form.css %}
+{% include_relative code-snippet/templates/customization-entire-form.css %}
 
 {% endhighlight %}
 {% endtabs %}
@@ -57,7 +57,7 @@ We can also integrate the `FormTemplate` renderer along with `FormItem` as showc
 {% tabs %}
 {% highlight razor tabtitle="Form Template"  %}
 
-{% include_relative code-snippet\templates\form-template.razor %}
+{% include_relative code-snippet/templates/form-template.razor %}
 
 {% endhighlight %}
 {% endtabs %}
@@ -69,13 +69,13 @@ When using the `Template` renderer, we can also customize the validation message
 {% tabs %}
 {% highlight razor tabtitle="Razor"  %}
 
-{% include_relative code-snippet\templates\tooltip-validation.razor %}
+{% include_relative code-snippet/templates/tooltip-validation.razor %}
 
 {% endhighlight %}
 
 {% highlight C# tabtitle="C#"  %}
 
-{% include_relative code-snippet\templates\tooltip-validation.cs %}
+{% include_relative code-snippet/templates/tooltip-validation.cs %}
 
 {% endhighlight %}
 {% endtabs %}
@@ -89,13 +89,13 @@ The [ValidationSummary](https://learn.microsoft.com/en-us/dotnet/api/microsoft.a
 {% tabs %}
 {% highlight razor tabtitle="Razor"  %}
 
-{% include_relative code-snippet\templates\validation-summary.razor %}
+{% include_relative code-snippet/templates/validation-summary.razor %}
 
 {% endhighlight %}
 
 {% highlight C# tabtitle="C#"  %}
 
-{% include_relative code-snippet\templates\validation-summary.cs %}
+{% include_relative code-snippet/templates/validation-summary.cs %}
 
 {% endhighlight %}
 {% endtabs %}
