@@ -137,7 +137,7 @@ You can use [FilterBarPlaceholder](https://help.syncfusion.com/cr/blazor/Syncfus
 
 ## Minimum filter length
 
-When filtering the tree items, you can set the minimum filtering length. This can be done by manual validation by using the [Filtering event arguments](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.DdtFilteringEventArgs.html#Syncfusion_Blazor_Navigations_DdtFilteringEventArgs_Text) within the [Filtering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfDropDownTree-2.html#Syncfusion_Blazor_Navigations_SfDropDownTree_2_Filtering) event handler.
+When filtering the tree items, you can set the minimum characters after which the filtering must occur. This can be done by checking the text length using the [Filtering event arguments](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.DdtFilteringEventArgs.html#Syncfusion_Blazor_Navigations_DdtFilteringEventArgs_Text) within the [Filtering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfDropDownTree-2.html#Syncfusion_Blazor_Navigations_SfDropDownTree_2_Filtering) event handler.
 
 In the following example, the limit is set to 2.
 
