@@ -24,13 +24,50 @@ Start by following the steps provided in this [link](https://blazor.syncfusion.c
 1. Import the required namespaces at the top of the file:
 
 ```csharp
-
+@using Amazon;
+@using Amazon.S3;
+@using Amazon.S3.Model;
+@using Syncfusion.Blazor.SfPdfViewer;
 ```
 
 **Step 4:** Add the below code example to 
 
 ```csharp
 
+@page "/"
+
+<SfPdfViewer2 DocumentPath="@DocumentPath"
+              @ref="viewer"
+              Height="100%"
+              Width="100%">
+</SfPdfViewer2>
+
+@code {
+    private SfPdfViewerServer viewer;
+    private string DocumentPath { get; set; }
+
+    private readonly string accessKey = "Your Access Key from AWS S3";
+    private readonly string secretKey = "Your Secret Key from AWS S3";
+    private readonly string bucketName = "Your Bucket name from AWS S3";
+    private readonly string fileName = "File Name to be loaded into Syncfusion PDF Viewer";
+
+    protected override async Task OnInitializedAsync()
+    {
+        MemoryStream stream = new MemoryStream();
+        RegionEndpoint bucketRegion = RegionEndpoint.USEast1;
+
+        // Configure the AWS SDK with your access credentials and other settings
+        var s3Client = new AmazonS3Client(accessKey, secretKey, bucketRegion);
+
+        // Specify the document name or retrieve it from a different source
+        var response = await s3Client.GetObjectAsync(bucketName, fileName);
+
+        Stream responseStream = response.ResponseStream;
+        responseStream.CopyTo(stream);
+        stream.Seek(0, SeekOrigin.Begin);
+        DocumentPath = "data:application/pdf;base64," + Convert.ToBase64String(stream.ToArray());
+    }
+}
 ```
 
 Replace the file name with the actual document name that you want to load from Box cloud file storage. Make sure to pass the document name from the box folder to the `documentPath` property of the SfPdfViewer component
