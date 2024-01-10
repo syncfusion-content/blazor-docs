@@ -18,7 +18,7 @@ The below example showcases how to configure `FormGroup` within  DataForm compon
 {% tabs %}
 {% highlight razor tabtitle="Form group" %}
 
-{% include_relative code-snippet\form-group\form-group.razor %}
+{% include_relative code-snippet/form-group/form-group.razor %}
 
 {% endhighlight %}
 {% endtabs %}
@@ -32,12 +32,12 @@ The DataForm component provides the functionality to organize various form group
 {% tabs %}
 {% highlight razor tabtitle="Razor" %}
 
-{% include_relative code-snippet\form-group\multiple-form-group.razor %}
+{% include_relative code-snippet/form-group/multiple-form-group.razor %}
 
 {% endhighlight %}
 {% highlight C# tabtitle="C#" %}
 
-{% include_relative code-snippet\form-group\multiple-form-group.razor %}
+{% include_relative code-snippet/form-group/multiple-form-group.razor %}
 
 {% endhighlight %}
 {% endtabs %}
@@ -51,12 +51,12 @@ This section explains how to configure the DataForm component on dividing the co
 {% tabs %}
 {% highlight razor tabtitle="Razor" %}
 
-{% include_relative code-snippet\form-group\column-layout.razor %}
+{% include_relative code-snippet/form-group/column-layout.razor %}
 
 {% endhighlight %}
 {% highlight C# tabtitle="C#" %}
 
-{% include_relative code-snippet\form-group\column-layout.razor %}
+{% include_relative code-snippet/form-group/column-layout.razor %}
 
 {% endhighlight %}
 {% endtabs %}
@@ -72,13 +72,13 @@ You can customize the appearance of the form group by using the [CssClass](https
 {% tabs %}
 {% highlight razor tabtitle="Razor"  %}
 
-{% include_relative code-snippet\form-group\change-appearance-form-group.razor %}
+{% include_relative code-snippet/form-group/change-appearance-form-group.razor %}
 
 {% endhighlight %}
 
 {% highlight C# tabtitle="C#"  %}
 
-{% include_relative code-snippet\form-group\change-appearance-form-group.cs %}
+{% include_relative code-snippet/form-group/change-appearance-form-group.cs %}
 
 {% endhighlight %}
 {% endtabs %}

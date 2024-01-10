@@ -14,7 +14,7 @@ This segment provides guidance on dividing the form field editors inside the Dat
 {% tabs %}
 {% highlight razor tabtitle="razor" %}
 
-{% include_relative code-snippet\column-layout\columns-count.razor %}
+{% include_relative code-snippet/column-layout/columns-count.razor %}
 
 {% endhighlight %}
 {% endtabs %}
@@ -26,7 +26,7 @@ Additionally, by utilizing the [ColumnSpan](https://help.syncfusion.com/cr/blazo
 {% tabs %}
 {% highlight razor tabtitle="ColumnSpan" %}
 
-{% include_relative code-snippet\column-layout\column-span.razor %}
+{% include_relative code-snippet/column-layout/column-span.razor %}
 
 {% endhighlight %}
 {% endtabs %}

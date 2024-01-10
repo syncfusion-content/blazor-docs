@@ -19,7 +19,7 @@ The classification of methods that can be invoked by using the DataForm instance
 {% tabs %}
 {% highlight razor tabtitle="IsValid" %}
 
-{% include_relative code-snippet\methods\isValid-method.razor %}
+{% include_relative code-snippet/methods/isValid-method.razor %}
 
 {% endhighlight %}
 {% endtabs %}
@@ -31,7 +31,7 @@ The classification of methods that can be invoked by using the DataForm instance
 {% tabs %}
 {% highlight razor tabtitle="Refresh" %}
 
-{% include_relative code-snippet\methods\refresh-method.razor %}
+{% include_relative code-snippet/methods/refresh-method.razor %}
 
 {% endhighlight %}
 {% endtabs %}
