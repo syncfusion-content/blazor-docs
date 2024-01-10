@@ -716,6 +716,161 @@ namespace DropDownTreeSample.Data
 
 ```
 
+### Entity Framework
+
+Follow these steps to consume data from the [Entity Framework](https://blazor.syncfusion.com/documentation/common/data-binding/bind-entity-framework) in the Dropdown Tree component.
+
+#### Create DBContext class
+
+The first step is to create a DBContext class called `AppDBContext` to connect to a Microsoft SQL Server database.
+
+```csharp
+using Microsoft.EntityFrameworkCore;
+
+namespace DBTree.Data
+{
+    public class AppDBContext : DbContext
+    {
+        public AppDBContext()
+        {
+        }
+
+        public AppDBContext(DbContextOptions<AppDBContext> options)
+            : base(options)
+        {
+        }
+
+        public DbSet<Employee> Employees { get; set; }
+
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            if (!optionsBuilder.IsConfigured)
+            {
+                // To make the sample runnable, replace your DB name here
+                optionsBuilder.UseSqlServer("Server=(localdb)\\MSSQLLocalDB;Database=DBTree;Integrated Security=True");
+            }
+        }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Employee>().HasData(
+                new Employee() { Id = 1, Name = "Steven Buchanan", Job = "General Manager", HasChild = true, Expanded = true },
+                new Employee() { Id = 2, PId = 1, Name = "Laura Callahan", Job = "Product Manager", HasChild = true },
+                new Employee() { Id = 3, PId = 2, Name = "Andrew Fuller", Job = "Team Lead", HasChild = true },
+                new Employee() { Id = 4, PId = 3, Name = "Anne Dodsworth", Job = "Developer" },
+                new Employee() { Id = 10, PId = 3, Name = "Lilly", Job = "Developer" },
+                new Employee() { Id = 5, PId = 1, Name = "Nancy Davolio", Job = "Product Manager", HasChild = true },
+                new Employee() { Id = 6, PId = 5, Name = "Michael Suyama", Job = "Team Lead", HasChild = true },
+                new Employee() { Id = 7, PId = 6, Name = "Robert King", Job = "Developer" },
+                new Employee() { Id = 11, PId = 6, Name = "Mary", Job = "Developer" },
+                new Employee() { Id = 9, PId = 1, Name = "Janet Leverling", Job = "HR" }
+            );
+        }
+    }
+}
+```
+
+#### Create data access layer to perform data operation
+
+Now, create a class named `EmployeeDataAccessLayer`, which act as data access layer for retrieving the records from the database table.
+
+```csharp
+using Microsoft.EntityFrameworkCore;
+
+namespace DBTree.Data
+{
+    public class EmployeeDataAccessLayer
+    {
+        AppDBContext db = new();
+
+        // returns the employee data from the data base
+        public DbSet<Employee> GetAllEmployees()
+        {
+            try
+            {
+                return db.Employees;
+            }
+            catch
+            {
+                throw;
+            }
+        }
+    }
+}
+```
+
+#### Creating web API controller
+
+ A Web API Controller has to be created, which allows the Dropdown Tree to directly consume data from the Entity Framework.
+
+```csharp
+using DBTree.Data;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Primitives;
+
+namespace DBTree.Controller
+{
+    [Route("api/[controller]")]
+    [ApiController]
+    public class DefaultController : ControllerBase
+    {
+        EmployeeDataAccessLayer db = new EmployeeDataAccessLayer();
+        [HttpGet("{id}")]
+        public object Get()
+        {
+            // Get the DataSource from Database
+            var data = db.GetAllEmployees().ToList();
+            var queryString = Request.Query;
+            if (queryString.Keys.Contains("$filter"))
+            {
+                StringValues Skip;
+                StringValues Take;
+                int skip = (queryString.TryGetValue("$skip", out Skip)) ? Convert.ToInt32(Skip[0]) : 0;
+                int top = (queryString.TryGetValue("$top", out Take)) ? Convert.ToInt32(Take[0]) : data.Count();
+                string filter = string.Join("", queryString["$filter"].ToString().Split(' ').Skip(2)); // get filter from querystring
+                data = data.Where(d => d.PId?.ToString() == filter).ToList();
+                return data.Skip(skip).Take(top);
+            }
+            else
+            {
+                data = data.Where(d => d.PId == null).ToList();
+                return data;
+            }
+        }
+    }
+}
+```
+
+#### Configure Blazor Dropdown Tree component using Web API adaptor
+
+Now, the Blazor Dropdown Tree can be configured using the **‘SfDataManager’** to interact with the created Web API and consume the data appropriately. To interact with web API, use web API adaptor.
+
+```csharp
+
+@using Syncfusion.Blazor
+@using Syncfusion.Blazor.Navigations
+@using Syncfusion.Blazor.Data
+
+<SfDropDownTree TValue="int" TItem="Employee" Placeholder="Select a Employee">
+    <DropDownTreeField TItem="Employee" ID="Id" Text="Name" ParentID="PId" HasChildren="HasChild" Expanded="Expanded">
+        <SfDataManager Url="api/Default" Adaptor="Adaptors.WebApiAdaptor" CrossDomain="true"></SfDataManager>
+    </DropDownTreeField>
+</SfDropDownTree>
+
+@code {
+    public class Employee
+    {
+        public int Id { get; set; }
+        public int? PId { get; set; }
+        public string Name { get; set; }
+        public string Job { get; set; }
+        public bool HasChild { get; set; }
+        public bool Expanded { get; set; }
+    }
+}
+
+```
+
 ## Adding new items
 
 Dropdown Tree items can be added or removed dynamically by modify the **DataSource**.
