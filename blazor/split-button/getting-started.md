@@ -132,7 +132,7 @@ Add the Syncfusion Blazor Split Button component in the **~/Pages/Index.razor** 
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion Blazor Split Button component in your default web browser.
 
-![Blazor Split Button Component](./images/blazor-splitbutton.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/htBftCjkgSHfTgXj?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Split Button Component](./images/blazor-splitbutton.png)" %}
 
 ## See Also
 

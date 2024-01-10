@@ -11,7 +11,7 @@ documentation: ug
 
 ## Sorting
 
-The ListBox supports sorting of available items in the alphabetical order that can be either ascending or descending. This can be achieved using [SortOrder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfListBox-2.html) property. Sort order can be `None`, `Ascending` or `Descending`.
+The ListBox supports sorting of available items in the alphabetical order that can be either ascending or descending. This can be achieved using [SortOrder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SortOrder.html) property. Sort order can be `None`, `Ascending` or `Descending`.
 
 In the following example, the `SortOrder` is set as `Descending`.
 

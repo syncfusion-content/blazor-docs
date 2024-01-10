@@ -205,7 +205,7 @@ The following sample code demonstrates binding local data through the [SfDataMan
 
 @using Syncfusion.Blazor.DropDowns
 
-<SfDropDownList Placeholder="e.g. Australia" TValue="Countries">
+<SfDropDownList Placeholder="e.g. Australia" TItem="Countries" TValue="string">
     <SfDataManager Json=@Country></SfDataManager>
     <DropDownListFieldSettings Value="Name"></DropDownListFieldSettings>
 </SfDropDownList>
@@ -230,7 +230,7 @@ The following sample code demonstrates binding local data through the [SfDataMan
 {% endhighlight %}
 {% endtabs %}
 
-![Binding DropDownList Item in Blazor DataManager Component](./images/blazor-datamanager-binding-dropdown-item.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BXLTNCDSrGTKeMrJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Binding DropDownList Item in Blazor DataManager Component](./images/blazor-datamanager-binding-dropdown-item.png)" %}
 
 ### Remote data binding
 
@@ -241,7 +241,7 @@ The following sample code demonstrates binding remote data through the [SfDataMa
 {% tabs %}
 {% highlight razor %}
 
-<SfDropDownList Placeholder="Name" TValue="Contact">
+<SfDropDownList Placeholder="Name" TValue="string" TItem="Contact">
     <SfDataManager Url="https://services.odata.org/V4/Northwind/Northwind.svc/Customers" Adaptor="Adaptors.ODataV4Adaptor"></SfDataManager>
     <DropDownListFieldSettings Value="CustomerID" Text="ContactName"></DropDownListFieldSettings>
 </SfDropDownList>
@@ -258,6 +258,6 @@ The following sample code demonstrates binding remote data through the [SfDataMa
 {% endhighlight %}
 {% endtabs %}
 
-![Data Binding in Blazor DataManager Component](./images/blazor-datamanager-data-binding.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNLpNCtoraMWalfm?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Data Binding in Blazor DataManager Component](./images/blazor-datamanager-data-binding.png)" %}
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/DataManager).
