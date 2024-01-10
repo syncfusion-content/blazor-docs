@@ -18,7 +18,7 @@ The following example illustrates how the `Model` is bound to the DataForm compo
 {% tabs %}
 {% highlight razor tabtitle="Model"  %}
 
-{% include_relative code-snippet\form-binding\model-binding.razor %}
+{% include_relative code-snippet/form-binding/model-binding.razor %}
 
 {% endhighlight %}
 {% endtabs %}
@@ -32,7 +32,7 @@ The following example illustrates how the `EditContext` is bound to the DataForm
 {% tabs %}
 {% highlight razor tabtitle="EditContext"  %}
 
-{% include_relative code-snippet\form-binding\edit-context-binding.razor %}
+{% include_relative code-snippet/form-binding/edit-context-binding.razor %}
 
 {% endhighlight %}
 {% endtabs %}
