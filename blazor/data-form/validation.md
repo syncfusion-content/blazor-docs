@@ -18,7 +18,7 @@ DataForm provides the capability to utilize both standard and custom validators 
 {% tabs %}
 {% highlight razor tabtitle="DataAnnotationsValidator"  %}
 
-{% include_relative code-snippet\data-annotations-validation\data-annotation-validation.razor %}
+{% include_relative code-snippet/data-annotations-validation/data-annotation-validation.razor %}
 
 {% endhighlight %}
 {% endtabs %}
@@ -40,7 +40,7 @@ The below example demonstrate , how to configure validation message presentation
 {% tabs %}
 {% highlight razor tabtitle="Validation Message Display"  %}
 
-{% include_relative code-snippet\data-annotations-validation\validation-message-display.razor %}
+{% include_relative code-snippet/data-annotations-validation/validation-message-display.razor %}
 
 {% endhighlight %}
 {% endtabs %}
@@ -52,7 +52,7 @@ The `ObjectGraphDataAnnotationsValidator` within the DataForm component ensures 
 {% tabs %}
 {% highlight razor tabtitle="ObjectGraphDataAnnotationsValidator"  %}
 
-{% include_relative code-snippet\data-annotations-validation\complex-model-validation.razor %}
+{% include_relative code-snippet/data-annotations-validation/complex-model-validation.razor %}
 
 {% endhighlight %}
 {% endtabs %}
@@ -66,13 +66,13 @@ The `ObjectGraphDataAnnotationsValidator` within the DataForm component ensures 
 {% tabs %}
 {% highlight razor tabtitle="FluentValidator.razor"  %}
 
-{% include_relative code-snippet\data-annotations-validation\fluent-validation.razor %}
+{% include_relative code-snippet/data-annotations-validation/fluent-validation.razor %}
 
 {% endhighlight %}
 
 {% highlight razor tabtitle="PaymentDetailsValidator.cs"  %}
 
-{% include_relative code-snippet\data-annotations-validation\complex-model-validation.cs %}
+{% include_relative code-snippet/data-annotations-validation/complex-model-validation.cs %}
 
 {% endhighlight %}
 
