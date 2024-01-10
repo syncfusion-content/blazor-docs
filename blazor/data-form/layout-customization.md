@@ -31,8 +31,7 @@ The below example portrays how to use the `ButtonsAlignment` property in DataFor
 @using System.ComponentModel.DataAnnotations
 
 
-<SfDataForm Width="50%"
-            Model="@RegistrationDetailsModel"
+<SfDataForm Model="@RegistrationDetailsModel"
             ButtonsAlignment="FormButtonsAlignment.Center">
 
     <FormValidator>
@@ -64,7 +63,7 @@ The below example portrays how to use the `ButtonsAlignment` property in DataFor
 {% endhighlight %}
 {% endtabs %}
 
-## Button Customization
+## Adding additional buttons and its customization 
 
 It is possible to incorporate custom buttons along with other elements ,if necessary by using the [FormButtons](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataForm.FormButtons.html) `RenderFragment` within the DataForm component.
 
@@ -78,8 +77,7 @@ In the provided code snippet, an extra button component is implemented to reset 
 @using Syncfusion.Blazor.Buttons
 
 
-<SfDataForm Width="50%"
-            EditContext="@RegistrationEditContext">
+<SfDataForm EditContext="@RegistrationEditContext">
 
     <FormValidator>
         <DataAnnotationsValidator></DataAnnotationsValidator>
@@ -134,6 +132,8 @@ In the provided code snippet, an extra button component is implemented to reset 
 {% endhighlight %}
 {% endtabs %}
 
+![DataForm Button Customization](images/blazor_dataform_formbuttons.png)
+
 ## Label positioning
 
 DataForm component allows you to align the label either to the top or left to the field editors , We can implement this feature by assigning values to [LabelPosition](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataForm.SfDataForm.html#Syncfusion_Blazor_DataForm_SfDataForm_LabelPosition) , Classification of the respective property is outlined below ,
@@ -153,8 +153,7 @@ The below code part explains how to configure the `LabelPosition` in DataForm co
 @using System.ComponentModel.DataAnnotations
 
 
-<SfDataForm Width="50%"
-            Model="@RegistrationDetailsModel"
+<SfDataForm Model="@RegistrationDetailsModel"
             LabelPosition="FormLabelPosition.Left">
 
     <FormValidator>
@@ -191,28 +190,20 @@ The below code part explains how to configure the `LabelPosition` in DataForm co
 {% endhighlight %}
 {% endtabs %}
 
-## Validation Message Display
+## Change the Form width 
 
-Within the DataForm component, we have the option to showcase validation messages in two distinct styles: inline or via a tooltip. When applying inline display, the validation messages remain statically visible whenever validation occurs. On the other hand, tooltip display reveals validation messages to users upon request. Additionally, there is functionality to hide the validation messages as desired by using [ValidationDisplayMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataForm.SfDataForm.html#Syncfusion_Blazor_DataForm_SfDataForm_ValidationDisplayMode) . The classifications of the respective property are outline below 
-
-| FormValidationDisplay | Snapshot |
-| ------------ | ----------------------- |
-|[FormValidationDisplay.Inline](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataForm.FormValidationDisplay.html#Syncfusion_Blazor_DataForm_FormValidationDisplay_Inline)|![DataForm FormValidationDisplay.Inline](images/blazor_dataform_validation_display_inline.png)|
-|[FormValidationDisplay.Tooltip](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataForm.FormValidationDisplay.html#Syncfusion_Blazor_DataForm_FormValidationDisplay_Tooltip)|![DataForm FormValidationDisplay.Tooltip](images/blazor_dataform_validation_display_tooltip.png)|
-|[FormValidationDisplay.None](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataForm.FormValidationDisplay.html#Syncfusion_Blazor_DataForm_FormValidationDisplay_None)|![DataForm FormValidationDisplay.None](images/blazor_dataform_validation_display_none.png)|
-
-The below example demonstrate , how to configure validation message presentation with DataForm component
+The DataForm component allows you to customize the width of the form container by using the [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataForm.SfDataForm.html#Syncfusion_Blazor_DataForm_SfDataForm_Width) property.
 
 {% tabs %}
-{% highlight razor tabtitle="Validation Message Display"  %}
+{% highlight razor tabtitle="Width"  %}
+
 
 @using Syncfusion.Blazor.DataForm
 @using System.ComponentModel.DataAnnotations
 
 
 <SfDataForm Width="50%"
-            Model="@RegistrationDetailsModel"
-            ValidationDisplayMode="FormValidationDisplay.Tooltip">
+            Model="@RegistrationDetailsModel">
 
     <FormValidator>
         <DataAnnotationsValidator></DataAnnotationsValidator>
@@ -235,6 +226,11 @@ The below example demonstrate , how to configure validation message presentation
         [Required(ErrorMessage = "Please enter your email address")]
         [EmailAddress(ErrorMessage = "Please enter valid email address")]
         public string Email { get; set; }
+
+        [Required(ErrorMessage = "You need to agree to the Terms and Conditions")]
+        [Range(typeof(bool), "true", "true", ErrorMessage = "You need to agree to the Terms and Conditions")]
+        [Display(Name = "Agree to the terms")]
+        public bool Accept { get; set; }
     }
 
     private RegistrationDetails RegistrationDetailsModel = new RegistrationDetails();
