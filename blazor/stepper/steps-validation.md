@@ -9,7 +9,7 @@ documentation: ug
 
 # Steps validation in Blazor Stepper Component
 
-The Stepper control allows you to set the validation state for each step, displaying either a success or error icon. You can define the success state of a step by setting the `IsValid` property to `true`. If set to `false`, the step will display an error state. By default, the `IsValid` property is `null`.
+The Stepper control allows you to set the validation state for each step, displaying either a success or error icon. You can define the success state of a step by setting the [IsValid](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.StepperStep.html#Syncfusion_Blazor_Navigations_StepperStep_IsValid) property to `true`. If set to `false`, the step will display an error state. By default, the `IsValid` property is `null`.
 
 > Based on the `StepType`, the validation state icon will be displayed either as an indicator or as part of the step label/text.
 
