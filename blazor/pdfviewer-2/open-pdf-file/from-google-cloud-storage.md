@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Open PDF files from Google Cloud Storage in Blazor SfPdfViewer Component | Syncfusion
+title: Open PDF files from GCS in Blazor SfPdfViewer Component | Syncfusion
 description: Learn here all about how to Open PDF files from Google Cloud Storage in Syncfusion Blazor SfPdfViewer component and much more details.
 platform: Blazor
 control: SfPdfViewer
@@ -10,7 +10,6 @@ documentation: ug
 # Open PDF file from Google Cloud Storage
 
 To load a PDF file from Google Cloud Storage in a SfPdfViewer, you can follow the steps below
-
 
 **Step 1** Create a Service Account
 

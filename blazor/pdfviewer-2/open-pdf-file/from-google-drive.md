@@ -37,7 +37,6 @@ Start by following the steps provided in this [link](https://blazor.syncfusion.c
 ```csharp
 @page "/"
 
-
 <SfPdfViewer2 DocumentPath="@DocumentPath"
               Height="100%"
               Width="100%">
