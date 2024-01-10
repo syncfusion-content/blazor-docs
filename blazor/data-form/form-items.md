@@ -7,7 +7,7 @@ control: DataForm
 documentation: ug
 ---
 
-# Form items
+# Form items in DataForm component
 
 The [FormItem](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataForm.FormItem.html)  can be utilized to set up various configuration for the editor component, including the unique identifier (id), the type of editor component used, any additional CSS classes to be applied to the editor, and whether the field is to be active (enabled) or inactive (disabled) upon being rendered.The below example showcases the different property usages.
 
@@ -19,13 +19,13 @@ The [Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataForm.For
 {% tabs %}
 {% highlight razor tabtitle="Razor"  %}
 
-{% include_relative code-snippet\form-items\configure-model-ID.razor %}
+{% include_relative code-snippet/form-items/configure-model-ID.razor %}
 
 {% endhighlight %}
 
 {% highlight C# tabtitle="C#"  %}
 
-{% include_relative code-snippet\form-items\configure-model-ID.cs %}
+{% include_relative code-snippet/form-items/configure-model-ID.cs %}
 
 {% endhighlight %}
 {% endtabs %}
@@ -36,13 +36,13 @@ The [Placeholder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataFo
 {% tabs %}
 {% highlight razor tabtitle="Razor"  %}
 
-{% include_relative code-snippet\form-items\placeholder.razor %}
+{% include_relative code-snippet/form-items/placeholder.razor %}
 
 {% endhighlight %}
 
 {% highlight C# tabtitle="C#"  %}
 
-{% include_relative code-snippet\form-items\placeholder.cs %}
+{% include_relative code-snippet/form-items/placeholder.cs %}
 
 {% endhighlight %}
 {% endtabs %}
@@ -73,13 +73,13 @@ The [EditorType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataFor
 {% tabs %}
 {% highlight razor tabtitle="Razor"  %}
 
-{% include_relative code-snippet\form-items\configure-model-ID.cs %}
+{% include_relative code-snippet/form-items/configure-model-ID.cs %}
 
 {% endhighlight %}
 
 {% highlight C# tabtitle="C#"  %}
 
-{% include_relative code-snippet\form-items\configure-editor-type.cs %}
+{% include_relative code-snippet/form-items/configure-editor-type.cs %}
 
 {% endhighlight %}
 {% endtabs %}
@@ -94,13 +94,13 @@ The [IsEnabled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataForm
 {% tabs %}
 {% highlight razor tabtitle="Razor"  %}
 
-{% include_relative code-snippet\form-items\disable-form-item.razor %}
+{% include_relative code-snippet/form-items/disable-form-item.razor %}
 
 {% endhighlight %}
 
 {% highlight C# tabtitle="C#"  %}
 
-{% include_relative code-snippet\form-items\disable-form-item.cs %}
+{% include_relative code-snippet/form-items/disable-form-item.cs %}
 
 {% endhighlight %}
 {% endtabs %}
@@ -114,14 +114,14 @@ The [Label](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataForm.For
 {% tabs %}
 {% highlight razor tabtitle="Razor"  %}
 
-{% include_relative code-snippet\form-items\label-name.razor %}
+{% include_relative code-snippet/form-items/label-name.razor %}
 
 
 {% endhighlight %}
 
 {% highlight C# tabtitle="C#"  %}
 
-{% include_relative code-snippet\form-items\label-name.cs %}
+{% include_relative code-snippet/form-items/label-name.cs %}
 
 
 {% endhighlight %}
@@ -137,12 +137,12 @@ The [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataForm.
 {% tabs %}
 {% highlight razor tabtitle="Razor"  %}
 
-{% include_relative code-snippet\form-items\appearence-of-form-item.razor %}
+{% include_relative code-snippet/form-items/appearence-of-form-item.razor %}
 
 {% endhighlight %}
 {% highlight C# tabtitle="C#"  %}
 
-{% include_relative code-snippet\form-items\appearence-of-form-item.cs %}
+{% include_relative code-snippet/form-items/appearence-of-form-item.cs %}
 
 {% endhighlight %}
 {% endtabs %}
