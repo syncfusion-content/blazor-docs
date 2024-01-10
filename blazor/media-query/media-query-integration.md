@@ -18,9 +18,13 @@ You can integrate any component inside the `Media Query` such as the Chart, Grid
 
 @{
     var RenderingMode = RowDirection.Horizontal;
-    if (activeBreakPoint != "Large")
+    if (activeBreakPoint == "Small" || activeBreakPoint == "Medium")
     {
         RenderingMode = RowDirection.Vertical;
+    }
+    else
+    {
+        RenderingMode = RowDirection.Horizontal;
     }
 }
 <SfMediaQuery @bind-ActiveBreakpoint="activeBreakPoint"></SfMediaQuery>
