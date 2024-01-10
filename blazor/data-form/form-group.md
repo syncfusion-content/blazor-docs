@@ -7,7 +7,7 @@ control: DataForm
 documentation: ug
 ---
 
-# Form group
+# Form group in DataForm component
 
 In DataForm , [FormGroup](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataForm.FormGroup.html) feature provides a way to organize the `FormItem` and `FormAutoGenerateItems` with descriptive label text and a layout organized into columns.
 

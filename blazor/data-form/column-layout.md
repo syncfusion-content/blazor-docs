@@ -7,7 +7,7 @@ control: DataForm
 documentation: ug
 ---
 
-# Column layout
+# Column layout in DataForm component
 
 This segment provides guidance on dividing the form field editors inside the DataForm component into a column-based layout. The [ColumnCount](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataForm.SfDataForm.html#Syncfusion_Blazor_DataForm_SfDataForm_ColumnCount) property allows us to specify the number of columns into which the DataForm should be divided. 
 
