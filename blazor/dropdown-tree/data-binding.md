@@ -141,6 +141,140 @@ To render the root level nodes, specify the ParentID as null or no need to speci
 }
 ```
 
+### ExpandoObject binding 
+
+The Blazor Dropdown Tree is a generic component that is strongly bound to a specific model type, but in cases where the model type is unknown at compile time, the Dropdown Tree can be bound to a list of ExpandoObjects using the `DataSource` property. This allows the Dropdown Tree to perform all supported data operations.
+
+```cshtml
+@using Syncfusion.Blazor.Navigations
+@using System.Dynamic
+
+<SfDropDownTree TValue="string" TItem="ExpandoObject" Placeholder="Select a Item">
+    <DropDownTreeField TItem="ExpandoObject" ID="ID" DataSource="@TreeData" Text="Name" ParentID="ParentID" HasChildren="ChildRecordID" Expanded="Expanded"></DropDownTreeField>
+</SfDropDownTree>
+
+@code {
+    public List<ExpandoObject> TreeData { get; set; }
+
+    protected override void OnInitialized()
+    {
+        this.TreeData = GetData().ToList();
+    }
+
+    public static List<ExpandoObject> Data = new List<ExpandoObject>();
+    public static int ParentRecordID { get; set; }
+    public static int ChildRecordID { get; set; }
+
+    public static List<ExpandoObject> GetData()
+    {
+        Data.Clear();
+        ParentRecordID = 0;
+        ChildRecordID = 0;
+
+        for (var i = 1; i <= 3; i++)
+        {
+            dynamic ParentRecord = new ExpandoObject();
+            ParentRecord.ID = ++ParentRecordID;
+            ParentRecord.Name = "Parent " + i;
+            ParentRecord.ParentID = null;
+            ParentRecord.Expanded = true;
+            Data.Add(ParentRecord);
+            AddChildRecords(ParentRecordID);
+        }
+
+        return Data;
+    }
+
+    public static void AddChildRecords(int ParentId)
+    {
+        for (var i = 1; i < 3; i++)
+        {
+            dynamic ChildRecord = new ExpandoObject();
+            ChildRecord.ID = ++ParentRecordID;
+            ChildRecord.Name = "Child item" + ++ChildRecordID;
+            ChildRecord.ParentID = ParentId;
+            Data.Add(ChildRecord);
+        }
+    }
+}
+
+```
+
+### DynamicObject binding
+
+The Blazor Dropdown Tree is a generic component that is strongly bound to a specific model type, but in cases where the model type is unknown at compile time, the data can be bound to the Dropdown Tree as a list of DynamicObjects. The Dropdown Tree can also perform all supported data operations on DynamicObjects when they are assigned to the DataSource property.
+
+```cshtml
+@using Syncfusion.Blazor.Navigations
+@using System.Dynamic
+<SfDropDownTree TValue="string" TItem="DynamicDictionary" Placeholder="Select a Item">
+    <DropDownTreeField TItem="DynamicDictionary" ID="ID" DataSource="@TreeData" Text="Name" ParentID="ParentID" HasChildren="ChildRecordID" Expanded="Expanded"></DropDownTreeField>
+</SfDropDownTree>
+
+@code {
+    public List<DynamicDictionary> TreeData { get; set; }
+    protected override void OnInitialized()
+    {
+        this.TreeData = GetData().ToList();
+    }
+    public static List<DynamicDictionary> Data = new List<DynamicDictionary>();
+    public static int ParentRecordID { get; set; }
+    public static int ChildRecordID { get; set; }
+
+    public static List<DynamicDictionary> GetData()
+    {
+        Data.Clear();
+        ParentRecordID = 0;
+        ChildRecordID = 0;
+        for (var i = 1; i <= 3; i++)
+        {
+            dynamic ParentRecord = new DynamicDictionary();
+            ParentRecord.ID = ++ParentRecordID;
+            ParentRecord.Name = "Parent " + i;
+            ParentRecord.ParentID = null;
+            ParentRecord.Expanded = true;
+            Data.Add(ParentRecord);
+            AddChildRecords(ParentRecordID);
+        }
+        return Data;
+    }
+    public static void AddChildRecords(int ParentId)
+    {
+        for (var i = 1; i < 3; i++)
+        {
+            dynamic ChildRecord = new DynamicDictionary();
+            ChildRecord.ID = ++ParentRecordID;
+            ChildRecord.Name = "Child Item " + ++ChildRecordID;
+            ChildRecord.ParentID = ParentId;
+            Data.Add(ChildRecord);
+        }
+    }
+
+    public class DynamicDictionary : DynamicObject
+    {
+        Dictionary<string, object> dictionary = new Dictionary<string, object>();
+
+        public override bool TryGetMember(GetMemberBinder binder, out object result)
+        {
+            string name = binder.Name;
+            return dictionary.TryGetValue(name, out result);
+        }
+        public override bool TrySetMember(SetMemberBinder binder, object value)
+        {
+            dictionary[binder.Name] = value;
+            return true;
+        }
+
+        public override System.Collections.Generic.IEnumerable<string> GetDynamicMemberNames()
+        {
+            return this.dictionary?.Keys;
+        }
+
+    }
+}
+
+```
+
 ## Binding Remote data
 
 Blazor Dropdown Tree can also be populated from a remote data service with the help of `DataManager` component and `Query` property. It supports different kinds of data services such as OData, OData V4, Web API, URL, and JSON with the help of `DataManager` adaptors. A service data can be assigned as an instance of `DataManager` to the `DataSource` property. To interact with remote data source, provide the endpoint `url`.
@@ -307,6 +441,322 @@ namespace DropDownTreeSample.Controllers
     }
 }
 ```
+
+## Observable collection
+
+The Blazor Dropdown Tree component's ObservableCollection provides notifications of changes made to the collection, such as when items are added, removed, or updated. It implements INotifyCollectionChanged to notify of dynamic changes to the collection, and INotifyPropertyChanged to notify of changes to property values on the client side.
+
+```cshtml
+@using Syncfusion.Blazor.Navigations
+@using System.Collections.ObjectModel
+@using DropDownTreeSample.Data
+
+<div class="control_wrapper">
+    <SfDropDownTree TValue="string" TItem="ObservableDatas" Placeholder="Select a Item" ValueChanging="TreeNodeClick">
+        <DropDownTreeField TItem="ObservableDatas" DataSource="@ObservableData" ID="@nameof(ObservableDatas.Id)" Child="@nameof(ObservableDatas.Children)" Text="@nameof(ObservableDatas.Name)" HasChildren="@nameof(ObservableDatas.HasChild)" Expanded="@nameof(ObservableDatas.Expanded)"></DropDownTreeField>
+    </SfDropDownTree>
+</div>
+
+@if (SelectedUnderlyingData != null)
+{
+    <ObservableDatasView Value="@SelectedUnderlyingData" OnNodeAddition="NodeAdded" />
+}
+
+@code {
+
+    public ObservableCollection<ObservableDatas> ObservableData { get; set; }
+
+    private int UniqueId { get; set; } = 10;
+    public string SelectedNode { get; set; }
+    public ObservableDatas SelectedUnderlyingData { get; set; }
+    public SfTreeView<ObservableDatas> TreeView;
+
+    protected override void OnInitialized()
+    {
+        ObservableData = ObservableDatas.GetRecords();
+    }
+
+    public void TreeNodeClick(DdtChangeEventArgs<string> args)
+    {
+        SelectedNode = args.NodeData.Id;
+        foreach (var data in ObservableData)
+        {
+            if (SelectedUnderlyingData?.Id == SelectedNode)
+            {
+                break;
+            }
+            SelectedUnderlyingData = RecurseFindData(data, SelectedNode);
+        }
+    }
+
+    public void NodeAdded(ObservableDatas node)
+    {
+        StateHasChanged();
+    }
+
+    private ObservableDatas RecurseFindData(ObservableDatas fromData, string dataId)
+    {
+        if (fromData.Id == dataId)
+        {
+            return fromData;
+        }
+        if (fromData.Children == null)
+            return null;
+        foreach (var child in fromData.Children)
+        {
+            var result = RecurseFindData(child, dataId);
+            if (result != null)
+            {
+                return result;
+            }
+        }
+        return null;
+    }
+
+    private ObservableDatas RecurseFindParent(ObservableDatas potential, string childId)
+    {
+        foreach (var child in potential.Children)
+        {
+            if (child.Id == childId)
+            {
+                return potential;
+            }
+            else
+            {
+                var result = RecurseFindParent(child, childId);
+                if (result != null)
+                    return result;
+            }
+        }
+        return null;
+    }
+}
+
+<style>
+    .control_wrapper {
+        max-width: 500px;
+        margin: auto;
+        border: 1px solid #dddddd;
+        border-radius: 3px;
+        max-height: 470px;
+        overflow: auto;
+    }
+</style>
+```
+```cshtml
+@using DropDownTreeSample.Data
+@using Syncfusion.Blazor.Inputs
+@using Syncfusion.Blazor.Buttons
+
+<div class="col-lg-4 property-section property-custom">
+    <div class="property-panel-section">
+        <div id="observable" class="property-panel-content">
+            <div class="buttonEle">
+                <label>Node name:</label>
+                <SfTextBox @bind-Value=@Value.Name />
+                <SfButton @onclick="AddNode">Add Child</SfButton>
+            </div>
+        </div>
+    </div>
+</div>
+
+@code {
+
+    [Parameter]
+    public ObservableDatas Value { get; set; }
+
+    [Parameter]
+    public EventCallback<ObservableDatas> OnNodeAddition { get; set; }
+
+    private int UniqueId = 0;
+
+    public async Task AddNode()
+    {
+        var newId = $"{Value.Id}-{UniqueId++}";
+        if (Value.Children == null)
+        {
+            Value.Children = new List<ObservableDatas>();
+        }
+        Value.Children.Add(new ObservableDatas
+        {
+            Id = newId,
+            Name = $"New node {newId}"
+        });
+
+        await OnNodeAddition.InvokeAsync(Value);
+    }
+}
+
+<style>
+    .buttonEle {
+        margin-left: 75px;
+        margin-top: 10px;
+    }
+</style>
+```
+```csharp
+
+using System.Collections.ObjectModel;
+using System.ComponentModel;
+using System.Runtime.CompilerServices;
+
+namespace DropDownTreeSample.Data
+{
+    public class ObservableDatas : INotifyPropertyChanged
+    {
+        public List<ObservableDatas> Children { get; set; }
+        public string Id { get; set; }
+
+        private string _name { get; set; }
+        public string Name
+        {
+            get => _name;
+            set
+            {
+                _name = value;
+                NotifyPropertyChanged();
+            }
+        }
+
+        public bool HasChild { get; set; }
+
+        private bool _expanded = false;
+
+        public bool Expanded
+        {
+            get => _expanded;
+            set
+            {
+                _expanded = value;
+                NotifyPropertyChanged();
+            }
+        }
+
+        public static ObservableCollection<ObservableDatas> GetRecords()
+        {
+            List<ObservableDatas> ListDataSource = new List<ObservableDatas>();
+            List<ObservableDatas> Folder1 = new List<ObservableDatas>();
+            ListDataSource.Add(new ObservableDatas
+            {
+                Id = "01",
+                Name = "Inbox",
+                Children = Folder1
+            });
+
+            List<ObservableDatas> Folder2 = new List<ObservableDatas>();
+
+            Folder1.Add(new ObservableDatas
+            {
+                Id = "01-01",
+                Name = "Categories",
+                Children = Folder2
+            });
+            Folder2.Add(new ObservableDatas
+            {
+                Id = "01-02",
+                Name = "Primary"
+            });
+            Folder2.Add(new ObservableDatas
+            {
+                Id = "01-03",
+                Name = "Social"
+            });
+            Folder2.Add(new ObservableDatas
+            {
+                Id = "01-04",
+                Name = "Promotions"
+            });
+
+            List<ObservableDatas> Folder3 = new List<ObservableDatas>();
+
+            ListDataSource.Add(new ObservableDatas
+            {
+                Id = "02",
+                Name = "Others",
+                Expanded = true,
+                Children = Folder3
+            });
+            List<ObservableDatas> Folder4 = new List<ObservableDatas>();
+            Folder3.Add(new ObservableDatas
+            {
+                Id = "02-01",
+                Name = "Sent Items",
+                Expanded = true,
+                Children = Folder4
+            });
+
+            Folder4.Add(new ObservableDatas
+            {
+                Id = "02-02",
+                Name = "Delete Items"
+            });
+            Folder3.Add(new ObservableDatas
+            {
+                Id = "02-03",
+                Name = "Drafts"
+            });
+            Folder3.Add(new ObservableDatas
+            {
+                Id = "02-04",
+                Name = "Archive"
+            });
+            return new ObservableCollection<ObservableDatas>(ListDataSource);
+        }
+        public event PropertyChangedEventHandler PropertyChanged;
+        private void NotifyPropertyChanged([CallerMemberName] string propertyName = "")
+        {
+            var handler = PropertyChanged;
+            if (handler != null)
+            {
+                handler(this, new PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+}
+
+```
+
+## Adding new items
+
+Dropdown Tree items can be added or removed dynamically by modify the **DataSource**.
+
+In the following demo, initially there are five tree items rendered. On clicking the `Add Data` button, a new item is added to the **DataSource**.
+
+```cshtml
+@using Syncfusion.Blazor.Navigations
+@using Syncfusion.Blazor.Buttons
+
+<SfButton OnClick="AddData">Add Data</SfButton>
+<SfDropDownTree TItem="EmployeeData" TValue="string" Placeholder="Select an employee" Width="500px" LoadOnDemand="true">
+    <DropDownTreeField TItem="EmployeeData" DataSource="Data" ID="Id" Text="Name" HasChildren="HasChild" ParentID="PId"></DropDownTreeField>
+</SfDropDownTree>
+
+@code {
+    List<EmployeeData> Data = new List<EmployeeData>
+    {
+        new EmployeeData() { Id = "1", Name = "Steven Buchanan", Job = "General Manager", HasChild = true, Expanded = true },
+        new EmployeeData() { Id = "2", PId = "1", Name = "Laura Callahan", Job = "Product Manager", HasChild = true },
+        new EmployeeData() { Id = "3", Name = "Andrew Fuller", Job = "Team Lead", HasChild = true },
+        new EmployeeData() { Id = "4", PId = "3", Name = "Anne Dodsworth", Job = "Developer" },
+        new EmployeeData() { Id = "10", PId = "3", Name = "Lilly", Job = "Developer" }
+    };
+
+    void AddData()
+    {
+        Data.Add(new EmployeeData() { Id = "5", PId = "3", Name = "Jack", Job = "Developer" });
+    }
+    class EmployeeData
+    {
+        public string Id { get; set; }
+        public string Name { get; set; }
+        public string Job { get; set; }
+        public bool HasChild { get; set; }
+        public bool Expanded { get; set; }
+        public string PId { get; set; }
+    }
+}
+```
+
 
 ## Load On Demand
 
