@@ -35,11 +35,6 @@ Follow the below steps to configure localization for label text and error messag
 {% include_relative code-snippet/localization/localization.razor %}
 
 {% endhighlight %}
-{% highlight C# tabtitle="C#"  %}
-
-{% include_relative code-snippet/localization/localization.razor.cs %}
-
-{% endhighlight %}
 {% endtabs %}
 
 4.Finally, run the application to view the localized DataForm component.

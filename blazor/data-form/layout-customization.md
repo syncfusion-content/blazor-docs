@@ -27,7 +27,7 @@ The below example portrays how to use the `ButtonsAlignment` property in DataFor
 {% tabs %}
 {% highlight razor tabtitle="ButtonsAlignment"  %}
 
-{% include_relative code-snippet\layout-customization\buttons-alignment.razor %}
+{% include_relative code-snippet/layout-customization/buttons-alignment.razor %}
 
 {% endhighlight %}
 {% endtabs %}
@@ -41,7 +41,7 @@ In the provided code snippet, an extra button component is implemented to reset 
 {% tabs %}
 {% highlight razor tabtitle="ButtonsAlignment"  %}
 
-{% include_relative code-snippet\layout-customization\additional-buttons.razor %}
+{% include_relative code-snippet/layout-customization/additional-buttons.razor %}
 
 {% endhighlight %}
 {% endtabs %}
@@ -63,7 +63,7 @@ The below code part explains how to configure the `LabelPosition` in DataForm co
 {% tabs %}
 {% highlight razor tabtitle="Label Position"  %}
 
-{% include_relative code-snippet\layout-customization\label-position.razor %}
+{% include_relative code-snippet/layout-customization/label-position.razor %}
 
 {% endhighlight %}
 {% endtabs %}
@@ -75,7 +75,7 @@ The DataForm component allows you to customize the width of the form container b
 {% tabs %}
 {% highlight razor tabtitle="Width"  %}
 
-{% include_relative code-snippet\templates\change-form-width.razor %}
+{% include_relative code-snippet/templates/change-form-width.razor %}
 
 {% endhighlight %}
 {% endtabs %}

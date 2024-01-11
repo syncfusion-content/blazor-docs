@@ -193,7 +193,7 @@ In the `IsValid` method, you can define your custom validation logic. If the val
 {% tabs %}
 {% highlight razor tabtitle="Custom Validation Attributes"  %}
 
-{% include_relative code-snippet\data-annotation-attributes\custom-validation.razor %}
+{% include_relative code-snippet/data-annotation-attributes/custom-validation.razor %}
 
 {% endhighlight %}
 {% endtabs %}
