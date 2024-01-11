@@ -19,12 +19,12 @@ The [OnSubmit](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataForm.
 {% tabs %}
 {% highlight razor tabtitle="Model" %}
 
-{% include_relative code-snippet\events\onsubmit.razor %}
+{% include_relative code-snippet/events/onsubmit.razor %}
 
 {% endhighlight %}
 {% highlight razor tabtitle="EditContext" %}
 
-{% include_relative code-snippet\events\onsubmit-editcontext.razor %}
+{% include_relative code-snippet/events/onsubmit-editcontext.razor %}
 
 {% endhighlight %}
 {% endtabs %}
@@ -38,12 +38,12 @@ he [OnValidSubmit](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataF
 {% tabs %}
 {% highlight razor tabtitle="Model" %}
 
-{% include_relative code-snippet\events\onvalidsubmit-model.razor %}
+{% include_relative code-snippet/events/onvalidsubmit-model.razor %}
 
 {% endhighlight %}
 {% highlight razor tabtitle="EditContext" %}
 
-{% include_relative code-snippet\events\onvalidsubmit-editcontext.razor %}
+{% include_relative code-snippet/events/onvalidsubmit-editcontext.razor %}
 
 {% endhighlight %}
 {% endtabs %}
@@ -55,12 +55,12 @@ The [OnInvalidSubmit](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Da
 {% tabs %}
 {% highlight razor tabtitle="Model" %}
 
-{% include_relative code-snippet\events\oninvalidsubmit-model.razor %}
+{% include_relative code-snippet/events/oninvalidsubmit-model.razor %}
 
 {% endhighlight %}
 {% highlight razor tabtitle="EditContext" %}
 
-{% include_relative code-snippet\events\oninvalidsubmit-editcontext.razor %}
+{% include_relative code-snippet/events/oninvalidsubmit-editcontext.razor %}
 
 {% endhighlight %}
 {% endtabs %}
@@ -72,12 +72,12 @@ The [OnUpdate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataForm.
 {% tabs %}
 {% highlight razor tabtitle="Model" %}
 
-{% include_relative code-snippet\events\onupdate-model.razor %}
+{% include_relative code-snippet/events/onupdate-model.razor %}
 
 {% endhighlight %}
 {% highlight razor tabtitle="EditContext" %}
 
-{% include_relative code-snippet\events\onupdate-editcontext.razor %}
+{% include_relative code-snippet/events/onupdate-editcontext.razor %}
 
 {% endhighlight %}
 {% endtabs %}
