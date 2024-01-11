@@ -19,7 +19,7 @@ The [OnSubmit](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataForm.
 {% tabs %}
 {% highlight razor tabtitle="Model" %}
 
-{% include_relative code-snippet/events/onsubmit.razor %}
+{% include_relative code-snippet/events/onsubmit-model.razor %}
 
 {% endhighlight %}
 {% highlight razor tabtitle="EditContext" %}
