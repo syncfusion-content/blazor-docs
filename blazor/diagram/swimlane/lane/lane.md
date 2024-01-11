@@ -193,6 +193,8 @@ You can download a complete working sample from [GitHub]()
 
  The `LaneOffsetX` and `LaneOffsetY` property of the node will position the element in the lane canvas.
 
+>Note: By default, lane children will maintain a 20px padding from the lane canvas.
+
 The following code example explains how to add nodes to lane.
 
 ```cshtml
