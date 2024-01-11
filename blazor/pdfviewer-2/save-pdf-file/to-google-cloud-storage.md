@@ -76,4 +76,4 @@ N> Replace **path/to/service-account-key.json** with the actual file path to you
 
 N> The **Google.Cloud.Storage.V1** NuGet package must be installed in your application to use the previous code example.
 
-[View sample in GitHub](https://github.com/SyncfusionExamples/open-save-pdf-documents-in-google-cloud-storage)
+[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Load%20and%20Save/Open%20and%20Save%20from%20GCS-SfPdfViewer)

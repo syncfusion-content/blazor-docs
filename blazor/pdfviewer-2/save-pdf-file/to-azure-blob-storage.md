@@ -76,4 +76,4 @@ N> Replace **Your Connection string from Azure** with the actual connection stri
 
 N> The **Azure.Storage.Blobs** NuGet package must be installed in your application to use the previous code example.
 
-[View sample in GitHub](https://github.com/SyncfusionExamples/open-save-pdf-documents-in-azure-blob-storage).
+[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Load%20and%20Save/Open%20and%20Save%20from%20Azure%20blob%20storage-SfPdfViewer).
