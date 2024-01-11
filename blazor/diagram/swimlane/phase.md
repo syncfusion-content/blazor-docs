@@ -191,7 +191,7 @@ The following code example explains how to define a Phase header and its customi
                         Width = 450,
                         Header = new SwimlaneHeader()
                         {
-                            Annotation = new ShapeAnnotation(){Content = "Phase 1", Style = new TextStyle(){ Color = "White"} },
+                            Annotation = new ShapeAnnotation(){Content = "Phase 1", Style = new TextStyle(){ Color = "White", TextDecoration = TextDecoration.Underline, Italic = true, Bold = true} },
                             Height = 30
                         },
                         Style = new TextStyle(){Fill = "Teal"},
