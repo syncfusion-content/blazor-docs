@@ -32,5 +32,6 @@ You can customize the appearance of the Button by using the Cascading Style Shee
 
 ```
 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hZLKMBBBsmGcZMPJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Customizing Blazor Button Appearance](./../images/blazor-button-customization.png)

@@ -48,6 +48,6 @@ The following shortcut keys are used to access the Chip control without any inte
 </style>
 
 ```
-
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXBgChrcBRGexhup?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Accessibility in Blazor Chip](./images/blazor-chip-accessibility.gif)

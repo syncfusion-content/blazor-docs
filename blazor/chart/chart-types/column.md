@@ -51,6 +51,7 @@ documentation: ug
 }
 
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/htrKMBhHfdzwUSJa?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 N> Refer to our [Blazor Column Charts](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/column-chart) feature tour page to know about its other groundbreaking feature representations. Explore our [Blazor Column Charts Example](https://blazor.syncfusion.com/demos/chart/column?theme=bootstrap4) to compare **Frequency**, **Count**, **Total**, or **Average** of data in different categories.
 
@@ -96,6 +97,7 @@ The [ColumnSpacing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Char
 }
 
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDrKWLhxpnpuRSHe?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Column Chart with Space and Width](../images/chart-types-images/blazor-column-chart-space-and-width.png)
 
@@ -142,6 +144,7 @@ You can use the [GroupName](https://help.syncfusion.com/cr/blazor/Syncfusion.Bla
 }
 
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BDLAWrVdzxoVOMsL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Grouping in Blazor Grouped Column Chart](../images/chart-types-images/blazor-column-chart-grouped-column.png)
 
@@ -194,6 +197,7 @@ The following properties can be used to customize the [Column](https://help.sync
 }
 
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rtrgCLBdzRySCgaX?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Column Chart with Custom Series](../images/chart-types-images/blazor-column-chart-custom-series.png)
 

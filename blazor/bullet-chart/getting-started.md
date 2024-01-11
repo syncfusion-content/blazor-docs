@@ -133,6 +133,8 @@ Add the Syncfusion Blazor Bullet Chart component in the **~/Pages/Index.razor** 
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion Blazor Bullet Chart component in your default web browser.
 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/htrqCBBifAwtrfXs?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 ![Blazor Bullet Chart Component](images/blazor-bullet-chart-component.png)
 
 ## Adding title
@@ -147,6 +149,8 @@ Add a title by using the [Title](https://help.syncfusion.com/cr/blazor/Syncfusio
 
 {% endhighlight %}
 {% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZVgihVMfqmppipq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Bullet Chart with Title](images/blazor-bullet-chart-title.png)
 
@@ -168,6 +172,8 @@ Add ranges by using the [BulletChartRangeCollection](https://help.syncfusion.com
 {% endhighlight %}
 {% endtabs %}
 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VjVKsrBsTAGlHYun?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 ![Adding Range in Blazor Bullet Chart](images/blazor-bullet-chart-ranges.png)
 
 ## Adding tooltip
@@ -188,6 +194,8 @@ Use the tooltip to show the measured values by setting the [Enable](https://help
 
 {% endhighlight %}
 {% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LXhKshVCTUlrTVjQ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Bullet Chart displays ToolTip](images/blazor-bullet-chart-tooltip.png)
 

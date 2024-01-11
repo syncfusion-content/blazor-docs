@@ -51,6 +51,7 @@ documentation: ug
 }
 
 ``` 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BXrKiVhdhoVJjpOZ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Line Chart](../images/chart-types-images/blazor-line-chart.png)
 
@@ -93,6 +94,7 @@ To render a multicolored line series, specify the [Type](https://help.syncfusion
 }
 
 ``` 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rZhqiBrHryhdGmHf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Multicolored Line Chart](../images/chart-types-images/blazor-multicolor-line-chart.png)
 
@@ -144,6 +146,7 @@ The following properties can be used to customize the [Line](https://help.syncfu
 }
 
 ``` 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BNrgsBVRheBaFjKV?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Line Chart with Custom Series](../images/chart-types-images/blazor-line-chart-custom-series.png)
 

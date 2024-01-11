@@ -1,0 +1,10 @@
+@using Syncfusion.Blazor.DropDowns
+
+<SfAutoComplete TValue=int? TItem=int? DataSource="@data" Width="300px" @bind-Value="@SelectedValue">
+
+</SfAutoComplete>
+
+@code {
+    public int? SelectedValue { get; set; } = 1022;
+    public int?[] data = { 1011, 1022, 1044, 1066 };
+}
