@@ -17,7 +17,7 @@ Paging options can be configured through the [GridPageSettings](https://help.syn
 
 > You can achieve better performance by using grid paging to fetch only a pre-defined number of records from the data source.
 
-# Customize the pager options
+## Customize the pager options
 
 Customizing the pager options in the Syncfusion Grid allows you to tailor the pagination control according to your specific requirements. You can customize the pager to display the number of pages using the `PageCount` property, change the current page using `CurrentPage` property, display the number of records in the grid using the `PageSize` property, and even adjust the page sizes in a dropdown using the `PageSizes` property. <!--Additionally, you can include the current page as a query string in the URL for convenient navigation.-->
 
