@@ -61,7 +61,7 @@ The `ObjectGraphDataAnnotationsValidator` within the DataForm component ensures 
 
 ## Fluent validation 
 
-`FluentValidator` is a custom validator that validates beyond standard validation attributes. It allows for checking if field values conform to the credit card format, match a specific value, exceed or fall below a given value, or are equivalent to the value of another field within the same model.
+[FluentValidator](https://www.nuget.org/packages/Blazored.FluentValidation/) is a custom validator that validates beyond standard validation attributes. It allows for checking if field values conform to the credit card format, match a specific value, exceed or fall below a given value, or are equivalent to the value of another field within the same model.
 
 {% tabs %}
 {% highlight razor tabtitle="FluentValidator.razor"  %}
@@ -69,19 +69,10 @@ The `ObjectGraphDataAnnotationsValidator` within the DataForm component ensures 
 {% include_relative code-snippet/data-annotations-validation/fluent-validation.razor %}
 
 {% endhighlight %}
-
-{% highlight razor tabtitle="PaymentDetailsValidator.cs"  %}
-
-{% include_relative code-snippet/data-annotations-validation/complex-model-validation.cs %}
-
-{% endhighlight %}
-
 {% endtabs %}
 
 ![Blazor DataForm ObjectGraphDataAnnotationsValidator](images/blazor_dataform_fluentvalidation.png)
 
 ## See also
 
-* Custom Validation
-
-    * [Custom Validation attributes](./form-binding.md)
+  * [Custom Validation attributes](https://blazor.syncfusion.com/documentation/data-form/data-annotation-attributes#custom-validation)
