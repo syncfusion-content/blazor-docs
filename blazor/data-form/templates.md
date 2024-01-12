@@ -38,7 +38,7 @@ We can also utilize the above `Template` combination with [FormAutoGenerateItems
 {% include_relative code-snippet/templates/customization-entire-form.razor %}
 
 {% endhighlight %}
-{% highlight razor tabtitle="C#"  %}
+{% highlight C# tabtitle="C#"  %}
 
 {% include_relative code-snippet/templates/customization-entire-form.cs %}
 
