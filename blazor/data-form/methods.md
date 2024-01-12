@@ -11,7 +11,7 @@ documentation: ug
 
 The classification of methods that can be invoked by using the DataForm instance are outlined below 
 
-## IsValid
+## Validate method
 
  The [IsValid](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataForm.SfDataForm.html#Syncfusion_Blazor_DataForm_SfDataForm_IsValid) method evaluates the form data against defined validation rules to determine its validity.
 
@@ -24,7 +24,7 @@ The classification of methods that can be invoked by using the DataForm instance
 {% endhighlight %}
 {% endtabs %}
 
-## Refresh
+## Refresh method
 
  The [Refresh](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataForm.SfDataForm.html#Syncfusion_Blazor_DataForm_SfDataForm_Refresh) method updates the form to reflect any changes in the data model or configuration.It also resets the validation state, clearing any existing validation error messages. 
 

@@ -1,15 +1,16 @@
-public class CreditCard
-{
-    [Required(ErrorMessage = "Please enter the name on card")]
-    public string Name { get; set; }
+ public class RegistrationDetails
+    {
 
-    [Required(ErrorMessage = "Please enter the card number")]
-    [CreditCard]
-    public string CardNumber { get; set; }
+        [Display(ResourceType = typeof(SfResources), Name = "DataForm_FirstName")]
+        [Required(ErrorMessageResourceName = "DataForm_FirstName_Error", ErrorMessageResourceType = typeof(SfResources))]
+        public string FirstName { get; set; }
 
-    [Required(ErrorMessage = "Please enter cvv number")]
-    public string CVV { get; set; }
+        [Display(ResourceType = typeof(SfResources), Name = "DataForm_LastName")]
+        [Required(ErrorMessageResourceName = "DataForm_LastName_Error", ErrorMessageResourceType = typeof(SfResources))]
+        public string LastName { get; set; }
 
-    [Required(ErrorMessage = "Please select/enter expiry date")]
-    public DateTime? ExpiryDate { get; set; }
-}
+        [Display(ResourceType = typeof(SfResources), Name = "DataForm_Email")]
+        [Required(ErrorMessageResourceName = "DataForm_Email_Required_Error", ErrorMessageResourceType = typeof(SfResources))]
+        [EmailAddress(ErrorMessageResourceName = "DataForm_Invalid_Email_Error", ErrorMessageResourceType = typeof(SfResources))]
+        public string Email { get; set; }
+    }
