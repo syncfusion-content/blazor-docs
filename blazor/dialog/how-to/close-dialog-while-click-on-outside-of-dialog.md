@@ -51,7 +51,7 @@ N> The [OnOverlayModalClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Bl
         this.IsVisible = true;
     }
 
-    private void OverlayClick(OverlayModalClickEventArgs  args)
+    private void OverlayClick(OverlayModalClickEventArgs args)
     {
         this.IsVisible = false;
     }
