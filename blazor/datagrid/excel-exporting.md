@@ -569,6 +569,356 @@ This can be demonstrated using the following sample:
 
 N> [View Sample in GitHub.](https://github.com/SyncfusionExamples/blazor-datagrid-customize-background-color-for-grid-exported-excel-file)
 
+
+### Customizing the grid column header in an exported Excel document
+
+You can add custom text and customize its styles for a particular column header in the exported document. This can be achieved by the [ExcelHeaderQueryCellInfoEvent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_ExcelHeaderQueryCellInfoEvent) of the Grid.
+
+The following example demonstrates how the `ExcelHeaderQueryCellInfoEvent` works in an exported Excel document. The `ExcelHeaderQueryCellInfoEvent` is used to change the background color of the column in the exported Excel document.
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+@using Syncfusion.Blazor.Grids
+
+<SfGrid @ref="Grid" DataSource="@GridData" AllowExcelExport="true" Toolbar="@(new List<string>() { "ExcelExport" })">
+    <GridEvents ExcelHeaderQueryCellInfoEvent="ExcelHeaderQueryCellInfoHandler" OnToolbarClick="ToolbarClickHandler" TValue="OrderData"></GridEvents>
+    <GridColumns>
+        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code {
+    private SfGrid<OrderData> Grid;
+
+    public List<OrderData> GridData { get; set; }
+
+    protected override void OnInitialized()
+    {
+        GridData = OrderData.GetAllRecords();
+    }
+
+ 
+    public async Task ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
+    {
+        await this.Grid.ExcelExport();
+    }
+
+    public void ExcelHeaderQueryCellInfoHandler(ExcelHeaderQueryCellInfoEventArgs args)
+    {
+        if (args.Value == "Customer Name")
+        {
+
+            args.Cell.CellStyle.BackColor = "#DC143C";
+        }
+        else if (args.Value == "Freight")
+        {
+            args.Cell.CellStyle.BackColor = "#DC143C";
+        }
+
+        else if (args.Column.Field == "OrderID")
+        {
+
+            args.Cell.Value = "OrderNumber";
+        }
+        else if (args.Column.Field == "OrderDate")
+        {
+            args.Cell.Value = "CustomerDate";
+        }
+    }
+}
+{% endhighlight %}
+{% highlight c# tabtitle="OrderData.cs" %}
+public class OrderData
+    {
+        
+            public static List<OrderData> Orders = new List<OrderData>();
+            public OrderData()
+            {
+
+            }
+            public OrderData(int? OrderID, string CustomerID, DateTime? OrderDate, double Freight)
+            {
+                this.OrderID = OrderID;
+                this.CustomerID = CustomerID;
+                this.OrderDate = OrderDate;
+                this.Freight = Freight;
+            }
+
+            public static List<OrderData> GetAllRecords()
+            {
+                if (Orders.Count() == 0)
+                {
+                    int code = 10;
+                    for (int? i = 1; i < 2; i++)
+                    {
+                        Orders.Add(new OrderData(1, "Nancy", new DateTime(1993, 09, 15), 98));
+                        Orders.Add(new OrderData(2, "Andrew", new DateTime(1997, 06, 01), 46));
+                        Orders.Add(new OrderData(3, "Steven", new DateTime(2000, 04, 04), 56));
+                        Orders.Add(new OrderData(4, "Margaret", new DateTime(1895, 11, 11), 74));
+                        Orders.Add(new OrderData(5, "Janet", new DateTime(2001, 08, 04), 83));
+                        Orders.Add(new OrderData(6, "Andrew", new DateTime(2022, 04, 09), 51));
+                        Orders.Add(new OrderData(7, "Nancy", new DateTime(2023, 06, 06), 23));
+                        Orders.Add(new OrderData(8, "Margaret", new DateTime(2011, 12, 30), 87));
+                        Orders.Add(new OrderData(9, "Janet", new DateTime(2012, 07, 07), 34));
+                        code += 5;
+                    }
+                }
+                return Orders;
+            }
+
+            public int? OrderID { get; set; }
+            public string CustomerID { get; set; }
+            public DateTime? OrderDate { get; set; }
+            public double Freight { get; set; }
+        
+    }
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hXLqsMBjwBjyyIfv?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+### Customizing the DataGrid aggregate content in an exported Excel document
+
+You can customize the DataGrid aggregate content in the exported document. This can be achieved by the [ExcelAggregateTemplateInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_ExcelAggregateTemplateInfo) of the Grid.
+
+The following example demonstrates how the `ExcelAggregateTemplateInfo` event works to aggregate content in an exported Excel document. The `ExcelAggregateTemplateInfo` event is utilized to modify the background color of the aggregated content in an Excel document.
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+
+@using Syncfusion.Blazor.Grids
+
+<SfGrid @ref="Grid" DataSource="@GridData" AllowExcelExport="true" Toolbar="@(new List<string>() { "ExcelExport" })">
+    <GridEvents ExcelAggregateTemplateInfo="ExcelAggregateTemplateInfoHandler" OnToolbarClick="ToolbarClickHandler" TValue="OrderData"></GridEvents>
+    <GridAggregates>
+        <GridAggregate>
+            <GridAggregateColumns>
+                <GridAggregateColumn Field=@nameof(OrderData.Freight) Type="AggregateType.Sum" Format="C2">
+                    <FooterTemplate>
+                        @{
+                            var aggregate = (context as AggregateTemplateContext);
+                            <div>
+                                <p>Sum: @aggregate.Sum</p>
+                            </div>
+                        }
+                    </FooterTemplate>
+                </GridAggregateColumn>
+            </GridAggregateColumns>
+        </GridAggregate>
+        <GridAggregate>
+            <GridAggregateColumns>
+                <GridAggregateColumn Field=@nameof(OrderData.CustomerID) Type="AggregateType.Count" Format="C2">
+                    <FooterTemplate>
+                        @{
+                            var aggregate = (context as AggregateTemplateContext);
+                            <div>
+                                <p>Count: @aggregate.Count</p>
+                            </div>
+                        }
+                    </FooterTemplate>
+                </GridAggregateColumn>
+            </GridAggregateColumns>
+        </GridAggregate>
+    </GridAggregates>
+    <GridColumns>
+        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+    </GridColumns>
+</SfGrid>
+@code {
+    private SfGrid<OrderData> Grid;
+
+    public List<OrderData> GridData { get; set; }
+
+    protected override void OnInitialized()
+    {
+        GridData = OrderData.GetAllRecords();
+    }
+
+ 
+    public async Task ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
+    {
+        await this.Grid.ExcelExport();
+    }
+
+    public void ExcelAggregateTemplateInfoHandler(ExcelAggregateEventArgs args)
+    {
+        if (args.Column.Field == "Freight")
+        {
+            args.Style.BackColor = "#DC143C";
+        }
+        else if (args.Column.Field == "CustomerID")
+        {
+            args.Style.BackColor = "#7CFC00";
+        }
+
+
+    }
+}
+{% endhighlight %}
+{% highlight c# tabtitle="OrderData.cs" %}
+public class OrderData
+    {
+        
+            public static List<OrderData> Orders = new List<OrderData>();
+            public OrderData()
+            {
+
+            }
+            public OrderData(int? OrderID, string CustomerID, DateTime? OrderDate, double Freight)
+            {
+                this.OrderID = OrderID;
+                this.CustomerID = CustomerID;
+                this.OrderDate = OrderDate;
+                this.Freight = Freight;
+            }
+
+            public static List<OrderData> GetAllRecords()
+            {
+                if (Orders.Count() == 0)
+                {
+                    int code = 10;
+                    for (int? i = 1; i < 2; i++)
+                    {
+                        Orders.Add(new OrderData(1, "Nancy", new DateTime(1993, 09, 15), 98));
+                        Orders.Add(new OrderData(2, "Andrew", new DateTime(1997, 06, 01), 46));
+                        Orders.Add(new OrderData(3, "Steven", new DateTime(2000, 04, 04), 56));
+                        Orders.Add(new OrderData(4, "Margaret", new DateTime(1895, 11, 11), 74));
+                        Orders.Add(new OrderData(5, "Janet", new DateTime(2001, 08, 04), 83));
+                        Orders.Add(new OrderData(6, "Andrew", new DateTime(2022, 04, 09), 51));
+                        Orders.Add(new OrderData(7, "Nancy", new DateTime(2023, 06, 06), 23));
+                        Orders.Add(new OrderData(8, "Margaret", new DateTime(2011, 12, 30), 87));
+                        Orders.Add(new OrderData(9, "Janet", new DateTime(2012, 07, 07), 34));
+                        code += 5;
+                    }
+                }
+                return Orders;
+            }
+
+            public int? OrderID { get; set; }
+            public string CustomerID { get; set; }
+            public DateTime? OrderDate { get; set; }
+            public double Freight { get; set; }
+        
+    }
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LZrUCiBXloodxJqV?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+### Customizing the DataGrid group caption content in an exported Excel document
+
+You can customize the values and  its styles for a particular group caption content in the exported document. This can be achieved by the [ExcelGroupCaptionTemplateInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_ExcelGroupCaptionTemplateInfo) of the Grid
+
+The following example demonstrates how the `ExcelGroupCaptionTemplateInfo` event works in customizing the values and changing the background color of the aggregate content in an exported Excel document.
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+@using Syncfusion.Blazor.Grids
+
+<SfGrid ID="Grid" @ref="DefaultGrid" DataSource="@GridData" AllowGrouping="true" AllowExcelExport="true" Toolbar="@(new List<string>() { "ExcelExport" })">
+    <GridEvents ExcelGroupCaptionTemplateInfo="ExcelGroupCaptionHandler" OnToolbarClick="ToolbarClickHandler" TValue="OrderData"></GridEvents>
+    <GridGroupSettings Columns="@Initial">
+        <CaptionTemplate>
+            @{
+                var order = (context as CaptionTemplateContext);
+                <div>@order.Field - @order.Key</div>
+            }
+        </CaptionTemplate>
+    </GridGroupSettings>
+    <GridColumns>
+        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+    </GridColumns>
+</SfGrid>
+@code {
+    private SfGrid<OrderData> DefaultGrid;
+
+    public List<OrderData> GridData { get; set; }
+
+    protected override void OnInitialized()
+    {
+        GridData = OrderData.GetAllRecords();
+    }
+
+    string[] Initial = new string[] { "CustomerID" };
+
+    public void ExcelGroupCaptionHandler(ExcelCaptionTemplateArgs Args)
+    {
+        if (Args.Field == "CustomerID")
+        {
+            Args.Cell.Value = Args.Field + " - " + Args.Key;
+             Args.Style.BackColor = "#DC143C";
+        }
+    }
+
+    public async Task ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
+    {
+        if (args.Item.Id == "Grid_excelexport")  // Id is the combination of Grid's ID and item name.
+        {
+            await this.DefaultGrid.ExportToExcelAsync();
+        }
+    }
+}
+{% endhighlight %}
+{% highlight c# tabtitle="OrderData.cs" %}
+public class OrderData
+    {
+        
+            public static List<OrderData> Orders = new List<OrderData>();
+            public OrderData()
+            {
+
+            }
+            public OrderData(int? OrderID, string CustomerID, DateTime? OrderDate, double Freight)
+            {
+                this.OrderID = OrderID;
+                this.CustomerID = CustomerID;
+                this.OrderDate = OrderDate;
+                this.Freight = Freight;
+            }
+
+            public static List<OrderData> GetAllRecords()
+            {
+                if (Orders.Count() == 0)
+                {
+                    int code = 10;
+                    for (int? i = 1; i < 2; i++)
+                    {
+                        Orders.Add(new OrderData(1, "Nancy", new DateTime(1993, 09, 15), 98));
+                        Orders.Add(new OrderData(2, "Andrew", new DateTime(1997, 06, 01), 46));
+                        Orders.Add(new OrderData(3, "Steven", new DateTime(2000, 04, 04), 56));
+                        Orders.Add(new OrderData(4, "Margaret", new DateTime(1895, 11, 11), 74));
+                        Orders.Add(new OrderData(5, "Janet", new DateTime(2001, 08, 04), 83));
+                        Orders.Add(new OrderData(6, "Andrew", new DateTime(2022, 04, 09), 51));
+                        Orders.Add(new OrderData(7, "Nancy", new DateTime(2023, 06, 06), 23));
+                        Orders.Add(new OrderData(8, "Margaret", new DateTime(2011, 12, 30), 87));
+                        Orders.Add(new OrderData(9, "Janet", new DateTime(2012, 07, 07), 34));
+                        code += 5;
+                    }
+                }
+                return Orders;
+            }
+
+            public int? OrderID { get; set; }
+            public string CustomerID { get; set; }
+            public DateTime? OrderDate { get; set; }
+            public double Freight { get; set; }
+        
+    }
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VZLzZsDwlAttEcPn?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+
 ### Customizing the background color for a particular column in an exported Excel document
 
 You can set the background color for a particular column in the exported document. This can be achieved by the [ExcelQueryCellInfoEvent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_ExcelQueryCellInfoEvent) of the Grid.
