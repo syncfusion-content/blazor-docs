@@ -9,7 +9,7 @@ documentation: ug
 
 # Integrate Media Query with other components
 
-You can integrate any component inside the `Media Query` such as the Chart, Grid, etc. In the example below, the Grid component is placed along with the Media Query to showcase the grid's responsiveness by changing the `RowRenderingMode` property of the Grid component based on `activeBreakpoint` when the browser size is changed.
+You can integrate various components, such as the Chart and Grid, with `Media Query` to improve responsiveness. In the example below, the Grid component is utilized in conjunction with a Media Query to demonstrate its responsiveness. This is achieved by dynamically adjusting the `RowRenderingMode` property of the Grid based on the `activeBreakpoint` when the browser size is changed.
 
 ```cshtml
 
@@ -29,24 +29,7 @@ You can integrate any component inside the `Media Query` such as the Chart, Grid
 }
 <SfMediaQuery @bind-ActiveBreakpoint="activeBreakPoint"></SfMediaQuery>
 <div style="position:relative; min-height: 500px;">
-    <SfGrid DataSource="@Orders" RowRenderingMode="@RenderingMode" EnableAdaptiveUI=true Height="100%" Width="100%" AllowPaging="true">
-        <GridFilterSettings Type="@FilterType.Excel"></GridFilterSettings>
-         <GridAggregates>
-            <GridAggregate>
-                <GridAggregateColumns>
-                    <GridAggregateColumn Field=@nameof(Order.Freight) Type="AggregateType.Sum" Format="C2">
-                        <FooterTemplate>
-                            @{
-                                var aggregate = (context as AggregateTemplateContext);
-                                <div>
-                                    <p>Sum: @aggregate.Sum</p>
-                                </div>
-                            }
-                        </FooterTemplate>
-                    </GridAggregateColumn>
-                </GridAggregateColumns>
-            </GridAggregate>
-        </GridAggregates>
+    <SfGrid DataSource="@Orders" RowRenderingMode="@RenderingMode" EnableAdaptiveUI=true Height="100%" Width="100%">
         <GridColumns>
             <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" IsPrimaryKey="true" Width="80"></GridColumn>
             <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="120"></GridColumn>
