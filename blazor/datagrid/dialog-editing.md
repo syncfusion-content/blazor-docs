@@ -108,11 +108,11 @@ In the below example we have changed the dialog's header text and footer button 
     }
     public async Task Cancel()
     {
-        await Grid.CloseEdit();     //Cancel editing action
+        await Grid.CloseEditAsync();     //Cancel editing action
     }
     public async Task Save()
     {
-        await Grid.EndEdit();       //Save the edited/added data to Grid
+        await Grid.EndEditAsync();       //Save the edited/added data to Grid
     }
     protected override void OnInitialized()
     {
