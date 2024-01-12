@@ -79,3 +79,5 @@ The DataForm component allows you to customize the width of the form container b
 
 {% endhighlight %}
 {% endtabs %}
+
+![Blazor DataForm Form Width](images/blazor_dataform_change_form_width.png)
