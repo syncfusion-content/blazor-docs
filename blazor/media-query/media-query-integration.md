@@ -65,4 +65,4 @@ You can integrate various components, such as the Chart and Grid, with `Media Qu
 
 ```
 
-![Blazor Media Query integration in Grid](images/blazor-media-query-with-grid.png)
+![Blazor Media Query integration in Grid](images/blazor-media-query-with-grid.gif)
