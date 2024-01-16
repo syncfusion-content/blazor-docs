@@ -3,6 +3,6 @@
 <SfDropDownList TValue=int? TItem=int? Placeholder="Select a game" DataSource="@data" Width="300px" @bind-Value="@DropDownValue"></SfDropDownList>
 
 @code{
-    public string DropDownValue { get; set; } = 1022;
+    public int? DropDownValue { get; set; } = 1022;
     public int?[] data = { 1011, 1022, 1044, 1066 };
 }
