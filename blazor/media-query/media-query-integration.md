@@ -28,10 +28,10 @@ You can integrate various components, such as the Chart and Grid, with `Media Qu
     }
 }
 <SfMediaQuery @bind-ActiveBreakpoint="activeBreakPoint"></SfMediaQuery>
-<div style="position:relative; min-height: 500px;">
-    <SfGrid DataSource="@Orders" RowRenderingMode="@RenderingMode" EnableAdaptiveUI=true Height="100%" Width="100%">
-        <GridColumns>
-            <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" IsPrimaryKey="true" Width="80"></GridColumn>
+<div style="position:relative; height: 650px; overflow-y: auto;">
+    <SfGrid DataSource="@Orders" EnableAdaptiveUI="true" RowRenderingMode="@RenderingMode" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Cancel", "Update", "Search" })" Height="100%" Width="100%" AllowPaging="true">
+       <GridColumns>
+            <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" IsPrimaryKey="true" Width="80" ValidationRules="@(new ValidationRules{ Required= true })"></GridColumn>
             <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="120"></GridColumn>
             <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" Width="130"></GridColumn>
             <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" Width="120"></GridColumn>
@@ -45,7 +45,7 @@ You can integrate various components, such as the Chart and Grid, with `Media Qu
 
     protected override void OnInitialized()
     {
-        Orders = Enumerable.Range(1, 5).Select(x => new Order()
+        Orders = Enumerable.Range(1, 75).Select(x => new Order()
         {
             OrderID = 1000 + x,
             CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
