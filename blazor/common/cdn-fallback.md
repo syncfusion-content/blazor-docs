@@ -37,7 +37,7 @@ You can check the Syncfusion Blazor object for script fallback whether scripts a
 {% endhighlight %}
 {% endtabs %}
 
-### Style Sheet Fallback
+### stylesheet Fallback
 
 You can refer the theme style sheet inside the `<head>` of **~/Components/App.razor** file in server side app like below.
 
@@ -108,7 +108,7 @@ You can check the Syncfusion Blazor object for script fallback whether scripts a
 {% endhighlight %}
 {% endtabs %}
 
-### Style Sheet Fallback
+### stylesheet Fallback
 
 You can refer the theme style sheet inside the `<head>` of **wwwroot/index.html** file in client web app like below.
 
