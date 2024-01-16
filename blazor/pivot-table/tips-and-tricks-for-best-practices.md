@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Best practices to improve the performance of the Blazor Pivot Table Component | Syncfusion
+title: Best practices to improve the performance of Blazor Pivot Table Component | Syncfusion
 description: Checkout and learn here all about best practices to improve the performance of the Syncfusion Blazor Pivot Table component and much more.
 platform: Blazor
 control: Pivot Table
