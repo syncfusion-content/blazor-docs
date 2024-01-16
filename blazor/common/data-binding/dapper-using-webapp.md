@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Bind data using Dapper and perform CRUD operations | Syncfusion
+title: Bind data using Dapper with CRUD operations in Web App | Syncfusion
 component: "DataGrid component and DataManager"
 description: How to consume data from SQL database using Dapper, bind it to a Syncfusion Component, and perform CRUD operations in Blazor Web App.
 component: Common
@@ -95,7 +95,7 @@ Run the following commands in the Package Manager Console.
 
 ```c#
 
-namespace {Your namespace}
+namespace BlazorWebApp.Shared
 {
     public class Bug
     {
