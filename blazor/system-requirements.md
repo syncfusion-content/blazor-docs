@@ -15,7 +15,7 @@ Blazor applications can be developed using one of the following IDEs or using [.
 
 Blazor applications can be developed using one of the following IDEs. You can also develop using [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/) without below IDEs.
 
-* [Visual Studio 2022 / Visual Studio 2019](https://visualstudio.microsoft.com/vs/)
+* [Visual Studio 2022](https://visualstudio.microsoft.com/vs/)
 * [Visual Studio Code](https://code.visualstudio.com/download)
 * [JetBrains Rider](https://www.jetbrains.com/rider/)
 
@@ -38,5 +38,3 @@ If you are planning to use Visual Studio to develop Blazor Applications.
 * .NET 8.0 requires Visual Studio 2022 17.8.0 or later.
 * .NET 7.0 requires Visual Studio 2022 17.4.3 or later.
 * .NET 6.0 requires Visual Studio 2022 17.0 Preview 4.1 or later.
-* .NET 5.0 requires Visual Studio 2019 16.8 or later.
-* .NET Core SDK 3.1.8 requires Visual Studio 2019 16.7 or later.
