@@ -245,6 +245,81 @@ Before opening a filter dialog for each column, the `OnActionBegin` event will b
 
 ![Customize the Height and Width of Filter Popup in Blazor DataGrid](./images/blazor-datagrid-customize-filter-popup.gif)
 
+## How to make DataGrid filter dialog entirely visible rendered inside other components
+
+The Syncfusion DataGrid component allows you to render its filter dialog entirely visible inside other components, such as [Dialog](https://blazor.syncfusion.com/documentation/dialog/getting-started), [Accordion](https://blazor.syncfusion.com/documentation/accordion/getting-started), or [Splitter](https://blazor.syncfusion.com/documentation/splitter/getting-started) components. This can be achieved by customizing the CSS of the other component to modify the overflow property of specific elements, ensuring the filter dialog's visibility.
+
+The following example demonstrates how to make the DataGrid filter dialog fully visible within two panes of the `SfSplitter` component. The SfSplitter component lets you split the screen into resizable panes, and by customizing the CSS, we ensure the filter dialog's complete visibility.
+
+```cshtml
+@using Syncfusion.Blazor.Buttons
+@using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor.Layouts
+
+<SfSplitter ID="Splitter" Orientation="Orientation.Vertical"  Width="100%" Height="400%">
+    <SplitterPanes>
+        <SplitterPane Size="200px">
+            <ContentTemplate>
+                <SfGrid ID="Grid1" DataSource="@Orders" AllowFiltering="true" Height="200">
+                    <GridFilterSettings Type="Syncfusion.Blazor.Grids.FilterType.Excel"></GridFilterSettings>
+                    <GridColumns>
+                        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+                        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
+                        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+                        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+                    </GridColumns>
+                </SfGrid>
+            </ContentTemplate>
+        </SplitterPane>
+        <SplitterPane Size="200px">
+            <ContentTemplate>
+                <SfGrid ID="Grid2" DataSource="@Orders" AllowFiltering="true" Height="200">
+                    <GridFilterSettings Type="Syncfusion.Blazor.Grids.FilterType.Excel"></GridFilterSettings>
+                    <GridColumns>
+                        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+                        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
+                        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+                        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+                    </GridColumns>
+                </SfGrid>
+            </ContentTemplate>
+        </SplitterPane>
+    </SplitterPanes>
+</SfSplitter>
+
+<style>
+    /* Custom CSS to ensure filter dialog visibility */
+    #Splitter, .e-pane.e-pane-vertical.e-scrollable.e-resizable {
+        overflow: unset;
+    }
+</style>
+
+@code {
+    public List<Order> Orders { get; set; }
+
+    protected override void OnInitialized()
+    {
+        Orders = Enumerable.Range(1, 75).Select(x => new Order()
+            {
+                OrderID = 1000 + x,
+                CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
+                Freight = 2.1 * x,
+                OrderDate = (new DateTime[] { new DateTime(2010, 5, 1), new DateTime(2010, 5, 2), new DateTime(2010, 5, 3), })[new Random().Next(3)],
+            }).ToList();
+    }
+
+    public class Order
+    {
+        public int? OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public DateTime? OrderDate { get; set; }
+        public double? Freight { get; set; }
+    }
+}
+```
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LZLqXPMtztWiSdnT?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 N> [View Sample in GitHub.](https://github.com/SyncfusionExamples/blazor-datagrid-customize-filter-popup-using-css)
 
 N> You can refer to our [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap4) to understand how to present and manipulate data.
