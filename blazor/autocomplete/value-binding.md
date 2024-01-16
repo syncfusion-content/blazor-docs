@@ -11,14 +11,14 @@ documentation: ug
 
 Value binding is the process of passing values between a component and its parent. There are two methods for binding values.These are.
 
-    * bind-Value Binding 
-    * bind-Index Binding
+* bind-Value Binding 
+* bind-Index Binding
 
 ## Bind value binding
 
 The value binding can be achieved by using the [@bind-Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_Value) attribute and it supports `string`, `int`, `enum`, `bool` and `complex types`. If the component value has been changed, it will affect all places where you bind the variable for the `@bind-value` attribute. In order for the binding to work properly, the value assigned to the `@bind-value` attribute should be based on the field mapped to [AutoCompleteFieldSettings.Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.AutoCompleteFieldSettings.html#Syncfusion_Blazor_DropDowns_AutoCompleteFieldSettings_Value)
 
-* **TValue** - Specifies the type of each list item of the dropdown component.
+* **TValue** - Specifies the type of each list item on the suggestion list.
 
 {% highlight cshtml %}
 
