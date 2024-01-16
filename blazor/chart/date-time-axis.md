@@ -47,6 +47,7 @@ The [DateTime](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Va
 
 ```
 
+
 ![Blazor Chart with DateTime Axis](images/datetime/blazor-line-chart-datetime-axis.png)
 
 ## DateTime category axis
@@ -84,6 +85,7 @@ The [DateTime Category](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 }
 
 ```
+
 
 ![Blazor Line Chart with DateTime Axis](images/datetime/blazor-line-chart-with-datetime-axis.png)
 
@@ -188,7 +190,7 @@ The [RangePadding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Chart
 
 **DateTime - None**
 
-When the [RangePadding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAxis.html#Syncfusion_Blazor_Charts_ChartAxis_RangePadding) is set to **None**, the minimum and maximum of the axis is based on the data.
+When the [RangePadding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAxis.html#Syncfusion_Blazor_Charts_ChartAxis_RangePadding) is set to **None**, the minimum and maximum of the axis is based on the data.
 
 ```cshtml
 
@@ -226,7 +228,7 @@ When the [RangePadding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
 
 **DateTime - Round**
 
-When the [RangePadding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAxis.html#Syncfusion_Blazor_Charts_ChartAxis_RangePadding) property is set to **Round**, the minimum and maximum will be rounded to the nearest possible value divisible by interval.
+When the [RangePadding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAxis.html#Syncfusion_Blazor_Charts_ChartAxis_RangePadding) property is set to **Round**, the minimum and maximum will be rounded to the nearest possible value divisible by interval.
 
 ```cshtml
 
@@ -262,7 +264,7 @@ When the [RangePadding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 
 **DateTime - Additional**
 
-When the [RangePadding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAxis.html#Syncfusion_Blazor_Charts_ChartAxis_RangePadding) property is set to **Additional**, the interval of an axis will be padded to the minimum and maximum of the axis.
+When the [RangePadding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonAxis.html#Syncfusion_Blazor_Charts_ChartCommonAxis_RangePadding) property is set to **Additional**, the interval of an axis will be padded to the minimum and maximum of the axis.
 
 ```cshtml
 
@@ -374,6 +376,47 @@ The table below shows the results of applying various popular date and time form
 <td>The label is displayed in hours:minutes:seconds format.</td>
 </tr>
 </table>
+
+## Custom label format
+
+Axis also supports custom label format using placeholders such as {value}K, where the value represents the axis label, for example, 200K.
+
+```cshtml
+
+@using Syncfusion.Blazor.Charts
+
+<SfChart>
+    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.DateTime" />
+
+    <ChartPrimaryYAxis LabelFormat="${value}K"/>
+
+    <ChartSeriesCollection>
+        <ChartSeries DataSource="@Sales" XName="XValue" YName="YValue" />
+    </ChartSeriesCollection>
+</SfChart>
+
+@code {
+    public class ChartData
+    {
+        public DateTime XValue { get; set; }
+        public double YValue { get; set; }
+    }
+
+    public List<ChartData> Sales = new List<ChartData>
+    {
+        new ChartData { XValue = new DateTime(2005, 01, 01), YValue = 20 },
+        new ChartData { XValue = new DateTime(2006, 01, 01), YValue = 10 },
+        new ChartData { XValue = new DateTime(2007, 01, 01), YValue = 30 },
+        new ChartData { XValue = new DateTime(2008, 01, 01), YValue = 40 },
+        new ChartData { XValue = new DateTime(2009, 01, 01), YValue = 35 },
+        new ChartData { XValue = new DateTime(2010, 01, 01), YValue = 15 },
+        new ChartData { XValue = new DateTime(2011, 01, 01), YValue = 45 },
+    };
+}
+
+```
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hjBANRVvUPwMucgI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 <!-- markdownlint-disable MD033 -->
 

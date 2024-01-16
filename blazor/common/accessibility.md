@@ -24,6 +24,7 @@ Keyboard navigation support enables users to interact with components using keyb
 * [Accordion](../accordion/accessibility)
 * [AutoComplete](../autocomplete/accessibility)
 * [Calendar](../calendar/accessibility)
+* [Chart](../chart/accessibility)
 * [CheckBox](../check-box/accessibility)
 * [Chip](../chip/accessibility)
 * [Circular Gauge](../circular-gauge/accessibility)
