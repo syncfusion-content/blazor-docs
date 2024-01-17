@@ -109,6 +109,7 @@ The following properties can be used to customize the [Range Step Area](https://
 }
 
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VtrKsBVRTRZTpvRQ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Range Step Area Chart with customized series](../images/chart-types-images/blazor-range-step-area-chart-custom-series.png)
 

@@ -124,7 +124,7 @@ Add the Syncfusion Blazor TimePicker component in the **~/Pages/Index.razor** fi
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion Blazor TimePicker component in your default web browser.
 
-![Blazor TimePicker Component](./images/blazor-timepicker.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LZLzDMNYzCKonpeq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor TimePicker Component](./images/blazor-timepicker.png)" %}
 
 ## Setting the time format
 
@@ -145,7 +145,7 @@ The below code demonstrates how to render TimePicker component in 24 hours Forma
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor TimePicker with Time Format](./images/blazor-timepicker-time-format.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hXVTjijuTCSjRxkR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor TimePicker with Time Format](./images/blazor-timepicker-time-format.png)" %}
 
 ## See Also
 

@@ -41,7 +41,7 @@ The DashboardLayout component is also provided with the panel resizing functiona
 
 ```
 
-
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDVAsBVwTABPvxgH?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Resizing Panels in Blazor DashboardLayout](../images/blazor-dashboard-layout-panel-resizing.gif)
 

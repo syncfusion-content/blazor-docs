@@ -112,6 +112,7 @@ The following code example shows how to add legend in the gauge.
 </CircularGaugeAxes>
 </SfCircularGauge>
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LZVUWhBQArOwLnwY?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Legend in Blazor Circular Gauge](./images/blazor-circulargauge-legend.PNG)
 
@@ -150,6 +151,7 @@ The toggle option has been provided for legend. So, if you toggle the legend, th
 </CircularGaugeAxes>
 </SfCircularGauge>
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hZrKMLBcAhEahQVw?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Circular Gauge Legend with Toggle Option](./images/blazor-circulargauge-legend-with-toggle-option.gif)
 
@@ -186,6 +188,7 @@ By default, paging will be enabled if the legend items exceed the legend bounds.
 </CircularGaugeAxes>
 </SfCircularGauge>
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hNhKWhLGgANsovmK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Circular Gauge Legend with Paging](./images/blazor-circulargauge-legend-paging.gif)
 
@@ -222,5 +225,6 @@ You can customize the legend text using `LegendText` property in `CircularGaugeR
 </CircularGaugeAxes>
 </SfCircularGauge>
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNBUihhmUUjgdbpV?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Customizing Legend Text in Blazor Circular Gauge](./images/blazor-circulargauge-legend-text.PNG)

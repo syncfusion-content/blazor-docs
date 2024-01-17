@@ -38,6 +38,7 @@ The Chip control has the following predefined styles that can be defined using t
 
 ```
 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BXLKsrBcBIwnwbXs?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Customizing Blazor Chip Styles](./images/blazor-chip-style.png)
 
@@ -76,6 +77,7 @@ You can add and customize the leading icon of chip using the `LeadingIconCss` pr
 
 ```
 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BjrgirrwBoGkWnCI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Customizing LeadingIcon of Blazor Chip](./images/blazor-chip-leading-icon.gif)
 
@@ -114,6 +116,7 @@ You can add and customize the avatar of chip using the `LeadingIconCss` property
 
 ```
 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BNrgCBhQLIvJWaER?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 
 
@@ -133,6 +136,7 @@ You can add and customize the avatar content of chip using the `LeadingText` pro
 </SfChip>
 
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXrqCLrQrovxnFxf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 
 ![Customizing Avatar Text of Blazor Chip](./images/blazor-chip-avatar-content.gif)
@@ -154,6 +158,7 @@ You can add and customize the trailing icon of chip using the `TrailingIconCss` 
 
 ```
 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hZVUiBhwBekjUuOz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 
 ![Customizing Blazor Chip TrailingIcon](./images/blazor-chip-trailing-icon.png)
@@ -174,6 +179,7 @@ Outline chip has the border with the background transparent. It can be set using
 </SfChip>
 
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VtVgshrQrokgrCJD?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 
 

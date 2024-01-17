@@ -25,6 +25,7 @@ public DateTime[] MultipleValues { get; set; } = new DateTime[] { new DateTime(D
 }
 ```
 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rXVqCrrrBIKclcWx?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 
 ![Multi Selection in Blazor Calendar Component](./images/blazor-calendar-multi-selection.png)
