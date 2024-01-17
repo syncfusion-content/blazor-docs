@@ -110,7 +110,7 @@ Add the Syncfusion Blazor RichTextEditor component in the **~Pages/.razor** file
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion Blazor RichTextEditor component in your default web browser.
 
-![Blazor RichTextEditor Component](./images/blazor-richtexteditor.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VZrpNiZOBsRVaDCe?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor RichTextEditor Component](./images/blazor-richtexteditor.png)" %}
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/RichTextEditor/BlazorWebApp).
 
@@ -179,7 +179,7 @@ Configure the toolbar with the tools using [RichTextEditorToolbarSettings.Items]
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor RichTextEditor with Toolbar](./images/blazor-richtexteditor-toolbar.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hZLpDWZurCaZsLjF?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor RichTextEditor with Toolbar](./images/blazor-richtexteditor-toolbar.png)" %}
 
 ## Insert images and links
 
@@ -196,7 +196,7 @@ Specifies the items to be rendered in quick toolbar based on the target elements
     <p>Rich Text Editor allows to insert images from online source as well as local computer where you want to insert the image in your content.</p>
     <p><b>Get started Quick Toolbar to click on the image</b></p>
     <p>It is possible to add custom style on the selected image inside the Rich Text Editor through quick toolbar.</p>
-    <img alt='Logo' style='width: 300px; height: 300px; transform: rotate(0deg);' src='https://blazor.syncfusion.com/demos/images/RichTextEditor/RTEImage-Feather.png' />
+    <img alt='Logo' style='width: 300px; height: 300px; transform: rotate(0deg);' src='https://blazor.syncfusion.com/demos/_content/blazor_webapp_common_net8/images/rich-text-editor/rte-image-feather.png' />
 </SfRichTextEditor>
 
 @code {
@@ -242,7 +242,7 @@ Specifies the items to be rendered in quick toolbar based on the target elements
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor RichTextEditor with Image](./images/blazor-richtexteditor-image.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LZBJXCXaBhLFcCpC?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor RichTextEditor with Image](./images/blazor-richtexteditor-image.png)" %}
 
 ## Retrieve the formatted content
 

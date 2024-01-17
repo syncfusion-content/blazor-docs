@@ -46,6 +46,7 @@ documentation: ug
 }
 
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rjBqMVBdfdNOtUiF?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Spline Range Area Chart](../images/chart-types-images/blazor-spline-range-area-chart.png)
 
@@ -96,6 +97,7 @@ The following properties can be used to customize the [Spline Range Area](https:
 }
 
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rtVKiVVHpnirchKL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Spline Range Area Chart with Custom Series](../images/chart-types-images/blazor-spline-range-area-chart-custom-series.png)
 

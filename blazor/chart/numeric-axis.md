@@ -44,6 +44,7 @@ Numeric axis can be used to represent numeric values in a chart. The [ValueType]
 }
 
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VNLgWLhVpXofZgyo?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Line Chart with Numeric Axis](images/numeric-axis/blazor-line-chart-numeric-axis.png)
 
@@ -83,6 +84,7 @@ The axis range will be calculated automatically based on the provided data; howe
 }
 
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BXrgiVrhJjoSuZwi?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Changing Blazor Line Chart Axis based on Range](images/numeric-axis/blazor-line-chart-axis-range.png)
 
@@ -132,6 +134,7 @@ When the [RangePadding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
 }
 
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BjhKWVBhTjobfVue?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Line Chart without RangePadding](images/numeric-axis/blazor-line-chart-range-without-padding.png)
 
@@ -171,6 +174,7 @@ When the [RangePadding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
 }
 
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hZrKMLhBztnCBwWc?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Line Chart with Round RangePadding](images/numeric-axis/blazor-line-chart-round-range-padding.png)
 
@@ -210,6 +214,7 @@ When the [RangePadding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
 }
 
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VNhgWLrhpZRURFmO?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Line Chart with Additional RangePadding](images/numeric-axis/blazor-line-chart-additional-range-padding.png)
 
@@ -249,6 +254,7 @@ When the [RangePadding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
 }
 
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LtLKsrrrpXdxUwHH?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Line Chart with Normal RangePadding](images/numeric-axis/blazor-line-chart-normal-range-padding.png)
 
@@ -289,6 +295,7 @@ When the [RangePadding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
 }
 
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rjrUChBVTtmNHCaU?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Line Chart with Auto RangePadding](images/numeric-axis/blazor-line-chart-auto-rangepadding.png)
 
@@ -333,6 +340,7 @@ Using the [LabelFormat](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 }
 
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rjhUChrhpjcKDKLn?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Label Formatting in Blazor Line Chart](images/numeric-axis/blazor-line-chart-label-format.png)
 
@@ -433,6 +441,7 @@ Axis also supports custom label format using placeholders such as {value}K, wher
 }
 
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LtBAiVLrzZGdUeri?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Line Chart with Custom Label Format](images/numeric-axis/blazor-line-chart-custom-label-format.png)
 

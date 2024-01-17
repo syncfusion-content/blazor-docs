@@ -43,6 +43,8 @@ This mode is the default one in which the AppBar is displayed with the default h
 
 ![Blazor AppBar with Regular Size](./images/regular_appbar.png)
 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LtBAiVWfLtaWPHyq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 ### Prominent AppBar
 
 This height mode can be set to the AppBar by setting `AppBarMode.Prominent` to the property [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfAppBar.html#Syncfusion_Blazor_Navigations_SfAppBar_Mode). The prominent AppBar is displayed with a longer height and can be used for larger titles, images, or texts. It is also longer than the regular AppBar. In the following example, we have customized the prominent text using align-self and white-space CSS properties. You can change the prominent AppBar height if larger titles, images, or texts are used.
@@ -93,6 +95,8 @@ This height mode can be set to the AppBar by setting `AppBarMode.Prominent` to t
 
 ![Blazor AppBar with Prominent Size](./images/prominent_appbar.png)
 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rjLUChipVCDBzbVE?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 ### Dense AppBar
 
 This height mode can be set to the AppBar by setting `AppBarMode.Dense` to the property [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfAppBar.html#Syncfusion_Blazor_Navigations_SfAppBar_Mode). Dense AppBar is displayed with shorter height which is denser to accommodate all the AppBar content.
@@ -118,6 +122,7 @@ This height mode can be set to the AppBar by setting `AppBarMode.Dense` to the p
 ```
 
 ![Blazor AppBar with Dense Size](./images/dense_appbar.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VthKirWTrCLzRlMA?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Color
 
@@ -159,6 +164,8 @@ This color mode is the default one in which the AppBar can be displayed with a l
 
 ![Blazor AppBar with Light Color](./images/light_appbar.png)
 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hNrqsrMpVMqGpFYy?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 ### Dark AppBar
 
 This color mode can be set to the AppBar by setting `AppBarColor.Dark` to the property [ColorMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfAppBar.html#Syncfusion_Blazor_Navigations_SfAppBar_ColorMode). A dark AppBar can be displayed with a dark background and its corresponding font color.
@@ -188,6 +195,8 @@ This color mode can be set to the AppBar by setting `AppBarColor.Dark` to the pr
 ```
 
 ![Blazor AppBar with Dark Color](./images/dark_appbar.png)
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDBgMBCpBMfsnjes?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ### Primary AppBar
 
@@ -219,6 +228,8 @@ This color mode can be set to the AppBar by setting `AppBarColor.Primary` to the
 
 ![Blazor AppBar with Primary Color](./images/primary_appbar.png)
 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LZBAChsTrifpmere?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 ### Inherit AppBar
 
 This color mode can be set to the AppBar by setting `AppBarColor.Inherit` to the property [ColorMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfAppBar.html#Syncfusion_Blazor_Navigations_SfAppBar_ColorMode). The AppBar inherits the background and font color from its parent element.
@@ -249,3 +260,5 @@ This color mode can be set to the AppBar by setting `AppBarColor.Inherit` to the
 ```
 
 ![Blazor AppBar with Inherit Color](./images/inherit_appbar.png)
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VDLgWrWJrsJagjCw?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}

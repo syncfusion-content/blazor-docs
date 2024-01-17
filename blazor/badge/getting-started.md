@@ -67,6 +67,6 @@ Add the Syncfusion Blazor Badge component in the **~/Pages/Index.razor** file.
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion Blazor Badge component in your default web browser.
 
-![Blazor Badge Component](images/blazor-badge-component.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hZLztsZzgAdJFIop?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Badge Component](images/blazor-badge-component.png)" %}
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/Badge).

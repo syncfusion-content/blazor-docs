@@ -41,6 +41,7 @@ The size of the [Blazor Bullet Chart](https://help.syncfusion.com/cr/blazor/Sync
     };
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rjrgsVVCzqENDzfI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Size for Bullet Chart
 
@@ -62,6 +63,7 @@ N> If the size is not specified, the Bullet Chart will be rendered with a heigh
     </SfBulletChart>
 </div>
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/htrgWhLCJqkfMCtE?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 N> Refer to the [code block](#size-for-container) to know about the property value of **BulletChartData**.
 
@@ -87,5 +89,7 @@ The [BulletChartMargin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 ```
 
 N> Refer to the [code block](#size-for-container) to know about the property value of **BulletChartData**.
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BjBACrrWzKabABVG?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Bullet Chart with Margin](images/blazor-bullet-chart-margin.png)
