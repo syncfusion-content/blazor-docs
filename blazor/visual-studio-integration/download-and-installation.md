@@ -13,14 +13,14 @@ Syncfusion publishes the Visual Studio extension in the below Visual Studio mark
 
 [Visual Studio 2022](https://marketplace.visualstudio.com/items?itemName=SyncfusionInc.BlazorVSExtension)
 
-[Visual Studio 2019](https://marketplace.visualstudio.com/items?itemName=SyncfusionInc.Blazor-Extension) 
+[Visual Studio 2019](https://marketplace.visualstudio.com/items?itemName=SyncfusionInc.Blazor-Extension)
 
 
 ## Prerequisites
 
 The following software prerequisites must be installed to install the Syncfusion Blazor extension, as well as to creating, adding snippet, converting, and upgrading Syncfusion Blazor applications.
 
-* [Visual Studio 2019 16.3 or later](https://visualstudio.microsoft.com/downloads/).
+* [Visual Studio 2022 or later](https://visualstudio.microsoft.com/downloads/).
 
 * [.NET Core 3.0 or later](https://dotnet.microsoft.com/en-us/download/dotnet).
 
@@ -28,7 +28,7 @@ The following software prerequisites must be installed to install the Syncfusion
 
 The steps below assist you to how to install the Syncfusion Blazor extensions from **Visual Studio Manage Extensions**.
 
-1. Open the Visual Studio 2019 or Visual Studio 2022.
+1. Open the Visual Studio 2022 or later.
 
 2. Navigate to **Extension ->Manage Extensions** and open the Manage Extensions.
 

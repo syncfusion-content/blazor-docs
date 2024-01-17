@@ -92,7 +92,7 @@ N> Before use the Syncfusion Blazor Project Template, check whether the Syncfusi
 
      **Option 1:** Click the corresponding selected control box.
 
-     **Option 2:** Click ‘x’ button for corresponding control in the control list from **Project Details**. 
+     **Option 2:** Click ‘x’ button for corresponding control in the control list from **Project Details**.
 
      N> **Note:** Choose at least one control to enable the Features and Configuration tab.
 

@@ -14,7 +14,7 @@ In this section, you can learn how to consume data from a database using [Dapper
 
 ## Prerequisite software
 
-* Visual Studio 2019 or Visual Studio 2022.
+* Visual Studio 2022.
 * MS SQL Server.
 
 ## Creating Blazor application

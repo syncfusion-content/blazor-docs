@@ -271,6 +271,6 @@ The grouping feature enables you to view the datagrid record in a grouped view. 
 
 * [Getting Started with Syncfusion Data Grid in Blazor WebAssembly using .NET Core CLI](./blazor-webassembly-data-grid-using-cli)
 
-* [Getting Started with Syncfusion DataGrid in Blazor Server-Side using Visual Studio 2019](../getting-started)
+* [Getting Started with Syncfusion DataGrid in Blazor Server-Side using Visual Studio 2022](../getting-started)
 
 * [Getting Started with Syncfusion Data Grid in Blazor Server-Side using .NET Core CLI](./server-side-using-cli)

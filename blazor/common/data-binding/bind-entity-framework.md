@@ -16,8 +16,8 @@ Entity Framework is an open-source object-relational mapper (O/RM) from Microsof
 
 The following software are needed
 
-* Visual Studio 2019 v16.9.0 or Visual Studio 2022
-* .NET SDK 5.0 or later.
+* Visual Studio 2022
+* .NET 6.0 or later.
 * SQL Server 2019 or later
 
 ## Create the database
@@ -51,7 +51,7 @@ You need to configure the corresponding [Interactive render mode](https://learn.
 
 ## Create Blazor Server Application
 
-Open Visual Studio 2019 Preview, select Create a New Project, select Blazor Server App, then click Next.
+Open Visual Studio 2022, select Create a New Project, select Blazor Server App, then click Next.
 
 ![Create New Blazor Server Project](../images/create-new-project.png)
 

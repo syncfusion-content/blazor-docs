@@ -17,7 +17,7 @@ To enable the OData query option for Web API, Refer to this [documentation](http
 ## Prerequisite software
 
 The following software are needed
-* Visual Studio 2019 or Visual Studio 2022
+* Visual Studio 2022
 * .NET 7.0 or .NET 8.0.
 
 ## Create the database
