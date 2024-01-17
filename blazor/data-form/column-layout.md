@@ -19,6 +19,8 @@ This segment provides guidance on dividing the form field editors inside the Dat
 {% endhighlight %}
 {% endtabs %}
 
+![Blazor DataForm Column Layout](images/blazor_dataform_change_form_width.png)
+
 ## Configure the column span 
 
 Additionally, by utilizing the [ColumnSpan](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataForm.FormItem.html#Syncfusion_Blazor_DataForm_FormItem_ColumnSpan) attribute of a `FormItem`, we can control the width of the editor, either allowing it to expand to full width or allocating it a portion of the width based on the provided column span.
@@ -33,7 +35,7 @@ Additionally, by utilizing the [ColumnSpan](https://help.syncfusion.com/cr/blazo
 
 In the provided example, the layout of the DataForm is segmented into six equal columns, with the editor fields distributed accordingly, depending on the column span allocated to each one.
 
-![Blazor DataForm Column Layout](images/blazor_dataform_button_column_span.png)
+![Blazor DataForm Column Layout](images/blazor_dataform_column_span.png)
 
 
 ## See Also

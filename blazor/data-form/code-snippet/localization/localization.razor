@@ -1,40 +1,24 @@
 @using Syncfusion.Blazor.DataForm
 @using System.ComponentModel.DataAnnotations
-@using Syncfusion.Blazor.Inputs
-@using Syncfusion.Blazor.Calendars
+@using BlazorApp1.Resources
+@using Syncfusion.Blazor.Buttons
 
+<SfDataForm Width="50%"
 
-<SfDataForm ID="MyForm"
-            Model="@CreditCardModel"
-            ValidationDisplayMode="FormValidationDisplay.Tooltip">
+            Model="@RegistrationDetailsModel">
 
     <FormValidator>
         <DataAnnotationsValidator></DataAnnotationsValidator>
-        <ValidationSummary></ValidationSummary>
     </FormValidator>
 
     <FormItems>
-        <FormItem Field="@nameof(CreditCardModel.Name)" Placeholder="e.g. Andrew Fuller" LabelText="Name on card"></FormItem>
-        <FormItem Field="@nameof(CreditCardModel.CardNumber)" LabelText="Card Number">
-        </FormItem>
-        <FormItem Field="@nameof(CreditCardModel.CVV)" ID="CVV">
-            <Template>
-                <label class="e-form-label">CVV*:</label>
-                <SfMaskedTextBox Mask="000" @bind-Value="CreditCardModel.CVV" ID="CVV"></SfMaskedTextBox>
-            </Template>
-        </FormItem>
-        <FormItem Field="@nameof(CreditCardModel.ExpiryDate)" ID="ExpiryDate">
-            <Template>
-                <label class="e-form-label">Expiry Date*:</label>
-                <SfDatePicker TValue="DateTime?" Format="MM/yy" EnableMask="true" ID="ExpiryDate"></SfDatePicker>
-            </Template>
-        </FormItem>
+        <FormAutoGenerateItems></FormAutoGenerateItems>
     </FormItems>
-
 </SfDataForm>
 
 
 @code {
-    public char PromptCharacter { get; set; } = ' ';
-    private CreditCard CreditCardModel = new CreditCard();
+    
+    private RegistrationDetails RegistrationDetailsModel = new RegistrationDetails();
 }
+
