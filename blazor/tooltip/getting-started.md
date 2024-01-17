@@ -133,7 +133,7 @@ Integrate the Syncfusion Blazor Tooltip component with the Syncfusion Blazor [Bu
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion Blazor Tooltip component in your default web browser.
 
-![Blazor Tooltip Component](./images/blazor-tooltip.gif)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rtVzDCXkzrmdaddJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Tooltip Component](./images/blazor-tooltip.gif)" %}
 
 N> The Tooltip component in our system uses the HTML element's id or class name to identify the target for the tooltip. However, when using a GUID as the target ID, it is not able to recognize IDs that start with a digit.
 

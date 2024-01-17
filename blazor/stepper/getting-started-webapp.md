@@ -114,7 +114,7 @@ Add the Syncfusion Blazor Stepper component in the **~Pages/.razor** file. If an
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion Blazor Stepper component in your default web browser.
 
-![Blazor Stepper Component](images/Blazor-stepper-component.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VDVJtiXEKPzzHbJo?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Stepper Component](images/Blazor-stepper-component.png)" %}
 
 ## Configure icon and label
 
@@ -123,7 +123,7 @@ You can define the step icon and label by setting the `IconCss` and `Label` prop
 {% tabs %}
 {% highlight razor %}
 
-<SfStepper ID="iconWithLabel">
+<SfStepper>
     <StepperSteps>
         <StepperStep Label="Cart" IconCss="sf-icon-cart"></StepperStep>
         <StepperStep Label="Address" IconCss="sf-icon-user"></StepperStep>
@@ -173,6 +173,6 @@ You can define the step icon and label by setting the `IconCss` and `Label` prop
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor Stepper with Icon and Label](./images/Blazor-iconWithLabel.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rtLJjCNkgPeMWkoJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Stepper with Icon and Label](./images/Blazor-iconWithLabel.png)" %}
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/Stepper).
