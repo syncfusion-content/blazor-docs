@@ -83,11 +83,11 @@ Additionally, ensure that you have added a reference to the `BlazorWebApp.Shared
     Once the above packages are installed, you can scaffold DbContext and Model classes. Run the following command in the Package Manager Console under the `BlazorWebApp.Shared` project.
 
     ```
-    Scaffold-DbContext “Server={Your Server name};Database=OrdersDetails;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False” Microsoft.EntityFrameworkCore.SqlServer -OutputDir Data
+    Scaffold-DbContext “Server=localhost;Database=OrdersDetails;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False” Microsoft.EntityFrameworkCore.SqlServer -OutputDir Data
     ```
 
     The above scaffolding command contains the following details for creating DbContext and model classes for the existing database and its tables.
-    * **Connection string**: Server={Your Server name};Database=OrdersDetails;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False
+    * **Connection string**: Server=localhost;Database=OrdersDetails;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False
     * **Data provider**: Microsoft.EntityFrameworkCore.SqlServer
     * **Output directory**: -OutputDir Data
 
@@ -252,11 +252,11 @@ Install-Package Microsoft.EntityFrameworkCore.SqlServer -Version 7.0.11
 {% endtabs %}
 
 ```
-Scaffold-DbContext “Server={Your Server name};Database=OrdersDetails;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False” Microsoft.EntityFrameworkCore.SqlServer -OutputDir Data
+Scaffold-DbContext “Server=localhost;Database=OrdersDetails;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False” Microsoft.EntityFrameworkCore.SqlServer -OutputDir Data
 ```
 
 The above scaffolding command contains the following details for creating DbContext and model classes for the existing database and its tables.
-* **Connection string**: Server={Your Server name};Database=OrdersDetails;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False
+* **Connection string**: Server=localhost;Database=OrdersDetails;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False
 * **Data provider**: Microsoft.EntityFrameworkCore.SqlServer
 * **Output directory**: -OutputDir Data
 
@@ -470,11 +470,11 @@ Themes provide life to components. Syncfusion Blazor has different themes. They 
 * Bootstrap
 * High Contrast
 
-In this demo application, the Material theme will be used. To add the theme, `<head>` section  of **~/Components/App.razor**(For Blazor Web App) or **Pages/_Host.cshtml** (for Blazor Server App) file.
+In this demo application, the Bootstrap theme will be used. To add the theme, `<head>` section  of **~/Components/App.razor**(For Blazor Web App) or **Pages/_Host.cshtml** (for Blazor Server App) file.
 
 {% highlight cshtml %}
 
-<link href="_content/Syncfusion.Blazor.Themes/material.css" rel="stylesheet" />
+<link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
 
 {% endhighlight %}
 

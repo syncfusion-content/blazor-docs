@@ -11,7 +11,7 @@ documentation: ug
 
 The Syncfusion Blazor migration add-in for Visual Studio allows you to migrate an existing Syncfusion Blazor application from one version of Essential Studio version to another version. This reduces the amount of manual work required when migrating the Syncfusion version.
 
-The steps below will assist you to upgrade the Syncfusion version in the Syncfusion Blazor application via Visual Visual Studio 2022:
+The steps below will assist you to upgrade the Syncfusion version in the Syncfusion Blazor application via Visual Studio 2022:
 
 N> Before use the Syncfusion Blazor Project Migration, check whether the Syncfusion Blazor Template Studio Extension installed or not in Visual Studio Extension Manager by clicking on the Extensions -> Manage Extensions -> Installed. If this extension not installed, install the extension by follow the steps from the [download and installation](download-and-installation) help topic.
 
