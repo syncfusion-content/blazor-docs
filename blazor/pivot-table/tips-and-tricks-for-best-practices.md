@@ -7,7 +7,7 @@ control: Pivot Table
 documentation: ug
 ---
 
-# Best practices to improve the performance of the Pivot Table
+# Best practices to improve the performance of the Blazor Pivot Table
 
 Performance optimization is crucial when working with large datasets in the [Syncfusion Blazor Pivot Table](https://www.syncfusion.com/blazor-components). This documentation provides practical tips and best practices to empower your data analysis and enhance the user experience.
 
@@ -15,13 +15,29 @@ N> In Blazor, the framework takes about 0.06 milliseconds to render one componen
 
 ## Improve loading performance by referring individual nuget, script and CSS
 
-To improve the performance of the [Syncfusion Blazor Pivot Table](https://www.syncfusion.com/blazor-components) component during the initial render as well as during certain UI actions, it is suggested that you refer to the individual NuGet package (Syncfusion.Blazor.PivotTable) along with the individual script and CSS files specific to the component. In the consolidated package (Syncfusion.Blazor), all the components will be defined, and hence the size of the package will be larger. Along with the script and CSS files, the file size will increase since the script and CSS necessary for all the Syncfusion Blazor components will be defined inside them.
+To improve the performance of the [Syncfusion Blazor Pivot Table](https://www.syncfusion.com/blazor-components) component during the initial render as well as during certain UI actions, it is suggested that you refer to the individual NuGet package (Syncfusion.Blazor.PivotTable) along with the individual script and CSS files specific to the component. In the consolidated package (Syncfusion.Blazor), all the components will be defined, and hence the size of the package will be larger. Along with the script and CSS files, the file size will increase since the script and CSS necessary for all the Syncfusion Blazor components will be defined inside them. 
 
 When package, script, and CSS file sizes are larger, there might be a delay or performance lag in rendering the component in certain scenarios compared to the pivot table rendered using individual packages, scripts, and CSS. Individual NuGet packages will contain all the necessary and required dependent component sources, along with their script references. So, it is not necessary to refer to the dependent component externally while referring to the individual package.
 
 Refer to the below documentation:
 * [Individual NuGet package](https://blazor.syncfusion.com/documentation/pivot-table/getting-started-webapp)
 * [Adding script and CSS](https://blazor.syncfusion.com/documentation/pivot-table/getting-started-webapp)
+
+## Data compression
+
+When loading a large amount of input data (aka, raw data) into the pivot table, this data compression feature allows the input data to be compressed based on the uniqueness of the input data, and unique records will be provided as input for the pivot table's data source property. The compressed data will always be used for further operations, reducing looping complexity during internal pivot calculation and improving the pivot table performance. For more information on implementing the data compression in the pivot table, you can refer to the documentation [here](https://blazor.syncfusion.com/documentation/pivot-table/virtual-scrolling#data-compression).
+
+### Best practices for utilizing data compression in pivot table
+
+#### Unique records vs. Data compression
+
+When dealing with a large amount of input data, specifically with fewer unique records available in the input data, data compression performs exceptionally well.
+
+The effectiveness of data compression fails when your input data is entirely made up of more unique records. In such circumstances, using data compression in pivot table is not suggested because the primary goal of data compression may not be met.
+
+#### Unsupported aggregation types
+
+Avoid setting complex aggregation types like **Average, Populationsdev, Samplestdev, Populationvar, and Samplevar** to the fields available in the pivot report that may hinder the data compression process.
 
 ## Avoid incorporating column-related features
 
@@ -49,9 +65,13 @@ Each row and cell in the pivot table is treated as an individual Razor component
 
 N> The pixel units are preferred, and this ensures more accurate page calculations compared to using percentage units, which involve additional computations for determining page as well as row and column sizes.
 
+#### Avoid incorporating column-related features
+
+When dealing with large datasets, certain column-related features, such as resizing, autofit, text wrapping, and the dynamic hiding of specific columns, can significantly impact the pivot table's row height and column width at runtime. So, it's better to avoid them while virtual scrolling is enabled.
+
 ## Paging
 
-If your browser's maximum pixel height restricts you from utilizing Pivot Table with virtual scrolling, we advise you to utilize the paging feature instead of virtual scrolling. The paging feature, similar to virtual scrolling, enables you to load a large amount of data that may be split up and shown in the pivot table page by page. For more information on implementing the paging in the pivot table, you can refer to the documentation [here](https://blazor.syncfusion.com/documentation/pivot-table/paging).
+If your browser's maximum pixel height restricts you from utilizing pivot table with virtual scrolling, we advise you to utilize the paging feature instead of virtual scrolling. The paging feature, similar to virtual scrolling, enables you to load a large amount of data that may be split up and shown in the pivot table page by page. For more information on implementing the paging in the pivot table, you can refer to the documentation [here](https://blazor.syncfusion.com/documentation/pivot-table/paging).
 
 ## Data handling
 
@@ -63,35 +83,236 @@ During initial rendering, applying sorting to fields other than the string data 
 
 N> Once you pass the input data in the desired order and the pivot table is rendered, you can limit the sorting usage for runtime performance.
 
-### Member Filtering
+### Member filtering
 
 When dealing with large datasets, an effective strategy is to set a limit on the display of members in the filter dialog UI. By specifying a limit, the filter dialog UI will quickly display members up to that limit without encountering any performance constraints. To identify remaining members beyond the limit, a message indicating the count of remaining members will be displayed at the bottom of the filter dialog UI. To access the remaining members, use the search option included in the filter dialog at runtime. For more information on implementing the node limit in the filter dialog UI, see the documentation [here](https://blazor.syncfusion.com/documentation/pivot-table/filtering#performance-tips).
 
 ### Grouping
 
-Using the pivot table's built-in grouping feature to group date, number, and string data type fields is not recommended. It obviously impacts the overall performance during pivot table rendering because it always consumes the input data to split and reframe based on the fields contained in the report that will be used for further pivot calculation.
+Using the pivot table's built-in grouping feature to group date, number, and string data type fields is not often recommended.
 
-To avoid this performance constraints, we recommend passing the input data source along with pre-processed group field sets based on your grouping needs. For example, if your input data has a date field "StartDate" with the value "15/AUG/2019 03:41 PM" and you want to display it as the year and month alone, split out the date field as "StartDate_Year" = "15/AUG/2019" for the year and "StartDate_Month" = "15/AUG/2019". And use the [FormatSettings](https://blazor.syncfusion.com/documentation/pivot-table/how-to/customize-number-and-date-format) property to show these date fields with the chosen date format. Similarly, to group a number field, just alter its value based on your group interval (e.g., 1-5, 6-10).
+Here is an example below of how [PivotViewGroupSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewGroupSetting.html) has been used to configure grouping for the available fields using code-behind. The date and number grouping have been set to the fields "TimeLine" and "Id", respectively.
 
-### Value Filtering
+It obviously impacts the overall performance during pivot table rendering because it always consumes the input data source, splits, reframes, and provides modified input data sources based on the fields in the report that will be used for further pivot calculations.
+
+```cshtml
+@using Syncfusion.Blazor.PivotView
+
+<SfPivotView TValue="GroupData" Width="1000" Height="600">
+     <PivotViewDataSourceSettings DataSource="@data">
+        <PivotViewColumns>
+            <PivotViewColumn Name="Id"></PivotViewColumn>
+        </PivotViewColumns>
+        <PivotViewRows>
+            <PivotViewRow Name="TimeLine"></PivotViewRow>
+        </PivotViewRows>
+        <PivotViewValues>
+            <PivotViewValue Name="PowUnits"></PivotViewValue>
+            <PivotViewValue Name="ProCost"></PivotViewValue>
+        </PivotViewValues>
+        <PivotViewFormatSettings>
+            <PivotViewFormatSetting Name="ProCost" Format="C"></PivotViewFormatSetting>
+        </PivotViewFormatSettings>
+        <PivotViewGroupSettings>
+            <PivotViewGroupSetting Name="TimeLine" Type=GroupType.Date GroupInterval="new List<DateGroup> { DateGroup.Years, DateGroup.Months }"></PivotViewGroupSetting>
+            <PivotViewGroupSetting Name="Id" Type=GroupType.Number RangeInterval=3></PivotViewGroupSetting>
+        </PivotViewGroupSettings>
+    </PivotViewDataSourceSettings>
+</SfPivotView>
+
+@code{
+    private List<GroupData> data { get; set; } 
+    
+    protected override void OnInitialized()
+    {
+        data = GroupData.GetGroupData();
+        // Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
+    }
+
+    public class GroupData
+    {
+        public int Id { get; set; }
+        public DateTime TimeLine { get; set; }
+        public string Sector { get; set; }
+        public string EnerType { get; set; }
+        public string EneSource { get; set; }
+        public int PowUnits { get; set; }
+        public int ProCost { get; set; }
+
+        public static List<GroupData> GetGroupData()
+        {
+            List<GroupData> groupData = new List<GroupData>();
+            groupData.Add(new GroupData
+            {
+                Id = 1001,
+                TimeLine = new DateTime(2015,1,1),
+                Sector = "Public Sector",
+                EnerType = "Free Energy",
+                EneSource = "Hydro-electric",
+                PowUnits = 46,
+                ProCost = 43
+            });
+            groupData.Add(new GroupData
+            {
+                Id = 1002,
+                TimeLine = new DateTime(2015,1,2),
+                Sector = "Private Sector",
+                EnerType = "Free Energy",
+                EneSource = "Geo-thermal",
+                PowUnits = 30,
+                ProCost = 29
+            });
+            groupData.Add(new GroupData
+            {
+                Id = 1003,
+                TimeLine = new DateTime(2015,2,3),
+                Sector = "Public Sector",
+                EnerType = "Free Energy",
+                EneSource = "Solar",
+                PowUnits = 125,
+                ProCost = 96
+            });
+            groupData.Add(new GroupData
+            {
+                Id = 1004,
+                TimeLine = new DateTime(2015,2,4),
+                Sector = "Private Sector",
+                EnerType = "Free Energy",
+                EneSource = "Wind",
+                PowUnits = 215,
+                ProCost = 123
+            });
+            groupData.Add(new GroupData
+            {
+                Id = 1005,
+                TimeLine = new DateTime(2016,3,5),
+                Sector = "Public Sector",
+                EnerType = "Free Energy",
+                EneSource = "Wind",
+                PowUnits = 263,
+                ProCost = 125
+            });
+        }
+    }
+}
+```
+
+To avoid this performance constraint, we recommend passing the input data source along with pre-processed group field sets based on your grouping needs. For example, if your input data has a date field "TimeLine" with the value "15/AUG/2019 03:41 PM" and you want to display it as the year and month alone, split out the date field as "TimeLine_Year" = "15/AUG/2019" for the year and "TimeLine_Month" = "15/AUG/2019" for the month. Further use the [PivotViewFormatSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewFilterSettings.html) property to show these date fields with the chosen date format. Similarly, to group a number field, just alter its value based on your requirements (e.g., 1–5, 6–10).
+
+Here's an example below of configuring grouping in your input data and assigning it to the pivot table's data source. In the code below, the fields "TimeLine_Year," "TimeLine_Month," and "Id" are created and updated in the provided input data and have been specified for the date and number grouping. Additionally, the date formatting has been applied to these specified date group fields using the [PivotViewFormatSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewFilterSettings.html).
+
+```cshtml
+@using Syncfusion.Blazor.PivotView
+
+<SfPivotView TValue="GroupData" Width="1000" Height="600">
+     <PivotViewDataSourceSettings DataSource="@data">
+        <PivotViewColumns>
+            <PivotViewColumn Name="Id"></PivotViewColumn>
+        </PivotViewColumns>
+        <PivotViewRows>
+            <PivotViewRow Name="TimeLine"></PivotViewRow>
+        </PivotViewRows>
+        <PivotViewValues>
+            <PivotViewValue Name="PowUnits"></PivotViewValue>
+            <PivotViewValue Name="ProCost"></PivotViewValue>
+        </PivotViewValues>
+        <PivotViewFieldMapping>
+            <PivotViewField Name="Id" DataType="number"></PivotViewField>
+        </PivotViewFieldMapping>
+        <PivotViewFormatSettings>
+            <PivotViewFormatSetting Name="ProCost" Format="C"></PivotViewFormatSetting>
+            <PivotViewFormatSetting Name="TimeLine_Year" Type="FormatType.DateTime" Format="yyyy"></PivotViewFormatSetting>
+            <PivotViewFormatSetting Name="TimeLine_Month" Type="FormatType.DateTime" Format="MMM"></PivotViewFormatSetting>
+        </PivotViewFormatSettings>
+    </PivotViewDataSourceSettings>
+</SfPivotView>
+
+@code{
+    private List<GroupData> data { get; set; } 
+    
+    protected override void OnInitialized()
+    {
+        data = GroupData.GetGroupData();
+        // Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
+    }
+
+    public class GroupData
+    {
+        public string Id { get; set; }
+        public DateTime TimeLine_Year { get; set; }
+        public DateTime TimeLine_Month { get; set; }
+        public string Sector { get; set; }
+        public string EnerType { get; set; }
+        public string EneSource { get; set; }
+        public int PowUnits { get; set; }
+        public int ProCost { get; set; }
+
+        public static List<GroupData> GetGroupData()
+        {
+            List<GroupData> groupData = new List<GroupData>();
+            groupData.Add(new GroupData
+            {
+                Id = "1001-1003",
+                TimeLine_Year = new DateTime(2015,1,1),
+                TimeLine_Month = new DateTime(2015,1,1),
+                Sector = "Public Sector",
+                EnerType = "Free Energy",
+                EneSource = "Hydro-electric",
+                PowUnits = 46,
+                ProCost = 43
+            });
+            groupData.Add(new GroupData
+            {
+                Id = "1001-1003",
+                TimeLine_Year = new DateTime(2015,1,2),
+                TimeLine_Month = new DateTime(2015,1,1),
+                Sector = "Private Sector",
+                EnerType = "Free Energy",
+                EneSource = "Geo-thermal",
+                PowUnits = 30,
+                ProCost = 29
+            });
+            groupData.Add(new GroupData
+            {
+                Id = "1001-1003",
+                TimeLine_Year = new DateTime(2015,2,3),
+                TimeLine_Month = new DateTime(2015,1,1),
+                Sector = "Public Sector",
+                EnerType = "Free Energy",
+                EneSource = "Solar",
+                PowUnits = 125,
+                ProCost = 96
+            });
+            groupData.Add(new GroupData
+            {
+                Id = "1004-1006",
+                TimeLine_Year = new DateTime(2015,2,4),
+                TimeLine_Month = new DateTime(2015,1,1),
+                Sector = "Private Sector",
+                EnerType = "Free Energy",
+                EneSource = "Wind",
+                PowUnits = 215,
+                ProCost = 123
+            });
+            groupData.Add(new GroupData
+            {
+                Id = "1004-1006",
+                TimeLine_Year = new DateTime(2016,3,5),
+                TimeLine_Month = new DateTime(2015,1,1),
+                Sector = "Public Sector",
+                EnerType = "Free Energy",
+                EneSource = "Wind",
+                PowUnits = 263,
+                ProCost = 125
+            });
+        }
+    }
+}
+```
+
+### Value filtering
 
 The [value filtering](https://blazor.syncfusion.com/documentation/pivot-table/filtering#value-filtering) primarily operates on grand totals, meaning the filtering process considers entire rows and columns to match applied value conditions. To achieve similar results with more flexibility, explore our label filtering or member filtering options. These alternates can yield similar results with better performance, especially when dealing with large datasets. More information on utilizing the [label filtering](https://blazor.syncfusion.com/documentation/pivot-table/filtering#label-filtering) or [member filtering](https://blazor.syncfusion.com/documentation/pivot-table/filtering#member-filtering) options can be found in the documentation section dedicated to these features.
-
-## Data compression
-
-When loading a large amount of input data (aka, raw data) into the pivot table, this data compression feature allows the input data to be compressed based on the uniqueness of the input data, and unique records will be provided as input for the pivot table's data source property. The compressed data will always be used for further operations, reducing looping complexity during internal pivot calculation and improving the pivot table performance. For more information on implementing the data compression in the pivot table, you can refer to the documentation [here](https://blazor.syncfusion.com/documentation/pivot-table/virtual-scrolling#data-compression).
-
-### Best practices for utilizing data compression in pivot table
-
-#### Unique Records vs. Data Compression
-
-When dealing with a large amount of input data, specifically with fewer unique records available in the input data, data compression performs exceptionally well.
-
-The effectiveness of data compression fails when your input data is entirely made up of more unique records. In such circumstances, using data compression in pivot tables is not suggested because the primary goal of data compression may not be met.
-
-#### Unsupported aggregation types
-
-Avoid setting complex aggregation types like Average, Populationsdev, Samplestdev, Populationvar, and Samplevar to the fields available in the pivot report that may hinder the data compression process.
 
 ## Server-side engine
 
@@ -99,21 +320,21 @@ Rather than using the Blazor Pivot Table's built-in engine to process large amou
 
 For more information on implementing the server-side engine in the pivot table, you can refer to the documentation [here](https://blazor.syncfusion.com/documentation/pivot-table/server-side-pivot-engine).
 
-## Enhancing performance of Pivot Table in WASM application
+## Enhancing performance of pivot table in WASM application
 
-Improving the performance of a Blazor Pivot Table in WebAssembly (WASM) requires more than just built-in features. This section provides performance guidelines for using the Syncfusion Pivot Table component efficiently in Blazor WebAssembly application. The best practice or guidelines for general framework Blazor WebAssembly performance can be found [here](https://learn.microsoft.com/en-us/aspnet/core/blazor/performance?view=aspnetcore-8.0).
+This section provides performance guidelines for using the Syncfusion Pivot Table component efficiently in the Blazor WebAssembly application, besides built-in features. The best practices or guidelines for general framework Blazor WebAssembly performance can be found [here](https://learn.microsoft.com/en-us/aspnet/core/blazor/performance?view=aspnetcore-8.0).
 
 ### Avoid unnecessary component renders
 
-During Blazor diffing algorithm, every cell of the Pivot Table component and its child component will be checked for re-rendering. For instance, having **EventCallBack** on the application or Pivot Table will check every child component once event callback is completed.
+During Blazor diffing algorithm, every cell of the pivot table component and its child component will be checked for re-rendering. For instance, having **EventCallBack** on the application or pivot table will check every child component once event callback is completed.
 
-You can have fine-grained control over Pivot Table component rendering. The **PreventRender** method helps you to avoid unnecessary re-rendering of the Pivot Table component. This method internally overrides the **ShouldRender** method of the Pivot Table to prevent rendering.
+You can have fine-grained control over pivot table component rendering. The **PreventRender** method helps you to avoid unnecessary re-rendering of the pivot table component. This method internally overrides the **ShouldRender** method of the pivot table to prevent rendering.
 
 In the following example:
 
 * The **PreventRender** method is called in the **IncrementCount** method, which is a click event callback.
 
-* Now, Pivot Table component will not be a part of the rendering which happens because of the click event and **currentCount** alone will get updated.
+* Now, pivot table component will not be a part of the rendering which happens because of the click event and **currentCount** alone will get updated.
 
 ```cshtml
 @using Syncfusion.Blazor.PivotView
@@ -174,13 +395,13 @@ In the following example:
 ```
 
 N> * The **PreventRender** method takes a boolean argument that accepts **true** or **false** to disable or enable rendering respectively.
-N> * This method can only be used after the Pivot Table component has completed its initial rendering. Calling this method during the initial rendering will have no effect.
+N> * This method can only be used after the pivot table component has completed its initial rendering. Calling this method during the initial rendering will have no effect.
 
-### Avoid unnecessary component renders after Pivot Table events
+### Avoid unnecessary component renders after pivot table events
 
-When a callback method is assigned to the Pivot Table event, the parent component of the Pivot Table will automatically invoke its **StateHasChanged** when the event is completed.
+When a callback method is assigned to the pivot table event, the parent component of the pivot table will automatically invoke its **StateHasChanged** when the event is completed.
 
-You can prevent this re-rendering of the Pivot Table component by calling the **PreventRender** method.
+You can prevent this re-rendering of the pivot table component by calling the **PreventRender** method.
 
 In the following example, the [Drill](https://blazor.syncfusion.com/documentation/pivot-table/events#drill) event is bound with a callback method. So, after the drill event is completed, the parent component's **StateHasChanged** method will be invoked.
 
@@ -222,7 +443,7 @@ In the following example, the [Drill](https://blazor.syncfusion.com/documentatio
 
 N> * The **PreventRender** method internally overrides the component's **ShouldRender** method to prevent rendering.
 N> * For better performance, it is recommended to use the **PreventRender** method for user interactive [events](https://blazor.syncfusion.com/documentation/pivot-table/events) like Drill, BeforeColumnsRender, BeforeExport, DrillThrough, CellClick, ChartSeriesCreated, etc.
-N> * For events without any argument such as [DataBound](https://blazor.syncfusion.com/documentation/pivot-table/events#databound), you can use **PreventRender** method of the Pivot Table to disable rendering.
+N> * For events without any argument such as [DataBound](https://blazor.syncfusion.com/documentation/pivot-table/events#databound), you can use **PreventRender** method of the pivot table to disable rendering.
 
 ## Strategic approaches to addressing latency challenges
 
