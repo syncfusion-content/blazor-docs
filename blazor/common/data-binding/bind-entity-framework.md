@@ -67,14 +67,14 @@ Now, select Target Framework as (.NET 6.0 or .NET 7.0) in the project template a
 
 ### DbContext and model class in Blazor Web App
 
-Now, scaffold DbContext and model classes from the existing Library database. To perform scaffolding and work with the SQL Server database in our application, you need to install the following NuGet packages. If you have created a Blazor Web App with the `Interactive render mode` set to `WebAssembly` or `Auto`, ensure to follow these steps:
+Now, scaffold DbContext and model classes from the existing library database. To perform scaffolding and work with the SQL Server Database in our application, you need to install the following NuGet packages. If you have created a Blazor Web App with the interactive render mode set to `WebAssembly` or `Auto`, ensure to follow these steps:
 
-1. Create the new project with Class Library template named as `BlazorWebApp.Shared` for DbContext and model class as shown below.
+* Create the new project with Class Library template named as `BlazorWebApp.Shared` for DbContext and model class as shown below.
 ![Create Shared Project](../images/db-shared-project.png)
 
 Additionally, ensure that you have added a reference to the `BlazorWebApp.Shared` project in both the server-side and client-side projects of your web application.
 
-2. Then, open the NuGet Package Manager and install the following packages in both the shared and server-side projects of your Blazor Web App.
+* Then, open the NuGet Package Manager and install the following packages in both the shared and server-side projects of your app.
 
    * [Microsoft.EntityFrameworkCore.Tools](https://www.nuget.org/packages/Microsoft.EntityFrameworkCore.Tools): This package creates database context and model classes from the database.
    * [Microsoft.EntityFrameworkCore.SqlServer](https://www.nuget.org/packages/Microsoft.EntityFrameworkCore.SqlServer/): The database provider that allows Entity Framework Core to work with SQL Server.
@@ -104,7 +104,7 @@ Additionally, ensure that you have added a reference to the `BlazorWebApp.Shared
     * **Data provider**: Microsoft.EntityFrameworkCore.SqlServer
     * **Output directory**: -OutputDir Models
 
-3. After running the above command, **LibraryContext.cs** and **Book.cs** files will be created under the **Models** folder in the `BlazorWebApp.Shared` project as follows.
+* After running the above command, **LibraryContext.cs** and **Book.cs** files will be created under the **Models** folder in the `BlazorWebApp.Shared` project as follows.
 
 ![Create Shared Project](../images/shared-models.png)
 
@@ -112,7 +112,7 @@ You can see that **LibraryContext.cs** file contains the connection string detai
 
 ![Created Connectionstring in Blazor](../images/shared-connection-string.png)
 
-4. Also, include the following code snippet in the **app settings.json** file from server side application.
+* Also, include the following code snippet in the **app settings.json** file from server side application.
 
 {% tabs %}
 {% highlight C# tabtitle="app settings.json" hl_lines="2 10 11 12" %}
@@ -133,7 +133,7 @@ You can see that **LibraryContext.cs** file contains the connection string detai
 {% endhighlight %}
 {% endtabs %}
 
-5. Add the following code snippet to configure a scoped HttpClient with a base address and **DbContext** must be configured using connection string and registered as scoped service using the **AddDbContext** method in **Program.cs** file in server side application.
+* Add the following code snippet to configure a scoped HttpClient with a base address and **DbContext** must be configured using connection string and registered as scoped service using the **AddDbContext** method in **Program.cs** file in server side application.
 
 {% tabs %}
 {% highlight c# tabtitle="~/Program.cs" hl_lines="1 2 3 4" %}
@@ -145,7 +145,7 @@ builder.Services.AddDbContext<LibraryContext>(option =>
 {% endhighlight %}
 {% endtabs %}
 
-6. Crete the `DataGridController` in server side application for handle CRUD (Create, Read, Update, Delete) operations for the Book entity.
+* Crete the `DataGridController` in server side application for handle CRUD (Create, Read, Update, Delete) operations for the Book entity.
 
 ```cshtml
 using BlazorWebApp.Shared.Models;
@@ -237,7 +237,7 @@ app.MapControllers();
 {% endhighlight %}
 {% endtabs %}
 
-7. Create a `Services` folder in the `BlazorWebApp.Shared` project. Inside the `Services` folder, create the ClientServices class. This class will be responsible for interacting with the server-side API to perform operations such as retrieving books, inserting a new book, removing a book, and updating a book.
+* Create a `Services` folder in the `BlazorWebApp.Shared` project. Inside the `Services` folder, create the ClientServices class. This class will be responsible for interacting with the server-side API to perform operations such as retrieving books, inserting a new book, removing a book, and updating a book.
 
 {% tabs %}
 {% highlight c# tabtitle="ClientServices.cs" %}
@@ -295,7 +295,7 @@ N> To ensure the using correct your's localhost portable number in code snippet.
 
 ### DbContext and model class in Blazor Server App
 
-Now, scaffold DbContext and model classes from the existing Library database. To perform scaffolding and work with the SQL Server database in our application, you need to install the following NuGet packages.
+Now, scaffold DbContext and model classes from the existing library database. To perform scaffolding and work with the SQL Server Database in our application, you need to install the following NuGet packages.
 
 * [Microsoft.EntityFrameworkCore.Tools](https://www.nuget.org/packages/Microsoft.EntityFrameworkCore.Tools): This package creates database context and model classes from the database.
 * [Microsoft.EntityFrameworkCore.SqlServer](https://www.nuget.org/packages/Microsoft.EntityFrameworkCore.SqlServer/): The database provider that allows Entity Framework Core to work with SQL Server.
@@ -349,7 +349,7 @@ builder.Services.AddDbContext<LibraryContext>(option =>
 
 ### Creating a Data Access Layer
 
-The application is now configured to connect with the Library database using Entity Framework. Now, it’s time to consume data from the Library database. To do so, you need an interface to fetch data from DbContext to the Blazor application.
+The application is now configured to connect with the library database using Entity Framework. Now, it’s time to consume data from the library database. To do so, you need an interface to fetch data from DbContext to the Blazor application.
 
 To create an interface, right-click on the Models folder and create an interface called **ILibraryService.cs**  like below.
 
@@ -604,7 +604,7 @@ Grid columns can be defined using the **GridColumn** component. We are going to 
 
 <SfGrid DataSource="@LibraryBooks" TValue="Book">
     <GridColumns>
-        <GridColumn Field="@nameof(Book.Id)" IsPrimaryKey="true" IsIdentity="true" Visible="false"></GridColumn>
+        <GridColumn Field="@nameof(Book.Id)" IsPrimaryKey="true" IsIdentity="true"></GridColumn>
         <GridColumn Field="@nameof(Book.Name)" Width="150"></GridColumn>
         <GridColumn Field="@nameof(Book.Author)" Width="150"></GridColumn>
         <GridColumn Field="@nameof(Book.Quantity)" Width="90" TextAlign="TextAlign.Right"></GridColumn>
@@ -630,7 +630,7 @@ Grid columns can be defined using the **GridColumn** component. We are going to 
 
 <SfGrid DataSource="@LibraryBooks" TValue="Book">
     <GridColumns>
-        <GridColumn Field="@nameof(Book.Id)" IsPrimaryKey="true" IsIdentity="true" Visible="false"></GridColumn>
+        <GridColumn Field="@nameof(Book.Id)" IsPrimaryKey="true" IsIdentity="true" ></GridColumn>
         <GridColumn Field="@nameof(Book.Name)" Width="150"></GridColumn>
         <GridColumn Field="@nameof(Book.Author)" Width="150"></GridColumn>
         <GridColumn Field="@nameof(Book.Quantity)" Width="90" TextAlign="TextAlign.Right"></GridColumn>
@@ -685,7 +685,7 @@ We have added the DataGrid editing, toolbar, and OnActionBegin and OnActionCompl
     <GridEditSettings AllowAdding="true" AllowDeleting="true" AllowEditing="true" Mode="EditMode.Normal"></GridEditSettings>
     <GridEvents OnActionBegin="ActionBeginHandler" OnActionComplete="ActionCompleteHandler" TValue="Book"></GridEvents>
     <GridColumns>
-        <GridColumn Field="@nameof(Book.Id)" IsPrimaryKey="true" IsIdentity="true" Visible="false"></GridColumn>
+        <GridColumn Field="@nameof(Book.Id)" IsPrimaryKey="true" IsIdentity="true" ></GridColumn>
         <GridColumn Field="@nameof(Book.Name)" Width="150"></GridColumn>
         <GridColumn Field="@nameof(Book.Author)" Width="150"></GridColumn>
         <GridColumn Field="@nameof(Book.Quantity)" Width="90" TextAlign="TextAlign.Right"></GridColumn>
@@ -724,7 +724,7 @@ We have added the DataGrid editing, toolbar, and OnActionBegin and OnActionCompl
     <GridEditSettings AllowAdding="true" AllowDeleting="true" AllowEditing="true" Mode="EditMode.Normal"></GridEditSettings>
     <GridEvents OnActionBegin="ActionBeginHandler" OnActionComplete="ActionCompleteHandler" TValue="Book"></GridEvents>
     <GridColumns>
-        <GridColumn Field="@nameof(Book.Id)" IsPrimaryKey="true" IsIdentity="true" Visible="false"></GridColumn>
+        <GridColumn Field="@nameof(Book.Id)" IsPrimaryKey="true" IsIdentity="true" ></GridColumn>
         <GridColumn Field="@nameof(Book.Name)" Width="150"></GridColumn>
         <GridColumn Field="@nameof(Book.Author)" Width="150"></GridColumn>
         <GridColumn Field="@nameof(Book.Quantity)" Width="90" TextAlign="TextAlign.Right"></GridColumn>
