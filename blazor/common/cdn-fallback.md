@@ -15,7 +15,7 @@ This section provides information about how to refer fallback [scripts](https://
 
 For Blazor Web app, refer the script and style sheet fallback from [Static Web Assets](https://blazor.syncfusion.com/documentation/common/adding-script-references#static-web-assets) inside the Script tag like below.
 
-### Script Fallback
+### Script fallback
 
 You can check the Syncfusion Blazor object for script fallback whether scripts are loaded or not. If it's not loaded, create a script tag and refer scripts externally inside the `<body>` of **~/Components/App.razor** file in server side app as in the below code.
 
@@ -37,7 +37,7 @@ You can check the Syncfusion Blazor object for script fallback whether scripts a
 {% endhighlight %}
 {% endtabs %}
 
-### stylesheet Fallback
+### Stylesheet fallback
 
 You can refer the theme stylesheet inside the `<head>` of **~/Components/App.razor** file in server side app like below.
 
@@ -86,7 +86,7 @@ N> Alternately, fallback links can be provided using [script fallback](#script-f
 
 For Blazor WebAssembly app, refer the script and style sheet fallback from [Static Web Assets](https://blazor.syncfusion.com/documentation/common/adding-script-references#static-web-assets) inside the Script tag like below.
 
-### Script Fallback
+### Script fallback
 
 You can check the Syncfusion Blazor object for script fallback whether scripts are loaded or not. If it's not loaded, create a script tag and refer scripts externally inside the `<head>` of **wwwroot/index.html** file in client web app as in the below code.
 
@@ -108,7 +108,7 @@ You can check the Syncfusion Blazor object for script fallback whether scripts a
 {% endhighlight %}
 {% endtabs %}
 
-### stylesheet Fallback
+### Stylesheet fallback
 
 You can refer the theme stylesheet inside the `<head>` of **wwwroot/index.html** file in client web app like below.
 
