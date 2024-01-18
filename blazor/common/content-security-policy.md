@@ -29,7 +29,7 @@ These directives should be included in the `<head>` tag of the application's web
 * For **Blazor WebAssembly App**, inside the `<head>` of **wwwroot/index.html** file.
 
 {% tabs %}
-{% highlight cshtml hl_lines="9 10" %}
+{% highlight c# hl_lines="9 10" %}
 
 <head>
     ...
@@ -52,7 +52,7 @@ These directives should be included in the `<head>` tag of the application's web
 if you are referencing script and style references from CDN, then add CDN domain reference in CSP meta tag.
 
 {% tabs %}
-{% highlight cshtml  hl_lines="9 10" %}
+{% highlight c# hl_lines="9 10" %}
 
 <head>
     ...
