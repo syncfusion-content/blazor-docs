@@ -123,7 +123,7 @@ You can define the step icon and label by setting the `IconCss` and `Label` prop
 {% tabs %}
 {% highlight razor %}
 
-<SfStepper ID="iconWithLabel">
+<SfStepper>
     <StepperSteps>
         <StepperStep Label="Cart" IconCss="sf-icon-cart"></StepperStep>
         <StepperStep Label="Address" IconCss="sf-icon-user"></StepperStep>
