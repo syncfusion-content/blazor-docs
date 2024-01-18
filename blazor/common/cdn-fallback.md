@@ -39,7 +39,7 @@ You can check the Syncfusion Blazor object for script fallback whether scripts a
 
 ### stylesheet Fallback
 
-You can refer the theme style sheet inside the `<head>` of **~/Components/App.razor** file in server side app like below.
+You can refer the theme stylesheet inside the `<head>` of **~/Components/App.razor** file in server side app like below.
 
 {% tabs %}
 {% highlight cshtml %}
@@ -110,7 +110,7 @@ You can check the Syncfusion Blazor object for script fallback whether scripts a
 
 ### stylesheet Fallback
 
-You can refer the theme style sheet inside the `<head>` of **wwwroot/index.html** file in client web app like below.
+You can refer the theme stylesheet inside the `<head>` of **wwwroot/index.html** file in client web app like below.
 
 {% tabs %}
 {% highlight cshtml tabtitle="~/index.html" %}
