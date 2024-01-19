@@ -276,7 +276,7 @@ If you create a Blazor Web App with an **Interactive render mode** such as `WebA
 
 {% tabs %}
 
-{% highlight c# tabtitle=".NET 6 & .NET 7 (Program.cs)" hl_lines="8 10 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26" %}
+{% highlight c# tabtitle="Program.cs" hl_lines="8 10 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26" %}
 
 using Microsoft.JSInterop;
 using System.Globalization;
