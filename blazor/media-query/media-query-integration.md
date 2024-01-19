@@ -7,9 +7,9 @@ control: Media Query
 documentation: ug
 ---
 
-# Integrate Media Query with other components
+# Media Query with other components
 
-You can integrate various components, such as the Chart and Grid, with `Media Query` to improve responsiveness. In the example below, the Grid component is utilized in conjunction with a Media Query to demonstrate its responsiveness. This is achieved by dynamically adjusting the `RowRenderingMode` property of the Grid based on the `activeBreakpoint` when the browser size is changed.
+You can use components like charts and grids along with `Media Query` component to make the website adaptable to different screen sizes. In the  below example, the Grid component is used and upon browser resizing the `RowRenderingMode` Grid property is updated based on the `activeBreakpoint` values.
 
 ```cshtml
 
@@ -18,18 +18,28 @@ You can integrate various components, such as the Chart and Grid, with `Media Qu
 
 @{
     var RenderingMode = RowDirection.Horizontal;
-    if (activeBreakPoint == "Small" || activeBreakPoint == "Medium")
+    if (activeBreakPoint == "Small")
     {
         RenderingMode = RowDirection.Vertical;
+        enableAdaptiveUI = true;
+    }
+    else if (activeBreakPoint == "Medium")
+    {
+        RenderingMode = RowDirection.Horizontal;
+        enableAdaptiveUI = true;
     }
     else
     {
         RenderingMode = RowDirection.Horizontal;
+        enableAdaptiveUI = false;
     }
 }
+
+Active media name: <b>@activeBreakPoint</b><br/>
+
 <SfMediaQuery @bind-ActiveBreakpoint="activeBreakPoint"></SfMediaQuery>
 <div style="height: 650px; overflow-y: auto;">
-    <SfGrid DataSource="@Orders" EnableAdaptiveUI="true" RowRenderingMode="@RenderingMode" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Cancel", "Update", "Search" })" Height="100%" Width="100%" AllowPaging=true>
+    <SfGrid DataSource="@Orders" EnableAdaptiveUI="@enableAdaptiveUI" RowRenderingMode="@RenderingMode" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Cancel", "Update", "Search" })" Height="100%" Width="100%" AllowPaging=true>
         <GridPageSettings PageSize="15"></GridPageSettings>
         <GridColumns>
             <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" IsPrimaryKey="true" Width="80" ValidationRules="@(new ValidationRules{ Required= true })"></GridColumn>
@@ -42,6 +52,7 @@ You can integrate various components, such as the Chart and Grid, with `Media Qu
 
 @code{
     private string activeBreakPoint { get; set; }
+    private bool enableAdaptiveUI { get; set; }
     public List<Order> Orders { get; set; }
 
     protected override void OnInitialized()

@@ -9,13 +9,11 @@ documentation: ug
 
 # Global level reuse of Blazor Media Query component
 
-You can achieve global reusability of the `Media Query` component across different sections of your applications, ensuring a consistent and adaptive design.
-
-To globally reuse the Syncfusion `Media Query` component, you can define it in the `MainLayout.razor` file:
+You can reuse the `Media Query` component across different parts of your application to keep the design the consistent and adaptable.
 
 1. Click on the **~/Shared** folder in Visual Studio and select **MainLayout.razor** to define the `Media Query` component globally.
 
-2. Place the `Media Query` component within a `CascadingValue` component, and create a public variable named `activeBreakPoint` by using the parameters.
+2. Place the `Media Query` component within the `CascadingValue`, and create a public variable named `activeBreakPoint` as a parameter.
 
 {% tabs %}
 {% highlight razor %}
