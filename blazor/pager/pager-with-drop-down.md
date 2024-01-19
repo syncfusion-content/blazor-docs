@@ -8,7 +8,7 @@ documentation: ug
 ---
 
 
-# Pager with Dropdown in Blazor Pager Component
+# Pager with Dropdown in Blazor
 
 ## Page size list
 
