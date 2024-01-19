@@ -35,7 +35,7 @@ Additionally, by utilizing the [ColumnSpan](https://help.syncfusion.com/cr/blazo
 
 In the provided example, the layout of the DataForm is segmented into six equal columns, with the editor fields distributed accordingly, depending on the column span allocated to each one.
 
-![Blazor DataForm Column Layout.](images/blazor_dataform_button_column_span.png)
+![Blazor DataForm Column Layout.](images/blazor_dataform_column_span.png)
 
 
 ## See Also
