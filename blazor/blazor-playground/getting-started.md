@@ -1,11 +1,14 @@
 ---
 layout: post
 title: Getting Started with Blazor Playground | Syncfusion
-description: Syncfusion Blazor Playground is a powerful online code editor for building and editing Blazor components easily.
+description: Explore real-time Blazor component development with Syncfusion Blazor Playground. Write, edit, compile, and share effortlessly in your browser!
 platform: Blazor
 component: Common
 documentation: ug
 ---
+
+Syncfusion provides an option to render a blazor components using [Blazor Playground](https://blazorplayground.syncfusion.com/). Playground offers a platform where developers can write, visualize, and experiment with Blazor components using C# and Razor syntax. The code compilation utilizes WebAssembly technology which gives a performance that closely resembles native execution.
+
 # Getting Started with Blazor playground
 
 This section briefly explains about how to use the blazor playground.
@@ -13,38 +16,90 @@ This section briefly explains about how to use the blazor playground.
 2. Use the code editor to create your desired  .razor format code. 
 3. Once you are done writing your code, press the run button or <kbd>Ctrl</kbd>+<kbd>R</kbd> to execute the code. The output of the executed code will appear in the result view.
 
-![Getting Started with Blazor playground](images/getting_started.png)
+# Blazor Component
 
-## How to add/remove child components
+You can create a blazor component in blazor playground by following the given steps below:
 
-To create a child component, you can click the "+" button in the Blazor playground. This will add a new component to the project. You can then type the name for the child component in the input box.
+1. Add the code in __Index.razor,
 
-The index.razor file is the main file for the Blazor playground app. To view the outcome of the child component, you can refer to it in the index.razor file and press run button to execute the code.
+```cshtml
+<!-- ColorPicker.razor -->
 
-![Adding child components in Blazor playgorund](images/ChildComponent.png)
+@page "/colorpicker"
 
-![Referring child component in index.razor](images/Refer_ChildComponent.png)
+<h3>Color Picker</h3>
 
-To remove a child component, you can simply click the delete icon. This will remove the component from the Blazor playground.
+<div class="color-palette">
+    @foreach (var color in ColorPalette)
+    {
+        <div class="color" style="background-color: @color" @onclick="() => SelectColor(color)"></div>
+    }
+</div>
 
-![Deleting child component in index.razor](images/Delete_ChildComponent.png)
+<p>Selected Color: @selectedColor</p>
 
-N> After deleting a child component from the Blazor playground, the references to the component will not be removed from the index.razor file. This is because the index.razor file is a static file that is not updated when you delete a child component from the Blazor playground.
+@code {
+    private List<string> ColorPalette = new List<string>
+    {
+        "#ff0000", "#00ff00", "#0000ff", "#ffff00", "#ff00ff", "#00ffff"
+    };
 
-## How to add/remove classes
+    private string selectedColor = "#ff0000";
 
-To generate a class file, click on the "+" icon and input the desired class name. The system will create the class file, setting up the required using statements, namespace, and class name according to your input. Then, reference this class as required within your codebase.
+    private void SelectColor(string color)
+    {
+        selectedColor = color;
+    }
+}
+<style>
 
-![Predefined snippets for class file](images/Class_Snippet.png)
+    .color-palette {
+        display: flex;
+        flex-wrap: wrap;
+    }
 
-![Adding class file in Blazor playgorund](images/Adding_Class.png)
+    .color {
+        width: 50px;
+        height: 50px;
+        margin: 5px;
+        cursor: pointer;
+        border: 2px solid #fff;
+    }
 
-![Referring the class in Blazor playgorund](images/Referred_Class.png)
+    .color:hover {
+        border: 2px solid #000;
+    }
+    
+</style>
+```
+2. Press the run button or <kbd>Ctrl</kbd>+<kbd>R</kbd> to execute the code. The output of the executed code will appear in the result view.
 
-To remove a class file, click the delete icon corresponding to the specific component.
+![blazor_component](images/blazor_component.png)
 
-N>Remember to include the ".cs" extension; otherwise, the file will be generated as a razor file.
+# Syncfusion Blazor component
+
+To render syncfusion components in blazor playground follow the steps given below:
+
+1. Import the Syncfusion.Blazor and Syncfusion.Blazor.Calendars namespace.
 
 
+```cshtml
 
+@using Syncfusion.Blazor
+@using Syncfusion.Blazor.Calendars
 
+```
+
+N>Since the latest `Syncfusion.Blazor` package is readily available in the Blazor playground, external installation is unnecessary. All necessary theme assets, including the stylesheet and scripts, are linked with the application.
+
+2. Add the Syncfusion Calendar component in the code editor.
+
+```cshtml
+
+<SfCalendar TValue="DateTime"></SfCalendar>
+
+```
+
+Press the run button or <kbd>Ctrl</kbd>+<kbd>R</kbd> to execute the code. The output of the executed code will appear in the result view.
+
+![syncfusion_component](images/syncfusion_component.png)

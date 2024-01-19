@@ -7,8 +7,6 @@ component: Common
 documentation: ug
 ---
 
-# Predefined code templates for blazor
-
 Blazor Playground simplifies the process of incorporating UI components by offering a collection of pre-defined code templates for various components. These snippets are conveniently displayed in a popup, making it easy for users to browse and select their preferred Syncfusion components. 
 
 By choosing a component and clicking the "add" button, Playground significantly reduces the time needed to render the component in your project.
@@ -31,11 +29,10 @@ For added efficiency, Blazor Playground allows you to select multiple components
 
 N>Ensure that when adding components in Blazor Playground, you are aware that the selection is limited to a maximum of 10 components at a time.
 
-## Adding the Component
 Once you've selected the component, click the "add" button. The chosen snippet will be seamlessly added at the cursor point in the editor.
 
 ![Add Snippets](./images/Add_Snippets.png)
 
 For every component you select, the corresponding individual NuGet latest package will be installed, and the overall `Syncfusion.Blazor` package will be removed.
 
-![Selected snippet output](./images/Snippet_Output.png)
+![Selected snippet output](./images/Snippet_Output.gif)
