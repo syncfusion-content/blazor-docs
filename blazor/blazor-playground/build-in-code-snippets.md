@@ -7,6 +7,7 @@ component: Common
 documentation: ug
 ---
 
+# Predefined code templates for blazor
 Blazor Playground simplifies the process of incorporating UI components by offering a collection of pre-defined code templates for various components. These snippets are conveniently displayed in a popup, making it easy for users to browse and select their preferred Syncfusion components. 
 
 By choosing a component and clicking the "add" button, Playground significantly reduces the time needed to render the component in your project.

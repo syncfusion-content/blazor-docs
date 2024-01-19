@@ -1,68 +1,71 @@
 ---
 layout: post
-title: Customizing Themes and Exploring the Code Editor in Blazor Playground
+title: Customizing Themes and Exploring the Code Editor in Blazor Playground | Syncfusion
 description: Blazor Playground offers theme customization and a feature-rich code editor to simplify the development and testing of Blazor components.
 platform: Blazor
 component: Common
 documentation: ug
 ---
-# Switching the theme
+
+# End use Capabilities
+
+## Switching the themes
 
 Blazor Playground offers the option to customize themes for Syncfusion Blazor components. Clicking the "Output Theme" button will display a dropdown containing all available Syncfusion Blazor themes. You can choose any desired theme for Syncfusion Blazor components to personalize their appearance.
 
 ![output_theme](images/Output_Theme.gif)
 
-# Explore the code editor 
+## Explore the code editor 
 
 The editor provides an environment for type, copy , cut, paste and edit. There is a default index.razor and also provides an option to add .razor and .cs files. Here are the key features and functionalities:
 
-## Syntax Highlighting
+### Syntax Highlighting
 
 The code editor supports syntax highlighting, making it easy to distinguish between different elements of your code. Keywords, variables, strings, and comments are color-coded for enhanced readability.
 
-##  Code Folding
+###  Code Folding
 
 Simplify code navigation by collapsing or expanding sections of code. Code folding allows you to focus on specific parts of your code while hiding the details of others.
 
-## Search and Replace
+### Search and Replace
 
 Easily locate specific code snippets using the search functionality. Additionally, streamline code modifications with the powerful find-and-replace feature.
 
-# Compiling and Running Code
+## Compiling and Running Code
 
 This section outlines the steps to compile and run your code using our platform. Follow these instructions to execute your code successfully.
 
-## Run the Compiled Code
+### Run the Compiled Code
 Press the run button or <kbd>Ctrl</kbd>+<kbd>R</kbd>, the code undergoes compilation and execution. The outcome is then displayed, presenting the compiled code within the result view.
 
-# Preview code output
+## Preview code output
 
 Once you click the run button, the code within the code editor gets compiled. If there are no errors, the result view will show the output. Previewing code output allows you to visualize and assess the results of your code.
 
-## Interactive Features
+### Interactive Features
 
 If your code involves interactive elements or user inputs, interact with the preview to simulate real-world scenarios. This allows you to observe how your code behaves under different conditions.
 
-# Errors and warnings
+## Errors and warnings
 
 During compile time, any errors and warnings in the code are displayed, along with their corresponding line numbers, helps you to identify and address issues effectively.
 
 ![Error Console](images/ErrorConsole.png)
 
-## Error Messages
+### Error Messages
 
 * Description: Clearly describes the issue.
 * Location: Specifies the file and line number where the error occurs.
 * Suggestions: May include suggestions on how to fix the problem.
 
-## Warning Messages
+### Warning Messages
 
 * Description: Highlights potential issues that might not prevent compilation but could lead to unexpected behavior.
 * Location: Indicates the file and line number where the warning is triggered.
 * Suggestions: Offers advice on addressing the warning for better code quality.
 
 
-# Embedding and sharing code
+## Embedding and sharing code
 
 In Blazor Playground, you can share your code snippets using unique URLs. Each snippet gets its own distinct URL, making it simple to showcase and discuss your code with others.
 
@@ -72,11 +75,11 @@ To access sharing options, click the "Share" button, triggering a popup that pre
 
 ![Save Code Snippet](images/Save_Snippet.png)
 
-## Shared Link
+### Shared Link
 
 A shared link is useful if you want to allow others to customize the code snippet and package versions. You can share a unique URL that provides access to the code snippet and allows others to modify it according to their needs.
 
-## Embed Link
+### Embed Link
 
 An embed link is useful if you want to share the code snippet but don't want others to customize the installed packages. Based on that embed support, we can embed our work anywhere by providing the values in URL query params. 
 
@@ -102,7 +105,7 @@ Provided the option to show the result alone by disabling all the options except
 
 ![Result View](images/Embed_Result.png)
 
-# Configuring services 
+## Configuring services 
 
 This section provides guidance on updating the configuration and adding new services in our application.
 
@@ -207,7 +210,7 @@ Include the dependency injection in the __Index.razor file, and you can also inc
 
 ![Adding_Services](images/add_services.gif)
 
-# Handling static assets
+## Handling static assets
 
 This section provides instructions on how to manage static assets within your application. Static assets includes stylesheets and scripts. Here is an example for adding the static assets in blazor playground,
 

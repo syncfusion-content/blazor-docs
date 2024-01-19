@@ -16,7 +16,7 @@ This section briefly explains about how to use the blazor playground.
 2. Use the code editor to create your desired  .razor format code. 
 3. Once you are done writing your code, press the run button or <kbd>Ctrl</kbd>+<kbd>R</kbd> to execute the code. The output of the executed code will appear in the result view.
 
-# Blazor Component
+## Blazor Component
 
 You can create a blazor component in blazor playground by following the given steps below:
 
@@ -76,7 +76,7 @@ You can create a blazor component in blazor playground by following the given st
 
 ![blazor_component](images/blazor_component.png)
 
-# Syncfusion Blazor component
+## Syncfusion Blazor component
 
 To render syncfusion components in blazor playground follow the steps given below:
 

@@ -7,7 +7,8 @@ component: Common
 documentation: ug
 ---
 
-# Adding and Removing Child components
+# Working with components in Blazor Playground
+## Adding and Removing Child components
 
 This section briefly explains about the adding and removing of child components:
 
@@ -67,7 +68,7 @@ N> After deleting a child component from the Blazor playground, the references t
 ![blazor_component](images/child_component.gif)
 4. You can generate multiple components simultaneously according to your specific needs.
 
-# How to add/remove classes
+## How to add/remove classes
 
 1. To generate a class file, click on the "+" icon and input the desired class name. The system will create the class file, setting up the required using statements, namespace, and class name according to your input. 
 
