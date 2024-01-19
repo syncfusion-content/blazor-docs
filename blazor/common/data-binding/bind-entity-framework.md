@@ -685,7 +685,7 @@ We have added the DataGrid editing, toolbar, and OnActionBegin and OnActionCompl
     <GridEditSettings AllowAdding="true" AllowDeleting="true" AllowEditing="true" Mode="EditMode.Normal"></GridEditSettings>
     <GridEvents OnActionBegin="ActionBeginHandler" OnActionComplete="ActionCompleteHandler" TValue="Book"></GridEvents>
     <GridColumns>
-        <GridColumn Field="@nameof(Book.Id)" IsPrimaryKey="true" IsIdentity="true" ></GridColumn>
+        <GridColumn Field="@nameof(Book.Id)" IsPrimaryKey="true" IsIdentity="true" Visible="false" ></GridColumn>
         <GridColumn Field="@nameof(Book.Name)" Width="150"></GridColumn>
         <GridColumn Field="@nameof(Book.Author)" Width="150"></GridColumn>
         <GridColumn Field="@nameof(Book.Quantity)" Width="90" TextAlign="TextAlign.Right"></GridColumn>
@@ -724,7 +724,7 @@ We have added the DataGrid editing, toolbar, and OnActionBegin and OnActionCompl
     <GridEditSettings AllowAdding="true" AllowDeleting="true" AllowEditing="true" Mode="EditMode.Normal"></GridEditSettings>
     <GridEvents OnActionBegin="ActionBeginHandler" OnActionComplete="ActionCompleteHandler" TValue="Book"></GridEvents>
     <GridColumns>
-        <GridColumn Field="@nameof(Book.Id)" IsPrimaryKey="true" IsIdentity="true" ></GridColumn>
+        <GridColumn Field="@nameof(Book.Id)" IsPrimaryKey="true" IsIdentity="true" Visible="false" ></GridColumn>
         <GridColumn Field="@nameof(Book.Name)" Width="150"></GridColumn>
         <GridColumn Field="@nameof(Book.Author)" Width="150"></GridColumn>
         <GridColumn Field="@nameof(Book.Quantity)" Width="90" TextAlign="TextAlign.Right"></GridColumn>
