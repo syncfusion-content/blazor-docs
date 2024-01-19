@@ -604,7 +604,7 @@ Grid columns can be defined using the **GridColumn** component. We are going to 
 
 <SfGrid DataSource="@LibraryBooks" TValue="Book">
     <GridColumns>
-        <GridColumn Field="@nameof(Book.Id)" IsPrimaryKey="true" IsIdentity="true"></GridColumn>
+        <GridColumn Field="@nameof(Book.Id)" IsPrimaryKey="true" IsIdentity="true" Visible="false"></GridColumn>
         <GridColumn Field="@nameof(Book.Name)" Width="150"></GridColumn>
         <GridColumn Field="@nameof(Book.Author)" Width="150"></GridColumn>
         <GridColumn Field="@nameof(Book.Quantity)" Width="90" TextAlign="TextAlign.Right"></GridColumn>
@@ -630,7 +630,7 @@ Grid columns can be defined using the **GridColumn** component. We are going to 
 
 <SfGrid DataSource="@LibraryBooks" TValue="Book">
     <GridColumns>
-        <GridColumn Field="@nameof(Book.Id)" IsPrimaryKey="true" IsIdentity="true" ></GridColumn>
+        <GridColumn Field="@nameof(Book.Id)" IsPrimaryKey="true" IsIdentity="true" Visible="false"></GridColumn>
         <GridColumn Field="@nameof(Book.Name)" Width="150"></GridColumn>
         <GridColumn Field="@nameof(Book.Author)" Width="150"></GridColumn>
         <GridColumn Field="@nameof(Book.Quantity)" Width="90" TextAlign="TextAlign.Right"></GridColumn>
