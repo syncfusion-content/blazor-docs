@@ -18,14 +18,8 @@ The example demonstrates the functionality of both linear and non-linear flow in
 @using Syncfusion.Blazor.Navigations
 
 <div id="container">
-    <div class="e-btn-group">
-        <input type="radio" id="linear" name="Linear" value="true" @oninput="@(() => UpdateLinear(true))" checked />
-        <label class="e-btn" for="linear">Linear</label>
-        <input type="radio" id="nonLinear" name="Linear" value="false" @oninput="@(() => UpdateLinear(false))" />
-        <label class="e-btn" for="nonLinear">Non-Linear</label>
-    </div>
     <div class="linear-stepper-control">
-        <SfStepper @ref="linearStepper" Linear=@isLinear>
+        <SfStepper Linear=true>
             <StepperSteps>
                 <StepperStep IconCss="sf-icon-cart" Label="Cart"></StepperStep>
                 <StepperStep IconCss="sf-icon-transport" Label="Delivery"></StepperStep>
@@ -35,16 +29,6 @@ The example demonstrates the functionality of both linear and non-linear flow in
         </SfStepper>
     </div>
 </div>
-
-@code {
-    private bool isLinear = true;
-    private SfStepper linearStepper;
-    private async void UpdateLinear(bool value)
-    {
-        isLinear = value;
-        await linearStepper.ResetAsync();
-    }
-}
 
 <style>
     @@font-face {
