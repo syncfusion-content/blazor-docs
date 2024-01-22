@@ -18,7 +18,7 @@ It is recommended to choose the suitable adaptor based on the RESTful service wh
 ## Prerequisite software
 
 The following software are needed
-* Visual Studio 2022 or later.
+* Visual Studio 2022.
 * .NET 6.0 or later.
 
 ## Create the database
