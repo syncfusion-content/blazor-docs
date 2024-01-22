@@ -7,7 +7,7 @@ component: Common
 documentation: ug
 ---
 
-# End use Capabilities
+# End-user Capabilities
 
 ## Switching the themes
 
