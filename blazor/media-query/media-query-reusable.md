@@ -9,9 +9,9 @@ documentation: ug
 
 # Global level reuse of Blazor Media Query component
 
-You can reuse the `Media Query` component across different parts of your application to keep the design the consistent and adaptable.
+You can reuse the `Media Query` component across different parts of your application to maintain a responsive design.
 
-1. Click on the **~/Shared** folder in Visual Studio and select **MainLayout.razor** to define the `Media Query` component globally.
+1. Open the **~/Shared** folder in Visual Studio and select **MainLayout.razor** to define the `Media Query` component globally.
 
 2. Place the `Media Query` component within the `CascadingValue`, and create a public variable named `activeBreakPoint` as a parameter.
 
@@ -47,7 +47,7 @@ You can reuse the `Media Query` component across different parts of your applica
 {% endhighlight %}
 {% endtabs %}
 
-3. Inherit the `MainLayout` component in the view page, such as **~/Pages/Home.razor or Index.razor**, and run the application.
+3. Inherit the `MainLayout` component in your razor pages to access the `activeBreakPoint` and run the application.
 
 {% tabs %}
 {% highlight razor %}

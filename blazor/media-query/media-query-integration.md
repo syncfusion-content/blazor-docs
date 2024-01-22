@@ -7,9 +7,9 @@ control: Media Query
 documentation: ug
 ---
 
-# Media Query with other components
+# Media Query with other components integration
 
-You can use components like charts and grids along with `Media Query` component to make the website adaptable to different screen sizes. In the  below example, the Grid component is used and upon browser resizing the `RowRenderingMode` Grid property is updated based on the `activeBreakpoint` values.
+You can use `Media Query` component to make the website adaptable to different screen sizes. In the  below example, the Grid component is used and upon browser resizing the `RowRenderingMode` Grid property is updated based on the `activeBreakpoint` values.
 
 ```cshtml
 
@@ -25,12 +25,10 @@ You can use components like charts and grids along with `Media Query` component 
     }
     else if (activeBreakPoint == "Medium")
     {
-        RenderingMode = RowDirection.Horizontal;
         enableAdaptiveUI = true;
     }
     else
     {
-        RenderingMode = RowDirection.Horizontal;
         enableAdaptiveUI = false;
     }
 }
