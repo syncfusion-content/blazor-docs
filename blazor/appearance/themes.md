@@ -607,7 +607,7 @@ In the Blazor application, the application theme can be changed dynamically by c
 
 The following example demonstrates how to change a theme dynamically in Blazor application using Syncfusion Blazor themes using Syncfusion Dropdown component.
 
-1. For **Blazor Web App**, the theme is changed based on query string at the **~/Components/App.razor** file
+* For **Blazor Web App**, the theme is changed based on query string at the **~/Components/App.razor** file
 
 {% tabs %}
 {% highlight c# tabtitle=".NET 8 (~/App.razor)" %}
@@ -632,7 +632,7 @@ The following example demonstrates how to change a theme dynamically in Blazor a
 {% endhighlight %}
 {% endtabs %}
 
-2. Create a new `DropDownComponent.razor` page, and then add the provided code snippet to enable dynamic theming within the application using [Syncfusion DropDown List Component](https://blazor.syncfusion.com/documentation/dropdown-list/getting-started-with-web-app).
+* Create a new `DropDownComponent.razor` page, and then add the provided code snippet to enable dynamic theming within the application using [Syncfusion DropDown List Component](https://blazor.syncfusion.com/documentation/dropdown-list/getting-started-with-web-app).
 
 ```cshtml
 @rendermode InteractiveAuto
@@ -700,7 +700,7 @@ The following example demonstrates how to change a theme dynamically in Blazor a
 
 ```
 
-3. To include `DropDownComponent` in the `~/MainLayout.razor` as shown bellow
+* To include `DropDownComponent` in the `~/MainLayout.razor` as shown bellow
 
 {% tabs %}
 {% highlight c# tabtitle="C#" hl_lines="4 5 6 7" %}
