@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Customizing Themes and Exploring the Code Editor in Blazor Playground | Syncfusion
+title: Exploring Themes and Code Editor in Blazor Playground | Syncfusion
 description: Blazor Playground offers theme customization and a feature-rich code editor to simplify the development and testing of Blazor components.
 platform: Blazor
 component: Common
