@@ -1834,6 +1834,111 @@ N> [View Sample in GitHub.](https://github.com/SyncfusionExamples/blazor-datagri
 
 N> ASP.NET Core (Blazor) Web API with batch handling is not yet supported by ASP.NET Core v3+. Hence, it is not feasible for us to support batch mode CRUD operations until ASP.NET Core provides the support for the batch handler. Refer [here](https://github.com/dotnet/aspnetcore/issues/14722) for more details.
 
+## How to filter the column with multiple values using Query property of DataGrid
+
+The Syncfusion Blazor DataGrid component allows you to easily filter columns with multiple values using the [Query](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Query) property of the datagrid. This property allows you to include multiple parameters in a `Query`, generating predicates through the  [WhereFilter](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.WhereFilter.html) class. As a result, you can display specific data in the datagrid according to your defined filtering criteria. The `WhereFilter` class enables you to create custom filter predicates, which can be combined using logical operators like [AND](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.WhereFilter.html#Syncfusion_Blazor_Data_WhereFilter_And_Syncfusion_Blazor_Data_WhereFilter_) and [OR](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.WhereFilter.html#Syncfusion_Blazor_Data_WhereFilter_Or_Syncfusion_Blazor_Data_WhereFilter_) to build complex filtering logic.
+
+The following example demonstrates how to create a custom filter using the Syncfusion Blazor DataGrid. We will create age-based filters for the `FromAge` and `ToAge` columns. Using these predicates, we will create a custom query that will be applied to the DataGrid's `Query` property for filtering when the button's onClick event is triggered.
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+@using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor.Data
+@using Syncfusion.Blazor.Buttons
+
+<SfButton OnClick="CustomFilter">Custom Filter</SfButton>
+<SfGrid DataSource="@GridData" AllowPaging="true" Query="@CustomQuery">
+    <GridColumns>
+        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" IsPrimaryKey="true" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.FromAge) Width="150" TextAlign="TextAlign.Right"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.ToAge) Width="150" TextAlign="TextAlign.Right"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.ShippedDate) HeaderText="Shipped Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.ShipCountry) HeaderText="Ship Country" Visible="false" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.ShipCity) HeaderText="Ship City" Visible="false" Width="150"></GridColumn>
+    </GridColumns>
+</SfGrid>
+@code 
+{
+    public List<OrderData> GridData { get; set; }
+    public Query CustomQuery { get; set; }
+
+    protected override void OnInitialized()
+    {
+        GridData = OrderData.GetAllRecords();
+    }
+
+    public void CustomFilter()
+    {
+        // Create filter predicates
+        var FirstPredicate = new WhereFilter();
+        var SecondPredicate = new WhereFilter();
+        List<WhereFilter> OrPredicate = new List<WhereFilter>();
+        List<WhereFilter> AndPredicate = new List<WhereFilter>();
+        // Define the filtering conditions
+        OrPredicate.Add(new WhereFilter() { Field = "FromAge", value = 0, Operator = "equal" });
+        FirstPredicate = WhereFilter.Or(OrPredicate);
+        AndPredicate.Add(new WhereFilter() { Field = "FromAge", value = 13, Operator = "lessthanorequal" });
+        AndPredicate.Add(new WhereFilter() { Field = "ToAge", value = 11, Operator = "greaterthanorequal" });
+        SecondPredicate = WhereFilter.And(AndPredicate);
+        //Build your custom query and assign to Grid's Query property
+        CustomQuery = new Query().Where(FirstPredicate.Or(SecondPredicate));
+    }
+}
+{% endhighlight %}
+{% highlight c# tabtitle="OrderData.cs" %}
+ public class OrderData
+ {
+     public static List<OrderData> Orders = new List<OrderData>();
+     public OrderData()
+     {
+
+     }
+     public OrderData(int? OrderID, string CustomerID, string ShipCountry, int FromAge, int ToAge, DateTime ShippedDate, string ShipCity)
+     {
+         this.OrderID = OrderID;
+         this.CustomerID = CustomerID;
+         this.ShipCountry = ShipCountry;
+         this.FromAge = FromAge;
+         this.ToAge = ToAge;
+         this.ShippedDate = ShippedDate;
+         this.ShipCity = ShipCity;
+     }
+     public static List<OrderData> GetAllRecords()
+     {
+         if (Orders.Count() == 0)
+         {
+             int code = 10;
+             for (int i = 1; i < 2; i++)
+             {
+                 Orders.Add(new OrderData(10248, "ALFKI", "France", 0, 3, new DateTime(1996, 08, 07), "Reims"));
+                 Orders.Add(new OrderData(10249, "ANANTR", "Germany", 3, 5, new DateTime(1996, 08, 08), "Münster"));
+                 Orders.Add(new OrderData(10250, "ANTON", "Brazil", 5, 8, new DateTime(1996, 08, 09), "Rio de Janeiro"));
+                 Orders.Add(new OrderData(10251, "BLONP", "Belgium", 8, 11, new DateTime(1996, 08, 10), "Lyon"));
+                 Orders.Add(new OrderData(10252, "BOLID", "Venezuela", 11, 12, new DateTime(1996, 08, 11), "Charleroi"));
+                 Orders.Add(new OrderData(10253, "BLONP", "Venezuela", 12, 13, new DateTime(1996, 08, 12), "Lyon"));
+                 Orders.Add(new OrderData(10254, "ANTON", "Belgium", 13, 14, new DateTime(1996, 08, 13), "Rio de Janeiro"));
+                 Orders.Add(new OrderData(10255, "ANANTR", "Germany", 14, 17, new DateTime(1996, 08, 14), "Münster"));
+                 Orders.Add(new OrderData(10256, "ALFKI", "France", 17, 18, new DateTime(1996, 08, 15), "Reims"));
+                 code += 5;
+             }
+         }
+         return Orders;
+     }
+     public int? OrderID { get; set; }
+     public string CustomerID { get; set; }
+     public int? FromAge { get; set; }
+     public int? ToAge { get; set; }
+     public DateTime ShippedDate { get; set; }
+     public string ShipCountry { get; set; }
+     public string ShipCity { get; set; }
+
+ }
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXhAsCNhgYiaIejJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 ## See also
 
 * [How to import data from Excel sheet and bind to Blazor Grid](https://support.syncfusion.com/kb/article/11560/how-to-import-data-from-excel-sheet-and-bind-to-blazor-grid)
