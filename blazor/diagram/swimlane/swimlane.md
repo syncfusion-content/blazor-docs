@@ -192,7 +192,7 @@ Swimlane can be selected by clicking (tap) the header of the swimlane. Also, it 
 
 ### How to drag the swimlane  
 
-* Swimlane can be dragged by clicking and dragging the header of the swimlane. 
+* Swimlane object can be dragged by clicking and dragging the header of the swimlane. 
 
 * When you drag the elements in the diagram, the [PositionChanging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_PositionChanging) and [PositionChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_PositionChanged) events get triggered and we can do customization on those events.
 
