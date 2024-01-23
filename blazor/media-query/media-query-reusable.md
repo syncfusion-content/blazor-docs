@@ -9,18 +9,16 @@ documentation: ug
 
 # Global level reuse of Blazor Media Query component
 
-You can reuse the `Media Query` component across different parts of your application to maintain a responsive design.
+You can globally reuse the Media Query component in any `razor` pages within web application to achieve a more flexible and responsive layout design. 
 
-1. Open the **~/Shared** folder in Visual Studio and select **MainLayout.razor** to define the `Media Query` component globally.
+Refer the following steps to reuse the Media Query in any `razor` pages.
 
-2. Place the `Media Query` component within the `CascadingValue`, and create a public variable named `activeBreakPoint` as a parameter.
+1. Define the Media Query component along with layout `Body` property within the `CascadingValue` component in **MainLayout.razor** page.
 
 {% tabs %}
 {% highlight razor %}
 
 @inherits LayoutComponentBase
-
-<PageTitle>BlazorValue</PageTitle>
 
 <div class="page">
     <div class="sidebar">
@@ -31,7 +29,7 @@ You can reuse the `Media Query` component across different parts of your applica
             <a href="https://docs.microsoft.com/aspnet/" target="_blank">About</a>
         </div>
         <article class="content px-4">
-            <CascadingValue Value="@this">
+            <CascadingValue Value="@activeBreakpoint">
                 <SfMediaQuery @bind-ActiveBreakPoint="activeBreakPoint"></SfMediaQuery>
                 @Body
             </CascadingValue>
@@ -40,14 +38,13 @@ You can reuse the `Media Query` component across different parts of your applica
 </div>
 
 @code {
-    [Parameter]
-    public string activeBreakPoint { get; set; }
+    private string activeBreakpoint { get; set; }
 }
 
 {% endhighlight %}
 {% endtabs %}
 
-3. Inherit the `MainLayout` component in your razor pages to access the `activeBreakPoint` and run the application.
+2. Inherit the `MainLayout` component in your razor pages to access the `activeBreakPoint` and run the application.
 
 {% tabs %}
 {% highlight razor %}
