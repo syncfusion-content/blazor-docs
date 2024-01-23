@@ -20,7 +20,7 @@ A Lane can be selected by clicking (tap) the header of the lane.
 * Lane can be resized in the bottom and right direction.
 * Lane can be resized by using the resize selector of the lane.
 * Lane can be resized by resizing the bottom and right border of the lane without make a selection.
-* Once you are able to resize the lane, the swimlane will automatically be resized.
+* Once you are able to resize the lane, the swimlane will be automatically resized.
 * The lane can be resized either resizing the selector or the tight bounds of the child object. If the child node move to edge of the lane it can be automatically resized.
 
 The following image shows how resize the lane.

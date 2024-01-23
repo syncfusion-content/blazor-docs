@@ -115,8 +115,6 @@ The following code example explains how to define a lane header and its customiz
 
 You can download a complete working sample from [GitHub]()
 
->Note: Default RotateAngle value of LaneHeader's Annotation is 270 degrees. If you want to place the Annotation in the Horizontal direction, you have to set the RotateAngle of LaneHeader's Annotation as 360 degrees.
-
 ## Add and Remove the lane at runtime
 
  You can add and remove the lane at runtime by using the `Add` and `Remove` method of the `Swimlane.Lanes` Collection. The following code explains how to dynamically add and remove lane to swimlane.
