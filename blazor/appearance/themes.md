@@ -977,6 +977,29 @@ Material and Tailwind Themes uses online roboto font. If your app is designed to
         <link href="material.min.css" rel="stylesheet" />
     </head>
     ```
+### Using Customized Styles from `Syncfusion.Blazor.Themes` Package and CDN (From `v23.2.4` and above)
+
+Starting from `v23.2.4`, customized `Material` and `Tailwind` themes are available in the `Syncfusion.Blazor.Themes` package. Also it can be accessed via CDN for Blazor components.
+
+#### Static Web Asset Reference:
+
+```html
+<head>
+    ....
+    ....
+    <link href="_content/Syncfusion.Blazor.Themes/customized/material.css" rel="stylesheet" />
+</head>
+```
+
+#### CDN Reference:
+
+```html
+<head>
+    ....
+    ....
+    <link href="https://cdn.syncfusion.com/blazor/23.2.4/styles/customized/material.css" rel="stylesheet" />
+</head>
+```
 
 ## See also
 
