@@ -47,15 +47,16 @@ Refer the following steps to reuse the Media Query in any `razor` pages.
 
 2. Inherit the `MainLayout` component in your razor pages to access the `activeBreakPoint` and run the application.
 
-If you are using .NET 8, then you need add `@rendermode` in the `<body>` section in the **~/Components/App.razor** file, as shown below:
+If you are using .NET 8, configure the `@rendermode` in the `<body>` section of the **~/Components/App.razor** file, as shown below:
 
 ```html
 <body>
+    ....
     <Routes @rendermode="InteractiveServer" />
 </body>
 ```
 
-In the below example, the `MainLayout` component is inherited in the **Index.razor** file.
+In the below example, the `MainLayout` component is inherited in the razor file.
 
 {% tabs %}
 {% highlight C# tabtitle=".NET 7" hl_lines="3 10" %}
