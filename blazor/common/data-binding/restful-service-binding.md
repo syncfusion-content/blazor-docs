@@ -18,8 +18,8 @@ It is recommended to choose the suitable adaptor based on the RESTful service wh
 ## Prerequisite software
 
 The following software are needed
-* Visual Studio 2019 v16.8.0 Preview 3.0 or later.
-* .NET SDK 5.0 RC2 or later.
+* Visual Studio 2022 or later.
+* .NET 6.0 or later.
 
 ## Create the database
 
@@ -53,7 +53,7 @@ Now, click on **Update Database**.
 
 ## Create OData service project
 
-Open Visual Studio 2019 and create an empty ASP.NET Core Web Application and name it as ODataServiceProject. After creating the application, install [Microsoft.AspNetCore.OData](https://www.nuget.org/packages/Microsoft.AspNetCore.OData/) package by running the following command in the Package Manager Console.
+Open Visual Studio 2022 and create an empty ASP.NET Core Web Application and name it as ODataServiceProject. After creating the application, install [Microsoft.AspNetCore.OData](https://www.nuget.org/packages/Microsoft.AspNetCore.OData/) package by running the following command in the Package Manager Console.
 
 ```
 Install-Package Microsoft.AspNetCore.OData -Version 8.2.3
@@ -316,7 +316,7 @@ app.Run();
 
 ## Create Blazor Server Application
 
-Open Visual Studio 2019 or Visual Studio 2022 and follow the steps in the below documentation to create the Blazor Server Application.
+Open Visual Studio 2022 and follow the steps in the below documentation to create the Blazor Server Application.
 
 [Getting Started](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio)
 

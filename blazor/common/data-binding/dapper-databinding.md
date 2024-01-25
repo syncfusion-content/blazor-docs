@@ -14,12 +14,10 @@ In this section, you can learn how to consume data from a database using [Dapper
 
 ## Prerequisite software
 
-* Visual Studio 2019 or Visual Studio 2022.
+* Visual Studio 2022.
 * MS SQL Server.
 
 ## Creating Blazor application
-
-* Open Visual Studio and follow the steps in the [documentation](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0&pivots=windows) to create the Blazor Web App.
 
 * Open Visual Studio and follow the steps in the [documentation](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio) to create the Blazor Server Application.
 
@@ -175,8 +173,6 @@ public class BugDataAccessLayer
 
 Now, register `BugDataAccessLayer` as scoped service in the `Program.cs` file as follows.
 
-If you select an **Interactive render mode** as `WebAssembly` or `Auto`, you need to register the `BugDataAccessLayer` as scoped service in both **~/Program.cs** files of your Blazor Web App.
-
 ```cshtml
 ....
 builder.Services.AddScoped<BugDataAccessLayer>();
@@ -186,8 +182,6 @@ builder.Services.AddScoped<BugDataAccessLayer>();
 ## Adding Syncfusion Blazor DataGrid component
 
 To add **Blazor DataGrid** component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/).
-
-If you utilize WebAssembly or automatic render modes in the Blazor web App need to be constructed Syncfusion Blazor components within the client project.
 
 Alternatively, you can utilize the following package manager command to achieve the same.
 
@@ -212,7 +206,7 @@ Open `_Import.razor` file and add the following namespaces which are required to
 
 {% endhighlight %}
 
-Open `Program.cs` file in your application and register the Syncfusion service. If you create Blazor Web App with an **Interactive render mode** as `WebAssembly` or `Auto`, you need to register the Syncfusion Blazor service in both **~/Program.cs** files.
+Open `Program.cs` file in your application and register the Syncfusion service.
 
 ```cshtml
 
@@ -234,8 +228,6 @@ Syncfusion Blazor provides different themes. They are:
 
 In this demo application, the Bootstrap4 theme will be used.
 
-* For **.NET 8** app, add theme in the `<head>` of the **~/Components/App.razor** file.
-
 * For **.NET 7** app, add theme in the `<head>` of the **~/Pages/_Host.cshtml** file.
 
 * For **.NET 6** app, add theme in the `<head>` of the **~/Pages/_Layout.cshtml** file.
@@ -244,14 +236,12 @@ In this demo application, the Bootstrap4 theme will be used.
 {% highlight cshtml %}
 <head>
     ....
-    <link href="_content/Syncfusion.Blazor.Themes/bootstrap4.css" rel="stylesheet" />
+    <link href="_content/Syncfusion.Blazor.Themes/bootstrap4.css" rel="stylesheet" />
 </head>
 
 {% endhighlight %}
 
 Also, include the script reference in the following files
-
-* For **.NET 8** app, add script reference at end of the `<body>` section of the **~/Components/App.razor** file.
 
 * For **.NET 7** app, add script reference at end of the `<body>` section of the **~/Pages/_Host.cshtml** file.
 
@@ -264,18 +254,7 @@ Also, include the script reference in the following files
 </body>
 {% endhighlight %}
 
-In previous steps, you have successfully configured the Syncfusion Blazor package in the application. Now, you can add the DataGrid Component to the `Home.razor or index.razor` or anoter razor page inside of pages folder.
-
-If you have set the interactivity location to `Per page/component` in the web app, ensure that you define a render mode at the top of the Syncfusion Blazor component-included razor page as follows:
-
-{% tabs %}
-{% highlight razor %}
-
-@* Your App render mode define here *@
-@rendermode InteractiveAuto
-
-{% endhighlight %}
-{% endtabs %}
+In previous steps, you have successfully configured the Syncfusion Blazor package in the application. Now, you can add the DataGrid Component to the `index.razor` page of your app.
 
 {% highlight cshtml %}
 
@@ -323,8 +302,6 @@ public class BugDataAdaptor: DataAdaptor
 
 Now, Open the `Program.cs` file in the application and register the `BugDataAdaptor` class.
 
-If you select an **Interactive render mode** as `WebAssembly` or `Auto`, you need to register the `BugDataAdaptor` as scoped service in both **~/Program.cs** files of your Blazor Web App.
-
 {% tabs %}
 {% highlight c# tabtitle="~/Program.cs" hl_lines="4"%}
 
@@ -337,7 +314,7 @@ builder.Services.AddScoped<BugDataAdaptor>();
 {% endhighlight %}
 {% endtabs %}
 
-Now, we have added `SfDataManager` in Grid for binding the data to the Grid and added column definition.
+Now, you need to add the `SfDataManager` in Grid for binding the data to the Grid and added column definition.
 
 In the following code example,
 
@@ -400,7 +377,7 @@ Here, we are using inline edit mode and the [Toolbar](https://blazor.syncfusion.
 
 {% endhighlight %}
 
-We have already created CRUD operations method in the data access layer section itself. Now, we are going to call those methods while performing CRUD actions in DataGrid.
+You have already created CRUD operations methods in the data access layer section itself. Now, you are going to call those methods while performing CRUD actions in DataGrid.
 
 ## Insert a row
 
