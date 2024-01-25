@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Blazor DataForm Component
 
-This section briefly explains about how to include `Blazor DataForm` component in your Blazor Server App and Blazor WebAssembly App using Visual Studio.
+This section briefly explains about how to include [Blazor DataForm](https://www.syncfusion.com/blazor-components/blazor-data-form) component in your Blazor Server App and Blazor WebAssembly App using Visual Studio.
 
 ## Prerequisites
 
@@ -21,7 +21,7 @@ You can create a **Blazor Server App** or **Blazor WebAssembly App** using Visua
 
 ## Install Syncfusion Blazor DataForm and Themes NuGet in the App
 
-To add **Blazor DataForm** component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install `Syncfusion.Blazor.DataForm` and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/). Alternatively, you can utilize the following package manager command to achieve the same.
+To add **Blazor DataForm** component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install [Syncfusion.Blazor.DataForm](https://www.nuget.org/packages/Syncfusion.Blazor.DataForm/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/). Alternatively, you can utilize the following package manager command to achieve the same.
 
 {% tabs %}
 {% highlight C# tabtitle="Package Manager" %}
@@ -156,4 +156,6 @@ Add the Syncfusion Blazor DataForm component in the **~/Pages/Index.razor** file
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor DataForm Component](images/blazor-dataform.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hNhTDCXIrESlZjZG?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor DataForm Component](images/blazor-dataform.png)" %}
+
+N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/DataForm).

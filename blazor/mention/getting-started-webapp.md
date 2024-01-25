@@ -132,7 +132,7 @@ Add the Syncfusion Blazor Mention component in the **~Pages/.razor** file. If an
 
 * Press <kbd>ctrl</kbd>+<kbd>F5</kbd> or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion Blazor Mention component in your default web browser.
 
-![Blazor Mention Component](images/blazor-mention.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZhTZstPqzLHoKTb?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Mention Component](images/blazor-mention.png)" %}
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/Mention/BlazorWebApp).
 
@@ -182,7 +182,7 @@ In the bellow example, the `Target` property of the Mention component is set to 
 
 {% endhighlight %}
 
-![Blazor Mention target](images/blazor-mention-target.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BDrpjWNFKfAQakoN?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Mention target](images/blazor-mention-target.png)" %}
 
 ## See also
 

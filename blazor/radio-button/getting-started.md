@@ -132,7 +132,7 @@ Add the Syncfusion Blazor RadioButton component in the **~/Pages/Index.razor** f
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion Blazor RadioButton component in your default web browser.
 
-![Blazor RadioButton Component](./images/blazor-radiobutton-component.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hZBTjWjYsGhDyiVK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor RadioButton Component](./images/blazor-radiobutton-component.png)" %} 
 
 ## See Also
 

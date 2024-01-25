@@ -179,6 +179,6 @@ The following example shows how to render a TreeView within the Accordion.
 }
 ```
 
-
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LthqWrMKgwYXnecX?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Treeview Integration in Blazor Accordion](../images/blazor-accordion-treeview-integration.png)

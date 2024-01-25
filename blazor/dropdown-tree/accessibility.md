@@ -44,3 +44,5 @@ You can use the following key shortcuts to access the Dropdown Tree without inte
 | <kbd>End</kbd> | Goes to the last item in the popup. |
 | <kbd>Enter</kbd> | Selects the focused item in the popup. |
 | <kbd>Space</kbd> | Checks the current item in the popup. |
+|**Over All Checkbox**|
+| <kbd>Space</kbd> | Checks all the items in popup |

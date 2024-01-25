@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Blazor Dropdown Tree Component in Web App
 
-This section briefly explains about how to include `Blazor Dropdown Tree` component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/).
+This section briefly explains about how to include [Blazor Dropdown Tree](https://www.syncfusion.com/blazor-components/blazor-dropdowntree) component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/).
 
 ## Prerequisites
 
@@ -123,5 +123,6 @@ Add the Syncfusion Blazor Dropdown Tree component in `.razor` file inside the `P
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor Dropdown Tree Component](./images/blazor-dropdowntree-component.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BtrzjsNvVWcFAOMc?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Dropdown Tree Component](./images/blazor-dropdowntree-component.png)" %}
 
+N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/DropdownTree).

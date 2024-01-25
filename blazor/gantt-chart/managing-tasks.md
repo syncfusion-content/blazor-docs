@@ -132,21 +132,17 @@ The following code example describes, how to define the Edit template for a part
         <GanttColumn Field="Progress"></GanttColumn>
     </GanttColumns>
     <GanttEditSettings AllowAdding="true" AllowEditing=true AllowTaskbarEditing=true></GanttEditSettings>
-    <GanttEvents OnActionBegin="ActionBeginHandler" TValue="TaskData"></GanttEvents>
+    <GanttEvents OnCellSave="CellSaveHandler" TValue="TaskData"></GanttEvents>
 </SfGantt>
 
 @code{
     SfDropDownList<string, string> dropdown;
 
-    public void ActionBeginHandler(GanttActionEventArgs<TaskData> args)
+    private void CellSaveHandler(CellSaveArgs<TaskData> args)
     {
-        if (args.RequestType.Equals(Syncfusion.Blazor.Gantt.Action.BeforeSave))
+        if (args.ColumnName == "TaskName")
         {
-            var data = args.Data as TaskData;
-            if (dropdown != null && dropdown.Value != null)
-            {
-                data.TaskName = dropdown.Value.ToString();
-            }
+            args.Value = dropdown.Value;
         }
     }
     private List<TaskData> TaskCollection { get; set; }

@@ -147,11 +147,11 @@ Add the Syncfusion Blazor Scheduler component in the **~/Pages/Index.razor** fil
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion Blazor Scheduler component in your default web browser.
 
-![Blazor Scheduler Component](images/blazor-scheduler.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VjVTXMDaLTmBMpNe?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Scheduler Component](images/blazor-scheduler.png)" %}
 
 ## Populating appointments
 
-To populate the Scheduler with appointments, bind the event data to it by assigning the `DataSource` property under [ScheduleEventSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleEventSettings-1.html).
+To populate the Scheduler with appointments, bind the event data to it by assigning the `DataSource` property under [ScheduleEventSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleEventSettings-1.html#Syncfusion_Blazor_Schedule_ScheduleEventSettings_1__ctor).
 
 {% tabs %}
 {% highlight razor %}
@@ -192,7 +192,7 @@ To populate the Scheduler with appointments, bind the event data to it by assign
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor Scheduler with Appointments](images/blazor-scheduler-appointments.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rtVzZWjkrpQwwJOk?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Scheduler with Appointments](images/blazor-scheduler-appointments.png)" %}
 
 ## Setting date
 

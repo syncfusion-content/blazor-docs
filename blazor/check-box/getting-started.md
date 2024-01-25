@@ -131,6 +131,8 @@ Add the Syncfusion Blazor CheckBox component in the **~/Pages/Index.razor** file
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion Blazor CheckBox component in your default web browser.
 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BjBgMVhGrpxmJSPp?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 ![Blazor CheckBox Component](./images/blazor-checkbox-component.png)
 
 ## See also
