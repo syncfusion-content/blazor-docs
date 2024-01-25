@@ -15,12 +15,12 @@ In this topic, you can learn how to consume data from [gRPC](https://grpc.io/) s
 
 The following software are needed,
 
-* Visual Studio 2019 v16.9.0 or later.
-* .NET SDK 5.0 or later.
+* Visual Studio 2022 or later.
+* .NET 6.0 or later.
 
 ## Creating Blazor server-side application
 
-Open Visual Studio 2019 and follow the steps in the below documentation to **create the Blazor WebAssembly(Hosted) Application**.
+Open Visual Studio 2022 and follow the steps in the below documentation to **create the Blazor WebAssembly(Hosted) Application**.
 
 [Create Blazor WebAssembly Application](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-visual-studio)
 
