@@ -32,10 +32,13 @@ The following example demonstrates how to change the page size of a Grid using a
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Inputs
+@using Syncfusion.Blazor.Buttons
 
 <div>
     <label style="padding: 30px 17px 0 0">Enter page size:</label>
-    <SfTextBox Input="@InputHandler" Width="120px"></SfTextBox>
+    <SfNumericTextBox Width="120px" Value="@value" ShowSpinButton="false" TValue="int?">
+        <NumericTextBoxEvents TValue="int?"  ValueChange="@ValueChangeHandler"></NumericTextBoxEvents>
+    </SfNumericTextBox>
     <SfButton @onclick="@UpdateValue">CLICK BUTTON</SfButton>
 </div>
 <br/>
@@ -55,24 +58,27 @@ The following example demonstrates how to change the page size of a Grid using a
 
     SfGrid<OrderData> Grid;
 
-    public int value{ get; set; }
+    public int? value { get; set; } = null;
 
     protected override void OnInitialized()
     {
         GridData = OrderData.GetAllRecords();
     }
 
-    public async Task UpdateValue()
+    private async Task ValueChangeHandler(Syncfusion.Blazor.Inputs.ChangeEventArgs<int?> args)
     {
-        Grid.PageSettings.PageSize = value;
-        await Grid.Refresh();
+        if(args.Value != null && args.Value != 0)
+        {
+            value = args.Value;
+        }
     }
 
-    private async Task InputHandler(InputEventArgs args)
+    public async Task UpdateValue()
     {
-        if(args.Value != string.Empty)
+        if (value != null )
         {
-            value = int.Parse(args.Value);
+            Grid.PageSettings.PageSize = (int)value;
+            await Grid.Refresh();
         }
     }
 }
@@ -127,7 +133,7 @@ The following example demonstrates how to change the page size of a Grid using a
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VjLztiturzdVycbb?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LjVTtshJAItZMYUX?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Change the page count
 
@@ -146,7 +152,9 @@ The following example demonstrates how to change the page count of a Grid using 
 
 <div>
     <label style="padding: 30px 17px 0 0">Enter page count:</label>
-    <SfTextBox Input="@InputHandler" Width="120px"></SfTextBox>
+    <SfNumericTextBox Width="120px" Value="@value" ShowSpinButton="false" TValue="int?">
+        <NumericTextBoxEvents TValue="int?" ValueChange="@ValueChangeHandler"></NumericTextBoxEvents>
+    </SfNumericTextBox>
     <SfButton @onclick="@UpdateValue">CLICK BUTTON</SfButton>
 </div>
 <br/>
@@ -166,24 +174,27 @@ The following example demonstrates how to change the page count of a Grid using 
 
     SfGrid<OrderData> Grid;
 
-    public int value{ get; set; }
+    public int? value{ get; set; }
 
     protected override void OnInitialized()
     {
         GridData = OrderData.GetAllRecords();
     }
 
-    public async Task UpdateValue()
+    private async Task ValueChangeHandler(Syncfusion.Blazor.Inputs.ChangeEventArgs<int?> args)
     {
-        Grid.PageSettings.PageCount = value;
-        await Grid.Refresh();
+        if (args.Value != null && args.Value != 0)
+        {
+            value = args.Value;
+        }
     }
 
-    private async Task InputHandler(InputEventArgs args)
+    public async Task UpdateValue()
     {
-        if(args.Value != string.Empty)
+        if (value != null)
         {
-            value = int.Parse(args.Value);
+            Grid.PageSettings.PageCount = (int)value;
+            await Grid.Refresh();
         }
     }
 }
@@ -238,7 +249,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VNVTtiZELIPCWqIZ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rXVpNsrfUyIpaGxQ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Change the current page
 
@@ -257,7 +268,9 @@ The following example demonstrates how to dynamically change the current page us
 
 <div>
     <label style="padding: 30px 17px 0 0">Enter current page:</label>
-    <SfTextBox Input="@InputHandler" Width="120px"></SfTextBox>
+    <SfNumericTextBox Width="120px" Value="@value" ShowSpinButton="false" TValue="int?">
+        <NumericTextBoxEvents TValue="int?" ValueChange="@ValueChangeHandler"></NumericTextBoxEvents>
+    </SfNumericTextBox>
     <SfButton @onclick="@UpdateValue">CLICK BUTTON</SfButton>
 </div>
 <br />
@@ -277,24 +290,27 @@ The following example demonstrates how to dynamically change the current page us
 
     SfGrid<OrderData> Grid;
 
-    public int value { get; set; }
+    public int? value { get; set; }
 
     protected override void OnInitialized()
     {
         GridData = OrderData.GetAllRecords();
     }
 
-    public async Task UpdateValue()
+    private async Task ValueChangeHandler(Syncfusion.Blazor.Inputs.ChangeEventArgs<int?> args)
     {
-        Grid.PageSettings.CurrentPage = value;
-        await Grid.Refresh();
+        if (args.Value != null && args.Value != 0)
+        {
+            value = args.Value;
+        }
     }
 
-    private async Task InputHandler(InputEventArgs args)
+    public async Task UpdateValue()
     {
-        if (args.Value != string.Empty)
+        if (value != null)
         {
-            value = int.Parse(args.Value);
+            Grid.PageSettings.CurrentPage = (int)value;
+            await Grid.Refresh();
         }
     }
 }
@@ -349,7 +365,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/htrTXCZuLdnPIeht?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BtLJjCLJKHyfBBpf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 <!--## Add current page in URL as a query string
 
@@ -744,6 +760,7 @@ The following example demonstrates how to dynamically navigate to a particular p
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
+
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Inputs
@@ -751,7 +768,9 @@ The following example demonstrates how to dynamically navigate to a particular p
 
 <div>
     <label style="padding: 30px 17px 0 0">Enter page index:</label>
-    <SfTextBox Input="@InputHandler" Width="120px"></SfTextBox>
+    <SfNumericTextBox Width="120px" Value="@value" ShowSpinButton="false" TValue="int?">
+        <NumericTextBoxEvents TValue="int?" ValueChange="@ValueChangeHandler"></NumericTextBoxEvents>
+    </SfNumericTextBox>
     <SfButton @onclick="@UpdateValue">CLICK BUTTON</SfButton>
 </div>
 <br />
@@ -771,23 +790,26 @@ The following example demonstrates how to dynamically navigate to a particular p
 
     SfGrid<OrderData> Grid;
 
-    public int value { get; set; }
+    public int? value { get; set; }
 
     protected override void OnInitialized()
     {
         GridData = OrderData.GetAllRecords();
     }
 
-    public async Task UpdateValue()
+    private async Task ValueChangeHandler(Syncfusion.Blazor.Inputs.ChangeEventArgs<int?> args)
     {
-        await Grid.GoToPageAsync(value);
+        if (args.Value != null && args.Value != 0)
+        {
+            value = args.Value;
+        }
     }
 
-    private async Task InputHandler(InputEventArgs args)
+    public async Task UpdateValue()
     {
-        if (args.Value != string.Empty)
+        if (value != null)
         {
-            value = int.Parse(args.Value);
+           await Grid.GoToPageAsync((int)value);
         }
     }
 }
@@ -842,7 +864,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rjLJXssDNXLlILjc?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rjhptiBJfZoASXjt?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Dynamically calculate page size based on element height
 
@@ -859,8 +881,8 @@ The following example demonstrates how to calculate the page size based on the e
 
 <div style="padding:0 0 20px 0">
     <label style="padding: 30px 17px 0 0">Select page size:</label>
-    <SfNumericTextBox Placeholder="select container height" Width="200px" Format="###.##" TValue="int" Min=150 Step=50>
-        <NumericTextBoxEvents TValue="int" ValueChange="@CalculatePageSize"></NumericTextBoxEvents>
+    <SfNumericTextBox Placeholder="select container height" Width="200px" Format="###.##" @bind-Value=@value TValue="int?" Min="150"  Step=50>
+        <NumericTextBoxEvents TValue="int?" ValueChange="@CalculatePageSize"></NumericTextBoxEvents>
     </SfNumericTextBox>
 </div>
 
@@ -879,14 +901,17 @@ The following example demonstrates how to calculate the page size based on the e
 
     public int GridHeight;
 
+    public int? value;
+
     protected override void OnInitialized()
     {
         GridData = OrderData.GetAllRecords();
     }
 
-    private async Task CalculatePageSize(Syncfusion.Blazor.Inputs.ChangeEventArgs<int> args)
+    private async Task CalculatePageSize(Syncfusion.Blazor.Inputs.ChangeEventArgs<int?> args)
     {
-        GridHeight = args.Value;
+        value = args.Value;
+        GridHeight = (int)args.Value;
         var RowHeight = 37; //height of the each row
         Grid.Height = GridHeight.ToString(); ////datagrid height
         var PageSize = (this.Grid.PageSettings as GridPageSettings).PageSize; //initial page size
@@ -943,7 +968,7 @@ The following example demonstrates how to calculate the page size based on the e
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rZhfXiiWLoaAoCIo?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNBJZWhzpcLcPshm?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Render pager at the top of the grid
 
