@@ -21,11 +21,11 @@ Paging options can be configured through the [GridPageSettings](https://help.syn
 
 Customizing the pager options in the Syncfusion Grid allows you to tailor the pagination control according to your specific requirements. You can customize the pager to display the number of pages using the `PageCount` property, change the current page using `CurrentPage` property, display the number of records in the grid using the `PageSize` property, and even adjust the page sizes in a dropdown using the `PageSizes` property. <!--Additionally, you can include the current page as a query string in the URL for convenient navigation.-->
 
-## Change the page size
+### Change the page size
 
 The Syncfusion Grid allows you to control the number of records displayed per page, providing you with flexibility in managing your data. This feature is particularly useful when you want to adjust the amount of data visible to you at any given time. To achieve this, you can utilize the [PageSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridPageSettings.html#Syncfusion_Blazor_Grids_GridPageSettings_PageSize) property in [GridPageSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_PageSettings) component. This property is used to specify the initial number of records to display on each page. The default value of pageSize property is 12.
 
-The following example demonstrates how to change the page size of a Grid using an external button click based on **TextBox** input.
+The following example demonstrates how to change the page size of a Grid using an external button click based on **NumericTextBox** input.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -135,13 +135,13 @@ The following example demonstrates how to change the page size of a Grid using a
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LjVTtshJAItZMYUX?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-## Change the page count
+### Change the page count
 
 The Syncfusion Grid allows you to adjust the number of pages displayed in the pager container. This is useful when you want to manage the number of pages you see while navigating through extensive datasets. The default value of **PageCount** property is 8.
 
 To change the page count in the Syncfusion Grid, you can utilize the [PageCount](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridPageSettings.html#Syncfusion_Blazor_Grids_GridPageSettings_PageCount) property in [GridPageSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_PageSettings) component, which defines the number of pages displayed in the pager container.
 
-The following example demonstrates how to change the page count of a Grid using an external button click based on **TextBox** input.
+The following example demonstrates how to change the page count of a Grid using an external button click based on **NumericTextBox** input.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -251,13 +251,13 @@ public class OrderData
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rXVpNsrfUyIpaGxQ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-## Change the current page
+### Change the current page
 
 The Syncfusion Grid allows you to change the currently displayed page, which can be particularly useful when you need to navigate through different pages of data either upon the initial rendering of the grid or update the displayed page based on interactions or specific conditions. The default value of **CurrentPage** property is 1.
 
 To change the current page in the Syncfusion Grid, you can utilize the [CurrentPage](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridPageSettings.html#Syncfusion_Blazor_Grids_GridPageSettings_CurrentPage) property in [GridPageSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_PageSettings) component, which defines the current page number of the pager.
 
-The following example demonstrates how to dynamically change the current page using an external button click based on **TextBox** input.
+The following example demonstrates how to dynamically change the current page using an external button click based on **NumericTextBox** input.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -478,12 +478,16 @@ The following example demonstrates how to render a **NumericTextBox** component 
 @using Syncfusion.Blazor.Inputs
 
 <SfGrid DataSource="@GridData" @ref="Grid" AllowPaging="true">
-    <GridPageSettings PageSize="@pageSize">
+      <GridPageSettings PageSize="@pageSize">
         <Template>
-              <div>
+
+            @{
+                var Paging = ( context as PagerModel );
+
+            <div>
                 <div>
                     <div>
-                        <SfNumericTextBox TValue="int" Format="###" Step="1" Min="1" Max="3" Placeholder="Select Page Size" Width="200px">
+                        <SfNumericTextBox TValue="int" Format="###" Step="1" Min="1" Max="4" Placeholder="Select Page Size" Width="200px">
                             <NumericTextBoxEvents TValue="int" ValueChange="@CalculatePageSize"></NumericTextBoxEvents>
                         </SfNumericTextBox>
                     </div>
@@ -492,6 +496,7 @@ The following example demonstrates how to render a **NumericTextBox** component 
                     <span> of @totalPages pages (@GridData.Count items)</span>
                 </div>
             </div>
+            }
         </Template>
     </GridPageSettings>
     <GridColumns>
@@ -573,7 +578,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VXLJXCiizsqxrUbb?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hDVJXirSLdBgDLic?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 > * Inside the **Template** RenderFragment, you can access the parameters passed to the pager templates using implicit parameter named context matching with the [PagerTemplateContent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PagerModel.html#Syncfusion_Blazor_Grids_PagerModel__ctor) class name. 
 > * You can refer to our [Blazor Grid Pager Template](https://blazor.syncfusion.com/demos/datagrid/pager-template) online demo of Pager Template feature in Blazor DataGrid.
@@ -756,7 +761,7 @@ Navigating to a particular page in the Syncfusion Grid is particularly useful wh
 
 To achieve page navigation, you can use the [GotoPageAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GoToPageAsync_System_Int32_) method provided by Syncfusion Grid. This method allows you to programmatically navigate to a specific page within the grid.
 
-The following example demonstrates how to dynamically navigate to a particular page using the `GotoPageAsync` method triggered by an external button click based on **TextBox** input:
+The following example demonstrates how to dynamically navigate to a particular page using the `GotoPageAsync` method triggered by an external button click based on **NumericTextBox** input:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -1079,7 +1084,11 @@ In the following sample, the SfPager component is rendered on top of the grid. I
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LNhJXsMiVRBvwccP?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-> Here, default pager action of the Grid component is disabled.
+> * Here, default pager action of the Grid component is disabled.
+> * During the paging action, the pager component triggers the below three events.
+>   * The [Created](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfPager.html#Syncfusion_Blazor_Navigations_SfPager_Created) event triggers when Pager is created. 
+>   * The [ItemClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfPager.html#Syncfusion_Blazor_Navigations_SfPager_ItemClick) event triggers when the numeric items in the pager is clicked.
+>   * The [PageSizeChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfPager.html#Syncfusion_Blazor_Navigations_SfPager_PageSizeChanged) event triggers when pageSize DropDownList value is selected.
 
 ## Pager events
 
