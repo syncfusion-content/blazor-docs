@@ -310,7 +310,7 @@ The Word document can be opened on control initialization, in this sample, the d
 
 You can also explore our [Blazor Word Processor](https://blazor.syncfusion.com/demos/document-editor/default-functionalities) example to know how to render and configure the document editor.the document editor.
 
-## Opening a document with EMF, WMF, and TIFF images
+## Opening a document with TIFF, EMF and WMF images
 
 The web browsers do not support to display metafile images like EMF and WMF and also TIFF format images. As a fallback approach, you can convert the metafile/TIFF format image to raster image using any image converter in the `MetafileImageParsed` event and this fallback raster image will be displayed in the client-side Document editor component.
 
@@ -321,17 +321,13 @@ The following example code illustrates how to use `MetafileImageParsed` event fo
 ```cshtml
 @using SkiaSharp
 @using BitMiracle.LibTiff.Classic;
-
 @using Syncfusion.Blazor.DocumentEditor
-
 
 <SfDocumentEditorContainer UseDefaultEditor="false">
     <SfDocumentEditor>
         <DocumentEditorEvents MetafileImageParsed="OnMetafileImageParsed"></DocumentEditorEvents>
     </SfDocumentEditor>
 </SfDocumentEditorContainer>
-
-
 
 @code{
 
@@ -413,7 +409,5 @@ The following example code illustrates how to use `MetafileImageParsed` event fo
         }
         return imageStream;
     }
-
-
 }
 ```
