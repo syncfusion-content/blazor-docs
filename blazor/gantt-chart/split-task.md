@@ -122,7 +122,7 @@ The [GanttTaskFields.SegmentChanging](https://help.syncfusion.com/cr/blazor/Sync
     <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" ParentID="ParentId" Dependency="Predecessor">
     </GanttTaskFields>
     <GanttEditSettings AllowAdding="true" AllowDeleting="true" AllowEditing="true" AllowTaskbarEditing="true"></GanttEditSettings>
-    <GanttSegmentFields PrimaryKey="id" ForeignKey="TaskId" StartDate="StartDate" EndDate="EndDate" Duration="Duration" TValue="TaskData" TSegments="SegmentModel" DataSource="segmentCollection" SegmentChanging="SegmentsHanlder"></GanttSegmentFields>
+    <GanttSegmentFields PrimaryKey="id" ForeignKey="TaskId" StartDate="StartDate" EndDate="EndDate" Duration="Duration" TValue="TaskData" TSegments="SegmentModel" DataSource="segmentCollection" SegmentChanging="SegmentsHandler"></GanttSegmentFields>
     <GanttLabelSettings LeftLabel="TaskName" TValue="TaskData"></GanttLabelSettings>
     <GanttColumns>
         <GanttColumn Field="TaskId" Width="100"  Visible="false"></GanttColumn>
@@ -206,7 +206,7 @@ The [GanttTaskFields.SegmentChanging](https://help.syncfusion.com/cr/blazor/Sync
         segments.Add(new SegmentModel() { id = 15, TaskId = 14, StartDate = new DateTime(2022, 04, 04), Duration = "2" });
         return segments;
     }
-    private void SegmentsHanlder(SegmentEventArgs<SegmentModel> args)
+    private void SegmentsHandler(SegmentEventArgs<SegmentModel> args)
     {
         if (args.UpdatedSegments != null)
         {
@@ -224,7 +224,7 @@ The [GanttTaskFields.SegmentChanging](https://help.syncfusion.com/cr/blazor/Sync
 }
 ```
 
-## Split Tasks public methods
+## Split Tasks methods
 
 The [MergeTaskAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_MergeTaskAsync) method used to merge the particular segments based on given task id and index values, the index values starts with 0.
 
@@ -242,7 +242,7 @@ The [SplitTaskAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gan
     <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" ParentID="ParentId" Dependency="Predecessor">
     </GanttTaskFields>
     <GanttEditSettings AllowAdding="true" AllowDeleting="true" AllowEditing="true" AllowTaskbarEditing="true"></GanttEditSettings>
-    <GanttSegmentFields PrimaryKey="id" ForeignKey="TaskId" StartDate="StartDate" EndDate="EndDate" Duration="Duration" TValue="TaskData" TSegments="SegmentModel" DataSource="segmentCollection" SegmentChanging="SegmentsHanlder"></GanttSegmentFields>
+    <GanttSegmentFields PrimaryKey="id" ForeignKey="TaskId" StartDate="StartDate" EndDate="EndDate" Duration="Duration" TValue="TaskData" TSegments="SegmentModel" DataSource="segmentCollection" SegmentChanging="SegmentsHandler"></GanttSegmentFields>
     <GanttLabelSettings LeftLabel="TaskName" TValue="TaskData"></GanttLabelSettings>
     <GanttColumns>
         <GanttColumn Field="TaskId" Width="100" Visible="false"></GanttColumn>
@@ -327,7 +327,7 @@ The [SplitTaskAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gan
         segments.Add(new SegmentModel() { id = 15, TaskId = 14, StartDate = new DateTime(2022, 04, 04), Duration = "2" });
         return segments;
     }
-    private void SegmentsHanlder(SegmentEventArgs<SegmentModel> args)
+    private void SegmentsHandler(SegmentEventArgs<SegmentModel> args)
     {
         if (args.UpdatedSegments != null)
         {
