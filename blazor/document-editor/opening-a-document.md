@@ -308,7 +308,7 @@ The Word document can be opened on control initialization, in this sample, the d
 }
 ```
 
-You can also explore our [Blazor Word Processor](https://blazor.syncfusion.com/demos/document-editor/default-functionalities) example to know how to render and configure the document editor.the document editor.
+You can also explore our [Blazor Word Processor](https://blazor.syncfusion.com/demos/document-editor/default-functionalities) example to know how to render and configure the document editor.
 
 ## Opening a document with TIFF, EMF and WMF images
 
