@@ -58,7 +58,7 @@ To render adaptive dialog UI in the DataGrid, set the [EnableAdaptiveUI](https:/
 
 ```
 
-![Blazor DataGrid with Adaptive UI](./images/blazor-datagrid-render-adaptive-dialog.gif)
+![Blazor DataGrid with Adaptive UI.](./images/blazor-datagrid-render-adaptive-dialog.gif)
 
 N> 1. This UI is common for both horizontal and vertical mode of rendering when EnableAdaptiveUI is enabled.
 
@@ -129,7 +129,7 @@ The DataGrid will render the row elements vertically while setting the [RowRende
 
 ```
 
-![Blazor DataGrid with Adaptive Vertical Mode](./images/blazor-datagrid-adaptive-vertical-rendering-mode.gif)
+![Blazor DataGrid with Adaptive Vertical Mode.](./images/blazor-datagrid-adaptive-vertical-rendering-mode.gif)
 
 ### Supported features in vertical mode
 
@@ -191,4 +191,4 @@ N> The [RowRenderingMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
 
 ```
 
-N> [View Sample in GitHub.](https://github.com/SyncfusionExamples/blazor-datagrid-render-adaptive-layout)
+N> [View Sample in GitHub](https://github.com/SyncfusionExamples/blazor-datagrid-render-adaptive-layout)

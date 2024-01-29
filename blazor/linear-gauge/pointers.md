@@ -26,7 +26,7 @@ Pointers are used to indicate values on an axis. The value of the pointer can be
 </SfLinearGauge>
 ```
 
-![Blazor Linear Gauge with Pointer Value](images/blazor-linear-gauge-with-pointer-value.png)
+![Blazor Linear Gauge with Pointer Value.](images/blazor-linear-gauge-with-pointer-value.png)
 
 ## Types of pointer
 
@@ -68,7 +68,7 @@ By default, the marker shape for the pointer is **InvertedTriangle**. To change 
 </SfLinearGauge>
 ```
 
-![Blazor Linear Gauge with Marker Pointer](images/blazor-linear-gauge-marker-pointer.png)
+![Blazor Linear Gauge with Marker Pointer.](images/blazor-linear-gauge-marker-pointer.png)
 
 Image can be rendered instead of rendering a shape as a pointer. It can be achieved by setting the [MarkerType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugePointer.html#Syncfusion_Blazor_LinearGauge_LinearGaugePointer_MarkerType) property to **Image** and setting the source URL of image to [ImageUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugePointer.html#Syncfusion_Blazor_LinearGauge_LinearGaugePointer_ImageUrl) property in [LinearGaugePointer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugePointer.html).
 
@@ -93,7 +93,7 @@ Image can be rendered instead of rendering a shape as a pointer. It can be achie
 </SfLinearGauge>
 
 ```
-![Blazor Linear Gauge with Image Pointer](images/blazor-linear-gauge-image-pointer.png)
+![Blazor Linear Gauge with Image Pointer.](images/blazor-linear-gauge-image-pointer.png)
 
 Text can be added instead of rendering a shape as a pointer. It can be achieved by setting the [MarkerType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugePointer.html#Syncfusion_Blazor_LinearGauge_LinearGaugePointer_MarkerType) property to **Text**, and the text content can be set using the [Text](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugePointer.html#Syncfusion_Blazor_LinearGauge_LinearGaugePointer_Text) property in [LinearGaugePointer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugePointer.html).
 
@@ -137,7 +137,7 @@ The following properties in the [LinearGaugeMarkerTextStyle](https://help.syncfu
 </SfLinearGauge>
 ```
 
-![Blazor Linear Gauge with text pointer](images/blazor-linear-gauge-text-pointer.png)
+![Blazor Linear Gauge with text pointer.](images/blazor-linear-gauge-text-pointer.png)
 
 <b>Marker pointer customization</b>
 
@@ -170,7 +170,7 @@ The marker pointer can be customized using the following properties and componen
 </SfLinearGauge>
 ```
 
-![Customizing Marker Pointer in Blazor Linear Gauge](images/blazor-linear-gauge-custom-marker-pointer.png)
+![Customizing Marker Pointer in Blazor Linear Gauge.](images/blazor-linear-gauge-custom-marker-pointer.png)
 
 ### Bar pointer
 
@@ -192,7 +192,7 @@ The bar pointer is used to track the axis value. The bar pointer starts from the
 </SfLinearGauge>
 ```
 
-![Blazor Linear Gauge with Bar Pointer](images/blazor-linear-gauge-with-bar-pointer.png)
+![Blazor Linear Gauge with Bar Pointer.](images/blazor-linear-gauge-with-bar-pointer.png)
 
 <b>Bar pointer customization</b>
 
@@ -224,7 +224,7 @@ N>The Placement property is not applicable for the bar pointer.
 </SfLinearGauge>
 ```
 
-![Customizing Bar Pointer in Blazor Linear Gauge](images/blazor-linear-gauge-custom-bar-pointer.png)
+![Customizing Bar Pointer in Blazor Linear Gauge.](images/blazor-linear-gauge-custom-bar-pointer.png)
 
 ## Multiple pointers
 
@@ -249,7 +249,7 @@ Multiple pointers can be added to the Linear Gauge by adding multiple [LinearGau
 </SfLinearGauge>
 ```
 
-![Blazor Linear Gauge with Multiple Pointers](images/blazor-linear-gauge-multiple-pointer.png)
+![Blazor Linear Gauge with Multiple Pointers.](images/blazor-linear-gauge-multiple-pointer.png)
 
 ## Pointer animation
 
@@ -270,7 +270,7 @@ When the gauge is initially loaded and when the pointer value is changed dynamic
 </SfLinearGauge>
 ```
 
-![Blazor Linear Gauge with Pointer Animation](./images/blazor-linear-gauge-pointer-animation.gif)
+![Blazor Linear Gauge with Pointer Animation.](./images/blazor-linear-gauge-pointer-animation.gif)
 
 ## Gradient Color
 
@@ -322,7 +322,7 @@ Using linear gradient, colors will be applied in a linear progression. The start
 </SfLinearGauge>
 ```
 
-![Blazor Linear Gauge with Linear Gradient Pointer](images/blazor-linear-gauge-with-linear-pointer.png)
+![Blazor Linear Gauge with Linear Gradient Pointer.](images/blazor-linear-gauge-with-linear-pointer.png)
 
 ### Radial Gradient
 
@@ -369,6 +369,6 @@ Using radial gradient, colors will be applied in circular progression. The inner
 </SfLinearGauge>
 ```
 
-![Blazor Linear Gauge with Radial Gradient Pointer](images/blazor-linear-gauge-with-radial-pointer.png)
+![Blazor Linear Gauge with Radial Gradient Pointer.](images/blazor-linear-gauge-with-radial-pointer.png)
 
 N>If we set both gradients, only the linear gradient gets rendered. If we set the [StartValue](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugeLinearGradient.html#Syncfusion_Blazor_LinearGauge_LinearGaugeLinearGradient_StartValue) and [EndValue](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugeLinearGradient.html#Syncfusion_Blazor_LinearGauge_LinearGaugeLinearGradient_EndValue) of the [LinearGradient](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugeLinearGradient.html) as empty strings, then the radial gradient gets rendered in the pointer of the Linear Gauge.

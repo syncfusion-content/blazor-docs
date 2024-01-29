@@ -67,7 +67,7 @@ The shapefile can be used to render vector shape map in the Maps component by sp
 }
 ```
 
-![Shapefile rendered in Blazor Maps](./images/Shapefile/blazor-shapefile.png)
+![Shapefile rendered in Blazor Maps.](./images/Shapefile/blazor-shapefile.png)
 
 ## Multilayer
 
@@ -95,7 +95,7 @@ The following example demonstrates how to display the shapefile map as a sublaye
 </SfMaps>
 
 ```
-![Multilayer in Blazor Maps](./images/Shapefile/blazor-multilayer.png)
+![Multilayer in Blazor Maps.](./images/Shapefile/blazor-multilayer.png)
 
 ## Customization
 

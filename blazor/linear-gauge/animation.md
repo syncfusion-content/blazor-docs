@@ -48,7 +48,7 @@ The animation of the Linear Gauge is demonstrated in the following example.
 
 ```
 
-![Blazor Linear Gauge Animation](images/blazor-linear-gauge-multiple-elements-animation.gif)
+![Blazor Linear Gauge Animation.](images/blazor-linear-gauge-multiple-elements-animation.gif)
 
 N> Only the pointer of the Linear Gauge can be animated individually, not the axis lines, ticks, labels, ranges, and annotations. You can refer this [link](https://blazor.syncfusion.com/documentation/linear-gauge/pointers#pointer-animation) to enable only pointer animation.
 

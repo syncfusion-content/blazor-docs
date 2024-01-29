@@ -164,7 +164,7 @@ N> You can perform the Data operations and CRUD operations for Complex ExpandoOb
 
 The following image represents ExpandoObject complex data binding,
 
-![Binding ExpandObject with Complex Data in Blazor DataGrid](./images/blazor-datagrid-expand-complex-data.png)
+![Binding ExpandObject with Complex Data in Blazor DataGrid.](./images/blazor-datagrid-expand-complex-data.png)
 
 ### DynamicObject binding
 
@@ -300,7 +300,7 @@ N> * you can perform the Data operations and CRUD operations for Complex Dynamic
 
 The following image represents DynamicObject complex data binding
 
-![Binding DynamicObject with Complex Data in Blazor DataGrid](./images/blazor-datagrid-dynamic-complex-data.png)
+![Binding DynamicObject with Complex Data in Blazor DataGrid.](./images/blazor-datagrid-dynamic-complex-data.png)
 
 N> While binding the Grid DataSource dynamically in the form of a list of IEnumerable collections, you need to call the Refresh() method of the Grid to reflect the changes externally. Because tracking items of IEnumerable for changes made externally is avoided for performance considerations.
 
@@ -678,7 +678,7 @@ The following sample code demonstrates achieving this,
 
 The following GIF represents dynamically modifying the query property in DataGrid,
 
-![Changing Query Dynamically in Blazor DataGrid](./images/blazor-datagrid-query-update.gif)
+![Changing Query Dynamically in Blazor DataGrid.](./images/blazor-datagrid-query-update.gif)
 
 ## GraphQL service binding
 
@@ -1662,7 +1662,7 @@ Here, Order class implements the interface of **INotifyPropertyChanged** and it 
 
 The following screenshot represents the DataGrid with **Observable Collection**.
 
-![Blazor DataGrid with ObservableCollection](./images/blazor-datagrid-observable-collection.PNG)
+![Blazor DataGrid with ObservableCollection.](./images/blazor-datagrid-observable-collection.PNG)
 
 N> While using an Observable collection, the added, removed, and changed records are reflected in the UI. But while updating the Observable collection using external actions like timers, events, and other notifications, you need to call the StateHasChanged method to reflect the changes in the UI.
 

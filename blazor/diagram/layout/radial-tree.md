@@ -143,7 +143,7 @@ You can create a radial tree layout with DataSource. The following code example 
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Layout/RadialTreeWithDataSource).
 
-![Blazor Radial Tree Diagram](../images/RadialTreeUG.png)
+![Blazor Radial Tree Diagram.](../images/RadialTreeUG.png)
 
 ## How to create a RadialTree with nodes and connectors
 
