@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Step Types in Blazor Stepper Component | Syncfusion
-description: Checkout and learn about Step Types with Blazor Stepper component in Blazor Server App and Blazor WebAssembly App.
+description: Checkout and learn here about Step Types with Blazor Stepper component in Blazor Server App and Blazor WebAssembly App.
 platform: Blazor
 control: Stepper
 documentation: ug
@@ -113,7 +113,7 @@ In label type, the Stepper displays the steps with only the step labels by setti
 
 ```
 
-![Blazor Stepper Component with Label type](./images/Blazor-label-type.png)
+![Blazor Stepper Component with Label type.](./images/Blazor-label-type.png)
 
 ### Label positions
 
@@ -200,7 +200,7 @@ The following label positions are supported in Stepper:
 
 ```
 
-![Blazor Stepper Component with LabelPosition](./images/Blazor-labelposition.png)
+![Blazor Stepper Component with LabelPosition.](./images/Blazor-labelposition.png)
 
 ## Indicator type
 
@@ -242,4 +242,4 @@ In indicator type, the Stepper displays steps with only the step indicators  by 
 
 ```
 
-![Blazor Stepper Component with Indicator type](./images/Blazor-indicator.png)
+![Blazor Stepper Component with Indicator type.](./images/Blazor-indicator.png)

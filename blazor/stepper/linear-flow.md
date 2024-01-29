@@ -7,7 +7,7 @@ control: Stepper
 documentation: ug
 ---
 
-# Linear flow in Blazor Stepper Component
+# Linear Flow in Blazor Stepper Component
 
 The Stepper component enables users to progress sequentially through each step, ensuring navigation from one step to the next in a linear way by setting the [Linear](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfStepper.html#Syncfusion_Blazor_Navigations_SfStepper_Linear) property to `true`. The default value is `false` allowing navigation between any steps and vice versa.
 
@@ -67,4 +67,4 @@ The example demonstrates the functionality of both linear and non-linear flow in
 
 ```
 
-![Blazor Stepper Component with Linear Flow](./images/Blazor-linear.png)
+![Blazor Stepper Component with Linear Flow.](./images/Blazor-linear.png)
