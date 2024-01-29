@@ -7,7 +7,7 @@ control: DataForm
 documentation: ug
 ---
 
-# Templates in DataForm component
+# Templates in Blazor DataForm Component
 
 In DataForm component we can customize the specific editor field or the entire form components using template feature. 
 
@@ -23,7 +23,7 @@ We can customize the particular field editor with required UI customization usin
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor DataForm Form Item](images/blazor_dataform_template.png)
+![Blazor DataForm Form Item.](images/blazor_dataform_template.png)
 
 We can also utilize the above `Template` combination with [FormAutoGenerateItems](./form-items.md) which will generate the items except the specified `Formitem`.
 
@@ -50,7 +50,7 @@ We can also utilize the above `Template` combination with [FormAutoGenerateItems
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor DataForm Form Item](images/blazor_dataform_template.png)
+![Blazor DataForm Form Item.](images/blazor_dataform_template.png)
 
 We can also integrate the `FormTemplate` renderer along with `FormItem` as showcased in the below example.
 
@@ -80,7 +80,7 @@ When using the `Template` renderer, we can also customize the validation message
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor DataForm Form Item](images/blazor_dataform_tooltip_with_templates.png)
+![Blazor DataForm Form Item.](images/blazor_dataform_tooltip_with_templates.png)
 
 ## Validation summary 
 
@@ -100,4 +100,4 @@ The [ValidationSummary](https://learn.microsoft.com/en-us/dotnet/api/microsoft.a
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor DataForm Form Item](images/blazor_dataform_validation_summary.png)
+![Blazor DataForm Form Item.](images/blazor_dataform_validation_summary.png)
