@@ -134,3 +134,63 @@ The Data items can be filtered with or without case sensitivity using the [Ignor
 You can use [FilterBarPlaceholder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfDropDownTree-2.html#Syncfusion_Blazor_Navigations_SfDropDownTree_2_FilterBarPlaceholder) to accept the value to be displayed as a watermark text on the filter bar TextBox. `FilterBarPlaceholder` is applicable when `AllowFiltering` is used as true. `FilterBarPlaceholder` is depends on `AllowFiltering` property.
 
 ![Blazor Dropdown Tree with local data filtering.](./images/filter/blazor-dropdowntree-placeholder.png)
+
+## Minimum filter length
+
+When filtering the tree items, you can set the minimum characters after which the filtering must occur. This can be done by checking the text length using the [Filtering event arguments](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.DdtFilteringEventArgs.html#Syncfusion_Blazor_Navigations_DdtFilteringEventArgs_Text) within the [Filtering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfDropDownTree-2.html#Syncfusion_Blazor_Navigations_SfDropDownTree_2_Filtering) event handler.
+
+In the following example, the limit is set to 2.
+
+```cshtml
+@using Syncfusion.Blazor.Navigations
+
+<SfDropDownTree TItem="Listdata" TValue="string" ID="filter" Placeholder="Select a country" PopupHeight="230px" AllowFiltering="true" FilterBarPlaceholder="Search" Filtering="OnFiltering">
+    <DropDownTreeField TItem="Listdata" DataSource="@ListDataSource" ID="Id" ParentID="Pid" Text="Name" HasChildren="HasChild" Expanded="Expanded"></DropDownTreeField>
+</SfDropDownTree>
+
+@code {
+    List<Listdata> ListDataSource = new List<Listdata>
+    {
+        new Listdata { Id = "1", Name = "Australia", HasChild = true, Expanded = true },
+        new Listdata { Id = "2", Pid = "1", Name = "New South Wales" },
+        new Listdata { Id = "3", Pid = "1", Name = "Victoria" },
+        new Listdata { Id = "4", Pid = "1", Name = "South Australia" },
+        new Listdata { Id = "6", Pid = "1", Name = "Western Australia" },
+        new Listdata { Id = "7", Name = "Brazil", HasChild = true },
+        new Listdata { Id = "8", Pid = "7", Name = "Parana" },
+        new Listdata { Id = "9", Pid = "7", Name = "Ceara" },
+        new Listdata { Id = "10", Pid = "7", Name = "Acre" },
+        new Listdata { Id = "11", Name = "China", HasChild = true },
+        new Listdata { Id = "12", Pid = "11", Name = "Guangzhou" },
+        new Listdata { Id = "13", Pid = "11", Name = "Shanghai" },
+        new Listdata { Id = "14", Pid = "11", Name = "Beijing" },
+        new Listdata { Id = "15", Pid = "11", Name = "Shantou" },
+        new Listdata { Id = "16", Name = "France", HasChild = true },
+        new Listdata { Id = "17", Pid = "16", Name = "Pays de la Loire" },
+        new Listdata { Id = "18", Pid = "16", Name = "Aquitaine" },
+        new Listdata { Id = "19", Pid = "16", Name = "Brittany" },
+        new Listdata { Id = "20", Pid = "16", Name = "Lorraine" },
+        new Listdata { Id = "21", Name = "India", HasChild = true },
+        new Listdata { Id = "22", Pid = "21", Name = "Assam" },
+        new Listdata { Id = "23", Pid = "21", Name = "Bihar" },
+        new Listdata { Id = "24", Pid = "21", Name = "Tamil Nadu" }
+    };
+
+    void OnFiltering(DdtFilteringEventArgs args)
+    {
+        if(args.Text?.Length < 2 && args.Text?.Length != 0)
+        {
+            args.Cancel = true;
+        }
+    }
+
+    class Listdata
+    {
+        public string Id { get; set; }
+        public string Pid { get; set; }
+        public string Name { get; set; }
+        public bool HasChild { get; set; }
+        public bool Expanded { get; set; }
+    }
+}
+```
