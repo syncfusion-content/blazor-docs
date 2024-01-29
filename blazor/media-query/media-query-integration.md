@@ -18,46 +18,51 @@ In the following code example, showcasing the Data Grid to demonstrate the dynam
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Grids
 
+<SfMediaQuery @bind-ActiveBreakPoint="activeBreakpoint"></SfMediaQuery>
+
+Active media name: <b>@activeBreakpoint</b>
+
 @{
     var RenderingMode = RowDirection.Horizontal;
-    if (activeBreakPoint == "Small")
+    var EnableAdaptiveUIMode = false;
+    var gridHeight = "100%";
+
+    if (activeBreakpoint == "Small")
     {
+        EnableAdaptiveUIMode = true;
         RenderingMode = RowDirection.Vertical;
-        enableAdaptiveUI = true;
+        gridHeight = "500px";
     }
-    else if (activeBreakPoint == "Medium")
+    else if (activeBreakpoint == "Medium")
     {
-        enableAdaptiveUI = true;
+        EnableAdaptiveUIMode = true;
     }
     else
     {
-        enableAdaptiveUI = false;
+        EnableAdaptiveUIMode = false;
     }
 }
 
-Active media name: <b>@activeBreakPoint</b><br/>
-
-<SfMediaQuery @bind-ActiveBreakpoint="activeBreakPoint"></SfMediaQuery>
-<div style="height: 650px; overflow-y: auto;">
-    <SfGrid DataSource="@Orders" EnableAdaptiveUI="@enableAdaptiveUI" RowRenderingMode="@RenderingMode" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Cancel", "Update", "Search" })" Height="100%" Width="100%" AllowPaging=true>
-        <GridPageSettings PageSize="15"></GridPageSettings>
+<div style="position:relative; min-height: 1000px;">
+    <SfGrid DataSource="@orders" EnableAdaptiveUI="@EnableAdaptiveUIMode" RowRenderingMode="@RenderingMode" AllowSorting="true" AllowFiltering="true" AllowPaging="true" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Cancel", "Update", "Search" })" Height="@gridHeight" Width="100%">
+        <GridFilterSettings Type="@FilterType.Excel"></GridFilterSettings>
+        <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true" Mode="EditMode.Dialog"></GridEditSettings>
         <GridColumns>
-            <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" IsPrimaryKey="true" Width="80" ValidationRules="@(new ValidationRules{ Required= true })"></GridColumn>
-            <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="120"></GridColumn>
-            <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" Width="130"></GridColumn>
-            <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" Width="120"></GridColumn>
+            <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" IsPrimaryKey="true"></GridColumn>
+            <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name"></GridColumn>
+            <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date"></GridColumn>
+            <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2"></GridColumn>
         </GridColumns>
     </SfGrid>
 </div>
 
-@code{
-    private string activeBreakPoint { get; set; }
-    private bool enableAdaptiveUI { get; set; }
-    public List<Order> Orders { get; set; }
+@code {
+    private string activeBreakpoint { get; set; }
+    private List<Order> orders { get; set; }
 
     protected override void OnInitialized()
     {
-        Orders = Enumerable.Range(1, 50).Select(x => new Order()
+        orders = Enumerable.Range(1, 75).Select(x => new Order()
         {
             OrderID = 1000 + x,
             CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
