@@ -492,7 +492,7 @@ In the below example, we have bound the nested **Employee** object’s **FirstNa
         <GridColumn Field=@nameof(EmployeeData.EmployeeID) HeaderText="EmployeeID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
         <GridColumn Field="Name.FirstName" HeaderText="First Name" Width="150"></GridColumn>
         <GridColumn Field="Name.LastName" HeaderText="Last Name"Width="130"></GridColumn>
-        <GridColumn Field=@nameof(EmployeeData.Title) HeaderText="Title" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(EmployeeData.Title) HeaderText="Title" TextAlign="TextAlign.Right" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
 
