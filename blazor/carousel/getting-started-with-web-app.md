@@ -166,7 +166,7 @@ Add the Syncfusion Blazor Carousel component in `.razor` file inside the `Pages`
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion Blazor Carousel component in your default web browser.
 
-![Blazor Carousel Component](images/getting_started.png)
+![Blazor Carousel Component](images/blazor-carousel-getting-started.png)
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/Carousel).
 
