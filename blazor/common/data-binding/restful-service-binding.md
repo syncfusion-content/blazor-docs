@@ -73,8 +73,6 @@ Run the following commands in the **Package Manager Console**.
 
 ```
 Install-Package Microsoft.EntityFrameworkCore.Tools -Version 7.0.11
-```
-```
 Install-Package Microsoft.EntityFrameworkCore.SqlServer -Version 7.0.11
 
 ```
@@ -383,12 +381,12 @@ Themes provide life to components. Syncfusion Blazor has different themes. They 
 * Material
 * High Contrast
 
-In this demo application, the Bootstrap theme will be used.
+In this demo application, the latest theme will be used.
 
-  * For **Blazor Web App**,  refer style sheet inside the `<head>` of **~/Components/App.razor** file for .NET 8.
+  * For **Blazor Web App**,  refer stylesheet inside the `<head>` of **~/Components/App.razor** file for .NET 8.
 
-  * For **Blazor WebAssembly application**, refer style sheet inside the `<head>` element of **wwwroot/index.html** file.
-  * For **Blazor Server application**, refer style sheet inside the `<head>` element of
+  * For **Blazor WebAssembly application**, refer stylesheet inside the `<head>` element of **wwwroot/index.html** file.
+  * For **Blazor Server application**, refer stylesheet inside the `<head>` element of
     * **~/Pages/_Host.cshtml** file for .NET 7.
     * **~/Pages/_Layout.cshtml** file for .NET 6.
 
