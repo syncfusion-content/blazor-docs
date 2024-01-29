@@ -107,7 +107,7 @@ Add the Syncfusion Blazor Dashboard Layout component in `.razor` file inside the
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion Blazor Dashboard Layout component in your default web browser.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rDhJtCXohfIIeroh?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor DashboardLayout Component](images/blazor-dashboard-layout-component.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hjVpXihOLKRGIhFf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor DashboardLayout Component](images/blazor-dashboard-layout-component.png)" %}
 
 ## Defining panels
 
@@ -149,7 +149,7 @@ A dashboard layout panel is rendered with simple data. The header of a panel is 
 
 The Dashboard layout with simple content will be rendered in the web browser as demonstrated in the following screenshot.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VZLJjWDSLJFfcYbV?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor DashboardLayout with Single Data](images/blazor-dashboard-layout-single-content.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDLzXChErUwBJvMB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor DashboardLayout with Single Data](images/blazor-dashboard-layout-single-content.png)" %}
 
 ### Panels with components
 
@@ -242,7 +242,7 @@ These complex data (components) are placed as the panel content by assigning the
                             <GridColumns>
                                 <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="120"></GridColumn>
                                 <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="130"></GridColumn>
-                                <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="yMd" Type="ColumnType.Date" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="150"></GridColumn>
+                                <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="150"></GridColumn>
                                 <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="120"></GridColumn>
                             </GridColumns>
                         </SfGrid>
@@ -301,9 +301,9 @@ These complex data (components) are placed as the panel content by assigning the
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {
         await Task.Delay(3000); // simulate the async operations
-        this.chartObj.Refresh();
-        this.linechartObj.Refresh();
-        this.barchartObj.Refresh();
+        this.chartObj.RefreshAsync();
+        this.linechartObj.RefreshAsync();
+        this.barchartObj.RefreshAsync();
     }
  }
 
@@ -317,7 +317,7 @@ These complex data (components) are placed as the panel content by assigning the
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VZhpjsZyLSVQaaRb?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor DashboardLayout displays Chart Component Content](images/blazor-dashboard-layout-with-chart-component.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXLzZWrYhAuIgUlf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor DashboardLayout displays Chart Component Content](images/blazor-dashboard-layout-with-chart-component.png)" %}
 
 To get started quickly with designing a Blazor Dashboard Layout with UI Components, you can check the video below.
 

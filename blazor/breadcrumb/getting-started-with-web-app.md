@@ -106,7 +106,7 @@ Add the Syncfusion Blazor Breadcrumb component in the **~Pages/.razor** file. If
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion Blazor Breadcrumb component in your default web browser.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VthJXMXzgbVNlUUo?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rXhpNiBSgmQNkpCP?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/Breadcrumb/BlazorWebApp).
 
@@ -132,7 +132,7 @@ To render Breadcrumb component with items use [BreadcrumbItem](https://help.sync
 
 N> Place list of [BreadcrumbItem](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.BreadcrumbItem.html) within [BreadcrumbItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.BreadcrumbItems.html) tag directive.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/htLJXMZpKmvpUOUs?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Breadcrumb Component](./images/blazor-Breadcrumb-items.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LZVzNCByUbgRQChk?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Breadcrumb Component](./images/blazor-Breadcrumb-items.png)" %}
 
 ## Enable or disable navigation
 

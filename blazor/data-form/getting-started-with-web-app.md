@@ -139,6 +139,6 @@ Add the Syncfusion Blazor DataForm component in `.razor` file inside the `Pages`
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hNhTDCXIrESlZjZG?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor DataForm Component](images/blazor-dataform.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hNhfXCLaBIvJBwaZ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor DataForm Component](images/blazor-dataform.png)" %}
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/DataForm). 

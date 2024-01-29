@@ -102,7 +102,7 @@ Add the Syncfusion Blazor DateRangePicker component in `.razor` file inside the 
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion Blazor DateRangePicker component in your default web browser.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BjhfjsZyKlLWfvKL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor DateRangePicker Component](./images/blazor-daterangepicker-component.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDhTZCBOqWgwMmva?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor DateRangePicker Component](./images/blazor-daterangepicker-component.png)" %}
 
 ## Setting the Min and Max
 
@@ -121,7 +121,7 @@ The minimum and maximum date range can be defined with the help of [Min](https:/
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LNhTXCNIKFaUAsuQ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Setting Minimum and Maximum Date in Blazor DateRangePicker](./images/blazor-daterangepicker-min-max-date.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hDrztiraUCJLpmHG?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Setting Minimum and Maximum Date in Blazor DateRangePicker](./images/blazor-daterangepicker-min-max-date.png)" %}
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/DateRangePicker).
 

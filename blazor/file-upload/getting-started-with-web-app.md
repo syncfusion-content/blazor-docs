@@ -102,7 +102,7 @@ Add the Syncfusion Blazor File Upload component in `.razor` file inside the `Pag
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion Blazor File Upload component in your default web browser.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VtrfjsNPVgcxzCGN?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor FileUpload Component](./images/blazor-fileupload-component.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LXBJXsrOqbMEOurR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor FileUpload Component](./images/blazor-fileupload-component.png)" %}
 
 ## Without server-side API endpoint
 
@@ -268,12 +268,12 @@ You can allow the specific files alone to upload using the [AllowedExtensions](h
 {% tabs %}
 {% highlight razor %}
 
-<SfUploader AllowedExtensions=".doc, .docx, .xls, xlsx"></SfUploader>
+<SfUploader AllowedExtensions=".doc, .docx, .xls, .xlsx"></SfUploader>
 
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rDLfNsDbhTNNJjbi?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Allowing Specific Files in Blazor FileUpload](./images/blazor-fileupload-allow-specific-file.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rXhzDsrOqbKVNviI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Allowing Specific Files in Blazor FileUpload](./images/blazor-fileupload-allow-specific-file.png)" %}
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/FileUpload).
 

@@ -124,9 +124,7 @@ Add the Syncfusion Blazor ColorPicker component in the **~/Pages/Index.razor** f
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion Blazor ColorPicker component in your default web browser.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VDVqMBBGAyWEwyqv?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Blazor ColorPicker Component](./images/blazor-colorpicker-component.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDrztMhkhMtJdbVL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor ColorPicker Component](./images/blazor-colorpicker-component.png)" %}
 
 ## See also
 
