@@ -27,7 +27,7 @@ Visual Studio provides **.NET MAUI Blazor app** template to create .NET MAUI Bla
 
 ## Create a new .NET MAUI Blazor App in Visual Studio
 
-You can create a **.NET MAUI Blazor App** using Visual Studio via [Microsoft Templates](https://dotnet.microsoft.com/en-us/learn/maui/first-app-tutorial/create)
+You can create a **.NET MAUI Blazor App** using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/hybrid/tutorials/maui?view=aspnetcore-8.0)
 
 ## BlazorWebView in .NET MAUI Blazor App
 
@@ -87,7 +87,7 @@ Open **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusio
 Now, register the Syncfusion Blazor service in the `MauiProgram.cs` file of your MAUI Blazor App.
 
 {% tabs %}
-{% highlight c# tabtitle="~/MauiProgram.cs" hl_lines="1 3" %}
+{% highlight C# tabtitle="~/MauiProgram.cs" hl_lines="1 3" %}
 
     using Syncfusion.Blazor;
     ....
@@ -129,7 +129,7 @@ Before running the sample, make sure the mode is `Windows Machine`.
 
 ![Build and run MAUI Blazor App](images/maui/windows-machine-mode.png)
 
-N> If you want to run the application in Android or iOS refer [MAUI Getting Started](https://learn.microsoft.com/en-us/dotnet/maui/get-started/first-app?tabs=vswin&pivots=devices-android) for the setup.
+N> If you want to run the application in Android or iOS refer [MAUI Getting Started](https://learn.microsoft.com/en-us/aspnet/core/blazor/hybrid/tutorials/maui?view=aspnetcore-8.0#run-the-app-in-the-android-emulator) for the setup.
 
 ![MAUI Blazor App with Syncfusion Blazor Components](images/maui/maui-blazor-calendar.png)
 
