@@ -7,11 +7,11 @@ control: DataForm
 documentation: ug
 ---
 
-# Layout customization in DataForm component
+# Layout customization
 
 This segment provides a concise overview of how to position buttons and labels correctly within the DataForm component. It also covers how to customize the button elements and the various ways to present validation messages.
 
-## Button Alignment
+## Button alignment
 
 The DataForm component provides the capability to position the button horizontally within the form container as needed, utilizing the [ButtonsAlignment](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataForm.FormButtonsAlignment.html) property .The `ButtonsAlignment` is categorized into three types, as outlined below,
 
@@ -27,43 +27,12 @@ The below example portrays how to use the `ButtonsAlignment` property in DataFor
 {% tabs %}
 {% highlight razor tabtitle="ButtonsAlignment"  %}
 
-@using Syncfusion.Blazor.DataForm
-@using System.ComponentModel.DataAnnotations
-
-
-<SfDataForm Model="@RegistrationDetailsModel"
-            ButtonsAlignment="FormButtonsAlignment.Center">
-
-    <FormValidator>
-        <DataAnnotationsValidator></DataAnnotationsValidator>
-    </FormValidator>
-
-    <FormItems>
-        <FormAutoGenerateItems></FormAutoGenerateItems>
-    </FormItems>
-
-</SfDataForm>
-
-@code {
-
-    public class RegistrationDetails
-    {
-
-        [Required(ErrorMessage = "Please enter your name")]
-        public string Name { get; set; }
-
-        [Required(ErrorMessage = "Please enter your email address")]
-        [EmailAddress(ErrorMessage = "Please enter valid email address")]
-        public string Email { get; set; }
-    }
-
-    private RegistrationDetails RegistrationDetailsModel = new RegistrationDetails();
-}
+{% include_relative code-snippet/layout-customization/buttons-alignment.razor %}
 
 {% endhighlight %}
 {% endtabs %}
 
-## Adding additional buttons and its customization 
+## Add additional buttons and customization
 
 It is possible to incorporate custom buttons along with other elements ,if necessary by using the [FormButtons](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataForm.FormButtons.html) `RenderFragment` within the DataForm component.
 
@@ -72,69 +41,14 @@ In the provided code snippet, an extra button component is implemented to reset 
 {% tabs %}
 {% highlight razor tabtitle="ButtonsAlignment"  %}
 
-@using Syncfusion.Blazor.DataForm
-@using System.ComponentModel.DataAnnotations
-@using Syncfusion.Blazor.Buttons
-
-
-<SfDataForm EditContext="@RegistrationEditContext">
-
-    <FormValidator>
-        <DataAnnotationsValidator></DataAnnotationsValidator>
-    </FormValidator>
-
-    <FormItems>
-        <FormAutoGenerateItems></FormAutoGenerateItems>
-    </FormItems>
-
-    <FormButtons>
-        <SfButton type="submit" CssClass="e-success">Register</SfButton>
-        <SfButton type="button" CssClass="e-warning" OnClick="ClickHandler">Clear</SfButton>
-    </FormButtons>
-
-</SfDataForm>
-
-<style>
-    .e-data-form .e-btn.e-success {
-        margin-right: 5px; 
-    }
-</style>
-
-@code {
-    public EditContext RegistrationEditContext { get; set; }
-
-    protected override void OnInitialized()
-    {
-        RegistrationEditContext = new EditContext(RegistrationDetailsModel);
-        base.OnInitialized();
-    }
-
-    public class RegistrationDetails
-    {
-
-        [Required(ErrorMessage = "Please enter your name")]
-        public string Name { get; set; }
-
-        [Required(ErrorMessage = "Please enter your email address")]
-        [EmailAddress(ErrorMessage = "Please enter valid email address")]
-        public string Email { get; set; }
-    }
-
-    private RegistrationDetails RegistrationDetailsModel = new RegistrationDetails();
-
-    public void ClickHandler()
-    {
-        RegistrationDetailsModel = new RegistrationDetails();
-        RegistrationEditContext = new EditContext(RegistrationDetailsModel);
-    }
-}
+{% include_relative code-snippet/layout-customization/additional-buttons.razor %}
 
 {% endhighlight %}
 {% endtabs %}
 
 ![DataForm Button Customization](images/blazor_dataform_formbuttons.png)
 
-## Label positioning
+## Label position
 
 DataForm component allows you to align the label either to the top or left to the field editors , We can implement this feature by assigning values to [LabelPosition](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataForm.SfDataForm.html#Syncfusion_Blazor_DataForm_SfDataForm_LabelPosition) , Classification of the respective property is outlined below ,
 
@@ -149,92 +63,21 @@ The below code part explains how to configure the `LabelPosition` in DataForm co
 {% tabs %}
 {% highlight razor tabtitle="Label Position"  %}
 
-@using Syncfusion.Blazor.DataForm
-@using System.ComponentModel.DataAnnotations
-
-
-<SfDataForm Model="@RegistrationDetailsModel"
-            LabelPosition="FormLabelPosition.Left">
-
-    <FormValidator>
-        <DataAnnotationsValidator></DataAnnotationsValidator>
-    </FormValidator>
-
-    <FormItems>
-        <FormAutoGenerateItems></FormAutoGenerateItems>
-    </FormItems>
-
-</SfDataForm>
-
-@code {
-
-    public class RegistrationDetails
-    {
-
-        [Required(ErrorMessage = "Please enter your name")]
-        public string Name { get; set; }
-
-        [Required(ErrorMessage = "Please enter your email address")]
-        [EmailAddress(ErrorMessage = "Please enter valid email address")]
-        public string Email { get; set; }
-
-        [Required(ErrorMessage = "You need to agree to the Terms and Conditions")]
-        [Range(typeof(bool), "true", "true", ErrorMessage = "You need to agree to the Terms and Conditions")]
-        [Display(Name="Agree to the terms")]
-        public bool Accept { get; set; }
-    }
-
-    private RegistrationDetails RegistrationDetailsModel = new RegistrationDetails();
-}
+{% include_relative code-snippet/layout-customization/label-position.razor %}
 
 {% endhighlight %}
 {% endtabs %}
 
-## Change the Form width 
+## Change the form width 
 
 The DataForm component allows you to customize the width of the form container by using the [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataForm.SfDataForm.html#Syncfusion_Blazor_DataForm_SfDataForm_Width) property.
 
 {% tabs %}
 {% highlight razor tabtitle="Width"  %}
 
-
-@using Syncfusion.Blazor.DataForm
-@using System.ComponentModel.DataAnnotations
-
-
-<SfDataForm Width="50%"
-            Model="@RegistrationDetailsModel">
-
-    <FormValidator>
-        <DataAnnotationsValidator></DataAnnotationsValidator>
-    </FormValidator>
-
-    <FormItems>
-        <FormAutoGenerateItems></FormAutoGenerateItems>
-    </FormItems>
-
-</SfDataForm>
-
-@code {
-
-    public class RegistrationDetails
-    {
-
-        [Required(ErrorMessage = "Please enter your name")]
-        public string Name { get; set; }
-
-        [Required(ErrorMessage = "Please enter your email address")]
-        [EmailAddress(ErrorMessage = "Please enter valid email address")]
-        public string Email { get; set; }
-
-        [Required(ErrorMessage = "You need to agree to the Terms and Conditions")]
-        [Range(typeof(bool), "true", "true", ErrorMessage = "You need to agree to the Terms and Conditions")]
-        [Display(Name = "Agree to the terms")]
-        public bool Accept { get; set; }
-    }
-
-    private RegistrationDetails RegistrationDetailsModel = new RegistrationDetails();
-}
+{% include_relative code-snippet/templates/change-form-width.razor %}
 
 {% endhighlight %}
 {% endtabs %}
+
+![Blazor DataForm Form Width](images/blazor_dataform_change_form_width.png)

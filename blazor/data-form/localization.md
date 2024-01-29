@@ -7,7 +7,7 @@ control: DataForm
 documentation: ug
 ---
 
-# Localization in Blazor DataForm Component
+# Localization in Blazor DataForm component
 
 DataForm component can be localized to any particular culture. Refer to [Blazor Localization](https://blazor.syncfusion.com/documentation/common/localization) topic to localize Syncfusion Blazor components.
 
@@ -29,70 +29,19 @@ Follow the below steps to configure localization for label text and error messag
 
 | ![Localization step 3](./images/blazor_dataform_localization_step3.png) | ![Localization step 3](./images/blazor_dataform_localization_step3_2.png) |
 
-
 {% tabs %}
 {% highlight razor tabtitle="Razor"  %}
 
-@using Syncfusion.Blazor.DataForm
-@using System.ComponentModel.DataAnnotations
-@using Syncfusion.Blazor.Inputs
-@using Syncfusion.Blazor.Calendars
-
-
-<SfDataForm ID="MyForm"
-            Model="@CreditCardModel"
-            ValidationDisplayMode="FormValidationDisplay.Tooltip">
-
-    <FormValidator>
-        <DataAnnotationsValidator></DataAnnotationsValidator>
-        <ValidationSummary></ValidationSummary>
-    </FormValidator>
-
-    <FormItems>
-        <FormItem Field="@nameof(CreditCardModel.Name)" Placeholder="e.g. Andrew Fuller" LabelText="Name on card"></FormItem>
-        <FormItem Field="@nameof(CreditCardModel.CardNumber)" LabelText="Card Number">
-        </FormItem>
-        <FormItem Field="@nameof(CreditCardModel.CVV)" ID="CVV">
-            <Template>
-                <label class="e-form-label">CVV*:</label>
-                <SfMaskedTextBox Mask="000" @bind-Value="CreditCardModel.CVV" ID="CVV"></SfMaskedTextBox>
-            </Template>
-        </FormItem>
-        <FormItem Field="@nameof(CreditCardModel.ExpiryDate)" ID="ExpiryDate">
-            <Template>
-                <label class="e-form-label">Expiry Date*:</label>
-                <SfDatePicker TValue="DateTime?" Format="MM/yy" EnableMask="true" ID="ExpiryDate"></SfDatePicker>
-            </Template>
-        </FormItem>
-    </FormItems>
-
-</SfDataForm>
-
-
-@code {
-    public char PromptCharacter { get; set; } = ' ';
-    private CreditCard CreditCardModel = new CreditCard();
-}
+{% include_relative code-snippet/localization/localization.razor %}
 
 {% endhighlight %}
+{% highlight razor tabtitle="Razor"  %}
 
-{% highlight C# tabtitle="C#"  %}
-public class CreditCard
-{
-    [Required(ErrorMessage = "Please enter the name on card")]
-    public string Name { get; set; }
+{% include_relative code-snippet/localization/localization.razor %}
 
-    [Required(ErrorMessage = "Please enter the card number")]
-    [CreditCard]
-    public string CardNumber { get; set; }
-
-    [Required(ErrorMessage = "Please enter cvv number")]
-    public string CVV { get; set; }
-
-    [Required(ErrorMessage = "Please select/enter expiry date")]
-    public DateTime? ExpiryDate { get; set; }
-}
 {% endhighlight %}
 {% endtabs %}
+
+4.Finally, run the application to view the localized DataForm component.
 
 ![Localization in DataForm component](./images/blazor_dataform_localization.png)

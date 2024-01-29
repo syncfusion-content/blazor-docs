@@ -11,8 +11,8 @@ documentation: ug
 
 Value binding is the process of passing values between a component and its parent. There are two methods for binding values.These are.
 
-    * bind-Value Binding 
-    * bind-Index Binding
+* bind-Value Binding 
+* bind-Index Binding
 
 ## Bind value binding
 

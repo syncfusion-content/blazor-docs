@@ -9,7 +9,7 @@ documentation: ug
 
 # DataGrid Customization in Blazor DataGrid Component
 
-It is possible to customize the default styles of the DataGrid component. This can be achieved by adding class dynamically to the columns using the `AddClass` method of the [QueryCellInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_DashArray) event. Then the required styles are added to this class.
+It is possible to customize the default styles of the DataGrid component. This can be achieved by adding class dynamically to the columns using the `AddClass` method of the [QueryCellInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Query) event. Then the required styles are added to this class.
 
 This is demonstrated in the following sample code,
 

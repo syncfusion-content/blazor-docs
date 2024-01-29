@@ -356,7 +356,7 @@ Each step's progress state can be specified using the [Status](https://help.sync
 
 ## Step styling
 
-You can use the `CssClass` property to customize the appearance of each step.
+You can use the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.StepperStep.html#Syncfusion_Blazor_Navigations_StepperStep_CssClass) property to customize the appearance of each step.
 
 ```cshtml
 
@@ -417,6 +417,6 @@ You can use the `CssClass` property to customize the appearance of each step.
 
 ## Step validation
 
-You can set the validation state for each step to displaying a success or error icon by using `IsValid` property.
+You can set the validation state for each step to displaying a success or error icon by using [IsValid](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.StepperStep.html#Syncfusion_Blazor_Navigations_StepperStep_IsValid) property.
 
 > To know more about Stepper validation, please refer to the [Validation](./steps-validation#validating-steps) section.
