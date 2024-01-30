@@ -125,7 +125,7 @@ Add the Syncfusion Blazor Spinner component with Syncfusion Blazor Button compon
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion Blazor Spinner component in your default web browser.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LZVptsXugpMZasZi?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Spinner Component](./images/blazor-spinner.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/htrTZCUjfzWlJVVS?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Spinner Component](./images/blazor-spinner.png)" %}
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/Spinner/BlazorWebApp).
 
