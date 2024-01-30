@@ -104,7 +104,7 @@ N> If you don't provide the `DocumentPath` property value, the PDF Viewer (Next 
 
 Run the application, and the PDF file will be displayed using Syncfusion's Blazor PDF Viewer (Next Gen) component in your browser.
 
-![Blazor SfPdfViewer Component](GettingStarted_images/blazor-pdfviewer.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BXBpXCZPTWSAUYOM?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor SfPdfViewer Component](GettingStarted_images/blazor-pdfviewer.png)" %}
 
 ## See also
 

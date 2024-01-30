@@ -124,7 +124,7 @@ Add the Syncfusion Blazor Tabs component in the **~Pages/.razor** file. If an in
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion Blazor Tabs component in your default web browser.
 
-![Blazor Tabs Component](./images/blazor-tabs.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BtBzZCNOfDXLQncI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Tabs Component](./images/blazor-tabs.png)" %}
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/Tabs/BlazorWebApp).
 
@@ -176,7 +176,7 @@ The following code explains how to initialize tab content using `ContentTemplate
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor Tabs with Template](./images/blazor-tabs-template.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BjBJtWZOzjWLpHWJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Tabs with Template](./images/blazor-tabs-template.png)" %}
 
 ## Two way binding of SelectedItem
 
@@ -228,7 +228,7 @@ Selected Tab
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor Tabs with Data Binding](./images/blazor-tabs-data-binding.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rtLfNMZuzXLWCPKZ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Tabs with Data Binding](./images/blazor-tabs-data-binding.png)" %}
 
 ## See also
 

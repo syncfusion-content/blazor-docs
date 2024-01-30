@@ -50,6 +50,8 @@ The size of grid cells can be modified to the required size using the `Columns` 
 
 ```
 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDrUMrBmpWKQAbtE?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 In the above sample, width of the parent element is divided into five equal cells based on the `Columns` property value resulting the width of each cell as 100px.
 
 The height of these cells will be 50px based on the CellAspectRatio value 100/50 (that is for every 100px of width, 50px will be the height of the cell).
@@ -92,6 +94,8 @@ The spacing between each panel in a row and column can be defined using the `Cel
 
 ```
 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LjLKMBhQpMKkevti?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 The following output demonstrates the neat and clear representation of data by setting the `cellSpacing` property in dashboard component.
 
 ![Blazor DashboardLayout with Cell Spacing](images/blazor-dashboard-layout-cell-space.png)
@@ -129,6 +133,8 @@ These cells combinedly form a grid-structured layout, which will be hidden initi
 </style>
 
 ```
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rZVKMhBQzsTMyoHg?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 The following output demonstrates the gridlines indicating the cells split-up of the layout and the data containers placed over these cells are known as panels.
 

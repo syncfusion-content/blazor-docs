@@ -283,6 +283,6 @@ Through the navigation of the pager items, view the items in the list view page 
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion Blazor Pager component in your default web browser.
 
-![Blazor Pager with ListView](./images/blazor-pager-with-list-view.gif)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXLzDMDlgOyHXfvW?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Pager with ListView](./images/blazor-pager-with-list-view.gif)" %}
 
 N> [View Sample in GitHub.](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/Pager/BlazorWebApp)

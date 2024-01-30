@@ -18,7 +18,7 @@ This topic gives a clear idea about how to consume data from [SQL Server](https:
 The following software are needed:
 
 * Microsoft.EntityFrameworkCore.SqlServer
-* Visual Studio 2022
+* Visual Studio 2022 or later
 * .NET 6.0 or later.
 
 ## Create Blazor Server Application

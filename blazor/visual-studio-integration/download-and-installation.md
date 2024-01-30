@@ -13,6 +13,7 @@ Syncfusion publishes the Visual Studio extension in the below Visual Studio mark
 
 [Visual Studio 2022](https://marketplace.visualstudio.com/items?itemName=SyncfusionInc.BlazorVSExtension)
 
+
 ## Prerequisites
 
 The following software prerequisites must be installed to install the Syncfusion Blazor extension, as well as to creating, adding snippet, converting, and upgrading Syncfusion Blazor applications.

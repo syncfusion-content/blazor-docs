@@ -27,7 +27,7 @@ The [Blazor Checkbox](https://www.syncfusion.com/blazor-components/blazor-checkb
 }
 
 ```
-
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LjLgMVBmLTwBGRID?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor CheckBox with Label](./images/blazor-checkbox-label.png)
 
@@ -53,7 +53,7 @@ The different Checkbox sizes available are default and small. To reduce the size
 </style>
 
 ```
-
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BNLAiVVQVzGyDwWz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Changing Blazor CheckBox Size](./images/blazor-checkbox-size.png)
 

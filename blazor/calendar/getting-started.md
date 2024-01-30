@@ -124,6 +124,8 @@ Add the Syncfusion Blazor Calendar component in the **~/Pages/Index.razor** file
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion Blazor Calendar component in your default web browser.
 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNrgCrLLCFvlvtay?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 ![Blazor Calendar Component](./images/blazor-calendar-component.png)
 
 ## Setting the Value, Min, and Max dates
@@ -145,6 +147,8 @@ Here, the Calendar allows you to select a date within the range from 5th to 27th
 
 {% endhighlight %}
 {% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hjBAihhhMaZXWMHb?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Selection in Blazor Calendar Component](./images/blazor-calendar-selection.png)
 

@@ -47,6 +47,7 @@ documentation: ug
 }
 
 ``` 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDhUsBhHTngrkaFC?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Step Area Chart](../images/chart-types-images/blazor-step-area-chart.png)
 
@@ -95,6 +96,7 @@ The following properties can be used to customize the [Step Area](https://help.s
 }
 
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rXrgWhBxpxgIqdqw?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Step Area Chart with Custom Series](../images/chart-types-images/blazor-step-area-chart-custom-series.png)
 

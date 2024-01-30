@@ -66,24 +66,12 @@ If you are using CDN for style sheet references then you have to add style sheet
 * **~/Pages/_Layout.cshtml** for **.NET 6**.
 
 {% tabs %}
-{% highlight cshtml tabtitle=".NET 6 (~/_Layout.cshtml)" %}
+{% highlight cshtml %}
 
 <head>
     ...
     <link rel="stylesheet" href="https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/bootstrap5.css"
-    asp-fallback-href="_content/Syncfusion.Blazor/styles/bootstrap5.css"
-    asp-fallback-test-class="e-control"
-    asp-fallback-test-property="font-size"
-    asp-fallback-test-value="12px" />
-</head>
-
-{% endhighlight %}
-{% highlight cshtml tabtitle=".NET 7 (~/_Host.cshtml)" %}
-
-<head>
-    ...
-    <link rel="stylesheet" href="https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/bootstrap5.css"
-    asp-fallback-href="_content/Syncfusion.Blazor/styles/bootstrap5.css"
+    asp-fallback-href="_content/Syncfusion.Blazor.Themes/bootstrap5.css"
     asp-fallback-test-class="e-control"
     asp-fallback-test-property="font-size"
     asp-fallback-test-value="12px" />
@@ -145,7 +133,7 @@ You can refer the theme stylesheet inside the `<head>` of **wwwroot/index.html**
             var fallbackStyle = document.createElement("link");
             fallbackStyle.setAttribute("rel", "stylesheet");
             fallbackStyle.setAttribute("type", "text/css");
-            fallbackStyle.setAttribute("href", "_content/Syncfusion.Blazor/styles/bootstrap5.css"); // URL to the static asset from the Syncfusion package
+            fallbackStyle.setAttribute("href", "_content/Syncfusion.Blazor.Themes/bootstrap5.css"); // URL to the static asset from the individual NuGet packages
             document.getElementsByTagName("head")[0].appendChild(fallbackStyle);
             }
             document.body.removeChild(testElem);

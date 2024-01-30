@@ -106,7 +106,7 @@ Add the Syncfusion Blazor Rating component in the **~Pages/.razor** file. If an 
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion Blazor Rating component in your default web browser.
 
-![Blazor Rating Component](images/blazor-rating-component.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hZLfXiXkVWWVpSTA?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Rating Component](images/blazor-rating-component.png)" %}
 
 ## Value
 
@@ -120,6 +120,6 @@ You can set the rating value by using the [Value](https://help.syncfusion.com/cr
 {% endhighlight %}
 {% endtabs %}
 
-![Displaying Rating Value in Blazor Rating Component](images/blazor-rating-value.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BjVpDWXaLshjAdaE?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Displaying Rating Value in Blazor Rating Component](images/blazor-rating-value.png)" %}
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/Rating/BlazorWebApp).

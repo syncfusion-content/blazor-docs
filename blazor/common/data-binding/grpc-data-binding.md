@@ -15,7 +15,7 @@ In this topic, you can learn how to consume data from [gRPC](https://grpc.io/) s
 
 The following software are needed,
 
-* Visual Studio 2022 or later.
+* Visual Studio 2022.
 * .NET 6.0 or later.
 
 ## Creating Blazor server-side application
@@ -248,7 +248,6 @@ In this demo application, the **Bootstrap4** theme will be used. To add the them
 
 ```html
 <link href="_content/Syncfusion.Blazor.Themes/ bootstrap4.css" rel="stylesheet" />
-
 ```
 
 In previous steps, we have successfully configured the Syncfusion Blazor package in the application. Now, we can add the DataGrid Component to the `Index.razor`.

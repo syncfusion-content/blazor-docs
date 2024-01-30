@@ -158,7 +158,7 @@ Add the Syncfusion Blazor Toast component in the **~/Pages/Index.razor** file.
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion Blazor Toast component in your default web browser.
 
-![Blazor Toast Component](./images/blazor-toast.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VDhpjsjOziOhAUQG?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Toast Component](./images/blazor-toast.png)" %}
 
 ## See Also
 
