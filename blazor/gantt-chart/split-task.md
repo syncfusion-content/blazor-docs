@@ -20,9 +20,9 @@ To enable the split task feature using the [GanttSegmentFields](https://help.syn
   `Dialog`: The Segments tab includes a mandatory start date. The inclusion of either duration or end date is optional, and this behavior is based on the mapping in the `GanttSegmentFields` component.
 
   `Context menu`: If the `GanttSegmentFields` component is mapped and the [EnableContextMenu](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_EnableContextMenu) property is enabled, the context menu will include the `Split Task` and `Merge Task` items.
-  You can split any taskbar by first opening the context menu within the taskbar. To merge taskbars, click the specific taskbar and choose the merge action either to the right or left.
+  You can split taskbar by first opening the context menu within the taskbar. To merge taskbars, click the taskbar and choose the merge action either to the right or left.
 
-  `Method`: You can split any taskbar using the [SplitTaskAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_SplitTaskAsync) method and merge any taskbar using the [MergeTaskAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_MergeTaskAsync) method.
+  `Method`: You can split taskbar using the [SplitTaskAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_SplitTaskAsync) method and merge taskbar using the [MergeTaskAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_MergeTaskAsync) method.
 
 
 ```cshtml
@@ -121,9 +121,7 @@ To enable the split task feature using the [GanttSegmentFields](https://help.syn
 
 The [SegmentChanging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttSegmentFields.html#Syncfusion_Blazor_Gantt_GanttSegmentFields_SegmentChanging) event triggers when performing split and merge actions, taskbar editing, segment editing in a dialog box, and editing date-related(start date, end date, duration and etc.,) cells in the task.
 
-The `Cancel` property is only valid for split and merge actions performed through the context menu, dialog box, and methods, it is not applicable for taskbar dragging and cell editing in date-related columns.
-
-> The split and merge action can be cancelled by setting the `Cancel` argument of the `SegmentChanging` event to true.
+> The `Cancel` property is only applicable for split and merge actions; it does not apply to changes in the scheduling of tasks.
 
 ```cshtml
 @using Syncfusion.Blazor.Gantt
@@ -246,6 +244,6 @@ The `Cancel` property is only valid for split and merge actions performed throug
 
 ![Editing split task with context menu](images/blazor-gantt-chart-split-task-context.png)
 
-## Limitations
+## Limitation
 
 * Parent and milestone tasks cannot be split into segments.
