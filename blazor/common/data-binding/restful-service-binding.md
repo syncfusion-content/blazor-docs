@@ -374,12 +374,13 @@ builder.Services.AddSyncfusionBlazor();
 
 ```
 
-Themes provide life to components. Syncfusion Blazor has different themes. They are:
+Themes provide life to components. Syncfusion Blazor has different [themes](https://blazor.syncfusion.com/documentation/appearance/themes). They are:
 
-* Fabric
-* Bootstrap
-* Material
+* Bootstrap5
+* Material 3
+* Tailwind CSS
 * High Contrast
+* Fluent
 
 In this demo application, the latest theme will be used.
 
