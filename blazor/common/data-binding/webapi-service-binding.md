@@ -58,33 +58,33 @@ You can create a **Blazor Web App** using Visual Studio 2022 via [Microsoft Temp
 
 Now, you need to scaffold **DbContext** and **model classes** from the existing **OrdersDetails** database. To perform scaffolding and work with the SQL Server database in our application, install the following NuGet packages.If you have created a Blazor Web App with the `Interactive render mode` set to `WebAssembly` or `Auto` ensure to follow these steps:
 
-1. Create the new project with Class Library template named as `BlazorWebApp.Shared` for DbContext and model class as shown below.
+* Create the new project with Class Library template named as `BlazorWebApp.Shared` for DbContext and model class as shown below.
 ![Create Shared Project](../images/db-shared-project.png)
 
-Additionally, ensure that you have added a reference to the `BlazorWebApp.Shared` project in both the server-side and client-side projects of your web application.
+  Additionally, ensure that you have added a reference to the `BlazorWebApp.Shared` project in both the server-side and client-side projects of your web application.
 
-2. Then, open the NuGet Package Manager and install the following packages in both the shared and server-side projects of your Blazor Web App.
+* Then, open the NuGet Package Manager and install the following packages in both the shared and server-side projects of your Blazor Web App.
 
    * [Microsoft.EntityFrameworkCore.Tools](https://www.nuget.org/packages/Microsoft.EntityFrameworkCore.Tools): This package creates database context and model classes from the database.
    * [Microsoft.EntityFrameworkCore.SqlServer](https://www.nuget.org/packages/Microsoft.EntityFrameworkCore.SqlServer/): The database provider that allows Entity Framework Core to work with SQL Server.
 
    Alternatively, you can utilize the following package manager command to achieve the same.
 
-    {% tabs %}
-    {% highlight C# tabtitle="Package Manager" %}
+{% tabs %}
+{% highlight C# tabtitle="Package Manager" %}
 
-    Install-Package Microsoft.EntityFrameworkCore.Tools -Version 7.0.11
+Install-Package Microsoft.EntityFrameworkCore.Tools -Version 7.0.11
 
-    Install-Package Microsoft.EntityFrameworkCore.SqlServer -Version 7.0.11
+Install-Package Microsoft.EntityFrameworkCore.SqlServer -Version 7.0.11
 
-    {% endhighlight %}
-    {% endtabs %}
+{% endhighlight %}
+{% endtabs %}
 
     Once the above packages are installed, you can scaffold DbContext and Model classes. Run the following command in the Package Manager Console under the `BlazorWebApp.Shared` project.
 
-    ```
-    Scaffold-DbContext “Server=localhost;Database=OrdersDetails;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False” Microsoft.EntityFrameworkCore.SqlServer -OutputDir Data
-    ```
+```
+Scaffold-DbContext “Server=localhost;Database=OrdersDetails;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False” Microsoft.EntityFrameworkCore.SqlServer -OutputDir Data
+```
 
     The above scaffolding command contains the following details for creating DbContext and model classes for the existing database and its tables.
     * **Connection string**: Server=localhost;Database=OrdersDetails;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False
@@ -139,7 +139,7 @@ Additionally ensure the connection strings added in the **appsettings.json** fil
   }
 }
 ```
-3. Now, the DbContext must be configured using connection string and registered as scoped service using the AddDbContext method in **Program.cs**  of server side project only.
+* Now, the DbContext must be configured using connection string and registered as scoped service using the AddDbContext method in **Program.cs**  of server side project only.
 
 ```
 builder.Services.AddDbContext<OrdersDetailsContext>(option =>
@@ -420,7 +420,7 @@ app.Run();
 {% endhighlight %}
 {% endtabs %}
 
-### Add Syncfusion Blazor DataGrid package
+## Add Syncfusion Blazor DataGrid package
 
 To add **Blazor DataGrid** component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/).
 
@@ -470,7 +470,14 @@ Themes provide life to components. Syncfusion Blazor has different themes. They 
 * Bootstrap
 * High Contrast
 
-In this demo application, the Bootstrap theme will be used. To add the theme, `<head>` section  of **~/Components/App.razor**(For Blazor Web App) or **Pages/_Host.cshtml** (for Blazor Server App) file.
+In this demo application, the latest theme will be used.
+
+  * For **Blazor Web App**,  refer stylesheet inside the `<head>` of **~/Components/App.razor** file for .NET 8.
+
+  * For **Blazor WebAssembly application**, refer stylesheet inside the `<head>` element of **wwwroot/index.html** file.
+  * For **Blazor Server application**, refer stylesheet inside the `<head>` element of
+    * **~/Pages/_Host.cshtml** file for .NET 7.
+    * **~/Pages/_Layout.cshtml** file for .NET 6.
 
 {% highlight cshtml %}
 
@@ -512,9 +519,7 @@ If you have set the interactivity location to `Per page/component` in the web ap
 
 ## Binding data to Blazor DataGrid component using WebApiAdaptor
 
-To consume data from the WebApi Controller, you need to add the **SfDataManager** with **WebApiAdaptor**. Refer to the following documentation for more details on WebApiAdaptor.
-
-[WebApiAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors#web-api-adaptor)
+To consume data from the WebApi Controller, you need to add the **SfDataManager** with **WebApiAdaptor**. Refer to the following documentation for more details on [WebApiAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors#web-api-adaptor).
 
 {% tabs %}
 {% highlight razor %}

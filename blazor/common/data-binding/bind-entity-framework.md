@@ -72,7 +72,7 @@ Now, scaffold DbContext and model classes from the existing library database. To
 * Create the new project with Class Library template named as `BlazorWebApp.Shared` for DbContext and model class as shown below.
 ![Create Shared Project](../images/db-shared-project.png)
 
-Additionally, ensure that you have added a reference to the `BlazorWebApp.Shared` project in both the server-side and client-side projects of your web application.
+  Additionally, ensure that you have added a reference to the `BlazorWebApp.Shared` project in both the server-side and client-side projects of your web application.
 
 * Then, open the NuGet Package Manager and install the following packages in both the shared and server-side projects of your app.
 
@@ -81,22 +81,22 @@ Additionally, ensure that you have added a reference to the `BlazorWebApp.Shared
 
    Alternatively, you can utilize the following package manager command to achieve the same.
 
-    {% tabs %}
-    {% highlight C# tabtitle="Package Manager" %}
+{% tabs %}
+{% highlight C# tabtitle="Package Manager" %}
 
-    Install-Package Microsoft.EntityFrameworkCore.Tools -Version 7.0.11
+Install-Package Microsoft.EntityFrameworkCore.Tools -Version 7.0.11
 
-    Install-Package Microsoft.EntityFrameworkCore.SqlServer -Version 7.0.11
+Install-Package Microsoft.EntityFrameworkCore.SqlServer -Version 7.0.11
 
-    {% endhighlight %}
-    {% endtabs %}
+{% endhighlight %}
+{% endtabs %}
 
     Once the above packages are installed, you can scaffold DbContext and Model classes. Run the following command in the Package Manager Console under the `BlazorWebApp.Shared` project.
 
-    ```
-    Scaffold-DbContext “Server=localhost;Database=Library;Integrated Security=True” Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models
+```
+Scaffold-DbContext “Server=localhost;Database=Library;Integrated Security=True” Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models
 
-    ```
+```
 
     The above scaffolding command contains the following details for creating DbContext and model classes for the existing database and its tables.
 
@@ -108,7 +108,7 @@ Additionally, ensure that you have added a reference to the `BlazorWebApp.Shared
 
 ![Create Shared Project](../images/shared-models.png)
 
-You can see that **LibraryContext.cs** file contains the connection string details in the OnConfiguring method.
+ You can see that **LibraryContext.cs** file contains the connection string details in the OnConfiguring method.
 
 ![Created Connectionstring in Blazor](../images/shared-connection-string.png)
 
@@ -347,7 +347,7 @@ builder.Services.AddDbContext<LibraryContext>(option =>
 {% endhighlight %}
 {% endtabs %}
 
-### Creating a Data Access Layer
+#### Creating a Data Access Layer
 
 The application is now configured to connect with the library database using Entity Framework. Now, it’s time to consume data from the library database. To do so, you need an interface to fetch data from DbContext to the Blazor application.
 
@@ -443,7 +443,7 @@ namespace LibraryManagement.Models
 
 {% endhighlight %}
 
-### Register the service in Program.cs
+#### Register the service in Program.cs
 
 Now, you need to register the **LibraryService** and **ILibraryService** as services in the **Program.cs** file for .NET6 and .NET7 applications. Register the Scoped Services like below.
 
@@ -506,7 +506,14 @@ Themes provide life to components. Syncfusion Blazor has different themes. They 
 * Material
 * High Contrast
 
-In this demo application, the Bootstrap theme will be used. To add the theme, `<head>` section  of **~/Components/App.razor**(For Blazor Web App) or **Pages/_Host.cshtml** (for Blazor Server App) file.
+In this demo application, the latest theme will be used.
+
+  * For **Blazor Web App**,  refer stylesheet inside the `<head>` of **~/Components/App.razor** file for .NET 8.
+
+  * For **Blazor WebAssembly application**, refer stylesheet inside the `<head>` element of **wwwroot/index.html** file.
+  * For **Blazor Server application**, refer stylesheet inside the `<head>` element of
+    * **~/Pages/_Host.cshtml** file for .NET 7.
+    * **~/Pages/_Layout.cshtml** file for .NET 6.
 
 {% highlight cshtml %}
 
