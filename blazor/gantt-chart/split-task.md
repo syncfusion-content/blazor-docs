@@ -119,7 +119,7 @@ To enable the split task feature using the [GanttSegmentFields](https://help.syn
 
 ## Segment event
 
-The [SegmentChanging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttSegmentFields.html#Syncfusion_Blazor_Gantt_GanttSegmentFields_SegmentChanging) event triggers when performing split and merge actions, taskbar editing, segment editing in a dialog box, and editing date-related(start date, end date, duration and etc.,) cells in the task.
+The [SegmentChanging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttSegmentFields.html#Syncfusion_Blazor_Gantt_GanttSegmentFields_SegmentChanging) event is triggered when split and merge actions are performed, and there are changes in the scheduling of tasks.
 
 > The `Cancel` property is only applicable for split and merge actions; it does not apply to changes in the scheduling of tasks.
 
