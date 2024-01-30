@@ -126,7 +126,7 @@ The segment collection is also supported for `ExpandoObject`, `DynamicObject`, a
 
 ## Split task event
 
-The [GanttTaskFields.SegmentChanging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttSegmentFields.html#Syncfusion_Blazor_Gantt_GanttSegmentFields_SegmentChanging) event triggers when the segment is added, deleted and updated time in Gantt Chart.
+The [SegmentChanging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttSegmentFields.html#Syncfusion_Blazor_Gantt_GanttSegmentFields_SegmentChanging) event triggers when the segment is added, deleted and updated time in Gantt Chart.
 
 > To cancel the split task action in the Gantt Chart, you can achieve this by setting the `Cancel` argument of the `SegmentChanging` event to true. It's important to note that the `Cancel` property will only be accepted when the segmentation operation is initiated through the context menu for split and merge, via dialog box operations such as add, remove, and update, or when utilizing public methods like `MergeTaskAsync` and `SplitTaskAsync`. This ensures that the cancellation functionality is applicable in specific scenarios where segmentation actions are triggered by user interactions or explicit method calls in the Gantt Chart component.
 
