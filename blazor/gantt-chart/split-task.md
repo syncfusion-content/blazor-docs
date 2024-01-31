@@ -296,6 +296,15 @@ To customize segment taskbars, you can use the [TaskbarTemplate](https://help.sy
     .e-segmented-taskbar.e-gantt-clone-taskbar{
         top: 0px !important;
     }
+
+    .e-segmented-taskbar .e-gantt-child-progressbar {
+        background-color: #0056B3 !important;
+    }
+
+    .e-segmented-taskbar {
+        background-color: #8553F1 !important;
+        border: 1px solid #3f51b5 !important;
+    }
 </style>
 @code {
     private SfGantt<TaskData> gantt;
