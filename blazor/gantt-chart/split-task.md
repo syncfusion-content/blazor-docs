@@ -267,42 +267,14 @@ To customize segment taskbars, you can use the [TaskbarTemplate](https://help.sy
                 {
                     foreach (var segment in segments)
                     {
-                        @if (segment.SegmentIndex == 0)
-                        {
-                            <div class="e-gantt-child-taskbar-inner-div e-gantt-child-taskbar e-segmented-taskbar" style=@("height:24px;position: absolute;left:" + segment.Left + "px; width:" + segment.Width + "px;") tabindex=-1 data-segment-index="0">
-                                <div class="e-taskbar-left-resizer e-icon" style="margin-top: 5px; left:2px">
-                                </div>
-                                <div class="e-gantt-child-progressbar-inner-div e-gantt-child-progressbar" style="height:24px;width:@(segment.ProgressWidth + "px");border-radius: 0px;text-align: right;">
-                                </div>
-
-                                <div class="e-taskbar-right-resizer e-icon" style="margin-top: 5px;left:@((segment.Width) - 15)px">
-                                </div>
+                        <div class="e-gantt-child-taskbar-inner-div e-gantt-child-taskbar e-segmented-taskbar" style=@("height:24px;position: absolute;left:" + segment.Left + "px; width:" + segment.Width + "px;") tabindex=-1 data-segment-index="@(segment.SegmentIndex)">
+                            <div class="e-taskbar-left-resizer e-icon" style="margin-top: 5px; left:2px">
                             </div>
-                        }
-                        else if (segments.Count() == segment.SegmentIndex + 1)
-                        {
-                            <div class="e-gantt-child-taskbar-inner-div e-gantt-child-taskbar e-segmented-taskbar" style="@("height:24px;position: absolute;left:" + segment.Left + "px; width:" + segment.Width + "px")" tabindex=-1 data-segment-index="@segment.SegmentIndex">
-                                <div class="e-taskbar-left-resizer e-icon" style="margin-top: 5px; left:2px">
-                                </div>
-                                <div class="e-gantt-child-progressbar-inner-div e-gantt-child-progressbar" style="height:24px;width:@(segment.ProgressWidth + "px");text-align: right;border-radius: 0px;">
-                                </div>
-
-                                <div class="e-taskbar-right-resizer e-icon" style="margin-top: 5px;left:@((segment.Width) - 15)px">
-                                </div>
+                            <div class="e-gantt-child-progressbar-inner-div e-gantt-child-progressbar" style="height:24px;width:@(segment.ProgressWidth + "px");border-radius: 0px;text-align: right;">
                             </div>
-                        }
-                        else
-                        {
-                            <div class="e-gantt-child-taskbar-inner-div e-gantt-child-taskbar e-segmented-taskbar" style="@("height:24px;position: absolute;left:" + segment.Left + "px; width:" + segments[segment.SegmentIndex].Width + "px")" tabindex=-1 data-segment-index="@segment.SegmentIndex">
-                                <div class="e-taskbar-left-resizer e-icon" style="margin-top: 5px; left:2px">
-                                </div>
-                                <div class="e-gantt-child-progressbar-inner-div e-gantt-child-progressbar" style="height:24px;width:@(segment.ProgressWidth + "px");text-align: right;border-radius: 0px;">
-                                </div>
-
-                                <div class="e-taskbar-right-resizer e-icon" style="margin-top: 5px;left:@((segment.Width) - 15)px">
-                                </div>
+                            <div class="e-taskbar-right-resizer e-icon" style="margin-top: 5px;left:@((segment.Width) - 15)px">
                             </div>
-                        }
+                        </div>
                     }
                 }
                 else
