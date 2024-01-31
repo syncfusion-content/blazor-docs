@@ -11,9 +11,7 @@ documentation: ug
 
 You can globally reuse the Media Query component in any `razor` pages within web application to achieve a more flexible and responsive layout design. 
 
-Refer the following steps to reuse the Media Query in any `razor` pages.
-
-1. Define the Media Query component along with layout `Body` property within the `CascadingValue` component in **MainLayout.razor** page.
+Define the Media Query component along with layout `Body` property within the `CascadingValue` component in **MainLayout.razor** page.
 
 {% tabs %}
 {% highlight razor %}
@@ -45,8 +43,6 @@ Refer the following steps to reuse the Media Query in any `razor` pages.
 {% endhighlight %}
 {% endtabs %}
 
-2. Inherit the `MainLayout` component in your razor pages to access the `activeBreakPoint` and run the application.
-
 If you are using .NET 8, configure the `@rendermode` in the `<body>` section of the **~/Components/App.razor** file, as shown below:
 
 ```html
@@ -56,70 +52,31 @@ If you are using .NET 8, configure the `@rendermode` in the `<body>` section of 
 </body>
 ```
 
-In the below example, the `MainLayout` component is inherited in the razor file.
+In the below example, the `activeBreakPoint` was accessed in the **Home.razor** and **Counter.razor** files.
 
 {% tabs %}
-{% highlight C# tabtitle=".NET 7" hl_lines="3 10" %}
+{% highlight C# tabtitle="Home" hl_lines="3 10" %}
 
-@inherits MainLayout
-
-The active breakpoint is @activeValue
+The active breakpoint is @activeBreakPointValue
 <br/><br/>
 <h5>Home Page</h5>
 
 @code {
     [CascadingParameter]
-    public string activeValue { get; set; }
+    public string activeBreakPointValue { get; set; }
 }
 ....
 
 {% endhighlight %}
-{% highlight C# tabtitle=".NET 8" hl_lines="3 11" %}
+{% highlight C# tabtitle="Counter" hl_lines="3 11" %}
 
-@inherits BlazorApp.Components.Layout.MainLayout
-
-The active breakpoint is @activeValue
-<br /><br />
-<h5>Home Page</h5>
-
-@code {
-    [CascadingParameter]
-    public string activeValue { get; set; }
-}
-....
-
-{% endhighlight %}
-{% endtabs %}
-
-In the below example, the `MainLayout` component is inherited in the **Counter.razor** file.
-
-{% tabs %}
-{% highlight C# tabtitle=".NET 7" hl_lines="3 10" %}
-
-@inherits MainLayout
-
-The active breakpoint is @activeValue
-<br/><br/>
-<h5>Counter Page</h5>
-
-@code {
-    [CascadingParameter]
-    public string activeValue { get; set; }
-}
-....
-
-{% endhighlight %}
-{% highlight C# tabtitle=".NET 8" hl_lines="3 11" %}
-
-@inherits BlazorApp.Components.Layout.MainLayout
-
-The active breakpoint is @activeValue
+The active breakpoint is @activeBreakPointValue
 <br /><br />
 <h5>Counter Page</h5>
 
 @code {
     [CascadingParameter]
-    public string activeValue { get; set; }
+    public string activeBreakPointValue { get; set; }
 }
 ....
 

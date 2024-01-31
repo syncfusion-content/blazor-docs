@@ -23,28 +23,28 @@ In the following code example, showcasing the Data Grid to demonstrate the dynam
 Active media name: <b>@activeBreakpoint</b>
 
 @{
-    var RenderingMode = RowDirection.Horizontal;
-    var EnableAdaptiveUIMode = false;
+    var renderingMode = RowDirection.Horizontal;
+    var enableAdaptiveUIMode = false;
     var containerHeight = "100%";
 
     if (activeBreakpoint == "Small")
     {
-        EnableAdaptiveUIMode = true;
-        RenderingMode = RowDirection.Vertical;
+        enableAdaptiveUIMode = true;
+        renderingMode = RowDirection.Vertical;
         containerHeight = "600px";
     }
     else if (activeBreakpoint == "Medium")
     {
-        EnableAdaptiveUIMode = true;
+        enableAdaptiveUIMode = true;
     }
     else
     {
-        EnableAdaptiveUIMode = false;
+        enableAdaptiveUIMode = false;
     }
 }
 
 <div style="position:relative; height: @containerHeight;">
-    <SfGrid DataSource="@orders" EnableAdaptiveUI="@EnableAdaptiveUIMode" RowRenderingMode="@RenderingMode" AllowSorting="true" AllowFiltering="true" AllowPaging="true" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Cancel", "Update", "Search" })" Height="100%" Width="100%">
+    <SfGrid DataSource="@orders" EnableAdaptiveUI="@enableAdaptiveUIMode" RowRenderingMode="@renderingMode" AllowSorting="true" AllowFiltering="true" AllowPaging="true" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Cancel", "Update", "Search" })" Height="100%" Width="100%">
         <GridFilterSettings Type="@FilterType.Excel"></GridFilterSettings>
         <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true" Mode="EditMode.Dialog"></GridEditSettings>
         <GridColumns>
