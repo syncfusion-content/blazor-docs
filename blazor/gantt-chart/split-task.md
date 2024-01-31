@@ -387,6 +387,10 @@ To customize segment taskbars, you can use the [TaskbarTemplate](https://help.sy
 
 ![Editing split task with context menu](images/blazor-gantt-chart-split-task-context.png)
 
+#### Split task template in Blazor Gantt Chart
+
+![Split task template in Blazor Gantt Chart](images/blazor-gantt-chart-split-task-template.png)
+
 ## Limitation
 
 * Parent and milestone tasks cannot be split into segments.
