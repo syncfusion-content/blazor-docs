@@ -132,7 +132,7 @@ Add the Syncfusion Blazor DropDown Menu component in the **~/Pages/Index.razor**
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion Blazor DropDown Menu component in your default web browser.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VZrJNiDPMkRSrAzI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor DropDownMenu Component](./images/blazor-dropdownmenu-component.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LjLTjshOAyMLHrtb?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor DropDownMenu Component](./images/blazor-dropdownmenu-component.png)" %}
 
 ## See also
 
