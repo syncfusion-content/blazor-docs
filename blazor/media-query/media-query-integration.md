@@ -25,13 +25,13 @@ Active media name: <b>@activeBreakpoint</b>
 @{
     var RenderingMode = RowDirection.Horizontal;
     var EnableAdaptiveUIMode = false;
-    var gridHeight = "100%";
+    var containerHeight = "100%";
 
     if (activeBreakpoint == "Small")
     {
         EnableAdaptiveUIMode = true;
         RenderingMode = RowDirection.Vertical;
-        gridHeight = "500px";
+        containerHeight = "600px";
     }
     else if (activeBreakpoint == "Medium")
     {
@@ -43,8 +43,8 @@ Active media name: <b>@activeBreakpoint</b>
     }
 }
 
-<div style="position:relative; min-height: 1000px;">
-    <SfGrid DataSource="@orders" EnableAdaptiveUI="@EnableAdaptiveUIMode" RowRenderingMode="@RenderingMode" AllowSorting="true" AllowFiltering="true" AllowPaging="true" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Cancel", "Update", "Search" })" Height="@gridHeight" Width="100%">
+<div style="position:relative; height: @containerHeight;">
+    <SfGrid DataSource="@orders" EnableAdaptiveUI="@EnableAdaptiveUIMode" RowRenderingMode="@RenderingMode" AllowSorting="true" AllowFiltering="true" AllowPaging="true" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Cancel", "Update", "Search" })" Height="100%" Width="100%">
         <GridFilterSettings Type="@FilterType.Excel"></GridFilterSettings>
         <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true" Mode="EditMode.Dialog"></GridEditSettings>
         <GridColumns>
