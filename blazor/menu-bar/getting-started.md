@@ -157,7 +157,7 @@ Add the Syncfusion Blazor Menu Bar component in the **~/Pages/Index.razor** file
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion Blazor Menu Bar component in your default web browser.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VNLzZiNFUpkeCWTU?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor MenuBar Component](./images/blazor-menubar.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rZhfDiUNVjEteVaW?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor MenuBar Component](./images/blazor-menubar.png)" %}
 
 N> `TValue` can be specified as either `MenuItemModel` or `MenuItem`. If the menu is generated using the `Items` property, then `TValue` is specified as `MenuItemModel`. However, if it is created using a tag directive, then `TValue` is specified as `MenuItem`.
 

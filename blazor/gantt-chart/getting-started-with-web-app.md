@@ -457,7 +457,7 @@ You can show the relationship in tasks by using the `Dependency` property as sho
 
 You can find the full information regarding Predecessors from [here](https://blazor.syncfusion.com/documentation/gantt-chart/task-dependencies)
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LXLJjWXvrJdJTMQs?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hZrTDWLOAOhAyPxe?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Handling exceptions
 Exceptions that occur during Gantt actions can be handled without stopping the application. These error messages or exception details can be acquired using the [OnActionFailure](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_OnActionFailure) event.
@@ -515,7 +515,7 @@ The following sample code demonstrates notifying user when server-side exception
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rNVTtMZPVTbVWzzB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Gantt Chart](images/blazor-gantt-chart-handling-exception.PNG)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VNBTZCBkAYLYNvrK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Gantt Chart](images/blazor-gantt-chart-handling-exception.PNG)" %}
 
 ## See also
 

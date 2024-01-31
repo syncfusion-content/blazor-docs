@@ -252,7 +252,7 @@ Let us create and add a [Node](https://help.syncfusion.com/cr/blazor/Syncfusion.
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LXVzjiZyfiZaJbTe?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Diagram Component](../images/blazor-diagram-component.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDLJZWLYqiuRApvY?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Diagram Component](images/blazor-diagram-component.png)" %}
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/DiagramComponent).
 
@@ -334,7 +334,7 @@ A built-in automatic layout algorithm is specifically designed for organizationa
 {% endtabs %}
 
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BZhTjWNoJChCINxi?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Organization Diagram ChildNode in Vertical Right](../images/blazor-diagram-childnode-at-vertical-right.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rXVTDsrYqBZBcmEv?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Organization Diagram ChildNode in Vertical Right](images/blazor-diagram-childnode-at-vertical-right.png)" %}
 
 ## See also
 
