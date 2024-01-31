@@ -106,8 +106,8 @@ Here is an example of how to configure the initial filter using the `Predicate` 
 <SfGrid DataSource="@GridData" AllowFiltering="true" Height="273px">
     <GridFilterSettings>
         <GridFilterColumns>
-            <GridFilterColumn Field="ShipCity" MatchCase=false Operator="Syncfusion.Blazor.Operator.StartsWith" Predicate="and" Value="@val"></GridFilterColumn>
-           <GridFilterColumn Field="ShipName" MatchCase=false Operator="Syncfusion.Blazor.Operator.StartsWith" Predicate="and" Value="@value"></GridFilterColumn>
+            <GridFilterColumn Field="ShipCity" MatchCase=false Operator="Syncfusion.Blazor.Operator.StartsWith" Predicate="and" Value="@ShipCityValue"></GridFilterColumn>
+           <GridFilterColumn Field="ShipName" MatchCase=false Operator="Syncfusion.Blazor.Operator.StartsWith" Predicate="and" Value="@ShipNameValue"></GridFilterColumn>
         </GridFilterColumns>
     </GridFilterSettings>
     <GridColumns>
@@ -122,8 +122,8 @@ Here is an example of how to configure the initial filter using the `Predicate` 
 
     public List<OrderData> GridData { get; set; }
 
-    public string val = "reims";
-    public string value = "Vins et alcools Chevalier";
+    public string ShipCityValue = "reims";
+    public string ShipNameValue = "Vins et alcools Chevalier";
 
     protected override void OnInitialized()
     {
@@ -184,7 +184,7 @@ public class OrderData
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LDVTZCCymbPjhVWg?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-### Initial filter with multiple values for same column
+### Initial filter with multiple values for same column using Query property
 
 In the Syncfusion Blazor Grid, you can establish an initial filter containing multiple values for a particular column, which helps you to preset filter conditions for a specific column using multiple values. This functionality allows you to display a filtered records in the grid right after the grid is initially loaded.
 
@@ -289,7 +289,7 @@ The following example demonstrates, how to perform an initial filter with multip
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rXhTjMilotUqJJMF?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-### Initial filter with multiple values for different columns
+### Initial filter with multiple values for different columns using Query property
 
 In the Syncfusion Blazor Grid, you can establish an initial filter containing multiple values for a different column, which helps you to preset filter conditions for a different column using multiple values. This functionality allows you to display a filtered records in the grid right after the grid is initially loaded.
 
@@ -449,36 +449,43 @@ Below is an example code demonstrating how to enable or disable case sensitivity
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Buttons
 
-<div style="padding: 20px 0px 20px 0px">
-    <label>Enable/Disable Query String</label>
-         <SfSwitch ValueChange="Change" TChecked="bool"></SfSwitch>
-</div>
+<label> Enable Case Sensitivity</label>
+<SfSwitch @bind-Checked="isChecked" OffLabel="OFF" OnLabel="ON" ValueChange="onToggleCaseSensitive" TChecked="bool?"></SfSwitch>
 
-<SfGrid @ref="Grid" DataSource="@GridData" AllowPaging="true" Height="315px">
+<SfGrid DataSource="@GridData" AllowFiltering="true" Height="273px">
+    <GridFilterSettings EnableCaseSensitivity="@isCaseSensitive">
+    </GridFilterSettings>
     <GridColumns>
         <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="90"></GridColumn>
-        <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer ID" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" Format="C2" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="90"></GridColumn>
-        <GridColumn Field=@nameof(OrderData.OrderDate) HeaderText=" Order Date" Format="d"  TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer ID" Width="100"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.ShipCountry) HeaderText="Ship Country" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="90"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.ShipCity) HeaderText="Ship City" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.ShipRegion) HeaderText="Ship Region" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
 
 @code {
-    public List<OrderData> GridData { get; set; }
-    SfGrid<OrderData>? Grid { get; set; }
 
-    public bool enableQuery = false;
+    public List<OrderData> GridData { get; set; }
+
+    private bool? isChecked = null;
+    private bool isCaseSensitive = false;
 
     protected override void OnInitialized()
     {
         GridData = OrderData.GetAllRecords();
     }
-
-    private async Task Change(Syncfusion.Blazor.Buttons.ChangeEventArgs<bool> args)
+ 
+    private async Task onToggleCaseSensitive(Syncfusion.Blazor.Buttons.ChangeEventArgs<bool?> args)
     {
-        enableQuery = args.Checked;
-        Grid.PageSettings.EnableQueryString = enableQuery;
-        await Grid.Refresh();
+        if (args.Checked == true)
+        {
+            isCaseSensitive = true;
+        }
+        else
+        {
+            isCaseSensitive = false;
+        }
     }
 }
 {% endhighlight %}
@@ -486,35 +493,36 @@ Below is an example code demonstrating how to enable or disable case sensitivity
  public class OrderData
     {
         public static List<OrderData> Orders = new List<OrderData>();
-        
+
         public OrderData()
         {
 
         }
-        public OrderData(int? OrderID,string CustomerID, DateTime? OrderDate, double? Freight)
+        public OrderData(int? OrderID, string CustomerID, string ShipCity, string ShipCountry, string ShipRegion)
         {
-           this.OrderID = OrderID;    
-           this.CustomerID = CustomerID;
-            this.OrderDate = OrderDate;
-            this.Freight = Freight;            
+            this.OrderID = OrderID;
+            this.CustomerID = CustomerID;
+            this.ShipCity = ShipCity;
+            this.ShipCountry = ShipCountry;
+            this.ShipRegion = ShipRegion;
         }
 
         public static List<OrderData> GetAllRecords()
         {
             if (Orders.Count() == 0)
             {
-                int OrderID = 10248;
-                for (int i = 1; i < 7; i++)
+                int OrderID = 10247;
+                for (int i = 1; i < 2; i++)
                 {
-                    Orders.Add(new OrderData(OrderID+1, "VINET", new DateTime(1996, 07, 06), 32.38));
-                    Orders.Add(new OrderData(OrderID+2, "TOMSP", new DateTime(1996, 07, 06), 11.61));
-                    Orders.Add(new OrderData(OrderID+3, "HANAR", new DateTime(1996, 07, 06), 65.83));
-                    Orders.Add(new OrderData(OrderID+4, "VICTE", new DateTime(1996, 07, 06), 45.78));
-                    Orders.Add(new OrderData(OrderID+5, "SUPRD", new DateTime(1996, 07, 06), 98.6));
-                    Orders.Add(new OrderData(OrderID+6, "HANAR", new DateTime(1996, 07, 06), 103.45));
-                    Orders.Add(new OrderData(OrderID+7, "CHOPS", new DateTime(1996, 07, 06), 103.45));
-                    Orders.Add(new OrderData(OrderID+8, "RICSU", new DateTime(1996, 07, 06), 112.48));
-                    Orders.Add(new OrderData(OrderID+9, "WELLI", new DateTime(1996, 07, 06), 33.45));
+                    Orders.Add(new OrderData(OrderID + 1, "VINET", "Reims", "France", "CJ"));
+                    Orders.Add(new OrderData(OrderID + 2, "TOMSP", "Münster", "Germany", "CJ"));
+                    Orders.Add(new OrderData(OrderID + 3, "HANAR", "Rio de Janeiro", "Brazil", "RJ"));
+                    Orders.Add(new OrderData(OrderID + 4, "VICTE", "Lyon", "Belgium", "RJ"));
+                    Orders.Add(new OrderData(OrderID + 5, "SUPRD", "Charleroi", "Switzerland", "SP"));
+                    Orders.Add(new OrderData(OrderID + 6, "HANAR", "Lyon", "Venezuela", "NM"));
+                    Orders.Add(new OrderData(OrderID + 7, "CHOPS", "Rio de Janeiro", "Austria", "CJ"));
+                    Orders.Add(new OrderData(OrderID + 8, "RICSU", "Münster", "Mexico", "RJ"));
+                    Orders.Add(new OrderData(OrderID + 9, "WELLI", "Reims", "USA", "SP"));
                     OrderID += 9;
                 }
             }
@@ -523,13 +531,14 @@ Below is an example code demonstrating how to enable or disable case sensitivity
 
         public int? OrderID { get; set; }
         public string CustomerID { get; set; }
-        public DateTime? OrderDate { get; set; }
-        public double? Freight { get; set; }
+        public string ShipCountry { get; set; }
+        public string ShipCity { get; set; }
+        public string ShipRegion { get; set; }
     }
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rNrpDiZEgFLkOPxe?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/htLpjMAsrilvEiin?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Enable different filter for a column
 
@@ -548,12 +557,12 @@ Here’s an example where the menu filter is enabled by default for all columns,
 <label>Select Column</label>
 <SfDropDownList TValue="string" TItem="string" Width="130px" Placeholder="Eg: OrderID" DataSource="@ColumnData">
     <DropDownListEvents TValue="string" TItem="string" ValueChange="onFieldChange"></DropDownListEvents>
-        </SfDropDownList>
+ </SfDropDownList>
 
 <label>Select Filter Type</label>
 <SfDropDownList TValue="string" TItem="string" Width="130px" Placeholder="Eg: Excel" Enabled="@flag" DataSource="@LocalData">
     <DropDownListEvents TValue="string" TItem="string" ValueChange="onTypeChange"></DropDownListEvents>
-        </SfDropDownList>
+</SfDropDownList>
 
 <SfGrid DataSource="@GridData" @ref="Grid" AllowFiltering="true" AllowPaging="true" Height="273px">
     <GridFilterSettings Type=" Syncfusion.Blazor.Grids.FilterType.Menu"></GridFilterSettings>
@@ -666,11 +675,11 @@ Here’s an example where the menu filter is enabled by default for all columns,
                     Orders.Add(new OrderData(OrderID + 2, "TOMSP", new DateTime(1996, 07, 06), 11.61, false));
                     Orders.Add(new OrderData(OrderID + 3, "HANAR", new DateTime(1996, 07, 06), 65.83, false));
                     Orders.Add(new OrderData(OrderID + 4, "VICTE", new DateTime(1996, 07, 06), 45.78, true));
-                Orders.Add(new OrderData(OrderID + 5, "SUPRD", new DateTime(1996, 07, 06), 98.6, true));
-                Orders.Add(new OrderData(OrderID + 6, "HANAR", new DateTime(1996, 07, 06), 103.45, false));
-                Orders.Add(new OrderData(OrderID + 7, "CHOPS", new DateTime(1996, 07, 06), 103.45, true));
+                    Orders.Add(new OrderData(OrderID + 5, "SUPRD", new DateTime(1996, 07, 06), 98.6, true));
+                    Orders.Add(new OrderData(OrderID + 6, "HANAR", new DateTime(1996, 07, 06), 103.45, false));
+                     Orders.Add(new OrderData(OrderID + 7, "CHOPS", new DateTime(1996, 07, 06), 103.45, true));
                     Orders.Add(new OrderData(OrderID + 8, "RICSU", new DateTime(1996, 07, 06), 112.48, true));
-                Orders.Add(new OrderData(OrderID + 9, "WELLI", new DateTime(1996, 07, 06), 33.45, false));
+                    Orders.Add(new OrderData(OrderID + 9, "WELLI", new DateTime(1996, 07, 06), 33.45, false));
                     OrderID += 9;
                 }
             }
@@ -690,7 +699,7 @@ Here’s an example where the menu filter is enabled by default for all columns,
 
 ## Change default filter operator for particular column
 
-The Syncfusion Grid component provides the flexibility to change the default filter operator for a particular column. By default, the filter operator for string-type columns is **StartsWith**, for numerical-type columns is **Equal**, and for boolean-type columns is also **Equal**. However, you may need to customize the filter operator to better match the nature of the data in a specific column. This can be achieved using the [Operator](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.FilterSettings.html#Syncfusion_Blazor_Grids_FilterSettings_Operator) property within the [GridFilterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_FilterSettings)  configuration.
+The Syncfusion Grid component provides the flexibility to change the default filter operator for a particular column. By default, the filter operator for string-type columns is **StartsWith**, for numerical-type columns is **Equal**, and for boolean-type columns is also **Equal**. However, you may need to customize the filter operator to better match the nature of the data in a specific column. This can be achieved using the [Operator](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.FilterSettings.html#Syncfusion_Blazor_Grids_FilterSettings_Operator) property within the [GridFilterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_FilterSettings) configuration.
 
 Here’s an example that demonstrates how to change the default filter operator column :
 
@@ -702,12 +711,12 @@ Here’s an example that demonstrates how to change the default filter operator 
 <label>Select Column</label>
 <SfDropDownList TValue="string" TItem="string" Width="130px" Placeholder="Eg: OrderID" DataSource="@ColumnData">
     <DropDownListEvents TValue="string" TItem="string" ValueChange="onFieldChange"></DropDownListEvents>
-        </SfDropDownList>
+</SfDropDownList>
 
 <label>Select Operator</label>
 <SfDropDownList TValue="string" TItem="string" Width="130px" Placeholder="Eg: Equal" Enabled="@flag" DataSource="@LocalData">
     <DropDownListEvents TValue="string" TItem="string" ValueChange="onOperatorChange"></DropDownListEvents>
-        </SfDropDownList>
+</SfDropDownList>
 
 <SfGrid DataSource="@GridData" @ref="Grid" AllowFiltering="true" Height="273px">
    
@@ -781,7 +790,7 @@ Here’s an example that demonstrates how to change the default filter operator 
                 break;
                 
             case "Freight":
-                customerIDFilterSettings = new FilterSettings { Operator = filterOperator };
+                FreightFilterSettings = new FilterSettings { Operator = filterOperator };
                 break;
 
             case "ShipCity":
@@ -848,7 +857,7 @@ Here’s an example that demonstrates how to change the default filter operator 
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hNVJZiimmQoQZjQZ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rtLTXCAsUitWDKfU?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Filter grid programmatically with single and multiple values using method
 
@@ -889,10 +898,12 @@ The following example demostrates, how to programmatically filter the Grid using
 
     public async Task onSingleValueFilter()
     {
+        await Grid.ClearFilteringAsync();
         await Grid.FilterByColumnAsync("OrderID", "equal", 10248);
     }
     public async Task onMultipleValueFilter()
     {
+        await Grid.ClearFilteringAsync();
         await Grid.FilterByColumnAsync("CustomerID", "equal", new List<string> { "VINET", "TOMSP", "ERNSH" });
     }
 }
@@ -947,7 +958,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LDrJtWsmqZbmEIGG?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rZVptiACLTgtLlbq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## How to get filtered records
 
@@ -1126,6 +1137,112 @@ To access these properties, you can use the [Filtered](https://help.syncfusion.c
         var FilterPredicates = args.FilterPredicates;
     }
 ```
+
+### Get filtered records when using remote data source
+
+Use the [GetFilteredRecordsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GetFilteredRecordsAsync) method to retrieve the details of the filtered records from the Grid component. The `GetFilteredRecordsAsync` method returns the filtered records in the form of objects when using a remote data source. So, you need to deserialize the object to retrieve the filtered records.
+
+```cshtml
+@using Syncfusion.Blazor.Data
+@using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor
+@using Syncfusion.Blazor.Buttons
+@using Newtonsoft.Json
+
+<div style="text-align : center; color: red">
+    <span>@message</span>
+</div>
+<br />
+
+<SfButton CssClass="e-success" OnClick="click">Get Filtered Data</SfButton>
+<SfButton CssClass="e-danger" OnClick="clear">Clear</SfButton>
+
+<SfGrid @ref="Grid" TValue="EmployeeData" ID="Grid" AllowFiltering="true" AllowPaging="true">
+    <GridPageSettings PageSize="10" PageCount="5"></GridPageSettings>
+    <GridEvents Filtering="FilteringHandler" TValue="EmployeeData"></GridEvents>
+    <SfDataManager Url="https://services.odata.org/V4/Northwind/Northwind.svc/Orders/" Adaptor="Adaptors.ODataV4Adaptor"></SfDataManager>
+    <GridColumns>
+        <GridColumn Field=@nameof(EmployeeData.OrderID) TextAlign="Syncfusion.Blazor.Grids.TextAlign.Center" HeaderText="Order ID" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(EmployeeData.CustomerID) TextAlign="Syncfusion.Blazor.Grids.TextAlign.Center" HeaderText="Customer Name" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(EmployeeData.ShipCity) TextAlign="Syncfusion.Blazor.Grids.TextAlign.Center" HeaderText="ShipCity" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(EmployeeData.ShipName) HeaderText="Ship Name" Width="100"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@if (showRecords == true)
+{
+    <h3> Filtered Records</h3>
+
+    <SfGrid DataSource="@FilterData" AllowFiltering="true" AllowPaging="true" Height="280px">
+        <GridPageSettings PageSize="10" PageCount="5"></GridPageSettings>
+        <GridColumns>
+            <GridColumn Field=@nameof(EmployeeData.OrderID) TextAlign="Syncfusion.Blazor.Grids.TextAlign.Center" HeaderText="Order ID" Width="120"></GridColumn>
+            <GridColumn Field=@nameof(EmployeeData.CustomerID) TextAlign="Syncfusion.Blazor.Grids.TextAlign.Center" HeaderText="Customer Name" Width="130"></GridColumn>
+            <GridColumn Field=@nameof(EmployeeData.ShipCity) TextAlign="Syncfusion.Blazor.Grids.TextAlign.Center" HeaderText="ShipCity" Width="120"></GridColumn>
+            <GridColumn Field=@nameof(EmployeeData.ShipName) HeaderText="Ship Name" Width="100"></GridColumn>
+        </GridColumns>
+
+    </SfGrid>
+}
+
+@code {
+    SfGrid<EmployeeData> Grid;
+
+    public List<EmployeeData> FilterData { get; set; }
+
+    public bool flag = false;
+    public bool showRecords = false;
+
+    public string message;
+
+    public async Task click()
+    {
+        if (flag == true)
+        {
+            var filteredData = await Grid.GetFilteredRecordsAsync();
+            List<EmployeeData> filteredList = JsonConvert.DeserializeObject<List<EmployeeData>>(JsonConvert.SerializeObject(filteredData));
+            FilterData = filteredList;
+            showRecords = true;
+            message = "";
+        }
+
+        else
+        {
+            showRecords = false;
+            message = "No Records is filtered ";
+        }
+
+    }
+    public async Task clear()
+    {
+        await Grid.ClearFilteringAsync();
+        showRecords = false;
+    }
+
+    public async Task FilteringHandler(FilteringEventArgs args)
+
+    {
+        if (args.FilterPredicates != null)
+        {
+            flag = true;
+        }
+        else
+        {
+            flag = false;
+        }
+    }
+   
+    public class EmployeeData
+    {
+        public int OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public string ShipCity { get; set; }
+        public string ShipName { get; set; }
+    }
+}
+```
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rXLTXiUChxbmPDxX?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}.
 
 ## Clear filtering using methods
 
@@ -1330,51 +1447,6 @@ public class OrderData
 {% endtabs %}
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LjVJDMMmLnklDAQG?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-## Get filtered records when using remote data source
-
-Use the [GetFilteredRecordsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GetFilteredRecordsAsync) method to retrieve the details of the filtered records from the Grid component. The `GetFilteredRecordsAsync` method returns the filtered records in the form of objects when using a remote data source. So, you need to deserialize the object to retrieve the filtered records.
-
-```cshtml
-@using Syncfusion.Blazor.Data
-@using Syncfusion.Blazor.Grids
-@using Syncfusion.Blazor.Buttons
-@using Newtonsoft.Json
-
-<SfButton OnClick="Click">GetFilteredRecord</SfButton>
-
-<SfGrid @ref="Grid" TValue="EmployeeData" ID="Grid" AllowFiltering="true" AllowPaging="true">
-    <SfDataManager Url="https://services.odata.org/V4/Northwind/Northwind.svc/Orders/" Adaptor="Adaptors.ODataV4Adaptor"></SfDataManager>
-    <GridColumns>
-        <GridColumn Field=@nameof(EmployeeData.OrderID) TextAlign="Syncfusion.Blazor.Grids.TextAlign.Center" HeaderText="Order ID" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(EmployeeData.CustomerID) TextAlign="Syncfusion.Blazor.Grids.TextAlign.Center" HeaderText="Customer Name" Width="130"></GridColumn>
-        <GridColumn Field=@nameof(EmployeeData.ShipCity) TextAlign="Syncfusion.Blazor.Grids.TextAlign.Center" HeaderText="ShipCity" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(EmployeeData.ShipName) HeaderText="Ship Name" Width="100"></GridColumn>
-    </GridColumns>
-</SfGrid>
-
-@code {
-    SfGrid<EmployeeData> Grid;
-    public int? counting;
-
-    public async Task Click()
-    {
-        var filteredData = await Grid.GetFilteredRecordsAsync();
-        List<EmployeeData> filteredList = JsonConvert.DeserializeObject<List<EmployeeData>>(JsonConvert.SerializeObject(filteredData));
-        
-    }
-
-    public class EmployeeData
-    {
-        public int OrderID { get; set; }
-        public string CustomerID { get; set; }
-        public string ShipCity { get; set; }
-        public string ShipName { get; set; }
-    }
-}
-```
-
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BjBzDWVCvyCgZBXF?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}.
 
 ## Filter enum column
 
