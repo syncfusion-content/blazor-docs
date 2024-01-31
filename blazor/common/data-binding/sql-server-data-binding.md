@@ -18,24 +18,356 @@ This topic gives a clear idea about how to consume data from [SQL Server](https:
 The following software are needed:
 
 * Microsoft.EntityFrameworkCore.SqlServer
-* Visual Studio 2019 v16.9.0 or later
-* .NET SDK 5.0 or later.
+* Visual Studio 2022
+* .NET 6.0 or later.
 
+## Create the database
+
+Open Visual Studio , select **View -> SQL Server Object Explorer**. Right-click on the Databases folder to create a new Database and name it as OrdersDetails.
+
+![Add new database in Blazor](../images/odata-add-db.png)
+![Adding database name and location in Blazor](../images/odata-db-name.png)
+
+Right-click on the **Tables** folder of the created database and click **Add New Table**.
+
+![Add table in Blazor](../images/odata-add-table.png)
+
+Use the following query to add a new table named **Orders**.
+
+```
+Create Table Orders(
+ OrderID BigInt Identity(1,1) Primary Key Not Null,
+ CustomerID Varchar(100) Not Null,
+ Freight int Null,
+ OrderDate datetime null
+)
+```
+
+Now, the Orders table design will look like below. Click on the **Update** button.
+
+![Database table design in Blazor](../images/odata-table-design.png)
+
+Now, click on **Update Database**.
+
+![Update database in Blazor](../images/odata-update-db.png)
+
+## Creating Blazor Web App
+
+Open Visual Studio and follow the steps in the [documentation](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0&pivots=windows) to create the Blazor Web App.
+
+You need to configure the corresponding [Interactive render mode](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-8.0#render-modes) and [Interactivity location](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0&pivots=windows) while creating a Blazor Web Application.
+
+### Generate model class and API services from the database
+
+Now, you need to add **model classes** from the existing **OrdersDetails** database. To work with the SQL Server database in our application, install the following NuGet packages.If you have created a Blazor Web App with the `Interactive render mode` set to `WebAssembly` or `Auto` ensure to follow these steps:
+
+* Create the new project with Class Library template named as `BlazorWebApp.Shared` for model class and API services as shown below.
+
+![Create Shared Project](../images/db-shared-project.png)
+
+  Additionally, ensure that you have added a reference to the `BlazorWebApp.Shared` project in both the server-side and client-side projects of your web application.
+
+* Then, open the NuGet Package Manager and install the following packages in both the shared and server-side projects of your Blazor Web App.
+
+   * [Microsoft.EntityFrameworkCore.Tools](https://www.nuget.org/packages/Microsoft.EntityFrameworkCore.Tools): This package creates database context and model classes from the database.
+   * [Microsoft.EntityFrameworkCore.SqlServer](https://www.nuget.org/packages/Microsoft.EntityFrameworkCore.SqlServer/): The database provider that allows Entity Framework Core to work with SQL Server.
+
+   Alternatively, you can utilize the following package manager command to achieve the same.
+
+{% tabs %}
+{% highlight C# tabtitle="Package Manager" %}
+
+Install-Package Microsoft.EntityFrameworkCore.Tools -Version 7.0.11
+
+Install-Package Microsoft.EntityFrameworkCore.SqlServer -Version 7.0.11
+
+{% endhighlight %}
+{% endtabs %}
+
+* Once the above packages are installed, you can add the following classes in the `BlazorWebApp.Shared` project  like shown below,
+
+![Create Client Side Services](../images/db-models-services.png)
+
+{% tabs %}
+{% highlight C# tabtitle="Order.cs" %}
+
+public class Order
+{
+    public int? OrderID { get; set; }
+
+    public string CustomerID { get; set; }
+
+    public int? Freight { get; set; }
+
+    public DateTime? OrderDate { get; set; }
+}
+
+{% endhighlight %}
+{% highlight C# tabtitle="ClientServices.cs" %}
+
+public class ClientServices
+{
+    private readonly HttpClient _httpClient;
+
+    public ClientServices ( HttpClient httpClient )
+    {
+        _httpClient = httpClient;
+
+    }
+
+    public async Task<List<Order>> GetOrders (int skip, int take)
+    {
+        var apiUrl = $"https://localhost:7223/api/DataGrid?skip={skip}&take={take}";
+        var result = await _httpClient.GetFromJsonAsync<List<Order>>(apiUrl);
+        return result;
+    }
+
+
+    public async Task<object> InsertOrder ( object value)
+    {
+        string apiUrl = $"https://localhost:7223/api/DataGrid/";
+
+        await _httpClient.PostAsJsonAsync<object>(apiUrl, value);
+        return value;
+    }
+    public async Task<object> RemoveOrder ( object value )
+    {
+        await _httpClient.DeleteAsync($"https://localhost:7223/api/DataGrid/{value}");
+        return value;
+    }
+
+    public async Task<object> UpdateOrder ( object value)
+    {
+
+            string apiUrl = $"https://localhost:7223/api/DataGrid/";
+            await _httpClient.PutAsJsonAsync<object>(apiUrl, value);
+            return value;
+    }
+    public async Task<int> GetOrderCountAsync ()
+    {
+        var response = await _httpClient.GetAsync("https://localhost:7223/api/DataGrid/OrderCount");
+
+        if (response.IsSuccessStatusCode)
+        {
+            // Assuming the API returns an integer value for Order count
+            int OrderCount = await response.Content.ReadFromJsonAsync<int>();
+            return OrderCount;
+        }
+        else
+        {
+            // Handle the error response
+            // You might want to return a default value or throw an exception
+            return 0;
+        }
+
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+ Here, `ClientServices` class will be responsible for interacting with the server-side API to perform operations such as retrieving data, inserting a new data, removing a data, and updating a data.
+
+* Additionally, make sure to register the `ClientServices` class in `Program.cs` files of both server & client side project.
+
+```
+....
+builder.Services.AddScoped<ClientServices>();
+
+```
+N> To ensure the using correct your's localhost portable number in code snippet.
+
+* Next, ensure the `BaseUri` added in the **appsettings.json** file of server side project of your Web App.
+
+```
+{
+ // your app localhost
+  "BaseUri": "https://localhost:7223",
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft.AspNetCore": "Warning"
+    }
+  },
+  "AllowedHosts": "*"
+}
+
+```
+* Add the following code snippet to configure a scoped HttpClient with a base address in **Program.cs** file in server side application.
+
+{% tabs %}
+{% highlight c# tabtitle="~/Program.cs" hl_lines="1 2 3 4" %}
+
+builder.Services.AddScoped(http => new HttpClient { BaseAddress = new Uri(builder.Configuration.GetSection("BaseUri").Value!) });
+
+{% endhighlight %}
+{% endtabs %}
+
+* Crete the `DataGridController` in server side application for handle CRUD (Create, Read, Update, Delete) operations for the Order entity.
+
+```cshtml
+namespace BlazorWebApp.Controller
+{
+
+    [Route("api/[controller]")]
+    [ApiController]
+    public class DataGridController : ControllerBase
+    {
+        public static DataSet CreateCommand(string queryString, string connectionString)
+        {
+            using (SqlConnection connection = new SqlConnection(
+                       connectionString))
+            {
+                SqlDataAdapter adapter = new SqlDataAdapter(queryString, connection);
+                DataSet dt = new DataSet();
+                try
+                {
+                    connection.Open();
+
+                    // Using sqlDataAdapter, we process the query string and fill the data into the dataset
+
+                    adapter.Fill(dt);
+                }
+                catch (SqlException se)
+                {
+                    Console.WriteLine(se.ToString());
+                }
+                finally
+                {
+                    connection.Close();
+                }
+                return dt;
+            }
+        }
+
+
+        // GET: api/<DataGridController>
+        [HttpGet]
+        public async Task<ActionResult<List<Order>>> Get (int skip, int take)
+        {
+
+            string ConnectionStr = $"Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=D:\\VIDEOTEAM\\BLAZOR UG\\IMPLEMENTATION\\BINDDATAUSINGSQL\\SERVERRENDERMODE\\APP_DATA\\NORTHWND.MDF;Integrated Security=True;Connect Timeout=30";
+
+            // Here, we formed the SQL query string based on the skip and take count from the DataManagerRequest
+
+            string QueryStr = "SELECT OrderID, CustomerID FROM dbo.Orders ORDER BY OrderID OFFSET " + skip + " ROWS FETCH NEXT " + take + " ROWS ONLY;";
+            DataSet Data = CreateCommand(QueryStr, ConnectionStr);
+            Orders = Data.Tables[0].AsEnumerable().Select(r => new Order
+            {
+                OrderID = r.Field<int>("OrderID"),
+                CustomerID = r.Field<string>("CustomerID")
+            }).ToList();  // Here, we convert dataset into list
+            List<Order> DataSource = Orders;
+            return (DataSource);
+        }
+
+        [HttpGet("OrderCount")]
+        public async Task<ActionResult<int>> GetOrderCountAsync ()
+        {
+            string ConnectionStr = $"Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=D:\\VIDEOTEAM\\BLAZOR UG\\IMPLEMENTATION\\BINDDATAUSINGSQL\\SERVERRENDERMODE\\APP_DATA\\NORTHWND.MDF;Integrated Security=True;Connect Timeout=30";
+
+            SqlConnection Con = new SqlConnection(ConnectionStr);
+            Con.Open();
+            SqlCommand Cmd = new SqlCommand("SELECT COUNT(*) FROM dbo.Orders", Con);
+            Int32 Count = (Int32)Cmd.ExecuteScalar();
+            return Ok(Count);
+        }
+        // GET api/<DataGridController>/5
+        [HttpGet("{id}")]
+        public string Get ( int id )
+        {
+            return "value";
+        }
+
+        // POST api/<DataGridController>
+        [HttpPost]
+        public void Post([FromBody] object value)
+        {
+            Order order = Newtonsoft.Json.JsonConvert.DeserializeObject<Order>(value.ToString());
+            string ConnectionStr = $"Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=D:\\VIDEOTEAM\\BLAZOR UG\\IMPLEMENTATION\\BINDDATAUSINGSQL\\SERVERRENDERMODE\\APP_DATA\\NORTHWND.MDF;Integrated Security=True;Connect Timeout=30";
+            string QueryStr = $"Insert into Orders(CustomerID) values('{order.CustomerID}')";
+            SqlConnection Con = new SqlConnection(ConnectionStr);
+            try
+            {
+                Con.Open();
+                SqlCommand Cmd = new SqlCommand(QueryStr, Con);
+                Cmd.ExecuteNonQuery();
+            }
+            catch (SqlException Exception)
+            {
+                Console.WriteLine(Exception.ToString());
+            }
+            finally
+            {
+                Con.Close();
+            }
+
+        }
+
+        // PUT api/<DataGridController>/5
+        [HttpPut]
+        public void Put([FromBody] object value)
+        {
+            Order order = Newtonsoft.Json.JsonConvert.DeserializeObject<Order>(value.ToString());
+            string ConnectionStr = $"Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=D:\\VIDEOTEAM\\BLAZOR UG\\IMPLEMENTATION\\BINDDATAUSINGSQL\\SERVERRENDERMODE\\APP_DATA\\NORTHWND.MDF;Integrated Security=True;Connect Timeout=30";
+            string QueryStr = $"Update Orders set CustomerID='{order.CustomerID}' where OrderID={order.OrderID}";
+            SqlConnection Con = new SqlConnection(ConnectionStr);
+            try
+            {
+                Con.Open();
+                SqlCommand Cmd = new SqlCommand(QueryStr, Con);
+                Cmd.ExecuteNonQuery();
+            }
+            catch (SqlException Exception)
+            {
+                Console.WriteLine(Exception.ToString());
+            }
+            finally
+            {
+                Con.Close();
+            }
+
+        }
+
+        // DELETE api/<DataGridController>/5
+        [HttpDelete("{id}")]
+        public void Delete(int id)
+        {
+
+            string ConnectionStr = $"Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=D:\\VIDEOTEAM\\BLAZOR UG\\IMPLEMENTATION\\BINDDATAUSINGSQL\\SERVERRENDERMODE\\APP_DATA\\NORTHWND.MDF;Integrated Security=True;Connect Timeout=30";
+            string QueryStr = $"Delete from Orders where OrderID={id}";
+            SqlConnection Con = new SqlConnection(ConnectionStr);
+            try
+            {
+                Con.Open();
+                SqlCommand Cmd = new SqlCommand(QueryStr, Con);
+                Cmd.ExecuteNonQuery();
+            }
+            catch (SqlException Exception)
+            {
+                Console.WriteLine(Exception.ToString());
+            }
+            finally
+            {
+                Con.Close();
+            }
+
+        }
+
+    }
+
+}
+
+```
 ## Create Blazor Server Application
 
 Open Visual Studio and follow the steps in the [documentation](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio) to create the Blazor Server Application.
 
 ## Add Syncfusion Blazor DataGrid package
 
-The SQL server data binding process using the Blazor DataGrid component and the method of performing the CRUD operations in it are explained as follows.
+To add **Blazor DataGrid** component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/).
 
-The first approach is to install the necessary packages alone. Now, right-click Dependencies in the project and select Manage NuGet Packages.
-
-![Add Syncfusion Blazor DataGrid package](../images/SQLServer-InstallNuGet.png)
-
-Now, in the Browse tab, search and install the Syncfusion.Blazor.Grid NuGet package.
-
-![Add Syncfusion Blazor DataGrid package](../images/SQLServer-BrowserGrid.png)
+If you utilize `WebAssembly or Auto` render modes in the Blazor Web App need to be install Syncfusion Blazor components NuGet packages within the client project.
 
 Alternatively, you can utilize the following package manager command to achieve the same.
 
@@ -43,14 +375,14 @@ Alternatively, you can utilize the following package manager command to achieve 
 {% highlight C# tabtitle="Package Manager" %}
 
 Install-Package Syncfusion.Blazor.Grid -Version {{ site.releaseversion }}
+Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
 
 {% endhighlight %}
 {% endtabs %}
 
+N> Syncfusion Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for available NuGet packages list with component details.
 
-## Adding Syncfusion Blazor DataGrid Component into the application
-
-Open **_Import.razor** file and add the following namespaces which are required to use Syncfusion Blazor DataGrid Component in this application.
+Open **~/_Imports.razor** file and import the following namespace.
 
 {% highlight razor %}
 
@@ -59,43 +391,73 @@ Open **_Import.razor** file and add the following namespaces which are required 
 
 {% endhighlight %}
 
-Open **Program.cs** file in .NET 6 and .NET 7 application and register the Syncfusion service.
+Now, register the Syncfusion Blazor Service in the **~/Program.cs** file of your App.
+
+For a Blazor Web App with `WebAssembly` or `Auto (Server and WebAssembly)` interactive render mode, register the Syncfusion Blazor service in both **~/Program.cs** files of your web app.
+
+```cshtml
+
+....
+using Syncfusion.Blazor;
+....
+builder.Services.AddSyncfusionBlazor();
+....
+
+```
+
+Themes provide life to components. Syncfusion Blazor has different themes. They are:
+
+* Bootstrap5
+* Material 3
+* Tailwind CSS
+* High Contrast
+* Fluent
+
+In this demo application, the latest theme will be used.
+
+  * For **Blazor Web App**,  refer stylesheet inside the `<head>` of **~/Components/App.razor** file for .NET 8.
+
+  * For **Blazor WebAssembly application**, refer stylesheet inside the `<head>` element of **wwwroot/index.html** file.
+  * For **Blazor Server application**, refer stylesheet inside the `<head>` element of
+    * **~/Pages/_Host.cshtml** file for .NET 7.
+    * **~/Pages/_Layout.cshtml** file for .NET 6.
+
+{% highlight cshtml %}
+
+<link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
+
+{% endhighlight %}
+
+Also, Include the script reference at the end of the `<body>` of **~/Components/App.razor**(For Blazor Web App) or **Pages/_Host.cshtml** (for Blazor Server App) file as shown below:
+
+```html
+<body>
+    ....
+    <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
+</body>
+```
+## Add Syncfusion Blazor DataGrid component to an application
+
+In previous steps, you have successfully configured the Syncfusion Blazor package in the application. Now, you can add the grid component to the to the `.razor` page inside the `Pages` folder.
+
+If you have set the interactivity location to `Per page/component` in the web app, ensure that you define a render mode at the top of the Syncfusion Blazor component-included razor page as follows:
 
 {% tabs %}
-{% highlight c# tabtitle=".NET 6 & .NET 7 (~/Program.cs)" %}
+{% highlight razor %}
 
-builder.Services.AddRazorPages();
-builder.Services.AddServerSideBlazor();
-builder.Services.AddSingleton<WeatherForecastService>();
-builder.Services.AddSyncfusionBlazor();
+@* Your App render mode define here *@
+@rendermode InteractiveAuto
 
 {% endhighlight %}
 {% endtabs %}
 
-Themes provide life to components. Syncfusion Blazor has different themes. They are as follows:
-
-* Bootstrap4
-* Material
-* Office 365
-* Bootstrap
-* High Contrast
-
-To add the theme, open the **Pages/_Host.cshtml** file and add the following CSS reference code.
-
-{% highlight cshtml %}
-
-<link href="_content/Syncfusion.Blazor/styles/bootstrap4.css" rel="stylesheet" />
-
-{% endhighlight %}
-
-In previous steps, Syncfusion Blazor DataGrid package is successfully configured in the application. Now, add the DataGrid Component to the **Index.razor**.
-
+{% tabs %}
 {% highlight razor %}
 
-<SfGrid TValue="Order" AllowPaging="true">
-</SfGrid >
+<SfGrid TValue="Order"></SfGrid>
 
 {% endhighlight %}
+{% endtabs %}
 
 ## Binding SQL data to the Blazor DataGrid Component
 
@@ -104,7 +466,30 @@ Now, get the SQL data from the SQL server and bind it to the DataGrid component 
 Grid columns can be defined using the [GridColumn](https://blazor.syncfusion.com/documentation/datagrid/columns) component. Create columns using the following code. The properties used and their usage are discussed below.
 
 {% tabs %}
-{% highlight razor tabtitle="~/Index.razor"%}
+{% highlight razor tabtitle="Blazor Web App"%}
+
+@* Your App render mode define here *@
+@rendermode InteractiveAuto
+@using BlazorWebApp.Shared.Data
+
+<SfGrid @ref="Grid" TValue="Order" AllowPaging="true">
+    <SfDataManager Adaptor="Adaptors.CustomAdaptor">
+        <CustomAdaptorComponent></CustomAdaptorComponent>
+    </SfDataManager>
+    <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true"></GridEditSettings>
+    <GridColumns>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID"  IsIdentity="true" IsPrimaryKey="true" TextAlign="TextAlign.Right" Width="120">
+        </GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
+    </GridColumns>
+</SfGrid>
+@code{
+    SfGrid<Order> Grid { get; set; }
+    public static List<Order> Orders { get; set; }
+}
+
+{% endhighlight %}
+{% highlight razor tabtitle="Blazor Server App"%}
 
 <SfGrid @ref="Grid" TValue="Order" AllowPaging="true" >
     <SfDataManager Adaptor="Adaptors.CustomAdaptor">
@@ -138,8 +523,42 @@ In the custom adaptor’s **Read** method, you can get the Grid action details l
 
 * Return the response in Result and Count pair object in Read method to bind the data to the DataGrid.
 
-{% highlight razor %}
+{% tabs %}
+{% highlight razor tabtitle="Blazor Web App"%}
+[CustomAdaptorComponent.razor]
+@using Newtonsoft.Json
+@using BlazorWebApp.Shared.Data;
+@using Microsoft.Data.SqlClient;
+@using System.Data;
+@using System.IO;
+@using Microsoft.AspNetCore.Hosting;
+@inherits DataAdaptor<Order>
+@using BlazorWebApp.Shared.Services;
 
+<CascadingValue Value="@this">
+    @ChildContent
+</CascadingValue>
+
+@code {
+    [Parameter]
+    [JsonIgnore]
+    public RenderFragment ChildContent { get; set; }
+
+
+
+    ClientServices OrderDetails = new ClientServices(new HttpClient());
+    public override async Task<object> ReadAsync ( DataManagerRequest dataManagerRequest, string key = null )
+    {
+        List<Order> orders = await OrderDetails.GetOrders(dataManagerRequest.Skip, dataManagerRequest.Take);
+        int count = await OrderDetails.GetOrderCountAsync();
+        return dataManagerRequest.RequiresCounts ? new DataResult() { Result = orders, Count = count } : count;
+    }
+
+}
+
+{% endhighlight %}
+{% highlight razor tabtitle="Blazor Server App"%}
+[CustomAdaptorComponent.razor]
 [CustomAdaptorComponent.razor]
 
 @using Syncfusion.Blazor;
@@ -218,6 +637,7 @@ string ConnectionStr = $"Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename='{
 }
 
 {% endhighlight %}
+{% endtabs %}
 
 While running the application, the grid will be displayed as follows.
 
@@ -252,8 +672,17 @@ Let’s see how to perform CRUD operation using SQL server data with Syncfusion 
 
 To Perform the Insert operation, override the Insert/InsertAsync method of the custom adaptor and add the following code in the CustomAdaptorComponent.razor.
 
-{% highlight c# %}
+{% tabs %}
+{% highlight razor tabtitle="Blazor Web App"%}
 
+public override async Task<object> InsertAsync(DataManager DataManager, object Value, string Key)
+{
+    await OrderDetails.InsertOrder(Value);
+    return Value;
+}
+
+{% endhighlight %}
+{% highlight razor tabtitle="Blazor Server App"%}
 // Performs Insert operation
 //You will get the DataManager instance in the DataManager parameter
 //You will get the record in the Value parameter
@@ -283,8 +712,8 @@ public override object Insert(DataManager DataManager, object Value, string Key)
     }
     return Value;
 }
-
 {% endhighlight %}
+{% endtabs %}
 
 The resultant grid will look like below.
 
@@ -294,7 +723,18 @@ The resultant grid will look like below.
 
 To Perform the Update operation, override the Update/UpdateAsync method of the custom adaptor and add the following code in the CustomAdaptorComponent.razor.
 
-{% highlight c# %}
+{% tabs %}
+{% highlight razor tabtitle="Blazor Web App"%}
+
+// Performs Update operation
+public override async Task<object> Update(DataManager dm, object value, string keyField, string key)
+{
+    await OrderDetails.UpdateOrder(value);
+    return value;
+}
+
+{% endhighlight %}
+{% highlight razor tabtitle="Blazor Server App"%}
 
 // Performs Update operation
 //You will get the DataManager instance in the DataManager parameter
@@ -326,6 +766,7 @@ public override object Update(DataManager DataManager, object Value, string KeyF
 }
 
 {% endhighlight %}
+{% endtabs %}
 
 The resultant grid will look like below.
 
@@ -335,7 +776,17 @@ The resultant grid will look like below.
 
 To Perform the Delete operation, override the Remove/RemoveAsync method of the custom adaptor and add the following code in the CustomAdaptorComponent.razor.
 
-{% highlight c# %}
+{% tabs %}
+{% highlight razor tabtitle="Blazor Web App"%}
+
+public override async Task<object> RemoveAsync(DataManager dm, object value, string keyField, string key)
+{
+    await OrderDetails.RemoveOrder(value);
+    return value;
+}
+
+{% endhighlight %}
+{% highlight razor tabtitle="Blazor Server App"%}
 
 // Performs Remove operation
 //You will get the DataManager instance in the DataManager parameter
@@ -368,6 +819,7 @@ public override object Remove(DataManager DataManager, object Value, string KeyF
 }
 
 {% endhighlight %}
+{% endtabs %}
 
 The resultant grid will look like below.
 
