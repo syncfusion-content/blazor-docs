@@ -15,7 +15,7 @@ In this topic, you can learn how to consume data from [gRPC](https://grpc.io/) s
 
 The following software are needed,
 
-* Visual Studio 2022 or later.
+* Visual Studio 2022.
 * .NET 6.0 or later.
 
 ## Creating Blazor server-side application
@@ -56,6 +56,7 @@ To add a proto file, **Right-click** the **Shared** project, go to **Add**, and 
 Remove the boiler plate code in the file. Copy the following code and paste it into your proto file.
 
 ```c#
+
 syntax = "proto3";
 
 import "google/protobuf/empty.proto";
