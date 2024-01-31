@@ -423,13 +423,12 @@ Format|Formatted value
 -----|-----
 Type="ColumnType.Date" Format="dd/MM/yyyy" | 04/07/1996
 Type="ColumnType.Date" Format="dd.MM.yyyy" | 04.07.1996
-Type="ColumnType.Date" Format="dMM/dd/yyyy hh:mm tt" | 04/07/1996 12:00 AM
-Type="ColumnType.Date" Format="dMM/dd/yyyy hh:mm:ss tt" | 04/07/1996 12:00 AM
+Type="ColumnType.Date" Format="MM/dd/yyyy hh:mm tt" | 04/07/1996 12:00 AM
+Type="ColumnType.DateTime" Format="MM/dd/yyyy hh:mm:ss tt" | 04/07/1996 12:00:00 AM
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids
-@using BlazorApp1.Data
 
 <SfGrid DataSource="@Orders" AllowPaging="true" Height="315">
     <GridColumns>
@@ -449,17 +448,16 @@ Type="ColumnType.Date" Format="dMM/dd/yyyy hh:mm:ss tt" | 04/07/1996 12:00 AM
 }
 {% endhighlight %}
 {% highlight c# tabtitle="OrderData.cs" %}
-    public class OrderData
+   public class OrderData
     {
         public static List<OrderData> Orders = new List<OrderData>();
         public OrderData()
         {
 
         }
-        public OrderData(int? OrderID, string CustomerID, double Freight,DateTime? OrderDate)
+        public OrderData(int? OrderID, double Freight,DateTime? OrderDate)
         {
-            this.OrderID = OrderID;
-            this.CustomerID = CustomerID;   
+            this.OrderID = OrderID;  
             this.Freight = Freight;  
             this.OrderDate = OrderDate;           
         }
@@ -492,7 +490,7 @@ Type="ColumnType.Date" Format="dMM/dd/yyyy hh:mm:ss tt" | 04/07/1996 12:00 AM
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rXhAMZKWitcsyBzO?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDBfjiANzmsqgKzp?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 > To learn more about date formatting, you can refer to [Date formatting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ColumnType.html#Syncfusion_Blazor_Grids_ColumnType_Date).
 
