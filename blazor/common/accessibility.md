@@ -11,33 +11,194 @@ documentation: ug
 
 All the Syncfusion Blazor components follow the WAI-ARIA accessibility standard by default. This enables you to build accessible web applications, which are fully navigable by users with disabilities.
 
-## Section 508
+## Accessibility overview
 
-Section 508 is part of the U.S. Rehabilitation Act of 1973 introduced in 1998, requires Federal agencies to make their electronic and information technology (EIT) accessible to people with disabilities. This law defines the need for both members of the public and Federal employees in all Federal agencies to have access to, develop, maintain, procure, or use electronic and information technology. Under Section 508, Federal agencies must develop a website that can be used by people with disabilities.
+Accessibility in components refers to the practice of designing and building user interface elements in a way that makes them accessible to users with disabilities. This can include a variety of things, such as making sure that text is high-contrast and easy to read, providing alternative text for images, and designing controls and interactions that can be used with a keyboard or assistive technology.
 
-N> All our Syncfusion Blazor components comply with the standard of Section 508 accessibility by default. This enables you to build accessible web applications, which are fully navigable by users with disabilities.
+## Accessibility standards
 
-## Keyboard navigation
+The component is said to be accessible when it is constructed in accordance with certain standards that are required to make it accessible.
 
-Keyboard navigation support enables users to interact with components using keyboard shortcuts. Each component has its own set of shortcuts. Refer to the following documents to get the details of each component.
+The accessibility of the components consists of the following standards and aspects:
 
-* [Accordion](../accordion/accessibility)
-* [AutoComplete](../autocomplete/accessibility)
-* [Calendar](../calendar/accessibility)
-* [CheckBox](../check-box/accessibility)
-* [Chip](../chip/accessibility)
-* [Circular Gauge](../circular-gauge/accessibility)
-* [ColorPicker](../color-picker/accessibility)
-* [ComboBox](../combobox/accessibility)
-* [ContextMenu](../context-menu/accessibility)
-* [Dashboard Layout](../dashboard-layout/accessibility)
-* [DatePicker](../datepicker/accessibility)
-* [DateRangePicker](../daterangepicker/accessibility)
-* [DateTimePicker](../datetime-picker/accessibility)
-* [Dialog](../dialog/accessibility)
-* [DropDownButton](../drop-down-button/accessibility)
-* [DropDownList](../dropdown-list/accessibility)
-* [FileManager](../file-manager/accessibility)
-* [Grid](../datagrid/accessibility)
-* [Linear Gauge](../linear-gauge/accessibility)
-* [List Box](../listbox/accessibility)
+[ADA](https://www.ada.gov/) - A law to ensure that people with disabilities have the same opportunities and access as people without disabilities.
+
+[WCAG 2.2](https://www.w3.org/WAI/standards-guidelines/wcag/) - The Web Content Accessibility Guidelines (WCAG) provide guidelines developed by the World Wide Web Consortium (W3C) to ensure web content is accessible to people with disabilities. WCAG 2.2 establishes a framework of accessibility principles and their associated success criteria. The level of accessibility conformance achieved by a web application is determined by the extent to which it meets these success criteria, categorized into three levels: A, AA, and AAA.
+
+[Section 508](https://www.section508.gov/) - It is a set of guidelines for making electronic and information technology (EIT) accessible to people with disabilities. These standards apply to federal agencies in the United States, and they are based on the Web Content Accessibility Guidelines (WCAG).
+
+[WAI-ARIA](https://www.w3.org/WAI/ARIA/) - WAI-ARIA stands for “Web Accessibility Initiative - Accessible Rich Internet Applications.” It is a set of technical specifications and guidelines developed by the World Wide Web Consortium (W3C) as part of the Web Accessibility Initiative (WAI). WAI-ARIA is designed to enhance the accessibility of dynamic web content, particularly web applications and rich internet applications (RIAs), for people with disabilities. WAI-ARIA provides a set of roles, states, and properties that can be added to HTML elements to provide additional context and information about the purpose and behavior of those elements. This can help assistive technologies better understand and interpret web content and interact with web applications.
+
+[Keyboard navigation](https://www.w3.org/TR/WCAG22/#keyboard-accessible) - It refers to the ability to use a keyboard to interact with and navigate through a user interface. It is an important aspect of web accessibility, as it allows people who cannot use a mouse or other pointing device to access and use web content and applications.
+
+Syncfusion Blazor components adhere to these established standards.
+
+## Accessibility compliance
+
+The accessibility support provided by Syncfusion Blazor components is based on a collection of methodologies for adhering to and [applying recognized standards and technical specifications](#accessibility-standards) to ensure an intuitive experience for people with disabilities.
+
+There are several methodologies of accessibility validation that can be performed on the Syncfusion Blazor components, such as:
+
+The [WAI-ARIA patterns](https://www.w3.org/WAI/ARIA/apg/patterns/) are followed by the Syncfusion Blazor components to enable appreciable accessibility.
+
+Each Blazor component is subjected to manual testing with a screen reader and also automated test cases to ensure the component’s required attributes.
+
+Attributes are allocated and updated correctly during interaction as well. Each component has been assigned a distinct `Role` attribute and its own set of ARIA attributes defined by the [WCAG 2.2](https://www.w3.org/TR/WCAG22/) specification.
+
+In addition to the methodologies mentioned above, Syncfusion Blazor components are constructed to support the following accessibility aspects.
+
+### Screen reader support
+
+A screen reader allows people who are blind or visually impaired to use a computer by reading aloud the text that is displayed on the screen. Syncfusion Blazor components followed the [WAI-ARIA](https://www.w3.org/WAI/ARIA/) standards to work properly in the screen readers such as [Narrator](https://support.microsoft.com/en-us/windows/complete-guide-to-narrator-e4397a0d-ef4f-b386-d8ae-c172f109bdb1) for Windows and [Embedded VoiceOver](https://support.apple.com/en-in/guide/voiceover/vo2706/mac) for MAC.
+
+### Right-To-Left support
+
+Right-to-Left (RTL) support allows applications to effectively communicate with users who use languages that are written from right to left, such as Arabic, Hebrew, etc. Syncfusion Blazor components support the Right-to-Left feature. Refer to the [Right-to-Left documentation](https://blazor.syncfusion.com/documentation/common/right-to-left) to learn more about this support.
+
+### Color contrast
+
+Syncfusion Blazor components come equipped with [predefined themes](https://blazor.syncfusion.com/documentation/appearance/themes) that guarantee the presence of satisfactory color contrast, benefiting individuals with visual impairments.
+
+### Mobile device support
+
+Syncfusion Blazor components are more user-friendly and accessible to individuals using mobile devices, including those with disabilities. These are designed to be responsive, adaptable to various screen sizes and orientations, and touch-friendly.
+
+### Keyboard navigation support
+
+Syncfusion Blazor components support keyboard navigation, allowing users who rely on alternate methods to effortlessly navigate and interact with the component.
+
+## Ensuring accessibility
+
+Ensuring the accessibility of Syncfusion Blazor components is crucial for making the product inclusive and user-friendly for individuals with disabilities. This process involves various types of accessibility testing, including:
+
+* **Automated testing**: The Syncfusion Blazor component's accessibility levels are ensured through an [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) software tools.
+
+* **Manual testing**: This type of testing involves manually evaluating the Syncfusion Blazor components. During manual accessibility testing, testers will ensure accessibility using the screen readers such as [Narrator](https://support.microsoft.com/en-us/windows/complete-guide-to-narrator-e4397a0d-ef4f-b386-d8ae-c172f109bdb1) for Windows and [Embedded VoiceOver](https://support.apple.com/en-in/guide/voiceover/vo2706/mac) for MAC.
+
+Syncfusion Blazor components will keep improving when there is anything required. It also involves client feedback to make the component more accessible.
+
+## Accessibility support for specific components
+
+Consult the component-specific documents below for detailed information about how Syncfusion Blazor components ensure compliance with accessibility standards, encompassing Section 508, WAI-ARIA, WCAG 2.2, keyboard navigation, and more.
+
+<style>
+# table
+{
+border:0 !important;
+line-height: 2!important;
+}
+
+tr
+{
+border:0 !important;
+}
+
+td
+{
+border:0 !important;
+vertical-align: top;
+}
+
+.controlanchorlink
+{
+text-decoration: none !important;
+font-size: 14px !important;
+text-align: left !important;
+padding: 5px 0px;
+letter-spacing: 1px;
+}
+.controlcategory
+{
+font-size: 14px !important;
+text-align: left !important;
+font-weight: bold !important;
+letter-spacing: 0.7px;
+}
+}
+</style>
+
+<table id="table">
+<tbody>
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+</tbody>
+<tr>
+    <td>
+        <div><p class="controlcategory-topics">GRIDS</p></div>
+        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/datagrid/accessibility">DataGrid</a></div>
+        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/pivot-table/accessibility">Pivot Table</a></div>
+        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/treegrid/accessibility">TreeGrid</a></div>
+        <div><p class="controlcategory">FILE VIEWERS & EDITORS</p></div>
+        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/rich-text-editor/accessibility">RichTextEditor</a></div>
+        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/pdfviewer-2/keyboard-accessibility">PDF Viewer</a></div>
+        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/document-editor/accessibility">Word Processor</a></div>
+        <div><p class="controlcategory">LAYOUT</p></div>
+        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/dialog/accessibility">Dialog</a></div>
+        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/listview/accessibility">ListView</a></div>
+        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/splitter/accessibility">Splitter</a></div>
+        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/dashboard-layout/accessibility">Dashboard</a></div>
+    </td>
+    <td>
+        <div><p class="controlcategory-topics">DATA VISUALIZATION</p></div>
+        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/chart/accessibility">Charts</a></div>
+        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/circular-gauge/accessibility">Circular Gauge</a></div>
+        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/linear-gauge/accessibility">Linear Gauge</a></div>
+        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/maps/accessibility">Map</a></div>
+        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/treemap/accessibility">TreeMap</a></div>
+        <div><p class="controlcategory">BUTTONS</p></div>
+        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/drop-down-menu/accessibility">Dropdown Menu</a></div>
+        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/progress-button/accessibility">Progress Button</a></div>
+        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/split-button/accessibility">SplitButton</a></div>
+        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/chip/accessibility">Chips</a></div>
+        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/speeddial/accessibility">Speed Dial</a></div>
+    </td>
+    <td>
+        <div><p class="controlcategory-topics">CALENDARS</p></div>
+        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/scheduler/accessibility">Scheduler</a></div>
+        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/gantt-chart/accessibility">Gantt Chart</a></div>
+        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/calendar/accessibility">Calendar</a></div>
+        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/datepicker/accessibility">DatePicker</a></div>
+        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/daterangepicker/accessibility">DateRangePicker</a></div>
+        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/datetime-picker/accessibility">DateTime Picker</a></div>
+        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/timepicker/accessibility">TimePicker</a></div>
+        <div><p class="controlcategory">INPUTS</p></div>
+        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/input-mask/accessibility">Input Mask</a></div>
+        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/numeric-textbox/accessibility">Numeric TextBox</a></div>
+        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/check-box/accessibility">CheckBox</a></div>
+        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/color-picker/accessibility">Color Picker</a></div>
+        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/range-slider/accessibility">Range Slider</a></div>
+        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/toggle-switch-button/accessibility">Toggle Switch Button</a></div>
+        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/signature/accessibility">Signature</a></div>
+        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/rating/accessibility">Rating</a></div>
+    </td>
+    <td>
+        <div><p class="controlcategory-topics">DROPDOWNS</p></div>
+        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/autocomplete/accessibility">AutoComplete</a></div>
+        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/listbox/accessibility">ListBox</a></div>
+        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/combobox/accessibility">ComboBox</a></div>
+        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/dropdown-list/accessibility">Dropdown List</a></div>
+		<div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/dropdown-tree/accessibility">DropDown Tree</a></div>
+        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/multiselect-dropdown/accessibility">Multiselect DropDown</a></div>
+        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/mention/accessibility">Mention</a></div>
+        <div><p class="controlcategory">NAVIGATION</p></div>
+        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/accordion/accessibility">Accordion</a></div>
+        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/carousel/accessibility">Carousel</a></div>
+        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/context-menu/accessibility">Context Menu</a></div>
+        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/menu-bar/accessibility">Menu Bar</a></div>
+        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/tabs/accessibility">Tabs</a></div>
+        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/toolbar/accessibility">Toolbar</a></div>
+        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/treeview/accessibility">TreeView</a></div>
+        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/file-manager/accessibility">File Manager</a></div>
+        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/pager/accessibility">Pager</a></div>
+		<div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/stepper/accessibility">Stepper</a></div>
+        <div><p class="controlcategory">NOTIFICATION</p></div>
+        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/toast/accessibility">Toast</a></div>
+        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/skeleton/accessibility">Skeleton</a></div>
+        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/message/accessibility">Message</a></div>
+    </td>
+</tr>
+</table>
