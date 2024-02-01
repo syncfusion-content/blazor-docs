@@ -82,10 +82,10 @@ Syncfusion Blazor components will keep improving when there is anything required
 Consult the component-specific documents below for detailed information about how Syncfusion Blazor components ensure compliance with accessibility standards, encompassing Section 508, WAI-ARIA, WCAG 2.2, keyboard navigation, and more.
 
 <style>
-# table
+#table
 {
 border:0 !important;
-line-height: 2!important;
+line-height: 160% !important;
 }
 
 tr
@@ -101,19 +101,26 @@ vertical-align: top;
 
 .controlanchorlink
 {
-text-decoration: none !important;
 font-size: 14px !important;
-text-align: left !important;
-padding: 5px 0px;
-letter-spacing: 1px;
+text-decoration: none!important;
+text-align: left!important;
+padding: 1px 0px;
+}
+.controlcategory-topics
+{
+font-size: 14px !important;
+font-weight: 500!important;
+border:0 !important;
+line-height: 20px;
 }
 .controlcategory
 {
 font-size: 14px !important;
-text-align: left !important;
-font-weight: bold !important;
-letter-spacing: 0.7px;
-}
+font-weight: 500!important;
+border:0 !important;
+text-align: left!important;
+line-height: 20px;
+padding-top: 20px;
 }
 </style>
 
