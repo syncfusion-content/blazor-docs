@@ -982,7 +982,7 @@ Material and Tailwind Themes uses online roboto font. If your app is designed to
 
 Starting from `v23.2.4`, customized `Material` and `Tailwind` themes are available in the `Syncfusion.Blazor.Themes` package. Also it can be accessed via CDN for Blazor components.
 
-##### Static Web Asset Reference:
+###### Static Web Asset Reference:
 
 ```html
 <head>
@@ -992,7 +992,7 @@ Starting from `v23.2.4`, customized `Material` and `Tailwind` themes are availab
 </head>
 ```
 
-##### CDN Reference:
+###### CDN Reference:
 
 ```html
 <head>
