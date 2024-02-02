@@ -2,7 +2,7 @@
 layout: post
 title: Native Events in Blazor Button Component | Syncfusion
 description: Checkout and learn here all about Native Events in Syncfusion Blazor Button component and much more.
-platform: Blazor
+platform: flutter
 control: Button
 documentation: ug
 ---
