@@ -193,6 +193,99 @@ public class OrderData
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BZrTDsVFcbVkxSol?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
+## Show 24 hours time format in filter dialog
+
+The Syncfusion Blazor Grid provides a feature to display the time in a 24-hour format in the date or datetime column filter dialog. By default, the filter dialog displays the time in a 12-hour format (AM/PM) for the date or datetime column. However, you can customize the default format by setting the type as **DateTime** and the format as **MM/dd/yyyy HH:mm**. To enable the 24-hour time format in the filter dialog, you need to handle the [FilterTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) property of the [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html). This property is used to add custom components to a particular column and set the `TimeFormat` of the `DateTimepicker` to **HH:mm**.
+
+Here is an example that demonstrates how to show 24 hours time format in filter dialog:
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+@using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor.Calendars
+
+<SfGrid DataSource="@GridData" @ref="Grid" AllowSorting="true" AllowPaging="true" AllowFiltering="true">
+    <GridPageSettings PageCount="5"></GridPageSettings>
+    <GridFilterSettings Type="Syncfusion.Blazor.Grids.FilterType.Menu"></GridFilterSettings>
+    <GridColumns>
+        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.OrderDate) HeaderText=" Order Date" Type =ColumnType.DateTime Format="MM/dd/yyyy HH:mm" Width="180">
+            <FilterTemplate>
+                <SfDateTimePicker Placeholder="OrderDate" ID="OrderDate" TimeFormat="HH:mm" Format="MM/dd/yyyy HH:mm" @bind-Value="@((context as PredicateModel<DateTime?>).Value)" TValue="DateTime?">
+                </SfDateTimePicker>
+            </FilterTemplate>
+        </GridColumn>
+        <GridColumn Field=@nameof(OrderData.ShippedDate) HeaderText=" Shipped Date" Type=ColumnType.DateTime Format="MM/dd/yyyy HH:mm" Width="180">
+            <FilterTemplate>
+                <SfDateTimePicker Placeholder="ShippedDate" ID="ShippedDate" TimeFormat="HH:mm" Format="MM/dd/yyyy HH:mm" @bind-Value="@((context as PredicateModel<DateTime?>).Value)" TValue="DateTime?">
+                </SfDateTimePicker>
+            </FilterTemplate>
+        </GridColumn>
+        <GridColumn Field=@nameof(OrderData.ShipCountry) HeaderText="Ship Country" Width="150"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code {
+
+    public List<OrderData> GridData { get; set; }
+
+    SfGrid<OrderData> Grid;
+
+    protected override void OnInitialized()
+    {
+        GridData = OrderData.GetAllRecords();
+    }
+}
+{% endhighlight %}
+{% highlight c# tabtitle="OrderData.cs" %}
+    public class OrderData
+    {
+        public static List<OrderData> Orders = new List<OrderData>();
+
+        public OrderData()
+        {
+
+        }
+        public OrderData(int? OrderID, DateTime? OrderDate, DateTime? ShippedDate, string ShipCountry)
+        {
+            this.OrderID = OrderID;
+            this.OrderDate = OrderDate;
+            this.ShippedDate = ShippedDate;
+            this.ShipCountry = ShipCountry;
+        }
+
+        public static List<OrderData> GetAllRecords()
+        {
+            if (Orders.Count() == 0)
+            {
+                int OrderID = 10247;
+                for (int i = 1; i < 3; i++)
+                {
+                    Orders.Add(new OrderData(OrderID + 1, new DateTime(1996, 07, 10, 0, 0, 0), new DateTime(1996, 07, 10, 7, 46, 0), "France"));
+                    Orders.Add(new OrderData(OrderID + 2, new DateTime(1996, 07, 10, 1, 56, 0), new DateTime(1996, 07, 10, 9, 26, 0), "Germany"));
+                    Orders.Add(new OrderData(OrderID + 3, new DateTime(1996, 07, 10, 3, 53, 0), new DateTime(1996, 07, 10, 11, 40, 0), "Brazil"));
+                    Orders.Add(new OrderData(OrderID + 4, new DateTime(1996, 07, 10, 5 , 50, 0), new DateTime(1996, 07, 10,13, 36, 0), "Belgium"));
+                    Orders.Add(new OrderData(OrderID + 5, new DateTime(1996, 07, 10, 7, 46 ,0), new DateTime(1996, 07, 10, 15, 33, 0), "Switzerland"));
+                    Orders.Add(new OrderData(OrderID + 6, new DateTime(1996, 07, 10, 9, 43, 0), new DateTime(1996, 07, 10, 17, 30, 0), "Venezuela"));
+                    Orders.Add(new OrderData(OrderID + 7, new DateTime(1996, 07, 10, 13, 36, 0), new DateTime(1996, 07, 10, 19, 26, 0), "Austria"));
+                    Orders.Add(new OrderData(OrderID + 8, new DateTime(1996, 07, 10, 15, 33, 0), new DateTime(1996, 07, 10, 21, 23, 0), "Mexico"));
+                    Orders.Add(new OrderData(OrderID + 9, new DateTime(1996, 07, 10,17, 30, 0), new DateTime(1996, 07, 10, 23, 20, 0), "USA"));
+                    OrderID += 9;
+                }
+            }
+            return Orders;
+        }
+
+        public int? OrderID { get; set; }
+        public DateTime? OrderDate { get; set; }
+        public DateTime? ShippedDate { get; set; }
+        public string ShipCountry { get; set; }
+    }
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hZLTXsUNzHJMohoW?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 ## Customizing filter menu operators list
 
 The Syncfusion Blazor Grid enables you to customize the default filter operator list by utilizing the [FilterDialogOpening](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_FilterDialogOpening) event of the grid. You can customize operators for string, number, date, and boolean data types.
@@ -1076,3 +1169,23 @@ In the following sample, the `SfDateRangePicker` component is rendered in the fi
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VtBfNiqZXNASChsV?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
+## Troubleshoot filter menu operator issue
+
+When using the filter menu, the UI displays operators for all columns based on the data type of the first data it encounters. If the first data is empty or null, it may not work correctly. To overcome this issue, follow these steps to troubleshoot and resolve it:
+
+**Explicitly Define Data Type**: When defining columns in your Blazor Grid component, make sure to explicitly specify the data type for each column. You can do this using the type property within the columns configuration. For example:
+
+
+```cshtml
+<SfGrid AllowFiltering="true" DataSource="@GridData">
+    <GridColumns>
+        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" IsPrimaryKey="true" Type="ColumnType.Number" TextAlign="TextAlign.Right" Width="90"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer Name" Type="ColumnType.String" Width="120"></GridColumn>
+                @*Define data types for other columns as needed*@
+    </GridColumns>
+</SfGrid>
+
+```
+**Handle Null or Empty Data**: If your data source contains null or empty values, make sure that these values are appropriately handled within your data source or by preprocessing your data to ensure consistency.
+
+**Check Data Types in Data Source**: Ensure that the data types specified in the column definitions match the actual data types in your data source. Mismatched data types can lead to unexpected behavior.
