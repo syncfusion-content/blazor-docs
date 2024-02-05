@@ -24,11 +24,13 @@ We can prevent the selected file from being uploaded and also prevent the remova
 @code {
     private void BeforeUploadHandler(BeforeUploadEventArgs args)
     {
-        // Here, you can customize your code.
+        // You can prevent uploading by setting "Cancel" as true
+        args.Cancel =  true;
     }
     private void BeforeRemovehandler(BeforeRemoveEventArgs args)
     {
-        // Here, you can customize your code.
+        // You can prevent removing by setting "Cancel" as true
+        args.Cancel =  true;
     }
 }
 ```
@@ -44,11 +46,13 @@ We can prevent the selected file from being uploaded and also prevent the remova
 @code {
     private void BeforeUploadHandler(BeforeUploadEventArgs args)
     {
-        // Here, you can customize your code.
+        // You can prevent uploading by setting "Cancel" to true.
+        args.Cancel =  true;
     }
     private void BeforeRemovehandler(BeforeRemoveEventArgs args)
     {
-        // Here, you can customize your code.
+        // You can prevent removing by setting "Cancel" as true
+       args.Cancel =  true;
     }
 }
 ```
