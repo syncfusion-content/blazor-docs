@@ -52,7 +52,9 @@ Now, click on **Update Database**.
 
 ## Create a new Blazor Web App
 
-You can create a **Blazor Web App** using Visual Studio 2022 via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0)
+You can create a **Blazor Web App** using Visual Studio 2022 via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0) or the [Syncfusion Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
+
+You need to configure the corresponding [Interactive render mode](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-8.0#render-modes) and [Interactivity location](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0&pivots=windows) while creating a Blazor Web Application.
 
 ### Generate DbContext and model class from the database
 
@@ -61,14 +63,14 @@ Now, you need to scaffold **DbContext** and **model classes** from the existing 
 * Create the new project with Class Library template named as `BlazorWebApp.Shared` for DbContext and model class as shown below.
 ![Create Shared Project](../images/db-shared-project.png)
 
-  Additionally, ensure that you have added a reference to the `BlazorWebApp.Shared` project in both the server-side and client-side projects of your web application.
+Additionally, ensure that you have added a reference to the `BlazorWebApp.Shared` project in both the server-side and client-side projects of your web application.
 
 * Then, open the NuGet Package Manager and install the following packages in both the shared and server-side projects of your Blazor Web App.
 
    * [Microsoft.EntityFrameworkCore.Tools](https://www.nuget.org/packages/Microsoft.EntityFrameworkCore.Tools): This package creates database context and model classes from the database.
    * [Microsoft.EntityFrameworkCore.SqlServer](https://www.nuget.org/packages/Microsoft.EntityFrameworkCore.SqlServer/): The database provider that allows Entity Framework Core to work with SQL Server.
 
-   Alternatively, you can utilize the following package manager command to achieve the same.
+Alternatively, you can utilize the following package manager command to achieve the same.
 
 {% tabs %}
 {% highlight C# tabtitle="Package Manager" %}
@@ -80,16 +82,16 @@ Install-Package Microsoft.EntityFrameworkCore.SqlServer -Version 7.0.11
 {% endhighlight %}
 {% endtabs %}
 
-    Once the above packages are installed, you can scaffold DbContext and Model classes. Run the following command in the Package Manager Console under the `BlazorWebApp.Shared` project.
+Once the above packages are installed, you can scaffold DbContext and Model classes. Run the following command in the Package Manager Console under the `BlazorWebApp.Shared` project.
 
 ```
 Scaffold-DbContext “Server=localhost;Database=OrdersDetails;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False” Microsoft.EntityFrameworkCore.SqlServer -OutputDir Data
 ```
 
-    The above scaffolding command contains the following details for creating DbContext and model classes for the existing database and its tables.
-    * **Connection string**: Server=localhost;Database=OrdersDetails;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False
-    * **Data provider**: Microsoft.EntityFrameworkCore.SqlServer
-    * **Output directory**: -OutputDir Data
+The above scaffolding command contains the following details for creating DbContext and model classes for the existing database and its tables.
+  * **Connection string**: Server=localhost;Database=OrdersDetails;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False
+  * **Data provider**: Microsoft.EntityFrameworkCore.SqlServer
+  * **Output directory**: -OutputDir Data
 
 After running the above command, **OrdersDetailsContext.cs** and **Orders.cs** files will be created under the Data folder of `BlazorWebApp.Shared` project as follows.
 
@@ -228,9 +230,7 @@ app.MapControllers();
 
 ## Create Blazor Server Application
 
-Open Visual Studio and follow the steps in the below documentation to create the Blazor Server Application.
-
-[Getting Started](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio)
+You can create a **Blazor Server App** using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0) or the [Syncfusion Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
 
 ### Generate DbContext and model class from the database
 
@@ -467,7 +467,6 @@ Themes provide life to components. Syncfusion Blazor has different themes. They 
 * Fabric
 * Bootstrap
 * Material
-* Bootstrap
 * High Contrast
 
 In this demo application, the latest theme will be used.
