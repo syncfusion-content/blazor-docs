@@ -44,3 +44,5 @@ You can show the dialog in full screen by passing `true` as argument to the dial
 }
 
 ```
+
+![Blazor Dialog with fullscreen](../images/blazor-dialog-with-fullscreen.gif)
