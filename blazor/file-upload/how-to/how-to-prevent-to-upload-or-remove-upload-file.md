@@ -1,6 +1,6 @@
 ---
 layout: post
-title: How to Preventing File Upload or Removal in Uploader Component | Syncfusion
+title: How to Prevent Uploading or Removing in Uploader | Syncfusion
 description: Checkout and learn here how to Preventing File Upload or Removal in Uploader Component in Syncfusion Blazor File Upload component and more.
 platform: Blazor
 control: File Upload
