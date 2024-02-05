@@ -7,224 +7,1022 @@ control: DataGrid
 documentation: ug
 ---
 
-# Filter Menu in Blazor DataGrid Component
+# Filter menu in Blazor Grid component
 
-You can enable filter menu by setting the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridFilterSettings.html#Syncfusion_Blazor_Grids_GridFilterSettings_Type) of **GridFilterSettings** as **Menu**. The filter menu UI will be rendered based on its column type, which allows you to filter data.
+The filter menu in the Blazor Grid component allows you to enable filtering and provides a user-friendly interface for filtering data based on column types and operators.
 
-You can filter the records with different operators.
+To enable the filter menu, you need to set the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridFilterSettings.html#Syncfusion_Blazor_Grids_GridFilterSettings_Type) of [GridFilterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_FilterSettings) as **Menu**. This property determines the type of filter UI that will be rendered. The filter menu UI allows you to apply filters using different operators.
 
-```cshtml
+Here is an example that demonstrates the usage of the filter menu in the Syncfusion Blazor Grid:
+
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids
 
-<SfGrid DataSource="@Orders" AllowFiltering="true" AllowPaging="true" Height="315">
-  <GridFilterSettings Type ="Syncfusion.Blazor.Grids.FilterType.Menu"></GridFilterSettings>
-   <GridColumns>
-     <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-     <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
-     <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
-     <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-   </GridColumns>
+<SfGrid DataSource="@GridData" @ref="Grid" AllowFiltering="true" Height="273px">
+    <GridFilterSettings Type="Syncfusion.Blazor.Grids.FilterType.Menu"></GridFilterSettings>
+    <GridColumns>
+        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="100"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer ID" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.ShipCity) HeaderText="Ship City" Width="100"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.ShipName) HeaderText="Ship Name" Width="100"></GridColumn>
+    </GridColumns>
 </SfGrid>
 
-@code{
-    public List<Order> Orders { get; set; }
+@code {
+
+    public List<OrderData> GridData { get; set; }
+
+    SfGrid<OrderData> Grid;
 
     protected override void OnInitialized()
     {
-        Orders = Enumerable.Range(1, 75).Select(x => new Order()
-        {
-            OrderID = 1000 + x,
-            CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
-            Freight = 2.1 * x,
-            OrderDate = (new DateTime[] { new DateTime(2010, 5, 1), new DateTime(2010, 5, 2), new DateTime(2010, 5, 3), })[new Random().Next(3)],
-        }).ToList();
-    }
-
-    public class Order {
-        public int? OrderID { get; set; }
-        public string CustomerID { get; set; }
-        public DateTime? OrderDate { get; set; }
-        public double? Freight { get; set; }
+        GridData = OrderData.GetAllRecords();
     }
 }
+{% endhighlight %}
+{% highlight c# tabtitle="OrderData.cs" %}
+public class OrderData
+    {
+        public static List<OrderData> Orders = new List<OrderData>();
 
-```
+        public OrderData()
+        {
 
-The following screenshot represents Menu filter
+        }
+        public OrderData(int? OrderID,string CustomerID,string ShipCity, string ShipName)
+        {
+            this.OrderID = OrderID;    
+            this.CustomerID = CustomerID;
+            this.ShipCity = ShipCity;
+            this.ShipName = ShipName;           
+        }
 
-![Blazor DataGrid with Menu Filter](./images/blazor-datagrid-menu-filter.png)
+        public static List<OrderData> GetAllRecords()
+        {
+            if (Orders.Count() == 0)
+            {
+               
+                int OrderID = 10247;
 
-N> * [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowFiltering) must be set as true to enable filter menu.
-<br/> * Setting [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_AllowFiltering) property of **GridColumn** as false will prevent
+                for (int i = 1; i < 2; i++)
+                {
+                    Orders.Add(new OrderData(OrderID+1, "VINET", "Reims", "Vins et alcools Chevali"));
+                    Orders.Add(new OrderData(OrderID+2, "TOMSP", "Münster", "Toms Spezialitäten"));
+                    Orders.Add(new OrderData(OrderID+3, "HANAR", "Rio de Janeiro", "Hanari Carnes"));
+                    Orders.Add(new OrderData(OrderID+4, "VICTE", "Lyon", "Victuailles en stock"));
+                    Orders.Add(new OrderData(OrderID+5, "SUPRD", "Charleroi", "Suprêmes délices"));
+                    Orders.Add(new OrderData(OrderID+6, "HANAR", "Lyon", "Hanari Carnes"));
+                    Orders.Add(new OrderData(OrderID+7, "CHOPS", "Rio de Janeiro", "Chop-suey Chinese"));
+                    Orders.Add(new OrderData(OrderID + 8, "ERNSH", "Münster", "Richter Supermarkt"));
+                    Orders.Add(new OrderData(OrderID+9, "WELLI", "Reims", "Wellington Import"));
+                   
+                    OrderID += 9;
+                }
+            }
+            return Orders;
+        }
+
+        public int? OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public string ShipCity { get; set; }
+        public string ShipName { get; set; }
+   }
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hZVJXMVKpLxfzxZN?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+> * [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowFiltering) must be set as true to enable filter menu.
+> * By setting [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowFiltering) property of the [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) object as false will prevent filter menu rendering for a particular column.
 
 ## Custom component in filter menu
 
-You can use **Menu** type filter in the datagrid. To do so, set the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridFilterSettings.html#Syncfusion_Blazor_Grids_GridFilterSettings_Type) as **Menu** in the **GridFilterSettings**.
+You can enhance the filtering experience in the Syncfusion Blazor Grid component by customizing the filter menu with custom components. This allows you to replace the default search box with custom components like dropdowns or textboxes. By default, the filter menu provides an autocomplete component for string type columns, a numeric textbox for number type columns, and a dropdown component for boolean type columns, making it easy to search for values.
 
-In the following sample, the [FilterTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) property is used to add custom components to a particular column. To access the filtered values inside the FilterTemplate, you can use the implicit named parameter context. You can type cast the context as `PredicateModel<T>` to get filter values inside template.
+To customize the filter menu, you can make use the [FilterTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) property. This property allows you to integrate your desired custom filter component into a specific column of the Grid. To implement a custom filter UI, you need to define the following functions:
 
-```cshtml
+For example, you can replace the standard search box in the filter menu with a dropdown component. This enables you to perform filtering operations by selecting values from the dropdown list, rather than manually typing in search queries.
+
+Here is a sample code demonstrating how to render a dropdownlist component for the **OrderID** column:
+
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.DropDowns
 
-<SfGrid DataSource="@Orders" AllowFiltering="true" AllowPaging="true" Height="315">
+<SfGrid DataSource="@GridData" @ref="Grid" AllowFiltering="true" Height="273px">
     <GridFilterSettings Type="Syncfusion.Blazor.Grids.FilterType.Menu"></GridFilterSettings>
     <GridColumns>
-        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Center" Width="120">
-            <FilterTemplate>
-                <SfDropDownList Placeholder="OrderID" ID="OrderID" @bind-Value="@((context as PredicateModel<int?>).Value)" TItem="Order" TValue="int?" DataSource="@(Orders)">
+        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="100">
+             <FilterTemplate>
+                <SfDropDownList Placeholder="OrderID" ID="OrderID" @bind-Value="@((context as PredicateModel<int?>).Value)" TItem="OrderData" TValue="int?" DataSource="@(GridData)">
                     <DropDownListFieldSettings Value="OrderID" Text="OrderID"></DropDownListFieldSettings>
                 </SfDropDownList>
             </FilterTemplate>
         </GridColumn>
-        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" TextAlign="TextAlign.Center" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Center" Width="130"></GridColumn>
-        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Center" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer ID" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.ShipCity) HeaderText="Ship City" Width="100"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.ShipName) HeaderText="Ship Name" Width="100"></GridColumn>
     </GridColumns>
 </SfGrid>
 
-@code{
+@code {
 
-    public List<Order> Orders { get; set; }
+    public List<OrderData> GridData { get; set; }
+
+    SfGrid<OrderData> Grid;
+
     protected override void OnInitialized()
     {
-        Orders = Enumerable.Range(1, 75).Select(x => new Order()
-        {
-            OrderID = 1000 + x,
-            CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
-            Freight = 2.1 * x,
-            OrderDate = (new DateTime[] { new DateTime(2010, 5, 1), new DateTime(2010, 5, 2), new DateTime(2010, 5, 3), })[new Random().Next(3)],
-        }).ToList();
-    }
-
-    public class Order
-    {
-        public int? OrderID { get; set; }
-        public string CustomerID { get; set; }
-        public DateTime? OrderDate { get; set; }
-        public double? Freight { get; set; }
+        GridData = OrderData.GetAllRecords();
     }
 }
+{% endhighlight %}
+{% highlight c# tabtitle="OrderData.cs" %}
+public class OrderData
+    {
+        public static List<OrderData> Orders = new List<OrderData>();
 
-```
+        public OrderData()
+        {
 
-The following screenshot shows filter menu using custom component
+        }
+        public OrderData(int? OrderID,string CustomerID,string ShipCity, string ShipName)
+        {
+            this.OrderID = OrderID;    
+            this.CustomerID = CustomerID;
+            this.ShipCity = ShipCity;
+            this.ShipName = ShipName;           
+        }
 
-![Blazor DataGrid with Custom Filter Menu](./images/blazor-datagrid-custom-filter-menu.PNG)
+        public static List<OrderData> GetAllRecords()
+        {
+            if (Orders.Count() == 0)
+            {
+               
+                int OrderID = 10247;
 
-## Override default filter operators for menu filtering
+                for (int i = 1; i < 2; i++)
+                {
+                    Orders.Add(new OrderData(OrderID+1, "VINET", "Reims", "Vins et alcools Chevali"));
+                    Orders.Add(new OrderData(OrderID+2, "TOMSP", "Münster", "Toms Spezialitäten"));
+                    Orders.Add(new OrderData(OrderID+3, "HANAR", "Rio de Janeiro", "Hanari Carnes"));
+                    Orders.Add(new OrderData(OrderID+4, "VICTE", "Lyon", "Victuailles en stock"));
+                    Orders.Add(new OrderData(OrderID+5, "SUPRD", "Charleroi", "Suprêmes délices"));
+                    Orders.Add(new OrderData(OrderID+6, "HANAR", "Lyon", "Hanari Carnes"));
+                    Orders.Add(new OrderData(OrderID+7, "CHOPS", "Rio de Janeiro", "Chop-suey Chinese"));
+                    Orders.Add(new OrderData(OrderID + 8, "ERNSH", "Münster", "Richter Supermarkt"));
+                    Orders.Add(new OrderData(OrderID+9, "WELLI", "Reims", "Wellington Import"));
+                   
+                    OrderID += 9;
+                }
+            }
+            return Orders;
+        }
 
-The default filter operators for a GridColumn can be overridden by using the [OnActionBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnActionBegin) event of the grid. In the below code, we have overridden the filter operators for the `CustomerID` column.
+        public int? OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public string ShipCity { get; set; }
+        public string ShipName { get; set; }
+   }
+{% endhighlight %}
+{% endtabs %}
 
-```cshtml
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZrTDsVFcbVkxSol?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+## Show 24 hours time format in filter dialog
+
+The Syncfusion Blazor Grid provides a feature to display the time in a 24-hour format in the date or datetime column filter dialog. By default, the filter dialog displays the time in a 12-hour format (AM/PM) for the date or datetime column. However, you can customize the default format by setting the type as **DateTime** and the format as **MM/dd/yyyy HH:mm**. To enable the 24-hour time format in the filter dialog, you need to handle the [FilterTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) property of the [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html). This property is used to add custom components to a particular column and set the `TimeFormat` of the `DateTimepicker` to **HH:mm**.
+
+Here is an example that demonstrates how to show 24 hours time format in filter dialog:
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor.Calendars
 
-<SfGrid DataSource="@Orders" AllowFiltering="true" AllowPaging="true" Height="315">
-    <GridEvents OnActionBegin="ActionBeginHandler" TValue="Order"></GridEvents>
+<SfGrid DataSource="@GridData" @ref="Grid" AllowSorting="true" AllowPaging="true" AllowFiltering="true">
+    <GridPageSettings PageCount="5"></GridPageSettings>
     <GridFilterSettings Type="Syncfusion.Blazor.Grids.FilterType.Menu"></GridFilterSettings>
     <GridColumns>
-        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
-        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.OrderDate) HeaderText=" Order Date" Type =ColumnType.DateTime Format="MM/dd/yyyy HH:mm" Width="180">
+            <FilterTemplate>
+                <SfDateTimePicker Placeholder="OrderDate" ID="OrderDate" TimeFormat="HH:mm" Format="MM/dd/yyyy HH:mm" @bind-Value="@((context as PredicateModel<DateTime?>).Value)" TValue="DateTime?">
+                </SfDateTimePicker>
+            </FilterTemplate>
+        </GridColumn>
+        <GridColumn Field=@nameof(OrderData.ShippedDate) HeaderText=" Shipped Date" Type=ColumnType.DateTime Format="MM/dd/yyyy HH:mm" Width="180">
+            <FilterTemplate>
+                <SfDateTimePicker Placeholder="ShippedDate" ID="ShippedDate" TimeFormat="HH:mm" Format="MM/dd/yyyy HH:mm" @bind-Value="@((context as PredicateModel<DateTime?>).Value)" TValue="DateTime?">
+                </SfDateTimePicker>
+            </FilterTemplate>
+        </GridColumn>
+        <GridColumn Field=@nameof(OrderData.ShipCountry) HeaderText="Ship Country" Width="150"></GridColumn>
     </GridColumns>
 </SfGrid>
 
-@code{
-    public List<Order> Orders { get; set; }
+@code {
 
-    public void ActionBeginHandler(ActionEventArgs<Order> Args)
+    public List<OrderData> GridData { get; set; }
+
+    SfGrid<OrderData> Grid;
+
+    protected override void OnInitialized()
     {
-        if (Args.RequestType == Syncfusion.Blazor.Grids.Action.FilterBeforeOpen)
+        GridData = OrderData.GetAllRecords();
+    }
+}
+{% endhighlight %}
+{% highlight c# tabtitle="OrderData.cs" %}
+    public class OrderData
+    {
+        public static List<OrderData> Orders = new List<OrderData>();
+
+        public OrderData()
         {
-            if (Args.ColumnName == "CustomerID")//Specify Field name
+
+        }
+        public OrderData(int? OrderID, DateTime? OrderDate, DateTime? ShippedDate, string ShipCountry)
+        {
+            this.OrderID = OrderID;
+            this.OrderDate = OrderDate;
+            this.ShippedDate = ShippedDate;
+            this.ShipCountry = ShipCountry;
+        }
+
+        public static List<OrderData> GetAllRecords()
+        {
+            if (Orders.Count() == 0)
             {
-                Args.FilterOperators = CustomerIDOperator;
+                int OrderID = 10247;
+                for (int i = 1; i < 3; i++)
+                {
+                    Orders.Add(new OrderData(OrderID + 1, new DateTime(1996, 07, 10, 0, 0, 0), new DateTime(1996, 07, 10, 7, 46, 0), "France"));
+                    Orders.Add(new OrderData(OrderID + 2, new DateTime(1996, 07, 10, 1, 56, 0), new DateTime(1996, 07, 10, 9, 26, 0), "Germany"));
+                    Orders.Add(new OrderData(OrderID + 3, new DateTime(1996, 07, 10, 3, 53, 0), new DateTime(1996, 07, 10, 11, 40, 0), "Brazil"));
+                    Orders.Add(new OrderData(OrderID + 4, new DateTime(1996, 07, 10, 5 , 50, 0), new DateTime(1996, 07, 10,13, 36, 0), "Belgium"));
+                    Orders.Add(new OrderData(OrderID + 5, new DateTime(1996, 07, 10, 7, 46 ,0), new DateTime(1996, 07, 10, 15, 33, 0), "Switzerland"));
+                    Orders.Add(new OrderData(OrderID + 6, new DateTime(1996, 07, 10, 9, 43, 0), new DateTime(1996, 07, 10, 17, 30, 0), "Venezuela"));
+                    Orders.Add(new OrderData(OrderID + 7, new DateTime(1996, 07, 10, 13, 36, 0), new DateTime(1996, 07, 10, 19, 26, 0), "Austria"));
+                    Orders.Add(new OrderData(OrderID + 8, new DateTime(1996, 07, 10, 15, 33, 0), new DateTime(1996, 07, 10, 21, 23, 0), "Mexico"));
+                    Orders.Add(new OrderData(OrderID + 9, new DateTime(1996, 07, 10,17, 30, 0), new DateTime(1996, 07, 10, 23, 20, 0), "USA"));
+                    OrderID += 9;
+                }
             }
+            return Orders;
+        }
+
+        public int? OrderID { get; set; }
+        public DateTime? OrderDate { get; set; }
+        public DateTime? ShippedDate { get; set; }
+        public string ShipCountry { get; set; }
+    }
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hZLTXsUNzHJMohoW?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+## Customizing filter menu operators list
+
+The Syncfusion Blazor Grid enables you to customize the default filter operator list by utilizing the [FilterDialogOpening](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_FilterDialogOpening) event of the grid. You can customize operators for string, number, date, and boolean data types.
+
+The available options for customization are:
+
+* **stringOperator**- defines customized string operator list.
+
+* **numberOperator** - defines customized number operator list.
+
+* **dateOperator** - defines customized date operator list.
+
+* **booleanOperator** - defines customized boolean operator list.
+
+Here is an example of how to customize the filter operators list in Syncfusion Blazor Grid:
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+@using Syncfusion.Blazor.Grids
+
+<SfGrid DataSource="@GridData" @ref="Grid" AllowFiltering="true" Height="273px">
+    <GridFilterSettings Type=" Syncfusion.Blazor.Grids.FilterType.Menu"></GridFilterSettings>
+    <GridEvents FilterDialogOpening="FilterDialogOpeningHandler" TValue="OrderData"></GridEvents>
+    <GridColumns>
+        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="100"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer ID" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.OrderDate) HeaderText=" Order Date" Format="d" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="100"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.Verified) HeaderText="Verified" Width="100" DisplayAsCheckBox="true" Type="Syncfusion.Blazor.Grids.ColumnType.Boolean"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.ShipName) HeaderText="Ship Name" Width="100"></GridColumn>
+    </GridColumns>
+
+</SfGrid>
+
+@code {
+
+    public List<OrderData> GridData { get; set; }
+
+    SfGrid<OrderData> Grid;
+
+    protected override void OnInitialized()
+    {
+        GridData = OrderData.GetAllRecords();
+    }
+    public async Task FilterDialogOpeningHandler(FilterDialogOpeningEventArgs args)
+    {
+
+        if (args.ColumnName == "CustomerID" || args.ColumnName == "ShipName")
+        {
+            args.FilterOperators = StringOperator;
+        }
+        else if (args.ColumnName == "OrderID")
+        {
+            args.FilterOperators = NumberOperator;
+        }
+        else if (args.ColumnName == "OrderDate")
+        {
+            args.FilterOperators = DateOperator;
+        }
+        else if (args.ColumnName == "Verified")
+        {
+            args.FilterOperators = BooleanOperator;
         }
     }
 
-    public class Operators
+
+    public class Operators : Syncfusion.Blazor.Grids.IFilterOperator
     {
         public string Value { get; set; }
         public string Text { get; set; }
     }
-    List<object> CustomerIDOperator = new List<object> {
-        new Operators() { Text= "Equal", Value= "equal" },
-        new Operators() { Text= "Contains", Value= "contains" }
+
+    List<Syncfusion.Blazor.Grids.IFilterOperator> StringOperator = new List<Syncfusion.Blazor.Grids.IFilterOperator> {
+        new Operators()  { Value= "startsWith", Text= "Starts With" },
+        new Operators() { Value= "endsWith", Text= "Ends With" },
+        new Operators() { Value= "contains", Text= "Contains" },
+        new Operators() { Value= "equal", Text= "Equal" },
+        new Operators() { Value= "notEqual", Text= "Not Equal" }
     };
-
-
-    protected override void OnInitialized()
+    List<Syncfusion.Blazor.Grids.IFilterOperator> NumberOperator = new List<Syncfusion.Blazor.Grids.IFilterOperator> {
+        new Operators()  { Value= "equal", Text= "Equal" },
+        new Operators() { Value= "notEqual", Text= "Not Equal" },
+        new Operators() { Value= "greaterThan", Text= "Greater Than" },
+        new Operators() { Value= "lessThan", Text= "Less Than" },
+    };
+    List<Syncfusion.Blazor.Grids.IFilterOperator> DateOperator = new List<Syncfusion.Blazor.Grids.IFilterOperator> {
+         new Operators()  { Value= "equal", Text= "Equal" },
+        new Operators() { Value= "notEqual", Text= "Not Equal" },
+        new Operators() { Value= "greaterThan", Text= "After" },
+        new Operators() { Value= "lessThan", Text= "Before" },
+    };
+    List<Syncfusion.Blazor.Grids.IFilterOperator> BooleanOperator = new List<Syncfusion.Blazor.Grids.IFilterOperator> {
+        new Operators()  { Value= "equal", Text= "Equal" },
+        new Operators() { Value= "notEqual", Text= "Not Equal" },
+    };
+}
+{% endhighlight %}
+{% highlight c# tabtitle="OrderData.cs" %}
+public class OrderData
     {
-        Orders = Enumerable.Range(1, 75).Select(x => new Order()
+        public static List<OrderData> Orders = new List<OrderData>();
+
+        public OrderData()
         {
-            OrderID = 1000 + x,
-            CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
-            Freight = 2.1 * x,
-            OrderDate = (new DateTime[] { new DateTime(2010, 5, 1), new DateTime(2010, 5, 2), new DateTime(2010, 5, 3), })[new Random().Next(3)],
-        }).ToList();
-    }
 
-    public class Order
-    {
+        }
+        public OrderData(int? OrderID, string CustomerID, DateTime? OrderDate, bool Verified, string ShipName)
+        {
+            this.OrderID = OrderID;
+            this.CustomerID = CustomerID;
+            this.OrderDate = OrderDate;
+            this.Verified = Verified;
+            this.ShipName = ShipName;
+        }
+
+        public static List<OrderData> GetAllRecords()
+        {
+            if (Orders.Count() == 0)
+            {
+                int OrderID = 10247;
+                for (int i = 1; i < 3; i++)
+                {
+                    Orders.Add(new OrderData(OrderID + 1, "VINET", new DateTime(1996, 07, 06), true, "Vins et alcools Chevali"));
+                    Orders.Add(new OrderData(OrderID + 2, "TOMSP", new DateTime(1996, 07, 06), false, "Toms Spezialitäten"));
+                    Orders.Add(new OrderData(OrderID + 3, "HANAR", new DateTime(1996, 07, 06), false, "Hanari Carnes"));
+                    Orders.Add(new OrderData(OrderID + 4, "VICTE", new DateTime(1996, 07, 06), true, "Victuailles en stock"));
+                    Orders.Add(new OrderData(OrderID + 5, "SUPRD", new DateTime(1996, 07, 06), true, "Suprêmes délices"));
+                    Orders.Add(new OrderData(OrderID + 6, "HANAR", new DateTime(1996, 07, 06), false, "Hanari Carnes"));
+                    Orders.Add(new OrderData(OrderID + 7, "CHOPS", new DateTime(1996, 07, 06), true, "Chop-suey Chinese"));
+                    Orders.Add(new OrderData(OrderID + 8, "RICSU", new DateTime(1996, 07, 06), true, "Richter Supermarkt"));
+                    Orders.Add(new OrderData(OrderID + 9, "WELLI", new DateTime(1996, 07, 06), false, "Wellington Import"));
+                    OrderID += 9;
+                }
+            }
+            return Orders;
+        }
+
         public int? OrderID { get; set; }
         public string CustomerID { get; set; }
         public DateTime? OrderDate { get; set; }
-        public double? Freight { get; set; }
+        public bool Verified { get; set; }
+        public string ShipName { get; set; }
     }
-}
+{% endhighlight %}
+{% endtabs %}
 
-```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/htBpDsVbcPPGFEgo?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-## Enable different filter for a column
+## Filter by multiple keywords using filter menu
 
-You can use different filter types such as **Menu**,**CheckBox** and **Excel** filter in a same DataGrid. To do so, set the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridFilterSettings.html#Syncfusion_Blazor_Grids_GridFilterSettings_Type) as **Menu** in **GridFilterSettings** and **CheckBox** in [Filter](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) property of **GridColumn** component.
+The Syncfusion Blazor Grid allows you to perform filtering actions based on multiple keywords, rather than a single keyword, using the filter menu dialog. To enable this feature, you can set the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridFilterSettings.html#Syncfusion_Blazor_Grids_GridFilterSettings_Type) of [GridFilterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_FilterSettings) as **Menu** and render the `MultiSelect` component as a custom component in the filter menu dialog.
 
-In the following sample, menu filter is enabled by default and checkbox filter is enabled for the CustomerID column using the [Filter](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) property of **GridColumn** component.
+Here is an example that demonstrates how to perform filtering by multiple keywords using the filter menu in the Syncfusion Blazor Grid:
 
-```cshtml
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor.DropDowns
 
-<SfGrid DataSource="@Orders" AllowFiltering="true" AllowPaging="true" Height="315">
-  <GridFilterSettings Type ="Syncfusion.Blazor.Grids.FilterType.Menu"></GridFilterSettings>
-   <GridColumns>
-     <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-     <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" FilterSettings="@(new FilterSettings{Type = Syncfusion.Blazor.Grids.FilterType.CheckBox })" Width="150"></GridColumn>
-     <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
-     <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-   </GridColumns>
+<SfGrid DataSource="@GridData" @ref="Grid" AllowFiltering="true" AllowPaging="true" Height="273px">
+    <GridFilterSettings Type="Syncfusion.Blazor.Grids.FilterType.Menu"></GridFilterSettings>
+    <GridEvents Filtering="FilteringHandler" TValue="OrderData"></GridEvents>
+    <GridColumns>
+        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="100">
+            <FilterTemplate>
+                <SfMultiSelect TValue="int[]" Placeholder="OrderID" Value="@OrderIDValues.ToArray()" Mode="VisualMode.Delimiter" TItem="OrderData" DataSource="@GridData">
+                    <MultiSelectFieldSettings Value="OrderID" Text="OrderID"></MultiSelectFieldSettings>
+                    <MultiSelectEvents ValueChange="OrderIDOnChange" TValue="int[]" TItem="OrderData"></MultiSelectEvents>
+                </SfMultiSelect>
+            </FilterTemplate>
+        </GridColumn>
+        <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer ID" Width="120">
+            <FilterTemplate>
+                <SfMultiSelect TValue="string[]" Placeholder="CustomerID" Value="@CustomerIDValues.ToArray()" Mode="VisualMode.Delimiter" TItem="string" DataSource="@CustomerIDData">
+                    <MultiSelectEvents ValueChange="CustomerIDOnChange" TValue="string[]" TItem="string"></MultiSelectEvents>
+                </SfMultiSelect>
+            </FilterTemplate>
+        </GridColumn>
+        <GridColumn Field=@nameof(OrderData.ShipCity) HeaderText="Ship City" Width="100">
+            <FilterTemplate>
+                <SfMultiSelect TValue="string[]" Placeholder="ShipCity" Value="@ShipCityValues.ToArray()" Mode="VisualMode.Delimiter" TItem="string" DataSource="@ShipCityData">
+                    <MultiSelectEvents ValueChange="ShipCityOnChange" TValue="string[]" TItem="string"></MultiSelectEvents>
+                </SfMultiSelect>
+            </FilterTemplate>
+        </GridColumn>
+        <GridColumn Field=@nameof(OrderData.ShipName) HeaderText="Ship Name" Width="100">
+            <FilterTemplate>
+                <SfMultiSelect TValue="string[]" Placeholder="ShipName" Value="@ShipCityValues.ToArray()" Mode="VisualMode.Delimiter" TItem="string" DataSource="@ShipNameData">
+                    <MultiSelectEvents ValueChange="ShipNameOnChange" TValue="string[]" TItem="string"></MultiSelectEvents>
+                </SfMultiSelect>
+            </FilterTemplate>
+
+        </GridColumn>
+    </GridColumns>
 </SfGrid>
 
-@code{
-    public List<Order> Orders { get; set; }
+@code {
+
+    public List<OrderData> GridData { get; set; }
+
+    SfGrid<OrderData> Grid;
+    List<string> CustomerIDValues = new List<string>();
+    List<string> ShipCityValues = new List<string>();
+    List<string> ShipNameValues = new List<string>();
+    List<int> OrderIDValues = new List<int>();
+    bool IsFilterValueChange { get; set; }
+
+    public List<string> CustomerIDData { get; set; }
+    public List<string> ShipCityData { get; set; }
+    public List<string> ShipNameData { get; set; }
 
     protected override void OnInitialized()
     {
-        Orders = Enumerable.Range(1, 75).Select(x => new Order()
-        {
-            OrderID = 1000 + x,
-            CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
-            Freight = 2.1 * x,
-            OrderDate = (new DateTime[] { new DateTime(2010, 5, 1), new DateTime(2010, 5, 2), new DateTime(2010, 5, 3), })[new Random().Next(3)],
-        }).ToList();
+        GridData = OrderData.GetAllRecords();
+        this.CustomerIDData = GridData.Select(x => x.CustomerID).Distinct().ToList();
+        this.ShipCityData = GridData.Select(x => x.ShipCity).Distinct().ToList();
+        this.ShipNameData = GridData.Select(x => x.ShipName).Distinct().ToList();
     }
+    public async Task OrderIDOnChange(MultiSelectChangeEventArgs<int[]> args)
+    {
+        if (args.Value?.Length > 0)
+        {
+            OrderIDValues = args.Value.ToList();
+            IsFilterValueChange = true;
+        }
+        else
+        {
+            OrderIDValues = new List<int>();
+            IsFilterValueChange = true;
+        }
+    } 
+    public async Task CustomerIDOnChange(MultiSelectChangeEventArgs<string[]> args)
+    {
+        if (args.Value?.Length > 0)
+        {
+            CustomerIDValues = args.Value.ToList();
+            IsFilterValueChange = true;
+        }
+        else
+        {
+            CustomerIDValues = new List<string>();
+            IsFilterValueChange = true;
+        }
+    }
+    public async Task ShipCityOnChange(MultiSelectChangeEventArgs<string[]> args)
+    {
+        if (args.Value?.Length > 0)
+        {
+            ShipCityValues = args.Value.ToList();
+            IsFilterValueChange = true;
+        }
+        else
+        {
+            ShipCityValues = new List<string>();
+            IsFilterValueChange = true;
+        }
+    }
+    public async Task ShipNameOnChange(MultiSelectChangeEventArgs<string[]> args)
+    {
+        if (args.Value?.Length > 0)
+        {
+            ShipNameValues = args.Value.ToList();
+            IsFilterValueChange = true;
+        }
+        else
+        {
+            ShipNameValues = new List<string>();
+            IsFilterValueChange = true;
+        }
+    }
+    public async Task FilteringHandler(Syncfusion.Blazor.Grids.FilteringEventArgs args)
+    {
+        if (IsFilterValueChange)
+        {
+            IsFilterValueChange = false;
+            args.Cancel = true;
+            if (args.ColumnName == "OrderID")
+            {
+               
+                await Grid.FilterByColumnAsync("OrderID", "equal", OrderIDValues, "or");
+            } 
+            else if (args.ColumnName == "CustomerID")
+            {
+                await Grid.FilterByColumnAsync("CustomerID", "equal", CustomerIDValues, "or");
+            }
+            else if (args.ColumnName == "ShipCity")
+            {
+                await Grid.FilterByColumnAsync("ShipCity", "equal", ShipCityValues, "or");
+            }
+           else if (args.ColumnName == "ShipName")
+            {
+               await Grid.FilterByColumnAsync("ShipName", "equal", ShipNameValues, "or");
+            }
+            
+        }
+        if (args.FilterPredicates == null)
+        {
+            if (args.ColumnName == "OrderID")
+            {
 
-    public class Order {
-        public int? OrderID { get; set; }
-        public string CustomerID { get; set; }
-        public DateTime? OrderDate { get; set; }
-        public double? Freight { get; set; }
+                OrderIDValues = new List<int>();
+            }
+            else if (args.ColumnName == "CustomerID")
+            {
+                CustomerIDValues = new List<string>();
+            } 
+            else if (args.ColumnName == "ShipCity")
+            {
+                ShipCityValues = new List<string>();
+            } 
+            else if (args.ColumnName == "ShipName")
+            {
+                ShipNameValues = new List<string>();
+            }
+        }
     }
 }
+{% endhighlight %}
+{% highlight c# tabtitle="OrderData.cs" %}
+public class OrderData
+    {
+        public static List<OrderData> Orders = new List<OrderData>();
 
-```
+        public OrderData()
+        {
 
-The following screenshot represents CheckBox filter
+        }
+        public OrderData(int? OrderID,string CustomerID,string ShipCity, string ShipName)
+        {
+            this.OrderID = OrderID;    
+            this.CustomerID = CustomerID;
+            this.ShipCity = ShipCity;
+            this.ShipName = ShipName;           
+        }
 
-![Blazor DataGrid with CheckBox Filter](./images/blazor-datagrid-checkbox-filter.png)
+        public static List<OrderData> GetAllRecords()
+        {
+            if (Orders.Count() == 0)
+            {
+               
+                int OrderID = 10247;
 
-### Limitations of using different filter types in different columns
+                for (int i = 1; i < 2; i++)
+                {
+                    Orders.Add(new OrderData(OrderID+1, "VINET", "Reims", "Vins et alcools Chevali"));
+                    Orders.Add(new OrderData(OrderID+2, "TOMSP", "Münster", "Toms Spezialitäten"));
+                    Orders.Add(new OrderData(OrderID+3, "HANAR", "Rio de Janeiro", "Hanari Carnes"));
+                    Orders.Add(new OrderData(OrderID+4, "VICTE", "Lyon", "Victuailles en stock"));
+                    Orders.Add(new OrderData(OrderID+5, "SUPRD", "Charleroi", "Suprêmes délices"));
+                    Orders.Add(new OrderData(OrderID+6, "HANAR", "Lyon", "Hanari Carnes"));
+                    Orders.Add(new OrderData(OrderID+7, "CHOPS", "Rio de Janeiro", "Chop-suey Chinese"));
+                    Orders.Add(new OrderData(OrderID + 8, "ERNSH", "Münster", "Richter Supermarkt"));
+                    Orders.Add(new OrderData(OrderID+9, "WELLI", "Reims", "Wellington Import"));
+                   
+                    OrderID += 9;
+                }
+            }
+            return Orders;
+        }
+
+        public int? OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public string ShipCity { get; set; }
+        public string ShipName { get; set; }
+   }
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BDhftMLkrRRXmpHY?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+## Customize the default input component of filter menu dialog
+
+You have the flexibility to customize the default settings of input components within the menu filter by utilizing the [FilterTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_FilterTemplate) property  of the [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html). This property is used to add custom components to a particular column, allowing you to modify the behavior of specific filter components to better suit your needs.
+
+| Column Type | Default component  |Customization  | API Reference     |
+| ----------- | ------------------------------------------------------------------------------------------------- | ---------------------------------------- | --------------------------------------------------------------------------------------------------------- |
+| String      | [AutoComplete](https://blazor.syncfusion.com/documentation/autocomplete/getting-started)    | Eg: Autofill="false" | [AutoComplete API](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfAutoComplete-2.html) |
+| Number      | [NumericTextBox](https://blazor.syncfusion.com/documentation/numeric-textbox/getting-started) | Eg: ShowSpinButton="false" | [NumericTextBox API](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfNumericTextBox-1.html)                 |
+| Boolean     | [DropDownList](https://blazor.syncfusion.com/documentation/dropdown-list/getting-started)   | Eg: SortOrder="SortOrder.Ascending"  | [DropDownList API](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html)                   |
+| Date        | [DatePicker](https://blazor.syncfusion.com/documentation/datepicker/getting-started)         | Eg: WeekNumber="true"    | [DatePicker API](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfDatePicker-1.html)                         |
+| DateTime    | [DateTimePicker](https://blazor.syncfusion.com/documentation/datetime-picker/getting-started) | Eg: ShowClearButton="true"  | [DateTimePicker API](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfDateTimePicker-1.html)                 |
+
+> To know more about the feature, refer to the Getting Started documentation and API Reference
+
+In the example provided below, the **OrderID** and **Freight** columns are numeric columns. When you open the filter dialog for these columns, you will notice that a `NumericTextBox` with a spin button is displayed to change or set the filter value. However, using the `FilterTemplate` property of the GridColumn. This property is used to add custom components to a particular column, you can hide the spin button specifically for the **OrderID** column.
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+@using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor.Inputs
+
+<SfGrid DataSource="@GridData" @ref="Grid" AllowFiltering="true" AllowPaging="true" >
+    <GridFilterSettings Type="Syncfusion.Blazor.Grids.FilterType.Menu"></GridFilterSettings>
+    <GridColumns>
+        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" >
+            <FilterTemplate>
+                <SfNumericTextBox TValue="int?" ShowSpinButton="false" @bind-Value="@NumericValue">
+                    <NumericTextBoxEvents TValue="int?" ValueChange="NumericTextBoxValueChange"></NumericTextBoxEvents>
+                </SfNumericTextBox>
+            </FilterTemplate>
+        </GridColumn>
+        <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer ID" ></GridColumn>
+        <GridColumn Field=@nameof(OrderData.ShipName) HeaderText="Ship Name" ></GridColumn>
+        <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" Format="C2" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code {
+    public List<OrderData> GridData { get; set; }
+    SfGrid<OrderData>? Grid { get; set; }
+
+    protected override void OnInitialized()
+    {
+        GridData = OrderData.GetAllRecords();
+    }
+
+    public int? NumericValue { get; set; }
+
+    public async Task NumericTextBoxValueChange(Syncfusion.Blazor.Inputs.ChangeEventArgs<int?> args)
+    {
+        if (args.Value == null)
+        {
+            await Grid.ClearFiltering();
+        }
+        else
+        {
+            NumericValue = (int)args.Value;
+
+            await Grid.FilterByColumnAsync("OrderID", "equal", args.Value);
+        }
+    }
+}
+{% endhighlight %}
+{% highlight c# tabtitle="OrderData.cs" %}
+ public class OrderData
+    {
+        public static List<OrderData> Orders = new List<OrderData>();
+
+        public OrderData()
+        {
+
+        }
+        public OrderData(int? OrderID, string CustomerID, double? Freight, string ShipName)
+        {
+            this.OrderID = OrderID;
+            this.CustomerID = CustomerID;
+            this.Freight = Freight;
+            this.ShipName = ShipName;
+        }
+
+        public static List<OrderData> GetAllRecords()
+        {
+            if (Orders.Count() == 0)
+            {
+                int OrderID = 10247;
+                for (int i = 1; i < 3; i++)
+                {
+                    Orders.Add(new OrderData(OrderID + 1, "VINET", 32.38, "Vins et alcools Chevali"));
+                    Orders.Add(new OrderData(OrderID + 2, "TOMSP", 11.61, "Toms Spezialitäten"));
+                    Orders.Add(new OrderData(OrderID + 3, "HANAR", 65.83, "Hanari Carnes"));
+                    Orders.Add(new OrderData(OrderID + 4, "VICTE", 45.78, "Victuailles en stock"));
+                    Orders.Add(new OrderData(OrderID + 5, "SUPRD", 98.6, "Suprêmes délices"));
+                    Orders.Add(new OrderData(OrderID + 6, "HANAR", 103.45, "Hanari Carnes"));
+                    Orders.Add(new OrderData(OrderID + 7, "CHOPS", 103.45, "Chop-suey Chinese"));
+                    Orders.Add(new OrderData(OrderID + 8, "RICSU", 112.48, "Richter Supermarkt"));
+                    Orders.Add(new OrderData(OrderID + 9, "WELLI", 33.45, "Wellington Import"));
+                    OrderID += 9;
+                }
+            }
+            return Orders;
+        }
+
+        public int? OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public string ShipName { get; set; }
+        public double? Freight { get; set; }
+    }
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDhJDMrYKwUfVOxp?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+### Prevent autofill option in autocomplete of menu filter
+
+By default, the [AutoComplete](https://blazor.syncfusion.com/documentation/autocomplete/getting-started) component in the filter menu dialog is set to automatically fill suggestions as you type. However, there might be scenarios where you want to prevent this autofill behavior to provide a more customized and controlled user experience.
+
+You can prevent autofill feature by setting the [Autofill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfComboBox-2.html#Syncfusion_Blazor_DropDowns_SfComboBox_2_Autofill) parameter to false using the `FilterTemplate` property of the GridColumn. This property is used to add custom components to a particular column.
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+@using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor.DropDowns
+
+<SfGrid DataSource="@GridData" @ref="Grid" AllowFiltering="true" AllowPaging="true">
+    <GridFilterSettings Type="Syncfusion.Blazor.Grids.FilterType.Menu"></GridFilterSettings>
+    <GridColumns>
+        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer ID">
+            <FilterTemplate>
+                <SfAutoComplete TValue="string" TItem="string" ID="CustomerID" Autofill="false" @bind-Value="@((context as PredicateModel<string>).Value)" Placeholder="CustomerID" DataSource="@CustomerData">
+                </SfAutoComplete>
+            </FilterTemplate>
+        </GridColumn>
+        <GridColumn Field=@nameof(OrderData.ShipName) HeaderText="Ship Name"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" Format="C2" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code {
+    public List<OrderData> GridData { get; set; }
+    SfGrid<OrderData>? Grid { get; set; }
+
+    List<string> CustomerData = new List<string>() { "VINET", "TOMSP", "HANAR", "VICTE", "SUPRD", "CHOPS", "RICSU", "WELLI" };
+
+    protected override void OnInitialized()
+    {
+        GridData = OrderData.GetAllRecords();
+    }
+}
+{% endhighlight %}
+{% highlight c# tabtitle="OrderData.cs" %}
+   public class OrderData
+    {
+        public static List<OrderData> Orders = new List<OrderData>();
+
+        public OrderData()
+        {
+
+        }
+        public OrderData(int? OrderID, string CustomerID, double? Freight, string ShipName)
+        {
+            this.OrderID = OrderID;
+            this.CustomerID = CustomerID;
+            this.Freight = Freight;
+            this.ShipName = ShipName;
+        }
+
+        public static List<OrderData> GetAllRecords()
+        {
+            if (Orders.Count() == 0)
+            {
+                int OrderID = 10247;
+                for (int i = 1; i < 3; i++)
+                {
+                    Orders.Add(new OrderData(OrderID + 1, "VINET", 32.38, "Vins et alcools Chevali"));
+                    Orders.Add(new OrderData(OrderID + 2, "TOMSP", 11.61, "Toms Spezialitäten"));
+                    Orders.Add(new OrderData(OrderID + 3, "HANAR", 65.83, "Hanari Carnes"));
+                    Orders.Add(new OrderData(OrderID + 4, "VICTE", 45.78, "Victuailles en stock"));
+                    Orders.Add(new OrderData(OrderID + 5, "SUPRD", 98.6, "Suprêmes délices"));
+                    Orders.Add(new OrderData(OrderID + 6, "HANAR", 103.45, "Hanari Carnes"));
+                    Orders.Add(new OrderData(OrderID + 7, "CHOPS", 103.45, "Chop-suey Chinese"));
+                    Orders.Add(new OrderData(OrderID + 8, "RICSU", 112.48, "Richter Supermarkt"));
+                    Orders.Add(new OrderData(OrderID + 9, "WELLI", 33.45, "Wellington Import"));
+                    OrderID += 9;
+                }
+            }
+            return Orders;
+        }
+
+        public int? OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public string ShipName { get; set; }
+        public double? Freight { get; set; }
+    }
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BtBpXMrazUJxtJCP?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+## Filter menu events
+
+The Syncfusion Blazor Grid offers the [Filtering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_Filtering), [Filtered](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_Filtered), [FilterDialogOpening](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_FilterDialogOpening) and [FilterDialogOpened](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_FilterDialogOpened) events, which provide information about the actions being performed.
+
+1. **Filtering event**: `Filtering` event is triggered before the filtering or clear filtering action is performed in the grid. It provides a way to perform any necessary operations before the Filtering action takes place.
+
+2. **Filtered event**: `Filtered` event is triggered after the filtering or clear filtering action is performed in the grid. It provides a way to perform any necessary operations after the Filtering action has taken place.
+
+3. **FilterDialogOpening event**: `FilterDialogOpening` event is triggered before the filter dialog is opened in the grid. It provides a way to perform any necessary operations before the filter dialog opened.
+
+4. **FilterDialogOpened event**: `FilterDialogOpened` event is triggered after the filter dialog is opened in the grid. It provides a way to perform any necessary operations after the filter dialog opened.
+
+
+Here’s an example of how to use these events to handle filter menu action in the Syncfusion Blazor Grid:
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+@using Syncfusion.Blazor.Grids
+
+@if(Show == true)
+{
+    <div style="text-align : center; color: red">
+        <span> @BeginMessage</span>
+        <br />
+        <br />
+        <span> @CompleteMessage</span>
+    </div>
+    <br />
+}
+
+<SfGrid DataSource="@GridData" @ref="Grid" AllowFiltering="true" Height="273px">
+    <GridFilterSettings Type="Syncfusion.Blazor.Grids.FilterType.Menu"></GridFilterSettings>
+    <GridEvents FilterDialogOpening="FilterDialogOpeningHandler" FilterDialogOpened="FilterDialogOpeneHandler" Filtered="FilteredHandler" Filtering="FilteringHandler" TValue="OrderData"></GridEvents>
+    <GridColumns>
+        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="90"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer ID" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.ShipCity) HeaderText="Ship City" Width="100"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.ShipName) HeaderText="Ship Name" Width="100"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@if(flag == true){
+
+    <style>
+
+        .e-grid .e-dialog .e-footer-content {
+            background-color: red;
+        }
+
+    </style>
+}
+
+@code {
+
+    public List<OrderData> GridData { get; set; }
+
+    SfGrid<OrderData> Grid;
+
+    public bool flag = false;
+    public bool Show = false;
+
+    protected override void OnInitialized()
+    {
+        GridData = OrderData.GetAllRecords();
+    }
+
+    public string BeginMessage;
+
+    public string CompleteMessage;
+
+    public async Task FilteringHandler(FilteringEventArgs args)
+
+    {
+        if (args.ColumnName == "ShipCity")
+        {
+            args.Cancel = true;
+            BeginMessage = "Filtering is not allowed for ShipCity column";
+        }
+        else
+        {
+            BeginMessage = "The Filtering event is triggered for the " + args.ColumnName + " column";
+        }
+    }
+    public async Task FilteredHandler(FilteredEventArgs args)
+    {
+        CompleteMessage = "Filtering action completed for " + args.ColumnName + " column";
+    }
+    public async Task FilterDialogOpeningHandler(FilterDialogOpeningEventArgs args)
+    {
+        Show = true;
+        if (args.ColumnName == "OrderID" || args.ColumnName == "Freight")
+        {
+            args.FilterOperators = new List<Syncfusion.Blazor.Grids.IFilterOperator>
+            {
+             new Operators() { Text = "Equal", Value = "equal" },
+             new Operators() { Text = "Not Equal", Value = "notequal" }
+            };
+            BeginMessage = "Filter operators for number column were customized in the FilterDialogOpening event";
+        }
+        else
+        {
+            BeginMessage = "The FilterDialogOpening event is triggered for the "+ args.ColumnName+ " column";
+        }
+    }
+    public async Task FilterDialogOpeneHandler(FilterDialogOpenedEventArgs args)
+    {
+        flag = true;
+        CompleteMessage = "Applied CSS for filter dialog during FilterDialogOpened event";
+    }
+    public class Operators : Syncfusion.Blazor.Grids.IFilterOperator
+    {
+        public string Value { get; set; }
+        public string Text { get; set; }
+    }
+}
+{% endhighlight %}
+{% highlight c# tabtitle="OrderData.cs" %}
+     public class OrderData
+    {
+        public static List<OrderData> Orders = new List<OrderData>();
+
+        public OrderData()
+        {
+
+        }
+        public OrderData(int? OrderID, string CustomerID, double? Freight, string ShipCity, string ShipName)
+        {
+            this.OrderID = OrderID;
+            this.CustomerID = CustomerID;
+            this.Freight = Freight;
+            this.ShipCity = ShipCity;
+            this.ShipName = ShipName;
+        }
+
+        public static List<OrderData> GetAllRecords()
+        {
+            if (Orders.Count() == 0)
+            {
+                int OrderID = 10247;
+                for (int i = 1; i < 2; i++)
+                {
+                    Orders.Add(new OrderData(OrderID + 1, "VINET", 32.38, "Reims", "Vins et alcools Chevali"));
+                    Orders.Add(new OrderData(OrderID + 2, "TOMSP", 11.61, "Münster", "Toms Spezialitäten"));
+                    Orders.Add(new OrderData(OrderID + 3, "HANAR", 65.83, "Rio de Janeiro", "Hanari Carnes"));
+                    Orders.Add(new OrderData(OrderID + 4, "VICTE", 45.78, "Lyon", "Victuailles en stock"));
+                    Orders.Add(new OrderData(OrderID + 5, "SUPRD", 98.6, "Charleroi", "Suprêmes délices"));
+                    Orders.Add(new OrderData(OrderID + 6, "HANAR", 103.45, "Lyon", "Hanari Carnes"));
+                    Orders.Add(new OrderData(OrderID + 7, "CHOPS", 103.45, "Rio de Janeiro", "Chop-suey Chinese"));
+                    Orders.Add(new OrderData(OrderID + 8, "RICSU", 112.48, "Münster", "Richter Supermarkt"));
+                    Orders.Add(new OrderData(OrderID + 9, "WELLI", 33.45, "Reims", "Wellington Import"));
+                    OrderID += 9;
+                }
+            }
+            return Orders;
+        }
+
+        public int? OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public double? Freight { get; set; }
+        public string ShipName { get; set; }
+        public string ShipCity { get; set; }
+    }
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rNrTZWVuFpHxbSMS?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+## Limitations of using different filter types in different columns
 
 The different filter types such as Excel, Menu, and Checkbox can be defined in different columns of the same Grid. However, you cannot use these filter types along with filterBar type (default filter type). Because the filterbar type requires UI level changes with other filter types. For all other filter types, icons will be rendered in the column header.
 
@@ -234,44 +1032,52 @@ By default, for the date column in the filter menu, filtering action is performe
 
 In the following sample, the `SfDateRangePicker` component is rendered in the filter template. Using the `ValueChange` event of the `SfDateRangePicker`, get the start and end date values needed to perform the filtering action. In the [OnActionBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnActionBegin) event of the Grid, the default filter action is prevented by setting the `args.Cancel` as true. Then, perform the filtering action by setting the custom predicate values.
 
-```cshtml
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Calendars
 @using Syncfusion.Blazor.Data
 @using Syncfusion.Blazor.Grids
 
-<SfGrid @ref="Grid" TValue="Order" AllowFiltering="true" AllowPaging="true" DataSource="@Orders">
-    <GridEvents OnActionBegin="OnActionBegin" TValue="Order"></GridEvents>
+<SfGrid @ref="Grid" TValue="OrderData" AllowFiltering="true" AllowPaging="true" DataSource="@GridData">
+    <GridEvents Filtering="FilteringHandler" TValue="OrderData"></GridEvents>
     <GridFilterSettings Type="Syncfusion.Blazor.Grids.FilterType.Menu"></GridFilterSettings>
     <GridColumns>
-        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" IsPrimaryKey="true"
-                    TextAlign ="TextAlign.Right" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="MM/dd/yyyy hh:mm tt"
+        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" IsPrimaryKey="true"
+                    TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.OrderDate) HeaderText=" Order Date" Format="MM/dd/yyyy hh:mm tt"
                     TextAlign="TextAlign.Right" Width="250">
             <FilterTemplate>
-            @{
-                <SfDateRangePicker Placeholder="Choose a Range" Width="500" ShowClearButton="true"
-                                   @bind-StartDate="StartDate" @bind-EndDate="EndDate" TValue="DateTime">
-                    <DateRangePickerEvents TValue="DateTime" ValueChange="ValueChangeHandler">
-                    </DateRangePickerEvents>
-                </SfDateRangePicker>
-            }
+                @{
+                    <SfDateRangePicker Placeholder="Choose a Range" Width="500" ShowClearButton="true"
+                                       @bind-StartDate="StartDate" @bind-EndDate="EndDate" TValue="DateTime">
+                        <DateRangePickerEvents TValue="DateTime" ValueChange="ValueChangeHandler">
+                        </DateRangePickerEvents>
+                    </SfDateRangePicker>
+                }
             </FilterTemplate>
         </GridColumn>
-        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" 
+        <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" Format="C2"
                     TextAlign="TextAlign.Right" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
 
-@code{
-    private SfGrid<Order> Grid;
+@code {
+   
     public DateTime StartDate { get; set; }
     public DateTime EndDate { get; set; }
-    public List<Order> Orders { get; set; }
-    public async Task OnActionBegin(ActionEventArgs<Order> args)
+    public List<OrderData> GridData { get; set; }
+    SfGrid<OrderData>? Grid { get; set; }
+
+    protected override void OnInitialized()
     {
-        if (args.RequestType == Syncfusion.Blazor.Grids.Action.Filtering && 
-            args.CurrentFilteringColumn == "OrderDate")
+        GridData = OrderData.GetAllRecords();
+    }
+
+    public async Task FilteringHandler(FilteringEventArgs args)
+
+    {
+        if (args.ColumnName == "OrderDate")
         {
             args.Cancel = true; //cancel default filter action
             if (Grid.FilterSettings.Columns == null)
@@ -287,40 +1093,23 @@ In the following sample, the `SfDateRangePicker` component is rendered in the fi
             // Fetch the Uid of OrderDate column.
             string fUid = columns[2].Uid;
             Grid.FilterSettings.Columns.Add(new GridFilterColumn
-            {
-                Field = "OrderDate",
-                Operator = Syncfusion.Blazor.Operator.GreaterThanOrEqual,
-                Predicate = "and",
-                Value = StartDate,
-                Uid = fUid
-            });
+                {
+                    Field = "OrderDate",
+                    Operator = Syncfusion.Blazor.Operator.GreaterThanOrEqual,
+                    Predicate = "and",
+                    Value = StartDate,
+                    Uid = fUid
+                });
             Grid.FilterSettings.Columns.Add(new GridFilterColumn
-            {
-                Field = "OrderDate",
-                Operator = Syncfusion.Blazor.Operator.LessThanOrEqual,
-                Predicate = "and",
-                Value = EndDate.AddDays(1).AddSeconds(-1),
-                Uid = fUid
-            });
+                {
+                    Field = "OrderDate",
+                    Operator = Syncfusion.Blazor.Operator.LessThanOrEqual,
+                    Predicate = "and",
+                    Value = EndDate.AddDays(1).AddSeconds(-1),
+                    Uid = fUid
+                });
             Grid.Refresh();
         }
-    }
-    public class Order
-    {
-        public int? OrderID { get; set; }
-        public string CustomerID { get; set; }
-        public DateTime? OrderDate { get; set; }
-        public double? Freight { get; set; }
-    }
-    protected override void OnInitialized()
-    {
-        Orders = Enumerable.Range(1, 75).Select(x => new Order()
-        {
-            OrderID = 1000 + x,
-            CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
-            Freight = 2.1 * x,
-            OrderDate = DateTime.Now.AddDays(-x),
-        }).ToList();
     }
     public void ValueChangeHandler(RangePickerEventArgs<DateTime> args)
     {
@@ -328,103 +1117,75 @@ In the following sample, the `SfDateRangePicker` component is rendered in the fi
         EndDate = args.EndDate;
     }
 }
-```
-
-N> [View Sample in GitHub.](https://github.com/SyncfusionExamples/blazor-datagrid-filtering-using-date-range-picker)
-
-## Filter by multiple keywords using filter menu
-
-By default, the filtering action is performed based on the single value selected from the built-in component of the filter menu dialog. Now the DataGrid has the option to perform filtering actions based on multiple values. This can be achieved by using the [FilterTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_FilterTemplate) feature and [FilterByColumnAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_FilterByColumnAsync_System_String_System_String_System_Object_System_String_System_Nullable_System_Boolean__System_Nullable_System_Boolean__System_Object_System_Object_) method of the Grid.
-
-In the following sample, the MultiSelect component is rendered in the filter menu of the Customer Name column. Using the `ValueChange` event of `SfMultiSelect`, the selected values from the multiselect dropdown can be retrieved as a list. In the [OnActionBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnActionBegin) event of the Grid, when `RequestType` is `Filtering`, the list(selected values) can be passed to the `FilterByColumnAsync` method to get the filtered records.
-
-```cshtml
-@using Syncfusion.Blazor.Grids
-@using Syncfusion.Blazor.DropDowns
-
-<SfGrid @ref="@Grid" DataSource="@Orders" AllowFiltering="true" AllowPaging="true" Height="315">
-    <GridFilterSettings Type="Syncfusion.Blazor.Grids.FilterType.Menu"></GridFilterSettings>
-    <GridEvents OnActionBegin="OnActionBegin" TValue="Order"></GridEvents> 
-    <GridColumns>
-        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150">
-            <FilterTemplate>
-                <SfMultiSelect TValue="string[]" Placeholder="Customer" Value="@FilteredValues.ToArray()" ShowSelectAll="true" Mode="VisualMode.CheckBox" TItem="Data" DataSource="@Dropdown">
-                    <MultiSelectFieldSettings Value="CustomerID" Text="CustomerID" ></MultiSelectFieldSettings>
-                    <MultiSelectEvents ValueChange="OnChange" TValue="string[]" TItem="Data"></MultiSelectEvents>
-                </SfMultiSelect>
-            </FilterTemplate>
-        </GridColumn>
-        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
-        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-    </GridColumns>
-</SfGrid>
-
-@code{
-    SfGrid<Order> Grid;
-    public List<Order> Orders { get; set; }
-    List<string> FilteredValues = new List<string>();
-    bool IsFilterValueChange { get; set; }
-    protected override void OnInitialized()
+{% endhighlight %}
+{% highlight c# tabtitle="OrderData.cs" %}
+    public class OrderData
     {
-        Orders = Enumerable.Range(1, 75).Select(x => new Order()
+        public static List<OrderData> Orders = new List<OrderData>();
+
+        public OrderData()
         {
-            OrderID = 1000 + x,
-            CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
-            Freight = 2.1 * x,
-            OrderDate = (new DateTime[] { new DateTime(2010, 5, 1), new DateTime(2010, 5, 2), new DateTime(2010, 5, 3), })[new Random().Next(3)],
-        }).ToList();
-    }
-    public class Data
-    {
-        public string CustomerID { get; set; }
-    }
-    List<Data> Dropdown = new List<Data>
-    {
-        new Data() { CustomerID= "ANTON" },
-        new Data() { CustomerID= "ANANTR" },
-        new Data() { CustomerID= "ALFKI" },
-        new Data() { CustomerID= "BOLID" },
-        new Data() { CustomerID= "BLONP" },
-    };
-    public class Order
-    {
+
+        }
+        public OrderData(int? OrderID, string CustomerID, DateTime? OrderDate, double? Freight)
+        {
+            this.OrderID = OrderID;
+            this.CustomerID = CustomerID;
+            this.OrderDate = OrderDate;
+            this.Freight = Freight;
+        }
+
+        public static List<OrderData> GetAllRecords()
+        {
+            if (Orders.Count() == 0)
+            {
+                int OrderID = 10248;
+                int j = 1;
+                for (int i = 1; i < 7; i++)
+                {
+                    Orders.Add(new OrderData(OrderID + 1, "VINET", DateTime.Now.AddDays(-j), 32.38));
+                    Orders.Add(new OrderData(OrderID + 2, "TOMSP", DateTime.Now.AddDays(-j-1), 11.61));
+                    Orders.Add(new OrderData(OrderID + 3, "HANAR", DateTime.Now.AddDays(-j - 2), 65.83));
+                    Orders.Add(new OrderData(OrderID + 4, "VICTE", DateTime.Now.AddDays(-j - 3), 45.78));
+                    Orders.Add(new OrderData(OrderID + 5, "SUPRD", DateTime.Now.AddDays(-j - 4), 98.6));
+                    Orders.Add(new OrderData(OrderID + 6, "HANAR", DateTime.Now.AddDays(-j - 5), 103.45));
+                    Orders.Add(new OrderData(OrderID + 7, "CHOPS", DateTime.Now.AddDays(-j - 6), 103.45));
+                    Orders.Add(new OrderData(OrderID + 8, "RICSU", DateTime.Now.AddDays(-j - 7), 112.48));
+                    Orders.Add(new OrderData(OrderID + 9, "WELLI", DateTime.Now.AddDays(-j - 8), 33.45));
+                    OrderID += 9;
+                    j += 9;
+                }
+            }
+            return Orders;
+        }
+
         public int? OrderID { get; set; }
         public string CustomerID { get; set; }
         public DateTime? OrderDate { get; set; }
         public double? Freight { get; set; }
     }
-    public void OnChange(MultiSelectChangeEventArgs<string[]> args)
-    {
-        if(args.Value?.Length > 0)
-        {
-            FilteredValues = args.Value.ToList();
-            IsFilterValueChange = true;
-        } 
-        else
-        {
-            FilteredValues = new List<string>();
-            IsFilterValueChange = true; 
-        }
-    }
-    public void OnActionBegin(ActionEventArgs<Order> Args) 
-    { 
-        if (Args.RequestType == Syncfusion.Blazor.Grids.Action.Filtering) 
-        {
-            if (IsFilterValueChange)
-            {
-                IsFilterValueChange = false;
-                Args.Cancel = true;
-                Grid.ClearFilteringAsync(); 
-                Grid.FilterByColumnAsync("CustomerID", "equal", FilteredValues, "or");
-            }
-            if (Args.CurrentFilteringColumn == null)
-            {
-                FilteredValues = new List<string>();
-            }
-        } 
-    } 
-}
-```
+{% endhighlight %}
+{% endtabs %}
 
-N> [View Sample in GitHub.](https://github.com/SyncfusionExamples/blazor-datagrid-filter-by-multiple-keywords-using-filter-menu)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VtBfNiqZXNASChsV?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+## Troubleshoot filter menu operator issue
+
+When using the filter menu, the UI displays operators for all columns based on the data type of the first data it encounters. If the first data is empty or null, it may not work correctly. To overcome this issue, follow these steps to troubleshoot and resolve it:
+
+**Explicitly Define Data Type**: When defining columns in your Blazor Grid component, make sure to explicitly specify the data type for each column. You can do this using the type property within the columns configuration. For example:
+
+
+```cshtml
+<SfGrid AllowFiltering="true" DataSource="@GridData">
+    <GridColumns>
+        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" IsPrimaryKey="true" Type="ColumnType.Number" TextAlign="TextAlign.Right" Width="90"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer Name" Type="ColumnType.String" Width="120"></GridColumn>
+                @*Define data types for other columns as needed*@
+    </GridColumns>
+</SfGrid>
+
+```
+**Handle Null or Empty Data**: If your data source contains null or empty values, make sure that these values are appropriately handled within your data source or by preprocessing your data to ensure consistency.
+
+**Check Data Types in Data Source**: Ensure that the data types specified in the column definitions match the actual data types in your data source. Mismatched data types can lead to unexpected behavior.
