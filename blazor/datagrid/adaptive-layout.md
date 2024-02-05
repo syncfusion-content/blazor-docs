@@ -9,7 +9,7 @@ documentation: ug
 
 # Adaptive UI Layout in Blazor DataGrid Component
 
-The DataGrid user interface (UI) was redesigned to provide an optimal viewing experience and improve usability on small screens. This interface will render the filter, sort, and edit dialogs adaptively and have an option to render the DataGrid row elements in the vertical direction.
+The DataGrid user interface (UI) was redesigned to provide an optimal viewing experience and improve usability on small screens. This interface will render the filter, sort, column chooser, column menu(supports only when the `RowRenderingMode` as Horizontal) and edit dialogs adaptively and have an option to render the DataGrid row elements in the vertical direction.
 
 ## Render adaptive dialog
 
@@ -135,14 +135,16 @@ The DataGrid will render the row elements vertically while setting the [RowRende
 
 The following features are only supported in vertical row rendering:
 
-* Paging
+* Paging, including PageSize dropdown
 * Sorting
 * Filtering
 * Selection
 * Dialog Editing
 * Aggregate
 * Virtual scroll
-* Toolbar
+* Toolbar - Options like **Add**, **Filter**, **Sort**, **Edit**, **Delete**, **Search**, and **Toolbar template** are available when their respective features are enabled. The toolbar dynamically includes a three-dotted icon, containing additional features like **ColumnChooser**, **Print**, **PdfExport**, **ExcelExport**, or **CsvExport**, once these features are enabled. Please refer to the following snapshot.
+
+![AdaptivePagerDropdown ColumnMenu](./images/blazor-datagrid-adaptive-vertical-rendering-pager-dropdown-column-menu.gif)
 
 ## Rendering an adaptive layout for smaller screens alone
 
