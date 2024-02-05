@@ -328,9 +328,7 @@ You need to configure the corresponding [Interactive render mode](https://learn.
 
 ## Create Blazor Server Application
 
-Open Visual Studio 2022 and follow the steps in the below documentation to create the Blazor Server Application.
-
-[Getting Started](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio)
+You can create a **Blazor Server App** using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0) or the [Syncfusion Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
 
 ## Add Syncfusion Blazor Grid and Themes NuGet in Blazor App
 
