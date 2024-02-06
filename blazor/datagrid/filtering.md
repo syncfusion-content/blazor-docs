@@ -184,7 +184,7 @@ public class OrderData
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LDVTZCCymbPjhVWg?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-### Initial filter with multiple values for same column using Query property
+### Initial filter with multiple values for same column
 
 In the Syncfusion Blazor Grid, you can establish an initial filter containing multiple values for a particular column, which helps you to preset filter conditions for a specific column using multiple values. This functionality allows you to display a filtered records in the grid right after the grid is initially loaded.
 
@@ -197,8 +197,9 @@ The following example demonstrates, how to perform an initial filter with multip
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Data;
  
-<SfGrid DataSource="@GridData" @ref="Grid" Query="@Qry" AllowFiltering="true" Height="325px">
+<SfGrid DataSource="@GridData" @ref="Grid" AllowFiltering="true" Height="325px">
 <GridFilterSettings Type="Syncfusion.Blazor.Grids.FilterType.Excel"></GridFilterSettings>
+<GridEvents DataBound="DataBoundHandler" TValue="OrderData"></GridEvents>
 <GridColumns>
 <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="100"></GridColumn>
 <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer ID" Width="120"></GridColumn>
@@ -210,7 +211,6 @@ The following example demonstrates, how to perform an initial filter with multip
 @code {
  
     public List<OrderData> GridData { get; set; }
-    public Query Qry { get; set; }
     SfGrid<OrderData> Grid;
  
     public int value{ get; set; }
@@ -218,24 +218,43 @@ The following example demonstrates, how to perform an initial filter with multip
     protected override void OnInitialized()
     {
         GridData = OrderData.GetAllRecords();
-        ApplyInitialFilter();
     }
- 
-    private void ApplyInitialFilter()
+
+    public bool flag = true;
+
+    public async Task DataBoundHandler()
     {
-        var Col1Pre = new WhereFilter();
-        var predicate = new List<WhereFilter>();
-        predicate.Add(new WhereFilter() {Field= "CustomerID",
-                Operator = "startswith",
-                value = "VINET", });
-        predicate.Add(new WhereFilter()
+        var columns = await Grid.GetColumns();
+
+        if (columns != null && flag == true)
+        {
+            flag = false;
+            if (Grid.FilterSettings.Columns == null)
             {
-                Field = "CustomerID",
-                Operator = "startswith",
-                value = "HANAR",
-            });
-        Col1Pre = WhereFilter.Or(predicate);
-        Qry = new Query().Where(Col1Pre);
+                Grid.FilterSettings.Columns = new List<GridFilterColumn>();
+            }
+            string CustomerfUid = columns[1].Uid;
+           
+            Grid.FilterSettings.Columns.Add(new GridFilterColumn
+                {
+                    Field = "CustomerID",
+                    Operator = Syncfusion.Blazor.Operator.StartsWith,
+                    Predicate = "or",
+                    Value = "VINET",
+                    Uid = CustomerfUid
+                });
+
+            Grid.FilterSettings.Columns.Add(new GridFilterColumn
+                {
+                    Field = "CustomerID",
+                    Operator = Syncfusion.Blazor.Operator.StartsWith,
+                    Predicate = "or",
+                    Value = "HANAR",
+                    Uid = CustomerfUid
+                });
+
+           await Grid.Refresh();
+        }
     }
 }
 {% endhighlight %}
@@ -287,7 +306,7 @@ The following example demonstrates, how to perform an initial filter with multip
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rXhTjMilotUqJJMF?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BDVzXLjnKdMxxvHP?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ### Initial filter with multiple values for different columns using Query property
 
@@ -302,8 +321,9 @@ The following example demonstrates how to perform an initial filter with multipl
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Data;
 
-<SfGrid DataSource="@GridData" @ref="Grid" Query="@Qry" AllowFiltering="true" Height="273px">
+<SfGrid DataSource="@GridData" @ref="Grid"  AllowFiltering="true" Height="273px">
     <GridFilterSettings Type="Syncfusion.Blazor.Grids.FilterType.Excel"></GridFilterSettings>
+    <GridEvents DataBound="DataBoundHandler" TValue="OrderData"></GridEvents>
     <GridColumns>
         <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="100"></GridColumn>
         <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer ID" Width="120"></GridColumn>
@@ -315,7 +335,6 @@ The following example demonstrates how to perform an initial filter with multipl
 @code {
 
     public List<OrderData> GridData { get; set; }
-    public Query Qry { get; set; }
     SfGrid<OrderData> Grid;
 
     public int value { get; set; }
@@ -323,48 +342,62 @@ The following example demonstrates how to perform an initial filter with multipl
     protected override void OnInitialized()
     {
         GridData = OrderData.GetAllRecords();
-        ApplyInitialFilter();
     }
 
-    private void ApplyInitialFilter()
+    public bool flag = true;
+
+    public async Task DataBoundHandler()
     {
+        var columns = await Grid.GetColumns();
 
-        var filters = new List<WhereFilter>();
-        var Col1PreCustomerID = new WhereFilter();
-        var Col1PreOrderID = new WhereFilter();
-        var predicateCustomerID = new List<WhereFilter>();
-        var predicateOrderID = new List<WhereFilter>();
-        predicateCustomerID.Add(new WhereFilter()
+        if (columns != null && flag == true)
+        {
+            flag = false;
+            if (Grid.FilterSettings.Columns == null)
             {
-                Field = "CustomerID",
-                Operator = "startswith",
-                value = "VINET",
-            });
-        predicateCustomerID.Add(new WhereFilter()
-            {
-                Field = "CustomerID",
-                Operator = "startswith",
-                value = "HANAR",
-            });
-        predicateOrderID.Add(new WhereFilter()
-            {
-                Field = "OrderID",
-                Operator = "lessthan",
-                value = 10250,
-            });
-        predicateOrderID.Add(new WhereFilter()
-            {
-                Field = "OrderID",
-                Operator = "notequal",
-                value = 10262,
-            });
-        Col1PreCustomerID = WhereFilter.Or(predicateCustomerID);
-        Col1PreOrderID = WhereFilter.And(predicateOrderID);
+                Grid.FilterSettings.Columns = new List<GridFilterColumn>();
+            }
+            string CustomerfUid = columns[1].Uid;
+            string OrderfUid = columns[0].Uid;
 
-        filters.Add(Col1PreCustomerID);
-        filters.Add(Col1PreOrderID);
+            Grid.FilterSettings.Columns.Add(new GridFilterColumn
+                {
+                    Field = "CustomerID",
+                    Operator = Syncfusion.Blazor.Operator.StartsWith,
+                    Predicate = "or",
+                    Value = "VINET",
+                    Uid = CustomerfUid
+                });
 
-        Qry = new Query().Where(filters);
+            Grid.FilterSettings.Columns.Add(new GridFilterColumn
+                {
+                    Field = "CustomerID",
+                    Operator = Syncfusion.Blazor.Operator.StartsWith,
+                    Predicate = "or",
+                    Value = "HANAR",
+                    Uid = CustomerfUid
+                });
+
+            Grid.FilterSettings.Columns.Add(new GridFilterColumn
+                {
+                    Field = "OrderID",
+                    Operator = Syncfusion.Blazor.Operator.LessThan,
+                    Predicate = "and",
+                    Value = 10250,
+                    Uid = OrderfUid
+                });
+
+            Grid.FilterSettings.Columns.Add(new GridFilterColumn
+                {
+                    Field = "OrderID",
+                    Operator = Syncfusion.Blazor.Operator.NotEqual,
+                    Predicate = "and",
+                    Value = 10262,
+                    Uid = OrderfUid
+                });
+
+            Grid.Refresh();
+        }
     }
 }
 {% endhighlight %}
@@ -416,7 +449,7 @@ The following example demonstrates how to perform an initial filter with multipl
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BZrzZCivcbsjQFOG?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hXrzNLDngxUMWDzM?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Filter operators
 
@@ -1120,25 +1153,7 @@ Here’s an example of how to get the filtering data in a Syncfusion grid using 
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hjhpZCiFKFFRoZzt?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-**2.Using the properties in the  FilteredEventArgs object**
-
-Alternatively, you can use the properties available in the  FilteredEventArgs object to obtain the filter record details.
-
-* [ColumnName](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.FilteredEventArgs.html#Syncfusion_Blazor_Grids_FilteredEventArgs_ColumnName): This property returns the column name that is currently filtered.
-
-* [FilterPredicates](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.FilteredEventArgs.html#Syncfusion_Blazor_Grids_FilteredEventArgs_FilterPredicates): This property returns the object containing filter predicate model details that is currently filtered.
-
-To access these properties, you can use the [Filtered](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_Filtered) event handler as shown below:
-
-```cshtml
-  public async Task FilteredHandler(FilteredEventArgs args)
-    {
-        var columnname = args.ColumnName;
-        var FilterPredicates = args.FilterPredicates;
-    }
-```
-
-### Get filtered records when using remote data source
+**2.Using the GetFilteredRecordsAsync() method for remote data**
 
 Use the [GetFilteredRecordsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GetFilteredRecordsAsync) method to retrieve the details of the filtered records from the Grid component. The `GetFilteredRecordsAsync` method returns the filtered records in the form of objects when using a remote data source. So, you need to deserialize the object to retrieve the filtered records.
 
@@ -1243,6 +1258,25 @@ Use the [GetFilteredRecordsAsync](https://help.syncfusion.com/cr/blazor/Syncfusi
 ```
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rXLTXiUChxbmPDxX?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}.
+
+**3.Using the properties in the  FilteredEventArgs object**
+
+Alternatively, you can use the properties available in the  FilteredEventArgs object to obtain the filter record details.
+
+* [ColumnName](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.FilteredEventArgs.html#Syncfusion_Blazor_Grids_FilteredEventArgs_ColumnName): This property returns the column name that is currently filtered.
+
+* [FilterPredicates](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.FilteredEventArgs.html#Syncfusion_Blazor_Grids_FilteredEventArgs_FilterPredicates): This property returns the object containing filter predicate model details that is currently filtered.
+
+To access these properties, you can use the [Filtered](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_Filtered) event handler as shown below:
+
+```cshtml
+  public async Task FilteredHandler(FilteredEventArgs args)
+    {
+        var columnname = args.ColumnName;
+        var FilterPredicates = args.FilterPredicates;
+    }
+```
+
 
 ## Clear filtering using methods
 
