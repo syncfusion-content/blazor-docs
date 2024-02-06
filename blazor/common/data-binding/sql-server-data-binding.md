@@ -65,14 +65,14 @@ Now, you need to add **model classes** from the existing **OrdersDetails** datab
 
 ![Create Shared Project](../images/db-shared-project.png)
 
-  Additionally, ensure that you have added a reference to the `BlazorWebApp.Shared` project in both the server-side and client-side projects of your web application.
+Additionally, ensure that you have added a reference to the `BlazorWebApp.Shared` project in both the server-side and client-side projects of your web application.
 
 * Then, open the NuGet Package Manager and install the following packages in both the shared and server-side projects of your Blazor Web App.
 
    * [Microsoft.EntityFrameworkCore.Tools](https://www.nuget.org/packages/Microsoft.EntityFrameworkCore.Tools): This package creates database context and model classes from the database.
    * [Microsoft.EntityFrameworkCore.SqlServer](https://www.nuget.org/packages/Microsoft.EntityFrameworkCore.SqlServer/): The database provider that allows Entity Framework Core to work with SQL Server.
 
-   Alternatively, you can utilize the following package manager command to achieve the same.
+Alternatively, you can utilize the following package manager command to achieve the same.
 
 {% tabs %}
 {% highlight C# tabtitle="Package Manager" %}
@@ -171,9 +171,7 @@ public class ClientServices
 * Additionally, make sure to register the `ClientServices` class in `Program.cs` files of both server & client side project.
 
 ```
-....
 builder.Services.AddScoped<ClientServices>();
-
 ```
 N> To ensure the using correct your's localhost portable number in code snippet.
 
@@ -196,7 +194,7 @@ N> To ensure the using correct your's localhost portable number in code snippet.
 * Add the following code snippet to configure a scoped HttpClient with a base address in **Program.cs** file in server side application.
 
 {% tabs %}
-{% highlight c# tabtitle="~/Program.cs" hl_lines="1 2 3 4" %}
+{% highlight c# tabtitle="~/Program.cs" %}
 
 builder.Services.AddScoped(http => new HttpClient { BaseAddress = new Uri(builder.Configuration.GetSection("BaseUri").Value!) });
 
