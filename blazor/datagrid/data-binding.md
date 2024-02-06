@@ -1206,7 +1206,7 @@ You can get the entire code in the [github](https://github.com/SyncfusionExample
 
 ## SQL Server data binding(SQL Client)
 
-The following examples demonstrate how to consume data from SQL Server using Microsoft SqlClient and bound it to Blazor DataGrid. You can achieve this requirement by using [Custom Adaptor](./custom-binding/#custom-adaptor-as-component).
+The following examples demonstrate how to consume data from SQL Server using Microsoft SqlClient and bound it to Blazor DataGrid. You can achieve this requirement by using [Custom Adaptor](./custom-binding#custom-adaptor-as-component).
 
 Before the implementation, add required NuGet like **Microsoft.Data.SqlClient** and **Syncfusion.Blazor** in your application. In the following sample, Custom Adaptor can be created as a Component. In custom adaptor **Read** method, you can get grid action details like paging, filtering, sorting information etc., using **DataManagerRequest**.
 
@@ -1451,7 +1451,7 @@ Now, you can configure the datagrid using the **'SfDataManager'** to interact wi
 }
 ```
 
-To perform datagrid CRUD operation using Entity Framework. You can refer [here](./editing/#entity-framework).
+To perform datagrid CRUD operation using Entity Framework. You can refer [here](./editing#entity-framework).
 N>You can find the fully working sample [here](https://github.com/ej2gridsamples/Blazor/blob/master/EntityFramework.zip).
 
 ## HTTP client
