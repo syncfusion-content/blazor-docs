@@ -240,9 +240,8 @@ To enable the display of filter text within the pager, you should set the [ShowF
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Buttons
 
-
 <div style="padding: 20px 0px 20px 0px">
-    <label>Enable/Disable Query String</label>
+    <label><b>Show filter bar status</b></label>
     <SfSwitch ValueChange="Change" Checked="@Checked" TChecked="bool"></SfSwitch>
 </div>
 
@@ -341,7 +340,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rDLJtsLFwCmpWUNk?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hZBTXrtHqQhshryZ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Prevent filtering for particular column
 

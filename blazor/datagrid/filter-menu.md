@@ -681,9 +681,7 @@ In the example provided below, the **OrderID** and **Freight** columns are numer
     <GridColumns>
         <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" >
             <FilterTemplate>
-                <SfNumericTextBox TValue="int?" ShowSpinButton="false" @bind-Value="@NumericValue">
-                    <NumericTextBoxEvents TValue="int?" ValueChange="NumericTextBoxValueChange"></NumericTextBoxEvents>
-                </SfNumericTextBox>
+                <SfNumericTextBox TValue="int?" ShowSpinButton="false" @bind-Value="@((context as PredicateModel<int?>).Value)"></SfNumericTextBox>
             </FilterTemplate>
         </GridColumn>
         <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer ID" ></GridColumn>
@@ -699,22 +697,6 @@ In the example provided below, the **OrderID** and **Freight** columns are numer
     protected override void OnInitialized()
     {
         GridData = OrderData.GetAllRecords();
-    }
-
-    public int? NumericValue { get; set; }
-
-    public async Task NumericTextBoxValueChange(Syncfusion.Blazor.Inputs.ChangeEventArgs<int?> args)
-    {
-        if (args.Value == null)
-        {
-            await Grid.ClearFiltering();
-        }
-        else
-        {
-            NumericValue = (int)args.Value;
-
-            await Grid.FilterByColumnAsync("OrderID", "equal", args.Value);
-        }
     }
 }
 {% endhighlight %}
@@ -765,7 +747,7 @@ In the example provided below, the **OrderID** and **Freight** columns are numer
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LDhJDMrYKwUfVOxp?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rXrftBDxzDMOqgsi?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ### Prevent autofill option in autocomplete of menu filter
 
