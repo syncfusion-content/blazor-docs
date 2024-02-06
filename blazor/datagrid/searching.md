@@ -681,7 +681,7 @@ The following example demonstrates, how to perform a search with multiple keywor
 @using Syncfusion.Blazor.Data
 
 <SfTextBox Input="OnInput"></SfTextBox>
-<SfRadioButton TChecked="bool" ValueChange="DariRadioButton" Label="Lucas"></SfRadioButton>
+<SfRadioButton TChecked="bool" ValueChange="OnRadioButtonChecked" Label="Lucas"></SfRadioButton>
 
 <SfGrid @ref="DefaultGrid" DataSource="@Orders" Query="@SearchQuery">
     <GridColumns>
@@ -713,7 +713,7 @@ The following example demonstrates, how to perform a search with multiple keywor
         SearchQuery = new Query().Where(ColumnPredicate);
     }
 
-    public void DariRadioButton(ChangeArgs<bool> pilihan)
+    public void OnRadioButtonChecked(ChangeArgs<bool> pilihan)
     {
         Predicate.Add(new WhereFilter()
             {
