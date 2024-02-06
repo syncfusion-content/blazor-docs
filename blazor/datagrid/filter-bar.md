@@ -257,6 +257,16 @@ To enable the display of filter text within the pager, you should set the [ShowF
     </GridColumns>
 </SfGrid>
 
+@if(Checked == false)
+{
+<style>
+    .e-pager .e-pagerexternalmsg 
+    {
+    display : none;
+    }
+</style>
+}
+
 @code {
 
     public List<OrderData> GridData { get; set; }
@@ -340,7 +350,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hZBTXrtHqQhshryZ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZVfZhtdTBLebNJe?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Prevent filtering for particular column
 
