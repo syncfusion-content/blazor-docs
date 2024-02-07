@@ -57,26 +57,26 @@ In the below example, the `activeBreakPoint` was accessed in the **Home.razor** 
 {% tabs %}
 {% highlight C# tabtitle="Home" hl_lines="3 10" %}
 
-The active breakpoint is @activeBreakPointValue
+The active breakpoint is @activeBreakPoint
 <br/><br/>
 <h5>Home Page</h5>
 
 @code {
     [CascadingParameter]
-    public string activeBreakPointValue { get; set; }
+    public string activeBreakPoint { get; set; }
 }
 ....
 
 {% endhighlight %}
 {% highlight C# tabtitle="Counter" hl_lines="3 11" %}
 
-The active breakpoint is @activeBreakPointValue
+The active breakpoint is @activeBreakPoint
 <br /><br />
 <h5>Counter Page</h5>
 
 @code {
     [CascadingParameter]
-    public string activeBreakPointValue { get; set; }
+    public string activeBreakPoint { get; set; }
 }
 ....
 
