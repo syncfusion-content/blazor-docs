@@ -65,15 +65,15 @@ public class OrderData
                 
                 for (int i = 1; i < 3; i++)
                 {
-                    Orders.Add(new OrderData(OrderID + 1, "VINET", new DateTime(1996, 07, 06), 32.38));
-                    Orders.Add(new OrderData(OrderID + 2, "TOMSP", new DateTime(1996, 07, 06), 11.61));
+                    Orders.Add(new OrderData(OrderID + 1, "VINET", new DateTime(1996, 07, 04), 32.38));
+                    Orders.Add(new OrderData(OrderID + 2, "TOMSP", new DateTime(1996, 07, 05), 11.61));
                     Orders.Add(new OrderData(OrderID + 3, "HANAR", new DateTime(1996, 07, 06), 65.83));
-                    Orders.Add(new OrderData(OrderID + 4, "VICTE", new DateTime(1996, 07, 06), 45.78));
-                    Orders.Add(new OrderData(OrderID + 5, "SUPRD", new DateTime(1996, 07, 06), 98.6));
-                    Orders.Add(new OrderData(OrderID + 6, "HANAR", new DateTime(1996, 07, 06), 103.45));
-                    Orders.Add(new OrderData(OrderID + 7, "CHOPS", new DateTime(1996, 07, 06), 103.45));
-                    Orders.Add(new OrderData(OrderID + 8, "RICSU", new DateTime(1996, 07, 06), 112.48));
-                    Orders.Add(new OrderData(OrderID + 9, "WELLI", new DateTime(1996, 07, 06), 33.45));
+                    Orders.Add(new OrderData(OrderID + 4, "VICTE", new DateTime(1996, 07, 07), 45.78));
+                    Orders.Add(new OrderData(OrderID + 5, "SUPRD", new DateTime(1996, 07, 08), 98.6));
+                    Orders.Add(new OrderData(OrderID + 6, "HANAR", new DateTime(1996, 07, 09), 103.45));
+                    Orders.Add(new OrderData(OrderID + 7, "CHOPS", new DateTime(1996, 07, 10), 103.45));
+                    Orders.Add(new OrderData(OrderID + 8, "RICSU", new DateTime(1996, 07, 11), 112.48));
+                    Orders.Add(new OrderData(OrderID + 9, "WELLI", new DateTime(1996, 07, 12), 33.45));
                     OrderID += 9;
                     
                 }
@@ -89,7 +89,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rthfDsKDhZjsizFd?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LtVfZVDQLqvKxcHI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 > * The Excel-like filter feature supports various filter conditions, including text-based, number-based, date-based, and boolean-based filters.
 > * The filter dialog provides additional options, such as searching for specific values, and clearing applied filters.
@@ -152,15 +152,15 @@ public class OrderData
                 
                 for (int i = 1; i < 3; i++)
                 {
-                    Orders.Add(new OrderData(OrderID + 1, "VINET", new DateTime(1996, 07, 06), 32.38));
-                    Orders.Add(new OrderData(OrderID + 2, "TOMSP", new DateTime(1996, 07, 06), 11.61));
+                    Orders.Add(new OrderData(OrderID + 1, "VINET", new DateTime(1996, 07, 04), 32.38));
+                    Orders.Add(new OrderData(OrderID + 2, "TOMSP", new DateTime(1996, 07, 05), 11.61));
                     Orders.Add(new OrderData(OrderID + 3, "HANAR", new DateTime(1996, 07, 06), 65.83));
-                    Orders.Add(new OrderData(OrderID + 4, "VICTE", new DateTime(1996, 07, 06), 45.78));
-                    Orders.Add(new OrderData(OrderID + 5, "SUPRD", new DateTime(1996, 07, 06), 98.6));
-                    Orders.Add(new OrderData(OrderID + 6, "HANAR", new DateTime(1996, 07, 06), 103.45));
-                    Orders.Add(new OrderData(OrderID + 7, "CHOPS", new DateTime(1996, 07, 06), 103.45));
-                    Orders.Add(new OrderData(OrderID + 8, "RICSU", new DateTime(1996, 07, 06), 112.48));
-                    Orders.Add(new OrderData(OrderID + 9, "WELLI", new DateTime(1996, 07, 06), 33.45));
+                    Orders.Add(new OrderData(OrderID + 4, "VICTE", new DateTime(1996, 07, 07), 45.78));
+                    Orders.Add(new OrderData(OrderID + 5, "SUPRD", new DateTime(1996, 07, 08), 98.6));
+                    Orders.Add(new OrderData(OrderID + 6, "HANAR", new DateTime(1996, 07, 09), 103.45));
+                    Orders.Add(new OrderData(OrderID + 7, "CHOPS", new DateTime(1996, 07, 10), 103.45));
+                    Orders.Add(new OrderData(OrderID + 8, "RICSU", new DateTime(1996, 07, 11), 112.48));
+                    Orders.Add(new OrderData(OrderID + 9, "WELLI", new DateTime(1996, 07, 12), 33.45));
                     OrderID += 9;
                 }
             }
@@ -175,7 +175,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LthJNsUjzlaVEAhW?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hNBTZBNcrfDcFCUo?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Customize the filter choice count
 
@@ -419,57 +419,35 @@ In this example, you can see how to use the `FilterItemTemplate` to render icons
 
                     if (filterContext.Value.ToString() == "Beverages")
                     {
-                        <i class="fa fa-coffee"></i>
-
-                        @filterContext.Value.ToString()
-                        ;
+                        <i class="fa fa-coffee"></i> <ln/> @filterContext.Value.ToString();
                     }
                     else if (filterContext.Value.ToString() == "Condiments")
                     {
-                        <i class="fa fa-leaf"></i>
-
-                        @filterContext.Value.ToString()
-                        ;
+                        <i class="fa fa-leaf"></i> <ln/> @filterContext.Value.ToString();
                     }
                     else if (filterContext.Value.ToString() == "Confections")
                     {
-                        <i class="fas fa-birthday-cake"></i>
-
-                        @filterContext.Value.ToString()
-                        ;
+                        <i class="fas fa-birthday-cake"></i> <ln/> @filterContext.Value.ToString();
                     }
                     else if (filterContext.Value.ToString() == "DairyProducts")
                     {
-                        <i class="fas fa-ice-cream"></i> @filterContext.Value.ToString()
-                        ;
+                        <i class="fas fa-ice-cream"></i> <ln/> @filterContext.Value.ToString();
                     }
                     else if (filterContext.Value.ToString() == "Grains")
                     {
-                        <i class="fas fa-seedling"></i>
-
-                        @filterContext.Value.ToString()
-                        ;
+                        <i class="fas fa-seedling"></i> <ln/> @filterContext.Value.ToString();
                     }
                     else if (filterContext.Value.ToString() == "Meat")
                     {
-                        <i class="fas fa-drumstick-bite"></i>
-
-                        @filterContext.Value.ToString()
-                        ;
+                        <i class="fas fa-drumstick-bite"></i> <ln/> @filterContext.Value.ToString();
                     }
                     else if (filterContext.Value.ToString() == "Produce")
                     {
-                        <i class="fas fa-carrot"></i>
-
-                        @filterContext.Value.ToString()
-                        ;
+                        <i class="fas fa-carrot"></i> <ln/> @filterContext.Value.ToString();
                     }
                     else if (filterContext.Value.ToString() == "Seafood")
                     {
-                        <i class="fas fa-fish"></i>
-
-                        @filterContext.Value.ToString()
-                        ;
+                        <i class="fas fa-fish"></i> <ln/> @filterContext.Value.ToString();
                     }
                 }
             </FilterItemTemplate>
@@ -536,13 +514,13 @@ In this example, you can see how to use the `FilterItemTemplate` to render icons
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VXVJjrZhhSCSEboQ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZrJjVtQgjHtuqOK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Customize the excel filter dialog using CSS
 
 In the Syncfusion Blazor Grid, you have the flexibility to enhance the visual presentation of the excel filter dialog. This can be achieved by utilizing CSS styles to modify the dialog’s appearance according to the specific needs and aesthetics of your application.
 
-**Removing context menu option**
+**1.Removing context menu option**
 
 The excel filter dialog includes several features such as **context menu**, **search box**, and c**heckbox list** that may not be required in some scenarios. You can remove these options using the className attribute in the grid component.
 
@@ -639,7 +617,7 @@ public class OrderData
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BDVJZhtsFqnfgvJa?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-**Customize the height and width of filter popup**
+**2.Customize the height and width of filter popup**
 
 You can customize the height and width of each column’s filter dialog using the CSS style in the [FilterDialogOpening](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_FilterDialogOpening) event of the Grid.
 
@@ -763,7 +741,7 @@ public class OrderData
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BDBpZBDBCFDseVPP?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-## Customize filter icon for filtered columns
+**3.Customize filter icon for filtered columns**
 
 After filtering the column, the DataGrid will display the in-built filtered icon with predefined styles by default. The filtered icon can also be customized using <b>.e-grid .e-filtered::before</b> class.
 
