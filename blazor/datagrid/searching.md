@@ -18,6 +18,7 @@ To further enhance the search functionality, you can integrate a search text box
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids
+@using BlazorApp1.Data
 
 <SfGrid DataSource="@Orders" Toolbar=@ToolbarItems>
     <GridColumns>
@@ -119,6 +120,7 @@ The following example demonstrates how to set an initial search in the grid usin
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids
+@using BlazorApp1.Data
 
 <SfGrid DataSource="@Orders" Toolbar=@ToolbarItems>
     <GridSearchSettings Fields=@InitSearch Operator=Syncfusion.Blazor.Operator.Contains Key="Ha" IgnoreCase="true"></GridSearchSettings>
@@ -215,6 +217,7 @@ The following example demonstrates how to set the `SearchSettings.Operator` prop
 {% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.DropDowns
+@using BlazorApp1.Data
 
 <label>Change the search operators: </label>
 <SfDropDownList Width="100px" TValue="Operator" TItem="DropDownOrder" Value="@SearchOperator" DataSource="@DropDownData">
@@ -329,6 +332,7 @@ The ```SearchAsync``` method allows you to perform a search operation based on a
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Inputs
 @using Syncfusion.Blazor.Buttons
+@using BlazorApp1.Data
 
 <SfTextBox @ref="TextBox" Placeholder="Search" Width="200px"></SfTextBox>
 <SfButton Content="Search" OnClick="SearchBtnHandler"></SfButton>
@@ -416,6 +420,7 @@ The following example demonstrates how to search specific columns such as **Cust
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids
+@using BlazorApp1.Data
 
 <SfGrid DataSource="@Orders" Toolbar=@ToolbarItems>
     <GridSearchSettings Fields=@SpecificColumns></GridSearchSettings>
@@ -496,6 +501,8 @@ In the below code example, the **Order ID** column search functionality is disab
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids
+@using BlazorApp1.Data
+
 
 <SfGrid DataSource="@Orders" Toolbar=@ToolbarItems>
     <GridColumns>
@@ -577,6 +584,7 @@ By default, the datagrid will initiate searching operation after the Enter key i
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Inputs
 @using Syncfusion.Blazor.Navigations
+@using BlazorApp1.Data
 
 <SfGrid @ref="DefaultGrid" DataSource="@Orders" AllowSorting="true" AllowPaging="true">
     <SfToolbar>
@@ -679,9 +687,10 @@ The following example demonstrates, how to perform a search with multiple keywor
 @using Syncfusion.Blazor.Inputs
 @using Syncfusion.Blazor.Buttons
 @using Syncfusion.Blazor.Data
+@using BlazorApp1.Data
 
 <SfTextBox Input="OnInput"></SfTextBox>
-<SfRadioButton TChecked="bool" ValueChange="OnRadioButtonChecked" Label="Lucas"></SfRadioButton>
+<SfRadioButton TChecked="bool" ValueChange="DariRadioButton" Label="Lucas"></SfRadioButton>
 
 <SfGrid @ref="DefaultGrid" DataSource="@Orders" Query="@SearchQuery">
     <GridColumns>
@@ -713,7 +722,7 @@ The following example demonstrates, how to perform a search with multiple keywor
         SearchQuery = new Query().Where(ColumnPredicate);
     }
 
-    public void OnRadioButtonChecked(ChangeArgs<bool> pilihan)
+    public void DariRadioButton(ChangeArgs<bool> pilihan)
     {
         Predicate.Add(new WhereFilter()
             {
@@ -795,6 +804,7 @@ The following example demonstrates how to clear the searched records using an ex
 {% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Buttons
 @using Syncfusion.Blazor.Grids
+@using BlazorApp1.Data
 
 <SfButton Content="ClearSearch" OnClick="clearSearchBtnHandler"></SfButton>
 <SfGrid @ref="DefaultGrid" DataSource="@Orders" AllowSorting="true" Toolbar=@ToolbarItems>
@@ -817,9 +827,7 @@ The following example demonstrates how to clear the searched records using an ex
     }  
     public void clearSearchBtnHandler()
     {
-#pragma warning disable BL0005
         this.DefaultGrid.SearchSettings.Key = "";
-#pragma warning restore BL0005
         DefaultGrid.Refresh();
     }     
 }
