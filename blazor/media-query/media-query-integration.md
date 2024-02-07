@@ -7,7 +7,7 @@ control: Media Query
 documentation: ug
 ---
 
-# Component integration using Blazor Media Query Component
+# Integration using Blazor Media Query component
 
 The Blazor Media Query component enhances the responsiveness of web application, allowing you to perform conditional rendering or styling to achieve a dynamic UI adpatable for various screen sizes.
 
