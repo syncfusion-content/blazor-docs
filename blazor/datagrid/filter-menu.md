@@ -193,6 +193,14 @@ public class OrderData
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BZrTDsVFcbVkxSol?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
+**Default filter input for OrderID column**
+
+![Default filter input OrderID column](images/Blazor-default-filter-input-datagrid.gif)
+
+**Custom dropdown filter for OrderID column**
+
+![Custom dropdown filter for OrderID column](images/blazor-custom-dropdown-filter-datagrid.gif)
+
 ## Show 24 hours time format in filter dialog
 
 The Syncfusion Blazor Grid provides a feature to display the time in a 24-hour format in the date or datetime column filter dialog. By default, the filter dialog displays the time in a 12-hour format (AM/PM) for the date or datetime column. However, you can customize the default format by setting the type as **DateTime** and the format as **MM/dd/yyyy HH:mm**. To enable the 24-hour time format in the filter dialog, you need to handle the [FilterTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) property of the [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html). This property is used to add custom components to a particular column and set the `TimeFormat` of the `DateTimepicker` to **HH:mm**.
@@ -292,13 +300,13 @@ The Syncfusion Blazor Grid enables you to customize the default filter operator 
 
 The available options for customization are:
 
-* **stringOperator**- defines customized string operator list.
+* **StringOperator**- defines customized string operator list.
 
-* **numberOperator** - defines customized number operator list.
+* **NumberOperator** - defines customized number operator list.
 
-* **dateOperator** - defines customized date operator list.
+* **DateOperator** - defines customized date operator list.
 
-* **booleanOperator** - defines customized boolean operator list.
+* **BooleanOperator** - defines customized boolean operator list.
 
 Here is an example of how to customize the filter operators list in Syncfusion Blazor Grid:
 

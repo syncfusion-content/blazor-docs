@@ -537,7 +537,6 @@ To utilize this feature, you can define a custom template for the filter bar by 
     <GridColumns>
         <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="100"></GridColumn>
         <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer ID" Width="100">
-
              <FilterTemplate>
                 <SfDropDownList PlaceHolder="All" ID="CustomerID" @bind-Value="@stringvalue" DataSource="@CustomerIDDropdown" TValue="string" TItem="string">
                     <DropDownListEvents ValueChange="@DropDownValueChange" TItem="string" TValue="string"></DropDownListEvents>
@@ -551,16 +550,13 @@ To utilize this feature, you can define a custom template for the filter bar by 
                     <NumericTextBoxEvents TValue="double?" ValueChange="NumericTextBoxValueChange"></NumericTextBoxEvents>
                 </SfNumericTextBox>
             </FilterTemplate>
-
         </GridColumn>
         <GridColumn Field=@nameof(OrderData.OrderDate) HeaderText=" Order Date" Format="d" Width="100">
             <FilterTemplate>
                 <SfDatePicker TValue="DateTime?" @bind-Value="@DateValue">
                     <DatePickerEvents TValue="DateTime?" ValueChange="DatePickerValueChange"></DatePickerEvents>
                 </SfDatePicker>
-
             </FilterTemplate>
-
         </GridColumn>
         <GridColumn Field=@nameof(OrderData.ShipCity) HeaderText="Ship City" Width="100">
             <FilterTemplate>
@@ -589,7 +585,6 @@ To utilize this feature, you can define a custom template for the filter bar by 
 
     public string ComboVal;
 
-
     public List<string> CustomerIDDropdown = new List<string>() { "All", "VINET", "TOMSP", "HANAR", "VICTE", "SUPRD", "CHOPS", "RICSU", "WELLI" };
 
     public List<string> ShipCountryData = new List<string>() { "France", "Germany", "Brazil", "Belgium", "Switzerland", "Venezuela", "Austria", "Mexico", "USA" };
@@ -599,7 +594,6 @@ To utilize this feature, you can define a custom template for the filter bar by 
         if(args.Value== null)
         {
             await Grid.ClearFiltering();
-
         }
         else
         {
@@ -623,7 +617,6 @@ To utilize this feature, you can define a custom template for the filter bar by 
     
     public List<string> ShipCityData = new List<string>() { "Reims", "Münster", "Rio de Janeiro", "Lyon", "Charleroi" };
 
-   
     private async Task ComboBoxValueChange(Syncfusion.Blazor.DropDowns.ChangeEventArgs<string, string> args)
     {
         if (args.Value == null)
@@ -636,7 +629,6 @@ To utilize this feature, you can define a custom template for the filter bar by 
             await Grid.FilterByColumnAsync("ShipCity", "equal", args.Value);
         }
     }
-
 
     public double? NumericValue { get; set; } = 10;
 
