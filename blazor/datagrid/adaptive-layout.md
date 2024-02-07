@@ -131,6 +131,102 @@ The DataGrid will render the row elements vertically while setting the [RowRende
 
 ![Blazor DataGrid with Adaptive Vertical Mode](./images/blazor-datagrid-adaptive-vertical-rendering-mode.gif)
 
+### Displaying grid in vertical row rendering mode with mobile device only
+
+The Syncfusion Blazor DataGrid provides a feature to display the grid in [vertical](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.RowDirection.html#Syncfusion_Blazor_Grids_RowDirection_Vertical) row rendering mode specifically designed for mobile devices. This is achieved by using the [SfMediaQuery](https://blazor.syncfusion.com/documentation/media-query/break-points) component to switch between vertical and horizontal modes based on the screen size. The [@bind-ActiveBreakPoint](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfMediaQuery.html#Syncfusion_Blazor_SfMediaQuery_ActiveBreakpoint) property is used to activate the vertical rendering mode when the screen size is smaller than the specified height
+
+Here’s an example code snippet illustrating the display of the grid in vertical row rendering mode exclusively for mobile devices using the Syncfusion Blazor DataGrid:
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+@using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor
+
+<div style="position:relative; min-height: 500px;">
+    <SfMediaQuery @bind-ActiveBreakPoint="activeBreakpoint" />
+    @if (activeBreakpoint == "Small")
+    {
+        IsEnableAdaptiveUI = true;
+        rowDirection = Syncfusion.Blazor.Grids.RowDirection.Vertical;
+    }
+    else
+    {
+        IsEnableAdaptiveUI = false;
+        rowDirection = Syncfusion.Blazor.Grids.RowDirection.Horizontal;
+
+    }
+
+    <SfGrid DataSource="@GridData" Height="100%" Width="100%" AllowPaging="true" RowRenderingMode="@rowDirection" EnableAdaptiveUI="@IsEnableAdaptiveUI">
+        <GridColumns>
+            <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" Width="120"></GridColumn>
+            <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer ID" Width="150"></GridColumn>
+            <GridColumn Field=@nameof(OrderData.OrderDate) HeaderText="Ship City" Width="150"></GridColumn>
+            <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Ship Name" Width="150"></GridColumn>
+        </GridColumns>
+    </SfGrid>
+</div>
+@code {
+
+    public List<OrderData> GridData { get; set; }
+
+    private string? activeBreakpoint { get; set; }
+
+    public bool IsEnableAdaptiveUI { get; set; }
+
+    private Syncfusion.Blazor.Grids.RowDirection rowDirection { get; set; }
+
+    protected override void OnInitialized()
+    {
+        GridData = OrderData.GetAllRecords();
+    }
+}
+{% highlight c# tabtitle="Order.cs" %}
+    public class OrderData
+    {
+        public static List<OrderData> Orders = new List<OrderData>();
+        public OrderData()
+        {
+
+        }
+        public OrderData( int? OrderID, string CustomerID, DateTime? OrderDate,double? Freight)
+        {
+           this.OrderID = OrderID;
+           this.CustomerID = CustomerID;
+           this.OrderDate = OrderDate;   
+           this.Freight = Freight;
+        }
+
+        public static List<OrderData> GetAllRecords()
+        {
+            if (Orders.Count() == 0)
+            {
+                int code = 10;
+                for (int i = 1; i < 2; i++)
+                {
+                    Orders.Add(new OrderData(10248, "VINET", new DateTime(1996,07,08), 32.38));
+                    Orders.Add(new OrderData(10249, "TOMSP", new DateTime(1996, 07, 08),66.98));
+                    Orders.Add(new OrderData(10248, "HANAR", new DateTime(1996, 07, 08),56.08));
+                    Orders.Add(new OrderData(10248, "VICTE", new DateTime(1996, 07, 08),21.78));
+                    Orders.Add(new OrderData(10248, "SUPRD", new DateTime(1996, 07, 08),87.56));
+                    Orders.Add(new OrderData(10248, "HANAR", new DateTime(1996, 07, 08),32.56));
+                    Orders.Add(new OrderData(10248, "CHOPS", new DateTime(1996, 07, 08),12.76));
+                    Orders.Add(new OrderData(10248, "RICSU", new DateTime(1996, 07, 08),55.45));
+                    Orders.Add(new OrderData(10248, "VINET", new DateTime(1996, 07, 08),11.94));                                                                                    
+                    code += 5;
+                }
+            }
+            return Orders;
+        }
+        public int? OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public DateTime? OrderDate { get; set; }
+        public double? Freight { get; set; }
+    }
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZrfjBXcJhoKKuBS?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %}
+
 ### Supported features in vertical mode
 
 The following features are only supported in vertical row rendering:
