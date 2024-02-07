@@ -7,7 +7,7 @@ control: Media Query
 documentation: ug
 ---
 
-# Component integration in Blazor Media Query Component
+# Component integration using Blazor Media Query Component
 
 The Blazor Media Query component enhances the responsiveness of web application, allowing you to perform conditional rendering or styling to achieve a dynamic UI adpatable for various screen sizes.
 
@@ -82,8 +82,14 @@ Active media name: <b>@activeBreakpoint</b>
 
 ```
 
+ActiveBreakPoint as `Large`:
+
 ![Blazor Media Query integration in Grid with activeBreakpoint as large](images/blazor-media-query-large-with-grid.png)
 
+ActiveBreakPoint as `Medium`:
+
 ![Blazor Media Query integration in Grid with activeBreakpoint as medium](images/blazor-media-query-medium-with-grid.png)
+
+ActiveBreakPoint as `Small`:
 
 ![Blazor Media Query integration in Grid with activeBreakpoint as small](images/blazor-media-query-small-with-grid.png)
