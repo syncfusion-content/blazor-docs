@@ -90,7 +90,7 @@ Here is an example that demonstrates the default filtering feature of the grid:
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VNrfZCsImdiJgcDd?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-> * You can apply and clear filtering by using **FilterByColumn** and **ClearFiltering** methods.
+> * You can apply and clear filtering by using **FilterByColumnAsync** and **ClearFilteringAsync** methods.
 > * To disable filtering for a particular column, set [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_AllowFiltering) property of **GridColumn** as false.
 
 ## Initial filter
@@ -188,9 +188,9 @@ public class OrderData
 
 In the Syncfusion Blazor Grid, you can establish an initial filter containing multiple values for a particular column, which helps you to preset filter conditions for a specific column using multiple values. This functionality allows you to display a filtered records in the grid right after the grid is initially loaded.
 
-To apply the filter with multiple values for same column at initial rendering by using Grid [Query](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Query) property 
+To apply the filter with multiple values for same column at initial rendering, set the filter [Predicate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridFilterColumn.html#Syncfusion_Blazor_Grids_GridFilterColumn_Predicate) object in [Columns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridFilterSettings.html#Syncfusion_Blazor_Grids_GridFilterSettings_Columns) property of [GridFilterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_FilterSettings) component.
 
-The following example demonstrates, how to perform an initial filter with multiple values for same **CustomerID** column using `Query` property
+The following example demonstrates, how to perform an initial filter with multiple values for same **CustomerID** column using `Columns` property of `GridFilterSettings` component and `Predicate`.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -312,9 +312,9 @@ The following example demonstrates, how to perform an initial filter with multip
 
 In the Syncfusion Blazor Grid, you can establish an initial filter containing multiple values for a different column, which helps you to preset filter conditions for a different column using multiple values. This functionality allows you to display a filtered records in the grid right after the grid is initially loaded.
 
-To apply the filter with multiple values for different column at initial rendering by using Grid [Query](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Query) property 
+To apply the filter with multiple values for different column at initial rendering, , set the filter [Predicate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridFilterColumn.html#Syncfusion_Blazor_Grids_GridFilterColumn_Predicate) object in [Columns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridFilterSettings.html#Syncfusion_Blazor_Grids_GridFilterSettings_Columns) property of [GridFilterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_FilterSettings) component.
 
-The following example demonstrates how to perform an initial filter with multiple values for different **Order ID** and **Customer ID** columns using `Query` property
+The following example demonstrates how to perform an initial filter with multiple values for different **Order ID** and **Customer ID** columns using `Columns` property of `GridFilterSettings` component and `Predicate`.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
