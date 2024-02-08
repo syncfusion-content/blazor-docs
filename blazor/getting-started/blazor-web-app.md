@@ -37,7 +37,7 @@ cd BlazorApp
 cd BlazorApp.Client
 ```
 
-N> If you want to see more available templates, you need to run the `dotnet new blazor --help` command.
+N> If you want to see more available templates, you need to run the `dotnet new blazor --help` or `dotnet new blazor -h` command.
 
 ## Manually Creating a project
 
