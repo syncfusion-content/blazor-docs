@@ -29,13 +29,42 @@ To use the individual component in Blazor playground, uninstall the existing pac
 
 Run the following command to create a new Blazor Web App in a command prompt (Windows) or terminal (macOS) or command shell (Linux).
 
-For a Blazor Web App with `Auto` interactive render mode & `Per page/component` interactivity location, use the following commands,
+If you set the Authentication Type as `None` and Interactivity location as `Per page/component`, you need to use the following command.
 
-```
-dotnet new blazor -o BlazorApp -int Auto
-cd BlazorApp
-cd BlazorApp.Client
-```
+|Interactive<br/> render mode | Command |
+|---|---|
+| server | <pre lang="xml">dotnet new blazor -o BlazorApp -int Server<br/>cd BlazorApp</pre>|
+|WebAssembly|<pre lang="xml">dotnet new blazor -o BlazorApp -int WebAssembly<br/>cd BlazorApp<br/>cd BlazorApp.Client</pre>|
+|Auto|<pre lang="xml">dotnet new blazor -o BlazorApp -int Auto<br/>cd BlazorApp<br/>cd BlazorApp.Client</pre>|
+|None|<pre lang="xml">dotnet new blazor -o BlazorApp -int None<br/>cd BlazorApp</pre>|
+
+If you set the Authentication Type as `Individual Accounts` and Interactivity location as `Per page/component`, you need to use the following command.
+
+|Interactive<br/> render mode | Command |
+|---|---|
+| server | <pre lang="xml">dotnet new blazor -o BlazorApp -au Individual -int Server<br/>cd BlazorApp</pre>|
+|WebAssembly|<pre lang="xml">dotnet new blazor -o BlazorApp -au Individual -int WebAssembly<br/>cd BlazorApp<br/>cd BlazorApp.Client</pre>|
+|Auto|<pre lang="xml">dotnet new blazor -o BlazorApp -au Individual -int Auto<br/>cd BlazorApp<br/>cd BlazorApp.Client</pre>|
+|None|<pre lang="xml">dotnet new blazor -o BlazorApp -au Individual -int None<br/>cd BlazorApp</pre>|
+
+If you set the Authentication Type as `Individual Accounts` and Interactivity location as `Global`, you need to use the following command.
+
+|Interactive<br/> render mode | Command |
+|---|---|
+| server | <pre lang="xml">dotnet new blazor -o BlazorApp -au Individual -int Server -ai<br/>cd BlazorApp</pre>|
+|WebAssembly|<pre lang="xml">dotnet new blazor -o BlazorApp -au Individual -int WebAssembly -ai<br/>cd BlazorApp<br/>cd BlazorApp.Client</pre>|
+|Auto|<pre lang="xml">dotnet new blazor -o BlazorApp -au Individual -int Auto -ai<br/>cd BlazorApp<br/>cd BlazorApp.Client</pre>|
+|None|<pre lang="xml">dotnet new blazor -o BlazorApp -au Individual -int None -ai<br/>cd BlazorApp</pre>|
+
+If you set the Authentication Type as `None` and Interactivity location as `Global`, you need to use the following command.
+
+|Interactive<br/> render mode | Command |
+|---|---|
+| server | <pre lang="xml">dotnet new blazor -o BlazorApp -int Server-ai<br/>cd BlazorApp</pre>|
+|WebAssembly|<pre lang="xml">dotnet new blazor -o BlazorApp -int WebAssembly -ai<br/>cd BlazorApp<br/>cd BlazorApp.Client</pre>|
+|Auto|<pre lang="xml">dotnet new blazor -o BlazorApp8 -int Auto -ai<br/>cd BlazorApp<br/>cd BlazorApp.Client</pre>|
+|None|<pre lang="xml">dotnet new blazor -o BlazorApp8 -int None -ai<br/>cd BlazorApp</pre>|
+
 
 N> If you want to see more available templates, you need to run the `dotnet new blazor --help` or `dotnet new blazor -h` command.
 
