@@ -11,7 +11,7 @@ documentation: ug
 
 ## ValueChange Event
 
-The ValueChange event will trigger when switch state has been changed by user interaction. ValueChange event argument type is [ChangeEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.ChangeEventArgs-1.html#properties). [ChangeEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.ChangeEventArgs-1.html#properties) contains [Checked](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.ChangeEventArgs-1.html#Syncfusion_Blazor_Buttons_ChangeEventArgs_1_Checked) and [Event](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.ChangeEventArgs-1.html#Syncfusion_Blazor_Buttons_ChangeEventArgs_1_Event) properties.
+The ValueChange event will trigger when switch state has been changed by user interaction. ValueChange event argument type is [ChangeEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.ChangeEventArgs-1.html). [ChangeEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.ChangeEventArgs-1.html) contains [Checked](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.ChangeEventArgs-1.html#Syncfusion_Blazor_Buttons_ChangeEventArgs_1_Checked) and [Event](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.ChangeEventArgs-1.html#Syncfusion_Blazor_Buttons_ChangeEventArgs_1_Event) properties.
 
 ```csharp
 
