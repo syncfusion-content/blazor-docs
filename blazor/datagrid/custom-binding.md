@@ -989,9 +989,9 @@ The following sample code demonstrates sending additional parameters to the cust
 
 ![Passing Additional Parameters to Custom Adaptor in Blazor DataGrid](./images/blazor-datagrid-passing-additional-parameter-to-custom-adaptor.gif)
 
-## DataTable Binding
+## DataTable binding
 
-DataTable represents a table with data rows and columns. Data binding of the DataTable can be acheieved in the DataGrid component by providing the **CustomAdaptor** class and overriding the Read or ReadAsync method of the DataAdaptor abstract class.
+DataTable represents a table with data rows and columns. Data binding of the DataTable can be achieved in the DataGrid component by providing the **CustomAdaptor** class and overriding the `Read` or `ReadAsync` method of the `DataAdaptor` abstract class.
 
 To bind DataTable to the datagrid, you can assign `TValue` to the **ExpandoObject**. 
 
@@ -1059,17 +1059,16 @@ Refer to the following code example for how to bind the DataTable using custom a
             // Searching
             DataSource = DynamicObjectOperation.PerformSearching(DataSource, dm.Search);
         }
-        if (dm.Sorted != null && dm.Sorted.Count > 0)
-        {
-            // Sorting
-            DataSource = DynamicObjectOperation.PerformSorting(DataSource, dm.Sorted);
-        }
         if (dm.Where != null && dm.Where.Count > 0)
         {
             // Filtering
             DataSource = DynamicObjectOperation.PerformFiltering(DataSource, dm.Where, dm.Where[0].Operator);
         }
-
+        if (dm.Sorted != null && dm.Sorted.Count > 0)
+        {
+            // Sorting
+            DataSource = DynamicObjectOperation.PerformSorting(DataSource, dm.Sorted);
+        }
         return DataSource;
     }
 
@@ -1120,7 +1119,7 @@ In the above example, DataTable is passed to the `ToQueryableCollection` method,
 
 You can perform data operations like **searching**, **sorting** and **filtering** using the `PerformDataOperation` method. This method takes a DataTable and a DataManagerRequest object as parameters, processes the data operations, and then returns an IQueryable data source.
 
-Refer to the following code example for how to implement **grouping** and **aggregates** in a DataTable using a custom adapter.
+Refer to the following code example for how to implement **grouping** and **aggregates** in a DataTable using a custom adaptor.
 
 ```cshtml
     // Implementing custom adaptor by extending the DataAdaptor class
@@ -1351,17 +1350,16 @@ While using batch editing in DataGrid, use the BatchUpdate/BatchUpdateAsync meth
             // Searching
             DataSource = DynamicObjectOperation.PerformSearching(DataSource, dm.Search);
         }
-        if (dm.Sorted != null && dm.Sorted.Count > 0)
-        {
-            // Sorting
-            DataSource = DynamicObjectOperation.PerformSorting(DataSource, dm.Sorted);
-        }
         if (dm.Where != null && dm.Where.Count > 0)
         {
             // Filtering
             DataSource = DynamicObjectOperation.PerformFiltering(DataSource, dm.Where, dm.Where[0].Operator);
         }
-
+        if (dm.Sorted != null && dm.Sorted.Count > 0)
+        {
+            // Sorting
+            DataSource = DynamicObjectOperation.PerformSorting(DataSource, dm.Sorted);
+        }
         return DataSource;
     }
 
