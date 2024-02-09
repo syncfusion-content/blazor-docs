@@ -48,7 +48,7 @@ Open **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusio
 Now, register the Syncfusion Blazor Service in the **~/Program.cs** file of your Blazor WebAssembly App.
 
 {% tabs %}
-{% highlight c# tabtitle=".NET 6 & .NET 7 (~/Program.cs)" hl_lines="3 11" %}
+{% highlight c# tabtitle="Blazor WebAssembly App (~/Program.cs)" hl_lines="3 11" %}
 
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
@@ -71,7 +71,7 @@ await builder.Build().RunAsync();
 
 The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Reference the stylesheet and script in the `<head>` of the main page as follows:
 
-* For Blazor WebAssembly app, include it in the **~/index.html** file.
+* For Blazor WebAssembly app, include it in the **~wwwroot/index.html** file.
 
 ```html
 <head>
@@ -96,6 +96,8 @@ Add the Syncfusion Blazor Calendar component in the **~/Pages/Index.razor** file
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion Blazor Calendar component in your default web browser.
 
-![Blazor Calendar Component](images/output-calendar-using-blazor-webassembly.png)
 
-N> You need to include a valid license key (either paid or trial key) within your applications. Refer to this [help topic](https://blazor.syncfusion.com/documentation/getting-started/license-key/overview) for more information.
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDBgirsJBGDheWFi?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+
+![Blazor Calendar Component](images/output-calendar-using-blazor-webassembly.png)

@@ -9,7 +9,7 @@ documentation: ug
 
 # Localization of Blazor Components
 
-Localization is the process of translating the application resources into different languages for specific cultures. You can localize the Syncfusion Blazor components by adding a resource file for each language.
+[Localization](https://learn.microsoft.com/en-us/aspnet/core/blazor/globalization-localization?view=aspnetcore-8.0) is the process of translating the application resources into different languages for specific cultures. You can localize the Syncfusion Blazor components by adding a resource file for each language.
 
 ## Localization of Syncfusion Blazor Components
 
@@ -29,7 +29,7 @@ Copy the default resx file (`SfResources.resx`) and the other required resx file
 
 N> Update the localization files whenever you upgrade the Syncfusion NuGet packages in the application to avoid the issues occur due to localization strings.
 
-After adding the resource file in the application, double click default resx (`SfResources.resx`) file and open **Resource Editor**. In the Resource Editor, change **Access Modifier** option as **Public** to generate `designer.cs` file.
+After adding the resource file in the application, double click default resx (`SfResources.resx`) file and open **Resource Editor**. In the Resource Editor, change **Access Modifier** option as **Public** .
 
 ![Changing Access Modifier](images/localization-resource-file.png)
 
@@ -70,15 +70,17 @@ public class SyncfusionLocalizer : ISyncfusionStringLocalizer
 
 {% endtabs %}
 
-Register the `ISyncfusionStringLocalizer` implementation to localize the Syncfusion Blazor components based on resources files added in application.
+Register the `ISyncfusionStringLocalizer` and `Syncfusion Blazor Service` in the **~/Program.cs** file of your app.
 
-* For **Blazor WebAssembly App** or **Blazor Server App**, register the Syncfusion Blazor Service in the client web app of **~/Program.cs** file.
+* If you create a Blazor Web App with an **Interactive render mode** such as `WebAssembly or Auto`, you need to ensure the registration of the `SyncfusionLocalizer and Syncfusion Blazor` services in both **~/Program.cs** files.
+
 * For **MAUI Blazor App**, register the Syncfusion Blazor Service in the **~/MauiProgram.cs** file.
 
 {% tabs %}
 
-{% highlight c# tabtitle="C#" hl_lines="4" %}
+{% highlight c# tabtitle="C#" hl_lines="3 5" %}
 
+using Syncfusion.Blazor;
 ...
 builder.Services.AddSyncfusionBlazor();
 // Register the locale service to localize the  SyncfusionBlazor components.
@@ -93,36 +95,31 @@ builder.Services.AddSingleton(typeof(ISyncfusionStringLocalizer), typeof(Syncfus
 
 If you don't want to change culture dynamically, you can set it statically by following the procedures below.
 
-### Blazor Server App
+### Blazor Web App and Blazor WASM App
 
-* For **.NET 6 & .NET 7** app, specify the static culture in **~/Program.cs** file.
-
-{% tabs %}
-
-{% highlight c# tabtitle=".NET 6 & .NET 7 (~/Program.cs)" hl_lines="3" %}
-
-...
-var app = builder.Build();
-app.UseRequestLocalization("de-DE");
-...
-
-{% endhighlight %}
-
-{% endtabs %}
-
-### Blazor WASM App
-
-In Blazor WASM app, you can set culture statically in Blazor's start option or in C# code.
+In Blazor Web App and Blazor WASM app, you can set culture statically in Blazor's start option or in C# code.
 
 #### Setting the culture Blazor's start option
 
 The app's culture can be set in JavaScript by setting `applicationCulture` in Blazor's start option by following the steps below,
 
-* In `wwwroot/index.html`, prevent Blazor autostart by adding `autostart="false"` attribute to Blazor's `<script>` tag.
+* For `Blazor Web App`, prevent Blazor autostart by adding `autostart="false"` attribute to the Blazor `<script>` tag in the **~/Components/App.razor** file.
+
+* For `Blazor WebAssembly App` , prevent Blazor autostart by adding `autostart="false"` attribute to Blazor's `<script>` tag in the **wwwroot/index.html** file.
 
 {% tabs %}
 
-{% highlight cshtml tabtitle="wwwroot/index.html" %}
+{% highlight cshtml tabtitle="Blazor Web App" %}
+
+<body>
+    ...
+    <script src="_framework/blazor.web.js" autostart="false"></script>
+    ...
+</body>
+
+{% endhighlight %}
+
+{% highlight cshtml tabtitle="Blazor WASM App" %}
 
 <body>
     ...
@@ -137,15 +134,30 @@ The app's culture can be set in JavaScript by setting `applicationCulture` in Bl
 * Add the script block below Blazor's `<script>` tag and before the closing </body> tag to start blazor with specific culture.
 
 {% tabs %}
+{% highlight cshtml tabtitle="Blazor Web App" hl_lines="4 5 6 7 8 9 10" %}
 
-{% highlight cshtml tabtitle="wwwroot/index.html" hl_lines="4 5 6 7 8" %}
+<body>
+    ...
+    <script src="_framework/blazor.web.js" autostart="false"></script>
+    <script>
+        Blazor.start({
+            webAssembly: {
+                applicationCulture: 'de'
+            }
+        });
+    </script>
+    ...
+</body>
+
+{% endhighlight %}
+{% highlight cshtml tabtitle="Blazor WASM App" hl_lines="4 5 6 7 8" %}
 
 <body>
     ...
     <script src="_framework/blazor.webassembly.js" autostart="false"></script>
     <script>
         Blazor.start({
-            applicationCulture: 'de-DE'
+            applicationCulture: 'de'
         });
     </script>
     ...
@@ -157,7 +169,7 @@ The app's culture can be set in JavaScript by setting `applicationCulture` in Bl
 
 #### Setting the culture in C# code
 
-You can set culture in C# code alternative for setting the culture Blazor's start option. Set the `CultureInfo.DefaultThreadCurrentCulture` and `CultureInfo.DefaultThreadCurrentUICulture` in `Program.cs` to the same culture before line that builds and runs the `WebAssemblyHostBuilder` (`await builder.Build().RunAsync();`).
+For `Blazor Web App & Blazor WASM App`, you can set culture in C# code alternative for setting the culture Blazor's start option. Set the `CultureInfo.DefaultThreadCurrentCulture` and `CultureInfo.DefaultThreadCurrentUICulture` in `Program.cs` to the same culture before line that builds and runs the `WebAssemblyHostBuilder` (`await builder.Build().RunAsync();`).
 
 {% tabs %}
 
@@ -167,6 +179,23 @@ using System.Globalization;
 
 CultureInfo.DefaultThreadCurrentCulture = new CultureInfo("de-DE");
 CultureInfo.DefaultThreadCurrentUICulture = new CultureInfo("de-DE");
+
+{% endhighlight %}
+
+{% endtabs %}
+
+### Blazor Server App
+
+* For **.NET 6 & .NET 7** app, specify the static culture in **~/Program.cs** file.
+
+{% tabs %}
+
+{% highlight c# tabtitle=".NET 6 & .NET 7 (~/Program.cs)" hl_lines="3" %}
+
+...
+var app = builder.Build();
+app.UseRequestLocalization("de-DE");
+...
 
 {% endhighlight %}
 
@@ -194,6 +223,172 @@ CultureInfo.DefaultThreadCurrentUICulture = new CultureInfo("de-DE");
 ## Dynamically set the culture
 
 The culture can be set dynamically based on user's preference. The following example demonstrates how to use a localization cookie to store user's localization preference.
+
+### Blazor Web App and Blazor WASM App
+
+For `Blazor Web App and Blazor WASM App`, set the `BlazorWebAssemblyLoadAllGlobalizationData` property to true in the project file:
+
+{% tabs %}
+
+{% highlight xml tabtitle=".csproj" %}
+
+<PropertyGroup>
+    <BlazorWebAssemblyLoadAllGlobalizationData>true</BlazorWebAssemblyLoadAllGlobalizationData>
+</PropertyGroup>
+
+{% endhighlight %}
+
+{% endtabs %}
+
+* For Blazor Web App, add JS function in `~/Components/App.razor` file (after Blazor's `<script>` tag and before the closing `</body>`), to get and set the user's selected culture in the browser local storage.
+
+* For Blazor WASM App, add JS function in `wwwroot/index.html` file (after Blazor's `<script>` tag and before the closing `</body>`), to get and set the user's selected culture in the browser local storage.
+
+{% tabs %}
+{% highlight cshtml tabtitle="Blazor Web App" hl_lines="2 3 4 5 6 7" %}
+
+<script src="_framework/blazor.web.js"></script>
+<script>
+    window.cultureInfo = {
+        get: () => window.localStorage['BlazorCulture'],
+        set: (value) => window.localStorage['BlazorCulture'] = value
+    };
+</script>
+
+{% endhighlight %}
+{% highlight cshtml tabtitle="Blazor WASM App" hl_lines="2 3 4 5 6 7" %}
+
+<script src="_framework/blazor.webassembly.js"></script>
+<script>
+    window.cultureInfo = {
+        get: () => window.localStorage['BlazorCulture'],
+        set: (value) => window.localStorage['BlazorCulture'] = value
+    };
+</script>
+
+{% endhighlight %}
+
+{% endtabs %}
+
+In `Program.cs` use JS interop to call above function and retrieve the user's culture selection from local storage. If local storage doesn't contain a culture for the user, the code sets a default value of United States English (en-US).
+
+If you create a Blazor Web App with an **Interactive render mode** such as `WebAssembly or Auto`, you need to ensure the registration of the `SyncfusionLocalizer and Syncfusion Blazor` services in both **~/Program.cs** files.
+
+{% tabs %}
+
+{% highlight c# tabtitle="Program.cs" hl_lines="8 10 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26" %}
+
+using Microsoft.JSInterop;
+using System.Globalization;
+
+...
+
+builder.Services.AddSyncfusionBlazor();
+//Register the Syncfusion locale service to localize Syncfusion Blazor components.
+builder.Services.AddSingleton(typeof(ISyncfusionStringLocalizer), typeof(SyncfusionLocalizer));
+
+var host = builder.Build();
+
+//Setting culture of the application
+var jsInterop = host.Services.GetRequiredService<IJSRuntime>();
+var result = await jsInterop.InvokeAsync<string>("cultureInfo.get");
+CultureInfo culture;
+if (result != null)
+{
+    culture = new CultureInfo(result);
+}
+else
+{
+    culture = new CultureInfo("en-US");
+    await jsInterop.InvokeVoidAsync("cultureInfo.set", "en-US");
+}
+CultureInfo.DefaultThreadCurrentCulture = culture;
+CultureInfo.DefaultThreadCurrentUICulture = culture;
+
+await builder.Build().RunAsync();
+
+{% endhighlight %}
+
+{% endtabs %}
+
+Create `CultureSwitcher` component to set the user's culture selection into browser local storage via JS interop and to force reload the page using the updated culture.
+
+{% tabs %}
+
+{% highlight razor tabtitle="CultureSwitcher.razor" %}
+
+@using  System.Globalization
+@inject IJSRuntime JSRuntime
+@inject NavigationManager NavigationManager
+
+<select @bind="Culture">
+    @foreach (var culture in supportedCultures)
+    {
+        <option value="@culture">@culture.DisplayName</option>
+    }
+</select>
+
+@code {
+    private CultureInfo[] supportedCultures = new[]
+    {
+        new CultureInfo("en-US"),
+        new CultureInfo("de-DE"),
+        new CultureInfo("fr-FR"),
+        new CultureInfo("ar-AE"),
+        new CultureInfo("zh-HK")
+    };
+
+    private CultureInfo Culture
+    {
+        get => CultureInfo.CurrentCulture;
+        set
+        {
+            if (CultureInfo.CurrentCulture != value)
+            {
+                var js = (IJSInProcessRuntime)JSRuntime;
+                js.InvokeVoid("cultureInfo.set", value.Name);
+
+                NavigationManager.NavigateTo(NavigationManager.Uri, forceLoad: true);
+            }
+        }
+    }
+}
+
+{% endhighlight %}
+
+{% endtabs %}
+
+Add the `CultureSwitcher` component to `~/MainLayout.razor` to enable the culture switcher in all pages. If you create a Blazor Web App with an interactivity location as `Per page/component`, you need to ensure the set a render mode at the `CultureSwitcher` component instance in the `~/MainLayout.razor` file.
+
+{% tabs %}
+{% highlight razor tabtitle="Blazor Web App" %}
+
+<div class="page">
+    ....
+    <main>
+        <div class="top-row px-4">
+            <CultureSwitcher @rendermode="@InteractiveAuto" />
+            ....
+        </div>
+    </main>
+</div>
+
+{% endhighlight %}
+{% highlight razor tabtitle="Blazor WASM App" %}
+
+<div class="page">
+    ....
+    <main>
+        <div class="top-row px-4">
+            <CultureSwitcher />
+            <a href="https://docs.microsoft.com/aspnet/" target="_blank">About</a>
+        </div>
+    </main>
+</div>
+
+{% endhighlight %}
+
+{% endtabs %}
 
 ### Blazor Server App
 
@@ -376,150 +571,6 @@ Add the `CultureSwitcher` component to `Shared/MainLayout.razor` to enable the c
         <article class="content px-4">
             @Body
         </article>
-    </main>
-</div>
-
-{% endhighlight %}
-
-{% endtabs %}
-
-### Blazor WASM App
-
-Set the `BlazorWebAssemblyLoadAllGlobalizationData` property to true in the project file:
-
-{% tabs %}
-
-{% highlight xml tabtitle=".csproj" %}
-
-<PropertyGroup>
-    <BlazorWebAssemblyLoadAllGlobalizationData>true</BlazorWebAssemblyLoadAllGlobalizationData>
-</PropertyGroup>
-
-{% endhighlight %}
-
-{% endtabs %}
-
-Add JS function in `wwwroot/index.html` file (after Blazor's `<script>` tag and before the closing `</body>`), to get and set the user's selected culture in the browser local storage.
-
-{% tabs %}
-
-{% highlight cshtml tabtitle="wwwroot/index.html" hl_lines="3 4 5 6" %}
-
-<script src="_framework/blazor.webassembly.js"></script>
-<script>
-    window.cultureInfo = {
-        get: () => window.localStorage['BlazorCulture'],
-        set: (value) => window.localStorage['BlazorCulture'] = value
-    };
-</script>
-
-{% endhighlight %}
-
-{% endtabs %}
-
-In `Program.cs` use JS interop to call above function and retrieve the user's culture selection from local storage. If local storage doesn't contain a culture for the user, the code sets a default value of United States English (en-US).
-
-{% tabs %}
-
-{% highlight c# tabtitle=".NET 6 & .NET 7 (Program.cs)" hl_lines="9 13 14 15 16 17 1819 20 21 22 23 24 25 26 27" %}
-
-using Microsoft.JSInterop;
-using System.Globalization;
-
-...
-
-builder.Services.AddSyncfusionBlazor();
-builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
-//Register the Syncfusion locale service to localize Syncfusion Blazor components.
-builder.Services.AddSingleton(typeof(ISyncfusionStringLocalizer), typeof(SyncfusionLocalizer));
-
-var host = builder.Build();
-
-//Setting culture of the application
-var jsInterop = host.Services.GetRequiredService<IJSRuntime>();
-var result = await jsInterop.InvokeAsync<string>("cultureInfo.get");
-CultureInfo culture;
-if (result != null)
-{
-    culture = new CultureInfo(result);
-}
-else
-{
-    culture = new CultureInfo("en-US");
-    await jsInterop.InvokeVoidAsync("cultureInfo.set", "en-US");
-}
-CultureInfo.DefaultThreadCurrentCulture = culture;
-CultureInfo.DefaultThreadCurrentUICulture = culture;
-
-await builder.Build().RunAsync();
-
-{% endhighlight %}
-
-{% endtabs %}
-
-Create `CultureSwitcher` component to set the user's culture selection into browser local storage via JS interop and to force reload the page using the updated culture.
-
-{% tabs %}
-
-{% highlight razor tabtitle="CultureSwitcher.razor" %}
-
-@using  System.Globalization
-@inject IJSRuntime JSRuntime
-@inject NavigationManager NavigationManager
-@using  System.Globalization
-@inject IJSRuntime JSRuntime
-@inject NavigationManager NavigationManager
-
-<select @bind="Culture">
-    @foreach (var culture in supportedCultures)
-    {
-        <option value="@culture">@culture.DisplayName</option>
-    }
-</select>
-
-@code {
-    private CultureInfo[] supportedCultures = new[]
-    {
-        new CultureInfo("en-US"),
-        new CultureInfo("de-DE"),
-        new CultureInfo("fr-FR"),
-        new CultureInfo("ar-AE"),
-        new CultureInfo("zh-HK")
-    };
-
-    private CultureInfo Culture
-    {
-        get => CultureInfo.CurrentCulture;
-        set
-        {
-            if (CultureInfo.CurrentCulture != value)
-            {
-                var js = (IJSInProcessRuntime)JSRuntime;
-                js.InvokeVoid("cultureInfo.set", value.Name);
-
-                NavigationManager.NavigateTo(NavigationManager.Uri, forceLoad: true);
-            }
-        }
-    }
-}
-
-{% endhighlight %}
-
-{% endtabs %}
-
-Add the `CultureSwitcher` component to `Shared/MainLayout.razor` to enable the culture switcher in all pages.
-
-{% tabs %}
-
-{% highlight razor tabtitle="MainLayout.razor" %}
-
-<div class="page">
-    ....
-    <main>
-        <div class="top-row px-4">
-            <CultureSwitcher />
-            <a href="https://docs.microsoft.com/aspnet/" target="_blank">About</a>
-        </div>
     </main>
 </div>
 

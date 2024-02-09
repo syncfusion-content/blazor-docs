@@ -17,7 +17,7 @@ This section briefly explains how to include the predefined dialogs in your Blaz
 
 ## Create a new Blazor App in Visual Studio
 
-You can create a **Blazor Server App** or **Blazor WebAssembly App** using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0) or the [Syncfusion Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
+You can create a **Blazor Server App** or **Blazor WebAssembly App** using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0&pivots=windows) or the [Syncfusion Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
 
 ## Install Syncfusion Blazor Popups and Themes NuGet in the App
 
@@ -132,7 +132,7 @@ In the code example below, an alert dialog is displayed upon clicking the button
 {% endhighlight %}
 {% endtabs %}
 
-![Alert Dialog](./images/blazor-alert-dialog.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hZBfNsKZLmlnIlwK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Alert Dialog](./images/blazor-alert-dialog.png)" %}
 
 ### Show confirm dialog
 
@@ -148,7 +148,7 @@ In the below code example, the confirm dialog displayed on `OK` and `Cancel` but
 {% endhighlight %}
 {% endtabs %}
 
-![Confirm Dialog](./images/blazor-confirm-dialog.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hZhTZigXBFzGkGUJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Confirm Dialog](./images/blazor-confirm-dialog.png)" %}
 
 ### Show prompt dialog
 
@@ -164,6 +164,5 @@ In the below code example, the prompt dialog displayed on `OK` and `Cancel` butt
 {% endhighlight %}
 {% endtabs %}
 
-![Prompt Dialog](./images/blazor-prompt-dialog.png)
-
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BXhfZiKjVvxKZQrI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Prompt Dialog](./images/blazor-prompt-dialog.png)" %}
 

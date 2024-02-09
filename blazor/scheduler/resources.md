@@ -9,7 +9,7 @@ documentation: ug
 
 # Resources and Grouping in Blazor Scheduler Component
 
-[Resources and grouping](https://www.syncfusion.com/blazor-components/blazor-scheduler/multiple-resources/) support allows the Scheduler to be shared by multiple resources. Also, the appointments of each resources are displayed under relevant resources. Each resource in the Scheduler is arranged in a column or row wise order, with individual spacing to display all its respective appointments on a single page. It also supports the multiple levels of grouping of resources, thus enabling the categorization of resources in a hierarchical structure and shows it either in expandable groups (Timeline views) or else vertical hierarchy one after the other (Calendar views).
+[Resources and grouping](https://www.syncfusion.com/blazor-components/blazor-scheduler/multiple-resources) support allows the Scheduler to be shared by multiple resources. Also, the appointments of each resources are displayed under relevant resources. Each resource in the Scheduler is arranged in a column or row wise order, with individual spacing to display all its respective appointments on a single page. It also supports the multiple levels of grouping of resources, thus enabling the categorization of resources in a hierarchical structure and shows it either in expandable groups (Timeline views) or else vertical hierarchy one after the other (Calendar views).
 
 It is also possible to assign one or more resources to the same appointment, by allowing multiple selection of resource options available in the event editor window.
 
@@ -25,9 +25,10 @@ The default options available within the `Resources` collection are as follows,
 | `Title` | string | It holds the title of the resource field to be displayed on the event editor window. |
 | `Name` | string | A unique resource name used for differentiating various resource objects while grouping. |
 | `AllowMultiple` | bool | When set to `true`, allows multiple selection of resource names, thus creating multiple instances of same appointment for the selected resources. |
-| `DataSource` | Object | Assigns the resource [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleResource-2.html#Syncfusion_Blazor_Schedule_ScheduleResource_2_DataSource), where data can be passed either as an array of JavaScript objects, or else can create an instance of [DataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) in case of processing remote data and can be assigned to the `DataSource` property. With the remote data assigned to `DataSource`, check the available [Adaptors](https://blazor.syncfusion.com/documentation/data/adaptors/) to customize the data processing. |
+| `DataSource` | Object | Assigns the resource [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleResource-2.html#Syncfusion_Blazor_Schedule_ScheduleResource_2_DataSource), where data can be passed either as an array of JavaScript objects, or else can create an instance of [DataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) in case of processing remote data and can be assigned to the `DataSource` property. With the remote data assigned to `DataSource`, check the available [Adaptors](https://blazor.syncfusion.com/documentation/data/adaptors) to customize the data processing. |
 | `Query` | query | Defines the external [Query](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.Query.html) that will be executed along with the data processing. |
 | `IdField` | string/int/Guid | Binds the resource ID field name from the resources `DataSource`. |
+| `ExpandedField` | string | Binds the `ExpandedField` name from the resources `DataSource`. It usually holds boolean value which decide whether the resource of timeline views is in collapse or expand state on initial load. |
 | `TextField` | string | Binds the text field name from the resources `DataSource`. It usually holds the resource names. |
 | `GroupIDField` | string | Binds the group ID field name from the resource `DataSource`. It usually holds the value of resource IDs of parent level resources. |
 | `ColorField` | string | Binds the color field name from the resource `DataSource`. The color value mapped in this field will be applied to the events of resources. |
@@ -90,7 +91,7 @@ The following code example depicts how to bind the list of object collection to 
 
 ### Binding ExpandoObject
 
-Scheduler is a generic component which is strongly bound to a model type. There are cases when the model type is unknown during compile type. In such cases data can be bound to the scheduler as list of [**ExpandoObject**](https://docs.microsoft.com/en-us/dotnet/api/system.dynamic.expandoobject?view=net-6.0).
+Scheduler is a generic component which is strongly bound to a model type. There are cases when the model type is unknown during compile type. In such cases data can be bound to the scheduler as list of [**ExpandoObject**](https://learn.microsoft.com/en-us/dotnet/api/system.dynamic.expandoobject?view=net-6.0).
 
 **ExpandoObject** can be bound to the `DataSource` option of the scheduler within the [`ScheduleResource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleResource-2.html) tag. Scheduler can also perform all kind of supported data operations and editing in ExpandoObject.
 
@@ -153,11 +154,11 @@ Scheduler is a generic component which is strongly bound to a model type. There 
 
 ## Binding DynamicObject
 
-Scheduler is a generic component which is strongly bound to a model type. There are cases when the model type is unknown during compile type. In such cases data can be bound to the scheduler as list of  [**DynamicObject**](https://docs.microsoft.com/en-us/dotnet/api/system.dynamic.dynamicobject?view=net-6.0).
+Scheduler is a generic component which is strongly bound to a model type. There are cases when the model type is unknown during compile type. In such cases data can be bound to the scheduler as list of  [**DynamicObject**](https://learn.microsoft.com/en-us/dotnet/api/system.dynamic.dynamicobject?view=net-6.0).
 
 **DynamicObject** can be bound to the `DataSource` option of the scheduler within the `ScheduleResource` tag. Scheduler can also perform all kinds of supported data operations and editing in DynamicObject.
 
-N> The [`GetDynamicMemberNames`](https://docs.microsoft.com/en-us/dotnet/api/system.dynamic.dynamicobject.getdynamicmembernames?view=netcore-3.1) method of DynamicObject class must be overridden and return the property names to perform data operation and editing while using DynamicObject.
+N> The [`GetDynamicMemberNames`](https://learn.microsoft.com/en-us/dotnet/api/system.dynamic.dynamicobject.getdynamicmembernames?view=netcore-3.1) method of DynamicObject class must be overridden and return the property names to perform data operation and editing while using DynamicObject.
 
 ```csharp
 @using System.Dynamic
@@ -234,7 +235,7 @@ N> The [`GetDynamicMemberNames`](https://docs.microsoft.com/en-us/dotnet/api/sys
 
 ## Binding ObservableCollection
 
-This [ObservableCollection](https://docs.microsoft.com/en-us/dotnet/api/system.collections.objectmodel.observablecollection-1?view=netframework-4.8) (dynamic data collection) provides notifications when items are added, removed and moved. The implement [INotifyCollectionChanged](https://docs.microsoft.com/en-us/dotnet/api/system.collections.specialized.inotifycollectionchanged?view=netframework-4.8) notifies when dynamic changes of add,remove, move and clear the collection. The implement [INotifyPropertyChanged](https://docs.microsoft.com/en-us/dotnet/api/system.componentmodel.inotifypropertychanged?view=netframework-4.8) notifies when property value has changed in client side.
+This [ObservableCollection](https://learn.microsoft.com/en-us/dotnet/api/system.collections.objectmodel.observablecollection-1?view=netframework-4.8) (dynamic data collection) provides notifications when items are added, removed and moved. The implement [INotifyCollectionChanged](https://learn.microsoft.com/en-us/dotnet/api/system.collections.specialized.inotifycollectionchanged?view=netframework-4.8) notifies when dynamic changes of add,remove, move and clear the collection. The implement [INotifyPropertyChanged](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.inotifypropertychanged?view=netframework-4.8) notifies when property value has changed in client side.
 Here, ResourceData class implements the interface of **INotifyPropertyChanged** and it raises the event when RoomText and OwnerText property value was changed.
 
 ```csharp

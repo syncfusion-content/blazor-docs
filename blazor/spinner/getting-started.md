@@ -22,7 +22,7 @@ To get start quickly with Blazor Spinner component, refer to the video below or 
 
 ## Create a new Blazor App in Visual Studio
 
-You can create a **Blazor Server App** or **Blazor WebAssembly App** using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0) or the [Syncfusion Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
+You can create a **Blazor Server App** or **Blazor WebAssembly App** using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0&pivots=windows) or the [Syncfusion Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
 
 ## Install Syncfusion Blazor Spinner and Themes NuGet in the App
 
@@ -142,6 +142,7 @@ Add the Syncfusion Blazor Spinner component with Syncfusion Blazor [Button](http
 {% endtabs %}
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion Blazor Spinner component in your default web browser.
-![Blazor Spinner Component](./images/blazor-spinner.png)
 
-N> You can also explore our [Blazor Spinner Example](https://blazor.syncfusion.com/demos/spinner/overview) that shows you how to render and configure the Spinner.
+{% previewsample "https://blazorplayground.syncfusion.com/embed/htrTZCUjfzWlJVVS?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Spinner Component](./images/blazor-spinner.png)" %}
+
+N> You can also explore our [Blazor Spinner Example](https://blazor.syncfusion.com/demos/spinner/overview?theme=bootstrap5) that shows you how to render and configure the Spinner.

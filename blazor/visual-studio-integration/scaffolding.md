@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Scaffolding in Blazor Application | Syncfusion
-description: Learn here about scaffolding using Syncfusion Blazor Extension for Visual Studio to quickly add code to reduce the amount of development time. 
+description: Learn here about scaffolding using Syncfusion Blazor Extension for Visual Studio to quickly add code to reduce the amount of development time.
 platform: Blazor
 component: Common
 documentation: ug
@@ -143,6 +143,6 @@ N> Before adding the scaffolded item from command-line, check whether the **dotn
 
 Refer to the following UG links to render Syncfusion control after performing scaffolding:
 
-WebAssembly App: [Configure Blazor components using Syncfusion.Blazor NuGet Package](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-visual-studio)
+WebAssembly App: [Configure Blazor components using Syncfusion Blazor Component NuGet Package](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-visual-studio)
 
-Blazor Server App: [Configure Blazor components using Syncfusion.Blazor NuGet Package](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio)
+Blazor Server App: [Configure Blazor components using Syncfusion Blazor Component NuGet Package](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio)

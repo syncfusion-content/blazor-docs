@@ -143,7 +143,7 @@ Add the Syncfusion Blazor ContextMenu component in the **~/Pages/Index.razor** f
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion Blazor ContextMenu component in your default web browser.
 
-![Blazor ContextMenu Component](./images/blazor-contextmenu-component.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rtBftMLEBgCMeGpg?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor ContextMenu Component](./images/blazor-contextmenu-component.png)" %}
 
 ## See also
 

@@ -128,7 +128,7 @@ Add the Syncfusion Blazor DropDown List component in the **~/Pages/Index.razor**
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion Blazor DropDown List component in your default web browser.
 
-![Blazor DropDownList Component](./images/blazor-dropdownlist-component.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNLTDChuUITQFPJn?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor DropDownList Component](./images/blazor-dropdownlist-component.png)" %}
 
 ## Binding data source
 
@@ -164,7 +164,7 @@ After initialization, populate the DropDownList with data using the [DataSource]
 {% endhighlight %}
 {% endtabs %}
 
-![Data Binding in Blazor DropDownList](./images/blazor-dropdownlist-data-binding.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BDVfZWVOAySCbMYl?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Data Binding in Blazor DropDownList](./images/blazor-dropdownlist-data-binding.png)" %}
 
 ## Configure the popup list
 
@@ -200,7 +200,7 @@ By default, the width of the popup list automatically adjusts according to the D
 {% endhighlight %}
 {% endtabs %}
 
-![Changing Popup List Height in Blazor DropDownList](./images/blazor-dropdownlist-popup-height.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/htrTDWBYqHlMcKgk?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Changing Popup List Height in Blazor DropDownList](./images/blazor-dropdownlist-popup-height.png)" %}
 
 ## Get selected value
 

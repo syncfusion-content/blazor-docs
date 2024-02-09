@@ -25,7 +25,7 @@ You need to configure the corresponding [Interactive render mode](https://learn.
 
 To add **Blazor Pivot Table** component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install [Syncfusion.Blazor.PivotTable](https://www.nuget.org/packages/Syncfusion.Blazor.PivotTable) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/).
 
-If you select an **Interactive render mode** as `WebAssembly` or `Auto`, you can install the NuGet package in the project any where to add component in Web App.
+If you utilize `WebAssembly or Auto` render modes in the Blazor Web App need to be install Syncfusion Blazor components NuGet packages within the client project.
 
 Alternatively, you can utilize the following package manager command to achieve the same.
 
@@ -315,7 +315,7 @@ N> Only fields from value section, which is in the form of numeric data values a
 
 After successful compilation of the application, simply press F5 to run the same. The pivot table component will render in the default web browser like below.
 
-![Blazor PivotTable with Formatting](images/blazor-pivottable-formatting.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rtVfZMqtrIxIbWRH?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor PivotTable with Formatting](images/blazor-pivottable-formatting.png)" %}
 
 ## Enable Field List
 
@@ -356,9 +356,7 @@ The field list allows to add or remove fields and also rearrange the fields betw
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor PivotTable with FieldList Icon](images/blazor-pivottable-fieldlist-icon.png)
-
-![Blazor PivotTable with FieldList Dialog](images/blazor-pivottabel-fieldlist-dialog.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXhpNWgjVxtIVCtC?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor PivotTable with FieldList Icon](images/blazor-pivottable-fieldlist-icon.png)" %}
 
 ## Enable Grouping Bar
 
@@ -399,7 +397,7 @@ The grouping bar feature automatically populates fields from the bound data sour
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor PivotTable with Grouping Bar](images/blazor-pivottable-grouping-bar.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rjVJtWqjrnMHzUfe?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor PivotTable with Grouping Bar](images/blazor-pivottable-grouping-bar.png)" %}
 
 ## Exploring Filter Axis
 
@@ -442,9 +440,7 @@ The filter axis contains collection of fields that would act as master filter ov
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor PivotTable with FieldList](images/blazor-pivottable-fieldlist.png)
-
-![Blazor PivotTable with Formatting](images/blazor-pivottable-format.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rXhptsKZBRUHymkX?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor PivotTable with Formatting](images/blazor-pivottable-format.png)" %}
 
 ## Calculated Field
 
@@ -491,11 +487,7 @@ The calculated field feature allows user to insert or add a new calculated field
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor PivotTable with Caluclation Button](images/blazor-pivottable-calculate-button.png)
-
-![Blazor PivotTable with Calculate Dialog Field](images/blazor-pivottable-calculate-dialog.png)
-
-![Blazor PivotGrid with Calculation](images/blazor-pivotgrid-calculation.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BtrTDMUNBxfzcndb?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor PivotTable with Caluclation Button](images/blazor-pivottable-calculate-button.png)" %}
 
 ## See also
 

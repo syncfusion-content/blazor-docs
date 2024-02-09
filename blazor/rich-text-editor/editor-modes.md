@@ -74,4 +74,4 @@ N> You can also explore our [Blazor Rich Text Editor](https://blazor.syncfusion.
 
 ## See also
 
-* [How to render the iframe](./iframe/)
+* [How to render the iframe](./iframe)

@@ -417,6 +417,10 @@ The event [DrillThrough](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
 
 ```
 
+## EditCompleted
+
+To know more about this event, refer [here](./editing/#editcompleted).
+
 ## EnginePopulating
 
 The [EnginePopulating](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewEvents-1.html#Syncfusion_Blazor_PivotView_PivotViewEvents_1_EnginePopulating) event is available in both Pivot Table and Field List.

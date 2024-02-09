@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with Syncfusion Blazor Calendar Component in Web App 
+title: Getting Started with Syncfusion Blazor Calendar Component in Web App
 description: Checkout and learn about the documentation for getting started with Blazor Calendar Component in Blazor Web App.
 platform: Blazor
 component: Calendar
@@ -23,9 +23,9 @@ You need to configure the corresponding [Interactive render mode](https://learn.
 
 ## Install Syncfusion Blazor Calendars and Themes NuGet in the Blazor Web App
 
-To add **Blazor Calendar** component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install [Syncfusion.Blazor.Calendars](https://www.nuget.org/packages/Syncfusion.Blazor.Calendars/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/). 
+To add **Blazor Calendar** component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install [Syncfusion.Blazor.Calendars](https://www.nuget.org/packages/Syncfusion.Blazor.Calendars/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/).
 
-If you select an **Interactive render mode** as `WebAssembly` or `Auto`, you can install the NuGet package in the project any where to add component in Web App.
+If you utilize `WebAssembly or Auto` render modes in the Blazor Web App need to be install Syncfusion Blazor components NuGet packages within the client project.
 
 Alternatively, you can utilize the following package manager command to achieve the same.
 
@@ -106,7 +106,7 @@ Add the Syncfusion Blazor Calendar component in `.razor` file inside the `Pages`
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion Blazor Calendar component in your default web browser.
 
-![Selection in Blazor Calendar Component](./images/blazor-calendar-selection.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BNLzjMLSzUEDfIGE?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Selection in Blazor Calendar Component](./images/blazor-calendar-selection.png)" %}
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/Calendar).
 

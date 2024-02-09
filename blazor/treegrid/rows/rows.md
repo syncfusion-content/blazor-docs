@@ -13,7 +13,7 @@ The row represents record details fetched from the data source.
 
 ## Customize rows
 
-The appearance of a row can be customized by using the [RowDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid~RowDataBound.html) event. The `RowDataBound` event triggers for every row. In the event handler, the **args** is achieved which contains the details of the row.
+The appearance of a row can be customized by using the [RowDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_RowDataBound) event. The `RowDataBound` event triggers for every row. In the event handler, the **args** is achieved which contains the details of the row.
 
 {% tabs %}
 

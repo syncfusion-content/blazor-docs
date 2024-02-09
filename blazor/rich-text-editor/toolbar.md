@@ -207,4 +207,4 @@ N> You can refer to our [Blazor Rich Text Editor](https://www.syncfusion.com/bla
 
 ## See also
 
-* [How to render the toolbar in inline mode](./inline-mode/)
+* [How to render the toolbar in inline mode](./inline-mode)

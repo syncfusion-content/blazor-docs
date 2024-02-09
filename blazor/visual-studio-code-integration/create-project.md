@@ -23,19 +23,44 @@ The instructions below assist you in creating **Syncfusion Blazor Applications**
 
     ![TemplateStudioWizard](images/ProjectLocationName.png)
 
-    N> .NET 6.0 is available from v19.4.0.38 and support from Visual Studio 2022.
+N> Refer to the .NET SDK support for Syncfusion Blazor Components [here](https://blazor.syncfusion.com/documentation/system-requirements#net-sdk).
 
-    N> .NET 7.0 is available from v20.4.0.38 and support from Visual Studio 2022.
+3. Select either **Next** or the **Project Type** tab. Syncfusion Blazor project types will be displayed. Choose one of the following Syncfusion Blazor project types based on the version of the .NET SDK you are using.
 
-    N> .NET 8.0 is available from v23.2.4 and support from Visual Studio 2022.
+    | .NET SDK version | Supported Syncfusion Blazor Application Type |
+    | ------------- | ------------- |
+    | [.NET 8.0](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) | Syncfusion Blazor Web App |
+    | [.NET 8.0](https://dotnet.microsoft.com/en-us/download/dotnet/8.0), [.NET 7.0](https://dotnet.microsoft.com/en-us/download/dotnet/7.0), [.NET 6.0](https://dotnet.microsoft.com/en-us/download/dotnet/6.0) | Syncfusion Blazor WebAssembly App |
+    | [.NET 7.0](https://dotnet.microsoft.com/en-us/download/dotnet/7.0), [.NET 6.0](https://dotnet.microsoft.com/en-us/download/dotnet/6.0) | Syncfusion Blazor Server App |
 
-3. Select either **Next** or the **Project Type** tab. Syncfusion Blazor Project Types will be displayed. Select one of the following Syncfusion Blazor project types:
-   * Syncfusion Blazor Server App
-   * Syncfusion Blazor WebAssembly App
+    In the **Syncfusion Blazor Web App** application type, you can configure the following options:
 
-    You can select ASP.NET Core hosted, Progressive Web Application, or both in the Syncfusion Blazor Web Assembly App project type.
+    <table>
+    <tbody>
+    <tr>
+    <td>
+    <a href="https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-8.0#render-modes" rel="nofollow">Interactivity type</a>
+    </td>
+    <td>
+    Server, WebAssembly, Auto (Server and WebAssembly)
+    </td>
+    </tr>
+    <tr>
+    <td>
+    <a href="https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0&pivots=windows" rel="nofollow">Interactivity location</a>
+    </td>
+    <td>
+    Global, Per page/component
+    </td>
+    </tr>
+    </tbody>
+    </table>
 
-    ![ProjectType](images/ProjectTypeDetails.png)
+    ![WebAppTemplate](images/WebAppType.png)
+
+     In the **Syncfusion Blazor WebAssembly App** application type, you can choose ASP.NET Core hosted, Progressive Web Application, or both.
+
+     ![ProjectType](images/ProjectTypeDetails.png)
 
 4. The Configuration section will be displayed when you click either **Next** or the **Configuration** tab. Here, you have the option for selecting the required .NET Core version, themes, https configuration, and Blazor Web Assembly project types (ASP.NET Core hosted and Progressive Web Application).
 
@@ -67,6 +92,7 @@ The selected theme is added from Syncfusion NuGet and its reference at these app
 
 | Application type  | File location  |
 |---|---|
+| Syncfusion Blazor Web App | ~/Components/App.razor |
 | Syncfusion Blazor Server App | {Project location}/Pages//_Host.cshtml |
 | Syncfusion Blazor WebAssembly App (ASPNET Core hosted) <br/> Syncfusion Blazor WebAssembly App (Progressive Web Application) | {Client Project location}/wwwroot/index.html  |
 | Syncfusion Blazor WebAssembly App  | {Project location}/wwwroot/index.html|
@@ -85,6 +111,6 @@ The Syncfusion Blazor Calendar, Button, and DataGrid component render code is in
 
 | File name  | Code snippet added |
 |---|---|
-| `~/Pages/Index.razor`  | ![IndexFileChange](images/IndexFileChange.png) |
+| `~/Pages/Home.razor or Index.razor`  | ![IndexFileChange](images/IndexFileChange.png) |
 | `~/Pages/Counter.razor` | ![CounterPageChange](images/CounterPageChange.png) |
 | `~/Pages/FetchData.razor`  | ![FetchDataPageChange](images/FetchDataPageChange.png) |

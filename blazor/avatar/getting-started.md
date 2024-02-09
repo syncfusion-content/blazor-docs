@@ -24,7 +24,7 @@ To get start quickly with Avatar component using Blazor, you can check on this v
 
 ## Create a new Blazor App in Visual Studio
 
-You can create a **Blazor Server App** or **Blazor WebAssembly App** using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0) or the [Syncfusion Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
+You can create a **Blazor Server App** or **Blazor WebAssembly App** using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0&pivots=windows) or the [Syncfusion Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
 
 ## Install Syncfusion Blazor Themes NuGet in the App
 
@@ -85,4 +85,4 @@ Add the Syncfusion Blazor Avatar component in the **~/Pages/Index.razor** file.
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion Blazor Avatar component in your default web browser.
 
-![Blazor Avatar Component](./images/blazor-avatar-component.PNG)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDLzXWBegzxvDwzZ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "![Blazor Avatar Component](./images/blazor-avatar-component.PNG)" %}

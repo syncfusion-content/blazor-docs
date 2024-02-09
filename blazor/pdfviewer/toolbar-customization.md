@@ -107,28 +107,27 @@ You can show or hide the toolbar items using the “PdfViewerToolbarSettings” 
 @using Syncfusion.Blazor.PdfViewerServer
 @using Syncfusion.Blazor.PdfViewer
 
-<SfPdfViewerServer Width="1060px" Height="500px" DocumentPath="@DocumentPath" ToolbarSettings="@ToolbarSettings">
+<SfPdfViewerServer Width="1060px" Height="500px" DocumentPath="@DocumentPath">
+    <PdfViewerToolbarSettings ToolbarItems="ToolbarItems"></PdfViewerToolbarSettings>
 </SfPdfViewerServer>
 
 @code{
 
     public string DocumentPath { get; set; } = "wwwroot/data/PDF_Succinctly.pdf";
 
-       public PdfViewerToolbarSettings ToolbarSettings = new PdfViewerToolbarSettings() {
-        ToolbarItems = new List<ToolbarItem>()
-           {
-                ToolbarItem.PageNavigationTool,
-                ToolbarItem.MagnificationTool,
-                ToolbarItem.CommentTool,
-                ToolbarItem.SelectionTool,
-                ToolbarItem.PanTool,
-                ToolbarItem.UndoRedoTool,
-                ToolbarItem.CommentTool,
-                ToolbarItem.AnnotationEditTool,
-                ToolbarItem.SearchOption,
-                ToolbarItem.PrintOption,
-                ToolbarItem.DownloadOption
-            }
+    List<ToolbarItem> ToolbarItems = new List<ToolbarItem>()
+    {
+        ToolbarItem.PageNavigationTool,
+        ToolbarItem.MagnificationTool,
+        ToolbarItem.CommentTool,
+        ToolbarItem.SelectionTool,
+        ToolbarItem.PanTool,
+        ToolbarItem.UndoRedoTool,
+        ToolbarItem.CommentTool,
+        ToolbarItem.AnnotationEditTool,
+        ToolbarItem.SearchOption,
+        ToolbarItem.PrintOption,
+        ToolbarItem.DownloadOption
     };
 }
 ```
@@ -277,6 +276,8 @@ The following code represnts how to create custom toolbar with save and some cus
     }
 </style>
 ```
+![Blazor PDFViewer with Custom Toolbar](./images/toolbar-customization.png)
+
 N> [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Toolbar/Custom%20Toolbar/Custom%20toolbar%20with%20save%20option).
 
 The following sample mimics all the options of the PDF Viewer default toolbar in a custom toolbar along with the save button.
@@ -355,6 +356,7 @@ You can customize the appearance of the toolbar icons by disabling the default t
 </style>
 Footer
 ```
+![Blazor PDFViewer with Custom Toolbar](./images/customization-final.png)
 
 N> [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Toolbar/Custom%20Toolbar/Custom%20toolbar%20with%20PNG%20image).
 

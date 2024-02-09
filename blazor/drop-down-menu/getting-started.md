@@ -24,7 +24,7 @@ To get start quickly with Dropdown Menu Component using Blazor, you can check on
 
 ## Create a new Blazor App in Visual Studio
 
-You can create a **Blazor Server App** or **Blazor WebAssembly App** using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0) or the [Syncfusion Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
+You can create a **Blazor Server App** or **Blazor WebAssembly App** using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0&pivots=windows) or the [Syncfusion Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
 
 ## Install Syncfusion Blazor SplitButtons and Themes NuGet in the App
 
@@ -132,7 +132,7 @@ Add the Syncfusion Blazor DropDown Menu component in the **~/Pages/Index.razor**
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion Blazor DropDown Menu component in your default web browser.
 
-![Blazot DropDownMenu Component](./images/blazor-dropdownmenu-component.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LjLTjshOAyMLHrtb?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor DropDownMenu Component](./images/blazor-dropdownmenu-component.png)" %}
 
 ## See also
 

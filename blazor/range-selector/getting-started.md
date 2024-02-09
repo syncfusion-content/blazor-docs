@@ -39,7 +39,7 @@ N> Syncfusion Blazor components are available in [nuget.org](https://www.nuget.o
 Open **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Charts` namespace.
 
 {% tabs %}
-{% highlight c# tabtitle="~/_Imports.razor" %}
+{% highlight razor tabtitle="~/_Imports.razor" %}
 
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Charts
@@ -88,7 +88,7 @@ await builder.Build().RunAsync();
 
 ## Add stylesheet and script resources
 
-The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Reference the stylesheet and script in the `<head>` of the main page as follows: 
+The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Reference the stylesheet and script in the `<head>` of the main page as follows:
 
 * For **.NET 6** Blazor Server app, include it in **~/Pages/_Layout.cshtml** file.
 
@@ -164,7 +164,7 @@ Now map `Date` and `Close` fields from the datasource to [XName](https://help.sy
 
 Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion Blazor Range Selector component in your default web browser.
 
-![Blazor RangeNavigator Component](images/blazor-range-navigator.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZrJDWAtULnzQnOO?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor RangeNavigator Component](images/blazor-range-navigator.png)" %}
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/RangeSelector).
 

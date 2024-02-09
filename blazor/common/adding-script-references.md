@@ -17,10 +17,11 @@ N> The javascript interop files needs to be added to support the features that c
 
 You can refer the Syncfusion Blazor scripts through the CDN resources.
 
+* For **Blazor Web App**, reference scripts in `~/Components/App.razor` file.
 * For **Blazor WASM App**, reference scripts in `~/wwwroot/index.html` file.
 * For **Blazor Server App**, reference scripts in `~/Pages/_Layout.cshtml` file for `.NET 6` project and in `~/Pages/_Host.cshtml` file for `.NET 7` project.
 
-Syncfusion Blazor components are available in CDN for each version. Make sure that the version in the URLs matches the version of the Syncfusion Blazor Package you are using.
+Syncfusion Blazor components are available in CDN for each version. Make sure that the version in the URLs matches the version of the Syncfusion Blazor Package you are using .
 
 <table>
 <tr>
@@ -109,11 +110,9 @@ You can refer the Syncfusion Blazor scripts through the NuGet package's static w
 
 ### Enable static web assets usage
 
-To use static web assets, ensure [UseStaticFiles](https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.builder.staticfileextensions.usestaticfiles?view=aspnetcore-7.0) method is called as follows,
+To use static web assets, ensure [UseStaticFiles](https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.builder.staticfileextensions.usestaticfiles?view=aspnetcore-8.0) method in the **~/Program.cs** file of your app.
 
-* For **.NET 6 and .NET 7** app, open the **~/Program.cs** file and call `UseStaticFiles` method.
-
-N> For **Blazor WASM App**, call `UseStaticFiles` method in **Server project** of the above mentioned file.
+N> For **Blazor Web App with interaction mode as  Auto & Blazor WASM App**, call `UseStaticFiles` method in **Server project**.
 
 ### Refer script from static web assets
 

@@ -27,24 +27,12 @@ This section briefly explains about how to integrate [Blazor PDF Viewer](https:/
 4. In the **Additional information** dialog, set the target framework.
 ![Set-target-framework](GettingStarted_images/Additional_information.png)
 
-## Install Blazor PDF Viewer and Themes NuGet package in Blazor Server App
+## Install Blazor PDF Viewer NuGet package in Blazor Server App
 
-To add `Blazor PDF Viewer` component in Blazor Server App, use `SfPdfViewerServer` component and theme style sheet in corresponding NuGet based on the operating system of the server you intend to host, as shown below.,
+To add Blazor PDF Viewer component in Blazor Server App, use `SfPdfViewerServer` component and theme style sheet in corresponding NuGet based on the operating system of the server you intend to host, as shown below.,
 * For **Windows**, use [Syncfusion.Blazor.PdfViewerServer.Windows](https://www.nuget.org/packages/Syncfusion.Blazor.PdfViewerServer.Windows) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/)
 * For **Linux**, use [Syncfusion.Blazor.PdfViewerServer.Linux](https://www.nuget.org/packages/Syncfusion.Blazor.PdfViewerServer.Linux) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/)
 * For **macOs**, use [Syncfusion.Blazor.PdfViewerServer.OSX](https://www.nuget.org/packages/Syncfusion.Blazor.PdfViewerServer.OSX)and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/)
-
-Alternatively, you can utilize the following package manager command to achieve the same.
-
-{% tabs %}
-{% highlight C# tabtitle="Package Manager" %}
-
-Install-Package Syncfusion.Blazor.PdfViewer -Version {{ site.releaseversion }}
-
-Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
-
-{% endhighlight %}
-{% endtabs %}
 
 ## Register Syncfusion Blazor Service
 
@@ -59,10 +47,16 @@ Open **~/_Imports.razor** file and import the **Syncfusion.Blazor** and **Syncfu
 {% endhighlight %}
 {% endtabs %}
 
-Now, register the Syncfusion Blazor Service in the **~/Program.cs** file of your Blazor Server App.
+Now, register the Syncfusion Blazor Service in the Blazor Server App. Here, Syncfusion Blazor Service is registered by setting [IgnoreScriptIsolation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.GlobalOptions.html#Syncfusion_Blazor_GlobalOptions_IgnoreScriptIsolation) property as true to load the scripts externally in the [next steps](#add-script-reference).
+
+> From 2022 Vol-1 (20.1) version, the default value of `IgnoreScriptIsolation` is changed to `true`. It is not necessary to set the `IgnoreScriptIsolation` property to refer scripts externally, since the default value has already been changed to true, and this property is obsolete.
+
+* For **.NET 6 and .NET 7** app, open the **~/Program.cs** file and register the Syncfusion Blazor Service.
+
+* For **.NET 5 and .NET 3.X** app, open the **~/Startup.cs** file and register the Syncfusion Blazor Service.
 
 {% tabs %}
-{% highlight C# tabtitle="Blazor Server App" hl_lines="3 10" %}
+{% highlight c# tabtitle=".NET 6 & .NET 7 (~/Program.cs)" hl_lines="3 10" %}
 
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Web;
@@ -72,33 +66,84 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
-builder.Services.AddServerSideBlazor();
+builder.Services.AddServerSideBlazor().AddHubOptions(o => { o.MaximumReceiveMessageSize = 102400000; });
+// Add Syncfusion Blazor service to the container.
 builder.Services.AddSyncfusionBlazor();
 
 var app = builder.Build();
 ....
 
 {% endhighlight %}
+
+{% highlight c# tabtitle=".NET 5 and .NET 3.X (~/Startup.cs)" hl_lines="1 12" %}
+
+using Syncfusion.Blazor;
+
+namespace BlazorApplication
+{
+    public class Startup
+    {
+        ...
+        public void ConfigureServices(IServiceCollection services)
+        {
+            services.AddRazorPages();
+            services.AddServerSideBlazor();
+            // Add Syncfusion Blazor service to the container.
+            services.AddSyncfusionBlazor();
+        }
+        ...
+    }
+}
+
+{% endhighlight %}
 {% endtabs %}
 
-## Add stylesheet and script resources
+## Adding Style Sheet
 
-The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Reference the stylesheet and script in the `<head>` of the main page as follows:
+Add the theme style sheet as below in the sever web app.
 
-* For **.NET 6** Blazor Server app, include it in **~/Pages/_Layout.cshtml** file.
+* For .NET 6 app, add the Syncfusion bootstrap5 theme in the `<head>` of the **~/Pages/_Layout.cshtml** file.
 
-* For **.NET 7** Blazor Server app, include it in the **~/Pages/_Host.cshtml** file.
+* For .NET 3.X, .NET 5 and .NET 7 app, add the Syncfusion bootstrap5 theme in the `<head>` of the **~/Pages/_Host.cshtml** file.
 
-```html
+{% tabs %}
+{% highlight cshtml %}
+
+<head>
+    <!-- Syncfusion Blazor PDF Viewer controls theme style sheet -->
+    <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
+</head>
+
+{% endhighlight %}
+{% endtabs %}
+
+> Checkout the [Blazor Themes topic](https://blazor.syncfusion.com/documentation/appearance/themes) to learn different ways ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference) and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)) to refer themes in Blazor application, and to have the expected appearance for Syncfusion Blazor components. Here, the theme is referred using [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Refer to [Enable static web assets usage](https://blazor.syncfusion.com/documentation/appearance/themes#enable-static-web-assets-usage) topic to use static assets in your project.
+
+## Adding Script Reference
+
+ In this getting started walk-through, the required scripts are referred using [Static Web Assets](https://blazor.syncfusion.com/documentation/common/adding-script-references#static-web-assets) externally inside the `<head>` as follows. Refer to [Enable static web assets usage](https://blazor.syncfusion.com/documentation/common/adding-script-references#enable-static-web-assets-usage) topic to use static assets in your project.
+
+* For **.NET 6** app, Refer script in the `<head>` of the **~/Pages/_Layout.cshtml** file.
+
+* For **.NET 3.X, .NET 5 and .NET 7** app, Refer script in the `<head>` of the **~/Pages/_Host.cshtml** file.
+
+{% tabs %}
+{% highlight cshtml hl_lines="4" %}
+
 <head>
     ....
+    <!-- Syncfusion Blazor PDF Viewer controls theme style sheet -->
     <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
+    <!-- Syncfusion Blazor PDF Viewer controls scripts -->
     <script src="_content/Syncfusion.Blazor.PdfViewer/scripts/syncfusion-blazor-pdfviewer.min.js" type="text/javascript"></script>
 </head>
-```
 
-N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic to discover various methods ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference), and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)) for referencing themes in your Blazor application. Also, check out the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic to learn different approaches for adding script references in your Blazor application.
+{% endhighlight %}
+{% endtabs %}
 
+> Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/documentation/common/adding-script-references) to learn different ways to add script reference in Blazor Application.
+
+> Syncfusion recommends to reference scripts using [Static Web Assets](https://blazor.syncfusion.com/documentation/common/adding-script-references#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/common/adding-script-references#cdn-reference) and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator) by [disabling JavaScript isolation](https://blazor.syncfusion.com/documentation/common/adding-script-references#disable-javascript-isolation) for better loading performance of the Blazor application.
 
 ## Adding Blazor PDF Viewer Component
 
@@ -119,7 +164,7 @@ private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
 
 N> If the `DocumentPath` property value is not provided, the PDF Viewer component will be rendered without loading the PDF document. The users can then use the open option from the toolbar to browse and open the PDF as required.
 
-* Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion Blazor PDF Viewer component in your default web browser.
+Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to run the application. Then, the Syncfusion `Blazor PDF Viewer` component will be rendered in the default web browser.
 
 ![Blazor PDFViewer Component](GettingStarted_images/blazor-pdfviewer.png)
 

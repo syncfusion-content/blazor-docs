@@ -25,7 +25,7 @@ You need to configure the corresponding [Interactive render mode](https://learn.
 
 To add **Blazor Dialog** component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install [Syncfusion.Blazor.Popups](https://www.nuget.org/packages/Syncfusion.Blazor.Popups/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/).
 
-If you select an **Interactive render mode** as `WebAssembly` or `Auto`, you can install the NuGet package in the project any where to add component in Web App.
+If you utilize `WebAssembly or Auto` render modes in the Blazor Web App need to be install Syncfusion Blazor components NuGet packages within the client project.
 
 Alternatively, you can utilize the following package manager command to achieve the same.
 
@@ -106,7 +106,7 @@ Add the Syncfusion Blazor Dialog component in `.razor` file inside the `Pages` f
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion Blazor Dialog component in your default web browser.
 
-![Blazor Dialog](./images/blazor-dialog.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LtBTZiBuALxClojn?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Dialog](./images/blazor-dialog.png)" %}
 
 N> * In the dialog control, max-height is calculated based on the dialog target element height. If the **Target** property is not configured, the **document.body** is considered as a target. Therefore, to show a dialog in proper height, you need to add min-height to the target element.
 
@@ -139,7 +139,7 @@ The dialog component is maintained in the DOM after hiding the dialog when the [
 {% endhighlight %}
 {% endtabs %}
 
-![Prerender Blazor Dialog](./images/blazor-prerender-dialog.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDVfjCBaAUCATHQS?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Prerender Blazor Dialog](./images/blazor-prerender-dialog.png)" %}
 
 ## Modal Blazor dialog
 
@@ -209,7 +209,7 @@ The Dialog header can be enabled by adding the header content as text or HTML co
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor Dialog with Header](./images/blazor-dialog-header.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VDrJZWrYAArBuqod?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Dialog with Header](./images/blazor-dialog-header.png)" %}
 
 ## Render Blazor Dialog with buttons
 
@@ -266,7 +266,7 @@ By adding the [DialogButtons](https://help.syncfusion.com/cr/blazor/Syncfusion.B
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor Dialog with Buttons](./images/blazor-dialog-buttons.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BNVpjWVkggLndKKB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Dialog with Buttons](./images/blazor-dialog-buttons.png)" %}
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/Dialog).
 

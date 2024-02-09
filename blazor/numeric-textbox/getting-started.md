@@ -124,7 +124,7 @@ Add the Syncfusion Blazor NumericTextBox component in the **~/Pages/Index.razor*
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion Blazor NumericTextBox component in your default web browser.
 
-![Blazor NumericTextBox Component](./images/blazor-numerictextbox-component.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNLzXCKXVVvZqDCS?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor NumericTextBox Component](./images/blazor-numerictextbox-component.png)" %}
 
 ## Range validation
 
@@ -138,7 +138,7 @@ You can set the minimum and maximum range of values in the NumericTextBox using 
 {% endhighlight %}
 {% endtabs %}
 
-![Inputnumber Blazor with Range Value](./images/blazor-numerictextbox-range-value.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BNhzjMgNLBEbgCZT?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Inputnumber Blazor with Range Value](./images/blazor-numerictextbox-range-value.png)" %}
 
 ## Formatting the value
 
@@ -152,7 +152,7 @@ Users can set the format of the NumericTextBox component using the [Format](http
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor NumericTextBox with Formatting Value](./images/blazor-numerictextbox-format-value.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VDBzjCUtBgMxHgbo?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor NumericTextBox with Formatting Value](./images/blazor-numerictextbox-format-value.png)" %}
 
 ## Precision of numbers
 
@@ -170,7 +170,7 @@ If `ValidateDecimalOnType` is false, number of decimals will not be restricted. 
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor NumericTextBox with Precision Value](./images/blazor-numerictextbox-precision-value.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDrpDsqNBqKqBEud?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor NumericTextBox with Precision Value](./images/blazor-numerictextbox-precision-value.png)" %}
 
 ## See also
 

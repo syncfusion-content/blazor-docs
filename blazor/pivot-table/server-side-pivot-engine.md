@@ -11,7 +11,7 @@ documentation: ug
 
 # Getting Started with Syncfusion Server-side Pivot Engine
 
-This section briefs the Syncfusion assembly [Syncfusion.EJ2.Pivot](https://www.nuget.org/packages/Syncfusion.EJ2.Pivot/), which is used in a server-side application to perform all pivot calculations such as aggregation, filtering, sorting, grouping, and so on, and only the information to be displayed in the pivot table's viewport is passed to the client-side (browser) via web service (Web API) rather than the entire data source. It reduces network traffic and improves the rendering performance of the pivot table, especially when dealing with large amounts of data. It also works best with virtual scrolling enabled and supports all the pivot table's existing features.
+This section briefs the Syncfusion assembly [Syncfusion.Pivot.Engine](https://www.nuget.org/packages/Syncfusion.Pivot.Engine), which is used in a server-side application to perform all pivot calculations such as aggregation, filtering, sorting, grouping, and so on, and only the information to be displayed in the pivot table's viewport is passed to the client-side (browser) via web service (Web API) rather than the entire data source. It reduces network traffic and improves the rendering performance of the pivot table, especially when dealing with large amounts of data. It also works best with virtual scrolling enabled and supports all the pivot table's existing features.
 
 ## Quick steps to render the Blazor Pivot Table by using the server-side Pivot Engine
 
@@ -25,7 +25,7 @@ This section briefs the Syncfusion assembly [Syncfusion.EJ2.Pivot](https://www.n
 * **DataSource.cs** file under **DataSource** folder – This file has model classes to define the structure of the data sources.
 * The sample data source files **sales.csv** and **sales-analysis.json** under **DataSource** folder.
 
-**3.** Open the **PivotController** application in Visual Studio where the Syncfusion library [Syncfusion.EJ2.Pivot](https://www.nuget.org/packages/Syncfusion.EJ2.Pivot/) will be downloaded automatically from the nuget.org site.
+**3.** Open the **PivotController** application in Visual Studio where the Syncfusion library [Syncfusion.Pivot.Engine](https://www.nuget.org/packages/Syncfusion.Pivot.Engine) will be downloaded automatically from the nuget.org site.
 
 ![Solution Explorer](./images/blazor-pivotcontroller-solution-explorer.png)
 

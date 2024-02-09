@@ -40,8 +40,11 @@ To achieve this, set [NoColor](https://help.syncfusion.com/cr/blazor/Syncfusion.
 </style>
 
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VDVUsLLGKoIFoxSv?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor ColorPicker with Default No Color](./../images/blazor-colorpicker-nocolor.png)
+
+>If the [NoColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfColorPicker.html#Syncfusion_Blazor_Inputs_SfColorPicker_NoColor) property is enabled, make sure to disable the [ModeSwitcher](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfColorPicker.html#Syncfusion_Blazor_Inputs_SfColorPicker_ModeSwitcher) property.
 
 ## Custom no color
 
@@ -120,5 +123,6 @@ The following sample shows the color palette with custom no color option.
 </style>
 
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VthAsLLwAyxsVKHl?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor ColorPicker with Custom No Color](./../images/blazor-colorpicker-custom-nocolor.png)

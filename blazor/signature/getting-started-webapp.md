@@ -25,7 +25,7 @@ You need to configure the corresponding [Interactive render mode](https://learn.
 
 To add **Blazor Signature** component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install [Syncfusion.Blazor.Inputs](https://www.nuget.org/packages/Syncfusion.Blazor.Inputs/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/).
 
-If you select an **Interactive render mode** as `WebAssembly` or `Auto`, you can install the NuGet package in the project any where to add component in Web App.
+If you utilize `WebAssembly or Auto` render modes in the Blazor Web App need to be install Syncfusion Blazor components NuGet packages within the client project.
 
 Alternatively, you can utilize the following package manager command to achieve the same.
 
@@ -106,7 +106,7 @@ Add the Syncfusion Blazor Signature component in the **~Pages/.razor** file. If 
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion Blazor Signature component in your default web browser.
 
-![Blazor Signature Component](./images/blazor-Signature-component.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VNLJXigtqGYfziwd?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Signature Component](./images/blazor-Signature-component.png)" %}
 
 N> The Signature component will render default height and width of canvas (300 * 150), when the Signature height and width are not specified.
 

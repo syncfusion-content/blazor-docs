@@ -22,7 +22,7 @@ To get start quickly with Blazor DatePicker component, you can check on this vid
 
 ## Create a new Blazor App in Visual Studio
 
-You can create a **Blazor Server App** or **Blazor WebAssembly App** using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0) or the [Syncfusion Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
+You can create a **Blazor Server App** or **Blazor WebAssembly App** using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0&pivots=windows) or the [Syncfusion Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
 
 ## Install Syncfusion Blazor Calendars and Themes NuGet in the App
 
@@ -124,7 +124,7 @@ Add the Syncfusion Blazor DatePicker component in the **~/Pages/Index.razor** fi
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion Blazor DatePicker component in your default web browser.
 
-![Blazor DatePicker Component](./images/blazor-datepicker-component.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LXVptWruKtEfoXQa?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor DatePicker Component](./images/blazor-datepicker-component.png)" %}
 
 ## Setting the Value and Min and Max dates
 
@@ -144,7 +144,7 @@ The following example demonstrates how to set the [Value](https://help.syncfusio
 {% endhighlight %}
 {% endtabs %}
 
-![Setting Minimum and Maximum Dates in Blazor DatePicker](./images/blazor-datepicker-min-max-date.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDVzZCrEKWXBIcRK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Setting Minimum and Maximum Dates in Blazor DatePicker](./images/blazor-datepicker-min-max-date.png)" %}
 
 ## See also
 

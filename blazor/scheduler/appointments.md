@@ -480,6 +480,8 @@ By default, the scheduler will render the overlapping events based on the start 
 ## Restricting event creation on specific time slots
 You can restrict the users to create and update more than one appointment on specific time slots. Also, you can disable the CRUD action on those time slots if it is already occupied, which can be achieved using Scheduler’s public method [IsSlotAvailableAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_IsSlotAvailableAsync__0_).
 
+>Note: The **IsSlotAvailableAsync** is centered around verifying appointments within the present view's date range. Yet, it does not encompass an evaluation of availability for recurrence occurrences that fall beyond this particular date range.
+
 ```cshtml
 @using Syncfusion.Blazor.Schedule
 <SfSchedule @ref="ScheduleObj" TValue="AppointmentData" Height="600px" @bind-SelectedDate="@CurrentDate">
@@ -628,7 +630,7 @@ The tooltip shows the Scheduler appointment's information in a formatted style b
 
 ### Show or hide built-in tooltip
 
-The tooltip can be displayed for appointments by setting `true` to the [EnableTooltip](https://help.syncfusion.com/cr/blazor/Syncfulsion.Blazor.Schedule.ScheduleEventSettings-1.html#Syncfusion_Blazor_Schedule_ScheduleEventSettings_1_EnableTooltip) option within the `ScheduleEventSettings` tag helper.
+The tooltip can be displayed for appointments by setting `true` to the [EnableTooltip](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleEventSettings-1.html#Syncfusion_Blazor_Schedule_ScheduleEventSettings_1_EnableTooltip) option within the `ScheduleEventSettings` tag helper.
 
 ```cshtml
 @using Syncfusion.Blazor.Schedule

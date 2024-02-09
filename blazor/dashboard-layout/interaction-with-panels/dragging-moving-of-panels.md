@@ -44,6 +44,7 @@ N> The complete panel will act as the handler for dragging the panel such that t
 </style>
 
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hNLAMVLGpBoyKHBy?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 The above sample demonstrates dragging and pushing of panels. For example, while dragging the panel 0 over panel 1, these panels get collided and push the panel 1 towards the feasible direction, so that, the panel 0 gets placed in the panel 1 position.
 
@@ -88,6 +89,7 @@ The dragging handler for the panels can be customized using the `DraggableHandle
 </style>
 
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hNLAMVLGpBoyKHBy?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 The following output demonstrates customizing the dragging handler of the panels, where the dragging action of panel occurs only with the header of the panel.
 

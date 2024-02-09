@@ -25,7 +25,7 @@ You need to configure the corresponding [Interactive render mode](https://learn.
 
 To add **Blazor RichTextEditor** component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install [Syncfusion.Blazor.RichTextEditor](https://www.nuget.org/packages/Syncfusion.Blazor.RichTextEditor) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/).
 
-If you select an **Interactive render mode** as `WebAssembly` or `Auto`, you can install the NuGet package in the project any where to add component in Web App.
+If you utilize `WebAssembly or Auto` render modes in the Blazor Web App need to be install Syncfusion Blazor components NuGet packages within the client project.
 
 Alternatively, you can utilize the following package manager command to achieve the same.
 
@@ -110,7 +110,7 @@ Add the Syncfusion Blazor RichTextEditor component in the **~Pages/.razor** file
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion Blazor RichTextEditor component in your default web browser.
 
-![Blazor RichTextEditor Component](./images/blazor-richtexteditor.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rXhfZMqXAUqtaOyK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor RichTextEditor Component](./images/blazor-richtexteditor.png)" %}
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/RichTextEditor/BlazorWebApp).
 
@@ -179,7 +179,7 @@ Configure the toolbar with the tools using [RichTextEditorToolbarSettings.Items]
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor RichTextEditor with Toolbar](./images/blazor-richtexteditor-toolbar.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hthTNWAZUAqIpYkv?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor RichTextEditor with Toolbar](./images/blazor-richtexteditor-toolbar.png)" %}
 
 ## Insert images and links
 
@@ -196,7 +196,7 @@ Specifies the items to be rendered in quick toolbar based on the target elements
     <p>Rich Text Editor allows to insert images from online source as well as local computer where you want to insert the image in your content.</p>
     <p><b>Get started Quick Toolbar to click on the image</b></p>
     <p>It is possible to add custom style on the selected image inside the Rich Text Editor through quick toolbar.</p>
-    <img alt='Logo' style='width: 300px; height: 300px; transform: rotate(0deg);' src='https://blazor.syncfusion.com/demos/images/RichTextEditor/RTEImage-Feather.png' />
+    <img alt='Logo' style='width: 300px; height: 300px; transform: rotate(0deg);' src='https://blazor.syncfusion.com/demos/_content/blazor_webapp_common_net8/images/rich-text-editor/rte-image-feather.png' />
 </SfRichTextEditor>
 
 @code {
@@ -242,7 +242,7 @@ Specifies the items to be rendered in quick toolbar based on the target elements
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor RichTextEditor with Image](./images/blazor-richtexteditor-image.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hjVztWADAAziHrZz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor RichTextEditor with Image](./images/blazor-richtexteditor-image.png)" %}
 
 ## Retrieve the formatted content
 

@@ -66,7 +66,7 @@ To apply the conditions initially, you can define the condition and rules in **Q
 
 ### Importing from SQL
 
-You can set the conditions from SQL query through the [SetRulesFromSql](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_SetRulesFromSql_System_String_) method.
+You can set the conditions from SQL query through the [SetRulesFromSql](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder-1.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_1_SetRules_System_Collections_Generic_List_Syncfusion_Blazor_QueryBuilder_RuleModel__System_String_System_Nullable_System_Boolean__) method.
 
 ```cshtml
 @using Syncfusion.Blazor.QueryBuilder
@@ -121,7 +121,7 @@ Exporting allows to save or maintain the created conditions through the [Blazor 
 
 ## Exporting to SQL
 
-The defined conditions can be exported to the SQL query through the [GetSqlFromRules](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_GetSqlFromRules) method.
+The defined conditions can be exported to the SQL query through the [GetSqlFromRules](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder-1.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_1_GetSqlFromRules_Syncfusion_Blazor_QueryBuilder_RuleModel_System_Boolean_) method.
 
 ```cshtml
 @using Syncfusion.Blazor.QueryBuilder
@@ -170,6 +170,64 @@ The defined conditions can be exported to the SQL query through the [GetSqlFromR
         QueryBuilderObj.GetSqlFromRules(QueryBuilderObj.GetRules());
     }
  }
+
+```
+
+## Importing and Exporting the JSON data
+
+The Syncfusion Blazor [Query Builder](https://www.syncfusion.com/blazor-components/blazor-query-builder) allows you to import and export JSON data, enabling you to load existing conditions and save created conditions. 
+
+### Importing from JSON
+
+The [SetRules](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder-1.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_1_SetRules_System_Collections_Generic_List_Syncfusion_Blazor_QueryBuilder_RuleModel__System_String_System_Nullable_System_Boolean__) function gives you the ability to define conditions from a JSON. You can import rules using this function by providing a list of RuleModel objects as the basis. The JSON text is additionally deserialized to a RuleModel object using the JsonConvert.DeserializeObject method.
+
+### Exporting from JSON
+
+You can seamlessly export the defined conditions from the Syncfusion Blazor Query Builder to a JSON by utilizing the [GetRules](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder-1.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_1_GetRules) method. This method retrieves the configured rules within the Query Builder, offering a convenient way to capture and use the conditions. To complete the process, the JsonConvert.SerializeObject method is employed, enabling the conversion of these rules into a JSON.
+
+```cshtml
+@using Syncfusion.Blazor.Buttons
+@using Syncfusion.Blazor.QueryBuilder
+@using Newtonsoft.Json
+
+<SfQueryBuilder TValue="EmployeeDetails" @ref="QueryBuilderObj">
+    <QueryBuilderColumns>
+        <QueryBuilderColumn Field="EmployeeID" Label="Employee ID" Type="ColumnType.Number"></QueryBuilderColumn>
+        <QueryBuilderColumn Field="FirstName" Label="First Name" Type="ColumnType.String"></QueryBuilderColumn>
+        <QueryBuilderColumn Field="HireDate" Label="Hire Date" Type="ColumnType.Date" Format="yyyy-dd-MM" Operators="dateOpr"></QueryBuilderColumn>
+    </QueryBuilderColumns>
+</SfQueryBuilder>
+
+<SfButton id="open" CssClass="e-primary" @onclick="Get">Get</SfButton>
+<SfButton id="open" CssClass="e-primary" @onclick="Set">Set</SfButton>
+
+@code {
+    private SfQueryBuilder<EmployeeDetails> QueryBuilderObj;
+    private List<OperatorsModel> dateOpr = new List<OperatorsModel> {
+        new OperatorsModel {Text = "Between", Value = "between"},
+        new OperatorsModel {Text = "Not Between", Value = "notbetween"}
+    };
+    private string rule;
+    public class EmployeeDetails
+    {
+        public int EmployeeID { get; set; }
+        public string FirstName { get; set; }
+        public bool TitleOfCourtesy { get; set; }
+        public string Title { get; set; }
+        public DateTime HireDate { get; set; }
+        public string Country { get; set; }
+        public string City { get; set; }
+    }
+
+    private void Get() {
+        rule = JsonConvert.SerializeObject(QueryBuilderObj.GetRules());
+    }
+
+    private void Set() {
+        RuleModel ruleModel = JsonConvert.DeserializeObject<RuleModel>(rule);
+        QueryBuilderObj.SetRules(ruleModel.Rules,"and");
+    }
+}
 
 ```
 

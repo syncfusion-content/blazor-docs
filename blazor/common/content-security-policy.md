@@ -17,114 +17,59 @@ To use Syncfusion blazor components with strict CSP mode, the following directiv
 
 * `font-src data:` - This directive allows for the use of `base64` encoded font icons.
 * `style-src 'self' unsafe-inline` - This directive allows for the use of inline styles and external fonts.
-* `script-src 'self' unsafe-eval blob:` - This directive allows for the use of the `new()` and `eval()` functions, as well as loading scripts from Blob URLs. Used in animation enabled Syncfusion components.
+* `connect-src 'self' https: wss:` - This directive enables web sockets.
+* `script-src 'self' unsafe-eval` - This directive allows for the use of the `new()` and `eval()` functions. Used in animation enabled Syncfusion components.
 
 These directives should be included in the `<head>` tag of the application's webpage, typically
 
+* For **Blazor Web App**, inside the `<head>` of **~/Components/App.razor** file.
 * For **Blazor Server application**, inside the `<head>` of
-
     * **~/Pages/_Host.cshtml** file for .NET 7.
     * **~/Pages/_Layout.cshtml** for .NET 6.
-
-{% tabs %}
-{% highlight cshtml tabtitle=".NET 6 (~/_Layout.cshtml)" hl_lines="9 10" %}
-
-<head>
-    ...
-    <meta http-equiv="Content-Security-Policy" content="
-        script-src 'self' 'unsafe-eval' blob:;
-        style-src 'self' 'unsafe-inline';
-        img-src data: blob: https:;
-        font-src 'self' data:;" />
-    ...
-</head>
-
-{% endhighlight %}
-{% highlight cshtml tabtitle=".NET 7 (~/_Host.cshtml)" hl_lines="9 10" %}
-
-<head>
-    ...
-    <meta http-equiv="Content-Security-Policy" content="
-        script-src 'self' 'unsafe-eval' blob:;
-        style-src 'self' 'unsafe-inline';
-        img-src data: blob: https:;
-        font-src 'self' data:;" />
-    ...
-</head>
-
-{% endhighlight %}
-{% endtabs %}
-
 * For **Blazor WebAssembly App**, inside the `<head>` of **wwwroot/index.html** file.
 
 {% tabs %}
-{% highlight html tabtitle="~/index.html" hl_lines="9 10" %}
+{% highlight c# hl_lines="9 10" %}
+
 <head>
     ...
-    <meta http-equiv="Content-Security-Policy" content="
-        script-src 'self' 'unsafe-eval' blob:;
+    <meta http-equiv="Content-Security-Policy"
+        content="base-uri 'self';
+        default-src 'self';
+        connect-src 'self' https: wss:;
+        img-src data: https:;
+        object-src 'none';
+        script-src 'self' 'unsafe-eval';
         style-src 'self' 'unsafe-inline';
-        img-src data: blob: https:;
-        font-src 'self' data:;" />
+        font-src 'self' data:;
+        upgrade-insecure-requests;">
     ...
 </head>
+
 {% endhighlight %}
 {% endtabs %}
 
 if you are referencing script and style references from CDN, then add CDN domain reference in CSP meta tag.
 
-* Blazor Server App
-
 {% tabs %}
-
-{% highlight cshtml tabtitle=".NET 6 (~/_Layout.cshtml)" hl_lines="9 10" %}
+{% highlight c# hl_lines="9 10" %}
 
 <head>
     ...
-    <meta http-equiv="Content-Security-Policy" content="
-        script-src 'self' 'unsafe-eval' https://cdn.syncfusion.com blob:;
-        style-src 'self' 'unsafe-inline' https://cdn.syncfusion.com;
-        img-src data: blob: https:;
-        font-src 'self' data:;" />
+    <meta http-equiv="Content-Security-Policy"
+        content="base-uri 'self';
+        default-src 'self';
+        connect-src 'self' https: wss:;
+        img-src data: https:;
+        object-src 'none';
+        script-src 'self' 'unsafe-eval' https://cdn.syncfusion.com/blazor/;
+        style-src 'self' 'unsafe-inline' https://cdn.syncfusion.com/blazor/;
+        font-src 'self' data:;
+        upgrade-insecure-requests;">
     ...
 </head>
 
 {% endhighlight %}
-
-{% highlight cshtml tabtitle=".NET 7 (~/_Host.cshtml)" hl_lines="9 10" %}
-
-<head>
-    ...
-    <meta http-equiv="Content-Security-Policy" content="
-        script-src 'self' 'unsafe-eval' https://cdn.syncfusion.com blob:;
-        style-src 'self' 'unsafe-inline' https://cdn.syncfusion.com;
-        img-src data: blob: https:;
-        font-src 'self' data:;" />
-    ...
-</head>
-
-{% endhighlight %}
-
-{% endtabs %}
-
-
-* Blazor WebAssembly App
-
-{% tabs %}
-{% highlight html tabtitle="~/index.html" hl_lines="9 10" %}
-
-<head>
-    ...
-    <meta http-equiv="Content-Security-Policy" content="
-        script-src 'self' 'unsafe-eval' https://cdn.syncfusion.com blob:;
-        style-src 'self' 'unsafe-inline' https://cdn.syncfusion.com;
-        img-src data: blob: https:;
-        font-src 'self' data:;" />
-    ...
-</head>
-
-{% endhighlight %}
-
 {% endtabs %}
 
 ## See also

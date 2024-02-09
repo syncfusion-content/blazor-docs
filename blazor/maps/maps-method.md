@@ -73,7 +73,7 @@ The [Refresh](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.SfMap
 
 ## PanByDirectionAsync
 
-[PanByDirectionAsync]((https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.SfMaps.html#methods)) method pans the Maps dynamically by specifying direction. The following are the arguments for this method.
+The [PanByDirectionAsync]((https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.SfMaps.html#methods)) method pans the Maps dynamically by specifying direction. The following are the arguments for this method.
 
 |   Argument name      |   Description                            |
 |----------------------| -----------------------------------------|
@@ -107,7 +107,7 @@ The [Refresh](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.SfMap
 
 ## ZoomByPosition
 
-[ZoomByPosition](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.SfMaps.html#Syncfusion_Blazor_Maps_SfMaps_ZoomByPosition_Syncfusion_Blazor_Maps_MapsCenterPosition_System_Double_) method zooms the Maps by specifying the center position for the map. This method triggers the [OnZoom](https://blazor.syncfusion.com/documentation/maps/maps-event#onzoom) event when the zooming operation begins and the [OnZoomComplete](https://blazor.syncfusion.com/documentation/maps/maps-event#onzoomcomplete) event when the zooming operation is completed. The following are the arguments for this method.
+The [ZoomByPosition](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.SfMaps.html#Syncfusion_Blazor_Maps_SfMaps_ZoomByPosition_Syncfusion_Blazor_Maps_MapsCenterPosition_System_Double_) method zooms the Maps by specifying the center position for the map. This method triggers the [OnZoom](https://blazor.syncfusion.com/documentation/maps/maps-event#onzoom) event when the zooming operation begins and the [OnZoomComplete](https://blazor.syncfusion.com/documentation/maps/maps-event#onzoomcomplete) event when the zooming operation is completed. The following are the arguments for this method.
 
 |   Argument name      |   Description                            |
 |----------------------| -----------------------------------------|
@@ -141,7 +141,7 @@ The [Refresh](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.SfMap
 
 ## ZoomToCoordinates
 
-[ZoomToCoordinates](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.SfMaps.html#Syncfusion_Blazor_Maps_SfMaps_ZoomToCoordinates_System_Double_System_Double_System_Double_System_Double_) zooms the map to the center point of the provided minimum and maximum coordinates. This method triggers the [OnZoom](https://blazor.syncfusion.com/documentation/maps/maps-event#onzoom) event when the zooming operation begins and the [OnZoomComplete](https://blazor.syncfusion.com/documentation/maps/maps-event#onzoomcomplete) event when the zooming operation is completed. The following are the arguments for this method.
+The [ZoomToCoordinates](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.SfMaps.html#Syncfusion_Blazor_Maps_SfMaps_ZoomToCoordinates_System_Double_System_Double_System_Double_System_Double_) zooms the map to the center point of the provided minimum and maximum coordinates. This method triggers the [OnZoom](https://blazor.syncfusion.com/documentation/maps/maps-event#onzoom) event when the zooming operation begins and the [OnZoomComplete](https://blazor.syncfusion.com/documentation/maps/maps-event#onzoomcomplete) event when the zooming operation is completed. The following are the arguments for this method.
 
 |   Argument name      |   Description                            |
 |----------------------| -----------------------------------------|
@@ -169,5 +169,66 @@ The [Refresh](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.SfMap
     {
         maps.ZoomToCoordinates(0, 0, 100, 100);
     }
+}
+```
+
+## GetMinMaxLatitudeLongitude
+
+The [GetMinMaxLatitudeLongitude](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.SfMaps.html#Syncfusion_Blazor_Maps_SfMaps_GetMinMaxLatitudeLongitude) method returns the minimum and maximum latitude and longitude values of the Maps visible area. This method returns a [MinMaxLatitudeLongitude](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MinMaxLatitudeLongitude.html) class object that contains the Maps minimum and maximum latitude and longitude coordinates.
+
+```cshtml
+@using Syncfusion.Blazor.Maps
+@using System.Collections.ObjectModel;
+
+<button @onclick="GetMinMaxLatitudeLongitude">GetMinMaxLatitudeLongitude</button>
+
+@if(MapBoundCoordinates != null)
+{
+    <div>
+        Maximum Latitude = @MapBoundCoordinates.MaxLatitude <br/>
+        Minimum Latitude = @MapBoundCoordinates.MinLatitude  <br />
+        Maximum Longitude = @MapBoundCoordinates.MaxLongitude <br />
+        Minimum Longitude = @MapBoundCoordinates.MinLongitude
+    </div>
+}
+
+
+<SfMaps ID="maps" @ref="MapsRef">
+    <MapsZoomSettings Enable="true" ZoomFactor="@ZoomFactor"></MapsZoomSettings>
+    <MapsCenterPosition Latitude="@CenterLat" Longitude="@CenterLong"></MapsCenterPosition>
+    <MapsLayers>
+        <MapsLayer ShapeData='new {dataOptions= "https://cdn.syncfusion.com/maps/map-data/world-map.json"}' TValue="string">
+            <MapsMarkerSettings>
+                <MapsMarker Visible="true" DataSource="MarkerDataSource" Height="25" Width="25" TValue="MarkerData" Shape="MarkerType.Circle" AnimationDuration="1500">
+                </MapsMarker>
+            </MapsMarkerSettings>
+        </MapsLayer>
+    </MapsLayers>
+</SfMaps>
+
+
+@code {
+    SfMaps MapsRef;
+    public double ZoomFactor = 7;
+    public double CenterLat = 21.815447;
+    public double CenterLong = 80.1932;
+    public MinMaxLatitudeLongitude MapBoundCoordinates;
+
+    public class MarkerData
+    {
+        public string Name{ get; set; }
+        public double Latitude { get; set; }
+        public double Longitude { get; set; }
+    }
+
+    public void GetMinMaxLatitudeLongitude()
+    {
+        MapBoundCoordinates = MapsRef?.GetMinMaxLatitudeLongitude();
+    }
+
+    public ObservableCollection<MarkerData> MarkerDataSource = new ObservableCollection<MarkerData> {
+        new MarkerData {Latitude=22.572646,Longitude=88.363895},
+        new MarkerData {Latitude=25.0700428,Longitude=67.2847875}
+    };
 }
 ```

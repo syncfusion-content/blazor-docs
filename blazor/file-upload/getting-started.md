@@ -119,7 +119,7 @@ Add the Syncfusion Blazor File Upload component in the **~/Pages/Index.razor** f
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion Blazor File Upload component in your default web browser.
 
-![Blazor FileUpload Component](./images/blazor-fileupload-component.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LXBJXsrOqbMEOurR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor FileUpload Component](./images/blazor-fileupload-component.png)" %}
 
 ## Without server-side API endpoint
 
@@ -290,7 +290,7 @@ You can allow the specific files alone to upload using the [AllowedExtensions](h
 {% endhighlight %}
 {% endtabs %}
 
-![Allowing Specific Files in Blazor FileUpload](./images/blazor-fileupload-allow-specific-file.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rXhzDsrOqbKVNviI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Allowing Specific Files in Blazor FileUpload](./images/blazor-fileupload-allow-specific-file.png)" %}
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/FileUpload).
 

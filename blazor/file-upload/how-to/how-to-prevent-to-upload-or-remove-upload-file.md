@@ -1,6 +1,6 @@
 ---
 layout: post
-title: How to Preventing File Upload or Removal in Uploader Component | Syncfusion
+title: How to Prevent Uploading or Removing in Uploader | Syncfusion
 description: Checkout and learn here how to Preventing File Upload or Removal in Uploader Component in Syncfusion Blazor File Upload component and more.
 platform: Blazor
 control: File Upload
@@ -24,11 +24,13 @@ We can prevent the selected file from being uploaded and also prevent the remova
 @code {
     private void BeforeUploadHandler(BeforeUploadEventArgs args)
     {
-        // Here, you can customize your code.
+        // You can prevent uploading by setting "Cancel" as true
+        args.Cancel =  true;
     }
     private void BeforeRemovehandler(BeforeRemoveEventArgs args)
     {
-        // Here, you can customize your code.
+        // You can prevent removing by setting "Cancel" as true
+        args.Cancel =  true;
     }
 }
 ```
@@ -44,11 +46,13 @@ We can prevent the selected file from being uploaded and also prevent the remova
 @code {
     private void BeforeUploadHandler(BeforeUploadEventArgs args)
     {
-        // Here, you can customize your code.
+        // You can prevent uploading by setting "Cancel" to true.
+        args.Cancel =  true;
     }
     private void BeforeRemovehandler(BeforeRemoveEventArgs args)
     {
-        // Here, you can customize your code.
+        // You can prevent removing by setting "Cancel" as true
+       args.Cancel =  true;
     }
 }
 ```

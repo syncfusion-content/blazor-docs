@@ -240,352 +240,75 @@ You can use [GanttEvents](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
 }
 ```
 
-## Drag and drop
+## Customize rows and cells
 
-You can dynamically rearrange the rows in the Gantt Chart component by using the [AllowRowDragAndDrop](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_AllowRowDragAndDrop) property. Using this property, row drag and drop can be enabled or disabled in Gantt. Using this feature, rows can be dropped above and below as a sibling or child to the existing rows.
-
-```cshtml
-@using Syncfusion.Blazor.Gantt
-<SfGantt DataSource="@TaskCollection" Height="450px" Width="900px" TreeColumnIndex="1" AllowRowDragAndDrop="true">
-    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress"
-                     ParentID="ParentId">
-    </GanttTaskFields>
-</SfGantt>
-
-@code{
-
-    public void Collapsing(Syncfusion.Blazor.TreeGrid.RowCollapsingEventArgs<TaskData> args)
-    {
-        if (args.Data.TaskId == 1)
-        {
-            args.Cancel = true;
-        }
-    }
-    public void Expanding(Syncfusion.Blazor.TreeGrid.RowExpandingEventArgs<TaskData> args)
-    {
-        if (args.Data.TaskId == 5)
-        {
-            args.Cancel = true;
-        }
-    }
-
-    private List<TaskData> TaskCollection { get; set; }
-
-    protected override void OnInitialized()
-    {
-        this.TaskCollection = GetTaskCollection();
-    }
-
-    public class TaskData
-    {
-        public int TaskId { get; set; }
-        public string TaskName { get; set; }
-        public DateTime StartDate { get; set; }
-        public DateTime? EndDate { get; set; }
-        public string Duration { get; set; }
-        public int Progress { get; set; }
-        public int? ParentId { get; set; }
-    }
-
-
-    private static List<TaskData> GetTaskCollection()
-    {
-        List<TaskData> Tasks = new List<TaskData>()
-        {
-            new TaskData() { TaskId = 1, TaskName = "Project initiation", StartDate = new DateTime(2022, 01, 04), EndDate = new DateTime(2022, 01, 17), },
-            new TaskData() { TaskId = 2, TaskName = "Identify Site location", StartDate = new DateTime(2022, 01, 04), Duration = "0", Progress = 30, ParentId = 1, },
-            new TaskData() { TaskId = 3, TaskName = "Perform soil test", StartDate = new DateTime(2022, 01, 04), Duration = "4", Progress = 40, ParentId = 1, },
-            new TaskData() { TaskId = 4, TaskName = "Soil test approval", StartDate = new DateTime(2022, 01, 04), Duration = "0", Progress = 30, ParentId = 1, },
-            new TaskData() { TaskId = 5, TaskName = "Project estimation", StartDate = new DateTime(2022, 01, 04), EndDate = new DateTime(2022, 01, 17), },
-            new TaskData() { TaskId = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2022, 01, 06), Duration = "3", Progress = 30, ParentId = 5, },
-            new TaskData() { TaskId = 7, TaskName = "List materials", StartDate = new DateTime(2022, 01, 06), Duration = "3", Progress = 40, ParentId = 5, },
-            new TaskData() { TaskId = 8, TaskName = "Estimation approval", StartDate = new DateTime(2022, 01, 06), Duration = "0", Progress = 30, ParentId = 5, }
-        };
-        return Tasks;
-    }
-}
-```
-
-### Multiple row drag and drop
-
-Gantt also supports dragging multiple rows at a time and dropping them on any rows above, below, or at child positions. In Gantt, you can enable the multiple drag and drop by setting the [GanttSelectionSettings.Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttSelectionSettings.html) to `Multiple` and you should enable the [AllowRowDragAndDrop](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_AllowRowDragAndDrop) property.
-
-```cshtml
-@using Syncfusion.Blazor.Gantt
-<SfGantt DataSource="@TaskCollection" Height="450px" Width="900px" TreeColumnIndex="1" AllowRowDragAndDrop="true">
-    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress"
-                     ParentID="ParentId">
-    </GanttTaskFields>
-    <GanttSelectionSettings Type="Syncfusion.Blazor.Grids.SelectionType.Multiple"></GanttSelectionSettings>
-</SfGantt>
-
-@code{
-
-    public void Collapsing(Syncfusion.Blazor.TreeGrid.RowCollapsingEventArgs<TaskData> args)
-    {
-        if (args.Data.TaskId == 1)
-        {
-            args.Cancel = true;
-        }
-    }
-    public void Expanding(Syncfusion.Blazor.TreeGrid.RowExpandingEventArgs<TaskData> args)
-    {
-        if (args.Data.TaskId == 5)
-        {
-            args.Cancel = true;
-        }
-    }
-
-    private List<TaskData> TaskCollection { get; set; }
-
-    protected override void OnInitialized()
-    {
-        this.TaskCollection = GetTaskCollection();
-    }
-
-    public class TaskData
-    {
-        public int TaskId { get; set; }
-        public string TaskName { get; set; }
-        public DateTime StartDate { get; set; }
-        public DateTime? EndDate { get; set; }
-        public string Duration { get; set; }
-        public int Progress { get; set; }
-        public int? ParentId { get; set; }
-    }
-
-
-    private static List<TaskData> GetTaskCollection()
-    {
-        List<TaskData> Tasks = new List<TaskData>()
-        {
-            new TaskData() { TaskId = 1, TaskName = "Project initiation", StartDate = new DateTime(2022, 01, 04), EndDate = new DateTime(2022, 01, 17), },
-            new TaskData() { TaskId = 2, TaskName = "Identify Site location", StartDate = new DateTime(2022, 01, 04), Duration = "0", Progress = 30, ParentId = 1, },
-            new TaskData() { TaskId = 3, TaskName = "Perform soil test", StartDate = new DateTime(2022, 01, 04), Duration = "4", Progress = 40, ParentId = 1, },
-            new TaskData() { TaskId = 4, TaskName = "Soil test approval", StartDate = new DateTime(2022, 01, 04), Duration = "0", Progress = 30, ParentId = 1, },
-            new TaskData() { TaskId = 5, TaskName = "Project estimation", StartDate = new DateTime(2022, 01, 04), EndDate = new DateTime(2022, 01, 17), },
-            new TaskData() { TaskId = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2022, 01, 06), Duration = "3", Progress = 30, ParentId = 5, },
-            new TaskData() { TaskId = 7, TaskName = "List materials", StartDate = new DateTime(2022, 01, 06), Duration = "3", Progress = 40, ParentId = 5, },
-            new TaskData() { TaskId = 8, TaskName = "Estimation approval", StartDate = new DateTime(2022, 01, 06), Duration = "0", Progress = 30, ParentId = 5, }
-        };
-        return Tasks;
-    }
-}
-```
-
-### Drag and drop events
-
-Several events are available to customize the row drag and drop action. The following table explains about the available events and their details.
-
-Event Name |Description
------|-----
-`OnRowDragStart`  |Triggers when drag action starts in Gantt.
-`RowDropped`  |Triggers when a drag row was dropped on the target row.
-
-<!-- Customize row drag and drop action
-
-In Gantt, the `OnRowDragStart` and `RowDropped` events are triggered on row drag and drop action. Using this event, you can prevent dragging of particular record, validate the drop position, and cancel the drop action based on the target record and dragged record. The following topics explains about this.
-
- Prevent dragging of particular record
-
-You can prevent drag action of the particular record by setting the `Cancel` property to `true`, which is available in the `OnRowDragStart` event argument based on our requirement. In the following sample, drag action was restricted for first parent record and its child records.
-
-```cshtml
-@using Syncfusion.Blazor.Gantt
-<SfGantt DataSource="@TaskCollection" Height="450px" Width="900px" TreeColumnIndex="1" AllowRowDragAndDrop="true">
-    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress"
-            ParentID="ParentId">
-    </GanttTaskFields>
-    <GanttEvents OnRowDragStart="rowDrag" TValue="TaskData"></GanttEvents>
-</SfGantt>
-
-@code{
-    public List<TaskData> TaskCollection { get; set; }
-    protected override void OnInitialized()
-    {
-        this.TaskCollection = GetTaskCollection();
-    }
-    public void rowDrag(RowDragEventArgs<TaskData> args) {
-        if(args.Data[0].TaskId == 4) {
-            args.Cancel = true;
-        }
-    }
-    public class TaskData
-    {
-        public int TaskId { get; set; }
-        public string TaskName { get; set; }
-        public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
-        public string Duration { get; set; }
-        public int Progress { get; set; }
-        public int? ParentId { get; set; }
-    }
-    public static List <TaskData> GetTaskCollection() {
-        List <TaskData> Tasks = new List <TaskData> () {
-            new TaskData() {
-                TaskId = 1,
-                TaskName = "Project initiation",
-                StartDate = new DateTime(2019, 03, 28),
-                EndDate = new DateTime(2019, 07, 28),
-                Duration="4"
-            },
-            new TaskData() {
-                TaskId = 2,
-                TaskName = "Identify Site location",
-                StartDate = new DateTime(2019, 03, 29),
-                Progress = 30,
-                ParentId = 1,
-                Duration="2",
-            },
-            new TaskData() {
-                TaskId = 3,
-                TaskName = "Perform soil test",
-                StartDate = new DateTime(2019, 03, 29),
-                ParentId = 1,
-                Duration="4"
-            },
-            new TaskData() {
-                TaskId = 4,
-                TaskName = "Soil test approval",
-                StartDate = new DateTime(2019, 03, 29),
-                Duration = "4",
-                Progress = 30,
-                ParentId = 1
-            },
-            new TaskData() {
-                TaskId = 5,
-                TaskName = "Project estimation",
-                StartDate = new DateTime(2019, 03, 29),
-                EndDate = new DateTime(2019, 04, 2),
-                Duration="4",
-            },
-            new TaskData() {
-                TaskId = 6,
-                TaskName = "Develop floor plan for estimation",
-                StartDate = new DateTime(2019, 03, 29),
-                Duration = "3",
-                Progress = 30,
-                ParentId = 5
-            },
-            new TaskData() {
-                TaskId = 7,
-                TaskName = "List materials",
-                StartDate = new DateTime(2019, 04, 01),
-                Duration = "3",
-                Progress = 30,
-                ParentId = 5
-            },
-            new TaskData() {
-                TaskId = 8,
-                TaskName = "Estimation approval",
-                StartDate = new DateTime(2019, 04, 01),
-                Duration = "2",
-                ParentId = 5
-            }
-        };
-        return Tasks;
-    }
-}
-``` -->
-
-### Perform row drag and drop action programmatically
-
-Gantt provides option to perform row drag and drop action programmatically by using the [ReorderRowsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_ReorderRowAsync_System_Double_System_Double_System_String_) method. This method can be used for any external actions like button click.
-The following arguments are used to specify the positions to drag and drop a row:
-
-* `FromIndexes`: Index value of source(dragging) row.
-* `ToIndex`: Value of target index.
-* `Position`: Drop positions such as above, below, or child.
-
-The following code example shows how to drag and drop a row on button click action.
-
-```cshtml
-@using Syncfusion.Blazor.Gantt
-<button @onclick="drag">Dynamic drag and drop</button>
-<SfGantt @ref="Gantt" DataSource="@TaskCollection" Height="450px" Width="900px" TreeColumnIndex="1" AllowRowDragAndDrop="true">
-    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress"
-                     ParentID="ParentId">
-    </GanttTaskFields>
-</SfGantt>
-
-@code{
-    public SfGantt<TaskData> Gantt;
-    private List<TaskData> TaskCollection { get; set; }
-    protected override void OnInitialized()
-    {
-        this.TaskCollection = GetTaskCollection();
-    }
-    public void drag()
-    {
-        this.Gantt.ReorderRowAsync(2, 6, "Below");
-    }
-    public class TaskData
-    {
-        public int TaskId { get; set; }
-        public string TaskName { get; set; }
-        public DateTime StartDate { get; set; }
-        public DateTime? EndDate { get; set; }
-        public string Duration { get; set; }
-        public int Progress { get; set; }
-        public int? ParentId { get; set; }
-    }
-
-    private static List<TaskData> GetTaskCollection()
-    {
-        List<TaskData> Tasks = new List<TaskData>()
-        {
-            new TaskData() { TaskId = 1, TaskName = "Project initiation", StartDate = new DateTime(2022, 01, 04), EndDate = new DateTime(2022, 01, 17), },
-            new TaskData() { TaskId = 2, TaskName = "Identify Site location", StartDate = new DateTime(2022, 01, 04), Duration = "0", Progress = 30, ParentId = 1, },
-            new TaskData() { TaskId = 3, TaskName = "Perform soil test", StartDate = new DateTime(2022, 01, 04), Duration = "4", Progress = 40, ParentId = 1, },
-            new TaskData() { TaskId = 4, TaskName = "Soil test approval", StartDate = new DateTime(2022, 01, 04), Duration = "0", Progress = 30, ParentId = 1, },
-            new TaskData() { TaskId = 5, TaskName = "Project estimation", StartDate = new DateTime(2022, 01, 04), EndDate = new DateTime(2022, 01, 17), },
-            new TaskData() { TaskId = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2022, 01, 06), Duration = "3", Progress = 30, ParentId = 5, },
-            new TaskData() { TaskId = 7, TaskName = "List materials", StartDate = new DateTime(2022, 01, 06), Duration = "3", Progress = 40, ParentId = 5, },
-            new TaskData() { TaskId = 8, TaskName = "Estimation approval", StartDate = new DateTime(2022, 01, 06), Duration = "0", Progress = 30, ParentId = 5, }
-        };
-        return Tasks;
-    }
-}
-```
-
-## Customize rows
-
-You can use [GanttEvents](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html) to customize the appearance of a row on the grid side by using the `RowDataBound` event and on the chart side by using the `QueryChartRowInfo` event.
+While rendering the Tree Grid part in Gantt Chart, the [RowDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_RowDataBound) and [QueryCellInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_QueryCellInfo) events trigger for every row and cell. Using these events, you can customize the rows and cells. To customize the appearance of a row on the chart side by using the [QueryChartRowInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_QueryChartRowInfo) event. The following code example shows how to customize the cell and row elements using these events.
 
 ```cshtml
 @using Syncfusion.Blazor.Gantt
 @using Syncfusion.Blazor.Grids
-
-<SfGantt DataSource="@TaskCollection" Height="450px" Width="900px" TreeColumnIndex="1">
-    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress"
-                     ParentID="ParentId">
+ 
+<SfGantt DataSource="@TaskCollection" Height="450px" Width="900px">
+    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate"
+                     Duration="Duration" Progress="Progress" ParentID="ParentId">
     </GanttTaskFields>
-    <GanttEvents RowDataBound="rowBound" QueryChartRowInfo="queryChart" TValue="TaskData"></GanttEvents>
+    <GanttColumns>
+        <GanttColumn Field="TaskId" Width="150"></GanttColumn>
+        <GanttColumn Field="TaskName" HeaderText="Task Name" Width="250"></GanttColumn>
+        <GanttColumn Field="Progress" Width="150"></GanttColumn>
+        <GanttColumn Field="StartDate" HeaderText="Start Date" Width="150"></GanttColumn>
+        <GanttColumn Field="Duration" HeaderText="Duration" Width="150"></GanttColumn>
+    </GanttColumns>
+    <GanttSplitterSettings ColumnIndex=3></GanttSplitterSettings>
+    <GanttEvents QueryCellInfo="QueryCellInfo" RowDataBound="RowDataBound" QueryChartRowInfo="queryChart" TValue="TaskData"></GanttEvents>
 </SfGantt>
 <style>
-    .rowcustom {
-        background-color: orangered;
+    .custom-row {
+        background-color: #90EE90;
+    }
+
+    .yellow-cell {
+        background-color: #FFFF00;
+    }
+
+    .red-cell {
+        background-color: #20B2AA;
     }
 </style>
 @code{
-    private List<TaskData> TaskCollection { get; set; }
-    protected override void OnInitialized()
+    public void QueryCellInfo(QueryCellInfoEventArgs<TaskData> args)
     {
-        this.TaskCollection = GetTaskCollection();
+        if (args.Column.Field == "Progress")
+        {
+            if (args.Data.Progress == 30)
+            {
+                args.Cell.AddClass(new string[] { "yellow-cell" });
+            }
+            else
+            {
+                args.Cell.AddClass(new string[] { "red-cell" });
+            }
+        }
     }
-    public void rowBound(RowDataBoundEventArgs<TaskData> args)
+    public void RowDataBound(RowDataBoundEventArgs<TaskData> args)
     {
         if (args.Data.TaskId == 4)
         {
-            args.Row.AddClass(new string[] { "rowcustom" });
+            args.Row.AddClass(new string[] { "custom-row" });
         }
     }
     public void queryChart(QueryChartRowInfoEventArgs<TaskData> args)
     {
         if (args.Data.TaskId == 4)
         {
-            args.Row.AddClass(new string[] { "rowcustom" });
+            args.Row.AddClass(new string[] { "custom-row" });
         }
+    }
+    private List<TaskData> TaskCollection { get; set; }
+
+    protected override void OnInitialized()
+    {
+        this.TaskCollection = GetTaskCollection();
     }
 
     public class TaskData
@@ -617,7 +340,7 @@ You can use [GanttEvents](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
 }
 ```
 
-![Customizing Rows in Blazor Gantt Chart](images/blazor-gantt-chart-row-customization.png)
+![Customizing Rows and Cells in Blazor Gantt Chart](images/blazor-gantt-chart-row-cell-customization.png)
 
 ## Styling alternate rows
 
@@ -768,5 +491,75 @@ This is demonstrated in the below sample code, where the [GetRowTaskModel](https
 }
 ```
 ![Row Task Model Properties](images/blazor-gantt-chart-GetRowTaskModel.png)
+
+## Clip mode
+
+The clip mode provides options to display its overflow cell content and it can be defined by the `GanttColumn.ClipMode` property.
+
+The following are three types of `ClipMode`:
+
+* `Clip`: Truncates the cell content when it overflows its area.
+* `Ellipsis`: Displays ellipsis when content of the cell overflows its area.
+* `EllipsisWithTooltip`: Displays ellipsis when content of the cell overflows its area; it displays the tooltip content when hover over ellipsis.
+
+N> By default, all the column's `ClipMode` property is defined as `EllipsisWithTooltip`.
+
+### Cell tooltip
+
+You can enable the Grid cell tooltip by setting the [GanttColumn.ClipMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttColumn.html#Syncfusion_Blazor_Gantt_GanttColumn_ClipMode) property to `EllipsisWithTooltip`.
+
+```cshtml
+@using Syncfusion.Blazor.Gantt
+@using Syncfusion.Blazor.Grids
+<SfGantt DataSource="@TaskCollection" Height="450px" Width="700px">
+    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate"
+                     Duration="Duration" Progress="Progress" ParentID="ParentId">
+    </GanttTaskFields>
+    <GanttColumns>
+        <GanttColumn Field="TaskId"></GanttColumn>
+        <GanttColumn Field="TaskName" Width="100" ClipMode="ClipMode.EllipsisWithTooltip"></GanttColumn>
+        <GanttColumn Field="StartDate"></GanttColumn>
+        <GanttColumn Field="Duration" ClipMode="ClipMode.Clip"></GanttColumn>
+        <GanttColumn Field="Progress"></GanttColumn>
+    </GanttColumns>
+</SfGantt>
+
+@code{
+    private List<TaskData> TaskCollection { get; set; }
+    protected override void OnInitialized()
+    {
+        this.TaskCollection = GetTaskCollection();
+    }
+
+    public class TaskData
+    {
+        public int TaskId { get; set; }
+        public string TaskName { get; set; }
+        public DateTime StartDate { get; set; }
+        public DateTime EndDate { get; set; }
+        public string Duration { get; set; }
+        public int Progress { get; set; }
+        public int? ParentId { get; set; }
+    }
+
+    private static List<TaskData> GetTaskCollection()
+    {
+        List<TaskData> Tasks = new List<TaskData>()
+    {
+            new TaskData() { TaskId = 1, TaskName = "Project initiation", StartDate = new DateTime(2022, 01, 04), EndDate = new DateTime(2022, 01, 17), },
+            new TaskData() { TaskId = 2, TaskName = "Identify Site location", StartDate = new DateTime(2022, 01, 04), Duration = "0", Progress = 30, ParentId = 1, },
+            new TaskData() { TaskId = 3, TaskName = "Perform soil test", StartDate = new DateTime(2022, 01, 04), Duration = "4", Progress = 40, ParentId = 1, },
+            new TaskData() { TaskId = 4, TaskName = "Soil test approval", StartDate = new DateTime(2022, 01, 04), Duration = "0", Progress = 30, ParentId = 1, },
+            new TaskData() { TaskId = 5, TaskName = "Project estimation", StartDate = new DateTime(2022, 01, 04), EndDate = new DateTime(2022, 01, 17), },
+            new TaskData() { TaskId = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2022, 01, 06), Duration = "3", Progress = 30, ParentId = 5, },
+            new TaskData() { TaskId = 7, TaskName = "List materials", StartDate = new DateTime(2022, 01, 06), Duration = "3", Progress = 40, ParentId = 5, },
+            new TaskData() { TaskId = 8, TaskName = "Estimation approval", StartDate = new DateTime(2022, 01, 06), Duration = "0", Progress = 30, ParentId = 5, }
+        };
+        return Tasks;
+    }
+}
+```
+
+
 
 N> You can refer to our [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Gantt Chart example](https://blazor.syncfusion.com/demos/gantt-chart/default-functionalities?theme=bootstrap4) to know how to render and configure the Gantt.

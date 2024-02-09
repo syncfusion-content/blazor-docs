@@ -168,7 +168,7 @@ Stock Chart supports **DynamicObject** data source when the model type is unknow
 
 ### Binding with OData services
 
-[OData](http://www.odata.org/documentation/odata-version-3-0/) is a standardized protocol for creating and consuming data. You can retrieve data from OData service using the [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html). Refer to the following code example for remote data binding using OData service.
+[OData](https://www.odata.org/documentation/odata-version-3-0/) is a standardized protocol for creating and consuming data. You can retrieve data from OData service using the [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html). Refer to the following code example for remote data binding using OData service.
 
 ```cshtml
 
@@ -228,7 +228,7 @@ The [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data
 
 ### Web API
 
-The [WebApiAdaptor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.WebApiAdaptor.html) can be used to bind a Stock chart to a Web API created using an [OData](http://www.odata.org/documentation/odata-version-3-0/) endpoint.
+The [WebApiAdaptor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.WebApiAdaptor.html) can be used to bind a Stock chart to a Web API created using an [OData](https://www.odata.org/documentation/odata-version-3-0/) endpoint.
 
 ```cshtml
 @using Syncfusion.Blazor.Charts
@@ -506,7 +506,7 @@ For instance, to bind data directly from the data access layer class **OrderData
 }
 ```
 
-On the other hand, to configure the chart using Web API, provide the appropriate endpoint Url within [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html) along with [Adaptor](https://blazor.syncfusion.com/documentation/data/adaptors). Here, use [WebApiAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors/?no-cache=1#web-api-adaptor) in-order to interact with the Web API to consume data from the Entity Framework appropriately.
+On the other hand, to configure the chart using Web API, provide the appropriate endpoint Url within [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html) along with [Adaptor](https://blazor.syncfusion.com/documentation/data/adaptors). Here, use [WebApiAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors?no-cache=1#web-api-adaptor) in-order to interact with the Web API to consume data from the Entity Framework appropriately.
 
 ```cshtml
 @using Syncfusion.Blazor.Charts
@@ -531,4 +531,4 @@ On the other hand, to configure the chart using Web API, provide the appropriate
 
 ## See Also
 
-* [Series Types](./series-types/)
+* [Series Types](./series-types)

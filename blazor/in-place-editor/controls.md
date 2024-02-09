@@ -288,4 +288,4 @@ The following example demonstrates how to render the Editor components in the In
 
 ## See Also
 
-* [HTML5 components](./integration/)
+* [HTML5 components](./integration)

@@ -55,4 +55,4 @@ The following example demonstrates how to create a DatePicker that allows users 
 }
 ```
 
-N> To learn more about Calendar views, refer to the Calendar's [Calendar Views](../calendar/calendar-views/) section.
+N> To learn more about Calendar views, refer to the Calendar's [Calendar Views](../calendar/calendar-views) section.

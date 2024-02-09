@@ -132,7 +132,7 @@ To copy the data of the selected rows or cells into the clipboard with the help 
 }
 ```
 
-## Copy Hierarchy Modes
+## Copy hierarchy modes
 
 Gantt Chart provides support for a set of copy modes with the [CopyHierarchyMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.CopyHierarchyType.html) property. The following are the type of filter modes available in the Gantt Chart.
 

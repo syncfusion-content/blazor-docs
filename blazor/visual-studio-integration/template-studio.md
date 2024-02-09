@@ -92,7 +92,7 @@ N> Before use the Syncfusion Blazor Project Template, check whether the Syncfusi
 
      **Option 1:** Click the corresponding selected control box.
 
-     **Option 2:** Click ‘x’ button for corresponding control in the control list from **Project Details**. 
+     **Option 2:** Click ‘x’ button for corresponding control in the control list from **Project Details**.
 
      N> **Note:** Choose at least one control to enable the Features and Configuration tab.
 
@@ -128,7 +128,7 @@ N> Before use the Syncfusion Blazor Project Template, check whether the Syncfusi
 
 9. The Syncfusion Blazor application configures with most recent Syncfusion Blazor NuGet packages version, selected style, namespaces, selected authentication, and component render code for Syncfusion components.
 
-10. If you installed the trial setup or NuGet packages from nuget.org you must register the Syncfusion license key to your application since Syncfusion introduced the licensing system from 2018 Volume 2 (v16.2.0.41) Essential Studio release. Navigate to the [help topic](https://help.syncfusion.com/common/essential-studio/licensing/license-key#how-to-generate-syncfusion-license-key) to generate and register the Syncfusion license key to your application. Refer to this [blog](https://blog.syncfusion.com/post/Whats-New-in-2018-Volume-2-Licensing-Changes-in-the-1620x-Version-of-Essential-Studio.aspx?_ga=2.11237684.1233358434.1587355730-230058891.1567654773) post for understanding the licensing changes introduced in Essential Studio.
+10. If you installed the trial setup or NuGet packages from nuget.org you must register the Syncfusion license key to your application since Syncfusion introduced the licensing system from 2018 Volume 2 (v16.2.0.41) Essential Studio release. Navigate to the [help topic](https://help.syncfusion.com/common/essential-studio/licensing/overview#how-to-generate-syncfusion-license-key) to generate and register the Syncfusion license key to your application. Refer to this [blog](https://www.syncfusion.com/blogs/post/whats-new-in-2018-volume-2.aspx) post for understanding the licensing changes introduced in Essential Studio.
 
 ## Authentication Configuration
 
@@ -337,6 +337,42 @@ N> **Note:** Above culture combo box will be enabled in sample output if localiz
 ## Register and Login Application
 
 ### Individual Authentication
+
+#### Blazor Web App
+
+##### Applying Database Migrations and User Registration in the .NET 8.0 Blazor Web App
+
+##### Applying Database Migrations:
+
+In the Blazor Web App, it's essential to apply pending migrations to the database before proceeding with user registration. Choose one of the following options:
+
+**Option 1: Using Visual Studio Package Manager Console**
+ 
+Navigate to **View -> Other Windows -> Package Manager Console** in Visual Studio.
+ 
+Run the following command in the Package Manager Console:
+
+   ```Update-Database```
+
+**Option 2: Using Command Prompt**
+ 
+Open a command prompt in your project directory and execute the following command:
+
+   ```dotnet ef database update```
+
+##### User Registration:
+
+1.	Launch the application and register by submitting your email address and creating a password.
+
+    ![Register the WebApp](images/WebAppRegister.png)
+
+2.	Confirm your registration by clicking **Click here to confirm your account.**
+
+    ![Confirming the WebApp registration](images/WebAppRegisterConfirmation.png)
+
+3.	Submit your registered email address and password to log in to the application.
+
+    ![LogIn to the WebApp](images/WebApplogIn.png)
 
 #### Server Application, ASP.NET Core hosted Web Application, and Progressive Web Application with ASP.NET Core hosted
 

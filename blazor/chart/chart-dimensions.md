@@ -63,6 +63,7 @@ The chart can be scaled to fit the container. As shown below, the size can be s
 }
 
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VjVqWLrhgORNWnqy?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Changing Blazor Chart Size as Fit to Container](images/chart-dimensions/blazor-chart-size-for-container.png)
 
@@ -108,6 +109,7 @@ The [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfCha
 }
 
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hNLUCrhhUOHBRpDP?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Changing Blazor Chart Size in Pixel](images/chart-dimensions/blazor-chart-size-in-pixel.png)
 
@@ -149,6 +151,7 @@ By setting the values of [Width](https://help.syncfusion.com/cr/blazor/Syncfusio
 }
 
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hXLUMrVLAEHSsNxA?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Changing Blazor Chart Size in Percentage](images/chart-dimensions/blazor-chart-size-in-percentage.png)
 

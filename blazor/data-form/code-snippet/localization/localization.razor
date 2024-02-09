@@ -1,0 +1,24 @@
+@using Syncfusion.Blazor.DataForm
+@using System.ComponentModel.DataAnnotations
+@using BlazorApp1.Resources
+@using Syncfusion.Blazor.Buttons
+
+<SfDataForm Width="50%"
+
+            Model="@RegistrationDetailsModel">
+
+    <FormValidator>
+        <DataAnnotationsValidator></DataAnnotationsValidator>
+    </FormValidator>
+
+    <FormItems>
+        <FormAutoGenerateItems></FormAutoGenerateItems>
+    </FormItems>
+</SfDataForm>
+
+
+@code {
+    
+    private RegistrationDetails RegistrationDetailsModel = new RegistrationDetails();
+}
+

@@ -25,7 +25,7 @@ You need to configure the corresponding [Interactive render mode](https://learn.
 
 To add **Blazor Avatar** component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/).
 
-If you select an **Interactive render mode** as `WebAssembly` or `Auto`, you can install the NuGet package in the project any where to add component in Web App.
+If you utilize `WebAssembly or Auto` render modes in the Blazor Web App need to be install Syncfusion Blazor components NuGet packages within the client project.
 
 Alternatively, you can utilize the following package manager command to achieve the same.
 
@@ -51,6 +51,7 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 ```
 
 N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic to discover various methods ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference), and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)) for referencing themes in your Blazor application.
+
 ## Add Syncfusion Blazor Avatar component
 
 Add the Syncfusion Blazor Avatar component in the **~Pages/.razor** file. If an interactivity location as `Per page/component` in the web app, define a render mode at the top of the `~Pages/.razor` component, as follows:
@@ -87,6 +88,6 @@ Add the Syncfusion Blazor Avatar component in the **~Pages/.razor** file. If an 
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion Blazor Avatar component in your default web browser.
 
-![Blazor Avatar Component](./images/blazor-avatar-component.PNG)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDLzXWBegzxvDwzZ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "![Blazor Avatar Component](./images/blazor-avatar-component.PNG)" %}
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/Avatar/BlazorWebApp)

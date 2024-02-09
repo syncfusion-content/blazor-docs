@@ -19,7 +19,7 @@ documentation: ug
 
 <SfChart Title="Olympic Medals">
     <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
-
+	
     <ChartSeriesCollection>
         <ChartSeries DataSource="@MedalDetails" XName="X" YName="Y" Type="ChartSeriesType.Spline">
         </ChartSeries>
@@ -32,7 +32,7 @@ documentation: ug
         public string X { get; set; }
         public double Y { get; set; }
     }
-
+	
     public List<ChartData> MedalDetails = new List<ChartData>
 	{
         new ChartData { X= "South Korea", Y= 39.4 },
@@ -50,7 +50,8 @@ documentation: ug
     };
 }
 
-```
+``` 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rtrKiBLRVoGCXtGp?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Spline Chart](../images/chart-types-images/blazor-spline-chart.png)
 
@@ -66,7 +67,7 @@ To specify the type of [Spline Chart](https://help.syncfusion.com/cr/blazor/Sync
 
 <SfChart Title="Olympic Medals" Width="60%">
     <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
-
+	
     <ChartSeriesCollection>
         <ChartSeries DataSource="@MedalDetails" XName="X" YName="Y" Type="ChartSeriesType.Spline" SplineType="SplineType.Cardinal">
         </ChartSeries>
@@ -79,7 +80,7 @@ To specify the type of [Spline Chart](https://help.syncfusion.com/cr/blazor/Sync
         public string X { get; set; }
         public double Y { get; set; }
     }
-
+	
     public List<ChartData> MedalDetails = new List<ChartData>
 	{
         new ChartData { X= "South Korea", Y= 39.4 },
@@ -97,7 +98,8 @@ To specify the type of [Spline Chart](https://help.syncfusion.com/cr/blazor/Sync
     };
 }
 
-```
+``` 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hDrgshrHBIGUdhhV?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Cardinal Spline Chart](../images/chart-types-images/blazor-cardinal-spline-chart.png)
 
@@ -116,7 +118,7 @@ The following properties can be used to customize the [Spline](https://help.sync
 
 <SfChart Title="Olympic Medals" Width="60%">
     <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
-
+	
     <ChartSeriesCollection>
         <ChartSeries DataSource="@MedalDetails" XName="X" YName="Y" Width="3" Opacity="0.5"
                      DashArray="5,5" Fill="blue" Type="ChartSeriesType.Spline">
@@ -127,12 +129,10 @@ The following properties can be used to customize the [Spline](https://help.sync
 @code{
     public class ChartData
     {
-
        public string X { get; set; }
        public double Y { get; set; }
-
     }
-
+	
     public List<ChartData> MedalDetails = new List<ChartData>
 	{
         new ChartData { X= "South Korea", Y= 39.4 },
@@ -150,7 +150,8 @@ The following properties can be used to customize the [Spline](https://help.sync
     };
 }
 
-```
+``` 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VNhUCrLRhowdrObM?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Spline Chart with Custom Series](../images/chart-types-images/blazor-spline-chart-custom-series.png)
 

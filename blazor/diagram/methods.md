@@ -1579,7 +1579,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
         new MindMapDetails() { Id= "10", Label= "Ideas", ParentId ="5", Branch = "subRight" },
         new MindMapDetails() { Id= "11", Label= "Engagement", ParentId ="5", Branch = "subRight" },
     };
-    private void RefreshDataSource()
+    private async Task RefreshDataSource()
     {
         DataSource = new List<object>()
     {
@@ -1589,7 +1589,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
         new MindMapDetails() { Id= "4",  Label="Sessions", ParentId ="2", Branch = "subRight" },
         new MindMapDetails() { Id= "5",  Label="Complementing", ParentId ="2", Branch = "subRight" },
         };
-        Diagram.RefreshDataSource();
+        await Diagram.RefreshDataSource();
     }
 }
 ```

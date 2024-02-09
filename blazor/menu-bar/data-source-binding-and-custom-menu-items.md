@@ -15,7 +15,7 @@ The [Blazor Menu Bar](https://www.syncfusion.com/blazor-components/blazor-menu-b
 
 Menu Bar can be populated from self-referential data structure that contains data with `ParentId` mapping.
 
-In the following example, the **id**, **pId**, and **text** columns from self-referential data have been mapped to the [ItemId](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.MenuFieldSettings.html#Syncfusion_Blazor_Navigations_MenuFieldSettings_ItemId), [ParentId](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.MenuFieldSettings.html#Syncfusion_Blazor_Navigations_MenuFieldSettings_ParentId), and [Text](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Navigations.MenuFieldSettings~Text.html) fields, respectively.
+In the following example, the **id**, **pId**, and **text** columns from self-referential data have been mapped to the [ItemId](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.MenuFieldSettings.html#Syncfusion_Blazor_Navigations_MenuFieldSettings_ItemId), [ParentId](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.MenuFieldSettings.html#Syncfusion_Blazor_Navigations_MenuFieldSettings_ParentId), and [Text](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.MenuFieldSettings.html#Syncfusion_Blazor_Navigations_MenuFieldSettings_Text) fields, respectively.
 
 ```cshtml
 
@@ -76,7 +76,7 @@ N> In the above example, `TValue` is specified as `MenuItemModel` because the me
 
 ## Custom Menu Bar Items
 
-To customize Menu Bar items in your application, set your customized template using [MenuTemplates](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Navigations.MenuTemplates.html). In the following example, the Menu Bar has been rendered with customized Menu Bar items.
+To customize Menu Bar items in your application, set your customized template using [MenuTemplates](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.MenuTemplates-1.html). In the following example, the Menu Bar has been rendered with customized Menu Bar items.
 
 ```cshtml
 

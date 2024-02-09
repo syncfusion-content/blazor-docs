@@ -135,5 +135,5 @@ N> You can refer to our [Blazor Rich Text Editor](https://www.syncfusion.com/bla
 
 ## See also
 
-* [Globalization](./globalization/)
-* [Accessibility](./accessibility/)
+* [Globalization](./globalization)
+* [Accessibility](./accessibility)

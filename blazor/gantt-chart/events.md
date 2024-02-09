@@ -841,6 +841,698 @@ The events should be provided to the Gantt Chart using the GanttChartEvents comp
     }
 }
 ```
+## Sorting
+[Sorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_Sorting) event triggers  is triggered when a sorting action occurs or when a column is removed from sorting in the Gantt Chart.
+
+```cshtml
+@using Syncfusion.Blazor.Gantt
+@using Syncfusion.Blazor.Grids
+
+<SfGantt DataSource="@TaskCollection" Height="450px" Width="900px" AllowSorting="true">
+    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate"
+                     Duration="Duration" Progress="Progress" ParentID="ParentId">
+    </GanttTaskFields>
+    <GanttEvents Sorting="SortingHandler" TValue="TaskData"></GanttEvents>
+</SfGantt>
+
+@code {
+
+    private List<TaskData> TaskCollection { get; set; }
+
+    protected override void OnInitialized()
+    {
+        this.TaskCollection = GetTaskCollection();
+    }
+    public void SortingHandler(SortingEventArgs args)
+    {
+        // Here, you can customize your code.
+    }
+
+    public class TaskData
+    {
+        public int TaskId { get; set; }
+        public string TaskName { get; set; }
+        public DateTime StartDate { get; set; }
+        public DateTime EndDate { get; set; }
+        public string Duration { get; set; }
+        public int Progress { get; set; }
+        public int? ParentId { get; set; }
+    }
+
+    private static List<TaskData> GetTaskCollection()
+    {
+        List<TaskData> Tasks = new List<TaskData>()
+        {
+            new TaskData() { TaskId = 1, TaskName = "Project initiation", StartDate = new DateTime(2023, 01, 04), EndDate = new DateTime(2023, 01, 23), },
+            new TaskData() { TaskId = 2, TaskName = "Identify Site location", StartDate = new DateTime(2023, 01, 04), Duration = "0", Progress = 30, ParentId = 1, },
+            new TaskData() { TaskId = 3, TaskName = "Perform soil test", StartDate = new DateTime(2023, 01, 04), Duration = "4", Progress = 40, ParentId = 1, },
+            new TaskData() { TaskId = 4, TaskName = "Soil test approval", StartDate = new DateTime(2023, 01, 04), Duration = "0", Progress = 30, ParentId = 1, },
+            new TaskData() { TaskId = 5, TaskName = "Project estimation", StartDate = new DateTime(2023, 01, 04), EndDate = new DateTime(2023, 01, 23), },
+            new TaskData() { TaskId = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2023, 01, 06), Duration = "3", Progress = 30, ParentId = 5, },
+            new TaskData() { TaskId = 7, TaskName = "List materials", StartDate = new DateTime(2023, 01, 06), Duration = "3", Progress = 40, ParentId = 5, },
+            new TaskData() { TaskId = 8, TaskName = "Estimation approval", StartDate = new DateTime(2023, 01, 06), Duration = "0", Progress = 30, ParentId = 5, }
+        };
+        return Tasks;
+    }
+}
+```
+## Sorted 
+[Sorted](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_Sorted) event triggers after a sorting action is performed or a column is removed from sorting in the Gantt Chart.
+```cshtml
+@using Syncfusion.Blazor.Gantt
+@using Syncfusion.Blazor.Grids
+
+<SfGantt DataSource="@TaskCollection" Height="450px" Width="900px" AllowSorting="true">
+    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate"
+                     Duration="Duration" Progress="Progress" ParentID="ParentId">
+    </GanttTaskFields>
+    <GanttEvents Sorted="SortedHandler" TValue="TaskData"></GanttEvents>
+</SfGantt>
+
+@code {
+
+    private List<TaskData> TaskCollection { get; set; }
+
+    protected override void OnInitialized()
+    {
+        this.TaskCollection = GetTaskCollection();
+    }
+
+    public void SortedHandler(SortedEventArgs args)
+    {
+        // Here, you can customize your code.
+    }
+
+    public class TaskData
+    {
+        public int TaskId { get; set; }
+        public string TaskName { get; set; }
+        public DateTime StartDate { get; set; }
+        public DateTime EndDate { get; set; }
+        public string Duration { get; set; }
+        public int Progress { get; set; }
+        public int? ParentId { get; set; }
+    }
+
+    private static List<TaskData> GetTaskCollection()
+    {
+        List<TaskData> Tasks = new List<TaskData>()
+        {
+            new TaskData() { TaskId = 1, TaskName = "Project initiation", StartDate = new DateTime(2023, 01, 04), EndDate = new DateTime(2023, 01, 23), },
+            new TaskData() { TaskId = 2, TaskName = "Identify Site location", StartDate = new DateTime(2023, 01, 04), Duration = "0", Progress = 30, ParentId = 1, },
+            new TaskData() { TaskId = 3, TaskName = "Perform soil test", StartDate = new DateTime(2023, 01, 04), Duration = "4", Progress = 40, ParentId = 1, },
+            new TaskData() { TaskId = 4, TaskName = "Soil test approval", StartDate = new DateTime(2023, 01, 04), Duration = "0", Progress = 30, ParentId = 1, },
+            new TaskData() { TaskId = 5, TaskName = "Project estimation", StartDate = new DateTime(2023, 01, 04), EndDate = new DateTime(2023, 01, 23), },
+            new TaskData() { TaskId = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2023, 01, 06), Duration = "3", Progress = 30, ParentId = 5, },
+            new TaskData() { TaskId = 7, TaskName = "List materials", StartDate = new DateTime(2023, 01, 06), Duration = "3", Progress = 40, ParentId = 5, },
+            new TaskData() { TaskId = 8, TaskName = "Estimation approval", StartDate = new DateTime(2023, 01, 06), Duration = "0", Progress = 30, ParentId = 5, }
+        };
+        return Tasks;
+    }
+}
+```
+## Searching 
+
+[Searching](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_Searching)  event is triggered before a search action is performed in the Gantt Chart.
+
+```cshtml
+@using Syncfusion.Blazor.Gantt
+@using Syncfusion.Blazor.Grids
+
+<SfGantt DataSource="@TaskCollection" Height="450px" Width="900px" Toolbar="@(new List<string>() { "Search" })">
+    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate"
+                     Duration="Duration" Progress="Progress" ParentID="ParentId">
+    </GanttTaskFields>
+    <GanttEvents Searching="SearchingHandler" TValue="TaskData"></GanttEvents>
+</SfGantt>
+
+@code {
+
+    private List<TaskData> TaskCollection { get; set; }
+
+    protected override void OnInitialized()
+    {
+        this.TaskCollection = GetTaskCollection();
+    }
+
+    public void SearchingHandler(SearchingEventArgs args)
+    {
+        // Here, you can customize your code.
+    }
+
+    public class TaskData
+    {
+        public int TaskId { get; set; }
+        public string TaskName { get; set; }
+        public DateTime StartDate { get; set; }
+        public DateTime EndDate { get; set; }
+        public string Duration { get; set; }
+        public int Progress { get; set; }
+        public int? ParentId { get; set; }
+    }
+
+    private static List<TaskData> GetTaskCollection()
+    {
+        List<TaskData> Tasks = new List<TaskData>()
+        {
+            new TaskData() { TaskId = 1, TaskName = "Project initiation", StartDate = new DateTime(2023, 01, 04), EndDate = new DateTime(2023, 01, 23), },
+            new TaskData() { TaskId = 2, TaskName = "Identify Site location", StartDate = new DateTime(2023, 01, 04), Duration = "0", Progress = 30, ParentId = 1, },
+            new TaskData() { TaskId = 3, TaskName = "Perform soil test", StartDate = new DateTime(2023, 01, 04), Duration = "4", Progress = 40, ParentId = 1, },
+            new TaskData() { TaskId = 4, TaskName = "Soil test approval", StartDate = new DateTime(2023, 01, 04), Duration = "0", Progress = 30, ParentId = 1, },
+            new TaskData() { TaskId = 5, TaskName = "Project estimation", StartDate = new DateTime(2023, 01, 04), EndDate = new DateTime(2023, 01, 23), },
+            new TaskData() { TaskId = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2023, 01, 06), Duration = "3", Progress = 30, ParentId = 5, },
+            new TaskData() { TaskId = 7, TaskName = "List materials", StartDate = new DateTime(2023, 01, 06), Duration = "3", Progress = 40, ParentId = 5, },
+            new TaskData() { TaskId = 8, TaskName = "Estimation approval", StartDate = new DateTime(2023, 01, 06), Duration = "0", Progress = 30, ParentId = 5, }
+        };
+        return Tasks;
+    }
+}
+
+
+```
+## Searched 
+
+[Searched](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_Searched) event is triggered after a search action is performed in the Gantt Chart.
+
+```cshtml
+@using Syncfusion.Blazor.Gantt
+@using Syncfusion.Blazor.Grids
+
+<SfGantt DataSource="@TaskCollection" Height="450px" Width="900px" Toolbar="@(new List<string>() { "Search" })">
+    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate"
+                     Duration="Duration" Progress="Progress" ParentID="ParentId">
+    </GanttTaskFields>
+    <GanttEvents Searched="SearchedHandler" TValue="TaskData"></GanttEvents>
+</SfGantt>
+
+@code {
+
+    private List<TaskData> TaskCollection { get; set; }
+
+    protected override void OnInitialized()
+    {
+        this.TaskCollection = GetTaskCollection();
+    }
+
+    public void SearchedHandler(SearchedEventArgs args)
+    {
+        // Here, you can customize your code.
+    }
+
+    public class TaskData
+    {
+        public int TaskId { get; set; }
+        public string TaskName { get; set; }
+        public DateTime StartDate { get; set; }
+        public DateTime EndDate { get; set; }
+        public string Duration { get; set; }
+        public int Progress { get; set; }
+        public int? ParentId { get; set; }
+    }
+
+    private static List<TaskData> GetTaskCollection()
+    {
+        List<TaskData> Tasks = new List<TaskData>()
+        {
+            new TaskData() { TaskId = 1, TaskName = "Project initiation", StartDate = new DateTime(2023, 01, 04), EndDate = new DateTime(2023, 01, 23), },
+            new TaskData() { TaskId = 2, TaskName = "Identify Site location", StartDate = new DateTime(2023, 01, 04), Duration = "0", Progress = 30, ParentId = 1, },
+            new TaskData() { TaskId = 3, TaskName = "Perform soil test", StartDate = new DateTime(2023, 01, 04), Duration = "4", Progress = 40, ParentId = 1, },
+            new TaskData() { TaskId = 4, TaskName = "Soil test approval", StartDate = new DateTime(2023, 01, 04), Duration = "0", Progress = 30, ParentId = 1, },
+            new TaskData() { TaskId = 5, TaskName = "Project estimation", StartDate = new DateTime(2023, 01, 04), EndDate = new DateTime(2023, 01, 23), },
+            new TaskData() { TaskId = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2023, 01, 06), Duration = "3", Progress = 30, ParentId = 5, },
+            new TaskData() { TaskId = 7, TaskName = "List materials", StartDate = new DateTime(2023, 01, 06), Duration = "3", Progress = 40, ParentId = 5, },
+            new TaskData() { TaskId = 8, TaskName = "Estimation approval", StartDate = new DateTime(2023, 01, 06), Duration = "0", Progress = 30, ParentId = 5, }
+        };
+        return Tasks;
+    }
+}
+```
+## RowCreating
+
+[RowCreating](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_RowCreating) event is triggered before an add action is performed in the Gantt Chart.
+
+```cshtml
+@using Syncfusion.Blazor.Gantt
+
+<SfGantt DataSource="@TaskCollection" Height="450px" Width="900px" EnableContextMenu ="true" Toolbar="@(new List<string>() { "Add","Cancel", "Update" })">
+    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate"
+                     Duration="Duration" Progress="Progress" ParentID="ParentId">
+    </GanttTaskFields>
+    <GanttEditSettings AllowAdding="true" AllowEditing="true"></GanttEditSettings>
+    <GanttEvents RowCreating="RowAddingHandler" TValue="TaskData"></GanttEvents>
+</SfGantt>
+
+@code {
+
+    private List<TaskData> TaskCollection { get; set; }
+
+    protected override void OnInitialized()
+    {
+        this.TaskCollection = GetTaskCollection();
+    }
+
+    public void RowAddingHandler(GanttRowCreatingEventArgs<TaskData> args)
+    {
+        // Here, you can customize your code.
+    }
+
+    public class TaskData
+    {
+        public int TaskId { get; set; }
+        public string TaskName { get; set; }
+        public DateTime StartDate { get; set; }
+        public DateTime EndDate { get; set; }
+        public string Duration { get; set; }
+        public int Progress { get; set; }
+        public int? ParentId { get; set; }
+    }
+
+    private static List<TaskData> GetTaskCollection()
+    {
+        List<TaskData> Tasks = new List<TaskData>()
+        {
+            new TaskData() { TaskId = 1, TaskName = "Project initiation", StartDate = new DateTime(2023, 01, 04), EndDate = new DateTime(2023, 01, 23), },
+            new TaskData() { TaskId = 2, TaskName = "Identify Site location", StartDate = new DateTime(2023, 01, 04), Duration = "0", Progress = 30, ParentId = 1, },
+            new TaskData() { TaskId = 3, TaskName = "Perform soil test", StartDate = new DateTime(2023, 01, 04), Duration = "4", Progress = 40, ParentId = 1, },
+            new TaskData() { TaskId = 4, TaskName = "Soil test approval", StartDate = new DateTime(2023, 01, 04), Duration = "0", Progress = 30, ParentId = 1, },
+            new TaskData() { TaskId = 5, TaskName = "Project estimation", StartDate = new DateTime(2023, 01, 04), EndDate = new DateTime(2023, 01, 23), },
+            new TaskData() { TaskId = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2023, 01, 06), Duration = "3", Progress = 30, ParentId = 5, },
+            new TaskData() { TaskId = 7, TaskName = "List materials", StartDate = new DateTime(2023, 01, 06), Duration = "3", Progress = 40, ParentId = 5, },
+            new TaskData() { TaskId = 8, TaskName = "Estimation approval", StartDate = new DateTime(2023, 01, 06), Duration = "0", Progress = 30, ParentId = 5, }
+        };
+        return Tasks;
+    }
+}
+
+```
+
+## RowCreated
+
+[RowCreated](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_RowCreated) event is triggered after an add action is performed in the Gantt Chart.
+
+```cshtml
+@using Syncfusion.Blazor.Gantt
+
+<SfGantt DataSource="@TaskCollection" Height="450px" Width="900px" EnableContextMenu ="true" Toolbar="@(new List<string>() { "Add", "Cancel", "Update" })">
+    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate"
+                     Duration="Duration" Progress="Progress" ParentID="ParentId">
+    </GanttTaskFields>
+    <GanttEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true"></GanttEditSettings>
+    <GanttEvents RowCreated="RowCreatedHandler" TValue="TaskData"></GanttEvents>
+</SfGantt>
+
+@code {
+
+    private List<TaskData> TaskCollection { get; set; }
+
+    protected override void OnInitialized()
+    {
+        this.TaskCollection = GetTaskCollection();
+    }
+
+    public void RowCreatedHandler(GanttRowCreatedEventArgs<TaskData> args)
+    {
+        // Here, you can customize your code.
+    }
+
+    public class TaskData
+    {
+        public int TaskId { get; set; }
+        public string TaskName { get; set; }
+        public DateTime StartDate { get; set; }
+        public DateTime EndDate { get; set; }
+        public string Duration { get; set; }
+        public int Progress { get; set; }
+        public int? ParentId { get; set; }
+    }
+
+    private static List<TaskData> GetTaskCollection()
+    {
+        List<TaskData> Tasks = new List<TaskData>()
+        {
+            new TaskData() { TaskId = 1, TaskName = "Project initiation", StartDate = new DateTime(2023, 01, 04), EndDate = new DateTime(2023, 01, 23), },
+            new TaskData() { TaskId = 2, TaskName = "Identify Site location", StartDate = new DateTime(2023, 01, 04), Duration = "0", Progress = 30, ParentId = 1, },
+            new TaskData() { TaskId = 3, TaskName = "Perform soil test", StartDate = new DateTime(2023, 01, 04), Duration = "4", Progress = 40, ParentId = 1, },
+            new TaskData() { TaskId = 4, TaskName = "Soil test approval", StartDate = new DateTime(2023, 01, 04), Duration = "0", Progress = 30, ParentId = 1, },
+            new TaskData() { TaskId = 5, TaskName = "Project estimation", StartDate = new DateTime(2023, 01, 04), EndDate = new DateTime(2023, 01, 23), },
+            new TaskData() { TaskId = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2023, 01, 06), Duration = "3", Progress = 30, ParentId = 5, },
+            new TaskData() { TaskId = 7, TaskName = "List materials", StartDate = new DateTime(2023, 01, 06), Duration = "3", Progress = 40, ParentId = 5, },
+            new TaskData() { TaskId = 8, TaskName = "Estimation approval", StartDate = new DateTime(2023, 01, 06), Duration = "0", Progress = 30, ParentId = 5, }
+        };
+        return Tasks;
+    }
+}
+
+```
+##  RowUpdating 
+
+[RowUpdating](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_RowUpdating ) event is triggered before a save action is performed in the Gantt Chart. 
+
+```cshtml
+@using Syncfusion.Blazor.Gantt
+
+<SfGantt DataSource="@TaskCollection" Height="450px" Width="900px" EnableContextMenu="true" Toolbar="@(new List<string>() { "Add", "Edit", "Cancel", "Update" })">
+    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate"
+                     Duration="Duration" Progress="Progress" ParentID="ParentId">
+    </GanttTaskFields>
+    <GanttEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true" ></GanttEditSettings>
+    <GanttEvents RowUpdating="RowUpdatingHandler" TValue="TaskData"></GanttEvents>
+</SfGantt>
+
+@code {
+
+    private List<TaskData> TaskCollection { get; set; }
+
+    protected override void OnInitialized()
+    {
+        this.TaskCollection = GetTaskCollection();
+    }
+
+    public void RowUpdatingHandler(GanttRowUpdatingEventArgs<TaskData> args)
+    {
+        // Here, you can customize your code.
+    }
+
+    public class TaskData
+    {
+        public int TaskId { get; set; }
+        public string TaskName { get; set; }
+        public DateTime StartDate { get; set; }
+        public DateTime EndDate { get; set; }
+        public string Duration { get; set; }
+        public int Progress { get; set; }
+        public int? ParentId { get; set; }
+    }
+
+    private static List<TaskData> GetTaskCollection()
+    {
+        List<TaskData> Tasks = new List<TaskData>()
+        {
+            new TaskData() { TaskId = 1, TaskName = "Project initiation", StartDate = new DateTime(2023, 01, 04), EndDate = new DateTime(2023, 01, 23), },
+            new TaskData() { TaskId = 2, TaskName = "Identify Site location", StartDate = new DateTime(2023, 01, 04), Duration = "0", Progress = 30, ParentId = 1, },
+            new TaskData() { TaskId = 3, TaskName = "Perform soil test", StartDate = new DateTime(2023, 01, 04), Duration = "4", Progress = 40, ParentId = 1, },
+            new TaskData() { TaskId = 4, TaskName = "Soil test approval", StartDate = new DateTime(2023, 01, 04), Duration = "0", Progress = 30, ParentId = 1, },
+            new TaskData() { TaskId = 5, TaskName = "Project estimation", StartDate = new DateTime(2023, 01, 04), EndDate = new DateTime(2023, 01, 23), },
+            new TaskData() { TaskId = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2023, 01, 06), Duration = "3", Progress = 30, ParentId = 5, },
+            new TaskData() { TaskId = 7, TaskName = "List materials", StartDate = new DateTime(2023, 01, 06), Duration = "3", Progress = 40, ParentId = 5, },
+            new TaskData() { TaskId = 8, TaskName = "Estimation approval", StartDate = new DateTime(2023, 01, 06), Duration = "0", Progress = 30, ParentId = 5, }
+        };
+        return Tasks;
+    }
+}
+
+```
+## RowUpdated 
+
+[RowUpdated ](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_RowUpdated  ) event is triggered after a save action is performed in the Gantt Chart. 
+
+```cshtml
+
+@using Syncfusion.Blazor.Gantt
+
+<SfGantt DataSource="@TaskCollection" Height="450px" Width="900px" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Cancel", "Update" })">
+    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate"
+                     Duration="Duration" Progress="Progress" ParentID="ParentId">
+    </GanttTaskFields>
+    <GanttEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true"></GanttEditSettings>
+    <GanttEvents RowUpdated="RowUpdatedHandler" TValue="TaskData"></GanttEvents>
+</SfGantt>
+
+@code {
+
+    private List<TaskData> TaskCollection { get; set; }
+
+    protected override void OnInitialized()
+    {
+        this.TaskCollection = GetTaskCollection();
+    }
+
+    public void RowUpdatedHandler(GanttRowUpdatedEventArgs<TaskData> args)
+    {
+        // Here, you can customize your code.
+    }
+
+    public class TaskData
+    {
+        public int TaskId { get; set; }
+        public string TaskName { get; set; }
+        public DateTime StartDate { get; set; }
+        public DateTime EndDate { get; set; }
+        public string Duration { get; set; }
+        public int Progress { get; set; }
+        public int? ParentId { get; set; }
+    }
+
+    private static List<TaskData> GetTaskCollection()
+    {
+        List<TaskData> Tasks = new List<TaskData>()
+        {
+            new TaskData() { TaskId = 1, TaskName = "Project initiation", StartDate = new DateTime(2023, 01, 04), EndDate = new DateTime(2023, 01, 23), },
+            new TaskData() { TaskId = 2, TaskName = "Identify Site location", StartDate = new DateTime(2023, 01, 04), Duration = "0", Progress = 30, ParentId = 1, },
+            new TaskData() { TaskId = 3, TaskName = "Perform soil test", StartDate = new DateTime(2023, 01, 04), Duration = "4", Progress = 40, ParentId = 1, },
+            new TaskData() { TaskId = 4, TaskName = "Soil test approval", StartDate = new DateTime(2023, 01, 04), Duration = "0", Progress = 30, ParentId = 1, },
+            new TaskData() { TaskId = 5, TaskName = "Project estimation", StartDate = new DateTime(2023, 01, 04), EndDate = new DateTime(2023, 01, 23), },
+            new TaskData() { TaskId = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2023, 01, 06), Duration = "3", Progress = 30, ParentId = 5, },
+            new TaskData() { TaskId = 7, TaskName = "List materials", StartDate = new DateTime(2023, 01, 06), Duration = "3", Progress = 40, ParentId = 5, },
+            new TaskData() { TaskId = 8, TaskName = "Estimation approval", StartDate = new DateTime(2023, 01, 06), Duration = "0", Progress = 30, ParentId = 5, }
+        };
+        return Tasks;
+    }
+}
+
+```
+
+## RowDeleting 
+
+[RowDeleting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_RowDeleting) event is triggered before a delete action is performed in the Gantt Chart. 
+
+```cshtml
+
+
+<SfGantt DataSource="@TaskCollection" Height="450px" Width="900px" EnableContextMenu ="true" Toolbar="@(new List<string>() { "Edit", "Delete", "Cancel", "Update" })">
+    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate"
+                     Duration="Duration" Progress="Progress" ParentID="ParentId">
+    </GanttTaskFields>
+    <GanttEditSettings AllowEditing="true" AllowDeleting="true"></GanttEditSettings>
+    <GanttEvents RowDeleting="RowDeletingHandler" TValue="TaskData"></GanttEvents>
+</SfGantt>
+
+@code {
+
+    private List<TaskData> TaskCollection { get; set; }
+
+    protected override void OnInitialized()
+    {
+        this.TaskCollection = GetTaskCollection();
+    }
+
+    public void RowDeletingHandler(GanttRowDeletingEventArgs<TaskData> args)
+    {
+        // Here, you can customize your code.
+    }
+
+    public class TaskData
+    {
+        public int TaskId { get; set; }
+        public string TaskName { get; set; }
+        public DateTime StartDate { get; set; }
+        public DateTime EndDate { get; set; }
+        public string Duration { get; set; }
+        public int Progress { get; set; }
+        public int? ParentId { get; set; }
+    }
+
+    private static List<TaskData> GetTaskCollection()
+    {
+        List<TaskData> Tasks = new List<TaskData>()
+        {
+            new TaskData() { TaskId = 1, TaskName = "Project initiation", StartDate = new DateTime(2023, 01, 04), EndDate = new DateTime(2023, 01, 23), },
+            new TaskData() { TaskId = 2, TaskName = "Identify Site location", StartDate = new DateTime(2023, 01, 04), Duration = "0", Progress = 30, ParentId = 1, },
+            new TaskData() { TaskId = 3, TaskName = "Perform soil test", StartDate = new DateTime(2023, 01, 04), Duration = "4", Progress = 40, ParentId = 1, },
+            new TaskData() { TaskId = 4, TaskName = "Soil test approval", StartDate = new DateTime(2023, 01, 04), Duration = "0", Progress = 30, ParentId = 1, },
+            new TaskData() { TaskId = 5, TaskName = "Project estimation", StartDate = new DateTime(2023, 01, 04), EndDate = new DateTime(2023, 01, 23), },
+            new TaskData() { TaskId = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2023, 01, 06), Duration = "3", Progress = 30, ParentId = 5, },
+            new TaskData() { TaskId = 7, TaskName = "List materials", StartDate = new DateTime(2023, 01, 06), Duration = "3", Progress = 40, ParentId = 5, },
+            new TaskData() { TaskId = 8, TaskName = "Estimation approval", StartDate = new DateTime(2023, 01, 06), Duration = "0", Progress = 30, ParentId = 5, }
+        };
+        return Tasks;
+    }
+}
+
+```
+## RowDeleted
+
+[RowDeleted](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_RowDeleted) event is triggered after a delete action is performed in the Gantt Chart. 
+
+```cshtml
+@using Syncfusion.Blazor.Gantt
+
+<SfGantt DataSource="@TaskCollection" Height="450px" Width="900px" EnableContextMenu ="true" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Cancel", "Update" })">
+    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate"
+                     Duration="Duration" Progress="Progress" ParentID="ParentId">
+    </GanttTaskFields>
+    <GanttEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true"></GanttEditSettings>
+    <GanttEvents RowDeleted="RowDeletedHandler" TValue="TaskData"></GanttEvents>
+</SfGantt>
+
+@code {
+
+    private List<TaskData> TaskCollection { get; set; }
+
+    protected override void OnInitialized()
+    {
+        this.TaskCollection = GetTaskCollection();
+    }
+
+    public void RowDeletedHandler(GanttRowDeletedEventArgs<TaskData> args)
+    {
+        // Here, you can customize your code.
+    }
+
+    public class TaskData
+    {
+        public int TaskId { get; set; }
+        public string TaskName { get; set; }
+        public DateTime StartDate { get; set; }
+        public DateTime EndDate { get; set; }
+        public string Duration { get; set; }
+        public int Progress { get; set; }
+        public int? ParentId { get; set; }
+    }
+
+    private static List<TaskData> GetTaskCollection()
+    {
+        List<TaskData> Tasks = new List<TaskData>()
+        {
+            new TaskData() { TaskId = 1, TaskName = "Project initiation", StartDate = new DateTime(2023, 01, 04), EndDate = new DateTime(2023, 01, 23), },
+            new TaskData() { TaskId = 2, TaskName = "Identify Site location", StartDate = new DateTime(2023, 01, 04), Duration = "0", Progress = 30, ParentId = 1, },
+            new TaskData() { TaskId = 3, TaskName = "Perform soil test", StartDate = new DateTime(2023, 01, 04), Duration = "4", Progress = 40, ParentId = 1, },
+            new TaskData() { TaskId = 4, TaskName = "Soil test approval", StartDate = new DateTime(2023, 01, 04), Duration = "0", Progress = 30, ParentId = 1, },
+            new TaskData() { TaskId = 5, TaskName = "Project estimation", StartDate = new DateTime(2023, 01, 04), EndDate = new DateTime(2023, 01, 23), },
+            new TaskData() { TaskId = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2023, 01, 06), Duration = "3", Progress = 30, ParentId = 5, },
+            new TaskData() { TaskId = 7, TaskName = "List materials", StartDate = new DateTime(2023, 01, 06), Duration = "3", Progress = 40, ParentId = 5, },
+            new TaskData() { TaskId = 8, TaskName = "Estimation approval", StartDate = new DateTime(2023, 01, 06), Duration = "0", Progress = 30, ParentId = 5, }
+        };
+        return Tasks;
+    }
+}
+
+```
+## Filtering 
+
+[Filtering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_Filtering) event is triggered before a filtering or clear filtering action is performed in the Gantt Chart.
+
+```cshtml
+@using Syncfusion.Blazor.Gantt
+@using Syncfusion.Blazor.Grids
+
+<SfGantt DataSource="@TaskCollection" Height="450px" Width="900px" AllowFiltering="true">
+    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate"
+                     Duration="Duration" Progress="Progress" ParentID="ParentId">
+    </GanttTaskFields>
+    <GanttEvents Filtering="FilteringHandler" TValue="TaskData"></GanttEvents>
+</SfGantt>
+
+@code{
+
+    private List<TaskData> TaskCollection { get; set; }
+
+    protected override void OnInitialized()
+    {
+        this.TaskCollection = GetTaskCollection();
+    }
+
+    public void FilteringHandler(FilteringEventArgs args)
+    {
+        // Here, you can customize your code.
+    } 
+
+    public class TaskData
+    {
+        public int TaskId { get; set; }
+        public string TaskName { get; set; }
+        public DateTime StartDate { get; set; }
+        public DateTime EndDate { get; set; }
+        public string Duration { get; set; }
+        public int Progress { get; set; }
+        public int? ParentId { get; set; }
+    }
+
+    private static List<TaskData> GetTaskCollection()
+    {
+        List<TaskData> Tasks = new List<TaskData>()
+        {
+            new TaskData() { TaskId = 1, TaskName = "Project initiation", StartDate = new DateTime(2023, 01, 04), EndDate = new DateTime(2023, 01, 23), },
+            new TaskData() { TaskId = 2, TaskName = "Identify Site location", StartDate = new DateTime(2023, 01, 04), Duration = "0", Progress = 30, ParentId = 1, },
+            new TaskData() { TaskId = 3, TaskName = "Perform soil test", StartDate = new DateTime(2023, 01, 04), Duration = "4", Progress = 40, ParentId = 1, },
+            new TaskData() { TaskId = 4, TaskName = "Soil test approval", StartDate = new DateTime(2023, 01, 04), Duration = "0", Progress = 30, ParentId = 1, },
+            new TaskData() { TaskId = 5, TaskName = "Project estimation", StartDate = new DateTime(2023, 01, 04), EndDate = new DateTime(2023, 01, 23), },
+            new TaskData() { TaskId = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2023, 01, 06), Duration = "3", Progress = 30, ParentId = 5, },
+            new TaskData() { TaskId = 7, TaskName = "List materials", StartDate = new DateTime(2023, 01, 06), Duration = "3", Progress = 40, ParentId = 5, },
+            new TaskData() { TaskId = 8, TaskName = "Estimation approval", StartDate = new DateTime(2023, 01, 06), Duration = "0", Progress = 30, ParentId = 5, }
+        };
+        return Tasks;
+    }
+}
+
+```
+## Filtered
+
+[Filtered](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_Filtered) event is triggered after a filtering or clear filtering action is performed in the Gantt Chart.
+
+```cshtml
+@using Syncfusion.Blazor.Gantt
+@using Syncfusion.Blazor.Grids
+
+<SfGantt DataSource="@TaskCollection" Height="450px" Width="900px" AllowFiltering="true">
+    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate"
+                     Duration="Duration" Progress="Progress" ParentID="ParentId">
+    </GanttTaskFields>
+    <GanttEvents Filtered="FilteredHandler" TValue="TaskData"></GanttEvents>
+</SfGantt>
+
+@code {
+
+    private List<TaskData> TaskCollection { get; set; }
+
+    protected override void OnInitialized()
+    {
+        this.TaskCollection = GetTaskCollection();
+    }
+
+    public void FilteredHandler(FilteredEventArgs args)
+    {
+        // Here, you can customize your code.
+    }
+
+    public class TaskData
+    {
+        public int TaskId { get; set; }
+        public string TaskName { get; set; }
+        public DateTime StartDate { get; set; }
+        public DateTime EndDate { get; set; }
+        public string Duration { get; set; }
+        public int Progress { get; set; }
+        public int? ParentId { get; set; }
+    }
+
+    private static List<TaskData> GetTaskCollection()
+    {
+        List<TaskData> Tasks = new List<TaskData>()
+        {
+            new TaskData() { TaskId = 1, TaskName = "Project initiation", StartDate = new DateTime(2023, 01, 04), EndDate = new DateTime(2023, 01, 23), },
+            new TaskData() { TaskId = 2, TaskName = "Identify Site location", StartDate = new DateTime(2023, 01, 04), Duration = "0", Progress = 30, ParentId = 1, },
+            new TaskData() { TaskId = 3, TaskName = "Perform soil test", StartDate = new DateTime(2023, 01, 04), Duration = "4", Progress = 40, ParentId = 1, },
+            new TaskData() { TaskId = 4, TaskName = "Soil test approval", StartDate = new DateTime(2023, 01, 04), Duration = "0", Progress = 30, ParentId = 1, },
+            new TaskData() { TaskId = 5, TaskName = "Project estimation", StartDate = new DateTime(2023, 01, 04), EndDate = new DateTime(2023, 01, 23), },
+            new TaskData() { TaskId = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2023, 01, 06), Duration = "3", Progress = 30, ParentId = 5, },
+            new TaskData() { TaskId = 7, TaskName = "List materials", StartDate = new DateTime(2023, 01, 06), Duration = "3", Progress = 40, ParentId = 5, },
+            new TaskData() { TaskId = 8, TaskName = "Estimation approval", StartDate = new DateTime(2023, 01, 06), Duration = "0", Progress = 30, ParentId = 5, }
+        };
+        return Tasks;
+    }
+}
+```
 
 ## QueryChartRowInfo
 
@@ -2548,6 +3240,563 @@ The events should be provided to the Gantt Chart using the GanttChartEvents comp
             new TaskData() { TaskId = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2022, 01, 06), Duration = "3", Progress = 30, ParentId = 5, },
             new TaskData() { TaskId = 7, TaskName = "List materials", StartDate = new DateTime(2022, 01, 06), Duration = "3", Progress = 40, ParentId = 5, },
             new TaskData() { TaskId = 8, TaskName = "Estimation approval", StartDate = new DateTime(2022, 01, 06), Duration = "0", Progress = 30, ParentId = 5, }
+        };
+        return Tasks;
+    }
+}
+```
+## FilterDialogOpening
+[FilterDialogOpening](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_FilterDialogOpening) event triggers before the filter dialog is opened in the Gantt chart. 
+
+```cshtml
+@using Syncfusion.Blazor.Gantt
+@using Syncfusion.Blazor.Grids
+ 
+<SfGantt DataSource="@TaskCollection" Height="450px" Width="900px" AllowFiltering ="true">
+    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate"
+                     Duration="Duration" Progress="Progress" ParentID="ParentId">
+    </GanttTaskFields>
+    <GanttEvents FilterDialogOpening="FilterDialogOpeningHandler" TValue="TaskData"></GanttEvents>
+</SfGantt>
+ 
+@code{
+ 
+    private List<TaskData> TaskCollection { get; set; }
+ 
+    protected override void OnInitialized()
+    {
+        this.TaskCollection = GetTaskCollection();
+    }
+ 
+    public void FilterDialogOpeningHandler(FilterDialogOpeningEventArgs args)  
+    {  
+       //Here, you can customize your code.
+    }  
+ 
+    public class TaskData
+    {
+        public int TaskId { get; set; }
+        public string TaskName { get; set; }
+        public DateTime StartDate { get; set; }
+        public DateTime EndDate { get; set; }
+        public string Duration { get; set; }
+        public int Progress { get; set; }
+        public int? ParentId { get; set; }
+    }
+ 
+    private static List<TaskData> GetTaskCollection()
+    {
+        List<TaskData> Tasks = new List<TaskData>()
+        {
+            new TaskData() { TaskId = 1, TaskName = "Project initiation", StartDate = new DateTime( 2023, 01, 04), EndDate = new DateTime( 2023, 01, 23), },
+            new TaskData() { TaskId = 2, TaskName = "Identify Site location", StartDate = new DateTime( 2023, 01, 04), Duration = "0", Progress = 30, ParentId = 1, },
+            new TaskData() { TaskId = 3, TaskName = "Perform soil test", StartDate = new DateTime( 2023, 01, 04), Duration = "4", Progress = 40, ParentId = 1, },
+            new TaskData() { TaskId = 4, TaskName = "Soil test approval", StartDate = new DateTime( 2023, 01, 04), Duration = "0", Progress = 30, ParentId = 1, },
+            new TaskData() { TaskId = 5, TaskName = "Project estimation", StartDate = new DateTime( 2023, 01, 04), EndDate = new DateTime( 2023, 01, 23), },
+            new TaskData() { TaskId = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime( 2023, 01, 06), Duration = "3", Progress = 30, ParentId = 5, },
+            new TaskData() { TaskId = 7, TaskName = "List materials", StartDate = new DateTime( 2023, 01, 06), Duration = "3", Progress = 40, ParentId = 5, },
+            new TaskData() { TaskId = 8, TaskName = "Estimation approval", StartDate = new DateTime( 2023, 01, 06), Duration = "0", Progress = 30, ParentId = 5, }
+        };
+        return Tasks;
+    }
+}
+```
+## FilterDialogOpened
+[FilterDialogOpened](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_FilterDialogOpened) event is triggered after the filter dialog is opened in the Gantt chart. 
+
+```cshtml
+@using Syncfusion.Blazor.Gantt
+@using Syncfusion.Blazor.Grids
+ 
+<SfGantt DataSource="@TaskCollection" Height="450px" Width="900px" AllowFiltering ="true">
+    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate"
+                     Duration="Duration" Progress="Progress" ParentID="ParentId">
+    </GanttTaskFields>
+    <GanttEvents FilterDialogOpened="FilterDialogOpenedHandler" TValue="TaskData"></GanttEvents>
+</SfGantt>
+ 
+@code{
+
+    private List<TaskData> TaskCollection { get; set; }
+ 
+    protected override void OnInitialized()
+    {
+        this.TaskCollection = GetTaskCollection();
+    }
+ 
+    public void FilterDialogOpenedHandler(FilterDialogOpenedEventArgs args)  
+    {  
+       //Here, you can customize your code.
+    }  
+ 
+    public class TaskData
+    {
+        public int TaskId { get; set; }
+        public string TaskName { get; set; }
+        public DateTime StartDate { get; set; }
+        public DateTime EndDate { get; set; }
+        public string Duration { get; set; }
+        public int Progress { get; set; }
+        public int? ParentId { get; set; }
+    }
+ 
+    private static List<TaskData> GetTaskCollection()
+    {
+        List<TaskData> Tasks = new List<TaskData>()
+        {
+            new TaskData() { TaskId = 1, TaskName = "Project initiation", StartDate = new DateTime( 2023, 01, 04), EndDate = new DateTime( 2023, 01, 23), },
+            new TaskData() { TaskId = 2, TaskName = "Identify Site location", StartDate = new DateTime( 2023, 01, 04), Duration = "0", Progress = 30, ParentId = 1, },
+            new TaskData() { TaskId = 3, TaskName = "Perform soil test", StartDate = new DateTime( 2023, 01, 04), Duration = "4", Progress = 40, ParentId = 1, },
+            new TaskData() { TaskId = 4, TaskName = "Soil test approval", StartDate = new DateTime( 2023, 01, 04), Duration = "0", Progress = 30, ParentId = 1, },
+            new TaskData() { TaskId = 5, TaskName = "Project estimation", StartDate = new DateTime( 2023, 01, 04), EndDate = new DateTime( 2023, 01, 23), },
+            new TaskData() { TaskId = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime( 2023, 01, 06), Duration = "3", Progress = 30, ParentId = 5, },
+            new TaskData() { TaskId = 7, TaskName = "List materials", StartDate = new DateTime( 2023, 01, 06), Duration = "3", Progress = 40, ParentId = 5, },
+            new TaskData() { TaskId = 8, TaskName = "Estimation approval", StartDate = new DateTime( 2023, 01, 06), Duration = "0", Progress = 30, ParentId = 5, }
+        };
+        return Tasks;
+    }
+}
+```
+## ColumnReordering
+[ColumnReordering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_ColumnReordering) event is triggered before the columns are reordered in the Gantt chart.
+
+```cshtml
+@using Syncfusion.Blazor.Gantt
+@using Syncfusion.Blazor.Grids
+
+<SfGantt DataSource="@TaskCollection" Height="450px" Width="900px" AllowReordering ="true">
+    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate"
+                     Duration="Duration" Progress="Progress" ParentID="ParentId">
+    </GanttTaskFields>
+    <GanttEvents ColumnReordering="ColumnReorderingHandler" TValue="TaskData"></GanttEvents>
+</SfGantt>
+ 
+@code{
+
+    private List<TaskData> TaskCollection { get; set; }
+ 
+    protected override void OnInitialized()
+    {
+        this.TaskCollection = GetTaskCollection();
+    }
+ 
+    public void ColumnReorderingHandler(ColumnReorderingEventArgs args)  
+    {  
+       //Here, you can customize your code.
+    }  
+ 
+    public class TaskData
+    {
+        public int TaskId { get; set; }
+        public string TaskName { get; set; }
+        public DateTime StartDate { get; set; }
+        public DateTime EndDate { get; set; }
+        public string Duration { get; set; }
+        public int Progress { get; set; }
+        public int? ParentId { get; set; }
+    }
+ 
+    private static List<TaskData> GetTaskCollection()
+    {
+        List<TaskData> Tasks = new List<TaskData>()
+        {
+            new TaskData() { TaskId = 1, TaskName = "Project initiation", StartDate = new DateTime( 2023, 01, 04), EndDate = new DateTime( 2023, 01, 23), },
+            new TaskData() { TaskId = 2, TaskName = "Identify Site location", StartDate = new DateTime( 2023, 01, 04), Duration = "0", Progress = 30, ParentId = 1, },
+            new TaskData() { TaskId = 3, TaskName = "Perform soil test", StartDate = new DateTime( 2023, 01, 04), Duration = "4", Progress = 40, ParentId = 1, },
+            new TaskData() { TaskId = 4, TaskName = "Soil test approval", StartDate = new DateTime( 2023, 01, 04), Duration = "0", Progress = 30, ParentId = 1, },
+            new TaskData() { TaskId = 5, TaskName = "Project estimation", StartDate = new DateTime( 2023, 01, 04), EndDate = new DateTime( 2023, 01, 23), },
+            new TaskData() { TaskId = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime( 2023, 01, 06), Duration = "3", Progress = 30, ParentId = 5, },
+            new TaskData() { TaskId = 7, TaskName = "List materials", StartDate = new DateTime( 2023, 01, 06), Duration = "3", Progress = 40, ParentId = 5, },
+            new TaskData() { TaskId = 8, TaskName = "Estimation approval", StartDate = new DateTime( 2023, 01, 06), Duration = "0", Progress = 30, ParentId = 5, }
+        };
+        return Tasks;
+    }
+}
+```
+
+## ColumnReordered
+[ColumnReordered](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_ColumnReordered) event is triggered after the columns are reordered in the Gantt chart.
+
+```cshtml
+@using Syncfusion.Blazor.Gantt
+@using Syncfusion.Blazor.Grids
+ 
+<SfGantt DataSource="@TaskCollection" Height="450px" Width="900px" AllowReordering ="true">
+    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate"
+                     Duration="Duration" Progress="Progress" ParentID="ParentId">
+    </GanttTaskFields>
+    <GanttEvents ColumnReordered="ColumnReorderedHandler" TValue="TaskData"></GanttEvents>
+</SfGantt>
+ 
+@code{
+
+    private List<TaskData> TaskCollection { get; set; }
+ 
+    protected override void OnInitialized()
+    {
+        this.TaskCollection = GetTaskCollection();
+    }
+ 
+    public void ColumnReorderedHandler(ColumnReorderedEventArgs args)  
+    {  
+       //Here, you can customize your code.
+    }  
+ 
+    public class TaskData
+    {
+        public int TaskId { get; set; }
+        public string TaskName { get; set; }
+        public DateTime StartDate { get; set; }
+        public DateTime EndDate { get; set; }
+        public string Duration { get; set; }
+        public int Progress { get; set; }
+        public int? ParentId { get; set; }
+    }
+ 
+    private static List<TaskData> GetTaskCollection()
+    {
+        List<TaskData> Tasks = new List<TaskData>()
+        {
+            new TaskData() { TaskId = 1, TaskName = "Project initiation", StartDate = new DateTime( 2023, 01, 04), EndDate = new DateTime( 2023, 01, 23), },
+            new TaskData() { TaskId = 2, TaskName = "Identify Site location", StartDate = new DateTime( 2023, 01, 04), Duration = "0", Progress = 30, ParentId = 1, },
+            new TaskData() { TaskId = 3, TaskName = "Perform soil test", StartDate = new DateTime( 2023, 01, 04), Duration = "4", Progress = 40, ParentId = 1, },
+            new TaskData() { TaskId = 4, TaskName = "Soil test approval", StartDate = new DateTime( 2023, 01, 04), Duration = "0", Progress = 30, ParentId = 1, },
+            new TaskData() { TaskId = 5, TaskName = "Project estimation", StartDate = new DateTime( 2023, 01, 04), EndDate = new DateTime( 2023, 01, 23), },
+            new TaskData() { TaskId = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime( 2023, 01, 06), Duration = "3", Progress = 30, ParentId = 5, },
+            new TaskData() { TaskId = 7, TaskName = "List materials", StartDate = new DateTime( 2023, 01, 06), Duration = "3", Progress = 40, ParentId = 5, },
+            new TaskData() { TaskId = 8, TaskName = "Estimation approval", StartDate = new DateTime( 2023, 01, 06), Duration = "0", Progress = 30, ParentId = 5, }
+        };
+        return Tasks;
+    }
+}
+```
+## GanttDialogOpening
+[GanttDialogOpening](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_GanttDialogOpening) event is triggered before the dialog opens in the Gantt chart.
+
+```cshtml
+@using Syncfusion.Blazor.Gantt
+ 
+<SfGantt DataSource="@TaskCollection" Height="450px" Width="900px" Toolbar="@(new List<string>() { "Add", "Cancel", "Edit", })" EnableContextMenu="true" ContextMenuItems="@(new List<string>() {"TaskInformation"})">
+    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate"
+                     Duration="Duration" Progress="Progress" ParentID="ParentId">
+    </GanttTaskFields>
+    <GanttEditSettings AllowEditing="true" AllowAdding="true" Mode="Syncfusion.Blazor.Gantt.EditMode.Dialog"></GanttEditSettings>
+    <GanttEvents GanttDialogOpening="GanttDialogOpeningHandler" TValue="TaskData"></GanttEvents>
+</SfGantt>
+ 
+@code{
+    
+    private List<TaskData> TaskCollection { get; set; }
+ 
+    protected override void OnInitialized()
+    {
+        this.TaskCollection = GetTaskCollection();
+    }
+
+    public void GanttDialogOpeningHandler(GanttDialogOpenEventArgs<TaskData> args)
+    {
+        //Here, you can customize your code.
+    }
+
+    public class TaskData
+    {
+        public int TaskId { get; set; }
+        public string TaskName { get; set; }
+        public DateTime StartDate { get; set; }
+        public DateTime EndDate { get; set; }
+        public string Duration { get; set; }
+        public int Progress { get; set; }
+        public int? ParentId { get; set; }
+    }
+ 
+    private static List<TaskData> GetTaskCollection()
+    {
+        List<TaskData> Tasks = new List<TaskData>()
+        {
+            new TaskData() { TaskId = 1, TaskName = "Project initiation", StartDate = new DateTime( 2023, 01, 04), EndDate = new DateTime( 2023, 01, 23), },
+            new TaskData() { TaskId = 2, TaskName = "Identify Site location", StartDate = new DateTime( 2023, 01, 04), Duration = "0", Progress = 30, ParentId = 1, },
+            new TaskData() { TaskId = 3, TaskName = "Perform soil test", StartDate = new DateTime( 2023, 01, 04), Duration = "4", Progress = 40, ParentId = 1, },
+            new TaskData() { TaskId = 4, TaskName = "Soil test approval", StartDate = new DateTime( 2023, 01, 04), Duration = "0", Progress = 30, ParentId = 1, },
+            new TaskData() { TaskId = 5, TaskName = "Project estimation", StartDate = new DateTime( 2023, 01, 04), EndDate = new DateTime( 2023, 01, 23), },
+            new TaskData() { TaskId = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime( 2023, 01, 06), Duration = "3", Progress = 30, ParentId = 5, },
+            new TaskData() { TaskId = 7, TaskName = "List materials", StartDate = new DateTime( 2023, 01, 06), Duration = "3", Progress = 40, ParentId = 5, },
+            new TaskData() { TaskId = 8, TaskName = "Estimation approval", StartDate = new DateTime( 2023, 01, 06), Duration = "0", Progress = 30, ParentId = 5, }
+        };
+        return Tasks;
+    }
+}
+```
+## GanttDialogOpened
+[GanttDialogOpened](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_GanttDialogOpened) event is triggered after the dialog has opened in the Gantt chart.
+
+```cshtml
+@using Syncfusion.Blazor.Gantt
+ 
+<SfGantt DataSource="@TaskCollection" Height="450px" Width="900px" Toolbar="@(new List<string>() { "Add", "Cancel", "Edit", })" EnableContextMenu="true" ContextMenuItems="@(new List<string>() {"TaskInformation"})">
+    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate"
+                     Duration="Duration" Progress="Progress" ParentID="ParentId">
+    </GanttTaskFields>
+    <GanttEditSettings AllowEditing="true" AllowAdding="true" Mode="Syncfusion.Blazor.Gantt.EditMode.Dialog"></GanttEditSettings>
+    <GanttEvents GanttDialogOpened="GanttDialogOpenedHandler" TValue="TaskData"></GanttEvents>
+</SfGantt>
+ 
+@code{
+    
+    private List<TaskData> TaskCollection { get; set; }
+ 
+    protected override void OnInitialized()
+    {
+        this.TaskCollection = GetTaskCollection();
+    }
+
+    public void GanttDialogOpenedHandler(GanttDialogOpenedEventArgs<TaskData> args)
+    {
+        //Here, you can customize your code.
+    }
+
+    public class TaskData
+    {
+        public int TaskId { get; set; }
+        public string TaskName { get; set; }
+        public DateTime StartDate { get; set; }
+        public DateTime EndDate { get; set; }
+        public string Duration { get; set; }
+        public int Progress { get; set; }
+        public int? ParentId { get; set; }
+    }
+ 
+    private static List<TaskData> GetTaskCollection()
+    {
+        List<TaskData> Tasks = new List<TaskData>()
+        {
+            new TaskData() { TaskId = 1, TaskName = "Project initiation", StartDate = new DateTime( 2023, 01, 04), EndDate = new DateTime( 2023, 01, 23), },
+            new TaskData() { TaskId = 2, TaskName = "Identify Site location", StartDate = new DateTime( 2023, 01, 04), Duration = "0", Progress = 30, ParentId = 1, },
+            new TaskData() { TaskId = 3, TaskName = "Perform soil test", StartDate = new DateTime( 2023, 01, 04), Duration = "4", Progress = 40, ParentId = 1, },
+            new TaskData() { TaskId = 4, TaskName = "Soil test approval", StartDate = new DateTime( 2023, 01, 04), Duration = "0", Progress = 30, ParentId = 1, },
+            new TaskData() { TaskId = 5, TaskName = "Project estimation", StartDate = new DateTime( 2023, 01, 04), EndDate = new DateTime( 2023, 01, 23), },
+            new TaskData() { TaskId = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime( 2023, 01, 06), Duration = "3", Progress = 30, ParentId = 5, },
+            new TaskData() { TaskId = 7, TaskName = "List materials", StartDate = new DateTime( 2023, 01, 06), Duration = "3", Progress = 40, ParentId = 5, },
+            new TaskData() { TaskId = 8, TaskName = "Estimation approval", StartDate = new DateTime( 2023, 01, 06), Duration = "0", Progress = 30, ParentId = 5, }
+        };
+        return Tasks;
+    }
+}
+```
+## Zooming
+[Zooming](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_Zooming) event is triggered before the zoom action is performed in the Gantt chart.
+
+```cshtml
+@using Syncfusion.Blazor.Gantt
+
+<SfGantt DataSource="@TaskCollection" Height="450px" Width="900px" Toolbar="@(new List<string>() {"ZoomIn","ZoomOut","ZoomToFit"})">
+    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate"
+                     Duration="Duration" Progress="Progress" ParentID="ParentId">
+    </GanttTaskFields>
+    <GanttEvents Zooming="ZoomBeginHandler" TValue="TaskData"></GanttEvents>
+</SfGantt>
+ 
+@code{
+
+    private List<TaskData> TaskCollection { get; set; }
+ 
+    protected override void OnInitialized()
+    {
+        this.TaskCollection = GetTaskCollection();
+    }
+ 
+    public void ZoomBeginHandler(ZoomEventArgs args) 
+    {
+        //Here, you can customize your code.
+    }
+ 
+    public class TaskData
+    {
+        public int TaskId { get; set; }
+        public string TaskName { get; set; }
+        public DateTime StartDate { get; set; }
+        public DateTime EndDate { get; set; }
+        public string Duration { get; set; }
+        public int Progress { get; set; }
+        public int? ParentId { get; set; }
+    }
+ 
+    private static List<TaskData> GetTaskCollection()
+    {
+        List<TaskData> Tasks = new List<TaskData>()
+        {
+            new TaskData() { TaskId = 1, TaskName = "Project initiation", StartDate = new DateTime( 2023, 01, 04), EndDate = new DateTime( 2023, 01, 23), },
+            new TaskData() { TaskId = 2, TaskName = "Identify Site location", StartDate = new DateTime( 2023, 01, 04), Duration = "0", Progress = 30, ParentId = 1, },
+            new TaskData() { TaskId = 3, TaskName = "Perform soil test", StartDate = new DateTime( 2023, 01, 04), Duration = "4", Progress = 40, ParentId = 1, },
+            new TaskData() { TaskId = 4, TaskName = "Soil test approval", StartDate = new DateTime( 2023, 01, 04), Duration = "0", Progress = 30, ParentId = 1, },
+            new TaskData() { TaskId = 5, TaskName = "Project estimation", StartDate = new DateTime( 2023, 01, 04), EndDate = new DateTime( 2023, 01, 23), },
+            new TaskData() { TaskId = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime( 2023, 01, 06), Duration = "3", Progress = 30, ParentId = 5, },
+            new TaskData() { TaskId = 7, TaskName = "List materials", StartDate = new DateTime( 2023, 01, 06), Duration = "3", Progress = 40, ParentId = 5, },
+            new TaskData() { TaskId = 8, TaskName = "Estimation approval", StartDate = new DateTime( 2023, 01, 06), Duration = "0", Progress = 30, ParentId = 5, }
+        };
+        return Tasks;
+    }
+}
+```
+## Zoomed
+[Zoomed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_Zoomed) event is triggered after the zoom action has been performed in the Gantt chart.
+
+```cshtml
+@using Syncfusion.Blazor.Gantt
+ 
+<SfGantt DataSource="@TaskCollection" Height="450px" Width="900px" Toolbar="@(new List<string>() {"ZoomIn","ZoomOut","ZoomToFit"})">
+    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate"
+                     Duration="Duration" Progress="Progress" ParentID="ParentId">
+    </GanttTaskFields>
+    <GanttEvents Zoomed="ZoomCompleteHandler" TValue="TaskData"></GanttEvents>
+</SfGantt>
+ 
+@code{
+
+    private List<TaskData> TaskCollection { get; set; }
+ 
+    protected override void OnInitialized()
+    {
+        this.TaskCollection = GetTaskCollection();
+    }
+ 
+    public void ZoomCompleteHandler(ZoomedEventArgs args) 
+    {
+        //Here, you can customize your code.
+    }
+ 
+    public class TaskData
+    {
+        public int TaskId { get; set; }
+        public string TaskName { get; set; }
+        public DateTime StartDate { get; set; }
+        public DateTime EndDate { get; set; }
+        public string Duration { get; set; }
+        public int Progress { get; set; }
+        public int? ParentId { get; set; }
+    }
+ 
+    private static List<TaskData> GetTaskCollection()
+    {
+        List<TaskData> Tasks = new List<TaskData>()
+        {
+            new TaskData() { TaskId = 1, TaskName = "Project initiation", StartDate = new DateTime( 2023, 01, 04), EndDate = new DateTime( 2023, 01, 23), },
+            new TaskData() { TaskId = 2, TaskName = "Identify Site location", StartDate = new DateTime( 2023, 01, 04), Duration = "0", Progress = 30, ParentId = 1, },
+            new TaskData() { TaskId = 3, TaskName = "Perform soil test", StartDate = new DateTime( 2023, 01, 04), Duration = "4", Progress = 40, ParentId = 1, },
+            new TaskData() { TaskId = 4, TaskName = "Soil test approval", StartDate = new DateTime( 2023, 01, 04), Duration = "0", Progress = 30, ParentId = 1, },
+            new TaskData() { TaskId = 5, TaskName = "Project estimation", StartDate = new DateTime( 2023, 01, 04), EndDate = new DateTime( 2023, 01, 23), },
+            new TaskData() { TaskId = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime( 2023, 01, 06), Duration = "3", Progress = 30, ParentId = 5, },
+            new TaskData() { TaskId = 7, TaskName = "List materials", StartDate = new DateTime( 2023, 01, 06), Duration = "3", Progress = 40, ParentId = 5, },
+            new TaskData() { TaskId = 8, TaskName = "Estimation approval", StartDate = new DateTime( 2023, 01, 06), Duration = "0", Progress = 30, ParentId = 5, }
+        };
+        return Tasks;
+    }
+}
+```
+## TaskConnectorChanging
+[TaskConnectorChanging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_TaskConnectorChanging) event is triggered when initiating the connection of a taskbar to another taskbar in the Gantt chart.
+
+```cshtml
+@using Syncfusion.Blazor.Gantt
+ 
+<SfGantt DataSource="@TaskCollection" Height="450px" Width="900px" EnablePredecessorValidation="true">
+    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate"
+                     Duration="Duration" Progress="Progress" Dependency="Predecessor" ParentID="ParentId">
+    </GanttTaskFields>
+    <GanttEditSettings AllowTaskbarEditing="true"></GanttEditSettings>
+    <GanttEvents TaskConnectorChanging="ConnectorLineDrawHandler" TValue="TaskData"></GanttEvents>
+</SfGantt>
+ 
+@code{
+
+    private List<TaskData> TaskCollection { get; set; }
+ 
+    protected override void OnInitialized()
+    {
+        this.TaskCollection = GetTaskCollection();
+    }
+ 
+    public void ConnectorLineDrawHandler(TaskConnectorChangeEventArgs<TaskData> args)
+    {
+        //Here, you can customize your code.
+    }
+ 
+    public class TaskData
+    {
+        public int TaskId { get; set; }
+        public string TaskName { get; set; }
+        public DateTime StartDate { get; set; }
+        public string Duration { get; set; }
+        public string Predecessor { get; set; }
+        public int Progress { get; set; }
+        public int? ParentId { get; set; }
+    }
+
+    public static List<TaskData> GetTaskCollection()
+    {
+        List<TaskData> Tasks = new List<TaskData>() {
+            new TaskData() { TaskId = 1, TaskName = "Project initiation", StartDate = new DateTime( 2023, 04, 05)},
+            new TaskData() { TaskId = 2, TaskName = "Identify Site location", StartDate = new DateTime( 2023, 04, 05), Progress = 30, ParentId = 1},
+            new TaskData() { TaskId = 3, TaskName = "Perform soil test", StartDate = new DateTime( 2023, 04, 05), Duration = "3", Progress = 40, Predecessor = "2fs", ParentId = 1 },
+            new TaskData() { TaskId = 4, TaskName = "Soil test approval", StartDate = new DateTime( 2023, 04, 05), Duration = "1", Progress = 30, ParentId = 1 },
+            new TaskData() { TaskId = 5, TaskName = "Project estimation", StartDate = new DateTime( 2023, 04, 06) },
+            new TaskData() { TaskId = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime( 2023, 04, 06), Duration = "3", Progress = 30, ParentId = 5 },
+            new TaskData() { TaskId = 7, TaskName = "List materials", StartDate = new DateTime( 2023, 04, 06), Duration = "3", Progress = 40, Predecessor = "6", ParentId = 5 },
+            new TaskData() { TaskId = 8, TaskName = "Estimation approval", StartDate = new DateTime( 2023, 04, 06), Duration = "2", Progress = 30, ParentId = 5 }
+        };
+        return Tasks;
+    }
+}
+```
+## TaskConnectorChanged
+[TaskConnectorChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_TaskConnectorChanged) event is triggered when a dependency connector line is drawn between two taskbars in the Gantt chart.
+
+```cshtml
+@using Syncfusion.Blazor.Gantt
+
+<SfGantt DataSource="@TaskCollection" Height="450px" Width="900px" EnablePredecessorValidation="true">
+    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate"
+                     Duration="Duration" Progress="Progress" Dependency="Predecessor" ParentID="ParentId">
+    </GanttTaskFields>
+    <GanttEditSettings AllowTaskbarEditing="true"></GanttEditSettings>
+    <GanttEvents TaskConnectorChanged="ConnectorLineDrawCompletedHandler" TValue="TaskData"></GanttEvents>
+</SfGantt>
+ 
+@code{
+
+    private List<TaskData> TaskCollection { get; set; }
+ 
+    protected override void OnInitialized()
+    {
+        this.TaskCollection = GetTaskCollection();
+    }
+ 
+    public void ConnectorLineDrawCompletedHandler(TaskConnectorChangedEventArgs<TaskData> args)
+    {
+        //Here, you can customize your code.
+    }
+ 
+    public class TaskData
+    {
+        public int TaskId { get; set; }
+        public string TaskName { get; set; }
+        public DateTime StartDate { get; set; }
+        public string Duration { get; set; }
+        public string Predecessor { get; set; }
+        public int Progress { get; set; }
+        public int? ParentId { get; set; }
+    }
+
+    public static List<TaskData> GetTaskCollection()
+    {
+        List<TaskData> Tasks = new List<TaskData>() {
+            new TaskData() { TaskId = 1, TaskName = "Project initiation", StartDate = new DateTime( 2023, 04, 05)},
+            new TaskData() { TaskId = 2, TaskName = "Identify Site location", StartDate = new DateTime( 2023, 04, 05), Progress = 30, ParentId = 1},
+            new TaskData() { TaskId = 3, TaskName = "Perform soil test", StartDate = new DateTime( 2023, 04, 05), Duration = "3", Progress = 40, Predecessor = "2fs", ParentId = 1 },
+            new TaskData() { TaskId = 4, TaskName = "Soil test approval", StartDate = new DateTime( 2023, 04, 05), Duration = "1", Progress = 30, ParentId = 1 },
+            new TaskData() { TaskId = 5, TaskName = "Project estimation", StartDate = new DateTime( 2023, 04, 06) },
+            new TaskData() { TaskId = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime( 2023, 04, 06), Duration = "3", Progress = 30, ParentId = 5 },
+            new TaskData() { TaskId = 7, TaskName = "List materials", StartDate = new DateTime( 2023, 04, 06), Duration = "3", Progress = 40, Predecessor = "6", ParentId = 5 },
+            new TaskData() { TaskId = 8, TaskName = "Estimation approval", StartDate = new DateTime( 2023, 04, 06), Duration = "2", Progress = 30, ParentId = 5 }
         };
         return Tasks;
     }

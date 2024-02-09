@@ -86,4 +86,4 @@ You can programmatically refrsh chart using [Refresh](https://help.syncfusion.co
 }
 ```
 
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VXhgZwBxAWvTRNvI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rZBAWrMgzIuHCzXH?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}

@@ -131,7 +131,7 @@ The Grouping Bar has an option to filter members of particular fields at runtime
 
 ## Show or hide specific filter icon
 
-To disable the filter icon for a specific field, set the property [ShowFilterIcon](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewRow.html#Syncfusion_Blazor_PivotView_PivotViewRow_ShowFilterIcon) to **false** to the corresponding field in [PivotViewDataSourceSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.DataSourceSettingsModel-1.html).
+To disable the filter icon for a specific field, set the property [ShowFilterIcon](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewRow.html#Syncfusion_Blazor_PivotView_PivotViewRow_ShowFilterIcon) to **false** to the corresponding field in [PivotViewDataSourceSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html).
 
 
 ```cshtml
@@ -212,7 +212,7 @@ The Grouping Bar has an option to order members of a particular fields either in
 
 ## Show or hide specific sort icon
 
-To disable the sort icon for a specific button, set the property [ShowSortIcon](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewRow.html#Syncfusion_Blazor_PivotView_PivotViewRow_ShowSortIcon) to **false** to the corresponding field in the [PivotViewDataSourceSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.DataSourceSettingsModel-1.html).
+To disable the sort icon for a specific button, set the property [ShowSortIcon](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewRow.html#Syncfusion_Blazor_PivotView_PivotViewRow_ShowSortIcon) to **false** to the corresponding field in the [PivotViewDataSourceSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html).
 
 ```cshtml
 @using Syncfusion.Blazor.PivotView
@@ -292,7 +292,7 @@ The Grouping Bar has an option to remove any field at runtime. To remove a field
 
 ## Show or hide specific remove icon
 
-To disable the remove icon for a specific button, set the property [ShowRemoveIcon](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewRow.html#Syncfusion_Blazor_PivotView_PivotViewRow_ShowRemoveIcon) to **false** to the corresponding field in the [PivotViewDataSourceSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.DataSourceSettingsModel-1.html).
+To disable the remove icon for a specific button, set the property [ShowRemoveIcon](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewRow.html#Syncfusion_Blazor_PivotView_PivotViewRow_ShowRemoveIcon) to **false** to the corresponding field in the [PivotViewDataSourceSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html).
 
 
 ```cshtml
@@ -372,7 +372,7 @@ The Grouping Bar has an option to drag-and-drop fields between row, column, valu
 
 ## Disable specific field from dragging
 
-To disable dragging for a specific button, set the property [AllowDragAndDrop](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewRow.html#Syncfusion_Blazor_PivotView_PivotViewRow_AllowDragAndDrop) to **false** to the corresponding  field in the  [PivotViewDataSourceSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.DataSourceSettingsModel-1.html).
+To disable dragging for a specific button, set the property [AllowDragAndDrop](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewRow.html#Syncfusion_Blazor_PivotView_PivotViewRow_AllowDragAndDrop) to **false** to the corresponding  field in the  [PivotViewDataSourceSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html).
 
 
 ```cshtml
@@ -455,7 +455,7 @@ End user can perform calculations over a group of values using the aggregation o
 
 ## Show or hide specific dropdown icon
 
-To disable the dropdown icon for a specific button, set the property [ShowValueTypeIcon](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewRow.html#Syncfusion_Blazor_PivotView_PivotViewRow_ShowValueTypeIcon) to **false** to the corresponding field in the [PivotViewDataSourceSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.DataSourceSettingsModel-1.html).
+To disable the dropdown icon for a specific button, set the property [ShowValueTypeIcon](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewRow.html#Syncfusion_Blazor_PivotView_PivotViewRow_ShowValueTypeIcon) to **false** to the corresponding field in the [PivotViewDataSourceSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html).
 
 ```cshtml
 @using Syncfusion.Blazor.PivotView
@@ -492,7 +492,7 @@ To disable the dropdown icon for a specific button, set the property [ShowValueT
 
 ![Hiding Specific DropDown Icon in Blazor PivotTable](images/blazor-pivottable-hide-specific-dropdown-icon.png)
 
- N>The property [ShowFilterIcon](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewRow.html#Syncfusion_Blazor_PivotView_PivotViewRow_ShowFilterIcon), [ShowSortIcon](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewRow.html#Syncfusion_Blazor_PivotView_PivotViewRow_ShowSortIcon), [ShowValueTypeIcon](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewRow.html#Syncfusion_Blazor_PivotView_PivotViewRow_ShowValueTypeIcon) and [AllowDragAndDrop](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewRow.html#Syncfusion_Blazor_PivotView_PivotViewRow_AllowDragAndDrop) in fields of [PivotViewDataSourceSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.DataSourceSettingsModel-1.html) are applicable for both grouping bar and field list.
+ N>The property [ShowFilterIcon](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewRow.html#Syncfusion_Blazor_PivotView_PivotViewRow_ShowFilterIcon), [ShowSortIcon](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewRow.html#Syncfusion_Blazor_PivotView_PivotViewRow_ShowSortIcon), [ShowValueTypeIcon](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewRow.html#Syncfusion_Blazor_PivotView_PivotViewRow_ShowValueTypeIcon) and [AllowDragAndDrop](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewRow.html#Syncfusion_Blazor_PivotView_PivotViewRow_AllowDragAndDrop) in fields of [PivotViewDataSourceSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html) are applicable for both grouping bar and field list.
 
 ## Events
 

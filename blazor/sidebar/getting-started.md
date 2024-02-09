@@ -147,7 +147,7 @@ Add the Syncfusion Blazor Sidebar component in the **~/Pages/Index.razor** file.
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion Blazor Sidebar component in your default web browser.
 
-![Blazor Sidebar Component](./images/blazor-sidebar.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rNhJjsKXKHvqsDGC?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Sidebar Component](./images/blazor-sidebar.png)" %}
 
 ## Enable backdrop
 
@@ -207,7 +207,7 @@ Here, the DOM elements will not get changed. It only closes the main content by 
 
 N> Class can be added to the sidebar element using `HtmlAttributes` property. In that class, you have to add new styles or override existing styles of sidebar element.
 
-![Enabling Backdrop in Blazor Sidebar](./images/blazor-sidebar-enable-backdrop.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BjhTjsAXUHEgsGGw?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Enabling Backdrop in Blazor Sidebar](./images/blazor-sidebar-enable-backdrop.png)" %}
 
 ## Enable Animation
 
@@ -264,7 +264,7 @@ Animation transitions can be set while expanding or collapsing the Sidebar using
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor Sidebar with Animation](./images/blazor-sidebar-animation.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZBJNCKjKGsidAEC?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Sidebar with Animation](./images/blazor-sidebar-animation.png)" %}
 
 ## Navigation with Blazor Sidebar
 
@@ -437,7 +437,7 @@ In the following example, the Sidebar is rendered with Accordion component in it
 {% endhighlight %}
 {% endtabs %}
 
-![Navigation with Blazor Sidebar](./images/blazor-sidebar-navigation.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rNBzXCKZgcBckYGf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Navigation with Blazor Sidebar](./images/blazor-sidebar-navigation.png)" %}
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/Sidebar).
 

@@ -26,6 +26,21 @@ If your Razor Class Library (RCL) project uses Syncfusion Blazor packages from [
 
 Refer to this [link](https://blazor.syncfusion.com/documentation/getting-started/razor-class-library) for more information on getting started with the Syncfusion Blazor components in the RCL project.
 
+## Blazor Web App
+
+Open **~/Program.cs** file and register the Syncfusion Blazor license key in the Blazor web app.
+
+{% tabs %}
+
+{% highlight C# tabtitle="Blazor Web App" hl_lines="1 2" %}
+
+//Register Syncfusion license
+Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR LICENSE KEY");
+
+{% endhighlight %}
+
+{% endtabs %}
+
 ## Blazor Server App
 
 After configuring the RCL project with your Blazor Server application, register the license key in the Program.cs file.

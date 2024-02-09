@@ -22,7 +22,7 @@ To get started quickly with Blazor AutoComplete component, you can check on this
 
 ## Create a new Blazor App in Visual Studio
 
-You can create a **Blazor Server App** or **Blazor WebAssembly App** using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0) or the [Syncfusion Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio)
+You can create a **Blazor Server App** or **Blazor WebAssembly App** using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0&pivots=windows) or the [Syncfusion Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio)
 
 ## Install Syncfusion Blazor DropDowns and Themes NuGet in the App
 
@@ -143,7 +143,7 @@ Add the Syncfusion Blazor AutoComplete component in the **~/Pages/Index.razor** 
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application.This will render the Syncfusion Blazor AutoComplete component in your default web browser.
 
-![Blazor AutoComplete Component](./images/blazor-autocomplete-component.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LtBJZMreLmNLRbiw?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "![Blazor AutoComplete Component](./images/blazor-autocomplete-component.png)" %}
 
 ## Binding data source
 
@@ -190,7 +190,7 @@ After initialization, populate the AutoComplete with data using the [DataSource]
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor AutoComplete with Data Binding](./images/blazor-autocomplete-data-binding.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hjhfjCLSBGLRJZjX?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor AutoComplete with Data Binding](./images/blazor-autocomplete-data-binding.png)" %}
 
 ## Custom values
 
@@ -220,7 +220,7 @@ By default, suggestion list width automatically adjusts according to the AutoCom
 {% endhighlight %}
 {% endtabs %}
 
-![Customizing Popup Height and Width in Blazor AutoComplete](./images/blazor-autocomplete-popup-customization.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDVJXCByVQxticee?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Customizing Popup Height and Width in Blazor AutoComplete](./images/blazor-autocomplete-popup-customization.png)" %}
 
 ## See also
 

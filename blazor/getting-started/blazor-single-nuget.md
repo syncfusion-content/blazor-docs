@@ -9,13 +9,13 @@ documentation: ug
 
 # Getting started with Blazor Component using Syncfusion.Blazor NuGet
 
-This section briefly explains how to include a Blazor component with the Syncfusion.Blazor Single NuGet package in your Blazor Server App and Blazor WebAssembly App using Visual Studio. 
+This section briefly explains how to include a Blazor component with the Syncfusion.Blazor Single NuGet package in your Blazor Server App and Blazor WebAssembly App using Visual Studio.
 
 ## Prerequisites
 
 * [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
 
-## Create a new Blazor Server App in Visual Studio
+## Create a new Blazor App in Visual Studio
 
 You can create a **Blazor Server App** or **Blazor WebAssembly App** using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0) or the [Syncfusion Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
 
@@ -85,7 +85,7 @@ await builder.Build().RunAsync();
 
 ## Add stylesheet and script resources
 
-The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Reference the stylesheet and script in the `<head>` of the main page as follows: 
+The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Reference the stylesheet and script in the `<head>` of the main page as follows:
 
 * For **.NET 6** Blazor Server app, include it in **~/Pages/_Layout.cshtml** file.
 

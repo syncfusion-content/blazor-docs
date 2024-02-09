@@ -124,7 +124,7 @@ Add the Syncfusion Blazor MaskedTextBox component in the **~/Pages/Index.razor**
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion Blazor MaskedTextBox component in your default web browser.
 
-![Blazor MaskedTextBox Component](./images/blazor-maskedtextbox-component.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hNrzXsLuJBRJNWJf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor MaskedTextBox Component](./images/blazor-maskedtextbox-component.png)" %}
 
 ## Set the mask
 
@@ -140,7 +140,7 @@ The following example demonstrates the usage of mask element `0` that allows any
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor MaskedTextBox with Mask](./images/blazor-maskedtextbox-with-mask.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hXLJtsLEzVdPzZtq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor MaskedTextBox with Mask](./images/blazor-maskedtextbox-with-mask.png)" %}
 
 ## See also
 

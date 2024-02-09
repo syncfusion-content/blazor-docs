@@ -57,7 +57,7 @@ To Add `Syncfusion.Blazor.Grid` NuGet package to the application using the follo
 {% tabs %}
 {% highlight c# tabtitle=".NET CLI" %}
 
-dotnet add package Syncfusion.Blazor.Grid --version {{ site.releaseversion }}
+dotnet add package Syncfusion.Blazor.Grid -Version {{ site.releaseversion }}
 dotnet restore
 
 {% endhighlight %}
@@ -303,8 +303,8 @@ The grouping feature enables you to view the datagrid record in a grouped view. 
 
 ## See also
 
-* [Getting Started with Syncfusion DataGrid in Blazor WebAssembly using Visual Studio 2019](./blazor-webassembly-datagrid-using-visual-studio)
+* [Getting Started with Syncfusion DataGrid in Blazor WebAssembly using Visual Studio 2022](./blazor-webassembly-datagrid-using-visual-studio)
 
-* [Getting Started with Syncfusion DataGrid in Blazor Server-Side using Visual Studio 2019](../getting-started)
+* [Getting Started with Syncfusion DataGrid in Blazor Server-Side using Visual Studio 2022](../getting-started)
 
 * [Getting Started with Syncfusion DataGrid in Blazor Server-Side using .NET Core CLI](./server-side-using-cli)

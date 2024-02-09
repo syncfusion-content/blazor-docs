@@ -23,7 +23,7 @@ By Default, the uploader component allows you to select and upload multiple file
 
 ### With server-side API endpoint
 
-`SaveUrl` and `RemoveUrl` actions are explained in this [link](./chunk-upload/#save-and-remove-action-for-blazor-aspnet-core-hosted-application).
+`SaveUrl` and `RemoveUrl` actions are explained in this [link](./chunk-upload#save-and-remove-action-for-blazor-aspnet-core-hosted-application).
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
@@ -80,7 +80,7 @@ The following example explains about single file upload settings.
 
 ### With server-side API endpoint
 
-`SaveUrl` and `RemoveUrl` actions are explained in this [link](./chunk-upload/#save-and-remove-action-for-blazor-aspnet-core-hosted-application).
+`SaveUrl` and `RemoveUrl` actions are explained in this [link](./chunk-upload#save-and-remove-action-for-blazor-aspnet-core-hosted-application).
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
@@ -125,7 +125,7 @@ By default, the uploader processes the files to upload once the files are select
 
 ### With server-side API endpoint
 
-`SaveUrl` and `RemoveUrl` actions are explained in this [link](./chunk-upload/#save-and-remove-action-for-blazor-aspnet-core-hosted-application).
+`SaveUrl` and `RemoveUrl` actions are explained in this [link](./chunk-upload#save-and-remove-action-for-blazor-aspnet-core-hosted-application).
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
@@ -185,7 +185,7 @@ By default, the uploader component process multiple files to upload simultaneous
 
 ### With server-side API endpoint
 
-`SaveUrl` and `RemoveUrl` actions are explained in this [link](./chunk-upload/#save-and-remove-action-for-blazor-aspnet-core-hosted-application).
+`SaveUrl` and `RemoveUrl` actions are explained in this [link](./chunk-upload#save-and-remove-action-for-blazor-aspnet-core-hosted-application).
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
@@ -234,7 +234,7 @@ The uploader component allows you to pre-load the list of files that are uploade
 
 ### With server-side API endpoint
 
-`SaveUrl` and `RemoveUrl` actions are explained in this [link](./chunk-upload/#save-and-remove-action-for-blazor-aspnet-core-hosted-application).
+`SaveUrl` and `RemoveUrl` actions are explained in this [link](./chunk-upload#save-and-remove-action-for-blazor-aspnet-core-hosted-application).
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs

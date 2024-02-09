@@ -143,7 +143,7 @@ By default, week numbers are shown in the Scheduler based on the first day of th
 
 `FirstFullWeek` – The first week of the year begins when meeting the first day of the week (firstDayOfWeek) and the first day of the year.
 
-For more details refer to [this link](https://docs.microsoft.com/en-us/dotnet/api/system.globalization.calendarweekrule?view=net-5.0#remarks)
+For more details refer to [this link](https://learn.microsoft.com/en-us/dotnet/api/system.globalization.calendarweekrule?view=net-5.0#remarks)
 
 ```cshtml
 @using Syncfusion.Blazor.Schedule
@@ -334,6 +334,6 @@ You can manually scroll to a specific time on Scheduler by making use of the `Sc
 
 ## See also
 
-- [To display the current time indicator](./timescale/#highlighting-current-date-and-time)
-- [To set different working hours for each resources](./resources/#set-different-work-hours)
-- [To set different working days for each resources](./resources/#set-different-work-days)
+- [To display the current time indicator](./timescale#highlighting-current-date-and-time)
+- [To set different working hours for each resources](./resources#set-different-work-hours)
+- [To set different working days for each resources](./resources#set-different-work-days)

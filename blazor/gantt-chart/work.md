@@ -9,6 +9,8 @@ documentation: ug
 
 # Work in Blazor Gantt Chart Component
 
+## Work
+
 The work is the total hours required to complete a task. Work can be mapped from the data source field using the property [GanttTaskFields.Work](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTaskFields.html#Syncfusion_Blazor_Gantt_GanttTaskFields_Work). Work can be measured in `Hour`, `Day`, `Minute`. By default, work is measured in `Hour` and it can be changed by using the property `WorkUnit`.
 
 N> When the work field is mapped from the data source, the default task type will be `FixedWork`.
@@ -59,7 +61,7 @@ N> When the work field is mapped from the data source, the default task type wil
         public string TaskName { get; set; }
         public string TaskType { get; set; }
         public DateTime StartDate { get; set; }
-        public DateTime? EndDate { get; set; }
+        public DateTime EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
@@ -139,7 +141,7 @@ The work, duration and resource unit fields of a task depends upon each other an
         public string TaskName { get; set; }
         public TaskType TaskType { get; set; }
         public DateTime StartDate { get; set; }
-        public DateTime? EndDate { get; set; }
+        public DateTime EndDate { get; set; }
         public string Duration { get; set; }
         public double Progress { get; set; }
         public int? ParentId { get; set; }

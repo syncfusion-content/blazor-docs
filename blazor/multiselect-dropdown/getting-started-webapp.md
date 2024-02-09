@@ -25,7 +25,7 @@ You need to configure the corresponding [Interactive render mode](https://learn.
 
 To add **Blazor MultiSelect DropDown** component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install [Syncfusion.Blazor.DropDowns](https://www.nuget.org/packages/Syncfusion.Blazor.DropDowns) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/).
 
-If you select an **Interactive render mode** as `WebAssembly` or `Auto`, you can install the NuGet package in the project any where to add component in Web App.
+If you utilize `WebAssembly or Auto` render modes in the Blazor Web App need to be install Syncfusion Blazor components NuGet packages within the client project.
 
 Alternatively, you can utilize the following package manager command to achieve the same.
 
@@ -106,7 +106,7 @@ Add the Syncfusion Blazor MultiSelect DropDown component in the **~Pages/.razor*
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion Blazor MultiSelect DropDown component in your default web browser.
 
-![Blazor MultiSelect DropDown Component](./images/blazing-fast-multiselect-dropdown-blazor.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNLTZigtBWzsEjwg?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor MultiSelect DropDown Component](./images/blazing-fast-multiselect-dropdown-blazor.png)" %}
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/MultiSelectDropDown/BlazorWebApp).
 
@@ -145,7 +145,7 @@ After initialization, populate the MultiSelect with data using the [DataSource](
 {% endhighlight %}
 {% endtabs %}
 
-![Data Binding in Blazor MultiSelect DropDown](./images/blazing-fast-multiselect-dropdown-data-binding.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BNLTNMqXVWJxbCSJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Data Binding in Blazor MultiSelect DropDown](./images/blazing-fast-multiselect-dropdown-data-binding.png)" %}
 
 ## Configure the popup list
 
@@ -163,7 +163,7 @@ The height and width of the popup list can also be customized using the [PopupHe
 {% endhighlight %}
 {% endtabs %}
 
-![Configuring Popup List in Blazor MultiSelect DropDown](./images/blazor-multiselect-dropdown-configure-poup-list.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VtLTjiUjrCSBlVto?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Configuring Popup List in Blazor MultiSelect DropDown](./images/blazor-multiselect-dropdown-configure-poup-list.png)" %}
 
 ## See also
 

@@ -119,7 +119,7 @@ Add the Syncfusion Blazor Image Editor component in the **~/Pages/Index.razor** 
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the app. This will render the Syncfusion Blazor Image Editor component in your default web browser.
 
-![Blazor Image Editor Component](./images/blazor-image-editor-component.jpg)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BtLfZMhEziJhvXKH?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Image Editor Component](./images/blazor-image-editor-component.jpg)" %}
 
 ## See Also
 

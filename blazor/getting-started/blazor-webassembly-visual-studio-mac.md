@@ -21,7 +21,7 @@ This articles provides a step-by-step instructions for building Blazor WebAssemb
 
 You can create **Blazor WebAssembly App** in Visual Studio for mac by the following way.
 
-* [Create a project using Microsoft Templates](https://docs.microsoft.com/en-us/aspnet/core/blazor/tooling?pivots=macos)
+* [Create a project using Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0&pivots=macos)
 
 ## Install Syncfusion Blazor Packages in the App
 
@@ -132,6 +132,8 @@ N> Syncfusion recommends to reference scripts using [Static Web Assets](https://
 * <kbd>⌘</kbd>+<kbd>F5</kbd> to run the app. Then, the Syncfusion Blazor Calendar component will be rendered in the default web browser.
 
 ![Blazor Calendar Component](images/output-calendar-using-blazor-webassembly.png)
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDBgirsJBGDheWFi?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 N> When using a PDF viewer on macOS (ARM), we recommend our [NextGen PDF Viewer](https://blazor.syncfusion.com/documentation/pdfviewer-2/migration) since it is compatible with macOS (ARM).
 

@@ -403,6 +403,31 @@ SfDataManager
 </tr>
 </table>
 
+## Syncfusion.Blazor.DataForm
+
+The Blazor DataForm is a powerful UI component that simplifies the creation of dynamic and interactive forms in your applications. It offers flexible layout options, data binding capabilities, and supports various input types, making it easy to design user-friendly and efficient forms with features like validation and conditional logic.
+
+<table>
+<tr>
+<td><b>NuGet package</b></td>
+<td><b>Components friendly name</b></td>
+<td><b>Components name</b></td>
+<td><b>Dependencies</b></td>
+</tr>
+<tr>
+<td><a href="https://www.nuget.org/packages/Syncfusion.Blazor.DataForm">Syncfusion.Blazor.DataForm</a></td>
+<td><a href="https://blazor.syncfusion.com/documentation/data-form">DataForm</a></td>
+<td>SfDataForm</td>
+<td>
+<a href="#syncfusionblazorbuttons">Syncfusion.Blazor.Buttons</a>
+<a href="#syncfusionblazorcalendars">Syncfusion.Blazor.Calendars</a>
+<a href="#syncfusionblazorcore">Syncfusion.Blazor.Core</a>
+<a href="#syncfusionblazordropdowns">Syncfusion.Blazor.DropDowns</a>
+<a href="#syncfusionblazorinputs">Syncfusion.Blazor.Inputs</a>
+</td>
+</tr>
+</table>
+
 ## Syncfusion.Blazor.DataVizCommon
 
 The Blazor DataVizCommon is the base package for the svg elements used in the visualization components like charts and range selector.
@@ -1100,8 +1125,10 @@ A package of Blazor navigation components such as Accordion, ContextMenu, Tabs, 
 <li><a href="https://blazor.syncfusion.com/documentation/appbar">AppBar</a></li>
 <li><a href="https://blazor.syncfusion.com/documentation/breadcrumb">Breadcrumb</a></li>
 <li><a href="https://blazor.syncfusion.com/documentation/context-menu">ContextMenu</a></li>
+<li><a href="https://blazor.syncfusion.com/documentation/dropdown-tree">DropDown Tree</a></li>
 <li><a href="https://blazor.syncfusion.com/documentation/menu-bar">Menu Bar</a></li>
 <li><a href="https://blazor.syncfusion.com/documentation/sidebar">Sidebar</a></li>
+<li><a href="https://blazor.syncfusion.com/documentation/stepper">Stepper</a></li>
 <li><a href="https://blazor.syncfusion.com/documentation/tabs">Tabs</a></li>
 <li><a href="https://blazor.syncfusion.com/documentation/toolbar">Toolbar</a></li>
 <li><a href="https://blazor.syncfusion.com/documentation/treeview">TreeView</a></li>
@@ -1114,8 +1141,10 @@ A package of Blazor navigation components such as Accordion, ContextMenu, Tabs, 
 <li>SfAppBar</li>
 <li>SfBreadcrumb</li>
 <li>SfContextMenu</li>
+<li>SfDropDownTree</li>
 <li>SfMenu</li>
 <li>SfSidebar</li>
+<li>SfStepper</li>
 <li>SfTab</li>
 <li>SfToolbar</li>
 <li>SfTreeView</li>

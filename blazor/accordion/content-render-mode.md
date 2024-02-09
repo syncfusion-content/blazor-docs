@@ -26,3 +26,4 @@ N> The default value of the property `LoadOnDemand` is true.
 </SfAccordion>
 
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rZLqCVMgAzIOTDDm?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
