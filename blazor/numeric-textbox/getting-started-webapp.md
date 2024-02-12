@@ -25,7 +25,7 @@ You need to configure the corresponding [Interactive render mode](https://learn.
 
 To add **Blazor NumericTextBox** component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install [Syncfusion.Blazor.Inputs](https://www.nuget.org/packages/Syncfusion.Blazor.Inputs) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/).
 
-If you select an **Interactive render mode** as `WebAssembly` or `Auto`, you can install the NuGet package in the project any where to add component in Web App.
+If you utilize `WebAssembly or Auto` render modes in the Blazor Web App need to be install Syncfusion Blazor components NuGet packages within the client project.
 
 Alternatively, you can utilize the following package manager command to achieve the same.
 
@@ -106,7 +106,7 @@ Add the Syncfusion Blazor NumericTextBox component in the **~Pages/.razor** file
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion Blazor NumericTextBox component in your default web browser.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BjrzDCDbKvLNCWwQ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor NumericTextBox Component](./images/blazor-numerictextbox-component.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNLzXCKXVVvZqDCS?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor NumericTextBox Component](./images/blazor-numerictextbox-component.png)" %}
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/NumericTextBox/BlazorWebApp).
 
@@ -122,7 +122,7 @@ You can set the minimum and maximum range of values in the NumericTextBox using 
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rXLpNMDbAbAdLAZf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Inputnumber Blazor with Range Value](./images/blazor-numerictextbox-range-value.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BNhzjMgNLBEbgCZT?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Inputnumber Blazor with Range Value](./images/blazor-numerictextbox-range-value.png)" %}
 
 ## Formatting the value
 
@@ -136,7 +136,7 @@ Users can set the format of the NumericTextBox component using the [Format](http
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LNBfNstbUvSLnyDs?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor NumericTextBox with Formatting Value](./images/blazor-numerictextbox-format-value.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VDBzjCUtBgMxHgbo?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor NumericTextBox with Formatting Value](./images/blazor-numerictextbox-format-value.png)" %}
 
 ## Precision of numbers
 
@@ -154,7 +154,7 @@ If `ValidateDecimalOnType` is false, number of decimals will not be restricted. 
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hZhftsDvAldbQOoT?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor NumericTextBox with Precision Value](./images/blazor-numerictextbox-precision-value.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDrpDsqNBqKqBEud?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor NumericTextBox with Precision Value](./images/blazor-numerictextbox-precision-value.png)" %}
 
 ## See also
 

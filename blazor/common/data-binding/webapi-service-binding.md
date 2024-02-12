@@ -17,8 +17,8 @@ To enable the OData query option for Web API, Refer to this [documentation](http
 ## Prerequisite software
 
 The following software are needed
-* Visual Studio 2019 v16.8.0 Preview 3.0 or later
-* .NET SDK 5.0 RC2 or later.
+* Visual Studio 2022
+* .NET 7.0 or .NET 8.0.
 
 ## Create the database
 
@@ -50,11 +50,187 @@ Now, click on **Update Database**.
 
 ![Update database in Blazor](../images/odata-update-db.png)
 
+## Create a new Blazor Web App
+
+You can create a **Blazor Web App** using Visual Studio 2022 via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0) or the [Syncfusion Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
+
+You need to configure the corresponding [Interactive render mode](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-8.0#render-modes) and [Interactivity location](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0&pivots=windows) while creating a Blazor Web Application.
+
+### Generate DbContext and model class from the database
+
+Now, you need to scaffold **DbContext** and **model classes** from the existing **OrdersDetails** database. To perform scaffolding and work with the SQL Server database in our application, install the following NuGet packages.If you have created a Blazor Web App with the `Interactive render mode` set to `WebAssembly` or `Auto` ensure to follow these steps:
+
+* Create the new project with Class Library template named as `BlazorWebApp.Shared` for DbContext and model class as shown below.
+![Create Shared Project](../images/db-shared-project.png)
+
+Additionally, ensure that you have added a reference to the `BlazorWebApp.Shared` project in both the server-side and client-side projects of your web application.
+
+* Then, open the NuGet Package Manager and install the following packages in both the shared and server-side projects of your Blazor Web App.
+
+   * [Microsoft.EntityFrameworkCore.Tools](https://www.nuget.org/packages/Microsoft.EntityFrameworkCore.Tools): This package creates database context and model classes from the database.
+   * [Microsoft.EntityFrameworkCore.SqlServer](https://www.nuget.org/packages/Microsoft.EntityFrameworkCore.SqlServer/): The database provider that allows Entity Framework Core to work with SQL Server.
+
+Alternatively, you can utilize the following package manager command to achieve the same.
+
+{% tabs %}
+{% highlight C# tabtitle="Package Manager" %}
+
+Install-Package Microsoft.EntityFrameworkCore.Tools -Version 7.0.11
+
+Install-Package Microsoft.EntityFrameworkCore.SqlServer -Version 7.0.11
+
+{% endhighlight %}
+{% endtabs %}
+
+Once the above packages are installed, you can scaffold DbContext and Model classes. Run the following command in the Package Manager Console under the `BlazorWebApp.Shared` project.
+
+```
+Scaffold-DbContext “Server=localhost;Database=OrdersDetails;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False” Microsoft.EntityFrameworkCore.SqlServer -OutputDir Data
+```
+
+The above scaffolding command contains the following details for creating DbContext and model classes for the existing database and its tables.
+  * **Connection string**: Server=localhost;Database=OrdersDetails;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False
+  * **Data provider**: Microsoft.EntityFrameworkCore.SqlServer
+  * **Output directory**: -OutputDir Data
+
+After running the above command, **OrdersDetailsContext.cs** and **Orders.cs** files will be created under the Data folder of `BlazorWebApp.Shared` project as follows.
+
+![Data folder in BlazorWebApp.Shared](../images/shared-data-folder.png)
+
+You can see that OrdersDetailsContext.cs file contains the connection string details in the **OnConfiguring** method.
+
+{% tabs %}
+{% highlight c# tabtitle="OrdersDetailsContext.cs" hl_lines="21 22 23" %}
+
+using Microsoft.EntityFrameworkCore;
+
+namespace BlazorWebApp.Shared.Data;
+
+public partial class OrdersDetailsContext : DbContext
+{
+    public OrdersDetailsContext()
+    {
+    }
+
+    public OrdersDetailsContext(DbContextOptions<OrdersDetailsContext> options)
+        : base(options)
+    {
+    }
+
+    public virtual DbSet<Order> Orders { get; set; }
+
+    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)=> optionsBuilder.UseSqlServer("Server=(localdb)\\MSSQLLocalDB;Database=OrdersDetails;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
+  .....
+}
+{% endhighlight %}
+{% endtabs %}
+
+Additionally ensure the connection strings added in the **appsettings.json** file of server side project of your Web App.
+
+```
+{
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft.AspNetCore": "Warning"
+    }
+  },
+  "AllowedHosts": "*",
+  "ConnectionStrings": {
+    "OrdersDetailsDatabase": "Server=(localdb)\\MSSQLLocalDB;Database=OrdersDetails;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False"
+  }
+}
+```
+* Now, the DbContext must be configured using connection string and registered as scoped service using the AddDbContext method in **Program.cs**  of server side project only.
+
+```
+builder.Services.AddDbContext<OrdersDetailsContext>(option =>
+                option.UseSqlServer(builder.Configuration.GetConnectionString("OrdersDetailsDatabase")));
+```
+
+### Creating API Controller
+
+The application is now configured to connect with the **OrdersDetails** database using Entity Framework. Now, it’s time to consume data from the OrdersDetails database. To do so, you need a Web API controller to serve data from the DbContext to the Blazor application.
+
+To create a Web API controller, right-click the **Controller** folder in the Server side project and select **Add -> New Item -> API controller with read/write actions** to create a new Web API controller. We are naming this controller as OrdersController as it returns Orders table records.
+
+Now, replace the Web API controller with the following code which contains code to handle CRUD operations in the Orders table.
+
+{% tabs %}
+{% highlight c# tabtitle="OrdersController.cs" %}
+
+using Microsoft.AspNetCore.Mvc;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using WebAPICRUDServerApp.Data;
+
+namespace WebAPICRUDServerApp
+{
+    [Route("api/[controller]")]
+    [ApiController]
+    public class OrdersController : ControllerBase
+    {
+        private OrdersDetailsContext _context;
+        public OrdersController(OrdersDetailsContext context)
+        {
+            _context = context;
+        }
+        // GET: api/<OrdersController>
+        [HttpGet]
+        public object Get()
+        {
+            return new { Items = _context.Orders, Count = _context.Orders.Count() };
+        }
+        // POST api/<OrdersController>
+        [HttpPost]
+        public void Post([FromBody] Orders book)
+        {
+            _context.Orders.Add(book);
+            _context.SaveChanges();
+        }
+        // PUT api/<OrdersController>
+        [HttpPut]
+        public void Put(long id, [FromBody] Orders book)
+        {
+            Orders _book = _context.Orders.Where(x => x.OrderId.Equals(book.OrderId)).FirstOrDefault();
+            _book.CustomerId = book.CustomerId;
+            _book.Freight = book.Freight;
+            _book.OrderDate = book.OrderDate;
+            _context.SaveChanges();
+        }
+        // DELETE api/<OrdersController>
+        [HttpDelete("{id}")]
+        public void Delete(long id)
+        {
+            Orders _book = _context.Orders.Where(x => x.OrderId.Equals(id)).FirstOrDefault();
+            _context.Orders.Remove(_book);
+            _context.SaveChanges();
+        }
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+* Now, open **Program.cs** file and add **AddControllers & MapControllers** method as follows.
+
+{% tabs %}
+{% highlight c# tabtitle=".NET 8 (~/Program.cs)" %}
+
+......
+builder.Services.AddControllers();
+....
+app.MapControllers();
+.....
+
+{% endhighlight %}
+{% endtabs %}
+
 ## Create Blazor Server Application
 
-Open Visual Studio and follow the steps in the below documentation to create the Blazor Server Application.
-
-[Getting Started](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio)
+You can create a **Blazor Server App** using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0) or the [Syncfusion Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
 
 ### Generate DbContext and model class from the database
 
@@ -76,11 +252,11 @@ Install-Package Microsoft.EntityFrameworkCore.SqlServer -Version 7.0.11
 {% endtabs %}
 
 ```
-Scaffold-DbContext “Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=OrdersDetails;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False” Microsoft.EntityFrameworkCore.SqlServer -OutputDir Data
+Scaffold-DbContext “Server=localhost;Database=OrdersDetails;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False” Microsoft.EntityFrameworkCore.SqlServer -OutputDir Data
 ```
 
 The above scaffolding command contains the following details for creating DbContext and model classes for the existing database and its tables.
-* **Connection string**: Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=OrdersDetails;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False
+* **Connection string**: Server=localhost;Database=OrdersDetails;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False
 * **Data provider**: Microsoft.EntityFrameworkCore.SqlServer
 * **Output directory**: -OutputDir Data
 
@@ -244,15 +420,11 @@ app.Run();
 {% endhighlight %}
 {% endtabs %}
 
-### Add Syncfusion Blazor DataGrid package
+## Add Syncfusion Blazor DataGrid package
 
-To add Syncfusion components into the project, right-click **Dependencies** and select the **Manage NuGet Packages**.
+To add **Blazor DataGrid** component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/).
 
-![Manage Nuget Packages in Blazor](../images/webapi-manage-nuget.png)
-
-Now, in the **Browse** tab, search and install the Syncfusion.Blazor.Grid NuGet package.
-
-![Add Syncfusion package in Blazor](../images/odata-syncfusion-package.png)
+If you utilize `WebAssembly or Auto` render modes in the Blazor Web App need to be install Syncfusion Blazor components NuGet packages within the client project.
 
 Alternatively, you can utilize the following package manager command to achieve the same.
 
@@ -260,71 +432,81 @@ Alternatively, you can utilize the following package manager command to achieve 
 {% highlight C# tabtitle="Package Manager" %}
 
 Install-Package Syncfusion.Blazor.Grid -Version {{ site.releaseversion }}
+Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
 
 {% endhighlight %}
 {% endtabs %}
 
-Open **_Import.razor** file and add the following namespaces which are required to use Syncfusion Blazor components in this application.
+N> Syncfusion Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for available NuGet packages list with component details.
 
-{% tabs %}
-{% highlight razor tabtitle="_Import.razor" %}
+Open **~/_Imports.razor** file and import the following namespace.
+
+{% highlight razor %}
 
 @using Syncfusion.Blazor
-@using Syncfusion.Blazor.Data
 @using Syncfusion.Blazor.Grids
-@using WebAPICRUDServerApp.Data
 
 {% endhighlight %}
-{% endtabs %}
 
-Open **Program.cs** file in **.NET 6 and .NET 7** application and register the Syncfusion service.
+Now, register the Syncfusion Blazor Service in the **~/Program.cs** file of your App.
 
-{% tabs %}
-{% highlight c# tabtitle=".NET 6 & .NET 7 (~/Program.cs)" %}
+For a Blazor Web App with `WebAssembly` or `Auto (Server and WebAssembly)` interactive render mode, register the Syncfusion Blazor service in both **~/Program.cs** files of your web app.
 
-builder.Services.AddDbContext<OrdersDetailsContext>(option =>
-                option.UseSqlServer(builder.Configuration.GetConnectionString("OrdersDetailsDatabase")));
-builder.Services.AddRazorPages();
-builder.Services.AddServerSideBlazor();
-builder.Services.AddSingleton<WeatherForecastService>();
+```cshtml
+
+....
+using Syncfusion.Blazor;
+....
 builder.Services.AddSyncfusionBlazor();
+....
 
-{% endhighlight %}
-{% endtabs %}
+```
 
 Themes provide life to components. Syncfusion Blazor has different themes. They are:
 
-* Bootstrap4
-* Material
-* Office 365
+* Fabric
 * Bootstrap
+* Material
 * High Contrast
 
-In this demo application, the **Bootstrap4** theme will be used.
+In this demo application, the latest theme will be used.
 
-* For **.NET 6** app, add theme in the `<head>` of the **~/Pages/_Layout.cshtml** file.
+  * For **Blazor Web App**,  refer stylesheet inside the `<head>` of **~/Components/App.razor** file for .NET 8.
 
-* For **.NET 7** app, add theme in the `<head>` of the **~/Pages/_Host.cshtml** file.
+  * For **Blazor WebAssembly application**, refer stylesheet inside the `<head>` element of **wwwroot/index.html** file.
+  * For **Blazor Server application**, refer stylesheet inside the `<head>` element of
+    * **~/Pages/_Host.cshtml** file for .NET 7.
+    * **~/Pages/_Layout.cshtml** file for .NET 6.
 
-{% tabs %}
+{% highlight cshtml %}
 
-{% highlight cshtml tabtitle=".NET 6 (~/_Layout.cshtml)" %}
-
-<link href="_content/Syncfusion.Blazor.Themes/fabric.css" rel="stylesheet" />
-
-{% endhighlight %}
-
-{% highlight cshtml tabtitle=".NET 7 (~/_Host.cshtml)" %}
-
-<link href="_content/Syncfusion.Blazor.Themes/fabric.css" rel="stylesheet" />
+<link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
 
 {% endhighlight %}
 
-{% endtabs %}
+Also, Include the script reference at the end of the `<body>` of **~/Components/App.razor**(For Blazor Web App) or **Pages/_Host.cshtml** (for Blazor Server App) file as shown below:
+
+```html
+<body>
+    ....
+    <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
+</body>
+```
 
 ## Add Syncfusion Blazor DataGrid component to an application
 
-In previous steps, we have successfully configured the Syncfusion Blazor package in the application. Now, we can add the grid component to the **Index.razor** page.
+In previous steps, you have successfully configured the Syncfusion Blazor package in the application. Now, you can add the grid component to the to the `.razor` page inside the `Pages` folder.
+
+If you have set the interactivity location to `Per page/component` in the web app, ensure that you define a render mode at the top of the Syncfusion Blazor component-included razor page as follows:
+
+{% tabs %}
+{% highlight razor %}
+
+@* Your App render mode define here *@
+@rendermode InteractiveAuto
+
+{% endhighlight %}
+{% endtabs %}
 
 {% tabs %}
 {% highlight razor %}
@@ -336,9 +518,7 @@ In previous steps, we have successfully configured the Syncfusion Blazor package
 
 ## Binding data to Blazor DataGrid component using WebApiAdaptor
 
-To consume data from the WebApi Controller, we need to add the **SfDataManager** with **WebApiAdaptor**. Refer to the following documentation for more details on WebApiAdaptor.
-
-[WebApiAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors#web-api-adaptor)
+To consume data from the WebApi Controller, you need to add the **SfDataManager** with **WebApiAdaptor**. Refer to the following documentation for more details on [WebApiAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors#web-api-adaptor).
 
 {% tabs %}
 {% highlight razor %}

@@ -25,7 +25,7 @@ You need to configure the corresponding [Interactive render mode](https://learn.
 
 To add **Blazor Kanban** component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install [Syncfusion.Blazor.Kanban](https://www.nuget.org/packages/Syncfusion.Blazor.Kanban/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/).
 
-If you select an **Interactive render mode** as `WebAssembly` or `Auto`, you can install the NuGet package in the project any where to add component in Web App.
+If you utilize `WebAssembly or Auto` render modes in the Blazor Web App need to be install Syncfusion Blazor components NuGet packages within the client project.
 
 Alternatively, you can utilize the following package manager command to achieve the same.
 
@@ -119,7 +119,7 @@ Add the Syncfusion Blazor Kanban component in `.razor` file inside the `Pages` f
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion Blazor Kanban component in your default web browser.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LDLzXMNPrlYlpSFC?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Kanban Component](./images/blazor-kanban-component.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VDBpZMLOpgSSDQVm?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Kanban Component](./images/blazor-kanban-component.png)" %}
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/Kanban).
 
@@ -165,7 +165,7 @@ To populate the empty Kanban with cards, define the Enumerable object or remote 
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BthftWNvVOBtohDo?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Kanban with Cards](./images/blazor-kanban-with-cards.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BtBTtChkTKoFctAY?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Kanban with Cards](./images/blazor-kanban-with-cards.png)" %}
 
 ## Enable Swimlane
 
@@ -230,7 +230,7 @@ To populate the empty Kanban with cards, define the Enumerable object or remote 
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VjLzNitlVOKCnLvJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Kanban with Swimlane](./images/blazor-kanban-with-swimlane.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDrfNCraJAdqIiOM?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Kanban with Swimlane](./images/blazor-kanban-with-swimlane.png)" %}
 
 N> You can also explore our [Blazor Kanban Board example](https://blazor.syncfusion.com/demos/kanban/overview?theme=bootstrap5) that shows you how to render and configure the bullet chart.
 

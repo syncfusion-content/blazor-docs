@@ -126,7 +126,7 @@ Add the Syncfusion Blazor ProgressButton component in the **~/Pages/Index.razor*
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion Blazor ProgressButton component in your default web browser.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rthfNWNPfplCkbvh?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor ProgressButton Component](./images/blazor-progressbutton-component.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDLzDiqDgZzSLSvX?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor ProgressButton Component](./images/blazor-progressbutton-component.png)" %}
 
 ## See also
 

@@ -132,7 +132,7 @@ Add the Syncfusion Blazor RichTextEditor component in the **~/Pages/Index.razor*
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion Blazor RichTextEditor component in your default web browser.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VZrpNiZOBsRVaDCe?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor RichTextEditor Component](./images/blazor-richtexteditor.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rXhfZMqXAUqtaOyK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor RichTextEditor Component](./images/blazor-richtexteditor.png)" %}
 
 ## Configure the Toolbar
 
@@ -199,7 +199,7 @@ Configure the toolbar with the tools using [RichTextEditorToolbarSettings.Items]
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hZLpDWZurCaZsLjF?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor RichTextEditor with Toolbar](./images/blazor-richtexteditor-toolbar.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hthTNWAZUAqIpYkv?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor RichTextEditor with Toolbar](./images/blazor-richtexteditor-toolbar.png)" %}
 
 ## Insert images and links
 
@@ -262,7 +262,7 @@ Specifies the items to be rendered in quick toolbar based on the target elements
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LZBJXCXaBhLFcCpC?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor RichTextEditor with Image](./images/blazor-richtexteditor-image.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hjVztWADAAziHrZz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor RichTextEditor with Image](./images/blazor-richtexteditor-image.png)" %}
 
 ## Retrieve the formatted content
 
