@@ -7,33 +7,21 @@ component: Common
 documentation: ug
 ---
 
-# Predefined code templates for blazor
-Blazor Playground simplifies the process of incorporating UI components by offering a collection of pre-defined code templates for various components. These snippets are conveniently displayed in a popup, making it easy for users to browse and select their preferred Syncfusion components. 
+# Predefined code templates for Blazor
+Blazor Playground provides pre-defined code snippets for all Syncfusion Blazor components that helps to ease access the component's code snippets.  
 
-By choosing a component and clicking the "add" button, Playground significantly reduces the time needed to render the component in your project.
+1. Click the "Snippet" button to open a popup containing a list of predefined code snippets for Syncfusion Blazor UI components.
+![Blazor Playground with pre-configured code snippet](./images/Click_Snippet.png)
 
-## Accessing Code Snippets
+2. Choose the specific components you want to render (up to 10 at a time). This can be done by simply clicking on the desired snippet. Blazor Playground allows you to select multiple components simultaneously.
+![Blazor Playground with selecting a component](./images/Select_Component.png)
 
-Click the "snippet" button to open a popup containing a list of predefined code templates for various UI components.
+3. Once you've selected the component, click the "Add" button. The chosen snippet will be added in the editor.
 
-![Access Code Snippet](./images/Click_Snippet.png)
+![Blazor Playground with code snippets](./images/Add_Snippets.png)
 
-## Selecting a Component
-
-Choose the specific component you want to render from the popup. This can be done by simply clicking on the desired snippet.
-
-![Selecting a component](./images/Select_Component.png)
-
-## Adding Multiple Components
-
-For added efficiency, Blazor Playground allows you to select multiple components simultaneously.
-
-N>Ensure that when adding components in Blazor Playground, you are aware that the selection is limited to a maximum of 10 components at a time.
-
-Once you've selected the component, click the "add" button. The chosen snippet will be seamlessly added at the cursor point in the editor.
-
-![Add Snippets](./images/Add_Snippets.png)
-
-For every component you select, the corresponding individual NuGet latest package will be installed, and the overall `Syncfusion.Blazor` package will be removed.
+N>For each selected component, the corresponding individual NuGet package (latest version) will be added, while the overall `Syncfusion.Blazor` package will be removed.
 
 ![Selected snippet output](./images/Snippet_Output.gif)
+
+4. Press the `run` button or <kbd>Ctrl</kbd>+<kbd>R</kbd> to execute the code. The output of the executed code will appear in the result view.

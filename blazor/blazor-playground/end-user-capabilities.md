@@ -212,7 +212,7 @@ Include the dependency injection in the __Index.razor file, and you can also inc
 
 ## Handling static assets
 
-This section provides instructions on how to manage static assets within your application. Static assets includes stylesheets and scripts. Here is an example for adding the static assets in blazor playground,
+This section provides instructions on how to manage static assets within your application. Static assets includes stylesheets and scripts. Here is an example for adding the static assets in Blazor playground,
 
 1. Open the sidebar by clicking the "Nuget Asset Manager" button in the appbar.
 2. Navigate to the "Static Assets" tab.

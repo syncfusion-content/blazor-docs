@@ -7,20 +7,18 @@ component: Common
 documentation: ug
 ---
 
-Syncfusion provides an option to render a blazor components using [Blazor Playground](https://blazorplayground.syncfusion.com/). Playground offers a platform where developers can write, visualize, and experiment with Blazor components using C# and Razor syntax. The code compilation utilizes WebAssembly technology which gives a performance that closely resembles native execution.
+Syncfusion provides [Blazor Playground](https://blazorplayground.syncfusion.com/) that helps to write, visualize, and experiment with Blazor components using C# and Razor syntax. The code compilation utilizes WebAssembly which gives a performance that closely resembles native execution.
 
 # Getting Started with Blazor playground
 
-This section briefly explains about how to use the blazor playground.
-1. Open the [Blazor Playground](https://blazorplayground.syncfusion.com/) in your browser. 
-2. Use the code editor to create your desired  .razor format code. 
-3. Once you are done writing your code, press the run button or <kbd>Ctrl</kbd>+<kbd>R</kbd> to execute the code. The output of the executed code will appear in the result view.
+The Blazor playground allows you to develop and test any Blazor component, including both general components and pre-built Syncfusion Blazor components.
 
 ## Blazor Component
 
-You can create a blazor component in blazor playground by following the given steps below:
+You can create a Blazor component in Blazor playground by following the given steps below:
 
-1. Add the code in __Index.razor,
+1. Open the [Blazor Playground](https://blazorplayground.syncfusion.com/) URL in your browser. 
+2. Add the code in __Index.razor,
 
 ```cshtml
 <!-- ColorPicker.razor -->
@@ -72,15 +70,15 @@ You can create a blazor component in blazor playground by following the given st
     
 </style>
 ```
-2. Press the run button or <kbd>Ctrl</kbd>+<kbd>R</kbd> to execute the code. The output of the executed code will appear in the result view.
+3. Press the `run` button or <kbd>Ctrl</kbd>+<kbd>R</kbd> to execute the code. The output of the executed code will appear in the result view.
 
-![blazor_component](images/blazor_component.png)
+![Syncfusion Blazor Playground](images/blazor_component.png)
 
 ## Syncfusion Blazor component
 
-To render syncfusion components in blazor playground follow the steps given below:
+As Syncfusion Blazor playground comes pre-configured with `Syncfusion.Blazor` package, stylesheet, script, and namespace are included with the application. To render syncfusion components in Blazor playground, follow the steps given below:
 
-1. Import the Syncfusion.Blazor and Syncfusion.Blazor.Calendars namespace.
+1. Import the Syncfusion.Blazor and Syncfusion.Blazor.Calendars namespace on top of the code editor.
 
 
 ```cshtml
@@ -90,9 +88,7 @@ To render syncfusion components in blazor playground follow the steps given belo
 
 ```
 
-N>Since the latest `Syncfusion.Blazor` package is readily available in the Blazor playground, external installation is unnecessary. All necessary theme assets, including the stylesheet and scripts, are linked with the application.
-
-2. Add the Syncfusion Calendar component in the code editor.
+2. Add the Blazor Calendar component in the code editor.
 
 ```cshtml
 
@@ -100,6 +96,6 @@ N>Since the latest `Syncfusion.Blazor` package is readily available in the Blazo
 
 ```
 
-Press the run button or <kbd>Ctrl</kbd>+<kbd>R</kbd> to execute the code. The output of the executed code will appear in the result view.
+3. Press the `run` button or <kbd>Ctrl</kbd>+<kbd>R</kbd> to execute the code. The output of the executed code will appear in the result view.
 
-![syncfusion_component](images/syncfusion_component.png)
+![syncfusion Blazor Playground with Calendar component](images/syncfusion_component.png)
