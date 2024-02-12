@@ -15,10 +15,10 @@ N> From `v17.2.*` added only the limited number of events for the DatePicker com
 
 Event Name(`v17.1.*`) |Event Name(`v17.2.*`)
 -----|-----
-change |[ValueChange](events/#valuechange)
-close |[OnClose](events/#onclose)
-open |[OnOpen](events/#onopen)
-renderDayCell |[OnRenderDayCell](events/#onrenderdaycell)
+change |[ValueChange](events#valuechange)
+close |[OnClose](events#onclose)
+open |[OnOpen](events#onopen)
+renderDayCell |[OnRenderDayCell](events#onrenderdaycell)
 
 ## Blur
 

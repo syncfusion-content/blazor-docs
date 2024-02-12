@@ -72,14 +72,14 @@ Now, scaffold DbContext and model classes from the existing library database. To
 * Create the new project with Class Library template named as `BlazorWebApp.Shared` for DbContext and model class as shown below.
 ![Create Shared Project](../images/db-shared-project.png)
 
-  Additionally, ensure that you have added a reference to the `BlazorWebApp.Shared` project in both the server-side and client-side projects of your web application.
+Additionally, ensure that you have added a reference to the `BlazorWebApp.Shared` project in both the server-side and client-side projects of your web application.
 
 * Then, open the NuGet Package Manager and install the following packages in both the shared and server-side projects of your app.
 
    * [Microsoft.EntityFrameworkCore.Tools](https://www.nuget.org/packages/Microsoft.EntityFrameworkCore.Tools): This package creates database context and model classes from the database.
    * [Microsoft.EntityFrameworkCore.SqlServer](https://www.nuget.org/packages/Microsoft.EntityFrameworkCore.SqlServer/): The database provider that allows Entity Framework Core to work with SQL Server.
 
-   Alternatively, you can utilize the following package manager command to achieve the same.
+Alternatively, you can utilize the following package manager command to achieve the same.
 
 {% tabs %}
 {% highlight C# tabtitle="Package Manager" %}
@@ -91,18 +91,18 @@ Install-Package Microsoft.EntityFrameworkCore.SqlServer -Version 7.0.11
 {% endhighlight %}
 {% endtabs %}
 
-    Once the above packages are installed, you can scaffold DbContext and Model classes. Run the following command in the Package Manager Console under the `BlazorWebApp.Shared` project.
+Once the above packages are installed, you can scaffold DbContext and Model classes. Run the following command in the Package Manager Console under the `BlazorWebApp.Shared` project.
 
 ```
 Scaffold-DbContext “Server=localhost;Database=Library;Integrated Security=True” Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models
 
 ```
 
-    The above scaffolding command contains the following details for creating DbContext and model classes for the existing database and its tables.
+The above scaffolding command contains the following details for creating DbContext and model classes for the existing database and its tables.
 
-    * **Connection string**: Server=localhost;Database=Library;Integrated Security=True
-    * **Data provider**: Microsoft.EntityFrameworkCore.SqlServer
-    * **Output directory**: -OutputDir Models
+   * **Connection string**: Server=localhost;Database=Library;Integrated Security=True
+   * **Data provider**: Microsoft.EntityFrameworkCore.SqlServer
+   * **Output directory**: -OutputDir Models
 
 * After running the above command, **LibraryContext.cs** and **Book.cs** files will be created under the **Models** folder in the `BlazorWebApp.Shared` project as follows.
 
@@ -228,7 +228,7 @@ namespace BlazorWebApp.Controller
 Also, make sure to include the `AddControllers` and `MapControllers` methods in the Program.cs file of your server-side application.
 
 {% tabs %}
-{% highlight c# tabtitle="~/Program.cs" hl_lines="1 2 3 4" %}
+{% highlight c# tabtitle="~/Program.cs" hl_lines="2 4" %}
 ....
 builder.Services.AddControllers();
 ....
