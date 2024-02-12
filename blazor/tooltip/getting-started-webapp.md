@@ -25,7 +25,7 @@ You need to configure the corresponding [Interactive render mode](https://learn.
 
 To add **Blazor Tooltip** component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install [Syncfusion.Blazor.Popups](https://www.nuget.org/packages/Syncfusion.Blazor.Popups) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/).
 
-If you select an **Interactive render mode** as `WebAssembly` or `Auto`, you can install the NuGet package in the project any where to add component in Web App.
+If you utilize `WebAssembly or Auto` render modes in the Blazor Web App need to be install Syncfusion Blazor components NuGet packages within the client project.
 
 Alternatively, you can utilize the following package manager command to achieve the same.
 
@@ -115,7 +115,7 @@ Add the Syncfusion Blazor Tooltip component with the Syncfusion Blazor [Button](
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion Blazor Tooltip component in your default web browser.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rtVzDCXkzrmdaddJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Tooltip Component](./images/blazor-tooltip.gif)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BDLJNWgNzHwucLWE?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Tooltip Component](./images/blazor-tooltip.gif)" %}
 
 N> The Tooltip component in our system uses the HTML element's id or class name to identify the target for the tooltip. However, when using a GUID as the target ID, it is not able to recognize IDs that start with a digit.
 

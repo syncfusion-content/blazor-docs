@@ -25,7 +25,7 @@ You need to configure the corresponding [Interactive render mode](https://learn.
 
 To add **Blazor Skeleton** component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install [Syncfusion.Blazor.Notifications](https://www.nuget.org/packages/Syncfusion.Blazor.Notifications/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/).
 
-If you select an **Interactive render mode** as `WebAssembly` or `Auto`, you can install the NuGet package in the project any where to add component in Web App.
+If you utilize `WebAssembly or Auto` render modes in the Blazor Web App need to be install Syncfusion Blazor components NuGet packages within the client project.
 
 Alternatively, you can utilize the following package manager command to achieve the same.
 
@@ -107,7 +107,7 @@ Add the Syncfusion Blazor Skeleton component in the **~Pages/.razor** file. If a
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion Blazor Skeleton component in your default web browser.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BDhfXCjOBcbNWOHl?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Skeleton Component](./images/blazor-skeleton-component.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hNhfNWgXUFWfbEvA?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Skeleton Component](./images/blazor-skeleton-component.png)" %}
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/Skeleton/BlazorWebApp).
 
@@ -135,6 +135,6 @@ The [`Shape`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Notificati
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LXBpDCNOLlUkQdXp?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Skeleton Component](./images/blazor-skeleton-shape-sample.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BtrfDiqjgFiEILVS?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Skeleton Component](./images/blazor-skeleton-shape-sample.png)" %}
 
 N> You can also explore our [Blazor Skeleton example](https://blazor.syncfusion.com/demos/skeleton/defaultfunctionalities) that shows how to render and configure the skeleton.

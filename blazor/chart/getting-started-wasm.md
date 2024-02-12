@@ -100,9 +100,7 @@ Add the Syncfusion Blazor Chart component in the **~/Pages/Index.razor** file.
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion Blazor Chart component in your default web browser.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VZBgCBLBgpTiSRTp?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Blazor Chart](images/getting-started/blazor-chart.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rZLzNsLepwXKBvNw?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Chart Component](images/getting-started/blazor-chart.png)" %}
 
 ## Populate Blazor chart with data
 
@@ -166,9 +164,7 @@ Now, map the data fields  `Month` and `Sales` to the series [XName](https://help
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LZhAMBVVUzpJvywY?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Blazor Column Chart](images/getting-started/blazor-chart-column.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rtBTNiLezckHqsGf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Column Chart](images/getting-started/blazor-chart-column.png)" %}
 
 ## Add titles
 
@@ -189,9 +185,7 @@ Using the [Title](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hNBqMrrhKzzFhmmF?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Blazor Column Chart with Title](images/getting-started/blazor-chart-title.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VNBJjihozcpDsXHf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Column Chart with Title](images/getting-started/blazor-chart-title.png)" %}
 
 ## Add data label
 
@@ -215,9 +209,7 @@ You can add data labels to improve the readability of the chart. This can be ach
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rDBUsBVrApItlhRV?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Blazor Column Chart with Data Label](images/getting-started/blazor-chart-data-label.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hDVpjMhIzmJRkHwA?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Column Chart with DataLabel](images/getting-started/blazor-chart-data-label.png)" %}
 
 ## Enable Tooltip
 
@@ -239,9 +231,7 @@ When space constraints prevent you from displaying information using data labels
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BjrgMLhrAfSJAAOx?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Blazor Column Chart with Tooltip](images/getting-started/blazor-chart-tooltip.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rjVTNChepGIwhetf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Column Chart with Tooltip](images/getting-started/blazor-chart-tooltip.png)" %}
 
 ## Enable legend
 
@@ -263,9 +253,7 @@ You can use legend for the chart by setting the [Visible](https://help.syncfusio
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BXrUiVVBgJycpjdl?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Blazor Column Chart with Legend](images/getting-started/blazor-chart-legend.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VZrTDCLIpQHyGNEq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Column Chart with Legend](images/getting-started/blazor-chart-legend.png)" %}
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/Chart)
 

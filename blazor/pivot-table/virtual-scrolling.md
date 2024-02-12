@@ -166,6 +166,14 @@ Enabling this property causes the pivot table to render only the rows and column
 * Date Formatting, which takes additional time to convert date format.
 * Date Formatting with sorting, here additionally full date time format should be framed to perform sorting along with the provided date format which lags the performance.
 
+**Overcoming the browser's height limitation**
+
+You can load millions of records in the Blazor Pivot Table by using virtual scrolling, where the pivot table loads and renders rows on-demand while scrolling vertically. As a result, Pivot Table lightens the browser’s load by minimizing the DOM elements and rendering elements visible in the viewport. The height of the table is calculated using the Total Records Count * [RowHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewGridSettings.html#Syncfusion_Blazor_PivotView_PivotViewGridSettings_RowHeight) property.
+
+The browser has some maximum pixel height limitations for the scroll bar element. The content placed above the maximum height can’t be scrolled if the element height is greater than the browser’s maximum height limit. The browser height limit affects the virtual scrolling of the pivot table. Even when a large number of records are bound to the pivot table, it can only display the records until the maximum height limit of the browser. Once the browser’s height limit is reached while scrolling, you won’t be able to scroll further to view the remaining records.
+
+This maximum pixel height limitation differs between browsers and is entirely dependent on the browser's default behavior. So, it is best to set the [RowHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewGridSettings.html#Syncfusion_Blazor_PivotView_PivotViewGridSettings_RowHeight) to keep the virtual scroll bar element's height in the pivot table within the browser's maximum height limit.
+
 ## Data Compression
 
 N> This property is applicable only for relational data source.

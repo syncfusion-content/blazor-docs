@@ -171,8 +171,6 @@ Add the Syncfusion Blazor Carousel component in the **~/Pages/Index.razor** file
     }
 </style>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rNrKihBrVHeYBIqy?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Blazor Carousel Component.](images/blazor-carousel-getting-started.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZVTXWhIpyDoMAim?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Carousel Component.](images/blazor-carousel-getting-started.png)" %}
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/Carousel).

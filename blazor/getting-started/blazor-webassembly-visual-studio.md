@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Blazor WebAssembly App in Visual Studio
 
-This article provides a step-by-step instructions for building Blazor WebAssembly App with `Blazor Calendar` component using [Visual Studio](https://visualstudio.microsoft.com/vs/). 
+This article provides a step-by-step instructions for building Blazor WebAssembly App with `Blazor Calendar` component using [Visual Studio](https://visualstudio.microsoft.com/vs/).
 
 ## Prerequisites
 
@@ -71,7 +71,7 @@ await builder.Build().RunAsync();
 
 The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Reference the stylesheet and script in the `<head>` of the main page as follows:
 
-* For Blazor WebAssembly app, include it in the **~/index.html** file.
+* For Blazor WebAssembly app, include it in the **~wwwroot/index.html** file.
 
 ```html
 <head>

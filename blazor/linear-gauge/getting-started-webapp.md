@@ -27,7 +27,7 @@ You need to configure the corresponding [Interactive render mode](https://learn.
 
 To add **Blazor LinearGauge** component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install [Syncfusion.Blazor.LinearGauge](https://www.nuget.org/packages/Syncfusion.Blazor.LinearGauge).
 
-If you select an **Interactive render mode** as `WebAssembly` or `Auto`, you can install the NuGet package in the project any where to add component in Web App.
+If you utilize `WebAssembly or Auto` render modes in the Blazor Web App need to be install Syncfusion Blazor components NuGet packages within the client project.
 
 Alternatively, you can utilize the following package manager command to achieve the same.
 
@@ -110,7 +110,7 @@ Add the Syncfusion Blazor LinearGauge component in the **~Pages/.razor** file. I
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion Blazor LinearGauge component in your default web browser.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LDrTDsDPAZtwOtxU?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor LinearGauge Component](images/blazor-linear-gauge-component.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LjrzZCLkTTyPJnAO?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor LinearGauge Component](images/blazor-linear-gauge-component.png)" %}
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/LinearGauge/BlazorWebApp).
 
@@ -137,7 +137,7 @@ N> In LinearGauge, you can configure multiple axes. On each axis, you can add a 
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hjLzjCtFKjBniMkY?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor LinearGauge with Pointer Value](images/blazor-linear-gauge-with-pointer.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hZrJtWhEJTREUVHV?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor LinearGauge with Pointer Value](images/blazor-linear-gauge-with-pointer.png)" %}
 
 ## Add a title for Blazor LinearGauge
 
@@ -159,7 +159,7 @@ The title can be added to the linear gauge to provide a piece of quick informati
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VXrpZsXPqDfMKXSX?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor LinearGauge with Title](images/blazor-linear-gauge-with-title.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LZVTtsBuJzGmldKw?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor LinearGauge with Title](images/blazor-linear-gauge-with-title.png)" %}
 
 ## Add ranges in the Blazor LinearGauge
 
@@ -189,7 +189,7 @@ The range is used to specify a group of scale values in the gauge. You can set t
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VDrTtMNlANfPByWa?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor LinearGauge with Range Bar](images/blazor-linear-gauge-with-ranges.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hjrfjCrEpJFVEbRI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor LinearGauge with Range Bar](images/blazor-linear-gauge-with-ranges.png)" %}
 
 ## See also
 

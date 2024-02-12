@@ -51,7 +51,7 @@ In the following example, you can select the single node only.
 }
 ```
 
-![Selection in Blazor Dropdown Tree](./images/selection/blazor-dropdowntree-single-selection.png)
+![Selection in Blazor Dropdown Tree.](./images/selection/blazor-dropdowntree-single-selection.png)
 
 ## Multi Selection 
 
@@ -93,4 +93,4 @@ In the following example, the [AllowMultiSelection](https://help.syncfusion.com/
 }
 ```
 
-![MultiSelection in Blazor Dropdown Tree](./images/selection/blazor-dropdowntree-multi-selection.png)
+![MultiSelection in Blazor Dropdown Tree.](./images/selection/blazor-dropdowntree-multi-selection.png)

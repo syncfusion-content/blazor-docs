@@ -25,7 +25,7 @@ You need to configure the corresponding [Interactive render mode](https://learn.
 
 To add **Blazor TimePicker** component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install [Syncfusion.Blazor.Calendars](https://www.nuget.org/packages/Syncfusion.Blazor.Calendars) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/).
 
-If you select an **Interactive render mode** as `WebAssembly` or `Auto`, you can install the NuGet package in the project any where to add component in Web App.
+If you utilize `WebAssembly or Auto` render modes in the Blazor Web App need to be install Syncfusion Blazor components NuGet packages within the client project.
 
 Alternatively, you can utilize the following package manager command to achieve the same.
 
@@ -106,7 +106,7 @@ Add the Syncfusion Blazor TimePicker component in the **~Pages/.razor** file. If
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion Blazor TimePicker component in your default web browser.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LZLzDMNYzCKonpeq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor TimePicker Component](./images/blazor-timepicker.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BtBJjCKtzSOIsHLx?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor TimePicker Component](./images/blazor-timepicker.png)" %}
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/TimePicker/BlazorWebApp).
 
@@ -129,7 +129,7 @@ The below code demonstrates how to render TimePicker component in 24 hours Forma
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hXVTjijuTCSjRxkR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor TimePicker with Time Format](./images/blazor-timepicker-time-format.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LXVpXCUtfRjicUbp?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor TimePicker with Time Format](./images/blazor-timepicker-time-format.png)" %}
 
 ## See Also
 

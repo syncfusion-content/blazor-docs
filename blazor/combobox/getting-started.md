@@ -124,9 +124,7 @@ Add the Syncfusion Blazor ComboBox component in the **~/Pages/Index.razor** file
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion Blazor ComboBox component in your default web browser.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rNVgWBBGqybRoobd?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Blazor ComboBox Component](./images/blazor-combobox-component.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rtBpNiBuBWhiNjHa?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor ComboBox Component](./images/blazor-combobox-component.png)" %}
 
 ## Binding data source
 
@@ -162,9 +160,7 @@ After initializing, populate the ComboBox with data using the [DataSource](https
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VjLgihBwAouWiASQ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Blazor ComboBox with Data Binding](./images/blazor-combobox-data-binding.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VtBpjsLOhCBHPRgS?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor ComboBox with Data Binding](./images/blazor-combobox-data-binding.png)" %}
 
 ## Custom values
 
@@ -179,9 +175,8 @@ The ComboBox allows the users to give input as custom value, which is not requir
 
 {% endhighlight %}
 {% endtabs %}
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hDVKMVVcgeknwlQS?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-![Blazor ComboBox with Custom Values](./images/blazor-combobox-custom-values.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNVzXMVOrszHZiMo?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor ComboBox with Custom Values](./images/blazor-combobox-custom-values.png)" %}
 
 ## Configure the popup list
 
@@ -197,9 +192,7 @@ By default, the width of the popup list automatically adjusts according to the C
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hDVUCVhwUHDtyDRq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Customizing Popup Height and Width in Blazor ComboBox](./images/blazor-combobox-popup-customization.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rZBpXirahMIhXWui?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Customizing Popup Height and Width in Blazor ComboBox](./images/blazor-combobox-popup-customization.png)" %}
 
 ## See also
 
