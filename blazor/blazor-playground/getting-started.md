@@ -9,11 +9,11 @@ documentation: ug
 
 Syncfusion provides [Blazor Playground](https://blazorplayground.syncfusion.com/) that helps to write, visualize, and experiment with Blazor components using C# and Razor syntax. The code compilation utilizes WebAssembly which gives a performance that closely resembles native execution.
 
-# Getting Started with Blazor playground
+# Getting Started with Blazor Playground
 
 The Blazor playground allows you to develop and test any Blazor component, including both general components and pre-built Syncfusion Blazor components.
 
-## Blazor Component
+## Blazor component
 
 You can create a Blazor component in Blazor playground by following the given steps below:
 

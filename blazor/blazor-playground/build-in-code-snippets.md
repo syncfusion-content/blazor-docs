@@ -7,7 +7,7 @@ component: Common
 documentation: ug
 ---
 
-# Predefined code templates for Blazor
+# Predefined code snippets for Blazor Playground
 Blazor Playground provides pre-defined code snippets for all Syncfusion Blazor components that helps to ease access the component's code snippets.  
 
 1. Click the "Snippet" button to open a popup containing a list of predefined code snippets for Syncfusion Blazor UI components.

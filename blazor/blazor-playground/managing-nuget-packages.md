@@ -37,7 +37,7 @@ Click the `Remove` button next to the installed package details to uninstall it.
 
 ![Syncfusion Blazor Playground with Delete Package](images/delete_Package.gif)
 
-### Versioning
+### Control the NuGet versioning
 
 Upgrade or downgrade packages by searching for the desired package name and selecting the specific version. The Playground will handle installation or updates accordingly.
 

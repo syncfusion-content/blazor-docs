@@ -6,19 +6,98 @@ platform: Blazor
 component: Common
 documentation: ug
 ---
-# Update configuration and add new services
+# Configuring services in Blazor Playground
 
-To add new services or modify the existing ones in your program, you can access the Services button located in the app bar.
-Then, go to the ConfigureServices method in the Program.cs file, where you can add new injectable services or override the existing service configuration to suit your requirements.
+You an add or modify services in Blazor Playground using the "Services" button in the app bar.
+* Access the ConfigureServices method in Program.cs for adding new injectable services or overriding existing service configurations.
+* Register the created service class in the ConfigureServices method.
+* Inject the service into components as needed using dependency injection.
 
-For example, you can add the [C# file](#how-to-addremove-classes) and then click the "Services" button to configure the created class in the program.cs file.
+For example 
+1. Add a class file by clicking '+' button and include the following code snippet.
 
-![Add new services](images/Configuring_Services.png)
+```csharp
+using System;
+using System.Text;
+using System.Linq;
+using System.Threading.Tasks;
+using System.Collections.Generic;
 
-Then, register the services in ConfigureServices method.
+namespace Playground.User
+{
+    public class CounterService
+    {
+        private int _count = 0;
 
-![Configuring Services](images/Services_Program.png)
+        public int Count => _count;
 
-In this example, dependency injection is applied within the index.razor. You have the flexibility to inject the required dependencies according to your specific needs.
+        public void Increment()
+        {
+            _count++;
+        }
 
-![Injecting services](images/Inject_Services.png)
+        public void Decrement()
+        {
+            _count--;
+        }
+    }
+}
+```
+2. Click the "Services" button to configure the created class in the Program.cs file. Then, register the services in `ConfigureServices` method.
+
+```csharp
+using System;
+using System.Text;
+using System.Linq;
+using System.Threading.Tasks;
+using System.Collections.Generic;
+using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
+using Microsoft.Extensions.DependencyInjection;
+
+namespace Playground.User
+{
+    public class Program
+    {
+        /// <summary>
+        /// Configure Services method to add and configure the <see href="https://docs.microsoft.com/en-us/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">service collection</see>.
+        /// </summary>
+        /// <param name="WebAssemblyHostBuilder">A builder for configuring services and creating a WebAssemblyHost.</param>
+        /// <returns>The collection of services.</returns>
+        public static void ConfigureServices(WebAssemblyHostBuilder builder)
+        {
+            builder.Services.AddScoped<CounterService>();
+            // Configure your service here.
+            // For e.g., builder.Services.AddSingleton(new CustomClass());
+        }
+    }
+}
+```
+
+3. Include the dependency injection in the __Index.razor file.
+
+```csharp
+
+<h3>Counter</h3>
+
+<p>Current Count: @counterService.Count</p>
+
+<button @onclick="Increment">Increment</button>
+<button @onclick="Decrement">Decrement</button>
+
+@code {
+    [Inject]
+    private CounterService counterService { get; set; }
+
+    private void Increment()
+    {
+        counterService.Increment();
+    }
+
+    private void Decrement()
+    {
+        counterService.Decrement();
+    }
+}
+
+```
+![Syncfusion Blazor Playground with adding services](images/add_services.gif)
