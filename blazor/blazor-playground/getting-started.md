@@ -76,7 +76,7 @@ You can create a Blazor component in Blazor playground by following the given st
 
 ## Syncfusion Blazor component
 
-As Syncfusion Blazor playground comes pre-configured with `Syncfusion.Blazor` package, stylesheet, script, and namespace are included with the application. To render syncfusion components in Blazor playground, follow the steps given below:
+As Syncfusion Blazor playground comes pre-configured with `Syncfusion.Blazor` package, stylesheet, script, and namespace are included with the application. To render Syncfusion components in Blazor playground, follow the steps given below:
 
 1. Import the Syncfusion.Blazor and Syncfusion.Blazor.Calendars namespace on top of the code editor.
 
@@ -98,4 +98,4 @@ As Syncfusion Blazor playground comes pre-configured with `Syncfusion.Blazor` pa
 
 3. Press the `run` button or <kbd>Ctrl</kbd>+<kbd>R</kbd> to execute the code. The output of the executed code will appear in the result view.
 
-![syncfusion Blazor Playground with Calendar component](images/syncfusion_component.png)
+![Syncfusion Blazor Playground with Calendar component](images/syncfusion_component.png)

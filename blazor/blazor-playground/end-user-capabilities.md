@@ -36,7 +36,7 @@ Easily locate specific code snippets using the search functionality. Additionall
 This section outlines the steps to compile and run your code using our platform. Follow these instructions to execute your code successfully.
 
 ### Run the Compiled Code
-Press the run button or <kbd>Ctrl</kbd>+<kbd>R</kbd>, the code undergoes compilation and execution. The outcome is then displayed, presenting the compiled code within the result view.
+Press the `Run` button or <kbd>Ctrl</kbd>+<kbd>R</kbd>, the code undergoes compilation and execution. The outcome is then displayed, presenting the compiled code within the result view.
 
 ## Preview code output
 
@@ -89,7 +89,7 @@ You can customize the embed link through different options, such as
 * Display Error Console: Shows the warnings and errors console. 
 * Display App Bar: Enables the app bar which contains only run button.
 
-When you enabled all the options, the code editor, result view, app bar and error console become visible. This setup allows the users to modify the code but not the installed packages. The app bar shows a run button for code execution and compilation.
+When you enabled all the options, the code editor, result view, app bar and error console become visible. This setup allows the users to modify the code but not the installed packages. The app bar shows a `Run` button for code execution and compilation.
 
 ![Enable all the options](images/Embed_enableall.png)
 

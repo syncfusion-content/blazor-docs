@@ -47,7 +47,7 @@ Password:
 
 ```
 
-2. The __Index.razor file is the main file for the Blazor playground application. To view the outcome of the child component, you should refer the child component in the __Index.razor file and press run button to execute the code.
+2. The __Index.razor file is the main file for the Blazor playground application. To view the outcome of the child component, you should refer the child component in the __Index.razor file and press `Run` button to execute the code.
 
 ```cshtml
 
