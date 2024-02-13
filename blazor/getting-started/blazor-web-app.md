@@ -15,8 +15,6 @@ This article provides a step-by-step instructions for building `Blazor Web App` 
 
 [Blazor Playground](https://blazor.syncfusion.com/documentation/blazor-playground/overview) allows you to interact with our Blazor components directly in your web browser without need to install any required NuGet packages. By default, the `Syncfusion.Blazor` package is included in this.
 
-{% BlazorPlayground "https://blazorplayground.syncfusion.com/" %}
-
 To use the individual component in Blazor playground, uninstall the existing package and then install the needed NuGet package.
 
 ![Blazor Playground with Accordion component](images/pg-accordion.png)
