@@ -2,7 +2,7 @@
 layout: post
 title: Annotations in Mobile View using SfPdfViewer Component | Syncfusion
 description: Checkout and learn everything about annotations in the mobile view using the Syncfusion Blazor SfPdfViewer component and more.
-platform: Blazor
+platform: Blaz
 control: SfPdfViewer
 documentation: ug
 ---
@@ -17,7 +17,7 @@ To Open the annotation toolbar, click on the **Edit Annotation** option in the m
 
 Click the **Sticky Note Annotation** icon and then click anywhere in the viewer to add the sticky notes. 
 
-![Click Sticky Note icon in Blazor SfPdfViewer](../../pdfviewer-2/images/click-stickynote-annotation.png)
+![Click Sticky Note icon in Blazor SfPdfViewer](../../pdfviewer/images/click-stickynote-annotation.png)
 
 This action will open the comment panel, allowing you to add the required comment for the added sticky notes.
 
