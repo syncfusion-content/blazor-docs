@@ -13,17 +13,22 @@ In [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gant
 
 ## Mapping segment fields
 
-To enable the split task feature using the [GanttSegmentFields](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttSegmentFields.html) in the [SfGantt](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html) chart, you can utilize its properties such as [PrimaryKey](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttSegmentFields.html#Syncfusion_Blazor_Gantt_GanttSegmentFields_PrimaryKey), [ForeignKey](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttSegmentFields.html#Syncfusion_Blazor_Gantt_GanttSegmentFields_ForeignKey), [StartDate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttSegmentFields.html#Syncfusion_Blazor_Gantt_GanttSegmentFields_StartDate), [EndDate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttSegmentFields.html#Syncfusion_Blazor_Gantt_GanttSegmentFields_EndDate), [Duration](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttSegmentFields.html#Syncfusion_Blazor_Gantt_GanttSegmentFields_Duration), [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttSegmentFields.html#Syncfusion_Blazor_Gantt_GanttSegmentFields_DataSource).
+To enable the split task feature using the [GanttSegmentFields](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttSegmentFields-2.html) in the [SfGantt](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html) chart, you can utilize its properties such as [PrimaryKey](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttSegmentFields-2.html#Syncfusion_Blazor_Gantt_GanttSegmentFields_2_PrimaryKey), [ForeignKey](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttSegmentFields-2.html#Syncfusion_Blazor_Gantt_GanttSegmentFields_2_ForeignKey), [StartDate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttSegmentFields-2.html#Syncfusion_Blazor_Gantt_GanttSegmentFields_2_StartDate), [EndDate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttSegmentFields-2.html#Syncfusion_Blazor_Gantt_GanttSegmentFields_2_EndDate), [Duration](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttSegmentFields-2.html#Syncfusion_Blazor_Gantt_GanttSegmentFields_2_Duration), [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttSegmentFields-2.html#Syncfusion_Blazor_Gantt_GanttSegmentFields_2_DataSource).
+
+![Split task in Blazor Gantt Chart](images/blazor-gantt-chart-split-task.png)
 
 ## Interaction modes for split and merge task
 
   `Dialog`: The Segments tab includes a mandatory start date. The inclusion of either duration or end date is optional, and this behavior is based on the mapping in the `GanttSegmentFields` component.
 
+  ![Editing split task with edit dialog](images/blazor-gantt-chart-split-task-dialog.png) 
+
   `Context menu`: If the `GanttSegmentFields` component is mapped and the [EnableContextMenu](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_EnableContextMenu) property is enabled, the context menu will include the `Split Task` and `Merge Task` items.
   You can split taskbar by first opening the context menu within the taskbar. To merge taskbars, click the taskbar and choose the merge action either to the right or left.
 
-  `Method`: You can split taskbar using the [SplitTaskAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_SplitTaskAsync) method and merge taskbar using the [MergeTaskAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_MergeTaskAsync) method.
+  ![Editing split task with context menu](images/blazor-gantt-chart-split-task-context.png)
 
+  `Method`: You can split taskbar using the [SplitTaskAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_SplitTaskAsync_System_Int32_System_Collections_Generic_List_System_DateTime__) method and merge taskbar using the [MergeTaskAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_MergeTaskAsync_System_Int32_System_Collections_Generic_List_System_ValueTuple_System_Int32_System_Int32___) method.
 
 ```cshtml
 @using Syncfusion.Blazor.Gantt
@@ -119,7 +124,7 @@ To enable the split task feature using the [GanttSegmentFields](https://help.syn
 
 ## Segment event
 
-The [SegmentChanging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttSegmentFields.html#Syncfusion_Blazor_Gantt_GanttSegmentFields_SegmentChanging) event is triggered when split and merge actions are performed, and there are changes in the scheduling of tasks.
+The [SegmentChanging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttSegmentFields-2.html#Syncfusion_Blazor_Gantt_GanttSegmentFields_2_SegmentChanging) event is triggered when split and merge actions are performed, and there are changes in the scheduling of tasks.
 
 > The `Cancel` property is only applicable for split and merge actions; it does not apply to changes in the scheduling of tasks.
 
@@ -383,21 +388,6 @@ To customize segment taskbars, you can use the [TaskbarTemplate](https://help.sy
     }
 }
 ```
-
-#### Split task in Blazor Gantt Chart
-
-![Split task in Blazor Gantt Chart](images/blazor-gantt-chart-split-task.png)
-
-#### Editing split task with edit dialog
-
-![Editing split task with edit dialog](images/blazor-gantt-chart-split-task-dialog.png)
-
-#### Editing split task with context menu
-
-![Editing split task with context menu](images/blazor-gantt-chart-split-task-context.png)
-
-#### Split task template in Blazor Gantt Chart
-
 ![Split task template in Blazor Gantt Chart](images/blazor-gantt-chart-split-task-template.png)
 
 ## Limitation
