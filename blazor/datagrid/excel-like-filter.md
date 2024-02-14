@@ -826,6 +826,14 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
+## Add current selection to filter checkbox
+
+By default, the CheckBox filter can only filter the selected items. If filtering is done multiple times on the same column, the previously filtered values in the column will be cleared. Now, it is possible to retain those previous values by using the Add current selection to filter checkbox. This checkbox is displayed when data is searched in the search bar of the CheckBox filter.
+
+The following image describes the above mentioned behavior.
+
+![AddCurrentSelectionToFilter in Blazor DataGrid](./images/blazor-datagrid-add-current-selection-to-filter.png)
+
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VDBfNLDBsuTLPqvx?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 N> You can refer to our [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap4) to understand how to present and manipulate data.
