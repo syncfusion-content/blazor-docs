@@ -13,8 +13,8 @@ Syncfusion Blazor Playground pre-configures the `Syncfusion.Blazor` package for 
 
 ## Adding NuGet packages
 
-1. Open the NuGet Asset Manager sidebar.
-2. Search and select the desired package with its preferred version. Install it using the `Install NuGet` button.
+* Open the NuGet Asset Manager sidebar.
+* Search and select the desired package with its preferred version. Install it using the `Install NuGet` button.
 
 N>Uninstall the `Syncfusion.Blazor` package before installing individual packages.
 
@@ -22,22 +22,22 @@ For example, Uninstall `Syncfusion.Blazor` and install the latest [Syncfusion.Bl
 
 ![Syncfusion Blazor Playground with NuGet Package](images/adding_package.gif)
 
-3. Add the rendering code in the code editor.
+* Add the rendering code in the code editor.
 
 ```csharp
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Calendars
 <SfCalendar TValue="DateTime"></SfCalendar>
 ```
-4. Execute the code with the `Run` button or <kbd>Ctrl</kbd>+<kbd>R</kbd> to execute the code. The output will appear in the result view.
+* Execute the code with the `Run` button or <kbd>Ctrl</kbd>+<kbd>R</kbd> to execute the code. The output will appear in the result view.
 
-### Removing packages
+### Removing Packages
 
 Click the `Remove` button next to the installed package details to uninstall it.
 
 ![Syncfusion Blazor Playground with Delete Package](images/delete_Package.gif)
 
-### Control the NuGet versioning
+### Control the NuGet Versioning
 
 Upgrade or downgrade packages by searching for the desired package name and selecting the specific version. The Playground will handle installation or updates accordingly.
 
