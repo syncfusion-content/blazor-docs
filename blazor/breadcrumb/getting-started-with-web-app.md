@@ -108,7 +108,7 @@ Add the Syncfusion Blazor Breadcrumb component in the **~Pages/.razor** file. If
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rXhpNiBSgmQNkpCP?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/Breadcrumb/BlazorWebApp).
+N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/Breadcrumb).
 
 ## Add items to the Blazor Breadcrumb component
 
