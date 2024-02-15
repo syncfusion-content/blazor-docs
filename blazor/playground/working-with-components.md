@@ -9,13 +9,14 @@ documentation: ug
 
 # Working with components in Blazor Playground
 
-## Adding a child component
+## Adding a Child Component
 
-1. Click the "+" button to add a new component.
-2. Name the component in the input box.
-3. Add the corresponding code within the child component file (e.g., .razor).
+* Click the "+" button to add a new component.
+* Name the component in the input box.
+* Add the corresponding code within the child component file (e.g., .razor).
 
-For example, ChildComponent.razor
+For example, **ChildComponent.razor**
+
 ```cshtml
 <input @oninput="OnPasswordChanged"
        required
@@ -43,7 +44,7 @@ For example, ChildComponent.razor
     }
 }
 ```
-4. The __Index.razor file is the main file for the Blazor playground application. To view the outcome of the child component, refer the child component in the __Index.razor file.
+* The **__Index.razor** file is the main file for the Blazor playground application. To view the outcome of the child component, refer the child component in the **__Index.razor** file.
 
 ```cshtml
 <h1>Parent Component</h1>
@@ -54,11 +55,11 @@ For example, ChildComponent.razor
     private string _password;
 }
 ```
-5. Press the "Run" button to execute the code and see the component rendered.
+* Press the `Run` button to execute the code and see the component rendered.
 
-![Syncfusion Blazor Playground with child component](images/child_component.gif)
+![Syncfusion Blazor Playground with Child Component](images/child_component.gif)
 
-## Removing a child component:
+## Removing a Child Component
 
 Click the delete icon next to the child component in the Playground.
 
