@@ -21,7 +21,7 @@ To enable the split task feature using the [GanttSegmentFields](https://help.syn
 
   `Dialog`: The Segments tab includes a mandatory start date. The inclusion of either duration or end date is optional, and this behavior is based on the mapping in the `GanttSegmentFields` component.
 
-  ![Editing split task with edit dialog](images/blazor-gantt-chart-split-task-dialog.png)
+  ![Editing split task with edit dialog](images/blazor-gantt-chart-split-task-dialog.png) 
 
   `Context menu`: If the `GanttSegmentFields` component is mapped and the [EnableContextMenu](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_EnableContextMenu) property is enabled, the context menu will include the `Split Task` and `Merge Task` items.
   You can split taskbar by first opening the context menu within the taskbar. To merge taskbars, click the taskbar and choose the merge action either to the right or left.
