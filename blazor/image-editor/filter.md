@@ -76,7 +76,7 @@ Here is an example of filtering using the [`ApplyImageFilterAsync`](https://help
 }
 ```
 
-![Blazor Image Editor with Filter an image](./images/blazor-image-editor-filter.png)
+![Blazor Image Editor with Filter an image](./images/blazor-image-editor-filter.jpg)
 
 ### Image filtering event 
 
@@ -86,4 +86,6 @@ The parameter available in the [`ImageFilterEventArgs`](https://help.syncfusion.
 
 ImageFilterEventArgs.Filter - The type of filtering as ImageFilterOption to be applied in the image editor. 
 
-ImageFilterEventArgs.Cancel – Specifies to cancel the filtering action. 
+ImageFilterEventArgs.Cancel – Specifies to cancel the filtering action.
+
+N> Please note that the Filter and Finetune features were unavailable on iOS due to the non-functioning CanvasContext.filter property on this platform.
