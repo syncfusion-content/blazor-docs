@@ -682,7 +682,7 @@ In the following code sample, you can prevent default filter query generation us
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hXrgXxVXqtCMhOps?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZrzXrWOrKYCkblp?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 
 ## Enable multiple foreign key columns
