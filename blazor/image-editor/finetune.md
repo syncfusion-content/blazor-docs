@@ -82,7 +82,7 @@ Here is an example of hue, exposure, and blur fine-tuning using the [`FinetuneIm
 }
 ```
 
-![Blazor Image Editor with Finetune an image](./images/blazor-image-editor-finetune.png)
+![Blazor Image Editor with Finetune an image](./images/blazor-image-editor-finetune.jpg)
 
 ## Finetune value changing event 
 
