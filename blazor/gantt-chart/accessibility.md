@@ -36,7 +36,7 @@ The following ARIA attributes are used in Gantt:
 
 | **Attributes** | **Description** |
 | --- | --- |
-| `grid (role)` | This attribute is added to the `e-table` element present in the Gantt, which represents Grid part. |
+| `treegrid (role)` | Used to convey a significant and contextual message to the user. This attribute is added to the `e-table` element present in the Gantt, which represents Grid part. |
 | `gridcell (role)` | This attribute is added to the `td` elements present within the `e-table`, which represents the work cells of Gantt .|
 | `columnheader (role)` | This attribute is added to the `th` elements within the `e-table`, which represents the header cells of Grid table. |
 | `separator (role)` | This attribute is added to the `e-split-bar` element, which represents the splitter between the Grid table and Chart. |
@@ -49,9 +49,7 @@ The following ARIA attributes are used in Gantt:
 
 ## Keyboard navigation
 
-Gantt functionalities can be interactive with keyboard shortcuts.
-
-The following keyboard shortcuts are supported by Gantt.
+The Gantt component followed the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns) guideline, making it easy for people who use assistive technologies (AT) and those who completely rely on keyboard navigation. The following keyboard shortcuts are supported by the Gantt component.
 
 Interaction Keys |Description
 -----|-----
@@ -89,4 +87,4 @@ N> You can refer to our [Blazor Gantt Chart](https://www.syncfusion.com/blazor-c
 
 ## See also
 
-* [How to bind the native events in Gantt Chart](https://blazor.syncfusion.com/documentation/gantt-chart/how-to/bind-native-events)
+* [Accessibility in Syncfusion Blazor components](https://blazor.syncfusion.com/documentation/common/accessibility)
