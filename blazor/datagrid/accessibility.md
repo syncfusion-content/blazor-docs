@@ -22,7 +22,6 @@ The accessibility compliance for the Grid component is outlined below.
 | [Color Contrast](../common/accessibility#color-contrast) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
 | [Mobile Device Support](../common/accessibility#mobile-device-support) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
 | [Keyboard Navigation Support](../common/accessibility#keyboard-navigation-support) |<img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Intermediate"> |
-| [Accessibility Checker Validation](../common/accessibility#ensuring-accessibility) | <img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Intermediate"> |
 | [Axe-core Accessibility Validation](../common/accessibility#ensuring-accessibility) | <img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Intermediate"> |
 
 <style>
@@ -207,11 +206,9 @@ The Grid component followed the [keyboard interaction](https://www.w3.org/WAI/AR
 
 ## Ensuring accessibility
 
-The Grid component's accessibility levels are ensured through an [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) software tools during automated testing.
+The Grid component's accessibility levels are ensured through an [axe-core](https://www.nuget.org/packages/Deque.AxeCore.Playwright) with playwright tests.
 
 The accessibility compliance of the Grid component is shown in the following sample. Open the [sample](https://blazorplayground.syncfusion.com/embed/VXrzZLMViScgbigc?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5) in a new window to evaluate the accessibility of the Grid component with accessibility tools.
-
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VXrzZLMViScgbigc?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## See also
 
