@@ -29,7 +29,7 @@ The accessibility compliance for the Gantt component is outlined below.
 
 ## WAI-ARIA
 
-The Gantt component followed the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns) patterns to meet the accessibility. The following ARIA attributes are used in the Gantt component:
+The Gantt component followed the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/) patterns to meet the accessibility. The following ARIA attributes are used in the Gantt component:
 
 The following ARIA attributes are used in Gantt:
 
@@ -49,7 +49,7 @@ The following ARIA attributes are used in Gantt:
 
 ## Keyboard navigation
 
-The Gantt component followed the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns) guideline, making it easy for people who use assistive technologies (AT) and those who completely rely on keyboard navigation. The following keyboard shortcuts are supported by the Gantt component.
+The Gantt component followed the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/) guideline, making it easy for people who use assistive technologies (AT) and those who completely rely on keyboard navigation. The following keyboard shortcuts are supported by the Gantt component.
 
 Interaction Keys |Description
 -----|-----
