@@ -132,7 +132,7 @@ To render Breadcrumb component with items use [BreadcrumbItem](https://help.sync
 
 N> Place list of [BreadcrumbItem](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.BreadcrumbItem.html) within [BreadcrumbItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.BreadcrumbItems.html) tag directive.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LZVzNCByUbgRQChk?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Breadcrumb Component](./images/blazor-Breadcrumb-items.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LZVzNCByUbgRQChk?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Breadcrumb Component](./images/blazor-breadcrumb-items.png)" %}
 
 ## Enable or disable navigation
 

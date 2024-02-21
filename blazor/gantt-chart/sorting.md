@@ -355,7 +355,7 @@ The following code snippets explains how to achieve this.
 
 ## Touch interaction
 
-To perform `tap` action on a column header, trigger [Sorting](sorting/#sorting) operation to the selected column. A popup is displayed for multi-column sorting. To sort multiple columns, tap the popup, and then tap the desired column headers.
+To perform `tap` action on a column header, trigger [Sorting](https://blazor.syncfusion.com/documentation/gantt-chart/sorting) operation to the selected column. A popup is displayed for multi-column sorting. To sort multiple columns, tap the popup, and then tap the desired column headers.
 
 The following screenshot shows Gantt touch sorting,
 
