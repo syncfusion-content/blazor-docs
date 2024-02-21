@@ -9,6 +9,8 @@ documentation: ug
 
 # Accessibility in Blazor Maps Component
 
+Maps has built-in accessibility features like screen reading and WAI-ARIA attributes.
+
 ## WAI-ARIA attributes
 
 To meet accessibility standards, the Maps component follows to the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/alert/) patterns. In the Maps component, the following ARIA attributes are used:
