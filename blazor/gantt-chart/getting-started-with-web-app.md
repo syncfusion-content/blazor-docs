@@ -515,7 +515,7 @@ The following sample code demonstrates notifying user when server-side exception
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VNBTZCBkAYLYNvrK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Gantt Chart](images/blazor-gantt-chart-handling-exception.PNG)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VNBTZCBkAYLYNvrK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Gantt Chart](images/blazor-gantt-chart-handling-exception.png)" %}
 
 ## See also
 
