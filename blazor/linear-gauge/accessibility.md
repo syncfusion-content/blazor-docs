@@ -17,8 +17,8 @@ The Linear Gauge component followed the [WAI-ARIA](https://www.w3.org/WAI/ARIA/a
 
 | Attributes | Purpose |
 | --- | --- |
-| `role=region` | It is specified in the pointer where the interactive drag and drop function is supported to update the pointer value. |
-| `aria-label` | Provides an accessible name for the axis labels, text pointer and annotation. |
+| `role=region` | It is specified in the title and pointer. In the pointer where the interactive drag and drop function is supported to update the pointer value. |
+| `aria-label` | Provides an accessible name for the pointers and title. |
 
 ## Screen reading in Linear Gauge
 

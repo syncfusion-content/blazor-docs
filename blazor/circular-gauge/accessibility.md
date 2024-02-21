@@ -19,8 +19,8 @@ The Circular Gauge component followed the [WAI-ARIA](https://www.w3.org/WAI/ARIA
 
 | Attributes | Purpose |
 | --- | --- |
-| `role=region` | It is specified in the pointer where the interactive drag and drop function is supported to update the pointer value. |
-| `aria-label` | Provides an accessible name for the axis labels, legend title, legend item label, text pointer and annotation. |
+| `role=region` | It is specified in the annotation, title and pointer. In the pointer where the interactive drag and drop function is supported to update the pointer value.|
+| `aria-label` | Provides an accessible name for the title, pointers and annotation. |
 
 ## Screen reading in Circular Gauge
 
@@ -28,11 +28,7 @@ Accessibility in the Circular Gauge component ensures that all users, regardless
 
 | Elements | Description |
 | --- | --- |
-| Axis labels | Reads the axis labels of the Circular Gauge. |
-| Legend title | Reads the title of the legend in the Circular Gauge. |
-| Legend item label | Reads the label of the legend item in the Circular Gauge. |
-| Text pointer | Reads the text content shown as a pointer in Circular Gauge. |
-| Annotation | Reads the content specified in the annotation. |
+| Title | Reads the title in the Circular Gauge. |
 
 ## Ensuring accessibility
 
