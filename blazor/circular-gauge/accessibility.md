@@ -19,7 +19,7 @@ The Circular Gauge component followed the [WAI-ARIA](https://www.w3.org/WAI/ARIA
 
 | Attributes | Purpose |
 | --- | --- |
-| `role=region` | It is specified in the annotation, title and pointer. In the pointer where the interactive drag and drop function is supported to update the pointer value.|
+| `role=region` | It is specified in the pointer, annotation, and title. The pointer supports the interactive drag-and-drop function to update the pointer value. |
 | `aria-label` | Provides an accessible name for the title, pointers and annotation. |
 
 ## Screen reading in Circular Gauge
@@ -28,8 +28,10 @@ Accessibility in the Circular Gauge component ensures that all users, regardless
 
 | Elements | Description |
 | --- | --- |
-| Title | Reads the title in the Circular Gauge. |
+| Title | Reads the title of the Circular Gauge. |
 
 ## Ensuring accessibility
 
 The Circular Gauge component's accessibility levels are ensured through an [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) software tools during automated testing.
+
+The accessibility compliance of the Circular Gauge component is shown in [this sample](https://blazor.syncfusion.com/accessibility/circulargauge). Open the sample in a new window to evaluate the accessibility of the Circular Gauge component with accessibility tools.
