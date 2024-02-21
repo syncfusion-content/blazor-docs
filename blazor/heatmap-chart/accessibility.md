@@ -9,16 +9,17 @@ documentation: ug
 
 # Accessibility in Blazor HeatMap Component
 
-HeatMap has built-in accessibility features like screen reading. Screen reading in the HeatMap component allows all users, regardless of ability or disability, to use the component. The following HeatMap elements will be read aloud with screen reading software like Narrator for Windows.
+HeatMap has built-in accessibility features like WAI-ARIA attributes.
 
-| Elements | Description |
+## WAI-ARIA attributes
+
+The HeatMap component followed the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/alert/) patterns to meet the accessibility. The following ARIA attributes are used in the HeatMap component:
+
+| Attributes | Purpose |
 | --- | --- |
-| Title | Reads the contents of the HeatMap chart's title. |
-| Axis labels | Reads the x and y axis labels of the HeatMap chart. |
-| Multilevel labels | Reads the multilevel labels in the x and y axis of the HeatMap chart. |
-| Cell labels | Reads the labels from the cells in the Heatmap chart. |
-| Legend title | Reads the contents of the legend's title as specified in HeatMap chart. |
-| Legend item label | Reads the label of a legend item in HeatMap chart. |
+| `role=img` | It is specified in the legend and border of the heatmap element. It is used to identify the specified element is a SVG element in the HeatMap component. |
+| `aria-label` | Provides an accessible name for the gradient heatmap cells. |
+| `aria-hidden` | Provides an accessible name for the legends. |
 
 ## Ensuring accessibility
 
