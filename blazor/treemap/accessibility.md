@@ -18,7 +18,7 @@ The TreeMap component follows the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/pat
 | Attributes | Purpose |
 | --- | --- |
 | `role=region` | It specifies the TreeMap areas that do not support interactive functions like selection and highlight. |
-| `aria-label` | Provides an accessible name for the title, sub-title, treemap item groups. |
+| `aria-label` | Provides an accessible name for the title, sub-title and TreeMap leaf items. |
 
 ## Screen reading in TreeMap
 
@@ -31,3 +31,5 @@ Accessibility in the TreeMap component ensures that all users, regardless of abi
 ## Ensuring accessibility
 
 The TreeMap component's accessibility levels are ensured through an [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) software tools during automated testing.
+
+The accessibility compliance of the TreeMap component is shown in [this sample](https://blazor.syncfusion.com/accessibility/treemap). Open the sample in a new window to evaluate the accessibility of the TreeMap component with accessibility tools.
