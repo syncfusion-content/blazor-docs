@@ -9,7 +9,7 @@ documentation: ug
 
 # Accessibility in Blazor Maps Component
 
-Maps has built-in accessibility features like screen reading and WAI-ARIA attributes.
+Maps has built-in accessibility features like screen reading, keyboard navigation, and WAI-ARIA attributes.
 
 ## WAI-ARIA attributes
 
@@ -49,3 +49,5 @@ Interaction Keys |Description
 ## Ensuring accessibility
 
 The Maps component's accessibility levels are ensured using an [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) software tools during automated testing.
+
+The accessibility compliance of the Maps component is shown in [this sample](https://blazor.syncfusion.com/accessibility/maps). Open the sample in a new window to evaluate the accessibility of the Maps component with accessibility tools.
