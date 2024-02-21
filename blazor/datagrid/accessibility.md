@@ -208,7 +208,7 @@ The Grid component followed the [keyboard interaction](https://www.w3.org/WAI/AR
 
 The Grid component's accessibility levels are ensured through an [axe-core](https://www.nuget.org/packages/Deque.AxeCore.Playwright) with playwright tests.
 
-The accessibility compliance of the Grid component is shown in the following sample. Open the [sample](https://blazorplayground.syncfusion.com/embed/VXrzZLMViScgbigc?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5) in a new window to evaluate the accessibility of the Grid component with accessibility tools.
+The accessibility compliance of the Grid component is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/datagrid) in a new window to evaluate the accessibility of the Grid component with accessibility tools.
 
 ## See also
 
