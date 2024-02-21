@@ -53,11 +53,9 @@ The Tree Grid component followed the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/
 | `aria-owns` | Establishing relationships between an element and the elements it owns or controls. |
 | `aria-label` | Provides an accessible name for the close icon. |
 
-## Keyboard navigation
+## Keyboard interaction
 
-Tree Grid functionalities can be interactive with keyboard shortcuts.
-
-The following keyboard shortcuts are supported by Tree Grid.
+The Tree Grid component followed the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/treegrid/) guideline, making it easy for people who use assistive technologies (AT) and those who completely rely on keyboard navigation. The following keyboard shortcuts are supported by the Tree Grid component.
 
 Interaction Keys |Description
 -----|-----
