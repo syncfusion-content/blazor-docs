@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Microsoft SQL Data Binding in Blazor DataGrid Component | Syncfusion
-description: Learn how to bind data from a Microsoft SQL server in the Syncfusion Blazor DataGrid and more.
+description: Learn about consuming data from SQL Server using Microsoft SQL Client, binding it to Syncfusion Component, and performing CRUD operations
 platform: Blazor
 control: DataGrid
 documentation: ug
@@ -17,7 +17,7 @@ This section describes how to use [System.Data.SqlClient](https://www.nuget.org/
 
 **2.** To connect a Microsoft SQL using the Microsoft SQL driver in our application, we need to install the [System.Data.SqlClient](https://www.nuget.org/packages/System.Data.SqlClient/4.8.6?_src=template) NuGet package. To do so, open the NuGet package manager of the project solution, search for the package **System.Data.SqlClient** and install it.
 
-![Add the NuGet package "System.Data.SqlClient" to the project](../images/system-Data-sql-client-nuget-package-install.png)
+![Add the NuGet package System.Data.SqlClient to the project](../images/system-Data-sql-client-nuget-package-install.png)
 
 **3.** Next, in the **Index.razor** page, get the SQL data from the SQL server and bind it to the DataGrid component as a datasource by using the Custom adaptor feature and configure the report to use the Microsoft SQL data.
 
@@ -281,7 +281,7 @@ N> You can find the sample in this [GitHub location]()
 
 **2.** To connect a Microsoft SQL using the **System.Data.SqlClient** in our application, we need to install the [System.Data.SqlClient](https://www.nuget.org/packages/System.Data.SqlClient/4.8.6?_src=template) NuGet package. To do so, open the NuGet package manager of the project solution, search for the package **System.Data.SqlClient** and install it.
 
-![Add the NuGet package "Sytem.Data.SqlClient" to the project](../images/system-Data-sql-client-nuget-package-install.png)
+![Add the NuGet package Sytem.Data.SqlClient to the project](../images/system-Data-sql-client-nuget-package-install.png)
 
 **3.** Create a Web API controller (aka, GridController.cs) file under **Controllers** folder that helps to establish data communication with the DataGrid.
 
@@ -506,7 +506,7 @@ We have added the DataGrid Editing and Toolbar code with previous Grid model.
 {% endhighlight %}
 {% endtabs %}
 
-N> Normal editing is the default edit mode for the DataGrid component. Set the [IsPrimaryKey](https://help.syncfusion.com/cr/blazhttps://localhost:7033/Gridor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_IsPrimaryKey) property of Column as **true** for a particular column, whose value is a unique value for editing purposes.
+> Normal editing is the default edit mode for the DataGrid component. Set the [IsPrimaryKey](https://help.syncfusion.com/cr/blazhttps://localhost:7033/Gridor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_IsPrimaryKey) property of Column as **true** for a particular column, whose value is a unique value for editing purposes.
 
 #### Insert a row
 
