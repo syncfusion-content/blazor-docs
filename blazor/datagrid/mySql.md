@@ -7,7 +7,7 @@ control: DataGrid
 documentation: ug
 ---
 
-# MySQL Data Binding
+# MySQL Data Binding in DataGrid
 
 This section describes how to use [MySQL data](https://www.nuget.org/packages/MySql.Data) to retrieve data from a MySQL server and bind it to the Blazor Pivot Table.
 
@@ -273,11 +273,11 @@ public async Task RemoveOrderAsync(int? value)
 
 **1.** Open Visual Studio and create an ASP.NET Core Web App project type, naming it **MyWebService**. To create an ASP.NET Core Web application, follow the documentation [link](https://learn.microsoft.com/en-us/visualstudio/get-started/csharp/tutorial-aspnet-core?view=vs-2022).
 
-![Create ASP.NET Core Web App project](../images/azure-asp-core-web-service-create.png)
+![Create ASP.NET Core Web App project](./images/azure-asp-core-web-service-create.png)
 
-**2.** To connect a MySQL using the **MySQL data** in our application, we need to install the [MySQL.Data](https://www.nuget.org/packages/MySQL.Driver) NuGet package. To do so, open the NuGet package manager of the project solution, search for the package **MySQL.Data** and install it.
+**2.** To connect a MySQL using the **MySQL data** in our application, we need to install the [MySQL.Data](https://www.nuget.org/packages/MySql.Data) NuGet package. To do so, open the NuGet package manager of the project solution, search for the package **MySQL.Data** and install it.
 
-![Add the NuGet package MySQL.Data to the project](../images/MySQL-nuget-package-install.png)
+![Add the NuGet package MySQL.Data to the project](./images/MySQL-nuget-package-install.png)
 
 **3.** Create a Web API controller (aka, PivotController.cs) file under **Controllers** folder that helps to establish data communication with the Pivot Table.
 
@@ -432,7 +432,7 @@ namespace MySqlWebService.Controllers
 
 **7.** Finally, the retrieved data from MYSQL database which is in the form of JSON can be found in the Web API controller available in the URL link `https://localhost:7116/Grid`, as shown in the browser page below.
 
-![Hosted Web API URL](../images/Ms-Sql-data.png)
+![Hosted Web API URL](./images/Ms-Sql-data.png)
 
 ### Connecting the Grid to a Microsoft SQL using the Web API service
 
