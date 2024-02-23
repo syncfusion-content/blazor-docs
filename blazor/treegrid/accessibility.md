@@ -98,9 +98,9 @@ Interaction Keys |Description
 
 The Tree Grid component's accessibility levels are ensured through an [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) software tools during automated testing.
 
-The accessibility compliance of the Tree Grid component is shown in the following sample. Open the [sample](https://blazorplayground.syncfusion.com/embed/LjLJjrrMKoHFfDBX?appbar=false&editor=false&result=true&errorlist=false&theme=material3) in a new window to evaluate the accessibility of the Tree Grid component with accessibility tools.
+The accessibility compliance of the Tree Grid component is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/treegrid) in a new window to evaluate the accessibility of the Tree Grid component with accessibility tools.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LjLJjrrMKoHFfDBX?appbar=false&editor=false&result=true&errorlist=false&theme=material3" %}
+{% previewsample "https://blazor.syncfusion.com/accessibility/treegrid" %}
 
 ## See also
 * [Accessibility in Syncfusion Blazor components](https://blazor.syncfusion.com/documentation/common/accessibility)
