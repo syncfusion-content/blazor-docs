@@ -195,7 +195,7 @@ The Header Template has options to display custom element values or content in t
     } }
 ```
 
-![Header Template in Blazor Gantt Chart](images/headerTemplate.png)
+![Header Template in Blazor Gantt Chart](images/headertemplate.png)
 
 ## Format
 

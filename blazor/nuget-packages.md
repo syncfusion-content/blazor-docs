@@ -38,7 +38,7 @@ This package contains the base component, common classes, common functionalities
 <a href="https://www.nuget.org/packages/Syncfusion.Blazor.Core/">Syncfusion.Blazor.Core</a>
 </td>
 <td>
-<a href="https://blazor.syncfusion.com/documentation/media-query">MediaQuery</a>
+<a href="https://blazor.syncfusion.com/documentation/media-query/getting-started-webapp">MediaQuery</a>
 </td>
 <td>
 <ul>
@@ -125,7 +125,7 @@ The Blazor Bullet Chart is used to visually compare measures, similar to the com
 <a href="https://www.nuget.org/packages/Syncfusion.Blazor.BulletChart/">Syncfusion.Blazor.BulletChart</a>
 </td>
 <td>
-<a href="https://blazor.syncfusion.com/documentation/bullet-chart">Bullet Chart</a>
+<a href="https://blazor.syncfusion.com/documentation/bullet-chart/getting-started-with-web-app">Bullet Chart</a>
 </td>
 <td>
 SfBulletChart
@@ -166,13 +166,13 @@ The Blazor buttons package contains UI components such as Button, Checkbox, Radi
 </td>
 <td>
 <ul>
-<li><a href="https://blazor.syncfusion.com/documentation/button">Button</a></li>
-<li><a href="https://blazor.syncfusion.com/documentation/check-box">CheckBox</a></li>
-<li><a href="https://blazor.syncfusion.com/documentation/chip">Chip</a></li>
-<li><a href="https://blazor.syncfusion.com/documentation/floating-action-button">Floating Action Button</a></li>
-<li><a href="https://blazor.syncfusion.com/documentation/radio-button">RadioButton</a></li>
-<li><a href="https://blazor.syncfusion.com/documentation/speeddial">Speed Dial</a></li>
-<li><a href="https://blazor.syncfusion.com/documentation/toggle-switch-button">Toggle Switch Button</a></li>
+<li><a href="https://blazor.syncfusion.com/documentation/button/getting-started-with-web-app">Button</a></li>
+<li><a href="https://blazor.syncfusion.com/documentation/check-box/getting-started-with-web-app">CheckBox</a></li>
+<li><a href="https://blazor.syncfusion.com/documentation/chip/getting-started-with-web-app">Chip</a></li>
+<li><a href="https://blazor.syncfusion.com/documentation/floating-action-button/getting-started-with-web-app">Floating Action Button</a></li>
+<li><a href="https://blazor.syncfusion.com/documentation/radio-button/getting-started-webapp">RadioButton</a></li>
+<li><a href="https://blazor.syncfusion.com/documentation/speeddial/getting-started-webapp">Speed Dial</a></li>
+<li><a href="https://blazor.syncfusion.com/documentation/toggle-switch-button/getting-started-webapp">Toggle Switch Button</a></li>
 <li><a href="https://blazor.syncfusion.com/documentation/appearance/icons">Icon</a></li>
 </ul>
 </td>
@@ -219,11 +219,11 @@ The Calendars package contains date and time components such as Calendar, DatePi
 </td>
 <td>
 <ul>
-<li><a href="https://blazor.syncfusion.com/documentation/calendar">Calendar</a></li>
-<li><a href="https://blazor.syncfusion.com/documentation/datepicker">DatePicker</a></li>
-<li><a href="https://blazor.syncfusion.com/documentation/daterangepicker">DateRangePicker</a></li>
-<li><a href="https://blazor.syncfusion.com/documentation/datetime-picker">DateTime Picker</a></li>
-<li><a href="https://blazor.syncfusion.com/documentation/timepicker">TimePicker</a></li>
+<li><a href="https://blazor.syncfusion.com/documentation/calendar/getting-started-with-web-app">Calendar</a></li>
+<li><a href="https://blazor.syncfusion.com/documentation/datepicker/getting-started-with-web-app">DatePicker</a></li>
+<li><a href="https://blazor.syncfusion.com/documentation/daterangepicker/getting-started-with-web-app">DateRangePicker</a></li>
+<li><a href="https://blazor.syncfusion.com/documentation/datetime-picker/getting-started-with-web-app">DateTime Picker</a></li>
+<li><a href="https://blazor.syncfusion.com/documentation/timepicker/getting-started-webapp">TimePicker</a></li>
 </ul>
 </td>
 <td>
@@ -270,7 +270,7 @@ A Blazor Card is a small layout that shows a defined content in an organized str
 <a href="https://www.nuget.org/packages/Syncfusion.Blazor.Cards/">Syncfusion.Blazor.Cards</a>
 </td>
 <td>
-<a href="https://blazor.syncfusion.com/documentation/card">Card</a>
+<a href="https://blazor.syncfusion.com/documentation/card/getting-started-with-web-app">Card</a>
 </td>
 <td>
 SfCard
@@ -309,8 +309,8 @@ The Blazor Chart is a well-crafted charting component to visualize data. It cont
 </td>
 <td>
 <ul>
-<li><a href="https://blazor.syncfusion.com/documentation/chart">Charts</a></li>
-<li><a href="https://blazor.syncfusion.com/documentation/accumulation-chart">Accumulation Chart</a></li>
+<li><a href="https://blazor.syncfusion.com/documentation/chart/getting-started-with-web-app">Charts</a></li>
+<li><a href="https://blazor.syncfusion.com/documentation/accumulation-chart/getting-started-with-web-app">Accumulation Chart</a></li>
 </ul>
 </td>
 <td>
@@ -354,7 +354,7 @@ The Blazor Circular Gauge is used for visualizing numeric values on a circular s
 <a href="https://www.nuget.org/packages/Syncfusion.Blazor.CircularGauge/">Syncfusion.Blazor.CircularGauge</a>
 </td>
 <td>
-<a href="https://blazor.syncfusion.com/documentation/circular-gauge">Circular Gauge</a>
+<a href="https://blazor.syncfusion.com/documentation/circular-gauge/getting-started-with-web-app">Circular Gauge</a>
 </td>
 <td>
 SfCircularGauge
@@ -392,7 +392,7 @@ The SfDataManager is a data management package to perform data operations such a
 <a href="https://www.nuget.org/packages/Syncfusion.Blazor.Data/">Syncfusion.Blazor.Data</a>
 </td>
 <td>
-<a href="https://blazor.syncfusion.com/documentation/data">DataManager</a>
+<a href="https://blazor.syncfusion.com/documentation/data/getting-started-with-web-app">DataManager</a>
 </td>
 <td>
 SfDataManager
@@ -416,7 +416,7 @@ The Blazor DataForm is a powerful UI component that simplifies the creation of d
 </tr>
 <tr>
 <td><a href="https://www.nuget.org/packages/Syncfusion.Blazor.DataForm">Syncfusion.Blazor.DataForm</a></td>
-<td><a href="https://blazor.syncfusion.com/documentation/data-form">DataForm</a></td>
+<td><a href="https://blazor.syncfusion.com/documentation/data-form/getting-started-with-web-app">DataForm</a></td>
 <td>SfDataForm</td>
 <td>
 <a href="#syncfusionblazorbuttons">Syncfusion.Blazor.Buttons</a>
@@ -482,8 +482,8 @@ The Blazor Diagram component is a high-speed, robust library for crafting, editi
 </td>
 <td>
 <ul>
-<li><a href="https://blazor.syncfusion.com/documentation/diagram">Diagram</a></li>
-<li><a href="https://blazor.syncfusion.com/documentation/diagram/overview-panel">Overview Panel</a></li>
+<li><a href="https://blazor.syncfusion.com/documentation/diagram/getting-started-with-web-app">Diagram</a></li>
+<li><a href="https://blazor.syncfusion.com/documentation/diagram/overview">Overview Panel</a></li>
 <li><a href="https://blazor.syncfusion.com/documentation/diagram/symbol-palette">Symbol Palette</a></li>
 </ul>
 </td>
@@ -531,12 +531,12 @@ A package of Blazor Dropdown contains a collection of Dropdown components such a
 </td>
 <td>
 <ul>
-<li><a href="https://blazor.syncfusion.com/documentation/autocomplete">AutoComplete</a></li>
-<li><a href="https://blazor.syncfusion.com/documentation/combobox">ComboBox</a></li>
-<li><a href="https://blazor.syncfusion.com/documentation/dropdown-list">DropDown List</a></li>
-<li><a href="https://blazor.syncfusion.com/documentation/listbox">ListBox</a></li>
-<li><a href="https://blazor.syncfusion.com/documentation/multiselect-dropdown">MultiSelect DropDown</a></li>
-<li><a href="https://blazor.syncfusion.com/documentation/mention">Mention</a></li>
+<li><a href="https://blazor.syncfusion.com/documentation/autocomplete/getting-started-with-web-app">AutoComplete</a></li>
+<li><a href="https://blazor.syncfusion.com/documentation/combobox/getting-started-with-web-app">ComboBox</a></li>
+<li><a href="https://blazor.syncfusion.com/documentation/dropdown-list/getting-started-with-web-app">DropDown List</a></li>
+<li><a href="https://blazor.syncfusion.com/documentation/listbox/getting-started-webapp">ListBox</a></li>
+<li><a href="https://blazor.syncfusion.com/documentation/multiselect-dropdown/getting-started-webapp">MultiSelect DropDown</a></li>
+<li><a href="https://blazor.syncfusion.com/documentation/mention/getting-started-webapp">Mention</a></li>
 </ul>
 </td>
 <td>
@@ -586,7 +586,7 @@ Blazor File Manager is a graphical user interface component used to manage the f
 <a href="https://www.nuget.org/packages/Syncfusion.Blazor.FileManager/">Syncfusion.Blazor.FileManager</a>
 </td>
 <td>
-<a href="https://blazor.syncfusion.com/documentation/file-manager">FileManager</a>
+<a href="https://blazor.syncfusion.com/documentation/file-manager/getting-started-with-web-app">FileManager</a>
 </td>
 <td>
 SfFileManager
@@ -633,7 +633,7 @@ The Blazor Gantt is designed to visualize and edit the project schedule, and tra
 <a href="https://www.nuget.org/packages/Syncfusion.Blazor.Gantt/">Syncfusion.Blazor.Gantt</a>
 </td>
 <td>
-<a href="https://blazor.syncfusion.com/documentation/gantt-chart">Gantt Chart</a>
+<a href="https://blazor.syncfusion.com/documentation/gantt-chart/getting-started-with-web-app">Gantt Chart</a>
 </td>
 <td>
 SfGantt
@@ -684,7 +684,7 @@ Blazor DataGrid component is used to display and manipulate the tabular data wit
 <a href="https://www.nuget.org/packages/Syncfusion.Blazor.Grid/">Syncfusion.Blazor.Grid</a>
 </td>
 <td>
-<a href="https://blazor.syncfusion.com/documentation/datagrid">DataGrid</a>
+<a href="https://blazor.syncfusion.com/documentation/datagrid/getting-started-with-web-app">DataGrid</a>
 </td>
 <td>
 SfGrid
@@ -731,7 +731,7 @@ Blazor HeatMap Chart is used to visualize two-dimensional data in which the valu
 <a href="https://www.nuget.org/packages/Syncfusion.Blazor.HeatMap/">Syncfusion.Blazor.HeatMap</a>
 </td>
 <td>
-<a href="https://blazor.syncfusion.com/documentation/heatmap-chart">HeatMap Chart</a>
+<a href="https://blazor.syncfusion.com/documentation/heatmap-chart/getting-started-with-web-app">HeatMap Chart</a>
 </td>
 <td>
 SfHeatMap
@@ -771,7 +771,7 @@ The Blazor In-place Editor component is most useful for editing a value dynamica
 <a href="https://www.nuget.org/packages/Syncfusion.Blazor.InPlaceEditor/">Syncfusion.Blazor.InPlaceEditor</a>
 </td>
 <td>
-<a href="https://blazor.syncfusion.com/documentation/in-place-editor">In-place Editor</a>
+<a href="https://blazor.syncfusion.com/documentation/in-place-editor/getting-started-with-web-app">In-place Editor</a>
 </td>
 <td>
 SfInPlaceEditor
@@ -813,7 +813,7 @@ The Blazor Image Editor component loads and modifies the images by performing ac
 <a href="https://www.nuget.org/packages/Syncfusion.Blazor.ImageEditor/">Syncfusion.Blazor.ImageEditor</a>
 </td>
 <td>
-<a href="https://blazor.syncfusion.com/documentation/image-editor">Image Editor</a>
+<a href="https://blazor.syncfusion.com/documentation/image-editor/getting-started-with-web-app">Image Editor</a>
 </td>
 <td>
 SfImageEditor
@@ -857,14 +857,14 @@ A package of Blazor input components comes with a collection of form components.
 </td>
 <td>
 <ul>
-<li><a href="https://blazor.syncfusion.com/documentation/color-picker">Color Picker</a></li>
-<li><a href="https://blazor.syncfusion.com/documentation/input-mask">Input Mask</a></li>
-<li><a href="https://blazor.syncfusion.com/documentation/numeric-textbox">Numeric TextBox</a></li>
-<li><a href="https://blazor.syncfusion.com/documentation/rating">Rating</a></li>
-<li><a href="https://blazor.syncfusion.com/documentation/range-slider">Range Slider</a></li>
-<li><a href="https://blazor.syncfusion.com/documentation/textbox">TextBox</a></li>
-<li><a href="https://blazor.syncfusion.com/documentation/file-upload">File Upload</a></li>
-<li><a href="https://blazor.syncfusion.com/documentation/signature">Signature</a></li>
+<li><a href="https://blazor.syncfusion.com/documentation/color-picker/getting-started-with-web-app">Color Picker</a></li>
+<li><a href="https://blazor.syncfusion.com/documentation/input-mask/getting-started-with-web-app">Input Mask</a></li>
+<li><a href="https://blazor.syncfusion.com/documentation/numeric-textbox/getting-started-webapp">Numeric TextBox</a></li>
+<li><a href="https://blazor.syncfusion.com/documentation/rating/getting-started-webapp">Rating</a></li>
+<li><a href="https://blazor.syncfusion.com/documentation/range-slider/getting-started-webapp">Range Slider</a></li>
+<li><a href="https://blazor.syncfusion.com/documentation/textbox/getting-started-webapp">TextBox</a></li>
+<li><a href="https://blazor.syncfusion.com/documentation/file-upload/getting-started-with-web-app">File Upload</a></li>
+<li><a href="https://blazor.syncfusion.com/documentation/signature/getting-started-webapp">Signature</a></li>
 </ul>
 </td>
 <td>
@@ -915,7 +915,7 @@ The Blazor Kanban board visually depicts work at various stages of a process usi
 <a href="https://www.nuget.org/packages/Syncfusion.Blazor.Kanban/">Syncfusion.Blazor.Kanban</a>
 </td>
 <td>
-<a href="https://blazor.syncfusion.com/documentation/kanban">Kanban</a>
+<a href="https://blazor.syncfusion.com/documentation/kanban/getting-started-with-web-app">Kanban</a>
 </td>
 <td>
 SfKanban
@@ -962,7 +962,7 @@ The layout package contains Splitter and Dashboard Layout components. The Blazor
 <td>
 <ul>
 <li><a href="https://blazor.syncfusion.com/documentation/dashboard-layout">Dashboard Layout</a></li>
-<li><a href="https://blazor.syncfusion.com/documentation/splitter">Splitter</a></li>
+<li><a href="https://blazor.syncfusion.com/documentation/splitter/getting-started-webapp">Splitter</a></li>
 </ul>
 </td>
 <td>
@@ -1004,7 +1004,7 @@ The Blazor Linear Gauge is used for visualizing numeric values in a linear scale
 <a href="https://www.nuget.org/packages/Syncfusion.Blazor.LinearGauge/">Syncfusion.Blazor.LinearGauge</a>
 </td>
 <td>
-<a href="https://blazor.syncfusion.com/documentation/linear-gauge">Linear Gauge</a>
+<a href="https://blazor.syncfusion.com/documentation/linear-gauge/getting-started-webapp">Linear Gauge</a>
 </td>
 <td>
 SfLinearGauge
@@ -1042,7 +1042,7 @@ Blazor ListView component allows to select an item or multiple items from a list
 <a href="https://www.nuget.org/packages/Syncfusion.Blazor.Lists/">Syncfusion.Blazor.Lists</a>
 </td>
 <td>
-<a href="https://blazor.syncfusion.com/documentation/listview">ListView</a>
+<a href="https://blazor.syncfusion.com/documentation/listview/getting-started-webapp">ListView</a>
 </td>
 <td>
 SfListView
@@ -1081,7 +1081,7 @@ The Blazor Maps component is used for rendering maps from GeoJSON data or other 
 <a href="https://www.nuget.org/packages/Syncfusion.Blazor.Maps/">Syncfusion.Blazor.Maps</a>
 </td>
 <td>
-<a href="https://blazor.syncfusion.com/documentation/maps">Maps</a>
+<a href="https://blazor.syncfusion.com/documentation/maps/getting-started-webapp">Maps</a>
 </td>
 <td>
 SfMaps
@@ -1121,18 +1121,18 @@ A package of Blazor navigation components such as Accordion, ContextMenu, Tabs, 
 </td>
 <td>
 <ul>
-<li><a href="https://blazor.syncfusion.com/documentation/accordion">Accordion</a></li>
-<li><a href="https://blazor.syncfusion.com/documentation/appbar">AppBar</a></li>
-<li><a href="https://blazor.syncfusion.com/documentation/breadcrumb">Breadcrumb</a></li>
+<li><a href="https://blazor.syncfusion.com/documentation/accordion/getting-started-with-web-app">Accordion</a></li>
+<li><a href="https://blazor.syncfusion.com/documentation/appbar/getting-started-with-web-app">AppBar</a></li>
+<li><a href="https://blazor.syncfusion.com/documentation/breadcrumb/getting-started-with-web-app">Breadcrumb</a></li>
 <li><a href="https://blazor.syncfusion.com/documentation/context-menu">ContextMenu</a></li>
-<li><a href="https://blazor.syncfusion.com/documentation/dropdown-tree">DropDown Tree</a></li>
-<li><a href="https://blazor.syncfusion.com/documentation/menu-bar">Menu Bar</a></li>
-<li><a href="https://blazor.syncfusion.com/documentation/sidebar">Sidebar</a></li>
-<li><a href="https://blazor.syncfusion.com/documentation/stepper">Stepper</a></li>
-<li><a href="https://blazor.syncfusion.com/documentation/tabs">Tabs</a></li>
-<li><a href="https://blazor.syncfusion.com/documentation/toolbar">Toolbar</a></li>
+<li><a href="https://blazor.syncfusion.com/documentation/dropdown-tree/getting-started-with-web-app">DropDown Tree</a></li>
+<li><a href="https://blazor.syncfusion.com/documentation/menu-bar/getting-started-webapp">Menu Bar</a></li>
+<li><a href="https://blazor.syncfusion.com/documentation/sidebar/getting-started-webapp">Sidebar</a></li>
+<li><a href="https://blazor.syncfusion.com/documentation/stepper/getting-started-webapp">Stepper</a></li>
+<li><a href="https://blazor.syncfusion.com/documentation/tabs/getting-started-webapp">Tabs</a></li>
+<li><a href="https://blazor.syncfusion.com/documentation/toolbar/getting-started-webapp">Toolbar</a></li>
 <li><a href="https://blazor.syncfusion.com/documentation/treeview">TreeView</a></li>
-<li><a href="https://blazor.syncfusion.com/documentation/pager">Pager</a></li>
+<li><a href="https://blazor.syncfusion.com/documentation/pager/getting-started-webapp">Pager</a></li>
 </ul>
 </td>
 <td>
@@ -1191,9 +1191,9 @@ The notification component Toast is used to notify status or summary information
 </td>
 <td>
 <ul>
-<li><a href="https://blazor.syncfusion.com/documentation/toast">Toast</a></li>
-<li><a href="https://blazor.syncfusion.com/documentation/skeleton">Skeleton</a></li>
-<li><a href="https://blazor.syncfusion.com/documentation/message">Message</a></li>
+<li><a href="https://blazor.syncfusion.com/documentation/toast/getting-started-webapp">Toast</a></li>
+<li><a href="https://blazor.syncfusion.com/documentation/skeleton/getting-started-webapp">Skeleton</a></li>
+<li><a href="https://blazor.syncfusion.com/documentation/message/getting-started-webapp">Message</a></li>
 </ul>
 </td>
 <td>
@@ -1376,7 +1376,7 @@ The Blazor Pivot Table is a powerful control used to organize and summarize busi
 <a href="https://www.nuget.org/packages/Syncfusion.Blazor.PivotTable/">Syncfusion.Blazor.PivotTable</a>
 </td>
 <td>
-<a href="https://blazor.syncfusion.com/documentation/pivot-table">Pivot Table</a>
+<a href="https://blazor.syncfusion.com/documentation/pivot-table/getting-started-webapp">Pivot Table</a>
 </td>
 <td>
 <ul>
@@ -1431,7 +1431,7 @@ A package of Blazor popup components Dialog and Tooltip are used to display info
 <td>
 <ul>
 <li><a href="https://blazor.syncfusion.com/documentation/dialog">Dialog</a></li>
-<li><a href="https://blazor.syncfusion.com/documentation/tooltip">Tooltip</a></li>
+<li><a href="https://blazor.syncfusion.com/documentation/tooltip/getting-started-webapp">Tooltip</a></li>
 </ul>
 </td>
 <td>
@@ -1473,7 +1473,7 @@ The Progress Bar control can be used to visualize the changing status of an exte
 <a href="https://www.nuget.org/packages/Syncfusion.Blazor.ProgressBar/">Syncfusion.Blazor.ProgressBar</a>
 </td>
 <td>
-<a href="https://blazor.syncfusion.com/documentation/progress-bar">ProgressBar</a>
+<a href="https://blazor.syncfusion.com/documentation/progress-bar/getting-started-webapp">ProgressBar</a>
 </td>
 <td>
 SfProgressBar
@@ -1511,7 +1511,7 @@ The Blazor QueryBuilder package contains the QueryBuilder component that allows 
 <a href="https://www.nuget.org/packages/Syncfusion.Blazor.QueryBuilder/">Syncfusion.Blazor.QueryBuilder</a>
 </td>
 <td>
-<a href="https://blazor.syncfusion.com/documentation/query-builder">QueryBuilder</a>
+<a href="https://blazor.syncfusion.com/documentation/query-builder/getting-started-webapp">QueryBuilder</a>
 </td>
 <td>
 SfQueryBuilder
@@ -1555,7 +1555,7 @@ The Blazor Range Navigator is an interface for selecting a small range from a la
 <a href="https://www.nuget.org/packages/Syncfusion.Blazor.RangeNavigator/">Syncfusion.Blazor.RangeNavigator</a>
 </td>
 <td>
-<a href="https://blazor.syncfusion.com/documentation/range-selector">Range Selector</a>
+<a href="https://blazor.syncfusion.com/documentation/range-selector/getting-started-webapp">Range Selector</a>
 </td>
 <td>
 SfRangeNavigator
@@ -1598,7 +1598,7 @@ The Rich Text Editor component is the HTML and markdown editor that provides the
 <a href="https://www.nuget.org/packages/Syncfusion.Blazor.RichTextEditor/">Syncfusion.Blazor.RichTextEditor</a>
 </td>
 <td>
-<a href="https://blazor.syncfusion.com/documentation/rich-text-editor">RichTextEditor</a>
+<a href="https://blazor.syncfusion.com/documentation/rich-text-editor/getting-started-webapp">RichTextEditor</a>
 </td>
 <td>
 SfRichTextEditor
@@ -1641,7 +1641,7 @@ The Blazor Scheduler component is an event calendar that facilitates users with 
 </td>
 <td>
 <ul>
-<li><a href="https://blazor.syncfusion.com/documentation/scheduler">Scheduler</a></li>
+<li><a href="https://blazor.syncfusion.com/documentation/scheduler/getting-started-webapp">Scheduler</a></li>
 <li>Recurrence Editor</li>
 </ul>
 </td>
@@ -1692,7 +1692,7 @@ The Blazor Smith Chart is a control for showing the parameters of transmission l
 <a href="https://www.nuget.org/packages/Syncfusion.Blazor.SmithChart/">Syncfusion.Blazor.SmithChart</a>
 </td>
 <td>
-<a href="https://blazor.syncfusion.com/documentation/smith-chart">Smith Chart</a>
+<a href="https://blazor.syncfusion.com/documentation/smith-chart/getting-started-webapp">Smith Chart</a>
 </td>
 <td>
 SfSmithChart
@@ -1732,7 +1732,7 @@ The Blazor Sparkline Charts is a replacement for normal charts to display trends
 <a href="https://www.nuget.org/packages/Syncfusion.Blazor.Sparkline/">Syncfusion.Blazor.Sparkline</a>
 </td>
 <td>
-<a href="https://blazor.syncfusion.com/documentation/sparkline">Sparkline</a>
+<a href="https://blazor.syncfusion.com/documentation/sparkline/getting-started-webapp">Sparkline</a>
 </td>
 <td>
 SfSparkline
@@ -1772,7 +1772,7 @@ The Blazor Spinner is a loading indicator that denotes long-running tasks with n
 <a href="https://www.nuget.org/packages/Syncfusion.Blazor.Spinner/">Syncfusion.Blazor.Spinner</a>
 </td>
 <td>
-<a href="https://blazor.syncfusion.com/documentation/spinner">Spinner</a>
+<a href="https://blazor.syncfusion.com/documentation/spinner/getting-started-webapp">Spinner</a>
 </td>
 <td>
 SfSpinner
@@ -1808,10 +1808,10 @@ The Blazor SplitButtons package contains UI components such as DropDownButton, S
 </td>
 <td>
 <ul>
-<li><a href="https://blazor.syncfusion.com/documentation/button-group">ButtonGroup</a></li>
-<li><a href="https://blazor.syncfusion.com/documentation/drop-down-menu">DropDownButton</a></li>
-<li><a href="https://blazor.syncfusion.com/documentation/progress-button">ProgressButton</a></li>
-<li><a href="https://blazor.syncfusion.com/documentation/split-button">SplitButton</a></li>
+<li><a href="https://blazor.syncfusion.com/documentation/button-group/getting-started-with-web-app">ButtonGroup</a></li>
+<li><a href="https://blazor.syncfusion.com/documentation/drop-down-menu/getting-started-with-web-app">DropDownButton</a></li>
+<li><a href="https://blazor.syncfusion.com/documentation/progress-button/getting-started-webapp">ProgressButton</a></li>
+<li><a href="https://blazor.syncfusion.com/documentation/split-button/getting-started-webapp">SplitButton</a></li>
 </ul>
 </td>
 <td>
@@ -1857,7 +1857,7 @@ The Blazor Stock Chart is an easy-to-use financial charting package to track and
 <a href="https://www.nuget.org/packages/Syncfusion.Blazor.StockChart/">Syncfusion.Blazor.StockChart</a>
 </td>
 <td>
-<a href="https://blazor.syncfusion.com/documentation/stock-chart">Stock Chart</a>
+<a href="https://blazor.syncfusion.com/documentation/stock-chart/getting-started-webapp">Stock Chart</a>
 </td>
 <td>
 SfStockChart
@@ -1936,7 +1936,7 @@ Blazor Tree Grid is a feature-rich control used to visualize self-referential an
 <a href="https://www.nuget.org/packages/Syncfusion.Blazor.TreeGrid/">Syncfusion.Blazor.TreeGrid</a>
 </td>
 <td>
-<a href="https://blazor.syncfusion.com/documentation/treegrid">TreeGrid</a>
+<a href="https://blazor.syncfusion.com/documentation/treegrid/getting-started-webapp">TreeGrid</a>
 </td>
 <td>
 SfTreeGrid
@@ -1978,7 +1978,7 @@ Blazor TreeMap is a feature-rich component used to visualize both hierarchical a
 <a href="https://www.nuget.org/packages/Syncfusion.Blazor.TreeMap/">Syncfusion.Blazor.TreeMap</a>
 </td>
 <td>
-<a href="https://blazor.syncfusion.com/documentation/treemap">TreeMap</a>
+<a href="https://blazor.syncfusion.com/documentation/treemap/getting-started-webapp">TreeMap</a>
 </td>
 <td>
 SfTreeMap

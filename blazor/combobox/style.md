@@ -25,6 +25,26 @@ Specify the boolean value to the [Readonly](https://help.syncfusion.com/cr/blazo
 
 ![Blazor ComboBox with Readonly mode](./images/style/blazor_combobox_readonly-mode.png)
 
+## CssClass  
+
+Specifies the CSS class name that can be appended to the root element of the ComboBox. One or more custom CSS classes can be added to a ComboBox.
+
+Some of the possible values are:
+
+* `e-success`: Denotes the component in a success state, adding a green color to the ComboBox input field.
+* `e-warning`: Denotes the component in a warning state, adding an orange color to the ComboBox input field.
+* `e-error`: Denotes the component in an error state, adding a red color to the ComboBox input field.
+* `e-outline`: Supports only the material theme.
+* `e-multi-column`: Provides two or more columns in the popup, aligning the columns like a grid.
+
+{% highlight Razor %}
+
+{% include_relative code-snippet/style/cssclass-properties.razor %}
+
+{% endhighlight %} 
+
+![Blazor ComboBox with CssClass property](./images/style/blazor_combobox_cssclass-property.png)
+
 ## Customizing the appearance of container element
 
 You can customize the appearance of the container element within the ComboBox component by targeting its CSS class `.e-input`, which indicates the parent element of the input, and allows you to apply any desired styles to the component.
