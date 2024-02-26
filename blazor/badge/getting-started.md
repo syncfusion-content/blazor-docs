@@ -13,6 +13,10 @@ documentation: ug
 
 This section briefly explains about how to include Blazor `Badge` component in your Blazor Server App and Blazor WebAssembly App using Visual Studio.
 
+To get start quickly with Blazor Badge, you can check on this video:
+
+{% youtube "https://www.youtube.com/watch?v=CNkXfjZDGUQ" %}
+
 ## Prerequisites
 
 * [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)

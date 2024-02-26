@@ -122,7 +122,7 @@ Add the Syncfusion Blazor Breadcrumb component in the **~/Pages/Index.razor** fi
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rXhpNiBSgmQNkpCP?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-![Blazor Breadcrumb Component](./images/blazor-Breadcrumb-component.png)
+![Blazor Breadcrumb Component](./images/blazor-breadcrumb-component.png)
 
 N> The Breadcrumb component will render based on the current URL, when the Breadcrumb items are not specified.
 
@@ -148,7 +148,7 @@ To render Breadcrumb component with items use [BreadcrumbItem](https://help.sync
 
 N> Place list of [BreadcrumbItem](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.BreadcrumbItem.html) within [BreadcrumbItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.BreadcrumbItems.html) tag directive.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LZVzNCByUbgRQChk?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Breadcrumb Component](./images/blazor-Breadcrumb-items.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LZVzNCByUbgRQChk?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Breadcrumb Component](./images/blazor-breadcrumb-items.png)" %}
 
 ## Enable or disable navigation
 

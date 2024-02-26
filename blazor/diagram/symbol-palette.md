@@ -656,7 +656,7 @@ Symbol palette provides supports to show toolip when mouse hovers over any node 
 
 By default, the symbol's ID will be displayed as the tooltip for each symbol in the symbol palette. The following image illustrate how the tooltip displays when mouse hovers over the symbols in symbol palette.
 
-![Default Tooltip in symbol palette](images/DefaultTooltip.gif)
+![Default Tooltip in symbol palette](images/defaulttooltip.png)
 
 ### Custom tooltip for symbols
 
@@ -723,7 +723,7 @@ The following code example illustrates how to provide the custom tooltip for nod
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/SymbolPalette/SymbolPaletteTooltip)
 
-![Tooltip in symbol palette](images/SymbolTooltip.gif)
+![Tooltip in symbol palette](images/symboltooltip.png)
 
 ## How to provide different tooltip for Symbol palette and diagram elements.
 
@@ -819,7 +819,7 @@ When you define custom tooltip to the symbol then same tooltip will be displayed
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/SymbolPalette/SymbolPaletteTooltip)
 
-![Tooltip in symbol palette](images/DifferentTooltip.gif)
+![Tooltip in symbol palette](images/differenttooltip.gif)
 
 ## How to add/remove symbols from palette at runtime
 

@@ -108,8 +108,8 @@ Run the application, and the PDF file will be displayed using Syncfusion's Blazo
 
 ## See also
 
-* [Getting Started with Blazor PDF Viewer (Next Gen) Component in Blazor WASM App](./web-assembly-application)
+* [Getting Started with Blazor PDF Viewer (Next Gen) Component in Blazor WASM App](https://blazor.syncfusion.com/documentation/pdfviewer-2/getting-started/web-assembly-application)
 
-* [Getting Started with Blazor PDF Viewer (Next Gen) Component in WSL mode](./wsl-application)
+* [Getting Started with Blazor PDF Viewer (Next Gen) Component in WSL mode](https://blazor.syncfusion.com/documentation/pdfviewer-2/getting-started/wsl-application)
 
 * [Learn different ways to add script reference in Blazor Application](https://blazor.syncfusion.com/documentation/common/adding-script-references)

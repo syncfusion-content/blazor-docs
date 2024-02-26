@@ -72,7 +72,7 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 ```html
 <head>
     ....
-    <link href="_content/Syncfusion.Blazor.Themes/material.css" rel="stylesheet" />
+    <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
 </head>
 
 <body>
@@ -111,6 +111,6 @@ Add the Syncfusion Blazor Message component in the **~Pages/.razor** file. If an
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion Blazor Message component in your default web browser.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hjLJNiKZLsAMXCNa?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Message Component](./images/message-default.PNG)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hjLJNiKZLsAMXCNa?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Message Component](./images/message-default.png)" %}
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/Message/BlazorWebApp).
