@@ -96,10 +96,14 @@ else
 
 ![LazyLoad Line](../images/lazyload-line.png)
 
-#### Line : https://blazorplayground.syncfusion.com/hjLTDVrxqumlrJZY
+### Line 
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LjVpZhLxzguqSeHM?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![LazyLoad Column](../images/lazyload-column.png)
 
-#### Column : https://blazorplayground.syncfusion.com/hXBTDhBRpZYRXIUX
+### Column 
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZrTXBLdpqQSSsSy?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 N> Refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
