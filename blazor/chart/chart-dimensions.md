@@ -16,8 +16,6 @@ N> * When no size is specified, the default height and width are 450px and 600px
 ```html
 <head>
     ...
-    ...
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.20/lodash.min.js"></script>
    <!--- To avoid the redraw scenario, add the CDN link below. --->
    <script src="https://cdn.syncfusion.com/blazor/syncfusion-blazor-base.min.js"></script>
 </head>
