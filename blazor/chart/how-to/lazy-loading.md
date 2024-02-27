@@ -58,6 +58,7 @@ else
 
     public void ScrollChange(ScrollEventArgs e) {
         this.dataSource = GetRangeData(Convert.ToInt32(e.CurrentRange.Minimum), Convert.ToInt32(e.CurrentRange.Maximum));
+        this.StateHasChanged();
     }
 
     public ObservableCollection < ColumnChartData > GetRangeData(int min, int max) {
@@ -74,7 +75,7 @@ else
         ObservableCollection < ColumnChartData > data = new ObservableCollection < ColumnChartData > ();
         for (; count <= 100; count++) {
             data.Add(new ColumnChartData {
-                x = count++, y = random.Next(10, 100)
+                x = count, y = random.Next(10, 100)
             });
         }
         return data;
@@ -92,5 +93,17 @@ else
     }
 }
 ```
+
+![LazyLoad Line](../images/lazyload-line.png)
+
+### Line 
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LjVpZhLxzguqSeHM?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+![LazyLoad Column](../images/lazyload-column.png)
+
+### Column 
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZrTXBLdpqQSSsSy?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 N> Refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
