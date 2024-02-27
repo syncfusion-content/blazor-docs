@@ -29,7 +29,6 @@ This section describes how to use [System.Data.SqlClient](https://www.nuget.org/
 @using Syncfusion.Blazor.Data
 @using Syncfusion.Blazor
 @using Microsoft.Data.SqlClient;
-@using BlazorApp6.Data;
 
 <SfGrid @ref="Grid" TValue="Order" AllowSorting="true" AllowFiltering="true"  AllowGrouping="true" AllowPaging="true" Toolbar="@(new List<string>() { "Add", "Delete", "Update", "Cancel" })">
     <SfDataManager AdaptorInstance="@typeof(CustomAdaptor)" Adaptor="Adaptors.CustomAdaptor"></SfDataManager>
