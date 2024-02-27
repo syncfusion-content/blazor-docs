@@ -799,7 +799,7 @@ To delete a row, simply select the desrired row and click the **Delete** toolbar
 
 **Batch Operation**
 
-To perform Batch Operations, define the Edit Mode as [Batch] and specify the [BatchUrl] property in the SfDataManager. Use the "Add" toolbar button to insert new rows in batch mode. To edit a cell, double-click the desired cell and update the value as required. To delete a record, simply select the record and press the "Delete" toolbar button. Now, all CRUD operations will be executed in batch mode. Clicking the "Update" toolbar button will update the newly added, edited records, or deleted records from the Orders table using a single API **POST** request.
+To perform Batch Operations, define the Edit Mode as `Batch` and specify the [BatchUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_BatchUrl) property in the SfDataManager. Use the "Add" toolbar button to insert new rows in batch mode. To edit a cell, double-click the desired cell and update the value as required. To delete a record, simply select the record and press the "Delete" toolbar button. Now, all CRUD operations will be executed in batch mode. Clicking the "Update" toolbar button will update the newly added, edited records, or deleted records from the Orders table using a single API **POST** request.
 
 {% highlight razor %}
  // Performs BatchUpdate operation
