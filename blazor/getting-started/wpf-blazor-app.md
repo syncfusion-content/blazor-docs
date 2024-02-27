@@ -98,4 +98,4 @@ In the Visual Studio toolbar, select the start button to build and run the app.
 
 ![WPF Blazor App with Syncfusion Blazor Components](images/wpf/wpf-blazor-calendar.png)
 
-N> Download demo from [GitHub](https://github.com/SyncfusionExamples/WPF-Blazor-App-using-Syncfusion-Blazor-Components)
+N> Download demo from [GitHub](https://github.com/SyncfusionExamples/blazor-general-cross-platform-wpf)
