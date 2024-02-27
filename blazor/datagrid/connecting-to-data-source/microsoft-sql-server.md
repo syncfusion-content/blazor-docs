@@ -253,7 +253,7 @@ Here, inline edit mode and [Toolbar](https://blazor.syncfusion.com/documentation
 
 {% endhighlight %}
 
-> Normal editing is the default edit mode for the DataGrid component. Also, to perform CRUD operations, set IsPrimaryKey property as True for a particular GridColumn, whose value is a unique.
+> Normal editing is the default edit mode for the DataGrid component. Also, to perform CRUD operations, set [IsPrimaryKey](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_IsPrimaryKey) property as **true** for a particular GridColumn, whose value is a unique.
 
 The CRUD operations can be performed and customized on our own by overriding the following CRUD methods of the DataAdaptor abstract class.
 
@@ -351,7 +351,7 @@ public async Task RemoveOrderAsync(int? Value)
 {% endhighlight %}
 {% endtabs %}
 
-> You can find the sample in this [GitHub location]().
+> You can find the sample in this [GitHub location](https://github.com/VigneshNatarajan27/connecting-microsoft-sql-data-base-to-data-grid).
 
 ## Bind data using an API Service with a Url Adaptor
 
@@ -638,4 +638,4 @@ public void Delete([FromBody] CRUDModel<Order> Value)
 {% endhighlight %}
 {% endtabs %}
 
-> Find the sample from this [Github]() location.
+> Find the sample from this [Github location](https://github.com/VigneshNatarajan27/connecting-sql-data-base-to-data-grid-using-api-service).
