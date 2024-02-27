@@ -468,6 +468,7 @@ To Perform the Batch operation, override the [BatchUpdate](https://help.syncfusi
 
 **4.** In the API controller  (aka, GridController), connect to Microsoft SQL server. In the **Get()** method **SqlConnection** helps to connect the SQL database (that is, Database1.mdf). Next, using **SqlCommand** and **SqlDataAdapter** you can process the desired SQL query string and retrieve data from the database. The **Fill** method of the DataAdapter is used to populate the SQL data into a **DataTable** as shown in the following code snippet.
 
+
 {% tabs %}
 {% highlight razor tabtitle="GridController.cs"%}
 using Microsoft.AspNetCore.Mvc;
@@ -493,27 +494,27 @@ namespace MyWebService.Controllers
             public string? ShipCity { get; set; }
         }
         [Route("api/[controller]")]
-        public List<Order> GetSQLResult()
+        public List<Order> GetOrderData()
         {
-            string conSTR = @"<Enter a valid connection string>";
+            string ConnectionString = @"<Enter a valid connection string>";
             string QueryStr = "SELECT * FROM dbo.Orders ORDER BY OrderID;";
-            SqlConnection sqlConnection = new(conSTR);
+            SqlConnection sqlConnection = new(ConnectionString);
             sqlConnection.Open();
-            SqlCommand sqlCommand = new(QueryStr, sqlConnection);
-            SqlDataAdapter dataAdapter = new(sqlCommand);
-            DataTable dataTable = new();
-            dataAdapter.Fill(dataTable);
+            SqlCommand SqlCommand = new(QueryStr, sqlConnection);
+            SqlDataAdapter DataAdapter = new(SqlCommand);
+            DataTable DataTable = new();
+            DataAdapter.Fill(DataTable);
             sqlConnection.Close();
-            var dataSource = (from DataRow data in dataTable.Rows
-                              select new Order()
-                              {
-                                  OrderID = Convert.ToInt32(data["OrderID"]),
-                                  CustomerID = data["CustomerID"].ToString(),
-                                  EmployeeID = Convert.IsDBNull(data["EmployeeID"]) ? 0 : Convert.ToUInt16(data["EmployeeID"]),
-                                  ShipCity = data["ShipCity"].ToString(),
-                                  Freight = Convert.ToDecimal(data["Freight"])
-                              }).ToList();
-            return dataSource;
+            var DataSource = (from DataRow Data in DataTable.Rows
+                      select new Order()
+                      {
+                          OrderID = Convert.ToInt32(Data["OrderID"]),
+                          CustomerID = Data["CustomerID"].ToString(),
+                          EmployeeID = Convert.IsDBNull(Data["EmployeeID"]) ? 0 : Convert.ToUInt16(Data["EmployeeID"]),
+                          ShipCity = Data["ShipCity"].ToString(),
+                          Freight = Convert.ToDecimal(Data["Freight"])
+                      }).ToList();
+            return DataSource;
         } 
     }
 }
@@ -577,13 +578,13 @@ When you run the application, the resultant Grid will look like this
 
 ### Handling data operations
 
-The Syncfusion Grid component offers a range of powerful features for handling grid actions such as **Searching**, **Sorting**,**Filtering**,**Paging** and  **Grouping**. This ensures efficient data retrieval and manipulation, providing a better user experience. Below are explanations on how to handle these data operations effectively in Url Adaptor:
+The Syncfusion Grid component offers a range of powerful features for handling grid actions such as **Searching**, **Sorting**,**Filtering**,**Paging** and  **Grouping**. To handle the Dataoperation in serve side [PerformSearching](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html#Syncfusion_Blazor_DataOperations_PerformSearching__1_System_Collections_Generic_IEnumerable___0__System_Collections_Generic_List_Syncfusion_Blazor_Data_SearchFilter__), [PerformSorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html#Syncfusion_Blazor_DataOperations_PerformSorting__1_System_Collections_Generic_IEnumerable___0__System_Collections_Generic_List_Syncfusion_Blazor_Data_Sort__), [PerformFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html#Syncfusion_Blazor_DataOperations_PerformFiltering_System_Collections_IEnumerable_System_Collections_Generic_List_Syncfusion_Blazor_Data_WhereFilter__System_String_), [PerformTake](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html#Syncfusion_Blazor_DataOperations_PerformTake_System_Collections_IEnumerable_System_Int32_) and [PerformSkip](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html#Syncfusion_Blazor_DataOperations_PerformSkip__1_System_Collections_Generic_IEnumerable___0__System_Int32_) method from Syncfusion package. This ensures efficient data retrieval and manipulation, providing a better user experience. Below are explanations on how to handle these data operations effectively in Url Adaptor:
+
+> Ensure to refer syncfusion blazor nuget package in the Api service project
 
 **Perform Searching:**
 
-When using a custom adaptor, the filtering operation has to be handled by overriding the `Read` or `ReadAsync` method of the **DataAdaptor** abstract class.
-
-In the below code example, a custom data source can be search using the built-in `PerformSearching` method of the `DataOperations` class. Also, you can use your own method to do the Searching operation and bind the resultant data to the grid.
+To handle searching operations, ensure that your API endpoint supports custom sorting criteria. Implement the sorting logic on the server-side using the `PerformSearching` method from the `DataOperations` class. This allows the custom data source to undergo sorting based on the criteria specified in the incoming **DataManagerRequest** object.
 
 {% highlight razor %}
 
@@ -605,7 +606,7 @@ In the below code example, a custom data source can be search using the built-in
 
 **Perform Sorting:**
 
-To handle filtering operations, ensure that your API endpoint supports custom sorting criteria. Implement the sorting logic on the server-side using the `PerformSorting` method from the `DataOperations` class. This allows the custom data source to undergo sorting based on the criteria specified in the incoming **DataManagerRequest** object.
+To handle Sorting operations, ensure that your API endpoint supports custom sorting criteria. Implement the sorting logic on the server-side using the `PerformSorting` method from the `DataOperations` class. This allows the custom data source to undergo sorting based on the criteria specified in the incoming **DataManagerRequest** object.
 
 {% highlight razor %}
  [HttpPost]
@@ -645,9 +646,7 @@ To handle filtering operations, ensure that your API endpoint supports custom fi
 
 **Perform Paging:**
 
-When using a custom adaptor, the filtering operation has to be handled by overriding the `Read` or `ReadAsync` method of the **DataAdaptor** abstract class.
-
-In the below code example, a custom data source can be paging using the built-in `PerformTake` and `PerformSkip` method of the `DataOperations` class. Also, you can use your own method to do the paging operation and bind the resultant data to the grid.
+To handle paging operations, ensure that your API endpoint supports custom sorting criteria. Implement the sorting logic on the server-side using the `PerformTake` and `PerformSkip` method from the `DataOperations` class. This allows the custom data source to undergo sorting based on the criteria specified in the incoming **DataManagerRequest** object.
 
 {% highlight razor %}
  [HttpPost]
