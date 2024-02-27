@@ -11,7 +11,7 @@ documentation: ug
 
 This section describes how to use [System.Data.SqlClient](https://www.nuget.org/packages/System.Data.SqlClient/4.8.6?_src=template) to retrieve data from a Microsoft SQL server database and bind it to the Blazor DataGrid.
 
-## Binding data from MySQL using Custom Adaptor
+## Bind data using Custom Adaptor
 
 **1.** Create a simple Blazor DataGrid by following the **"Getting Started"** documentation [link](https://blazor.syncfusion.com/documentation/datagrid/getting-started-with-web-app).
 
@@ -61,11 +61,11 @@ This section describes how to use [System.Data.SqlClient](https://www.nuget.org/
 
 **4.** In the custom adaptor’s **Read** method, you can get the Grid action details like paging, filtering, sorting information, etc. using [DataManagerRequest](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManagerRequest.html).
 
-* Based on the DataManagerRequest, form a SQL query string (to perform paging) and execute the SQL query. Retrieve the data from the database using SqlDataAdapter class.
+* Based on the **DataManagerRequest**, form a SQL query string (to perform paging) and execute the SQL query. Retrieve the data from the database using **SqlDataAdapter** class.
 
-* The Fill method of the DataAdapter is used to populate a DataSet with the results of the SelectCommand of the DataAdapter, then convert the DataSet into the List.
+* The Fill method of the **DataAdapter** is used to populate a DataSet with the results of the SelectCommand of the DataAdapter, then convert the DataSet into the List.
 
-* Return the response in Result and Count pair object in Read method to bind the data to the DataGrid.
+* Return the response in **Result** and **Count** pair object in **Read** method to bind the data to the DataGrid.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -75,7 +75,6 @@ This section describes how to use [System.Data.SqlClient](https://www.nuget.org/
 @using Syncfusion.Blazor.Data
 @using Syncfusion.Blazor
 @using Microsoft.Data.SqlClient;
-@using BlazorApp6.Data;
 
 <SfGrid @ref="Grid" TValue="Order" AllowSorting="true" AllowFiltering="true"  AllowGrouping="true" AllowPaging="true" Toolbar="@(new List<string>() { "Add", "Delete", "Update", "Cancel" })">
     <SfDataManager AdaptorInstance="@typeof(CustomAdaptor)" Adaptor="Adaptors.CustomAdaptor"></SfDataManager>
@@ -119,7 +118,7 @@ This section describes how to use [System.Data.SqlClient](https://www.nuget.org/
   {
       public async Task<List<Order>> GetOrdersAsync()
       {
-          string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\NaveenPalanivel\Downloads\BlazorApp6\BlazorApp6\BlazorApp6\App_Data\NORTHWND.MDF;Integrated Security=True;Connect Timeout=30";            
+          string connectionString = @"<Enter a valid connection string>";            
           string QueryStr = "SELECT * FROM dbo.Orders ORDER BY OrderID;";
           List<Order> Orders = null;
           using (SqlConnection connection = new SqlConnection(connectionString))
@@ -149,15 +148,15 @@ While running the application, the grid will be displayed as follows.
 
 ![Blazor Grid bound with Microsoft SQL data](../images/blazor-Grid-Ms-SQL-databinding.png)
 
-### Handling Data operations
+### Handling data operations
 
 The Syncfusion Grid component offers a range of powerful features for handling grid actions such as **grouping**, **sorting** and **filtering**.This ensures efficient data retrieval and manipulation, providing a better user experience. Below are explanations on how to handle these data operations effectively in Custom Adaptor:
 
 #### Filtering 
 
-When using a custom adaptor, the filtering operation has to be handled by overriding the Read/ReadAsync method of the DataAdaptor abstract class
+When using a custom adaptor, the filtering operation has to be handled by overriding the Read/ReadAsync method of the **DataAdaptor** abstract class
 
-In the below code example, a custom data source can be filtered using the built-in PerformFiltering method of the DataOperations class. Also, you can use your own method to do the filtering operation and bind the resultant data to the grid.
+In the below code example, a custom data source can be filtered using the built-in `PerformFiltering` method of the `DataOperations` class. Also, you can use your own method to do the filtering operation and bind the resultant data to the grid.
 
 {% highlight razor %}
 
@@ -181,9 +180,9 @@ In the below code example, a custom data source can be filtered using the built-
 
 #### Sorting 
 
-When using a custom adaptor, the sorting operation has to be handled by overriding the Read/ReadAsync method of the DataAdaptor abstract class
+When using a custom adaptor, the sorting operation has to be handled by overriding the Read/ReadAsync method of the **DataAdaptor** abstract class
 
-In the below code example, a custom data source can be sorted using the built-in PerformSorting method of the DataOperations class. Also, you can use your own method to do the sorting operation and bind the resultant data to the grid.
+In the below code example, a custom data source can be sorted using the built-in `PerformSorting` method of the `DataOperations` class. Also, you can use your own method to do the sorting operation and bind the resultant data to the grid.
 
 {% highlight razor %}
 
@@ -240,7 +239,7 @@ The following sample code demonstrates implementing the grouping operation in Cu
        }
 {% endhighlight %}
 
-### Handling CRUD operation
+### Handling CRUD operations
 
 Enable editing in the grid component using the [GridEditSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html) component. Grid provides various modes of editing options such as Inline/Normal, Dialog and Batch editing. Refer the [Grid Editing](https://blazor.syncfusion.com/documentation/datagrid/editing) documentation for reference.
 
@@ -254,7 +253,7 @@ Here, inline edit mode and [Toolbar](https://blazor.syncfusion.com/documentation
 
 {% endhighlight %}
 
-N> Normal editing is the default edit mode for the DataGrid component. Also, to perform CRUD operations, set IsPrimaryKey property as True for a particular GridColumn, whose value is a unique.
+> Normal editing is the default edit mode for the DataGrid component. Also, to perform CRUD operations, set IsPrimaryKey property as True for a particular GridColumn, whose value is a unique.
 
 The CRUD operations can be performed and customized on our own by overriding the following CRUD methods of the DataAdaptor abstract class.
 
@@ -352,11 +351,11 @@ public async Task RemoveOrderAsync(int? Value)
 {% endhighlight %}
 {% endtabs %}
 
-N> You can find the sample in this [GitHub location]()
+> You can find the sample in this [GitHub location]()
 
-## Binding data from MySQL using WebAPI Service
+## Bind data using an API Service with a Url Adaptor
 
-### Create a  Web API service to fetch Microsoft SQL data
+### Creating a API service 
 
 **1.** Open Visual Studio and create an ASP.NET Core Web App project type, naming it **MyWebService**. To create an ASP.NET Core Web application, follow the documentation [link](https://learn.microsoft.com/en-us/visualstudio/get-started/csharp/tutorial-aspnet-core?view=vs-2022).
 
@@ -366,9 +365,9 @@ N> You can find the sample in this [GitHub location]()
 
 ![Add the NuGet package Sytem.Data.SqlClient to the project](../images/system-Data-sql-client-nuget-package-install.png)
 
-**3.** Create a Web API controller (aka, GridController.cs) file under **Controllers** folder that helps to establish data communication with the DataGrid.
+**3.** Create a API controller (aka, GridController.cs) file under **Controllers** folder that helps to establish data communication with the DataGrid.
 
-**4.** In the Web API controller  (aka, GridController), connect to Microsoft SQL server. In the **Get()** method **SqlConnection** helps to connect the SQL database (that is, Database1.mdf). Next, using **SqlCommand** and **SqlDataAdapter** you can process the desired SQL query string and retrieve data from the database. The **Fill** method of the DataAdapter is used to populate the SQL data into a **DataTable** as shown in the following code snippet.
+**4.** In the API controller  (aka, GridController), connect to Microsoft SQL server. In the **Get()** method **SqlConnection** helps to connect the SQL database (that is, Database1.mdf). Next, using **SqlCommand** and **SqlDataAdapter** you can process the desired SQL query string and retrieve data from the database. The **Fill** method of the DataAdapter is used to populate the SQL data into a **DataTable** as shown in the following code snippet.
 
 {% tabs %}
 {% highlight razor tabtitle="GridController.cs"%}
@@ -424,15 +423,15 @@ namespace MyWebService.Controllers
 
 **5.** Run the application and it will be hosted within the URL `https://localhost:7033`.
 
-**6.** Finally, the retrieved data from Microsoft SQL database which is in the form of JSON can be found in the Web API controller available in the URL link `https://localhost:7033/api/Grid`, as shown in the browser page below.
+**6.** Finally, the retrieved data from Microsoft SQL database which is in the form of JSON can be found in the API controller available in the URL link `https://localhost:7033/api/Grid`, as shown in the browser page below.
 
-![Hosted Web API URL](../images/Ms-Sql-data.png)
+![Hosted API URL](../images/Ms-Sql-data.png)
 
-### Connecting the Grid to a Microsoft SQL using the Web API service
+### Connecting the Grid to API service
 
-**1.** Create a simple Blazor Pivot Table by following the **"Getting Started"** documentation [link](https://blazor.syncfusion.com/documentation/datagrid/getting-started-with-web-app).
+**1.** Create a simple Blazor Grid by following the **"Getting Started"** documentation [link](https://blazor.syncfusion.com/documentation/datagrid/getting-started-with-web-app).
 
-**2.** Map the hosted Web API's URL link `https://localhost:7033/api/Grid` to the Grid in **Index.razor** by using the [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) to the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_DataSource) property or by using [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) component. To interact with remote data source, provide the endpoint **Url**.
+**2.** Map the hosted API's URL link `https://localhost:7033/api/Grid` to the Grid in **Index.razor** by using the [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) to the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_DataSource) property or by using [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) component. To interact with remote data source, provide the endpoint **Url**.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor"%}
@@ -469,24 +468,24 @@ namespace MyWebService.Controllers
 {% endhighlight %}
 {% endtabs %}
 
-When you run the application, the resultant pivot table will look like this
+When you run the application, the resultant Grid will look like this
 
 ![Blazor Grid bound with Microsoft SQL data](../images/blazor-Grid-Ms-SQL-databinding.png)
 
-### Handling Data operations
+### Handling data operations
 
 The Syncfusion Grid component offers a range of powerful features for handling grid actions such as **grouping**, **sorting** and **filtering**.This ensures efficient data retrieval and manipulation, providing a better user experience. Below are explanations on how to handle these data operations effectively in Custom Adaptor:
 
 #### Filtering 
 
-To handle filtering operations, ensure that your Web API endpoint supports custom filtering criteria. Implement the filtering logic on the server-side using the PerformFiltering method from the DataOperations class. This allows the custom data source to undergo filtering based on the criteria specified in the incoming DataManagerRequest object.
+To handle filtering operations, ensure that your API endpoint supports custom filtering criteria. Implement the filtering logic on the server-side using the `PerformFiltering` method from the `DataOperations` class. This allows the custom data source to undergo filtering based on the criteria specified in the incoming **DataManagerRequest** object.
 
 {% highlight razor %}
  [HttpPost]
 [Route("api/[controller]")]
 public object Post([FromBody] DataManagerRequest dm)
 {
-    IEnumerable<Order> DataSource = GetMySQLResult();
+    IEnumerable<Order> DataSource = GetSQLResult();
     if (dm.Where != null && dm.Where.Count > 0)
     {
         // Filtering
@@ -499,14 +498,14 @@ public object Post([FromBody] DataManagerRequest dm)
 
 #### Sorting
 
-To handle filtering operations, ensure that your Web API endpoint supports custom sorting criteria. Implement the sorting logic on the server-side using the PerformSorting method from the DataOperations class. This allows the custom data source to undergo sorting based on the criteria specified in the incoming DataManagerRequest object.
+To handle filtering operations, ensure that your API endpoint supports custom sorting criteria. Implement the sorting logic on the server-side using the `PerformSorting` method from the `DataOperations` class. This allows the custom data source to undergo sorting based on the criteria specified in the incoming **DataManagerRequest** object.
 
 {% highlight razor %}
  [HttpPost]
  [Route("api/[controller]")]
  public object Post([FromBody] DataManagerRequest dm)
  {
-     IEnumerable<Order> DataSource = GetMySQLResult();
+     IEnumerable<Order> DataSource = GetSQLResult();
      if (dm.Sorted != null && dm.Sorted.Count > 0)
      {
          // Sorting
@@ -519,14 +518,14 @@ To handle filtering operations, ensure that your Web API endpoint supports custo
 
 #### Grouping 
 
-To handle grouping operations, ensure that your Web API endpoint supports custom grouping criteria. Implement the grouping logic on the server-side using the Group method from the DataUtil class. This allows the custom data source to undergo grouping based on the criteria specified in the incoming DataManagerRequest object.
+To handle grouping operations, ensure that your  API endpoint supports custom grouping criteria. Implement the grouping logic on the server-side using the Group method from the [DataUtil](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.DataUtil.html) class. This allows the custom data source to undergo grouping based on the criteria specified in the incoming **DataManagerRequest** object.
 
 {% highlight razor %}
  [HttpPost]
  [Route("api/[controller]")]
  public object Post([FromBody] DataManagerRequest dm)
  {
-     IEnumerable<Order> DataSource = GetMySQLResult();
+     IEnumerable<Order> DataSource = GetSQLResult();
      int count = DataSource.Cast<Order>().Count();
      DataResult DataObject = new DataResult();
      if (dm.Group != null)
@@ -577,7 +576,7 @@ DataGrid Editing and Toolbar code have been added to the previous Grid model.
 
 To insert a new row, click the **Add** toolbar button. The new record edit form will look like below.
 
-Clicking the **Update** toolbar button will insert the record in the Orders table by calling the following **POST** method of the Web API.
+Clicking the **Update** toolbar button will insert the record in the Orders table by calling the following **POST** method of the  API.
 
 {% tabs %}
 {% highlight c# tabtitle="OrdersController.cs" %}
@@ -600,7 +599,7 @@ Clicking the **Update** toolbar button will insert the record in the Orders tabl
 
 To edit a row, select any row and click the **Edit** toolbar button. The edit form will look like below. Edit the Customer Name column.
 
-Clicking the **Update** toolbar button will update the record in the Orders table by calling the following **Post** method of the Web API.
+Clicking the **Update** toolbar button will update the record in the Orders table by calling the following **Post** method of the  API.
 
 {% tabs %}
 {% highlight c# tabtitle="OrdersController.cs" %}
@@ -621,23 +620,22 @@ Clicking the **Update** toolbar button will update the record in the Orders tabl
 
 #### Delete a row
 
-To delete a row, select any row and click the **Delete** toolbar button. Deleting operation will send a **DELETE** request to the Web API with the selected record`s primary key value to remove the corresponding record from the Orders table.
+To delete a row, select any row and click the **Delete** toolbar button. Deleting operation will send a **DELETE** request to the API with the selected record`s primary key value to remove the corresponding record from the Orders table.
 
 {% tabs %}
 {% highlight c# tabtitle="OrdersController.cs" %}
- [HttpPost]
- [Route("api/Grid/Delete")]
- public void Delete([FromBody] CRUDModel<Order> value)
- {
-     string connectionString = @"<Enter a valid connection string>";
-     string QueryStr = $"Delete from Orders where OrderID={value.Value.OrderID}";
-     SqlConnection Con = new SqlConnection(connectionString);
-     Con.Open();
-     SqlCommand Cmd = new SqlCommand(QueryStr, Con);
-     Cmd.ExecuteNonQuery();
-     Con.Close();
+[HttpPost]
+[Route("api/Grid/Delete")]
+public void Delete([FromBody] CRUDModel<Order> Value)
+{
+    string connectionString = @"<Enter a valid connection string>";
+    string QueryStr = $"Delete from Orders where OrderID={Value.Key}";
+    SqlConnection Con = new SqlConnection(connectionString);
+    Con.Open();
+    SqlCommand Cmd = new SqlCommand(QueryStr, Con);
+    Cmd.ExecuteNonQuery();
  }
 {% endhighlight %}
 {% endtabs %}
 
-N> Find the sample from this [Github]() location.
+> Find the sample from this [Github]() location.
