@@ -154,9 +154,9 @@ The Syncfusion Grid component offers a range of powerful features for handling g
 
 **Perform Filtering:**
 
-When using a custom adaptor, the filtering operation has to be handled by overriding the `Read` or `ReadAsync` method of the **DataAdaptor** abstract class.
+When employing a custom adaptor, handling the filtering operation involves overriding the `Read` or `ReadAsync` method of the **DataAdaptor** abstract class.
 
-In the below code example, a custom data source can be filtered using the built-in `PerformFiltering` method of the `DataOperations` class. Also, you can use your own method to do the filtering operation and bind the resultant data to the grid.
+In the code example below, filtering a custom data source can be achieved by utilizing the built-in `PerformFiltering` method of the `DataOperations` class. Alternatively, you can implement your own method for filtering operations and bind the resulting data to the grid.
 
 {% highlight razor %}
 
@@ -179,10 +179,9 @@ In the below code example, a custom data source can be filtered using the built-
 {% endhighlight %}
 
 **Perform Sorting:** 
+When utilizing a custom adaptor, managing the sorting operation involves overriding the `Read` or `ReadAsync` method of the **DataAdaptor** abstract class.
 
-When using a custom adaptor, the sorting operation has to be handled by overriding the `Read` or `ReadAsync` method of the **DataAdaptor** abstract class.
-
-In the below code example, a custom data source can be sorted using the built-in `PerformSorting` method of the `DataOperations` class. Also, you can use your own method to do the sorting operation and bind the resultant data to the grid.
+In the code example below, sorting a custom data source can be accomplished by employing the built-in `PerformSorting` method of the `DataOperations` class. Alternatively, you can implement your own method for sorting operations and bind the resulting data to the grid.
 
 {% highlight razor %}
 
@@ -207,9 +206,9 @@ In the below code example, a custom data source can be sorted using the built-in
 
 **Perform Grouping:** 
 
-When using Custom Adaptor, the grouping operation has to be handled in the `Read` or `ReadAsync` method of Custom adaptor.
+When employing a Custom Adaptor, the grouping operation must be managed within the `Read` or `ReadAsync` method of the Custom adaptor.
 
-The following sample code demonstrates implementing the grouping operation in Custom Adaptor, 
+The provided sample code illustrates how to implement the grouping operation within a Custom Adaptor.
 
 {% highlight razor %}
 
@@ -241,9 +240,9 @@ The following sample code demonstrates implementing the grouping operation in Cu
 
 ### Handling CRUD operations
 
-Enable editing in the grid component using the [GridEditSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html) component. Grid provides various modes of editing options such as Inline/Normal, Dialog and Batch editing. Refer the [Grid Editing](https://blazor.syncfusion.com/documentation/datagrid/editing) documentation for reference.
+To enable editing in the grid component, utilize the [GridEditSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html) component. The grid offers multiple editing modes including Inline/Normal, Dialog, and Batch editing. For more details, refer to the [Grid Editing](https://blazor.syncfusion.com/documentation/datagrid/editing) documentation.
 
-Here, inline edit mode and [Toolbar](https://blazor.syncfusion.com/documentation/datagrid/tool-bar) property are used to show toolbar items for editing.
+In this scenario, the inline edit mode and [Toolbar](https://blazor.syncfusion.com/documentation/datagrid/tool-bar) property are configured to display toolbar items for editing purposes.
 
 {% highlight razor %}
 
@@ -253,9 +252,9 @@ Here, inline edit mode and [Toolbar](https://blazor.syncfusion.com/documentation
 
 {% endhighlight %}
 
-> Normal editing is the default edit mode for the DataGrid component. Also, to perform CRUD operations, set [IsPrimaryKey](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_IsPrimaryKey) property as **true** for a particular GridColumn, whose value is a unique.
+> Normal editing is the default mode for the DataGrid component. To enable CRUD operations, ensure that the [IsPrimaryKey](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_IsPrimaryKey) property is set to **true** for a specific GridColumn, ensuring that its value is unique.
 
-The CRUD operations can be performed and customized on our own by overriding the following CRUD methods of the DataAdaptor abstract class.
+The CRUD operations can be performed and customized on our own by overriding the following CRUD methods of the **DataAdaptor** abstract class.
 
 * Insert/InsertAsync
 * Remove/RemoveAsync
@@ -266,17 +265,19 @@ Let’s see how to perform CRUD operation using SQL server data with Syncfusion 
 
 **Insert Operation:**
 
-To Perform the Insert operation, override the Insert/InsertAsync method of the custom adaptor and add the following code in the CustomAdaptorComponent.razor.
+To execute the insert operation, you will need to override the `Insert` or `InsertAsync` method of the custom adaptor. Then, integrate the following code snippet into the **CustomAdaptorComponent.razor** file. The above code snippet demonstrates how to handle the insertion of new records within the `InsertAsync` method of the custom adaptor component. Adjust the logic inside this method as per your application requirements.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor"%}
 
  public override async Task<object> InsertAsync(DataManager DataManager, object Value, string Key)
  {
+    // Add your insert logic here
+    // This method will be invoked when inserting new records into the grid
      await Order.AddOrderAsync(Value as Order);
      return Value;
  }
-
+ 
 {% endhighlight %}
 {% highlight razor tabtitle="Orderdata.cs"%}
  public async Task AddOrderAsync(Order Value)
@@ -294,7 +295,7 @@ To Perform the Insert operation, override the Insert/InsertAsync method of the c
 
 **Update Operation:**
 
-To Perform the Update operation, override the Update/UpdateAsync method of the custom adaptor and add the following code in the CustomAdaptorComponent.razor.
+To execute the update operation, override the `Update` or `UpdateAsync` method of the custom adaptor. Then, integrate the following code snippet into the **CustomAdaptorComponent.razor** file. This code snippet demonstrates how to handle the updating of existing records within the `UpdateAsync` method of the custom adaptor component. Adjust the logic inside this method as per your application requirements.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor"%}
@@ -302,6 +303,8 @@ To Perform the Update operation, override the Update/UpdateAsync method of the c
 // Performs Update operation
  public override async Task<object> UpdateAsync(DataManager dm, object Value, string keyField, string key)
  {
+    // Add your update logic here
+    // This method will be invoked when updating existing records in the grid
      await Order.UpdateOrderAsync(Value as Order);
      return Value;
  }
@@ -325,13 +328,15 @@ To Perform the Update operation, override the Update/UpdateAsync method of the c
 
 **Delete Operation:**
 
-To Perform the Delete operation, override the Remove/RemoveAsync method of the custom adaptor and add the following code in the CustomAdaptorComponent.razor.
+To perform the delete operation, you need to override the `Remove` or `RemoveAsync` method of the custom adaptor. Below is the code snippet that you can add to the **CustomAdaptorComponent.razor** file. This code snippet demonstrates how to handle the deletion of existing records within the `RemoveAsync` method of the custom adaptor component. Adjust the logic inside this method according to your application requirements.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor"%}
 
 public override async Task<object> RemoveAsync(DataManager dm, object Value, string keyField, string key)
 {
+    // Add your delete logic here
+    // This method will be invoked when deleting existing records from the grid
     await Order.RemoveOrderAsync(Value as int?);
     return Value;
 }
@@ -518,7 +523,7 @@ To handle filtering operations, ensure that your API endpoint supports custom so
 
 **Perform Grouping:**
 
-To handle grouping operations, ensure that your  API endpoint supports custom grouping criteria. Implement the grouping logic on the server-side using the Group method from the [DataUtil](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.DataUtil.html) class. This allows the custom data source to undergo grouping based on the criteria specified in the incoming **DataManagerRequest** object.
+To handle grouping operations, ensure that your API endpoint supports custom grouping criteria. Implement the grouping logic on the server-side using the `Group` method from the [DataUtil](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.DataUtil.html) class. This allows the custom data source to undergo grouping based on the criteria specified in the incoming **DataManagerRequest** object.
 
 {% highlight razor %}
  [HttpPost]
@@ -547,9 +552,9 @@ To handle grouping operations, ensure that your  API endpoint supports custom gr
 
 ### Handling CRUD operations 
 
-You can enable editing in the grid component using the [GridEditSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html) component. Grid provides various modes of editing options such as [Inline/Normal](https://blazor.syncfusion.com/documentation/datagrid/in-line-editing), [Dialog](https://blazor.syncfusion.com/documentation/datagrid/dialog-editing), and [Batch](https://blazor.syncfusion.com/documentation/datagrid/batch-editing) editing.
+To enable editing in the grid component, utilize the [GridEditSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html) component. The grid offers multiple editing modes including Inline/Normal, Dialog, and Batch editing. For more details, refer to the [Grid Editing](https://blazor.syncfusion.com/documentation/datagrid/editing) documentation.
 
-Here, Inline edit mode is utilized, and used Toolbar property to show toolbar items for editing. DataGrid Editing and Toolbar code have been added to the previous Grid model.
+In this scenario, the inline edit mode and [Toolbar](https://blazor.syncfusion.com/documentation/datagrid/tool-bar) property are configured to display toolbar items for editing purposes.
 
 {% tabs %}
 {% highlight razor %}
@@ -569,13 +574,11 @@ Here, Inline edit mode is utilized, and used Toolbar property to show toolbar it
 {% endhighlight %}
 {% endtabs %}
 
-> Normal editing is the default edit mode for the DataGrid component. Set the [IsPrimaryKey](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_IsPrimaryKey) property of Column as **true** for a particular column, whose value is a unique value for editing purposes.
+> Normal editing is the default mode for the DataGrid component. To enable CRUD operations, ensure that the [IsPrimaryKey](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_IsPrimaryKey) property is set to **true** for a specific GridColumn, ensuring that its value is unique.
 
 **Insert Operation:**
 
-To insert a new row, click the **Add** toolbar button. The new record edit form will look like below.
-
-Clicking the **Update** toolbar button will insert the record in the Orders table by calling the following **POST** method of the  API.
+To add a new row, simply click the **Add** toolbar button. The new record edit form will be displayed as shown below. Upon clicking the **Update** toolbar button, the record will be inserted into the Orders table by invoking the following **POST** method of the API.
 
 {% tabs %}
 {% highlight c# tabtitle="OrdersController.cs" %}
@@ -596,9 +599,7 @@ Clicking the **Update** toolbar button will insert the record in the Orders tabl
 
 **Update Operation:**
 
-To edit a row, select any row and click the **Edit** toolbar button. The edit form will look like below. Edit the Customer Name column.
-
-Clicking the **Update** toolbar button will update the record in the Orders table by calling the following **Post** method of the  API.
+To edit a row, first, select the desired row and then click the **Edit** toolbar button. The edit form will be displayed as shown below. Proceed to modify the Customer Name column as needed. Clicking the **Update** toolbar button will update the record in the Orders table by invoking the following **POST** method of the API.
 
 {% tabs %}
 {% highlight c# tabtitle="OrdersController.cs" %}
@@ -619,7 +620,7 @@ Clicking the **Update** toolbar button will update the record in the Orders tabl
 
 **Delete Operation:**
 
-To delete a row, select any row and click the **Delete** toolbar button. Deleting operation will send a **DELETE** request to the API with the selected record`s primary key value to remove the corresponding record from the Orders table.
+To delete a row, simply select the desired row and click the **Delete** toolbar button. This action will trigger a **DELETE** request to the API, containing the primary key value of the selected record. As a result, the corresponding record will be removed from the Orders table.
 
 {% tabs %}
 {% highlight c# tabtitle="OrdersController.cs" %}
