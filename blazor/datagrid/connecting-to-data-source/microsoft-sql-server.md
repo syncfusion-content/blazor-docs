@@ -150,11 +150,11 @@ While running the application, the grid will be displayed as follows.
 
 ### Handling data operations
 
-The Syncfusion Grid component offers a range of powerful features for handling grid actions such as **grouping**, **sorting** and **filtering**.This ensures efficient data retrieval and manipulation, providing a better user experience. Below are explanations on how to handle these data operations effectively in Custom Adaptor:
+The Syncfusion Grid component offers a range of powerful features for handling grid actions such as **grouping**, **sorting** and **filtering**. This ensures efficient data retrieval and manipulation, providing a better user experience. Below are explanations on how to handle these data operations effectively in Custom Adaptor:
 
 #### Filtering 
 
-When using a custom adaptor, the filtering operation has to be handled by overriding the Read/ReadAsync method of the **DataAdaptor** abstract class
+When using a custom adaptor, the filtering operation has to be handled by overriding the Read/ReadAsync method of the **DataAdaptor** abstract class.
 
 In the below code example, a custom data source can be filtered using the built-in `PerformFiltering` method of the `DataOperations` class. Also, you can use your own method to do the filtering operation and bind the resultant data to the grid.
 
@@ -180,7 +180,7 @@ In the below code example, a custom data source can be filtered using the built-
 
 #### Sorting 
 
-When using a custom adaptor, the sorting operation has to be handled by overriding the Read/ReadAsync method of the **DataAdaptor** abstract class
+When using a custom adaptor, the sorting operation has to be handled by overriding the Read/ReadAsync method of the **DataAdaptor** abstract class.
 
 In the below code example, a custom data source can be sorted using the built-in `PerformSorting` method of the `DataOperations` class. Also, you can use your own method to do the sorting operation and bind the resultant data to the grid.
 
@@ -209,7 +209,7 @@ In the below code example, a custom data source can be sorted using the built-in
 
 When using Custom Adaptor, the grouping operation has to be handled in the Read/ReadAsync method of Custom adaptor.
 
-The following sample code demonstrates implementing the grouping operation in Custom Adaptor 
+The following sample code demonstrates implementing the grouping operation in Custom Adaptor, 
 
 {% highlight razor %}
 
@@ -262,7 +262,7 @@ The CRUD operations can be performed and customized on our own by overriding the
 * Update/UpdateAsync
 * BatchUpdate/BatchUpdateAsync
 
-Let’s see how to perform CRUD operation using SQL server data with Syncfusion Blazor DataGrid component
+Let’s see how to perform CRUD operation using SQL server data with Syncfusion Blazor DataGrid component.
 
 #### Insert Operation
 
@@ -351,7 +351,7 @@ public async Task RemoveOrderAsync(int? Value)
 {% endhighlight %}
 {% endtabs %}
 
-> You can find the sample in this [GitHub location]()
+> You can find the sample in this [GitHub location]().
 
 ## Bind data using an API Service with a Url Adaptor
 
