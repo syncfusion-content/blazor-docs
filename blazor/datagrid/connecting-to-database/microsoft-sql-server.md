@@ -170,7 +170,6 @@ When using a custom adaptor, the filtering operation has to be handled by overri
 In the below code example, a custom data source can be search using the built-in `PerformSearching` method of the `DataOperations` class. Also, you can use your own method to do the Searching operation and bind the resultant data to the grid.
 
 {% highlight razor %}
-
 public class CustomAdaptor : DataAdaptor
 {
     public OrderData OrderService = new OrderData();
@@ -187,7 +186,6 @@ public class CustomAdaptor : DataAdaptor
         return DataManagerRequest.RequiresCounts ? new DataResult() { Result = DataSource, Count = count } : (object)DataSource;
     }
 }
-
 {% endhighlight %}
 
 **Perform Sorting:** 
