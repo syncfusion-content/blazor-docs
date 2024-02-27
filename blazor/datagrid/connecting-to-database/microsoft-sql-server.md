@@ -11,15 +11,15 @@ documentation: ug
 
 This section describes how to use [System.Data.SqlClient](https://www.nuget.org/packages/System.Data.SqlClient/4.8.6?_src=template) to retrieve data from a Microsoft SQL server database and bind it to the Blazor DataGrid.
 
-Microsoft SQL database bound to the grid in different ways, and I'll provide two examples on my end using different approaches: a custom adapter with local binding and API services with a URL adapter.
+Microsoft SQL database can be bound to the datagrid in different ways (i.e.) DataSource property, CustomAdaptor and Remote Databinding using various adaptors (WebAPI, OData, ODataV4, URLadaptor). Here listed two options are the most efficient and easily customizable approaches. [CustomAdaptor](https://blazor.syncfusion.com/documentation/datagrid/custom-binding) approach suitable to local binding and [URLAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors#url-adaptor) suitable for remote data bidning. Both the approaches have capability to handle data and CRUD operations with built-in methods as well as can be customized as per your own.
 
-**Custom Adapter - Local Binding:**
+**Custom Adaptor**
 
-A custom adapter allows you to perform manual operations on the data. This is demonstrated below by implementing custom data binding and editing operations in the DataGrid component.
+A custom adapter allows you to perform manual operations on the data. For implementing custom data binding in Grid, DataAdaptor class is used. It class acts as a base class and has both synchronous and asynchronous method signatures whcih can be overriden in CustomAdaptor.
 
-**API Services with URL Adapter-Remote data binding:**
+**API Services with URL Adaptor**
 
-The UrlAdaptor acts as the base adaptor for interacting with remote data services.Using API services with a URL adapter involves creating your own service to connect to the adapter and bind data to the grid. You can also connect your own service to different adapters like OData v4 or WebAPI adapters.
+Remotely database can be bound to grid using multiple adaptors namely WebAPI, OData, ODataV4 including the URLadaptor. If you have pre configured API service following existing WebAPI standards, then WebAPI adaptor can be utilized to achieve your requirement. The URL adaptor send all requests to API service as a **POST** reqeust. The UrlAdaptor acts as the base adaptor for interacting with remote data services.
 
 
 ## Binding data from Microsoft SQL Server using Custom Adaptor
@@ -75,7 +75,6 @@ The UrlAdaptor acts as the base adaptor for interacting with remote data service
 * Employ the Fill method of the **DataAdapter** to populate a DataSet with the results of the `Select` command of the DataAdapter, followed by conversion of the DataSet into a List.
 
 * Finally, return the response as a `Result` and `Count` pair object in the **ReadAsync** method to bind the data to the DataGrid.
-
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -165,9 +164,9 @@ The Syncfusion Grid component offers a range of powerful features for handling g
 
 **Perform Searching:**
 
-When using a custom adaptor, the filtering operation has to be handled by overriding the `Read` or `ReadAsync` method of the **DataAdaptor** abstract class.
+When utlizing a custom adaptor, managing the searching operation ivolves overriding the `Read` or `ReadAsync` method of the **DataAdaptor** abstract class.
 
-In the below code example, a custom data source can be search using the built-in `PerformSearching` method of the `DataOperations` class. Also, you can use your own method to do the Searching operation and bind the resultant data to the grid.
+In the code example below, searching a custom data source can be accomplished by employing the built-in [PerformSearching](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html#Syncfusion_Blazor_DataOperations_PerformSearching_System_Collections_IEnumerable_System_Collections_Generic_List_Syncfusion_Blazor_Data_SearchFilter__) method of the [DataOperations](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html) class. Alternatively, you can implement your own method for Searching operation and bind the resultant data to the grid.
 
 {% highlight razor %}
 public class CustomAdaptor : DataAdaptor
@@ -190,9 +189,9 @@ public class CustomAdaptor : DataAdaptor
 
 **Perform Sorting:** 
 
-When using a custom adaptor, the sorting operation has to be handled by overriding the `Read` or `ReadAsync` method of the **DataAdaptor** abstract class.
+When utlizing a custom adaptor, managing the sorting operation involves overriding the `Read` or `ReadAsync` method of the **DataAdaptor** abstract class.
 
-In the below code example, a custom data source can be sorted using the built-in `PerformSorting` method of the `DataOperations` class. Also, you can use your own method to do the sorting operation and bind the resultant data to the grid.
+In the code example below, sorting a custom data source can be accomplished by employing the built-in [PerformSorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html#Syncfusion_Blazor_DataOperations_PerformSorting__1_System_Collections_Generic_IEnumerable___0__System_Collections_Generic_List_Syncfusion_Blazor_Data_Sort__) method of the `DataOperations` class. Alternatively, you can implement your own method for sorting operation and bind the resulting data to the grid.
 
 {% highlight razor %}
 
@@ -217,9 +216,9 @@ In the below code example, a custom data source can be sorted using the built-in
 
 **Perform Filtering:**
 
-When using a custom adaptor, the filtering operation has to be handled by overriding the `Read` or `ReadAsync` method of the **DataAdaptor** abstract class.
+When employing a custom adaptor, handling the filtering operation involves overriding the `Read` or `ReadAsync` method of the **DataAdaptor** abstract class.
 
-In the below code example, a custom data source can be filtered using the built-in `PerformFiltering` method of the `DataOperations` class. Also, you can use your own method to do the filtering operation and bind the resultant data to the grid.
+In the code example below, filtering a custom data source can be achieved by utilizing the built-in [PerformFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html#Syncfusion_Blazor_DataOperations_PerformFiltering__1_System_Collections_Generic_IEnumerable___0__System_Collections_Generic_List_Syncfusion_Blazor_Data_WhereFilter__System_String_) method of the `DataOperations` class. Alternatively, you can implement your own method for filtering operations and bind the resulting data to the grid.
 
 {% highlight razor %}
 
@@ -244,9 +243,9 @@ In the below code example, a custom data source can be filtered using the built-
 
 **Perform Paging:**
 
-When using a custom adaptor, the filtering operation has to be handled by overriding the `Read` or `ReadAsync` method of the **DataAdaptor** abstract class.
+When employing a custom adaptor, handling paging operation involves overriding the `Read` or `ReadAsync` method of the **DataAdaptor** abstract class.
 
-In the below code example, a custom data source can be paging using the built-in `PerformTake` and `PerformSkip` method of the `DataOperations` class. Also, you can use your own method to do the paging operation and bind the resultant data to the grid.
+In the code example below, paging a custom data source can be achieved by utilizing the built-in [PerformTake](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html#Syncfusion_Blazor_DataOperations_PerformTake_System_Collections_IEnumerable_System_Int32_) and [PerformSkip](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html#Syncfusion_Blazor_DataOperations_PerformSkip__1_System_Collections_Generic_IEnumerable___0__System_Int32_) method of the `DataOperations` class. Alternatively, you can use your own method for paging operation and bind the resulting data to the grid.
 
 {% highlight razor %}
 
@@ -274,9 +273,9 @@ public class CustomAdaptor : DataAdaptor
 
 **Perform Grouping:** 
 
-When using Custom Adaptor, the grouping operation has to be handled in the `Read` or `ReadAsync` method of Custom adaptor.
+When employing Custom Adaptor, the grouping operation must be managed wihtin the `Read` or `ReadAsync` method of the Custom adaptor.
 
-The following sample code demonstrates implementing the grouping operation in Custom Adaptor, 
+The provided sample code illustrated how to implement the grouping operation wihtin in Custom Adaptor, 
 
 {% highlight razor %}
 public class CustomAdaptor : DataAdaptor
@@ -309,9 +308,9 @@ public class CustomAdaptor : DataAdaptor
 
 ### Handling CRUD operations
 
-Enable editing in the grid component using the [GridEditSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html) component. Grid provides various modes of editing options such as Inline/Normal, Dialog and Batch editing. Refer the [Grid Editing](https://blazor.syncfusion.com/documentation/datagrid/editing) documentation for reference.
+To enable editing in the grid component, utilize the [GridEditSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html) component.The grid offers multiple editing modes including the Inline/Normal, Dialog and Batch editing. For more details, refer to the [Grid Editing](https://blazor.syncfusion.com/documentation/datagrid/editing) documentation.
 
-Here, inline edit mode and [Toolbar](https://blazor.syncfusion.com/documentation/datagrid/tool-bar) property are used to show toolbar items for editing.
+In this scenario, the inline edit mode and [Toolbar](https://blazor.syncfusion.com/documentation/datagrid/tool-bar) property configured to dispaly toolbar items for editing pruposes.
 
 {% highlight razor %}
 
@@ -321,10 +320,10 @@ Here, inline edit mode and [Toolbar](https://blazor.syncfusion.com/documentation
 
 {% endhighlight %}
 
->* Normal editing is the default edit mode for the DataGrid component. Also, to perform CRUD operations, set [IsPrimaryKey](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_IsPrimaryKey) property as **true** for a particular GridColumn, whose value is a unique.
-> * If [IsIdentity](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_IsIdentity) is enabled, then it will be considered as a read-only column when editing and adding a record.
+> * Normal editing is the default edit mode for the DataGrid component. To enable CRUD operations, ensure that the [IsPrimaryKey](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_IsPrimaryKey) property is set to **true** for a specific GridColumn, ensuring that its value is unique.
+> * If database have AutoGenerated column, kinldy ensure to define [IsIdentity](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_IsIdentity) property of GridColumn to disable them while adding or editing operations.
 
-The CRUD operations can be performed and customized on our own by overriding the following CRUD methods of the DataAdaptor abstract class.
+The CRUD operations can be performed and customized on our own by overriding the following CRUD methods of the **DataAdaptor** abstract class.
 
 * Insert/InsertAsync
 * Remove/RemoveAsync
@@ -335,13 +334,15 @@ Let’s see how to perform CRUD operation using SQL server data with Syncfusion 
 
 **Insert Operation:**
 
-To Perform the Insert operation, override the [Insert](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_Insert_Syncfusion_Blazor_DataManager_System_Object_System_String_) or [InsertAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_InsertAsync_Syncfusion_Blazor_DataManager_System_Object_System_String_) method of the custom adaptor and add the following code in the CustomAdaptor.
+To execute the insert operation, you will need to override the [Insert](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_Insert_Syncfusion_Blazor_DataManager_System_Object_System_String_) or [InsertAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_InsertAsync_Syncfusion_Blazor_DataManager_System_Object_System_String_) method of the custom adaptor. Then, integrate the following code snippet into the **CustomAdaptor** class. The above code snippet demonstrated how to handle the insertion of new records within the `InsertAsync` method of CustomAdaptor component. Adjust the login inside this method as per your application requirements.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor"%}
 
 public override async Task<object> InsertAsync(DataManager DataManager, object Value, string Key)
 {
+    //Add your insert logic here
+    //This method will be invoked when inserting new records into the grid.
     await OrderService.AddOrderAsync(Value as Order);
     return Value;
 }
@@ -363,7 +364,7 @@ public override async Task<object> InsertAsync(DataManager DataManager, object V
 
 **Update Operation:**
 
-To Perform the Update operation, override the [Update](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_Update_Syncfusion_Blazor_DataManager_System_Object_System_String_System_String_) or [UpdateAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_UpdateAsync_Syncfusion_Blazor_DataManager_System_Object_System_String_System_String_) method of the custom adaptor and add the following code in the CustomAdaptor.
+To execute the Update operation, override the [Update](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_Update_Syncfusion_Blazor_DataManager_System_Object_System_String_System_String_) or [UpdateAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_UpdateAsync_Syncfusion_Blazor_DataManager_System_Object_System_String_System_String_) method of the custom adaptor. Then, integrate the following code snippet into the **CustomAdaptor** class. This code snippet demonstrated how to handle the updating of existing records within the `UpdateAsync` method of the CustomAdaptor component. Adjust the login insdie this method as per your application requirements.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor"%}
@@ -371,6 +372,8 @@ To Perform the Update operation, override the [Update](https://help.syncfusion.c
 // Performs Update operation
  public override async Task<object> UpdateAsync(DataManager DataManager, object Value, string keyField, string key)
  {
+    //Add your update logic here
+    //This method will be invoked when updating existing in the grid.
      await OrderService.UpdateOrderAsync(Value as Order);
      return Value;
  }
@@ -392,13 +395,15 @@ To Perform the Update operation, override the [Update](https://help.syncfusion.c
 
 **Delete Operation:**
 
-To Perform the Delete operation, override the Remove(https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_Remove_Syncfusion_Blazor_DataManager_System_Object_System_String_System_String_) or RemoveAsync(https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_RemoveAsync_Syncfusion_Blazor_DataManager_System_Object_System_String_System_String_) method of the custom adaptor and add the following code in the CustomAdaptor.
+To Perform the delete operation, you need to override the Remove(https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_Remove_Syncfusion_Blazor_DataManager_System_Object_System_String_System_String_) or RemoveAsync(https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_RemoveAsync_Syncfusion_Blazor_DataManager_System_Object_System_String_System_String_) method of the custom adaptor. Below is the code snippet that you can add to **CustomAdaptor** class. This code snippet demonstrated how to handle the deletion of existing records within the `RemoveAsync` method of CustomAdaptor component. Adjust the logic inside this method according to your application requirements.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor"%}
 
  public override async Task<object> RemoveAsync(DataManager DataManager, object Value, string keyField, string key)
  {
+    //Add your delete logic here
+    //This method will be invoked when deleting existing records from the grid.
      await OrderService.RemoveOrderAsync(Value as int?);
      return Value;
  }
@@ -531,9 +536,11 @@ namespace MyWebService.Controllers
 
 **1.** Create a simple Blazor Grid by following the [Getting Started](https://blazor.syncfusion.com/documentation/datagrid/getting-started-with-web-app) documentation link.
 
-**2.** Map the hosted API's URL link `https://localhost:xxxx/api/Grid` to the Grid in **Index.razor** by using the [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) to the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_DataSource) property or by using [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) component. To interact with remote data source, provide the endpoint **Url**.
+**2.** Map the hosted API's URL link `https://localhost:xxxx/api/Grid` to the Grid in **Index.razor** by using the [SfDataManager's](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) [Url](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_Url) property. To interact with remote data source, provide the endpoint **Url**.
 
-**3.** The `UrlAdaptor` acts as the base adaptor for interacting with remote data services. Most of the built-in adaptors are derived from the `UrlAdaptor`.
+**3.** The SfDataManager offers mulitple adaptor options to connect with remote datasource based on API services. Below demonstrated is the URLAdaptor where API services is configured to return the resuting data in `Result` and `Count` format.  
+
+**4.** The `UrlAdaptor` acts as the base adaptor for interacting with remote data services. Most of the built-in adaptors are derived from the `UrlAdaptor`.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor"%}
@@ -584,7 +591,7 @@ The Syncfusion Grid component offers a range of powerful features for handling g
 
 **Perform Searching:**
 
-To handle searching operations, ensure that your API endpoint supports custom sorting criteria. Implement the sorting logic on the server-side using the `PerformSearching` method from the `DataOperations` class. This allows the custom data source to undergo sorting based on the criteria specified in the incoming **DataManagerRequest** object.
+To handle searching operations, ensure that your API endpoint supports custom searching criteria. Implement the searching logic on the server-side using the [PerformSearching](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html#Syncfusion_Blazor_DataOperations_PerformSearching__1_System_Collections_Generic_IEnumerable___0__System_Collections_Generic_List_Syncfusion_Blazor_Data_SearchFilter__) method from the [DataOperations](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html) class. This allows the custom data source to undergo searching based on the criteria specified in the incoming **DataManagerRequest** object.
 
 {% highlight razor %}
 
@@ -606,7 +613,7 @@ To handle searching operations, ensure that your API endpoint supports custom so
 
 **Perform Sorting:**
 
-To handle Sorting operations, ensure that your API endpoint supports custom sorting criteria. Implement the sorting logic on the server-side using the `PerformSorting` method from the `DataOperations` class. This allows the custom data source to undergo sorting based on the criteria specified in the incoming **DataManagerRequest** object.
+To handle sorting operations, ensure that your API endpoint supports custom sorting criteria. Implement the sorting logic on the server-side using the [PerformSorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html#Syncfusion_Blazor_DataOperations_PerformSorting__1_System_Collections_Generic_IEnumerable___0__System_Collections_Generic_List_Syncfusion_Blazor_Data_Sort__) method from the `DataOperations` class. This allows the custom data source to undergo sorting based on the criteria specified in the incoming **DataManagerRequest** object.
 
 {% highlight razor %}
  [HttpPost]
@@ -626,7 +633,7 @@ To handle Sorting operations, ensure that your API endpoint supports custom sort
 
 **Perform Filtering:**
 
-To handle filtering operations, ensure that your API endpoint supports custom filtering criteria. Implement the filtering logic on the server-side using the `PerformFiltering` method from the `DataOperations` class. This allows the custom data source to undergo filtering based on the criteria specified in the incoming **DataManagerRequest** object.
+To handle filtering operations, ensure that your API endpoint supports custom filtering criteria. Implement the filtering logic on the server-side using the [PerformFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html#Syncfusion_Blazor_DataOperations_PerformFiltering_System_Collections_IEnumerable_System_Collections_Generic_List_Syncfusion_Blazor_Data_WhereFilter__System_String_) method from the `DataOperations` class. This allows the custom data source to undergo filtering based on the criteria specified in the incoming **DataManagerRequest** object.
 
 {% highlight razor %}
  [HttpPost]
@@ -646,7 +653,7 @@ To handle filtering operations, ensure that your API endpoint supports custom fi
 
 **Perform Paging:**
 
-To handle paging operations, ensure that your API endpoint supports custom sorting criteria. Implement the sorting logic on the server-side using the `PerformTake` and `PerformSkip` method from the `DataOperations` class. This allows the custom data source to undergo sorting based on the criteria specified in the incoming **DataManagerRequest** object.
+To handle paging operations, ensure that your API endpoint supports custom paging criteria. Implement the paging logic on the server-side using the [PerformTake](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html#Syncfusion_Blazor_DataOperations_PerformTake_System_Collections_IEnumerable_System_Int32_) and [PerformSkip](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html#Syncfusion_Blazor_DataOperations_PerformSkip__1_System_Collections_Generic_IEnumerable___0__System_Int32_) method from the `DataOperations` class. This allows the custom data source to undergo paging based on the criteria specified in the incoming **DataManagerRequest** object.
 
 {% highlight razor %}
  [HttpPost]
@@ -671,7 +678,7 @@ To handle paging operations, ensure that your API endpoint supports custom sorti
 
 **Perform Grouping:**
 
-To handle grouping operations, ensure that your  API endpoint supports custom grouping criteria. Implement the grouping logic on the server-side using the Group method from the [DataUtil](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.DataUtil.html) class. This allows the custom data source to undergo grouping based on the criteria specified in the incoming **DataManagerRequest** object.
+To handle grouping operations, ensure that your API endpoint supports custom grouping criteria. Implement the grouping logic on the server-side using the `Group` method from the [DataUtil](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.DataUtil.html) class. This allows the custom data source to undergo grouping based on the criteria specified in the incoming **DataManagerRequest** object.
 
 {% highlight razor %}
  [HttpPost]
@@ -703,9 +710,9 @@ To handle grouping operations, ensure that your  API endpoint supports custom gr
 
 ### Handling CRUD operations 
 
-You can enable editing in the grid component using the [GridEditSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html) component. Grid provides various modes of editing options such as [Inline/Normal](https://blazor.syncfusion.com/documentation/datagrid/in-line-editing), [Dialog](https://blazor.syncfusion.com/documentation/datagrid/dialog-editing), and [Batch](https://blazor.syncfusion.com/documentation/datagrid/batch-editing) editing.
+To enable editing in this grid component, utilize the [GridEditSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html) component. The grid offers multiple editing modes including the [Inline/Normal](https://blazor.syncfusion.com/documentation/datagrid/in-line-editing), [Dialog](https://blazor.syncfusion.com/documentation/datagrid/dialog-editing), and [Batch](https://blazor.syncfusion.com/documentation/datagrid/batch-editing) editing. For more details, refer to the [Grid Editing](https://blazor.syncfusion.com/documentation/datagrid/editing) documentation. 
 
-Here, Inline edit mode is utilized, and used Toolbar property to show toolbar items for editing. DataGrid Editing and Toolbar code have been added to the previous Grid model.
+In this scenario, the inline edit mode and [Toolbar](https://blazor.syncfusion.com/documentation/datagrid/tool-bar) property are configured to display toolbar items for editing purposes.
 
 {% tabs %}
 {% highlight razor %}
@@ -725,12 +732,12 @@ Here, Inline edit mode is utilized, and used Toolbar property to show toolbar it
 {% endhighlight %}
 {% endtabs %}
 
-> Normal editing is the default edit mode for the DataGrid component. Set the [IsPrimaryKey](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_IsPrimaryKey) property of Column as **true** for a particular column, whose value is a unique value for editing purposes.
-> * If [IsIdentity](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_IsIdentity) is enabled, then it will be considered as a read-only column when editing and adding a record.
+> * Normal editing is the default edit mode for the DataGrid component. To enable CRUD operations, ensure that the [IsPrimaryKey](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_IsPrimaryKey) property is set to **true** for a specific GridColumn, ensuring that its value is unique.
+> * If database have AutoGenerated column, kinldy ensure to define [IsIdentity](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_IsIdentity) property of GridColumn to disable them while adding or editing operations.
 
 **Insert Operation:**
 
-To insert a new row, click the **Add** toolbar button. Clicking the **Update** toolbar button will insert the new record in the Orders table by calling the following **POST** method of the  API.
+To insert a new row, simply click the **Add** toolbar button. The new records edit form will be dispalyed as shown below. Upon clicking the **Update** toolbar button, record will inserted into in the Orders table by calling the following **POST** method of the  API.
 
 {% tabs %}
 {% highlight c# tabtitle="OrdersController.cs" %}
@@ -751,7 +758,7 @@ To insert a new row, click the **Add** toolbar button. Clicking the **Update** t
 
 **Update Operation:**
 
-To edit a row, select any row and click the **Edit** toolbar button. Clicking the **Update** toolbar button will update the edit record in the Orders table by calling the following **Post** method of the  API.
+To edit a row, first select desrired row and click the **Edit** toolbar button. The edit form will be displayed as shown below. proceed to modify the CustomerName column as needed. Clicking the **Update** toolbar button will update the edit record in the Orders table by involing the following **Post** method of the  API.
 
 {% tabs %}
 {% highlight c# tabtitle="OrdersController.cs" %}
@@ -772,7 +779,7 @@ public void Update([FromBody] CRUDModel<Order> Value)
 
 **Delete Operation:**
 
-To delete a row, select any row and click the **Delete** toolbar button. Deleting operation will send a **DELETE** request to the API with the selected record`s primary key value to remove the corresponding record from the Orders table.
+To delete a row, simply select the desrired row and click the **Delete** toolbar button. This action will trigger a **DELETE** request to the API, containing the primary key value of the selected record. As a result corresponding record will be removed from the Orders table.
 
 {% tabs %}
 {% highlight c# tabtitle="OrdersController.cs" %}
@@ -793,7 +800,7 @@ To delete a row, select any row and click the **Delete** toolbar button. Deletin
 
 **Batch Operation**
 
-To perform Batch Operation, define Edit Mode as Batch and define  BatchUrl porperty in the SfDataManager, then use the Add toolbar button to insert new rows. To edit rows, select them and click the Edit toolbar button. clicking the Update toolbar button will update the new and edited records in the Orders table using the API **POST** method. For batch deletion, select multiple rows and click the Delete toolbar button
+To perform Batch Operation, define Edit Mode as [Batch] and define [BatchUrl] porperty in the SfDataManager. Use the Add toolbar button to insert new rows into the batch mode. To edit cell, double click the desried cell and update the value as requirement. To delete the desired record, simply select the record and press delete toolbar button. Now all the CRUD operations will be executed in batch mode only. Upon clicking the Update toolbar button will update the newly added ,edited records or deleted record from the Orders table using the single API **POST** request.
 
 {% highlight razor %}
  // Performs BatchUpdate operation
