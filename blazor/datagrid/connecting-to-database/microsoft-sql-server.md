@@ -1,4 +1,4 @@
-![image](https://github.com/syncfusion-content/blazor-docs/assets/30143756/f653125d-221f-442a-b3a4-13a52df7cf12)---
+---
 layout: post
 title: Microsoft SQL Data Binding in Blazor DataGrid Component | Syncfusion
 description: Learn about consuming data from SQL Server using Microsoft SQL Client, binding it to Syncfusion Component, and performing CRUD operations
