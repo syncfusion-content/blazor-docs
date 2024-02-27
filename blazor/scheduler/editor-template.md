@@ -470,6 +470,7 @@ In this demo, we tailor the editor's header according to the appointment's subje
     }
 </style>
 ```
+
 ![Add customize header and footer using template in Blazor Scheduler](images/blazor-scheduler-custom-editor-header-footer.png)
 
 ### How to add resource options within editor template
@@ -1693,7 +1694,7 @@ It is possible to prevent the display of popup window by passing the value `true
        <ScheduleViews>
            <ScheduleView Option="View.Month"></ScheduleView>
        </ScheduleViews>
-    <ScheduleEvents TValue="AppointmentData" MoreEventsClicked="OnMoreEventsCliecked"></ScheduleEvents>
+    <ScheduleEvents TValue="AppointmentData" MoreEventsClicked="OnMoreEventsClicked"></ScheduleEvents>
 </SfSchedule>
 
 @code{
@@ -1702,7 +1703,7 @@ It is possible to prevent the display of popup window by passing the value `true
 
     private DateTime SelectedDate = new DateTime(2020, 1, 31);
 
-    private void OnMoreEventsCliecked(MoreEventsClickArgs args)
+    private void OnMoreEventsClicked(MoreEventsClickArgs args)
     {
         args.Cancel = true;
     }
