@@ -144,7 +144,7 @@ When you run the application, the resultant Blazor DataGrid will look like this
 
 ![Blazor DataGrid bound with Microsoft SQL Server data](../images/blazor-Grid-Ms-SQL-databinding.png)
 
-> * The Syncfusion Blazor DataGrid component provides built-in support for handling various data operations such as **searching**, **sorting**, **filtering**, **paging**, and **grouping** on the server-side. These operations can be handled using methods such as PerformSearching, PerformSorting, PerformFiltering, PerformTake, and PerformSkip, available in the **Syncfusion.Blazor.Data** package. Let's explore how to manage these data operations using the `UrlAdaptor`.
+> * The Syncfusion Blazor DataGrid component provides built-in support for handling various data operations such as **searching**, **sorting**, **filtering**, **paging**, and **grouping** on the server-side. These operations can be handled using methods such as `PerformSearching`, `PerformSorting`, `PerformFiltering`, `PerformTake`, and `PerformSkip`, available in the **Syncfusion.Blazor.Data** package. Let's explore how to manage these data operations using the `UrlAdaptor`.
 > * In an API service project, add **Syncfusion.Blazor.Data** by opening the NuGet package manager in Visual Studio (Tools → NuGet Package Manager → Manage NuGet Packages for Solution), search and install it.
 
 ### Handling searching operation
