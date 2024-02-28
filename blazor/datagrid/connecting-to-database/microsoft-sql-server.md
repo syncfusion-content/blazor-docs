@@ -45,8 +45,8 @@ Remotely database can be bound to grid using multiple adaptors namely WebAPI, OD
     <GridColumns>
         <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" IsIdentity="true" IsPrimaryKey="true" TextAlign="TextAlign.Right" Width="120"></GridColumn>
         <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.EmployeeID) HeaderText="Employee ID" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Width="150"></GridColumn>       
+        <GridColumn Field=@nameof(Order.EmployeeID) HeaderText="Employee ID" TextAlign="TextAlign.Right" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" TextAlign="TextAlign.Right" Format="C2" Width="150"></GridColumn>
         <GridColumn Field=@nameof(Order.ShipCity) HeaderText="Ship City" Width="150"></GridColumn>
     </GridColumns>
 </SfGrid>
@@ -376,7 +376,6 @@ To execute the Update operation, override the [Update](https://help.syncfusion.c
      await OrderService.UpdateOrderAsync(Value as Order);
      return Value;
  }
-
 {% endhighlight %}
 {% highlight razor tabtitle="Orderdata.cs"%}
  public async Task UpdateOrderAsync(Order Value)
@@ -388,7 +387,6 @@ To execute the Update operation, override the [Update](https://help.syncfusion.c
     Command.ExecuteNonQuery();
     Connection.Close();
 }
- 
 {% endhighlight %}
 {% endtabs %}
 
@@ -471,7 +469,6 @@ To Perform the Batch operation, override the [BatchUpdate](https://help.syncfusi
 **3.** Create a API controller (aka, GridController.cs) file under **Controllers** folder that helps to establish data communication with the DataGrid.
 
 **4.** In the API controller  (aka, GridController), connect to Microsoft SQL server. In the **Get()** method **SqlConnection** helps to connect the SQL database (that is, Database1.mdf). Next, using **SqlCommand** and **SqlDataAdapter** you can process the desired SQL query string and retrieve data from the database. The **Fill** method of the DataAdapter is used to populate the SQL data into a **DataTable** as shown in the following code snippet.
-
 
 {% tabs %}
 {% highlight razor tabtitle="GridController.cs"%}
