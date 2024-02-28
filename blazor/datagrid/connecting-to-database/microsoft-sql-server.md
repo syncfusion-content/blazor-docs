@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Microsoft SQL Server Data Binding in Blazor DataGrid Component | Syncfusion
-description: Learn about consuming data from Microsoft SQL Server using Microsoft SQL Client, binding it to Syncfusion Blazor DataGrid component, and performing CRUD operations
+description: Learn about consuming data from Microsoft SQL Server using Microsoft SQL Client, binding it to Syncfusion Blazor DataGrid component, and performing CRUD operations.
 platform: Blazor
 control: DataGrid
 documentation: ug
