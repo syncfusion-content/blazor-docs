@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Microsoft SQL Data Binding in Blazor DataGrid Component | Syncfusion
-description: Learn about consuming data from SQL Server using Microsoft SQL Client, binding it to Syncfusion Component, and performing CRUD operations
+title: Microsoft SQL Server Data Binding in Blazor DataGrid Component | Syncfusion
+description: Learn about consuming data from Microsoft SQL Server using Microsoft SQL Client, binding it to Syncfusion Blazor DataGrid component, and performing CRUD operations
 platform: Blazor
 control: DataGrid
 documentation: ug
@@ -11,7 +11,7 @@ documentation: ug
 
 This section describes how to connect and retrieve data from a Microsoft SQL Server database using [System.Data.SqlClient](https://www.nuget.org/packages/System.Data.SqlClient/4.8.6?_src=template) and bind it to the Blazor DataGrid component.
 
-Microsoft SQL Server database can be bound to the Blazor DataGrid in different ways (i.e.) [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_DataSource) property, [CustomAdaptor](https://blazor.syncfusion.com/documentation/datagrid/custom-binding) and Remote data binding using various adaptors (Web API, OData, ODataV4, Url). In this documentation, two approaches will be examined to connect a Microsoft SQL Server database to a Blazor DataGrid component. Both the approaches have capability to handle data and CRUD operations with built-in methods as well as can be customized as per your own.
+Microsoft SQL Server database can be bound to the Blazor DataGrid in different ways (i.e.) using [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_DataSource) property, [CustomAdaptor](https://blazor.syncfusion.com/documentation/datagrid/custom-binding) feature and Remote data binding using various adaptors (Web API, OData, ODataV4, Url, GraphQL). In this documentation, two approaches will be examined to connect a Microsoft SQL Server database to a Blazor DataGrid component. Both the approaches have capability to handle data and CRUD operations with built-in methods as well as can be customized as per your own.
 
 * **Using UrlAdaptor**
 
@@ -27,7 +27,7 @@ The [CustomAdaptor](https://blazor.syncfusion.com/documentation/datagrid/custom-
 
 **1.** Open Visual Studio and create an ASP.NET Core Web App project type, naming it **MyWebService**. To create an ASP.NET Core Web application, follow the documentation [link](https://learn.microsoft.com/en-us/visualstudio/get-started/csharp/tutorial-aspnet-core?view=vs-2022).
 
-**2.** To connect a Microsoft SQL Server using the Microsoft SQL driver in your application, you need to install the [System.Data.SqlClient](https://www.nuget.org/packages/System.Data.SqlClient/4.8.6?_src=template) NuGet package. To add **System.Data.SqlClient** in the app, open the NuGet package manager in Visual Studio (Tools → NuGet Package Manager → Manage NuGet Packages for Solution), search and install it.
+**2.** To connect a Microsoft SQL Server database using the Microsoft SQL driver in your application, you need to install the [System.Data.SqlClient](https://www.nuget.org/packages/System.Data.SqlClient/4.8.6?_src=template) NuGet package. To add **System.Data.SqlClient** in the app, open the NuGet package manager in Visual Studio (Tools → NuGet Package Manager → Manage NuGet Packages for Solution), search and install it.
 
 **3.** Create an API controller (aka, GridController.cs) file under **Controllers** folder that helps to establish data communication with the Blazor DataGrid.
 
@@ -144,8 +144,8 @@ When you run the application, the resultant Blazor DataGrid will look like this
 
 ![Blazor DataGrid bound with Microsoft SQL Server data](../images/blazor-Grid-Ms-SQL-databinding.png)
 
-> * The Syncfusion Blazor DataGrid component provides built-in support for handling various data operations, including **searching**, **sorting**, **filtering**, **paging**, and **grouping** on the server-side. These operations can be managed using methods such as `PerformSearching`, `PerformSorting`, `PerformFiltering`, `PerformTake`, and `PerformSkip` available in the **Syncfusion.Blazor.Data** package. Below, let's explore how to manage these data operations using the `UrlAdaptor`.
-> * In an API service project, add **Syncfusion.Blazor.Data** in the app by opening the NuGet package manager in Visual Studio (Tools → NuGet Package Manager → Manage NuGet Packages for Solution), search and install it.
+> * The Syncfusion Blazor DataGrid component provides built-in support for handling various data operations such as **searching**, **sorting**, **filtering**, **paging**, and **grouping** on the server-side. These operations can be handled using methods such as PerformSearching, PerformSorting, PerformFiltering, PerformTake, and PerformSkip, available in the **Syncfusion.Blazor.Data** package. Let's explore how to manage these data operations using the `UrlAdaptor`.
+> * In an API service project, add **Syncfusion.Blazor.Data** by opening the NuGet package manager in Visual Studio (Tools → NuGet Package Manager → Manage NuGet Packages for Solution), search and install it.
 
 ### Handling searching operation
 
@@ -311,7 +311,7 @@ public void Insert([FromBody] CRUDModel<Order> Value)
 
 **Update Operation:**
 
-To edit a row, first select desired row and click the **Edit** toolbar button. The edit form will be displayed as shown below and proceed to modify the any column value as per your requirement. Clicking the **Update** toolbar button will update the edit record in the Orders table by involving the following **Post** method of an API.
+To edit a row, first select desired row and click the **Edit** toolbar button. The edit form will be displayed and proceed to modify any column value as per your requirement. Clicking the **Update** toolbar button will update the edit record in the Orders table by involving the following **Post** method of an API.
 
 {% tabs %}
 {% highlight c# tabtitle="OrdersController.cs" %}
@@ -351,9 +351,9 @@ To delete a row, simply select the desired row and click the **Delete** toolbar 
 {% endhighlight %}
 {% endtabs %}
 
-**Batch Operation**
+**Batch Operation:**
 
-To perform batch operations, define the edit [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_Mode) as `Batch` and specify the [BatchUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_BatchUrl) property in the `SfDataManager`. Use the **Add** toolbar button to insert new row in batch editing mode. To edit a cell, double-click the desired cell and update the value as required. To delete a record, simply select the record and press the **Delete** toolbar button. Now, all CRUD operations will be executed in batch editing mode. Clicking the **Update** toolbar button will update the newly added, edited, or deleted records from the Orders table using a single API **POST** request.
+To perform batch operation, define the edit [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_Mode) as `Batch` and specify the [BatchUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_BatchUrl) property in the `SfDataManager`. Use the **Add** toolbar button to insert new row in batch editing mode. To edit a cell, double-click the desired cell and update the value as required. To delete a record, simply select the record and press the **Delete** toolbar button. Now, all CRUD operations will be executed in batch editing mode. Clicking the **Update** toolbar button will update the newly added, edited, or deleted records from the Orders table using a single API **POST** request.
 
 {% highlight razor %}
  // Performs BatchUpdate operation
@@ -391,9 +391,9 @@ public void Batch([FromBody] CRUDModel<Order> Value)
 
 **1.** Create a simple Blazor DataGrid by following the [Getting Started](https://blazor.syncfusion.com/documentation/datagrid/getting-started-with-web-app) documentation link. In this Blazor web app, the `rendermode` is set as **InteractiveServer**.
 
-**2.** To connect a Microsoft SQL Server using the Microsoft SQL driver in your application, you need to install the [System.Data.SqlClient](https://www.nuget.org/packages/System.Data.SqlClient/4.8.6?_src=template) NuGet package. To do this, open the NuGet package manager of the project solution, search for the package **System.Data.SqlClient**, and proceed with the installation.
+**2.** To connect a Microsoft SQL Server database using the Microsoft SQL driver in your application, you need to install the [System.Data.SqlClient](https://www.nuget.org/packages/System.Data.SqlClient/4.8.6?_src=template) NuGet package. To add **System.Data.SqlClient** in the app, open the NuGet package manager in Visual Studio (Tools → NuGet Package Manager → Manage NuGet Packages for Solution), search and install it.
 
-**3.** To inject your service into a `CustomAdaptor` and utilize it, you can meet your requirements using the following approach.
+**3.** If you intend to inject your own service into the `CustomAdaptor` and utilize it, you can achieve this as follows.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -431,7 +431,6 @@ public void Batch([FromBody] CRUDModel<Order> Value)
   }
 {% endhighlight %}
 {% endtabs %}
-
 
 **4.** Within the CustomAdaptor’s [ReadAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_ReadAsync_Syncfusion_Blazor_DataManagerRequest_System_String_) method, fetch the data from the service by calling the `GetOrdersAsync` method.
 
@@ -543,7 +542,7 @@ public class CustomAdaptor : DataAdaptor
 
 When employing the `CustomAdaptor`, handling the filtering operation involves overriding the [Read](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_Read_Syncfusion_Blazor_DataManagerRequest_System_String_) or [ReadAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_ReadAsync_Syncfusion_Blazor_DataManagerRequest_System_String_) method of the [DataAdaptor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html) abstract class.
 
-In the code example below, filtering a custom data source can be achieved by utilizing the built-in [PerformFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html#Syncfusion_Blazor_DataOperations_PerformFiltering__1_System_Collections_Generic_IEnumerable___0__System_Collections_Generic_List_Syncfusion_Blazor_Data_WhereFilter__System_String_) method of the [DataOperations](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html) class. Alternatively, you can implement your own method for filtering operations and bind the resulting data to the Blazor DataGrid.
+In the code example below, filtering a custom data source can be achieved by utilizing the built-in [PerformFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html#Syncfusion_Blazor_DataOperations_PerformFiltering__1_System_Collections_Generic_IEnumerable___0__System_Collections_Generic_List_Syncfusion_Blazor_Data_WhereFilter__System_String_) method of the [DataOperations](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html) class. Alternatively, you can implement your own method for filtering operation and bind the resulting data to the Blazor DataGrid.
 
 {% highlight razor %}
 public class CustomAdaptor : DataAdaptor
@@ -621,7 +620,7 @@ public class CustomAdaptor : DataAdaptor
 
 ### Handling grouping operation
 
-When employing `CustomAdaptor`, the grouping operation must be managed wihtin the [Read](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_Read_Syncfusion_Blazor_DataManagerRequest_System_String_) or [ReadAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_ReadAsync_Syncfusion_Blazor_DataManagerRequest_System_String_) method of the `CustomAdaptor`.
+When employing `CustomAdaptor`, the grouping operation must be managed within the [Read](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_Read_Syncfusion_Blazor_DataManagerRequest_System_String_) or [ReadAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_ReadAsync_Syncfusion_Blazor_DataManagerRequest_System_String_) method of the `CustomAdaptor`.
 
 The provided sample code illustrated how to implement the grouping operation within `CustomAdaptor`, 
 
@@ -678,7 +677,7 @@ The CRUD operations can be performed and customized on our own by overriding the
 * Update/UpdateAsync
 * BatchUpdate/BatchUpdateAsync
 
-Let’s see how to perform CRUD operation using SQL server data with Syncfusion Blazor DataGrid component.
+Let’s see how to perform CRUD operation using Microsoft SQL Server data with Syncfusion Blazor DataGrid component.
 
 **Insert Operation:**
 
@@ -739,7 +738,7 @@ public override async Task<object> UpdateAsync(DataManager DataManager, object V
 
 **Delete Operation:**
 
-To Perform the delete operation, you need to override the [Remove](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_Remove_Syncfusion_Blazor_DataManager_System_Object_System_String_System_String_) or [RemoveAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_RemoveAsync_Syncfusion_Blazor_DataManager_System_Object_System_String_System_String_) method of the `CustomAdaptor`. Below is the code snippet that you can add to `CustomAdaptor` class. The below code snippet demonstrated how to handle the deletion of existing records within the `RemoveAsync` method of `CustomAdaptor` component. Modify the logic within this method according to the requirements of your application.
+To perform the delete operation, you need to override the [Remove](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_Remove_Syncfusion_Blazor_DataManager_System_Object_System_String_System_String_) or [RemoveAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_RemoveAsync_Syncfusion_Blazor_DataManager_System_Object_System_String_System_String_) method of the `CustomAdaptor`. Below is the code snippet that you can add to `CustomAdaptor` class. The below code snippet demonstrated how to handle the deletion of existing records within the `RemoveAsync` method of `CustomAdaptor` component. Modify the logic within this method according to the requirements of your application.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor"%}
@@ -766,7 +765,7 @@ public override async Task<object> RemoveAsync(DataManager DataManager, object V
 {% endhighlight %}
 {% endtabs %}
 
-**Batch Operation**
+**Batch Operation:**
 
 To perform the batch operation, override the [BatchUpdate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_BatchUpdate_Syncfusion_Blazor_DataManager_System_Object_System_Object_System_Object_System_String_System_String_System_Nullable_System_Int32__) or [BatchUpdateAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_BatchUpdateAsync_Syncfusion_Blazor_DataManager_System_Object_System_Object_System_Object_System_String_System_String_System_Nullable_System_Int32__) method of the `CustomAdaptor` and add the following code in the `CustomAdaptor`. The below code snippet demonstrated how to handle the batch update request within the `BatchUpdateAsync` method of `CustomAdaptor` component. Modify the logic within this method according to the requirements of your application.
 
@@ -800,4 +799,3 @@ public override async Task<object> BatchUpdateAsync(DataManager DataManager, obj
 {% endhighlight %}
 
 > You can find the sample in this [GitHub location](https://github.com/SyncfusionExamples/blazor-grid-mssql-connectivity-using-custom-adaptor).
-
