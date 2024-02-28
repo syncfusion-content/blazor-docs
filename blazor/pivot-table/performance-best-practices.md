@@ -9,91 +9,89 @@ documentation: ug
 
 # Best practices to improve the performance of the Blazor Pivot Table
 
-Performance optimization is crucial when working with large datasets in the [Syncfusion Blazor Pivot Table](https://www.syncfusion.com/blazor-components). This documentation provides practical tips and best practices to empower your data analysis and enhance the user experience.
+Performance optimization is crucial when working with large datasets in the [Syncfusion Blazor Pivot Table](https://www.syncfusion.com/blazor-components). This documentation provides some best practices to empower your data analysis and enhance the user experience.
 
 N> In Blazor, the framework takes about 0.06 milliseconds to render one component on the page. You can find more details at the official [documentation link](https://learn.microsoft.com/en-us/aspnet/core/blazor/performance?view=aspnetcore-8.0).
 
-## Improve loading performance by referring individual nuget, script and CSS
+## How do I improve the loading performance of the Pivot Table?
 
-To improve the performance of the [Syncfusion Blazor Pivot Table](https://www.syncfusion.com/blazor-components) component during the initial render as well as during certain UI actions, it is suggested that you refer to the individual NuGet package (Syncfusion.Blazor.PivotTable) along with the individual script and CSS files specific to the component. In the consolidated package (Syncfusion.Blazor), all the components will be defined, and hence the size of the package will be larger. Along with the script and CSS files, the file size will increase since the script and CSS necessary for all the Syncfusion Blazor components will be defined inside them. 
+### Refer individual NuGet, Script and CSS
 
-When package, script, and CSS file sizes are larger, there might be a delay or performance lag in rendering the component in certain scenarios compared to the pivot table rendered using individual packages, scripts, and CSS. Individual NuGet packages will contain all the necessary and required dependent component sources, along with their script references. So, it is not necessary to refer to the dependent component externally while referring to the individual package.
+To enhance the performance of the [Syncfusion Blazor Pivot Table](https://www.syncfusion.com/blazor-components) component during the initial render and specific UI interactions, it's recommended to utilize the individual NuGet package (Syncfusion.Blazor.PivotTable) along with the respective script and CSS files dedicated to this component.
+
+In the bundled package (Syncfusion.Blazor), all components are included, resulting in a larger package size. With the inclusion of script and CSS files, the overall file size increases as they encompass the necessary resources for all Syncfusion Blazor components. Larger package, script, and CSS file sizes may lead to delays or performance issues during component rendering in certain scenarios compared to using individual packages, scripts, and CSS files.
+
+Individual NuGet packages contain all required dependencies and resources for each component, including their script and CSS references. Therefore, it's preferable to reference the individual package.
 
 Refer to the below documentation:
 * [Individual NuGet package](https://blazor.syncfusion.com/documentation/pivot-table/getting-started-webapp)
 * [Adding script and CSS](https://blazor.syncfusion.com/documentation/pivot-table/getting-started-webapp)
 
-## Data compression
+### Virtual scrolling
 
-When loading a large amount of input data (aka, raw data) into the pivot table, this data compression feature allows the input data to be compressed based on the uniqueness of the input data, and unique records will be provided as input for the pivot table's data source property. The compressed data will always be used for further operations, reducing looping complexity during internal pivot calculation and improving the pivot table performance. For more information on implementing the data compression in the pivot table, you can refer to the documentation [here](https://blazor.syncfusion.com/documentation/pivot-table/virtual-scrolling#data-compression).
+The virtual scrolling in the pivot table significantly improves performance, especially when handling large datasets, because it only renders the rows and columns related to the current viewport. The remaining data is loaded dynamically as you scroll, either vertically or horizontally. For more information on implementing virtual scrolling in the pivot table, you can refer to the documentation [here](https://blazor.syncfusion.com/documentation/pivot-table/virtual-scrolling).
 
-### Best practices for utilizing data compression in pivot table
+### Paging
 
-#### Unique records vs. Data compression
+If your browser's maximum pixel height limits you from using the pivot table with virtual scrolling, we recommend utilizing the paging option instead. Similar to virtual scrolling, the paging option allows you to load a large amount of data, which can be displayed in the pivot table page-by-page. For more information on implementing paging in the pivot table, please refer to the documentation [here](https://blazor.syncfusion.com/documentation/pivot-table/paging).
 
-When dealing with a large amount of input data, specifically with fewer unique records available in the input data, data compression performs exceptionally well.
+### Server-side engine
 
-The effectiveness of data compression fails when your input data is entirely made up of more unique records. In such circumstances, using data compression in pivot table is not suggested because the primary goal of data compression may not be met.
+In contrast to the Blazor Server application, the Blazor WASM application operates on the client-side and has its own drawbacks. For example:
 
-#### Unsupported aggregation types
+1. Connecting your WASM application to an external data source and fetching a large dataset (referred to as input data), such as one million records for the pivot table, may take considerable time due to network bandwidth limitations when transmitting data from server-side to client-side.
 
-Avoid setting complex aggregation types like **Average, Populationsdev, Samplestdev, Populationvar, and Samplevar** to the fields available in the pivot report that may hinder the data compression process.
+2. Moreover, while we use the same Pivot Table source code for deploying the component in both Server and WASM applications, the WASM framework exhibits slower performance. 
 
-## Avoid incorporating column-related features
+Therefore, we highly recommend using our server-side engine for rendering the Pivot Table with a large amount of data, hosted in the WASM application instead of the built-in engine.
 
-When dealing with large datasets, certain column-related features, such as resizing, autofit, text wrapping, and the dynamic hiding of specific columns, can significantly impact the pivot table's row height and column width at runtime. So, it's better to avoid them while virtual scrolling is enabled.
+Typically, in this approach, the pivot table component and its report are defined and often modified on the client-side (browser), while the pivot engine is implied and hosted in a dedicated web service (Web API) known as the server-side engine. Here, the server-side engine can directly connect to your data source, swiftly collect the input data (referred to as input raw data), and, based on the provided report by the pivot table through UI interactions periodically, the server-side engine performs all pivot-oriented calculations internally. It then transmits only aggregated data for pivot table display to the client-side (browser). This approach minimizes network bandwidth usage and enhances pivot table rendering, similar to the Blazor Server application.
 
-## Defer layout update
+In case a large amount of aggregated data is sent to the client-side from the web service (Web API), the server-side engine offers the option to enable virtual scrolling or paging. This feature generates aggregated data exclusively for the current viewport of the Pivot Table, further optimizing network bandwidth and rendering performance.
 
-The Defer Layout Update feature allows users to perform operations in the Field List, such as rearranging fields, filtering, sorting, changing aggregation type, and more, without immediately updating the pivot table. The efficiency of this process is that when users complete their modifications and finally apply them by clicking the "Apply" button in the Field List, the pivot table is then updated based on the last modified report. By deferring the layout update until precisely requested, the Blazor Pivot Table remains the same, thereby providing minimal resource utilization and avoiding frequent re-rendering.
+Additionally, the cache concept is implemented in the server-side engine to hold the pivot engine's instance based on the end-user GUID. This allows for quick retrieval, calculation, and re-sending of modified pivot data to the Pivot Table viewport, based on the UI action performed.
+
+For more information on implementing the server-side engine in the pivot table, please refer to the documentation [here](https://blazor.syncfusion.com/documentation/pivot-table/server-side-pivot-engine).
+
+## How can I enhance the performance of the Pivot Table through data operations?
+
+### Data compression
+
+If your input data (referred to as input raw data) contains a large number of repeated records, the data compression option becomes particularly useful.
+
+In this approach, based on the pivot report defined in the data source settings and with the data compression option enabled, all the input data is initially iterated. Repetitive records are then summarized, reducing the overall input data for all further pivot calculations. For example, if there are 1000 records with 400 records being repeated, data compression will clean up and result in 600 unique records for every future pivot calculations. Now, consider the impact with one million records and how useful it will be.
+
+The limitation here is that during the initial rendering of the Pivot Table alone, data compression will work by taking slightly extra time to summarize and reduce overall input data. However, for subsequent uses, it will be very quick, with reduced input data. Nevertheless, it is more advantageous since it's a one-time process.
+
+Additionally, it works with the virtual scrolling or paging option enabled as well.
+
+N> If your input data has very few repeated records, we would not suggest this option.
+
+For more information on implementing the data compression in the pivot table, you can refer to the documentation [here](https://blazor.syncfusion.com/documentation/pivot-table/virtual-scrolling#data-compression).
+
+### Defer layout update
+
+The Defer Layout Update feature in the pivot table allows end-users to perform various operations, such as adding, removing, and rearranging fields, filtering, sorting, changing aggregation types, and more, without immediately updating the pivot table. The efficiency of this process lies in allowing end-users to complete their modifications. The final application of these changes occurs when end-users click the **Apply** button in the Field List UI. This action triggers the pivot table to update based on the last modified report. By deferring the layout update until precisely requested, the Blazor Pivot Table remains unchanged initially, ensuring minimal resource utilization and avoiding frequent re-rendering until the end-user explicitly applies the modifications.
 
 For more information on defer layout updates, you can refer to the documentation [here](https://blazor.syncfusion.com/documentation/pivot-table/defer-layout-update).
 
-## Virtual scrolling
-
-The virtual scrolling in the pivot table improves performance significantly, especially when handling large datasets, because it only renders the rows and columns within the current view. The remaining data is loaded dynamically as you scroll, either vertically or horizontally. For more information on implementing the virtual scrolling in the pivot table, you can refer to the documentation [here](https://blazor.syncfusion.com/documentation/pivot-table/virtual-scrolling).
-
-### Best practices to use virtual scrolling in a pivot table
-
-#### Single page mode
-
-By default, the pivot table with virtual scrolling renders not only the current view page but also the previous and next pages. By using single-page mode along with virtual scrolling, only the rows and columns relevant to the current view page are rendered. This optimization enhances the performance of the pivot table significantly. For more information on implementing this feature, you can refer to the documentation [here](https://blazor.syncfusion.com/documentation/pivot-table/virtual-scrolling#single-page-mode).
-
-#### Limiting the component size
-
-Each row and cell in the pivot table is treated as an individual Razor component. However, loading an extensive number of rows and columns into the current view can strain memory consumption and CPU processing. To avoid such performance impacts, load a smaller set of rows and columns in the pivot table by defining and limiting the pivot table using [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewGridSettings.html#Syncfusion_Blazor_PivotView_PivotViewGridSettings_Height) and [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewGridSettings.html#Syncfusion_Blazor_PivotView_PivotViewGridSettings_Width) properties. For example, 600px * 1000px, respectively, with just the pivot table alone (that is, without the grouping bar, toolbar, and other additional UI's).
-
-N> The pixel units are preferred, and this ensures more accurate page calculations compared to using percentage units, which involve additional computations for determining page as well as row and column sizes.
-
-#### Avoid incorporating column-related features
-
-When dealing with large datasets, certain column-related features, such as resizing, autofit, text wrapping, and the dynamic hiding of specific columns, can significantly impact the pivot table's row height and column width at runtime. So, it's better to avoid them while virtual scrolling is enabled.
-
-## Paging
-
-If your browser's maximum pixel height restricts you from utilizing pivot table with virtual scrolling, we advise you to utilize the paging feature instead of virtual scrolling. The paging feature, similar to virtual scrolling, enables you to load a large amount of data that may be split up and shown in the pivot table page by page. For more information on implementing the paging in the pivot table, you can refer to the documentation [here](https://blazor.syncfusion.com/documentation/pivot-table/paging).
-
-## Data handling
-
-Here is a list of best practices with respect to data handling via sorting, filtering, and grouping.
-
 ### Sorting
 
-During initial rendering, applying sorting to fields other than the string data type, which holds a large number of members, takes time for the pivot engine to be framed (that is, internal pivot calculation). To overcome this performance constraint without affecting the outcome, the sorting option should be avoided. Instead, load the origin data into the data source in the order you want it to appear in the pivot table.
+During the initial rendering phase, applying sorting to fields other than the string data type, particularly those with a large number of members, may lead to increased processing time for the pivot engine due to internal calculations. To enhance performance without compromising the final outcome, it is advisable to refrain from using sorting options at this stage. Alternatively, load the input raw data into the data source settings in the desired order for display in the pivot table.
 
-N> Once you pass the input data in the desired order and the pivot table is rendered, you can limit the sorting usage for runtime performance.
+Once the input raw data is arranged as needed and the pivot table is rendered, it is recommended to restrict the use of sorting operations for runtime performance optimization. This approach ensures efficient processing and responsive performance while still achieving the desired presentation in the pivot table.
 
 ### Member filtering
 
-When dealing with large datasets, an effective strategy is to set a limit on the display of members in the filter dialog UI. By specifying a limit, the filter dialog UI will quickly display members up to that limit without encountering any performance constraints. To identify remaining members beyond the limit, a message indicating the count of remaining members will be displayed at the bottom of the filter dialog UI. To access the remaining members, use the search option included in the filter dialog at runtime. For more information on implementing the node limit in the filter dialog UI, see the documentation [here](https://blazor.syncfusion.com/documentation/pivot-table/filtering#performance-tips).
+When working with large datasets, it's beneficial to set a display limit for members in the filter dialog UI. This allows the filter dialog to quickly show members up to the specified limit without facing performance issues. If there are more members beyond this limit, a message displaying the count of remaining members will appear at the bottom of the filter dialog UI. End users can then access the remaining members using the search option provided in the filter dialog during runtime. For detailed instructions on implementing the node limit in the filter dialog UI, refer to the documentation linked [here](https://blazor.syncfusion.com/documentation/pivot-table/filtering#performance-tips).
 
 ### Grouping
 
 Using the pivot table's built-in grouping feature to group date, number, and string data type fields is not often recommended.
 
-Here is an example below of how [PivotViewGroupSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewGroupSetting.html) has been used to configure grouping for the available fields using code-behind. The date and number grouping have been set to the fields "TimeLine" and "Id", respectively.
+Here is an example below of how the [PivotViewGroupSetting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewGroupSetting.html) tag has been used to configure grouping for the available fields using code-behind. The date and number grouping have been set to the fields "TimeLine" and "Id", respectively.
 
-It obviously impacts the overall performance during pivot table rendering because it always consumes the input data source, splits, reframes, and provides modified input data sources based on the fields in the report that will be used for further pivot calculations.
+It obviously impacts the overall performance during pivot table rendering because it always consumes the input raw data, splits, reframes, and provides modified input raw data based on the fields in the report that will be used for further pivot calculations.
 
 ```cshtml
 @using Syncfusion.Blazor.PivotView
@@ -197,9 +195,9 @@ It obviously impacts the overall performance during pivot table rendering becaus
 }
 ```
 
-To avoid this performance constraint, we recommend passing the input data source along with pre-processed group field sets based on your grouping needs. For example, if your input data has a date field "TimeLine" with the value "15/AUG/2019 03:41 PM" and you want to display it as the year and month alone, split out the date field as "TimeLine_Year" = "15/AUG/2019" for the year and "TimeLine_Month" = "15/AUG/2019" for the month. Further use the [PivotViewFormatSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewFilterSettings.html) property to show these date fields with the chosen date format. Similarly, to group a number field, just alter its value based on your requirements (e.g., 1–5, 6–10).
+To avoid this performance constraint, we recommend passing the input raw data along with pre-processed group field sets based on your grouping needs. For example, if your input raw data has a date field "TimeLine" with the value "15/AUG/2019 03:41 PM" and you want to display it as the year and month alone, split out the date field as "TimeLine_Year" = "15/AUG/2019" for the year and "TimeLine_Month" = "15/AUG/2019" for the month. Further use the [PivotViewFormatSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewFilterSettings.html) property to show these date fields with the chosen date format. Similarly, to group a number field, just alter its value based on your requirements (e.g., 1–5, 6–10).
 
-Here's an example below of configuring grouping in your input data and assigning it to the pivot table's data source. In the code below, the fields "TimeLine_Year," "TimeLine_Month," and "Id" are created and updated in the provided input data and have been specified for the date and number grouping. Additionally, the date formatting has been applied to these specified date group fields using the [PivotViewFormatSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewFilterSettings.html).
+Here's an example below of configuring grouping in your input raw data and assigning it to the pivot table's data source. In the code below, the fields "TimeLine_Year," "TimeLine_Month," and "Id" are created and updated in the provided input raw data and have been specified for the date and number grouping. Additionally, the date formatting has been applied to these specified date group fields using the [PivotViewFormatSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewFilterSettings.html).
 
 ```cshtml
 @using Syncfusion.Blazor.PivotView
@@ -312,17 +310,23 @@ Here's an example below of configuring grouping in your input data and assigning
 
 ### Value filtering
 
-The [value filtering](https://blazor.syncfusion.com/documentation/pivot-table/filtering#value-filtering) primarily operates on grand totals, meaning the filtering process considers entire rows and columns to match applied value conditions. To achieve similar results with more flexibility, explore our label filtering or member filtering options. These alternates can yield similar results with better performance, especially when dealing with large datasets. More information on utilizing the [label filtering](https://blazor.syncfusion.com/documentation/pivot-table/filtering#label-filtering) or [member filtering](https://blazor.syncfusion.com/documentation/pivot-table/filtering#member-filtering) options can be found in the documentation section dedicated to these features.
+The [value filtering](https://blazor.syncfusion.com/documentation/pivot-table/filtering#value-filtering) primarily operates on grand totals, meaning the filtering process considers entire rows and columns to match applied value conditions. For similar results with more flexibility and better performance, consider exploring our label filtering or member filtering options. These alternatives can yield comparable outcomes, particularly when dealing with large datasets. You can find more information on utilizing the [label filtering](https://blazor.syncfusion.com/documentation/pivot-table/filtering#label-filtering) or [member filtering](https://blazor.syncfusion.com/documentation/pivot-table/filtering#member-filtering) options in the documentation section dedicated to these features.
 
-## Server-side engine
+## How do I improve the scrolling performance of the Pivot Table?
 
-Rather than using the Blazor Pivot Table's built-in engine to process large amounts of data, the server-side engine allows performing all pivot-oriented calculations in a separate hosted web service (Web API), and only the data to be displayed in the pivot table’s viewport is passed to the client-side (browser). It reduces network traffic and improves the pivot table's rendering performance, especially when virtual scrolling or paging is enabled. It also supports all of the pivot table’s existing features, such as data compression, filtering, sorting, aggregation, and more.
+### Virtual scrolling with single page mode
 
-For more information on implementing the server-side engine in the pivot table, you can refer to the documentation [here](https://blazor.syncfusion.com/documentation/pivot-table/server-side-pivot-engine).
+By default, the pivot table with virtual scrolling renders not only the current view page but also the previous and next pages. However, by using single-page mode along with virtual scrolling, only the rows and columns relevant to the current view page are rendered. This optimization significantly enhances the scrolling performance of the pivot table. For more information on implementing this feature, you can refer to the documentation [here](https://blazor.syncfusion.com/documentation/pivot-table/virtual-scrolling#single-page-mode).
 
-## Enhancing performance of pivot table in WASM application
+### Limiting the component size
 
-This section provides performance guidelines for using the Syncfusion Pivot Table component efficiently in the Blazor WebAssembly application, besides built-in features. The best practices or guidelines for general framework Blazor WebAssembly performance can be found [here](https://learn.microsoft.com/en-us/aspnet/core/blazor/performance?view=aspnetcore-8.0).
+Each row and cell in the pivot table is treated as an individual Razor component. However, loading an extensive number of rows and columns into the current view can strain memory consumption and CPU processing. To avoid such performance impacts, load a smaller set of rows and columns in the pivot table by defining and limiting the pivot table using the [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewGridSettings.html#Syncfusion_Blazor_PivotView_PivotViewGridSettings_Height) and [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewGridSettings.html#Syncfusion_Blazor_PivotView_PivotViewGridSettings_Width) properties. For example, 600px * 1000px, respectively, with just the pivot table alone (that is, without the grouping bar, toolbar, and other additional UI elements).
+       
+N> Normally, pixel units are preferred, ensuring more accurate page calculations compared to using percentage units, which involve additional computations for determining page as well as row and column sizes.
+
+## What other framework-based options exist for improving performance, particularly in the WASM?
+
+This section provides performance guidelines for efficiently using the Syncfusion Pivot Table component in Blazor WebAssembly, besides built-in features. The best practices or guidelines for general framework Blazor WebAssembly performance can be found [here](https://learn.microsoft.com/en-us/aspnet/core/blazor/performance?view=aspnetcore-8.0).
 
 ### Avoid unnecessary component renders
 
@@ -442,10 +446,10 @@ In the following example, the [Drill](https://blazor.syncfusion.com/documentatio
 ```
 
 N> * The **PreventRender** method internally overrides the component's **ShouldRender** method to prevent rendering.
-N> * For better performance, it is recommended to use the **PreventRender** method for user interactive [events](https://blazor.syncfusion.com/documentation/pivot-table/events) like Drill, BeforeColumnsRender, BeforeExport, DrillThrough, CellClick, ChartSeriesCreated, etc.
+N> * For better performance, it is recommended to use the **PreventRender** method for user interactive [events](https://blazor.syncfusion.com/documentation/pivot-table/events) like BeforeColumnsRender, BeforeExport, CellClick, ChartSeriesCreated, Drill, DrillThrough, etc.
 N> * For events without any argument such as [DataBound](https://blazor.syncfusion.com/documentation/pivot-table/events#databound), you can use **PreventRender** method of the pivot table to disable rendering.
 
-## Strategic approaches to addressing latency challenges
+## What are the strategic approaches to addressing latency challenges?
 
 Understanding the concerns you are facing regarding the lagging responsiveness of the [Syncfusion Blazor Pivot Table](https://www.syncfusion.com/blazor-components) component, your situation has been reviewed, and several factors contributing to this issue have been identified. It’s important to note that when using dialog-oriented features like filtering and drill-through, a call is made from the client to the server, resulting in some delay if the servers are located in a distant location.
 
