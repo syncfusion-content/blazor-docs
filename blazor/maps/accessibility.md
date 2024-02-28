@@ -33,6 +33,7 @@ Accessibility in the Maps component ensures that all users, regardless of abilit
 | Data label | Reads the label specified for the shapes in the Maps layer. |
 | Annotation | Reads the content specified in the annotation. |
 | Marker template | Reads the content provided in the marker template. |
+| Tooltip template | Reads the content provided in the tooltip template. |
 | Data label template | Reads the content provided in the data label template. |
 
 ## Keyboard Navigation
