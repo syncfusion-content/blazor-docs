@@ -862,6 +862,81 @@ The available options for the sort order are:
 
 ```
 
+## Custom sorting
+
+The FileManager component provides a way to customize the default sort action for a column by defining the `SortComparer` property of FileManagerColumn.The SortComparer data type was the [IComparer](https://learn.microsoft.com/en-us/dotnet/api/system.collections.generic.icomparer-1?view=net-7.0&viewFallbackFrom=net-5) interface, so the custom sort comparer class should be implemented in the interface IComparer.
+
+The following example demonstrates how to define custom sort comparer function for the Name column.
+
+```cshtml
+
+@using Syncfusion.Blazor.FileManager
+@using System.Text.RegularExpressions;
+
+<SfFileManager @ref="fileObj" TValue="FileManagerDirectoryContent" View="ViewType.Details">
+    <FileManagerAjaxSettings Url="http://localhost:62869/api/FileManager/FileOperations"
+                             UploadUrl="http://localhost:62869/api/FileManager/Upload"
+                             DownloadUrl="http://localhost:62869/api/FileManager/Download"
+                             GetImageUrl="http://localhost:62869/api/FileManager/GetImage">
+    </FileManagerAjaxSettings>
+    <FileManagerDetailsViewSettings>
+        <FileManagerColumns>
+            <FileManagerColumn Field="Name" HeaderText="Name" SortComparer="new NameCustomComparer()"></FileManagerColumn>
+            <FileManagerColumn Field="DateModified" Format="MM/dd/yyyy h:mm tt" HeaderText="Modified"></FileManagerColumn>
+            <FileManagerColumn Field="Size" HeaderText="Size">
+            </FileManagerColumn>
+        </FileManagerColumns>
+    </FileManagerDetailsViewSettings>
+</SfFileManager>
+
+@code {
+    public SfFileManager<FileManagerDirectoryContent> fileObj;
+
+    public class NameCustomComparer : IComparer<Object>
+    {
+        public int Compare(Object XRowDataToCompare, Object YRowDataToCompare)
+        {
+            FileManagerDirectoryContent XRowDataToCompare1 = (FileManagerDirectoryContent)XRowDataToCompare;
+            FileManagerDirectoryContent YRowDataToCompare1 = (FileManagerDirectoryContent)YRowDataToCompare;
+            dynamic reference = XRowDataToCompare1.GetType().GetProperty("Name").GetValue(XRowDataToCompare1, null); // Assuming Value property holds the value of the column
+            dynamic comparer = YRowDataToCompare1.GetType().GetProperty("Name").GetValue(YRowDataToCompare1, null); // Assuming Value property holds the value of the column
+            bool referenceIsFile = Regex.IsMatch(reference, @"\.\S+");
+            bool comparerIsFile = Regex.IsMatch(comparer, @"\.\S+");
+
+            if (referenceIsFile && !comparerIsFile) return 1;
+            if (!referenceIsFile && comparerIsFile) return -1;
+
+            var referenceParts = new List<(double, string)>();
+            var comparerParts = new List<(double, string)>();
+
+            Regex.Replace(reference, @"(\d+)|(\D+)", (MatchEvaluator)(m => { referenceParts.Add((m.Groups[1].Success ? double.Parse(m.Groups[1].Value) : double.PositiveInfinity, m.Groups[2].Value)); return ""; }));
+            Regex.Replace(comparer, @"(\d+)|(\D+)", (MatchEvaluator)(m => { comparerParts.Add((m.Groups[1].Success ? double.Parse(m.Groups[1].Value) : double.PositiveInfinity, m.Groups[2].Value)); return ""; }));
+            for (int i = 0; i < referenceParts.Count && i < comparerParts.Count; i++)
+            {
+                var referencePart = referenceParts[i];
+                var comparerPart = comparerParts[i];
+                int comparisonResult;
+                if (referencePart.Item1 != double.PositiveInfinity && comparerPart.Item1 != double.PositiveInfinity)
+                {
+                    comparisonResult = referencePart.Item1.CompareTo(comparerPart.Item1);
+                }
+                else
+                {
+                    comparisonResult = String.Compare(referencePart.Item2, comparerPart.Item2);
+                }
+                if (comparisonResult != 0)
+                {
+                    return comparisonResult;
+                }
+            }
+
+            return referenceParts.Count - comparerParts.Count;
+        }
+    }
+}
+
+```
+
 ## Uploading Files
 
 The following table represents the request parameters of *Upload* operations.
