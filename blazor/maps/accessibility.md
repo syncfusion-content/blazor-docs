@@ -19,7 +19,7 @@ To meet accessibility standards, the Maps component follows to the [WAI-ARIA](ht
 | --- | --- |
 | `role=region` | It specifies the Maps areas that do not support interactive functions like selection and highlight. |
 | `role=button` | It specifies the Maps areas where interactive functions such as selection and highlight are available. |
-| `aria-label` | Provides an accessible name for Maps elements such as geometric map shapes, legend title, data labels, and so on. To learn more, see the next topic. |
+| `aria-label` | Provides an accessible name for Maps elements such as geometric map shapes. To learn more, see the next topic. |
 
 ## Screen reading in Maps
 
