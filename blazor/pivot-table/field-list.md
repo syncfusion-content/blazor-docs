@@ -169,7 +169,7 @@ To enable search box in the static field list UI, set the [ShowFieldSearch](http
 }
 
 ```
-![Static Field List with search in Blazor Pivot Table](images/blazor-pivottable-static-fieldlist-search.PNG)
+![Static Field List with search in Blazor Pivot Table](images/blazor-pivottable-static-fieldlist-search.png)
 
 To enable search box in the pivot table's built-in popup field list UI, set the [ShowFieldSearch](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_ShowFieldSearch) property to **true** in [SfPivotView](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html).
 
@@ -206,7 +206,7 @@ To enable search box in the pivot table's built-in popup field list UI, set the 
 }
 
 ```
-![Popup Field List with search in Blazor Pivot Table](images/blazor-pivottable-popup-fieldlist-search.PNG)
+![Popup Field List with search in Blazor Pivot Table](images/blazor-pivottable-popup-fieldlist-search.png)
 
 ## Option to sort fields
 
@@ -214,7 +214,7 @@ End user can sort fields in the field list UI to ascending (or) descending (or) 
 
 N> By default, fields are displayed in the default order.
 
-![Field list with sorting options in Blazor Pivot Table](images/blazor-pivottable-fieldlist-default-sort.PNG)
+![Field list with sorting options in Blazor Pivot Table](images/blazor-pivottable-fieldlist-default-sort.png)
 
 ## Add or remove fields
 
