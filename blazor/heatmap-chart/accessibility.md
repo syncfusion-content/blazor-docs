@@ -18,7 +18,8 @@ The HeatMap component followed the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/pa
 | Attributes | Purpose |
 | --- | --- |
 | `role=img` | It is specified in the legend and border of the HeatMap. This role is provided to specify the information in a visual manner. |
-| `aria-label` | Provides an accessible name for the gradient HeatMap cells. |
+| `role=region` | It specifies the HeatMap areas that do not support interactive functions like cell selection. |
+| `aria-label` | Provides an accessible name for the title, legend title, legend item labels, data labels and gradient HeatMap cells. |
 | `aria-hidden` | Provides an accessible name for the legends. |
 
 ## Screen reading in HeatMap
