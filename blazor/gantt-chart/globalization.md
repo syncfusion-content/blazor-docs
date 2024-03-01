@@ -54,7 +54,7 @@ Gantt_Hour | Stunde
 Gantt_Minute | Minute
 Gantt_Days | Tage
 Gantt_Hours | Std
-Gantt_Minutes | Min.
+Gantt_Minutes | Minuten
 Gantt_GeneralTab | Allgemeines
 Gantt_CustomTab | Benutzerdefinierte Spalten
 Gantt_WriteNotes | Notizen schreiben
