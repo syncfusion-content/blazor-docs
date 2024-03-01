@@ -30,7 +30,6 @@ Accessibility in the Circular Gauge component ensures that all users, regardless
 | --- | --- |
 | Axis labels | Reads the axis labels of the Circular Gauge. |
 | Title | Reads the title of the Circular Gauge. |
-| Legend title | Reads the title of the legend in the Circular Gauge. |
 | Legend item label | Reads the label of the legend item in the Circular Gauge. |
 | Text pointer | Reads the text content shown as a pointer in Circular Gauge. |
 | Annotation | Reads the content specified in the annotation. |
