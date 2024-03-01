@@ -35,18 +35,18 @@ The Resource file is an XML file which contains the strings(key and value pairs)
 Name |Value (in Deutsch culture)
 -----|-----
 Gantt_EmptyRecord | Keine Datensätze zum Anzeigen
-Gantt_Id | ICH WÜRDE
+Gantt_Id | Id
 Gantt_Name | Name
 Gantt_StartDate | Anfangsdatum
-Gantt_EndDate | Endtermin
+Gantt_EndDate | Enddatum
 Gantt_Duration | Dauer
 Gantt_Progress | Fortschritt
 Gantt_Dependency | Abhängigkeit
 Gantt_Notes | Anmerkungen
 Gantt_BaselineStartDate | Basisstartdatum
-Gantt_BaselineEndDate | Baseline-Enddatum
+Gantt_BaselineEndDate | Basisenddatum
 Gantt_Type | Art
-Gantt_Offset | Offset
+Gantt_Offset | Versatz
 Gantt_ResourceName | Ressourcen
 Gantt_ResourceID | Ressourcen-ID
 Gantt_Day | Tag
@@ -54,7 +54,7 @@ Gantt_Hour | Stunde
 Gantt_Minute | Minute
 Gantt_Days | Tage
 Gantt_Hours | Std
-Gantt_Minutes | Protokoll
+Gantt_Minutes | Min.
 Gantt_GeneralTab | Allgemeines
 Gantt_CustomTab | Benutzerdefinierte Spalten
 Gantt_WriteNotes | Notizen schreiben
@@ -66,26 +66,26 @@ Gantt_Edit | Bearbeiten
 Gantt_Update | Aktualisieren
 Gantt_Delete | Löschen
 Gantt_Cancel | Stornieren
-Gantt_Search | Suche
+Gantt_Search | Suchen
 Gantt_Task | Aufgabe
 Gantt_Tasks | Aufgaben
 Gantt_ZoomIn | Hineinzoomen
 Gantt_ZoomOut | Rauszoomen
-Gantt_ZoomToFit | Zoom passend
+Gantt_ZoomToFit | Zoomen Sie
 Gantt_ExcelExport | Excel-Export
 Gantt_CsvExport | CSV-Export
 Gantt_ExpandAll | Alle erweitern
 Gantt_CollapseAll | Alles einklappen
 Gantt_NextTimeSpan | Nächste Zeitspanne
-Gantt_PrevTimeSpan | Vorherige Zeitspanne
-Gantt_OkText | In Ordnung
+Gantt_PrevTimeSpan | Vorheriger Zeitraum
+Gantt_OkText | Ok
 Gantt_ConfirmDelete | Möchten Sie den Datensatz wirklich löschen?
-Gantt_From | Von
+Gantt_From | Aus
 Gantt_To | Zu
-Gantt_TaskLink | Task-Link
+Gantt_TaskLink | Aufgabenlink
 Gantt_Lag | Verzögerung
 Gantt_Start | Start
-Gantt_Finish | Fertig
+Gantt_Finish | Beenden
 Gantt_EnterValue | Geben Sie den Wert ein
 Gantt_TaskBeforePredecessor_FS | Sie haben '{0}' verschoben, um vor dem Ende von '{1}' zu beginnen, und die beiden Aufgaben sind miteinander verknüpft. Infolgedessen können die Links nicht beachtet werden. Wählen Sie unten eine Aktion aus, die ausgeführt werden soll
 Gantt_TaskAfterPredecessor_FS | Sie haben '{0}' von '{1}' entfernt und die beiden Aufgaben sind miteinander verknüpft. Infolgedessen können die Links nicht beachtet werden. Wählen Sie unten eine Aktion aus, die ausgeführt werden soll
@@ -98,20 +98,20 @@ Gantt_TaskInformation | Aufgabeninformationen
 Gantt_DeleteTask | Aufgabe löschen
 Gantt_DeleteDependency | Abhängigkeit löschen
 Gantt_Convert | Konvertieren
-Gantt_Save | speichern
-Gantt_Above | Über
-Gantt_Below | Unten
+Gantt_Save | Speichern
+Gantt_Above | Darüber
+Gantt_Below | Darunter
 Gantt_Child | Kind
 Gantt_Milestone | Meilenstein
 Gantt_ToTask | Zur Aufgabe
 Gantt_ToMilestone | Zum Meilenstein
-Gantt_EventMarkers | Ereignismarker
+Gantt_EventMarkers | Ereignismarkierungen
 Gantt_LeftTaskLabel | Linke Aufgabenbezeichnung
-Gantt_RightTaskLabel | Richtige Aufgabenbezeichnung
-Gantt_TimelineCell | Timeline-Zelle
+Gantt_RightTaskLabel | Rechte Aufgabenbezeichnung
+Gantt_TimelineCell | Zeitleistenzelle
 Gantt_ConfirmPredecessorDelete | Möchten Sie den Abhängigkeitslink wirklich entfernen?
-Gantt_Indent | Einzug
-Gantt_Outdent | Outdent
+Gantt_Indent | Einrücken
+Gantt_Outdent | Ausrücken
 
 ### Blazor server-side
 
