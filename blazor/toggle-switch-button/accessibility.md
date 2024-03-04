@@ -39,7 +39,7 @@ The accessibility compliance for the Toggle Switch Button component is outlined 
 
 ## WAI-ARIA attributes
 
-The Toggle Switch Button component followed the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/Toggle Switch Button/) patterns to meet the accessibility. The following ARIA attributes are used in the Toggle Switch Button component:
+The Toggle Switch Button component followed the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/switch/) patterns to meet the accessibility. The following ARIA attributes are used in the Toggle Switch Button component:
 
 | Attributes | Purpose |
 | --- | --- |
@@ -48,7 +48,7 @@ The Toggle Switch Button component followed the [WAI-ARIA](https://www.w3.org/WA
 
 ## Keyboard interaction
 
-The Toggle Switch Button component followed the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/Toggle Switch Button/#keyboardinteraction) guideline, making it easy for people who use assistive technologies (AT) and those who completely rely on keyboard navigation. The following keyboard shortcuts are supported by the Toggle Switch Button component.
+The Toggle Switch Button component followed the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/switch/#keyboardinteraction) guideline, making it easy for people who use assistive technologies (AT) and those who completely rely on keyboard navigation. The following keyboard shortcuts are supported by the Toggle Switch Button component.
 
 | **Press** | **To do this** |
 | --- | --- |
