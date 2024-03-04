@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Accessibility in Blazor Breadcrumb Component | Syncfusion
-description: Checkout and learn here all about Accessibility in Syncfusion Blazor Breadcrumb component and more.
+description: Checkout and learn here all about Accessibility in Syncfusion Blazor Breadcrumb component and much more.
 platform: Blazor
 control: Button
 documentation: ug
