@@ -9,36 +9,35 @@ documentation: ug
 
 # Cell edit type and its params in Blazor Tree Grid Component
 
-The [TreeGridColumn.EditType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridColumn~EditType.html) is used to customize the edit type of the particular column. The [TreeGridColumn.EditType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridColumn~EditType.html) can be set based on the data type of the column.
+The [TreeGridColumn.EditType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_EditType) is used to customize the edit type of the particular column. The [TreeGridColumn.EditType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_EditType) can be set based on the data type of the column.
 
-* [NumericTextBox](../../numerictextbox/getting-started) component for integers, double, and decimal data types.
+* [NumericTextBox](https://blazor.syncfusion.com/documentation/numeric-textbox/getting-started-webapp) component for integers, double, and decimal data types.
 
-* [TextBox](../../textbox/getting-started) component for string data type.
+* [TextBox](https://blazor.syncfusion.com/documentation/textbox/getting-started-webapp) component for string data type.
 
-* [DropDownList](../../dropdownlist/getting-started) component for list data type.
+* [DropDownList](https://blazor.syncfusion.com/documentation/dropdown-list/getting-started-with-web-app) component for list data type.
 
-* [DatePicker](../../datepicker/getting-started) component for date values.
+* [DatePicker](https://blazor.syncfusion.com/documentation/datepicker/getting-started-with-web-app) component for date values.
 
-* [DateTimePicker](../../datetimepicker/getting-started) component for datetime type.
+* [DateTimePicker](https://blazor.syncfusion.com/documentation/datetime-picker/getting-started-with-web-app) component for datetime type.
 
-* [Checkbox](../../check-box/getting-started) component for boolean type.
+* [Checkbox](https://blazor.syncfusion.com/documentation/check-box/getting-started-with-web-app) component for boolean type.
 
-* [TimePickerEdit](https://blazor.syncfusion.com/documentation/timepicker/getting-started)
-component for TimeOnly data type.
+* [TimePickerEdit](https://blazor.syncfusion.com/documentation/timepicker/getting-started-webapp) component for TimeOnly data type.
 
-Also, the model of the [TreeGridColumn.EditType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridColumn~EditType.html) component can be customized through the [TreeGridColumn.Edit.params](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridColumn~Edit.html).
+Also, the model of the [TreeGridColumn.EditType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_EditType) component can be customized through the [TreeGridColumn.Edit.params](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_Edit).
 
 The following table describes cell edit type component and their corresponding edit params of the column.
 
 Component |Example
 -----|-----
-[NumericTextBox](../../numerictextbox/getting-started) | @(new { @params = new { format = "n"} })
-[TextBox](../../textbox/getting-started) | -
-[DropDownList](../../dropdownlist/getting-started) | @(new { @params = new { value = "Germany"} })
-[DatePicker](../../datepicker/getting-started) | @(new { @params = new { format = "yyyy-MM-dd"} })
-[DateTimePicker](../../datetimepicker/getting-started) | @(new { @params = new { strictMode = true} })
-[Checkbox](../../check-box/getting-started) | @(new { @params = new { checked = true} })
-[TimePickerEdit](https://blazor.syncfusion.com/documentation/timepicker/getting-started) | @(new { @params = new { format = "HH:mm:ss"} })
+[NumericTextBox](https://blazor.syncfusion.com/documentation/numeric-textbox/getting-started-webapp) | @(new { @params = new { format = "n"} })
+[TextBox](https://blazor.syncfusion.com/documentation/textbox/getting-started-webapp) | -
+[DropDownList](https://blazor.syncfusion.com/documentation/dropdown-list/getting-started-with-web-app) | @(new { @params = new { value = "Germany"} })
+[DatePicker](https://blazor.syncfusion.com/documentation/datepicker/getting-started-with-web-app) | @(new { @params = new { format = "yyyy-MM-dd"} })
+[DateTimePicker](https://blazor.syncfusion.com/documentation/datetime-picker/getting-started-with-web-app) | @(new { @params = new { strictMode = true} })
+[Checkbox](https://blazor.syncfusion.com/documentation/check-box/getting-started-with-web-app) | @(new { @params = new { checked = true} })
+[TimePickerEdit](https://blazor.syncfusion.com/documentation/timepicker/getting-started-webapp) | @(new { @params = new { format = "HH:mm:ss"} })
 
 {% tabs %}
 
