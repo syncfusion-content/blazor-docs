@@ -64,15 +64,20 @@ namespace MyWebService.Controllers
         [Route("api/[controller]")]
         public List<Order> GetOrderData()
         {
+            //Enter the connectionstring of database
             string ConnectionString = @"<Enter a valid connection string>";
             string QueryStr = "SELECT * FROM dbo.Orders ORDER BY OrderID;";
             SqlConnection sqlConnection = new(ConnectionString);
             sqlConnection.Open();
+            //Initialize the SqlCommand
             SqlCommand SqlCommand = new(QueryStr, sqlConnection);
+            //initialize the SqlDataAdapter
             SqlDataAdapter DataAdapter = new(SqlCommand);
             DataTable DataTable = new();
+            // Using SqlDataAdapter, process the query string and fill the data into the dataset
             DataAdapter.Fill(DataTable);
             sqlConnection.Close();
+            //Cast the data fetched from Adaptor to List<T>
             var DataSource = (from DataRow Data in DataTable.Rows
                               select new Order()
                               {
@@ -83,7 +88,7 @@ namespace MyWebService.Controllers
                                   Freight = Convert.ToDecimal(Data["Freight"])
                               }).ToList();
             return DataSource;
-        } 
+        }
     }
 }
 {% endhighlight %}
@@ -238,6 +243,70 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
     }
 }
 {% endhighlight %}
+{% highlight c# tabtitle="GridController.cs"%}
+    public class GridController : ControllerBase
+    {
+        /// <summary>
+        /// Returns the data collection as result and count after performing data operations based on request from <see cref=DataManagerRequest”/>
+        /// </summary>
+        /// <param name="dataManagerRequest">DataManagerRequest containes the information regarding paging, grouping, filtering, searching which is handled on the DataGrid component side</param>
+        /// <returns>The data collection's type is determined by how this method has been implemented.</returns>
+        [HttpPost]
+        [Route("api/[controller]")]
+        public object Post([FromBody] DataManagerRequest DataManagerRequest)
+        {
+            IEnumerable<Order> DataSource = GetOrderData();
+            // Handling Searching in Custom Adaptor.
+            if (DataManagerRequest.Search != null && DataManagerRequest.Search.Count > 0)
+            {
+                // Searching
+                DataSource = DataOperations.PerformSearching(DataSource, DataManagerRequest.Search);
+                //Add custom logic here if needed and remove above method
+            }
+            // Handling Filtering in Custom Adaptor.
+            if (DataManagerRequest.Where != null && DataManagerRequest.Where.Count > 0)
+            {
+                // Filtering
+                DataSource = DataOperations.PerformFiltering(DataSource, DataManagerRequest.Where, DataManagerRequest.Where[0].Operator);
+                //Add custom logic here if needed and remove above method
+            }
+            // Handling Sorting in Custom Adaptor.
+            if (DataManagerRequest.Sorted != null && DataManagerRequest.Sorted.Count > 0)
+            {
+                // Sorting
+                DataSource = DataOperations.PerformSorting(DataSource, DataManagerRequest.Sorted);
+                //Add custom logic here if needed and remove above method
+            }
+            int count = DataSource.Cast<Order>().Count();
+            // Handling Paging in Custom Adaptor.
+            if (DataManagerRequest.Skip != 0)
+            {
+                // Paging
+                DataSource = DataOperations.PerformSkip(DataSource, DataManagerRequest.Skip);
+                //Add custom logic here if needed and remove above method
+            }
+            if (DataManagerRequest.Take != 0)
+            {
+                DataSource = DataOperations.PerformTake(DataSource, DataManagerRequest.Take);
+                //Add custom logic here if needed and remove above method
+            }
+            DataResult DataObject = new DataResult();
+            // Handling Aggregation in Custom Adaptor.
+            if (DataManagerRequest.Aggregates != null)
+            {
+                DataObject.Result = DataSource;
+                DataObject.Count = count;
+                // Aggregation
+                DataObject.Aggregates = DataUtil.PerformAggregation(DataSource, DataManagerRequest.Aggregates);
+                //Add custom logic here if needed and remove above method
+                return DataManagerRequest.RequiresCounts ? DataObject : (object)DataSource;
+            }
+            //Here RequiresCount is passed from the control side itself, where ever the ondemand data fetching is needed then the RequiresCount is set as true in component side itself.
+            // In the above case we are using Paging so datas are loaded in ondemand bases whenever the next page is clicked in DataGrid side.
+            return new { result = DataSource, count = count };
+        }
+    }
+{% endhighlight %}
 {% endtabs %}
 
 > In the above Blazor DataGrid, [AllowSearching](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_AllowSearching), [AllowSorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowSorting), [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowFiltering), [AllowPaging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowPaging), [AllowGrouping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowGrouping) and CRUD-related properties have been enabled. The details on how to handle these actions are explained below.
@@ -260,10 +329,12 @@ To handle searching operation, ensure that your API endpoint supports custom sea
 public object Post([FromBody] DataManagerRequest DataManagerRequest)
 {
     IEnumerable<Order> DataSource = GetOrderData();
+    // Handling Searching in Custom Adaptor.
     if (DataManagerRequest.Search != null && DataManagerRequest.Search.Count > 0)
     {
         // Searching
         DataSource = DataOperations.PerformSearching(DataSource, DataManagerRequest.Search);
+        //Add custom logic here if needed and remove above method
     }
     int count = DataSource.Cast<Order>().Count();
     return new { result = DataSource, count = count };
@@ -280,10 +351,12 @@ To handle filtering operation, ensure that your API endpoint supports custom fil
 public object Post([FromBody] DataManagerRequest DataManagerRequest)
 {
     IEnumerable<Order> DataSource = GetOrderData();
+    // Handling Filtering in Custom Adaptor.
     if (DataManagerRequest.Where != null && DataManagerRequest.Where.Count > 0)
     {
         // Filtering
         DataSource = DataOperations.PerformFiltering(DataSource, DataManagerRequest.Where, DataManagerRequest.Where[0].Operator);
+        //Add custom logic here if needed and remove above method
     }
     int count = DataSource.Cast<Order>().Count();
     return new { result = DataSource, count = count };
@@ -301,10 +374,12 @@ To handle sorting operation, ensure that your API endpoint supports custom sorti
 public object Post([FromBody] DataManagerRequest DataManagerRequest)
 {
     IEnumerable<Order> DataSource = GetOrderData();
+    // Handling Sorting in Custom Adaptor.
     if (DataManagerRequest.Sorted != null && DataManagerRequest.Sorted.Count > 0)
     {
         // Sorting
         DataSource = DataOperations.PerformSorting(DataSource, DataManagerRequest.Sorted);
+        //Add custom logic here if needed and remove above method
     }
     int count = DataSource.Cast<Order>().Count();
     return new { result = DataSource, count = count };
@@ -322,14 +397,17 @@ public object Post([FromBody] DataManagerRequest DataManagerRequest)
 {
     IEnumerable<Order> DataSource = GetOrderData();
     int count = DataSource.Cast<Order>().Count();
+    // Handling Paging in Custom Adaptor.
     if (DataManagerRequest.Skip != 0)
     {
         // Paging
         DataSource = DataOperations.PerformSkip(DataSource, DataManagerRequest.Skip);
+        //Add custom logic here if needed and remove above method
     }
     if (DataManagerRequest.Take != 0)
     {
         DataSource = DataOperations.PerformTake(DataSource, DataManagerRequest.Take);
+        //Add custom logic here if needed and remove above method
     }
     return new { result = DataSource, count = count };
 }
@@ -375,12 +453,13 @@ To handle aggregate operation, ensure that your API endpoint supports custom agg
      IEnumerable<Order> DataSource = GetOrderData();
      int count = DataSource.Cast<Order>().Count();
      DataResult DataObject = new DataResult();
+     // Handling Aggregation in Custom Adaptor.
      if (DataManagerRequest.Aggregates != null) // Aggregation
      {
          DataObject.Result = DataSource;
          DataObject.Count = count;
          DataObject.Aggregates = DataUtil.PerformAggregation(DataSource, DataManagerRequest.Aggregates);
-
+        //Add custom logic here if needed and remove above method
          return DataManagerRequest.RequiresCounts ? DataObject : (object)DataSource;
      }
      return new { result = DataSource, count = count };
@@ -389,7 +468,7 @@ To handle aggregate operation, ensure that your API endpoint supports custom agg
 
 > For optimal performance, it is recommended to follow this sequence of operations(Searching, Filtering, Sorting, Paging, Grouping and Aggregate) in the [ReadAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_ReadAsync_Syncfusion_Blazor_DataManagerRequest_System_String_) method.
 
-### Handling CRUD operations 
+### Handling CRUD operations
 
 To enable editing in this Blazor DataGrid component, utilize the [GridEditSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html) component. The Blazor DataGrid offers multiple edit modes including the [Inline/Normal](https://blazor.syncfusion.com/documentation/datagrid/in-line-editing), [Dialog](https://blazor.syncfusion.com/documentation/datagrid/dialog-editing), and [Batch](https://blazor.syncfusion.com/documentation/datagrid/batch-editing) editing. For more details, refer to the Blazor DataGrid [editing](https://blazor.syncfusion.com/documentation/datagrid/editing) documentation. 
 
@@ -420,17 +499,26 @@ To insert a new row, simply click the **Add** toolbar button. The new record edi
 
 {% tabs %}
 {% highlight c# tabtitle="OrdersController.cs" %}
- [HttpPost]
+[HttpPost]
 [Route("api/Grid/Insert")]
+/// <summary>
+/// Inserts a new data item into the data collection.
+/// </summary>
+/// <param name="CRUDModel<T>">The set of information along with new record detail which is need to be inserted.</param>
+/// <returns>Returns void</returns>
 public void Insert([FromBody] CRUDModel<Order> Value)
 {
+    //Enter the connectionstring of database
     string ConnectionString = @"<Enter a valid connection string>";
+    //Create query to insert the specific into the database by accessing its properties
     string Query = $"Insert into Orders(CustomerID,Freight,ShipCity,EmployeeID) values('{Value.Value.CustomerID}','{Value.Value.Freight}','{Value.Value.ShipCity}','{Value.Value.EmployeeID}')";
     SqlConnection SqlConnection = new SqlConnection(ConnectionString);
     SqlConnection.Open();
     SqlCommand SqlCommand = new SqlCommand(Query, SqlConnection);
-    SqlCommand.ExecuteNonQuery();   
+    //Execute this code to reflect the changes into the database
+    SqlCommand.ExecuteNonQuery();
     SqlConnection.Close();
+    //Add custom logic here if needed and remove above method
 }
 {% endhighlight %}
 {% endtabs %}
@@ -443,15 +531,25 @@ To edit a row, first select desired row and click the **Edit** toolbar button. T
 {% highlight c# tabtitle="OrdersController.cs" %}
 [HttpPost]
 [Route("api/Grid/Update")]
+/// <summary>
+/// Update a existing data item from the data collection.
+/// </summary>
+/// <param name="CRUDModel<T>">The set of information along with updated record detail which is need to be updated.</param>
+/// <returns>Returns void</returns>
 public void Update([FromBody] CRUDModel<Order> Value)
 {
+    //Enter the connectionstring of database
     string ConnectionString = @"<Enter a valid connection string>";
-    string Query = $"Update Orders set CustomerID='{Value.Value.CustomerID}', Freight='{Value.Value.Freight}', EmployeeID='{Value.Value.EmployeeID}', ShipCity='{Value.Value.ShipCity}' where OrderID='{Value.Value.OrderID}'";
+    //Create query to update the changes into the database by accessing its properties
+    string Query = $"Update Orders set CustomerID='{Value.Value.CustomerID}', Freight='{Value.Value.Freight}',EmployeeID='{Value.Value.EmployeeID}',ShipCity='{Value.Value.ShipCity}' where OrderID='{Value.Value.OrderID}'";
     SqlConnection SqlConnection = new SqlConnection(ConnectionString);
     SqlConnection.Open();
+    //Execute the SQL Command
     SqlCommand SqlCommand = new SqlCommand(Query, SqlConnection);
-    SqlCommand.ExecuteNonQuery();   
+    //Exceute this code to reflect the changes into the database
+    SqlCommand.ExecuteNonQuery();
     SqlConnection.Close();
+    //Add custom logic here if needed and remove above method
 }
 {% endhighlight %}
 {% endtabs %}
@@ -463,17 +561,27 @@ To delete a row, simply select the desired row and click the **Delete** toolbar 
 {% tabs %}
 {% highlight c# tabtitle="OrdersController.cs" %}
  [HttpPost]
- [Route("api/Grid/Delete")]
- public void Delete([FromBody] CRUDModel<Order> Value)
- {
-     string ConnectionString = @"<Enter a valid connection string>";
-     string Query = $"Delete from Orders where OrderID={Value.Key}";
-     SqlConnection SqlConnection = new SqlConnection(ConnectionString);
-     SqlConnection.Open();
-     SqlCommand SqlCommand = new SqlCommand(Query, SqlConnection);
-     SqlCommand.ExecuteNonQuery();
-     SqlConnection.Close();
- }
+[Route("api/Grid/Delete")]
+/// <summary>
+/// Remove a specific data item from the data collection.
+/// </summary>
+/// <param name="CRUDModel<T>">The set of information along with specific record detail which is need to be removed.</param>
+/// <returns>Returns void</returns>
+public void Delete([FromBody] CRUDModel<Order> Value)
+{
+    //Enter the connectionstring of database
+    string ConnectionString = @"<Enter a valid connection string>";
+    //Create query to remove the specific from database by passing the primary key column value.
+    string Query = $"Delete from Orders where OrderID={Value.Key}";
+    SqlConnection SqlConnection = new SqlConnection(ConnectionString);
+    SqlConnection.Open();
+    //Execute the SQL Command
+    SqlCommand SqlCommand = new SqlCommand(Query, SqlConnection);
+    //Exceute this code to reflect the changes into the database
+    SqlCommand.ExecuteNonQuery();
+    SqlConnection.Close();
+    //Add custom logic here if needed and remove above method
+}
 {% endhighlight %}
 {% endtabs %}
 
@@ -482,30 +590,65 @@ To delete a row, simply select the desired row and click the **Delete** toolbar 
 To perform batch operation, define the edit [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_Mode) as `Batch` and specify the [BatchUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_BatchUrl) property in the `SfDataManager`. Use the **Add** toolbar button to insert new row in batch editing mode. To edit a cell, double-click the desired cell and update the value as required. To delete a record, simply select the record and press the **Delete** toolbar button. Now, all CRUD operations will be executed in batch editing mode. Clicking the **Update** toolbar button will update the newly added, edited, or deleted records from the Orders table using a single API **POST** request.
 
 {% highlight razor %}
- // Performs BatchUpdate operation
-[HttpPost]
+ [HttpPost]
 [Route("api/Grid/Batch")]
+/// <summary>
+/// Batchupdate (Insert, Update, Delete) a collection of datas item from the data collection.
+/// </summary>
+/// <param name="CRUDModel<T>">The set of information along with details about the CRUD actions to be executed from the database.</param>
+/// <returns>Returns void</returns>
 public void Batch([FromBody] CRUDModel<Order> Value)
 {
+    //Enter the connectionstring of database
+    string ConnectionString = @"<Enter a valid connection string>";
     if (Value.Changed != null)
     {
-        foreach (var record in (IEnumerable<Order>)Value.Changed)
+        foreach (var Record in (IEnumerable<Order>)Value.Changed)
         {
-            //update in your database
+            //Create query to update the changes into the database by accessing its properties
+            string Query = $"Update Orders set CustomerID='{Record.CustomerID}', Freight='{Record.Freight}',EmployeeID='{Record.EmployeeID}',ShipCity='{Record.ShipCity}' where OrderID='{Record.OrderID}'";
+            SqlConnection SqlConnection = new SqlConnection(ConnectionString);
+            SqlConnection.Open();
+            //Execute the SQL Command
+            SqlCommand SqlCommand = new SqlCommand(Query, SqlConnection);
+            //Exceute this code to reflect the changes into the database
+            SqlCommand.ExecuteNonQuery();
+            SqlConnection.Close();
+            //Add custom logic here if needed and remove above method
         }
+
     }
     if (Value.Added != null)
     {
-        foreach (var record in (IEnumerable<Order>)Value.Added)
+        foreach (var Record in (IEnumerable<Order>)Value.Added)
         {
-            //Insert in your database
+            //Create query to insert the specific into the database by accessing its properties 
+            string Query = $"Insert into Orders(CustomerID,Freight,ShipCity,EmployeeID) values('{Record.CustomerID}','{Record.Freight}','{Record.ShipCity}','{Record.EmployeeID}')";
+            SqlConnection SqlConnection = new SqlConnection(ConnectionString);
+            SqlConnection.Open();
+            //Execute the SQL Command
+            SqlCommand SqlCommand = new SqlCommand(Query, SqlConnection);
+            //Exceute this code to reflect the changes into the database
+            SqlCommand.ExecuteNonQuery();
+            SqlConnection.Close();
+            //Add custom logic here if needed and remove above method
         }
+
     }
     if (Value.Deleted != null)
     {
-        foreach (var record in (IEnumerable<Order>)Value.Deleted)
+        foreach (var Record in (IEnumerable<Order>)Value.Deleted)
         {
-            //remove the records from your database
+            //Create query to remove the specific from database by passing the primary key column value.
+            string Query = $"Delete from Orders where OrderID={Record.OrderID}";
+            SqlConnection SqlConnection = new SqlConnection(ConnectionString);
+            SqlConnection.Open();
+            //Execute the SQL Command
+            SqlCommand SqlCommand = new SqlCommand(Query, SqlConnection);
+            //Exceute this code to reflect the changes into the database
+            SqlCommand.ExecuteNonQuery();
+            SqlConnection.Close();
+            //Add custom logic here if needed and remove above method
         }
     }
 }
@@ -515,7 +658,7 @@ When you run the application, the resultant Blazor DataGrid will look like this
 
 ![Blazor DataGrid bound with Microsoft SQL Server data](../images/blazor-Grid-Ms-SQl-databinding-Gif.gif)
 
-> Find the sample from this [Github location](https://github.com/SyncfusionExamples/blazor-grid-mssql-connectivity-using-api-service).
+> Find the sample from this [Github location](https://github.com/SyncfusionExamples/connecting-databases-to-blazor-datagrid-component/tree/master/Binding%20MS%20SQL%20database%20using%20UrlAdaptor).
 
 ## Binding data from Microsoft SQL Server using CustomAdaptor
 
@@ -724,10 +867,19 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 </SfGrid>
 
 @code {
+    /// <summary>
+    /// Implementing custom adaptor by extending the <see cref=“DataAdaptor”/> class.
+    /// The DataGrid component support for custom data binding, which enables the binding and manipulation of data in a personalized way, using user-defined methods.
+    /// </summary>
     public class CustomAdaptor : DataAdaptor
     {
         public OrderData OrderService = new OrderData();
-        // Performs data read operation
+        /// <summary>
+        /// Returns the data collection after performing data operations based on request from <see cref=”DataManagerRequest”/>
+        /// </summary>
+        /// <param name="dataManagerRequest">DataManagerRequest containes the information regarding paging, grouping, filtering, searching which is handled on the DataGrid component side</param>
+        /// <param name="additionalParam">An optional parameter that can be used to perform additional data operations.</param>
+        /// <returns>The data collection's type is determined by how this method has been implemented.</returns>
         public override async Task<object> ReadAsync(DataManagerRequest DataManagerRequest, string key = null)
         {
             IEnumerable<Order> DataSource = await OrderService.GetOrdersAsync();
@@ -741,29 +893,32 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 public class OrderData
 {
     public async Task<List<Order>> GetOrdersAsync()
-    {
-        string connectionString = @"<Enter a valid connection string>";
-        string QueryStr = "SELECT * FROM dbo.Orders ORDER BY OrderID;";
-        List<Order> Orders = null;
-        using (SqlConnection connection = new SqlConnection(connectionString))
         {
-            SqlDataAdapter adapter = new SqlDataAdapter(QueryStr, connection);
-            DataSet data = new DataSet();
-            connection.Open();
-            // Using SqlDataAdapter, process the query string and fill the data into the dataset
-            adapter.Fill(data);
-            Orders = data.Tables[0].AsEnumerable().Select(r => new Order
+            //Create query to fetch data from database
+            string Query = "SELECT * FROM dbo.Orders ORDER BY OrderID;";
+            List<Order> Orders = null;
+            //Create SQL Connection
+            using (SqlConnection Connection = new SqlConnection(ConnectionString))
             {
-                OrderID = r.Field<int>("OrderID"),
-                CustomerID = r.Field<string>("CustomerID"),
-                EmployeeID = r.Field<int>("EmployeeID"),
-                ShipCity = r.Field<string>("ShipCity"),
-                Freight = r.Field<decimal>("Freight")
-            }).ToList();
-            connection.Close();
+                //Using SqlDataAdapter and Query create connection with database 
+                SqlDataAdapter Adapter = new SqlDataAdapter(Query, Connection);
+                DataSet Data = new DataSet();
+                Connection.Open();
+                // Using SqlDataAdapter, process the query string and fill the data into the dataset
+                Adapter.Fill(Data);
+                //Cast the data fetched from Adaptor to List<T>
+                Orders = Data.Tables[0].AsEnumerable().Select(r => new Order
+                {
+                    OrderID = r.Field<int>("OrderID"),
+                    CustomerID = r.Field<string>("CustomerID"),
+                    EmployeeID = r.Field<int>("EmployeeID"),
+                    ShipCity = r.Field<string>("ShipCity"),
+                    Freight = r.Field<decimal>("Freight")
+                }).ToList();
+                Connection.Close();
+            }
+            return Orders;
         }
-        return Orders;
-    }
 }
 {% endhighlight %}
 {% endtabs %}
@@ -789,10 +944,12 @@ public class CustomAdaptor : DataAdaptor
     public override async Task<object> ReadAsync(DataManagerRequest DataManagerRequest, string key = null)
     {
         IEnumerable<Order> DataSource = await OrderService.GetOrdersAsync();
+        // Handling Searching in Custom Adaptor.
         if (DataManagerRequest.Search != null && DataManagerRequest.Search.Count > 0)
         {
             // Searching
             DataSource = DataOperations.PerformSearching(DataSource, DataManagerRequest.Search);
+            //Add custom logic here if needed and remove above method
         }
         int count = DataSource.Cast<Order>().Count();
         return DataManagerRequest.RequiresCounts ? new DataResult() { Result = DataSource, Count = count } : (object)DataSource;
@@ -814,10 +971,12 @@ public class CustomAdaptor : DataAdaptor
     public override async Task<object> ReadAsync(DataManagerRequest DataManagerRequest, string key = null)
     {
         IEnumerable<Order> DataSource = await OrderService.GetOrdersAsync();
+        // Handling Filtering in Custom Adaptor.
         if (DataManagerRequest.Where != null && DataManagerRequest.Where.Count > 0)
         {
             // Filtering
             DataSource = DataOperations.PerformFiltering(DataSource, DataManagerRequest.Where, DataManagerRequest.Where[0].Operator);
+            //Add custom logic here if needed and remove above method
         }
         int count = DataSource.Cast<Order>().Count();
         return DataManagerRequest.RequiresCounts ? new DataResult() { Result = DataSource, Count = count } : (object)DataSource;
@@ -839,10 +998,12 @@ public class CustomAdaptor : DataAdaptor
     public override async Task<object> ReadAsync(DataManagerRequest DataManagerRequest, string key = null)
     {
         IEnumerable<Order> DataSource = await OrderService.GetOrdersAsync();
+        // Handling Sorting in Custom Adaptor.
         if (DataManagerRequest.Sorted != null && DataManagerRequest.Sorted.Count > 0)
         {
             // Sorting
             DataSource = DataOperations.PerformSorting(DataSource, DataManagerRequest.Sorted);
+            //Add custom logic here if needed and remove above method
         }
         int count = DataSource.Cast<Order>().Count();
         return DataManagerRequest.RequiresCounts ? new DataResult() { Result = DataSource, Count = count } : (object)DataSource;
@@ -865,15 +1026,18 @@ public class CustomAdaptor : DataAdaptor
     {
         IEnumerable<Order> DataSource = await OrderService.GetOrdersAsync();
         int count = DataSource.Cast<Order>().Count();
+        // Handling paging in Custom Adaptor.
         if (DataManagerRequest.Skip != 0)
         {
             // Paging
             DataSource = DataOperations.PerformSkip(DataSource, DataManagerRequest.Skip);
+            //Add custom logic here if needed and remove above method
         }
         if (DataManagerRequest.Take != 0)
         {
             // Taking
             DataSource = DataOperations.PerformTake(DataSource, DataManagerRequest.Take);
+            //Add custom logic here if needed and remove above method
         }
         return DataManagerRequest.RequiresCounts ? new DataResult() { Result = DataSource, Count = count } : (object)DataSource;
     }
@@ -896,6 +1060,7 @@ public class CustomAdaptor : DataAdaptor
         IEnumerable<Order> DataSource = await OrderService.GetOrdersAsync();
         int count = DataSource.Cast<Order>().Count();
         DataResult DataObject = new DataResult();
+        // Handling Group operation in Custom Adaptor.
         if (DataManagerRequest.Group != null)
         {
             IEnumerable ResultData = DataSource.ToList();
@@ -903,6 +1068,7 @@ public class CustomAdaptor : DataAdaptor
             foreach (var group in DataManagerRequest.Group)
             {
                 ResultData = DataUtil.Group<Order>(ResultData, group, DataManagerRequest.Aggregates, 0, DataManagerRequest.GroupByFormatter);
+                //Add custom logic here if needed and remove above method
             }
             DataObject.Result = ResultData;
             DataObject.Count = count;
@@ -929,11 +1095,13 @@ public class CustomAdaptor : DataAdaptor
         IEnumerable<Order> DataSource = await OrderService.GetOrdersAsync();
         int count = DataSource.Cast<Order>().Count();
         DataResult DataObject = new DataResult();
+        // Handling Aggregation in Custom Adaptor.
         if (DataManagerRequest.Aggregates != null) // Aggregation
         {
             DataObject.Result = DataSource;
             DataObject.Count = count;
             DataObject.Aggregates = DataUtil.PerformAggregation(DataSource, DataManagerRequest.Aggregates);
+            //Add custom logic here if needed and remove above method
             return DataManagerRequest.RequiresCounts ? DataObject : (object)DataSource;
         }
         return DataManagerRequest.RequiresCounts ? new DataResult() { Result = DataSource, Count = count } : (object)DataSource;
@@ -943,6 +1111,7 @@ public class CustomAdaptor : DataAdaptor
 
 > * For optimal performance, it is recommended to follow this sequence of operations(Searching, Filtering, Sorting, Paging, Grouping and Aggregate) in the `ReadAsync` method.
 > * If both grouping and aggregate operations are enabled, the code provided below demonstrates how to implement these operations within the `CustomAdaptor`.
+
 ```cshtml
 public class CustomAdaptor : DataAdaptor
 {
@@ -953,6 +1122,7 @@ public class CustomAdaptor : DataAdaptor
         IEnumerable<Order> DataSource = await OrderService.GetOrdersAsync();
         int count = DataSource.Cast<Order>().Count();
         DataResult DataObject = new DataResult();
+        // Handling both Grouping and Aggregation in Custom Adaptor.
         if (DataManagerRequest.Aggregates != null || DataManagerRequest.Group != null) // Aggregation
         {
             if (DataManagerRequest.Group != null)
@@ -962,6 +1132,7 @@ public class CustomAdaptor : DataAdaptor
                 foreach (var group in DataManagerRequest.Group)
                 {
                     ResultData = DataUtil.Group<Order>(ResultData, group, DataManagerRequest.Aggregates, 0, DataManagerRequest.GroupByFormatter);
+                    //Add custom logic here if needed and remove above method
                 }
                 DataObject.Result = ResultData;
             }
@@ -1017,7 +1188,13 @@ To execute the insert operation, you will need to override the [Insert](https://
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor"%}
-// Perform Insert operation
+/// <summary>
+/// Inserts a new data item into the data collection.
+/// </summary>
+/// <param name="dataManager">The DataManager is a data management component used for performing data operations in applications.</param>
+/// <param name="record">The new record which is need to be inserted.</param>
+/// <param name="additionalParam">An optional parameter that can be used to perform additional data operations.</param>
+/// <returns>Returns the newly inserted record details.</returns>
 public override async Task<object> InsertAsync(DataManager DataManager, object Value, string Key)
 {
     // Add your insert logic here
@@ -1027,16 +1204,18 @@ public override async Task<object> InsertAsync(DataManager DataManager, object V
 }
 {% endhighlight %}
 {% highlight razor tabtitle="Orderdata.cs"%}
-public async Task AddOrderAsync(Order Value)
-{
-    string ConnectionString = $"<Enter a valid connection string>";
-    string Query = $"Insert into Orders(CustomerID, Freight, ShipCity, EmployeeID) values('{Value.CustomerID}', '{Value.Freight}', '{Value.ShipCity}', '{Value.EmployeeID}')";
-    SqlConnection Connection = new SqlConnection(ConnectionString);
-    Connection.Open();
-    SqlCommand Command = new SqlCommand(Query, Connection);
-    Command.ExecuteNonQuery();   
-    Connection.Close();
-}
+        public async Task AddOrderAsync(Order Value)
+        {
+            //Create query to insert the specific into the database by accessing its properties 
+            string Query = $"Insert into Orders(CustomerID,Freight,ShipCity,EmployeeID) values('{(Value as Order).CustomerID}','{(Value as Order).Freight}','{(Value as Order).ShipCity}','{(Value as Order).EmployeeID}')";
+            SqlConnection Connection = new SqlConnection(ConnectionString);
+            Connection.Open();
+            //Execute the SQL Command
+            SqlCommand SqlCommand = new SqlCommand(Query, Connection);
+            //Exceute this code to reflect the changes into the database
+            SqlCommand.ExecuteNonQuery();
+            Connection.Close();
+        }
 {% endhighlight %}
 {% endtabs %}
 
@@ -1046,7 +1225,14 @@ To execute the update operation, override the [Update](https://help.syncfusion.c
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor"%}
-// Perform Update operation
+/// <summary>
+/// Updates an existing data item in the data collection.
+/// </summary>
+/// <param name="DataManager">The DataManager is a data management component used for performing data operations in applications.</param>
+/// <param name="value">The modified record which is need to be updated.</param>
+/// <param name="keyField">The primaryColumnName specifies the field name of the primary column.</param>
+/// <param name="key">An optional parameter that can be used to perform additional data operations.</param>
+/// <returns>Returns the updated data item.</returns>
 public override async Task<object> UpdateAsync(DataManager DataManager, object Value, string keyField, string key)
 {
     // Add your update logic here
@@ -1056,13 +1242,16 @@ public override async Task<object> UpdateAsync(DataManager DataManager, object V
 }
 {% endhighlight %}
 {% highlight razor tabtitle="Orderdata.cs"%}
- public async Task UpdateOrderAsync(Order Value)
+public async Task UpdateOrderAsync(Order Value)
 {
-    string ConnectionString = $"<Enter a valid connection string>";
+    //Create query to update the changes into the database by accessing its properties
+    string Query = $"Update Orders set CustomerID='{(Value as Order).CustomerID}', Freight='{(Value as Order).Freight}',EmployeeID='{(Value as Order).EmployeeID}',ShipCity='{(Value as Order).ShipCity}' where OrderID='{(Value as Order).OrderID}'";
     SqlConnection Connection = new SqlConnection(ConnectionString);
     Connection.Open();
-    SqlCommand Command = new SqlCommand(Query, Connection);
-    Command.ExecuteNonQuery();
+    //Execute the SQL Command
+    SqlCommand SqlCommand = new SqlCommand(Query, Connection);
+    //Exceute this code to reflect the changes into the database
+    SqlCommand.ExecuteNonQuery();
     Connection.Close();
 }
 {% endhighlight %}
@@ -1074,7 +1263,14 @@ To perform the delete operation, you need to override the [Remove](https://help.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor"%}
-// Perform Delete operation
+/// <summary>
+/// Removes a data item from the data collection.
+/// </summary>
+/// <param name="DataManager">The DataManager is a data management component used for performing data operations in applications.</param>
+/// <param name="Value">The Value specifies the primary column value which is needs to be removed from the grid record.</param>
+/// <param name="keyField">The keyField specifies the field name of the primary column.</param>
+/// <param name="key">An optional parameter that can be used to perform additional data operations.</param>
+/// <returns>Returns the removed data item.</returns>
 public override async Task<object> RemoveAsync(DataManager DataManager, object Value, string keyField, string key)
 {
     // Add your delete logic here
@@ -1084,16 +1280,18 @@ public override async Task<object> RemoveAsync(DataManager DataManager, object V
 }
 {% endhighlight %}
 {% highlight razor tabtitle="Orderdata.cs"%}
- public async Task RemoveOrderAsync(int? Key)
- {
-     string ConnectionString = $"<Enter a valid connection string>";
-     string Query = $"Delete from Orders where OrderID={Key}";
-     SqlConnection Connection = new SqlConnection(ConnectionString);
-     Connection.Open();
-     SqlCommand Command = new SqlCommand(Query, Connection);
-     Command.ExecuteNonQuery();
-     Connection.Close();
- } 
+public async Task RemoveOrderAsync(int? Key)
+{
+    //Create query to remove the specific from database by passing the primary key column value.
+    string Query = $"Delete from Orders where OrderID={Key}";
+    SqlConnection Connection = new SqlConnection(ConnectionString);
+    Connection.Open();
+    //Execute the SQL Command
+    SqlCommand SqlCommand = new SqlCommand(Query, Connection);
+    //Exceute this code to reflect the changes into the database
+    SqlCommand.ExecuteNonQuery();
+    Connection.Close();
+}
 {% endhighlight %}
 {% endtabs %}
 
@@ -1102,7 +1300,17 @@ public override async Task<object> RemoveAsync(DataManager DataManager, object V
 To perform the batch operation, override the [BatchUpdate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_BatchUpdate_Syncfusion_Blazor_DataManager_System_Object_System_Object_System_Object_System_String_System_String_System_Nullable_System_Int32__) or [BatchUpdateAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_BatchUpdateAsync_Syncfusion_Blazor_DataManager_System_Object_System_Object_System_Object_System_String_System_String_System_Nullable_System_Int32__) method of the `CustomAdaptor` and add the following code in the `CustomAdaptor`. The below code snippet demonstrated how to handle the batch update request within the `BatchUpdateAsync` method of `CustomAdaptor` component. Modify the logic within this method according to the requirements of your application.
 
 {% highlight razor %}
-// Perform BatchUpdate operation
+/// <summary>
+/// /// Batchupdate (Insert, Update, Delete) a collection of data item from the data collection.
+/// </summary>
+/// <param name="DataManager">The DataManager is a data management component used for performing data operations in applications.</param>
+/// <param name="Changed">The Changed specifies the collection of record updated in batch mode which needs to be updated from the grid record.</param>
+/// <param name="Added">The Added specifies the collection of record inserted in batch mode which needs to be inserted from the grid record.</param>
+/// <param name="Deleted">The Deleted specifies the collection of record deleted in batch mode which needs to be removed from the grid record.</param>
+/// <param name="keyField">The keyField specifies the field name of the primary column.</param>
+/// <param name="Key">An optional parameter that can be used to perform additional data operations.</param>
+/// <param name="dropIndex">An optional parameter that can be used to perform row drag and drop operation.</param>
+/// <returns>Returns the removed data item.</returns>
 public override async Task<object> BatchUpdateAsync(DataManager DataManager, object Changed, object Added, object Deleted, string KeyField, string Key, int? dropIndex)
 {
     if (Changed != null)
@@ -1132,4 +1340,4 @@ public override async Task<object> BatchUpdateAsync(DataManager DataManager, obj
 
 ![Blazor DataGrid bound with Microsoft SQL Server data](../images/blazor-Grid-Ms-SQl-databinding-Gif.gif)
 
-> You can find the sample in this [GitHub location](https://github.com/SyncfusionExamples/blazor-grid-mssql-connectivity-using-custom-adaptor).
+> You can find the sample in this [GitHub location](https://github.com/SyncfusionExamples/connecting-databases-to-blazor-datagrid-component/tree/master/Binding%20MS%20SQL%20database%20using%20CustomAdaptor).
