@@ -3,7 +3,7 @@ layout: post
 title: Accessibility in Blazor Kanban Component | Syncfusion
 description: Checkout and learn here all about accessibility in Syncfusion Blazor Kanban component and more.
 platform: Blazor
-control: RichTextEditor
+control: Kanban
 documentation: ug
 ---
 
