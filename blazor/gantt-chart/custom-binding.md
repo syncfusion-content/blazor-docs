@@ -350,7 +350,6 @@ The following sample code demonstrates implementing CRUD operations for the cust
         public int? ParentID { get; set; }
         public TaskData() { }
     }
-
     protected override void OnInitialized()
     {
         GanttData = GetGantt().ToList();
