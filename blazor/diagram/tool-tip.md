@@ -391,7 +391,7 @@ The following code example illustrates how to add the formatted template content
                     Fill = "#6495ED",
                     StrokeColor = "white"
                 },
-                Tooltip = new DiagramTooltip() { Content = "NodeTooltip", Template = getContent() },
+                Tooltip = new DiagramTooltip() { Template = getContent() },
                 Constraints = NodeConstraints.Default | NodeConstraints.Tooltip,
             };
         nodes.Add(node);
