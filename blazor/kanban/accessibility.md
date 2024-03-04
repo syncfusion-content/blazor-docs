@@ -16,7 +16,7 @@ The accessibility compliance for the Kanban component is outlined below.
 | Accessibility Criteria | Compatibility |
 | -- | -- |
 | WCAG 2.2 Support | ![Yes](https://cdn.syncfusion.com/content/images/documentation/full.png) |
-| [Section 508 Support](../common/accessibility#accessibility-standards) | ![Yes](https://cdn.syncfusion.com/content/images/documentation/full.png) |
+| [Section 508](../common/accessibility#section-508) | ![Yes](https://cdn.syncfusion.com/content/images/documentation/full.png) |
 | Screen Reader Support | ![Yes](https://cdn.syncfusion.com/content/images/documentation/full.png) |
 | Right-To-Left Support | ![Yes](https://cdn.syncfusion.com/content/images/documentation/full.png) |
 | Color Contrast | ![Intermediate](https://cdn.syncfusion.com/content/images/documentation/partial.png) |
