@@ -15,15 +15,15 @@ The accessibility compliance for the Kanban component is outlined below.
 
 | Accessibility Criteria | Compatibility |
 | -- | -- |
-| [WCAG 2.2 Support](../common/accessibility#accessibility-standards) | ![Yes](https://cdn.syncfusion.com/content/images/documentation/full.png) |
+| WCAG 2.2 Support | ![Yes](https://cdn.syncfusion.com/content/images/documentation/full.png) |
 | [Section 508 Support](../common/accessibility#accessibility-standards) | ![Yes](https://cdn.syncfusion.com/content/images/documentation/full.png) |
-| [Screen Reader Support](../common/accessibility#screen-reader-support) | ![Yes](https://cdn.syncfusion.com/content/images/documentation/full.png) |
-| [Right-To-Left Support](../common/accessibility#right-to-left-support) | ![Yes](https://cdn.syncfusion.com/content/images/documentation/full.png) |
-| [Color Contrast](../common/accessibility#color-contrast) | ![Intermediate](https://cdn.syncfusion.com/content/images/documentation/partial.png) |
-| [Mobile Device Support](../common/accessibility#mobile-device-support) | ![Yes](https://cdn.syncfusion.com/content/images/documentation/full.png) |
-| [Keyboard Navigation Support](../common/accessibility#keyboard-navigation-support) | ![Yes](https://cdn.syncfusion.com/content/images/documentation/full.png) |
-| [Accessibility Checker Validation](../common/accessibility#ensuring-accessibility) | ![Intermediate](https://cdn.syncfusion.com/content/images/documentation/partial.png) |
-| [Axe-core Accessibility Validation](../common/accessibility#ensuring-accessibility) | ![Yes](https://cdn.syncfusion.com/content/images/documentation/full.png) |
+| Screen Reader Support | ![Yes](https://cdn.syncfusion.com/content/images/documentation/full.png) |
+| Right-To-Left Support | ![Yes](https://cdn.syncfusion.com/content/images/documentation/full.png) |
+| Color Contrast | ![Intermediate](https://cdn.syncfusion.com/content/images/documentation/partial.png) |
+| Mobile Device Support | ![Yes](https://cdn.syncfusion.com/content/images/documentation/full.png) |
+| Keyboard Navigation](../common/accessibility#keyboard-navigation) | ![Yes](https://cdn.syncfusion.com/content/images/documentation/full.png) |
+| Accessibility Checker Validation | ![Intermediate](https://cdn.syncfusion.com/content/images/documentation/partial.png) |
+| Axe-core Accessibility Validation | ![Yes](https://cdn.syncfusion.com/content/images/documentation/full.png) |
 
 <style>
     .post .post-content img {

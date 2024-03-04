@@ -15,15 +15,15 @@ The accessibility compliance for the Rich Text Editor component is outlined belo
 
 | Accessibility Criteria | Compatibility |
 | -- | -- |
-| [WCAG 2.2 Support](../common/accessibility#accessibility-standards) | <img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> |
-| [Section 508 Support](../common/accessibility#accessibility-standards) | <img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> |
-| [Screen Reader Support](../common/accessibility#screen-reader-support) | <img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> |
-| [Right-To-Left Support](../common/accessibility#right-to-left-support) | <img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> |
-| [Color Contrast](../common/accessibility#color-contrast) | <img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Intermediate"> |
-| [Mobile Device Support](../common/accessibility#mobile-device-support) | <img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> |
-| [Keyboard Navigation Support](../common/accessibility#keyboard-navigation-support) | <img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> |
-| [Accessibility Checker Validation](../common/accessibility#ensuring-accessibility) | <img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Intermediate"> |
-| [Axe-core Accessibility Validation](../common/accessibility#ensuring-accessibility) | <img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> |
+| WCAG 2.2 Support | ![Yes](https://cdn.syncfusion.com/content/images/documentation/full.png) |
+| [Section 508 Support](../common/accessibility#accessibility-standards) | ![Yes](https://cdn.syncfusion.com/content/images/documentation/full.png) |
+| Screen Reader Support | ![Yes](https://cdn.syncfusion.com/content/images/documentation/full.png) |
+| Right-To-Left Support | ![Yes](https://cdn.syncfusion.com/content/images/documentation/full.png) |
+| Color Contrast | ![Intermediate](https://cdn.syncfusion.com/content/images/documentation/partial.png) |
+| Mobile Device Support | ![Yes](https://cdn.syncfusion.com/content/images/documentation/full.png) |
+| Keyboard Navigation](../common/accessibility#keyboard-navigation) | ![Yes](https://cdn.syncfusion.com/content/images/documentation/full.png) |
+| Accessibility Checker Validation | ![Intermediate](https://cdn.syncfusion.com/content/images/documentation/partial.png) |
+| Axe-core Accessibility Validation | ![Yes](https://cdn.syncfusion.com/content/images/documentation/full.png) |
 
 <style>
     .post .post-content img {
