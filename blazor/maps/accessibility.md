@@ -28,6 +28,8 @@ Accessibility in the Maps component ensures that all users, regardless of abilit
 | Elements | Description |
 | --- | --- |
 | Shapes in the layer | Reads the names of the geographical shapes (such as countries, states, and regions) that appear on the Maps. |
+| Title | Reads the contents of the title as specified in Maps. |
+| Sub title | Reads the contents of the sub title as specified in Maps. |
 | Legend title | Reads the contents of the legend's title as specified in Maps. |
 | Legend item label | Reads the label of a legend item in Maps. |
 | Data label | Reads the label specified for the shapes in the Maps layer. |
