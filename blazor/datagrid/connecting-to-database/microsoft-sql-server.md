@@ -7,7 +7,7 @@ control: DataGrid
 documentation: ug
 ---
 
-# Microsoft SQL Server Data Binding in Blazor DataGrid Component
+# Connecting Microsoft SQL Server data in to Blazor DataGrid Component
 
 This section describes how to connect and retrieve data from a Microsoft SQL Server database using [System.Data.SqlClient](https://www.nuget.org/packages/System.Data.SqlClient/4.8.6?_src=template) and bind it to the Blazor DataGrid component.
 
@@ -19,7 +19,7 @@ The [UrlAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors#url-a
 
 * **Using CustomAdaptor**
 
-The [CustomAdaptor](https://blazor.syncfusion.com/documentation/datagrid/custom-binding) serves as a mediator between the UI component and the database for data binding. While the data source from the database can be directly bound to the `DataGrid` component locally using the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_DataSource) property, the `CustomAdaptor` approach is preferred as it allows for customization of both data operations and CRUD operations according to specific requirements. In this approach, for every action in the Blazor DataGrid component, a corresponding request with action details is sent to the `CustomAdaptor`. The Blazor DataGrid provides predefined methods such as **PerformSearching**, **PerformFiltering**, **PerformSorting**, **PerformSkip**, **PerformTake**, and **PerformGrouping** for executing these data operations. Alternatively, your own custom methods can be employed to execute operations and return the data in the `Result` and `Count` format of the `DataResult` class for display in the Blazor DataGrid component. Additionally, for CRUD operations, predefined methods can be overridden to provide custom functionality. Further details on this can be found in the latter part of the documentation.
+The [CustomAdaptor](https://blazor.syncfusion.com/documentation/datagrid/custom-binding) serves as a mediator between the UI component and the database for data binding. While the data source from the database can be directly bound to the `DataGrid` component locally using the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_DataSource) property, the `CustomAdaptor` approach is preferred as it allows for customization of both data operations and CRUD operations according to specific requirements. In this approach, for every action in the Blazor DataGrid component, a corresponding request with action details is sent to the `CustomAdaptor`. The Blazor DataGrid provides predefined methods such as **PerformSearching**, **PerformFiltering**, **PerformSorting**, **PerformSkip**, **PerformTake**, **PerformAggregation** and **Group** for executing these data operations. Alternatively, your own custom methods can be employed to execute operations and return the data in the `Result` and `Count` format of the `DataResult` class for display in the Blazor DataGrid component. Additionally, for CRUD operations, predefined methods can be overridden to provide custom functionality. Further details on this can be found in the latter part of the documentation.
 
 ## Binding data from Microsoft SQL Server using an API service 
 
@@ -246,7 +246,7 @@ When you run the application, the resultant Blazor DataGrid will look like this
 
 ![Blazor DataGrid bound with Microsoft SQL Server data](../images/blazor-Grid-Ms-SQL-databinding.png)
 
-> * The Syncfusion Blazor DataGrid component provides built-in support for handling various data operations such as **searching**, **sorting**, **filtering**, **paging**, **grouping**, **aggregate** on the server-side. These operations can be handled using methods such as `PerformSearching`, `PerformSorting`, `PerformFiltering`, `PerformTake`, and `PerformSkip`, available in the **Syncfusion.Blazor.Data** package. Let's explore how to manage these data operations using the `UrlAdaptor`.
+> * The Syncfusion Blazor DataGrid component provides built-in support for handling various data operations such as **searching**, **sorting**, **filtering**, **paging**, **grouping** and **aggregate** on the server-side. These operations can be handled using methods such as `PerformSearching`, `PerformSorting`, `PerformFiltering`, `PerformTake`, and `PerformSkip` and `PerformAggregation` available in the **Syncfusion.Blazor.Data** package. Let's explore how to manage these data operations using the `UrlAdaptor`.
 > * In an API service project, add **Syncfusion.Blazor.Data** by opening the NuGet package manager in Visual Studio (Tools → NuGet Package Manager → Manage NuGet Packages for Solution), search and install it.
 
 ### Handling searching operation
@@ -365,7 +365,7 @@ public object Post([FromBody] DataManagerRequest DataManagerRequest)
 
 ### Handling aggregate operation
 
-To handle aggregate operation, ensure that your API endpoint supports custom aggregate criteria. Implement the aggregate logic on the server-side using the `PerformAggregation` method from the [DataUtil](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.DataUtil.html) class. This allows the custom data source to undergo aggregate based on the criteria specified in the incoming [DataManagerRequest](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManagerRequest.html) object.
+To handle aggregate operation, ensure that your API endpoint supports custom aggregate criteria. Implement the aggregate logic on the server-side using the [PerformAggregation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.DataUtil.html#Syncfusion_Blazor_Data_DataUtil_PerformAggregation_System_Collections_IEnumerable_System_Collections_Generic_List_Syncfusion_Blazor_Data_Aggregate__) method from the [DataUtil](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.DataUtil.html) class. This allows the custom data source to undergo aggregate based on the criteria specified in the incoming [DataManagerRequest](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManagerRequest.html) object.
 
 {% highlight razor %}
  [HttpPost]
@@ -942,7 +942,7 @@ public class CustomAdaptor : DataAdaptor
 {% endhighlight %}
 
 > * For optimal performance, it is recommended to follow this sequence of operations(Searching, Filtering, Sorting, Paging, Grouping and Aggregate) in the `ReadAsync` method.
-> * If both grouping and aggregate operations are enabled, the code provided below demonstrates how to implement these operations within the `CustomAdapter`.
+> * If both grouping and aggregate operations are enabled, the code provided below demonstrates how to implement these operations within the `CustomAdaptor`.
 ```cshtml
 public class CustomAdaptor : DataAdaptor
 {
