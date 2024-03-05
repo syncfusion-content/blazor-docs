@@ -11,15 +11,15 @@ documentation: ug
 
 This section describes how to connect and retrieve data from a Microsoft SQL Server database using [System.Data.SqlClient](https://www.nuget.org/packages/System.Data.SqlClient/4.8.6?_src=template) and bind it to the Blazor SfGrid component.
 
-Microsoft SQL Server database can be bound to the Blazor DataGrid in different ways (i.e.) using [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_DataSource) property, [CustomAdaptor](https://blazor.syncfusion.com/documentation/datagrid/custom-binding) feature and Remote data binding using various adaptors (Web API, OData, ODataV4, Url, GraphQL). In this documentation, two approaches will be examined to connect a Microsoft SQL Server database to a Blazor SfGrid component. Both the approaches have capability to handle data and CRUD operations with built-in methods as well as can be customized as per your own.
+Microsoft SQL Server database can be bound to the Blazor SfGrid component in different ways (i.e.) using [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_DataSource) property, [CustomAdaptor](https://blazor.syncfusion.com/documentation/datagrid/custom-binding) feature and Remote data binding using various adaptors (Web API, OData, ODataV4, Url, GraphQL). In this documentation, two approaches will be examined to connect a Microsoft SQL Server database to a Blazor SfGrid component. Both the approaches have capability to handle data and CRUD operations with built-in methods as well as can be customized as per your own.
 
 * **Using UrlAdaptor**
 
-The [UrlAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors#url-adaptor) serves as the base adaptor for facilitating communication between remote data services and a UI component. It enables the remote binding of data to the Blazor SfGrid component by connecting to an existing pre-configured API service linked to the Microsoft SQL Server database. While the Blazor DataGrid supports various adaptors to fulfill this requirement, including [Web API](https://blazor.syncfusion.com/documentation/data/adaptors#web-api-adaptor), [OData](https://blazor.syncfusion.com/documentation/data/adaptors#odata-adaptor), [ODataV4](https://blazor.syncfusion.com/documentation/data/adaptors#odatav4-adaptor), [Url](https://blazor.syncfusion.com/documentation/data/adaptors#url-adaptor), and [GraphQL](https://blazor.syncfusion.com/documentation/data/adaptors#graphql-service-binding), the `UrlAdaptor` is particularly useful for scenarios where a custom API service with unique logic for handling data and CRUD operations is in place. This approach allows for custom handling of data and CRUD operations, and the resultant data returned in the `Result` and `Count` format for display in the Blazor SfGrid component.
+The [UrlAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors#url-adaptor) serves as the base adaptor for facilitating communication between remote data services and a UI component. It enables the remote binding of data to the Blazor SfGrid component by connecting to an existing pre-configured API service linked to the Microsoft SQL Server database. While the Blazor SfGrid component supports various adaptors to fulfill this requirement, including [Web API](https://blazor.syncfusion.com/documentation/data/adaptors#web-api-adaptor), [OData](https://blazor.syncfusion.com/documentation/data/adaptors#odata-adaptor), [ODataV4](https://blazor.syncfusion.com/documentation/data/adaptors#odatav4-adaptor), [Url](https://blazor.syncfusion.com/documentation/data/adaptors#url-adaptor), and [GraphQL](https://blazor.syncfusion.com/documentation/data/adaptors#graphql-service-binding), the `UrlAdaptor` is particularly useful for scenarios where a custom API service with unique logic for handling data and CRUD operations is in place. This approach allows for custom handling of data and CRUD operations, and the resultant data returned in the `Result` and `Count` format for display in the Blazor SfGrid component.
 
 * **Using CustomAdaptor**
 
-The [CustomAdaptor](https://blazor.syncfusion.com/documentation/datagrid/custom-binding) serves as a mediator between the UI component and the database for data binding. While the data source from the database can be directly bound to the `SfGrid` component locally using the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_DataSource) property, the `CustomAdaptor` approach is preferred as it allows for customization of both data operations and CRUD operations according to specific requirements. In this approach, for every action in the Blazor SfGrid component, a corresponding request with action details is sent to the `CustomAdaptor`. The Blazor DataGrid provides predefined methods such as **PerformSearching**, **PerformFiltering**, **PerformSorting**, **PerformSkip**, **PerformTake**, **PerformAggregation** and **Group** for executing these data operations. Alternatively, your own custom methods can be employed to execute operations and return the data in the `Result` and `Count` format of the `DataResult` class for display in the Blazor SfGrid component. Additionally, for CRUD operations, predefined methods can be overridden to provide custom functionality. Further details on this can be found in the latter part of the documentation.
+The [CustomAdaptor](https://blazor.syncfusion.com/documentation/datagrid/custom-binding) serves as a mediator between the UI component and the database for data binding. While the data source from the database can be directly bound to the `SfGrid` component locally using the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_DataSource) property, the `CustomAdaptor` approach is preferred as it allows for customization of both data operations and CRUD operations according to specific requirements. In this approach, for every action in the Blazor SfGrid component, a corresponding request with action details is sent to the `CustomAdaptor`. The Blazor SfGrid component provides predefined methods such as **PerformSearching**, **PerformFiltering**, **PerformSorting**, **PerformSkip**, **PerformTake**, **PerformAggregation** and **Group** for executing these data operations. Alternatively, your own custom methods can be employed to execute operations and return the data in the `Result` and `Count` format of the `DataResult` class for display in the Blazor SfGrid component. Additionally, for CRUD operations, predefined methods can be overridden to provide custom functionality. Further details on this can be found in the latter part of the documentation.
 
 ## Binding data from Microsoft SQL Server using an API service
 
@@ -31,7 +31,7 @@ This section describes step by step process how to retrieve data from a Microsof
 
 **2.** To connect a Microsoft SQL Server database using the Microsoft SQL driver in your application, you need to install the [System.Data.SqlClient](https://www.nuget.org/packages/System.Data.SqlClient/4.8.6?_src=template) NuGet package. To add **System.Data.SqlClient** in the app, open the NuGet package manager in Visual Studio (Tools → NuGet Package Manager → Manage NuGet Packages for Solution), search and install it.
 
-**3.** Create an API controller (aka, GridController.cs) file under **Controllers** folder that helps to establish data communication with the Blazor DataGrid.
+**3.** Create an API controller (aka, GridController.cs) file under **Controllers** folder that helps to establish data communication with the Blazor SfGrid component.
 
 **4.** In an API controller (aka, GridController), connect to Microsoft SQL Server. In the **Get()** method **SqlConnection** helps to connect the Microsoft SQL Server database. Next, using **SqlCommand** and **SqlDataAdapter** you can process the desired SQL query string and retrieve data from the database. The **Fill** method of the **DataAdapter** is used to populate the SQL data into a **DataTable** as shown in the following code snippet.
 
@@ -102,7 +102,7 @@ namespace MyWebService.Controllers
 
 ### Connecting Blazor DataGrid to an API service
 
-**1.** Create a simple Blazor DataGrid by following steps. This section briefly explains about how to include [Blazor SfGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/).
+**1.** Create a simple Blazor SfGrid component by following steps. This section briefly explains about how to include [Blazor SfGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/).
 
 **Prerequisites**
 
@@ -172,9 +172,9 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 ```
 
 > * Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic to discover various methods ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference), and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)) for referencing themes in your Blazor application. Also, check out the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic to learn different approaches for adding script references in your Blazor application.
-> * In this Blazor web app, the `rendermode` is set as **InteractiveServer**.
+> * In this Blazor web application, set the `rendermode` as either **InteractiveServer** or **InteractiveAuto** as per your configuration.
 
-**2.** Map the hosted API's URL link `https://localhost:xxxx/api/Grid` to the Blazor DataGrid in **Index.razor** by using the [Url](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_Url) property of [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html). To interact with remote data source, provide the endpoint `Url`.
+**2.** Map the hosted API's URL link `https://localhost:xxxx/api/Grid` to the Blazor SfGrid component in **Index.razor** by using the [Url](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_Url) property of [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html). To interact with remote data source, provide the endpoint `Url`.
 
 **3.** The `SfDataManager` offers multiple adaptor options to connect with remote database based on API services. Below is an example of the [UrlAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors#url-adaptor) configuration where an API services are set up to return the resulting data in the `Result` and `Count` format.
 
@@ -249,7 +249,7 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
         /// <summary>
         /// Returns the data collection as result and count after performing data operations based on request from <see cref=DataManagerRequest”/>
         /// </summary>
-        /// <param name="dataManagerRequest">DataManagerRequest containes the information regarding paging, grouping, filtering, searching which is handled on the SfGrid component side</param>
+        /// <param name="dataManagerRequest">DataManagerRequest containes the information regarding paging, grouping, filtering, searching which is handled on the Blazor SfGrid component side</param>
         /// <returns>The data collection's type is determined by how this method has been implemented.</returns>
         [HttpPost]
         [Route("api/[controller]")]
@@ -302,18 +302,18 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
                 return DataManagerRequest.RequiresCounts ? DataObject : (object)DataSource;
             }
             //Here RequiresCount is passed from the control side itself, where ever the ondemand data fetching is needed then the RequiresCount is set as true in component side itself.
-            // In the above case we are using Paging so datas are loaded in ondemand bases whenever the next page is clicked in DataGrid side.
+            // In the above case we are using Paging so datas are loaded in ondemand bases whenever the next page is clicked in Blazor SfGrid component side.
             return new { result = DataSource, count = count };
         }
     }
 {% endhighlight %}
 {% endtabs %}
 
-> In the above Blazor DataGrid, [AllowSearching](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_AllowSearching), [AllowSorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowSorting), [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowFiltering), [AllowPaging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowPaging), [AllowGrouping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowGrouping) and CRUD-related properties have been enabled. The details on how to handle these actions are explained below.
+> In the above Blazor SfGrid component, [AllowSearching](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_AllowSearching), [AllowSorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowSorting), [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowFiltering), [AllowPaging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowPaging), [AllowGrouping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowGrouping) and CRUD-related properties have been enabled. The details on how to handle these actions are explained below.
 
-When you run the application, the resultant Blazor DataGrid will look like this
+When you run the application, the resultant Blazor SfGrid component will look like this
 
-![Blazor DataGrid bound with Microsoft SQL Server data](../images/blazor-Grid-Ms-SQL-databinding.png)
+![Blazor SfGrid component bound with Microsoft SQL Server data](../images/blazor-Grid-Ms-SQL-databinding.png)
 
 > * The Syncfusion Blazor SfGrid component provides built-in support for handling various data operations such as **searching**, **sorting**, **filtering**, **paging**, **grouping** and **aggregate** on the server-side. These operations can be handled using methods such as `PerformSearching`, `PerformSorting`, `PerformFiltering`, `PerformTake`, and `PerformSkip` and `PerformAggregation` available in the **Syncfusion.Blazor.Data** package. Let's explore how to manage these data operations using the `UrlAdaptor`.
 > * In an API service project, add **Syncfusion.Blazor.Data** by opening the NuGet package manager in Visual Studio (Tools → NuGet Package Manager → Manage NuGet Packages for Solution), search and install it.
@@ -470,7 +470,7 @@ To handle aggregate operation, ensure that your API endpoint supports custom agg
 
 ### Handling CRUD operations
 
-To enable editing in this Blazor SfGrid component, utilize the [GridEditSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html) component. The Blazor DataGrid offers multiple edit modes including the [Inline/Normal](https://blazor.syncfusion.com/documentation/datagrid/in-line-editing), [Dialog](https://blazor.syncfusion.com/documentation/datagrid/dialog-editing), and [Batch](https://blazor.syncfusion.com/documentation/datagrid/batch-editing) editing. For more details, refer to the Blazor DataGrid [editing](https://blazor.syncfusion.com/documentation/datagrid/editing) documentation. 
+To enable editing in this Blazor SfGrid component, utilize the [GridEditSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html) component. The Blazor DataGrid offers multiple edit modes including the [Inline/Normal](https://blazor.syncfusion.com/documentation/datagrid/in-line-editing), [Dialog](https://blazor.syncfusion.com/documentation/datagrid/dialog-editing), and [Batch](https://blazor.syncfusion.com/documentation/datagrid/batch-editing) editing. For more details, refer to the Blazor SfGrid component [editing](https://blazor.syncfusion.com/documentation/datagrid/editing) documentation. 
 
 In this scenario, the inline edit mode and [Toolbar](https://blazor.syncfusion.com/documentation/datagrid/tool-bar) property are configured to display toolbar items for editing purposes.
 
@@ -654,9 +654,9 @@ public void Batch([FromBody] CRUDModel<Order> Value)
 }
 {% endhighlight %}
 
-When you run the application, the resultant Blazor DataGrid will look like this
+When you run the application, the resultant Blazor SfGrid component will look like this
 
-![Blazor DataGrid bound with Microsoft SQL Server data](../images/blazor-Grid-Ms-SQl-databinding-Gif.gif)
+![Blazor SfGrid component bound with Microsoft SQL Server data](../images/blazor-Grid-Ms-SQl-databinding-Gif.gif)
 
 > Find the sample from this [Github location](https://github.com/SyncfusionExamples/connecting-databases-to-blazor-datagrid-component/tree/master/Binding%20MS%20SQL%20database%20using%20UrlAdaptor).
 
@@ -664,9 +664,9 @@ When you run the application, the resultant Blazor DataGrid will look like this
 
 This section describes step by step process how to retrieve data from a Microsoft SQL server using `CustomAdaptor` and bind it to the Blazor SfGrid component.
 
-**1.** To create a simple Blazor DataGrid, the procedure is explained in the above-mentioned topic on [Connecting Blazor DataGrid to an API service](#connecting-blazor-datagrid-to-an-api-service)
+**1.** To create a simple Blazor SfGrid component, the procedure is explained in the above-mentioned topic on [Connecting Blazor DataGrid to an API service](#connecting-blazor-datagrid-to-an-api-service)
 
-> * In this Blazor web app, the `rendermode` is set as **InteractiveServer**.
+> * In this Blazor web application, set the `rendermode` as either **InteractiveServer** or **InteractiveAuto** as per your configuration.
 
 **2.** To connect a Microsoft SQL Server database using the Microsoft SQL driver in your application, you need to install the [System.Data.SqlClient](https://www.nuget.org/packages/System.Data.SqlClient/4.8.6?_src=template) NuGet package. To add **System.Data.SqlClient** in the app, open the NuGet package manager in Visual Studio (Tools → NuGet Package Manager → Manage NuGet Packages for Solution), search and install it.
 
@@ -801,7 +801,7 @@ This section describes step by step process how to retrieve data from a Microsof
 @code {
     /// <summary>
     /// Implementing custom adaptor by extending the <see cref=“DataAdaptor”/> class.
-    /// The SGrid component support for custom data binding, which enables the binding and manipulation of data in a personalized way, using user-defined methods.
+    /// The Blazor SGrid component support for custom data binding, which enables the binding and manipulation of data in a personalized way, using user-defined methods.
     /// </summary>
     public class CustomAdaptor : DataAdaptor
     {
@@ -809,7 +809,7 @@ This section describes step by step process how to retrieve data from a Microsof
         /// <summary>
         /// Returns the data collection after performing data operations based on request from <see cref=”DataManagerRequest”/>
         /// </summary>
-        /// <param name="dataManagerRequest">DataManagerRequest containes the information regarding paging, grouping, filtering, searching which is handled on the SfGrid component side</param>
+        /// <param name="dataManagerRequest">DataManagerRequest containes the information regarding paging, grouping, filtering, searching which is handled on the Blazor SfGrid component side</param>
         /// <param name="additionalParam">An optional parameter that can be used to perform additional data operations.</param>
         /// <returns>The data collection's type is determined by how this method has been implemented.</returns>
         public override async Task<object> ReadAsync(DataManagerRequest DataManagerRequest, string key = null)
@@ -855,18 +855,18 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-> * The `DataManagerRequest` encompasses details about the Blazor DataGrid actions such as searching, filtering, sorting, paging, grouping and aggregate.
+> * The `DataManagerRequest` encompasses details about the Blazor SfGrid component actions such as searching, filtering, sorting, paging, grouping and aggregate.
 > * In the above Blazor DataGrid, [AllowSearching](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_AllowSearching), [AllowSorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowSorting), [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowFiltering), [AllowPaging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowPaging), [AllowGrouping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowGrouping) and CRUD-related properties have been enabled. The details on how to handle these actions are explained below.
 
-When the application is executed, the Blazor DataGrid will appear as depicted below.
+When the application is executed, the Blazor SfGrid component will appear as depicted below.
 
-![Blazor DataGrid bound with Microsoft SQL Server data](../images/blazor-Grid-Ms-SQL-databinding.png)
+![Blazor SfGrid component bound with Microsoft SQL Server data](../images/blazor-Grid-Ms-SQL-databinding.png)
 
 ### Handling searching operation
 
 When utilizing the `CustomAdaptor`, managing the searching operation involves overriding the [Read](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_Read_Syncfusion_Blazor_DataManagerRequest_System_String_) or [ReadAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_ReadAsync_Syncfusion_Blazor_DataManagerRequest_System_String_) method of the [DataAdaptor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html) abstract class.
 
-In the code example below, searching a custom data source can be accomplished by employing the built-in [PerformSearching](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html#Syncfusion_Blazor_DataOperations_PerformSearching_System_Collections_IEnumerable_System_Collections_Generic_List_Syncfusion_Blazor_Data_SearchFilter__) method of the [DataOperations](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html) class. Alternatively, you can implement your own method for searching operation and bind the resultant data to the Blazor DataGrid.
+In the code example below, searching a custom data source can be accomplished by employing the built-in [PerformSearching](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html#Syncfusion_Blazor_DataOperations_PerformSearching_System_Collections_IEnumerable_System_Collections_Generic_List_Syncfusion_Blazor_Data_SearchFilter__) method of the [DataOperations](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html) class. Alternatively, you can implement your own method for searching operation and bind the resultant data to the Blazor SfGrid component.
 
 {% highlight razor %}
 public class CustomAdaptor : DataAdaptor
@@ -893,7 +893,7 @@ public class CustomAdaptor : DataAdaptor
 
 When employing the `CustomAdaptor`, handling the filtering operation involves overriding the [Read](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_Read_Syncfusion_Blazor_DataManagerRequest_System_String_) or [ReadAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_ReadAsync_Syncfusion_Blazor_DataManagerRequest_System_String_) method of the [DataAdaptor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html) abstract class.
 
-In the code example below, filtering a custom data source can be achieved by utilizing the built-in [PerformFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html#Syncfusion_Blazor_DataOperations_PerformFiltering__1_System_Collections_Generic_IEnumerable___0__System_Collections_Generic_List_Syncfusion_Blazor_Data_WhereFilter__System_String_) method of the [DataOperations](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html) class. Alternatively, you can implement your own method for filtering operation and bind the resulting data to the Blazor DataGrid.
+In the code example below, filtering a custom data source can be achieved by utilizing the built-in [PerformFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html#Syncfusion_Blazor_DataOperations_PerformFiltering__1_System_Collections_Generic_IEnumerable___0__System_Collections_Generic_List_Syncfusion_Blazor_Data_WhereFilter__System_String_) method of the [DataOperations](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html) class. Alternatively, you can implement your own method for filtering operation and bind the resulting data to the Blazor SfGrid component.
 
 {% highlight razor %}
 public class CustomAdaptor : DataAdaptor
@@ -920,7 +920,7 @@ public class CustomAdaptor : DataAdaptor
 
 When utilizing the `CustomAdaptor`, managing the sorting operation involves overriding the [Read](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_Read_Syncfusion_Blazor_DataManagerRequest_System_String_) or [ReadAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_ReadAsync_Syncfusion_Blazor_DataManagerRequest_System_String_) method of the [DataAdaptor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html) abstract class.
 
-In the code example below, sorting a custom data source can be accomplished by employing the built-in [PerformSorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html#Syncfusion_Blazor_DataOperations_PerformSorting__1_System_Collections_Generic_IEnumerable___0__System_Collections_Generic_List_Syncfusion_Blazor_Data_Sort__) method of the [DataOperations](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html) class. Alternatively, you can implement your own method for sorting operation and bind the resulting data to the Blazor DataGrid.
+In the code example below, sorting a custom data source can be accomplished by employing the built-in [PerformSorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html#Syncfusion_Blazor_DataOperations_PerformSorting__1_System_Collections_Generic_IEnumerable___0__System_Collections_Generic_List_Syncfusion_Blazor_Data_Sort__) method of the [DataOperations](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html) class. Alternatively, you can implement your own method for sorting operation and bind the resulting data to the Blazor SfGrid component.
 
 {% highlight razor %}
 public class CustomAdaptor : DataAdaptor
@@ -947,7 +947,7 @@ public class CustomAdaptor : DataAdaptor
 
 When employing the `CustomAdaptor`, handling paging operation involves overriding the [Read](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_Read_Syncfusion_Blazor_DataManagerRequest_System_String_) or [ReadAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_ReadAsync_Syncfusion_Blazor_DataManagerRequest_System_String_) method of the [DataAdaptor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html) abstract class.
 
-In the code example below, paging a custom data source can be achieved by utilizing the built-in [PerformTake](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html#Syncfusion_Blazor_DataOperations_PerformTake_System_Collections_IEnumerable_System_Int32_) and [PerformSkip](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html#Syncfusion_Blazor_DataOperations_PerformSkip__1_System_Collections_Generic_IEnumerable___0__System_Int32_) method of the [DataOperations](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html) class. Alternatively, you can use your own method for paging operation and bind the resulting data to the Blazor DataGrid.
+In the code example below, paging a custom data source can be achieved by utilizing the built-in [PerformTake](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html#Syncfusion_Blazor_DataOperations_PerformTake_System_Collections_IEnumerable_System_Int32_) and [PerformSkip](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html#Syncfusion_Blazor_DataOperations_PerformSkip__1_System_Collections_Generic_IEnumerable___0__System_Int32_) method of the [DataOperations](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html) class. Alternatively, you can use your own method for paging operation and bind the resulting data to the Blazor SfGrid component.
 
 {% highlight razor %}
 public class CustomAdaptor : DataAdaptor
@@ -1084,7 +1084,7 @@ public class CustomAdaptor : DataAdaptor
 
 ### Handling CRUD operations
 
-To enable editing in the Blazor SfGrid component, utilize the [GridEditSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html) component. The Blazor DataGrid offers multiple edit modes including the Inline/Normal, Dialog and Batch editing. For more details, refer to the Blazor DataGrid [editing](https://blazor.syncfusion.com/documentation/datagrid/editing) documentation.
+To enable editing in the Blazor SfGrid component, utilize the [GridEditSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html) component. The Blazor SfGrid component offers multiple edit modes including the Inline/Normal, Dialog and Batch editing. For more details, refer to the Blazor SfGrid component [editing](https://blazor.syncfusion.com/documentation/datagrid/editing) documentation.
 
 In this scenario, the inline edit mode and [Toolbar](https://blazor.syncfusion.com/documentation/datagrid/tool-bar) property configured to display toolbar items for editing purpose.
 
@@ -1130,7 +1130,7 @@ To execute the insert operation, you will need to override the [Insert](https://
 public override async Task<object> InsertAsync(DataManager DataManager, object Value, string Key)
 {
     // Add your insert logic here
-    // This method will be invoked when inserting new records into the Blazor DataGrid.
+    // This method will be invoked when inserting new records into the Blazor SfGrid component.
     await OrderService.AddOrderAsync(Value as Order);
     return Value;
 }
@@ -1168,7 +1168,7 @@ To execute the update operation, override the [Update](https://help.syncfusion.c
 public override async Task<object> UpdateAsync(DataManager DataManager, object Value, string keyField, string key)
 {
     // Add your update logic here
-    // This method will be invoked when updating existing records in the Blazor DataGrid.
+    // This method will be invoked when updating existing records in the Blazor SfGrid component.
     await OrderService.UpdateOrderAsync(Value as Order);
     return Value;
 }
@@ -1206,7 +1206,7 @@ To perform the delete operation, you need to override the [Remove](https://help.
 public override async Task<object> RemoveAsync(DataManager DataManager, object Value, string keyField, string key)
 {
     // Add your delete logic here
-    // This method will be invoked when deleting existing records from the Blazor DataGrid.
+    // This method will be invoked when deleting existing records from the Blazor SfGrid component.
     await OrderService.RemoveOrderAsync(Value as int?);
     return Value;
 }
@@ -1270,6 +1270,6 @@ public override async Task<object> BatchUpdateAsync(DataManager DataManager, obj
 }
 {% endhighlight %}
 
-![Blazor DataGrid bound with Microsoft SQL Server data](../images/blazor-Grid-Ms-SQl-databinding-Gif.gif)
+![Blazor SfGrid component bound with Microsoft SQL Server data](../images/blazor-Grid-Ms-SQl-databinding-Gif.gif)
 
 > You can find the sample in this [GitHub location](https://github.com/SyncfusionExamples/connecting-databases-to-blazor-datagrid-component/tree/master/Binding%20MS%20SQL%20database%20using%20CustomAdaptor).
