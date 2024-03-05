@@ -73,6 +73,8 @@ The `ObjectGraphDataAnnotationsValidator` within the DataForm component ensures 
 
 ![Blazor DataForm ObjectGraphDataAnnotationsValidator](images/blazor_dataform_fluentvalidation.png)
 
+N> We need to install the [Blazored.FluentValidation](https://www.nuget.org/packages/Blazored.FluentValidation/) Nuget package into the dataform FluentValidation.
+
 ## See also
 
   * [Custom Validation attributes](https://blazor.syncfusion.com/documentation/data-form/data-annotation-attributes#custom-validation)
