@@ -11,7 +11,7 @@ documentation: ug
 
 The [Blazor Accordion](https://www.syncfusion.com/blazor-components/blazor-accordion) component has been designed keeping in mind the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/accordion/) specifications, by applying the prompt WAI-ARIA roles, states and properties along with the keyboard support. Thus, making it usable for people who use assistive WAI-ARIA Accessibility supports that is achieved through the attributes like `aria-labelledby`. It helps to provides information about the elements in a document for assistive technology. The component implements the keyboard navigation support by following the [WAI-ARIA practices](https://www.w3.org/WAI/ARIA/apg/) and tested in major screen readers.
 
-The accessibility compliance for the Accordion component is outlined below.
+The accessibility compliance for the Blazor Accordion component is outlined below.
 
 | Accessibility Criteria | Compatibility |
 | -- | -- |
@@ -22,7 +22,7 @@ The accessibility compliance for the Accordion component is outlined below.
 | Color Contrast |  |
 | Mobile Device Support |  |
 | Keyboard Navigation Support | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
-| [Axe-core](https://www.npmjs.com/package/axe-core) Accessibility Validation | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
+| [Axe-core](https://www.nuget.org/packages/Deque.AxeCore.Playwright) Accessibility Validation | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
 
 <style>
     .post .post-content img {
@@ -62,10 +62,10 @@ Keyboard navigation is enabled by default. The possible keys are:
 
 ## Ensuring accessibility
 
-The Accordion component's accessibility levels are ensured through an [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) software tools during automated testing.
+The Blazor Accordion component's accessibility levels are ensured through an [axe-core](https://www.nuget.org/packages/Deque.AxeCore.Playwright) software tool during automated testing.
 
-The accessibility compliance of the Accordion component is shown in the following sample. Open the `sample` in a new window to evaluate the accessibility of the Accordion component with accessibility tools.
+The accessibility compliance of the Accordion component is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/accordion) in a new window to evaluate the accessibility of the Accordion component with accessibility tools.
 
 ## See also
 
-* [Accessibility in Syncfusion components](https://blazor.syncfusion.com/documentation/common/accessibility)
+* [Accessibility in Syncfusion Blazor components](https://blazor.syncfusion.com/documentation/common/accessibility)
