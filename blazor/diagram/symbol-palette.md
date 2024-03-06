@@ -1404,7 +1404,7 @@ The following code is an example to change the style of a symbol description for
         SymbolInfo.Height = 40;
         SymbolInfo.Description = new SymbolDescription() { 
             Text = text,
-            // Customize the style for the symbol description
+            // Customize the style of the symbol description
             Style = new TextStyle() 
             { 
                 Bold = true,
