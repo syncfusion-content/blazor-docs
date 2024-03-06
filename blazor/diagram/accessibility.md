@@ -34,18 +34,18 @@ All the diagram actions can be controlled via keyboard keys. The applicable key 
 
 Interaction Keys |Description
 -----|-----
-<kbd>Ctrl+C</kbd> | This command is used to copy the selected elements to the clipboard.
-<kbd>Ctrl+X</kbd> | This command is used to cut the selected elements  to the clipboard.
-<kbd>Ctrl+V</kbd> | This command is used to paste the elements  from the clipboard.
+<kbd>Ctrl+C</kbd> | This command is used to copy the selected diagram elements to the clipboard.
+<kbd>Ctrl+X</kbd> | This command is used to cut the selected diagram elements  to the clipboard.
+<kbd>Ctrl+V</kbd> | This command is used to paste the diagram elements from the clipboard.
 <kbd>Ctrl+A</kbd> | This command is used to select all the diagram elements.
 <kbd>Delete</kbd> | This command is used to delete the selected diagram elements.
 <kbd>Ctrl+P</kbd> | This command is used to prints the diagram page.
 <kbd>Ctrl+Z</kbd> | This command is used to undo the last action.
 <kbd>Ctrl+Y</kbd> | This command is used to redo the last undo action.
-<kbd>ArrowUp</kbd> | Moves the selected elements towards up by the specified delta value.
-<kbd>ArrowDown</kbd> | Moves the selected elements towards down by the specified delta value..
-<kbd>ArrowRight</kbd> | Moves the selected elements towards left by the specified delta value..
-<kbd>ArrowLeft</kbd> | Moves the selected elements towards right by the specified delta value.
+<kbd>ArrowUp</kbd> | Moves the selected diagram elements towards up by the specified delta value.
+<kbd>ArrowDown</kbd> | Moves the selected diagram elements towards down by the specified delta value..
+<kbd>ArrowRight</kbd> | Moves the selected diagram elements towards left by the specified delta value..
+<kbd>ArrowLeft</kbd> | Moves the selected diagram elements towards right by the specified delta value.
 <kbd>F2</kbd> | This command is used to start editing the selected diagram elements.
 <kbd>Ctrl++</kbd> | This command is used to zoom in the diagram.
 <kbd>Ctrl+-</kbd> | This command is used to zoom out the diagram.
@@ -69,12 +69,12 @@ Interaction Keys |Description
 <kbd>Ctrl+[</kbd> | Visually moves the selected Node, connector, and group behind the underlying Node or Connector or Group.
 <kbd>Ctrl+L</kbd> | This command is used to rotate the selected nodes counterclockwise.
 <kbd>Ctrl+R</kbd> | This command is used to rotate the selected nodes clockwise.
-<kbd>Ctrl+H</kbd> | This command is used to flip the selected elements horizontally.
-<kbd>Ctrl+J</kbd> | This command is used to flip the selected elements vertically.
+<kbd>Ctrl+H</kbd> | This command is used to flip the selected diagram elements horizontally.
+<kbd>Ctrl+J</kbd> | This command is used to flip the selected diagram elements vertically.
 <kbd>Tab</kbd> | Select the diagram elements in Forward: Focus on the diagram element based on the rendering order when using the "Tab" key.
 <kbd>Shift + Tab</kbd> | Select the diagram elements in backward: Focus on the diagram element based on the rendering order when using the "Shift+Tab" key.
 <kbd>Ctrl+D</kbd> | Duplicate the selected shape.
-<kbd>Enter</kbd> | Perform annotation editing for the selected element.
+<kbd>Enter</kbd> | Perform annotation editing for the selected diagram element.
 <kbd>Ctrl+1</kbd> | This command is used to activate the pointer tool.
 <kbd>Ctrl+3</kbd> | This command is used to activate the connector tool.
 <kbd>Ctrl+2</kbd> | This command is used to activate the text tool.
