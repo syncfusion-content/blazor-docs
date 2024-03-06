@@ -1423,7 +1423,7 @@ The following code is an example to change the style of a symbol description for
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/SymbolPalette/DescriptionStyle)
+You can download a complete working sample from [GitHub]()
 
 ![Style of the Symbol Description in Blazor Diagram](images/blazor-diagram-symbol-description-style.png)
 
