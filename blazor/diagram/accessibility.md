@@ -10,6 +10,7 @@ documentation: ug
 # Accessibility in Blazor Diagram Tab Component
 
 Accessibility is achieved in the pivot table component through WAI-ARIA standard and keyboard navigation. The pivot table features can be effectively accessed through assistive technologies such as screen readers.
+
 The accessibility compliance for the diagram component is outlined below.
 
 * [Color Contrast](../common/accessibility#color-contrast)
@@ -85,4 +86,4 @@ Interaction Keys |Description
 
 You can refer to the accessibility sample on  [GitHub](https://github.com/essential-studio/blazor-accessibility-demos).
 
-You can download a complete working sample for keyboard navigation from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/ES-874103-UGshortcutkey/UG-Samples/Accessibility/KeyBoardNavigation)
+You can download a complete working sample for keyboard navigation from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Accessibility/KeyBoardNavigation)
