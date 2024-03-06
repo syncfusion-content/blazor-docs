@@ -35,7 +35,7 @@ All the diagram actions can be controlled via keyboard keys. The applicable key 
 Interaction Keys |Description
 -----|-----
 <kbd>Ctrl+C</kbd> | This command is used to copy the selected diagram elements to the clipboard.
-<kbd>Ctrl+X</kbd> | This command is used to cut the selected diagram elements  to the clipboard.
+<kbd>Ctrl+X</kbd> | This command is used to cut the selected diagram elements to the clipboard.
 <kbd>Ctrl+V</kbd> | This command is used to paste the diagram elements from the clipboard.
 <kbd>Ctrl+A</kbd> | This command is used to select all the diagram elements.
 <kbd>Delete</kbd> | This command is used to delete the selected diagram elements.
@@ -43,8 +43,8 @@ Interaction Keys |Description
 <kbd>Ctrl+Z</kbd> | This command is used to undo the last action.
 <kbd>Ctrl+Y</kbd> | This command is used to redo the last undo action.
 <kbd>ArrowUp</kbd> | Moves the selected diagram elements towards up by the specified delta value.
-<kbd>ArrowDown</kbd> | Moves the selected diagram elements towards down by the specified delta value..
-<kbd>ArrowRight</kbd> | Moves the selected diagram elements towards left by the specified delta value..
+<kbd>ArrowDown</kbd> | Moves the selected diagram elements towards down by the specified delta value.
+<kbd>ArrowRight</kbd> | Moves the selected diagram elements towards left by the specified delta value.
 <kbd>ArrowLeft</kbd> | Moves the selected diagram elements towards right by the specified delta value.
 <kbd>F2</kbd> | This command is used to start editing the selected diagram elements.
 <kbd>Ctrl++</kbd> | This command is used to zoom in the diagram.
@@ -65,8 +65,8 @@ Interaction Keys |Description
 <kbd>Ctrl+Shift+U</kbd> | This command is used to ungroup shapes within a previously grouped selection.
 <kbd>Ctrl+Shift+F</kbd> | This command is used to bring the selected shape forward in the stacking order, making it appear in front of other shapes.
 <kbd>Ctrl+Shift+B</kbd> | This command is used to send the selected shape backward in the stacking order, making it appear behind other shapes.
-<kbd>Ctrl+]</kbd> | Visually moves the selected Node, Connector, and Group over the nearest overlapping Node, connector, or group.
-<kbd>Ctrl+[</kbd> | Visually moves the selected Node, connector, and group behind the underlying Node or Connector or Group.
+<kbd>Ctrl+]</kbd> | Visually moves the selected node, connector, and group over the nearest overlapping node, connector, or group.
+<kbd>Ctrl+[</kbd> | Visually moves the selected node, connector, and group behind the underlying node or connector or Group.
 <kbd>Ctrl+L</kbd> | This command is used to rotate the selected nodes counterclockwise.
 <kbd>Ctrl+R</kbd> | This command is used to rotate the selected nodes clockwise.
 <kbd>Ctrl+H</kbd> | This command is used to flip the selected diagram elements horizontally.
