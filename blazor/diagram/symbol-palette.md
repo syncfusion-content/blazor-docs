@@ -1342,7 +1342,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Appearance of symbol description
 
-The appearance of a symbol description in the symbol palette can be customized by changing its color, fill, fontSize, fontFamily, bold, italic, textDecoration, textWrapping, textOverflow and margin.
+The appearance of a symbol description in the symbol palette can be customized by changing its [Color](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.TextStyle.html#Syncfusion_Blazor_Diagram_TextStyle_Color), [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ShapeStyle.html#Syncfusion_Blazor_Diagram_ShapeStyle_Fill), [FontSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.TextStyle.html#Syncfusion_Blazor_Diagram_TextStyle_FontSize), [FontFamily](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.TextStyle.html#Syncfusion_Blazor_Diagram_TextStyle_FontFamily), [Bold](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.TextStyle.html#Syncfusion_Blazor_Diagram_TextStyle_Bold), [Italic](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.TextStyle.html#Syncfusion_Blazor_Diagram_TextStyle_Italic), [TextDecoration], [TextWrapping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.TextStyle.html#Syncfusion_Blazor_Diagram_TextStyle_TextWrapping), [TextOverflow](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.TextStyle.html#Syncfusion_Blazor_Diagram_TextStyle_TextOverflow) and [Margin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SymbolPalette.SymbolDescription.html#Syncfusion_Blazor_Diagram_SymbolPalette_SymbolDescription_Margin) properties.
 
 The following code is an example to change the style of a symbol description for symbols in the palette.
 
@@ -1413,7 +1413,6 @@ The following code is an example to change the style of a symbol description for
                 Fill = "transparent",
                 FontFamily = "Arial",
                 FontSize = 15,
-                Opacity = 0.9,
                 TextDecoration = TextDecoration.Underline,
                 TextOverflow = TextOverflow.Ellipsis,
                 TextWrapping = TextWrap.WrapWithOverflow
@@ -1424,6 +1423,8 @@ The following code is an example to change the style of a symbol description for
     }
 }
 ```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/SymbolPalette/DescriptionStyle)
+
 ![Style of the Symbol Description in Blazor Diagram](images/blazor-diagram-symbol-description-style.png)
 
 ## Palette interaction
