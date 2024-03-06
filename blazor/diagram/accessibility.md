@@ -3,13 +3,13 @@ layout: post
 title: Accessibility in Blazor Diagram Component | Syncfusion
 description: Checkout and learn here all about accessibility in Syncfusion Blazor Diagram component and more.
 platform: Blazor
-control: Diagram Table
+control: Diagram 
 documentation: ug
 ---
 
-# Accessibility in Blazor Diagram Tab Component
+# Accessibility in Blazor Diagram Component
 
-Accessibility is achieved in the pivot table component through WAI-ARIA standard and keyboard navigation. The pivot table features can be effectively accessed through assistive technologies such as screen readers.
+Accessibility is achieved in the diagram component through WAI-ARIA standard and keyboard navigation support. The diagram features can be effectively accessed through assistive technologies such as screen readers.
 
 The accessibility compliance for the diagram component is outlined below.
 
@@ -31,15 +31,14 @@ The following ARIA attributes are used in the diagram component:
 
 All the diagram actions can be controlled via keyboard keys. The applicable key combinations and their relative functionalities are listed below for the appropriate UI features available in the component.
 
-### Pivot Table
 
 Interaction Keys |Description
 -----|-----
-<kbd>Ctrl+C</kbd> | This command is used to copy the selected elements t to the clipboard.
+<kbd>Ctrl+C</kbd> | This command is used to copy the selected elements to the clipboard.
 <kbd>Ctrl+X</kbd> | This command is used to cut the selected elements  to the clipboard.
 <kbd>Ctrl+V</kbd> | This command is used to paste the elements  from the clipboard.
-<kbd>Ctrl+A</kbd> | This command is used to  select all the elements such as nodes/connectors in the diagram.
-<kbd>Delete</kbd> | This command is used to delete the selected nodes/connectors.
+<kbd>Ctrl+A</kbd> | This command is used to select all the diagram elements.
+<kbd>Delete</kbd> | This command is used to delete the selected diagram elements.
 <kbd>Ctrl+P</kbd> | This command is used to prints the diagram page.
 <kbd>Ctrl+Z</kbd> | This command is used to undo the last action.
 <kbd>Ctrl+Y</kbd> | This command is used to redo the last undo action.
@@ -47,7 +46,7 @@ Interaction Keys |Description
 <kbd>ArrowDown</kbd> | Moves the selected elements towards down by the specified delta value..
 <kbd>ArrowRight</kbd> | Moves the selected elements towards left by the specified delta value..
 <kbd>ArrowLeft</kbd> | Moves the selected elements towards right by the specified delta value.
-<kbd>F2</kbd> | This command is used to start editing the selected nodes/connectors.
+<kbd>F2</kbd> | This command is used to start editing the selected diagram elements.
 <kbd>Ctrl++</kbd> | This command is used to zoom in the diagram.
 <kbd>Ctrl+-</kbd> | This command is used to zoom out the diagram.
 <kbd>Ctrl+B</kbd> | This command is used to toggle bold formatting for the selected text.
@@ -59,7 +58,7 @@ Interaction Keys |Description
 <kbd>Ctrl+Shift+C</kbd> | This command is used to center the selected text horizontally.
 <kbd>Ctrl+Shift+R</kbd> | This command is used to align the selected text to the right.
 <kbd>Ctrl+Shift+J</kbd> | This command is used to justify the selected text, aligning it to both the left and right margins.
-<kbd>Ctrl+Shift+E</kbd> | This command is used to align the selected text to the top vertically. (Note: In Visio, use Ctrl+Shift+T keys for top alignment. In Blazor, when hosting a link on the web, use these keys to enable support for opening in a new window or tab.)
+<kbd>Ctrl+Shift+E</kbd> | This command is used to align the selected text to the top vertically. 
 <kbd>Ctrl+Shift+M</kbd> | This command is used to center the selected text vertically.
 <kbd>Ctrl+Shift+V</kbd> | This command is used to align the selected text to the bottom vertically.
 <kbd>Ctrl+G</kbd> or <kbd>Ctrl+Shift+G</kbd> | This command is used to group together multiple selected shapes, allowing them to be treated as a single shape.
