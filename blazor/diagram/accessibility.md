@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Accessibility in Blazor Diagram Component | Syncfusion
-description: Checkout and learn here all about accessibility in Syncfusion Blazor Diagram component and more.
+description: Checkout and learn here all about accessibility in Syncfusion Blazor Diagram component and more
 platform: Blazor
 control: Diagram 
 documentation: ug
@@ -20,7 +20,7 @@ The accessibility compliance for the diagram component is outlined below.
 
 ## WAI-ARIA
 
-WAI-ARIA (Accessibility Initiative – Accessible Rich Internet Applications) defines a way to increase the accessibility of web pages, dynamic content, and user interface components developed with Ajax, HTML, JavaScript,and related technologies. ARIA provides additional semantics to describe the role, state, and functionality of web components.
+WAI-ARIA (Accessibility Initiative – Accessible Rich Internet Applications) defines a way to increase the accessibility of web pages, dynamic content, and user interface components developed with HTML, JavaScript,and related technologies. ARIA provides additional semantics to describe the role, state, and functionality of web components.
 
 The following ARIA attributes are used in the diagram component:
 
@@ -82,7 +82,5 @@ Interaction Keys |Description
 <kbd>Ctrl+6</kbd> | This command is used to activate the line tool.
 <kbd>Ctrl+5</kbd> | This command is used to activate the freeform tool.
 <kbd>Ctrl+9</kbd> | This command is used to activate the ellipse tool.
-
-You can refer to the accessibility sample on  [GitHub](https://github.com/essential-studio/blazor-accessibility-demos).
 
 You can download a complete working sample for keyboard navigation from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Accessibility/KeyBoardNavigation)
