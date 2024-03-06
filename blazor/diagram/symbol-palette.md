@@ -1340,6 +1340,92 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ![Symbol with Description in Blazor Diagram](images/blazor-diagram-symbol-description.png)
 
+## Appearance of symbol description
+
+The appearance of a symbol description in the symbol palette can be customized by changing its color, fill, fontSize, fontFamily, bold, italic, textDecoration, textWrapping, textOverflow and margin.
+
+The following code is an example to change the style of a symbol description for symbols in the palette.
+
+```csharp
+@using Syncfusion.Blazor.Diagram
+@using Syncfusion.Blazor.Diagram.SymbolPalette
+
+<div class="control-section">
+    <div style="width: 30%">
+        <div id="palette-space" class="sb-mobile-palette" style="border: 2px solid #b200ff; height:200px">
+            <SfSymbolPaletteComponent @ref="@SymbolPalette" Height="300px" GetSymbolInfo="GetSymbolInfo"
+                                      Palettes="@Palettes" SymbolHeight="60" SymbolWidth="120">
+            </SfSymbolPaletteComponent>
+        </div>
+    </div>
+</div>
+
+@code
+{
+    SfSymbolPaletteComponent SymbolPalette;
+    //Define palettes collection.
+    DiagramObjectCollection<Palette> Palettes = new DiagramObjectCollection<Palette>();
+    // Defines palette's basic-shape collection.
+    DiagramObjectCollection<NodeBase> PaletteNodes = new DiagramObjectCollection<NodeBase>();
+
+    protected override void OnInitialized()
+    {
+        InitPaletteModel();
+    }
+
+    private void InitPaletteModel()
+    {
+        CreatePaletteNode(NodeBasicShapes.Rectangle, "Rectangle");
+        CreatePaletteNode(NodeBasicShapes.Ellipse, "Ellipse");
+        CreatePaletteNode(NodeBasicShapes.Hexagon, "Hexagon");
+        Palettes = new DiagramObjectCollection<Palette>()
+        {
+           new Palette(){Symbols = PaletteNodes,Title = "Basic Shapes", ID = "Basic Shapes" },
+        };
+    }
+
+    private void CreatePaletteNode(NodeBasicShapes basicShape, string id)
+    {
+        Node node = new Node()
+            {
+                ID = id,
+                Shape = new BasicShape() { Type = NodeShapes.Basic, Shape = basicShape },
+                Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "#6495ED" },
+            };
+        PaletteNodes.Add(node);
+    }
+
+    private SymbolInfo GetSymbolInfo(IDiagramObject symbol)
+    {
+        SymbolInfo SymbolInfo = new SymbolInfo();
+        string text = string.Empty;
+        text = (symbol as NodeBase).ID;
+        SymbolInfo.Width = 75;
+        SymbolInfo.Height = 40;
+        SymbolInfo.Description = new SymbolDescription() { 
+            Text = text,
+            // Customize the style for the symbol description
+            Style = new TextStyle() 
+            { 
+                Bold = true,
+                Italic = true,
+                Color = "red",
+                Fill = "transparent",
+                FontFamily = "Arial",
+                FontSize = 15,
+                Opacity = 0.9,
+                TextDecoration = TextDecoration.Underline,
+                TextOverflow = TextOverflow.Ellipsis,
+                TextWrapping = TextWrap.WrapWithOverflow
+            },
+            Margin = new DiagramThickness(){ Top = 10, Bottom = 10 }
+        };
+        return SymbolInfo;
+    }
+}
+```
+![Style of the Symbol Description in Blazor Diagram](images/blazor-diagram-symbol-description-style.png)
+
 ## Palette interaction
 
 Palette interaction notifies the element enter, leave, and dragging of the symbols into the diagram.
