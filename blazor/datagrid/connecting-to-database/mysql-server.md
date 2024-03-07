@@ -188,7 +188,7 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 @using Syncfusion.Blazor
 
 <SfGrid @ref="Grid" TValue="Order" AllowPaging="true" AllowFiltering="true" AllowSorting="true" AllowGrouping="true" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Update", "Cancel", "Search" })">
-    <SfDataManager Url="https://localhost:7116/api/Grid" BatchUrl="https://localhost:7116/api/Grid/Batch" InsertUrl="https://localhost:7116/api/Grid/Insert" UpdateUrl="https://localhost:7116/api/Grid/Update" RemoveUrl="https://localhost:7116/api/Grid/Delete" Adaptor="Adaptors.UrlAdaptor"></SfDataManager>
+    <SfDataManager Url="https://localhost:xxxx/api/Grid" BatchUrl="https://localhost:xxxx/api/Grid/Batch" InsertUrl="https://localhost:xxxx/api/Grid/Insert" UpdateUrl="https://localhost:xxxx/api/Grid/Update" RemoveUrl="https://localhost:xxxx/api/Grid/Delete" Adaptor="Adaptors.UrlAdaptor"></SfDataManager>
     <GridEditSettings AllowEditing="true" AllowDeleting="true" AllowAdding="true" Mode="EditMode.Normal"></GridEditSettings>
     <GridAggregates>
         <GridAggregate>
