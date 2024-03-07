@@ -70,7 +70,7 @@ Other properties include:
 
 ![Number Formatting in Blazor PivotTable](images/blazor-pivottable-number-formatting.png)
 
-You can also format the values at runtime using the formatting dialog. This option can be enabled by setting the [AllowNumberFormatting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewModel-1.html#Syncfusion_Blazor_PivotView_PivotViewModel_1_AllowNumberFormatting) property to **true**. The same has been discussed in some of the upcoming topics.
+You can also format the values at runtime using the formatting dialog. This option can be enabled by setting the [AllowNumberFormatting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_AllowNumberFormatting) property to **true**. The same has been discussed in some of the upcoming topics.
 
 ## Custom format
 
@@ -127,7 +127,7 @@ N> If custom format is defined, certain properties such as [UseGrouping](https:/
 
 ## Toolbar
 
-You can enable formatting dialog option in the toolbar by adding `NumberFormatting` in the [Toolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewModel-1.html#Syncfusion_Blazor_PivotView_PivotViewModel_1_Toolbar). After that, you can see the option to invoke the formatting dialog in the toolbar.
+You can enable formatting dialog option in the toolbar by adding `NumberFormatting` in the [Toolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_Toolbar). After that, you can see the option to invoke the formatting dialog in the toolbar.
 
 ```cshtml
 @using Syncfusion.Blazor.PivotView

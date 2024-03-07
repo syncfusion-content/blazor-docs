@@ -328,10 +328,6 @@ AppBar toggle button used to control the expand and collapse state of **SfSideba
     #main-text .sidebar-heading {
         font-size: 16px;
     }
-    .sidebar-treeview .table-content {
-        padding: 20px 18px;
-        height: 8em;
-    }
     #main-text .sidebar-content .line {
         width: 100%;
         height: 1px;

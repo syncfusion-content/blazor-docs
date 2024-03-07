@@ -514,7 +514,7 @@ The event [OnActionFailure](https://help.syncfusion.com/cr/blazor/Syncfusion.Bla
 | Action | Action Name|
 |----------------|-------------|
 | [Calculated field button](./calculated-field)| Open calculated field dialog|
-| [Edit icon in calculated field](./calculated-field#editing-through-the-field-list-and-the-groupingbar)| Edit calculated field|
+| [Edit icon in calculated field](https://blazor.syncfusion.com/documentation/pivot-table/calculated-field#editing-through-the-field-list-and-the-groupingbar)| Edit calculated field|
 | [Context menu in the tree view inside the calculated field dialog](./calculated-field)| Calculated field context menu|
 
 
