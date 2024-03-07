@@ -70,15 +70,15 @@ namespace MySqlWebService.Controllers
             string QueryStr = "SELECT * FROM orders ORDER BY OrderID";
             MySqlConnection sqlConnection = new(ConnectionString);
             sqlConnection.Open();
-            //Execute the MySQL Command
+            //Initialize the MySqlCommand
             MySqlCommand SqlCommand = new(QueryStr, sqlConnection);
-            //Using MySqlDataAdapter and Query create connection with database 
+            //Initialize the MySqlDataAdapter
             MySqlDataAdapter DataAdapter = new(SqlCommand);
             DataTable DataTable = new();
             // Using MySqlDataAdapter, process the query string and fill the data into the dataset
             DataAdapter.Fill(DataTable);
             sqlConnection.Close();
-            //Cast the data fetched from Adaptor to List<T>
+            //Cast the data fetched from Adapter to List<T>
             var DataSource = (from DataRow Data in DataTable.Rows
                             select new Order()
                             {
@@ -187,7 +187,7 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 @using Syncfusion.Blazor.Data
 @using Syncfusion.Blazor
 
-<SfGrid @ref="Grid" TValue="Order" AllowPaging="true" AllowFiltering="true" AllowSorting="true" AllowGrouping="true" Toolbar="@(new List<string>() { "Add","Edit", "Delete", "Update", "Cancel", "Search" })">
+<SfGrid @ref="Grid" TValue="Order" AllowPaging="true" AllowFiltering="true" AllowSorting="true" AllowGrouping="true" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Update", "Cancel", "Search" })">
     <SfDataManager Url="https://localhost:7116/api/Grid" BatchUrl="https://localhost:7116/api/Grid/Batch" InsertUrl="https://localhost:7116/api/Grid/Insert" UpdateUrl="https://localhost:7116/api/Grid/Update" RemoveUrl="https://localhost:7116/api/Grid/Delete" Adaptor="Adaptors.UrlAdaptor"></SfDataManager>
     <GridEditSettings AllowEditing="true" AllowDeleting="true" AllowAdding="true" Mode="EditMode.Normal"></GridEditSettings>
     <GridAggregates>
@@ -261,35 +261,42 @@ public class GridController : ControllerBase
         {
             // Searching
             DataSource = DataOperations.PerformSearching(DataSource, DataManagerRequest.Search);
+            //Add custom logic here if needed and remove above method
         }
         // Handling Filtering in Url Adaptor.
         if (DataManagerRequest.Where != null && DataManagerRequest.Where.Count > 0)
         {
             // Filtering
             DataSource = DataOperations.PerformFiltering(DataSource, DataManagerRequest.Where, DataManagerRequest.Where[0].Operator);
+            //Add custom logic here if needed and remove above method
         }
         // Handling Sorting in Url Adaptor.
         if (DataManagerRequest.Sorted != null && DataManagerRequest.Sorted.Count > 0)
         {
             // Sorting
             DataSource = DataOperations.PerformSorting(DataSource, DataManagerRequest.Sorted);
+            //Add custom logic here if needed and remove above method
         }
         int count = DataSource.Cast<Order>().Count();
         // Handling Aggregation in Url Adaptor.
         IDictionary<string, object> Aggregates = null;
-        if (DataManagerRequest.Aggregates != null) // Aggregation
+        if (DataManagerRequest.Aggregates != null)
         {
+            //Aggregation
             Aggregates = DataUtil.PerformAggregation(DataSource, DataManagerRequest.Aggregates);
+            //Add custom logic here if needed and remove above method
         }
         // Handling paging in Url Adaptor.
         if (DataManagerRequest.Skip != 0)
         {
             // Paging
             DataSource = DataOperations.PerformSkip(DataSource, DataManagerRequest.Skip);
+            //Add custom logic here if needed and remove above method
         }
         if (DataManagerRequest.Take != 0)
         {
             DataSource = DataOperations.PerformTake(DataSource, DataManagerRequest.Take);
+            //Add custom logic here if needed and remove above method
         }
         //Here RequiresCount is passed from the control side itself, where ever the ondemand data fetching is needed then the RequiresCount is set as true in component side itself.
         // In the above case we are using Paging so data are loaded in ondemand bases whenever the next page is clicked in DataGrid side.
@@ -640,7 +647,7 @@ This section describes step by step process how to retrieve data from a MySQL se
 @using Syncfusion.Blazor
 @using MySql.Data.MySqlClient;
 
-<SfGrid TValue="Order" AllowSorting="true" AllowFiltering="true" AllowGrouping="true" AllowPaging="true" Toolbar="@(new List<string>() { "Add","Edit", "Delete", "Update", "Cancel", "Search" })">
+<SfGrid TValue="Order" AllowSorting="true" AllowFiltering="true" AllowGrouping="true" AllowPaging="true" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Update", "Cancel", "Search" })">
     <SfDataManager AdaptorInstance="@typeof(CustomAdaptor)" Adaptor="Adaptors.CustomAdaptor"></SfDataManager>
     <GridEditSettings AllowEditing="true" AllowDeleting="true" AllowAdding="true" Mode="@EditMode.Normal"></GridEditSettings>
     <GridAggregates>
@@ -716,7 +723,7 @@ This section describes step by step process how to retrieve data from a MySQL se
 @using MySql.Data.MySqlClient;
 @using System.Collections
 
-<SfGrid TValue="Order" AllowSorting="true" AllowFiltering="true" AllowGrouping="true" AllowPaging="true" Toolbar="@(new List<string>() { "Add","Edit", "Delete", "Update", "Cancel", "Search" })">
+<SfGrid TValue="Order" AllowSorting="true" AllowFiltering="true" AllowGrouping="true" AllowPaging="true" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Update", "Cancel", "Search" })">
     <SfDataManager AdaptorInstance="@typeof(CustomAdaptor)" Adaptor="Adaptors.CustomAdaptor"></SfDataManager>
     <GridEditSettings AllowEditing="true" AllowDeleting="true" AllowAdding="true" Mode="@EditMode.Normal"></GridEditSettings>
     <GridAggregates>
