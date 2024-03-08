@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Accessibility in Blazor Bullet Chart Component | Syncfusion
-description: Checkout and learn here all about Accessibility in Syncfusion Blazor Bullet Chart component and more.
+title: Accessibility in Blazor Range Selector Component | Syncfusion
+description: Checkout and learn here all about Accessibility in Syncfusion Blazor Range Selector component and much more.
 platform: Blazor
-control: Bullet Chart 
+control: Range Selector
 documentation: ug
 ---
 
-# Accessibility in Blazor Bullet Chart Component
+# Accessibility in Blazor Range Selector Component
 
-The Bullet chart control followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
+The Range navigator control followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 
-The accessibility compliance for the Bullet chart control is outlined below.
+The accessibility compliance for the Range navigator control is outlined below.
 
 | Accessibility Criteria | Compatibility |
 | -- | -- |
@@ -40,25 +40,20 @@ The accessibility compliance for the Bullet chart control is outlined below.
 
 ## WAI-ARIA attributes
 
-The Bullet chart control followed the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/alert/) patterns to meet the accessibility. The following ARIA attributes are used in the Bullet chart control:
+The Range navigator control followed the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/alert/) patterns to meet the accessibility. The following ARIA attributes are used in the Range navigator control:
 
-* img (role)
-* button (role)
+* region (role)
 * aria-label (attribute)
-* aria-pressed (attribute)
 
 ## Keyboard interaction
 
-The Bullet chart control followed the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/alert/#keyboardinteraction) guideline, making it easy for people who use assistive technologies (AT) and those who completely rely on keyboard navigation. The following keyboard shortcuts are supported by the Bullet chart control.
+The Range navigator control followed the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/alert/#keyboardinteraction) guideline, making it easy for people who use assistive technologies (AT) and those who completely rely on keyboard navigation. The following keyboard shortcuts are supported by the Range navigator control.
 
 | **Press** | **To do this** |
 | --- | --- |
-| <kbd>Tab</kbd> | Moves the focus to the next element in the Bullet chart. |
-| <kbd>Shift + Tab</kbd> | Moves the focus to the previous element in the Bullet chart. |
-| <kbd>Ctrl + P</kbd> | Prints the Bullet chart. |
+| <kbd>Tab</kbd> | Moves the focus to the Range navigator element. |
+| <kbd>Ctrl + P</kbd> | Prints the Range navigator. |
 
 ## Ensuring accessibility
 
-The Bullet chart control's accessibility levels are ensured through an [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) software tools during automated testing.
-
-The accessibility compliance of the Bullet chart control is shown in the following sample. Open the [sample](https://ej2.syncfusion.com/accessibility/bullet-chart.html) in a new window to evaluate the accessibility of the Bullet chart control with accessibility tools.
+The Range navigator control's accessibility levels are ensured through an [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) software tools during automated testing.
