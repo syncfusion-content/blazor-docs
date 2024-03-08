@@ -219,6 +219,179 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ![Dragging Connector End Point in Blazor Diagram](../images/blazor-diagram-drag-connector-end-point.gif)
 
+## How to route the connectors
+
+The connectors can be overlapped with any neighboring nodes when the node is positioned in contact with the connection. This will make less clarity about the connector path flow. This can be avoided using Routing process.
+
+The routing is the process of updating the connector’s geometry to prevent it from overlapping with any nearby nodes that may be in their path. This behavior can be enabled by adding `DiagramConstraints.Routing` enum value to the [Constraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Constraints) property of diagram.
+
+```cshtml
+@using Syncfusion.Blazor.Diagram
+
+<SfDiagramComponent Width="1000px" Height="500px" Connectors="@connectors" Nodes="@nodes" Constraints="@diagramConstraints">
+</SfDiagramComponent>
+@code 
+{    
+    // Enable routing constraints for diagram
+    DiagramConstraints diagramConstraints = DiagramConstraints.Default | DiagramConstraints.Routing;
+    //Intialize the node collection
+    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    //Intialize the connector collection
+    DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+    
+    protected override void OnInitialized()
+    {
+        nodes = new DiagramObjectCollection<Node>()
+        {
+            new Node() { ID = "node1", OffsetX = 100, OffsetY = 300, Width = 100, Height =100 },
+            new Node() { ID = "node2", OffsetX = 600, OffsetY = 100, Width = 100, Height = 100 },
+            new Node() { ID = "node3", OffsetX = 400, OffsetY = 250, Width = 100, Height = 100 }
+        };
+        connectors = new DiagramObjectCollection<Connector>(){
+            new Connector()
+            {
+                ID = "connector1",
+                SourceID = "node1", TargetID = "node2",
+                Type = ConnectorSegmentType.Orthogonal
+            }
+        };
+    }
+}
+```
+![Blazor Diagram Connector Routing](../images/DefaultRouting.png)
+You can download a complete working sample from [GitHub]().
+
+**Note:** Routing is applicable only for orthogonal connectors.
+
+### How to enable or disable routing for nodes
+
+By default, all nodes are treated as an obstacle for a connector that is connections will go around the node boundary. You can disable the node’s routing obstacles by removing the NodeConstraints.RoutingObstacle from the Constraints property of node.
+
+```cshtml
+@using Syncfusion.Blazor.Diagram
+
+<SfDiagramComponent Width="1000px" Height="500px" NodeCreating="@OnNodeCreating" ConnectorCreating="@OnConnectorCreating" Connectors="@connectors" Nodes="@nodes" Constraints="@diagramConstraints">
+    <SnapSettings Constraints="SnapConstraints.None"></SnapSettings>
+</SfDiagramComponent>
+@code
+{
+    // Enable routing constraints for diagram
+    DiagramConstraints diagramConstraints = DiagramConstraints.Default | DiagramConstraints.Routing;
+    //Intialize the node collection
+    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    //Intialize the connector collection
+    DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+    protected override void OnInitialized()
+    {
+        nodes = new DiagramObjectCollection<Node>()
+        {
+            new Node() { ID = "Source", OffsetX = 100, OffsetY = 300, Width = 100, Height =100, Annotations= new DiagramObjectCollection<ShapeAnnotation>(){ new ShapeAnnotation() { Content="Source" } }, Ports=new DiagramObjectCollection<PointPort>(){ new PointPort(){ ID="port1", Offset=new DiagramPoint() { X = 1, Y = 0.5 } } } },
+            new Node() { ID = "Target", OffsetX = 800, OffsetY = 300, Width = 100, Height = 100, Annotations= new DiagramObjectCollection<ShapeAnnotation>(){ new ShapeAnnotation() { Content="Target" } }, Ports=new DiagramObjectCollection<PointPort>(){ new PointPort(){ ID="port1", Offset=new DiagramPoint() { X = 0, Y = 0.5 } } } },
+            new Node() { ID = "RoutingObstacle", OffsetX = 300, OffsetY = 300, Width = 100, Height = 100,  Annotations= new DiagramObjectCollection<ShapeAnnotation>(){ new ShapeAnnotation() { Content="Routing Obstacle" } }, },
+            new Node() { ID = "NonRoutingObstacle", OffsetX = 500, OffsetY = 250, Width = 100, Height = 100,  Annotations= new DiagramObjectCollection<ShapeAnnotation>(){ new ShapeAnnotation() { Content="Non-Routing Obstacle" } }, Constraints = NodeConstraints.Default & ~NodeConstraints.RoutingObstacle }
+        };
+        connectors = new DiagramObjectCollection<Connector>(){
+            new Connector()
+            {
+                ID = "connector1",
+                SourceID = "Source", TargetID = "Target", SourcePortID="port1", TargetPortID="port1",
+                Type = ConnectorSegmentType.Orthogonal
+            }
+        };
+    }
+    private void OnNodeCreating(IDiagramObject obj)
+    {
+        if (obj is Node node)
+        {
+            node.Style = new ShapeStyle() { Fill = "#6BA5D7", StrokeColor = "#6BA5D7" };
+        }
+    }
+    private void OnConnectorCreating(IDiagramObject obj)
+    {
+        if (obj is Connector connector)
+        {
+            connector.Style = new ShapeStyle() { StrokeColor = "#6BA5D7", StrokeWidth = 1 };
+            connector.TargetDecorator = new DecoratorSettings()
+                {
+                    Shape = DecoratorShape.Arrow,
+                    Style = new ShapeStyle() { Fill = "#6BA5D7", StrokeColor = "#6BA5D7", StrokeWidth = 1 }
+                };
+        }
+    }
+}
+```
+![Blazor Diagram RoutingObstacle for Node](../images/NodeRoutingObstable.png)
+You can download a complete working sample from [GitHub]().
+
+### How to enable or disable routing for connectors
+
+By default, each connector’s routing process is inherited based on the value of the Constraints property of the diagram. To control the individual connector’s routing regardless of the diagram, you should remove the ConnectorConstraints.InheritRouting enum value from the Constraints property of the connector and add ConnectorConstraints.Routing enum value to the Constraints property or remove ConnectorConstraints.Routing enum value from the Constraints property to enable or disable the routing respectively.
+
+```cshtml
+@using Syncfusion.Blazor.Diagram
+
+<SfDiagramComponent Width="1000px" Height="500px" NodeCreating="@OnNodeCreating" ConnectorCreating="@OnConnectorCreating" Connectors="@connectors" Nodes="@nodes">
+    <SnapSettings Constraints="SnapConstraints.None"></SnapSettings>
+</SfDiagramComponent>
+@code
+{
+    //Intialize the node collection
+    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    //Intialize the connector collection
+    DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+    protected override void OnInitialized()
+    {
+        nodes = new DiagramObjectCollection<Node>()
+        {
+            new Node() { ID = "Source", OffsetX = 90, OffsetY = 290, Width = 100, Height =100, Annotations= new DiagramObjectCollection<ShapeAnnotation>(){ new ShapeAnnotation() { Content="Source1" } }, Ports=new DiagramObjectCollection<PointPort>(){ new PointPort(){ ID="port1", Offset=new DiagramPoint() { X = 1, Y = 0.5 } } } },
+            new Node() { ID = "Target", OffsetX = 800, OffsetY = 300, Width = 100, Height = 100, Annotations= new DiagramObjectCollection<ShapeAnnotation>(){ new ShapeAnnotation() { Content="Target1" } }, Ports=new DiagramObjectCollection<PointPort>(){ new PointPort(){ ID="port1", Offset=new DiagramPoint() { X = 0, Y = 0.5 } } } },
+            new Node() { ID = "Source2", OffsetX = 120, OffsetY = 150, Width = 100, Height = 100,  Annotations= new DiagramObjectCollection<ShapeAnnotation>(){ new ShapeAnnotation() { Content="Source2" } }, },
+            new Node() { ID = "Target2", OffsetX = 490, OffsetY = 250, Width = 100, Height = 100,  Annotations= new DiagramObjectCollection<ShapeAnnotation>(){ new ShapeAnnotation() { Content="Target2" } } },
+            new Node() { ID = "node", OffsetX = 303, OffsetY = 283, Width = 100, Height = 100,  Annotations= new DiagramObjectCollection<ShapeAnnotation>(){ new ShapeAnnotation() { Content="Source2" } }, },
+        };
+        connectors = new DiagramObjectCollection<Connector>(){
+            new Connector()
+            {
+                ID = "connector1",
+                SourceID = "Source", TargetID = "Target",
+                Type = ConnectorSegmentType.Orthogonal,
+                // Disable the inherit routing for the particular connector
+                Constraints = ConnectorConstraints.Default & ~ConnectorConstraints.InheritRouting,
+            },
+            new Connector()
+            {
+                ID = "connector2",
+                SourceID = "Source2", TargetID = "Target2",
+                Type = ConnectorSegmentType.Orthogonal,
+                // Enable the routing for the particular connector
+                Constraints = (ConnectorConstraints.Default & ~ConnectorConstraints.InheritRouting)| ConnectorConstraints.Routing
+            }
+        };
+    }
+    private void OnNodeCreating(IDiagramObject obj)
+    {
+        if (obj is Node node)
+        {
+            node.Style = new ShapeStyle() { Fill = "#6BA5D7", StrokeColor = "#6BA5D7" };
+        }
+    }
+    private void OnConnectorCreating(IDiagramObject obj)
+    {
+        if (obj is Connector connector)
+        {
+            connector.Style = new ShapeStyle() { StrokeColor = "#6BA5D7", StrokeWidth = 1 };
+            connector.TargetDecorator = new DecoratorSettings()
+                {
+                    Shape = DecoratorShape.Arrow,
+                    Style = new ShapeStyle() { Fill = "#6BA5D7", StrokeColor = "#6BA5D7", StrokeWidth = 1 }
+                };
+        }
+    }
+}
+```
+![Blazor Diagram Routing for Connector](../images/ConnectorRoutingConstraints.png)
+You can download a complete working sample from [GitHub]().
+
 ## How to flip the connector
 
 The [Flip](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeBase.html#Syncfusion_Blazor_Diagram_NodeBase_Flip) is performed to give the mirrored image of the original element.
