@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Accessibility in Blazor CheckBox Component | Syncfusion
-description: Checkout and learn here all about Accessibility in Syncfusion Blazor CheckBox component and much more.
+title: Accessibility in Blazor RadioButton Component | Syncfusion
+description: Checkout and learn here all about Accessibility in Syncfusion Blazor RadioButton component and much more.
 platform: Blazor
-control: Checkbox
+control: RadioButton
 documentation: ug
 ---
 
-# Accessibility in Blazor CheckBox Component
+# Accessibility in Blazor RadioButton component
 
-The CheckBox component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
+The RadioButton component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 
-The accessibility compliance for the CheckBox component is outlined below.
+The accessibility compliance for the RadioButton component is outlined below.
 
 | Accessibility Criteria | Compatibility |
 | -- | -- |
@@ -39,7 +39,7 @@ The accessibility compliance for the CheckBox component is outlined below.
 
 ## WAI-ARIA attributes
 
-The CheckBox component followed the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/checkbox/) patterns to meet the accessibility. The following ARIA attributes are used in the CheckBox component:
+The RadioButton component followed the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/radio/) patterns to meet the accessibility. The following ARIA attributes are used in the RadioButton component:
 
 | Attributes | Purpose |
 | --- | --- |
@@ -47,20 +47,17 @@ The CheckBox component followed the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/p
 
 ## Keyboard interaction
 
-The CheckBox component followed the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/checkbox/#keyboardinteraction) guideline, making it easy for people who use assistive technologies (AT) and those who completely rely on keyboard navigation. The following keyboard shortcuts are supported by the CheckBox component.
+The RadioButton component followed the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/radio/#keyboardinteraction) guideline, making it easy for people who use assistive technologies (AT) and those who completely rely on keyboard navigation. The following keyboard shortcuts are supported by the RadioButton component.
 
 | **Press** | **To do this** |
 | --- | --- |
-| <kbd>Space</kbd> | When the CheckBox has focus, pressing the Space key changes the state of the CheckBox. |
+| <kbd>UP/Left arrow</kbd> | Move and select the previous options. |
+| <kbd>Down/Right arrow</kbd> | Move and select the next options. |
 
 ## Ensuring accessibility
 
-The CheckBox component's accessibility levels are ensured through an [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) software tools during automated testing.
+The RadioButton component component's accessibility levels are ensured through an [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) software tools during automated testing.
 
-The accessibility compliance of the CheckBox component is shown in the following sample. Open the [sample](https://ej2.syncfusion.com/accessibility/checkbox.html) in a new window to evaluate the accessibility of the CheckBox component with accessibility tools.
+The accessibility compliance of the RadioButton component is shown in the following sample. Open the [sample](https://ej2.syncfusion.com/accessibility/radiobutton.html) in a new window to evaluate the accessibility of the RadioButton component with accessibility tools.
 
-{% previewsample "https://ej2.syncfusion.com/accessibility/checkbox.html" %}
-
-## See also
-
-![Accessibility in Blazor CheckBox](./images/blazor-checkbox-accessibility.png)
+{% previewsample "https://ej2.syncfusion.com/accessibility/radiobutton.html" %}
