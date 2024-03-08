@@ -120,10 +120,10 @@ The following properties are available in the [`MapsPolygonTooltipSettings`]() t
     <MapsLayers>
         <MapsLayer ShapeData='new {dataOptions= "https://cdn.syncfusion.com/maps/map-data/world-map.json"}' TValue="string">
             <MapsPolygons>
-                <MapsPolygon Points="Points" Fill="red" Opacity="0.7" BorderColor="green" BorderWidth="2" BorderOpacity="0.7">
-                <TooltipTemplate> <div style="width:200px;"> Country Name : Saudi Arabia</div> </TooltipTemplate>
+                <MapsPolygon Points="Points" Fill="red" TooltipText="Saudi Arabia" Opacity="0.7" BorderColor="green" BorderWidth="2" BorderOpacity="0.7">
                 </MapsPolygon>
-                <MapsPolygonTooltipSettings Visible="true"></MapsPolygonTooltipSettings>
+                <MapsPolygonTooltipSettings Visible="true" BorderColor="Red" BorderWidth="2">
+                </MapsPolygonTooltipSettings>
             </MapsPolygons>
         </MapsLayer>
     </MapsLayers>
@@ -197,7 +197,10 @@ The HTML element can be rendered in the tooltip of the Maps using the [`TooltipT
     <MapsLayers>
         <MapsLayer ShapeData='new {dataOptions= "https://cdn.syncfusion.com/maps/map-data/world-map.json"}' TValue="string">
             <MapsPolygons>
-                <MapsPolygon Points="Points" Fill="red" Opacity="0.7" BorderColor="green" BorderWidth="2" BorderOpacity="0.7"></MapsPolygon>
+                <MapsPolygon Points="Points" Fill="red" Opacity="0.7" BorderColor="green" BorderWidth="2" BorderOpacity="0.7">
+                    <TooltipTemplate> <div style="width:200px;"> Country Name : Saudi Arabia</div> </TooltipTemplate>
+                </MapsPolygon>
+                <MapsPolygonTooltipSettings Visible="true"></MapsPolygonTooltipSettings>
             </MapsPolygons>
         </MapsLayer>
     </MapsLayers>
