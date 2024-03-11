@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Render the Sidebar component in the MainLayout page of the .NET 8 Blazor Web application | Syncfusion
+title: Add Sidebar to MainLayout of the .NET 8 Blazor Web app | Syncfusion
 description: Learn here all about how to render the Sidebar component in the MainLayout page of the .NET 8 Blazor Web application and more.
 platform: Blazor
 control: Sidebar
@@ -9,7 +9,7 @@ documentation: ug
 
 <!-- markdownlint-disable MD009 -->
 
-# Render the Sidebar component in the MainLayout page of the .NET 8 Blazor Web application
+# Render the Sidebar within the MainLayout of the .NET 8 Blazor Web app
 
 Integrate the Blazor Sidebar component into the `MainLayout.razor` page of the .NET 8 application. Next, include the `@rendermode InteractiveServer` directive in the `Routes.razor` page of the application.
 
