@@ -23,9 +23,7 @@ Resource Multi-Taskbar in a Gantt Chart is a feature that allows you to visualiz
                 </GanttTaskFields>
                 <GanttColumns>
                     <GanttColumn Field="TaskId" Visible=false></GanttColumn>
-                    <GanttColumn Field="ResourceId" Visible=false></GanttColumn>
                     <GanttColumn Field="TaskName" HeaderText="Name" Width="250"></GanttColumn>
-                    <GanttColumn Field="ResourceName" HeaderText="Name" Width="250"></GanttColumn>
                     <GanttColumn Field="Work" HeaderText="Work"></GanttColumn>
                     <GanttColumn Field="Progress"></GanttColumn>
                     <GanttColumn Field="StartDate" HeaderText="Start Date"></GanttColumn>

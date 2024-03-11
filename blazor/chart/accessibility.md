@@ -11,6 +11,33 @@ documentation: ug
 
 Accessibility is achieved in the Chart component through WAI-ARIA standard and keyboard navigation. The chart features can be effectively accessed through assistive technologies such as screen readers.
 
+The Chart control followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
+
+The accessibility compliance for the Chart control is outlined below.
+
+|Accessibility Criteria | Compatibility|
+-----|-----
+|[WCAG 2.2](https://www.w3.org/TR/WCAG22/) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">  |
+|[Section 508](https://www.section508.gov/) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">  |
+|Screen Reader Support| <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">  |
+|Right-To-Left Support | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">  |
+|Color Contrast | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">  |
+|Mobile Device Support | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">  |
+|[Accessibility Checker](https://www.npmjs.com/package/accessibility-checker) Validation | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">  |
+|[Axe-core](https://www.npmjs.com/package/axe-core) Accessibility Validation | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">  |
+
+<style>
+    .post .post-content img {
+        display: inline-block;
+        margin: 0.5em 0;
+    }
+</style>
+<div><img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> - All features of the component meet the requirement.</div>
+
+<div><img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Intermediate"> - Some features of the component do not meet the requirement.</div>
+
+<div><img src="https://cdn.syncfusion.com/content/images/documentation/not-supported.png" alt="No"> - The component does not meet the requirement.</div>
+
 ## WAI-ARIA
 
 WAI-ARIA(Accessibility Initiative - Accessible Rich Internet Applications) defines a way to increase the accessibility of web pages, dynamic content, and user interface components developed with AJAX, HTML, Javascript, and related technologies. ARIA provides additional semantics to describe the role, state, and functionality of web components.

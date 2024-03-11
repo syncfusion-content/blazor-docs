@@ -148,8 +148,8 @@ The following image shows how to drag a symbol from the palette and connect the 
 There are several types of Text annotation directions as follows:
 | Direction | Image |
 | -------- | -------- |
-| Auto | ![Auto BPMN Shape](../images/Bpmn-TextAnnotation-Auto.png) |
-| Left | ![Left TextAnnotation BPMN Shape](../images/Bpmn-TextAnnotation-Auto.png) |
-| Right | ![Right TextAnnotation BPMN Shape](../images/Bpmn-TextAnnotation-Right.png) |
-| Top | ![Top TextAnnotation BPMN Shape](../images/Bpmn-TextAnnotation-Top.png) |
-| Bottom | ![Bottom TextAnnotation BPMN Shape](../images/Bpmn-TextAnnotation-Bottom.png) |
+| Auto | ![Auto BPMN Shape](../images/Bpmn-TextAnnotation-Auto.png)|
+| Left | ![Left TextAnnotation BPMN Shape](../images/Bpmn-TextAnnotation-Auto.png)|
+| Right | ![Right TextAnnotation BPMN Shape](../images/Bpmn-TextAnnotation-Right.png)|
+| Top | ![Top TextAnnotation BPMN Shape](../images/Bpmn-TextAnnotation-Top.png)|
+| Bottom | ![Bottom TextAnnotation BPMN Shape](../images/Bpmn-TextAnnotation-Bottom.png)|
