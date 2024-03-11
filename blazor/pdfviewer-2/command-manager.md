@@ -28,7 +28,7 @@ You can create custom keyboard commands by specifying the name of the action and
 * [ActionName](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.html): Specifies the name of the action to be executed upon pressing the keyboard shortcuts within the PDF viewer.
 
 * [Gesture](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.html): 
-Specifies the combination of [keys](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.html) and [modifiers](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.html), including Control, Shift, Alt or Meta key, within the PDF viewer.
+Specifies the combination of [keys](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.html) and [modifiers](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.html), including Control, Shift, Alt or Meta key that are utilized within the PDF viewer.
 
 The following code snippet explains how to create custom command.
 
