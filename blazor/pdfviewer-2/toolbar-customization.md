@@ -195,7 +195,7 @@ Now, you have the power to tailor their toolbar exactly to your needs, adding ne
     * Take full control over your toolbar layout by rearranging the positions of existing toolbar items to better suit your preferences.
     * Organize your toolbar intuitively, placing frequently used tools front and center for easy access and improved productivity.
 
-## How to customize primary toolbar without default options
+## How to customize Primary Toolbar without default options
 
 You can Modify the Primary Toolbar in the PDF Viewer by Assign the `ToolbarItems` as null and Create PdfToolbarItem list which Contains RenderFragment and Index for the Toolbar Items. Assign the list to the property `CustomToolbarItems`.
 
@@ -302,7 +302,7 @@ The following sample mimics all the options of the SfPdfViewer default toolbar i
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Toolbar/Custom%20Toolbar/Custom%20Toolbar%20-%20%20SfPdfViewer).
 
-## How to customize the primary toolbar with default options
+## How to customize the Primary Toolbar with default options
 
 You can include both `ToolbarItems` and `CustomToolbarItems` within the PDF Viewer. The following code demonstrate how to add customized items between the default toolbar items by specifying the correct index value for adding them to the toolbar.
 
@@ -345,6 +345,64 @@ You can include both `ToolbarItems` and `CustomToolbarItems` within the PDF View
 ```
 ![Blazor PDFViewer with Custom Toolbar](./images/primary-toolbar-customization-with-default-toolbaritems.png)
 
+[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Toolbar/Custom%20Toolbar/Custom%20toolbar%20with%20PNG%20image%20-%20SfPdfViewer).
+
+## How modify the toolbar Icons in the Primary Toolbar
+
+You can customize the appearance of the toolbar icons in the primary toolbar customization with the icons style.
+
+```cshtml
+
+@using Syncfusion.Blazor.SfPdfViewer; 
+@using Syncfusion.Blazor.Navigations; 
+
+<SfPdfViewer2 @ref="@Viewer" DocumentPath="@DocumentPath" Height="100%" Width="100%">  
+    <PdfViewerToolbarSettings CustomToolbarItems="@CustomToolbarItems" ToolbarItems="@ToolbarItems" />   
+    <PdfViewerEvents ToolbarClicked="ClickAction"></PdfViewerEvents>              
+</SfPdfViewer2>  
+
+@code { 
+    private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf"; 
+    SfPdfViewer2 Viewer; 
+    MemoryStream stream; 
+
+    // List provide the position and element for the custom toolbar items
+    public List<PdfToolbarItem> CustomToolbarItems = new List<PdfToolbarItem>() 
+    {  
+        new PdfToolbarItem (){ Index = 1, Template = @GetTemplate("PreviousPage")}, 
+        new PdfToolbarItem (){ Index = 2, Template = @GetTemplate("NextPage")}, 
+        new PdfToolbarItem (){ Index = 4, Template = @GetTemplate("Save")}, 
+        new PdfToolbarItem (){ Index = 7, Template = @GetTemplate("Download")} 
+    }; 
+
+    // GetTemaplate and ClickAction function as same as the previous example
+
+    // Default toolbar items list provided for the toolbaritems
+    public List<Syncfusion.Blazor.SfPdfViewer.ToolbarItem> ToolbarItems = new List<Syncfusion.Blazor.SfPdfViewer.ToolbarItem>() 
+    { 
+        Syncfusion.Blazor.SfPdfViewer.ToolbarItem.OpenOption, 
+        Syncfusion.Blazor.SfPdfViewer.ToolbarItem.SelectionTool, 
+        Syncfusion.Blazor.SfPdfViewer.ToolbarItem.SearchOption,
+        Syncfusion.Blazor.SfPdfViewer.ToolbarItem.PrintOption 
+    };
+} 
+
+<style> 
+    .e-icons e-chevron-up::before { 
+        content: '\e70d'; 
+    } 
+    .e-icons e-chevron-down::before { 
+        content: '\e76a'; 
+    } 
+    .e-icons e-download::before { 
+        content: '\e75d'; 
+    } 
+    .e-pv-print-document-icon::before { 
+        content: '\e743'; 
+    } 
+</style> 
+
+```
 [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Toolbar/Custom%20Toolbar/Custom%20toolbar%20with%20PNG%20image%20-%20SfPdfViewer).
 
 N> This is applicable only for custom toolbar.
