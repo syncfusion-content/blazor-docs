@@ -395,7 +395,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
     public void OnConnectorCreating(IDiagramObject args)
     { 
-        Connector connector = obj as Connector;
+        Connector connector = args as Connector;
         connector.Style.Fill = "black";
         connector.Style.StrokeColor = "black";
         connector.Style.Opacity = 1;
