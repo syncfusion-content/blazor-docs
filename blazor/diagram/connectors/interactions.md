@@ -88,8 +88,6 @@ And also the selection can be enabled during the interaction.
 * An element can be selected by clicking that element.
 * When you select the elements in the diagram, the [SelectionChanging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_SelectionChanging) and  [SelectionChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_SelectionChanged) events get triggered and do customization in this event.
 
-![Selection in Blazor Diagram Connector](../images/blazor-diagram-connector-selection.gif)
-
 ## How to drag a connector
 
 A connector can be dragged at runtime by using the [Drag](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Drag_Syncfusion_Blazor_Diagram_IDiagramObject_System_Double_System_Double_) method. The following code explains how to drag the connector by using the drag method.
@@ -221,9 +219,9 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## How to route the connectors
 
-The connectors can be overlapped with any neighboring nodes when the node is positioned in contact with the connection. This will make less clarity about the connector path flow. This can be avoided using Routing process.
+The connectors may overlap with adjacent nodes when a node is positioned in such a way that it encounters the connector. This overlap can reduce the clarity of the connector's path. To prevent this, the Routing process can be utilized.
 
-The routing is the process of updating the connector’s geometry to prevent it from overlapping with any nearby nodes that may be in their path. This behavior can be enabled by adding `DiagramConstraints.Routing` enum value to the [Constraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Constraints) property of diagram.
+Routing is the process of adjusting the geometry of connectors to prevent them from overlapping with any nearby nodes in their path. This feature can be activated by adding [Routing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramConstraints.html#Syncfusion_Blazor_Diagram_DiagramConstraints_Routing) enum value to the [Constraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Constraints) property of diagram.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -258,14 +256,15 @@ The routing is the process of updating the connector’s geometry to prevent it 
     }
 }
 ```
-![Blazor Diagram Connector Routing](../images/DefaultRouting.png)
+![Blazor Diagram Connector Routing](../images/blazor-diagram-connector-routing.gif)
+
 You can download a complete working sample from [GitHub]().
 
 **Note:** Routing is applicable only for orthogonal connectors.
 
 ### How to enable or disable routing for nodes
 
-By default, all nodes are treated as an obstacle for a connector that is connections will go around the node boundary. You can disable the node’s routing obstacles by removing the NodeConstraints.RoutingObstacle from the Constraints property of node.
+By default, connectors treat all nodes as obstacles, causing connections to navigate around the node boundaries. However, you can disable this behavior and allow connectors to ignore the node as an obstacle by removing the [RoutingObstacle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeConstraints.html#Syncfusion_Blazor_Diagram_NodeConstraints_RoutingObstacle) from the node's [Constraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Node.html#Syncfusion_Blazor_Diagram_Node_Constraints) property.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -321,11 +320,12 @@ By default, all nodes are treated as an obstacle for a connector that is connect
 }
 ```
 ![Blazor Diagram RoutingObstacle for Node](../images/NodeRoutingObstable.png)
+
 You can download a complete working sample from [GitHub]().
 
 ### How to enable or disable routing for connectors
 
-By default, each connector’s routing process is inherited based on the value of the Constraints property of the diagram. To control the individual connector’s routing regardless of the diagram, you should remove the ConnectorConstraints.InheritRouting enum value from the Constraints property of the connector and add ConnectorConstraints.Routing enum value to the Constraints property or remove ConnectorConstraints.Routing enum value from the Constraints property to enable or disable the routing respectively.
+By default, each connector's routing process is inherited based on the value of the diagram's [Constraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Constraints) property. If you wish to independently control the routing of a specific connector regardless of the diagram settings, you can achieve this by removing the [InheritRouting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ConnectorConstraints.html#Syncfusion_Blazor_Diagram_ConnectorConstraints_InheritRouting) enum value from the connector's [Constraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Connector.html#Syncfusion_Blazor_Diagram_Connector_Constraints) property. Then, add the [Routing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ConnectorConstraints.html#Syncfusion_Blazor_Diagram_ConnectorConstraints_Routing) enum value to enable routing or remove it to disable routing altogether.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -390,6 +390,7 @@ By default, each connector’s routing process is inherited based on the value o
 }
 ```
 ![Blazor Diagram Routing for Connector](../images/ConnectorRoutingConstraints.png)
+
 You can download a complete working sample from [GitHub]().
 
 ## How to flip the connector
