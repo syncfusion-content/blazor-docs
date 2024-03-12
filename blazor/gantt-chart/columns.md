@@ -331,7 +331,7 @@ Format | Formatted value
 
 ![Blazor Gantt Chart with Date Format](images/blazor-gantt-chart-date-format.png)
 
-## AutoFit columns using method
+## Autofit columns using method
 
 In Gantt chart, you can automatically adjust specific column width based on the maximum content width of each column, ensuring that the width displays the content without wrapping or hiding by using [AutoFitColumnsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_AutoFitColumnsAsync) method. You can autofit specific columns at initial rendering by invoking the `AutoFitColumnsAsync` method in DataBound event.
 
