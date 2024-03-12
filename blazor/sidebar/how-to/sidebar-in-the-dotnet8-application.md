@@ -11,7 +11,7 @@ documentation: ug
 
 # Render the Sidebar within the MainLayout of the .NET 8 Blazor Web app
 
-Integrate the Blazor Sidebar component into the `MainLayout.razor` page of the .NET 8 application. Next, include the `@rendermode InteractiveServer` directive in the `Routes.razor` page of the application.
+Integrate the Blazor Sidebar component into the `MainLayout.razor` page of the .NET 8 application. Next, include the `@rendermode InteractiveServer` directive in the `Routes.razor` page of the application. When you specify InteractiveServer as the render mode for the Routes component, you are enabling interactive server-side rendering (SSR) for your entire Blazor application.
 
 ```cshtml
 
@@ -36,7 +36,7 @@ Integrate the Blazor Sidebar component into the `MainLayout.razor` page of the .
             </SfToolbar>
         </div>
         @*Initialize the Sidebar component*@
-        <SfSidebar HtmlAttributes="@HtmlAttribute" @ref="Sidebar" Width="290px" Target=".e-main-content" MediaQuery="(min-width:600px)" @bind-IsOpen="SidebarToggle">
+        <SfSidebar @attributes="@HtmlAttribute" Width="290px" Target=".e-main-content" MediaQuery="(min-width:600px)" @bind-IsOpen="SidebarToggle">
             <ChildContent>
                 <div class="main-menu">
                     <div class="table-content">
@@ -65,14 +65,13 @@ Integrate the Blazor Sidebar component into the `MainLayout.razor` page of the .
     </div>
 </div>
 @code {
-    SfSidebar Sidebar;
     // Specifies the value of TreeView component ExpanOn property.
     public ExpandAction Expand = ExpandAction.Click;
     // Specify the value of Sidebar component state. It indicates whether the sidebar component is in an open/close state.
     public bool SidebarToggle = false;
     // Specifies the value of Sidebar HTMLAttribute property.
     Dictionary<string, object> HtmlAttribute = new Dictionary<string, object>()
-{
+    {
         {"class", "sidebar-treeview" }
     };
     // Specifies the event handler for Clicked event in Toolbar component.
@@ -172,6 +171,8 @@ Integrate the Blazor Sidebar component into the `MainLayout.razor` page of the .
 ```
 
 ```cshtml
+
+<--Add it in Router.razor--->
 
 @rendermode InteractiveServer
 
