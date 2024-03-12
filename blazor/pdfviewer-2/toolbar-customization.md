@@ -182,26 +182,14 @@ The following code snippet explains how to show or hide annotation toolbar using
 
 ## Primary Toolbar Customization
 
-Unlock unprecedented control over your PDF viewing experience with the latest feature in our NextGen Blazor PDF Viewer: "Customizable Primary Toolbar". 
-Now, you have the power to tailor their toolbar exactly to your needs, adding new items, hiding existing ones, and repositioning items for optimal workflow efficiency .
+You can modify the primary toolbar options by rearrange the toolbar options, Disable the default options of toolbar and add new items, adding the new item in particular index with existing toolbar options.
 
-### Key Features:
-
-* Add New Toolbar Items
-    * Enhance your PDF Viewer's functionality by seamlessly integrating new toolbar items tailored to your specific requirements.
-    * Integrate custom actions, such as annotation tools, bookmark management, or document navigation shortcuts, directly into your primary toolbar for quick and convenient access.
-
-* Change Positions of Existing and New Toolbar Items
-    * Take full control over your toolbar layout by rearranging the positions of existing toolbar items to better suit your preferences.
-    * Organize your toolbar intuitively, placing frequently used tools front and center for easy access and improved productivity.
-
-## How to customize Primary Toolbar without default options
+## Disable the default items and Add new items in Primary Toolbar
 
 You can Modify the Primary Toolbar in the PDF Viewer by Assign the `ToolbarItems` as null and Create PdfToolbarItem list which Contains RenderFragment and Index for the Toolbar Items. Assign the list to the property `CustomToolbarItems`.
 
-The following code example show how to customize the primary toolbar without default items.
-
 ```cshtml
+{% highlight hl_lines="5" %}
 
 @using Syncfusion.Blazor.SfPdfViewer; 
 @using Syncfusion.Blazor.Navigations; 
@@ -293,6 +281,7 @@ The following code example show how to customize the primary toolbar without def
     }  
 } 
 
+{% endhighlight %}
 ```
 ![Blazor PDFViewer with Custom Toolbar](./images/primary-toolbar-customization-with-save-option.png)
 
