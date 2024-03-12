@@ -216,21 +216,6 @@ In the following example, ListView has been rendered as custom component inside 
         currentColIndex = VisibleCols.Select(x => x.Field).ToList().IndexOf(ColName);
     }
 
-    public async Task OnActionComplete(GanttActionEventArgs<TaskData> args)
-    {
-        if (args.RequestType.Equals(Syncfusion.Blazor.Gantt.Action.ColumnState))
-        {
-            foreach (var a in args.VisibleColumns)
-            {
-                if (VisibleCols.Where(e => e.Field == a.Field).Count() == 0)
-                {
-                    currentColIndex = currentColIndex + 1;
-                    VisibleCols = Gantt.Columns;
-                }
-            }
-        }
-    }
-
     public async void AftterCompletion(string col)
     {
         var newcols = Gantt.Columns;
