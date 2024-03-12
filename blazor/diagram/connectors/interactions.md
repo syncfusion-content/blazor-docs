@@ -219,7 +219,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## How to route the connectors
 
-The connectors may overlap with adjacent nodes when a node is positioned in such a way that it encounters the connector. This overlap can reduce the clarity of the connector's path. To prevent this, the Routing process can be utilized.
+The connectors may overlap with adjacent nodes when a node is positioned so that it encounters the connector. This overlap can reduce the clarity of the connector's path. To prevent this, the Routing process can be utilized.
 
 Routing is the process of adjusting the geometry of connectors to prevent them from overlapping with any nearby nodes in their path. This feature can be activated by adding [Routing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramConstraints.html#Syncfusion_Blazor_Diagram_DiagramConstraints_Routing) enum value to the [Constraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Constraints) property of diagram.
 
@@ -230,11 +230,11 @@ Routing is the process of adjusting the geometry of connectors to prevent them f
 </SfDiagramComponent>
 @code 
 {    
-    // Enable routing constraints for diagram
+    // Enable routing constraints for diagram.
     DiagramConstraints diagramConstraints = DiagramConstraints.Default | DiagramConstraints.Routing;
-    //Intialize the node collection
+    // Intialize the node collection.
     DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
-    //Intialize the connector collection
+    // Intialize the connector collection.
     DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
     
     protected override void OnInitialized()
@@ -258,7 +258,7 @@ Routing is the process of adjusting the geometry of connectors to prevent them f
 ```
 ![Blazor Diagram Connector Routing](../images/blazor-diagram-connector-routing.gif)
 
-You can download a complete working sample from [GitHub]().
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Interaction).
 
 **Note:** Routing is applicable only for orthogonal connectors.
 
@@ -274,11 +274,11 @@ By default, connectors treat all nodes as obstacles, causing connections to navi
 </SfDiagramComponent>
 @code
 {
-    // Enable routing constraints for diagram
+    // Enable routing constraints for the diagram.
     DiagramConstraints diagramConstraints = DiagramConstraints.Default | DiagramConstraints.Routing;
-    //Intialize the node collection
+    // Intialize the node collection.
     DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
-    //Intialize the connector collection
+    // Intialize the connector collection.
     DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
     protected override void OnInitialized()
     {
@@ -321,7 +321,7 @@ By default, connectors treat all nodes as obstacles, causing connections to navi
 ```
 ![Blazor Diagram RoutingObstacle for Node](../images/NodeRoutingObstable.png)
 
-You can download a complete working sample from [GitHub]().
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Interaction).
 
 ### How to enable or disable routing for connectors
 
@@ -335,9 +335,9 @@ By default, each connector's routing process is inherited based on the value of 
 </SfDiagramComponent>
 @code
 {
-    //Intialize the node collection
+    // Intialize the node collection.
     DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
-    //Intialize the connector collection
+    // Intialize the connector collection.
     DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
     protected override void OnInitialized()
     {
@@ -355,7 +355,7 @@ By default, each connector's routing process is inherited based on the value of 
                 ID = "connector1",
                 SourceID = "Source", TargetID = "Target",
                 Type = ConnectorSegmentType.Orthogonal,
-                // Disable the inherit routing for the particular connector
+                // Disable the inherited routing for a particular connector.
                 Constraints = ConnectorConstraints.Default & ~ConnectorConstraints.InheritRouting,
             },
             new Connector()
@@ -363,7 +363,7 @@ By default, each connector's routing process is inherited based on the value of 
                 ID = "connector2",
                 SourceID = "Source2", TargetID = "Target2",
                 Type = ConnectorSegmentType.Orthogonal,
-                // Enable the routing for the particular connector
+                // Enable the routing for a particular connector.
                 Constraints = (ConnectorConstraints.Default & ~ConnectorConstraints.InheritRouting)| ConnectorConstraints.Routing
             }
         };
@@ -391,7 +391,7 @@ By default, each connector's routing process is inherited based on the value of 
 ```
 ![Blazor Diagram Routing for Connector](../images/ConnectorRoutingConstraints.png)
 
-You can download a complete working sample from [GitHub]().
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Interaction).
 
 ## How to flip the connector
 
