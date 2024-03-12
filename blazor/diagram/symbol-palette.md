@@ -1342,7 +1342,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Appearance of symbol description
 
-You can customize the appearance of a symbol description in the symbol palette by adjusting the following properties:
+Customize the appearance of a symbol description in the symbol palette by adjusting the following properties:
 
 [Color](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.TextStyle.html#Syncfusion_Blazor_Diagram_TextStyle_Color): Sets the color of the symbol description text.
 
@@ -1445,7 +1445,7 @@ The following code is an example to change the style of a symbol description for
     }
 }
 ```
-You can download a complete working sample from [GitHub]()
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/SymbolPalette)
 
 ![Style of the Symbol Description in Blazor Diagram](images/blazor-diagram-symbol-description-style.png)
 
