@@ -184,19 +184,56 @@ The following code snippet explains how to show or hide annotation toolbar using
 
 You can modify the primary toolbar options by rearrange the toolbar options, Disable the default options of toolbar and add new items, adding the new item in particular index with existing toolbar options.
 
+## Rearrange the deafault options of toolbar
+
+You can rearrange the `ToolbarItems` list by the order of listing the items. The toolbar items show in the given order of the list
+
+```cshtml
+
+@using Syncfusion.Blazor.SfPdfViewer
+
+<SfPdfViewer2 Height="100%" Width="100%" DocumentPath="@DocumentPath">
+    <PdfViewerToolbarSettings ToolbarItems="ToolbarItems"></PdfViewerToolbarSettings>
+</SfPdfViewer2>
+
+@code {
+
+    public string DocumentPath { get; set; } = "wwwroot/data/PDF_Succinctly.pdf";
+
+    List<ToolbarItem> ToolbarItems = new List<ToolbarItem>()
+    {
+        ToolbarItem.OpenOption,
+        ToolbarItem.PageNavigationTool,
+        ToolbarItem.SelectionTool,
+        ToolbarItem.MagnificationTool,
+        ToolbarItem.PanTool,
+        ToolbarItem.UndoRedoTool,
+        ToolbarItem.CommentTool,
+        ToolbarItem.AnnotationEditTool,
+        ToolbarItem.SearchOption,
+        ToolbarItem.DownloadOption,
+        ToolbarItem.PrintOption,
+    };
+}
+
+```
+
+![Blazor PDFViewer with Custom Toolbar](./images/Rearrange-Default-Options.png)
+
+[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Toolbar/Custom%20Toolbar/Primary%20Custom%20Toolbar-%20SfPdfViewer/Rearrange-Default-Options).
+
 ## Disable the default items and Add new items in Primary Toolbar
 
 You can Modify the Primary Toolbar in the PDF Viewer by Assign the `ToolbarItems` as null and Create PdfToolbarItem list which Contains RenderFragment and Index for the Toolbar Items. Assign the list to the property `CustomToolbarItems`.
 
-{% highlight razor hl_lines="9 12" %}
 ```cshtml
 
 @using Syncfusion.Blazor.SfPdfViewer; 
 @using Syncfusion.Blazor.Navigations; 
 
 <SfPdfViewer2 @ref="@Viewer" DocumentPath="@DocumentPath" Height="100%" Width="100%">  
-         `<PdfViewerToolbarSettings CustomToolbarItems="@CustomToolbarItems" ToolbarItems="null" />`   
-         <PdfViewerEvents ToolbarClicked="ClickAction"></PdfViewerEvents>              
+    <PdfViewerToolbarSettings CustomToolbarItems="@CustomToolbarItems" ToolbarItems="null" />`   
+    <PdfViewerEvents ToolbarClicked="ClickAction"></PdfViewerEvents>              
 </SfPdfViewer2>  
 
 @code{ 
@@ -261,37 +298,41 @@ You can Modify the Primary Toolbar in the PDF Viewer by Assign the `ToolbarItems
     public async void ClickAction(ClickEventArgs Item) 
     {  
         if (Item.Item.Id == "previousPage") 
-        {  
+        {
+            //Navigate to previous page of the PDF document.
             await Viewer.GoToPreviousPageAsync(); 
         }  
         else if (Item.Item.Id == "nextPage") 
-        {  
+        {
+            //Navigate to next page page of the PDF document.
             await Viewer.GoToNextPageAsync(); 
         }  
         else if(Item.Item.Id == "save")  
-        {  
-            byte[] data = await Viewer.GetDocumentAsync(); 
-            stream = new MemoryStream(data); 
+        {
+            //Gets the loaded PDF document with the changes.
+            byte[] data = await Viewer.GetDocumentAsync();
+            //Save the PDF document to a MemoryStream. 
+            stream = new MemoryStream(data);
+            //Load a PDF document from the MemoryStream. 
             await Viewer.LoadAsync(stream); 
         } 
         else if (Item.Item.Id == "download") 
-        { 
+        {
+            //Downloads the PDF document
             await Viewer.DownloadAsync(); 
         } 
     }  
 } 
 
 ```
-{% endhighlight %}
+
 ![Blazor PDFViewer with Custom Toolbar](./images/primary-toolbar-customization-with-save-option.png)
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Toolbar/Custom%20Toolbar/Primary%20Custom%20Toolbar-%20SfPdfViewer/Without-Default-Options).
 
 ## How to customize the Primary Toolbar with default options
 
-You can include both `ToolbarItems` and `CustomToolbarItems` within the PDF Viewer. The index position at the `CustomToolbaIitems` list is used to add the items in the toolbar.
-
-The following code demonstrate how to rearrange the toolbar with the both `ToolbarItems` and `CustomToolbarItems`.
+You can include both `ToolbarItems` and `CustomToolbarItems` within the PDF Viewer. The index position at the `CustomToolbarItems` list is used to add the items in the list of `ToolbarItems`.
 
 ```cshtml
 
