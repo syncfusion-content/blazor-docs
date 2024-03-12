@@ -184,7 +184,7 @@ The following code snippet explains how to show or hide annotation toolbar using
 
 You can modify the primary toolbar options by rearrange the toolbar options, Disable the default options of toolbar and add new items, adding the new item in particular index with existing toolbar options.
 
-## Rearrange the deafault options of toolbar
+## Rearrange the default options of toolbar
 
 You can rearrange the `ToolbarItems` list by the order of listing the items. The toolbar items show in the given order of the list
 
