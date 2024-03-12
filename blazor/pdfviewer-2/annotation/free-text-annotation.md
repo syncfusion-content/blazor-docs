@@ -173,7 +173,7 @@ This code will add a free text annotation to the third page of the PDF document.
 
 ## Edit free text annotation programmatically
 
-The Blazor SfPdfViewer offers the capability to programmatically edit the free text annotation within the SfPdfViewer control using the EditAnnotationAsync() method.
+The Blazor SfPdfViewer offers the capability to programmatically edit the free text annotation within the SfPdfViewer control using the [EditAnnotationAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_EditAnnotationAsync_Syncfusion_Blazor_SfPdfViewer_PdfAnnotation_) method.
 
 Below is an example demonstrating how you can utilize this method to edit the free text annotation programmatically:
 
