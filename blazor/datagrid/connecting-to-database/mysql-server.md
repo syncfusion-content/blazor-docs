@@ -1,7 +1,7 @@
 ---
 layout: post
-title: MySQL Data Binding in Blazor DataGrid Component | Syncfusion
-description: Learn about consuming data from MYSQL Server and binding it to Syncfusion Component, and performing CRUD operations.
+title: MySQL Server Data Binding in Blazor DataGrid Component | Syncfusion
+description: Learn about consuming data from MySQL Server and binding it to Syncfusion Component, and performing CRUD operations.
 platform: Blazor
 control: DataGrid
 documentation: ug
@@ -15,7 +15,7 @@ MySQL Server database can be bound to the Blazor DataGrid component in different
 
 * **Using UrlAdaptor**
 
-The [UrlAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors#url-adaptor) serves as the base adaptor for facilitating communication between remote data services and an UI component. It enables the remote binding of data to the Blazor DataGrid component by connecting to an existing pre-configured API service linked to the MySQL Server database. While the Blazor DataGrid component supports various adaptors to fulfill this requirement, including [Web API](https://blazor.syncfusion.com/documentation/data/adaptors#web-api-adaptor), [OData](https://blazor.syncfusion.com/documentation/data/adaptors#odata-adaptor), [ODataV4](https://blazor.syncfusion.com/documentation/data/adaptors#odatav4-adaptor), [Url](https://blazor.syncfusion.com/documentation/data/adaptors#url-adaptor), and [GraphQL](https://blazor.syncfusion.com/documentation/data/adaptors#graphql-service-binding), the `UrlAdaptor` is particularly useful for the scenarios where a custom API service with unique logic for handling data and CRUD operations is in place. This approach allows for custom handling of data and CRUD operations, and the resultant data returned in the `Result` and `Count` format for display in the Blazor DataGrid component.
+The [UrlAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors#url-adaptor) serves as the base adaptor for facilitating communication between remote data services and an UI component. It enables the remote binding of data to the Blazor DataGrid component by connecting to an existing pre-configured API service linked to the MySQL Server database. While the Blazor DataGrid component supports various adaptors to fulfill this requirement, including [Web API](https://blazor.syncfusion.com/documentation/data/adaptors#web-api-adaptor), [OData](https://blazor.syncfusion.com/documentation/data/adaptors#odata-adaptor), [ODataV4](https://blazor.syncfusion.com/documentation/data/adaptors#odatav4-adaptor), [Url](https://blazor.syncfusion.com/documentation/data/adaptors#url-adaptor), and [GraphQL](https://blazor.syncfusion.com/documentation/data/adaptors#graphql-service-binding), the `UrlAdaptor` is particularly useful for the scenarios where a custom API service with unique logic for handling data and CRUD operations is in place. This approach allows for custom handling of data and CRUD operations, and the resultant data returned in the `result` and `count` format for display in the Blazor DataGrid component.
 
 * **Using CustomAdaptor**
 
@@ -23,7 +23,7 @@ The [CustomAdaptor](https://blazor.syncfusion.com/documentation/datagrid/custom-
 
 ## Binding data from MySQL Server using an API service
 
-This section describes step by step process how to retrieve data from a MySQL server using an API service and bind it to the Blazor DataGrid component.
+This section describes step by step process how to retrieve data from a MySQL Server using an API service and bind it to the Blazor DataGrid component.
 
 ### Creating an API service
 
@@ -33,7 +33,7 @@ This section describes step by step process how to retrieve data from a MySQL se
 
 **3.** Create an API controller (aka, GridController.cs) file under **Controllers** folder that helps to establish data communication with the Blazor DataGrid component.
 
-**4.** In an API controller (aka, GridController), connect to MySQL Server. In the **Get()** method **MySqlConnection** helps to connect the MySQL Server database. Next, using **MySqlCommand** and **MySqlDataAdapter** you can process the desired SQL query string and retrieve data from the database. The **Fill** method of the **DataAdapter** is used to populate the SQL data into a **DataTable** as shown in the following code snippet.
+**4.** In an API controller (aka, GridController), connect to MySQL Server. In the **Get()** method **MySqlConnection** helps to connect the MySQL Server database. Next, using **MySqlCommand** and **MySqlDataAdapter** you can process the desired MySQL query string and retrieve data from the database. The **Fill** method of the **DataAdapter** is used to populate the MySQL data into a **DataTable** as shown in the following code snippet.
 
 {% tabs %}
 {% highlight razor tabtitle="GridController.cs"%}
@@ -78,7 +78,7 @@ namespace MySqlWebService.Controllers
             // Using MySqlDataAdapter, process the query string and fill the data into the dataset
             DataAdapter.Fill(DataTable);
             sqlConnection.Close();
-            //Cast the data fetched from Adapter to List<T>
+            //Cast the data fetched from MySqlDataAdapter to List<T>
             var DataSource = (from DataRow Data in DataTable.Rows
                             select new Order()
                             {
@@ -177,7 +177,7 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 
 **2.** Map the hosted API's URL link `https://localhost:xxxx/api/Grid` to the Blazor DataGrid component in **Index.razor** by using the [Url](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_Url) property of [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html). To interact with remote data source, provide the endpoint `Url`.
 
-**3.** The `SfDataManager` offers multiple adaptor options to connect with remote database based on an API service. Below is an example of the [UrlAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors#url-adaptor) configuration where an API service are set up to return the resulting data in the `Result` and `Count` format.
+**3.** The `SfDataManager` offers multiple adaptor options to connect with remote database based on an API service. Below is an example of the [UrlAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors#url-adaptor) configuration where an API service are set up to return the resulting data in the `result` and `count` format.
 
 **4.** The `UrlAdaptor` acts as the base adaptor for interacting with remote data service. Most of the built-in adaptors are derived from the `UrlAdaptor`.
 
@@ -249,28 +249,28 @@ public class GridController : ControllerBase
     /// <summary>
     /// Returns the data collection as result and count after performing data operations based on request from <see cref=”DataManagerRequest”/>
     /// </summary>
-    /// <param name="DataManagerRequest">DataManagerRequest contains the information regarding searching, filtering, sorting, aggregates and paging which is handled on the DataGrid component side</param>
+    /// <param name="DataManagerRequest">DataManagerRequest contains the information regarding searching, filtering, sorting, aggregates and paging which is handled on the Blazor DataGrid component side</param>
     /// <returns>The data collection's type is determined by how this method has been implemented.</returns>
     [HttpPost]
     [Route("api/[controller]")]
     public object Post([FromBody] DataManagerRequest DataManagerRequest)
     {
         IEnumerable<Order> DataSource = GetOrderData();
-        // Handling Searching in Url Adaptor.
+        // Handling Searching in UrlAdaptor.
         if (DataManagerRequest.Search != null && DataManagerRequest.Search.Count > 0)
         {
             // Searching
             DataSource = DataOperations.PerformSearching(DataSource, DataManagerRequest.Search);
             //Add custom logic here if needed and remove above method
         }
-        // Handling Filtering in Url Adaptor.
+        // Handling Filtering in UrlAdaptor.
         if (DataManagerRequest.Where != null && DataManagerRequest.Where.Count > 0)
         {
             // Filtering
             DataSource = DataOperations.PerformFiltering(DataSource, DataManagerRequest.Where, DataManagerRequest.Where[0].Operator);
             //Add custom logic here if needed and remove above method
         }
-        // Handling Sorting in Url Adaptor.
+        // Handling Sorting in UrlAdaptor.
         if (DataManagerRequest.Sorted != null && DataManagerRequest.Sorted.Count > 0)
         {
             // Sorting
@@ -278,7 +278,7 @@ public class GridController : ControllerBase
             //Add custom logic here if needed and remove above method
         }
         int count = DataSource.Cast<Order>().Count();
-        // Handling Aggregation in Url Adaptor.
+        // Handling Aggregation in UrlAdaptor.
         IDictionary<string, object> Aggregates = null;
         if (DataManagerRequest.Aggregates != null)
         {
@@ -286,7 +286,7 @@ public class GridController : ControllerBase
             Aggregates = DataUtil.PerformAggregation(DataSource, DataManagerRequest.Aggregates);
             //Add custom logic here if needed and remove above method
         }
-        // Handling paging in Url Adaptor.
+        // Handling paging in UrlAdaptor.
         if (DataManagerRequest.Skip != 0)
         {
             // Paging
@@ -298,8 +298,8 @@ public class GridController : ControllerBase
             DataSource = DataOperations.PerformTake(DataSource, DataManagerRequest.Take);
             //Add custom logic here if needed and remove above method
         }
-        //Here RequiresCount is passed from the control side itself, where ever the ondemand data fetching is needed then the RequiresCount is set as true in component side itself.
-        // In the above case we are using Paging so data are loaded in ondemand bases whenever the next page is clicked in DataGrid side.
+        //Here RequiresCount is passed from the control side itself, where ever the on-demand data fetching is needed then the RequiresCount is set as true in component side itself.
+        // In the above case we are using paging so data are loaded in on-demand bases whenever the next page is clicked in Blazor DataGrid side.
         return new { result = DataSource, count = count, aggregates = Aggregates };
     }
 }
@@ -312,7 +312,7 @@ When you run the application, the resultant Blazor DataGrid component will look 
 
 ![Blazor DataGrid component bound with MySQL Server data](../images/blazor-Grid-Ms-SQL-databinding.png)
 
-> * The Syncfusion Blazor DataGrid component provides built-in support for handling various data operations such as **searching**, **sorting**, **filtering**, **aggregate**, **paging** and **grouping** on the server-side. These operations can be handled using methods such as `PerformSearching`, `PerformFiltering`, `PerformSorting`, `PerformAggregation`, `PerformTake` and `PerformSkip` available in the **Syncfusion.Blazor.Data** package. Let's explore how to manage these data operations using the `UrlAdaptor`.
+> * The Syncfusion Blazor DataGrid component provides built-in support for handling various data operations such as **searching**, **sorting**, **filtering**, **aggregate** and **paging** on the server-side. These operations can be handled using methods such as `PerformSearching`, `PerformFiltering`, `PerformSorting`, `PerformAggregation`, `PerformTake` and `PerformSkip` available in the **Syncfusion.Blazor.Data** package. Let's explore how to manage these data operations using the `UrlAdaptor`.
 > * In an API service project, add **Syncfusion.Blazor.Data** by opening the NuGet package manager in Visual Studio (Tools → NuGet Package Manager → Manage NuGet Packages for Solution), search and install it.
 
 ### Handling searching operation
@@ -326,7 +326,7 @@ To handle searching operation, ensure that your API endpoint supports custom sea
 public object Post([FromBody] DataManagerRequest DataManagerRequest)
 {
     IEnumerable<Order> DataSource = GetOrderData();
-    // Handling Searching in Url Adaptor.
+    // Handling Searching in UrlAdaptor.
     if (DataManagerRequest.Search != null && DataManagerRequest.Search.Count > 0)
     {
         // Searching
@@ -348,7 +348,7 @@ To handle filtering operation, ensure that your API endpoint supports custom fil
 public object Post([FromBody] DataManagerRequest DataManagerRequest)
 {
     IEnumerable<Order> DataSource = GetOrderData();
-    // Handling Filtering in Url Adaptor.
+    // Handling Filtering in UrlAdaptor.
     if (DataManagerRequest.Where != null && DataManagerRequest.Where.Count > 0)
     {
         // Filtering
@@ -371,7 +371,7 @@ To handle sorting operation, ensure that your API endpoint supports custom sorti
 public object Post([FromBody] DataManagerRequest DataManagerRequest)
 {
     IEnumerable<Order> DataSource = GetOrderData();
-    // Handling Sorting in Url Adaptor.
+    // Handling Sorting in UrlAdaptor.
     if (DataManagerRequest.Sorted != null && DataManagerRequest.Sorted.Count > 0)
     {
         // Sorting
@@ -394,7 +394,7 @@ To handle aggregate operation, ensure that your API endpoint supports custom agg
  {
     IEnumerable<Order> DataSource = GetOrderData();
     int count = DataSource.Cast<Order>().Count();
-    // Handling Aggregation in Url Adaptor.
+    // Handling Aggregation in UrlAdaptor.
     IDictionary<string, object> Aggregates = null;
     if (DataManagerRequest.Aggregates != null) 
     {  
@@ -417,7 +417,7 @@ public object Post([FromBody] DataManagerRequest DataManagerRequest)
 {
     IEnumerable<Order> DataSource = GetOrderData();
     int count = DataSource.Cast<Order>().Count();
-    // Handling Paging in Url Adaptor.
+    // Handling Paging in UrlAdaptor.
     if (DataManagerRequest.Skip != 0)
     {
         // Paging
@@ -433,7 +433,7 @@ public object Post([FromBody] DataManagerRequest DataManagerRequest)
 }
 {% endhighlight %}
 
-> For optimal performance, it is recommended to follow this sequence of operations(Searching, Filtering, Sorting, Aggregate, Paging and Grouping ) in the [ReadAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_ReadAsync_Syncfusion_Blazor_DataManagerRequest_System_String_) method.
+> For optimal performance, it is recommended to follow this sequence of operations(Searching, Filtering, Sorting, Aggregate and Paging  ) in the [ReadAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_ReadAsync_Syncfusion_Blazor_DataManagerRequest_System_String_) method.
 
 ### Handling CRUD operations
 
@@ -457,7 +457,7 @@ In this scenario, the inline edit mode and [Toolbar](https://blazor.syncfusion.c
 {% endhighlight %}
 {% endtabs %}
 
-> * Normal editing is the default edit mode for the Blazor DataGrid component. To enable CRUD operations, ensure that the [IsPrimaryKey](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_IsPrimaryKey) property is set to **true** for a specific `GridColumn`, ensuring that its value is unique.
+> * Normal/Inline editing is the default edit [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_Mode) for the Blazor DataGrid component. To enable CRUD operations, ensure that the [IsPrimaryKey](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_IsPrimaryKey) property is set to **true** for a specific `GridColumn`, ensuring that its value is unique.
 > * If database has an Autogenerated column, ensure to define [IsIdentity](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_IsIdentity) property of `GridColumn` to disable them during adding or editing operations.
 
 **Insert Operation:**
@@ -560,7 +560,7 @@ To perform batch operation, define the edit [Mode](https://help.syncfusion.com/c
  [HttpPost]
 [Route("api/Grid/Batch")]
 /// <summary>
-/// Batchupdate (Insert, Update, Delete) a collection of datas item from the data collection.
+/// Batchupdate (Insert, Update, Delete) a collection of data items from the data collection.
 /// </summary>
 /// <param name="CRUDModel<T>">The set of information along with details about the CRUD actions to be executed from the database.</param>
 /// <returns>Returns void</returns>
@@ -628,7 +628,7 @@ When you run the application, the resultant Blazor DataGrid component will look 
 
 ## Binding data from MySQL Server using CustomAdaptor
 
-This section describes step by step process how to retrieve data from a MySQL server using `CustomAdaptor` and bind it to the Blazor DataGrid component.
+This section describes step by step process how to retrieve data from a MySQL Server using `CustomAdaptor` and bind it to the Blazor DataGrid component.
 
 **1.** To create a simple Blazor DataGrid component, the procedure is explained in the above-mentioned topic on [Connecting Blazor DataGrid to an API service](#connecting-blazor-datagrid-to-an-api-service)
 
@@ -767,7 +767,7 @@ This section describes step by step process how to retrieve data from a MySQL se
 
 @code {
     /// <summary>
-    /// Implementing custom adaptor by extending the <see cref=“DataAdaptor”/> class.
+    /// Implementing CustomAdaptor by extending the <see cref=“DataAdaptor”/> class.
     /// The Blazor DataGrid component support for custom data binding, which enables the binding and manipulation of data in a personalized way, using user-defined methods.
     /// </summary>
     public class CustomAdaptor : DataAdaptor
@@ -805,7 +805,7 @@ public class OrderData
                 Connection.Open();
                 // Using MySqlDataAdapter, process the query string and fill the data into the dataset
                 adapter.Fill(data);
-                //Cast the data fetched from Adapter to List<T>
+                //Cast the data fetched from MySqlDataAdapter to List<T>
                 Orders = data.Tables[0].AsEnumerable().Select(r => new Order
                 {
                     OrderID = r.Field<int>("OrderID"),
@@ -843,7 +843,7 @@ public class CustomAdaptor : DataAdaptor
     public override async Task<object> ReadAsync(DataManagerRequest DataManagerRequest, string Key = null)
     {
         IEnumerable<Order> DataSource = await OrderService.GetOrdersAsync();
-        // Handling Searching in Custom Adaptor.
+        // Handling Searching in CustomAdaptor.
         if (DataManagerRequest.Search != null && DataManagerRequest.Search.Count > 0)
         {
             // Searching
@@ -870,7 +870,7 @@ public class CustomAdaptor : DataAdaptor
     public override async Task<object> ReadAsync(DataManagerRequest DataManagerRequest, string Key = null)
     {
         IEnumerable<Order> DataSource = await OrderService.GetOrdersAsync();
-        // Handling Filtering in Custom Adaptor.
+        // Handling Filtering in CustomAdaptor.
         if (DataManagerRequest.Where != null && DataManagerRequest.Where.Count > 0)
         {
             // Filtering
@@ -897,7 +897,7 @@ public class CustomAdaptor : DataAdaptor
     public override async Task<object> ReadAsync(DataManagerRequest DataManagerRequest, string Key = null)
     {
         IEnumerable<Order> DataSource = await OrderService.GetOrdersAsync();
-        // Handling Sorting in Custom Adaptor.
+        // Handling Sorting in CustomAdaptor.
         if (DataManagerRequest.Sorted != null && DataManagerRequest.Sorted.Count > 0)
         {
             // Sorting
@@ -925,7 +925,7 @@ public class CustomAdaptor : DataAdaptor
     {
         IEnumerable<Order> DataSource = await OrderService.GetOrdersAsync();
         int count = DataSource.Cast<Order>().Count();
-        // Handling Aggregation in Custom Adaptor.
+        // Handling Aggregation in CustomAdaptor.
         IDictionary<string, object> Aggregates = null;
         if (DataManagerRequest.Aggregates != null) // Aggregation
         {
@@ -952,7 +952,7 @@ public class CustomAdaptor : DataAdaptor
     {
         IEnumerable<Order> DataSource = await OrderService.GetOrdersAsync();
         int count = DataSource.Cast<Order>().Count();
-        // Handling paging in Custom Adaptor.
+        // Handling paging in CustomAdaptor.
         if (DataManagerRequest.Skip != 0)
         {
             // Paging
@@ -986,7 +986,7 @@ public class CustomAdaptor : DataAdaptor
         IEnumerable<Order> DataSource = await OrderService.GetOrdersAsync();
         int count = DataSource.Cast<Order>().Count();
         DataResult DataObject = new DataResult();
-        // Handling Group operation in Custom Adaptor.
+        // Handling Group operation in CustomAdaptor.
         if (DataManagerRequest.Group != null)
         {
             IEnumerable ResultData = DataSource.ToList();
@@ -1018,7 +1018,7 @@ public class CustomAdaptor : DataAdaptor
         IEnumerable<Order> DataSource = await OrderService.GetOrdersAsync();
         int count = DataSource.Cast<Order>().Count();
         DataResult DataObject = new DataResult();
-        // Handling both Grouping and Aggregation in Custom Adaptor.
+        // Handling both Grouping and Aggregation in CustomAdaptor.
         if (DataManagerRequest.Aggregates != null || DataManagerRequest.Group != null) // Aggregation
         {
             if (DataManagerRequest.Group != null)
@@ -1050,7 +1050,7 @@ public class CustomAdaptor : DataAdaptor
 
 To enable editing in the Blazor DataGrid component, utilize the [GridEditSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html) component. The Blazor DataGrid component offers multiple edit modes including the Inline/Normal, Dialog and Batch editing. For more details, refer to the Blazor DataGrid component [editing](https://blazor.syncfusion.com/documentation/datagrid/editing) documentation.
 
-In this scenario, the inline edit mode and [Toolbar](https://blazor.syncfusion.com/documentation/datagrid/tool-bar) property configured to display toolbar items for editing purpose.
+In this scenario, the inline edit `Mode` and [Toolbar](https://blazor.syncfusion.com/documentation/datagrid/tool-bar) property configured to display toolbar items for editing purpose.
 
 {% highlight razor %}
 <SfGrid TValue="Order" AllowSorting="true" AllowFiltering="true" AllowGrouping="true" AllowPaging="true" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Update", "Cancel", "Search" })">
@@ -1066,7 +1066,7 @@ In this scenario, the inline edit mode and [Toolbar](https://blazor.syncfusion.c
 </SfGrid>
 {% endhighlight %}
 
-> * Normal editing is the default edit mode for the Blazor DataGrid component. To enable CRUD operations, ensure that the [IsPrimaryKey](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_IsPrimaryKey) property is set to **true** for a specific `GridColumn`, ensuring that its value is unique.
+> * Inline/Normal editing is the default edit mode for the Blazor DataGrid component. To enable CRUD operations, ensure that the [IsPrimaryKey](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_IsPrimaryKey) property is set to **true** for a specific `GridColumn`, ensuring that its value is unique.
 > * If database has an Autogenerated column, ensure to define [IsIdentity](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_IsIdentity) property of `GridColumn` to disable them during adding or editing operations.
 
 The CRUD operations can be performed and customized on our own by overriding the following CRUD methods of the [DataAdaptor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html) abstract class.
@@ -1197,7 +1197,7 @@ To perform the batch operation, override the [BatchUpdate](https://help.syncfusi
 
 {% highlight razor %}
 /// <summary>
-/// /// Batchupdate (Insert, Update, Delete) a collection of data item from the data collection.
+/// /// Batchupdate (Insert, Update, Delete) a collection of data items from the data collection.
 /// </summary>
 /// <param name="DataManager">The DataManager is a data management component used for performing data operations in application.</param>
 /// <param name="Changed">The Changed specifies the collection of record updated in batch mode which needs to be updated from the grid record.</param>
