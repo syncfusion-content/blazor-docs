@@ -296,11 +296,7 @@ The following code example show how to customize the primary toolbar without def
 ```
 ![Blazor PDFViewer with Custom Toolbar](./images/primary-toolbar-customization-with-save-option.png)
 
-[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Toolbar/Custom%20Toolbar/Custom%20toolbar%20with%20save%20option%20-%20SfPdfViewer).
-
-The following sample mimics all the options of the SfPdfViewer default toolbar in a custom toolbar along with the save button.
-
-[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Toolbar/Custom%20Toolbar/Custom%20Toolbar%20-%20%20SfPdfViewer).
+[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Toolbar/Custom%20Toolbar/Primary%20Custom%20Toolbar-%20SfPdfViewer/Without-Default-Options).
 
 ## How to customize the Primary Toolbar with default options
 
@@ -345,7 +341,7 @@ You can include both `ToolbarItems` and `CustomToolbarItems` within the PDF View
 ```
 ![Blazor PDFViewer with Custom Toolbar](./images/primary-toolbar-customization-with-default-toolbaritems.png)
 
-[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Toolbar/Custom%20Toolbar/Custom%20toolbar%20with%20PNG%20image%20-%20SfPdfViewer).
+[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Toolbar/Custom%20Toolbar/Primary%20Custom%20Toolbar-%20SfPdfViewer/With-Default-Options).
 
 ## How modify the toolbar Icons in the Primary Toolbar
 
@@ -403,6 +399,6 @@ You can customize the appearance of the toolbar icons in the primary toolbar cus
 </style> 
 
 ```
-[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Toolbar/Custom%20Toolbar/Custom%20toolbar%20with%20PNG%20image%20-%20SfPdfViewer).
+[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Toolbar/Custom%20Toolbar/Primary%20Custom%20Toolbar-%20SfPdfViewer/Icon-Style-Change).
 
 N> This is applicable only for custom toolbar.
