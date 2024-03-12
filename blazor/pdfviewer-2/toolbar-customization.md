@@ -182,11 +182,11 @@ The following code snippet explains how to show or hide annotation toolbar using
 
 ## Primary Toolbar Customization
 
-You can modify the primary toolbar options by rearrange the toolbar options, Disable the default options of toolbar and add new items, adding the new item in particular index with existing toolbar options.
+You have the capability to modify the primary toolbar options by rearranging them, disabling default options and adding new items and moreover, you can specify the index at which to add a new item within the existing toolbar options.
 
 ## Rearrange the default options of toolbar
 
-You can rearrange the `ToolbarItems` list by the order of listing the items. The toolbar items show in the given order of the list
+You can adjust the order of the `ToolbarItems` by rearranging how the items are listed. The toolbar will display the items based on the order in which they appear in the list
 
 ```cshtml
 
@@ -224,7 +224,7 @@ You can rearrange the `ToolbarItems` list by the order of listing the items. The
 
 ## Disable the default items and Add new items in Primary Toolbar
 
-You can Modify the Primary Toolbar in the PDF Viewer by Assign the `ToolbarItems` as null and Create PdfToolbarItem list which Contains RenderFragment and Index for the Toolbar Items. Assign the list to the property `CustomToolbarItems`.
+To customize the Primary Toolbar in the PDF Viewer, you can achieve this by setting the `ToolbarItems` property to null and creating a list of `PdfToolbarItem` objects. Each PdfToolbarItem contains a **RenderFragment** and an **Index** for positioning the toolbar items. Finally, assign this list to the `CustomToolbarItems` property. 
 
 ```cshtml
 
@@ -332,7 +332,7 @@ You can Modify the Primary Toolbar in the PDF Viewer by Assign the `ToolbarItems
 
 ## How to customize the Primary Toolbar with default options
 
-You can include both `ToolbarItems` and `CustomToolbarItems` within the PDF Viewer. The index position at the `CustomToolbarItems` list is used to add the items in the list of `ToolbarItems`.
+You can implement the both `ToolbarItems` and `CustomToolbarItems`. The `CustomToolbarItems` list allows you to specify items with their respective index positions, which are then incorporated into the ToolbarItems list accordingly. 
 
 ```cshtml
 
@@ -377,7 +377,7 @@ You can include both `ToolbarItems` and `CustomToolbarItems` within the PDF View
 
 ## How modify the toolbar Icons in the Primary Toolbar
 
-You can customize the appearance of the toolbar icons in the primary toolbar customization with the icons style.
+You can customize the appearance of the toolbar icons. The below code illustrates how to create custom toolbar with custom toolbar icon.
 
 ```cshtml
 
@@ -416,21 +416,26 @@ You can customize the appearance of the toolbar icons in the primary toolbar cus
 } 
 
 <style> 
-    .e-icons e-chevron-up::before { 
-        content: '\e70d'; 
-    } 
-    .e-icons e-chevron-down::before { 
-        content: '\e76a'; 
-    } 
-    .e-icons e-download::before { 
-        content: '\e75d'; 
-    } 
-    .e-pv-print-document-icon::before { 
-        content: '\e743'; 
-    } 
+    .e-icons.e-chevron-up::before {
+        content: '\e87a';
+    }
+
+    .e-icons.e-chevron-down::before {
+        content: '\e70d';
+    }
+
+    .e-icons.e-download::before {
+        content: '\e7a0';
+    }
+
+    .e-icons.e-save::before {
+        content: '\e7a8'
+    }
 </style> 
 
 ```
+![Blazor PDFViewer with Custom Toolbar](./images/primary-toolbar-customization-icon-change.png)
+
 [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Toolbar/Custom%20Toolbar/Primary%20Custom%20Toolbar-%20SfPdfViewer/Icon-Style-Change).
 
 N> This is applicable only for custom toolbar.
