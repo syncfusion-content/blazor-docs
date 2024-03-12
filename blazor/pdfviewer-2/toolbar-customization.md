@@ -188,14 +188,14 @@ You can modify the primary toolbar options by rearrange the toolbar options, Dis
 
 You can Modify the Primary Toolbar in the PDF Viewer by Assign the `ToolbarItems` as null and Create PdfToolbarItem list which Contains RenderFragment and Index for the Toolbar Items. Assign the list to the property `CustomToolbarItems`.
 
+{% highlight razor hl_lines="9 12" %}
 ```cshtml
-{% highlight hl_lines="5" %}
 
 @using Syncfusion.Blazor.SfPdfViewer; 
 @using Syncfusion.Blazor.Navigations; 
 
 <SfPdfViewer2 @ref="@Viewer" DocumentPath="@DocumentPath" Height="100%" Width="100%">  
-         <PdfViewerToolbarSettings CustomToolbarItems="@CustomToolbarItems" ToolbarItems="null" />   
+         `<PdfViewerToolbarSettings CustomToolbarItems="@CustomToolbarItems" ToolbarItems="null" />`   
          <PdfViewerEvents ToolbarClicked="ClickAction"></PdfViewerEvents>              
 </SfPdfViewer2>  
 
@@ -281,15 +281,17 @@ You can Modify the Primary Toolbar in the PDF Viewer by Assign the `ToolbarItems
     }  
 } 
 
-{% endhighlight %}
 ```
+{% endhighlight %}
 ![Blazor PDFViewer with Custom Toolbar](./images/primary-toolbar-customization-with-save-option.png)
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Toolbar/Custom%20Toolbar/Primary%20Custom%20Toolbar-%20SfPdfViewer/Without-Default-Options).
 
 ## How to customize the Primary Toolbar with default options
 
-You can include both `ToolbarItems` and `CustomToolbarItems` within the PDF Viewer. The following code demonstrate how to add customized items between the default toolbar items by specifying the correct index value for adding them to the toolbar.
+You can include both `ToolbarItems` and `CustomToolbarItems` within the PDF Viewer. The index position at the `CustomToolbaIitems` list is used to add the items in the toolbar.
+
+The following code demonstrate how to rearrange the toolbar with the both `ToolbarItems` and `CustomToolbarItems`.
 
 ```cshtml
 
