@@ -99,3 +99,94 @@ The SfPdfViewer2 control provides an option to disable the sticky note annotatio
 }
 
 ```
+
+## Add sticky note annotation programmatically
+
+The Blazor SfPdfViewer offers the capability to programmatically add the sticky note annotation within the SfPdfViewer control using the [AddAnnotationAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_AddAnnotationAsync_Syncfusion_Blazor_SfPdfViewer_PdfAnnotation_) method.
+
+Below is an example demonstrating how you can use this method to add sticky note annotation to a PDF document:
+
+
+```cshtml
+
+@using Syncfusion.Blazor.Navigations;
+@using Syncfusion.Blazor.SfPdfViewer
+
+<SfButton OnClick="@AddStickyNoteAnnotationAsync">Add StickyNote Annotation</SfButton>
+<SfPdfViewer2 Width="100%" Height="100%" DocumentPath="@DocumentPath" @ref="@Viewer" />
+
+@code {
+    SfPdfViewer2 Viewer;
+    public string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
+
+    public async void AddStickyNoteAnnotationAsync(MouseEventArgs args)
+    {
+        PdfAnnotation annotation = new PdfAnnotation();
+        // Set the annotation type sticky note
+        annotation.Type = AnnotationType.StickyNotes;
+        // Set the PageNumber starts from 0. So, if set 2 it represents the page 3.
+        annotation.PageNumber = 2;
+
+        // Bound of the sticky note annotation
+        annotation.Bound = new Bound();
+        annotation.Bound.X = 200;
+        annotation.Bound.Y = 150;
+        annotation.Bound.Width = 50;
+        annotation.Bound.Height = 50;
+        // Add sticky note annotation
+        await Viewer.AddAnnotationAsync(annotation);
+    }
+}
+
+```
+
+This code will add a sticky note annotation to the third page of the PDF document.
+
+![Programmatically Added Sticky Note Annotation in Blazor SfPdfViewer](../images/blazor-sfpdfviewer-programmatically-add-stickynote-annotation.png)
+
+## Edit sticky note annotation programmatically
+
+The Blazor SfPdfViewer offers the capability to programmatically edit the sticky note annotation within the SfPdfViewer control using the [EditAnnotationAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_EditAnnotationAsync_Syncfusion_Blazor_SfPdfViewer_PdfAnnotation_) method.
+
+Below is an example demonstrating how you can utilize this method to edit the StickyNote annotation programmatically:
+
+```cshtml
+
+@using Syncfusion.Blazor.Buttons
+@using Syncfusion.Blazor.SfPdfViewer
+
+<SfButton OnClick="@EditStickyNoteAnnotationAsync">Edit StickyNote Annotation</SfButton>
+<SfPdfViewer2 Width="100%" Height="100%" DocumentPath="@DocumentPath" @ref="@Viewer" />
+
+@code {
+    SfPdfViewer2 Viewer;
+    public string DocumentPath { get; set; } = "wwwroot/Data/DynamicStampAnnotation.pdf";
+
+    public async void EditStickyNoteAnnotationAsync(MouseEventArgs args)
+    {
+        // Get annotation collection
+        List<PdfAnnotation> annotationCollection = await Viewer.GetAnnotationsAsync();
+        // Select the annotation want to edit
+        PdfAnnotation annotation = annotationCollection[0];
+        // Change the position of the sticky note annotation
+        annotation.Bound.X = 100;
+        annotation.Bound.Y = 100;
+        // Change the width and height of the sticky note annotation
+        annotation.Bound.Width = 75;
+        annotation.Bound.Height = 75;
+        // Change the Opacity (0 to 1) of sticky note annotation
+        annotation.Opacity = 0.5;
+        // Edit the sticky note annotation
+        await Viewer.EditAnnotationAsync(annotation);
+    }
+}
+
+```
+
+This code snippet will edit the sticky note annotation programmatically within the SfPdfViewer control.
+
+![Programmatically Edit Sticky Note Annotation in Blazor SfPdfViewer](../images/blazor-sfpdfviewer-programmatically-edit-stickynote-annotation.png)
+
+## See also
+
+* [How to delete the annotation programmatically](./text-markup-annotation#delete-annotation-programmatically)
