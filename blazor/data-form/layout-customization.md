@@ -68,6 +68,29 @@ The below code part explains how to configure the `LabelPosition` in DataForm co
 {% endhighlight %}
 {% endtabs %}
 
+## Floating label 
+
+The DataForm component allows you to float the label to the top of the input field when the input field is focused, by using the [EnableFloatingLabel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataForm.SfDataForm.html#Syncfusion_Blazor_DataForm_SfDataForm_EnableFloatingLabel) property.The below code example and gif demonstration illustrates how to use the `EnableFloatingLabel` property in DataForm component.
+
+{% tabs %}
+{% highlight razor tabtitle="Razor"  %}
+
+{% include_relative code-snippet/layout-customization/floating-label.razor %}
+
+{% endhighlight %}
+
+{% highlight csharp tabtitle="C#" %}
+
+{% include_relative code-snippet/layout-customization/floating-label.cs %}
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![Blazor DataForm Floating Label](images/blazor_dataform_floating_label.gif)
+
+N> The floating label feature is only applicable when the [LabelPosition](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataForm.SfDataForm.html#Syncfusion_Blazor_DataForm_SfDataForm_LabelPosition) is set to [FormLabelPosition.Top](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataForm.FormLabelPosition.html#Syncfusion_Blazor_DataForm_FormLabelPosition_Top).
+
 ## Change the form width 
 
 The DataForm component allows you to customize the width of the form container by using the [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataForm.SfDataForm.html#Syncfusion_Blazor_DataForm_SfDataForm_Width) property.
