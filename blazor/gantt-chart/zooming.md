@@ -89,7 +89,7 @@ In the Gantt chart, the zoom-in and zoom-out actions are performed based on the 
     private GanttZoomTimelineSettings[] zoomingLevel = new GanttZoomTimelineSettings[]
     {
             new GanttZoomTimelineSettings { TopTier = new GanttTopTierSettings { Unit = TimelineViewMode.Month, Format = "MMM yyyy", Count = 1 }, BottomTier = new GanttBottomTierSettings { Unit = TimelineViewMode.Week, Format = "MMM yy", Count = 1 }, TimelineUnitSize = 66, TimelineViewMode = TimelineViewMode.Month, WeekStartDay = 0, UpdateTimescaleView = true, WeekendBackground = null, ShowTooltip = true, Level = 0 },
-            new GanttZoomTimelineSettings { TopTier = new GanttTopTierSettings { Unit = TimelineViewMode.Month, Format = "MMM yyyy", Count = 1 }, BottomTier = new GanttBottomTierSettings { Unit = TimelineViewMode.Week, Format = "dd MMM", Count = 1}, TimelineUnitSize = 99, TimelineViewMode = TimelineViewMode.Month, WeekStartDay = 0, UpdateTimescaleView = true, WeekendBackground = null, ShowTooltip = true, Level = 1 }, 
+            new GanttZoomTimelineSettings { TopTier = new GanttTopTierSettings { Unit = TimelineViewMode.Month, Format = "MMM yyyy", Count = 1 }, BottomTier = new GanttBottomTierSettings { Unit = TimelineViewMode.Week, Format = "dd MMM", Count = 1}, TimelineUnitSize = 99, TimelineViewMode = TimelineViewMode.Month, WeekStartDay = 0, UpdateTimescaleView = true, WeekendBackground = null, ShowTooltip = true, Level = 1 },
             new GanttZoomTimelineSettings { TopTier = new GanttTopTierSettings { Unit = TimelineViewMode.Week, Format = "MMM dd yyyy", Count = 1 }, BottomTier = new GanttBottomTierSettings { Unit = TimelineViewMode.Day, Format = "dd", Count = 1 }, TimelineUnitSize = 33, TimelineViewMode = TimelineViewMode.Month, WeekStartDay = 0, UpdateTimescaleView = true, WeekendBackground = null, ShowTooltip = true, Level = 2 },
             new GanttZoomTimelineSettings { TopTier = new GanttTopTierSettings { Unit = TimelineViewMode.Week, Format = "MMM dd yyyy", Count = 1 }, BottomTier = new GanttBottomTierSettings { Unit = TimelineViewMode.Day, Format = "dd", Count = 1 }, TimelineUnitSize = 66, TimelineViewMode = TimelineViewMode.Week, WeekStartDay = 0, UpdateTimescaleView = true, WeekendBackground = null, ShowTooltip = true, Level = 3 },
             new GanttZoomTimelineSettings { TopTier = new GanttTopTierSettings { Unit = TimelineViewMode.Week, Format = "MMM dd yyyy", Count = 1 }, BottomTier = new GanttBottomTierSettings { Unit = TimelineViewMode.Day, Format = "dd", Count = 1 }, TimelineUnitSize = 99, TimelineViewMode = TimelineViewMode.Week, WeekStartDay = 0, UpdateTimescaleView = true, WeekendBackground = null, ShowTooltip = true, Level = 4 },
@@ -137,7 +137,7 @@ In the Gantt chart, the zoom-in and zoom-out actions are performed based on the 
 
 ## Resetting zooming levels using method
 
-In Gantt chart, you can resets the zoom level to its initial state, as configured during the initial rendering after performing zooming actions like `ZoomIn`, `ZoomOut`, and `ZoomToFit` by [ResetZoomAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_ResetZoomAsync) method. 
+In Gantt chart, you can reset the zoom level to its initial state, as configured during the initial rendering, after performing zooming actions like ZoomIn, ZoomOut, and ZoomToFit, using [ResetZoomAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_ResetZoomAsync) method.
 
 ```cshtml
 @using Syncfusion.Blazor.Gantt
@@ -190,6 +190,5 @@ In Gantt chart, you can resets the zoom level to its initial state, as configure
     }
 }
 ```
-
 
 ![Resetting zooming levels in Blazor Gantt Chart](images/blazor-gantt-chart-zooming-reset.gif)
