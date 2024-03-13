@@ -101,16 +101,16 @@ A tooltip is used to display more information about a polygon shape during a mou
 
 The following properties are available in the [MapsPolygonTooltipSettings]() to customize the tooltip of the Maps component.
 
-* [Fill]() - Applies the color of the tooltip in the polygon shape.
-* [BorderColor]() - To change the color of the border of the tooltip in the polygon shape.
-* [BorderWidth]() - To change the width of the border of the tooltip in the polygon shape.
-* [BorderOpacity]() - To change the opacity of the border of the tooltip in the polygon shape.
-* [FontFamily]() - To change the font family of the text in the tooltip of the polygon shape.
-* [FontWeight]() - To change the font weight of the text in the tooltip of the polygon shape.
-* [FontStyle]() - To change the font style of the text in the tooltip of the polygon shape.
-* [FontColor]() - To change the font color of the text in the tooltip of the polygon shape.
-* [FontSize]() - To change the font size of the text in the tooltip of the polygon shape.
-* [FontOpacity]() - To change the opacity of the text in the tooltip of the polygon shape.
+* [Fill]() - Applies the color of the tooltip of the polygon shape..
+* [BorderColor]() - It is used to change the color of the border of the tooltip of the polygon shape.
+* [BorderWidth]() - It is used to change the width of the border of the tooltip of the polygon shape.
+* [BorderOpacity]() - It is used to change the opacity of the border of the tooltip of the polygon shape.
+* [FontFamily]() - It is used to change the font family of the text in the tooltip of the polygon shape.
+* [FontWeight]() - It is used to change the font weight of the text in the tooltip of the polygon shape.
+* [FontStyle]() - It is used to change the font style of the text in the tooltip of the polygon shape.
+* [FontColor]() - It is used to change the font color of the text in the tooltip of the polygon shape.
+* [FontSize]() - It is used to change the font size of the text in the tooltip of the polygon shape.
+* [FontOpacity]() - It is used to change the opacity of the text in the tooltip of the polygon shape.
 
 
 ```cshtml
