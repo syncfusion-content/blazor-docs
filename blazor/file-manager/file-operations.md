@@ -873,20 +873,12 @@ The following example demonstrates how to define custom sort comparer function t
 @using Syncfusion.Blazor.FileManager
 @using System.Text.RegularExpressions;
 
-<SfFileManager @ref="fileObj" TValue="FileManagerDirectoryContent" View="ViewType.Details">
+<SfFileManager @ref="fileObj" TValue="FileManagerDirectoryContent" SortComparer="new NameCustomComparer()">
     <FileManagerAjaxSettings Url="http://localhost:62869/api/FileManager/FileOperations"
                              UploadUrl="http://localhost:62869/api/FileManager/Upload"
                              DownloadUrl="http://localhost:62869/api/FileManager/Download"
                              GetImageUrl="http://localhost:62869/api/FileManager/GetImage">
     </FileManagerAjaxSettings>
-    <FileManagerDetailsViewSettings>
-        <FileManagerColumns>
-            <FileManagerColumn Field="Name" HeaderText="Name" SortComparer="new NameCustomComparer()"></FileManagerColumn>
-            <FileManagerColumn Field="DateModified" Format="MM/dd/yyyy h:mm tt" HeaderText="Modified"></FileManagerColumn>
-            <FileManagerColumn Field="Size" HeaderText="Size">
-            </FileManagerColumn>
-        </FileManagerColumns>
-    </FileManagerDetailsViewSettings>
 </SfFileManager>
 
 @code {
@@ -898,8 +890,10 @@ The following example demonstrates how to define custom sort comparer function t
         {
             FileManagerDirectoryContent XRowDataToCompare1 = (FileManagerDirectoryContent)XRowDataToCompare;
             FileManagerDirectoryContent YRowDataToCompare1 = (FileManagerDirectoryContent)YRowDataToCompare;
-            dynamic reference = XRowDataToCompare1.GetType().GetProperty("Name").GetValue(XRowDataToCompare1, null); // Assuming Value property holds the value of the column
-            dynamic comparer = YRowDataToCompare1.GetType().GetProperty("Name").GetValue(YRowDataToCompare1, null); // Assuming Value property holds the value of the column
+			// Assuming Value property holds the value of the column
+            dynamic reference = XRowDataToCompare1.GetType().GetProperty("Name").GetValue(XRowDataToCompare1, null);
+			// Assuming Value property holds the value of the column
+            dynamic comparer = YRowDataToCompare1.GetType().GetProperty("Name").GetValue(YRowDataToCompare1, null);
             bool referenceIsFile = XRowDataToCompare1.IsFile;
             bool comparerIsFile = YRowDataToCompare1.IsFile;
 
