@@ -95,22 +95,22 @@ The following example shows how to customize the polygon shape over the geometry
 
 ## Tooltip for polygon shape
 
-Tooltip is used to display more information about a polygon shape on mouse over or touch end event. This can be enabled by setting the [`Visible`]() property to **true** in the  [`MapsPolygonTooltipSettings`](). Additonally, you need to set the [`TooltipText`]() property in the [`MapsPolygon`](../api/maps/polygonSettingsModel) to show the tooltip text separately for each polygon shape, if you add 'n' numbers of polygon shapes.
+A tooltip is used to display more information about a polygon shape during a mouse or touch interaction. Tooltips and tooltip templates can be enabled by setting the [Visible]() property to **true** in the [MapsPolygonTooltipSettings](). Additionally, you need to set the desired content as a value to the [TooltipText]() property in the [MapsPolygon](../api/maps/polygonSettingsModel) tag to show the tooltip. If you add 'n' numbers of polygon shapes, you can add the `TooltipText` property to each polygon, which will display the tooltip for the associated polygon shape.
 
 ### Tooltip customization
 
-The following properties are available in the [`MapsPolygonTooltipSettings`]() to customize the tooltip of the Maps component.
+The following properties are available in the [MapsPolygonTooltipSettings]() to customize the tooltip of the Maps component.
 
-* [`Fill`]() - Applies the color of the tooltip in the polygon shape.
-* [`BorderColor`]() - To customize the color of the border of the tooltip in the polygon shape.
-* [`BorderWidth`]() - To customize the width of the border of the tooltip in the polygon shape.
-* [`BorderOpacity`]() - To customize the opacity of the border of the tooltip in the polygon shape.
-* [`FontFamily`]() - To customize the font family of the text in the tooltip of the polygon shape.
-* [`FontWeight`]() - TTo customize the font weight of the text in the tooltip of the polygon shape.
-* [`FontStyle`]() - To customize the font style of the text in the tooltip of the polygon shape.
-* [`FontColor`]() - To customize the font color of the text in the tooltip of the polygon shape.
-* [`FontSize`]() - To customize the font size of the text in the tooltip of the polygon shape.
-* [`FontOpacity`]() - TTo customize the opacity of the text in the tooltip of the polygon shape.
+* [Fill]() - Applies the color of the tooltip in the polygon shape.
+* [BorderColor]() - To change the color of the border of the tooltip in the polygon shape.
+* [BorderWidth]() - To change the width of the border of the tooltip in the polygon shape.
+* [BorderOpacity]() - To change the opacity of the border of the tooltip in the polygon shape.
+* [FontFamily]() - To change the font family of the text in the tooltip of the polygon shape.
+* [FontWeight]() - To change the font weight of the text in the tooltip of the polygon shape.
+* [FontStyle]() - To change the font style of the text in the tooltip of the polygon shape.
+* [FontColor]() - To change the font color of the text in the tooltip of the polygon shape.
+* [FontSize]() - To change the font size of the text in the tooltip of the polygon shape.
+* [FontOpacity]() - To change the opacity of the text in the tooltip of the polygon shape.
 
 
 ```cshtml
@@ -188,7 +188,7 @@ The following properties are available in the [`MapsPolygonTooltipSettings`]() t
 
 ### Tooltip template
 
-The HTML element can be rendered in the tooltip of the Maps using the [`TooltipTemplate`]() property of the [`MapsPolygon`](../api/maps/polygonSettingsModel).  If you add 'n' numbers of polygon shapes, you may add the `TooltipTemplate` property to each polygon group, which will display the tooltip data for the associated polygon shape.
+Any HTML element can be rendered in the tooltip of the polygon shapes using the [TooltipTemplate]()property of the [MapsPolygon](../api/maps/polygonSettingsModel). If you add 'n' numbers of polygon shapes, you can add the `TooltipTemplate` property to each polygon, which will display the tooltip for the associated polygon shape.
 
 ```cshtml
 @using Syncfusion.Blazor.Maps
@@ -198,7 +198,7 @@ The HTML element can be rendered in the tooltip of the Maps using the [`TooltipT
         <MapsLayer ShapeData='new {dataOptions= "https://cdn.syncfusion.com/maps/map-data/world-map.json"}' TValue="string">
             <MapsPolygons>
                 <MapsPolygon Points="Points" Fill="red" Opacity="0.7" BorderColor="green" BorderWidth="2" BorderOpacity="0.7">
-                    <TooltipTemplate> <div style="width:200px;"> Country Name : Saudi Arabia</div> </TooltipTemplate>
+                    <TooltipTemplate> <div style="width:240px;border: 2px solid #000;padding: 10px;fill:white;font-weight:bold;font-size:15px;"> Country Name : Saudi Arabia</div> </TooltipTemplate>
                 </MapsPolygon>
                 <MapsPolygonTooltipSettings Visible="true"></MapsPolygonTooltipSettings>
             </MapsPolygons>
