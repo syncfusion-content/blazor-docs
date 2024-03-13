@@ -75,17 +75,17 @@ The following code snippet explains how to create custom command.
     { 
         if(args.Modifiers == PdfModifierKeys.Shift && args.Key == PdfKeys.W) 
         { 
-            pdf.FitToWidthAsync(); 
+            pdfViewer.FitToWidthAsync(); 
         } 
         else if (args.Modifiers == PdfModifierKeys.Alt && args.Key == PdfKeys.P) 
         { 
-            pdf.FitToPageAsync(); 
+            pdfViewer.FitToPageAsync(); 
         }  
     } 
 } 
 
 ```
-[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Load%20and%20Save/Load%20a%20PDF%20document%20using%20created%20event-SfPdfViewer)
+[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/Keyboard%20accessibility/Command%20Manager)
 
 ## See also
 
