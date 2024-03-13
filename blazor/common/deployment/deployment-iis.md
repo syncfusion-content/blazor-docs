@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Deploy Blazor Server App to IIS | Syncfusion
+title: Deploy a Blazor Web App to IIS | Syncfusion
 description: Learn here all about deploying the Blazor application with Syncfusion Blazor Components to IIS server.
 platform: Blazor
 component: Common
 documentation: ug
 ---
 
-# Deploy Blazor Server App to IIS server
+# Deploy Blazor Web App to IIS server
 
-This section provides information about deploying a Blazor Server applications with the Syncfusion Blazor components to IIS server.
+This section provides information about deploying a Blazor Web applications with the Syncfusion Blazor components to IIS server.
 
 Refer to [Host and deploy ASP.NET Core Blazor](https://learn.microsoft.com/en-us/aspnet/core/blazor/host-and-deploy/?view=aspnetcore-7.0&tabs=visual-studio) topic for more information.
 
@@ -43,4 +43,4 @@ Set the physical path to the location where your sample application is developed
 
 ## See also
 
-Refer [here](https://learn.microsoft.com/en-us/azure/app-service/quickstart-dotnetcore?tabs=net70&pivots=development-environment-vs#publish-your-web-app) for publishing the application to Azure App Service using Visual Studio.
+Refer [here](https://learn.microsoft.com/en-us/aspnet/core/tutorials/publish-to-iis?view=aspnetcore-7.0&tabs=visual-studio) for publishing the application to IIS Service using Visual Studio.
