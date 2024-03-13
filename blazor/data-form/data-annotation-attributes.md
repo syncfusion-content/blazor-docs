@@ -41,6 +41,8 @@ public string FirstName { get; set; }
 {% endhighlight %}
 {% endtabs %}
 
+N> DataForm gives priority to the [ShortName](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.displayattribute.shortname?view=net-8.0#system-componentmodel-dataannotations-displayattribute-shortname) property over the [Name](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.displayattribute.name?view=net-8.0#system-componentmodel-dataannotations-displayattribute-name)  property of `DisplayAttribute` and [LabelText](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataForm.FormItem.html#Syncfusion_Blazor_DataForm_FormItem_LabelText) property of the `FormItem`.
+
 ### Prompt property
 
 The [Prompt](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.displayattribute.prompt?view=net-5.0#system-componentmodel-dataannotations-displayattribute-prompt) property is used to specify the prompt for a property. The prompt is used as the placeholder for the corresponding editor in the DataForm component. 
@@ -234,24 +236,24 @@ The [DataTypeAttribute](https://learn.microsoft.com/en-us/dotnet/api/system.comp
 
 | Data type | Editor type | Image |
 | ------------ | ----------------------- | ------ |
-| [DataType.Date](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.datatype.date?view=net-5.0) | [SfDatePicker](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfDatePicker.html) | ![Blazor DataForm DataType.Date](images/blazor_dataform_data_type_date.png) |
+| `DataType.Date` | [SfDatePicker](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfDatePicker-1.html) | ![Blazor DataForm DataType.Date](images/blazor_dataform_data_type_date.png) |
 
-| [DataType.Time](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.datatype.time?view=net-5.0) | [SfTimePicker](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfTimePicker.html) |![Blazor DataForm DataType.Time](images/blazor_dataform_data_type_time.png) |
+| [DataType.Time](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.datatype.time?view=net-5.0) | [SfTimePicker](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfTimePicker-1.html) |![Blazor DataForm DataType.Time](images/blazor_dataform_data_type_time.png) |
 
-| [DataType.DateTime](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.datatype.datetime?view=net-5.0) | [SfDateTimePicker](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfDateTimePicker.html) |![Blazor DataForm DataType.DateTime](images/blazor_dataform_data_type_date_time.png) |
+| `DataType.DateTime` | [SfDateTimePicker](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfDateTimePicker-1.html) |![Blazor DataForm DataType.DateTime](images/blazor_dataform_data_type_date_time.png) |
 
-| [DataType.Currency](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.datatype.currency?view=net-5.0) | [SfNumericTextBox](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfNumericTextBox.html) |![Blazor DataForm DataType.Currency](images/blazor_dataform_data_type_currency.png) |
+| `DataType.Currency` | [SfNumericTextBox](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfNumericTextBox-1.html) |![Blazor DataForm DataType.Currency](images/blazor_dataform_data_type_currency.png) |
 
-| [DataType.PhoneNumber](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.datatype.phonenumber?view=net-5.0) | [SfTextBox](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfMaskedTextBox.html) |![Blazor DataForm DataType.PhoneNumber](images/blazor_dataform_data_type_phone.png) |
+| `DataType.PhoneNumber` | [SfMaskedTextBox](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfMaskedTextBox.html) |![Blazor DataForm DataType.PhoneNumber](images/blazor_dataform_data_type_phone.png) |
 
-| [DataType.CreditCard](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.datatype.creditcard?view=net-5.0) | [SfMaskedTextBox](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfMaskedTextBox.html) |![Blazor DataForm DataType.CreditCard](images/blazor_dataform_data_type_credit_card.png) |
+| `DataType.CreditCard` | [SfMaskedTextBox](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfMaskedTextBox.html) |![Blazor DataForm DataType.CreditCard](images/blazor_dataform_data_type_credit_card.png) |
 
-| [DataType.MultilineText](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.datatype.multilinetext?view=net-5.0) | [SfTextBox](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextBox.html) | ![Blazor DataForm DataType.MultilineText](images/blazor_dataform_data_type_multiline_text.png) |
+| `DataType.MultilineText` | [SfTextBox](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextBox.html) | ![Blazor DataForm DataType.MultilineText](images/blazor_dataform_data_type_multiline_text.png) |
 
 
-| [DataType.Password](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.datatype.password?view=net-5.0) | [SfTextBox](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextBox.html) | ![Blazor DataForm DataType.Password](images/blazor_dataform_data_type_password.png) |
+| `DataType.Password` | [SfTextBox](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextBox.html) | ![Blazor DataForm DataType.Password](images/blazor_dataform_data_type_password.png) |
 
-| <ul><li>[DataType.EmailAddress](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.datatype.emailaddress?view=net-5.0)</li><li>[DataType.Url](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.datatype.url?view=net-5.0)</li><li>[DataType.Text](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.datatype.text?view=net-5.0)</li><li> [DataType.ImageUrl](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.datatype.imageurl?view=net-5.0)</li><li> [DataType.Html](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.datatype.html?view=net-5.0)</li></ul> | [SfTextBox](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextBox.html) |![Blazor DataForm DataType.EmailAddress](images/blazor_dataform_data_type_text.png) |
+| <ul><li>`DataType.EmailAddress`</li><li>`DataType.Url`</li><li>`DataType.Text`</li><li> `DataType.ImageUrl`</li><li> `DataType.Html`</li></ul> | [SfTextBox](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextBox.html) |![Blazor DataForm DataType.EmailAddress](images/blazor_dataform_data_type_text.png) |
 
 If any other data type is specified other than the above table, the DataForm component uses the [SfTextBox](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextBox.html) editor by default.
 
@@ -281,7 +283,7 @@ public string ID { get; set; }
 
 ## Bindable attribute
 
-The [BindableAttribute](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.bindableattribute?view=net-5.0) class is used to specify whether the property should be automatically generated as a field in the DataForm component similar to the AutoGenerateField property in the Display attribute. If set to false the property will not be generated as a field in the DataForm component.
+The [BindableAttribute](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.bindableattribute?view=net-5.0) class is used to specify whether the property should be automatically generated as a field in the DataForm component similar to the AutoGenerateField property in the Display attribute. If set to false the property will not be generated as a field in the DataForm component.
 
 {% tabs %}
 {% highlight C# tabtitle="C#"  %}  
@@ -295,7 +297,7 @@ public string ID { get; set; }
 
 ## Read only attribute
 
-The [ReadOnlyAttribute](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.readonlyattribute?view=net-5.0) class is used to specify whether the property should be read-only in the DataForm component. 
+The [ReadOnlyAttribute](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.readonlyattribute?view=net-5.0) class is used to specify whether the property should be read-only in the DataForm component. 
 
 {% tabs %}
 {% highlight C# tabtitle="C#"  %}
