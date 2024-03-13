@@ -963,7 +963,7 @@ This section shows how to get the node from corresponding ID. Using the `GetTree
 @using Syncfusion.Blazor.Buttons
 <SfButton OnClick="GetData">Get TreeData</SfButton>
 
-<SfDropDownTree @ref="tree" TItem="EmployeeData" TValue="string" Placeholder="Select an employee" Width="500px" Value="selecteditem" ShowCheckBox AutoUpdateCheckState Mode="DdtVisualMode.Box" TextWrap=false>
+<SfDropDownTree @ref="tree" TItem="EmployeeData" TValue="string" Placeholder="Select an employee" Width="500px" Value="selecteditem">
     <DropDownTreeField TItem="EmployeeData" DataSource="Data" ID="Id" Text="Name" HasChildren="HasChild" ParentID="PId" Selected="Selected" IsChecked="IsChecked"></DropDownTreeField>
 
 </SfDropDownTree>
