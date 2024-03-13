@@ -148,7 +148,8 @@ The Grid component followed the [keyboard interaction](https://www.w3.org/WAI/AR
 <kbd>Ctrl + Up Arrow</kbd> | <kbd>Command + Up Arrow</kbd> | Collapses all the visible groups.
 <kbd>Ctrl + Down Arrow</kbd> | <kbd>Command + Down Arrow</kbd> | Expands all the visible groups.
 <kbd>Ctrl + Space</kbd> | <kbd>Ctrl + Space</kbd> | Performs grouping when focused on a header element.
-<kbd>Enter</kbd> | <kbd>Enter</kbd> | If the current cell is an expand/collapse cell then expands/collapses the current group/detailrow/childgrid.
+<kbd>Alt + Up Arrow</kbd> | <kbd>Alt + Up Arrow</kbd> | Collapses the selected group.
+<kbd>Alt + Down Arrow</kbd> | <kbd>Alt + Down Arrow</kbd> | Expands the selected group.
 
 <b>Print</b>
 
