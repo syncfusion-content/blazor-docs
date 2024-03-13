@@ -63,6 +63,7 @@ The Accumulation chart control followed the [keyboard interaction](https://www.w
 | <kbd>Down/Left Arrow</kbd> | Moves the focus to the legend left side from the selected legend. |
 | <kbd>Up/Right Arrow</kbd> | Moves the focus to the legend right side from the selected legend. |
 | <kbd>Enter/Space</kbd> | Toggles the visibility of the corresponding series. |
+| <kbd>ESC</kbd> | Cancel the tooltip for the data point. |
 | <kbd>Ctrl + P</kbd> | Prints the Accumulation chart. |
 
 ## Ensuring accessibility

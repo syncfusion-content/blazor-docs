@@ -74,7 +74,6 @@ Interaction Keys |Description
 <kbd>UpArrow</kbd> |Moves the focus to the data point right side from the selected point.
 <kbd>Left Arrow</kbd> |Moves the focus to the next series in our Chart component.
 <kbd>Right Arrow</kbd> |Moves the focus to the previous series in our Chart component.
-<kbd>ESC</kbd> |Cancel the tooltip for the data point.
 <kbd>Enter/Space</kbd> |Selects the data point in the series
 <kbd>Down/Left Arrow</kbd> |Moves the focus to the legend left side from the selected legend.
 <kbd>Up/Right Arrow</kbd> | Moves the focus to the legend right side from the selected legend.
