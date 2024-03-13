@@ -15,7 +15,7 @@ This article provides a step-by-step instructions for building `Blazor Web App` 
 
 [Blazor Playground](https://blazor.syncfusion.com/documentation/blazor-playground/overview) allows you to interact with our Blazor components directly in your web browser without need to install any required NuGet packages. By default, the `Syncfusion.Blazor` package is included in this.
 
-{% BlazorPlayground "https://blazorplayground.syncfusion.com/" %}
+[https://blazorplayground.syncfusion.com/](https://blazorplayground.syncfusion.com/)
 
 To use the individual component in Blazor playground, uninstall the existing package and then install the needed NuGet package.
 
@@ -31,40 +31,167 @@ Run the following command to create a new Blazor Web App in a command prompt (Wi
 
 If you set the Authentication Type as `None` and Interactivity location as `Per page/component`, you need to use the following command.
 
-|Interactive<br/> render mode | Command |
-|---|---|
-| server | <pre lang="xml">dotnet new blazor -o BlazorApp -int Server<br/>cd BlazorApp</pre>|
-|WebAssembly|<pre lang="xml">dotnet new blazor -o BlazorApp -int WebAssembly<br/>cd BlazorApp<br/>cd BlazorApp.Client</pre>|
-|Auto|<pre lang="xml">dotnet new blazor -o BlazorApp -int Auto<br/>cd BlazorApp<br/>cd BlazorApp.Client</pre>|
-|None|<pre lang="xml">dotnet new blazor -o BlazorApp -int None<br/>cd BlazorApp</pre>|
+<table>
+<tr>
+<th>Interactive Render Mode</th>
+<th>Command</th>
+</tr>
+<tr>
+<td>Server</td>
+<td>
+{% highlight c# %}
+dotnet new blazor -o BlazorApp -int Server
+{% endhighlight %}
+</td>
+</tr>
+<tr>
+<td>WebAssembly</td>
+<td>
+{% highlight c# %}
+dotnet new blazor -o BlazorApp -int WebAssembly
+{% endhighlight %}
+</td>
+</tr>
+<tr>
+<td>Auto</td>
+<td>
+{% highlight c# %}
+dotnet new blazor -o BlazorApp -int Auto
+{% endhighlight %}
+</td>
+</tr>
+<tr>
+<td>None</td>
+<td>
+{% highlight c# %}
+dotnet new blazor -o BlazorApp -int None
+{% endhighlight %}
+</td>
+</tr>
+</table>
 
 If you set the Authentication Type as `Individual Accounts` and Interactivity location as `Per page/component`, you need to use the following command.
 
-|Interactive<br/> render mode | Command |
-|---|---|
-| server | <pre lang="xml">dotnet new blazor -o BlazorApp -au Individual -int Server<br/>cd BlazorApp</pre>|
-|WebAssembly|<pre lang="xml">dotnet new blazor -o BlazorApp -au Individual -int WebAssembly<br/>cd BlazorApp<br/>cd BlazorApp.Client</pre>|
-|Auto|<pre lang="xml">dotnet new blazor -o BlazorApp -au Individual -int Auto<br/>cd BlazorApp<br/>cd BlazorApp.Client</pre>|
-|None|<pre lang="xml">dotnet new blazor -o BlazorApp -au Individual -int None<br/>cd BlazorApp</pre>|
+<table>
+<tr>
+<th>Interactive Render Mode</th>
+<th>Command</th>
+</tr>
+<tr>
+<td>Server</td>
+<td>
+{% highlight c# %}
+dotnet new blazor -o BlazorApp -au Individual -int Server
+{% endhighlight %}
+</td>
+</tr>
+<tr>
+<td>WebAssembly</td>
+<td>
+{% highlight c# %}
+dotnet new blazor -o BlazorApp -au Individual -int WebAssembly
+{% endhighlight %}
+</td>
+</tr>
+<tr>
+<td>Auto</td>
+<td>
+{% highlight c# %}
+dotnet new blazor -o BlazorApp -au Individual -int Auto
+{% endhighlight %}
+</td>
+</tr>
+<tr>
+<td>None</td>
+<td>
+{% highlight c# %}
+dotnet new blazor -o BlazorApp -au Individual -int None
+{% endhighlight %}
+</td>
+</tr>
+</table>
 
 If you set the Authentication Type as `Individual Accounts` and Interactivity location as `Global`, you need to use the following command.
 
-|Interactive<br/> render mode | Command |
-|---|---|
-| server | <pre lang="xml">dotnet new blazor -o BlazorApp -au Individual -int Server -ai<br/>cd BlazorApp</pre>|
-|WebAssembly|<pre lang="xml">dotnet new blazor -o BlazorApp -au Individual -int WebAssembly -ai<br/>cd BlazorApp<br/>cd BlazorApp.Client</pre>|
-|Auto|<pre lang="xml">dotnet new blazor -o BlazorApp -au Individual -int Auto -ai<br/>cd BlazorApp<br/>cd BlazorApp.Client</pre>|
-|None|<pre lang="xml">dotnet new blazor -o BlazorApp -au Individual -int None -ai<br/>cd BlazorApp</pre>|
+<table>
+<tr>
+<th>Interactive Render Mode</th>
+<th>Command</th>
+</tr>
+<tr>
+<td>Server</td>
+<td>
+{% highlight c# %}
+dotnet new blazor -o BlazorApp -au Individual -int Server -ai
+{% endhighlight %}
+</td>
+</tr>
+<tr>
+<td>WebAssembly</td>
+<td>
+{% highlight c# %}
+dotnet new blazor -o BlazorApp -au Individual -int WebAssembly -ai
+{% endhighlight %}
+</td>
+</tr>
+<tr>
+<td>Auto</td>
+<td>
+{% highlight c# %}
+dotnet new blazor -o BlazorApp -au Individual -int Auto -ai
+{% endhighlight %}
+</td>
+</tr>
+<tr>
+<td>None</td>
+<td>
+{% highlight c# %}
+dotnet new blazor -o BlazorApp -au Individual -int None -ai
+{% endhighlight %}
+</td>
+</tr>
+</table>
 
 If you set the Authentication Type as `None` and Interactivity location as `Global`, you need to use the following command.
 
-|Interactive<br/> render mode | Command |
-|---|---|
-| server | <pre lang="xml">dotnet new blazor -o BlazorApp -int Server-ai<br/>cd BlazorApp</pre>|
-|WebAssembly|<pre lang="xml">dotnet new blazor -o BlazorApp -int WebAssembly -ai<br/>cd BlazorApp<br/>cd BlazorApp.Client</pre>|
-|Auto|<pre lang="xml">dotnet new blazor -o BlazorApp8 -int Auto -ai<br/>cd BlazorApp<br/>cd BlazorApp.Client</pre>|
-|None|<pre lang="xml">dotnet new blazor -o BlazorApp8 -int None -ai<br/>cd BlazorApp</pre>|
-
+<table>
+<tr>
+<th>Interactive Render Mode</th>
+<th>Command</th>
+</tr>
+<tr>
+<td>Server</td>
+<td>
+{% highlight c# %}
+dotnet new blazor -o BlazorApp -int Server-ai
+{% endhighlight %}
+</td>
+</tr>
+<tr>
+<td>WebAssembly</td>
+<td>
+{% highlight c# %}
+dotnet new blazor -o BlazorApp -int WebAssembly -ai
+{% endhighlight %}
+</td>
+</tr>
+<tr>
+<td>Auto</td>
+<td>
+{% highlight c# %}
+dotnet new blazor -o BlazorApp8 -int Auto -ai
+{% endhighlight %}
+</td>
+</tr>
+<tr>
+<td>None</td>
+<td>
+{% highlight c# %}
+dotnet new blazor -o BlazorApp8 -int None -ai
+{% endhighlight %}
+</td>
+</tr>
+</table>
 
 N> If you want to see more available templates, you need to run the `dotnet new blazor --help` or `dotnet new blazor -h` command.
 
@@ -124,7 +251,7 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 ```html
 <head>
     ....
-    <link href="_content/Syncfusion.Blazor.Themes/material.css" rel="stylesheet" />
+    <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
 </head>
 
 <body>

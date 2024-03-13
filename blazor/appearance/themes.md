@@ -182,11 +182,11 @@ N> If you use individual component styles, you should install the styles of thei
 
 * Open Visual Studio 2022 and click the Extensions in the toolbar.
 
-    ![VS Extension](images/VS_Extension.png)
+    ![VS Extension](images/vs_extension.png)
 
 * Search the `Web Compiler 2022+` in search box and download the extension.
 
-    ![Web Compiler 2022+](images/Web_Compiler.png)
+    ![Web Compiler 2022+](images/web_compiler.png)
 
 * Right-click the `SCSS` file and click the Web Compiler to compile the file.
 
@@ -233,11 +233,11 @@ You can add the `SCSS theme` for Blazor applications through NPM package and com
 
 * Open Visual Studio 2022 and click the Extensions in the toolbar.
 
-    ![VS Extension](images/VS_Extension.png)
+    ![VS Extension](images/vs_extension.png)
 
 * Search the `Web Compiler 2022+` in search box and download the extension.
 
-    ![Web Compiler 2022+](images/Web_Compiler.png)
+    ![Web Compiler 2022+](images/web_compiler.png)
 
 * Install the [Syncfusion Blazor Themes](https://www.npmjs.com/package/@syncfusion/blazor-themes) NPM package using the below command.
 
@@ -258,7 +258,7 @@ You can add the `SCSS theme` for Blazor applications through NPM package and com
 
     **Output:**
 
-    ![Overall Theme Output](images/Overall_Theme_Output.png)
+    ![Overall Theme Output](images/overall_theme_output.png)
 
     For the Calendar (individual) component:
 
@@ -271,11 +271,11 @@ You can add the `SCSS theme` for Blazor applications through NPM package and com
 
     **Output:**
 
-    ![Individual Theme Output](images/Individual_Theme_Output.png)
+    ![Individual Theme Output](images/individual_theme_output.png)
 
 * Then, Right-click the created `SCSS` file and click the `Web Compiler` option to compile the file.
 
-    ![Web Compiler Option](images/Web_Compiler_Option.png)
+    ![Web Compiler Option](images/web_compiler_option.png)
 
 * The `compilerconfig.json` file is created by default. Then, provide the location of the compiled CSS file and include a path in `compilerconfig.json` as shown in the following code snippet.
 

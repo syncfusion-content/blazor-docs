@@ -82,7 +82,7 @@ Here is an example of hue, exposure, and blur fine-tuning using the [`FinetuneIm
 }
 ```
 
-![Blazor Image Editor with Finetune an image](./images/blazor-image-editor-finetune.png)
+![Blazor Image Editor with Finetune an image](./images/blazor-image-editor-finetune.jpg)
 
 ## Finetune value changing event 
 
@@ -94,4 +94,6 @@ FinetuneEventArgs.Finetune - The type of fine-tuning as ImageFinetuneOption to b
 
 FinetuneEventArgs.Value - The fine-tuning value to be applied in the image editor. 
 
-FinetuneEventArgs.Cancel – Specifies a boolean value to cancel the fine-tuning action. 
+FinetuneEventArgs.Cancel – Specifies a boolean value to cancel the fine-tuning action.
+
+N> Please note that the Filter and Finetune features were unavailable on iOS due to the non-functioning CanvasContext.filter property on this platform.

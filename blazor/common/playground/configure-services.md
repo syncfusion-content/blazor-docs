@@ -6,15 +6,16 @@ platform: Blazor
 component: Common
 documentation: ug
 ---
-# Configuring services in Blazor Playground
+# Configuring Services in Blazor Playground
 
-You an add or modify services in Blazor Playground using the "Services" button in the app bar.
+You can add or modify services in Blazor Playground using the `Services` button in the app bar.
 * Access the ConfigureServices method in Program.cs for adding new injectable services or overriding existing service configurations.
 * Register the created service class in the ConfigureServices method.
 * Inject the service into components as needed using dependency injection.
 
 For example 
-1. Add a class file by clicking '+' button and include the following code snippet.
+
+* Add a class file by clicking '+' button and include the following code snippet.
 
 ```csharp
 using System;
@@ -43,7 +44,7 @@ namespace Playground.User
     }
 }
 ```
-2. Click the "Services" button to configure the created class in the Program.cs file. Then, register the services in `ConfigureServices` method.
+* Click the "Services" button to configure the created class in the Program.cs file. Then, register the services in `ConfigureServices` method.
 
 ```csharp
 using System;
@@ -73,7 +74,7 @@ namespace Playground.User
 }
 ```
 
-3. Include the dependency injection in the __Index.razor file.
+* Include the dependency injection in the **__Index.razor** file.
 
 ```csharp
 

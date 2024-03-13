@@ -20,7 +20,7 @@ timestamps
 
 
 
-			 def branchCommit = '"' + 'https://api.github.com/repos/syncfusion-content/blazor-docs/pulls/' + env.pullRequestId + '/files'
+			 def branchCommit = 'https://api.github.com/repos/syncfusion-content/'+env.githubSourceRepoHttpUrl.split('/')[env.githubSourceRepoHttpUrl.split('/').size() - 1]+'/pulls/' + env.pullRequestId + '/files'
 
             String branchCommitDetails = bat returnStdout: true, script: 'curl -H "Accept: application/vnd.github.v3+json" -u SyncfusionBuild:' + env.GithubBuildAutomation_PrivateToken + " " + branchCommit
 
