@@ -461,9 +461,9 @@ Operator |Description |Supported Types
 StartsWith |Checks whether the value begins with the specified value. |String
 EndsWith |Checks whether the value ends with the specified value. |String
 Contains |Checks whether the value contains the specified value. |String
-DoesNotStartsWith |Checks whether the value does not begin with the specified value. |String
-DoesNotEndsWith |Checks whether the value does not end with the specified value. |String
-DoesNotContains |Checks whether the value does not contain the specified value. |String
+DoesNotStartWith |Checks whether the value does not begin with the specified value. |String
+DoesNotEndWith |Checks whether the value does not end with the specified value. |String
+DoesNotContain |Checks whether the value does not contain the specified value. |String
 Equal |Checks whether the value is equal to the specified value. |String &#124; Number &#124; Boolean &#124; Date
 NotEqual |Checks for values not equal to the specified value. |String &#124; Number &#124; Boolean &#124; Date
 GreaterThan |Checks whether the value is greater than the specified value. |Number &#124; Date
