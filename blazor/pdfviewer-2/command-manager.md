@@ -85,7 +85,7 @@ The following code snippet explains how to create custom command.
 } 
 
 ```
-[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/Keyboard%20accessibility/Command%20Manager)
+[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/ES-871339-Command-Manager/Keyboard%20accessibility/Command%20Manager)
 
 ## See also
 
