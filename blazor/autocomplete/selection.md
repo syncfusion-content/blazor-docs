@@ -51,6 +51,26 @@ Change the component value programmatically or externally by the component insta
 
 ![Blazor AutoComplete with pre-select value before](./images/selection/blazor_autocomplete_changing-selected-value.gif)
 
+### ValueChange event
+
+The [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.AutoCompleteEvents-2.html#Syncfusion_Blazor_DropDowns_AutoCompleteEvents_2_ValueChange) event is triggered when the value of the AutoComplete component get changed or modified. Also, it will return the necessary arguments including the current and previously selected or changed value.
+
+{% highlight cshtml %}
+
+{% include_relative code-snippet/selection/valuechange-event.razor %}
+
+{% endhighlight %}
+
+### OnValueSelect event
+
+The [OnValueSelect](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.AutoCompleteEvents-2.html#Syncfusion_Blazor_DropDowns_AutoCompleteEvents_2_OnValueSelect) event is triggered when you select any value in the AutoComplete component. Get the necessary arguments including the [ChangeEventArgs.ItemData](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ChangeEventArgs-2.html#Syncfusion_Blazor_DropDowns_ChangeEventArgs_2_ItemData). Also,  prevent the selection of items by setting the [ChangeEventArgs.Cancel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ChangeEventArgs-2.html#Syncfusion_Blazor_DropDowns_ChangeEventArgs_2_Cancel) property as `true` provided by the event arguments. 
+
+{% highlight cshtml %}
+
+{% include_relative code-snippet/selection/valueselect-event.razor %}
+
+{% endhighlight %}
+
 ## Preselect value with index
 
 Bind the pre-selected value to the component using the [@bind-Index](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_Index) attribute. It binds the respective value present in the specified index position of the datasource.
@@ -69,7 +89,7 @@ The following sample shows how to bind the index on the initial rendering.
 
 ## Autofill the selected value
 
-Specifies whether the input field of the control will automatically suggest and fill in the first matched item as the user types, based on the items in the control's data source. If no matches are found, the input field will not be filled, and no action will occur. The default value of [Autofill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.AutoCompleteModel.html#Syncfusion_Blazor_DropDowns_AutoCompleteModel_Autofill) is `false`.
+The [Autofill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.AutoCompleteModel.html#Syncfusion_Blazor_DropDowns_AutoCompleteModel_Autofill) property specifies whether the input field of the component automatically suggests and fills in the first matched item as the user types, based on the items in the component's data source. If no matches are found, the input field will not be filled, and no action will occur. The default value of `Autofill` is `false`.
 
 {% highlight Razor %}
 
@@ -101,6 +121,14 @@ Focus the component programmatically using the [FocusAsync](https://help.syncfus
 
 ## Prevent reload on form submit
 
+To prevent the page from reloading when using the AutoComplete component inside a form, you can specify the type of the button as "button" by utilizing the `HTMLAttributes` property. This will prevent the page from reloading when the button is clicked.
+
+{% highlight cshtml %}
+
+{% include_relative code-snippet/selection/prevent-reload.razor %}
+
+{% endhighlight %}
+
 ## Programmatically clear the selected value
 
 To clear the Autocomplete value programmatically, use the [ClearAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_ClearAsync) method. This method clears out the selected values from the SfAutocomplete<TValue, TItem> component and sets the [Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_Value) and [Index](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_Index) properties to null.
@@ -113,7 +141,6 @@ To clear the Autocomplete value programmatically, use the [ClearAsync](https://h
 
 ![Blazor AutoComplete with programatically clear value](./images/selection/blazor_autocomplete_with-programmatically-clear-value.gif)
 
-
 ## Programmatically trigger onChange event
 
 Trigger the [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.AutoCompleteEvents-2.html#Syncfusion_Blazor_DropDowns_AutoCompleteEvents_2_ValueChange) event manually by using the instance (taken from @ref attribute) of the [AutoCompleteEvents](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.AutoCompleteEvents-2.html). In the following example, the `ValueChange` event is invoked inside the `Created` event handler. As per the following code, it will trigger once the component is created or rendered on the page.
@@ -124,27 +151,19 @@ Trigger the [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
 
 {% endhighlight %}
 
-## Events
+## Programmatically focus in and focus out the component
 
-### ValueChange event
+In order to trigger the `FocusAsync()` and `FocusOutAsync()` methods using the instance of the autocomplete, you can use buttons. You can bind the click event of the button to the `FocusAsync()` and `FocusOutAsync()` methods. When the button is clicked, it triggers the corresponding method on the autocomplete.
 
-The [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.AutoCompleteEvents-2.html#Syncfusion_Blazor_DropDowns_AutoCompleteEvents_2_ValueChange) event is triggered when the value of the AutoComplete component get changed or modified. Also, it will return the necessary arguments including the current and previously selected or changed value.
+{% highlight Razor %}
 
-{% highlight cshtml %}
-
-{% include_relative code-snippet/selection/valuechange-event.razor %}
+{% include_relative code-snippet/selection/focus-method.razor %}
 
 {% endhighlight %}
 
-### OnValueSelect event
+![Blazor DropDownList with dynamic focus in and out](./images/selection/blazor_autocomplete_focus-in-out.gif)
 
-The [OnValueSelect](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.AutoCompleteEvents-2.html#Syncfusion_Blazor_DropDowns_AutoCompleteEvents_2_OnValueSelect) event is triggered when you select any value in the AutoComplete component. Get the necessary arguments including the [ChangeEventArgs.ItemData](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ChangeEventArgs-2.html#Syncfusion_Blazor_DropDowns_ChangeEventArgs_2_ItemData). Also,  prevent the selection of items by setting the [ChangeEventArgs.Cancel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ChangeEventArgs-2.html#Syncfusion_Blazor_DropDowns_ChangeEventArgs_2_Cancel) property as `true` provided by the event arguments. 
-
-{% highlight cshtml %}
-
-{% include_relative code-snippet/selection/valueselect-event.razor %}
-
-{% endhighlight %}
+While focusing and focus out the following event get triggered.
 
 ### Focus event
 
