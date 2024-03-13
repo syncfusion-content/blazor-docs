@@ -15,14 +15,85 @@ The DataForm component enables users to define the data annotation attributes av
 
 The [DisplayAttribute](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.displayattribute?view=net-5.0) class is used to specify the display name for a property. The display name is used as the label for the corresponding editor in the DataForm component if label text is not specified for the form item. 
 
+### Name property
+
+The [Name](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.displayattribute.name?view=net-5.0#system-componentmodel-dataannotations-displayattribute-name) property is used to specify the display name for a property. The display name is used as the label for the corresponding editor in the DataForm component if label text is not specified for the form item. 
+
 {% tabs %}
 {% highlight C# tabtitle="C#"  %}
 
-[Display(Name = "Name")]
-public string Name { get; set; }
+[Display(Name = "First Name")]
+public string FirstName { get; set; }
 
 {% endhighlight %}
 {% endtabs %}
+
+### Short name property
+
+The [ShortName](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.displayattribute.shortname?view=net-5.0#system-componentmodel-dataannotations-displayattribute-shortname) property is used to specify the short display name for a property. The short display name is used as the label for the corresponding editor in the DataForm component if label text is not specified for the form item. 
+
+{% tabs %}
+{% highlight C# tabtitle="C#"  %}
+
+[Display(ShortName = "First Name")]
+public string FirstName { get; set; }
+
+{% endhighlight %}
+{% endtabs %}
+
+### Prompt property
+
+The [Prompt](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.displayattribute.prompt?view=net-5.0#system-componentmodel-dataannotations-displayattribute-prompt) property is used to specify the prompt for a property. The prompt is used as the placeholder for the corresponding editor in the DataForm component. 
+
+{% tabs %}
+{% highlight C# tabtitle="C#"  %}
+
+[Display(Prompt = "Enter your first name")]
+public string FirstName { get; set; }
+
+{% endhighlight %}
+{% endtabs %}
+
+### Auto generate field property
+
+The [AutoGenerateField](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.displayattribute.autogeneratefield?view=net-5.0#system-componentmodel-dataannotations-displayattribute-autogeneratefield) property is used to specify whether the property should be automatically generated as a field in the DataForm component. 
+
+{% tabs %}
+{% highlight C# tabtitle="C#"  %}
+
+[Display(AutoGenerateField = false)]
+public string ID { get; set; }
+
+{% endhighlight %}
+{% endtabs %}
+
+## Bindable attribute
+
+The [BindableAttribute](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.bindableattribute?view=net-5.0) class is used to specify whether the property should be automatically generated as a field in the DataForm component similar to the AutoGenerateField property in the Display attribute. If set to false the property will not be generated as a field in the DataForm component.
+
+{% tabs %}
+{% highlight C# tabtitle="C#"  %}  
+
+[Bindable(false)]
+public string ID { get; set; }
+
+{% endhighlight %}
+{% endtabs %}
+
+
+## Read only attribute
+
+The [ReadOnlyAttribute](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.readonlyattribute?view=net-5.0) class is used to specify whether the property should be read-only in the DataForm component. 
+
+{% tabs %}
+{% highlight C# tabtitle="C#"  %}
+
+[ReadOnly(true)]
+public string ID { get; set; }
+
+{% endhighlight %}
+{% endtabs %}
+
 
 ## Validation attributes
 
@@ -170,6 +241,50 @@ public string ConfirmPassword { get; set; }
 
 {% endhighlight %}
 {% endtabs %}
+
+
+### String length attribute
+
+The [StringLengthAttribute](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.stringlengthattribute?view=net-5.0) class is used to specify the minimum and maximum length constraints for the value of a property. The DataForm component displays an error message if the property value is not within the specified length constraints.Additionally editor component will not allow to enter more than the specified length.
+
+{% tabs %}
+{% highlight C# tabtitle="C#"  %}
+
+[StringLength(100, MinimumLength = 3, ErrorMessage = "Name must be between 5 and 10 characters")]
+public string Name { get; set; }
+
+{% endhighlight %}
+{% endtabs %}
+
+## Data type attribute
+
+The [DataTypeAttribute](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.datatypeattribute?view=net-5.0) class is used to specify the data type of a property. The DataForm component uses this attribute to determine the editor type for the property.The below table explains the supported data types and the corresponding editor types.
+
+| Data type | Editor type |
+| ------------ | ----------------------- |
+| [DataType.Date](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.datatype.date?view=net-5.0) | [SfDatePicker](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfDatePicker.html) |
+| [DataType.Time](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.datatype.time?view=net-5.0) | [SfTimePicker](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfTimePicker.html) |
+| [DataType.DateTime](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.datatype.datetime?view=net-5.0) | [SfDateTimePicker](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfDateTimePicker.html) |
+| [DataType.Currency](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.datatype.currency?view=net-5.0) | [SfNumericTextBox](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfNumericTextBox.html) |
+| [DataType.EmailAddress](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.datatype.emailaddress?view=net-5.0) | [SfTextBox](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextBox.html) |
+| [DataType.PhoneNumber](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.datatype.phonenumber?view=net-5.0) | [SfTextBox](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfMaskedTextBox.html) |
+| [DataType.Url](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.datatype.url?view=net-5.0) | [SfTextBox](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextBox.html) |
+| [DataType.MultilineText](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.datatype.multilinetext?view=net-5.0) | [SfTextBox](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextBox.html) |
+| [DataType.Password](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.datatype.password?view=net-5.0) | [SfTextBox](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextBox.html) |
+| [DataType.Text](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.datatype.text?view=net-5.0) | [SfTextBox](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextBox.html) |
+
+If any other data type is specified other than the above table, the DataForm component uses the [SfTextBox](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextBox.html) editor by default.
+
+{% tabs %}
+{% highlight C# tabtitle="C#"  %}
+
+[DataType(DataType.Date)]
+public DateTime DateOfBirth { get; set; }
+
+{% endhighlight %}
+{% endtabs %}
+
+
 
 ## Editable attribute
 
