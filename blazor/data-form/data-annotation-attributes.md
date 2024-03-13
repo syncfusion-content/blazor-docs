@@ -11,6 +11,12 @@ documentation: ug
 
 The DataForm component enables users to define the data annotation attributes available from the instance of [System.ComponentModel.DataAnnotations](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations?view=net-5.0). 
 
+| Column 1 | Column 2 |
+| -------- | -------- |
+| Row 1    | Cell 1   |
+|          | Cell 2   |
+| Row 2    | Cell 3   |
+
 ## Display attribute
 
 The [DisplayAttribute](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.displayattribute?view=net-5.0) class is used to specify the display name for a property. The display name is used as the label for the corresponding editor in the DataForm component if label text is not specified for the form item. 
@@ -262,16 +268,25 @@ The [DataTypeAttribute](https://learn.microsoft.com/en-us/dotnet/api/system.comp
 
 | Data type | Editor type |
 | ------------ | ----------------------- |
-| [DataType.Date](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.datatype.date?view=net-5.0) | [SfDatePicker](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfDatePicker.html) |
-| [DataType.Time](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.datatype.time?view=net-5.0) | [SfTimePicker](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfTimePicker.html) |
-| [DataType.DateTime](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.datatype.datetime?view=net-5.0) | [SfDateTimePicker](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfDateTimePicker.html) |
-| [DataType.Currency](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.datatype.currency?view=net-5.0) | [SfNumericTextBox](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfNumericTextBox.html) |
-| [DataType.EmailAddress](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.datatype.emailaddress?view=net-5.0) | [SfTextBox](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextBox.html) |
-| [DataType.PhoneNumber](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.datatype.phonenumber?view=net-5.0) | [SfTextBox](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfMaskedTextBox.html) |
-| [DataType.Url](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.datatype.url?view=net-5.0) | [SfTextBox](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextBox.html) |
-| [DataType.MultilineText](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.datatype.multilinetext?view=net-5.0) | [SfTextBox](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextBox.html) |
-| [DataType.Password](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.datatype.password?view=net-5.0) | [SfTextBox](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextBox.html) |
-| [DataType.Text](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.datatype.text?view=net-5.0) | [SfTextBox](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextBox.html) |
+| [DataType.Date](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.datatype.date?view=net-5.0) | [SfDatePicker](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfDatePicker.html) | ![Blazor DataForm DataType.Date](images/blazor_dataform_data_type_date.png) |
+
+| [DataType.Time](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.datatype.time?view=net-5.0) | [SfTimePicker](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfTimePicker.html) |![Blazor DataForm DataType.Time](images/blazor_dataform_data_type_time.png) |
+
+| [DataType.DateTime](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.datatype.datetime?view=net-5.0) | [SfDateTimePicker](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfDateTimePicker.html) |![Blazor DataForm DataType.DateTime](images/blazor_dataform_data_type_date_time.png) |
+
+| [DataType.Currency](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.datatype.currency?view=net-5.0) | [SfNumericTextBox](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfNumericTextBox.html) |![Blazor DataForm DataType.Currency](images/blazor_dataform_data_type_currency.png) |
+
+| [DataType.PhoneNumber](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.datatype.phonenumber?view=net-5.0) | [SfTextBox](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfMaskedTextBox.html) |![Blazor DataForm DataType.PhoneNumber](images/blazor_dataform_data_type_phone.png) |
+
+| [DataType.CreditCard](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.datatype.creditcard?view=net-5.0) | [SfMaskedTextBox](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfMaskedTextBox.html) |![Blazor DataForm DataType.CreditCard](images/blazor_dataform_data_type_credit_card.png) |
+
+| [DataType.MultilineText](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.datatype.multilinetext?view=net-5.0) | [SfTextBox](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextBox.html) | ![Blazor DataForm DataType.MultilineText](images/blazor_dataform_data_type_multiline_text.png) |
+
+
+| [DataType.Password](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.datatype.password?view=net-5.0) | [SfTextBox](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextBox.html) | ![Blazor DataForm DataType.Password](images/blazor_dataform_data_type_password.png) |
+
+| <ul><li>[DataType.EmailAddress](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.datatype.emailaddress?view=net-5.0)</li><li>[DataType.Url](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.datatype.url?view=net-5.0)</li><li>[DataType.Text](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.datatype.text?view=net-5.0)</li><li> [DataType.ImageUrl](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.datatype.imageurl?view=net-5.0)</li><li> [DataType.Html](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.datatype.html?view=net-5.0)</li></ul> | [SfTextBox](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextBox.html) |![Blazor DataForm DataType.EmailAddress](images/blazor_dataform_data_type_email_address.png) |
+
 
 If any other data type is specified other than the above table, the DataForm component uses the [SfTextBox](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextBox.html) editor by default.
 
@@ -279,7 +294,7 @@ If any other data type is specified other than the above table, the DataForm com
 {% highlight C# tabtitle="C#"  %}
 
 [DataType(DataType.Date)]
-public DateTime DateOfBirth { get; set; }
+public DateTime? DateOfBirth { get; set; }
 
 {% endhighlight %}
 {% endtabs %}
