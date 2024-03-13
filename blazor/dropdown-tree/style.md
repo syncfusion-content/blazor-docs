@@ -543,7 +543,7 @@ Specify the boolean value to the [TextWrap](https://help.syncfusion.com/cr/blazo
 
 @using Syncfusion.Blazor.Navigations
 
-<SfDropDownTree @ref="tree" TItem="EmployeeData" TValue="string" Placeholder="Select an employee" Width="500px" Value="selecteditem" ShowCheckBox="true" AutoUpdateCheckState="true" Mode="DdtVisualMode.Box" TextWrap="false">
+<SfDropDownTree @ref="tree" TItem="EmployeeData" TValue="string" Placeholder="Select an employee" Width="500px" Value="selecteditem" ShowCheckBox="true" AutoUpdateCheckState="true" Mode="DdtVisualMode.Box" TextWrap="true">
     <DropDownTreeField TItem="EmployeeData" DataSource="Data" ID="Id" Text="Name" HasChildren="HasChild" ParentID="PId" Selected="Selected" IsChecked="IsChecked"></DropDownTreeField>
 
 </SfDropDownTree>

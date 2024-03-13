@@ -955,7 +955,7 @@ In the following example, the [LoadOnDemand](https://help.syncfusion.com/cr/blaz
 
 ## GetTreeViewData
 
-This section shows how to get the node from corresponding ID. Using the `GetTreeViewData` method, the entire node details of the TreeView is achieved.
+The `GetTreeViewData` method can be used to retrieve the complete node details of the tree rendered in the Dropdown Tree popup or to retrieve specific node details by passing its corresponding ID.
 
 ```cshtml
 
