@@ -963,14 +963,13 @@ The `GetTreeViewData` method can be used to retrieve the complete node details o
 @using Syncfusion.Blazor.Buttons
 <SfButton OnClick="GetData">Get TreeData</SfButton>
 
-<SfDropDownTree @ref="tree" TItem="EmployeeData" TValue="string" Placeholder="Select an employee" Width="500px" Value="selecteditem">
+<SfDropDownTree @ref="tree" TItem="EmployeeData" TValue="string" Placeholder="Select an employee" Width="500px">
     <DropDownTreeField TItem="EmployeeData" DataSource="Data" ID="Id" Text="Name" HasChildren="HasChild" ParentID="PId" Selected="Selected" IsChecked="IsChecked"></DropDownTreeField>
 
 </SfDropDownTree>
 
 @code {
     SfDropDownTree<string, EmployeeData>? tree;
-    List<string> selecteditem = new() { "1" };
     List<EmployeeData> Data = new List<EmployeeData>
     {
         new EmployeeData() { Id = "1", Name = "Steven Buchanan", Job = "General Manager", HasChild = true, Expanded = true},
