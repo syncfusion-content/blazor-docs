@@ -161,8 +161,6 @@ In order to trigger the `FocusAsync()` and `FocusOutAsync()` methods using the i
 
 {% endhighlight %}
 
-![Blazor DropDownList with dynamic focus in and out](./images/selection/blazor_autocomplete_focus-in-out.gif)
-
 While focusing and focus out the following event get triggered.
 
 ### Focus event
