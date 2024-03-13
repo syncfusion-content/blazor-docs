@@ -67,34 +67,6 @@ public string ID { get; set; }
 {% endhighlight %}
 {% endtabs %}
 
-## Bindable attribute
-
-The [BindableAttribute](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.bindableattribute?view=net-5.0) class is used to specify whether the property should be automatically generated as a field in the DataForm component similar to the AutoGenerateField property in the Display attribute. If set to false the property will not be generated as a field in the DataForm component.
-
-{% tabs %}
-{% highlight C# tabtitle="C#"  %}  
-
-[Bindable(false)]
-public string ID { get; set; }
-
-{% endhighlight %}
-{% endtabs %}
-
-
-## Read only attribute
-
-The [ReadOnlyAttribute](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.readonlyattribute?view=net-5.0) class is used to specify whether the property should be read-only in the DataForm component. 
-
-{% tabs %}
-{% highlight C# tabtitle="C#"  %}
-
-[ReadOnly(true)]
-public string ID { get; set; }
-
-{% endhighlight %}
-{% endtabs %}
-
-
 ## Validation attributes
 
 The DataForm component supports the following validation attributes from the [System.ComponentModel.DataAnnotations](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations?view=net-5.0) namespace.
@@ -293,7 +265,6 @@ public DateTime? DateOfBirth { get; set; }
 {% endtabs %}
 
 
-
 ## Editable attribute
 
 The [EditableAttribute](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.editableattribute?view=net-5.0) class is used to specify that a property can be edited in the DataForm component. 
@@ -306,6 +277,59 @@ public string ID { get; set; }
 
 {% endhighlight %}
 {% endtabs %}
+
+
+## Bindable attribute
+
+The [BindableAttribute](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.bindableattribute?view=net-5.0) class is used to specify whether the property should be automatically generated as a field in the DataForm component similar to the AutoGenerateField property in the Display attribute. If set to false the property will not be generated as a field in the DataForm component.
+
+{% tabs %}
+{% highlight C# tabtitle="C#"  %}  
+
+[Bindable(false)]
+public string ID { get; set; }
+
+{% endhighlight %}
+{% endtabs %}
+
+
+## Read only attribute
+
+The [ReadOnlyAttribute](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.readonlyattribute?view=net-5.0) class is used to specify whether the property should be read-only in the DataForm component. 
+
+{% tabs %}
+{% highlight C# tabtitle="C#"  %}
+
+[ReadOnly(true)]
+public string ID { get; set; }
+
+{% endhighlight %}
+{% endtabs %}
+
+
+## Custom attributes
+
+### Data form display options attribute
+
+The [DataFormDisplayOptionsAttribute](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataForm.DataFormDisplayOptionsAttribute.html) attribute is used to specify the display options for a property in the DataForm component. The DataForm component uses this attribute to determine the [ColumnSpan](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataForm.DataFormDisplayOptionsAttribute.ColumnSpan.html)for the property.
+
+{% tabs %}
+
+{% highlight razor tabtitle="Razor" %}
+
+{% include_relative code-snippet\custom-attributes\custom-attribute.razor %}
+
+{% endhighlight %}
+
+{% highlight C# tabtitle="C#" %}
+
+{% include_relative code-snippet\custom-attributes\custom-attribute.cs %}
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![Blazor DataForm Custom Attributes](images/blazor_dataform_custom_attributes.png)
 
 ## Custom validation
 
