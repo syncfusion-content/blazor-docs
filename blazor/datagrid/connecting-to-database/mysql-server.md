@@ -1,49 +1,50 @@
 ---
 layout: post
-title: Microsoft SQL Data Binding in Blazor DataGrid Component | Syncfusion
-description: Learn about consuming data from SQL Server using Microsoft SQL Client, binding it to Syncfusion Component, and performing CRUD operations.
+title: MySQL Server Data Binding in Blazor DataGrid Component | Syncfusion
+description: Learn about consuming data from MySQL Server and binding it to Syncfusion Component, and performing CRUD operations.
 platform: Blazor
 control: DataGrid
 documentation: ug
 ---
 
-# Connecting Microsoft SQL Server data in to Blazor DataGrid Component
+# Connecting MySQL Server data in to Blazor DataGrid Component
 
-This section describes how to connect and retrieve data from a Microsoft SQL Server database using [System.Data.SqlClient](https://www.nuget.org/packages/System.Data.SqlClient/4.8.6?_src=template) and bind it to the Blazor DataGrid component.
+This section describes how to connect and retrieve data from a MySQL Server database using [MySQL data](https://www.nuget.org/packages/MySql.Data) and bind it to the Blazor DataGrid component.
 
-Microsoft SQL Server database can be bound to the Blazor DataGrid component in different ways (i.e.) using [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_DataSource) property, [CustomAdaptor](https://blazor.syncfusion.com/documentation/datagrid/custom-binding) feature and remote data binding using various adaptors. In this documentation, two approaches will be examined to connect a Microsoft SQL Server database to a Blazor DataGrid component. Both the approaches have capability to handle data and CRUD operations with built-in methods as well as can be customized as per your own.
+MySQL Server database can be bound to the Blazor DataGrid component in different ways (i.e.) using [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_DataSource) property, [CustomAdaptor](https://blazor.syncfusion.com/documentation/datagrid/custom-binding) feature and remote data binding using various adaptors. In this documentation, two approaches will be examined to connect a MySQL Server database to a Blazor DataGrid component. Both the approaches have capability to handle data and CRUD operations with built-in methods as well as can be customized as per your own.
 
 * **Using UrlAdaptor**
 
-The [UrlAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors#url-adaptor) serves as the base adaptor for facilitating communication between remote data services and an UI component. It enables the remote binding of data to the Blazor DataGrid component by connecting to an existing pre-configured API service linked to the Microsoft SQL Server database. While the Blazor DataGrid component supports various adaptors to fulfill this requirement, including [Web API](https://blazor.syncfusion.com/documentation/data/adaptors#web-api-adaptor), [OData](https://blazor.syncfusion.com/documentation/data/adaptors#odata-adaptor), [ODataV4](https://blazor.syncfusion.com/documentation/data/adaptors#odatav4-adaptor), [Url](https://blazor.syncfusion.com/documentation/data/adaptors#url-adaptor), and [GraphQL](https://blazor.syncfusion.com/documentation/data/adaptors#graphql-service-binding), the `UrlAdaptor` is particularly useful for the scenarios where a custom API service with unique logic for handling data and CRUD operations is in place. This approach allows for custom handling of data and CRUD operations, and the resultant data returned in the `result` and `count` format for display in the Blazor DataGrid component.
+The [UrlAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors#url-adaptor) serves as the base adaptor for facilitating communication between remote data services and an UI component. It enables the remote binding of data to the Blazor DataGrid component by connecting to an existing pre-configured API service linked to the MySQL Server database. While the Blazor DataGrid component supports various adaptors to fulfill this requirement, including [Web API](https://blazor.syncfusion.com/documentation/data/adaptors#web-api-adaptor), [OData](https://blazor.syncfusion.com/documentation/data/adaptors#odata-adaptor), [ODataV4](https://blazor.syncfusion.com/documentation/data/adaptors#odatav4-adaptor), [Url](https://blazor.syncfusion.com/documentation/data/adaptors#url-adaptor), and [GraphQL](https://blazor.syncfusion.com/documentation/data/adaptors#graphql-service-binding), the `UrlAdaptor` is particularly useful for the scenarios where a custom API service with unique logic for handling data and CRUD operations is in place. This approach allows for custom handling of data and CRUD operations, and the resultant data returned in the `result` and `count` format for display in the Blazor DataGrid component.
 
 * **Using CustomAdaptor**
 
 The [CustomAdaptor](https://blazor.syncfusion.com/documentation/datagrid/custom-binding) serves as a mediator between the UI component and the database for data binding. While the data source from the database can be directly bound to the `SfGrid` component locally using the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_DataSource) property, the `CustomAdaptor` approach is preferred as it allows for customization of both data operations and CRUD operations according to specific requirements. In this approach, for every action in the Blazor DataGrid component, a corresponding request with action details is sent to the `CustomAdaptor`. The Blazor DataGrid component provides predefined methods to perform data operations such as **searching**, **filtering**, **sorting**, **aggregation**, **paging** and **grouping**. Alternatively, your own custom methods can be employed to execute operations and return the data in the `Result` and `Count` format of the `DataResult` class for displaying in the Blazor DataGrid component. Additionally, for CRUD operations, predefined methods can be overridden to provide custom functionality. Further details on this can be found in the latter part of the documentation.
 
-## Binding data from Microsoft SQL Server using an API service
+## Binding data from MySQL Server using an API service
 
-This section describes step by step process how to retrieve data from a Microsoft SQL Server using an API service and bind it to the Blazor DataGrid component.
+This section describes step by step process how to retrieve data from a MySQL Server using an API service and bind it to the Blazor DataGrid component.
 
 ### Creating an API service
 
 **1.** Open Visual Studio and create an ASP.NET Core Web App project type, naming it **MyWebService**. To create an ASP.NET Core Web application, follow the documentation [link](https://learn.microsoft.com/en-us/visualstudio/get-started/csharp/tutorial-aspnet-core?view=vs-2022).
 
-**2.** To connect a Microsoft SQL Server database using the Microsoft SQL driver in your application, you need to install the [System.Data.SqlClient](https://www.nuget.org/packages/System.Data.SqlClient/4.8.6?_src=template) NuGet package. To add **System.Data.SqlClient** in the app, open the NuGet package manager in Visual Studio (Tools → NuGet Package Manager → Manage NuGet Packages for Solution), search and install it.
+**2.** To connect a MySQL Server database using the MySQL driver in your application, you need to install the [MySQL.Data](https://www.nuget.org/packages/MySql.Data) NuGet package. To add **MySQL.Data** in the app, open the NuGet package manager in Visual Studio (Tools → NuGet Package Manager → Manage NuGet Packages for Solution), search and install it.
 
 **3.** Create an API controller (aka, GridController.cs) file under **Controllers** folder that helps to establish data communication with the Blazor DataGrid component.
 
-**4.** In an API controller (aka, GridController), connect to Microsoft SQL Server. In the **Get()** method **SqlConnection** helps to connect the Microsoft SQL Server database. Next, using **SqlCommand** and **SqlDataAdapter** you can process the desired SQL query string and retrieve data from the database. The **Fill** method of the **DataAdapter** is used to populate the SQL data into a **DataTable** as shown in the following code snippet.
+**4.** In an API controller (aka, GridController), connect to MySQL Server. In the **Get()** method **MySqlConnection** helps to connect the MySQL Server database. Next, using **MySqlCommand** and **MySqlDataAdapter** you can process the desired MySQL query string and retrieve data from the database. The **Fill** method of the **DataAdapter** is used to populate the MySQL data into a **DataTable** as shown in the following code snippet.
 
 {% tabs %}
 {% highlight razor tabtitle="GridController.cs"%}
 using Microsoft.AspNetCore.Mvc;
+using MySql.Data.MySqlClient;
 using System.Data;
-using System.Data.SqlClient;
 using Syncfusion.Blazor;
 using Syncfusion.Blazor.Data;
 using System.ComponentModel.DataAnnotations;
 using Newtonsoft.Json;
+
 namespace MyWebService.Controllers
 {
     [ApiController]
@@ -55,7 +56,7 @@ namespace MyWebService.Controllers
         {
             [Key]
             public int? OrderID { get; set; }
-            public string? CustomerID { get; set; }
+            public string? CustomerName { get; set; }
             public int? EmployeeID { get; set; }
             public decimal? Freight { get; set; }
             public string? ShipCity { get; set; }
@@ -66,27 +67,27 @@ namespace MyWebService.Controllers
         {
             //TODO: Enter the connectionstring of database
             string ConnectionString = @"<Enter a valid connection string>";
-            string QueryStr = "SELECT * FROM dbo.Orders ORDER BY OrderID;";
-            SqlConnection sqlConnection = new(ConnectionString);
+            string QueryStr = "SELECT * FROM orders ORDER BY OrderID";
+            MySqlConnection sqlConnection = new(ConnectionString);
             sqlConnection.Open();
-            //Initialize the SqlCommand
-            SqlCommand SqlCommand = new(QueryStr, sqlConnection);
-            //Initialize the SqlDataAdapter
-            SqlDataAdapter DataAdapter = new(SqlCommand);
+            //Initialize the MySqlCommand
+            MySqlCommand SqlCommand = new(QueryStr, sqlConnection);
+            //Initialize the MySqlDataAdapter
+            MySqlDataAdapter DataAdapter = new(SqlCommand);
             DataTable DataTable = new();
-            // Using SqlDataAdapter, process the query string and fill the data into the dataset
+            // Using MySqlDataAdapter, process the query string and fill the data into the dataset
             DataAdapter.Fill(DataTable);
             sqlConnection.Close();
-            //Cast the data fetched from SqlDataAdapter to List<T>
+            //Cast the data fetched from MySqlDataAdapter to List<T>
             var DataSource = (from DataRow Data in DataTable.Rows
-                              select new Order()
-                              {
-                                  OrderID = Convert.ToInt32(Data["OrderID"]),
-                                  CustomerID = Data["CustomerID"].ToString(),
-                                  EmployeeID = Convert.IsDBNull(Data["EmployeeID"]) ? 0 : Convert.ToUInt16(Data["EmployeeID"]),
-                                  ShipCity = Data["ShipCity"].ToString(),
-                                  Freight = Convert.ToDecimal(Data["Freight"])
-                              }).ToList();
+                            select new Order()
+                            {
+                                OrderID = Convert.ToInt32(Data["OrderID"]),
+                                CustomerName = Data["CustomerName"].ToString(),
+                                EmployeeID = Convert.ToInt32(Data["EmployeeID"]),
+                                ShipCity = Data["ShipCity"].ToString(),
+                                Freight = Convert.ToDecimal(Data["Freight"])
+                            }).ToList();
             return DataSource;
         }
     }
@@ -96,7 +97,7 @@ namespace MyWebService.Controllers
 
 **5.** Run the application and it will be hosted within the URL `https://localhost:xxxx`.
 
-**6.** Finally, the retrieved data from Microsoft SQL Server database which is in the form of list of array can be found in an API controller available in the URL link `https://localhost:xxxx/api/Grid`, as shown in the browser page below.
+**6.** Finally, the retrieved data from MySQL Server database which is in the form of list of array can be found in an API controller available in the URL link `https://localhost:xxxx/api/Grid`, as shown in the browser page below.
 
 ![Hosted API URL](../images/Ms-Sql-data.png)
 
@@ -185,10 +186,9 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Data
 @using Syncfusion.Blazor
-@using Microsoft.Data.SqlClient;
 
 <SfGrid @ref="Grid" TValue="Order" AllowPaging="true" AllowFiltering="true" AllowSorting="true" AllowGrouping="true" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Update", "Cancel", "Search" })">
-    <SfDataManager Url="https://localhost:xxxx/api/Grid" InsertUrl="https://localhost:xxxx/api/Grid/Insert" UpdateUrl="https://localhost:xxxx/api/Grid/Update" RemoveUrl="https://localhost:xxxx/api/Grid/Delete" Adaptor="Adaptors.UrlAdaptor"></SfDataManager>
+    <SfDataManager Url="https://localhost:xxxx/api/Grid" BatchUrl="https://localhost:xxxx/api/Grid/Batch" InsertUrl="https://localhost:xxxx/api/Grid/Insert" UpdateUrl="https://localhost:xxxx/api/Grid/Update" RemoveUrl="https://localhost:xxxx/api/Grid/Delete" Adaptor="Adaptors.UrlAdaptor"></SfDataManager>
     <GridEditSettings AllowEditing="true" AllowDeleting="true" AllowAdding="true" Mode="EditMode.Normal"></GridEditSettings>
     <GridAggregates>
         <GridAggregate>
@@ -221,8 +221,8 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
         </GridAggregate>
     </GridAggregates>
     <GridColumns>
-        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" IsIdentity="true" ValidationRules="@(new ValidationRules{ Required= true })" IsPrimaryKey="true" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" ValidationRules="@(new ValidationRules{ Required= true, MinLength = 3 })" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID"  ValidationRules="@(new ValidationRules{ Required= true })" IsPrimaryKey="true" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerName) HeaderText="Customer Name" ValidationRules="@(new ValidationRules{ Required= true, MinLength = 3 })" Width="150"></GridColumn>
         <GridColumn Field=@nameof(Order.EmployeeID) HeaderText="Employee ID" TextAlign="TextAlign.Right" Width="150"></GridColumn>
         <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" TextAlign="TextAlign.Right" Format="C2" Width="150"></GridColumn>
         <GridColumn Field=@nameof(Order.ShipCity) HeaderText="Ship City" Width="150"></GridColumn>
@@ -232,11 +232,10 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 @code {
     SfGrid<Order> Grid { get; set; }
     public List<Order> Orders { get; set; }
-
     public class Order
     {
         public int? OrderID { get; set; }
-        public string CustomerID { get; set; }
+        public string CustomerName { get; set; }
         public int EmployeeID { get; set; }
         public decimal Freight { get; set; }
         public string ShipCity { get; set; }
@@ -244,22 +243,23 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 }
 {% endhighlight %}
 {% highlight c# tabtitle="GridController.cs"%}
-    public class GridController : ControllerBase
+[ApiController]
+public class GridController : ControllerBase
+{ 
+    /// <summary>
+    /// Returns the data collection as result and count after performing data operations based on request from <see cref=”DataManagerRequest”/>
+    /// </summary>
+    /// <param name="DataManagerRequest">DataManagerRequest contains the information regarding searching, filtering, sorting, aggregates and paging which is handled on the Blazor DataGrid component side</param>
+    /// <returns>The data collection's type is determined by how this method has been implemented.</returns>
+    [HttpPost]
+    [Route("api/[controller]")]
+    public object Post([FromBody] DataManagerRequest DataManagerRequest)
     {
-        /// <summary>
-        /// Returns the data collection as result and count after performing data operations based on request from <see cref=DataManagerRequest”/>
-        /// </summary>
-        /// <param name="DataManagerRequest">DataManagerRequest contains the information regarding searching, filtering, sorting, aggregates and paging which is handled on the Blazor DataGrid component side</param>
-        /// <returns>The data collection's type is determined by how this method has been implemented.</returns>
-        [HttpPost]
-        [Route("api/[controller]")]
-        public object Post([FromBody] DataManagerRequest DataManagerRequest)
-        {
-            IEnumerable<Order> DataSource = GetOrderData();
-            int TotalRecordsCount = DataSource.Cast<Order>().Count();
-            return new { result = DataSource, count = TotalRecordsCount };
-        }
+        IEnumerable<Order> DataSource = GetOrderData();
+        int TotalRecordsCount = DataSource.Cast<Order>().Count();
+        return new { result = DataSource, count = TotalRecordsCount};
     }
+}
 {% endhighlight %}
 {% endtabs %}
 
@@ -267,7 +267,7 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 
 When you run the application, the resultant Blazor DataGrid component will look like this
 
-![Blazor DataGrid component bound with Microsoft SQL Server data](../images/blazor-Grid-Ms-SQL-databinding.png)
+![Blazor DataGrid component bound with MySQL Server data](../images/blazor-Grid-Ms-SQL-databinding.png)
 
 > * The Syncfusion Blazor DataGrid component provides built-in support for handling various data operations such as **searching**, **sorting**, **filtering**, **aggregate** and **paging** on the server-side. These operations can be handled using methods such as `PerformSearching`, `PerformFiltering`, `PerformSorting`, `PerformAggregation`, `PerformTake` and `PerformSkip` available in the **Syncfusion.Blazor.Data** package. Let's explore how to manage these data operations using the `UrlAdaptor`.
 > * In an API service project, add **Syncfusion.Blazor.Data** by opening the NuGet package manager in Visual Studio (Tools → NuGet Package Manager → Manage NuGet Packages for Solution), search and install it.
@@ -392,7 +392,7 @@ public object Post([FromBody] DataManagerRequest DataManagerRequest)
 }
 {% endhighlight %}
 
-> For optimal performance, it is recommended to follow this sequence of operations(Searching, Filtering, Sorting, Aggregate and Paging) in the [ReadAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_ReadAsync_Syncfusion_Blazor_DataManagerRequest_System_String_) method.
+> For optimal performance, it is recommended to follow this sequence of operations(Searching, Filtering, Sorting, Aggregate and Paging  ) in the [ReadAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_ReadAsync_Syncfusion_Blazor_DataManagerRequest_System_String_) method.
 
 ### Handling CRUD operations
 
@@ -403,11 +403,11 @@ In this scenario, the inline edit `Mode` and [Toolbar](https://blazor.syncfusion
 {% tabs %}
 {% highlight razor %}
 <SfGrid @ref="Grid" TValue="Order" AllowPaging="true" AllowFiltering="true" AllowSorting="true" AllowGrouping="true" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Update", "Cancel", "Search" })">
-    <SfDataManager Url="https://localhost:xxxx/api/Grid" InsertUrl="https://localhost:xxxx/api/Grid/Insert" UpdateUrl="https://localhost:xxxx/api/Grid/Update" RemoveUrl="https://localhost:xxxx/api/Grid/Delete" BatchUrl="https://localhost:7033/api/Grid/Batch" Adaptor="Adaptors.UrlAdaptor"></SfDataManager>
+    <SfDataManager Url="https://localhost:xxxx/api/Grid" InsertUrl="https://localhost:xxxx/api/Grid/Insert" UpdateUrl="https://localhost:xxxx/api/Grid/Update" RemoveUrl="https://localhost:xxxx/api/Grid/Delete" BatchUrl="https://localhost:xxxx/api/Grid/Batch" Adaptor="Adaptors.UrlAdaptor"></SfDataManager>
     <GridEditSettings AllowEditing="true" AllowDeleting="true" AllowAdding="true" Mode="EditMode.Normal"></GridEditSettings>
     <GridColumns>
         <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" IsIdentity="true" ValidationRules="@(new ValidationRules{ Required= true })" IsPrimaryKey="true" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" ValidationRules="@(new ValidationRules{ Required= true, MinLength = 3 })" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerName) HeaderText="Customer Name" ValidationRules="@(new ValidationRules{ Required= true, MinLength = 3 })" Width="150"></GridColumn>
         <GridColumn Field=@nameof(Order.EmployeeID) HeaderText="Employee ID" TextAlign="TextAlign.Right" Width="150"></GridColumn>
         <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" TextAlign="TextAlign.Right" Format="C2" Width="150"></GridColumn>
         <GridColumn Field=@nameof(Order.ShipCity) HeaderText="Ship City" Width="150"></GridColumn>
@@ -437,13 +437,13 @@ public void Insert([FromBody] CRUDModel<Order> Value)
     //TODO: Enter the connectionstring of database
     string ConnectionString = @"<Enter a valid connection string>";
     //Create query to insert the specific into the database by accessing its properties
-    string Query = $"Insert into Orders(CustomerID,Freight,ShipCity,EmployeeID) values('{Value.Value.CustomerID}','{Value.Value.Freight}','{Value.Value.ShipCity}','{Value.Value.EmployeeID}')";
-    SqlConnection SqlConnection = new SqlConnection(ConnectionString);
-    SqlConnection.Open();
-    SqlCommand SqlCommand = new SqlCommand(Query, SqlConnection);
+    string Query = $"Insert into Orders(OrderID, CustomerName,Freight,ShipCity,EmployeeID) values( '{Value.Value.OrderID}','{Value.Value.CustomerName}','{Value.Value.Freight}','{Value.Value.ShipCity}','{Value.Value.EmployeeID}')";
+    MySqlConnection Connection = new MySqlConnection(ConnectionString);
+    Connection.Open();
+    MySqlCommand Command = new MySqlCommand(Query, Connection);
     //Execute this code to reflect the changes into the database
-    SqlCommand.ExecuteNonQuery();
-    SqlConnection.Close();
+    Command.ExecuteNonQuery();
+    Connection.Close();
     //Add custom logic here if needed and remove above method
 }
 {% endhighlight %}
@@ -467,14 +467,14 @@ public void Update([FromBody] CRUDModel<Order> Value)
     //TODO: Enter the connectionstring of database
     string ConnectionString = @"<Enter a valid connection string>";
     //Create query to update the changes into the database by accessing its properties
-    string Query = $"Update Orders set CustomerID='{Value.Value.CustomerID}', Freight='{Value.Value.Freight}',EmployeeID='{Value.Value.EmployeeID}',ShipCity='{Value.Value.ShipCity}' where OrderID='{Value.Value.OrderID}'";
-    SqlConnection SqlConnection = new SqlConnection(ConnectionString);
-    SqlConnection.Open();
-    //Execute the SQL Command
-    SqlCommand SqlCommand = new SqlCommand(Query, SqlConnection);
+    string Query = $"Update Orders set CustomerName='{Value.Value.CustomerName}', Freight='{Value.Value.Freight}',EmployeeID='{Value.Value.EmployeeID}',ShipCity='{Value.Value.ShipCity}' where OrderID='{Value.Value.OrderID}'";
+    MySqlConnection Connection = new MySqlConnection(ConnectionString);
+    Connection.Open();
+    //Execute the MySQL Command
+    MySqlCommand Command = new MySqlCommand(Query, Connection);
     //Execute this code to reflect the changes into the database
-    SqlCommand.ExecuteNonQuery();
-    SqlConnection.Close();
+    Command.ExecuteNonQuery();
+    Connection.Close();
     //Add custom logic here if needed and remove above method
 }
 {% endhighlight %}
@@ -499,13 +499,13 @@ public void Delete([FromBody] CRUDModel<Order> Value)
     string ConnectionString = @"<Enter a valid connection string>";
     //Create query to remove the specific from database by passing the primary key column value.
     string Query = $"Delete from Orders where OrderID={Value.Key}";
-    SqlConnection SqlConnection = new SqlConnection(ConnectionString);
-    SqlConnection.Open();
-    //Execute the SQL Command
-    SqlCommand SqlCommand = new SqlCommand(Query, SqlConnection);
+    MySqlConnection Connection = new MySqlConnection(ConnectionString);
+    Connection.Open();
+    //Execute the MySQL Command
+    MySqlCommand Command = new MySqlCommand(Query, Connection);
     //Execute this code to reflect the changes into the database
-    SqlCommand.ExecuteNonQuery();
-    SqlConnection.Close();
+    Command.ExecuteNonQuery();
+    Connection.Close();
     //Add custom logic here if needed and remove above method
 }
 {% endhighlight %}
@@ -532,14 +532,14 @@ public void Batch([FromBody] CRUDModel<Order> Value)
         foreach (var Record in (IEnumerable<Order>)Value.Changed)
         {
             //Create query to update the changes into the database by accessing its properties
-            string Query = $"Update Orders set CustomerID='{Record.CustomerID}', Freight='{Record.Freight}',EmployeeID='{Record.EmployeeID}',ShipCity='{Record.ShipCity}' where OrderID='{Record.OrderID}'";
-            SqlConnection SqlConnection = new SqlConnection(ConnectionString);
-            SqlConnection.Open();
-            //Execute the SQL Command
-            SqlCommand SqlCommand = new SqlCommand(Query, SqlConnection);
+            string Query = $"Update Orders set CustomerName='{Record.CustomerName}', Freight='{Record.Freight}',EmployeeID='{Record.EmployeeID}',ShipCity='{Record.ShipCity}' where OrderID='{Record.OrderID}'";
+            MySqlConnection Connection = new MySqlConnection(ConnectionString);
+            Connection.Open();
+            //Execute the MySQL Command
+            MySqlCommand Command = new MySqlCommand(Query, Connection);
             //Execute this code to reflect the changes into the database
-            SqlCommand.ExecuteNonQuery();
-            SqlConnection.Close();
+            Command.ExecuteNonQuery();
+            Connection.Close();
             //Add custom logic here if needed and remove above method
         }
 
@@ -549,14 +549,14 @@ public void Batch([FromBody] CRUDModel<Order> Value)
         foreach (var Record in (IEnumerable<Order>)Value.Added)
         {
             //Create query to insert the specific into the database by accessing its properties 
-            string Query = $"Insert into Orders(CustomerID,Freight,ShipCity,EmployeeID) values('{Record.CustomerID}','{Record.Freight}','{Record.ShipCity}','{Record.EmployeeID}')";
-            SqlConnection SqlConnection = new SqlConnection(ConnectionString);
-            SqlConnection.Open();
-            //Execute the SQL Command
-            SqlCommand SqlCommand = new SqlCommand(Query, SqlConnection);
+            string Query = $"Insert into Orders(CustomerName,Freight,ShipCity,EmployeeID) values('{Record.CustomerName}','{Record.Freight}','{Record.ShipCity}','{Record.EmployeeID}')";
+            MySqlConnection Connection = new MySqlConnection(ConnectionString);
+            Connection.Open();
+            //Execute the MySQL Command
+            MySqlCommand Command = new MySqlCommand(Query, Connection);
             //Execute this code to reflect the changes into the database
-            SqlCommand.ExecuteNonQuery();
-            SqlConnection.Close();
+            Command.ExecuteNonQuery();
+            Connection.Close();
             //Add custom logic here if needed and remove above method
         }
     }
@@ -566,13 +566,13 @@ public void Batch([FromBody] CRUDModel<Order> Value)
         {
             //Create query to remove the specific from database by passing the primary key column value.
             string Query = $"Delete from Orders where OrderID={Record.OrderID}";
-            SqlConnection SqlConnection = new SqlConnection(ConnectionString);
-            SqlConnection.Open();
-            //Execute the SQL Command
-            SqlCommand SqlCommand = new SqlCommand(Query, SqlConnection);
+            MySqlConnection Connection = new MySqlConnection(ConnectionString);
+            Connection.Open();
+            //Execute the MySQL Command
+            MySqlCommand Command = new MySqlCommand(Query, Connection);
             //Execute this code to reflect the changes into the database
-            SqlCommand.ExecuteNonQuery();
-            SqlConnection.Close();
+            Command.ExecuteNonQuery();
+            Connection.Close();
             //Add custom logic here if needed and remove above method
         }
     }
@@ -581,19 +581,19 @@ public void Batch([FromBody] CRUDModel<Order> Value)
 
 When you run the application, the resultant Blazor DataGrid component will look like this
 
-![Blazor DataGrid component bound with Microsoft SQL Server data](../images/blazor-Grid-Ms-SQl-databinding-Gif.gif)
+![Blazor DataGrid component bound with MySQL Server data](../images/blazor-Grid-Ms-SQl-databinding-Gif.gif)
 
-> Find the sample from this [GitHub location](https://github.com/SyncfusionExamples/connecting-databases-to-blazor-datagrid-component/tree/master/Binding%20MS%20SQL%20database%20using%20UrlAdaptor).
+> Find the sample from this [GitHub location]().
 
-## Binding data from Microsoft SQL Server using CustomAdaptor
+## Binding data from MySQL Server using CustomAdaptor
 
-This section describes step by step process how to retrieve data from a Microsoft SQL Server using `CustomAdaptor` and bind it to the Blazor DataGrid component.
+This section describes step by step process how to retrieve data from a MySQL Server using `CustomAdaptor` and bind it to the Blazor DataGrid component.
 
 **1.** To create a simple Blazor DataGrid component, the procedure is explained in the above-mentioned topic on [Connecting Blazor DataGrid to an API service](#connecting-blazor-datagrid-to-an-api-service)
 
 > * In this Blazor Web app, set the `rendermode` as either **InteractiveServer** or **InteractiveAuto** as per your configuration.
 
-**2.** To connect a Microsoft SQL Server database using the Microsoft SQL driver in your application, you need to install the [System.Data.SqlClient](https://www.nuget.org/packages/System.Data.SqlClient/4.8.6?_src=template) NuGet package. To add **System.Data.SqlClient** in the app, open the NuGet package manager in Visual Studio (Tools → NuGet Package Manager → Manage NuGet Packages for Solution), search and install it.
+**2.** To connect a MySQL Server database using the MySQL driver in your application, you need to install the [MySQL.Data](https://www.nuget.org/packages/MySql.Data) NuGet package. To add **MySQL.Data** in the app, open the NuGet package manager in Visual Studio (Tools → NuGet Package Manager → Manage NuGet Packages for Solution), search and install it.
 
 **3.** If you intend to inject your own service into the `CustomAdaptor` and utilize it, you can achieve this as follows.
 
@@ -604,7 +604,7 @@ This section describes step by step process how to retrieve data from a Microsof
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Data
 @using Syncfusion.Blazor
-@using Microsoft.Data.SqlClient;
+@using MySql.Data.MySqlClient;
 
 <SfGrid TValue="Order" AllowSorting="true" AllowFiltering="true" AllowGrouping="true" AllowPaging="true" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Update", "Cancel", "Search" })">
     <SfDataManager AdaptorInstance="@typeof(CustomAdaptor)" Adaptor="Adaptors.CustomAdaptor"></SfDataManager>
@@ -640,8 +640,8 @@ This section describes step by step process how to retrieve data from a Microsof
         </GridAggregate>
     </GridAggregates>
     <GridColumns>
-        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" IsIdentity="true" ValidationRules="@(new ValidationRules{ Required= true })" IsPrimaryKey="true" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" ValidationRules="@(new ValidationRules{ Required= true, MinLength = 3 })" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" ValidationRules="@(new ValidationRules{ Required= true })"  IsPrimaryKey="true" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerName) HeaderText="Customer Name" ValidationRules="@(new ValidationRules{ Required= true, MinLength = 3 })" Width="150"></GridColumn>
         <GridColumn Field=@nameof(Order.EmployeeID) HeaderText="Employee ID" TextAlign="TextAlign.Right" Width="150"></GridColumn>
         <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" TextAlign="TextAlign.Right" Format="C2" Width="150"></GridColumn>
         <GridColumn Field=@nameof(Order.ShipCity) HeaderText="Ship City" Width="150"></GridColumn>
@@ -653,20 +653,20 @@ This section describes step by step process how to retrieve data from a Microsof
 }
 {% endhighlight %}
 {% highlight razor tabtitle="Orderdata.cs"%}
-  public class Order
-  {
-      public int? OrderID { get; set; }
-      public string CustomerID { get; set; }
-      public int EmployeeID { get; set; }
-      public decimal Freight { get; set; }
-      public string ShipCity { get; set; }
-  }
+ public class Order
+ {
+     public int? OrderID { get; set; }
+     public string CustomerName { get; set; }
+     public int EmployeeID { get; set; }
+     public decimal Freight { get; set; }
+     public string ShipCity { get; set; }
+ }
 {% endhighlight %}
 {% endtabs %}
 
 **4.** Within the `CustomAdaptor’s` [ReadAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_ReadAsync_Syncfusion_Blazor_DataManagerRequest_System_String_) method, fetch the data from the service by calling the `GetOrdersAsync` method.
 
-* In this `GetOrdersAsync` method, the Microsoft SQL Server database data is fetch by using the **SqlDataAdapter** class.
+* In this `GetOrdersAsync` method, the MySQL Server database data is fetch by using the **MySqlDataAdapter** class.
 
 * Employ the **Fill** method of the **DataAdapter** to populate a **DataSet** with the results of the `Select` command of the **DataAdapter**, followed by conversion of the **DataSet** into a List.
 
@@ -679,9 +679,10 @@ This section describes step by step process how to retrieve data from a Microsof
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Data
 @using Syncfusion.Blazor
-@using Microsoft.Data.SqlClient;
+@using MySql.Data.MySqlClient;
+@using System.Collections
 
-<SfGrid TValue="Order" AllowSorting="true" AllowFiltering="true" AllowGrouping="true" AllowPaging="true" Toolbar="@(new List<string>() { "Add","Edit", "Delete", "Update", "Cancel", "Search" })">
+<SfGrid TValue="Order" AllowSorting="true" AllowFiltering="true" AllowGrouping="true" AllowPaging="true" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Update", "Cancel", "Search" })">
     <SfDataManager AdaptorInstance="@typeof(CustomAdaptor)" Adaptor="Adaptors.CustomAdaptor"></SfDataManager>
     <GridEditSettings AllowEditing="true" AllowDeleting="true" AllowAdding="true" Mode="@EditMode.Normal"></GridEditSettings>
     <GridAggregates>
@@ -715,8 +716,8 @@ This section describes step by step process how to retrieve data from a Microsof
         </GridAggregate>
     </GridAggregates>
     <GridColumns>
-        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" IsIdentity="true" ValidationRules="@(new ValidationRules{ Required= true })" IsPrimaryKey="true" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" ValidationRules="@(new ValidationRules{ Required= true, MinLength = 3 })" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" ValidationRules="@(new ValidationRules{ Required= true })"  IsPrimaryKey="true" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerName) HeaderText="Customer Name" ValidationRules="@(new ValidationRules{ Required= true, MinLength = 3 })" Width="150"></GridColumn>
         <GridColumn Field=@nameof(Order.EmployeeID) HeaderText="Employee ID" TextAlign="TextAlign.Right" Width="150"></GridColumn>
         <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" TextAlign="TextAlign.Right" Format="C2" Width="150"></GridColumn>
         <GridColumn Field=@nameof(Order.ShipCity) HeaderText="Ship City" Width="150"></GridColumn>
@@ -734,7 +735,7 @@ This section describes step by step process how to retrieve data from a Microsof
         /// <summary>
         /// Returns the data collection after performing data operations based on request from <see cref=”DataManagerRequest”/>
         /// </summary>
-        /// <param name="DataManagerRequest">DataManagerRequest contains the information regarding paging, grouping, filtering, searching, sorting which is handled on the Blazor DataGrid component side</param>
+        /// <param name="DataManagerRequest">DataManagerRequest contains the information regarding searching, filtering, sorting, aggregates paging and grouping which is handled on the Blazor DataGrid component side</param>
         /// <param name="Key">An optional parameter that can be used to perform additional data operations.</param>
         /// <returns>The data collection's type is determined by how this method has been implemented.</returns>
         public override async Task<object> ReadAsync(DataManagerRequest DataManagerRequest, string Key = null)
@@ -749,25 +750,25 @@ This section describes step by step process how to retrieve data from a Microsof
 {% highlight razor tabtitle="OrderData.cs" %}
 public class OrderData
 {
-    public async Task<List<Order>> GetOrdersAsync()
+     public async Task<List<Order>> GetOrdersAsync()
         {
             //Create query to fetch data from database
-            string Query = "SELECT * FROM dbo.Orders ORDER BY OrderID;";
+            string Query = "SELECT * FROM orders ORDER BY OrderID;";
             List<Order> Orders = null;
             //Create SQL Connection
-            using (SqlConnection Connection = new SqlConnection(ConnectionString))
+            using (MySqlConnection Connection = new MySqlConnection(ConnectionString))
             {
-                //Using SqlDataAdapter and Query create connection with database 
-                SqlDataAdapter Adapter = new SqlDataAdapter(Query, Connection);
-                DataSet Data = new DataSet();
+                //Using MySqlDataAdapter and Query create connection with database 
+                MySqlDataAdapter adapter = new MySqlDataAdapter(Query, Connection);
+                DataSet data = new DataSet();
                 Connection.Open();
-                // Using SqlDataAdapter, process the query string and fill the data into the dataset
-                Adapter.Fill(Data);
-                //Cast the data fetched from SqlDataAdapter to List<T>
-                Orders = Data.Tables[0].AsEnumerable().Select(r => new Order
+                // Using MySqlDataAdapter, process the query string and fill the data into the dataset
+                adapter.Fill(data);
+                //Cast the data fetched from MySqlDataAdapter to List<T>
+                Orders = data.Tables[0].AsEnumerable().Select(r => new Order
                 {
                     OrderID = r.Field<int>("OrderID"),
-                    CustomerID = r.Field<string>("CustomerID"),
+                    CustomerName = r.Field<string>("CustomerName"),
                     EmployeeID = r.Field<int>("EmployeeID"),
                     ShipCity = r.Field<string>("ShipCity"),
                     Freight = r.Field<decimal>("Freight")
@@ -785,7 +786,7 @@ public class OrderData
 
 When the application is executed, the Blazor DataGrid component will appear as depicted below.
 
-![Blazor DataGrid component bound with Microsoft SQL Server data](../images/blazor-Grid-Ms-SQL-databinding.png)
+![Blazor DataGrid component bound with MySQL Server data](../images/blazor-Grid-Ms-SQL-databinding.png)
 
 ### Handling searching operation
 
@@ -1018,7 +1019,7 @@ In this scenario, the inline edit `Mode` and [Toolbar](https://blazor.syncfusion
     <GridEditSettings AllowEditing="true" AllowDeleting="true" AllowAdding="true" Mode="@EditMode.Normal"></GridEditSettings>
     <GridColumns>
         <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" IsIdentity="true" ValidationRules="@(new ValidationRules{ Required= true })" IsPrimaryKey="true" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" ValidationRules="@(new ValidationRules{ Required= true, MinLength = 3 })" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerName) HeaderText="Customer Name" ValidationRules="@(new ValidationRules{ Required= true, MinLength = 3 })" Width="150"></GridColumn>
         <GridColumn Field=@nameof(Order.EmployeeID) HeaderText="Employee ID" TextAlign="TextAlign.Right" Width="150"></GridColumn>
         <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" TextAlign="TextAlign.Right" Format="C2" Width="150"></GridColumn>
         <GridColumn Field=@nameof(Order.ShipCity) HeaderText="Ship City" Width="150"></GridColumn>
@@ -1026,7 +1027,7 @@ In this scenario, the inline edit `Mode` and [Toolbar](https://blazor.syncfusion
 </SfGrid>
 {% endhighlight %}
 
-> * Normal/Inline editing is the default edit [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_Mode) for the Blazor DataGrid component. To enable CRUD operations, ensure that the [IsPrimaryKey](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_IsPrimaryKey) property is set to **true** for a specific `GridColumn`, ensuring that its value is unique.
+> * Inline/Normal editing is the default edit [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_Mode) for the Blazor DataGrid component. To enable CRUD operations, ensure that the [IsPrimaryKey](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_IsPrimaryKey) property is set to **true** for a specific `GridColumn`, ensuring that its value is unique.
 > * If database has an Autogenerated column, ensure to define [IsIdentity](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_IsIdentity) property of `GridColumn` to disable them during adding or editing operations.
 
 The CRUD operations can be performed and customized on our own by overriding the following CRUD methods of the [DataAdaptor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html) abstract class.
@@ -1036,7 +1037,7 @@ The CRUD operations can be performed and customized on our own by overriding the
 * Update/UpdateAsync
 * BatchUpdate/BatchUpdateAsync
 
-Let’s see how to perform CRUD operation using Microsoft SQL Server data with Syncfusion Blazor DataGrid component.
+Let’s see how to perform CRUD operation using MySQL Server data with Syncfusion Blazor DataGrid component.
 
 **Insert Operation:**
 
@@ -1063,13 +1064,13 @@ public override async Task<object> InsertAsync(DataManager DataManager, object V
         public async Task AddOrderAsync(Order Value)
         {
             //Create query to insert the specific into the database by accessing its properties 
-            string Query = $"Insert into Orders(CustomerID,Freight,ShipCity,EmployeeID) values('{(Value as Order).CustomerID}','{(Value as Order).Freight}','{(Value as Order).ShipCity}','{(Value as Order).EmployeeID}')";
-            SqlConnection Connection = new SqlConnection(ConnectionString);
+            string Query = $"Insert into Orders(OrderID,CustomerName,Freight,ShipCity,EmployeeID) values('{(Value as Order).OrderID}','{(Value as Order).CustomerName}','{(Value as Order).Freight}','{(Value as Order).ShipCity}','{(Value as Order).EmployeeID}')";
+            MySqlConnection Connection = new MySqlConnection(ConnectionString);
             Connection.Open();
-            //Execute the SQL Command
-            SqlCommand SqlCommand = new SqlCommand(Query, Connection);
+            //Execute the MySQL Command
+            MySqlCommand Command = new MySqlCommand(Query, Connection);
             //Execute this code to reflect the changes into the database
-            SqlCommand.ExecuteNonQuery();
+            Command.ExecuteNonQuery();
             Connection.Close();
         }
 {% endhighlight %}
@@ -1101,13 +1102,13 @@ public override async Task<object> UpdateAsync(DataManager DataManager, object V
 public async Task UpdateOrderAsync(Order Value)
 {
     //Create query to update the changes into the database by accessing its properties
-    string Query = $"Update Orders set CustomerID='{(Value as Order).CustomerID}', Freight='{(Value as Order).Freight}',EmployeeID='{(Value as Order).EmployeeID}',ShipCity='{(Value as Order).ShipCity}' where OrderID='{(Value as Order).OrderID}'";
-    SqlConnection Connection = new SqlConnection(ConnectionString);
+    string Query = $"Update Orders set CustomerName='{(Value as Order).CustomerName}', Freight='{(Value as Order).Freight}',EmployeeID='{(Value as Order).EmployeeID}',ShipCity='{(Value as Order).ShipCity}' where OrderID='{(Value as Order).OrderID}'";
+    MySqlConnection Connection = new MySqlConnection(ConnectionString);
     Connection.Open();
-    //Execute the SQL Command
-    SqlCommand SqlCommand = new SqlCommand(Query, Connection);
+    //Execute the MySQL Command
+    MySqlCommand Command = new MySqlCommand(Query, Connection);
     //Execute this code to reflect the changes into the database
-    SqlCommand.ExecuteNonQuery();
+    Command.ExecuteNonQuery();
     Connection.Close();
 }
 {% endhighlight %}
@@ -1140,12 +1141,12 @@ public async Task RemoveOrderAsync(int? Key)
 {
     //Create query to remove the specific from database by passing the primary key column value.
     string Query = $"Delete from Orders where OrderID={Key}";
-    SqlConnection Connection = new SqlConnection(ConnectionString);
+    MySqlConnection Connection = new MySqlConnection(ConnectionString);
     Connection.Open();
-    //Execute the SQL Command
-    SqlCommand SqlCommand = new SqlCommand(Query, Connection);
+    //Execute the MySQL Command
+    MySqlCommand Command = new MySqlCommand(Query, Connection);
     //Execute this code to reflect the changes into the database
-    SqlCommand.ExecuteNonQuery();
+    Command.ExecuteNonQuery();
     Connection.Close();
 }
 {% endhighlight %}
@@ -1194,6 +1195,6 @@ public override async Task<object> BatchUpdateAsync(DataManager DataManager, obj
 }
 {% endhighlight %}
 
-![Blazor DataGrid component bound with Microsoft SQL Server data](../images/blazor-Grid-Ms-SQl-databinding-Gif.gif)
+![Blazor DataGrid component bound with MySQL Server data](../images/blazor-Grid-Ms-SQl-databinding-Gif.gif)
 
-> You can find the sample in this [GitHub location](https://github.com/SyncfusionExamples/connecting-databases-to-blazor-datagrid-component/tree/master/Binding%20MS%20SQL%20database%20using%20CustomAdaptor).
+> You can find the sample in this [GitHub location]().

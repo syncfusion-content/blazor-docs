@@ -524,8 +524,11 @@ In the below example, `TaskData` implements `INotifyPropertyChanged` and it rais
             get { return taskName; }
             set
             {
-                taskName = value;
-                NotifyPropertyChanged("TaskName");
+                if (value != taskName)
+                {
+                    taskName = value;
+                    NotifyPropertyChanged("TaskName");
+                }
             }
         }
 
