@@ -13,7 +13,7 @@ HeatMap has built-in accessibility features like screen reading and WAI-ARIA att
 
 ## WAI-ARIA attributes
 
-HeatMap component followed the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/alert/) patterns to meet the accessibility. The following ARIA attributes are used in the HeatMap control.
+HeatMap component followed the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/alert/) patterns to meet the accessibility. The following ARIA attributes are used in the HeatMap component.
 
 | Attributes | Purpose |
 | --- | --- |
@@ -23,7 +23,7 @@ HeatMap component followed the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patter
 
 ## Screen reading in HeatMap
 
-HeatMap has built-in accessibility features like screen reading. Screen reading in the HeatMap control allows all users, regardless of ability or disability, to use the control. The following HeatMap elements will be read aloud with screen reading software like Narrator for Windows.
+HeatMap has built-in accessibility features like screen reading. Screen reading in the HeatMap component allows all users, regardless of ability or disability, to use the component. The following HeatMap elements will be read aloud with screen reading software like Narrator for Windows.
 
 | Elements | Description |
 | --- | --- |
