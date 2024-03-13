@@ -931,6 +931,8 @@ The following example demonstrates how to define custom sort comparer function t
 
 ```
 
+![custom sorting](images/blazor-filemanager-custom-sorting.png)
+
 ## Uploading Files
 
 The following table represents the request parameters of *Upload* operations.
