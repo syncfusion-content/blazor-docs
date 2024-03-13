@@ -866,7 +866,7 @@ The available options for the sort order are:
 
 The FileManager component provides a way to customize the default sort action for a column by defining the `SortComparer` property of FileManagerColumn.The SortComparer data type was the [IComparer](https://learn.microsoft.com/en-us/dotnet/api/system.collections.generic.icomparer-1?view=net-7.0&viewFallbackFrom=net-5) interface, so the custom sort comparer class should be implemented in the interface IComparer.
 
-The following example demonstrates how to define custom sort comparer function for the Name column.
+The following example demonstrates how to define custom sort comparer function to achieve natural sorting behavior for the Name column.
 
 ```cshtml
 
@@ -900,8 +900,8 @@ The following example demonstrates how to define custom sort comparer function f
             FileManagerDirectoryContent YRowDataToCompare1 = (FileManagerDirectoryContent)YRowDataToCompare;
             dynamic reference = XRowDataToCompare1.GetType().GetProperty("Name").GetValue(XRowDataToCompare1, null); // Assuming Value property holds the value of the column
             dynamic comparer = YRowDataToCompare1.GetType().GetProperty("Name").GetValue(YRowDataToCompare1, null); // Assuming Value property holds the value of the column
-            bool referenceIsFile = Regex.IsMatch(reference, @"\.\S+");
-            bool comparerIsFile = Regex.IsMatch(comparer, @"\.\S+");
+            bool referenceIsFile = XRowDataToCompare1.IsFile;
+            bool comparerIsFile = YRowDataToCompare1.IsFile;
 
             if (referenceIsFile && !comparerIsFile) return 1;
             if (!referenceIsFile && comparerIsFile) return -1;
