@@ -19,7 +19,7 @@ The TreeMap component follows the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/pat
 | --- | --- |
 | `role=region` | It specifies the TreeMap areas that do not support interactive functions like selection and highlight. |
 | `role=button` | It specifies the TreeMap areas where interactive functions such as selection and highlight are available. |
-| `aria-label` | Provides an accessible name for the title, sub-title, data labels, legend title, and legend item labels. |
+| `aria-label` | Provides an accessible name for the title, subtitle, data labels, legend title, and legend item labels. |
 
 ## Screen reading in TreeMap
 
@@ -29,7 +29,7 @@ Accessibility in the TreeMap component ensures that all users, regardless of abi
 | --- | --- |
 | Data labels | Reads the labels displayed on leaf items of the TreeMap. |
 | Title | Reads the title in the TreeMap. |
-| Sub Title | Reads the sub title in the TreeMap. |
+| Subtitle | Reads the title below the main title content in the TreeMap. |
 | Legend title | Reads the title of the legend in the TreeMap. |
 | Legend item label | Reads the label of the legend item in the TreeMap. |
 

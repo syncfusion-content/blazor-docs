@@ -19,7 +19,7 @@ To meet accessibility standards, the Maps component follows to the [WAI-ARIA](ht
 | --- | --- |
 | `role=region` | It specifies the Maps areas that do not support interactive functions like selection and highlight. |
 | `role=button` | It specifies the Maps areas where interactive functions such as selection and highlight are available. |
-| `aria-label` | Provides an accessible name for Maps elements such as geometric map shapes, title, sub title, legend title, legend item labels, data labels, and so on. To learn more, see the next topic. |
+| `aria-label` | Provides an accessible name for Maps elements such as geometric map shapes, title, subtitle, legend title, legend item labels, data labels, and so on. To learn more, see the next topic. |
 
 ## Screen reading in Maps
 
@@ -28,8 +28,8 @@ Accessibility in the Maps component ensures that all users, regardless of abilit
 | Elements | Description |
 | --- | --- |
 | Shapes in the layer | Reads the names of the geographical shapes (such as countries, states, and regions) that appear on the Maps. |
-| Title | Reads the contents of the title as specified in Maps. |
-| Sub title | Reads the contents of the sub title as specified in Maps. |
+| Title | Reads the title content in the Maps. |
+| Subtitle | Reads the title below the main title content in the Maps. |
 | Legend title | Reads the contents of the legend's title as specified in Maps. |
 | Legend item label | Reads the label of a legend item in Maps. |
 | Data label | Reads the label specified for the shapes in the Maps layer. |

@@ -9,18 +9,17 @@ documentation: ug
 
 # Accessibility in Blazor HeatMap component
 
-HeatMap has built-in accessibility features like WAI-ARIA attributes.
+HeatMap has built-in accessibility features like screen reading and WAI-ARIA attributes.
 
 ## WAI-ARIA attributes
 
-The HeatMap component followed the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/alert/) patterns to meet the accessibility. The following ARIA attributes are used in the HeatMap component:
+HeatMap component followed the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/alert/) patterns to meet the accessibility. The following ARIA attributes are used in the HeatMap control.
 
 | Attributes | Purpose |
 | --- | --- |
 | `role=img` | It is specified in the legend and border of the HeatMap. This role is provided to specify the information in a visual manner. |
 | `role=region` | It specifies the HeatMap areas that do not support interactive functions like cell selection. |
-| `aria-label` | Provides an accessible name for the title, legend title, legend item labels, data labels and gradient HeatMap cells. |
-| `aria-hidden` | Provides an accessible name for the legends. |
+| `aria-label` | Provides an accessible name for the title, legend title, legend item labels, axis labels, cell labels and multilevel labels. |
 
 ## Screen reading in HeatMap
 
