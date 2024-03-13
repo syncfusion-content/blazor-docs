@@ -198,7 +198,7 @@ Any HTML element can be rendered in the tooltip of the polygon shapes using the 
         <MapsLayer ShapeData='new {dataOptions= "https://cdn.syncfusion.com/maps/map-data/world-map.json"}' TValue="string">
             <MapsPolygons>
                 <MapsPolygon Points="Points" Fill="red" Opacity="0.7" BorderColor="green" BorderWidth="2" BorderOpacity="0.7">
-                    <TooltipTemplate> <div style="width:240px;border: 2px solid #000;padding: 10px;fill:white;font-weight:bold;font-size:15px;"> Country Name : Saudi Arabia</div> </TooltipTemplate>
+                    <TooltipTemplate> <div style="width:240px;border: 2px solid #000;padding: 10px;background-color:white;color:black;font-weight:bold;font-size:15px;"> Country Name : Saudi Arabia</div> </TooltipTemplate>
                 </MapsPolygon>
                 <MapsPolygonTooltipSettings Visible="true"></MapsPolygonTooltipSettings>
             </MapsPolygons>
