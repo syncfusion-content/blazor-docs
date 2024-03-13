@@ -245,5 +245,6 @@ N> Based on the types configured, respective connector points appear on hovering
 ## Limitations
 
 * Currently, there is no support for establishing relationship for manual parent tasks.
+* Currently, there is no support for drawing dependency lines continuity across all pages while virtualization is enabled after filtering or sorting Gantt chart.
 
 N> You can refer to our [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Gantt Chart example](https://blazor.syncfusion.com/demos/gantt-chart/default-functionalities?theme=bootstrap5) to know how to render and configure the Gantt.

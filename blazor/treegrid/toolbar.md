@@ -18,7 +18,7 @@ To know about toolbar template in Blazor tree grid component, you can check on t
 
 ## Built-in toolbar items
 
-Built-in toolbar items execute standard actions of the tree grid, and it can be added by defining the [Toolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid~Toolbar.html) as a collection of built-in items. It renders the button with icon and text.
+Built-in toolbar items execute standard actions of the tree grid, and it can be added by defining the [Toolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_Toolbar) as a collection of built-in items. It renders the button with icon and text.
 
 The following table shows built-in toolbar items and its actions.
 
