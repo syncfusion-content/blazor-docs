@@ -534,3 +534,49 @@ You can customize the width of the component using [Width](https://help.syncfusi
     }
 }
 ```
+
+## TextWrap
+
+Specify the boolean value to the [TextWrap](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfDropDownTree-2.html#Syncfusion_Blazor_Navigations_SfDropDownTree_2_TextWrap) property that indicates whether to wrap the selected items into multiple lines when the selected item’s text content exceeded the input width limit or not.
+
+```cshtml
+
+@using Syncfusion.Blazor.Navigations
+
+<SfDropDownTree @ref="tree" TItem="EmployeeData" TValue="string" Placeholder="Select an employee" Width="500px" Value="selecteditem" ShowCheckBox="true" AutoUpdateCheckState="true" Mode="DdtVisualMode.Box" TextWrap="false">
+    <DropDownTreeField TItem="EmployeeData" DataSource="Data" ID="Id" Text="Name" HasChildren="HasChild" ParentID="PId" Selected="Selected" IsChecked="IsChecked"></DropDownTreeField>
+
+</SfDropDownTree>
+
+@code {
+    SfDropDownTree<string, EmployeeData>? tree;
+    List<string> selecteditem = new() { "1" };
+    List<EmployeeData> Data = new List<EmployeeData>
+    {
+        new EmployeeData() { Id = "1", Name = "Steven Buchanan", Job = "General Manager", HasChild = true, Expanded = true},
+        new EmployeeData() { Id = "2", PId = "1", Name = "Laura Callahan", Job = "Product Manager", HasChild = true },
+        new EmployeeData() { Id = "3", PId = "2", Name = "Andrew Fuller", Job = "Team Lead", HasChild = true },
+        new EmployeeData() { Id = "4", PId = "3", Name = "Anne Dodsworth", Job = "Developer" },
+        new EmployeeData() { Id = "10", PId = "3", Name = "Lilly", Job = "Developer" },
+        new EmployeeData() { Id = "5", PId = "1", Name = "Nancy Davolio", Job = "Product Manager", HasChild = true },
+        new EmployeeData() { Id = "6", PId = "5", Name = "Michael Suyama", Job = "Team Lead", HasChild = true },
+        new EmployeeData() { Id = "7", PId = "6", Name = "Robert King", Job = "Developer" },
+        new EmployeeData() { Id = "11", PId = "6", Name = "Mary", Job = "Developer" },
+        new EmployeeData() { Id = "9", PId = "1", Name = "Janet Leverling", Job = "HR"}
+    };
+    
+    class EmployeeData
+    {
+        public string Id { get; set; }
+        public string Name { get; set; }
+        public string Job { get; set; }
+        public bool HasChild { get; set; }
+        public bool Expanded { get; set; }
+        public bool Selected { get; set; }
+        public bool IsChecked { get; set; }
+        public string PId { get; set; }
+    }
+}
+```
+
+![Blazor Dropdown Tree with TextWrap property.](./images/styles/blazor-dropdowntree-component-textwrap.png)

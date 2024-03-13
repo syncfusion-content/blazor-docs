@@ -361,7 +361,7 @@ In the following sample, the Dropdown Tree is rendered with custom value of the 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
 
-<SfDropDownTree @ref="tree" TItem="EmployeeData" TValue="string" Placeholder="Select an employee" Width="500px" Value="selecteditem" ShowCheckBox Mode="DdtVisualMode.Custom">
+<SfDropDownTree @ref="tree" TItem="EmployeeData" TValue="string" Placeholder="Select an employee" Width="500px" Value="selecteditem" ShowCheckBox="true" Mode="DdtVisualMode.Custom">
 <ChildContent>
 <DropDownTreeField TItem="EmployeeData" DataSource="Data" ID="Id" Text="Name" HasChildren="HasChild" ParentID="PId" Selected="Selected" IsChecked="IsChecked"></DropDownTreeField>
  
