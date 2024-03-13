@@ -35,11 +35,11 @@ Set the physical path to the location where your sample application is developed
 
 * Open Internet Information Services (IIS) Manager. Expand the `Sites` node to verify that the published application is running. Click `Browse` to open the application in your browser.
 
-![Browse application](.images/browser-website.png)
+![Browse application](./images/browser-website.png)
 
 * Now, application runs in the specified browser port(8080).
 
-![Output-IIS](.images/iis-output.png)
+![Output-IIS](./images/iis-output.png)
 
 ## See also
 
