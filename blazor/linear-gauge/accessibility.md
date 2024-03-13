@@ -9,21 +9,30 @@ documentation: ug
 
 # Accessibility in Blazor Linear Gauge Component
 
-Linear Gauge provides built-in compliance with the [WAI-ARIA](https://www.w3.org/TR/wai-aria-practices/) specifications. The WAI-ARIA accessibility support is achieved through the attribute like `aria-label` in the SVG element. It helps to provide information about elements in a document for assistive technology. This attribute sets the text label with some default descriptions for the following elements in the Linear Gauge.
-<!-- markdownlint-disable MD033 -->
-<table>
-<tr>
-<td><b>Element</b></td>
-<td><b>Default description</b></td>
-</tr>
-<tr>
-<td>Gauge title</td>
-<td>Specifies the title of the Linear gauge.</td>
-</tr>
-<tr>
-<td>Pointer value</td>
-<td>Specifies the value of the pointer in the Linear gauge.</td>
-</tr>
-</table>
+Linear Gauge has built-in accessibility features like screen reading and WAI-ARIA attributes.
 
-To change this default description, use the [Description](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.SfLinearGauge.html#Syncfusion_Blazor_LinearGauge_SfLinearGauge_Description) property available in the [LinearGaugePointer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugePointer.html#Syncfusion_Blazor_LinearGauge_LinearGaugePointer_Description) and the [SfLinearGauge](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.SfLinearGauge.html#Syncfusion_Blazor_LinearGauge_SfLinearGauge_Description). It helps the screen reader to read for an assistive purpose.
+## WAI-ARIA attributes
+
+The Linear Gauge component followed the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/alert/) patterns to meet the accessibility. The following ARIA attributes are used in the Linear Gauge component.
+
+| Attributes | Purpose |
+| --- | --- |
+| `role=region` | It is specified in the title and pointer. The pointer supports the interactive drag-and-drop function to update the pointer value. |
+| `aria-label` | Provides an accessible name for the title, axis labels, text pointer and annotation. |
+
+## Screen reading in Linear Gauge
+
+Accessibility in the Linear Gauge component ensures that all users, regardless of ability or disability, can use screen reading. The following Linear Gauge elements will be read aloud using screen reading software, such as Narrator for Windows.
+
+| Elements | Description |
+| --- | --- |
+| Title | Reads the title of the Linear Gauge.|
+| Axis labels | Reads the axis labels of the Linear Gauge.|
+| Text pointer | Reads the text content shown as a pointer in Linear Gauge. |
+| Annotation | Reads the content specified in the annotation. |
+
+## Ensuring accessibility
+
+The Linear Gauge component's accessibility levels are ensured through an [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) software tools during automated testing.
+
+The accessibility compliance of the Linear Gauge component is shown in [this sample](https://blazor.syncfusion.com/accessibility/lineargauge). Open the sample in a new window to evaluate the accessibility of the Linear Gauge component with accessibility tools.
