@@ -1072,6 +1072,7 @@ The pivot chart in the following code sample can be seen as a single chart with 
 ![Multiple axis mode Combined in Blazor Pivotchart](images\blazor-pivotchart-multiple-axis-Combined-mode.png)
 
 
+
 ## Series Customization
 
 User can customize series of the pivot chart using [PivotChartSeries](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartSettings.html#Syncfusion_Blazor_PivotView_PivotChartSettings_ChartSeries) in [PivotChartSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartSettings.html) class. The changes handled in the property will be reflected commonly in all chart series.
