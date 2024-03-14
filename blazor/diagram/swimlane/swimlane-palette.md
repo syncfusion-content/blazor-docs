@@ -32,17 +32,17 @@ The following code sample shows how to add the lanes and phases to palette.
 
 @code
 {
-    //Reference the symbolpreview
+    //Reference the symbolpreview.
     DiagramSize SymbolPreview;
-    //Define symbol margin
+    //Define symbol margin.
     SymbolMargin SymbolMargin = new SymbolMargin { Left = 15, Right = 15, Top = 15, Bottom = 15 };
 
     SfSymbolPaletteComponent symbolpalette;
 
-    //Define palattes collection
+    //Define palattes collection.
     DiagramObjectCollection<Palette> Palettes = new DiagramObjectCollection<Palette>();
 
-    // Defines palette's swimlane-shape collection
+    // Defines palette's swimlane-shape collection.
     DiagramObjectCollection<NodeBase> SwimlaneNodes = new DiagramObjectCollection<NodeBase>();
 
     protected override void OnInitialized()
@@ -56,7 +56,7 @@ The following code sample shows how to add the lanes and phases to palette.
 
         SwimlaneNodes = new DiagramObjectCollection<NodeBase>();
 
-        //create a horizontal lane
+        //create a horizontal lane.
         Lane horizontalLane = new Lane()
             {
                 ID = "HorizontalSwimlane",
@@ -73,7 +73,7 @@ The following code sample shows how to add the lanes and phases to palette.
                 },
             };
 
-        //create a vertical lane
+        //create a vertical lane.
         Lane verticalLane = new Lane()
             {
                 ID = "VerticalSwimlane",
@@ -90,10 +90,10 @@ The following code sample shows how to add the lanes and phases to palette.
                 },
             };
 
-        //create a horizontal phase
+        //create a horizontal phase.
         Phase horizontalPhase = new Phase() { ID = "HorizontalPhase", Orientation = Orientation.Horizontal, Width = 80, Height = 1, Style = new ShapeStyle() { Fill = "#5b9bd5", StrokeColor = "#5b9bd5" } };
 
-        //create a vertical phase
+        //create a vertical phase.
         Phase verticalPhase = new Phase() { ID = "VerticalPhase", Orientation = Orientation.Vertical, Width = 1, Height = 80, Style = new ShapeStyle() { Fill = "#5b9bd5", StrokeColor = "#5b9bd5" } };
 
         SwimlaneNodes = new DiagramObjectCollection<NodeBase>()
