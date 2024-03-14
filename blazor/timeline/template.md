@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Template in Blazor Timeline Component | Syncfusion
-description: Checkout and learn about Template with Blazor Timeline component and more details.
+description: Checkout and learn here all about the template in Syncfusion Blazor Timeline component and more details.
 platform: Blazor
 control: Timeline
 documentation: ug
@@ -9,14 +9,14 @@ documentation: ug
 
 # Template in Blazor Timeline component
 
-The Timeline component allows you to customize the appearance for each item by using the [template]() tag directive to modify the dot items, templated contents, progress bar styling and more.
+The Timeline component allows you to customize the appearance for each item by using the `Template` tag directive to modify the dot items, templated contents, progress bar styling and more.
 
-The `template` context receives the following information:
+The `Template` context receives the following information:
 
 | Type | Purpose |
 | --- | --- |
-| `item` | Indicates the current data of the Timeline item. |
-| `itemIndex` | Indicates the current index of the Timeline item. |
+| `Item` | Indicates the current data of the Timeline item. |
+| `ItemIndex` | Indicates the current index of the Timeline item. |
 
 ```cshtml
 

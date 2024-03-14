@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Orientations in Blazor Timeline Component | Syncfusion
-description: Checkout and learn about Orientations with Blazor Timeline component and more details.
+description: Checkout and learn here all about orientations in Syncfusion Blazor Timeline component and more details.
 platform: Blazor
 control: Timeline
 documentation: ug
@@ -9,11 +9,11 @@ documentation: ug
 
 # Orientations in Blazor Timeline component
 
-The Timeline component supports the display of items in both horizontal and vertical direction by using the [Orientation]().
+The Timeline component supports the display of items in both horizontal and vertical direction by using the `Orientation` property.
 
 ## Vertical
 
-You can display the items one below the other vertically by setting the [Orientation]() property to `Vertical`. By default, the items are displayed in vertical orientation.
+You can display the items one below the other vertically by setting the `Orientation` property to `Vertical`. By default, the items are displayed in vertical orientation.
 
 ```cshtml
 
@@ -59,29 +59,27 @@ You can display the items one below the other vertically by setting the [Orienta
 
 ## Horizontal
 
-In horizontal orientation, the items are displayed in a side-by-side manner by setting the [Orientation]() property to `Horizontal`.
+In horizontal orientation, the items are displayed in a side-by-side manner by setting the `Orientation` property to `Horizontal`.
 
 ```cshtml
 
 @using Syncfusion.Blazor.Layouts
 
-<div class="container">
-    <SfTimeline Orientation=TimelineOrientation.Horizontal>
-        <TimelineItems>
-            @foreach (var item in timelineItems)
-            {
-                <TimelineItem>
-                    <Content>
-                        @item.Content
-                    </Content>
-                    <OppositeContent>
-                        @item.OppositeContent
-                    </OppositeContent>
-                </TimelineItem>
-            }
-        </TimelineItems>
-    </SfTimeline>
-</div>
+<SfTimeline Orientation=TimelineOrientation.Horizontal>
+    <TimelineItems>
+        @foreach (var item in timelineItems)
+        {
+            <TimelineItem>
+                <Content>
+                    @item.Content
+                </Content>
+                <OppositeContent>
+                    @item.OppositeContent
+                </OppositeContent>
+            </TimelineItem>
+        }
+    </TimelineItems>
+</SfTimeline>
 
 @code {
 

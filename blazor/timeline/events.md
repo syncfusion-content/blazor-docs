@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Events in Blazor Timeline Component | Syncfusion
-description: Checkout and learn about Events with Blazor Timeline component and more details.
+description: Checkout and learn here all about events section in Syncfusion Blazor Timeline component and more details.
 platform: Blazor
 control: Timeline
 documentation: ug
@@ -13,7 +13,7 @@ This section describes the Timeline events that will be triggered when an approp
 
 ## Created
 
-The Timeline component triggers the [Created]() event when the component rendering is completed.
+The Timeline component triggers the `Created` event when the component rendering is completed.
 
 ```cshtml
 
@@ -54,7 +54,7 @@ The Timeline component triggers the [Created]() event when the component renderi
 
 ## ItemRendered
 
-The Timeline component triggers the [ItemRendered]() event after rendering each item.
+The Timeline component triggers the `ItemRendered` event after rendering each item.
 
 ```cshtml
 

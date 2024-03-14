@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Customization in Blazor Timeline Component | Syncfusion
-description: Checkout and learn about Customization with Blazor Timeline component and more details.
+description: Checkout and learn here all about customization in Syncfusion Blazor Timeline component and more details.
 platform: Blazor
 control: Timeline
 documentation: ug
@@ -69,7 +69,7 @@ You can define the styles applicable to the all the Timeline item connectors.
 
 ### Individual styling
 
-You can also apply unique styles to individual connectors, to differentiate specific items within the timeline.
+You can also apply unique styles to individual connectors, to differentiate specific items within the Timeline.
 
 ```cshtml
 
@@ -136,8 +136,8 @@ You can modify the color of the dots to highlight the specific Timeline items.
 
 @using Syncfusion.Blazor.Layouts
 
-<div class="container" style="height: 250px">
-    <SfTimeline>
+<div class="container">
+    <SfTimeline CssClass="dot-color">
         <TimelineItems>
             @foreach (var item in timelineItems)
             {
@@ -152,16 +152,20 @@ You can modify the color of the dots to highlight the specific Timeline items.
 </div>
 
 <style>
-    .e-timeline-item.state-completed .e-dot {
+    .dot-color .state-completed .e-dot {
         background: #ff9900;
         outline: 1px dashed #ff9900;
         border-color: #ff9900;
     }
 
-    .e-timeline-item.state-progress .e-dot {
+    .dot-color .state-progress .e-dot {
         background: #33cc33;
         outline: 1px dashed #33cc33;
         border-color: #33cc33;
+    }
+
+    .container {
+        height: 250px;
     }
 </style>
 
@@ -192,8 +196,8 @@ You can adjust the size of the dot to make it larger or smaller by using the `--
 
 @using Syncfusion.Blazor.Layouts
 
-<div class="container" style="height: 250px">
-    <SfTimeline>
+<div class="container">
+    <SfTimeline CssClass="dot-size">
         <TimelineItems>
             @foreach (var item in timelineItems)
             {
@@ -208,20 +212,23 @@ You can adjust the size of the dot to make it larger or smaller by using the `--
 </div>
 
 <style>
-    .e-timeline-item .e-dot {
+    .dot-size .e-dot {
         background: #33cc33;
     }
-    .e-timeline-item.x-small .e-dot {
+    .dot-size .x-small .e-dot {
         --dot-size: 12px;
     }
-    .e-timeline-item.small .e-dot {
+    .dot-size .small .e-dot {
         --dot-size: 18px;
     }
-    .e-timeline-item.medium .e-dot {
+    .dot-size .medium .e-dot {
         --dot-size: 24px;
     }
-    .e-timeline-item.large .e-dot {
+    .dot-size .large .e-dot {
         --dot-size: 30px;
+    }
+    .container {
+        height: 250px;
     }
 </style>
 
@@ -253,8 +260,8 @@ You can add shadow effects to the Timeline dots to make it feel visually engagin
 
 @using Syncfusion.Blazor.Layouts
 
-<div class="container" style="height: 250px">
-    <SfTimeline>
+<div class="container">
+    <SfTimeline CssClass="dot-shadow">
         <TimelineItems>
             @foreach (var item in timelineItems)
             {
@@ -269,13 +276,16 @@ You can add shadow effects to the Timeline dots to make it feel visually engagin
 </div>
 
 <style>
-    .e-timeline-item .e-dot {
+    .dot-shadow .e-dot {
         --dot-outer-space: 3px;
         --dot-border: 3px;
         --dot-size: 20px;
         outline-color: #dee2e6;
         border-color: #fff;
         box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5), 2px -2px 4px rgba(255, 255, 255, 0.5) inset;
+    }
+    .container {
+        height: 250px;
     }
 </style>
 
@@ -305,8 +315,8 @@ You can achieve the desired dot variant by customizing the border, outline and b
 
 @using Syncfusion.Blazor.Layouts
 
-<div class="container" style="height: 250px">
-    <SfTimeline>
+<div class="container">
+    <SfTimeline CssClass="dot-variant">
         <TimelineItems>
             @foreach (var item in timelineItems)
             {
@@ -321,33 +331,36 @@ You can achieve the desired dot variant by customizing the border, outline and b
 </div>
 
 <style>
-    .e-timeline-item.dot-filled .e-dot::before {
+    .dot-variant .dot-filled .e-dot::before {
         content: 'A';
         color: #fff;
     }
-    .e-timeline-item.dot-flat .e-dot::before {
+    .dot-variant .dot-flat .e-dot::before {
         content: 'B';
         color: #fff;
     }
-    .e-timeline-item.dot-outlined .e-dot::before {
+    .dot-variant .dot-outlined .e-dot::before {
         content: 'C';
     }
-    .e-timeline-item.dot-filled .e-dot {
+    .dot-variant .dot-filled .e-dot {
         background: #33cc33;
         --dot-outer-space: 3px;
         outline-color: #81ff05;
         --dot-size: 25px;
     }
-    .e-timeline-item.dot-flat .e-dot {
+    .dot-variant .dot-flat .e-dot {
         background: #33cc33;
         --dot-size: 25px;
         --dot-radius: 10%;
     }
-    .e-timeline-item.dot-outlined .e-dot {
+    .dot-variant .dot-outlined .e-dot {
         outline-color: #33cc33;
         --dot-outer-space: 3px;
         background-color: unset;
         --dot-size: 25px;
+    }
+    .container {
+        height: 250px;
     }
 </style>
 
@@ -372,13 +385,13 @@ You can achieve the desired dot variant by customizing the border, outline and b
 
 ### Dot outline
 
-By adding the `e-outline` class to the timeline cssClass property it enables the dots to have an outline state.
+By adding the `e-outline` class to the Timeline `CssClass` property it enables the dots to have an outline state.
 
 ```cshtml
 
 @using Syncfusion.Blazor.Layouts
 
-<div class="container" style="height: 250px">
+<div class="container">
     <SfTimeline CssClass="e-outline">
         <TimelineItems>
             @foreach (var item in timelineItems)
@@ -392,6 +405,12 @@ By adding the `e-outline` class to the timeline cssClass property it enables the
         </TimelineItems>
     </SfTimeline>
 </div>
+
+<style>
+    .container {
+        height: 250px;
+    }
+</style>
 
 @code {
 

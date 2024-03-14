@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Alignment in Blazor Timeline Component | Syncfusion
-description: Checkout and learn about Alignment with Blazor Timeline component and more details.
+description: Checkout and learn here all about alignment in Syncfusion Blazor Timeline component and more details.
 platform: Blazor
 control: Timeline
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Alignment in Blazor Timeline component
 
-You can display the Timeline content `Before`, `After`, `Alternate` and `AlternateReverse` by using the [Align]() property. The oppositeContent will be displayed parallel to the content when configured in the `TimelineItem` directive.
+You can display the Timeline content `Before`, `After`, `Alternate` and `AlternateReverse` by using the `Align` property. The oppositeContent will be displayed parallel to the content when configured in the `TimelineItem` directive.
 
 ## Before
 

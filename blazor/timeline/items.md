@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Items in Blazor Timeline Component | Syncfusion
-description: Checkout and learn about Items with Blazor Timeline component and more details.
+description: Checkout and learn here all about items and how to configure action items in Syncfusion Timeline component and much more.
 platform: Blazor
 control: Timeline
 documentation: ug
@@ -9,11 +9,11 @@ documentation: ug
 
 # Items in Blazor Timeline component
 
-The Timeline items can be added by using the [TimelineItem]() tag directive. Each item can be configured with options such as `Content`, `OppositeContent`, `DotCss`, `Disabled` and `CssClass`.
+The Timeline items can be added by using the `TimelineItem` tag directive. Each item can be configured with options such as `Content`, `OppositeContent`, `DotCss`, `Disabled` and `CssClass`.
 
 ## Adding content
 
-You can define the item content using the [Content]() tag directive as a child to `TimelineItem` directive.
+You can define the item content using the `Content` tag directives as a child to `TimelineItem` directive.
 
 ### String content
 
@@ -56,7 +56,7 @@ You can define string content for the Timeline items.
 
 ### Template content
 
-You can specify the template content for the items in the [Content]() tag directive.
+You can specify the template content for the items in the `Content` tag directive.
 
 ```cshtml
 
@@ -150,7 +150,7 @@ You can specify the template content for the items in the [Content]() tag direct
 
 ## Adding opposite content
 
-You can add additional information to each Timeline item, by using [OppositeContent]() tag directive as a child to `TimelineItem` which is positioned opposite to the item content. Similar to the `content` property you can define `string` or `template` as contents to the OppositeContent.
+You can add additional information to each Timeline item, by using `OppositeContent` tag directive as a child to `TimelineItem` which is positioned opposite to the item content. Similar to the `Content` property you can define `string` and template contents to the OppositeContent.
 
 ```cshtml
 
@@ -194,7 +194,7 @@ You can add additional information to each Timeline item, by using [OppositeCont
 
 ## Dot item
 
-You can define CSS class to set icons, background colors, or images to personalize the appearance of dots associated with each Timeline item by using the [DotCss](../api/timeline#items#dotCss) property.
+You can define CSS class to set icons, background colors, or images to personalize the appearance of dots associated with each Timeline item by using the `DotCss` property.
 
 ### Adding icons
 
@@ -259,7 +259,7 @@ You can display text for the Timeline items using the `DotCss` property, by addi
 
 ## Disabling items
 
-You can use the [Disabled](../api/timeline#items#disabled) property to disable an item when set to `true`. By default, the value is `false`.
+You can use the `Disabled` property to disable an item when set to `true`. By default, the value is `false`.
 
 ```cshtml
 
@@ -299,6 +299,6 @@ You can use the [Disabled](../api/timeline#items#disabled) property to disable a
 
 ![Blazor Timeline Component with Disabled Item](./images/Blazor-disabled)
 
-## Css class
+## CSS class
 
-You can customize the appearance of the Timeline item by specifying a custom CssClass using the [CssClass](../api/timeline#items#cssClass) property.
+You can customize the appearance of the Timeline item by specifying a custom CSS class using the `CssClass` property.
