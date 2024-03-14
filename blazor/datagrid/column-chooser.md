@@ -457,7 +457,7 @@ Using the column chooser template, you can customize the column chooser dialog u
         <Template>
             @{
                 var ContextData = context as ColumnChooserTemplateContext;
-                <CustomComponent @key="ContextData.Columns.Count" ColumnContext="ContextData"></Counter>
+                <CustomComponent @key="ContextData.Columns.Count" ColumnContext="ContextData"></CustomComponent>
             }
         </Template>
          <FooterTemplate>
