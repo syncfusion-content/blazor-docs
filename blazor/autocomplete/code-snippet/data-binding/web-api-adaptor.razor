@@ -1,0 +1,22 @@
+@using Syncfusion.Blazor.DropDowns
+@using Syncfusion.Blazor.Data
+
+<SfAutoComplete TValue="string" TItem="EmployeeData" Placeholder="Select a name" Query="@RemoteQuery" @bind-Value="@EmployeeValue">
+    <SfDataManager Url="https://blazor.syncfusion.com/services/production/api/Employees" Offline="true" CrossDomain="true" Adaptor="Syncfusion.Blazor.Adaptors.WebApiAdaptor"></SfDataManager>
+    <AutoCompleteFieldSettings Value="FirstName" />
+</SfAutoComplete>
+           
+@code {
+    public string EmployeeValue { get; set; } = "Andrew";
+
+
+    public Query RemoteQuery = new Query();
+
+    public class EmployeeData
+    {
+        public int EmployeeID { get; set; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public string Country { get; set; }
+    }
+}
