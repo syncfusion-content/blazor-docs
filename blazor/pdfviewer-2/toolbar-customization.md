@@ -220,7 +220,7 @@ You can adjust the order of the `ToolbarItems` by rearranging how the items are 
 
 ![Blazor PDFViewer with Custom Toolbar](./images/Rearrange-Default-Options.png)
 
-[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Toolbar/Custom%20Toolbar/Primary%20Custom%20Toolbar-%20SfPdfViewer/Rearrange-Default-Options).
+[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Toolbar/Custom%20Toolbar/Primary%20Custom%20Toolbar%20-%20SfPdfViewer/Rearrange-Default-Options).
 
 ## Disable the default items and Add new items in Primary Toolbar
 
@@ -328,7 +328,7 @@ To customize the Primary Toolbar in the PDF Viewer, you can achieve this by sett
 
 ![Blazor PDFViewer with Custom Toolbar](./images/primary-toolbar-customization-with-save-option.png)
 
-[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Toolbar/Custom%20Toolbar/Primary%20Custom%20Toolbar-%20SfPdfViewer/Without-Default-Options).
+[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Toolbar/Custom%20Toolbar/Primary%20Custom%20Toolbar%20-%20SfPdfViewer/Without-Default-Options).
 
 ## How to customize the Primary Toolbar with default options
 
@@ -373,7 +373,7 @@ You can implement the both `ToolbarItems` and `CustomToolbarItems`. The `CustomT
 ```
 ![Blazor PDFViewer with Custom Toolbar](./images/primary-toolbar-customization-with-default-toolbaritems.png)
 
-[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Toolbar/Custom%20Toolbar/Primary%20Custom%20Toolbar-%20SfPdfViewer/With-Default-Options).
+[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Toolbar/Custom%20Toolbar/Primary%20Custom%20Toolbar%20-%20SfPdfViewer/With-Default-Options).
 
 ## How modify the toolbar Icons in the Primary Toolbar
 
@@ -436,6 +436,6 @@ You can customize the appearance of the toolbar icons. The below code illustrate
 ```
 ![Blazor PDFViewer with Custom Toolbar](./images/primary-toolbar-customization-icon-change.png)
 
-[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Toolbar/Custom%20Toolbar/Primary%20Custom%20Toolbar-%20SfPdfViewer/Icon-Style-Change).
+[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Toolbar/Custom%20Toolbar/Primary%20Custom%20Toolbar%20-%20SfPdfViewer/Icon-Style-Change).
 
 N> This is applicable only for custom toolbar.
