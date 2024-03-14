@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Flat Data rendering in Blazor FileManager component | Syncfusion
-description: Learn here all about Flat Data rendering in Syncfusion Blazor FileManager component.
+title: Flat data rendering in Blazor FileManager component | Syncfusion
+description: Checkout and learn here all about flat data rendering in Syncfusion Blazor FileManager component and more.
 platform: Blazor
 control: File Manager
 documentation: ug
