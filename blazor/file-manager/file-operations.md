@@ -864,7 +864,7 @@ The available options for the sort order are:
 
 ## Custom sorting
 
-The FileManager component provides a way to customize the default sort action for LargeIcons view by defining the [`SortComparer`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.SfFileManager-1.html#Syncfusion_Blazor_FileManager_SfFileManager_1_SortComparer) property and for a DetailsView column by defining the `SortComparer` property of [`FileManagerColumn`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerColumn.html).The `SortComparer` clas should implement the [IComparer](https://learn.microsoft.com/en-us/dotnet/api/system.collections.generic.icomparer-1?view=net-8.0) interface.
+The FileManager component provides a way to customize the default sort action for the LargeIcons view by defining the [`SortComparer`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.SfFileManager-1.html#Syncfusion_Blazor_FileManager_SfFileManager_1_SortComparer) property and for sorting individual columns in the DetailsView by defining the `SortComparer` property in the [`FileManagerColumn`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerColumn.html) class.The `SortComparer` class should implement the [IComparer](https://learn.microsoft.com/en-us/dotnet/api/system.collections.generic.icomparer-1?view=net-8.0) interface.
 
 The following example demonstrates how to define custom sort comparer function to achieve natural sorting behavior for the LargeIcons view.
 
@@ -934,6 +934,8 @@ The following example demonstrates how to define custom sort comparer function t
 
 {% endhighlight %}
 {% endtabs %}
+
+![custom sorting](images/blazor-filemanager-largeicons-custom-sorting.png)
 
 The following example demonstrates how to define custom sort comparer function to achieve natural sorting behavior for the Name column in DetailsView pane.
 
@@ -1012,6 +1014,7 @@ The following example demonstrates how to define custom sort comparer function t
 {% endhighlight %}
 {% endtabs %}
 
+![custom sorting](images/blazor-filemanager-detailsview-custom-sorting.png)
 
 {% tabs %}
 {% highlight FileManagerService.cs %}
@@ -1276,9 +1279,6 @@ namespace FileManager.Data
 
 {% endhighlight %}
 {% endtabs %}
-
-
-![custom sorting](images/blazor-filemanager-custom-sorting.png)
 
 ## Uploading Files
 
