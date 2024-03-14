@@ -300,11 +300,11 @@ public class OrderData
 
 ## Show customized text in checkbox list data
 
-The Syncfusion Angular Grid component provides you with the flexibility to customize the text displayed in the Excel/Checkbox filtering options. This allows you to modify the default text and provide more meaningful and contextual labels for the filtering.
+The Syncfusion Blazor Grid component provides you with the flexibility to customize the text displayed in the Excel/Checkbox filtering options. This allows you to modify the default text and provide more meaningful and contextual labels for the filtering.
 
 To customize the text in the Excel/Checkbox filter, you can define a `FilterItemTemplate`  and bind it to the desired column. The `FilterItemTemplate`  property allows you to create custom templates for filter items. You can use any logic and HTML elements within this template to display the desired text or content.
 
-In the example below, you can see how you can customize the text displayed in the filter checkbox list for the **Delivered** column. This is achieved by defining a `FilterItemTemplate`  within the element for that specific column. Inside the template, you can use Angular's template syntax to conditionally display **Delivered** if the data value is true and **Not delivered** if the value is false.
+In the example below, you can see how you can customize the text displayed in the filter checkbox list for the **Delivered** column. This is achieved by defining a `FilterItemTemplate`  within the element for that specific column. Inside the template, you can use FilterItemTemplateContext to conditionally display **Delivered** if the data value is true and **Not delivered** if the value is false.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
