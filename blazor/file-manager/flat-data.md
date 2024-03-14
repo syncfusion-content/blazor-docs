@@ -9,21 +9,27 @@ documentation: ug
 
 # Flat data rendering in Blazor FileManager component
 
-This section briefly explains how to render the FileManager component using a flat data object. With the latest enhancement, the File Manager component now employs a flat data object for rendering, eliminating the need to define `FileManagerAjaxSettings`. Instead, in the documentation code, a physical service is injected for file actions, and the corresponding file action's response can be retrieved from the locally injected service with the help of new event support for actions performed with the FileManager component.
+This section briefly explains how to render the FileManager component using a flat data object. With the latest enhancement, the File Manager component now employs a flat data object for rendering, eliminating the need to define [FileManagerAjaxSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerAjaxSettings.html). In the documentation code, a physical service is injected to handle file actions, and the resulting file action response can be obtained locally through the newly added event support for actions performed with the FileManager component.
 
 **Event information**
 
 Event Name | Description
  ---  | ---
-OnRead | Gets or sets an event callback that will be invoked when the initial data is set and when the sub folders data are read.
-ItemsDeleting | Gets or sets an event callback that will be invoked before the delete operation takes place.
-FolderCreating | Gets or sets an event callback that will be invoked before the folder is being created.
-Searching | Gets or sets an event callback that will be invoked when the character is entered in input box for searching files or folders.
-ItemRenaming | Gets or sets an event callback that will be invoked when the file or folder is being renamed.
-ItemsMoving | Gets or sets an event callback that will be invoked when the file or folder is being cut or copied for the reason to be pasted in another path.
-ItemsUploaded | Gets or sets an event callback that will be invoked when the file or folder is uploaded.
-BeforeImageLoad | Gets or sets an event callback that will be invoked before sending the image request to the server.
-BeforeDownload  | Gets or sets an event callback that will be invoked before sending the download request to the server.
+[OnRead](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerEvents-1.html#Syncfusion_Blazor_FileManager_FileManagerEvents_1_OnRead) | Gets or sets an event callback that will be invoked when the initial data is set and when the sub folders data are read.
+[ItemsDeleting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerEvents-1.html#Syncfusion_Blazor_FileManager_FileManagerEvents_1_ItemsDeleting) | Gets or sets an event callback that will be invoked before the delete operation takes place.
+[ItemsDeleted](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerEvents-1.html#Syncfusion_Blazor_FileManager_FileManagerEvents_1_ItemsDeleted) | Gets or sets an event callback that will be invoked when the file or folder is deleted successfully.
+[FolderCreating](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerEvents-1.html#Syncfusion_Blazor_FileManager_FileManagerEvents_1_FolderCreating) | Gets or sets an event callback that will be invoked before the folder is being created.
+[FolderCreated](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerEvents-1.html#Syncfusion_Blazor_FileManager_FileManagerEvents_1_FolderCreated) | Gets or sets an event callback that will be invoked when the new folder is created successfully. 
+[Searching](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerEvents-1.html#Syncfusion_Blazor_FileManager_FileManagerEvents_1_Searching) | Gets or sets an event callback that will be invoked when the character is entered in input box for searching files or folders.
+[Searched](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerEvents-1.html#Syncfusion_Blazor_FileManager_FileManagerEvents_1_Searched) | Gets or sets an event callback that will be invoked when the search action is completed.
+[ItemRenaming](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerEvents-1.html#Syncfusion_Blazor_FileManager_FileManagerEvents_1_ItemRenaming) | Gets or sets an event callback that will be invoked when the file or folder is being renamed.
+[ItemRenamed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerEvents-1.html#Syncfusion_Blazor_FileManager_FileManagerEvents_1_ItemRenamed) | Gets or sets an event callback that will be invoked when the file or folder is renamed successfully.
+[ItemsMoving](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerEvents-1.html#Syncfusion_Blazor_FileManager_FileManagerEvents_1_ItemsMoving) | Gets or sets an event callback that will be invoked when the file or folder is being cut or copied for the reason to be pasted in another path.
+[ItemsMoved](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerEvents-1.html#Syncfusion_Blazor_FileManager_FileManagerEvents_1_ItemsMoved) | Gets or sets an event callback that will be invoked when the file or folder is being pasted to the destination path.
+[ItemsUploading](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerEvents-1.html#Syncfusion_Blazor_FileManager_FileManagerEvents_1_ItemsUploading) | Gets or sets an event callback that will be invoked when the file or folder upload begins.
+[ItemsUploaded](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerEvents-1.html#Syncfusion_Blazor_FileManager_FileManagerEvents_1_ItemsUploaded) | Gets or sets an event callback that will be invoked when the file or folder is uploaded.
+[BeforeImageLoad](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerEvents-1.html#Syncfusion_Blazor_FileManager_FileManagerEvents_1_BeforeImageLoad) | Gets or sets an event callback that will be invoked before sending the image request to the server.
+[BeforeDownload](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerEvents-1.html#Syncfusion_Blazor_FileManager_FileManagerEvents_1_BeforeDownload)  | Gets or sets an event callback that will be invoked before sending the download request to the server.
 
 ## Add Blazor FileManager component
 
@@ -46,7 +52,7 @@ File operations such as read, delete, and folder creation are seamlessly execute
 
 To set up a locally injected service, create a new file with the extension `.cs` within the project, include the following GitHub file code in this file, and then proceed to inject the created service into the `program.cs` file.
 
-N> [View FileManagerService.cs in GitHub ](https://github.com/SyncfusionExamples).
+N> [View FileManagerService.cs in GitHub ](https://github.com/SyncfusionExamples/blazor-filemanager-with-flat-data/blob/master/FileManagerService.cs).
 
 ```cshtml
 
@@ -112,7 +118,7 @@ To perform file operations such as reading, deleting, creating, renaming, search
 
 ## Upload operation
 
-To perform a upload operation in FileManager component with injected service, utilize the `ItemsUploaded` event. This event enables you to access details of the file selected in the browser, providing access to metadata such as the file name, size, and content type. To read the contents of the uploaded file, invoke the `OpenReadStream()` method of the `IBrowserFile` interface, which returns a stream for reading the file data.
+To perform a upload operation in FileManager component with injected service, utilize the [ItemsUploaded](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerEvents-1.html#Syncfusion_Blazor_FileManager_FileManagerEvents_1_ItemsUploaded) event. This event enables you to access details of the file selected in the browser, providing access to metadata such as the file name, size, and content type. To read the contents of the uploaded file, invoke the `OpenReadStream()` method of the `IBrowserFile` interface, which returns a stream for reading the file data.
 
 ```cshtml
 
@@ -160,7 +166,7 @@ To perform a upload operation in FileManager component with injected service, ut
 
 ## Download operation
 
-To perform a download operation in FileManager component with injected service, utilize the <code>BeforeDownload</code> event. This will allow you to retrieve necessary Downloaded item details from the event argument. Updating the downloaded file's stream data and name to the event arguments <code>FileStream</code> and <code>DownloadFileName</code> respectively completes the download operation.
+To perform a download operation in FileManager component with injected service, utilize the [BeforeDownload](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerEvents-1.html#Syncfusion_Blazor_FileManager_FileManagerEvents_1_BeforeDownload) event. This will allow you to retrieve necessary Downloaded item details from the event argument. Updating the downloaded file's stream data and name to the event arguments [FileStream](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.BeforeDownloadEventArgs-1.html#Syncfusion_Blazor_FileManager_BeforeDownloadEventArgs_1_FileStream) and [DownloadFileName](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.BeforeDownloadEventArgs-1.html#Syncfusion_Blazor_FileManager_BeforeDownloadEventArgs_1_DownloadFileName) respectively completes the download operation.
 
 ```cshtml
 
@@ -178,7 +184,7 @@ To perform a download operation in FileManager component with injected service, 
 
 ## Get image operation
 
-To load image in FileManager component with injected service, utilize the <code>BeforeImageLoad</code> event. This will allow you to retrieve necessary Downloaded item details from the event argument. Updating the image file's stream data to the event argument <code>FileStream</code> completes the image retrieval operation.
+To load image in FileManager component with injected service, utilize the [BeforeImageLoad](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerEvents-1.html#Syncfusion_Blazor_FileManager_FileManagerEvents_1_BeforeImageLoad) event. This will allow you to retrieve necessary Downloaded item details from the event argument. Updating the image file's stream data to the event argument [FileStream](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.BeforeImageLoadEventArgs-1.html#Syncfusion_Blazor_FileManager_BeforeImageLoadEventArgs_1_FileStream) completes the image retrieval operation.
 
 ```cshtml
 
@@ -194,4 +200,4 @@ To load image in FileManager component with injected service, utilize the <code>
 
 ```
 
-N> [View Sample in GitHub](https://github.com/SyncfusionExamples).
+N> [View Sample in GitHub](https://github.com/SyncfusionExamples/blazor-filemanager-with-flat-data).
