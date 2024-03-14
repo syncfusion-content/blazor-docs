@@ -27,7 +27,7 @@ You need to configure the corresponding [Interactive render mode](https://learn.
 
 To add **Blazor In-place Editor** component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install [Syncfusion.Blazor.InPlaceEditor](https://www.nuget.org/packages/Syncfusion.Blazor.InPlaceEditor/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/).
 
-If you select an **Interactive render mode** as `WebAssembly` or `Auto`, you can install the NuGet package in the project any where to add component in Web App.
+If you utilize `WebAssembly or Auto` render modes in the Blazor Web App need to be install Syncfusion Blazor components NuGet packages within the client project.
 
 Alternatively, you can utilize the following package manager command to achieve the same.
 
@@ -70,7 +70,7 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 ```html
 <head>
     ....
-    <link href="_content/Syncfusion.Blazor.Themes/material.css" rel="stylesheet" />
+    <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
 </head>
 ....
 <body>
@@ -125,7 +125,7 @@ N> The type of component editor must be configured in the 'Type' Editor In-place
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion Blazor In-place Editor component in your default web browser.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LNBzDsDvrxUlWkDg?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor In-place Editor Component](images/blazor-inplace-editor-component.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VNhJtMLkzWvWaMvy?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor In-place Editor Component](images/blazor-inplace-editor-component.png)" %}
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/InPlaceEditor).
 
@@ -179,9 +179,9 @@ The following code explains how to initialize a simple In-place Editor with popu
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hZBTNCZbrxRMjckY?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor In-place Editor in Inline Mode](./images/blazor-inplace-editor-in-inline-mode.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VtrfZiBaJrrIVqHN?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor In-place Editor in Inline Mode](./images/blazor-inplace-editor-in-inline-mode.png)" %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rDLfXstFhReorynz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor In-place Editor in Popup Mode](./images/blazor-inplace-editor-in-popup-mode.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BNVJDsrOTBrCTUyL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor In-place Editor in Popup Mode](./images/blazor-inplace-editor-in-popup-mode.png)" %}
 
 ## Configuring DropDownList
 
@@ -339,7 +339,7 @@ In the following code, it is configured to render the `DatePicker`, `DropDownLis
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BthJjiDlrQBUUcfd?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Integrating DatePicker in Blazor In-place Editor](./images/blazor-inplace-editor-integrate-datepicker.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNLpDiBOpBgAmQAj?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Integrating DatePicker in Blazor In-place Editor](./images/blazor-inplace-editor-integrate-datepicker.png)" %}
 
 ## Submitting data to the server (save)
 
@@ -446,7 +446,7 @@ The edited data is submitted to the server and you can see the new values gettin
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rNLfNWZlhmmqhrCN?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Refreshing Blazor In-place Editor Data](./images/blazor-inplace-editor-refresh-data.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZVzXiLafrzKnAQi?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Refreshing Blazor In-place Editor Data](./images/blazor-inplace-editor-refresh-data.png)" %}
 
 ## See also
 

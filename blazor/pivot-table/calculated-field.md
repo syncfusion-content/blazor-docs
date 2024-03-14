@@ -167,7 +167,7 @@ N> By default, **None** will be selected from the dropdown.
 
 In addition, you can specify the desired custom formats by selecting the **Custom** option from the "Format" dropdown.
 
-![Applying custom format through Blazor PivotTable calculated field dialog UI](images/calculatdfield-apply-custom-Format.png)
+![Applying custom format through Blazor PivotTable calculated field dialog UI](images/calculatdfield-apply-custom-format.png)
 ## Supported operators and functions for the calculated field formula
 
 Below is a list of operators and functions that can be used in the formula to create the calculated fields.
@@ -379,8 +379,8 @@ The event [OnActionBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
 
 | Action | Action Name|
 |----------------|-------------|
-| [Calculated field button](./calculated-field)| Open calculated field dialog|
-| [Edit icon in calculated field](./calculated-field/#editing-through-the-field-list-and-the-groupingbar)| Edit calculated field|
+| [Calculated field button](https://blazor.syncfusion.com/documentation/pivot-table/calculated-field)| Open calculated field dialog|
+| [Edit icon in calculated field](https://blazor.syncfusion.com/documentation/pivot-table/calculated-field#editing-through-the-field-list-and-the-groupingbar)| Edit calculated field|
 | [Context menu in the tree view inside the calculated field dialog](./calculated-field)| Calculated field context menu|
 
 * [FieldInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotActionBeginEventArgs.html#Syncfusion_Blazor_PivotView_PivotActionBeginEventArgs_FieldInfo): It holds the selected value field information.
@@ -448,8 +448,8 @@ The event [OnActionComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Bl
 
 | Action | Action Name|
 |----------------|-------------|
-| [Calculated field button](./calculated-field)| Calculated field applied|
-| [Edit icon in calculated field](./calculated-field#editing-through-the-field-list-and-the-groupingbar)| Calculated field edited|
+| [Calculated field button](https://blazor.syncfusion.com/documentation/pivot-table/calculated-field)| Calculated field applied|
+| [Edit icon in calculated field](https://blazor.syncfusion.com/documentation/pivot-table/calculated-field#editing-through-the-field-list-and-the-groupingbar)| Calculated field edited|
 
 
 * [FieldInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotActionCompleteEventArgs-1.html#Syncfusion_Blazor_PivotView_PivotActionCompleteEventArgs_1_FieldInfo): It holds the selected value field information.
@@ -514,7 +514,7 @@ The event [OnActionFailure](https://help.syncfusion.com/cr/blazor/Syncfusion.Bla
 | Action | Action Name|
 |----------------|-------------|
 | [Calculated field button](./calculated-field)| Open calculated field dialog|
-| [Edit icon in calculated field](./calculated-field#editing-through-the-field-list-and-the-groupingbar)| Edit calculated field|
+| [Edit icon in calculated field](https://blazor.syncfusion.com/documentation/pivot-table/calculated-field#editing-through-the-field-list-and-the-groupingbar)| Edit calculated field|
 | [Context menu in the tree view inside the calculated field dialog](./calculated-field)| Calculated field context menu|
 
 

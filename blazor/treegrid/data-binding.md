@@ -899,6 +899,6 @@ Now, the Tree Grid can be configured using the **'SfDataManager'** to interact w
 }
 ```
 
-To perform Tree Grid CRUD operation using Entity Framework. You can refer [here](./edit/#entity-framework).
+To perform Tree Grid CRUD operation using Entity Framework. You can refer [here](https://blazor.syncfusion.com/documentation/treegrid/editing/entity-frame-work).
 
 N> You can find the fully working sample [here](https://github.com/SyncfusionExamples/Blazor-TreeGrid-With-EntityFramework).

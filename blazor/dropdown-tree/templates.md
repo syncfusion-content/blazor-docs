@@ -7,7 +7,7 @@ control: Dropdown Tree
 documentation: ug
 ---
 
-# Templates in Dropdown Tree
+# Templates in Blazor Dropdown Tree Component
 
 The Dropdown Tree has been provided with several options to customize each list item, header, and footer elements.
 
@@ -60,7 +60,7 @@ The variable `context` holds the data of the current node.
 }
 ```
 
-![Blazor Dropdown Tree with ItemTemplate](./images/template/blazor-dropdowntree-item-template.png)
+![Blazor Dropdown Tree with ItemTemplate.](./images/template/blazor-dropdowntree-item-template.png)
 
 ## Header template
 
@@ -120,7 +120,7 @@ In the following sample, the header is customized with the custom element.
 </style>
 ```
 
-![Blazor Dropdown Tree with HeaderTemplate](./images/template/blazor-dropdowntree-header-template.png)
+![Blazor Dropdown Tree with HeaderTemplate.](./images/template/blazor-dropdowntree-header-template.png)
 
 ## Footer template
 
@@ -181,7 +181,7 @@ In the following sample, the footer element displays the total number of employe
 </style>
 ```
 
-![Blazor Dropdown Tree with Footer Template](./images/template/blazor-dropdowntree-footer-template.png)
+![Blazor Dropdown Tree with Footer Template.](./images/template/blazor-dropdowntree-footer-template.png)
 
 ## No records template
 
@@ -216,7 +216,7 @@ In the following sample, popup list content displays the notification of no data
 }
 ```
 
-![Blazor Dropdown Tree without Data](./images/template/blazor-dropdowntree-nodata-template.png)
+![Blazor Dropdown Tree without Data.](./images/template/blazor-dropdowntree-nodata-template.png)
 
 ## Action failure template
 
@@ -265,7 +265,7 @@ In the following sample, when the data fetch request fails, the Dropdown Tree di
 }
 ```
 
-![Blazor Dropdown Tree with Action Failure Template](./images/template/blazor-dropdowntree-failure-template.png)
+![Blazor Dropdown Tree with Action Failure Template.](./images/template/blazor-dropdowntree-failure-template.png)
 
 ## Placeholder
 
@@ -302,7 +302,7 @@ Use the [Placeholder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Na
 }
 ```
 
-![Blazor Dropdown Tree with place holder](./images/template/blazor-dropdowntree-placeholder.png)
+![Blazor Dropdown Tree with place holder.](./images/template/blazor-dropdowntree-placeholder.png)
 
 ## FloatLabel
 
@@ -350,4 +350,61 @@ The `FloatLabelType` as  `Auto` is demonstrated in the following code sample.
 }
 ```
 
-![Blazor Dropdown Tree with place holder](./images/template/blazor-dropdowntree-float-label.png)
+![Blazor Dropdown Tree with place holder.](./images/template/blazor-dropdowntree-float-label.png)
+
+## SelectedItem Template
+
+In Dropdown Tree, while selecting more than one items via checkbox or multi selection support, all the selected items will be displayed in the input. Instead of displaying all the selected item text, the custom template can be displayed by setting the the [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfDropDownTree-2.html#Syncfusion_Blazor_Navigations_SfDropDownTree_2_Mode) property as **Custom**.
+
+In the following sample, the Dropdown Tree is rendered with custom value of the SelectedItemTemplate tag like 1 item selected.
+
+```cshtml
+@using Syncfusion.Blazor.Navigations
+
+<SfDropDownTree @ref="tree" TItem="EmployeeData" TValue="string" Placeholder="Select an employee" Width="500px" Value="selecteditem" ShowCheckBox="true" Mode="DdtVisualMode.Custom">
+<ChildContent>
+<DropDownTreeField TItem="EmployeeData" DataSource="Data" ID="Id" Text="Name" HasChildren="HasChild" ParentID="PId" Selected="Selected" IsChecked="IsChecked"></DropDownTreeField>
+ 
+    </ChildContent>
+<SelectedItemTemplate>
+ 
+        @if (context != null && context.Value != null && context.Value.Count>0)
+        {
+            string content = $"{context.Value.Count} item{(context.Value.Count == 1 ? "" : "s")} selected";
+            @content
+        }
+</SelectedItemTemplate>
+</SfDropDownTree>
+ 
+@code {
+    SfDropDownTree<string,EmployeeData>? tree;
+    List<string> selecteditem = new() { "2"};
+    List<EmployeeData> Data = new List<EmployeeData>
+    {
+        new EmployeeData() { Id = "1", Name = "Steven Buchanan", Job = "General Manager", HasChild = true, Expanded = true},
+        new EmployeeData() { Id = "2", PId = "1", Name = "Laura Callahan", Job = "Product Manager", HasChild = true },
+        new EmployeeData() { Id = "3", PId = "2", Name = "Andrew Fuller", Job = "Team Lead", HasChild = true },
+        new EmployeeData() { Id = "4", PId = "3", Name = "Anne Dodsworth", Job = "Developer" },
+        new EmployeeData() { Id = "10", PId = "3", Name = "Lilly", Job = "Developer" },
+        new EmployeeData() { Id = "5", PId = "1", Name = "Nancy Davolio", Job = "Product Manager", HasChild = true },
+        new EmployeeData() { Id = "6", PId = "5", Name = "Michael Suyama", Job = "Team Lead", HasChild = true },
+        new EmployeeData() { Id = "7", PId = "6", Name = "Robert King", Job = "Developer" },
+        new EmployeeData() { Id = "11", PId = "6", Name = "Mary", Job = "Developer" },
+        new EmployeeData() { Id = "9", PId = "1", Name = "Janet Leverling", Job = "HR"}
+    };
+ 
+    class EmployeeData
+    {
+        public string Id { get; set; }
+        public string Name { get; set; }
+        public string Job { get; set; }
+        public bool HasChild { get; set; }
+        public bool Expanded { get; set; }
+        public bool Selected { get; set; }
+        public bool IsChecked { get; set; }
+        public string PId { get; set; }
+    }
+}
+```
+
+![Blazor Dropdown Tree with SelectedItem Template.](./images/template/blazor-dropdowntree-selecteditem-template.png)

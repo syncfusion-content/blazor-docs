@@ -71,7 +71,7 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 ```html
 <head>
     ....
-    <link href="_content/Syncfusion.Blazor.Themes/material.css" rel="stylesheet" />
+    <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
 </head>
 ....
 <body>
@@ -164,7 +164,7 @@ Add the Syncfusion Blazor Carousel component in `.razor` file inside the `Pages`
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion Blazor Carousel component in your default web browser.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LNrptMjTJygFOUCB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Carousel Component](images/getting_started.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZVTXWhIpyDoMAim?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Carousel Component.](images/blazor-carousel-getting-started.png)" %}
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/Carousel).
 

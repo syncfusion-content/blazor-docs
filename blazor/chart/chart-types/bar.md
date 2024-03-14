@@ -191,6 +191,6 @@ N> Refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/bla
 
 ## See also
 
-* [Creating stacked waterfall chart using Blazor bar chart](https://www.syncfusion.com/kb/13237/creating-stacked-waterfall-chart-using-blazor-bar-chart)
+* [Creating stacked waterfall chart using Blazor bar chart](https://support.syncfusion.com/kb/article/11589/creating-stacked-waterfall-chart-using-blazor-bar-chart)
 * [Data Label](../data-labels)
 * [Tooltip](../tool-tip)
