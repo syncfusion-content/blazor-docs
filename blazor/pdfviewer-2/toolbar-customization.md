@@ -180,321 +180,262 @@ The following code snippet explains how to show or hide annotation toolbar using
 ```
 [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Toolbar/Annotation%20Toolbar/Show%20or%20hide%20on%20loading%20-%20SfPdfViewer).
 
-## How to create custom Toolbar with Save option
+## Primary Toolbar Customization
 
-You can create your own Toolbar in PDFViewer by disabling the default toolbar using the EnableNavigationToolbar, EnableAnnotationToolbar, and EnableToolbar properties of PDFViewer class.
+You have the capability to modify the primary toolbar options by rearranging them, disabling default options and adding new items and moreover, you can specify the index at which to add a new item within the existing toolbar options.
 
-The following code represnts how to create custom toolbar with save and some custom options.
+## Rearrange the default options of toolbar
 
-```cshtml
-
-@using Syncfusion.Blazor.Navigations
-@using Syncfusion.Blazor.SfPdfViewer
-
-<SfToolbar>
-        <ToolbarItems>
-            <ToolbarItem PrefixIcon="e-icons e-chevron-up"
-                         TooltipText="Previous Page"
-                         id="previousPage"
-                         Align="@Syncfusion.Blazor.Navigations.ItemAlign.Left"
-                         OnClick="@previousClicked">
-            </ToolbarItem>
-            <ToolbarItem PrefixIcon="e-icons e-chevron-down"
-                         TooltipText="Next Page"
-                         id="nextPage"
-                         Align="@Syncfusion.Blazor.Navigations.ItemAlign.Left"
-                         OnClick="@nextClicked">
-            </ToolbarItem>
-            <ToolbarItem PrefixIcon="e-icons e-circle-add"
-                         TooltipText="Zoom in"
-                         id="zoomIn"
-                         OnClick="@zoomInClicked"></ToolbarItem>
-            <ToolbarItem PrefixIcon="e-icons e-circle-remove"
-                         TooltipText="Zoom out"
-                         id="zoomOut"
-                         OnClick="@zoomoutClicked">
-            </ToolbarItem>
-            <ToolbarItem Text="Save"
-                         TooltipText="Save Document"
-                         id="save"
-                         Align="@Syncfusion.Blazor.Navigations.ItemAlign.Right"
-                         OnClick="@save">
-            </ToolbarItem>
-            <ToolbarItem Text="Edit Annotation"
-                         TooltipText="Annotation Toolbar"
-                         id="annotation"
-                         Align="@Syncfusion.Blazor.Navigations.ItemAlign.Right"
-                         OnClick="@annotations">
-            </ToolbarItem>
-            <ToolbarItem PrefixIcon="e-icons e-print"
-                         TooltipText="Print" id="print"
-                         Align="@Syncfusion.Blazor.Navigations.ItemAlign.Right"
-                         OnClick="@print">
-            </ToolbarItem>
-            <ToolbarItem PrefixIcon="e-icons e-download"
-                         TooltipText="Download"
-                         id="Download"
-                         Align="@Syncfusion.Blazor.Navigations.ItemAlign.Right"
-                         OnClick="@download">
-            </ToolbarItem>
-        </ToolbarItems>
-    </SfToolbar>
-
-
-<SfPdfViewer2 @ref="PDFViewer"
-              DocumentPath="@DocumentPath"
-              EnableNavigationToolbar="false"
-              EnableToolbar="false"
-              Height="100%"
-              Width="100%">
-</SfPdfViewer2>
-
-@code
-{
-    SfPdfViewer2 PDFViewer;
-    private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
-
-    public async void nextClicked(ClickEventArgs args)
-    {
-        //Navigate to next page of the PDF document loaded in the SfPdfViewer.
-        await PDFViewer.GoToNextPageAsync();
-    }
-
-    public async void previousClicked(ClickEventArgs args)
-    {
-        //Navigate to previous page of the PDF document.
-        await PDFViewer.GoToPreviousPageAsync();
-    }
-
-    MemoryStream stream;
-
-    public async void save(ClickEventArgs args)
-    {
-        //Gets the loaded PDF document with the changes.
-        byte[] data = await PDFViewer.GetDocumentAsync();
-        //Save the PDF document to a MemoryStream.
-        stream = new MemoryStream(data);
-        //Load a PDF document from the MemoryStream.
-        await PDFViewer.LoadAsync(stream);
-    }
-
-    public async void annotations(ClickEventArgs args)
-    {
-        //Shows or hides the annotation toolbar in the SfPdfViewer.
-        await PDFViewer.ShowAnnotationToolbar(true);
-    }
-
-    public async void print(ClickEventArgs args)
-    {
-        //Print the PDF document being loaded in the SfPdfViewer.
-        await PDFViewer.PrintAsync();
-    }
-
-    public async void download(ClickEventArgs args)
-    {
-        //Downloads the PDF document being loaded in the SfPdfViewer.
-        await PDFViewer.DownloadAsync();
-    }
-
-    public async void zoomInClicked(ClickEventArgs args)
-    {
-        //Scale the page to the next value in the zoom drop down list.
-        await PDFViewer.ZoomInAsync();
-    }
-
-    public async void zoomoutClicked(ClickEventArgs args)
-    {
-        //Magnifies the page to the previous value in the zoom drop down list.
-        await PDFViewer.ZoomOutAsync();
-    }
-}
-
-<style>
-    .e-pv-previous-page-navigation-icon::before {
-        content: '\e70d';
-    }
-
-    .e-pv-next-page-navigation-icon::before {
-        content: '\e76a';
-    }
-
-    .e-pv-download-document-icon::before {
-        content: '\e75d';
-    }
-
-    .e-pv-print-document-icon::before {
-        content: '\e743';
-    }
-
-    .e-pv-zoom-out-icon::before {
-        content: '\e742';
-    }
-
-    .e-pv-zoom-in-icon::before {
-        content: '\e755';
-    }
-
-    .e-pv-fit-page::before {
-        content: '\e91b';
-    }
-</style>
-
-```
-![Blazor PDFViewer with Custom Toolbar](../pdfviewer/images/toolbar-customization.png)
-
-[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Toolbar/Custom%20Toolbar/Custom%20toolbar%20with%20save%20option%20-%20SfPdfViewer).
-
-The following sample mimics all the options of the SfPdfViewer default toolbar in a custom toolbar along with the save button.
-
-[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Toolbar/Custom%20Toolbar/Custom%20Toolbar%20-%20%20SfPdfViewer).
-
-## Customize the toolbar icon in Blazor SfPdfViewer Component
-
-You can customize the appearance of the toolbar icons by disabling the default toolbar and creating custom toolbar with template. The below code illustrates how to create custom toolbar with custom toolbar icon.
+You can adjust the order of the `ToolbarItems` by rearranging how the items are listed. The toolbar will display the items based on the order in which they appear in the list
 
 ```cshtml
 
-@using Syncfusion.Blazor.Navigations
 @using Syncfusion.Blazor.SfPdfViewer
 
-<SfToolbar>
-        <ToolbarItems>
-            <ToolbarItem PrefixIcon="e-icons e-chevron-up"
-                         TooltipText="Previous Page"
-                         id="previousPage"
-                         Align="@Syncfusion.Blazor.Navigations.ItemAlign.Left"
-                         OnClick="@previousClicked">
-            </ToolbarItem>
-            <ToolbarItem PrefixIcon="e-icons e-chevron-down"
-                         TooltipText="Next Page"
-                         id="nextPage"
-                         Align="@Syncfusion.Blazor.Navigations.ItemAlign.Left"
-                         OnClick="@nextClicked">
-            </ToolbarItem>
-            <ToolbarItem PrefixIcon="e-icons e-circle-add"
-                         TooltipText="Zoom in"
-                         id="zoomIn"
-                         OnClick="@zoomInClicked">
-            </ToolbarItem>
-            <ToolbarItem PrefixIcon="e-icons e-circle-remove"
-                         TooltipText="Zoom out" id="zoomOut"
-                         OnClick="@zoomoutClicked">
-            </ToolbarItem>
-            <ToolbarItem Text="Edit Annotation"
-                         TooltipText="Annotation Toolbar"
-                         id="annotation"
-                         Align="@Syncfusion.Blazor.Navigations.ItemAlign.Right"
-                         OnClick="@annotations">
-            </ToolbarItem>
-            <ToolbarItem PrefixIcon="e-icons e-print"
-                         TooltipText="Print"
-                         id="print"
-                         Align="@Syncfusion.Blazor.Navigations.ItemAlign.Right"
-                         CssClass="e-pv-print-document-container"
-                         OnClick="@print">
-            </ToolbarItem>
-            <ToolbarItem PrefixIcon="e-icons e-download"
-                         TooltipText="Download"
-                         id="Download"
-                         Align="@Syncfusion.Blazor.Navigations.ItemAlign.Right"
-                         CssClass="e-pv-download-document-container"
-                         OnClick="@download">
-            </ToolbarItem>
-        </ToolbarItems>
-    </SfToolbar>
-
-
-<SfPdfViewer2 @ref="PDFViewer"
-              DocumentPath="@DocumentPath"
-              EnableNavigationToolbar="false"
-              EnableToolbar="false"
-              Height="100%"
-              Width="100%">
+<SfPdfViewer2 Height="100%" Width="100%" DocumentPath="@DocumentPath">
+    <PdfViewerToolbarSettings ToolbarItems="ToolbarItems"></PdfViewerToolbarSettings>
 </SfPdfViewer2>
 
-@code
-{
-    SfPdfViewer2 PDFViewer;
-    private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
+@code {
 
-    public async void nextClicked(ClickEventArgs args)
+    public string DocumentPath { get; set; } = "wwwroot/data/PDF_Succinctly.pdf";
+
+    List<ToolbarItem> ToolbarItems = new List<ToolbarItem>()
     {
-        //Navigate to next page of the PDF document loaded in the SfPdfViewer.
-       await PDFViewer.GoToNextPageAsync();
-    }
-
-    public async void previousClicked(ClickEventArgs args)
-    {
-        //Navigate to previous page of the PDF document.
-        await PDFViewer.GoToPreviousPageAsync();
-    }
-
-    MemoryStream stream;
-
-    public async void annotations(ClickEventArgs args)
-    {
-        //Shows or hides the annotation toolbar in the SfPdfViewer.
-        await PDFViewer.ShowAnnotationToolbar(true);
-    }
-
-    public asynccvoid print(ClickEventArgs args)
-    {
-        //Print the PDF document being loaded in the SfPdfViewer.
-        await PDFViewer.PrintAsync();
-    }
-
-    public async void download(ClickEventArgs args)
-    {
-        //Downloads the PDF document being loaded in the SfPdfViewer.
-        await PDFViewer.DownloadAsync();
-    }
-
-    public async void zoomInClicked(ClickEventArgs args)
-    {
-        //Scale the page to the next value in the zoom drop down list.
-        await PDFViewer.ZoomInAsync();
-    }
-
-    public async void zoomoutClicked(ClickEventArgs args)
-    {
-        //Magnifies the page to the previous value in the zoom drop down list.
-        await PDFViewer.ZoomOutAsync();
-    }
+        ToolbarItem.OpenOption,
+        ToolbarItem.PageNavigationTool,
+        ToolbarItem.SelectionTool,
+        ToolbarItem.MagnificationTool,
+        ToolbarItem.PanTool,
+        ToolbarItem.UndoRedoTool,
+        ToolbarItem.CommentTool,
+        ToolbarItem.AnnotationEditTool,
+        ToolbarItem.SearchOption,
+        ToolbarItem.DownloadOption,
+        ToolbarItem.PrintOption,
+    };
 }
 
-<style>
-    .e-pv-previous-page-navigation-icon::before {
+```
+
+![Blazor PDFViewer with Custom Toolbar](./images/Rearrange-Default-Options.png)
+
+[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Toolbar/Custom%20Toolbar/Primary%20Custom%20Toolbar%20-%20SfPdfViewer/Rearrange-Default-Options).
+
+## Disable the default items and Add new items in Primary Toolbar
+
+To customize the Primary Toolbar in the PDF Viewer, you can achieve this by setting the `ToolbarItems` property to null and creating a list of `PdfToolbarItem` objects. Each PdfToolbarItem contains a **RenderFragment** and an **Index** for positioning the toolbar items. Finally, assign this list to the `CustomToolbarItems` property. 
+
+```cshtml
+
+@using Syncfusion.Blazor.SfPdfViewer; 
+@using Syncfusion.Blazor.Navigations; 
+
+<SfPdfViewer2 @ref="@Viewer" DocumentPath="@DocumentPath" Height="100%" Width="100%">  
+    <PdfViewerToolbarSettings CustomToolbarItems="@CustomToolbarItems" ToolbarItems="null" />`   
+    <PdfViewerEvents ToolbarClicked="ClickAction"></PdfViewerEvents>              
+</SfPdfViewer2>  
+
+@code{ 
+    private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf"; 
+    SfPdfViewer2 Viewer; 
+    MemoryStream stream; 
+
+    // List provide the position and element for the custom toolbar items
+    public List<PdfToolbarItem> CustomToolbarItems = new List<PdfToolbarItem>() 
+    {    
+        new PdfToolbarItem (){ Index = 0, Template = @GetTemplate("PreviousPage")}, 
+        new PdfToolbarItem (){ Index = 1, Template = @GetTemplate("NextPage")}, 
+        new PdfToolbarItem (){ Index = 2, Template = @GetTemplate("Save")}, 
+        new PdfToolbarItem (){ Index = 3, Template = @GetTemplate("Download")} 
+    };  
+
+    // Get the renderfragment element for the custom toolbaritems in the primary toolbar
+    private static RenderFragment GetTemplate(string name)  
+    {  
+        return __builder => 
+            {  
+                if (name == "PreviousPage")
+                { 
+                    <ToolbarItem PrefixIcon="e-icons e-chevron-up" 
+                          		Text="Previous Page" 
+                                TooltipText="Previous Page" 
+                                Id="previousPage" 
+                                Align="ItemAlign.Left"> 
+                    </ToolbarItem> 
+                }  
+                else if(name == "NextPage")
+                { 
+                    <ToolbarItem PrefixIcon="e-icons e-chevron-down" 
+                                Text="Next Page" 
+                                TooltipText="Next Page" 
+                                Id="nextPage" 
+                                Align="ItemAlign.Left"> 
+                    </ToolbarItem> 
+                }  
+                else if(name == "Save")
+                { 
+                    <ToolbarItem PrefixIcon="e-icons e-save" 
+                                Text="Save" 
+                                TooltipText="Save Document" 
+                                Id="save" 
+                                Align="ItemAlign.Right"> 
+                    </ToolbarItem>
+                }  
+                else if(name == "Download")
+                { 
+                    <ToolbarItem PrefixIcon="e-icons e-download" 
+                                Text="Download"
+                                TooltipText="Download" 
+                                Id="download" 
+                                Align="ItemAlign.Right"> 
+                    </ToolbarItem> 
+                }  
+            };            
+    }  
+
+    // Click for the custom toolbaritems in the primary toolbar
+    public async void ClickAction(ClickEventArgs Item) 
+    {  
+        if (Item.Item.Id == "previousPage") 
+        {
+            //Navigate to previous page of the PDF document.
+            await Viewer.GoToPreviousPageAsync(); 
+        }  
+        else if (Item.Item.Id == "nextPage") 
+        {
+            //Navigate to next page page of the PDF document.
+            await Viewer.GoToNextPageAsync(); 
+        }  
+        else if(Item.Item.Id == "save")  
+        {
+            //Gets the loaded PDF document with the changes.
+            byte[] data = await Viewer.GetDocumentAsync();
+            //Save the PDF document to a MemoryStream. 
+            stream = new MemoryStream(data);
+            //Load a PDF document from the MemoryStream. 
+            await Viewer.LoadAsync(stream); 
+        } 
+        else if (Item.Item.Id == "download") 
+        {
+            //Downloads the PDF document
+            await Viewer.DownloadAsync(); 
+        } 
+    }  
+} 
+
+```
+
+![Blazor PDFViewer with Custom Toolbar](./images/primary-toolbar-customization-with-save-option.png)
+
+[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Toolbar/Custom%20Toolbar/Primary%20Custom%20Toolbar%20-%20SfPdfViewer/Without-Default-Options).
+
+## How to customize the Primary Toolbar with default options
+
+You can implement the both `ToolbarItems` and `CustomToolbarItems`. The `CustomToolbarItems` list allows you to specify items with their respective index positions, which are then incorporated into the ToolbarItems list accordingly. 
+
+```cshtml
+
+@using Syncfusion.Blazor.SfPdfViewer; 
+@using Syncfusion.Blazor.Navigations;
+
+<SfPdfViewer2 @ref="@Viewer" DocumentPath="@DocumentPath" Height="100%" Width="100%">  
+         <PdfViewerToolbarSettings CustomToolbarItems="@CustomToolbarItems" ToolbarItems="@ToolbarItems" />   
+         <PdfViewerEvents ToolbarClicked="ClickAction"></PdfViewerEvents>              
+</SfPdfViewer2>  
+
+@code { 
+    private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf"; 
+    SfPdfViewer2 Viewer; 
+    MemoryStream stream; 
+
+    // List provide the position and element for the custom toolbar items
+    public List<PdfToolbarItem> CustomToolbarItems = new List<PdfToolbarItem>() 
+    {  
+        new PdfToolbarItem (){ Index = 1, Template = @GetTemplate("PreviousPage")}, 
+        new PdfToolbarItem (){ Index = 2, Template = @GetTemplate("NextPage")}, 
+        new PdfToolbarItem (){ Index = 4, Template = @GetTemplate("Save")}, 
+        new PdfToolbarItem (){ Index = 7, Template = @GetTemplate("Download")} 
+    }; 
+
+    // GetTemaplate and ClickAction function as same as the previous example
+
+    // Default toolbar items list provided for the toolbaritems
+    public List<Syncfusion.Blazor.SfPdfViewer.ToolbarItem> ToolbarItems = new List<Syncfusion.Blazor.SfPdfViewer.ToolbarItem>() 
+    { 
+        Syncfusion.Blazor.SfPdfViewer.ToolbarItem.OpenOption, 
+        Syncfusion.Blazor.SfPdfViewer.ToolbarItem.SelectionTool, 
+        Syncfusion.Blazor.SfPdfViewer.ToolbarItem.SearchOption,
+        Syncfusion.Blazor.SfPdfViewer.ToolbarItem.PrintOption 
+    }; 
+} 
+
+```
+![Blazor PDFViewer with Custom Toolbar](./images/primary-toolbar-customization-with-default-toolbaritems.png)
+
+[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Toolbar/Custom%20Toolbar/Primary%20Custom%20Toolbar%20-%20SfPdfViewer/With-Default-Options).
+
+## How modify the toolbar Icons in the Primary Toolbar
+
+You can customize the appearance of the toolbar icons. The below code illustrates how to create custom toolbar with custom toolbar icon.
+
+```cshtml
+
+@using Syncfusion.Blazor.SfPdfViewer; 
+@using Syncfusion.Blazor.Navigations; 
+
+<SfPdfViewer2 @ref="@Viewer" DocumentPath="@DocumentPath" Height="100%" Width="100%">  
+    <PdfViewerToolbarSettings CustomToolbarItems="@CustomToolbarItems" ToolbarItems="@ToolbarItems" />   
+    <PdfViewerEvents ToolbarClicked="ClickAction"></PdfViewerEvents>              
+</SfPdfViewer2>  
+
+@code { 
+    private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf"; 
+    SfPdfViewer2 Viewer; 
+    MemoryStream stream; 
+
+    // List provide the position and element for the custom toolbar items
+    public List<PdfToolbarItem> CustomToolbarItems = new List<PdfToolbarItem>() 
+    {  
+        new PdfToolbarItem (){ Index = 1, Template = @GetTemplate("PreviousPage")}, 
+        new PdfToolbarItem (){ Index = 2, Template = @GetTemplate("NextPage")}, 
+        new PdfToolbarItem (){ Index = 4, Template = @GetTemplate("Save")}, 
+        new PdfToolbarItem (){ Index = 7, Template = @GetTemplate("Download")} 
+    }; 
+
+    // GetTemaplate and ClickAction function as same as the previous example
+
+    // Default toolbar items list provided for the toolbaritems
+    public List<Syncfusion.Blazor.SfPdfViewer.ToolbarItem> ToolbarItems = new List<Syncfusion.Blazor.SfPdfViewer.ToolbarItem>() 
+    { 
+        Syncfusion.Blazor.SfPdfViewer.ToolbarItem.OpenOption, 
+        Syncfusion.Blazor.SfPdfViewer.ToolbarItem.SelectionTool, 
+        Syncfusion.Blazor.SfPdfViewer.ToolbarItem.SearchOption,
+        Syncfusion.Blazor.SfPdfViewer.ToolbarItem.PrintOption 
+    };
+} 
+
+<style> 
+    .e-icons.e-chevron-up::before {
+        content: '\e87a';
+    }
+
+    .e-icons.e-chevron-down::before {
         content: '\e70d';
     }
 
-    .e-pv-next-page-navigation-icon::before {
-        content: '\e76a';
+    .e-icons.e-download::before {
+        content: '\e7a0';
     }
 
-    .e-pv-download-document-icon::before {
-        content: '\e75d';
+    .e-icons.e-save::before {
+        content: '\e7a8'
     }
-
-    .e-pv-print-document-icon::before {
-        content: '\e743';
-    }
-
-    .e-pv-zoom-out-icon::before {
-        content: '\e742';
-    }
-
-    .e-pv-zoom-in-icon::before {
-        content: '\e755';
-    }
-
-    .e-pv-fit-page::before {
-        content: '\e91b';
-    }
-</style>
+</style> 
 
 ```
-![Blazor PDFViewer with Custom Toolbar](../pdfviewer/images/customization-final.png)
+![Blazor PDFViewer with Custom Toolbar](./images/primary-toolbar-customization-icon-change.png)
 
-[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Toolbar/Custom%20Toolbar/Custom%20toolbar%20with%20PNG%20image%20-%20SfPdfViewer).
+[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Toolbar/Custom%20Toolbar/Primary%20Custom%20Toolbar%20-%20SfPdfViewer/Icon-Style-Change).
 
 N> This is applicable only for custom toolbar.
