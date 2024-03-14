@@ -112,7 +112,7 @@ To perform file operations such as reading, deleting, creating, renaming, search
 
 ## Upload operation
 
-To perform a upload operation in FileManager component with injected service, utilize the `ItemsUploaded` event. This event enables you to access details of the file selected in the browser, providing access to metadata such as the file name, size, and content type. To read the contents of the uploaded file, invoke the OpenReadStream() method of the IBrowserFile interface, which returns a stream for reading the file data.
+To perform a upload operation in FileManager component with injected service, utilize the `ItemsUploaded` event. This event enables you to access details of the file selected in the browser, providing access to metadata such as the file name, size, and content type. To read the contents of the uploaded file, invoke the `OpenReadStream()` method of the `IBrowserFile` interface, which returns a stream for reading the file data.
 
 ```cshtml
 
