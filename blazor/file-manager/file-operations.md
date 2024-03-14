@@ -866,7 +866,7 @@ The available options for the sort order are:
 
 The FileManager component provides a way to customize the default sort action for the LargeIconsView by defining the [`SortComparer`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.SfFileManager-1.html#Syncfusion_Blazor_FileManager_SfFileManager_1_SortComparer) property and for sorting individual columns in the DetailsView by defining the `SortComparer` property in the [`FileManagerColumn`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerColumn.html) class.The `SortComparer` class should implement the [IComparer](https://learn.microsoft.com/en-us/dotnet/api/system.collections.generic.icomparer-1?view=net-8.0) interface.
 
-The following example demonstrates how to define custom sort comparer function to achieve natural sorting behavior for the LargeIconsView.
+The following example demonstrates how to define custom sort comparer function to achieve natural sorting behavior for the Name column in both DetailsView and LargeIconsView.
 
 {% tabs %}
 {% highlight razor %}
@@ -875,81 +875,13 @@ The following example demonstrates how to define custom sort comparer function t
 @using System.Text.RegularExpressions;
 @using FileManager.Data
 
+<!-- SfFileManager component with a custom sorting SortComparer property -->
 <SfFileManager TValue="FileManagerDirectoryContent" SortComparer="new NaturalSortComparer()">
     <FileManagerEvents TValue="FileManagerDirectoryContent" OnRead="OnReadAsync"></FileManagerEvents>
-</SfFileManager>
-
-@code {
-    public FileManagerService FileService = new FileManagerService();
-
-    public async Task OnReadAsync(ReadEventArgs<FileManagerDirectoryContent> args)
-    {
-        args.Response = await FileService.ReadAsync(args.Path, args.Folder);
-    }
-
-    public class NaturalSortComparer : IComparer<Object>
-    {
-        public int Compare(Object XRowDataToCompare, Object YRowDataToCompare)
-        {
-            FileManagerDirectoryContent XRowDataToCompare1 = (FileManagerDirectoryContent)XRowDataToCompare;
-            FileManagerDirectoryContent YRowDataToCompare1 = (FileManagerDirectoryContent)YRowDataToCompare;
-			// Assuming Value property holds the value of the column
-            dynamic reference = XRowDataToCompare1.GetType().GetProperty("Name").GetValue(XRowDataToCompare1, null);
-			// Assuming Value property holds the value of the column
-            dynamic comparer = YRowDataToCompare1.GetType().GetProperty("Name").GetValue(YRowDataToCompare1, null);
-            bool referenceIsFile = XRowDataToCompare1.IsFile;
-            bool comparerIsFile = YRowDataToCompare1.IsFile;
-
-            if (referenceIsFile && !comparerIsFile) return 1;
-            if (!referenceIsFile && comparerIsFile) return -1;
-
-            var referenceParts = new List<(double, string)>();
-            var comparerParts = new List<(double, string)>();
-
-            Regex.Replace(reference, @"(\d+)|(\D+)", (MatchEvaluator)(m => { referenceParts.Add((m.Groups[1].Success ? double.Parse(m.Groups[1].Value) : double.PositiveInfinity, m.Groups[2].Value)); return ""; }));
-            Regex.Replace(comparer, @"(\d+)|(\D+)", (MatchEvaluator)(m => { comparerParts.Add((m.Groups[1].Success ? double.Parse(m.Groups[1].Value) : double.PositiveInfinity, m.Groups[2].Value)); return ""; }));
-            for (int i = 0; i < referenceParts.Count && i < comparerParts.Count; i++)
-            {
-                var referencePart = referenceParts[i];
-                var comparerPart = comparerParts[i];
-                int comparisonResult;
-                if (referencePart.Item1 != double.PositiveInfinity && comparerPart.Item1 != double.PositiveInfinity)
-                {
-                    comparisonResult = referencePart.Item1.CompareTo(comparerPart.Item1);
-                }
-                else
-                {
-                    comparisonResult = String.Compare(referencePart.Item2, comparerPart.Item2);
-                }
-                if (comparisonResult != 0)
-                {
-                    return comparisonResult;
-                }
-            }
-
-            return referenceParts.Count - comparerParts.Count;
-        }
-    }
-}
-
-{% endhighlight %}
-{% endtabs %}
-
-![custom sorting](images/blazor-filemanager-largeicons-custom-sorting.png)
-
-The following example demonstrates how to define custom sort comparer function to achieve natural sorting behavior for the Name column in DetailsView pane.
-
-{% tabs %}
-{% highlight razor %}
-
-@using Syncfusion.Blazor.FileManager
-@using System.Text.RegularExpressions;
-@using FileManager.Data
-
-<SfFileManager TValue="FileManagerDirectoryContent" View="ViewType.Details">
-    <FileManagerEvents TValue="FileManagerDirectoryContent" OnRead="OnReadAsync"></FileManagerEvents>
+    <!-- FileManagerDetailsViewSettings component for configuring the details view of the file manager -->
     <FileManagerDetailsViewSettings>
         <FileManagerColumns>
+            <!-- FileManagerColumn for the 'Name' field with a custom sorting SortComparer property -->
             <FileManagerColumn Field="Name" HeaderText="Name" SortComparer="new NaturalSortComparer()"></FileManagerColumn>
             <FileManagerColumn Field="DateModified" Format="MM/dd/yyyy h:mm tt" HeaderText="Modified"></FileManagerColumn>
             <FileManagerColumn Field="Size" HeaderText="Size">
@@ -1013,8 +945,6 @@ The following example demonstrates how to define custom sort comparer function t
 
 {% endhighlight %}
 {% endtabs %}
-
-![custom sorting](images/blazor-filemanager-detailsview-custom-sorting.png)
 
 {% tabs %}
 {% highlight FileManagerService.cs %}
@@ -1279,6 +1209,10 @@ namespace FileManager.Data
 
 {% endhighlight %}
 {% endtabs %}
+
+![custom sorting](images/blazor-filemanager-largeicons-custom-sorting.png)
+
+![custom sorting](images/blazor-filemanager-detailsview-custom-sorting.png)
 
 ## Uploading Files
 
