@@ -538,6 +538,63 @@ N> The default value is [InheritReadOnly](https://help.syncfusion.com/cr/blazor/
 
 Refer to [Constraints](https://blazor.syncfusion.com/documentation/diagram/constraints) to learn about how to enable or disable the annotation constraints.
 
+## Template Support for Annotation
+Diagram provides template support for annotation. you can define a HTML content at tag level and specify the use of template with [UseTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Annotation.html#Syncfusion_Blazor_Diagram_Annotation_UseTemplate) property. If you want to define separate template for each annotation, differentiate the annotaiton by the ID property. The following code explains how to define template for a annotation.
+
+The following code illustrates how to define a template in node’s annotation. similarly, you can define it in connectors.
+```cshtml
+@using Syncfusion.Blazor.Diagram
+
+<SfDiagramComponent Width="1000px" Height="1000px" Nodes="@nodes">
+    <DiagramTemplates>
+        <AnnotationTemplate>
+            @if (context is Annotation annotation)
+            {
+                if (annotation.ID == "Annotation1")
+                {
+                    string ID = annotation.ID + "TemplateContent";
+                    <div id="@ID" class="profile-card" style="width:100%;height:100%;display:flex;justify-content:center;align-items:center;flex-direction:column">
+                        <div class="profile-image" style="width:100%;height:100%;border-radius:50%;overflow:hidden;background:white">
+                            <img src="https://ej2.syncfusion.com/demos/src/diagram/employees/image2.png" width="100%" height="100%" alt="Profile Image">
+                        </div>
+                        <div class="profile-name" style="font-size:12px;font-weight:bold;">Nicolas</div>
+                    </div>
+                }
+            }
+        </AnnotationTemplate>
+    </DiagramTemplates>
+</SfDiagramComponent>
+@code
+{
+    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    protected override void OnInitialized()
+    {
+        Node node = new Node()
+        {
+            ID = "node1",
+            Height = 100,
+            Width  = 100,
+            OffsetX = 300,
+            OffsetY = 300,
+            Style = new ShapeStyle() { Fill = "#6BA5D7", StrokeColor = "black", Opacity = 1},
+            Annotations = new DiagramObjectCollection<ShapeAnnotation>()
+            {
+                 new ShapeAnnotation()
+                 {
+                     ID = "Annotation1",
+                     UseTemplate = true,
+                     Height = 75,
+                     Width = 75,
+
+                 },
+            },
+        };
+        nodes.Add(node);
+    }
+}
+```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Annotations/Appearance/TemplateSupportforAnnotation)
+![Blazor Diagram with Template Annotations](../images/TemplateSupportforAnnotation.png)
 ## See also
 
 * [How to add or remove annotation constraints](../constraints#annotation-constraints)
