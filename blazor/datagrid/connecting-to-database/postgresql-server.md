@@ -1,6 +1,6 @@
 ---
 layout: post
-title: PostgreSQL Server Data Binding in Blazor DataGrid Component | Syncfusion
+title: PostgreSQL Data Binding in Blazor DataGrid Component | Syncfusion
 description: Learn about consuming data from PostgreSQL Server and binding it to Syncfusion Component, and performing CRUD operations.
 platform: Blazor
 control: DataGrid
