@@ -299,7 +299,6 @@ When the [EnableVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion
 
 ```cshtml
 @using Syncfusion.Blazor.PivotView
-@using Syncfusion.Blazor.Buttons
 
 <SfPivotView TValue="ProductDetails" Height="400" Width="100%" ShowGroupingBar="true" EnableVirtualization=true ShowToolbar=true Toolbar="@Options" ExportAllPages=false AllowExcelExport=true>
     <PivotViewDataSourceSettings DataSource="@Data">
