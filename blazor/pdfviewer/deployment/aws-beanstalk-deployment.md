@@ -158,7 +158,6 @@ Check the comment dotnet --info and it should come as follows.
 9. After opening the provided URL the provided PDF document will be displayed in PDF Viewer.
 ![beanstalk-output](aws-benstalk-deployment-images/beanstalk-output.png)
 
-
 >[View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/PDFViewer)
 
 
