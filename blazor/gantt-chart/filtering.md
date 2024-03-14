@@ -263,9 +263,9 @@ You can filter the columns dynamically by using the [FilterByColumnAsync](https:
 
 @code{
     public SfGantt<TaskData> Gantt;
-    public void Filter()
+    public async void Filter()
     {
-        this.Gantt.FilterByColumnAsync("TaskName","startswith","Iden");
+        await this.Gantt.FilterByColumnAsync("TaskName", "startswith", "Iden", "or", true, false);
     }
     private List<TaskData> TaskCollection { get; set; }
     protected override void OnInitialized()
