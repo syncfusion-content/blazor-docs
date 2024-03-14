@@ -144,15 +144,15 @@ Below is an example demonstrating how you can use this method to add free text a
 
 @code {
     SfPdfViewer2 Viewer;
-    public string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
+    public string DocumentPath { get; set; } = "wwwroot/Data/Free_Text_Annotation.pdf";
 
     public async void AddFreeTextAnnotationAsync(MouseEventArgs args)
     {
         PdfAnnotation annotation = new PdfAnnotation();
         // Set the annotation type of free text
         annotation.Type = AnnotationType.FreeText;
-        // Set the PageNumber starts from 0.So, if set 2 it repersent the page 3.
-        annotation.PageNumber = 2;
+        // Set the PageNumber starts from 0. So, if set 0 it repersent the page 1.
+        annotation.PageNumber = 0;
 
         // Bound of the free text annotation
         annotation.Bound = new Bound();
@@ -167,9 +167,11 @@ Below is an example demonstrating how you can use this method to add free text a
 
 ```
 
-This code will add a free text annotation to the third page of the PDF document.
+This code will add a free text annotation to the first page of the PDF document.
 
 ![Programmatically Added Free Text Annotation in Blazor SfPdfViewer](../images/blazor-sfpdfviewer-programmatically-add-freetext-annotation.png)
+
+[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Annotations/Programmatic%20Support/Free%20Text/Add).
 
 ## Edit free text annotation programmatically
 
@@ -187,7 +189,7 @@ Below is an example demonstrating how you can utilize this method to edit the fr
 
 @code {
     SfPdfViewer2 Viewer;
-    public string DocumentPath { get; set; } = "wwwroot/Data/FreeTextAnnotation.pdf";
+    public string DocumentPath { get; set; } = "wwwroot/Data/Free_Text_Annotation.pdf";
 
     public async void EditFreeTextAnnotationAsync(MouseEventArgs args)
     {
@@ -196,13 +198,13 @@ Below is an example demonstrating how you can utilize this method to edit the fr
         // Select the annotation want to edit
         PdfAnnotation annotation = annotationCollection[0];
         // Change the position of the free text annotation
-        annotation.Bound.X = 100;
-        annotation.Bound.Y = 100;
+        annotation.Bound.X = 125;
+        annotation.Bound.Y = 125;
         // Change the width and height of the free text annotation
         annotation.Bound.Width = 250;
         annotation.Bound.Height = 40;
         // Change the font style of free text annotation like bold, italic, underline strikethrough
-        annotation.FontStyle = FontStyle.Bold|FontStyle.Italic;
+        annotation.FontStyle = FontStyle.Bold | FontStyle.Italic;
         // Change the font size of free text annotation
         annotation.FontSize = 20;
         // Change the font color of free text annotation
@@ -231,6 +233,8 @@ Below is an example demonstrating how you can utilize this method to edit the fr
 This code snippet will edit the free text annotation programmatically within the SfPdfViewer control.
 
 ![Programmatically Edit Free Text Annotation in Blazor SfPdfViewer](../images/blazor-sfpdfviewer-programmatically-edit-freetext-annotation.png)
+
+[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Annotations/Programmatic%20Support/Free%20Text/Edit).
 
 ## See also
 

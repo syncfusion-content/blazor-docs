@@ -211,15 +211,15 @@ Below is an example demonstrating how you can use this method to add measurement
 
 @code {
     SfPdfViewer2 Viewer;
-    public string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
+    public string DocumentPath { get; set; } = "wwwroot/Data/Measurement_Annotation.pdf";
 
     public async void AddMeasurementAnnotationAsync(MouseEventArgs args)
     {
         PdfAnnotation annotation = new PdfAnnotation();
         // Set the annotation type of measurement annotation like radius, distance, perimeter, area, volume
         annotation.Type = AnnotationType.Radius;
-        // Set the PageNumber starts from 0. So, if set 2 it represents the page 3.
-        annotation.PageNumber = 2;
+        // Set the PageNumber starts from 0. So, if set 0 it represents the page 1.
+        annotation.PageNumber = 0;
 
         // Bound of the radius annotation
         annotation.Bound = new Bound();
@@ -234,9 +234,11 @@ Below is an example demonstrating how you can use this method to add measurement
 
 ```
 
-This code will add a measurement annotation to the third page of the PDF document.
+This code will add a measurement annotation to the first page of the PDF document.
 
 ![Programmatically Added Measurement Annotation in Blazor SfPdfViewer](../images/blazor-sfpdfviewer-programmatically-add-measurement-annotation.png)
+
+[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Annotations/Programmatic%20Support/Measurement/Add).
 
 ## Edit measurement annotation programmatically
 
@@ -254,7 +256,7 @@ Below is an example demonstrating how you can utilize this method to edit the me
 
 @code {
     SfPdfViewer2 Viewer;
-    public string DocumentPath { get; set; } = "wwwroot/Data/MeasurementAnnotation.pdf";
+    public string DocumentPath { get; set; } = "wwwroot/Data/Measurement_Annotation.pdf";
 
     public async void EditMeasurementAnnotationAsync(MouseEventArgs args)
     {
@@ -263,8 +265,8 @@ Below is an example demonstrating how you can utilize this method to edit the me
         // Select the annotation want to edit
         PdfAnnotation annotation = annotationCollection[0];
         // Change the position of the radius annotation
-        annotation.Bound.X = 100;
-        annotation.Bound.Y = 100;
+        annotation.Bound.X = 125;
+        annotation.Bound.Y = 125;
         // Change the width and height of the radius annotation
         annotation.Bound.Width = 125;
         annotation.Bound.Height = 75;
@@ -286,6 +288,8 @@ Below is an example demonstrating how you can utilize this method to edit the me
 This code snippet will edit the measurement annotation programmatically within the SfPdfViewer control.
 
 ![Programmatically Edit Measurement Annotation in Blazor SfPdfViewer](../images/blazor-sfpdfviewer-programmatically-edit-measurement-annotation.png)
+
+[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Annotations/Programmatic%20Support/Measurement/Edit).
 
 ## See also
 
