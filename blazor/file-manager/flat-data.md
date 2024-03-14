@@ -61,7 +61,6 @@ using Flat_Data.Data;
 using Syncfusion.Blazor;
 
 ...
-builder.Services.AddSingleton<WeatherForecastService>();
 builder.Services.AddSyncfusionBlazor();
 builder.Services.AddSingleton<FileManagerService>();
 
