@@ -44,11 +44,9 @@ Add the Syncfusion Blazor FileManager component in the **~/Pages/Index.razor** f
 
 File operations such as read, delete, and folder creation are seamlessly executed in the injected service.
 
-To set up a locally injected service, create a new file with the extension `.cs` within the project and include the following GitHub file code in that file.
+To set up a locally injected service, create a new file with the extension `.cs` within the project, include the following GitHub file code in this file, and then proceed to inject the created service into the `program.cs` file.
 
 N> [View FileManagerService.cs in GitHub ](https://github.com/SyncfusionExamples).
-
-Inject the created service into the `program.cs` file.
 
 ```cshtml
 
