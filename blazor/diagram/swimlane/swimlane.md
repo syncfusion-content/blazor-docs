@@ -201,4 +201,4 @@ Swimlane can be selected by clicking (tapping) the header of the swimlane. Also,
 
 Please find the swimlane sample as follows.
 
-You can download a complete working sample from [GitHub]()
+You can download a complete working sample from [GitHub]().
