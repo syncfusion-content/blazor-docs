@@ -293,7 +293,7 @@ N> The pivot table component can be exported to CSV format using options availab
 
 ![CSV Exporting in Blazor PivotTable](images/blazor-pivottable-csv-export.png)
 
-## Export all pages
+## Export All Pages
 
 During the Virtualization exports the entire virtual data of the pivot table (i.e. the data that contains all of the records used to render the complete pivot table) as an Excel/CSV document.To export just the current viewport of the pivot table, set the [`ExportAllPages`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_ExportAllPages) property to **false**.
 
