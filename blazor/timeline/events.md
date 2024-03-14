@@ -9,11 +9,11 @@ documentation: ug
 
 # Events in Blazor Timeline component
 
-This section describes the TImeline events that will be triggered when an appropriate actions are performed. The following events are available in the TImeline component.
+This section describes the Timeline events that will be triggered when an appropriate actions are performed. The following events are available in the TImeline component.
 
 ## Created
 
-The [Created]() event is triggered when the Timeline component is created and fully initialized.
+The Timeline component triggers the [Created]() event when the component rendering is completed.
 
 ```cshtml
 
@@ -54,7 +54,7 @@ The [Created]() event is triggered when the Timeline component is created and fu
 
 ## ItemRendered
 
-The [ItemRendered]() event is fired after each item is rendered in Timeline component. By utilizing this, you can modify the appearance or content of the items based on specific conditions.
+The Timeline component triggers the [ItemRendered]() event after rendering each item.
 
 ```cshtml
 

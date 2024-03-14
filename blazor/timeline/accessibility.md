@@ -29,28 +29,24 @@ The accessibility compliance for the Timeline component is outlined below.
         margin: 0.5em 0;
     }
 </style>
-<div><img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> - All features of the control meet the requirement.</div>
+<div><img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> - All features of the component meet the requirement.</div>
 
-<div><img src="https://cdn.syncfusion.com/content/images/landing-page/intermediate.png" alt="Intermediate"> - Some features of the control do not meet the requirement.</div>
+<div><img src="https://cdn.syncfusion.com/content/images/landing-page/intermediate.png" alt="Intermediate"> - Some features of the component do not meet the requirement.</div>
 
-<div><img src="https://cdn.syncfusion.com/content/images/landing-page/no.png" alt="No"> - The control does not meet the requirement.</div>
+<div><img src="https://cdn.syncfusion.com/content/images/landing-page/no.png" alt="No"> - The component does not meet the requirement.</div>
 
 ## WAI-ARIA attributes
 
-The following ARIA attributes are used in the Timeline control:
+The following ARIA attributes are used in the Timeline component:
 
 | Attributes | Purpose |
 | --- | --- |
-| `role=navigation` | The navigation role in a timeline component signifies its purpose as a navigational element. |
+| `role=navigation` | Specified its purpose as a navigational element. |
 | `aria-label` | Provides an accessibile name for an element when a visible label is not present |
 
 ## Ensuring accessibility
 
-The Timeline control's accessibility levels are ensured through an [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) software tools during automated testing.
-
-The accessibility compliance of the Timeline control is shown in the following sample. Open the [sample](https://ej2.syncfusion.com/accessibility/timeline.html) in a new window to evaluate the accessibility of the Timeline control with accessibility tools.
-
-{% previewsample "https://ej2.syncfusion.com/accessibility/timeline.html" %}
+The Timeline component's accessibility levels are ensured through an [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) software tools during automated testing.
 
 ## See also
 

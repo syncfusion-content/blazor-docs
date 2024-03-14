@@ -9,11 +9,11 @@ documentation: ug
 
 # Alignment in Blazor Timeline component
 
-The [Alignment]() property in the Timeline component determines how item content is positioned relative to each other within the timeline. The available values are `Before`, `After`, `Alternate` and `AlternateReverse`.
+You can display the Timeline content `Before`, `After`, `Alternate` and `AlternateReverse` by using the [Align]() property. The oppositeContent will be displayed parallel to the content when configured in the `TimelineItem` directive.
 
 ## Before
 
-The `Before` alignment places item content at the top and opposite content at the bottom in `horizontal` orientation whereas in `vertical`, it positions content to the left and opposite content to the right.
+In `Before` alignment, for `horizontal` orientation the item content is placed at the top and oppositeContent at the bottom whereas in `vertical`, the content to the left and oppositeContent to the right.
 
 ```cshtml
 
@@ -54,7 +54,7 @@ The `Before` alignment places item content at the top and opposite content at th
 
 ## After
 
-The `After` alignment places item content at the bottom and opposite content at the top in `horizontal` orientation whereas in `vertical`, it positions content to the right and opposite content to the left.
+In `After` alignment, for `horizontal` orientation the item content is placed at the bottom and oppositeContent at the top whereas in `vertical`, the content to the right and oppositeContent to the left.
 
 ```cshtml
 
@@ -95,7 +95,7 @@ The `After` alignment places item content at the bottom and opposite content at 
 
 ## Alternate
 
-The `Alternate` option positions item content in an alternating manner where items are arranged in a back-and-forth pattern, regardless of the Timeline's orientation.
+In `Alternate` alignment, the item content are arranged alternatively regardless of the Timeline orientation.
 
 ```cshtml
 
@@ -136,7 +136,7 @@ The `Alternate` option positions item content in an alternating manner where ite
 
 ## Alternate reverse
 
-The `AlternateReverse` option organizes item content in a reverse alternating style providing an alternative method for displaying timeline items, regardless of the Timeline's orientation.
+In `AlternateReverse` alignment, the item content are arranged in reverse alternate regardless of the Timeline orientation.
 
 ```cshtml
 
