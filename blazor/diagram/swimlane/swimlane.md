@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Swimlane in Blazor Diagram Component | Syncfusion
-description: Checkout and learn here all about swimlane support in Syncfusion Blazor Diagram component and much more.
+description: Learn here all about swimlane support in Syncfusion Blazor Diagram component and more.
 platform: Blazor
 control: Diagram Component
 documentation: ug
@@ -29,7 +29,7 @@ To create a swimlane, you have to define the swimlane object and add it to the `
 
 @code
 {
-    //Define diagram's swimlane collection
+    //Define diagram's swimlane collection.
     DiagramObjectCollection<Swimlane> SwimlaneCollections = new DiagramObjectCollection<Swimlane>();
 
     protected override void OnInitialized()
@@ -39,7 +39,7 @@ To create a swimlane, you have to define the swimlane object and add it to the `
         {
             OffsetX = 400, OffsetY = 200, Height = 120, Width = 450,
         };
-        // Add swimlane
+        // Add swimlane.
         SwimlaneCollections.Add(swimlane);
     }
 }
@@ -49,7 +49,7 @@ Now, the swimlane will be as follows.
 
 ![Add swimlane](Swimlane-images/Swimlane_Empty.PNG)
 
-You can download a complete working sample from [GitHub]()
+You can download a complete working sample from [GitHub]().
 
 >Note: We can't add swimlane elements such as phase, lane, and lane children at runtime by using the [AddDiagramElements](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_AddDiagramElements_Syncfusion_Blazor_Diagram_DiagramObjectCollection_Syncfusion_Blazor_Diagram_NodeBase__) method.
 
@@ -68,7 +68,7 @@ The following code example explains how to define the swimlane header.
 
 @code
 {
-    //Define diagram's swimlane collection
+    //Define diagram's swimlane collection.
     DiagramObjectCollection<Swimlane> SwimlaneCollections = new DiagramObjectCollection<Swimlane>();
 
     protected override void OnInitialized()
@@ -86,7 +86,7 @@ The following code example explains how to define the swimlane header.
             },
             OffsetX = 400, OffsetY = 200, Height = 120, Width = 450,
         };
-        // Add swimlane
+        // Add swimlane.
         SwimlaneCollections.Add(swimlane);
     }
 }
@@ -98,7 +98,7 @@ You can download a complete working sample from [GitHub]()
 
 ### Customization of headers
 
-The height and width of swimlane header can be customized with the `Width` and `Height` properties of swimlane header. You can set the fill color of the header by using the `Style` property.
+The height and width of the swimlane header can be customized with the `Width` and `Height` properties of the swimlane header. You can set the fill color of the header by using the `Style` property.
 
 The following code example explains how to customize the swimlane header.
 
@@ -109,7 +109,7 @@ The following code example explains how to customize the swimlane header.
 
 @code
 {
-    //Define diagram's swimlane collection
+    //Define diagram's swimlane collection.
     DiagramObjectCollection<Swimlane> SwimlaneCollections = new DiagramObjectCollection<Swimlane>();
 
     protected override void OnInitialized()
@@ -132,7 +132,7 @@ The following code example explains how to customize the swimlane header.
             },
             OffsetX = 400, OffsetY = 200, Height = 120, Width = 450,
         }
-        // Add swimlane
+        // Add swimlane.
         SwimlaneCollections.Add(swimlane);
     }
 }
@@ -142,8 +142,7 @@ The following code example explains how to customize the swimlane header.
 
 ### Header editing
 
-The diagram provides the support to edit swimlane headers at runtime. You can achieve the header editing by double clicking on it. Double clicking the header label will enables the editing mode.
-The following image shows how to edit the swimlane header.
+The diagram provides support to edit swimlane headers at runtime. You can achieve the header editing by double-clicking on it. Double-clicking the header label will enable the editing mode.
 
 ![Header Editing](Swimlane-images/Header_Edit.gif).
 
@@ -162,7 +161,7 @@ The following code example explains how to set the orientation of the swimlane.
 
 @code
 {
-    //Define diagram's swimlane collection
+    //Define diagram's swimlane collection.
     DiagramObjectCollection<Swimlane> SwimlaneCollections = new DiagramObjectCollection<Swimlane>();
 
     protected override void OnInitialized()
@@ -173,7 +172,7 @@ The following code example explains how to set the orientation of the swimlane.
             OffsetX = 400, OffsetY = 200, Height = 120, Width = 450, 
             Orientation = Orientation.Horizontal,
         }
-        // Add swimlane
+        // Add swimlane.
         SwimlaneCollections.Add(swimlane);
     }
 }
@@ -188,7 +187,7 @@ The following code example explains how to set the orientation of the swimlane.
 
 ### How to select the swimlane
 
-Swimlane can be selected by clicking (tap) the header of the swimlane. Also, it can be selected at runtime by using the [Select](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Select_System_Collections_ObjectModel_ObservableCollection_Syncfusion_Blazor_Diagram_IDiagramObject__System_Nullable_System_Boolean__) method and clear the selection in the diagram by using the [ClearSelection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_ClearSelection)
+Swimlane can be selected by clicking (tapping) the header of the swimlane. Also, it can be selected at runtime by using the [Select](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Select_System_Collections_ObjectModel_ObservableCollection_Syncfusion_Blazor_Diagram_IDiagramObject__System_Nullable_System_Boolean__) method and clear the selection in the diagram by using the [ClearSelection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_ClearSelection)
 
 ### How to drag the swimlane  
 
