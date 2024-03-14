@@ -1069,7 +1069,7 @@ The pivot chart in the following code sample can be seen as a single chart with 
 }
 ```
 
-![Multiple axis mode Combined in Blazor Pivotchart](images\blazor-pivotchart-multiple-axis-Combined-mode.png)
+![Multiple axis mode Combined in Blazor Pivotchart](images/blazor-pivotchart-multiple-axis-Combined-mode.png)
 
 
 ## Series Customization
