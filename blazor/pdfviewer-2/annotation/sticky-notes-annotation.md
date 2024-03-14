@@ -117,15 +117,15 @@ Below is an example demonstrating how you can use this method to add sticky note
 
 @code {
     SfPdfViewer2 Viewer;
-    public string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
+    public string DocumentPath { get; set; } = "wwwroot/Data/Sticky_Notes_Annotation.pdf";
 
     public async void AddStickyNoteAnnotationAsync(MouseEventArgs args)
     {
         PdfAnnotation annotation = new PdfAnnotation();
         // Set the annotation type sticky note
         annotation.Type = AnnotationType.StickyNotes;
-        // Set the PageNumber starts from 0. So, if set 2 it represents the page 3.
-        annotation.PageNumber = 2;
+        // Set the PageNumber starts from 0. So, if set 0 it represents the page 1.
+        annotation.PageNumber = 0;
 
         // Bound of the sticky note annotation
         annotation.Bound = new Bound();
@@ -144,6 +144,8 @@ This code will add a sticky note annotation to the third page of the PDF documen
 
 ![Programmatically Added Sticky Note Annotation in Blazor SfPdfViewer](../images/blazor-sfpdfviewer-programmatically-add-stickynote-annotation.png)
 
+[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Annotations/Programmatic%20Support/Sticky%20Notes/Add).
+
 ## Edit sticky note annotation programmatically
 
 The Blazor SfPdfViewer offers the capability to programmatically edit the sticky note annotation within the SfPdfViewer control using the [EditAnnotationAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_EditAnnotationAsync_Syncfusion_Blazor_SfPdfViewer_PdfAnnotation_) method.
@@ -160,7 +162,7 @@ Below is an example demonstrating how you can utilize this method to edit the St
 
 @code {
     SfPdfViewer2 Viewer;
-    public string DocumentPath { get; set; } = "wwwroot/Data/DynamicStampAnnotation.pdf";
+    public string DocumentPath { get; set; } = "wwwroot/Data/Sticky_Notes_Annotation.pdf";
 
     public async void EditStickyNoteAnnotationAsync(MouseEventArgs args)
     {
@@ -169,8 +171,8 @@ Below is an example demonstrating how you can utilize this method to edit the St
         // Select the annotation want to edit
         PdfAnnotation annotation = annotationCollection[0];
         // Change the position of the sticky note annotation
-        annotation.Bound.X = 100;
-        annotation.Bound.Y = 100;
+        annotation.Bound.X = 125;
+        annotation.Bound.Y = 125;
         // Change the width and height of the sticky note annotation
         annotation.Bound.Width = 75;
         annotation.Bound.Height = 75;
@@ -186,6 +188,8 @@ Below is an example demonstrating how you can utilize this method to edit the St
 This code snippet will edit the sticky note annotation programmatically within the SfPdfViewer control.
 
 ![Programmatically Edit Sticky Note Annotation in Blazor SfPdfViewer](../images/blazor-sfpdfviewer-programmatically-edit-stickynote-annotation.png)
+
+[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Annotations/Programmatic%20Support/Sticky%20Notes/Edit).
 
 ## See also
 

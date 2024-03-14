@@ -264,6 +264,8 @@ This code will add a text markup annotation to the third page of the PDF documen
 
 ![Programmatically Added Textmarkup annotation in Blazor SfPdfViewer](../images/blazor-sfpdfviewer-programmatically-add-textmarkup-annotation.png)
 
+[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Annotations/Programmatic%20Support/Text%20Markup/Add).
+
 ## Edit text markup annotation programmatically
 
 The Blazor SfPdfViewer offers the capability to programmatically edit the text markup annotation such as Highlight, Underline, and Strikethrough within the SfPdfViewer control using the [EditAnnotationAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_EditAnnotationAsync_Syncfusion_Blazor_SfPdfViewer_PdfAnnotation_) method.
@@ -302,6 +304,8 @@ This code snippet will edit the text markup annotation programmatically within t
 
 ![Programmatically Edit Textmarkup annotation in Blazor SfPdfViewer](../images/blazor-sfpdfviewer-programmatically-edit-textmarkup-annotation.png)
 
+[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Annotations/Programmatic%20Support/Text%20Markup/Edit).
+
 ## Delete annotation programmatically
 
 The Blazor SfPdfViewer additionally offers the functionality to programmatically remove annotations within the SfPdfViewer control using the [DeleteAnnotationAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_DeleteAnnotationAsync_Syncfusion_Blazor_SfPdfViewer_PdfAnnotation_) method.
@@ -337,6 +341,8 @@ Below is an example demonstrating how you can utilize this method to delete an a
 This code snippet demonstrates how to programmatically delete an annotation within the Syncfusion Blazor SfPdfViewer using the [DeleteAnnotationAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_DeleteAnnotationAsync_Syncfusion_Blazor_SfPdfViewer_PdfAnnotation_) method.
 
 N> Alternatively, delete the annotation with the annotation ID using the [DeleteAnnotationAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_DeleteAnnotationAsync_System_String_) method.
+
+[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Annotations/Programmatic%20Support/Delete%20Annotation).
 
 ## See also
 

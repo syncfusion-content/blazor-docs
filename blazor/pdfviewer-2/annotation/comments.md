@@ -166,15 +166,15 @@ Below is an example demonstrating how you can use this method to add Line annota
 
 @code {
     SfPdfViewer2 Viewer;
-    public string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
+    public string DocumentPath { get; set; } = "wwwroot/Data/Comment_and_Reply_Comment.pdf";
 
     public async void AddCommentandReplyCommentAsync(MouseEventArgs args)
     {
         PdfAnnotation annotation = new PdfAnnotation();
         // Set the annotation type of Line
         annotation.Type = AnnotationType.Line;
-        // Set the PageNumber starts from 0.So, if set 2 it repersent the page 3.
-        annotation.PageNumber = 2;
+        // Set the PageNumber starts from 0. So, if set 0 it repersent the page 1.
+        annotation.PageNumber = 0;
 
         // Vertex Points of the Line Annotation
         List<VertexPoint> vertexPoints = new List<VertexPoint>();
@@ -242,9 +242,11 @@ Below is an example demonstrating how you can use this method to add Line annota
 
 ```
 
-This code will add a line annotation with comment and reply comment to the third page of the PDF document.
+This code will add a line annotation with comment and reply comment to the first page of the PDF document.
 
 ![Programmatically Added Comment and Reply Comment in Blazor SfPdfViewer](../images/blazor-sfpdfviewer-programmatically-add-comment-reply-comment.png)
+
+[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Annotations/Programmatic%20Support/Comment/Add).
 
 ## Edit Comments and Reply Comments Programmatically
 
@@ -262,7 +264,7 @@ Below is an example demonstrating how you can utilize this method to edit the Co
 
 @code {
     SfPdfViewer2 Viewer;
-    public string DocumentPath { get; set; } = "wwwroot/Data/Annotation.pdf";
+    public string DocumentPath { get; set; } = "wwwroot/Data/Comment_and_Reply_Comment.pdf";
 
     public async void EditCommentandReplyCommentAsync(MouseEventArgs args)
     {
@@ -297,6 +299,8 @@ Below is an example demonstrating how you can utilize this method to edit the Co
 This code snippet will edit the comment and reply comment programmatically within the SfPdfViewer control.
 
 ![Programmatically Edit Comment and Reply Comment in Blazor SfPdfViewer](../images/blazor-sfpdfviewer-programmatically-edit-comment-reply-comment.png)
+
+[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Annotations/Programmatic%20Support/Comment/Edit).
 
 ## See also
 
