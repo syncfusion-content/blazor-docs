@@ -554,7 +554,7 @@ Using the column chooser template, you can customize the column chooser dialog u
 
  }
 {% endhighlight %}
-{% highlight razor tabtitle="customComponent.razor" %}
+{% highlight razor tabtitle="CustomComponent.razor" %}
 @using Syncfusion.Blazor.Lists;
 @using Syncfusion.Blazor.Inputs;
 @using Syncfusion.Blazor.Grids;
