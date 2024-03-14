@@ -187,16 +187,72 @@ The available operators and its supported data types are:
 Operator |Description |Supported Types
 -----|-----|-----
 startswith |Checks whether the value begins with the specified value. |String
+doesnotstartswith |Checks whether the value does not begins with the specified value. |String
 endswith |Checks whether the value ends with the specified value. |String
+doesnotendswith |Checks whether the value does not ends with the specified value. |String
 contains |Checks whether the value contains the specified value. |String
+doesnotcontains |Checks whether the value does not contains the specified value. |String
+empty |Checks whether the value is empty. |String
+notempty |Checks whether the value is not empty. |String
+like |It process single search patterns using the '%' symbol, retrieving values matching the specified patterns. |String
+wildcard |It process one or more search patterns using the '*' symbol, retrieving values matching the specified patterns. |String
 equal |Checks whether the value is equal to the specified value. |String &#124; Number &#124; Boolean &#124; Date
 notequal |Checks for values not equal to the specified value. |String &#124; Number &#124; Boolean &#124; Date
 greaterthan |Checks whether the value is greater than the specified value. |Number &#124; Date
 greaterthanorequal|Checks whether a value is greater than or equal to the specified value. |Number &#124; Date
 lessthan |Checks whether the value is lesser than the specified value. |Number &#124; Date
 lessthanorequal |Checks whether the value is lesser than or equal to the specified value. |Number &#124; Date
+null |Checks whether the value is null. |Number &#124; Date
+notnull |Checks whether the value is not null. |Number &#124; Date
 
 N> By default, the [Operator](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridFilterSettings.html#Syncfusion_Blazor_TreeGrid_TreeGridFilterSettings_Operators) value is **equal**.
+
+## Wildcard and LIKE operator filter
+
+**Wildcard** and **LIKE** filter operators filters the value based on the given string pattern, and they apply to string-type columns. But it will work slightly differently.
+
+### Wildcard filtering
+
+The **Wildcard** filter can process one or more search patterns using the "*" symbol, retrieving values matching the specified patterns.
+
+* The **Wildcard** filter option is supported for the tree grid that has all search options.
+
+**For example:**
+
+Operator |Description
+-----|-----
+a*b |Everything that starts with "a" and ends with "b".
+a* |Everything that starts with "a".
+*b |Everything that ends with "b".
+*a* |Everything that has an "a" in it.
+*a*b* |Everything that has an "a" in it, followed by anything, followed by a "b", followed by anything.
+
+The following image illustrates the behavior of the **Wildcard** operator in the filter
+
+![WildcardFilter](../images/blazor-treegrid-wildcard-search.gif) 
+
+> When using the **Wildcard** filter operator in a tree grid, records can be filtered using different filter [HierarchyMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_FilterSettings#Syncfusion_Blazor_TreeGrid_TreeGridFilterSettings_HierarchyMode) of the [FilterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_FilterSettings) property. The filtered records are displayed according to the filter hierarchy mode specified in the `FilterSettings` property. For further details on the filter hierarchy mode, refer to [this section](https://blazor.syncfusion.com/documentation/treegrid/filtering/filtering#filter-hierarchy-modes).
+
+### LIKE filtering
+
+The **LIKE** filter can process single search patterns using the "%" symbol, retrieving values matching the specified patterns. The following tree grid features support **LIKE** filtering on string-type columns:
+
+* Filter Menu
+* Custom Filter of Excel filter type.
+
+**For example:**
+
+Operator |Description
+-----|-----
+%ab% |Returns all the value that are contains "ab" character.
+ab% |Returns all the value that are ends with "ab" character.
+%ab |Returns all the value that are starts with "ab" character.
+
+The following image illustrates the behavior of the **LIKE** operator in the filter.
+
+![LIKEFilter](../images/blazor-treegrid-like_filter.gif)
+
+> When using the **LIKE** filter operator in a tree grid, records can be filtered using different filter [HierarchyMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_FilterSettings#Syncfusion_Blazor_TreeGrid_TreeGridFilterSettings_HierarchyMode) of the [FilterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_FilterSettings) property. The filtered records are displayed according to the filter hierarchy mode specified in the `FilterSettings` property. For further details on the filter hierarchy mode, refer to [this section](https://blazor.syncfusion.com/documentation/treegrid/filtering/filtering#filter-hierarchy-modes).
 
 ## Filter enum column
 
