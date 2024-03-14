@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Phase in Blazor Diagram Component | Syncfusion
-description: Checkout and learn here all about Phase support in Syncfusion Blazor Diagram component, its elements and more.
+description: Learn here all about Phase support in Syncfusion Blazor Diagram component, its elements and more.
 platform: Blazor
 control: Diagram Component
 documentation: ug
@@ -9,15 +9,15 @@ documentation: ug
 
 # Phase in Blazor Diagram Component
 
- The `Phase` is the subprocess which will split each lanes as horizontally or vertically based on the swimlane orientation. The multiple number of phase can be added to swimlane.
+ The `Phase` is the subprocess which will split each lane as horizontally or vertically based on the swimlane orientation. The multiple phases can be added to the swimlane.
 
 ## Create an empty Phase
 
 You can create the `Phase` and add into the `Phases` collection of the Swimlane.
 
->Note: For Horizontal Swimlane, you must set the `Width` of the Phase. For Vertical Swimlane, you must set `Height` of the Phase.
+>Note: For Horizontal Swimlane, you must set the `Width` of the Phase. For Vertical Swimlane, you must set the `Height` of the Phase.
 
-The following code example explains how to add phase at swimlane.
+The following code example explains how to add a phase at the swimlane.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -26,7 +26,7 @@ The following code example explains how to add phase at swimlane.
 
 @code
 {
-    //Define diagram's swimlane collection
+    //Define diagram's swimlane collection.
     DiagramObjectCollection<Swimlane> SwimlaneCollections = new DiagramObjectCollection<Swimlane>();
 
     protected override void OnInitialized()
@@ -59,7 +59,7 @@ The following code example explains how to add phase at swimlane.
                     }
                 }
             };
-        // Add swimlane
+        // Add swimlane.
         SwimlaneCollections.Add(swimlane);
     }
 }
@@ -67,12 +67,12 @@ The following code example explains how to add phase at swimlane.
 
 ![Phse](Swimlane-images/Swimlane_Phase.PNG).
 
-You can download a complete working sample from [GitHub]()
+You can download a complete working sample from [GitHub]().
 
 
 ## Dynamically add phase to Swimlane
 
- You can add a phase at runtime by using the `Add` and `Remove` method of the `Swimlane.Phases` collection. The following code example explains how to add and remove phase at run time.
+ You can add a phase at runtime by using the `Add` and `Remove` methods of the `Swimlane.Phases` collection. The following code example explains how to add and remove phases at run time.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -84,7 +84,7 @@ You can download a complete working sample from [GitHub]()
 
 @code
 {
-    //Define diagram's swimlane collection
+    //Define diagram's swimlane collection.
     DiagramObjectCollection<Swimlane> SwimlaneCollections = new DiagramObjectCollection<Swimlane>();
 
     protected override void OnInitialized()
@@ -117,7 +117,7 @@ You can download a complete working sample from [GitHub]()
                     }
                 }
             };
-        // Add swimlane
+        // Add swimlane.
         SwimlaneCollections.Add(swimlane);
     }
 
@@ -147,13 +147,13 @@ You can download a complete working sample from [GitHub]()
 
 ![Phase Add Remove](Swimlane-images/Phase_Add_Remove.gif)
 
-You can download a complete working sample from [GitHub]()
+You can download a complete working sample from [GitHub]().
 
 ## Create the Phase Header and Header customization
 
-* The `Header` property of Phase allows you to textually describe the phase and to customize the appearance of the description.
-* The size of Phase header can be controlled by using the `Width` and `Height` properties of header.
-* The appearance of Phase header can be customized by using the `Style` properties.
+* The `Header` property of Phase allows you to describe the phase textually and customize the appearance of the description.
+* The size of the Phase header can be controlled by using the header's `Width` and `Height` properties.
+* The appearance of the Phase header can be customized by using the `Style` property.
 
 The following code example explains how to define a Phase header and its customization.
 
@@ -164,7 +164,7 @@ The following code example explains how to define a Phase header and its customi
 
 @code
 {
-    //Define diagram's swimlane collection
+    //Define diagram's swimlane collection.
     DiagramObjectCollection<Swimlane> SwimlaneCollections = new DiagramObjectCollection<Swimlane>();
 
     protected override void OnInitialized()
@@ -198,20 +198,20 @@ The following code example explains how to define a Phase header and its customi
                     }
                 }
             };
-        // Add swimlane
+        // Add swimlane.
         SwimlaneCollections.Add(swimlane);
     }
 }
 ```
 ![Phase Header](Swimlane-images/Swimlane_Phase_Header.PNG).
 
-You can download a complete working sample from [GitHub]()
+You can download a complete working sample from [GitHub]().
 
 ## Header Selection and Resize
 
  * You can select the individual phase header by clicking on the header twice. On the first click, you can select the respective phase. 
 
- * You can able to resize the individual phase header. While resizing the phase, it will maintain 20px distances from Lane children.
+ * You can resize the individual phase header. While resizing the phase, it will maintain 20px distances from Lane children.
 
   * When a element is resized, the [SizeChanging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_SizeChanging) and [SizeChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_SizeChanged) events get triggered.
 
@@ -221,7 +221,7 @@ You can download a complete working sample from [GitHub]()
 
 ## Phase header editing
 
-The diagram provides support for editing phase headers at runtime. You can achieve header editing by using the double click event. Double-clicking the header label enables the editing of that specific header. 
+The diagram provides support for editing phase headers at runtime. You can achieve header editing by using the double-click event. Double-clicking the header label enables the editing of that specific header. 
 
 The following image shows how to edit the phase header.
 
@@ -232,7 +232,7 @@ The following image shows how to edit the phase header.
 
 ### Select
 
-Phase can be selected by clicking (tap) the header of the phase.
+Phase can be selected by clicking (tapping) the header of the phase.
 
 ### Resizing
 
