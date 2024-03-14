@@ -231,7 +231,7 @@ The following image illustrates the behavior of the **Wildcard** operator in the
 
 ![WildcardFilter](../images/blazor-treegrid-wildcard-search.gif) 
 
-> The **Wildcard** filter operator functions with various filtering modes of the [HierarchyMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_FilterSettings#Syncfusion_Blazor_TreeGrid_TreeGridFilterSettings_HierarchyMode) in the [FilterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_FilterSettings) property to display the filtered items. For more information about filter hierarchy mode refer to [this section](https://blazor.syncfusion.com/documentation/treegrid/filtering/filtering#filter-hierarchy-modes).
+> When using the **Wildcard** filter operator in a tree grid, records can be filtered using different filter [HierarchyMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_FilterSettings#Syncfusion_Blazor_TreeGrid_TreeGridFilterSettings_HierarchyMode) of the [FilterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_FilterSettings) property. This allows for the display of filtered items according to various hierarchy modes. For more information about filter hierarchy mode refer to [this section](https://blazor.syncfusion.com/documentation/treegrid/filtering/filtering#filter-hierarchy-modes).
 
 ### LIKE filtering
 
@@ -252,7 +252,7 @@ The following image illustrates the behavior of the **LIKE** operator in the fil
 
 ![LIKEFilter](../images/blazor-treegrid-like_filter.gif)
 
-> The **LIKE** filter operator functions with various filtering modes of the [HierarchyMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_FilterSettings#Syncfusion_Blazor_TreeGrid_TreeGridFilterSettings_HierarchyMode) in the [FilterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_FilterSettings) property to display the filtered items. For more information about filter hierarchy mode refer to [this section](https://blazor.syncfusion.com/documentation/treegrid/filtering/filtering#filter-hierarchy-modes).
+> When using the **LIKE** filter operator in a tree grid, records can be filtered using different filter [HierarchyMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_FilterSettings#Syncfusion_Blazor_TreeGrid_TreeGridFilterSettings_HierarchyMode) of the [FilterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_FilterSettings) property. This allows for the display of filtered items according to various hierarchy modes. For more information about filter hierarchy mode refer to [this section](https://blazor.syncfusion.com/documentation/treegrid/filtering/filtering#filter-hierarchy-modes).
 
 ## Filter enum column
 
