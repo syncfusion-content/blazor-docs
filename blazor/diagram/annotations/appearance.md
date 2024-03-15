@@ -539,7 +539,7 @@ N> The default value is [InheritReadOnly](https://help.syncfusion.com/cr/blazor/
 Refer to [Constraints](https://blazor.syncfusion.com/documentation/diagram/constraints) to learn about how to enable or disable the annotation constraints.
 
 ## Template Support for Annotation
-Diagram provides template support for annotation. you can define a HTML content at tag level and specify the use of template with [UseTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Annotation.html#Syncfusion_Blazor_Diagram_Annotation_UseTemplate) property. If you want to define separate template for each annotation, differentiate the annotaiton by the ID property. The following code explains how to define template for a annotation.
+Diagram provides template support for annotation. you can define a HTML content at tag level and specify the use of template with [UseTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Annotation.html#Syncfusion_Blazor_Diagram_Annotation_UseTemplate) property. If you want to define separate template for each annotation, differentiate the annotaiton by the ID property.
 
 The following code illustrates how to define a template in node’s annotation. similarly, you can define it in connectors.
 ```cshtml
