@@ -9,13 +9,13 @@ documentation: ug
 
 # Phase in Blazor Diagram Component
 
- The `Phase` is the subprocess which will split each lane as horizontally or vertically based on the swimlane orientation. The multiple phases can be added to the swimlane.
+ The [Phase](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Phase.html) is the subprocess which will split each lane as horizontally or vertically based on the swimlane orientation. The multiple phases can be added to the swimlane.
 
 ## Create an empty Phase
 
-You can create the `Phase` and add into the `Phases` collection of the Swimlane.
+You can create the [Phase](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Phase.html) and add into the [Phases](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Swimlane.html#Syncfusion_Blazor_Diagram_Swimlane_Phases) collection of the Swimlane.
 
->Note: For Horizontal Swimlane, you must set the `Width` of the Phase. For Vertical Swimlane, you must set the `Height` of the Phase.
+>Note: For Horizontal Swimlane, you must set the [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SwimlaneChild.html#Syncfusion_Blazor_Diagram_SwimlaneChild_Width) of the Phase. For Vertical Swimlane, you must set the [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SwimlaneChild.html#Syncfusion_Blazor_Diagram_SwimlaneChild_Height) of the Phase.
 
 The following code example explains how to add a phase at the swimlane.
 
@@ -67,12 +67,12 @@ The following code example explains how to add a phase at the swimlane.
 
 ![Phse](Swimlane-images/Swimlane_Phase.PNG).
 
-You can download a complete working sample from [GitHub]().
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Swimlanes/Phase/PhaseCreation).
 
 
 ## Dynamically add phase to Swimlane
 
- You can add a phase at runtime by using the `Add` and `Remove` methods of the `Swimlane.Phases` collection. The following code example explains how to add and remove phases at run time.
+ You can add a phase at runtime by using the `Add` and `Remove` methods of the [Swimlane.Phases](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Swimlane.html#Syncfusion_Blazor_Diagram_Swimlane_Phases) collection. The following code example explains how to add and remove phases at run time.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -147,13 +147,13 @@ You can download a complete working sample from [GitHub]().
 
 ![Phase Add Remove](Swimlane-images/Phase_Add_Remove.gif)
 
-You can download a complete working sample from [GitHub]().
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Swimlanes/Phase/AddRemovePhaseAtRuntime).
 
 ## Create the Phase Header and Header customization
 
-* The `Header` property of Phase allows you to describe the phase textually and customize the appearance of the description.
-* The size of the Phase header can be controlled by using the header's `Width` and `Height` properties.
-* The appearance of the Phase header can be customized by using the `Style` property.
+* The [Header](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Phase.html#Syncfusion_Blazor_Diagram_Phase_Header) property of Phase allows you to describe the phase textually and customize the appearance of the description.
+* The size of the Phase header can be controlled by using the header's [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SwimlaneChild.html#Syncfusion_Blazor_Diagram_SwimlaneChild_Width) and [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SwimlaneChild.html#Syncfusion_Blazor_Diagram_SwimlaneChild_Height) properties.
+* The appearance of the Phase header can be customized by using the [Style](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SwimlaneHeader.html#Syncfusion_Blazor_Diagram_SwimlaneHeader_Style) property.
 
 The following code example explains how to define a Phase header and its customization.
 
@@ -205,7 +205,7 @@ The following code example explains how to define a Phase header and its customi
 ```
 ![Phase Header](Swimlane-images/Swimlane_Phase_Header.PNG).
 
-You can download a complete working sample from [GitHub]().
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Swimlanes/Phase/PhaseHeader).
 
 ## Header Selection and Resize
 
