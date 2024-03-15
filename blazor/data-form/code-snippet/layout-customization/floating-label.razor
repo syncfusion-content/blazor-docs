@@ -1,0 +1,19 @@
+@using Syncfusion.Blazor.DataForm;
+@using System.ComponentModel.DataAnnotations
+
+<SfDataForm ID="MyForm1"  Model="@EventRegistrationModel"  EnableFloatingLabel="true" Width="50%">
+
+    <FormValidator>
+        <DataAnnotationsValidator></DataAnnotationsValidator>
+    </FormValidator>
+   
+</SfDataForm>
+
+@code {
+
+    private EventRegistration EventRegistrationModel = new EventRegistration()
+        {
+            FirstName = "Andrew",
+            LastName = "Jack"
+        };
+}

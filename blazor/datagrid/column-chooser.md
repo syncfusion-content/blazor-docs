@@ -450,33 +450,8 @@ Using the column chooser template, you can customize the column chooser dialog u
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
-@using Syncfusion.Blazor.Grids
-@using BlazorApp1.Data
-
-<SfGrid ID="Grid" DataSource="@Orders" ShowColumnChooser="true" Toolbar=@ToolbarItems>
-    <GridColumns>
-        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(OrderData.OrderDate) HeaderText="Order Date" Format="d" Type="ColumnType.DateOnly" TextAlign=" Syncfusion.Blazor.Grids.TextAlign.Right" Width="130"></GridColumn>
-        <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(OrderData.ShipCountry) HeaderText="Ship Country" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(OrderData.ShipCity) HeaderText="Ship City" Visible="false" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-    </GridColumns>
-</SfGrid>
-@code {
-    private SfGrid<OrderData> DefaultGrid;
-    public string[] ToolbarItems = new string[] { "ColumnChooser" };
-    public List<OrderData> Orders { get; set; }   
-    protected override void OnInitialized()
-    {
-        Orders = OrderData.GetAllRecords();       
-    }  
-}
-{% endhighlight %}
-{% highlight c# tabtitle="OrderData.cs" %}
 @using Syncfusion.Blazor.Grids;
-@using BlazorApp1.Data
-
-
+@using BlazorApp.Data
 <SfGrid ID="Grid" @ref="Grid" AllowPaging="true" DataSource="@Orders" ShowColumnChooser="true" Toolbar="@ToolbarItems">
     <GridColumnChooserSettings>
         <Template>
@@ -485,6 +460,9 @@ Using the column chooser template, you can customize the column chooser dialog u
                 <CustomComponent @key="ContextData.Columns.Count" ColumnContext="ContextData"></CustomComponent>
             }
         </Template>
+         <FooterTemplate>
+
+        </FooterTemplate>
     </GridColumnChooserSettings>
     <GridColumns>
         <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"> </GridColumn>
@@ -524,35 +502,86 @@ Using the column chooser template, you can customize the column chooser dialog u
     }
 }
 {% endhighlight %}
-{% endtabs %}
+{% highlight c# tabtitle="OrderData.cs" %}
+ public class OrderData
+ {
+     public static List<OrderData> Orders = new List<OrderData>();
+     public OrderData()
+     {
 
-> You can build reusable custom component based on your customization need as like above code example.
-<br/> In the above example, Syncfusion [ListView](https://blazor.syncfusion.com/documentation/listview/getting-started) component is used as custom component in the content template to show/hide columns.
+     }
+     public OrderData(int? OrderID, string CustomerID, double Freight, DateTime OrderDate, int? EmployeeID, string FirstName, string LastName, string Title, DateTime? HireDate)
+     {
+         this.OrderID = OrderID;
+         this.CustomerID = CustomerID;
+         this.Freight = Freight;
+         this.OrderDate = OrderDate;
+         this.EmployeeID = EmployeeID;
+         this.FirstName = FirstName;
+         this.LastName = LastName;
+         this.Title = Title;
+         this.HireDate = HireDate;
+     }
+     public static List<OrderData> GetAllRecords()
+     {
+         if (Orders.Count() == 0)
+         {
+             int code = 10247;
+             int EmployeeID = 0;
+             for (int i = 1; i < 5; i++)
+             {
+                 Orders.Add(new OrderData(code + 1, "ALFKI", 33.33, new DateTime(1996, 07, 07), EmployeeID + 1, "Nancy", "Davolio", "Sales Representative", new DateTime(1992, 05, 01)));
+                 Orders.Add(new OrderData(code + 2, "ANANTR", 89.76, new DateTime(1996, 07, 12), EmployeeID + 2, "Andrew", "Fuller", "Vice President, Sales", new DateTime(1992, 08, 14)));
+                 Orders.Add(new OrderData(code + 3, "ANTON", 78.67, new DateTime(1996, 07, 13), EmployeeID + 3, "Janet", "Leverling", "Sales Manager", new DateTime(1993, 05, 03)));
+                 Orders.Add(new OrderData(code + 4, "BLONP", 55.65, new DateTime(1996, 07, 14), EmployeeID + 4, "Margaret", "Peacock", "Inside Sales Coordinator", new DateTime(1963, 08, 30)));
+                 Orders.Add(new OrderData(code + 5, "BOLID", 65.65, new DateTime(1996, 07, 15), EmployeeID + 5, "Steven", "Buchanan", "Sales Manager", new DateTime(1973, 08, 25)));
+                 code += 5;
+                 EmployeeID += 5;
+             }
+         }
+         return Orders;
+     }
 
-{% tabs %}
-{% highlight razor tabtitle="customComponent.razor" %}
+     public int? OrderID { get; set; }
+     public string CustomerID { get; set; }
+     public DateTime? OrderDate { get; set; }
+     public double? Freight { get; set; }
+     public int? EmployeeID { get; set; }
+     public string FirstName { get; set; }
+     public string LastName { get; set; }
+     public string Title { get; set; }
+     public DateTime? HireDate { get; set; }
+
+ }
+{% endhighlight %}
+{% highlight razor tabtitle="CustomComponent.razor" %}
 @using Syncfusion.Blazor.Lists;
 @using Syncfusion.Blazor.Inputs;
+@using Syncfusion.Blazor.Grids;
+@using BlazorApp.Data
 @using Model
 
 <div class="setMargin">
     <SfTextBox Placeholder="Search" Input="@OnInput"></SfTextBox>
 </div>
+
 <SfListView @ref="ListView" Height="100%" ShowCheckBox="true" DataSource="@CloneData">
-    <ListViewFieldSettings TValue="DataModel" Id="Id" Text="Text" ></ListViewFieldSettings>
+    <ListViewFieldSettings TValue="DataModel" Id="Id" Text="Text"></ListViewFieldSettings>
     <ListViewEvents Clicked="OnClicked" Created="@(()=>OnCreated(ColumnContext.Columns))" TValue="DataModel"></ListViewEvents>
 </SfListView>
+
 <style>
-    .setMargin{
+    .setMargin {
         margin-bottom: 10px;
     }
 </style>
+
 @code
 {
     public List<DataModel> CloneData { get; set; } = new List<DataModel>();
 
     [CascadingParameter]
-    public SfGrid<Order> Grid { get; set; }
+    public SfGrid<OrderData> Grid { get; set; }
 
     [Parameter]
     public ColumnChooserTemplateContext ColumnContext { get; set; }
@@ -612,24 +641,16 @@ Using the column chooser template, you can customize the column chooser dialog u
     {
         if (args.IsChecked)
         {
-            await Grid.HideColumnAsync(args.Text);
+            await Grid.ShowColumnAsync(args.Text);
         }
         else
         {
-            await Grid.ShowColumnAsync(args.Text);
+            await Grid.HideColumnAsync(args.Text);
         }
     }
 }
 {% endhighlight %}
-{% endtabs %}
-
-
-> * The model class used in the above example is enclosed in the Model.cs file.
-
-{% tabs %}
 {% highlight c# tabtitle="Model.cs" %}
-using System;
-
 namespace Model
 {
     public class DataModel
@@ -638,22 +659,14 @@ namespace Model
         public string Text { get; set; }
         public string Type { get; set; }
     }
-
-    public class Order
-    {
-        public int? OrderID { get; set; }
-        public string CustomerID { get; set; }
-        public DateTime? OrderDate { get; set; }
-        public double? Freight { get; set; }
-        public int? EmployeeID { get; set; }
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
-        public string Title { get; set; }
-        public DateTime? HireDate { get; set; }
-    }
 }
 {% endhighlight %}
 {% endtabs %}
+
+> You can build reusable custom component based on your customization need as like above code example.
+<br/> In the above example, Syncfusion [ListView](https://blazor.syncfusion.com/documentation/listview/getting-started) component is used as custom component in the content template to show/hide columns.
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDBTXUszLlWhsBgB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor DataGrid with ListView in Column Chooser](./images/blazor-datagrid-column-chooser-content-template.png)
 
