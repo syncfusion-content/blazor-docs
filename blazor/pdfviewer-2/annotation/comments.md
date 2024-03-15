@@ -149,3 +149,159 @@ The following code snippet explains how to show the Comment panel.
 }
 ```
 [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Annotations/Comment%20Panel/Show%20or%20hide%20comment%20panel%20-%20SfPdfViewer).
+
+## Add Comments and Reply Comments Programmatically
+
+The Blazor SfPdfViewer offers the capability to programmatically add the line annotation with Comment and Reply Comment to the annotation within the SfPdfViewer control using the [AddAnnotationAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_AddAnnotationAsync_Syncfusion_Blazor_SfPdfViewer_PdfAnnotation_) method.
+
+Below is an example demonstrating how you can use this method to add Line annotation with Comment and Reply Comment to a PDF document:
+
+```cshtml
+
+@using Syncfusion.Blazor.Buttons
+@using Syncfusion.Blazor.SfPdfViewer
+
+<SfButton OnClick="@AddCommentandReplyCommentAsync">Add Comment & ReplyComment</SfButton>
+<SfPdfViewer2 Width="100%" Height="100%" DocumentPath="@DocumentPath" @ref="@Viewer" />
+
+@code {
+    SfPdfViewer2 Viewer;
+    public string DocumentPath { get; set; } = "wwwroot/Data/Comment_and_Reply_Comment.pdf";
+
+    public async void AddCommentandReplyCommentAsync(MouseEventArgs args)
+    {
+        PdfAnnotation annotation = new PdfAnnotation();
+        // Set the annotation type of Line
+        annotation.Type = AnnotationType.Line;
+        // Set the PageNumber starts from 0. So, if set 0 it repersent the page 1.
+        annotation.PageNumber = 0;
+
+        // Vertex Points of the Line Annotation
+        List<VertexPoint> vertexPoints = new List<VertexPoint>();
+        VertexPoint vertexPoint = new VertexPoint();
+        vertexPoint.X = 200;
+        vertexPoint.Y = 200;
+        vertexPoints.Add(vertexPoint);
+        vertexPoint = new VertexPoint();
+        vertexPoint.X = 300;
+        vertexPoint.Y = 200;
+        vertexPoints.Add(vertexPoint);
+        // Set the VertexPoints of Line annotation
+        annotation.VertexPoints = vertexPoints;
+
+        // Add Comment
+        annotation.Note = "Add Comment";
+
+        // Add Comment Status
+        annotation.Review = new Review();
+        annotation.Review.State = "Accepted";
+
+        // Add Comment Author name
+        annotation.Author = "Author1";
+
+        // Add Comment Modified Date
+        annotation.ModifiedDate = "1/1/2024 10:00:00 AM";
+
+        // Add Reply Comment
+        List<Comment> comments = new List<Comment>();
+        Comment comment = new Comment();
+
+        // Add First Reply Comment
+        comment.Note = "Reply Comment1";
+        // Add First Reply Comment Author name
+        comment.Author = "Author2";
+
+        // Add First Reply Comment Modified Date
+        comment.ModifiedDate = "1/1/2024 11:00:00 AM";
+
+        // Add First Reply Comment Status
+        comment.State = "Rejected";
+        comments.Add(comment);
+
+        comment = new Comment();
+        // Add Second Reply Comment
+        comment.Note = "Reply Comment2";
+
+        // Add Second Reply Comment Author name
+        comment.Author = "Author3";
+
+        // Add Second Reply Comment Modified Date
+        comment.ModifiedDate = "1/1/2024 12:00:00 PM";
+
+        // Add Second Reply Comment Status
+        comment.State = "Completed";
+        comments.Add(comment);
+
+        // Add Reply Comment
+        annotation.Comments = comments;
+
+        // Add Line annotation with Comments and Reply Comments
+        await Viewer.AddAnnotationAsync(annotation);
+    }
+}
+
+```
+
+This code will add a line annotation with comment and reply comment to the first page of the PDF document.
+
+![Programmatically Added Comment and Reply Comment in Blazor SfPdfViewer](../images/blazor-sfpdfviewer-programmatically-add-comment-reply-comment.png)
+
+[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Annotations/Programmatic%20Support/Comment/Add).
+
+## Edit Comments and Reply Comments Programmatically
+
+The Blazor SfPdfViewer offers the capability to programmatically edit the Comment and Reply Comment of the annotation within the SfPdfViewer control using the [EditAnnotationAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_EditAnnotationAsync_Syncfusion_Blazor_SfPdfViewer_PdfAnnotation_) method.
+
+Below is an example demonstrating how you can utilize this method to edit the Comment and Reply Comment of the annotation programmatically:
+
+```cshtml
+
+@using Syncfusion.Blazor.Buttons
+@using Syncfusion.Blazor.SfPdfViewer
+
+<SfButton OnClick="@EditCommentandReplyCommentAsync">Edit Comment & ReplyComment</SfButton>
+<SfPdfViewer2 Width="100%" Height="100%" DocumentPath="@DocumentPath" @ref="@Viewer" />
+
+@code {
+    SfPdfViewer2 Viewer;
+    public string DocumentPath { get; set; } = "wwwroot/Data/Comment_and_Reply_Comment.pdf";
+
+    public async void EditCommentandReplyCommentAsync(MouseEventArgs args)
+    {
+        // Get annotation collection
+        List<PdfAnnotation> annotationCollection = await Viewer.GetAnnotationsAsync();
+        // Select the annotation want to edit
+        PdfAnnotation annotation = annotationCollection[0];
+        // Edit the Comment of Annotation
+        annotation.Note = "Updated Comment";
+        // Edit the Comment Status of Annotation
+        annotation.Review.State = "Cancelled";
+        // Edit the Comment Author of Annotation
+        annotation.Author = "Author";
+        // Edit the Comment ModifiedDate of Annotation
+        annotation.ModifiedDate = "2/1/2024 11:00:00 AM";
+        // Edit the Reply Comment of Annotation
+        annotation.Comments[0].Note = "Updated Reply Comment1";
+        // Edit the Reply Comment Status of Annotation
+        annotation.Comments[0].State = "Accepted";
+        // Edit the Reply Comment Author of Annotation
+        annotation.Comments[0].Author = "Author1";
+        // Edit the Reply Comment ModifiedDate of Annotation
+        annotation.Comments[0].ModifiedDate = "2/1/2024 12:00:00 PM";
+        // Delete or Remove Second Reply Comment
+        annotation.Comments.RemoveAt(1);
+        // Edit the Line Annotation Comments and Reply Comments
+        await Viewer.EditAnnotationAsync(annotation);
+    }
+}
+
+```
+This code snippet will edit the comment and reply comment programmatically within the SfPdfViewer control.
+
+![Programmatically Edit Comment and Reply Comment in Blazor SfPdfViewer](../images/blazor-sfpdfviewer-programmatically-edit-comment-reply-comment.png)
+
+[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Annotations/Programmatic%20Support/Comment/Edit).
+
+## See also
+
+* [How to delete the annotation programmatically](./text-markup-annotation#delete-annotation-programmatically)
