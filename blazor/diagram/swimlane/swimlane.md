@@ -142,7 +142,7 @@ The following code example explains how to customize the swimlane header.
 
 The Swimlane header annotations also support templates. You can define HTML content at the tag level and specify the use of a template with the [UseTemplate]() property. If you want to define a separate template for each Swimlane, differentiate the annotation by using the ID property.
 
-The following code example explains how to define a Swimlane header annotaiton template.
+The following code example explains how to define a Swimlane header annotation template.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
