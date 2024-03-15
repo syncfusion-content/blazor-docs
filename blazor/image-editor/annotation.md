@@ -37,6 +37,8 @@ The [`DrawTextAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Im
 
 * color - Specifies the font color of the text, allowing you to define the desired color using appropriate color values or names.
 
+* isSelected: Specifies to show the text in the selected state.
+
 By utilizing the [`DrawTextAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_DrawTextAsync_System_Nullable_System_Double__System_Nullable_System_Double__System_String_System_String_System_Nullable_System_Int32__System_Boolean_System_Boolean_System_String_) method with these parameters, you can precisely position and customize text annotations within the image. This provides the flexibility to add labels, captions, or other text elements with specific font styles, sizes, and colors, enhancing the visual presentation and clarity of the image. 
 
 Here is an example of adding a text in a button click using [`DrawTextAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_DrawTextAsync_System_Nullable_System_Double__System_Nullable_System_Double__System_String_System_String_System_Nullable_System_Int32__System_Boolean_System_Boolean_System_String_) method. 
@@ -356,6 +358,10 @@ The [`DrawRectangleAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blaz
 
 * fillColor: Specifies the fill color of the rectangle.
 
+* degree: Specifies the degree to rotate the rectangle.
+
+* isSelected: Specifies to show the rectangle in the selected state.
+
 The [`DrawEllipseAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_DrawEllipseAsync_System_Nullable_System_Double__System_Nullable_System_Double__System_Nullable_System_Double__System_Nullable_System_Double__System_Nullable_System_Double__System_String_System_String_) method in the Blazor Image Editor component is used to draw an ellipse. Ellipse annotations are valuable for highlighting, emphasizing, or marking specific areas of an image.
 
 The [`DrawEllipseAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_DrawEllipseAsync_System_Nullable_System_Double__System_Nullable_System_Double__System_Nullable_System_Double__System_Nullable_System_Double__System_Nullable_System_Double__System_String_System_String_) method in the Image Editor component takes seven parameters to define the properties of the ellipse annotation: 
@@ -374,6 +380,10 @@ The [`DrawEllipseAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
 
 * fillColor: Specifies the fill color of the ellipse. 
 
+* degree: Specifies the degree to rotate the ellipse.
+
+* isSelected: Specifies to show the ellipse in the selected state.
+
 The [`DrawLineAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_DrawLineAsync_System_Nullable_System_Double__System_Nullable_System_Double__System_Nullable_System_Double__System_Nullable_System_Double__System_Nullable_System_Double__System_String_) method is used to draw line in the Blazor Image Editor component. Line annotations are valuable for highlighting, emphasizing, or marking specific areas of an image.
 
 The [`DrawLineAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_DrawLineAsync_System_Nullable_System_Double__System_Nullable_System_Double__System_Nullable_System_Double__System_Nullable_System_Double__System_Nullable_System_Double__System_String_) method in the Image Editor component takes seven parameters to define the properties of the ellipse annotation:
@@ -390,6 +400,7 @@ The [`DrawLineAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Im
 
 * strokeColor - Specifies the stroke color of the line.
 
+* isSelected: Specifies to show the line in the selected state.
 
 The [`DrawArrowAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_DrawArrowAsync_System_Nullable_System_Double__System_Nullable_System_Double__System_Nullable_System_Double__System_Nullable_System_Double__System_Nullable_System_Double__System_String_Syncfusion_Blazor_ImageEditor_ImageEditorArrowHeadType_Syncfusion_Blazor_ImageEditor_ImageEditorArrowHeadType_) method is used to draw arrow in the Blazor Image Editor component. Arrow annotations are valuable for highlighting, emphasizing, or marking specific areas of an image.
 
@@ -411,6 +422,8 @@ The [`DrawArrowAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.I
 
 * arrowEnd - Specifies the arrowhead as ImageEditorArrowHeadType at the end of the arrow.
 
+* isSelected: Specifies to show the arrow in the selected state.
+
 The [`DrawPathAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_DrawPathAsync_Syncfusion_Blazor_ImageEditor_ImageEditorPoint___System_Nullable_System_Double__System_String_) method is used to draw path in the Blazor Image Editor component. Line annotations are valuable for highlighting, emphasizing, or marking specific areas of an image.
 
 The [`DrawPathAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_DrawPathAsync_Syncfusion_Blazor_ImageEditor_ImageEditorPoint___System_Nullable_System_Double__System_String_) method in the Image Editor component takes three parameters to define the properties of the ellipse annotation:
@@ -420,6 +433,8 @@ The [`DrawPathAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Im
 * strokeWidth - Specifies the stroke width of the path.
 
 * strokeColor - Specifies the stroke color of the path.
+
+* isSelected: Specifies to show the path in the selected state.
 
 Here is an example of inserting rectangle, ellipse, arrow, path, and line in a button click event.
 
@@ -545,6 +560,12 @@ The [`DrawImageAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.I
 * height: Specifies the height of the image.
 
 * isAspectRatio: Specifies whether the image is rendered with aspect ratio or not.
+
+* degree: Specifies the degree to rotate the image.
+
+* opacity: Specifies the value for the image.
+
+* isSelected: Specifies to show the image in the selected state.
 
 In the following example, you can use the [`DrawImageAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_DrawImageAsync_System_String_System_Nullable_System_Double__System_Nullable_System_Double__System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_System_Boolean__System_Nullable_System_Int32__) method in the button click event.
 
