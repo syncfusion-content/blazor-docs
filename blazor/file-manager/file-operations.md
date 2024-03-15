@@ -947,7 +947,7 @@ The following example demonstrates how to define custom sort comparer function t
 {% endtabs %}
 
 {% tabs %}
-{% highlight FileManagerService.cs %}
+{% highlight %}
 
 using System.IO.Compression;
 using Syncfusion.Blazor.FileManager;
