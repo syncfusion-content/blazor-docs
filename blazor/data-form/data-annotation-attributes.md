@@ -313,19 +313,19 @@ public string ID { get; set; }
 
 ### Data form display options attribute
 
-The `DataFormDisplayOptionsAttribute` attribute is used to specify the display options for a property in the DataForm component. The DataForm component uses this attribute to determine the `ColumnSpan` for the property.
+The [DataFormDisplayOptionsAttribute](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataForm.DataFormDisplayOptionsAttribute.html) attribute is used to specify the display options for a property in the DataForm component. The DataForm component uses this attribute to determine the [ColumnSpan](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataForm.DataFormDisplayOptionsAttribute.ColumnSpan.html)for the property.
 
 {% tabs %}
 
 {% highlight razor tabtitle="Razor" %}
 
-{% include_relative code-snippet\custom-attributes\custom-attribute.razor %}
+{% include_relative code-snippet/custom-attributes/custom-attribute.razor %}
 
 {% endhighlight %}
 
 {% highlight C# tabtitle="C#" %}
 
-{% include_relative code-snippet\custom-attributes\custom-attribute.cs %}
+{% include_relative code-snippet/custom-attributes/custom-attribute.cs %}
 
 {% endhighlight %}
 
