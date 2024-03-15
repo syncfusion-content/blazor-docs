@@ -319,13 +319,13 @@ The [DataFormDisplayOptionsAttribute](https://help.syncfusion.com/cr/blazor/Sync
 
 {% highlight razor tabtitle="Razor" %}
 
-{% include_relative code-snippet\custom-attributes\custom-attribute.razor %}
+{% include_relative code-snippet/custom-attributes/custom-attribute.razor %}
 
 {% endhighlight %}
 
 {% highlight C# tabtitle="C#" %}
 
-{% include_relative code-snippet\custom-attributes\custom-attribute.cs %}
+{% include_relative code-snippet/custom-attributes/custom-attribute.cs %}
 
 {% endhighlight %}
 
