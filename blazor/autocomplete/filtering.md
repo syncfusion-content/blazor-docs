@@ -27,7 +27,7 @@ The following code demonstrates the filtering functionality with local data in t
 
 For Remote data, each key press, filter action request is made at the server end.
 
-The below code demonstrates the filtering functionality with [ODataAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors#odata-adaptor) in the DropDownList component with help of [Query](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.Query.html) property.
+The below code demonstrates the filtering functionality with [ODataAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors#odata-adaptor) in the AutoComplete component with help of [Query](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.Query.html) property.
 
 {% highlight cshtml %}
 
@@ -154,6 +154,18 @@ You can highlight the search text in the suggested list items of the autocomplet
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BZLAMLszLyjsCNWA?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor AutoComplete with highlight property](./images/filtering/blazor_autocomplete_highlight-property.png)
+
+## AutoComplete with google search result
+
+The Blazor AutoComplete component offers Google-like search suggestions. This functionality simulates the behavior of conducting a Google search with each keypress, displaying relevant results in the suggestion list.
+
+{% highlight Razor %}
+
+{% include_relative code-snippet/filtering/google-search-result.razor %}
+
+{% endhighlight %} 
+
+![Blazor AutoComplete with google search result](./images/filtering/blazor_autocomplete_google-search-result.gif)
 
 ### Highlighting Search character using method
 
