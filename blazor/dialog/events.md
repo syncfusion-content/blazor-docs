@@ -187,7 +187,7 @@ This section explains the list of events of the [Blazor Dialog](https://www.sync
 
 @using Syncfusion.Blazor.Popups
 
-<SfDialog>
+<SfDialog IsModal="true">
    <DialogEvents OnOverlayModalClick ="@OnOverlayModalClickHandler" ></DialogEvents>
 </SfDialog>
 @code{

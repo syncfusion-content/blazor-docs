@@ -12,8 +12,7 @@ documentation: ug
 The port can be used to create connector by enabling the `Draw` in the [PortConstraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PortConstraints.html).
 
 ## How to draw connector from the port
-
-Diagram provides the support to draw the connector in the port.
+You can draw connectors from the port by enabling Draw constraints to the Constraints property. By default, the connector segment type is set to [Orthogonal](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ConnectorSegmentType.html#Syncfusion_Blazor_Diagram_ConnectorSegmentType_Orthogonal).
 
 The following code explains how to draw the connector by using the port constraints.
 
@@ -29,7 +28,7 @@ The following code explains how to draw the connector by using the port constrai
     protected override void OnInitialized()
     {
         nodes = new DiagramObjectCollection<Node>();
-        // A node is created and stored in nodes array.
+        // A node is created and stored in the nodes array.
         Node node = new Node()
         {
             // Position of the node.
@@ -57,7 +56,7 @@ The following code explains how to draw the connector by using the port constrai
                     Height = 12, 
                     // Sets the shape of the port as Square.
                     Shape = PortShapes.Square,
-                    // Enable draw operation for Port
+                    // Enable draw operation for Port.
                     Constraints = PortConstraints.Default | PortConstraints.Draw
                 }
             },
@@ -70,6 +69,97 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ![Drawing Port Connection in Blazor Diagram](../images/blazor-diagram-draw-port-connection.gif)
 
+## How to draw different types of connector from the port
+
+You can change the default connector type while drawing the connector from the port by setting the specific connector type instance to the[DrawingObject](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_DrawingObject) property. This enables the drawing of various connector types from the port, including:
+* Staright
+* Bezier
+* Polyline
+* Orthagonal
+* Free Hand
+
+
+The following code explains how to draw the connector by using the port constraints.
+
+```cshtml
+@using Syncfusion.Blazor.Diagram
+
+<SfDiagramComponent @ref="diagram" Height="600px" Nodes="@nodes" DrawingObject="DrawingObject"/>
+
+@code
+{
+    DiagramObjectCollection<Node> nodes;
+
+    protected override void OnInitialized()
+    {
+        public SfDiagramComponent diagram;
+        nodes = new DiagramObjectCollection<Node>();
+        // Nodes are created and stored in the nodes array.
+        Node node1 = new Node()
+        {
+            // Position of the node.
+            OffsetX = 250,
+            OffsetY = 250,
+            // Size of the node.
+            Width = 100,
+            Height = 100,
+            Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "white" },
+            // Initialize port collection.
+            Ports = new DiagramObjectCollection<PointPort>()
+            {
+                new PointPort()
+                {
+                    ID = "port1",
+                    Offset = new DiagramPoint() { X = 1, Y = 0.5 },
+                    Visibility = PortVisibility.Visible,
+                    //Set the style for the port.
+                    Style= new ShapeStyle(){ Fill = "gray", StrokeColor = "black"},
+                    // Sets the shape of the port as Circle.
+                    Width = 12, Height = 12, Shape = PortShapes.Square,
+                    // Enable drag operation for Port.
+                    Constraints = PortConstraints.Default|PortConstraints.Draw
+                }
+            },
+        };
+        nodes.Add(node1);
+        Node node2 = new Node()
+        {
+            // Position of the node.
+            OffsetX = 500,
+            OffsetY = 350,
+            // Size of the node.
+            Width = 100,
+            Height = 100,
+            Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "white" },
+            // Initialize port collection.
+            Ports = new DiagramObjectCollection<PointPort>()
+            {
+                new PointPort()
+                {
+                    ID = "port1",
+                    Offset = new DiagramPoint() { X = 0, Y = 0.5 },
+                    Visibility = PortVisibility.Visible,
+                    //Set the style for the port.
+                    Style= new ShapeStyle(){ Fill = "gray", StrokeColor = "black"},
+                    // Sets the shape of the port as Circle.
+                    Width = 12, Height = 12, Shape = PortShapes.Square,
+                    // Enable drag operation for Port.
+                    Constraints = PortConstraints.Default|PortConstraints.Draw
+                }
+            },
+        };
+        nodes.Add(node2);
+        DrawingObject = new Connector()
+        {
+            ID = "connector1",
+            Type = ConnectorSegmentType.Bezier,            
+        };
+    }
+}
+```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Ports/Interaction).
+
+![Drawing Bezier Port Connection in Blazor Diagram](../images/blazor-diagram-draw-port-connection-bezier.gif)
 ## See also
 
 * [How to create a node](../nodes/nodes)

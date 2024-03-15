@@ -104,12 +104,12 @@ N> If you don't provide the `DocumentPath` property value, the PDF Viewer (Next 
 
 Run the application, and the PDF file will be displayed using Syncfusion's Blazor PDF Viewer (Next Gen) component in your browser.
 
-![Blazor SfPdfViewer Component](GettingStarted_images/blazor-pdfviewer.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hZVzNWqXLSZpnuzc?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor SfPdfViewer Component](GettingStarted_images/blazor-pdfviewer.png)" %}
 
 ## See also
 
-* [Getting Started with Blazor PDF Viewer (Next Gen) Component in Blazor WASM App](./web-assembly-application)
+* [Getting Started with Blazor PDF Viewer (Next Gen) Component in Blazor WASM App](https://blazor.syncfusion.com/documentation/pdfviewer-2/getting-started/web-assembly-application)
 
-* [Getting Started with Blazor PDF Viewer (Next Gen) Component in WSL mode](./wsl-application)
+* [Getting Started with Blazor PDF Viewer (Next Gen) Component in WSL mode](https://blazor.syncfusion.com/documentation/pdfviewer-2/getting-started/wsl-application)
 
 * [Learn different ways to add script reference in Blazor Application](https://blazor.syncfusion.com/documentation/common/adding-script-references)

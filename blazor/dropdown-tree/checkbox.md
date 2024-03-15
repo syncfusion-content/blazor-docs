@@ -122,4 +122,4 @@ In the following example, the [ShowSelectAll](https://help.syncfusion.com/cr/bla
 }
 ```
 
-![MultiSelection in Blazor DropDownTree](./images/blazor-dropdowntree-component-selectall.PNG)
+![MultiSelection in Blazor Dropdown Tree.](./images/blazor-dropdowntree-component-selectall.PNG)

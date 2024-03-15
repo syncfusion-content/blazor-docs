@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Blazor Stepper in Blazor Web App
 
-This section briefly explains about how to include `Blazor Stepper` component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/).
+This section briefly explains about how to include [Blazor Stepper](https://www.syncfusion.com/blazor-components/blazor-stepper) component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/).
 
 ## Prerequisites
 
@@ -25,7 +25,7 @@ You need to configure the corresponding [Interactive render mode](https://learn.
 
 To add **Blazor Stepper** component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install [Syncfusion.Blazor.Navigations](https://www.nuget.org/packages/Syncfusion.Blazor.Navigations/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/).
 
-If you select an **Interactive render mode** as `WebAssembly` or `Auto`, you can install the NuGet package in the project any where to add component in Web App.
+If you utilize `WebAssembly or Auto` render modes in the Blazor Web App need to be install Syncfusion Blazor components NuGet packages within the client project.
 
 Alternatively, you can utilize the following package manager command to achieve the same.
 
@@ -114,7 +114,7 @@ Add the Syncfusion Blazor Stepper component in the **~Pages/.razor** file. If an
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion Blazor Stepper component in your default web browser.
 
-![Blazor Stepper Component](images/Blazor-stepper-component.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BNBTDCKZfTxNJwlE?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Stepper Component](images/blazor-stepper-component.png)" %}
 
 ## Configure icon and label
 
@@ -123,7 +123,7 @@ You can define the step icon and label by setting the `IconCss` and `Label` prop
 {% tabs %}
 {% highlight razor %}
 
-<SfStepper ID="iconWithLabel">
+<SfStepper>
     <StepperSteps>
         <StepperStep Label="Cart" IconCss="sf-icon-cart"></StepperStep>
         <StepperStep Label="Address" IconCss="sf-icon-user"></StepperStep>
@@ -173,4 +173,6 @@ You can define the step icon and label by setting the `IconCss` and `Label` prop
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor Stepper with Icon and Label](./images/Blazor-iconWithLabel.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VjBzZsKNpJRTvqSH?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Stepper with Icon and Label](./images/blazor-iconwithlabel.png)" %}
+
+N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/Stepper).

@@ -130,7 +130,7 @@ Add the Syncfusion Blazor Accordion component in the **~/Pages/Index.razor** fil
 
 Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion Blazor Accordion component in your default web browser.
 
-![Blazor Accordion Component](images/blazor-accordion-component.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BjBfZMDKrVnxBgsm?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Accordion Component](images/blazor-accordion-component.png)" %}
 
 ## Initialize Blazor Accordion using Template
 
@@ -142,7 +142,8 @@ The following code explains how to initialize Blazor Accordion using header and 
 
 {% endhighlight %}
 
-![Blazor Accordion with header and content Template](./images/blazor-accordion-header-template.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LtBzXirSVLuZFLkH?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Accordion with header and content Template](images/blazor-accordion-header-template.png)" %}
+
 
 ## See also
 

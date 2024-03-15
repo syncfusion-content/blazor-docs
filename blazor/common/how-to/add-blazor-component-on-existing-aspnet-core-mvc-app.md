@@ -11,7 +11,7 @@ documentation: ug
 
 This section explains how to add Syncfusion Blazor component on an existing ASP.NET Core MVC application.
 
-1. Open your existing ASP.NET Core MVC application on Visual Studio 2019.
+1. Open your existing ASP.NET Core MVC application on Visual Studio 2022.
 
 2. Right-click on the project and select `Manage NuGet Package`.
 

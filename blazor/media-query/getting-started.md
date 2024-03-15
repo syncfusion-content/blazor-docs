@@ -339,7 +339,7 @@ else
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion Blazor Media Query component in your default web browser.
 
-![Blazor Media Query Component](images/blazor-media-query.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rZBzXMKtikurjnwB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Media Query Component](images/blazor-media-query.png)" %}
 
 ## See also
 

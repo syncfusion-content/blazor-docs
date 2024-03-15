@@ -7,7 +7,7 @@ control: Dropdown Tree
 documentation: ug
 ---
 
-# Accessibility in Dropdown Tree 
+# Accessibility in Blazor Dropdown Tree Component
 
 The Dropdown Tree component has been designed, keeping in mind the `WAI-ARIA` specifications, and applied the WAI-ARIA roles, states, and properties along with `keyboard support`. This component is characterized by complete keyboard interaction support and ARIA accessibility support that makes it easy for people who use assistive technologies (AT) or those who completely rely on keyboard navigation.
 
@@ -44,3 +44,5 @@ You can use the following key shortcuts to access the Dropdown Tree without inte
 | <kbd>End</kbd> | Goes to the last item in the popup. |
 | <kbd>Enter</kbd> | Selects the focused item in the popup. |
 | <kbd>Space</kbd> | Checks the current item in the popup. |
+|**Over All Checkbox**|
+| <kbd>Space</kbd> | Checks all the items in popup |

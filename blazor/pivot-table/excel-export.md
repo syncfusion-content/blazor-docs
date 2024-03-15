@@ -240,6 +240,10 @@ The Excel export provides an option to change file name of the document before e
 
 ![Changing Blazor PivotTable File Name while Exporting](images/blazor-pivottable-change-excel-file-name.png)
 
+## Limitation when exporting millions of records to Excel format
+
+By default, Microsoft Excel supports only 1,048,576 records in an excel sheet. Hence it is not possible to export millions of records to excel. You can refer the [documentation](https://support.microsoft.com/en-gb/office/excel-specifications-and-limits-1672b34d-7043-467e-8e27-269d656771c3) link for more details on Microsoft excel specifications and limits. So suggest to export the data in CSV (Comma-Separated Values) or other formats that can handle large datasets more efficiently than Excel.
+
 ## CSV Export
 
 The Excel export allows pivot table data to be exported in **CSV** file format as well. To enable CSV export in the pivot table, set the [AllowExcelExport](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_AllowExcelExport) property in [SfPivotView](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html) class as **true**. Once the API is set, user needs to call the [ExportToCsvAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_CsvExport_System_Object_System_Nullable_System_Boolean__System_Object_System_Nullable_System_Boolean__) method for exporting on external button click.
@@ -289,6 +293,45 @@ N> The pivot table component can be exported to CSV format using options availab
 
 ![CSV Exporting in Blazor PivotTable](images/blazor-pivottable-csv-export.png)
 
+## Export All Pages
+
+When the [EnableVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_EnableVirtualization) property in the [SfPivotView](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html) class is set to **true**, the entire virtual data of the pivot table (i.e. the data that contains all of the records used to render the complete pivot table) will be exported as an Excel/CSV document. To export only the current viewport of the pivot table, set the  [ExportAllPages](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_ExportAllPages) parameter to **false**.
+
+```cshtml
+@using Syncfusion.Blazor.PivotView
+
+<SfPivotView TValue="ProductDetails" Height="400" Width="100%" ShowGroupingBar="true" EnableVirtualization=true ShowToolbar=true Toolbar="@Options" ExportAllPages=false AllowExcelExport=true>
+    <PivotViewDataSourceSettings DataSource="@Data">
+        <PivotViewColumns>
+            <PivotViewColumn Name="Year"></PivotViewColumn>
+            <PivotViewColumn Name="Products"></PivotViewColumn>
+               <PivotViewColumn Name="Quarter"></PivotViewColumn>
+        </PivotViewColumns>
+        <PivotViewRows>
+            <PivotViewRow Name="Sold"></PivotViewRow>
+            <PivotViewRow Name="Country"></PivotViewRow>
+        </PivotViewRows>
+        <PivotViewValues>
+            <PivotViewValue Name="Amount" Caption="Sold Amount"></PivotViewValue>
+        </PivotViewValues>
+        <PivotViewFormatSettings>
+            <PivotViewFormatSetting Name="Amount" Format="C"></PivotViewFormatSetting>
+        </PivotViewFormatSettings>
+    </PivotViewDataSourceSettings>
+</SfPivotView>
+
+@code{
+    public List<ProductDetails> Data { get; set; }
+    protected override void OnInitialized()
+    {
+        this.Data = ProductDetails.GetProductData().ToList();
+          //Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
+    }
+    public List<ToolbarItems> Options = new List<ToolbarItems> {
+        ToolbarItems.Export,
+    };
+}
+```
 ## Events
 
 ### ExcelQueryCellInfo

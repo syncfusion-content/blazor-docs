@@ -44,19 +44,37 @@ The following sample code demonstrates data annotations implemented in the DataG
 <SfGrid TValue="Order" DataSource="@Orders" Height="315" Width="500" AllowPaging="true" AllowFiltering="true" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Update", "Cancel" })">
     <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true"></GridEditSettings>
     <GridColumns>
-        <GridColumn Field=@nameof(Order.OrderID) TextAlign="TextAlign.Right" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.CustomerID) Width="80"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderID) TextAlign="TextAlign.Right" Width="115"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) Width="120"></GridColumn>
         <GridColumn Field=@nameof(Order.OrderDate) EditType="EditType.DatePickerEdit" Format="d" TextAlign="TextAlign.Right" Width="130" Type="ColumnType.Date"></GridColumn>
-        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" TextAlign="TextAlign.Right" Format="C2" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" TextAlign="TextAlign.Right" Format="C2" Width="115"></GridColumn>
         <GridColumn Field=@nameof(Order.ShipCity) Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.Verified) Width="110">
+            <EditTemplate>
+                @{
+                    var Order = (context as Order);
+                    <SfDropDownList Placeholder="Type" ID="Type" @bind-Value="@((context as Order).Verified)" DataSource="@DropDownData" TValue="Status" TItem="Data">
+                        <DropDownListEvents TItem="Data" TValue="Status"></DropDownListEvents>
+                        <DropDownListFieldSettings Value="Value" Text="Type"></DropDownListFieldSettings>
+                    </SfDropDownList>
+                }
+            </EditTemplate>
+        </GridColumn>
     </GridColumns>
 </SfGrid>
 
 @code {
     public List<Order> Orders { get; set; }
+    public List<Data> DropDownData = new List<Data>();
 
     protected override void OnInitialized()
     {
+        Random rnd = new Random();
+        var values = Enum.GetValues(typeof(Status));
+        foreach (Status item in Enum.GetValues(typeof(Status)))
+        {
+            DropDownData.Add(new Data { Type = GetDisplayName(item), Value = item });
+        }
         Orders = Enumerable.Range(1, 75).Select(x => new Order()
             {
                 OrderID = 1000 + x,
@@ -64,7 +82,35 @@ The following sample code demonstrates data annotations implemented in the DataG
                 Freight = 2.1 * x,
                 OrderDate = DateTime.Now.AddDays(-x),
                 ShipCity = (new string[] { "Berlin", "Madrid", "Cholchester", "Marseille", "Tsawassen" })[new Random().Next(5)],
+                Verified = (Status)(values.GetValue(rnd.Next(values.Length))),
             }).ToList();
+    }
+
+    public static string GetDisplayName(Enum enumValue)
+    {
+        string displayName;
+        displayName = enumValue.GetType()
+            .GetMember(enumValue.ToString())
+            .FirstOrDefault()
+            .GetCustomAttribute<DisplayAttribute>()?
+            .GetName();
+        if (String.IsNullOrEmpty(displayName))
+        {
+            displayName = enumValue.ToString();
+        }
+        return displayName;
+    }
+    public enum Status
+    {
+        [Display(Name = "Yeah")]
+        Yes = 0,
+        [Display(Name = "Nope")]
+        No = 1
+    }
+    public class Data
+    {
+        public string Type { get; set; }
+        public Status Value { get; set; }
     }
 
     public class Order
@@ -91,11 +137,14 @@ The following sample code demonstrates data annotations implemented in the DataG
         public double? Freight { get; set; }
         [ScaffoldColumn(scaffold:false)]
         public string ShipCity { get; set; }
+        public Status Verified { get; set; }
     }
 }
 ```
 
 The following image represents data annotations enabled in the DataGrid columns,
 ![Data Annotation in Blazor DataGrid](./images/blazor-datagrid-data-annotation.png)
+
+> Displaying Enum Class Display attribute name in the "Verified" Column, this implementation aims to improve user experience by presenting human-readable text in the grid for Enum values associated with the "Verified" column
 
 N> You can refer to our [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap5) to understand how to present and manipulate data.

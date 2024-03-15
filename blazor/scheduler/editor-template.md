@@ -243,7 +243,7 @@ In case, in order to prevent only specific popups on Scheduler, check the condit
 
 ### How to open editor window manually
 
-It is possible to open the editor window manually for a specific time or certain events by using the `OpenEditorAsync` method which allows the [TValue](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_OpenEditor__0_Syncfusion_Blazor_Schedule_CurrentAction_) or [CellClickEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_OpenEditor_Syncfusion_Blazor_Schedule_CellClickEventArgs_Syncfusion_Blazor_Schedule_CurrentAction_System_Nullable_Syncfusion_Blazor_Schedule_RepeatType__) and `CurrentAction` as parameters.
+It is possible to open the editor window manually for a specific time or certain events by using the `OpenEditorAsync` method which allows the [TValue](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_OpenEditor__0_Syncfusion_Blazor_Schedule_CurrentAction_) or [CellClickEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.CellClickEventArgs.html) and `CurrentAction` as parameters.
 
 N> [Here](https://blazor.syncfusion.com/documentation/scheduler/how-to/open-editor-window-on-single-click) is the example to open the editor window on a single click.
 
@@ -470,6 +470,7 @@ In this demo, we tailor the editor's header according to the appointment's subje
     }
 </style>
 ```
+
 ![Add customize header and footer using template in Blazor Scheduler](images/blazor-scheduler-custom-editor-header-footer.png)
 
 ### How to add resource options within editor template
@@ -1693,7 +1694,7 @@ It is possible to prevent the display of popup window by passing the value `true
        <ScheduleViews>
            <ScheduleView Option="View.Month"></ScheduleView>
        </ScheduleViews>
-    <ScheduleEvents TValue="AppointmentData" MoreEventsClicked="OnMoreEventsCliecked"></ScheduleEvents>
+    <ScheduleEvents TValue="AppointmentData" MoreEventsClicked="OnMoreEventsClicked"></ScheduleEvents>
 </SfSchedule>
 
 @code{
@@ -1702,7 +1703,7 @@ It is possible to prevent the display of popup window by passing the value `true
 
     private DateTime SelectedDate = new DateTime(2020, 1, 31);
 
-    private void OnMoreEventsCliecked(MoreEventsClickArgs args)
+    private void OnMoreEventsClicked(MoreEventsClickArgs args)
     {
         args.Cancel = true;
     }

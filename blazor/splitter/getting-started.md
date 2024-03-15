@@ -155,7 +155,7 @@ Add the Syncfusion Blazor Splitter component in the **~/Pages/Index.razor** file
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion Blazor Splitter component in your default web browser.
 
-![Blazor Splitter Component](./images/blazor-splitter.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hDBTNWqXTTzLolQw?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Splitter Component](./images/blazor-splitter.png)" %}
 
 ## See Also
 

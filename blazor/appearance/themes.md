@@ -182,11 +182,11 @@ N> If you use individual component styles, you should install the styles of thei
 
 * Open Visual Studio 2022 and click the Extensions in the toolbar.
 
-    ![VS Extension](images/VS_Extension.png)
+    ![VS Extension](images/vs_extension.png)
 
 * Search the `Web Compiler 2022+` in search box and download the extension.
 
-    ![Web Compiler 2022+](images/Web_Compiler.png)
+    ![Web Compiler 2022+](images/web_compiler.png)
 
 * Right-click the `SCSS` file and click the Web Compiler to compile the file.
 
@@ -233,11 +233,11 @@ You can add the `SCSS theme` for Blazor applications through NPM package and com
 
 * Open Visual Studio 2022 and click the Extensions in the toolbar.
 
-    ![VS Extension](images/VS_Extension.png)
+    ![VS Extension](images/vs_extension.png)
 
 * Search the `Web Compiler 2022+` in search box and download the extension.
 
-    ![Web Compiler 2022+](images/Web_Compiler.png)
+    ![Web Compiler 2022+](images/web_compiler.png)
 
 * Install the [Syncfusion Blazor Themes](https://www.npmjs.com/package/@syncfusion/blazor-themes) NPM package using the below command.
 
@@ -258,7 +258,7 @@ You can add the `SCSS theme` for Blazor applications through NPM package and com
 
     **Output:**
 
-    ![Overall Theme Output](images/Overall_Theme_Output.png)
+    ![Overall Theme Output](images/overall_theme_output.png)
 
     For the Calendar (individual) component:
 
@@ -271,11 +271,11 @@ You can add the `SCSS theme` for Blazor applications through NPM package and com
 
     **Output:**
 
-    ![Individual Theme Output](images/Individual_Theme_Output.png)
+    ![Individual Theme Output](images/individual_theme_output.png)
 
 * Then, Right-click the created `SCSS` file and click the `Web Compiler` option to compile the file.
 
-    ![Web Compiler Option](images/Web_Compiler_Option.png)
+    ![Web Compiler Option](images/web_compiler_option.png)
 
 * The `compilerconfig.json` file is created by default. Then, provide the location of the compiled CSS file and include a path in `compilerconfig.json` as shown in the following code snippet.
 
@@ -607,7 +607,7 @@ In the Blazor application, the application theme can be changed dynamically by c
 
 The following example demonstrates how to change a theme dynamically in Blazor application using Syncfusion Blazor themes using Syncfusion Dropdown component.
 
-1. For **Blazor Web App**, the theme is changed based on query string at the **~/Components/App.razor** file
+* For **Blazor Web App**, the theme is changed based on query string at the **~/Components/App.razor** file
 
 {% tabs %}
 {% highlight c# tabtitle=".NET 8 (~/App.razor)" %}
@@ -632,7 +632,7 @@ The following example demonstrates how to change a theme dynamically in Blazor a
 {% endhighlight %}
 {% endtabs %}
 
-2. Create a new `DropDownComponent.razor` page, and then add the provided code snippet to enable dynamic theming within the application using [Syncfusion DropDown List Component](https://blazor.syncfusion.com/documentation/dropdown-list/getting-started-with-web-app).
+* Create a new `DropDownComponent.razor` page, and then add the provided code snippet to enable dynamic theming within the application using [Syncfusion DropDown List Component](https://blazor.syncfusion.com/documentation/dropdown-list/getting-started-with-web-app).
 
 ```cshtml
 @rendermode InteractiveAuto
@@ -700,7 +700,7 @@ The following example demonstrates how to change a theme dynamically in Blazor a
 
 ```
 
-3. To include `DropDownComponent` in the `~/MainLayout.razor` as shown bellow
+* To include `DropDownComponent` in the `~/MainLayout.razor` as shown bellow
 
 {% tabs %}
 {% highlight c# tabtitle="C#" hl_lines="4 5 6 7" %}
@@ -970,13 +970,37 @@ Material and Tailwind Themes uses online roboto font. If your app is designed to
         * `~/Pages/_Layout.cshtml` file for `.NET 6` project
         * `~/Pages/_Host.cshtml` file for `.NET 7` project.
 
-    ```html
+```html
     <head>
         ....
         ....
         <link href="material.min.css" rel="stylesheet" />
     </head>
-    ```
+```
+
+### Using Customized Styles from `Syncfusion.Blazor.Themes` Package and CDN (From `v23.2.4` and above)
+
+Starting from `v23.2.4`, customized `Material` and `Tailwind` themes are available in the `Syncfusion.Blazor.Themes` package. Also it can be accessed via CDN for Blazor components.
+
+#### Static Web Asset Reference:
+
+```html
+<head>
+    ....
+    ....
+    <link href="_content/Syncfusion.Blazor.Themes/customized/material.css" rel="stylesheet" />
+</head>
+```
+
+#### CDN Reference:
+
+```html
+<head>
+    ....
+    ....
+    <link href="https://cdn.syncfusion.com/blazor/23.2.4/styles/customized/material.css" rel="stylesheet" />
+</head>
+```
 
 ## See also
 

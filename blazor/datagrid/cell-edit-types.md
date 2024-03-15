@@ -664,6 +664,7 @@ You can render the [SfNumericTextBox](https://help.syncfusion.com/cr/blazor/Sync
         public double? Freight { get; set; }
         public string ShipCountry { get; set; }
     }
+}
 ```
 
 ### Using TimePicker in EditTemplate

@@ -17,17 +17,17 @@ The [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gan
 
 The `GanttColumn.EditType` is used to customize the edit type of the particular column. You can set the `GanttColumn.EditType` based on data type of the column.
 
-* [NumericTextBox](../numerictextbox/getting-started) component for integers, double, and decimal data types.
+* [NumericTextBox](https://blazor.syncfusion.com/documentation/numeric-textbox/getting-started) component for integers, double, and decimal data types.
 
-* [TextBox](../textbox/getting-started) component for string data type.
+* [TextBox](https://blazor.syncfusion.com/documentation/textbox/getting-started) component for string data type.
 
-* [DropDownList](../dropdownlist/getting-started) component for list data type.
+* [DropDownList](https://blazor.syncfusion.com/documentation/dropdown-list/getting-started) component for list data type.
 
-* [DatePicker](../datepicker/getting-started) component for date values.
+* [DatePicker](https://blazor.syncfusion.com/documentation/datepicker/getting-started) component for date values.
 
-* [DateTimePicker](../datetimepicker/getting-started) component for datetime type.
+* [DateTimePicker](https://blazor.syncfusion.com/documentation/datetime-picker/getting-started) component for datetime type.
 
-* [Checkbox](../check-box/getting-started) component for boolean type.
+* [Checkbox](https://blazor.syncfusion.com/documentation/check-box/getting-started) component for boolean type.
 
 Also, you can customize model of the `GanttColumn.EditType` component through the `GanttColumn.EditorSettings`.
 
@@ -35,12 +35,12 @@ The following table describes cell edit type component and their corresponding e
 
 Component |Example
 -----|-----
-[NumericTextBox](../numerictextbox/getting-started) | @(new { @params = new { format = "n"} })
-[TextBox](../textbox/getting-started) | -
-[DropDownList](../dropdownlist/getting-started) | @(new { @params = new { value = "Germany"} })
-[DatePicker](../datepicker/getting-started) | @(new { @params = new { format = "yyyy-MM-dd"} })
-[DateTimePicker](../datetimepicker/getting-started) | @(new { @params = new { strictMode = true} })
-[Checkbox](../check-box/getting-started) | @(new { @params = new { checked = true} })
+[NumericTextBox](https://blazor.syncfusion.com/documentation/numeric-textbox/getting-started) | @(new { @params = new { format = "n"} })
+[TextBox](https://blazor.syncfusion.com/documentation/textbox/getting-started) | -
+[DropDownList](https://blazor.syncfusion.com/documentation/dropdown-list/getting-started) | @(new { @params = new { value = "Germany"} })
+[DatePicker](https://blazor.syncfusion.com/documentation/datepicker/getting-started) | @(new { @params = new { format = "yyyy-MM-dd"} })
+[DateTimePicker](https://blazor.syncfusion.com/documentation/datetime-picker/getting-started) | @(new { @params = new { strictMode = true} })
+[Checkbox](https://blazor.syncfusion.com/documentation/check-box/getting-started) | @(new { @params = new { checked = true} })
 
 ```cshtml
 @using Syncfusion.Blazor.Gantt
@@ -132,21 +132,17 @@ The following code example describes, how to define the Edit template for a part
         <GanttColumn Field="Progress"></GanttColumn>
     </GanttColumns>
     <GanttEditSettings AllowAdding="true" AllowEditing=true AllowTaskbarEditing=true></GanttEditSettings>
-    <GanttEvents OnActionBegin="ActionBeginHandler" TValue="TaskData"></GanttEvents>
+    <GanttEvents OnCellSave="CellSaveHandler" TValue="TaskData"></GanttEvents>
 </SfGantt>
 
 @code{
     SfDropDownList<string, string> dropdown;
 
-    public void ActionBeginHandler(GanttActionEventArgs<TaskData> args)
+    private void CellSaveHandler(CellSaveArgs<TaskData> args)
     {
-        if (args.RequestType.Equals(Syncfusion.Blazor.Gantt.Action.BeforeSave))
+        if (args.ColumnName == "TaskName")
         {
-            var data = args.Data as TaskData;
-            if (dropdown != null && dropdown.Value != null)
-            {
-                data.TaskName = dropdown.Value.ToString();
-            }
+            args.Value = dropdown.Value;
         }
     }
     private List<TaskData> TaskCollection { get; set; }
@@ -255,13 +251,13 @@ The following table describes different types of editing modes available in Gant
 
 Action |Description
 -----|-----
-[Cell editing](managing-tasks/#cell-editing) | To perform `double tap` on a specific cell, initiate the cell to be in edit state.
-[Dialog editing](managing-tasks/#dialog-editing) | To perform `double tap` on a specific row, initiate the edit dialog to be opened.
-[Taskbar editing](managing-tasks/#taskbar-editing) | Taskbar editing action is initiated using the `tap` action on the taskbar. <br> **Parent taskbar** : Once you tap on the parent taskbar, it will be changed to editing state. Perform only dragging action on parent taskbar editing.<br>![Blazor Gantt Chart displays editing parent taskbar in touch mode](images/editingparent.PNG) <br><br> **Child taskbar** : Once you tap the child taskbar, it will be changed to editing state.<br>![Blazor Gantt Chart displays editing parent taskbar in touch mode](images/editingstate.PNG) <br> <br> **Dragging taskbar** : To drag a taskbar to the left or right in editing state. <br> <br> **Resizing taskbar** : To resize a taskbar, drag the left/right resize icon. <br> <br> **Progress resizing** : To change the progress, drag the progress resize icon to the left or right direction.
+[Cell editing](https://blazor.syncfusion.com/documentation/gantt-chart/editing-tasks#cell-editing) | To perform `double tap` on a specific cell, initiate the cell to be in edit state.
+[Dialog editing](https://blazor.syncfusion.com/documentation/gantt-chart/editing-tasks#dialog-editing) | To perform `double tap` on a specific row, initiate the edit dialog to be opened.
+[Taskbar editing](https://blazor.syncfusion.com/documentation/gantt-chart/taskbar-editing) | Taskbar editing action is initiated using the `tap` action on the taskbar. <br> **Parent taskbar** : Once you tap on the parent taskbar, it will be changed to editing state. Perform only dragging action on parent taskbar editing.<br>![Blazor Gantt Chart displays editing parent taskbar in touch mode](images/editingparent.png) <br><br> **Child taskbar** : Once you tap the child taskbar, it will be changed to editing state.<br>![Blazor Gantt Chart displays editing parent taskbar in touch mode](images/editingstate.png) <br> <br> **Dragging taskbar** : To drag a taskbar to the left or right in editing state. <br> <br> **Resizing taskbar** : To resize a taskbar, drag the left/right resize icon. <br> <br> **Progress resizing** : To change the progress, drag the progress resize icon to the left or right direction.
 
 ### Task dependency editing
 
-Tap the taskbar to initiate the taskbar editing for predecessors. Once it enters the edited state, `tap` the left or right connector point to initiate the task [dependencies](managing-tasks/#task-dependencies) editing. The dialog will be rendered with the message `Choose another task` and `Cancel` button.
+Tap the taskbar to initiate the taskbar editing for predecessors. Once it enters the edited state, `tap` the left or right connector point to initiate the task [dependencies](https://blazor.syncfusion.com/documentation/gantt-chart/managing-tasks#task-dependency-editing) editing. The dialog will be rendered with the message `Choose another task` and `Cancel` button.
 
 ![Task Dependency Editing in Blazor Gantt Chart](images/dependency-editing-touch.png)
 

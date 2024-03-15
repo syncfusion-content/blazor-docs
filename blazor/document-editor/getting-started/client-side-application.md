@@ -96,7 +96,7 @@ Add the Syncfusion Blazor DocumentEditor component in the **~/Pages/Index.razor*
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion Blazor DocumentEditor component in your default web browser.
 
-![Blazor DocumentEditor](../images/blazor-document-editor.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDBpDiLugARSruZb?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor DocumentEditor](../images/blazor-document-editor.png)" %}
 
 N> The Document editor is one of the large functionalities covered component as it gives you many functionalities of Microsoft Word application. It has more UI views like text properties pane, header footer properties pane, image properties pane and dialogs.
 The dependency components are [Syncfusion.Blazor.Calendars](https://www.nuget.org/packages/Syncfusion.Blazor.Calendars/), [Syncfusion.Blazor.Core](https://www.nuget.org/packages/Syncfusion.Blazor.Core/), [Syncfusion.Blazor.Data](https://www.nuget.org/packages/Syncfusion.Blazor.Data/), [Syncfusion.Blazor.DropDowns](https://www.nuget.org/packages/Syncfusion.Blazor.DropDowns/), [Syncfusion.Blazor.Navigations](https://www.nuget.org/packages/Syncfusion.Blazor.Navigations/), [Syncfusion.WordProcessor.AspNet.Core](https://www.nuget.org/packages/Syncfusion.WordProcessor.AspNet.Core/), [System.Text.Json](https://www.nuget.org/packages/System.Text.Json/). So, it takes some time (less than 6seconds) for initial loading in client browsers to load all the dependency components and it is an expected one.

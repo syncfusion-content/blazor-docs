@@ -9,7 +9,7 @@ documentation: ug
 
 # Searching and Filtering in Blazor TreeView Component
 
-The Blazor TreeView component allows for searching and filtering of TreeView nodes. However, filtering of the TreeView component nodes can also be achieved through an external input TextBox.
+The Blazor TreeView component allows for searching and filtering of TreeView nodes through an external input TextBox.
 
 ```cshtml 
 @using Syncfusion.Blazor.Inputs

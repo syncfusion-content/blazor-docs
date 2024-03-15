@@ -124,7 +124,7 @@ Add the Syncfusion Blazor TextBox component in the **~/Pages/Index.razor** file.
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion Blazor TextBox component in your default web browser.
 
-![Blazor TextBox Component](./images/blazor-textbox.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rjrJZMAtTozPjvlK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor TextBox Component](./images/blazor-textbox.png)" %}
 
 ## Adding icons to the Blazor TextBox
 
@@ -155,7 +155,7 @@ A TextBox can be created with icon as a group by creating the parent `div` eleme
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor TextBox with Icon](./images/blazor-textbox-icons.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hDhzZCKNfeoflPrc?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor TextBox with Icon](./images/blazor-textbox-icons.png)" %}
 
 ## Floating label
 
@@ -169,7 +169,7 @@ The floating label TextBox floats the label above the TextBox after focusing, or
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor TextBox with Floating Label](./images/blazor-textbox-float-label.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LjLTZWUjzeHZgdPK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor TextBox with Floating Label](./images/blazor-textbox-float-label.png)" %}
 
 ## See Also
 

@@ -190,3 +190,96 @@ The following code illustrates how to change the resizer shape of the shape anno
 ![Custom Selector in Blazor SfPdfViewer](../../pdfviewer/images/CustomSelector.png)
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Annotations/Selector/Customize%20Annotation%20%20Selector%20-%20SfPdfViewer).
+
+## Add shape annotation Programmatically
+
+The Blazor SfPdfViewer offers the capability to programmatically add shape annotations such as Rectangle, Line, Arrow, Circle, and Polygon within the SfPdfViewer control using the [AddAnnotationAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_AddAnnotationAsync_Syncfusion_Blazor_SfPdfViewer_PdfAnnotation_)  method.
+
+Below is an example demonstrating how you can use this method to add shape annotation to a PDF document:
+
+```cshtml
+
+@using Syncfusion.Blazor.Buttons
+@using Syncfusion.Blazor.SfPdfViewer
+
+<SfButton OnClick="@AddShapeAnnotationAsync">Add Shape Annotation</SfButton>
+<SfPdfViewer2 Width="100%" Height="100%" DocumentPath="@DocumentPath" @ref="@Viewer" />
+
+@code {
+    SfPdfViewer2 Viewer;
+    public string DocumentPath { get; set; } = "wwwroot/Data/Shape_Annotation.pdf";
+
+    public async void AddShapeAnnotationAsync(MouseEventArgs args)
+    {
+        PdfAnnotation annotation = new PdfAnnotation();
+        // Set the Shape annotation type like Rectangle, Line, Arrow, Circle, Polygon.
+        annotation.Type = AnnotationType.Rectangle;
+        // Set the page number starts from 0. So, if set 0 it represents the page 1.
+        annotation.PageNumber = 0;
+
+        // Bound of the rectangle annotation
+        annotation.Bound = new Bound();
+        annotation.Bound.X = 200;
+        annotation.Bound.Y = 150;
+        annotation.Bound.Width = 300;
+        annotation.Bound.Height = 100;
+        // Add rectangle annotation
+        await Viewer.AddAnnotationAsync(annotation);
+    }
+}
+
+```
+This code will add a shape annotation to the first page of the PDF document.
+
+![Programmatically Added Shape annotation in Blazor SfPdfViewer](../images/blazor-sfpdfviewer-programmatically-add-shape-annotation.png)
+
+[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Annotations/Programmatic%20Support/Shapes/Add).
+
+## Edit shape annotation Programmatically
+
+The Blazor SfPdfViewer offers the capability to programmatically edit the shape annotation such as Rectangle, Line, Arrow, Circle, and Polygon within the SfPdfViewer control using the [EditAnnotationAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_EditAnnotationAsync_Syncfusion_Blazor_SfPdfViewer_PdfAnnotation_) method.
+
+Below is an example demonstrating how you can utilize this method to edit the shape annotation programmatically:
+
+```cshtml
+
+@using Syncfusion.Blazor.Buttons
+@using Syncfusion.Blazor.SfPdfViewer
+
+<SfButton OnClick="@EditShapeAnnotationAsync">Edit Shape Annotation</SfButton>
+<SfPdfViewer2 Width="100%" Height="100%" DocumentPath="@DocumentPath" @ref="@Viewer" />
+
+@code {
+    SfPdfViewer2 Viewer;
+    public string DocumentPath { get; set; } = "wwwroot/Data/Shape_Annotation.pdf";
+
+    public async void EditShapeAnnotationAsync(MouseEventArgs args)
+    {
+        // Get annotation collection
+        List<PdfAnnotation> annotationCollection = await Viewer.GetAnnotationsAsync();
+        // Select the annotation want to edit
+        PdfAnnotation annotation = annotationCollection[0];
+        // Change the fill color of rectangle annotation
+        annotation.FillColor = "#FFFF00";
+        // Change the stroke color of rectangle annotation
+        annotation.StrokeColor = "#0000FF";
+        // Change the thickness of rectangle annotation
+        annotation.Thickness = 3;
+        // Change the Opacity (0 to 1) of rectangle annotation
+        annotation.Opacity = 0.5;
+        // Edit the rectangle shape annotation
+        await Viewer.EditAnnotationAsync(annotation);
+    }
+}
+
+```
+
+This code snippet will edit the shape annotation programmatically within the SfPdfViewer control.
+
+![Programmatically Edit Shape Annotation in Blazor SfPdfViewer](../images/blazor-sfpdfviewer-programmatically-edit-shape-annotation.png)
+
+[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Annotations/Programmatic%20Support/Shapes/Edit).
+
+## See also
+
+* [How to delete the annotation programmatically](./text-markup-annotation#delete-annotation-programmatically)

@@ -123,8 +123,7 @@ Add the Syncfusion Blazor Chip component in the **~/Pages/Index.razor** file.
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion Blazor Chip component in your default web browser.
 
-![Blazor Chip Component](./images/blazor-chip-component.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LDBgtdMdrZfWcvRZ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXrTNCBaiGVbwHyL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Chip Component](./images/blazor-chip-component.png)" %}
 
 ## Render chip items from collection
 
@@ -182,11 +181,11 @@ You can render the chip items from collection using for loop in Blazor Chip comp
 
 ```
 
-![Blazor Chip Component](./images/blazor-chip-sample.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VZrfZWrksmKnbVhg?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Chip Component](./images/blazor-chip-sample.png)" %}
 
 ## See also
 
 * [How to add chip items dynamically in the Blazor Chips component?](https://support.syncfusion.com/kb/article/11788/how-to-add-chip-items-dynamically-in-the-blazor-chips-component)
 * [Getting Started with Syncfusion Blazor for Client-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-dotnet-cli)
-* [Getting Started with Syncfusion Blazor for Client-Side in Visual Studio 2019](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-visual-studio)
+* [Getting Started with Syncfusion Blazor for Client-Side in Visual Studio 2022](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-visual-studio)
 * [Getting Started with Syncfusion Blazor for Server-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-dotnet-cli)

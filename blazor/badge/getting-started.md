@@ -13,6 +13,10 @@ documentation: ug
 
 This section briefly explains about how to include Blazor `Badge` component in your Blazor Server App and Blazor WebAssembly App using Visual Studio.
 
+To get start quickly with Blazor Badge, you can check on this video:
+
+{% youtube "https://www.youtube.com/watch?v=CNkXfjZDGUQ" %}
+
 ## Prerequisites
 
 * [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
@@ -67,6 +71,6 @@ Add the Syncfusion Blazor Badge component in the **~/Pages/Index.razor** file.
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion Blazor Badge component in your default web browser.
 
-![Blazor Badge Component](images/blazor-badge-component.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BtLzXsVSUIDNyXnz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Badge Component](images/blazor-badge-component.png)" %}
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/Badge).

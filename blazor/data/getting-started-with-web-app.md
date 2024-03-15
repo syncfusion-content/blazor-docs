@@ -25,7 +25,7 @@ You need to configure the corresponding [Interactive render mode](https://learn.
 
 To add **Blazor DataManager** component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install [Syncfusion.Blazor.Data](https://www.nuget.org/packages/Syncfusion.Blazor.Data/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/).
 
-If you select an **Interactive render mode** as `WebAssembly` or `Auto`, you can install the NuGet package in the project any where to add component in Web App.
+If you utilize `WebAssembly or Auto` render modes in the Blazor Web App need to be install Syncfusion Blazor components NuGet packages within the client project.
 
 Alternatively, you can utilize the following package manager command to achieve the same.
 
@@ -68,7 +68,7 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 ```html
 <head>
     ....
-    <link href="_content/Syncfusion.Blazor.Themes/material.css" rel="stylesheet" />
+    <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
 </head>
 ....
 <body>
@@ -179,7 +179,7 @@ The following sample code demonstrates binding local data through the [SfDataMan
 
 @using Syncfusion.Blazor.DropDowns
 
-<SfDropDownList Placeholder="e.g. Australia" TValue="Countries">
+<SfDropDownList Placeholder="e.g. Australia" TItem="Countries" TValue="string">
     <SfDataManager Json=@Country></SfDataManager>
     <DropDownListFieldSettings Value="Name"></DropDownListFieldSettings>
 </SfDropDownList>
@@ -204,7 +204,7 @@ The following sample code demonstrates binding local data through the [SfDataMan
 {% endhighlight %}
 {% endtabs %}
 
-![Binding DropDownList Item in Blazor DataManager Component](./images/blazor-datamanager-binding-dropdown-item.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rZLztCVEBpQxSKZU?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Binding DropDownList Item in Blazor DataManager Component](./images/blazor-datamanager-binding-dropdown-item.png)" %}
 
 ### Remote data binding
 
@@ -232,7 +232,7 @@ The following sample code demonstrates binding remote data through the [SfDataMa
 {% endhighlight %}
 {% endtabs %}
 
-![Data Binding in Blazor DataManager Component](./images/blazor-datamanager-data-binding.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hthpNMhYLzkEUBiB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Data Binding in Blazor DataManager Component](./images/blazor-datamanager-data-binding.png)" %}
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/DataManager).
 

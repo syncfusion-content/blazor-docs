@@ -326,11 +326,19 @@ The following sample code demonstrates implementing CRUD operations for the cust
     <GanttTaskFields Id="TaskID" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Progress="Progress" Duration="Duration"  ParentID="ParentID">
     </GanttTaskFields>
      <GanttEditSettings AllowEditing="true" AllowAdding="true" AllowDeleting="true"></GanttEditSettings>
+     <GanttEvents RowUpdating="RowUpdatingHandler" TValue="TaskData"></GanttEvents>
 </SfGantt>
 
 @code{
     public static List<TaskData> GanttData { get; set; }
     public static List<TaskData> gantt = new List<TaskData>();
+    public static int index = 0;
+
+    public void RowUpdatingHandler(GanttRowUpdatingEventArgs<TaskData> args)
+    {
+        index = args.Index;
+    }
+
     public class TaskData
     {
         public int? TaskID { get; set; }
@@ -421,7 +429,7 @@ The following sample code demonstrates implementing CRUD operations for the cust
         }
         public override object Insert(DataManager dm, object value, string key)
         {
-            GanttData.Insert(0, value as TaskData);
+            GanttData.Insert(index, value as TaskData);
             return value;
         }
 

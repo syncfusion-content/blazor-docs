@@ -697,6 +697,104 @@ The ODataV4 is an improved version of OData protocols, and the SfDataManager can
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/DataBinding/RemoteData)
 
+### Binding with GraphQL service
+GraphQL is a query language for APIs with which you can get exactly what you need and nothing more. The GraphQLAdaptor provides an option to retrieve data from the GraphQL server. For more details on GraphQL service, refer to the [GraphQL documentation](https://blazor.syncfusion.com/documentation/data/adaptors#graphql-service-binding).
+
+```cshtml
+@using Syncfusion.Blazor.Diagram
+@using Syncfusion.Blazor.Data
+@using System.Collections.ObjectModel
+@using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor
+
+<div class="content-wrapper" style="width:100%">
+    <div>
+        <SfDiagramComponent @ref="@diagram"  Height="400px" InteractionController="@DiagramInteractions.ZoomPan" 
+                            NodeCreating="OnNodeCreating" ConnectorCreating="OnConnectorCreating" >
+            <DataSourceSettings Id="OrderID" ParentId="CustomerID">
+            <SfDataManager Url="https://localhost:7131/graphql" GraphQLAdaptorOptions=@adaptorOptions Adaptor="Adaptors.GraphQLAdaptor"></SfDataManager>
+            </DataSourceSettings>
+            <SnapSettings Constraints ="SnapConstraints.ShowLines"></SnapSettings>
+            <Layout HorizontalSpacing="40" VerticalSpacing="40" Type="LayoutType.HierarchicalTree"></Layout>
+        </SfDiagramComponent>
+    </div>
+</div>
+@code{
+    public SfDiagramComponent diagram;
+    private float x = 100;
+    private float y = 100;
+    private GraphQLAdaptorOptions adaptorOptions { get; set; } = new GraphQLAdaptorOptions
+        {
+            Query = @"
+            query ordersData($dataManager: DataManagerRequestInput!){
+                ordersData(dataManager: $dataManager) {
+                    count, result { OrderID, CustomerID, EmployeeID, } , aggregates
+                }
+            }",
+            ResolverName = "OrdersData"
+        };
+
+    public class Order
+    {
+        public int? OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public string EmployeeID { get; set; } 
+    }
+    private void OnNodeCreating(IDiagramObject obj)
+    {
+        Node node = obj as Node;
+
+        node.Width = 80;
+        node.Height = 45;        
+        node.Shape = new BasicShape() { Type = Syncfusion.Blazor.Diagram.NodeShapes.Basic, Shape = NodeBasicShapes.Rectangle };
+        node.Style = new ShapeStyle() { StrokeWidth = 0, Fill = "#2084c4" };
+        Dictionary<string, object> data = node.Data as Dictionary<string, object>;
+        string content = "";
+        if (data != null)
+        {
+            foreach (var kvp in data)
+            {
+                if (kvp.Key == "EmployeeID")
+                {
+                    content = kvp.Value.ToString(); 
+                }
+            }
+        }
+        node.Annotations = new DiagramObjectCollection<ShapeAnnotation>()
+            {
+                // Annotation is created and stored in the Annotations collection of Node.
+                new ShapeAnnotation 
+                {
+                    Content = content,
+                    Style = new TextStyle() 
+                    {
+                        Color = "White",
+                        Bold = true,
+                        FontSize = 12, 
+                        FontFamily = "TimesNewRoman"
+                    }
+                }
+            };
+      
+    }
+    @*End:Hidden*@
+    private void OnConnectorCreating(IDiagramObject obj)
+    {
+        Connector connector = obj as Connector;
+        connector.Style.StrokeColor = "#048785";
+        connector.Type = ConnectorSegmentType.Orthogonal;
+        connector.TargetDecorator.Shape = DecoratorShape.None;
+        connector.SourceDecorator.Shape = DecoratorShape.None;
+        connector.Style = new ShapeStyle() { StrokeColor = "#3A4857", Fill = "#3A4857" };
+    }
+}
+```
+
+![Binding with GraphQL service](images/GraphQLAdaptor.png) 
+
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/DataBinding/GraphQLAdaptor)
+
+
 ## See Also
 
 * [How to arrange the diagram nodes and connectors using varies layout](./layout/automatic-layout)

@@ -25,7 +25,7 @@ You need to configure the corresponding [Interactive render mode](https://learn.
 
 To add **Blazor Stock Chart** component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install [Syncfusion.Blazor.StockChart](https://www.nuget.org/packages/Syncfusion.Blazor.StockChart) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/).
 
-If you select an **Interactive render mode** as `WebAssembly` or `Auto`, you can install the NuGet package in the project any where to add component in Web App.
+If you utilize `WebAssembly or Auto` render modes in the Blazor Web App need to be install Syncfusion Blazor components NuGet packages within the client project.
 
 Alternatively, you can utilize the following package manager command to achieve the same.
 
@@ -72,7 +72,7 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 ```html
 <head>
     ....
-    <link href="_content/Syncfusion.Blazor.Themes/material.css" rel="stylesheet" />
+    <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
 </head>
 
 <body>
@@ -157,7 +157,7 @@ Now set the `StockDetails` to [DataSource](https://help.syncfusion.com/cr/blazor
 
 Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion Blazor Stock Chart component in your default web browser.
 
-![Blazor Stock Chart Component](images/blazor-stock-chart.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hNBTZWAXpJFtLYFv?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Stock Chart Component](images/blazor-stock-chart.png)" %}
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/StockChart/BlazorWebApp).
 
@@ -202,7 +202,7 @@ A title using [Title](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ch
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor Stock Chart with Title](images/blazor-stock-chart-title.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LZrJtMKjTJvplKeq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Stock Chart with Title](images/blazor-stock-chart-title.png)" %}
 
 ## Adding Crosshair
 
@@ -242,7 +242,7 @@ The crosshair is a vertical and horizontal line on the view that shows the value
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor Stock Chart with Crosshair](images/blazor-stock-chart-with-crosshair.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VZhTtsANzJEKAOXS?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Stock Chart with Crosshair](images/blazor-stock-chart-with-crosshair.png)" %}
 
 ## Adding Trackball
 
@@ -285,7 +285,7 @@ The trackball is used to track a closest data point to the mouse or touch positi
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor Stock Chart with Trackball](images/blazor-stock-chart-trackball.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VtrfXCgjzINVMeUY?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Stock Chart with Trackball](images/blazor-stock-chart-trackball.png)" %}
 
 ## See also
 

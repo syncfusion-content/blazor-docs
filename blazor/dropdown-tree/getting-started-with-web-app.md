@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Blazor Dropdown Tree Component in Web App
 
-This section briefly explains about how to include `Blazor Dropdown Tree` component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/).
+This section briefly explains about how to include [Blazor Dropdown Tree](https://www.syncfusion.com/blazor-components/blazor-dropdowntree) component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/).
 
 ## Prerequisites
 
@@ -25,7 +25,7 @@ You need to configure the corresponding [Interactive render mode](https://learn.
 
 To add **Blazor Dropdown Tree** component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install [Syncfusion.Blazor.Navigations](https://www.nuget.org/packages/Syncfusion.Blazor.Navigations/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/).
 
-If you select an **Interactive render mode** as `WebAssembly` or `Auto`, you can install the NuGet package in the project any where to add component in Web App.
+If you utilize `WebAssembly or Auto` render modes in the Blazor Web App need to be install Syncfusion Blazor components NuGet packages within the client project.
 
 Alternatively, you can utilize the following package manager command to achieve the same.
 
@@ -68,7 +68,7 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 ```html
 <head>
     ....
-    <link href="_content/Syncfusion.Blazor.Themes/material.css" rel="stylesheet" />
+    <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
 </head>
 ....
 <body>
@@ -97,7 +97,7 @@ Add the Syncfusion Blazor Dropdown Tree component in `.razor` file inside the `P
 
 @using Syncfusion.Blazor.Navigations
 
-<SfDropDownTree TItem="EmployeeData" TValue="string" Placeholder="Select an employee" Width="500px"> 
+<SfDropDownTree TItem="EmployeeData" TValue="string" Placeholder="Select an employee" Width="500px">
     <DropDownTreeField TItem="EmployeeData" DataSource="Data" Id="Id" Text="Name" HasChildren="HasChild" ParentID="PId"></DropDownTreeField>
 </SfDropDownTree>
 
@@ -123,5 +123,6 @@ Add the Syncfusion Blazor Dropdown Tree component in `.razor` file inside the `P
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor Dropdown Tree Component](./images/blazor-dropdowntree-component.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hDLfNiVkAGwJAcqZ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Dropdown Tree Component](./images/blazor-dropdowntree-component.png)" %}
 
+N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/DropdownTree).
