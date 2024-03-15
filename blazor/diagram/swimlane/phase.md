@@ -207,7 +207,7 @@ The following code example explains how to define a Phase header and its customi
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Swimlanes/Phase/PhaseHeader).
 
-The Phase header annotations also support templates. You can define HTML content at the tag level and specify the use of a template with the [UseTemplate]() property. If you want to define a separate template for each phase, differentiate the annotation by using the ID property.
+The Phase header annotations also support templates. You can define HTML content at the tag level and specify the use of a template with the [UseTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Annotation.html#Syncfusion_Blazor_Diagram_Annotation_UseTemplate) property. If you want to define a separate template for each phase, differentiate the annotation by using the ID property.
 
 The following code example explains how to define a Phase header annotation template.
 
