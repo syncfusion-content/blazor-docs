@@ -215,38 +215,3 @@ The AutoComplete component filter queries can be customized. You can also use yo
 }
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rXhKsLiprJawVKuX?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-## Highlighting Search character
-
-### Highlighting Search character using property
-
-You can highlight the search text in the suggested list items of the autocomplete component by using the `Highlight` property. When set to true, it will highlight the characters that match the search query in the list items.
-
-{% highlight Razor %}
-
-{% include_relative code-snippet/filtering/highlight-property.razor %}
-
-{% endhighlight %} 
-
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BZLAMLszLyjsCNWA?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Blazor AutoComplete with highlight property](./images/filtering/blazor_autocomplete_highlight-property.png)
-
-### Highlighting Search character using method
-
-You can highlight the search text in the suggested list items of the autocomplete component by using the `HighLightSearch` method. It accepts several arguments, including `textValue`, `ignoreCase`, `filtertype` and `highLighText`. When called, it will highlight the characters that match the search query in the list items."
-
-* `textValue` - The text to be highlighted in the list item.
-* `ignoreCase` - A boolean value which when set to true performs the search text based on casing.
-* `filterType` - Determines on which filter type the highlight text is updated on the text.
-* `highlightText` - The text to be highlighted. This is an optional argument. If not provided, it will use the filter value as the highlight text."
-
-{% highlight Razor %}
-
-{% include_relative code-snippet/filtering/highLightSearch-method.razor %}
-
-{% endhighlight %} 
-
-![Blazor AutoComplete with HighLightSearch method](./images/filtering/blazor_dropdown_highLightSearch-method.png)
-
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rthUsLsphSZYvuHw?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
