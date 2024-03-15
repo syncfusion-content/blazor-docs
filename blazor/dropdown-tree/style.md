@@ -535,7 +535,7 @@ You can customize the width of the component using [Width](https://help.syncfusi
 }
 ```
 
-## TextWrap
+## Wrapping the selected item as text 
 
 Specify the boolean value to the [TextWrap](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfDropDownTree-2.html#Syncfusion_Blazor_Navigations_SfDropDownTree_2_TextWrap) property that indicates whether to wrap the selected items into multiple lines when the selected item’s text content exceeded the input width limit or not.
 
@@ -543,13 +543,12 @@ Specify the boolean value to the [TextWrap](https://help.syncfusion.com/cr/blazo
 
 @using Syncfusion.Blazor.Navigations
 
-<SfDropDownTree @ref="tree" TItem="EmployeeData" TValue="string" Placeholder="Select an employee" Width="500px" ShowCheckBox="true"  Mode="DdtVisualMode.Box" TextWrap="true">
+<SfDropDownTree TItem="EmployeeData" TValue="string" Placeholder="Select an employee" Width="500px" ShowCheckBox="true" TextWrap="true">
     <DropDownTreeField TItem="EmployeeData" DataSource="Data" ID="Id" Text="Name" HasChildren="HasChild" ParentID="PId" Selected="Selected" IsChecked="IsChecked"></DropDownTreeField>
 
 </SfDropDownTree>
 
 @code {
-    SfDropDownTree<string, EmployeeData>? tree;
     List<EmployeeData> Data = new List<EmployeeData>
     {
         new EmployeeData() { Id = "1", Name = "Steven Buchanan", Job = "General Manager", HasChild = true, Expanded = true},
