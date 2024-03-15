@@ -207,6 +207,7 @@ The following code example explains how to define a Swimlane header annotation t
     }
 }
 ``` 
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Swimlanes/SwimlaneHeader/SwimlaneHeaderTemplate)
 
 ![Swimlane Header Customization](Swimlane-images/Swimlane_Header_Template.PNG)
 

@@ -191,7 +191,7 @@ The following code example explains how to define a lane header annotation templ
 
 ![Lane Header](../Swimlane-images/Swimlane_Lane_Header_Template.PNG).
 
-You can download a complete working sample from [GitHub]()
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Swimlanes/Lane/LaneHeaderTemplate)
 
 ## Add and Remove the lane at runtime
 

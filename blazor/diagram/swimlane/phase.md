@@ -285,7 +285,7 @@ The following code example explains how to define a Phase header annotation temp
 ```
 ![Phase Header](Swimlane-images/Swimlane_Phase_Header_Template.PNG).
 
-You can download a complete working sample from [GitHub]().
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Swimlanes/Phase/PhaseHeaderTemplate).
 
 ## Header Selection and Resize
 

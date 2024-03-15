@@ -635,7 +635,7 @@ The following code illustrates how to define a template for a node's annotation.
     }
 }
 ```
-You can download a complete working sample from [GitHub]()
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Annotations/TemplateSupportforAnnotation)
 ![Blazor Diagram with Template Annotations](../images/TemplateSupportforAnnotation.png)
 
 ## See also
