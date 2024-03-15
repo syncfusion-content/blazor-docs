@@ -232,7 +232,7 @@ To customize the Primary Toolbar in the PDF Viewer, you can achieve this by sett
 @using Syncfusion.Blazor.Navigations; 
 
 <SfPdfViewer2 @ref="@Viewer" DocumentPath="@DocumentPath" Height="100%" Width="100%">  
-    <PdfViewerToolbarSettings CustomToolbarItems="@CustomToolbarItems" ToolbarItems="null" />`   
+    <PdfViewerToolbarSettings CustomToolbarItems="@CustomToolbarItems" ToolbarItems="null" />   
     <PdfViewerEvents ToolbarClicked="ClickAction"></PdfViewerEvents>              
 </SfPdfViewer2>  
 
