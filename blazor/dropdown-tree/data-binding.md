@@ -957,6 +957,8 @@ In the following example, the [LoadOnDemand](https://help.syncfusion.com/cr/blaz
 
 The [GetTreeViewData](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfDropDownTree-2.html#Syncfusion_Blazor_Navigations_SfDropDownTree_2_GetTreeViewData_System_String_) method can be used to retrieve the complete node details of the tree rendered in the Dropdown Tree popup or to retrieve specific node details by passing its corresponding ID.
 
+By clicking the `GetTree Data` button, you can retrieve the Name and Job details associated with Id '11' in the following example
+
 ```cshtml
 
 @using Syncfusion.Blazor.Navigations
