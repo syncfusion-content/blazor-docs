@@ -207,15 +207,15 @@ Below is an example demonstrating how you can use this method to add shape annot
 
 @code {
     SfPdfViewer2 Viewer;
-    public string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
+    public string DocumentPath { get; set; } = "wwwroot/Data/Shape_Annotation.pdf";
 
     public async void AddShapeAnnotationAsync(MouseEventArgs args)
     {
         PdfAnnotation annotation = new PdfAnnotation();
         // Set the Shape annotation type like Rectangle, Line, Arrow, Circle, Polygon.
         annotation.Type = AnnotationType.Rectangle;
-        // Set the page number starts from 0. So, if set 2 it represents the page 3.
-        annotation.PageNumber = 2;
+        // Set the page number starts from 0. So, if set 0 it represents the page 1.
+        annotation.PageNumber = 0;
 
         // Bound of the rectangle annotation
         annotation.Bound = new Bound();
@@ -229,11 +229,13 @@ Below is an example demonstrating how you can use this method to add shape annot
 }
 
 ```
-This code will add a shape annotation to the third page of the PDF document.
+This code will add a shape annotation to the first page of the PDF document.
 
 ![Programmatically Added Shape annotation in Blazor SfPdfViewer](../images/blazor-sfpdfviewer-programmatically-add-shape-annotation.png)
 
-## Edit Shape annotation Programmatically
+[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Annotations/Programmatic%20Support/Shapes/Add).
+
+## Edit shape annotation Programmatically
 
 The Blazor SfPdfViewer offers the capability to programmatically edit the shape annotation such as Rectangle, Line, Arrow, Circle, and Polygon within the SfPdfViewer control using the [EditAnnotationAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_EditAnnotationAsync_Syncfusion_Blazor_SfPdfViewer_PdfAnnotation_) method.
 
@@ -249,7 +251,7 @@ Below is an example demonstrating how you can utilize this method to edit the sh
 
 @code {
     SfPdfViewer2 Viewer;
-    public string DocumentPath { get; set; } = "wwwroot/Data/RectangleAnnotation.pdf";
+    public string DocumentPath { get; set; } = "wwwroot/Data/Shape_Annotation.pdf";
 
     public async void EditShapeAnnotationAsync(MouseEventArgs args)
     {
@@ -275,6 +277,8 @@ Below is an example demonstrating how you can utilize this method to edit the sh
 This code snippet will edit the shape annotation programmatically within the SfPdfViewer control.
 
 ![Programmatically Edit Shape Annotation in Blazor SfPdfViewer](../images/blazor-sfpdfviewer-programmatically-edit-shape-annotation.png)
+
+[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Annotations/Programmatic%20Support/Shapes/Edit).
 
 ## See also
 
