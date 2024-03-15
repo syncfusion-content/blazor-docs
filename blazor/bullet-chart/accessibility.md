@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Accessibility in Blazor Bullet Chart Component | Syncfusion
-description: Checkout and learn here all about Accessibility in Syncfusion Blazor Bullet Chart component and more.
+description: Checkout and learn here all about Accessibility using Keyboard navigation in Syncfusion Blazor Bullet Chart component and more.
 platform: Blazor
 control: Bullet Chart 
 documentation: ug
@@ -65,7 +65,7 @@ The Bullet chart control followed the [keyboard interaction](https://www.w3.org/
 
 The Bullet chart control's accessibility levels are ensured through an [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) software tools during automated testing.
 
-The accessibility compliance of the Bullet chart control is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/demos/bullet-chart/legend?theme=fluent) in a new window to evaluate the accessibility of the Bullet chart control with accessibility tools.
+The accessibility compliance of the Bullet chart control is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/bullet-chart) in a new window to evaluate the accessibility of the Bullet chart control with accessibility tools.
 
 
 ## See also

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Accessibility in Blazor Stock Chart Component | Syncfusion
-description: Checkout and learn here all about Accessibility in Syncfusion Blazor Stock Chart component and more.
+description: Checkout and learn here all about Accessibility using Keyboard navigation in Syncfusion Blazor Stock Chart component and more.
 platform: Blazor
 control: Stock Chart
 documentation: ug
@@ -70,7 +70,7 @@ The Stock chart control followed the [keyboard interaction](https://www.w3.org/W
 
 The Stock chart control's accessibility levels are ensured through an [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) software tools during automated testing.
 
-The accessibility compliance of the Stock chart control is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/demos/stock-chart/stock-chart?theme=fluent) in a new window to evaluate the accessibility of the Stock chart control with accessibility tools.
+The accessibility compliance of the Stock chart control is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/stock-chart) in a new window to evaluate the accessibility of the Stock chart control with accessibility tools.
 
 
 ## See also

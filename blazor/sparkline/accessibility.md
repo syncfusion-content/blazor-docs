@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Accessibility in Blazor Sparkline Component | Syncfusion
-description: Checkout and learn here all about Accessibility in Syncfusion Blazor Sparkline component and more.
+description: Checkout and learn here all about Accessibility using Keyboard navigation in Syncfusion Blazor Sparkline component and more.
 platform: Blazor
 control: Sparkline
 documentation: ug
@@ -65,7 +65,7 @@ The Sparkline control followed the [keyboard interaction](https://www.w3.org/WAI
 
 The Sparkline control's accessibility levels are ensured through an [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) software tools during automated testing.
 
-The accessibility compliance of the Sparkline control is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/demos/sparkline/default-functionalities?theme=fluent) in a new window to evaluate the accessibility of the Sparkline control with accessibility tools.
+The accessibility compliance of the Sparkline control is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/sparkline) in a new window to evaluate the accessibility of the Sparkline control with accessibility tools.
 
 
 ## See also

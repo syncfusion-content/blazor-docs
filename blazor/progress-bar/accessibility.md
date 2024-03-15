@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Accessibility in Blazor Progress Bar Component | Syncfusion
-description: Checkout and learn here all about Accessibility in Syncfusion Blazor Progress Bar component and more.
+description: Checkout and learn here all about Accessibility using Keyboard navigation in Syncfusion Blazor Progress Bar component and more.
 platform: Blazor
 control: Progress Bar
 documentation: ug
@@ -51,7 +51,7 @@ The Progress bar control followed the [keyboard interaction](https://www.w3.org/
 
 The Progress bar control's accessibility levels are ensured through an [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) software tools during automated testing.
 
-The accessibility compliance of the Progress bar control is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/demos/progress-bar/linear?theme=fluent) in a new window to evaluate the accessibility of the Progress bar control with accessibility tools.
+The accessibility compliance of the Progress bar control is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/progress-bar) in a new window to evaluate the accessibility of the Progress bar control with accessibility tools.
 
 
 ## See also

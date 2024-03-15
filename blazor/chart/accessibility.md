@@ -89,7 +89,7 @@ Interaction Keys |Description
 
 The Chart control's accessibility levels are ensured through an [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) software tools during automated testing.
 
-The accessibility compliance of the Chart control is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/demos/chart/line?theme=fluent) in a new window to evaluate the accessibility of the Chart control with accessibility tools.
+The accessibility compliance of the Chart control is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/chart) in a new window to evaluate the accessibility of the Chart control with accessibility tools.
 
 
 ## See also

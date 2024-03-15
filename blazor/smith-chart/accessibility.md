@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Accessibility in Blazor Smith Chart Component | Syncfusion
-description: Checkout and learn here all about Accessibility in Syncfusion Blazor Smith Chart component and more.
+description: Checkout and learn here all about Accessibility using Keyboard navigation in Syncfusion Blazor Smith Chart component and more.
 platform: Blazor
 control: Smith Chart
 documentation: ug
@@ -69,7 +69,7 @@ The Smith chart control followed the [keyboard interaction](https://www.w3.org/W
 
 The Smith chart control's accessibility levels are ensured through an [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) software tools during automated testing.
 
-The accessibility compliance of the Smith chart control is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/demos/smith-chart/default-functionalities?theme=fluent) in a new window to evaluate the accessibility of the Smith chart control with accessibility tools.
+The accessibility compliance of the Smith chart control is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/smith-chart) in a new window to evaluate the accessibility of the Smith chart control with accessibility tools.
 
 
 ## See also

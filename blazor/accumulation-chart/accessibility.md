@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Accessibility in Blazor Accumulation Chart Component | Syncfusion
-description: Checkout and learn here all about Accessibility in Syncfusion Blazor Accumulation Chart component and more.
+description: Checkout and learn here all about Accessibility using Keyboard navigation in Syncfusion Blazor Accumulation Chart component and more.
 platform: Blazor
 control: Accumulation Chart
 documentation: ug
@@ -70,7 +70,7 @@ The Accumulation chart control followed the [keyboard interaction](https://www.w
 
 The Accumulation chart control's accessibility levels are ensured through an [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) software tools during automated testing.
 
-The accessibility compliance of the Accumulation chart control is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/demos/chart/pie-radius?theme=fluent) in a new window to evaluate the accessibility of the Accumulation chart control with accessibility tools.
+The accessibility compliance of the Accumulation chart control is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/accumulation-chart) in a new window to evaluate the accessibility of the Accumulation chart control with accessibility tools.
 
 
 ## See also
