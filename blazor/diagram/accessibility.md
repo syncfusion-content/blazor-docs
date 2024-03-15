@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Accessibility in Blazor Diagram Component | Syncfusion
-description: Checkout and learn here all about accessibility in Syncfusion Blazor Diagram component and much more details.
+description: Learn all about accessibility in Syncfusion Blazor Diagram component and many more details.
 platform: Blazor
 control: Diagram 
 documentation: ug
