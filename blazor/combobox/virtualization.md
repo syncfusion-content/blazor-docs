@@ -46,6 +46,59 @@ This feature is applicable to both local and remote data scenarios, providing fl
 
 ![Blazor ComboBox with virtualization](./images/blazor_combobox_virtualization.gif)
 
+## Grouping with Virtualization
+
+The Combobox component supports grouping with Virtualization. It allows you to organize elements into groups based on different categories. Each item in the list can be classified using the [GroupBy](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ComboBoxFieldSettings.html#Syncfusion_Blazor_DropDowns_ComboBoxFieldSettings_GroupBy) field in the data table. After grouping, virtualization works similarly to local data binding, providing a seamless user experience. When the data source is bound to remote data, an initial request is made to retrieve all data for the purpose of grouping. Subsequently, the grouped data works in the same way as local data binding virtualization, enhancing performance and responsiveness.
+
+The following sample shows the example for Grouping with Virtualization.
+
+```cshtml
+
+@using Syncfusion.Blazor.DropDowns
+@using Syncfusion.Blazor.Data
+
+<SfComboBox TValue="string" TItem="Record" Placeholder="e.g. Item 1" DataSource="@Records" Query="@LocalDataQuery" PopupHeight="130px" EnableVirtualization="true">
+    <ComboBoxFieldSettings Text="Text" Value="ID" GroupBy="Group" />
+</SfComboBox>
+
+@code{
+    public Query LocalDataQuery = new Query().Take(6); 
+    public class Record
+    {
+        public string ID { get; set; }
+        public string Text { get; set; }
+        public string Group { get; set; }
+    }
+    public List<Record> Records { get; set; } 
+    protected override void OnInitialized()
+    {
+        var random = new Random();
+        this.Records = Enumerable.Range(1, 150).Select(i => new Record()
+            {
+                ID = i.ToString(),
+                Text = "Item " + i,
+                Group = GetRandomGroup(random)
+            }).ToList();
+    }
+    private string GetRandomGroup(Random random)
+    {
+        switch (random.Next(1, 5))
+        {
+            case 1:
+                return "Group A";
+            case 2:
+                return "Group B";
+            case 3:
+                return "Group C";
+            case 4:
+                return "Group D";
+            default:
+                return string.Empty;
+        }
+    }
+}
+```
+
 ## Keyboard interaction
 
 Users can navigate through the scrollable content using keyboard keys. This feature loads the next or next set of items based on the key inputs in the popup.The ComboBox supports the following keyboard shortcuts.
@@ -56,9 +109,3 @@ Users can navigate through the scrollable content using keyboard keys. This feat
 | `ArrowUp` | Loads the previous virtual list item if the selection is present in first item of the current page. |
 | `PageDown` | Loads the next page and selects the last item in it. |
 | `PageUp` | Loads the previous page and selects the first item in it. |
-
-## Limitation of virtualization
-
-* Virtualization is not supported in the grouping feature.
-* Selected Value may or may not be present in the current view port.
-* Long-pressing of navigation keys is not intended for item navigation in the ComboBox component , It accepts single key action at a time.
