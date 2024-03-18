@@ -826,9 +826,9 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-## Add current selection to filter checkbox
+## Add current selection to filter
 
-By default, the CheckBox filter can only filter the selected items. If filtering is done multiple times on the same column, the previously filtered values in the column will be cleared. Now, it is possible to retain those previous values by using the Add current selection to filter checkbox. This checkbox is displayed when data is searched in the search bar of the CheckBox filter.
+By default, the CheckBox filter can only filter the selected items. If filtering is done multiple times on the same column, the previously filtered values in the column will be cleared. Now, it is possible to retain those previous values by using the Add current selection to filter. This checkbox is displayed when data is searched in the search bar of the CheckBox or Excel filter type.
 
 The following image describes the above mentioned behavior.
 
