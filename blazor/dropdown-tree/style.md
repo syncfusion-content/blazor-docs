@@ -539,7 +539,7 @@ You can customize the width of the component using [Width](https://help.syncfusi
 
 Specify the boolean value to the [TextWrap](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfDropDownTree-2.html#Syncfusion_Blazor_Navigations_SfDropDownTree_2_TextWrap) property that indicates whether to wrap the selected items into multiple lines when the selected item’s text content exceeded the input width limit or not.
 
-In the following example, by enabling the `TextWrap` the selected items to appear on multiple lines within the input. 
+In the following example, by enabling the `TextWrap` the selected items will appear on multiple lines within the input. 
 
 ```cshtml
 
