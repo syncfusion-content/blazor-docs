@@ -235,7 +235,7 @@ You can set the conditions from Named Parameter SQL query through the [SetNamedP
 
 ![Importing from Named Parameter SQL in Blazor QueryBuilder](./images/import-named-parameter.png)
 
-#### Importing from MongoDB
+### Importing from MongoDB
 
 You can set the conditions from MongoDB query through the [SetMongoQuery](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder-1.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_1_SetMongoQuery_System_Collections_Generic_List_Syncfusion_Blazor_QueryBuilder_RuleModel__System_String_System_Nullable_System_Boolean__) method.
 
