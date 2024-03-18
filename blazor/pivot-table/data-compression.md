@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  Data Compression in Blazor Pivot Table Component | Syncfusion
-description:Learn here all about Data Compression in Syncfusion Blazor Pivot Table component and more.
+description: Checkout and Learn here all about Data Compression in Syncfusion Blazor Pivot Table component and more.
 platform: Blazor
 control: Pivot Table
 documentation: ug
