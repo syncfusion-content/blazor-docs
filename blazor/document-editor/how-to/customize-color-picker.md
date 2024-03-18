@@ -13,7 +13,7 @@ The following example code illustrates how to Customize the color picker in Docu
 </SfDocumentEditorContainer>
 
 @code {
-    SfDocumentEditorContainer container;
+    SfDocumentEditorContainer container; 
     DocumentEditorSettingsModel settings = new DocumentEditorSettingsModel() { ColorPickerSettings = { Mode = ColorPickerMode.Palette , ShowButtons = true , ModeSwitcher = true}};
 } 
 ```
