@@ -9,7 +9,7 @@ The following example code illustrates how to Customize the color picker in Docu
 @inject IJSRuntime JSRuntime;
 
 <SfDocumentEditorContainer @ref="container" Height="590px">
-    <DocumentEditorContainerEvents Created="OnCreated" DocumentEditorSettings="settings"></DocumentEditorContainerEvents>
+    <DocumentEditorContainerEvents Created="OnCreated" DocumentEditorSettings="settings"></DocumentEditorContainerEvents> 
 </SfDocumentEditorContainer>
 
 @code {
@@ -31,4 +31,4 @@ The following table illustrates all the possible properties for the color picker
 
 | ModeSwitcher | It is used to show / hide the mode switcher button of ColorPicker component. Defaults to true | 
 
-| ShowButtons | It is used to show / hide the control buttons (apply / cancel) of ColorPicker component. Defaults to true | 
+| ShowButtons | It is used to show / hide the control buttons (apply / cancel) of ColorPicker component. Defaults to true |
