@@ -12,7 +12,7 @@ documentation: ug
 
 ## Add lanes and phases into symbol palette
 
-Swimlane elements such as `Lane`, and `Phase` can be used to visualize the Symbol.
+Swimlane elements such as [Lane](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Lane.html), and [Phase](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Phase.html) can be used to visualize the Symbol.
 
 The following code sample shows how to add the lanes and phases to palette.
 
@@ -114,7 +114,7 @@ The following code sample shows how to add the lanes and phases to palette.
 
 ![Swimlane SymbolPalette Shapes](Swimlane-images/Swimlane_SymbolPalette.PNG)
 
-You can download a complete working sample from [GitHub]()
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Swimlanes/SwimlanePalette)
 
 
 ## Interactions
