@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Deployment in Blazor | AOT | Syncfusion
-description: Learn here all about deploying the Blazor application with Syncfusion Blazor Components and much more.
+title: Publish and Deploy in Blazor | AOT | Syncfusion
+description: Learn here all about publish the Blazor application with Syncfusion Blazor Components and much more.
 platform: Blazor
 component: Common
 documentation: ug
 ---
 
-# Deployment in Blazor
+# Publish and Deploy in Blazor
 
-This section provides information about deploying Blazor applications with the Syncfusion Blazor components. 
+This section provides information about publishing and deploying Blazor applications with the Syncfusion Blazor components. 
 
 Refer to [Host and deploy ASP.NET Core Blazor](https://learn.microsoft.com/en-us/aspnet/core/blazor/host-and-deploy/?view=aspnetcore-7.0&tabs=visual-studio) topic for more information.
 
