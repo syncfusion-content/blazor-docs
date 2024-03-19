@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Excel exporting with Templates in Blazor DataGrid Component | Syncfusion
+title: Excel exporting with Templates in Blazor Grid Component | Syncfusion
 description: Checkout and learn here all about Template Excel Export in Syncfusion Blazor DataGrid component and much more.
 platform: Blazor
 control: DataGrid
