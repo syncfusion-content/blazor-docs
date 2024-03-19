@@ -9,13 +9,41 @@ documentation: ug
 
 # Accessibility in Blazor Mention Component
 
+Web accessibility makes web content and web applications more accessible for people with disabilities. Mention control provides built-in compliance with `WAI-ARIA` specifications. The `WAI-ARIA` support is achieved using the attributes such as `aria-selected` and `aria-activedescendent`.
+
+The Mention component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
+
+The accessibility compliance for the Mention component is outlined below.
+
+| Accessibility Criteria | Compatibility |
+| -- | -- |
+| [WCAG 2.2 Support](../common/accessibility#accessibility-standards) | <img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> |
+| [Section 508 Support](../common/accessibility#accessibility-standards) | <img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> |
+| [Screen Reader Support](../common/accessibility#screen-reader-support) | <img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> |
+| [Right-To-Left Support](../common/accessibility#right-to-left-support) | <img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> |
+| [Color Contrast](../common/accessibility#color-contrast) | <img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> |
+| [Mobile Device Support](../common/accessibility#mobile-device-support) | <img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> |
+| [Keyboard Navigation Support](../common/accessibility#keyboard-navigation-support) | <img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> |
+| [Accessibility Checker Validation](../common/accessibility#ensuring-accessibility) | <img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> |
+| [Axe-core Accessibility Validation](../common/accessibility#ensuring-accessibility) | <img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> |
+
+<style>
+    .post .post-content img {
+        display: inline-block;
+        margin: 0.5em 0;
+    }
+</style>
+<div><img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> - All features of the component meet the requirement.</div>
+
+<div><img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Intermediate"> - Some features of the component do not meet the requirement.</div>
+
+<div><img src="https://cdn.syncfusion.com/content/images/documentation/not-supported.png" alt="No"> - The component does not meet the requirement.</div>
+
+## WAI-ARIA attributes
+
 The Mention component is designed to be compliant with `WAI-ARIA` (Web Accessibility Initiative - Accessible Rich Internet Applications) specifications, which provide guidelines and standards for making web content more accessible to people with disabilities. To achieve `WAI-ARIA` support, the Mention uses attributes such as `aria-selected` and `aria-activedescendent`. 
 
 The `aria-selected` attribute is used to indicate that an element is currently selected or has been selected in the past, while the `aria-activedescendent` attribute is used to indicate the currently active descendant element of a composite widget.
-
-## ARIA attributes
-
-The Mention component uses the listbox role and option role to implement the Mention functionality. The listbox role represents a list of options, and the option role represents a single item in the list. 
 
 It uses the various `ARIA attributes` (Accessible Rich Internet Applications) to denote the state of the component and provide additional information to assistive technologies such as screen readers. These attributes can help users who rely on assistive technologies to understand and interact with the Mention component more easily.
 
@@ -45,3 +73,15 @@ You can use the following key shortcuts to access the Mention without interrupti
 {% include_relative code-snippet/accessibility.razor %}
 
 {% endhighlight %}
+
+## Ensuring accessibility
+
+The Mention component's accessibility levels are ensured through an [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) software tools during automated testing.
+
+The accessibility compliance of the Mention component is shown in the following sample. Open the [sample](https://ej2.syncfusion.com/accessibility/mention.html) in a new window to evaluate the accessibility of the Mention component with accessibility tools.
+
+{% previewsample "https://ej2.syncfusion.com/accessibility/mention.html" %}
+
+## See also
+
+* [Accessibility in Syncfusion components](../common/accessibility)

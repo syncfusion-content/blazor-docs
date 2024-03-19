@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Keyboard Shortcuts | Syncfusion
-description: Checkout and learn here all about keyboard shortcuts in Syncfusion Blazor Splitter component and more.
+title: Accessibility in Blazor File Upload Component | Syncfusion
+description: Checkout and learn here all about accessibility in Syncfusion Blazor File Upload component and more.
 platform: Blazor
-control: Splitter
+control: File Upload
 documentation: ug
 ---
 
-# Accessibility in Blazor Splitter Component
+# Accessibility in Blazor File Upload Component
 
-The Splitter component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
+The Uploader component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 
-The accessibility compliance for the Splitter component is outlined below.
+The accessibility compliance for the Uploader component is outlined below.
 
 | Accessibility Criteria | Compatibility |
 | -- | -- |
@@ -37,28 +37,26 @@ The accessibility compliance for the Splitter component is outlined below.
 
 <div><img src="https://cdn.syncfusion.com/content/images/documentation/not-supported.png" alt="No"> - The component does not meet the requirement.</div>
 
+## Keyboard interaction
 
-# Keyboard interaction
+The uploader component characterized with complete ARIA accessibility support that helps to be accessible by on-screen readers and other assistive technology devices.
 
-The following key shortcuts can be used to access the Splitter without interruptions:
+The following are the standard keys that works on uploader component:
 
-| **Keyboard shortcuts** | **Actions** |
+| **Keyboard shortcuts** | **Actions** |
 | --- | --- |
-| <kbd>Tab</kbd> | Helps in focusing the splitter on the page and switching between the consecutive splitter bars. |
-| <kbd>Shift</kbd> + <kbd>Tab</kbd> | Helps in focusing the previous splitter bar element on the splitter. |
-| <kbd>Right arrow</kbd> | Helps in moving the active `Horizontal` orientated splitter bar to its `Right` side. |
-| <kbd>Left arrow</kbd> | Helps in moving the active `Horizontal` orientated splitter bar to its `Left` side. |
-| <kbd>Up arrow</kbd> | Helps in moving the active `Vertical` orientated splitter bar to its `Up` side. |
-| <kbd>Down arrow</kbd> | Helps in moving the active `Vertical` orientated splitter bar to its `Down` side. |
-| <kbd>Enter</kbd> | Helps to toggle between `Expand` and `Collapse` actions of the splitter bar when it is active. |
+| <kbd>Tab</kbd> | Move focus to next element. |
+| <kbd>Shift + Tab</kbd> | Move focus to previous element. |
+| <kbd>Enter</kbd> | Triggers corresponding action to button element. |
+| <kbd>Esc</kbd> | Close the file browser dialog alone and cancels the upload on drop the file. |
 
 ## Ensuring accessibility
 
-The Splitter component's accessibility levels are ensured through an [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) software tools during automated testing.
+The Uploader component's accessibility levels are ensured through an [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) software tools during automated testing.
 
-The accessibility compliance of the Splitter component is shown in the following sample. Open the [sample](https://ej2.syncfusion.com/accessibility/splitter.html) in a new window to evaluate the accessibility of the Splitter component with accessibility tools.
+The accessibility compliance of the Uploader component is shown in the following sample. Open the [sample](https://ej2.syncfusion.com/accessibility/uploader.html) in a new window to evaluate the accessibility of the Uploader component with accessibility tools.
 
-{% previewsample "https://ej2.syncfusion.com/accessibility/splitter.html" %}
+{% previewsample "https://ej2.syncfusion.com/accessibility/uploader.html" %}
 
 ## See also
 
