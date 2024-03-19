@@ -113,9 +113,9 @@ N> You can refer to our [Blazor Date Range Picker](https://www.syncfusion.com/bl
 
 The DateRangePicker component's accessibility levels are ensured through an [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) software tools during automated testing.
 
-The accessibility compliance of the DateRangePicker component is shown in the following sample. Open the [sample](https://ej2.syncfusion.com/accessibility/date-range-picker.html) in a new window to evaluate the accessibility of the DateRangePicker component with accessibility tools.
+The accessibility compliance of the DateRangePicker component is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/daterangepicker) in a new window to evaluate the accessibility of the DateRangePicker component with accessibility tools.
 
-{% previewsample "https://ej2.syncfusion.com/accessibility/date-range-picker.html" %}
+{% previewsample "https://blazor.syncfusion.com/accessibility/daterangepicker" %}
 
 ## See also
 

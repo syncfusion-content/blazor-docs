@@ -81,9 +81,9 @@ You can use the following key shortcuts to access the DropDownList without inter
 
 The DropDownList component's accessibility levels are ensured through an [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) software tools during automated testing.
 
-The accessibility compliance of the DropDownList component is shown in the following sample. Open the [sample](https://ej2.syncfusion.com/accessibility/drop-down-list.html) in a new window to evaluate the accessibility of the DropDownList component with accessibility tools.
+The accessibility compliance of the DropDownList component is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/dropdownlist) in a new window to evaluate the accessibility of the DropDownList component with accessibility tools.
 
-{% previewsample "https://ej2.syncfusion.com/accessibility/drop-down-list.html" %}
+{% previewsample "https://blazor.syncfusion.com/accessibility/dropdownlist" %}
 
 ## See also
 

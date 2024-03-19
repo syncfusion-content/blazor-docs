@@ -128,9 +128,9 @@ N> To focus out the DateTimePicker component, use the `t` keys. For additional i
 
 The DateTimePicker component's accessibility levels are ensured through an [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) software tools during automated testing.
 
-The accessibility compliance of the DateTimePicker component is shown in the following sample. Open the [sample](https://ej2.syncfusion.com/accessibility/date-time-picker.html) in a new window to evaluate the accessibility of the DateTimePicker component with accessibility tools.
+The accessibility compliance of the DateTimePicker component is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/datetimepicker) in a new window to evaluate the accessibility of the DateTimePicker component with accessibility tools.
 
-{% previewsample "https://ej2.syncfusion.com/accessibility/date-time-picker.html" %}
+{% previewsample "https://blazor.syncfusion.com/accessibility/datetimepicker" %}
 
 ## See also
 

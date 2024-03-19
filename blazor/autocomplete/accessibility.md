@@ -124,9 +124,9 @@ N> In the following sample, disable the AutoComplete component using <kbd>t</kbd
 
 The AutoComplete component's accessibility levels are ensured through an [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) software tools during automated testing.
 
-The accessibility compliance of the AutoComplete component is shown in the following sample. Open the [sample](https://ej2.syncfusion.com/accessibility/auto-complete.html) in a new window to evaluate the accessibility of the AutoComplete component with accessibility tools.
+The accessibility compliance of the AutoComplete component is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/autocomplete) in a new window to evaluate the accessibility of the AutoComplete component with accessibility tools.
 
-{% previewsample "https://ej2.syncfusion.com/accessibility/auto-complete.html" %}
+{% previewsample "https://blazor.syncfusion.com/accessibility/autocomplete" %}
 
 ## See also
 

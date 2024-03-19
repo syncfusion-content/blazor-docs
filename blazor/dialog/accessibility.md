@@ -147,9 +147,9 @@ to last focusable element</td></tr>
 
 The Dialog component's accessibility levels are ensured through an [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) software tools during automated testing.
 
-The accessibility compliance of the Dialog component is shown in the following sample. Open the [sample](https://ej2.syncfusion.com/accessibility/dialog.html) in a new window to evaluate the accessibility of the Dialog component with accessibility tools.
+The accessibility compliance of the Dialog component is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/dialog) in a new window to evaluate the accessibility of the Dialog component with accessibility tools.
 
-{% previewsample "https://ej2.syncfusion.com/accessibility/dialog.html" %}
+{% previewsample "https://blazor.syncfusion.com/accessibility/dialog" %}
 
 ## See also
 

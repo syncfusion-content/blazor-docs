@@ -56,9 +56,9 @@ The MaskedTextBox uses the `textbox` role and following ARIA properties for its 
 
 The MaskedTextBox component's accessibility levels are ensured through an [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) software tools during automated testing.
 
-The accessibility compliance of the MaskedTextBox component is shown in the following sample. Open the [sample](https://ej2.syncfusion.com/accessibility/masked-textbox.html) in a new window to evaluate the accessibility of the MaskedTextBox component with accessibility tools.
+The accessibility compliance of the MaskedTextBox component is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/maskedtextbox) in a new window to evaluate the accessibility of the MaskedTextBox component with accessibility tools.
 
-{% previewsample "https://ej2.syncfusion.com/accessibility/masked-textbox.html" %}
+{% previewsample "https://blazor.syncfusion.com/accessibility/maskedtextbox" %}
 
 ## See also
 
