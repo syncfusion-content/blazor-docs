@@ -18,7 +18,7 @@ The following example demonstrates how to set attributes in the HtmlAttributes p
 @using Syncfusion.Blazor.Inputs
 
 <SfUploader  HtmlAttributes="@htmlattribute">
-    <UploaderAsyncSettings SaveUrl="https://aspnetmvc.syncfusion.com/services/api/uploadbox/Save" RemoveUrl="https://aspnetmvc.syncfusion.com/services/api/uploadbox/Remove"></UploaderAsyncSettings>
+    <UploaderAsyncSettings SaveUrl="https://blazor.syncfusion.com/services/production/api/FileUploader/Save" RemoveUrl="https://blazor.syncfusion.com/services/production/api/FileUploader/Remove"></UploaderAsyncSettings>
 </SfUploader>
 
 @code{
