@@ -583,7 +583,7 @@ When you run the application, the resultant Blazor DataGrid component will look 
 
 ![Blazor DataGrid component bound with PostgreSQL Server data](../images/blazor-Grid-Ms-SQl-databinding-Gif.gif)
 
-> Find the sample from this [GitHub location]().
+> Find the sample from this [GitHub location](https://github.com/SyncfusionExamples/connecting-databases-to-blazor-datagrid-component/tree/master/Binding%20PostgreSQL%20database%20using%20UrlAdaptor).
 
 ## Binding data from PostgreSQL Server using CustomAdaptor
 
@@ -1198,4 +1198,4 @@ public override async Task<object> BatchUpdateAsync(DataManager DataManager, obj
 
 ![Blazor DataGrid component bound with PostgreSQL Server data](../images/blazor-Grid-Ms-SQl-databinding-Gif.gif)
 
-> You can find the sample in this [GitHub location]().
+> You can find the sample in this [GitHub location](https://github.com/SyncfusionExamples/connecting-databases-to-blazor-datagrid-component/tree/master/Binding%20PostgreSQL%20database%20using%20CustomAdaptor).
