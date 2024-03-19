@@ -38,7 +38,7 @@ The accessibility compliance for the Splitter component is outlined below.
 <div><img src="https://cdn.syncfusion.com/content/images/documentation/not-supported.png" alt="No"> - The component does not meet the requirement.</div>
 
 
-# Keyboard interaction
+## Keyboard interaction
 
 The following key shortcuts can be used to access the Splitter without interruptions:
 

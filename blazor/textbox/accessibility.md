@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Accessibility in Blazor TextBox Component | Syncfusion
-description: Checkout and learn here all about accessibility in Syncfusion Blazor TextBox component and more.
+description: Discover Syncfusion Blazor TextBox Components accessibility features—easy to learn, implement, and use for all.
 platform: Blazor
 control: TextBox
 documentation: ug
