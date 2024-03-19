@@ -1027,7 +1027,7 @@ The example below demonstrates how to customize the caption text in the Excel us
 
 ### Exporting with Detail template
 
-By default, the Grid exports the parent grid along with expanded detail rows only. To modify the exporting behavior, utilize the [PdfExportProperties.PdfDetailRowMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfDetailRowMode.html) property. The available options include:
+By default, the Grid exports the parent grid along with expanded detail rows only. To modify the exporting behavior, utilize the [ExcelExportProperties.ExcelDetailRowMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelDetailRowMode.html) property. The available options include:
 
 | Mode | Behaviour |
 |-------|----------|
@@ -1117,7 +1117,7 @@ In the provided example, detail row content is formatted by specifyin the [Heade
             }
         </DetailTemplate>
     </GridTemplates>
-    <GridEvents ExcelDetailTemplateExporting="ExcelDetailTemplateHandler" PdfDetailTemplateExporting="PdfDetailTemplateHandler" OnToolbarClick="ToolbarClickHandler" TValue="Product"></GridEvents>
+    <GridEvents ExcelDetailTemplateExporting="ExcelDetailTemplateHandler" OnToolbarClick="ToolbarClickHandler" TValue="Product"></GridEvents>
     <GridColumns>
         <GridColumn Field=@nameof(Product.Category) HeaderText="Category" Width="110"> </GridColumn>
         <GridColumn Field=@nameof(Product.ProductID) HeaderText="Product ID" Width="160"> </GridColumn>
@@ -1126,25 +1126,6 @@ In the provided example, detail row content is formatted by specifyin the [Heade
 </SfGrid>
 
 <style type="text/css" class="cssStyles">
-    #container {
-        visibility: hidden;
-    }
-
-    #loader {
-        color: #008cff;
-        font-family: 'Helvetica Neue','calibiri';
-        font-size: 14px;
-        height: 40px;
-        left: 45%;
-        position: absolute;
-        top: 45%;
-        width: 30%;
-    }
-
-    .orientationcss .e-headercelldiv {
-        transform: rotate(90deg);
-    }
-
     .detailtable td {
         font-size: 13px;
         padding: 4px;
@@ -1154,22 +1135,6 @@ In the provided example, detail row content is formatted by specifyin the [Heade
         white-space: nowrap;
         font-weight: normal;
     }
-
-    .photo {
-        width: 100px;
-        height: 100px;
-        border-radius: 50px;
-        box-shadow: inset 0 0 1px #e0e0e0, inset 0 0 14px rgba(0, 0, 0, 0.2);
-    }
-
-    .Unavailable {
-        color: #FF0000;
-    }
-
-    .Available {
-        color: #00FF00;
-    }
-
 </style>
 
 @code {
@@ -1183,7 +1148,7 @@ In the provided example, detail row content is formatted by specifyin the [Heade
             ExcelExportProperties ExportProperties = new ExcelExportProperties();
             ExportProperties.ExcelDetailRowMode = ExcelDetailRowMode.Expand;
             await this.DefaultGrid.ExportToExcelAsync(ExportProperties);
-        } 
+        }
     }
 
     public void ExcelDetailTemplateHandler(ExcelDetailTemplateEventArgs<Product> args)
@@ -1209,7 +1174,7 @@ In the provided example, detail row content is formatted by specifyin the [Heade
             new ExcelDetailTemplateRow()
                 {
                     Cells = new List<ExcelDetailTemplateCell>()
-                    {
+                            {
             new ExcelDetailTemplateCell()
             {
                 CellValue = data.Cost, Index = 0
@@ -1217,7 +1182,7 @@ In the provided example, detail row content is formatted by specifyin the [Heade
             new ExcelDetailTemplateCell()
             {
                 Index = 1, CellValue = "Available :" + data.Available }
-                    }
+                            }
                 });
         excelRows.Add(new ExcelDetailTemplateRow()
             {
@@ -1324,7 +1289,7 @@ In the provided example, detail row content is formatted by specifyin the [Heade
         <DetailTemplate>
             @{
                 var employee = (context as EmployeeData);
-            }  
+            }
             <SfGrid DataSource="@Orders" Query="@(new Query().Where("EmployeeID", "equal", employee.EmployeeID))">
                 <GridTemplates>
                     <DetailTemplate Context="CustomerContext">
@@ -1339,7 +1304,7 @@ In the provided example, detail row content is formatted by specifyin the [Heade
                                 <GridColumn Field=@nameof(OrderDetails.Country) HeaderText="Country" Width="110"></GridColumn>
                             </GridColumns>
                         </SfGrid>
-                        </DetailTemplate>
+                    </DetailTemplate>
                 </GridTemplates>
                 <GridColumns>
                     <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="110"> </GridColumn>
@@ -1425,8 +1390,9 @@ In the provided example, detail row content is formatted by specifyin the [Heade
     public void ExcelDetailTemplateHandler(ExcelDetailTemplateEventArgs<EmployeeData> args)
     {
         var excelRows = new List<ExcelDetailTemplateRow>();
-        var data = Orders.ToList().Where(_ =>_.EmployeeID == args.ParentRow.Data.EmployeeID).ToList();
-        for (var i = 0; i < data.Count(); i++) {
+        var data = Orders.ToList().Where(_ => _.EmployeeID == args.ParentRow.Data.EmployeeID).ToList();
+        for (var i = 0; i < data.Count(); i++)
+        {
             var row = data[i];
             var childData = OrderInfo.ToList().Where(_ => _.OrderID == row.OrderID).ToList();
             var excelchildRows = new List<ExcelDetailTemplateRow>();

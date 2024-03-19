@@ -1585,7 +1585,7 @@ In the provided example, detail row content is formatted by specifyin the [Colum
 @using Syncfusion.Blazor.Navigations
 @using Syncfusion.Blazor
 
-<SfGrid @ref="DefaultGrid" ID="Grid" DataSource="@Employees" Toolbar="@(new List<string>() { "ExcelExport", "PdfExport" })" AllowPdfExport="true" AllowExcelExport="true" Height="450px">
+<SfGrid @ref="DefaultGrid" ID="Grid" DataSource="@Employees" Toolbar="@(new List<string>() { "PdfExport" })" AllowPdfExport="true" Height="450px">
     <GridTemplates>
         <DetailTemplate>
             @{
@@ -1652,7 +1652,7 @@ In the provided example, detail row content is formatted by specifyin the [Colum
             }
         </DetailTemplate>
     </GridTemplates>
-    <GridEvents ExcelDetailTemplateExporting="ExcelDetailTemplateHandler" PdfDetailTemplateExporting="PdfDetailTemplateHandler" OnToolbarClick="ToolbarClickHandler" TValue="Product"></GridEvents>
+    <GridEvents PdfDetailTemplateExporting="PdfDetailTemplateHandler" OnToolbarClick="ToolbarClickHandler" TValue="Product"></GridEvents>
     <GridColumns>
         <GridColumn Field=@nameof(Product.Category) HeaderText="Category" Width="110"> </GridColumn>
         <GridColumn Field=@nameof(Product.ProductID) HeaderText="Product ID" Width="160"> </GridColumn>
@@ -1661,25 +1661,6 @@ In the provided example, detail row content is formatted by specifyin the [Colum
 </SfGrid>
 
 <style type="text/css" class="cssStyles">
-    #container {
-        visibility: hidden;
-    }
-
-    #loader {
-        color: #008cff;
-        font-family: 'Helvetica Neue','calibiri';
-        font-size: 14px;
-        height: 40px;
-        left: 45%;
-        position: absolute;
-        top: 45%;
-        width: 30%;
-    }
-
-    .orientationcss .e-headercelldiv {
-        transform: rotate(90deg);
-    }
-
     .detailtable td {
         font-size: 13px;
         padding: 4px;
@@ -1689,22 +1670,6 @@ In the provided example, detail row content is formatted by specifyin the [Colum
         white-space: nowrap;
         font-weight: normal;
     }
-
-    .photo {
-        width: 100px;
-        height: 100px;
-        border-radius: 50px;
-        box-shadow: inset 0 0 1px #e0e0e0, inset 0 0 14px rgba(0, 0, 0, 0.2);
-    }
-
-    .Unavailable {
-        color: #FF0000;
-    }
-
-    .Available {
-        color: #00FF00;
-    }
-
 </style>
 
 @code {
@@ -1726,7 +1691,7 @@ In the provided example, detail row content is formatted by specifyin the [Colum
         var pdfRows = new List<PdfDetailTemplateRow>();
         var data = args.ParentRow.Data;
         args.RowInfo.ColumnCount = 2;
-        args.RowInfo.Headers = new List<PdfDetailTemplateRow>() { new PdfDetailTemplateRow() { Cells = new List<PdfDetailTemplateCell>() { new PdfDetailTemplateCell() { Index = 0, CellValue = "Product Details", ColumnSpan = 2, Style = new PdfThemeStyle() { Bold = true } } } } };
+        args.RowInfo.Headers = new List<PdfDetailTemplateRow>() { new PdfDetailTemplateRow() { Cells = new List<PdfDetailTemplateCell>() { new PdfDetailTemplateCell() { Index = 0, CellValue = "Product Details", ColumnSpan = 2, Style = new PdfThemeStyle() { Bold = true, FontColor = "#0A76FF", FontSize = 13 } } } } };
         pdfRows.Add(new PdfDetailTemplateRow()
             {
                 Cells = new List<PdfDetailTemplateCell>()
@@ -1745,7 +1710,7 @@ In the provided example, detail row content is formatted by specifyin the [Colum
             new PdfDetailTemplateRow()
                 {
                     Cells = new List<PdfDetailTemplateCell>()
-                {
+                            {
             new PdfDetailTemplateCell()
             {
                 CellValue = data.Cost, Index = 0
@@ -1753,7 +1718,7 @@ In the provided example, detail row content is formatted by specifyin the [Colum
             new PdfDetailTemplateCell()
             {
                 Index = 1, CellValue = "Available :" + data.Available }
-                }
+                            }
                 });
         pdfRows.Add(new PdfDetailTemplateRow()
             {
@@ -1860,7 +1825,7 @@ In the provided example, detail row content is formatted by specifyin the [Heade
         <DetailTemplate>
             @{
                 var employee = (context as EmployeeData);
-            }  
+            }
             <SfGrid DataSource="@Orders" Query="@(new Query().Where("EmployeeID", "equal", employee.EmployeeID))">
                 <GridTemplates>
                     <DetailTemplate Context="CustomerContext">
@@ -1875,7 +1840,7 @@ In the provided example, detail row content is formatted by specifyin the [Heade
                                 <GridColumn Field=@nameof(OrderDetails.Country) HeaderText="Country" Width="110"></GridColumn>
                             </GridColumns>
                         </SfGrid>
-                        </DetailTemplate>
+                    </DetailTemplate>
                 </GridTemplates>
                 <GridColumns>
                     <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="110"> </GridColumn>
@@ -1968,7 +1933,7 @@ In the provided example, detail row content is formatted by specifyin the [Heade
             var childData = OrderInfo.ToList().Where(_ => _.OrderID == row.OrderID).ToList();
             var pdfchildRows = new List<PdfDetailTemplateRow>();
             var pdfRow = ProcessPdfRow(new List<string>() { row.OrderID.ToString(), row.CustomerID.ToString(), row.Freight.ToString(), row.ShipCity });
-            for(var j = 0; j < childData.Count; j++)
+            for (var j = 0; j < childData.Count; j++)
             {
                 var childRow = childData[j];
                 pdfchildRows.Add(ProcessPdfRow(new List<string>() { childRow.CustomerID.ToString(), childRow.Title.ToString(), childRow.Address.ToString(), childRow.Country }));
@@ -1983,7 +1948,7 @@ In the provided example, detail row content is formatted by specifyin the [Heade
     PdfDetailTemplateRow ProcessPdfRow(List<string> value)
     {
         var cells = new List<PdfDetailTemplateCell>();
-        for(var j = 0; j < value.Count(); j++)
+        for (var j = 0; j < value.Count(); j++)
         {
             cells.Add(new PdfDetailTemplateCell { CellValue = $"{value[j]}", Index = j });
         }
