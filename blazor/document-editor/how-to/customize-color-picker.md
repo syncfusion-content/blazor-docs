@@ -10,7 +10,7 @@ The following example code illustrates how to Customize the color picker in Docu
 
 <SfDocumentEditorContainer @ref="container" Height="590px">
     <DocumentEditorContainerEvents Created="OnCreated" DocumentEditorSettings="settings"></DocumentEditorContainerEvents> 
-</SfDocumentEditorContainer> 
+</SfDocumentEditorContainer>
 
 @code {
     SfDocumentEditorContainer container; 
