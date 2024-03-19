@@ -41,7 +41,7 @@ The accessibility compliance for the Blazor Dropdown Tree component is outlined 
 
 The Blazor Dropdown Tree component followed the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/) patterns to meet the accessibility. The following ARIA attributes are used in the Dropdown Tree component:
 
-| **Properties** | **Functionalities** |
+| **Attributes** | **Purpose** |
 | --- | --- |
 | `aria-haspopup` | Indicates the availability and type of interactive popup element |
 | `aria-expanded` | Indicates whether the popup list has expanded or not. |

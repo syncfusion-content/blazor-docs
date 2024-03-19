@@ -41,7 +41,7 @@ The accessibility compliance for the Blazor FileManager component is outlined be
 
 The Blazor FileManager component followed the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/) patterns to meet the accessibility. The following ARIA attributes are used in the FileManager component:
 
-| **Property** | **Functionalities** |
+| **Attributes** | **Purpose** |
 | --- | --- |
 | aria-disabled | Indicates whether the File Manager component is in disabled state.|
 | aria-haspopup | Indicates whether the Toolbar element has a suggestion list. |

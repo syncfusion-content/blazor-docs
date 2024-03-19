@@ -37,9 +37,9 @@ The accessibility compliance for the Blazor Accordion component is outlined belo
 
 <div><img src="https://cdn.syncfusion.com/content/images/landing-page/no.png" alt="No"> - The component does not meet the requirement.</div>
 
-## ARIA attributes
+## WAI-ARIA attributes
 
-| Property             | Functionality |
+| Attributes             | Purpose |
 |----------------------|---------------|
 | role                 | **Button:** Attribute is set to the Accordion header elements to indicate that the element can be used to toggle the visibility of the associated content section, describing the actual role of the element.<br> **Region:** Attribute is set to the Accordion panel elements to create a landmark region that contains the currently expanded accordion panel, describing the actual role of the element.  |
 | aria-labelledby      | Attribute is set to content (panel) and it points to the corresponding Accordion header.|
