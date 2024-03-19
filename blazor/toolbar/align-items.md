@@ -1,15 +1,13 @@
 ---
 layout: post
 title: Align Items in Blazor Toolbar Component | Syncfusion
-description: Checkout and learn here all about align the items in Syncfusion Blazor Toolbar component and more.
+description: Checkout and learn here all about align the items using spacer in Syncfusion Blazor Toolbar component and more.
 platform: Blazor
 control: Toolbar
 documentation: ug
 ---
 
 # Align Items in Blazor Toolbar Component
-
-To optimize the alignment of Toolbar items without using [Align](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.ToolbarItem.html#Syncfusion_Blazor_Navigations_ToolbarItem_Align) property, utilize the [Spacer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.ToolbarItem.html#Syncfusion_Blazor_Navigations_ToolbarItem_Type) in toolbar.
 
 A Toolbar [Spacer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.ToolbarItem.html#Syncfusion_Blazor_Navigations_ToolbarItem_Type) is used for managing the alignment of a toolbar items. It creates an adjustable empty space within the toolbar, providing a clear separation between different items. The spacer dynamically adapts to the toolbar's width.
 
