@@ -24,11 +24,7 @@ The following table illustrates all the possible properties for the color picker
 |---|---| 
 
 | Columns | It is used to render the ColorPicker palette with specified columns. Defaults to 10 | 
-
 | Disabled | It is used to enable / disable ColorPicker component. If it is disabled the ColorPicker popup won’t open. Defaults to false | 
-
 | Mode | It is used to render the ColorPicker with the specified mode. Defaults to ‘Picker’ | 
-
 | ModeSwitcher | It is used to show / hide the mode switcher button of ColorPicker component. Defaults to true | 
-
 | ShowButtons | It is used to show / hide the control buttons (apply / cancel) of ColorPicker component. Defaults to true |
