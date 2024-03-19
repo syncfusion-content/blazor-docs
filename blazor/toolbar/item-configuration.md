@@ -384,7 +384,7 @@ The following code explains how to add `NumericTextBox`, `DropDownList`, `RadioB
 
 ### Spacer
 
-N>you can refer [here](https://blazor.syncfusion.com/documentation/toolbar/align-items) to integrate the spacer in Toolbar component.
+N>you can refer [Align Items](https://blazor.syncfusion.com/documentation/toolbar/align-items) for guidance on integrating the spacer in the Toolbar component.
 
 ## Visible
 
