@@ -1,7 +1,7 @@
 @using Syncfusion.Blazor.Data
 
 <SfAutoComplete TValue="string" TItem="OrderDetails"  Placeholder="Select a customerID" SuggestionCount=3 Query="@RemoteDataQuery" FilterType="Syncfusion.Blazor.DropDowns.FilterType.StartsWith">
-    <SfDataManager Url="https://js.syncfusion.com/demos/ejServices/Wcf/Northwind.svc/Orders" Adaptor="Adaptors.ODataAdaptor" CrossDomain=true></SfDataManager>
+    <SfDataManager Url="https://blazor.syncfusion.com/services/production/api/Orders" Adaptor="Adaptors.WebApiAdaptor" CrossDomain=true></SfDataManager>
     <AutoCompleteFieldSettings  Value="CustomerID"></AutoCompleteFieldSettings>
 </SfAutoComplete>
 
