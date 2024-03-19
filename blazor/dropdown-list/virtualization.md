@@ -22,6 +22,19 @@ This feature is applicable to both local and remote data scenarios, providing fl
 
 ![Blazor DropDownList with virtualization of local data](./images/virtualization/blazor_dropdownlist_virtualization-local-data.gif)
 
+
+## Grouping with Virtualization
+
+The DropDownList component supports grouping with Virtualization. It allows you to organize elements into groups based on different categories. Each item in the list can be classified using the [DropDownListFieldSettings.GroupBy](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListFieldSettings.html#Syncfusion_Blazor_DropDowns_DropDownListFieldSettings_GroupBy) field in the data table. After grouping, virtualization works similarly to local data binding, providing a seamless user experience. When the data source is bound to remote data, an initial request is made to retrieve all data for the purpose of grouping. Subsequently, the grouped data works in the same way as local data binding on virtualization. 
+
+The following sample shows the example for Grouping with Virtualization. 
+
+{% highlight cshtml %}
+
+{% include_relative code-snippet/virtualization/group.razor %}
+
+{% endhighlight %}
+
 ## Keyboard interaction
 
 Users can navigate through the scrollable content using keyboard actions. This feature loads the next or next set of items based on the key inputs in the popup.
@@ -34,9 +47,3 @@ Users can navigate through the scrollable content using keyboard actions. This f
 | `PageUp` | Loads the previous page and selects the first item in it. |
 | `Home` | Loads the initial set of items and selects first item in it. |
 | `End` | Loads the last set of items and selects last item in it. |
-
-## Limitation of virtualization
-
-* Virtualization is not supported in the grouping feature.
-* Selected Value may or may not be present in the current view port.
-* Long-pressing of navigation keys is not intended for item navigation in the Dropdownlist component , It accepts single key action at a time.

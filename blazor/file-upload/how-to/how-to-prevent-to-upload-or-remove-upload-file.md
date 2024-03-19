@@ -17,8 +17,8 @@ We can prevent the selected file from being uploaded and also prevent the remova
 
 @using Syncfusion.Blazor.Inputs
 <SfUploader AutoUpload="false">
-    <UploaderAsyncSettings SaveUrl="https://aspnetmvc.syncfusion.com/services/api/uploadbox/Save"
-                           RemoveUrl="https://aspnetmvc.syncfusion.com/services/api/uploadbox/Remove"></UploaderAsyncSettings>
+    <UploaderAsyncSettings SaveUrl="https://blazor.syncfusion.com/services/production/api/FileUploader/Save"
+                           RemoveUrl="https://blazor.syncfusion.com/services/production/api/FileUploader/Remove"></UploaderAsyncSettings>
     <UploaderEvents BeforeUpload="@BeforeUploadHandler" BeforeRemove="@BeforeRemovehandler"></UploaderEvents>
 </SfUploader>
 @code {
