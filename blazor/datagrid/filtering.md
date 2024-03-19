@@ -458,6 +458,10 @@ The available operators and its supported data types are,
 
 Operator |Description |Supported Types
 -----|-----|-----
+IsNull |Returns the values that are null. |String &#124; Number &#124; Date
+IsNotNull |Returns the values that are not null. |String &#124; Number &#124; Date
+IsEmpty |Returns the values that are empty. |String
+IsNotEmpty |Returns the values that are not empty. |String
 StartsWith |Checks whether the value begins with the specified value. |String
 EndsWith |Checks whether the value ends with the specified value. |String
 Contains |Checks whether the value contains the specified value. |String
@@ -470,17 +474,13 @@ GreaterThan |Checks whether the value is greater than the specified value. |Nu
 GreaterThanOrEqual |Checks whether a value is greater than or equal to the specified value. |Number &#124; Date
 LessThan |Checks whether the value is less than the specified value. |Number &#124; Date
 LessThanOrEqual |Checks whether the value is less than or equal to the specified value. |Number &#124; Date
-IsNull |Returns the values that are null. |String &#124; Number &#124; Date
-IsNotNull |Returns the values that are not null. |String &#124; Number &#124; Date
-IsEmpty |Returns the values that are empty. |String
-IsNotEmpty |Returns the values that are not empty. |String
-between |Filter the values based on the range between the start and end specified values. |Number &#124; Date
+Between |Filter the values based on the range between the start and end specified values. |Number &#124; Date
 
 > By default, the **Operator** value is **Equal** in [Columns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridFilterSettings.html#Syncfusion_Blazor_Grids_GridFilterSettings_Columns) property of **GridFilterSettings** component.
 
-## Wildcard and LIKE operator filter
+## Wildcard and Like operator filter
 
-**Wildcard** and **LIKE** filter operators filter value based on the given string pattern, and they apply to string-type columns. But it will work slightly differently.
+**Wildcard** and **Like** filter operators filter value based on the given string pattern, and they apply to string-type columns. But it will work slightly differently.
 
 ### Wildcard filtering
 
@@ -500,8 +500,8 @@ The following GIF represent a Wildcard operator filtering.
 
 ![Blazor DataGrid with Wildcard operator filtering](./images/blazor-datagrid-wildcard-operator-filtering.gif)
 
-### LIKE filtering
-The LIKE filter can process single search patterns using the “%” symbol, retrieving values matching the specified patterns. The following Grid features support LIKE filtering on string-type columns:
+### Like filtering
+The Like filter can process single search patterns using the “%” symbol, retrieving values matching the specified patterns. The following Grid features support Like filtering on string-type columns:
 
 * Filter Menu
 * Filter Bar using the [Operator](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.FilterSettings.html#Syncfusion_Blazor_Grids_FilterSettings_Operator) property within the [GridFilterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_FilterSettings) configuration.
@@ -514,9 +514,9 @@ Operator |Description
 ab% | Returns all the value that are ends with “ab” character.
 %ab | Returns all the value that are starts with “ab” character.
 
-The following GIF represent a LIKE operator filtering.
+The following GIF represent a Like operator filtering.
 
-![Blazor DataGrid with LIKE operator filtering](./images/blazor-datagrid-like-operator-filtering.gif)
+![Blazor DataGrid with Like operator filtering](./images/blazor-datagrid-like-operator-filtering.gif)
 
 ## Filtering with case sensitivity
 
