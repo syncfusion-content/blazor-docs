@@ -1564,9 +1564,19 @@ The example below demonstrates how to customize the caption text in the PDF usin
 
 ### Exporting with Detail template
 
-By default, the grid will export the parent grid with expanded detail rows alone. Change the exporting option by using the PdfExportProperties.hierarchyExportMode property. The available options are:
+By default, the Grid exports the parent grid along with expanded detail rows only. To modify the exporting behavior, utilize the [PdfExportProperties.PdfDetailRowMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfDetailRowMode.html) property. The available options include:
 
-PDF export provides an option to export template columns of the DataGrid by defining the [IncludeTemplateColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportProperties.html#Syncfusion_Blazor_Grids_PdfExportProperties_IncludeTemplateColumn) of [PdfExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportProperties.html) as true. In the following sample, the CustomerID column is a template column. The template values cannot be directly exported into the cells. To customize the values of template columns in the PDF document, you must use [PdfQueryCellInfoEvent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_PdfQueryCellInfoEvent).
+| Mode | Behaviour |
+|-------|----------|
+| Expand | Exports the parent grid with expanded detail rows.
+| None | Exports the parent grid alone.
+
+Customization of detail rows in the exported PDF is achievable through the [PdfDetailTemplateExporting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_PdfDetailTemplateExporting) event. This event enables formatting the detail rows based on their parent row details within the PDF document.
+
+In the provided example, detail row content is formatted by specifyin the [ColumnCount](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfDetailTemplateRowSettings.html#Syncfusion_Blazor_Grids_PdfDetailTemplateRowSettings_ColumnCount), [Headers](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfDetailTemplateRowSettings.html#Syncfusion_Blazor_Grids_PdfDetailTemplateRowSettings_Headers), [Rows](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfDetailTemplateRowSettings.html#Syncfusion_Blazor_Grids_PdfDetailTemplateRowSettings_Rows) using parentRow details, facilitating the creation of detail rows within the PDF. Additionally, custom styles can be applied to specific cells using the [Style](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfDetailTemplateCell.html#Syncfusion_Blazor_Grids_PdfDetailTemplateCell_Style) property.
+
+>If [ColumnCount](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfDetailTemplateRowSettings.html#Syncfusion_Blazor_Grids_PdfDetailTemplateRowSettings_ColumnCount) is not provided or is less than the number of cells in the first row of Headers/Rows, the columns in the detail row of the PDF grid will be generated based on the count of cells in the first row of Headers/Rows.
+
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -1835,7 +1845,10 @@ PDF export provides an option to export template columns of the DataGrid by defi
 
 ### Hierarchy Grid Exporting with Detail template
 
-By default, the grid will export the parent grid with expanded detail rows alone. Change the exporting option by using the PdfExportProperties.hierarchyExportMode property. The available options are:
+The Grid have an option to export the hierarchy grid to pdf document using detail template feature. Customization of detail rows in the exported PDF is achievable through the [PdfDetailTemplateExporting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_PdfDetailTemplateExporting) event.
+
+In the provided example, detail row content is formatted by specifyin the [Headers](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfDetailTemplateRowSettings.html#Syncfusion_Blazor_Grids_PdfDetailTemplateRowSettings_Headers), [Rows](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfDetailTemplateRowSettings.html#Syncfusion_Blazor_Grids_PdfDetailTemplateRowSettings_Rows) using parentRow details. Additionaly, this achieves a nested level of children using the [ChildRowInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfDetailTemplateRow.html#Syncfusion_Blazor_Grids_PdfDetailTemplateRow_ChildRowInfo) property.
+
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
