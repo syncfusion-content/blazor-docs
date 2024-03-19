@@ -14,15 +14,15 @@ The Gantt component followed the accessibility guidelines and standards, includi
 The accessibility compliance for the Gantt component is outlined below.
 
 | Accessibility Criteria | Compatibility |
-| ---------------------- | ------------- |
-| [WCAG 2.2](https://www.w3.org/TR/WCAG22/) Support | ![Intermediate](https://cdn.syncfusion.com/content/images/documentation/partial.png) |
-| [Section 508](https://www.section508.gov/) Support | ![Yes](https://cdn.syncfusion.com/content/images/documentation/full.png) |
-| Screen Reader Support | ![Intermediate](https://cdn.syncfusion.com/content/images/documentation/partial.png) |
-| Right-To-Left Support | ![Yes](https://cdn.syncfusion.com/content/images/documentation/full.png) |
-| Color Contrast | ![Yes](https://cdn.syncfusion.com/content/images/documentation/full.png) |
-| Mobile Device Support | ![Yes](https://cdn.syncfusion.com/content/images/documentation/full.png) |
-| Keyboard Navigation Support | ![Yes](https://cdn.syncfusion.com/content/images/documentation/full.png) |
-| [Axe-core](https://www.npmjs.com/package/axe-core) Accessibility Validation | ![Yes](https://cdn.syncfusion.com/content/images/documentation/full.png) |
+| -- | -- |
+| [WCAG 2.2](https://www.w3.org/TR/WCAG22/) Support | <img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Intermediate"> |
+| [Section 508](https://www.section508.gov/) Support | <img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> |
+| Screen Reader Support | <img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Intermediate"> |
+| Right-To-Left Support | <img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> |
+| Color Contrast | <img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> |
+| Mobile Device Support | <img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> |
+| Keyboard Navigation Support | <img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> |
+| [Axe-core](https://www.npmjs.com/package/axe-core) Accessibility Validation | <img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> |
 
 <style>
     .post .post-content img {
