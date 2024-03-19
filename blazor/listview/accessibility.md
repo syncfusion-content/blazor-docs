@@ -243,9 +243,9 @@ The Blazor ListView component followed the [keyboard interaction](https://www.w3
 
 ## Ensuring accessibility
 
-The Blazor Dashboard Layout component's accessibility levels are ensured through an [axe-core](https://www.nuget.org/packages/Deque.AxeCore.Playwright) software tool during automated testing.
+The Blazor ListView component's accessibility levels are ensured through an [axe-core](https://www.nuget.org/packages/Deque.AxeCore.Playwright) software tool during automated testing.
 
-The accessibility compliance of the Dashboard Layout component is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/listview) in a new window to evaluate the accessibility of the Dashboard Layout component with accessibility tools.
+The accessibility compliance of the ListView component is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/listview) in a new window to evaluate the accessibility of the ListView component with accessibility tools.
 
 ## See also
 
