@@ -77,9 +77,9 @@ The following table shows shortcut keys and its corresponding usage.
 
 The NumericTextBox component's accessibility levels are ensured through an [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) software tools during automated testing.
 
-The accessibility compliance of the NumericTextBox component is shown in the following sample. Open the [sample](https://ej2.syncfusion.com/accessibility/numeric-textbox.html) in a new window to evaluate the accessibility of the NumericTextBox component with accessibility tools.
+The accessibility compliance of the NumericTextBox component is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/numerictextbox) in a new window to evaluate the accessibility of the NumericTextBox component with accessibility tools.
 
-{% previewsample "https://ej2.syncfusion.com/accessibility/numeric-textbox.html" %}
+{% previewsample "https://blazor.syncfusion.com/accessibility/numerictextbox" %}
 
 ## See also
 

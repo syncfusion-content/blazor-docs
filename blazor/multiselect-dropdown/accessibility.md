@@ -77,9 +77,9 @@ You can use the following key shortcuts to access the MultiSelect without interr
 
 The MultiSelect component's accessibility levels are ensured through an [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) software tools during automated testing.
 
-The accessibility compliance of the MultiSelect component is shown in the following sample. Open the [sample](https://ej2.syncfusion.com/accessibility/multi-select.html) in a new window to evaluate the accessibility of the MultiSelect component with accessibility tools.
+The accessibility compliance of the MultiSelect component is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/multiselect) in a new window to evaluate the accessibility of the MultiSelect component with accessibility tools.
 
-{% previewsample "https://ej2.syncfusion.com/accessibility/multi-select.html" %}
+{% previewsample "https://blazor.syncfusion.com/accessibility/multiselect" %}
 
 ## See also
 

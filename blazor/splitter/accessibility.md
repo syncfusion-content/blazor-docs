@@ -38,7 +38,7 @@ The accessibility compliance for the Splitter component is outlined below.
 <div><img src="https://cdn.syncfusion.com/content/images/documentation/not-supported.png" alt="No"> - The component does not meet the requirement.</div>
 
 
-# Keyboard interaction
+## Keyboard interaction
 
 The following key shortcuts can be used to access the Splitter without interruptions:
 
@@ -56,9 +56,9 @@ The following key shortcuts can be used to access the Splitter without interrupt
 
 The Splitter component's accessibility levels are ensured through an [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) software tools during automated testing.
 
-The accessibility compliance of the Splitter component is shown in the following sample. Open the [sample](https://ej2.syncfusion.com/accessibility/splitter.html) in a new window to evaluate the accessibility of the Splitter component with accessibility tools.
+The accessibility compliance of the Splitter component is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/splitter) in a new window to evaluate the accessibility of the Splitter component with accessibility tools.
 
-{% previewsample "https://ej2.syncfusion.com/accessibility/splitter.html" %}
+{% previewsample "https://blazor.syncfusion.com/accessibility/splitter" %}
 
 ## See also
 

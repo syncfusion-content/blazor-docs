@@ -50,9 +50,9 @@ You can use the following key shortcuts to access the Inplace editor without int
 
 The Inplace editor component's accessibility levels are ensured through an [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) software tools during automated testing.
 
-The accessibility compliance of the Inplace editor component is shown in the following sample. Open the [sample](https://ej2.syncfusion.com/accessibility/inplace-editor.html) in a new window to evaluate the accessibility of the Inplace editor component with accessibility tools.
+The accessibility compliance of the Inplace editor component is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/inplace-editor) in a new window to evaluate the accessibility of the Inplace editor component with accessibility tools.
 
-{% previewsample "https://ej2.syncfusion.com/accessibility/inplace-editor.html" %}
+{% previewsample "https://blazor.syncfusion.com/accessibility/inplace-editor" %}
 
 ## See also
 

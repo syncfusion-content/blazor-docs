@@ -54,9 +54,9 @@ The following are the standard keys that works on uploader component:
 
 The Uploader component's accessibility levels are ensured through an [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) software tools during automated testing.
 
-The accessibility compliance of the Uploader component is shown in the following sample. Open the [sample](https://ej2.syncfusion.com/accessibility/uploader.html) in a new window to evaluate the accessibility of the Uploader component with accessibility tools.
+The accessibility compliance of the Uploader component is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/uploader) in a new window to evaluate the accessibility of the Uploader component with accessibility tools.
 
-{% previewsample "https://ej2.syncfusion.com/accessibility/uploader.html" %}
+{% previewsample "https://blazor.syncfusion.com/accessibility/uploader" %}
 
 ## See also
 

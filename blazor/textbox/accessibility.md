@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Accessibility in Blazor TextBox Component | Syncfusion
-description: Checkout and learn here all about accessibility in Syncfusion Blazor TextBox component and more.
+description: Discover Syncfusion Blazor TextBox Components accessibility features—easy to learn, implement, and use for all.
 platform: Blazor
 control: TextBox
 documentation: ug
@@ -52,9 +52,9 @@ The Textbox uses the `textbox` role and following ARIA properties for its elemen
 
 The Textbox component's accessibility levels are ensured through an [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) software tools during automated testing.
 
-The accessibility compliance of the Textbox component is shown in the following sample. Open the [sample](https://ej2.syncfusion.com/accessibility/textbox.html) in a new window to evaluate the accessibility of the Textbox component with accessibility tools.
+The accessibility compliance of the Textbox component is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/textbox) in a new window to evaluate the accessibility of the Textbox component with accessibility tools.
 
-{% previewsample "https://ej2.syncfusion.com/accessibility/textbox.html" %}
+{% previewsample "https://blazor.syncfusion.com/accessibility/textbox" %}
 
 ## See also
 

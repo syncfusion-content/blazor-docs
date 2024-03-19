@@ -86,9 +86,9 @@ It supports the following list of shortcut keys:
 
 The Calendar component's accessibility levels are ensured through an [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) software tools during automated testing.
 
-The accessibility compliance of the Calendar component is shown in the following sample. Open the [sample](https://ej2.syncfusion.com/accessibility/calendar.html) in a new window to evaluate the accessibility of the Calendar component with accessibility tools.
+The accessibility compliance of the Calendar component is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/calendar) in a new window to evaluate the accessibility of the Calendar component with accessibility tools.
 
-{% previewsample "https://ej2.syncfusion.com/accessibility/calendar.html" %}
+{% previewsample "https://blazor.syncfusion.com/accessibility/calendar" %}
 
 ## See also
 

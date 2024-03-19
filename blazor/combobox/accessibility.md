@@ -124,9 +124,9 @@ N> In the following sample, disable the ComboBox component using <kbd>t</kbd> ke
 
 The ComboBox component's accessibility levels are ensured through an [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) software tools during automated testing.
 
-The accessibility compliance of the ComboBox component is shown in the following sample. Open the [sample](https://ej2.syncfusion.com/accessibility/combo-box.html) in a new window to evaluate the accessibility of the ComboBox component with accessibility tools.
+The accessibility compliance of the ComboBox component is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/combobox) in a new window to evaluate the accessibility of the ComboBox component with accessibility tools.
 
-{% previewsample "https://ej2.syncfusion.com/accessibility/combo-box.html" %}
+{% previewsample "https://blazor.syncfusion.com/accessibility/combobox" %}
 
 ## See also
 
