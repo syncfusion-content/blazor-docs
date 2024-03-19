@@ -24,6 +24,12 @@ The accessibility compliance for the Gantt component is outlined below.
 | Keyboard Navigation Support | ![Yes](https://cdn.syncfusion.com/content/images/documentation/full.png) |
 | [Axe-core](https://www.npmjs.com/package/axe-core) Accessibility Validation | ![Yes](https://cdn.syncfusion.com/content/images/documentation/full.png) |
 
+<style>
+    .post .post-content img {
+        display: inline-block;
+        margin: 0.5em 0;
+    }
+</style>
 
 <div><img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> - All features of the component meet the requirement.</div>
 
