@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Accessibility in Blazor Sidebar Component | Syncfusion
-description: Checkout and learn here all about Accessibility in Syncfusion Blazor Sidebar component and more.
+description: Checkout and learn here all about Accessibility in Syncfusion Blazor Sidebar component and more details.
 platform: Blazor
 control: Sidebar
 documentation: ug
