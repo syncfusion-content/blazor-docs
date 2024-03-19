@@ -9,27 +9,47 @@ documentation: ug
 
 # Accessibility in Blazor Chart Component
 
-Accessibility is achieved in the Chart component through WAI-ARIA standard and keyboard navigation. The chart features can be effectively accessed through assistive technologies such as screen readers.
+The Blazor Chart component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
+
+The accessibility compliance for the Blazor Chart component is outlined below.
+
+| Accessibility Criteria | Compatibility |
+| -- | -- |
+| [WCAG 2.2](https://www.w3.org/TR/WCAG22/) Support | <img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> |
+| [Section 508](https://www.section508.gov/) Support | <img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> |
+| Screen Reader Support | <img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> |
+| Right-To-Left Support | <img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> |
+| Color Contrast | <img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> |
+| Mobile Device Support | <img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> |
+| Keyboard Navigation Support | <img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> |
+| [Axe-core](https://www.npmjs.com/package/axe-core) Accessibility Validation | <img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> |
+
+<style>
+    .post .post-content img {
+        display: inline-block;
+        margin: 0.5em 0;
+    }
+</style>
+<div><img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> - All features of the control meet the requirement.</div>
+
+<div><img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Intermediate"> - Some features of the control do not meet the requirement.</div>
+
+<div><img src="https://cdn.syncfusion.com/content/images/documentation/not-supported.png" alt="No"> - The control does not meet the requirement.</div>
 
 ## WAI-ARIA
 
-WAI-ARIA(Accessibility Initiative - Accessible Rich Internet Applications) defines a way to increase the accessibility of web pages, dynamic content, and user interface components developed with AJAX, HTML, Javascript, and related technologies. ARIA provides additional semantics to describe the role, state, and functionality of web components.
+The Blazor Chart component followed the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/alert/) patterns to meet the accessibility. The following ARIA attributes are used in the Blazor Chart component:
 
-The following ARIA attributes are used in the chart:
-
-Element |Default description
------|-----
-Datalabel |Reads the Point y value.
-Legend |Click to show or hide the series.
-Axis Title |Reads the axis title.
-Chart Title |Reads the chart title.
-Series Points |Reads the Point x: Point y value.
+* img (role)
+* button (role)
+* region (role)
+* aria-label (attribute)
+* aria-hidden (attribute)
+* aria-pressed (attribute)
 
 ## Keyboard navigation
 
-Chart functionalities can be interactive with keyboard shortcuts.
-
-The following keyboard shortcuts are supported by Chart.
+The Blazor Chart component followed the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/alert/#keyboardinteraction) guideline, making it easy for people who use assistive technologies (AT) and those who completely rely on keyboard navigation. The following keyboard shortcuts are supported by the Blazor Chart component.
 
 Interaction Keys |Description
 -----|-----
@@ -50,3 +70,13 @@ Interaction Keys |Description
 <kbd>Left/Right Arrow</kbd> |Pans the chart horizontally.
 <kbd>R</kbd> |Reset the zoomed chart.
 <kbd>Ctrl + P</kbd> |Prints the Chart.
+
+## Ensuring accessibility
+
+The Blazor Chart component's accessibility levels are ensured through an [axe-core](https://www.nuget.org/packages/Deque.AxeCore.Playwright) with playwright tests.
+
+The accessibility compliance of the Blazor Chart component is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/chart) in a new window to evaluate the accessibility of the Blazor Chart component with accessibility tools.
+
+## See also
+
+* [Accessibility in Syncfusion Blazor components](https://blazor.syncfusion.com/documentation/common/accessibility)
