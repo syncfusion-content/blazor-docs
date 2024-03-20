@@ -39,7 +39,7 @@ The accessibility compliance for the Blazor Stepper component is outlined below.
 
 ## Keyboard interaction
 
-The Blazor Stepper component followed the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/menubar/#keyboardinteraction) guideline, making it easy for people who use assistive technologies (AT) and those who completely rely on keyboard navigation. The following keyboard shortcuts are supported by the Blazor Stepper component.
+The Blazor Stepper component followed the keyboard interaction guideline, making it easy for people who use assistive technologies (AT) and those who completely rely on keyboard navigation. The following keyboard shortcuts are supported by the Blazor Stepper component.
 
 | **Keyboard shortcuts** | **Actions** |
 | --- | --- |
@@ -53,7 +53,7 @@ The Blazor Stepper component followed the [keyboard interaction](https://www.w3.
 
 ## ARIA attribute
 
-The Blazor Stepper component followed the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/menubar/) patterns to meet the accessibility.The following ARIA attributes are used in Blazor Stepper component based on its state.
+The Stepper component is interactive with the below keyboard shortcuts.
 
 | Properties | Functionality |
 | ------------ | ----------------------- |

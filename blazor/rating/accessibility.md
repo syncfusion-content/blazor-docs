@@ -39,7 +39,7 @@ The accessibility compliance for the Blazor Rating component is outlined below.
 
 ## Keyboard interaction
 
-The Blazor Rating component followed the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/slider/#keyboardinteraction) guideline, making it easy for people who use assistive technologies (AT) and those who completely rely on keyboard navigation. The following keyboard shortcuts are supported by the Blazor Rating component.
+The Blazor Rating component followed the keyboard interaction guideline, making it easy for people who use assistive technologies (AT) and those who completely rely on keyboard navigation. The following keyboard shortcuts are supported by the Blazor Rating component.
 
 | Keyboard shortcuts | Actions |
 |------------|-------------------|
@@ -51,7 +51,7 @@ The Blazor Rating component followed the [keyboard interaction](https://www.w3.o
 
 ## ARIA attributes
 
-The Blazor Rating component followed the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/slider/) patterns to meet the accessibility. The following ARIA attributes are used in the Blazor Rating component:
+The Blazor Rating component followed the WAI-ARIA patterns to meet the accessibility. The following ARIA attributes are used in the Blazor Rating component:
 
 | Properties | Functionality |
 | ------------ | ----------------------- |

@@ -37,9 +37,9 @@ The accessibility compliance for the Blazor Skeleton component is outlined below
 
 <div><img src="https://cdn.syncfusion.com/content/images/documentation/not-supported.png" alt="No"> - The component does not meet the requirement.</div>
 
-## WAI-ARIA attributes
+## ARIA attributes
 
-The Blazor Skeleton component followed the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/alert/) patterns to meet the accessibility. The following ARIA attributes are used in the Blazor Skeleton component:
+The Skeleton component characterized with complete ARIA accessibility support that helps to be accessible by on-screen readers and other assistive technology devices. The following ARIA attributes are applicable for Skeleton component.
 
 | Properties | Functionality |
 | ------------ | ----------------------- |
