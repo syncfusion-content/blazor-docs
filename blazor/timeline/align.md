@@ -9,11 +9,11 @@ documentation: ug
 
 # Alignment in Blazor Timeline component
 
-You can display the Timeline content `Before`, `After`, `Alternate` and `AlternateReverse` by using the `Align` property. The oppositeContent will be displayed parallel to the content when configured in the `TimelineItem` directive.
+You can display the Timeline content `Before`, `After`, `Alternate` and `AlternateReverse` by using the [Alignment](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.SfTimeline.html#Syncfusion_Blazor_Layouts_SfTimeline_Alignment) property. The oppositeContent will be displayed parallel to the content when configured in the [TimelineItem](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.TimelineItem.html) directive.
 
 ## Before
 
-In `Before` alignment, for `horizontal` orientation the item content is placed at the top and oppositeContent at the bottom whereas in `vertical`, the content to the left and oppositeContent to the right.
+In [Before](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.TimelineAlignment.html) alignment, for `horizontal` orientation the item content is placed at the top and oppositeContent at the bottom whereas in `vertical`, the content to the left and oppositeContent to the right.
 
 ```cshtml
 
@@ -54,7 +54,7 @@ In `Before` alignment, for `horizontal` orientation the item content is placed a
 
 ## After
 
-In `After` alignment, for `horizontal` orientation the item content is placed at the bottom and oppositeContent at the top whereas in `vertical`, the content to the right and oppositeContent to the left.
+In [After](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.TimelineAlignment.html) alignment, for `horizontal` orientation the item content is placed at the bottom and oppositeContent at the top whereas in `vertical`, the content to the right and oppositeContent to the left.
 
 ```cshtml
 
@@ -95,7 +95,7 @@ In `After` alignment, for `horizontal` orientation the item content is placed at
 
 ## Alternate
 
-In `Alternate` alignment, the item content are arranged alternatively regardless of the Timeline orientation.
+In [Alternate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.TimelineAlignment.html) alignment, the item content are arranged alternatively regardless of the Timeline orientation.
 
 ```cshtml
 
@@ -136,7 +136,7 @@ In `Alternate` alignment, the item content are arranged alternatively regardless
 
 ## Alternate reverse
 
-In `AlternateReverse` alignment, the item content are arranged in reverse alternate regardless of the Timeline orientation.
+In [AlternateReverse](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.TimelineAlignment.html) alignment, the item content are arranged in reverse alternate regardless of the Timeline orientation.
 
 ```cshtml
 

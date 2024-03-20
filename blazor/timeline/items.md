@@ -9,11 +9,11 @@ documentation: ug
 
 # Items in Blazor Timeline component
 
-The Timeline items can be added by using the `TimelineItem` tag directive. Each item can be configured with options such as `Content`, `OppositeContent`, `DotCss`, `Disabled` and `CssClass`.
+The Timeline items can be added by using the [TimelineItem](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.TimelineItem.html) tag directive. Each item can be configured with options such as `Content`, `OppositeContent`, `DotCss`, `Disabled` and `CssClass`.
 
 ## Adding content
 
-You can define the item content using the `Content` tag directives as a child to `TimelineItem` directive.
+You can define the item content using the [Content](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.TimelineItem.html#Syncfusion_Blazor_Layouts_TimelineItem_Content) tag directives as a child to `TimelineItem` directive.
 
 ### String content
 
@@ -150,7 +150,7 @@ You can specify the template content for the items in the `Content` tag directiv
 
 ## Adding opposite content
 
-You can add additional information to each Timeline item, by using `OppositeContent` tag directive as a child to `TimelineItem` which is positioned opposite to the item content. Similar to the `Content` property you can define `string` and template contents to the OppositeContent.
+You can add additional information to each Timeline item, by using [OppositeContent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.TimelineItem.html#Syncfusion_Blazor_Layouts_TimelineItem_OppositeContent) tag directive as a child to `TimelineItem` which is positioned opposite to the item content. Similar to the `Content` property you can define `string` and template contents to the OppositeContent.
 
 ```cshtml
 
@@ -194,7 +194,7 @@ You can add additional information to each Timeline item, by using `OppositeCont
 
 ## Dot item
 
-You can define CSS class to set icons, background colors, or images to personalize the appearance of dots associated with each Timeline item by using the `DotCss` property.
+You can define CSS class to set icons, background colors, or images to personalize the appearance of dots associated with each Timeline item by using the [DotCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.TimelineItem.html#Syncfusion_Blazor_Layouts_TimelineItem_DotCss) property.
 
 ### Adding icons
 
@@ -259,7 +259,7 @@ You can display text for the Timeline items using the `DotCss` property, by addi
 
 ## Disabling items
 
-You can use the `Disabled` property to disable an item when set to `true`. By default, the value is `false`.
+You can use the [Disabled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.TimelineItem.html#Syncfusion_Blazor_Layouts_TimelineItem_Disabled) property to disable an item when set to `true`. By default, the value is `false`.
 
 ```cshtml
 
@@ -301,4 +301,4 @@ You can use the `Disabled` property to disable an item when set to `true`. By de
 
 ## CSS class
 
-You can customize the appearance of the Timeline item by specifying a custom CSS class using the `CssClass` property.
+You can customize the appearance of the Timeline item by specifying a custom CSS class using the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.TimelineItem.html#Syncfusion_Blazor_Layouts_TimelineItem_CssClass) property.
