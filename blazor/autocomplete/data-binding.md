@@ -368,5 +368,3 @@ Add the new item in the popup with the help of [AddItemsAsync](https://help.sync
 {% include_relative code-snippet/data-binding/add-new-item.razor %}
 
 {% endhighlight %}
-
-![Blazor AutoComplete with adding new Item](./images/data-binding/blazor_autocomplete_add-new-item.png)
