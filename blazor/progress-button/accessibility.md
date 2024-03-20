@@ -38,7 +38,7 @@ The accessibility compliance for the Blazor ProgressButton component is outlined
 
 ## WAI-ARIA attributes
 
-The Blazor ProgressButton component followed the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/alert/) patterns to meet the accessibility. The following ARIA attributes are used in the Blazor ProgressButton component:
+The Blazor ProgressButton component followed the WAI-ARIA patterns to meet the accessibility. The following ARIA attributes are used in the Blazor ProgressButton component:
 
 | Attributes | Purpose |
 | --- | --- |
@@ -47,7 +47,7 @@ The Blazor ProgressButton component followed the [WAI-ARIA](https://www.w3.org/W
 
 ## Keyboard interaction
 
-The Blazor ProgressButton component followed the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/menubar/#keyboardinteraction) guideline, making it easy for people who use assistive technologies (AT) and those who completely rely on keyboard navigation. The following keyboard shortcuts are supported by the Blazor ProgressButton component.
+The Blazor ProgressButton component followed the keyboard interaction guideline, making it easy for people who use assistive technologies (AT) and those who completely rely on keyboard navigation. The following keyboard shortcuts are supported by the Blazor ProgressButton component.
 
 | **Press** | **To do this** |
 | --- | --- |

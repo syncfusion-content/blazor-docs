@@ -38,7 +38,7 @@ The accessibility compliance for the Blazor SplitButton component is outlined be
 
 ## WAI-ARIA attributes
 
-The Blazor SplitButton component followed the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/radio/) patterns to meet the accessibility. The following ARIA attributes are used in the Blazor SplitButton component:
+The Blazor SplitButton component followed the WAI-ARIA patterns to meet the accessibility. The following ARIA attributes are used in the Blazor SplitButton component:
 
 | Attributes | Purpose |
 | --- | --- |
@@ -50,7 +50,7 @@ The Blazor SplitButton component followed the [WAI-ARIA](https://www.w3.org/WAI/
 
 ## Keyboard interaction
 
-The Blazor SplitButton component followed the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/radio/#keyboardinteraction) guideline, making it easy for people who use assistive technologies (AT) and those who completely rely on keyboard navigation. The following keyboard shortcuts are supported by the Blazor SplitButton component.
+The Blazor SplitButton component followed the keyboard interaction guideline, making it easy for people who use assistive technologies (AT) and those who completely rely on keyboard navigation. The following keyboard shortcuts are supported by the Blazor SplitButton component.
 
 | **Press** | **To do this** |
 | --- | --- |

@@ -38,7 +38,7 @@ The accessibility compliance for the Blazor Dropdown Menu component is outlined 
 
 ## WAI-ARIA attributes
 
-The Blazor Dropdown Menu component followed the [WAI-ARIA] patterns to meet the accessibility. The following ARIA attributes are used in the Blazor Dropdown Menu component:
+The Blazor Dropdown Menu component followed the WAI-ARIA patterns to meet the accessibility. The following ARIA attributes are used in the Blazor Dropdown Menu component:
 
 | Attributes | Purpose |
 | --- | --- |
@@ -50,7 +50,7 @@ The Blazor Dropdown Menu component followed the [WAI-ARIA] patterns to meet the 
 
 ## Keyboard interaction
 
-The Blazor Dropdown button component followed the [keyboard interaction] guideline, making it easy for people who use assistive technologies (AT) and those who completely rely on keyboard navigation. The following keyboard shortcuts are supported by the Blazor Dropdown Menu component.
+The Blazor Dropdown button component followed the keyboard interaction guideline, making it easy for people who use assistive technologies (AT) and those who completely rely on keyboard navigation. The following keyboard shortcuts are supported by the Blazor Dropdown Menu component.
 
 | **Press** | **To do this** |
 | --- | --- |

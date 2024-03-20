@@ -38,7 +38,7 @@ The accessibility compliance for the Blazor Query Builder component is outlined 
 
 ## WAI-ARIA attributes
 
-The Blazor Query Builder component followed the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/alert/) patterns to meet the accessibility. The following ARIA attributes are used in the Blazor Query Builder component:
+WAI-ARIA (Accessibility Initiative – Accessible Rich Internet Applications) defines a way to increase the accessibility of web pages, dynamic content, and user interface components developed with Ajax, HTML, JavaScript, and related technologies. ARIA provides additional semantics to describe the role, state, and functionality of web components.
 
 The following list of ARIA attributes is used in Blazor Query Builder.
 
@@ -48,7 +48,7 @@ The following list of ARIA attributes is used in Blazor Query Builder.
 
 ## Keyboard interaction
 
-The Blazor Query Builder component followed the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/menubar/#keyboardinteraction) guideline, making it easy for people who use assistive technologies (AT) and those who completely rely on keyboard navigation. The following keyboard shortcuts are supported by the Blazor Query Builder component.
+The Query Builder component followed the keyboard interaction guideline, making it easy for people who use assistive technologies (AT) and those who completely rely on keyboard navigation. The following keyboard shortcuts are supported by the Query Builder component.
 
 | **Press** | **To do this** |
 | --- | --- |
