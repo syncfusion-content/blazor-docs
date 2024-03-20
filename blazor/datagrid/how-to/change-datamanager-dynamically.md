@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Change SfDataManager dynamically in Syncfusion Blazor DataGrid Component
+title: Change SfDataManager dynamically in Syncfusion Blazor DataGrid
 description: Learn here all about Change SfDataManager dynamically in Syncfusion Blazor DataGrid component and more.
 platform: Blazor
 control: DataGrid
