@@ -6,7 +6,7 @@ platform: Blazor
 control: Pivot Table
 documentation: ug
 ---
-# Data Compression Blazor Pivot Table Component
+# Data Compression in Blazor Pivot Table Component
 
 > This property is applicable only for relational data source.
 

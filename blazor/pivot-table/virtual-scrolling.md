@@ -87,7 +87,7 @@ Allows to load the large amounts of data without any performance degradation by 
 
 ![Virtual Scrolling in Blazor PivotTable](images/blazor-pivottable-virtual-scroll.png)
 
-## Virtual scrolling with Single Page Mode
+## Virtual scrolling with single page mode
 
 When virtual scrolling is enabled, the pivot table renders not only the current view page, but also the previous and next pages by default. This default behavior, however, can cause performance delays when dealing with a large number of rows and columns. This is because the same number of rows and columns from adjacent pages are also processed, resulting in additional computational load. This performance constraint can be avoided by setting the [AllowSinglePage](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewVirtualScrollSettings.html#Syncfusion_Blazor_PivotView_PivotViewVirtualScrollSettings_AllowSinglePage) property to **true** within the [PivotViewVirtualScrollSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewVirtualScrollSettings.html).
 
