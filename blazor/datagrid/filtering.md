@@ -478,15 +478,15 @@ Between |Filter the values based on the range between the start and end specifie
 
 > By default, the **Operator** value is **Equal** in [Columns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridFilterSettings.html#Syncfusion_Blazor_Grids_GridFilterSettings_Columns) property of **GridFilterSettings** component.
 
-## Wildcard and Like operator filter
+## WildCard and Like operator filter
 
-**Wildcard** and **Like** filter operators filter value based on the given string pattern, and they apply to string-type columns. But it will work slightly differently.
+**WildCard** and **Like** filter operators filter value based on the given string pattern, and they apply to string-type columns. But it will work slightly differently.
 
-### Wildcard filtering
+### WildCard filtering
 
-The **Wildcard** filter can process one or more search patterns using the “*” symbol, retrieving values matching the specified patterns.
+The **WildCard** filter can process one or more search patterns using the “*” symbol, retrieving values matching the specified patterns.
 
-* The **Wildcard** filter option is supported for the DataGrid that has all search options.
+* The **WildCard** filter option is supported for the DataGrid that has all search options.
 
 Operator |Description
 -----|-----|
@@ -496,9 +496,9 @@ a* | Everything that starts with “a”.
 a | Everything that has an “a” in it.
 ab* | Everything that has an “a” in it, followed by anything, followed by a “b”, followed by anything.
 
-The following GIF represent a Wildcard operator filtering.
+The following GIF represent a WildCard operator filtering.
 
-![Blazor DataGrid with Wildcard operator filtering](./images/blazor-datagrid-wildcard-operator-filtering.gif)
+![Blazor DataGrid with WildCard operator filtering](./images/blazor-datagrid-wildcard-operator-filtering.gif)
 
 ### Like filtering
 The Like filter can process single search patterns using the “%” symbol, retrieving values matching the specified patterns. The following Grid features support Like filtering on string-type columns:
