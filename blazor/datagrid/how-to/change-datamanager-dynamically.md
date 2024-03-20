@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Change SfDataManager dynamically in Syncfusion Blazor DataGrid
+title: Change the JSON collection dynamically in the DataManager
 description: Learn here all about Change SfDataManager dynamically in Syncfusion Blazor DataGrid component and more.
 platform: Blazor
 control: DataGrid
 documentation: ug
 ---
 
-# Change SfDataManager Dynamically in Blazor DataGrid Component
+# Change the JSON collection dynamically in the DataManager
 
 You can change the data by using the [Json](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_Json) property of the [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) component through an external button. After changing the data, invoke the [Refresh](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Refresh) method of the DataGrid component to reflect the changes in the grid.
 
