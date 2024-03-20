@@ -324,7 +324,7 @@ The mandatory indicator `*` can be applied to the placeholder by targeting its C
 
 ## Customizing the text selection color
 
-The appearance of a selected item within a autocomplete component can be customized by targeting the CSS class `input.e-input::selection` and set the desired background color and text color. This customization will only be applied when the item is selected manually. To achieve this, use the `background-color` and `color` properties of the CSS class `input.e-input::selection`.
+The appearance of a selected item within a AutoComplete component can be customized by targeting the CSS class `input.e-input::selection` and set the desired background color and text color. This customization will only be applied when the item is selected manually. To achieve this, use the `background-color` and `color` properties of the CSS class `input.e-input::selection`.
 
 {% highlight cshtml %}
 
