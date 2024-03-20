@@ -461,14 +461,62 @@ Operator |Description |Supported Types
 StartsWith |Checks whether the value begins with the specified value. |String
 EndsWith |Checks whether the value ends with the specified value. |String
 Contains |Checks whether the value contains the specified value. |String
+DoesNotStartWith |Checks whether the value does not begin with the specified value. |String
+DoesNotEndWith |Checks whether the value does not end with the specified value. |String
+DoesNotContain |Checks whether the value does not contain the specified value. |String
 Equal |Checks whether the value is equal to the specified value. |String &#124; Number &#124; Boolean &#124; Date
 NotEqual |Checks for values not equal to the specified value. |String &#124; Number &#124; Boolean &#124; Date
 GreaterThan |Checks whether the value is greater than the specified value. |Number &#124; Date
 GreaterThanOrEqual |Checks whether a value is greater than or equal to the specified value. |Number &#124; Date
 LessThan |Checks whether the value is less than the specified value. |Number &#124; Date
 LessThanOrEqual |Checks whether the value is less than or equal to the specified value. |Number &#124; Date
+IsNull |Returns the values that are null. |String &#124; Number &#124; Date
+IsNotNull |Returns the values that are not null. |String &#124; Number &#124; Date
+IsEmpty |Returns the values that are empty. |String
+IsNotEmpty |Returns the values that are not empty. |String
+between |Filter the values based on the range between the start and end specified values. |Number &#124; Date
 
 > By default, the **Operator** value is **Equal** in [Columns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridFilterSettings.html#Syncfusion_Blazor_Grids_GridFilterSettings_Columns) property of **GridFilterSettings** component.
+
+## Wildcard and LIKE operator filter
+
+**Wildcard** and **LIKE** filter operators filter value based on the given string pattern, and they apply to string-type columns. But it will work slightly differently.
+
+### Wildcard filtering
+
+The **Wildcard** filter can process one or more search patterns using the “*” symbol, retrieving values matching the specified patterns.
+
+* The **Wildcard** filter option is supported for the DataGrid that has all search options.
+
+Operator |Description
+-----|-----|
+a*b | Everything that starts with “a” and ends with “b”.
+a* | Everything that starts with “a”.
+*b | Everything that ends with “b”.
+a | Everything that has an “a” in it.
+ab* | Everything that has an “a” in it, followed by anything, followed by a “b”, followed by anything.
+
+The following GIF represent a Wildcard operator filtering.
+
+![Blazor DataGrid with Wildcard operator filtering](./images/blazor-datagrid-wildcard-operator-filtering.gif)
+
+### LIKE filtering
+The LIKE filter can process single search patterns using the “%” symbol, retrieving values matching the specified patterns. The following Grid features support LIKE filtering on string-type columns:
+
+* Filter Menu
+* Filter Bar using the [Operator](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.FilterSettings.html#Syncfusion_Blazor_Grids_FilterSettings_Operator) property within the [GridFilterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_FilterSettings) configuration.
+* Custom Filter of Excel filter type.
+
+**For example**
+Operator |Description
+-----|-----|
+%ab% | Returns all the value that are contains “ab” character.
+ab% | Returns all the value that are ends with “ab” character.
+%ab | Returns all the value that are starts with “ab” character.
+
+The following GIF represent a LIKE operator filtering.
+
+![Blazor DataGrid with LIKE operator filtering](./images/blazor-datagrid-like-operator-filtering.gif)
 
 ## Filtering with case sensitivity
 
