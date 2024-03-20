@@ -33,7 +33,7 @@ Event Name | Description
 
 ## List object
 
-Blazor FileManager can be populated with local data that contains the list of objects with `ParentID` mapping.
+Blazor FileManager can be populated with local data that contains the list of objects with [ParentID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerDirectoryContent.html#Syncfusion_Blazor_FileManager_FileManagerDirectoryContent_ParentId) mapping.
 
 To render the root-level folder, specify the ParentID as null, or there is no need to specify the ParentID in the local list object.
 
