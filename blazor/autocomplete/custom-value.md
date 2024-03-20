@@ -15,9 +15,5 @@ The AutoComplete allows the users to give input as custom value, which is not re
 
 {% include_relative code-snippet/custom-value/custom-value-enable.razor %}
 
-{% endhighlight %} 
-
-![Blazor AutoComplete with custom value](./images/filtering/custom-value-enable.png)
-
-## Custom value with Int type
+{% endhighlight %}
 

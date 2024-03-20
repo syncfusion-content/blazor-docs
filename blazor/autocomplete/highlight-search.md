@@ -7,7 +7,7 @@ control: AutoComplete
 documentation: ug
 ---
 
-# Highlight Search
+# Highlight Search Blazor AutoComplete Component
 
 You can highlight the search text in the suggested list items of the autocomplete component by using the `Highlight` property. When set to true, it will highlight the characters that match the search query in the list items.
 
