@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Change the JSON collection dynamically in the DataManager
+title: Change JSON collection dynamically in Syncfusion DataManager
 description: Learn here all about Change SfDataManager dynamically in Syncfusion Blazor DataGrid component and more.
 platform: Blazor
 control: DataGrid
