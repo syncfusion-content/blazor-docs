@@ -9,29 +9,29 @@ documentation: ug
 
 # Flat data rendering in Blazor FileManager component
 
-The Blazor FileManager component provides the option to load data either from a local object or from an injected service. This can be done through the newly introduced event support for actions performed within the FileManager component.
+The Blazor FileManager component provides the option to load a list of objects. This can be achieved by providing the response within the corresponding events.
 
 **Event information**
 
 Event Name | Description
  ---  | ---
-[OnRead](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerEvents-1.html#Syncfusion_Blazor_FileManager_FileManagerEvents_1_OnRead) | Gets or sets an event callback that will be invoked when the initial data is set and when the sub folders data are read.
-[ItemsDeleting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerEvents-1.html#Syncfusion_Blazor_FileManager_FileManagerEvents_1_ItemsDeleting) | Gets or sets an event callback that will be invoked before the delete operation takes place.
-[ItemsDeleted](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerEvents-1.html#Syncfusion_Blazor_FileManager_FileManagerEvents_1_ItemsDeleted) | Gets or sets an event callback that will be invoked when the file or folder is deleted successfully.
-[FolderCreating](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerEvents-1.html#Syncfusion_Blazor_FileManager_FileManagerEvents_1_FolderCreating) | Gets or sets an event callback that will be invoked before the folder is being created.
-[FolderCreated](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerEvents-1.html#Syncfusion_Blazor_FileManager_FileManagerEvents_1_FolderCreated) | Gets or sets an event callback that will be invoked when the new folder is created successfully. 
-[Searching](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerEvents-1.html#Syncfusion_Blazor_FileManager_FileManagerEvents_1_Searching) | Gets or sets an event callback that will be invoked when the character is entered in input box for searching files or folders.
-[Searched](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerEvents-1.html#Syncfusion_Blazor_FileManager_FileManagerEvents_1_Searched) | Gets or sets an event callback that will be invoked when the search action is completed.
-[ItemRenaming](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerEvents-1.html#Syncfusion_Blazor_FileManager_FileManagerEvents_1_ItemRenaming) | Gets or sets an event callback that will be invoked when the file or folder is being renamed.
-[ItemRenamed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerEvents-1.html#Syncfusion_Blazor_FileManager_FileManagerEvents_1_ItemRenamed) | Gets or sets an event callback that will be invoked when the file or folder is renamed successfully.
-[ItemsMoving](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerEvents-1.html#Syncfusion_Blazor_FileManager_FileManagerEvents_1_ItemsMoving) | Gets or sets an event callback that will be invoked when the file or folder is being cut or copied for the reason to be pasted in another path.
-[ItemsMoved](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerEvents-1.html#Syncfusion_Blazor_FileManager_FileManagerEvents_1_ItemsMoved) | Gets or sets an event callback that will be invoked when the file or folder is being pasted to the destination path.
-[ItemsUploading](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerEvents-1.html#Syncfusion_Blazor_FileManager_FileManagerEvents_1_ItemsUploading) | Gets or sets an event callback that will be invoked when the file or folder upload begins.
-[ItemsUploaded](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerEvents-1.html#Syncfusion_Blazor_FileManager_FileManagerEvents_1_ItemsUploaded) | Gets or sets an event callback that will be invoked when the file or folder is uploaded.
-[BeforeImageLoad](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerEvents-1.html#Syncfusion_Blazor_FileManager_FileManagerEvents_1_BeforeImageLoad) | Gets or sets an event callback that will be invoked before sending the image request to the server.
-[BeforeDownload](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerEvents-1.html#Syncfusion_Blazor_FileManager_FileManagerEvents_1_BeforeDownload)  | Gets or sets an event callback that will be invoked before sending the download request to the server.
+[OnRead](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerEvents-1.html#Syncfusion_Blazor_FileManager_FileManagerEvents_1_OnRead) | An event callback that will be invoked when the initial data is set and when the sub folders data are read.
+[ItemsDeleting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerEvents-1.html#Syncfusion_Blazor_FileManager_FileManagerEvents_1_ItemsDeleting) | An event callback that will be invoked before the delete operation takes place.
+[ItemsDeleted](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerEvents-1.html#Syncfusion_Blazor_FileManager_FileManagerEvents_1_ItemsDeleted) | An event callback that will be invoked when the file or folder is deleted successfully.
+[FolderCreating](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerEvents-1.html#Syncfusion_Blazor_FileManager_FileManagerEvents_1_FolderCreating) | An event callback that will be invoked before the folder is being created.
+[FolderCreated](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerEvents-1.html#Syncfusion_Blazor_FileManager_FileManagerEvents_1_FolderCreated) | An event callback that will be invoked when the new folder is created successfully. 
+[Searching](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerEvents-1.html#Syncfusion_Blazor_FileManager_FileManagerEvents_1_Searching) | An event callback that will be invoked when the character is entered in input box for searching files or folders.
+[Searched](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerEvents-1.html#Syncfusion_Blazor_FileManager_FileManagerEvents_1_Searched) | An event callback that will be invoked when the search action is completed.
+[ItemRenaming](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerEvents-1.html#Syncfusion_Blazor_FileManager_FileManagerEvents_1_ItemRenaming) | An event callback that will be invoked when the file or folder is being renamed.
+[ItemRenamed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerEvents-1.html#Syncfusion_Blazor_FileManager_FileManagerEvents_1_ItemRenamed) | An event callback that will be invoked when the file or folder is renamed successfully.
+[ItemsMoving](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerEvents-1.html#Syncfusion_Blazor_FileManager_FileManagerEvents_1_ItemsMoving) | An event callback that will be invoked when the file or folder is being cut or copied for the reason to be pasted in another path.
+[ItemsMoved](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerEvents-1.html#Syncfusion_Blazor_FileManager_FileManagerEvents_1_ItemsMoved) | An event callback that will be invoked when the file or folder is being pasted to the destination path.
+[ItemsUploading](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerEvents-1.html#Syncfusion_Blazor_FileManager_FileManagerEvents_1_ItemsUploading) | An event callback that will be invoked when the file or folder upload begins.
+[ItemsUploaded](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerEvents-1.html#Syncfusion_Blazor_FileManager_FileManagerEvents_1_ItemsUploaded) | An event callback that will be invoked when the file or folder is uploaded.
+[BeforeImageLoad](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerEvents-1.html#Syncfusion_Blazor_FileManager_FileManagerEvents_1_BeforeImageLoad) | An event callback that will be invoked before sending the image request to the server.
+[BeforeDownload](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerEvents-1.html#Syncfusion_Blazor_FileManager_FileManagerEvents_1_BeforeDownload)  | An event callback that will be invoked before sending the download request to the server.
 
-## Local object
+## List object
 
 Blazor FileManager can be populated with local data that contains the list of objects with `ParentID` mapping.
 
@@ -42,130 +42,128 @@ To render the root-level folder, specify the ParentID as null, or there is no ne
 @using Syncfusion.Blazor.FileManager
 
  <SfFileManager TValue="FileManagerDirectoryContent">
-    <FileManagerEvents TValue="FileManagerDirectoryContent" OnRead="OnRead"></FileManagerEvents>
+    <FileManagerEvents TValue="FileManagerDirectoryContent" OnRead="OnReadAsync"></FileManagerEvents>
  </SfFileManager>
 
 @code
 {
-    List<FileManagerDirectoryContent> Data = new List<FileManagerDirectoryContent>();
+    List<FileManagerDirectoryContent> Data { get; set; }
 
     protected override void OnInitialized()
     {
-        GetData();
-    }
-    private async Task OnRead(ReadEventArgs<FileManagerDirectoryContent> args)
-    {
-        args.Response = await ReadAsync(args.Path, args.Folder);
-    }
-    private void GetData()
-    {
-            Data.Add(new FileManagerDirectoryContent()
-            {
-                CaseSensitive = false,
-                DateCreated = new DateTime(2022, 1, 2),
-                DateModified = new DateTime(2022, 2, 3),
-                FilterPath = "",
-                FilterId = "",
-                HasChild = true,
-                Id = "0",
-                IsFile = false,
-                Name = "Files",
-                ParentId = null,
-                ShowHiddenItems = false,
-                Size = 1779448,
-                Type = "folder"
-            });
-            Data.Add(new FileManagerDirectoryContent()
-            {
-                CaseSensitive = false,
-                DateCreated = new DateTime(2022, 1, 2),
-                DateModified = new DateTime(2022, 2, 3),
-                FilterId = "0/",
-                FilterPath = "/",
-                HasChild = false,
-                Id = "1",
-                IsFile = false,
-                Name = "Documents",
-                ParentId = "0",
-                ShowHiddenItems = false,
-                Size = 680786,
-                Type = "folder"
-            });
-            Data.Add(new FileManagerDirectoryContent()
-            {
-                CaseSensitive = false,
-                DateCreated = new DateTime(2022, 1, 2),
-                DateModified = new DateTime(2022, 2, 3),
-                FilterId = "0/",
-                FilterPath = "/",
-                HasChild = false,
-                Id = "2",
-                IsFile = false,
-                Name = "Downloads",
-                ParentId = "0",
-                ShowHiddenItems = false,
-                Size = 6172,
-                Type = "folder"
-            });
-            Data.Add(new FileManagerDirectoryContent()
-            {
-                CaseSensitive = false,
-                DateCreated = new DateTime(2022, 1, 2),
-                DateModified = new DateTime(2022, 2, 3),
-                FilterId = "0/1/",
-                FilterPath = "/Documents/",
-                HasChild = false,
-                Id = "5",
-                IsFile = true,
-                Name = "EJ2 File Manager.docx",
-                ParentId = "1",
-                ShowHiddenItems = false,
-                Size = 12403,
-                Type = ".docx"
-            });
-            Data.Add(new FileManagerDirectoryContent()
-            {
-                CaseSensitive = false,
-                DateCreated = new DateTime(2022, 1, 2),
-                DateModified = new DateTime(2022, 2, 3),
-                FilterId = "0/1/",
-                FilterPath = "/Documents/",
-                HasChild = false,
-                Id = "6",
-                IsFile = true,
-                Name = "EJ2 File Manager.pdf",
-                ParentId = "1",
-                ShowHiddenItems = false,
-                Size = 90099,
-                Type = ".pdf"
-            });
+        Data = GetData();
     }
 
-    public async Task<FileManagerResponse<FileManagerDirectoryContent>> ReadAsync(string path, List<FileManagerDirectoryContent> fileDetails)
+    private async Task OnReadAsync(ReadEventArgs<FileManagerDirectoryContent> args)
     {
-            FileManagerResponse<FileManagerDirectoryContent> response = new FileManagerResponse<FileManagerDirectoryContent>();
-            if (path == "/")
-            {
-                string ParentId = Data
-                    .Where(x => x.FilterPath == string.Empty)
-                    .Select(x => x.Id).First();
-                response.CWD = Data
-                    .Where(x => x.FilterPath == string.Empty).First();
-                response.Files = Data
-                    .Where(x => x.ParentId == ParentId).ToList();
-            }
-            else
-            {
-                var id = fileDetails.Count > 0 && fileDetails[0] != null ? fileDetails[0].Id : Data
-                    .Where(x => x.FilterPath == path)
-                    .Select(x => x.ParentId).First();
-                response.CWD = Data
-                    .Where(x => x.Id == (fileDetails.Count > 0 && fileDetails[0] != null ? fileDetails[0].Id : id)).First();
-                response.Files = Data
-                    .Where(x => x.ParentId == (fileDetails.Count > 0 && fileDetails[0] != null ? fileDetails[0].Id : id)).ToList();
-            }
-            await Task.Yield();
-            return await Task.FromResult(response);
+        string path = args.Path;
+        List<FileManagerDirectoryContent> fileDetails = args.Folder;
+        FileManagerResponse<FileManagerDirectoryContent> response = new FileManagerResponse<FileManagerDirectoryContent>();
+        if (path == "/")
+        {
+            string ParentId = Data
+                .Where(x => string.IsNullOrEmpty(x.ParentId))
+                .Select(x => x.Id).First();
+            response.CWD = Data
+                .Where(x => string.IsNullOrEmpty(x.ParentId)).First();
+            response.Files = Data
+                .Where(x => x.ParentId == ParentId).ToList();
+        }
+        else
+        {
+            var childItem = fileDetails.Count > 0 && fileDetails[0] != null ? fileDetails[0] : Data
+                .Where(x => x.FilterPath == path).First();
+            response.CWD = childItem;
+            response.Files = Data
+                .Where(x => x.ParentId == childItem.Id).ToList();
+        }
+        await Task.Yield();
+        args.Response = response;
+    }
+
+    private List<FileManagerDirectoryContent> GetData()
+    {
+        List<FileManagerDirectoryContent> data = new List<FileManagerDirectoryContent>();
+        data.Add(new FileManagerDirectoryContent()
+        {
+            CaseSensitive = false,
+            DateCreated = new DateTime(2022, 1, 2),
+            DateModified = new DateTime(2022, 2, 3),
+            FilterPath = "",
+            FilterId = "",
+            HasChild = true,
+            Id = "0",
+            IsFile = false,
+            Name = "Files",
+            ParentId = null,
+            ShowHiddenItems = false,
+            Size = 1779448,
+            Type = "folder"
+        });
+        data.Add(new FileManagerDirectoryContent()
+        {
+            CaseSensitive = false,
+            DateCreated = new DateTime(2022, 1, 2),
+            DateModified = new DateTime(2022, 2, 3),
+            FilterId = "0/",
+            FilterPath = "/",
+            HasChild = false,
+            Id = "1",
+            IsFile = false,
+            Name = "Documents",
+            ParentId = "0",
+            ShowHiddenItems = false,
+            Size = 680786,
+            Type = "folder"
+        });
+        data.Add(new FileManagerDirectoryContent()
+        {
+            CaseSensitive = false,
+            DateCreated = new DateTime(2022, 1, 2),
+            DateModified = new DateTime(2022, 2, 3),
+            FilterId = "0/",
+            FilterPath = "/",
+            HasChild = false,
+            Id = "2",
+            IsFile = false,
+            Name = "Downloads",
+            ParentId = "0",
+            ShowHiddenItems = false,
+            Size = 6172,
+            Type = "folder"
+        });
+        data.Add(new FileManagerDirectoryContent()
+        {
+            CaseSensitive = false,
+            DateCreated = new DateTime(2022, 1, 2),
+            DateModified = new DateTime(2022, 2, 3),
+            FilterId = "0/1/",
+            FilterPath = "/Documents/",
+            HasChild = false,
+            Id = "5",
+            IsFile = true,
+            Name = "EJ2 File Manager.docx",
+            ParentId = "1",
+            ShowHiddenItems = false,
+            Size = 12403,
+            Type = ".docx"
+        });
+        data.Add(new FileManagerDirectoryContent()
+        {
+            CaseSensitive = false,
+            DateCreated = new DateTime(2022, 1, 2),
+            DateModified = new DateTime(2022, 2, 3),
+            FilterId = "0/1/",
+            FilterPath = "/Documents/",
+            HasChild = false,
+            Id = "6",
+            IsFile = true,
+            Name = "EJ2 File Manager.pdf",
+            ParentId = "1",
+            ShowHiddenItems = false,
+            Size = 90099,
+            Type = ".pdf"
+        });
     }
 }
 
@@ -175,9 +173,13 @@ N> [Also see the demo here](https://blazor.syncfusion.com/demos/file-manager/fla
 
 ## Injected service
 
-Blazor FileManager can also be populated from a injected service with a help of new events. These events enable you to access essential item details from the event argument. Subsequently, update the FileManager component's result data by incorporating the data returned from the injected service. Assign this returned data to the Response property of the corresponding event argument.
+Blazor FileManager can also be populated from an injected service, eliminating the need for HTTP client requests and backend URL configuration. This allows you to utilize your required service, such as physical, Amazon, Azure, etc., through the FileManager's action events.
 
-To set up a locally injected service, create a new file with the extension `.cs` within the project, include the following GitHub file code in this file, and then proceed to inject the created service into the `program.cs` file.
+These events enable you to access essential item details from the event argument. Subsequently, update the FileManager component's result data by incorporating the data returned from the injected service. Assign this returned data to the Response property of the corresponding event argument.
+
+To set up a locally injected physical service, create a new file with the extension `.cs` within the project, include the following GitHub file code in this file, and then proceed to inject the created service into the `program.cs` file.
+
+This will fetch the details of the static folder from the `wwwroot` directory. Likewise, you can inject your own service.
 
 N> [View FileManagerService.cs in GitHub ](https://github.com/SyncfusionExamples/blazor-filemanager-with-flat-data/blob/master/FileManagerService.cs).
 
@@ -246,9 +248,9 @@ builder.Services.AddSingleton<FileManagerService>();
 
 ```
 
-## Upload operation
+## Upload action
 
-To perform a upload operation in FileManager component with injected service, utilize the [ItemsUploaded](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerEvents-1.html#Syncfusion_Blazor_FileManager_FileManagerEvents_1_ItemsUploaded) event. This event enables you to access details of the file selected in the browser, providing access to metadata such as the file name, size, and content type. To read the contents of the uploaded file, invoke the `OpenReadStream()` method of the `IBrowserFile` interface, which returns a stream for reading the file data.
+To perform a upload action in FileManager component with injected service, utilize the [ItemsUploaded](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerEvents-1.html#Syncfusion_Blazor_FileManager_FileManagerEvents_1_ItemsUploaded) event. This event enables you to access details of the file selected in the browser, providing access to metadata such as the file name, size, and content type. To read the contents of the uploaded file, invoke the [OpenReadStream()](https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.components.forms.ibrowserfile.openreadstream?view=aspnetcore-8.0) method of the [IBrowserFile](https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.components.forms.ibrowserfile?view=aspnetcore-8.0) interface, which returns a stream for reading the file data.
 
 ```cshtml
 
@@ -294,9 +296,9 @@ To perform a upload operation in FileManager component with injected service, ut
 
 ```
 
-## Download operation
+## Download action
 
-To perform a download operation in FileManager component with injected service, utilize the [BeforeDownload](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerEvents-1.html#Syncfusion_Blazor_FileManager_FileManagerEvents_1_BeforeDownload) event. This will allow you to retrieve necessary Downloaded item details from the event argument. Updating the downloaded file's stream data and name to the event arguments [FileStream](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.BeforeDownloadEventArgs-1.html#Syncfusion_Blazor_FileManager_BeforeDownloadEventArgs_1_FileStream) and [DownloadFileName](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.BeforeDownloadEventArgs-1.html#Syncfusion_Blazor_FileManager_BeforeDownloadEventArgs_1_DownloadFileName) respectively completes the download operation.
+To perform a download action in FileManager component with injected service, utilize the [BeforeDownload](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerEvents-1.html#Syncfusion_Blazor_FileManager_FileManagerEvents_1_BeforeDownload) event. This will allow you to retrieve necessary Downloaded item details from the event argument. Updating the downloaded file's stream data and name to the event arguments [FileStream](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.BeforeDownloadEventArgs-1.html#Syncfusion_Blazor_FileManager_BeforeDownloadEventArgs_1_FileStream) and [DownloadFileName](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.BeforeDownloadEventArgs-1.html#Syncfusion_Blazor_FileManager_BeforeDownloadEventArgs_1_DownloadFileName) respectively completes the download action.
 
 ```cshtml
 
@@ -312,7 +314,7 @@ To perform a download operation in FileManager component with injected service, 
 
 ```
 
-## Get image operation
+## Get image action
 
 To load image in FileManager component with injected service, utilize the [BeforeImageLoad](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerEvents-1.html#Syncfusion_Blazor_FileManager_FileManagerEvents_1_BeforeImageLoad) event. This will allow you to retrieve necessary Downloaded item details from the event argument. Updating the image file's stream data to the event argument [FileStream](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.BeforeImageLoadEventArgs-1.html#Syncfusion_Blazor_FileManager_BeforeImageLoadEventArgs_1_FileStream) completes the image retrieval operation.
 
