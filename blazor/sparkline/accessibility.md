@@ -7,11 +7,11 @@ control: Sparkline
 documentation: ug
 ---
 
-# Accessibility in Blazor Sparkline Component 
+# Accessibility in Blazor Sparkline Component
 
-The Sparkline control followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
+The Blazor Sparkline control followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 
-The accessibility compliance for the Sparkline control is outlined below.
+The accessibility compliance for the Blazor Sparkline control is outlined below.
 
 | Accessibility Criteria | Compatibility |
 | -- | -- |
@@ -22,7 +22,6 @@ The accessibility compliance for the Sparkline control is outlined below.
 | Color Contrast | <img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> |
 | Mobile Device Support | <img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> |
 | Keyboard Navigation Support | <img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> |
-| [Accessibility Checker](https://www.npmjs.com/package/accessibility-checker) Validation | <img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> |
 | [Axe-core](https://www.npmjs.com/package/axe-core) Accessibility Validation | <img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> |
 
 <style>
@@ -40,7 +39,7 @@ The accessibility compliance for the Sparkline control is outlined below.
 
 ## WAI-ARIA attributes
 
-The Sparkline control followed the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/alert/) patterns to meet the accessibility. The following ARIA attributes are used in the Sparkline control:
+The Blazor Sparkline control followed the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/alert/) patterns to meet the accessibility. The following ARIA attributes are used in the Blazor Sparkline control:
 
 * img (role)
 * region (role)
@@ -50,7 +49,7 @@ The Sparkline control followed the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/pa
 
 ## Keyboard interaction
 
-The Sparkline control followed the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/alert/#keyboardinteraction) guideline, making it easy for people who use assistive technologies (AT) and those who completely rely on keyboard navigation. The following keyboard shortcuts are supported by the Sparkline control.
+The Blazor Sparkline control followed the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/alert/#keyboardinteraction) guideline, making it easy for people who use assistive technologies (AT) and those who completely rely on keyboard navigation. The following keyboard shortcuts are supported by the Blazor Sparkline control.
 
 | **Press** | **To do this** |
 | --- | --- |
@@ -63,9 +62,9 @@ The Sparkline control followed the [keyboard interaction](https://www.w3.org/WAI
 
 ## Ensuring accessibility
 
-The Sparkline control's accessibility levels are ensured through an [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) software tools during automated testing.
+The Blazor Sparkline component's accessibility levels are ensured through an [axe-core](https://www.nuget.org/packages/Deque.AxeCore.Playwright) with playwright tests.
 
-The accessibility compliance of the Sparkline control is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/sparkline) in a new window to evaluate the accessibility of the Sparkline control with accessibility tools.
+The accessibility compliance of the Blazor Sparkline control is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/sparkline) in a new window to evaluate the accessibility of the Blazor Sparkline control with accessibility tools.
 
 
 ## See also
