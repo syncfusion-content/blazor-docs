@@ -868,20 +868,19 @@ The FileManager component provides a way to customize the default sort action fo
 
 The following example demonstrates how to define custom sort comparer function to achieve natural sorting behavior for the Name column in both DetailsView and LargeIconsView.
 
-{% tabs %}
-{% highlight razor %}
+```cshtml
 
 @using Syncfusion.Blazor.FileManager
 @using System.Text.RegularExpressions;
 @using FileManager.Data
 
-<!-- SfFileManager component with a custom sorting SortComparer property -->
+@* SfFileManager component with a custom sorting SortComparer property *@
 <SfFileManager TValue="FileManagerDirectoryContent" SortComparer="new NaturalSortComparer()">
     <FileManagerEvents TValue="FileManagerDirectoryContent" OnRead="OnReadAsync"></FileManagerEvents>
-    <!-- FileManagerDetailsViewSettings component for configuring the details view of the file manager -->
+    @* FileManagerDetailsViewSettings component for configuring the details view of the file manager *@
     <FileManagerDetailsViewSettings>
         <FileManagerColumns>
-            <!-- FileManagerColumn for the 'Name' field with a custom sorting SortComparer property -->
+            @* FileManagerColumn for the 'Name' field with a custom sorting SortComparer property *@
             <FileManagerColumn Field="Name" HeaderText="Name" SortComparer="new NaturalSortComparer()"></FileManagerColumn>
             <FileManagerColumn Field="DateModified" Format="MM/dd/yyyy h:mm tt" HeaderText="Modified"></FileManagerColumn>
             <FileManagerColumn Field="Size" HeaderText="Size">
@@ -943,11 +942,9 @@ The following example demonstrates how to define custom sort comparer function t
     }
 }
 
-{% endhighlight %}
-{% endtabs %}
+```
 
-{% tabs %}
-{% highlight %}
+```cshtml
 
 using System.IO.Compression;
 using Syncfusion.Blazor.FileManager;
@@ -1207,8 +1204,7 @@ namespace FileManager.Data
     }
 }
 
-{% endhighlight %}
-{% endtabs %}
+```
 
 ![custom sorting](images/blazor-filemanager-largeicons-custom-sorting.png)
 

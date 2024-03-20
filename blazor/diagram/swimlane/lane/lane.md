@@ -265,7 +265,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Add children to lane
 
- To add nodes to the lane, you should add a node collection to the `Children` collection of the lane.
+ To add nodes to the lane, you should add a node collection to the [Children](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Lane.html#Syncfusion_Blazor_Diagram_Lane_Children) collection of the lane.
 
  The [LaneOffsetX](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Node.html#Syncfusion_Blazor_Diagram_Node_LaneOffsetX) and [LaneOffsetY](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Node.html#Syncfusion_Blazor_Diagram_Node_LaneOffsetY) property of the node will position the element in the lane canvas.
 

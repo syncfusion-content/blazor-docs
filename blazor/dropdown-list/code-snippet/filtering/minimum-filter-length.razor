@@ -2,7 +2,7 @@
 @using Syncfusion.Blazor.DropDowns
 
 <SfDropDownList TValue="string" @ref="ddlObj" TItem="OrderDetails" Placeholder="Select a customer" Query="@Query" AllowFiltering=true Width="300px">
-    <SfDataManager Url="https://services.odata.org/V4/Northwind/Northwind.svc/Employees" Adaptor="Syncfusion.Blazor.Adaptors.ODataV4Adaptor" CrossDomain=true></SfDataManager>
+    <SfDataManager Url="https://blazor.syncfusion.com/services/production/api/Employees" Adaptor="Syncfusion.Blazor.Adaptors.WebApiAdaptor" CrossDomain=true></SfDataManager>
     <DropDownListFieldSettings Text="FirstName" Value="LastName"></DropDownListFieldSettings>
     <DropDownListEvents TValue=string TItem="OrderDetails" Filtering="OnFiltering"></DropDownListEvents>
 </SfDropDownList>

@@ -17,8 +17,8 @@ The template in the code snippet allows for the customization of how file detail
 @using Syncfusion.Blazor.Inputs
 
 <SfUploader ID="Files" AutoUpload="false">
-    <UploaderAsyncSettings SaveUrl="https://aspnetmvc.syncfusion.com/services/api/uploadbox/Save"
-                           RemoveUrl="https://aspnetmvc.syncfusion.com/services/api/uploadbox/Remove"></UploaderAsyncSettings>
+    <UploaderAsyncSettings SaveUrl="https://blazor.syncfusion.com/services/production/api/FileUploader/Save"
+                           RemoveUrl="https://blazor.syncfusion.com/services/production/api/FileUploader/Remove"></UploaderAsyncSettings>
     <UploaderTemplates>
         <Template>
             <div class="name file-name" title="@(context.Name)">File Name : @(context.Name)</div>

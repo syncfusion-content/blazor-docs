@@ -186,7 +186,7 @@ You have the capability to modify the primary toolbar options by rearranging the
 
 ## Rearrange the default options of toolbar
 
-You can adjust the order of the `ToolbarItems` by rearranging how the items are listed. The toolbar will display the items based on the order in which they appear in the list
+You can adjust the order of the [ToolbarItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerToolbarSettings.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerToolbarSettings_ToolbarItems) by rearranging how the items are listed. The toolbar will display the items based on the order in which they appear in the list
 
 ```cshtml
 
@@ -224,7 +224,7 @@ You can adjust the order of the `ToolbarItems` by rearranging how the items are 
 
 ## Disable the default items and Add new items in Primary Toolbar
 
-To customize the Primary Toolbar in the PDF Viewer, you can achieve this by setting the `ToolbarItems` property to null and creating a list of `PdfToolbarItem` objects. Each PdfToolbarItem contains a **RenderFragment** and an **Index** for positioning the toolbar items. Finally, assign this list to the `CustomToolbarItems` property. 
+To customize the Primary Toolbar in the PDF Viewer, you can achieve this by setting the [ToolbarItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerToolbarSettings.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerToolbarSettings_ToolbarItems) property to null and creating a list of [PdfToolbarItem](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfToolbarItem.html#Syncfusion_Blazor_SfPdfViewer_PdfToolbarItem__ctor) objects. Each PdfToolbarItem contains a **RenderFragment** and an **Index** for positioning the toolbar items. Finally, assign this list to the [CustomToolbarItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerToolbarSettings.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerToolbarSettings_CustomToolbarItems) property. 
 
 ```cshtml
 
@@ -332,7 +332,7 @@ To customize the Primary Toolbar in the PDF Viewer, you can achieve this by sett
 
 ## How to customize the Primary Toolbar with default options
 
-You can implement the both `ToolbarItems` and `CustomToolbarItems`. The `CustomToolbarItems` list allows you to specify items with their respective index positions, which are then incorporated into the ToolbarItems list accordingly. 
+You can implement the both [ToolbarItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerToolbarSettings.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerToolbarSettings_ToolbarItems) and [CustomToolbarItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerToolbarSettings.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerToolbarSettings_CustomToolbarItems). The [CustomToolbarItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerToolbarSettings.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerToolbarSettings_CustomToolbarItems) list allows you to specify items with their respective index positions, which are then incorporated into the ToolbarItems list accordingly. 
 
 ```cshtml
 

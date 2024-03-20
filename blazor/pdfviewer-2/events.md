@@ -118,7 +118,7 @@ The following code illustrates how to load PDF document on created event.
 
 The DocumentEdited Event is Triggered when the PDF document getting Edited. 
 
-The following code illustrates how to trigger the DocumentEdited Event. In that code , `EditingAction` provides the information related to document edited. 
+The following code illustrates how to trigger the DocumentEdited Event. In that code , [EditingAction](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.EditingAction.html) provides the information related to document edited. 
 
 ```cshtml
 

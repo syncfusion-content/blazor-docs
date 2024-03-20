@@ -135,8 +135,8 @@ The provided code snippet demonstrates a Blazor form for editing employee inform
         </div>  
         <div class="form-group">  
             <SfUploader @ref="UploadObj" AllowMultiple=false AutoUpload="false" ID="UploadFiles"> 
-             <UploaderAsyncSettings SaveUrl="https://aspnetmvc.syncfusion.com/services/api/uploadbox/Save"
-                           RemoveUrl="https://aspnetmvc.syncfusion.com/services/api/uploadbox/Remove"></UploaderAsyncSettings> 
+             <UploaderAsyncSettings SaveUrl="https://blazor.syncfusion.com/services/production/api/FileUploader/Save"
+                           RemoveUrl="https://blazor.syncfusion.com/services/production/api/FileUploader/Remove"></UploaderAsyncSettings> 
                 <UploaderEvents OnRemove="OnRemove" FileSelected="OnSelect"></UploaderEvents>  
             </SfUploader>  
             <ValidationMessage For="() => employee.files" /> 
