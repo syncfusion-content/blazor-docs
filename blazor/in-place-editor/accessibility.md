@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Accessibility in Blazor Input Mask Component | Syncfusion
-description: Checkout and learn here all about Accessibility in Syncfusion Blazor Input Mask component and much more.
+title: Accessibility in Blazor In-place Editor Component | Syncfusion
+description: Checkout and learn here all about keyboard shortcuts in Syncfusion Blazor In-place Editor component and more.
 platform: Blazor
-control: Input Mask
+control: In-place Editor
 documentation: ug
 ---
 
-# Accessibility in Blazor Input Mask Component
+# Accessibility in Blazor Inplace editor component
 
-The Maskedtextbox component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
+The Inplace editor component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 
-The accessibility compliance for the Maskedtextbox component is outlined below.
+The accessibility compliance for the Inplace editor component is outlined below.
 
 | Accessibility Criteria | Compatibility |
 | -- | -- |
@@ -37,28 +37,22 @@ The accessibility compliance for the Maskedtextbox component is outlined below.
 
 <div><img src="https://cdn.syncfusion.com/content/images/documentation/not-supported.png" alt="No"> - The component does not meet the requirement.</div>
 
-## WAI-ARIA attributes
+## Keyboard interaction
 
-The MaskedTextBox is characterized with complete ARIA Accessibility support that helps to access using on-screen readers and other assistive technology devices. This component is designed with the reference of the guidelines document given in [WAI ARAI Accessibility practices](https://www.w3.org/WAI/ARIA/apg/).
+You can use the following key shortcuts to access the Inplace editor without interruptions:
 
-The MaskedTextBox uses the `textbox` role and following ARIA properties for its element based on its state.
-
-| **Property** | **Functionality** |
+| **Keyboard shortcuts** | **Actions** |
 | --- | --- |
-| aria-live | Indicates the priority of updates to a live region. |
-| aria-disabled | Indicates the disabled state of the MaskedTextBox. |
-| aria-valuenow | Specifies the current value of the MaskedTextBox. |
-| aria-invalid | Indicates that the user input is incorrect or not within the acceptable ranges. |
-| aria-placeholder | It is a short hint to help the users with data entry when the MaskedTextBox has no value. |
-| aria-labelledby | Indicates the floating label element of the MaskedTextBox. |
+| <kbd>Tab</kbd> | Helps in focusing the Inplace editor on the page and switching between the consecutive Inplace editor bars. |
+| <kbd>Shift</kbd> + <kbd>Tab</kbd> | Helps in focusing the previous Inplace editor bar element on the Inplace editor. |
 
 ## Ensuring accessibility
 
-The MaskedTextBox component's accessibility levels are ensured through an [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) software tools during automated testing.
+The Inplace editor component's accessibility levels are ensured through an [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) software tools during automated testing.
 
-The accessibility compliance of the MaskedTextBox component is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/maskedtextbox) in a new window to evaluate the accessibility of the MaskedTextBox component with accessibility tools.
+The accessibility compliance of the Inplace editor component is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/inplace-editor) in a new window to evaluate the accessibility of the Inplace editor component with accessibility tools.
 
-{% previewsample "https://blazor.syncfusion.com/accessibility/maskedtextbox" %}
+{% previewsample "https://blazor.syncfusion.com/accessibility/inplace-editor" %}
 
 ## See also
 
