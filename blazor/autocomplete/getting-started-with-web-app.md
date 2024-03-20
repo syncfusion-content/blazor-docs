@@ -176,20 +176,6 @@ After initialization, populate the AutoComplete with data using the [DataSource]
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hjhfjCLSBGLRJZjX?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor AutoComplete with Data Binding](./images/blazor-autocomplete-data-binding.png)" %}
 
-## Custom values
-
-The AutoComplete allows the users to give input as custom value, which is not required to present in predefined set of values. By default, this support is enabled by the [AllowCustom](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfComboBox-2.html#Syncfusion_Blazor_DropDowns_SfComboBox_2_AllowCustom) property. The custom value will be sent to post back handler when a form is about to be submitted.
-
-{% tabs %}
-{% highlight razor %}
-
-<SfAutoComplete TValue="string" TItem="Country" Placeholder="Select a country" AllowCustom=true DataSource="@LocalData">
-    <AutoCompleteFieldSettings Value="Name" />
-</SfAutoComplete>
-
-{% endhighlight %}
-{% endtabs %}
-
 ## Configure the suggestion list
 
 By default, suggestion list width automatically adjusts according to the AutoComplete input element's width, and the height of the suggestion list has `300px`. The height and width of the popup list can also be customized using the [PopupHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_PopupHeight) and [PopupWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_PopupWidth) properties respectively.

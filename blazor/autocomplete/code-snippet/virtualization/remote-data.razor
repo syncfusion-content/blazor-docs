@@ -1,0 +1,25 @@
+@using Syncfusion.Blazor.DropDowns
+@using Syncfusion.Blazor.Data
+
+<SfAutoComplete TValue="int?" TItem="OrderDetails" PopupHeight="130px" EnableVirtualization="true" Placeholder="Select ID" Query="@RemoteDataQuery" >
+    <SfDataManager Url="https://blazor.syncfusion.com/services/production/api/Orders" CrossDomain="true" Adaptor="Syncfusion.Blazor.Adaptors.WebApiAdaptor" />
+    <AutoCompleteFieldSettings Text="OrderID" Value="OrderID"/>
+</SfAutoComplete>
+@code {
+    public Query RemoteDataQuery = new Query().Take(6);
+
+    public class OrderDetails
+    {
+        public int? OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public int? EmployeeID { get; set; }
+        public double? Freight { get; set; }
+        public string ShipCity { get; set; }
+        public bool Verified { get; set; }
+        public DateTime? OrderDate { get; set; }
+        public string ShipName { get; set; }
+        public string ShipCountry { get; set; }
+        public DateTime? ShippedDate { get; set; }
+        public string ShipAddress { get; set; }
+    }
+}
