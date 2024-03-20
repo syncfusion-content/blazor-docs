@@ -352,16 +352,17 @@ The `FloatLabelType` as  `Auto` is demonstrated in the following code sample.
 
 ![Blazor Dropdown Tree with place holder.](./images/template/blazor-dropdowntree-float-label.png)
 
-## SelectedItem Template
+## SelectedItem template
 
-In Dropdown Tree, while selecting more than one items via checkbox or multi selection support, all the selected items will be displayed in the input. Instead of displaying all the selected item text, the custom template can be displayed by setting the the [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfDropDownTree-2.html#Syncfusion_Blazor_Navigations_SfDropDownTree_2_Mode) property as **Custom**.
+In Dropdown Tree, while selecting more than one items via checkbox or multi selection support, all the selected items will be displayed in the input. Instead of displaying all the selected item text, the custom text in [SelectedItemTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfDropDownTree-2.html#Syncfusion_Blazor_Navigations_SfDropDownTree_2_SelectedItemTemplate) can be displayed by setting the [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfDropDownTree-2.html#Syncfusion_Blazor_Navigations_SfDropDownTree_2_Mode) property as **Custom**.
 
-In the following sample, the Dropdown Tree is rendered with custom value of the SelectedItemTemplate tag like 1 item selected.
+
+In this example, the custom text provided is displayed instead of the text of the selected item.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
 
-<SfDropDownTree @ref="tree" TItem="EmployeeData" TValue="string" Placeholder="Select an employee" Width="500px" Value="selecteditem" ShowCheckBox="true" Mode="DdtVisualMode.Custom">
+<SfDropDownTree TItem="EmployeeData" TValue="string" Placeholder="Select an employee" Width="500px" Value="selecteditem" ShowCheckBox="true" Mode="DdtVisualMode.Custom">
 <ChildContent>
 <DropDownTreeField TItem="EmployeeData" DataSource="Data" ID="Id" Text="Name" HasChildren="HasChild" ParentID="PId" Selected="Selected" IsChecked="IsChecked"></DropDownTreeField>
  
@@ -377,7 +378,6 @@ In the following sample, the Dropdown Tree is rendered with custom value of the 
 </SfDropDownTree>
  
 @code {
-    SfDropDownTree<string,EmployeeData>? tree;
     List<string> selecteditem = new() { "2"};
     List<EmployeeData> Data = new List<EmployeeData>
     {
@@ -407,4 +407,4 @@ In the following sample, the Dropdown Tree is rendered with custom value of the 
 }
 ```
 
-![Blazor Dropdown Tree with SelectedItem Template.](./images/template/blazor-dropdowntree-selecteditem-template.png)
+![Blazor Dropdown Tree with SelectedItem template.](./images/template/blazor-dropdowntree-selecteditem-template.png)
