@@ -9,7 +9,7 @@ documentation: ug
 
 # Working with data in Blazor HeatMap Chart Component
 
-This section shows how to bind data to the HeatMap component using the video below.
+This section shows how to bind data to the HeatMap component. The below video demonstrates the same.
 
 {% youtube
 "youtube:https://www.youtube.com/watch?v=u27NqwNs8sw&t=78s"%}

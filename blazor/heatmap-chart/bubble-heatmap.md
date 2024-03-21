@@ -9,7 +9,7 @@ documentation: ug
 
 # Bubble HeatMap in Blazor HeatMap Chart Component
 
-This section shows how to customize the appearance of the bubbles in the HeatMap component using the video below.
+This section shows how to customize the appearance of the HeatMap cells as bubbles. The below video demonstrates the same.
 
 {% youtube
 "youtube:https://www.youtube.com/watch?v=MXrqp-YHUgU"%}

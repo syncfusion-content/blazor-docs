@@ -11,7 +11,7 @@ documentation: ug
 
 This section briefly explains about how to include [Blazor HeatMap Chart](https://www.syncfusion.com/blazor-components/blazor-heatmap-chart) component in your Blazor Server App and Blazor WebAssembly App using Visual Studio.
 
-The below video demonstrates the basic usage of Blazor HeatMap component.
+You can explore some useful features in the Blazor HeatMap component using the video below.
 
 {% youtube
 "youtube:https://www.youtube.com/watch?v=0SAf_S4HFS4"%}
