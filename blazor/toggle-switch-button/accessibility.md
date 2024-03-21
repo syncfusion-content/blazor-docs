@@ -9,9 +9,9 @@ documentation: ug
 
 # Accessibility in Blazor Toggle Switch Button Component
 
-The Toggle Switch Button component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
+The Blazor Toggle Switch Button component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 
-The accessibility compliance for the Toggle Switch Button component is outlined below.
+The accessibility compliance for the Blazor Toggle Switch Button component is outlined below.
 
 | Accessibility Criteria | Compatibility |
 | -- | -- |
@@ -22,7 +22,6 @@ The accessibility compliance for the Toggle Switch Button component is outlined 
 | Color Contrast | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
 | Mobile Device Support | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
 | Keyboard Navigation Support | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
-| [Accessibility Checker](https://www.npmjs.com/package/accessibility-checker) Validation | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
 | [Axe-core](https://www.npmjs.com/package/axe-core) Accessibility Validation | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
 
 <style>
@@ -39,7 +38,7 @@ The accessibility compliance for the Toggle Switch Button component is outlined 
 
 ## WAI-ARIA attributes
 
-The Toggle Switch Button component followed the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/switch/) patterns to meet the accessibility. The following ARIA attributes are used in the Toggle Switch Button component:
+The Blazor Toggle Switch Button component followed the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/switch/) patterns to meet the accessibility. The following ARIA attributes are used in the Blazor Toggle Switch Button component:
 
 | Attributes | Purpose |
 | --- | --- |
@@ -48,7 +47,7 @@ The Toggle Switch Button component followed the [WAI-ARIA](https://www.w3.org/WA
 
 ## Keyboard interaction
 
-The Toggle Switch Button component followed the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/switch/#keyboardinteraction) guideline, making it easy for people who use assistive technologies (AT) and those who completely rely on keyboard navigation. The following keyboard shortcuts are supported by the Toggle Switch Button component.
+The Blazor Toggle Switch Button component followed the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/switch/#keyboardinteraction) guideline, making it easy for people who use assistive technologies (AT) and those who completely rely on keyboard navigation. The following keyboard shortcuts are supported by the Blazor Toggle Switch Button component.
 
 | **Press** | **To do this** |
 | --- | --- |
@@ -56,8 +55,12 @@ The Toggle Switch Button component followed the [keyboard interaction](https://w
 
 ## Ensuring accessibility
 
-The Toggle Switch Button component's accessibility levels are ensured through an [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) software tools during automated testing.
+The Blazor Toggle Switch Button component's accessibility levels are ensured through an [axe-core](https://www.nuget.org/packages/Deque.AxeCore.Playwright) with playwright tests.
 
-The accessibility compliance of the Toggle Switch Button component is shown in the following sample. Open the [sample](https://ej2.syncfusion.com/accessibility/switch.html) in a new window to evaluate the accessibility of the Toggle Switch Button component with accessibility tools.
+The accessibility compliance of the Blazor Toggle Switch Button component is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/switch) in a new window to evaluate the accessibility of the Blazor Toggle Switch Button component with accessibility tools.
 
 {% previewsample "https://ej2.syncfusion.com/accessibility/switch.html" %}
+
+## See also
+
+* [Accessibility in Syncfusion Blazor components](https://blazor.syncfusion.com/documentation/common/accessibility)
