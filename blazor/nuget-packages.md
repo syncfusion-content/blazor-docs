@@ -963,12 +963,14 @@ The layout package contains Splitter and Dashboard Layout components. The Blazor
 <ul>
 <li><a href="https://blazor.syncfusion.com/documentation/dashboard-layout">Dashboard Layout</a></li>
 <li><a href="https://blazor.syncfusion.com/documentation/splitter/getting-started-webapp">Splitter</a></li>
+<li><a href="https://blazor.syncfusion.com/documentation/timeline/getting-started-webapp">Timeline</a></li>
 </ul>
 </td>
 <td>
 <ul>
 <li>SfDashboardLayout</li>
 <li>SfSplitter</li>
+<li>SfTimeline</li>
 </ul>
 </td>
 <td>

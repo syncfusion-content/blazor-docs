@@ -1,0 +1,14 @@
+@using Syncfusion.Blazor.Data
+@using Syncfusion.Blazor.DropDowns
+
+<SfAutoComplete  TValue="string" TItem="Order" Placeholder="Select a Country">
+    <SfDataManager Url="api/Default" Adaptor="Adaptors.WebApiAdaptor" CrossDomain="true"></SfDataManager>
+    <AutoCompleteFieldSettings  Value="ShipCountry"></AutoCompleteFieldSettings>
+</SfAutoComplete>
+
+@code{
+    public class Order
+    {
+        public string ShipCountry { get; set; }
+    }
+}

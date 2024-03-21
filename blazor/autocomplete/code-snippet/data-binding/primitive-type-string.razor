@@ -1,0 +1,8 @@
+@using Syncfusion.Blazor.DropDowns
+
+<SfAutoComplete TValue="string" TItem="string" Placeholder="Select a game" DataSource="@data" @bind-Value="MyItem" Width="300px"></SfAutoComplete>
+
+@code {
+    List<string> data = new List<string>() { "One", "Two", "Three" };
+    public string MyItem { get; set; } = "Two";
+}

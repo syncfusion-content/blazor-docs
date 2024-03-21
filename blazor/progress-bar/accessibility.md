@@ -9,9 +9,9 @@ documentation: ug
 
 # Accessibility in Progress Bar Component
 
-The Progress bar control followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
+The Blazor Progress bar control followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 
-The accessibility compliance for the Progress bar control is outlined below.
+The accessibility compliance for the Blazor Progress bar control is outlined below.
 
 | Accessibility Criteria | Compatibility |
 | -- | -- |
@@ -22,7 +22,6 @@ The accessibility compliance for the Progress bar control is outlined below.
 | Color Contrast | <img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> |
 | Mobile Device Support | <img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> |
 | Keyboard Navigation Support | <img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Intermediate"> |
-| [Accessibility Checker](https://www.npmjs.com/package/accessibility-checker) Validation | <img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> |
 | [Axe-core](https://www.npmjs.com/package/axe-core) Accessibility Validation | <img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> |
 
 <style>
@@ -40,7 +39,7 @@ The accessibility compliance for the Progress bar control is outlined below.
 
 ## Keyboard interaction
 
-The Progress bar control followed the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/alert/#keyboardinteraction) guideline, making it easy for people who use assistive technologies (AT) and those who completely rely on keyboard navigation. The following keyboard shortcuts are supported by the Progress bar control.
+The Blazor Progress bar control followed the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/alert/#keyboardinteraction) guideline, making it easy for people who use assistive technologies (AT) and those who completely rely on keyboard navigation. The following keyboard shortcuts are supported by the Blazor Progress bar control.
 
 | **Press** | **To do this** |
 | --- | --- |
@@ -49,9 +48,9 @@ The Progress bar control followed the [keyboard interaction](https://www.w3.org/
 
 ## Ensuring accessibility
 
-The Progress bar control's accessibility levels are ensured through an [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) software tools during automated testing.
+The Blazor Progress bar component's accessibility levels are ensured through an [axe-core](https://www.nuget.org/packages/Deque.AxeCore.Playwright) with playwright tests.
 
-The accessibility compliance of the Progress bar control is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/progress-bar) in a new window to evaluate the accessibility of the Progress bar control with accessibility tools.
+The accessibility compliance of the Blazor Progress bar control is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/progress-bar) in a new window to evaluate the accessibility of the Progress bar control with accessibility tools.
 
 
 ## See also
