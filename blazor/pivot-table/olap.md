@@ -10,7 +10,7 @@ documentation: ug
 <!-- markdownlint-disable MD024 -->
 <!-- markdownlint-disable MD012 -->
 
-# OLAP in Blazor Pivot Table Component
+# OLAP in Blazor Pivot Table component
 
 ## Getting Started
 
