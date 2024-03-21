@@ -53,8 +53,8 @@ The Blazor Tooltip component followed the [keyboard interaction](https://www.w3.
 
 | Keyboard shortcuts | Actions |
 | --- | --- |
-| Escape | Closes or dismisses the Tooltip. |
-| Tab | A form control receiving focus (say through tab key), opens the Tooltip, and on focus out closes it. |
+| <kbd>Escape</kbd> | Closes or dismisses the Tooltip. |
+| <kbd>Tab</kbd> | A form control receiving focus (say through tab key), opens the Tooltip, and on focus out closes it. |
 
 ## Ensuring accessibility
 
