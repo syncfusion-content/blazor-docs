@@ -1075,6 +1075,7 @@ public override async Task<object> InsertAsync(DataManager DataManager, object V
 {% endhighlight %}
 {% endtabs %}
 
+
 **Update Operation:**
 
 To execute the update operation, override the [Update](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_Update_Syncfusion_Blazor_DataManager_System_Object_System_String_System_String_) or [UpdateAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_UpdateAsync_Syncfusion_Blazor_DataManager_System_Object_System_String_System_String_) method of the `CustomAdaptor`. Then, integrate the following code snippet into the `CustomAdaptor` class. The below code snippet demonstrated how to handle the updating of existing records within the `UpdateAsync` method of the `CustomAdaptor` component. Modify the logic within this method according to the requirements of your application.
