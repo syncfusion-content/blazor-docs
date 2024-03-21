@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Virtual Scrolling in Blazor Pivot Table component | Syncfusion
+title: Virtual scrolling in Blazor Pivot Table component | Syncfusion
 description: Checkout and learn here all about virtual scrolling in Syncfusion Blazor Pivot Table component and more.
 platform: Blazor
 control: Pivot Table
@@ -9,7 +9,7 @@ documentation: ug
 
 <!-- markdownlint-disable MD036 -->
 
-# Virtual Scrolling in Blazor Pivot Table component
+# Virtual scrolling in Blazor Pivot Table component
 
 Allows to load the large amounts of data without any performance degradation by rendering rows and columns only in the current content viewport. Rest of the aggregated data will be brought into viewport dynamically based on the vertical or horizontal scroll position. This feature can be enabled by setting the [EnableVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_EnableVirtualization) property in [SfPivotView](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html) class to **true**.
 
