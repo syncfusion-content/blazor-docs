@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Accessibility in Blazor Input Mask Component | Syncfusion
-description: Checkout and learn here all about Accessibility in Syncfusion Blazor Input Mask component and much more.
+title: Accessibility in Blazor TextBox Component | Syncfusion
+description: Discover Syncfusion Blazor TextBox Components accessibility features—easy to learn, implement, and use for all.
 platform: Blazor
-control: Input Mask
+control: TextBox
 documentation: ug
 ---
 
-# Accessibility in Blazor Input Mask Component
+# Accessibility in Blazor TextBox Component
 
-The Maskedtextbox component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
+The Textbox component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 
-The accessibility compliance for the Maskedtextbox component is outlined below.
+The accessibility compliance for the Textbox component is outlined below.
 
 | Accessibility Criteria | Compatibility |
 | -- | -- |
@@ -39,26 +39,22 @@ The accessibility compliance for the Maskedtextbox component is outlined below.
 
 ## WAI-ARIA attributes
 
-The MaskedTextBox is characterized with complete ARIA Accessibility support that helps to access using on-screen readers and other assistive technology devices. This component is designed with the reference of the guidelines document given in [WAI ARAI Accessibility practices](https://www.w3.org/WAI/ARIA/apg/).
+The Textbox is characterized with complete ARIA Accessibility support that helps to access through the on-screen readers and other assistive technology devices. This component is designed with the reference of the guidelines document given in [WAI ARAI Accessibility practices](https://www.w3.org/TR/wai-aria/#textbox).
 
-The MaskedTextBox uses the `textbox` role and following ARIA properties for its element based on its state.
+The Textbox uses the `textbox` role and following ARIA properties for its element based on its state.
 
 | **Property** | **Functionality** |
 | --- | --- |
-| aria-live | Indicates the priority of updates to a live region. |
-| aria-disabled | Indicates the disabled state of the MaskedTextBox. |
-| aria-valuenow | Specifies the current value of the MaskedTextBox. |
-| aria-invalid | Indicates that the user input is incorrect or not within the acceptable ranges. |
-| aria-placeholder | It is a short hint to help the users with data entry when the MaskedTextBox has no value. |
-| aria-labelledby | Indicates the floating label element of the MaskedTextBox. |
+| aria-placeholder | The `aria-placeholder` is a short hint to help the users with data entry when the Textbox has no value. |
+| aria-labelledby | The `aria-labelledby` property indicates the floating label element of the Textbox. |
 
 ## Ensuring accessibility
 
-The MaskedTextBox component's accessibility levels are ensured through an [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) software tools during automated testing.
+The Textbox component's accessibility levels are ensured through an [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) software tools during automated testing.
 
-The accessibility compliance of the MaskedTextBox component is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/maskedtextbox) in a new window to evaluate the accessibility of the MaskedTextBox component with accessibility tools.
+The accessibility compliance of the Textbox component is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/textbox) in a new window to evaluate the accessibility of the Textbox component with accessibility tools.
 
-{% previewsample "https://blazor.syncfusion.com/accessibility/maskedtextbox" %}
+{% previewsample "https://blazor.syncfusion.com/accessibility/textbox" %}
 
 ## See also
 
