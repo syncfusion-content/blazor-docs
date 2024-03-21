@@ -1,6 +1,6 @@
 ---
 layout: post
-title: OLAP in Blazor Pivot Table Component | Syncfusion
+title: OLAP in Blazor Pivot Table component | Syncfusion
 description: Checkout and learn here all about OLAP in Syncfusion Blazor Pivot Table component and much more details.
 platform: Blazor
 control: Pivot Table

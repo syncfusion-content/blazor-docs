@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Excel Export in Blazor Pivot Table Component | Syncfusion
+title: Excel export in Blazor Pivot Table component | Syncfusion
 description: Checkout and learn here all about Excel export in Syncfusion Blazor Pivot Table component and much more.
 platform: Blazor
 control: Pivot Table
