@@ -3,15 +3,15 @@ layout: post
 title: Accessibility in Blazor Diagram Component | Syncfusion
 description: Checkout and Learn all about accessibility in Syncfusion Blazor Diagram component and many more details.
 platform: Blazor
-control: Diagram 
+control: Diagram
 documentation: ug
 ---
 
 # Accessibility in Blazor Diagram Component
 
-Accessibility in the diagram component is achieved through compliance with the [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) and support for keyboard navigation. This ensures that users can effectively interact with the diagram features using assistive technologies such as screen readers.
+Accessibility in the Blazor diagram component is achieved through compliance with the [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) and support for keyboard navigation. This ensures that users can effectively interact with the diagram features using assistive technologies such as screen readers.
 
-The accessibility compliance for the diagram component is outlined below:
+The accessibility compliance for the Blazor diagram component is outlined below:
 
 | Accessibility Criteria | Compatibility |
 | -- | -- |
@@ -36,19 +36,17 @@ The accessibility compliance for the diagram component is outlined below:
 
 <div><img src="https://cdn.syncfusion.com/content/images/documentation/not-supported.png" alt="No"> - The component does not meet the requirement.</div>
 
-## WAI-ARIA
+## WAI-ARIA attributes
 
-WAI-ARIA (Web Accessibility Initiative – Accessible Rich Internet Applications) defines standards to enhance the accessibility of web pages, dynamic content, and user interface components developed with HTML, JavaScript, and related technologies. ARIA supplements the semantics of web components by providing additional information about their role, state, and functionality.
+The Blazor Diagram component followed the WAI-ARIA patterns to meet the accessibility. The following ARIA attributes are used in the Blazor Diagram component:
 
-The diagram component utilizes the following ARIA attribute:
-
-* aria-label (attribute): Provides a label or description for an element to aid assistive technologies in conveying its purpose or meaning to users with disabilities.
-
+| Attributes | Purpose |
+| --- | --- |
+| `aria-label` | Provides an accessible name for the Diagram Objects. |
 
 ## Keyboard Navigation
 
-All the diagram actions can be controlled via keyboard keys. The applicable key combinations and their relative functionalities are listed below for the appropriate UI features available in the component.
-
+All the Blazor diagram actions can be controlled via keyboard keys. The applicable key combinations and their relative functionalities are listed below for the appropriate UI features available in the component.
 
 Interaction Keys |Description
 -----|-----
@@ -76,7 +74,7 @@ Interaction Keys |Description
 <kbd>Ctrl+Shift+C</kbd> | Center the selected text horizontally.
 <kbd>Ctrl+Shift+R</kbd> | Align the selected text to the right.
 <kbd>Ctrl+Shift+J</kbd> | Justify the selected text, aligning it to both the left and right margins.
-<kbd>Ctrl+Shift+E</kbd> | Align the selected text to the top vertically. 
+<kbd>Ctrl+Shift+E</kbd> | Align the selected text to the top vertically.
 <kbd>Ctrl+Shift+M</kbd> | Center the selected text vertically.
 <kbd>Ctrl+Shift+V</kbd> | Align the selected text to the bottom vertically.
 <kbd>Ctrl+G</kbd> or <kbd>Ctrl+Shift+G</kbd> | Group selected shapes together, treating them as a single shape.
@@ -101,4 +99,14 @@ Interaction Keys |Description
 <kbd>Ctrl+5</kbd> | Activate the freeform tool.
 <kbd>Ctrl+9</kbd> | Activate the ellipse tool.
 
-You can download a complete working sample for keyboard navigation from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Accessibility/KeyBoardNavigation)
+N> You can download a complete working sample for keyboard navigation from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Accessibility/KeyBoardNavigation)
+
+## Ensuring accessibility
+
+The Blazor diagram component's accessibility levels are ensured through an [axe-core](https://www.nuget.org/packages/Deque.AxeCore.Playwright) with playwright tests.
+
+The accessibility compliance of the Blazor diagram component is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/diagram) in a new window to evaluate the accessibility of the Blazor diagram component with accessibility tools.
+
+## See also
+
+* [Accessibility in Syncfusion Blazor components](https://blazor.syncfusion.com/documentation/common/accessibility)
