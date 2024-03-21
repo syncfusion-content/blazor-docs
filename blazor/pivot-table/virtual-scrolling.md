@@ -160,8 +160,8 @@ Enabling this property causes the pivot table to render only the rows and column
 
 **Limitations for virtual scrolling**
 
-* In virtual scrolling, the [ColumnWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewGridSettings.html#Syncfusion_Blazor_PivotView_PivotViewGridSettings_ColumnWidth) property in [GridSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewGridSettings.html) should be in pixels and percentage values are not accepted.
-* Resizing columns or setting width to individual columns which affects the calculation used to pick the correct page on scrolling.
+* In virtual scrolling, the [ColumnWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewGridSettings.html#Syncfusion_Blazor_PivotView_PivotViewGridSettings_ColumnWidth) property in [GridSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewGridSettings.html) should be in pixels, and percentage values are not accepted.
+* Resizing columns or setting width to individual columns affects the calculation used to pick the correct page on scrolling.
 * Grouping, which takes additional time to splitting the raw items into the provided format.
 * Date Formatting, which takes additional time to convert date format.
 * Date Formatting with sorting, here additionally full date time format should be framed to perform sorting along with the provided date format which lags the performance.
