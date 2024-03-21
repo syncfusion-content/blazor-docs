@@ -1,11 +1,13 @@
 ---
 layout: post
 title: View in Blazor DocumentEditor Component | Syncfusion
-description: Checkout and learn here all about view in Syncfusion Blazor DocumentEditor component and more.
+description: Checkout and learn here all about the view in the Syncfusion Blazor DocumentEditor component and more.
 platform: Blazor
 control: DocumentEditor
 documentation: ug
 ---
+
+# View in Blazor DocumentEditor component
 
 ## Web Layout
 
