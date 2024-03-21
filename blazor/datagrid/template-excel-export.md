@@ -420,7 +420,7 @@ In the provided example, detail row content is formatted by specifying the [Head
 }
 ```
 
-## Hierarchy grid exporting with detail template
+## Exporting hierarchical grid using detail template
 
 The DataGrid offers an option to export the hierarchical Grid to Excel using the detail template exporting feature. The detail rows in the exported Excel can be customized or formatted using the [ExcelDetailTemplateExporting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_ExcelDetailTemplateExporting) event. In this event, the detail rows of the Excel document are formatted in accordance with their parent row details.
 
