@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started - Syncfusion Blazor Web App in Linux
-description: Check out the documentation for getting started with Blazor Web App and Syncfusion Blazor Components in Visual Studio using .NET CLI and much more.
+description: Check out the documentation for getting started with Blazor Web App and Syncfusion Blazor Components in Visual Studio using .NET CLI in Linux and much more.
 platform: Blazor
 component: Common
 documentation: ug
