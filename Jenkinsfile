@@ -89,7 +89,7 @@ if(currentBuild.result != 'FAILURE')
 
 def errorfiles = findFiles(glob: '**/Output/*.*')      
         
-    if(errorfiles.size() > 0) 		
+    if (errorfiles.size() > 0) 		
     { 		
          archiveArtifacts artifacts: 'ug_spellchecker/', excludes: null 	 
     }
