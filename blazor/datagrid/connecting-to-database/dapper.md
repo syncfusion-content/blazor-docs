@@ -59,8 +59,6 @@ namespace MyWebService.Controllers
     [ApiController]
     public class GridController : ControllerBase
     {
-        public static List<Order> Orders { get; set; }
-
         public class Order
         {
             [Key]
@@ -76,13 +74,13 @@ namespace MyWebService.Controllers
         {
             //TODO: Enter the connectionstring of database
             string ConnectionString = @"<Enter a valid connection string>";
-            string query = "SELECT * FROM dbo.Orders ORDER BY OrderID;";
+            string Query = "SELECT * FROM dbo.Orders ORDER BY OrderID;";
             //Create SQL Connection
-            using (IDbConnection connection = new SqlConnection(ConnectionString))
+            using (IDbConnection Connection = new SqlConnection(ConnectionString))
             {
-             connection.Open();
+             Connection.Open();
              // Dapper automatically handles mapping to your Order class
-             List<Order> orders = connection.Query<Order>(query).ToList();
+             List<Order> orders = Connection.Query<Order>(Query).ToList();
              return orders;
             }
         }
@@ -435,11 +433,11 @@ public void Insert([FromBody] CRUDModel<Order> Value)
     string ConnectionString = @"<Enter a valid connection string>";
     //Create query to insert the specific into the database by accessing its properties
     string Query = "INSERT INTO Orders(CustomerID, Freight, ShipCity, EmployeeID) VALUES(@CustomerID, @Freight, @ShipCity, @EmployeeID)";
-    using (IDbConnection connection = new SqlConnection(ConnectionString))
+    using (IDbConnection Connection = new SqlConnection(ConnectionString))
     {
-        connection.Open();
+        Connection.Open();
         //Execute this code to reflect the changes into the database
-        connection.Execute(Query, Value.Value);
+        Connection.Execute(Query, Value.Value);
     }
     //Add custom logic here if needed and remove above method
 }
@@ -465,11 +463,11 @@ public void Update([FromBody] CRUDModel<Order> Value)
     string ConnectionString = @"<Enter a valid connection string>";
     //Create query to update the changes into the database by accessing its properties
     string Query = "UPDATE Orders SET CustomerID = @CustomerID, Freight = @Freight, ShipCity = @ShipCity, EmployeeID = @EmployeeID WHERE OrderID = @OrderID";
-    using (IDbConnection connection = new SqlConnection(ConnectionString))
+    using (IDbConnection Connection = new SqlConnection(ConnectionString))
     {
-        connection.Open();
+        Connection.Open();
         //Execute this code to reflect the changes into the database
-        connection.Execute(Query, Value.Value);
+        Connection.Execute(Query, Value.Value);
     }
     //Add custom logic here if needed and remove above method
 }
@@ -495,12 +493,12 @@ public void Delete([FromBody] CRUDModel<Order> Value)
     string ConnectionString = @"<Enter a valid connection string>";
     //Create query to remove the specific from database by passing the primary key column value.
     string Query = "DELETE FROM Orders WHERE OrderID = @OrderID";
-    using (IDbConnection connection = new SqlConnection(ConnectionString))
+    using (IDbConnection Connection = new SqlConnection(ConnectionString))
     {
-        connection.Open();
+        Connection.Open();
         int orderID = Convert.ToInt32(Value.Key.ToString());
         //Execute this code to reflect the changes into the database
-        connection.Execute(Query, new { OrderID = orderID });
+        Connection.Execute(Query, new { OrderID = orderID });
     }
     //Add custom logic here if needed and remove above method
 }
@@ -529,11 +527,11 @@ public void Batch([FromBody] CRUDModel<Order> Value)
         {
             //Create query to update the changes into the database by accessing its properties
             string Query = "UPDATE Orders SET CustomerID = @CustomerID, Freight = @Freight, ShipCity = @ShipCity, EmployeeID = @EmployeeID WHERE OrderID = @OrderID";
-            using (IDbConnection connection = new SqlConnection(ConnectionString))
+            using (IDbConnection Connection = new SqlConnection(ConnectionString))
             {
-                connection.Open();
+                Connection.Open();
                 //Execute this code to reflect the changes into the database
-                connection.Execute(Query, Record);
+                Connection.Execute(Query, Record);
             }
             //Add custom logic here if needed and remove above method
         }
@@ -545,11 +543,11 @@ public void Batch([FromBody] CRUDModel<Order> Value)
         {
             //Create query to insert the specific into the database by accessing its properties 
             string Query = "INSERT INTO Orders (CustomerID, Freight, ShipCity, EmployeeID) VALUES (@CustomerID, @Freight, @ShipCity, @EmployeeID)";
-            using (IDbConnection connection = new SqlConnection(ConnectionString))
+            using (IDbConnection Connection = new SqlConnection(ConnectionString))
             {
-                connection.Open();
+                Connection.Open();
                 //Execute this code to reflect the changes into the database
-                connection.Execute(Query, Record);
+                Connection.Execute(Query, Record);
             }
             //Add custom logic here if needed and remove above method
         }
@@ -560,11 +558,11 @@ public void Batch([FromBody] CRUDModel<Order> Value)
         {
             //Create query to remove the specific from database by passing the primary key column value.
             string Query = "DELETE FROM Orders WHERE OrderID = @OrderID";
-            using (IDbConnection connection = new SqlConnection(ConnectionString))
+            using (IDbConnection Connection = new SqlConnection(ConnectionString))
             {
-                connection.Open();
+                Connection.Open();
                 //Execute this code to reflect the changes into the database
-                connection.Execute(Query, new { OrderID = Record.OrderID });
+                Connection.Execute(Query, new { OrderID = Record.OrderID });
             }
             //Add custom logic here if needed and remove above method
         }
@@ -743,13 +741,13 @@ public class OrderData
     public async Task<List<Order>> GetOrdersAsync()
     {
         //Create query to fetch data from database
-        string query = "SELECT * FROM dbo.Orders ORDER BY OrderID;";
+        string Query = "SELECT * FROM dbo.Orders ORDER BY OrderID;";
         //Create SQL Connection
-        using (IDbConnection connection = new SqlConnection(ConnectionString))
+        using (IDbConnection Connection = new SqlConnection(ConnectionString))
         {
-            connection.Open();
+            Connection.Open();
             // Dapper automatically handles mapping to your Order class
-            List<Order> orders = connection.Query<Order>(query).ToList();
+            List<Order> orders = Connection.Query<Order>(Query).ToList();
             return orders;
         }            
     }
@@ -1040,12 +1038,12 @@ public override async Task<object> InsertAsync(DataManager DataManager, object V
 public async Task AddOrderAsync(Order Value)
 {
     //Create query to insert the specific into the database by accessing its properties
-    string query = "INSERT INTO Orders(CustomerID, Freight, ShipCity, EmployeeID) VALUES(@CustomerID, @Freight, @ShipCity, @EmployeeID)";
-    using (IDbConnection connection = new SqlConnection(connectionString))
+    string Query = "INSERT INTO Orders(CustomerID, Freight, ShipCity, EmployeeID) VALUES(@CustomerID, @Freight, @ShipCity, @EmployeeID)";
+    using (IDbConnection Connection = new SqlConnection(connectionString))
     {
-        connection.Open();
+        Connection.Open();
         //Execute this code to reflect the changes into the database
-        await connection.ExecuteAsync(query, Value);
+        await Connection.ExecuteAsync(query, Value);
     }
 }
 {% endhighlight %}
@@ -1077,12 +1075,12 @@ public override async Task<object> UpdateAsync(DataManager DataManager, object V
 public async Task UpdateOrderAsync(Order Value)
 {
     //Create query to update the changes into the database by accessing its properties
-    string query = "UPDATE Orders SET CustomerID = @CustomerID, Freight = @Freight, EmployeeID = @EmployeeID, ShipCity = @ShipCity WHERE OrderID = @OrderID";
-    using (IDbConnection connection = new SqlConnection(connectionString))
+    string Query = "UPDATE Orders SET CustomerID = @CustomerID, Freight = @Freight, EmployeeID = @EmployeeID, ShipCity = @ShipCity WHERE OrderID = @OrderID";
+    using (IDbConnection Connection = new SqlConnection(connectionString))
     {
         connection.Open();
         //Execute this code to reflect the changes into the database
-        await connection.ExecuteAsync(query, Value);
+        await Connection.ExecuteAsync(Query, Value);
     }
 }
 {% endhighlight %}
@@ -1114,12 +1112,12 @@ public override async Task<object> RemoveAsync(DataManager DataManager, object V
 public async Task RemoveOrderAsync(int? Key)
 {
     //Create query to remove the specific from database by passing the primary key column value.
-    string query = "DELETE FROM Orders WHERE OrderID = @OrderID";
-    using (IDbConnection connection = new SqlConnection(connectionString))
+    string Query = "DELETE FROM Orders WHERE OrderID = @OrderID";
+    using (IDbConnection Connection = new SqlConnection(connectionString))
     {
-        connection.Open();
+        Connection.Open();
         //Execute this code to reflect the changes into the database
-        await connection.ExecuteAsync(query, new { OrderID = Key });
+        await Connection.ExecuteAsync(Query, new { OrderID = Key });
     }
 }
 {% endhighlight %}
