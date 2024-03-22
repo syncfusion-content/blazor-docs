@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Microsoft SQL Data Binding using Dapper in Blazor DataGrid Component | Syncfusion
+title: SQL Data Binding using Dapper in Blazor DataGrid Component | Syncfusion
 description: Learn about consuming data using Dapper from SQL Server using Microsoft SQL Client, binding it to Syncfusion Component, and performing CRUD operations.
 platform: Blazor
 control: DataGrid
 documentation: ug
 ---
 
-# Connecting Microsoft SQL Server data in to Blazor DataGrid Component using Dapper
+# Connecting SQL Server data in to Blazor DataGrid Component using Dapper
 
 This section describes how to connect and retrieve data from a Microsoft SQL Server database using [Dapper](https://github.com/DapperLib/Dapper) and [System.Data.SqlClient](https://www.nuget.org/packages/System.Data.SqlClient/4.8.6?_src=template) and bind it to the Blazor DataGrid component.
 
@@ -574,7 +574,7 @@ public void Batch([FromBody] CRUDModel<Order> Value)
 
 When you run the application, the resultant Blazor DataGrid component will look like this
 
-![Blazor DataGrid component bound with Microsoft SQL Server data](../images/blazor-Grid-Ms-SQl-databinding-Gif.gif)
+![Blazor DataGrid component bound with Microsoft SQL Server data using Dapper](../images/blazor-Grid-Ms-SQl-databinding-Gif.gif)
 
 > Find the sample from this [GitHub location](https://github.com/SyncfusionExamples/connecting-databases-to-blazor-datagrid-component/tree/master/Binding%20MS%20SQL%20database%20using%20UrlAdaptor).
 
@@ -1168,6 +1168,6 @@ public override async Task<object> BatchUpdateAsync(DataManager DataManager, obj
 }
 {% endhighlight %}
 
-![Blazor DataGrid component bound with Microsoft SQL Server data](../images/blazor-Grid-Ms-SQl-databinding-Gif.gif)
+![Blazor DataGrid component bound with Microsoft SQL Server data using Dapper](../images/blazor-Grid-Ms-SQl-databinding-Gif.gif)
 
 > You can find the sample in this [GitHub location](https://github.com/SyncfusionExamples/connecting-databases-to-blazor-datagrid-component/tree/master/Binding%20MS%20SQL%20database%20using%20CustomAdaptor).
