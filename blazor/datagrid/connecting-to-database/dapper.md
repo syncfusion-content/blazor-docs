@@ -1039,7 +1039,7 @@ public async Task AddOrderAsync(Order Value)
 {
     //Create query to insert the specific into the database by accessing its properties
     string Query = "INSERT INTO Orders(CustomerID, Freight, ShipCity, EmployeeID) VALUES(@CustomerID, @Freight, @ShipCity, @EmployeeID)";
-    using (IDbConnection Connection = new SqlConnection(connectionString))
+    using (IDbConnection Connection = new SqlConnection(ConnectionString))
     {
         Connection.Open();
         //Execute this code to reflect the changes into the database
@@ -1076,7 +1076,7 @@ public async Task UpdateOrderAsync(Order Value)
 {
     //Create query to update the changes into the database by accessing its properties
     string Query = "UPDATE Orders SET CustomerID = @CustomerID, Freight = @Freight, EmployeeID = @EmployeeID, ShipCity = @ShipCity WHERE OrderID = @OrderID";
-    using (IDbConnection Connection = new SqlConnection(connectionString))
+    using (IDbConnection Connection = new SqlConnection(ConnectionString))
     {
         connection.Open();
         //Execute this code to reflect the changes into the database
@@ -1113,7 +1113,7 @@ public async Task RemoveOrderAsync(int? Key)
 {
     //Create query to remove the specific from database by passing the primary key column value.
     string Query = "DELETE FROM Orders WHERE OrderID = @OrderID";
-    using (IDbConnection Connection = new SqlConnection(connectionString))
+    using (IDbConnection Connection = new SqlConnection(ConnectionString))
     {
         Connection.Open();
         //Execute this code to reflect the changes into the database
