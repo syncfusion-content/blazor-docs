@@ -103,3 +103,55 @@ builder.Services.AddSyncfusionBlazor();
 ....
 
 ```
+
+## Add Stylesheet and Script Resources
+
+The theme stylesheet and script can be accessed from NuGet through Static Web Assets. Include the stylesheet reference in the <head> section and the script reference at the end of the <body> in the ~/Components/App.razor file as shown below:
+
+```html
+<head>
+    ....
+    <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
+</head>
+....
+<body>
+    ....
+    <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
+</body>
+```
+
+N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic to discover various methods ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference), and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)) for referencing themes in your Blazor application. Also, check out the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic to learn different approaches for adding script references in your Blazor application.
+
+## Add Syncfusion Blazor component
+
+Add the Syncfusion Blazor Calendar component in the ~/Pages/.razor file. Ensure the page is defined with a render mode at the top of the ~Pages/.razor component, as follows:
+
+{% tabs %}
+{% highlight razor %}
+
+@* desired render mode define here *@
+@rendermode InteractiveAuto
+
+{% endhighlight %}
+{% endtabs %}
+
+{% tabs %}
+{% highlight razor %}
+
+<SfCalendar TValue="DateTime" />
+
+{% endhighlight %}
+{% endtabs %}
+
+*	In the terminal, run the following command to build and start the app. The app will listen on http://localhost:<port number> and you can view it in the browser.
+*	If an interactive render mode as WebAssembly or Auto in the web app, you should run the Blazor server project.
+
+{% tabs %}
+{% highlight c# tabtitle=".NET CLI" %}
+
+dotnet run
+
+{% endhighlight %}
+{% endtabs %}
+
+![Blazor Calendar Component](images/output-calendar-using-blazor-webassembly.png)
