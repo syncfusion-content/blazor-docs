@@ -1,13 +1,13 @@
 ---
 layout: post
-title: SQL Data Binding using Dapper in Blazor DataGrid Component | Syncfusion
+title: Bind Sql Data in Blazor DataGrid component using Dapper | Syncfusion
 description: Learn about consuming data using Dapper from SQL Server using Microsoft SQL Client, binding it to Syncfusion Component, and performing CRUD operations.
 platform: Blazor
 control: DataGrid
 documentation: ug
 ---
 
-# Connecting SQL Server data in to Blazor DataGrid Component using Dapper
+# connecting SQL data into Blazor DataGrid component using Dapper
 
 This section describes how to connect and retrieve data from a Microsoft SQL Server database using [Dapper](https://github.com/DapperLib/Dapper) and [System.Data.SqlClient](https://www.nuget.org/packages/System.Data.SqlClient/4.8.6?_src=template) and bind it to the Blazor DataGrid component.
 
