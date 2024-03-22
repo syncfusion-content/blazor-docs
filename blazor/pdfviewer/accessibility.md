@@ -83,7 +83,7 @@ The Blazor PDF Viewer component followed the [keyboard interaction](https://www.
 
 ## Ensuring accessibility
 
-The Blazor PDF Viewer component's accessibility levels are ensured through an [axe-core](https://www.npmjs.com/package/axe-core) software tools during automated testing.
+The Blazor PDF Viewer component's accessibility levels are ensured through an [axe-core](https://www.nuget.org/packages/Deque.AxeCore.Playwright) with playwright tests.
 
 The accessibility compliance of the Blazor PDF Viewer component is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/pdfviewer) in a new window to evaluate the accessibility of the Blazor PDF Viewer component with accessibility tools.
 

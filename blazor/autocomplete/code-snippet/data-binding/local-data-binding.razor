@@ -1,0 +1,27 @@
+@using Syncfusion.Blazor.DropDowns
+
+<p>AutoComplete value is : <strong>@AutoVal</strong></p>
+
+<SfAutoComplete TValue="string" Placeholder="e.g. Australia" TItem="Country" Width="300px" @bind-Value="@AutoVal" DataSource="@Countries">
+    <AutoCompleteFieldSettings Value="Name"></AutoCompleteFieldSettings>
+</SfAutoComplete>
+
+@code {
+
+    public string AutoVal = "Canada";
+
+    public class Country
+    {
+        public string Name { get; set; }
+
+        public string Code { get; set; }
+    }
+
+    List<Country> Countries = new List<Country>
+   {
+        new Country() { Name = "Australia", Code = "AU" },
+        new Country() { Name = "Bermuda", Code = "BM" },
+        new Country() { Name = "Canada", Code = "CA" },
+        new Country() { Name = "Cameroon", Code = "CM" },
+    };
+}

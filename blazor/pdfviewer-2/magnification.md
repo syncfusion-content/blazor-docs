@@ -20,7 +20,7 @@ The built-in toolbar of SfPdfViewer contains the following zooming options:
 
 ![Magnification in Blazor SfPdfViewer](./images/magnification.png)
 
-You can enable or disable the magnification option in SfPdfViewer default toolbar by setting the `EnableMagnification` property.
+You can enable or disable the magnification option in SfPdfViewer default toolbar by setting the [EnableMagnification](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_EnableMagnification) property.
 
 ```cshtml
 
