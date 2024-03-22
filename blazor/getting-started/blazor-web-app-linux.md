@@ -9,6 +9,8 @@ documentation: ug
 
 # Getting Started with Blazor Web App in Linux (Ubuntu)
 
+This article provides a step-by-step instruction for building Blazor Web App with `Syncfusion Blazor` component using the [.NET CLI](https://dotnet.microsoft.com/en-us/download/dotnet) on linux.
+
 ## Prerequisites
 
 Ensure you have the latest version of the [.NET SDK](https://learn.microsoft.com/en-us/dotnet/core/install/linux-ubuntu) installed. If you previously installed the SDK, you can determine the installed version by executing the following command in a terminal.
@@ -58,7 +60,7 @@ cd BlazorApp.Client
 {% endhighlight %}
 {% endtabs %}
 
-This command creates new Blazor Web app project and places it in a new directory called `BlazorApp` inside your current location. See [dotnet new CLI command](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?pivots=linux-macos&view=aspnetcore-8.0) command topics for more details.
+This command creates new Blazor Web app project and places it in a new directory called `BlazorApp` inside your current location. See [dotnet new CLI command](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?pivots=linux-macos&view=aspnetcore-8.0) topics for more details.
 
 ## Install Syncfusion Blazor Calendars and Themes NuGet in the App
 
@@ -71,7 +73,6 @@ If you utilize `WebAssembly or Auto` render modes in the Blazor Web App, you nee
 
 dotnet add package Syncfusion.Blazor.Calendars --version {{ site.releaseversion }}
 dotnet add package Syncfusion.Blazor.Themes --version {{ site.releaseversion }}
-dotnet restore
 
 {% endhighlight %}
 {% endtabs %}
@@ -80,7 +81,7 @@ N> Syncfusion Blazor components are available in [nuget.org](https://www.nuget.o
 
 ## Register Syncfusion Blazor Service
 
-Open **~/_Imports.razor** file and import the Syncfusion.Blazor and Syncfusion.Blazor.Calendars namespace.
+Open **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Calendars` namespace.
 
 
 ```cshtml
@@ -106,7 +107,7 @@ builder.Services.AddSyncfusionBlazor();
 
 ## Add Stylesheet and Script Resources
 
-The theme stylesheet and script can be accessed from NuGet through Static Web Assets. Include the stylesheet reference in the <head> section and the script reference at the end of the <body> in the ~/Components/App.razor file as shown below:
+The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the stylesheet reference in the `<head>` section and the script reference at the end of the `<body>` in the **~/Components/App.razor** file as shown below:
 
 ```html
 <head>
@@ -124,7 +125,7 @@ N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/app
 
 ## Add Syncfusion Blazor component
 
-Add the Syncfusion Blazor Calendar component in the ~/Pages/.razor file. Ensure the page is defined with a render mode at the top of the ~Pages/.razor component, as follows:
+Add the Syncfusion Blazor Calendar component in the **~/Pages/.razor** file. Ensure the page is defined with a render mode at the top of the **~Pages/.razor** component, as follows:
 
 {% tabs %}
 {% highlight razor %}
@@ -143,8 +144,8 @@ Add the Syncfusion Blazor Calendar component in the ~/Pages/.razor file. Ensure 
 {% endhighlight %}
 {% endtabs %}
 
-*	In the terminal, run the following command to build and start the app. The app will listen on http://localhost:<port number> and you can view it in the browser.
-*	If an interactive render mode as WebAssembly or Auto in the web app, you should run the Blazor server project.
+*	In the terminal, run the following command to build and start the app. The app will listen on `http://localhost:<port number>` and you can view it in the browser.
+*	If an interactive render mode as `WebAssembly` or `Auto` in the web app, you should run the Blazor server project.
 
 {% tabs %}
 {% highlight c# tabtitle=".NET CLI" %}
