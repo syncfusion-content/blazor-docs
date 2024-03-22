@@ -86,6 +86,13 @@ if(currentBuild.result != 'FAILURE')
     { 		
          archiveArtifacts artifacts: 'cireports/', excludes: null 	 
     }
+
+def errorfiles = findFiles(glob: '**/Output/*.*')      
+        
+    if(errorfiles.size() > 0) 		
+    { 		
+         archiveArtifacts artifacts: 'Output/', excludes: null 	 
+    }
 	    step([$class: 'WsCleanup'])	}
 	    }
 }
