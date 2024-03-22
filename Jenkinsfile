@@ -91,7 +91,7 @@ def errorfiles = findFiles(glob: '**/Output/*.*')
         
     if(errorfiles.size() > 0) 		
     { 		
-         archiveArtifacts artifacts: 'ug_spellchecker/tools/Output/', excludes: null 	 
+         archiveArtifacts artifacts: 'ug_spellchecker', excludes: null 	 
 	    echo errorfiles
     }
 	    step([$class: 'WsCleanup'])	}
