@@ -15,7 +15,7 @@ You can customize the cell by using the [CellSettings](https://help.syncfusion.c
 
 ### Border
 
-Change the width, color, and radius of the heat map cells by using the [HeatMapCellBorder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapCellBorder.html) tag.
+Change the width, color, and radius of the heatmap cells by using the [HeatMapCellBorder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapCellBorder.html) tag.
 
 ```cshtml
 
@@ -61,7 +61,7 @@ Change the width, color, and radius of the heat map cells by using the [HeatMapC
 
 ### Cell highlighting
 
-Enable or disable the cell highlighting while hovering over the heat map cells by using the  [EnableCellHighlighting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapCellSettings.html#Syncfusion_Blazor_HeatMap_HeatMapCellSettings_EnableCellHighlighting) property.
+Enable or disable the cell highlighting while hovering over the heatmap cells by using the  [EnableCellHighlighting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapCellSettings.html#Syncfusion_Blazor_HeatMap_HeatMapCellSettings_EnableCellHighlighting) property.
 
 ```cshtml
 

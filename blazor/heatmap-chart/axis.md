@@ -9,15 +9,21 @@ documentation: ug
 
 # Axis in Blazor HeatMap Chart Component
 
-Heat map consists of two axes namely, `X-axis` and `Y-axis` that displays the row headers and column headers to plot the data points respectively. You can define the type, format, and other customizing options for both axes in the heat map.
+Heatmap consists of two axes namely, `X-axis` and `Y-axis` that displays the row headers and column headers to plot the data points respectively. You can customize both the axes by specifying the properties like type, format, and other customising options in the axis of the heatmap.
 
 ## Types
 
-There are three different axis types available in the heat map, which defines the data type of the axis labels. You can define the axis type by using the [ValueType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapCommonAxis.html#Syncfusion_Blazor_HeatMap_HeatMapCommonAxis_ValueType) property in the heat map.
+There are three different axis types available in the heatmap, which defines the data type of the axis labels. You can define the axis type by using the [ValueType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapCommonAxis.html#Syncfusion_Blazor_HeatMap_HeatMapCommonAxis_ValueType) property in the heatmap.
+
+Three different types of axis in the heatmap as follows.
+
+* Category axis
+* Numeric axis
+* Date Time axis
 
 ### Category axis
 
-Category axis type is used to represent the string values in axis labels.
+Category axis type is used to represent the string values in axis labels. You can specify the [ValueType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapCommonAxis.html#Syncfusion_Blazor_HeatMap_HeatMapCommonAxis_ValueType) property for the axis is **Category**.
 
 ```cshtml
 
@@ -60,7 +66,7 @@ Category axis type is used to represent the string values in axis labels.
 
 ### Numeric axis
 
-Numeric axis type is used to represent the numeric values in axis labels.
+Numeric axis type is used to represent the numeric values in the axis labels. You can specify the [ValueType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapCommonAxis.html#Syncfusion_Blazor_HeatMap_HeatMapCommonAxis_ValueType) property for the axis is **Numeric**.
 
 ```cshtml
 
@@ -101,7 +107,7 @@ Numeric axis type is used to represent the numeric values in axis labels.
 
 ### Date-time axis
 
-Date-time axis type is used to represent the date-time values in axis labels with a specific format. In date-time axis, you can define the start and end date/time using the [Minimum](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapCommonAxis.html#Syncfusion_Blazor_HeatMap_HeatMapCommonAxis_Minimum) and [Maximum](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapCommonAxis.html#Syncfusion_Blazor_HeatMap_HeatMapCommonAxis_Maximum) properties.
+Date-time axis type is used to represent the date-time values in the axis labels with a specific format. In date-time axis, you can define the start and end date/time using the [Minimum](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapCommonAxis.html#Syncfusion_Blazor_HeatMap_HeatMapCommonAxis_Minimum) and [Maximum](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapCommonAxis.html#Syncfusion_Blazor_HeatMap_HeatMapCommonAxis_Maximum) properties. You can specify the [ValueType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapCommonAxis.html#Syncfusion_Blazor_HeatMap_HeatMapCommonAxis_ValueType) property for the axis is **DateTime**.
 
 ```cshtml
 
@@ -143,9 +149,11 @@ Date-time axis type is used to represent the date-time values in axis labels wit
 
 ![Blazor HeatMap Chart with DateTime Axis](images/axis/blazor-heatmap-chart-datetime-axis.png)
 
-## Inversed axis
+## Axis customization
 
-Heat map supports inversing the axis origin for both axes, where the axis labels are placed in an inversed manner. You can enable axis inversing by enabling the [IsInversed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapCommonAxis.html#Syncfusion_Blazor_HeatMap_HeatMapCommonAxis_IsInversed) property.
+### Inversed axis
+
+Heatmap supports inversing the axis origin for both axes, where the axis labels are placed in an inversed manner. You can enable axis inversing by enabling the [IsInversed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapCommonAxis.html#Syncfusion_Blazor_HeatMap_HeatMapCommonAxis_IsInversed) property.
 
 ```cshtml
 
@@ -187,9 +195,9 @@ Heat map supports inversing the axis origin for both axes, where the axis labels
 
 ![Blazor HeatMap Chart with Inversed Axis](images/axis/blazor-heatmap-chart-inversed-axis.png)
 
-## Opposed axis
+### Opposed axis
 
-In heat map, you can place the axis label in an opposite position of its default axis label position by using the [OpposedPosition](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapCommonAxis.html#Syncfusion_Blazor_HeatMap_HeatMapCommonAxis_OpposedPosition) property.
+In heatmap, you can place the axis label in an opposite position of its default axis label position by using the [OpposedPosition](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapCommonAxis.html#Syncfusion_Blazor_HeatMap_HeatMapCommonAxis_OpposedPosition) property.
 
 ```cshtml
 
@@ -231,9 +239,11 @@ In heat map, you can place the axis label in an opposite position of its default
 
 ![Blazor HeatMap Chart with Opposed Axis](images/axis/blazor-heatmap-chart-opposed-axis.png)
 
-## Label formatting
+## Axis label customization
 
-Heat map supports formatting the axis labels by using the [LabelFormat](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapCommonAxis.html#Syncfusion_Blazor_HeatMap_HeatMapCommonAxis_LabelFormat) property. Using this property, you can customize the axis label by global string format (‘P’, ‘C’, etc) or customized format like ‘{value}°C’.
+### Label formatting
+
+Heatmap supports formatting the axis labels by using the [LabelFormat](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapCommonAxis.html#Syncfusion_Blazor_HeatMap_HeatMapCommonAxis_LabelFormat) property. Using this property, you can customize the axis label by global string format (‘P’, ‘C’, etc) or customized format like ‘{value}°C’.
 
 ```cshtml
 
@@ -277,7 +287,7 @@ Heat map supports formatting the axis labels by using the [LabelFormat](https://
 
 ## Axis intervals
 
-In heat map, you can define an interval between the axis labels using the [Interval](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapCommonAxis.html#Syncfusion_Blazor_HeatMap_HeatMapCommonAxis_Interval) property. In date-time axis, you can change the interval mode by using the [IntervalType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapCommonAxis.html#Syncfusion_Blazor_HeatMap_HeatMapCommonAxis_IntervalType) property. The date-time axis supports the following interval types.
+In heatmap, you can define an interval between the axis labels using the [Interval](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapCommonAxis.html#Syncfusion_Blazor_HeatMap_HeatMapCommonAxis_Interval) property. In date-time axis, you can change the interval mode by using the [IntervalType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapCommonAxis.html#Syncfusion_Blazor_HeatMap_HeatMapCommonAxis_IntervalType) property. The date-time axis supports the following interval types.
 
 ```cshtml
 
@@ -321,7 +331,7 @@ In heat map, you can define an interval between the axis labels using the [Inter
 
 ## Axis label increment
 
-Axis label increment in the heat map is used to display the axis labels with regular interval values in numeric and date-time axes. The labels will be displayed with tick gaps when you set the label interval. But, to achieve the same behavior without tick gaps, use the label increment. You can set the axis label increment using the [Increment](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapCommonAxis.html#Syncfusion_Blazor_HeatMap_HeatMapCommonAxis_Increment) property and the default value of this property is **1**.
+Axis label increment in the heatmap is used to display the axis labels with regular interval values in numeric and date-time axes. The labels will be displayed with gaps on the axis when you set the interval. However, you need to limit the gaps on the axis, use the `Increment` property. The [Increment](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapCommonAxis.html#Syncfusion_Blazor_HeatMap_HeatMapCommonAxis_Increment) property can be used to set the increment value for the axis in order to display the axis labels without gaps and the default value of this property is **1**.
 
 ```cshtml
 
@@ -360,3 +370,111 @@ Axis label increment in the heat map is used to display the axis labels with reg
 ```
 
 ![Incrementing Axis Label in Blazor HeatMap Chart](images/axis/blazor-heatmap-chart-increment-axis-label.png)
+
+### Limiting labels in date-time axis
+
+You can display the axis labels at specific time intervals along with the date-time axis using the [ShowLabelOn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapCommonAxis.html#Syncfusion_Blazor_HeatMap_HeatMapCommonAxis_ShowLabelOn) property. This property supports the following types:
+
+* None: Displays the axis labels based on the [`IntervalType`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapCommonAxis.html#Syncfusion_Blazor_HeatMap_HeatMapCommonAxis_IntervalType) and `Interval` property of the axis. This type is default value of the `ShowLabelOn` property.
+* Years: Displays the axis labels on every year between given date-time range.
+* Months: Displays the axis labels on every month between given date-time range.
+* Days: Displays the axis labels on every day between given date-time range.
+* Hours: Displays the axis labels on every hours between given date-time range.
+
+```cshtml
+
+@using Syncfusion.Blazor.HeatMap
+
+<SfHeatMap DataSource="@HeatMapData" Height="280px">
+    <HeatMapTitleSettings Text="Annual Summary of User Activities in GitLab">
+        <HeatMapTitleTextStyle Size="15px" FontWeight="500" FontStyle="Normal" FontFamily="Segoe UI"></HeatMapTitleTextStyle>
+    </HeatMapTitleSettings>
+    <HeatMapXAxis ValueType="Syncfusion.Blazor.HeatMap.ValueType.DateTime" OpposedPosition="true" Minimum="@Minimum" Maximum="@Maximum" IntervalType="IntervalType.Days" LabelFormat="MMM" Increment="7" ShowLabelOn="LabelType.Months">
+    </HeatMapXAxis>
+    <HeatMapYAxis Labels="@YAxisLabels" IsInversed="true"></HeatMapYAxis>
+    <HeatMapPaletteSettings Type="PaletteType.Gradient">
+        <HeatMapPalettes>
+            <HeatMapPalette Value="0" Color="rgb(238,238,238)" Label="no contributions"></HeatMapPalette>
+            <HeatMapPalette Value="1" Color="rgb(172, 213, 242)" Label="1-15 contributions"></HeatMapPalette>
+            <HeatMapPalette Value="16" Color="rgb(127, 168, 201)" Label="16-31 contributions"></HeatMapPalette>
+            <HeatMapPalette Value="32" Color="rgb(82, 123, 160)" Label="31-49 contributions"></HeatMapPalette>
+            <HeatMapPalette Value="50" Color="rgb(37, 78, 119)" Label="50+ contributions"></HeatMapPalette>
+        </HeatMapPalettes>
+    </HeatMapPaletteSettings>
+    <HeatMapLegendSettings Position="LegendPosition.Bottom" Width="20%" Alignment="Alignment.Near" ShowLabel="true" LabelDisplayType="LabelDisplayType.None" EnableSmartLegend="true"></HeatMapLegendSettings>
+</SfHeatMap>
+
+@code{
+    int?[,] GetDefaultData()
+    {
+        int?[,]dataSource = new int?[,]
+        {
+
+            {null, null, null, null, 16, 48, 0 },
+            {0, 15, 0, 24, 0, 39, 0 },
+            {0, 18, 37, 0, 0, 50, 0 },
+            {0, 10, 0, 0, 44, 5, 0 },
+            {0, 36, 0, 45, 20, 18, 0 },
+            {0, 28, 1, 42, 0, 10, 0 },
+            {0, 16, 32, 0, 1, 25, 0},
+            {0, 31, 2, 9, 24, 0, 0 },
+            {0, 8, 47, 0, 0, 35, 0 },
+            {0, 31, 0, 0, 0, 40, 0},
+            {0, 8, 0, 27, 0, 35, 0},
+            {0, 12, 9, 45, 0, 8, 0},
+            {0, 0, 13, 0, 22, 10, 0},
+            {0, 16, 32, 0, 1, 25, 0},
+            {0, 31, 2, 9, 24, 0, 0},
+            {0, 8, 47, 27, 0, 35, 0},
+            {0, 28, 14, 10, 0, 0, 0},
+            {0, 36, 0, 45, 20, 18, 0},
+            { 0, 28, 1, 42, 0, 10, 0},
+            {0, 31, 0, 24, 0, 40, 0},
+            { 0, 8, 47, 27, 0, 35, 0},
+            { 0, 36, 0, 45, 20, 18, 0},
+            {0, 28, 1, 42, 0, 10, 0},
+            { 0, 31, 0, 24, 0, 40, 0},
+            { 0, 16, 32, 0, 1, 25, 0},
+            {0, 31, 2, 9, 24, 0, 0},
+            { 0, 8, 47, 27, 0, 35, 0},
+            {0, 10, 0, 36, 23, 19, 0},
+            { 0, 18, 37, 23, 0, 50, 0},
+            {0, 28, 14, 10, 0, 0, 0},
+            { 0, 18, 37, 23, 0, 50, 0},
+            {0, 18, 37, 23, 0, 50, 0},
+            { 0, 28, 14, 10, 0, 0, 0},
+            {0, 31, 2, 9, 24, 0, 0},
+            { 0, 8, 47, 27, 0, 35, 0},
+            {0, 10, 2, 0, 44, 5, 0},
+            { 0, 36, 0, 45, 20, 18, 0},
+            { 0, 28, 1, 42, 0, 10, 0},
+            { 0, 31, 0, 24, 0, 40, 1},
+            { 0, 16, 32, 0, 1, 25, 0},
+            { 0, 31, 2, 9, 24, 0, 0},
+            { 0, 8, 47, 27, 0, 35, 0},
+            { 0, 10, 2, 0, 44, 5, 0},
+            { 0, 12, 9, 45, 0, 8, 0},
+            {0, 0, 13, 35, 22, 10, 0},
+            { 0, 28, 14, 10, 0, 0, 0},
+            {0, 36, 0, 45, 20, 18, 2},
+            { 0, 28, 1, 42, 0, 10, 0},
+            {0, 31, 0, 24, 0, 40, 1},
+            { 0, 8, 47, 27, 0, 35, 0},
+            { 0, 10, 2, 0, 44, 5, 0},
+            { 0, 31, 2, 9, 24, 0, 1},
+            { 0, 8, 47, 27, 0, 35, 40},
+            {0, 10, 2, 0, 44, 5, null}
+        };
+        return dataSource;
+    }
+    string[] YAxisLabels = new string[] { "Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat" };
+    object Minimum = new DateTime(2017, 6, 23);
+    object Maximum = new DateTime(2018, 6, 30);
+    public object HeatMapData { get; set; }
+    protected override void OnInitialized()
+    {
+        HeatMapData = GetDefaultData();
+    }
+}
+
+```

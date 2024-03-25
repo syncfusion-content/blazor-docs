@@ -9,13 +9,13 @@ documentation: ug
 
 # Dimensions in Blazor HeatMap Chart Component
 
-## Size for heat map
+## Size for heatmap
 
-You can set the size of heat map directly by using the [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.Size.html#Syncfusion_Blazor_HeatMap_Size_Width) and [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.Size.html#Syncfusion_Blazor_HeatMap_Size_Height) properties.
+You can set the size of heatmap directly by using the [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.Size.html#Syncfusion_Blazor_HeatMap_Size_Width) and [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.Size.html#Syncfusion_Blazor_HeatMap_Size_Height) properties.
 
 ### In pixel
 
-You can set the size for heat map in a pixel.
+You can set the size for heatmap in a pixel.
 
 ```cshtml
 
@@ -58,7 +58,7 @@ You can set the size for heat map in a pixel.
 
 ### In percentage
 
-By setting the value in percentage, the heat map gets its dimension with respect to its container. For example, when the height is ‘50%’, the heat map is rendered to half of the container height.
+By setting the value in percentage, the heatmap gets its dimension with respect to its container. For example, when the height is ‘50%’, the heatmap is rendered to half of the container height.
 
 ```cshtml
 
