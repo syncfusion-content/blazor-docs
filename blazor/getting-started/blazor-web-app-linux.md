@@ -91,8 +91,7 @@ Open **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusio
 
 ```
 
-Now, register the Syncfusion Blazor Service in the **~/Program.cs** file of your App.
-If you select an Interactive render mode as `WebAssembly` or `Auto`, you need to register the Syncfusion Blazor service in both **~/Program.cs** files of your Blazor Web App.
+Now, register the Syncfusion Blazor Service in the **~/Program.cs** file of your App. If you select an Interactive render mode as `WebAssembly` or `Auto`, you need to register the Syncfusion Blazor service in both **~/Program.cs** files of your Blazor Web App.
 
 
 ```cshtml
