@@ -37,7 +37,8 @@ Blazor FileManager can be populated with local data that contains the list of ob
 
 To render the root-level folder, specify the ParentID as null, or there is no need to specify the ParentID in the local list object.
 
-```cshtml
+{% tabs %}
+{% highlight razor %}
 
 @using Syncfusion.Blazor.FileManager
 
@@ -167,7 +168,8 @@ To render the root-level folder, specify the ParentID as null, or there is no ne
     }
 }
 
-```
+{% endhighlight %}
+{% endtabs %}
 
 N> [Also see the demo here](https://blazor.syncfusion.com/demos/file-manager/flat-data?theme=fluent).
 
@@ -183,7 +185,8 @@ This will fetch the details of the static folder from the `wwwroot` directory. L
 
 N> [View FileManagerService.cs in GitHub ](https://github.com/SyncfusionExamples/blazor-filemanager-with-flat-data/blob/master/FileManagerService.cs).
 
-```cshtml
+{% tabs %}
+{% highlight c# %}
 
 using Flat_Data;
 using Flat_Data.Data;
@@ -193,9 +196,11 @@ using Syncfusion.Blazor;
 builder.Services.AddSyncfusionBlazor();
 builder.Services.AddSingleton<FileManagerService>();
 
-```
+{% endhighlight %}
+{% endtabs %}
 
-```cshtml
+{% tabs %}
+{% highlight razor %}
 
 @using Syncfusion.Blazor.FileManager
 @inject FileManagerService FileManagerService
@@ -246,13 +251,15 @@ builder.Services.AddSingleton<FileManagerService>();
     }
 }
 
-```
+{% endhighlight %}
+{% endtabs %}
 
 ## Upload action
 
 To perform a upload action in FileManager component with injected service, utilize the [ItemsUploaded](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerEvents-1.html#Syncfusion_Blazor_FileManager_FileManagerEvents_1_ItemsUploaded) event. This event enables you to access details of the file selected in the browser, providing access to metadata such as the file name, size, and content type. To read the contents of the uploaded file, invoke the [OpenReadStream()](https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.components.forms.ibrowserfile.openreadstream?view=aspnetcore-8.0) method of the [IBrowserFile](https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.components.forms.ibrowserfile?view=aspnetcore-8.0) interface, which returns a stream for reading the file data.
 
-```cshtml
+{% tabs %}
+{% highlight razor %}
 
 @code{
 
@@ -294,13 +301,15 @@ To perform a upload action in FileManager component with injected service, utili
     }
 }
 
-```
+{% endhighlight %}
+{% endtabs %}
 
 ## Download action
 
 To perform a download action in FileManager component with injected service, utilize the [BeforeDownload](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerEvents-1.html#Syncfusion_Blazor_FileManager_FileManagerEvents_1_BeforeDownload) event. This will allow you to retrieve necessary Downloaded item details from the event argument. Updating the downloaded file's stream data and name to the event arguments [FileStream](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.BeforeDownloadEventArgs-1.html#Syncfusion_Blazor_FileManager_BeforeDownloadEventArgs_1_FileStream) and [DownloadFileName](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.BeforeDownloadEventArgs-1.html#Syncfusion_Blazor_FileManager_BeforeDownloadEventArgs_1_DownloadFileName) respectively completes the download action.
 
-```cshtml
+{% tabs %}
+{% highlight razor %}
 
 @code{
 
@@ -312,13 +321,15 @@ To perform a download action in FileManager component with injected service, uti
     }
 }
 
-```
+{% endhighlight %}
+{% endtabs %}
 
 ## Get image action
 
 To load image in FileManager component with injected service, utilize the [BeforeImageLoad](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerEvents-1.html#Syncfusion_Blazor_FileManager_FileManagerEvents_1_BeforeImageLoad) event. This will allow you to retrieve necessary Downloaded item details from the event argument. Updating the image file's stream data to the event argument [FileStream](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.BeforeImageLoadEventArgs-1.html#Syncfusion_Blazor_FileManager_BeforeImageLoadEventArgs_1_FileStream) completes the image retrieval operation.
 
-```cshtml
+{% tabs %}
+{% highlight razor %}
 
 @code{
 
@@ -330,6 +341,7 @@ To load image in FileManager component with injected service, utilize the [Befor
     }
 }
 
-```
+{% endhighlight %}
+{% endtabs %}
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/blazor-filemanager-with-flat-data).
