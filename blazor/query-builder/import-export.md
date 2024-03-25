@@ -9,15 +9,19 @@ documentation: ug
 
 # Importing and Exporting in Blazor QueryBuilder Component
 
-Importing allows to view or edit the predefined conditions which is available in List rules or SQL rules. You can import the conditions as either initial rendering or post rendering.
+Importing facilitates the viewing or editing of predefined conditions available in JSON, SQL, and MongoDB query formats, while exporting enables obtaining the created rules in the query builder as JSON, SQL, and MongoDB queries.
 
 ## Importing
 
-### Importing from JSON
+Importing enables users to bring predefined conditions into the system for viewing or editing, available in formats such as JSON, SQL, and MongoDB query. It facilitates the quick incorporation of pre-defined rules or parameters into workflows, streamlining the setup process by importing directly from external sources or saved configurations.
+
+### Importing from JSON Object
+
+Importing from JSON enables users to bring predefined conditions encoded in JSON format into the system. This feature streamlines the process by providing a standardized format for importing data, ensuring compatibility, and ease of use.
 
 #### Initial rendering
 
-To apply the conditions initially, you can define the condition and rules in **QueryBuilderRule** . Here, the list of rules can be imported by defining the **QueryBuilderRule**.
+To initially apply conditions, you can establish the rules in **QueryBuilderRule** by importing a structured JSON object and defining its properties.
 
 ```cshtml
 
@@ -68,13 +72,15 @@ To apply the conditions initially, you can define the condition and rules in **Q
 
 #### Post rendering
 
-The [SetRules](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder-1.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_1_SetRules_System_Collections_Generic_List_Syncfusion_Blazor_QueryBuilder_RuleModel__System_String_System_Nullable_System_Boolean__) function gives you the ability to define conditions from a JSON. You can import rules using this function by providing a list of RuleModel objects as the basis. The JSON text is additionally deserialized to a RuleModel object using the JsonConvert.DeserializeObject method.
+You can set the conditions from structured JSON object through the [SetRules](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder-1.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_1_SetRules_System_Collections_Generic_List_Syncfusion_Blazor_QueryBuilder_RuleModel__System_String_System_Nullable_System_Boolean__) method.
 
-### Importing from SQL
+### Importing from SQL Query
 
-#### Importing from Inline SQL
+Importing from SQL involves integrating predefined conditions or data stored in a SQL database into the Query Builder. This enables the direct integration of SQL queries, thereby improving workflow efficiency and data accuracy within the application. SQL importing supports various types, including Inline SQL, Parameter SQL, and Named Parameter SQL.
 
-You can set the conditions from Inline SQL query through the [SetRulesFromSql](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder-1.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_1_SetRules_System_Collections_Generic_List_Syncfusion_Blazor_QueryBuilder_RuleModel__System_String_System_Nullable_System_Boolean__) method.
+#### Importing from Inline SQL Query
+
+Importing from Inline SQL involves integrating SQL queries directly into the Query Builder. This method streamlines the process by enabling users to input SQL statements directly into the application for analysis, manipulation, or further processing within the Query Builder. Conditions can be set from Inline SQL queries using the [SetRulesFromSql](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder-1.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_1_SetRules_System_Collections_Generic_List_Syncfusion_Blazor_QueryBuilder_RuleModel__System_String_System_Nullable_System_Boolean__) method.
 
 ```cshtml
 @using Syncfusion.Blazor.QueryBuilder
@@ -123,9 +129,9 @@ You can set the conditions from Inline SQL query through the [SetRulesFromSql](h
 
 ![Importing from Inline SQL in Blazor QueryBuilder](./images/blazor-querybuilder-import-from-sql.png)
 
-#### Importing from Parameter SQL
+#### Importing from Parameter SQL Query
 
-You can set the conditions from Parameter SQL query through the [SetParameterSql](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder-1.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_1_SetParameterSql_System_Collections_Generic_List_Syncfusion_Blazor_QueryBuilder_RuleModel__System_String_System_Nullable_System_Boolean__) method.
+Importing from Parameter SQL involves integrating SQL queries with parameters directly into the Query Builder. This method allows users to input SQL statements containing parameters, which can be dynamically filled in during execution. It streamlines the process by enabling flexible and customizable querying within the application. Conditions can be set from Parameter SQL queries using the [SetParameterSql](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder-1.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_1_SetParameterSql_System_Collections_Generic_List_Syncfusion_Blazor_QueryBuilder_RuleModel__System_String_System_Nullable_System_Boolean__) method.
 
 ```cshtml
 @using Syncfusion.Blazor.QueryBuilder
@@ -179,9 +185,9 @@ You can set the conditions from Parameter SQL query through the [SetParameterSql
 
 ![Importing from Parameter SQL in Blazor QueryBuilder](./images/import-parameter.png)
 
-#### Importing from Named Parameter SQL
+#### Importing from Named Parameter SQL Query
 
-You can set the conditions from Named Parameter SQL query through the [SetNamedParameterSql](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder-1.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_1_SetNamedParameterSql_System_Collections_Generic_List_Syncfusion_Blazor_QueryBuilder_RuleModel__System_String_System_Nullable_System_Boolean__) method.
+Importing from Named Parameter SQL involves integrating SQL queries with named parameters directly into the Query Builder. This method enables users to input SQL statements containing named parameters, providing flexibility and customization during execution. It streamlines the process by allowing dynamic parameter assignment within the application's query environment. Conditions can be set from Named Parameter SQL queries using the [SetNamedParameterSql](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder-1.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_1_SetNamedParameterSql_System_Collections_Generic_List_Syncfusion_Blazor_QueryBuilder_RuleModel__System_String_System_Nullable_System_Boolean__) method.
 
 ```cshtml
 @using Syncfusion.Blazor.QueryBuilder
@@ -235,9 +241,9 @@ You can set the conditions from Named Parameter SQL query through the [SetNamedP
 
 ![Importing from Named Parameter SQL in Blazor QueryBuilder](./images/import-named-parameter.png)
 
-### Importing from MongoDB
+### Importing from MongoDB Query
 
-You can set the conditions from MongoDB query through the [SetMongoQuery](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder-1.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_1_SetMongoQuery_System_Collections_Generic_List_Syncfusion_Blazor_QueryBuilder_RuleModel__System_String_System_Nullable_System_Boolean__) method.
+Importing from MongoDB Query involves integrating MongoDB queries directly into the Query Builder. This enables users to input MongoDB query statements directly into the application, allowing for seamless integration and manipulation of MongoDB data within the Query Builder environment. It streamlines the process by facilitating direct access to MongoDB data for analysis, filtering, and further processing within the application. Conditions can be set from Named Parameter SQL queries using the [SetMongoQuery](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder-1.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_1_SetMongoQuery_System_Collections_Generic_List_Syncfusion_Blazor_QueryBuilder_RuleModel__System_String_System_Nullable_System_Boolean__) method.
 
 ```cshtml
 @using Syncfusion.Blazor.QueryBuilder
@@ -289,11 +295,11 @@ You can set the conditions from MongoDB query through the [SetMongoQuery](https:
 
 ## Exporting
 
-Exporting allows to save or maintain the created conditions through the [Blazor Query Builder](https://www.syncfusion.com/blazor-components/blazor-query-builder). You can export the defined conditions by the following ways.
+Exporting from the [Blazor Query Builder](https://www.syncfusion.com/blazor-components/blazor-query-builder) allows users to preserve or store the created conditions. The defined conditions can be exported using various methods, including:
 
-### Exporting to JSON
+### Exporting to JSON Object
 
-You can seamlessly export the defined conditions from the Syncfusion Blazor Query Builder to a JSON by utilizing the [GetRules](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder-1.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_1_GetRules) method. This method retrieves the configured rules within the Query Builder, offering a convenient way to capture and use the conditions. To complete the process, the JsonConvert.SerializeObject method is employed, enabling the conversion of these rules into a JSON.
+You can extract the established conditions in the Query Builder and convert them into a structured JSON object format using the [GetRules](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder-1.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_1_GetRules) method. This process enables users to save or transfer the conditions for further use or analysis in other applications or systems that support JSON data.
 
 ```cshtml
 @using Syncfusion.Blazor.Buttons
@@ -341,11 +347,13 @@ You can seamlessly export the defined conditions from the Syncfusion Blazor Quer
 
 ```
 
-### Exporting to SQL
+### Exporting to SQL Query
 
-#### Exporting to Inline SQL
+Exporting to SQL involves converting the defined conditions within the Query Builder into SQL queries. This functionality allows users to generate SQL code representing the conditions set in the Query Builder, which can then be executed directly on a SQL database or used for further analysis and processing. SQL exporting supports various types, including Inline SQL, Parameter SQL, and Named Parameter SQL.
 
-The defined conditions can be exported to the Inline SQL query through the [GetSqlFromRules](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder-1.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_1_GetSqlFromRules_Syncfusion_Blazor_QueryBuilder_RuleModel_System_Boolean_) method.
+#### Exporting to Inline SQL Query
+
+Exporting to Inline SQL Query entails embedding the defined conditions from the Query Builder directly into SQL statements within the exported code. This method ensures that the conditions are seamlessly integrated into the SQL query syntax, enabling straightforward execution or further processing within SQL database systems. This can be achieved using the [GetSqlFromRules](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder-1.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_1_GetSqlFromRules_Syncfusion_Blazor_QueryBuilder_RuleModel_System_Boolean_) method.
 
 ```cshtml
 @using Syncfusion.Blazor.QueryBuilder
@@ -397,9 +405,9 @@ The defined conditions can be exported to the Inline SQL query through the [GetS
 
 ```
 
-#### Exporting to Parameter SQL
+#### Exporting to Parameter SQL Query
 
-The defined conditions can be exported to the Parameter SQL query through the [GetParameterSql](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder-1.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_1_GetParameterSql_Syncfusion_Blazor_QueryBuilder_RuleModel_System_Boolean_) method.
+Exporting to Parameter SQL involves incorporating the defined conditions from the Query Builder into SQL queries with parameters. This method allows for dynamic value assignment during execution, enhancing flexibility and adaptability in query processing within SQL database. This can be accomplished using the [GetParameterSql](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder-1.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_1_GetParameterSql_Syncfusion_Blazor_QueryBuilder_RuleModel_System_Boolean_) method for exporting to Parameter SQL query.
 
 ```cshtml
 @using Syncfusion.Blazor.QueryBuilder
@@ -451,9 +459,9 @@ The defined conditions can be exported to the Parameter SQL query through the [G
 
 ```
 
-#### Exporting to Named Parameter SQL
+#### Exporting to Named Parameter SQL Query
 
-The defined conditions can be exported to the Named Parameter SQL query through the [GetNamedParameterSql](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder-1.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_1_GetNamedParameterSql_Syncfusion_Blazor_QueryBuilder_RuleModel_System_Boolean_) method.
+Exporting to Named Parameter SQL entails integrating the defined conditions from the Query Builder into SQL queries with named parameters. This method offers enhanced readability and flexibility during execution by using named placeholders for parameter values. Named Parameter SQL facilitates easier maintenance and modification of queries, making it convenient for dynamic parameter assignment within SQL database. This can be accomplished using the method [GetNamedParameterSql](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder-1.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_1_GetNamedParameterSql_Syncfusion_Blazor_QueryBuilder_RuleModel_System_Boolean_)  for exporting to Named Parameter SQL query.
 
 ```cshtml
 @using Syncfusion.Blazor.QueryBuilder
@@ -505,9 +513,9 @@ The defined conditions can be exported to the Named Parameter SQL query through 
 
 ```
 
-### Exporting to MongoDB
+### Exporting to MongoDB Query
 
-The defined conditions can be exported to the MongoDB query through the [GetMongoQuery](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder-1.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_1_GetMongoQuery_Syncfusion_Blazor_QueryBuilder_RuleModel_System_Boolean_) method.
+Exporting to MongoDB Query involves converting the defined conditions within the Query Builder into MongoDB query syntax. This process allows users to generate MongoDB queries representing the conditions set in the Query Builder, which can then be executed directly on a MongoDB database or used for further analysis and processing. This can be accomplished using the [GetMongoQuery](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder-1.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_1_GetMongoQuery_Syncfusion_Blazor_QueryBuilder_RuleModel_System_Boolean_) method for exporting to MongoDB query.
 
 ```cshtml
 @using Syncfusion.Blazor.QueryBuilder
