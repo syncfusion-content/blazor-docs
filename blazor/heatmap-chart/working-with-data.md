@@ -23,7 +23,7 @@ HeatMap supports the following types of data binding with the adaptor support.
 1. Array 
     * Table binding
     * Cell binding
-2. Object data
+2. JSON data
     * Table binding
     * Cell binding
 
