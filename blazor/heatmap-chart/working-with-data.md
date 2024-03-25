@@ -341,6 +341,8 @@ The data points that use the `null` or `undefined` or empty string as value are 
     </HeatMapTitleSettings>
     <HeatMapXAxis Labels="@XAxisLabels"></HeatMapXAxis>
     <HeatMapYAxis Labels="@YAxisLabels"></HeatMapYAxis>
+    <HeatMapPaletteSettings EmptyPointColor="#d3d3d3">
+    </HeatMapPaletteSettings>
 </SfHeatMap>
 
 @code{
