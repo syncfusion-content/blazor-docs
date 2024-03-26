@@ -246,6 +246,14 @@ The following example demonstrates how to set the `SearchSettings.Operator` prop
         public Operator Value { get; set; }
     }
 
+     public enum Operator
+    {
+        StartsWith,
+        EndsWith,
+        Contains,
+        Equal
+    }
+
     List<DropDownOrder> DropDownData = new List<DropDownOrder>
     {
         new DropDownOrder(){Text="StartsWith",Value= Operator.StartsWith },

@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Accessibility in Blazor Input Mask Component | Syncfusion
-description: Checkout and learn here all about Accessibility in Syncfusion Blazor Input Mask component and much more.
+title: Accessibility in Blazor File Upload Component | Syncfusion
+description: Checkout and learn here all about accessibility in Syncfusion Blazor File Upload component and more.
 platform: Blazor
-control: Input Mask
+control: File Upload
 documentation: ug
 ---
 
-# Accessibility in Blazor Input Mask Component
+# Accessibility in Blazor File Upload Component
 
-The Maskedtextbox component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
+The Uploader component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 
-The accessibility compliance for the Maskedtextbox component is outlined below.
+The accessibility compliance for the Uploader component is outlined below.
 
 | Accessibility Criteria | Compatibility |
 | -- | -- |
@@ -37,28 +37,26 @@ The accessibility compliance for the Maskedtextbox component is outlined below.
 
 <div><img src="https://cdn.syncfusion.com/content/images/documentation/not-supported.png" alt="No"> - The component does not meet the requirement.</div>
 
-## WAI-ARIA attributes
+## Keyboard interaction
 
-The MaskedTextBox is characterized with complete ARIA Accessibility support that helps to access using on-screen readers and other assistive technology devices. This component is designed with the reference of the guidelines document given in [WAI ARAI Accessibility practices](https://www.w3.org/WAI/ARIA/apg/).
+The uploader component characterized with complete ARIA accessibility support that helps to be accessible by on-screen readers and other assistive technology devices.
 
-The MaskedTextBox uses the `textbox` role and following ARIA properties for its element based on its state.
+The following are the standard keys that works on uploader component:
 
-| **Property** | **Functionality** |
+| **Keyboard shortcuts** | **Actions** |
 | --- | --- |
-| aria-live | Indicates the priority of updates to a live region. |
-| aria-disabled | Indicates the disabled state of the MaskedTextBox. |
-| aria-valuenow | Specifies the current value of the MaskedTextBox. |
-| aria-invalid | Indicates that the user input is incorrect or not within the acceptable ranges. |
-| aria-placeholder | It is a short hint to help the users with data entry when the MaskedTextBox has no value. |
-| aria-labelledby | Indicates the floating label element of the MaskedTextBox. |
+| <kbd>Tab</kbd> | Move focus to next element. |
+| <kbd>Shift + Tab</kbd> | Move focus to previous element. |
+| <kbd>Enter</kbd> | Triggers corresponding action to button element. |
+| <kbd>Esc</kbd> | Close the file browser dialog alone and cancels the upload on drop the file. |
 
 ## Ensuring accessibility
 
-The MaskedTextBox component's accessibility levels are ensured through an [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) software tools during automated testing.
+The Uploader component's accessibility levels are ensured through an [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) software tools during automated testing.
 
-The accessibility compliance of the MaskedTextBox component is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/maskedtextbox) in a new window to evaluate the accessibility of the MaskedTextBox component with accessibility tools.
+The accessibility compliance of the Uploader component is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/uploader) in a new window to evaluate the accessibility of the Uploader component with accessibility tools.
 
-{% previewsample "https://blazor.syncfusion.com/accessibility/maskedtextbox" %}
+{% previewsample "https://blazor.syncfusion.com/accessibility/uploader" %}
 
 ## See also
 

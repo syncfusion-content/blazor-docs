@@ -20,7 +20,7 @@ To add the printing option to the grid’s Toolbar, simply include the [Toolbar]
 @using Syncfusion.Blazor.Grids
 @using BlazorApp1.Data
 
-<SfGrid DataSource="@Orders" Height="315" oolbar="@(new List<object>() { "Print" })">
+<SfGrid DataSource="@Orders" Height="315" Toolbar="@(new List<object>() { "Print" })">
     <GridColumns>
         <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="140"></GridColumn>
         <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer ID" Width="120"></GridColumn>
