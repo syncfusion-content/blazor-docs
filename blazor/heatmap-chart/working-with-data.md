@@ -36,7 +36,7 @@ This data type is a collection of array of numbers, where each array represents 
 @using Syncfusion.Blazor.HeatMap
 
 <SfHeatMap DataSource="@HeatMapData">
-    <HeatMapTitleSettings Text="GDP Growth Rate for Major Economies (in Percentage)">
+    <HeatMapTitleSettings Text="GDP Growth Rate for Major Economics (in Percentage)">
     </HeatMapTitleSettings>
     <HeatMapXAxis Labels="@XAxisLabels"></HeatMapXAxis>
     <HeatMapYAxis Labels="@YAxisLabels"></HeatMapYAxis>
@@ -52,22 +52,22 @@ This data type is a collection of array of numbers, where each array represents 
     </HeatMapPaletteSettings>
 </SfHeatMap>
 
-@code{
-    double[,] GetDefaultData()
+@code {
+    public double[,] GetDefaultData()
     {
         double[,] dataSource = new double[6, 10]
-            {
+        {
                 {9.5, 2.2, 4.2, 8.2, -0.5, 3.2, 5.4, 7.4, 6.2, 1.4 },
                 {4.3, 8.9, 10.8, 6.5, 5.1, 6.2, 7.6, 7.5, 6.1, 7.6},
                 {3.9, 2.7, 2.5, 3.7, 2.6, 5.1, 5.8, 2.9, 4.5, 5.1},
                 {2.4, -3.7, 4.1, 6.0, 5.0, 2.4, 3.3, 4.6, 4.3, 2.7},
                 {2.0, 7.0, -4.1, 8.9, 2.7, 5.9, 5.6, 1.9, -1.7, 2.9},
                 {5.4, 1.1, 6.9, 4.5, 2.9, 3.4, 1.5, -2.8, -4.6, 1.2}
-            };
-            return dataSource;
+        };
+        return dataSource;
     }
-    string[] XAxisLabels = new string[] { "China", "India", "Australia", "Mexico", "Canada", "Brazil" };
-    string[] YAxisLabels = new string[] { "2008", "2009", "2010", "2011", "2012", "2013", "2014", "2015", "2016", "2017" };
+    public string[] XAxisLabels = new string[] { "China", "India", "Australia", "Mexico", "Canada", "Brazil" };
+    public string[] YAxisLabels = new string[] { "2008", "2009", "2010", "2011", "2012", "2013", "2014", "2015", "2016", "2017" };
     public object HeatMapData { get; set; }
     protected override void OnInitialized()
     {
@@ -110,7 +110,7 @@ This data type is a collection of array objects that contain information about t
 </SfHeatMap>
 
 @code {
-    double[,] GetDefaultData()
+    public double[,] GetDefaultData()
     {
         double[,] dataSource = new double[,]
             {
@@ -139,8 +139,8 @@ This data type is a collection of array objects that contain information about t
             };
         return dataSource;
     }
-    string[] XAxisLabels = new string[] { "China", "Australia", "Mexico", "Canada", "Brazil", "USA", "UK" , "Germany", "Russia", "France", "Japan" };
-    string[] YAxisLabels = new string[] { "2000", "2005", "2010", "2011", "2012", "2013", "2014" };
+    public string[] XAxisLabels = new string[] { "China", "Australia", "Mexico", "Canada", "Brazil", "USA", "UK", "Germany", "Russia", "France", "Japan" };
+    public string[] YAxisLabels = new string[] { "2000", "2005", "2010", "2011", "2012", "2013", "2014" };
     public object HeatMapData { get; set; }
     protected override void OnInitialized()
     {
@@ -344,22 +344,22 @@ The data points that use the `null` value are considered as empty points. Empty 
     </HeatMapPaletteSettings>
 </SfHeatMap>
 
-@code{
-        int?[,] GetDefaultData()
+@code {
+    public int?[,] GetDefaultData()
+    {
+        int?[,] dataSource = new int?[6, 12]
         {
-            int?[,] dataSource = new int?[6, 12]
-            {
                 {8, 5, 2, 6, 8, 2, 9, 3, 7, 8, 7, 6},
                 {5, null, 4, 9, 10, null, 11, 7, 3, 7, 8, null},
                 {8, 7, 2, null, 5, 3, null, 2, 1, 8, null, 4},
                 {10, 2, null, 4, 5, null, 1, 10, 5, 2, 1, null},
                 {1, 2, 9, 4, null, 5, 1, null, 12, 1, null, 4},
                 {4, null, 3, 5, 2, null, null, null, 5, null, 1, 3},
-            };
-            return dataSource;
-        }
-    string[] XAxisLabels = new string[] {"Nancy", "Andrew", "Janet", "Margaret", "Steven", "Michael", "Robert","Laura", "Anne", "Paul", "Karin", "Mario" };
-    string[] YAxisLabels = new string[] { "2008", "2009", "2010", "2011", "2012", "2013", "2014", "2015", "2016", "2017", "2018", "2019" };
+        };
+        return dataSource;
+    }
+    public string[] XAxisLabels = new string[] { "Nancy", "Andrew", "Janet", "Margaret", "Steven", "Michael", "Robert", "Laura", "Anne", "Paul", "Karin", "Mario" };
+    public string[] YAxisLabels = new string[] { "2008", "2009", "2010", "2011", "2012", "2013", "2014", "2015", "2016", "2017", "2018", "2019" };
     public object HeatMapData { get; set; }
     protected override void OnInitialized()
     {
