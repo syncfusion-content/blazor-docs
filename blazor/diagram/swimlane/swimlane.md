@@ -272,5 +272,3 @@ Swimlane can be selected by clicking (tapping) the header of the swimlane. Also,
 
 
 ![Drag Node](Swimlane-images/Swimlane_Select_Drag.gif)
-
-
