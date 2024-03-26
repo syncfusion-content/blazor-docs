@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Improve the performance using CDN in SfPdfViewer component | Syncfusion
+title: Improve the performance using CDN in Blazor SfPdfViewer component | Syncfusion
 description: Learn here all about how to improve the performance using CDN in Blazor SfPdfViewer component and more.
 platform: Blazor
 control: SfPdfViewer
