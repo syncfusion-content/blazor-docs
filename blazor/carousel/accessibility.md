@@ -37,11 +37,11 @@ The accessibility compliance for the Blazor Carousel component is outlined below
 
 <div><img src="https://cdn.syncfusion.com/content/images/landing-page/no.png" alt="No"> - The component does not meet the requirement.</div>
 
-## ARIA attributes
+## WAI-ARIA attributes
 
 The Blazor carousel component is designed by considering [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/) standard. Carousel is supported with ARIA Accessibility which is accessible by on-screen readers and other assistive technology devices. The following list of attributes is added to the Carousel.
 
-| **Roles and Attributes** | **Functionalities**                                                                                                                             |
+| **Attributes** | **Purpose**                                                                                                                             |
 | ------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------|
 | `aria-roledescription`   | The role description attribute should be added for the root element (carousel) and each carousel slide item (slide).                            |
 | `aria-label`             | Previous, next and play/pause buttons and all indicator elements.                                                                               |
