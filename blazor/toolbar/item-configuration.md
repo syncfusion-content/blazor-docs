@@ -56,6 +56,8 @@ It specifies the location for aligning Toolbar items on the Toolbar. Each comman
 
 ![Aligning Blazor Toolbar Item](./images/blazor-toolbar-align-item.png)
 
+To optimize the alignment of Toolbar items without using [Align](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.ToolbarItem.html#Syncfusion_Blazor_Navigations_ToolbarItem_Align) property, utilize the [Spacer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.ToolbarItem.html#Syncfusion_Blazor_Navigations_ToolbarItem_Type) in toolbar. Refer [here](./align-items.md) to integrate spacer in Toolbar.
+
 ## CssClass
 
 Single or multiple CSS classes can be added to the Toolbar commands using the Toolbar item `CssClass` property. Refer [Set command customization](https://blazor.syncfusion.com/documentation/toolbar/how-to/set-command-customization) for snippet and output.
@@ -237,6 +239,8 @@ It specifies the types of command to be rendered in the Toolbar. Supported types
 2. **Separator**: Adds a horizontal line that separates the Toolbar commands.
 
 3. **Input**: Creates an input element that is applicable to template rendering with Syncfusion controls like DropDownList, AutoComplete, etc.
+
+4. **Spacer**: Adds a space within the Toolbar item. [Spacer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.ToolbarItem.html#Syncfusion_Blazor_Navigations_ToolbarItem_Type) can be used to align the Toolbar items to the left, center, and right.
 
 ### Button
 
