@@ -1197,3 +1197,5 @@ public override async Task<object> BatchUpdateAsync(DataManager DataManager, obj
 ![Blazor DataGrid component bound with Microsoft SQL Server data](../images/blazor-Grid-Ms-SQl-databinding-Gif.gif)
 
 > You can find the sample in this [GitHub location](https://github.com/SyncfusionExamples/connecting-databases-to-blazor-datagrid-component/tree/master/Binding%20MS%20SQL%20database%20using%20CustomAdaptor).
+>
+> 
