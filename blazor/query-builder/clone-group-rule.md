@@ -9,7 +9,7 @@ documentation: ug
 
 # Clone Group/ Rule in Blazor QueryBuilder Component
 
-The [Blazor Query Builder](https://www.syncfusion.com/blazor-components/blazor-query-builder) allows you to clone rules as well as groups. The Clone options will create an exact replica of a rule or group next to the original. You can use [ShowButtons](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.QueryBuilderShowButtons.html) to enable/disable these buttons.
+The [Blazor Query Builder](https://www.syncfusion.com/blazor-components/blazor-query-builder) functionality extends to cloning both individual rules and entire groups. Utilizing the Clone options will generate an exact duplicate of a rule or group adjacent to the original one. This feature enables users to replicate complex query structures effortlessly. The [ShowButtons](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.QueryBuilderShowButtons.html) function offers users the ability to toggle the visibility of these cloning buttons, providing convenient control over the cloning process within the Query Builder interface.
 
 You can `clone` groups and rules by interacting through the user interface and methods.
 
