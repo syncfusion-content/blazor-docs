@@ -25,10 +25,10 @@ The Syncfusion's Blazor SfPdfViewer component allows to improve performance by r
 
 ```
 
-## File size when referencing the script from NuGet
+We have a file named pdfium.js in our source. Whenever that file is fetched, it is downloaded from the hosted location while referring to the script from the NuGet. Below is a clear image that illustrates this process.
 
 ![Using Nuget](../getting-started/GettingStarted_images/Filesize_using_NuGet.png)
 
-## File size when referencing the script from CDN
+When referencing the script from the **CDN**, it is initially fetched from the hosted location. Subsequently, it is retrieved from the browser cache. The image below provides a clear illustration of this process.
 
 ![Using CDN](../getting-started/GettingStarted_images/Filesize_using_CDN.png)
