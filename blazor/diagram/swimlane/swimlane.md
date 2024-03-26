@@ -270,4 +270,5 @@ Swimlane can be selected by clicking (tapping) the header of the swimlane. Also,
 
 * When you drag the elements in the diagram, the [PositionChanging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_PositionChanging) and [PositionChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_PositionChanged) events get triggered and we can do customization on those events.
 
+
 ![Drag Node](Swimlane-images/Swimlane_Select_Drag.gif)
