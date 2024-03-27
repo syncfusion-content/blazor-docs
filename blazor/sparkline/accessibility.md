@@ -9,9 +9,9 @@ documentation: ug
 
 # Accessibility in Blazor Sparkline Component
 
-The Blazor Sparkline control followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
+The Blazor Sparkline component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 
-The accessibility compliance for the Blazor Sparkline control is outlined below.
+The accessibility compliance for the Blazor Sparkline component is outlined below.
 
 | Accessibility Criteria | Compatibility |
 | -- | -- |
@@ -39,7 +39,7 @@ The accessibility compliance for the Blazor Sparkline control is outlined below.
 
 ## WAI-ARIA attributes
 
-The Blazor Sparkline control followed the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/alert/) patterns to meet the accessibility. The following ARIA attributes are used in the Blazor Sparkline control:
+The Blazor Sparkline component followed the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/alert/) patterns to meet the accessibility. The following ARIA attributes are used in the Blazor Sparkline component:
 
 * img (role)
 * region (role)
@@ -49,9 +49,9 @@ The Blazor Sparkline control followed the [WAI-ARIA](https://www.w3.org/WAI/ARIA
 
 ## Keyboard interaction
 
-The Blazor Sparkline control followed the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/alert/#keyboardinteraction) guideline, making it easy for people who use assistive technologies (AT) and those who completely rely on keyboard navigation. The following keyboard shortcuts are supported by the Blazor Sparkline control.
+The Blazor Sparkline component followed the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/alert/#keyboardinteraction) guideline, making it easy for people who use assistive technologies (AT) and those who completely rely on keyboard navigation. The following keyboard shortcuts are supported by the Blazor Sparkline component.
 
-| **Press** | **To do this** |
+Interaction Keys |Description
 | --- | --- |
 | <kbd>Tab</kbd> | Moves the focus to the next element in the Sparkline. |
 | <kbd>Shift + Tab</kbd> | Moves the focus to the previous element in the Sparkline. |
@@ -64,7 +64,7 @@ The Blazor Sparkline control followed the [keyboard interaction](https://www.w3.
 
 The Blazor Sparkline component's accessibility levels are ensured through an [axe-core](https://www.nuget.org/packages/Deque.AxeCore.Playwright) with playwright tests.
 
-The accessibility compliance of the Blazor Sparkline control is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/sparkline) in a new window to evaluate the accessibility of the Blazor Sparkline control with accessibility tools.
+The accessibility compliance of the Blazor Sparkline component is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/sparkline) in a new window to evaluate the accessibility of the Blazor Sparkline component with accessibility tools.
 
 
 ## See also
