@@ -13,7 +13,9 @@ This article provides a step-by-step instruction for building Blazor Web App wit
 
 ## Prerequisites
 
-Ensure you have the latest version of the [.NET SDK](https://learn.microsoft.com/en-us/dotnet/core/install/linux-ubuntu) installed. If you previously installed the SDK, you can determine the installed version by executing the following command in a terminal.
+* **Ubuntu 22.04.2** or later.
+* [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
+* Ensure you have the latest version of the [.NET SDK](https://learn.microsoft.com/en-us/dotnet/core/install/linux-ubuntu) installed. If you previously installed the SDK, you can determine the installed version by executing the following command in a terminal.
 
 {% tabs %}
 {% highlight c# tabtitle=".NET CLI" %}
