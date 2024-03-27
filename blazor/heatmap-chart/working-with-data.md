@@ -14,6 +14,7 @@ This section shows how to bind data to the HeatMap component. The below video de
 {% youtube
 "youtube:https://www.youtube.com/watch?v=u27NqwNs8sw&t=78s"%}
 
+
 HeatMap visualizes the JSON data and two-dimensional array data. Using the data adaptor support, data can be bound to the HeatMap.
 
 ## Data adaptor
