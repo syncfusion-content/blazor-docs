@@ -11,6 +11,8 @@ documentation: ug
 
 The [Blazor Range Slider](https://www.syncfusion.com/blazor-components/blazor-range-slider) is characterized with complete [WAI-ARIA](https://www.w3.org/TR/wai-aria-practices/#slider) Accessibility support that helps to access by on-screen readers and other assistive technology devices. This component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 
+The Blazor Range Slider component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
+
 The accessibility compliance for the Blazor Range Slider component is outlined below.
 
 | Accessibility Criteria | Compatibility |

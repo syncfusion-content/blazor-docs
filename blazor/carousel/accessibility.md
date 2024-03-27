@@ -11,6 +11,8 @@ documentation: ug
 
 The [Blazor Carousel](https://www.syncfusion.com/blazor-components/blazor-carousel) component has been designed, keeping in mind the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/carousel/) specifications, and applying the WAI-ARIA roles, states and properties along with keyboard support. Thus, making it usable for people who use assistive WAI-ARIA accessibility supports that is achieved through attributes like `aria-roledescription`, `aria-label`, `aria-current`, `aria-live`, `aria-role` and `aria-hidden`. It helps to provides information about the elements in a document for assistive technology. The component implements the keyboard navigation support by following the [WAI-ARIA practices](https://www.w3.org/WAI/ARIA/apg/) and tested in major screen readers.
 
+The Blazor Carousel component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
+
 The accessibility compliance for the Blazor Carousel component is outlined below.
 
 | Accessibility Criteria | Compatibility |

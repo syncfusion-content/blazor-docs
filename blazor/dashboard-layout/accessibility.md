@@ -11,6 +11,8 @@ documentation: ug
 
 The [Blazor Dashboard Layout](https://www.syncfusion.com/blazor-components/blazor-dashboard) component has been designed keeping in mind the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/) specifications, by applying the prompt `WAI-ARIA` roles, states, and properties. This component is characterized by ARIA accessibility support, which makes navigation easy for people who use assistive technologies (AT).
 
+The Blazor Dashboard Layout component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
+
 The accessibility compliance for the Blazor Dashboard Layout component is outlined below.
 
 | Accessibility Criteria | Compatibility |

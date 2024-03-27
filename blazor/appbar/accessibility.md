@@ -43,7 +43,7 @@ The Blazor AppBar component provides the focus element navigation based on its�
 
 ## Ensuring accessibility
 
-The Blazor AppBar component’s accessibility levels are ensured through an axe-core software tool during automated testing.
+The Blazor AppBar component’s accessibility levels are ensured through an [axe-core](https://www.nuget.org/packages/Deque.AxeCore.Playwright) software tool during automated testing.
 
 The accessibility compliance of the AppBar component is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/appbar) in a new window to evaluate the accessibility of the AppBar component with accessibility tools.
 
