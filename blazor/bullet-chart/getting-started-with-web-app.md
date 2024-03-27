@@ -34,7 +34,7 @@ Alternatively, you can utilize the following package manager command to achieve 
 
 Install-Package Syncfusion.Blazor.BulletChart -Version {{ site.releaseversion }}
 
-{% endhighlight %}
+
 {% endtabs %}
 
 N> Syncfusion Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for available NuGet packages list with component details.
@@ -109,7 +109,7 @@ Add the Syncfusion Blazor Bullet Chart component in the **~Pages/.razor** file. 
 }
 
 {% endhighlight %}
-{% endtabs %}
+
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion Blazor Bullet Chart component in your default web browser.
 
