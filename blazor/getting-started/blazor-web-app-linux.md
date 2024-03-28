@@ -13,7 +13,9 @@ This article provides a step-by-step instruction for building Blazor Web App wit
 
 ## Prerequisites
 
-Ensure you have the latest version of the [.NET SDK](https://learn.microsoft.com/en-us/dotnet/core/install/linux-ubuntu) installed. If you previously installed the SDK, you can determine the installed version by executing the following command in a terminal.
+* **Ubuntu 20.04** or later.
+* [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
+* Ensure you have the latest version of the [.NET SDK](https://learn.microsoft.com/en-us/dotnet/core/install/linux-ubuntu) installed. If you previously installed the SDK, you can determine the installed version by executing the following command in a terminal.
 
 {% tabs %}
 {% highlight c# tabtitle=".NET CLI" %}
@@ -91,8 +93,7 @@ Open **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusio
 
 ```
 
-Now, register the Syncfusion Blazor Service in the **~/Program.cs** file of your App.
-If you select an Interactive render mode as `WebAssembly` or `Auto`, you need to register the Syncfusion Blazor service in both **~/Program.cs** files of your Blazor Web App.
+Now, register the Syncfusion Blazor Service in the **~/Program.cs** file of your App. If you select an Interactive render mode as `WebAssembly` or `Auto`, you need to register the Syncfusion Blazor service in both **~/Program.cs** files of your Blazor Web App.
 
 
 ```cshtml
