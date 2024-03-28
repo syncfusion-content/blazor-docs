@@ -65,7 +65,7 @@ The Blazor Chart component followed the [keyboard interaction](https://www.w3.or
 Interaction Keys |Description
 -----|-----
 <kbd>Alt + J</kbd> | Moves the focus to the chart element.
-<kbd>Tab</kbd> | Moves the focus to the next element in the chart.
+<kbd>Tab</kbd> |Moves the focus to the next element in the chart.
 <kbd>Shift + Tab</kbd> |Moves the focus to the previous element in the chart.
 <kbd>DownArrow</kbd> |Moves the focus to the data point right side from the selected point.
 <kbd>UpArrow</kbd> |Moves the focus to the data point right side from the selected point.
