@@ -3,7 +3,7 @@ layout: post
 title: Accessibility in Blazor Stock Chart Component | Syncfusion
 description: Checkout and learn here all about Accessibility using Keyboard navigation in Syncfusion Blazor Stock Chart component and more.
 platform: Blazor
-control: Stock Chart
+component: Stock Chart
 documentation: ug
 ---
 

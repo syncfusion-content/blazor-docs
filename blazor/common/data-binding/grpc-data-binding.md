@@ -18,11 +18,9 @@ The following software are needed,
 * Visual Studio 2022.
 * .NET 6.0 or later.
 
-## Creating Blazor server-side application
+## Creating Blazor webassembly application
 
-Open Visual Studio 2022 and follow the steps in the below documentation to **create the Blazor WebAssembly(Hosted) Application**.
-
-[Create Blazor WebAssembly Application](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-visual-studio)
+You can create a **Blazor WebAssembly App** with **ASP.NET Core Hosted** using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0)
 
 Finally, ensure to select the **ASP.NET Core Hosted** application.
 

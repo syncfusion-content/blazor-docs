@@ -74,12 +74,11 @@ Here’s an example that demonstrates how to use the custom aggregate feature in
         {
 
         }
-        public OrderData(int? OrderID, string CustomerID, string ShipCountry, DateTime OrderDate, double Freight)
+        public OrderData(int? OrderID, string CustomerID, string ShipCountry, double Freight)
         {
             this.OrderID = OrderID;
             this.CustomerID = CustomerID;   
             this.ShipCountry = ShipCountry;
-            this.OrderDate = OrderDate;
             this.Freight = Freight;           
         }
 

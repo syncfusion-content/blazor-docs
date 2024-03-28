@@ -1033,71 +1033,6 @@ In the following sample, selected records will be gotten from the `GetSelectedRe
 }
 ```
 
-### Export template columns
-
-PDF export provides an option to export template columns of the DataGrid by defining the [IncludeTemplateColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportProperties.html#Syncfusion_Blazor_Grids_PdfExportProperties_IncludeTemplateColumn) of [PdfExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportProperties.html) as true. In the following sample, the CustomerID column is a template column. The template values cannot be directly exported into the cells. To customize the values of template columns in the PDF document, you must use [PdfQueryCellInfoEvent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_PdfQueryCellInfoEvent).
-
-```cshtml
-@using Syncfusion.Blazor.Grids
-
-<SfGrid ID="Grid" @ref="DefaultGrid" DataSource="@Orders" Toolbar="@(new List<string>() { "PdfExport" })" AllowPdfExport="true" AllowPaging="true">
-    <GridEvents PdfQueryCellInfoEvent="PdfQueryCellInfoHandler" OnToolbarClick="ToolbarClickHandler" TValue="Order"></GridEvents>
-    <GridColumns>
-        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150">
-            <Template>
-                @{
-                    var con = (context as Order);
-                }
-                <span>Mr.@con.CustomerID</span>
-            </Template>
-        </GridColumn>
-        <GridColumn Field=@nameof(Order.OrderDate) HeaderText="Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
-        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-    </GridColumns>
-</SfGrid>
-
-@code{
-    private SfGrid<Order> DefaultGrid;
-    public List<Order> Orders { get; set; }
-
-    public async Task ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
-    {
-        if (args.Item.Id == "Grid_pdfexport")  //Id is combination of Grid's ID and itemname
-        {
-            PdfExportProperties ExportProperties = new PdfExportProperties();
-            ExportProperties.IncludeTemplateColumn = true;
-            await this.DefaultGrid.ExportToPdfAsync(ExportProperties);
-        }
-    }
-    public void PdfQueryCellInfoHandler(PdfQueryCellInfoEventArgs<Order> args)
-    {
-        if (args.Column.Field == "CustomerID")
-        {
-            args.Cell.Value = "Mr." + args.Data.CustomerID;
-        }
-    }
-    protected override void OnInitialized()
-    {
-        Orders = Enumerable.Range(1, 75).Select(x => new Order()
-        {
-            OrderID = 1000 + x,
-            CustomerID = (new string[] { "Alfki", "Anantr", "Anton", "Blonp", "Bolid" })[new Random().Next(5)],
-            Freight = 2.1 * x,
-            OrderDate = DateTime.Now.AddDays(-x),
-        }).ToList();
-    }
-
-    public class Order
-    {
-        public int? OrderID { get; set; }
-        public string CustomerID { get; set; }
-        public DateTime? OrderDate { get; set; }
-        public double? Freight { get; set; }
-    }
-}
-```
-
 ### Theme
 
 PDF export provides an option to include theme for exported PDF document.
@@ -1344,7 +1279,7 @@ In the following demo, the [DrawString](https://help.syncfusion.com/cr/file-form
         height: 100px;
         transform: rotate(-60deg); // This is used to rotate the header text.
     }
-</style> 
+</style>
 ```
 
 ![PDF Exported Grid Cell Customization in Blazor DataGrid](./images/blazor-datagrid-pdf-exported-grid-cell-customization.png)
@@ -1511,9 +1446,9 @@ function saveAsFile(filename, bytesBase64) {
     public List<Order> Orders { get; set; }
 
     public async Task ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
-    {       
+    {
         if (args.Item.Id == "Grid_pdfexport") //Id is combination of Grid's ID and itemname
-        {           
+        {
             MemoryStream streamDoc = await DefaultGrid.ExportToPdfAsync(asMemoryStream: true);
             await JSRuntime.InvokeVoidAsync("saveAsFile", new object[] {"PdfMemoryStream.pdf", Convert.ToBase64String(streamDoc.ToArray()), true });
         }
@@ -1548,7 +1483,7 @@ function saveAsFile(filename, bytesBase64) {
 }
 ```
 
-### Converting Memory Stream to File Stream for Pdf Export
+### Converting Memory Stream to File Stream for PDF Export
 
 This section explains the process of converting a memory stream obtained from the `ExportToPdfAsync` method into a file stream to export pdf document.
 
@@ -1578,9 +1513,9 @@ The example provided demonstrates this process of exporting the pdf document fro
     public List<Order> Orders { get; set; }
 
     public async Task ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
-    {       
+    {
         if (args.Item.Id == "Grid_pdfexport") //Id is combination of Grid's ID and itemname
-        {           
+        {
             //Memory stream to file stream exporting
             MemoryStream streamDoc1 = await DefaultGrid.ExportToPdfAsync(asMemoryStream: true);
 
@@ -1627,7 +1562,7 @@ The example provided demonstrates this process of exporting the pdf document fro
 }
 ```
 
-### Merging Two Pdf Memory Streams
+### Merging Two PDF Memory Streams
 
 This section explains the process of combining two memory stream files and exporting the resulting merged file as a PDF document. To accomplish this, you can use the PDF documents [Merge](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.PdfDocumentBase.html#Syncfusion_Pdf_PdfDocumentBase_Merge_Syncfusion_Pdf_PdfDocumentBase_Syncfusion_Pdf_Parsing_PdfLoadedDocument_) method available in the [PdfDocumentBase](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.PdfDocumentBase.html) class, class. To achieve this functionality, you can utilize the [Syncfusion.Blazor.Pdf](https://www.nuget.org/packages/Syncfusion.Pdf.Net.Core/) package.
 
@@ -1657,7 +1592,7 @@ In this example, there are two memory streams: *streamDoc1* and *streamDoc2*. st
     public List<Order> Orders { get; set; }
 
     public async Task ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
-    {       
+    {
         if (args.Item.Id == "Grid_pdfexport") //Id is combination of Grid's ID and itemname
         {
             //Merging two memory stream
@@ -1668,7 +1603,7 @@ In this example, there are two memory streams: *streamDoc1* and *streamDoc2*. st
             MemoryStream streamDoc1 = await DefaultGrid.ExportToPdfAsync(asMemoryStream: true);
             //Create a copy of streamDoc1 to access the memory stream
             MemoryStream copyOfStreamDoc1 = new MemoryStream(streamDoc1.ToArray());
-            
+
             //Customized grid for memory stream export
             PdfExportProperties ExportProperties = new PdfExportProperties();
             PdfTheme Theme = new PdfTheme();

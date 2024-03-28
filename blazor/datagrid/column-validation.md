@@ -220,6 +220,8 @@ In the following sample, you must use the `ValidateComplexType` attribute for th
 }
 ```
 
+> To include the package **Microsoft.AspNetCore.Components.DataAnnotations.Validation** for complex type validation
+
 ![Validate Complex Column Using Data Annotation Attribute in Blazor DataGrid](./images/blazor-datagrid-validate-complex-column-using-data-annotation-attribute.gif)
 
 ## Custom validator component
