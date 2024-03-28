@@ -9,7 +9,7 @@ documentation: ug
 
 # Accessibility in Blazor Mention Component
 
-Web accessibility makes web content and web applications more accessible for people with disabilities. Blazoe Mention component provides built-in compliance with `WAI-ARIA` specifications. The `WAI-ARIA` support is achieved using the attributes such as `aria-selected` and `aria-activedescendent`.
+Web accessibility makes web content and web applications more accessible for people with disabilities. Blazor Mention component provides built-in compliance with `WAI-ARIA` specifications. The `WAI-ARIA` support is achieved using the attributes such as `aria-selected` and `aria-activedescendent`.
 
 The [Blazor Mention](https://www.syncfusion.com/blazor-components/blazor-mention) component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 
@@ -64,7 +64,7 @@ You can use the following key shortcuts to access the Blazor Mention without int
 | <kbd>Up arrow</kbd> | Focus the item previous to the currently focused one. |
 | <kbd>Esc(Escape)</kbd> | Closes the popup list when it is in an open state. |
 | <kbd>Enter</kbd> | Selects the focused item, and when it is in an open state the popup list closes. |
-| <kbd>Tab</kbd> | Focuses on the next tabindex element on the page when the popup is closed. Otherwise, inserts the selected popup list item and closes the popup list. |
+| <kbd>Tab</kbd> | Focuses on the next tab index element on the page when the popup is closed. Otherwise, inserts the selected popup list item and closes the popup list. |
 
 
 {% highlight razor %}
