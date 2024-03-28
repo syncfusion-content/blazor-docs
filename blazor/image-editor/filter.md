@@ -88,4 +88,4 @@ ImageFilterEventArgs.Filter - The type of filtering as ImageFilterOption to be a
 
 ImageFilterEventArgs.Cancel – Specifies to cancel the filtering action.
 
-N> Please note that the Filter and Finetune features were unavailable on iOS due to the non-functioning CanvasContext.filter property on this platform.
+> Please note that the Filter and Finetune features were unavailable on iOS due to the non-functioning CanvasContext.filter property on this platform.
