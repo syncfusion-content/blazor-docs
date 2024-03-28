@@ -152,7 +152,7 @@ Interaction Keys |Description
 <kbd>Ctrl+2</kbd> | Activate the text tool.
 <kbd>Ctrl+8</kbd> | Activate the rectangle tool.
 <kbd>Ctrl+6</kbd> | Activate the line tool.
-<kbd>Ctrl+5</kbd> | Activate the freeform tool.
+<kbd>Ctrl+5</kbd> | Activate the free form tool.
 <kbd>Ctrl+9</kbd> | Activate the ellipse tool.
 
 N> You can download a complete working sample for keyboard navigation from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Accessibility/KeyBoardNavigation)
