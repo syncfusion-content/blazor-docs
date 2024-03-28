@@ -9,7 +9,7 @@ documentation: ug
 
 # Accessibility in Blazor Range Selector Component
 
-The Blazor Range selector component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
+The Blazor Range Selector component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 
 The accessibility compliance for the Blazor Range navigator component is outlined below.
 
@@ -39,7 +39,7 @@ The accessibility compliance for the Blazor Range navigator component is outline
 
 ## WAI-ARIA attributes
 
-The Blazor Range selector component followed the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/alert/) patterns to meet the accessibility. The following ARIA attributes are used in the Blazor Range selector component:
+The Blazor Range Selector component followed the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/alert/) patterns to meet the accessibility. The following ARIA attributes are used in the Blazor Range Selector component:
 
 * img (role)
 * region (role)
@@ -48,18 +48,18 @@ The Blazor Range selector component followed the [WAI-ARIA](https://www.w3.org/W
 
 ## Keyboard interaction
 
-The Blazor Range selector component followed the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/alert/#keyboardinteraction) guideline, making it easy for people who use assistive technologies (AT) and those who completely rely on keyboard navigation. The following keyboard shortcuts are supported by the Blazor Range selector component.
+The Blazor Range Selector component followed the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/alert/#keyboardinteraction) guideline, making it easy for people who use assistive technologies (AT) and those who completely rely on keyboard navigation. The following keyboard shortcuts are supported by the Blazor Range Selector component.
 
-| **Press** | **To do this** |
+Interaction Keys |Description
 | --- | --- |
-| <kbd>Alt + J</kbd> | Moves the focus to the range selector element. |
-| <kbd>Tab</kbd> | Moves the focus to the Range selector element. |
-| <kbd>Shift + Tab</kbd> | Moves the focus to the previous element in the Range selector. |
-| <kbd>Ctrl + P</kbd> | Prints the Range selector. |
+| <kbd>Alt + J</kbd> | Moves the focus to the Range Selector element. |
+| <kbd>Tab</kbd> | Moves the focus to the Range Selector element. |
+| <kbd>Shift + Tab</kbd> | Moves the focus to the previous element in the Range Selector. |
+| <kbd>Ctrl + P</kbd> | Prints the Range Selector. |S
 
 ## Ensuring accessibility
 
-The Blazor Range selector component's accessibility levels are ensured through an [axe-core](https://www.nuget.org/packages/Deque.AxeCore.Playwright) with playwright tests.
+The Blazor Range Selector component's accessibility levels are ensured through an [axe-core](https://www.nuget.org/packages/Deque.AxeCore.Playwright) with playwright tests.
 
 The accessibility compliance of the Blazor Range Selector component is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/range-selector) in a new window to evaluate the accessibility of the Blazor Range Selector component with accessibility tools.
 
