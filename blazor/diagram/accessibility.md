@@ -30,6 +30,7 @@ The accessibility compliance for the Blazor diagram component is outlined below:
         margin: 0.5em 0;
     }
 </style>
+
 <div><img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> - All features of the component meet the requirement.</div>
 
 <div><img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Intermediate"> - Some features of the component do not meet the requirement.</div>
@@ -101,7 +102,7 @@ Attribute provides the text label with some default description for below elemen
 
 ## Keyboard Navigation
 
-All the Blazor diagram actions can be controlled via keyboard keys. The applicable key combinations and their relative functionalities are listed below for the appropriate UI features available in the component.
+The Blazor Diagram component followed the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/alert/#keyboardinteraction) guideline, making it easy for people who use assistive technologies (AT) and those who completely rely on keyboard navigation. The following keyboard shortcuts are supported by the Blazor Diagram component.
 
 Interaction Keys |Description
 -----|-----
