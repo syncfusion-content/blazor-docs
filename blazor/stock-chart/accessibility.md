@@ -9,21 +9,20 @@ documentation: ug
 
 # Accessibility in Blazor Stock Chart Component
 
-The Blazor Stock chart control followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
+The Blazor Stock Chart component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 
-The accessibility compliance for the Blazor Stock chart control is outlined below.
+The accessibility compliance for the Blazor Stock Chart component is outlined below.
 
 | Accessibility Criteria | Compatibility |
 | -- | -- |
-| [WCAG 2.2](https://www.w3.org/TR/WCAG22/) Support | <img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> |
-| [Section 508](https://www.section508.gov/) Support | <img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> |
-| Screen Reader Support | <img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> |
-| Right-To-Left Support | <img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> |
-| Color Contrast | <img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> |
-| Mobile Device Support | <img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> |
-| Keyboard Navigation Support | <img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> |
-| [Accessibility Checker](https://www.npmjs.com/package/accessibility-checker) Validation | <img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> |
-| [Axe-core](https://www.npmjs.com/package/axe-core) Accessibility Validation | <img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> |
+| [WCAG 2.2 Support](../common/accessibility#accessibility-standards) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
+| [Section 508 Support](../common/accessibility#accessibility-standards) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
+| [Screen Reader Support](../common/accessibility#screen-reader-support) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
+| [Right-To-Left Support](../common/accessibility#right-to-left-support) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
+| [Color Contrast](../common/accessibility#color-contrast) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
+| [Mobile Device Support](../common/accessibility#mobile-device-support) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
+| [Keyboard Navigation Support](../common/accessibility#keyboard-navigation-support) |<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
+| [Axe-core Accessibility Validation](../common/accessibility#ensuring-accessibility) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
 
 <style>
     .post .post-content img {
@@ -31,16 +30,16 @@ The accessibility compliance for the Blazor Stock chart control is outlined belo
         margin: 0.5em 0;
     }
 </style>
-<div><img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> - All features of the control meet the requirement.</div>
+<div><img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> - All features of the component meet the requirement.</div>
 
-<div><img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Intermediate"> - Some features of the control do not meet the requirement.</div>
+<div><img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Intermediate"> - Some features of the component do not meet the requirement.</div>
 
-<div><img src="https://cdn.syncfusion.com/content/images/documentation/not-supported.png" alt="No"> - The control does not meet the requirement.</div>
+<div><img src="https://cdn.syncfusion.com/content/images/documentation/not-supported.png" alt="No"> - The component does not meet the requirement.</div>
 
 
 ## WAI-ARIA attributes
 
-The Blazor Stock chart control followed the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/alert/) patterns to meet the accessibility. The following ARIA attributes are used in the Blazor Stock chart control:
+The Blazor Stock Chart component followed the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/alert/) patterns to meet the accessibility. The following ARIA attributes are used in the Blazor Stock Chart component:
 
 * img (role)
 * button (role)
@@ -51,27 +50,26 @@ The Blazor Stock chart control followed the [WAI-ARIA](https://www.w3.org/WAI/AR
 
 ## Keyboard interaction
 
-The Blazor Stock chart control followed the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/alert/#keyboardinteraction) guideline, making it easy for people who use assistive technologies (AT) and those who completely rely on keyboard navigation. The following keyboard shortcuts are supported by the Blazor Stock chart control.
+The Blazor Stock Chart component followed the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/alert/#keyboardinteraction) guideline, making it easy for people who use assistive technologies (AT) and those who completely rely on keyboard navigation. The following keyboard shortcuts are supported by the Blazor Stock Chart component.
 
-| **Press** | **To do this** |
+Interaction Keys |Description
 | --- | --- |
-| <kbd>Alt + J</kbd> | Moves the focus to the Stock chart element. |
-| <kbd>Tab</kbd> | Moves the focus to the next element in the Stock chart. |
-| <kbd>Shift + Tab</kbd> | Moves the focus to the previous element in the Stock chart. |
+| <kbd>Alt + J</kbd> | Moves the focus to the Stock Chart element. |
+| <kbd>Tab</kbd> | Moves the focus to the next element in the Stock Chart. |
+| <kbd>Shift + Tab</kbd> | Moves the focus to the previous element in the Stock Chart. |
 | <kbd>Down Arrow</kbd> | Moves the focus to the data point left side from the selected point. |
 | <kbd>Up Arrow</kbd> | Moves the focus to the data point right side from the selected point. |
 | <kbd>Down/Left Arrow</kbd> | Moves the focus to the legend left side from the selected legend. |
 | <kbd>Up/Right Arrow</kbd> | Moves the focus to the legend right side from the selected legend. |
 | <kbd>Enter/Space</kbd> | Toggles the visibility of the corresponding series. |
 | <kbd>ESC</kbd> | Cancel the tooltip for the data point. |
-| <kbd>Ctrl + P</kbd> | Prints the Stock chart. |
+| <kbd>Ctrl + P</kbd> | Prints the Stock Chart. |
 
 ## Ensuring accessibility
 
-The Blazor Stock chart component's accessibility levels are ensured through an [axe-core](https://www.nuget.org/packages/Deque.AxeCore.Playwright) with playwright tests.
+The Blazor Stock Chart component's accessibility levels are ensured through an [axe-core](https://www.nuget.org/packages/Deque.AxeCore.Playwright) with playwright tests.
 
-The accessibility compliance of the Blazor Stock chart control is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/stock-chart) in a new window to evaluate the accessibility of the Blazor Stock chart control with accessibility tools.
-
+The accessibility compliance of the Blazor Stock Chart component is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/stock-chart) in a new window to evaluate the accessibility of the Blazor Stock Chart component with accessibility tools.
 
 ## See also
 
