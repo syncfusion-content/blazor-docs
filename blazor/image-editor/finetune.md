@@ -96,4 +96,4 @@ FinetuneEventArgs.Value - The fine-tuning value to be applied in the image edito
 
 FinetuneEventArgs.Cancel – Specifies a boolean value to cancel the fine-tuning action.
 
-N> Please note that the Filter and Finetune features were unavailable on iOS due to the non-functioning CanvasContext.filter property on this platform.
+> Please note that the Filter and Finetune features were unavailable on iOS due to the non-functioning CanvasContext.filter property on this platform.
