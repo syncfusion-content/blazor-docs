@@ -37,7 +37,17 @@ The accessibility compliance for the  Blazor Chart component is outlined below.
 
 <div><img src="https://cdn.syncfusion.com/content/images/documentation/not-supported.png" alt="No"> - The component does not meet the requirement.</div>
 
-## WAI-ARIA
+## WAI-ARIA attributes
+
+WAI-ARIA(Accessibility Initiative - Accessible Rich Internet Applications) defines a way to increase the accessibility of web pages, dynamic content, and user interface components developed with AJAX, HTML, JavaScript, and related technologies. ARIA provides additional semantics to describe the role, state, and functionality of web components.
+
+Element |Default description
+-----|-----
+Datalabel |Reads the Point y value.
+Legend |Click to show or hide the series.
+Axis Title |Reads the axis title.
+Chart Title |Reads the chart title.
+Series Points |Reads the Point x: Point y value.
 
 The Blazor Chart component followed the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/alert/) patterns to meet the accessibility. The following ARIA attributes are used in the Blazor Chart component:
 
