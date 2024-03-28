@@ -9,9 +9,9 @@ documentation: ug
 
 # Accessibility in DropDown List 
 
-The DropDownList component has been designed, keeping in mind the `WAI-ARIA` specifications, and applied the WAI-ARIA roles, states, and properties along with `keyboard support`. This component is characterized by complete keyboard interaction support and ARIA accessibility support that makes it easy for people who use assistive technologies (AT) or those who completely rely on keyboard navigation.
+The [Blazor DropDownList](https://www.syncfusion.com/blazor-components/blazor-dropdown-list) component has been designed, keeping in mind the `WAI-ARIA` specifications, and applied the WAI-ARIA roles, states, and properties along with `keyboard support`. This component is characterized by complete keyboard interaction support and ARIA accessibility support that makes it easy for people who use assistive technologies (AT) or those who completely rely on keyboard navigation.
 
-The DropDownList component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
+The Blazor DropDownList component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 
 The accessibility compliance for the DropDownList component is outlined below.
 
@@ -24,7 +24,6 @@ The accessibility compliance for the DropDownList component is outlined below.
 | [Color Contrast](../common/accessibility#color-contrast) | <img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> |
 | [Mobile Device Support](../common/accessibility#mobile-device-support) | <img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> |
 | [Keyboard Navigation Support](../common/accessibility#keyboard-navigation-support) | <img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> |
-| [Accessibility Checker Validation](../common/accessibility#ensuring-accessibility) | <img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> |
 | [Axe-core Accessibility Validation](../common/accessibility#ensuring-accessibility) | <img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> |
 
 <style>
@@ -41,7 +40,7 @@ The accessibility compliance for the DropDownList component is outlined below.
 
 ## WAI-ARIA attributes
 
-The DropDownList component uses the `Combobox` role. The following `ARIA attributes` denote the DropDownList state.
+The Blazor DropDownList component uses the `Combobox` role. The following `ARIA attributes` denote the DropDownList state.
 
 | **Properties** | **Functionalities** |
 | --- | --- |
@@ -55,7 +54,7 @@ The DropDownList component uses the `Combobox` role. The following `ARIA attribu
 
 ## Keyboard interaction
 
-You can use the following key shortcuts to access the DropDownList without interruptions:
+You can use the following key shortcuts to access the Blazor DropDownList without interruptions:
 
 | **Keyboard shortcuts** | **Actions** |
 | --- | --- |
@@ -79,11 +78,9 @@ You can use the following key shortcuts to access the DropDownList without inter
 
 ## Ensuring accessibility
 
-The DropDownList component's accessibility levels are ensured through an [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) software tools during automated testing.
+The Blazor DropDownList component's accessibility levels are ensured through an [axe-core](https://www.npmjs.com/package/axe-core) software tool during automated testing.
 
 The accessibility compliance of the DropDownList component is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/dropdownlist) in a new window to evaluate the accessibility of the DropDownList component with accessibility tools.
-
-{% previewsample "https://blazor.syncfusion.com/accessibility/dropdownlist" %}
 
 ## See also
 
