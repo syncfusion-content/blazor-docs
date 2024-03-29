@@ -7,7 +7,7 @@ control: Rating
 documentation: ug
 ---
 
-# Accessibility in Blazor Rating Component
+# Accessibility in Blazor Rating component
 
 The Blazor Rating component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 
@@ -55,11 +55,11 @@ The Blazor Rating component followed the WAI-ARIA patterns to meet the accessibi
 
 | Properties | Functionality |
 | ------------ | ----------------------- |
-| role | This attribute is added to the div element to describe the actual role. |
-| aria-label | Attribute provides the text label with some default description for the Rating and its items. |
-| aria-valuemin | It defines the minimum value of rating. |
-| aria-valuemax | It defines the maximum value of rating. |
-| aria-valuenow | It defines the current value of rating. |
+| `role` | This attribute is added to the div element to describe the actual role. |
+| `aria-label` | Attribute provides the text label with some default description for the Rating and its items. |
+| `aria-valuemin` | It defines the minimum value of rating. |
+| `aria-valuemax` | It defines the maximum value of rating. |
+| `aria-valuenow` | It defines the current value of rating. |
 
 ## Ensuring accessibility
 

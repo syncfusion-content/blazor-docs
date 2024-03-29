@@ -54,9 +54,9 @@ The Blazor Floating action button component followed the [keyboard interaction](
 
 ## Ensuring accessibility
 
-The Blazor Floating action button component's accessibility levels are ensured through an [axe-core](https://www.nuget.org/packages/Deque.AxeCore.Playwright) with playwright tests.
+The Blazor Floating Action Button component's accessibility levels are ensured through an [axe-core](https://www.nuget.org/packages/Deque.AxeCore.Playwright) with playwright tests.
 
-The accessibility compliance of the Blazor Floating action button component is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/fab) in a new window to evaluate the accessibility of the Blazor Floating action button component with accessibility tools.
+The accessibility compliance of the Blazor Floating Action Button component is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/fab) in a new window to evaluate the accessibility of the Blazor Floating action button component with accessibility tools.
 
 ## See also
 

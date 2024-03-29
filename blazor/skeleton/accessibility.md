@@ -7,7 +7,7 @@ control: Skeleton
 documentation: ug
 ---
 
-# Accessibility in Blazor Skeleton Component
+# Accessibility in Blazor Skeleton component
 
 The Blazor Skeleton component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 
@@ -43,10 +43,10 @@ The Skeleton component characterized with complete ARIA accessibility support th
 
 | Properties | Functionality |
 | ------------ | ----------------------- |
-| role | This attribute is added to the input element to describe the actual role. |
-| aria-label | Attribute provides the text label with some default description for the Skeleton. |
-| aria-live | The aria-live attribute indicates the priority of updates to a live region. |
-| aria-busy | This attribute is set to true when component is shown. |
+| `role` | This attribute is added to the input element to describe the actual role. |
+| `aria-label` | Attribute provides the text label with some default description for the Skeleton. |
+| `aria-live` | The aria-live attribute indicates the priority of updates to a live region. |
+| `aria-busy` | This attribute is set to true when component is shown. |
 
 ## Ensuring accessibility
 

@@ -7,7 +7,7 @@ control: Stepper
 documentation: ug
 ---
 
-# Accessibility in Blazor Stepper Component
+# Accessibility in Blazor Stepper component
 
 The Blazor Stepper component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 
@@ -53,7 +53,7 @@ The Blazor Stepper component followed the keyboard interaction guideline, making
 
 ## ARIA attribute
 
-The Stepper component is interactive with the below keyboard shortcuts.
+The following ARIA attributes are used in the Stepper component:
 
 | Properties | Functionality |
 | ------------ | ----------------------- |

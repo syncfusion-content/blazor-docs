@@ -58,12 +58,12 @@ The Blazor Speed Dial component followed the WAI-ARIA patterns to meet the acces
 
 | Properties | Functionality |
 | ------------ | ----------------------- |
-| role | This attribute is added to the input element to describe the actual role. |
-| aria-label | Attribute provides the text label with some default description for the SpeedDial and its items. |
-| aria-expanded | It indicates whether the SpeedDial current state is expanded or collapsed. |
-| aria-haspopup | It indicates whether the SpeedDial has popup items or not. |
-| aria-controls | Attribute is set to the SpeedDial button and it points to the corresponding content. |
-| aria-disabled | It indicates the disabled state of the SpeedDial and its items. |
+| `role` | This attribute is added to the input element to describe the actual role. |
+| `aria-label` | Attribute provides the text label with some default description for the SpeedDial and its items. |
+| `aria-expanded` | It indicates whether the SpeedDial current state is expanded or collapsed. |
+| `aria-haspopup` | It indicates whether the SpeedDial has popup items or not. |
+| `aria-controls` | Attribute is set to the SpeedDial button and it points to the corresponding content. |
+| `aria-disabled` | It indicates the disabled state of the SpeedDial and its items. |
 
 ## Ensuring accessibility
 
