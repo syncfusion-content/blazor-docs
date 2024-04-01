@@ -71,7 +71,6 @@ The Blazor Smith Chart component's accessibility levels are ensured through an [
 
 The accessibility compliance of the Blazor Smith Chart component is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/smith-chart) in a new window to evaluate the accessibility of the Blazor Smith Chart component with accessibility tools.
 
-
 ## See also
 
 * [Accessibility in Syncfusion Blazor components](https://blazor.syncfusion.com/documentation/common/accessibility)
