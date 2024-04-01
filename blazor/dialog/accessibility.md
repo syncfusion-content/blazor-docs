@@ -9,9 +9,11 @@ documentation: ug
 
 # Accessibility in Blazor Dialog Component
 
-The Dialog is characterized with complete ARIA Accessibility support which makes it accessible to on-screen readers and other assistive technology devices. This component is designed with the reference of the guidelines document given in [WAI ARAI Accessibility Practices](https://www.w3.org/WAI/ARIA/apg/#dialog_modal).
+The [Blazor Dialog](https://www.syncfusion.com/blazor-components/blazor-modal-dialog) is characterized with complete ARIA Accessibility support which makes it accessible to on-screen readers and other assistive technology devices. This component is designed with the reference of the guidelines document given in [WAI ARAI Accessibility Practices](https://www.w3.org/WAI/ARIA/apg/#dialog_modal).
 
-The accessibility compliance for the Dialog component is outlined below.
+The Blazor Dialog component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
+
+The accessibility compliance for the Blazor Dialog component is outlined below.
 
 | Accessibility Criteria | Compatibility |
 | -- | -- |
@@ -22,7 +24,6 @@ The accessibility compliance for the Dialog component is outlined below.
 | [Color Contrast](../common/accessibility#color-contrast) | <img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> |
 | [Mobile Device Support](../common/accessibility#mobile-device-support) | <img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> |
 | [Keyboard Navigation Support](../common/accessibility#keyboard-navigation-support) | <img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> |
-| [Accessibility Checker Validation](../common/accessibility#ensuring-accessibility) | <img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> |
 | [Axe-core Accessibility Validation](../common/accessibility#ensuring-accessibility) | <img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> |
 
 <style>
@@ -39,8 +40,7 @@ The accessibility compliance for the Dialog component is outlined below.
 
 ## WAI-ARIA attributes
 
-
-The Dialog component uses the `Dialog` role and following ARIA properties to its element based on its state.
+The Blazor Dialog component uses the `Dialog` role and following ARIA properties to its element based on its state.
 
 | **Property** | **Functionalities** |
 | --- | --- |
@@ -51,7 +51,7 @@ The Dialog component uses the `Dialog` role and following ARIA properties to its
 
 ## Keyboard interaction
 
-Keyboard interaction of Dialog component has been designed based on [WAI-ARIA Practices](https://www.w3.org/WAI/ARIA/apg/#dialog_modal) described for Dialog. User can use the following shortcut keys to interact with the Dialog.
+Keyboard interaction of Blazor Dialog component has been designed based on [WAI-ARIA Practices](https://www.w3.org/WAI/ARIA/apg/#dialog_modal) described for Dialog. User can use the following shortcut keys to interact with the Dialog.
 
 <!-- markdownlint-disable MD033 -->
 <table>
@@ -145,11 +145,9 @@ to last focusable element</td></tr>
 
 ## Ensuring accessibility
 
-The Dialog component's accessibility levels are ensured through an [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) software tools during automated testing.
+The Blazor Dialog component's accessibility levels are ensured through an [axe-core](https://www.npmjs.com/package/axe-core) software tool during automated testing.
 
 The accessibility compliance of the Dialog component is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/dialog) in a new window to evaluate the accessibility of the Dialog component with accessibility tools.
-
-{% previewsample "https://blazor.syncfusion.com/accessibility/dialog" %}
 
 ## See also
 
