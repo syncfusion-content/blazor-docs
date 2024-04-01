@@ -9,9 +9,9 @@ documentation: ug
 
 # Accessibility in Blazor Maps Component
 
-The Maps component follows commonly used accessibility guidelines and standards, such as [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles).
+The [Blazor Maps](https://www.syncfusion.com/blazor-components/blazor-map) component follows commonly used accessibility guidelines and standards, such as [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles).
 
-The accessibility compliance for the Maps component is outlined below.
+The accessibility compliance for the Blazor Maps component is outlined below.
 
 | Accessibility Criteria | Compatibility |
 | -- | -- |
@@ -21,7 +21,6 @@ The accessibility compliance for the Maps component is outlined below.
 | [Color Contrast](../common/accessibility) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
 | [Mobile Device Support](../common/accessibility) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
 | [Keyboard Navigation Support](../common/accessibility) |<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
-| [Accessibility Checker Validation](../common/accessibility) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
 | [Axe-core Accessibility Validation](../common/accessibility) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
 
 <style>
@@ -39,7 +38,7 @@ The accessibility compliance for the Maps component is outlined below.
 
 ## WAI-ARIA attributes
 
-To meet accessibility standards, the Maps component follows to the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/alert/) patterns. In the Maps component, the following ARIA attributes are used:
+To meet accessibility standards, the Blazor Maps component follows to the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/alert/) patterns. In the Maps component, the following ARIA attributes are used:
 
 | Attributes | Purpose |
 | --- | --- |
@@ -49,7 +48,7 @@ To meet accessibility standards, the Maps component follows to the [WAI-ARIA](ht
 
 ## Screen reading in Maps
 
-Accessibility in the Maps component ensures that all users, regardless of ability or disability, can use screen reading. The following Map elements will be read aloud using screen reading software, such as Narrator for Windows.
+Accessibility in the Blazor Maps component ensures that all users, regardless of ability or disability, can use screen reading. The following Map elements will be read aloud using screen reading software, such as Narrator for Windows.
 
 | Elements | Description |
 | --- | --- |
@@ -66,7 +65,7 @@ Accessibility in the Maps component ensures that all users, regardless of abilit
 
 ## Keyboard Navigation
 
-All the Maps actions can be controlled via keyboard keys. The applicable key combinations and their relative functionalities are listed below for the appropriate UI features available in the component.
+All the Blazor Maps actions can be controlled via keyboard keys. The applicable key combinations and their relative functionalities are listed below for the appropriate UI features available in the component.
 
 Interaction Keys |Description
 -----|-----
@@ -83,6 +82,6 @@ Interaction Keys |Description
 
 ## Ensuring accessibility
 
-The Maps component's accessibility levels are ensured using an [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) software tools during automated testing.
+The Blazor Maps component's accessibility levels are ensured using an [axe-core](https://www.npmjs.com/package/axe-core) software tool during automated testing.
 
-The accessibility compliance of the Maps component is shown in [this sample](https://blazor.syncfusion.com/accessibility/maps). Open the sample in a new window to evaluate the accessibility of the Maps component with accessibility tools.
+The accessibility compliance of the Maps component is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/maps) in a new window to evaluate the accessibility of the Maps component with accessibility tools.

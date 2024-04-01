@@ -9,9 +9,9 @@ documentation: ug
 
 # Accessibility in Blazor Linear Gauge Component
 
-The Linear Gauge component follows commonly used accessibility guidelines and standards, such as [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles).
+The [Blazor Linear Gauge](https://www.syncfusion.com/blazor-components/blazor-linear-gauge) component follows commonly used accessibility guidelines and standards, such as [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles).
 
-The accessibility compliance for the Linear Gauge component is outlined below.
+The accessibility compliance for the Blazor Linear Gauge component is outlined below.
 
 | Accessibility Criteria | Compatibility |
 | -- | -- |
@@ -20,7 +20,6 @@ The accessibility compliance for the Linear Gauge component is outlined below.
 | [Screen Reader Support](../common/accessibility) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
 | [Color Contrast](../common/accessibility) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
 | [Mobile Device Support](../common/accessibility) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
-| [Accessibility Checker Validation](../common/accessibility) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
 | [Axe-core Accessibility Validation](../common/accessibility) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
 
 <style>
@@ -38,7 +37,7 @@ The accessibility compliance for the Linear Gauge component is outlined below.
 
 ## WAI-ARIA attributes
 
-The Linear Gauge component followed the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/alert/) patterns to meet the accessibility. The following ARIA attributes are used in the Linear Gauge component.
+The Blazor Linear Gauge component followed the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/alert/) patterns to meet the accessibility. The following `WAI-ARIA` attributes are used in the Linear Gauge component.
 
 | Attributes | Purpose |
 | --- | --- |
@@ -47,7 +46,7 @@ The Linear Gauge component followed the [WAI-ARIA](https://www.w3.org/WAI/ARIA/a
 
 ## Screen reading in Linear Gauge
 
-Accessibility in the Linear Gauge component ensures that all users, regardless of ability or disability, can use screen reading. The following Linear Gauge elements will be read aloud using screen reading software, such as Narrator for Windows.
+Accessibility in the Blazor Linear Gauge component ensures that all users, regardless of ability or disability, can use screen reading. The following Linear Gauge elements will be read aloud using screen reading software, such as Narrator for Windows.
 
 | Elements | Description |
 | --- | --- |
@@ -58,6 +57,6 @@ Accessibility in the Linear Gauge component ensures that all users, regardless o
 
 ## Ensuring accessibility
 
-The Linear Gauge component's accessibility levels are ensured through an [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) software tools during automated testing.
+The Blazor Linear Gauge component's accessibility levels are ensured through an [axe-core](https://www.npmjs.com/package/axe-core) software tool during automated testing.
 
-The accessibility compliance of the Linear Gauge component is shown in [this sample](https://blazor.syncfusion.com/accessibility/lineargauge). Open the sample in a new window to evaluate the accessibility of the Linear Gauge component with accessibility tools.
+The accessibility compliance of the Linear Gauge component is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/lineargauge) in a new window to evaluate the accessibility of the Linear Gauge component with accessibility tools.

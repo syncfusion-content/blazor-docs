@@ -9,9 +9,9 @@ documentation: ug
 
 # Accessibility in Blazor TreeMap Component
 
-The TreeMap component follows commonly used accessibility guidelines and standards, such as [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles).
+The [Blazor TreeMap](https://www.syncfusion.com/blazor-components/blazor-treemap) component follows commonly used accessibility guidelines and standards, such as [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles).
 
-The accessibility compliance for the TreeMap component is outlined below.
+The accessibility compliance for the Blazor TreeMap component is outlined below.
 
 | Accessibility Criteria | Compatibility |
 | -- | -- |
@@ -21,7 +21,6 @@ The accessibility compliance for the TreeMap component is outlined below.
 | [Right-To-Left Support](../common/accessibility) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
 | [Color Contrast](../common/accessibility) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
 | [Mobile Device Support](../common/accessibility) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
-| [Accessibility Checker Validation](../common/accessibility) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
 | [Axe-core Accessibility Validation](../common/accessibility) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
 
 <style>
@@ -39,7 +38,7 @@ The accessibility compliance for the TreeMap component is outlined below.
 
 ## WAI-ARIA attributes
 
-The TreeMap component follows the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/alert/) patterns to meet the accessibility. The following ARIA attributes are used in the TreeMap component:
+The Blazor TreeMap component follows the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/alert/) patterns to meet the accessibility. The following ARIA attributes are used in the TreeMap component:
 
 | Attributes | Purpose |
 | --- | --- |
@@ -49,7 +48,7 @@ The TreeMap component follows the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/pat
 
 ## Screen reading in TreeMap
 
-Accessibility in the TreeMap component ensures that all users, regardless of ability or disability, can use screen reading. The following TreeMap elements will be read aloud using screen reading software, such as Narrator for Windows.
+Accessibility in the Blazor TreeMap component ensures that all users, regardless of ability or disability, can use screen reading. The following TreeMap elements will be read aloud using screen reading software, such as Narrator for Windows.
 
 | Elements | Description |
 | --- | --- |
@@ -61,6 +60,6 @@ Accessibility in the TreeMap component ensures that all users, regardless of abi
 
 ## Ensuring accessibility
 
-The TreeMap component's accessibility levels are ensured through an [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) software tools during automated testing.
+The Blazor TreeMap component's accessibility levels are ensured through an [axe-core](https://www.npmjs.com/package/axe-core) software tool during automated testing.
 
-The accessibility compliance of the TreeMap component is shown in [this sample](https://blazor.syncfusion.com/accessibility/treemap). Open the sample in a new window to evaluate the accessibility of the TreeMap component with accessibility tools.
+The accessibility compliance of the TreeMap component is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/treemap) in a new window to evaluate the accessibility of the TreeMap component with accessibility tools.
