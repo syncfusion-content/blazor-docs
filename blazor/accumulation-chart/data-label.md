@@ -271,7 +271,7 @@ N> Refer to the [Blazor Charts](https://www.syncfusion.com/blazor-components/bla
 
 ## Format
 
-Data label for the accumulation chart can be formatted using [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDataLabel.html#Syncfusion_Blazor_Charts_ChartDataLabel_Format) property. You can use the global formatting options, such as 'N1', 'P1', and 'C1'.
+Data label for the accumulation chart can be formatted using [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationDataLabelSettings.html#Syncfusion_Blazor_Charts_AccumulationDataLabelSettings_Format) property. You can use the global formatting options, such as 'N1', 'P1', and 'C1'.
 
 ```cshtml
 
@@ -310,6 +310,73 @@ Data label for the accumulation chart can be formatted using [Format](https://he
 
 ![Format in Blazor Accumulation Chart](images/data-label/blazor-accumulation-chart-with-data-label-format.png)
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VDhqMLsqzSLpcrER?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+## Template
+
+The text and interior information for a datapoint can be bound from a datasource other than the x and y values. The implicit named parameter context can be used to access the aggregate values within the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationDataLabelSettings.html#Syncfusion_Blazor_Charts_AccumulationDataLabelSettings_Template). To retrieve aggregate values inside the template, type cast the context as [AccumulationChartDataPointInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartDataPointInfo.html). The context attribute can also be used to modify the name of this implicit parameter. For example, the data label information can be accessed using context in the template as shown below.
+
+```cshtml
+<AccumulationDataLabelSettings Visible="true" Name="Browser">
+    <Template>
+        @{
+            var data = context as AccumulationChartDataPointInfo;
+            <table>
+                <tr><td align="center"> @data.X</td></tr>
+            </table>
+        }
+    </Template>
+</AccumulationDataLabelSettings>
+  
+```
+
+```cshtml
+
+@using Syncfusion.Blazor.Charts
+
+<SfAccumulationChart Title="Mobile Browser Statistics">
+    <AccumulationChartSeriesCollection>
+        <AccumulationChartSeries DataSource="@StatisticsDetails" XName="Browser" YName="Users"
+                                 Name="Browser" InnerRadius="40%">
+            <AccumulationDataLabelSettings Position="AccumulationLabelPosition.Outside" Name="Browser" Visible="true">
+                <Template>
+                    @{
+                        var data = context as AccumulationChartDataPointInfo;
+                    }
+                    <table>
+                        <tr>
+                            <td align="center" style="background-color: #C1272D; font-size: 14px; color: #E7C554; font-weight: bold; padding: 5px"> @data.X :</td>
+                            <td align="center" style="background-color: #C1272D; font-size: 14px; color: whitesmoke; font-weight: bold; padding: 5px"> @data.Y</td>
+                        </tr>
+                    </table>
+                </Template>
+            </AccumulationDataLabelSettings>
+        </AccumulationChartSeries>
+    </AccumulationChartSeriesCollection>
+    <AccumulationChartLegendSettings Visible="false"></AccumulationChartLegendSettings>
+</SfAccumulationChart>
+
+@code{
+    public class Statistics
+    {
+        public string Browser { get; set; }
+        public double Users { get; set; }
+    }
+
+    public List<Statistics> StatisticsDetails = new List<Statistics>
+    {
+        new Statistics { Browser = "Chrome", Users = 37 },
+        new Statistics { Browser = "UC Browser", Users = 17 },
+        new Statistics { Browser = "iPhone", Users = 19 },
+        new Statistics { Browser = "Others", Users = 4  },
+        new Statistics { Browser = "Opera", Users = 11 },
+        new Statistics { Browser = "Android", Users = 12 },
+    };
+}
+
+```
+
+![Template in Blazor Accumulation Chart](images/data-label/blazor-accumulation-chart-with-data-label-template.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BNLpZghnzXPGMCxq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## See also
 
