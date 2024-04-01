@@ -300,7 +300,7 @@ The following demo shows how to change the default frozen line color.
         background-color: aqua;
     }
 
-    .e-grid .e-leftfreeze.e-freezeleftborder {
+    .e-grid.e-lib .e-leftfreeze.e-freezeleftborder{
         border-right-color: aqua;
     }
 

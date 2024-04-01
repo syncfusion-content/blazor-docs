@@ -13,8 +13,8 @@ The [Blazor Query Builder](https://www.syncfusion.com/blazor-components/blazor-q
 
 You can `lock` groups and rules by interacting through the user interface and methods.
 
-* Use the [LockGroup](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder-1.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_1_LockGroup_Syncfusion_Blazor_QueryBuilder_RuleModel_System_String_System_Boolean_) method to lock group.
-* Use [LockRule](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder-1.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_1_LockRule_Syncfusion_Blazor_QueryBuilder_RuleModel_System_String_) method to lock rule.
+* Use the [LockGroup](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder-1.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_1_LockGroup_System_String_System_Boolean_) method to lock group.
+* Use [LockRule](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder-1.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_1_LockRule_System_String_System_Boolean_) method to lock rule.
 
 ```cshtml
 @using Syncfusion.Blazor.QueryBuilder

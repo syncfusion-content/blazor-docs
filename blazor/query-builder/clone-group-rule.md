@@ -13,8 +13,8 @@ The [Blazor Query Builder](https://www.syncfusion.com/blazor-components/blazor-q
 
 You can `clone` groups and rules by interacting through the user interface and methods.
 
-* Use the [CloneGroup](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder-1.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_1_CloneGroup_Syncfusion_Blazor_QueryBuilder_RuleModel_System_String_System_Boolean_) method to clone group.
-* Use [CloneRule](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder-1.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_1_CloneRule_Syncfusion_Blazor_QueryBuilder_RuleModel_System_String_) method to clone rule.
+* Use the [CloneGroup](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder-1.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_1_CloneGroup_System_String_System_Int32_) method to clone group.
+* Use [CloneRule](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder-1.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_1_CloneRule_System_String_System_Int32_) method to clone rule.
 
 ```cshtml
 @using Syncfusion.Blazor.QueryBuilder
