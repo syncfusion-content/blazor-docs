@@ -384,6 +384,10 @@ The following code explains how to add `NumericTextBox`, `DropDownList`, `RadioB
 
 ![Blazor Toolbar Item with Other Components](./images/blazor-toolbar-item-with-other-components.png)
 
+### Spacer
+
+N>You can refer [here](./align-items-using-spacer.md) to integrate the spacer in Toolbar component.
+
 ## Visible
 
 It specifies whether an item should be hidden or not.
