@@ -38,7 +38,7 @@ The accessibility compliance for the Blazor Maps component is outlined below.
 
 ## WAI-ARIA attributes
 
-To meet accessibility standards, the Blazor Maps component follows to the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/alert/) patterns. In the Maps component, the following ARIA attributes are used:
+To meet accessibility standards, the Blazor Maps component follows to the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/) patterns. In the Maps component, the following `WAI-ARIA` attributes are used:
 
 | Attributes | Purpose |
 | --- | --- |

@@ -39,7 +39,7 @@ The accessibility compliance for the Blazor Circular Gauge component is outlined
 
 ## WAI-ARIA attributes
 
-The Blazor Circular Gauge component followed the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/alert/) patterns to meet the accessibility. The following ARIA attributes are used in the Circular Gauge component.
+The Blazor Circular Gauge component followed the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/) patterns to meet the accessibility. The following `WAI-ARIA` attributes are used in the Circular Gauge component.
 
 
 | Attributes | Purpose |

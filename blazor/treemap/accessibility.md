@@ -38,7 +38,7 @@ The accessibility compliance for the Blazor TreeMap component is outlined below.
 
 ## WAI-ARIA attributes
 
-The Blazor TreeMap component follows the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/alert/) patterns to meet the accessibility. The following ARIA attributes are used in the TreeMap component:
+The Blazor TreeMap component follows the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/) patterns to meet the accessibility. The following `WAI-ARIA` attributes are used in the TreeMap component:
 
 | Attributes | Purpose |
 | --- | --- |

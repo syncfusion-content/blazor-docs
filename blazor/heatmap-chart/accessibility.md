@@ -37,7 +37,7 @@ The accessibility compliance for the Blazor HeatMap Chart component is outlined 
 
 ## WAI-ARIA attributes
 
-Blazor HeatMap Chart component followed the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/alert/) patterns to meet the accessibility. The following [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/) attributes are used in the HeatMap component.
+Blazor HeatMap Chart component followed the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/) patterns to meet the accessibility. The following `WAI-ARIA` attributes are used in the HeatMap component.
 
 | Attributes | Purpose |
 | --- | --- |

@@ -37,7 +37,7 @@ The accessibility compliance for the Blazor Linear Gauge component is outlined b
 
 ## WAI-ARIA attributes
 
-The Blazor Linear Gauge component followed the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/alert/) patterns to meet the accessibility. The following `WAI-ARIA` attributes are used in the Linear Gauge component.
+The Blazor Linear Gauge component followed the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/) patterns to meet the accessibility. The following `WAI-ARIA` attributes are used in the Linear Gauge component.
 
 | Attributes | Purpose |
 | --- | --- |
