@@ -113,4 +113,4 @@ Add the Syncfusion Blazor Timeline component in the **~Pages/.razor** file. If a
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion Blazor Timeline component in your default web browser.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BNBTDCKZfTxNJwlE?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Timeline Component](images/blazor-timeline-component.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BDrzZJtMfhknPrWl?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Timeline Component](./images/blazor-timeline-component.png)" %}
