@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Orientations in Blazor Timeline Component | Syncfusion
-description: Checkout and learn here all about orientations in Syncfusion Blazor Timeline component and more details.
+description: Checkout and learn here all about Orientations in Syncfusion Blazor Timeline component and more details.
 platform: Blazor
 control: Timeline
 documentation: ug
 ---
 
-# Orientations in Blazor Timeline component
+# Orientations in Blazor Timeline Component
 
 The Timeline component supports the display of items in both horizontal and vertical direction by using the `Orientation` property.
 

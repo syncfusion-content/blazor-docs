@@ -7,7 +7,7 @@ control: DataGrid
 documentation: ug
 ---
 
-# Filtering in Blazor Grid component
+# Filtering in Blazor DataGrid Component
 
 Filtering is a powerful feature in the Syncfusion Grid component that enables you to selectively view data based on specific criteria. It allows you to narrow down large datasets and focus on the information you need, thereby enhancing data analysis and decision-making.
 
