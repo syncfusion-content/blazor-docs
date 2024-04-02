@@ -14,9 +14,9 @@ A [Swimlane](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Swi
 ![Swimlane Content](./Swimlane-images/Swimlane_Default.PNG)
 
 ## Create a swimlane
-A swimlane can be created and added to the diagram, either programmatically or interactively. 
+A swimlane can be created and added to the diagram, either programmatically or interactively.
 
-### Add Swimlane through the Swimlanes collection 
+### Add Swimlane through the Swimlanes collection
 
 To create a swimlane, you have to define the swimlane object and add it to the [Swimlanes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Swimlanes) collection of the diagram.
 
@@ -90,7 +90,7 @@ The following code example explains how to define the swimlane header.
         SwimlaneCollections.Add(swimlane);
     }
 }
-``` 
+```
 
 ![Swimlane Header](Swimlane-images/Swimlane_Header.PNG)
 
@@ -136,7 +136,7 @@ The following code example explains how to customize the swimlane header.
         SwimlaneCollections.Add(swimlane);
     }
 }
-``` 
+```
 
 ![Swimlane Header Customization](Swimlane-images/Swimlane_Header_Customization.PNG)
 
@@ -166,7 +166,7 @@ The following code example explains how to define a Swimlane header annotation t
                         </svg>
                         <div class="profile-name" style="font-size:12px;font-weight:bold;">SALES PROCESS FLOW CHART</div>
                     </div>
-                }              
+                }
             }
         </AnnotationTemplate>
     </DiagramTemplates>
@@ -191,7 +191,7 @@ The following code example explains how to define a Swimlane header annotation t
                     Width = 220,
                     Height = 50,
                     UseTemplate = true
-                    
+
                 },
                 Height = 50,
                 Style = new TextStyle()
@@ -208,7 +208,7 @@ The following code example explains how to define a Swimlane header annotation t
         SwimlaneCollections.Add(swimlane);
     }
 }
-``` 
+```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Swimlanes/SwimlaneHeader/SwimlaneHeaderTemplate)
 
 ![Swimlane Header Customization](Swimlane-images/Swimlane_Header_Template.PNG)
@@ -242,7 +242,7 @@ The following code example explains how to set the orientation of the swimlane.
         // A swimlane is created and stored in the swimlanes collection.
         Swimlane swimlane = new Swimlane()
         {
-            OffsetX = 400, OffsetY = 200, Height = 120, Width = 450, 
+            OffsetX = 400, OffsetY = 200, Height = 120, Width = 450,
             Orientation = Orientation.Horizontal,
         };
         // Add swimlane.
@@ -264,11 +264,10 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 Swimlane can be selected by clicking (tapping) the header of the swimlane. Also, it can be selected at runtime by using the [Select](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Select_System_Collections_ObjectModel_ObservableCollection_Syncfusion_Blazor_Diagram_IDiagramObject__System_Nullable_System_Boolean__) method and clear the selection in the diagram by using the [ClearSelection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_ClearSelection)
 
-### How to drag the swimlane  
+### How to drag the swimlane
 
-* Swimlane object can be dragged by clicking and dragging the header of the swimlane. 
+* Swimlane object can be dragged by clicking and dragging the header of the swimlane.
 
 * When you drag the elements in the diagram, the [PositionChanging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_PositionChanging) and [PositionChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_PositionChanged) events get triggered and we can do customization on those events.
-
 
 ![Drag Node](Swimlane-images/Swimlane_Select_Drag.gif)

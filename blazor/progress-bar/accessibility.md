@@ -52,6 +52,7 @@ The Blazor ProgressBar component's accessibility levels are ensured through an [
 
 The accessibility compliance of the Blazor ProgressBar component is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/progress-bar) in a new window to evaluate the accessibility of the Blazor ProgressBar component with accessibility tools.
 
+The accessibility compliance of the Blazor ProgressBar component is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/progress-bar) in a new window to evaluate the accessibility of the Blazor ProgressBar component with accessibility tools.
 
 ## See also
 

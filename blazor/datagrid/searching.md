@@ -339,7 +339,7 @@ The ```SearchAsync``` method allows you to perform a search operation based on a
 @using Syncfusion.Blazor.Buttons
 
 <SfTextBox @ref="TextBox" Placeholder="Search" Width="200px"></SfTextBox>
-<SfButton Content="Search" OnClick="SearchBtnHandler"></SfButton>
+<SfButton Content="Search" OnClick="SearchButtonHandler"></SfButton>
 
 <SfGrid DataSource="@Orders" @ref="DefaultGrid">
     <GridColumns>
@@ -359,7 +359,7 @@ The ```SearchAsync``` method allows you to perform a search operation based on a
     {
         Orders = OrderData.GetAllRecords();
     } 
-    public void SearchBtnHandler()
+    public void SearchButtonHandler()
     {
         var textBoxValue = TextBox.Value;
         this.DefaultGrid.SearchAsync(textBoxValue);
@@ -804,7 +804,7 @@ The following example demonstrates how to clear the searched records using an ex
 @using Syncfusion.Blazor.Buttons
 @using Syncfusion.Blazor.Grids
 
-<SfButton Content="ClearSearch" OnClick="clearSearchBtnHandler"></SfButton>
+<SfButton Content="ClearSearch" OnClick="clearSearchButtonHandler"></SfButton>
 <SfGrid @ref="DefaultGrid" DataSource="@Orders" AllowSorting="true" Toolbar=@ToolbarItems>
     <GridColumns>
         <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
@@ -823,7 +823,7 @@ The following example demonstrates how to clear the searched records using an ex
     {
         Orders = OrderData.GetAllRecords();
     }  
-    public void clearSearchBtnHandler()
+    public void clearSearchButtonHandler()
     {
 #pragma warning disable BL0005
         this.DefaultGrid.SearchSettings.Key = "";
