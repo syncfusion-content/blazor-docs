@@ -1,25 +1,25 @@
 ---
 layout: post
-title: Bind Sql Data in Blazor DataGrid component using Dapper | Syncfusion
-description: Learn about consuming data using Dapper from SQL Server using Microsoft SQL Client, binding it to Syncfusion Component, and performing CRUD operations.
+title: Bind SQL Data in Blazor DataGrid component using Dapper | Syncfusion
+description: Learn about consuming data from SQL Server using Dapper and Microsoft SQL Client, binding it to Syncfusion components, and performing CRUD operations.
 platform: Blazor
 control: DataGrid
 documentation: ug
 ---
 
-# connecting SQL data into Blazor DataGrid component using Dapper
+# Connecting SQL data to a Blazor DataGrid Component using Dapper
 
 This section describes how to connect and retrieve data from a Microsoft SQL Server database using [Dapper](https://github.com/DapperLib/Dapper) and [System.Data.SqlClient](https://www.nuget.org/packages/System.Data.SqlClient/4.8.6?_src=template) and bind it to the Blazor DataGrid component.
 
-Microsoft SQL Server database can be bound to the Blazor DataGrid component using `Dapper` in different ways (i.e.) using [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_DataSource) property, [CustomAdaptor](https://blazor.syncfusion.com/documentation/datagrid/custom-binding) feature and remote data binding using various adaptors. In this documentation, two approaches will be examined to connect a Microsoft SQL Server database to a Blazor DataGrid component using `Dapper`. Both the approaches have capability to handle data and CRUD operations with built-in methods as well as can be customized as per your own.
+Microsoft SQL Server database can be bound to the Blazor DataGrid component using **Dapper** in different ways (i.e.) using [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_DataSource) property, [CustomAdaptor](https://blazor.syncfusion.com/documentation/datagrid/custom-binding) feature and remote data binding using various adaptors. In this documentation, two approaches will be examined to connect a Microsoft SQL Server database to a Blazor DataGrid component using **Dapper**. Both the approaches have capability to handle data and CRUD operations with built-in methods as well as can be customized as per your own.
 
 **Dapper**
 
-`Dapper` is an open-source and micro **ORM** (object-relational mapping) product developed by the StackOverflow team. It is very lightweight and straightforward to use with a project. It supports **PostgreSQL**, **MySQL**, **SQL** Server, and other databases.
+Dapper is an open-source and micro **ORM** (object-relational mapping) product developed by the StackOverflow team. It is very lightweight and straightforward to use with a project. It supports **PostgreSQL**, **MySQL**, **SQL** Server, and other databases.
 
-`Dapper` extends the [IDbConnection interface](https://learn.microsoft.com/en-us/dotnet/api/system.data.idbconnection?view=net-8.0), which provides an open data source connection supported by the .NET Framework. We also have to write queries when using `Dapper`. It’s simple to execute a SQL query on a database and have the results mapped to a C# domain class.
+Dapper expands upon the functionality of the [IDbConnection interface](https://learn.microsoft.com/en-us/dotnet/api/system.data.idbconnection?view=net-8.0), which offers a connection to a data source compatible with the .NET Framework. Additionally, Dapper facilitates writing queries. It simplifies the execution of SQL queries on a database and the mapping of results to C# domain classes.
 
- `Dapper` can be used to interact with a Microsoft SQL Server database in conjunction with **System.Data.SqlClient**.
+ Dapper can be used to interact with a Microsoft SQL Server database in conjunction with **System.Data.SqlClient**.
 
 * **Using UrlAdaptor**
 
@@ -31,17 +31,17 @@ The [CustomAdaptor](https://blazor.syncfusion.com/documentation/datagrid/custom-
 
 ## Binding data using Dapper from Microsoft SQL Server via an API service.
 
-This section describes step by step process how to use `Dapper` to retrieve data from a Microsoft SQL Server using an API service and bind it to the Blazor DataGrid component.
+This section describes step by step process how to use Dapper to retrieve data from a Microsoft SQL Server using an API service and bind it to the Blazor DataGrid component.
 
 ### Creating an API service
 
 **1.** Open Visual Studio and create an ASP.NET Core Web App project type, naming it **MyWebService**. To create an ASP.NET Core Web application, follow the documentation [link](https://learn.microsoft.com/en-us/visualstudio/get-started/csharp/tutorial-aspnet-core?view=vs-2022).
 
-**2.** To use `Dapper` and access the Microsoft SQL Server database in our Blazor application, we need to install the [System.Data.SqlClient](https://www.nuget.org/packages/System.Data.SqlClient/4.8.6?_src=template) and [Dapper](https://www.nuget.org/packages/Dapper) NuGet packages. To add **System.Data.SqlClient** and `Dapper` in the app, open the NuGet package manager in Visual Studio (Tools → NuGet Package Manager → Manage NuGet Packages for Solution), search and install it.
+**2.** To use Dapper and access the Microsoft SQL Server database in our Blazor application, need to install the [System.Data.SqlClient](https://www.nuget.org/packages/System.Data.SqlClient/4.8.6?_src=template) and [Dapper](https://www.nuget.org/packages/Dapper) NuGet packages. To add **System.Data.SqlClient** and Dapper in the app, open the NuGet package manager in Visual Studio (Tools → NuGet Package Manager → Manage NuGet Packages for Solution), search and install it.
 
 **3.** Create an API controller (aka, GridController.cs) file under **Controllers** folder that helps to establish data communication with the Blazor DataGrid component.
 
-**4** In the API controller (aka, GridController), a connection is established to Microsoft SQL Server within the **Get()** method using **SqlConnection** which implements the **IDbConnection** interface. The SQL query string to retrieve data from the database is prepared. Using `Dapper`, the query is executed and data is fetched directly into a list of `Order` objects. `Dapper` automates the mapping process, eliminating the need for manual mapping using **SqlDataAdapter** and **DataTable** as shown in the following code snippet.
+**4** In the API controller (aka, GridController), a connection is established to Microsoft SQL Server within the **Get()** method using **SqlConnection** which implements the **IDbConnection** interface. The SQL query string to retrieve data from the database is prepared. Using Dapper, the query is executed and data is fetched directly into a list of `Order` objects. Dapper automates the mapping process, eliminating the need for manual mapping using **SqlDataAdapter** and **DataTable** as shown in the following code snippet.
 
 {% tabs %}
 {% highlight razor tabtitle="GridController.cs"%}
@@ -91,7 +91,7 @@ namespace MyWebService.Controllers
 
 **5.** Run the application and it will be hosted within the URL `https://localhost:xxxx`.
 
-**6.** Finally, the retrieved data from Microsoft SQL Server database using `Dapper` which is in the form of list of array can be found in an API controller available in the URL link `https://localhost:xxxx/api/Grid`, as shown in the browser page below.
+**6.** Finally, the retrieved data from Microsoft SQL Server database using Dapper which is in the form of list of array can be found in an API controller available in the URL link `https://localhost:xxxx/api/Grid`, as shown in the browser page below.
 
 ![Hosted API URL](../images/Ms-Sql-data.png)
 
@@ -576,9 +576,9 @@ When you run the application, the resultant Blazor DataGrid component will look 
 
 > Find the sample from this [GitHub location](https://github.com/SyncfusionExamples/connecting-databases-to-blazor-datagrid-component/tree/master/Binding%20MS%20SQL%20database%20using%20UrlAdaptor).
 
-## Binding data using Dapper from Microsoft SQL Server using CustomAdaptor
+## Binding data from Microsoft SQL Server using Dapper with CustomAdaptor
 
-This section describes step by step process how to use `Dapper` to retrieve data from a Microsoft SQL Server using `CustomAdaptor` and bind it to the Blazor DataGrid component.
+This section describes step by step process how to use Dapper to retrieve data from a Microsoft SQL Server using `CustomAdaptor` and bind it to the Blazor DataGrid component.
 
 **1.** To create a simple Blazor DataGrid component, the procedure is explained in the above-mentioned topic on [Connecting Blazor DataGrid to an API service](#connecting-blazor-datagrid-to-an-api-service)
 
@@ -655,9 +655,9 @@ This section describes step by step process how to use `Dapper` to retrieve data
 {% endhighlight %}
 {% endtabs %}
 
-**4.** Within the `CustomAdaptor’s` [ReadAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_ReadAsync_Syncfusion_Blazor_DataManagerRequest_System_String_) method, fetch the data from the service by calling the `GetOrdersAsync` method.
+**4.** Within the `CustomAdaptor` [ReadAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_ReadAsync_Syncfusion_Blazor_DataManagerRequest_System_String_) method, fetch the data from the service by calling the `GetOrdersAsync` method.
 
-* In this `GetOrdersAsync` method, a connection is established to Microsoft SQL Server using **SqlConnection** which implements the **IDbConnection** interface. The SQL query string to retrieve data from the database is prepared. Using `Dapper`, the query is executed and data is fetched directly into a list of `Order` objects. `Dapper` automates the mapping process, eliminating the need for manual mapping using **SqlDataAdapter** and **DataTable**
+* In this `GetOrdersAsync` method, a connection is established to Microsoft SQL Server using **SqlConnection** which implements the **IDbConnection** interface. The SQL query string to retrieve data from the database is prepared. Using Dapper, the query is executed and data is fetched directly into a list of `Order` objects. Dapper automates the mapping process, eliminating the need for manual mapping using **SqlDataAdapter** and **DataTable**
 
 * Finally, return the response as a `Result` and `Count` pair object in the `ReadAsync` method to bind the data to the Blazor DataGrid component.
 
