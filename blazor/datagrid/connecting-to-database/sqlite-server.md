@@ -1,7 +1,7 @@
 ---
 layout: post
 title: SQLite Data Binding in Blazor DataGrid Component | Syncfusion
-description: Learn about consuming data from SQLite and binding it to Syncfusion Component, and performing CRUD operations.
+description: Learn about consuming data from SQLite and binding it to Grid Component, and performing CRUD operations.
 platform: Blazor
 control: DataGrid
 documentation: ug
@@ -68,7 +68,7 @@ namespace MyWebService.Controllers
             List<Order> DataSource = new List<Order>();
             SqliteConnection Connection = new SqliteConnection(ConnectionString);
             Connection.Open();
-            //Using sqliteCommand and Query create connection with database
+            //Using SqliteCommand and Query create connection with database
             SqliteCommand Command = new SqliteCommand(Query, Connection);
             // Execute the SQLite command and retrieve data using SqliteDataReader
             using (SqliteDataReader reader = Command.ExecuteReader())
@@ -668,7 +668,7 @@ This section describes step by step process how to retrieve data from a SQLite S
 
 * In this `GetOrdersAsync` method, the SQLite Server database data is fetch by using the **SqliteDataReader** class.
 
-* Employ the **ReadAsync** method to asynchronously iterate over the results retrieved by executing the SQL query with **ExecuteReaderAsync** method, gathering the data into a list.
+* Employ the `ReadAsync` method to asynchronously iterate over the results retrieved by executing the SQL query with **ExecuteReaderAsync** method, gathering the data into a list.
 
 * Finally, return the response as a `Result` and `Count` pair object in the `ReadAsync` method to bind the data to the Blazor DataGrid component.
 
@@ -757,7 +757,7 @@ public class OrderData
         // Create sqlite Connection
         SqliteConnection Connection = new SqliteConnection(ConnectionString);
         Connection.Open();
-        //Using sqliteCommand and Query create connection with database
+        //Using SqliteCommand and Query create connection with database
         SqliteCommand Command = new SqliteCommand(Query, Connection);
         // Execute the SQLite command and retrieve data using SqliteDataReader
         using (SqliteDataReader reader = await Command.ExecuteReaderAsync())
