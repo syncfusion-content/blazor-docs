@@ -251,7 +251,7 @@ The following code example shows how to change the color of the default frozen l
         background-color: blue;
     }
 
-    .e-grid .e-leftfreeze.e-freezeleftborder {
+    .e-grid.e-lib .e-leftfreeze.e-freezeleftborder {
         border-right-color: blue;
     }
 </style>
