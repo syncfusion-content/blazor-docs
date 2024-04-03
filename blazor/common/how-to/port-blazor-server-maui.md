@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Port Syncfusion Blazor Server App to .NET MAUI Blazor Hybrid App | Syncfusion
+title: Port Blazor Server Side App to MAUI Blazor Hybrid App | Syncfusion
 description: Checkout and learn here all about porting Syncfusion Blazor Server App to .NET MAUI Blazor Hybrid App.
 platform: Blazor
 component: Common
 documentation: ug
 ---
 
-# How to port Syncfusion Blazor Server App to .NET MAUI Blazor Hybrid App
+# How to port Syncfusion Blazor Server App to MAUI Blazor Hybrid App
 
 This section explains how to port Syncfusion Blazor Server App to .NET MAUI Blazor Hybrid App using Razor Class Library (RCL). This way, you can avoid rewriting all your Blazor Server App pages for the .NET MAUI Blazor Hybrid App.
 
