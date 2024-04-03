@@ -50,12 +50,12 @@ The Blazor Range Selector component followed the [WAI-ARIA](https://www.w3.org/W
 
 The Blazor Range Selector component followed the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/alert/#keyboardinteraction) guideline, making it easy for people who use assistive technologies (AT) and those who completely rely on keyboard navigation. The following keyboard shortcuts are supported by the Blazor Range Selector component.
 
-| Interaction Keys | Description |
+Interaction Keys |Description
 | --- | --- |
 | <kbd>Alt + J</kbd> | Moves the focus to the Range Selector element. |
 | <kbd>Tab</kbd> | Moves the focus to the Range Selector element. |
 | <kbd>Shift + Tab</kbd> | Moves the focus to the previous element in the Range Selector. |
-| <kbd>Ctrl + P</kbd> | Prints the Range Selector. |
+| <kbd>Ctrl + P</kbd> | Prints the Range Selector. |S
 
 ## Ensuring accessibility
 

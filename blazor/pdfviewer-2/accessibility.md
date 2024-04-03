@@ -15,14 +15,14 @@ The accessibility compliance for the Blazor SfPdfViewer component is outlined be
 
 | Accessibility Criteria | Compatibility |
 | -- | -- |
-| [WCAG 2.2 Support](../common/accessibility#accessibility-standards) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
-| [Section 508 Support](../common/accessibility#accessibility-standards) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
-| [Screen Reader Support](../common/accessibility#screen-reader-support) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
-| [Right-To-Left Support](../common/accessibility#right-to-left-support) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
-| [Color Contrast](../common/accessibility#color-contrast) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
-| [Mobile Device Support](../common/accessibility#mobile-device-support) | <img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Intermediate"> |
-| [Keyboard Navigation Support](../common/accessibility#keyboard-navigation-support) |<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
-| [Axe-core Accessibility Validation](../common/accessibility#ensuring-accessibility) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
+| [WCAG 2.2 Support]| <img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> |
+| [Section 508 Support] | <img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> |
+| [Screen Reader Support]| <img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> |
+| [Right-To-Left Support]| <img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> |
+| [Color Contrast] | <img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> |
+| [Mobile Device Support]| <img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Intermediate"> |
+| [Keyboard Navigation Support]| <img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> |
+| [Axe-core Accessibility Validation]| <img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> |
 
 <style>
     .post .post-content img {
@@ -95,7 +95,7 @@ The Blazor SfPdfViewer component followed the [keyboard interaction](https://www
 
 ## Ensuring accessibility
 
-The Blazor SfPdfViewer component's accessibility levels are ensured through an [axe-core](https://www.nuget.org/packages/Deque.AxeCore.Playwright) with playwright tests.
+The Blazor SfPdfViewer component's accessibility levels are ensured through an [axe-core](https://www.npmjs.com/package/axe-core) software tools during automated testing.
 
 The accessibility compliance of the Blazor SfPdfViewer component is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/pdfviewer) in a new window to evaluate the accessibility of the Blazor SfPdfViewer component with accessibility tools.
 

@@ -41,7 +41,7 @@ The accessibility compliance for the Blazor ProgressBar component is outlined be
 
 The Blazor ProgressBar component followed the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/alert/#keyboardinteraction) guideline, making it easy for people who use assistive technologies (AT) and those who completely rely on keyboard navigation. The following keyboard shortcuts are supported by the Blazor ProgressBar component.
 
-| Interaction Keys | Description |
+Interaction Keys |Description
 | --- | --- |
 | <kbd>Tab</kbd> | Moves the focus to the ProgressBar element. |
 | <kbd>Ctrl + P</kbd> | Prints the ProgressBar. |

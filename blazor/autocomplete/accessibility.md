@@ -82,42 +82,7 @@ N> In the following sample, disable the AutoComplete component using <kbd>t</kbd
 
 {% highlight cshtml %}
 
-@using Syncfusion.Blazor.DropDowns
-
 {% include_relative code-snippet/accessibility/accessibility.razor %}
-
-{% endhighlight %}
-
-    public SfAutoComplete<string, Country> AutoObj;
-
-    public bool enable { get; set; } = true ;
-    public class Country
-    {
-        public string Name { get; set; }
-        public string Code { get; set; }
-    }
-
-    List<Country> LocalData = new List<Country> {
-        new Country() { Name = "Australia", Code = "AU" },
-        new Country() { Name = "Bermuda", Code = "BM" },
-        new Country() { Name = "Canada", Code = "CA" },
-        new Country() { Name = "Cameroon", Code = "CM" },
-        new Country() { Name = "Denmark", Code = "DK" },
-        new Country() { Name = "France", Code = "FR" },
-        new Country() { Name = "Finland", Code = "FI" },
-        new Country() { Name = "Germany", Code = "DE" },
-        new Country() { Name = "Greenland", Code = "GL" },
-        new Country() { Name = "Hong Kong", Code = "HK" },
-    };
-
-    public void KeyPressed(KeyboardEventArgs args)
-    {
-        if (args.Key == "t")
-        {
-            enable = false;
-        }
-    }
-}
 
 {% endhighlight %}
 

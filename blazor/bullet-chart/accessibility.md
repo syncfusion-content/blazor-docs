@@ -51,7 +51,7 @@ The Blazor Bullet Chart component followed the [WAI-ARIA](https://www.w3.org/WAI
 
 The Blazor Bullet Chart component followed the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/alert/#keyboardinteraction) guideline, making it easy for people who use assistive technologies (AT) and those who completely rely on keyboard navigation. The following keyboard shortcuts are supported by the Blazor Bullet Chart component.
 
-| Interaction Keys | Description |
+Interaction Keys |Description
 | --- | --- |
 |<kbd>Alt + J</kbd> | Moves the focus to the Bullet Chart element. |
 | <kbd>Tab</kbd> | Moves the focus to the next element in the Bullet Chart. |
