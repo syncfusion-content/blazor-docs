@@ -94,8 +94,6 @@ The Blazor AutoComplete component's accessibility levels are ensured through an 
 
 The accessibility compliance of the AutoComplete component is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/autocomplete) in a new window to evaluate the accessibility of the AutoComplete component with accessibility tools.
 
-{% previewsample "https://blazor.syncfusion.com/accessibility/autocomplete" %}
-
 ## See also
 
 * [Accessibility in Syncfusion components](../common/accessibility)

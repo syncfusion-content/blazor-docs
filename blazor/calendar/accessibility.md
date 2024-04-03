@@ -87,8 +87,6 @@ The Blazor Calendar component's accessibility levels are ensured through an [axe
 
 The accessibility compliance of the Calendar component is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/calendar) in a new window to evaluate the accessibility of the Calendar component with accessibility tools.
 
-{% previewsample "https://blazor.syncfusion.com/accessibility/calendar" %}
-
 ## See also
 
 * [Accessibility in Syncfusion components](../common/accessibility)
