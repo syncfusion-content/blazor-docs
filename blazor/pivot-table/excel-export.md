@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Excel Export in Blazor Pivot Table Component | Syncfusion
+title: Excel export in Blazor Pivot Table component | Syncfusion
 description: Checkout and learn here all about Excel export in Syncfusion Blazor Pivot Table component and much more.
 platform: Blazor
 control: Pivot Table
 documentation: ug
 ---
 
-# Excel Export in Blazor Pivot Table Component
+# Excel export in Blazor Pivot Table component
 
 The Excel export allows Pivot Table data to be exported as Excel document. To enable Excel export in the pivot table, set the [AllowExcelExport](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_AllowExcelExport) property in [SfPivotView](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html) class to **true**. Once the API is set, user needs to call the [ExportToExcelAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_ExcelExport_System_Object_System_Nullable_System_Boolean__System_Object_System_Nullable_System_Boolean__) method for exporting on external button click.
 
@@ -242,7 +242,7 @@ The Excel export provides an option to change file name of the document before e
 
 ## Limitation when exporting millions of records to Excel format
 
-By default, Microsoft Excel supports only 1,048,576 records in an excel sheet. Hence it is not possible to export millions of records to excel. You can refer the [documentation](https://support.microsoft.com/en-gb/office/excel-specifications-and-limits-1672b34d-7043-467e-8e27-269d656771c3) link for more details on Microsoft excel specifications and limits. So suggest to export the data in CSV (Comma-Separated Values) or other formats that can handle large datasets more efficiently than Excel.
+By default, Microsoft Excel supports only 1,048,576 records in an Excel sheet. Hence, it is not possible to export millions of records to Excel. You can refer to the [documentation link](https://support.microsoft.com/en-gb/office/excel-specifications-and-limits-1672b34d-7043-467e-8e27-269d656771c3) for more details on Microsoft Excel specifications and limits. Therefore, it is suggested to export the data in CSV (Comma-Separated Values) or other formats that can handle large datasets more efficiently than Excel.
 
 ## CSV Export
 
@@ -293,9 +293,9 @@ N> The pivot table component can be exported to CSV format using options availab
 
 ![CSV Exporting in Blazor PivotTable](images/blazor-pivottable-csv-export.png)
 
-## Export All Pages
+## Export all pages
 
-When the [EnableVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_EnableVirtualization) property in the [SfPivotView](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html) class is set to **true**, the entire virtual data of the pivot table (i.e. the data that contains all of the records used to render the complete pivot table) will be exported as an Excel/CSV document. To export only the current viewport of the pivot table, set the  [ExportAllPages](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_ExportAllPages) parameter to **false**.
+When the [EnableVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_EnableVirtualization) property in the [SfPivotView](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html) is set to **true**, the entire virtual data of the pivot table (i.e. the data that contains all of the records used to render the complete pivot table) will be exported as an Excel/CSV document. To export only the current viewport of the pivot table, set the  [ExportAllPages](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_ExportAllPages) property to **false**.
 
 ```cshtml
 @using Syncfusion.Blazor.PivotView

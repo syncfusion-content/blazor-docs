@@ -237,22 +237,13 @@ The [DataTypeAttribute](https://learn.microsoft.com/en-us/dotnet/api/system.comp
 | Data type | Editor type | Image |
 | ------------ | ----------------------- | ------ |
 | `DataType.Date` | [SfDatePicker](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfDatePicker-1.html) | ![Blazor DataForm DataType.Date](images/blazor_dataform_data_type_date.png) |
-
 | `DataType.Time` | [SfTimePicker](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfTimePicker-1.html) |![Blazor DataForm DataType.Time](images/blazor_dataform_data_type_time.png) |
-
 | `DataType.DateTime` | [SfDateTimePicker](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfDateTimePicker-1.html) |![Blazor DataForm DataType.DateTime](images/blazor_dataform_data_type_date_time.png) |
-
 | `DataType.Currency` | [SfNumericTextBox](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfNumericTextBox-1.html) |![Blazor DataForm DataType.Currency](images/blazor_dataform_data_type_currency.png) |
-
 | `DataType.PhoneNumber` | [SfMaskedTextBox](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfMaskedTextBox.html) |![Blazor DataForm DataType.PhoneNumber](images/blazor_dataform_data_type_phone.png) |
-
 | `DataType.CreditCard` | [SfMaskedTextBox](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfMaskedTextBox.html) |![Blazor DataForm DataType.CreditCard](images/blazor_dataform_data_type_credit_card.png) |
-
 | `DataType.MultilineText` | [SfTextBox](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextBox.html) | ![Blazor DataForm DataType.MultilineText](images/blazor_dataform_data_type_multiline_text.png) |
-
-
 | `DataType.Password` | [SfTextBox](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextBox.html) | ![Blazor DataForm DataType.Password](images/blazor_dataform_data_type_password.png) |
-
 | <ul><li>`DataType.EmailAddress`</li><li>`DataType.Url`</li><li>`DataType.Text`</li><li> `DataType.ImageUrl`</li><li> `DataType.Html`</li></ul> | [SfTextBox](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextBox.html) |![Blazor DataForm DataType.EmailAddress](images/blazor_dataform_data_type_text.png) |
 
 If any other data type is specified other than the above table, the DataForm component uses the [SfTextBox](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextBox.html) editor by default.
@@ -319,13 +310,13 @@ The [DataFormDisplayOptionsAttribute](https://help.syncfusion.com/cr/blazor/Sync
 
 {% highlight razor tabtitle="Razor" %}
 
-{% include_relative code-snippet\custom-attributes\custom-attribute.razor %}
+{% include_relative code-snippet/custom-attributes/custom-attribute.razor %}
 
 {% endhighlight %}
 
 {% highlight C# tabtitle="C#" %}
 
-{% include_relative code-snippet\custom-attributes\custom-attribute.cs %}
+{% include_relative code-snippet/custom-attributes/custom-attribute.cs %}
 
 {% endhighlight %}
 

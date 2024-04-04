@@ -9,7 +9,36 @@ documentation: ug
 
 # Accessibility in Blazor Numeric TextBox Component
 
-The NumericTextBox is characterized with complete ARIA Accessibility support that helps to be accessible by on-screen readers and other assistive technology devices. This component designed with the reference of the guidelines document given in [WAI ARAI Accessibility practices](https://www.w3.org/WAI/ARIA/apg/#spinbutton).
+The [Blazor NumericTextBox](https://www.syncfusion.com/blazor-components/blazor-numeric-textbox) component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
+
+The accessibility compliance for the Blazor NumericTextBox component is outlined below.
+
+| Accessibility Criteria | Compatibility |
+| -- | -- |
+| [WCAG 2.2 Support](../common/accessibility#accessibility-standards) | <img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> |
+| [Section 508 Support](../common/accessibility#accessibility-standards) | <img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> |
+| [Screen Reader Support](../common/accessibility#screen-reader-support) | <img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> |
+| [Right-To-Left Support](../common/accessibility#right-to-left-support) | <img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> |
+| [Color Contrast](../common/accessibility#color-contrast) | <img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> |
+| [Mobile Device Support](../common/accessibility#mobile-device-support) | <img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> |
+| [Keyboard Navigation Support](../common/accessibility#keyboard-navigation-support) | <img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> |
+| [Axe-core Accessibility Validation](../common/accessibility#ensuring-accessibility) | <img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> |
+
+<style>
+    .post .post-content img {
+        display: inline-block;
+        margin: 0.5em 0;
+    }
+</style>
+<div><img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> - All features of the component meet the requirement.</div>
+
+<div><img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Intermediate"> - Some features of the component do not meet the requirement.</div>
+
+<div><img src="https://cdn.syncfusion.com/content/images/documentation/not-supported.png" alt="No"> - The component does not meet the requirement.</div>
+
+## WAI-ARIA attributes
+
+The Blazor NumericTextBox is characterized with complete ARIA Accessibility support that helps to be accessible by on-screen readers and other assistive technology devices. This component designed with the reference of the guidelines document given in [WAI ARAI Accessibility practices](https://www.w3.org/WAI/ARIA/apg/#spinbutton).
 
 The NumericTextBox uses the `spin button` role and following ARIA properties to its element based on its state.
 
@@ -26,7 +55,7 @@ The NumericTextBox uses the `spin button` role and following ARIA properties to 
 
 ## Keyboard interaction
 
-Keyboard interaction of the NumericTextBox component has been designed based on [WAI-ARIA Practices](https://www.w3.org/WAI/ARIA/apg/#spinbutton) described for the NumericTextBox and it is an alternative to mouse actions to interact with the NumericTextBox.
+Keyboard interaction of the Blazor NumericTextBox component has been designed based on [WAI-ARIA Practices](https://www.w3.org/WAI/ARIA/apg/#spinbutton) described for the NumericTextBox and it is an alternative to mouse actions to interact with the NumericTextBox.
 
 The following table shows shortcut keys and its corresponding usage.
 
@@ -42,3 +71,13 @@ The following table shows shortcut keys and its corresponding usage.
 ```
 
 ![Accessibility in Blazor NumericTextBox](./images/blazor-numerictextbox-component.png)
+
+## Ensuring accessibility
+
+The Blazor NumericTextBox component's accessibility levels are ensured through an [axe-core](https://www.npmjs.com/package/axe-core) software tool during automated testing.
+
+The accessibility compliance of the NumericTextBox component is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/numerictextbox) in a new window to evaluate the accessibility of the NumericTextBox component with accessibility tools.
+
+## See also
+
+* [Accessibility in Syncfusion components](../common/accessibility)

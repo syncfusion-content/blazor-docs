@@ -233,11 +233,9 @@ RowIndex : <input @bind-value = "@RowIndex" />
         {
             string[] Names = new string[] { "VINET", "TOMSP", "HANAR", "VICTE", "SUPRD", "HANAR", "CHOPS", "RICSU", "WELLI", "HILAA", "ERNSH", "CENTC", "OTTIK", "QUEDE", "RATTC", "ERNSH", "FOLKO", "BLONP", "WARTH", "FRANK", "GROSR", "WHITC", "WARTH", "SPLIR", "RATTC", "QUICK", "VINET", "MAGAA", "TORTU", "MORGK", "BERGS", "LEHMS", "BERGS", "ROMEY", "ROMEY", "LILAS", "LEHMS", "QUICK", "QUICK", "RICAR", "REGGC", "BSBEV", "COMMI", "QUEDE", "TRADH", "TORTU", "RATTC", "VINET", "LILAS", "BLONP", "HUNGO", "RICAR", "MAGAA", "WANDK", "SUPRD", "GODOS", "TORTU", "OLDWO", "ROMEY", "LONEP", "ANATR", "HUNGO", "THEBI", "DUMON", "WANDK", "QUICK", "RATTC", "ISLAT", "RATTC", "LONEP", "ISLAT", "TORTU", "WARTH", "ISLAT", "PERIC", "KOENE", "SAVEA", "KOENE", "BOLID", "FOLKO", "FURIB", "SPLIR", "LILAS", "BONAP", "MEREP", "WARTH", "VICTE", "HUNGO", "PRINI", "FRANK", "OLDWO", "MEREP", "BONAP", "SIMOB", "FRANK", "LEHMS", "WHITC", "QUICK", "RATTC", "FAMIA" };
             List<TaskData> DataCollection = new List<TaskData>();
-            Random random = new Random();
             var x = 0;
             for (var i = 1; i <= 100; i++)
             {
-                var name = random.Next(0, 100);
                 TaskData Parent = new TaskData()
                 {
                     ProjectId = ++x,
@@ -252,7 +250,6 @@ RowIndex : <input @bind-value = "@RowIndex" />
                 DataCollection.Add(Parent);
                 for (var j = 1; j <= 50; j++)
                 {
-                    var childName = random.Next(0, 100);
                     DataCollection.Add(new TaskData()
                     {
                         ProjectId = ++x,
@@ -263,7 +260,7 @@ RowIndex : <input @bind-value = "@RowIndex" />
                         ProjectProgress = x + 20,
                         ParentId = Parent.ProjectId,
                         Predecessor = i + "FS",
-                        Field1 = Names[name],
+                        Field1 = Names[x % Names.Length],
                         FIELD2 = 1967 + x + 10,
                         FIELD3 = 395 + x + 10,
                         FIELD4 = 87 + x + 10,

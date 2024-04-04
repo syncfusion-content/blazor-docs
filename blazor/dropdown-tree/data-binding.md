@@ -953,9 +953,11 @@ In the following example, the [LoadOnDemand](https://help.syncfusion.com/cr/blaz
 }
 ```
 
-## GetTreeViewData
+## Gets the data of TreeView
 
-The `GetTreeViewData` method can be used to retrieve the complete node details of the tree rendered in the Dropdown Tree popup or to retrieve specific node details by passing its corresponding ID.
+The [GetTreeViewData](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfDropDownTree-2.html#Syncfusion_Blazor_Navigations_SfDropDownTree_2_GetTreeViewData_System_String_) method can be used to retrieve the complete node details of the tree rendered in the Dropdown Tree popup or to retrieve specific node details by passing its corresponding ID.
+
+By clicking the `GetTree Data` button, you can retrieve the Name and Job details associated with Id '11' in the following example
 
 ```cshtml
 
@@ -967,6 +969,7 @@ The `GetTreeViewData` method can be used to retrieve the complete node details o
     <DropDownTreeField TItem="EmployeeData" DataSource="Data" ID="Id" Text="Name" HasChildren="HasChild" ParentID="PId" Selected="Selected" IsChecked="IsChecked"></DropDownTreeField>
 
 </SfDropDownTree>
+<span>@EmployeeList</span>
 
 @code {
     SfDropDownTree<string, EmployeeData>? tree;
@@ -983,9 +986,14 @@ The `GetTreeViewData` method can be used to retrieve the complete node details o
         new EmployeeData() { Id = "11", PId = "6", Name = "Mary", Job = "Developer" },
         new EmployeeData() { Id = "9", PId = "1", Name = "Janet Leverling", Job = "HR"}
     };
+    string EmployeeList { get; set; } = "";
+
     public void GetData()
     {
-        List<EmployeeData> employees = tree.GetTreeViewData("10");
+        List<EmployeeData> employees = tree.GetTreeViewData("11");
+
+        // Concatenate the names of employees into a single string
+        EmployeeList = string.Join(", ", employees.Select(e => $"{e.Name} ({e.Job})"));
     }
     class EmployeeData
     {

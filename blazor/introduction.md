@@ -9,7 +9,7 @@ documentation: ug
 
 # Welcome to Syncfusion Blazor Components
 
-Syncfusion Blazor Components is a modern enterprise native UI components library for creating Blazor WebAssembly and Server applications. Syncfusion Blazor components library has been built from the ground up to be lightweight, responsive, modular, and touch-friendly. The Syncfusion Blazor components are native Blazor components and not wrappers over EJ2 components.
+Syncfusion Blazor Components is a modern enterprise native UI components library for creating Blazor WebAssembly and Server applications. Syncfusion Blazor components library has been built from the ground up to be lightweight, responsive and touch-friendly. The Syncfusion Blazor components are native Blazor components and not wrappers over EJ2 components.
 
 ## How to best read this user guide
 
@@ -97,6 +97,7 @@ padding-top: 20px;
         <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/card/getting-started">Card</a></div>
         <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/avatar/getting-started">Avatar</a></div>
         <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/media-query/getting-started">Media Query</a></div>
+        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/timeline/getting-started">Timeline</a></div>
     </td>
     <td>
         <div><p class="controlcategory-topics">DATA VISUALIZATION</p></div>
