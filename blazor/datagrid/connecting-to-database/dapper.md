@@ -574,7 +574,7 @@ When you run the application, the resultant Blazor DataGrid component will look 
 
 ![Blazor DataGrid component bound with Microsoft SQL Server data using Dapper](../images/blazor-Grid-Ms-SQl-databinding-Gif.gif)
 
-> Find the sample from this [GitHub location](https://github.com/SyncfusionExamples/connecting-databases-to-blazor-datagrid-component/tree/master/Binding%20MS%20SQL%20database%20using%20UrlAdaptor).
+> Find the sample from this [GitHub location](https://github.com/SyncfusionExamples/connecting-databases-to-blazor-datagrid-component/tree/master/Binding%20Dapper%20using%20UrlAdaptor).
 
 ## Binding data from Microsoft SQL Server using Dapper with CustomAdaptor
 
@@ -1168,4 +1168,4 @@ public override async Task<object> BatchUpdateAsync(DataManager DataManager, obj
 
 ![Blazor DataGrid component bound with Microsoft SQL Server data using Dapper](../images/blazor-Grid-Ms-SQl-databinding-Gif.gif)
 
-> You can find the sample in this [GitHub location](https://github.com/SyncfusionExamples/connecting-databases-to-blazor-datagrid-component/tree/master/Binding%20MS%20SQL%20database%20using%20CustomAdaptor).
+> You can find the sample in this [GitHub location](https://github.com/SyncfusionExamples/connecting-databases-to-blazor-datagrid-component/tree/master/Binding%20Dapper%20using%20CustomAdaptor).
