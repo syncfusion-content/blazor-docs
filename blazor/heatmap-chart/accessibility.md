@@ -7,11 +7,11 @@ control: HeatMap Chart
 documentation: ug
 ---
 
-# Accessibility in Blazor HeatMap component
+# Accessibility in Blazor HeatMap Chart component
 
-The HeatMap component follows commonly used accessibility guidelines and standards, such as [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles).
+The [Blazor HeatMap Chart](https://www.syncfusion.com/blazor-components/blazor-heatmap-chart) component follows commonly used accessibility guidelines and standards, such as [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles).
 
-The accessibility compliance for the HeatMap component is outlined below.
+The accessibility compliance for the Blazor HeatMap Chart component is outlined below.
 
 | Accessibility Criteria | Compatibility |
 | -- | -- |
@@ -20,7 +20,6 @@ The accessibility compliance for the HeatMap component is outlined below.
 | [Screen Reader Support](../common/accessibility) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
 | [Color Contrast](../common/accessibility) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
 | [Mobile Device Support](../common/accessibility) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
-| [Accessibility Checker Validation](../common/accessibility) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
 | [Axe-core Accessibility Validation](../common/accessibility) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
 
 <style>
@@ -38,7 +37,7 @@ The accessibility compliance for the HeatMap component is outlined below.
 
 ## WAI-ARIA attributes
 
-HeatMap component followed the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/alert/) patterns to meet the accessibility. The following ARIA attributes are used in the HeatMap component.
+Blazor HeatMap Chart component followed the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/) patterns to meet the accessibility. The following `WAI-ARIA` attributes are used in the HeatMap component.
 
 | Attributes | Purpose |
 | --- | --- |
@@ -48,7 +47,7 @@ HeatMap component followed the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patter
 
 ## Screen reading in HeatMap
 
-HeatMap has built-in accessibility features like screen reading. Screen reading in the HeatMap component allows all users, regardless of ability or disability, to use the component. The following HeatMap elements will be read aloud with screen reading software like Narrator for Windows.
+Blazor HeatMap Chart has built-in accessibility features like screen reading. Screen reading in the HeatMap component allows all users, regardless of ability or disability, to use the component. The following HeatMap elements will be read aloud with screen reading software like Narrator for Windows.
 
 | Elements | Description |
 | --- | --- |
@@ -61,6 +60,6 @@ HeatMap has built-in accessibility features like screen reading. Screen reading 
 
 ## Ensuring accessibility
 
-The HeatMap component's accessibility levels are ensured through an [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) software tools during automated testing.
+The Blazor HeatMap component's accessibility levels are ensured through an [axe-core](https://www.npmjs.com/package/axe-core) software tool during automated testing.
 
-The accessibility compliance of the HeatMap component is shown in [this sample](https://blazor.syncfusion.com/accessibility/heatmap). Open the sample in a new window to evaluate the accessibility of the HeatMap component with accessibility tools.
+The accessibility compliance of the HeatMap component is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/heatmap) in a new window to evaluate the accessibility of the HeatMap component with accessibility tools.

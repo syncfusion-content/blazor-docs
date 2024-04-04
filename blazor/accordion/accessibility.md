@@ -11,6 +11,8 @@ documentation: ug
 
 The [Blazor Accordion](https://www.syncfusion.com/blazor-components/blazor-accordion) component has been designed keeping in mind the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/accordion/) specifications, by applying the prompt WAI-ARIA roles, states and properties along with the keyboard support. Thus, making it usable for people who use assistive WAI-ARIA Accessibility supports that is achieved through the attributes like `aria-labelledby`. It helps to provides information about the elements in a document for assistive technology. The component implements the keyboard navigation support by following the [WAI-ARIA practices](https://www.w3.org/WAI/ARIA/apg/) and tested in major screen readers.
 
+The Blazor Accordion component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
+
 The accessibility compliance for the Blazor Accordion component is outlined below.
 
 | Accessibility Criteria | Compatibility |
@@ -37,9 +39,9 @@ The accessibility compliance for the Blazor Accordion component is outlined belo
 
 <div><img src="https://cdn.syncfusion.com/content/images/landing-page/no.png" alt="No"> - The component does not meet the requirement.</div>
 
-## ARIA attributes
+## WAI-ARIA attributes
 
-| Property             | Functionality |
+| Attributes             | Purpose |
 |----------------------|---------------|
 | role                 | **Button:** Attribute is set to the Accordion header elements to indicate that the element can be used to toggle the visibility of the associated content section, describing the actual role of the element.<br> **Region:** Attribute is set to the Accordion panel elements to create a landmark region that contains the currently expanded accordion panel, describing the actual role of the element.  |
 | aria-labelledby      | Attribute is set to content (panel) and it points to the corresponding Accordion header.|

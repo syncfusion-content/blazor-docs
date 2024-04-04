@@ -27,55 +27,43 @@ The following sample code demonstrates DataGrid enabled with Inline template edi
 @using Syncfusion.Blazor.DropDowns
 @using Syncfusion.Blazor.Inputs
 
-<SfGrid DataSource="@GridData" Toolbar="@(new string[] {"Add", "Edit" ,"Delete","Update","Cancel" })">
+<SfGrid DataSource="@GridData" Toolbar="@(new string[] { "Add", "Edit", "Delete", "Update", "Cancel" })">
     <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true" Mode="@EditMode.Normal">
         <Template>
             @{
                 var Order = (context as OrdersDetails);
-                <div>
-                    <div class="form-row">
-                        <div class="form-group col-md-6">
-                            <label class="e-float-text e-label-top">Order ID</label>
-                            <SfNumericTextBox ID="OrderID" @bind-Value="@(Order.OrderID)" ShowSpinButton="false" Enabled="@((Order.OrderID == null)? true: false)"></SfNumericTextBox>
-                        </div>
-                        <div class="form-group col-md-6">
-                            <label class="e-float-text e-label-top">Customer Name</label>
-                            <SfAutoComplete ID="CustomerID" TItem="OrdersDetails" FloatLabelType="FloatLabelType.Auto" @bind-Value="@(Order.CustomerID)" TValue="string" DataSource="@GridData">
-                                <AutoCompleteFieldSettings Value="CustomerID"></AutoCompleteFieldSettings>
-                            </SfAutoComplete>
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group col-md-6">
-                            <label class="e-float-text e-label-top">Freight</label>
-                            <SfNumericTextBox ID="Freight" @bind-Value="@(Order.Freight)" TValue="double?"></SfNumericTextBox>
-                        </div>
-                        <div class="form-group col-md-6">
-                            <label class="e-float-text e-label-top">Order Date</label>
-                            <SfDatePicker ID="OrderDate" @bind-Value="@(Order.OrderDate)"></SfDatePicker>
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group col-md-6">
-                            <label class="e-float-text e-label-top">Ship Country</label>
-                            <SfDropDownList ID="ShipCountry" TItem="OrdersDetails" @bind-Value="@(Order.ShipCountry)" TValue="string" DataSource="@GridData">
-                                <DropDownListFieldSettings Value="ShipCountry" Text="ShipCountry"></DropDownListFieldSettings>
-                            </SfDropDownList>
-                        </div>
-                        <div class="form-group col-md-6">
-                            <label class="e-float-text e-label-top">Ship City</label>
-                            <SfDropDownList ID="ShipCity" TItem="OrdersDetails" @bind-Value="@(Order.ShipCity)" TValue="string" DataSource="@GridData">
-                                <DropDownListFieldSettings Value="ShipCity" Text="ShipCity"></DropDownListFieldSettings>
-                            </SfDropDownList>
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group col-md-12">
-                            <label class="e-float-text e-label-top">Ship Address</label>
-                            <SfTextBox ID="ShipAddress" @bind-Value="@(Order.ShipAddress)"></SfTextBox>
-                        </div>
-                    </div>
-                </div>
+                <table class="e-table e-inline-edit" cellspacing="0.25">
+                    <colgroup>
+                        <col style="width: 140px;">
+                        <col style="width: 150px;">
+                        <col style="width: 140px;">
+                        <col style="width: 160px;">
+                        <col style="width: 150px;">
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <td style="text-align: center">
+                                <SfNumericTextBox ID="OrderID" @bind-Value="@(Order.OrderID)" ShowSpinButton="false" Enabled="@((Order.OrderID == null)? true: false)"></SfNumericTextBox>
+                            </td>
+                            <td>
+                                <SfAutoComplete ID="CustomerID" TItem="OrdersDetails" FloatLabelType="FloatLabelType.Auto" @bind-Value="@(Order.CustomerID)" TValue="string" DataSource="@GridData">
+                                    <AutoCompleteFieldSettings Value="CustomerID"></AutoCompleteFieldSettings>
+                                </SfAutoComplete>
+                            </td>
+                            <td style="text-align: right">
+                                <SfNumericTextBox ID="Freight" @bind-Value="@(Order.Freight)" TValue="double?"></SfNumericTextBox>
+                            </td>
+                            <td>
+                                <SfDatePicker ID="OrderDate" @bind-Value="@(Order.OrderDate)"></SfDatePicker>
+                            </td>
+                            <td>
+                                <SfDropDownList ID="ShipCountry" TItem="OrdersDetails" @bind-Value="@(Order.ShipCountry)" TValue="string" DataSource="@GridData">
+                                    <DropDownListFieldSettings Value="ShipCountry" Text="ShipCountry"></DropDownListFieldSettings>
+                                </SfDropDownList>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
             }
         </Template>
     </GridEditSettings>
@@ -88,7 +76,8 @@ The following sample code demonstrates DataGrid enabled with Inline template edi
     </GridColumns>
 </SfGrid>
 
-@code{
+
+@code {
     public List<OrdersDetails> GridData = new List<OrdersDetails>
 {
         new OrdersDetails() { OrderID = 10248, CustomerID = "VINET", Freight = 32.38, ShipCity = "Berlin", OrderDate = DateTime.Now.AddDays(-2), ShipName = "Vins et alcools Chevalier", ShipCountry = "Denmark", ShipAddress = "Kirchgasse 6" },
@@ -114,18 +103,6 @@ The following sample code demonstrates DataGrid enabled with Inline template edi
         public string ShipAddress { get; set; }
     }
 }
-
-<style>
-    .form-group.col-md-6 {
-        width: 200px;
-    }
-
-    label.e-float-text {
-        position: relative;
-        padding-left: 0;
-        top: 10%;
-    }
-</style>
 ```
 
 N> In the above sample code, the textbox rendered for **OrderID** column inside the Inline editing template is disabled using its `Enabled` property to prevent editing of the primary key column.
@@ -158,49 +135,33 @@ The following sample code demonstrates DataGrid enabled with dialog template edi
         <Template>
             @{
                 var Order = (context as OrdersDetails);
-                <div>
-                    <div class="form-row">
-                        <div class="form-group col-md-6">
-                            <label class="e-float-text e-label-top">Order ID</label>
-                            <SfNumericTextBox ID="OrderID" @bind-Value="@(Order.OrderID)" Enabled="@((Order.OrderID == null) ? true : false)"></SfNumericTextBox>
-                        </div>
-                        <div class="form-group col-md-6">
-                            <label class="e-float-text e-label-top">Customer Name</label>
-                            <SfAutoComplete ID="customerID" TItem="OrdersDetails" @bind-Value="@(Order.CustomerID)" TValue="string" DataSource="@GridData">
-                                <AutoCompleteFieldSettings Value="CustomerID"></AutoCompleteFieldSettings>
-                            </SfAutoComplete>
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group col-md-6">
-                            <label class="e-float-text e-label-top">Freight</label>
-                            <SfNumericTextBox ID="Freight" @bind-Value="@(Order.Freight)" TValue="double?"></SfNumericTextBox>
-                        </div>
-                        <div class="form-group col-md-6">
-                            <label class="e-float-text e-label-top">Order Date</label>
-                            <SfDatePicker ID="OrderDate" @bind-Value="@(Order.OrderDate)"></SfDatePicker>
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group col-md-6">
-                            <label class="e-float-text e-label-top">Ship Country</label>
-                            <SfDropDownList ID="ShipCountry" @bind-Value="@(Order.ShipCountry)" TItem="OrdersDetails" TValue="string" DataSource="@GridData">
-                                <DropDownListFieldSettings Value="ShipCountry" Text="ShipCountry"></DropDownListFieldSettings>
-                            </SfDropDownList>
-                        </div>
-                        <div class="form-group col-md-6">
-                            <label class="e-float-text e-label-top">Ship City</label>
-                            <SfDropDownList ID="ShipCity" @bind-Value="@(Order.ShipCity)" TItem="OrdersDetails" TValue="string" DataSource="@GridData">
-                                <DropDownListFieldSettings Value="ShipCity" Text="ShipCity"></DropDownListFieldSettings>
-                            </SfDropDownList>
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group col-md-12">
-                            <label class="e-float-text e-label-top">Ship Address</label>
-                            <SfTextBox ID="ShipAddress" @bind-Value="@(Order.ShipAddress)"></SfTextBox>
-                        </div>
-                    </div>
+                <div style="width:305px; height:380px;">
+                    <label>Order ID</label>
+                    <SfNumericTextBox ID="OrderID" @bind-Value="@(Order.OrderID)" Enabled="@((Order.OrderID == null) ? true : false)"></SfNumericTextBox>
+
+                    <label>Customer Name</label>
+                    <SfAutoComplete ID="customerID" TItem="OrdersDetails" @bind-Value="@(Order.CustomerID)" TValue="string" DataSource="@GridData">
+                        <AutoCompleteFieldSettings Value="CustomerID"></AutoCompleteFieldSettings>
+                    </SfAutoComplete>
+
+                    <label>Freight</label>
+                    <SfNumericTextBox ID="Freight" @bind-Value="@(Order.Freight)" TValue="double?"></SfNumericTextBox>
+
+                    <label>Order Date</label>
+                    <SfDatePicker ID="OrderDate" @bind-Value="@(Order.OrderDate)"></SfDatePicker>
+
+                    <label>Ship Country</label>
+                    <SfDropDownList ID="ShipCountry" @bind-Value="@(Order.ShipCountry)" TItem="OrdersDetails" TValue="string" DataSource="@GridData">
+                        <DropDownListFieldSettings Value="ShipCountry" Text="ShipCountry"></DropDownListFieldSettings>
+                    </SfDropDownList>
+
+                    <label>Ship City</label>
+                    <SfDropDownList ID="ShipCity" @bind-Value="@(Order.ShipCity)" TItem="OrdersDetails" TValue="string" DataSource="@GridData">
+                        <DropDownListFieldSettings Value="ShipCity" Text="ShipCity"></DropDownListFieldSettings>
+                    </SfDropDownList>
+
+                    <label>Ship Address</label>
+                    <SfTextBox ID="ShipAddress" @bind-Value="@(Order.ShipAddress)"></SfTextBox>
                 </div>
             }
         </Template>
@@ -214,7 +175,7 @@ The following sample code demonstrates DataGrid enabled with dialog template edi
     </GridColumns>
 </SfGrid>
 
-@code{
+@code {
     public List<OrdersDetails> GridData = new List<OrdersDetails>
 {
         new OrdersDetails() { OrderID = 10248, CustomerID = "VINET", Freight = 32.38, ShipCity = "Berlin", OrderDate = DateTime.Now.AddDays(-2), ShipName = "Vins et alcools Chevalier", ShipCountry = "Denmark", ShipAddress = "Kirchgasse 6" },
@@ -241,18 +202,6 @@ The following sample code demonstrates DataGrid enabled with dialog template edi
         public string ShipAddress { get; set; }
     }
 }
-
-<style>
-    .form-group.col-md-6 {
-        width: 200px;
-    }
-
-    label.e-float-text {
-        position: relative;
-        padding-left: 0;
-        top: 10%;
-    }
-</style>
 ```
 
 N> In the above sample code, the textbox rendered for **OrderID** column inside the dialog template is disabled using its `Enabled` property to prevent editing of the primary key column.
@@ -279,49 +228,34 @@ This is demonstrated in the following sample code, where if the `RequestType` ar
         <Template>
             @{
                 var Order = (context as OrdersDetails);
-                <div>
-                    <div class="form-row">
-                        <div class="form-group col-md-6">
-                            <label class="e-float-text e-label-top">Order ID</label>
-                            <SfNumericTextBox ID="OrderID" @bind-Value="@(Order.OrderID)" Enabled="@Enabled"></SfNumericTextBox>
-                        </div>
-                        <div class="form-group col-md-6">
-                            <label class="e-float-text e-label-top">Customer Name</label>
-                            <SfAutoComplete ID="CustomerID" TItem="OrdersDetails" @bind-Value="@(Order.CustomerID)" TValue="string" DataSource="@GridData">
-                                <AutoCompleteFieldSettings Value="CustomerID"></AutoCompleteFieldSettings>
-                            </SfAutoComplete>
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group col-md-6">
-                            <label class="e-float-text e-label-top">Freight</label>
-                            <SfNumericTextBox ID="Freight" @bind-Value="@(Order.Freight)" TValue="double"></SfNumericTextBox>
-                        </div>
-                        <div class="form-group col-md-6">
-                            <label class="e-float-text e-label-top">Order Date</label>
-                            <SfDatePicker ID="OrderDate" @bind-Value="@(Order.OrderDate)"></SfDatePicker>
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group col-md-6">
-                            <label class="e-float-text e-label-top">Ship Country</label>
-                            <SfDropDownList ID="ShipCountry" @bind-Value="@(Order.ShipCountry)" TItem="OrdersDetails" TValue="string" DataSource="@GridData">
-                                <DropDownListFieldSettings Value="ShipCountry" Text="ShipCountry"></DropDownListFieldSettings>
-                            </SfDropDownList>
-                        </div>
-                        <div class="form-group col-md-6">
-                            <label class="e-float-text e-label-top">Ship City</label>
-                            <SfDropDownList ID="ShipCity" @bind-Value="@(Order.ShipCity)" TItem="OrdersDetails" TValue="string" DataSource="@GridData">
-                                <DropDownListFieldSettings Value="ShipCity" Text="ShipCity"></DropDownListFieldSettings>
-                            </SfDropDownList>
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group col-md-12">
-                            <label class="e-float-text e-label-top">Ship Address</label>
-                            <SfTextBox ID="ShipAddress" @bind-Value="@(Order.ShipAddress)"></SfTextBox>
-                        </div>
-                    </div>
+                <div style="width:305px; height:380px;">
+                    <label>Order ID</label>
+                    <SfNumericTextBox ID="OrderID" @bind-Value="@(Order.OrderID)" Enabled="@Enabled"></SfNumericTextBox>
+
+                    <label>Customer Name</label>
+                    <SfAutoComplete ID="CustomerID" TItem="OrdersDetails" @bind-Value="@(Order.CustomerID)" TValue="string" DataSource="@GridData">
+                        <AutoCompleteFieldSettings Value="CustomerID"></AutoCompleteFieldSettings>
+                    </SfAutoComplete>
+
+
+                    <label>Freight</label>
+                    <SfNumericTextBox ID="Freight" @bind-Value="@(Order.Freight)" TValue="double"></SfNumericTextBox>
+
+                    <label>Order Date</label>
+                    <SfDatePicker ID="OrderDate" @bind-Value="@(Order.OrderDate)"></SfDatePicker>
+
+                    <label>Ship Country</label>
+                    <SfDropDownList ID="ShipCountry" @bind-Value="@(Order.ShipCountry)" TItem="OrdersDetails" TValue="string" DataSource="@GridData">
+                        <DropDownListFieldSettings Value="ShipCountry" Text="ShipCountry"></DropDownListFieldSettings>
+                    </SfDropDownList>
+
+                    <label>Ship City</label>
+                    <SfDropDownList ID="ShipCity" @bind-Value="@(Order.ShipCity)" TItem="OrdersDetails" TValue="string" DataSource="@GridData">
+                        <DropDownListFieldSettings Value="ShipCity" Text="ShipCity"></DropDownListFieldSettings>
+                    </SfDropDownList>
+
+                    <label>Ship Address</label>
+                    <SfTextBox ID="ShipAddress" @bind-Value="@(Order.ShipAddress)"></SfTextBox>
                 </div>
             }
         </Template>
@@ -335,7 +269,7 @@ This is demonstrated in the following sample code, where if the `RequestType` ar
     </GridColumns>
 </SfGrid>
 
-@code{
+@code {
     public bool Enabled = true;
 
     public List<OrdersDetails> GridData = new List<OrdersDetails>
@@ -377,18 +311,6 @@ This is demonstrated in the following sample code, where if the `RequestType` ar
         }
     }
 }
-
-<style>
-    .form-group.col-md-6 {
-        width: 200px;
-    }
-
-    label.e-float-text {
-        position: relative;
-        padding-left: 0;
-        top: 10%;
-    }
-</style>
 ```
 
 The following image represents the dialog template of the DataGrid component with disabled components,
@@ -412,50 +334,34 @@ This is demonstrated in the following sample code, where the first input element
         <Template>
             @{
                 var Order = (context as OrdersDetails);
-                <div>
-                    <div class="form-row">
-                        <div class="form-group col-md-6">
-                            <label class="e-float-text e-label-top">Order ID</label>
-                            <SfNumericTextBox ID="OrderID" @bind-Value="@(Order.OrderID)" Enabled="@((Order.OrderID == null) ? true : false)"></SfNumericTextBox>
-                        </div>
-                        <div class="form-group col-md-6">
-                            <label class="e-float-text e-label-top">Customer Name</label>
-                            <SfAutoComplete ID="customerID" TItem="OrdersDetails" @bind-Value="@(Order.CustomerID)" TValue="string" DataSource="@GridData">
-                                <AutoCompleteFieldSettings Value="CustomerID"></AutoCompleteFieldSettings>
-                                <AutoCompleteEvents TValue="string" TItem="OrdersDetails" DataBound="FocusAutoComplete"></AutoCompleteEvents>
-                            </SfAutoComplete>
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group col-md-6">
-                            <label class="e-float-text e-label-top">Freight</label>
-                            <SfNumericTextBox ID="Freight" @bind-Value="@(Order.Freight)" TValue="double?"></SfNumericTextBox>
-                        </div>
-                        <div class="form-group col-md-6">
-                            <label class="e-float-text e-label-top">Order Date</label>
-                            <SfDatePicker ID="OrderDate" @bind-Value="@(Order.OrderDate)"></SfDatePicker>
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group col-md-6">
-                            <label class="e-float-text e-label-top">Ship Country</label>
-                            <SfDropDownList ID="ShipCountry" @bind-Value="@(Order.ShipCountry)" TItem="OrdersDetails" TValue="string" DataSource="@GridData">
-                                <DropDownListFieldSettings Value="ShipCountry" Text="ShipCountry"></DropDownListFieldSettings>
-                            </SfDropDownList>
-                        </div>
-                        <div class="form-group col-md-6">
-                            <label class="e-float-text e-label-top">Ship City</label>
-                            <SfDropDownList ID="ShipCity" @bind-Value="@(Order.ShipCity)" TItem="OrdersDetails" TValue="string" DataSource="@GridData">
-                                <DropDownListFieldSettings Value="ShipCity" Text="ShipCity"></DropDownListFieldSettings>
-                            </SfDropDownList>
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group col-md-12">
-                            <label class="e-float-text e-label-top">Ship Address</label>
-                            <SfTextBox ID="ShipAddress" @bind-Value="@(Order.ShipAddress)"></SfTextBox>
-                        </div>
-                    </div>
+                <div style="width:305px; height:380px;">
+                    <label>Order ID</label>
+                    <SfNumericTextBox ID="OrderID" @bind-Value="@(Order.OrderID)" Enabled="@((Order.OrderID == null) ? true : false)"></SfNumericTextBox>
+
+                    <label>Customer Name</label>
+                    <SfAutoComplete ID="customerID" @ref="AutoComplete" TItem="OrdersDetails" @bind-Value="@(Order.CustomerID)" TValue="string" DataSource="@GridData">
+                        <AutoCompleteFieldSettings Value="CustomerID"></AutoCompleteFieldSettings>
+                        <AutoCompleteEvents TValue="string" TItem="OrdersDetails" DataBound="FocusAutoComplete"></AutoCompleteEvents>
+                    </SfAutoComplete>
+
+                    <label>Freight</label>
+                    <SfNumericTextBox ID="Freight" @bind-Value="@(Order.Freight)" TValue="double?"></SfNumericTextBox>
+
+                    <label>Order Date</label>
+                    <SfDatePicker ID="OrderDate" @bind-Value="@(Order.OrderDate)"></SfDatePicker>
+
+                    <label>Ship Country</label>
+                    <SfDropDownList ID="ShipCountry" @bind-Value="@(Order.ShipCountry)" TItem="OrdersDetails" TValue="string" DataSource="@GridData">
+                        <DropDownListFieldSettings Value="ShipCountry" Text="ShipCountry"></DropDownListFieldSettings>
+                    </SfDropDownList>
+
+                    <label>Ship City</label>
+                    <SfDropDownList ID="ShipCity" @bind-Value="@(Order.ShipCity)" TItem="OrdersDetails" TValue="string" DataSource="@GridData">
+                        <DropDownListFieldSettings Value="ShipCity" Text="ShipCity"></DropDownListFieldSettings>
+                    </SfDropDownList>
+
+                    <label>Ship Address</label>
+                    <SfTextBox ID="ShipAddress" @bind-Value="@(Order.ShipAddress)"></SfTextBox>
                 </div>
             }
         </Template>
@@ -469,7 +375,7 @@ This is demonstrated in the following sample code, where the first input element
     </GridColumns>
 </SfGrid>
 
-@code{
+@code {
     SfAutoComplete<string, OrdersDetails> AutoComplete { get; set; }
     public List<OrdersDetails> GridData = new List<OrdersDetails>
     {
@@ -496,22 +402,11 @@ This is demonstrated in the following sample code, where the first input element
         public string ShipCountry { get; set; }
         public string ShipAddress { get; set; }
     }
-    private async Task FocusAutoComplete() {
-        await this.AutoComplete.FocusIn();
+    private async Task FocusAutoComplete()
+    {
+        await this.AutoComplete.FocusAsync();
     }
 }
-
-<style>
-    .form-group.col-md-6 {
-        width: 200px;
-    }
-
-    label.e-float-text {
-        position: relative;
-        padding-left: 0;
-        top: 10%;
-    }
-</style>
 ```
 
 The following image represents the AutoComplete component in focused state inside the dialog template of the DataGrid component,

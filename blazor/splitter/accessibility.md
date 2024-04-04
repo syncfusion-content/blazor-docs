@@ -9,9 +9,9 @@ documentation: ug
 
 # Accessibility in Blazor Splitter Component
 
-The Splitter component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
+The [Blazor Splitter](https://www.syncfusion.com/blazor-components/blazor-splitter) component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 
-The accessibility compliance for the Splitter component is outlined below.
+The accessibility compliance for the Blazor Splitter component is outlined below.
 
 | Accessibility Criteria | Compatibility |
 | -- | -- |
@@ -22,7 +22,6 @@ The accessibility compliance for the Splitter component is outlined below.
 | [Color Contrast](../common/accessibility#color-contrast) | <img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> |
 | [Mobile Device Support](../common/accessibility#mobile-device-support) | <img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> |
 | [Keyboard Navigation Support](../common/accessibility#keyboard-navigation-support) | <img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> |
-| [Accessibility Checker Validation](../common/accessibility#ensuring-accessibility) | <img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> |
 | [Axe-core Accessibility Validation](../common/accessibility#ensuring-accessibility) | <img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> |
 
 <style>
@@ -40,7 +39,7 @@ The accessibility compliance for the Splitter component is outlined below.
 
 ## Keyboard interaction
 
-The following key shortcuts can be used to access the Splitter without interruptions:
+The following key shortcuts can be used to access the Blazor Splitter without interruptions:
 
 | **Keyboard shortcuts** | **Actions** |
 | --- | --- |
@@ -54,11 +53,9 @@ The following key shortcuts can be used to access the Splitter without interrupt
 
 ## Ensuring accessibility
 
-The Splitter component's accessibility levels are ensured through an [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) software tools during automated testing.
+The Blazor Splitter component's accessibility levels are ensured through an [axe-core](https://www.npmjs.com/package/axe-core) software tool during automated testing.
 
 The accessibility compliance of the Splitter component is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/splitter) in a new window to evaluate the accessibility of the Splitter component with accessibility tools.
-
-{% previewsample "https://blazor.syncfusion.com/accessibility/splitter" %}
 
 ## See also
 

@@ -39,6 +39,8 @@ The following sample code demonstrates data annotations implemented in the DataG
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor.DropDowns
+@using System.Reflection
 @using System.ComponentModel.DataAnnotations;
 
 <SfGrid TValue="Order" DataSource="@Orders" Height="315" Width="500" AllowPaging="true" AllowFiltering="true" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Update", "Cancel" })">
