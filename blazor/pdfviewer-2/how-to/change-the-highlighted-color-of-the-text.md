@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Change the highlight color of the text in Blazor SfPdfViewer Component | Syncfusion
+title: Change highlight color text in Blazor PDFViewer Component | Syncfusion
 description: Learn here all about how to change the highlighted color of the text in Syncfusion Blazor SfPdfViewer component.
 platform: Blazor
 control: SfPdfViewer
