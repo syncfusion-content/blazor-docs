@@ -15,10 +15,10 @@ The accessibility compliance for the Blazor Speed Dial component is outlined bel
 
 | Accessibility Criteria | Compatibility |
 | -- | -- |
-| [WCAG 2.2 Support](../common/accessibility#accessibility-standards) ||
-| [Section 508 Support](../common/accessibility#accessibility-standards) ||
+| [WCAG 2.2 Support](../common/accessibility#accessibility-standards) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
+| [Section 508 Support](../common/accessibility#accessibility-standards) |<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
 | [Screen Reader Support](../common/accessibility#screen-reader-support) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
-| [Right-To-Left Support](../common/accessibility#right-to-left-support) ||
+| [Right-To-Left Support](../common/accessibility#right-to-left-support) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
 | [Color Contrast](../common/accessibility#color-contrast) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
 | [Mobile Device Support](../common/accessibility#mobile-device-support) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
 | [Keyboard Navigation Support](../common/accessibility#keyboard-navigation-support) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
@@ -37,33 +37,34 @@ The accessibility compliance for the Blazor Speed Dial component is outlined bel
 
 <div><img src="https://cdn.syncfusion.com/content/images/documentation/not-supported.png" alt="No"> - The component does not meet the requirement.</div>
 
-## Keyboard interaction
-
-The Blazor Speed Dial component followed the keyboard interaction guideline, making it easy for people who use assistive technologies (AT) and those who completely rely on keyboard navigation. The following keyboard shortcuts are supported by the Blazor Speed Dial component.
-
-| Keyboard shortcuts | Actions |
-|------------|-------------------|
-| <kbd>Enter</kbd> | Open/close the menu. If a SpeedDial item is focused, should triggers the clicked event for the item. |
-| <kbd>ArrowUp</kbd> | Navigates up or to the previous menu item. |
-| <kbd>ArrowLeft</kbd> | Navigates left or to the previous menu item. |
-| <kbd>ArrowDown-</kbd> | Navigates down or to the previous menu item. |
-| <kbd>ArrowRight</kbd> | Navigates right or to the previous menu item. |
-| <kbd>Home</kbd> | Navigates to the first menu item. |
-| <kbd>End</kbd> | Navigates to the last menu item. |
-| <kbd>Esc</kbd> | Closes the menu. |
-
 ## WAI-ARIA attributes
 
-The Blazor Speed Dial component followed the WAI-ARIA patterns to meet the accessibility. The following ARIA attributes are used in the Blazor Speed Dial component:
+The Blazor Speed Dial component followed the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/menubar/) patterns to meet the accessibility. The following ARIA attributes are used in the Blazor Speed Dial component:
 
-| Properties | Functionality |
+| Attributes | Purpose  |
 | ------------ | ----------------------- |
-| `role` | This attribute is added to the input element to describe the actual role. |
-| `aria-label` | Attribute provides the text label with some default description for the SpeedDial and its items. |
-| `aria-expanded` | It indicates whether the SpeedDial current state is expanded or collapsed. |
-| `aria-haspopup` | It indicates whether the SpeedDial has popup items or not. |
-| `aria-controls` | Attribute is set to the SpeedDial button and it points to the corresponding content. |
-| `aria-disabled` | It indicates the disabled state of the SpeedDial and its items. |
+| `role=menu` | Specifies that the Speed Dial item has a submenu.|
+| `role=menuitem` | Indicates an actionable item within the Speed Dial submenu. |
+| `aria-label` | Indicates the Speed Dial Popup item text. |
+| `aria-expanded` | It indicates whether the Speed Dial current state is expanded or collapsed. |
+| `aria-haspopup` | It indicates whether the Speed Dial has popup items or not. |
+| `aria-controls` | Attribute is set to the Speed Dial button and it points to the corresponding content. |
+| `aria-disabled` | Indicates the state of menu item whether it is disabled. |
+
+## Keyboard interaction
+
+The Blazor Speed Dial component followed the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/menubar/#keyboardinteraction) guideline, making it easy for people who use assistive technologies (AT) and those who completely rely on keyboard navigation. The following keyboard shortcuts are supported by the Blazor Speed Dial component.
+
+| **Press** | **To do this** |
+|------------|-------------------|
+| <kbd>Enter</kbd> | Open/close the menu. |
+| <kbd>Up-arrow </kbd> | Focuses the next menu item. |
+| <kbd>Left-Arrow</kbd> | Focuses the previous menu item. |
+| <kbd>Down-Arrow</kbd> | Focuses the previous menu item. |
+| <kbd>Right-Arrow</kbd> | Focuses the next menu item. |
+| <kbd>Home</kbd> | Focuses the first menu item. |
+| <kbd>End</kbd> | Focuses the last menu item. |
+| <kbd>Esc</kbd> | Closes the menu. |
 
 ## Ensuring accessibility
 

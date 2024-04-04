@@ -15,10 +15,10 @@ The accessibility compliance for the Blazor Rating component is outlined below.
 
 | Accessibility Criteria | Compatibility |
 | -- | -- |
-| [WCAG 2.2 Support](../common/accessibility#accessibility-standards) ||
-| [Section 508 Support](../common/accessibility#accessibility-standards) ||
+| [WCAG 2.2 Support](../common/accessibility#accessibility-standards) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
+| [Section 508 Support](../common/accessibility#accessibility-standards) |<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
 | [Screen Reader Support](../common/accessibility#screen-reader-support) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
-| [Right-To-Left Support](../common/accessibility#right-to-left-support) ||
+| [Right-To-Left Support](../common/accessibility#right-to-left-support) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
 | [Color Contrast](../common/accessibility#color-contrast) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
 | [Mobile Device Support](../common/accessibility#mobile-device-support) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
 | [Keyboard Navigation Support](../common/accessibility#keyboard-navigation-support) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
@@ -37,29 +37,31 @@ The accessibility compliance for the Blazor Rating component is outlined below.
 
 <div><img src="https://cdn.syncfusion.com/content/images/documentation/not-supported.png" alt="No"> - The component does not meet the requirement.</div>
 
-## Keyboard interaction
+## WAI-ARIA attributes
 
-The Blazor Rating component followed the keyboard interaction guideline, making it easy for people who use assistive technologies (AT) and those who completely rely on keyboard navigation. The following keyboard shortcuts are supported by the Blazor Rating component.
+The Blazor Rating component followed the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/slider/) patterns to meet the accessibility. The following ARIA attributes are used in the Blazor Rating component:
 
-| Keyboard shortcuts | Actions |
-|------------|-------------------|
-| <kbd>Space</kbd> | If a **Reset Button** is focused, resets the value to `Min` value. |
-| <kbd>ArrowUp</kbd> | Increases the value. |
-| <kbd>ArrowLeft</kbd> | Decreases the value and in RTL mode, increases the value. |
-| <kbd>ArrowDown</kbd> | Decreases the value. |
-| <kbd>ArrowRight</kbd> | Increases the value and in RTL mode, decreases the value.  |
-
-## ARIA attributes
-
-The Blazor Rating component followed the WAI-ARIA patterns to meet the accessibility. The following ARIA attributes are used in the Blazor Rating component:
-
-| Properties | Functionality |
+| Attributes | Purpose |
 | ------------ | ----------------------- |
-| `role` | This attribute is added to the div element to describe the actual role. |
-| `aria-label` | Attribute provides the text label with some default description for the Rating and its items. |
+| `role=slider` | It defines an input where the user selects a value from within a specified range. |
+| `role=button` | Specifies that the reset is a clickable element that resets the rating to its minimum value. |
+| `aria-label` | Provides an accessible name for Rating. |
 | `aria-valuemin` | It defines the minimum value of rating. |
 | `aria-valuemax` | It defines the maximum value of rating. |
 | `aria-valuenow` | It defines the current value of rating. |
+| `aria-hidden` | It specifies whether the reset button is interactive or not. |
+
+## Keyboard interaction
+
+The Blazor Rating component followed the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/slider/#keyboardinteraction) guideline, making it easy for people who use assistive technologies (AT) and those who completely rely on keyboard navigation. The following keyboard shortcuts are supported by the Blazor Rating component.
+
+| Keyboard shortcuts | Actions |
+|------------|-------------------|
+| <kbd>Space</kbd> | When **Reset Button** is focused, resets to `min` value. |
+| <kbd>Arrow Up</kbd> | Increases the value. |
+| <kbd>Arrow Left</kbd> | Decreases the value; in RTL mode, increases the value. |
+| <kbd>Arrow Down</kbd> | Decreases the value. |
+| <kbd>Arrow Right</kbd> | Increases the value; in RTL mode, decreases the value. |
 
 ## Ensuring accessibility
 
