@@ -730,6 +730,7 @@ This section describes step by step process how to use Dapper to retrieve data f
         {
             IEnumerable<Order> DataSource = await OrderService.GetOrdersAsync();
             int TotalRecordsCount = DataSource.Cast<Order>().Count();
+            //Here RequiresCount is passed from the control side itself, where ever the on-demand data fetching is needed then the RequiresCount is set as true in component side itself.
             return DataManagerRequest.RequiresCounts ? new DataResult() { Result = DataSource, Count = TotalRecordsCount } : (object)DataSource;
         }
     }
@@ -784,6 +785,7 @@ public class CustomAdaptor : DataAdaptor
             //Add custom logic here if needed and remove above method
         }
         int TotalRecordsCount = DataSource.Cast<Order>().Count();
+        //Here RequiresCount is passed from the control side itself, where ever the on-demand data fetching is needed then the RequiresCount is set as true in component side itself.
         return DataManagerRequest.RequiresCounts ? new DataResult() { Result = DataSource, Count = TotalRecordsCount } : (object)DataSource;
     }
 }
@@ -811,6 +813,7 @@ public class CustomAdaptor : DataAdaptor
             //Add custom logic here if needed and remove above method
         }
         int TotalRecordsCount = DataSource.Cast<Order>().Count();
+        //Here RequiresCount is passed from the control side itself, where ever the on-demand data fetching is needed then the RequiresCount is set as true in component side itself.
         return DataManagerRequest.RequiresCounts ? new DataResult() { Result = DataSource, Count = TotalRecordsCount } : (object)DataSource;
     }
 }
@@ -838,6 +841,7 @@ public class CustomAdaptor : DataAdaptor
             //Add custom logic here if needed and remove above method
         }
         int TotalRecordsCount = DataSource.Cast<Order>().Count();
+        //Here RequiresCount is passed from the control side itself, where ever the on-demand data fetching is needed then the RequiresCount is set as true in component side itself.
         return DataManagerRequest.RequiresCounts ? new DataResult() { Result = DataSource, Count = TotalRecordsCount } : (object)DataSource;
     }
 }
@@ -865,6 +869,7 @@ public class CustomAdaptor : DataAdaptor
             Aggregates = DataUtil.PerformAggregation(DataSource, DataManagerRequest.Aggregates);
             //Add custom logic here if needed and remove above method
         }
+        //Here RequiresCount is passed from the control side itself, where ever the on-demand data fetching is needed then the RequiresCount is set as true in component side itself.
         return DataManagerRequest.RequiresCounts ? new DataResult() { Result = DataSource, Count = TotalRecordsCount, Aggregates = Aggregates } : (object)DataSource;
     }
 }
@@ -896,10 +901,10 @@ public class CustomAdaptor : DataAdaptor
         }
         if (DataManagerRequest.Take != 0)
         {
-            // Taking
             DataSource = DataOperations.PerformTake(DataSource, DataManagerRequest.Take);
             //Add custom logic here if needed and remove above method
         }
+        //Here RequiresCount is passed from the control side itself, where ever the on-demand data fetching is needed then the RequiresCount is set as true in component side itself.
         return DataManagerRequest.RequiresCounts ? new DataResult() { Result = DataSource, Count = TotalRecordsCount } : (object)DataSource;
     }
 }
@@ -935,6 +940,7 @@ public class CustomAdaptor : DataAdaptor
             DataObject.Count = TotalRecordsCount;
             return DataManagerRequest.RequiresCounts ? DataObject : (object)ResultData;
         }
+        //Here RequiresCount is passed from the control side itself, where ever the on-demand data fetching is needed then the RequiresCount is set as true in component side itself.
         return DataManagerRequest.RequiresCounts ? new DataResult() { Result = DataSource, Count = TotalRecordsCount } : (object)DataSource;
     }
 }
@@ -976,6 +982,7 @@ public class CustomAdaptor : DataAdaptor
 
             return DataManagerRequest.RequiresCounts ? DataObject : (object)DataSource;
         }
+        //Here RequiresCount is passed from the control side itself, where ever the on-demand data fetching is needed then the RequiresCount is set as true in component side itself.
         return DataManagerRequest.RequiresCounts ? new DataResult() { Result = DataSource, Count = TotalRecordsCount } : (object)DataSource;
     }
 }

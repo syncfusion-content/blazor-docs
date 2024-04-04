@@ -9,7 +9,7 @@ documentation: ug
 
 # Connecting SQLite Server data in to Blazor DataGrid Component
 
-This section describes how to connect and retrieve data from a SQLite Server database using [System.Data.SqlClient](https://www.nuget.org/packages/System.Data.SqlClient/4.8.6?_src=template) and bind it to the Blazor DataGrid component.
+This section describes how to connect and retrieve data from a SQLite Server database using [Microsoft.Data.Sqlite](https://www.nuget.org/packages/Microsoft.Data.Sqlite/) and bind it to the Blazor DataGrid component.
 
 SQLite Server database can be bound to the Blazor DataGrid component in different ways (i.e.) using [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_DataSource) property, [CustomAdaptor](https://blazor.syncfusion.com/documentation/datagrid/custom-binding) feature and remote data binding using various adaptors. In this documentation, two approaches will be examined to connect a SQLite Server database to a Blazor DataGrid component. Both the approaches have capability to handle data and CRUD operations with built-in methods as well as can be customized as per your own.
 
@@ -741,6 +741,7 @@ This section describes step by step process how to retrieve data from a SQLite S
         {
             IEnumerable<Order> DataSource = await OrderService.GetOrdersAsync();
             int TotalRecordsCount = DataSource.Cast<Order>().Count();
+            //Here RequiresCount is passed from the control side itself, where ever the on-demand data fetching is needed then the RequiresCount is set as true in component side itself.
             return DataManagerRequest.RequiresCounts ? new DataResult() { Result = DataSource, Count = TotalRecordsCount } : (object)DataSource;
         }
     }
@@ -810,6 +811,7 @@ public class CustomAdaptor : DataAdaptor
             //Add custom logic here if needed and remove above method
         }
         int TotalRecordsCount = DataSource.Cast<Order>().Count();
+        //Here RequiresCount is passed from the control side itself, where ever the on-demand data fetching is needed then the RequiresCount is set as true in component side itself.
         return DataManagerRequest.RequiresCounts ? new DataResult() { Result = DataSource, Count = TotalRecordsCount } : (object)DataSource;
     }
 }
@@ -837,6 +839,7 @@ public class CustomAdaptor : DataAdaptor
             //Add custom logic here if needed and remove above method
         }
         int TotalRecordsCount = DataSource.Cast<Order>().Count();
+        //Here RequiresCount is passed from the control side itself, where ever the on-demand data fetching is needed then the RequiresCount is set as true in component side itself.
         return DataManagerRequest.RequiresCounts ? new DataResult() { Result = DataSource, Count = TotalRecordsCount } : (object)DataSource;
     }
 }
@@ -864,6 +867,7 @@ public class CustomAdaptor : DataAdaptor
             //Add custom logic here if needed and remove above method
         }
         int TotalRecordsCount = DataSource.Cast<Order>().Count();
+        //Here RequiresCount is passed from the control side itself, where ever the on-demand data fetching is needed then the RequiresCount is set as true in component side itself.
         return DataManagerRequest.RequiresCounts ? new DataResult() { Result = DataSource, Count = TotalRecordsCount } : (object)DataSource;
     }
 }
@@ -891,6 +895,7 @@ public class CustomAdaptor : DataAdaptor
             Aggregates = DataUtil.PerformAggregation(DataSource, DataManagerRequest.Aggregates);
             //Add custom logic here if needed and remove above method
         }
+        //Here RequiresCount is passed from the control side itself, where ever the on-demand data fetching is needed then the RequiresCount is set as true in component side itself.
         return DataManagerRequest.RequiresCounts ? new DataResult() { Result = DataSource, Count = TotalRecordsCount, Aggregates = Aggregates } : (object)DataSource;
     }
 }
@@ -922,10 +927,11 @@ public class CustomAdaptor : DataAdaptor
         }
         if (DataManagerRequest.Take != 0)
         {
-            // Taking
+            
             DataSource = DataOperations.PerformTake(DataSource, DataManagerRequest.Take);
             //Add custom logic here if needed and remove above method
         }
+        //Here RequiresCount is passed from the control side itself, where ever the on-demand data fetching is needed then the RequiresCount is set as true in component side itself.
         return DataManagerRequest.RequiresCounts ? new DataResult() { Result = DataSource, Count = TotalRecordsCount } : (object)DataSource;
     }
 }
@@ -961,6 +967,7 @@ public class CustomAdaptor : DataAdaptor
             DataObject.Count = TotalRecordsCount;
             return DataManagerRequest.RequiresCounts ? DataObject : (object)ResultData;
         }
+        //Here RequiresCount is passed from the control side itself, where ever the on-demand data fetching is needed then the RequiresCount is set as true in component side itself.
         return DataManagerRequest.RequiresCounts ? new DataResult() { Result = DataSource, Count = TotalRecordsCount } : (object)DataSource;
     }
 }
@@ -1002,6 +1009,7 @@ public class CustomAdaptor : DataAdaptor
 
             return DataManagerRequest.RequiresCounts ? DataObject : (object)DataSource;
         }
+        //Here RequiresCount is passed from the control side itself, where ever the on-demand data fetching is needed then the RequiresCount is set as true in component side itself.
         return DataManagerRequest.RequiresCounts ? new DataResult() { Result = DataSource, Count = TotalRecordsCount } : (object)DataSource;
     }
 }
