@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with Syncfusion AutoComplete in Blazor Web App
-description: Checkout and learn about getting started with Syncfusion Essential Blazor AutoComplete component in Blazor Web App, it's elements and more.
+description: Checkout and learn about the documentation for getting started with Blazor AutoComplete Component in Blazor Web App.
 platform: Blazor
 component: AutoComplete
 documentation: ug
