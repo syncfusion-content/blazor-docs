@@ -823,13 +823,10 @@ The following example demonstrates how to clear the searched records using an ex
     {
         Orders = OrderData.GetAllRecords();
     }  
-    public void clearSearchBtnHandler()
+    public async Task clearSearchBtnHandler()
     {
-#pragma warning disable BL0005
-        this.DefaultGrid.SearchSettings.Key = "";
-#pragma warning restore BL0005
-        DefaultGrid.Refresh();
-    }     
+        await DefaultGrid.SearchAsync("");
+    }    
 }
 {% endhighlight %}
 {% highlight c# tabtitle="OrderData.cs" %}
@@ -879,7 +876,7 @@ The following example demonstrates how to clear the searched records using an ex
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LjhUMXKtKjyEzLsl?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZVzjpXoqkaJnBKx?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 > You can also clear the searched records by using the clear icon within the search input field.
 
