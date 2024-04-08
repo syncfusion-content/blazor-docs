@@ -19,7 +19,6 @@ Syncfusion Blazor UI components are supported by all modern web browsers on both
 |    Mozilla Firefox    |    Latest Version  |
 |    Microsoft Edge    |    Latest Version  |
 |    Apple Safari, including iOS    |    Latest Version  |
-|    Opera    |    Latest Version  |
 
 ## Blazor WebAssembly
 
@@ -29,7 +28,6 @@ Syncfusion Blazor UI components are supported by all modern web browsers on both
 |    Mozilla Firefox    |    Latest Version  |
 |    Microsoft Edge    |    Latest Version  |
 |    Apple Safari, including iOS    |    Latest Version  |
-|    Opera    |    Latest Version  |
 |    Microsoft Internet Explorer    |    Not Supported  |
 
 ## Blazor Server Side
@@ -40,7 +38,6 @@ Syncfusion Blazor UI components are supported by all modern web browsers on both
 |    Mozilla Firefox    |    Latest Version  |
 |    Microsoft Edge    |    Latest Version  |
 |    Apple Safari, including iOS    |    Latest Version  |
-|    Opera    |    Latest Version  |
 |    Microsoft Internet Explorer    |    11  |
 
 N> Blazor Server supports Microsoft Internet Explorer 11 with sufficient polyfills when using [.NET Core 3.1 / lower versions](https://learn.microsoft.com/en-us/aspnet/core/blazor/supported-platforms?view=aspnetcore-3.1). Refer this [documentation](https://blazor.syncfusion.com/documentation/common/how-to/render-blazor-server-app-in-ie) to add the polyfills in Blazor server application.

@@ -9,11 +9,11 @@ documentation: ug
 
 # Accessibility in Blazor AutoComplete Component
 
-The [AutoComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfAutoComplete-2.html) component has been designed, keeping in mind the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/) specifications, and applies the `WAI-ARIA` roles, states, and properties along with `keyboard support`. This component is characterized by complete keyboard interaction support and ARIA accessibility support that makes it easy for people who use assistive technologies (AT) or those who completely rely on keyboard navigation.
+The [Blazor AutoComplete](https://www.syncfusion.com/blazor-components/blazor-autocomplete) component has been designed, keeping in mind the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/) specifications, and applies the `WAI-ARIA` roles, states, and properties along with `keyboard support`. This component is characterized by complete keyboard interaction support and ARIA accessibility support that makes it easy for people who use assistive technologies (AT) or those who completely rely on keyboard navigation.
 
-The AutoComplete component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
+The Blazor AutoComplete component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 
-The accessibility compliance for the AutoComplete component is outlined below.
+The accessibility compliance for the Blazor AutoComplete component is outlined below.
 
 | Accessibility Criteria | Compatibility |
 | -- | -- |
@@ -24,7 +24,6 @@ The accessibility compliance for the AutoComplete component is outlined below.
 | [Color Contrast](../common/accessibility#color-contrast) | <img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> |
 | [Mobile Device Support](../common/accessibility#mobile-device-support) | <img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> |
 | [Keyboard Navigation Support](../common/accessibility#keyboard-navigation-support) | <img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> |
-| [Accessibility Checker Validation](../common/accessibility#ensuring-accessibility) | <img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> |
 | [Axe-core Accessibility Validation](../common/accessibility#ensuring-accessibility) | <img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> |
 
 <style>
@@ -42,18 +41,18 @@ The accessibility compliance for the AutoComplete component is outlined below.
 
 ## WAI-ARIA attributes
 
-The AutoComplete component uses the `combobox` role and each list item has an `option` role. The following `ARIA Attributes` denotes the AutoComplete state:
+The Blazor AutoComplete component uses the `combobox` role and each list item has an `option` role. The following `ARIA Attributes` denotes the AutoComplete state:
 
 | **Property** | **Functionalities** |
 | --- | --- |
-| aria-haspopup | Indicates whether the AutoComplete input element has a suggestion list or not. |
-| aria-expanded | Indicates whether the suggestion list has expanded or not. |
-| aria-selected | Indicates the selected option from the list. |
-| aria-readonly | Indicates the readonly state of the AutoComplete element. |
-| aria-disabled | Indicates whether the AutoComplete component is in disabled state or not.|
-| aria-activedescendent | This attribute holds the ID of the active list item to focus its descendant child element. |
-| aria-owns | This attribute contains the ID of the suggestion list to indicate popup as a child element. |
-| aria-autocomplete | This attribute contains the ‘both’ to a list of options shows and the currently selected suggestion also shows inline. |
+| `aria-haspopup`| Indicates whether the AutoComplete input element has a suggestion list or not. |
+| `aria-expanded` | Indicates whether the suggestion list has expanded or not. |
+| `aria-selected` | Indicates the selected option from the list. |
+| `aria-readonly` | Indicates the readonly state of the AutoComplete element. |
+| `aria-disabled` | Indicates whether the AutoComplete component is in disabled state or not.|
+| `aria-activedescendent` | This attribute holds the ID of the active list item to focus its descendant child element. |
+| `aria-owns` | This attribute contains the ID of the suggestion list to indicate popup as a child element. |
+| `aria-autocomplete` | This attribute contains the ‘both’ to a list of options shows and the currently selected suggestion also shows inline. |
 
 ## Keyboard interaction
 
@@ -61,22 +60,28 @@ You can use the following key shortcuts to access the AutoComplete without inter
 
 | **Keyboard shortcuts** | **Actions** |
 | --- | --- |
-| <kbd>Arrow Down</kbd> | In popup hidden state, opens the suggestion list. In popup open state, selects the first item when no item selected else selects the item next to the currently selected item. |
-| <kbd>Arrow Up</kbd> | In popup hidden state, opens the suggestion list. In popup open state, selects the last item when no item selected else selects the item previous to the currently selected one. |
-| <kbd>Page Down</kbd> | Scrolls down to the next page and selects the first item when popup list opens. |
-| <kbd>Page Up</kbd> | Scrolls up to previous page and selects the first item when popup list opens. |
-| <kbd>Enter</kbd> | Selects the focused item and set to AutoComplete component. |
-| <kbd>Tab</kbd> | Focuses the next tab indexed element when the popup is closed. Otherwise, closes the popup list and remains the focus in component if it is in open state. |
-| <kbd>Shift + tab </kbd> | Focuses the previous tab indexed element when the popup is closed.  Otherwise, closes the popup list and remains the focus in component if it is in open state. |
-| <kbd>Alt + Down</kbd> | Opens the popup list. |
-| <kbd>Alt + Up</kbd> | In popup hidden state, opens the popup list. In popup open state, closes the popup list. |
-| <kbd>Esc(Escape)</kbd> | Closes the popup list when it is in open state then removes the selection. |
-| <kbd>Home</kbd> | Moves the cursor before the first character in input. |
-| <kbd>End</kbd> | Moves the cursor next to the last character in input. |
+|**Focus**|
+|<kbd>Alt + J</kbd> | Focuses on the first component of the sample. |
+|**Input Navigation**|
+| <kbd>Alt + Down arrow</kbd> | Opens the popup list. |
+| <kbd>Alt + Up arrow</kbd> | Closes the popup list. |
+| <kbd>Tab</kbd> | Focuses on the next TabIndex element on the page when the popup is closed. Otherwise, closes the popup list and remains the focus of the component. |
+| <kbd>Shift + tab </kbd> | Focuses on the previous TabIndex element on the page when the popup is closed. Otherwise, closes the popup list and remains the focus of the component. |
+|**Selection**|
+| <kbd>Enter</kbd> | Selects the focused item, and when it is in open state, the popup list closes. Otherwise, toggles the popup list. |
+|**Popup Navigation**|
+| <kbd>Esc(Escape)</kbd> | Closes the popup list when it is in an open state and the currently selected item remains the same. |
+| <kbd>Down arrow</kbd> | Selects the first item in the AutoComplete when no item is selected. Otherwise, selects the item next to the currently selected item. |
+| <kbd>Up arrow</kbd> | Selects the item previous to the currently selected one. |
+| <kbd>Page down</kbd> | Scrolls down to the next page and selects the first item when the popup list opens. |
+| <kbd>Page up</kbd> | Scrolls up to the previous page and selects the first item when the popup list opens. |
+| <kbd>Home</kbd> | Selects the first item. |
+| <kbd>End</kbd> | Selects the last item. |
 
 N> In the following sample, disable the AutoComplete component using <kbd>t</kbd> keys.
 
-```cshtml
+{% highlight cshtml %}
+
 @using Syncfusion.Blazor.DropDowns
 
 <SfAutoComplete TValue="string" TItem="Country" @ref="AutoObj" Placeholder="Select a country" Enabled="@enable" @onkeypress="@(e => KeyPressed(e))" DataSource="@LocalData">
@@ -115,14 +120,14 @@ N> In the following sample, disable the AutoComplete component using <kbd>t</kbd
         }
     }
 }
-```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VtLUCrMzKHwTMpln?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-![Accessibility in Blazor AutoComplete](./images/blazor-autocomplete-accessibility.png)
+{% endhighlight %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VtLUCrMzKHwTMpln?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Ensuring accessibility
 
-The AutoComplete component's accessibility levels are ensured through an [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) software tools during automated testing.
+The Blazor AutoComplete component's accessibility levels are ensured through an [axe-core](https://www.npmjs.com/package/axe-core) software tool during automated testing.
 
 The accessibility compliance of the AutoComplete component is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/autocomplete) in a new window to evaluate the accessibility of the AutoComplete component with accessibility tools.
 
