@@ -13,19 +13,19 @@ In [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gant
 
 ## Binding segments data source
 
-To enable the split task feature using the [GanttSegmentFields](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttSegmentFields-2.html) in the [SfGantt](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html) chart. The split task based on segment [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttSegmentFields-2.html#Syncfusion_Blazor_Gantt_GanttSegmentFields_2_DataSource),The data source collection is split based on task ID, and each individual segment record must contain unique ID, task ID, start date, end date, or duration values. 
+To enable the split task feature using the [GanttSegmentFields](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttSegmentFields-2.html) in the [SfGantt](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html) chart. In your Gantt chart, the split task functionality relies on the segment [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttSegmentFields-2.html#Syncfusion_Blazor_Gantt_GanttSegmentFields_2_DataSource), specified in the `GanttSegmentFields` component. The organization of the data source collection is based on task ID. Each segment record within this collection, represented by the TSegments type, must include crucial information such as a unique ID, task ID, start date, end date, or duration values. These details are essential for accurately representing and managing segmented tasks within the Gantt chart. 
 
-[PrimaryKey](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttSegmentFields-2.html#Syncfusion_Blazor_Gantt_GanttSegmentFields_2_PrimaryKey) - This field contains unique values used to identify each individual segments. 
+`PrimaryKey` - This field contains unique values used to identify each individual segments. 
 
-[ForeignKey](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttSegmentFields-2.html#Syncfusion_Blazor_Gantt_GanttSegmentFields_2_ForeignKey) - This field is used to map the task ID in the segments collection. It establishes a relationship between the task and its segments.
+`ForeignKey` - This field is used to map the task ID in the segments collection. It establishes a relationship between the task and its segments.
 
-[StartDate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttSegmentFields-2.html#Syncfusion_Blazor_Gantt_GanttSegmentFields_2_StartDate) - This field is used to map the segment's start date in the segments collection. It defines when the segment begins.
+`StartDate` - This field is used to map the segment's start date in the segments collection. It defines when the segment begins.
 
-[EndDate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttSegmentFields-2.html#Syncfusion_Blazor_Gantt_GanttSegmentFields_2_EndDate) - This field is used to map the segment's end date in the segments collection. It specifies when the segment ends. 
+`EndDate` - This field is used to map the segment's end date in the segments collection. It specifies when the segment ends. 
 
-[Duration](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttSegmentFields-2.html#Syncfusion_Blazor_Gantt_GanttSegmentFields_2_Duration) - This field is used to specify the duration of the segment. It can be used instead of or in conjunction with the start and end dates.
+`Duration` - This field is used to specify the duration of the segment. It can be used instead of or in conjunction with the start and end dates.
 
-In the code snippet below, the `GanttSegmentFields` component is used to bind the segments, and the segment's data source collection is mapped to the `segmentCollection` property. The `TSegments` class, represented by `SegmentModel`, contains properties such as `Id` mapped to `PrimaryKey`, `TaskId` mapped to `ForeignKey`, `SegmentStartDate` mapped to `StartDate`, `SegmentEndDate` mapped to `EndDate`, and `SegmentDuration` mapped to `Duration`. 
+In the code snippet below, the `GanttSegmentFields` component is used to bind the segments, and the segment's data source collection is mapped to the `segmentCollection` property. The `TSegments` class, represented by `SegmentModel`, contains properties such as `Id` mapped to [PrimaryKey](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttSegmentFields-2.html#Syncfusion_Blazor_Gantt_GanttSegmentFields_2_PrimaryKey), `TaskId` mapped to [ForeignKey](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttSegmentFields-2.html#Syncfusion_Blazor_Gantt_GanttSegmentFields_2_ForeignKey), `SegmentStartDate` mapped to [StartDate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttSegmentFields-2.html#Syncfusion_Blazor_Gantt_GanttSegmentFields_2_StartDate), `SegmentEndDate` mapped to [EndDate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttSegmentFields-2.html#Syncfusion_Blazor_Gantt_GanttSegmentFields_2_EndDate), and `SegmentDuration` mapped to [Duration](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttSegmentFields-2.html#Syncfusion_Blazor_Gantt_GanttSegmentFields_2_Duration). 
 
 ```cshtml
 @using Syncfusion.Blazor.Gantt
@@ -122,11 +122,15 @@ In the code snippet below, the `GanttSegmentFields` component is used to bind th
 
 ## Splitting and merge tasks dynamically
 
-The task splitting and merging actions can be performed in three ways in a Gantt chart.
+`Split task` - Splitting a task in a Gantt chart involves dividing the taskbar into two segments at a specified point in the timeline. 
+
+`Merge task` - Merging tasks in a Gantt chart combines two or more adjacent taskbars into a single taskbar.
+
+The task splitting and merging actions can be performed in the following three ways in a Gantt chart. Additionally, tasks can also be merged by simply taskbar dragging the segments together in the ui.
 
 ### Context menu
 
-If the `GanttSegmentFields` component is mapped and the [EnableContextMenu](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_EnableContextMenu) property is enabled, the context menu will include the `Split Task` and `Merge Task` items. if need to split the taskbar first select the date to on hover after right mouse click, show the split task option then click to proceed action, the merge task is selected the splitted taskbar choose the particular segment and open the context menu after click the merge task the two (right and left) options show based on segmet. You can split taskbar by first opening the context menu within the taskbar. To merge taskbars, click the taskbar and choose the merge action either to the right or left. The image below shows the context menu.
+The [EnableContextMenu](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_EnableContextMenu) property is enabled, the context menu will include the `Split Task` and `Merge Task` items. To split a taskbar, first select the timeline cell, then hover over it and right-click to open the context menu. From the context menu, select the `Split Task` option and then proceed with the action by clicking. For merging taskbars, select the split taskbar, choose the particular segment, and open the context menu. From there, click on the `Merge Task` option, and you'll see two options (right and left) based on the segment. You can split the taskbar by opening the context menu within the taskbar itself. To merge taskbars, click on the taskbar and select the merge action either to the right or left. The image below illustrates the context menu for these actions.
 
 ```cshtml
 @using Syncfusion.Blazor.Gantt
@@ -435,7 +439,7 @@ You can split taskbar using the [SplitTaskAsync](https://help.syncfusion.com/cr/
 
 ## Segment event
 
-The [SegmentChanging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttSegmentFields-2.html#Syncfusion_Blazor_Gantt_GanttSegmentFields_2_SegmentChanging) event is triggered when split and merge actions are performed, and there are changes in the scheduling of tasks. The `Cancel` property is only applicable for split and merge actions; it does not apply to changes in the scheduling of tasks. The gif image below shows the message content using segment event.
+The [SegmentChanging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttSegmentFields-2.html#Syncfusion_Blazor_Gantt_GanttSegmentFields_2_SegmentChanging) event is triggered when split and merge actions occur, or there are changes in the scheduling dates of tasks. In the Gantt sample below, the `SegmentEventHandler` method is bound to the segment event to customize behavior based on added, updated, or deleted segment records. When handling this event, a display message is customized if any added, updated, or deleted records are found in the event arguments. Additionally, changes to segments in task id 2 are restricted by setting the `Cancel` property to true in the `SegmentEventHandler` method. This prevents the merging of Task 2 using the context menu, as demonstrated in the gif image below showcasing the message content using the segment event.
 
 ```cshtml
 @using Syncfusion.Blazor.Gantt
@@ -559,7 +563,7 @@ The [SegmentChanging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ga
 
 ## Segment customization with template
 
-To customize segment taskbars, you can use the TaskbarTemplate component as shown in the following code sample. The customization below demonstrates how to render the taskbar based on a template and change the split taskbar color. The image below shows the ui changes using the template.  
+To customize segment taskbars in a Gantt chart, you can use the [TaskbarTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTemplates-1.html#Syncfusion_Blazor_Gantt_GanttTemplates_1_TaskbarTemplate) component to customize the taskbars. For customizing the split taskbar, you can use the [GetRowTaskModel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_GetRowTaskModel__0_) method to get the taskbar segment details such as left position, width, progress width, and more. You can refer to the [Segments](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.IGanttTaskModel-1.html#Syncfusion_Blazor_Gantt_IGanttTaskModel_1_Segments) for more information. The code snippet below using the `GetTaskData` method to retrieve segment details using the template context in `GetRowTaskModel` method. The code sample below demonstrates how to change the split taskbar color in a Gantt chart using a template. The image below shows the ui changes using the template.
 
 ```cshtml
 @using Syncfusion.Blazor.Gantt
