@@ -65,7 +65,7 @@ By default, the tooltip displays information in points for the x and y values. I
 
 ### Cartesian Chart
 
-For cartesian type charts like line, column area, etc., you can access series.name, point.x and point.y values in **Format** property. For example, the format **$series.name $point.x** displays series name and point x-value in the tooltip.
+For Cartesian type charts like line, column area, etc., you can access series.name, point.x and point.y values in **Format** property. For example, the format **$series.name $point.x** displays series name and point x-value in the tooltip.
 
 ```cshtml
 
@@ -108,7 +108,7 @@ For cartesian type charts like line, column area, etc., you can access series.na
 
 ### Financial Chart
 
-For financial type charts like candle, hilo, hiloopenclose you can access series.name, point.x, point.high, point.low, point.open, point.close and point.volume in Format property.
+For financial type charts like candle, hilo, hilo open close you can access series.name, point.x, point.high, point.low, point.open, point.close and point.volume in Format property.
 
 ```cshtml
 @using Syncfusion.Blazor.Charts
