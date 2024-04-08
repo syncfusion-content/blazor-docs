@@ -9,7 +9,7 @@ documentation: ug
 
 # Styles in Blazor SpeedDial Component
 
-This section briefs different ways to stye SpeedDial Component.
+This section briefs different ways to style SpeedDial Component.
 
 ## SpeedDial button
 
