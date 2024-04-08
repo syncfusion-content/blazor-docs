@@ -126,8 +126,7 @@ The task splitting and merging actions can be performed in three ways in a Gantt
 
 ### Context menu
 
-If the `GanttSegmentFields` component is mapped and the [EnableContextMenu](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_EnableContextMenu) property is enabled, the context menu will include the `Split Task` and `Merge Task` items. if need to split the taskbar first select the date to on hover after right mouse click, show the split task option then click to proceed action, the merge task is selected the splited taskbar choose the particular segment and open the context menu after click the merge task the two (right and left) options show based on segmetn    
-You can split taskbar by first opening the context menu within the taskbar. To merge taskbars, click the taskbar and choose the merge action either to the right or left. The image below shows the context menu.
+If the `GanttSegmentFields` component is mapped and the [EnableContextMenu](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_EnableContextMenu) property is enabled, the context menu will include the `Split Task` and `Merge Task` items. if need to split the taskbar first select the date to on hover after right mouse click, show the split task option then click to proceed action, the merge task is selected the splitted taskbar choose the particular segment and open the context menu after click the merge task the two (right and left) options show based on segmet. You can split taskbar by first opening the context menu within the taskbar. To merge taskbars, click the taskbar and choose the merge action either to the right or left. The image below shows the context menu.
 
 ```cshtml
 @using Syncfusion.Blazor.Gantt
