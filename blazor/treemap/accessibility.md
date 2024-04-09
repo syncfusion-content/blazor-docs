@@ -60,6 +60,6 @@ Accessibility in the Blazor TreeMap component ensures that all users, regardless
 
 ## Ensuring accessibility
 
-The Blazor TreeMap component's accessibility levels are ensured through an [axe-core](https://www.npmjs.com/package/axe-core) software tool during automated testing.
+The Blazor TreeMap component's accessibility levels are ensured through an [axe-core](https://www.nuget.org/packages/Deque.AxeCore.Playwright) software tool during automated testing.
 
 The accessibility compliance of the TreeMap component is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/treemap) in a new window to evaluate the accessibility of the TreeMap component with accessibility tools.

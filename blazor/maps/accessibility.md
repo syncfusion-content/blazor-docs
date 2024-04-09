@@ -82,6 +82,6 @@ Interaction Keys |Description
 
 ## Ensuring accessibility
 
-The Blazor Maps component's accessibility levels are ensured using an [axe-core](https://www.npmjs.com/package/axe-core) software tool during automated testing.
+The Blazor Maps component's accessibility levels are ensured using an [axe-core](https://www.nuget.org/packages/Deque.AxeCore.Playwright) software tool during automated testing.
 
 The accessibility compliance of the Maps component is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/maps) in a new window to evaluate the accessibility of the Maps component with accessibility tools.
