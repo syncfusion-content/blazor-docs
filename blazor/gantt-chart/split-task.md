@@ -438,7 +438,7 @@ In the following code snippet, upon external button click, segments of the 1st i
 
 The [SegmentChanging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttSegmentFields-2.html#Syncfusion_Blazor_Gantt_GanttSegmentFields_2_SegmentChanging) event is triggered in the Blazor Gantt chart when split and merge actions occur, or when there are changes in the scheduling dates of tasks. Using this event, any custom actions can be performed or even the split or merge action can be canceled by setting the [Cancel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SegmentEventArgs-1.html#Syncfusion_Blazor_Gantt_SegmentEventArgs_1_Cancel) property of the even argument to `true`.
 
-In the below code snippet, using the `SegmentChanging` event a customized message is displayed when doing split or merge actions. Moreover, segement deletion is prevented to the 1st index task.
+In the below code snippet, using the `SegmentChanging` event a customized message is displayed when doing split or merge actions. Moreover, segment deletion is prevented to the 1st index task.
 
 ```cshtml
     @using Syncfusion.Blazor.Gantt
