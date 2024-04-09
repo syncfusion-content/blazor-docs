@@ -15,19 +15,19 @@ This section explains how to port Syncfusion Blazor Server App to .NET MAUI Blaz
 
 [.NET 6.0](https://dotnet.microsoft.com/en-us/download/dotnet/6.0) or later.
 
-## Create a new project for Blazor Server Side App
+## Create a new project for Blazor Server App
 
-1. Create a new [Blazor Server Side App](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio) with Syncfusion `Blazor Calendar` component using [Visual Studio](https://visualstudio.microsoft.com/vs/).
+1. Create a new [Blazor Server App](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio) with Syncfusion `Blazor Calendar` component using [Visual Studio](https://visualstudio.microsoft.com/vs/).
 
-2. Now, create a [Razor Class Library](https://blazor.syncfusion.com/documentation/getting-started/razor-class-library) in Visual Studio and configure it with already created Blazor Server Side App.
+2. Now, create a [Razor Class Library](https://blazor.syncfusion.com/documentation/getting-started/razor-class-library) in Visual Studio and configure it with already created Blazor Server App.
 
-3. Next, move the Syncfusion Blazor NuGet packages, Razor components, App.razor, Import.razor, CSS, Shared, and Data folders to the Razor class library from the Blazor server project.
+3. Next, move the Syncfusion `Blazor NuGet packages`, `Razor components`, `App.razor`, `Import.razor`, `CSS`, `Shared`, and `Data` folders to the Razor class library from the Blazor server project.
 
 ![Folders to move](images/server-folders.png)
 
 4. Create a new [.NET MAUI Blazor Hybrid App](https://learn.microsoft.com/en-us/aspnet/core/blazor/hybrid/tutorials/maui?view=aspnetcore-8.0) for porting the `Blazor Server Side App`.
 
-5. Afterward, refer the Razor class library in both the Blazor server app and MAUI Blazor app and then resolve reference missing errors.
+5. Afterward, refer the `Razor class library` in both the `Blazor server app` and `MAUI Blazor App` and then resolve reference missing errors.
 
 6. Delete the common folders like Razor components, Main.razor, Import.razor, CSS, Shared, and Data folder from the MAUI Blazor app.
 
@@ -80,5 +80,7 @@ This section explains how to port Syncfusion Blazor Server App to .NET MAUI Blaz
 {% endhighlight %}
 {% endtabs %}
 
-10. Run the application, The Syncfusion Blazor Calendar component will be rendered in the default web browser.
+10. In the Visual Studio toolbar, select the **Windows Machine** button to build and run the app.
+
+![Build and run MAUI Blazor Hybrid App](images/windows-machine-mode.png)
 
