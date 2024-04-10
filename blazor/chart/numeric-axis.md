@@ -407,7 +407,7 @@ The table below shows the results of applying various commonly used label format
 
 ## GroupingSeparator
 
-To separate groups of thousands, use [UseGroupingSeparator](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfChart.html#Syncfusion_Blazor_Charts_SfChart_UseGroupingSeparator) property in chart. This property will display axis labels, data labels and tooltip with thousand separator.
+To separate groups of thousands for numerical values, use the [UseGroupingSeparator](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfChart.html#Syncfusion_Blazor_Charts_SfChart_UseGroupingSeparator) property set to true in the chart to enable it. When this property is enabled, axis labels, data labels, and tooltips will display with a thousand separator.
 
 ```cshtml
 

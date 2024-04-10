@@ -313,7 +313,7 @@ Data label for the accumulation chart can be formatted using [Format](https://he
 
 ## Template
 
-The text and interior information for a datapoint can be bound from a datasource other than the x and y values. The implicit named parameter context can be used to access the aggregate values within the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationDataLabelSettings.html#Syncfusion_Blazor_Charts_AccumulationDataLabelSettings_Template). To retrieve aggregate values inside the template, type cast the context as [AccumulationChartDataPointInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartDataPointInfo.html). The context attribute can also be used to modify the name of this implicit parameter. For example, the data label information can be accessed using context in the template as shown below.
+Data labels can be customized using the template element for the accumulation chart. The [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationDataLabelSettings.html#Syncfusion_Blazor_Charts_AccumulationDataLabelSettings_Template) allows for the customization of data labels using HTML elements, unlike a standard data label. Within the template, you can access the context value as an [AccumulationChartDataPointInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartDataPointInfo.html) and customize it accordingly. This allows you to access data point values such as x, y, label, percentage, as well as data point information like point index, point text, series name, and series index.
 
 ```cshtml
 <AccumulationDataLabelSettings Visible="true" Name="Browser">

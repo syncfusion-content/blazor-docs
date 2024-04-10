@@ -61,11 +61,7 @@ When space constraints prevent displaying information using data labels, the too
 
 <!-- markdownlint-disable MD013 -->
 
-By default, the tooltip displays information in points for the x and y values. In addition, further information can be displayed in the tooltip. 
-
-### Cartesian Chart
-
-For Cartesian type charts like line, column area, etc., you can access series.name, point.x and point.y values in **Format** property. For example, the format **$series.name $point.x** displays series name and point x-value in the tooltip.
+By default, the tooltip displays information in points for the x and y values. In addition, further information can be displayed in the tooltip. For example, the format **$series.name $point.x** displays series name and point x-value in the tooltip.
 
 ```cshtml
 
@@ -79,7 +75,7 @@ For Cartesian type charts like line, column area, etc., you can access series.na
     <ChartTooltipSettings Enable="true" Header="Sales" Format="<b>${series.name} : ${point.y}</b>"></ChartTooltipSettings>
 
     <ChartSeriesCollection>
-        <ChartSeries DataSource="@SalesReports" Name="Product" XName="X" YName="Y" Type="Syncfusion.Blazor.Charts.ChartSeriesType.Column">
+        <ChartSeries DataSource="@SalesReports" XName="X" YName="Y" Type="ChartSeriesType.Column">
         </ChartSeries>
     </ChartSeriesCollection>
 </SfChart>
@@ -104,196 +100,6 @@ For Cartesian type charts like line, column area, etc., you can access series.na
 ```
 
 ![Blazor Column Chart with Tooltip Format](images/tooltip/blazor-column-chart-tooltip-format.png)
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hjLJtzDABxkrAgOK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-### Financial Chart
-
-For financial type charts like candle, hilo, hilo open close you can access series.name, point.x, point.high, point.low, point.open, point.close and point.volume in Format property.
-
-```cshtml
-@using Syncfusion.Blazor.Charts
-
-<SfChart>
-    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category">
-    </ChartPrimaryXAxis>
-    <ChartTooltipSettings Enable="true" Format="<b>${point.x}</b> <br> High : <b>${point.high}</b> <br> Low : <b>${point.low}</b> <br> Open : <b>${point.open}</b> <br> Close : <b>${point.close}</b>"></ChartTooltipSettings>
-    <ChartSeriesCollection>
-        <ChartSeries DataSource="@StockDetails" XName="X" High="High" Low="Low" Type="Syncfusion.Blazor.Charts.ChartSeriesType.Candle" Open="Open" Close="Close">
-        </ChartSeries>
-    </ChartSeriesCollection>
-</SfChart>
-
-@code {
-    public class Data
-    {
-        public string X { get; set; }
-        public double Y { get; set; }
-        public double High { get; set; }
-        public double Low { get; set; }
-        public double Open { get; set; }
-        public double Close { get; set; }
-    }
-
-    public List<Data> StockDetails = new List<Data>
-    {
-        new Data{ X= "Jan", Open= 120, High= 160, Low= 100, Close= 140 },
-        new Data{ X= "Feb", Open= 150, High= 190, Low= 130, Close= 170 },
-        new Data{ X= "Mar", Open= 130, High= 170, Low= 110, Close= 150 },
-        new Data{ X= "Apr", Open= 160, High= 180, Low= 120, Close= 140 },
-        new Data{ X= "May", Open= 150, High= 170, Low= 110, Close= 130 }
-    };
-}
-```
-
-![Blazor Candle Chart with Tooltip Format](images/tooltip/blazor-candle-chart-tooltip-format.png)
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rjhTDJjKhYCuRmyY?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-### Scatter and Bubble
-
-For scatter and bubble type charts, you can access series.name, point.x, point.y and point.size in Format property.
-
-```cshtml
-@using Syncfusion.Blazor.Charts
-
-<SfChart>
-    <ChartSeriesCollection>
-        <ChartSeries DataSource="@SalesReports" XName="X" YName="Y" Opacity="0.7" Fill="blue" Size="Size" Type="Syncfusion.Blazor.Charts.ChartSeriesType.Bubble">
-        </ChartSeries>
-    </ChartSeriesCollection>
-    <ChartTooltipSettings Enable="true" EnableMarker=false Format="X : <b>${point.x}</b> <br> Y : <b>${point.y}</b> <br> Size : <b>${point.size}</b>"></ChartTooltipSettings>
-</SfChart>
-
-@code {
-    public class ChartData
-    {
-        public double X { get; set; }
-        public double Y { get; set; }
-        public double Size { get; set; }
-    }
-
-    public List<ChartData> SalesReports = new List<ChartData>
-    {
-        new ChartData { X= 92.2, Y= 7.8, Size= 1.347 },
-        new ChartData { X= 74, Y= 6.5, Size= 1.241 },
-        new ChartData { X= 90.4, Y= 6.0, Size= 0.238 },
-        new ChartData { X= 99.4, Y= 2.2, Size= 0.312 },
-        new ChartData { X= 88.6, Y= 1.3, Size= 0.197 },
-        new ChartData { X= 99, Y= 0.7, Size= 0.0818 },
-        new ChartData { X= 72, Y= 2.0, Size= 0.0826 },
-        new ChartData { X= 99.6, Y= 3.4, Size= 0.143 },
-        new ChartData { X= 99, Y= 0.2, Size= 0.128 },
-        new ChartData { X= 86.1, Y= 4.0, Size= 0.115 },
-        new ChartData { X= 92.6, Y= 6.6, Size= 0.096 },
-        new ChartData { X= 61.3, Y= 1.45, Size= 0.162 },
-        new ChartData { X= 82.2, Y= 3.97, Size= 0.7 },
-        new ChartData { X= 79.2, Y= 3.9, Size= 0.162 },
-        new ChartData { X= 72.5, Y= 4.5, Size= 0.7 },
-        new ChartData { X= 81, Y= 3.5, Size= 0.21 },
-        new ChartData { X= 66.8, Y= 3.9, Size= 0.028 },
-        new ChartData { X= 78.4, Y= 2.9, Size= 0.231 }
-    };
-}
-```
-
-![Blazor Bubble Chart with Tooltip Format](images/tooltip/blazor-bubble-chart-tooltip-format.png)
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hDrzjJtKgHzoUBdk?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-### Other Types
-
-#### Box and Whisker
-
-For box and whisker chart type, you can access point.x, point.minimum, point.maximum and point.median in format. 
-
-```cshtml
-@using Syncfusion.Blazor.Charts
-
-<SfChart>
-    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category">
-    </ChartPrimaryXAxis>
-    <ChartSeriesCollection>
-        <ChartSeries DataSource="@ExpenseDetails" XName="XValue" YName="YValue" Type="Syncfusion.Blazor.Charts.ChartSeriesType.BoxAndWhisker">
-        </ChartSeries>
-    </ChartSeriesCollection>
-    <ChartTooltipSettings Enable="true" Format=" ${point.x} <br> Min : ${point.minimum} <br> Max : ${point.maximum} <br> Median : ${point.median}"></ChartTooltipSettings>
-</SfChart>
-
-@code {
-    public class ChartData
-    {
-        public string XValue { get; set; }
-        public double[] YValue { get; set; }
-    }
-    public List<ChartData> ExpenseDetails = new List<ChartData>
-    {
-        new ChartData { XValue = "Development", YValue = new double[]{ 22, 22, 23, 25, 25, 25, 26, 27, 27, 28, 28, 29, 30, 32, 34, 32, 34, 36, 35, 38 } },
-        new ChartData { XValue = "Testing", YValue = new double[] { 22, 33, 23, 25, 26, 28, 29, 30, 34, 33, 32, 31, 50 }},
-        new ChartData { XValue = "HR", YValue = new double[] { 22, 24, 25, 30, 32, 34, 36, 38, 39, 41, 35, 36, 40, 56 } },
-        new ChartData { XValue = "Finance", YValue =  new double[] { 26, 27, 28, 30, 32, 34, 35, 37, 35, 37, 45 } },
-        new ChartData { XValue = "R&D", YValue = new double[] { 26, 27, 29, 32, 34, 35, 36, 37, 38, 39, 41, 43, 58 } },
-        new ChartData { XValue = "Sales", YValue = new double[] { 27, 26, 28, 29, 29, 29, 32, 35, 32, 38, 53 } },
-        new ChartData { XValue = "Inventory", YValue = new double[] { 21, 23, 24, 25, 26, 27, 28, 30, 34, 36, 38 } },
-        new ChartData { XValue = "Graphics", YValue = new double[] { 26, 28, 29, 30, 32, 33, 35, 36, 52 } },
-        new ChartData { XValue = "Training", YValue = new double[] { 28, 29, 30, 31, 32, 34, 35, 36 } }
-    };
-}
-```
-
-![Blazor BoxandWhisker Chart with Tooltip Format](images/tooltip/blazor-boxandwhisker-chart-tooltip-format.png)
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rjrzNftUKQlubsZm?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-#### Histogram
-
-For histogram chart type, you can access point.x, point.minimum and point.maximum in format.
-
-```cshtml
-@using Syncfusion.Blazor.Charts
-
-<SfChart Title="Score of Final Examination">
-    <ChartArea><ChartAreaBorder Width="0"></ChartAreaBorder></ChartArea>
-    <ChartPrimaryXAxis Minimum="0" Maximum="110">
-        <ChartAxisMajorGridLines Width="0"></ChartAxisMajorGridLines>
-    </ChartPrimaryXAxis>
-    <ChartPrimaryYAxis Minimum="0" Maximum="6" Interval="2" Title="Number of Students">
-        <ChartAxisMajorGridLines Width="0"></ChartAxisMajorGridLines>
-    </ChartPrimaryYAxis>
-    <ChartSeriesCollection>
-        <ChartSeries DataSource="@ExamScores" YName="Y" Type="Syncfusion.Blazor.Charts.ChartSeriesType.Histogram" BinInterval="20" ShowNormalDistribution="true" ColumnWidth="0.99">
-            <ChartMarker Visible="true" Height="10" Width="10">
-                <ChartDataLabel Visible="true" Position="Syncfusion.Blazor.Charts.LabelPosition.Top">
-                    <ChartDataLabelFont Color="#ffffff" FontWeight="600"></ChartDataLabelFont>
-                </ChartDataLabel>
-            </ChartMarker>
-        </ChartSeries>
-    </ChartSeriesCollection>
-    <ChartTooltipSettings Enable="true" Format="Score: ${point.x} <br> Minimum : ${point.minimum} <br> Maximum : ${point.maximum}"></ChartTooltipSettings>
-</SfChart>
-
-@code {
-    public class Data
-    {
-        public double Y { get; set; }
-    }
-
-    public List<Data> ExamScores = new List<Data>
-    {
-       new Data { Y=5.250},
-       new Data { Y=7.750},
-       new Data { Y=8.275},
-       new Data { Y=9.750},
-       new Data { Y=36.250},
-       new Data { Y=46.250},
-       new Data { Y=56.250},
-       new Data { Y=66.500},
-       new Data { Y=76.625},
-       new Data { Y=80.000},
-       new Data { Y=97.750}
-    };
-}
-```
-
-![Blazor Histogram Chart with Tooltip Format](images/tooltip/blazor-histogram-chart-tooltip-format.png)
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hZVJjfNqTNIWSOqe?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
 
 <!-- markdownlint-disable MD013 -->
 
