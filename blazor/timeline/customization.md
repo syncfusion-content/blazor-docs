@@ -40,12 +40,6 @@ You can define the styles applicable to the all the Timeline item connectors.
     .custom-connector .e-timeline-item.e-connector::after {
         border-color: #f7c867;
         border-width: 1.4px;
-        animation: progress 2s;
-    }
-
-    @@keyframes progress {
-        from { height: 0%; }
-        to { height: 100%; }
     }
 </style>
 
@@ -65,7 +59,7 @@ You can define the styles applicable to the all the Timeline item connectors.
 
 ```
 
-![Blazor Timeline Component with Common Customized Connector](./images/Blazor-connector-common.gif)
+![Blazor Timeline Component with Common Customized Connector](./images/Blazor-connector-common.png)
 
 ### Individual styling
 
@@ -93,17 +87,10 @@ You can also apply unique styles to individual connectors, to differentiate spec
 <style>
     .custom-connector .state-initial.e-connector::after {
         border: 1.5px #f8c050 dashed;
-        animation: progress 1.5s ease-in-out;
     }
 
     .custom-connector .state-intermediate.e-connector::after {
         border: 1.5px #4d85f5 dashed;
-        animation: progress 1.5s ease-in-out;
-    }
-
-    @@keyframes progress {
-        from { height: 0%; }
-        to { height: 100%; }
     }
 </style>
 
@@ -124,7 +111,7 @@ You can also apply unique styles to individual connectors, to differentiate spec
 
 ```
 
-![Blazor Timeline Component with Individual Customized Connector](./images/Blazor-connector-individual.gif)
+![Blazor Timeline Component with Individual Customized Connector](./images/Blazor-connector-individual.png)
 
 ## Dot styling
 
