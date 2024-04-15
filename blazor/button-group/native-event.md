@@ -70,7 +70,7 @@ The following native event support has been provided to the Button Group compone
 
 ## How to bind onchange event to Button Group
 
-The `onchage` attribute is used to bind the click event for button group. Here, we have explained about the sample code snippets.
+The `onchage` attribute is used to bind the change event for button group. Here, we have explained about the sample code snippets.
 
 ```csharp
 
