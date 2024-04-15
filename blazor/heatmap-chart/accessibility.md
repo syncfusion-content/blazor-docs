@@ -60,6 +60,6 @@ Blazor HeatMap Chart has built-in accessibility features like screen reading. Sc
 
 ## Ensuring accessibility
 
-The Blazor HeatMap component's accessibility levels are ensured through an [axe-core](https://www.npmjs.com/package/axe-core) software tool during automated testing.
+The Blazor HeatMap component's accessibility levels are ensured through an [axe-core](https://www.nuget.org/packages/Deque.AxeCore.Playwright) software tool during automated testing.
 
 The accessibility compliance of the HeatMap component is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/heatmap) in a new window to evaluate the accessibility of the HeatMap component with accessibility tools.

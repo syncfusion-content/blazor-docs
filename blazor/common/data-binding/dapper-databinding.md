@@ -294,7 +294,7 @@ public class BugDataAdaptor: DataAdaptor
     {
         List<Bug> bugs = await _dataLayer.GetBugsAsync();
         int count = await _dataLayer.GetBugCountAsync();
-        return dataManagerRequest.RequiresCounts ? new DataResult() { Result = bugs, Count = count } : count;
+        return dataManagerRequest.RequiresCounts ? new DataResult() { Result = bugs, Count = count } : (object)bugs;
     }
 }
 
