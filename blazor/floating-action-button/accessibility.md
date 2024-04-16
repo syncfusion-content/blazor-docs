@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Accessibility in Blazor Stepper Component | Syncfusion
-description: Checkout and learn about Accessibility and Keyboard interaction with Blazor Stepper component and more details.
+title: Accessibility in Blazor Floating Action Button | Syncfusion
+description: Checkout and learn here all about Accessibility in Syncfusion Blazor Floating Action Button component and much more.
 platform: Blazor
-control: Stepper
+control: Floating Action Button
 documentation: ug
 ---
 
-# Accessibility in Blazor Stepper component
+# Accessibility in Blazor Floating Action Button component
 
-The Blazor Stepper component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
+The Blazor Floating Action Button component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 
-The accessibility compliance for the Blazor Stepper component is outlined below.
+The accessibility compliance for the Blazor Floating Action Button component is outlined below.
 
 | Accessibility Criteria | Compatibility |
 | -- | -- |
@@ -30,7 +30,6 @@ The accessibility compliance for the Blazor Stepper component is outlined below.
         margin: 0.5em 0;
     }
 </style>
-
 <div><img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> - All features of the component meet the requirement.</div>
 
 <div><img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Intermediate"> - Some features of the component do not meet the requirement.</div>
@@ -39,33 +38,25 @@ The accessibility compliance for the Blazor Stepper component is outlined below.
 
 ## WAI-ARIA attributes
 
-The following ARIA attributes are used in the Stepper component:
+The Blazor Floating action button component followed the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/button/) patterns to meet the accessibility. The following ARIA attributes are used in the Blazor Floating action button component:
 
 | Attributes | Purpose |
 | --- | --- |
-| `aria-label` | Attribute provide a descriptive text that labels the interactive element for accessibility. |
-| `aria-current` | Attribute denotes the currently active step in the Stepper. |
-| `aria-disabled`| Indicates when the step is disabled and cannot be interacted. |
+| `aria-label` | Provides an accessible name for the icon only floating action button. |
 
 ## Keyboard interaction
 
-The following keyboard shortcuts are supported by the Stepper component.
+The Blazor Floating action button component followed the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/button/#keyboardinteraction) guideline, making it easy for people who use assistive technologies (AT) and those who completely rely on keyboard navigation. The following keyboard shortcuts are supported by the Blazor Floating action button component.
 
 | **Press** | **To do this** |
 | --- | --- |
-| <kbd>Up Arrow</kbd> | Focuses the previous step in a vertical Stepper. |
-| <kbd>Down Arrow</kbd> | Focuses the next step in a vertical Stepper. |
-| <kbd>Left Arrow</kbd> | Focuses the previous step in a horizontal Stepper. |
-| <kbd>Right Arrow</kbd> | Focuses the next step in a horizontal Stepper. |
-| <kbd>Home</kbd> | Focuses on the first step of the Stepper. |
-| <kbd>End</kbd> | Focuses on the last step of the Stepper. |
-| <kbd>Enter / Space</kbd> | Activates the currently focused step. |
+| <kbd>Space</kbd> | When the floating action button has focus, pressing the space key changes the state of the floating action button. |
 
 ## Ensuring accessibility
 
-The Blazor Stepper component's accessibility levels are ensured through an [axe-core](https://www.nuget.org/packages/Deque.AxeCore.Playwright) with playwright tests.
+The Blazor Floating Action Button component's accessibility levels are ensured through an [axe-core](https://www.nuget.org/packages/Deque.AxeCore.Playwright) with playwright tests.
 
-The accessibility compliance of the Blazor Stepper component is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/stepper) in a new window to evaluate the accessibility of the Blazor Stepper component with accessibility tools.
+The accessibility compliance of the Blazor Floating Action Button component is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/fab) in a new window to evaluate the accessibility of the Blazor Floating action button component with accessibility tools.
 
 ## See also
 
