@@ -7,7 +7,7 @@ control: DataGrid
 documentation: ug
 ---
 
-# Connecting SQL data to Blazor DataGrid Component using Entity Framework
+# Connecting SQL data to Blazor DataGrid using Entity Framework
 
 This section describes how to connect and retrieve data from a Microsoft SQL Server database using [Entity Framework ](https://learn.microsoft.com/en-us/ef/core/) and bind it to the Blazor DataGrid component.
 
