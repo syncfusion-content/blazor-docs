@@ -69,10 +69,10 @@ namespace MyWebService.Controllers
         {
             //TODO: Enter the connectionstring of database
             string ConnectionString = @"<Enter a valid connection string>";
-            using (var context = new OrderDbContext(ConnectionString))
+            using (var Context = new OrderDbContext(ConnectionString))
             {
                 // Retrieve orders from the Orders DbSet and convert to list asynchronously
-                List<Order> orders = context.Orders.ToList();
+                List<Order> orders = Context.Orders.ToList();
                 return orders;
             }
         }
@@ -439,12 +439,12 @@ public void Insert([FromBody] CRUDModel<Order> Value)
 {
     //TODO: Enter the connectionstring of database
     string ConnectionString = @"<Enter a valid connection string>";
-    using (var context = new OrderDbContext(ConnectionString))
+    using (var Context = new OrderDbContext(ConnectionString))
     {
         // Add the provided order to the Orders DbSet
-        context.Orders.Add(Value.Value);
+        Context.Orders.Add(Value.Value);
         // Save changes to the database
-        context.SaveChanges();
+        Context.SaveChanges();
     }
     //Add custom logic here if needed and remove above method
 }
@@ -468,15 +468,15 @@ public void Update([FromBody] CRUDModel<Order> Value)
 {
     //TODO: Enter the connectionstring of database
     string ConnectionString = @"<Enter a valid connection string>";
-    using (var context = new OrderDbContext(ConnectionString))
+    using (var Context = new OrderDbContext(ConnectionString))
     {
-        var existingOrder = context.Orders.Find(Value.Value.OrderID);
+        var ExistingOrder = Context.Orders.Find(Value.Value.OrderID);
         if (existingOrder != null)
         {
             // Update the existing order with the new values
-            context.Entry(existingOrder).CurrentValues.SetValues(Value.Value);
+            Context.Entry(ExistingOrder).CurrentValues.SetValues(Value.Value);
             // Save changes to the database
-            context.SaveChanges();
+            Context.SaveChanges();
         }
     }
     //Add custom logic here if needed and remove above method
@@ -501,14 +501,18 @@ public void Delete([FromBody] CRUDModel<Order> Value)
 {
     //TODO: Enter the connectionstring of database
     string ConnectionString = @"<Enter a valid connection string>";
-    //Create query to remove the specific from database by passing the primary key column value.
-    string Query = "DELETE FROM Orders WHERE OrderID = @OrderID";
-    using (IDbConnection Connection = new SqlConnection(ConnectionString))
+    int OrderId = Convert.ToInt32(Value.Key.ToString());
+    using (var Context = new OrderDbContext(ConnectionString))
     {
-        Connection.Open();
-        int orderID = Convert.ToInt32(Value.Key.ToString());
-        //Execute this code to reflect the changes into the database
-        Connection.Execute(Query, new { OrderID = orderID });
+        var Order = Context.Orders.Find(OrderId);
+        if (Order != null)
+        {
+
+            // Remove the order from the Orders DbSet
+            Context.Orders.Remove(Order);
+            // Save changes to the database
+            Context.SaveChanges();
+        }
     }
     //Add custom logic here if needed and remove above method
 }
@@ -531,35 +535,35 @@ public void Batch([FromBody] CRUDModel<Order> Value)
 {
     //TODO: Enter the connection string of the database
     string ConnectionString = @"<Enter a valid connection string>";
-    using (var context = new OrderDbContext(ConnectionString))
+    using (var Context = new OrderDbContext(ConnectionString))
     {
         if (Value.Changed != null)
         {
             foreach (var Record in Value.Changed)
             {
                 // Update the changed records
-                context.UpdateRange(Record);
+                Context.UpdateRange(Record);
             }
         }
         if (Value.Added != null)
         {
             // Add new records
-            context.Orders.AddRange(Value.Added);
+            Context.Orders.AddRange(Value.Added);
         }
         if (Value.Deleted != null)
         {
             foreach (var Record in Value.Deleted)
             {
                 // Find and delete the records
-                var ExistingOrder = context.Orders.Find(Record.OrderID);       
+                var ExistingOrder = Context.Orders.Find(Record.OrderID);       
                 if (ExistingOrder != null)
                 {
-                    context.Orders.Remove(ExistingOrder);
+                    Context.Orders.Remove(ExistingOrder);
                 }
             }
         }        
         // Save changes to the database
-        context.SaveChanges();
+        Context.SaveChanges();
     }
 }
 {% endhighlight %}
@@ -733,10 +737,10 @@ public class OrderData
 {
     public async Task<List<Order>> GetOrdersAsync()
     {
-        using (var context = new OrderDbContext(ConnectionString))
+        using (var Context = new OrderDbContext(ConnectionString))
         {
             // Retrieve orders from the Orders DbSet and convert to list asynchronously
-            var orders = await context.Orders.ToListAsync();
+            var orders = await Context.Orders.ToListAsync();
             return orders; 
         }            
     }
@@ -1048,12 +1052,12 @@ public override async Task<object> InsertAsync(DataManager DataManager, object V
 {% highlight razor tabtitle="Orderdata.cs"%}
 public async Task AddOrderAsync(Order Value)
 {
-    using (var context = new OrderDbContext(ConnectionString))
+    using (var Context = new OrderDbContext(ConnectionString))
     {
         // Add the provided order to the Orders DbSet
-        context.Orders.Add(Value);
+        Context.Orders.Add(Value);
         // Save changes asynchronously to the database
-        await context.SaveChangesAsync();
+        await Context.SaveChangesAsync();
     }
 }
 {% endhighlight %}
@@ -1084,12 +1088,12 @@ public override async Task<object> UpdateAsync(DataManager DataManager, object V
 {% highlight razor tabtitle="Orderdata.cs"%}
 public async Task UpdateOrderAsync(Order Value)
 {
-    using (var context = new OrderDbContext(ConnectionString))
+    using (var Context = new OrderDbContext(ConnectionString))
     {
         // Update the provided order in the Orders DbSet
-        context.Orders.Update(Value);
+        Context.Orders.Update(Value);
         // Save changes asynchronously to the database
-        await context.SaveChangesAsync();
+        await Context.SaveChangesAsync();
     }
 }
 {% endhighlight %}
@@ -1120,15 +1124,15 @@ public override async Task<object> RemoveAsync(DataManager DataManager, object V
 {% highlight razor tabtitle="Orderdata.cs"%}
 public async Task RemoveOrderAsync(int? Key)
 {
-    using (var context = new OrderDbContext(ConnectionString))
+    using (var Context = new OrderDbContext(ConnectionString))
     {
-        var Order = await context.Orders.FindAsync(Key);
+        var Order = await Context.Orders.FindAsync(Key);
         if (Order != null)
         {
             // Remove the order from the Orders DbSet
-            context.Orders.Remove(Order);
+            Context.Orders.Remove(Order);
             // Save changes asynchronously to the database
-            await context.SaveChangesAsync();
+            await Context.SaveChangesAsync();
         }
     }
 }
