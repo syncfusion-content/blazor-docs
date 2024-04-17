@@ -9,7 +9,7 @@ documentation: ug
 
 # Reverse in Blazor Timeline component
 
-You can display the Timeline items in reverse order, for different alignments by using the `Reverse` property which provides adaptability and improves user interaction.
+You can display the Timeline items in reverse order, for different alignments by using the [Reverse](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.SfTimeline.html#Syncfusion_Blazor_Layouts_SfTimeline_Reverse) property which provides adaptability and improves user interaction.
 
 ```cshtml
 
