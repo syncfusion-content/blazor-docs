@@ -11,7 +11,7 @@ documentation: ug
 
 ## ARIA attributes
 
-[Blazor Tabs](https://www.syncfusion.com/blazor-components/blazor-tabs) component is designed by considering [WAI-ARIA](https://www.w3.org/TR/wai-aria-practices/#Tabpanel) standard. Tab is supported with ARIA Accessibility which is accessible by on-screen readers, and other assistive technology devices.
+[Blazor Tabs](https://www.syncfusion.com/blazor-components/blazor-tabs) component is designed by considering [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/practices/) standard. Tab is supported with ARIA Accessibility which is accessible by on-screen readers, and other assistive technology devices.
 The following list of attributes are added in the Tab.
 
 | **Roles and Attributes** | **Functionalities** |
