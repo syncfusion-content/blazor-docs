@@ -240,99 +240,6 @@ For `Blazor Web App and Blazor WASM App`, set the `BlazorWebAssemblyLoadAllGloba
 
 {% endtabs %}
 
-### Blazor Web App(Server)
-
-If you create a Blazor Web App with an **Interactive render mode** such as `Server` you need to ensure the registration of the SyncfusionLocalizer and Syncfusion Blazorservices in both ~/Program.cs files.
-
-{% tabs %}
-
-{% highlight c# tabtitle="Program.cs" hl_lines="12 13 16 17 18 19 20 21 22 23 34" %}
-
-@using System.Globalization
-@using Microsoft.AspNetCore.Localization
-
-var builder = WebApplication.CreateBuilder(args);
-
-// Add services to the container.
-builder.Services.AddRazorPages();
-builder.Services.AddServerSideBlazor();
-builder.Services.AddSingleton<WeatherForecastService>();
-builder.Services.AddControllers();
-
-builder.Services.AddSyncfusionBlazor();
-builder.Services.AddLocalization();
-
-
-var supportedCultures = new[] { "en-US", "de-DE", "fr-FR", "ar-AE", "zh-HK" };
-var localizationOptions = new RequestLocalizationOptions()
-    .SetDefaultCulture(supportedCultures[0])
-    .AddSupportedCultures(supportedCultures)
-    .AddSupportedUICultures(supportedCultures);
-
-var app = builder.Build();
-app.UseRequestLocalization(localizationOptions);
-// Configure the HTTP request pipeline.
-if (!app.Environment.IsDevelopment())
-{
-    app.UseExceptionHandler("/Error");
-    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
-    app.UseHsts();
-}
-app.UseHttpsRedirection();
-app.UseStaticFiles();
-app.UseRouting();
-app.MapControllers();
-app.MapBlazorHub();
-app.MapFallbackToPage("/_Host");
-
-app.Run();
-
-{% endhighlight %}
-
-{% endtabs %}
-
-For configuring the Localization Middleware in the middleware pipeline and setting the current culture in a cookie for ASP.NET Core
-
-Ensure that the following namespaces are included in the App component:
-
-{% tabs %}
-
-{% highlight c# tabtitle="App.razor"%}
-
-@using System.Globalization
-@using Microsoft.AspNetCore.Localization
-
-{% endhighlight %}
-
-{% endtabs %}
-
-Then, add the following @code block to the bottom of the App component file:
-
-{% tabs %}
-
-{% highlight c# tabtitle="App.razor"}
-
-@code {
-    [CascadingParameter]
-    public HttpContext? HttpContext { get; set; }
-
-    protected override void OnInitialized()
-    {
-        HttpContext?.Response.Cookies.Append(
-            CookieRequestCultureProvider.DefaultCookieName,
-            CookieRequestCultureProvider.MakeCookieValue(
-                new RequestCulture(
-                    CultureInfo.CurrentCulture,
-                    CultureInfo.CurrentUICulture)));
-    }
-}
-
-{% endhighlight %}
-
-{% endtabs %}
-
-### Blazor Web App(WebAssembly or Auto) and Blazor WASM App
-
 * For Blazor Web App, add JS function in `~/Components/App.razor` file (after Blazor's `<script>` tag and before the closing `</body>`), to get and set the user's selected culture in the browser local storage.
 
 * For Blazor WASM App, add JS function in `wwwroot/index.html` file (after Blazor's `<script>` tag and before the closing `</body>`), to get and set the user's selected culture in the browser local storage.
@@ -403,8 +310,6 @@ await builder.Build().RunAsync();
 {% endhighlight %}
 
 {% endtabs %}
-
-### Common for Blazor Web App(WebAssembly or Auto and Server) and Blazor WASM App
 
 Create `CultureSwitcher` component to set the user's culture selection into browser local storage via JS interop and to force reload the page using the updated culture.
 
@@ -485,9 +390,11 @@ Add the `CultureSwitcher` component to `~/MainLayout.razor` to enable the cultur
 
 {% endtabs %}
 
-### Blazor Server App
+### Blazor Server App and Blazor Web App (Server)
 
 Set the app's supported cultures. Also, ensure the app is configured to process controller actions by calling `AddControllers` and `MapControllers`.
+
+If you create a Blazor Web App with an **Interactive render mode** such as `Server` you need to ensure the registration of the SyncfusionLocalizer and Syncfusion Blazorservices in ~/Program.cs files.
 
 {% tabs %}
 
@@ -531,9 +438,53 @@ app.Run();
 
 {% endhighlight %}
 
+{% highlight c# tabtitle=".NET 8 (~/Program.cs)" hl_lines="12 13 16 17 18 19 20 21 22 23 34" %}
+
+@using System.Globalization
+@using Microsoft.AspNetCore.Localization
+
+var builder = WebApplication.CreateBuilder(args);
+
+// Add services to the container.
+builder.Services.AddRazorPages();
+builder.Services.AddServerSideBlazor();
+builder.Services.AddSingleton<WeatherForecastService>();
+builder.Services.AddControllers();
+
+builder.Services.AddSyncfusionBlazor();
+builder.Services.AddLocalization();
+
+
+var supportedCultures = new[] { "en-US", "de-DE", "fr-FR", "ar-AE", "zh-HK" };
+var localizationOptions = new RequestLocalizationOptions()
+    .SetDefaultCulture(supportedCultures[0])
+    .AddSupportedCultures(supportedCultures)
+    .AddSupportedUICultures(supportedCultures);
+
+var app = builder.Build();
+app.UseRequestLocalization(localizationOptions);
+// Configure the HTTP request pipeline.
+if (!app.Environment.IsDevelopment())
+{
+    app.UseExceptionHandler("/Error");
+    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
+    app.UseHsts();
+}
+app.UseHttpsRedirection();
+app.UseStaticFiles();
+app.UseRouting();
+app.MapControllers();
+app.MapBlazorHub();
+app.MapFallbackToPage("/_Host");
+
+app.Run();
+
+{% endhighlight %}
 {% endtabs %}
 
-Set the current culture in a cookie immediately after opening <body> tag of `Pages/_Host.cshtml`.
+For .NET 6 and 7 set the current culture in a cookie immediately after opening <body> tag of `Pages/_Host.cshtml`.
+
+For .NET 8 set the current culture in a cookie in App component file
 
 {% tabs %}
 {% highlight c# tabtitle=".NET 6 & .NET 7 (_Host.cshtml)" hl_lines="6 7 8 9 10 11" %}
@@ -549,6 +500,27 @@ Set the current culture in a cookie immediately after opening <body> tag of `Pag
                     new RequestCulture(
                         CultureInfo.CurrentCulture,
                         CultureInfo.CurrentUICulture)));
+}
+
+{% endhighlight %}
+
+{% highlight c# tabtitle=".NET 8 (App.razor)"}
+
+@using System.Globalization
+@using Microsoft.AspNetCore.Localization
+@code {
+    [CascadingParameter]
+    public HttpContext? HttpContext { get; set; }
+
+    protected override void OnInitialized()
+    {
+        HttpContext?.Response.Cookies.Append(
+            CookieRequestCultureProvider.DefaultCookieName,
+            CookieRequestCultureProvider.MakeCookieValue(
+                new RequestCulture(
+                    CultureInfo.CurrentCulture,
+                    CultureInfo.CurrentUICulture)));
+    }
 }
 
 {% endhighlight %}
@@ -588,7 +560,7 @@ Create `CultureSwitcher` component and place it inside shared folder to perform 
 
 {% tabs %}
 
-{% highlight razor tabtitle="Shared/CultureSwitcher.razor" %}
+{% highlight razor tabtitle=".NET 6 & .NET 7 (Shared/CultureSwitcher.razor) .NET 8 (Components/Pages/CultureSwitcher.razor)" %}
 
 @using  System.Globalization
 @inject NavigationManager NavigationManager
@@ -650,7 +622,7 @@ Add the `CultureSwitcher` component to `Shared/MainLayout.razor` to enable the c
 
 {% tabs %}
 
-{% highlight razor tabtitle="Shared/MainLayout.razor" %}
+{% highlight razor tabtitle=".NET 6 & .NET 7 (Shared/MainLayout.razor)%}
 
 <div class="page">
     <div class="sidebar">
@@ -669,6 +641,14 @@ Add the `CultureSwitcher` component to `Shared/MainLayout.razor` to enable the c
     </main>
 </div>
 
+{% endhighlight %}
+
+{% highlight razor tabtitle=".NET 8 (Components/Layout/NavMenu.razor)" %}
+
+ <div class="nav-item px-3">
+            <CultureSwitcher></CultureSwitcher>
+ </div>
+        
 {% endhighlight %}
 
 {% endtabs %}
