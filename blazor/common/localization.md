@@ -240,6 +240,99 @@ For `Blazor Web App and Blazor WASM App`, set the `BlazorWebAssemblyLoadAllGloba
 
 {% endtabs %}
 
+### Blazor Web App(Server)
+
+If you create a Blazor Web App with an **Interactive render mode** such as `Server` you need to ensure the registration of the SyncfusionLocalizer and Syncfusion Blazorservices in both ~/Program.cs files.
+
+{% tabs %}
+
+{% highlight c# tabtitle="Program.cs" hl_lines="12 13 16 17 18 19 20 21 22 23 34" %}
+
+@using System.Globalization
+@using Microsoft.AspNetCore.Localization
+
+var builder = WebApplication.CreateBuilder(args);
+
+// Add services to the container.
+builder.Services.AddRazorPages();
+builder.Services.AddServerSideBlazor();
+builder.Services.AddSingleton<WeatherForecastService>();
+builder.Services.AddControllers();
+
+builder.Services.AddSyncfusionBlazor();
+builder.Services.AddLocalization();
+
+
+var supportedCultures = new[] { "en-US", "de-DE", "fr-FR", "ar-AE", "zh-HK" };
+var localizationOptions = new RequestLocalizationOptions()
+    .SetDefaultCulture(supportedCultures[0])
+    .AddSupportedCultures(supportedCultures)
+    .AddSupportedUICultures(supportedCultures);
+
+var app = builder.Build();
+app.UseRequestLocalization(localizationOptions);
+// Configure the HTTP request pipeline.
+if (!app.Environment.IsDevelopment())
+{
+    app.UseExceptionHandler("/Error");
+    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
+    app.UseHsts();
+}
+app.UseHttpsRedirection();
+app.UseStaticFiles();
+app.UseRouting();
+app.MapControllers();
+app.MapBlazorHub();
+app.MapFallbackToPage("/_Host");
+
+app.Run();
+
+{% endhighlight %}
+
+{% endtabs %}
+
+For configuring the Localization Middleware in the middleware pipeline and setting the current culture in a cookie for ASP.NET Core
+
+Ensure that the following namespaces are included in the App component:
+
+{% tabs %}
+
+{% highlight c# tabtitle="App.razor"%}
+
+@using System.Globalization
+@using Microsoft.AspNetCore.Localization
+
+{% endhighlight %}
+
+{% endtabs %}
+
+Then, add the following @code block to the bottom of the App component file:
+
+{% tabs %}
+
+{% highlight c# tabtitle="App.razor"}
+
+@code {
+    [CascadingParameter]
+    public HttpContext? HttpContext { get; set; }
+
+    protected override void OnInitialized()
+    {
+        HttpContext?.Response.Cookies.Append(
+            CookieRequestCultureProvider.DefaultCookieName,
+            CookieRequestCultureProvider.MakeCookieValue(
+                new RequestCulture(
+                    CultureInfo.CurrentCulture,
+                    CultureInfo.CurrentUICulture)));
+    }
+}
+
+{% endhighlight %}
+
+{% endtabs %}
+
+### Blazor Web App(WebAssembly or Auto) and Blazor WASM App
+
 * For Blazor Web App, add JS function in `~/Components/App.razor` file (after Blazor's `<script>` tag and before the closing `</body>`), to get and set the user's selected culture in the browser local storage.
 
 * For Blazor WASM App, add JS function in `wwwroot/index.html` file (after Blazor's `<script>` tag and before the closing `</body>`), to get and set the user's selected culture in the browser local storage.
@@ -276,7 +369,7 @@ If you create a Blazor Web App with an **Interactive render mode** such as `WebA
 
 {% tabs %}
 
-{% highlight c# tabtitle="Program.cs" hl_lines="8 10 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26" %}
+{% highlight c# tabtitle="Program.cs" hl_lines=" 10 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26" %}
 
 using Microsoft.JSInterop;
 using System.Globalization;
@@ -310,6 +403,8 @@ await builder.Build().RunAsync();
 {% endhighlight %}
 
 {% endtabs %}
+
+### Common for Blazor Web App(WebAssembly or Auto and Server) and Blazor WASM App
 
 Create `CultureSwitcher` component to set the user's culture selection into browser local storage via JS interop and to force reload the page using the updated culture.
 
