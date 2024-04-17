@@ -9,11 +9,11 @@ documentation: ug
 
 # Orientations in Blazor Timeline component
 
-The Timeline component supports the display of items in both horizontal and vertical direction by using the `Orientation` property.
+The Timeline component supports the display of items in both horizontal and vertical direction by using the [Orientation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.SfTimeline.html#Syncfusion_Blazor_Layouts_SfTimeline_Orientation) property.
 
 ## Vertical
 
-You can display the items one below the other vertically by setting the `Orientation` property to `Vertical`. By default, the items are displayed in vertical orientation.
+You can display the items one below the other vertically by setting the [Orientation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.SfTimeline.html#Syncfusion_Blazor_Layouts_SfTimeline_Orientation) property to `Vertical`. By default, the items are displayed in vertical orientation.
 
 ```cshtml
 
@@ -59,7 +59,7 @@ You can display the items one below the other vertically by setting the `Orienta
 
 ## Horizontal
 
-In horizontal orientation, the items are displayed in a side-by-side manner by setting the `Orientation` property to `Horizontal`.
+In horizontal orientation, the items are displayed in a side-by-side manner by setting the [Orientation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.SfTimeline.html#Syncfusion_Blazor_Layouts_SfTimeline_Orientation) property to `Horizontal`.
 
 ```cshtml
 
