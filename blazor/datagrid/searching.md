@@ -339,7 +339,7 @@ The ```SearchAsync``` method allows you to perform a search operation based on a
 @using Syncfusion.Blazor.Buttons
 
 <SfTextBox @ref="TextBox" Placeholder="Search" Width="200px"></SfTextBox>
-<SfButton Content="Search" OnClick="SearchButtonHandler"></SfButton>
+<SfButton Content="Search" OnClick="search"></SfButton>
 
 <SfGrid DataSource="@Orders" @ref="DefaultGrid">
     <GridColumns>
@@ -358,8 +358,8 @@ The ```SearchAsync``` method allows you to perform a search operation based on a
     protected override void OnInitialized()
     {
         Orders = OrderData.GetAllRecords();
-    } 
-    public void SearchButtonHandler()
+    }
+    public void search()
     {
         var textBoxValue = TextBox.Value;
         this.DefaultGrid.SearchAsync(textBoxValue);
@@ -804,7 +804,7 @@ The following example demonstrates how to clear the searched records using an ex
 @using Syncfusion.Blazor.Buttons
 @using Syncfusion.Blazor.Grids
 
-<SfButton Content="ClearSearch" OnClick="clearSearchButtonHandler"></SfButton>
+<SfButton Content="ClearSearch" OnClick="clearSearch"></SfButton>
 <SfGrid @ref="DefaultGrid" DataSource="@Orders" AllowSorting="true" Toolbar=@ToolbarItems>
     <GridColumns>
         <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
@@ -822,14 +822,11 @@ The following example demonstrates how to clear the searched records using an ex
     protected override void OnInitialized()
     {
         Orders = OrderData.GetAllRecords();
-    }  
-    public void clearSearchButtonHandler()
+    }
+    public async Task clearSearch()
     {
-#pragma warning disable BL0005
-        this.DefaultGrid.SearchSettings.Key = "";
-#pragma warning restore BL0005
-        DefaultGrid.Refresh();
-    }     
+        await DefaultGrid.SearchAsync("");
+    }    
 }
 {% endhighlight %}
 {% highlight c# tabtitle="OrderData.cs" %}
@@ -879,7 +876,7 @@ The following example demonstrates how to clear the searched records using an ex
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LjhUMXKtKjyEzLsl?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZVzjpXoqkaJnBKx?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 > You can also clear the searched records by using the clear icon within the search input field.
 
