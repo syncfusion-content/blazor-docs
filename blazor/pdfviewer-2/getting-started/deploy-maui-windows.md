@@ -127,23 +127,23 @@ N> If the `DocumentPath` property value is not provided, the PDF Viewer (Next Ge
 
 Run the sample in Windows Machine mode, and it will run Blazor MAUI in Windows.
 
-![Run Windows machine](GettingStarted_images/Windows-machine.png)
+![Run Windows machine](gettingstarted-images/Windows-machine.png)
 
 Upon successfully launching the application, the PDF Viewer (Next Gen) component will seamlessly render the specified PDF document within its interface.
 
-![Blazor SfPdfViewer Component](GettingStarted_images/Windows-maui-output.png)
+![Blazor SfPdfViewer Component](gettingstarted-images/Windows-maui-output.png)
 
 ## Run on Android
 
 To run the PDF Viewer (Next Gen) in a Blazor Android MAUI application using the Android emulator, follow these steps:
 
-![Run Windows machine](GettingStarted_images/android-maui.png)
+![Run Windows machine](gettingstarted-images/android-maui.png)
 
 Refer [here](https://learn.microsoft.com/en-us/dotnet/maui/android/emulator/device-manager#android-device-manager-on-windows) to install and launch Android emulator.
 
 N> If you encounter any errors while using the Android Emulator, refer to the following link for troubleshooting guidance[Troubleshooting Android Emulator](https://learn.microsoft.com/en-us/dotnet/maui/android/emulator/troubleshooting).
 
-![Blazor SfPdfViewer Component](GettingStarted_images/android-emulator.png)
+![Blazor SfPdfViewer Component](gettingstarted-images/android-emulator.png)
 
 >[View Sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Server%20Deployment/Maui/MauiBlazorWindow%20-%20%20SfPdfViewer).
 
