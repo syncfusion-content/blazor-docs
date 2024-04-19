@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Essential Studio for Blazor Listview How to Create Mobile Contact Layout Listview
+title: Chat window user interface using Blazor ListView | Syncfusion
 description: Learn here all about Blazor Listview How to Create Mobile Contact Layout Listview in Syncfusion component and more.
 platform: Blazor
 control: Listview
