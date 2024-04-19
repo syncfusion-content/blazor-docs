@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Create mobile contact layout using Blazor ListView | Syncfusion
-description: Checkout and learn here all about creating mobile contact layout using syncfusion blazor listview and much more.
+title: Essential Studio for Blazor Listview How to Create Mobile Contact Layout Listview
+description: Learn here all about Blazor Listview How to Create Mobile Contact Layout Listview in Syncfusion component and more.
 platform: Blazor
 control: Listview
 documentation: ug
