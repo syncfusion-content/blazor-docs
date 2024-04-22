@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting started with Syncfusion TreeView in Blazor Web App
-description: Check out the documentation for getting started with Syncfusion Blazor TreeView Components in Blazor Web App.
+title: TreeView Getting started with Blazor Web App Component | Syncfusion
+description: Learn here all about Blazor TreeView Getting started with Web App in Syncfusion component and more.
 platform: Blazor
 control: TreeView
 documentation: ug

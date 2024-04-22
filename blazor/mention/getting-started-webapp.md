@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting started with Syncfusion Mention Component in Blazor Web App
-description: Check out the documentation for getting started with Syncfusion Blazor Mention Components in Web App.
+title: Mention Getting started with Blazor Web App Component | Syncfusion
+description: Learn here all about Blazor Mention Getting started with Web App in Syncfusion component and more.
 platform: Blazor
 control: Mention
 documentation: ug
