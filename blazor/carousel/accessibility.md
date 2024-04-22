@@ -9,11 +9,11 @@ documentation: ug
 
 # Accessibility in Blazor Carousel Component
 
-The Carousel component has been designed, keeping in mind the [WAI-ARIA](https://www.w3.org/TR/wai-aria-practices/) specifications, and applying the WAI-ARIA roles, states and properties along with keyboard support for people who use assistive devices. WAI-ARIA accessibility support is achieved through attributes like `aria-roledescription`, `aria-label`, `aria-current`, `aria-live`, `aria-role` and `aria-hidden`. It provides information about elements in a document for assistive technology. The component implements keyboard navigation support by following the [WAI-ARIA practices](https://www.w3.org/TR/wai-aria-practices/) and has been tested in major screen readers.
+The Carousel component has been designed, keeping in mind the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/) specifications, and applying the WAI-ARIA roles, states and properties along with keyboard support for people who use assistive devices. WAI-ARIA accessibility support is achieved through attributes like `aria-label`, `aria-current`, `aria-live`, `aria-role` and `aria-hidden`. It provides information about elements in a document for assistive technology. The component implements keyboard navigation support by following the [WAI-ARIA practices](https://www.w3.org/WAI/ARIA/apg/) and has been tested in major screen readers.
 
 ## ARIA attributes
 
-The carousel component is designed by considering [WAI-ARIA](https://www.w3.org/TR/wai-aria-practices/) standard. Carousel is supported with ARIA Accessibility which is accessible by on-screen readers and other assistive technology devices. The following list of attributes is added to the Carousel.
+The carousel component is designed by considering [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/) standard. Carousel is supported with ARIA Accessibility which is accessible by on-screen readers and other assistive technology devices. The following list of attributes is added to the Carousel.
 
 | **Roles and Attributes** | **Functionalities**                                                                                                                             |
 | ------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------|

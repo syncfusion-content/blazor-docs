@@ -38,10 +38,10 @@ The accessibility compliance for the Blazor DateRangePicker component is outline
 
 ## WAI-ARIA attributes
 
-The web accessibility makes web content and web applications more accessible for people with disabilities. It especially helps in dynamic content change and development of advanced user interface controls with AJAX, HTML, JavaScript, and related technologies. DateRangePicker provides built-in compliance with [WAI-ARIA](https://www.w3.org/TR/wai-aria-practices/) specifications. WAI-ARIA
+The web accessibility makes web content and web applications more accessible for people with disabilities. It especially helps in dynamic content change and development of advanced user interface controls with AJAX, HTML, JavaScript, and related technologies. DateRangePicker provides built-in compliance with [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/) specifications. WAI-ARIA
 support is achieved through the attributes like `aria-expanded`, `aria-disabled`, and `aria-activedescendant` applied as an input element.
 
-To learn about the accessibility of Calendar, refer to the Calendar's [Accessibility](../calendar/accessibility/)  section.
+To learn about the accessibility of Calendar, refer to the Calendar's [Accessibility](https://blazor.syncfusion.com/documentation/calendar/accessibility) section.
 
 It helps people with disabilities by providing information about the widget for assistive technology in the screen readers. DateRangePicker component contains grid role and grid cell for each day cell.
 
@@ -51,7 +51,7 @@ It helps people with disabilities by providing information about the widget for 
 
 ## Keyboard interaction
 
-Use the following keys to interact with the DateRangePicker. This component implements the keyboard navigation support by following the  [WAI-ARIA practices](https://www.w3.org/TR/wai-aria-practices/).
+Use the following keys to interact with the DateRangePicker. This component implements the keyboard navigation support by following the  [WAI-ARIA practices](https://www.w3.org/WAI/ARIA/apg/).
 
 It supports the following list of shortcut keys:
 
@@ -87,7 +87,7 @@ Use the following list of keys to navigate the currently focused Calendar after 
 | <kbd>Alt + Right</kbd>  | Focuses through out the pop-up container in forward direction. |
 | <kbd>Alt + Left</kbd>  | Focuses through out the pop-up container in backward direction. |
 
-N> To focus out the DateRangePicker component, use the `t` keys. For additional information about native event, [click](./native-events/) here.
+N> To focus out the DateRangePicker component, use the `t` keys. For additional information about native event, [click](https://blazor.syncfusion.com/documentation/daterangepicker/native-events) here.
 
 ```cshtml
 @using Syncfusion.Blazor.Calendars
