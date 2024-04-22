@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Customize Color Picker in Blazor Color Picker Component | Syncfusion
-description: Learn here all about Customize Color Picker in Syncfusion Blazor Color Picker component and more.
+description: Learn here all about Blazor Color Picker Customize in Syncfusion component and more.
 platform: Blazor
 control: Color Picker
 documentation: ug
