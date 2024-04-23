@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Styling and Appearance in Blazor Kanban Component | Syncfusion
-description: Checkout and learn here all about styling and appearance in Syncfusion Blazor Kanban component and more.
+description: Checkout and learn here all about styling and appearance in Syncfusion Blazor Kanban component, it's elements and more.
 platform: Blazor
 control: Kanban
 documentation: ug
