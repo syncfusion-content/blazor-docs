@@ -1,7 +1,7 @@
 ---
 layout: post
-title: TimePicker CSS Customization in Blazor Component | Syncfusion
-description: Learn here all about Blazor TimePicker CSS customization in Syncfusion component and more.
+title: CSS Customization in Blazor TimePicker Component | Syncfusion
+description: Checkout and learn here all about CSS customization in Syncfusion Blazor TimePicker component and more.
 platform: Blazor
 control: TimePicker
 documentation: ug
