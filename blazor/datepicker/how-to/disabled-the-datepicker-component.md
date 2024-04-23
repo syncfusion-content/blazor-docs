@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Disable the Syncfusion Blazor DateRangePicker Component | Syncfusion
-description: Checkout and learn here all about disabling the Syncfusion Blazor DateRangePicker Component and much more.
+description: Checkout and learn here all about disabling the Syncfusion Blazor DateRangePicker Component and more.
 platform: Blazor
 control: DatePicker
 documentation: ug
