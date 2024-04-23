@@ -222,7 +222,10 @@ The segmented taskbars can be merged together using **Merge Task** context menu 
 In the segments tab of the [add/edit dialog](https://blazor.syncfusion.com/documentation/gantt-chart/editing-tasks#dialog-editing), taskbars can be split or merged by providing the segments details such as the start date, end date, and duration. However, it's important to note that the segment start date and end date cannot exceed the task's start date and end date.
 
 ```cshtml
+
 @using Syncfusion.Blazor.Gantt
+@using System.ComponentModel.DataAnnotations
+
 <SfGantt TValue="TaskData" EnableContextMenu="true" DataSource="@taskCollection" Height="450px" Width="100%" TreeColumnIndex="1" Toolbar="@(new List<Object>() { "Add", "Cancel", "Update" , "Delete", "Edit", "CollapseAll", "ExpandAll", "ZoomIn", "ZoomOut", "ZoomToFit" })" RowHeight="37" ProjectStartDate="projectStart" ProjectEndDate="projectEnd">
     <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" ParentID="ParentId" Dependency="Predecessor">
     </GanttTaskFields>
@@ -254,8 +257,11 @@ In the segments tab of the [add/edit dialog](https://blazor.syncfusion.com/docum
     {
         public int Id { get; set; }
         public int TaskId { get; set; }
+        [Display(Name = "Start Date")]
         public DateTime SegmentStartDate { get; set; }
+        [Display(Name = "End Date")]
         public DateTime SegmentEndDate { get; set; }
+        [Display(Name = "Duration")]
         public string SegmentDuration { get; set; }
     }
     public class TaskData
