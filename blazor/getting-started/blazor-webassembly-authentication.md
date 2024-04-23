@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting Started with Syncfusion Blazor WASM Standalone App with Authentication Library
+title: Getting Started with Blazor WebAssembly App with Authentication Library
 description: Check out the documentation for getting started with Blazor WebAssembly App and Syncfusion Blazor Components with Authentication Library.
 platform: Blazor
 component: Common
 documentation: ug
 ---
 
-# Getting Started with Blazor WASM Standalone App with Authentication Library
+# Getting Started with Blazor WebAssembly App with Authentication Library
 
 This article provides a step-by-step instructions for building and securing Blazor WebAssembly Standalone App with Blazor WebAssembly Authentication library using [Visual Studio](https://visualstudio.microsoft.com/vs/).
 
