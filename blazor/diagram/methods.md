@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Diagram Methods in Blazor Diagram Component | Syncfusion
-description: Learn here all about diagram methods support in Syncfusion Blazor Diagram component, it's elements and more.
+description: Checkout and learn here all about diagram methods support in Syncfusion Blazor Diagram component, it's elements and more.
 platform: Blazor
 control: DiagramComponent
 documentation: ug

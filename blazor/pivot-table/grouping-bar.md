@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Grouping Bar in Blazor Pivot Table Component | Syncfusion
-description: Checkout and learn here all about grouping bar in Syncfusion Blazor Pivot Table component and much more.
+description: Checkout and learn here all about grouping bar in Syncfusion Blazor Pivot Table component, it's elements and more.
 platform: Blazor
 control: Pivot Table
 documentation: ug
