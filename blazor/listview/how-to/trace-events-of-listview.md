@@ -1,7 +1,11 @@
 ---
 layout: post
 title: Trace events of listview in Blazor ListView Component | Syncfusion
+<<<<<<< HEAD
 description: Checkout and learn here all about trace events of listview in Syncfusion Blazor ListView component, it's elements and more.
+=======
+description: Checkout and learn here all about trace events of listview in Syncfusion Blazor ListView component and more.
+>>>>>>> parent of 4e9378641 (SEO-174654-Coverage-Issues)
 platform: Blazor
 control: Listview
 documentation: ug

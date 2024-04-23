@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Blazor ListView Component with hyper-link navigation | Syncfusion
-description: Learn here all about Blazor Listview How to ListView with Hyper Link Navigation in Syncfusion component and more.
+description: Checkout and learn here all about Blazor ListView Component with hyper-link navigation and much more.
 platform: Blazor
 control: Listview
 documentation: ug
