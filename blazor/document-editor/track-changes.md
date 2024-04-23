@@ -20,6 +20,26 @@ The following example demonstrates how to enable track changes.
 </SfDocumentEditorContainer>
 ```
 
+## Show/Hide Revisions Pane
+ 
+The Show/Hide Revisions Pane feature in the Document Editor allows users to toggle the visibility of the revisions pane, providing flexibility in managing tracked changes within the document.
+ 
+The following example code illustrates how to show/hide the revisions pane.
+
+```typescript
+
+@using Syncfusion.Blazor.DocumentEditor
+<SfDocumentEditorContainer @ref="container" EnableToolbar=true EnableTrackChanges=true></SfDocumentEditorContainer>
+
+@code {
+    SfDocumentEditorContainer container;
+    container.documentEditor.showRevisions = true; // To show revisions pane
+    container.documentEditor.showRevisions = false; // To hide revisions pane
+}
+
+```
+
+
 ## Navigate between the tracked changes
 
 The following example demonstrates how to navigate tracked revision programmatically.
