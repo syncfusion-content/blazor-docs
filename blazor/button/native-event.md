@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Native Events in Blazor Button Component | Syncfusion
-description: Learn here all about native events support in Syncfusion Blazor Button component, it's elements and more.
+description: Checkout and learn here all about native events support in Syncfusion Blazor Button component, it's elements and more.
 platform: Blazor
 control: Button
 documentation: ug
