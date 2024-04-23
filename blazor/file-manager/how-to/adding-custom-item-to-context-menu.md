@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Adding Custom Item to Context Menu in Blazor FileManager | Syncfusion
-description: Learn here all about adding custom item to context menu in Syncfusion Blazor FileManager component and more.
+description: Learn here all about Blazor FileManager adding custom item to context menu in Syncfusion component and more.
 platform: Blazor
 control: File Manager
 documentation: ug
