@@ -580,7 +580,7 @@ Add the `CultureSwitcher` component to `Shared/MainLayout.razor` to enable the c
 
 ### MAUI Blazor App
 
-In `App.xaml.cs`, use [Preferences](https://learn.microsoft.com/en-us/dotnet/maui/platform-integration/storage/preferences) to retrieve the user's stored culture selection. If the storage doesn't contain a culture for the user, the code sets a default value of United States English (en-US).
+In `App.xaml.cs`, use [Preferences](https://learn.microsoft.com/en-us/dotnet/maui/platform-integration/storage/preferences?view=net-maui-8.0&tabs=windows) to retrieve the user's stored culture selection. If the storage doesn't contain a culture for the user, the code sets a default value of United States English (en-US).
 
 {% tabs %}
 
@@ -608,7 +608,7 @@ namespace LocalizationMauiBlazor
 
 {% endtabs %}
 
-Create `CultureSwitcher` component to store the user's culture selection via [Preferences](https://learn.microsoft.com/en-us/dotnet/maui/platform-integration/storage/preferences) and to force reload the page using the updated culture.
+Create `CultureSwitcher` component to store the user's culture selection via [Preferences](https://learn.microsoft.com/en-us/dotnet/maui/platform-integration/storage/preferences?view=net-maui-8.0&tabs=windows) and to force reload the page using the updated culture.
 
 {% tabs %}
 
