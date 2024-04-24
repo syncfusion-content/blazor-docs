@@ -394,7 +394,7 @@ Add the `CultureSwitcher` component to `~/MainLayout.razor` to enable the cultur
 
 Set the app's supported cultures. Also, ensure the app is configured to process controller actions by calling `AddControllers` and `MapControllers`.
 
-If you create a Blazor Web App with an **Interactive render mode** such as `Server` you need to ensure the registration of the SyncfusionLocalizer and Syncfusion Blazorservices in ~/Program.cs files.
+If you create a Blazor Web App with an **Interactive render mode** as `Server` make sure to include the registration of SyncfusionLocalizer and Syncfusion Blazor services in the ~/Program.cs files.
 
 {% tabs %}
 
@@ -438,22 +438,12 @@ app.Run();
 
 {% endhighlight %}
 
-{% highlight c# tabtitle=".NET 8 (~/Program.cs)" hl_lines="12 13 16 17 18 19 20 21 22 23 34" %}
+{% highlight c# tabtitle=".NET 8 (~/Program.cs)" hl_lines="4 6 7 8 9 10 13 16 17 18 19 20 21 22 23 34" %}
 
-@using System.Globalization
-@using Microsoft.AspNetCore.Localization
-
-var builder = WebApplication.CreateBuilder(args);
-
-// Add services to the container.
-builder.Services.AddRazorPages();
-builder.Services.AddServerSideBlazor();
-builder.Services.AddSingleton<WeatherForecastService>();
 builder.Services.AddControllers();
 
 builder.Services.AddSyncfusionBlazor();
 builder.Services.AddLocalization();
-
 
 var supportedCultures = new[] { "en-US", "de-DE", "fr-FR", "ar-AE", "zh-HK" };
 var localizationOptions = new RequestLocalizationOptions()
