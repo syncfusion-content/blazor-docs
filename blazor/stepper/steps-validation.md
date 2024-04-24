@@ -268,3 +268,5 @@ You can integrate form validation within the Blazor Stepper using the `EditForm`
 </style>
 
 ```
+
+![Blazor Stepper validation with editform](./images/Blazor-editform-validation.png)
