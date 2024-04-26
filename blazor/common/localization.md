@@ -390,7 +390,7 @@ Add the `CultureSwitcher` component to `~/MainLayout.razor` to enable the cultur
 
 {% endtabs %}
 
-### Blazor Server App and Blazor Web App (Server)
+### Blazor Server App and Blazor Web App (Interactive Server)
 
 Set the app's supported cultures. Also, ensure the app is configured to process controller actions by calling `AddControllers` and `MapControllers`.
 
