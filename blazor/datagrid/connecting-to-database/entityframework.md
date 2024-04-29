@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Bind SQL data to Blazor DataGrid using EntityFramework | Syncfusion
-description: Learn about consuming data from SQL Server using Entity Framework, binding it to Syncfusion components, and performing CRUD operations.
+title: Connecting SQL data to a Blazor DataGrid Component using Entity Framework | Syncfusion
+description: Learn about consuming data using Entity Framework from Microsoft SQL Server, binding it to Syncfusion Component, and performing CRUD operations.
 platform: Blazor
 control: DataGrid
 documentation: ug
 ---
 
-# Connecting SQL data to Blazor DataGrid using Entity Framework
+# Connecting Microsoft SQL Server data to Blazor DataGrid using Entity Framework
 
-This section describes how to connect and retrieve data from a Microsoft SQL Server database using [Entity Framework ](https://learn.microsoft.com/en-us/ef/core/) and bind it to the Blazor DataGrid component.
+This section describes how to connect and retrieve data from a Microsoft SQL Server database using [Entity Framework](https://learn.microsoft.com/en-us/ef/core/) and bind it to the Blazor DataGrid component.
 
 Microsoft SQL Server database can be bound to the Blazor DataGrid component using **Entity Framework** in different ways (i.e.) using [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_DataSource) property, [CustomAdaptor](https://blazor.syncfusion.com/documentation/datagrid/custom-binding) feature and remote data binding using various adaptors. In this documentation, two approaches will be examined to connect a Microsoft SQL Server database to a Blazor DataGrid component using **Entity Framework**. Both the approaches have capability to handle data and CRUD operations with built-in methods as well as can be customized as per your own.
 
@@ -37,7 +37,7 @@ This section describes step by step process how to use Entity Framework to retri
 
 **3.** Create an API controller (aka, GridController.cs) file under **Controllers** folder that helps to establish data communication with the Blazor DataGrid component.
 
-**4** In the API controller (aka, GridController), a connection is established to Microsoft SQL Server within the **Get()** method using **OrderDbContext**. This class extends **DbContext** and is configured to connect to a SQL Server database using the provided connection string. It includes a **DbSet<Order>** property, enabling interaction with the Orders table in the database. The method retrieves all orders from the database asynchronously and returns them as a list of `Order` objects as shown in the following code snippet.
+**4** In the API controller (aka, GridController), a connection is established to Microsoft SQL Server within the **Get()** method using **OrderDbContext**. This class extends **DbContext** and is configured to connect to a Microsoft SQL Server database using the provided connection string. It includes a **DbSet<Order>** property, enabling interaction with the Orders table in the database. The method retrieves all orders from the database asynchronously and returns them as a list of `Order` objects as shown in the following code snippet.
 
 {% tabs %}
 {% highlight razor tabtitle="GridController.cs"%}
@@ -87,7 +87,7 @@ namespace MyWebService.Controllers
             }
             protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
             {
-                // Configure DbContext to use SQL Server with the provided connection string
+                // Configure DbContext to use Microsoft SQL Server with the provided connection string
                 optionsBuilder.UseSqlServer(_ConnectionString);
             }
             // DbSet representing a collection of Order entities in the database
