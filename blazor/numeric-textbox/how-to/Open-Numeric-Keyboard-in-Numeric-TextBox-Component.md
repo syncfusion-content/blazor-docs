@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Open Numeric Keyboard in Numeric TextBox Component | Syncfusion
-description: Learn how to configure the NumericTextBox component to display the numeric keyboard in web applications.
+description: Learn how to configure the Numeric TextBox component to display the numeric keyboard in web applications.
 platform: Blazor
 control: Numeric TextBox
 documentation: ug
@@ -9,13 +9,13 @@ documentation: ug
 
 # Open Numeric Keyboard in Numeric TextBox Component
 
-When implementing a Numeric Textbox in a web application, it is often desirable to restrict input to numeric values and to display the numeric keyboard on devices that support it. This can enhance the user experience by providing an appropriate keyboard for data entry.
+When implementing a Numeric TextBox in a web application, it is often desirable to restrict input to numeric values and to display the numeric keyboard on devices that support it. This can enhance the user experience by providing an appropriate keyboard for data entry.
 
 ## Enabling the Numeric Keyboard
 
-To configure the Numeric Textbox to use the numeric keyboard, you can set the `type` attribute to `"tel"`. This instructs the browser to display the numeric keyboard on devices where it is available.
+To configure the Numeric TextBox to use the numeric keyboard, you can set the `type` attribute to `"tel"`. This instructs the browser to display the numeric keyboard on devices where it is available.
 
-Here is an example code snippet using the Syncfusion Blazor NumericTextBox component:
+Here is an example code snippet using the Syncfusion Blazor Numeric TextBox component:
 
 ```csharp
 @using Syncfusion.Blazor.Inputs
@@ -25,15 +25,13 @@ Here is an example code snippet using the Syncfusion Blazor NumericTextBox compo
 </div>
 ```
 
-By setting the `type` attribute to `"tel"`, the Numeric Textbox will trigger the numeric keyboard on supported devices, making it easier for users to enter numeric data.
-
-## Preview
+By setting the `type` attribute to `"tel"`, the Numeric TextBox will trigger the numeric keyboard on supported devices, making it easier for users to enter numeric data.
 
 ![Open Numeric Keyboard in Numeric TextBox Component](../images/Open-Numeric-Keyboard-in-Numeric-TextBox-Component.gif)
 
 ## Fallback for Unsupported Browsers
 
-It is important to note that not all browsers support the `type="tel"` attribute. In cases where a browser does not support this attribute, the `Numeric Textbox` will fall back to being a standard text input. This ensures that the functionality remains intact across all browsers, even if the enhanced keyboard experience is not available.
+It is important to note that not all browsers support the `type="tel"` attribute. In cases where a browser does not support this attribute, the `Numeric TextBox` will fall back to being a standard text input. This ensures that the functionality remains intact across all browsers, even if the enhanced keyboard experience is not available.
 
 ## Live Sample
 
