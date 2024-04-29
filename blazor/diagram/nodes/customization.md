@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Customization in Blazor Diagram Component | Syncfusion
-description: Checkout and learn here all about Customization in Syncfusion Blazor Diagram component and much more.
+description: Checkout and learn here all about customization support in Syncfusion Blazor Diagram component, it's elements and more.
 platform: Blazor
 control: Diagram Component
 documentation: ug
