@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Connecting SQL data to a Blazor DataGrid Component using Entity Framework | Syncfusion
+title: Connecting SQL data to Blazor DataGrid using Entity Framework | Syncfusion
 description: Learn about consuming data using Entity Framework from Microsoft SQL Server, binding it to Syncfusion Component, and performing CRUD operations.
 platform: Blazor
 control: DataGrid
 documentation: ug
 ---
 
-# Connecting Microsoft SQL Server data to Blazor DataGrid using Entity Framework
+# Connecting SQL Server data to Blazor DataGrid using Entity Framework
 
 This section describes how to connect and retrieve data from a Microsoft SQL Server database using [Entity Framework](https://learn.microsoft.com/en-us/ef/core/) and bind it to the Blazor DataGrid component.
 
