@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Open Numeric Keyboard in Numeric TextBox Component | Syncfusion
-description: Learn how to configure the NumericTextBox component in order to display the numeric keyboard.
+description: Learn how to configure the NumericTextBox to display the numeric keyboard.
 platform: Blazor
 control: Numeric TextBox
 documentation: ug
