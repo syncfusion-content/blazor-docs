@@ -195,6 +195,10 @@ Using [EnableSelectionOrder](https://help.syncfusion.com/cr/blazor/Syncfusion.Bl
 
 ![Changing Selection Order in Blazor MultiSelect DropDown](./images/blazor-multiselect-dropdown-change-selection-order.png)
 
+## Limitation
+
+In checkbox mode, the HTML element isn't rendered inside the input, making implementing a value template challenging. This is because checkbox inputs in HTML have separate label and input elements. As a result, integrating a value template directly within the checkbox input isn't feasible.
+
 ## See Also
 
 * [Blazor MultiSelect DropDown with selection stacked vertically in CheckBox](https://www.syncfusion.com/forums/172062/how-to-stack-selected-items-vertically-in-a-multiselct-dropdown)
