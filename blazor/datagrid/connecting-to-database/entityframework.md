@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Connecting SQL data to Blazor DataGrid using Entity Framework | Syncfusion
+title: Connecting SQL to Blazor DataGrid using Entity Framework | Syncfusion
 description: Learn about consuming data using Entity Framework from Microsoft SQL Server, binding it to Syncfusion Component, and performing CRUD operations.
 platform: Blazor
 control: DataGrid
@@ -572,7 +572,7 @@ When you run the application, the resultant Blazor DataGrid component will look 
 
 ![Blazor DataGrid component bound with Microsoft SQL Server data using Entity Framework](../images/blazor-Grid-Ms-SQl-databinding-Gif.gif)
 
-> Find the sample from this [GitHub location]().
+> Find the sample from this [GitHub location](https://github.com/SyncfusionExamples/connecting-databases-to-blazor-datagrid-component/tree/master/Bindind%20SQL%20database%20using%20EF%20and%20UrlAdaptor).
 
 ## Binding data from Microsoft SQL Server using Entity Framework with CustomAdaptor
 
@@ -1184,4 +1184,4 @@ public override async Task<object> BatchUpdateAsync(DataManager DataManager, obj
 
 ![Blazor DataGrid component bound with Microsoft SQL Server data using Entity Framework](../images/blazor-Grid-Ms-SQl-databinding-Gif.gif)
 
-> You can find the sample in this [GitHub location]().
+> You can find the sample in this [GitHub location](https://github.com/SyncfusionExamples/connecting-databases-to-blazor-datagrid-component/tree/master/Binding%20SQL%20database%20using%20EF%20and%20CustomAdaptor).
