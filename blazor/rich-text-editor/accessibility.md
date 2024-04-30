@@ -7,23 +7,24 @@ control: RichTextEditor
 documentation: ug
 ---
 
-# Accessibility in Blazor Rich text editor Component
+# Accessibility in Blazor Rich Text Editor Component
 
-The Rich Text Editor component has been designed, keeping in mind the WAI-ARIA specifications, and applies the WAI-ARIA roles, states, and properties. This component is characterized by complete ARIA accessibility support that makes it easy for people who use assistive technologies (AT) or those who completely rely on keyboard navigation
+The [Blazor Rich Text Editor](https://www.syncfusion.com/blazor-components/blazor-wysiwyg-rich-text-editor) component has been designed, keeping in mind the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/) specifications, and applies the WAI-ARIA roles, states, and properties. This component is characterized by complete ARIA accessibility support that makes it easy for people who use assistive technologies (AT) or those who completely rely on keyboard navigation.
 
-The accessibility compliance for the Rich Text Editor component is outlined below.
+The Blazor Rich Text Editor component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
+
+The accessibility compliance for the Blazor Rich Text Editor component is outlined below.
 
 | Accessibility Criteria | Compatibility |
 | -- | -- |
-| WCAG 2.2 Support | <img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> |
+| [WCAG 2.2](https://www.w3.org/TR/WCAG22/) Support | <img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> |
 | [Section 508 Support](../common/accessibility#section-508) | <img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> |
 | Screen Reader Support | <img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> |
 | Right-To-Left Support | <img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> |
 | Color Contrast | <img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Intermediate"> |
 | Mobile Device Support | <img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> |
 | [Keyboard Navigation](../common/accessibility#keyboard-navigation) | <img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> |
-| Accessibility Checker Validation | <img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Intermediate"> |
-| Axe-core Accessibility Validation | <img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> |
+| [Axe-core](https://www.nuget.org/packages/Deque.AxeCore.Playwright) Accessibility Validation | <img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> |
 
 <style>
     .post .post-content img {
@@ -37,9 +38,9 @@ The accessibility compliance for the Rich Text Editor component is outlined belo
 
 <div><img src="https://cdn.syncfusion.com/content/images/documentation/not-supported.png" alt="No"> - The component does not meet the requirement.</div>
 
-## ARIA attributes
+## WAI-ARIA attributes
 
-* The toolbar of Rich Text Editor, assigned the role of `Toolbar` and has the following list of ARIA attribute.
+* The toolbar of Blazor Rich Text Editor, assigned the role of `Toolbar` and has the following list of [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/) attribute.
 
 | **Property** | **Functionalities** |
 | --- | --- |
@@ -51,7 +52,7 @@ The accessibility compliance for the Rich Text Editor component is outlined belo
 
 For further details of Toolbar ARIA attributes, refer the  [`accessibility of Toolbar`](../../toolbar/accessibility) documentation.
 
-The Rich Text Editor element is assigned the role of `application`.
+The Blazor Rich Text Editor element is assigned the role of `application`.
 
 | **Property** | **Functionalities** |
 | --- | --- |
@@ -70,11 +71,11 @@ The Rich Text Editor element is assigned the role of `application`.
 
 ## Keyboard interaction
 
-The Rich Text Editor component followed the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/alert/#keyboardinteraction) guideline, making it easy for people who use assistive technologies (AT) and those who completely rely on keyboard navigation. The following keyboard shortcuts are supported by the Rich Text Editor component. 
+The Blazor Rich Text Editor component followed the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/alert/#keyboardinteraction) guideline, making it easy for people who use assistive technologies (AT) and those who completely rely on keyboard navigation. The following keyboard shortcuts are supported by the Rich Text Editor component. 
 
 ### HTML formation shortcut key
 
-You can use the following key shortcuts when the Rich Text Editor renders with HTML edit mode.
+You can use the following key shortcuts when the Blazor Rich Text Editor renders with HTML edit mode.
 
 | Actions | Keyboard shortcuts |
 |----------------|---------|
@@ -113,7 +114,7 @@ You can use the following key shortcuts when the Rich Text Editor renders with H
 
 ### Markdown formation shortcut key
 
-You can use the following key shortcuts when the Rich Text Editor renders with Markdown edit mode
+You can use the following key shortcuts when the Blazor Rich Text Editor renders with Markdown edit mode.
 
 | Actions | Keyboard shortcuts |
 |----------------|---------|
@@ -133,7 +134,7 @@ You can use the following key shortcuts when the Rich Text Editor renders with M
 | Lowercase| <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>l</kbd> |
 | Superscript| <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>=</kbd> |
 | Subscript| <kbd>Ctrl</kbd> + <kbd>=</kbd> |
-| Fullscreen| <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>f</kbd> |
+| Full screen| <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>f</kbd> |
 | Ordered list| <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>o</kbd> |
 | Unordered list| <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>o</kbd> |
 
@@ -149,9 +150,9 @@ You can use the following key shortcuts when the Rich Text Editor renders with M
 
 ## Ensuring accessibility
 
-The Rich Text Editor component's accessibility levels are ensured through an [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) software tools during automated testing.
+The Blazor Rich Text Editor component's accessibility levels are ensured through an [axe-core](https://www.npmjs.com/package/axe-core) software tool during automated testing.
 
-The accessibility compliance of the Rich Text Editor component is shown in the following sample. Open the sample in a new window to evaluate the accessibility of the Rich Text Editor component with accessibility tools.
+The accessibility compliance of the Rich Text Editor component is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/rich-text-editor) in a new window to evaluate the accessibility of the Rich Text Editor component with accessibility tools.
 
 ### Custom key configuration
 
@@ -172,5 +173,4 @@ N> You can refer to our [Blazor Rich Text Editor](https://www.syncfusion.com/bla
 
 ## See also
 
-* [Globalization](./globalization)
-* [Accessibility](./accessibility)
+* [Accessibility in Syncfusion Blazor components](../common/accessibility)

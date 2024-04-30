@@ -84,7 +84,7 @@ var app = builder.Build();
 
 The above configuration enables the Right-To-Left (RTL) support globally for all the Syncfusion Blazor components. For illustration, the Syncfusion Blazor DataGrid component is displayed with Right-To-Left (RTL).
 
-![Blazor Grid component is rendered from the right to left](images/rteGrid.png)
+![Blazor Grid component is rendered from the right to left](images/rtegrid.png)
 
 ## Enable RTL to individual component
 
@@ -121,4 +121,4 @@ In the below code example, right to left enabled for `SfDropDownList` component 
 
 ```
 
-![Blazor component is rendered from the right-to-left](images/rightToLeft.png)
+![Blazor component is rendered from the right-to-left](images/righttoleft.png)

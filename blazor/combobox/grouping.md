@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Grouping in Blazor ComboBox Component | Syncfusion
-description: Checkout and learn here all about Grouping in the Syncfusion Blazor ComboBox component and much more.
+description: Checkout and learn here all about grouping support in Syncfusion Blazor ComboBox component, it's elements and more.
 platform: Blazor
 control: ComboBox
 documentation: ug
