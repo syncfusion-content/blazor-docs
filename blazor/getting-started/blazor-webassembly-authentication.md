@@ -32,8 +32,8 @@ You can create a **Blazor WebAssembly Standalone App** using Visual Studio via [
   "Local": {
     "Authority": "https://accounts.google.com/",
     "ClientId": "2...7-e...q.apps.googleusercontent.com",
-    "PostLogoutRedirectUri": "https://localhost:5001/authentication/logout-callback",
-    "RedirectUri": "https://localhost:5001/authentication/login-callback",
+    "PostLogoutRedirectUri": "https://<example.com>/authentication/logout-callback",
+    "RedirectUri": "https://<example.com>/authentication/login-callback",
     "ResponseType": "id_token"
   }
 }
@@ -45,7 +45,7 @@ You can create a **Blazor WebAssembly Standalone App** using Visual Studio via [
 
 ![OAuth 2.0 client ID](images/oauth-client-id.png)
 
-* The `RedirectUri` (https://localhost:5001/authentication/login-callback) should be registered in the Google APIs console as mentioned below.
+* The `RedirectUri` (https://<example.com>/authentication/login-callback) should be registered in the Google APIs console as mentioned below.
 
 ![OAuth RedirectUri](images/oauth-rediredt-uri.png)
 
