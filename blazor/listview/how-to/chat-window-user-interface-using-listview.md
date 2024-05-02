@@ -133,7 +133,7 @@ void OnSend()
         },
         new ListDataModel {
             Text = "Jenifer",
-            Contact = "What Knid of application going to launch",
+            Contact = "What Kind of application going to launch",
             Id = "4",
             Avatar = "",
             Pic = "pic02",
@@ -141,7 +141,7 @@ void OnSend()
         },
         new ListDataModel {
             Text = "Amenda ",
-            Contact = "A knid of Emergency broadcast App",
+            Contact = "A Kind of Emergency broadcast App",
             Id = "5",
             Avatar = "A",
             Pic = "",
