@@ -584,7 +584,7 @@ In `App.xaml.cs`, use [Preferences](https://learn.microsoft.com/en-us/dotnet/mau
 
 {% tabs %}
 
-{% highlight c# tabtitle="App.xaml.cs)" %}
+{% highlight c# tabtitle="App.xaml.cs" %}
 
 using System.Globalization;
 
