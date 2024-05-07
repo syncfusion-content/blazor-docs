@@ -369,23 +369,23 @@ Here is an example of how to customize the filter operators list in Syncfusion B
         new Operators() { Value= "endsWith", Text= "Ends With" },
         new Operators() { Value= "contains", Text= "Contains" },
         new Operators() { Value= "equal", Text= "Equal" },
-        new Operators() { Value= "notEqual", Text= "Not Equal" }
+        new Operators() { Value= "notequal", Text= "Not Equal" }
     };
     List<Syncfusion.Blazor.Grids.IFilterOperator> NumberOperator = new List<Syncfusion.Blazor.Grids.IFilterOperator> {
         new Operators()  { Value= "equal", Text= "Equal" },
-        new Operators() { Value= "notEqual", Text= "Not Equal" },
+        new Operators() { Value= "notequal", Text= "Not Equal" },
         new Operators() { Value= "greaterThan", Text= "Greater Than" },
         new Operators() { Value= "lessThan", Text= "Less Than" },
     };
     List<Syncfusion.Blazor.Grids.IFilterOperator> DateOperator = new List<Syncfusion.Blazor.Grids.IFilterOperator> {
          new Operators()  { Value= "equal", Text= "Equal" },
-        new Operators() { Value= "notEqual", Text= "Not Equal" },
+        new Operators() { Value= "notequal", Text= "Not Equal" },
         new Operators() { Value= "greaterThan", Text= "After" },
         new Operators() { Value= "lessThan", Text= "Before" },
     };
     List<Syncfusion.Blazor.Grids.IFilterOperator> BooleanOperator = new List<Syncfusion.Blazor.Grids.IFilterOperator> {
         new Operators()  { Value= "equal", Text= "Equal" },
-        new Operators() { Value= "notEqual", Text= "Not Equal" },
+        new Operators() { Value= "notequal", Text= "Not Equal" },
     };
 }
 {% endhighlight %}
@@ -438,7 +438,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/htBpDsVbcPPGFEgo?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rXVJtojQUZhLvrpa?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Filter by multiple keywords using filter menu
 
