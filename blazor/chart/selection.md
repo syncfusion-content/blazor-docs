@@ -181,6 +181,8 @@ Set [SelectionMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Char
 
 In the drag complete event, the selected data will be returned as an array collection.
 
+N> To initiate a rectangular selection gesture on a device, you must touch the screen, hold your touch, and then drag to define the area for selection on the chart.
+
 ```cshtml
 
 @using Syncfusion.Blazor.Charts
