@@ -358,7 +358,7 @@ The ```SearchAsync``` method allows you to perform a search operation based on a
     protected override void OnInitialized()
     {
         Orders = OrderData.GetAllRecords();
-    } 
+    }
     public void search()
     {
         var textBoxValue = TextBox.Value;
@@ -822,7 +822,7 @@ The following example demonstrates how to clear the searched records using an ex
     protected override void OnInitialized()
     {
         Orders = OrderData.GetAllRecords();
-    }  
+    }
     public async Task clearSearch()
     {
         await DefaultGrid.SearchAsync("");

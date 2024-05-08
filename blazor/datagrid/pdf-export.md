@@ -1279,7 +1279,7 @@ In the following demo, the [DrawString](https://help.syncfusion.com/cr/file-form
         height: 100px;
         transform: rotate(-60deg); // This is used to rotate the header text.
     }
-</style> 
+</style>
 ```
 
 ![PDF Exported Grid Cell Customization in Blazor DataGrid](./images/blazor-datagrid-pdf-exported-grid-cell-customization.png)
@@ -1446,9 +1446,9 @@ function saveAsFile(filename, bytesBase64) {
     public List<Order> Orders { get; set; }
 
     public async Task ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
-    {       
+    {
         if (args.Item.Id == "Grid_pdfexport") //Id is combination of Grid's ID and itemname
-        {           
+        {
             MemoryStream streamDoc = await DefaultGrid.ExportToPdfAsync(asMemoryStream: true);
             await JSRuntime.InvokeVoidAsync("saveAsFile", new object[] {"PdfMemoryStream.pdf", Convert.ToBase64String(streamDoc.ToArray()), true });
         }
@@ -1483,7 +1483,7 @@ function saveAsFile(filename, bytesBase64) {
 }
 ```
 
-### Converting Memory Stream to File Stream for Pdf Export
+### Converting Memory Stream to File Stream for PDF Export
 
 This section explains the process of converting a memory stream obtained from the `ExportToPdfAsync` method into a file stream to export pdf document.
 
@@ -1513,9 +1513,9 @@ The example provided demonstrates this process of exporting the pdf document fro
     public List<Order> Orders { get; set; }
 
     public async Task ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
-    {       
+    {
         if (args.Item.Id == "Grid_pdfexport") //Id is combination of Grid's ID and itemname
-        {           
+        {
             //Memory stream to file stream exporting
             MemoryStream streamDoc1 = await DefaultGrid.ExportToPdfAsync(asMemoryStream: true);
 
@@ -1562,7 +1562,7 @@ The example provided demonstrates this process of exporting the pdf document fro
 }
 ```
 
-### Merging Two Pdf Memory Streams
+### Merging Two PDF Memory Streams
 
 This section explains the process of combining two memory stream files and exporting the resulting merged file as a PDF document. To accomplish this, you can use the PDF documents [Merge](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.PdfDocumentBase.html#Syncfusion_Pdf_PdfDocumentBase_Merge_Syncfusion_Pdf_PdfDocumentBase_Syncfusion_Pdf_Parsing_PdfLoadedDocument_) method available in the [PdfDocumentBase](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.PdfDocumentBase.html) class, class. To achieve this functionality, you can utilize the [Syncfusion.Blazor.Pdf](https://www.nuget.org/packages/Syncfusion.Pdf.Net.Core/) package.
 
@@ -1592,7 +1592,7 @@ In this example, there are two memory streams: *streamDoc1* and *streamDoc2*. st
     public List<Order> Orders { get; set; }
 
     public async Task ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
-    {       
+    {
         if (args.Item.Id == "Grid_pdfexport") //Id is combination of Grid's ID and itemname
         {
             //Merging two memory stream
@@ -1603,7 +1603,7 @@ In this example, there are two memory streams: *streamDoc1* and *streamDoc2*. st
             MemoryStream streamDoc1 = await DefaultGrid.ExportToPdfAsync(asMemoryStream: true);
             //Create a copy of streamDoc1 to access the memory stream
             MemoryStream copyOfStreamDoc1 = new MemoryStream(streamDoc1.ToArray());
-            
+
             //Customized grid for memory stream export
             PdfExportProperties ExportProperties = new PdfExportProperties();
             PdfTheme Theme = new PdfTheme();

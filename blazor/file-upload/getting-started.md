@@ -278,6 +278,84 @@ The [OnFailure](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.U
 {% endhighlight %}
 {% endtabs %}
 
+### Server-side configuration for saving and returning responses
+
+The following example demonstrates the server-side action for saving files on the server and returning responses in JSON, String, and File formats.
+
+{% tabs %}
+{% highlight cshtml %}
+
+[Route("api/[controller]")]
+
+private IHostingEnvironment hostingEnv;
+
+public SampleDataController(IHostingEnvironment env)
+{
+    this.hostingEnv = env;
+}
+
+[HttpPost("[action]")]
+public IActionResult Save()
+{
+    // for JSON Data
+    try
+    {
+        // Process uploaded files
+        var responseData = new
+        {
+            Success = true,
+            Message = "Files uploaded successfully",
+            // Additional data can be added here
+        };
+
+        return Ok(responseData);
+    }
+    catch (Exception e)
+    {
+        var errorResponse = new
+        {
+            Success = false,
+            Message = "File upload failed: " + e.Message
+        };
+
+        return BadRequest(errorResponse);
+    }
+
+    // for String Data
+    try
+    {
+        // Process string data
+        var data = "success";
+        // Return the string data
+        return Content(data);
+    }
+    catch (Exception)
+    {
+        var data = "failed";
+        return Content(data);
+    }
+
+    // for File Data
+    try
+    {
+        // Example: Retrieve file path for stream.txt
+        var filePath = "stream.txt"; // Example file path
+        
+        var fullPath = Path.GetFullPath(filePath);
+
+        // Return the file
+        return PhysicalFile(fullPath, "text/plain");
+    }
+    catch (Exception e)
+    {
+        return Content("Failed to retrieve file response: " + e.Message, "text/plain");
+    }
+
+}
+
+{% endhighlight %}
+{% endtabs %}
+
 ## Configure allowed file types
 
 You can allow the specific files alone to upload using the [AllowedExtensions](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.UploaderModel.html#Syncfusion_Blazor_Inputs_UploaderModel_AllowedExtensions) property. The extension can be represented as collection by comma separators. The uploader component filters the selected or dropped files to match against the specified file types and processes the upload operation. The validation happens when you specify value to inline attribute to accept the original input element.

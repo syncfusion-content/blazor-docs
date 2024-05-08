@@ -178,7 +178,7 @@ The example below demonstrates how to customize the caption text in the PDF usin
 
 By default, the Grid exports the parent grid along with expanded detail rows only. To modify the exporting behavior, utilize the [PdfExportProperties.PdfDetailRowMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfDetailRowMode.html) property. The available options include:
 
-| Mode | Behaviour |
+| Mode | Behavior |
 |-------|----------|
 | Expand | Exports the parent grid with expanded detail rows.
 | None | Exports the parent grid alone.

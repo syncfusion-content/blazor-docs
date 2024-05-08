@@ -1,0 +1,34 @@
+@using Syncfusion.Blazor.DropDowns
+
+<SfAutoComplete TValue="string" TItem="Country" Placeholder="Select a customer" DataSource="@Country">
+    <AutoCompleteTemplates TItem="Country">
+        <NoRecordsTemplate>
+            <span class='norecord'> NO DATA AVAILABLE</span>
+        </NoRecordsTemplate>
+    </AutoCompleteTemplates>
+    <AutoCompleteFieldSettings Value="Name"></AutoCompleteFieldSettings>
+</SfAutoComplete>
+
+@code {
+    public class EmployeeData
+    {
+        public string Name { get; set; }
+    }
+    public EmployeeData Data = new EmployeeData();
+
+    public class Country
+    {
+        public string Name { get; set; }
+
+        public string Code { get; set; }
+    }
+
+    List<Country> Country = new List<Country>
+{
+        new Country() { Name = "Australia", Code = "AU" },
+        new Country() { Name = "Bermuda", Code = "BM" },
+        new Country() { Name = "Canada", Code = "CA" },
+        new Country() { Name = "Cameroon", Code = "CM" },
+        new Country() { Name = "Denmark", Code = "DK" },
+    };
+}

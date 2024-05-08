@@ -9,7 +9,7 @@ documentation: ug
 
 # Custom Resource Generator
 
-Syncfusion provides an option to generate a component's interop script and styles using the [Custom Resource Generator](https://blazor.syncfusion.com/crg/) (CRG) web tool for Blazor components from v19.2.0.44.
+Syncfusion provides an option to generate a component's interop script and styles using the [Custom Resource Generator](https://blazor.syncfusion.com/crg/) (CRG) web tool for Blazor components from v19.2.0.44. This tool empowers users by generating precise interop scripts and styles specifically for their components. By leveraging the CRG, you can optimize loading times and enhance responsiveness compared to loading overall script and style resources.
 
 ![Custom resource generator preview for Blazor](images/custom-resource-generator-preview.png)
 

@@ -2,7 +2,7 @@
 @using Syncfusion.Blazor.DropDowns
 
 <SfAutoComplete TValue="string" TItem="OrderDetails" Placeholder="Select a customer" AllowFiltering=true Query="@Query" @bind-Value="@OrderValue" Width="300px">
-    <SfDataManager Url="https://services.odata.org/V4/Northwind/Northwind.svc/Orders" Adaptor="Syncfusion.Blazor.Adaptors.ODataV4Adaptor" CrossDomain=true></SfDataManager>
+    <SfDataManager Url="https://blazor.syncfusion.com/services/production/api/Orders" Adaptor="Syncfusion.Blazor.Adaptors.WebApiAdaptor" CrossDomain=true></SfDataManager>
     <AutoCompleteFieldSettings Value="CustomerID"></AutoCompleteFieldSettings>
 </SfAutoComplete>
 

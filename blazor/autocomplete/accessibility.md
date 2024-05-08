@@ -82,44 +82,7 @@ N> In the following sample, disable the AutoComplete component using <kbd>t</kbd
 
 {% highlight cshtml %}
 
-@using Syncfusion.Blazor.DropDowns
-
-<SfAutoComplete TValue="string" TItem="Country" @ref="AutoObj" Placeholder="Select a country" Enabled="@enable" @onkeypress="@(e => KeyPressed(e))" DataSource="@LocalData">
-    <AutoCompleteFieldSettings Value="Name"></AutoCompleteFieldSettings>
-</SfAutoComplete>
-
-@code {
-
-    public SfAutoComplete<string, Country> AutoObj;
-
-    public bool enable { get; set; } = true ;
-    public class Country
-    {
-        public string Name { get; set; }
-        public string Code { get; set; }
-    }
-
-    List<Country> LocalData = new List<Country> {
-        new Country() { Name = "Australia", Code = "AU" },
-        new Country() { Name = "Bermuda", Code = "BM" },
-        new Country() { Name = "Canada", Code = "CA" },
-        new Country() { Name = "Cameroon", Code = "CM" },
-        new Country() { Name = "Denmark", Code = "DK" },
-        new Country() { Name = "France", Code = "FR" },
-        new Country() { Name = "Finland", Code = "FI" },
-        new Country() { Name = "Germany", Code = "DE" },
-        new Country() { Name = "Greenland", Code = "GL" },
-        new Country() { Name = "Hong Kong", Code = "HK" },
-    };
-
-    public void KeyPressed(KeyboardEventArgs args)
-    {
-        if (args.Key == "t")
-        {
-            enable = false;
-        }
-    }
-}
+{% include_relative code-snippet/accessibility/accessibility.razor %}
 
 {% endhighlight %}
 
@@ -130,8 +93,6 @@ N> In the following sample, disable the AutoComplete component using <kbd>t</kbd
 The Blazor AutoComplete component's accessibility levels are ensured through an [axe-core](https://www.npmjs.com/package/axe-core) software tool during automated testing.
 
 The accessibility compliance of the AutoComplete component is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/autocomplete) in a new window to evaluate the accessibility of the AutoComplete component with accessibility tools.
-
-{% previewsample "https://blazor.syncfusion.com/accessibility/autocomplete" %}
 
 ## See also
 

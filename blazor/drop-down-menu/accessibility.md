@@ -51,7 +51,7 @@ The Blazor Dropdown Menu component followed the WAI-ARIA patterns to meet the ac
 
 ## Keyboard interaction
 
-The Blazor Dropdown button component followed the [keyboard interaction] guideline, making it easy for people who use assistive technologies (AT) and those who completely rely on keyboard navigation. The following keyboard shortcuts are supported by the Blazor Dropdown Menu component.
+The Blazor Dropdown button component followed the keyboard interaction guideline, making it easy for people who use assistive technologies (AT) and those who completely rely on keyboard navigation. The following keyboard shortcuts are supported by the Blazor Dropdown Menu component.
 
 | **Press** | **To do this** |
 | --- | --- |

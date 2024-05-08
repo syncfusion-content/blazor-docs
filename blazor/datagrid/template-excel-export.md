@@ -82,7 +82,7 @@ In the following sample, the **CustomerID** column is a template column. The tem
 
 ## Exporting with group caption template
 
-The Excel export feature enables exporting of Grid with a caption template to an Excel document. 
+The Excel export feature enables exporting of Grid with a caption template to an Excel document.
 
 The example below demonstrates how to customize the caption text in the Excel using the [ExcelGroupCaptionTemplateInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_ExcelGroupCaptionTemplateInfo) event.
 
@@ -181,7 +181,7 @@ The example below demonstrates how to customize the caption text in the Excel us
 
 By default, the Grid exports the parent grid along with expanded detail rows only. To modify the exporting behavior, utilize the [ExcelExportProperties.ExcelDetailRowMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelDetailRowMode.html) property. The available options include:
 
-| Mode | Behaviour |
+| Mode | Behavior |
 |-------|----------|
 | Expand | Exports the parent grid with expanded detail rows.
 | Collapse | Exports the parent grid with collapsed detail rows.

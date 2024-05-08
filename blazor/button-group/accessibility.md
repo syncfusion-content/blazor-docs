@@ -50,7 +50,7 @@ The Blazor Button Group component followed the [keyboard interaction](https://ww
 
 ## Ensuring accessibility
 
-The Blazor Button Group component's accessibility levels are ensured through an [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) software tools during automated testing.
+The Blazor Button Group component's accessibility levels are ensured through an an [axe-core](https://www.nuget.org/packages/Deque.AxeCore.Playwright) with playwright tests.
 
 The accessibility compliance of the Blazor Button Group component is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/button-group) in a new window to evaluate the accessibility of the Blazor Button Group component with accessibility tools.
 
