@@ -30,6 +30,7 @@ The accessibility compliance for the Blazor Gantt component is outlined below.
         margin: 0.5em 0;
     }
 </style>
+
 <div><img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> - All features of the component meet the requirement.</div>
 
 <div><img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Intermediate"> - Some features of the component do not meet the requirement.</div>
@@ -90,7 +91,6 @@ Interaction Keys |Description
 The Blazor Gantt component's accessibility levels are ensured through an [axe-core](https://www.nuget.org/packages/Deque.AxeCore.Playwright) with playwright tests.
 
 The accessibility compliance of the Blazor Gantt component is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/gantt-chart) in a new window to evaluate the accessibility of the Blazor Gantt component with accessibility tools.
-
 
 N> You can refer to our [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Gantt Chart example](https://blazor.syncfusion.com/demos/gantt-chart/default-functionalities?theme=bootstrap5) to know how to render and configure the Gantt.
 

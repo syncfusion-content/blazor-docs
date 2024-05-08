@@ -37,11 +37,13 @@ The accessibility compliance for the Blazor diagram component is outlined below:
 
 <div><img src="https://cdn.syncfusion.com/content/images/documentation/not-supported.png" alt="No"> - The component does not meet the requirement.</div>
 
-## WAI-ARIA
+## WAI-ARIA attributes
 
 The Blazor Diagram component followed the WAI-ARIA patterns to meet the accessibility. The following ARIA attributes are used in the Blazor Diagram component:
 
-* aria-label (attribute): Provides a label or description for an element to aid assistive technologies in conveying its purpose or meaning to users with disabilities.
+| Attributes | Purpose |
+| --- | --- |
+| `aria-label` | Provides an accessible name for the Diagram Objects. |
 
 ### Aria-label
 Attribute provides the text label with some default description for below elements in diagram.
@@ -150,7 +152,7 @@ Interaction Keys |Description
 <kbd>Ctrl+2</kbd> | Activate the text tool.
 <kbd>Ctrl+8</kbd> | Activate the rectangle tool.
 <kbd>Ctrl+6</kbd> | Activate the line tool.
-<kbd>Ctrl+5</kbd> | Activate the freeform tool.
+<kbd>Ctrl+5</kbd> | Activate the free form tool.
 <kbd>Ctrl+9</kbd> | Activate the ellipse tool.
 
 N> You can download a complete working sample for keyboard navigation from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Accessibility/KeyBoardNavigation)

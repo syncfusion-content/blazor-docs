@@ -47,7 +47,7 @@ The Blazor ProgressButton component followed the [WAI-ARIA](https://www.w3.org/W
 
 ## Keyboard interaction
 
-The Blazor ProgressButton component followed the [keyboard interaction] guideline, making it easy for people who use assistive technologies (AT) and those who completely rely on keyboard navigation. The following keyboard shortcuts are supported by the Blazor ProgressButton component.
+The Blazor ProgressButton component followed the keyboard interaction guideline, making it easy for people who use assistive technologies (AT) and those who completely rely on keyboard navigation. The following keyboard shortcuts are supported by the Blazor ProgressButton component.
 
 | **Press** | **To do this** |
 | --- | --- |
