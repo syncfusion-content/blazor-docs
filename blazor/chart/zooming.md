@@ -19,7 +19,7 @@ The chart can be zoomed in three different ways.
 
  N> 
  * Pinch zooming is only usable in browsers that support multi-touch gestures.
- * To initiate a rectangular selection gesture on a device, you must touch the screen, hold your touch, and then drag to define the area for zooming on the chart.
+ * To zoom in on a rectangular area on a chart using a touch device, quickly double-tap and then drag your finger to define the zooming area.
 
 ```cshtml
 
