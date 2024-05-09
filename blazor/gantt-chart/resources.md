@@ -9,1124 +9,1033 @@ documentation: ug
 
 # Resources in Blazor Gantt Chart Component
 
-In [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart), the resources are represented by staff, equipment, materials, etc. In the Gantt Chart component, you can show or allocate the resources (human resources) for each task.
+In [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart), the resources are represented by staff, equipment, materials, and so on. It allows for the allocation of resources, such as human resources, to each task.
 
 ## Binding data source for resource collection and assigning resource to tasks
 
-Resources are a list of `TResources` objects that contain id, name, max unit and group of the resources, and this collection is mapped to the Gantt Chart component using the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttResource-1.html#Syncfusion_Blazor_Gantt_GanttResource_1_DataSource) property in [GanttResource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttResource-1.html). The following code snippets show resource collection and how it is assigned to the Gantt Chart component. 
+Resources are a list of `TResources` objects, mapped to the Gantt Chart component using the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttResource-1.html#Syncfusion_Blazor_Gantt_GanttResource_1_DataSource) property in [GanttResource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttResource-1.html). To link the resource collection with task collection, the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttAssignmentFields-1.html#Syncfusion_Blazor_Gantt_GanttAssignmentFields_1_DataSource) property of the [GanttAssignmentFields](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttAssignmentFields-1.html) component is essential to use. It is crucial to structure this collection thoughtfully to establish a strong foreign key relationship. This involves linking the [TaskId](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttAssignmentFields-1.html#Syncfusion_Blazor_Gantt_GanttAssignmentFields_1_TaskId) and [ResourceId](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttAssignmentFields-1.html#Syncfusion_Blazor_Gantt_GanttAssignmentFields_1_ResourceId) properties of `GanttAssignmentFields` with the [ID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTaskFields.html#Syncfusion_Blazor_Gantt_GanttTaskFields_Id) property value of [GanttTaskFields](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTaskFields.html) for tasks and the [Id](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttResource-1.html#Syncfusion_Blazor_Gantt_GanttResource_1_Id) property of `GanttResource` for resources.
 
-The [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttAssignmentFields-1.html#Syncfusion_Blazor_Gantt_GanttAssignmentFields_1_DataSource) property of the [GanttAssignmentFields](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttAssignmentFields-1.html) component is vital for defining the resource assignment data source collection in a Blazor Gantt chart. It's crucial to structure this collection thoughtfully to establish a strong foreign key relationship. This involves linking the [TaskId](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttAssignmentFields-1.html#Syncfusion_Blazor_Gantt_GanttAssignmentFields_1_TaskId) and [ResourceId](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttAssignmentFields-1.html#Syncfusion_Blazor_Gantt_GanttAssignmentFields_1_ResourceId) properties of `GanttAssignmentFields` with the [ID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTaskFields.html#Syncfusion_Blazor_Gantt_GanttTaskFields_Id) property value of [GanttTaskFields](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTaskFields.html) for tasks and the [Id](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttResource-1.html#Syncfusion_Blazor_Gantt_GanttResource_1_Id) property of `GanttResource` for resources. By establishing these connections, the Gantt chart can efficiently manage resource assignments in individual task.
+Also, the following properties of `GanttResource` component needs to be configured
+1. [Name](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttAssignmentFields-1.html#Syncfusion_Blazor_Gantt_GanttAssignmentFields_1_Name) - Maps the resource name
+2. [MaxUnits](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttAssignmentFields-1.html#Syncfusion_Blazor_Gantt_GanttAssignmentFields_1_MaxUnits) - resource’s maximum capacity or availability per day.
 
-```cshtml
+The following code snippets show resource collection and how it is assigned to the Gantt Chart component. 
+
+{% tabs %}
+
+{% highlight razor %}
+
+
 @using Syncfusion.Blazor.Gantt
+@using BlazorGanttChart.Data
 
-<SfGantt DataSource="@TaskCollection" Height="450px" Width="100%" TreeColumnIndex="1" ProjectStartDate="@ProjectStart" ProjectEndDate="@ProjectEnd" WorkUnit="WorkUnit.Hour"
-            Toolbar="@(new List<string>(){ "Add", "Edit", "Update", "Delete", "Cancel", "ExpandAll", "CollapseAll"})">
-    <GanttTaskFields Id="Id" Name="Name" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress"
-                        ParentID="ParentId" Work="Work" TaskType="TaskType">
+<SfGantt DataSource="@TaskCollection" Height="450px" Width="850px" TreeColumnIndex="1" ProjectStartDate="@ProjectStart" ProjectEndDate="@ProjectEnd" WorkUnit="WorkUnit.Hour"
+         Toolbar="@(new List<string>(){ "Add", "Edit", "Update", "Delete", "Cancel", "ExpandAll", "CollapseAll"})">
+    <GanttTaskFields Id="@nameof(GanttModel.TaskInfoModel.Id)" Name="@nameof(GanttModel.TaskInfoModel.Name)" StartDate="@nameof(GanttModel.TaskInfoModel.StartDate)" EndDate="@nameof(GanttModel.TaskInfoModel.EndDate)" Duration="@nameof(GanttModel.TaskInfoModel.Duration)" Progress="@nameof(GanttModel.TaskInfoModel.Progress)"
+                     ParentID="@nameof(GanttModel.TaskInfoModel.ParentId)" Work="@nameof(GanttModel.TaskInfoModel.Work)" TaskType="@nameof(GanttModel.TaskInfoModel.TaskType)">
     </GanttTaskFields>
+    <GanttResource DataSource="ResourceCollection" Id="@nameof(GanttModel.ResourceInfoModel.Id)" Name="@nameof(GanttModel.ResourceInfoModel.Name)" MaxUnits="@nameof(GanttModel.ResourceInfoModel.MaxUnit)" TValue="GanttModel.TaskInfoModel" TResources="GanttModel.ResourceInfoModel"></GanttResource>
+    <GanttAssignmentFields DataSource="AssignmentCollection" PrimaryKey="@nameof(GanttModel.AssignmentModel.PrimaryId)" TaskID="@nameof(GanttModel.AssignmentModel.TaskId)" ResourceID="@nameof(GanttModel.AssignmentModel.ResourceId)" Units="@nameof(GanttModel.AssignmentModel.Unit)" TValue="GanttModel.TaskInfoModel" TAssignment="GanttModel.AssignmentModel">
+    </GanttAssignmentFields>
+    <GanttLabelSettings RightLabel="Resources" TValue="GanttModel.TaskInfoModel"></GanttLabelSettings>
     <GanttEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true" AllowTaskbarEditing="true"
-                        ShowDeleteConfirmDialog="true"></GanttEditSettings>
+                       ShowDeleteConfirmDialog="true"></GanttEditSettings>
     <GanttColumns>
-        <GanttColumn Field="Id" HeaderText="ID"></GanttColumn>
-        <GanttColumn Field="Name" HeaderText="Event Name" ClipMode="Syncfusion.Blazor.Grids.ClipMode.EllipsisWithTooltip"></GanttColumn>
-        <GanttResourceColumn HeaderText="Event Resources"></GanttResourceColumn>
-        <GanttColumn Field="Work" HeaderText="Work"></GanttColumn>
-        <GanttColumn Field="Duration" HeaderText="Duration"></GanttColumn>
-        <GanttColumn Field="TaskType" HeaderText="Task Type"></GanttColumn>
-        <GanttColumn Field="StartDate" HeaderText="Start Date"></GanttColumn>
-        <GanttColumn Field="EndDate" HeaderText="End Date"></GanttColumn>
+        <GanttColumn Field="@nameof(GanttModel.TaskInfoModel.Id)" HeaderText="ID"></GanttColumn>
+        <GanttColumn Field="@nameof(GanttModel.TaskInfoModel.Name)" HeaderText="Event Name" Width="250px"></GanttColumn>
+        <GanttResourceColumn HeaderText="Event Resources" Width="300px"></GanttResourceColumn>
+        <GanttColumn Field="@nameof(GanttModel.TaskInfoModel.Work)" HeaderText="Work"></GanttColumn>
+        <GanttColumn Field="@nameof(GanttModel.TaskInfoModel.Duration)" HeaderText="Duration"></GanttColumn>
+        <GanttColumn Field="@nameof(GanttModel.TaskInfoModel.TaskType)" HeaderText="Task Type"></GanttColumn>
+        <GanttColumn Field="@nameof(GanttModel.TaskInfoModel.StartDate)" HeaderText="Start Date"></GanttColumn>
+        <GanttColumn Field="@nameof(GanttModel.TaskInfoModel.EndDate)" HeaderText="End Date"></GanttColumn>
     </GanttColumns>
-    <GanttResource DataSource="ResourceCollection" Id="Id" Name="Name" MaxUnits="MaxUnit" TValue="TaskInfoModel" TResources="ResourceInfoModel"></GanttResource>
-    <GanttAssignmentFields DataSource="AssignmentCollection" PrimaryKey="PrimaryId" TaskID="TaskId" ResourceID="ResourceId" Units="Unit" TValue="TaskInfoModel" TAssignment="AssignmentModel"></GanttAssignmentFields>
-    <GanttLabelSettings RightLabel="Resources" TValue="TaskInfoModel"></GanttLabelSettings>
     <GanttSplitterSettings Position="28%"> </GanttSplitterSettings>
 </SfGantt>
 
 @code {
     private DateTime ProjectStart = new DateTime(2021, 3, 28);
     private DateTime ProjectEnd = new DateTime(2021, 7, 28);
-    private List<TaskInfoModel> TaskCollection { get; set; } = new();
-    private List<ResourceInfoModel> ResourceCollection { get; set; } = new();
-    private static List<AssignmentModel> AssignmentCollection { get; set; } = new();
+    private List<GanttModel.TaskInfoModel> TaskCollection { get; set; } = new();
+    private List<GanttModel.ResourceInfoModel> ResourceCollection { get; set; } = new();
+    private static List<GanttModel.AssignmentModel> AssignmentCollection { get; set; } = new();
     protected override void OnInitialized()
     {
-        TaskCollection = GetTaskCollection();
-        ResourceCollection = GetResources;
-        AssignmentCollection = GetAssignmentCollection();
-    }
-        
-    public class ResourceInfoModel
-    {
-        public int Id { get; set; }
-        public string? Name { get; set; }
-        public double MaxUnit { get; set; }
-    }
-   
-    public class TaskInfoModel
-    {
-        public int Id { get; set; }
-        public string? Name { get; set; }
-        public string? TaskType { get; set; }
-        public DateTime StartDate { get; set; }
-        public DateTime? EndDate { get; set; }
-        public string? Duration { get; set; }
-        public int Progress { get; set; }
-        public int? ParentId { get; set; }
-        public double? Work { get; set; }
-    }
-
-    public class AssignmentModel
-    {
-        public int PrimaryId { get; set; }
-        public int TaskId { get; set; }
-        public int ResourceId { get; set; }
-        public double Unit { get; set; }
-    }
-
-    public static List<ResourceInfoModel> GetResources = new List<ResourceInfoModel>()
-    {
-        new ResourceInfoModel() { Id= 1, Name= "Martin Tamer" ,MaxUnit=70},
-        new ResourceInfoModel() { Id= 2, Name= "Rose Fuller" },
-        new ResourceInfoModel() { Id= 3, Name= "Margaret Buchanan" },
-        new ResourceInfoModel() { Id= 4, Name= "Fuller King", MaxUnit = 100},
-        new ResourceInfoModel() { Id= 5, Name= "Davolio Fuller" },
-        new ResourceInfoModel() { Id= 6, Name= "Van Jack" },
-        new ResourceInfoModel() { Id= 7, Name= "Fuller Buchanan" },
-        new ResourceInfoModel() { Id= 8, Name= "Jack Davolio" },
-        new ResourceInfoModel() { Id= 9, Name= "Tamer Vinet" },
-        new ResourceInfoModel() { Id= 10, Name= "Vinet Fuller" },
-        new ResourceInfoModel() { Id= 11, Name= "Bergs Anton" },
-        new ResourceInfoModel() { Id= 12, Name= "Construction Supervisor" }
-    };
-
-    public static List<AssignmentModel> GetAssignmentCollection()
-    {
-        List<AssignmentModel> assignments = new List<AssignmentModel>()
-        {
-            new AssignmentModel(){ PrimaryId=1, TaskId = 2 , ResourceId=1, Unit=70},
-            new AssignmentModel(){ PrimaryId=2, TaskId = 2 , ResourceId=6},
-            new AssignmentModel(){ PrimaryId=3, TaskId = 3 , ResourceId=2},
-            new AssignmentModel(){ PrimaryId=4, TaskId = 3 , ResourceId=3},
-            new AssignmentModel(){ PrimaryId=5, TaskId = 3 , ResourceId=6},
-            new AssignmentModel(){ PrimaryId=6, TaskId = 4 , ResourceId=8},
-            new AssignmentModel(){ PrimaryId=7, TaskId = 4 , ResourceId=9},
-            new AssignmentModel(){ PrimaryId=8, TaskId = 6 , ResourceId=4},
-            new AssignmentModel(){ PrimaryId=9, TaskId = 7 , ResourceId=4},
-            new AssignmentModel(){ PrimaryId=10, TaskId = 7 , ResourceId=8},
-            new AssignmentModel(){ PrimaryId=11, TaskId = 8 , ResourceId=12},
-            new AssignmentModel(){ PrimaryId=12, TaskId = 8 , ResourceId=5},
-            new AssignmentModel(){ PrimaryId=13, TaskId = 9 , ResourceId=12},
-            new AssignmentModel(){ PrimaryId=14, TaskId = 9 , ResourceId=5}
-        };
-        return assignments;
-    }
-
-    public static List<TaskInfoModel> GetTaskCollection()
-    {
-        List<TaskInfoModel> Tasks = new List<TaskInfoModel>()
-        {
-            new TaskInfoModel() {
-                Id = 1,
-                Name = "Project initiation",
-                StartDate = new DateTime(2021, 03, 28),
-                EndDate = new DateTime(2021, 07, 28),
-                TaskType ="FixedDuration",
-                Work=128,
-                Duration="4"
-            },
-            new TaskInfoModel() {
-                Id = 2,
-                Name = "Identify site location",
-                StartDate = new DateTime(2021, 03, 29),
-                Progress = 30,
-                ParentId = 1,
-                Duration="2",
-                TaskType ="FixedDuration",
-                Work=16,
-            },
-            new TaskInfoModel() {
-                Id = 3,
-                Name = "Perform soil test",
-                StartDate = new DateTime(2021, 03, 29),
-                ParentId = 1,
-                Work=96,
-                Duration="4",
-                TaskType="FixedWork"
-            },
-            new TaskInfoModel() {
-                Id = 4,
-                Name = "Soil test approval",
-                StartDate = new DateTime(2021, 03, 29),
-                Duration = "1",
-                Progress = 30,
-                ParentId = 1,
-                Work=16,
-                TaskType="FixedWork"
-            },
-            new TaskInfoModel() {
-                Id = 5,
-                Name = "Project estimation",
-                StartDate = new DateTime(2021, 03, 29),
-                EndDate = new DateTime(2021, 04, 2),
-                TaskType="FixedDuration",
-                Duration="4"
-            },
-            new TaskInfoModel() {
-                Id = 6,
-                Name = "Develop floor plan for estimation",
-                StartDate = new DateTime(2021, 03, 29),
-                Duration = "3",
-                Progress = 30,
-                ParentId = 5,
-                Work=30,
-                TaskType="FixedWork"
-            },
-            new TaskInfoModel() {
-                Id = 7,
-                Name = "List materials",
-                StartDate = new DateTime(2021, 04, 01),
-                Duration = "3",
-                Progress = 30,
-                ParentId = 5,
-                TaskType="FixedWork",
-                Work=48,
-            },
-            new TaskInfoModel() {
-                Id = 8,
-                Name = "Estimation approval",
-                StartDate = new DateTime(2021, 04, 01),
-                Duration = "2",
-                ParentId = 5,
-                Work=60,
-                TaskType="FixedWork",
-            },
-            new TaskInfoModel() {
-                Id = 9,
-                Name = "Sign contract",
-                StartDate = new DateTime(2021, 03, 31),
-                EndDate = new DateTime(2021, 04, 01),
-                Duration="1",
-                TaskType="FixedWork",
-                Work=24,
-            },
-        };
-        return Tasks;
+        TaskCollection = GanttModel.GetTaskCollection();
+        ResourceCollection = GanttModel.GetResources;
+        AssignmentCollection = GanttModel.GetAssignmentCollection();
     }
 }
-```
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="GanttModel.cs" %}
+
+namespace BlazorGanttChart.Data
+{
+    public class GanttModel
+    {
+        public class ResourceInfoModel
+        {
+            public int Id { get; set; }
+            public string? Name { get; set; }
+            public double MaxUnit { get; set; }
+        }
+
+        public class TaskInfoModel
+        {
+            public int Id { get; set; }
+            public string? Name { get; set; }
+            public string? TaskType { get; set; }
+            public DateTime StartDate { get; set; }
+            public DateTime? EndDate { get; set; }
+            public string? Duration { get; set; }
+            public int Progress { get; set; }
+            public int? ParentId { get; set; }
+            public double? Work { get; set; }
+        }
+
+        public class AssignmentModel
+        {
+            public int PrimaryId { get; set; }
+            public int TaskId { get; set; }
+            public int ResourceId { get; set; }
+            public double Unit { get; set; }
+        }
+
+        public static List<ResourceInfoModel> GetResources = new List<ResourceInfoModel>()
+        {
+            new ResourceInfoModel() { Id= 1, Name= "Martin Tamer" ,MaxUnit=70},
+            new ResourceInfoModel() { Id= 2, Name= "Rose Fuller" },
+            new ResourceInfoModel() { Id= 3, Name= "Margaret Buchanan" },
+            new ResourceInfoModel() { Id= 4, Name= "Fuller King", MaxUnit = 100},
+            new ResourceInfoModel() { Id= 5, Name= "Davolio Fuller" },
+            new ResourceInfoModel() { Id= 6, Name= "Van Jack" },
+            new ResourceInfoModel() { Id= 7, Name= "Fuller Buchanan" },
+            new ResourceInfoModel() { Id= 8, Name= "Jack Davolio" },
+            new ResourceInfoModel() { Id= 9, Name= "Tamer Vinet" },
+            new ResourceInfoModel() { Id= 10, Name= "Vinet Fuller" },
+            new ResourceInfoModel() { Id= 11, Name= "Bergs Anton" },
+            new ResourceInfoModel() { Id= 12, Name= "Construction Supervisor" }
+        };
+
+        public static List<AssignmentModel> GetAssignmentCollection()
+        {
+            List<AssignmentModel> assignments = new List<AssignmentModel>()
+            {
+                new AssignmentModel(){ PrimaryId=1, TaskId = 2 , ResourceId=1, Unit=70},
+                new AssignmentModel(){ PrimaryId=2, TaskId = 2 , ResourceId=6},
+                new AssignmentModel(){ PrimaryId=3, TaskId = 3 , ResourceId=2},
+                new AssignmentModel(){ PrimaryId=4, TaskId = 3 , ResourceId=3},
+                new AssignmentModel(){ PrimaryId=5, TaskId = 3 , ResourceId=6},
+                new AssignmentModel(){ PrimaryId=6, TaskId = 4 , ResourceId=8},
+                new AssignmentModel(){ PrimaryId=7, TaskId = 4 , ResourceId=9},
+                new AssignmentModel(){ PrimaryId=8, TaskId = 6 , ResourceId=4},
+                new AssignmentModel(){ PrimaryId=9, TaskId = 7 , ResourceId=4},
+                new AssignmentModel(){ PrimaryId=10, TaskId = 7 , ResourceId=8},
+                new AssignmentModel(){ PrimaryId=11, TaskId = 8 , ResourceId=12},
+                new AssignmentModel(){ PrimaryId=12, TaskId = 8 , ResourceId=5},
+                new AssignmentModel(){ PrimaryId=13, TaskId = 9 , ResourceId=12},
+                new AssignmentModel(){ PrimaryId=14, TaskId = 9 , ResourceId=5}
+            };
+            return assignments;
+        }
+
+        public static List<TaskInfoModel> GetTaskCollection()
+        {
+            return new List<TaskInfoModel>()
+            {
+                new TaskInfoModel() { Id = 1, Name = "Project initiation", StartDate = new DateTime(2021, 03, 28), EndDate = new DateTime(2021, 07, 28), TaskType ="FixedDuration", Work=128, Duration="4" },
+                new TaskInfoModel() { Id = 2, Name = "Identify site location", StartDate = new DateTime(2021, 03, 29), Progress = 30, ParentId = 1, Duration="2", TaskType ="FixedDuration", Work=16 },
+                new TaskInfoModel() { Id = 3, Name = "Perform soil test", StartDate = new DateTime(2021, 03, 29), ParentId = 1, Work=96, Duration="4", TaskType="FixedWork" },
+                new TaskInfoModel() { Id = 4, Name = "Soil test approval", StartDate = new DateTime(2021, 03, 29), Duration = "1", Progress = 30, ParentId = 1, Work=16, TaskType="FixedWork" },
+                new TaskInfoModel() { Id = 5, Name = "Project estimation", StartDate = new DateTime(2021, 03, 29), EndDate = new DateTime(2021, 04, 2), TaskType="FixedDuration", Duration="4" },
+                new TaskInfoModel() { Id = 6, Name = "Develop floor plan for estimation", StartDate = new DateTime(2021, 03, 29), Duration = "3", Progress = 30, ParentId = 5, Work=30, TaskType="FixedWork" },
+                new TaskInfoModel() { Id = 7, Name = "List materials", StartDate = new DateTime(2021, 04, 01), Duration = "3", Progress = 30, ParentId = 5, TaskType="FixedWork", Work=48 },
+                new TaskInfoModel() { Id = 8, Name = "Estimation approval", StartDate = new DateTime(2021, 04, 01), Duration = "2", ParentId = 5, Work=60, TaskType="FixedWork" },
+                new TaskInfoModel() { Id = 9, Name = "Sign contract", StartDate = new DateTime(2021, 03, 31), EndDate = new DateTime(2021, 04, 01), Duration="1", TaskType="FixedWork", Work=24 },
+            };
+        }
+    }
+}
+
+{% endhighlight %}
+
+{% endtabs %}
+
 ![Resource allocation](images/blazor-gantt-chart-resource.png)
 
 ## Resource unit
 
-When the resource unit is defined in the resource collection, it indicates that the amount of work done by a particular resource remains consistent across all tasks. This concept applies to both the [Units](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttAssignmentFields-1.html#Syncfusion_Blazor_Gantt_GanttAssignmentFields_1_Units) and [MaxUnits](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttResource-1.html#Syncfusion_Blazor_Gantt_GanttResource_1_MaxUnits) properties in resource allocation. The `Units` property represents the quantity of work done by the resource for a specific task, while the `MaxUnits` property defines the maximum capacity or availability of that resource.
+When defining the resource unit within the resource collection, it indicates the amount of work that a specific resource will perform per day for a task. This concept is reflected in both the [Units](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttAssignmentFields-1.html#Syncfusion_Blazor_Gantt_GanttAssignmentFields_1_Units) property in `GanttAssignmentFields` and the [MaxUnits](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttResource-1.html#Syncfusion_Blazor_Gantt_GanttResource_1_MaxUnits) property in `GanttResource`. The `Units` property specifies the work amount done per day by a resource for a task, while `MaxUnits` sets the resource's maximum capacity or availability for any task.
 
-To illustrate this concept, the following code snippet demonstrates how to assign resources to specific tasks and map them in the Gantt chart, providing a clear overview of how resource units and maximum capacities are managed in task allocation. For more detailed information about work and resource units, you can refer to the [documentation link](https://blazor.syncfusion.com/documentation/gantt-chart/work).
+To illustrate this concept, the following code snippet demonstrates how to assign resources to specific tasks and map them in the Gantt chart, providing a clear overview of how resource units and maximum capacities are managed in task allocation. For more detailed information about work and resource units, you can refer to the [link](https://blazor.syncfusion.com/documentation/gantt-chart/work).
 
-```cshtml
+{% tabs %}
+
+{% highlight razor %}
+
+
 @using Syncfusion.Blazor.Gantt
+@using BlazorGanttChart.Data
 
-<SfGantt DataSource="@TaskCollection" Height="450px" Width="100%" TreeColumnIndex="1" ProjectStartDate="@ProjectStart" ProjectEndDate="@ProjectEnd" WorkUnit="WorkUnit.Hour"
-            Toolbar="@(new List<string>(){ "Add", "Edit", "Update", "Delete", "Cancel", "ExpandAll", "CollapseAll"})">
-    <GanttTaskFields Id="Id" Name="Name" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress"
-                        ParentID="ParentId" Work="Work" TaskType="TaskType">
-    </GanttTaskFields>
-    <GanttEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true" AllowTaskbarEditing="true"
-                        ShowDeleteConfirmDialog="true"></GanttEditSettings>
-    <GanttColumns>
-        <GanttColumn Field="Id" HeaderText="ID"></GanttColumn>
-        <GanttColumn Field="Name" HeaderText="Event Name" ClipMode="Syncfusion.Blazor.Grids.ClipMode.EllipsisWithTooltip"></GanttColumn>
-        <GanttResourceColumn HeaderText="Event Resources"></GanttResourceColumn>
-        <GanttColumn Field="Work" HeaderText="Work"></GanttColumn>
-        <GanttColumn Field="Duration" HeaderText="Duration"></GanttColumn>
-        <GanttColumn Field="TaskType" HeaderText="Task Type"></GanttColumn>
-        <GanttColumn Field="StartDate" HeaderText="Start Date"></GanttColumn>
-        <GanttColumn Field="EndDate" HeaderText="End Date"></GanttColumn>
-    </GanttColumns>
-    <GanttResource DataSource="ResourceCollection" Id="Id" Name="Name" MaxUnits="MaxUnit" TValue="TaskInfoModel" TResources="ResourceInfoModel"></GanttResource>
-    <GanttAssignmentFields DataSource="AssignmentCollection" PrimaryKey="PrimaryId" TaskID="TaskId" ResourceID="ResourceId" Units="Unit" TValue="TaskInfoModel" TAssignment="AssignmentModel"></GanttAssignmentFields>
-    <GanttLabelSettings RightLabel="Resources" TValue="TaskInfoModel"></GanttLabelSettings>
-    <GanttSplitterSettings Position="28%"> </GanttSplitterSettings>
-</SfGantt>
-
-@code {
-    private DateTime ProjectStart = new DateTime(2021, 3, 28);
-    private DateTime ProjectEnd = new DateTime(2021, 7, 28);
-    private List<TaskInfoModel> TaskCollection { get; set; } = new();
-    private List<ResourceInfoModel> ResourceCollection { get; set; } = new();
-    private static List<AssignmentModel> AssignmentCollection { get; set; } = new();
-    protected override void OnInitialized()
-    {
-        TaskCollection = GetTaskCollection();
-        ResourceCollection = GetResources;
-        AssignmentCollection = GetAssignmentCollection();
-    }
-        
-    public class ResourceInfoModel
-    {
-        public int Id { get; set; }
-        public string? Name { get; set; }
-        public double MaxUnit { get; set; }
-    }
-   
-    public class TaskInfoModel
-    {
-        public int Id { get; set; }
-        public string? Name { get; set; }
-        public string? TaskType { get; set; }
-        public DateTime StartDate { get; set; }
-        public DateTime? EndDate { get; set; }
-        public string? Duration { get; set; }
-        public int Progress { get; set; }
-        public int? ParentId { get; set; }
-        public double? Work { get; set; }
-    }
-
-    public class AssignmentModel
-    {
-        public int PrimaryId { get; set; }
-        public int TaskId { get; set; }
-        public int ResourceId { get; set; }
-        public double Unit { get; set; }
-    }
-
-    public static List<ResourceInfoModel> GetResources = new List<ResourceInfoModel>()
-    {
-        new ResourceInfoModel() { Id= 1, Name= "Martin Tamer" ,MaxUnit=70},
-        new ResourceInfoModel() { Id= 2, Name= "Rose Fuller" },
-        new ResourceInfoModel() { Id= 3, Name= "Margaret Buchanan" },
-        new ResourceInfoModel() { Id= 4, Name= "Fuller King", MaxUnit = 100},
-        new ResourceInfoModel() { Id= 5, Name= "Davolio Fuller" },
-        new ResourceInfoModel() { Id= 6, Name= "Van Jack" },
-        new ResourceInfoModel() { Id= 7, Name= "Fuller Buchanan" },
-        new ResourceInfoModel() { Id= 8, Name= "Jack Davolio" },
-        new ResourceInfoModel() { Id= 9, Name= "Tamer Vinet" },
-        new ResourceInfoModel() { Id= 10, Name= "Vinet Fuller" },
-        new ResourceInfoModel() { Id= 11, Name= "Bergs Anton" },
-        new ResourceInfoModel() { Id= 12, Name= "Construction Supervisor" }
-    };
-
-    public static List<AssignmentModel> GetAssignmentCollection()
-    {
-        List<AssignmentModel> assignments = new List<AssignmentModel>()
-        {
-            new AssignmentModel(){ PrimaryId=1, TaskId = 2 , ResourceId=1, Unit=70},
-            new AssignmentModel(){ PrimaryId=2, TaskId = 2 , ResourceId=6},
-            new AssignmentModel(){ PrimaryId=3, TaskId = 3 , ResourceId=2},
-            new AssignmentModel(){ PrimaryId=4, TaskId = 3 , ResourceId=3},
-            new AssignmentModel(){ PrimaryId=5, TaskId = 3 , ResourceId=6},
-            new AssignmentModel(){ PrimaryId=6, TaskId = 4 , ResourceId=8},
-            new AssignmentModel(){ PrimaryId=7, TaskId = 4 , ResourceId=9},
-            new AssignmentModel(){ PrimaryId=8, TaskId = 6 , ResourceId=4},
-            new AssignmentModel(){ PrimaryId=9, TaskId = 7 , ResourceId=4},
-            new AssignmentModel(){ PrimaryId=10, TaskId = 7 , ResourceId=8},
-            new AssignmentModel(){ PrimaryId=11, TaskId = 8 , ResourceId=12},
-            new AssignmentModel(){ PrimaryId=12, TaskId = 8 , ResourceId=5},
-            new AssignmentModel(){ PrimaryId=13, TaskId = 9 , ResourceId=12},
-            new AssignmentModel(){ PrimaryId=14, TaskId = 9 , ResourceId=5}
-        };
-        return assignments;
-    }
-
-    public static List<TaskInfoModel> GetTaskCollection()
-    {
-        List<TaskInfoModel> Tasks = new List<TaskInfoModel>()
-        {
-            new TaskInfoModel() {
-                Id = 1,
-                Name = "Project initiation",
-                StartDate = new DateTime(2021, 03, 28),
-                EndDate = new DateTime(2021, 07, 28),
-                TaskType ="FixedDuration",
-                Work=128,
-                Duration="4"
-            },
-            new TaskInfoModel() {
-                Id = 2,
-                Name = "Identify site location",
-                StartDate = new DateTime(2021, 03, 29),
-                Progress = 30,
-                ParentId = 1,
-                Duration="2",
-                TaskType ="FixedDuration",
-                Work=16,
-            },
-            new TaskInfoModel() {
-                Id = 3,
-                Name = "Perform soil test",
-                StartDate = new DateTime(2021, 03, 29),
-                ParentId = 1,
-                Work=96,
-                Duration="4",
-                TaskType="FixedWork"
-            },
-            new TaskInfoModel() {
-                Id = 4,
-                Name = "Soil test approval",
-                StartDate = new DateTime(2021, 03, 29),
-                Duration = "1",
-                Progress = 30,
-                ParentId = 1,
-                Work=16,
-                TaskType="FixedWork"
-            },
-            new TaskInfoModel() {
-                Id = 5,
-                Name = "Project estimation",
-                StartDate = new DateTime(2021, 03, 29),
-                EndDate = new DateTime(2021, 04, 2),
-                TaskType="FixedDuration",
-                Duration="4"
-            },
-            new TaskInfoModel() {
-                Id = 6,
-                Name = "Develop floor plan for estimation",
-                StartDate = new DateTime(2021, 03, 29),
-                Duration = "3",
-                Progress = 30,
-                ParentId = 5,
-                Work=30,
-                TaskType="FixedWork"
-            },
-            new TaskInfoModel() {
-                Id = 7,
-                Name = "List materials",
-                StartDate = new DateTime(2021, 04, 01),
-                Duration = "3",
-                Progress = 30,
-                ParentId = 5,
-                TaskType="FixedWork",
-                Work=48,
-            },
-            new TaskInfoModel() {
-                Id = 8,
-                Name = "Estimation approval",
-                StartDate = new DateTime(2021, 04, 01),
-                Duration = "2",
-                ParentId = 5,
-                Work=60,
-                TaskType="FixedWork",
-            },
-            new TaskInfoModel() {
-                Id = 9,
-                Name = "Sign contract",
-                StartDate = new DateTime(2021, 03, 31),
-                EndDate = new DateTime(2021, 04, 01),
-                Duration="1",
-                TaskType="FixedWork",
-                Work=24,
-            },
-        };
-        return Tasks;
-    }
-}
-```
-
-## Managing resources assignments in project view
-
-In the Gantt Chart, you can enable dynamic resources assignments by setting the [AllowEditing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEditSettings.html#Syncfusion_Blazor_Gantt_GanttEditSettings_AllowEditing) properties to true in the [GanttEditSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEditSettings.html) component. When editing resources, it's essential to bind the `GanttResource` and `GanttAssignmentFields` within the SfGantt component for a comprehensive resource management process. Task resources can be dynamically added, removed, and updated. Additionally, these actions can be performed using the following three methods:
-
-### Through cell edit
-
-To edit resources directly through [cell editing](https://blazor.syncfusion.com/documentation/gantt-chart/editing-tasks#cell-editing), you can use the [GanttResourceColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttResourceColumn.html) within the [GanttColumns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttColumns.html) of the Blazor Gantt Chart. The image below demonstrates the cell edit functionality in the Gantt chart.
-
-```cshtml
-@using Syncfusion.Blazor.Gantt
-
-<SfGantt DataSource="@TaskCollection" Height="450px" Width="100%" TreeColumnIndex="1" ProjectStartDate="@ProjectStart" ProjectEndDate="@ProjectEnd" WorkUnit="WorkUnit.Hour"
+<SfGantt DataSource="@TaskCollection" Height="450px" Width="850px" TreeColumnIndex="1" ProjectStartDate="@ProjectStart" ProjectEndDate="@ProjectEnd" WorkUnit="WorkUnit.Hour"
          Toolbar="@(new List<string>(){ "Add", "Edit", "Update", "Delete", "Cancel", "ExpandAll", "CollapseAll"})">
-    <GanttTaskFields Id="Id" Name="Name" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress"
-                     ParentID="ParentId" Work="Work" TaskType="TaskType">
+    <GanttTaskFields Id="@nameof(GanttModel.TaskInfoModel.Id)" Name="@nameof(GanttModel.TaskInfoModel.Name)" StartDate="@nameof(GanttModel.TaskInfoModel.StartDate)" EndDate="@nameof(GanttModel.TaskInfoModel.EndDate)" Duration="@nameof(GanttModel.TaskInfoModel.Duration)" Progress="@nameof(GanttModel.TaskInfoModel.Progress)"
+                     ParentID="@nameof(GanttModel.TaskInfoModel.ParentId)" Work="@nameof(GanttModel.TaskInfoModel.Work)" TaskType="@nameof(GanttModel.TaskInfoModel.TaskType)">
     </GanttTaskFields>
+    <GanttResource DataSource="ResourceCollection" Id="@nameof(GanttModel.ResourceInfoModel.Id)" Name="@nameof(GanttModel.ResourceInfoModel.Name)" MaxUnits="@nameof(GanttModel.ResourceInfoModel.MaxUnit)" TValue="GanttModel.TaskInfoModel" TResources="GanttModel.ResourceInfoModel"></GanttResource>
+    <GanttAssignmentFields DataSource="AssignmentCollection" PrimaryKey="@nameof(GanttModel.AssignmentModel.PrimaryId)" TaskID="@nameof(GanttModel.AssignmentModel.TaskId)" ResourceID="@nameof(GanttModel.AssignmentModel.ResourceId)" Units="@nameof(GanttModel.AssignmentModel.Unit)" TValue="GanttModel.TaskInfoModel" TAssignment="GanttModel.AssignmentModel">
+    </GanttAssignmentFields>
+    <GanttLabelSettings RightLabel="Resources" TValue="GanttModel.TaskInfoModel"></GanttLabelSettings>
     <GanttEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true" AllowTaskbarEditing="true"
                        ShowDeleteConfirmDialog="true"></GanttEditSettings>
     <GanttColumns>
-        <GanttColumn Field="Id" HeaderText="ID"></GanttColumn>
-        <GanttColumn Field="Name" HeaderText="Event Name" ClipMode="Syncfusion.Blazor.Grids.ClipMode.EllipsisWithTooltip"></GanttColumn>
-        <GanttResourceColumn HeaderText="Event Resources"></GanttResourceColumn>
-        <GanttColumn Field="Work" HeaderText="Work"></GanttColumn>
-        <GanttColumn Field="Duration" HeaderText="Duration"></GanttColumn>
-        <GanttColumn Field="TaskType" HeaderText="Task Type"></GanttColumn>
-        <GanttColumn Field="StartDate" HeaderText="Start Date"></GanttColumn>
-        <GanttColumn Field="EndDate" HeaderText="End Date"></GanttColumn>
+        <GanttColumn Field="@nameof(GanttModel.TaskInfoModel.Id)" HeaderText="ID"></GanttColumn>
+        <GanttColumn Field="@nameof(GanttModel.TaskInfoModel.Name)" HeaderText="Event Name" Width="250px"></GanttColumn>
+        <GanttResourceColumn HeaderText="Event Resources" Width="300px"></GanttResourceColumn>
+        <GanttColumn Field="@nameof(GanttModel.TaskInfoModel.Work)" HeaderText="Work"></GanttColumn>
+        <GanttColumn Field="@nameof(GanttModel.TaskInfoModel.Duration)" HeaderText="Duration"></GanttColumn>
+        <GanttColumn Field="@nameof(GanttModel.TaskInfoModel.TaskType)" HeaderText="Task Type"></GanttColumn>
+        <GanttColumn Field="@nameof(GanttModel.TaskInfoModel.StartDate)" HeaderText="Start Date"></GanttColumn>
+        <GanttColumn Field="@nameof(GanttModel.TaskInfoModel.EndDate)" HeaderText="End Date"></GanttColumn>
     </GanttColumns>
-    <GanttResource DataSource="ResourceCollection" Id="Id" Name="Name" MaxUnits="MaxUnit" TValue="TaskInfoModel" TResources="ResourceInfoModel"></GanttResource>
-    <GanttAssignmentFields DataSource="AssignmentCollection" PrimaryKey="PrimaryId" TaskID="TaskId" ResourceID="ResourceId" Units="Unit" TValue="TaskInfoModel" TAssignment="AssignmentModel"></GanttAssignmentFields>
-    <GanttLabelSettings RightLabel="Resources" TValue="TaskInfoModel"></GanttLabelSettings>
     <GanttSplitterSettings Position="28%"> </GanttSplitterSettings>
 </SfGantt>
 
 @code {
     private DateTime ProjectStart = new DateTime(2021, 3, 28);
     private DateTime ProjectEnd = new DateTime(2021, 7, 28);
-    private List<TaskInfoModel> TaskCollection { get; set; } = new();
-    private List<ResourceInfoModel> ResourceCollection { get; set; } = new();
-    private static List<AssignmentModel> AssignmentCollection { get; set; } = new();
+    private List<GanttModel.TaskInfoModel> TaskCollection { get; set; } = new();
+    private List<GanttModel.ResourceInfoModel> ResourceCollection { get; set; } = new();
+    private static List<GanttModel.AssignmentModel> AssignmentCollection { get; set; } = new();
     protected override void OnInitialized()
     {
-        TaskCollection = GetTaskCollection();
-        ResourceCollection = GetResources;
-        AssignmentCollection = GetAssignmentCollection();
-    }
-
-    public class ResourceInfoModel
-    {
-        public int Id { get; set; }
-        public string? Name { get; set; }
-        public double MaxUnit { get; set; }
-    }
-
-    public class TaskInfoModel
-    {
-        public int Id { get; set; }
-        public string? Name { get; set; }
-        public string? TaskType { get; set; }
-        public DateTime StartDate { get; set; }
-        public DateTime? EndDate { get; set; }
-        public string? Duration { get; set; }
-        public int Progress { get; set; }
-        public int? ParentId { get; set; }
-        public double? Work { get; set; }
-    }
-
-    public class AssignmentModel
-    {
-        public int PrimaryId { get; set; }
-        public int TaskId { get; set; }
-        public int ResourceId { get; set; }
-        public double Unit { get; set; }
-    }
-
-    public static List<ResourceInfoModel> GetResources = new List<ResourceInfoModel>()
-    {
-        new ResourceInfoModel() { Id= 1, Name= "Martin Tamer" ,MaxUnit=70},
-        new ResourceInfoModel() { Id= 2, Name= "Rose Fuller" },
-        new ResourceInfoModel() { Id= 3, Name= "Margaret Buchanan" },
-        new ResourceInfoModel() { Id= 4, Name= "Fuller King", MaxUnit = 100},
-        new ResourceInfoModel() { Id= 5, Name= "Davolio Fuller" },
-        new ResourceInfoModel() { Id= 6, Name= "Van Jack" },
-        new ResourceInfoModel() { Id= 7, Name= "Fuller Buchanan" },
-        new ResourceInfoModel() { Id= 8, Name= "Jack Davolio" },
-        new ResourceInfoModel() { Id= 9, Name= "Tamer Vinet" },
-        new ResourceInfoModel() { Id= 10, Name= "Vinet Fuller" },
-        new ResourceInfoModel() { Id= 11, Name= "Bergs Anton" },
-        new ResourceInfoModel() { Id= 12, Name= "Construction Supervisor" }
-    };
-
-    public static List<AssignmentModel> GetAssignmentCollection()
-    {
-        List<AssignmentModel> assignments = new List<AssignmentModel>()
-        {
-            new AssignmentModel(){ PrimaryId=1, TaskId = 2 , ResourceId=1, Unit=70},
-            new AssignmentModel(){ PrimaryId=2, TaskId = 2 , ResourceId=6},
-            new AssignmentModel(){ PrimaryId=3, TaskId = 3 , ResourceId=2},
-            new AssignmentModel(){ PrimaryId=4, TaskId = 3 , ResourceId=3},
-            new AssignmentModel(){ PrimaryId=5, TaskId = 3 , ResourceId=6},
-            new AssignmentModel(){ PrimaryId=6, TaskId = 4 , ResourceId=8},
-            new AssignmentModel(){ PrimaryId=7, TaskId = 4 , ResourceId=9},
-            new AssignmentModel(){ PrimaryId=8, TaskId = 6 , ResourceId=4},
-            new AssignmentModel(){ PrimaryId=9, TaskId = 7 , ResourceId=4},
-            new AssignmentModel(){ PrimaryId=10, TaskId = 7 , ResourceId=8},
-            new AssignmentModel(){ PrimaryId=11, TaskId = 8 , ResourceId=12},
-            new AssignmentModel(){ PrimaryId=12, TaskId = 8 , ResourceId=5},
-            new AssignmentModel(){ PrimaryId=13, TaskId = 9 , ResourceId=12},
-            new AssignmentModel(){ PrimaryId=14, TaskId = 9 , ResourceId=5}
-        };
-        return assignments;
-    }
-
-    public static List<TaskInfoModel> GetTaskCollection()
-    {
-        List<TaskInfoModel> Tasks = new List<TaskInfoModel>()
-        {
-            new TaskInfoModel() {
-                Id = 1,
-                Name = "Project initiation",
-                StartDate = new DateTime(2021, 03, 28),
-                EndDate = new DateTime(2021, 07, 28),
-                TaskType ="FixedDuration",
-                Work=128,
-                Duration="4"
-            },
-            new TaskInfoModel() {
-                Id = 2,
-                Name = "Identify site location",
-                StartDate = new DateTime(2021, 03, 29),
-                Progress = 30,
-                ParentId = 1,
-                Duration="2",
-                TaskType ="FixedDuration",
-                Work=16,
-            },
-            new TaskInfoModel() {
-                Id = 3,
-                Name = "Perform soil test",
-                StartDate = new DateTime(2021, 03, 29),
-                ParentId = 1,
-                Work=96,
-                Duration="4",
-                TaskType="FixedWork"
-            },
-            new TaskInfoModel() {
-                Id = 4,
-                Name = "Soil test approval",
-                StartDate = new DateTime(2021, 03, 29),
-                Duration = "1",
-                Progress = 30,
-                ParentId = 1,
-                Work=16,
-                TaskType="FixedWork"
-            },
-            new TaskInfoModel() {
-                Id = 5,
-                Name = "Project estimation",
-                StartDate = new DateTime(2021, 03, 29),
-                EndDate = new DateTime(2021, 04, 2),
-                TaskType="FixedDuration",
-                Duration="4"
-            },
-            new TaskInfoModel() {
-                Id = 6,
-                Name = "Develop floor plan for estimation",
-                StartDate = new DateTime(2021, 03, 29),
-                Duration = "3",
-                Progress = 30,
-                ParentId = 5,
-                Work=30,
-                TaskType="FixedWork"
-            },
-            new TaskInfoModel() {
-                Id = 7,
-                Name = "List materials",
-                StartDate = new DateTime(2021, 04, 01),
-                Duration = "3",
-                Progress = 30,
-                ParentId = 5,
-                TaskType="FixedWork",
-                Work=48,
-            },
-            new TaskInfoModel() {
-                Id = 8,
-                Name = "Estimation approval",
-                StartDate = new DateTime(2021, 04, 01),
-                Duration = "2",
-                ParentId = 5,
-                Work=60,
-                TaskType="FixedWork",
-            },
-            new TaskInfoModel() {
-                Id = 9,
-                Name = "Sign contract",
-                StartDate = new DateTime(2021, 03, 31),
-                EndDate = new DateTime(2021, 04, 01),
-                Duration="1",
-                TaskType="FixedWork",
-                Work=24,
-            },
-        };
-        return Tasks;
+        TaskCollection = GanttModel.GetTaskCollection();
+        ResourceCollection = GanttModel.GetResources;
+        AssignmentCollection = GanttModel.GetAssignmentCollection();
     }
 }
-```
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="GanttModel.cs" %}
+
+namespace BlazorGanttChart.Data
+{
+    public class GanttModel
+    {
+        public class ResourceInfoModel
+        {
+            public int Id { get; set; }
+            public string? Name { get; set; }
+            public double MaxUnit { get; set; }
+        }
+
+        public class TaskInfoModel
+        {
+            public int Id { get; set; }
+            public string? Name { get; set; }
+            public string? TaskType { get; set; }
+            public DateTime StartDate { get; set; }
+            public DateTime? EndDate { get; set; }
+            public string? Duration { get; set; }
+            public int Progress { get; set; }
+            public int? ParentId { get; set; }
+            public double? Work { get; set; }
+        }
+
+        public class AssignmentModel
+        {
+            public int PrimaryId { get; set; }
+            public int TaskId { get; set; }
+            public int ResourceId { get; set; }
+            public double Unit { get; set; }
+        }
+
+        public static List<ResourceInfoModel> GetResources = new List<ResourceInfoModel>()
+        {
+            new ResourceInfoModel() { Id= 1, Name= "Martin Tamer" ,MaxUnit=70},
+            new ResourceInfoModel() { Id= 2, Name= "Rose Fuller" },
+            new ResourceInfoModel() { Id= 3, Name= "Margaret Buchanan" },
+            new ResourceInfoModel() { Id= 4, Name= "Fuller King", MaxUnit = 100},
+            new ResourceInfoModel() { Id= 5, Name= "Davolio Fuller" },
+            new ResourceInfoModel() { Id= 6, Name= "Van Jack" },
+            new ResourceInfoModel() { Id= 7, Name= "Fuller Buchanan" },
+            new ResourceInfoModel() { Id= 8, Name= "Jack Davolio" },
+            new ResourceInfoModel() { Id= 9, Name= "Tamer Vinet" },
+            new ResourceInfoModel() { Id= 10, Name= "Vinet Fuller" },
+            new ResourceInfoModel() { Id= 11, Name= "Bergs Anton" },
+            new ResourceInfoModel() { Id= 12, Name= "Construction Supervisor" }
+        };
+
+        public static List<AssignmentModel> GetAssignmentCollection()
+        {
+            List<AssignmentModel> assignments = new List<AssignmentModel>()
+            {
+                new AssignmentModel(){ PrimaryId=1, TaskId = 2 , ResourceId=1, Unit=70},
+                new AssignmentModel(){ PrimaryId=2, TaskId = 2 , ResourceId=6},
+                new AssignmentModel(){ PrimaryId=3, TaskId = 3 , ResourceId=2},
+                new AssignmentModel(){ PrimaryId=4, TaskId = 3 , ResourceId=3},
+                new AssignmentModel(){ PrimaryId=5, TaskId = 3 , ResourceId=6},
+                new AssignmentModel(){ PrimaryId=6, TaskId = 4 , ResourceId=8},
+                new AssignmentModel(){ PrimaryId=7, TaskId = 4 , ResourceId=9},
+                new AssignmentModel(){ PrimaryId=8, TaskId = 6 , ResourceId=4},
+                new AssignmentModel(){ PrimaryId=9, TaskId = 7 , ResourceId=4},
+                new AssignmentModel(){ PrimaryId=10, TaskId = 7 , ResourceId=8},
+                new AssignmentModel(){ PrimaryId=11, TaskId = 8 , ResourceId=12},
+                new AssignmentModel(){ PrimaryId=12, TaskId = 8 , ResourceId=5},
+                new AssignmentModel(){ PrimaryId=13, TaskId = 9 , ResourceId=12},
+                new AssignmentModel(){ PrimaryId=14, TaskId = 9 , ResourceId=5}
+            };
+            return assignments;
+        }
+
+        public static List<TaskInfoModel> GetTaskCollection()
+        {
+            return new List<TaskInfoModel>()
+            {
+                new TaskInfoModel() { Id = 1, Name = "Project initiation", StartDate = new DateTime(2021, 03, 28), EndDate = new DateTime(2021, 07, 28), TaskType ="FixedDuration", Work=128, Duration="4" },
+                new TaskInfoModel() { Id = 2, Name = "Identify site location", StartDate = new DateTime(2021, 03, 29), Progress = 30, ParentId = 1, Duration="2", TaskType ="FixedDuration", Work=16 },
+                new TaskInfoModel() { Id = 3, Name = "Perform soil test", StartDate = new DateTime(2021, 03, 29), ParentId = 1, Work=96, Duration="4", TaskType="FixedWork" },
+                new TaskInfoModel() { Id = 4, Name = "Soil test approval", StartDate = new DateTime(2021, 03, 29), Duration = "1", Progress = 30, ParentId = 1, Work=16, TaskType="FixedWork" },
+                new TaskInfoModel() { Id = 5, Name = "Project estimation", StartDate = new DateTime(2021, 03, 29), EndDate = new DateTime(2021, 04, 2), TaskType="FixedDuration", Duration="4" },
+                new TaskInfoModel() { Id = 6, Name = "Develop floor plan for estimation", StartDate = new DateTime(2021, 03, 29), Duration = "3", Progress = 30, ParentId = 5, Work=30, TaskType="FixedWork" },
+                new TaskInfoModel() { Id = 7, Name = "List materials", StartDate = new DateTime(2021, 04, 01), Duration = "3", Progress = 30, ParentId = 5, TaskType="FixedWork", Work=48 },
+                new TaskInfoModel() { Id = 8, Name = "Estimation approval", StartDate = new DateTime(2021, 04, 01), Duration = "2", ParentId = 5, Work=60, TaskType="FixedWork" },
+                new TaskInfoModel() { Id = 9, Name = "Sign contract", StartDate = new DateTime(2021, 03, 31), EndDate = new DateTime(2021, 04, 01), Duration="1", TaskType="FixedWork", Work=24 },
+            };
+        }
+    }
+}
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![Resource unit](images/blazor-gantt-chart-resource.png)
+
+## Managing resources assignments in project view
+
+In the Gantt Chart, you can enable dynamic resources assignments by setting the [AllowEditing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEditSettings.html#Syncfusion_Blazor_Gantt_GanttEditSettings_AllowEditing) properties to **true** in the [GanttEditSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEditSettings.html) component. These actions can be performed using the following three methods:
+
+### Through cell edit
+
+To edit resources directly through [cell editing](https://blazor.syncfusion.com/documentation/gantt-chart/editing-tasks#cell-editing), you can use the [GanttResourceColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttResourceColumn.html) within the [GanttColumns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttColumns.html) of the Blazor Gantt Chart. The following code snippet demonstrates the cell edit functionality in the Gantt chart.
+
+
+{% tabs %}
+
+{% highlight razor %}
+
+
+@using Syncfusion.Blazor.Gantt
+@using BlazorGanttChart.Data
+
+<SfGantt DataSource="@TaskCollection" Height="450px" Width="850px" TreeColumnIndex="1" ProjectStartDate="@ProjectStart" ProjectEndDate="@ProjectEnd" WorkUnit="WorkUnit.Hour"
+         Toolbar="@(new List<string>(){ "Add", "Edit", "Update", "Delete", "Cancel", "ExpandAll", "CollapseAll"})">
+    <GanttTaskFields Id="@nameof(GanttModel.TaskInfoModel.Id)" Name="@nameof(GanttModel.TaskInfoModel.Name)" StartDate="@nameof(GanttModel.TaskInfoModel.StartDate)" EndDate="@nameof(GanttModel.TaskInfoModel.EndDate)" Duration="@nameof(GanttModel.TaskInfoModel.Duration)" Progress="@nameof(GanttModel.TaskInfoModel.Progress)"
+                     ParentID="@nameof(GanttModel.TaskInfoModel.ParentId)" Work="@nameof(GanttModel.TaskInfoModel.Work)" TaskType="@nameof(GanttModel.TaskInfoModel.TaskType)">
+    </GanttTaskFields>
+    <GanttResource DataSource="ResourceCollection" Id="@nameof(GanttModel.ResourceInfoModel.Id)" Name="@nameof(GanttModel.ResourceInfoModel.Name)" MaxUnits="@nameof(GanttModel.ResourceInfoModel.MaxUnit)" TValue="GanttModel.TaskInfoModel" TResources="GanttModel.ResourceInfoModel"></GanttResource>
+    <GanttAssignmentFields DataSource="AssignmentCollection" PrimaryKey="@nameof(GanttModel.AssignmentModel.PrimaryId)" TaskID="@nameof(GanttModel.AssignmentModel.TaskId)" ResourceID="@nameof(GanttModel.AssignmentModel.ResourceId)" Units="@nameof(GanttModel.AssignmentModel.Unit)" TValue="GanttModel.TaskInfoModel" TAssignment="GanttModel.AssignmentModel">
+    </GanttAssignmentFields>
+    <GanttLabelSettings RightLabel="Resources" TValue="GanttModel.TaskInfoModel"></GanttLabelSettings>
+    <GanttEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true" AllowTaskbarEditing="true"
+                       ShowDeleteConfirmDialog="true"></GanttEditSettings>
+    <GanttColumns>
+        <GanttColumn Field="@nameof(GanttModel.TaskInfoModel.Id)" HeaderText="ID"></GanttColumn>
+        <GanttColumn Field="@nameof(GanttModel.TaskInfoModel.Name)" HeaderText="Event Name" Width="250px"></GanttColumn>
+        <GanttResourceColumn HeaderText="Event Resources" Width="300px"></GanttResourceColumn>
+        <GanttColumn Field="@nameof(GanttModel.TaskInfoModel.Work)" HeaderText="Work"></GanttColumn>
+        <GanttColumn Field="@nameof(GanttModel.TaskInfoModel.Duration)" HeaderText="Duration"></GanttColumn>
+        <GanttColumn Field="@nameof(GanttModel.TaskInfoModel.TaskType)" HeaderText="Task Type"></GanttColumn>
+        <GanttColumn Field="@nameof(GanttModel.TaskInfoModel.StartDate)" HeaderText="Start Date"></GanttColumn>
+        <GanttColumn Field="@nameof(GanttModel.TaskInfoModel.EndDate)" HeaderText="End Date"></GanttColumn>
+    </GanttColumns>
+    <GanttSplitterSettings Position="28%"> </GanttSplitterSettings>
+</SfGantt>
+
+@code {
+    private DateTime ProjectStart = new DateTime(2021, 3, 28);
+    private DateTime ProjectEnd = new DateTime(2021, 7, 28);
+    private List<GanttModel.TaskInfoModel> TaskCollection { get; set; } = new();
+    private List<GanttModel.ResourceInfoModel> ResourceCollection { get; set; } = new();
+    private static List<GanttModel.AssignmentModel> AssignmentCollection { get; set; } = new();
+    protected override void OnInitialized()
+    {
+        TaskCollection = GanttModel.GetTaskCollection();
+        ResourceCollection = GanttModel.GetResources;
+        AssignmentCollection = GanttModel.GetAssignmentCollection();
+    }
+}
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="GanttModel.cs" %}
+
+namespace BlazorGanttChart.Data
+{
+    public class GanttModel
+    {
+        public class ResourceInfoModel
+        {
+            public int Id { get; set; }
+            public string? Name { get; set; }
+            public double MaxUnit { get; set; }
+        }
+
+        public class TaskInfoModel
+        {
+            public int Id { get; set; }
+            public string? Name { get; set; }
+            public string? TaskType { get; set; }
+            public DateTime StartDate { get; set; }
+            public DateTime? EndDate { get; set; }
+            public string? Duration { get; set; }
+            public int Progress { get; set; }
+            public int? ParentId { get; set; }
+            public double? Work { get; set; }
+        }
+
+        public class AssignmentModel
+        {
+            public int PrimaryId { get; set; }
+            public int TaskId { get; set; }
+            public int ResourceId { get; set; }
+            public double Unit { get; set; }
+        }
+
+        public static List<ResourceInfoModel> GetResources = new List<ResourceInfoModel>()
+        {
+            new ResourceInfoModel() { Id= 1, Name= "Martin Tamer" ,MaxUnit=70},
+            new ResourceInfoModel() { Id= 2, Name= "Rose Fuller" },
+            new ResourceInfoModel() { Id= 3, Name= "Margaret Buchanan" },
+            new ResourceInfoModel() { Id= 4, Name= "Fuller King", MaxUnit = 100},
+            new ResourceInfoModel() { Id= 5, Name= "Davolio Fuller" },
+            new ResourceInfoModel() { Id= 6, Name= "Van Jack" },
+            new ResourceInfoModel() { Id= 7, Name= "Fuller Buchanan" },
+            new ResourceInfoModel() { Id= 8, Name= "Jack Davolio" },
+            new ResourceInfoModel() { Id= 9, Name= "Tamer Vinet" },
+            new ResourceInfoModel() { Id= 10, Name= "Vinet Fuller" },
+            new ResourceInfoModel() { Id= 11, Name= "Bergs Anton" },
+            new ResourceInfoModel() { Id= 12, Name= "Construction Supervisor" }
+        };
+
+        public static List<AssignmentModel> GetAssignmentCollection()
+        {
+            List<AssignmentModel> assignments = new List<AssignmentModel>()
+            {
+                new AssignmentModel(){ PrimaryId=1, TaskId = 2 , ResourceId=1, Unit=70},
+                new AssignmentModel(){ PrimaryId=2, TaskId = 2 , ResourceId=6},
+                new AssignmentModel(){ PrimaryId=3, TaskId = 3 , ResourceId=2},
+                new AssignmentModel(){ PrimaryId=4, TaskId = 3 , ResourceId=3},
+                new AssignmentModel(){ PrimaryId=5, TaskId = 3 , ResourceId=6},
+                new AssignmentModel(){ PrimaryId=6, TaskId = 4 , ResourceId=8},
+                new AssignmentModel(){ PrimaryId=7, TaskId = 4 , ResourceId=9},
+                new AssignmentModel(){ PrimaryId=8, TaskId = 6 , ResourceId=4},
+                new AssignmentModel(){ PrimaryId=9, TaskId = 7 , ResourceId=4},
+                new AssignmentModel(){ PrimaryId=10, TaskId = 7 , ResourceId=8},
+                new AssignmentModel(){ PrimaryId=11, TaskId = 8 , ResourceId=12},
+                new AssignmentModel(){ PrimaryId=12, TaskId = 8 , ResourceId=5},
+                new AssignmentModel(){ PrimaryId=13, TaskId = 9 , ResourceId=12},
+                new AssignmentModel(){ PrimaryId=14, TaskId = 9 , ResourceId=5}
+            };
+            return assignments;
+        }
+
+        public static List<TaskInfoModel> GetTaskCollection()
+        {
+            return new List<TaskInfoModel>()
+            {
+                new TaskInfoModel() { Id = 1, Name = "Project initiation", StartDate = new DateTime(2021, 03, 28), EndDate = new DateTime(2021, 07, 28), TaskType ="FixedDuration", Work=128, Duration="4" },
+                new TaskInfoModel() { Id = 2, Name = "Identify site location", StartDate = new DateTime(2021, 03, 29), Progress = 30, ParentId = 1, Duration="2", TaskType ="FixedDuration", Work=16 },
+                new TaskInfoModel() { Id = 3, Name = "Perform soil test", StartDate = new DateTime(2021, 03, 29), ParentId = 1, Work=96, Duration="4", TaskType="FixedWork" },
+                new TaskInfoModel() { Id = 4, Name = "Soil test approval", StartDate = new DateTime(2021, 03, 29), Duration = "1", Progress = 30, ParentId = 1, Work=16, TaskType="FixedWork" },
+                new TaskInfoModel() { Id = 5, Name = "Project estimation", StartDate = new DateTime(2021, 03, 29), EndDate = new DateTime(2021, 04, 2), TaskType="FixedDuration", Duration="4" },
+                new TaskInfoModel() { Id = 6, Name = "Develop floor plan for estimation", StartDate = new DateTime(2021, 03, 29), Duration = "3", Progress = 30, ParentId = 5, Work=30, TaskType="FixedWork" },
+                new TaskInfoModel() { Id = 7, Name = "List materials", StartDate = new DateTime(2021, 04, 01), Duration = "3", Progress = 30, ParentId = 5, TaskType="FixedWork", Work=48 },
+                new TaskInfoModel() { Id = 8, Name = "Estimation approval", StartDate = new DateTime(2021, 04, 01), Duration = "2", ParentId = 5, Work=60, TaskType="FixedWork" },
+                new TaskInfoModel() { Id = 9, Name = "Sign contract", StartDate = new DateTime(2021, 03, 31), EndDate = new DateTime(2021, 04, 01), Duration="1", TaskType="FixedWork", Work=24 },
+            };
+        }
+    }
+}
+
+{% endhighlight %}
+
+{% endtabs %}
+
+
 ![Resource edit in cell editing](images/blazor-gantt-chart-resource-cell-edit.png)
 
 ### Through dialog box
 
-In the resource tab of the [add/edit dialog box](https://blazor.syncfusion.com/documentation/gantt-chart/editing-tasks#dialog-editing) within the Gantt chart, resources can be both added and removed. Additionally, the resource tab allows editing the unit value for individual resources. When editing resources through the dialog box, it's essential to bind the `GanttResource` and `GanttAssignmentFields` within the `SfGantt` component for a comprehensive resource management process. 
+In the resource tab of the [add/edit dialog box](https://blazor.syncfusion.com/documentation/gantt-chart/editing-tasks#dialog-editing) within the Gantt chart, resources can be conveniently added or removed using the checkboxes provided in the grid rows of the resource tab. Clicking on a checkbox item in a grid row adds the corresponding resource to the task, while unchecking it removes the resource. Also, the resource tab allows editing the unit value for individual resources.
 
-```cshtml
+{% tabs %}
+
+{% highlight razor %}
+
+
 @using Syncfusion.Blazor.Gantt
-@using System.ComponentModel.DataAnnotations
+@using BlazorGanttChart.Data
 
 <SfGantt DataSource="@TaskCollection" Height="450px" Width="850px" TreeColumnIndex="1" ProjectStartDate="@ProjectStart" ProjectEndDate="@ProjectEnd" WorkUnit="WorkUnit.Hour"
          Toolbar="@(new List<string>(){ "Add", "Edit", "Update", "Delete", "Cancel", "ExpandAll", "CollapseAll"})">
-    <GanttTaskFields Id="Id" Name="Name" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress"
-                     ParentID="ParentId" Work="Work" TaskType="TaskType">
+    <GanttTaskFields Id="@nameof(GanttModel.TaskInfoModel.Id)" Name="@nameof(GanttModel.TaskInfoModel.Name)" StartDate="@nameof(GanttModel.TaskInfoModel.StartDate)" EndDate="@nameof(GanttModel.TaskInfoModel.EndDate)" Duration="@nameof(GanttModel.TaskInfoModel.Duration)" Progress="@nameof(GanttModel.TaskInfoModel.Progress)"
+                     ParentID="@nameof(GanttModel.TaskInfoModel.ParentId)" Work="@nameof(GanttModel.TaskInfoModel.Work)" TaskType="@nameof(GanttModel.TaskInfoModel.TaskType)">
     </GanttTaskFields>
+    <GanttResource DataSource="ResourceCollection" Id="@nameof(GanttModel.ResourceInfoModel.Id)" Name="@nameof(GanttModel.ResourceInfoModel.Name)" MaxUnits="@nameof(GanttModel.ResourceInfoModel.MaxUnit)" TValue="GanttModel.TaskInfoModel" TResources="GanttModel.ResourceInfoModel"></GanttResource>
+    <GanttAssignmentFields DataSource="AssignmentCollection" PrimaryKey="@nameof(GanttModel.AssignmentModel.PrimaryId)" TaskID="@nameof(GanttModel.AssignmentModel.TaskId)" ResourceID="@nameof(GanttModel.AssignmentModel.ResourceId)" Units="@nameof(GanttModel.AssignmentModel.Unit)" TValue="GanttModel.TaskInfoModel" TAssignment="GanttModel.AssignmentModel">
+    </GanttAssignmentFields>
+    <GanttLabelSettings RightLabel="Resources" TValue="GanttModel.TaskInfoModel"></GanttLabelSettings>
     <GanttEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true" AllowTaskbarEditing="true"
                        ShowDeleteConfirmDialog="true"></GanttEditSettings>
     <GanttColumns>
-        <GanttColumn Field="Id" HeaderText="ID"></GanttColumn>
-        <GanttColumn Field="Name" HeaderText="Event Name" ClipMode="Syncfusion.Blazor.Grids.ClipMode.EllipsisWithTooltip"></GanttColumn>
-        <GanttResourceColumn HeaderText="Event Resources"></GanttResourceColumn>
-        <GanttColumn Field="Work" HeaderText="Work"></GanttColumn>
-        <GanttColumn Field="Duration" HeaderText="Duration"></GanttColumn>
-        <GanttColumn Field="TaskType" HeaderText="Task Type"></GanttColumn>
-        <GanttColumn Field="StartDate" HeaderText="Start Date"></GanttColumn>
-        <GanttColumn Field="EndDate" HeaderText="End Date"></GanttColumn>
+        <GanttColumn Field="@nameof(GanttModel.TaskInfoModel.Id)" HeaderText="ID"></GanttColumn>
+        <GanttColumn Field="@nameof(GanttModel.TaskInfoModel.Name)" HeaderText="Event Name" Width="250px"></GanttColumn>
+        <GanttResourceColumn HeaderText="Event Resources" Width="300px"></GanttResourceColumn>
+        <GanttColumn Field="@nameof(GanttModel.TaskInfoModel.Work)" HeaderText="Work"></GanttColumn>
+        <GanttColumn Field="@nameof(GanttModel.TaskInfoModel.Duration)" HeaderText="Duration"></GanttColumn>
+        <GanttColumn Field="@nameof(GanttModel.TaskInfoModel.TaskType)" HeaderText="Task Type"></GanttColumn>
+        <GanttColumn Field="@nameof(GanttModel.TaskInfoModel.StartDate)" HeaderText="Start Date"></GanttColumn>
+        <GanttColumn Field="@nameof(GanttModel.TaskInfoModel.EndDate)" HeaderText="End Date"></GanttColumn>
     </GanttColumns>
-    <GanttResource DataSource="ResourceCollection" Id="Id" Name="Name" MaxUnits="MaxUnit" TValue="TaskInfoModel" TResources="ResourceInfoModel"></GanttResource>
-    <GanttAssignmentFields DataSource="AssignmentCollection" PrimaryKey="PrimaryId" TaskID="TaskId" ResourceID="ResourceId" Units="Unit" TValue="TaskInfoModel" TAssignment="AssignmentModel"></GanttAssignmentFields>
-    <GanttLabelSettings RightLabel="Resources" TValue="TaskInfoModel"></GanttLabelSettings>
     <GanttSplitterSettings Position="28%"> </GanttSplitterSettings>
 </SfGantt>
 
 @code {
     private DateTime ProjectStart = new DateTime(2021, 3, 28);
     private DateTime ProjectEnd = new DateTime(2021, 7, 28);
-    private List<TaskInfoModel> TaskCollection { get; set; } = new();
-    private List<ResourceInfoModel> ResourceCollection { get; set; } = new();
-    private static List<AssignmentModel> AssignmentCollection { get; set; } = new();
+    private List<GanttModel.TaskInfoModel> TaskCollection { get; set; } = new();
+    private List<GanttModel.ResourceInfoModel> ResourceCollection { get; set; } = new();
+    private static List<GanttModel.AssignmentModel> AssignmentCollection { get; set; } = new();
     protected override void OnInitialized()
     {
-        TaskCollection = GetTaskCollection();
-        ResourceCollection = GetResources;
-        AssignmentCollection = GetAssignmentCollection();
-    }
-
-    public class ResourceInfoModel
-    {
-        [Display(Name ="Resource Id")]
-        public int Id { get; set; }
-        [Display(ShortName ="Resource Name")]
-        public string? Name { get; set; }
-        [Display(ShortName = "MaxUnits")]
-        public double MaxUnit { get; set; }
-    }
-
-    public class TaskInfoModel
-    {
-        public int Id { get; set; }
-        public string? Name { get; set; }
-        public string? TaskType { get; set; }
-        public DateTime StartDate { get; set; }
-        public DateTime? EndDate { get; set; }
-        public string? Duration { get; set; }
-        public int Progress { get; set; }
-        public int? ParentId { get; set; }
-        public double? Work { get; set; }
-    }
-
-    public class AssignmentModel
-    {
-        public int PrimaryId { get; set; }
-        public int TaskId { get; set; }
-        public int ResourceId { get; set; }
-        public double Unit { get; set; }
-    }
-
-    public static List<ResourceInfoModel> GetResources = new List<ResourceInfoModel>()
-    {
-        new ResourceInfoModel() { Id= 1, Name= "Martin Tamer" ,MaxUnit=70},
-        new ResourceInfoModel() { Id= 2, Name= "Rose Fuller" },
-        new ResourceInfoModel() { Id= 3, Name= "Margaret Buchanan" },
-        new ResourceInfoModel() { Id= 4, Name= "Fuller King", MaxUnit = 100},
-        new ResourceInfoModel() { Id= 5, Name= "Davolio Fuller" },
-        new ResourceInfoModel() { Id= 6, Name= "Van Jack" },
-        new ResourceInfoModel() { Id= 7, Name= "Fuller Buchanan" },
-        new ResourceInfoModel() { Id= 8, Name= "Jack Davolio" },
-        new ResourceInfoModel() { Id= 9, Name= "Tamer Vinet" },
-        new ResourceInfoModel() { Id= 10, Name= "Vinet Fuller" },
-        new ResourceInfoModel() { Id= 11, Name= "Bergs Anton" },
-        new ResourceInfoModel() { Id= 12, Name= "Construction Supervisor" }
-    };
-
-    public static List<AssignmentModel> GetAssignmentCollection()
-    {
-        List<AssignmentModel> assignments = new List<AssignmentModel>()
-        {
-            new AssignmentModel(){ PrimaryId=1, TaskId = 2 , ResourceId=1, Unit=70},
-            new AssignmentModel(){ PrimaryId=2, TaskId = 2 , ResourceId=6},
-            new AssignmentModel(){ PrimaryId=3, TaskId = 3 , ResourceId=2},
-            new AssignmentModel(){ PrimaryId=4, TaskId = 3 , ResourceId=3},
-            new AssignmentModel(){ PrimaryId=5, TaskId = 3 , ResourceId=6},
-            new AssignmentModel(){ PrimaryId=6, TaskId = 4 , ResourceId=8},
-            new AssignmentModel(){ PrimaryId=7, TaskId = 4 , ResourceId=9},
-            new AssignmentModel(){ PrimaryId=8, TaskId = 6 , ResourceId=4},
-            new AssignmentModel(){ PrimaryId=9, TaskId = 7 , ResourceId=4},
-            new AssignmentModel(){ PrimaryId=10, TaskId = 7 , ResourceId=8},
-            new AssignmentModel(){ PrimaryId=11, TaskId = 8 , ResourceId=12},
-            new AssignmentModel(){ PrimaryId=12, TaskId = 8 , ResourceId=5},
-            new AssignmentModel(){ PrimaryId=13, TaskId = 9 , ResourceId=12},
-            new AssignmentModel(){ PrimaryId=14, TaskId = 9 , ResourceId=5}
-        };
-        return assignments;
-    }
-
-    public static List<TaskInfoModel> GetTaskCollection()
-    {
-        List<TaskInfoModel> Tasks = new List<TaskInfoModel>()
-        {
-            new TaskInfoModel() {
-                Id = 1,
-                Name = "Project initiation",
-                StartDate = new DateTime(2021, 03, 28),
-                EndDate = new DateTime(2021, 07, 28),
-                TaskType ="FixedDuration",
-                Work=128,
-                Duration="4"
-            },
-            new TaskInfoModel() {
-                Id = 2,
-                Name = "Identify site location",
-                StartDate = new DateTime(2021, 03, 29),
-                Progress = 30,
-                ParentId = 1,
-                Duration="2",
-                TaskType ="FixedDuration",
-                Work=16,
-            },
-            new TaskInfoModel() {
-                Id = 3,
-                Name = "Perform soil test",
-                StartDate = new DateTime(2021, 03, 29),
-                ParentId = 1,
-                Work=96,
-                Duration="4",
-                TaskType="FixedWork"
-            },
-            new TaskInfoModel() {
-                Id = 4,
-                Name = "Soil test approval",
-                StartDate = new DateTime(2021, 03, 29),
-                Duration = "1",
-                Progress = 30,
-                ParentId = 1,
-                Work=16,
-                TaskType="FixedWork"
-            },
-            new TaskInfoModel() {
-                Id = 5,
-                Name = "Project estimation",
-                StartDate = new DateTime(2021, 03, 29),
-                EndDate = new DateTime(2021, 04, 2),
-                TaskType="FixedDuration",
-                Duration="4"
-            },
-            new TaskInfoModel() {
-                Id = 6,
-                Name = "Develop floor plan for estimation",
-                StartDate = new DateTime(2021, 03, 29),
-                Duration = "3",
-                Progress = 30,
-                ParentId = 5,
-                Work=30,
-                TaskType="FixedWork"
-            },
-            new TaskInfoModel() {
-                Id = 7,
-                Name = "List materials",
-                StartDate = new DateTime(2021, 04, 01),
-                Duration = "3",
-                Progress = 30,
-                ParentId = 5,
-                TaskType="FixedWork",
-                Work=48,
-            },
-            new TaskInfoModel() {
-                Id = 8,
-                Name = "Estimation approval",
-                StartDate = new DateTime(2021, 04, 01),
-                Duration = "2",
-                ParentId = 5,
-                Work=60,
-                TaskType="FixedWork",
-            },
-            new TaskInfoModel() {
-                Id = 9,
-                Name = "Sign contract",
-                StartDate = new DateTime(2021, 03, 31),
-                EndDate = new DateTime(2021, 04, 01),
-                Duration="1",
-                TaskType="FixedWork",
-                Work=24,
-            },
-        };
-        return Tasks;
+        TaskCollection = GanttModel.GetTaskCollection();
+        ResourceCollection = GanttModel.GetResources;
+        AssignmentCollection = GanttModel.GetAssignmentCollection();
     }
 }
-```
-![Resource edit in dialogbox](images/blazor-gantt-chart-resource-dialogbox.png)
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="GanttModel.cs" %}
+
+using System.ComponentModel.DataAnnotations;
+
+namespace BlazorGanttChart.Data
+{
+    public class GanttModel
+    {
+        public class ResourceInfoModel
+        {
+            [Display(Name ="ID")]
+            public int Id { get; set; }
+            [Display(ShortName ="Name")]
+            public string? Name { get; set; }
+            [Display(ShortName = "Unit")]
+            public double MaxUnit { get; set; }
+        }
+
+        public class TaskInfoModel
+        {
+            public int Id { get; set; }
+            public string? Name { get; set; }
+            public string? TaskType { get; set; }
+            public DateTime StartDate { get; set; }
+            public DateTime? EndDate { get; set; }
+            public string? Duration { get; set; }
+            public int Progress { get; set; }
+            public int? ParentId { get; set; }
+            public double? Work { get; set; }
+        }
+
+        public class AssignmentModel
+        {
+            public int PrimaryId { get; set; }
+            public int TaskId { get; set; }
+            public int ResourceId { get; set; }
+            public double Unit { get; set; }
+        }
+
+        public static List<ResourceInfoModel> GetResources = new List<ResourceInfoModel>()
+        {
+            new ResourceInfoModel() { Id= 1, Name= "Martin Tamer" ,MaxUnit=70},
+            new ResourceInfoModel() { Id= 2, Name= "Rose Fuller" },
+            new ResourceInfoModel() { Id= 3, Name= "Margaret Buchanan" },
+            new ResourceInfoModel() { Id= 4, Name= "Fuller King", MaxUnit = 100},
+            new ResourceInfoModel() { Id= 5, Name= "Davolio Fuller" },
+            new ResourceInfoModel() { Id= 6, Name= "Van Jack" },
+            new ResourceInfoModel() { Id= 7, Name= "Fuller Buchanan" },
+            new ResourceInfoModel() { Id= 8, Name= "Jack Davolio" },
+            new ResourceInfoModel() { Id= 9, Name= "Tamer Vinet" },
+            new ResourceInfoModel() { Id= 10, Name= "Vinet Fuller" },
+            new ResourceInfoModel() { Id= 11, Name= "Bergs Anton" },
+            new ResourceInfoModel() { Id= 12, Name= "Construction Supervisor" }
+        };
+
+        public static List<AssignmentModel> GetAssignmentCollection()
+        {
+            List<AssignmentModel> assignments = new List<AssignmentModel>()
+            {
+                new AssignmentModel(){ PrimaryId=1, TaskId = 2 , ResourceId=1, Unit=70},
+                new AssignmentModel(){ PrimaryId=2, TaskId = 2 , ResourceId=6},
+                new AssignmentModel(){ PrimaryId=3, TaskId = 3 , ResourceId=2},
+                new AssignmentModel(){ PrimaryId=4, TaskId = 3 , ResourceId=3},
+                new AssignmentModel(){ PrimaryId=5, TaskId = 3 , ResourceId=6},
+                new AssignmentModel(){ PrimaryId=6, TaskId = 4 , ResourceId=8},
+                new AssignmentModel(){ PrimaryId=7, TaskId = 4 , ResourceId=9},
+                new AssignmentModel(){ PrimaryId=8, TaskId = 6 , ResourceId=4},
+                new AssignmentModel(){ PrimaryId=9, TaskId = 7 , ResourceId=4},
+                new AssignmentModel(){ PrimaryId=10, TaskId = 7 , ResourceId=8},
+                new AssignmentModel(){ PrimaryId=11, TaskId = 8 , ResourceId=12},
+                new AssignmentModel(){ PrimaryId=12, TaskId = 8 , ResourceId=5},
+                new AssignmentModel(){ PrimaryId=13, TaskId = 9 , ResourceId=12},
+                new AssignmentModel(){ PrimaryId=14, TaskId = 9 , ResourceId=5}
+            };
+            return assignments;
+        }
+
+        public static List<TaskInfoModel> GetTaskCollection()
+        {
+            return new List<TaskInfoModel>()
+            {
+                new TaskInfoModel() { Id = 1, Name = "Project initiation", StartDate = new DateTime(2021, 03, 28), EndDate = new DateTime(2021, 07, 28), TaskType ="FixedDuration", Work=128, Duration="4" },
+                new TaskInfoModel() { Id = 2, Name = "Identify site location", StartDate = new DateTime(2021, 03, 29), Progress = 30, ParentId = 1, Duration="2", TaskType ="FixedDuration", Work=16 },
+                new TaskInfoModel() { Id = 3, Name = "Perform soil test", StartDate = new DateTime(2021, 03, 29), ParentId = 1, Work=96, Duration="4", TaskType="FixedWork" },
+                new TaskInfoModel() { Id = 4, Name = "Soil test approval", StartDate = new DateTime(2021, 03, 29), Duration = "1", Progress = 30, ParentId = 1, Work=16, TaskType="FixedWork" },
+                new TaskInfoModel() { Id = 5, Name = "Project estimation", StartDate = new DateTime(2021, 03, 29), EndDate = new DateTime(2021, 04, 2), TaskType="FixedDuration", Duration="4" },
+                new TaskInfoModel() { Id = 6, Name = "Develop floor plan for estimation", StartDate = new DateTime(2021, 03, 29), Duration = "3", Progress = 30, ParentId = 5, Work=30, TaskType="FixedWork" },
+                new TaskInfoModel() { Id = 7, Name = "List materials", StartDate = new DateTime(2021, 04, 01), Duration = "3", Progress = 30, ParentId = 5, TaskType="FixedWork", Work=48 },
+                new TaskInfoModel() { Id = 8, Name = "Estimation approval", StartDate = new DateTime(2021, 04, 01), Duration = "2", ParentId = 5, Work=60, TaskType="FixedWork" },
+                new TaskInfoModel() { Id = 9, Name = "Sign contract", StartDate = new DateTime(2021, 03, 31), EndDate = new DateTime(2021, 04, 01), Duration="1", TaskType="FixedWork", Work=24 },
+            };
+        }
+    }
+}
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![Resource edit in dialogbox](images/blazor-gantt-chart-resource-dialogbox.gif)
 
 ### Through method
 
 You can manipulate task resources programmatically by using the following methods:
 
-* [AddResourceAssignmentAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_AddResourceAssignmentAsync): Adds a resource assignment to a task.
-* [DeleteResourceAssignmentAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_DeleteResourceAssignmentAsync): Removes a resource assignment from a task.
-* [UpdateResourceAssignmentAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_UpdateResourceAssignmentAsync): Updates an existing resource assignment for a task.
+* [AddResourceAssignmentAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_AddResourceAssignmentAsync): This method adds a new resource to a specific task in the Gantt chart.
+* [DeleteResourceAssignmentAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_DeleteResourceAssignmentAsync): Use this method to remove a resource from an existing task in the Gantt chart.
+* [UpdateResourceAssignmentAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_UpdateResourceAssignmentAsync): This method updates an existing resource assignment for a task, allowing you to modify resource allocations as needed within the Gantt chart.
 
 Additionally, you can retrieve assigned resources and resource assignments through the following methods:
 
 * [GetResources](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_GetResources): Retrieves the list of resources.
 * [GetResourceAssignments](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_GetResourceAssignments): Retrieves the list of resource assignments.
 
-These methods provide a convenient way to efficiently add, remove, and update task resources in your Gantt chart. In the following code snippet, upon clicking an external button, perform the following actions: add a resource to the 7th index record, update the resource of the 3rd index record, delete the resource of the 1st index record, retrieve the resource of the 1st index record, and retrieve the resource assignments of the 1st index record.
+* [AddRecordAsync]() - This method is utilized to add a new task to the Gantt chart. The fourth argument in this method is used for adding resources to the task.
 
-```cshtml
+These methods offer a convenient way to add, remove, and update task resources in your Gantt chart efficiently. In the code snippet below, upon clicking an external button, the following actions are performed:
+
+* Add a resource to the 7th index record.
+* Update the resource of the 3rd index record.
+* Delete the resource of the 1st index record.
+* Retrieve the resource of the 1st index record.
+* Retrieve the resource assignments of the 1st index record.
+
+{% tabs %}
+
+{% highlight razor %}
+
 @using Syncfusion.Blazor.Gantt
+@using BlazorGanttChart.Data
 
 <button @onclick="AddAssignment">Add Assignment</button>
 <button @onclick="UpdateAssignment">Update Assignment</button>
 <button @onclick="DeleteAssignment">Delete Assignment</button>
 <button @onclick="GetResource">GetResource</button>
 <button @onclick="GetAssignment">GetAssignments</button>
+<button @onclick="AddNewRecord">AddRecord</button>
 
 <SfGantt @ref="ganttInstance" DataSource="@TaskCollection" Height="450px" Width="850px" TreeColumnIndex="1" ProjectStartDate="@ProjectStart" ProjectEndDate="@ProjectEnd" WorkUnit="WorkUnit.Hour"
          Toolbar="@(new List<string>(){ "Add", "Edit", "Update", "Delete", "Cancel", "ExpandAll", "CollapseAll"})">
-    <GanttTaskFields Id="Id" Name="Name" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress"
-                     ParentID="ParentId" Work="Work" TaskType="TaskType">
+    <GanttTaskFields Id="@nameof(GanttModel.TaskInfoModel.Id)" Name="@nameof(GanttModel.TaskInfoModel.Name)" StartDate="@nameof(GanttModel.TaskInfoModel.StartDate)" EndDate="@nameof(GanttModel.TaskInfoModel.EndDate)" Duration="@nameof(GanttModel.TaskInfoModel.Duration)" Progress="@nameof(GanttModel.TaskInfoModel.Progress)"
+                     ParentID="@nameof(GanttModel.TaskInfoModel.ParentId)" Work="@nameof(GanttModel.TaskInfoModel.Work)" TaskType="@nameof(GanttModel.TaskInfoModel.TaskType)">
     </GanttTaskFields>
+    <GanttResource DataSource="ResourceCollection" Id="@nameof(GanttModel.ResourceInfoModel.Id)" Name="@nameof(GanttModel.ResourceInfoModel.Name)" MaxUnits="@nameof(GanttModel.ResourceInfoModel.MaxUnit)" TValue="GanttModel.TaskInfoModel" TResources="GanttModel.ResourceInfoModel"></GanttResource>
+    <GanttAssignmentFields DataSource="AssignmentCollection" PrimaryKey="@nameof(GanttModel.AssignmentModel.PrimaryId)" TaskID="@nameof(GanttModel.AssignmentModel.TaskId)" ResourceID="@nameof(GanttModel.AssignmentModel.ResourceId)" Units="@nameof(GanttModel.AssignmentModel.Unit)" TValue="GanttModel.TaskInfoModel" TAssignment="GanttModel.AssignmentModel">
+    </GanttAssignmentFields>
+    <GanttLabelSettings RightLabel="Resources" TValue="GanttModel.TaskInfoModel"></GanttLabelSettings>
     <GanttEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true" AllowTaskbarEditing="true"
                        ShowDeleteConfirmDialog="true"></GanttEditSettings>
     <GanttColumns>
-        <GanttColumn Field="Id" HeaderText="ID"></GanttColumn>
-        <GanttColumn Field="Name" HeaderText="Event Name" ClipMode="Syncfusion.Blazor.Grids.ClipMode.EllipsisWithTooltip"></GanttColumn>
-        <GanttResourceColumn HeaderText="Event Resources"></GanttResourceColumn>
-        <GanttColumn Field="Work" HeaderText="Work"></GanttColumn>
-        <GanttColumn Field="Duration" HeaderText="Duration"></GanttColumn>
-        <GanttColumn Field="TaskType" HeaderText="Task Type"></GanttColumn>
-        <GanttColumn Field="StartDate" HeaderText="Start Date"></GanttColumn>
-        <GanttColumn Field="EndDate" HeaderText="End Date"></GanttColumn>
+        <GanttColumn Field="@nameof(GanttModel.TaskInfoModel.Id)" HeaderText="ID"></GanttColumn>
+        <GanttColumn Field="@nameof(GanttModel.TaskInfoModel.Name)" HeaderText="Event Name" Width="250px"></GanttColumn>
+        <GanttResourceColumn HeaderText="Event Resources" Width="300px"></GanttResourceColumn>
+        <GanttColumn Field="@nameof(GanttModel.TaskInfoModel.Work)" HeaderText="Work"></GanttColumn>
+        <GanttColumn Field="@nameof(GanttModel.TaskInfoModel.Duration)" HeaderText="Duration"></GanttColumn>
+        <GanttColumn Field="@nameof(GanttModel.TaskInfoModel.TaskType)" HeaderText="Task Type"></GanttColumn>
+        <GanttColumn Field="@nameof(GanttModel.TaskInfoModel.StartDate)" HeaderText="Start Date"></GanttColumn>
+        <GanttColumn Field="@nameof(GanttModel.TaskInfoModel.EndDate)" HeaderText="End Date"></GanttColumn>
     </GanttColumns>
-    <GanttResource DataSource="ResourceCollection" Id="Id" Name="Name" MaxUnits="MaxUnit" TValue="TaskInfoModel" TResources="ResourceInfoModel"></GanttResource>
-    <GanttAssignmentFields DataSource="AssignmentCollection" PrimaryKey="PrimaryId" TaskID="TaskId" ResourceID="ResourceId" Units="Unit" TValue="TaskInfoModel" TAssignment="AssignmentModel"></GanttAssignmentFields>
-    <GanttLabelSettings RightLabel="Resources" TValue="TaskInfoModel"></GanttLabelSettings>
     <GanttSplitterSettings Position="28%"> </GanttSplitterSettings>
 </SfGantt>
 
 @code {
-    private SfGantt<TaskInfoModel> ganttInstance { get; set; } = new();
+    private SfGantt<GanttModel.TaskInfoModel> ganttInstance { get; set; } = new();
     private DateTime ProjectStart = new DateTime(2021, 3, 28);
     private DateTime ProjectEnd = new DateTime(2021, 7, 28);
-    private List<TaskInfoModel> TaskCollection { get; set; } = new();
-    private List<ResourceInfoModel> ResourceCollection { get; set; } = new();
-    private static List<AssignmentModel> AssignmentCollection { get; set; } = new();
+    private List<GanttModel.TaskInfoModel> TaskCollection { get; set; } = new();
+    private List<GanttModel.ResourceInfoModel> ResourceCollection { get; set; } = new();
+    private static List<GanttModel.AssignmentModel> AssignmentCollection { get; set; } = new();
     protected override void OnInitialized()
     {
-        TaskCollection = GetTaskCollection();
-        ResourceCollection = GetResources;
-        AssignmentCollection = GetAssignmentCollection();
+        TaskCollection = GanttModel.GetTaskCollection();
+        ResourceCollection = GanttModel.GetResources;
+        AssignmentCollection = GanttModel.GetAssignmentCollection();
     }
-
-    public class ResourceInfoModel
-    {
-        public int Id { get; set; }
-        public string? Name { get; set; }
-        public double MaxUnit { get; set; }
-    }
-
-    public class TaskInfoModel
-    {
-        public int Id { get; set; }
-        public string? Name { get; set; }
-        public string? TaskType { get; set; }
-        public DateTime StartDate { get; set; }
-        public DateTime? EndDate { get; set; }
-        public string? Duration { get; set; }
-        public int Progress { get; set; }
-        public int? ParentId { get; set; }
-        public double? Work { get; set; }
-    }
-
-    public class AssignmentModel
-    {
-        public int PrimaryId { get; set; }
-        public int TaskId { get; set; }
-        public int ResourceId { get; set; }
-        public double Unit { get; set; }
-    }
-
     private async void AddAssignment()
     {
-        var record = new AssignmentModel() { PrimaryId = 15, TaskId = 8, ResourceId = 8 };
+        var record = new GanttModel.AssignmentModel() { PrimaryId = 15, TaskId = 8, ResourceId = 8 };
         await ganttInstance.AddResourceAssignmentAsync(record);
     }
     private async void UpdateAssignment()
     {
-        var record = new AssignmentModel() { PrimaryId = 7, TaskId = 4, ResourceId = 3, Unit = 50 };
+        var record = new GanttModel.AssignmentModel() { PrimaryId = 7, TaskId = 4, ResourceId = 3, Unit = 50 };
         await ganttInstance.UpdateResourceAssignmentAsync(record);
     }
     private async void DeleteAssignment()
     {
-        var record = new AssignmentModel() { TaskId = 2, ResourceId = 6 };
+        var record = new GanttModel.AssignmentModel() { TaskId = 2, ResourceId = 6 };
         await ganttInstance.DeleteResourceAssignmentAsync(record);
     }
 
     private void GetResource()
     {
-        TaskInfoModel data = new TaskInfoModel() { Id = 2 };
-        var resources = ganttInstance.GetResources<ResourceInfoModel>(data);
+        GanttModel.TaskInfoModel data = new GanttModel.TaskInfoModel() { Id = 2 };
+        var resources = ganttInstance.GetResources<GanttModel.ResourceInfoModel>(data);
     }
     private void GetAssignment()
     {
-        TaskInfoModel data = new TaskInfoModel() { Id = 2 };
-        var assignments = ganttInstance.GetResourceAssignments<AssignmentModel>(data);
+        GanttModel.TaskInfoModel data = new GanttModel.TaskInfoModel() { Id = 2 };
+        var assignments = ganttInstance.GetResourceAssignments<GanttModel.AssignmentModel>(data);
     }
-
-    public static List<ResourceInfoModel> GetResources = new List<ResourceInfoModel>()
+    private async void AddNewRecord()
     {
-        new ResourceInfoModel() { Id= 1, Name= "Martin Tamer" ,MaxUnit=70},
-        new ResourceInfoModel() { Id= 2, Name= "Rose Fuller" },
-        new ResourceInfoModel() { Id= 3, Name= "Margaret Buchanan" },
-        new ResourceInfoModel() { Id= 4, Name= "Fuller King", MaxUnit = 100},
-        new ResourceInfoModel() { Id= 5, Name= "Davolio Fuller" },
-        new ResourceInfoModel() { Id= 6, Name= "Van Jack" },
-        new ResourceInfoModel() { Id= 7, Name= "Fuller Buchanan" },
-        new ResourceInfoModel() { Id= 8, Name= "Jack Davolio" },
-        new ResourceInfoModel() { Id= 9, Name= "Tamer Vinet" },
-        new ResourceInfoModel() { Id= 10, Name= "Vinet Fuller" },
-        new ResourceInfoModel() { Id= 11, Name= "Bergs Anton" },
-        new ResourceInfoModel() { Id= 12, Name= "Construction Supervisor" }
-    };
-
-    public static List<AssignmentModel> GetAssignmentCollection()
-    {
-        List<AssignmentModel> assignments = new List<AssignmentModel>()
-        {
-            new AssignmentModel(){ PrimaryId=1, TaskId = 2 , ResourceId=1, Unit=70},
-            new AssignmentModel(){ PrimaryId=2, TaskId = 2 , ResourceId=6},
-            new AssignmentModel(){ PrimaryId=3, TaskId = 3 , ResourceId=2},
-            new AssignmentModel(){ PrimaryId=4, TaskId = 3 , ResourceId=3},
-            new AssignmentModel(){ PrimaryId=5, TaskId = 3 , ResourceId=6},
-            new AssignmentModel(){ PrimaryId=6, TaskId = 4 , ResourceId=8},
-            new AssignmentModel(){ PrimaryId=7, TaskId = 4 , ResourceId=9},
-            new AssignmentModel(){ PrimaryId=8, TaskId = 6 , ResourceId=4},
-            new AssignmentModel(){ PrimaryId=9, TaskId = 7 , ResourceId=4},
-            new AssignmentModel(){ PrimaryId=10, TaskId = 7 , ResourceId=8},
-            new AssignmentModel(){ PrimaryId=11, TaskId = 8 , ResourceId=12},
-            new AssignmentModel(){ PrimaryId=12, TaskId = 8 , ResourceId=5},
-            new AssignmentModel(){ PrimaryId=13, TaskId = 9 , ResourceId=12},
-            new AssignmentModel(){ PrimaryId=14, TaskId = 9 , ResourceId=5}
-        };
-        return assignments;
-    }
-
-    public static List<TaskInfoModel> GetTaskCollection()
-    {
-        List<TaskInfoModel> Tasks = new List<TaskInfoModel>()
-        {
-            new TaskInfoModel() {
-                Id = 1,
-                Name = "Project initiation",
-                StartDate = new DateTime(2021, 03, 28),
-                EndDate = new DateTime(2021, 07, 28),
-                TaskType ="FixedDuration",
-                Work=128,
-                Duration="4"
-            },
-            new TaskInfoModel() {
-                Id = 2,
-                Name = "Identify site location",
-                StartDate = new DateTime(2021, 03, 29),
-                Progress = 30,
-                ParentId = 1,
-                Duration="2",
-                TaskType ="FixedDuration",
-                Work=16,
-            },
-            new TaskInfoModel() {
-                Id = 3,
-                Name = "Perform soil test",
-                StartDate = new DateTime(2021, 03, 29),
-                ParentId = 1,
-                Work=96,
-                Duration="4",
-                TaskType="FixedWork"
-            },
-            new TaskInfoModel() {
-                Id = 4,
-                Name = "Soil test approval",
-                StartDate = new DateTime(2021, 03, 29),
-                Duration = "1",
-                Progress = 30,
-                ParentId = 1,
-                Work=16,
-                TaskType="FixedWork"
-            },
-            new TaskInfoModel() {
-                Id = 5,
-                Name = "Project estimation",
-                StartDate = new DateTime(2021, 03, 29),
-                EndDate = new DateTime(2021, 04, 2),
-                TaskType="FixedDuration",
-                Duration="4"
-            },
-            new TaskInfoModel() {
-                Id = 6,
-                Name = "Develop floor plan for estimation",
-                StartDate = new DateTime(2021, 03, 29),
-                Duration = "3",
-                Progress = 30,
-                ParentId = 5,
-                Work=30,
-                TaskType="FixedWork"
-            },
-            new TaskInfoModel() {
-                Id = 7,
-                Name = "List materials",
-                StartDate = new DateTime(2021, 04, 01),
-                Duration = "3",
-                Progress = 30,
-                ParentId = 5,
-                TaskType="FixedWork",
-                Work=48,
-            },
-            new TaskInfoModel() {
-                Id = 8,
-                Name = "Estimation approval",
-                StartDate = new DateTime(2021, 04, 01),
-                Duration = "2",
-                ParentId = 5,
-                Work=60,
-                TaskType="FixedWork",
-            },
-            new TaskInfoModel() {
-                Id = 9,
-                Name = "Sign contract",
-                StartDate = new DateTime(2021, 03, 31),
-                EndDate = new DateTime(2021, 04, 01),
-                Duration="1",
-                TaskType="FixedWork",
-                Work=24,
-            },
-        };
-        return Tasks;
+        var record = new GanttModel.AssignmentModel() { PrimaryId = 19, TaskId = 10, ResourceId = 8 };
+        GanttModel.TaskInfoModel data = new GanttModel.TaskInfoModel() { Id = 10, Name = "NewRecord", StartDate = new DateTime(2021, 03, 29), Duration = "2", };
+        await ganttInstance.AddRecordAsync(data, 0, null, record);
     }
 }
-```
 
-## Custom taskbar styling using template
+{% endhighlight %}
 
-The taskbar appearance can be customized by using the [TaskbarTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTemplates-1.html#Syncfusion_Blazor_Gantt_GanttTemplates_1_TaskbarTemplate) property. In the code snippet below, the child task are customized based on template context data, and the resource name is added inside each child taskbar.
+{% highlight c# tabtitle="GanttModel.cs" %}
 
-``` cshtml
+namespace BlazorGanttChart.Data
+{
+    public class GanttModel
+    {
+        public class ResourceInfoModel
+        {
+            public int Id { get; set; }
+            public string? Name { get; set; }
+            public double MaxUnit { get; set; }
+        }
+
+        public class TaskInfoModel
+        {
+            public int Id { get; set; }
+            public string? Name { get; set; }
+            public string? TaskType { get; set; }
+            public DateTime StartDate { get; set; }
+            public DateTime? EndDate { get; set; }
+            public string? Duration { get; set; }
+            public int Progress { get; set; }
+            public int? ParentId { get; set; }
+            public double? Work { get; set; }
+        }
+
+        public class AssignmentModel
+        {
+            public int PrimaryId { get; set; }
+            public int TaskId { get; set; }
+            public int ResourceId { get; set; }
+            public double Unit { get; set; }
+        }
+
+        public static List<ResourceInfoModel> GetResources = new List<ResourceInfoModel>()
+        {
+            new ResourceInfoModel() { Id= 1, Name= "Martin Tamer" ,MaxUnit=70},
+            new ResourceInfoModel() { Id= 2, Name= "Rose Fuller" },
+            new ResourceInfoModel() { Id= 3, Name= "Margaret Buchanan" },
+            new ResourceInfoModel() { Id= 4, Name= "Fuller King", MaxUnit = 100},
+            new ResourceInfoModel() { Id= 5, Name= "Davolio Fuller" },
+            new ResourceInfoModel() { Id= 6, Name= "Van Jack" },
+            new ResourceInfoModel() { Id= 7, Name= "Fuller Buchanan" },
+            new ResourceInfoModel() { Id= 8, Name= "Jack Davolio" },
+            new ResourceInfoModel() { Id= 9, Name= "Tamer Vinet" },
+            new ResourceInfoModel() { Id= 10, Name= "Vinet Fuller" },
+            new ResourceInfoModel() { Id= 11, Name= "Bergs Anton" },
+            new ResourceInfoModel() { Id= 12, Name= "Construction Supervisor" }
+        };
+
+        public static List<AssignmentModel> GetAssignmentCollection()
+        {
+            List<AssignmentModel> assignments = new List<AssignmentModel>()
+            {
+                new AssignmentModel(){ PrimaryId=1, TaskId = 2 , ResourceId=1, Unit=70},
+                new AssignmentModel(){ PrimaryId=2, TaskId = 2 , ResourceId=6},
+                new AssignmentModel(){ PrimaryId=3, TaskId = 3 , ResourceId=2},
+                new AssignmentModel(){ PrimaryId=4, TaskId = 3 , ResourceId=3},
+                new AssignmentModel(){ PrimaryId=5, TaskId = 3 , ResourceId=6},
+                new AssignmentModel(){ PrimaryId=6, TaskId = 4 , ResourceId=8},
+                new AssignmentModel(){ PrimaryId=7, TaskId = 4 , ResourceId=9},
+                new AssignmentModel(){ PrimaryId=8, TaskId = 6 , ResourceId=4},
+                new AssignmentModel(){ PrimaryId=9, TaskId = 7 , ResourceId=4},
+                new AssignmentModel(){ PrimaryId=10, TaskId = 7 , ResourceId=8},
+                new AssignmentModel(){ PrimaryId=11, TaskId = 8 , ResourceId=12},
+                new AssignmentModel(){ PrimaryId=12, TaskId = 8 , ResourceId=5},
+                new AssignmentModel(){ PrimaryId=13, TaskId = 9 , ResourceId=12},
+                new AssignmentModel(){ PrimaryId=14, TaskId = 9 , ResourceId=5}
+            };
+            return assignments;
+        }
+
+        public static List<TaskInfoModel> GetTaskCollection()
+        {
+            return new List<TaskInfoModel>()
+            {
+                new TaskInfoModel() { Id = 1, Name = "Project initiation", StartDate = new DateTime(2021, 03, 28), EndDate = new DateTime(2021, 07, 28), TaskType ="FixedDuration", Work=128, Duration="4" },
+                new TaskInfoModel() { Id = 2, Name = "Identify site location", StartDate = new DateTime(2021, 03, 29), Progress = 30, ParentId = 1, Duration="2", TaskType ="FixedDuration", Work=16 },
+                new TaskInfoModel() { Id = 3, Name = "Perform soil test", StartDate = new DateTime(2021, 03, 29), ParentId = 1, Work=96, Duration="4", TaskType="FixedWork" },
+                new TaskInfoModel() { Id = 4, Name = "Soil test approval", StartDate = new DateTime(2021, 03, 29), Duration = "1", Progress = 30, ParentId = 1, Work=16, TaskType="FixedWork" },
+                new TaskInfoModel() { Id = 5, Name = "Project estimation", StartDate = new DateTime(2021, 03, 29), EndDate = new DateTime(2021, 04, 2), TaskType="FixedDuration", Duration="4" },
+                new TaskInfoModel() { Id = 6, Name = "Develop floor plan for estimation", StartDate = new DateTime(2021, 03, 29), Duration = "3", Progress = 30, ParentId = 5, Work=30, TaskType="FixedWork" },
+                new TaskInfoModel() { Id = 7, Name = "List materials", StartDate = new DateTime(2021, 04, 01), Duration = "3", Progress = 30, ParentId = 5, TaskType="FixedWork", Work=48 },
+                new TaskInfoModel() { Id = 8, Name = "Estimation approval", StartDate = new DateTime(2021, 04, 01), Duration = "2", ParentId = 5, Work=60, TaskType="FixedWork" },
+                new TaskInfoModel() { Id = 9, Name = "Sign contract", StartDate = new DateTime(2021, 03, 31), EndDate = new DateTime(2021, 04, 01), Duration="1", TaskType="FixedWork", Work=24 },
+            };
+        }
+    }
+}
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![Resource method in Gantt Chart](images/blazor-gantt-chart-resource-method.gif)
+
+## Resource event
+
+The [ResourceAssignmentChanging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttAssignmentFields-1.html#Syncfusion_Blazor_Gantt_GanttAssignmentFields_1_ResourceAssignmentChanging) event is triggered in the Blazor Gantt chart when resource add, remove, and update actions occur. This event allows for custom actions to be performed, and it also provides the ability to cancel add, remove, or update actions by setting the [Cancel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.ResourceAssignmentChangeEventArgs-1.html#Syncfusion_Blazor_Gantt_ResourceAssignmentChangeEventArgs_1_Cancel) property of the event argument to **true**.
+
+In the code snippet below, the `ResourceAssignmentChanging` event is used to display a customized message when performing resource add, remove, and update actions. Additionally, it prevents resource deletion for the 1st index task.
+
+{% tabs %}
+
+{% highlight razor %}
 
 @using Syncfusion.Blazor.Gantt
+@using BlazorGanttChart.Data
 
+<span class="text-primary">@assignmentEventMessage</span>
 <SfGantt @ref="ganttInstance" DataSource="@TaskCollection" Height="450px" Width="850px" TreeColumnIndex="1" WorkUnit="WorkUnit.Hour"
          Toolbar="@(new List<string>(){ "Add", "Edit", "Update", "Delete", "Cancel", "ExpandAll", "CollapseAll"})">
-    <GanttTaskFields Id="Id" Name="Name" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress"
-                     ParentID="ParentId" Work="Work" TaskType="TaskType" Dependency="Predecessor">
+    <GanttTaskFields Id="@nameof(GanttModel.TaskInfoModel.Id)" Name="@nameof(GanttModel.TaskInfoModel.Name)" StartDate="@nameof(GanttModel.TaskInfoModel.StartDate)" EndDate="@nameof(GanttModel.TaskInfoModel.EndDate)" Duration="@nameof(GanttModel.TaskInfoModel.Duration)"
+                     ParentID="@nameof(GanttModel.TaskInfoModel.ParentId)" Work="@nameof(GanttModel.TaskInfoModel.Work)" TaskType="@nameof(GanttModel.TaskInfoModel.TaskType)" Progress="@nameof(GanttModel.TaskInfoModel.Progress)">
     </GanttTaskFields>
+    <GanttResource DataSource="ResourceCollection" Id="@nameof(GanttModel.ResourceInfoModel.Id)" Name="@nameof(GanttModel.ResourceInfoModel.Name)" MaxUnits="@nameof(GanttModel.ResourceInfoModel.MaxUnit)" TValue="GanttModel.TaskInfoModel" TResources="GanttModel.ResourceInfoModel"></GanttResource>
+    <GanttAssignmentFields DataSource="AssignmentCollection" PrimaryKey="@nameof(GanttModel.AssignmentModel.PrimaryId)" TaskID="@nameof(GanttModel.AssignmentModel.TaskId)" ResourceID="@nameof(GanttModel.AssignmentModel.ResourceId)" Units="@nameof(GanttModel.AssignmentModel.Unit)" ResourceAssignmentChanging="AssignmentHandler" TValue="GanttModel.TaskInfoModel" TAssignment="GanttModel.AssignmentModel"></GanttAssignmentFields>
+    <GanttLabelSettings RightLabel="Resources" TValue="GanttModel.TaskInfoModel"></GanttLabelSettings>
     <GanttEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true" AllowTaskbarEditing="true"
                        ShowDeleteConfirmDialog="true"></GanttEditSettings>
     <GanttColumns>
-        <GanttColumn Field="Id" HeaderText="ID"></GanttColumn>
-        <GanttColumn Field="Name" HeaderText="Event Name" ClipMode="Syncfusion.Blazor.Grids.ClipMode.EllipsisWithTooltip"></GanttColumn>
-        <GanttResourceColumn HeaderText="Event Resources"></GanttResourceColumn>
-        <GanttColumn Field="Work" HeaderText="Work"></GanttColumn>
-        <GanttColumn Field="Duration" HeaderText="Duration"></GanttColumn>
-        <GanttColumn Field="TaskType" HeaderText="Task Type"></GanttColumn>
-        <GanttColumn Field="StartDate" HeaderText="Start Date"></GanttColumn>
-        <GanttColumn Field="EndDate" HeaderText="End Date"></GanttColumn>
+        <GanttColumn Field="@nameof(GanttModel.TaskInfoModel.Id)" HeaderText="ID"></GanttColumn>
+        <GanttColumn Field="@nameof(GanttModel.TaskInfoModel.Name)" HeaderText="Event Name" Width="250px"></GanttColumn>
+        <GanttResourceColumn HeaderText="Event Resources" Width="300px"></GanttResourceColumn>
+        <GanttColumn Field="@nameof(GanttModel.TaskInfoModel.Work)" HeaderText="Work"></GanttColumn>
+        <GanttColumn Field="@nameof(GanttModel.TaskInfoModel.Duration)" HeaderText="Duration"></GanttColumn>
+        <GanttColumn Field="@nameof(GanttModel.TaskInfoModel.TaskType)" HeaderText="Task Type"></GanttColumn>
+        <GanttColumn Field="@nameof(GanttModel.TaskInfoModel.StartDate)" HeaderText="Start Date"></GanttColumn>
+        <GanttColumn Field="@nameof(GanttModel.TaskInfoModel.EndDate)" HeaderText="End Date"></GanttColumn>
     </GanttColumns>
-    <GanttResource DataSource="ResourceCollection" Id="Id" Name="Name" MaxUnits="MaxUnit" TValue="TaskInfoModel" TResources="ResourceInfoModel"></GanttResource>
-    <GanttAssignmentFields DataSource="AssignmentCollection" PrimaryKey="PrimaryId" TaskID="TaskId" ResourceID="ResourceId" Units="Unit" TValue="TaskInfoModel" TAssignment="AssignmentModel"></GanttAssignmentFields>
-    <GanttTaskbarSettings EnableMultiTaskbar="true"></GanttTaskbarSettings>
     <GanttSplitterSettings Position="28%"> </GanttSplitterSettings>
-    <GanttTemplates TValue="TaskInfoModel">
+</SfGantt>
+
+@code {
+    private SfGantt<GanttModel.TaskInfoModel> ganttInstance { get; set; } = new();
+    private List<GanttModel.TaskInfoModel> TaskCollection { get; set; } = new();
+    private List<GanttModel.ResourceInfoModel> ResourceCollection { get; set; } = new();
+    private static List<GanttModel.AssignmentModel> AssignmentCollection { get; set; } = new();
+    private string assignmentEventMessage { get; set; }
+    protected override void OnInitialized()
+    {
+        TaskCollection = GanttModel.GetTaskCollection();
+        ResourceCollection = GanttModel.GetResources;
+        AssignmentCollection = GanttModel.GetAssignmentCollection();
+    }
+    private async Task AssignmentHandler(ResourceAssignmentChangeEventArgs<GanttModel.AssignmentModel> args)
+    {
+        if (args.AddedResources is not null && args.AddedResources.Any())
+        {
+            assignmentEventMessage = "New resource is added!";
+        }
+        if (args.UpdatedResources is not null && args.UpdatedResources.Any())
+        {
+            assignmentEventMessage = "The resource details are updated!";
+        }
+        if (args.DeletedResources is not null && args.DeletedResources.Any())
+        {
+            foreach(GanttModel.AssignmentModel assignment in args.DeletedResources)
+            {
+                if (assignment.TaskId == 2)
+                {
+                    assignmentEventMessage = "The deleted resource action is canceled!";
+                    args.Cancel = true;
+                }
+            }
+        }
+        await Task.CompletedTask;
+    }
+}
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="GanttModel.cs" %}
+
+namespace BlazorGanttChart.Data
+{
+    public class GanttModel
+    {
+        public class ResourceInfoModel
+        {
+            public int Id { get; set; }
+            public string? Name { get; set; }
+            public double MaxUnit { get; set; }
+        }
+
+        public class TaskInfoModel
+        {
+            public int Id { get; set; }
+            public string? Name { get; set; }
+            public string? TaskType { get; set; }
+            public DateTime StartDate { get; set; }
+            public DateTime? EndDate { get; set; }
+            public string? Duration { get; set; }
+            public int Progress { get; set; }
+            public int? ParentId { get; set; }
+            public double? Work { get; set; }
+        }
+
+        public class AssignmentModel
+        {
+            public int PrimaryId { get; set; }
+            public int TaskId { get; set; }
+            public int ResourceId { get; set; }
+            public double Unit { get; set; }
+        }
+
+        public static List<ResourceInfoModel> GetResources = new List<ResourceInfoModel>()
+        {
+            new ResourceInfoModel() { Id= 1, Name= "Martin Tamer" ,MaxUnit=70},
+            new ResourceInfoModel() { Id= 2, Name= "Rose Fuller" },
+            new ResourceInfoModel() { Id= 3, Name= "Margaret Buchanan" },
+            new ResourceInfoModel() { Id= 4, Name= "Fuller King", MaxUnit = 100},
+            new ResourceInfoModel() { Id= 5, Name= "Davolio Fuller" },
+            new ResourceInfoModel() { Id= 6, Name= "Van Jack" },
+            new ResourceInfoModel() { Id= 7, Name= "Fuller Buchanan" },
+            new ResourceInfoModel() { Id= 8, Name= "Jack Davolio" },
+            new ResourceInfoModel() { Id= 9, Name= "Tamer Vinet" },
+            new ResourceInfoModel() { Id= 10, Name= "Vinet Fuller" },
+            new ResourceInfoModel() { Id= 11, Name= "Bergs Anton" },
+            new ResourceInfoModel() { Id= 12, Name= "Construction Supervisor" }
+        };
+
+        public static List<AssignmentModel> GetAssignmentCollection()
+        {
+            List<AssignmentModel> assignments = new List<AssignmentModel>()
+            {
+                new AssignmentModel(){ PrimaryId=1, TaskId = 2 , ResourceId=1, Unit=70},
+                new AssignmentModel(){ PrimaryId=2, TaskId = 2 , ResourceId=6},
+                new AssignmentModel(){ PrimaryId=3, TaskId = 3 , ResourceId=2},
+                new AssignmentModel(){ PrimaryId=4, TaskId = 3 , ResourceId=3},
+                new AssignmentModel(){ PrimaryId=5, TaskId = 3 , ResourceId=6},
+                new AssignmentModel(){ PrimaryId=6, TaskId = 4 , ResourceId=8},
+                new AssignmentModel(){ PrimaryId=7, TaskId = 4 , ResourceId=9},
+                new AssignmentModel(){ PrimaryId=8, TaskId = 6 , ResourceId=4},
+                new AssignmentModel(){ PrimaryId=9, TaskId = 7 , ResourceId=4},
+                new AssignmentModel(){ PrimaryId=10, TaskId = 7 , ResourceId=8},
+                new AssignmentModel(){ PrimaryId=11, TaskId = 8 , ResourceId=12},
+                new AssignmentModel(){ PrimaryId=12, TaskId = 8 , ResourceId=5},
+                new AssignmentModel(){ PrimaryId=13, TaskId = 9 , ResourceId=12},
+                new AssignmentModel(){ PrimaryId=14, TaskId = 9 , ResourceId=5}
+            };
+            return assignments;
+        }
+
+        public static List<TaskInfoModel> GetTaskCollection()
+        {
+            return new List<TaskInfoModel>()
+            {
+                new TaskInfoModel() { Id = 1, Name = "Project initiation", StartDate = new DateTime(2021, 03, 28), EndDate = new DateTime(2021, 07, 28), TaskType ="FixedDuration", Work=128, Duration="4" },
+                new TaskInfoModel() { Id = 2, Name = "Identify site location", StartDate = new DateTime(2021, 03, 29), Progress = 30, ParentId = 1, Duration="3", TaskType ="FixedDuration", Work=16 },
+                new TaskInfoModel() { Id = 3, Name = "Perform soil test", StartDate = new DateTime(2021, 03, 29), ParentId = 1, Work=96, Duration="4", TaskType="FixedWork" },
+                new TaskInfoModel() { Id = 4, Name = "Soil test approval", StartDate = new DateTime(2021, 03, 29), Duration = "4", Progress = 30, ParentId = 1, Work=16, TaskType="FixedWork" },
+                new TaskInfoModel() { Id = 5, Name = "Project estimation", StartDate = new DateTime(2021, 03, 29), EndDate = new DateTime(2021, 04, 2), TaskType="FixedDuration", Duration="4" },
+                new TaskInfoModel() { Id = 6, Name = "Develop floor plan for estimation", StartDate = new DateTime(2021, 03, 29), Duration = "3", Progress = 30, ParentId = 5, Work=30, TaskType="FixedWork" },
+                new TaskInfoModel() { Id = 7, Name = "List materials", StartDate = new DateTime(2021, 04, 01), Duration = "3", Progress = 30, ParentId = 5, TaskType="FixedWork", Work=48 },
+                new TaskInfoModel() { Id = 8, Name = "Estimation approval", StartDate = new DateTime(2021, 04, 01), Duration = "4", ParentId = 5, Work=60, TaskType="FixedWork" },
+                new TaskInfoModel() { Id = 9, Name = "Sign contract", StartDate = new DateTime(2021, 03, 31), EndDate = new DateTime(2021, 04, 01), Duration="4", TaskType="FixedWork", Work=24 },
+            };
+        }
+    }
+}
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![Resource event in Gantt Chart](images/blazor-gantt-chart-resource-event.gif)
+
+## Custom taskbar styling using template
+
+The taskbar appearance can be customized by using the [TaskbarTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTemplates-1.html#Syncfusion_Blazor_Gantt_GanttTemplates_1_TaskbarTemplate) property. In the code snippet below, the child tasks are customized based on template context data, with the resource name added inside each child taskbar, and the taskbar colors are changed based on task resources.
+
+{% tabs %}
+
+{% highlight razor %}
+
+@using Syncfusion.Blazor.Gantt
+@using BlazorGanttChart.Data
+
+<SfGantt @ref="ganttInstance" DataSource="@TaskCollection" Height="450px" Width="850px" TreeColumnIndex="1" WorkUnit="WorkUnit.Hour"
+         Toolbar="@(new List<string>(){ "Add", "Edit", "Update", "Delete", "Cancel", "ExpandAll", "CollapseAll"})">
+    <GanttTaskFields Id="@nameof(GanttModel.TaskInfoModel.Id)" Name="@nameof(GanttModel.TaskInfoModel.Name)" StartDate="@nameof(GanttModel.TaskInfoModel.StartDate)" EndDate="@nameof(GanttModel.TaskInfoModel.EndDate)" Duration="@nameof(GanttModel.TaskInfoModel.Duration)"
+                     ParentID="@nameof(GanttModel.TaskInfoModel.ParentId)" Work="@nameof(GanttModel.TaskInfoModel.Work)" TaskType="@nameof(GanttModel.TaskInfoModel.TaskType)">
+    </GanttTaskFields>
+    <GanttResource DataSource="ResourceCollection" Id="@nameof(GanttModel.ResourceInfoModel.Id)" Name="@nameof(GanttModel.ResourceInfoModel.Name)" MaxUnits="@nameof(GanttModel.ResourceInfoModel.MaxUnit)" TValue="GanttModel.TaskInfoModel" TResources="GanttModel.ResourceInfoModel"></GanttResource>
+    <GanttAssignmentFields DataSource="AssignmentCollection" PrimaryKey="@nameof(GanttModel.AssignmentModel.PrimaryId)" TaskID="@nameof(GanttModel.AssignmentModel.TaskId)" ResourceID="@nameof(GanttModel.AssignmentModel.ResourceId)" Units="@nameof(GanttModel.AssignmentModel.Unit)" TValue="GanttModel.TaskInfoModel" TAssignment="GanttModel.AssignmentModel">
+    </GanttAssignmentFields>
+    <GanttLabelSettings RightLabel="Resources" TValue="GanttModel.TaskInfoModel"></GanttLabelSettings>
+    <GanttEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true" AllowTaskbarEditing="true"
+                       ShowDeleteConfirmDialog="true"></GanttEditSettings>
+    <GanttTemplates TValue="GanttModel.TaskInfoModel">
         <TaskbarTemplate>
             @{
-                var task = context as TaskInfoModel;
+                var task = context as GanttModel.TaskInfoModel;
                 if (task is null)
                 {
                     return;
                 }
                 var taskModel = ganttInstance.GetRowTaskModel(task);
                 string resource = GetResourceName(task);
-                <div class="e-gantt-child-taskbar e-gantt-child-taskbar-inner-div" style="height:24px;" tabindex=-1>
-                    <div class="e-gantt-child-progressbar-inner-div e-gantt-child-progressbar" style="height:24px;width:@(taskModel.ProgressWidth + "px");text-align: right;border-radius: 0px;">
+                progressColor = "#5869c5";
+                string backgroundColor = GetBGColor(resource);
+                <div class="e-gantt-child-taskbar e-gantt-child-taskbar-inner-div" style="height:24px;background:@backgroundColor" tabindex=-1>
+                    <div class="e-gantt-child-progressbar-inner-div e-gantt-child-progressbar" style="height:24px;width:@(taskModel.ProgressWidth + "px");text-align: right;border-radius: 0px;background:@progressColor">
                     </div>
                     <div style="position: absolute;font-size: 13px; top: 3px; color: #ffffff;left: 7px;overflow: hidden; width: @(taskModel.Width + "px"); text-wrap: nowrap;text-overflow: ellipsis;">
                         @resource
@@ -1135,417 +1044,168 @@ The taskbar appearance can be customized by using the [TaskbarTemplate](https://
             }
         </TaskbarTemplate>
     </GanttTemplates>
+    <GanttColumns>
+        <GanttColumn Field="@nameof(GanttModel.TaskInfoModel.Id)" HeaderText="ID"></GanttColumn>
+        <GanttColumn Field="@nameof(GanttModel.TaskInfoModel.Name)" HeaderText="Event Name" Width="250px"></GanttColumn>
+        <GanttResourceColumn HeaderText="Event Resources" Width="300px"></GanttResourceColumn>
+        <GanttColumn Field="@nameof(GanttModel.TaskInfoModel.Work)" HeaderText="Work"></GanttColumn>
+        <GanttColumn Field="@nameof(GanttModel.TaskInfoModel.Duration)" HeaderText="Duration"></GanttColumn>
+        <GanttColumn Field="@nameof(GanttModel.TaskInfoModel.TaskType)" HeaderText="Task Type"></GanttColumn>
+        <GanttColumn Field="@nameof(GanttModel.TaskInfoModel.StartDate)" HeaderText="Start Date"></GanttColumn>
+        <GanttColumn Field="@nameof(GanttModel.TaskInfoModel.EndDate)" HeaderText="End Date"></GanttColumn>
+    </GanttColumns>
+    <GanttSplitterSettings Position="28%"> </GanttSplitterSettings>
 </SfGantt>
 
-<style>
-    .e-gantt .e-gantt-chart .e-gantt-child-progressbar-inner-div {
-        border-radius: 0px !important
-    }
-
-    .e-gantt .e-gantt-chart .e-gantt-child-taskbar-inner-div {
-        border-radius: 0px !important
-    }
-</style>
-
 @code {
-    private SfGantt<TaskInfoModel> ganttInstance { get; set; } = new();
-    private List<TaskInfoModel> TaskCollection { get; set; } = new();
-    private List<ResourceInfoModel> ResourceCollection { get; set; } = new();
-    private static List<AssignmentModel> AssignmentCollection { get; set; } = new();
+    private SfGantt<GanttModel.TaskInfoModel> ganttInstance { get; set; } = new();
+    private List<GanttModel.TaskInfoModel> TaskCollection { get; set; } = new();
+    private List<GanttModel.ResourceInfoModel> ResourceCollection { get; set; } = new();
+    private static List<GanttModel.AssignmentModel> AssignmentCollection { get; set; } = new();
+    private string progressColor = "#5869C5";
     protected override void OnInitialized()
     {
-        TaskCollection = GetTaskCollection();
-        ResourceCollection = GetResources;
-        AssignmentCollection = GetAssignmentCollection();
+        TaskCollection = GanttModel.GetTaskCollection();
+        ResourceCollection = GanttModel.GetResources;
+        AssignmentCollection = GanttModel.GetAssignmentCollection();
     }
 
-    public class ResourceInfoModel
+    private string GetResourceName(GanttModel.TaskInfoModel record)
     {
-        public int Id { get; set; }
-        public string? Name { get; set; }
-        public double MaxUnit { get; set; }
-    }
-
-    public class TaskInfoModel
-    {
-        public int Id { get; set; }
-        public string? Name { get; set; }
-        public string? TaskType { get; set; }
-        public DateTime StartDate { get; set; }
-        public DateTime? EndDate { get; set; }
-        public string? Duration { get; set; }
-        public int Progress { get; set; }
-        public int? ParentId { get; set; }
-        public double? Work { get; set; }
-        public string? Predecessor { get; set; }
-    }
-
-    public class AssignmentModel
-    {
-        public int PrimaryId { get; set; }
-        public int TaskId { get; set; }
-        public int ResourceId { get; set; }
-        public double Unit { get; set; }
-    }
-
-    private string GetResourceName(TaskInfoModel record)
-    {
-        var assignment = ganttInstance.GetResourceAssignments<AssignmentModel>(record);
+        var assignment = ganttInstance.GetResourceAssignments<GanttModel.AssignmentModel>(record);
         if (assignment is not null && assignment.Any())
         {
-            var resourceId = (assignment[0] as AssignmentModel).ResourceId - 1;
-            return (GetResources[(int)resourceId]).Name;
+            var resourceId = (assignment[0] as GanttModel.AssignmentModel).ResourceId - 1;
+            return (GanttModel.GetResources[(int)resourceId]).Name;
         }
         return string.Empty;
     }
 
-    public static List<ResourceInfoModel> GetResources = new List<ResourceInfoModel>()
+    private string GetBGColor(string resource)
     {
-        new ResourceInfoModel() { Id= 1, Name= "Martin Tamer" ,MaxUnit=70},
-        new ResourceInfoModel() { Id= 2, Name= "Rose Fuller" },
-        new ResourceInfoModel() { Id= 3, Name= "Margaret Buchanan" },
-        new ResourceInfoModel() { Id= 4, Name= "Fuller King", MaxUnit = 100},
-        new ResourceInfoModel() { Id= 5, Name= "Davolio Fuller" },
-        new ResourceInfoModel() { Id= 6, Name= "Van Jack" },
-        new ResourceInfoModel() { Id= 7, Name= "Fuller Buchanan" },
-        new ResourceInfoModel() { Id= 8, Name= "Jack Davolio" },
-        new ResourceInfoModel() { Id= 9, Name= "Tamer Vinet" },
-        new ResourceInfoModel() { Id= 10, Name= "Vinet Fuller" },
-        new ResourceInfoModel() { Id= 11, Name= "Bergs Anton" },
-        new ResourceInfoModel() { Id= 12, Name= "Construction Supervisor" }
-    };
-
-    public static List<AssignmentModel> GetAssignmentCollection()
-    {
-        List<AssignmentModel> assignments = new List<AssignmentModel>()
+        if (string.IsNullOrEmpty(resource))
         {
-            new AssignmentModel(){ PrimaryId=1, TaskId = 2 , ResourceId=1, Unit=70},
-            new AssignmentModel(){ PrimaryId=2, TaskId = 3 , ResourceId=1, Unit=70},
-            new AssignmentModel(){ PrimaryId=3, TaskId = 4 , ResourceId=1},
-            new AssignmentModel(){ PrimaryId=4, TaskId = 6 , ResourceId=2},
-            new AssignmentModel(){ PrimaryId=6, TaskId = 8 , ResourceId=2},
-            new AssignmentModel(){ PrimaryId=7, TaskId = 10 , ResourceId=3},
-            new AssignmentModel(){ PrimaryId=8, TaskId = 11, ResourceId=3},
-            new AssignmentModel(){ PrimaryId=9, TaskId = 12 , ResourceId=3},
-            new AssignmentModel(){ PrimaryId=10, TaskId = 14 , ResourceId=4},
-            new AssignmentModel(){ PrimaryId=11, TaskId = 15 , ResourceId=4},
-            new AssignmentModel(){ PrimaryId=12, TaskId = 16 , ResourceId=4},
-            new AssignmentModel(){ PrimaryId=13, TaskId = 18 , ResourceId=5},
-            new AssignmentModel(){ PrimaryId=14, TaskId = 19 , ResourceId=5},
-            new AssignmentModel(){ PrimaryId=15, TaskId = 20 , ResourceId=5},
-            new AssignmentModel(){ PrimaryId=16, TaskId = 21 , ResourceId=6},
-            new AssignmentModel(){ PrimaryId=17, TaskId = 22 , ResourceId=6},
-            new AssignmentModel(){ PrimaryId=18, TaskId = 23 , ResourceId=7},
-            new AssignmentModel(){ PrimaryId=19, TaskId = 24 , ResourceId=7},
-            new AssignmentModel(){ PrimaryId=20, TaskId = 25 , ResourceId=8},
-            new AssignmentModel(){ PrimaryId=21, TaskId = 26 , ResourceId=8},
-            new AssignmentModel(){ PrimaryId=22, TaskId = 27 , ResourceId=9},
-            new AssignmentModel(){ PrimaryId=23, TaskId = 28 , ResourceId=9},
-            new AssignmentModel(){ PrimaryId=24, TaskId = 29 , ResourceId=10},
-        };
-        return assignments;
-    }
-
-    public static List<TaskInfoModel> GetTaskCollection()
-    {
-        List<TaskInfoModel> Tasks = new List<TaskInfoModel>() {
-                new TaskInfoModel() {
-                    Id = 1,
-                    Name = "Project initiation",
-                    StartDate = new DateTime(2019, 03, 29),
-                    EndDate = new DateTime(2019, 04, 21),
-                    TaskType ="FixedDuration",
-                    Work=128,
-                    Duration="4",
-                },
-                new TaskInfoModel() {
-                    Id = 2,
-                    Name = "Identify Site location",
-                    StartDate = new DateTime(2019, 03, 29),
-                    Progress = 30,
-                    ParentId = 1,
-                    Duration="3",
-                },
-                new TaskInfoModel() {
-                    Id = 3,
-                    Name = "Perform soil test",
-                    StartDate = new DateTime(2019, 04, 03),
-                    Progress = 50,
-                    ParentId = 1,
-                    Duration="5",
-                    Work=16,
-                },
-                new TaskInfoModel() {
-                    Id = 4,
-                    Name = "Soil test approval",
-                    StartDate = new DateTime(2019, 04, 09),
-                    ParentId = 1,
-                    Work=96,
-                    Duration="3",
-                    TaskType="FixedWork",
-                    Predecessor="3",
-                    Progress=40,
-                },
-                new TaskInfoModel() {
-                    Id = 5,
-                    Name = "Project estimation",
-                    StartDate = new DateTime(2019, 03, 29),
-                    EndDate = new DateTime(2019,04,21),
-                    Progress = 30,
-                    Work=16,
-                    TaskType="FixedWork",
-                },
-                new TaskInfoModel() {
-                    Id = 6,
-                    Name = "Develop floor plan for estimation",
-                    StartDate = new DateTime(2019, 04, 01),
-                    TaskType="FixedDuration",
-                    Duration="5",
-                    Progress=40,
-                    Work=50,
-                },
-                new TaskInfoModel() {
-                    Id = 7,
-                    Name = "List materials",
-                    StartDate = new DateTime(2019, 04, 04),
-                    Duration = "4",
-                    Progress = 30,
-                    ParentId = 5,
-                    Work=30,
-                    TaskType="FixedDuration",
-                    Predecessor= "6FS-2",
-                },
-                new TaskInfoModel() {
-                    Id = 8,
-                    Name = "Estimation approval",
-                    StartDate = new DateTime(2019, 04, 09),
-                    Duration = "4",
-                    Progress = 30,
-                    ParentId = 5,
-                    TaskType="FixedWork",
-                    Work=48,
-                    Predecessor = "7FS-1",
-                },
-                new TaskInfoModel() {
-                    Id = 9,
-                    Name = "Site work",
-                    Progress=30,
-                    StartDate = new DateTime(2019, 04, 04),
-                    EndDate = new DateTime(2019,04,21),
-                    Work=60,
-                    TaskType="FixedUnit",
-                },
-                new TaskInfoModel() {
-                    Id = 10,
-                    Name = "Install temporary power service",
-                    StartDate = new DateTime(2019, 04, 01),
-                    Duration = "14",
-                    ParentId = 9,
-                    Work=60,
-                    Progress=50,
-                    TaskType="FixedWork",
-                },
-                new TaskInfoModel() {
-                    Id = 11,
-                    Name = "Clear the building site",
-                    StartDate = new DateTime(2019, 04, 08),
-                    Duration = "9",
-                    ParentId = 9,
-                    Work=60,
-                    Progress=40,
-                    TaskType="FixedDuration",
-                    Predecessor = "10FS-9",
-                },
-                new TaskInfoModel() {
-                    Id = 12,
-                    Name = "Sign contract",
-                    StartDate = new DateTime(2019, 04, 12),
-                    Duration = "5",
-                    ParentId = 9,
-                    Work=60,Progress=40,
-                    TaskType="FixedDuration",
-                    Predecessor = "11FS-5",
-                },
-                new TaskInfoModel() {
-                    Id = 13,
-                    Name = "Foundation",
-                    StartDate = new DateTime(2022, 04, 04),
-                    EndDate = new DateTime(2019,04,28),
-                    Work=60,
-                    Progress=40,
-                    TaskType="FixedDuration",
-                },
-                new TaskInfoModel() {
-                    Id = 14,
-                    Name = "Excavate for foundations",
-                    StartDate = new DateTime(2019, 04, 01),
-                    Duration = "2",
-                    ParentId = 13,
-                    Work=60,
-                    Progress=40,
-                    TaskType="FixedDuration",
-                },
-                new TaskInfoModel() {
-                    Id = 15,
-                    Name = "Dig footer",
-                    StartDate = new DateTime(2019, 04, 04),
-                    Duration = "2",
-                    ParentId = 13,
-                    Work=60,
-                    Progress=40,
-                    TaskType="FixedDuration",
-                    Predecessor = "14FS + 1",
-                },
-                new TaskInfoModel() {
-                    Id = 16,
-                    Name = "Install plumbing grounds",
-                    StartDate = new DateTime(2019, 04, 08),
-                    Duration = "2",
-                    ParentId = 13,
-                    Work=60,
-                    Progress=40,
-                    TaskType="FixedDuration",
-                    Predecessor = "15FS"
-                },
-                new TaskInfoModel() {
-                    Id = 17,
-                    Name = "Framing",
-                    StartDate = new DateTime(2019, 04, 04),
-                    EndDate = new DateTime(2019,04,28),
-                    Work=60,
-                    Progress=40,
-                    TaskType="FixedDuration",
-                },
-                new TaskInfoModel() {
-                    Id = 18,
-                    Name = "Add load-bearing structure",
-                    StartDate = new DateTime(2019, 04, 03),
-                    Duration = "2",
-                    ParentId = 17,
-                    Work=60,
-                    Progress=20,
-                    TaskType="FixedDuration",
-                },
-                new TaskInfoModel() {
-                    Id = 19,
-                    Name = "Natural gas utilities",
-                    StartDate = new DateTime(2019, 04, 08),
-                    Duration = "5",
-                    ParentId = 17,
-                    Work=60,
-                    Progress=40,
-                    TaskType="FixedDuration",
-                    Predecessor = "18",
-                },
-                new TaskInfoModel() {
-                    Id = 20,
-                    Name = "Electrical utilities",
-                    StartDate = new DateTime(2022, 04, 01),
-                    Duration = "4",
-                    ParentId = 17,
-                    Work=60,
-                    Progress=50,
-                    TaskType="FixedWork",
-                    Predecessor = "19FS + 1",
-                },
-                new TaskInfoModel() {
-                    Id = 21,
-                    Name = "Plumbing test",
-                    StartDate = new DateTime(2019, 04, 04),
-                    Duration = "4",
-                    Work=60,
-                    Progress=50,
-                    TaskType="FixedWork",
-                },
-                new TaskInfoModel() {
-                    Id = 22,
-                    Name = "Electrical test",
-                    StartDate = new DateTime(2019, 04, 04),
-                    Duration = "4",
-                    Work=60,
-                    Progress=50,
-                    TaskType="FixedWork",
-                    Predecessor = "21"
-                },
-                new TaskInfoModel() {
-                    Id = 23,
-                    Name = "First floor initiation",
-                    StartDate = new DateTime(2019, 04, 06),
-                    Duration = "4",
-                    Work=60,
-                    Progress=50,
-                    TaskType="FixedWork",
-                },
-                new TaskInfoModel() {
-                    Id = 24,
-                    Name = "Interior work",
-                    StartDate = new DateTime(2019, 04, 04),
-                    Duration = "4",
-                    Work=60,
-                    Progress=50,
-                    TaskType="FixedWork",
-                    Predecessor="23"
-                },
-                new TaskInfoModel() {
-                    Id = 25,
-                    Name = "First floor tile work initation",
-                    StartDate = new DateTime(2019, 04, 10),
-                    Duration = "4",
-                    Work=60,
-                    Progress=50,
-                    TaskType="FixedWork",
-                },
-                new TaskInfoModel() {
-                    Id = 26,
-                    Name = "Tile test",
-                    StartDate = new DateTime(2019, 04, 04),
-                    Duration = "4",
-                    Work=60,
-                    Progress=50,
-                    TaskType="FixedWork",
-                },
-                new TaskInfoModel() {
-                    Id = 27,
-                    Name = "Second floor initiation",
-                    StartDate = new DateTime(2019, 04, 10),
-                    Duration = "4",
-                    Work=60,
-                    Progress=50,
-                    TaskType="FixedWork",
-                },
-                new TaskInfoModel() {
-                    Id = 28,
-                    Name = "Second floor tile work initation",
-                    StartDate = new DateTime(2019, 04, 06),
-                    Duration = "4",
-                    Work=60,
-                    Progress=50,
-                    TaskType="FixedWork",
-                    Predecessor="27FS - 1"
-                },
-                new TaskInfoModel() {
-                    Id = 29,
-                    Name = "Exterior work initation",
-                    StartDate = new DateTime(2019, 04, 12),
-                    Duration = "4",
-                    Work=60,
-                    Progress=50,
-                    TaskType="FixedWork",
-                },
-                new TaskInfoModel() {
-                    Id = 30,
-                    Name = "Building test",
-                    StartDate = new DateTime(2019, 04, 08),
-                    Duration = "4",
-                    Work=60,
-                    Progress=50,
-                    TaskType="FixedWork",
-                },
-            };
-        return Tasks;
+            return "#87B7FE";
+        }
+        string color = string.Empty;
+        if (resource == "Martin Tamer")
+        {
+            color = "#5869C5";
+            progressColor = "#AD7A66";
+        }
+        else if (resource == "Rose Fuller")
+        {
+            color = "#8553F1";
+            progressColor = "#0056B3";
+        }
+        else if (resource == "Fuller King")
+        {
+            color = "#7AB748";
+            progressColor = "#5869c5";
+        }
+        return color;
     }
 }
 
-```
+{% endhighlight %}
+
+{% highlight c# tabtitle="GanttModel.cs" %}
+
+namespace BlazorGanttChart.Data
+{
+    public class GanttModel
+    {
+        public class ResourceInfoModel
+        {
+            public int Id { get; set; }
+            public string? Name { get; set; }
+            public double MaxUnit { get; set; }
+        }
+
+        public class TaskInfoModel
+        {
+            public int Id { get; set; }
+            public string? Name { get; set; }
+            public string? TaskType { get; set; }
+            public DateTime StartDate { get; set; }
+            public DateTime? EndDate { get; set; }
+            public string? Duration { get; set; }
+            public int Progress { get; set; }
+            public int? ParentId { get; set; }
+            public double? Work { get; set; }
+        }
+
+        public class AssignmentModel
+        {
+            public int PrimaryId { get; set; }
+            public int TaskId { get; set; }
+            public int ResourceId { get; set; }
+            public double Unit { get; set; }
+        }
+
+        public static List<ResourceInfoModel> GetResources = new List<ResourceInfoModel>()
+        {
+            new ResourceInfoModel() { Id= 1, Name= "Martin Tamer" ,MaxUnit=70},
+            new ResourceInfoModel() { Id= 2, Name= "Rose Fuller" },
+            new ResourceInfoModel() { Id= 3, Name= "Margaret Buchanan" },
+            new ResourceInfoModel() { Id= 4, Name= "Fuller King", MaxUnit = 100},
+            new ResourceInfoModel() { Id= 5, Name= "Davolio Fuller" },
+            new ResourceInfoModel() { Id= 6, Name= "Van Jack" },
+            new ResourceInfoModel() { Id= 7, Name= "Fuller Buchanan" },
+            new ResourceInfoModel() { Id= 8, Name= "Jack Davolio" },
+            new ResourceInfoModel() { Id= 9, Name= "Tamer Vinet" },
+            new ResourceInfoModel() { Id= 10, Name= "Vinet Fuller" },
+            new ResourceInfoModel() { Id= 11, Name= "Bergs Anton" },
+            new ResourceInfoModel() { Id= 12, Name= "Construction Supervisor" }
+        };
+
+        public static List<AssignmentModel> GetAssignmentCollection()
+        {
+            List<AssignmentModel> assignments = new List<AssignmentModel>()
+            {
+                new AssignmentModel(){ PrimaryId=1, TaskId = 2 , ResourceId=1, Unit=70},
+                new AssignmentModel(){ PrimaryId=2, TaskId = 2 , ResourceId=6},
+                new AssignmentModel(){ PrimaryId=3, TaskId = 3 , ResourceId=2},
+                new AssignmentModel(){ PrimaryId=4, TaskId = 3 , ResourceId=3},
+                new AssignmentModel(){ PrimaryId=5, TaskId = 3 , ResourceId=6},
+                new AssignmentModel(){ PrimaryId=6, TaskId = 4 , ResourceId=8},
+                new AssignmentModel(){ PrimaryId=7, TaskId = 4 , ResourceId=9},
+                new AssignmentModel(){ PrimaryId=8, TaskId = 6 , ResourceId=4},
+                new AssignmentModel(){ PrimaryId=9, TaskId = 7 , ResourceId=4},
+                new AssignmentModel(){ PrimaryId=10, TaskId = 7 , ResourceId=8},
+                new AssignmentModel(){ PrimaryId=11, TaskId = 8 , ResourceId=12},
+                new AssignmentModel(){ PrimaryId=12, TaskId = 8 , ResourceId=5},
+                new AssignmentModel(){ PrimaryId=13, TaskId = 9 , ResourceId=12},
+                new AssignmentModel(){ PrimaryId=14, TaskId = 9 , ResourceId=5}
+            };
+            return assignments;
+        }
+
+        public static List<TaskInfoModel> GetTaskCollection()
+        {
+            return new List<TaskInfoModel>()
+            {
+                new TaskInfoModel() { Id = 1, Name = "Project initiation", StartDate = new DateTime(2021, 03, 28), EndDate = new DateTime(2021, 07, 28), TaskType ="FixedDuration", Work=128, Duration="4" },
+                new TaskInfoModel() { Id = 2, Name = "Identify site location", StartDate = new DateTime(2021, 03, 29), Progress = 30, ParentId = 1, Duration="3", TaskType ="FixedDuration", Work=16 },
+                new TaskInfoModel() { Id = 3, Name = "Perform soil test", StartDate = new DateTime(2021, 03, 29), ParentId = 1, Work=96, Duration="4", TaskType="FixedWork" },
+                new TaskInfoModel() { Id = 4, Name = "Soil test approval", StartDate = new DateTime(2021, 03, 29), Duration = "4", Progress = 30, ParentId = 1, Work=16, TaskType="FixedWork" },
+                new TaskInfoModel() { Id = 5, Name = "Project estimation", StartDate = new DateTime(2021, 03, 29), EndDate = new DateTime(2021, 04, 2), TaskType="FixedDuration", Duration="4" },
+                new TaskInfoModel() { Id = 6, Name = "Develop floor plan for estimation", StartDate = new DateTime(2021, 03, 29), Duration = "3", Progress = 30, ParentId = 5, Work=30, TaskType="FixedWork" },
+                new TaskInfoModel() { Id = 7, Name = "List materials", StartDate = new DateTime(2021, 04, 01), Duration = "3", Progress = 30, ParentId = 5, TaskType="FixedWork", Work=48 },
+                new TaskInfoModel() { Id = 8, Name = "Estimation approval", StartDate = new DateTime(2021, 04, 01), Duration = "4", ParentId = 5, Work=60, TaskType="FixedWork" },
+                new TaskInfoModel() { Id = 9, Name = "Sign contract", StartDate = new DateTime(2021, 03, 31), EndDate = new DateTime(2021, 04, 01), Duration="4", TaskType="FixedWork", Work=24 },
+            };
+        }
+    }
+}
+
+{% endhighlight %}
+
+{% endtabs %}
+
 
 ![Custom taskbar styling in Gantt Chart](images/blazor-gantt-chart-resource-taskbar-custom.png)
+
+## See also
+
+* [CRUD operations on tasks](https://blazor.syncfusion.com/documentation/gantt-chart/managing-tasks)
