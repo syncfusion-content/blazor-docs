@@ -494,7 +494,7 @@ For .NET 8 set the current culture in a cookie in App component file
 
 {% endhighlight %}
 
-{% highlight C# tabtitle=".NET 8 (App.razor)"}
+{% highlight C# tabtitle=".NET 8 (App.razor)" %}
 
 @using System.Globalization
 @using Microsoft.AspNetCore.Localization
