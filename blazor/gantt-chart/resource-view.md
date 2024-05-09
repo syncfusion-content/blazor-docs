@@ -150,13 +150,13 @@ namespace BlazorGanttChart.Data
 
 > * In the resource view, records are ordered based on the assigning of task resources. If a task does not have any assigned resources, it is placed under the **Unassigned Tasks** parent record. 
 > * The delete operation in the resource view functions differently: if you delete any task under a resource, the task is first moved under the **Unassigned Tasks** parent record. If you subsequently delete the same record again, it is completely removed from the task collection. 
-> * There is not support for Indent/Oudent in resource view Gantt Chart.
+> * There is not support for Indent/Outdent in resource view Gantt Chart.
 
 ## Resource overallocation
 
 When a resource is assigned more work than they can complete within their available time in a day, it is referred to as overallocation. The available working time for resources to complete tasks in a day is calculated based on the [GanttDayWorkingTime](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttDayWorkingTimeCollection.html#Syncfusion_Blazor_Gantt_GanttDayWorkingTimeCollection_DayWorkingTime) property and the [resource unit](https://blazor.syncfusion.com/documentation/gantt-chart/resources.html#resource-unit).
 
-You can indicate overallocated date ranges with square brackets by enabling the feature through the [ShowOverallocation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_ShowOverallocation) property.
+You can indicate overallocation date ranges with square brackets by enabling the feature through the [ShowOverallocation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_ShowOverallocation) property.
 
 {% tabs %}
 
@@ -799,7 +799,7 @@ namespace BlazorGanttChart.Data
 
 ## Managing resource assignments
 
-In the Gantt Chart, you can enable dynamic resources assignments by setting the [AllowEditing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEditSettings.html#Syncfusion_Blazor_Gantt_GanttEditSettings_AllowEditing) properties to **true** in the [GanttEditSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEditSettings.html) component. These actions can be performed using the following three methods:
+In the Gantt Chart, you can enable dynamic resources assignments by setting the [AllowEditing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEditSettings.html#Syncfusion_Blazor_Gantt_GanttEditSettings_AllowEditing) properties to **true** in the [GanttEditSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEditSettings.html) component. These actions can be performed using the following two methods:
 
 ### Through dialog box
 
