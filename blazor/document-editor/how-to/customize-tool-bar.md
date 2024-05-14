@@ -32,11 +32,23 @@ documentation: ug
 
 ```csharp
 <SfDocumentEditorContainer @ref="container" EnableToolbar=true ToolbarItems="@Items"> 
+    <DocumentEditorContainerEvents OnToolbarClick="@OnToolbarClick"></DocumentEditorContainerEvents>
 </SfDocumentEditorContainer> 
  
 @code { 
     SfDocumentEditorContainer container; 
     List<Object> Items = new List<Object> { new CustomToolbarItemModel() { Id = "save", Text = "Save" }, "New", "Undo", "Redo", "Comments", "Image", "Table", "Hyperlink", "Bookmark", "TableOfContents", "Header", "Footer", "PageSetup", "PageNumber", "Break", "Find", "LocalClipboard", "RestrictEditing" }; 
+
+    public async void OnToolbarClick(Syncfusion.Blazor.DocumentEditor.ClickEventArgs args)
+    {
+        switch (args.Item.Id)
+        {
+            case "save":
+                // for example
+                container.DocumentEditor.SaveAsync("test", Syncfusion.Blazor.DocumentEditor.FormatType.Docx);
+                break;
+        }
+    }
 } 
 ```
 
