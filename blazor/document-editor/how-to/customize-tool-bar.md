@@ -45,7 +45,7 @@ documentation: ug
         {
             case "save":
                 // for example
-                container.DocumentEditor.SaveAsync("test", Syncfusion.Blazor.DocumentEditor.FormatType.Docx);
+                await container.DocumentEditor.SaveAsync("test", Syncfusion.Blazor.DocumentEditor.FormatType.Docx);
                 break;
         }
     }
