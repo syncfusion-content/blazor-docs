@@ -45,7 +45,7 @@ Start by following the steps provided in this [link](https://blazor.syncfusion.c
 
 @code {
     private string DocumentPath { get; set; }
-    SfPdfViewer2 viewer;
+    private SfPdfViewer2 viewer;
     private readonly string connectionString = "Your Connection string from Azure";
     private readonly string containerName = "Your container name in Azure";
     private readonly string fileName = "File Name to be loaded into Syncfusion SfPdfViewer";
