@@ -474,7 +474,7 @@ app.Run();
 
 For .NET 6 and 7 set the current culture in a cookie immediately after opening <body> tag of `Pages/_Host.cshtml`.
 
-For .NET 8 set the current culture in a cookie in Routes component file
+For .NET 8 set the current culture in a cookie in **~/Components/App.razor** file.
 
 {% tabs %}
 {% highlight c# tabtitle=".NET 6 & .NET 7 (_Host.cshtml)" hl_lines="6 7 8 9 10 11" %}
