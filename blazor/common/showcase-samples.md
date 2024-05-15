@@ -23,7 +23,6 @@ Syncfusion has a collection of sample applications that demonstrate the use of S
 * [Organizational Chart](https://blazor.syncfusion.com/showcase/organization-chart/)
 * [Document Explorer](https://blazor.syncfusion.com/showcase/documentexplorer/)
 * [Hotel Booking](https://blazor.syncfusion.com/showcase/hotel-booking)
-* [Health Tracker](https://blazor.syncfusion.com/showcase/wasm/health-tracker/)
 * [Stock Market Dashboard](https://blazor.syncfusion.com/showcase/stockmarket-dashboard/)
 
 ## Blazor WebAssembly (WASM) samples
@@ -37,4 +36,5 @@ Syncfusion has a collection of sample applications that demonstrate the use of S
 * [Bpmn Editor](https://blazor.syncfusion.com/showcase/wasm/bpmn-editor/)
 * [Organizational Chart](https://blazor.syncfusion.com/showcase/wasm/organization-chart/)
 * [Loan Calculator](https://blazor.syncfusion.com/showcase/wasm/loan-calculator/)
+* [Health Tracker](https://blazor.syncfusion.com/showcase/wasm/health-tracker/)
 
