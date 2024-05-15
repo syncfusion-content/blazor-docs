@@ -226,7 +226,7 @@ The culture can be set dynamically based on user's preference. The following exa
 
 ### Blazor Web App (Interactive render mode `WebAssembly or Auto`) and Blazor WASM App
 
-For `Blazor Web App (Interactive `WebAssembly or Auto`) and Blazor WASM App`, set the `BlazorWebAssemblyLoadAllGlobalizationData` property to true in the project file:
+For `Blazor Web App and Blazor WASM App`, set the `BlazorWebAssemblyLoadAllGlobalizationData` property to true in the project file:
 
 {% tabs %}
 
