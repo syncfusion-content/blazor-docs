@@ -224,9 +224,9 @@ CultureInfo.DefaultThreadCurrentUICulture = new CultureInfo("de-DE");
 
 The culture can be set dynamically based on user's preference. The following example demonstrates how to use a localization cookie to store user's localization preference.
 
-### Blazor Web App and Blazor WASM App
+### Blazor Web App (Interactive render mode `WebAssembly or Auto`) and Blazor WASM App
 
-For `Blazor Web App and Blazor WASM App`, set the `BlazorWebAssemblyLoadAllGlobalizationData` property to true in the project file:
+For `Blazor Web App (Interactive `WebAssembly or Auto`) and Blazor WASM App`, set the `BlazorWebAssemblyLoadAllGlobalizationData` property to true in the project file:
 
 {% tabs %}
 
@@ -474,7 +474,7 @@ app.Run();
 
 For .NET 6 and 7 set the current culture in a cookie immediately after opening <body> tag of `Pages/_Host.cshtml`.
 
-For .NET 8 set the current culture in a cookie in App component file
+For .NET 8 set the current culture in a cookie in Routes component file
 
 {% tabs %}
 {% highlight c# tabtitle=".NET 6 & .NET 7 (_Host.cshtml)" hl_lines="6 7 8 9 10 11" %}
@@ -494,7 +494,7 @@ For .NET 8 set the current culture in a cookie in App component file
 
 {% endhighlight %}
 
-{% highlight C# tabtitle=".NET 8 (App.razor)" %}
+{% highlight C# tabtitle=".NET 8 (Routes.razor)" %}
 
 @using System.Globalization
 @using Microsoft.AspNetCore.Localization
