@@ -1520,7 +1520,7 @@ You can search for symbols in the palette by entering the symbol name (e.g: “r
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/SymbolPalette/SymbolDescription)
 
-![Drag and Drop in Blazor Diagram](images/blazor-diagram-drag-and-drop.gif)
+![Drag and Drop in Blazor Diagram](images/SearchOption.gif)
 
 ### How to add searchtag for symbols
 
