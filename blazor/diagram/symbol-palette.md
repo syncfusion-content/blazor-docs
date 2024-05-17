@@ -654,7 +654,7 @@ Symbol palette provides supports to show toolip when mouse hovers over any node 
 
 ### Default tooltip for symbols
 
-By default, the symbol's ID will be displayed as the tooltip for each symbol in the symbol palette. The following image illustrate how the tooltip displays when mouse hovers over the symbols in symbol palette.
+By default, the symbol's ID will be displayed as the tooltip for each symbol in the symbol palette when the tooltip property is not defined. The following image illustrate how the tooltip displays when mouse hovers over the symbols in symbol palette.
 
 ![Default Tooltip in symbol palette](images/defaulttooltip.png)
 
@@ -724,6 +724,7 @@ The following code example illustrates how to provide the custom tooltip for nod
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/SymbolPalette/SymbolPaletteTooltip)
 
 ![Tooltip in symbol palette](images/symboltooltip.png)
+
 
 ## How to provide different tooltip for Symbol palette and diagram elements.
 
@@ -820,6 +821,86 @@ When you define custom tooltip to the symbol then same tooltip will be displayed
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/SymbolPalette/SymbolPaletteTooltip)
 
 ![Tooltip in symbol palette](images/differenttooltip.gif)
+
+
+### Tooltip template for symbols
+
+You can provide custom template as tooltip for symbols in the symbol palette using SymbolTooltipTemplate. Once tooltip template is defined then enable the custom tooltip for symbols in the symbol palette by setting the Tooltip constraints for node and connector. This allows the tooltips template to be displayed when hovering over symbols in the symbol palette.
+
+The following code example illustrates how to provide the tooltip template for nodes.
+
+```csharp
+@using Syncfusion.Blazor.Diagram
+@using Syncfusion.Blazor.Diagram.SymbolPalette
+
+<div class="control-section">
+    <div style="width:20%">
+        <div id="palette-space" class="sb-mobile-palette" style="border: 2px solid #b200ff">
+            <SfSymbolPaletteComponent @ref="@SymbolPalette" Height="300px" Width="200px"
+                                      Palettes="@Palettes" SymbolHeight="60" SymbolWidth="60" SymbolMargin="@SymbolMargin">
+               <SymbolPaletteTemplates>
+                    <SymbolTooltipTemplate>
+                        @{
+                            if (context is Node node)
+                            {
+                                <div><p>Product Name : Diagram</p><p>Element: Node</p><p>Content: Node Tooltip</p><p>ID:@node.ID</p></div>
+
+                            }
+                        }
+                    </SymbolTooltipTemplate>
+                </SymbolPaletteTemplates>
+            </SfSymbolPaletteComponent>
+        </div>
+    </div>
+</div>
+
+@code
+{
+    SfSymbolPaletteComponent SymbolPalette;
+
+    //Define palettes collection.
+    DiagramObjectCollection<Palette> Palettes = new DiagramObjectCollection<Palette>();
+
+    // Defines palette's flow-shape collection.
+    DiagramObjectCollection<NodeBase> PaletteNodes = new DiagramObjectCollection<NodeBase>();
+
+    protected override void OnInitialized()
+    {
+        InitPaletteModel();
+    }
+
+    private void InitPaletteModel()
+    {
+        CreatePaletteNode(NodeFlowShapes.Terminator, "Terminator");
+        Palettes = new DiagramObjectCollection<Palette>()
+        {
+           new Palette(){Symbols =PaletteNodes, Title="Flow Shapes", ID="Flow Shapes" },
+        };
+    }
+    private void CreatePaletteNode(NodeFlowShapes flowShape, string id)
+    {
+        Node node = new Node()
+        {
+            ID = id,
+            Shape = new FlowShape() { Type = NodeShapes.Flow, Shape = flowShape },
+            Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "#6495ED" },
+            Tooltip = new DiagramTooltip()
+            {
+                Position = Position.BottomRight,
+                ShowTipPointer = true
+            },
+            Constraints = NodeConstraints.Default | NodeConstraints.Tooltip
+        };
+        PaletteNodes.Add(node);
+    }
+}
+
+```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/SymbolPalette/SymbolPaletteTooltip)
+
+![Tooltip template in symbol palette](images/symboltooltipTemplate.gif)
+
+>**Note:**  When the tooltip for the symbol is not initialised the ID of the symbol will be rendered by default as tooltip content. When the tooltip is defined either content or template must be defined in order for the tooltip to be rendered otherview the tooltip will remain empty.
 
 ## How to add/remove symbols from palette at runtime
 
