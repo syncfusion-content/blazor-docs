@@ -108,11 +108,11 @@ The following sample demonstrates the `string` used as `TValue`. So, if you clea
 
 ## Dynamically change TItem
 
-The `TItem` property can be changed dynamically by defining the datasource type of the DropDownList component with the help of the `@typeparam` directive. The following sample demonstration explains how to change  the TItem dynamically with different type of datasource.
+The `TItem` property can be changed dynamically by defining the datasource type of the ComboBox component with the help of the `@typeparam` directive. The following sample demonstration explains how to change  the TItem dynamically with different type of datasource.
 
-### Creating generic dropdownList component
+### Creating generic combobox component
 
-First, create a `DropDownList.razor` file as a parent component in the `/Pages` folder. Also, add a Parameter property for a List as `<TItem>` and `TValue`.
+First, create a `ComboBox.razor` file as a parent component in the `/Pages` folder. Also, add a Parameter property for a List as `<TItem>` and `TValue`.
 
 {% tabs %}
 {% highlight razor %}
@@ -149,7 +149,7 @@ Here, the ComboBox component is rendered with the TValue as a string type in the
 {% tabs %}
 {% highlight razor %}
 
-<ComboBox TValue="string" TItem="Games" @bind-DDLValue="@value" customData="@LocalData">
+<ComboBox TValue="string" TItem="Games" @bind-ComboBoxValue="@value" customData="@LocalData">
 </ComboBox>
 
 @code{
@@ -180,7 +180,7 @@ Here, the ComboBox component is rendered with the TValue as a string type in the
 
 {% tabs %}
 {% highlight razor %}
-<ComboBox TValue="int?" TItem="Games" @bind-DDLValue="@value" customData="@LocalData">
+<ComboBox TValue="int?" TItem="Games" @bind-ComboBoxValue="@value" customData="@LocalData">
 </ComboBox>
 
 @code{
