@@ -29,7 +29,7 @@ Get the complete object list of the selected value in the [ValueChange](https://
 
 ## Preselected value on OnInitializedAsync
 
-Bind the pre-selected value to the DropDownList component using the [@bind-Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_Value) attribute. Assign the value property inside the [OnInitializedAsync](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/lifecycle?view=aspnetcore-6.0#component-initialization-oninitializedasync) lifecycle. The following sample shows how to bind the value on the initial rendering of the component.
+Bind the pre-selected value to the ComboBox component using the [@bind-Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_Value) attribute. Assign the value property inside the [OnInitializedAsync](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/lifecycle?view=aspnetcore-6.0#component-initialization-oninitializedasync) lifecycle. The following sample shows how to bind the value on the initial rendering of the component.
 
 {% highlight cshtml %}
 
@@ -153,7 +153,7 @@ Trigger the [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
 
 ## Programmatically focus in and focus out the component
 
-In order to trigger the `FocusAsync()` and `FocusOutAsync()` methods using the instance of the autocomplete, you can use buttons. You can bind the click event of the button to the `FocusAsync()` and `FocusOutAsync()` methods. When the button is clicked, it triggers the corresponding method on the autocomplete.
+In order to trigger the `FocusAsync()` and `FocusOutAsync()` methods using the instance of the combobox, you can use buttons. You can bind the click event of the button to the `FocusAsync()` and `FocusOutAsync()` methods. When the button is clicked, it triggers the corresponding method on the combobox.
 
 {% highlight Razor %}
 
