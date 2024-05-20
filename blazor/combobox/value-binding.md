@@ -42,7 +42,7 @@ The Index value binding is achieved by using the [@bind-Index](https://help.sync
 
 ## Primitive type binding
 
-The ComboBox has support to load array of primitive data such as strings and numbers. Bind the value of primitive data to the [@bind-Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_Value) attribute of the ComboBox 
+The ComboBox has support to load array of primitive data such as strings and numbers. Bind the value of primitive data to the [@bind-Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_Value) attribute of the ComboBox.
 
 The following code demonstrates array of string as datasource to the ComboBox component.
 
@@ -105,7 +105,6 @@ The following sample demonstrates the `string` used as `TValue`. So, if you clea
 {% endhighlight %}
 
 ![Blazor ComboBox with clear button](./images/value-binding/blazor_combobox_show-hide-clear-button.png)
-
 
 ## Dynamically change TItem
 
