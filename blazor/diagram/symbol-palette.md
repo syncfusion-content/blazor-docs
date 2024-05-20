@@ -839,7 +839,7 @@ The following code example illustrates how to provide the tooltip template for n
             <SfSymbolPaletteComponent @ref="@SymbolPalette" Height="300px" Width="200px"
                                       Palettes="@Palettes" SymbolHeight="60" SymbolWidth="60" SymbolMargin="@SymbolMargin">
                <SymbolPaletteTemplates>
-                    <SymbolTooltipTemplate>
+                    <TooltipTemplate>
                         @{
                             if (context is Node node)
                             {
@@ -847,7 +847,7 @@ The following code example illustrates how to provide the tooltip template for n
 
                             }
                         }
-                    </SymbolTooltipTemplate>
+                    </TooltipTemplate>
                 </SymbolPaletteTemplates>
             </SfSymbolPaletteComponent>
         </div>

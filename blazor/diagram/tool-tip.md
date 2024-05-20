@@ -369,14 +369,14 @@ The following code example illustrates how to add the formatted template content
 <SfButton Content="Node Template" OnClick="@TemplateChange" />
 <SfDiagramComponent Width="1000px" Height="500px" Nodes="@nodes" >
     <DiagramTemplates>
-        <DiagramTooltipTemplate>
+        <TooltipTemplate>
             @{
                 if (context is Node)
                 {
                     <div><p>Product Name : Diagram</p><p>Element: Node</p><p>Content: Node Tooltip </p></div>
                 }
             }
-        </DiagramTooltipTemplate>
+        </TooltipTemplate>
     </DiagramTemplates>
 </SfDiagramComponent>
 @code
@@ -420,14 +420,14 @@ The following code example illustrates how to add the formatted template content
 <SfButton Content="Connector Template" OnClick="@TemplateChange" />
 <SfDiagramComponent Width="1000px" Height="500px" Connectors="connector">
     <DiagramTemplates>
-        <DiagramTooltipTemplate>
+        <TooltipTemplate>
             @{
                 if (context is Connector)
                 {
                     <div><p>Product Name : Diagram</p><p>Element: Node</p><p>Content: Node Tooltip </p></div>
                 }
             }
-        </DiagramTooltipTemplate>
+        </TooltipTemplate>
     </DiagramTemplates>
 </SfDiagramComponent>
 @code
