@@ -522,7 +522,7 @@ In the Syncfusion Blazor Grid, you have the flexibility to enhance the visual pr
 
 **1.Removing context menu option**
 
-The excel filter dialog includes several features such as **context menu**, **search box**, and c**heckbox list** that may not be required in some scenarios. You can remove these options using the className attribute in the grid component.
+The excel filter dialog includes several features such as **context menu**, **search box**, and **checkbox list** that may not be required in some scenarios. You can remove these options using the className attribute in the grid component.
 
 ```cshtml
 <style>
