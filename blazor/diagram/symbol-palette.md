@@ -650,7 +650,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## How to provide tooltip for symbols in symbol palette
 
-Symbol palette provides supports to show toolip when mouse hovers over any node or connector. The tooltip can be customized for each symbols in the symbol palette.
+Symbol palette provides supports to show tooltip when mouse hovers over any node or connector. The tooltip can be customized for each symbols in the symbol palette.
 
 ### Default tooltip for symbols
 
@@ -900,7 +900,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ![Tooltip template in symbol palette](images/symboltooltipTemplate.gif)
 
->**Note:**  When the tooltip for the symbol is not initialised the ID of the symbol will be rendered by default as tooltip content. When the tooltip is defined either content or template must be defined in order for the tooltip to be rendered otherview the tooltip will remain empty.
+>**Note:**  When the tooltip for the symbol is not initialized, the ID of the symbol will be rendered by default as the tooltip content. When the tooltip is defined, either content or template must be specified; otherwise, the tooltip will remain empty.
 
 ## How to add/remove symbols from palette at runtime
 
