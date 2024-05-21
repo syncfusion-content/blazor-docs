@@ -505,7 +505,7 @@ The [GridColumns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.
 ```
 
 N> If frozen columns are not specified, the frozen column separator will be displayed at the left and right ends. You can dynamically change the frozen columns by dragging the column separator.
-Add or remove frozen columns by dragging the column separator
+
 ![Drag and drop column separator in Blazor DataGrid.](./images/blazor-datagrid-drag-and-drop-the-column-separator.gif)
 
 ## Customize grid scroll bar
@@ -568,4 +568,4 @@ N> You can find the fully working sample [here](https://github.com/SyncfusionExa
 
 ```
 
-![Customizing the dcroll bar in Blazor DataGrid.](./images/blazor-datagrid-scrollbar-customization.png)
+![Customizing the scroll bar in Blazor DataGrid.](./images/blazor-datagrid-scrollbar-customization.png)
