@@ -34,7 +34,7 @@ The ComboBox has built-in support to filter data items when [AllowFiltering](htt
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hZBqMBrGKGJKmQZU?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-![Filtering in Blazor ComboBox](./images/blazor-combobox-filtering.png)
+![Filtering in Blazor ComboBox.](./images/blazor-combobox-filtering.png)
 
 ## Custom Filtering
 
@@ -113,4 +113,4 @@ Specifies whether the input field of the control will automatically suggest and 
 
 {% endhighlight %} 
 
-![Blazor ComboBox with Autofill property](./images/filtering/blazor_combobox_with-autofill-property.png)
+![Blazor ComboBox with autofill property.](./images/filtering/blazor_combobox_with-autofill-property.png)
