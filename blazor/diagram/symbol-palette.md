@@ -898,7 +898,6 @@ The following code example illustrates how to provide the tooltip template for n
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/SymbolPalette/SymbolPaletteTooltip)
 
-![Tooltip template in symbol palette](images/symboltooltipTemplate.gif)
 
 >**Note:**  When the tooltip for the symbol is not initialized, the ID of the symbol will be rendered by default as the tooltip content. When the tooltip is defined, either content or template must be specified; otherwise, the tooltip will remain empty.
 
