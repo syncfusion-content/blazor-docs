@@ -612,7 +612,7 @@ Add the `CultureSwitcher` component to `Shared/MainLayout.razor` to enable the c
 
 {% tabs %}
 
-{% highlight razor tabtitle=".NET 6 & .NET 7 (Shared/MainLayout.razor)%}
+{% highlight razor tabtitle=".NET 6 & .NET 7 (Shared/MainLayout.razor)" %}
 
 <div class="page">
     <div class="sidebar">
