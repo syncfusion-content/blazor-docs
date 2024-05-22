@@ -1452,7 +1452,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 ## How to add symbol search option in symbol palette
 
 The diagram provides support to add search option in palette.  The ShowSearchTextBox property of the palette is used to show or hide the search textbox in a palette.
-You can search for symbols in the palette by entering the symbol name (e.g: “rectangle”) into the search text box and clicking the search box. The symbols are resulted by matching the value of the Name property with the string entered in the search textbox.
+You can search for symbols in the palette by entering the symbol ID (e.g: “rectangle”) into the search text box and clicking the search box. The symbols are resulted by matching the value of the ID property with the string entered in the search textbox.
 
 ```csharp
 @using Syncfusion.Blazor.Diagram
@@ -1461,7 +1461,7 @@ You can search for symbols in the palette by entering the symbol name (e.g: “r
 <div class="control-section">   
     <div style="width: 100%">  
         <div id="palette-space" class="sb-mobile-palette" style="border: 2px solid #b200ff">
-            <SfSymbolPaletteComponent @ref="@SymbolPalette" ShowSearchTextBox="true" Height="300px" Width="200px" GetSymbolInfo="GetSymbolInfo"
+            <SfSymbolPaletteComponent @ref="@SymbolPalette" ShowSearchTextBox="true" Height="300px" Width="200px" 
                                       Palettes="@Palettes" SymbolHeight="60" SymbolWidth="120" SymbolMargin="@SymbolMargin">
             </SfSymbolPaletteComponent>
         </div>
@@ -1491,6 +1491,8 @@ You can search for symbols in the palette by entering the symbol name (e.g: “r
     private void InitPaletteModel()
     {
         CreatePaletteNode(NodeBasicShapes.Rectangle, "Rectangle");
+        CreatePaletteNode(NodeBasicShapes.Ellipse, "Ellipse");
+        CreatePaletteNode(NodeBasicShapes.Star, "Star");
         Palettes = new DiagramObjectCollection<Palette>()
         {
            new Palette(){Symbols = PaletteNodes,Title = "Basic Shapes", ID = "Basic Shapes" },
@@ -1507,29 +1509,138 @@ You can search for symbols in the palette by entering the symbol name (e.g: “r
         };
         PaletteNodes.Add(node);
     }
-
-    private SymbolInfo GetSymbolInfo(IDiagramObject symbol)
-    {
-        SymbolInfo SymbolInfo = new SymbolInfo();
-        string text = null;
-        text = (symbol as Node).ID;
-        SymbolInfo.Description = new SymbolDescription() { Text = text };
-        return SymbolInfo;
-    }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/SymbolPalette/SymbolDescription)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/SymbolPalette/SearchOption)
 
-![Drag and Drop in Blazor Diagram](images/SearchOption.gif)
+![Search Option in Blazor Diagram](images/SearchOption.gif)
 
 ### How to add searchtag for symbols
 
-The SearchTags property allows you to specify keywords that enhance the searchability of symbols within the symbol palette. These keywords are associated with nodes, connectors, groups, swimlanes, and BPMN symbols, making it easier for users to find relevant symbols for their diagrams or designs.
+The SearchTags property allows you to specify keywords that enhance the search ability of symbols within the symbol palette. These keywords are associated with nodes, connectors, groups, swimlanes, and BPMN symbols, making it easier for users to find relevant symbols for their diagrams or designs.
 
+```csharp
+@using Syncfusion.Blazor.Diagram
+@using Syncfusion.Blazor.Diagram.SymbolPalette
 
-### How to ignore symbols in search results based on search tags
+<div class="control-section">   
+    <div style="width: 100%">  
+        <div id="palette-space" class="sb-mobile-palette" style="border: 2px solid #b200ff">
+            <SfSymbolPaletteComponent @ref="@SymbolPalette" ShowSearchTextBox="true" Height="300px" Width="200px" 
+                                      Palettes="@Palettes" SymbolHeight="60" SymbolWidth="120" SymbolMargin="@SymbolMargin">
+            </SfSymbolPaletteComponent>
+        </div>
+        </div>
+</div>
 
-The IgnoreSearchTags property allows you to specify keywords associated with nodes, connectors, groups, and swimlane symbols that should be excluded from search results in the symbol palette. By defining ignore tags, you can customize the search behavior to exclude certain symbols based on specific criteria.
+@code
+{
+    SymbolMargin SymbolMargin = new SymbolMargin 
+    { 
+        Left = 15, 
+        Right = 15, 
+        Top = 15, 
+        Bottom = 15 
+    };       
+    SfSymbolPaletteComponent SymbolPalette;
+    //Define palettes collection.
+    DiagramObjectCollection<Palette> Palettes = new DiagramObjectCollection<Palette>();
+    // Defines palette's flow-shape collection.
+    DiagramObjectCollection<NodeBase> PaletteNodes = new DiagramObjectCollection<NodeBase>();
+
+    protected override void OnInitialized()
+    {
+        InitPaletteModel();
+    }
+        
+    private void InitPaletteModel()
+    {
+        CreatePaletteNode(NodeBasicShapes.Rectangle, "Rectangle");
+        CreatePaletteNode(NodeBasicShapes.Ellipse, "Ellipse");
+        CreatePaletteNode(NodeBasicShapes.Star, "Star");
+        Palettes = new DiagramObjectCollection<Palette>()
+        {
+           new Palette(){Symbols = PaletteNodes,Title = "Basic Shapes", ID = "Basic Shapes" },
+        };
+    }
+        
+    private void CreatePaletteNode(NodeBasicShapes basicShape, string id)
+    {
+        Node node = new Node()
+        {
+            ID = id,
+            SearchTags = new List<string>() { "Basic" },
+            Shape = new BasicShape() { Type = NodeShapes.Basic, Shape = basicShape },
+            Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "#6495ED" },
+        };
+        PaletteNodes.Add(node);
+    }
+}
+```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/SymbolPalette/SearchTag)
+
+### How to Enable/Disable animation in symbol palette
+
+The diagram provides support to enable or disable Animation support when expanding and collapsing the panel in the symbol palette. The EnableAnimation property is used to enable or disable the animation in the symbol palette. the default value is true. The default animation is set as SlideDown for expanding the panel and SlideUp for collapsing the panel in the symbol palette. The time duration for transforming content on collapse action is set to 400 milliseconds by default.
+
+```csharp
+@using Syncfusion.Blazor.Diagram
+@using Syncfusion.Blazor.Diagram.SymbolPalette
+
+<div class="control-section">   
+    <div style="width: 100%">  
+        <div id="palette-space" class="sb-mobile-palette" style="border: 2px solid #b200ff">
+            <SfSymbolPaletteComponent @ref="@SymbolPalette" EnableAnimation=true Height="300px" Width="200px" 
+                                      Palettes="@Palettes" SymbolHeight="60" SymbolWidth="120" SymbolMargin="@SymbolMargin">
+            </SfSymbolPaletteComponent>
+        </div>
+        </div>
+</div>
+
+@code
+{
+    SymbolMargin SymbolMargin = new SymbolMargin 
+    { 
+        Left = 15, 
+        Right = 15, 
+        Top = 15, 
+        Bottom = 15 
+    };       
+    SfSymbolPaletteComponent SymbolPalette;
+    //Define palettes collection.
+    DiagramObjectCollection<Palette> Palettes = new DiagramObjectCollection<Palette>();
+    // Defines palette's flow-shape collection.
+    DiagramObjectCollection<NodeBase> PaletteNodes = new DiagramObjectCollection<NodeBase>();
+
+    protected override void OnInitialized()
+    {
+        InitPaletteModel();
+    }
+        
+    private void InitPaletteModel()
+    {
+        CreatePaletteNode(NodeBasicShapes.Rectangle, "Rectangle");
+        CreatePaletteNode(NodeBasicShapes.Ellipse, "Ellipse");
+        CreatePaletteNode(NodeBasicShapes.Star, "Star");
+        Palettes = new DiagramObjectCollection<Palette>()
+        {
+           new Palette(){Symbols = PaletteNodes,Title = "Basic Shapes", ID = "Basic Shapes" },
+        };
+    }
+        
+    private void CreatePaletteNode(NodeBasicShapes basicShape, string id)
+    {
+        Node node = new Node()
+        {
+            ID = id,
+            Shape = new BasicShape() { Type = NodeShapes.Basic, Shape = basicShape },
+            Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "#6495ED" },
+        };
+        PaletteNodes.Add(node);
+    }
+}
+```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/SymbolPalette/AnimationSupport)
 
 ## Palette interaction
 
