@@ -262,6 +262,57 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 **Note:** Routing is applicable only for orthogonal connectors.
 
+### Routing types
+
+The diagram supports two types of routing algorithm:
+    * [Classic]: Additional segments will be added based on the position and dimensions of the obstacles in the path. This routing method prioritizes reducing the impact of obstacles over minimizing geometry length and the number of bends.
+    * [Advanced]: This routing type evaluates all possible geometrical paths for a connector, aiming to find the one with the minimal bends and the shortest length.
+
+The routing algorithm can be specified by using [RoutingType] property of [LineRoutingSettings] class. You can also set the distance from an obstacle node to route the connector for advanced routing by using [ObstaclePadding].
+
+```cshtml
+@using Syncfusion.Blazor.Diagram
+
+<SfDiagramComponent Width="1000px" Height="500px" Connectors="@connectors" Nodes="@nodes" Constraints="@diagramConstraints">
+    <LineRoutingSettings RoutingType ="@routingTypes" ObstaclePadding="@padding"></LineRoutingSettings>
+</SfDiagramComponent>
+@code 
+{
+    // Set the type of the routing
+    RoutingTypes routingTypes = RoutingTypes.Advanced;
+    // Set the padding for the obstable
+    double padding = 20;
+    // Enable routing constraints for diagram.
+    DiagramConstraints diagramConstraints = DiagramConstraints.Default | DiagramConstraints.Routing;
+    // Intialize the node collection.
+    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    // Intialize the connector collection.
+    DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+    
+    protected override void OnInitialized()
+    {
+        nodes = new DiagramObjectCollection<Node>()
+        {
+            new Node() { ID = "node1", OffsetX = 100, OffsetY = 300, Width = 100, Height =100 },
+            new Node() { ID = "node2", OffsetX = 600, OffsetY = 100, Width = 100, Height = 100 },
+            new Node() { ID = "node3", OffsetX = 400, OffsetY = 250, Width = 100, Height = 100 }
+        };
+        connectors = new DiagramObjectCollection<Connector>(){
+            new Connector()
+            {
+                ID = "connector1",
+                SourceID = "node1", TargetID = "node2",
+                Type = ConnectorSegmentType.Orthogonal
+            }
+        };
+    }
+}
+```
+
+**Note:** Default value of [RoutingType] is Classic. ObstaclePadding property is only applicable when the [RoutingType] property is set to [RoutingTypes.Advanced].
+
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Interaction).
+
 ### How to enable or disable routing for nodes
 
 By default, connectors treat all nodes as obstacles, causing connections to navigate around the node boundaries. However, you can disable this behavior and allow connectors to ignore the node as an obstacle by removing the [RoutingObstacle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeConstraints.html#Syncfusion_Blazor_Diagram_NodeConstraints_RoutingObstacle) from the node's [Constraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Node.html#Syncfusion_Blazor_Diagram_Node_Constraints) property.
