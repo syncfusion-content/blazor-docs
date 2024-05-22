@@ -116,6 +116,8 @@ Organizational chart layout starts parsing from root and iterate through all its
 2. **TreeInfo**: Object to set the customizable properties.
 3. **TreeInfo**: Returns an object value to be customized.
 
+>**Note:** In the DataSourceSettings, both the ID and ParentID properties are of type string. The given DataSource should have a parent-child relationship. Additionally, one of the ParentID values should be updated to be empty in order to establish a children-parent relationship at the source level. It is necessary for at least one node to have an empty ParentID.
+
 ## Customize layout
 
 Orientation, spacings, and position of the layout can be customized with a set of properties.

@@ -157,6 +157,8 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ![Blazor Complex Hierarchical Diagram](../images/blazor-diagram-samepoint.png)
 
+>**Note:** In the DataSourceSettings, both the ID and ParentID properties are of type string. The given DataSource should have a parent-child relationship. Additionally, one of the ParentID values should be updated to be empty in order to establish a children-parent relationship at the source level. It is necessary for at least one node to have an empty ParentID.
+
 ### How to enable/disable linear arrangement
 
 Linear arrangement  is used to arrange the child nodes in linear manner in the layout, that is the parent node is placed in the center, corresponding to its children. When line distribution is enabled, the linear arrangement is also activated by default. The [LinearArrangement](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_LinearArrangement) property of layout is used to enable or disable the linear arrangement in the layout. By default, the value is false.

@@ -161,6 +161,8 @@ You can create a hierarchical layout with DataSource. The following code demonst
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Layout/HierarchicalTreeWithDataSource)
 
+>**Note:** In the DataSourceSettings, both the ID and ParentID properties are of type string. The given DataSource should have a parent-child relationship. Additionally, one of the ParentID values should be updated to be empty in order to establish a children-parent relationship at the source level. It is necessary for at least one node to have an empty ParentID.
+
 ## Customizing the properties
 
 ### How to change orientation 
