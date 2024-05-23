@@ -650,7 +650,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## How to provide tooltip for symbols in symbol palette
 
-Symbol palette provides supports to show toolip when mouse hovers over any node or connector. The tooltip can be customized for each symbols in the symbol palette.
+Symbol palette provides supports to show tooltip when mouse hovers over any node or connector. The tooltip can be customized for each symbols in the symbol palette.
 
 ### Default tooltip for symbols
 
@@ -1515,7 +1515,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ![Search Option in Blazor Diagram](images/SearchOption.gif)
 
-### How to add searchtag for symbols
+### How to add searchtags for symbols
 
 The SearchTags property allows you to specify keywords that enhance the search ability of symbols within the symbol palette. These keywords are associated with nodes, connectors, groups, swimlanes, and BPMN symbols, making it easier for users to find relevant symbols for their diagrams or designs.
 
