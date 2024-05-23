@@ -177,17 +177,12 @@ The following code explains how to initialize tab content using `ContentTemplate
             <ChildContent>
                 <TabHeader Text="JavaScript"></TabHeader>
             </ChildContent>
-            <ContentTemplate>@DynamicContent</ContentTemplate>
+            <ContentTemplate>
+                <div>JavaScript (JS) is an interpreted computer programming language. It was originally implemented as part of web browsers so that client-side scripts could interact with the user, control the browser, communicate asynchronously, and alter the document content that was displayed.[5] More recently, however, it has become common in both game development and the creation of desktop applications.</div>
+            </ContentTemplate>
         </TabItem>
     </TabItems>
 </SfTab>
-
-@code{
-    public RenderFragment DynamicContent = builder =>
-    {
-        builder.AddContent(1, "JavaScript (JS) is an interpreted computer programming language. It was originally implemented as part of web browsers so that client-side scripts could interact with the user, control the browser, communicate asynchronously, and alter the document content that was displayed.[5] More recently, however, it has become common in both game development and the creation of desktop applications.");
-    };
-}
 
 {% endhighlight %}
 {% endtabs %}
@@ -224,14 +219,14 @@ Selected Tab
                 <TabHeader Text="Java"></TabHeader>
             </ChildContent>
         </TabItem>
-        <TabItem Content="The command-line compiler, VBC.EXE, is installed as part of the freeware .NET Framework SDK. Mono also includes a command-line VB.NET compiler. The most recent version is VB 2012, which was released on August 15, 2012.">
+        <TabItem Content="Python is a high-level, general-purpose programming language. Its design philosophy emphasizes code readability with the use of significant indentation. Python is dynamically typed and garbage-collected. It supports multiple programming paradigms, including structured, object-oriented and functional.">
             <ChildContent>
-                <TabHeader Text="VB.Net"></TabHeader>
+                <TabHeader Text="Python"></TabHeader>
             </ChildContent>
         </TabItem>
-        <TabItem Content="Xamarin is a San Francisco, California based software company created in May 2011[3] by the engineers that created Mono,[4] Mono for Android and MonoTouch that are cross-platform implementations of the Common Language Infrastructure (CLI) and Common Language Specifications (often called Microsoft .NET). With a C#-shared codebase, developers can use Xamarin tools to write native Android, iOS, and Windows apps with native user interfaces and share code across multiple platforms.[5] Xamarin has over 1 million developers in more than 120 countries around the World as of May 2015.">
+        <TabItem Content="TypeScript is a newcomer to top programming language lists, but it’s making headway. It was developed in 2012 by Microsoft and is a typed version of JavaScript that is well suited for large code bases. TypeScript is used to create JavaScript-based projects with typing in both client-side and server-side development, making useful for catching errors and preventing systemic issues.">
             <ChildContent>
-                <TabHeader Text="Xamarin"></TabHeader>
+                <TabHeader Text="TypeScript"></TabHeader>
             </ChildContent>
         </TabItem>
     </TabItems>
