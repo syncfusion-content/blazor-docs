@@ -21,7 +21,7 @@ This section briefly explains about how to include [Blazor 3D Charts](https://ww
 
 You can create a **Blazor WebAssembly App** using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0&pivots=windows) or the [Syncfusion Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
 
-## Install Syncfusion Blazor 3D Charts NuGet in the App
+## Install Syncfusion Blazor 3D Chart NuGet in the App
 
 To add **Blazor 3D Chart** component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install [Syncfusion.Blazor.Chart3D](https://www.nuget.org/packages/Syncfusion.Blazor.Chart3D). Alternatively, you can utilize the following package manager command to achieve the same.
 
