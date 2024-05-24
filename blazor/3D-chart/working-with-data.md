@@ -251,7 +251,7 @@ The data points that uses the `null` or `undefined` as value are considered as e
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VtLUWVrBKOfaDiKg?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-![Blazor Column 3D Chart with Empty Points](images/working-data/blazor-chart-empty-point.png)
+[Blazor Column 3D Chart with Empty Points]
 
 N> Refer to our [Blazor 3D Chart](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor 3D Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
 

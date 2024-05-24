@@ -91,7 +91,7 @@ By default, category axis labels are placed between ticks in an axis. It can als
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rtLgWVrBgOQpAjdB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-![Changing Labels Position in Blazor 3D Chart](images/category-axis/blazor-diagram-label-position.png)
+[Changing Labels Position in Blazor 3D Chart]
 
 ## Range
 
