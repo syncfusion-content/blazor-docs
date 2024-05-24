@@ -41,7 +41,7 @@ The following code demonstrates how to add a ruler to the diagram.
 * `VerticalRuler` - Defines the appearance of the vertical ruler.
 * Ruler `Interval` - The interval property allows you to define the interval between both horizontal and vertical ruler segments.
 * Ruler `IsVisible` - It is used to define whether the horizontal and vertical rulers are visible in the diagram.
-* `TickAlignment` - It controls the positioning of the ticks/hashmarks in the ruler.
+* `TickAlignment` - It controls the positioning of the ticks/hash marks in the ruler.
 * `EnableDynamicGrid` - Indicates whether gridlines are synchronized with the hash marks on the ruler.
 * `MarkerColor` - Determines the color of the marker line/guide line for the ruler, the one which represents current position of cursor in diagram.
 
