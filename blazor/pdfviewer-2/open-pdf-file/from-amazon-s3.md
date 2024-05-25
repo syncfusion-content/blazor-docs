@@ -43,7 +43,7 @@ Start by following the steps provided in this [link](https://blazor.syncfusion.c
 </SfPdfViewer2>
 
 @code {
-    private SfPdfViewerServer viewer;
+    private SfPdfViewer2 viewer;
     private string DocumentPath { get; set; }
 
     private readonly string accessKey = "Your Access Key from AWS S3";
