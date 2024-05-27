@@ -174,7 +174,9 @@ You can add a title using [Title](https://help.syncfusion.com/cr/blazor/Syncfusi
 {% highlight razor %}
 
 <SfChart3D Title="Sales Analysis">
-    <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></Chart3DPrimaryXAxis>
+    <Chart3DPrimaryXAxis Title="Month" ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></Chart3DPrimaryXAxis>
+    
+     <Chart3DPrimaryYAxis Title="Sales in Dollar"><Chart3DPrimaryYAxis>
     <Chart3DSeriesCollection>
         <Chart3DSeries DataSource="@Sales" XName="Month" YName="SalesValue" Type="Chart3DSeriesType.Column">
         </Chart3DSeries>
@@ -235,15 +237,15 @@ The tooltip is useful when you cannot display information by using the data labe
 {% tabs %}
 {% highlight razor %}
 
-<SfChart Title="Sales Analysis">
-    <ChartPrimaryXAxis Title="Month" ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
-    <ChartPrimaryYAxis Title="Sales in Dollar"></ChartPrimaryYAxis>
-    <ChartTooltipSettings Enable="true"></ChartTooltipSettings>
-    <ChartSeriesCollection>
-        <ChartSeries DataSource="@Sales" XName="Month" YName="SalesValue" Type="ChartSeriesType.Column">
-        </ChartSeries>
-    </ChartSeriesCollection>
-</SfChart>
+<SfChart3D Title="Sales Analysis">
+    <Chart3DPrimaryXAxis Title="Month" ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></Chart3DPrimaryXAxis>
+    <Chart3DPrimaryYAxis Title="Sales in Dollar"></Chart3DPrimaryYAxis>
+    <Chart3DTooltipSettings Enable="true"></Chart3DTooltipSettings>
+    <Chart3DSeriesCollection>
+        <Chart3DSeries DataSource="@Sales" XName="Month" YName="SalesValue" Type="Chart3DSeriesType.Column">
+        </Chart3DSeries>
+    </Chart3DSeriesCollection>
+</SfChart3D>
 
 {% endhighlight %}
 {% endtabs %}

@@ -206,7 +206,7 @@ The [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data
 ![Blazor 3D Chart with ODataV4Adaptor Binding](images/working-data/blazor-chart-odata-adaptor-binding.png)
 
 ## Empty points
-The data points that uses the `null` or `undefined` as value are considered as empty points. The empty data points are ignored and is not plotted in the chart. When the data is provided by using the points property, by using [EmptyPointSettings]() property in series, the empty can be customized. The default [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEmptyPointSettings.html#Syncfusion_Blazor_Charts_ChartEmptyPointSettings_Mode) of the empty point is **Gap**.
+The data points that uses the `null` or `undefined` as value are considered as empty points. The empty data points are ignored and is not plotted in the chart. When the data is provided by using the points property, by using [EmptyPointSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_EmptyPointSettings) property in series, the empty can be customized. The default [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEmptyPointSettings.html#Syncfusion_Blazor_Charts_ChartEmptyPointSettings_Mode) of the empty point is **Gap**.
 
 ```cshtml
 
@@ -218,7 +218,7 @@ The data points that uses the `null` or `undefined` as value are considered as e
 
     <Chart3DSeriesCollection>
         <Chart3DSeries DataSource="@SalesReports" XName="Month" YName="Sales" Type="Chart3DSeriesType.Column">
-            <Chart3DEmptyPointSettings Fill="gray" Mode="EmptyPointMode.Average">
+            <Chart3DEmptyPointSettings Fill="gray" Mode="Syncfusion.Blazor.Charts.EmptyPointMode.Gap">
             </Chart3DEmptyPointSettings>
         </Chart3DSeries>
     </Chart3DSeriesCollection>
@@ -251,7 +251,7 @@ The data points that uses the `null` or `undefined` as value are considered as e
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VtLUWVrBKOfaDiKg?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-[Blazor Column 3D Chart with Empty Points]
+![Blazor Column 3D Chart with Empty Points](images/working-data/blazor-chart-empty-point.png)
 
 N> Refer to our [Blazor 3D Chart](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor 3D Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
 

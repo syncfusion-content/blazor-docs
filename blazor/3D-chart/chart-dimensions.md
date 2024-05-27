@@ -158,4 +158,3 @@ N> Refer to our [Blazor 3D Chart](https://www.syncfusion.com/blazor-components/b
 
 * [Data Label](./data-labels)
 * [Tooltip](./tool-tip)
-* [Marker](./data-markers)

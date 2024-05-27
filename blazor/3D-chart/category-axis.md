@@ -59,7 +59,7 @@ By default, category axis labels are placed between ticks in an axis. It can als
 @using Syncfusion.Blazor.Chart3D
 
 <SfChart3D>
-    <Chart3DPrimaryXAxis LabelPlacement="LabelPlacement.OnTicks" ValueType="Syncfusion.Blazor.Charts.ValueType.Category">
+    <Chart3DPrimaryXAxis LabelPlacement="Syncfusion.Blazor.Charts.LabelPlacement.OnTicks" ValueType="Syncfusion.Blazor.Charts.ValueType.Category">
     </Chart3DPrimaryXAxis>
 
     <Chart3DSeriesCollection>
@@ -91,7 +91,7 @@ By default, category axis labels are placed between ticks in an axis. It can als
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rtLgWVrBgOQpAjdB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-[Changing Labels Position in Blazor 3D Chart]
+![Changing Labels Position in Blazor 3D Chart](images/category-axis/blazor-diagram-label-position.png)
 
 ## Range
 
@@ -192,4 +192,3 @@ N> Refer to our [Blazor 3D Chart](https://www.syncfusion.com/blazor-components/b
 
 * [Data Label](./data-labels)
 * [Tooltip](./tool-tip)
-* [Marker](./data-markers)
