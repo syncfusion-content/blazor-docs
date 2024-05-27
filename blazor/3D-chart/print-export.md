@@ -89,7 +89,7 @@ The rendered 3D chart can be exported to `JPEG`, `PNG`, `SVG`, or `PDF` format u
 
     private async Task Export(MouseEventArgs args)
     {
-        await Chart3DObj.ExportAsync(ExportType.PNG, "pngImage");
+        await Chart3DObj.ExportAsync(Syncfusion.Blazor.Charts.ExportType.PNG, "pngImage");
     }
 
     public class Chart3DData
