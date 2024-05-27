@@ -22,7 +22,7 @@ The following sample code demonstrates adding custom headers to the [SfDataManag
 
 <SfGrid TValue="Order" AllowPaging="true">
     <GridPageSettings PageSize="10"></GridPageSettings>
-    <SfDataManager Headers=@HeaderData Url="https://ej2services.syncfusion.com/production/web-services/api/Orders" Adaptor="Adaptors.WebApiAdaptor"></SfDataManager>
+    <SfDataManager Headers=@HeaderData Url="https://blazor.syncfusion.com/services/production/api/orders" Adaptor="Adaptors.WebApiAdaptor"></SfDataManager>
     <GridColumns>
         <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" IsPrimaryKey="true" TextAlign="TextAlign.Right" Width="120"></GridColumn>
         <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
