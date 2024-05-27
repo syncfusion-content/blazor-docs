@@ -119,7 +119,7 @@ N> All the events should be provided in a single **GridEvents** component.
 
 <SfGrid TValue="Order">
     <GridEvents OnActionFailure="ActionFailureHandler" TValue="Order"></GridEvents>
-    <SfDataManager Url="https://ej2services.syncfusion.com/production/web-services/api/Orderss" Adaptor="Adaptors.WebApiAdaptor"></SfDataManager>
+    <SfDataManager Url="https://blazor.syncfusion.com/services/production/api/orders" Adaptor="Adaptors.WebApiAdaptor"></SfDataManager>
     <GridColumns>
         <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
         <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
