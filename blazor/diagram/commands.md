@@ -1151,7 +1151,7 @@ The [BringIntoView](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diag
 @using Syncfusion.Blazor.Buttons
 
 <SfButton Content="BringIntoView" OnClick="@BringIntoView" />
-<SfDiagramComponent @ref="diagram" Width="1000px" Height="500px" @bind-Nodes="@nodes"><PageSettings @bind-Orientation="@pageOrientation" @bind-MultiplePage="@IsMultiplePage"></PageSettings>
+<SfDiagramComponent @ref="diagram" Width="1000px" Height="500px" @bind-Nodes="@nodes">
 </SfDiagramComponent>
 @code
 {
@@ -1168,7 +1168,7 @@ protected override void OnInitialized()
             new ShapeAnnotation() { Content = "Node1" } } },
         };
     }
-    Brings the specified bounds into the view port of the diagram
+    //Brings the specified bounds into the view port of the diagram
     private void BringIntoView()
     {
     DiagramRect bound = new DiagramRect(950,650,500,500);
@@ -1187,7 +1187,7 @@ The [BringIntoCenter](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Di
 @using Syncfusion.Blazor.Buttons
 
 <SfButton Content="BringIntoCenter" OnClick="@BringIntoCenter" />
-<SfDiagramComponent @ref="diagram" Width="1000px" Height="500px" @bind-Nodes="@nodes"><PageSettings @bind-Orientation="@pageOrientation" @bind-MultiplePage="@IsMultiplePage"></PageSettings>
+<SfDiagramComponent @ref="diagram" Width="1000px" Height="500px" @bind-Nodes="@nodes">
 </SfDiagramComponent>
 @code
 {
@@ -1204,7 +1204,7 @@ protected override void OnInitialized()
             new ShapeAnnotation() { Content = "Node1" } } },
         };
     }
-    Brings the specified bounds into the center of the view port of the diagram
+    //Brings the specified bounds into the center of the view port of the diagram
     private void BringIntoCenter()
     {
     DiagramRect bound = new DiagramRect(950,650,500,500);
@@ -1388,7 +1388,9 @@ The following code illustrates how to execute the CanZoomIn command.
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 @using Node = Syncfusion.Blazor.Diagram.Node
+@using Syncfusion.Blazor.Buttons
 
+<SfButton Content="CanZoomIn" OnClick="@ZoomIn" />
 <SfDiagramComponent @ref="diagram" Width="1000px" Height="600px" Nodes="nodes" Connectors="connectors">
 </SfDiagramComponent>
 
