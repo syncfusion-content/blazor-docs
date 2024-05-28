@@ -252,8 +252,6 @@ The labels will be rendered based on the count in the [MaximumLabels](https://he
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rtLUCVrRhftplXww?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-![Blazor Column 3D Chart Axis with Maximum Labels](images/axis-labels/blazor-column-chart-axis-maximum-labels.png)
-
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Chart-Axis-Label-Customization).
 
 ## See also

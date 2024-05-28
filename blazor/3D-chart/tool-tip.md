@@ -168,9 +168,9 @@ Any HTML elements can be displayed within the tooltip by using the [Template](ht
         LabelPlacement="Syncfusion.Blazor.Charts.LabelPlacement.BetweenTicks" />
     <Chart3DTooltipSettings Enable="true">
         <Chart3DTooltipSettings Enable="true">
-        <Template>
+        <Chart3DTooltipTemplate>
             @{
-                    var data = context as ChartTooltipInfo;
+                    var data = context as Chart3DTooltipInfo;
                     <div>                       
                         <table style="width:100%;  border: 1px solid black;">
                             <tr><th colspan="2" bgcolor="#00FFFF">Unemployment</th></tr>
@@ -178,7 +178,7 @@ Any HTML elements can be displayed within the tooltip by using the [Template](ht
                         </table>
                     </div>
                 }         
-        </Template>
+        </Chart3DTooltipTemplate>
     </Chart3DTooltipSettings>
     </Chart3DTooltipSettings>
     <Chart3DSeriesCollection>
@@ -212,7 +212,7 @@ Any HTML elements can be displayed within the tooltip by using the [Template](ht
 
 ```
 
-![Blazor Column 3D Chart with Tooltip Template]
+![Blazor Column 3D Chart with Tooltip Template](images/tooltip/blazor-column-chart-tooltip-template.png)
 
 ## Customize the appearance of tooltip
 

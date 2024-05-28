@@ -419,8 +419,7 @@ When the legend text exceeds the container, the text can be wrapped by using the
         <Chart3DSeries DataSource="@MedalDetails" Name="Bronze" XName="Country" Opacity="1" YName="Bronze" Type="Chart3DSeriesType.Column" LegendShape="Syncfusion.Blazor.Charts.LegendShape.Diamond"/>      
     </Chart3DSeriesCollection>
 
-    <Chart3DLegendSettings Visible="true" Position="Syncfusion.Blazor.Charts.LegendPosition.Right" TextWrap="@TextWrap.Wrap" MaximumLabelWidth="50">
-        <Chart3DLegendBorder Color="red" Width="1"/>
+    <Chart3DLegendSettings Visible="true" Position="Syncfusion.Blazor.Charts.LegendPosition.Right" TextWrap="@Syncfusion.Blazor.TextWrap.Wrap" MaximumLabelWidth="50">
     </Chart3DLegendSettings>
 </SfChart3D>
 
@@ -449,7 +448,7 @@ When the legend text exceeds the container, the text can be wrapped by using the
 
 ```
 
-![Blazor 3D Chart Legend with Wrap]
+![Blazor 3D Chart Legend with Wrap](images/legend/blazor-column-chart-legend-text-wrap.png)
 
 ## Series selection based on legend
 
@@ -601,26 +600,26 @@ You can set title for legend using `Title` property in `LegendSettings`. The `Si
 
 ## Arrow page navigation
 
-The page number will always be visible while using legend paging. It is now possible to disable the page number and enable page navigation with the left and right arrows. The `EnablePages` property needs to be set to **false** in order to render the arrow page navigation.
+The page number will always be visible while using legend paging. It is now possible to disable the page number and enable page navigation with the left and right arrows. The `AllowPaging` property needs to be set to **false** in order to render the arrow page navigation.
 
 ```cshtml
 
 @using Syncfusion.Blazor.Chart3D
 
 <SfChart3D Title="Olympic Medals">
-    <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"/>    
+    <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category" />
 
     <Chart3DSeriesCollection>
-        <Chart3DSeries DataSource="@MedalDetails" Name="Gold" XName="Country" Opacity="1" YName="Gold" Type="Chart3DSeriesType.Column" LegendShape="Syncfusion.Blazor.Charts.LegendShape.Circle"/>      
-        <Chart3DSeries DataSource="@MedalDetails" Name="Silver" XName="Country" Opacity="1" YName="Silver" Type="Chart3DSeriesType.Column" LegendShape="Syncfusion.Blazor.Charts.LegendShape.SeriesType"/>     
-        <Chart3DSeries DataSource="@MedalDetails" Name="Bronze" XName="Country" Opacity="1" YName="Bronze" Type="Chart3DSeriesType.Column" LegendShape="Syncfusion.Blazor.Charts.LegendShape.Diamond"/>      
+        <Chart3DSeries DataSource="@MedalDetails" Name="Gold" XName="Country" Opacity="1" YName="Gold" Type="Chart3DSeriesType.Column" LegendShape="Syncfusion.Blazor.Charts.LegendShape.Circle" />
+        <Chart3DSeries DataSource="@MedalDetails" Name="Silver" XName="Country" Opacity="1" YName="Silver" Type="Chart3DSeriesType.Column" LegendShape="Syncfusion.Blazor.Charts.LegendShape.SeriesType" />
+        <Chart3DSeries DataSource="@MedalDetails" Name="Bronze" XName="Country" Opacity="1" YName="Bronze" Type="Chart3DSeriesType.Column" LegendShape="Syncfusion.Blazor.Charts.LegendShape.Diamond" />
     </Chart3DSeriesCollection>
 
-    <Chart3DLegendSettings Visible="true" EnablePages="false" Width="180" Height="20">
+    <Chart3DLegendSettings Visible="true" AllowPaging="true" Width="180" Height="20">
     </Chart3DLegendSettings>
 </SfChart3D>
 
-@code{
+@code {
 
     public class Chart3DData
     {
@@ -631,21 +630,21 @@ The page number will always be visible while using legend paging. It is now poss
     }
 
     public List<Chart3DData> MedalDetails = new List<Chart3DData>
-	{
-		new Chart3DData{ Country= "USA", Gold=50, Silver=70, Bronze=45 },
-		new Chart3DData{ Country="China", Gold=40, Silver= 60, Bronze=55 },
-		new Chart3DData{ Country= "Japan", Gold=70, Silver= 60, Bronze=50 },
-		new Chart3DData{ Country= "Australia", Gold=60, Silver= 56, Bronze=40 },
-		new Chart3DData{ Country= "France", Gold=50, Silver= 45, Bronze=35 },
-		new Chart3DData{ Country= "Germany", Gold=40, Silver=30, Bronze=22 },
-		new Chart3DData{ Country= "Italy", Gold=40, Silver=35, Bronze=37 },
-		new Chart3DData{ Country= "Sweden", Gold=30, Silver=25, Bronze=27 }
-	};
+    {
+        new Chart3DData{ Country= "USA", Gold=50, Silver=70, Bronze=45 },
+        new Chart3DData{ Country="China", Gold=40, Silver= 60, Bronze=55 },
+        new Chart3DData{ Country= "Japan", Gold=70, Silver= 60, Bronze=50 },
+        new Chart3DData{ Country= "Australia", Gold=60, Silver= 56, Bronze=40 },
+        new Chart3DData{ Country= "France", Gold=50, Silver= 45, Bronze=35 },
+        new Chart3DData{ Country= "Germany", Gold=40, Silver=30, Bronze=22 },
+        new Chart3DData{ Country= "Italy", Gold=40, Silver=35, Bronze=37 },
+        new Chart3DData{ Country= "Sweden", Gold=30, Silver=25, Bronze=27 }
+    };
 }
 
 ```
 
-[Enabling legend pages in Blazor Column 3D Chart]
+![Enabling legend pages in Blazor Column 3D Chart](images/legend/blazor-column-chart-legend-with-page-navigation.png)
 
 ### Legend Item Padding
 

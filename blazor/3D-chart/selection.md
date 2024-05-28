@@ -168,13 +168,13 @@ To select the points that corresponds to the same index in all the series, set t
 
 ## Selection type
 
-To select multiple points or series, enable the [IsMultiSelect](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfChart.html#Syncfusion_Blazor_Charts_SfChart_IsMultiSelect)  property.
+To select multiple points or series, enable the [AllowMultiSelection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfChart.html#Syncfusion_Blazor_Charts_SfChart_IsMultiSelect)  property.
 
 ```cshtml
 
 @using Syncfusion.Blazor.Chart3D
 
-<SfChart3D Title="Olympic Medals" SelectionMode="Syncfusion.Blazor.Charts.SelectionMode.Point" IsMultiSelect="true" WallColor="transparent" EnableRotation="true" RotationAngle="7" TiltAngle="10" Depth="100">
+<SfChart3D Title="Olympic Medals" SelectionMode="Syncfusion.Blazor.Charts.SelectionMode.Point" AllowMultiSelection="true" WallColor="transparent" EnableRotation="true" RotationAngle="7" TiltAngle="10" Depth="100">
     <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category">
     </Chart3DPrimaryXAxis>
 
@@ -188,7 +188,7 @@ To select multiple points or series, enable the [IsMultiSelect](https://help.syn
     </Chart3DSeriesCollection>
 </SfChart3D>
 
-@code{
+@code {
     public class Chart3DData
     {
         public string Country { get; set; }
@@ -198,7 +198,7 @@ To select multiple points or series, enable the [IsMultiSelect](https://help.syn
     }
 
     public List<Chart3DData> MedalDetails = new List<Chart3DData>
-	{
+    {
         new Chart3DData{ Country= "USA", Gold=50, Silver=70, Bronze=45 },
         new Chart3DData{ Country="China", Gold=40, Silver= 60, Bronze=55 },
         new Chart3DData{ Country= "Japan", Gold=70, Silver= 60, Bronze=50 },
@@ -212,7 +212,7 @@ To select multiple points or series, enable the [IsMultiSelect](https://help.syn
 
 ```
 
-![Blazor Column 3D Chart with Multiple Selection]
+![Blazor Column 3D Chart with Multiple Selection](images/selection/blazor-chart-multiple-selection.png)
 
 ## Selection during initial loading
 
