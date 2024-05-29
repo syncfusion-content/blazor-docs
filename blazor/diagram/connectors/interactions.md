@@ -397,6 +397,8 @@ By default, each connector's routing process is inherited based on the value of 
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Interaction/RoutingConstraints).
 
+For more information about the routing type in line routing settings, refer to [Line Routing](../properties#line-routing-settings).
+
 ## How to flip the connector
 
 The [Flip](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeBase.html#Syncfusion_Blazor_Diagram_NodeBase_Flip) is performed to give the mirrored image of the original element.
@@ -411,3 +413,4 @@ For more information about the connector flip, refer to [Connector Flip](../flip
 
 * [How to get the connector events](./events)
  
+* [How to change the routing type of the line routing](../properties.md)
