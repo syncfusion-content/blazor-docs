@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Chunk message in the Blazor Diagram Component | Syncfusion
-description: Checkout and learn  all about Chunk message in the Syncfusion Blazor Diagram component and much more.
+title: Properties in the Blazor Diagram Component | Syncfusion
+description: Checkout and learn  all about diagram properties in the Syncfusion Blazor Diagram component and much more.
 platform: Blazor
 control: Diagram Component
 documentation: ug
@@ -11,14 +11,14 @@ documentation: ug
 
 ## Chunk Message
 
-In the Blazor Diagram component, it is essential to calculate the bounds of paths, text, images, and SVG data from the server to the JavaScript side using JsInterop calls. When processing large data sets (greater than 32KB for a single incoming hub message) in a single JS call, connection disconnect issues can occur. To address this, we have introduced the [EnableChunkMessage] property in the Diagram component. This property allows large data to be sent in smaller chunks, thereby preventing connection disconnection issues. Chunk messages facilitate the measurement of paths, images, text, and SVG data without exceeding the maximum size limit for a single incoming hub message (MaximumReceiveMessageSize of 32KB). By default, the [EnableChunkMessage] property is set to `false`.
+In the Blazor Diagram component, it is essential to calculate the bounds of paths, text, images, and SVG data from the server to the JavaScript side using JsInterop calls. When processing large data sets (greater than 32KB for a single incoming hub message) in a single JS call, connection disconnect issues can occur. To address this, we have introduced the [EnableChunkMessages](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_EnableChunkMessages) property in the Diagram component. This property allows large data to be sent in smaller chunks, thereby preventing connection disconnection issues. Chunk messages facilitate the measurement of paths, images, text, and SVG data without exceeding the maximum size limit for a single incoming hub message (MaximumReceiveMessageSize of 32KB). By default, the [EnableChunkMessages](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_EnableChunkMessages) property is set to `false`.
 
-Here is an example demonstrating how to use the [EnableChunkMessage] property:
+Here is an example demonstrating how to use the [EnableChunkMessages](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_EnableChunkMessages) property:
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Height="600px" Nodes="@nodes" EnableChunkMessage="true"/>
+<SfDiagramComponent Height="600px" Nodes="@nodes" EnableChunkMessages="true"/>
 
 @code
 {
@@ -58,15 +58,15 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Line Routing Settings
 
-The [LineRoutingSettings] class provides customization options for line routing within a diagram. This class enables you to set various properties related to line routing, such as the routing type and obstacle padding. It supports customization of how connectors navigate around obstacles within the diagram.
+The [LineRoutingSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.LineRoutingSettings.html) class provides customization options for line routing within a diagram. This class enables you to set various properties related to line routing, such as the routing type and obstacle padding. It supports customization of how connectors navigate around obstacles within the diagram.
 
 ### Routing Type
 
-Determines the routing strategy used for connectors in the diagram. It can be set to either [Classic] for faster routing or [Advanced] for more accurate routing with better obstacle avoidance.
+Determines the routing strategy used for connectors in the diagram. It can be set to either [Classic](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.RoutingTypes.html#Syncfusion_Blazor_Diagram_RoutingTypes_Classic) for faster routing or [Advanced](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.RoutingTypes.html#Syncfusion_Blazor_Diagram_RoutingTypes_Advanced) for more accurate routing with better obstacle avoidance.
 
 #### Classic Routing
 
-The [Classic] routing algorithm adds additional segments based on the position and dimensions of the obstacles in the path. This routing method prioritizes reducing the impact of obstacles over minimizing the geometry length and the number of bends. Use Classic routing when it's crucial to navigate around obstacles efficiently, even if it means having a longer path or more bends.
+The [Classic](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.RoutingTypes.html#Syncfusion_Blazor_Diagram_RoutingTypes_Classic) routing algorithm adds additional segments based on the position and dimensions of the obstacles in the path. This routing method prioritizes reducing the impact of obstacles over minimizing the geometry length and the number of bends. Use Classic routing when it's crucial to navigate around obstacles efficiently, even if it means having a longer path or more bends.
 
 
 ```cshtml
@@ -109,7 +109,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 #### Advanced Routing
 
-The [Advanced] routing algorithm evaluates all possible geometrical paths for a connector, aiming to find the one with the minimal bends and the shortest length. Use Advanced routing when you need a more optimized path with the fewest bends and the shortest possible length, even if it means the path might get closer to obstacles.
+The [Advanced](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.RoutingTypes.html#Syncfusion_Blazor_Diagram_RoutingTypes_Advanced) routing algorithm evaluates all possible geometrical paths for a connector, aiming to find the one with the minimal bends and the shortest length. Use Advanced routing when you need a more optimized path with the fewest bends and the shortest possible length, even if it means the path might get closer to obstacles.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -152,11 +152,11 @@ The [Advanced] routing algorithm evaluates all possible geometrical paths for a 
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/)
 
-**Note:** Default value of [RoutingType] is Classic.
+**Note:** Default value of [RoutingType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.LineRoutingSettings.html#Syncfusion_Blazor_Diagram_LineRoutingSettings_RoutingType) is Classic.
 
 ### ObstaclePadding
 
-The [ObstaclePadding] defines the minimum distance between the connectors and obstacles when the advanced routing is enabled. This ensures connectors are routed with clear spacing around obstacles, improving diagram readability.
+The [ObstaclePadding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.LineRoutingSettings.html#Syncfusion_Blazor_Diagram_LineRoutingSettings_ObstaclePadding) defines the minimum distance between the connectors and obstacles when the advanced routing is enabled. This ensures connectors are routed with clear spacing around obstacles, improving diagram readability.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -206,6 +206,6 @@ The following table shows the various obstacle padding.
 | 12 | ![Blazor Diagram ObstaclePadding12 ](./images/blazor-diagram-obstacle-padding12.png) |
 | 20 | ![Blazor Diagram ObstaclePadding20 ](./images/blazor-diagram-obstacle-padding20.png) |
 
-**Note:** ObstaclePadding property is only applicable when the [RoutingType] property is set to [RoutingTypes.Advanced]. Default value of [ObstaclePadding] is 12.
+**Note:** [ObstaclePadding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.LineRoutingSettings.html#Syncfusion_Blazor_Diagram_LineRoutingSettings_ObstaclePadding) property is only applicable when the [RoutingType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.LineRoutingSettings.html#Syncfusion_Blazor_Diagram_LineRoutingSettings_RoutingType) property is set to [RoutingTypes.Advanced]. Default value of [ObstaclePadding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.LineRoutingSettings.html#Syncfusion_Blazor_Diagram_LineRoutingSettings_ObstaclePadding) is 12.
 
 For more information about the enable and disable the routing for the connectors and nodes, refer to [Connector routing](./connectors/interactions/#how-to-route-the-connectors).
