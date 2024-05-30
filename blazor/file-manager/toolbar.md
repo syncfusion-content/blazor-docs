@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Data Binding in Blazor FileManager Component | Syncfusion
-description: Checkout and learn here all about Data Binding in Syncfusion Blazor FileManager component and much more.
+title: Toolbar in Blazor FileManager Component | Syncfusion
+description: Checkout and learn here all about Toolbar in Syncfusion Blazor FileManager component and much more.
 platform: Blazor
 control: File Manager
 documentation: ug
