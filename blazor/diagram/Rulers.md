@@ -42,7 +42,6 @@ The following code demonstrates how to add a ruler to the diagram.
 * Ruler `Interval` - The interval property allows you to define the interval between both horizontal and vertical ruler segments.
 * Ruler `IsVisible` - It is used to define whether the horizontal and vertical rulers are visible in the diagram.
 * `TickAlignment` - It controls the positioning of the ticks/hash marks in the ruler.
-* `EnableDynamicGrid` - Indicates whether gridlines are synchronized with the hash marks on the ruler.
 * `MarkerColor` - Determines the color of the marker line/guide line for the ruler, the one which represents current position of cursor in diagram.
 
 The code below demonstrates how the diagram ruler can be customized.
@@ -51,7 +50,7 @@ The code below demonstrates how the diagram ruler can be customized.
 @using Syncfusion.Blazor.Diagram
 
 <SfDiagramComponent @ref="@diagram" Height="600px" >
-	<RulerSettings EnableDynamicGrid="@enableDynamicGrid">
+	<RulerSettings>
         <HorizontalRuler  IsVisible="true" Interval="@RulerInterval" 
                             TickAlignment="@RulerTickAlignment" MarkerColor="@RulerMarkerColor">
      </HorizontalRuler>
@@ -65,7 +64,6 @@ The code below demonstrates how the diagram ruler can be customized.
 {
     //Reference to diagram.
     SfDiagramComponent diagram;
-    public bool enableDynamicGrid = true;
     //Defining Ruler Interval of Rulers
     public int RulerInterval = 20;
     //Defining Tick Alignment of Rulers
