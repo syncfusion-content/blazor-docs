@@ -11,7 +11,7 @@ documentation: ug
 
 ## Chunk Message
 
-In the Blazor Diagram component, there is a need to calculate the bounds of paths, text, images, and SVG data from the server to the JavaScript side using JsInterop calls. When large data (greater than 32KB in size for a single incoming hub message) is sent and processed in a single JS call, connection disconnect issues can occur. To address this, we have introduced the EnableChunkMessage property in the Diagram component. This property helps to send large data in smaller chunks to the server, thus preventing connection disconnection issues. Chunk messages enable the measurement of paths, images, text, and SVG data without exceeding the maximum size of a single incoming hub message (MaximumReceiveMessageSize of 32KB) at the sample level. By default, the [EnableChunkMessage] property is set to false.
+In the Blazor Diagram component, it is essential to calculate the bounds of paths, text, images, and SVG data from the server to the JavaScript side using JsInterop calls. When processing large data sets (greater than 32KB for a single incoming hub message) in a single JS call, connection disconnect issues can occur. To address this, we have introduced the [EnableChunkMessage] property in the Diagram component. This property allows large data to be sent in smaller chunks, thereby preventing connection disconnection issues. Chunk messages facilitate the measurement of paths, images, text, and SVG data without exceeding the maximum size limit for a single incoming hub message (MaximumReceiveMessageSize of 32KB). By default, the [EnableChunkMessage] property is set to `false`.
 
 Here is an example demonstrating how to use the [EnableChunkMessage] property:
 
