@@ -736,7 +736,7 @@ The following code example illustrates how to set the connection padding value f
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Customization/ConnectionPadding)
 
 
-## How to enable connector split
+## How to enable Connector Split
 
 The connectors are used to create a link between two points, ports, or nodes to represent the relationship between them. We can split the connector between two nodes when dropping a new node onto the existing connector and create a connection between the new node and existing nodes by setting the EnableConnectorSplitting as true. The default value of the EnableConnectorSplitting is false.
 
@@ -818,6 +818,7 @@ The following code illustrates how to split the connector and create a connectio
 Similarly, when dropping a node onto the target connector, the node connection differs based on the state of the connection and we can create a new connection by dropping on the connector 
 
 ### Create connection using Connector splitting
+
 When a node is dropped on a point-to-point connection, the node gets connected as the source for the target connector.
 
 When we drop another node on the target connector with only a source connection, the dropped node will be connected as its target now we have a complete connection
