@@ -815,22 +815,16 @@ The following code illustrates how to split the connector and create a connectio
 
 >**Note:** The 'AllowDrop' constraints must be enabled for the connector to allow dropping a node.
 
-Similarly, when dropping a node onto the target connector, the node connection differs based on the state of the connection in the target connector as described below.
+Similarly, when dropping a node onto the target connector, the node connection differs based on the state of the connection and we can create a new connection by dropping on the connector 
 
-# Node to Node connection
-When a node drops on a node-to-node connection, the connector between the two nodes splits and creates a connection between the new node and the existing nodes.
-
-![ConnectorSplitting](../images/ConnectorSplitting.gif)
-
-# Node to point connection
-When the target connector has either a source or target connection only, the dropped node will get connected as the counterpart. For example, for a connector with only a source connection, the dropped node will be connected as its target, and vice versa.
-
-![ConnectorSplitting](../images/NodeToPointSplit.gif)
-
-# Point to Point connection
+### Create connection using Connector splitting
 When a node is dropped on a point-to-point connection, the node gets connected as the source for the target connector.
 
-![ConnectorSplitting](../images/PointToPointSplit.gif)
+When we drop another node on the target connector with only a source connection, the dropped node will be connected as its target now we have a complete connection
+
+When a node drops on this node-to-node connection, the connector between the two nodes splits and creates a connection between the new node and the existing nodes.
+
+![ConnectorSplitting](../images/ConnectorSplitDemo.gif)
 
 
 ## See also
