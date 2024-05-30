@@ -7,7 +7,7 @@ control: Scheduler
 documentation: ug
 ---
 
-# Recurring events
+# Recurring events in Blazor Scheduler Component
 
 It represents an appointment that is created for a certain time interval and occurring repeatedly on a daily, weekly, monthly or yearly basis at the same time interval based on the provided recurrence rule. Usually, the recurring events are indicated by a repeat marker added at the bottom-right position.
 
