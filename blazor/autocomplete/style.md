@@ -71,9 +71,6 @@ You can customize the dropdown icon for the particular component using the [CssC
 
 ![Blazor AutoComplete with dropdown icon using CssClass](./images/style/blazor_autocomplete_dropdown-icon.png)
 
-## Adding icon in popup items
-
-
 ## Customizing the appearance of container element
 
 You can customize the appearance of the container element within the autocomplete component by targeting its CSS class `.e-input`, which indicates the parent element of the input, and allows you to apply any desired styles to the component.
