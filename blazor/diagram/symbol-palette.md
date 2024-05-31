@@ -1449,10 +1449,10 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ![Style of the Symbol Description in Blazor Diagram](images/blazor-diagram-symbol-description-style.png)
 
-## How to add symbol search option in symbol palette
+## How to enable symbol search option in symbol palette
 
-The diagram provides support to add search option in palette.  The ShowSearchTextBox property of the palette is used to show or hide the search textbox in a palette.
-You can search for symbols in the palette by entering the symbol ID (e.g: “rectangle”) into the search text box and clicking the search box. The symbols are resulted by matching the value of the ID property with the string entered in the search textbox.
+The diagram provides support for enabling the search option in the palette. The ShowSearchTextBox property of the palette is used to show or hide the search textbox in the palette.
+You can search for symbols in the palette by entering the symbol ID (e.g., "rectangle") and search keywords into the search text box and clicking the search button. The symbols are retrieved by matching the value of the ID property with the string entered in the search textbox.
 
 ```csharp
 @using Syncfusion.Blazor.Diagram
@@ -1461,7 +1461,7 @@ You can search for symbols in the palette by entering the symbol ID (e.g: “rec
 <div class="control-section">   
     <div style="width: 100%">  
         <div id="palette-space" class="sb-mobile-palette" style="border: 2px solid #b200ff">
-            <SfSymbolPaletteComponent @ref="@SymbolPalette" ShowSearchTextBox="true" Height="300px" Width="200px" 
+            <SfSymbolPaletteComponent @ref="@SymbolPalette" ShowSearchTextBox="true" Height="700px" Width="100%" 
                                       Palettes="@Palettes" SymbolHeight="60" SymbolWidth="120" SymbolMargin="@SymbolMargin">
             </SfSymbolPaletteComponent>
         </div>
@@ -1481,33 +1481,86 @@ You can search for symbols in the palette by entering the symbol ID (e.g: “rec
     //Define palettes collection.
     DiagramObjectCollection<Palette> Palettes = new DiagramObjectCollection<Palette>();
     // Defines palette's flow-shape collection.
+    DiagramObjectCollection<NodeBase> FlowShapes = new DiagramObjectCollection<NodeBase>();
+    // Defines palette's basic-shape collection.
     DiagramObjectCollection<NodeBase> PaletteNodes = new DiagramObjectCollection<NodeBase>();
+
+    // Defines palette's connector collection.
+    DiagramObjectCollection<NodeBase> Connectors = new DiagramObjectCollection<NodeBase>();
+
 
     protected override void OnInitialized()
     {
         InitPaletteModel();
     }
-        
+
     private void InitPaletteModel()
     {
         CreatePaletteNode(NodeBasicShapes.Rectangle, "Rectangle");
         CreatePaletteNode(NodeBasicShapes.Ellipse, "Ellipse");
         CreatePaletteNode(NodeBasicShapes.Star, "Star");
+        CreatePaletteNode(NodeBasicShapes.Hexagon, "Hexagon");
+        CreatePaletteNode(NodeBasicShapes.Plus, "Plus");
+        CreatePaletteNode(NodeBasicShapes.Diamond, "Diamond");
+
+        CreateFlowShape(NodeFlowShapes.Terminator, "Terminator");
+        CreateFlowShape(NodeFlowShapes.Process, "Process");
+        CreateFlowShape(NodeFlowShapes.PreDefinedProcess, "PreDefinedProcess");
+        CreateFlowShape(NodeFlowShapes.Annotation, "Annotation");
+        CreateFlowShape(NodeFlowShapes.Card, "Card");
+
+        CreateConnector("ortho", ConnectorSegmentType.Orthogonal, DecoratorShape.Arrow);
+        CreateConnector("link2", ConnectorSegmentType.Orthogonal, DecoratorShape.None);
+        CreateConnector("link3", ConnectorSegmentType.Straight, DecoratorShape.Arrow);
+        CreateConnector("straight", ConnectorSegmentType.Straight, DecoratorShape.None);
+        CreateConnector("link5", ConnectorSegmentType.Bezier, DecoratorShape.None);
+        CreateConnector("link6", ConnectorSegmentType.Bezier, DecoratorShape.Arrow);
         Palettes = new DiagramObjectCollection<Palette>()
         {
            new Palette(){Symbols = PaletteNodes,Title = "Basic Shapes", ID = "Basic Shapes" },
+           new Palette(){Symbols = FlowShapes,Title = "Flow Shapes", ID = "Flow Shapes" },
+            new Palette(){Symbols = Connectors,Title = "Connector", ID = "Connector" },
         };
     }
-        
+    private void CreateConnector(string id, ConnectorSegmentType type, DecoratorShape shape)
+    {
+        Connector connector = new Connector()
+            {
+                ID = id,
+                Type = type,
+                SearchTags = new List<string>() { "connector" },
+                SourcePoint = new DiagramPoint() { X = 0, Y = 0 },
+                TargetPoint = new DiagramPoint() { X = 40, Y = 40 },
+                TargetDecorator = new DecoratorSettings()
+                {
+                    Shape = shape,
+                    Style = new ShapeStyle() { StrokeColor = "#757575", Fill = "#757575" }
+                },
+                Style = new ShapeStyle() { StrokeWidth = 2, StrokeColor = "#757575" }
+            };
+        Connectors.Add(connector);
+    }
     private void CreatePaletteNode(NodeBasicShapes basicShape, string id)
     {
         Node node = new Node()
         {
             ID = id,
+                SearchTags = new List<string>() { "Basic" },
             Shape = new BasicShape() { Type = NodeShapes.Basic, Shape = basicShape },
             Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "#6495ED" },
         };
         PaletteNodes.Add(node);
+    }
+    private void CreateFlowShape(NodeFlowShapes flowShape, string id)
+    {
+        Node node = new Node()
+            {
+                ID = id,
+                SearchTags = new List<string>() { "Flow" },
+                Shape = new FlowShape() { Type = NodeShapes.Flow, Shape = flowShape },
+                Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "#6495ED" },
+            };
+        FlowShapes.Add(node);
     }
 }
 ```
@@ -1581,7 +1634,15 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ### How to Enable/Disable animation in symbol palette
 
-The diagram provides support to enable or disable Animation support when expanding and collapsing the panel in the symbol palette. The EnableAnimation property is used to enable or disable the animation in the symbol palette. the default value is true. The default animation is set as SlideDown for expanding the panel and SlideUp for collapsing the panel in the symbol palette. The time duration for transforming content on collapse action is set to 400 milliseconds by default.
+The symbol palette provides support for enabling or disabling animation when expanding and collapsing panels. This functionality is controlled through the EnableAnimation property.
+
+* EnableAnimation Property: This property is used to enable or disable animation within the symbol palette. By default, the EnableAnimation property is set to true.
+
+#### Default Animation Types:
+
+* Expand Animation: The default animation for expanding a panel is set to SlideDown.
+* Collapse Animation: The default animation for collapsing a panel is set to SlideUp.
+* Animation Duration: The duration for the collapse action animation is set to 400 milliseconds by default. This duration dictates how long the transformation takes when a panel collapses.
 
 ```csharp
 @using Syncfusion.Blazor.Diagram
