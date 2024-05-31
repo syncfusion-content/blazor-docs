@@ -100,7 +100,7 @@ If you are using Syncfusion.Blazor.Diagram && Syncfusion.Blazor.Themes NuGet pac
 
 ## Add Diagram component
 
-Add the Syncfusion PDF Viewer (Next Gen) component in the **~/Pages/Index.razor** file.
+Add the Syncfusion Diagram component in the **~/Pages/Index.razor** file.
 
 {% tabs %}
 {% highlight razor %}
