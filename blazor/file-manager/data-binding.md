@@ -585,5 +585,3 @@ To load image in FileManager component with injected service, utilize the [Befor
 {% endtabs %}
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/blazor-filemanager-with-flat-data).
-
-
