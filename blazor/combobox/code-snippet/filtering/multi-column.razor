@@ -1,0 +1,52 @@
+@using Syncfusion.Blazor.DropDowns
+
+<SfComboBox TValue="string" Width="300px" TItem="Countries" Placeholder="e.g. Australia" PopupHeight="200px" CssClass="e-multi-column" DataSource="@Country" AllowFiltering="true">
+    <ComboBoxFieldSettings Value="Code" Text="Name"></ComboBoxFieldSettings>
+    <ComboBoxTemplates TItem="Countries">
+        <HeaderTemplate>
+            <table><tr><th>Name</th><th>Position</th></tr></table>
+        </HeaderTemplate>
+        <ItemTemplate>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>@((context as Countries).Name)</td>
+                        <td>@((context as Countries).Job)</td>
+                    </tr>
+                </tbody>
+            </table>
+        </ItemTemplate>
+    </ComboBoxTemplates>
+</SfComboBox>
+@code {
+    public class Countries
+    {
+        public string Name { get; set; }
+        public string Code { get; set; }
+        public string Job { get; set; }
+
+    }
+    List<Countries> Country = new List<Countries>
+{
+       new Countries() { Name = "Australia", Code = "AU",Job= "Team Lead" },
+        new Countries() { Name = "Bermuda", Code = "BM",Job="Developer"  },
+        new Countries() { Name = "Canada", Code = "CA",Job="CEO"  },
+        new Countries() { Name = "Cameroon", Code = "CM" ,Job="HR" },
+        new Countries() { Name = "Denmark", Code = "DK",Job="Product Manager"  },
+        new Countries() { Name = "France", Code = "FR",Job="Developer"  },
+        new Countries() { Name = "Finland", Code = "FI",Job="Team Lead"  },
+        new Countries() { Name = "Germany", Code = "DE",Job="Product Manager"  },
+        new Countries() { Name = "Greenland", Code = "GL",Job="Developer"  },
+        new Countries() { Name = "Hong Kong", Code = "HK",Job="CEO"  },
+        new Countries() { Name = "India", Code = "IN",Job="HR"  },
+        new Countries() { Name = "Italy", Code = "IT",Job="Team Lead"  },
+        new Countries() { Name = "Japan", Code = "JP",Job="Developer"  },
+        new Countries() { Name = "Mexico", Code = "MX",Job="Product Manager"  },
+        new Countries() { Name = "Norway", Code = "NO",Job="HR"  },
+        new Countries() { Name = "Poland", Code = "PL",Job="Team Lead"  },
+        new Countries() { Name = "Switzerland", Code = "CH",Job="Product Manager"  },
+        new Countries() { Name = "United Kingdom", Code = "GB",Job="CEO"  },
+        new Countries() { Name = "United States", Code = "US",Job="Developer"  },
+        };
+
+}

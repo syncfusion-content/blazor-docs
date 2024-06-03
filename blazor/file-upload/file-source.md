@@ -1,7 +1,7 @@
 ---
 layout: post
 title: File Source in Blazor File Upload Component | Syncfusion
-description: Checkout and learn here all about File Source in Syncfusion Blazor File Upload component and much more.
+description: Checkout and learn here all about file source in Syncfusion Blazor File Upload component, its elements and more.
 platform: Blazor
 control: File Upload
 documentation: ug

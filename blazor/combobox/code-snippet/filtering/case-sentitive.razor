@@ -1,0 +1,38 @@
+@using Syncfusion.Blazor.Data
+@using Syncfusion.Blazor.DropDowns
+
+<SfComboBox TValue="string" @ref="comboObj" TItem="Country" Placeholder="e.g. Australia" DataSource="country" AllowFiltering="true">
+    <ComboBoxFieldSettings Text="Name" Value="Code"></ComboBoxFieldSettings>
+    <ComboBoxEvents TValue="string" TItem="Country" Filtering="OnFilter"></ComboBoxEvents>
+</SfComboBox>
+
+@code {
+
+    SfComboBox<string, Country> comboObj { get; set; }
+
+    public class Country
+    {
+        public string Name { get; set; }
+
+        public string Code { get; set; }
+    }
+
+    List<Country> country = new List<Country>
+    {
+        new Country() { Name = "Australia", Code = "AU" },
+        new Country() { Name = "Bermuda", Code = "BM" },
+        new Country() { Name = "Canada", Code = "CA" },
+        new Country() { Name = "Cameroon", Code = "CM" },
+        new Country() { Name = "Denmark", Code = "DK" }
+    };
+
+    private async Task OnFilter(FilteringEventArgs args)
+    {
+        args.PreventDefaultAction = true;
+        var query = new Query().Where(new WhereFilter() { Field = "Name", Operator = "contains", value = args.Text, IgnoreCase = true });
+
+        query = !string.IsNullOrEmpty(args.Text) ? query : new Query();
+
+        await comboObj.FilterAsync(country, query);
+    }
+}

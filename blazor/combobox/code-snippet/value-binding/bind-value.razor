@@ -1,0 +1,26 @@
+
+@using Syncfusion.Blazor.DropDowns
+
+<SfComboBox TValue="string" Placeholder="e.g. Australia" TItem="Countries" @bind-Value="@DropVal" DataSource="@Country" Width="300px">
+    <ComboBoxFieldSettings Value="Code" Text="Name"></ComboBoxFieldSettings>
+</SfComboBox>
+
+@code {
+
+    public string DropVal = "Canada";
+
+    public class Countries
+    {
+        public string Name { get; set; }
+
+        public string Code { get; set; }
+    }
+
+    List<Countries> Country = new List<Countries>
+    {
+        new Countries() { Name = "Australia", Code = "AU" },
+        new Countries() { Name = "Bermuda", Code = "BM" },
+        new Countries() { Name = "Canada", Code = "CA" },
+        new Countries() { Name = "Cameroon", Code = "CM" },
+    };
+}

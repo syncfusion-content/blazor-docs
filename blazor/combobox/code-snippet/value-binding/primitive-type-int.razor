@@ -1,0 +1,9 @@
+@using Syncfusion.Blazor.DropDowns
+
+
+<SfComboBox TValue=int? TItem=int? Placeholder="Select a game" DataSource="@data" Width="300px" @bind-Value="@ComboBoxValue"></SfComboBox>
+
+@code {
+    public int? ComboBoxValue { get; set; } = 1022;
+    public int?[] data = { 1011, 1022, 1044, 1066 };
+}

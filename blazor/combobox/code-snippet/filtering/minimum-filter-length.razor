@@ -1,0 +1,43 @@
+@using Syncfusion.Blazor.Data
+@using Syncfusion.Blazor.DropDowns
+
+<SfComboBox TValue="string" @ref="comboObj" TItem="Country" Placeholder="e.g. Australia" DataSource="country" AllowFiltering="true">
+    <ComboBoxFieldSettings Text="Name" Value="Code"></ComboBoxFieldSettings>
+    <ComboBoxEvents TValue="string" TItem="Country" Filtering="OnFilter"></ComboBoxEvents>
+</SfComboBox>
+
+@code {
+
+    SfComboBox<string, Country> comboObj { get; set; }
+
+    public class Country
+    {
+        public string Name { get; set; }
+
+        public string Code { get; set; }
+    }
+
+    List<Country> country = new List<Country>
+    {
+        new Country() { Name = "Australia", Code = "AU" },
+        new Country() { Name = "Bermuda", Code = "BM" },
+        new Country() { Name = "Canada", Code = "CA" },
+        new Country() { Name = "Cameroon", Code = "CM" },
+        new Country() { Name = "Denmark", Code = "DK" }
+    };
+
+    private async Task OnFilter(FilteringEventArgs args)
+    {
+        args.PreventDefaultAction = true;
+        // load overall data when search key empty.
+        if (args.Text == "") await comboObj.FilterAsync(comboObj.DataSource);
+        // restrict the remote request until search key contains 3 characters.
+        else if (args.Text.Length < 3) { return; }
+        else
+        {
+            var query = new Query().Where(new WhereFilter() { Field = "Name", value = args.Text, Operator = "contains", IgnoreAccent = true, IgnoreCase = true });
+            query = !string.IsNullOrEmpty(args.Text) ? query : new Query();
+            await comboObj.FilterAsync(comboObj.DataSource, query);
+        }
+    }
+}

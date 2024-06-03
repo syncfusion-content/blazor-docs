@@ -162,6 +162,8 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 Linear arrangement  is used to arrange the child nodes in linear manner in the layout, that is the parent node is placed in the center, corresponding to its children. When line distribution is enabled, the linear arrangement is also activated by default. The [LinearArrangement](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_LinearArrangement) property of layout is used to enable or disable the linear arrangement in the layout. By default, the value is false.
 The following code illustrates how to arrange the nodes in non linear manner.
 ```csharp
+@using Syncfusion.Blazor.Diagram
+
  <SfDiagramComponent Height="600px" NodeCreating="@OnNodeCreating" ConnectorCreating="@OnConnectorCreating">
     <DataSourceSettings ID="Id" ParentID="ReportingPerson" DataSource="@DataSource"></DataSourceSettings>
     <Layout Type="LayoutType.ComplexHierarchicalTree" LinearArrangement="false" @bind-HorizontalSpacing="@HorizontalSpacing" @bind-VerticalSpacing="@VerticalSpacing">

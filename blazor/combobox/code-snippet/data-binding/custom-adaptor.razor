@@ -1,0 +1,54 @@
+@using Syncfusion.Blazor
+@using Syncfusion.Blazor.Data
+@using Syncfusion.Blazor.DropDowns
+
+<SfComboBox TValue="string" TItem="Orders">
+    <SfDataManager AdaptorInstance="@typeof(CustomAdaptor)" Adaptor="Adaptors.CustomAdaptor"></SfDataManager>
+    <ComboBoxFieldSettings Value="CustomerID"></ComboBoxFieldSettings>
+</SfComboBox>
+
+@code {
+
+    public class Orders
+    {
+        public Orders() { }
+        public Orders(int OrderID, string CustomerID)
+        {
+            this.OrderID = OrderID;
+            this.CustomerID = CustomerID;
+        }
+        public int OrderID { get; set; }
+        public string CustomerID { get; set; }
+    }
+    public class CustomAdaptor : DataAdaptor
+    {
+        static readonly HttpClient client = new HttpClient();
+        public static List<OrdersDetails> order = OrdersDetails.GetAllRecords();
+        public override object Read(DataManagerRequest dm, string key = null)
+        {
+            IEnumerable<OrdersDetails> DataSource = order;
+            if (dm.Search != null && dm.Search.Count > 0)
+            {
+                DataSource = DataOperations.PerformSearching(DataSource, dm.Search);  //Search
+            }
+            if (dm.Sorted != null && dm.Sorted.Count > 0) //Sorting
+            {
+                DataSource = DataOperations.PerformSorting(DataSource, dm.Sorted);
+            }
+            if (dm.Where != null && dm.Where.Count > 0) //Filtering
+            {
+                DataSource = DataOperations.PerformFiltering(DataSource, dm.Where, dm.Where[0].Operator);
+            }
+            int count = DataSource.Cast<OrdersDetails>().Count();
+            if (dm.Skip != 0)
+            {
+                DataSource = DataOperations.PerformSkip(DataSource, dm.Skip);         //Paging
+            }
+            if (dm.Take != 0)
+            {
+                DataSource = DataOperations.PerformTake(DataSource, dm.Take);
+            }
+            return dm.RequiresCounts ? new DataResult() { Result = DataSource, Count = count } : (object)DataSource;
+        }
+    }
+}

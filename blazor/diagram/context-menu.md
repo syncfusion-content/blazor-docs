@@ -19,8 +19,9 @@ Diagram provides some in-built context menu items and allows you to define custo
 The [Show](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ContextMenuSettings.html#Syncfusion_Blazor_Diagram_ContextMenuSettings_Show) property helps you to enable or disable the context menu. Diagram provides default context menu items such as copy, cut, paste, select all, undo, redo and group options. The following code shows how to enable the default context menu items.
 
 ```cshtml
-<SfDiagramComponent @ref="diagram" Height="600px">
-    //Define context menu
+@using Syncfusion.Blazor.Diagram
+
+<SfDiagramComponent Height="600px">
     <ContextMenuSettings Show="true">
     </ContextMenuSettings>
 </SfDiagramComponent>
@@ -31,8 +32,9 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 The following code shows how to disable the default context menu items.
 
 ```cshtml
-<SfDiagramComponent @ref="diagram" Height="600px">
-    //Define context menu
+@using Syncfusion.Blazor.Diagram
+
+<SfDiagramComponent Height="600px">
     <ContextMenuSettings Show="false">
     </ContextMenuSettings>
 </SfDiagramComponent>
@@ -158,7 +160,6 @@ The following code example shows how to show custom context menu items alone.
 @using Syncfusion.Blazor.Diagram
 
 <SfDiagramComponent Height="600px">
-    // Defines context menu and set the ShowCustomMenuOnly to true to render the custom context menu alone
     <ContextMenuSettings Show="true" ShowCustomMenuOnly="true">
     </ContextMenuSettings>
 </SfDiagramComponent>
@@ -174,47 +175,100 @@ Diagram provides template support for context menu. The context menu items can b
 @using Syncfusion.Blazor.Diagram
 @using System.Collections.ObjectModel
 
-<SfDiagramComponent @ref="diagram" Height="600px">
-    <ContextMenuSettings Show="true" Items="@Items">
 
-        <ContextMenuTemplate>
-            @context.Text
-            <span class="shortcut">@((@context.Text == "Save As...") ? "Ctrl + S" : "")</span>
-        </ContextMenuTemplate>
-
+<SfDiagramComponent @ref="diagram" Height="600px" Width="90%" @bind-Nodes="nodes"
+                    @bind-Connectors="connectors">
+    <ContextMenuSettings @bind-Show="@show"
+                        @bind-ShowCustomMenuOnly="customMenuOnly"
+                        @bind-Items="@Items">
+    <ContextMenuTemplate>
+        @context.Text
+        <span class="shortcut">@((@context.Text == "Save As...") ? "Ctrl + S" : "")</span>
+    </ContextMenuTemplate>
     </ContextMenuSettings>
 </SfDiagramComponent>
 
 @code {
+    //Reference the diagram
     SfDiagramComponent diagram;
+    //Define diagram nodes collection
+    DiagramObjectCollection<Node> nodes;
+    //Define diagram connectors collection
+    DiagramObjectCollection<Connector> connectors;
+
     List<ContextMenuItem> Items;
+    bool customMenuOnly = false;
+    bool show = true;
 
     protected override void OnInitialized()
     {
-        Items = new List<ContextMenuItem>()
+    //Initialize diagram nodes collection
+    nodes = new DiagramObjectCollection<Node>();
+    //Initialize diagram connectors collection
+    connectors = new DiagramObjectCollection<Connector>();
+
+    Items = new List<ContextMenuItem>()
+    {
+            new ContextMenuItem()
+            {
+                Text = "Save As...",
+                ID = "save",
+                IconCss = "e-save",
+            },
+            new ContextMenuItem()
+            {
+                Text = "Delete",
+                ID = "delete",
+                IconCss = "e-delete"
+            }
+    };
+
+    Node node1 = new Node()
         {
-                new ContextMenuItem()
-                {
-                    Text = "Save As...",
-                    ID = "save",
-                    IconCss = "e-save",
-                },
-                new ContextMenuItem()
-                {
-                    Text = "Delete",
-                    ID = "delete",
-                    IconCss = "e-delete"
-                }
+            ID = "node1",
+            Height = 100,
+            Width = 100,
+            OffsetX = 100,
+            OffsetY = 100,
+            Style = new ShapeStyle()
+            {
+                Fill = "#6BA5D7",
+                StrokeColor = "white",
+                StrokeWidth = 1
+            }
         };
+    Node node2 = new Node()
+        {
+            ID = "node2",
+            Height = 100,
+            Width = 100,
+            OffsetX = 300,
+            OffsetY = 100,
+            Style = new ShapeStyle()
+            {
+                Fill = "#6BA5D7",
+                StrokeColor = "white",
+                StrokeWidth = 1
+            }
+        };
+    nodes.Add(node1);
+    nodes.Add(node2);
+
+    Connector connector1 = new Connector()
+        {
+            ID = "connector1",
+            SourceID = "node1",
+            TargetID = "node2",
+            Type = ConnectorSegmentType.Straight,
+            Style = new ShapeStyle()
+            {
+                Fill = "#6BA5D7",
+                StrokeWidth = 2
+            }
+        };
+    connectors.Add(connector1);
     }
 }
-<style>
-    .shortcut {
-        float: right;
-        font-size: 10px;
-        opacity: 0.5;
-    }
-</style>
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/ContextMenu/ContextMenuTemplate)
 ![Context Menu Template](images/ContextMenuTemplate.gif)
@@ -231,7 +285,6 @@ The Diagram control triggers the event [ContextMenuOpening](https://help.syncfus
 @using Syncfusion.Blazor.Diagram
 
 <SfDiagramComponent Height="600px">
-    // Defines context menu and ContextMenuOpening event
     <ContextMenuSettings Show="true" ShowCustomMenuOnly="false" ContextMenuOpening="@OnContextMenuOpen">
     </ContextMenuSettings>
 </SfDiagramComponent>
@@ -252,9 +305,9 @@ The Diagram control triggers the event [ContextMenuItemClicked](https://help.syn
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
+@using System.Collections.ObjectModel
 
 <SfDiagramComponent Height="600px">
-    // Defines context menu and ContextMenuItemClicked event
     <ContextMenuSettings Show="true" ShowCustomMenuOnly="false" ContextMenuItemClicked="@ContextMenuItemClickHandler">
     </ContextMenuSettings>
 </SfDiagramComponent>
@@ -268,9 +321,11 @@ The Diagram control triggers the event [ContextMenuItemClicked](https://help.syn
 }
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/ContextMenu/ContextMenuEvent/ContextMenuItemClickedEvent)
+
 The following code example shows how to add separate custom context menu items for nodes and connectors. In the following code, the node color context menu item only renders for the node and the connector color context menu item only renders for the connector.
 
 ```cshtml
+@using Syncfusion.Blazor.Diagram
 <SfDiagramComponent @ref="@diagram" Height="600px"
            Nodes="@NodeCollection"
            Connectors="@ConnectorCollection">
