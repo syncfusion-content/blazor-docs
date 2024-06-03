@@ -120,4 +120,4 @@ The Scheduler layout and its behavior can be changed as per the common RTL (Righ
 
 ## See also
 
-* [How to change first day of the week in the Scheduler](./working-hours/#setting-start-day-of-the-week)
+* [How to change first day of the week in the Scheduler](./working-hours#setting-start-day-of-the-week)

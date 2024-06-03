@@ -202,4 +202,4 @@ Specific panes can be rendered with collapsed state on page load. Specify a Bool
 
 ## See Also
 
-* [Resizable split panes](./resizing/)
+* [Resizable split panes](./resizing)

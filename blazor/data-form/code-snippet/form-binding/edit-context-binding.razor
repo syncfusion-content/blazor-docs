@@ -1,0 +1,47 @@
+@using Syncfusion.Blazor.DataForm
+@using Syncfusion.Blazor.Buttons
+@using System.ComponentModel.DataAnnotations
+
+<SfDataForm ID="MyForm" Width="50%"
+            EditContext="@RegistrationEditContext">
+    <FormValidator>
+        <DataAnnotationsValidator></DataAnnotationsValidator>
+    </FormValidator>
+    <FormItems>
+        <FormAutoGenerateItems></FormAutoGenerateItems>
+    </FormItems>
+    <FormButtons>
+        <SfButton typeof="submit">Register</SfButton>
+    </FormButtons>
+</SfDataForm>
+
+@code {
+    EditContext RegistrationEditContext { get; set; }
+
+    protected override void OnInitialized()
+    {
+        RegistrationEditContext = new EditContext(EventRegistrationModel);
+        base.OnInitialized();
+    }
+
+    private EventRegistration EventRegistrationModel = new EventRegistration()
+    {
+        FirstName = "Andrew",
+        LastName = "Jack"
+    };
+
+    public class EventRegistration
+    {
+        [Required(ErrorMessage = "Please enter your name.")]
+        [Display(Name = "First Name")]
+        public string FirstName { get; set; }
+
+        [Required(ErrorMessage = "Please enter your last name.")]
+        [Display(Name = "Last Name")]
+        public string LastName { get; set; }
+
+        [Required(ErrorMessage = "Please enter your email-ID.")]
+        [Display(Name = "Email ID")]
+        public string Email { get; set; }
+    }
+}

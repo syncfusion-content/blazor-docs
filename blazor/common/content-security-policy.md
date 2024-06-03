@@ -22,54 +22,15 @@ To use Syncfusion blazor components with strict CSP mode, the following directiv
 
 These directives should be included in the `<head>` tag of the application's webpage, typically
 
-* For **Blazor Server application**, inside the `<head>` of 
-
-    * **~/Pages/_Host.cshtml** file for .NET Core 3.X, .NET 5 and .NET 7.
+* For **Blazor Web App**, inside the `<head>` of **~/Components/App.razor** file.
+* For **Blazor Server application**, inside the `<head>` of
+    * **~/Pages/_Host.cshtml** file for .NET 7.
     * **~/Pages/_Layout.cshtml** for .NET 6.
-
-{% tabs %}
-{% highlight cshtml tabtitle=".NET 6 (~/_Layout.cshtml)" hl_lines="9 10" %}
-
-<head>
-    ...
-    <meta http-equiv="Content-Security-Policy"
-        content="base-uri 'self';
-        default-src 'self';
-        connect-src 'self' https: wss:;
-        img-src data: https:;
-        object-src 'none';
-        script-src 'self' 'unsafe-eval';
-        style-src 'self' 'unsafe-inline';
-        font-src 'self' data:;
-        upgrade-insecure-requests;">
-    ...
-</head>
-
-{% endhighlight %}
-{% highlight cshtml tabtitle=".NET 3.X, .NET 5 and .NET 7 (~/_Host.cshtml)" hl_lines="9 10" %}
-
-<head>
-    ...
-    <meta http-equiv="Content-Security-Policy"
-        content="base-uri 'self';
-        default-src 'self';
-        connect-src 'self' https: wss:;
-        img-src data: https:;
-        object-src 'none';
-        script-src 'self' 'unsafe-eval';
-        style-src 'self' 'unsafe-inline';
-        font-src 'self' data:;
-        upgrade-insecure-requests;">
-    ...
-</head>
-
-{% endhighlight %}
-{% endtabs %}
-
 * For **Blazor WebAssembly App**, inside the `<head>` of **wwwroot/index.html** file.
 
 {% tabs %}
-{% highlight html tabtitle="~/index.html" hl_lines="9 10" %}
+{% highlight c# hl_lines="9 10" %}
+
 <head>
     ...
     <meta http-equiv="Content-Security-Policy"
@@ -84,35 +45,14 @@ These directives should be included in the `<head>` tag of the application's web
         upgrade-insecure-requests;">
     ...
 </head>
+
 {% endhighlight %}
 {% endtabs %}
 
 if you are referencing script and style references from CDN, then add CDN domain reference in CSP meta tag.
 
-* Blazor Server App
-
 {% tabs %}
-
-{% highlight cshtml tabtitle=".NET 6 (~/_Layout.cshtml)" hl_lines="9 10" %}
-
-<head>
-    ...
-    <meta http-equiv="Content-Security-Policy"
-        content="base-uri 'self';
-        default-src 'self';
-        connect-src 'self' https: wss:;
-        img-src data: https:;
-        object-src 'none';
-        script-src 'self' 'unsafe-eval' https://cdn.syncfusion.com/blazor/;
-        style-src 'self' 'unsafe-inline' https://cdn.syncfusion.com/blazor/;
-        font-src 'self' data:;
-        upgrade-insecure-requests;">
-    ...
-</head>
-
-{% endhighlight %}
-
-{% highlight cshtml tabtitle=".NET 3.X, .NET 5 and .NET 7 (~/_Host.cshtml)" hl_lines="9 10" %}
+{% highlight c# hl_lines="9 10" %}
 
 <head>
     ...
@@ -130,32 +70,6 @@ if you are referencing script and style references from CDN, then add CDN domain
 </head>
 
 {% endhighlight %}
-
-{% endtabs %}
-
-
-* Blazor WebAssembly App
-
-{% tabs %}
-{% highlight html tabtitle="~/index.html" hl_lines="9 10" %}
-
-<head>
-    ...
-    <meta http-equiv="Content-Security-Policy"
-        content="base-uri 'self';
-        default-src 'self';
-        connect-src 'self' https: wss:;
-        img-src data: https:;
-        object-src 'none';
-        script-src 'self' 'unsafe-eval' https://cdn.syncfusion.com/blazor/;
-        style-src 'self' 'unsafe-inline' https://cdn.syncfusion.com/blazor/;
-        font-src 'self' data:;
-        upgrade-insecure-requests;">
-    ...
-</head>
-
-{% endhighlight %}
-
 {% endtabs %}
 
 ## See also

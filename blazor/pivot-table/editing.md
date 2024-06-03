@@ -37,9 +37,9 @@ The following are the supported edit types in the data grid:
 
 ## Normal
 
-In normal edit mode, when user starts editing, the state of the currently selected row alone will be completely changed to edit state. User can change the cell values and save it to the data source by clicking "Update" toolbar button. To enable the normal edit, set the [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewCellEditSettings.html#Syncfusion_Blazor_PivotView_PivotViewCellEditSettings_Mode) property in [PivotViewCellEditSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewCellEditSettings.html) class to [EditMode.Normal](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.EditMode.html).
+In normal edit mode, when user starts editing, the state of the currently selected row alone will be completely changed to edit state. User can change the cell values and save it to the data source by clicking "Update" toolbar button. To enable the normal edit, set the [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewCellEditSettings.html#Syncfusion_Blazor_PivotView_PivotViewCellEditSettings_Mode) property in [PivotViewCellEditSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewCellEditSettings.html) class to [EditMode.Normal](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.EditMode.html#Syncfusion_Blazor_PivotView_EditMode_Normal).
 
-N> The normal edit mode [EditMode.Normal](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.EditMode.html) is set as the default mode for editing.
+N> The normal edit mode [EditMode.Normal](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.EditMode.html#Syncfusion_Blazor_PivotView_EditMode_Normal) is set as the default mode for editing.
 
 ```cshtml
 @using Syncfusion.Blazor.PivotView
@@ -79,7 +79,7 @@ N> The normal edit mode [EditMode.Normal](https://help.syncfusion.com/cr/blazor/
 
 ## Dialog
 
-In dialog edit mode, when user starts editing, the currently selected row data will be shown in an exclusive dialog. User can change cell values and save it to the data source by clicking "Save" button in the dialog. To enable the dialog edit, set the [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewCellEditSettings.html#Syncfusion_Blazor_PivotView_PivotViewCellEditSettings_Mode) property in [PivotViewCellEditSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewCellEditSettings.html) class to [EditMode.Dialog](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.EditMode.html).
+In dialog edit mode, when user starts editing, the currently selected row data will be shown in an exclusive dialog. User can change cell values and save it to the data source by clicking "Save" button in the dialog. To enable the dialog edit, set the [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewCellEditSettings.html#Syncfusion_Blazor_PivotView_PivotViewCellEditSettings_Mode) property in [PivotViewCellEditSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewCellEditSettings.html) class to [EditMode.Dialog](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.EditMode.html#Syncfusion_Blazor_PivotView_EditMode_Dialog).
 
 ```cshtml
 @using Syncfusion.Blazor.PivotView
@@ -119,7 +119,7 @@ In dialog edit mode, when user starts editing, the currently selected row data w
 
 ## Batch
 
-In batch edit mode, when user double-clicks any data grid cell, the state of target cell is changed to edit state. User can perform bulk changes and finally save (added, changed, and deleted data in the single request) to the data source by clicking "Update" toolbar button. To enable the batch edit, set the [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewCellEditSettings.html#Syncfusion_Blazor_PivotView_PivotViewCellEditSettings_Mode) property in [PivotViewCellEditSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewCellEditSettings.html) class to [EditMode.Batch](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.EditMode.html).
+In batch edit mode, when user double-clicks any data grid cell, the state of target cell is changed to edit state. User can perform bulk changes and finally save (added, changed, and deleted data in the single request) to the data source by clicking "Update" toolbar button. To enable the batch edit, set the [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewCellEditSettings.html#Syncfusion_Blazor_PivotView_PivotViewCellEditSettings_Mode) property in [PivotViewCellEditSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewCellEditSettings.html) class to [EditMode.Batch](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.EditMode.html#Syncfusion_Blazor_PivotView_EditMode_Batch).
 
 ```cshtml
 @using Syncfusion.Blazor.PivotView
@@ -286,6 +286,64 @@ Users can also add, delete, or update the underlying raw items of any data point
 ![Dialog Editing in Blazor PivotChart](images/blazor-pivotchart-editing-dialog.png)
 
 ## Events
+
+### EditCompleted
+
+The event [`EditCompleted`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewEvents-1.html#Syncfusion_Blazor_PivotView_PivotViewEvents_1_EditCompleted) triggers when values cells are edited completely. The event provides edited cell(s) information along with its previous cell value. It also helps to do the CRUD operation by manually updating the database which is connected to the component. It has the following parameters.
+
+* `AddedData` - It holds the newly added raw data of the current edited cell which is used to add them in the datasource.
+
+* `ModifiedData` - It holds the modified raw data of the current edited cell as well as their current index, which is used to identify and update them in the datasource.
+
+* `RemovedData` - It holds the current edited cell's removed raw data as well as their current index, which is used to identify and remove them from the datasource.
+
+* `Cancel` - It is a boolean property and if it is set as **true**, the editing won’t be reflected in the pivot table.
+
+```cshtml
+@using Syncfusion.Blazor.PivotView
+
+<SfPivotView TValue="ProductDetails" ShowFieldList="true" ShowGroupingBar="true">
+    <PivotViewDataSourceSettings DataSource="@data">
+        <PivotViewColumns>
+            <PivotViewColumn Name="Year"></PivotViewColumn>
+            <PivotViewColumn Name="Quarter"></PivotViewColumn>
+        </PivotViewColumns>
+        <PivotViewRows>
+            <PivotViewRow Name="Country"></PivotViewRow>
+            <PivotViewRow Name="Products"></PivotViewRow>
+        </PivotViewRows>
+        <PivotViewValues>
+            <PivotViewValue Name="Sold" Caption="Unit Sold"></PivotViewValue>
+            <PivotViewValue Name="Amount" Caption="Sold Amount"></PivotViewValue>
+        </PivotViewValues>
+        <PivotViewFormatSettings>
+            <PivotViewFormatSetting Name="Amount" Format="C"></PivotViewFormatSetting>
+        </PivotViewFormatSettings>
+    </PivotViewDataSourceSettings>
+    <PivotViewCellEditSettings AllowAdding="true" AllowDeleting="true" AllowEditing="true" Mode=EditMode.Dialog></PivotViewCellEditSettings>
+    <PivotViewEvents TValue="ProductDetails" EditCompleted="EditCompleted"></PivotViewEvents>
+</SfPivotView>
+
+@code {
+    private List<ProductDetails> data { get; set; }
+    protected override void OnInitialized()
+    {
+        data = ProductDetails.GetProductData().ToList();
+        //Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
+    }
+    private void EditCompleted(EditCompletedEventArgs<PivotProductDetails> args)
+    {
+        // Here you can obtain all the newly added raw data for the current edited cell which is used to add them in the datasource.
+        List<PivotProductDetails> addedData = args.AddedData;
+
+        // Here you can obtain all the modified raw data of the current edited cell as well as their current index, which is used to identify and update them in the datasource.
+        Dictionary<int, PivotProductDetails> modifiedData = args.ModifiedData;
+
+        // Here you can obtain the current edited cell's all the removed raw data as well as their current index, which is used to identify and remove them from the datasource.
+        Dictionary<int, PivotProductDetails> removeData = args.RemovedData;
+    }
+}
+```
 
 ### OnActionBegin
 

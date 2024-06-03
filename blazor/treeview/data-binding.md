@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Data Binding in Blazor TreeView Component | Syncfusion
-description: Checkout and learn here all about Data Binding in Syncfusion Blazor TreeView component and much more.
+description: Checkout and learn here all about data binding support in Syncfusion Blazor TreeView component, it's elements and more.
 platform: Blazor
 control: TreeView
 documentation: ug
@@ -372,9 +372,9 @@ The **OrderID**, **EmployeeID**, and **ShipName** columns from orders table have
 @using Syncfusion.Blazor.Data
 <SfTreeView TValue="TreeData" >
     <TreeViewFieldsSettings TValue="TreeData" Query="@Query" Id="EmployeeID" Text="FirstName" HasChildren="EmployeeID">
-        <SfDataManager Url="http://services.odata.org/Northwind/Northwind.svc" Adaptor="@Syncfusion.Blazor.Adaptors.ODataAdaptor" CrossDomain="true"></SfDataManager>
+        <SfDataManager Url="https://services.odata.org/Northwind/Northwind.svc/" Adaptor="@Syncfusion.Blazor.Adaptors.ODataAdaptor" CrossDomain="true"></SfDataManager>
         <TreeViewFieldChild TValue="TreeData" Query="@SubQuery" Id="OrderID" Text="ShipName" ParentID="EmployeeID">
-            <SfDataManager Url="http://services.odata.org/Northwind/Northwind.svc" Adaptor="@Syncfusion.Blazor.Adaptors.ODataAdaptor" CrossDomain="true"></SfDataManager>
+            <SfDataManager Url="https://services.odata.org/Northwind/Northwind.svc/" Adaptor="@Syncfusion.Blazor.Adaptors.ODataAdaptor" CrossDomain="true"></SfDataManager>
         </TreeViewFieldChild>
     </TreeViewFieldsSettings>
 </SfTreeView>
@@ -404,9 +404,9 @@ The **OrderID**, **EmployeeID**, and **ShipName** columns from orders table have
 @using Syncfusion.Blazor.Data
 <SfTreeView TValue="TreeData">
     <TreeViewFieldsSettings TValue="TreeData" Query="@Query" Id="EmployeeID" Text="FirstName" HasChildren="EmployeeID">
-        <SfDataManager Url="http://services.odata.org/V4/Northwind/Northwind.svc" Adaptor="@Syncfusion.Blazor.Adaptors.ODataV4Adaptor" CrossDomain="true"></SfDataManager>
+        <SfDataManager Url="https://services.odata.org/V4/Northwind/Northwind.svc/" Adaptor="@Syncfusion.Blazor.Adaptors.ODataV4Adaptor" CrossDomain="true"></SfDataManager>
         <TreeViewFieldChild TValue="TreeData" Query="@SubQuery" Id="OrderID" Text="ShipName" ParentID="EmployeeID">
-            <SfDataManager Url="http://services.odata.org/V4/Northwind/Northwind.svc" Adaptor="@Syncfusion.Blazor.Adaptors.ODataV4Adaptor" CrossDomain="true"></SfDataManager>
+            <SfDataManager Url="https://services.odata.org/V4/Northwind/Northwind.svc/" Adaptor="@Syncfusion.Blazor.Adaptors.ODataV4Adaptor" CrossDomain="true"></SfDataManager>
         </TreeViewFieldChild>
     </TreeViewFieldsSettings>
 </SfTreeView>

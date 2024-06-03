@@ -243,7 +243,7 @@ In case, in order to prevent only specific popups on Scheduler, check the condit
 
 ### How to open editor window manually
 
-It is possible to open the editor window manually for a specific time or certain events by using the `OpenEditorAsync` method which allows the [TValue](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_OpenEditor__0_Syncfusion_Blazor_Schedule_CurrentAction_) or [CellClickEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_OpenEditor_Syncfusion_Blazor_Schedule_CellClickEventArgs_Syncfusion_Blazor_Schedule_CurrentAction_System_Nullable_Syncfusion_Blazor_Schedule_RepeatType__) and `CurrentAction` as parameters.
+It is possible to open the editor window manually for a specific time or certain events by using the `OpenEditorAsync` method which allows the [TValue](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_OpenEditor__0_Syncfusion_Blazor_Schedule_CurrentAction_) or [CellClickEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.CellClickEventArgs.html) and `CurrentAction` as parameters.
 
 N> [Here](https://blazor.syncfusion.com/documentation/scheduler/how-to/open-editor-window-on-single-click) is the example to open the editor window on a single click.
 
@@ -341,6 +341,137 @@ To get start quickly on customizing editor window using template, you can check 
     }
 }
 ```
+
+### How to customize header and footer using template
+
+The editor window's header and footer can be enhanced with custom designs using the `EditorHeaderTemplate` and `EditorFooterTemplate` options.
+
+In this demo, we tailor the editor's header according to the appointment's subject field using the `EditorHeaderTemplate`. Furthermore, we make use of the `EditorFooterTemplate` to handle the functionality of validating specific fields before proceeding with the save action or canceling it if validation requirements are not met.
+
+```cshtml
+@using Syncfusion.Blazor.Schedule
+@using Syncfusion.Blazor.Buttons
+<SfSchedule TValue="AppointmentData" Height="650px" @ref="scheduleObj">
+    <ScheduleEvents TValue="AppointmentData" OnPopupClose="OnPopupClose"></ScheduleEvents>
+    <ScheduleTemplates>
+        <EditorHeaderTemplate>
+            @{
+                var subject = (context as AppointmentData)?.Subject;
+            }
+            @if (string.IsNullOrEmpty(subject))
+            {
+                <div>Create New Event</div>
+            }
+            else
+            {
+                <div>@subject</div>
+            }
+        </EditorHeaderTemplate>
+        <EditorFooterTemplate>
+            <div id="event-footer">
+                <div id="verify">
+                    <SfCheckBox @bind-Checked="@isChecked" @onchange="@(() => isSaveButtonDisabled = !isChecked)">
+                        <label htmlFor="check-box" id="text">Verified</label>
+                    </SfCheckBox>
+                </div><div id="right-button">
+                    <SfButton IsPrimary="true" Disabled="@isSaveButtonDisabled" OnClick="@(() => FooterButtonClick(true))">Save</SfButton>
+                    <SfButton IsPrimary="true" OnClick="@(() => FooterButtonClick(false))">Cancel</SfButton>
+                </div>
+            </div>
+        </EditorFooterTemplate>
+    </ScheduleTemplates>
+    <ScheduleEventSettings DataSource="@DataSource"></ScheduleEventSettings>
+</SfSchedule>
+
+@code {
+    SfSchedule<AppointmentData> scheduleObj;
+    private bool isSaveClick = false;
+    private bool isChecked = false;
+    private bool isSaveButtonDisabled = true;
+    List<AppointmentData> DataSource = new List<AppointmentData>
+    {
+        new AppointmentData
+        {
+            Id = 1,
+            Subject = "Surgery - Andrew",
+            StartTime = new DateTime(DateTime.Today.Year, DateTime.Today.Month, DateTime.Today.Day, 9, 0, 0),
+            EndTime = new DateTime(DateTime.Today.Year, DateTime.Today.Month, DateTime.Today.Day, 10, 0, 0),
+            IsAllDay = false
+        },
+        new AppointmentData
+        {
+            Id = 2,
+            Subject = "Consulting - John",
+            StartTime = new DateTime(DateTime.Today.Year, DateTime.Today.Month, DateTime.Today.Day, 10, 0, 0),
+            EndTime = new DateTime(DateTime.Today.Year, DateTime.Today.Month, DateTime.Today.Day, 11, 30, 0),
+            IsAllDay = false
+        },
+        new AppointmentData
+        {
+            Id = 3,
+            Subject = "Therapy - Robert",
+            StartTime = new DateTime(DateTime.Today.Year, DateTime.Today.Month, DateTime.Today.Day, 11, 30, 0),
+            EndTime = new DateTime(DateTime.Today.Year, DateTime.Today.Month, DateTime.Today.Day, 12, 30, 0),
+            IsAllDay = false
+        },
+        new AppointmentData
+        {
+            Id = 4,
+            Subject = "Observation - Steven",
+            StartTime = new DateTime(DateTime.Today.Year, DateTime.Today.Month, DateTime.Today.Day, 12, 30, 0),
+            EndTime = new DateTime(DateTime.Today.Year, DateTime.Today.Month, DateTime.Today.Day, 13, 30, 0),
+            IsAllDay = false
+        }
+    };
+    public async Task OnPopupClose(PopupCloseEventArgs<AppointmentData> args)
+    {
+        if (args.Type == PopupType.Editor && args.Data != null && isSaveClick)
+        {
+            if (args.Data.Id != 0)
+            {
+                await scheduleObj.SaveEventAsync(args.Data);
+            }
+            else
+            {
+                args.Data.Id = await scheduleObj.GetMaxEventIdAsync<int>();
+                await scheduleObj.AddEventAsync(args.Data);
+            }
+
+        }
+    }
+    private void FooterButtonClick(bool isSave)
+    {
+        isSaveClick = isSave;
+        scheduleObj.CloseEditor();
+    }
+
+    public class AppointmentData
+    {
+        public int Id { get; set; }
+        public string Subject { get; set; }
+        public string Location { get; set; }
+        public DateTime StartTime { get; set; }
+        public DateTime EndTime { get; set; }
+        public string Description { get; set; }
+        public bool IsAllDay { get; set; }
+        public string RecurrenceRule { get; set; }
+        public string RecurrenceException { get; set; }
+        public Nullable<int> RecurrenceID { get; set; }
+    }
+}
+<style>
+    #verify {
+        position: fixed;
+        padding: 0 20px;
+    }
+
+    #right-button {
+        padding: 0 10px;
+    }
+</style>
+```
+
+![Add customize header and footer using template in Blazor Scheduler](images/blazor-scheduler-custom-editor-header-footer.png)
 
 ### How to add resource options within editor template
 
@@ -1563,7 +1694,7 @@ It is possible to prevent the display of popup window by passing the value `true
        <ScheduleViews>
            <ScheduleView Option="View.Month"></ScheduleView>
        </ScheduleViews>
-    <ScheduleEvents TValue="AppointmentData" MoreEventsClicked="OnMoreEventsCliecked"></ScheduleEvents>
+    <ScheduleEvents TValue="AppointmentData" MoreEventsClicked="OnMoreEventsClicked"></ScheduleEvents>
 </SfSchedule>
 
 @code{
@@ -1572,7 +1703,7 @@ It is possible to prevent the display of popup window by passing the value `true
 
     private DateTime SelectedDate = new DateTime(2020, 1, 31);
 
-    private void OnMoreEventsCliecked(MoreEventsClickArgs args)
+    private void OnMoreEventsClicked(MoreEventsClickArgs args)
     {
         args.Cancel = true;
     }

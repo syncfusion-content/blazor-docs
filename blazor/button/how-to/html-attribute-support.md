@@ -9,22 +9,15 @@ documentation: ug
 
 # HTML Attribute Support in Blazor Button Component
 
-HTML attribute support is given for button using [HtmlAttributes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfButton.html) property.
+You can incorporate additional HTML attributes like disabled, value, name, and others into the SfButton by explicitly specifying them within the [SfButton](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfButton.html) tag. If you configure both the property and equivalent HTML attribute, then the component will consider the property value.
+
+The following example demonstrates how to set type attribute in the [SfButton](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfButton.html).
 
 ```csharp
 
 @using Syncfusion.Blazor.Buttons
 
-<SfButton Content="@Content" HtmlAttributes="@submit"></SfButton>
-
-@code {
-    public string Content = "Submit";
-    private Dictionary<string, object> submit = new Dictionary<string, object>()
-     {
-        { "type", "submit"},
-        { "title", "Primary Button" }
-    };
-}
+<SfButton Content="Submit" title="Primary Button" type="submit"></SfButton>
 
 ```
 

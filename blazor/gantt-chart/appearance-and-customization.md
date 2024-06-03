@@ -35,7 +35,7 @@ Height of child taskbars and parent taskbars can be customized by using [Taskbar
         public int TaskId { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
+        public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
@@ -85,7 +85,7 @@ In the Gantt Chart component, the appearance can be customized based on the Hier
     private void GanttChartRowInfo(QueryChartRowInfoEventArgs<TaskData> args)
     {
         dynamic data = Gantt.GetHierarchicalData(args.Data.TaskId);
-        if (data.level == 0 && data.hasChildRecords == true)
+        if (data.Level == 0 && data.HasChildRecords == true)
         {
             args.Row.AddClass(new string[] { "customize-parent" });
         }
@@ -99,7 +99,7 @@ In the Gantt Chart component, the appearance can be customized based on the Hier
         public int TaskId { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
+        public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
@@ -173,7 +173,7 @@ The Gantt Chart component maps any data source fields to [GanttLabelSettings](ht
         public int TaskId { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
+        public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
@@ -230,7 +230,7 @@ The width and background color of connector lines in Gantt Chart can be customiz
         public int TaskId { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
+        public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
         public string Predecessor { get; set; }
@@ -326,7 +326,7 @@ While rendering the Tree Grid part in Gantt Chart, the [RowDataBound](https://he
         public int TaskId { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
+        public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
@@ -386,7 +386,7 @@ N> By default, the `GridLines` property is set to `Horizontal` type.
         public int TaskId { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
+        public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
@@ -445,7 +445,7 @@ Gantt Chart component consists of both Tree Grid part and Chart part. Splitter i
         public int TaskId { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
+        public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
@@ -541,7 +541,7 @@ The following code example shows how to use this method.
         public int TaskId { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
+        public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }

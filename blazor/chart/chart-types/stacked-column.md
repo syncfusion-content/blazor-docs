@@ -50,9 +50,9 @@ documentation: ug
 }
 
 ``` 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LXVqWLrRzHvzyQHq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Stacked Column Chart](../images/chart-types-images/blazor-stacked-column-chart.png)
-
 
 N> Refer to our [Blazor Stacked Column Chart](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/stacked-column-chart) feature tour page to know about its other groundbreaking feature representations. Explore our [Blazor Stacked Column Chart Example](https://blazor.syncfusion.com/demos/chart/stacked-column?theme=bootstrap4) to know how to render and configure the Stacked Column type chart.
 
@@ -100,6 +100,7 @@ The [StackingGroup](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Char
 }
 
 ``` 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rjrqWBhRJHPHyIOf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Grouping in Blazor Stacked Column Chart](../images/chart-types-images/blazor-stacked-colum-chart-with-grouping.png)
 
@@ -151,6 +152,7 @@ The following properties can be used to customize the [Stacked Column](https://h
 }
 
 ``` 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BDLAiBhxJRlYsLQr?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Stacked Column Chart with Custom Series](../images/chart-types-images/blazor-stacked-column-chart-custom-series.png)
 

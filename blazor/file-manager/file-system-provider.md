@@ -11,8 +11,6 @@ documentation: ug
 
 The file system provider allows the File Manager component to manage the files and folders in a physical or cloud-based file system. It provides the methods for performing various file actions like creating a new folder, copying and moving of files or folders, deleting, uploading, and downloading the files or folders in the file system.
 
-N> It is important to note that the inclusion of the **ApiController** attribute is not mandatory for our file service providers. However, it is essential to be aware that enabling this attribute may result in certain functionality failures, such as the **GetImage** and **Upload** events, the visibility of image previews, and the success of uploads.
-
 The following file providers are added in Syncfusion Blazor File Manager component.
 
 * [ASP.NET Core file system provider](#aspnet-core-file-system-provider)

@@ -7,7 +7,7 @@ control: Range Slider
 documentation: ug
 ---
 
-# Render Blazor Range Slider inside Dialog
+# Render Blazor Range Slider Inside Dialog Popup
 
 The Blazor Slider component will be created before the Dialog popup is opened, and the Slider component will not be adapted to the parent element during dynamic rendering. As a result, the Slider does not render with the accurate initial value. To address this case, you must invoke the Slider's [RepositionAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSlider-1.html#Syncfusion_Blazor_Inputs_SfSlider_1_RepositionAsync) method when the Dialog component is opened, utilizing the [Opened](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogEvents.html#Syncfusion_Blazor_Popups_DialogEvents_Opened) event.
 
@@ -37,7 +37,7 @@ The Blazor Slider component will be created before the Dialog popup is opened, a
     {
        sliderObj?.RepositionAsync();
     }
-    public void ToggleDialog()
+    protected void ToggleDialog()
     {
         IsVisible = !IsVisible;
         StateHasChanged();

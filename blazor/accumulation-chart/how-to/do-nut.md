@@ -99,4 +99,6 @@ The complete code snippet for the preceding steps is as follows.
 
 ```
 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hjhAMLCziQTKvjhv?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 N> Refer to the [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore the [Blazor Accumulation Chart Example](https://blazor.syncfusion.com/demos/chart/pie?theme=bootstrap4) to know about the various features of accumulation charts and how it is used to represent numeric proportional data.

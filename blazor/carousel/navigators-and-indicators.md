@@ -63,6 +63,7 @@ The following example depicts the code to hide the navigators in the carousel.
     }
 </style>
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hDhKCBVhAsyEmfKw?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Carousel Navigators](images/navigators_hidden.png)
 
@@ -110,6 +111,7 @@ In the carousel, you can show the previous and next buttons only on mouse hover 
     }
 </style>
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VDrAiBrLAMdVnAce?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Carousel Navigators OnHover](images/navigators_onhover.gif)
 
@@ -193,6 +195,7 @@ Template options are provided to customize the previous button using [PreviousBu
     }
 </style>
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rZVUihrBKinwfomJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Carousel Navigators Template](images/navigators_template.png)
 
@@ -242,6 +245,7 @@ In indicators, the total slides and current slide state have been depicted. You 
     }
 </style>
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VDBAsVBBgWwAAeOK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Carousel Indicators](images/indicators_hidden.png)
 
@@ -319,6 +323,7 @@ Template option is provided to customize the indicators by using the [Indicators
     }
 </style>
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rNLqshhrUWwRrjbh?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Carousel Indicators](images/indicators_template.png)
 
@@ -395,6 +400,7 @@ You can customize the indicators by showing the preview image of each slide usin
     }
 </style>
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VtLAsVBBgMwagdvn?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Carousel Indicators](images/indicators_preview.png)
 
@@ -451,6 +457,7 @@ A default indicator in a carousel is a set of dots that indicate the current pos
     }
 </style>
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BXBKsBVhKsaLlNlA?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Carousel indicators type default](images/indicator-default.png)
 
@@ -498,6 +505,7 @@ A dynamic indicator in a carousel provides visual cues or markers that dynamical
     }
 </style>
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rZBqsLBhACumvJUW?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Carousel indicators type dynamic](images/indicator-dynamic.png)
 
@@ -545,6 +553,7 @@ The fraction indicator type displays the current slide index and total slide cou
     }
 </style>
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rXBUCBhhqVZMmiMz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Carousel indicators type fraction](images/indicator-fraction.png)
 
@@ -592,6 +601,7 @@ The Progress Indicator type displays the current slide as a progress bar. The Pr
     }
 </style>
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDBgChBrqhNyvyRO?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Carousel indicators type progress](images/indicator-progress.png)
 
@@ -641,6 +651,7 @@ In the carousel, [AutoPlay](https://help.syncfusion.com/cr/blazor/Syncfusion.Bla
     }
 </style>
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/htLUCBVrgBjuRDmo?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Carousel Indicators](images/play_button.png)
 
@@ -721,5 +732,6 @@ Template option is provided to customize the play button by using the [PlayButto
     }
 </style>
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/htrgsVVhgVCgSyAJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Carousel Indicators](images/play_button_template.png)

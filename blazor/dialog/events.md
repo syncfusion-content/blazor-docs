@@ -9,7 +9,7 @@ documentation: ug
 
 # Events in Blazor Dialog Component
 
-This section explains the list of events of the Dialog component which will be triggered for appropriate Dialog actions.
+This section explains the list of events of the [Blazor Dialog](https://www.syncfusion.com/blazor-components/blazor-modal-dialog)component which will be triggered for appropriate Dialog actions.
 
 ## Created
 
@@ -187,7 +187,7 @@ This section explains the list of events of the Dialog component which will be t
 
 @using Syncfusion.Blazor.Popups
 
-<SfDialog>
+<SfDialog IsModal="true">
    <DialogEvents OnOverlayModalClick ="@OnOverlayModalClickHandler" ></DialogEvents>
 </SfDialog>
 @code{

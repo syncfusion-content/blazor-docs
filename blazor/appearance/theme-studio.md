@@ -15,7 +15,7 @@ Theme Studio for Syncfusion Blazor can be used to customize a new theme from an 
 
 The Syncfusion Blazor themes are developed under the SCSS environment. Each theme has a unique common variable list. When you change the common variable color code value, it will reflect in all the Syncfusion Blazor components. All Syncfusion Blazor component styles are derived from these [theme-based common variables](#common-variables). This common variable list is handled inside the Theme Studio application for customizing theme-based colors.
 
-1. Open [Blazor Theme Studio](https://blazor.syncfusion.com/themestudio/) application.
+1. Open [Blazor Theme Studio](https://blazor.syncfusion.com/themestudio/?theme=material3) application.
 2. The Theme Studio application page can be divided into two sections: the controls preview section on the left, and the theme customization section on the right.
 ![Theme Studio two-sections](images/two-pane.png)
 3. Click the color pickers in the theme customization section to select your desired colors.
@@ -51,10 +51,11 @@ You can directly use the customized CSS file in the web application.
 
 1. Copy and paste the customized CSS file from the download folder into any folder, e.g., `~/wwwroot/styles/{file-name}.css`.
 2. Refer the customized CSS file reference as follows,
+    * For **Blazor Web App**, refer style sheet inside the `<head>` of **~/Components/App.razor** file.
     * For **Blazor WebAssembly application**, refer style sheet inside the `<head>` of **wwwroot/index.html** file.
-    * For **Blazor Server application**, refer style sheet inside the `<head>` of 
-        * **~/Pages/_Host.cshtml** file for .NET 3 and .NET 5.
-        * **~/Pages/_Layout.cshtml** for .NET 6.
+    * For **Blazor Server application**, refer style sheet inside the `<head>` of
+        * **~/Pages/_Host.cshtml** file for .NET 7.
+        * **~/Pages/_Layout.cshtml**  file for .NET 6.
 
     ```html
     <head>
@@ -3018,4 +3019,3 @@ Design based on bootstrap 3 theme.
         </tr>
     </tbody>
 </table>
-

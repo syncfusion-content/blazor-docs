@@ -33,7 +33,7 @@ To enable frozen columns, use the [FrozenColumns](https://help.syncfusion.com/cr
         public int TaskId { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
+        public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
@@ -90,7 +90,7 @@ In the following code snippet, the columns with the field names `TaskID` and `Ta
         public int TaskId { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
+        public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
@@ -152,7 +152,7 @@ The following is the sample code for using `FreezeDirection` in the Blazor Gantt
         public int TaskId { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
+        public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
@@ -210,7 +210,7 @@ To enable this feature, you need to set the [AllowFreezeLineMoving](https://help
         public int TaskId { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
+        public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
@@ -247,18 +247,12 @@ The following code example shows how to change the color of the default frozen l
     <GanttSplitterSettings Position="60%"></GanttSplitterSettings>
 </SfGantt>
 <style>
-    .e-grid .e-frozenheader > .e-table,
-    .e-grid .e-frozencontent > .e-table,
-    .e-grid .e-frozencontent .e-virtualtable > .e-table,
-    .e-grid .e-frozenheader .e-virtualtable > .e-table {
-        border-right-color: blue;
+    .e-grid .e-frozenrow-border {
+        background-color: blue;
     }
 
-    .e-grid .e-frozenhdrcont .e-headercontent > .e-table,
-    .e-grid .e-frozenhdrcont .e-frozenheader > .e-table,
-    .e-grid .e-frozenhdrcont .e-movableheader > .e-table,
-    .e-grid .e-frozenhdrcont .e-headercontent .e-virtualtable > .e-table {
-        border-bottom-color: blue;
+    .e-grid.e-lib .e-leftfreeze.e-freezeleftborder {
+        border-right-color: blue;
     }
 </style>
 @code {
@@ -273,7 +267,7 @@ The following code example shows how to change the color of the default frozen l
         public int TaskId { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
+        public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }

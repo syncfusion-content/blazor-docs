@@ -7,19 +7,19 @@ component: Appearance
 documentation: ug
 ---
 
-# Blazor Themes in Syncfusion Components 
+# Blazor Themes in Syncfusion Components
 
 The following list of themes are included in the Syncfusion Blazor components library.
 
-|Theme	|Style Sheet Name| 
+|Theme	|Style Sheet Name|
 |--------|--------|
 |Material 3 | material3.css |
 |Material 3 Dark | material3-dark.css |
-|Bootstrap 5	| bootstrap5.css | 
-|Bootstrap 5 Dark	| bootstrap5-dark.css | 
+|Bootstrap 5	| bootstrap5.css |
+|Bootstrap 5 Dark	| bootstrap5-dark.css |
 |Bootstrap 4	| bootstrap4.css |
-|Bootstrap 3	| bootstrap.css | 
-|Bootstrap 3 Dark	| bootstrap-dark.css | 
+|Bootstrap 3	| bootstrap.css |
+|Bootstrap 3 Dark	| bootstrap-dark.css |
 |Google’s Material | material.css |
 |Google’s Material-Dark | material-dark.css |
 |Tailwind CSS | tailwind.css |
@@ -34,42 +34,42 @@ The Syncfusion Blazor Bootstrap Theme is designed based on Bootstrap v3, whereas
 
 ## Reference themes in Blazor application
 
-Syncfusion Blazor themes can be used in your Blazor application by referencing the style sheet. 
+Syncfusion Blazor themes can be used in your Blazor application by referencing the style sheet.
 
+*  For **Blazor Web App**, refer style sheet inside the `<head>` of **~/Components/App.razor** file for .NET 8.
 * For **Blazor WebAssembly application**, refer style sheet inside the `<head>` of **wwwroot/index.html** file.
-* For **Blazor Server application**, refer style sheet inside the `<head>` of 
-    * **~/Pages/_Host.cshtml** file for .NET 3, .NET 5 and .NET 7.
-    * **~/Pages/_Layout.cshtml** for .NET 6.
+* For **Blazor Server application**, refer style sheet inside the `<head>` of
+    * **~/Pages/_Host.cshtml** file for .NET 7.
+    * **~/Pages/_Layout.cshtml** file for .NET 6.
 
 Using the below approaches the themes can be referenced in the Blazor application,
 
-1. [Static Web assets](#static-web-assets) - Used to reference complete css via static web assests. 
-2. [CDN](#cdn-reference) - Used to reference complete css via static web assests. 
-3. [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator) - Used to generate resources only for the selected (used) components. 
-4. [Theme Studio](https://blazor.syncfusion.com/documentation/appearance/theme-studio) - Used to customize and generate themes only for the selected (used) components. 
+1. [Static Web assets](#static-web-assets) - Used to reference complete css via static web assests.
+2. [CDN](#cdn-reference) - Used to reference complete css via static web assests.
+3. [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator) - Used to generate resources only for the selected (used) components.
+4. [Theme Studio](https://blazor.syncfusion.com/documentation/appearance/theme-studio) - Used to customize and generate themes only for the selected (used) components.
 5. [NPM packages](#npm-packages) - Used to customize the existing themes and bundle stylesheet's in an application.
 
-Instead of using [Static Web assets](#static-web-assets) or a [CDN reference](#cdn-reference), you can reference the style sheet into your projects to customize the theme or bundle it with the other style sheets using [NPM packages](#npm-packages). 
+Instead of using [Static Web assets](#static-web-assets) or a [CDN reference](#cdn-reference), you can reference the style sheet into your projects to customize the theme or bundle it with the other style sheets using [NPM packages](#npm-packages).
 
 ## Static Web Assets
 
 ### Enable static web assets usage
 
-To use static web assets, ensure [UseStaticFiles](https://docs.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.builder.staticfileextensions.usestaticfiles) method is called as follows,
+To use static web assets, ensure [UseStaticFiles](https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.builder.staticfileextensions.usestaticfiles?view=aspnetcore-8.0) method in the **~/Program.cs** file of your app.
 
-* For **.NET 6 and .NET 7** app, open the **~/Program.cs** file and call `UseStaticFiles` method.
-* For **.NET 5 and .NET 3.X** app, open the **~/Startup.cs** file and call `UseStaticFiles` method.
-
-N> For **Blazor WASM App**, call `UseStaticFiles` method in **Server project** in the above mentioned file. 
+N> For **Blazor Web App with interaction mode as  Auto & Blazor WASM App**, call `UseStaticFiles` method in **Server project**.
 
 ### Refer theme style sheet from static web assets
 
 Syncfusion Blazor themes are available as static web assets in the [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) and [Syncfusion.Blazor](https://www.nuget.org/packages/Syncfusion.Blazor/) NuGet Packages.
 
+*  For **Blazor Web App**,  refer style sheet inside the `<head>` of **~/Components/App.razor** file for .NET 8.
+
 * For **Blazor WebAssembly application**, refer style sheet inside the `<head>` element of **wwwroot/index.html** file.
-* For **Blazor Server application**, refer style sheet inside the `<head>` element of 
-    * **~/Pages/_Host.cshtml** file for .NET 3, .NET 5 and .NET 7.
-    * **~/Pages/_Layout.cshtml** for .NET 6.
+* For **Blazor Server application**, refer style sheet inside the `<head>` element of
+    * **~/Pages/_Host.cshtml** file for .NET 7.
+    * **~/Pages/_Layout.cshtml** file for .NET 6.
 
 When using individual NuGet packages in your application, add [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet Package and reference style sheet as below,
 
@@ -182,15 +182,15 @@ N> If you use individual component styles, you should install the styles of thei
 
 * Open Visual Studio 2022 and click the Extensions in the toolbar.
 
-    ![VS Extension](images/VS_Extension.png)
+    ![VS Extension](images/vs_extension.png)
 
 * Search the `Web Compiler 2022+` in search box and download the extension.
 
-    ![Web Compiler 2022+](images/Web_Compiler.png)
+    ![Web Compiler 2022+](images/web_compiler.png)
 
 * Right-click the `SCSS` file and click the Web Compiler to compile the file.
 
-![Themes-libman-compile](images/themes-libman-compile.png) 
+![Themes-libman-compile](images/themes-libman-compile.png)
 
 * The `compilerconfig.json` file is created by default as shown in the following code snippet.
 
@@ -233,11 +233,11 @@ You can add the `SCSS theme` for Blazor applications through NPM package and com
 
 * Open Visual Studio 2022 and click the Extensions in the toolbar.
 
-    ![VS Extension](images/VS_Extension.png)
+    ![VS Extension](images/vs_extension.png)
 
 * Search the `Web Compiler 2022+` in search box and download the extension.
 
-    ![Web Compiler 2022+](images/Web_Compiler.png)
+    ![Web Compiler 2022+](images/web_compiler.png)
 
 * Install the [Syncfusion Blazor Themes](https://www.npmjs.com/package/@syncfusion/blazor-themes) NPM package using the below command.
 
@@ -248,7 +248,7 @@ You can add the `SCSS theme` for Blazor applications through NPM package and com
 * Create a `SCSS` file in the Static Web Assets folder (e.g., ~/wwwroot/styles/custom.scss). Next, define the [theme variables](https://blazor.syncfusion.com/documentation/appearance/theme-studio#common-variables) to override and import the theme as shown in the following.
 
     In the following code, the primary theme variable color is changed. For all components:
-    
+
     ```scss
     $primary: blue !default;
 
@@ -258,7 +258,7 @@ You can add the `SCSS theme` for Blazor applications through NPM package and com
 
     **Output:**
 
-    ![Overall Theme Output](images/Overall_Theme_Output.png)
+    ![Overall Theme Output](images/overall_theme_output.png)
 
     For the Calendar (individual) component:
 
@@ -271,11 +271,11 @@ You can add the `SCSS theme` for Blazor applications through NPM package and com
 
     **Output:**
 
-    ![Individual Theme Output](images/Individual_Theme_Output.png)
+    ![Individual Theme Output](images/individual_theme_output.png)
 
 * Then, Right-click the created `SCSS` file and click the `Web Compiler` option to compile the file.
 
-    ![Web Compiler Option](images/Web_Compiler_Option.png)
+    ![Web Compiler Option](images/web_compiler_option.png)
 
 * The `compilerconfig.json` file is created by default. Then, provide the location of the compiled CSS file and include a path in `compilerconfig.json` as shown in the following code snippet.
 
@@ -303,7 +303,22 @@ You can add the `SCSS theme` for Blazor applications through NPM package and com
 
 * Run the application to see the customized Fluent theme applied.
 
+It is important to note that the Material 3 theme uses CSS variables. To override its variables, you should import the Material 3 theme's SCSS file and then customize the [Material 3 variables](https://blazor.syncfusion.com/documentation/appearance/theme-studio#material-3-theme) like this:
+
+```scss
+// Import the Material 3 theme
+@import 'blazor-themes/SCSS-Themes/material3.scss';
+
+// Override Material 3 variables
+:root {
+    // Customize the primary color
+    --color-sf-primary: 26 26 192;
+}
+```
+
 N> If you are using **Visual Studio 2019**, please use the `includePath` property instead of `loadPaths` as the latter does not support the Web Compiler for VS 2019. However, we highly recommend using the **Web Compiler 2022+** for **Visual Studio 2022**. For more information, please refer to the [discussion link here](https://github.com/failwyn/WebCompiler/issues/24).
+
+N> If you come across the **'Can't find stylesheet to import'** error, ensure that you have installed the [Syncfusion Blazor Themes](https://www.npmjs.com/package/@syncfusion/blazor-themes) NPM package in the project's directory rather than the solution's directory.
 
 The following shows the importing theme path for the overall theme.
 
@@ -586,103 +601,49 @@ Below table lists the importing theme path for the individual components.
 
 ## Change theme dynamically
 
-In the Blazor application, the application theme can be changed dynamically by changing its style sheet reference in code. 
+In the Blazor application, the application theme can be changed dynamically by changing its style sheet reference in code.
 
-### Change theme dynamically in Blazor server app
+### Change theme dynamically in Blazor Web app
 
-The following example demonstrates how to change a theme dynamically in Blazor Server application using Syncfusion Blazor themes using Syncfusion Dropdown component.
+The following example demonstrates how to change a theme dynamically in Blazor application using Syncfusion Blazor themes using Syncfusion Dropdown component.
 
-1.Below step shows how to reference style sheet in the way to change at dynamically.
-
-* For **.NET6 Blazor Server Application**, In the **_Layout.cshtml** the theme is changed dynamically using `id` in `setTheme` method.
-* For **.NET 3.1, .NET 5 and .NET 7 Blazor Server Application**, In **_Host.cshtml**, the theme is changed based on query string. 
+* For **Blazor Web App**, the theme is changed based on query string at the **~/Components/App.razor** file
 
 {% tabs %}
-{% highlight c# tabtitle=".NET 6 (~/_Layout.cshtml)" %}
+{% highlight c# tabtitle=".NET 8 (~/App.razor)" %}
 
-<head>
-... 
-<link id="theme" href="_content/Syncfusion.Blazor.Themes/bootstrap4.css" rel="stylesheet" />
-</head>
-... 
-<script>
-    function setTheme(theme) {
-        document.getElementsByTagName('body')[0].style.display = 'none';
-        let synclink = document.getElementById('theme');
-        synclink.href = '_content/Syncfusion.Blazor.Themes/' + theme + '.css';
-        setTimeout(function () { document.getElementsByTagName('body')[0].style.display = 'block'; }, 200);
-    }
-</script>
-...
+@using Microsoft.AspNetCore.WebUtilities;
+@inject NavigationManager UrlHelper;
 
-{% endhighlight %}
-{% highlight c# tabtitle=".NET 3.1, .NET 5 & .NET 7 (~/_Host.cshtml)" %}
-
-@page "/"
-@namespace BlazorThemeSwitcher.Pages
-@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
-    
 @{
-    Layout = null;
-    QueryHelpers.ParseQuery(Request.QueryString.Value).TryGetValue("theme", out var themeName);
+
+    var uri = UrlHelper.ToAbsoluteUri(UrlHelper.Uri);
+    QueryHelpers.ParseQuery(uri.Query).TryGetValue("theme", out var themeName);
     themeName = themeName.Count > 0 ? themeName.First() : "bootstrap4";
 }
-
-<!DOCTYPE html>
-<html lang="en">
+...
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>BlazorThemeSwitcher</title>
-    <base href="~/" />
-    <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css" />
-    <link href="css/site.css" rel="stylesheet" />
-    <link href="BlazorThemeSwitcher.styles.css" rel="stylesheet" />
-    <link href=@("_content/Syncfusion.Blazor.Themes/" + themeName + ".css")rel="stylesheet" />
+...
+    @*Sets the selected theme name into styles*@
+    <link href=@("_content/Syncfusion.Blazor.Themes/" + themeName + ".css") rel="stylesheet" />
 </head>
-
-<body>
-    <script src="_framework/blazor.server.js"></script>
-</ </body>
-</html>
+...
 
 {% endhighlight %}
 {% endtabs %}
 
-2.Below step shows changing style sheet dynamically.
+* Create a new `DropDownComponent.razor` page, and then add the provided code snippet to enable dynamic theming within the application using [Syncfusion DropDown List Component](https://blazor.syncfusion.com/documentation/dropdown-list/getting-started-with-web-app).
 
-* For **.NET5 Blazor Server Application**, in **MainLayout.razor** page add dropdown list with themes. In `ValueChange` event handler, the page is refreshed by changing query string to change the theme in application.
-
-* For **.NET6 Blazor Server Application**, modify the **MainLayout.razor** page add dropdown list with themes. In `ValueChange` event handler, the theme is changed by calling `setTheme` method defined in step `. 
-
-{% tabs %}
-{% highlight c# tabtitle=".NET 6 (~/MainLayout.razor)" %}
-
-@inherits LayoutComponentBase
-@inject NavigationManager UrlHelper;
-@inject IJSRuntime JSRuntime;
+```cshtml
+@rendermode InteractiveAuto
 @using Syncfusion.Blazor.DropDowns;
-@using Syncfusion.Blazor.Buttons;
-@using Microsoft.AspNetCore.WebUtilities;
+@inject NavigationManager UrlHelper;
+@using Microsoft.AspNetCore.WebUtilities
 
-<div class="page">
-    <div class="main">
-        <div class="top-row px-4">
-            <div class="theme-switcher">
-                @*Theme switcher*@
-                <SfDropDownList TItem="ThemeDetails" TValue="string" @bind-Value="themeName" DataSource="@Themes">
-                    <DropDownListFieldSettings Text="Text" Value="ID"></DropDownListFieldSettings>
-                    <DropDownListEvents TItem="ThemeDetails" TValue="string" ValueChange="OnThemeChange"></DropDownListEvents>
-                </SfDropDownList>
-            </div>
-            <a href="http://blazor.net" target="_blank" class="ml-md-auto">About</a>
-        </div>
-
-        <div class="content px-4">
-            @Body
-        </div>
-    </div>
-</div>
+<SfDropDownList TItem="ThemeDetails" TValue="string" @bind-Value="themeName" DataSource="@Themes">
+     <DropDownListFieldSettings Text="Text" Value="ID"></DropDownListFieldSettings>
+     <DropDownListEvents TItem="ThemeDetails" TValue="string" ValueChange="OnThemeChange"></DropDownListEvents>
+</SfDropDownList>
 
 @code {
     private string themeName;
@@ -707,31 +668,117 @@ The following example demonstrates how to change a theme dynamically in Blazor S
         new ThemeDetails(){ ID = "fabric-dark", Text = "Fabric Dark" },
         new ThemeDetails(){ ID = "highcontrast", Text = "High Contrast" }
     };
-    
 
-    public void OnThemeChange(Syncfusion.Blazor.DropDowns.ChangeEventArgs<string, ThemeDetails> args)
+    public void OnThemeChange ( ChangeEventArgs<string, ThemeDetails> args )
     {
-        JSRuntime.InvokeAsync<object>("setTheme", args.ItemData.ID);                
+        var theme = GetThemeName();
+        if (theme != args.ItemData.ID)
+        {
+            UrlHelper.NavigateTo(GetUri(args.ItemData.ID), true);
+        }
     }
-    
-    private string GetThemeName()
+
+    private string GetThemeName ()
     {
         var uri = UrlHelper.ToAbsoluteUri(UrlHelper.Uri);
         QueryHelpers.ParseQuery(uri.Query).TryGetValue("theme", out var theme);
         return theme.Count > 0 ? theme.First() : "bootstrap4";
     }
 
-    protected override void OnInitialized()
+    private string GetUri ( string themeName )
+    {
+        var uri = UrlHelper.ToAbsoluteUri(UrlHelper.Uri);
+        return uri.AbsolutePath + "?theme=" + themeName;
+    }
+
+    protected override void OnInitialized ()
     {
         var theme = GetThemeName();
         themeName = theme.Contains("bootstrap4") ? "bootstrap4" : theme;
     }
-
 }
 
-{% endhighlight %}
-{% highlight c# tabtitle=".NET 5 & 3.1 (~/MainLayout.razor)" %}
+```
 
+* To include `DropDownComponent` in the `~/MainLayout.razor` as shown bellow
+
+{% tabs %}
+{% highlight c# tabtitle="C#" hl_lines="4 5 6 7" %}
+....
+    <main>
+        <div class="top-row px-4">
+            <div class="theme-switcher">
+                @*Theme switcher*@
+                <DropDownComponent></DropDownComponent>
+            </div>
+            <a href="https://learn.microsoft.com/aspnet/core/" target="_blank">About</a>
+        </div>
+     ....
+    </main>
+</div>
+
+{% endhighlight %}
+{% endtabs %}
+
+### Change theme dynamically in Blazor server app
+
+The following example demonstrates how to change a theme dynamically in Blazor application using Syncfusion Blazor themes using Syncfusion Dropdown component.
+
+1. For **Blazor Server application**, the theme is changed based on query string at the
+    * **~/Pages/_Host.cshtml** file for .NET 7.
+    * **~/Pages/_Layout.cshtml** file for .NET 6.
+
+{% tabs %}
+{% highlight c# tabtitle=".NET 7 (~/_Host.cshtml)" %}
+
+@page "/"
+@namespace BlazorThemeSwitcher.Pages
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+@{
+    Layout = null;
+    QueryHelpers.ParseQuery(Request.QueryString.Value).TryGetValue("theme", out var themeName);
+    themeName = themeName.Count > 0 ? themeName.First() : "bootstrap4";
+}
+...
+<head>
+...
+    @*Sets the selected theme name into styles*@
+    <link href=@("_content/Syncfusion.Blazor.Themes/" + themeName + ".css")rel="stylesheet" />
+</head>
+...
+
+{% endhighlight %}
+{% highlight c# tabtitle=".NET 6 (~/_Layout.cshtml)" %}
+
+@using Microsoft.AspNetCore.Components.Web
+@using Microsoft.AspNetCore.Components;
+@using Microsoft.AspNetCore.WebUtilities;
+@namespace BlazorThemeSwitcher.Pages
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@inject NavigationManager UrlHelper;
+
+@{
+    Layout = null;
+    var uri = UrlHelper.ToAbsoluteUri(UrlHelper.Uri);
+    QueryHelpers.ParseQuery(uri.Query).TryGetValue("theme", out var themeName);
+    themeName = themeName.Count > 0 ? themeName.First() : "bootstrap4";
+}
+
+...
+<head>
+...
+    @*Sets the selected theme name into styles*@
+    <link href=@("_content/Syncfusion.Blazor.Themes/" + themeName + ".css") rel="stylesheet" />
+</head>
+...
+
+{% endhighlight %}
+{% endtabs %}
+
+2.Modify the MainLayout.razor page with the code below to implement dynamic theme change using the dropdown by modifying the query string to change the theme in the application.
+
+```cshtml
 @inherits LayoutComponentBase
 @inject NavigationManager UrlHelper;
 @using Syncfusion.Blazor.DropDowns;
@@ -765,7 +812,7 @@ The following example demonstrates how to change a theme dynamically in Blazor S
         public string ID { get; set; }
         public string Text { get; set; }
     }
-    
+
     private List<ThemeDetails> Themes = new List<ThemeDetails>() {
         new ThemeDetails(){ ID = "material3", Text = "Material 3" },
         new ThemeDetails(){ ID = "material", Text = "Material" },
@@ -780,7 +827,7 @@ The following example demonstrates how to change a theme dynamically in Blazor S
         new ThemeDetails(){ ID = "fabric-dark", Text = "Fabric Dark" },
         new ThemeDetails(){ ID = "highcontrast", Text = "High Contrast" }
     };
-    
+
     public void OnThemeChange(ChangeEventArgs<string, ThemeDetails> args)
     {
         var theme = GetThemeName();
@@ -789,20 +836,20 @@ The following example demonstrates how to change a theme dynamically in Blazor S
             UrlHelper.NavigateTo(GetUri(args.ItemData.ID ), true);
         }
     }
-    
+
     private string GetThemeName()
     {
         var uri = UrlHelper.ToAbsoluteUri(UrlHelper.Uri);
         QueryHelpers.ParseQuery(uri.Query).TryGetValue("theme", out var theme);
         return theme.Count > 0 ? theme.First() : "bootstrap4";
     }
-    
+
     private string GetUri(string themeName)
     {
         var uri = UrlHelper.ToAbsoluteUri(UrlHelper.Uri);
         return uri.AbsolutePath + "?theme=" + themeName;
     }
-    
+
     protected override void OnInitialized()
     {
         var theme = GetThemeName();
@@ -810,38 +857,37 @@ The following example demonstrates how to change a theme dynamically in Blazor S
     }
 }
 
-{% endhighlight %}
-{% endtabs %}
+```
 
-   ![Change theme dynamically in blazor server app](images/blazor-dynamic-theme-switching.gif) 
-    
-   N> [View sample in GitHub](https://github.com/SyncfusionExamples/theme-switching-in-blazor-server-app) 
+![Change theme dynamically in blazor server app](images/blazor-dynamic-theme-switching.gif)
+
+N> [View sample in GitHub](https://github.com/SyncfusionExamples/theme-switching-in-blazor-server-app)
 
 ### Change theme dynamically in blazor WebAssembly (WASM) app
 
 The following example demonstrates how to change a theme dynamically in Blazor WebAssembly using the application with the Syncfusion Blazor themes using Syncfusion Dropdown component.
 
 1. Add the below function code in the  **index.html** file to set the theme as selected in dropdown by using its `id` value.
-    
+
     ```html
     <head>
-    ... 
+    ...
     <link id="theme" href="_content/Syncfusion.Blazor.Themes/bootstrap4.css" rel="stylesheet" />
     </head>
-    ... 
+    ...
     <script>
         function setTheme(theme) {
             document.getElementsByTagName('body')[0].style.display = 'none';
             let synclink = document.getElementById('theme');
             synclink.href = '_content/Syncfusion.Blazor.Themes/' + theme + '.css';
-            setTimeout(function () { document.getElementsByTagName('body')[0].style.display = 'block'; }, 200);
+            setTimeout(function () { document.getElementsByTagName('body')[0].style.display = 'block'; }, 300);
         }
     </script>
     ...
     ```
 
 2. Modify the **MainLayout.razor** page with the below code to implement a theme change dynamically using the dropdown by its id value in javascript function in the application.
-    
+
     ```cshtml
     @inherits LayoutComponentBase
     @inject NavigationManager UrlHelper;
@@ -849,7 +895,7 @@ The following example demonstrates how to change a theme dynamically in Blazor W
     @using Syncfusion.Blazor.DropDowns;
     @using Syncfusion.Blazor.Buttons;
     @using Microsoft.AspNetCore.WebUtilities;
-    
+
     <div class="page">
         <div class="main">
             <div class="top-row px-4">
@@ -862,22 +908,22 @@ The following example demonstrates how to change a theme dynamically in Blazor W
                 </div>
                 <a href="http://blazor.net" target="_blank" class="ml-md-auto">About</a>
             </div>
-    
+
             <div class="content px-4">
                 @Body
             </div>
         </div>
     </div>
-    
+
     @code {
-        private string themeName;
-    
+        private string themeName = "bootstrap4";
+
         public class ThemeDetails
         {
             public string ID { get; set; }
             public string Text { get; set; }
         }
-    
+
         private List<ThemeDetails> Themes = new List<ThemeDetails>() {
             new ThemeDetails(){ ID = "material3", Text = "Material 3" },
             new ThemeDetails(){ ID = "material", Text = "Material" },
@@ -892,37 +938,23 @@ The following example demonstrates how to change a theme dynamically in Blazor W
             new ThemeDetails(){ ID = "fabric-dark", Text = "Fabric Dark" },
             new ThemeDetails(){ ID = "highcontrast", Text = "High Contrast" }
         };
-        
-    
+
         public void OnThemeChange(Syncfusion.Blazor.DropDowns.ChangeEventArgs<string, ThemeDetails> args)
         {
-            JSRuntime.InvokeAsync<object>("setTheme", args.ItemData.ID);                
+            JSRuntime.InvokeAsync<object>("setTheme", args.ItemData.ID);
         }
-     
-        private string GetThemeName()
-        {
-            var uri = UrlHelper.ToAbsoluteUri(UrlHelper.Uri);
-            QueryHelpers.ParseQuery(uri.Query).TryGetValue("theme", out var theme);
-            return theme.Count > 0 ? theme.First() : "bootstrap4";
-        }
-    
-        protected override void OnInitialized()
-        {
-            var theme = GetThemeName();
-            themeName = theme.Contains("bootstrap4") ? "bootstrap4" : theme;
-        }
-    
+
     }
-    
+
     ```
-    ![Change theme dynamically in blazor WASM app](images/blazor-dynamic-theme-switching-wasm.gif) 
-    
+    ![Change theme dynamically in blazor WASM app](images/blazor-dynamic-theme-switching-wasm.gif)
+
     N> [View sample in GitHub](https://github.com/SyncfusionExamples/theme-switching-in-blazor-WASM-app)
-  
+
 ## Render Syncfusion Components in offline with Material and Tailwind Themes
 
 Material and Tailwind Themes uses online roboto font. If your app is designed to work in a local network without internet connection, follow the below steps to use offline fonts to work in offline scenarios.
-   
+
 1. Download the minified styles for the required components from [CRG](https://blazor.syncfusion.com/crg/) site. Learn more about CRG in [help documentation](https://blazor.syncfusion.com/documentation/common/custom-resource-generator).
 2. Unzip the file and it contains the styles of the selected components and an `import.json` file, which stores the current settings.
    ![Select styles folder](images/crg-styles.png)
@@ -932,19 +964,44 @@ Material and Tailwind Themes uses online roboto font. If your app is designed to
    ![Customized CSS](images/custom-css-crg.png)
 5. Copy the files under the **customized** folder to Blazor application `~/wwwroot` folder.
 6. Now, manually add the custom styles in the Blazor App to render the components without any issues on the machines that contains no internet access.
-    * For **Blazor WASM App**, reference custom interop script in `~/wwwroot/index.html` file. 
-    * For **Blazor Server App**, reference custom interop script in 
+    * For **Blazor Web App**, reference custom styles in `~/Components/App.razor` file
+    * For **Blazor WASM App**, reference custom styles in `~/wwwroot/index.html` file.
+    * For **Blazor Server App**, reference custom styles in
         * `~/Pages/_Layout.cshtml` file for `.NET 6` project
-        * `~/Pages/_Host.cshtml` file for `.NET Core 3.X, .NET 5 and .NET 7` project.
+        * `~/Pages/_Host.cshtml` file for `.NET 7` project.
 
-    ```html
+```html
     <head>
         ....
         ....
         <link href="material.min.css" rel="stylesheet" />
     </head>
-    ```
-   
+```
+
+### Using Customized Styles from `Syncfusion.Blazor.Themes` Package and CDN (From `v23.2.4` and above)
+
+Starting from `v23.2.4`, customized `Material` and `Tailwind` themes are available in the `Syncfusion.Blazor.Themes` package. Also it can be accessed via CDN for Blazor components.
+
+#### Static Web Asset Reference:
+
+```html
+<head>
+    ....
+    ....
+    <link href="_content/Syncfusion.Blazor.Themes/customized/material.css" rel="stylesheet" />
+</head>
+```
+
+#### CDN Reference:
+
+```html
+<head>
+    ....
+    ....
+    <link href="https://cdn.syncfusion.com/blazor/23.2.4/styles/customized/material.css" rel="stylesheet" />
+</head>
+```
+
 ## See also
 
 [How to change background of browser based on Syncfusion Theme in Blazor?](https://www.syncfusion.com/forums/171882/problems-with-implementing-dark-themes)

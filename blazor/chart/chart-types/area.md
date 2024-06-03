@@ -43,6 +43,7 @@ documentation: ug
 }
 
 ``` 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BjrUsrVRVybSLVPC?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Area Chart](../images/chart-types-images/blazor-area-chart.png)
 
@@ -88,6 +89,7 @@ To render a multicolored area series, specify the [Type](https://help.syncfusion
 }
 
 ``` 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rNLUirLdBevFgeZv?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Multicolored Area Chart](../images/chart-types-images/blazor-multicolor-area-chart.png)
 
@@ -130,6 +132,7 @@ The following properties can be used to customize the [Area](https://help.syncfu
 }
 
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rXrACLrdrokDGazV?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Area Chart with Custom Series](../images/chart-types-images/blazor-area-chart-fill.png)
 
@@ -171,6 +174,7 @@ The following properties in the [ChartSeriesBorder](https://help.syncfusion.com/
 }
 
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BDLKiLVdhnoffMQB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Area Chart with Border](../images/chart-types-images/blazor-area-border.png)
 

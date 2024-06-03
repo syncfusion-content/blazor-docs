@@ -11,11 +11,11 @@ documentation: ug
 
 Syncfusion provides the component Code Generator for the Blazor platform, which allows you to quickly add component code to the application at the required place in the razor file. The Syncfusion extension adds the required Syncfusion component to render the code with namespaces, styles, and NuGet references. The Code Generator is a simple wizard that interacts with data models and adds Syncfusion components with the required features to your application.
 
-The steps below will assist you to add the Syncfusion components code in your Blazor application through **Visual Studio 2019 or Visual Studio 2022**:
+The steps below will assist you to add the Syncfusion components code in your Blazor application through **Visual Studio 2022**:
 
 N> Before using the Syncfusion Blazor Code Generator, check whether the Syncfusion Blazor Extension is installed or not in Visual Studio Extension Manager by clicking on the Extensions -> Manage Extensions -> Installed. If this extension not installed, install the extension by follow the steps from the [download and installation](download-and-installation) help topic.
 
-1. Open your existing Blazor application or create a new Blazor application in the Visual Studio 2019 or Visual Studio 2022.
+1. Open your existing Blazor application or create a new Blazor application in the Visual Studio 2022 or Visual Studio 2022.
 
 2. To open the Syncfusion Blazor Code Generator Wizard, select one of the options below in the Razor file, and then add Syncfusion components:
 
@@ -51,4 +51,4 @@ N> Before using the Syncfusion Blazor Code Generator, check whether the Syncfusi
 
 5. The selected Syncfusion Blazor component code is inserted in selected active razor file and application configured with most recent selected Syncfusion Blazor component NuGet package, styles, namespaces for selected components.
 
-6. If you have installed the trial setup or NuGet packages from nuget.org, you must register the Syncfusion license key to your application as Syncfusion has introduced the licensing system from 2018 Volume 2 (v16.2.0.41) Essential Studio release. Navigate to the [help topic](https://help.syncfusion.com/common/essential-studio/licensing/license-key#how-to-generate-syncfusion-license-key) to generate and register the Syncfusion license key to your application. Refer to this [blog](https://blog.syncfusion.com/post/Whats-New-in-2018-Volume-2-Licensing-Changes-in-the-1620x-Version-of-Essential-Studio.aspx?_ga=2.11237684.1233358434.1587355730-230058891.1567654773) post to know more about the licensing changes introduced in Essential Studio.
+6. If you have installed the trial setup or NuGet packages from nuget.org, you must register the Syncfusion license key to your application as Syncfusion has introduced the licensing system from 2018 Volume 2 (v16.2.0.41) Essential Studio release. Navigate to the [help topic](https://help.syncfusion.com/common/essential-studio/licensing/overview#how-to-generate-syncfusion-license-key) to generate and register the Syncfusion license key to your application. Refer to this [blog](https://www.syncfusion.com/blogs/post/whats-new-in-2018-volume-2.aspx?_ga=2.11237684.1233358434.1587355730-230058891.1567654773) post to know more about the licensing changes introduced in Essential Studio.

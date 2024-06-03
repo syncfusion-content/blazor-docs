@@ -7,212 +7,149 @@ control: AutoComplete
 documentation: ug
 ---
 
-# Filtering in Blazor AutoComplete Component
+# Filtering in Blazor AutoComplete
 
-The [AutoComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfAutoComplete-2.html) has built-in support to filter data items. The filter operation starts as soon as you start typing characters in the component.
+The AutoComplete has built-in support to filter data items when [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_AllowFiltering) is enabled. The filter operation starts as soon as you start typing characters in the search box.  Default value of AllowFiltering is `false`.
 
-## Change the filter type
+## Local data
 
-Determines on which filter type the component needs to be considered on search action. The available [FilterType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_FilterType) and its supported data types are:
+The following code demonstrates the filtering functionality with local data in the AutoComplete component.
 
-| **Filter Type** | **Description**                                         | **Supported Types** |
-| --------------- | ------------------------------------------------------- | ------------------- |
-| StartsWith      | Checks whether a value begins with the specified value. | String              |
-| EndsWith        | Checks whether a value ends with specified value.       | String              |
-| Contains        | Checks whether a value contains with specified value.   | String              |
+{% highlight cshtml %}
 
-The following examples shows data filtering is done with the `StartsWith` type.
+{% include_relative code-snippet/filtering/local-data.razor %}
 
-```cshtml
-@using Syncfusion.Blazor.Data
-@using Syncfusion.Blazor.DropDowns
+{% endhighlight %}
 
-<SfAutoComplete TValue="string" TItem="OrderDetails"  Placeholder="Select a customerID" Query="@RemoteDataQuery" FilterType="Syncfusion.Blazor.DropDowns.FilterType.StartsWith">
-    <SfDataManager Url="https://js.syncfusion.com/demos/ejServices/Wcf/Northwind.svc/Orders" Adaptor="Adaptors.ODataAdaptor" CrossDomain=true></SfDataManager>
-    <AutoCompleteFieldSettings  Value="CustomerID"></AutoCompleteFieldSettings>
-</SfAutoComplete>
+![Blazor AutoComplete with local data filtering](./images/filtering/blazor_autocomplete_local-data.png)
 
-@code {
-    public Query RemoteDataQuery = new Query().Select(new List<string> { "CustomerID" }).Take(6).RequiresCount();
-    public class OrderDetails
-    {
-        public int? OrderID { get; set; }
-        public string CustomerID { get; set; }
-        public int? EmployeeID { get; set; }
-        public double? Freight { get; set; }
-        public string ShipCity { get; set; }
-        public bool Verified { get; set; }
-        public DateTime? OrderDate { get; set; }
-        public string ShipName { get; set; }
-        public string ShipCountry { get; set; }
-        public DateTime? ShippedDate { get; set; }
-        public string ShipAddress { get; set; }
-    }
-}
-```
+## Remote data
 
+For Remote data, each key press, filter action request is made at the server end.
 
+The below code demonstrates the filtering functionality with [ODataAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors#odata-adaptor) in the AutoComplete component with help of [Query](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.Query.html) property.
 
-![Filtering in Blazor AutoComplete](./images/blazor-autocomplete-filter.png)
+{% highlight cshtml %}
 
-## Filter item count
+{% include_relative code-snippet/filtering/remote-data.razor %}
+
+{% endhighlight %}
+
+![Blazor AutoComplete with Remote Data filtering](./images/filtering/blazor_autocomplete_remote-data.png)
+
+## Filter type
+
+You can use [FilterType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfAutoComplete-2.html#Syncfusion_Blazor_DropDowns_SfAutoComplete_2_FilterType) property to specify on which filter type needed to be considered on the search action of the component. The available `FilterType` and its supported data types are:
+
+FilterType     | Description
+------------ | -------------
+  [StartsWith](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.FilterType.html#Syncfusion_Blazor_DropDowns_FilterType_StartsWith)       | Checks whether a value begins with the specified value.
+  [EndsWith](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.FilterType.html#Syncfusion_Blazor_DropDowns_FilterType_EndsWith)     | Checks whether a value ends with specified value.
+  [Contains](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.FilterType.html#Syncfusion_Blazor_DropDowns_FilterType_Contains)      | Checks whether a value contained with specified value.
+
+In the following example, `StartsWith` filter type has been mapped to the `FilterType` property.
+
+{% highlight cshtml %}
+
+{% include_relative code-snippet/filtering/filter-type.razor %}
+
+{% endhighlight %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hjBKMhipBzHIgAvv?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+![Blazor AutoComplete with Filter Type](./images/filtering/blazor_autocomplete_filter-type.png)
+
+## Minimum length
+
+You can set the limit for the character count to filter the data on the AutoComplete. This can be done by setting the [MinLength](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfAutoComplete-2.html#Syncfusion_Blazor_DropDowns_SfAutoComplete_2_MinLength) property to AutoComplete.
+
+In the following example, the remote request does not fetch the search data until the search key contains three characters.
+
+{% highlight cshtml %}
+
+{% include_relative code-snippet/filtering/minimum-filter-length.razor %}
+
+{% endhighlight %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BDBUsBsJhzbSDGTo?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+![Filtering Blazor AutoComplete Items based on Character Count](./images/blazor-autocomplete-filter-based-length.png)
+
+## Multi column filtering
+
+In the built-in Syncfusion Blazor theme files, support for multi column can be enabled by adding `e-multi-column` class in the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListModel-2.html#Syncfusion_Blazor_DropDowns_DropDownListModel_2_CssClass) property.
+
+{% highlight cshtml %}
+
+{% include_relative code-snippet/filtering/multi-column.razor %}
+
+{% endhighlight %}
+
+![Blazor AutoComplete with Multi Column filtering](./images/filtering/blazor_autocomplete_multi-column.png)
+
+You can achieve multiple column(field) filtering by passing the List of [predicates](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.WhereFilter.html#Syncfusion_Blazor_Data_WhereFilter_predicates) to the [And](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.WhereFilter.html#Syncfusion_Blazor_Data_WhereFilter_And_Syncfusion_Blazor_Data_WhereFilter_) or [Or](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.WhereFilter.html#Syncfusion_Blazor_Data_WhereFilter_Or_Syncfusion_Blazor_Data_WhereFilter_) methods of [WhereFilters](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.WhereFilter.html#Syncfusion_Blazor_Data_WhereFilter__ctor).
+
+{% highlight cshtml %}
+
+{% include_relative code-snippet/filtering/multi-column-filtering.razor %}
+
+{% endhighlight %}
+
+![Blazor AutoComplete with Multi Column filtering](./images/filtering/blazor_autocomplete_multi-colum-filtering.gif)
+
+## Case sensitive filtering
+
+The Data items can be filtered with or without case sensitivity using the [DataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html). This can be done by passing the fourth optional parameter [IgnoreCase](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.WhereFilter.html#Syncfusion_Blazor_Data_WhereFilter_IgnoreCase) of the [Where clause](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.Query.html#Syncfusion_Blazor_Data_Query_Where_Syncfusion_Blazor_Data_WhereFilter_).
+
+The following example shows how to perform case-sensitive filter.
+
+{% highlight cshtml %}
+
+{% include_relative code-snippet/filtering/case-sentitive.razor %}
+
+{% endhighlight %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BDVACVWJhzFwRqep?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+## Custom filtering
+
+The AutoComplete component filter queries can be customized using [Filtering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.AutoCompleteEvents-2.html#Syncfusion_Blazor_DropDowns_AutoCompleteEvents_2_Filtering) event. You can also filter the text in multiple columns in the data source.
+
+{% highlight cshtml %}
+
+{% include_relative code-snippet/filtering/custom-filtering.razor %}
+
+{% endhighlight %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rXhKsLiprJawVKuX?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+## Suggestion item count
 
 You can specify the filter suggestion item count using the [SuggestionCount](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfAutoComplete-2.html#Syncfusion_Blazor_DropDowns_SfAutoComplete_2_SuggestionCount) property of AutoComplete.
 
 Refer to the following example to restrict the suggestion list item counts as 3.
 
-```cshtml
-@using Syncfusion.Blazor.Data
+{% highlight cshtml %}
 
-<SfAutoComplete TValue="string" TItem="OrderDetails"  Placeholder="Select a customerID" SuggestionCount=3 Query="@RemoteDataQuery" FilterType="Syncfusion.Blazor.DropDowns.FilterType.StartsWith">
-    <SfDataManager Url="https://js.syncfusion.com/demos/ejServices/Wcf/Northwind.svc/Orders" Adaptor="Adaptors.ODataAdaptor" CrossDomain=true></SfDataManager>
-    <AutoCompleteFieldSettings  Value="CustomerID"></AutoCompleteFieldSettings>
-</SfAutoComplete>
+{% include_relative code-snippet/filtering/suggestion-filtering.razor %}
 
-@code {
+{% endhighlight %}
 
-    public Query RemoteDataQuery = new Query().Select(new List<string> { "CustomerID" }).RequiresCount();
-    public class OrderDetails
-    {
-        public int? OrderID { get; set; }
-        public string CustomerID { get; set; }
-        public int? EmployeeID { get; set; }
-        public double? Freight { get; set; }
-        public string ShipCity { get; set; }
-        public bool Verified { get; set; }
-        public DateTime? OrderDate { get; set; }
-        public string ShipName { get; set; }
-        public string ShipCountry { get; set; }
-        public DateTime? ShippedDate { get; set; }
-        public string ShipAddress { get; set; }
-    }
-}
-```
-
-
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNrgMVWTLTmOENnq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Filtering Blazor AutoComplete Items based on Count](./images/blazor-autocomplete-filter-item-count.png)
 
-## Limit the minimum filter character
+## AutoComplete with google search result
 
-You can set the limit for the character count to filter the data on the AutoComplete. This can be done by setting the [MinLength](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfAutoComplete-2.html#Syncfusion_Blazor_DropDowns_SfAutoComplete_2_MinLength) property to AutoComplete.
+The Blazor AutoComplete component offers Google-like search suggestions. This functionality simulates the behavior of conducting a Google search with each keypress, displaying relevant results in the suggestion list.
 
-In the following example, the remote request doesn't fetch the search data until the search key contains three characters.
+{% highlight Razor %}
 
-```cshtml
-@using Syncfusion.Blazor.Data
-@using Syncfusion.Blazor.DropDowns
+{% include_relative code-snippet/filtering/google-search-result.razor %}
 
-<SfAutoComplete TValue="string" TItem="OrderDetails"  Placeholder="Select a customerID" MinLength=3 Query="@RemoteDataQuery" FilterType="Syncfusion.Blazor.DropDowns.FilterType.StartsWith">
-    <SfDataManager Url="https://js.syncfusion.com/demos/ejServices/Wcf/Northwind.svc/Orders" Adaptor="Adaptors.ODataAdaptor" CrossDomain=true></SfDataManager>
-    <AutoCompleteFieldSettings Value="CustomerID"></AutoCompleteFieldSettings>
-</SfAutoComplete>
+{% endhighlight %} 
 
-@code {
-    public Query RemoteDataQuery = new Query().Select(new List<string> { "CustomerID" }).RequiresCount();
-    public class OrderDetails
-    {
-        public int? OrderID { get; set; }
-        public string CustomerID { get; set; }
-        public int? EmployeeID { get; set; }
-        public double? Freight { get; set; }
-        public string ShipCity { get; set; }
-        public bool Verified { get; set; }
-        public DateTime? OrderDate { get; set; }
-        public string ShipName { get; set; }
-        public string ShipCountry { get; set; }
-        public DateTime? ShippedDate { get; set; }
-        public string ShipAddress { get; set; }
-    }
-}
-```
-
-
-
-![Filtering Blazor AutoComplete Items based on Character Count](./images/blazor-autocomplete-filter-based-length.png)
-
-## Case sensitive filtering
-
-Data items can be filtered either with or without case sensitivity using the DataManager. This can be done by setting the [IgnoreCase](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_IgnoreCase) property of AutoComplete.
-
-The following sample depicts how to filter the data with case-sensitive.
-
-```cshtml
-@using Syncfusion.Blazor.Data
-@using Syncfusion.Blazor.DropDowns
-
-<SfAutoComplete TValue="string" TItem="Country" Placeholder="Select a country" IgnoreCase=false DataSource="@LocalData">
-    <AutoCompleteFieldSettings Value="Name"></AutoCompleteFieldSettings>
-</SfAutoComplete>
-
-@code {
-
-    public class Country
-    {
-        public string Name { get; set; }
-        public string Code { get; set; }
-    }
-
-    List<Country> LocalData = new List<Country> {
-        new Country() { Name = "Australia", Code = "AU" },
-        new Country() { Name = "Bermuda", Code = "BM" },
-        new Country() { Name = "Canada", Code = "CA" },
-        new Country() { Name = "Cameroon", Code = "CM" },
-        new Country() { Name = "Denmark", Code = "DK" },
-        new Country() { Name = "France", Code = "FR" },
-        new Country() { Name = "Finland", Code = "FI" },
-        new Country() { Name = "Germany", Code = "DE" },
-        new Country() { Name = "Greenland", Code = "GL" },
-        new Country() { Name = "Hong Kong", Code = "HK" },
-    };
-}
-```
-
-## Custom filtering
-
-The AutoComplete component filter queries can be customized. You can also use your own filter libraries to filter data like Fuzzy search.
-
-```cshtml
-@using Syncfusion.Blazor.Data
-
-<SfAutoComplete TValue="string" @ref="autoObj" TItem="Country" Placeholder="e.g. Australia" AllowFiltering="true">
-    <AutoCompleteFieldSettings Text="Name" Value="Code"></AutoCompleteFieldSettings>
-    <AutoCompleteEvents TValue="string" TItem="Country" Filtering="OnFilter"></AutoCompleteEvents>
-</SfAutoComplete>
-
-@code {
-
-    SfAutoComplete<string, Country> autoObj { get; set; }
-
-    public class Country
-    {
-        public string Name { get; set; }
-
-        public string Code { get; set; }
-    }
-
-    List<Country> Country = new List<Country>
-    {
-        new Country() { Name = "Australia", Code = "AU" },
-        new Country() { Name = "Bermuda", Code = "BM" },
-        new Country() { Name = "Canada", Code = "CA" },
-        new Country() { Name = "Cameroon", Code = "CM" },
-        new Country() { Name = "Denmark", Code = "DK" }
-    };
-
-    private async Task OnFilter(FilteringEventArgs args)
-    {
-        args.PreventDefaultAction = true;
-        var query = new Query().Where(new WhereFilter() { Field = "Name", Operator = "contains", value = args.Text, IgnoreCase = true });
-
-        query = !string.IsNullOrEmpty(args.Text) ? query : new Query();
-
-        await autoObj.FilterAsync(Country, query);
-    }
-}
-```
-
-## Highlighting Search character
+![Blazor AutoComplete with google search result](./images/filtering/blazor_autocomplete_google-search-result.gif)
 
 ### Highlighting Search character using property
 
@@ -223,6 +160,8 @@ You can highlight the search text in the suggested list items of the autocomplet
 {% include_relative code-snippet/filtering/highlight-property.razor %}
 
 {% endhighlight %} 
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZLAMLszLyjsCNWA?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor AutoComplete with highlight property](./images/filtering/blazor_autocomplete_highlight-property.png)
 
@@ -242,3 +181,5 @@ You can highlight the search text in the suggested list items of the autocomplet
 {% endhighlight %} 
 
 ![Blazor AutoComplete with HighLightSearch method](./images/filtering/blazor_dropdown_highLightSearch-method.png)
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rthUsLsphSZYvuHw?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}

@@ -656,7 +656,7 @@ Symbol palette provides supports to show toolip when mouse hovers over any node 
 
 By default, the symbol's ID will be displayed as the tooltip for each symbol in the symbol palette. The following image illustrate how the tooltip displays when mouse hovers over the symbols in symbol palette.
 
-![Default Tooltip in symbol palette](images/DefaultTooltip.gif)
+![Default Tooltip in symbol palette](images/defaulttooltip.png)
 
 ### Custom tooltip for symbols
 
@@ -667,7 +667,7 @@ The following code example illustrates how to provide the custom tooltip for nod
 ```csharp
 @using Syncfusion.Blazor.Diagram
 @using Syncfusion.Blazor.Diagram.SymbolPalette
-
+@using Syncfusion.Blazor.Popups
 <div class="control-section">
     <div style="width:20%">
         <div id="palette-space" class="sb-mobile-palette" style="border: 2px solid #b200ff">
@@ -681,7 +681,13 @@ The following code example illustrates how to provide the custom tooltip for nod
 @code
 {
     SfSymbolPaletteComponent SymbolPalette;
-
+    SymbolMargin SymbolMargin = new SymbolMargin
+    {
+        Left = 15,
+        Right = 15,
+        Top = 15,
+        Bottom = 15
+    };
     //Define palettes collection.
     DiagramObjectCollection<Palette> Palettes = new DiagramObjectCollection<Palette>();
 
@@ -723,7 +729,7 @@ The following code example illustrates how to provide the custom tooltip for nod
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/SymbolPalette/SymbolPaletteTooltip)
 
-![Tooltip in symbol palette](images/SymbolTooltip.gif)
+![Tooltip in symbol palette](images/symboltooltip.png)
 
 ## How to provide different tooltip for Symbol palette and diagram elements.
 
@@ -732,7 +738,7 @@ When you define custom tooltip to the symbol then same tooltip will be displayed
 ```csharp
 @using Syncfusion.Blazor.Diagram
 @using Syncfusion.Blazor.Diagram.SymbolPalette
-
+@using Syncfusion.Blazor.Popups
 <div class="control-section">    
     <div style="width: 100%">
         <div class="sb-mobile-palette-bar">
@@ -765,6 +771,8 @@ When you define custom tooltip to the symbol then same tooltip will be displayed
     SfSymbolPaletteComponent SymbolPalette;
     //Define nodes collection.
     DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    //Define connectors collection.
+    DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
     //Define palettes collection.
     DiagramObjectCollection<Palette> Palettes = new DiagramObjectCollection<Palette>();
     // Defines palette's flow-shape collection.
@@ -819,7 +827,7 @@ When you define custom tooltip to the symbol then same tooltip will be displayed
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/SymbolPalette/SymbolPaletteTooltip)
 
-![Tooltip in symbol palette](images/DifferentTooltip.gif)
+![Tooltip in symbol palette](images/differenttooltip.gif)
 
 ## How to add/remove symbols from palette at runtime
 
@@ -1135,7 +1143,7 @@ While adding more symbols such as nodes and connectors to the palette, define th
     DiagramObjectCollection<NodeBase> PaletteNodes = new DiagramObjectCollection<NodeBase>();
      public void OnNodeCreating(IDiagramObject args)
     { 
-        Node node = obj as Node;
+        Node node = args as Node;
         node.Style.Fill = "#357BD2";
         node.Style.StrokeColor = "White";
         node.Style.Opacity = 1;
@@ -1143,7 +1151,7 @@ While adding more symbols such as nodes and connectors to the palette, define th
 
     public void OnConnectorCreating(IDiagramObject args)
     { 
-        Connector connector = obj as Connector;
+        Connector connector = args as Connector;
         connector.Style.Fill = "black";
         connector.Style.StrokeColor = "black";
         connector.Style.Opacity = 1;
@@ -1339,6 +1347,115 @@ The following code is an example to set a symbol description for symbols in the 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/SymbolPalette/SymbolDescription)
 
 ![Symbol with Description in Blazor Diagram](images/blazor-diagram-symbol-description.png)
+
+## Appearance of symbol description
+
+Customize the appearance of a symbol description in the symbol palette by adjusting the following properties:
+
+[Color](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.TextStyle.html#Syncfusion_Blazor_Diagram_TextStyle_Color): Sets the color of the symbol description text.
+
+[Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ShapeStyle.html#Syncfusion_Blazor_Diagram_ShapeStyle_Fill): Defines the background color of the symbol description.
+
+[FontSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.TextStyle.html#Syncfusion_Blazor_Diagram_TextStyle_FontSize): Specifies the font size of the symbol description text.
+
+[FontFamily](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.TextStyle.html#Syncfusion_Blazor_Diagram_TextStyle_FontFamily): Sets the font family of the symbol description text.
+
+[Bold](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.TextStyle.html#Syncfusion_Blazor_Diagram_TextStyle_Bold): Indicates whether the symbol description text is bold.
+
+[Italic](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.TextStyle.html#Syncfusion_Blazor_Diagram_TextStyle_Italic): Indicates whether the symbol description text is italicized.
+
+[TextDecoration](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.TextStyle.html#Syncfusion_Blazor_Diagram_TextStyle_TextDecoration): Specifies the decoration applied to the symbol description text.
+
+[TextWrapping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.TextStyle.html#Syncfusion_Blazor_Diagram_TextStyle_TextWrapping): Defines the text wrapping behavior of the symbol description text.
+
+[TextOverflow](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.TextStyle.html#Syncfusion_Blazor_Diagram_TextStyle_TextOverflow): Specifies the behavior when the text overflows the available space in the symbol description.
+
+[Margin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SymbolPalette.SymbolDescription.html#Syncfusion_Blazor_Diagram_SymbolPalette_SymbolDescription_Margin): Sets the margin around the symbol description.
+
+By adjusting these properties, you can tailor the appearance of symbol descriptions in the symbol palette to suit your application's requirements.
+
+The following code is an example to change the style of a symbol description for symbols in the palette.
+
+```csharp
+@using Syncfusion.Blazor.Diagram
+@using Syncfusion.Blazor.Diagram.SymbolPalette
+
+<div class="control-section">
+    <div style="width: 30%">
+        <div id="palette-space" class="sb-mobile-palette" style="border: 2px solid #b200ff; height:200px">
+            <SfSymbolPaletteComponent @ref="@SymbolPalette" Height="300px" GetSymbolInfo="GetSymbolInfo"
+                                      Palettes="@Palettes" SymbolHeight="60" SymbolWidth="120">
+            </SfSymbolPaletteComponent>
+        </div>
+    </div>
+</div>
+
+@code
+{
+    SfSymbolPaletteComponent SymbolPalette;
+    //Define palettes collection.
+    DiagramObjectCollection<Palette> Palettes = new DiagramObjectCollection<Palette>();
+    // Defines palette's basic-shape collection.
+    DiagramObjectCollection<NodeBase> PaletteNodes = new DiagramObjectCollection<NodeBase>();
+
+    protected override void OnInitialized()
+    {
+        InitPaletteModel();
+    }
+
+    private void InitPaletteModel()
+    {
+        CreatePaletteNode(NodeBasicShapes.Rectangle, "Rectangle");
+        CreatePaletteNode(NodeBasicShapes.Ellipse, "Ellipse");
+        CreatePaletteNode(NodeBasicShapes.Hexagon, "Hexagon");
+        Palettes = new DiagramObjectCollection<Palette>()
+        {
+           new Palette(){Symbols = PaletteNodes,Title = "Basic Shapes", ID = "Basic Shapes" },
+        };
+    }
+
+    private void CreatePaletteNode(NodeBasicShapes basicShape, string id)
+    {
+        Node node = new Node()
+            {
+                ID = id,
+                Shape = new BasicShape() { Type = NodeShapes.Basic, Shape = basicShape },
+                Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "#6495ED" },
+            };
+        PaletteNodes.Add(node);
+    }
+
+    private SymbolInfo GetSymbolInfo(IDiagramObject symbol)
+    {
+        SymbolInfo SymbolInfo = new SymbolInfo();
+        string text = string.Empty;
+        text = (symbol as NodeBase).ID;
+        SymbolInfo.Width = 75;
+        SymbolInfo.Height = 40;
+        SymbolInfo.Description = new SymbolDescription() { 
+            Text = text,
+            // Customize the style of the symbol description
+            Style = new TextStyle() 
+            { 
+                Bold = true,
+                Italic = true,
+                Color = "red",
+                Fill = "transparent",
+                FontFamily = "Arial",
+                FontSize = 15,
+                TextDecoration = TextDecoration.Underline,
+                TextOverflow = TextOverflow.Ellipsis,
+                TextWrapping = TextWrap.WrapWithOverflow
+            },
+            Margin = new DiagramThickness(){ Top = 10, Bottom = 10 }
+        };
+        return SymbolInfo;
+    }
+}
+```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/SymbolPalette/DescriptionStyle)
+
+![Style of the Symbol Description in Blazor Diagram](images/blazor-diagram-symbol-description-style.png)
 
 ## Palette interaction
 

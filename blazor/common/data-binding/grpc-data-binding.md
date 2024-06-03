@@ -15,14 +15,12 @@ In this topic, you can learn how to consume data from [gRPC](https://grpc.io/) s
 
 The following software are needed,
 
-* Visual Studio 2019 v16.9.0 or later.
-* .NET SDK 5.0 or later.
+* Visual Studio 2022.
+* .NET 6.0 or later.
 
-## Creating Blazor server-side application
+## Creating Blazor webassembly application
 
-Open Visual Studio 2019 and follow the steps in the below documentation to **create the Blazor WebAssembly(Hosted) Application**.
-
-[Create Blazor WebAssembly Application](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-visual-studio)
+You can create a **Blazor WebAssembly App** with **ASP.NET Core Hosted** using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0)
 
 Finally, ensure to select the **ASP.NET Core Hosted** application.
 
@@ -56,6 +54,7 @@ To add a proto file, **Right-click** the **Shared** project, go to **Add**, and 
 Remove the boiler plate code in the file. Copy the following code and paste it into your proto file.
 
 ```c#
+
 syntax = "proto3";
 
 import "google/protobuf/empty.proto";

@@ -11,7 +11,6 @@ documentation: ug
 
 Filtering allows you to view specific or related records based on filter criteria. This can be done in the Gantt Chart component by using the filter menu and toolbar search. To enable filtering in the Gantt Chart component, set the [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_AllowFiltering) to `true`. Menu filtering support can be configured using the `GanttFilterSettings` property and toolbar searching can be configured using the `GanttSearchSettings` property.
 
-## Menu filtering
 
 The [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart) component provides menu-filtering support for each column. You can enable the filter menu by setting the `AllowFiltering` to `true`. The filter menu UI will be rendered based on its column type, which allows you to filter data. You can filter the records with different operators.
 
@@ -34,7 +33,7 @@ The [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gan
         public int TaskId { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
+        public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
@@ -62,7 +61,7 @@ The [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gan
 
 N> The `AllowFiltering` property should be set to `true` to enable the filter menu. Setting the `GanttColumn.AllowFiltering` property to `false` prevents rendering the filter menu for a particular column.
 
-### Filter hierarchy modes
+## Filter hierarchy modes
 
 The Gantt Chart supports a set of filtering modes with the [GanttFilterSettings.HierarchyMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttFilterSettings.html#Syncfusion_Blazor_Gantt_GanttFilterSettings_HierarchyMode) property. The following are the types of filter hierarchy modes available in the Gantt Chart component:
 
@@ -94,7 +93,7 @@ The Gantt Chart supports a set of filtering modes with the [GanttFilterSettings.
         public int TaskId { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
+        public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
@@ -118,7 +117,8 @@ The Gantt Chart supports a set of filtering modes with the [GanttFilterSettings.
 }
 ```
 
-### Initial filter
+
+## Initial filter
 
 To apply the filter at initial rendering, set the filter `Predicate` collections in the [GanttFilterSettings.Columns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttFilterSettings.html#Syncfusion_Blazor_Gantt_GanttFilterSettings_Columns) property.
 
@@ -149,7 +149,7 @@ To apply the filter at initial rendering, set the filter `Predicate` collections
         public int TaskId { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
+        public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
@@ -175,7 +175,7 @@ To apply the filter at initial rendering, set the filter `Predicate` collections
 
 ![Blazor Gantt Chart with Initial Filter](images/blazor-gantt-chart-initial-filter.png)
 
-### Filter operators
+## Filter operators
 
 The filter operator for a column can be defined in the [GanttFilterSettings.Columns.Operator](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttFilterSettings.html#Syncfusion_Blazor_Gantt_GanttFilterSettings_Operators) property.
 
@@ -195,7 +195,7 @@ lessthanorequal |Checks whether the value is less than or equal to the specified
 
 N> By default, the `GanttFilterSettings.Columns.Operator` value is `equal`
 
-### Diacritics
+## Diacritics
 
 By default, the Gantt Chart component ignores the diacritic characters while filtering. To include diacritic characters, set the [GanttFilterSettings.IgnoreAccent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttFilterSettings.html#Syncfusion_Blazor_Gantt_GanttFilterSettings_IgnoreAccent) to true.
 
@@ -221,7 +221,7 @@ In the following sample, type **Perform** in the **TaskName** column to filter d
         public int TaskId { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
+        public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
@@ -247,7 +247,7 @@ In the following sample, type **Perform** in the **TaskName** column to filter d
 
 ![Filtering Diacritic Characters in Blazor Gantt Chart](images/blazor-gantt-chart-filter-diacritic-charater.png)
 
-### Filtering a specific column by method
+## Filtering a specific column by method
 
 You can filter the columns dynamically by using the [FilterByColumnAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_FilterByColumnAsync_System_String_System_String_System_String_) method.
 
@@ -263,9 +263,9 @@ You can filter the columns dynamically by using the [FilterByColumnAsync](https:
 
 @code{
     public SfGantt<TaskData> Gantt;
-    public void Filter()
+    public async void Filter()
     {
-        this.Gantt.FilterByColumnAsync("TaskName","startswith","Iden");
+        await this.Gantt.FilterByColumnAsync("TaskName", "startswith", "Iden", "or", true, false);
     }
     private List<TaskData> TaskCollection { get; set; }
     protected override void OnInitialized()
@@ -278,7 +278,7 @@ You can filter the columns dynamically by using the [FilterByColumnAsync](https:
         public int TaskId { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
+        public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
@@ -304,7 +304,7 @@ You can filter the columns dynamically by using the [FilterByColumnAsync](https:
 
 ![Filtering Specific Column in Blazor Gantt Chart](images/blazor-gantt-chart-filter-column.png)
 
-### Clear filtered columns
+## Clear filtered columns
 
 You can clear all the filtering condition done in the Gantt Chart component by using the [ClearFilteringAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_ClearFilteringAsync) method.
 
@@ -346,7 +346,7 @@ The following code snippet explains the above behavior.
         public int TaskId { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
+        public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }

@@ -45,4 +45,5 @@ When the <kbd>Shift</kbd> + <kbd>Enter</kbd> key is customized with any of the a
 {% endhighlight %}
 {% endtabs %}
 
+
 ![Blazor RichTextEditor shift + enter key confuguration](./images/blazor-richtexteditor-shift-enter-key.png)

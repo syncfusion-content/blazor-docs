@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Configure Syncfusion Blazor Client Resources in Production Environment in Blazor - Syncfusion
+title: Configure Syncfusion Blazor Client Resources in Production
 description: Check out the documentation for Configure Syncfusion Blazor Client Resources in Production Environment in Blazor
 platform: Blazor
 component: Common
@@ -129,7 +129,7 @@ Till the previous version, you will be loading scripts `ej2.min.js` and `ejs-int
 </tr>
 </table>
 
-Still, you can load the resource from CRG by disabling default script loading from static web assets by passing arguments to `AddSyncfusionBlazor` service in `~/Startup.cs` or `~/Program.cs`.
+Still, you can load the resource from CRG by disabling default script loading from static web assets by passing arguments to `AddSyncfusionBlazor` service in the `~/Program.cs` file.
 
 ## DataManager changes
 

@@ -21,7 +21,7 @@ You can create a **Blazor Server App** or **Blazor WebAssembly App** using Visua
 
 ## Install Syncfusion Blazor Maps NuGet in the App
 
-To add Blazor Maps component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install [Syncfusion.Blazor.Maps](https://www.nuget.org/packages/Syncfusion.Blazor.Maps). Alternatively, you can utilize the following package manager command to achieve the same.
+To add **Blazor Maps** component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install [Syncfusion.Blazor.Maps](https://www.nuget.org/packages/Syncfusion.Blazor.Maps). Alternatively, you can utilize the following package manager command to achieve the same.
 
 {% tabs %}
 {% highlight C# tabtitle="Package Manager" %}
@@ -46,7 +46,7 @@ Open **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusio
 {% endhighlight %}
 {% endtabs %}
 
-Now, register the Syncfusion Blazor Service in the **~/Program.cs** file of your Blazor Server App or Blazor WebAssembly App. 
+Now, register the Syncfusion Blazor Service in the **~/Program.cs** file of your Blazor Server App or Blazor WebAssembly App.
 
 {% tabs %}
 {% highlight C# tabtitle="Blazor Server App" hl_lines="3 10" %}
@@ -87,7 +87,7 @@ await builder.Build().RunAsync();
 
 ## Add script resources
 
-The script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Reference the script in the `<head>` of the main page as follows: 
+The script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Reference the script in the `<head>` of the main page as follows:
 
 * For **.NET 6** Blazor Server app, include it in **~/Pages/_Layout.cshtml** file.
 
@@ -101,6 +101,7 @@ The script can be accessed from NuGet through [Static Web Assets](https://blazor
     <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
 </head>
 ```
+
 N> Check out the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic to learn different approaches for adding script references in your Blazor application.
 
 ## Add Blazor Maps component
@@ -137,7 +138,7 @@ You can use the [ShapeData](https://help.syncfusion.com/cr/blazor/Syncfusion.Bla
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor Maps with GeoJSON Layer](./images/blazor-map.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hZBzNsUjWcevzcvR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Maps with GeoJSON Layer](./images/blazor-map.png)" %}
 
 N> The "world-map.json" file contains the World map GeoJSON data.
 
@@ -229,7 +230,7 @@ The color mapping supports customization of shape colors based on the underlying
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor Maps with Color Mapping](./images/blazor-map-color-mapping.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BthTXCgjWGYITQsB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Maps with Color Mapping](./images/blazor-map-color-mapping.png)" %}
 
 N> Refer [code block](#bind-data-source) to know the property value of **SecurityCouncilDetails**.
 
@@ -263,7 +264,7 @@ Label provides information to users about the shapes, and you can enable label t
 
 N> Refer [code block](#bind-data-source) to know the property value of **SecurityCouncilDetails**.
 
-![Blazor Maps with Label](./images/blazor-map-label.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rNLJDiKjMPitIelx?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Maps with Label](./images/blazor-map-label.png)" %}
 
 ## Adding title for Blazor Maps
 
@@ -296,7 +297,7 @@ Title can be added to the Maps to provide quick information to the users about t
 
 N> Refer [code block](#bind-data-source) to know the property value of **SecurityCouncilDetails**.
 
-![Blazor Maps with Title](./images/blazor-map-title.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VthftCKZWbsaohgF?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Maps with Title](./images/blazor-map-title.png)" %}
 
 ## Enable legend
 
@@ -330,7 +331,7 @@ The legend items are used to denote color mapping categories, and you can show l
 
 N> Refer [code block](#bind-data-source) to know the property value of **SecurityCouncilDetails**.
 
-![Blazor Maps with Legend](./images/blazor-map-legend.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LtLzNsKtiFmBLBLC?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Maps with Legend](./images/blazor-map-legend.png)" %}
 
 ## Enable tooltip
 
@@ -365,7 +366,7 @@ The tooltip can be used when you cannot display information using the data label
 
 N> Refer [code block](#bind-data-source) to know the property value of **SecurityCouncilDetails**.
 
-![Blazor Maps with Tooltip](./images/blazor-map-tooltip.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BjBfXWgjCPFtJBKY?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Maps with Tooltip](./images/blazor-map-tooltip.png)" %}
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/Maps).
 

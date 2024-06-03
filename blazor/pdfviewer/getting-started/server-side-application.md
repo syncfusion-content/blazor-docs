@@ -1,11 +1,13 @@
 ---
 layout: post
 title: Getting Started with PDF Viewer in Blazor Server App | Syncfusion
-description: Learn how to getting started with PDF Viewer control in Blazor Server-side application. You can view and comment on PDFs in ease and also can fill fields. 
+description: Learn how to getting started with PDF Viewer control in Blazor Server-side application. You can view and comment on PDFs in ease and also can fill fields.
 platform: Blazor
 control: PDF Viewer
 documentation: ug
 ---
+
+N> Syncfusion recommends using [Blazor PDF Viewer (NextGen)](https://blazor.syncfusion.com/documentation/pdfviewer-2/getting-started/server-side-application) Component which provides fast rendering of pages and improved performance. Also, there is no need of external Web service for processing the files and ease out the deployment complexity. It can be used in Blazor Server, WASM and MAUI applications without any changes.
 
 # Getting Started with Blazor PDF Viewer Component in Blazor Server App
 
@@ -18,12 +20,12 @@ This section briefly explains about how to integrate [Blazor PDF Viewer](https:/
 ## Integrate PDF Viewer into Blazor Server App
 
 1. Start Visual Studio and select **Create a new project**.
-2. For a Blazor Server experience, choose the **Blazor Server App** template. Select **Next**. 
-![Create-new-blazor-server-app](GettingStarted_images/start-window-create-new-project.png)
-3. Provide a **Project Name** and confirm that the *Location* is correct. Select Next. 
-![Set-project-name](GettingStarted_images/Set-project-name.png)
-4. In the **Additional information** dialog, set the target framework. 
-![Set-target-framework](GettingStarted_images/Additional_information.png)
+2. For a Blazor Server experience, choose the **Blazor Server App** template. Select **Next**.
+![Create-new-blazor-server-app](gettingstarted-images/start-window-create-new-project.png)
+3. Provide a **Project Name** and confirm that the *Location* is correct. Select Next.
+![Set-project-name](gettingstarted-images/Set-project-name.png)
+4. In the **Additional information** dialog, set the target framework.
+![Set-target-framework](gettingstarted-images/Additional_information.png)
 
 ## Install Blazor PDF Viewer NuGet package in Blazor Server App
 
@@ -139,7 +141,7 @@ Add the theme style sheet as below in the sever web app.
 {% endhighlight %}
 {% endtabs %}
 
-> Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/documentation/common/adding-script-references) to learn different ways to add script reference in Blazor Application. 
+> Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/documentation/common/adding-script-references) to learn different ways to add script reference in Blazor Application.
 
 > Syncfusion recommends to reference scripts using [Static Web Assets](https://blazor.syncfusion.com/documentation/common/adding-script-references#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/common/adding-script-references#cdn-reference) and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator) by [disabling JavaScript isolation](https://blazor.syncfusion.com/documentation/common/adding-script-references#disable-javascript-isolation) for better loading performance of the Blazor application.
 
@@ -164,6 +166,6 @@ N> If the `DocumentPath` property value is not provided, the PDF Viewer componen
 
 Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to run the application. Then, the Syncfusion `Blazor PDF Viewer` component will be rendered in the default web browser.
 
-![Blazor PDFViewer Component](GettingStarted_images/blazor-pdfviewer.png)
+![Blazor PDFViewer Component](gettingstarted-images/blazor-pdfviewer.png)
 
 >[View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/PDFViewer).

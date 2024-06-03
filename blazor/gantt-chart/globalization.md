@@ -9,29 +9,16 @@ documentation: ug
 
 # Globalization in Blazor Gantt Chart Component
 
-Add **UseRequestLocalization** middle-ware in Configure method in **Startup.cs** file to get browser Culture Info.
+Add **UseRequestLocalization** middle-ware in the **Program.cs** file to get browser Culture Info.
 
-Refer the following code to add configuration in Startup.cs file
+Refer the following code to add configuration in Program.cs file
 
 ```csharp
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Localization;
 
-namespace BlazorApplication
-{
-    public class Startup
-    {
-        ....
-        ....
+app.UseRequestLocalization();
 
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
-        {
-            app.UseRequestLocalization();
-            ....
-            ....
-        }
-    }
-}
 ```
 
 ## Localization
@@ -40,25 +27,26 @@ The **Localization** library allows you to localize default text content of the 
 
 Resource file (**.resx**) is used to translate the static text of the Gantt.
 
-The Resource file is an XML file which contains the strings(key and value pairs) that you want to translate into different languages. You can also refer [Localization](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/localization?view=aspnetcore-3.0) link to know more about how to configure and use localization in the ASP.NET Core application framework.
+The Resource file is an XML file which contains the strings(key and value pairs) that you want to translate into different languages. You can also refer [Localization](https://learn.microsoft.com/en-us/aspnet/core/fundamentals/localization?view=aspnetcore-7.0) link to know more about how to configure and use localization in the ASP.NET Core application framework.
 
-* Add **.resx** file to [Resources](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/localization?view=aspnetcore-3.0#resource-files) folder and enter the key value (Locale Keywords) in the **Name** column and the translated string in the **Value** column as follows.
+* Add **.resx** file to [Resources](https://learn.microsoft.com/en-us/aspnet/core/fundamentals/localization?view=aspnetcore-7.0) folder and enter the key value (Locale Keywords) in the **Name** column and the translated string in the **Value** column as follows.
+
 
 Name |Value (in Deutsch culture)
 -----|-----
 Gantt_EmptyRecord | Keine Datensätze zum Anzeigen
-Gantt_Id | ICH WÜRDE
+Gantt_Id | Id
 Gantt_Name | Name
 Gantt_StartDate | Anfangsdatum
-Gantt_EndDate | Endtermin
+Gantt_EndDate | Enddatum
 Gantt_Duration | Dauer
-Gantt_Progress | Fortschritt  
+Gantt_Progress | Fortschritt
 Gantt_Dependency | Abhängigkeit
 Gantt_Notes | Anmerkungen
 Gantt_BaselineStartDate | Basisstartdatum
-Gantt_BaselineEndDate | Baseline-Enddatum
+Gantt_BaselineEndDate | Basisenddatum
 Gantt_Type | Art
-Gantt_Offset | Offset
+Gantt_Offset | Versatz
 Gantt_ResourceName | Ressourcen
 Gantt_ResourceID | Ressourcen-ID
 Gantt_Day | Tag
@@ -66,7 +54,7 @@ Gantt_Hour | Stunde
 Gantt_Minute | Minute
 Gantt_Days | Tage
 Gantt_Hours | Std
-Gantt_Minutes | Protokoll
+Gantt_Minutes | Minuten
 Gantt_GeneralTab | Allgemeines
 Gantt_CustomTab | Benutzerdefinierte Spalten
 Gantt_WriteNotes | Notizen schreiben
@@ -78,26 +66,26 @@ Gantt_Edit | Bearbeiten
 Gantt_Update | Aktualisieren
 Gantt_Delete | Löschen
 Gantt_Cancel | Stornieren
-Gantt_Search | Suche
+Gantt_Search | Suchen
 Gantt_Task | Aufgabe
 Gantt_Tasks | Aufgaben
 Gantt_ZoomIn | Hineinzoomen
 Gantt_ZoomOut | Rauszoomen
-Gantt_ZoomToFit | Zoom passend
+Gantt_ZoomToFit | Zoomen Sie
 Gantt_ExcelExport | Excel-Export
 Gantt_CsvExport | CSV-Export
 Gantt_ExpandAll | Alle erweitern
 Gantt_CollapseAll | Alles einklappen
 Gantt_NextTimeSpan | Nächste Zeitspanne
-Gantt_PrevTimeSpan | Vorherige Zeitspanne
-Gantt_OkText | In Ordnung
+Gantt_PrevTimeSpan | Vorheriger Zeitraum
+Gantt_OkText | Ok
 Gantt_ConfirmDelete | Möchten Sie den Datensatz wirklich löschen?
-Gantt_From | Von
+Gantt_From | Aus
 Gantt_To | Zu
-Gantt_TaskLink | Task-Link
+Gantt_TaskLink | Aufgabenlink
 Gantt_Lag | Verzögerung
 Gantt_Start | Start
-Gantt_Finish | Fertig
+Gantt_Finish | Beenden
 Gantt_EnterValue | Geben Sie den Wert ein
 Gantt_TaskBeforePredecessor_FS | Sie haben '{0}' verschoben, um vor dem Ende von '{1}' zu beginnen, und die beiden Aufgaben sind miteinander verknüpft. Infolgedessen können die Links nicht beachtet werden. Wählen Sie unten eine Aktion aus, die ausgeführt werden soll
 Gantt_TaskAfterPredecessor_FS | Sie haben '{0}' von '{1}' entfernt und die beiden Aufgaben sind miteinander verknüpft. Infolgedessen können die Links nicht beachtet werden. Wählen Sie unten eine Aktion aus, die ausgeführt werden soll
@@ -110,66 +98,55 @@ Gantt_TaskInformation | Aufgabeninformationen
 Gantt_DeleteTask | Aufgabe löschen
 Gantt_DeleteDependency | Abhängigkeit löschen
 Gantt_Convert | Konvertieren
-Gantt_Save | speichern  
-Gantt_Above | Über
-Gantt_Below | Unten
+Gantt_Save | Speichern
+Gantt_Above | Darüber
+Gantt_Below | Darunter
 Gantt_Child | Kind
 Gantt_Milestone | Meilenstein
 Gantt_ToTask | Zur Aufgabe
 Gantt_ToMilestone | Zum Meilenstein
-Gantt_EventMarkers | Ereignismarker
+Gantt_EventMarkers | Ereignismarkierungen
 Gantt_LeftTaskLabel | Linke Aufgabenbezeichnung
-Gantt_RightTaskLabel | Richtige Aufgabenbezeichnung
-Gantt_TimelineCell | Timeline-Zelle
+Gantt_RightTaskLabel | Rechte Aufgabenbezeichnung
+Gantt_TimelineCell | Zeitleistenzelle
 Gantt_ConfirmPredecessorDelete | Möchten Sie den Abhängigkeitslink wirklich entfernen?
-Gantt_Indent | Einzug
-Gantt_Outdent | Outdent
+Gantt_Indent | Einrücken
+Gantt_Outdent | Ausrücken
 
 ### Blazor server-side
 
 The following examples demonstrate how to enable **Localization** for Gantt in server-side Blazor samples.
 
-* Open the **Startup.cs** file and add the below configuration in the **ConfigureServices** function as follows.
+* Open the **Program.cs** file and add the below configuration as follows.
 
 ```csharp
 using Syncfusion.Blazor;
 using System.Globalization;
 using Microsoft.AspNetCore.Localization;
 
-namespace BlazorApplication
+builder.Services.AddSyncfusionBlazor();
+builder.Services.AddLocalization(options => options.ResourcesPath = "Resources");
+builder.Services.Configure<RequestLocalizationOptions>(options =>
 {
-    public class Startup
-    {
-        ....
-        ....
-        public void ConfigureServices(IServiceCollection services)
-        {
-            ....
-            ....
-            services.AddSyncfusionBlazor();
-            services.AddLocalization(options => options.ResourcesPath = "Resources");
-            services.Configure<RequestLocalizationOptions>(options =>
-            {
-                // define the list of cultures your app will support
-                var supportedCultures = new List<CultureInfo>()
+    // define the list of cultures your app will support
+    var supportedCultures = new List<CultureInfo>()
                 {
                     new CultureInfo("de")
                 };
-                // set the default culture
-                options.DefaultRequestCulture = new RequestCulture("de");
-                options.SupportedCultures = supportedCultures;
-                options.SupportedUICultures = supportedCultures;
-                options.RequestCultureProviders = new List<IRequestCultureProvider>() {
+    // set the default culture
+    options.DefaultRequestCulture = new RequestCulture("de");
+    options.SupportedCultures = supportedCultures;
+    options.SupportedUICultures = supportedCultures;
+    options.RequestCultureProviders = new List<IRequestCultureProvider>() {
                  new QueryStringRequestCultureProvider() // Here, You can also use other localization provider
                 };
-            });
-            services.AddSingleton(typeof(ISyncfusionStringLocalizer), typeof(SampleLocalizer));
-        }
-    }
-}
+});
+builder.Services.AddSingleton(typeof(ISyncfusionStringLocalizer), typeof(SampleLocalizer));
+
 ```
 
-N> Add [UseRequestLocalization()](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/localization?view=aspnetcore-3.0#localization-middleware) middle-ware in Configure method in **Startup.cs** file to get browser Culture Information.
+N> Add [UseRequestLocalization()](https://learn.microsoft.com/en-us/aspnet/core/fundamentals/localization?view=aspnetcore-7.0#localization-middleware) middle-ware in Configure method in **Program.cs** file to get browser Culture Information.
+
 
 * Then, write a **class** by inheriting **ISyncfusionStringLocalizer** interface and override the Manager property to get the resource file details from the application end.
 
@@ -300,7 +277,7 @@ public class SyncfusionLocalizer : ISyncfusionStringLocalizer
     public string GetText(string key)
     {
         return this.ResourceManager.GetString(key);
-    }  
+    }
 
     // To access the resource file and get the exact value for locale key.
 

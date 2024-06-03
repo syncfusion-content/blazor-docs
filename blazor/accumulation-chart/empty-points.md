@@ -39,7 +39,7 @@ Data points that contain **NaN** or **null** value are considered as empty point
     public List<Statistics> StatisticsDetails = new List<Statistics>
 	{
        new Statistics { Browser = "Chrome", Users = 37, Text= "37%", Fill="#498fff"},
-       new Statistics { Browser = "UC Browser", Users = null, Text= "17%", Fill="#ffa060"},
+       new Statistics { Browser = "UC Browser", Users = 17, Text= "17%", Fill="#ffa060"},
        new Statistics { Browser = "iPhone", Users = 19, Text= "19%", Fill="#ff68b6"},
        new Statistics { Browser = "Others", Users = 4 , Text= "4%", Fill="#81e2a1"},
     };
@@ -48,6 +48,7 @@ Data points that contain **NaN** or **null** value are considered as empty point
 ```
 
 ![Empty Points in Blazor Accumulation Chart](images/empty/blazor-accumulation-chart-with-empty-point.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LjLUZQhRVOciwQQa?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Customization
 
@@ -93,10 +94,11 @@ The [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Accumu
 ```
 
 ![Customizing Empty Points in Blazor Accumulation Chart](images/empty/blazor-accumulation-chart-empty-point-customization.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNVqiLMqfySLYAVU?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 N> Refer to the [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore the [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/pie?theme=bootstrap4) to know about the various chart types and how to represent time-dependent data, showing trends at equal intervals.
 
-## See Also
+## See also
 
 * [Data Label](./data-labels)
 * [Tooltip](./tool-tip)

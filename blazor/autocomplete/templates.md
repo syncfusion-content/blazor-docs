@@ -17,48 +17,13 @@ The content of each list item within the [AutoComplete](https://help.syncfusion.
 
 In the following sample, each list item is split into two columns to display relevant data.
 
-```cshtml
-@using Syncfusion.Blazor.Data
-@using Syncfusion.Blazor.DropDowns
+{% highlight cshtml %}
 
-<SfAutoComplete TValue="string" TItem="EmployeeData" Placeholder="Select a customer" DataSource="@Data">
-    <AutoCompleteTemplates TItem="EmployeeData">
-        <ItemTemplate>
-            <span><span class='name'>@((context as EmployeeData).FirstName)</span><span class='country'>@((context as EmployeeData).Country)</span></span>
-        </ItemTemplate>
-    </AutoCompleteTemplates>
-    <AutoCompleteFieldSettings Value="FirstName"></AutoCompleteFieldSettings>
-</SfAutoComplete>
+{% include_relative code-snippet/template/item-template.razor %}
 
-@code {
-    public class EmployeeData
-    {
-        public string FirstName { get; set; }
-        public string Country { get; set; }
-    }
-    List<EmployeeData> Data = new List<EmployeeData>
-{
-        new EmployeeData() { FirstName = "Andrew Fuller",  Country = "England" },
-        new EmployeeData() { FirstName = "Anne Dodsworth", Country = "USA" },
-        new EmployeeData() { FirstName = "Janet Leverling", Country = "USA" },
-        new EmployeeData() { FirstName = "Laura Callahan", Country = "USA"},
-        new EmployeeData() { FirstName = "Margaret Peacock", Country = "USA"},
-        new EmployeeData() { FirstName = "Michael Suyama", Country = "USA", },
-        new EmployeeData() { FirstName = "Nancy Davolio", Country = "USA"},
-        new EmployeeData() { FirstName = "Robert King", Country = "England"},
-        new EmployeeData() { FirstName = "Steven Buchanan", Country = "England"},
-    };
-}
+{% endhighlight %}
 
-<style>
-    .country {
-        right: 15px;
-        position: absolute;
-    }
-</style>
-```
-
-
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VDrUWLCzKpNiSVjy?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor AutoComplete with ItemTemplate](./images/blazor-autocomplete-item-template.png)
 
@@ -68,169 +33,45 @@ The group header title under which appropriate sub-items are categorized can als
 
 In the following sample, employees are grouped according to their country.
 
-```cshtml
-@using Syncfusion.Blazor.Data
-@using Syncfusion.Blazor.DropDowns
+{% highlight cshtml %}
 
-<SfAutoComplete TValue="string" TItem="EmployeeData" Placeholder="Select a customer" DataSource="@Data">
-    <AutoCompleteTemplates TItem="EmployeeData">
-        <GroupTemplate>
-            <span class='country'>@(context.Text)</span>
-        </GroupTemplate>
-    </AutoCompleteTemplates>
-    <AutoCompleteFieldSettings Value="FirstName" GroupBy="Country"></AutoCompleteFieldSettings>
-</SfAutoComplete>
+{% include_relative code-snippet/template/group-template.razor %}
 
-@code {
-    public class EmployeeData
-    {
-        public string FirstName { get; set; }
-        public string Country { get; set; }
-    }
-    List<EmployeeData> Data = new List<EmployeeData>
-{
-        new EmployeeData() { FirstName = "Andrew Fuller",  Country = "England" },
-        new EmployeeData() { FirstName = "Anne Dodsworth", Country = "USA" },
-        new EmployeeData() { FirstName = "Janet Leverling", Country = "USA" },
-        new EmployeeData() { FirstName = "Laura Callahan", Country = "USA"},
-        new EmployeeData() { FirstName = "Margaret Peacock", Country = "USA"},
-        new EmployeeData() { FirstName = "Michael Suyama", Country = "USA", },
-        new EmployeeData() { FirstName = "Nancy Davolio", Country = "USA"},
-        new EmployeeData() { FirstName = "Robert King", Country = "England"},
-        new EmployeeData() { FirstName = "Steven Buchanan", Country = "England"},
-    };
-}
-<style>
-    .group {
-        color: slategrey;
-    }
-</style>
-```
+{% endhighlight %}
 
-
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hjrqiVMzUfBbOtpn?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor AutoComplete with GroupTemplate](./images/blazor-autocomplete-group-template.png)
 
 ## Header template
 
-The header element is shown statically at the top of the suggestion list items within the AutoComplete, and any custom element can be placed as a header element using the `HeaderTemplate` property.
+The header element is shown statically at the top of the suggestion list items within the AutoComplete, and any custom element can be placed as a header element using the [HeaderTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_HeaderTemplate) property.
 
 In the following sample, the list items and its headers are designed and displayed as two columns similar to multiple columns of the grid.
 
-```cshtml
-@using Syncfusion.Blazor.Data
-@using Syncfusion.Blazor.DropDowns
+{% highlight cshtml %}
 
-<SfAutoComplete TValue="string" TItem="EmployeeData" Placeholder="Select a customer" DataSource="@Data">
-    <AutoCompleteTemplates TItem="EmployeeData">
-        <ItemTemplate>
-            <span class='item'><span class='name'>@((context as EmployeeData).FirstName)</span><span class='city'>@((context as EmployeeData).Country)</span></span>
-        </ItemTemplate>
-        <HeaderTemplate>
-            <span class='head'><span class='name'>Name</span><span class='city'>Country</span></span>
-        </HeaderTemplate>
-    </AutoCompleteTemplates>
-    <AutoCompleteFieldSettings Value="FirstName"></AutoCompleteFieldSettings>
-</SfAutoComplete>
+{% include_relative code-snippet/template/header-template.razor %}
 
-@code {
-    public class EmployeeData
-    {
-        public string FirstName { get; set; }
-        public string Country { get; set; }
-    }
-    List<EmployeeData> Data = new List<EmployeeData>
-{
-        new EmployeeData() { FirstName = "Andrew Fuller",  Country = "England" },
-        new EmployeeData() { FirstName = "Anne Dodsworth", Country = "USA" },
-        new EmployeeData() { FirstName = "Janet Leverling", Country = "USA" },
-        new EmployeeData() { FirstName = "Laura Callahan", Country = "USA"},
-        new EmployeeData() { FirstName = "Margaret Peacock", Country = "USA"},
-        new EmployeeData() { FirstName = "Michael Suyama", Country = "USA", },
-        new EmployeeData() { FirstName = "Nancy Davolio", Country = "USA"},
-        new EmployeeData() { FirstName = "Robert King", Country = "England"},
-        new EmployeeData() { FirstName = "Steven Buchanan", Country = "England"},
-    };
-}
+{% endhighlight %}
 
-<style>
-    .head, .item {
-        display: table;
-        width: 100%;
-        margin: auto;
-    }
-
-    .head {
-        height: 40px;
-        font-size: 15px;
-        font-weight: 600;
-    }
-
-    .name, .city {
-        display: table-cell;
-        vertical-align: middle;
-        width: 50%;
-    }
-
-    .head .name {
-        text-indent: 16px;
-    }
-</style>
-```
-
-
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VNVKChCfATUBVrhy?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor AutoComplete with HeaderTemplate](./images/blazor-autocomplete-header-template.png)
 
 ## Footer template
 
-The AutoComplete has options to show a footer element at the bottom of the list items in the suggestion list. Here, you can place any custom element as a footer element using `FooterTemplate` property.
+The AutoComplete has options to show a footer element at the bottom of the list items in the suggestion list. Here, you can place any custom element as a footer element using [FooterTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_FooterTemplate) property.
 
 In the following sample, footer element displays the total number of list items present in the AutoComplete.
 
-```cshtml
-@using Syncfusion.Blazor.Data
-@using Syncfusion.Blazor.DropDowns
+{% highlight cshtml %}
 
-<SfAutoComplete TValue="string" TItem="EmployeeData" DataSource="@Data" Placeholder="Select a customer">
-    <AutoCompleteTemplates TItem="EmployeeData">
-        <FooterTemplate>
-            <span class='footer'>Total list item: 6</span>
-        </FooterTemplate>
-    </AutoCompleteTemplates>
-    <AutoCompleteFieldSettings Value="FirstName"></AutoCompleteFieldSettings>
-</SfAutoComplete>
+{% include_relative code-snippet/template/footer-template.razor %}
 
-@code {
+{% endhighlight %}
 
-    public class EmployeeData
-    {
-        public string FirstName { get; set; }
-        public string Country { get; set; }
-    }
-    List<EmployeeData> Data = new List<EmployeeData>
-{
-        new EmployeeData() { FirstName = "Andrew Fuller",  Country = "England" },
-        new EmployeeData() { FirstName = "Anne Dodsworth", Country = "USA" },
-        new EmployeeData() { FirstName = "Janet Leverling", Country = "USA" },
-        new EmployeeData() { FirstName = "Laura Callahan", Country = "USA"},
-        new EmployeeData() { FirstName = "Margaret Peacock", Country = "USA"},
-        new EmployeeData() { FirstName = "Michael Suyama", Country = "USA", },
-    };
-}
-
-<style>
-    .footer {
-        text-indent: 1.2em;
-        display: block;
-        font-size: 15px;
-        line-height: 40px;
-        border-top: 1px solid #e0e0e0;
-    }
-</style>
-```
-
-
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rNVKChWpApASinEn?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor AutoComplete with FooterTemplate](./images/blazor-autocomplete-footer-template.png)
 
@@ -240,44 +81,13 @@ The AutoComplete is provided with support to custom design the suggestion list c
 
 In the following sample, suggestion list content displays the notification of no data available.
 
-```cshtml
-@using Syncfusion.Blazor.DropDowns
+{% highlight cshtml %}
 
-<SfAutoComplete TValue="string" TItem="Country" Placeholder="Select a customer" DataSource="@Country">
-    <AutoCompleteTemplates TItem="Country">
-        <NoRecordsTemplate>
-            <span class='norecord'> NO DATA AVAILABLE</span>
-        </NoRecordsTemplate>
-    </AutoCompleteTemplates>
-    <AutoCompleteFieldSettings Value="Name"></AutoCompleteFieldSettings>
-</SfAutoComplete>
+{% include_relative code-snippet/template/no-record-template.razor %}
 
-@code {
-    public class EmployeeData
-    {
-        public string Name { get; set; }
-    }
-    public EmployeeData Data = new EmployeeData();
+{% endhighlight %}
 
-    public class Country
-    {
-        public string Name { get; set; }
-
-        public string Code { get; set; }
-    }
-
-    List<Country> Country = new List<Country>
-{
-        new Country() { Name = "Australia", Code = "AU" },
-        new Country() { Name = "Bermuda", Code = "BM" },
-        new Country() { Name = "Canada", Code = "CA" },
-        new Country() { Name = "Cameroon", Code = "CM" },
-        new Country() { Name = "Denmark", Code = "DK" },
-    };
-}
-```
-
-
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VDVUWLCpKTJNdtaV?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor AutoComplete without Data](./images/blazor-autocomplete-without-data.png)
 
@@ -287,38 +97,10 @@ There is also an option to custom design the suggestion list content when the da
 
 In the following sample, when the data fetch request fails, the AutoComplete displays the notification.
 
-```cshtml
-@using Syncfusion.Blazor.Data
-@using Syncfusion.Blazor.DropDowns
+{% highlight cshtml %}
 
-<SfAutoComplete TValue="string" TItem="OrderDetails" Placeholder="Select a name" Query="@RemoteDataQuery">
-    <AutoCompleteTemplates TItem="OrderDetails">
-        <ActionFailureTemplate>
-            <span class='norecord'>Data fetch get fails </span>
-        </ActionFailureTemplate>
-    </AutoCompleteTemplates>
-     <SfDataManager Url="https://js.syncfusion.com/demos/ejServices/Wcf/Northwind.svc/Orders" CrossDomain="true" Adaptor="Syncfusion.Blazor.Adaptors.ODataAdaptor"></SfDataManager>
-     <AutoCompleteFieldSettings Value="CustomerID"></AutoCompleteFieldSettings>
-</SfAutoComplete>
+{% include_relative code-snippet/template/action-failure-template.razor %}
 
-@code {
-    public Query RemoteDataQuery = new Query().Select(new List<string> { "CustomerID" }).Take(6).RequiresCount();
+{% endhighlight %}
 
-    public Syncfusion.Blazor.Lists.SortOrder Sort { get; set; } = Syncfusion.Blazor.Lists.SortOrder.Ascending;
-
-     public class OrderDetails
-    {
-        public int? OrderID { get; set; }
-        public string CustomerID { get; set; }
-        public int? EmployeeID { get; set; }
-        public double? Freight { get; set; }
-        public string ShipCity { get; set; }
-        public bool Verified { get; set; }
-        public DateTime? OrderDate { get; set; }
-        public string ShipName { get; set; }
-        public string ShipCountry { get; set; }
-        public DateTime? ShippedDate { get; set; }
-        public string ShipAddress { get; set; }
-    }
-}
-```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rjLqWLCzUpfolFuq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}

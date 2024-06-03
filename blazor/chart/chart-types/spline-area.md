@@ -51,6 +51,7 @@ documentation: ug
 }
 
 ``` 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/htrqMBBxTHqadpnO?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Spline Area Chart](../images/chart-types-images/blazor-spline-area-chart.png)
 
@@ -104,6 +105,7 @@ The following properties can be used to customize the [Spline Area](https://help
 }
 
 ``` 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hNBAirhnfRzskwny?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Spline Area Chart with Custom Series](../images/chart-types-images/blazor-spline-area-chart-custom-series.png)
 

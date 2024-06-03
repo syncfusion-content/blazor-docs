@@ -13,13 +13,13 @@ This section describes about the Range Selector component's events, that is trig
 
 The Range Selector component supports the following events.
 
-* [Loaded](events/#loaded)
-* [OnPrintCompleted](events/#onprintcompleted)
-* [Changed](events/#changed)
-* [Resized](events/#resized)
-* [LabelRender](events/#labelrender)
-* [TooltipRender](events/#tooltiprender)
-* [SelectorRender](events/#selectorrender)
+* [Loaded](events#loaded)
+* [OnPrintCompleted](events#onprintcompleted)
+* [Changed](events#changed)
+* [Resized](events#resized)
+* [LabelRender](events#labelrender)
+* [TooltipRender](events#tooltiprender)
+* [SelectorRender](events#selectorrender)
 
 ## Loaded
 

@@ -9,7 +9,7 @@ documentation: ug
 
 # Maintain the State Persistence in Blazor QueryBuilder Component
 
-State persistence allows the QueryBuilder to retain the current QueryBuilder state in the browser local storage for state maintenance. This action is handled through the [EnablePersistence](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_EnablePersistence) property which is set to false by default. When it is set to true, the QueryBuilder `Rules` will be retained even after refreshing the page.
+State persistence allows the QueryBuilder to retain the current QueryBuilder state in the browser local storage for state maintenance. This action is handled through the [EnablePersistence](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder-1.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_1_EnablePersistence) property which is set to false by default. When it is set to true, the QueryBuilder `Rules` will be retained even after refreshing the page.
 
 N> The state will be persisted based on ID property. So, it is recommended to explicitly set the ID property for QueryBuilder.
 

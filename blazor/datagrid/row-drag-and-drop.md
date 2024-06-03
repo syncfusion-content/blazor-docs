@@ -9,7 +9,7 @@ documentation: ug
 
 # Row Drag and Drop in Blazor DataGrid Component
 
-The grid row drag and drop allows you to drag and drop grid rows to another grid or custom component. To enable row drag and drop, set the [AllowRowDragAndDrop](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowRowDragAndDrop) to true. The target component where the grid rows are to be dropped can be set by using the [TargetID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridRowDropSettings.html#Syncfusion_Blazor_Grids_GridRowDropSettings_TargetID).
+The grid row drag and drop feature allows you to move grid rows within the same grid or to another grid or custom component using the drag icon. To enable row drag and drop, set the [AllowRowDragAndDrop](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowRowDragAndDrop) to **true**. The target component where the grid rows are to be dropped can be set by using the [TargetID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridRowDropSettings.html#Syncfusion_Blazor_Grids_GridRowDropSettings_TargetID).
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -134,4 +134,6 @@ N> For performing row drag and drop action on the datagrid, any one of the colum
 
 * Multiple rows can be drag and drop in the row selections basis.
 * Single row is able to drag and drop in same grid without enable the row selection.
-* Row drag and drop feature is not having built in support with sorting, filtering, hierarchy grid, row template and grouping features of grid.
+* Row drag and drop feature is not having built in support with sorting, filtering, hierarchy grid and row template features of grid.
+* The row drag-and-drop feature for grouping currently lacks support for lazyload grouping.
+* Drag and drop within the same group key is not supported. DataGrid does not support the drag-and-drop functionality for multiple rows originating from different grouped collections.

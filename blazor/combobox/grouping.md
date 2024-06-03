@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Grouping in Blazor ComboBox Component | Syncfusion
-description: Checkout and learn here all about Grouping in the Syncfusion Blazor ComboBox component and much more.
+description: Checkout and learn here all about grouping support in Syncfusion Blazor ComboBox component, it's elements and more.
 platform: Blazor
 control: ComboBox
 documentation: ug
@@ -53,6 +53,6 @@ In the following sample, vegetables are grouped by category using the `GroupBy` 
     }
 }
 ```
-
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BXrAsLhwUmUFCjYX?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Grouping in Blazor ComboBox](./images/blazor-combobox-grouping.png)

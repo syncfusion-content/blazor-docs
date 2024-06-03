@@ -11,7 +11,7 @@ documentation: ug
 
 This section explains how to add Syncfusion Blazor component on an existing ASP.NET Core MVC application.
 
-1. Open your existing ASP.NET Core MVC application on Visual Studio 2019.
+1. Open your existing ASP.NET Core MVC application on Visual Studio 2022.
 
 2. Right-click on the project and select `Manage NuGet Package`.
 
@@ -21,33 +21,24 @@ This section explains how to add Syncfusion Blazor component on an existing ASP.
 
     ![Installing Syncfusion Blazor Grid NuGet package](images/asp-mvc-install-nuget.png)
 
-4. Register Blazor server service and Syncfusion Blazor service in the `ConfigureServices` method on `~/Startup.cs` file.
+4. Register Blazor server service and Syncfusion Blazor service in the `~/Program.cs` file.
 
     ```c#
     using Syncfusion.Blazor;
+    ....
+    builder.Services.AddServerSideBlazor();
+    builder.Services.AddSyncfusionBlazor();
 
-    public void ConfigureServices(IServiceCollection services)
-    {
-        ....
-        ....
-        services.AddServerSideBlazor();
-        services.AddSyncfusionBlazor();
-    }
     ```
 
-5. Add BlazorHub endpoint in the `Configure` method on `~/Startup.cs` file.
+5. Add BlazorHub in the `~/Program.cs` file.
 
     ```c#
-    public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
-    {
-        app.UseEndpoints(endpoints =>
-        {
-            ....
-            ....
-            // Map Blazor SignalR hub.
-            endpoints.MapBlazorHub();
-        });
-    }
+    // Map your endpoints here...
+
+    app.MapRazorPages();
+    app.MapBlazorHub();
+    app.MapFallbackToPage("/_Host");
     ```
 
 6. Create `~/_Imports.razor` file in the root of your application and add the below namespaces.
@@ -135,5 +126,5 @@ This section explains how to add Syncfusion Blazor component on an existing ASP.
 
 ## See Also
 
-* [Component Tag Helper in ASP.NET Core](https://docs.microsoft.com/en-us/aspnet/core/mvc/views/tag-helpers/built-in/component-tag-helper?view=aspnetcore-5.0)
+* [Component Tag Helper in ASP.NET Core](https://learn.microsoft.com/en-us/aspnet/core/mvc/views/tag-helpers/built-in/component-tag-helper?view=aspnetcore-7.0)
 * [Integrating Blazor Components on Existing ASP.NET Core MVC apps](https://devblogs.microsoft.com/premier-developer/integrating-blazor-components-into-existing-asp-net-core-mvc-apps/)

@@ -47,7 +47,7 @@ To specify the [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
         public int TaskId { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
+        public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
@@ -106,7 +106,7 @@ Specify the [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gan
         public int TaskId { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
+        public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
@@ -153,7 +153,7 @@ Taskbar that is not visible in the viewport can be auto scrolled to make it visi
         public int TaskId { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
+        public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
@@ -233,11 +233,9 @@ RowIndex : <input @bind-value = "@RowIndex" />
         {
             string[] Names = new string[] { "VINET", "TOMSP", "HANAR", "VICTE", "SUPRD", "HANAR", "CHOPS", "RICSU", "WELLI", "HILAA", "ERNSH", "CENTC", "OTTIK", "QUEDE", "RATTC", "ERNSH", "FOLKO", "BLONP", "WARTH", "FRANK", "GROSR", "WHITC", "WARTH", "SPLIR", "RATTC", "QUICK", "VINET", "MAGAA", "TORTU", "MORGK", "BERGS", "LEHMS", "BERGS", "ROMEY", "ROMEY", "LILAS", "LEHMS", "QUICK", "QUICK", "RICAR", "REGGC", "BSBEV", "COMMI", "QUEDE", "TRADH", "TORTU", "RATTC", "VINET", "LILAS", "BLONP", "HUNGO", "RICAR", "MAGAA", "WANDK", "SUPRD", "GODOS", "TORTU", "OLDWO", "ROMEY", "LONEP", "ANATR", "HUNGO", "THEBI", "DUMON", "WANDK", "QUICK", "RATTC", "ISLAT", "RATTC", "LONEP", "ISLAT", "TORTU", "WARTH", "ISLAT", "PERIC", "KOENE", "SAVEA", "KOENE", "BOLID", "FOLKO", "FURIB", "SPLIR", "LILAS", "BONAP", "MEREP", "WARTH", "VICTE", "HUNGO", "PRINI", "FRANK", "OLDWO", "MEREP", "BONAP", "SIMOB", "FRANK", "LEHMS", "WHITC", "QUICK", "RATTC", "FAMIA" };
             List<TaskData> DataCollection = new List<TaskData>();
-            Random random = new Random();
             var x = 0;
             for (var i = 1; i <= 100; i++)
             {
-                var name = random.Next(0, 100);
                 TaskData Parent = new TaskData()
                 {
                     ProjectId = ++x,
@@ -245,14 +243,13 @@ RowIndex : <input @bind-value = "@RowIndex" />
                     ProjectStartDate = new DateTime(2022, 1, 9),
                     ProjectEndDate = new DateTime(2022, 1, 13),
                     ProjectDuration = "10",
-                    ProjectProgress = random.Next(100),
+                    ProjectProgress =  x + 20,
                     ParentId = null,
                     Predecessor = null,
                 };
                 DataCollection.Add(Parent);
                 for (var j = 1; j <= 50; j++)
                 {
-                    var childName = random.Next(0, 100);
                     DataCollection.Add(new TaskData()
                     {
                         ProjectId = ++x,
@@ -260,21 +257,21 @@ RowIndex : <input @bind-value = "@RowIndex" />
                         ProjectStartDate = new DateTime(2022, 1, 9),
                         ProjectEndDate = new DateTime(2022, 1, 13),
                         ProjectDuration = "10",
-                        ProjectProgress = random.Next(100),
+                        ProjectProgress = x + 20,
                         ParentId = Parent.ProjectId,
                         Predecessor = i + "FS",
-                        Field1 = Names[name],
-                        FIELD2 = 1967 + random.Next(0, 10),
-                        FIELD3 = 395 + random.Next(100, 600),
-                        FIELD4 = 87 + random.Next(50, 250),
-                        FIELD5 = 410 + random.Next(100, 600),
-                        FIELD6 = 67 + random.Next(50, 250),
-                        Field7 = (int)Math.Floor(random.NextDouble() * 100),
-                        Field8 = (int)Math.Floor(random.NextDouble() * 10),
-                        Field9 = (int)Math.Floor(random.NextDouble() * 10),
-                        Field10 = (int)Math.Floor(random.NextDouble() * 100),
-                        Field11 = (int)Math.Floor(random.NextDouble() * 100),
-                        Field12 = (int)Math.Floor(random.NextDouble() * 1000),
+                        Field1 = Names[x % Names.Length],
+                        FIELD2 = 1967 + x + 10,
+                        FIELD3 = 395 + x + 10,
+                        FIELD4 = 87 + x + 10,
+                        FIELD5 = 410 + x + 10,
+                        FIELD6 = 67 + x + 10,
+                        Field7 = (x + 10 * 100),
+                        Field8 = (x + 10 * 10),
+                        Field9 = (x + 10 * 10),
+                        Field10 = (x + 10 * 100),
+                        Field11 = (x + 10 * 100),
+                        Field12 = (x + 10 * 1000),
                     });
                 }
             }
@@ -285,8 +282,8 @@ RowIndex : <input @bind-value = "@RowIndex" />
     {
         public int ProjectId { get; set; }
         public string ProjectName { get; set; }
-        public DateTime ProjectStartDate { get; set; }
-        public DateTime ProjectEndDate { get; set; }
+        public DateTime? ProjectStartDate { get; set; }
+        public DateTime? ProjectEndDate { get; set; }
         public string ProjectDuration { get; set; }
         public int ProjectProgress { get; set; }
         public int? ParentId { get; set; }

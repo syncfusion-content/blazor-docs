@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Diagram Methods in Blazor Diagram Component | Syncfusion
-description: Checkout and learn here all about Diagram Methods in Syncfusion Blazor Diagram component and much more.
+description: Checkout and learn here all about diagram methods support in Syncfusion Blazor Diagram component, it's elements and more.
 platform: Blazor
 control: DiagramComponent
 documentation: ug
@@ -222,7 +222,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Methods/Clear)
 
-![Diagram Clear](images/Clear.gif)
+![Blazor Diagram clear](images/blazor-diagram-clear.gif)
 
 ## How to delete the diagram elements
 
@@ -430,7 +430,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Methods/ResetZoom)
 
-![Diagram Reset](images/ResetZoom-Method.gif)
+![Blazor Diagram reset zoom methos](images/blazor-diagram-reset-zoom-method.gif)
 
 ## How to clear the selection
   The [ClearSelection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_ClearSelection) method is used to clear the selected nodes/connectors in the diagram. 
@@ -949,7 +949,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Methods/GetCustomCursor)
 
 ## BeginUpdate and EndUpdate
- [Beginupdate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_BeginUpdate) prevents visual updates to the diagram until the EndUpdate() method is called. [Endupdate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_EndUpdate) means that the diagram is unlocked following a call to the BeginUpdate(Boolean) method, resulting in an immediate visual update.
+ [BeginUpdate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_BeginUpdate) prevents visual updates to the diagram until the EndUpdate() method is called. [EndUpdate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_EndUpdate) means that the diagram is unlocked following a call to the BeginUpdate(Boolean) method, resulting in an immediate visual update.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -1414,7 +1414,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
  You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Methods/GetCustomTool)
 
 
- ## How to zoom and pan the diagram
+## How to zoom and pan the diagram
 
 [Zoom](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Zoom_System_Double_Syncfusion_Blazor_Diagram_DiagramPoint_) allows to user to zoom in and zoom out the diagram. [Pan](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Pan_System_Double_System_Double_Syncfusion_Blazor_Diagram_DiagramPoint_) is used to pan the diagram to the horizontal and vertical offset.
 
@@ -1579,7 +1579,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
         new MindMapDetails() { Id= "10", Label= "Ideas", ParentId ="5", Branch = "subRight" },
         new MindMapDetails() { Id= "11", Label= "Engagement", ParentId ="5", Branch = "subRight" },
     };
-    private void RefreshDataSource()
+    private async Task RefreshDataSource()
     {
         DataSource = new List<object>()
     {
@@ -1589,7 +1589,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
         new MindMapDetails() { Id= "4",  Label="Sessions", ParentId ="2", Branch = "subRight" },
         new MindMapDetails() { Id= "5",  Label="Complementing", ParentId ="2", Branch = "subRight" },
         };
-        Diagram.RefreshDataSource();
+        await Diagram.RefreshDataSource();
     }
 }
 ```

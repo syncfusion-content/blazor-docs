@@ -10,18 +10,16 @@ platform: Blazor
 
 # How to Bind Data Using Dapper and Perform CRUD Operations
 
-In this section, you can learn how to consume data from a database using [Dapper](https://github.com/DapperLib/Dapper), bind it to a Syncfusion Blazor Component, and perform CRUD operations.
+In this section, you can learn how to consume data from a database using [Dapper](https://github.com/DapperLib/Dapper), bind it to a `Syncfusion Blazor DataGrid` Component, and perform CRUD operations.
 
 ## Prerequisite software
 
-* Visual Studio 2019.
+* Visual Studio 2022.
 * MS SQL Server.
 
-## Creating Blazor server-side application
+## Creating Blazor application
 
-Open Visual Studio 2019 and follow the steps in the below documentation to create the Blazor Server Application.
-
-[Creating Blazor Server Application](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio)
+* Open Visual Studio and follow the steps in the [documentation](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio) to create the Blazor Server Application.
 
 ## Creating the database
 
@@ -54,23 +52,51 @@ Run the following commands in the Package Manager Console.
 * The following command enable us to use Dapper in our application.
 
     ```
-    Install-Package Dapper -Version 2.0.90
+    Install-Package Dapper -Version 2.1.24
+
     ```
 
 * The following command provide database access classes such as  `SqlConnection`, `SqlCommand`, etc. Also provides data provider for MS SQL Server.
 
     ```
-    Install-Package Microsoft.Data.SqlClient -Version 2.1.3
+    Install-Package Microsoft.Data.SqlClient -Version 5.1.2
     ```
 
-Most of the ORMs provide scaffolding options to create model classes. Dapper doesn’t have any in-built scaffolding option. So, we need to create model class manually. Here, we are creating a class named `Bug.cs` in the `Data` folder as follows.
+Most of the ORMs provide scaffolding options to create model classes. Dapper doesn’t have any in-built scaffolding option. So, you need to create model class manually. Here, you are creating a class named `Bug.cs` in the `Data` folder as follows.
+
+```c#
+
+namespace {Your namespace}
+{
+    public class Bug
+    {
+        public int Id { get; set; }
+
+        public string Summary { get; set; }
+
+        public string BugPriority { get; set; }
+
+        public string Assignee { get; set; }
+
+        public string BugStatus { get; set; }
+    }
+}
+
+```
 
 ![Bug Model Class in Blazor](../images/bug-model-class.png)
 
 ## Creating data access layer
 
-Before creating a data access layer, we need to set the connection string of our database in the `appsettings.json` file as follows.
+Before creating a data access layer, you need to set the connection string of our database in the `appsettings.json` file as follows.
 
+```cshtml
+
+"ConnectionStrings": {
+  "BugTrackerDatabase": "Server= {Your Server Name};Database=BugTracker;Integrated Security=True"
+}
+
+```
 ![Connection String in appsettings](../images/connection-string-appsettings.png)
 
 Now, right-click the `Data` folder and select `Class` to create a new class named `BugDataAccessLayer.cs`. Replace this class with the following code, which contains code to handle CRUD in the `Bugs` table.
@@ -145,45 +171,30 @@ public class BugDataAccessLayer
 
 {% endhighlight %}
 
-Now, register `BugDataAccessLayer` as scoped service in the `Startup.cs` file in .NET 5 and .NET 3.X application, in `Program.cs` file in .NET 6 application as follows.
+Now, register `BugDataAccessLayer` as scoped service in the `Program.cs` file as follows.
 
-{% tabs %}
-{% highlight c# tabtitle=".NET 6 & .NET 7 (~/Program.cs)" %}
-
-builder.Services.AddRazorPages();
-builder.Services.AddServerSideBlazor();
-builder.Services.AddSingleton<WeatherForecastService>();
+```cshtml
+....
 builder.Services.AddScoped<BugDataAccessLayer>();
 
-{% endhighlight %}
-{% highlight c# tabtitle=".NET 5 and .NET 3.X (~/Startup.cs)" %}
+```
 
-public void ConfigureServices(IServiceCollection services)
-{
-    services.AddRazorPages();
-    services.AddServerSideBlazor();
-    services.AddSingleton<WeatherForecastService>();
-    services.AddScoped<BugDataAccessLayer>();
-}
+## Adding Syncfusion Blazor DataGrid component
+
+To add **Blazor DataGrid** component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/).
+
+Alternatively, you can utilize the following package manager command to achieve the same.
+
+{% tabs %}
+{% highlight C# tabtitle="Package Manager" %}
+
+Install-Package Syncfusion.Blazor.Grid -Version {{ site.releaseversion }}
+Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
 
 {% endhighlight %}
 {% endtabs %}
 
-## Adding Syncfusion Blazor components Package
-
-We are going to explain this data binding process (using dapper) using the Syncfusion DataGrid component and perform CRUD operations in it.
-
-So, we are going to install the packages required to use the Syncfusion Blazor components. Now, right-click `Dependencies` in the project and select `Manage NuGet Packages`.
-
-![Manage NuGet packages in Blazor](../images/manage-nuget-packages.png)
-
-Now, in the `Browse` tab, search and install the `Syncfusion.Blazor.Grid` NuGet package.
-
-![Install Syncfusion Blazor Grid NuGet](../images/install-blazor-grid-nuget.png)
-
-N> For this demo, `Syncfusion.Blazor`(19.1.0.65) NuGet package is used.  A new `Syncfusion.Blazor` NuGet package with new enhancement will be released in our every-week release and main release. So, you can check and update to the [latest versions](https://www.nuget.org/packages/Syncfusion.Blazor).
-
-## Adding Syncfusion Blazor DataGrid component
+N> Syncfusion Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for available NuGet packages list with component details.
 
 Open `_Import.razor` file and add the following namespaces which are required to use the Syncfusion Blazor DataGrid Component in this application.
 
@@ -195,31 +206,17 @@ Open `_Import.razor` file and add the following namespaces which are required to
 
 {% endhighlight %}
 
-Open `Startup.cs` file in .NET 5 and .NET 3.X applications, `Program.cs` file in .NET 6 application and register the Syncfusion service in the `ConfigureServices` method as follows.
+Open `Program.cs` file in your application and register the Syncfusion service.
 
-{% tabs %}
-{% highlight c# tabtitle=".NET 6 & .NET 7 (~/Program.cs)" %}
+```cshtml
 
-builder.Services.AddRazorPages();
-builder.Services.AddServerSideBlazor();
-builder.Services.AddSingleton<WeatherForecastService>();
-builder.Services.AddScoped<BugDataAccessLayer>();
+....
+using Syncfusion.Blazor;
+....
 builder.Services.AddSyncfusionBlazor();
+....
 
-{% endhighlight %}
-{% highlight c# tabtitle=".NET 5 and .NET 3.X (~/Startup.cs)" %}
-
-public void ConfigureServices(IServiceCollection services)
-{
-    services.AddRazorPages();
-    services.AddServerSideBlazor();
-    services.AddSingleton<WeatherForecastService>();
-    services.AddScoped<BugDataAccessLayer>();
-    services.AddSyncfusionBlazor();
-}
-
-{% endhighlight %}
-{% endtabs %}
+```
 
 Syncfusion Blazor provides different themes. They are:
 
@@ -229,15 +226,35 @@ Syncfusion Blazor provides different themes. They are:
 * Bootstrap
 * High Contrast
 
-In this demo application, the Bootstrap4 theme will be used. To add the theme, open the `Pages/_Host.cshtml` file and add the following CSS reference code.
+In this demo application, the Bootstrap4 theme will be used.
+
+* For **.NET 7** app, add theme in the `<head>` of the **~/Pages/_Host.cshtml** file.
+
+* For **.NET 6** app, add theme in the `<head>` of the **~/Pages/_Layout.cshtml** file.
+
 
 {% highlight cshtml %}
-
-<link href="_content/Syncfusion.Blazor.Themes/ bootstrap4.css" rel="stylesheet" />
+<head>
+    ....
+    <link href="_content/Syncfusion.Blazor.Themes/bootstrap4.css" rel="stylesheet" />
+</head>
 
 {% endhighlight %}
 
-In previous steps, we have successfully configured the Syncfusion Blazor package in the application. Now, we can add the DataGrid Component to the `Index.razor`.
+Also, include the script reference in the following files
+
+* For **.NET 7** app, add script reference at end of the `<body>` section of the **~/Pages/_Host.cshtml** file.
+
+* For **.NET 6** app, add script reference at end of the `<body>` section of the **~/Pages/_Layout.cshtml** file.
+
+{% highlight cshtml %}
+<body>
+    ....
+    <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
+</body>
+{% endhighlight %}
+
+In previous steps, you have successfully configured the Syncfusion Blazor package in the application. Now, you can add the DataGrid Component to the `index.razor` page of your app.
 
 {% highlight cshtml %}
 
@@ -254,7 +271,7 @@ The following points must be considered for creating a custom adaptor.
 
 * Our custom adaptor must extend the `DataAdaptor` class.
 * Override available CRUD methods to handle data querying and manipulation.
-* Register our custom adaptor class as a service in the `Startup.cs`.
+* Register our custom adaptor class as a service in the `Program.cs`.
 
 Now, create a new class named `BugDataAdaptor.cs` under the `Data` folder and replace the following code in that class.
 
@@ -277,41 +294,27 @@ public class BugDataAdaptor: DataAdaptor
     {
         List<Bug> bugs = await _dataLayer.GetBugsAsync();
         int count = await _dataLayer.GetBugCountAsync();
-        return dataManagerRequest.RequiresCounts ? new DataResult() { Result = bugs, Count = count } : count;
+        return dataManagerRequest.RequiresCounts ? new DataResult() { Result = bugs, Count = count } : (object)bugs;
     }
 }
 
 {% endhighlight %}
 
-Now, Open the `Startup.cs` file in .NET 5 and .NET 3.X application, in `Program.cs` file in .NET 6 application and register the `BugDataAdaptor` class in the `ConfigureServices` method as follows.
+Now, Open the `Program.cs` file in the application and register the `BugDataAdaptor` class.
 
 {% tabs %}
-{% highlight c# tabtitle=".NET 6 & .NET 7 (~/Program.cs)" %}
+{% highlight c# tabtitle="~/Program.cs" hl_lines="4"%}
 
-builder.Services.AddRazorPages();
-builder.Services.AddServerSideBlazor();
-builder.Services.AddSingleton<WeatherForecastService>();
+....
 builder.Services.AddScoped<BugDataAccessLayer>();
 builder.Services.AddSyncfusionBlazor();
 builder.Services.AddScoped<BugDataAdaptor>();
-
-{% endhighlight %}
-{% highlight c# tabtitle=".NET 5 and .NET 3.X (~/Startup.cs)" %}
-
-public void ConfigureServices(IServiceCollection services)
-{
-    services.AddRazorPages();
-    services.AddServerSideBlazor();
-    services.AddSingleton<WeatherForecastService>();
-    services.AddScoped<BugDataAccessLayer>();
-    services.AddSyncfusionBlazor();
-    services.AddScoped<BugDataAdaptor>();
-}
+.....
 
 {% endhighlight %}
 {% endtabs %}
 
-Now, we have added `SfDataManager` in Grid for binding the data to the Grid and added column definition.
+Now, you need to add the `SfDataManager` in Grid for binding the data to the Grid and added column definition.
 
 In the following code example,
 
@@ -327,7 +330,7 @@ In the following code example,
 
 {% endhighlight %}
 
-Grid columns can be defined using the [GridColumn](https://blazor.syncfusion.com/documentation/datagrid/columns) component. We are going to create columns using the following code, let us see the properties used and their usage.
+Grid columns can be defined using the [GridColumn](https://blazor.syncfusion.com/documentation/datagrid/columns) component. Next, you can create columns using the following code. Let's explore the properties used and their applications.
 
 {% highlight razor %}
 
@@ -352,7 +355,7 @@ Now, the DataGrid will look like this while running the application. The display
 
 You can enable editing in the grid component using the [GridEditSettings](https://blazor.syncfusion.com/documentation/datagrid/editing) component. Grid provides various modes of editing options such as Inline/Normal, Dialog, and Batch editing. Refer to the following documentation for your reference.
 
-[Grid Editing in Blazor](https://blazor.syncfusion.com/documentation/datagrid/editing/#editing)
+[Grid Editing in Blazor](https://blazor.syncfusion.com/documentation/datagrid/editing#editing)
 
 N> Normal editing is the default edit mode for the DataGrid component. You need to set the IsPrimaryKey property of Column as True for a particular column, whose value is a unique value for editing purposes.
 
@@ -374,7 +377,7 @@ Here, we are using inline edit mode and the [Toolbar](https://blazor.syncfusion.
 
 {% endhighlight %}
 
-We have already created CRUD operations method in the data access layer section itself. Now, we are going to call those methods while performing CRUD actions in DataGrid.
+You have already created CRUD operations methods in the data access layer section itself. Now, you are going to call those methods while performing CRUD actions in DataGrid.
 
 ## Insert a row
 
@@ -437,7 +440,7 @@ public override async Task<object> RemoveAsync(DataManager dataManager, object p
 To delete a row, select any row and click the `Delete` toolbar button. Clicking the `Delete` toolbar button will call the `RemoveAsync` method of our `BugDataAdaptor` to update the record in the `Bug` table.
 
 N> Find the sample from this [Github](https://github.com/SyncfusionExamples/blazor-datagrid-dapper-crud) location.
-    
+
 ## See also
-    
+
 * [Create Blazor CRUD Application with PostgreSQL and Dapper](https://www.syncfusion.com/blogs/post/create-blazor-crud-application-with-postgresql-and-dapper.aspx)

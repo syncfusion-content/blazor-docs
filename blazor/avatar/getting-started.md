@@ -24,11 +24,11 @@ To get start quickly with Avatar component using Blazor, you can check on this v
 
 ## Create a new Blazor App in Visual Studio
 
-You can create a **Blazor Server App** or **Blazor WebAssembly App** using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0) or the [Syncfusion Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
+You can create a **Blazor Server App** or **Blazor WebAssembly App** using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0&pivots=windows) or the [Syncfusion Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
 
-## Install Syncfusion Blazor Theme NuGet in the App
+## Install Syncfusion Blazor Themes NuGet in the App
 
-To add Blazor Avatar component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/). Alternatively, you can utilize the following package manager command to achieve the same.
+To add **Blazor Avatar** component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/). Alternatively, you can utilize the following package manager command to achieve the same.
 
 {% tabs %}
 {% highlight C# tabtitle="Package Manager" %}
@@ -42,7 +42,7 @@ N> Syncfusion Blazor components are available in [nuget.org](https://www.nuget.o
 
 ## Add Stylesheet
 
-The theme stylesheet can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Reference the stylesheet in the `<head>` of the main page as follows: 
+The theme stylesheet can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Reference the stylesheet in the `<head>` of the main page as follows:
 
 * For **.NET 6** Blazor Server app, include it in **~/Pages/_Layout.cshtml** file.
 
@@ -80,41 +80,9 @@ Add the Syncfusion Blazor Avatar component in the **~/Pages/Index.razor** file.
 <!-- xLarge Avatar-->
 <div class="e-avatar e-avatar-xlarge image"></div>
 
-<style>
-
-    .e-avatar.e-avatar-xsmall {
-        font-size: 10px;
-        height: 24px;
-        line-height: 16px;
-        width: 24px;
-    }
-
-    .e-avatar.e-avatar-small {
-        font-size: 12px;
-        height: 32px;
-        line-height: 18px;
-        width: 32px;
-    }
-
-    .e-avatar.e-avatar-large {
-        font-size: 20px;
-        height: 48px;
-        line-height: 28px;
-        width: 48px;
-    }
-
-    .e-avatar.e-avatar-xlarge {
-        font-size: 24px;
-        height: 56px;
-        line-height: 28px;
-        width: 56px;
-    }
-
-</style>
-
 {% endhighlight %}
 {% endtabs %}
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion Blazor Avatar component in your default web browser.
 
-![Blazor Avatar Component](./images/blazor-avatar-component.PNG)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rNBptBtvgkjMdjrE?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "![Blazor Avatar Component](./images/blazor-avatar-component.png)" %}

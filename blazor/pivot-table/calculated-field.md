@@ -14,7 +14,7 @@ Allows end user to create a new calculated field in the pivot table, based on th
 Calculated field can also be included in the pivot table through code behind using the [PivotViewCalculatedFieldsSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewCalculatedFieldSetting.html) class. The required properties to create a new calculate field are:
 * [Name](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewCalculatedFieldSetting.html#Syncfusion_Blazor_PivotView_PivotViewCalculatedFieldSetting_Name): It allows to indicate the calculated field with a unique name.
 * [Formula](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewCalculatedFieldSetting.html#Syncfusion_Blazor_PivotView_PivotViewCalculatedFieldSetting_Formula): It allows to set the formula.
-* [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.FormatSettingsModel.html#Syncfusion_Blazor_PivotView_FormatSettingsModel_Format):  It helps to set the number format for the resultant value.
+* [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.FormatSettings.html#Syncfusion_Blazor_PivotView_FormatSettings_Format):  It helps to set the number format for the resultant value.
 
 N> The calculated field is applicable only for value fields. Also, the calculated field created through the code behind will be automatically listed in the UI dialog as well.
 
@@ -167,7 +167,7 @@ N> By default, **None** will be selected from the dropdown.
 
 In addition, you can specify the desired custom formats by selecting the **Custom** option from the "Format" dropdown.
 
-![Applying custom format through Blazor PivotTable calculated field dialog UI](images/calculatdfield-apply-custom-Format.png)
+![Applying custom format through Blazor PivotTable calculated field dialog UI](images/calculatdfield-apply-custom-format.png)
 ## Supported operators and functions for the calculated field formula
 
 Below is a list of operators and functions that can be used in the formula to create the calculated fields.
@@ -379,8 +379,8 @@ The event [OnActionBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
 
 | Action | Action Name|
 |----------------|-------------|
-| [Calculated field button](./calculated-field)| Open calculated field dialog|
-| [Edit icon in calculated field](./calculated-field/#editing-through-the-field-list-and-the-groupingbar)| Edit calculated field|
+| [Calculated field button](https://blazor.syncfusion.com/documentation/pivot-table/calculated-field)| Open calculated field dialog|
+| [Edit icon in calculated field](https://blazor.syncfusion.com/documentation/pivot-table/calculated-field#editing-through-the-field-list-and-the-groupingbar)| Edit calculated field|
 | [Context menu in the tree view inside the calculated field dialog](./calculated-field)| Calculated field context menu|
 
 * [FieldInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotActionBeginEventArgs.html#Syncfusion_Blazor_PivotView_PivotActionBeginEventArgs_FieldInfo): It holds the selected value field information.
@@ -448,8 +448,8 @@ The event [OnActionComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Bl
 
 | Action | Action Name|
 |----------------|-------------|
-| [Calculated field button](./calculated-field)| Calculated field applied|
-| [Edit icon in calculated field](./calculated-field/#editing-through-the-field-list-and-the-groupingbar)| Calculated field edited|
+| [Calculated field button](https://blazor.syncfusion.com/documentation/pivot-table/calculated-field)| Calculated field applied|
+| [Edit icon in calculated field](https://blazor.syncfusion.com/documentation/pivot-table/calculated-field#editing-through-the-field-list-and-the-groupingbar)| Calculated field edited|
 
 
 * [FieldInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotActionCompleteEventArgs-1.html#Syncfusion_Blazor_PivotView_PivotActionCompleteEventArgs_1_FieldInfo): It holds the selected value field information.
@@ -514,7 +514,7 @@ The event [OnActionFailure](https://help.syncfusion.com/cr/blazor/Syncfusion.Bla
 | Action | Action Name|
 |----------------|-------------|
 | [Calculated field button](./calculated-field)| Open calculated field dialog|
-| [Edit icon in calculated field](./calculated-field/#editing-through-the-field-list-and-the-groupingbar)| Edit calculated field|
+| [Edit icon in calculated field](https://blazor.syncfusion.com/documentation/pivot-table/calculated-field#editing-through-the-field-list-and-the-groupingbar)| Edit calculated field|
 | [Context menu in the tree view inside the calculated field dialog](./calculated-field)| Calculated field context menu|
 
 
@@ -578,4 +578,4 @@ The event [OnActionFailure](https://help.syncfusion.com/cr/blazor/Syncfusion.Bla
     }
 }
 ```
-N> You can refer to the [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) feature tour page for its groundbreaking feature representations. You can also explore the [Blazor Pivot Table example](https://blazor.syncfusion.com/demos/pivot-table/default-functionalities?theme=bootstrap4) to know how to render and configure the pivot table.
+N> You can refer to the [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) feature tour page for its groundbreaking feature representations. You can also explore the [Blazor Pivot Table example](https://blazor.syncfusion.com/demos/pivot-table/default-functionalities?theme=bootstrap5) to know how to render and configure the pivot table.

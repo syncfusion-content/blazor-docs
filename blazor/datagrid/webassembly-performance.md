@@ -9,7 +9,7 @@ documentation: ug
 
 # WebAssembly Performance in Blazor DataGrid Component
 
-This section provides performance guidelines for using Syncfusion data grid component efficiently in Blazor WebAssembly application. The general framework Blazor WebAssembly performance best practice/guidelines can be found [here](https://docs.microsoft.com/en-us/aspnet/core/blazor/webassembly-performance-best-practices).
+This section provides performance guidelines for using Syncfusion data grid component efficiently in Blazor WebAssembly application. The general framework Blazor WebAssembly performance best practice/guidelines can be found [here](https://learn.microsoft.com/en-us/aspnet/core/blazor/performance?view=aspnetcore-7.0).
 
 N> You can refer to our Getting Started with [Blazor Server-Side DataGrid](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio) and [Blazor WebAssembly DataGrid](https://blazor.syncfusion.com/documentation/datagrid/how-to/blazor-webassembly-datagrid-using-visual-studio) documentation pages for configuration specifications.
 
@@ -151,6 +151,6 @@ N> * **PreventRender** property internally overrides the **ShouldRender** method
 
 Grid renders each row and cell as individual component and loading large number of rows and cells in view will have performance impact on both memory consumption and CPU processing.
 
-To use grid without such performance impacts, you can load reduced set of rows in the grid using [paging](./paging) and [virtualization](./virtual) features.
+To use grid without such performance impacts, you can load reduced set of rows in the grid using [paging](./paging) and [virtualization](./virtualization) features.
 
 N> Even though with paging or virtualization feature enabled, having hundreds of rows in single grid page will again introduce performance lag in the application, so you need to set reasonable page size.

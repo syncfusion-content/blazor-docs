@@ -70,4 +70,4 @@ In the following code, toast buttons are configured using `ToastButton` property
 
 ## See Also
 
-* [Configuring options](./config/)
+* [Configuring options](./config)

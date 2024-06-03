@@ -11,160 +11,268 @@ documentation: ug
 
 # Print in Blazor DataGrid Component
 
-To print the DataGrid, call the [Print](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Print) method using datagrid reference. The print option can also be displayed on the toolbar by adding the `Print` toolbar item.
+The printing feature in Syncfusion Grid allows you to easily generate and print a representation of the grid’s content for better offline accessibility and documentation. You can enable this feature using either the grid’s Toolbar or the programmatically available [PrintAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_PrintAsync) method.
 
-The below sample code demonstrates DataGrid with print option added in the toolbar,
+To add the printing option to the grid’s Toolbar, simply include the [Toolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Toolbar) property in your grid configuration and add the **Print** as Toolbar item. This will allow you to directly initiate the printing process while click on the Print item from the toolbar
 
-```cshtml
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids
+@using BlazorApp1.Data
 
-<SfGrid DataSource="@Orders" Toolbar="@(new List<object>() { "Print" })" AllowPaging="true">
-    <GridPageSettings PageSize="8"></GridPageSettings>
+<SfGrid DataSource="@Orders" Height="315" Toolbar="@(new List<object>() { "Print" })">
     <GridColumns>
-        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" TextAlign="TextAlign.Right" Width="130" Type="ColumnType.Date"></GridColumn>
-        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="140"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer ID" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.ShipCity) HeaderText="Ship City" Width="100"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.ShipName) HeaderText="Ship Name" Width="100"></GridColumn>
     </GridColumns>
 </SfGrid>
 
-@code{
-
-    public List<Order> Orders { get; set; }
+@code {
+  
+    public List<OrderData> Orders { get; set; }
 
     protected override void OnInitialized()
     {
-        Orders = Enumerable.Range(1, 75).Select(x => new Order()
-        {
-            OrderID = 1000 + x,
-            CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
-            Freight = 2.1 * x,
-            OrderDate = DateTime.Now.AddDays(-x),
-        }).ToList();
-    }
-
-    public class Order
+        Orders = OrderData.GetAllRecords();
+    }   
+}
+{% endhighlight %}
+{% highlight c# tabtitle="OrderData.cs" %}
+    public class OrderData
     {
+        public static List<OrderData> Orders = new List<OrderData>();
+        public OrderData()
+        {
+
+        }
+        public OrderData(int? OrderID,string CustomerID,string ShipCity,string ShipName)
+        {
+           this.OrderID = OrderID;
+           this.CustomerID = CustomerID;
+           this.ShipCity = ShipCity;
+           this.ShipName = ShipName;
+        }
+
+        public static List<OrderData> GetAllRecords()
+        {
+            if (Orders.Count() == 0)
+            {
+                int code = 10;
+                for (int i = 1; i < 2; i++)
+                {
+                    Orders.Add(new OrderData(10248, "VINET", "Reims", "Vins et alcools Cheval"));
+                    Orders.Add(new OrderData(10249, "TOMSP", "Münster", "Toms Spezialitäten"));
+                    Orders.Add(new OrderData(10250, "HANAR", "Rio de Janeiro", "Hanari Carnes"));
+                    Orders.Add(new OrderData(10251, "VICTE", "Lyon", "Victuailles en stock"));
+                    Orders.Add(new OrderData(10252, "SUPRD", "Charleroi", "Suprêmes délices"));
+                    Orders.Add(new OrderData(10253, "HANAR", "Rio de Janeiro", "Hanari Carnes"));
+                    Orders.Add(new OrderData(10254, "CHOPS", "Bern", "Chop-suey Chinese"));
+                    Orders.Add(new OrderData(10255, "RICSU", "Genève", "Richter Supermarkt"));
+                    Orders.Add(new OrderData(10256, "WELLI", "Resende", "Wellington Importado"));
+                    code += 5;
+                }
+            }
+            return Orders;
+        }
+
         public int? OrderID { get; set; }
         public string CustomerID { get; set; }
-        public DateTime? OrderDate { get; set; }
-        public double? Freight { get; set; }
+        public string ShipCity { get; set; }
+        public string ShipName { get; set; }
     }
-}
-```
+{% endhighlight %}
+{% endtabs %}
 
-The following image represents DataGrid with print toolbar item,
-
-![Printing in Blazor DataGrid](./images/blazor-datagrid-printing.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BDVACDDzLCOPwlKE?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Page setup
 
-Some of the print options cannot be configured through code. So, you have to customize the layout, paper size, and margin options using the browser page setup dialog. Refer to the following links to know more about this,
+When printing a webpage, some print options, such as layout, paper size, and margin settings, cannot be configured through code. Instead, you need to customize these settings using the browser’s page setup dialog. Below are links to the page setup guides for popular web browsers:
 
 * [Chrome](https://support.google.com/chrome/answer/1069693?hl=en&visit_id=1-636335333734668335-3165046395&rd=1)
 * [Firefox](https://support.mozilla.org/en-US/kb/how-print-web-pages-firefox)
 * [Safari](https://www.mintprintables.com/print-tips/adjust-margins-osx/)
-* [IE](https://www.helpteaching.com/help/print/index.htm)
+* [IE](https://www.helpteaching.com/blog/)
 
-## Print using an external button
+## Print by external button
 
-To print the datagrid from an external button, invoke the print method using the datagrid reference.
+You can print the grid’s content using an external button by utilizing the [PrintAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_PrintAsync) method. This method allows you to trigger the printing process programmatically.
 
-The below sample code demonstrates invoking print using an external button,
-
-```cshtml
-@using Syncfusion.Blazor.Buttons
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor.Buttons
+@using BlazorApp1.Data
 
 <SfButton Content="Print" OnClick="PrintContent"></SfButton>
-<SfGrid @ref="DefaultGrid" DataSource="@Orders" AllowPaging="true">
-    <GridPageSettings PageSize="8"></GridPageSettings>
+<SfGrid @ref="DefaultGrid" DataSource="@Orders" >
     <GridColumns>
-        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" TextAlign="TextAlign.Right" Width="130" Type="ColumnType.Date"></GridColumn>
-        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer Name" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.ShipCity) HeaderText="Ship City" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.ShipName) HeaderText="Ship Name" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
-
-@code{
-
-    public List<Order> Orders { get; set; }
-
-    private SfGrid<Order> DefaultGrid;
+@code 
+{
+    private SfGrid<OrderData> DefaultGrid;
+    public List<OrderData> Orders{ get; set; }
 
     protected override void OnInitialized()
     {
-        Orders = Enumerable.Range(1, 75).Select(x => new Order()
-        {
-            OrderID = 1000 + x,
-            CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
-            Freight = 2.1 * x,
-            OrderDate = DateTime.Now.AddDays(-x),
-        }).ToList();
-    }
-
-    public class Order
-    {
-        public int? OrderID { get; set; }
-        public string CustomerID { get; set; }
-        public DateTime? OrderDate { get; set; }
-        public double? Freight { get; set; }
+        Orders = OrderData.GetAllRecords();
     }
     public void PrintContent()
     {
-        this.DefaultGrid.Print();
+        this.DefaultGrid.PrintAsync();
     }
 }
-```
-
-The following image represents DataGrid with external button for invoking print operation,
-
-![Blazor DataGrid displays Print Option in External Button](./images/blazor-datagrid-print-external-button.png)
-
-## Print the visible page
-
-By default, the datagrid prints all the pages. To print the current page alone, set the [PrintMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_DashArray) value as **CurrentPage**.
-
-The below sample code demonstrates this,
-
-```cshtml
-@using Syncfusion.Blazor.Grids
-
-<SfGrid DataSource="@Orders" Toolbar="@(new List<object>() { "Print" })" PrintMode=PrintMode.CurrentPage AllowPaging="true">
-    <GridPageSettings PageSize="8"></GridPageSettings>
-    <GridColumns>
-        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" TextAlign="TextAlign.Right" Width="130" Type="ColumnType.Date"></GridColumn>
-        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-    </GridColumns>
-</SfGrid>
-
-@code{
-
-    public List<Order> Orders { get; set; }
-
-    protected override void OnInitialized()
+{% endhighlight %}
+{% highlight c# tabtitle="OrderData.cs" %}
+    public class OrderData
     {
-        Orders = Enumerable.Range(1, 75).Select(x => new Order()
+        public static List<OrderData> Orders = new List<OrderData>();
+        public OrderData()
         {
-            OrderID = 1000 + x,
-            CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
-            Freight = 2.1 * x,
-            OrderDate = DateTime.Now.AddDays(-x),
-        }).ToList();
-    }
 
-    public class Order
-    {
+        }
+        public OrderData(int? OrderID,string CustomerID,string ShipCity,string ShipName)
+        {
+           this.OrderID = OrderID;
+           this.CustomerID = CustomerID;
+           this.ShipCity = ShipCity;
+           this.ShipName = ShipName;
+        }
+        public static List<OrderData> GetAllRecords()
+        {
+            if (Orders.Count() == 0)
+            {
+                int code = 10;
+                for (int i = 1; i < 2; i++)
+                {
+                    Orders.Add(new OrderData(10248, "VINET", "Reims", "Vins et alcools Cheval"));
+                    Orders.Add(new OrderData(10249, "TOMSP", "Münster", "Toms Spezialitäten"));
+                    Orders.Add(new OrderData(10250, "HANAR", "Rio de Janeiro", "Hanari Carnes"));
+                    Orders.Add(new OrderData(10251, "VICTE", "Lyon", "Victuailles en stock"));
+                    Orders.Add(new OrderData(10252, "SUPRD", "Charleroi", "Suprêmes délices"));
+                    Orders.Add(new OrderData(10253, "HANAR", "Rio de Janeiro", "Hanari Carnes"));
+                    Orders.Add(new OrderData(10254, "CHOPS", "Bern", "Chop-suey Chinese"));
+                    Orders.Add(new OrderData(10255, "RICSU", "Genève", "Richter Supermarkt"));
+                    Orders.Add(new OrderData(10256, "WELLI", "Resende", "Wellington Importado"));
+                    code += 5;
+                }
+            }
+            return Orders;
+        }
         public int? OrderID { get; set; }
         public string CustomerID { get; set; }
-        public DateTime? OrderDate { get; set; }
-        public double? Freight { get; set; }
+        public string ShipCity { get; set; }
+        public string ShipName { get; set; }
+    }
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rXrgWXZTryODdbNo?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+## Print visible Page
+
+By default, the Syncfusion Blazor Grid prints all the pages of the grid. The [PrintMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_DashArray) property within the grid grants you control over the printing process. However, if you want to print only the current visible page, you can achieve this by setting the `PrintMode` property to **CurrentPage**.
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+@using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor.DropDowns
+@using BlazorApp1.Data
+
+<label>Select Print Mode: </label>
+<SfDropDownList TValue="PrintMode" TItem="DropDownOrder" @bind-Value="@PrintMode" DataSource="@DropDownValue" Width="130px">
+    <DropDownListFieldSettings Text="Text" Value="Value"></DropDownListFieldSettings>
+    <DropDownListEvents ValueChange="OnValueChange" TValue="PrintMode" TItem="DropDownOrder"></DropDownListEvents>
+</SfDropDownList>
+
+<SfGrid @ref="Grid" DataSource="@Orders" Toolbar="@(new List<object>() { "Print" })" PrintMode="@PrintMode" AllowPaging="true">
+    <GridPageSettings PageSize="6"></GridPageSettings>
+    <GridColumns>
+        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer Name" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.ShipCity) HeaderText="Ship City" TextAlign="TextAlign.Right" Width="130" Type="ColumnType.Date"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.ShipName) HeaderText="Ship Name" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+    </GridColumns>
+</SfGrid>
+@code {
+    private SfGrid<OrderData> Grid;
+    public List<OrderData> Orders { get; set; }
+    public PrintMode PrintMode { get; set; } = PrintMode.AllPages;
+   
+    protected override void OnInitialized()
+    {
+        Orders = OrderData.GetAllRecords();
+    }
+    public class DropDownOrder
+    {
+        public string Text { get; set; }
+        public PrintMode Value { get; set; }
+    }
+    List<DropDownOrder> DropDownValue = new List<DropDownOrder>
+    {
+        new DropDownOrder() { Text = "All Pages", Value = PrintMode.AllPages },
+        new DropDownOrder() { Text = "Current Page", Value = PrintMode.CurrentPage },
+
+    };
+    public void OnValueChange(ChangeEventArgs<PrintMode, DropDownOrder> Args)
+    {
+        PrintMode = Args.Value;
+        Grid.Refresh();
     }
 }
-```
+{% endhighlight %}
+{% highlight c# tabtitle="OrderData.cs" %}
+public class OrderData
+    {
+        public static List<OrderData> Orders = new List<OrderData>();   
+        public OrderData()
+        {
+
+        }
+        public OrderData(int? OrderID, string CustomerID, string ShipCity,string ShipName)
+        {
+            this.OrderID = OrderID;
+            this.CustomerID = CustomerID;
+            this.ShipCity = ShipCity;
+            this.ShipName= ShipName;         
+        }
+        public static List<OrderData> GetAllRecords()
+        {
+            if (Orders.Count() == 0)
+            {
+                int code = 10;
+                for (int i = 1; i < 3; i++)
+                {
+                    Orders.Add(new OrderData(10248, "ALFKI", "Reims", "Vins et alcools Chev"));
+                    Orders.Add(new OrderData(10249, "ANANTR", "Münster", "Toms Spezialitäten"));
+                    Orders.Add(new OrderData(10250, "ANTON", "Rio de Janeiro", "Hanari Carnes"));
+                    Orders.Add(new OrderData(10251, "BLONP", "Lyon", "Victuailles en stock"));
+                    Orders.Add(new OrderData(10252, "BOLID", "Charleroi", "Suprêmes délices"));
+                    Orders.Add(new OrderData(10253, "ANTON", "Lyon", "Victuailles en stock"));
+                    Orders.Add(new OrderData(10254, "BLONP", "Rio de Janeiro", "Hanari Carnes"));
+                    Orders.Add(new OrderData(10255, "BOLID", "Münster", "Toms Spezialitäten"));
+                    Orders.Add(new OrderData(10256, "ALFKI", "Reims", "Vins et alcools Chev"));                   
+                    code += 5;
+                }
+            }
+            return Orders;
+        }
+        public int? OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public string ShipCity { get; set; }
+        public string ShipName { get; set; }
+    }
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BthAWMNUhrlcjXzc?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 <!-- Print the hierarchy datagrid
 
@@ -252,9 +360,9 @@ The following image represents Hierarchial Grid with print toolbar item,
 
 ## Print large number of columns
 
-By default, the browser uses A4 as page size option to print pages and in order to adapt to the size of the page, the browser print preview will auto-hide the overflowed contents. Hence datagrid with large number of columns will be cut off for adapting to the size of the print page.
+When printing a grid with a large number of columns, the browser’s default page size (usually A4) might not be sufficient to display all the columns properly. As a result, the browser’s print preview may automatically hide the overflowed content, leading to a cut-off appearance.
 
-To print large number of columns, adjust the scale option from print option panel based on your content size.
+To show a large number of columns when printing, you can adjust the scale option from the print option panel based on your content size. This will allow you to fit the entire grid content within the printable area.
 
 ![Printing Large Number of Columns in Blazor DataGrid](./images/blazor-datagrid-print-large-columns.png)
 
@@ -326,8 +434,8 @@ In the below example, we have **CustomerID** as a hidden column in the datagrid.
 
 ## Limitations of printing large data
 
-When datagrid contains large number of data, printing all the data at once is not the best option considering browser performance. Because rendering all the DOM elements in a single page will produce performance issues in the browser. This leads to slow down or non-responsiveness of the browser. DataGrid has option to handle large number of data by **Virtualization**. However while printing, it is not possible to use virtualization for rows and columns.
+Printing a large volume of data all at once in the grid can have certain limitations due to potential browser performance issues. Rendering numerous DOM elements on a single page can lead to browser slowdowns or even hang the browser. The grid offers a solution to manage extensive datasets through virtualization. However, it’s important to note that virtualization for both rows and columns is not feasible during the printing process.
 
-If printing of all the data is still needed, we suggest you to export the datagrid to Excel or CSV or Pdf file and then print it from another non-web based application.
+If printing all the data remains a requirement, an alternative approach is recommended. Exporting the grid data to formats like [Excel](https://blazor.syncfusion.com/documentation/datagrid/excel-exporting) or [CSV](https://blazor.syncfusion.com/documentation/datagrid/excel-exporting) or [Pdf](https://blazor.syncfusion.com/documentation/datagrid/pdf-export) is advised. This exported data can then be printed using non-web-based applications, mitigating the potential performance challenges associated with printing large datasets directly from the browser.
 
-N> You can refer to our [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap4) to understand how to present and manipulate data.
+> You can refer to our [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap4) to understand how to present and manipulate data.

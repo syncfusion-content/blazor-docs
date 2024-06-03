@@ -9,71 +9,67 @@ documentation: ug
 
 # Accessibility in Blazor Dropdown Menu Component
 
-## ARIA attributes
+The Blazor Dropdown Menu component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 
-The web accessibility makes web content and web applications more accessible for people with disabilities. Mostly it helps in dynamic content change and development of advanced user interface controls with AJAX, HTML, JavaScript, and related technologies.
+The accessibility compliance for the Blazor Dropdown Menu component is outlined below.
 
-Dropdown Menu provides built-in compliance with `WAI-ARIA` specifications. `WAI-ARIA` support is achieved through the attributes like `aria-expanded`, `aria-owns` and `aria-haspopup` applied for action item in
-Dropdown Menu. It helps by providing information about the widget for assistive technology in the screen readers. Dropdown Menu component contains the `Menu` role and `MenuItem` role.
+| Accessibility Criteria | Compatibility |
+| -- | -- |
+| [WCAG 2.2 Support](../common/accessibility#accessibility-standards) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
+| [Section 508 Support](../common/accessibility#accessibility-standards) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
+| [Screen Reader Support](../common/accessibility#screen-reader-support) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">  |
+| [Right-To-Left Support](../common/accessibility#right-to-left-support) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
+| [Color Contrast](../common/accessibility#color-contrast) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
+| [Mobile Device Support](../common/accessibility#mobile-device-support) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
+| [Keyboard Navigation Support](../common/accessibility#keyboard-navigation-support) |<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
+| [Axe-core Accessibility Validation](../common/accessibility#ensuring-accessibility) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
 
-| Properties | Functionality |
-| ------------ | ----------------------- |
-| menu | Specified for an Dropdown Menu element. |
-| menuItem | Specified for an action items. |
-| aria-haspopup | Indicates the availability and type of interactive dropdown popup element. |
-| aria-expanded | Indicates whether the current state of the dropdown popup can be expanded or collapsed. |
-| aria-owns | Identifies elements to define a visual, functional, or contextual parent or child relationship between DOM(Document Object Model) elements where the hierarchy cannot be used to represent the relationship. |
+<style>
+    .post .post-content img {
+        display: inline-block;
+        margin: 0.5em 0;
+    }
+</style>
+
+<div><img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> - All features of the component meet the requirement.</div>
+
+<div><img src="https://cdn.syncfusion.com/content/images/landing-page/intermediate.png" alt="Intermediate"> - Some features of the component do not meet the requirement.</div>
+
+<div><img src="https://cdn.syncfusion.com/content/images/landing-page/no.png" alt="No"> - The component does not meet the requirement.</div>
+
+## WAI-ARIA attributes
+
+The Blazor Dropdown Menu component followed the WAI-ARIA patterns to meet the accessibility. The following ARIA attributes are used in the Blazor Dropdown Menu component:
+
+| Attributes | Purpose |
+| --- | --- |
+| `role` | Indicates the Dropdown Menu component as `button`, Dropdown Menu popup as `menu`, and the dropdown popup action items as `menuitem`. |
+| `aria-haspopup` | Indicates the availability of the popup element. |
+| `aria-expanded` | Indicates whether the popup can be expanded or collapsed, as well as indicates whether its current state is expanded or collapsed. |
+| `aria-owns` | Identifies an elements in order to define a visual, functional, or contextual parent/child relationship between DOM elements where the DOM hierarchy cannot be used to represent the relationship. |
+| `aria-disabled` | Indicates that the element is perceivable but disabled, so it is not editable or otherwise operable. |
 
 ## Keyboard interaction
 
-<!-- markdownlint-disable MD033 -->
-<table>
-<tr>
-<td>
-<b>Keyboard shortcuts</b></td><td>
-<b>Actions</b></td></tr>
-<tr>
-<td>
-<kbd>Esc</kbd></td><td>
-Closes the popup.</td></tr>
-<tr>
-<td>
-<kbd>Enter</kbd></td><td>
-Opens the popup, or activates the highlighted item and closes the popup.</td></tr>
-<tr>
-<td>
-<kbd>Space</kbd></td><td>
-Opens the popup.</td></tr>
-<tr>
-<td>
-<kbd>Up</kbd></td><td>
-Navigates up or to the previous action item.</td></tr>
-<tr>
-<td>
-<kbd>Down</kbd></td><td>
-Navigates down or to the next action item.</td></tr>
-<tr>
-<td>
-<kbd>Alt + Up Arrow</kbd></td><td>
-Closes the popup.</td></tr>
-<tr>
-<td>
-<kbd>Alt + Down Arrow</kbd></td><td>
-Opens the popup</td></tr>
-</table>
+The Blazor Dropdown button component followed the keyboard interaction guideline, making it easy for people who use assistive technologies (AT) and those who completely rely on keyboard navigation. The following keyboard shortcuts are supported by the Blazor Dropdown Menu component.
 
-```cshtml
-@using Syncfusion.Blazor.SplitButtons
+| **Press** | **To do this** |
+| --- | --- |
+| <kbd>Esc</kbd> | Closes the popup. |
+| <kbd>Enter</kbd> | Opens the popup, or activates the highlighted item and closes the popup. |
+| <kbd>Space</kbd> | Opens the popup. |
+| <kbd>Up</kbd> | Navigates up or to the previous action item. |
+| <kbd>Alt + Up Arrow</kbd> | Closes the popup. |
+| <kbd>Alt + Down Arrow</kbd> | Opens the popup. |
 
-<SfDropDownButton Content="Edit">
-    <DropDownMenuItems>
-        <DropDownMenuItem Text="Cut"></DropDownMenuItem>
-        <DropDownMenuItem Text="Copy"></DropDownMenuItem>
-        <DropDownMenuItem Text="Paste"></DropDownMenuItem>
-    </DropDownMenuItems>
-</SfDropDownButton>
+## Ensuring accessibility
 
-```
+The Blazor Drop down component's accessibility levels are ensured through an [axe-core](https://www.nuget.org/packages/Deque.AxeCore.Playwright) with playwright tests.
 
+The accessibility compliance of the Blazor Dropdown Menu component is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/dropdown-button) in a new window to evaluate the accessibility of the Blazor Dropdown Menu component with accessibility tools.
 
-![Accessibility in Blazor DropDownMenu](./images/blazor-dropdownmenu-component.png)
+{% previewsample "https://ej2.syncfusion.com/accessibility/drop-down-button.html" %}
+
+## See also
+
+* [Accessibility in Syncfusion Blazor components](https://blazor.syncfusion.com/documentation/common/accessibility)

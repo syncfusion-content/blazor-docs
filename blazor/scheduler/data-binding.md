@@ -22,7 +22,7 @@ Please take a moment to watch this video to learn about data binding in the Blaz
 
 ## List binding
 
-To bind list binding to the Scheduler, you can simply assign a list of datasource collections as IEnumerable object to the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleEventSettings-1.html#Syncfusion_Blazor_Schedule_ScheduleEventSettings_1_DataSource) option of the scheduler within the ScheduleEventSettings tag. The list data source can also be provided as an instance of the [SfDataManager](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Data.SfDataManager.html) or by using [SfDataManager](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Data.SfDataManager.html) component.
+To bind list binding to the Scheduler, you can simply assign a list of datasource collections as IEnumerable object to the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleEventSettings-1.html#Syncfusion_Blazor_Schedule_ScheduleEventSettings_1_DataSource) option of the scheduler within the ScheduleEventSettings tag. The list data source can also be provided as an instance of the [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) or by using [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) component.
 
 ```cshtml
 @using Syncfusion.Blazor.Schedule
@@ -57,7 +57,7 @@ To bind list binding to the Scheduler, you can simply assign a list of datasourc
 
 N> By default, `DataManager` uses `BlazorAdaptor` for binding local data.
 
-You can also bind different field names to the default event fields as well as include additional custom fields to the event object collection which can be referred [here](./appointments/#event-fields).
+You can also bind different field names to the default event fields as well as include additional custom fields to the event object collection which can be referred [here](./appointments#event-fields).
 
 ### ExpandoObject binding
 
@@ -105,15 +105,15 @@ To bind data to the Scheduler using ExpandoObject, you can create a list of Expa
 }
 ```
 
-### DynamicObject Binding 
+### DynamicObject Binding
 
 **DynamicObject** binding is another approach for binding data to the Scheduler when the model type is unknown at compile time. In this approach, you use the dynamic keyword to define variables that can hold objects of any type, including those with dynamically added properties.
 
-To bind data to the Scheduler using **DynamicObject** binding, you can create a list of dynamic objects and set it as the `DataSource` property of the Scheduler's `ScheduleEventSettings` component. You can then use the Scheduler's built-in data operations and editing features to work with the data.   
+To bind data to the Scheduler using **DynamicObject** binding, you can create a list of dynamic objects and set it as the `DataSource` property of the Scheduler's `ScheduleEventSettings` component. You can then use the Scheduler's built-in data operations and editing features to work with the data.
 
 **DynamicObject** implements the `IDynamicMetaObjectProvider` interface, which means you can override member access operations like `GetMember` and `SetMember` to provide your own custom logic.**DynamicObject** binding is that it allows you to create objects with dynamic behavior, which can be useful in scenarios where you need to work with objects whose behavior is not known at compile-time.
 
-N> The [`GetDynamicMemberNames`](https://docs.microsoft.com/en-us/dotnet/api/system.dynamic.dynamicobject.getdynamicmembernames?view=netcore-3.1) method of DynamicObject class must be overridden and return the property names to perform data operation and editing while using DynamicObject.
+N> The [`GetDynamicMemberNames`](https://learn.microsoft.com/en-us/dotnet/api/system.dynamic.dynamicobject.getdynamicmembernames?view=net-7.0) method of DynamicObject class must be overridden and return the property names to perform data operation and editing while using DynamicObject.
 
 ```csharp
 @using System.Dynamic
@@ -173,7 +173,8 @@ N> The [`GetDynamicMemberNames`](https://docs.microsoft.com/en-us/dotnet/api/sys
 
 ## ObservableCollection
 
-This [ObservableCollection](https://docs.microsoft.com/en-us/dotnet/api/system.collections.objectmodel.observablecollection-1?view=netframework-4.8) (dynamic data collection) provides notifications when items are added, removed and moved. The implement [INotifyCollectionChanged](https://docs.microsoft.com/en-us/dotnet/api/system.collections.specialized.inotifycollectionchanged?view=netframework-4.8) notifies when dynamic changes of add,remove, move and clear the collection. The implement [INotifyPropertyChanged](https://docs.microsoft.com/en-us/dotnet/api/system.componentmodel.inotifypropertychanged?view=netframework-4.8) notifies when property value has changed in client side.
+This [ObservableCollection](https://learn.microsoft.com/en-us/dotnet/api/system.collections.objectmodel.observablecollection-1?view=net-7.0) (dynamic data collection) provides notifications when items are added, removed and moved. The implement [INotifyCollectionChanged](https://learn.microsoft.com/en-us/dotnet/api/system.collections.specialized.inotifycollectionchanged?view=net-7.0) notifies when dynamic changes of add,remove, move and clear the collection. The implement [INotifyPropertyChanged](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.inotifypropertychanged?view=net-7.0) notifies when property value has changed in client side.
+
 Here, AppointmentData class implements the interface of **INotifyPropertyChanged** and it raises the event when Subject property value was changed.
 
 ```csharp
@@ -185,7 +186,7 @@ Here, AppointmentData class implements the interface of **INotifyPropertyChanged
 <SfButton @onclick="AddRecord">Add Data</SfButton>
 <SfButton @onclick="UpdateRecord" Disabled="ObservableData.Count == 0">Update Data</SfButton>
 <SfButton @onclick="DeleteRecord" Disabled="ObservableData.Count == 0">Delete Data</SfButton>
-            
+
 <SfSchedule TValue="AppointmentData" @bind-SelectedDate="@CurrentDate" Width="100%" Height="550px">
     <ScheduleEventSettings DataSource="@ObservableData"></ScheduleEventSettings>
     <ScheduleViews>
@@ -270,9 +271,10 @@ Here, AppointmentData class implements the interface of **INotifyPropertyChanged
 }
 ```
 
+
 ## Custom binding
 
-It is possible to create your own `CustomAdaptor` by extending the built-in available adaptors. The following example demonstrates the custom adaptor usage and how to bind the data with custom service and the CRUD operations for custom bounded data is performed using the methods of [DataAdaptor](https://blazor.syncfusion.com/documentation/data/custom-binding/) abstract class.
+It is possible to create your own `CustomAdaptor` by extending the built-in available adaptors. The following example demonstrates the custom adaptor usage and how to bind the data with custom service and the CRUD operations for custom bounded data is performed using the methods of [DataAdaptor](https://blazor.syncfusion.com/documentation/data/custom-binding) abstract class.
 
 ```cshtml
 @using Syncfusion.Blazor
@@ -443,7 +445,7 @@ You can retrieve data from OData service using the `SfDataManager`. Refer to the
 }
 ```
 
-### Binding with OData v4 services 
+### Binding with OData v4 services
 
 [ODataV4](https://www.odata.org/documentation/) is the latest version of the OData protocol, which offers more features and better performance than its predecessors. It provides support for advanced query options, data validation, and data shaping. The ODataV4 protocol is based on the JSON format, which makes it more lightweight and easier to use.
 
@@ -515,7 +517,6 @@ This method greatly improves the component's performance by reducing the data th
 ```
 
 The following image represents how the parameters are passed using ODataV4 filter.
-
 ![ODataV4 filter](images/blazor-odatav4-filter.jpg)
 
 ### Web API adaptor
@@ -539,9 +540,9 @@ You can bind Web API data to the scheduler using [WebApiAdaptor](https://blazor.
 
 @code {
     DateTime currentDate = new DateTime(2023, 1, 6);
-   
+
     public class AppointmentData
-    { 
+    {
             public int Id { get; set; }
             public string Subject { get; set; }
             public string Location { get; set; }
@@ -677,7 +678,7 @@ namespace Url_Adaptor.Controller
                         dbContext.Entry(entity).CurrentValues.SetValues(appointment);
                     }
                 }
-            }            
+            }
             if (args.Added.Count > 0)
             {
                 foreach (Event appointment in args.Added)
@@ -733,7 +734,7 @@ N> The parameters added using the `Query` property will be sent along with the d
 
 It is common to have authorization in the server of origin to prevent anonymous access to the data services. **SfDataManager** can consume data from such protected remote data services with the proper bearer token. The access token or bearer token can be used by **SfDataManager** in one of the following ways.
 
-* By using the pre-configured HttpClient with the access token or authentication message handler, SfDataManager can access protected remote services. When registering your HttpClient, the registration should be done before calling `AddSyncfusionBlazor()` method in **Startup.cs/Program.cs**, so that SfDataManager will not create its own HttpClient and uses the already configured HttpClient.
+* By using the pre-configured HttpClient with the access token or authentication message handler, SfDataManager can access protected remote services. When registering your HttpClient, the registration should be done before calling `AddSyncfusionBlazor()` method in **Program.cs**, so that SfDataManager will not create its own HttpClient and uses the already configured HttpClient.
 * Setting access token in the default header of the HttpClient by injecting it in the page. See here for adding default headers to HttpClient.
 
 ```csharp
@@ -758,11 +759,12 @@ It is common to have authorization in the server of origin to prevent anonymous 
 
 * Setting the access token in the **Headers** property of the **SfDataManager**. See [here](#setting-custom-headers) for adding headers.
 
-Getting the bearer token may vary with access token providers. More information on configuring HttpClient with authentication can be found on the official page [here](https://docs.microsoft.com/en-us/aspnet/core/blazor/security/webassembly/additional-scenarios?view=aspnetcore-3.1).
+Getting the bearer token may vary with access token providers. More information on configuring HttpClient with authentication can be found on the official page [here](https://learn.microsoft.com/en-us/aspnet/core/blazor/security/webassembly/additional-scenarios?view=aspnetcore-7.0).
+
 
 ### Setting custom headers
 
-To add a custom headers to the data request, use the [Headers](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_Headers) property of the [SfDataManager](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Data.SfDataManager.html).
+To add a custom headers to the data request, use the [Headers](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_Headers) property of the [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html).
 
 The following sample code demonstrates adding custom headers to the `SfDataManager` request,
 
@@ -920,18 +922,18 @@ namespace syncfusion_blazor_app.Data {
         }
 
         List<AppointmentData>? EventData;
-        public override async Task<object> ReadAsync(DataManagerRequest dataManagerRequest, string key = null) {           
+        public override async Task<object> ReadAsync(DataManagerRequest dataManagerRequest, string key = null) {
             System.Collections.Generic.IDictionary<string, object> Params = dataManagerRequest.Params;
             DateTime start =  (DateTime)Params["StartDate"];
             DateTime end = (DateTime)Params["EndDate"];
             EventData = await _appService.Get(start, end);
             return dataManagerRequest.RequiresCounts ? new DataResult() { Result = EventData, Count = EventData.Count() } : EventData;
         }
-        public async override Task<object> InsertAsync(DataManager dataManager, object data, string key) {           
+        public async override Task<object> InsertAsync(DataManager dataManager, object data, string key) {
             await _appService.Insert(data as AppointmentData);
             return data;
         }
-        public async override Task<object> UpdateAsync(DataManager dataManager, object data, string keyField, string key) {            
+        public async override Task<object> UpdateAsync(DataManager dataManager, object data, string keyField, string key) {
             await _appService.Update(data as AppointmentData);
             return data;
         }
@@ -1068,7 +1070,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## SQL Server data binding(SQL Client)
 
-The following examples demonstrate how to consume data from SQL Server using Microsoft SqlClient and bound it to Blazor Scheduler. You can achieve this requirement by using [Custom Adaptor](./custom-binding/#custom-adaptor-as-component).
+The following examples demonstrate how to consume data from SQL Server using Microsoft SqlClient and bound it to Blazor Scheduler. You can achieve this requirement by using [Custom Adaptor](./custom-binding#custom-adaptor-as-component).
 
 Before the implementation, add required NuGet like **Microsoft.Data.SqlClient** and **Syncfusion.Blazor** in your application. In the following sample, Custom Adaptor can be created as a Component. In custom adaptor **Read** method, you can get filter appointments using **DataManagerRequest**.
 

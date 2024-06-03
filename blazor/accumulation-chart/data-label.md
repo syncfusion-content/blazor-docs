@@ -47,6 +47,7 @@ The [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Acc
 ```
 
 ![Blazor Accumulation Chart with Data Label](images/data-label/blazor-accumulation-chart-with-data-label.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BtBUCrWAJzilTTrb?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Text Wrap
 
@@ -83,6 +84,7 @@ When the data label text exceeds the container, the text can be wrapped by using
 }
 ```
 ![Text Wrap in Blazor Accumulation Chart](images/data-label/blazor-accumulation-chart-with-data-label-text-wrapping.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hjVUCVCgTfRsrPGK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Position
 
@@ -124,6 +126,7 @@ The [Position](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Ac
 ```
 
 ![Changing Data Label Position in Blazor Accumulation Chart](images/data-label/blazor-accumulation-chart-label-position.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VtLUMhsApTwpdpQa?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Smart Labels
 
@@ -176,6 +179,7 @@ Data labels will be arranged smartly without overlapping with each other. The [E
 ```
 
 ![Blazor Accumulation Chart with Smart Labels](images/data-label/blazor-accumulation-chart-smart-labels.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VthqCrMgfzFDgIcO?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Connector line
 
@@ -219,6 +223,7 @@ When the data label is placed [Outside](https://help.syncfusion.com/cr/blazor/Sy
 ```
 
 ![Blazor Accumulation Chart with Connector Line](images/data-label/blazor-accumulation-chart-connector-line.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rZLqWVsqzTYnAoVP?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Text mapping
 
@@ -260,12 +265,13 @@ The [Name](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Accumu
 ```
 
 ![Text Mapping in Blazor Accumulation Chart](images/data-label/blazor-accumulation-chart-text-mapping.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hjrUsrsApeCPdurG?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 N> Refer to the [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore the [Blazor Accumulation Chart Example](https://blazor.syncfusion.com/demos/chart/pie?theme=bootstrap4) to know various features of accumulation charts and how it is used to represent numeric proportional data.
 
 ## Format
 
-Data label for the accumulation chart can be formatted using [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDataLabel.html#Syncfusion_Blazor_Charts_ChartDataLabel_Format) property. You can use the global formatting options, such as 'N1', 'P1', and 'C1'.
+Data label for the accumulation chart can be formatted using [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationDataLabelSettings.html#Syncfusion_Blazor_Charts_AccumulationDataLabelSettings_Format) property. You can use the global formatting options, such as 'N1', 'P1', and 'C1'.
 
 ```cshtml
 
@@ -303,8 +309,76 @@ Data label for the accumulation chart can be formatted using [Format](https://he
 ```
 
 ![Format in Blazor Accumulation Chart](images/data-label/blazor-accumulation-chart-with-data-label-format.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VDhqMLsqzSLpcrER?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-## See Also
+## Template
+
+Data labels can be customized using the template element for the accumulation chart. The [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationDataLabelSettings.html#Syncfusion_Blazor_Charts_AccumulationDataLabelSettings_Template) allows for the customization of data labels using HTML elements, unlike a standard data label. Within the template, you can access the context value as an [AccumulationChartDataPointInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartDataPointInfo.html) and customize it accordingly. This allows you to access data point values such as x, y, label, percentage, as well as data point information like point index, point text, series name, and series index.
+
+```cshtml
+<AccumulationDataLabelSettings Visible="true" Name="Browser">
+    <Template>
+        @{
+            var data = context as AccumulationChartDataPointInfo;
+            <table>
+                <tr><td align="center"> @data.X</td></tr>
+            </table>
+        }
+    </Template>
+</AccumulationDataLabelSettings>
+  
+```
+
+```cshtml
+
+@using Syncfusion.Blazor.Charts
+
+<SfAccumulationChart Title="Mobile Browser Statistics">
+    <AccumulationChartSeriesCollection>
+        <AccumulationChartSeries DataSource="@StatisticsDetails" XName="Browser" YName="Users"
+                                 Name="Browser" InnerRadius="40%">
+            <AccumulationDataLabelSettings Position="AccumulationLabelPosition.Outside" Name="Browser" Visible="true">
+                <Template>
+                    @{
+                        var data = context as AccumulationChartDataPointInfo;
+                    }
+                    <table>
+                        <tr>
+                            <td align="center" style="background-color: #C1272D; font-size: 14px; color: #E7C554; font-weight: bold; padding: 5px"> @data.X :</td>
+                            <td align="center" style="background-color: #C1272D; font-size: 14px; color: whitesmoke; font-weight: bold; padding: 5px"> @data.Y</td>
+                        </tr>
+                    </table>
+                </Template>
+            </AccumulationDataLabelSettings>
+        </AccumulationChartSeries>
+    </AccumulationChartSeriesCollection>
+    <AccumulationChartLegendSettings Visible="false"></AccumulationChartLegendSettings>
+</SfAccumulationChart>
+
+@code{
+    public class Statistics
+    {
+        public string Browser { get; set; }
+        public double Users { get; set; }
+    }
+
+    public List<Statistics> StatisticsDetails = new List<Statistics>
+    {
+        new Statistics { Browser = "Chrome", Users = 37 },
+        new Statistics { Browser = "UC Browser", Users = 17 },
+        new Statistics { Browser = "iPhone", Users = 19 },
+        new Statistics { Browser = "Others", Users = 4  },
+        new Statistics { Browser = "Opera", Users = 11 },
+        new Statistics { Browser = "Android", Users = 12 },
+    };
+}
+
+```
+
+![Template in Blazor Accumulation Chart](images/data-label/blazor-accumulation-chart-with-data-label-template.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BNLpZghnzXPGMCxq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+## See also
 
 * [Tooltip](./tool-tip)
 * [Legend](./legend)

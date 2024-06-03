@@ -79,7 +79,7 @@ After editing the default opacity using the Edit Opacity tool, they will be chan
 }
 ```
 
-## Adding custom stamp to the PDF document via programmatically
+## Adding a custom stamp to the PDF document via PdfViewerCustomStampSettings
 
 You can add an image as a custom stamp icon using the CustomStamps property of the PdfViewerCustomStampSettings class.
 
@@ -187,3 +187,103 @@ The following code illustrates how to add the image as a stamp annotation in the
 
 ```
 [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Annotations/Stamp/Add%20a%20custom%20stamp%20-%20SfPdfViewer)
+
+## Add stamp annotation programmatically
+
+The Blazor SfPdfViewer offers the capability to programmatically add the stamp annotation within the SfPdfViewer control using the [DynamicStampAnnotation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_AddAnnotationAsync_Syncfusion_Blazor_SfPdfViewer_PdfAnnotation_Syncfusion_Blazor_SfPdfViewer_DynamicStampItem_), [SignStampAnnotation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_AddAnnotationAsync_Syncfusion_Blazor_SfPdfViewer_PdfAnnotation_Syncfusion_Blazor_SfPdfViewer_SignStampItem_), and [StandardBusinessStampAnnotation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_AddAnnotationAsync_Syncfusion_Blazor_SfPdfViewer_PdfAnnotation_Syncfusion_Blazor_SfPdfViewer_StandardBusinessStampItem_) method.
+
+Below is an example demonstrating how you can use this method to add stamp annotation to a PDF document:
+
+```cshtml
+
+@using Syncfusion.Blazor.Buttons
+@using Syncfusion.Blazor.SfPdfViewer
+
+<SfButton OnClick="@AddStampAnnotationAsync">Add Stamp Annotation</SfButton>
+<SfPdfViewer2 Width="100%" Height="100%" DocumentPath="@DocumentPath" @ref="@Viewer" />
+
+@code {
+    SfPdfViewer2 Viewer;
+    public string DocumentPath { get; set; } = "wwwroot/Data/Stamp_Annotation.pdf";
+
+    public async void AddStampAnnotationAsync(MouseEventArgs args)
+    {
+        PdfAnnotation annotation = new PdfAnnotation();
+        // Set the annotation type stamp
+        annotation.Type = AnnotationType.Stamp;
+        // Set the PageNumber starts from 0. So, if set 0 it represents the page 1.
+        annotation.PageNumber = 0;
+
+        // Bound of the dynamic stamp annotation
+        annotation.Bound = new Bound();
+        annotation.Bound.X = 200;
+        annotation.Bound.Y = 150;
+        annotation.Bound.Width = 300;
+        annotation.Bound.Height = 100;
+        // Add dynamic approved stamp annotation
+        await Viewer.AddAnnotationAsync(annotation, DynamicStampItem.Approved);
+        // Add standardbusiness approved stamp annotation
+        //await Viewer.AddAnnotationAsync(annotation, StandardBusinessStampItem.Approved);
+        // Add sign accepted stamp annotation
+        //await Viewer.AddAnnotationAsync(annotation, SignStampItem.Accepted);
+    }
+}
+
+```
+
+This code will add a stamp annotation to the first page of the PDF document.
+
+![Programmatically Added Stamp Annotation in Blazor SfPdfViewer](../images/blazor-sfpdfviewer-programmatically-add-stamp-annotation.png)
+
+[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Annotations/Programmatic%20Support/Stamp/Add).
+
+N> To add a custom stamp annotation, you need to set the annotation type as an [Image](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.AnnotationType.html#Syncfusion_Blazor_SfPdfViewer_AnnotationType_Image) and [CustomStampSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfAnnotation.html#Syncfusion_Blazor_SfPdfViewer_PdfAnnotation_CustomStampSource) API to set the custom stamp image data. Then use [AddAnnotationAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_AddAnnotationAsync_Syncfusion_Blazor_SfPdfViewer_PdfAnnotation_) to add the annotation properly.
+
+## Edit stamp annotation programmatically
+
+The Blazor SfPdfViewer offers the capability to programmatically edit the stamp annotation within the SfPdfViewer control using the  [EditAnnotationAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_EditAnnotationAsync_Syncfusion_Blazor_SfPdfViewer_PdfAnnotation_) method.
+
+Below is an example demonstrating how you can utilize this method to edit the stamp annotation programmatically:
+
+```cshtml
+
+@using Syncfusion.Blazor.Buttons
+@using Syncfusion.Blazor.SfPdfViewer
+
+<SfButton OnClick="@EditStampAnnotationAsync">Edit Stamp Annotation</SfButton>
+<SfPdfViewer2 Width="100%" Height="100%" DocumentPath="@DocumentPath" @ref="@Viewer" />
+
+@code {
+    SfPdfViewer2 Viewer;
+    public string DocumentPath { get; set; } = "wwwroot/Data/Stamp_Annotation.pdf";
+
+    public async void EditStampAnnotationAsync(MouseEventArgs args)
+    {
+        // Get annotation collection
+        List<PdfAnnotation> annotationCollection = await Viewer.GetAnnotationsAsync();
+        // Select the annotation want to edit
+        PdfAnnotation annotation = annotationCollection[0];
+        // Change the position of the stamp annotation
+        annotation.Bound.X = 125;
+        annotation.Bound.Y = 125;
+        // Change the width and height of the stamp annotation
+        annotation.Bound.Width = 350;
+        annotation.Bound.Height = 150;
+        // Change the Opacity (0 to 1) of stamp annotation
+        annotation.Opacity = 0.5;
+        // Edit the stamp annotation
+        await Viewer.EditAnnotationAsync(annotation);
+    }
+}
+
+```
+
+This code snippet will edit the stamp annotation programmatically within the SfPdfViewer control.
+
+![Programmatically Edit Stamp Annotation in Blazor SfPdfViewer](../images/blazor-sfpdfviewer-programmatically-edit-stamp-annotation.png)
+
+[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Annotations/Programmatic%20Support/Stamp/Edit).
+
+## See also
+
+* [How to delete the annotation programmatically](./text-markup-annotation#delete-annotation-programmatically)

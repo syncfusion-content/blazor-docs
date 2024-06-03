@@ -9,7 +9,7 @@ documentation: ug
 
 # Animation in Blazor Dialog Component
 
-The Dialog can be animated during the open and close actions. Also, users can customize animation's `Delay`, `Duration` and `Effect` by using the `DialogAnimationSettings` property.
+The [Blazor Dialog](https://www.syncfusion.com/blazor-components/blazor-modal-dialog) can be animated during the open and close actions. Also, users can customize animation's `Delay`, `Duration` and `Effect` by using the `DialogAnimationSettings` property.
 
 To get started quickly with animation in Blazor Dialog Component, you can check the video below.
 

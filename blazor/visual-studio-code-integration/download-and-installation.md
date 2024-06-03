@@ -17,9 +17,7 @@ The following software prerequisites must be installed to install the Syncfusion
 
 * [Visual Studio Code 1.29.0 or later](https://code.visualstudio.com/download)
 
-* [Visual Studio 2019 16.3 Preview 2](https://visualstudio.microsoft.com/vs/) or later
-
-* [.NET Core 3.1](https://dotnet.microsoft.com/en-us/download/dotnet/3.1) or later
+* [Visual Studio 2022 ](https://visualstudio.microsoft.com/vs/) or later
 
 * [C# Extension](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp)
 
@@ -62,3 +60,20 @@ The instructions below describe the process of downloading and installing Syncfu
 5. Now, you can create a new Syncfusion Blazor application by using the Syncfusion Blazor extensions from the Visual Studio Code Palette Find the **Syncfusion Blazor Template Studio: Launch** from Visual Studio Code commands to open the Syncfusion Blazor Template Studio wizard.
 
      ![CreateProjectPalette](images/CreateProjectPalette.png)
+
+## Manually Installing an Extension in Visual Studio Code
+The instructions below describe the process of installing the Syncfusion Blazor extensions manually in visual studio code.
+
+1. Install the extension by downloading it from the Visual Studio Marketplace and then installing it from a local file within VS Code. To do this: Download the **"SyncfusionInc.Blazor-VSCode-Extensions.vsix"** file from the [Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=SyncfusionInc.Blazor-VSCode-Extensions).
+
+2. In VS Code, go to the Extensions view by clicking on the Extensions icon in the Activity Bar.
+
+      ![ExtensionIcon](images/ExtensionIcon.png)
+
+3. Click on the three dots (ellipsis) in the top-right corner and select "Install from VSIX."
+
+      ![InstallVsix](images/InstallVsix.png)
+
+4. Browse to the downloaded SyncfusionInc.Blazor-VSCode-Extensions.vsix file and install it.
+
+      ![DownloadVsix](images/DownloadVsix.png)

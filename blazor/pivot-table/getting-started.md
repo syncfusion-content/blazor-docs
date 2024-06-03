@@ -27,17 +27,16 @@ To get start quickly with Blazor Pivot Table component, you can check out this v
 
 ## Create a new Blazor App in Visual Studio
 
-You can create a **Blazor Server App** or **Blazor WebAssembly App** using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0) or the [Syncfusion Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
+You can create a **Blazor Server App** or **Blazor WebAssembly App** using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0&pivots=windows) or the [Syncfusion Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
 
-## Install Syncfusion Blazor PivotTable and Theme NuGet in the App
+## Install Syncfusion Blazor PivotTable and Themes NuGet in the App
 
-To add Blazor Pivot Table component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install [Syncfusion.Blazor.PivotTable](https://www.nuget.org/packages/Syncfusion.Blazor.PivotTable) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/). Alternatively, you can utilize the following package manager command to achieve the same.
+To add **Blazor Pivot Table** component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install [Syncfusion.Blazor.PivotTable](https://www.nuget.org/packages/Syncfusion.Blazor.PivotTable) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/). Alternatively, you can utilize the following package manager command to achieve the same.
 
 {% tabs %}
 {% highlight C# tabtitle="Package Manager" %}
 
 Install-Package Syncfusion.Blazor.PivotTable -Version {{ site.releaseversion }}
-
 Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
 
 {% endhighlight %}
@@ -58,7 +57,7 @@ Open **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusio
 {% endhighlight %}
 {% endtabs %}
 
-Now, register the Syncfusion Blazor Service in the **~/Program.cs** file of your Blazor Server App or Blazor WebAssembly App. 
+Now, register the Syncfusion Blazor Service in the **~/Program.cs** file of your Blazor Server App or Blazor WebAssembly App.
 
 {% tabs %}
 {% highlight C# tabtitle="Blazor Server App" hl_lines="3 10" %}
@@ -99,7 +98,7 @@ await builder.Build().RunAsync();
 
 ## Add stylesheet and script resources
 
-The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Reference the stylesheet and script in the `<head>` of the main page as follows: 
+The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Reference the stylesheet and script in the `<head>` of the main page as follows:
 
 * For **.NET 6** Blazor Server app, include it in **~/Pages/_Layout.cshtml** file.
 
@@ -337,7 +336,7 @@ N> Only fields from value section, which is in the form of numeric data values a
 
 After successful compilation of the application, simply press F5 to run the same. The pivot table component will render in the default web browser like below.
 
-![Blazor PivotTable with Formatting](images/blazor-pivottable-formatting.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rtVfZMqtrIxIbWRH?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor PivotTable with Formatting](images/blazor-pivottable-formatting.png)" %}
 
 ## Enable Field List
 
@@ -378,9 +377,7 @@ The field list allows to add or remove fields and also rearrange the fields betw
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor PivotTable with FieldList Icon](images/blazor-pivottable-fieldlist-icon.png)
-
-![Blazor PivotTable with FieldList Dialog](images/blazor-pivottabel-fieldlist-dialog.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXhpNWgjVxtIVCtC?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor PivotTable with FieldList Icon](images/blazor-pivottable-fieldlist-icon.png)" %}
 
 ## Enable Grouping Bar
 
@@ -421,7 +418,7 @@ The grouping bar feature automatically populates fields from the bound data sour
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor PivotTable with Grouping Bar](images/blazor-pivottable-grouping-bar.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rjVJtWqjrnMHzUfe?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor PivotTable with Grouping Bar](images/blazor-pivottable-grouping-bar.png)" %}
 
 ## Exploring Filter Axis
 
@@ -464,9 +461,7 @@ The filter axis contains collection of fields that would act as master filter ov
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor PivotTable with FieldList](images/blazor-pivottable-fieldlist.png)
-
-![Blazor PivotTable with Formatting](images/blazor-pivottable-format.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rXhptsKZBRUHymkX?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor PivotTable with Formatting](images/blazor-pivottable-format.png)" %}
 
 ## Calculated Field
 
@@ -513,11 +508,7 @@ The calculated field feature allows user to insert or add a new calculated field
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor PivotTable with Caluclation Button](images/blazor-pivottable-calculate-button.png)
-
-![Blazor PivotTable with Calculate Dialog Field](images/blazor-pivottable-calculate-dialog.png)
-
-![Blazor PivotGrid with Calculation](images/blazor-pivotgrid-calculation.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BtrTDMUNBxfzcndb?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor PivotTable with Caluclation Button](images/blazor-pivottable-calculate-button.png)" %}
 
 ## See also
 

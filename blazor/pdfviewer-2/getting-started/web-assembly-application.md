@@ -112,7 +112,7 @@ Add the Syncfusion PDF Viewer (Next Gen) component in the **~/Pages/Index.razor*
 
 @page "/"
 
-<SfPdfViewer2 DocumentPath="wwwroot/FileToBeLoaded.pdf"
+<SfPdfViewer2 DocumentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
               Height="100%"
               Width="100%">
 </SfPdfViewer2>
@@ -126,7 +126,7 @@ N> If you don't provide the `DocumentPath` property value, the PDF Viewer (Next 
 
 Run the application, and the PDF file will be displayed using Syncfusion's Blazor PDF Viewer (Next Gen) component in your browser.
 
-![Blazor SfPdfViewer Component](GettingStarted_images/blazor-pdfviewer.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hZVzNWqXLSZpnuzc?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor SfPdfViewer Component](gettingstarted-images/blazor-pdfviewer.png)" %}
 
 ## See also
 

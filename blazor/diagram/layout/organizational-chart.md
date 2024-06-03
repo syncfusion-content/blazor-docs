@@ -293,7 +293,7 @@ Layout provides support to arrange the nodes with reference to the position of a
 
 [Assistants](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.TreeInfo.html#Syncfusion_Blazor_Diagram_TreeInfo_Assistants) are child items that have a different relationship with the parent node. They are laid out in a dedicated part of the tree. A node can be specified as an assistant of its parent by adding it to the assistants property of the argument `Assistants`.
 
-In the [Root](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_Root)property, define the node set to be the parent of the assistant node. In the `Assistant` property, define the node set to be assistant for the parent node. Both properties should be defined in the "LayoutInfo" property.
+In the [Root](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_Root) property, define the node set to be the parent of the assistant node. In the `Assistant` property, define the node set to be assistant for the parent node. Both properties should be defined in the "LayoutInfo" property.
 
 The following code example illustrates how to add assistants to the layout.
 
@@ -301,13 +301,13 @@ The following code example illustrates how to add assistants to the layout.
 @using Syncfusion.Blazor.Diagram
 @using System.Collections.ObjectModel
 
- <SfDiagramComponent @ref="diagram" Width="900px" Height="800px" NodeCreating="NodeCreating" ConnectorCreating="ConnectorCreating">
-        <DataSourceSettings DataSource="DataSource" ID="Id" ParentID="Manager"></DataSourceSettings>
-            <Layout @bind-Type="type" @bind-HorizontalSpacing="@HorizontalSpacing" @bind-FixedNode="@FixedNode" @bind-Orientation="@oreintation" @bind-VerticalSpacing="@VerticalSpacing" @bind-HorizontalAlignment="@horizontalAlignment" @bind-VerticalAlignment="@verticalAlignment" GetLayoutInfo="GetLayoutInfo">
-                <LayoutMargin @bind-Top="@top" @bind-Bottom="@bottom" @bind-Right="@right" @bind-Left="@left"></LayoutMargin>               
-            </Layout>
-            <SnapSettings></SnapSettings>
-    </SfDiagramComponent>
+<SfDiagramComponent @ref="diagram" Width="900px" Height="800px" >
+    <DataSourceSettings DataSource="DataSource" ID="Id" ParentID="Manager"></DataSourceSettings>
+        <Layout @bind-Type="type" @bind-HorizontalSpacing="@HorizontalSpacing" @bind-FixedNode="@FixedNode" @bind-Orientation="@oreintation" @bind-VerticalSpacing="@VerticalSpacing" @bind-HorizontalAlignment="@horizontalAlignment" @bind-VerticalAlignment="@verticalAlignment" GetLayoutInfo="GetLayoutInfo">
+            <LayoutMargin @bind-Top="@top" @bind-Bottom="@bottom" @bind-Right="@right" @bind-Left="@left"></LayoutMargin>               
+        </Layout>
+        <SnapSettings></SnapSettings>
+</SfDiagramComponent>
 
 @code {
     SfDiagramComponent diagram;
@@ -336,12 +336,13 @@ The following code example illustrates how to add assistants to the layout.
     }
     private TreeInfo GetLayoutInfo(IDiagramObject obj, TreeInfo options)
     {
-          Node node = obj as Node;
-           if ((node.Data as HierarchicalDetails).Role == "General Manager")
-            {
-                options.Assistants.Add(options.Children[0]);
-                options.Children.RemoveAt(0);
-            }
+        Node node = obj as Node;
+        if ((node.Data as HierarchicalDetails).Role == "General Manager")
+        {
+            options.Assistants.Add(options.Children[0]);
+            options.Children.RemoveAt(0);
+        }
+        return options;
     }
     public List<HierarchicalDetails> DataSource = new List<HierarchicalDetails>()
     {

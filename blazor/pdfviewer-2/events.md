@@ -24,6 +24,7 @@ The events provided in SfPdfViewer component are listed out as follows:
 |AnnotationSelected|Triggers when an annotation is selected over the page of the PDF document.|
 |AnnotationUnselected|Triggers when an annotation is unselected over the page of the PDF document.|
 |Created|Triggers when the PDFViewer component is created.|
+|DocumentEdited|Triggers when the PDF Document getting edited in SfPdfViewer.|
 |DocumentLoaded|Triggers while loading document into PdfViewer.|
 |DocumentLoadFailed|Triggers while loading document got failed in PdfViewer.|
 |DcoumentUnloaded|Triggers while close the document|
@@ -112,4 +113,29 @@ The following code illustrates how to load PDF document on created event.
 }
 
 ```
+
+## DocumentEdited Event
+
+The DocumentEdited Event is Triggered when the PDF document getting Edited. 
+
+The following code illustrates how to trigger the DocumentEdited Event. In that code , [EditingAction](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.EditingAction.html) provides the information related to document edited. 
+
+```cshtml
+
+@using Syncfusion.Blazor.SfPdfViewer 
+
+<SfPdfViewer2 DocumentPath="@DocumentPath" Height="100%" Width="100%"> 
+    <PdfViewerEvents DocumentEdited="@DocumentEdited"></PdfViewerEvents>
+</SfPdfViewer2>
+
+@code{ 
+    private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succintly.pdf"; 
+    public async Task DocumentEdited(DocumentEditedEventArgs args) 
+    {
+        Console.WriteLine(args.EditingAction);
+    }	 
+}
+
+```
+
 [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Load%20and%20Save/Load%20a%20PDF%20document%20using%20created%20event-SfPdfViewer)

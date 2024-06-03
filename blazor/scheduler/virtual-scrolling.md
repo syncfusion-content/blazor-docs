@@ -232,3 +232,127 @@ In Blazor Scheduler, templates can be applied when [`AllowVirtualScrolling`](htt
 
 N>  For now, the virtual loading of resources and events is not supported in `Month Agenda`, `Year` and `TimelineYear` (Horizontal Orientation) views.
 By default Virtual scrolling displays only 30 resources. You can increase or decrease the number of resources by using [VirtualResourceCount](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleView.html#Syncfusion_Blazor_Schedule_ScheduleView_VirtualResourceCount) property.
+
+## Enabling lazy loading for appointments
+
+The lazy loading feature provides a convenient way to efficiently load resource appointments into the Scheduler using an on-demand approach. With this feature, you can seamlessly load a large volume of appointment data into the Scheduler without experiencing any performance degradation.
+
+By default, the Scheduler fetches all the relevant appointments from the server with in the current date range. However, enabling this feature will trigger query requests to the server for appointment retrieval whenever new resources are rendered due to scroll actions. These queries contain the resource IDs of currently displayed resources along with current date range, which can be passed as a comma-separated string. In the server controller, these resource IDs are parsed to filter the necessary appointments to render in the scheduler. 
+
+When you enable this feature, the Scheduler becomes capable of fetching events from remote services only for the current view port alone to optimize the data retrieval. The remaining appointment data is fetched form the server on-demand based on currently rendered view port resources as you scroll's through the scheduler content.
+
+To enable this feature, you have to set the [`EnableLazyLoading`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleView.html#Syncfusion_Blazor_Schedule_ScheduleView_Enablelazyloading) property to `true` within the view specific settings.
+
+```cshtml
+@using Syncfusion.Blazor
+@using Syncfusion.Blazor.Data
+@using Syncfusion.Blazor.Schedule
+
+<SfSchedule TValue="AppointmentData" Width="100%" Height="650px" @bind-SelectedDate="@currentDate" Readonly="true">
+    <ScheduleGroup EnableCompactView="false" Resources="@groupData"></ScheduleGroup>
+    <ScheduleResources>
+        <ScheduleResource TItem="ResourceData" TValue="int" DataSource="@resourceDatasource" Field="ResourceId" Title="Resource" Name="Resources" TextField="Text" IdField="Id" ColorField="Color"></ScheduleResource>
+    </ScheduleResources>
+    <ScheduleEventSettings TValue="AppointmentData">
+        <SfDataManager Url="https://blazor.syncfusion.com/services/production/api/VirtualEventData" Adaptor="Adaptors.WebApiAdaptor" CrossDomain="true"></SfDataManager>
+    </ScheduleEventSettings>
+    <ScheduleViews>
+        <ScheduleView Option="View.TimelineMonth" EnableLazyLoading="true" IsSelected="true"></ScheduleView>
+    </ScheduleViews>
+</SfSchedule>
+
+@code{
+    List<ResourceData> resourceDatasource = new List<ResourceData>();
+    DateTime currentDate = new DateTime(2023, 4, 1);
+    string[] groupData { get; set; } = { "Resources" };
+    protected override void OnInitialized()
+    {
+        base.OnInitialized();
+        resourceDatasource = GenerateResourceData();
+    }
+    private List<ResourceData> GenerateResourceData()
+    {
+        List<ResourceData> resources = new List<ResourceData>(1000);
+        var colors = new string[] { "#ff8787", "#9775fa", "#748ffc", "#3bc9db", "#69db7c",
+            "#fdd835", "#748ffc", "#9775fa", "#df5286", "#7fa900",
+            "#fec200", "#5978ee", "#00bdae", "#ea80fc"};
+        for (int a = 1; a <= 1000; a++)
+        {
+            int index = a % colors.Length;
+            index = index == 0 ? (colors.Length / a) : index;
+            resources.Add(new ResourceData
+            {
+                Id = a,
+                Text = "Resource " + a,
+                Color = colors[index]
+            });
+        }
+        return resources;
+    }
+    public class AppointmentData
+    {
+        public int Id { get; set; }
+        public string Subject { get; set; }
+        public DateTime StartTime { get; set; }
+        public DateTime EndTime { get; set; }
+        public string Location { get; set; }
+        public string Description { get; set; }
+        public bool? IsAllDay { get; set; }
+        public int? RecurrenceID { get; set; }
+        public string RecurrenceRule { get; set; }
+        public string RecurrenceException { get; set; }
+        public int ResourceId { get; set; }
+    }
+    public class ResourceData
+    {
+        public int Id { get; set; }
+        public string Text { get; set; }
+        public string Color { get; set; }
+    }
+}
+```
+
+Here's the server-side controller code that retrieves appointment data based on the resource IDs provided as query parameters:
+
+```c#
+using Microsoft.AspNetCore.Mvc;
+using System.Collections.Generic;
+using System;
+using Microsoft.EntityFrameworkCore;
+using System.Linq;
+using System.ComponentModel.DataAnnotations;
+using Microsoft.AspNetCore.OData.Query;
+
+namespace LazyLoadingServices.Controllers
+{
+    public class VirtualEventDataController : Controller
+    {
+        private readonly EventsContext dbContext;
+
+        [HttpGet]
+        [EnableQuery]
+        [Route("api/VirtualEventData")]
+        public IActionResult GetData([FromQuery] Params param)
+        {
+            IQueryable<EventData> query = dbContext.Events;
+            // Filter the appointment data based on the ResourceId query params.
+            if (!string.IsNullOrEmpty(param.ResourceId))
+            {
+                string[] resourceId = param.ResourceId.Split(',');
+                query = query.Where(data => resourceId.Contains(data.ResourceId.ToString()));
+            }
+            return Ok(query.ToList());
+        }
+    }
+    public class Params
+    {
+        public DateTime? StartDate { get; set; }
+        public DateTime? EndDate { get; set; }
+        public string ResourceId { get; set; }
+    }
+}
+```
+
+**Note:** 
+* The property will be effective, when large number of resources and appointments bound to the Scheduler.
+* This property is applicable only when [resource grouping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleGroup.html#Syncfusion_Blazor_Schedule_ScheduleGroup_Resources) is enabled in Scheduler.

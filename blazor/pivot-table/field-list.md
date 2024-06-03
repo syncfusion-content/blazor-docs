@@ -169,7 +169,7 @@ To enable search box in the static field list UI, set the [ShowFieldSearch](http
 }
 
 ```
-![Static Field List with search in Blazor Pivot Table](images/blazor-pivottable-static-fieldlist-search.PNG)
+![Static Field List with search in Blazor Pivot Table](images/blazor-pivottable-static-fieldlist-search.png)
 
 To enable search box in the pivot table's built-in popup field list UI, set the [ShowFieldSearch](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_ShowFieldSearch) property to **true** in [SfPivotView](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html).
 
@@ -206,7 +206,7 @@ To enable search box in the pivot table's built-in popup field list UI, set the 
 }
 
 ```
-![Popup Field List with search in Blazor Pivot Table](images/blazor-pivottable-popup-fieldlist-search.PNG)
+![Popup Field List with search in Blazor Pivot Table](images/blazor-pivottable-popup-fieldlist-search.png)
 
 ## Option to sort fields
 
@@ -214,7 +214,7 @@ End user can sort fields in the field list UI to ascending (or) descending (or) 
 
 N> By default, fields are displayed in the default order.
 
-![Field list with sorting options in Blazor Pivot Table](images/blazor-pivottable-fieldlist-default-sort.PNG)
+![Field list with sorting options in Blazor Pivot Table](images/blazor-pivottable-fieldlist-default-sort.png)
 
 ## Add or remove fields
 
@@ -224,7 +224,7 @@ Using check box besides each field, end user can select or unselect to add or re
 
 ## Remove specific field(s) from displaying
 
-When a data source is bound to the component, fields will be automatically populated inside the Field List. In such case, user can also restrict specific field(s) from displaying. To do so, set the appropriate field name(s) in [ExcludeFields](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.DataSourceSettingsModel-1.html#Syncfusion_Blazor_PivotView_DataSourceSettingsModel_1_ExcludeFields) property belonging to [PivotViewDataSourceSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html) class.
+When a data source is bound to the component, fields will be automatically populated inside the Field List. In such case, user can also restrict specific field(s) from displaying. To do so, set the appropriate field name(s) in [ExcludeFields](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html#Syncfusion_Blazor_PivotView_PivotViewDataSourceSettings_1_ExcludeFields) property belonging to [PivotViewDataSourceSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html) class.
 
  ```cshtml
 @using Syncfusion.Blazor.PivotView
@@ -546,13 +546,13 @@ The event [OnActionBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
 
 | Action | Action Name|
 |----------------|-------------|
-| [Sort icon](./field-list/#sorting-members)| Sort field|
-| [Filter icon](./field-list/#filtering-members)| Filter field|
-| [Aggregation](./field-list/#changing-aggregation-type-of-value-fields-at-runtime) (Value type drop down and menu)| Aggregate field|
-| [Edit icon](./calculated-field/#editing-the-existing-calculated-field-formula) | Edit calculated field|
-| [Calculated field button](./field-list/#calculated-fields)| Open calculated field dialog|
-| [Field list](./field-list/#in-built-field-list-popup)| Open field list|
-| [Field list tree – Sort icon](./field-list/#in-built-field-list-popup)| Sort field tree|
+| [Sort icon](./field-list#sorting-members)| Sort field|
+| [Filter icon](./field-list#filtering-members)| Filter field|
+| [Aggregation](./field-list#changing-aggregation-type-of-value-fields-at-runtime) (Value type drop down and menu)| Aggregate field|
+| [Edit icon](./calculated-field#editing-the-existing-calculated-field-formula) | Edit calculated field|
+| [Calculated field button](./field-list#calculated-fields)| Open calculated field dialog|
+| [Field list](./field-list#in-built-field-list-popup)| Open field list|
+| [Field list tree – Sort icon](./field-list#in-built-field-list-popup)| Sort field tree|
 
 * [FieldInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotActionBeginEventArgs.html#Syncfusion_Blazor_PivotView_PivotActionBeginEventArgs_FieldInfo): It holds the selected field information.
 
@@ -615,13 +615,13 @@ The event [OnActionComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Bl
 
 | Action | Action Name|
 |----------------|-------------|
-| [Sort icon](./field-list/#sorting-members)| Field sorted|
-| [Filter icon](./field-list/#filtering-members)| Field filtered|
-| [Aggregation](./field-list/#changing-aggregation-type-of-value-fields-at-runtime)(Value type drop down and menu)| Field aggregated|
-| [Edit icon](./calculated-field/#editing-the-existing-calculated-field-formula)| Calculated field edited|
-| [Calculated field button](./field-list/#calculated-fields)| Calculated field applied|
-| [Field list](./field-list/#in-built-field-list-popup)| Field list closed|
-| [Field list tree – Sort icon](./field-list/#in-built-field-list-popup)| Field tree sorted|
+| [Sort icon](./field-list#sorting-members)| Field sorted|
+| [Filter icon](./field-list#filtering-members)| Field filtered|
+| [Aggregation](./field-list#changing-aggregation-type-of-value-fields-at-runtime)(Value type drop down and menu)| Field aggregated|
+| [Edit icon](./calculated-field#editing-the-existing-calculated-field-formula)| Calculated field edited|
+| [Calculated field button](./field-list#calculated-fields)| Calculated field applied|
+| [Field list](./field-list#in-built-field-list-popup)| Field list closed|
+| [Field list tree – Sort icon](./field-list#in-built-field-list-popup)| Field tree sorted|
 
 * [FieldInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotActionCompleteEventArgs-1.html#Syncfusion_Blazor_PivotView_PivotActionCompleteEventArgs_1_FieldInfo): It holds the selected field information.
 
@@ -680,13 +680,13 @@ The event [OnActionFailure](https://help.syncfusion.com/cr/blazor/Syncfusion.Bla
 
 | Action | Action Name|
 |----------------|-------------|
-| [Sort icon](./field-list/#sorting-members)| Sort field|
-| [Filter icon](./field-list/#filtering-members)| Filter field|
-| [Aggregation](./field-list/#changing-aggregation-type-of-value-fields-at-runtime) (Value type drop down and menu)| Aggregate field|
-| [Edit icon](./calculated-field/#editing-the-existing-calculated-field-formula)| Edit calculated field|
-| [Calculated field button](./field-list/#calculated-fields)| Open calculated field dialog|
-| [Field list](./field-list/#in-built-field-list-popup)| Open field list|
-| [Field list tree – Sort icon](./field-list/#in-built-field-list-popup)| Sort field tree|
+| [Sort icon](./field-list#sorting-members)| Sort field|
+| [Filter icon](./field-list#filtering-members)| Filter field|
+| [Aggregation](./field-list#changing-aggregation-type-of-value-fields-at-runtime) (Value type drop down and menu)| Aggregate field|
+| [Edit icon](./calculated-field#editing-the-existing-calculated-field-formula)| Edit calculated field|
+| [Calculated field button](./field-list#calculated-fields)| Open calculated field dialog|
+| [Field list](./field-list#in-built-field-list-popup)| Open field list|
+| [Field list tree – Sort icon](./field-list#in-built-field-list-popup)| Sort field tree|
 
 * [ErrorInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotActionFailureEventArgs.html#Syncfusion_Blazor_PivotView_PivotActionFailureEventArgs_ErrorInfo): It holds the error information of the current UI action.
 
