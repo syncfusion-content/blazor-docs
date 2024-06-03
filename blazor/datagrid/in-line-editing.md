@@ -199,8 +199,9 @@ The following sample demonstrates how to add a new record continuously using `sh
     <GridColumns>
         <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" IsPrimaryKey="true" ValidationRules="@(new Syncfusion.Blazor.Grids.ValidationRules{ Required=true})" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="120"></GridColumn>
         <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" ValidationRules="@(new Syncfusion.Blazor.Grids.ValidationRules{ Required=true})" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" EditType="Syncfusion.Blazor.Grids.EditType.DatePickerEdit" Format="d" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="130" Type="Syncfusion.Blazor.Grids.ColumnType.Date"></GridColumn>
         <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" EditType="Syncfusion.Blazor.Grids.EditType.NumericEdit" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" EditType="Syncfusion.Blazor.Grids.EditType.DatePickerEdit" Format="d" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="130" Type="Syncfusion.Blazor.Grids.ColumnType.Date"></GridColumn>
+        <GridColumn Field=@nameof(Orders.OrderTime) HeaderText="Order Time" Type="ColumnType.TimeOnly" TextAlign="TextAlign.Right" Width="140"></GridColumn>
         <GridColumn Field=@nameof(Order.ShipCountry) HeaderText="Ship Country" EditType="Syncfusion.Blazor.Grids.EditType.DropDownEdit" Width="150"></GridColumn>
     </GridColumns>
 </SfGrid>
@@ -218,6 +219,7 @@ The following sample demonstrates how to add a new record continuously using `sh
                 CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
                 Freight = 2.1 * x,
                 OrderDate = DateTime.Now.AddDays(-x),
+                OrderTime = DateTime.Now.AddHours(x),
                 ShipCountry = (new string[] { "USA", "UK", "CHINA", "RUSSIA", "INDIA" })[new Random().Next(5)]
             }).ToList();
     }
@@ -226,8 +228,9 @@ The following sample demonstrates how to add a new record continuously using `sh
     {
         public int? OrderID { get; set; }
         public string CustomerID { get; set; }
-        public DateTime? OrderDate { get; set; }
         public double? Freight { get; set; }
+        public DateTime? OrderDate { get; set; }
+        public DateTime? OrderTime { get; set; }
         public string ShipCountry { get; set; }
     }
 }
