@@ -2906,7 +2906,7 @@ The events should be provided to the Gantt Chart using the GanttChartEvents comp
 
 ## CellSaved
 
-[CellSaved](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_CellSaved) event triggers when cell is saved.
+[CellSaved](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_CellSaved) event triggers when cell is saved. From the event argument, details such as the previous cell value, edited cell value, and column name can be obtained. The following sample demonstrates how to get the previous cell value and the edited value.
 
 ```cshtml
 @using Syncfusion.Blazor.Gantt
@@ -2932,7 +2932,8 @@ The events should be provided to the Gantt Chart using the GanttChartEvents comp
 
         private void CellSavedHandler(CellSavedArgs<TaskData> args)
         {
-            // Here, you can customize your code.
+            var previousCellValue = args.PreviousValue;
+            var editedCellValue = args.Value;
         }
 
         public class TaskData
@@ -3755,7 +3756,7 @@ The events should be provided to the Gantt Chart using the GanttChartEvents comp
 
 ## IndentationChanging
 
-[IndentationChanging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_IndentationChanging) event triggers before an indent or outdent action is performed in the Gantt Chart.
+[IndentationChanging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_IndentationChanging) event triggers before an indent or outdent action is performed in the Gantt Chart. The [IsIndent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.IndentationChangingEventArgs-1.html#Syncfusion_Blazor_Gantt_IndentationChangingEventArgs_1_IsIndent) property of this event argument determines the type of indentation (indent or outdent). The following sample code demonstrates how to cancel the outdent action based on the `IsIndent` property.
 
 ```cshtml
 @using Syncfusion.Blazor.Gantt
@@ -3777,7 +3778,10 @@ The events should be provided to the Gantt Chart using the GanttChartEvents comp
 
     public void IndentationChangingHandler(IndentationChangingEventArgs<TaskData> args)
     {
-        //Here, you can customize your code.
+        if (!args.IsIndent)
+        {
+            args.Cancel = true;
+        }
     }
 
     public class TaskData
@@ -3811,7 +3815,7 @@ The events should be provided to the Gantt Chart using the GanttChartEvents comp
 
 ## IndentationChanged
 
-[IndentationChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_IndentationChanged) event triggers after an indent or outdent action is performed in the Gantt Chart.
+[IndentationChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_IndentationChanged) event triggers after an indent or outdent action is performed in the Gantt Chart. From the event argument, details about the indent or outdent action performed can be obtained using the [IsIndent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.IndentationChangedEventArgs-1.html#Syncfusion_Blazor_Gantt_IndentationChangedEventArgs_1_IsIndent) property. The following sample demonstrates how to determine whether the performed action is an indent or outdent based on the `IsIndent` property.
 
 ```cshtml
 @using Syncfusion.Blazor.Gantt
@@ -3831,9 +3835,16 @@ The events should be provided to the Gantt Chart using the GanttChartEvents comp
         this.TaskCollection = GetTaskCollection().ToList();
     }
 
-    public void IndentationChangedHandler(IndentationChangedEventArgs<TaskData> args)
+    public void IndentationChangedHandler(IndentationChangingEventArgs<TaskData> args)
     {
-        //Here, you can customize your code.
+        if (!args.IsIndent)
+        {
+            string outdentStatus = "The outdent action is performed.";
+        }
+        else
+        {
+            string indentStatus = "The indentation action is performed.";
+        }
     }
 
     public class TaskData
