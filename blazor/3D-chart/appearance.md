@@ -11,14 +11,14 @@ documentation: ug
 
 ## Custom color palette
 
-The default color of series or points can be customized by providing a custom color palette of your choice by using the [Palettes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfChart.html#Syncfusion_Blazor_Charts_SfChart_Palettes) property.
+The default color of series or points can be customized by providing a custom color palette of your choice by using the `Palettes` property.
 
 ```cshtml
 
 @using Syncfusion.Blazor.Chart3D
 
 <SfChart3D Title="Olympic Medals" Palettes="@palettes" WallColor="transparent" EnableRotation="true" RotationAngle="7" TiltAngle="10" Depth="100">
-    <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category">
+    <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Chart3D.ValueType.Category">
     </Chart3DPrimaryXAxis>
 
     <Chart3DSeriesCollection>
@@ -42,14 +42,14 @@ The default color of series or points can be customized by providing a custom co
 
     public List<Chart3DData> MedalDetails = new List<Chart3DData>
 	{
-         new Chart3DData{ Country= "USA", Gold=50, Silver=70, Bronze=45 },
-         new Chart3DData{ Country="China", Gold=40, Silver= 60, Bronze=55 },
-         new Chart3DData{ Country= "Japan", Gold=70, Silver= 60, Bronze=50 },
-         new Chart3DData{ Country= "Australia", Gold=60, Silver= 56, Bronze=40 },
-         new Chart3DData{ Country= "France", Gold=50, Silver= 45, Bronze=35 },
-         new Chart3DData{ Country= "Germany", Gold=40, Silver=30, Bronze=22 },
-         new Chart3DData{ Country= "Italy", Gold=40, Silver=35, Bronze=37 },
-         new Chart3DData{ Country= "Sweden", Gold=30, Silver=25, Bronze=27 }
+        new Chart3DData { Country = "USA", Gold = 50, Silver = 70, Bronze = 45 },
+        new Chart3DData { Country = "China", Gold = 40, Silver = 60, Bronze = 55 },
+        new Chart3DData { Country = "Japan", Gold = 70, Silver = 60, Bronze = 50 },
+        new Chart3DData { Country = "Australia", Gold = 60, Silver = 56, Bronze = 40 },
+        new Chart3DData { Country = "France", Gold = 50, Silver = 45, Bronze = 35 },
+        new Chart3DData { Country = "Germany", Gold = 40, Silver = 30, Bronze = 22 },
+        new Chart3DData { Country = "Italy", Gold = 40, Silver = 35, Bronze = 37 },
+        new Chart3DData { Country = "Sweden", Gold = 30, Silver = 25, Bronze = 27 }
     };
 
     public String[] palettes = new String[] { "#E94649", "#F6B53F", "#6FAAB0" };
@@ -73,60 +73,18 @@ The color for the points can be bound from the `DataSource` for the series by ut
 
 @using Syncfusion.Blazor.Chart3D
 
-<SfChart3D Title="Olympic Medals" WallColor="transparent" EnableRotation="true" RotationAngle="7" TiltAngle="10" Depth="100">
-
-    <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category" />
-
-    <Chart3DSeriesCollection>
-        <Chart3DSeries DataSource="@MedalDetails" XName="X" YName="Y" PointColor="Color" Type="Chart3DSeriesType.Column">
-        </Chart3DSeries>
-    </Chart3DSeriesCollection>
-</SfChart3D>
-
-@code {
-    public class Chart3DData
-    {
-        public string X { get; set; }
-        public double Y { get; set; }
-        public string Color { get; set; }
-    }
-
-    public List<Chart3DData> MedalDetails = new List<Chart3DData>
-    {
-        new Chart3DData { X = "Jan", Y = 6.96, Color = "#ed4c40" },
-        new Chart3DData { X = "Feb", Y = 8.9,Color = "#3285f3"},
-        new Chart3DData { X = "Mar", Y = 12, Color = "#1dd7f3"},
-        new Chart3DData { X = "Apr", Y = 17.5, Color = "#fe1684" },
-        new Chart3DData { X = "May", Y = 22.1, Color = "#4633f2" }
-    };
-}
-
-```
-
-![Blazor Column 3D Chart with PointColorMapping](images/appearance/blazor-column-chart-with-point-color.png)
-
-## Point level customization
-
-The data label and fill color of each data point can be customized using the [`PointRender`](../api/chart3d/i3DPointRenderEventArgs/) and [`TextRender`](../api/chart3d/i3dtextrendereventargs/) events.
-
-```cshtml
-
-@using Syncfusion.Blazor.Chart3D
-
-<SfChart3D Title="Olympic Medals" PointRendering="Point3DRender" WallColor="transparent" EnableRotation="true" RotationAngle="7" TiltAngle="10" Depth="100">
-
-    <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category" />
-
+<SfChart3D Title="Olympic Medals" PointRendering="Point3DRender" DataLabelRendering="TextRender" WallColor="transparent" EnableRotation="true" RotationAngle="7" TiltAngle="10" Depth="100">
+    <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Chart3D.ValueType.Category" />
     <Chart3DSeriesCollection>
         <Chart3DSeries DataSource="@MedalDetails" XName="Country" YName="Gold" Type="Chart3DSeriesType.Column">
+            <Chart3DDataLabel Visible="true"></Chart3DDataLabel>
         </Chart3DSeries>
-    </Chart3DSeriesCollection>
+  </Chart3DSeriesCollection>
 </SfChart3D>
 
 @code {
 
-    public String[] colors = new String[] { "#00bdae", "#404041", "#357cd2", "#e56590", "#f8b883",
-     "#70ad47", "#dd8abd", "#7f84e8", "#7bb4eb", "#ea7a57" };
+    public String[] colors = new String[] { "#00bdae", "#404041", "#357cd2", "#e56590", "#f8b883", "#70ad47", "#dd8abd", "#7f84e8", "#7bb4eb", "#ea7a57" };
 
     public class Chart3DData
     {
@@ -138,19 +96,93 @@ The data label and fill color of each data point can be customized using the [`P
 
     public List<Chart3DData> MedalDetails = new List<Chart3DData>
     {
-         new Chart3DData{ Country= "USA", Gold=50, Silver=70, Bronze=45 },
-         new Chart3DData{ Country="China", Gold=40, Silver= 60, Bronze=55 },
-         new Chart3DData{ Country= "Japan", Gold=70, Silver= 60, Bronze=50 },
-         new Chart3DData{ Country= "Australia", Gold=60, Silver= 56, Bronze=40 },
-         new Chart3DData{ Country= "France", Gold=50, Silver= 45, Bronze=35 },
-         new Chart3DData{ Country= "Germany", Gold=40, Silver=30, Bronze=22 },
-         new Chart3DData{ Country= "Italy", Gold=40, Silver=35, Bronze=37 },
-         new Chart3DData{ Country= "Sweden", Gold=30, Silver=25, Bronze=27 }
+        new Chart3DData { Country = "USA", Gold = 50, Silver = 70, Bronze = 45 },
+        new Chart3DData { Country = "China", Gold = 40, Silver = 60, Bronze = 55 },
+        new Chart3DData { Country = "Japan", Gold = 70, Silver = 60, Bronze = 50 },
+        new Chart3DData { Country = "Australia", Gold = 60, Silver = 56, Bronze = 40 },
+        new Chart3DData { Country = "France", Gold = 50, Silver = 45, Bronze = 35 },
+        new Chart3DData { Country = "Germany", Gold = 40, Silver = 30, Bronze = 22 },
+        new Chart3DData { Country = "Italy", Gold = 40, Silver = 35, Bronze = 37 },
+        new Chart3DData { Country = "Sweden", Gold = 30, Silver = 25, Bronze = 27 }
     };
 
     public void Point3DRender(Chart3DPointRenderEventArgs args)
     {
         args.Fill = colors[args.Point.Index];
+    }
+    public void TextRender(Chart3DTextRenderEventArgs args)
+    {
+        if (args.Point.Index == 2)
+        {
+            args.Text = "Label";
+        }
+        else
+        {
+            args.Cancel = true;
+        }
+    }
+}
+
+```
+
+![Blazor Column 3D Chart with PointColorMapping](images/appearance/blazor-column-chart-with-point-color.png)
+
+## Point level customization
+
+The data label and fill color of each data point can be customized using the `PointRender` and `TextRender` events.
+
+```cshtml
+
+@using Syncfusion.Blazor.Chart3D
+
+<SfChart3D Title="Olympic Medals" PointRendering="Point3DRender" DataLabelRendering="TextRender" WallColor="transparent" EnableRotation="true" RotationAngle="7" TiltAngle="10" Depth="100">
+    <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Chart3D.ValueType.Category" />
+
+    <Chart3DSeriesCollection>
+        <Chart3DSeries DataSource="@MedalDetails" XName="Country" YName="Gold" Type="Chart3DSeriesType.Column">
+            <Chart3DDataLabel Visible="true"></Chart3DDataLabel>
+        </Chart3DSeries>
+    </Chart3DSeriesCollection>
+</SfChart3D>
+
+@code {
+
+    public String[] colors = new String[] { "#00bdae", "#404041", "#357cd2", "#e56590", "#f8b883", "#70ad47", "#dd8abd", "#7f84e8", "#7bb4eb", "#ea7a57" };
+
+    public class Chart3DData
+    {
+        public string Country { get; set; }
+        public double Gold { get; set; }
+        public double Silver { get; set; }
+        public double Bronze { get; set; }
+    }
+
+    public List<Chart3DData> MedalDetails = new List<Chart3DData>
+    {
+        new Chart3DData { Country = "USA", Gold = 50, Silver = 70, Bronze = 45 },
+        new Chart3DData { Country = "China", Gold = 40, Silver = 60, Bronze = 55 },
+        new Chart3DData { Country = "Japan", Gold = 70, Silver = 60, Bronze = 50 },
+        new Chart3DData { Country = "Australia", Gold = 60, Silver = 56, Bronze = 40 },
+        new Chart3DData { Country = "France", Gold = 50, Silver = 45, Bronze = 35 },
+        new Chart3DData { Country = "Germany", Gold = 40, Silver = 30, Bronze = 22 },
+        new Chart3DData { Country = "Italy", Gold = 40, Silver = 35, Bronze = 37 },
+        new Chart3DData { Country = "Sweden", Gold = 30, Silver = 25, Bronze = 27 }
+    };
+
+    public void Point3DRender(Chart3DPointRenderEventArgs args)
+    {
+        args.Fill = colors[args.Point.Index];
+    }
+    public void TextRender(Chart3DTextRenderEventArgs args)
+    {
+        if (args.Point.Index == 2)
+        {
+            args.Text = "Label";
+        }
+        else
+        {
+            args.Cancel = true;
+        }
     }
 }
 
@@ -164,7 +196,7 @@ The data label and fill color of each data point can be customized using the [`P
 
 **Customize the chart background**
 
-The background color and border of the 3D chart can be customized using the [BackgroundColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfChart.html#Syncfusion_Blazor_Charts_SfChart_Background) and [ChartBorder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartBorder.html) properties.
+The background color and border of the 3D chart can be customized using the `BackgroundColor` and `Chart3DBorder` properties.
 
 ```cshtml
 
@@ -173,7 +205,7 @@ The background color and border of the 3D chart can be customized using the [Bac
 <SfChart3D Title="Olympic Medals" BackgroundColor="skyblue" WallColor="transparent" EnableRotation="true" RotationAngle="7" TiltAngle="10" Depth="100">
     <Chart3DBorder Color="#FF0000" Width="2"></Chart3DBorder>
 
-    <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category" />
+    <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Chart3D.ValueType.Category" />
 
     <Chart3DSeriesCollection>
         <Chart3DSeries DataSource="@MedalDetails" XName="Country" YName="Gold" Type="Chart3DSeriesType.Column">
@@ -190,14 +222,14 @@ The background color and border of the 3D chart can be customized using the [Bac
 
     public List<Chart3DData> MedalDetails = new List<Chart3DData>
 	{
-		new Chart3DData{ Country= "USA", Gold=50  },
-		new Chart3DData{ Country="China", Gold=40 },
-		new Chart3DData{ Country= "Japan", Gold=70 },
-		new Chart3DData{ Country= "Australia", Gold=60},
-		new Chart3DData{ Country= "France", Gold=50 },
-		new Chart3DData{ Country= "Germany", Gold=40 },
-		new Chart3DData{ Country= "Italy", Gold=40 },
-		new Chart3DData{ Country= "Sweden", Gold=30 }
+		new Chart3DData { Country = "USA", Gold = 50 },
+		new Chart3DData { Country = "China", Gold = 40 },
+		new Chart3DData { Country = "Japan", Gold = 70 },
+		new Chart3DData { Country = "Australia", Gold = 60 },
+		new Chart3DData { Country = "France", Gold = 50 },
+		new Chart3DData { Country = "Germany", Gold = 40 },
+		new Chart3DData { Country = "Italy", Gold = 40 },
+		new Chart3DData { Country = "Sweden", Gold = 30 }
     };
 }
 
@@ -207,7 +239,7 @@ The background color and border of the 3D chart can be customized using the [Bac
 
 **Chart margin**
 
-The 3D chart's margin can be set from its container using the [Chart3DMargin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartMargin.html) property.
+The 3D chart's margin can be set from its container using the `Chart3DMargin` property.
 
 ```cshtml
 
@@ -217,7 +249,7 @@ The 3D chart's margin can be set from its container using the [Chart3DMargin](ht
     <Chart3DBorder Color="#FF0000" Width="2"></Chart3DBorder>
     <Chart3DMargin Left="60" Right="60" Top="60" Bottom="60"></Chart3DMargin>
 
-    <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category" />
+    <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Chart3D.ValueType.Category" />
 
     <Chart3DSeriesCollection>
         <Chart3DSeries DataSource="@MedalDetails" XName="Country" YName="Gold" Type="Chart3DSeriesType.Column">
@@ -234,14 +266,14 @@ The 3D chart's margin can be set from its container using the [Chart3DMargin](ht
 
     public List<Chart3DData> MedalDetails = new List<Chart3DData>
 	{
-		new Chart3DData{ Country= "USA", Gold=50  },
-		new Chart3DData{ Country="China", Gold=40 },
-		new Chart3DData{ Country= "Japan", Gold=70 },
-		new Chart3DData{ Country= "Australia", Gold=60},
-		new Chart3DData{ Country= "France", Gold=50 },
-		new Chart3DData{ Country= "Germany", Gold=40 },
-		new Chart3DData{ Country= "Italy", Gold=40 },
-		new Chart3DData{ Country= "Sweden", Gold=30 }
+		new Chart3DData { Country = "USA", Gold = 50 },
+		new Chart3DData { Country = "China", Gold = 40 },
+		new Chart3DData { Country = "Japan", Gold = 70 },
+		new Chart3DData { Country = "Australia", Gold = 60 },
+		new Chart3DData { Country = "France", Gold = 50 },
+		new Chart3DData { Country = "Germany", Gold = 40 },
+		new Chart3DData { Country = "Italy", Gold = 40 },
+		new Chart3DData { Country = "Sweden", Gold = 30 }
     };
 }
 
@@ -251,18 +283,18 @@ The 3D chart's margin can be set from its container using the [Chart3DMargin](ht
 
 ## Animation
 
-To customize the animation for a particular series, the [Animation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Animation) property can be used. It can be enabled or disabled by using the [Enable](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartCommonAnimation.html#Syncfusion_Blazor_Charts_StockChartCommonAnimation_Enable) property. The [Duration](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartCommonAnimation.html#Syncfusion_Blazor_Charts_StockChartCommonAnimation_Duration) property specifies the duration of an animation and the [Delay](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartCommonAnimation.html#Syncfusion_Blazor_Charts_StockChartCommonAnimation_Delay) property allows us to start the animation at desire time.
+To customize the animation for a particular series, the `Animation` property can be used. It can be enabled or disabled by using the `Enable` property. The `Duration` property specifies the duration of an animation and the `Delay` property allows us to start the animation at desire time.
 
 ```cshtml
 
 @using Syncfusion.Blazor.Chart3D
 
 <SfChart3D Title="Olympic Medals" WallColor="transparent" EnableRotation="true" RotationAngle="7" TiltAngle="10" Depth="100">
-    <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"/>
+    <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Chart3D.ValueType.Category"/>
 
     <Chart3DSeriesCollection>
         <Chart3DSeries DataSource="@MedalDetails" Name="Gold" XName="Country" Opacity="1" YName="Gold" Type="Chart3DSeriesType.Column">
-             <Chart3DSeriesAnimation Enable="true" Duration="2000" Delay="200"></Chart3DSeriesAnimation> 
+             <Chart3DAnimation Enable="true" Duration="2000" Delay="200"></Chart3DAnimation>
             <Chart3DSeriesBorder Width="3" Color="red"></Chart3DSeriesBorder>
         </Chart3DSeries>
     </Chart3DSeriesCollection>
@@ -279,14 +311,14 @@ To customize the animation for a particular series, the [Animation](https://help
 
     public List<Chart3DData> MedalDetails = new List<Chart3DData>
 	{
-        new Chart3DData{ Country= "USA", Gold=50, Silver=70, Bronze=45 },
-        new Chart3DData{ Country="China", Gold=40, Silver= 60, Bronze=55 },
-        new Chart3DData{ Country= "Japan", Gold=70, Silver= 60, Bronze=50 },
-        new Chart3DData{ Country= "Australia", Gold=60, Silver= 56, Bronze=40 },
-        new Chart3DData{ Country= "France", Gold=50, Silver= 45, Bronze=35 },
-        new Chart3DData{ Country= "Germany", Gold=40, Silver=30, Bronze=22 },
-        new Chart3DData{ Country= "Italy", Gold=40, Silver=35, Bronze=37 },
-        new Chart3DData{ Country= "Sweden", Gold=30, Silver=25, Bronze=27 }
+        new Chart3DData { Country = "USA", Gold = 50, Silver = 70, Bronze = 45 },
+        new Chart3DData { Country = "China", Gold = 40, Silver = 60, Bronze = 55 },
+        new Chart3DData { Country = "Japan", Gold = 70, Silver = 60, Bronze = 50 },
+        new Chart3DData { Country = "Australia", Gold = 60, Silver = 56, Bronze = 40 },
+        new Chart3DData { Country = "France", Gold = 50, Silver = 45, Bronze = 35 },
+        new Chart3DData { Country = "Germany", Gold = 40, Silver = 30, Bronze = 22 },
+        new Chart3DData { Country = "Italy", Gold = 40, Silver = 35, Bronze = 37 },
+        new Chart3DData { Country = "Sweden", Gold = 30, Silver = 25, Bronze = 27 }
     };
 }
 
@@ -301,7 +333,7 @@ The 3D chart can be rotated by using the `EnableRotation` property.
 @using Syncfusion.Blazor.Chart3D
 
 <SfChart3D Title="Olympic Medals" WallColor="transparent" EnableRotation="true" RotationAngle="7" TiltAngle="10" Depth="100">
-    <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"/>
+    <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Chart3D.ValueType.Category"/>
 
     <Chart3DSeriesCollection>
         <Chart3DSeries DataSource="@MedalDetails" Name="Gold" XName="Country" Opacity="1" YName="Gold" Type="Chart3DSeriesType.Column">
@@ -320,14 +352,14 @@ The 3D chart can be rotated by using the `EnableRotation` property.
 
     public List<Chart3DData> MedalDetails = new List<Chart3DData>
 	{
-        new Chart3DData{ Country= "USA", Gold=50, Silver=70, Bronze=45 },
-        new Chart3DData{ Country="China", Gold=40, Silver= 60, Bronze=55 },
-        new Chart3DData{ Country= "Japan", Gold=70, Silver= 60, Bronze=50 },
-        new Chart3DData{ Country= "Australia", Gold=60, Silver= 56, Bronze=40 },
-        new Chart3DData{ Country= "France", Gold=50, Silver= 45, Bronze=35 },
-        new Chart3DData{ Country= "Germany", Gold=40, Silver=30, Bronze=22 },
-        new Chart3DData{ Country= "Italy", Gold=40, Silver=35, Bronze=37 },
-        new Chart3DData{ Country= "Sweden", Gold=30, Silver=25, Bronze=27 }
+        new Chart3DData { Country = "USA", Gold = 50, Silver = 70, Bronze = 45 },
+        new Chart3DData { Country = "China", Gold = 40, Silver = 60, Bronze = 55 },
+        new Chart3DData { Country = "Japan", Gold = 70, Silver = 60, Bronze = 50 },
+        new Chart3DData { Country = "Australia", Gold = 60, Silver = 56, Bronze = 40 },
+        new Chart3DData { Country = "France", Gold = 50, Silver = 45, Bronze = 35 },
+        new Chart3DData { Country = "Germany", Gold = 40, Silver = 30, Bronze = 22 },
+        new Chart3DData { Country = "Italy", Gold = 40, Silver = 35, Bronze = 37 },
+        new Chart3DData { Country = "Sweden", Gold = 30, Silver = 25, Bronze = 27 }
     };
 }
 
@@ -335,7 +367,7 @@ The 3D chart can be rotated by using the `EnableRotation` property.
 
 ## Title
 
-The 3D chart can be given a title by using [Title](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfChart.html#Syncfusion_Blazor_Charts_SfChart_Title) property, to show the information about the data plotted.
+The 3D chart can be given a title by using `Title` property, to show the information about the data plotted.
 
 ```cshtml
 
@@ -343,8 +375,7 @@ The 3D chart can be given a title by using [Title](https://help.syncfusion.com/c
 
 <SfChart3D Title="Olympic Medals" WallColor="transparent" EnableRotation="true" RotationAngle="7" TiltAngle="10" Depth="100">
     <Chart3DTitleStyle FontSize="23px" Color="red" FontFamily="Arial" FontWeight="regular" FontStyle="italic"></Chart3DTitleStyle>
-
-    <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category">
+    <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Chart3D.ValueType.Category">
     </Chart3DPrimaryXAxis>
 
     <Chart3DSeriesCollection>
@@ -362,14 +393,14 @@ The 3D chart can be given a title by using [Title](https://help.syncfusion.com/c
 
     public List<Chart3DData> MedalDetails = new List<Chart3DData>
 	{
-		new Chart3DData{ Country= "USA", Gold=50  },
-		new Chart3DData{ Country="China", Gold=40 },
-		new Chart3DData{ Country= "Japan", Gold=70 },
-		new Chart3DData{ Country= "Australia", Gold=60},
-		new Chart3DData{ Country= "France", Gold=50 },
-		new Chart3DData{ Country= "Germany", Gold=40 },
-		new Chart3DData{ Country= "Italy", Gold=40 },
-		new Chart3DData{ Country= "Sweden", Gold=30 }
+		new Chart3DData { Country = "USA", Gold = 50 },
+		new Chart3DData { Country = "China", Gold = 40 },
+		new Chart3DData { Country = "Japan", Gold = 70 },
+		new Chart3DData { Country = "Australia", Gold = 60 },
+		new Chart3DData { Country = "France", Gold = 50 },
+		new Chart3DData { Country = "Germany", Gold = 40 },
+		new Chart3DData { Country = "Italy", Gold = 40 },
+		new Chart3DData { Country = "Sweden", Gold = 30 }
     };
 }
 
@@ -379,7 +410,7 @@ The 3D chart can be given a title by using [Title](https://help.syncfusion.com/c
 
 ### Title position
 
-By using the `Position`property in `TitleStyle`, the [Title](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfChart.html#Syncfusion_Blazor_Charts_SfChart_Title) can be positioned at left, right, top or bottom of the 3D chart. The title is positioned at the top of the 3D chart, by default.
+By using the `Position`property in `TitleStyle`, the `Title` can be positioned at left, right, top or bottom of the 3D chart. The title is positioned at the top of the 3D chart, by default.
 
 ```cshtml
 
@@ -387,8 +418,7 @@ By using the `Position`property in `TitleStyle`, the [Title](https://help.syncf
 
 <SfChart3D Title="Olympic Medals" WallColor="transparent" EnableRotation="true" RotationAngle="7" TiltAngle="10" Depth="100">
     <Chart3DTitleStyle Position="Chart3DTitlePosition.Bottom"></Chart3DTitleStyle>
-
-    <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category">
+    <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Chart3D.ValueType.Category">
     </Chart3DPrimaryXAxis>
 
     <Chart3DSeriesCollection>
@@ -406,14 +436,14 @@ By using the `Position`property in `TitleStyle`, the [Title](https://help.syncf
 
     public List<Chart3DData> MedalDetails = new List<Chart3DData>
 	{
-		new Chart3DData{ Country= "USA", Gold=50  },
-		new Chart3DData{ Country="China", Gold=40 },
-		new Chart3DData{ Country= "Japan", Gold=70 },
-		new Chart3DData{ Country= "Australia", Gold=60},
-		new Chart3DData{ Country= "France", Gold=50 },
-		new Chart3DData{ Country= "Germany", Gold=40 },
-		new Chart3DData{ Country= "Italy", Gold=40 },
-		new Chart3DData{ Country= "Sweden", Gold=30 }
+		new Chart3DData { Country = "USA", Gold = 50 },
+		new Chart3DData { Country = "China", Gold = 40 },
+		new Chart3DData { Country = "Japan", Gold = 70 },
+		new Chart3DData { Country = "Australia", Gold = 60 },
+		new Chart3DData { Country = "France", Gold = 50 },
+		new Chart3DData { Country = "Germany", Gold = 40 },
+		new Chart3DData { Country = "Italy", Gold = 40 },
+		new Chart3DData { Country = "Sweden", Gold = 30 }
     };
 }
 
@@ -429,8 +459,7 @@ The custom option is used to position the title anywhere in the 3D chart using `
 
 <SfChart3D Title="Olympic Medals" WallColor="transparent" EnableRotation="true" RotationAngle="7" TiltAngle="10" Depth="100">
     <Chart3DTitleStyle Position="Chart3DTitlePosition.Custom" X="300" Y="60"></Chart3DTitleStyle>
-
-    <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category">
+    <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Chart3D.ValueType.Category">
     </Chart3DPrimaryXAxis>
 
     <Chart3DSeriesCollection>
@@ -448,14 +477,14 @@ The custom option is used to position the title anywhere in the 3D chart using `
 
     public List<Chart3DData> MedalDetails = new List<Chart3DData>
 	{
-		new Chart3DData{ Country= "USA", Gold=50  },
-		new Chart3DData{ Country="China", Gold=40 },
-		new Chart3DData{ Country= "Japan", Gold=70 },
-		new Chart3DData{ Country= "Australia", Gold=60},
-		new Chart3DData{ Country= "France", Gold=50 },
-		new Chart3DData{ Country= "Germany", Gold=40 },
-		new Chart3DData{ Country= "Italy", Gold=40 },
-		new Chart3DData{ Country= "Sweden", Gold=30 }
+		new Chart3DData { Country = "USA", Gold = 50 },
+		new Chart3DData { Country = "China", Gold = 40 },
+		new Chart3DData { Country = "Japan", Gold = 70 },
+		new Chart3DData { Country = "Australia", Gold = 60 },
+		new Chart3DData { Country = "France", Gold = 50 },
+		new Chart3DData { Country = "Germany", Gold = 40 },
+		new Chart3DData { Country = "Italy", Gold = 40 },
+		new Chart3DData { Country = "Sweden", Gold = 30 }
     };
 }
 
@@ -472,9 +501,8 @@ The title can be aligned to the near, far, or center of the 3D chart by using th
 @using Syncfusion.Blazor.Chart3D
 
 <SfChart3D Title="Olympic Medals" WallColor="transparent" EnableRotation="true" RotationAngle="7" TiltAngle="10" Depth="100">
-    <Chart3DTitleStyle TextAlignment="Syncfusion.Blazor.Charts.Alignment.Far"></Chart3DTitleStyle>
-
-    <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category">
+    <Chart3DTitleStyle TextAlignment="Alignment.Far"></Chart3DTitleStyle>
+    <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Chart3D.ValueType.Category">
     </Chart3DPrimaryXAxis>
 
     <Chart3DSeriesCollection>
@@ -492,20 +520,20 @@ The title can be aligned to the near, far, or center of the 3D chart by using th
 
     public List<Chart3DData> MedalDetails = new List<Chart3DData>
     {
-        new Chart3DData{ Country= "USA", Gold=50  },
-        new Chart3DData{ Country="China", Gold=40 },
-        new Chart3DData{ Country= "Japan", Gold=70 },
-        new Chart3DData{ Country= "Australia", Gold=60},
-        new Chart3DData{ Country= "France", Gold=50 },
-        new Chart3DData{ Country= "Germany", Gold=40 },
-        new Chart3DData{ Country= "Italy", Gold=40 },
-        new Chart3DData{ Country= "Sweden", Gold=30 }
+        new Chart3DData { Country = "USA", Gold = 50 },
+		new Chart3DData { Country = "China", Gold = 40 },
+		new Chart3DData { Country = "Japan", Gold = 70 },
+		new Chart3DData { Country = "Australia", Gold = 60 },
+		new Chart3DData { Country = "France", Gold = 50 },
+		new Chart3DData { Country = "Germany", Gold = 40 },
+		new Chart3DData { Country = "Italy", Gold = 40 },
+		new Chart3DData { Country = "Sweden", Gold = 30 }
     };
 }
+
 ```
 
 ![Blazor Column 3D Chart Title with Text Alignment](images/appearance/blazor-column-chart-title-alignment.png)
-
 
 ### Title customization
 
@@ -516,9 +544,9 @@ The `TitleStyle` property of the 3D chart provides options to customize the titl
 @using Syncfusion.Blazor.Chart3D
 
 <SfChart3D Title="Olympic Medals" WallColor="transparent" EnableRotation="true" RotationAngle="7" TiltAngle="10" Depth="100">
-    <Chart3DTitleStyle FontSize="18px" Color="red" TextOverflow="@Syncfusion.Blazor.Charts.TextOverflow.Wrap"></Chart3DTitleStyle>
+    <Chart3DTitleStyle FontSize="18px" Color="red" TextOverflow="@TextOverflow.Wrap"></Chart3DTitleStyle>
 
-    <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category">
+    <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Chart3D.ValueType.Category">
     </Chart3DPrimaryXAxis>
 
     <Chart3DSeriesCollection>
@@ -536,14 +564,14 @@ The `TitleStyle` property of the 3D chart provides options to customize the titl
 
     public List<Chart3DData> MedalDetails = new List<Chart3DData>
     {
-        new Chart3DData{ Country= "USA", Gold=50  },
-        new Chart3DData{ Country="China", Gold=40 },
-        new Chart3DData{ Country= "Japan", Gold=70 },
-        new Chart3DData{ Country= "Australia", Gold=60},
-        new Chart3DData{ Country= "France", Gold=50 },
-        new Chart3DData{ Country= "Germany", Gold=40 },
-        new Chart3DData{ Country= "Italy", Gold=40 },
-        new Chart3DData{ Country= "Sweden", Gold=30 }
+        new Chart3DData { Country = "USA", Gold = 50 },
+		new Chart3DData { Country = "China", Gold = 40 },
+		new Chart3DData { Country = "Japan", Gold = 70 },
+		new Chart3DData { Country = "Australia", Gold = 60 },
+		new Chart3DData { Country = "France", Gold = 50 },
+		new Chart3DData { Country = "Germany", Gold = 40 },
+		new Chart3DData { Country = "Italy", Gold = 40 },
+		new Chart3DData { Country = "Sweden", Gold = 30 }
     };
 }
 
@@ -551,9 +579,5 @@ The `TitleStyle` property of the 3D chart provides options to customize the titl
 
 ![Blazor Column 3D Chart Title with Customization](images/appearance/blazor-column-chart-title-with-customization.png)
 
-N> The chart components do not use any CSS style for customization; chart elements like axis labels, datalabel, background, series palette, legend text, and tooltip text can be customized by using the [ChartAxisLabelStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAxisLabelStyle.html), [ChartDataLabelFont](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDataLabelFont.html), [BackGround](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfChart.html#Syncfusion_Blazor_Charts_SfChart_Background), [Palettes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfChart.html#Syncfusion_Blazor_Charts_SfChart_Palettes), [ChartLegendTextStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartLegendTextStyle.html), and [ChartTooltipTextStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTooltipTextStyle.html), respectively. 
+N> The chart components do not use any CSS style for customization; chart elements like axis labels, datalabel, background, series palette, legend text, and tooltip text can be customized by using the `Chart3DAxisLabelStyle`, `Chart3DDataLabelFont`, `BackGround`, `Palettes`, `Chart3DLegendTextStyle`, and `Chart3DTooltipTextStyle`, respectively.
 
-## See also
-
-* [Data Label](./data-labels)
-* [Tooltip](./tool-tip)

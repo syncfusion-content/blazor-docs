@@ -9,14 +9,14 @@ documentation: ug
 
 # Data Labels in Blazor 3D Chart Component
 
-Data labels are fields that includes information about the sample point connected to an output. It can be added to a chart series by enabling the [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDataLabel.html#Syncfusion_Blazor_Charts_ChartDataLabel_Visible) property in the [Data label](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDataLabel.html). By default, the labels will arrange smartly without overlapping.
+Data labels are fields that includes information about the sample point connected to an output. It can be added to a chart series by enabling the `Visible` property in the `Data label`. By default, the labels will arrange smartly without overlapping.
 
 ```cshtml
 
 @using Syncfusion.Blazor.Chart3D
 
 <SfChart3D Title="Olympic Medals" WallColor="transparent" EnableRotation="true" RotationAngle="7" TiltAngle="10" Depth="100">
-    <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category">
+    <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Chart3D.ValueType.Category">
        </Chart3DPrimaryXAxis>
 
     <Chart3DSeriesCollection>
@@ -53,14 +53,14 @@ Data labels are fields that includes information about the sample point connecte
 
 ## Position
 
-The [Position](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDataLabel.html#Syncfusion_Blazor_Charts_ChartDataLabel_Position) property is used to place the label either on `Top`, `Middle`, or `Bottom`.
+The `Position` property is used to place the label either on `Top`, `Middle`, or `Bottom`.
 
 ```cshtml
 
 @using Syncfusion.Blazor.Chart3D
 
 <SfChart3D Title="Olympic Medals" WallColor="transparent" EnableRotation="true" RotationAngle="7" TiltAngle="10" Depth="100">
-    <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category">
+    <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Chart3D.ValueType.Category">
        </Chart3DPrimaryXAxis>
 
     <Chart3DSeriesCollection>
@@ -97,14 +97,14 @@ The [Position](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Ch
 
 ## Template
 
-Label content can be formatted by using the template option. Inside the template, the placeholder text `${point.x}` and `${point.y}` can be added to display corresponding data points x & y value. Using [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDataLabel.html#Syncfusion_Blazor_Charts_ChartDataLabel_Template) property, the data label template can be set.
+Label content can be formatted by using the template option. Inside the template, the placeholder text `${point.x}` and `${point.y}` can be added to display corresponding data points x & y value. Using `Template` property, the data label template can be set.
 
 ```cshtml
 
 @using Syncfusion.Blazor.Chart3D
 
 <SfChart3D WallColor="transparent" EnableRotation="true" RotationAngle="7" TiltAngle="10" Depth="100">
-    <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category" />
+    <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Chart3D.ValueType.Category" />
 
     <Chart3DSeriesCollection>
         <Chart3DSeries DataSource="@SalesReports" XName="X" YName="Y">
@@ -148,18 +148,18 @@ Label content can be formatted by using the template option. Inside the template
 
 ## Text mapping
 
-Text from the data source can be mapped using the [Name](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDataLabel.html#Syncfusion_Blazor_Charts_ChartDataLabel_Name) property.
+Text from the data source can be mapped using the `NameField` property.
 
 ```cshtml
 
 @using Syncfusion.Blazor.Chart3D
 
 <SfChart3D>
-    <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></Chart3DPrimaryXAxis>
+    <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Chart3D.ValueType.Category"></Chart3DPrimaryXAxis>
 
     <Chart3DSeriesCollection>
         <Chart3DSeries DataSource="@WeatherReports" XName="X" YName="Y" Type="Chart3DSeriesType.Column">
-                <Chart3DDataLabel Visible="true" NameField="Text"></Chart3DDataLabel>
+            <Chart3DDataLabel Visible="true" NameField="Text"></Chart3DDataLabel>
         </Chart3DSeries>
     </Chart3DSeriesCollection>
 </SfChart3D>
@@ -174,10 +174,10 @@ Text from the data source can be mapped using the [Name](https://help.syncfusion
 
     public List<Data> WeatherReports = new List<Data> 
 	{
-	   new Data{ X= "Jan", Y= 3, Text= "January" },
-	   new Data{ X= "Feb", Y= 3.5, Text= "February" },
-	   new Data{ X= "Mar", Y= 7, Text= "March" },
-	   new Data{ X= "Apr", Y= 13.5, Text= "April" }
+	   new Data{ X = "Jan", Y = 3, Text = "January" },
+	   new Data{ X = "Feb", Y = 3.5, Text = "February" },
+	   new Data{ X = "Mar", Y = 7, Text = "March" },
+	   new Data{ X = "Apr", Y = 13.5, Text = "April" }
 	};
 }
 
@@ -187,18 +187,18 @@ Text from the data source can be mapped using the [Name](https://help.syncfusion
 
 ## Format
 
-Data label for the chart can be formatted using the [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDataLabel.html#Syncfusion_Blazor_Charts_ChartDataLabel_Format) property. The global formatting options can be used as 'N1', 'P1', and 'C1'.
+Data label for the chart can be formatted using the `Format` property. The global formatting options can be used as 'N1', 'P1', and 'C1'.
 
 ```cshtml
 
 @using Syncfusion.Blazor.Chart3D
 
 <SfChart3D>
-    <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></Chart3DPrimaryXAxis>
+    <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Chart3D.ValueType.Category"></Chart3DPrimaryXAxis>
 
     <Chart3DSeriesCollection>
         <Chart3DSeries DataSource="@WeatherReports" XName="X" YName="Y" Type="Chart3DSeriesType.Column">
-                <Chart3DDataLabel Visible="true" Format="N1"></Chart3DDataLabel>
+            <Chart3DDataLabel Visible="true" Format="N1"></Chart3DDataLabel>
         </Chart3DSeries>
     </Chart3DSeriesCollection>
 </SfChart3D>
@@ -213,10 +213,10 @@ Data label for the chart can be formatted using the [Format](https://help.syncfu
 
     public List<Data> WeatherReports = new List<Data> 
 	{
-	   new Data{ X= "Jan", Y= 3, Text= "January" },
-	   new Data{ X= "Feb", Y= 3.5, Text= "February" },
-	   new Data{ X= "Mar", Y= 7, Text= "March" },
-	   new Data{ X= "Apr", Y= 13.5, Text= "April" }
+	   new Data{ X = "Jan", Y = 3, Text = "January" },
+	   new Data{ X = "Feb", Y = 3.5, Text = "February" },
+	   new Data{ X = "Mar", Y = 7, Text = "March" },
+	   new Data{ X = "Apr", Y = 13.5, Text = "April" }
 	};
 }
 
@@ -287,21 +287,21 @@ The table below shows the results of applying various commonly used label format
 
 ## Margin
 
-The [Margin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDataLabel.html#Syncfusion_Blazor_Charts_ChartDataLabel_Margin) option can be applied to the data label to create space around the element.
+The `Margin` option can be applied to the data label to create space around the element.
 
 ```cshtml
 
 @using Syncfusion.Blazor.Chart3D
 
 <SfChart3D>
-    <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></Chart3DPrimaryXAxis>
+    <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Chart3D.ValueType.Category"></Chart3DPrimaryXAxis>
 
     <Chart3DSeriesCollection>
         <Chart3DSeries DataSource="@WeatherReports" XName="X" YName="Y" Type="Chart3DSeriesType.Column">
-                <Chart3DDataLabel Visible="true">
-                    <Chart3DDataLabelBorder Color="red" Width="1"></Chart3DDataLabelBorder>
-                    <Chart3DDataLabelMargin Bottom="5" Left="5" Right="5" Top="5"></Chart3DDataLabelMargin>
-                </Chart3DDataLabel>
+            <Chart3DDataLabel Visible="true">
+                <Chart3DDataLabelBorder Color="red" Width="1"></Chart3DDataLabelBorder>
+                <Chart3DDataLabelMargin Bottom="5" Left="5" Right="5" Top="5"></Chart3DDataLabelMargin>
+            </Chart3DDataLabel>
         </Chart3DSeries>
     </Chart3DSeriesCollection>
 </SfChart3D>
@@ -316,10 +316,10 @@ The [Margin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Char
 
     public List<Data> WeatherReports = new List<Data> 
 	{
-	   new Data{ X= "Jan", Y= 3, Text= "January" },
-	   new Data{ X= "Feb", Y= 3.5, Text= "February" },
-	   new Data{ X= "Mar", Y= 7, Text= "March" },
-	   new Data{ X= "Apr", Y= 13.5, Text= "April" }
+	   new Data{ X = "Jan", Y = 3, Text = "January" },
+	   new Data{ X = "Feb", Y = 3.5, Text = "February" },
+	   new Data{ X = "Mar", Y = 7, Text = "March" },
+	   new Data{ X = "Apr", Y = 13.5, Text = "April" }
 	};
 }
 
@@ -329,20 +329,20 @@ The [Margin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Char
 
 ## Customization
 
-The `Stroke` and `Border` of data label can be customized using [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDataLabel.html#Syncfusion_Blazor_Charts_ChartDataLabel_Fill) and [ChartDataLabelBorder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDataLabelBorder.html) properties.
+The `Stroke` and `Border` of data label can be customized using `Fill` and `Chart3DDataLabelBorder` properties.
 
 ```cshtml
 
 @using Syncfusion.Blazor.Chart3D
 
 <SfChart3D>
-    <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></Chart3DPrimaryXAxis>
+    <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Chart3D.ValueType.Category"></Chart3DPrimaryXAxis>
 
     <Chart3DSeriesCollection>
         <Chart3DSeries DataSource="@WeatherReports" XName="X" YName="Y" Type="Chart3DSeriesType.Column">
-                <Chart3DDataLabel Visible="true">
-                     <Chart3DDataLabelBorder Width="2" Color="red"></Chart3DDataLabelBorder> 
-                </Chart3DDataLabel>
+            <Chart3DDataLabel Visible="true">
+                    <Chart3DDataLabelBorder Width="2" Color="red"></Chart3DDataLabelBorder> 
+            </Chart3DDataLabel>
         </Chart3DSeries>
     </Chart3DSeriesCollection>
 </SfChart3D>
@@ -357,10 +357,10 @@ The `Stroke` and `Border` of data label can be customized using [Fill](https://h
 
     public List<Data> WeatherReports = new List<Data> 
 	{
-	   new Data{ X= "Jan", Y= 3, Text= "January" },
-	   new Data{ X= "Feb", Y= 3.5, Text= "February" },
-	   new Data{ X= "Mar", Y= 7, Text= "March" },
-	   new Data{ X= "Apr", Y= 13.5, Text= "April" }
+	   new Data{ X = "Jan", Y = 3, Text = "January" },
+	   new Data{ X = "Feb", Y = 3.5, Text = "February" },
+	   new Data{ X = "Mar", Y = 7, Text = "March" },
+	   new Data{ X = "Apr", Y = 13.5, Text = "April" }
 	};
 }
 
@@ -377,15 +377,14 @@ A specific label can be customized by using the `TextRender` event. The `TextR
 @using Syncfusion.Blazor.Chart3D
 
 <SfChart3D Title="Olympic Medals" DataLabelRendering="TextRender" WallColor="transparent" EnableRotation="true" RotationAngle="7" TiltAngle="10" Depth="100">
-    <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"/>    
+    <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Chart3D.ValueType.Category"/>    
     <Chart3DSeriesCollection>
         <Chart3DSeries DataSource="@MedalDetails" Name="Gold" XName="Country" Opacity="1" YName="Gold" Type="Chart3DSeriesType.Column">
             <Chart3DDataLabel Visible="true"></Chart3DDataLabel>
         </Chart3DSeries>         
     </Chart3DSeriesCollection>
 
-    <Chart3DLegendSettings Visible="true">
-    </Chart3DLegendSettings>
+    <Chart3DLegendSettings Visible="true"></Chart3DLegendSettings>
 </SfChart3D>
 
 @code{
@@ -400,14 +399,14 @@ A specific label can be customized by using the `TextRender` event. The `TextR
 
     public List<Chart3DData> MedalDetails = new List<Chart3DData>
 	{
-		new Chart3DData{ Country= "USA", Gold=50, Silver=70, Bronze=45 },
-		new Chart3DData{ Country="China", Gold=40, Silver= 60, Bronze=55 },
-		new Chart3DData{ Country= "Japan", Gold=70, Silver= 60, Bronze=50 },
-		new Chart3DData{ Country= "Australia", Gold=60, Silver= 56, Bronze=40 },
-		new Chart3DData{ Country= "France", Gold=50, Silver= 45, Bronze=35 },
-		new Chart3DData{ Country= "Germany", Gold=40, Silver=30, Bronze=22 },
-		new Chart3DData{ Country= "Italy", Gold=40, Silver=35, Bronze=37 },
-		new Chart3DData{ Country= "Sweden", Gold=30, Silver=25, Bronze=27 }
+		new Chart3DData { Country = "USA", Gold = 50, Silver = 70, Bronze = 45 },
+        new Chart3DData { Country = "China", Gold = 40, Silver = 60, Bronze = 55 },
+        new Chart3DData { Country = "Japan", Gold = 70, Silver = 60, Bronze = 50 },
+        new Chart3DData { Country = "Australia", Gold = 60, Silver = 56, Bronze = 40 },
+        new Chart3DData { Country = "France", Gold = 50, Silver = 45, Bronze = 35 },
+        new Chart3DData { Country = "Germany", Gold = 40, Silver = 30, Bronze = 22 },
+        new Chart3DData { Country = "Italy", Gold = 40, Silver = 35, Bronze = 37 },
+        new Chart3DData { Country = "Sweden", Gold = 30, Silver = 25, Bronze = 27 }
 	};
 
     public void TextRender(Chart3DTextRenderEventArgs args)
@@ -427,9 +426,4 @@ A specific label can be customized by using the `TextRender` event. The `TextR
 
 ![Blazor 3D Chart with Custom Speci Label](images/data-label/blazor-chart-custom-specific-label.png)
 
-N> Refer to our [Blazor 3D Chart](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
-
-## See also
-
-* [Tooltip](./tool-tip)
-* [Legend](./legend)
+N> Refer to our `Blazor 3D Chart` feature tour page for its groundbreaking feature representations and also explore our `Blazor 3D Chart Example` to know various 3D Chart types and how to represent time-dependent data, showing trends at equal intervals.

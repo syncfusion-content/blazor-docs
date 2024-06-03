@@ -11,7 +11,7 @@ documentation: ug
 
 # Numeric Axis in Blazor 3D Chart Component
 
-The [numeric axis](https://www.syncfusion.com/javascript-ui-controls/js-charts/chart-axis) can be used to represent the numeric values of data in 3D chart. By default, the [ValueType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAxis html#Syncfusion_Blazor_Charts_ChartAxis_ValueType) of an axis is [Double](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ValueType.html#Syncfusion_Blazor_Charts_ValueType_Double).
+The `Numeric axis` can be used to represent the numeric values of data in 3D chart. By default, the `ValueType` of an axis is `Double`.
 
 ```cshtml
 
@@ -39,18 +39,17 @@ The [numeric axis](https://www.syncfusion.com/javascript-ui-controls/js-charts/c
 		new Chart3DData { XValue = 40, YValue = 38 },
 		new Chart3DData { XValue = 50, YValue = 54 },
 		new Chart3DData { XValue = 60, YValue = 57 },
-		new Chart3DData { XValue = 70, YValue = 70 },
+		new Chart3DData { XValue = 70, YValue = 70 }
 	};
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VNLgWLhVpXofZgyo?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Column 3D Chart with Numeric Axis](images/numeric-axis/blazor-column-chart-numeric-axis.png)
 
 ## Range and interval
 
-The range of an axis will be calculated automatically based on the provided data, and it can also be customized by using the [Minimum](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAxis.html#Syncfusion_Blazor_Charts_ChartAxis_Minimum), [Maximum](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAxis.html#Syncfusion_Blazor_Charts_ChartAxis_Maximum), and [Interval](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAxis.html#Syncfusion_Blazor_Charts_ChartAxis_Interval) properties of the axis.
+The range of an axis will be calculated automatically based on the provided data, and it can also be customized by using the `Minimum`, `Maximum`, and `Interval` properties of the axis.
 
 ```cshtml
 
@@ -79,18 +78,17 @@ The range of an axis will be calculated automatically based on the provided data
 		new Chart3DData { XValue = 40, YValue = 38 },
 		new Chart3DData { XValue = 50, YValue = 54 },
 		new Chart3DData { XValue = 60, YValue = 57 },
-		new Chart3DData { XValue = 70, YValue = 70 },
+		new Chart3DData { XValue = 70, YValue = 70 }
 	};
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BXrgiVrhJjoSuZwi?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Changing Column 3D Chart Axis based on Range](images/numeric-axis/blazor-column-chart-axis-range.png)
 
 ## Range padding
 
-Padding can be applied to the minimum and maximum extremes of an axis range by using the [RangePadding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAxis.html#Syncfusion_Blazor_Charts_ChartAxis_RangePadding) property. Numeric axis supports the following types of padding.
+Padding can be applied to the minimum and maximum extremes of an axis range by using the `RangePadding` property. Numeric axis supports the following types of padding.
 The following types of padding are supported by the numeric axis:
 
 * None
@@ -101,14 +99,14 @@ The following types of padding are supported by the numeric axis:
 
 **Numeric - None**
 
-When the [RangePadding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAxis.html#Syncfusion_Blazor_Charts_ChartAxis_RangePadding) is set to **None**, the minimum and maximum of an axis is based on the data.
+When the `RangePadding` is set to **None**, the minimum and maximum of an axis is based on the data.
 
 ```cshtml
 
 @using Syncfusion.Blazor.Chart3D
 
 <SfChart3D>
-    <Chart3DPrimaryYAxis RangePadding="Syncfusion.Blazor.Charts.ChartRangePadding.None"/>
+    <Chart3DPrimaryYAxis RangePadding="ChartRangePadding.None"/>
 
     <Chart3DSeriesCollection>
         <Chart3DSeries DataSource="@Data" XName="XValue" YName="YValue"/>
@@ -130,25 +128,24 @@ When the [RangePadding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
 		new Chart3DData { XValue = 40, YValue = 38 },
 		new Chart3DData { XValue = 50, YValue = 54 },
 		new Chart3DData { XValue = 60, YValue = 57 },
-		new Chart3DData { XValue = 70, YValue = 70 },
+		new Chart3DData { XValue = 70, YValue = 70 }
 	};
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BjhKWVBhTjobfVue?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Column 3D Chart without RangePadding](images/numeric-axis/blazor-column-chart-range-without-padding.png)
 
 **Numeric - Round**
 
-When the [RangePadding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAxis.html#Syncfusion_Blazor_Charts_ChartAxis_RangePadding) is set to **Round**, the minimum and maximum will be rounded to the nearest possible value divisible by interval. For example, when the minimum is 3.5 and the interval is 1, then the minimum will be rounded to 3.
+When the `RangePadding` is set to **Round**, the minimum and maximum will be rounded to the nearest possible value divisible by interval. For example, when the minimum is 3.5 and the interval is 1, then the minimum will be rounded to 3.
 
 ```cshtml
 
 @using Syncfusion.Blazor.Chart3D
 
 <SfChart3D>
-    <Chart3DPrimaryYAxis RangePadding="Syncfusion.Blazor.Charts.ChartRangePadding.Round"/>
+    <Chart3DPrimaryYAxis RangePadding="ChartRangePadding.Round"/>
 
     <Chart3DSeriesCollection>
         <Chart3DSeries DataSource="@Data" XName="XValue" YName="YValue"/>
@@ -170,25 +167,24 @@ When the [RangePadding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
 		new Chart3DData { XValue = 40, YValue = 38 },
 		new Chart3DData { XValue = 50, YValue = 54 },
 		new Chart3DData { XValue = 60, YValue = 57 },
-		new Chart3DData { XValue = 70, YValue = 70 },
+		new Chart3DData { XValue = 70, YValue = 70 }
 	};
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hZrKMLhBztnCBwWc?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Column 3D Chart with Round RangePadding](images/numeric-axis/blazor-column-chart-round-range-padding.png)
 
 **Numeric - Additional**
 
-When the [RangePadding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAxis.html#Syncfusion_Blazor_Charts_ChartAxis_RangePadding) is set to **Additional**, interval of an axis will be padded to the minimum and maximum of the axis.
+When the `RangePadding` is set to **Additional**, interval of an axis will be padded to the minimum and maximum of the axis.
 
 ```cshtml
 
 @using Syncfusion.Blazor.Chart3D
 
 <SfChart3D>
-    <Chart3DPrimaryYAxis RangePadding="Syncfusion.Blazor.Charts.ChartRangePadding.Additional"/>
+    <Chart3DPrimaryYAxis RangePadding="ChartRangePadding.Additional"/>
 
     <Chart3DSeriesCollection>
         <Chart3DSeries DataSource="@Data" XName="XValue" YName="YValue"/>
@@ -210,25 +206,24 @@ When the [RangePadding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
 		new Chart3DData { XValue = 40, YValue = 38 },
 		new Chart3DData { XValue = 50, YValue = 54 },
 		new Chart3DData { XValue = 60, YValue = 57 },
-		new Chart3DData { XValue = 70, YValue = 70 },
+		new Chart3DData { XValue = 70, YValue = 70 }
 	};
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VNhgWLrhpZRURFmO?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Column 3D Chart with Additional RangePadding](images/numeric-axis/blazor-column-chart-additional-range-padding.png)
 
 **Numeric - Normal**
 
-When the [RangePadding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAxis.html#Syncfusion_Blazor_Charts_ChartAxis_RangePadding) is set to **Normal**, padding is applied to the axis based on default range calculation.
+When the `RangePadding` is set to **Normal**, padding is applied to the axis based on default range calculation.
 
 ```cshtml
 
 @using Syncfusion.Blazor.Chart3D
 
 <SfChart3D>
-    <Chart3DPrimaryYAxis RangePadding="Syncfusion.Blazor.Charts.ChartRangePadding.Normal"/>
+    <Chart3DPrimaryYAxis RangePadding="ChartRangePadding.Normal"/>
 
     <Chart3DSeriesCollection>
         <Chart3DSeries DataSource="@Data" XName="XValue" YName="YValue"/>
@@ -250,26 +245,25 @@ When the [RangePadding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
 		new Chart3DData { XValue = 40, YValue = 38 },
 		new Chart3DData { XValue = 50, YValue = 54 },
 		new Chart3DData { XValue = 60, YValue = 57 },
-		new Chart3DData { XValue = 70, YValue = 70 },
+		new Chart3DData { XValue = 70, YValue = 70 }
 	};
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LtLKsrrrpXdxUwHH?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Column 3D Chart with Normal RangePadding](images/numeric-axis/blazor-column-chart-normal-range-padding.png)
 
 **Numeric - Auto**
 
-When the [RangePadding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAxis.html#Syncfusion_Blazor_Charts_ChartAxis_RangePadding) is set to **Auto**, horizontal numeric axis takes **None** as padding calculation, while the vertical numeric axis takes **Normal** as padding calculation.
+When the `RangePadding` is set to **Auto**, horizontal numeric axis takes **None** as padding calculation, while the vertical numeric axis takes **Normal** as padding calculation.
 
 ```cshtml
 
 @using Syncfusion.Blazor.Chart3D
 
 <SfChart3D>
-    <Chart3DPrimaryYAxis RangePadding="Syncfusion.Blazor.Charts.ChartRangePadding.Auto"/>
-    <Chart3DPrimaryXAxis RangePadding="Syncfusion.Blazor.Charts.ChartRangePadding.Auto"/>
+    <Chart3DPrimaryYAxis RangePadding="ChartRangePadding.Auto"/>
+    <Chart3DPrimaryXAxis RangePadding="ChartRangePadding.Auto"/>
 
     <Chart3DSeriesCollection>
         <Chart3DSeries DataSource="@Data" XName="XValue" YName="YValue"/>
@@ -291,12 +285,11 @@ When the [RangePadding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
 		new Chart3DData { XValue = 40, YValue = 38 },
 		new Chart3DData { XValue = 50, YValue = 54 },
 		new Chart3DData { XValue = 60, YValue = 57 },
-		new Chart3DData { XValue = 70, YValue = 70 },
+		new Chart3DData { XValue = 70, YValue = 70 }
 	};
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rjrUChBVTtmNHCaU?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Column 3D Chart with Auto RangePadding](images/numeric-axis/blazor-column-chart-auto-rangepadding.png)
 
@@ -304,7 +297,7 @@ When the [RangePadding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
 
 **Numeric label format**
 
-Numeric labels can be formatted by using the [LabelFormat](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAxis.html#Syncfusion_Blazor_Charts_ChartAxis_LabelFormat) property. Also, it supports all globalize format.
+Numeric labels can be formatted by using the `LabelFormat` property. Also, it supports all globalize format.
 
 ```cshtml
 
@@ -327,23 +320,22 @@ Numeric labels can be formatted by using the [LabelFormat](https://help.syncfus
 
     public List<Chart3DData> Data = new List<Chart3DData>
 	{
-          new Chart3DData{ X= 10, Y=7000 },
-          new Chart3DData{ X= 20, Y= 1000 },
-          new Chart3DData{ X= 30, Y= 12000 },
-          new Chart3DData{ X= 40, Y= 14000 },
-          new Chart3DData{ X= 50, Y= 11000 },
-          new Chart3DData{ X= 60, Y= 5000 },
-          new Chart3DData{ X= 70, Y= 7300 },
-          new Chart3DData{ X= 80, Y= 9000 },
-          new Chart3DData{ X= 90, Y= 12000 },
-          new Chart3DData{ X= 100, Y= 14000 },
-          new Chart3DData{ X= 110, Y= 11000 },
-          new Chart3DData{ X= 120, Y= 5000 }
+        new Chart3DData { X = 10, Y =7000 },
+        new Chart3DData { X = 20, Y = 1000 },
+        new Chart3DData { X = 30, Y = 12000 },
+        new Chart3DData { X = 40, Y = 14000 },
+        new Chart3DData { X = 50, Y = 11000 },
+        new Chart3DData { X = 60, Y = 5000 },
+        new Chart3DData { X = 70, Y = 7300 },
+        new Chart3DData { X = 80, Y = 9000 },
+        new Chart3DData { X = 90, Y = 12000 },
+        new Chart3DData { X = 100, Y = 14000 },
+        new Chart3DData { X = 110, Y = 11000 },
+        new Chart3DData { X = 120, Y = 5000 }
     };
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rjhUChrhpjcKDKLn?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Label Formatting in Blazor Column 3D Chart](images/numeric-axis/blazor-column-chart-label-format.png)
 
@@ -410,57 +402,7 @@ The table below shows the results of applying various commonly used label format
 
 ## GroupingSeparator
 
-To separate groups of thousands for numerical values, use the [UseGroupingSeparator](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfChart.html#Syncfusion_Blazor_Charts_SfChart_UseGroupingSeparator) property set to true in the 3D chart to enable it. When this property is enabled, axis labels, data labels, and tooltips will display with a thousand separator.
-
-```cshtml
-
-@using Syncfusion.Blazor.Charts
-
-<SfChart UseGroupingSeparator="true">
-    <ChartArea><ChartAreaBorder Width="0" /></ChartArea>
-    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.DateTimeCategory" LabelFormat="MMM yyyy" IntervalType="Syncfusion.Blazor.Charts.IntervalType.Months" EdgeLabelPlacement="EdgeLabelPlacement.Shift">
-        <ChartAxisMajorGridLines Width="0" />
-    </ChartPrimaryXAxis>
-    <ChartPrimaryYAxis>
-        <ChartAxisLineStyle Width="0" />
-        <ChartAxisMajorTickLines Width="0" />
-    </ChartPrimaryYAxis>
-    <ChartTooltipSettings Enable="true" />
-    <ChartSeriesCollection>
-        <ChartSeries DataSource="@Data" Name="Test" XName="PrdDate" Width="2" YName="Amount" Type="Syncfusion.Blazor.Charts.ChartSeriesType.Line">
-            <ChartMarker Visible="true">
-                <ChartDataLabel Visible="true" />
-            </ChartMarker>
-        </ChartSeries>
-    </ChartSeriesCollection>
-</SfChart>
-
-@code {
-    public class ChartData
-    {
-        public DateTime PrdDate { get; set; }
-        public double Amount { get; set; }
-    }
-    public List<ChartData> Data = new List<ChartData>
-    {
-        new ChartData { PrdDate = new DateTime(2021,01,01), Amount = 1000 },
-        new ChartData { PrdDate = new DateTime(2021,02,01), Amount = 4000 },
-        new ChartData { PrdDate = new DateTime(2021,03,01), Amount = 5000 },
-        new ChartData { PrdDate = new DateTime(2021,04,01), Amount = 6000 },
-        new ChartData { PrdDate = new DateTime(2021,05,01), Amount = 2000 },
-        new ChartData { PrdDate = new DateTime(2021,06,01), Amount = 3000 },
-        new ChartData { PrdDate = new DateTime(2021,07,01), Amount = 8000 },
-    };
-}
-
-```
-
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hDBJZqLnepVFKTog?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-![Grouping Separator in Blazor Column 3D Chart](images/numeric-axis/blazor-column-chart-grouping-separator.png)
-
-## Custom label format
-
-Axis also supports custom label format using placeholders such as {value}K, where the value represents the axis label, for example, 20K.
+To separate groups of thousands for numerical values, use the `UseGroupingSeparator` property set to true in the 3D chart to enable it. When this property is enabled, axis labels, data labels, and tooltips will display with a thousand separator.
 
 ```cshtml
 
@@ -468,7 +410,7 @@ Axis also supports custom label format using placeholders such as {value}K, wher
 
 <SfChart3D UseGroupingSeparator="true">
     <Chart3DArea><Chart3DAreaBorder Width="0" /></Chart3DArea>
-    <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.DateTimeCategory" LabelFormat="MMM yyyy" IntervalType="Syncfusion.Blazor.Charts.IntervalType.Months" EdgeLabelPlacement="Syncfusion.Blazor.Charts.EdgeLabelPlacement.Shift">
+    <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Chart3D.ValueType.DateTimeCategory" LabelFormat="MMM yyyy" IntervalType="IntervalType.Months" EdgeLabelPlacement="EdgeLabelPlacement.Shift">
         <Chart3DAxisMajorGridLines Width="0" />
     </Chart3DPrimaryXAxis>
     <Chart3DPrimaryYAxis>
@@ -478,7 +420,7 @@ Axis also supports custom label format using placeholders such as {value}K, wher
     <Chart3DTooltipSettings Enable="true" />
     <Chart3DSeriesCollection>
         <Chart3DSeries DataSource="@Data" Name="Test" XName="PrdDate" YName="Amount">
-                <Chart3DDataLabel Visible="true" />
+            <Chart3DDataLabel Visible="true" />
         </Chart3DSeries>
     </Chart3DSeriesCollection>
 </SfChart3D>
@@ -502,13 +444,54 @@ Axis also supports custom label format using placeholders such as {value}K, wher
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LtBAiVLrzZGdUeri?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+![Grouping Separator in Blazor Column 3D Chart](images/numeric-axis/blazor-column-chart-grouping-separator.png)
+
+## Custom label format
+
+Axis also supports custom label format using placeholders such as {value}K, where the value represents the axis label, for example, 20K.
+
+```cshtml
+
+@using Syncfusion.Blazor.Chart3D
+
+<SfChart3D UseGroupingSeparator="true">
+    <Chart3DArea><Chart3DAreaBorder Width="0" /></Chart3DArea>
+    <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Chart3D.ValueType.DateTimeCategory" LabelFormat="MMM yyyy" IntervalType="IntervalType.Months" EdgeLabelPlacement="EdgeLabelPlacement.Shift">
+        <Chart3DAxisMajorGridLines Width="0" />
+    </Chart3DPrimaryXAxis>
+    <Chart3DPrimaryYAxis>
+        <Chart3DAxisLineStyle Width="0" />
+        <Chart3DAxisMajorTickLines Width="0" />
+    </Chart3DPrimaryYAxis>
+    <Chart3DTooltipSettings Enable="true" />
+    <Chart3DSeriesCollection>
+        <Chart3DSeries DataSource="@Data" Name="Test" XName="PrdDate" YName="Amount">
+            <Chart3DDataLabel Visible="true" />
+        </Chart3DSeries>
+    </Chart3DSeriesCollection>
+</SfChart3D>
+
+@code {
+    public class Chart3DData
+    {
+        public DateTime PrdDate { get; set; }
+        public double Amount { get; set; }
+    }
+    public List<Chart3DData> Data = new List<Chart3DData>
+    {
+        new Chart3DData { PrdDate = new DateTime(2021,01,01), Amount = 1000 },
+        new Chart3DData { PrdDate = new DateTime(2021,02,01), Amount = 4000 },
+        new Chart3DData { PrdDate = new DateTime(2021,03,01), Amount = 5000 },
+        new Chart3DData { PrdDate = new DateTime(2021,04,01), Amount = 6000 },
+        new Chart3DData { PrdDate = new DateTime(2021,05,01), Amount = 2000 },
+        new Chart3DData { PrdDate = new DateTime(2021,06,01), Amount = 3000 },
+        new Chart3DData { PrdDate = new DateTime(2021,07,01), Amount = 8000 },
+    };
+}
+
+```
 
 ![Blazor Column 3D Chart with Custom Label Format](images/numeric-axis/blazor-column-chart-custom-label-format.png)
 
-N> Refer to our [Blazor Chart 3D](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor 3D Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to know various 3D Chart types and how to represent time-dependent data, showing trends at equal intervals.
-
-## See also
-
-* [Data label](./data-labels)
-* [Tooltip](./tool-tip)
+N> Refer to our `Blazor 3D Chart` feature tour page for its groundbreaking feature representations and also explore our `Blazor 3D Chart Example` to know various 3D Chart types and how to represent time-dependent data, showing trends at equal intervals.

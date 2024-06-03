@@ -75,11 +75,6 @@ Interaction Keys |Description
 <kbd>Down/Left Arrow</kbd> |Moves the focus to the legend left side from the selected legend.
 <kbd>Up/Right Arrow</kbd> | Moves the focus to the legend right side from the selected legend.
 <kbd>Enter/Space</kbd> |Toggles the visibility of the corresponding series.
-<kbd>Ctrl + +</kbd> |Zoom in the chart.
-<kbd>Ctrl + -</kbd> |Zoom out the chart.
-<kbd>Down/Up Arrow</kbd> |Pans the chart vertically.
-<kbd>Left/Right Arrow</kbd> |Pans the chart horizontally.
-<kbd>R</kbd> |Reset the zoomed chart.
 <kbd>Ctrl + P</kbd> |Prints the Chart.
 
 ## Ensuring accessibility

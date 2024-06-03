@@ -19,8 +19,7 @@ The rendered 3D chart can be printed directly from the browser by calling the pu
 @using Syncfusion.Blazor.Buttons
 
 <SfChart3D @ref="Chart3DObj" Title="Inflation - Consumer Price" WallColor="transparent" EnableRotation="true" RotationAngle="7" TiltAngle="10" Depth="100">
-    <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category">
-    </Chart3DPrimaryXAxis>
+    <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Chart3D.ValueType.Category"></Chart3DPrimaryXAxis>
 
     <Chart3DSeriesCollection>
         <Chart3DSeries DataSource="@ConsumerDetails" XName="X" YName="YValue" Type="Chart3DSeriesType.Column">
@@ -47,14 +46,14 @@ The rendered 3D chart can be printed directly from the browser by calling the pu
 
     public List<Chart3DData> ConsumerDetails = new List<Chart3DData>
 	{
-        new Chart3DData { X= "USA", YValue= 46 },
-        new Chart3DData { X= "GBR", YValue= 27 },
-        new Chart3DData { X= "CHN", YValue= 26 },
-        new Chart3DData { X= "UK", YValue= 36 },
-        new Chart3DData { X= "AUS", YValue= 15 },
-        new Chart3DData { X= "IND", YValue= 55 },
-        new Chart3DData { X= "DEN", YValue= 40 },
-        new Chart3DData { X= "MEX", YValue= 30 }
+        new Chart3DData { X = "USA", YValue = 46 },
+        new Chart3DData { X = "GBR", YValue = 27 },
+        new Chart3DData { X = "CHN", YValue = 26 },
+        new Chart3DData { X = "UK", YValue = 36 },
+        new Chart3DData { X = "AUS", YValue = 15 },
+        new Chart3DData { X = "IND", YValue = 55 },
+        new Chart3DData { X = "DEN", YValue = 40 },
+        new Chart3DData { X = "MEX", YValue = 30 }
     };
 }
 
@@ -72,8 +71,7 @@ The rendered 3D chart can be exported to `JPEG`, `PNG`, `SVG`, or `PDF` format u
 @using Syncfusion.Blazor.Buttons
 
 <SfChart3D @ref="Chart3DObj" Title="Inflation - Consumer Price" WallColor="transparent" EnableRotation="true" RotationAngle="7" TiltAngle="10" Depth="100">
-    <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category">
-    </Chart3DPrimaryXAxis>
+    <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Chart3D.ValueType.Category"></Chart3DPrimaryXAxis>
 
     <Chart3DSeriesCollection>
         <Chart3DSeries DataSource="@ConsumerDetails" XName="X" YName="YValue" Type="Chart3DSeriesType.Column">
@@ -89,7 +87,7 @@ The rendered 3D chart can be exported to `JPEG`, `PNG`, `SVG`, or `PDF` format u
 
     private async Task Export(MouseEventArgs args)
     {
-        await Chart3DObj.ExportAsync(Syncfusion.Blazor.Charts.ExportType.PNG, "pngImage");
+        await Chart3DObj.ExportAsync(Syncfusion.Blazor.Chart3D.ExportType.PNG, "pngImage");
     }
 
     public class Chart3DData
@@ -100,14 +98,14 @@ The rendered 3D chart can be exported to `JPEG`, `PNG`, `SVG`, or `PDF` format u
 
     public List<Chart3DData> ConsumerDetails = new List<Chart3DData>
     {
-        new Chart3DData { X= "USA", YValue= 46 },
-        new Chart3DData { X= "GBR", YValue= 27 },
-        new Chart3DData { X= "CHN", YValue= 26 },
-        new Chart3DData { X= "UK", YValue= 36 },
-        new Chart3DData { X= "AUS", YValue= 15 },
-        new Chart3DData { X= "IND", YValue= 55 },
-        new Chart3DData { X= "DEN", YValue= 40 },
-        new Chart3DData { X= "MEX", YValue= 30 }
+        new Chart3DData { X = "USA", YValue = 46 },
+        new Chart3DData { X = "GBR", YValue = 27 },
+        new Chart3DData { X = "CHN", YValue = 26 },
+        new Chart3DData { X = "UK", YValue = 36 },
+        new Chart3DData { X = "AUS", YValue = 15 },
+        new Chart3DData { X = "IND", YValue = 55 },
+        new Chart3DData { X = "DEN", YValue = 40 },
+        new Chart3DData { X = "MEX", YValue = 30 }
     };
 }
 
@@ -115,10 +113,4 @@ The rendered 3D chart can be exported to `JPEG`, `PNG`, `SVG`, or `PDF` format u
 
 ![Exporting in Blazor 3D Chart](images/getting-started/blazor-chart-exporting.png)
 
-N> Refer to our [Blazor 3D Chart](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor 3D Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap5) to know various 3D Chart types and how to represent time-dependent data, showing trends at equal intervals.
-
-## See Also
-
-* [Data Label](./data-labels)
-* [Tooltip](./tool-tip)
-* [Legend](./legend)
+N> Refer to our `Blazor 3D Chart` feature tour page for its groundbreaking feature representations and also explore our `Blazor 3D Chart Example` to know various 3D Chart types and how to represent time-dependent data, showing trends at equal intervals.

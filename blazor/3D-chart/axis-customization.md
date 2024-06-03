@@ -11,15 +11,16 @@ documentation: ug
 
 ## Title
 
-The title for the axis can be added by using the [Title](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonAxis.html#Syncfusion_Blazor_Charts_ChartCommonAxis_Title) property. It helps to provide quick information to the user about the data plotted in the axis. Title style can be customized using [ChartAxisTitleStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAxisTitleStyle.html) property of the axis.
+The title for the axis can be added by using the `Title` property. It helps to provide quick information to the user about the data plotted in the axis. Title style can be customized using `Chart3DAxisTitleStyle` property of the axis.
 
 ```cshtml
 
 @using Syncfusion.Blazor.Chart3D
 
 <SfChart3D WallColor="transparent" EnableRotation="true" RotationAngle="7" TiltAngle="10" Depth="100">
-    <Chart3DPrimaryXAxis Title="Countries" ValueType="Syncfusion.Blazor.Charts.ValueType.Category">
-        <Chart3DAxisTitleStyle FontSize="16px" Color="grey" FontFamily="Segoe UI" FontWeight="bold"></Chart3DAxisTitleStyle>
+    <Chart3DPrimaryXAxis Title="Countries" ValueType="Syncfusion.Blazor.Chart3D.ValueType.Category">
+        <Chart3DAxisTitleStyle FontSize="16px" Color="grey" FontFamily="Segoe UI" FontWeight="bold">
+        </Chart3DAxisTitleStyle>
     </Chart3DPrimaryXAxis>
 
     <Chart3DSeriesCollection>
@@ -37,32 +38,31 @@ The title for the axis can be added by using the [Title](https://help.syncfusion
 	
     public List<Chart3DData> MedalDetails = new List<Chart3DData>
 	{
-		new Chart3DData{ Country= "United States", Gold=50  },
-		new Chart3DData{ Country= "China", Gold=40 },
-		new Chart3DData{ Country= "Japan", Gold=70 },
-		new Chart3DData{ Country= "Australia", Gold=60},
-		new Chart3DData{ Country= "France", Gold=50 },
-		new Chart3DData{ Country= "Germany", Gold=40 },
-		new Chart3DData{ Country= "Italy", Gold=40 },
-		new Chart3DData{ Country= "Sweden", Gold=30 }
+		new Chart3DData { Country = "United States", Gold = 50 },
+		new Chart3DData { Country = "China", Gold = 40 },
+		new Chart3DData { Country = "Japan", Gold = 70 },
+		new Chart3DData { Country = "Australia", Gold = 60 },
+		new Chart3DData { Country = "France", Gold = 50 },
+		new Chart3DData { Country = "Germany", Gold = 40 },
+		new Chart3DData { Country = "Italy", Gold = 40 },
+		new Chart3DData { Country = "Sweden", Gold = 30 }
     };
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BNhUihhRhzzqpdFC?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} 
 
 ![Blazor Column 3D Chart with Axis Title](images/axis-customization/blazor-column-chart-axis-title.png)
 
 ## Title rotation
 
-The title can be rotated from 0 to 360 degree by using the [TitleRotationAngle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonAxis.html#Syncfusion_Blazor_Charts_ChartCommonAxis_Title) property.
+The title can be rotated from 0 to 360 degree by using the `TitleRotationAngle` property.
 
 ```cshtml
 
 @using Syncfusion.Blazor.Chart3D
 
 <SfChart3D WallColor="transparent" EnableRotation="true" RotationAngle="7" TiltAngle="10" Depth="100">
-    <Chart3DPrimaryXAxis Title="Countries" TitleRotationAngle="90" ValueType="Syncfusion.Blazor.Charts.ValueType.Category">
+    <Chart3DPrimaryXAxis Title="Countries" TitleRotationAngle="90" ValueType="Syncfusion.Blazor.Chart3D.ValueType.Category">
         <Chart3DAxisTitleStyle FontSize="16px" Color="grey" FontFamily="Segoe UI" FontWeight="bold"></Chart3DAxisTitleStyle>
     </Chart3DPrimaryXAxis>
 
@@ -81,34 +81,33 @@ The title can be rotated from 0 to 360 degree by using the [TitleRotationAngle](
 	
     public List<Chart3DData> MedalDetails = new List<Chart3DData>
 	{
-		new Chart3DData{ Country= "United States", Gold=50  },
-		new Chart3DData{ Country= "China", Gold=40 },
-		new Chart3DData{ Country= "Japan", Gold=70 },
-		new Chart3DData{ Country= "Australia", Gold=60},
-		new Chart3DData{ Country= "France", Gold=50 },
-		new Chart3DData{ Country= "Germany", Gold=40 },
-		new Chart3DData{ Country= "Italy", Gold=40 },
-		new Chart3DData{ Country= "Sweden", Gold=30 }
+		new Chart3DData { Country = "United States", Gold = 50 },
+		new Chart3DData { Country = "China", Gold = 40 },
+		new Chart3DData { Country = "Japan", Gold = 70 },
+		new Chart3DData { Country = "Australia", Gold = 60 },
+		new Chart3DData { Country = "France", Gold = 50 },
+		new Chart3DData { Country = "Germany", Gold = 40 },
+		new Chart3DData { Country = "Italy", Gold = 40 },
+		new Chart3DData { Country = "Sweden", Gold = 30 }
     };
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BNhUihhRhzzqpdFC?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} 
 
 ![Blazor Column 3D Chart with Axis Title Rotation](images/axis-customization/blazor-column-chart-axis-title-rotation.png)
 
 ## Tick lines customization
 
-The width, color, and height of the minor and major tick lines can be customized using [MajorTickLines](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonAxis.html#Syncfusion_Blazor_Charts_ChartCommonAxis_MajorTickLines) and [MinorTickLines](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonAxis.html#Syncfusion_Blazor_Charts_ChartCommonAxis_MinorTickLines) properties in the axis.
+The width, color, and height of the minor and major tick lines can be customized using `MajorTickLines` and `MinorTickLines` properties in the axis.
 
 ```cshtml
 
 @using Syncfusion.Blazor.Chart3D
 
 <SfChart3D WallColor="transparent" EnableRotation="true" RotationAngle="7" TiltAngle="10" Depth="100">
-    <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category">
+    <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Chart3D.ValueType.Category">
        <Chart3DMajorTickLines Color="blue" Width="5"></Chart3DMajorTickLines>
-       </Chart3DPrimaryXAxis>
+    </Chart3DPrimaryXAxis>
 
     <Chart3DSeriesCollection>
         <Chart3DSeries DataSource="@MedalDetails" XName="Country" YName="Gold" Type="Chart3DSeriesType.Column" />
@@ -124,34 +123,33 @@ The width, color, and height of the minor and major tick lines can be custo
 	
     public List<Chart3DData> MedalDetails = new List<Chart3DData>
     {
-		new Chart3DData{ Country= "USA", Gold=50  },
-		new Chart3DData{ Country= "China", Gold=40 },
-		new Chart3DData{ Country= "Japan", Gold=70 },
-		new Chart3DData{ Country= "Australia", Gold=60},
-		new Chart3DData{ Country= "France", Gold=50 },
-		new Chart3DData{ Country= "Germany", Gold=40 },
-		new Chart3DData{ Country= "Italy", Gold=40 },
-		new Chart3DData{ Country= "Sweden", Gold=30 }
+		new Chart3DData { Country = "United States", Gold = 50 },
+		new Chart3DData { Country = "China", Gold = 40 },
+		new Chart3DData { Country = "Japan", Gold = 70 },
+		new Chart3DData { Country = "Australia", Gold = 60 },
+		new Chart3DData { Country = "France", Gold = 50 },
+		new Chart3DData { Country = "Germany", Gold = 40 },
+		new Chart3DData { Country = "Italy", Gold = 40 },
+		new Chart3DData { Country = "Sweden", Gold = 30 }
     };
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rNLgiBBdLTzRploJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Column 3D Chart with Custom Tick Lines](images/axis-customization/blazor-column-chart-custom-tick-lines.png)
 
 ## Grid lines customization
 
-The width and color of the minor and major grid lines can be customized by using the [MajorGridLines](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonAxis.html#Syncfusion_Blazor_Charts_ChartCommonAxis_MajorGridLines) and [MinorGridLines](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonAxis.html#Syncfusion_Blazor_Charts_ChartCommonAxis_MinorGridLines) properties in the axis.
+The width and color of the minor and major grid lines can be customized by using the `MajorGridLines` and `MinorGridLines` properties in the axis.
 
 ```cshtml
 
 @using Syncfusion.Blazor.Chart3D
 
 <SfChart3D WallColor="transparent" EnableRotation="true" RotationAngle="7" TiltAngle="10" Depth="100">
-    <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category">
+    <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Chart3D.ValueType.Category">
        <Chart3DMajorGridLines Color="blue" Width="1"></Chart3DMajorGridLines>
-       </Chart3DPrimaryXAxis>
+    </Chart3DPrimaryXAxis>
 
     <Chart3DSeriesCollection>
         <Chart3DSeries DataSource="@MedalDetails" XName="Country" YName="Gold" Type="Chart3DSeriesType.Column" />
@@ -167,19 +165,18 @@ The width and color of the minor and major grid lines can be customized by usin
 	
     public List<Chart3DData> MedalDetails = new List<Chart3DData>
     {
-		new Chart3DData{ Country= "USA", Gold=50  },
-		new Chart3DData{ Country= "China", Gold=40 },
-		new Chart3DData{ Country= "Japan", Gold=70 },
-		new Chart3DData{ Country= "Australia", Gold=60},
-		new Chart3DData{ Country= "France", Gold=50 },
-		new Chart3DData{ Country= "Germany", Gold=40 },
-		new Chart3DData{ Country= "Italy", Gold=40 },
-		new Chart3DData{ Country= "Sweden", Gold=30 }
+		new Chart3DData { Country = "United States", Gold = 50 },
+		new Chart3DData { Country = "China", Gold = 40 },
+		new Chart3DData { Country = "Japan", Gold = 70 },
+		new Chart3DData { Country = "Australia", Gold = 60 },
+		new Chart3DData { Country = "France", Gold = 50 },
+		new Chart3DData { Country = "Germany", Gold = 40 },
+		new Chart3DData { Country = "Italy", Gold = 40 },
+		new Chart3DData { Country = "Sweden", Gold = 30 }
     };
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LNVAWVVnBzoAhreS?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Column 3D Chart with Custom GridLines](images/axis-customization/blazor-column-chart-custom-gridline.png)
 
@@ -192,11 +189,11 @@ In addition to primary X and Y axis, n number of axis can be added to the chart.
 @using Syncfusion.Blazor.Chart3D
 
 <SfChart3D WallColor="transparent" EnableRotation="true" RotationAngle="7" TiltAngle="10" Depth="100">
-    <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category">
-       </Chart3DPrimaryXAxis>
-       <Chart3DAxes>
+    <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Chart3D.ValueType.Category">
+    </Chart3DPrimaryXAxis>
+    <Chart3DAxes>
         <Chart3DAxis Name="YAxis" OpposedPosition="true"/>
-       </Chart3DAxes>
+    </Chart3DAxes>
     <Chart3DSeriesCollection>
         <Chart3DSeries DataSource="@MedalDetails" XName="Country" YName="Gold" Type="Chart3DSeriesType.Column" />
         <Chart3DSeries DataSource="@MedalDetails" XName="Country" YName="Silver" Type="Chart3DSeriesType.Column" YAxisName="YAxis"/>
@@ -213,33 +210,32 @@ In addition to primary X and Y axis, n number of axis can be added to the chart.
 	
     public List<Chart3DData> MedalDetails = new List<Chart3DData>
     {
-		new Chart3DData{ Country = "USA", Gold = 50, Silver = 70 },
-		new Chart3DData{ Country = "China", Gold = 40, Silver = 60 },
-		new Chart3DData{ Country = "Japan", Gold = 70, Silver = 60 },
-		new Chart3DData{ Country = "Australia", Gold = 60, Silver = 56 },
-		new Chart3DData{ Country = "France", Gold = 50, Silver = 45 },
-		new Chart3DData{ Country = "Germany", Gold = 40, Silver = 30 },
-		new Chart3DData{ Country = "Italy", Gold = 40, Silver = 35 },
-		new Chart3DData{ Country = "Sweden", Gold = 30, Silver = 25 }
+		new Chart3DData { Country = "USA", Gold = 50, Silver = 70 },
+		new Chart3DData { Country = "China", Gold = 40, Silver = 60 },
+		new Chart3DData { Country = "Japan", Gold = 70, Silver = 60 },
+		new Chart3DData { Country = "Australia", Gold = 60, Silver = 56 },
+		new Chart3DData { Country = "France", Gold = 50, Silver = 45 },
+		new Chart3DData { Country = "Germany", Gold = 40, Silver = 30 },
+		new Chart3DData { Country = "Italy", Gold = 40, Silver = 35 },
+		new Chart3DData { Country = "Sweden", Gold = 30, Silver = 25 }
     };
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LjVqirBHhzyoYHVs?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor 3D Column Chart with Multiple Axes](images/axis-customization/blazor-column-chart-multiple-axes.png)
 
 ## Inversed Axis
 
 <!-- markdownlint-disable MD033 -->
-When an axis is inversed, highest value of the axis comes closer to origin and vice versa. To place an axis in inversed manner, set the [IsInversed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonAxis.html#Syncfusion_Blazor_Charts_ChartCommonAxis_IsInversed) property to **true**.
+When an axis is inversed, highest value of the axis comes closer to origin and vice versa. To place an axis in inversed manner, set the `IsInversed` property to **true**.
 
 ```cshtml
 
 @using Syncfusion.Blazor.Chart3D
 
 <SfChart3D Title="Weather Reports" WallColor="transparent" EnableRotation="true" RotationAngle="7" TiltAngle="10" Depth="100">
-    <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category" />
+    <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Chart3D.ValueType.Category" />
 
     <Chart3DPrimaryYAxis IsInversed="true" />
 
@@ -268,20 +264,19 @@ When an axis is inversed, highest value of the axis comes closer to origin and v
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LZhgMBBRLzoOWYHq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Column 3D Chart with Inversed Axis](images/axis-customization/blazor-column-chart-inversed-axis.png)
 
 ## Opposed position
 
-To place an axis opposite from its original position, set the [OpposedPosition](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonAxis.html#Syncfusion_Blazor_Charts_ChartCommonAxis_OpposedPosition) property to **true**.
+To place an axis opposite from its original position, set the `OpposedPosition` property to **true**.
 
 ```cshtml
 
 @using Syncfusion.Blazor.Chart3D
 
 <SfChart3D Title="Weather Reports" WallColor="transparent" EnableRotation="true" RotationAngle="7" TiltAngle="10" Depth="100">
-    <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category" />
+    <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Chart3D.ValueType.Category" />
 
     <Chart3DPrimaryYAxis OpposedPosition="true" />
 
@@ -310,13 +305,7 @@ To place an axis opposite from its original position, set the [OpposedPosition](
 } 
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rNLqMVhHrJGZtGLh?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Column 3D Chart Axis in Opposed Position](images/axis-customization/blazor-column-chart-axis-at-opposed-position.png)
 
-N> Refer to our [Blazor 3D Chart](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor 3D Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap5) to know various 3D Chart types and how to represent time-dependent data, showing trends at equal intervals.
-
-## See also
-
-* [Data Label](./data-labels)
-* [Tooltip](./tool-tip)
+N> Refer to our `Blazor 3D Chart` feature tour page for its groundbreaking feature representations and also explore our `Blazor 3D Chart Example` to know various 3D Chart types and how to represent time-dependent data, showing trends at equal intervals.

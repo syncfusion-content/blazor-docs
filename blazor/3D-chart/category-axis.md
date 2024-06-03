@@ -16,7 +16,7 @@ The category axis is the horizontal axis of a 3D chart that shows text values ra
 @using Syncfusion.Blazor.Chart3D
 
 <SfChart3D>
-    <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category">
+    <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Chart3D.ValueType.Category">
     </Chart3DPrimaryXAxis>
 
     <Chart3DSeriesCollection>
@@ -34,32 +34,31 @@ The category axis is the horizontal axis of a 3D chart that shows text values ra
 
     public List<Chart3DData> MedalDetails = new List<Chart3DData>
 	{
-        new Chart3DData { X= "USA", YValue= 46 },
-        new Chart3DData { X= "GBR", YValue= 27 },
-        new Chart3DData { X= "CHN", YValue= 26 },
-        new Chart3DData { X= "UK", YValue= 23 },
-        new Chart3DData { X= "AUS", YValue= 16 },
-        new Chart3DData { X= "IND", YValue= 36 },
-        new Chart3DData { X= "DEN", YValue= 12 },
-        new Chart3DData { X= "MEX", YValue= 20 },
+        new Chart3DData { X = "USA", YValue = 46 },
+        new Chart3DData { X = "GBR", YValue = 27 },
+        new Chart3DData { X = "CHN", YValue = 26 },
+        new Chart3DData { X = "UK", YValue = 23 },
+        new Chart3DData { X = "AUS", YValue = 16 },
+        new Chart3DData { X = "IND", YValue = 36 },
+        new Chart3DData { X = "DEN", YValue = 12 },
+        new Chart3DData { X = "MEX", YValue = 20 }
     };
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rZLgWrhVAEwCkOWl?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Column 3D Chart with Default Axis](images/category-axis/blazor-chart-default-axis.png)
 
 ## Labels placement
 
-By default, category axis labels are placed between ticks in an axis. It can also be placed on ticks using the [LabelPlacement](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAxis.html#Syncfusion_Blazor_Charts_ChartAxis_LabelPlacement) property.
+By default, category axis labels are placed between ticks in an axis. It can also be placed on ticks using the `LabelPlacement` property.
 
 ```cshtml
 
 @using Syncfusion.Blazor.Chart3D
 
 <SfChart3D>
-    <Chart3DPrimaryXAxis LabelPlacement="Syncfusion.Blazor.Charts.LabelPlacement.OnTicks" ValueType="Syncfusion.Blazor.Charts.ValueType.Category">
+    <Chart3DPrimaryXAxis LabelPlacement="LabelPlacement.OnTicks" ValueType="Syncfusion.Blazor.Chart3D.ValueType.Category">
     </Chart3DPrimaryXAxis>
 
     <Chart3DSeriesCollection>
@@ -77,32 +76,31 @@ By default, category axis labels are placed between ticks in an axis. It can als
 	
     public List<Chart3DData> MedalDetails = new List<Chart3DData>
 	{
-        new Chart3DData { X= "USA", YValue= 46 },
-        new Chart3DData { X= "GBR", YValue= 27 },
-        new Chart3DData { X= "CHN", YValue= 26 },
-        new Chart3DData { X= "UK", YValue= 23 },
-        new Chart3DData { X= "AUS", YValue= 16 },
-        new Chart3DData { X= "IND", YValue= 36 },
-        new Chart3DData { X= "DEN", YValue= 12 },
-        new Chart3DData { X= "MEX", YValue= 20 },
+        new Chart3DData { X = "USA", YValue = 46 },
+        new Chart3DData { X = "GBR", YValue = 27 },
+        new Chart3DData { X = "CHN", YValue = 26 },
+        new Chart3DData { X = "UK", YValue = 23 },
+        new Chart3DData { X = "AUS", YValue = 16 },
+        new Chart3DData { X = "IND", YValue = 36 },
+        new Chart3DData { X = "DEN", YValue = 12 },
+        new Chart3DData { X = "MEX", YValue = 20 }
     };
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rtLgWVrBgOQpAjdB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Changing Labels Position in Blazor 3D Chart](images/category-axis/blazor-diagram-label-position.png)
 
 ## Range
 
-The range of the category axis can be customized using [Minimum](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAxis.html#Syncfusion_Blazor_Charts_ChartAxis_Minimum), [Maximum](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAxis.html#Syncfusion_Blazor_Charts_ChartAxis_Maximum), and [Interval](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAxis.html#Syncfusion_Blazor_Charts_ChartAxis_Interval) properties of the axis.
+The range of the category axis can be customized using `Minimum`, `Maximum`, and `Interval` properties of the axis.
 
 ```cshtml
 
 @using Syncfusion.Blazor.Chart3D
 
 <SfChart3D>
-    <Chart3DPrimaryXAxis Maximum="5" Minimum="1" Interval="2" ValueType="Syncfusion.Blazor.Charts.ValueType.Category">
+    <Chart3DPrimaryXAxis Maximum="5" Minimum="1" Interval="2" ValueType="Syncfusion.Blazor.Chart3D.ValueType.Category">
     </Chart3DPrimaryXAxis>
 
     <Chart3DSeriesCollection>
@@ -120,31 +118,30 @@ The range of the category axis can be customized using [Minimum](https://help.sy
 	
     public List<Chart3DData> MedalDetails = new List<Chart3DData>
 	{
-        new Chart3DData { X= "USA", YValue= 46 },
-        new Chart3DData { X= "GBR", YValue= 27 },
-        new Chart3DData { X= "CHN", YValue= 26 },
-        new Chart3DData { X= "UK", YValue= 23 },
-        new Chart3DData { X= "AUS", YValue= 16 },
-        new Chart3DData { X= "IND", YValue= 36 },
-        new Chart3DData { X= "DEN", YValue= 12 },
-        new Chart3DData { X= "MEX", YValue= 20 },
+        new Chart3DData { X = "USA", YValue = 46 },
+        new Chart3DData { X = "GBR", YValue = 27 },
+        new Chart3DData { X = "CHN", YValue = 26 },
+        new Chart3DData { X = "UK", YValue = 23 },
+        new Chart3DData { X = "AUS", YValue = 16 },
+        new Chart3DData { X = "IND", YValue = 36 },
+        new Chart3DData { X = "DEN", YValue = 12 },
+        new Chart3DData { X = "MEX", YValue = 20 }
     };
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LXLqWrrhTtLJCSXT?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Changing Blazor Column 3D Chart Axis based on Range and Interval](images/category-axis/blazor-chart-axis-range-and-interval.png)
 
 ## Indexed category axis
 
-The category axis can also be rendered based on the index values of the data source. This can be achieved by defining the [IsIndexed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAxis.html#Syncfusion_Blazor_Charts_ChartAxis_IsIndexed) property to **true** in the axis.
+The category axis can also be rendered based on the index values of the data source. This can be achieved by defining the `IsIndexed` property to **true** in the axis.
 
 ```cshtml
 
 @using Syncfusion.Blazor.Chart3D
 <SfChart3D>
-    <Chart3DPrimaryXAxis IsIndexed="true" ValueType="Syncfusion.Blazor.Charts.ValueType.Category">
+    <Chart3DPrimaryXAxis IsIndexed="true" ValueType="Syncfusion.Blazor.Chart3D.ValueType.Category">
     </Chart3DPrimaryXAxis>
 
     <Chart3DSeriesCollection>
@@ -164,31 +161,25 @@ The category axis can also be rendered based on the index values of the data sou
 
     public List<WeatherData> WeatherReports1 = new List<WeatherData>
 	{
-        new WeatherData{ X= "Myanmar", Y= 7.3 },
-        new WeatherData{ X= "India", Y= 7.9 },
-        new WeatherData{ X= "Bangladesh", Y= 6.8 },
-        new WeatherData{ X= "Cambodia", Y=7.0 },
-        new WeatherData{ X= "China", Y= 6.9 }
+        new WeatherData { X = "Myanmar", Y = 7.3 },
+        new WeatherData { X = "India", Y = 7.9 },
+        new WeatherData { X = "Bangladesh", Y = 6.8 },
+        new WeatherData { X = "Cambodia", Y = 7.0 },
+        new WeatherData { X = "China", Y = 6.9 }
     };
 
     public List<WeatherData> WeatherReports2 = new List<WeatherData>
 	{
-        new WeatherData{ X= "Poland", Y=2.7 },
-        new WeatherData{ X= "Australia", Y=2.5 },
-        new WeatherData{ X= "Singapore", Y=2.0 },
-        new WeatherData{ X= "Canada", Y=1.4 },
-        new WeatherData{ X= "Germany", Y=1.8 }
+        new WeatherData { X = "Poland", Y = 2.7 },
+        new WeatherData { X = "Australia", Y = 2.5 },
+        new WeatherData { X = "Singapore", Y = 2.0 },
+        new WeatherData { X = "Canada", Y = 1.4 },
+        new WeatherData { X = "Germany", Y = 1.8 }
     };
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hjVAiVrVTDrcDBLL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor 3D Chart with Indexed Category Axis](images/category-axis/blazor-chart-index-category-axis.png)
 
-N> Refer to our [Blazor 3D Chart](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor 3D Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap5) to knows various 3D Chart types and how to represent time-dependent data, showing trends in data at equal intervals.
-
-## See also
-
-* [Data Label](./data-labels)
-* [Tooltip](./tool-tip)
+N> Refer to our `Blazor 3D Chart` feature tour page for its groundbreaking feature representations and also explore our `Blazor 3D Chart Example` to know various 3D Chart types and how to represent time-dependent data, showing trends at equal intervals.

@@ -18,10 +18,9 @@ Logarithmic axis uses logarithmic scale and it is very useful in visualizing dat
 @using Syncfusion.Blazor.Chart3D
 
 <SfChart3D WallColor="transparent" EnableRotation="true" RotationAngle="7" TiltAngle="10" Depth="100">
-    <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.DateTime">
-    </Chart3DPrimaryXAxis>
+    <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Chart3D.ValueType.DateTime"></Chart3DPrimaryXAxis>
 
-    <Chart3DPrimaryYAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Logarithmic"/>    
+    <Chart3DPrimaryYAxis ValueType="Syncfusion.Blazor.Chart3D.ValueType.Logarithmic"/>    
 
     <Chart3DSeriesCollection>
         <Chart3DSeries DataSource="@Data" XName="XValue" YName="YValue" />        
@@ -52,23 +51,21 @@ Logarithmic axis uses logarithmic scale and it is very useful in visualizing dat
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hXLAMLhHLhczYuye?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor 3D Chart with Logarithmic Axis](images/logarithmic-axis/blazor-chart-logarithmic-axis.png)
 
 ## Range
 
-The range of an axis will be calculated automatically based on the provided data and it can also be customized by using the [Minimum](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonAxis.html#Syncfusion_Blazor_Charts_ChartCommonAxis_Minimum), [Maximum](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonAxis.html#Syncfusion_Blazor_Charts_ChartCommonAxis_Maximum) and [Interval](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonAxis.html#Syncfusion_Blazor_Charts_ChartCommonAxis_Interval) properties of the axis.
+The range of an axis will be calculated automatically based on the provided data and it can also be customized by using the `Minimum`, `Maximum` and `Interval` properties of the axis.
 
 ```cshtml
 
 @using Syncfusion.Blazor.Chart3D
 
 <SfChart3D WallColor="transparent" EnableRotation="true" RotationAngle="7" TiltAngle="10" Depth="100">
-    <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.DateTime">
-    </Chart3DPrimaryXAxis>
+    <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Chart3D.ValueType.DateTime"></Chart3DPrimaryXAxis>
 
-    <Chart3DPrimaryYAxis Minimum="100" Maximum="10000" ValueType="Syncfusion.Blazor.Charts.ValueType.Logarithmic"/>    
+    <Chart3DPrimaryYAxis Minimum="100" Maximum="10000" ValueType="Syncfusion.Blazor.Chart3D.ValueType.Logarithmic"/>    
 
     <Chart3DSeriesCollection>
         <Chart3DSeries DataSource="@Data" XName="XValue" YName="YValue" />        
@@ -99,23 +96,21 @@ The range of an axis will be calculated automatically based on the provided data
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hXrqChBHBgilgqlG?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Changing Blazor Column 3D Chart Logarithmic Axis based on Range](images/logarithmic-axis/blazor-column-chart-axis-based-on-range.png)
 
 ## Logarithmic base
 
-Logarithmic base can be customized by using the [LogBase](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonAxis.html#Syncfusion_Blazor_Charts_ChartCommonAxis_LogBase) property of the axis. For example when the `logBase` is **5**, the axis values follows 5<sup>-2</sup>, 5<sup>-1</sup>, 5<sup>0</sup>, 5<sup>1</sup>, 5<sup>2</sup> etc.
+Logarithmic base can be customized by using the `LogBase` property of the axis. For example when the `LogBase` is **5**, the axis values follows 5<sup>-2</sup>, 5<sup>-1</sup>, 5<sup>0</sup>, 5<sup>1</sup>, 5<sup>2</sup> etc.
 
 ```cshtml
 
 @using Syncfusion.Blazor.Chart3D
 
 <SfChart3D WallColor="transparent" EnableRotation="true" RotationAngle="7" TiltAngle="10" Depth="100">
-    <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.DateTime">
-    </Chart3DPrimaryXAxis>
+    <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Chart3D.ValueType.DateTime"></Chart3DPrimaryXAxis>
 
-    <Chart3DPrimaryYAxis LogBase="2" ValueType="Syncfusion.Blazor.Charts.ValueType.Logarithmic"/>    
+    <Chart3DPrimaryYAxis LogBase="2" ValueType="Syncfusion.Blazor.Chart3D.ValueType.Logarithmic"/>    
 
     <Chart3DSeriesCollection>
         <Chart3DSeries DataSource="@Data" XName="XValue" YName="YValue" />        
@@ -146,23 +141,21 @@ Logarithmic base can be customized by using the [LogBase](https://help.syncfusi
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LDVKWVLHhgBMKubZ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Column 3D Chart Logarithmic Axis with Base](images/logarithmic-axis/blazor-column-chart-logarithmic-axis-with-base.png)
 
 ## Logarithmic interval
 
-The interval of the logarithmic axis can be customized by using the [Interval](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonAxis.html#Syncfusion_Blazor_Charts_ChartCommonAxis_Interval) property in the axis. When the logarithmic base is 10 and logarithmic **interval** is 2, then the axis labels are placed at an interval of 10<sup>2</sup>. The default value of the [Interval](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonAxis.html#Syncfusion_Blazor_Charts_ChartCommonAxis_Interval)  is **1**.
+The interval of the logarithmic axis can be customized by using the `Interval` property in the axis. When the logarithmic base is 10 and logarithmic **interval** is 2, then the axis labels are placed at an interval of 10<sup>2</sup>. The default value of the `Interval` is **1**.
 
 ```cshtml
 
 @using Syncfusion.Blazor.Chart3D
 
 <SfChart3D WallColor="transparent" EnableRotation="true" RotationAngle="7" TiltAngle="10" Depth="100">
-    <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.DateTime">
-    </Chart3DPrimaryXAxis>
+    <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Chart3D.ValueType.DateTime"></Chart3DPrimaryXAxis>
 
-    <Chart3DPrimaryYAxis Interval="2" LogBase="2" ValueType="Syncfusion.Blazor.Charts.ValueType.Logarithmic"/>    
+    <Chart3DPrimaryYAxis Interval="2" LogBase="2" ValueType="Syncfusion.Blazor.Chart3D.ValueType.Logarithmic"/>    
 
     <Chart3DSeriesCollection>
         <Chart3DSeries DataSource="@Data" XName="XValue" YName="YValue" />        
@@ -193,13 +186,7 @@ The interval of the logarithmic axis can be customized by using the [Interval](h
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LZhqMhVdrUVPPtnR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Changing Blazor Column 3D Chart Logarithmic Axis based on Interval](images/logarithmic-axis/blazor-column-chart-axis-based-on-range-interval.png)
 
-N> Refer to our [Blazor 3D Chart](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor 3D Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to know various 3D Chart types and how to represent time-dependent data, showing trends at equal intervals.
-
-## See also
-
-* [Data label](./data-labels)
-* [Tooltip](./tool-tip)
+N> Refer to our `Blazor 3D Chart` feature tour page for its groundbreaking feature representations and also explore our `Blazor 3D Chart Example` to know various 3D Chart types and how to represent time-dependent data, showing trends at equal intervals.
