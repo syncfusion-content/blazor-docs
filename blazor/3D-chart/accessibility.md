@@ -81,8 +81,6 @@ Interaction Keys |Description
 
 The Blazor 3D Chart component's accessibility levels are ensured through an [axe-core](https://www.nuget.org/packages/Deque.AxeCore.Playwright) with playwright tests.
 
-The accessibility compliance of the Blazor 3D Chart component is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/chart) in a new window to evaluate the accessibility of the Blazor 3D Chart component with accessibility tools.
-
 ## See also
 
 * [Accessibility in Syncfusion Blazor components](https://blazor.syncfusion.com/documentation/common/accessibility)
