@@ -7,7 +7,7 @@ control: SfPdfViewer
 documentation: ug
 ---
 
-# Processing Large Files Without Increasing Maximum Message Size in SfPdfViewer Component
+# Processing Large Files Without Increasing Maximum Message Size
 
 The SfPdfViewer component now supports a new feature that allows for the processing of large files without the need to increase the maximum message size of a single incoming hub message (MaximumReceiveMessageSize 32KB). This is achieved through the use of chunk messaging.
 
