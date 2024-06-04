@@ -310,34 +310,30 @@ The [DateTimeFormat](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfP
 
 The following table describes various supported patterns
 
-| Format Specifier | Description |
+| Format | Result |
 |---|---|
-| d | Day of the month (1-31) |
-| dd | Day of the month (01-31) |
-| ddd | Abbreviated day name (Mon-Sun) |
-| dddd | Full day name (Monday-Sunday) |
-| h | 12-hour clock hour (1-12) |
-| hh | 12-hour clock hour (01-12) |
-| H | 24-hour clock hour (0-23) |
-| HH | 24-hour clock hour (00-23) |
-| m | Minutes (0-59) |
-| mm | Minutes (00-59) |
-| M | Month number (1-12) |
-| MM | Month number (01-12) |
-| MMM | Abbreviated month name (Jan-Dec) |
-| MMMM | Full month name (January-December) |
-| s | Seconds (0-59) |
-| ss | Seconds (00-59) |
-| t | Abbreviated AM/PM (A/P) |
-| tt | Full AM/PM (AM/PM) |
-| y | Year (current year digits) |
-| yy | Year with leading zero (last two digits) |
-| yyy | Year with leading zero (three digits) |
-| yyyy | Year with leading zero (four digits) |
-| K | Time zone information (+HH:MM) |
-| z | Signed UTC offset (hours) |
-| zz | Signed UTC offset (hours) with leading zero |
-| zzz | Signed UTC offset (hours:minutes) |
+| DateTime.Now.ToString("MM/dd/yyyy") | 05/29/2015 |
+| DateTime.Now.ToString("dddd, dd MMMM yyyy") | Friday, 29 May 2015 |
+| DateTime.Now.ToString("dddd, dd MMMM yyyy HH:mm") | Friday, 29 May 2015 05:50 |
+| DateTime.Now.ToString("dddd, dd MMMM yyyy HH:mm tt") | Friday, 29 May 2015 05:50 AM |
+| DateTime.Now.ToString("dddd, dd MMMM yyyy H:mm") | Friday, 29 May 2015 5:50 |
+| DateTime.Now.ToString("dddd, dd MMMM yyyy H:mm tt") | Friday, 29 May 2015 5:50 AM |
+| DateTime.Now.ToString("dddd, dd MMMM yyyy HH:mm:ss") | Friday, 29 May 2015 05:50:06 |
+| DateTime.Now.ToString("MM/dd/yyyy HH:mm") | 05/29/2015 05:50 |
+| DateTime.Now.ToString("MM/dd/yyyy hh:mm tt") | 05/29/2015 05:50 AM |
+| DateTime.Now.ToString("MM/dd/yyyy H:mm") | 05/29/2015 5:50 |
+| DateTime.Now.ToString("MM/dd/yyyy h:mm tt") | 05/29/2015 5:50 AM |
+| DateTime.Now.ToString("MM/dd/yyyy HH:mm:ss") | 05/29/2015 05:50:06 |
+| DateTime.Now.ToString("MMMM dd") | May 29 |
+| DateTime.Now.ToString("yyyy’-‘MM’-‘dd’T’HH’:’mm’:’ss.fffffffK") | 2015-05-16T05:50:06.7199222-04:00 |
+| DateTime.Now.ToString("ddd, dd MMM yyy HH’:’mm’:’ss ‘GMT’") | Fri, 16 May 2015 05:50:06 GMT |
+| DateTime.Now.ToString("yyyy’-‘MM’-‘dd’T’HH’:’mm’:’ss") | 2015-05-16T05:50:06 |
+| DateTime.Now.ToString("HH:mm") | 05:50 |
+| DateTime.Now.ToString("hh:mm tt") | 05:50 AM |
+| DateTime.Now.ToString("H:mm") | 5:50 |
+| DateTime.Now.ToString("h:mm tt") | 5:50 AM |
+| DateTime.Now.ToString("HH:mm:ss") | 05:50:06 |
+| DateTime.Now.ToString("yyyy MMMM") | 2015 May |
 
 Here is a sample code snippet demonstrating how to apply this setting 
 
