@@ -3835,7 +3835,7 @@ The events should be provided to the Gantt Chart using the GanttChartEvents comp
         this.TaskCollection = GetTaskCollection().ToList();
     }
 
-    public void IndentationChangedHandler(IndentationChangingEventArgs<TaskData> args)
+    public void IndentationChangedHandler(IndentationChangedEventArgs<TaskData> args)
     {
         if (!args.IsIndent)
         {
