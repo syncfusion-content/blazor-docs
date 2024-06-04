@@ -344,7 +344,7 @@ While rendering the Tree Grid part in Gantt Chart, the [RowDataBound](https://he
 
 ## Styling alternate rows
 
- You can change the background colour of alternative rows in Gantt chart by overriding the class as shown below.
+ You can change the background color of alternative rows in Gantt chart by overriding the class as shown below.
 
 ```css
 .e-altrow, tr.e-chart-row:nth-child(odd)  {
