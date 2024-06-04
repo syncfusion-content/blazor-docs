@@ -302,10 +302,6 @@ This code snippet will edit the comment and reply comment programmatically withi
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Annotations/Programmatic%20Support/Comment/Edit).
 
-## See also
-
-* [How to delete the annotation programmatically](./text-markup-annotation#delete-annotation-programmatically)
-
 ## Customizing DateTime Format
 
 The PDF Viewer provides the support to customize the date and time format displayed in the comment panel using the [PdfViewerCommentPanelSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.html). This feature allows you to tailor the appearance of date and time according to your preferences or regional standards.   
@@ -391,6 +387,11 @@ Here is a sample code snippet demonstrating how to apply this setting
 ```
 
 This code will enable multiline support in the Comment panel of the PDF Viewer
-![Enabling Multiline Support](../images/enabling_multiline%20_support.png)
+
+![Enabling Multiline Support](../images/enabling_multiline_support.png)
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/889407_vol2_2024/Annotations/Comment%20Panel/Enable%20Multiline%20Support%20-%20SfPdfViewer).
+
+## See also
+
+* [How to delete the annotation programmatically](./text-markup-annotation#delete-annotation-programmatically)
