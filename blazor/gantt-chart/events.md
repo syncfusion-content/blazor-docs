@@ -2904,6 +2904,67 @@ The events should be provided to the Gantt Chart using the GanttChartEvents comp
     }
 ```
 
+## CellSaved
+
+[CellSaved](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_CellSaved) event triggers when cell is saved. From the event argument, details such as the previous cell value, edited cell value, and column name can be obtained. The following sample demonstrates how to get the previous cell value and the edited value.
+
+```cshtml
+@using Syncfusion.Blazor.Gantt
+@using Syncfusion.Blazor.Grids
+
+
+<SfGantt DataSource="@TaskCollection" Height="450px" Width="900px">
+    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate"
+                     Duration="Duration" Progress="Progress" ParentID="ParentId">
+    </GanttTaskFields>
+    <GanttEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true" AllowTaskbarEditing="true"></GanttEditSettings>
+    <GanttEvents TValue="TaskData" CellSaved="CellSavedHandler"></GanttEvents>
+</SfGantt>
+
+    @code{
+        public SfGantt<TaskData> Gantt;
+        private List<TaskData> TaskCollection { get; set; }
+
+        protected override void OnInitialized()
+        {
+            this.TaskCollection = GetTaskCollection();
+        }
+
+        private void CellSavedHandler(CellSavedArgs<TaskData> args)
+        {
+            var previousCellValue = args.PreviousValue;
+            var editedCellValue = args.Value;
+        }
+
+        public class TaskData
+        {
+            public int TaskId { get; set; }
+            public string TaskName { get; set; }
+            public DateTime StartDate { get; set; }
+            public DateTime? EndDate { get; set; }
+            public string Duration { get; set; }
+            public int Progress { get; set; }
+            public int? ParentId { get; set; }
+        }
+
+        private static List<TaskData> GetTaskCollection()
+        {
+            List<TaskData> Tasks = new List<TaskData>()
+        {
+            new TaskData() { TaskId = 1, TaskName = "Project initiation", StartDate = new DateTime(2022, 01, 04), EndDate = new DateTime(2022, 01, 23), },
+            new TaskData() { TaskId = 2, TaskName = "Identify Site location", StartDate = new DateTime(2022, 01, 04), Duration = "0", Progress = 30, ParentId = 1, },
+            new TaskData() { TaskId = 3, TaskName = "Perform soil test", StartDate = new DateTime(2022, 01, 04), Duration = "4", Progress = 40, ParentId = 1, },
+            new TaskData() { TaskId = 4, TaskName = "Soil test approval", StartDate = new DateTime(2022, 01, 04), Duration = "0", Progress = 30, ParentId = 1, },
+            new TaskData() { TaskId = 5, TaskName = "Project estimation", StartDate = new DateTime(2022, 01, 04), EndDate = new DateTime(2022, 01, 23), },
+            new TaskData() { TaskId = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2022, 01, 06), Duration = "3", Progress = 30, ParentId = 5, },
+            new TaskData() { TaskId = 7, TaskName = "List materials", StartDate = new DateTime(2022, 01, 06), Duration = "3", Progress = 40, ParentId = 5, },
+            new TaskData() { TaskId = 8, TaskName = "Estimation approval", StartDate = new DateTime(2022, 01, 06), Duration = "0", Progress = 30, ParentId = 5, }
+        };
+            return Tasks;
+        }
+    }
+```
+
 ## ColumnResized
 
 [ColumnResized](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_ColumnResized) event triggers while column resized.
@@ -3687,6 +3748,128 @@ The events should be provided to the Gantt Chart using the GanttChartEvents comp
             new TaskData() { TaskId = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime( 2023, 04, 06), Duration = "3", Progress = 30, ParentId = 5 },
             new TaskData() { TaskId = 7, TaskName = "List materials", StartDate = new DateTime( 2023, 04, 06), Duration = "3", Progress = 40, Predecessor = "6", ParentId = 5 },
             new TaskData() { TaskId = 8, TaskName = "Estimation approval", StartDate = new DateTime( 2023, 04, 06), Duration = "2", Progress = 30, ParentId = 5 }
+        };
+        return Tasks;
+    }
+}
+```
+
+## IndentationChanging
+
+[IndentationChanging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_IndentationChanging) event triggers before an indent or outdent action is performed in the Gantt Chart. The [IsIndent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.IndentationChangingEventArgs-1.html#Syncfusion_Blazor_Gantt_IndentationChangingEventArgs_1_IsIndent) property of this event argument determines the type of indentation (indent or outdent). The following sample code demonstrates how to cancel the outdent action based on the `IsIndent` property.
+
+```cshtml
+@using Syncfusion.Blazor.Gantt
+@using Syncfusion.Blazor.TreeGrid
+
+<SfGantt DataSource="@TaskCollection" Height="450px" Width="900px" Toolbar="@(new List<string>(){"Indent","Outdent"})">
+    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" ParentID="ParentId"></GanttTaskFields>
+    <GanttEditSettings AllowEditing="true"></GanttEditSettings>
+    <GanttEvents TValue="TaskData" IndentationChanging="IndentationChangingHandler"></GanttEvents>
+</SfGantt>
+
+@code {
+    private List<TaskData> TaskCollection { get; set; }
+
+    protected override void OnInitialized()
+    {
+        this.TaskCollection = GetTaskCollection().ToList();
+    }
+
+    public void IndentationChangingHandler(IndentationChangingEventArgs<TaskData> args)
+    {
+        if (!args.IsIndent)
+        {
+            args.Cancel = true;
+        }
+    }
+
+    public class TaskData
+    {
+        public int TaskId { get; set; }
+        public string TaskName { get; set; }
+        public DateTime StartDate { get; set; }
+        public DateTime EndDate { get; set; }
+        public string Duration { get; set; }
+        public int Progress { get; set; }
+        public int? ParentId { get; set; }
+    }
+
+    private static List<TaskData> GetTaskCollection()
+    {
+        List<TaskData> Tasks = new List<TaskData>()
+        {
+            new TaskData() { TaskId = 1, TaskName = "Project initiation", StartDate = new DateTime( 2023, 01, 04), EndDate = new DateTime( 2023, 01, 23), },
+            new TaskData() { TaskId = 2, TaskName = "Identify Site location", StartDate = new DateTime( 2023, 01, 04), Duration = "0", Progress = 30, ParentId = 1, },
+            new TaskData() { TaskId = 3, TaskName = "Perform soil test", StartDate = new DateTime( 2023, 01, 04), Duration = "4", Progress = 40, ParentId = 1, },
+            new TaskData() { TaskId = 4, TaskName = "Soil test approval", StartDate = new DateTime( 2023, 01, 04), Duration = "0", Progress = 30, ParentId = 1, },
+            new TaskData() { TaskId = 5, TaskName = "Project estimation", StartDate = new DateTime( 2023, 01, 04), EndDate = new DateTime( 2023, 01, 23), },
+            new TaskData() { TaskId = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime( 2023, 01, 06), Duration = "3", Progress = 30, ParentId = 5, },
+            new TaskData() { TaskId = 7, TaskName = "List materials", StartDate = new DateTime( 2023, 01, 06), Duration = "3", Progress = 40, ParentId = 5, },
+            new TaskData() { TaskId = 8, TaskName = "Estimation approval", StartDate = new DateTime( 2023, 01, 06), Duration = "0", Progress = 30, ParentId = 5, }
+        };
+        return Tasks;
+    }
+}
+```
+
+## IndentationChanged
+
+[IndentationChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_IndentationChanged) event triggers after an indent or outdent action is performed in the Gantt Chart. From the event argument, details about the indent or outdent action performed can be obtained using the [IsIndent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.IndentationChangedEventArgs-1.html#Syncfusion_Blazor_Gantt_IndentationChangedEventArgs_1_IsIndent) property. The following sample demonstrates how to determine whether the performed action is an indent or outdent based on the `IsIndent` property.
+
+```cshtml
+@using Syncfusion.Blazor.Gantt
+@using Syncfusion.Blazor.TreeGrid
+
+<SfGantt DataSource="@TaskCollection" Height="450px" Width="900px" Toolbar="@(new List<string>(){"Indent","Outdent"})">
+    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" ParentID="ParentId"></GanttTaskFields>
+    <GanttEditSettings AllowEditing="true"></GanttEditSettings>
+    <GanttEvents TValue="TaskData" IndentationChanged="IndentationChangedHandler"></GanttEvents>
+</SfGantt>
+
+@code {
+    private List<TaskData> TaskCollection { get; set; }
+
+    protected override void OnInitialized()
+    {
+        this.TaskCollection = GetTaskCollection().ToList();
+    }
+
+    public void IndentationChangedHandler(IndentationChangedEventArgs<TaskData> args)
+    {
+        if (!args.IsIndent)
+        {
+            string outdentStatus = "The outdent action is performed.";
+        }
+        else
+        {
+            string indentStatus = "The indentation action is performed.";
+        }
+    }
+
+    public class TaskData
+    {
+        public int TaskId { get; set; }
+        public string TaskName { get; set; }
+        public DateTime StartDate { get; set; }
+        public DateTime EndDate { get; set; }
+        public string Duration { get; set; }
+        public int Progress { get; set; }
+        public int? ParentId { get; set; }
+    }
+
+    private static List<TaskData> GetTaskCollection()
+    {
+        List<TaskData> Tasks = new List<TaskData>()
+        {
+            new TaskData() { TaskId = 1, TaskName = "Project initiation", StartDate = new DateTime( 2023, 01, 04), EndDate = new DateTime( 2023, 01, 23), },
+            new TaskData() { TaskId = 2, TaskName = "Identify Site location", StartDate = new DateTime( 2023, 01, 04), Duration = "0", Progress = 30, ParentId = 1, },
+            new TaskData() { TaskId = 3, TaskName = "Perform soil test", StartDate = new DateTime( 2023, 01, 04), Duration = "4", Progress = 40, ParentId = 1, },
+            new TaskData() { TaskId = 4, TaskName = "Soil test approval", StartDate = new DateTime( 2023, 01, 04), Duration = "0", Progress = 30, ParentId = 1, },
+            new TaskData() { TaskId = 5, TaskName = "Project estimation", StartDate = new DateTime( 2023, 01, 04), EndDate = new DateTime( 2023, 01, 23), },
+            new TaskData() { TaskId = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime( 2023, 01, 06), Duration = "3", Progress = 30, ParentId = 5, },
+            new TaskData() { TaskId = 7, TaskName = "List materials", StartDate = new DateTime( 2023, 01, 06), Duration = "3", Progress = 40, ParentId = 5, },
+            new TaskData() { TaskId = 8, TaskName = "Estimation approval", StartDate = new DateTime( 2023, 01, 06), Duration = "0", Progress = 30, ParentId = 5, }
         };
         return Tasks;
     }
