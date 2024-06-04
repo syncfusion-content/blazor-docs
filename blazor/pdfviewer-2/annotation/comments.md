@@ -305,3 +305,92 @@ This code snippet will edit the comment and reply comment programmatically withi
 ## See also
 
 * [How to delete the annotation programmatically](./text-markup-annotation#delete-annotation-programmatically)
+
+## Customizing DateTime Format
+
+The PDF Viewer provides the support to customize the date and time format displayed in the comment panel using the [PdfViewerCommentPanelSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.html). This feature allows you to tailor the appearance of date and time according to your preferences or regional standards.   
+
+The [DateTimeFormat](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.html) API in [PdfViewerCommentPanelSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.html) enables you to change the format of date and time displayed in the comment panel. 
+
+The following table describes various supported patterns
+
+| Format Specifier | Description |
+|---|---|
+| d | Day of the month (1-31) |
+| dd | Day of the month (01-31) |
+| ddd | Abbreviated day name (Mon-Sun) |
+| dddd | Full day name (Monday-Sunday) |
+| h | 12-hour clock hour (1-12) |
+| hh | 12-hour clock hour (01-12) |
+| H | 24-hour clock hour (0-23) |
+| HH | 24-hour clock hour (00-23) |
+| m | Minutes (0-59) |
+| mm | Minutes (00-59) |
+| M | Month number (1-12) |
+| MM | Month number (01-12) |
+| MMM | Abbreviated month name (Jan-Dec) |
+| MMMM | Full month name (January-December) |
+| s | Seconds (0-59) |
+| ss | Seconds (00-59) |
+| t | Abbreviated AM/PM (A/P) |
+| tt | Full AM/PM (AM/PM) |
+| y | Year (current year digits) |
+| yy | Year with leading zero (last two digits) |
+| yyy | Year with leading zero (three digits) |
+| yyyy | Year with leading zero (four digits) |
+| K | Time zone information (+HH:MM) |
+| z | Signed UTC offset (hours) |
+| zz | Signed UTC offset (hours) with leading zero |
+| zzz | Signed UTC offset (hours:minutes) |
+
+Here is a sample code snippet demonstrating how to apply this setting 
+
+```cshtml
+
+@using Syncfusion.Blazor.SfPdfViewer; 
+
+<SfPdfViewer2 DocumentPath="@DocumentPath" Height="100%" Width="100%" EnableAnnotationToolbar="true" CommentPanelVisible="true"> 
+    <PdfViewerCommentPanelSettings DateTimeFormat=@dateFormat> </PdfViewerCommentPanelSettings>
+</SfPdfViewer2> 
+
+@code { 
+    // This is a valid C# datetime format 
+    private string dateFormat = "dd/MM/yyyy HH:mm:ss"; 
+    private string DocumentPath { get; set; } = "wwwroot/Annotation.pdf"; 
+} 
+
+```
+This code implements date and time formatting for the comment panel of the PDF viewer 
+
+![Customizing DateTime Format](../images/customizing_datetime_format.png)
+
+[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/889407_vol2_2024/Annotations/Comment%20Panel/Customize%20DateTimeFormat%20-%20SfPdfViewer).
+
+## Enabling Multiline Support 
+
+The multiline support feature in the comment panel enhances the functionality of the PDF Viewer by allowing users to input and display comments that span multiple lines. The PDF Viewer provides the support to enable multiline support in the comment panel using the [PdfViewerCommentPanelSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.html). 
+
+The [Multiline](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.html) API in [PdfViewerCommentPanelSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.html) is used to enable or disable multiline support in the comment panel.
+
+Here is a sample code snippet demonstrating how to apply this setting
+
+```cshtml
+
+@using Syncfusion.Blazor.SfPdfViewer; 
+
+<SfPdfViewer2 DocumentPath="@DocumentPath" Height="100%" Width="100%" EnableAnnotationToolbar="true" CommentPanelVisible="true"> 
+    <PdfViewerCommentPanelSettings Multiline=@multiline> </PdfViewerCommentPanelSettings> 
+</SfPdfViewer2> 
+
+@code {
+    // This variable stores the user's choice for enabling or disabling multiline support 
+    private bool multiline = true; 
+    private string DocumentPath { get; set; } = "wwwroot/Annotation.pdf";
+}
+
+```
+
+This code will enable multiline support in the Comment panel of the PDF Viewer
+![Enabling Multiline Support](../images/enabling_multiline%20_support.png)
+
+[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/889407_vol2_2024/Annotations/Comment%20Panel/Enable%20Multiline%20Support%20-%20SfPdfViewer).
