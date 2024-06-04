@@ -11,7 +11,7 @@ documentation: ug
 
 The diagram provides support to select, resize, or swap the lane interactively. 
 
-### Select
+## Select
 
 A Lane can be selected by clicking (tapping) the header of the lane.
 
