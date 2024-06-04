@@ -81,162 +81,88 @@ Syncfusion Blazor components will keep improving when there is anything required
 
 Consult the component-specific documents below for detailed information about how Syncfusion Blazor components ensure compliance with accessibility standards, encompassing Section 508, WAI-ARIA, WCAG 2.2, keyboard navigation, and more.
 
-<style>
-#table
-{
-border:0 !important;
-line-height: 160% !important;
-}
-
-tr
-{
-border:0 !important;
-}
-
-td
-{
-border:0 !important;
-vertical-align: top;
-}
-
-.controlanchorlink
-{
-font-size: 14px !important;
-text-decoration: none!important;
-text-align: left!important;
-padding: 1px 0px;
-}
-.controlcategory-topics
-{
-font-size: 14px !important;
-font-weight: 500!important;
-border:0 !important;
-line-height: 20px;
-}
-.controlcategory
-{
-font-size: 14px !important;
-font-weight: 500!important;
-border:0 !important;
-text-align: left!important;
-line-height: 20px;
-padding-top: 20px;
-}
-</style>
-
-<table id="table">
-<tbody>
-<colgroup>
-<col style="width: 25%">
-<col style="width: 25%">
-<col style="width: 25%">
-<col style="width: 25%">
-</colgroup>
-</tbody>
+<!-- markdownlint-disable MD033 -->
+<table>
 <tr>
-    <td>
-        <div><p class="controlcategory-topics">GRIDS</p></div>
-        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/datagrid/accessibility">DataGrid</a></div>
-        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/pivot-table/accessibility">Pivot Table</a></div>
-        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/treegrid/accessibility">TreeGrid</a></div>
-        <div><p class="controlcategory">FILE VIEWERS & EDITORS</p></div>
-        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/rich-text-editor/accessibility">RichTextEditor</a></div>
-        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/pdfviewer-2/keyboard-accessibility">PDF Viewer</a></div>
-        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/document-editor/accessibility">Word Processor</a></div>
-        <div class="controlanchorlink">Image Editor</div>
-        <div><p class="controlcategory">LAYOUT</p></div>
-        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/dialog/accessibility">Dialog</a></div>
-        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/listview/accessibility">ListView</a></div>
-        <div class="controlanchorlink">Tooltip</div>
-        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/splitter/accessibility">Splitter</a></div>
-        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/dashboard-layout/accessibility">Dashboard</a></div>
-        <div class="controlanchorlink">Card</div>
-        <div class="controlanchorlink">Avatar</div>
-        <div class="controlanchorlink">Media Query</div>
-    </td>
-    <td>
-        <div><p class="controlcategory-topics">DATA VISUALIZATION</p></div>
-        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/chart/accessibility">Charts</a></div>
-        <div class="controlanchorlink">Stock Chart</div>
-        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/circular-gauge/accessibility">Circular Gauge</a></div>
-        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/linear-gauge/accessibility">Linear Gauge</a></div>
-        <div class="controlanchorlink">Diagram</div>
-        <div class="controlanchorlink">HeatMap Chart</div>
-        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/maps/accessibility">Map</a></div>
-        <div class="controlanchorlink">Range Selector</div>
-        <div class="controlanchorlink">Smith Chart</div>
-        <div class="controlanchorlink">Sparkline Charts</div>
-        <div class="controlanchorlink">Barcode</div>
-        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/treemap/accessibility">TreeMap</a></div>
-        <div class="controlanchorlink">Bullet Chart</div>
-        <div class="controlanchorlink">Kanban</div>
-        <div><p class="controlcategory">BUTTONS</p></div>
-        <div class="controlanchorlink">Button</div>
-        <div class="controlanchorlink">ButtonGroup</div>
-        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/drop-down-menu/accessibility">Dropdown Menu</a></div>
-        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/progress-button/accessibility">Progress Button</a></div>
-        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/split-button/accessibility">SplitButton</a></div>
-        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/chip/accessibility">Chips</a></div>
-        <div class="controlanchorlink">Icons</div>
-        <div class="controlanchorlink">Floating Action Button</div>
-        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/speeddial/accessibility">Speed Dial</a></div>
-    </td>
-    <td>
-        <div><p class="controlcategory-topics">CALENDARS</p></div>
-        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/scheduler/accessibility">Scheduler</a></div>
-        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/gantt-chart/accessibility">Gantt Chart</a></div>
-        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/calendar/accessibility">Calendar</a></div>
-        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/datepicker/accessibility">DatePicker</a></div>
-        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/daterangepicker/accessibility">DateRangePicker</a></div>
-        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/datetime-picker/accessibility">DateTime Picker</a></div>
-        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/timepicker/accessibility">TimePicker</a></div>
-        <div><p class="controlcategory">INPUTS</p></div>
-        <div class="controlanchorlink">TextBox</div>
-        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/input-mask/accessibility">Input Mask</a></div>
-        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/numeric-textbox/accessibility">Numeric TextBox</a></div>
-        <div class="controlanchorlink">RadioButton</div>
-        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/check-box/accessibility">CheckBox</a></div>
-        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/color-picker/accessibility">Color Picker</a></div>
-        <div class="controlanchorlink">File Upload</div>
-        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/range-slider/accessibility">Range Slider</a></div>
-        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/toggle-switch-button/accessibility">Toggle Switch Button</a></div>
-        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/signature/accessibility">Signature</a></div>
-        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/rating/accessibility">Rating</a></div>
-        <div><p class="controlcategory">FORMS</p></div>
-        <div class="controlanchorlink">In-place Editor</div>
-        <div class="controlanchorlink">Query Builder</div>
-		<div class="controlanchorlink">Data Form</div>
-    </td>
-    <td>
-        <div><p class="controlcategory-topics">DROPDOWNS</p></div>
-        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/autocomplete/accessibility">AutoComplete</a></div>
-        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/listbox/accessibility">ListBox</a></div>
-        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/combobox/accessibility">ComboBox</a></div>
-        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/dropdown-list/accessibility">Dropdown List</a></div>
-		<div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/dropdown-tree/accessibility">DropDown Tree</a></div>
-        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/multiselect-dropdown/accessibility">Multiselect DropDown</a></div>
-        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/mention/accessibility">Mention</a></div>
-        <div><p class="controlcategory">NAVIGATION</p></div>
-        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/accordion/accessibility">Accordion</a></div>
-        <div class="controlanchorlink">Breadcrumb</div>
-        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/carousel/accessibility">Carousel</a></div>
-        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/context-menu/accessibility">Context Menu</a></div>
-        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/menu-bar/accessibility">Menu Bar</a></div>
-        <div class="controlanchorlink">Sidebar</div>
-        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/tabs/accessibility">Tabs</a></div>
-        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/toolbar/accessibility">Toolbar</a></div>
-        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/treeview/accessibility">TreeView</a></div>
-        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/file-manager/accessibility">File Manager</a></div>
-        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/pager/accessibility">Pager</a></div>
-        <div class="controlanchorlink">AppBar</div>
-		<div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/stepper/accessibility">Stepper</a></div>
-        <div><p class="controlcategory">NOTIFICATION</p></div>
-        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/toast/accessibility">Toast</a></div>
-        <div class="controlanchorlink">ProgressBar</div>
-        <div class="controlanchorlink">Spinner</div>
-        <div class="controlanchorlink">Badge</div>
-        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/skeleton/accessibility">Skeleton</a></div>
-        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/message/accessibility">Message</a></div>
-    </td>
+<td>
+<b>Components</b>
+</td>
+<td>
+<b>WCAG 2.2</b>
+</td>
+<td>
+<b>Section 508</b>
+</td>
+<td>
+<b>Screen Reader</b>
+</td>
+<td>
+<b>Right-To-Left</b>
+</td>
+<td>
+<b>Color Contrast</b>
+</td>
+<td>
+<b>Mobile Device</b>
+</td>
+<td>
+<b>Keyboard Navigation</b>
+</td>
+<td>
+<b>Axe-core Accessibility Validation</b>
+</td>  
+<td>
+<b>Accessibility Example</b>
+</td>
+<td>
+<b>Accessibility Documentation</b>
+</td>
+</tr>
+<tr>
+<td>
+Accordion 
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+
+</td>
+<td>
+
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<a href="https://blazor.syncfusion.com/accessibility/accordion" target="_blank">Demo</a>
+</td>
+<td>
+<a href="../accordion/accessibility.md" target="_blank">Documentation</a>
+</td>
 </tr>
 </table>
+
+<style>
+    .post .post-content img {
+        display: inline-block;
+        margin: 0.5em 0;
+    }
+</style>
+<div><img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> - All features of the component meet the requirement.</div>
+
+<div><img src="https://cdn.syncfusion.com/content/images/landing-page/intermediate.png" alt="Intermediate"> - Some features of the component do not meet the requirement.</div>
+
+<div><img src="https://cdn.syncfusion.com/content/images/landing-page/no.png" alt="No"> - The component does not meet the requirement.</div>
