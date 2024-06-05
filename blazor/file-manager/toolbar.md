@@ -28,6 +28,21 @@ Some common built-in toolbar items include:
 
 The Toolbar visibility can also be controlled by using the [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerToolbarSettings.html#Syncfusion_Blazor_FileManager_FileManagerToolbarSettings_Visible) property. Set this property as false to hide the toolbar. You can also toggle this property dynamically based on your application logic.
 
+```cshtml
+
+@using Syncfusion.Blazor.FileManager
+
+<SfFileManager TValue="FileManagerDirectoryContent">
+    <FileManagerAjaxSettings Url="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/FileOperations"
+                             UploadUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Upload"
+                             DownloadUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Download"
+                             GetImageUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/GetImage">
+    </FileManagerAjaxSettings>
+    <FileManagerToolbarSettings Visible=false></FileManagerToolbarSettings>
+</SfFileManager>
+
+```
+
 ## Events
 
 The Blazor FileManager Toolbar component has a [ToolbarCreated](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerEvents-1.html#Syncfusion_Blazor_FileManager_FileManagerEvents_1_ToolbarCreated) and [ToolbarItemClicked](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerEvents-1.html#Syncfusion_Blazor_FileManager_FileManagerEvents_1_ToolbarItemClicked) events that can be triggered for certain actions. These events can be bound to the FileManager using the **FileManagerEvents**, which requires the **TValue** to be provided.
