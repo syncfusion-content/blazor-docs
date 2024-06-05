@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Request and Response format in Blazor FileManager Component | Syncfusion
+title: Content format in Blazor FileManager Component | Syncfusion
 description: Checkout and learn here all about request and response contents format in Syncfusion Blazor FileManager component and more.
 platform: Blazor
 control: File Manager
