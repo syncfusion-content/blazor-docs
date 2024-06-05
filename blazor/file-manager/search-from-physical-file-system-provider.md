@@ -11,7 +11,22 @@ documentation: ug
 
 To perform a search operation in Syncfusion Blazor FileManager component from ASP.NET Core physical file system provider, you can follow the steps below
 
-**Step 1:** Initialize the physical service in controller
+**Step 1:** Create a `SfFileManager` Sample in blazor
+
+Start by following the steps provided in this link to create a simple `SfPdfViewer` sample in blazor. To perform the search operation, initialize the [Url](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerAjaxSettings.html#Syncfusion_Blazor_FileManager_FileManagerAjaxSettings_Url) property in a FileManagerAjaxSettings.
+
+{% tabs %}
+{% highlight razor %}
+
+<SfFileManager TValue="FileManagerDirectoryContent">
+    <FileManagerAjaxSettings Url="/api/FileManager/FileOperations">
+    </FileManagerAjaxSettings>
+</SfFileManager>
+
+{% endhighlight %}
+{% endtabs %}
+
+**Step 2:** Initialize the physical service in controller
 
 To initialize a local service with search action, create a new folder name with `Controllers` inside the server part of the project. Then, create a new file with extension `.cs` inside the Controllers folder and add the following code in that file.
 
@@ -72,9 +87,9 @@ namespace filemanager.Server.Controllers
 {% endhighlight %}
 {% endtabs %}
 
-**Step 2:** Access search response from model
+**Step 3:** Access search response from model
 
-To access the search Operations, you need physical model class files that have search operations methods. So, create `Models` folder in `server` part of the application and include the the `PhysicalFileProvider.cs` and required base class from the [link](https://github.com/SyncfusionExamples/ej2-aspcore-file-provider/tree/master/Models) in the Models folder.
+To access the search Operation, you need physical model class files that have search operation methods. So, create `Models` folder in `server` part of the application and include the the `PhysicalFileProvider.cs` and required base class from the [link](https://github.com/SyncfusionExamples/ej2-aspcore-file-provider/tree/master/Models) in the Models folder.
 
 In the following example, the **Search** operation is handled from physical service.
 
