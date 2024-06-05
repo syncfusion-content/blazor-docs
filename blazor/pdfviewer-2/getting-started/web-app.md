@@ -74,7 +74,7 @@ Interactive render mode as WebAssembly or Auto, need to add the following proper
 If you select an Interactive render mode as `WebAssembly` or `Auto`, you need to register the Syncfusion Blazor service in both **~/Program.cs** files of your Blazor Web App.
 
 {% tabs %}
-{% highlight c# tabtitle=".NET 8 (~/Program.cs) Server" hl_lines="2 8 10 12" %}
+{% highlight c# tabtitle=".NET 8 (~/Program.cs) Server" hl_lines="2 9 11 13" %}
 
 using BlazorWebAppServer.Components;
 using Syncfusion.Blazor;
@@ -83,7 +83,8 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddRazorComponents() 
         .AddInteractiveServerComponents()
-        .AddHubOptions(o => { o.MaximumReceiveMessageSize = 102400000; });
+
+builder.Services.AddSignalR(o => { o.MaximumReceiveMessageSize = 102400000; });
 
 builder.Services.AddMemoryCache();
 //Add Syncfusion Blazor service to the container.
@@ -178,6 +179,8 @@ app.MapRazorComponents<App>()
 
 {% endhighlight %}
 {% endtabs %}
+
+N> [Processing Large Files Without Increasing Maximum Message Size in SfPdfViewer Component](../how-to/processing-large-files-without-increasing-maximum-message-size.md)
 
 ## Adding stylesheet and script
 
