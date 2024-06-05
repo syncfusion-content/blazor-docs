@@ -118,6 +118,4 @@ The following example demonstrates how to preview PDF and docx files by utilizin
 
 ```
 
-N> 
-* The fully working sample can be found [here](https://github.com/SyncfusionExamples/Blazor-FileManager-Word-PDF).
-* Refer to this [KB](https://www.syncfusion.com/blogs/post/preview-file-blazor-file-manager) to know more about Preview Files in Blazor File Manager.
+N> The fully working sample can be found [here](https://github.com/SyncfusionExamples/Blazor-FileManager-Word-PDF). Also, refer to this [KB](https://www.syncfusion.com/blogs/post/preview-file-blazor-file-manager) to know more about Preview Files in Blazor File Manager.
