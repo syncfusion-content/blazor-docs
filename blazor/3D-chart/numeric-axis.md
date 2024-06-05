@@ -11,7 +11,7 @@ documentation: ug
 
 # Numeric Axis in Blazor 3D Chart Component
 
-The `Numeric axis` can be used to represent the numeric values of data in 3D chart. By default, the `ValueType` of an axis is `Double`.
+The numeric axis can be used to represent the numeric values of data in 3D chart. By default, the `ValueType` of an axis is `Double`.
 
 ```cshtml
 
@@ -47,7 +47,7 @@ The `Numeric axis` can be used to represent the numeric values of data in 3D cha
 
 ![Blazor Column 3D Chart with Numeric Axis](images/numeric-axis/blazor-column-chart-numeric-axis.png)
 
-## Range and interval
+## Range
 
 The range of an axis will be calculated automatically based on the provided data, and it can also be customized by using the `Minimum`, `Maximum`, and `Interval` properties of the axis.
 
@@ -400,9 +400,9 @@ The table below shows the results of applying various commonly used label format
 </tr>
 </table>
 
-## GroupingSeparator
+## Grouping separator
 
-To separate groups of thousands for numerical values, use the `UseGroupingSeparator` property set to true in the 3D chart to enable it. When this property is enabled, axis labels, data labels, and tooltips will display with a thousand separator.
+To separate groups of thousands for numerical values, use the `UseGroupingSeparator` property set to true in the 3D chart to enable it. When this property is enabled, axis labels, data labels, and tooltips will display with a thousand separators.
 
 ```cshtml
 
@@ -494,4 +494,4 @@ Axis also supports custom label format using placeholders such as {value}K, wher
 
 ![Blazor Column 3D Chart with Custom Label Format](images/numeric-axis/blazor-column-chart-custom-label-format.png)
 
-N> Refer to our `Blazor 3D Chart` feature tour page for its groundbreaking feature representations and also explore our `Blazor 3D Chart Example` to know various 3D Chart types and how to represent time-dependent data, showing trends at equal intervals.
+N> Refer to our [Blazor 3D Chart](https://www.syncfusion.com/blazor-components/blazor-3d-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor 3D Chart Example](https://blazor.syncfusion.com/demos/chart-3d/column?theme=fluent2) to know various 3D Chart types and how to represent time-dependent data, showing trends at equal intervals.

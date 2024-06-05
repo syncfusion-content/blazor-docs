@@ -9,9 +9,9 @@ documentation: ug
 
 # Stacked Bar in Blazor 3D Chart Component
 
-## Stacked Bar
+## Stacked bar chart
 
-To render a Stacked Bar series, use series `Type` as `StackingBar`.
+To render a stacked bar series, use series `Type` as `StackingBar`.
 
 ```cshtml
 
@@ -55,7 +55,7 @@ To render a Stacked Bar series, use series `Type` as `StackingBar`.
 
 ## Stacking group
 
-To group the Stacked Bar, the `StackingGroup` property can be used. The columns with same group name are stacked on top of each other.
+To group the stacked bar, the `StackingGroup` property can be used. The columns with same group name are stacked on top of each other.
 
 ```cshtml
 
@@ -99,7 +99,7 @@ To group the Stacked Bar, the `StackingGroup` property can be used. The columns 
 
 ## Cylindrical column chart
 
-To render a cylindrical Stacked Bar chart, set the `ColumnFacet` property to `Cylinder` in the chart series.
+To render a cylindrical stacked bar chart, set the `ColumnFacet` property to `Cylinder` in the chart series.
 
 ```cshtml
 
@@ -188,4 +188,4 @@ The following properties can be used to customize the `Stacked Bar` series.
 
 ![Blazor Stacked Bar 3D Chart with Custom Series](../images/chart-types-images/blazor-stacked-bar-chart-custom-series.png)
 
-N> Refer to our `Blazor 3D Chart` feature tour page for its groundbreaking feature representations and also explore our `Blazor 3D Chart Example` to know various 3D Chart types and how to represent time-dependent data, showing trends at equal intervals.
+N> Refer to our [Blazor 3D Chart](https://www.syncfusion.com/blazor-components/blazor-3d-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor 3D Chart Example](https://blazor.syncfusion.com/demos/chart-3d/column?theme=fluent2) to know various 3D Chart types and how to represent time-dependent data, showing trends at equal intervals.

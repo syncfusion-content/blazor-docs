@@ -13,7 +13,7 @@ documentation: ug
 
 The 3D Chart will display details about the points through tooltip, when the mouse is moved over the specific point.
 
-## Defauls tooltip
+## Default tooltip
 
 By default, tooltip is not visible. The tooltip can be enabled by setting the `Enable` property in `Chart3DTooltipSettings` to **true**.
 
@@ -59,7 +59,7 @@ By default, tooltip is not visible. The tooltip can be enabled by setting the `E
 
 ## Fixed tooltip
 
-By default, tooltip track the mouse movement, but the tooltip can be set in fixed position by using the `Location` property.
+By default, tooltip track the mouse movement, but the tooltip can be set in fixed position by using the `Chart3DTooltipLocation` property.
 
 ```cshtml
 
@@ -154,7 +154,7 @@ By default, tooltip shows information of x and y value in points. In addition to
 
 ## Tooltip template
 
-Any HTML elements can be displayed within the tooltip by using the `Template` property of the `Chart3DTooltipSettings`. You can use the **data.X** and **data.Y** as place holders in the HTML element to display x and y values of the corresponding data point.
+Any HTML elements can be displayed within the tooltip by using the `Chart3DTooltipTemplate` property of the `Chart3DTooltipSettings`. You can use the **data.X** and **data.Y** as place holders in the HTML element to display x and y values of the corresponding data point.
 
 ```cshtml
 
@@ -210,7 +210,7 @@ Any HTML elements can be displayed within the tooltip by using the `Template` pr
 
 ## Customize the appearance of tooltip
 
-The `Fill` and `Border` properties are used to customize the background color and the border of the tooltip respectively. The `ChartTooltipTextStyle` is used to customize the tooltip text. The `HighlightColor` property is used to customize the font of the tooltip text.
+The `Fill` and `Border` properties are used to customize the background color and the border of the tooltip respectively. The `ChartTooltipTextStyle` is used to customize the tooltip text.
 
 ```cshtml
 
@@ -254,4 +254,4 @@ The `Fill` and `Border` properties are used to customize the background color an
 
 ![Blazor Column 3D Chart with Custom Tooltip](images/tooltip/blazor-column-chart-custom-tooltip.png)
 
-N> Refer to our `Blazor 3D Chart` feature tour page for its groundbreaking feature representations and also explore our `Blazor 3D Chart Example` to know various 3D Chart types and how to represent time-dependent data, showing trends at equal intervals.
+N> Refer to our [Blazor 3D Chart](https://www.syncfusion.com/blazor-components/blazor-3d-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor 3D Chart Example](https://blazor.syncfusion.com/demos/chart-3d/column?theme=fluent2) to know various 3D Chart types and how to represent time-dependent data, showing trends at equal intervals.

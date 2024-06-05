@@ -166,7 +166,7 @@ Now, map the data fields  `Month` and `Sales` to the series `XName` and `YName` 
 
 ## Add 3D Chart title
 
-You can add a title using `Title` property, you can add a title to the chart and the axes to provide the user with quick information about the data plotted in the chart.
+Using the `Title` property, you can add a title to the chart and the axes to provide the user with quick information about the data plotted in the chart.
 
 {% tabs %}
 {% highlight razor %}

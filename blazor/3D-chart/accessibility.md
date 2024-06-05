@@ -77,10 +77,6 @@ Interaction Keys |Description
 <kbd>Enter/Space</kbd> |Toggles the visibility of the corresponding series.
 <kbd>Ctrl + P</kbd> |Prints the Chart.
 
-## Ensuring accessibility
-
-The Blazor 3D Chart component's accessibility levels are ensured through an [axe-core](https://www.nuget.org/packages/Deque.AxeCore.Playwright) with playwright tests.
-
 ## See also
 
 * [Accessibility in Syncfusion Blazor components](https://blazor.syncfusion.com/documentation/common/accessibility)

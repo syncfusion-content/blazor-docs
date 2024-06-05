@@ -53,7 +53,7 @@ documentation: ug
 
 ## DateTime category axis
 
-The `DateTime Category` axis is used to display the date time values with non-linear intervals. For example, the business days alone have been depicted in a week here.
+The `DateTimeCategory` axis is used to display the date time values with non-linear intervals. For example, the business days alone have been depicted in a week here.
 
 ```cshtml
 
@@ -228,9 +228,9 @@ When the `RangePadding` is set to **None**, the minimum and maximum of the a
 ![Blazor Column 3D Chart without RangePadding](images/datetime/blazor-column-chart-axis-based-on-range-none.png)
 
 **DateTime - Round**
+
 When the `RangePadding` is set to `Round`, minimum and maximum will be rounded to the nearest possible value, which is divisible by interval. For example, when the minimum is **15th Jan**, interval is **1** and interval type is **Month**, then the axis minimum will be **Jan 1st**.
 
-When the `RangePadding` property is set to **Round**, the minimum and maximum will be rounded to the nearest possible value divisible by interval.
 
 ```cshtml
 
@@ -405,4 +405,4 @@ The table below shows the results of applying various popular date and time form
 
 <!-- markdownlint-disable MD033 -->
 
-N> Refer to our `Blazor 3D Chart` feature tour page for its groundbreaking feature representations and also explore our `Blazor 3D Chart Example` to know various 3D Chart types and how to represent time-dependent data, showing trends at equal intervals.
+N> Refer to our [Blazor 3D Chart](https://www.syncfusion.com/blazor-components/blazor-3d-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor 3D Chart Example](https://blazor.syncfusion.com/demos/chart-3d/column?theme=fluent2) to know various 3D Chart types and how to represent time-dependent data, showing trends at equal intervals.

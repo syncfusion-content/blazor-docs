@@ -139,7 +139,7 @@ The data points can be grouped in the column type charts by using the `GroupName
 
 ## Cylindrical column chart
 
-To render a cylindrical column chart, set the ``ColumnFacet` property to `Cylinder` in the chart series.
+To render a cylindrical column chart, set the `ColumnFacet` property to `Cylinder` in the chart series.
 
 ```cshtml
 
@@ -221,4 +221,4 @@ The following properties can be used to customize the `Column` series.
 
 ![Blazor Column 3D Chart with Custom Series](../images/chart-types-images/blazor-column-chart-custom-series.png)
 
-N> Refer to our `Blazor 3D Chart` feature tour page for its groundbreaking feature representations and also explore our `Blazor 3D Chart Example` to know various 3D Chart types and how to represent time-dependent data, showing trends at equal intervals.
+N> Refer to our [Blazor 3D Chart](https://www.syncfusion.com/blazor-components/blazor-3d-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor 3D Chart Example](https://blazor.syncfusion.com/demos/chart-3d/column?theme=fluent2) to know various 3D Chart types and how to represent time-dependent data, showing trends at equal intervals.

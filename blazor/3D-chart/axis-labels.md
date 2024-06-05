@@ -11,7 +11,7 @@ documentation: ug
 
 Axis labels are the labels that are positioned adjacent to the y-axis and beneath the x-axis. It provides descriptive information about the axis.
 
-## Smart Axis Labels
+## Smart axis labels
 
 When the axis labels overlap with each other, `LabelIntersectAction` property in the axis can be used to place them smartly.
 
@@ -245,4 +245,4 @@ The labels will be rendered based on the count in the `MaximumLabels` property p
 
 ```
 
-N> Refer to our `Blazor 3D Chart` feature tour page for its groundbreaking feature representations and also explore our `Blazor 3D Chart Example` to know various 3D Chart types and how to represent time-dependent data, showing trends at equal intervals.
+N> Refer to our [Blazor 3D Chart](https://www.syncfusion.com/blazor-components/blazor-3d-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor 3D Chart Example](https://blazor.syncfusion.com/demos/chart-3d/column?theme=fluent2) to know various 3D Chart types and how to represent time-dependent data, showing trends at equal intervals.

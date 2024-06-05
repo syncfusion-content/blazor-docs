@@ -98,7 +98,7 @@ The title can be rotated from 0 to 360 degree by using the `TitleRotationAngle` 
 
 ## Tick lines customization
 
-The width, color, and height of the minor and major tick lines can be customized using `MajorTickLines` and `MinorTickLines` properties in the axis.
+The width, color, and height of the minor and major tick lines can be customized using `Chart3DMajorTickLines` and `Chart3DMinorTickLines` properties in the axis.
 
 ```cshtml
 
@@ -140,7 +140,7 @@ The width, color, and height of the minor and major tick lines can be custo
 
 ## Grid lines customization
 
-The width and color of the minor and major grid lines can be customized by using the `MajorGridLines` and `MinorGridLines` properties in the axis.
+The width and color of the minor and major grid lines can be customized by using the `Chart3DMajorGridLines` and `Chart3DMinorGridLines` properties in the axis.
 
 ```cshtml
 
@@ -308,4 +308,4 @@ To place an axis opposite from its original position, set the `OpposedPosition` 
 
 ![Blazor Column 3D Chart Axis in Opposed Position](images/axis-customization/blazor-column-chart-axis-at-opposed-position.png)
 
-N> Refer to our `Blazor 3D Chart` feature tour page for its groundbreaking feature representations and also explore our `Blazor 3D Chart Example` to know various 3D Chart types and how to represent time-dependent data, showing trends at equal intervals.
+N> Refer to our [Blazor 3D Chart](https://www.syncfusion.com/blazor-components/blazor-3d-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor 3D Chart Example](https://blazor.syncfusion.com/demos/chart-3d/column?theme=fluent2) to know various 3D Chart types and how to represent time-dependent data, showing trends at equal intervals.

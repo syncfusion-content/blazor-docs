@@ -9,7 +9,7 @@ documentation: ug
 
 # Stacked Column in Blazor 3D Chart Component
 
-## Stacked Column
+## Stacked column chart
 
 To render a stacked column series, use series `Type` as `StackingColumn`.
 
@@ -98,7 +98,7 @@ To group the stacked column, the `StackingGroup` property can be used. The colum
 
 ![Grouping in Blazor Stacked Column 3D Chart](../images/chart-types-images/blazor-stacked-colum-chart-with-grouping.png)
 
-## Cylindrical column chart
+## Cylindrical stacked column chart
 
 To render a cylindrical stacked column chart, set the `ColumnFacet` property to `Cylinder` in the chart series.
 
@@ -189,4 +189,4 @@ The following properties can be used to customize the `Stacked Column` series.
 
 ![Blazor Stacked Column 3D Chart with Custom Series](../images/chart-types-images/blazor-stacked-column-chart-custom-series.png)
 
-N> Refer to our `Blazor 3D Chart` feature tour page for its groundbreaking feature representations and also explore our `Blazor 3D Chart Example` to know various 3D Chart types and how to represent time-dependent data, showing trends at equal intervals.
+N> Refer to our [Blazor 3D Chart](https://www.syncfusion.com/blazor-components/blazor-3d-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor 3D Chart Example](https://blazor.syncfusion.com/demos/chart-3d/column?theme=fluent2) to know various 3D Chart types and how to represent time-dependent data, showing trends at equal intervals.

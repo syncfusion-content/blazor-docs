@@ -9,7 +9,7 @@ documentation: ug
 
 # Data Labels in Blazor 3D Chart Component
 
-Data labels are fields that includes information about the sample point connected to an output. It can be added to a chart series by enabling the `Visible` property in the `Data label`. By default, the labels will arrange smartly without overlapping.
+Data labels are fields that includes information about the sample point connected to an output. It can be added to a chart series by enabling the `Visible` property in the `Chart3DDataLabel`. By default, the labels will arrange smartly without overlapping.
 
 ```cshtml
 
@@ -97,7 +97,7 @@ The `Position` property is used to place the label either on `Top`, `Middle`, or
 
 ## Template
 
-Label content can be formatted by using the template option. Inside the template, the placeholder text `${point.x}` and `${point.y}` can be added to display corresponding data points x & y value. Using `Template` property, the data label template can be set.
+Label content can be formatted by using the template option. Inside the template, the placeholder text `${point.x}` and `${point.y}` can be added to display corresponding data points x & y value. Using `Chart3DDataLabelTemplate` property, the data label template can be set.
 
 ```cshtml
 
@@ -329,7 +329,7 @@ The `Margin` option can be applied to the data label to create space around the 
 
 ## Customization
 
-The `Stroke` and `Border` of data label can be customized using `Fill` and `Chart3DDataLabelBorder` properties.
+The `stroke` and `border` of data label can be customized using `Fill` and `Chart3DDataLabelBorder` properties.
 
 ```cshtml
 
@@ -426,4 +426,4 @@ A specific label can be customized by using the `TextRender` event. The `TextR
 
 ![Blazor 3D Chart with Custom Speci Label](images/data-label/blazor-chart-custom-specific-label.png)
 
-N> Refer to our `Blazor 3D Chart` feature tour page for its groundbreaking feature representations and also explore our `Blazor 3D Chart Example` to know various 3D Chart types and how to represent time-dependent data, showing trends at equal intervals.
+N> Refer to our [Blazor 3D Chart](https://www.syncfusion.com/blazor-components/blazor-3d-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor 3D Chart Example](https://blazor.syncfusion.com/demos/chart-3d/column?theme=fluent2) to know various 3D Chart types and how to represent time-dependent data, showing trends at equal intervals.

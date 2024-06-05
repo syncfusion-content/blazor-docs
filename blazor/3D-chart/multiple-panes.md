@@ -30,7 +30,7 @@ To split the chart area vertically into number of rows, use `Rows` property of t
         <Chart3DRow Height="50%"/>
     </Chart3DRows>
     <Chart3DAxes>
-        <Chart3DAxis Minimum="24" Maximum="36" Interval="2" OpposedPosition="true" RowIndex="1" Name="YAxis" LabelFormat="{value}°C">        
+        <Chart3DAxis Minimum="24" Maximum="36" Interval="2" OpposedPosition="true" RowIndex="1" Name="YAxis" LabelFormat="{value}°C"/>        
     </Chart3DAxes>
     <Chart3DSeriesCollection>
         <Chart3DSeries DataSource="@WeatherReports" XName="X" YName="Y" Type="Chart3DSeriesType.Column"/>
@@ -80,7 +80,7 @@ For spanning the vertical axis along multiple rows, use `Span` property of an a
         <Chart3DRow Height="50%"/>
     </Chart3DRows>
     <Chart3DAxes>
-        <Chart3DAxis Minimum="24" Maximum="36" Interval="2" OpposedPosition="true" RowIndex="1" Name="YAxis" LabelFormat="{value}°C">        
+        <Chart3DAxis Minimum="24" Maximum="36" Interval="2" OpposedPosition="true" RowIndex="1" Name="YAxis" LabelFormat="{value}°C"/>        
     </Chart3DAxes>
     <Chart3DSeriesCollection>
         <Chart3DSeries DataSource="@WeatherReports" XName="X" YName="Y" Type="Chart3DSeriesType.Column"/>
@@ -225,4 +225,4 @@ The `Span` property of the axis can be used to span the horizontal axis across m
 
 ![Column Spanning with Multiple Panes in Blazor 3D Chart](images/multiple-panes/blazor-chart-multiple-panes-with-column-span.png)
 
-N> Refer to our `Blazor 3D Chart` feature tour page for its groundbreaking feature representations and also explore our `Blazor 3D Chart Example` to know various 3D Chart types and how to represent time-dependent data, showing trends at equal intervals.
+N> Refer to our [Blazor 3D Chart](https://www.syncfusion.com/blazor-components/blazor-3d-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor 3D Chart Example](https://blazor.syncfusion.com/demos/chart-3d/column?theme=fluent2) to know various 3D Chart types and how to represent time-dependent data, showing trends at equal intervals.

@@ -71,56 +71,31 @@ The color for the points can be bound from the `DataSource` for the series by ut
 
 ```cshtml
 
-@using Syncfusion.Blazor.Chart3D
-
-<SfChart3D Title="Olympic Medals" PointRendering="Point3DRender" DataLabelRendering="TextRender" WallColor="transparent" EnableRotation="true" RotationAngle="7" TiltAngle="10" Depth="100">
+<SfChart3D Title="Olympic Medals" WallColor="transparent" EnableRotation="true" RotationAngle="7" TiltAngle="10" Depth="100">
     <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Chart3D.ValueType.Category" />
+
     <Chart3DSeriesCollection>
-        <Chart3DSeries DataSource="@MedalDetails" XName="Country" YName="Gold" Type="Chart3DSeriesType.Column">
-            <Chart3DDataLabel Visible="true"></Chart3DDataLabel>
+        <Chart3DSeries DataSource="@MedalDetails" XName="X" YName="Y" PointColor="Color" Type="Chart3DSeriesType.Column">
         </Chart3DSeries>
-  </Chart3DSeriesCollection>
+    </Chart3DSeriesCollection>
 </SfChart3D>
 
 @code {
-
-    public String[] colors = new String[] { "#00bdae", "#404041", "#357cd2", "#e56590", "#f8b883", "#70ad47", "#dd8abd", "#7f84e8", "#7bb4eb", "#ea7a57" };
-
     public class Chart3DData
     {
-        public string Country { get; set; }
-        public double Gold { get; set; }
-        public double Silver { get; set; }
-        public double Bronze { get; set; }
+        public string X { get; set; }
+        public double Y { get; set; }
+        public string Color { get; set; }
     }
 
     public List<Chart3DData> MedalDetails = new List<Chart3DData>
     {
-        new Chart3DData { Country = "USA", Gold = 50, Silver = 70, Bronze = 45 },
-        new Chart3DData { Country = "China", Gold = 40, Silver = 60, Bronze = 55 },
-        new Chart3DData { Country = "Japan", Gold = 70, Silver = 60, Bronze = 50 },
-        new Chart3DData { Country = "Australia", Gold = 60, Silver = 56, Bronze = 40 },
-        new Chart3DData { Country = "France", Gold = 50, Silver = 45, Bronze = 35 },
-        new Chart3DData { Country = "Germany", Gold = 40, Silver = 30, Bronze = 22 },
-        new Chart3DData { Country = "Italy", Gold = 40, Silver = 35, Bronze = 37 },
-        new Chart3DData { Country = "Sweden", Gold = 30, Silver = 25, Bronze = 27 }
+        new Chart3DData { X = "Jan", Y = 6.96, Color = "#ed4c40" },
+        new Chart3DData { X = "Feb", Y = 8.9, Color = "#3285f3" },
+        new Chart3DData { X = "Mar", Y = 12, Color = "#1dd7f3" },
+        new Chart3DData { X = "Apr", Y = 17.5, Color = "#fe1684" },
+        new Chart3DData { X = "May", Y = 22.1, Color = "#4633f2" }
     };
-
-    public void Point3DRender(Chart3DPointRenderEventArgs args)
-    {
-        args.Fill = colors[args.Point.Index];
-    }
-    public void TextRender(Chart3DTextRenderEventArgs args)
-    {
-        if (args.Point.Index == 2)
-        {
-            args.Text = "Label";
-        }
-        else
-        {
-            args.Cancel = true;
-        }
-    }
 }
 
 ```
@@ -283,7 +258,7 @@ The 3D chart's margin can be set from its container using the `Chart3DMargin` pr
 
 ## Animation
 
-To customize the animation for a particular series, the `Animation` property can be used. It can be enabled or disabled by using the `Enable` property. The `Duration` property specifies the duration of an animation and the `Delay` property allows us to start the animation at desire time.
+To customize the animation for a particular series, the `Chart3DAnimation` property can be used. It can be enabled or disabled by using the `Enable` property. The `Duration` property specifies the duration of an animation and the `Delay` property allows us to start the animation at desire time.
 
 ```cshtml
 
@@ -492,7 +467,7 @@ The custom option is used to position the title anywhere in the 3D chart using `
 
 ![Blazor Column 3D Chart with Custom Title](images/appearance/blazor-column-chart-title-custom.png)
 
-## Text Alignment
+## Title alignment
 
 The title can be aligned to the near, far, or center of the 3D chart by using the `TextAlignment` property.
 
@@ -537,7 +512,7 @@ The title can be aligned to the near, far, or center of the 3D chart by using th
 
 ### Title customization
 
-The `TitleStyle` property of the 3D chart provides options to customize the title by using the following properties.
+The `TitleStyle` property of the 3D chart provides options to customize the title.
 
 ```cshtml
 
