@@ -261,7 +261,7 @@ The mandatory indicator `*` can be applied to the placeholder by targeting its C
 
 The appearance of a selected item within a combobox component can be customized by targeting the CSS class `input.e-input::selection` and set the desired background color and text color. This customization will only be applied when the item is selected manually. To achieve this, use the `background-color` and `color` properties of the CSS class `input.e-input::selection`.
 
-{% highlight cshtml %}www
+{% highlight cshtml %}
 
 {% include_relative code-snippet/style/text-selection-color.razor %}
 

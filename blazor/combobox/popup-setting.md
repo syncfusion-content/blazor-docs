@@ -112,7 +112,7 @@ You can achieve this by binding the `resize` event in window and update the heig
 {% include_relative code-snippet/popup-setting/popup-resize.razor %}
 
 {% endhighlight %}
-2   
+
 {% tabs %}
 {% highlight razor tabtitle="Layout.razor" %}
 
