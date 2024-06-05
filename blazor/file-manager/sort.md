@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Sorting in Blazor FileManager Component | Syncfusion
-description: Checkout and learn here all about sorting in Syncfusion Blazor FileManager component and much more.
+description: Checkout and learn here all about sorting files and folders in Syncfusion Blazor FileManager component and much more.
 platform: Blazor
 control: File Manager
 documentation: ug
