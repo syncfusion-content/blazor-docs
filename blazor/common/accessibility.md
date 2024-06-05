@@ -2038,6 +2038,141 @@ Rich Text Editor
 <a href="../rich-text-editor/accessibility.md" target="_blank">Documentation</a>
 </td>
 </tr>
+<tr>
+<td>
+Scheduler
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<a href="https://blazor.syncfusion.com/accessibility/schedule" target="_blank">Demo</a>
+</td>
+<td>
+<a href="../scheduler/accessibility.md" target="_blank">Documentation</a>
+</td>
+</tr>
+<tr>
+<td>
+Sidebar
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<a href="https://blazor.syncfusion.com/accessibility/sidebar" target="_blank">Demo</a>
+</td>
+<td>
+<a href="../sidebar/accessibility.md" target="_blank">Documentation</a>
+</td>
+</tr>
+<tr>
+<td>
+Signature
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+N/A
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<a href="https://blazor.syncfusion.com/accessibility/signature" target="_blank">Demo</a>
+</td>
+<td>
+<a href="../signature/accessibility.md" target="_blank">Documentation</a>
+</td>
+</tr>
+<tr>
+<td>
+Skeleton
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<a href="https://blazor.syncfusion.com/accessibility/skeleton" target="_blank">Demo</a>
+</td>
+<td>
+<a href="../skeleton/accessibility.md" target="_blank">Documentation</a>
+</td>
+</tr>
 </table>
 
 <style>
