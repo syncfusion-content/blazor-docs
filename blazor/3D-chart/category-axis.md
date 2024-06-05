@@ -181,5 +181,3 @@ The category axis can also be rendered based on the index values of the data sou
 ```
 
 ![Blazor 3D Chart with Indexed Category Axis](images/category-axis/blazor-chart-index-category-axis.png)
-
-N> Refer to our [Blazor 3D Chart](https://www.syncfusion.com/blazor-components/blazor-3d-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor 3D Chart Example](https://blazor.syncfusion.com/demos/chart-3d/column?theme=fluent2) to know various 3D Chart types and how to represent time-dependent data, showing trends at equal intervals.

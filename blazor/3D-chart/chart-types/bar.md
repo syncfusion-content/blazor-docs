@@ -220,5 +220,3 @@ The following properties can be used to customize the `Bar` series.
 ```
 
 ![Blazor Bar 3D Chart with Custom Series](../images/chart-types-images/blazor-bar-chart-custom-series.png)
-
-N> Refer to our [Blazor 3D Chart](https://www.syncfusion.com/blazor-components/blazor-3d-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor 3D Chart Example](https://blazor.syncfusion.com/demos/chart-3d/column?theme=fluent2) to know various 3D Chart types and how to represent time-dependent data, showing trends at equal intervals.
