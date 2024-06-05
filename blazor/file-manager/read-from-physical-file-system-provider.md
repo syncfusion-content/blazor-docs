@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Perform read operation in Blazor FileManager Component with Physical service | Syncfusion
+title: Reading files in Blazor FileManager with Physical service | Syncfusion
 description: Checkout and learn here all about read operation of Syncfusion Blazor FileManager component with physical service and more.
 platform: Blazor
 control: File Manager
