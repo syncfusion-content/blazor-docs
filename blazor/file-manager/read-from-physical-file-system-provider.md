@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Reading files in Blazor FileManager with Physical service | Syncfusion
+title: Reading file in Blazor FileManager with Physical service | Syncfusion
 description: Checkout and learn here all about read operation of Syncfusion Blazor FileManager component with physical service and more.
 platform: Blazor
 control: File Manager
@@ -9,11 +9,11 @@ documentation: ug
 
 # Read file from phsyical service provider
 
-To perform a read operation in Syncfusion Blazor FileManager component From ASP.NET Core physical file system provider, you can follow the steps below
+To perform a read operation in Syncfusion Blazor FileManager component from ASP.NET Core physical file system provider, you can follow the steps below
 
-## Initialize the physical service in controller
+**Step 1:** Initialize the physical service in controller
 
-To initialize a local service, create a new folder name with `Controllers` inside the server part of the project. Then, create a new file with extension `.cs` inside the Controllers folder and add the following code in that file.
+To initialize a local service with read action, create a new folder name with `Controllers` inside the server part of the project. Then, create a new file with extension `.cs` inside the Controllers folder and add the following code in that file.
 
 {% tabs %}
 {% highlight cs tabtitle="Controllers/FileManagerController.cs" %}
@@ -68,11 +68,11 @@ namespace filemanager.Server.Controllers
 {% endhighlight %}
 {% endtabs %}
 
-## Access read response from model
+**Step 2:** Access read response from model
 
-To access the read Operations, you need some model class files that have read operations methods. So, create `Models` folder in `server` part of the application and include the the `PhysicalFileProvider.cs` and required base class from the [link](https://github.com/SyncfusionExamples/ej2-aspcore-file-provider/tree/master/Models) in the Models folder.
+To access the read Operations, you need physical model class files that have read operations methods. So, create `Models` folder in `server` part of the application and include the the `PhysicalFileProvider.cs` and required base class from the [link](https://github.com/SyncfusionExamples/ej2-aspcore-file-provider/tree/master/Models) in the Models folder.
 
-In the following example, the **Read** operation in handled from physical service.
+In the following example, the **Read** operation is handled from physical service.
 
 {% tabs %}
 {% highlight cs tabtitle="Models/PhysicalFileProvider.cs" %}
