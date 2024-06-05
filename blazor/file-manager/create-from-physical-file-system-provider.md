@@ -58,6 +58,7 @@ namespace filemanager.Server.Controllers
                 case "read":
                     // Path - Current path; ShowHiddenItems - Boolean value to show/hide hidden items.
                     return this.operation.ToCamelCase(this.operation.GetFiles(args.Path, args.ShowHiddenItems));
+                ...
                 case "create":
                     // creates a new folder in a given path.
                     return this.operation.ToCamelCase(this.operation.Create(args.Path, args.Name));
