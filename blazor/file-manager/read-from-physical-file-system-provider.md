@@ -116,13 +116,6 @@ namespace Syncfusion.EJ2.FileManager.PhysicalFileProvider
             }
         }
 
-        public void SetRules(AccessDetails details)
-        {
-            this.AccessDetails = details;
-            DirectoryInfo root = new DirectoryInfo(this.contentRootPath);
-            this.rootName = root.Name;
-        }
-
         public virtual FileManagerResponse GetFiles(string path, bool showHiddenItems, params FileManagerDirectoryContent[] data)
         {
             FileManagerResponse readResponse = new FileManagerResponse();
