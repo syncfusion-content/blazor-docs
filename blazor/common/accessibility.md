@@ -1,4 +1,4 @@
-![image](https://github.com/syncfusion-content/blazor-docs/assets/103921986/9e31d663-add4-400e-ab06-53ae80a7c167)---
+---
 layout: post
 title: Accessibility with ADA compliance in Syncfusion Blazor components
 description: The Syncfusion Blazor UI components are compliant with section 508, ADA, WAI-ARIA, WCAG, and keyboard accessibility standards.
@@ -923,6 +923,562 @@ Diagram
 <a href="../diagram/accessibility.md" target="_blank">Documentation</a>
 </td>
 </tr>
+<tr>
+<td>
+Dialog
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<a href="https://blazor.syncfusion.com/accessibility/dialog" target="_blank">Demo</a>
+</td>
+<td>
+<a href="../dialog/accessibility.md" target="_blank">Documentation</a>
+</td>
+</tr>
+<tr>
+<td>
+DocumentEditor
+</td>
+<td>
+<img src=https://cdn.syncfusion.com/content/images/documentation/partial.png alt="Intermediate">
+</td>
+<td>
+<img src=https://cdn.syncfusion.com/content/images/documentation/partial.png alt="Intermediate">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/no.png" alt="No">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/no.png" alt="No">
+</td>
+<td>
+<img src=https://cdn.syncfusion.com/content/images/documentation/partial.png alt="Intermediate">
+</td>
+<td>
+<img src=https://cdn.syncfusion.com/content/images/documentation/partial.png alt="Intermediate">
+</td>
+<td>
+<a href="https://blazor.syncfusion.com/accessibility/dialog" target="_blank">Demo</a>
+</td>
+<td>
+<a href="../document-editor/accessibility.md" target="_blank">Documentation</a>
+</td>
+</tr>
+<tr>
+<td>
+Dropdown Menu
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<a href="https://blazor.syncfusion.com/accessibility/dropdown-button" target="_blank">Demo</a>
+</td>
+<td>
+<a href="../drop-down-menu/accessibility.md" target="_blank">Documentation</a>
+</td>
+</tr>
+<tr>
+<td>
+DropDown List
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<a href="https://blazor.syncfusion.com/accessibility/dropdownlist" target="_blank">Demo</a>
+</td>
+<td>
+<a href="../dropdown-list/accessibility.md" target="_blank">Documentation</a>
+</td>
+</tr>
+<tr>
+<td>
+Dropdown Tree
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Partial">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Partial">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+
+</td>
+<td>
+
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<a href="https://blazor.syncfusion.com/accessibility/dropdowntree" target="_blank">Demo</a>
+</td>
+<td>
+<a href="../dropdown-tree/accessibility.md" target="_blank">Documentation</a>
+</td>
+</tr>
+<tr>
+<td>
+FileManager
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+
+</td>
+<td>
+
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<a href="https://blazor.syncfusion.com/accessibility/filemanager" target="_blank">Demo</a>
+</td>
+<td>
+<a href="../file-manager/accessibility.md" target="_blank">Documentation</a>
+</td>
+</tr>
+<tr>
+<td>
+File Upload
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<a href="https://blazor.syncfusion.com/accessibility/uploader" target="_blank">Demo</a>
+</td>
+<td>
+<a href="../file-upload/accessibility.md" target="_blank">Documentation</a>
+</td>
+</tr>
+<tr>
+<td>
+Gantt Chart
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Partial">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Partial">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<a href="https://blazor.syncfusion.com/accessibility/gantt-chart" target="_blank">Demo</a>
+</td>
+<td>
+<a href="../gantt-chart/accessibility.md" target="_blank">Documentation</a>
+</td>
+<tr>
+<td>
+HeatMap Chart
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Partial">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Partial">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<a href="https://blazor.syncfusion.com/accessibility/heatmap" target="_blank">Demo</a>
+</td>
+<td>
+<a href="../heatmap-chart/accessibility.md" target="_blank">Documentation</a>
+</td>
+</tr>
+</tr>
+<tr>
+<td>
+In-place editor
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<a href="https://blazor.syncfusion.com/accessibility/inplace-editor" target="_blank">Demo</a>
+</td>
+<td>
+<a href="../in-place-editor/accessibility.md" target="_blank">Documentation</a>
+</td>
+</tr>
+<tr>
+<td>
+Image Editor
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<a href="https://blazor.syncfusion.com/accessibility/image-editor" target="_blank">Demo</a>
+</td>
+<td>
+<a href="../image-editor/accessibility.md" target="_blank">Documentation</a>
+</td>
+</tr>
+<tr>
+<td>
+Input Mask
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<a href="https://blazor.syncfusion.com/accessibility/maskedtextbox" target="_blank">Demo</a>
+</td>
+<td>
+<a href="../input-mask/accessibility.md" target="_blank">Documentation</a>
+</td>
+</tr>
+<tr>
+<td>
+Kanban
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Partial">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<a href="https://blazor.syncfusion.com/accessibility/kanban" target="_blank">Demo</a>
+</td>
+<td>
+<a href="../kanban/accessibility.md" target="_blank">Documentation</a>
+</td>
+</tr>
+<tr>
+<td>
+Linear Gauge
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Partial">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Partial">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<a href="https://blazor.syncfusion.com/accessibility/lineargauge" target="_blank">Demo</a>
+</td>
+<td>
+<a href="../linear-gauge/accessibility.md" target="_blank">Documentation</a>
+</td>
+</tr>
+<tr>
+<td>
+ListBox
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<a href="https://blazor.syncfusion.com/accessibility/listbox" target="_blank">Demo</a>
+</td>
+<td>
+<a href="../listbox/accessibility.md" target="_blank">Documentation</a>
+</td>
+</tr>
+<tr>
+<td>
+ListView
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Partial">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Partial">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<a href="https://blazor.syncfusion.com/accessibility/listview" target="_blank">Demo</a>
+</td>
+<td>
+<a href="../listview/accessibility.md" target="_blank">Documentation</a>
+</td>
+</tr>
 </table>
 
 <style>
@@ -933,6 +1489,6 @@ Diagram
 </style>
 <div><img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> - All features of the component meet the requirement.</div>
 
-<div><img src="https://cdn.syncfusion.com/content/images/landing-page/intermediate.png" alt="Intermediate"> - Some features of the component do not meet the requirement.</div>
+<div><img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Partial"> - Some features of the component do not meet the requirement.</div>
 
 <div><img src="https://cdn.syncfusion.com/content/images/landing-page/no.png" alt="No"> - The component does not meet the requirement.</div>
