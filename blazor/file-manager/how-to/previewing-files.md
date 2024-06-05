@@ -7,7 +7,7 @@ control: File Manager
 documentation: ug
 ---
 
-# Previewing Files
+# Previewing files in Blazor FileManager component
 
 In the Blazor FileManager component, you can preview PDF files using the PDF viewer component, docx files using the DocumentEditor component, and play videos within the dialog component.
 
