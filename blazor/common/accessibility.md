@@ -1618,6 +1618,426 @@ MultiSelect Dropdown
 <a href="../multiselect-dropdown/accessibility.md" target="_blank">Documentation</a>
 </td>
 </tr>
+<tr>
+<td>
+Numeric TextBox
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<a href="https://blazor.syncfusion.com/accessibility/numerictextbox" target="_blank">Demo</a>
+</td>
+<td>
+<a href="../numeric-textbox/accessibility.md" target="_blank">Documentation</a>
+</td>
+</tr>
+<tr>
+<td>
+Pager
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Partial">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Partial">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<a href="https://blazor.syncfusion.com/accessibility/pager" target="_blank">Demo</a>
+</td>
+<td>
+<a href="../pager/accessibility.md" target="_blank">Documentation</a>
+</td>
+</tr>
+<tr>
+<td>
+SfPdfViewer
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Partial">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<a href="https://blazor.syncfusion.com/accessibility/pdfviewer" target="_blank">Demo</a>
+</td>
+<td>
+<a href="../pdfviewer-2/accessibility.md" target="_blank">Documentation</a>
+</td>
+</tr>
+<tr>
+<td>
+Pivot Table
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Partial">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Partial">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Partial">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Partial">
+</td>
+<td>
+<a href="https://blazor.syncfusion.com/accessibility/pivot-table" target="_blank">Demo</a>
+</td>
+<td>
+<a href="../pivot-table/accessibility.md" target="_blank">Documentation</a>
+</td>
+</tr>
+<tr>
+<td>
+ProgressBar
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Partial">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Partial">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<a href="https://blazor.syncfusion.com/accessibility/progress-bar" target="_blank">Demo</a>
+</td>
+<td>
+<a href="../progress-bar/accessibility.md" target="_blank">Documentation</a>
+</td>
+</tr>
+<tr>
+<td>
+ProgressButton
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<a href="https://blazor.syncfusion.com/accessibility/progress-button" target="_blank">Demo</a>
+</td>
+<td>
+<a href="../progress-button/accessibility.md" target="_blank">Documentation</a>
+</td>
+</tr>
+<tr>
+<td>
+Query Builder
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<a href="https://blazor.syncfusion.com/accessibility/querybuilder" target="_blank">Demo</a>
+</td>
+<td>
+<a href="../query-builder/accessibility.md" target="_blank">Documentation</a>
+</td>
+</tr>
+<tr>
+<td>
+RadioButton
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<a href="https://blazor.syncfusion.com/accessibility/radio-button" target="_blank">Demo</a>
+</td>
+<td>
+<a href="../radio-button/accessibility.md" target="_blank">Documentation</a>
+</td>
+</tr>
+<tr>
+<td>
+Range Selector
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<a href="https://blazor.syncfusion.com/accessibility/range-selector" target="_blank">Demo</a>
+</td>
+<td>
+<a href="../range-selector/accessibility.md" target="_blank">Documentation</a>
+</td>
+</tr>
+<tr>
+<td>
+Range Slider
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<a href="https://blazor.syncfusion.com/accessibility/slider" target="_blank">Demo</a>
+</td>
+<td>
+<a href="../range-slider/accessibility.md" target="_blank">Documentation</a>
+</td>
+</tr>
+<tr>
+<td>
+Rating
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<a href="https://blazor.syncfusion.com/accessibility/rating" target="_blank">Demo</a>
+</td>
+<td>
+<a href="../rating/accessibility.md" target="_blank">Documentation</a>
+</td>
+</tr>
+<tr>
+<td>
+Rich Text Editor
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Partial">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+</td>
+<td>
+<a href="https://blazor.syncfusion.com/accessibility/rich-text-editor" target="_blank">Demo</a>
+</td>
+<td>
+<a href="../rich-text-editor/accessibility.md" target="_blank">Documentation</a>
+</td>
+</tr>
 </table>
 
 <style>
