@@ -1,13 +1,255 @@
 ---
 layout: post
-title: Flat data rendering in Blazor FileManager component | Syncfusion
-description: Checkout and learn here all about flat data rendering in Syncfusion Blazor FileManager component and more.
+title: Data Binding in Blazor FileManager Component | Syncfusion
+description: Checkout and learn here all about Data Binding in Syncfusion Blazor FileManager component and much more.
 platform: Blazor
 control: File Manager
 documentation: ug
 ---
 
-# Flat data rendering in Blazor FileManager component
+# Data Binding in Blazor FileManager Component
+
+The FileManager uses [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.SfFileManager-1.html), which supports both RESTful JSON data services binding and IEnumerable binding. It provides the option to load data either with the [AjaxSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerAjaxSettings.html) property or list of objects by providing the response within the corresponding events.
+
+It supports the following kinds of data binding method:
+* AjaxSettings
+* List objects
+
+N> When using [AjaxSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerAjaxSettings.html), component will be load data from its Ajax URL. When using list of object, component will be load data by providing the response within the corresponding events.
+
+## AjaxSettings
+
+To initialize a local service, create a new folder name with `Controllers` inside the server part of the project. Then, create a new file `SampleDataController` with extension `.cs` inside the `Controllers` folder and add the following code in that file.
+
+{% tabs %}
+{% highlight razor %}
+
+<SfFileManager TValue="FileManagerDirectoryContent">
+    <FileManagerAjaxSettings Url="/api/SampleData/FileOperations">
+    </FileManagerAjaxSettings>
+</SfFileManager>
+
+{% endhighlight %}
+{% endtabs %}
+
+{% tabs %}
+{% highlight cs tabtitle="Controllers/SampleDataController.cs" %}
+
+using Microsoft.AspNetCore.Mvc;
+using System;
+using System.Collections.Generic;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Http.Features;
+//File Manager's base functions are available in the below namespace.
+using Syncfusion.EJ2.FileManager.Base;
+//File Manager's operations are available in the below namespace.
+using Syncfusion.EJ2.FileManager.PhysicalFileProvider;
+using Newtonsoft.Json;
+using System.Linq;
+using System.Threading.Tasks;
+
+namespace filemanager.Server.Controllers
+{
+    [Route("api/[controller]")]
+    public class SampleDataController : Controller
+    {
+        public PhysicalFileProvider operation;
+        public string basePath;
+        string root = "wwwroot\\Files";
+        [Obsolete]
+        public SampleDataController(IHostingEnvironment hostingEnvironment)
+        {
+            this.basePath = hostingEnvironment.ContentRootPath;
+            this.operation = new PhysicalFileProvider();
+            this.operation.RootFolder(this.basePath + "\\" + this.root); // It denotes in which files and folders are available.
+        }
+
+        // Processing the File Manager operations.
+        [Route("FileOperations")]
+        public object FileOperations([FromBody] FileManagerDirectoryContent args)
+        {
+            switch (args.Action)
+            {
+                // Add your custom action here.
+                case "read":
+                    // Path - Current path; ShowHiddenItems - Boolean value to show/hide hidden items.
+                    return this.operation.ToCamelCase(this.operation.GetFiles(args.Path, args.ShowHiddenItems));
+                case "delete":
+                    // Path - Current path where the folder to be deleted; Names - Name of the files to be deleted
+                    return this.operation.ToCamelCase(this.operation.Delete(args.Path, args.Names));
+                case "copy":
+                    //  Path - Path from where the file was copied; TargetPath - Path where the file/folder is to be copied; RenameFiles - Files with same name in the copied location that is confirmed for renaming; TargetData - Data of the copied file
+                    return this.operation.ToCamelCase(this.operation.Copy(args.Path, args.TargetPath, args.Names, args.RenameFiles, args.TargetData));
+                case "move":
+                    // Path - Path from where the file was cut; TargetPath - Path where the file/folder is to be moved; RenameFiles - Files with same name in the moved location that is confirmed for renaming; TargetData - Data of the moved file
+                    return this.operation.ToCamelCase(this.operation.Move(args.Path, args.TargetPath, args.Names, args.RenameFiles, args.TargetData));
+                case "details":
+                    // Path - Current path where details of file/folder is requested; Name - Names of the requested folders
+                    return this.operation.ToCamelCase(this.operation.Details(args.Path, args.Names));
+                case "create":
+                    // Path - Current path where the folder is to be created; Name - Name of the new folder
+                    return this.operation.ToCamelCase(this.operation.Create(args.Path, args.Name));
+                case "search":
+                    // Path - Current path where the search is performed; SearchString - String typed in the searchbox; CaseSensitive - Boolean value which specifies whether the search must be casesensitive
+                    return this.operation.ToCamelCase(this.operation.Search(args.Path, args.SearchString, args.ShowHiddenItems, args.CaseSensitive));
+                case "rename":
+                    // Path - Current path of the renamed file; Name - Old file name; NewName - New file name
+                    return this.operation.ToCamelCase(this.operation.Rename(args.Path, args.Name, args.NewName));
+            }
+            return null;
+        }
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+To access the above File Operations, you need some model class files that have file operations methods. So, create `Models` folder in `server` part of the application and download the `PhysicalFileProvider.cs` and `Base` folder from the [this](https://github.com/SyncfusionExamples/ej2-aspcore-file-provider/tree/master/Models) link in the Models folder.
+
+Add your required files and folders under the `wwwroot\Files` directory.
+
+* Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion Blazor FileManager component in your default web browser.
+
+![Blazor FileManager Component](images/blazor-filemanager-component.png)
+
+N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/FileManager).
+
+### File download support
+
+To perform the download operation, initialize the [DownloadUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerAjaxSettings.html#Syncfusion_Blazor_FileManager_FileManagerAjaxSettings_DownloadUrl) property in a FileManagerAjaxSettings.
+
+{% tabs %}
+{% highlight razor %}
+
+<SfFileManager TValue="FileManagerDirectoryContent">
+    <FileManagerAjaxSettings Url="/api/SampleData/FileOperations"
+                                DownloadUrl="/api/SampleData/Download">
+    </FileManagerAjaxSettings>
+</SfFileManager>
+
+{% endhighlight %}
+{% endtabs %}
+
+Initialize the `Download` FileOperation in Controller part with the following code snippet.
+
+{% tabs %}
+{% highlight cs tabtitle="Controllers/SampleDataController.cs" %}
+
+namespace filemanager.Server.Controllers
+{
+    [Route("api/[controller]")]
+    public class SampleDataController : Controller
+    {
+        // Processing the Download operation.
+        [Route("Download")]
+        public IActionResult Download(string downloadInput)
+        {
+            //Invoking download operation with the required parameters.
+            // path - Current path where the file is downloaded; Names - Files to be downloaded;
+            FileManagerDirectoryContent args = JsonConvert.DeserializeObject<FileManagerDirectoryContent>(downloadInput);
+            return operation.Download(args.Path, args.Names);
+        }
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+### File upload support
+
+To perform the upload operation, initialize the [UploadUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerAjaxSettings.html#Syncfusion_Blazor_FileManager_FileManagerAjaxSettings_UploadUrl) property in a FileManagerAjaxSettings.
+
+{% tabs %}
+{% highlight razor %}
+
+<SfFileManager TValue="FileManagerDirectoryContent">
+    <FileManagerAjaxSettings Url="/api/SampleData/FileOperations"
+                                UploadUrl="/api/SampleData/Upload">
+    </FileManagerAjaxSettings>
+</SfFileManager>
+
+{% endhighlight %}
+{% endtabs %}
+
+Initialize the `Upload` File Operation in Controller part with the following code snippet.
+
+{% tabs %}
+{% highlight cs tabtitle="Controllers/SampleDataController.cs" %}
+
+namespace filemanager.Server.Controllers
+{
+    [Route("api/[controller]")]
+    public class SampleDataController : Controller
+    {
+        // Processing the Upload operation.
+        [Route("Upload")]
+        public IActionResult Upload(string path, IList<IFormFile> uploadFiles, string action)
+        {
+            //Invoking upload operation with the required parameters.
+            // path - Current path where the file is to uploaded; uploadFiles - Files to be uploaded; action - name of the operation(upload)
+            FileManagerResponse uploadResponse;
+            uploadResponse = operation.Upload(path, uploadFiles, action, null);
+            if (uploadResponse.Error != null)
+            {
+                Response.Clear();
+                Response.ContentType = "application/json; charset=utf-8";
+                Response.StatusCode = Convert.ToInt32(uploadResponse.Error.Code);
+                Response.HttpContext.Features.Get<IHttpResponseFeature>().ReasonPhrase = uploadResponse.Error.Message;
+            }
+            return Content("");
+        }
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+### Image preview support
+
+To perform image preview support in the File Manager component, initialize the [GetImageUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerAjaxSettings.html#Syncfusion_Blazor_FileManager_FileManagerAjaxSettings_GetImageUrl) property in a FileManagerAjaxSettings.
+
+{% tabs %}
+{% highlight razor %}
+
+<SfFileManager TValue="FileManagerDirectoryContent">
+    <FileManagerAjaxSettings Url="/api/SampleData/FileOperations"
+                                GetImageUrl="/api/SampleData/GetImage">
+    </FileManagerAjaxSettings>
+</SfFileManager>
+
+{% endhighlight %}
+{% endtabs %}
+
+Initialize the `GetImage` File Operation in Controller part with the following code snippet.
+
+{% tabs %}
+{% highlight cs tabtitle="Controllers/SampleDataController.cs" %}
+
+namespace filemanager.Server.Controllers
+{
+    [Route("api/[controller]")]
+    public class SampleDataController : Controller
+    {
+        // Processing the GetImage operation.
+        [Route("GetImage")]
+        public IActionResult GetImage(FileManagerDirectoryContent args)
+        {
+            //Invoking GetImage operation with the required parameters.
+            // path - Current path of the image file; Id - Image file id;
+            return this.operation.GetImage(args.Path, args.Id, false, null, null);
+        }
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Blazor FileManager with Image Preview](images/blazor-filemanager-image-preview.png)
+
+Refer the sample [link](https://www.syncfusion.com/downloads/support/directtrac/general/ze/FileManager1055616812).
+
+## List objects
 
 The Blazor FileManager component provides the option to load a list of objects. This can be achieved by providing the response within the corresponding events.
 
@@ -30,8 +272,6 @@ Event Name | Description
 [ItemsUploaded](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerEvents-1.html#Syncfusion_Blazor_FileManager_FileManagerEvents_1_ItemsUploaded) | An event callback that will be invoked when the file or folder is uploaded.
 [BeforeImageLoad](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerEvents-1.html#Syncfusion_Blazor_FileManager_FileManagerEvents_1_BeforeImageLoad) | An event callback that will be invoked before sending the image request to the server.
 [BeforeDownload](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerEvents-1.html#Syncfusion_Blazor_FileManager_FileManagerEvents_1_BeforeDownload)  | An event callback that will be invoked before sending the download request to the server.
-
-## List object
 
 Blazor FileManager can be populated with local data that contains the list of objects with [ParentId](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerDirectoryContent.html#Syncfusion_Blazor_FileManager_FileManagerDirectoryContent_ParentId) mapping.
 
@@ -173,7 +413,7 @@ To render the root-level folder, specify the ParentID as null, or there is no ne
 
 N> [Also see the demo here](https://blazor.syncfusion.com/demos/file-manager/flat-data?theme=fluent).
 
-## Injected service
+### Injected service
 
 Blazor FileManager can also be populated from an injected service, eliminating the need for HTTP client requests and backend URL configuration. This allows you to utilize your required service, such as physical, Amazon, Azure, etc., through the FileManager's action events.
 
@@ -254,7 +494,7 @@ builder.Services.AddSingleton<FileManagerService>();
 {% endhighlight %}
 {% endtabs %}
 
-## Upload action
+### Upload action
 
 To perform a upload action in FileManager component with injected service, utilize the [ItemsUploaded](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerEvents-1.html#Syncfusion_Blazor_FileManager_FileManagerEvents_1_ItemsUploaded) event. This event enables you to access details of the file selected in the browser, providing access to metadata such as the file name, size, and content type. To read the contents of the uploaded file, invoke the [OpenReadStream()](https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.components.forms.ibrowserfile.openreadstream?view=aspnetcore-8.0) method of the [IBrowserFile](https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.components.forms.ibrowserfile?view=aspnetcore-8.0) interface, which returns a stream for reading the file data.
 
@@ -304,7 +544,7 @@ To perform a upload action in FileManager component with injected service, utili
 {% endhighlight %}
 {% endtabs %}
 
-## Download action
+### Download action
 
 To perform a download action in FileManager component with injected service, utilize the [BeforeDownload](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerEvents-1.html#Syncfusion_Blazor_FileManager_FileManagerEvents_1_BeforeDownload) event. This will allow you to retrieve necessary Downloaded item details from the event argument. Updating the downloaded file's stream data and name to the event arguments [FileStream](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.BeforeDownloadEventArgs-1.html#Syncfusion_Blazor_FileManager_BeforeDownloadEventArgs_1_FileStream) and [DownloadFileName](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.BeforeDownloadEventArgs-1.html#Syncfusion_Blazor_FileManager_BeforeDownloadEventArgs_1_DownloadFileName) respectively completes the download action.
 
@@ -324,7 +564,7 @@ To perform a download action in FileManager component with injected service, uti
 {% endhighlight %}
 {% endtabs %}
 
-## Get image action
+### Get image action
 
 To load image in FileManager component with injected service, utilize the [BeforeImageLoad](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerEvents-1.html#Syncfusion_Blazor_FileManager_FileManagerEvents_1_BeforeImageLoad) event. This will allow you to retrieve necessary Downloaded item details from the event argument. Updating the image file's stream data to the event argument [FileStream](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.BeforeImageLoadEventArgs-1.html#Syncfusion_Blazor_FileManager_BeforeImageLoadEventArgs_1_FileStream) completes the image retrieval operation.
 
