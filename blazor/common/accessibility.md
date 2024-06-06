@@ -2858,19 +2858,19 @@ The following table outlines the accessibility rules that are intentionally igno
 <td><b>Ignored Rules</b></td>
 </tr>
 <tr>
-<td>Datagrid, Treegrid, Gantt-Chart</td>
+<td> Grid, TreeGrid, Gantt Chart</td>
 <td>empty-table-header, scrollable-region-focusable, label, aria-required-children, aria-prohibited-attr, color-contrast</td>
 </tr>
 <tr>
-<td>Datepicker, Daterangepicker, Timepicker, Multiselect, Diagram, Button, Button-Group, Dropdown-Button, Split-Button, Progress-Button, Circulargauge, Lineargauge, Treemap, Heatmap, Maps, Chips, Dashboardlayout, Dropdowntree, Listview, Chart, Accumulation-Chart, Bullet-Chart, Stock-Chart, Range-Selector, Sparkline, Smith-Chart, Progress-Bar, Querybuilder, Autocomplete, Combobox, Dropdownlist, Barcodegenerator, Toolbar, Rich-Text-Editor, Document-Editor, Stepper</td>
+<td>DatePicker, DateRangePicker, TimePicker, MultiSelect, Diagram, Button, ButtonGroup, DropdownButton, SplitButton, ProgressButton, Circular Gauge, Linear Gauge, TreeMap, HeatMap, Maps, Chip, Dashboard Layout, Dropdown Tree, ListView, Chart, Accumulation Chart, Bullet Chart, Stock Chart, Range Selector, Sparkline, Smith Chart, ProgressBar, QueryBuilder, AutoComplete, ComboBox, Dropdown List, Barcode Generator, Toolbar, RichTextEditor, DocumentEditor, Stepper</td>
 <td>color-contrast</td>
 </tr>
 <tr>
-<td>Filemanager</td>
+<td>FileManager</td>
 <td>color-contrast, aria-required-children, empty-table-header</td>
 </tr>
 <tr>
-<td>Pivot-Table</td>
+<td>Pivot Table</td>
 <td>empty-table-header, scrollable-region-focusable, color-contrast, aria-required-children, region</td>
 </tr>
 </table>
