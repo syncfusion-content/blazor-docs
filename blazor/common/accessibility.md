@@ -596,7 +596,7 @@ Circular Gauge
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
 </td>
 <td>
-<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+
 </td>
 <td>
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
@@ -987,7 +987,7 @@ DocumentEditor
 <img src=https://cdn.syncfusion.com/content/images/documentation/partial.png alt="Intermediate">
 </td>
 <td>
-<a href="https://blazor.syncfusion.com/accessibility/dialog" target="_blank">Demo</a>
+<a href="https://blazor.syncfusion.com/accessibility/document-editor" target="_blank">Demo</a>
 </td>
 <td>
 <a href="../document-editor/accessibility.md" target="_blank">Documentation</a>
@@ -1950,10 +1950,10 @@ Range Slider
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
 </td>
 <td>
-<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+
 </td>
 <td>
-<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
+
 </td>
 <td>
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
