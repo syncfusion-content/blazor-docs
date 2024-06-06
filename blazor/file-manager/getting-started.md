@@ -129,10 +129,10 @@ Add the Syncfusion Blazor FileManager component in the **~/Pages/Index.razor** f
 
 File Manager supports the basic file actions like Read, Delete, Copy, Move, Get Details, Search, Rename, and Create New Folder.
 
-To initialize a local service, create a new folder name with `Controllers` inside the server part of the project. Then, create a new file `SampleDataController` with extension `.cs` inside the `Controllers` folder and add the following code in that file.
+For standalone Blazor WASM applications, you can use the service from this [link](https://github.com/SyncfusionExamples/ej2-aspcore-file-provider/). For other types of applications like Blazor Server and ASP hosted applications, create a new folder name with `Controllers` inside the server part of the project. Then, create a new file `FileManagerController` with extension `.cs` inside the `Controllers` folder and add the following code in that file.
 
 {% tabs %}
-{% highlight cs tabtitle="Controllers/SampleDataController.cs" %}
+{% highlight cs tabtitle="Controllers/FileManagerController.cs" %}
 
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -151,13 +151,13 @@ using System.Threading.Tasks;
 namespace filemanager.Server.Controllers
 {
     [Route("api/[controller]")]
-    public class SampleDataController : Controller
+    public class FileManagerController : Controller
     {
         public PhysicalFileProvider operation;
         public string basePath;
         string root = "wwwroot\\Files";
         [Obsolete]
-        public SampleDataController(IHostingEnvironment hostingEnvironment)
+        public FileManagerController(IHostingEnvironment hostingEnvironment)
         {
             this.basePath = hostingEnvironment.ContentRootPath;
             this.operation = new PhysicalFileProvider();
@@ -204,7 +204,7 @@ namespace filemanager.Server.Controllers
 {% endhighlight %}
 {% endtabs %}
 
-To configure and map the controller, open the `~/Program.cs` file of the server part of the application. Add the following code:
+To configure and map the controller, open the `~/Program.cs` file of the server part of the application. Add the following code to configure the service for the controller and map the controller after `app.UseRouting()`:
 
 ```cshtml
 
@@ -237,8 +237,8 @@ To perform the download operation, initialize the [DownloadUrl](https://help.syn
 {% highlight razor %}
 
 <SfFileManager TValue="FileManagerDirectoryContent">
-    <FileManagerAjaxSettings Url="/api/SampleData/FileOperations"
-                                DownloadUrl="/api/SampleData/Download">
+    <FileManagerAjaxSettings Url="/api/FileManager/FileOperations"
+                                DownloadUrl="/api/FileManager/Download">
     </FileManagerAjaxSettings>
 </SfFileManager>
 
@@ -248,12 +248,12 @@ To perform the download operation, initialize the [DownloadUrl](https://help.syn
 Initialize the `Download` FileOperation in Controller part with the following code snippet.
 
 {% tabs %}
-{% highlight cs tabtitle="Controllers/SampleDataController.cs" %}
+{% highlight cs tabtitle="Controllers/FileManagerController.cs" %}
 
 namespace filemanager.Server.Controllers
 {
     [Route("api/[controller]")]
-    public class SampleDataController : Controller
+    public class FileManagerController : Controller
     {
         // Processing the Download operation.
         [Route("Download")]
@@ -278,8 +278,8 @@ To perform the upload operation, initialize the [UploadUrl](https://help.syncfus
 {% highlight razor %}
 
 <SfFileManager TValue="FileManagerDirectoryContent">
-    <FileManagerAjaxSettings Url="/api/SampleData/FileOperations"
-                                UploadUrl="/api/SampleData/Upload">
+    <FileManagerAjaxSettings Url="/api/FileManager/FileOperations"
+                                UploadUrl="/api/FileManager/Upload">
     </FileManagerAjaxSettings>
 </SfFileManager>
 
@@ -289,12 +289,12 @@ To perform the upload operation, initialize the [UploadUrl](https://help.syncfus
 Initialize the `Upload` File Operation in Controller part with the following code snippet.
 
 {% tabs %}
-{% highlight cs tabtitle="Controllers/SampleDataController.cs" %}
+{% highlight cs tabtitle="Controllers/FileManagerController.cs" %}
 
 namespace filemanager.Server.Controllers
 {
     [Route("api/[controller]")]
-    public class SampleDataController : Controller
+    public class FileManagerController : Controller
     {
         // Processing the Upload operation.
         [Route("Upload")]
@@ -327,8 +327,8 @@ To perform image preview support in the File Manager component, initialize the [
 {% highlight razor %}
 
 <SfFileManager TValue="FileManagerDirectoryContent">
-    <FileManagerAjaxSettings Url="/api/SampleData/FileOperations"
-                                GetImageUrl="/api/SampleData/GetImage">
+    <FileManagerAjaxSettings Url="/api/FileManager/FileOperations"
+                                GetImageUrl="/api/FileManager/GetImage">
     </FileManagerAjaxSettings>
 </SfFileManager>
 
@@ -338,12 +338,12 @@ To perform image preview support in the File Manager component, initialize the [
 Initialize the `GetImage` File Operation in Controller part with the following code snippet.
 
 {% tabs %}
-{% highlight cs tabtitle="Controllers/SampleDataController.cs" %}
+{% highlight cs tabtitle="Controllers/FileManagerController.cs" %}
 
 namespace filemanager.Server.Controllers
 {
     [Route("api/[controller]")]
-    public class SampleDataController : Controller
+    public class FileManagerController : Controller
     {
         // Processing the GetImage operation.
         [Route("GetImage")]

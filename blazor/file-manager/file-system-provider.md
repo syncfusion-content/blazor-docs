@@ -18,6 +18,7 @@ The following file providers are added in Syncfusion Blazor File Manager compone
 * [ASP.NET Core Amazon S3 cloud file provider](#aspnet-core-amazon-s3-cloud-file-provider)
 * [File Transfer Protocol file system provider](#file-transfer-protocol-file-system-provider)
 * [SQL database file system provider](#sql-database-server-file-system-provider)
+* [Google Drive file system provider](#google-drive-file-system-provider)
 * [Firebase Real time Database file system provider](#firebase-realtime-database-file-system-provider)
 
 ## ASP.NET Core file system provider

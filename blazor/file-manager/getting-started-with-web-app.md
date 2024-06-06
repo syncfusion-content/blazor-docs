@@ -185,7 +185,7 @@ namespace filemanager.Server.Controllers
 {% endhighlight %}
 {% endtabs %}
 
-To configure and map the controller, open the `~/Program.cs` file of the server part of the application. Add the following code:
+To configure and map the controller, open the `~/Program.cs` file of the server part of the application. Add the following code to configure the service for the controller and map the controller after `app.UseRouting()`:
 
 ```cshtml
 
