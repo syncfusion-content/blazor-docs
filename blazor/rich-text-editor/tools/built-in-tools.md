@@ -140,6 +140,12 @@ The following table lists the tools available in the toolbar.
 </tr>
 
 <tr>
+<td><p>Blockquote</p></td>
+<td><img alt= "Blockquote in Blazor RichTextEditor" src="../images/blockquote.png"></td>
+<td><p>Blockquotes visually highlight important text within an editor, emphasizing key information or quotations.</p></td>
+</tr>
+
+<tr>
 <td><p>Format</p></td>
 <td><img alt= "Format in Blazor RichTextEditor" src="../images/formats.png"></td>
 <td><p>An Object with the options that will appear in the Paragraph Format dropdown from the toolbar.</p></td>
