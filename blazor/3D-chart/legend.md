@@ -19,8 +19,9 @@ By using the `Position` property, the legend can be positioned at left, right,
 
 @using Syncfusion.Blazor.Chart3D
 
-<SfChart3D Title="Olympic Medals">
-    <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Chart3D.ValueType.Category"/>    
+<SfChart3D Title="Olympic Medals" WallColor="transparent" EnableRotation="true" RotationAngle="7" TiltAngle="10" Depth="100">
+    <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Chart3D.ValueType.Category" Title="Countries"/>
+    <Chart3DPrimaryYAxis Title="Medals" Minimum="0" Maximum="80" Interval="20"></Chart3DPrimaryYAxis>   
 
     <Chart3DSeriesCollection>
         <Chart3DSeries DataSource="@MedalDetails" Name="Gold" XName="Country" Opacity="1" YName="Gold" Type="Chart3DSeriesType.Column"/>      
@@ -64,8 +65,9 @@ The custom position helps you to position the legend anywhere in the 3D chart us
 
 @using Syncfusion.Blazor.Chart3D
 
-<SfChart3D Title="Olympic Medals">
-    <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Chart3D.ValueType.Category"/>    
+<SfChart3D Title="Olympic Medals" WallColor="transparent" EnableRotation="true" RotationAngle="7" TiltAngle="10" Depth="100">
+    <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Chart3D.ValueType.Category" Title="Countries"/>
+    <Chart3DPrimaryYAxis Title="Medals" Minimum="0" Maximum="80" Interval="20"></Chart3DPrimaryYAxis>   
 
     <Chart3DSeriesCollection>
         <Chart3DSeries DataSource="@MedalDetails" Name="Gold" XName="Country" Opacity="1" YName="Gold" Type="Chart3DSeriesType.Column"/>      
@@ -115,8 +117,9 @@ The order of the legend items can be reversed by using the `Reverse` property. B
 
 @using Syncfusion.Blazor.Chart3D
 
-<SfChart3D Title="Olympic Medals">
-    <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Chart3D.ValueType.Category"/>    
+<SfChart3D Title="Olympic Medals" WallColor="transparent" EnableRotation="true" RotationAngle="7" TiltAngle="10" Depth="100">
+    <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Chart3D.ValueType.Category" Title="Countries"/>
+    <Chart3DPrimaryYAxis Title="Medals" Minimum="0" Maximum="80" Interval="20"></Chart3DPrimaryYAxis>  
 
     <Chart3DSeriesCollection>
         <Chart3DSeries DataSource="@MedalDetails" Name="Gold" XName="Country" Opacity="1" YName="Gold" Type="Chart3DSeriesType.Column"/>      
@@ -150,7 +153,6 @@ The order of the legend items can be reversed by using the `Reverse` property. B
 	};
 }
 
-
 ```
 
 ![Changing Blazor Column 3D Chart Legend Reverse](images/legend/blazor-column-chart-legend-reverse.png)
@@ -165,8 +167,9 @@ The legend can be aligned at near, far or center to the 3D chart using the `Alig
 
 @using Syncfusion.Blazor.Chart3D
 
-<SfChart3D Title="Olympic Medals">
-    <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Chart3D.ValueType.Category"/>    
+<SfChart3D Title="Olympic Medals" WallColor="transparent" EnableRotation="true" RotationAngle="7" TiltAngle="10" Depth="100">
+    <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Chart3D.ValueType.Category" Title="Countries"/>
+    <Chart3DPrimaryYAxis Title="Medals" Minimum="0" Maximum="80" Interval="20"></Chart3DPrimaryYAxis>  
 
     <Chart3DSeriesCollection>
         <Chart3DSeries DataSource="@MedalDetails" Name="Gold" XName="Country" Opacity="1" YName="Gold" Type="Chart3DSeriesType.Column"/>      
@@ -213,8 +216,9 @@ To change the legend icon shape, `LegendShape` property in the `Series` can be
 
 @using Syncfusion.Blazor.Chart3D
 
-<SfChart3D Title="Olympic Medals">
-    <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Chart3D.ValueType.Category"/>    
+<SfChart3D Title="Olympic Medals" WallColor="transparent" EnableRotation="true" RotationAngle="7" TiltAngle="10" Depth="100">
+    <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Chart3D.ValueType.Category" Title="Countries"/>
+    <Chart3DPrimaryYAxis Title="Medals" Minimum="0" Maximum="80" Interval="20"></Chart3DPrimaryYAxis>   
 
     <Chart3DSeriesCollection>
         <Chart3DSeries DataSource="@MedalDetails" Name="Gold" XName="Country" Opacity="1" YName="Gold" Type="Chart3DSeriesType.Column" LegendShape="LegendShape.Circle"/>      
@@ -260,8 +264,9 @@ By default, legend takes 20% - 25% of the 3D chart's height horizontally, when i
 
 @using Syncfusion.Blazor.Chart3D
 
-<SfChart3D Title="Olympic Medals">
-    <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Chart3D.ValueType.Category"/>    
+<SfChart3D Title="Olympic Medals" WallColor="transparent" EnableRotation="true" RotationAngle="7" TiltAngle="10" Depth="100">
+    <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Chart3D.ValueType.Category" Title="Countries"/>
+    <Chart3DPrimaryYAxis Title="Medals" Minimum="0" Maximum="80" Interval="20"></Chart3DPrimaryYAxis>   
 
     <Chart3DSeriesCollection>
         <Chart3DSeries DataSource="@MedalDetails" Name="Gold" XName="Country" Opacity="1" YName="Gold" Type="Chart3DSeriesType.Column" LegendShape="LegendShape.Circle"/>      
@@ -309,8 +314,9 @@ The size of the legend items can be customised by using the `ShapeHeight` and `S
 
 @using Syncfusion.Blazor.Chart3D
 
-<SfChart3D Title="Olympic Medals">
-    <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Chart3D.ValueType.Category"/>    
+<SfChart3D Title="Olympic Medals" WallColor="transparent" EnableRotation="true" RotationAngle="7" TiltAngle="10" Depth="100">
+    <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Chart3D.ValueType.Category" Title="Countries"/>
+    <Chart3DPrimaryYAxis Title="Medals" Minimum="0" Maximum="80" Interval="20"></Chart3DPrimaryYAxis> 
 
     <Chart3DSeriesCollection>
         <Chart3DSeries DataSource="@MedalDetails" Name="Gold" XName="Country" Opacity="1" YName="Gold" Type="Chart3DSeriesType.Column" LegendShape="Syncfusion.Blazor.Chart3D.LegendShape.Circle"/>      
@@ -319,7 +325,6 @@ The size of the legend items can be customised by using the `ShapeHeight` and `S
     </Chart3DSeriesCollection>
 
     <Chart3DLegendSettings Visible="true" Height="50" Width="300" ShapeHeight="20" ShapeWidth="20">
-        <Chart3DLegendBorder Color="red" Width="1"/>
     </Chart3DLegendSettings>
 </SfChart3D>
 
@@ -358,41 +363,42 @@ Paging will be enabled by default, when the legend items exceeds the legend boun
 
 @using Syncfusion.Blazor.Chart3D
 
-<SfChart3D Title="Olympic Medals">
-    <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Chart3D.ValueType.Category"/>    
+<SfChart3D Title="FB Penetration of Internet Audience" WallColor="transparent" EnableRotation="true" RotationAngle="7" TiltAngle="10" Depth="100">
+    <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Chart3D.ValueType.Category" Title="Countries" Interval="1" LabelIntersectAction="LabelIntersectAction.Rotate45"/>
+    <Chart3DPrimaryYAxis Title="Penetration (%)" LabelFormat="{value}%" Minimum="0" Maximum="90"></Chart3DPrimaryYAxis>
 
     <Chart3DSeriesCollection>
-        <Chart3DSeries DataSource="@MedalDetails" Name="Gold" XName="Country" Opacity="1" YName="Gold" Type="Chart3DSeriesType.Column" LegendShape="LegendShape.Circle"/>      
-        <Chart3DSeries DataSource="@MedalDetails" Name="Silver" XName="Country" Opacity="1" YName="Silver" Type="Chart3DSeriesType.Column" LegendShape="LegendShape.SeriesType"/>     
-        <Chart3DSeries DataSource="@MedalDetails" Name="Bronze" XName="Country" Opacity="1" YName="Bronze" Type="Chart3DSeriesType.Column" LegendShape="LegendShape.Diamond"/>      
+        <Chart3DSeries DataSource="@InternetDetails" Name="December 2007" XName="X" YName="Y" />
+        <Chart3DSeries DataSource="@InternetDetails" Name="December 2008" XName="X" YName="Y1" />
+        <Chart3DSeries DataSource="@InternetDetails" Name="December 2009" XName="X" YName="Y2" />
+        <Chart3DSeries DataSource="@InternetDetails" Name="December 20010" XName="X" YName="Y3" />
     </Chart3DSeriesCollection>
 
-    <Chart3DLegendSettings Visible="true" Width="100" Height="80" Padding="10" ShapePadding="10">
-        <Chart3DLegendBorder Color="red" Width="1"/>
+    <Chart3DLegendSettings Visible="true" Padding="10" ShapePadding="10" Width="200">
+        <Chart3DLegendBorder Color="red" Width="2" />
     </Chart3DLegendSettings>
 </SfChart3D>
 
-@code{
+@code {
 
     public class Chart3DData
     {
-        public string Country { get; set; }
-        public double Gold { get; set; }
-        public double Silver { get; set; }
-        public double Bronze { get; set; }
+        public string X { get; set; }
+        public double Y { get; set; }
+        public double Y1 { get; set; }
+        public double Y2 { get; set; }
+        public double Y3 { get; set; }
     }
 
-    public List<Chart3DData> MedalDetails = new List<Chart3DData>
-	{
-		new Chart3DData { Country = "USA", Gold = 50, Silver = 70, Bronze = 45 },
-        new Chart3DData { Country = "China", Gold = 40, Silver = 60, Bronze = 55 },
-        new Chart3DData { Country = "Japan", Gold = 70, Silver = 60, Bronze = 50 },
-        new Chart3DData { Country = "Australia", Gold = 60, Silver = 56, Bronze = 40 },
-        new Chart3DData { Country = "France", Gold = 50, Silver = 45, Bronze = 35 },
-        new Chart3DData { Country = "Germany", Gold = 40, Silver = 30, Bronze = 22 },
-        new Chart3DData { Country = "Italy", Gold = 40, Silver = 35, Bronze = 37 },
-        new Chart3DData { Country = "Sweden", Gold = 30, Silver = 25, Bronze = 27 }
-	};
+    public List<Chart3DData> InternetDetails = new List<Chart3DData>
+    {
+        new Chart3DData { X = "WW", Y = 12, Y1 = 22, Y2 = 38.3, Y3 = 50 },
+        new Chart3DData { X = "EU", Y = 9.9, Y1 = 26, Y2 = 45.2, Y3 = 63.6 },
+        new Chart3DData { X = "APAC", Y = 4.4, Y1 = 9.3, Y2 = 18.2, Y3 = 20.9 },
+        new Chart3DData { X = "LATAM", Y = 6.4, Y1 = 28, Y2 = 46.7, Y3 = 65.1 },
+        new Chart3DData { X = "MEA", Y = 30, Y1 = 45.7, Y2 = 61.5, Y3 = 73 },
+        new Chart3DData { X = "NA", Y = 25.3, Y1 = 35.9, Y2 = 64, Y3 = 81.4 }
+    };
 }
 
 ```
@@ -407,8 +413,9 @@ When the legend text exceeds the container, the text can be wrapped by using the
 
 @using Syncfusion.Blazor.Chart3D
 
-<SfChart3D Title="Olympic Medals">
-    <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Chart3D.ValueType.Category"/>    
+<SfChart3D Title="Olympic Medals" WallColor="transparent" EnableRotation="true" RotationAngle="7" TiltAngle="10" Depth="100">
+    <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Chart3D.ValueType.Category" Title="Countries"/>
+    <Chart3DPrimaryYAxis Title="Medals" Minimum="0" Maximum="80" Interval="20"></Chart3DPrimaryYAxis>   
 
     <Chart3DSeriesCollection>
         <Chart3DSeries DataSource="@MedalDetails" Name="Gold" XName="Country" Opacity="1" YName="Gold" Type="Chart3DSeriesType.Column" LegendShape="LegendShape.Circle"/>      
@@ -416,7 +423,7 @@ When the legend text exceeds the container, the text can be wrapped by using the
         <Chart3DSeries DataSource="@MedalDetails" Name="Bronze" XName="Country" Opacity="1" YName="Bronze" Type="Chart3DSeriesType.Column" LegendShape="LegendShape.Diamond"/>      
     </Chart3DSeriesCollection>
 
-    <Chart3DLegendSettings Visible="true" Position="LegendPosition.Right" TextWrap="@Syncfusion.Blazor.TextWrap.Wrap" MaximumLabelWidth="50">
+    <Chart3DLegendSettings Visible="true" Position="LegendPosition.Right" TextWrap="@Syncfusion.Blazor.TextWrap.Wrap" MaximumLabelWidth="20">
     </Chart3DLegendSettings>
 </SfChart3D>
 
@@ -455,8 +462,9 @@ By default, you can collapse the series visibility by clicking the legend. On th
 
 @using Syncfusion.Blazor.Chart3D
 
-<SfChart3D Title="Olympic Medals">
-    <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Chart3D.ValueType.Category"/>    
+<SfChart3D Title="Olympic Medals" WallColor="transparent" EnableRotation="true" RotationAngle="7" TiltAngle="10" Depth="100" SelectionMode="SelectionMode.Series">
+    <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Chart3D.ValueType.Category" Title="Countries"/>
+    <Chart3DPrimaryYAxis Title="Medals" Minimum="0" Maximum="80" Interval="20"></Chart3DPrimaryYAxis>    
 
     <Chart3DSeriesCollection>
         <Chart3DSeries DataSource="@MedalDetails" Name="Gold" XName="Country" Opacity="1" YName="Gold" Type="Chart3DSeriesType.Column" LegendShape="LegendShape.Circle"/>      
@@ -465,7 +473,6 @@ By default, you can collapse the series visibility by clicking the legend. On th
     </Chart3DSeriesCollection>
 
     <Chart3DLegendSettings Visible="true" ToggleVisibility="false">
-        <Chart3DLegendBorder Color="red" Width="1"/>
     </Chart3DLegendSettings>
 </SfChart3D>
 
@@ -504,9 +511,9 @@ By default, series `Name` will be displayed as legend. To skip the legend for a 
 
 @using Syncfusion.Blazor.Chart3D
 
-<SfChart Title="Olympic Medals">
-    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Chart3D.ValueType.Category">
-    </ChartPrimaryXAxis>
+<SfChart3D Title="Olympic Medals" WallColor="transparent" EnableRotation="true" RotationAngle="7" TiltAngle="10" Depth="100">
+    <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Chart3D.ValueType.Category" Title="Countries"/>
+    <Chart3DPrimaryYAxis Title="Medals" Minimum="0" Maximum="80" Interval="20"></Chart3DPrimaryYAxis>
 
     <ChartSeriesCollection>
         <ChartSeries DataSource="@MedalDetails" Name="Gold" XName="Country" Width="2" LegendShape="LegendShape.Circle" Opacity="1" YName="Gold" Type="ChartSeriesType.Column"></ChartSeries>
@@ -552,8 +559,9 @@ You can set title for legend using `Title` property in `LegendSettings`. The `Si
 
 @using Syncfusion.Blazor.Chart3D
 
-<SfChart3D Title="Olympic Medals">
-    <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Chart3D.ValueType.Category"/>    
+<SfChart3D Title="Olympic Medals" WallColor="transparent" EnableRotation="true" RotationAngle="7" TiltAngle="10" Depth="100">
+    <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Chart3D.ValueType.Category"/>
+    <Chart3DPrimaryYAxis Title="Medals" Minimum="0" Maximum="80" Interval="20"></Chart3DPrimaryYAxis>    
 
     <Chart3DSeriesCollection>
         <Chart3DSeries DataSource="@MedalDetails" Name="Gold" XName="Country" Opacity="1" YName="Gold" Type="Chart3DSeriesType.Column" LegendShape="LegendShape.Circle"/>      
@@ -599,16 +607,18 @@ The page number will always be visible while using legend paging. It is now poss
 
 @using Syncfusion.Blazor.Chart3D
 
-<SfChart3D Title="Olympic Medals">
-    <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Chart3D.ValueType.Category" />
+<SfChart3D Title="FB Penetration of Internet Audience" WallColor="transparent" EnableRotation="true" RotationAngle="7" TiltAngle="10" Depth="100">
+    <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Chart3D.ValueType.Category" Title="Countries" Interval="1" LabelIntersectAction="LabelIntersectAction.Rotate45"/>
+    <Chart3DPrimaryYAxis Title="Penetration (%)" LabelFormat="{value}%" Minimum="0" Maximum="90"></Chart3DPrimaryYAxis>
 
     <Chart3DSeriesCollection>
-        <Chart3DSeries DataSource="@MedalDetails" Name="Gold" XName="Country" Opacity="1" YName="Gold" Type="Chart3DSeriesType.Column" LegendShape="LegendShape.Circle" />
-        <Chart3DSeries DataSource="@MedalDetails" Name="Silver" XName="Country" Opacity="1" YName="Silver" Type="Chart3DSeriesType.Column" LegendShape="LegendShape.SeriesType" />
-        <Chart3DSeries DataSource="@MedalDetails" Name="Bronze" XName="Country" Opacity="1" YName="Bronze" Type="Chart3DSeriesType.Column" LegendShape="LegendShape.Diamond" />
+        <Chart3DSeries DataSource="@InternetDetails" Name="December 2007" XName="X" YName="Y" />
+        <Chart3DSeries DataSource="@InternetDetails" Name="December 2008" XName="X" YName="Y1" />
+        <Chart3DSeries DataSource="@InternetDetails" Name="December 2009" XName="X" YName="Y2" />
+        <Chart3DSeries DataSource="@InternetDetails" Name="December 20010" XName="X" YName="Y3" />
     </Chart3DSeriesCollection>
 
-    <Chart3DLegendSettings Visible="true" AllowPaging="true" Width="180" Height="20">
+    <Chart3DLegendSettings Visible="true" Width="180" Height="20" AllowPaging="true">
     </Chart3DLegendSettings>
 </SfChart3D>
 
@@ -616,22 +626,21 @@ The page number will always be visible while using legend paging. It is now poss
 
     public class Chart3DData
     {
-        public string Country { get; set; }
-        public double Gold { get; set; }
-        public double Silver { get; set; }
-        public double Bronze { get; set; }
+        public string X { get; set; }
+        public double Y { get; set; }
+        public double Y1 { get; set; }
+        public double Y2 { get; set; }
+        public double Y3 { get; set; }
     }
 
-    public List<Chart3DData> MedalDetails = new List<Chart3DData>
+    public List<Chart3DData> InternetDetails = new List<Chart3DData>
     {
-        new Chart3DData { Country = "USA", Gold = 50, Silver = 70, Bronze = 45 },
-        new Chart3DData { Country = "China", Gold = 40, Silver = 60, Bronze = 55 },
-        new Chart3DData { Country = "Japan", Gold = 70, Silver = 60, Bronze = 50 },
-        new Chart3DData { Country = "Australia", Gold = 60, Silver = 56, Bronze = 40 },
-        new Chart3DData { Country = "France", Gold = 50, Silver = 45, Bronze = 35 },
-        new Chart3DData { Country = "Germany", Gold = 40, Silver = 30, Bronze = 22 },
-        new Chart3DData { Country = "Italy", Gold = 40, Silver = 35, Bronze = 37 },
-        new Chart3DData { Country = "Sweden", Gold = 30, Silver = 25, Bronze = 27 }
+        new Chart3DData { X = "WW", Y = 12, Y1 = 22, Y2 = 38.3, Y3 = 50 },
+        new Chart3DData { X = "EU", Y = 9.9, Y1 = 26, Y2 = 45.2, Y3 = 63.6 },
+        new Chart3DData { X = "APAC", Y = 4.4, Y1 = 9.3, Y2 = 18.2, Y3 = 20.9 },
+        new Chart3DData { X = "LATAM", Y = 6.4, Y1 = 28, Y2 = 46.7, Y3 = 65.1 },
+        new Chart3DData { X = "MEA", Y = 30, Y1 = 45.7, Y2 = 61.5, Y3 = 73 },
+        new Chart3DData { X = "NA", Y = 25.3, Y1 = 35.9, Y2 = 64, Y3 = 81.4 }
     };
 }
 
@@ -647,41 +656,41 @@ The `ItemPadding` property can be used to adjust the space between the legend it
 
 @using Syncfusion.Blazor.Chart3D
 
-<SfChart3D Title="Olympic Medals">
-    <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Chart3D.ValueType.Category"/>    
+<SfChart3D Title="FB Penetration of Internet Audience" WallColor="transparent" EnableRotation="true" RotationAngle="7" TiltAngle="10" Depth="100">
+    <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Chart3D.ValueType.Category" Title="Countries" Interval="1" LabelIntersectAction="LabelIntersectAction.Rotate45"/>
+    <Chart3DPrimaryYAxis Title="Penetration (%)" LabelFormat="{value}%" Minimum="0" Maximum="90"></Chart3DPrimaryYAxis>
 
     <Chart3DSeriesCollection>
-        <Chart3DSeries DataSource="@MedalDetails" Name="Gold" XName="Country" Opacity="1" YName="Gold" Type="Chart3DSeriesType.Column" LegendShape="LegendShape.Circle"/>      
-        <Chart3DSeries DataSource="@MedalDetails" Name="Silver" XName="Country" Opacity="1" YName="Silver" Type="Chart3DSeriesType.Column" LegendShape="LegendShape.SeriesType"/>     
-        <Chart3DSeries DataSource="@MedalDetails" Name="Bronze" XName="Country" Opacity="1" YName="Bronze" Type="Chart3DSeriesType.Column" LegendShape="LegendShape.Diamond"/>      
+        <Chart3DSeries DataSource="@InternetDetails" Name="December 2007" XName="X" YName="Y" />
+        <Chart3DSeries DataSource="@InternetDetails" Name="December 2008" XName="X" YName="Y1" />
+        <Chart3DSeries DataSource="@InternetDetails" Name="December 2009" XName="X" YName="Y2" />
+        <Chart3DSeries DataSource="@InternetDetails" Name="December 20010" XName="X" YName="Y3" />
     </Chart3DSeriesCollection>
 
-    <Chart3DLegendSettings Visible="true" ItemPadding="30">
-        <Chart3DLegendBorder Color="red" Width="1"/>
+    <Chart3DLegendSettings Visible="true" ItemPadding="30" AllowPaging="false">
     </Chart3DLegendSettings>
 </SfChart3D>
 
-@code{
+@code {
 
     public class Chart3DData
     {
-        public string Country { get; set; }
-        public double Gold { get; set; }
-        public double Silver { get; set; }
-        public double Bronze { get; set; }
+        public string X { get; set; }
+        public double Y { get; set; }
+        public double Y1 { get; set; }
+        public double Y2 { get; set; }
+        public double Y3 { get; set; }
     }
 
-    public List<Chart3DData> MedalDetails = new List<Chart3DData>
-	{
-		new Chart3DData { Country = "USA", Gold = 50, Silver = 70, Bronze = 45 },
-        new Chart3DData { Country = "China", Gold = 40, Silver = 60, Bronze = 55 },
-        new Chart3DData { Country = "Japan", Gold = 70, Silver = 60, Bronze = 50 },
-        new Chart3DData { Country = "Australia", Gold = 60, Silver = 56, Bronze = 40 },
-        new Chart3DData { Country = "France", Gold = 50, Silver = 45, Bronze = 35 },
-        new Chart3DData { Country = "Germany", Gold = 40, Silver = 30, Bronze = 22 },
-        new Chart3DData { Country = "Italy", Gold = 40, Silver = 35, Bronze = 37 },
-        new Chart3DData { Country = "Sweden", Gold = 30, Silver = 25, Bronze = 27 }
-	};
+    public List<Chart3DData> InternetDetails = new List<Chart3DData>
+    {
+        new Chart3DData { X = "WW", Y = 12, Y1 = 22, Y2 = 38.3, Y3 = 50 },
+        new Chart3DData { X = "EU", Y = 9.9, Y1 = 26, Y2 = 45.2, Y3 = 63.6 },
+        new Chart3DData { X = "APAC", Y = 4.4, Y1 = 9.3, Y2 = 18.2, Y3 = 20.9 },
+        new Chart3DData { X = "LATAM", Y = 6.4, Y1 = 28, Y2 = 46.7, Y3 = 65.1 },
+        new Chart3DData { X = "MEA", Y = 30, Y1 = 45.7, Y2 = 61.5, Y3 = 73 },
+        new Chart3DData { X = "NA", Y = 25.3, Y1 = 35.9, Y2 = 64, Y3 = 81.4 }
+    };
 }
 
 ```

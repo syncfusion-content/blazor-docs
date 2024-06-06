@@ -17,8 +17,8 @@ The 3D chart can be rendered to its container size and it can be set via inline 
 
 @using Syncfusion.Blazor.Chart3D
 
-<div style="width:350px; height:350px; background-color:red">
-    <SfChart3D Title="Inflation - Consumer Price">
+<div style="width:650px; height:350px">
+    <SfChart3D Title="Inflation - Consumer Price" EnableRotation="true" RotationAngle="22" Depth="100">
         <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Chart3D.ValueType.Category"></Chart3DPrimaryXAxis>
 
         <Chart3DSeriesCollection>
@@ -64,7 +64,7 @@ The size of the 3D chart can be set in pixel as demonstrated below.
 
 @using Syncfusion.Blazor.Chart3D
 
-<SfChart3D Title="Inflation - Consumer Price" Width="650px" Height="250px">
+<SfChart3D Title="Inflation - Consumer Price" Width="650px" Height="350px" EnableRotation="true" RotationAngle="22" Depth="100">
     <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Chart3D.ValueType.Category"></Chart3DPrimaryXAxis>
 
     <Chart3DSeriesCollection>
@@ -105,7 +105,7 @@ By setting the value in percentage, the 3D Chart gets its dimension with respec
 
 @using Syncfusion.Blazor.Chart3D
 
-<SfChart3D Title="Inflation - Consumer Price" Width="60%" Height="90%">
+<SfChart3D Title="Inflation - Consumer Price" Width="80%" Height="90%" EnableRotation="true" RotationAngle="22" Depth="100">
     <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Chart3D.ValueType.Category"></Chart3DPrimaryXAxis>
 
     <Chart3DSeriesCollection>

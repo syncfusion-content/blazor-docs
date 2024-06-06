@@ -192,7 +192,7 @@ The following properties can be used to customize the `Bar` series.
     </Chart3DPrimaryXAxis>
 
     <Chart3DSeriesCollection>
-        <Chart3DSeries DataSource="@MedalDetails" XName="Country" YName="Gold" Fill="red" Type="Chart3DSeriesType.Column" />
+        <Chart3DSeries DataSource="@MedalDetails" XName="Country" YName="Gold" Fill="#0364DE" Type="Chart3DSeriesType.Bar" />
     </Chart3DSeriesCollection>
 </SfChart3D>
 
