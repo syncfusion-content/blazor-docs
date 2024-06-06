@@ -185,6 +185,21 @@ namespace filemanager.Server.Controllers
 {% endhighlight %}
 {% endtabs %}
 
+To configure and map the controller, open the `~/Program.cs` file of the server part of the application. Add the following code:
+
+```cshtml
+
+builder.Services.AddControllers();
+
+...
+
+app.UseRouting();
+app.MapControllers();.
+
+```
+
+This will configure and map the controller in your Blazor App.
+
 To access the above File Operations, you need some model class files that have file operations methods. So, create `Models` folder in `server` part of the application and download the `PhysicalFileProvider.cs` and `Base` folder from the [this](https://github.com/SyncfusionExamples/ej2-aspcore-file-provider/tree/master/Models) link in the Models folder.
 
 Add your required files and folders under the `wwwroot\Files` directory.
