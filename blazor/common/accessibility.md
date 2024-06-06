@@ -2847,3 +2847,30 @@ PDF Viewer
 <div><img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Partial"> - Some features of the component do not meet the requirement.</div>
 
 <div><img src="https://cdn.syncfusion.com/content/images/landing-page/no.png" alt="No"> - The component does not meet the requirement.</div>
+
+## Ignored Accessibility Rules
+
+The following table outlines the accessibility rules that are intentionally ignored for certain components in our product. These rules have been evaluated and deemed non-critical for our specific use cases.
+
+<table>
+<tr>
+<td><b>Component</b></td>
+<td><b>Ignored Rules</b></td>
+</tr>
+<tr>
+<td>Datagrid, Treegrid, Gantt-Chart</td>
+<td>empty-table-header, scrollable-region-focusable, label, aria-required-children, aria-prohibited-attr, color-contrast</td>
+</tr>
+<tr>
+<td>Datepicker, Daterangepicker, Timepicker, Multiselect, Diagram, Button, Button-Group, Dropdown-Button, Split-Button, Progress-Button, Circulargauge, Lineargauge, Treemap, Heatmap, Maps, Chips, Dashboardlayout, Dropdowntree, Listview, Chart, Accumulation-Chart, Bullet-Chart, Stock-Chart, Range-Selector, Sparkline, Smith-Chart, Progress-Bar, Querybuilder, Autocomplete, Combobox, Dropdownlist, Barcodegenerator, Toolbar, Rich-Text-Editor, Document-Editor, Stepper</td>
+<td>color-contrast</td>
+</tr>
+<tr>
+<td>Filemanager</td>
+<td>color-contrast, aria-required-children, empty-table-header</td>
+</tr>
+<tr>
+<td>Pivot-Table</td>
+<td>empty-table-header, scrollable-region-focusable, color-contrast, aria-required-children, region</td>
+</tr>
+</table>
