@@ -147,6 +147,81 @@ Using the quick toolbar, users can change the width, cell padding, and cell spac
 
 N> You can refer to our [Blazor Rich Text Editor](https://www.syncfusion.com/blazor-components/blazor-wysiwyg-rich-text-editor) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Rich Text Editor](https://blazor.syncfusion.com/demos/rich-text-editor/overview?theme=bootstrap4) example to know how to render and configure the rich text editor tools.
 
+## Table row and column selection
+
+The table row and column selection feature in our editor allows for intuitive and efficient table manipulation using both mouse and keyboard interactions.
+
+**Mouse interaction:**
+
+* Click and drag to select multiple rows or columns.
+* Selected cells are highlighted with a distinct background color for better visibility.
+
+**Keyboard interaction:**
+
+* Use <kbd>Shift</kbd> + <kbd>Arrow keys</kbd> to extend the selection of rows or columns.
+* Background color highlights selected cells, making it easy to see the current selection.
+
+![Rich Text Editor table row and column selection](./images/table-row-and-column-selection.png)
+
+**Table selection with backspace and delete keys:**
+
+* Press the <kbd>Backspace</kbd> key immediately after the table to select the entire table.
+* Press the <kbd>Delete</kbd> key immediately before the table to select the entire table.
+
+![Rich Text Editor table selection](./images/table-selection.png)
+
+**Table content text formatting:**
+
+The text formatting feature in tables allows users to apply various styles to selected cells, enhancing the appearance and readability of data. This includes the application of headings, paragraphs, lists, and inline styles such as bold, italic, and strikethrough. Users can efficiently format multiple cells simultaneously by selecting entire rows or columns.
+
+```cshtml
+
+@using Syncfusion.Blazor.RichTextEditor
+
+<SfRichTextEditor ShowCharCount="true">
+    <RichTextEditorToolbarSettings Items="@Tools" />
+    <h2>Discover the Table's Powerful Features</h2><p>A table can be created in the editor using either a keyboard shortcut or the      toolbar. With the quick toolbar, you can perform table cell insert, delete, split, and merge operations. You can style the table cells using background colours and borders.</p>      
+    <table class="e-rte-table" style="width: 100%; min-width: 0px; height: 151px">
+        <thead>
+            <tr>
+                <th><span>Name</span><br/></th>
+                <th><span>Age</span><br/></th>
+                <th><span>Gender</span><br/></th>
+                <th><span>Occupation</span><br/></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Selma Rose</td>
+                <td>30</td>
+                <td>Female</td>
+                <td><span>Engineer</span><br/></td>
+            </tr>
+            <tr>
+                <td><span>Robert</span><br/></td>
+                <td>28</td>
+                <td>Male</td>
+                <td><span>Graphic Designer</span></td>
+            </tr>
+            <tr>
+                <td><span>William</span><br/></td>
+                <td>35</td>
+                <td>Male</td>
+                <td>Teacher</td>
+            </tr>
+        </tbody>
+    </table>
+</SfRichTextEditor>
+
+@code{
+    private List<ToolbarItemModel> Tools = new List<ToolbarItemModel>()
+    {
+        new ToolbarItemModel() { Command = ToolbarCommand.CreateTable }
+    };
+}
+
+```
+
 ## Table cell merge and split
 
 The Rich Text Editor allows users to change the appearance of the tables by splitting or merging the table cells.
