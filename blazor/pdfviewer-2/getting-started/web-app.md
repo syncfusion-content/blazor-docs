@@ -82,7 +82,7 @@ using Syncfusion.Blazor;
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddRazorComponents() 
-        .AddInteractiveServerComponents()
+        .AddInteractiveServerComponents();
 
 builder.Services.AddSignalR(o => { o.MaximumReceiveMessageSize = 102400000; });
 
@@ -180,7 +180,7 @@ app.MapRazorComponents<App>()
 {% endhighlight %}
 {% endtabs %}
 
-N> [Processing Large Files Without Increasing Maximum Message Size in SfPdfViewer Component](../how-to/processing-large-files-without-increasing-maximum-message-size.md)
+N> [Processing Large Files Without Increasing Maximum Message Size in SfPdfViewer Component](../how-to/processing-large-files-without-increasing-maximum-message-size)
 
 ## Adding stylesheet and script
 
@@ -241,3 +241,5 @@ N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-
 * [Getting Started with Blazor PDF Viewer (Next Gen) Component in WSL mode](./wsl-application)
 
 * [Learn different ways to add script reference in Blazor Application](https://blazor.syncfusion.com/documentation/common/adding-script-references)
+
+* [Processing Large Files Without Increasing Maximum Message Size in SfPdfViewer Component](../how-to/processing-large-files-without-increasing-maximum-message-size)
