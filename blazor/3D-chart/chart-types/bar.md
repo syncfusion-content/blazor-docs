@@ -102,7 +102,7 @@ The data points can be grouped in the bar type charts by using the `GroupName` p
 
 @using Syncfusion.Blazor.Chart3D
 
-<SfChart3D EnableSideBySidePlacement="false" RotationAngle="-25" Depth="300" TiltAngle="10">
+<SfChart3D EnableSideBySidePlacement="false" RotationAngle="-12" Depth="250" TiltAngle="15">
     <Chart3DPrimaryXAxis ValueType="@Syncfusion.Blazor.Chart3D.ValueType.Category">
     </Chart3DPrimaryXAxis>
     <Chart3DSeriesCollection>
