@@ -93,7 +93,6 @@ To group the stacked column, the `StackingGroup` property can be used. The colum
     };
 }
 
-
 ``` 
 
 ![Grouping in Blazor Stacked Column 3D Chart](../images/chart-types-images/blazor-stacked-colum-chart-with-grouping.png)

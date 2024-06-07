@@ -265,7 +265,7 @@ By default, legend takes 20% - 25% of the 3D chart's height horizontally, when i
 @using Syncfusion.Blazor.Chart3D
 
 <SfChart3D Title="Olympic Medals" WallColor="transparent" EnableRotation="true" RotationAngle="7" TiltAngle="10" Depth="100">
-    <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Chart3D.ValueType.Category" Title="Countries"/>
+    <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Chart3D.ValueType.Category"/>
     <Chart3DPrimaryYAxis Title="Medals" Minimum="0" Maximum="80" Interval="20"></Chart3DPrimaryYAxis>   
 
     <Chart3DSeriesCollection>
@@ -364,7 +364,7 @@ Paging will be enabled by default, when the legend items exceeds the legend boun
 @using Syncfusion.Blazor.Chart3D
 
 <SfChart3D Title="FB Penetration of Internet Audience" WallColor="transparent" EnableRotation="true" RotationAngle="7" TiltAngle="10" Depth="100">
-    <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Chart3D.ValueType.Category" Title="Countries" Interval="1" LabelIntersectAction="LabelIntersectAction.Rotate45"/>
+    <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Chart3D.ValueType.Category" Interval="1" LabelIntersectAction="LabelIntersectAction.Rotate45"/>
     <Chart3DPrimaryYAxis Title="Penetration (%)" LabelFormat="{value}%" Minimum="0" Maximum="90"></Chart3DPrimaryYAxis>
 
     <Chart3DSeriesCollection>
@@ -375,7 +375,6 @@ Paging will be enabled by default, when the legend items exceeds the legend boun
     </Chart3DSeriesCollection>
 
     <Chart3DLegendSettings Visible="true" Padding="10" ShapePadding="10" Width="200">
-        <Chart3DLegendBorder Color="red" Width="2" />
     </Chart3DLegendSettings>
 </SfChart3D>
 
