@@ -9,7 +9,7 @@ documentation: ug
 
 # Virtualization in Blazor TreeView Component
 
-The TreeView has been provided virtualization support to improve the UI performance for a large amount of data when [EnableVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_EnableVirtualization) is true. This feature doesn’t render out the entire data source on initial rendering. It loads the N number of items in the initial rendering and the remaining set number of items will load on each scrolling action in the TreeView container. To setup the virtualization, define the [EnableVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_EnableVirtualization) as true and content height by [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_Height) property.
+The TreeView has been provided UI virtualization support to improve the UI performance for a large amount of data when [EnableVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_EnableVirtualization) is true. This feature initially gathers all the data, but doesn’t render out the entire data source on initial rendering. It loads the N number of items in the initial rendering and the remaining set number of items will load on each scrolling action in the TreeView container. To setup the virtualization, define the [EnableVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_EnableVirtualization) as true and content height by [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_Height) property.
 
 The following sample shows the example of Virtualization.
 
@@ -82,11 +82,6 @@ The following sample shows the example of Virtualization.
         public bool Expanded { get; set; }
         public string Name { get; set; }
     }
-    class MenuItems
-    {
-        public string ID { get; set; }
-        public string Text { get; set; }
-    }
 }
 <style>
     /* Sample specific styles */
@@ -102,7 +97,4 @@ The following sample shows the example of Virtualization.
 
 ![Blazor TreeView with virtualization](./images/virtualization.gif)
 
-## Limitations for Virtualization
-
-* Virtualization is not compatible with expand and collapse animation.
-* Select all action will select only visible items in UI.
+N> Virtualization is not compatible with expand and collapse animation. Select all action will select only visible items in UI.
