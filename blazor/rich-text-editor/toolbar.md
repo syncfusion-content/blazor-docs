@@ -91,6 +91,7 @@ The Rich text editor has quick toolbars that are open as context-menu on clickin
 | [Table](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.TableToolbarCommand.html#fields) | TableHeader, TableRows, TableColumns, BackgroundColor, TableRemove, Alignments, TableCellVerticalAlign, Styles |
 | [Audio](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.AudioToolbarCommand.html#fields) | AudioReplace, AudioRemove, AudioLayoutOption |
 | [Video](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.VideoToolbarCommand.html#fields) | VideoReplace, VideoAlign, VideoRemove, VideoLayoutOption, VideoDimension |
+| [Text](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.VideoToolbarCommand.html#fields) |No Default item have it and it support the all toolbar items |
 
 ### Image quick Toolbar
 
@@ -204,6 +205,195 @@ The Rich Text Editor allows you to customize the inserted video by using the [Ri
 ![Blazor RichTextEditor video quick toolbar](./images/blazor-richtexteditor-quick-toolbar-video.png)
 
 N> You can refer to our [Blazor Rich Text Editor](https://www.syncfusion.com/blazor-components/blazor-wysiwyg-rich-text-editor) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Rich Text Editor](https://blazor.syncfusion.com/demos/rich-text-editor/overview?theme=bootstrap4) example to knows how to render and configure the rich text editor tools.
+
+### Text quick Toolbar
+
+By activating the "RichTextEditorQuickToolbarSettings.Text" property, the Rich Text Editor offers the ability to display a quick toolbar when needed. The floating toolbar shows up when you select or focus on editable text. By modifying the "RichTextEditorQuickToolbarSettings.Text" property, the commands shown in the text quick toolbar can be changed.
+
+{% tabs %}
+{% highlight razor %}
+
+private List<ToolbarItemModel> TextQuickToolbarItems = new List<ToolbarItemModel>()
+    {
+        new ToolbarItemModel() { Command = ToolbarCommand.Bold },
+        new ToolbarItemModel() { Command = ToolbarCommand.Italic },
+        new ToolbarItemModel() { Command = ToolbarCommand.Underline },
+        new ToolbarItemModel() { Command = ToolbarCommand.FontColor },
+        new ToolbarItemModel() { Command = ToolbarCommand.BackgroundColor },
+        new ToolbarItemModel() { Command = ToolbarCommand.HorizontalSeparator },
+        new ToolbarItemModel() { Command = ToolbarCommand.Alignments },
+        new ToolbarItemModel() { Command = ToolbarCommand.Formats },
+        new ToolbarItemModel() { Command = ToolbarCommand.NumberFormatList },
+        new ToolbarItemModel() { Command = ToolbarCommand.BulletFormatList }
+    };
+
+{% endhighlight %}
+{% endtabs %}
+
+The text quick toolbar has the following items.
+
+<table>
+<tr>
+<td><b>Tools</b></td>
+<td><b>Description</b></td>
+</tr>
+
+<tr>
+<td><p>Undo</p></td>
+<td><p>Allows you to undo the actions.</p></td>
+</tr>
+
+<tr>
+<td><p>Redo</p></td>
+<td><p>Allows you to redo the actions.</p></td>
+</tr>
+
+<tr>
+<td><p>Alignment</p></td>
+<td><p>Aligns the content with the left, center, and right margins.</p></td>
+</tr>
+
+<tr>
+<td><p>OrderedList</p></td>
+<td><p>Creates a new list item(numbered).</p></td>
+</tr>
+
+<tr>
+<td><p>UnorderedList</p></td>
+<td><p>Creates a new list item(bulleted).</p></td>
+</tr>
+
+<tr>
+<td><p>Indent</p></td>
+<td><p>Allows you to increase the content's indentation level. </p></td>
+</tr>
+
+<tr>
+<td><p>Outdent</p></td>
+<td><p>Allows you to decrease the content's indentation level.</p></td>
+</tr>
+
+<tr>
+<td><p>Hyperlink</p></td>
+<td><p>Creates a hyperlink from a text or image to a specific location in the content.</p></td>
+</tr>
+
+<tr>
+<td><p>Images</p></td>
+<td><p>Inserts an image from an online source or local computer.</p></td>
+</tr>
+
+<tr>
+<td><p>LowerCase</p></td>
+<td><p>Change the selected content to lower case.</p></td>
+</tr>
+
+<tr>
+<td><p>UpperCase</p></td>
+<td><p>Change the selected content to upper case.</p></td>
+</tr>
+
+<tr>
+<td><p>SubScript</p></td>
+<td><p> Makes the selected text as subscript (lower).</p></td>
+</tr>
+
+<tr>
+<td><p>SuperScript</p></td>
+<td><p> Makes the selected text as superscript (higher).</p></td>
+</tr>
+
+<tr>
+<td><p>Print</p></td>
+<td><p>Allows the editor's content to be printed. </p></td>
+</tr>
+
+<tr>
+<td><p>FontName</p></td>
+<td><p>Defines the fonts that appear in the Rich Text Editor's Font Family DropDownList.</p></td>
+</tr>
+
+<tr>
+<td><p>FontSize</p></td>
+<td><p>Defines the font sizes that appear under the Font Size DropDownList from the Rich Text Editor's toolbar.</p></td>
+</tr>
+
+<tr>
+<td><p>FontColor</p></td>
+<td><p>Specifies an array of colors that can be used in the color popup for the font color.</p></td>
+</tr>
+
+<tr>
+<td><p>BackgroundColor</p></td>
+<td><p>Specifies an array of colors that can be used in the color popup for the background color.</p></td>
+</tr>
+
+<tr>
+<td><p>Format</p></td>
+<td><p>An Object with the options that will appear in the Paragraph Format dropdown from the toolbar.</p></td>
+</tr>
+
+<tr>
+<td><p>StrikeThrough</p></td>
+<td><p>Applies double line strike through formatting for the selected text.</p></td>
+</tr>
+
+<tr>
+<td><p>ClearFormat</p></td>
+<td><p>The clear format tool is useful for removing all formatting styles from currently selected text, such as bold, italic, underline, color, superscript, subscript, and more. As a result, all the text formatting will be cleared and returned to its default styles.</p></td>
+</tr>
+
+<tr>
+<td><p>FullScreen</p></td>
+<td><p>Stretches the editor to the maximum width and height of the browser window.</p></td>
+</tr>
+
+<tr>
+<td><p>SourceCode</p></td>
+<td><p>The Rich Text Editor allows users to directly edit HTML code via "Source View." If you make any modifications in the source view directly, synchronise with the design view.</p></td>
+</tr>
+
+<tr>
+<td><p>NumberFormatList</p></td>
+<td><p>Allows to create list items with various list style types(numbered). </p></td>
+</tr>
+
+<tr>
+<td><p>BulletFormatList</p></td>
+<td><p>Allows to create list items with various list style types(bulleted).</p></td>
+</tr>
+</table>
+
+The tools order can be customized as your application requirement.
+
+{% tabs %}
+{% highlight razor %}
+
+<SfRichTextEditor>
+    <RichTextEditorQuickToolbarSettings Text="@TextQuickToolbarItems"></RichTextEditorQuickToolbarSettings>
+    <p>The Rich Text Editor component is WYSIWYG ('what you see is what you get') editor that provides the best user experience to create and update the content. Users can format their content using standard toolbar commands.</p>
+</SfRichTextEditor>
+
+@code {
+    private List<ToolbarItemModel> TextQuickToolbarItems = new List<ToolbarItemModel>()
+    {
+        new ToolbarItemModel() { Command = ToolbarCommand.Bold },
+        new ToolbarItemModel() { Command = ToolbarCommand.Italic },
+        new ToolbarItemModel() { Command = ToolbarCommand.Underline },
+        new ToolbarItemModel() { Command = ToolbarCommand.FontColor },
+        new ToolbarItemModel() { Command = ToolbarCommand.BackgroundColor },
+        new ToolbarItemModel() { Command = ToolbarCommand.HorizontalSeparator },
+        new ToolbarItemModel() { Command = ToolbarCommand.Alignments },
+        new ToolbarItemModel() { Command = ToolbarCommand.Formats },
+        new ToolbarItemModel() { Command = ToolbarCommand.NumberFormatList },
+        new ToolbarItemModel() { Command = ToolbarCommand.BulletFormatList }
+    };
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Blazor RichTextEditor removed default toolbar items](./images/blazor-richtexteditor-text-quick-toolbar.png)
 
 ## See also
 
