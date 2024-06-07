@@ -401,10 +401,10 @@ Similarly, if the user navigates to a new page, the root nodes of that specific 
 
 namespace Sample.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/SelfReferenceDatacontroller")]
     [ApiController]
 
-    public class Controller : ControllerBase
+    public class SelfReferenceDataController : ControllerBase
     {
         public static List<SelfReferenceData> FlatData = new List<SelfReferenceData>();
         
