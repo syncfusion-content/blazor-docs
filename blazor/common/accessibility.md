@@ -157,19 +157,19 @@ padding-top: 20px;
     <td>
         <div><p class="controlcategory-topics">DATA VISUALIZATION</p></div>
         <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/chart/accessibility">Charts</a></div>
-        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/accumulation-chart/accessibility">Accumulation Chart</div>
-        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/stock-chart/accessibility">Stock Chart</div>
+        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/accumulation-chart/accessibility">Accumulation Chart</a></div>
+        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/stock-chart/accessibility">Stock Chart</a></div>
         <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/circular-gauge/accessibility">Circular Gauge</a></div>
         <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/linear-gauge/accessibility">Linear Gauge</a></div>
         <div class="controlanchorlink">Diagram</div>
         <div class="controlanchorlink">HeatMap Chart</div>
         <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/maps/accessibility">Map</a></div>
-        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/range-selector/accessibility">Range Selector</div>
-        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/smith-chart/accessibility">Smith Chart</div>
-        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/sparkline/accessibility">Sparkline Charts</div>
+        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/range-selector/accessibility">Range Selector</a></div>
+        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/smith-chart/accessibility">Smith Chart</a></div>
+        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/sparkline/accessibility">Sparkline Charts</a></div>
         <div class="controlanchorlink">Barcode</div>
         <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/treemap/accessibility">TreeMap</a></div>
-        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/bullet-chart/accessibility">Bullet Chart</div>
+        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/bullet-chart/accessibility">Bullet Chart</a></div>
         <div class="controlanchorlink">Kanban</div>
         <div><p class="controlcategory">BUTTONS</p></div>
         <div class="controlanchorlink">Button</div>
@@ -233,7 +233,7 @@ padding-top: 20px;
 		<div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/stepper/accessibility">Stepper</a></div>
         <div><p class="controlcategory">NOTIFICATION</p></div>
         <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/toast/accessibility">Toast</a></div>
-        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/progress-bar/accessibility">ProgressBar</div>
+        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/progress-bar/accessibility">ProgressBar</a></div>
         <div class="controlanchorlink">Spinner</div>
         <div class="controlanchorlink">Badge</div>
         <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/skeleton/accessibility">Skeleton</a></div>
