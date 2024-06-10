@@ -11,7 +11,7 @@ documentation: ug
 
 To perform a rename operation in Syncfusion Blazor FileManager component from ASP.NET Core physical file system provider, you can follow the steps below
 
-**Step 1:** Create a `SfFileManager` Sample in blazor
+**Step 1:** Create a `File Manager` Sample in blazor
 
 Start by following the steps provided in this link to create a simple `SfPdfViewer` sample in blazor. To perform the rename operation, initialize the [Url](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerAjaxSettings.html#Syncfusion_Blazor_FileManager_FileManagerAjaxSettings_Url) property in a FileManagerAjaxSettings.
 
