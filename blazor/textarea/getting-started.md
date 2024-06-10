@@ -11,8 +11,6 @@ documentation: ug
 
 This section briefly explains about how to include [Blazor TextArea](https://www.syncfusion.com/blazor-components/blazor-textarea) component in your Blazor Server App and Blazor WebAssembly App using Visual Studio.
 
-To get start quickly with Blazor TextArea component, check on this [GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/TextArea) sample.
-
 ## Prerequisites
 
 * [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)

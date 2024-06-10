@@ -108,8 +108,6 @@ Add the Syncfusion Blazor TextArea component in the **~Pages/.razor** file. If a
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rjrJZMAtTozPjvlK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor TextArea Component](./images/blazor-TextArea.png)" %}
 
-N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/TextArea/BlazorWebApp).
-
 ## Floating label
 
 The floating label TextArea floats the label above the TextArea after focusing, or filled with value in the TextArea. The floating label TextArea can be created by using the [FloatLabelType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextArea.html#Syncfusion_Blazor_Inputs_SfTextArea_FloatLabelType) API.
