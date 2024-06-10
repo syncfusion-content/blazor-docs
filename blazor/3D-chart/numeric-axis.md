@@ -17,9 +17,9 @@ The numeric axis can be used to represent the numeric values of data in 3D chart
 
 @using Syncfusion.Blazor.Chart3D
 
-<SfChart3D>
+<SfChart3D WallColor="transparent" EnableRotation="true" RotationAngle="7" TiltAngle="10" Depth="100">
     <Chart3DSeriesCollection>
-        <Chart3DSeries DataSource="@Data" XName="XValue" YName="YValue">
+        <Chart3DSeries DataSource="@Data" XName="XValue" YName="YValue" ColumnSpacing="0.1">
         </Chart3DSeries>
     </Chart3DSeriesCollection>
 </SfChart3D>
@@ -55,11 +55,11 @@ The range of an axis will be calculated automatically based on the provided data
 
 @using Syncfusion.Blazor.Chart3D
 
-<SfChart3D>
-    <Chart3DPrimaryXAxis Minimum="5" Maximum="50" Interval="2"/>
+<SfChart3D WallColor="transparent" EnableRotation="true" RotationAngle="7" TiltAngle="10" Depth="100">
+    <Chart3DPrimaryXAxis Minimum="5" Maximum="75" Interval="10"/>
 
     <Chart3DSeriesCollection>
-        <Chart3DSeries DataSource="@Data" XName="XValue" YName="YValue"/>
+        <Chart3DSeries DataSource="@Data" XName="XValue" YName="YValue" ColumnSpacing="0.1"/>
     </Chart3DSeriesCollection>
 </SfChart3D>
 
@@ -105,11 +105,11 @@ When the `RangePadding` is set to **None**, the minimum and maximum of an ax
 
 @using Syncfusion.Blazor.Chart3D
 
-<SfChart3D>
+<SfChart3D WallColor="transparent" EnableRotation="true" RotationAngle="7" TiltAngle="10" Depth="100">
     <Chart3DPrimaryYAxis RangePadding="ChartRangePadding.None"/>
 
     <Chart3DSeriesCollection>
-        <Chart3DSeries DataSource="@Data" XName="XValue" YName="YValue"/>
+        <Chart3DSeries DataSource="@Data" XName="XValue" YName="YValue" ColumnSpacing="0.1"/>
     </Chart3DSeriesCollection>
 </SfChart3D>
 
@@ -144,11 +144,11 @@ When the `RangePadding` is set to **Round**, the minimum and maximum will be r
 
 @using Syncfusion.Blazor.Chart3D
 
-<SfChart3D>
+<SfChart3D WallColor="transparent" EnableRotation="true" RotationAngle="7" TiltAngle="10" Depth="100">
     <Chart3DPrimaryYAxis RangePadding="ChartRangePadding.Round"/>
 
     <Chart3DSeriesCollection>
-        <Chart3DSeries DataSource="@Data" XName="XValue" YName="YValue"/>
+        <Chart3DSeries DataSource="@Data" XName="XValue" YName="YValue" ColumnSpacing="0.1"/>
     </Chart3DSeriesCollection>
 </SfChart3D>
 
@@ -183,11 +183,11 @@ When the `RangePadding` is set to **Additional**, interval of an axis will be
 
 @using Syncfusion.Blazor.Chart3D
 
-<SfChart3D>
+<SfChart3D WallColor="transparent" EnableRotation="true" RotationAngle="7" TiltAngle="10" Depth="100">
     <Chart3DPrimaryYAxis RangePadding="ChartRangePadding.Additional"/>
 
     <Chart3DSeriesCollection>
-        <Chart3DSeries DataSource="@Data" XName="XValue" YName="YValue"/>
+        <Chart3DSeries DataSource="@Data" XName="XValue" YName="YValue" ColumnSpacing="0.1"/>
     </Chart3DSeriesCollection>
 </SfChart3D>
 
@@ -222,11 +222,11 @@ When the `RangePadding` is set to **Normal**, padding is applied to the axis 
 
 @using Syncfusion.Blazor.Chart3D
 
-<SfChart3D>
+<SfChart3D WallColor="transparent" EnableRotation="true" RotationAngle="7" TiltAngle="10" Depth="100">
     <Chart3DPrimaryYAxis RangePadding="ChartRangePadding.Normal"/>
 
     <Chart3DSeriesCollection>
-        <Chart3DSeries DataSource="@Data" XName="XValue" YName="YValue"/>
+        <Chart3DSeries DataSource="@Data" XName="XValue" YName="YValue" ColumnSpacing="0.1"/>
     </Chart3DSeriesCollection>
 </SfChart3D>
 
@@ -261,12 +261,12 @@ When the `RangePadding` is set to **Auto**, horizontal numeric axis takes **N
 
 @using Syncfusion.Blazor.Chart3D
 
-<SfChart3D>
+<SfChart3D WallColor="transparent" EnableRotation="true" RotationAngle="7" TiltAngle="10" Depth="100">
     <Chart3DPrimaryYAxis RangePadding="ChartRangePadding.Auto"/>
     <Chart3DPrimaryXAxis RangePadding="ChartRangePadding.Auto"/>
 
     <Chart3DSeriesCollection>
-        <Chart3DSeries DataSource="@Data" XName="XValue" YName="YValue"/>
+        <Chart3DSeries DataSource="@Data" XName="XValue" YName="YValue" ColumnSpacing="0.1"/>
     </Chart3DSeriesCollection>
 </SfChart3D>
 
@@ -303,7 +303,7 @@ Numeric labels can be formatted by using the `LabelFormat` property. Also, it s
 
 @using Syncfusion.Blazor.Chart3D
 
-<SfChart3D Title="Sales Comparison">
+<SfChart3D Title="Sales Comparison" WallColor="transparent" EnableRotation="true" RotationAngle="7" TiltAngle="10" Depth="100">
     <Chart3DPrimaryYAxis LabelFormat="c"/>    
 
     <Chart3DSeriesCollection>
@@ -408,15 +408,9 @@ To separate groups of thousands for numerical values, use the `UseGroupingSepara
 
 @using Syncfusion.Blazor.Chart3D
 
-<SfChart3D UseGroupingSeparator="true">
-    <Chart3DArea><Chart3DAreaBorder Width="0" /></Chart3DArea>
+<SfChart3D UseGroupingSeparator="true" WallColor="transparent" EnableRotation="true" RotationAngle="7" TiltAngle="10" Depth="100">
     <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Chart3D.ValueType.DateTimeCategory" LabelFormat="MMM yyyy" IntervalType="IntervalType.Months" EdgeLabelPlacement="EdgeLabelPlacement.Shift">
-        <Chart3DAxisMajorGridLines Width="0" />
     </Chart3DPrimaryXAxis>
-    <Chart3DPrimaryYAxis>
-        <Chart3DAxisLineStyle Width="0" />
-        <Chart3DAxisMajorTickLines Width="0" />
-    </Chart3DPrimaryYAxis>
     <Chart3DTooltipSettings Enable="true" />
     <Chart3DSeriesCollection>
         <Chart3DSeries DataSource="@Data" Name="Test" XName="PrdDate" YName="Amount">
@@ -439,7 +433,7 @@ To separate groups of thousands for numerical values, use the `UseGroupingSepara
         new Chart3DData { PrdDate = new DateTime(2021,04,01), Amount = 6000 },
         new Chart3DData { PrdDate = new DateTime(2021,05,01), Amount = 2000 },
         new Chart3DData { PrdDate = new DateTime(2021,06,01), Amount = 3000 },
-        new Chart3DData { PrdDate = new DateTime(2021,07,01), Amount = 8000 },
+        new Chart3DData { PrdDate = new DateTime(2021,07,01), Amount = 8000 }
     };
 }
 
@@ -455,14 +449,10 @@ Axis also supports custom label format using placeholders such as {value}K, wher
 
 @using Syncfusion.Blazor.Chart3D
 
-<SfChart3D UseGroupingSeparator="true">
-    <Chart3DArea><Chart3DAreaBorder Width="0" /></Chart3DArea>
-    <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Chart3D.ValueType.DateTimeCategory" LabelFormat="MMM yyyy" IntervalType="IntervalType.Months" EdgeLabelPlacement="EdgeLabelPlacement.Shift">
-        <Chart3DAxisMajorGridLines Width="0" />
+ <SfChart3D WallColor="transparent" EnableRotation="true" RotationAngle="7" TiltAngle="10" Depth="100">
+    <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Chart3D.ValueType.DateTime" IntervalType="IntervalType.Months" EdgeLabelPlacement="EdgeLabelPlacement.Shift">
     </Chart3DPrimaryXAxis>
-    <Chart3DPrimaryYAxis>
-        <Chart3DAxisLineStyle Width="0" />
-        <Chart3DAxisMajorTickLines Width="0" />
+    <Chart3DPrimaryYAxis LabelFormat="${value}K">
     </Chart3DPrimaryYAxis>
     <Chart3DTooltipSettings Enable="true" />
     <Chart3DSeriesCollection>
@@ -486,7 +476,7 @@ Axis also supports custom label format using placeholders such as {value}K, wher
         new Chart3DData { PrdDate = new DateTime(2021,04,01), Amount = 6000 },
         new Chart3DData { PrdDate = new DateTime(2021,05,01), Amount = 2000 },
         new Chart3DData { PrdDate = new DateTime(2021,06,01), Amount = 3000 },
-        new Chart3DData { PrdDate = new DateTime(2021,07,01), Amount = 8000 },
+        new Chart3DData { PrdDate = new DateTime(2021,07,01), Amount = 8000 }
     };
 }
 

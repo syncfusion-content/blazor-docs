@@ -98,7 +98,7 @@ Range of an axis will be calculated automatically based on the provided data. Yo
 @using Syncfusion.Blazor.Chart3D
 
 <SfChart3D WallColor="transparent" EnableRotation="true" RotationAngle="7" TiltAngle="10" Depth="100">
-    <Chart3DPrimaryXAxis IntervalType="IntervalType.Years" ValueType="Syncfusion.Blazor.Chart3D.ValueType.DateTime">
+    <Chart3DPrimaryXAxis Interval="1" Minimum="@minimum" Maximum="@maximum" ValueType="Syncfusion.Blazor.Chart3D.ValueType.DateTime">
     </Chart3DPrimaryXAxis>
     <Chart3DSeriesCollection>
         <Chart3DSeries DataSource="@WeatherReports" XName="XValue" YName="YValue">
@@ -106,22 +106,24 @@ Range of an axis will be calculated automatically based on the provided data. Yo
     </Chart3DSeriesCollection>
 </SfChart3D>
 
-@code{
+@code {
+    public DateTime minimum = new DateTime(2000, 3, 1);
+    public DateTime maximum = new DateTime(2010, 10, 1);
     public class Chart3DData
     {
-        public DateTime XValue { get; set;}
-        public double YValue {get; set;}
+        public DateTime XValue { get; set; }
+        public double YValue { get; set; }
     }
-	
+
     public List<Chart3DData> WeatherReports = new List<Chart3DData>
-	{
-		new Chart3DData { XValue = new DateTime(2000, 4, 1), YValue = 21 },
-		new Chart3DData { XValue = new DateTime(2002, 5, 1), YValue = 24 },
-		new Chart3DData { XValue = new DateTime(2004, 6, 1), YValue = 36 },
-		new Chart3DData { XValue = new DateTime(2006, 7, 1), YValue = 38 },
-		new Chart3DData { XValue = new DateTime(2008, 8, 1), YValue = 46 },
-		new Chart3DData { XValue = new DateTime(2010, 9, 1), YValue = 28 }
-	};
+    {
+        new Chart3DData { XValue = new DateTime(2000, 4, 1), YValue = 21 },
+        new Chart3DData { XValue = new DateTime(2002, 5, 1), YValue = 24 },
+        new Chart3DData { XValue = new DateTime(2004, 6, 1), YValue = 36 },
+        new Chart3DData { XValue = new DateTime(2006, 7, 1), YValue = 38 },
+        new Chart3DData { XValue = new DateTime(2008, 8, 1), YValue = 46 },
+        new Chart3DData { XValue = new DateTime(2010, 9, 1), YValue = 28 }
+    };
 }
 
 ```
@@ -201,25 +203,21 @@ When the `RangePadding` is set to **None**, the minimum and maximum of the a
     </Chart3DSeriesCollection>
 </SfChart3D>
 
-@code{
+@code {
     public class Chart3DData
     {
         public DateTime XValue { get; set; }
         public double YValue { get; set; }
     }
-	
+
     public List<Chart3DData> WeatherReports = new List<Chart3DData>
-	{
-		new Chart3DData { XValue = new DateTime(2017, 11, 20), YValue = 21 },
-		new Chart3DData { XValue = new DateTime(2017, 11, 21), YValue = 24 },
+    {
+        new Chart3DData { XValue = new DateTime(2017, 11, 20), YValue = 21 },
+        new Chart3DData { XValue = new DateTime(2017, 11, 21), YValue = 24 },
         new Chart3DData { XValue = new DateTime(2017, 11, 22), YValue = 24 },
-		new Chart3DData { XValue = new DateTime(2017, 11, 26), YValue = 70 },
-		new Chart3DData { XValue = new DateTime(2017, 11, 27), YValue = 75 }, 
-		new Chart3DData { XValue = new DateTime(2018, 01, 02), YValue = 82 },
-		new Chart3DData { XValue = new DateTime(2018, 01, 03), YValue = 53 }, 
-		new Chart3DData { XValue = new DateTime(2018, 01, 04), YValue = 54 },
-		new Chart3DData { XValue = new DateTime(2018, 01, 05), YValue = 53 }, 
-		new Chart3DData { XValue = new DateTime(2018, 01, 08), YValue = 45 }
+        new Chart3DData { XValue = new DateTime(2017, 11, 26), YValue = 70 },
+        new Chart3DData { XValue = new DateTime(2017, 11, 27), YValue = 75 },
+        new Chart3DData { XValue = new DateTime(2017, 11, 29), YValue = 82 }
     };
 }
 
@@ -256,15 +254,11 @@ When the `RangePadding` is set to `Round`, minimum and maximum will be rounded t
     public List<Chart3DData> WeatherReports = new List<Chart3DData>
 	{
 		new Chart3DData { XValue = new DateTime(2017, 11, 20), YValue = 21 },
-		new Chart3DData { XValue = new DateTime(2017, 11, 21), YValue = 24 },
+        new Chart3DData { XValue = new DateTime(2017, 11, 21), YValue = 24 },
         new Chart3DData { XValue = new DateTime(2017, 11, 22), YValue = 24 },
-		new Chart3DData { XValue = new DateTime(2017, 11, 26), YValue = 70 },
-		new Chart3DData { XValue = new DateTime(2017, 11, 27), YValue = 75 }, 
-		new Chart3DData { XValue = new DateTime(2017, 12, 02), YValue = 82 },
-		new Chart3DData { XValue = new DateTime(2017, 12, 03), YValue = 53 }, 
-		new Chart3DData { XValue = new DateTime(2017, 12, 04), YValue = 54 },
-		new Chart3DData { XValue = new DateTime(2017, 12, 05), YValue = 53 }, 
-		new Chart3DData { XValue = new DateTime(2017, 12, 08), YValue = 45 }
+        new Chart3DData { XValue = new DateTime(2017, 11, 26), YValue = 70 },
+        new Chart3DData { XValue = new DateTime(2017, 11, 27), YValue = 75 },
+        new Chart3DData { XValue = new DateTime(2017, 11, 29), YValue = 82 }
     };                                             
 }
 
@@ -298,18 +292,14 @@ When the `RangePadding` property is set to **Additional**, the interval of an ax
     }
 	
     public List<Chart3DData> WeatherReports = new List<Chart3DData>
-	{
-		new Chart3DData { XValue = new DateTime(2017, 11, 20), YValue = 21 },
-		new Chart3DData { XValue = new DateTime(2017, 11, 21), YValue = 24 },
+    {
+        new Chart3DData { XValue = new DateTime(2017, 11, 20), YValue = 21 },
+        new Chart3DData { XValue = new DateTime(2017, 11, 21), YValue = 24 },
         new Chart3DData { XValue = new DateTime(2017, 11, 22), YValue = 24 },
-		new Chart3DData { XValue = new DateTime(2017, 11, 26), YValue = 70 },
-		new Chart3DData { XValue = new DateTime(2017, 11, 27), YValue = 75 }, 
-		new Chart3DData { XValue = new DateTime(2017, 12, 02), YValue = 82 },
-		new Chart3DData { XValue = new DateTime(2017, 12, 03), YValue = 53 }, 
-		new Chart3DData { XValue = new DateTime(2017, 12, 04), YValue = 54 },
-		new Chart3DData { XValue = new DateTime(2017, 12, 05), YValue = 53 }, 
-		new Chart3DData { XValue = new DateTime(2017, 12, 08), YValue = 45 }
-    };                                             
+        new Chart3DData { XValue = new DateTime(2017, 11, 26), YValue = 70 },
+        new Chart3DData { XValue = new DateTime(2017, 11, 27), YValue = 75 },
+        new Chart3DData { XValue = new DateTime(2017, 11, 29), YValue = 82 }
+    };                                            
 }
 
 ```

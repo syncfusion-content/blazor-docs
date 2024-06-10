@@ -102,18 +102,18 @@ The data points can be grouped in the bar type charts by using the `GroupName` p
 
 @using Syncfusion.Blazor.Chart3D
 
-<SfChart3D WallColor="transparent" EnableRotation="true" RotationAngle="7" TiltAngle="10" Depth="100">
+<SfChart3D EnableSideBySidePlacement="false" RotationAngle="-12" Depth="250" TiltAngle="15">
     <Chart3DPrimaryXAxis ValueType="@Syncfusion.Blazor.Chart3D.ValueType.Category">
     </Chart3DPrimaryXAxis>
     <Chart3DSeriesCollection>
-        <Chart3DSeries DataSource="@Chart3DPoints" XName="Year" YName="USA_Total" GroupName="USA" ColumnWidth="0.7" ColumnSpacing="0.1" Type="Chart3DSeriesType.Bar"></Chart3DSeries>
-        <Chart3DSeries DataSource="@Chart3DPoints" XName="Year" YName="USA_Gold" GroupName="USA" ColumnWidth="0.5" ColumnSpacing="0.1" Type="Chart3DSeriesType.Bar"></Chart3DSeries>
-        <Chart3DSeries DataSource="@Chart3DPoints" XName="Year" YName="UK_Total" GroupName="UK" ColumnWidth="0.7" ColumnSpacing="0.1" Type="Chart3DSeriesType.Bar"></Chart3DSeries>
-        <Chart3DSeries DataSource="@Chart3DPoints" XName="Year" YName="UK_Gold" GroupName="UK" ColumnWidth="0.5" ColumnSpacing="0.1" Type="Chart3DSeriesType.Bar"></Chart3DSeries>
+        <Chart3DSeries DataSource="@Chart3DPoints" XName="Year" YName="USA_Total" GroupName="USA" Type="Chart3DSeriesType.Bar" ColumnWidth="0.2" Fill="#CB3587"></Chart3DSeries>
+        <Chart3DSeries DataSource="@Chart3DPoints" XName="Year" YName="USA_Gold" GroupName="USA" Type="Chart3DSeriesType.Bar" ColumnWidth="0.2"></Chart3DSeries>
+        <Chart3DSeries DataSource="@Chart3DPoints" XName="Year" YName="UK_Total" GroupName="UK" Type="Chart3DSeriesType.Bar" ColumnWidth="0.2"></Chart3DSeries>
+        <Chart3DSeries DataSource="@Chart3DPoints" XName="Year" YName="UK_Gold" GroupName="UK" Type="Chart3DSeriesType.Bar" ColumnWidth="0.2" Fill="#E7910F"></Chart3DSeries>
     </Chart3DSeriesCollection>
 </SfChart3D>
 
-@code{
+@code {
     public class ColumnData
     {
         public string Year { get; set; }
@@ -192,7 +192,7 @@ The following properties can be used to customize the `Bar` series.
     </Chart3DPrimaryXAxis>
 
     <Chart3DSeriesCollection>
-        <Chart3DSeries DataSource="@MedalDetails" XName="Country" YName="Gold" Fill="red" Type="Chart3DSeriesType.Column" />
+        <Chart3DSeries DataSource="@MedalDetails" XName="Country" YName="Gold" Fill="#0364DE" Type="Chart3DSeriesType.Bar" />
     </Chart3DSeriesCollection>
 </SfChart3D>
 

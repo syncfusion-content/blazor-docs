@@ -273,7 +273,7 @@ To select a point or series through legend use the `ToggleVisibility` property. 
 
 @using Syncfusion.Blazor.Chart3D
 
-<SfChart3D Title="Olympic Medals" SelectionMode="SelectionMode.Point" WallColor="transparent" EnableRotation="true" RotationAngle="7" TiltAngle="10" Depth="100">
+<SfChart3D Title="Olympic Medals" WallColor="transparent" EnableRotation="true" RotationAngle="7" TiltAngle="10" Depth="100">
     <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Chart3D.ValueType.Category">
     </Chart3DPrimaryXAxis>
     <Chart3DSeriesCollection>
@@ -281,7 +281,7 @@ To select a point or series through legend use the `ToggleVisibility` property. 
         <Chart3DSeries DataSource="@MedalDetails" Name="Silver" XName="Country" YName="Silver" Type="Chart3DSeriesType.Column"></Chart3DSeries>
         <Chart3DSeries DataSource="@MedalDetails" Name="Bronze" XName="Country" YName="Bronze" Type="Chart3DSeriesType.Column"></Chart3DSeries>
     </Chart3DSeriesCollection>
-    <Chart3DLegendSettings Visible="true" ToggleVisibility="false"></Chart3DLegendSettings>
+    <Chart3DLegendSettings Visible="true" ToggleVisibility="false" EnableHighlight="true"></Chart3DLegendSettings>
 </SfChart3D>
 
 @code{
