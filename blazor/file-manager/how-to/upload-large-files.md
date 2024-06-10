@@ -44,3 +44,5 @@ To handle large file uploads on the server side, you can also configure the file
 </configuration>
 
 ```
+
+N> The above-mentioned configuration is only applicable for running a separate service, as well as when your Blazor Sample with Service is the same application running on IIS Express.

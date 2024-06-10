@@ -13,7 +13,7 @@ To perform a download operation in Syncfusion Blazor FileManager component from 
 
 **Step 1:** Create a `File Manager` Sample in blazor
 
-Start by following the steps provided in this link to create a simple `SfPdfViewer` sample in blazor. To perform the download operation, initialize the [Url](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerAjaxSettings.html#Syncfusion_Blazor_FileManager_FileManagerAjaxSettings_Url) property in a FileManagerAjaxSettings.
+Start by following the steps provided in this link to create a simple `File Manager` sample in blazor. To perform the download operation, initialize the [Url](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerAjaxSettings.html#Syncfusion_Blazor_FileManager_FileManagerAjaxSettings_Url) property in a FileManagerAjaxSettings.
 
 {% tabs %}
 {% highlight razor %}

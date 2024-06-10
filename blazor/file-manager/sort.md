@@ -382,6 +382,6 @@ namespace FileManager.Data
 {% endhighlight %}
 {% endtabs %}
 
-![custom sorting](images/blazor-filemanager-largeicons-custom-sorting.png)
+![custom sorting in large icons view](images/blazor-filemanager-largeicons-custom-sorting.png)
 
-![custom sorting](images/blazor-filemanager-detailsview-custom-sorting.png)
+![custom sorting in details view](images/blazor-filemanager-detailsview-custom-sorting.png)
