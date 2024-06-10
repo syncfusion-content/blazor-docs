@@ -460,12 +460,33 @@ You can find the full information regarding Predecessors from [here](https://bla
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hZrTDWLOAOhAyPxe?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Handling exceptions
-Exceptions that occur during Gantt actions can be handled without stopping the application. These error messages or exception details can be acquired using the [OnActionFailure](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_OnActionFailure) event.
+In [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart), exception handling plays a crucial role in identifying errors, displaying error messages, and devising recovery strategies. Access error messages and exception details via the [OnActionFailure](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_OnActionFailure) event.
 
-The argument passed to the [OnActionFailure](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_OnActionFailure)event contains the error details returned from the server.
+Here are some common errors and their resolutions:
+
+* [ResourceFields](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_ResourceFields) are not properly configured, which is crucial for the Resource View. Please ensure that the resource fields are configured correctly.
+To resolve the issue where users fail to map the [ResourceFields](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_ResourceFields) configuration, follow these steps:
+Navigate to the [Resource-view](https://blazor.syncfusion.com/documentation/gantt-chart/resource-view).
+Refer to the guidelines provided for configuring ResourceFields.
+
+* [GanttTaskFields](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_TaskFields) are not configured properly. The task fields are crucial for both the project and resource views to function properly. Please ensure that the gantt task fields are properly configured.
+To resolve the issue where users fail to map the [GanttTaskFields](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_TaskFields) configuration, follow these steps:
+Navigate to the [Hierarchical-data-binding](https://blazor.syncfusion.com/documentation/gantt-chart/data-binding#hierarchical-data-binding).
+Refer to the guidelines provided for configuring GanttTaskFields.
+
+* [HasChildMapping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTaskFields.html#Syncfusion_Blazor_Gantt_GanttTaskFields_HasChildMapping) property is not configured for load-on-demand. Please ensure its properly configured in the [GanttTaskFields](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_TaskFields).
+To resolve the issue where users fail to map the [HasChildMapping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTaskFields.html#Syncfusion_Blazor_Gantt_GanttTaskFields_HasChildMapping) property in GanttTaskFields configuration.
+Navigate to the [Load-child-on-demand](https://blazor.syncfusion.com/documentation/gantt-chart/data-binding#load-child-on-demand).
+Refer to the guidelines provided for configuring GanttTaskFields.
+
+* [GanttSegmentFields.StartDate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttSegmentFields-2.html#Syncfusion_Blazor_Gantt_GanttSegmentFields_2_StartDate) is not configured properly in the [GanttSegmentFields](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttSegmentFields-2.html). This field is crucial for task segmentation. Please ensure that the SegmentFields.StartDate field is correctly configured to enable task splitting in the Gantt chart.
+To resolve the issue where users fail to map the [StartDate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttSegmentFields-2.html#Syncfusion_Blazor_Gantt_GanttSegmentFields_2_StartDate) property in GanttAssignmentFields configuration.
+Navigate to the [Split-task](https://blazor.syncfusion.com/documentation/gantt-chart/split-task) .
+Refer to the guidelines provided for configuring GanttSegmentFields.
+
+The argument passed to the [OnActionFailure](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_OnActionFailure)   event contains the error details returned from the server.
 
 N> We recommend you bind the `OnActionFailure` event during your application development phase, this helps you to find any exceptions. You can pass these exception details to our support team to get a solution as early as possible.
-
 
 The following sample code demonstrates notifying user when server-side exception has occurred during data operation,
 
