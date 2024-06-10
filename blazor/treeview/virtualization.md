@@ -9,14 +9,13 @@ documentation: ug
 
 # Virtualization in Blazor TreeView Component
 
-The TreeView has been provided UI virtualization support to improve the UI performance for a large amount of data when [EnableVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_EnableVirtualization) is true. This feature initially gathers all the data, but doesn’t render out the entire data source on initial rendering. It loads the N number of items in the initial rendering and the remaining set number of items will load on each scrolling action in the TreeView container. To setup the virtualization, define the [EnableVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_EnableVirtualization) as true and content height by [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_Height) property.
+The TreeView has been provided UI virtualization support to improve the UI performance for a large amount of data when [EnableVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_EnableVirtualization) is true. This feature initially gathers all the data, but doesn’t render out the entire data source on initial rendering. It loads the N number of items in the initial rendering and the remaining set number of items will load on each scrolling action in the TreeView container. To setup the virtualization, define the [EnableVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_EnableVirtualization) as true and TreeView container height by [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_Height) property.
 
 The following sample shows the example of Virtualization.
 
 ```cshtml
-
 @using Syncfusion.Blazor.Navigations
-<div class="control-section"> 
+<div class="control-section">
     <div class="control_wrapper">
         @*Initialize the TreeView component*@
         <SfTreeView TValue="TreeData" EnableVirtualization="true" Height="400">
@@ -61,18 +60,16 @@ The following sample shows the example of Virtualization.
     protected override void OnInitialized()
     {
         base.OnInitialized();
-        List<TreeData> tempData1 = TreeDataSource?.ToList();
-        for (int i = 1; i <= TreeDataSource.Count; i++)
+        for (int i = 1; i <= 5; i++)
         {
-            List<TreeData> tempData = Enumerable.Range(0, 5000)
+            List<TreeData> TreeViewData = Enumerable.Range(0, 5000)
             .Select(j =>
             {
                 count++;
                 return new TreeData { Id = i.ToString() + "-" + j.ToString(), Name = DefaultData[j % DefaultData.Count].Name + " - " + count.ToString(), Pid = i.ToString() };
             }).ToList();
-            tempData1.AddRange(tempData);
+            TreeDataSource.AddRange(TreeViewData);
         }
-        TreeDataSource = tempData1.ToList();
     }
     class TreeData
     {
@@ -83,16 +80,6 @@ The following sample shows the example of Virtualization.
         public string Name { get; set; }
     }
 }
-<style>
-    /* Sample specific styles */
-    .control_wrapper {
-        max-width: 500px;
-        margin: auto;
-        border: 1px solid #dddddd;
-        border-radius: 3px;
-        max-height: 420px;
-    }
-</style>
 ```
 
 ![Blazor TreeView with virtualization](./images/virtualization.gif)
