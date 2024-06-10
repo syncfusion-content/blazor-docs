@@ -438,7 +438,7 @@ app.Run();
 
 {% endhighlight %}
 
-{% highlight c# tabtitle=".NET 8 (~/Program.cs)" hl_lines="4 6 7 8 9 10 13 16 17 18 19 20 21 22 23 34" %}
+{% highlight c# tabtitle=".NET 8 (~/Program.cs)" hl_lines="4 6 7 8 9 10 13 24" %}
 
 builder.Services.AddControllers();
 
@@ -612,7 +612,7 @@ Add the `CultureSwitcher` component to `Shared/MainLayout.razor` to enable the c
 
 {% tabs %}
 
-{% highlight razor tabtitle=".NET 6 & .NET 7 (Shared/MainLayout.razor)%}
+{% highlight razor tabtitle=".NET 6 & .NET 7 (Shared/MainLayout.razor)" %}
 
 <div class="page">
     <div class="sidebar">
@@ -633,11 +633,24 @@ Add the `CultureSwitcher` component to `Shared/MainLayout.razor` to enable the c
 
 {% endhighlight %}
 
-{% highlight razor tabtitle=".NET 8 (Components/Layout/NavMenu.razor)" %}
+{% highlight razor tabtitle=".NET 8 (Components/Layout/MainLayout.razor)" %}
 
- <div class="nav-item px-3">
+ <div class="page">
+    <div class="sidebar">
+        <NavMenu />
+    </div>
+
+    <main>
+        <div class="top-row px-4">
             <CultureSwitcher></CultureSwitcher>
- </div>
+            <a href="https://learn.microsoft.com/aspnet/core/" target="_blank">About</a>
+        </div>
+
+        <article class="content px-4">
+            @Body
+        </article>
+    </main>
+</div>
         
 {% endhighlight %}
 

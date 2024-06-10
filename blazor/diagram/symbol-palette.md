@@ -667,7 +667,7 @@ The following code example illustrates how to provide the custom tooltip for nod
 ```csharp
 @using Syncfusion.Blazor.Diagram
 @using Syncfusion.Blazor.Diagram.SymbolPalette
-
+@using Syncfusion.Blazor.Popups
 <div class="control-section">
     <div style="width:20%">
         <div id="palette-space" class="sb-mobile-palette" style="border: 2px solid #b200ff">
@@ -681,7 +681,13 @@ The following code example illustrates how to provide the custom tooltip for nod
 @code
 {
     SfSymbolPaletteComponent SymbolPalette;
-
+    SymbolMargin SymbolMargin = new SymbolMargin
+    {
+        Left = 15,
+        Right = 15,
+        Top = 15,
+        Bottom = 15
+    };
     //Define palettes collection.
     DiagramObjectCollection<Palette> Palettes = new DiagramObjectCollection<Palette>();
 
@@ -732,7 +738,7 @@ When you define custom tooltip to the symbol then same tooltip will be displayed
 ```csharp
 @using Syncfusion.Blazor.Diagram
 @using Syncfusion.Blazor.Diagram.SymbolPalette
-
+@using Syncfusion.Blazor.Popups
 <div class="control-section">    
     <div style="width: 100%">
         <div class="sb-mobile-palette-bar">
@@ -765,6 +771,8 @@ When you define custom tooltip to the symbol then same tooltip will be displayed
     SfSymbolPaletteComponent SymbolPalette;
     //Define nodes collection.
     DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    //Define connectors collection.
+    DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
     //Define palettes collection.
     DiagramObjectCollection<Palette> Palettes = new DiagramObjectCollection<Palette>();
     // Defines palette's flow-shape collection.
@@ -1135,7 +1143,7 @@ While adding more symbols such as nodes and connectors to the palette, define th
     DiagramObjectCollection<NodeBase> PaletteNodes = new DiagramObjectCollection<NodeBase>();
      public void OnNodeCreating(IDiagramObject args)
     { 
-        Node node = obj as Node;
+        Node node = args as Node;
         node.Style.Fill = "#357BD2";
         node.Style.StrokeColor = "White";
         node.Style.Opacity = 1;
@@ -1143,7 +1151,7 @@ While adding more symbols such as nodes and connectors to the palette, define th
 
     public void OnConnectorCreating(IDiagramObject args)
     { 
-        Connector connector = obj as Connector;
+        Connector connector = args as Connector;
         connector.Style.Fill = "black";
         connector.Style.StrokeColor = "black";
         connector.Style.Opacity = 1;
