@@ -1,20 +1,15 @@
 ---
 layout: post
-title: Drag and Drop in Blazor QueryBuilder Component | Syncfusion
-description: Checkout and learn here all about Drag and Drop in Syncfusion Blazor QueryBuilder component and much more.
+title: Drag and drop in Blazor QueryBuilder Component | Syncfusion
+description: Checkout and learn here all about Drag and drop in Syncfusion Blazor QueryBuilder component and much more.
 platform: Blazor
 control: QueryBuilder
 documentation: ug
 ---
 
-# Drag and Drop in Blazor QueryBuilder Component
+# Drag and drop in Blazor QueryBuilder Component
 
-The [Blazor Query Builder](https://www.syncfusion.com/blazor-components/blazor-query-builder) functionality extends to cloning both individual rules and entire groups. Utilizing the Clone options will generate an exact duplicate of a rule or group adjacent to the original one. This feature enables users to replicate complex query structures effortlessly. The [ShowButtons](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.QueryBuilderShowButtons.html) function offers users the ability to toggle the visibility of these cloning buttons, providing convenient control over the cloning process within the Query Builder interface.
-
-You can `clone` groups and rules by interacting through the user interface and methods.
-
-* Use the [CloneGroup](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder-1.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_1_CloneGroup_System_String_System_Int32_) method to clone group.
-* Use [CloneRule](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder-1.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_1_CloneRule_System_String_System_Int32_) method to clone rule.
+The [Blazor Query Builder](https://www.syncfusion.com/blazor-components/blazor-query-builder) provides the functionality to reposition rules or groups within the component effortlessly. This enhancement provides a more intuitive and flexible way to construct and modify queries. You can use [AllowDragAndDrop](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.QueryBuilderAllowDragAndDrop.html) to perform drag and drop functionality. And we have events support for drag and drop features that, indicates the [DragStart](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.QueryBuilderDragStart.html), [Drag](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.QueryBuilderDrag.html) and [Drop](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.QueryBuilderDrop.html) actions.
 
 ```cshtml
 @using Syncfusion.Blazor.QueryBuilder
@@ -67,6 +62,6 @@ You can `clone` groups and rules by interacting through the user interface and m
 
 ```
 
-![Drag and Drop in Blazor QueryBuilder](./images/drag-drop.png)
+![Drag and Drop in Blazor QueryBuilder](./images/drag-and-drop.png)
 
 N> You can also explore our [Blazor Query Builder example](https://blazor.syncfusion.com/demos/query-builder/default-functionalities?theme=bootstrap4) to know how to render and configure the query builder.
