@@ -1,13 +1,13 @@
 ---
 layout: post
-title: How to achieve common use cases using diagram methods and properties in Blazor Diagram Component | Syncfusion
-description: Checkout and learn here all about how to achieve common use cases using diagram methods and properties in Syncfusion Blazor Diagram component, it's elements and more.
+title: Common use cases in Blazor Diagram Component | Syncfusion
+description: Checkout and learn here all about how to achieve common use cases in Syncfusion Blazor Diagram component, it's elements and more.
 platform: Blazor
 control: DiagramComponent
 documentation: ug
 ---
 
-# How to achieve common use cases using diagram methods and properties in Blazor Diagram Component
+# How to achieve common use cases using diagram methods and properties
 
 The diagram functionalities are performed using the following methods and properties.
 
