@@ -734,6 +734,93 @@ The following code example illustrates how to set the connection padding value f
 }
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Customization/ConnectionPadding)
+
+### How to enable Connector Split
+
+Connectors are used to create links between two points, ports, or nodes to represent the relationships between them. By enabling the [EnableConnectorSplitting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_EnableConnectorSplitting) property, you can split a connector between two nodes when a new node is dropped onto the existing connector. This action creates a connection between the new node and the existing nodes.
+When a node is dropped on a point-to-point connection, it connects as the source for the target connector. Dropping another node on the target connector with only a source connection will connect the dropped node as its target, creating a complete connection. If a node is dropped on an existing node-to-node connection, the connector between the two nodes splits, creating a connection between the new node and the existing nodes.
+By default, [EnableConnectorSplitting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_EnableConnectorSplitting) is set to false.
+
+The following code illustrates how to enable connector splitting and create connections with a new node.
+```cshtml
+@using Syncfusion.Blazor.Diagram
+<SfDiagramComponent @ref="Diagram" Width="1000px" Height="500px" Nodes="@nodes" Connectors="@connectors" EnableConnectorSplitting="true">
+
+</SfDiagramComponent>
+@code {
+    //Reference the diagram
+    SfDiagramComponent Diagram;
+    // Initialize diagram's connector collection
+    DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+    // Initialize diagram's node collection
+    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    protected override void OnInitialized()
+    {
+        nodes = new DiagramObjectCollection<Node>() {
+          new Node() {  OffsetX = 100,
+            OffsetY = 100,
+            Height = 50,
+            Width = 100,
+            ID = "node1",
+            Style = new ShapeStyle(){ Fill = "#6495ED",
+                StrokeColor = "#6495ED",},
+            Shape = new BasicShape() { Type = NodeShapes.Basic, Shape = NodeBasicShapes.Rectangle }
+          },
+          new Node() {  OffsetX = 300,
+            OffsetY = 300,
+            Height = 50,
+            Width = 100,
+            ID = "node2",
+            Style = new ShapeStyle(){ Fill = "#6495ED",
+                StrokeColor = "#6495ED",},
+           Shape = new BasicShape() { Type = NodeShapes.Basic, Shape = NodeBasicShapes.Rectangle }
+          },
+          new Node() {  OffsetX = 300,
+            OffsetY = 100,
+            Height = 50,
+            Width = 100,
+            ID = "node3",
+            Style = new ShapeStyle(){ Fill = "#6495ED",
+                StrokeColor = "#6495ED",},
+           Shape = new BasicShape() { Type = NodeShapes.Basic, Shape = NodeBasicShapes.Rectangle }
+          }
+        };
+        Connector Connector = new Connector()
+            {
+                ID = "connector1",
+                //Source node id of the connector.
+                SourceID = "node1",
+                TargetDecorator = new DecoratorSettings()
+                {
+                    Style = new ShapeStyle()
+                    {
+                        Fill = "#6495ED",
+                        StrokeColor = "#6495ED",
+                    }
+                },
+                //Target node id of the connector.
+                TargetID = "node2",
+                Style = new ShapeStyle()
+                {
+                    Fill = "#6495ED",
+                    StrokeColor = "#6495ED",
+                },
+                // Type of the connector
+                Type = ConnectorSegmentType.Straight,
+                Constraints = ConnectorConstraints.Default | ConnectorConstraints.AllowDrop,
+            };
+        connectors.Add(Connector);
+    }
+}
+```
+![ConnectorSplitting](../images/ConnectorSplitDemo.gif)
+
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Interaction)
+
+>**Note:** The [AllowDrop](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ConnectorConstraints.html#Syncfusion_Blazor_Diagram_ConnectorConstraints_AllowDrop) constraints must be enabled for the connector to allow dropping a node.
+
+
+
 ## See also
 
 * [How to interact with the connector](./interactions)
