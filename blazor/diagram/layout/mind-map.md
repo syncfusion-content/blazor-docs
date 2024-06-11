@@ -164,6 +164,8 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ![Blazor Mind Map Diagram with Branches](../images/blazor-mind-map-diagram-with-branches.png)
 
+>**Note:** In the DataSourceSettings, the type of the ID and ParentID properties is string. The provided DataSource should have a parent-child relationship. It is necessary for at least one node to have an empty ParentID.
+
 Also, you can render a mind map layout without using Datasource. The following code demonstrates how to render a mind map layout without using DataSource.
 
 ```csharp
