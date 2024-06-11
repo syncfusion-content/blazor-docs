@@ -1,13 +1,13 @@
 ---
 layout: post
-title: EnableIndividualConditionsin Blazor QueryBuilder Component | Syncfusion
-description: Checkout and learn here all about EnableIndividualConditions in Syncfusion Blazor QueryBuilder component and much more.
+title: Separate Connector in Blazor QueryBuilder Component | Syncfusion
+description: Checkout and learn here all about Separate Connector in Syncfusion Blazor QueryBuilder component and much more.
 platform: Blazor
 control: QueryBuilder
 documentation: ug
 ---
 
-# EnableIndividualConditions in Blazor QueryBuilder Component
+# Separate Connector in Blazor QueryBuilder Component
 
 The [Blazor Query Builder](https://www.syncfusion.com/blazor-components/blazor-query-builder) provides the functionality to integrate standalone connectors between rules or groups within the same group. This allows for greater flexibility, as users can connect rules or groups using different connectors, enhancing the complexity and precision of query construction. You can use [EnableIndividualConditions](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.QueryBuilderEnableIndividualConditions.html) to perform separate connector functionality.
 
