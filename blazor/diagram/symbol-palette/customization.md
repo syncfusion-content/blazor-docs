@@ -609,7 +609,7 @@ The diagram provides support to cancel the node drop from symbol palette when th
 
 ![Escape key in symbol palette](../images/blazor-diagram-palette-escape-key.gif)
 
-## How to enable the Chunk Message
+## How to enable the chunk message
 
 In the Blazor Diagram component, it is essential to calculate the bounds of paths, text, images, and SVG data from the server to the JavaScript side using JsInterop calls. When processing large data sets (greater than 32KB for a single incoming hub message) in a single JS call, connection disconnect issues can occur. To address this, we have introduced the [EnableChunkMessages](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SymbolPalette.SfSymbolPaletteComponent.html#Syncfusion_Blazor_Diagram_SymbolPalette_SfSymbolPaletteComponent_EnableChunkMessages) property in the Symbol Palette component. This property allows large data to be sent in smaller chunks, thereby preventing connection disconnection issues. Chunk messages facilitate the measurement of paths, images, text, and SVG data without exceeding the maximum size limit for a single incoming hub message (MaximumReceiveMessageSize of 32KB). By default, the [EnableChunkMessages](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SymbolPalette.SfSymbolPaletteComponent.html#Syncfusion_Blazor_Diagram_SymbolPalette_SfSymbolPaletteComponent_EnableChunkMessages) property is set to `false`.
 
