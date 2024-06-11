@@ -47,7 +47,6 @@ Complex hierarchical tree layout arranges nodes in a tree-like structure, where 
         {
             new ShapeAnnotation 
             { 
-                Content = node.Annotations[0].Content,
                 Style = new TextStyle() { Color = "white", Bold = true }, 
             }
         };
@@ -156,6 +155,8 @@ The following code example illustrates how to create a complex hierarchical tree
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Layout/LineDistribution)
 
 ![Blazor Complex Hierarchical Diagram](../images/blazor-diagram-samepoint.png)
+
+>**Note:** In the DataSourceSettings, the type of the ID and ParentID properties is string. The provided DataSource should have a parent-child relationship. It is necessary for at least one node to have an empty ParentID.
 
 ### How to enable/disable linear arrangement
 
