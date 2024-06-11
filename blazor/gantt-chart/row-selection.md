@@ -220,7 +220,3 @@ You can select multiple rows by setting the `SelectionSettings.Type` property to
 ```
 
 ![Multiple Row Selection in Blazor Gantt Chart](images/blazor-gantt-chart-multi-row-selection.png)
-
-
-
-

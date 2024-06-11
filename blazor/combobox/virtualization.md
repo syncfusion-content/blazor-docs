@@ -13,38 +13,27 @@ The ComboBox component includes a virtual scrolling feature designed to enhance 
 
 This feature is applicable to both local and remote data scenarios, providing flexibility in its implementation. For instance, consider a case where the ComboBox is bound to a dataset containing 150 items. Upon opening the dropdown, only a few items are loaded initially, based on the height of the popup. As you scroll through the list, additional items are fetched and loaded on-demand, allowing you to effortlessly explore the complete dataset.
 
+## Local data
 
-```cshtml
+{% highlight cshtml %}
 
-@using Syncfusion.Blazor.DropDowns
-@using Syncfusion.Blazor.Data
+{% include_relative code-snippet/virtualization/local-data.razor %}
 
-<SfComboBox TValue="string" TItem="Record" Placeholder="Select an item" DataSource="@Records" Query="@LocalDataQuery" PopupHeight="130px" EnableVirtualization="true">
-    <ComboBoxFieldSettings Text="Text" Value="ID"></ComboBoxFieldSettings>
-</SfComboBox>
-
-@code{
-    public Query LocalDataQuery = new Query().Take(6); 
-    public class Record 
-    { 
-        public string ID { get; set; } 
-        public string Text { get; set; } 
-    } 
-    public List<Record> Records { get; set; } 
-    protected override void OnInitialized()
-    { 
-        this.Records = Enumerable.Range(1, 150).Select(i => new Record() 
-        { 
-            ID = i.ToString(), 
-            Text = "Item " + i, 
-        }).ToList(); 
-    } 
-}
-```
+{% endhighlight %}
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rXBgCVBQqlgGofzc?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor ComboBox with virtualization](./images/blazor_combobox_virtualization.gif)
+
+## Remote data
+
+{% highlight cshtml %}
+
+{% include_relative code-snippet/virtualization/remote-data.razor %}
+
+{% endhighlight %}
+
+![Blazor ComboBox with virtualization](./images/blazor_combobox_remote-data-virtualization.gif)
 
 ## Grouping with Virtualization
 
@@ -52,52 +41,11 @@ The Combobox component supports grouping with Virtualization. It allows you to o
 
 The following sample shows the example for Grouping with Virtualization.
 
-```cshtml
+{% highlight cshtml %}
 
-@using Syncfusion.Blazor.DropDowns
-@using Syncfusion.Blazor.Data
+{% include_relative code-snippet/virtualization/grouping-virtualization.razor %}
 
-<SfComboBox TValue="string" TItem="Record" Placeholder="e.g. Item 1" DataSource="@Records" Query="@LocalDataQuery" PopupHeight="130px" EnableVirtualization="true">
-    <ComboBoxFieldSettings Text="Text" Value="ID" GroupBy="Group" />
-</SfComboBox>
-
-@code{
-    public Query LocalDataQuery = new Query().Take(6); 
-    public class Record
-    {
-        public string ID { get; set; }
-        public string Text { get; set; }
-        public string Group { get; set; }
-    }
-    public List<Record> Records { get; set; } 
-    protected override void OnInitialized()
-    {
-        var random = new Random();
-        this.Records = Enumerable.Range(1, 150).Select(i => new Record()
-            {
-                ID = i.ToString(),
-                Text = "Item " + i,
-                Group = GetRandomGroup(random)
-            }).ToList();
-    }
-    private string GetRandomGroup(Random random)
-    {
-        switch (random.Next(1, 5))
-        {
-            case 1:
-                return "Group A";
-            case 2:
-                return "Group B";
-            case 3:
-                return "Group C";
-            case 4:
-                return "Group D";
-            default:
-                return string.Empty;
-        }
-    }
-}
-```
+{% endhighlight %}
 
 ## Keyboard interaction
 
