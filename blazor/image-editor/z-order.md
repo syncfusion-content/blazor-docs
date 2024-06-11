@@ -39,4 +39,4 @@ In the following example, you can use the `z-order` support.
 }
 ```
 
-![Blazor Image Editor with Opening an image](./images/blazor-image-editor-open.png)
+![Blazor Image Editor with Opening an image](./images/blazor-image-editor-z-order.png)
