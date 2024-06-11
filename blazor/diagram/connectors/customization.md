@@ -815,8 +815,6 @@ The following code illustrates how to split the connector and create a connectio
 
 >**Note:** The 'AllowDrop' constraints must be enabled for the connector to allow dropping a node.
 
-Similarly, when dropping a node onto the target connector, the node connection differs based on the state of the connection and we can create a new connection by dropping on the connector 
-
 ### Create connection using Connector splitting
 
 When a node is dropped on a point-to-point connection, the node gets connected as the source for the target connector.
