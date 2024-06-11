@@ -734,7 +734,6 @@ The following code example illustrates how to set the connection padding value f
 }
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Customization/ConnectionPadding)
-
 ## See also
 
 * [How to interact with the connector](./interactions)
