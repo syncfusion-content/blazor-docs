@@ -9,7 +9,7 @@ documentation: ug
 
 # Floating Label in Blazor TextArea Component
 
-The floating label functionality in the TextArea Component allows the placeholder text to float above the TextArea while the user interacts with it, providing a more intuitive user experience. This feature can be achieved using the [floatLabelType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextArea.html#Syncfusion_Blazor_Inputs_SfTextArea_FloatLabelType) API, which offers various options for defining the floating behavior:
+The floating label functionality in the TextArea Component allows the placeholder text to float above the TextArea while the user interacts with it, providing a more intuitive user experience. This feature can be achieved using the [FloatLabelType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextArea.html#Syncfusion_Blazor_Inputs_SfTextArea_FloatLabelType) API, which offers various options for defining the floating behavior:
 
 | Type  | Description |
 | -- | -- |
