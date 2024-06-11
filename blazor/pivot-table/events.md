@@ -118,7 +118,7 @@ To know more about this event, refer [here](./calculated-field#calculatedfieldcr
 
 ## CellClick
 
-The event [CellClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewEvents-1.html#Syncfusion_Blazor_PivotView_PivotViewEvents_1_CellClick) is triggered whenever a cell is clicked in the Pivot Table component. It has following parameters - [CurrentCell](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.CellClickEventArgs.html#Syncfusion_Blazor_PivotView_CellClickEventArgs_CurrentCell) and [Data](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.CellClickEventArgs.html#Syncfusion_Blazor_PivotView_CellClickEventArgs_Data). For instance, using this event end user can either add or remove CSS class name from the respective cell and also perform many other DOM manipulations.
+The [CellClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewEvents-1.html#Syncfusion_Blazor_PivotView_PivotViewEvents_1_CellClick) event is triggered whenever a cell in the Pivot Table component is clicked. This event has an argument named [Data](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.CellClickEventArgs.html#Syncfusion_Blazor_PivotView_CellClickEventArgs_Data). Using this event, end users may customize the information in the selected cell to their specific requirements.
 
 ```cshtml
 
@@ -142,6 +142,14 @@ The event [CellClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Pi
     <PivotViewEvents TValue="ProductDetails" CellClick="cellClick"></PivotViewEvents>
 </SfPivotView>
 
+<style>
+    .e-pivotview .e-custom {
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 12px !important;
+        background: pink !important;
+    }
+</style>
+
 @code{
     public List<ProductDetails> data { get; set; }
     protected override void OnInitialized()
@@ -151,7 +159,12 @@ The event [CellClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Pi
     }
     private void cellClick(CellClickEventArgs args)
     {
-        args.CurrentCell.AddClass(new string[] { "e-test" });
+        // Here, we check that the selected cell belongs to the "France" row, and the "FY 2015" column, and that its value is "450".
+        if (args.Data.RowHeaders == "France" && args.Data.ColumnHeaders == "FY 2015" && args.Data.FormattedText == "450")
+        {
+            // If it does, we apply custom styles to the selected cell
+            args.Data.CssClass = "e-custom";
+        }
     }
 }
 
