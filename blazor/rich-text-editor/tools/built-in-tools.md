@@ -146,6 +146,12 @@ The following table lists the tools available in the toolbar.
 </tr>
 
 <tr>
+<td><p>Blockquote</p></td>
+<td><img alt= "Blockquote in Blazor RichTextEditor" src="../images/blockquote.png"></td>
+<td><p>Blockquotes visually highlight important text within an editor, emphasizing key information or quotations.</p></td>
+</tr>
+
+<tr>
 <td><p>StrikeThrough</p></td>
 <td><img alt= "Strike through in Blazor RichTextEditor" src="../images/strikethrough.png"></td>
 <td><p>Applies double line strike through formatting for the selected text.</p></td>
