@@ -228,9 +228,9 @@ The [Constraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagra
 | Constraints | Description |
 | -------- | -------- |
 |None|Disable all connector Constraints.|
-|Select|Enables or disables node to be selected.|
-|Delete|Enables or disables node to be deleted.|
-|Drag|Enables or disables node to be dragged.|
+|Select|Enables or disables connector to be selected.|
+|Delete|Enables or disables connector to be deleted.|
+|Drag|Enables or disables connector to be dragged.|
 |DragSourceEnd|Enables connectors source end to be selected.|
 |DragTargetEnd|Enables connectors target end to be selected.|
 |DragSegmentThumb|Enables control point and end point of every segment in a connector for editing.|
