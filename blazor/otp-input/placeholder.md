@@ -23,7 +23,7 @@ You can set the placeholder text by using the [Placeholder](https://help.syncfus
 
 ![Blazor OTP Input Component with Placeholder](images/blazor-otp-char.png)
 
-When a placeholder with multiple placeholder characters is provided each input field will display characters from the placeholder string in sequence based on the available OTP input length.
+When a placeholder with multiple placeholder characters is provided each input field will display characters from the placeholder string in sequence based on the available OTP Input length.
 
 ```cshtml
 

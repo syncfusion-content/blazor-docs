@@ -42,7 +42,7 @@ The following ARIA attributes are used in the OTP Input component:
 | Attributes | Purpose |
 | ------------ | ----------------------- |
 | `role=group` | Attributes used to form a collection of items.|
-| `aria-label` | Attributes provides the text label for the Otp inputs. |
+| `aria-label` | Attributes provides the text label for the OTP Inputs. |
 
 ## Keyboard interaction
 

@@ -32,7 +32,7 @@ The OTP Input component triggers the [Created](https://help.syncfusion.com/cr/bl
 
 ## OnFocus 
 
-The OTP Input component triggers the [OnFocus](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfOtpInput.html#Syncfusion_Blazor_Inputs_SfOtpInput_OnFocus) event when the Otp input is focused. The [OtpFocusInEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.OtpFocusInEventArgs.html) passed as an event argument provides the details of the focus event.
+The OTP Input component triggers the [OnFocus](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfOtpInput.html#Syncfusion_Blazor_Inputs_SfOtpInput_OnFocus) event when the OTP Input is focused. The [OtpFocusInEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.OtpFocusInEventArgs.html) passed as an event argument provides the details of the focus event.
 
 ```cshtml
 
@@ -51,7 +51,7 @@ The OTP Input component triggers the [OnFocus](https://help.syncfusion.com/cr/bl
 
 ## OnBlur
 
-The OTP Input component triggers the [OnBlur](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfOtpInput.html#Syncfusion_Blazor_Inputs_SfOtpInput_OnBlur) event when the Otp input is focused out. The [OtpFocusOutEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.OtpFocusOutEventArgs.html) passed as an event argument provides the details of the blur event.
+The OTP Input component triggers the [OnBlur](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfOtpInput.html#Syncfusion_Blazor_Inputs_SfOtpInput_OnBlur) event when the OTP Input is focused out. The [OtpFocusOutEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.OtpFocusOutEventArgs.html) passed as an event argument provides the details of the blur event.
 
 ```cshtml
 
@@ -70,7 +70,7 @@ The OTP Input component triggers the [OnBlur](https://help.syncfusion.com/cr/bla
 
 ## OnInput
 
-The OTP Input component triggers the [OnInput](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfOtpInput.html#Syncfusion_Blazor_Inputs_SfOtpInput_OnInput) event when the value of each Otp input is changed. The [OtpInputEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.OtpInputEventArgs.html) passed as an event argument provides the details of the each value is changed.
+The OTP Input component triggers the [OnInput](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfOtpInput.html#Syncfusion_Blazor_Inputs_SfOtpInput_OnInput) event when the value of each OTP Input is changed. The [OtpInputEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.OtpInputEventArgs.html) passed as an event argument provides the details of the each value is changed.
 
 ```cshtml
 
