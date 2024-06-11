@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Diagram Methods in Blazor Diagram Component | Syncfusion
+title: Diagram Methods and Properties in Blazor Diagram Component | Syncfusion
 description: Checkout and learn here all about diagram methods support in Syncfusion Blazor Diagram component, it's elements and more.
 platform: Blazor
 control: DiagramComponent
 documentation: ug
 ---
 
-# Diagram Methods in Blazor Diagram Component
+# Diagram Methods and Properties in Blazor Diagram Component
 
-The diagram functionalities are performed using the following methods.
+The diagram functionalities are performed using the following methods and properties.
 
-## Add nodes through Add method
+## How to add nodes through Add method
 
 To create a node, define the Node object and add it to the nodes collection of the diagram using the `Add()` method. The Add() method in the OnInitialized method will measure and render each diagram element individually before rendering the diagram. As a result, calling the Add() method outside of the OnInitialized() method is not feasible. The following code example shows how to add a node to the diagram.
 
@@ -50,7 +50,7 @@ To create a node, define the Node object and add it to the nodes collection of t
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Methods/AddMethod)
 
-## Add nodes through AddDiagramElements
+## How to add nodes through AddDiagramElements
 
  Unlike the Add() method, the [AddDiagramElements](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_AddDiagramElements_Syncfusion_Blazor_Diagram_DiagramObjectCollection_Syncfusion_Blazor_Diagram_NodeBase__) method will measure the passed elements before re-rendering the complete diagram component at once. When using the Add() method to add multiple nodes and connectors simultaneously, the connectors will be rendered before the nodes. As a result, connectors may be misplaced due to the synchronous behavior of the Add method. To overcome this, use the asynchronous AddDiagramElements() method.
 
@@ -329,7 +329,7 @@ The [Delete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfD
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Methods/Delete)
 
-## ResetZoom
+## How to reset the zoom
   The [ResetZoom](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_ResetZoom) method is used to reset the current zoom value of the diagram page to 100% when the diagram is either in a zoomed in or zoomed out state. The following code example shows how to reset the current zoom value of the diagram page.
 
 ```cshtml
@@ -948,7 +948,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
  ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Methods/GetCustomCursor)
 
-## BeginUpdate and EndUpdate
+## How to use the BeginUpdate and EndUpdate
  [BeginUpdate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_BeginUpdate) prevents visual updates to the diagram until the EndUpdate() method is called. [EndUpdate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_EndUpdate) means that the diagram is unlocked following a call to the BeginUpdate(Boolean) method, resulting in an immediate visual update.
 
 ```cshtml
@@ -1645,3 +1645,49 @@ The following code illustrates how to set background color for node.
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Methods/GetParent)
 
+## How to enable the chunk message
+
+In the Blazor Diagram component, it is essential to calculate the bounds of paths, text, images, and SVG data from the server to the JavaScript side using JsInterop calls. When processing large data sets (greater than 32KB for a single incoming hub message) in a single JS call, connection disconnect issues can occur. To address this, we have introduced the [EnableChunkMessages](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_EnableChunkMessages) property in the Diagram component. This property allows large data to be sent in smaller chunks, thereby preventing connection disconnection issues. Chunk messages facilitate the measurement of paths, images, text, and SVG data without exceeding the maximum size limit for a single incoming hub message (MaximumReceiveMessageSize of 32KB). By default, the [EnableChunkMessages](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_EnableChunkMessages) property is set to `false`.
+
+Here is an example demonstrating how to use the [EnableChunkMessages](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_EnableChunkMessages) property:
+
+```cshtml
+@using Syncfusion.Blazor.Diagram
+
+<SfDiagramComponent Height="600px" Nodes="@nodes" EnableChunkMessages="true"/>
+
+@code
+{
+    //Initialize the Nodes Collection.
+    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+
+    protected override void OnInitialized()
+    {
+        int offsetX = 100; int offsetY = 100; double count = 1;
+        for(int i=1; i<=200; i++)
+        {
+            Node node = new Node()
+                {
+                    ID = "node" + i,
+                    OffsetX = count * offsetX,
+                    OffsetY = offsetY,
+                    Width = 100,
+                    Height = 100,
+                    Annotations = new DiagramObjectCollection<ShapeAnnotation>() {
+                        new ShapeAnnotation() { Content = "Annotation for the Node" + i.ToString() }
+                    }
+                };
+                count += 1.5;
+                if (i % 5 == 0)
+                {
+                    count = 1;
+                    offsetX = 100;
+                    offsetY = offsetY + 200;
+                }
+            nodes.Add(node);
+        }
+    }
+}
+```
+
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/)
