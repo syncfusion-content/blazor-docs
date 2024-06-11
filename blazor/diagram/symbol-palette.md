@@ -1570,7 +1570,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ### How to add searchtags for symbols
 
-The SearchTags property allows you to specify keywords that enhance the search ability of symbols within the symbol palette. These keywords are associated with nodes, connectors, groups, swimlanes, and BPMN symbols, making it easier for users to find relevant symbols for their diagrams or designs.
+The SearchTags property allows you to specify keywords that enhance the search ability of symbols within the symbol palette. These keywords are associated with nodes, connectors, groups, swimlanes, and BPMN symbols, making it easier for users to find relevant symbols for their diagram.
 
 ```csharp
 @using Syncfusion.Blazor.Diagram
@@ -1637,9 +1637,6 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 The symbol palette provides support for enabling or disabling animation when expanding and collapsing panels. This functionality is controlled through the EnableAnimation property.
 
 * EnableAnimation Property: This property is used to enable or disable animation within the symbol palette. By default, the EnableAnimation property is set to true.
-
-#### Default Animation Types:
-
 * Expand Animation: The default animation for expanding a panel is set to SlideDown.
 * Collapse Animation: The default animation for collapsing a panel is set to SlideUp.
 * Animation Duration: The duration for the collapse action animation is set to 400 milliseconds by default. This duration dictates how long the transformation takes when a panel collapses.
