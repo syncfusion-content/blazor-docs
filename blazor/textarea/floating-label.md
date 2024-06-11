@@ -20,7 +20,7 @@ The floating label functionality in the TextArea Component allows the placeholde
 {% tabs %}
 {% highlight razor %}
 
-<SfTextArea Placeholder='First Name' FloatLabelType='@FloatLabelType.Auto'></SfTextArea>
+<SfTextArea Placeholder='Enter the Address' FloatLabelType='@FloatLabelType.Auto'></SfTextArea>
 
 {% endhighlight %}
 {% endtabs %}

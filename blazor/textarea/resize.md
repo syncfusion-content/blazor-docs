@@ -21,19 +21,19 @@ The TextArea allows users to input and edit large amounts of text. Resizing this
 {% tabs %}
 {% highlight razor %}
 
-<SfTextArea Placeholder='First Name' ResizeMode = 'Both' ></SfTextArea>
+<SfTextArea Placeholder='Enter the Address' ResizeMode='Both'></SfTextArea>
 
 {% endhighlight %}
 {% endtabs %}
 
-## Width of Blazor TextArea component
+## Width
 
 You can easily customize the width of the TextArea using the [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextArea.html#Syncfusion_Blazor_Inputs_SfTextArea_Width) property. This property allows precise adjustment of the TextArea's width according to the specific layout requirements of the application.
 
 {% tabs %}
 {% highlight razor %}
 
-<SfTextArea Placeholder='First Name' Width= "500" ResizeMode = 'Both' ></SfTextArea>
+<SfTextArea Placeholder='Enter the Address' Width="500" ResizeMode='Syncfusion.Blazor.Inputs.Resize.Both'></SfTextArea>
 
 {% endhighlight %}
 {% endtabs %}

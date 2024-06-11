@@ -7,7 +7,7 @@ control: Textarea
 documentation: ug
 ---
 
-# Methods in Blazor TextArea Control
+# Methods in Blazor TextArea Component
 
 This section outlines the methods available for interacting with the TextArea component.
 
@@ -20,7 +20,7 @@ By calling the `FocusIn` method, you can programmatically set focus to the TextA
 ```cshtml
 @using Syncfusion.Blazor.Inputs
 
-<SfTextArea @ref="textArea" Placeholder="First Name"></SfTextArea>
+<SfTextArea @ref="textArea" Placeholder="Enter the Address"></SfTextArea>
 
 <button @onclick="AddFocus">Focus Text Area</button>
 
@@ -42,7 +42,7 @@ This method is beneficial for scenarios where user need to programmatically remo
 ```cshtml
 @using Syncfusion.Blazor.Inputs
 
-<SfTextArea @ref="textArea" Placeholder="First Name"></SfTextArea>
+<SfTextArea @ref="textArea" Placeholder="Enter the Address"></SfTextArea>
 
 <button @onclick="RemoveFocus">Remove Focus Text Area</button>
 
@@ -54,6 +54,7 @@ This method is beneficial for scenarios where user need to programmatically remo
         textArea.FocusOut();
     }
 }
+```
 
 ## GetPersistData method
 
@@ -63,7 +64,7 @@ This method returns an object containing the properties to be persisted, which c
 ```cshtml
 @using Syncfusion.Blazor.Inputs
 
-<SfTextArea @ref="textArea" Placeholder="First Name"></SfTextArea>
+<SfTextArea @ref="textArea" Placeholder="Enter the Address"></SfTextArea>
 
 <button @onclick="GetData">Get Data</button>
 
@@ -75,3 +76,4 @@ This method returns an object containing the properties to be persisted, which c
         textArea.GetPersistData();
     }
 }
+```
