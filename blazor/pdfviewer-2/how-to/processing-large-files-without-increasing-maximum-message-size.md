@@ -27,3 +27,5 @@ Here is an example of how to use this feature:
 }
 ```
 With [EnableChunkMessages](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_EnableChunkMessages) set to true, the SfPdfViewer component will break down large files into smaller chunks and process them individually. This can be particularly useful when dealing with large PDF files, as it allows for more efficient data processing and reduces the likelihood of encountering issues related to message size limits.
+
+[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Load%20and%20Save/Processing%20Large%20Files%20Without%20Increasing%20Maximum%20Message%20Size).
