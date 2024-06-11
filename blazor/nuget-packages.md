@@ -1,6 +1,6 @@
 ---
 layout: post
-title: NuGet Packages List | Syncfusion Blazor Components
+title: NuGet Packages for | Syncfusion Blazor UI Components
 description: Learn here about the installing, managing and upgrading of NuGet packages of Syncfusion Blaor Components.
 platform: Blazor
 component: Common
