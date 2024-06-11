@@ -81,8 +81,8 @@ The [ID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DataSou
     public List<HierarchicalDetails> DataSource = new List<HierarchicalDetails>()
     {
         new HierarchicalDetails()   { Id= "parent", Role= "Board", Color= "#71AF17" },
-        new HierarchicalDetails()   { Id= "1", Role= "General Manager", Manager= "parent", ChartType= "right", Color= "#71AF17" },
-        new HierarchicalDetails()   { Id= "11", Role= "Assistant Manager", Manager= "1", Color= "#71AF17" },
+        new HierarchicalDetails()   { Id= "1", Role= "General Manager", ParentId= "parent", ChartType= "right", Color= "#71AF17" },
+        new HierarchicalDetails()   { Id= "11", Role= "Assistant Manager", ParentId= "1", Color= "#71AF17" },
     };
 }
 ```
