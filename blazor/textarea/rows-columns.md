@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Rows and Columns count in Blazor TextArea Component | Syncfusion
-description: Adjusting the size of the Syncfusion Blazor Textarea component and much more.
+description: Learn about adjusting the rows and columns of the Syncfusion  Blazor TextArea component and much more.
 platform: Blazor
 control: Textarea
 documentation: ug

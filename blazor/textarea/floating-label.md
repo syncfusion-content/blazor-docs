@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Floating Label in Blazor TextArea Component | Syncfusion
-description: Checkout and learn about Floating Label of the Syncfusion Blazor Textarea component and much more.
+description: Checkout and learn about the Floating Label of the Syncfusion Blazor Textarea component and much more.
 platform: Blazor
 control: Textarea
 documentation: ug

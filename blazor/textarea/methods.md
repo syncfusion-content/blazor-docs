@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Methods in Blazor TextArea Component | Syncfusion
-description: Checkout and learn about methods of the Syncfusion Blazor Textarea component and much more.
+description: Checkout and learn about the list of all available methods in the Syncfusion Blazor TextArea component.
 platform: Blazor
 control: Textarea
 documentation: ug
