@@ -742,7 +742,7 @@ While adding more symbols such as nodes and connectors to the palette, define th
     DiagramObjectCollection<NodeBase> PaletteNodes = new DiagramObjectCollection<NodeBase>();
      public void OnNodeCreating(IDiagramObject args)
     { 
-        Node node = obj as Node;
+        Node node = args as Node;
         node.Style.Fill = "#357BD2";
         node.Style.StrokeColor = "White";
         node.Style.Opacity = 1;
@@ -750,7 +750,7 @@ While adding more symbols such as nodes and connectors to the palette, define th
 
     public void OnConnectorCreating(IDiagramObject args)
     { 
-        Connector connector = obj as Connector;
+        Connector connector = args as Connector;
         connector.Style.Fill = "black";
         connector.Style.StrokeColor = "black";
         connector.Style.Opacity = 1;
