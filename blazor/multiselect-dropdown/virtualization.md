@@ -112,7 +112,7 @@ The following sample shows the example for checkbox with Virtualization.
 
 ## Custom value with virtualization
 
-The MultiSelect component supports custom valie with Virtualization. When the [AllowCustomValue](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.MultiSelectModel-1.html#Syncfusion_Blazor_DropDowns_MultiSelectModel_1_AllowCustomValue) property is enabled, the MultiSelect enables users to include a new option not currently available in the component value. Upon selecting this newly added custom value, the MultiSelect triggers the `CustomValueSpecifier` event and also custom value will be added to the end of the complete list.
+The MultiSelect component supports custom value with Virtualization. When the [AllowCustomValue](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.MultiSelectModel-1.html#Syncfusion_Blazor_DropDowns_MultiSelectModel_1_AllowCustomValue) property is enabled, the MultiSelect enables users to include a new option not currently available in the component value. Upon selecting this newly added custom value, the MultiSelect triggers the `CustomValueSpecifier` event and also custom value will be added to the end of the complete list.
 
 The following sample shows the example for custom value with Virtualization.
 
