@@ -7,7 +7,7 @@ control: OTP Input
 documentation: ug
 ---
 
-# Getting Started with Blazor OTP Input Component
+# Getting Started with Blazor OTP Input component
 
 This section briefly explains about how to include `Blazor OTP Input` component in your Blazor Server App and Blazor WebAssembly App using Visual Studio.
 
