@@ -45,7 +45,7 @@ Start by following the steps provided in this [link](https://blazor.syncfusion.c
 
 @code {
     private string DocumentPath { get; set; }
-    SfPdfViewer2 viewer;
+    private SfPdfViewer2 viewer;
     private readonly string connectionString = "Your Connection string from Azure";
     private readonly string containerName = "Your container name in Azure";
     private readonly string fileName = "File Name to be loaded into Syncfusion SfPdfViewer";
@@ -77,3 +77,7 @@ N> Replace **Your Connection string from Azure** with the actual connection stri
 N> The **Azure.Storage.Blobs** NuGet package must be installed in your application to use the previous code example.
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Load%20and%20Save/Open%20and%20Save%20from%20Azure%20blob%20storage-SfPdfViewer).
+
+## See also
+
+* [Processing Large Files Without Increasing Maximum Message Size in SfPdfViewer Component](../how-to/processing-large-files-without-increasing-maximum-message-size)
