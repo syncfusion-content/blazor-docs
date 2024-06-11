@@ -558,5 +558,3 @@ For more information about the connector flip, refer to [Connector Flip](../flip
 * [How to change the segments](./segments)
 
 * [How to get the connector events](./events)
- 
-* [How to change the routing type of the line routing](../properties.md)
