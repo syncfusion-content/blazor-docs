@@ -203,6 +203,8 @@ The following code example illustrates how to change the preview size of a palet
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/SymbolPalette/SymbolPreview).
 
+![SymbolPreview in Blazor Diagram](../images/blazor-diagram-symbol-preview.gif)
+
 ## How to restrict symbol dragging in a palette
 
 The [AllowDrag](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SymbolPalette.SfSymbolPaletteComponent.html#Syncfusion_Blazor_Diagram_SymbolPalette_SfSymbolPaletteComponent_AllowDrag) property of `SfSymbolPaletteComponent` helps to decide whether the symbols can be dragged from the palette or not.
