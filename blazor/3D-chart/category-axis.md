@@ -15,7 +15,7 @@ The category axis is the horizontal axis of a 3D chart that shows text values ra
 
 @using Syncfusion.Blazor.Chart3D
 
-<SfChart3D>
+<SfChart3D Title="Olympic Medals" WallColor="transparent" EnableRotation="true" RotationAngle="7" TiltAngle="10" Depth="100">
     <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Chart3D.ValueType.Category">
     </Chart3DPrimaryXAxis>
 
@@ -57,7 +57,7 @@ By default, category axis labels are placed between ticks in an axis. It can als
 
 @using Syncfusion.Blazor.Chart3D
 
-<SfChart3D>
+<SfChart3D Title="Olympic Medals" WallColor="transparent" EnableRotation="true" RotationAngle="7" TiltAngle="10" Depth="100">
     <Chart3DPrimaryXAxis LabelPlacement="LabelPlacement.OnTicks" ValueType="Syncfusion.Blazor.Chart3D.ValueType.Category">
     </Chart3DPrimaryXAxis>
 
@@ -99,7 +99,7 @@ The range of the category axis can be customized using `Minimum`, `Maximum`, and
 
 @using Syncfusion.Blazor.Chart3D
 
-<SfChart3D>
+<SfChart3D Title="Olympic Medals" WallColor="transparent" EnableRotation="true" RotationAngle="7" TiltAngle="10" Depth="100">
     <Chart3DPrimaryXAxis Maximum="5" Minimum="1" Interval="2" ValueType="Syncfusion.Blazor.Chart3D.ValueType.Category">
     </Chart3DPrimaryXAxis>
 
@@ -140,7 +140,7 @@ The category axis can also be rendered based on the index values of the data sou
 ```cshtml
 
 @using Syncfusion.Blazor.Chart3D
-<SfChart3D>
+<SfChart3D Title="Olympic Medals" WallColor="transparent" EnableRotation="true" RotationAngle="7" TiltAngle="10" Depth="100">
     <Chart3DPrimaryXAxis IsIndexed="true" ValueType="Syncfusion.Blazor.Chart3D.ValueType.Category">
     </Chart3DPrimaryXAxis>
 

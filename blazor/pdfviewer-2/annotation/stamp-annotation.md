@@ -290,7 +290,7 @@ The customized templated stamp appearance feature provides support for displayin
 
 ![Customized templated stamp appearance](../images/customized_templated_stamp_appearance.png)
 
-[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/889407_vol2_2024/Annotations/Stamp/Customized%20templated%20stamp%20appearance).
+[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Annotations/Stamp/Customized%20templated%20stamp%20appearance).
 
 ## Rotation support for Custom Stamp and Customized templated stamps
 
@@ -298,7 +298,7 @@ The PDF Viewer also supports smooth rotation of Custom stamps and Customized tem
 
 ![Rotation support for Custom Stamp and Customized templated stamps](../images/rotation_support_for_customized_templated_stamps.png)
 
-[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/889407_vol2_2024/Annotations/Stamp/Customized%20templated%20stamp%20appearance).
+[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Annotations/Stamp/Customized%20templated%20stamp%20appearance).
 
 ## See also
 

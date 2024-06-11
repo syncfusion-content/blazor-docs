@@ -110,9 +110,9 @@ The following properties can be used to customize the `100% Stacked Column` seri
     <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Chart3D.ValueType.Category"></Chart3DPrimaryXAxis>
 
     <Chart3DSeriesCollection>
-        <Chart3DSeries DataSource="@DataSource" XName="X" YName="YValue" Fill="green" Type="Chart3DSeriesType.StackingColumn100"></Chart3DSeries>
-        <Chart3DSeries DataSource="@DataSource" XName="X" YName="YValue1" Fill="red" Type="Chart3DSeriesType.StackingColumn100"></Chart3DSeries>
-        <Chart3DSeries DataSource="@DataSource" XName="X" YName="YValue2" Fill="yellow" Type="Chart3DSeriesType.StackingColumn100"></Chart3DSeries>
+        <Chart3DSeries DataSource="@DataSource" XName="X" YName="YValue" Fill="#A1650A" Type="Chart3DSeriesType.StackingColumn100"></Chart3DSeries>
+        <Chart3DSeries DataSource="@DataSource" XName="X" YName="YValue1" Fill="#8E255E" Type="Chart3DSeriesType.StackingColumn100"></Chart3DSeries>
+        <Chart3DSeries DataSource="@DataSource" XName="X" YName="YValue2" Fill="#0364DE" Type="Chart3DSeriesType.StackingColumn100"></Chart3DSeries>
     </Chart3DSeriesCollection>
 </SfChart3D>
 
