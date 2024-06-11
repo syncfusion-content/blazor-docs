@@ -13,7 +13,7 @@ The Ruler provides horizontal and vertical guides for measuring in the Diagram c
 
 ### Adding Rulers to the Diagram Component
 
-- The `RulerSettings` property is used to control the visibility and appearance of the ruler in the diagram.
+The [RulerSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_RulerSettings) property of [SfDiagramComponent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.TextShape.html) is used to control the visibility and appearance of the ruler in the diagram. The [HorizontalRuler](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.RulerSettings.html#Syncfusion_Blazor_Diagram_RulerSettings_HorizontalRuler) and [VerticalRuler](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.RulerSettings.html#Syncfusion_Blazor_Diagram_RulerSettings_VerticalRuler) properties of [RulerSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_RulerSettings) are used to define and customize the horizontal ruler and vertical ruler in the diagram canvas.
 
 The following code demonstrates how to add a ruler to the diagram.
 
@@ -35,14 +35,12 @@ The following code demonstrates how to add a ruler to the diagram.
 
 ## Customizing the Ruler
 
-- The `RulerSettings` `HorizontalRuler` and `VerticalRuler` properties are used to customize the appearance of the rulers in the diagram.
+   The [HorizontalRuler](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.RulerSettings.html#Syncfusion_Blazor_Diagram_RulerSettings_HorizontalRuler) and [VerticalRuler](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.RulerSettings.html#Syncfusion_Blazor_Diagram_RulerSettings_VerticalRuler) properties [RulerSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_RulerSettings) class are used to customize the appearance of the rulers in the diagram. The following properties are used to customize the appearance of both the horizontal and vertical rulers.
 
-* `HorizontalRuler` - Defines the appearance of the horizontal ruler.
-* `VerticalRuler` - Defines the appearance of the vertical ruler.
-* Ruler `Interval` - The interval property allows you to define the interval between both horizontal and vertical ruler segments.
-* Ruler `IsVisible` - It is used to define whether the horizontal and vertical rulers are visible in the diagram.
-* `TickAlignment` - It controls the positioning of the ticks/hash marks in the ruler.
-* `MarkerColor` - Determines the color of the marker line/guide line for the ruler, the one which represents current position of cursor in diagram.
+* [Interval](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramRuler.html#Syncfusion_Blazor_Diagram_DiagramRuler_Interval) - This property allows you to define the number of intervals to be present on each segment of both horizontal and vertical rulers.
+* [IsVisible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramRuler.html#Syncfusion_Blazor_Diagram_DiagramRuler_IsVisible) - This property determines whether the horizontal and vertical rulers are displayed in the diagram. This can be useful for toggling rulers on and off depending on your needs.
+* [TickAlignment](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramRuler.html#Syncfusion_Blazor_Diagram_DiagramRuler_TickAlignment) - This property controls the placement of the tick marks (also called hash marks) on the ruler. You can typically choose to have them positioned on the left or right for the vertical ruler and on the top or bottom for the horizontal ruler.
+* [MarkerColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramRuler.html#Syncfusion_Blazor_Diagram_DiagramRuler_MarkerColor) - This property defines the color of the marker line, also known as the cursor guide. This line appears in the diagram and aligns with the ruler, visually indicating the current position of your cursor.
 
 The code below demonstrates how the diagram ruler can be customized.
 
