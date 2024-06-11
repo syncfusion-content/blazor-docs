@@ -26,14 +26,12 @@ In the following example, you can use the `z-order` support.
 ```cshtml
 @using Syncfusion.Blazor.ImageEditor 
 
-<SfImageEditor @ref="ImageEditor" Toolbar="customToolbarItem" Height="400">
+<SfImageEditor @ref="ImageEditor" Height="400">
     <ImageEditorEvents Created="OpenAsync"></ImageEditorEvents>
 </SfImageEditor> 
 
 @code { 
     SfImageEditor ImageEditor; 
-    private List<ImageEditorToolbarItemModel> customToolbarItem = new List<ImageEditorToolbarItemModel>() { }; 
-
     private async void OpenAsync() 
     { 
         await ImageEditor.OpenAsync("nature.png"); 
