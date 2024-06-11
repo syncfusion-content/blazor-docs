@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Diagram Methods and Properties in Blazor Diagram Component | Syncfusion
-description: Checkout and learn here all about diagram methods support in Syncfusion Blazor Diagram component, it's elements and more.
+title: How to achieve common use cases using diagram methods and properties in Blazor Diagram Component | Syncfusion
+description: Checkout and learn here all about how to achieve common use cases using diagram methods and properties in Syncfusion Blazor Diagram component, it's elements and more.
 platform: Blazor
 control: DiagramComponent
 documentation: ug
 ---
 
-# Diagram Methods and Properties in Blazor Diagram Component
+# How to achieve common use cases using diagram methods and properties in Blazor Diagram Component
 
 The diagram functionalities are performed using the following methods and properties.
 

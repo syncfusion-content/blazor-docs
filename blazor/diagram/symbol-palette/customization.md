@@ -11,7 +11,7 @@ documentation: ug
 
 The [SymbolPalette](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SymbolPalette.html) displays a collection of [Palettes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SymbolPalette.SfSymbolPaletteComponent.html#Syncfusion_Blazor_Diagram_SymbolPalette_SfSymbolPaletteComponent_Palettes). The palette shows a set of nodes and connectors. It allows to drag and drop the nodes and connectors into the diagram.
 
-## Customize the palette header
+## How to customize the palette header
 
 Palettes can be annotated with its header texts.
 
@@ -210,7 +210,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 The [AllowDrag](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SymbolPalette.SfSymbolPaletteComponent.html#Syncfusion_Blazor_Diagram_SymbolPalette_SfSymbolPaletteComponent_AllowDrag) property of `SfSymbolPaletteComponent` helps to decide whether the symbols can be dragged from the palette or not.
 
-## Expanding event
+## How to get notfication for expanding the palette
 
 The [Expanding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SymbolPalette.SfSymbolPaletteComponent.html#Syncfusion_Blazor_Diagram_SymbolPalette_SfSymbolPaletteComponent_Expanding) event of the `SfSymbolPaletteComponent` will be triggered before the item gets collapsed/expanded.
 
@@ -303,7 +303,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ![Symbol with Description in Blazor Diagram](../images/blazor-diagram-symbol-description.png)
 
-## Appearance of symbol description
+## How to customize the appearance of symbol description
 
 Customize the appearance of a symbol description in the symbol palette by adjusting the following properties:
 
