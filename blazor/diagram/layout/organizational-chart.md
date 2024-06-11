@@ -45,7 +45,7 @@ The following code example illustrates how to create an organizational chart.
         node.Style = new ShapeStyle() { Fill = "darkcyan", StrokeWidth = 3, StrokeColor = "Black" };
         node.Annotations = new DiagramObjectCollection<ShapeAnnotation>()
         {
-            new ShapeAnnotation { Style = new TextStyle() { Color = "white", Bold = true },Content = node.Annotations[0].Content }
+            new ShapeAnnotation { Style = new TextStyle() { Color = "white", Bold = true } }
         };
     }
 
@@ -115,6 +115,8 @@ Organizational chart layout starts parsing from root and iterate through all its
 1. **IDiagramObject**: Parent node to that options are to be customized.
 2. **TreeInfo**: Object to set the customizable properties.
 3. **TreeInfo**: Returns an object value to be customized.
+
+>**Note:** In the DataSourceSettings, the type of the ID and ParentID properties is string. The provided DataSource should have a parent-child relationship. It is necessary for at least one node to have an empty ParentID.
 
 ## Customize layout
 
