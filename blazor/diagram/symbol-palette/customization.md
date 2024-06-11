@@ -598,6 +598,12 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 Palette interaction notifies the element enter, leave, and dragging of the symbols into the diagram.
 
+- [DragStart](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_DragStart) event is triggered when a symbol is dragged into the diagram from the symbol palette.
+- [Dragging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Dragging) event is triggered when an element drags over another diagram element.
+- [DragLeave](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_DragLeave) event is triggered when an element drags over another diagram element.
+
+For more information about event, refer to the [Events](../events.md).
+
 ## Escape key function
 
 The diagram provides support to cancel the node drop from symbol palette when the ESC key is pressed.
