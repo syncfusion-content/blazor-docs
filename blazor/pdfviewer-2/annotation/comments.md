@@ -304,9 +304,9 @@ This code snippet will edit the comment and reply comment programmatically withi
 
 ## Customizing DateTime Format
 
-The PDF Viewer provides the support to customize the date and time format displayed in the comment panel using the [PdfViewerCommentPanelSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.html). This feature allows you to tailor the appearance of date and time according to your preferences or regional standards.   
+The PDF Viewer provides the support to customize the date and time format displayed in the comment panel using the [PdfViewerCommentPanelSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerCommentPanelSettings.html). This feature allows you to tailor the appearance of date and time according to your preferences or regional standards.   
 
-The [DateTimeFormat](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.html) API in [PdfViewerCommentPanelSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.html) enables you to change the format of date and time displayed in the comment panel. 
+The [DateTimeFormat](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerCommentPanelSettings.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerCommentPanelSettings_DateTimeFormat) API in [PdfViewerCommentPanelSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerCommentPanelSettings.html) enables you to change the format of date and time displayed in the comment panel. 
 
 The following table describes various supported patterns
 
@@ -356,13 +356,13 @@ This code implements date and time formatting for the comment panel of the PDF v
 
 ![Customizing DateTime Format](../images/customizing_datetime_format.png)
 
-[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/889407_vol2_2024/Annotations/Comment%20Panel/Customize%20DateTimeFormat%20-%20SfPdfViewer).
+[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Annotations/Comment%20Panel/Customize%20DateTimeFormat%20-%20SfPdfViewer).
 
 ## Enabling Multiline Support 
 
-The multiline support feature in the comment panel enhances the functionality of the PDF Viewer by allowing users to input and display comments that span multiple lines. The PDF Viewer provides the support to enable multiline support in the comment panel using the [PdfViewerCommentPanelSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.html). 
+The multiline support feature in the comment panel enhances the functionality of the PDF Viewer by allowing users to input and display comments that span multiple lines. The PDF Viewer provides the support to enable multiline support in the comment panel using the [PdfViewerCommentPanelSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerCommentPanelSettings.html). 
 
-The [Multiline](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.html) API in [PdfViewerCommentPanelSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.html) is used to enable or disable multiline support in the comment panel.
+The [Multiline](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerCommentPanelSettings.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerCommentPanelSettings_Multiline) API in [PdfViewerCommentPanelSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerCommentPanelSettings.html) is used to enable or disable multiline support in the comment panel.
 
 Here is a sample code snippet demonstrating how to apply this setting
 
@@ -386,7 +386,7 @@ This code will enable multiline support in the Comment panel of the PDF Viewer
 
 ![Enabling Multiline Support](../images/enabling_multiline_support.png)
 
-[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/889407_vol2_2024/Annotations/Comment%20Panel/Enable%20Multiline%20Support%20-%20SfPdfViewer).
+[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Annotations/Comment%20Panel/Enable%20Multiline%20Support%20-%20SfPdfViewer).
 
 ## See also
 

@@ -66,7 +66,7 @@ var app = builder.Build();
 {% endhighlight %}
 {% endtabs %}
 
-N> [Processing Large Files Without Increasing Maximum Message Size in SfPdfViewer Component](../how-to/processing-large-files-without-increasing-maximum-message-size.md)
+N> [Processing Large Files Without Increasing Maximum Message Size in SfPdfViewer Component](../how-to/processing-large-files-without-increasing-maximum-message-size)
 
 ## Adding stylesheet and script
 
@@ -117,3 +117,5 @@ Run the application, and the PDF file will be displayed using Syncfusion's Blazo
 * [Getting Started with Blazor PDF Viewer (Next Gen) Component in WSL mode](https://blazor.syncfusion.com/documentation/pdfviewer-2/getting-started/wsl-application)
 
 * [Learn different ways to add script reference in Blazor Application](https://blazor.syncfusion.com/documentation/common/adding-script-references)
+
+* [Processing Large Files Without Increasing Maximum Message Size in SfPdfViewer Component](../how-to/processing-large-files-without-increasing-maximum-message-size)

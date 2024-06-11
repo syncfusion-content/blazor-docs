@@ -154,7 +154,7 @@ Text from the data source can be mapped using the `NameField` property.
 
 @using Syncfusion.Blazor.Chart3D
 
-<SfChart3D>
+<SfChart3D WallColor="transparent" EnableRotation="true" RotationAngle="7" TiltAngle="10" Depth="100">
     <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Chart3D.ValueType.Category"></Chart3DPrimaryXAxis>
 
     <Chart3DSeriesCollection>
@@ -193,7 +193,7 @@ Data label for the chart can be formatted using the `Format` property. The globa
 
 @using Syncfusion.Blazor.Chart3D
 
-<SfChart3D>
+<SfChart3D WallColor="transparent" EnableRotation="true" RotationAngle="7" TiltAngle="10" Depth="100">
     <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Chart3D.ValueType.Category"></Chart3DPrimaryXAxis>
 
     <Chart3DSeriesCollection>
@@ -293,7 +293,7 @@ The `Margin` option can be applied to the data label to create space around the 
 
 @using Syncfusion.Blazor.Chart3D
 
-<SfChart3D>
+<SfChart3D WallColor="transparent" EnableRotation="true" RotationAngle="7" TiltAngle="10" Depth="100">
     <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Chart3D.ValueType.Category"></Chart3DPrimaryXAxis>
 
     <Chart3DSeriesCollection>
@@ -335,12 +335,12 @@ The `stroke` and `border` of data label can be customized using `Fill` and `Char
 
 @using Syncfusion.Blazor.Chart3D
 
-<SfChart3D>
+<SfChart3D WallColor="transparent" EnableRotation="true" RotationAngle="7" TiltAngle="10" Depth="100">
     <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Chart3D.ValueType.Category"></Chart3DPrimaryXAxis>
 
     <Chart3DSeriesCollection>
         <Chart3DSeries DataSource="@WeatherReports" XName="X" YName="Y" Type="Chart3DSeriesType.Column">
-            <Chart3DDataLabel Visible="true">
+            <Chart3DDataLabel Visible="true" Fill="#AB6E15">
                     <Chart3DDataLabelBorder Width="2" Color="red"></Chart3DDataLabelBorder> 
             </Chart3DDataLabel>
         </Chart3DSeries>
