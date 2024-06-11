@@ -18,9 +18,8 @@ You can `clone` groups and rules by interacting through the user interface and m
 
 ```cshtml
 @using Syncfusion.Blazor.QueryBuilder
-@using Syncfusion.Blazor.Buttons
 
-<SfQueryBuilder TValue="EmployeeDetails" @ref="QuerybuilderObj">
+<SfQueryBuilder TValue="EmployeeDetails" @ref="QuerybuilderObj" EnableIndividualConditions="true">
     <QueryBuilderRule Condition="or" Rules="@Rules"></QueryBuilderRule>
     <QueryBuilderColumns>
         <QueryBuilderColumns>
@@ -36,14 +35,12 @@ You can `clone` groups and rules by interacting through the user interface and m
     </QueryBuilderColumns>
 </SfQueryBuilder>
 
-<SfButton @onclick="SeperateConnector" IsPrimary="true" Content="EnableIndividualConditions"></SfButton>
-
 @code {
     SfQueryBuilder<EmployeeDetails> QuerybuilderObj;
     List<RuleModel> Rules = new List<RuleModel>()
     {
         new RuleModel { Label="First Name", Field="FirstName", Type="String", Operator="equal", Value = "Andre", Condition = "and" },
-        // new RuleModel { Label="Last Name", Field="LastName", Type="String", Operator="in", Value = new string[] { "Davolio", "Buchanan" } },
+        new RuleModel { Label="Last Name", Field="LastName", Type="String", Operator="in", Value = new string[] { "Davolio", "Buchanan" } },
         new RuleModel { Label="Last Name", Field="LastName", Type="String", Operator="equal", Value = "Davolio", Condition = "or" },
         new RuleModel { Label="Age", Field="Age", Type="Number", Operator="equal", Value = 29, Condition = "and" },
         new RuleModel {
@@ -54,20 +51,16 @@ You can `clone` groups and rules by interacting through the user interface and m
         }
     };
 
-    private void SeperateConnector()
-    {
-        QuerybuilderObj.EnableIndividualConditions = true;
-    }
-
     public class EmployeeDetails
     {
         public int EmployeeID { get; set; }
         public string FirstName { get; set; }
-        public bool TitleOfCourtesy { get; set; }
-        public string Title { get; set; }
+        public string LastName { get; set; }
+        public int Age { get; set; }
+        public bool IsDeveloper { get; set; }
+        public string PrimaryFramework { get; set; }
         public DateTime HireDate { get; set; }
         public string Country { get; set; }
-        public string City { get; set; }
     }
 }
 

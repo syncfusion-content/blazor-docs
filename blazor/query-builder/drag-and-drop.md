@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Drag and Dropin Blazor QueryBuilder Component | Syncfusion
+title: Drag and Drop in Blazor QueryBuilder Component | Syncfusion
 description: Checkout and learn here all about Drag and Drop in Syncfusion Blazor QueryBuilder component and much more.
 platform: Blazor
 control: QueryBuilder
 documentation: ug
 ---
 
-# Drag and Dropin Blazor QueryBuilder Component
+# Drag and Drop in Blazor QueryBuilder Component
 
 The [Blazor Query Builder](https://www.syncfusion.com/blazor-components/blazor-query-builder) functionality extends to cloning both individual rules and entire groups. Utilizing the Clone options will generate an exact duplicate of a rule or group adjacent to the original one. This feature enables users to replicate complex query structures effortlessly. The [ShowButtons](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.QueryBuilderShowButtons.html) function offers users the ability to toggle the visibility of these cloning buttons, providing convenient control over the cloning process within the Query Builder interface.
 
@@ -20,51 +20,48 @@ You can `clone` groups and rules by interacting through the user interface and m
 @using Syncfusion.Blazor.QueryBuilder
 @using Syncfusion.Blazor.Buttons
 
-<SfQueryBuilder TValue="EmployeeDetails" @ref="QuerybuilderObj">
+<SfQueryBuilder TValue="EmployeeDetails" @ref="QuerybuilderObj" AllowDragAndDrop="true">
     <QueryBuilderRule Condition="or" Rules="@Rules"></QueryBuilderRule>
     <QueryBuilderColumns>
         <QueryBuilderColumns>
-            <QueryBuilderColumn Field="CustomerID" Label="CustomerID" Type=Syncfusion.Blazor.QueryBuilder.ColumnType.String></QueryBuilderColumn>
-            <QueryBuilderColumn Field="EmployeeID" Label="EmployeeID" Type=Syncfusion.Blazor.QueryBuilder.ColumnType.Number></QueryBuilderColumn>
-            <QueryBuilderColumn Field="Verified" Label="Verified" Type=Syncfusion.Blazor.QueryBuilder.ColumnType.Boolean></QueryBuilderColumn>
-            <QueryBuilderColumn Field="ShipName" Label="ShipName" Type=Syncfusion.Blazor.QueryBuilder.ColumnType.String></QueryBuilderColumn>
-            <QueryBuilderColumn Field="OrderDate" Label="OrderDate" Type=Syncfusion.Blazor.QueryBuilder.ColumnType.Date Format="dd/MM/yyyy"></QueryBuilderColumn>
-            <QueryBuilderColumn Field="ShipCountry" Label="ShipCountry" Type=Syncfusion.Blazor.QueryBuilder.ColumnType.String></QueryBuilderColumn>
-            <QueryBuilderColumn Field="ShipAddress" Label="ShipAddress" Type=Syncfusion.Blazor.QueryBuilder.ColumnType.String></QueryBuilderColumn>
+            <QueryBuilderColumn Field="EmployeeID" Label="Employee ID" Type="ColumnType.Number"></QueryBuilderColumn>
+                <QueryBuilderColumn Field="FirstName" Label="First Name" Type="ColumnType.String"></QueryBuilderColumn>
+                <QueryBuilderColumn Field="LastName" Label="Last Name" Type="ColumnType.String"></QueryBuilderColumn>
+                <QueryBuilderColumn Field="IsDeveloper" Label="IsDeveloper" Type="ColumnType.Boolean"></QueryBuilderColumn>
+                <QueryBuilderColumn Field="Age" Label="Age" Type="ColumnType.Number"></QueryBuilderColumn>
+                <QueryBuilderColumn Field="PrimaryFramework" Label="Primary Framework" Type="ColumnType.String"></QueryBuilderColumn>
+                <QueryBuilderColumn Field="HireDate" Label="Hire Date" Type="ColumnType.Date"></QueryBuilderColumn>
+                <QueryBuilderColumn Field="Country" Label="Country" Type="ColumnType.String"></QueryBuilderColumn>
         </QueryBuilderColumns>
     </QueryBuilderColumns>
 </SfQueryBuilder>
-
-<SfButton @onclick="DragDrop" IsPrimary="true" Content="Drag and Drop"></SfButton>
 
 @code {
     SfQueryBuilder<EmployeeDetails> QuerybuilderObj;
     List<RuleModel> Rules = new List<RuleModel>()
     {
-         new RuleModel { Label="EmployeeID", Field="EmployeeID", Type="Number", Operator="equal", Value = 1001 },
-         new RuleModel { Label="CustomerID", Field="CustomerID", Type="String", Operator="equal", Value = "FLKIN" },
-         new RuleModel {
+        new RuleModel { Label="First Name", Field="FirstName", Type="String", Operator="equal", Value = "Andre", Condition = "and" },
+        new RuleModel { Label="Last Name", Field="LastName", Type="String", Operator="in", Value = new string[] { "Davolio", "Buchanan" } },
+        new RuleModel { Label="Last Name", Field="LastName", Type="String", Operator="equal", Value = "Davolio", Condition = "or" },
+        new RuleModel { Label="Age", Field="Age", Type="Number", Operator="equal", Value = 29, Condition = "and" },
+        new RuleModel {
             Condition = "or", Rules = new List<RuleModel>() {
-                new RuleModel { Label= "OrderDate", Field = "OrderDate", Type = "Date", Operator = "equal", Value = new DateTime(2024, 01, 12) },
-                new RuleModel { Label= "ShipCountry", Field = "ShipCountry", Type = "String", Operator = "equal", Value = "USA" }
+                new RuleModel { Label= "Is Developer", Field = "IsDeveloper", Type = "Boolean", Operator = "equal", Value = true, Condition = "and" },
+                new RuleModel { Label= "Primary Framework", Field = "PrimaryFramework", Type = "String", Operator = "equal", Value = "React"}
             }
         }
     };
-
-    private void DragDrop()
-    {
-        QuerybuilderObj.AllowDragAndDrop = true;
-    }
 
     public class EmployeeDetails
     {
         public int EmployeeID { get; set; }
         public string FirstName { get; set; }
-        public bool TitleOfCourtesy { get; set; }
-        public string Title { get; set; }
+        public string LastName { get; set; }
+        public int Age { get; set; }
+        public bool IsDeveloper { get; set; }
+        public string PrimaryFramework { get; set; }
         public DateTime HireDate { get; set; }
         public string Country { get; set; }
-        public string City { get; set; }
     }
 }
 
