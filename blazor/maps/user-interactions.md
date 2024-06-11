@@ -559,10 +559,10 @@ The [ShapeSelection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Map
 @code{
     SfMaps mapsref;
     public void Select() {
-        mapsref.ShapeSelection(0, "continent", "Asia", true);
+        mapsref.ShapeSelectionAsync(0, "continent", "Asia", true);
     }
     public void Unselect() {
-        mapsref.ShapeSelection(0, "continent", "Asia", false);
+        mapsref.ShapeSelectionAsync(0, "continent", "Asia", false);
     }
 }
 ```

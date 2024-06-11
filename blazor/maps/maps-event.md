@@ -797,10 +797,10 @@ The [OnPrint](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsE
 
 @code {
     SfMaps maps;
-    public void PrintMap()
+    public async Task PrintMap()
     {
         // using Maps component reference call 'Print' method
-        this.maps.Print();
+        await this.maps.Print();
     }
     public void GetGEOLocation(Syncfusion.Blazor.Maps.PrintEventArgs args)
     {
