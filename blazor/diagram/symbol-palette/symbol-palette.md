@@ -158,7 +158,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/SymbolPalette/AddNodeToPalette)
 
 
-![Adding Node to Symbol Palette in Blazor Diagram](images/blazor-diagram-add-node-to-palette.png)
+![Adding Node to Symbol Palette in Blazor Diagram](../images/blazor-diagram-add-node-to-palette.png)
 
 ### How to add connector to palette
 
@@ -228,7 +228,7 @@ The following code example illustrates how to add connector to a palette.
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/SymbolPalette/AddConnectorToSymbolPalette)
 
 
-![Adding Connector to Symbol Palette in Blazor Diagram](images/blazor-diagram-add-connector-to-palette.png)
+![Adding Connector to Symbol Palette in Blazor Diagram](../images/blazor-diagram-add-connector-to-palette.png)
 
 ### How to add nodegroup into palette
 
@@ -317,7 +317,7 @@ The following code example illustrates how to add nodegroup to a palette.
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/SymbolPalette/AddGroupToPalette)
 
 
-![Adding NodeGroup to Symbol Palette in Blazor Diagram](images/blazor-diagram-add-node-group-to-palette.png)
+![Adding NodeGroup to Symbol Palette in Blazor Diagram](../images/blazor-diagram-add-node-group-to-palette.png)
 
 ## How to add palette to SymbolPalette
 
@@ -473,7 +473,7 @@ Palettes = new DiagramObjectCollection<Palette>()
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/SymbolPalette/AddPaletteToSymbolPalette)
 
-![Adding Palette to SymbolPalette in Blazor Diagram](images/blazor-diagram-add-palette-to-symbol-palette.png)
+![Adding Palette to SymbolPalette in Blazor Diagram](../images/blazor-diagram-add-palette-to-symbol-palette.png)
 
 ## How to drag and drop symbols from palette to diagram
 
@@ -629,7 +629,7 @@ To initialize drag and drop, you must add the diagram to the [Targets](https://h
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/SymbolPalette/DragAndDrop)
 
-![Drag and Drop in Blazor Diagram](images/blazor-diagram-drag-and-drop.gif)
+![Drag and Drop in Blazor Diagram](../images/blazor-diagram-drag-and-drop.gif)
 
 ## How to add/remove symbols from palette at runtime
 
@@ -794,7 +794,7 @@ While adding more symbols such as nodes and connectors to the palette, define th
 }
 ```
 
-![Symbol with Description in Blazor Diagram](images/blazor-diagram-symbol-description.png)
+![Symbol with Description in Blazor Diagram](../images/blazor-diagram-symbol-description.png)
 
 ## How to refresh the symbols at runtime
 
