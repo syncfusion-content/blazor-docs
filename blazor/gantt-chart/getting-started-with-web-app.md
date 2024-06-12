@@ -465,19 +465,19 @@ Exception handling in [Blazor Gantt Chart](https://www.syncfusion.com/blazor-com
 
 Common Errors and Their Resolutions:
 
-* **[ResourceFields](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_ResourceFields)  Configuration Error**
+* **ResourceFields Configuration Error**
 
     Ensure that the [ResourceFields](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_ResourceFields) are properly configured by following the guidelines in the [Resource View documentation](https://blazor.syncfusion.com/documentation/gantt-chart/resource-view).
 
-* **[GanttTaskFields](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_TaskFields) Configuration Error**
+* **GanttTaskFields Configuration Error**
 
     Ensure that the [GanttTaskFields](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_TaskFields) are properly configured by following the guidelines in the [Hierarchical Data Binding documentation](https://blazor.syncfusion.com/documentation/gantt-chart/data-binding#hierarchical-data-binding).
 
-* **[HasChildMapping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTaskFields.html#Syncfusion_Blazor_Gantt_GanttTaskFields_HasChildMapping) Configuration Error**
+* **HasChildMapping Configuration Error**
     
     Ensure that the [HasChildMapping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTaskFields.html#Syncfusion_Blazor_Gantt_GanttTaskFields_HasChildMapping) property is properly configured for load-on-demand by following the guidelines in the [Load Child On Demand documentation](https://blazor.syncfusion.com/documentation/gantt-chart/data-binding#load-child-on-demand).
 
-* **[GanttSegmentFields.StartDate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttSegmentFields-2.html#Syncfusion_Blazor_Gantt_GanttSegmentFields_2_StartDate) Configuration Error**
+* **GanttSegmentFields.StartDate Configuration Error**
 
     Ensure that the [GanttSegmentFields.StartDate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttSegmentFields-2.html#Syncfusion_Blazor_Gantt_GanttSegmentFields_2_StartDate) field is properly configured by following the guidelines in the [Split Task documentation](https://blazor.syncfusion.com/documentation/gantt-chart/split-task).
 
