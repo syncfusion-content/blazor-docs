@@ -61,7 +61,9 @@ The following keyboard shortcuts are supported by the OTP Input component.
 
 ## HtmlAttributes
 
-[HtmlAttributes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfOtpInput.html#Syncfusion_Blazor_Inputs_SfOtpInput_HtmlAttributes) allow you to specify additional HTML attributes to be applied to the OTP input component.
+HtmlAttributes allow you to specify additional HTML attributes to be applied to the OTP input component.
+
+You can pass HTML attributes as key-value pairs to the [HtmlAttributes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfOtpInput.html#Syncfusion_Blazor_Inputs_SfOtpInput_HtmlAttributes) property.
 
 ```cshtml
 
