@@ -137,7 +137,7 @@ The axis title's position can be aligned using the `TextAlignment` property in [
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rDhptnWrASLOzPaX?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LZVfDHirzNGCVAZq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} 
 
 ![Blazor Column Chart with Axis Title Alignment](images/axis-customization/blazor-column-chart-axis-title-alignment.png)
 
