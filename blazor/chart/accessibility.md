@@ -91,4 +91,4 @@ The accessibility compliance of the Blazor Chart component is shown in the follo
 ## See also
 
 * [Accessibility in Syncfusion Blazor components](https://blazor.syncfusion.com/documentation/common/accessibility)
-* [Accessibility Customization in Syncfusion Blazor components](https://blazor.syncfusion.com/documentation/chart/accessibility)
+* [Accessibility Customization in Syncfusion Blazor components](./accessibility-customization.md)

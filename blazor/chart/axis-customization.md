@@ -97,7 +97,7 @@ A title can be added to the axis using [Title](https://help.syncfusion.com/cr/bl
 
 ### Axis title alignment
 
-The axis title's position can be aligned using the `TextAlignment` property in `ChartAxisTitleStyle`. The `TextAlignment` property allows you to specify the alignment of the title relative to the axis. You can set it to `Alignment.Near`, `Alignment.Center`, or `Alignment.Far` to position the title near the start, at the center, or far from the start of the axis, respectively. 
+The axis title's position can be aligned using the `TextAlignment` property in [ChartAxisTitleStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAxisTitleStyle.html). The `TextAlignment` property allows you to specify the alignment of the title relative to the axis. You can set it to `Alignment.Near`, `Alignment.Center`, or `Alignment.Far` to position the title near the start, at the center, or far from the start of the axis, respectively. 
 
 ```cshtml
 
@@ -105,23 +105,26 @@ The axis title's position can be aligned using the `TextAlignment` property in `
 
 <SfChart Title="Olympic Medals">
     <ChartPrimaryXAxis Title="Countries" ValueType="Syncfusion.Blazor.Charts.ValueType.Category">
-        <ChartAxisTitleStyle Size="16px" Color="red" FontFamily="Segoe UI" FontWeight="bold" TextAlignment="Alignment.Near"/>
+        <ChartAxisTitleStyle Size="16px" FontFamily="Segoe UI" FontWeight="bold" TextAlignment="Alignment.Near" />
     </ChartPrimaryXAxis>
+    <ChartPrimaryYAxis Title="MedalDetails">
+        <ChartAxisTitleStyle Size="16px" FontFamily="Segoe UI" FontWeight="bold" TextAlignment="Alignment.Far" />
+    </ChartPrimaryYAxis>
 
     <ChartSeriesCollection>
-        <ChartSeries DataSource="@MedalDetails" XName="X" YName="YValue" Type="ChartSeriesType.Column"/>        
+        <ChartSeries DataSource="@MedalDetails" XName="X" YName="YValue" Type="ChartSeriesType.Column" />
     </ChartSeriesCollection>
 </SfChart>
 
-@code{
+@code {
     public class ChartData
     {
         public string X { get; set; }
         public double YValue { get; set; }
     }
-	
+
     public List<ChartData> MedalDetails = new List<ChartData>
-	{
+    {
          new ChartData { X= "USA", YValue= 46 },
          new ChartData { X= "GBR", YValue= 27 },
          new ChartData { X= "CHN", YValue= 26 },
@@ -134,7 +137,7 @@ The axis title's position can be aligned using the `TextAlignment` property in `
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BZLfXRChVepNqOrv?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDhptnWrASLOzPaX?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} 
 
 ![Blazor Column Chart with Axis Title Alignment](images/axis-customization/blazor-column-chart-axis-title-alignment.png)
 
