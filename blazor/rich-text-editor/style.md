@@ -7,11 +7,11 @@ control: RichTextEditor
 documentation: ug
 ---
 
-# Style and Appearance
+# Style and Appearance in Blazor RichTextEditor Component
 
 ## Set placeholder
 
-The [Placeholder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.SfRichTextEditor.html#Syncfusion_Blazor_RichTextEditor_SfRichTextEditor_Placeholder) property is used to create a placeholder for the Rich Text Editor's content when the editor body is empty. 
+The [Placeholder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.SfRichTextEditor.html#Syncfusion_Blazor_RichTextEditor_SfRichTextEditor_Placeholder) property is used to create a placeholder for the Rich Text Editor's content when the editor body is empty.
 
 Use the `e-rte-placeholder` class to define the custom font family, font color, and styles to the placeholder text.
 

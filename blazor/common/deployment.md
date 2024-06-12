@@ -98,5 +98,5 @@ To enable AOT compilation in the application, add `RunAOTCompilation` options wi
 * [Host and deploy ASP.NET Core Blazor WebAssembly](https://learn.microsoft.com/en-us/aspnet/core/blazor/host-and-deploy/webassembly?view=aspnetcore-7.0)
 * [Publish a Web app to Azure App Service using Visual Studio](https://learn.microsoft.com/en-us/visualstudio/deployment/quickstart-deploy-aspnet-web-app?view=vs-2022&tabs=azure)
 * [Deploy ASP.NET Core apps to Azure App Service](https://learn.microsoft.com/en-us/aspnet/core/host-and-deploy/azure-apps/?view=aspnetcore-7.0&tabs=visual-studio)
-* [Deploy Blazor WASM App to Cloudflare](https://www.syncfusion.com/blogs/post/easily-deploy-a-blazor-webassembly-app-to-cloudflare.aspx)
+* [Deploy Blazor WASM App to Cloudflare](https://www.syncfusion.com/blogs/post/easily-deploy-a-blazor-webassembly-app-to-cloudflare)
 * [Publish a Blazor WebAssembly app and .NET API with Azure Static Web Apps](https://learn.microsoft.com/en-us/training/modules/publish-app-service-static-web-app-api-dotnet/)
