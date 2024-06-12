@@ -800,7 +800,7 @@ The [OnPrint](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsE
     public async Task PrintMap()
     {
         // using Maps component reference call 'Print' method
-        await this.maps.Print();
+        await this.maps.PrintAsync();
     }
     public void GetGEOLocation(Syncfusion.Blazor.Maps.PrintEventArgs args)
     {
