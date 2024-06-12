@@ -20,7 +20,7 @@ This integration enhances the usability of forms, allowing users to provide deta
 @using System.ComponentModel.DataAnnotations
 
 <EditForm Model="@formModel" OnValidSubmit="HandleValidSubmit">
-    <SfTextArea @bind-Value="@formModel.Address" Placeholder="Enter the Address" FloatLabelType="FloatLabelType.Auto"></SfTextArea>
+    <SfTextArea @bind-Value="@formModel.Address" Placeholder="Enter the Address" FloatLabelType="@FloatLabelType.Auto"></SfTextArea>
     <button type="submit">Submit</button>
 </EditForm>
 
