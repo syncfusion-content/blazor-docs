@@ -105,14 +105,14 @@ The axis title's position can be aligned using the `TextAlignment` property in [
 
 <SfChart Title="Olympic Medals">
     <ChartPrimaryXAxis Title="Countries" ValueType="Syncfusion.Blazor.Charts.ValueType.Category">
-        <ChartAxisTitleStyle Size="16px" FontFamily="Segoe UI" FontWeight="bold" TextAlignment="Alignment.Near" />
+        <ChartAxisTitleStyle Size="16px" FontFamily="Segoe UI" FontWeight="bold" TextAlignment="Syncfusion.Blazor.Charts.Alignment.Near" />
     </ChartPrimaryXAxis>
-    <ChartPrimaryYAxis Title="MedalDetails">
-        <ChartAxisTitleStyle Size="16px" FontFamily="Segoe UI" FontWeight="bold" TextAlignment="Alignment.Far" />
+    <ChartPrimaryYAxis Title="Medal Counts">
+        <ChartAxisTitleStyle Size="16px" FontFamily="Segoe UI" FontWeight="bold" TextAlignment="Syncfusion.Blazor.Charts.Alignment.Far" />
     </ChartPrimaryYAxis>
 
     <ChartSeriesCollection>
-        <ChartSeries DataSource="@MedalDetails" XName="X" YName="YValue" Type="ChartSeriesType.Column" />
+        <ChartSeries DataSource="@MedalDetails" XName="X" YName="YValue" Type="Syncfusion.Blazor.Charts.ChartSeriesType.Column" />
     </ChartSeriesCollection>
 </SfChart>
 
