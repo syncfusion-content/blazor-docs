@@ -40,10 +40,6 @@ By applying these classes, users can easily customize the appearance of the Text
 {% endhighlight %}
 {% highlight cshtml tabtitle="Css"  %}
 
-#container {
-  visibility: hidden;
-}
-
 #loader {
   color: #008cff;
   font-family: 'Helvetica Neue','calibiri';
@@ -174,17 +170,13 @@ You can customize the TextArea styles such as background-color, text-color and b
 <div id='container'>
     <div class='wrap'>
         <div id="input-container">
-            <SfTextArea id="default"></SfTextArea>
+            <SfTextArea Placeholder="Enter your comments" ></SfTextArea>
         </div>
     </div>
 </div>
 
 {% endhighlight %}
 {% highlight cshtml tabtitle="Css"  %}
-
-#container {
-  visibility: hidden;
-}
 
 #loader {
   color: #008cff;
@@ -249,10 +241,10 @@ You can change the floating label color of the TextArea for both `success` and `
     <div class='wrap'>
         <div id="input-container">
             <div>
-                <SfTextArea id="default1" Placeholder="Success" CssClass="e-success" FloatLabelType="Auto"></SfTextArea>
+                <SfTextArea id="default1" Placeholder="Success" CssClass="e-success" FloatLabelType="@FloatLabelType.Auto"></SfTextArea>
             </div>
             <div>
-                <SfTextArea id="default2" Placeholder ="Warning" CssClass="e-warning" FloatLabelType="Auto"></SfTextArea>
+                <SfTextArea id="default2" Placeholder ="Warning" CssClass="e-warning" FloatLabelType="@FloatLabelType.Auto"></SfTextArea>
             </div>
         </div>
     </div>
@@ -260,10 +252,6 @@ You can change the floating label color of the TextArea for both `success` and `
 
 {% endhighlight %}
 {% highlight cshtml tabtitle="Css"  %}
-
-#container {
-  visibility: hidden;
-}
 
 #loader {
   color: #008cff;
@@ -326,17 +314,13 @@ To add a mandatory asterisk (*) to the placeholder in the TextArea component, yo
 <div id='container'>
     <div class='wrap'>
         <div id="input-container">
-            <SfTextArea id="default" Placeholder="Enter your comments" FloatLabelType="Auto"></SfTextArea>
+            <SfTextArea id="default" Placeholder="Enter your comments" FloatLabelType="@FloatLabelType.Auto"></SfTextArea>
         </div>
     </div>
 </div>
 
 {% endhighlight %}
 {% highlight cshtml tabtitle="Css"  %}
-
-#container {
-  visibility: hidden;
-}
 
 #loader {
   color: #008cff;
