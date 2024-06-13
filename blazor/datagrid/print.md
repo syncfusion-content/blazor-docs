@@ -364,7 +364,7 @@ When printing a grid with a large number of columns, the browser’s default pag
 
 To show a large number of columns when printing, you can adjust the scale option from the print option panel based on your content size. This will allow you to fit the entire grid content within the printable area.
 
-![Printing Large Number of Columns in Blazor DataGrid](./images/blazor-datagrid-print-large-columns.png)
+![Printing large number of columns in Blazor DataGrid.](./images/blazor-datagrid-print-large-columns.png)
 
 <!-- Show or hide columns while Printing
 
