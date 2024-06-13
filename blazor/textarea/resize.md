@@ -21,10 +21,12 @@ The TextArea allows users to input and edit large amounts of text. Resizing this
 {% tabs %}
 {% highlight razor %}
 
-<SfTextArea Placeholder='Enter the Address' ResizeMode='Both'></SfTextArea>
+<SfTextArea Placeholder='Enter the Address' ResizeMode='Resize.Both'></SfTextArea>
 
 {% endhighlight %}
 {% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hXhTjHsgMqknhFJF?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor TextArea with Floating Label](./images/blazor-textarea-resize.png)" %}
 
 ## Width
 
@@ -33,7 +35,9 @@ You can easily customize the width of the TextArea using the [Width](https://hel
 {% tabs %}
 {% highlight razor %}
 
-<SfTextArea Placeholder='Enter the Address' Width="500" ResizeMode='Syncfusion.Blazor.Inputs.Resize.Both'></SfTextArea>
+<SfTextArea Placeholder='Enter the Address' Width="500" ResizeMode='Resize.Both'></SfTextArea>
 
 {% endhighlight %}
 {% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VZLTjRCACTsLJegK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor TextArea with Resize](./images/blazor-textarea-resize-width.png)" %}
