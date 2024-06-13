@@ -132,15 +132,3 @@ In the following example, the isTyped flag is used to track whether the filterin
 {% include_relative code-snippet/filtering/prevent-popupopen-in-filtering.razor %}
 
 {% endhighlight %}
-
-## Autofill
-
-Specifies whether the input field of the control will automatically suggest and fill in the first matched item, as the user types based on the items in the control's data source. If no matches are found, the input field will not be filled and no action will occur. Default value of [Autofill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfComboBox-2.html#Syncfusion_Blazor_DropDowns_SfComboBox_2_Autofill) is `false`.
-
-{% highlight Razor %}
-
-{% include_relative code-snippet/filtering/autofill-property.razor %}
-
-{% endhighlight %} 
-
-![Blazor ComboBox with autofill property.](./images/filtering/blazor_combobox_with-autofill-property.png)
