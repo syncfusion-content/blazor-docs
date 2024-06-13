@@ -381,7 +381,7 @@ The following example demonstrates the client-side action for saving files on th
            var responseText = args.Response.ResponseText;
            if (!string.IsNullOrWhiteSpace(responseText))
            {    
-                // for JSON Data and File Data
+                // for JSON and File Datas
                 using var jsonDoc = JsonDocument.Parse(responseText);
                 var jsonResponse = jsonDoc.RootElement;
 
