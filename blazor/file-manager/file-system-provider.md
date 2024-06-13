@@ -53,6 +53,10 @@ After setting the root directory of the file system, just build and run the proj
 
 ```
 
+To create a service application on your own and perform file operations (Read, Create, Rename, Delete, Get file details, Search, Copy, Move, Upload, Download, GetImage) in the Syncfusion Blazor File Manager component using the ASP.NET Core file system provider, you need to initialize the physical service in the controller.
+
+To initialize a local service with the above-mentioned file operations, create a new folder named `Controllers` inside the server part of the project. Then, create a new file with the extension `.cs` inside the Controllers folder and add the necessary file operations code available in the `FileManagerController.cs` found at this [link](https://github.com/SyncfusionExamples/ej2-aspcore-file-provider/blob/master/Controllers/FileManagerController.cs). Additionally, you can check out all the necessary file operation method details for this provider in the same GitHub repository.
+
 N> To learn more about file actions that can be performed with ASP.NET Core file system provider, refer to this [link](https://github.com/SyncfusionExamples/ej2-aspcore-file-provider#key-features)
 
 ## ASP.NET Core Azure cloud file system provider
@@ -128,6 +132,10 @@ Use the following command to install the NuGet package in an application.
 
 ```
 
+To create a service application on your own and perform file operations (Read, Create, Rename, Delete, Get file details, Search, Copy, Move, Upload, Download, GetImage) in the Syncfusion Blazor File Manager component using the ASP.NET Core Azure cloud file system provider, you need to initialize the Azure cloud provider in the controller.
+
+To initialize a local service with the above-mentioned file operations, create a new folder named `Controllers` inside the server part of the project. Then, create a new file with the extension `.cs` inside the Controllers folder and add the necessary file operations code available in the `AzureProviderController.cs` found at this [link](https://github.com/SyncfusionExamples/azure-aspcore-file-provider/blob/master/Controllers/AzureProviderController.cs). Additionally, you can check out all the necessary file operation method details for this provider in the same GitHub repository.
+
 N> To learn more about file actions that can be performed with ASP.NET Core Azure cloud file system provider, refer to this [link](https://github.com/SyncfusionExamples/ej2-azure-aspcore-file-provider#key-features)
 
 ## ASP.NET Core Amazon S3 cloud file provider
@@ -168,6 +176,10 @@ After registering the Amazon client account details, just build and run the proj
 
 ```
 
+To create a service application on your own and perform file operations (Read, Create, Rename, Delete, Get file details, Search, Copy, Move, Upload, Download, GetImage) in the Syncfusion Blazor File Manager component using the ASP.NET Core Amazon S3 cloud file provider, you need to initialize the Amazon S3 cloud file provider in the controller.
+
+To initialize a local service with the above-mentioned file operations, create a new folder named `Controllers` inside the server part of the project. Then, create a new file with the extension `.cs` inside the Controllers folder and add the necessary file operations code available in the `AmazonS3ProviderController.cs` found at this [link](https://github.com/SyncfusionExamples/amazon-s3-aspcore-file-provider/blob/master/Controllers/AmazonS3ProviderController.cs). Additionally, you can check out all the necessary file operation method details for this provider in the same GitHub repository.
+
 N> To learn more about the file actions that can be performed with Amazon S3 Cloud File provider, refer to this [link](https://github.com/SyncfusionExamples/ej2-amazon-s3-aspcore-file-provider.git#key-features)
 
 ## File Transfer Protocol file system provider
@@ -205,6 +217,10 @@ After registering the File Transfer Protocol details, just build and run the pro
 </SfFileManager>
 
 ```
+
+To create a service application on your own and perform file operations (Read, Create, Rename, Delete, Get file details, Search, Copy, Move, Upload, Download, GetImage) in the Syncfusion Blazor File Manager component using the File Transfer Protocol file system provider, you need to initialize the File Transfer Protocol file system provider in the controller.
+
+To initialize a local service with the above-mentioned file operations, create a new folder named `Controllers` inside the server part of the project. Then, create a new file with the extension `.cs` inside the Controllers folder and add the necessary file operations code available in the `FTPProviderController.cs` found at this [link](https://github.com/SyncfusionExamples/ftp-aspcore-file-provider/blob/master/Controllers/FTPProviderController.cs). Additionally, you can check out all the necessary file operation method details for this provider in the same GitHub repository.
 
 N> To learn more about the file actions that can be performed with File Transfer Protocol file system provider, refer to this [link](https://github.com/SyncfusionExamples/ej2-ftp-aspcore-file-provider.git#key-features)
 
@@ -264,6 +280,10 @@ After configuring the connection, just build and run the project. Now, the proje
 
 ```
 
+To create a service application on your own and perform file operations (Read, Create, Rename, Delete, Get file details, Search, Copy, Move, Upload, Download, GetImage) in the Syncfusion Blazor File Manager component using the SQL database file system provider, you need to initialize the SQL database file system provider in the controller.
+
+To initialize a local service with the above-mentioned file operations, create a new folder named `Controllers` inside the server part of the project. Then, create a new file with the extension `.cs` inside the Controllers folder and add the necessary file operations code available in the `SQLProviderController.cs` found at this [link](https://github.com/SyncfusionExamples/sql-server-database-aspcore-file-provider/blob/master/Controllers/SQLProviderController.cs). Additionally, you can check out all the necessary file operation method details for this provider in the same GitHub repository.
+
 N> To learn more about file actions that can be performed with SQL database file system provider, refer to this [link](https://github.com/SyncfusionExamples/ej2-sql-server-database-aspcore-file-provider#key-features)
 
 ## Google Drive file system provider
@@ -302,6 +322,10 @@ After updating the credentials, just build and run the project. Now, the project
 </SfFileManager>
 
 ```
+
+To create a service application on your own and perform file operations (Read, Create, Rename, Delete, Get file details, Search, Copy, Move, Upload, Download, GetImage) in the Syncfusion Blazor File Manager component using the Google Drive file system provider, you need to initialize the Google Drive file system provider in the controller.
+
+To initialize a local service with the above-mentioned file operations, create a new folder named `Controllers` inside the server part of the project. Then, create a new file with the extension `.cs` inside the Controllers folder and add the necessary file operations code available in the `GoogleDriveProviderController.cs` found at this [link](https://github.com/SyncfusionExamples/google-drive-aspcore-file-provider/blob/master/EJ2GoogleDriveFileProvider/Controllers/GoogleDriveProviderController.cs). Additionally, you can check out all the necessary file operation method details for this provider in the same GitHub repository.
 
 N> To learn more about file actions that can be performed with Google drive file system provider, refer to this [link](https://github.com/SyncfusionExamples/ej2-google-drive-aspcore-file-provider#key-features)
 
@@ -432,3 +456,39 @@ After configuring the Firebase Real time Database service link, build and run th
 
 
 ```
+
+To create a service application on your own and perform file operations (Read, Create, Rename, Delete, Get file details, Search, Copy, Move, Upload, Download, GetImage) in the Syncfusion Blazor File Manager component using the Firebase file system provider, you need to initialize the Firebase file system provider in the controller.
+
+To initialize a local service with the above-mentioned file operations, create a new folder named `Controllers` inside the server part of the project. Then, create a new file with the extension `.cs` inside the Controllers folder and add the necessary file operations code available in the `FirebaseProviderController.cs` found at this [link](https://github.com/SyncfusionExamples/firebase-realtime-database-aspcore-file-provider/blob/master/Controllers/FirebaseProviderController.cs). Additionally, you can check out all the necessary file operation method details for this provider in the same GitHub repository.
+
+N> To learn more about file actions that can be performed with Firebase file system provider, refer to this [link](https://github.com/SyncfusionExamples/firebase-realtime-database-aspcore-file-provider#key-features)
+
+
+## Custom file provider for the Syncfusion Blazor Fil eManager Component
+
+To create a custom file provider specific to your needs for the Syncfusion Blazor FileManager component, instead of relying on the predefined providers offered by Syncfusion, you can implement your own. Additionally, you need to ensure that the file actions requests and responses adhere to the same format used in the file system. Below are the detailed explanations for each file action, along with links to further information about their request and response parameters.
+
+
+* **Read** – This action is used to read files and directories from the file system. It retrieves the list of files and subdirectories in a specified directory. Click this [link](https://blazor.syncfusion.com/documentation/file-manager/file-operations#reading-files-and-folders) to know about the request and response parameters of read operations.
+
+* **Create** – This action is used to create new files or directories within the file system. It is essential for adding new content or organizing the directory structure. Click this [link](https://blazor.syncfusion.com/documentation/file-manager/file-operations#creating-files-and-folders) to know about the request and response parameters of create operations.
+
+* **Rename** – This action allows you to rename existing files or directories. It helps in managing and updating file names to maintain a clear and organized file system. Click this [link](https://blazor.syncfusion.com/documentation/file-manager/file-operations#renaming-files-and-folders) to know about the request and response parameters of rename operations.
+
+* **Delete** – This action is used to delete files or directories from the file system. It is a crucial operation for removing unnecessary or outdated files. Click this [link](https://blazor.syncfusion.com/documentation/file-manager/file-operations#deleting-files-and-folders) to know about the request and response parameters of delete operations.
+
+* **Get File Details**– This action retrieves detailed information about a specific file or directory, such as size, type, location, and last modified date. Click this [link](https://blazor.syncfusion.com/documentation/file-manager/file-operations#getting-file-details) to know about the request and response parameters of getting file details.
+
+* **Search** – This action allows you to search for files and directories within the file system based on specified criteria. It is useful for quickly finding files by name or other attributes. Click this [link](https://blazor.syncfusion.com/documentation/file-manager/file-operations#searching-files-and-folders) to know about the request and response parameters of search operations.
+
+* **Copy** – This action is used to copy files or directories from one location to another within the file system. It helps in duplicating content for backup or organizational purposes. Click this [link](https://blazor.syncfusion.com/documentation/file-manager/file-operations#copying-files-and-folders) to know about the request and response parameters of copy operations.
+
+* **Move** – This action allows you to move files or directories from one location to another. It is essential for reorganizing the file structure and managing content efficiently. Click this [link](https://blazor.syncfusion.com/documentation/file-manager/file-operations#moving-files-and-folders) to know about the request and response parameters of move operations.
+
+* **Upload** – This action enables the uploading of files from the client to the server. It is crucial for adding new content to the file system from external sources. Click this [link](https://blazor.syncfusion.com/documentation/file-manager/file-operations#uploading-files) to know about the request and response parameters of upload operations.
+
+* **Download** – This action allows you to download files from the server to the client. It is useful for accessing and retrieving files stored on the server. Click this [link](https://blazor.syncfusion.com/documentation/file-manager/file-operations#downloading-files) to know about the request and response parameters of download operations.
+
+* **Get Image** – This action retrieves image files from the file system. It is specifically used for handling image files and displaying them in the application. Click this [link](https://blazor.syncfusion.com/documentation/file-manager/file-operations#getting-images) to know about the request and response parameters of get image operations.
+
+Implementing these operations uniformly ensures that the File Manager component functions smoothly with your custom file provider, maintaining consistency in how files are managed and accessed across different actions.
