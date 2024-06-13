@@ -56,6 +56,7 @@ By using the `Position` property, the legend can be positioned at left, right,
 }
 
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BNVzNnMVpznHbBmn?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Changing Legend Position in Blazor Column Chart](images/legend/blazor-column-chart-legend-position.png)
 
@@ -75,7 +76,7 @@ The custom position helps you to position the legend anywhere in the 3D chart us
         <Chart3DSeries DataSource="@MedalDetails" Name="Bronze" XName="Country" Opacity="1" YName="Bronze" Type="Chart3DSeriesType.Column"/>      
     </Chart3DSeriesCollection>
 
-    <Chart3DLegendSettings Visible="true" Position="LegendPosition.Custom">
+    <Chart3DLegendSettings Visible="true" Position="Syncfusion.Blazor.Chart3D.LegendPosition.Custom">
         <Chart3DLocation X="200" Y="20"/>
     </Chart3DLegendSettings>
 </SfChart3D>
@@ -104,6 +105,7 @@ The custom position helps you to position the legend anywhere in the 3D chart us
 }
 
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VNBJXHiLpzGiRrpE?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Column 3D Chart Legend in Custom Position](images/legend/blazor-column-chart-legend-in-custom-position.png)
 
@@ -154,6 +156,7 @@ The order of the legend items can be reversed by using the `Reverse` property. B
 }
 
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rXVpXnsLpIMZlkTl?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Changing Blazor Column 3D Chart Legend Reverse](images/legend/blazor-column-chart-legend-reverse.png)
 
@@ -205,6 +208,7 @@ The legend can be aligned at near, far or center to the 3D chart using the `Alig
 }
 
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LjLpDRsrTICojdGV?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Changing Blazor Column 3D Chart Legend Alignment Position](images/legend/blazor-column-chart-legend-alignment-position.png)
 
@@ -221,9 +225,9 @@ To change the legend icon shape, `LegendShape` property in the `Series` can be
     <Chart3DPrimaryYAxis Title="Medals" Minimum="0" Maximum="80" Interval="20"></Chart3DPrimaryYAxis>   
 
     <Chart3DSeriesCollection>
-        <Chart3DSeries DataSource="@MedalDetails" Name="Gold" XName="Country" Opacity="1" YName="Gold" Type="Chart3DSeriesType.Column" LegendShape="LegendShape.Circle"/>      
-        <Chart3DSeries DataSource="@MedalDetails" Name="Silver" XName="Country" Opacity="1" YName="Silver" Type="Chart3DSeriesType.Column" LegendShape="LegendShape.SeriesType"/>     
-        <Chart3DSeries DataSource="@MedalDetails" Name="Bronze" XName="Country" Opacity="1" YName="Bronze" Type="Chart3DSeriesType.Column" LegendShape="LegendShape.Diamond"/>      
+        <Chart3DSeries DataSource="@MedalDetails" Name="Gold" XName="Country" Opacity="1" YName="Gold" Type="Syncfusion.Blazor.Chart3D.Chart3DSeriesType.Column" LegendShape="LegendShape.Circle"/>      
+        <Chart3DSeries DataSource="@MedalDetails" Name="Silver" XName="Country" Opacity="1" YName="Silver" Type="Syncfusion.Blazor.Chart3D.Chart3DSeriesType.Column" LegendShape="LegendShape.SeriesType"/>     
+        <Chart3DSeries DataSource="@MedalDetails" Name="Bronze" XName="Country" Opacity="1" YName="Bronze" Type="Syncfusion.Blazor.Chart3D.Chart3DSeriesType.Column" LegendShape="LegendShape.Diamond"/>      
     </Chart3DSeriesCollection>
 
     <Chart3DLegendSettings Visible="true"></Chart3DLegendSettings>
@@ -253,6 +257,7 @@ To change the legend icon shape, `LegendShape` property in the `Series` can be
 }
 
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rtLTNRiBpyVrMjeP?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Changing Legend Shape in Blazor Column 3D Chart](images/legend/blazor-column-chart-legend-shape.png)
 
@@ -269,9 +274,9 @@ By default, legend takes 20% - 25% of the 3D chart's height horizontally, when i
     <Chart3DPrimaryYAxis Title="Medals" Minimum="0" Maximum="80" Interval="20"></Chart3DPrimaryYAxis>   
 
     <Chart3DSeriesCollection>
-        <Chart3DSeries DataSource="@MedalDetails" Name="Gold" XName="Country" Opacity="1" YName="Gold" Type="Chart3DSeriesType.Column" LegendShape="LegendShape.Circle"/>      
-        <Chart3DSeries DataSource="@MedalDetails" Name="Silver" XName="Country" Opacity="1" YName="Silver" Type="Chart3DSeriesType.Column" LegendShape="LegendShape.SeriesType"/>     
-        <Chart3DSeries DataSource="@MedalDetails" Name="Bronze" XName="Country" Opacity="1" YName="Bronze" Type="Chart3DSeriesType.Column" LegendShape="LegendShape.Diamond"/>      
+        <Chart3DSeries DataSource="@MedalDetails" Name="Gold" XName="Country" Opacity="1" YName="Gold" Type="Chart3DSeriesType.Column" LegendShape="Syncfusion.Blazor.Chart3D.LegendShape.Circle"/>      
+        <Chart3DSeries DataSource="@MedalDetails" Name="Silver" XName="Country" Opacity="1" YName="Silver" Type="Chart3DSeriesType.Column" LegendShape="Syncfusion.Blazor.Chart3D.LegendShape.SeriesType"/>     
+        <Chart3DSeries DataSource="@MedalDetails" Name="Bronze" XName="Country" Opacity="1" YName="Bronze" Type="Chart3DSeriesType.Column" LegendShape="Syncfusion.Blazor.Chart3D.LegendShape.Diamond"/>      
     </Chart3DSeriesCollection>
 
     <Chart3DLegendSettings Visible="true" Height="50" Width="300">
@@ -303,6 +308,7 @@ By default, legend takes 20% - 25% of the 3D chart's height horizontally, when i
 }
 
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZrfDHMLpeVFwoRs?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Column 3D Chart Legend with Custom Size](images/legend/blazor-column-chart-legend-custom-size.png)
 
@@ -352,6 +358,7 @@ The size of the legend items can be customised by using the `ShapeHeight` and `S
 }
 
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rthftHMLpyqztChS?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Column Chart Legend Shape with Custom Size](images/legend/blazor-column-chart-custom-legend-shape-size.png)
 
@@ -364,7 +371,7 @@ Paging will be enabled by default, when the legend items exceeds the legend boun
 @using Syncfusion.Blazor.Chart3D
 
 <SfChart3D Title="FB Penetration of Internet Audience" WallColor="transparent" EnableRotation="true" RotationAngle="7" TiltAngle="10" Depth="100">
-    <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Chart3D.ValueType.Category" Interval="1" LabelIntersectAction="LabelIntersectAction.Rotate45"/>
+    <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Chart3D.ValueType.Category" Interval="1" LabelIntersectAction="Syncfusion.Blazor.Chart3D.LabelIntersectAction.Rotate45"/>
     <Chart3DPrimaryYAxis Title="Penetration (%)" LabelFormat="{value}%" Minimum="0" Maximum="90"></Chart3DPrimaryYAxis>
 
     <Chart3DSeriesCollection>
@@ -401,6 +408,7 @@ Paging will be enabled by default, when the legend items exceeds the legend boun
 }
 
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rZVTDnChfygYhRAJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Column 3D Chart Legend with Paging](images/legend/blazor-column-chart-legend-paging.png)
 
@@ -417,12 +425,12 @@ When the legend text exceeds the container, the text can be wrapped by using the
     <Chart3DPrimaryYAxis Title="Medals" Minimum="0" Maximum="80" Interval="20"></Chart3DPrimaryYAxis>   
 
     <Chart3DSeriesCollection>
-        <Chart3DSeries DataSource="@MedalDetails" Name="Gold" XName="Country" Opacity="1" YName="Gold" Type="Chart3DSeriesType.Column" LegendShape="LegendShape.Circle"/>      
-        <Chart3DSeries DataSource="@MedalDetails" Name="Silver" XName="Country" Opacity="1" YName="Silver" Type="Chart3DSeriesType.Column" LegendShape="LegendShape.SeriesType"/>     
-        <Chart3DSeries DataSource="@MedalDetails" Name="Bronze" XName="Country" Opacity="1" YName="Bronze" Type="Chart3DSeriesType.Column" LegendShape="LegendShape.Diamond"/>      
+        <Chart3DSeries DataSource="@MedalDetails" Name="Gold" XName="Country" Opacity="1" YName="Gold" Type="Chart3DSeriesType.Column" LegendShape="Syncfusion.Blazor.Chart3D.LegendShape.Circle"/>      
+        <Chart3DSeries DataSource="@MedalDetails" Name="Silver" XName="Country" Opacity="1" YName="Silver" Type="Chart3DSeriesType.Column" LegendShape="Syncfusion.Blazor.Chart3D.LegendShape.SeriesType"/>     
+        <Chart3DSeries DataSource="@MedalDetails" Name="Bronze" XName="Country" Opacity="1" YName="Bronze" Type="Chart3DSeriesType.Column" LegendShape="Syncfusion.Blazor.Chart3D.LegendShape.Diamond"/>      
     </Chart3DSeriesCollection>
 
-    <Chart3DLegendSettings Visible="true" Position="LegendPosition.Right" TextWrap="@Syncfusion.Blazor.TextWrap.Wrap" MaximumLabelWidth="20">
+    <Chart3DLegendSettings Visible="true" Position="Syncfusion.Blazor.Chart3D.LegendPosition.Right" TextWrap="@Syncfusion.Blazor.TextWrap.Wrap" MaximumLabelWidth="20">
     </Chart3DLegendSettings>
 </SfChart3D>
 
@@ -450,6 +458,7 @@ When the legend text exceeds the container, the text can be wrapped by using the
 }
 
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDVpXRsLJoJxytCf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor 3D Chart Legend with Wrap](images/legend/blazor-column-chart-legend-text-wrap.png)
 
@@ -461,14 +470,14 @@ By default, you can collapse the series visibility by clicking the legend. On th
 
 @using Syncfusion.Blazor.Chart3D
 
-<SfChart3D Title="Olympic Medals" WallColor="transparent" EnableRotation="true" RotationAngle="7" TiltAngle="10" Depth="100" SelectionMode="SelectionMode.Series">
+<SfChart3D Title="Olympic Medals" WallColor="transparent" EnableRotation="true" RotationAngle="7" TiltAngle="10" Depth="100" SelectionMode="Syncfusion.Blazor.Chart3D.SelectionMode.Series">
     <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Chart3D.ValueType.Category" Title="Countries"/>
     <Chart3DPrimaryYAxis Title="Medals" Minimum="0" Maximum="80" Interval="20"></Chart3DPrimaryYAxis>    
 
     <Chart3DSeriesCollection>
-        <Chart3DSeries DataSource="@MedalDetails" Name="Gold" XName="Country" Opacity="1" YName="Gold" Type="Chart3DSeriesType.Column" LegendShape="LegendShape.Circle"/>      
-        <Chart3DSeries DataSource="@MedalDetails" Name="Silver" XName="Country" Opacity="1" YName="Silver" Type="Chart3DSeriesType.Column" LegendShape="LegendShape.SeriesType"/>     
-        <Chart3DSeries DataSource="@MedalDetails" Name="Bronze" XName="Country" Opacity="1" YName="Bronze" Type="Chart3DSeriesType.Column" LegendShape="LegendShape.Diamond"/>      
+        <Chart3DSeries DataSource="@MedalDetails" Name="Gold" XName="Country" Opacity="1" YName="Gold" Type="Chart3DSeriesType.Column" LegendShape="Syncfusion.Blazor.Chart3D.LegendShape.Circle"/>      
+        <Chart3DSeries DataSource="@MedalDetails" Name="Silver" XName="Country" Opacity="1" YName="Silver" Type="Chart3DSeriesType.Column" LegendShape="Syncfusion.Blazor.Chart3D.LegendShape.SeriesType"/>     
+        <Chart3DSeries DataSource="@MedalDetails" Name="Bronze" XName="Country" Opacity="1" YName="Bronze" Type="Chart3DSeriesType.Column" LegendShape="Syncfusion.Blazor.Chart3D.LegendShape.Diamond"/>      
     </Chart3DSeriesCollection>
 
     <Chart3DLegendSettings Visible="true" ToggleVisibility="false">
@@ -499,6 +508,7 @@ By default, you can collapse the series visibility by clicking the legend. On th
 }
 
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hNhzNHiLfoSHNKph?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Column 3D Chart Legend with Series Selection](images/legend/blazor-column-chart-legend-series-selection.png)
 
@@ -514,18 +524,18 @@ By default, series `Name` will be displayed as legend. To skip the legend for a 
     <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Chart3D.ValueType.Category" Title="Countries"/>
     <Chart3DPrimaryYAxis Title="Medals" Minimum="0" Maximum="80" Interval="20"></Chart3DPrimaryYAxis>
 
-    <ChartSeriesCollection>
-        <ChartSeries DataSource="@MedalDetails" Name="Gold" XName="Country" Width="2" LegendShape="LegendShape.Circle" Opacity="1" YName="Gold" Type="ChartSeriesType.Column"></ChartSeries>
-        <ChartSeries DataSource="@MedalDetails" Name="" XName="Country" Width="2" LegendShape="LegendShape.SeriesType" Opacity="1" YName="Silver" Type="ChartSeriesType.Column"></ChartSeries>
-        <ChartSeries DataSource="@MedalDetails" Name="Bronze" XName="Country" Width="2" LegendShape="LegendShape.Diamond" Opacity="1" YName="Bronze" Type="ChartSeriesType.Column"></ChartSeries>
-    </ChartSeriesCollection>
+    <Chart3DSeriesCollection>
+        <Chart3DSeries DataSource="@MedalDetails" Name="Gold" XName="Country" LegendShape="Syncfusion.Blazor.Chart3D.LegendShape.Circle" Opacity="1" YName="Gold" Type="Syncfusion.Blazor.Chart3D.Chart3DSeriesType.Column"></Chart3DSeries>
+        <Chart3DSeries DataSource="@MedalDetails" Name="" XName="Country" LegendShape="Syncfusion.Blazor.Chart3D.LegendShape.SeriesType" Opacity="1" YName="Silver" Type="Syncfusion.Blazor.Chart3D.Chart3DSeriesType.Column"></Chart3DSeries>
+        <Chart3DSeries DataSource="@MedalDetails" Name="Bronze" XName="Country" LegendShape="Syncfusion.Blazor.Chart3D.LegendShape.Diamond" Opacity="1" YName="Bronze" Type="Syncfusion.Blazor.Chart3D.Chart3DSeriesType.Column"></Chart3DSeries>
+    </Chart3DSeriesCollection>
 
-    <ChartLegendSettings Visible="true" ToggleVisibility="true">
-    </ChartLegendSettings>
-</SfChart>
+    <Chart3DLegendSettings Visible="true" ToggleVisibility="true">
+    </Chart3DLegendSettings>
+</SfChart3D>
 @code{
     
-    public class ChartData
+    public class Chart3DData
     {
         public string Country { get; set; }
         public double Gold { get; set; }
@@ -533,7 +543,7 @@ By default, series `Name` will be displayed as legend. To skip the legend for a 
         public double Bronze { get; set; }
     }
 
-    public List<ChartData> MedalDetails = new List<ChartData>
+    public List<Chart3DData> MedalDetails = new List<Chart3DData>
 	{
 		new Chart3DData { Country = "USA", Gold = 50, Silver = 70, Bronze = 45 },
         new Chart3DData { Country = "China", Gold = 40, Silver = 60, Bronze = 55 },
@@ -547,6 +557,7 @@ By default, series `Name` will be displayed as legend. To skip the legend for a 
 }
 
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hjLJDxWLfeYGOxOB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Hiding Legend Item in Blazor Column 3D Chart](images/legend/blazor-column-chart-hide-legend-item.png)
 
@@ -563,9 +574,9 @@ You can set title for legend using `Title` property in `LegendSettings`. The `Si
     <Chart3DPrimaryYAxis Title="Medals" Minimum="0" Maximum="80" Interval="20"></Chart3DPrimaryYAxis>    
 
     <Chart3DSeriesCollection>
-        <Chart3DSeries DataSource="@MedalDetails" Name="Gold" XName="Country" Opacity="1" YName="Gold" Type="Chart3DSeriesType.Column" LegendShape="LegendShape.Circle"/>      
-        <Chart3DSeries DataSource="@MedalDetails" Name="Silver" XName="Country" Opacity="1" YName="Silver" Type="Chart3DSeriesType.Column" LegendShape="LegendShape.SeriesType"/>     
-        <Chart3DSeries DataSource="@MedalDetails" Name="Bronze" XName="Country" Opacity="1" YName="Bronze" Type="Chart3DSeriesType.Column" LegendShape="LegendShape.Diamond"/>      
+        <Chart3DSeries DataSource="@MedalDetails" Name="Gold" XName="Country" Opacity="1" YName="Gold" Type="Chart3DSeriesType.Column" LegendShape="Syncfusion.Blazor.Chart3D.LegendShape.Circle"/>      
+        <Chart3DSeries DataSource="@MedalDetails" Name="Silver" XName="Country" Opacity="1" YName="Silver" Type="Chart3DSeriesType.Column" LegendShape="Syncfusion.Blazor.Chart3D.LegendShape.SeriesType"/>     
+        <Chart3DSeries DataSource="@MedalDetails" Name="Bronze" XName="Country" Opacity="1" YName="Bronze" Type="Chart3DSeriesType.Column" LegendShape="Syncfusion.Blazor.Chart3D.LegendShape.Diamond"/>      
     </Chart3DSeriesCollection>
 
     <Chart3DLegendSettings Visible="true" Title="Countries"></Chart3DLegendSettings>
@@ -595,6 +606,7 @@ You can set title for legend using `Title` property in `LegendSettings`. The `Si
 }
 
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDhztRiBfnXfzkzm?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Legend Title in Blazor Column 3D Chart](images/legend/blazor-column-chart-legend-title.png)
 
@@ -607,7 +619,7 @@ The page number will always be visible while using legend paging. It is now poss
 @using Syncfusion.Blazor.Chart3D
 
 <SfChart3D Title="FB Penetration of Internet Audience" WallColor="transparent" EnableRotation="true" RotationAngle="7" TiltAngle="10" Depth="100">
-    <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Chart3D.ValueType.Category" Title="Countries" Interval="1" LabelIntersectAction="LabelIntersectAction.Rotate45"/>
+    <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Chart3D.ValueType.Category" Title="Countries" Interval="1" LabelIntersectAction="Syncfusion.Blazor.Chart3D.LabelIntersectAction.Rotate45"/>
     <Chart3DPrimaryYAxis Title="Penetration (%)" LabelFormat="{value}%" Minimum="0" Maximum="90"></Chart3DPrimaryYAxis>
 
     <Chart3DSeriesCollection>
@@ -644,6 +656,7 @@ The page number will always be visible while using legend paging. It is now poss
 }
 
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BXLfjxChpxNYlHvV?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Enabling legend pages in Blazor Column 3D Chart](images/legend/blazor-column-chart-legend-with-page-navigation.png)
 
@@ -656,7 +669,7 @@ The `ItemPadding` property can be used to adjust the space between the legend it
 @using Syncfusion.Blazor.Chart3D
 
 <SfChart3D Title="FB Penetration of Internet Audience" WallColor="transparent" EnableRotation="true" RotationAngle="7" TiltAngle="10" Depth="100">
-    <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Chart3D.ValueType.Category" Title="Countries" Interval="1" LabelIntersectAction="LabelIntersectAction.Rotate45"/>
+    <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Chart3D.ValueType.Category" Title="Countries" Interval="1" LabelIntersectAction="Syncfusion.Blazor.Chart3D.LabelIntersectAction.Rotate45"/>
     <Chart3DPrimaryYAxis Title="Penetration (%)" LabelFormat="{value}%" Minimum="0" Maximum="90"></Chart3DPrimaryYAxis>
 
     <Chart3DSeriesCollection>
@@ -693,5 +706,6 @@ The `ItemPadding` property can be used to adjust the space between the legend it
 }
 
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hDhTjnsVpdCodgcy?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Column 3D Chart Legend Shape with Item Padding](images/legend/blazor-column-chart-legend-item-padding.png)
