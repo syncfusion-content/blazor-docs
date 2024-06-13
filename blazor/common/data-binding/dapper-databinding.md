@@ -443,4 +443,4 @@ N> Find the sample from this [Github](https://github.com/SyncfusionExamples/blaz
 
 ## See also
 
-* [Create Blazor CRUD Application with PostgreSQL and Dapper](https://www.syncfusion.com/blogs/post/create-blazor-crud-application-with-postgresql-and-dapper)
+* [Create Blazor CRUD Application with PostgreSQL and Dapper](https://www.syncfusion.com/blogs/post/create-blazor-crud-application-with-postgresql-and-dapper.aspx)
