@@ -668,7 +668,7 @@ namespace Model
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LDBTXUszLlWhsBgB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-![Blazor DataGrid with ListView in Column Chooser](./images/blazor-datagrid-column-chooser-content-template.png)
+![Column chooser content template in Blazor DataGrid.](./images/blazor-datagrid-column-chooser-content-template.png)
 
 ### Customize the footer of column chooser
 

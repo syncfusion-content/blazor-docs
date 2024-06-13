@@ -304,7 +304,7 @@ Also, the add operation is handled while performing batch editing using the bool
         public string ShipCountry { get; set; }
         public bool Verified { get; set; }
     }
-    public async Task CellSavedHandler(CellSaveArgs<Order> args)
+    public async Task CellSavedHandler(CellSavedArgs<Order> args)
     {
         var index = await Grid.GetRowIndexByPrimaryKey(args.RowData.OrderID);
         if (args.ColumnName == "Quantity")

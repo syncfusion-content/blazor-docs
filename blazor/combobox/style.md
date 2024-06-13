@@ -25,6 +25,18 @@ Specify the boolean value to the [Readonly](https://help.syncfusion.com/cr/blazo
 
 ![Blazor ComboBox with readonly mode.](./images/style/blazor_combobox_readonly-mode.png)
 
+## Disabled state
+
+Specify the boolean value to the [Enabled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_Enabled) property that indicates whether the component is enabled or not.
+
+{% highlight cshtml %}
+
+{% include_relative code-snippet/style/disabled-state.razor %}
+
+{% endhighlight %}
+
+![Blazor ComboBox with Disabled ](./images/style/blazor_ComboBox_disabled-state.png)
+
 ## CssClass  
 
 Specifies the CSS class name that can be appended to the root element of the ComboBox. One or more custom CSS classes can be added to a ComboBox.
@@ -44,6 +56,20 @@ Some of the possible values are:
 {% endhighlight %} 
 
 ![Blazor ComboBox with CssClass property.](./images/style/blazor_combobox_cssclass-property.png)
+
+## Customizing the disabled component’s text color
+
+You can customize the text color of a disabled component by targeting its CSS class `.e-input[disabled]`, which indicates the input element in a disabled state, and set the desired color to the `-webkit-text-fill-color` property.
+
+{% highlight cshtml %}
+
+{% include_relative code-snippet/style/disable-text-color.razor %}
+
+{% endhighlight %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hNhqMVBwUFMudrwO?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+![Blazor ComboBox with Disabled component text color](./images/style/blazor_combobox_disabled-text-color.png)
 
 ## Customizing the appearance of container element
 
@@ -101,17 +127,17 @@ You can customize the color of the combobox component when it is in a focused st
 
 ![Blazor ComboBox focusing color outline theme.](./images/style/blazor_combobox_outline-focus-color.png)
 
-## Customizing the disabled component’s text color
+## Customizing the background color of focus, hover, and active items
 
-You can customize the text color of a disabled component by targeting its CSS class `.e-input[disabled]`, which indicates the input element in a disabled state, and set the desired color to the `-webkit-text-fill-color` property.
+You can customize the background color and text color of list items within the combobox component when they are in a focused, active, or hovered state by targeting the CSS classes `.e-list-item.e-item-focus`, `.e-list-item.e-active`, and `.e-list-item.e-hover`, and set the desired color to the background-color and color properties.
 
 {% highlight cshtml %}
 
-{% include_relative code-snippet/style/disable-text-color.razor %}
+{% include_relative code-snippet/style/background-color.razor %}
 
 {% endhighlight %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hNhqMVBwUFMudrwO?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VZhKWhLwgPKXzzDZ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor ComboBox with disabled component text color.](./images/style/blazor_combobox_disabled-text-color.png)
 
