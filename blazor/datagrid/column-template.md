@@ -427,7 +427,7 @@ After that, add new razor page for routing with routing url along with the param
 
 
 The following GIF represents template routing in DataGrid
-![Blazor DataGrid with Routing Template](./images/blazor-datagrid-template-routing.gif)
+![Blazor DataGrid with routing template.](./images/blazor-datagrid-template-routing.gif)
 
 ## See also
 
