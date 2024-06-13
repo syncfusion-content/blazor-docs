@@ -150,7 +150,12 @@ To enable or disable selection zooming, use the [EnableSelectionZooming](https:/
 @using Syncfusion.Blazor.Maps
 
 <SfMaps>
-    <MapsZoomSettings Enable="true" EnableSelectionZooming="true" EnablePanning="true" Toolbars='new string[]{"Zoom", "ZoomIn", "ZoomOut", "Pan", "Reset" }'></MapsZoomSettings>
+    <MapsZoomSettings Enable="true" EnableSelectionZooming="true" EnablePanning="true">
+        <MapsZoomToolbarSettings>
+            <MapsZoomToolbarButton ToolbarItems="new List<ToolbarItem>() { ToolbarItem.Zoom, ToolbarItem.ZoomIn, ToolbarItem.ZoomOut,
+            ToolbarItem.Pan, ToolbarItem.Reset }"></MapsZoomToolbarButton>
+        </MapsZoomToolbarSettings>
+    </MapsZoomSettings>
     <MapsLayers>
         <MapsLayer ShapeData='new {dataOptions ="https://cdn.syncfusion.com/maps/map-data/usa.json"}' TValue="string">
         </MapsLayer>
@@ -554,10 +559,10 @@ The [ShapeSelection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Map
 @code{
     SfMaps mapsref;
     public void Select() {
-        mapsref.ShapeSelection(0, "continent", "Asia", true);
+        mapsref.ShapeSelectionAsync(0, "continent", "Asia", true);
     }
     public void Unselect() {
-        mapsref.ShapeSelection(0, "continent", "Asia", false);
+        mapsref.ShapeSelectionAsync(0, "continent", "Asia", false);
     }
 }
 ```

@@ -126,7 +126,7 @@ The legend can be added to the Azure Maps by setting the [Visible](https://help.
 ```cshtml
 @using Syncfusion.Blazor.Maps
 
-<SfMaps Format="N0" UseGroupingSeparator="true">
+<SfMaps Format="N0" EnableGroupingSeparator="true">
     <MapsZoomSettings Enable="true">
         <MapsZoomToolbarSettings>
             <MapsZoomToolbarTooltipSettings FontFamily="inherit"></MapsZoomToolbarTooltipSettings>

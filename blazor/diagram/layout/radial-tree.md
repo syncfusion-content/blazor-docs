@@ -145,6 +145,8 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ![Blazor Radial Tree Diagram](../images/RadialTreeUG.png)
 
+>**Note:** In the DataSourceSettings, the type of the ID and ParentID properties is string. The provided DataSource should have a parent-child relationship. It is necessary for at least one node to have an empty ParentID.
+
 ## How to create a RadialTree with nodes and connectors
 
 You can render a radial tree layout without using Datasource. The following code demonstrates how to render a radial tree layout without using DataSource.
