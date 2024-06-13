@@ -9,7 +9,7 @@ documentation: ug
 
 # Accessibility Customization in Blazor Chart Component
 
-The Blazor Chart component provides extensive support for accessibility customization, allowing developers to enhance the user experience for individuals with disabilities. This section briefly explains the key properties for accessibility customization in the Blazor Chart component.
+The Blazor Chart component offers extensive support for accessibility customization, enabling you to improve the user experience for individuals with disabilities. This section provides a brief explanation of the key properties for accessibility customization in the Blazor Chart component.
 
 The chart component includes several properties that allow for the customization of accessibility features such as:
 *  [AccessibilityDescription](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfChart.html#Syncfusion_Blazor_Charts_SfChart_AccessibilityDescription) - Provides a text description for the chart, improving support for screen readers.
