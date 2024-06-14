@@ -460,14 +460,33 @@ You can find the full information regarding Predecessors from [here](https://bla
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hZrTDWLOAOhAyPxe?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Handling exceptions
-Exceptions that occur during Gantt actions can be handled without stopping the application. These error messages or exception details can be acquired using the [OnActionFailure](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_OnActionFailure) event.
+Exception handling in [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart) is crucial for identifying errors, displaying error messages, and devising recovery strategies. You can access error messages and exception details via the
+[OnActionFailure](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_OnActionFailure) event.
 
-The argument passed to the [OnActionFailure](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_OnActionFailure)event contains the error details returned from the server.
+Common Errors and Their Resolutions:
+
+* **ResourceFields Configuration Error**
+
+    Ensure that the [ResourceFields](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_ResourceFields) are properly configured by following the guidelines in the [Resource View documentation](https://blazor.syncfusion.com/documentation/gantt-chart/resource-view).
+
+* **GanttTaskFields Configuration Error**
+
+    Ensure that the [GanttTaskFields](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_TaskFields) are properly configured by following the guidelines in the [Hierarchical Data Binding documentation](https://blazor.syncfusion.com/documentation/gantt-chart/data-binding#hierarchical-data-binding).
+
+* **HasChildMapping Configuration Error**
+    
+    Ensure that the [HasChildMapping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTaskFields.html#Syncfusion_Blazor_Gantt_GanttTaskFields_HasChildMapping) property is properly configured for load-on-demand by following the guidelines in the [Load Child On Demand documentation](https://blazor.syncfusion.com/documentation/gantt-chart/data-binding#load-child-on-demand).
+
+* **GanttSegmentFields.StartDate Configuration Error**
+
+    Ensure that the [GanttSegmentFields.StartDate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttSegmentFields-2.html#Syncfusion_Blazor_Gantt_GanttSegmentFields_2_StartDate) field is properly configured by following the guidelines in the [Split Task documentation](https://blazor.syncfusion.com/documentation/gantt-chart/split-task).
+
+The argument passed to the [OnActionFailure](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_OnActionFailure) event contains the error details returned from the server.
 
 N> We recommend you bind the `OnActionFailure` event during your application development phase, this helps you to find any exceptions. You can pass these exception details to our support team to get a solution as early as possible.
 
 
-The following sample code demonstrates notifying user when server-side exception has occurred during data operation,
+The following sample code demonstrates how to notify the user when a server-side exception occurs during a data operation:
 
 {% tabs %}
 {% highlight razor %}
