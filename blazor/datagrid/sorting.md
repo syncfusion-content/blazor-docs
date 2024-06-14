@@ -531,13 +531,13 @@ The following example demonstrates how to define custom sort comparer function f
 
 ## Touch interaction
 
-When you tap the datagrid header on touchscreen devices, the selected column header is sorted. A popup ![sorting](./images/sorting.jpg) is displayed for multi-column sorting. To sort multiple columns, tap the popup![msorting](./images/msorting.jpg), and then tap the desired datagrid headers.
+When you tap the datagrid header on touchscreen devices, the selected column header is sorted. A popup ![Sorting in Blazor DataGrid.](./images/blazor-datagrid-sorting.jpg) is displayed for multi-column sorting. To sort multiple columns, tap the popup![Multiple sorting in Blazor DataGrid.](./images/blazor-datagrid-multiple-sorting.jpg), and then tap the desired datagrid headers.
 
 > The [AllowMultiSorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowMultiSorting) and [AllowSorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowSorting) should be **true** then only the popup will be shown.
 
 The following screenshot represents a grid touch sorting in the device.
 
-![Sorting in Blazor DataGrid using Touch Interaction](./images/blazor-datagrid-touch-sorting.jpg)
+![Sorting in Blazor DataGrid using touch interaction.](./images/blazor-datagrid-touch-sorting.jpg)
 
 ## Sort foreign key column based on text
 

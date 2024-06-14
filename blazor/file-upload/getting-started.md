@@ -356,6 +356,61 @@ public IActionResult Save()
 {% endhighlight %}
 {% endtabs %}
 
+### Client-side configuration for saving and returning responses
+
+The following example demonstrates the client-side action for saving files on the server and returning responses in JSON, String, and File formats.
+
+{% tabs %}
+{% highlight cshtml %}
+
+@using Syncfusion.Blazor.Inputs
+@using System.Text.Json
+
+
+<SfUploader>
+    <UploaderAsyncSettings SaveUrl="/api/Uploader/Save"></UploaderAsyncSettings>
+    <UploaderEvents Success="@OnSuccessHandler"></UploaderEvents>
+</SfUploader>
+
+@code {
+
+    private void OnSuccessHandler(SuccessEventArgs args)
+    {
+        if (args.Response is not null) // Check if the event argument is not null
+        {
+           var responseText = args.Response.ResponseText;
+           if (!string.IsNullOrWhiteSpace(responseText))
+           {    
+                // for JSON and File Datas
+                using var jsonDoc = JsonDocument.Parse(responseText);
+                var jsonResponse = jsonDoc.RootElement;
+
+                if (jsonResponse.TryGetProperty("success", out var successProp))
+                {
+                    var isSuccess = successProp.GetBoolean();
+
+                    if (isSuccess)
+                    {
+                        // File upload success
+                        var message = jsonResponse.TryGetProperty("message", out var messageProp) ? messageProp.GetString() : "File uploaded successfully";
+
+                        // Additional processing as needed
+                    }
+                }
+
+
+                // for string Data
+                var message = responseText;
+                // Additional processing as needed
+           }
+        }
+    }
+
+}
+
+{% endhighlight %}
+{% endtabs %}
+
 ## Configure allowed file types
 
 You can allow the specific files alone to upload using the [AllowedExtensions](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.UploaderModel.html#Syncfusion_Blazor_Inputs_UploaderModel_AllowedExtensions) property. The extension can be represented as collection by comma separators. The uploader component filters the selected or dropped files to match against the specified file types and processes the upload operation. The validation happens when you specify value to inline attribute to accept the original input element.
