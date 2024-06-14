@@ -49,6 +49,7 @@ To render a `Column Chart`, use series `Type` as `Column`.
 }
 
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNLpNRCqCFqsFuka?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Column 3D Chart](../images/chart-types-images/blazor-column-chart.png)
 
@@ -92,6 +93,7 @@ The `ColumnSpacing` and `ColumnWidth` properties are used to customize the space
 }
 
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BNhTZxMgMPqSWDMz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Column 3D Chart with Space and Width](../images/chart-types-images/blazor-column-chart-space-and-width.png)
 
@@ -134,6 +136,7 @@ The data points can be grouped in the column type charts by using the `GroupName
 }
 
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BthTjHsUWvUFSkhR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Grouping in Blazor Grouped Column 3D Chart](../images/chart-types-images/blazor-column-chart-grouped-column.png)
 
@@ -173,6 +176,7 @@ To render a cylindrical column chart, set the `ColumnFacet` property to `Cylinde
 }
 
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BtBJNxiAslpiKcOw?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Cylindrical Column 3D Chart](../images/chart-types-images/blazor-cylindricaal-column-chart.png)
 
@@ -218,5 +222,6 @@ The following properties can be used to customize the `Column` series.
 }
 
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VthztRMgWFpfyYWl?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Column 3D Chart with Custom Series](../images/chart-types-images/blazor-column-chart-custom-series.png)

@@ -44,6 +44,7 @@ The numeric axis can be used to represent the numeric values of data in 3D chart
 }
 
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BDhJjRsUMqZPMXVt?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Column 3D Chart with Numeric Axis](images/numeric-axis/blazor-column-chart-numeric-axis.png)
 
@@ -83,6 +84,7 @@ The range of an axis will be calculated automatically based on the provided data
 }
 
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hNVJZHCACUsVDOLk?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Changing Column 3D Chart Axis based on Range](images/numeric-axis/blazor-column-chart-axis-range.png)
 
@@ -106,7 +108,7 @@ When the `RangePadding` is set to **None**, the minimum and maximum of an ax
 @using Syncfusion.Blazor.Chart3D
 
 <SfChart3D WallColor="transparent" EnableRotation="true" RotationAngle="7" TiltAngle="10" Depth="100">
-    <Chart3DPrimaryYAxis RangePadding="ChartRangePadding.None"/>
+    <Chart3DPrimaryYAxis RangePadding="Syncfusion.Blazor.Chart3D.ChartRangePadding.None"/>
 
     <Chart3DSeriesCollection>
         <Chart3DSeries DataSource="@Data" XName="XValue" YName="YValue" ColumnSpacing="0.1"/>
@@ -133,6 +135,7 @@ When the `RangePadding` is set to **None**, the minimum and maximum of an ax
 }
 
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDLpDnMqCKVVDIJp?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Column 3D Chart without RangePadding](images/numeric-axis/blazor-column-chart-range-without-padding.png)
 
@@ -145,7 +148,7 @@ When the `RangePadding` is set to **Round**, the minimum and maximum will be r
 @using Syncfusion.Blazor.Chart3D
 
 <SfChart3D WallColor="transparent" EnableRotation="true" RotationAngle="7" TiltAngle="10" Depth="100">
-    <Chart3DPrimaryYAxis RangePadding="ChartRangePadding.Round"/>
+    <Chart3DPrimaryYAxis RangePadding="Syncfusion.Blazor.Chart3D.ChartRangePadding.Round"/>
 
     <Chart3DSeriesCollection>
         <Chart3DSeries DataSource="@Data" XName="XValue" YName="YValue" ColumnSpacing="0.1"/>
@@ -172,6 +175,7 @@ When the `RangePadding` is set to **Round**, the minimum and maximum will be r
 }
 
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rthTtHiUMKhdGTjA?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Column 3D Chart with Round RangePadding](images/numeric-axis/blazor-column-chart-round-range-padding.png)
 
@@ -184,7 +188,7 @@ When the `RangePadding` is set to **Additional**, interval of an axis will be
 @using Syncfusion.Blazor.Chart3D
 
 <SfChart3D WallColor="transparent" EnableRotation="true" RotationAngle="7" TiltAngle="10" Depth="100">
-    <Chart3DPrimaryYAxis RangePadding="ChartRangePadding.Additional"/>
+    <Chart3DPrimaryYAxis RangePadding="Syncfusion.Blazor.Chart3D.ChartRangePadding.Additional"/>
 
     <Chart3DSeriesCollection>
         <Chart3DSeries DataSource="@Data" XName="XValue" YName="YValue" ColumnSpacing="0.1"/>
@@ -211,6 +215,7 @@ When the `RangePadding` is set to **Additional**, interval of an axis will be
 }
 
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LjhpZxMAiUKXQVEl?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Column 3D Chart with Additional RangePadding](images/numeric-axis/blazor-column-chart-additional-range-padding.png)
 
@@ -223,7 +228,7 @@ When the `RangePadding` is set to **Normal**, padding is applied to the axis 
 @using Syncfusion.Blazor.Chart3D
 
 <SfChart3D WallColor="transparent" EnableRotation="true" RotationAngle="7" TiltAngle="10" Depth="100">
-    <Chart3DPrimaryYAxis RangePadding="ChartRangePadding.Normal"/>
+    <Chart3DPrimaryYAxis RangePadding="Syncfusion.Blazor.Chart3D.ChartRangePadding.Normal"/>
 
     <Chart3DSeriesCollection>
         <Chart3DSeries DataSource="@Data" XName="XValue" YName="YValue" ColumnSpacing="0.1"/>
@@ -250,6 +255,7 @@ When the `RangePadding` is set to **Normal**, padding is applied to the axis 
 }
 
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BjBTjdsUigqzLKgV?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Column 3D Chart with Normal RangePadding](images/numeric-axis/blazor-column-chart-normal-range-padding.png)
 
@@ -262,8 +268,8 @@ When the `RangePadding` is set to **Auto**, horizontal numeric axis takes **N
 @using Syncfusion.Blazor.Chart3D
 
 <SfChart3D WallColor="transparent" EnableRotation="true" RotationAngle="7" TiltAngle="10" Depth="100">
-    <Chart3DPrimaryYAxis RangePadding="ChartRangePadding.Auto"/>
-    <Chart3DPrimaryXAxis RangePadding="ChartRangePadding.Auto"/>
+    <Chart3DPrimaryYAxis RangePadding="Syncfusion.Blazor.Chart3D.ChartRangePadding.Auto"/>
+    <Chart3DPrimaryXAxis RangePadding="Syncfusion.Blazor.Chart3D.ChartRangePadding.Auto"/>
 
     <Chart3DSeriesCollection>
         <Chart3DSeries DataSource="@Data" XName="XValue" YName="YValue" ColumnSpacing="0.1"/>
@@ -290,6 +296,7 @@ When the `RangePadding` is set to **Auto**, horizontal numeric axis takes **N
 }
 
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rtBJNHWUiAgPWmCw?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Column 3D Chart with Auto RangePadding](images/numeric-axis/blazor-column-chart-auto-rangepadding.png)
 
@@ -336,6 +343,7 @@ Numeric labels can be formatted by using the `LabelFormat` property. Also, it s
 }
 
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LtVzDRCUsATCTBYJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Label Formatting in Blazor Column 3D Chart](images/numeric-axis/blazor-column-chart-label-format.png)
 
@@ -409,7 +417,7 @@ To separate groups of thousands for numerical values, use the `UseGroupingSepara
 @using Syncfusion.Blazor.Chart3D
 
 <SfChart3D UseGroupingSeparator="true" WallColor="transparent" EnableRotation="true" RotationAngle="7" TiltAngle="10" Depth="100">
-    <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Chart3D.ValueType.DateTimeCategory" LabelFormat="MMM yyyy" IntervalType="IntervalType.Months" EdgeLabelPlacement="EdgeLabelPlacement.Shift">
+    <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Chart3D.ValueType.DateTimeCategory" LabelFormat="MMM yyyy" IntervalType="Syncfusion.Blazor.Chart3D.IntervalType.Months" EdgeLabelPlacement="Syncfusion.Blazor.Chart3D.EdgeLabelPlacement.Shift">
     </Chart3DPrimaryXAxis>
     <Chart3DTooltipSettings Enable="true" />
     <Chart3DSeriesCollection>
@@ -438,6 +446,7 @@ To separate groups of thousands for numerical values, use the `UseGroupingSepara
 }
 
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDLfZHiUMgzGZgqO?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Grouping Separator in Blazor Column 3D Chart](images/numeric-axis/blazor-column-chart-grouping-separator.png)
 
@@ -450,7 +459,7 @@ Axis also supports custom label format using placeholders such as {value}K, wher
 @using Syncfusion.Blazor.Chart3D
 
  <SfChart3D WallColor="transparent" EnableRotation="true" RotationAngle="7" TiltAngle="10" Depth="100">
-    <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Chart3D.ValueType.DateTime" IntervalType="IntervalType.Months" EdgeLabelPlacement="EdgeLabelPlacement.Shift">
+    <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Chart3D.ValueType.DateTime" IntervalType="Syncfusion.Blazor.Chart3D.IntervalType.Months" EdgeLabelPlacement="Syncfusion.Blazor.Chart3D.EdgeLabelPlacement.Shift">
     </Chart3DPrimaryXAxis>
     <Chart3DPrimaryYAxis LabelFormat="${value}K">
     </Chart3DPrimaryYAxis>
@@ -481,5 +490,6 @@ Axis also supports custom label format using placeholders such as {value}K, wher
 }
 
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rZBztRiqiUoUFbWM?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Column 3D Chart with Custom Label Format](images/numeric-axis/blazor-column-chart-custom-label-format.png)
