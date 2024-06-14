@@ -17,9 +17,11 @@ You can enforce a maximum length limit for the text input in the TextArea using 
 {% tabs %}
 {% highlight razor %}
 
-<SfTextArea Placeholder='Enter the Address' MaxLength="20" FloatLabelType='@FloatLabelType.Auto'></SfTextArea>
+<SfTextArea Placeholder='Enter the Address' MaxLength="20" FloatLabelType='FloatLabelType.Auto'></SfTextArea>
 
 {% endhighlight %}
 {% endtabs %}
 
 When the user reaches the specified limit, the TextArea prevents further input, ensuring compliance with the defined character limit. This feature helps maintain data integrity and provides users with clear feedback on the allowed input length.
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rthpDRsUCffyeOfE?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor TextArea with MaxLength](./images/blazor-textarea-maxlength.png)" %}
