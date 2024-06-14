@@ -213,7 +213,7 @@ By activating the "RichTextEditorQuickToolbarSettings.Text" property, the Rich T
 {% tabs %}
 {% highlight razor %}
 
-private List<ToolbarItemModel> TextQuickToolbarItems = new List<ToolbarItemModel>()
+private List<ToolbarItemModel> textQuickToolbarItems = new List<ToolbarItemModel>()
     {
         new ToolbarItemModel() { Command = ToolbarCommand.Bold },
         new ToolbarItemModel() { Command = ToolbarCommand.Italic },
