@@ -369,3 +369,9 @@ To retrieve the maximum number of characters in the Rich Text Editor's content, 
 * [How to insert Emoticons](https://blazor.syncfusion.com/demos/rich-text-editor/insert-emoticons?theme=bootstrap5)
 
 * [Blog posting using Rich Text Editor](https://blazor.syncfusion.com/demos/rich-text-editor/usecase?theme=bootstrap5)
+
+* [Accessibility in Rich text editor](https://blazor.syncfusion.com/documentation/rich-text-editor/accessibility)
+
+* [Keyboard support in Rich text editor](https://blazor.syncfusion.com/documentation/rich-text-editor/keyboard-support)
+
+* [Globalization in Rich text editor](https://blazor.syncfusion.com/documentation/rich-text-editor/globalization)
