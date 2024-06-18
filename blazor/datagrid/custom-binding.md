@@ -988,3 +988,212 @@ The following sample code demonstrates sending additional parameters to the cust
 ```
 
 ![Passing Additional Parameters to Custom Adaptor in Blazor DataGrid](./images/blazor-datagrid-passing-additional-parameter-to-custom-adaptor.gif)
+
+
+## Pass custom parameters between DataGrid and Custom Adaptor using Grid's reference
+
+To pass custom parameters between the Syncfusion DataGrid and a custom data adaptor using the Grid's reference. This feature is useful for sending additional parameters during data requests, enabling more customized and dynamic data operations.
+
+The following sample code demonstrates how to pass custom parameters between the DataGrid and a custom adaptor using the Grid's reference.
+
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+@using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor.Data
+
+<SfGrid @ref="Grid" Query=@GridQuery TValue="OrderData" AllowPaging="true" AllowFiltering="true"
+        AllowSorting="true" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Update", "Cancel" })" Height="315" Width="900">
+    <SfDataManager Adaptor="Adaptors.CustomAdaptor"><CustomAdaptor GridRef=@Grid></CustomAdaptor></SfDataManager>
+    <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true" Mode="EditMode.Dialog"></GridEditSettings>
+    <GridEvents RowCreated="RowCreatedHandler" RowUpdated="RowUpdatedHandler" TValue="OrderData"></GridEvents>
+    <GridColumns>
+        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" IsPrimaryKey="true" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer Name" ValidationRules="@(new ValidationRules { Required = true })" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.OrderDate) HeaderText=" Order Date" EditType="EditType.DatePickerEdit" Format="d" TextAlign="TextAlign.Right" Width="130" Type="ColumnType.Date"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" EditType="EditType.NumericEdit" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.ShipCountry) HeaderText="Ship Country" EditType="EditType.DropDownEdit" Width="150"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code {
+
+    public string ParamValue = "";
+
+    public Query GridQuery { get; set; }
+
+    SfGrid<OrderData> Grid;
+
+    public bool IsAdd { get; set; } = false;
+
+    protected override async Task OnInitializedAsync()
+    {
+        GridQuery = new Query().AddParams("sfgrid", ParamValue);
+    }
+
+    public async Task RowCreatedHandler(RowCreatedEventArgs<OrderData> args)
+    {
+        if (!IsAdd)
+        {
+            IsAdd = true;
+        }
+    }
+
+    public async Task RowUpdatedHandler(RowUpdatedEventArgs<OrderData> args)
+    {
+        if (IsAdd)
+        {
+            var PKVal = Grid.Query.Queries.Params["PKValue"];
+            var RowIndex = await Grid.GetRowIndexByPrimaryKeyAsync(PKVal);
+            await Grid.SelectRowAsync(RowIndex);
+            IsAdd = false;
+        }
+    }
+
+}
+{% endhighlight %}
+{% highlight razor tabtitle="CustomAdaptor.Razor" %}
+@using Newtonsoft.Json
+@using Syncfusion.Blazor;
+@using Syncfusion.Blazor.Data;
+
+
+@using System.Collections
+
+@inherits DataAdaptor<OrderData>
+
+<CascadingValue Value="@this">
+    @ChildContent
+</CascadingValue>
+
+@code {
+    [Parameter]
+    [JsonIgnore]
+    public RenderFragment ChildContent { get; set; }
+
+    [Parameter]
+    public Syncfusion.Blazor.Grids.SfGrid<OrderData> GridRef { get; set; }
+
+    public List<OrderData> Orders { get; set; }
+
+    protected override void OnInitialized()
+    {
+        Orders = OrderData.GetAllRecords();
+        base.OnInitialized();
+    }
+    public override async Task<object> ReadAsync(DataManagerRequest dm, string key = null)
+    {
+        IEnumerable DataSource = Orders;
+
+        if (dm.Search != null && dm.Search.Count > 0)
+        {
+            DataSource = DataOperations.PerformSearching(DataSource, dm.Search);
+        }
+        if (dm.Sorted != null && dm.Sorted.Count > 0)
+        {
+            DataSource = DataOperations.PerformSorting(DataSource, dm.Sorted);
+        }
+        if (dm.Where != null && dm.Where.Count > 0)
+        {
+            DataSource = DataOperations.PerformFiltering(DataSource, dm.Where, dm.Where[0].Operator);
+        }
+        if (dm.Skip != 0)
+        {
+            DataSource = DataOperations.PerformSkip(DataSource, dm.Skip);
+        }
+        if (dm.Take != 0)
+        {
+            DataSource = DataOperations.PerformTake(DataSource, dm.Take);
+        }
+        if (dm.Group != null && dm.Group.Any()) //Grouping
+        {
+            foreach (var group in dm.Group)
+            {
+                DataSource = DataUtil.Group<OrderData>(DataSource, group, dm.Aggregates, 0, dm.GroupByFormatter);
+            }
+        }
+
+        return dm.RequiresCounts ? new DataResult() { Result = DataSource, Count = Orders.Count() } : (object)DataSource;
+    }
+
+
+    public override async Task<object> InsertAsync(DataManager dataManager, object value, string key)
+    {
+        Orders.Insert(0, value as OrderData);
+        GridRef.Query.Queries.Params["PKValue"] = (value as OrderData).OrderID;//Add the PK value to Grid’s Query Params
+        return value;
+    }
+
+    public override async Task<object> UpdateAsync(DataManager dataManager, object value, string keyField, string key)
+    {
+        var data = Orders.Where(or => or.OrderID == (value as OrderData).OrderID).FirstOrDefault();
+        if (data != null)
+        {
+            data.OrderID = (value as OrderData).OrderID;
+            data.CustomerID = (value as OrderData).CustomerID;
+            data.Freight = (value as OrderData).Freight;
+        }
+        return value;
+    }
+
+    public override async Task<object> RemoveAsync(DataManager dataManager, object value, string keyField, string key)
+    {
+        Orders.Remove(Orders.Where(or => or.OrderID == int.Parse(value.ToString())).FirstOrDefault());
+        return value;
+
+    }
+}
+{% endhighlight %}
+{% highlight c# tabtitle="OrderData.cs" %}
+public class OrderData
+{
+    public static List<OrderData> Orders = new List<OrderData>();
+    public OrderData()
+    {
+
+    }
+    public OrderData(int? OrderID, string CustomerID, string ShipCountry, DateTime OrderDate, double Freight)
+    {
+        this.OrderID = OrderID;
+        this.CustomerID = CustomerID;
+        this.ShipCountry = ShipCountry;
+        this.OrderDate = OrderDate;
+        this.Freight = Freight;
+
+    }
+
+    public static List<OrderData> GetAllRecords()
+    {
+        if (Orders.Count() == 0)
+        {
+            int code = 10;
+            for (int i = 1; i < 2; i++)
+            {
+                Orders.Add(new OrderData(10248, "ERNSH", "Austria", new DateTime(1996, 07, 17), 140.51));
+                Orders.Add(new OrderData(10249, "SUPRD", "Belgium", new DateTime(1996, 09, 07), 51.30));
+                Orders.Add(new OrderData(10250, "WELLI", "Brazil", new DateTime(1996, 07, 08), 65.83));
+                Orders.Add(new OrderData(10251, "HANAR", "France", new DateTime(1996, 07, 10), 58.17));
+                Orders.Add(new OrderData(10252, "WELLI", "Germany", new DateTime(1996, 10, 17), 13.97));
+                Orders.Add(new OrderData(10253, "HANAR", "Mexico", new DateTime(1996, 07, 19), 3.05));
+                Orders.Add(new OrderData(10254, "QUEDE", "Switzerland", new DateTime(1996, 07, 04), 32.38));
+                Orders.Add(new OrderData(10255, "RICSU", "Austria", new DateTime(1996, 07, 08), 41.34));
+                Orders.Add(new OrderData(10256, "WELLI", "Belgium", new DateTime(1996, 07, 05), 11.61));
+                code += 5;
+            }
+        }
+        return Orders;
+    }
+
+    public int? OrderID { get; set; }
+    public string CustomerID { get; set; }
+    public string ShipCountry { get; set; }
+    public DateTime OrderDate { get; set; }
+    public double? Freight { get; set; }
+}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BjVzjdibJRZXqbut?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %}
+
+N> Ensure that the [Query](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Query) object is initialized with the necessary parameters during the grid initialization phase.
+
