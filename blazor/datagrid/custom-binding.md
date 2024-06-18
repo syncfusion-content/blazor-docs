@@ -988,3 +988,8 @@ The following sample code demonstrates sending additional parameters to the cust
 ```
 
 ![Passing Additional Parameters to Custom Adaptor in Blazor DataGrid](./images/blazor-datagrid-passing-additional-parameter-to-custom-adaptor.gif)
+
+
+## Pass custom parameters between DataGrid and Custom Adaptor using Grid's reference
+
+
