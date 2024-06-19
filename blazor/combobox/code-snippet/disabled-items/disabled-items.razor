@@ -1,0 +1,30 @@
+@using Syncfusion.Blazor.DropDowns
+
+<SfComboBox TValue="string" TItem="StatusData" Placeholder="Select Status" DataSource="@LocalData">
+    <ComboBoxFieldSettings Value="Text" Disabled="State" ></ComboBoxFieldSettings>
+</SfComboBox>
+
+@code {
+
+    public IEnumerable<StatusData> LocalData { get; set; } = new StatusData().StatusDataList();
+
+    public class StatusData
+    {
+        public string Text { get; set; }
+        public bool State { get; set; }
+
+        public List<StatusData> StatusDataList()
+        {
+            List<StatusData> staus = new List<StatusData>();
+            staus.Add(new StatusData { Text = "Open", State = false });
+            staus.Add(new StatusData { Text = "Waiting for Customer", State = false });
+            staus.Add(new StatusData { Text = "On Hold", State = true });
+            staus.Add(new StatusData { Text = "Follow-up", State = false });
+            staus.Add(new StatusData { Text = "Closed", State = true });
+            staus.Add(new StatusData { Text = "Solved", State = false });
+            staus.Add(new StatusData { Text = "Feature Request", State = false });
+            return staus;
+
+        }
+    }
+}
