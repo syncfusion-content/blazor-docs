@@ -141,7 +141,7 @@ padding-top: 20px;
         <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/treegrid/accessibility">TreeGrid</a></div>
         <div><p class="controlcategory">FILE VIEWERS & EDITORS</p></div>
         <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/rich-text-editor/accessibility">RichTextEditor</a></div>
-        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/pdfviewer-2/keyboard-accessibility">PDF Viewer</a></div>
+        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/pdfviewer-2/accessibility">PDF Viewer</a></div>
         <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/document-editor/accessibility">Word Processor</a></div>
         <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/image-editor/accessibility">Image Editor</a></div>
         <div><p class="controlcategory">LAYOUT</p></div>
