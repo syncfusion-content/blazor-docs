@@ -1,0 +1,58 @@
+@using Syncfusion.Blazor.DropDowns
+@using System.Threading
+
+<h4>ComboBox A</h4>
+<SfComboBox ID="combobox1" TValue="string" TItem="Countries" Placeholder="e.g. Australia" DataSource="@Country">
+    <ComboBoxFieldSettings Text="Name" Value="Code"></ComboBoxFieldSettings>
+    <ComboBoxEvents TValue="string" TItem="Countries" Closed="@(e => OnClose(e, ComboObj2))"></ComboBoxEvents>
+</SfComboBox>
+<h4>ComboBox B</h4>
+<SfComboBox @ref="ComboObj2" ID="combobox2" TValue="string" TItem="Countries" Placeholder="e.g. Australia" DataSource="@Country">
+    <ComboBoxFieldSettings Text="Name" Value="Code"></ComboBoxFieldSettings>
+</SfComboBox>
+@code {
+    SfComboBox<string, Countries> ComboObj2;
+
+    public class Countries
+    {
+        public string Name { get; set; }
+
+        public string Code { get; set; }
+    }
+
+    List<Countries> Country = new List<Countries>
+    {
+        new Countries() { Name = "Australia", Code = "AU" },
+        new Countries() { Name = "Bermuda", Code = "BM" },
+        new Countries() { Name = "Canada", Code = "CA" },
+        new Countries() { Name = "Cameroon", Code = "CM" },
+        new Countries() { Name = "Denmark", Code = "DK" },
+        new Countries() { Name = "France", Code = "FR" },
+        new Countries() { Name = "Finland", Code = "FI" },
+        new Countries() { Name = "Germany", Code = "DE" },
+        new Countries() { Name = "Greenland", Code = "GL" },
+        new Countries() { Name = "Hong Kong", Code = "HK" },
+        new Countries() { Name = "India", Code = "IN" },
+        new Countries() { Name = "Italy", Code = "IT" },
+        new Countries() { Name = "Japan", Code = "JP" },
+        new Countries() { Name = "Mexico", Code = "MX" },
+        new Countries() { Name = "Norway", Code = "NO" },
+        new Countries() { Name = "Poland", Code = "PL" },
+        new Countries() { Name = "Switzerland", Code = "CH" },
+        new Countries() { Name = "United Kingdom", Code = "GB" },
+        new Countries() { Name = "United States", Code = "US" },
+    };
+
+    public async Task OnClose(ClosedEventArgs args, SfComboBox<string, Countries> componentRef)
+    {
+        Thread tread = new Thread(
+             async () =>
+             {
+                 Thread.Sleep(5);
+                 await componentRef.FocusAsync();
+             }
+          );
+        tread.Start();
+        await Task.CompletedTask;
+    }
+} 

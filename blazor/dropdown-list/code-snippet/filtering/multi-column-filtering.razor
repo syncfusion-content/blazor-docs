@@ -44,6 +44,6 @@
         });
         var query = new Query().Where(orWhere);
         query = !string.IsNullOrEmpty(args.Text) ? query : new Query();
-        await ddlObj.Filter(data, query);
+        await ddlObj.FilterAsync(data, query);
     }
 }

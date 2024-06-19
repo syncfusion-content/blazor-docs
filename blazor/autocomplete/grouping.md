@@ -40,5 +40,3 @@ The group header title under which appropriate sub-items are categorized is cust
 Grouping feature has some limitations. These are:
 
 * The component will support only single level of grouping, and you cannot specify it as like TreeView component.
-
-* The Virtualization is not supported in the grouping feature. Only assign fixed number of datasource items at initial rendering of the component.
