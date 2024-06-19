@@ -151,7 +151,6 @@ padding-top: 20px;
         <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/splitter/accessibility">Splitter</a></div>
         <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/dashboard-layout/accessibility">Dashboard</a></div>
         <div class="controlanchorlink">Card</div>
-        <div class="controlanchorlink">Avatar</div>
         <div class="controlanchorlink">Media Query</div>
     </td>
     <td>
@@ -234,7 +233,6 @@ padding-top: 20px;
         <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/toast/accessibility">Toast</a></div>
         <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/progress-bar/accessibility">ProgressBar</a></div>
         <div class="controlanchorlink">Spinner</div>
-        <div class="controlanchorlink">Badge</div>
         <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/skeleton/accessibility">Skeleton</a></div>
         <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/message/accessibility">Message</a></div>
     </td>
