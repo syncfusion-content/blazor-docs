@@ -125,6 +125,15 @@ The [SfIcon](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfI
 
 The following code explains how to render `open-iconic` icons using `IconCss` property.
 
+Include the stylesheet reference in the `<head>` section of the **~/App.razor** file as shown below:
+
+```html
+<head>
+    ....
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/open-iconic/1.1.1/font/css/open-iconic-bootstrap.min.css" rel="stylesheet">
+</head>
+```
+
 ```cshtml
 @using Syncfusion.Blazor.Buttons
 
