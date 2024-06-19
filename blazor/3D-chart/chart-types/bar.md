@@ -48,6 +48,7 @@ To render a bar series, set series `Type` as `Bar`.
 }
 
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hNhJXxsKslDavsMW?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Bar 3D Chart](../images/chart-types-images/blazor-bar-chart.png)
 
@@ -91,6 +92,7 @@ The `ColumnSpacing` and `ColumnWidth` properties are used to customize the space
 }
 
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BNhTXHMgilipfRPo?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Bar 3D Chart with Space and Width](../images/chart-types-images/blazor-bar-chart-space-and-width.png)
 
@@ -133,6 +135,7 @@ The data points can be grouped in the bar type charts by using the `GroupName` p
 }
 
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/htLfZRMUMlsmhOBI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Grouping in Blazor Grouped Bar 3D Chart](../images/chart-types-images/blazor-column-chart-grouped-bar.png)
 
@@ -173,6 +176,7 @@ To render a cylindrical column chart, set the `ColumnFacet` property to `Cylinde
 }
 
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rtBfDdMAilBDiXzS?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Cylindrical Bar 3D Chart](../images/chart-types-images/blazor-cylindricaal-bar-chart.png)
 
@@ -218,5 +222,6 @@ The following properties can be used to customize the `Bar` series.
 }
 
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VZBTZdMKWvrLOzmq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Bar 3D Chart with Custom Series](../images/chart-types-images/blazor-bar-chart-custom-series.png)

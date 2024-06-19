@@ -22,7 +22,7 @@ When the axis labels overlap with each other, `LabelIntersectAction` property i
 @using Syncfusion.Blazor.Chart3D
 
 <SfChart3D Title="Olympic Medals" WallColor="transparent" EnableRotation="true" RotationAngle="7" TiltAngle="10" Depth="100">
-    <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Chart3D.ValueType.Category" LabelIntersectAction="LabelIntersectAction.Hide" />
+    <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Chart3D.ValueType.Category" LabelIntersectAction="Syncfusion.Blazor.Chart3D.LabelIntersectAction.Hide" />
 
     <Chart3DSeriesCollection>
         <Chart3DSeries DataSource="@MedalDetails" XName="X" YName="Y" Type="Chart3DSeriesType.Column" />
@@ -55,6 +55,7 @@ When the axis labels overlap with each other, `LabelIntersectAction` property i
 
 
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BtBTDnMVpitELVMq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Hiding Smart Axis Label in Blazor Column 3D Chart](images/axis-labels/blazor-column-chart-hide-smart-axis-label.png)
 
@@ -65,7 +66,7 @@ When the axis labels overlap with each other, `LabelIntersectAction` property i
 @using Syncfusion.Blazor.Chart3D
 
 <SfChart3D Title="Olympic Medals" WallColor="transparent" EnableRotation="true" RotationAngle="7" TiltAngle="10" Depth="100">
-    <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Chart3D.ValueType.Category" LabelIntersectAction="LabelIntersectAction.Rotate45" />
+    <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Chart3D.ValueType.Category" LabelIntersectAction="Syncfusion.Blazor.Chart3D.LabelIntersectAction.Rotate45" />
 
     <Chart3DSeriesCollection>
         <Chart3DSeries DataSource="@MedalDetails" XName="X" YName="Y" Type="Chart3DSeriesType.Column" />
@@ -97,6 +98,7 @@ When the axis labels overlap with each other, `LabelIntersectAction` property i
 }
 
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hXLptnWBJMsfXNjH?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Column 3D Chart with Smart Axis Label in Rotate45](images/axis-labels/blazor-column-chart-axis-label-in-rotate45.png)
 
@@ -107,7 +109,7 @@ When the axis labels overlap with each other, `LabelIntersectAction` property i
 @using Syncfusion.Blazor.Chart3D
 
 <SfChart3D Title="Olympic Medals" WallColor="transparent" EnableRotation="true" RotationAngle="7" TiltAngle="10" Depth="100">
-    <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Chart3D.ValueType.Category" LabelIntersectAction="LabelIntersectAction.Rotate90" />
+    <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Chart3D.ValueType.Category" LabelIntersectAction="Syncfusion.Blazor.Chart3D.LabelIntersectAction.Rotate90" />
 
     <Chart3DSeriesCollection>
         <Chart3DSeries DataSource="@MedalDetails" XName="X" YName="Y" Type="Chart3DSeriesType.Column" />
@@ -139,6 +141,7 @@ When the axis labels overlap with each other, `LabelIntersectAction` property i
 }
 
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VtBJjnsLJMrjzDrD?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Column 3D Chart with Smart Axis Label in Rotate90](images/axis-labels/blazor-column-chart-axis-label-in-rotate90.png)
 
@@ -152,7 +155,7 @@ use the `EdgeLabelPlacement` property in axis, which moves the label inside t
 @using Syncfusion.Blazor.Chart3D
 
 <SfChart3D Title="Olympic Medals" WallColor="transparent" EnableRotation="true" RotationAngle="7" TiltAngle="10" Depth="100">
-    <Chart3DPrimaryXAxis EdgeLabelPlacement="EdgeLabelPlacement.Shift" ValueType="Syncfusion.Blazor.Chart3D.ValueType.Category">
+    <Chart3DPrimaryXAxis EdgeLabelPlacement="Syncfusion.Blazor.Chart3D.EdgeLabelPlacement.Shift" ValueType="Syncfusion.Blazor.Chart3D.ValueType.Category">
     </Chart3DPrimaryXAxis>
 
     <Chart3DSeriesCollection>
@@ -182,6 +185,7 @@ use the `EdgeLabelPlacement` property in axis, which moves the label inside t
 }
 
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rXVpDnsLTsLcphWe?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Displaying Blazor Chart Axis Label in Edge Position](images/axis-labels/blazor-chart-axis-label-in-edge.png)
 
@@ -244,3 +248,4 @@ The labels will be rendered based on the count in the `MaximumLabels` property p
 }
 
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/htBJNxCrTWKrGBCU?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
