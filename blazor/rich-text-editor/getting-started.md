@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started with RichTextEditor in Blazor | Syncfusion
-description: Checkout and learn about getting started with RichTextEditor in Blazor Server App and Blazor WebAssembly App.
+title: Getting Started with Rich Text Editor in Blazor | Syncfusion
+description: Checkout and learn about getting started with Rich Text Editor in Blazor Server App and Blazor WebAssembly App.
 platform: Blazor
 control: RichTextEditor
 documentation: ug
@@ -9,9 +9,9 @@ documentation: ug
 
 <!-- markdownlint-disable MD024 -->
 
-# Getting Started with RichTextEditor in Blazor
+# Getting Started with Rich Text Editor in Blazor
 
-This section briefly explains about how to include [Blazor RichTextEditor](https://www.syncfusion.com/blazor-components/blazor-wysiwyg-rich-text-editor) component in your Blazor Server App and Blazor WebAssembly App using Visual Studio.
+This section briefly explains about how to include [Blazor Rich Text Editor](https://www.syncfusion.com/blazor-components/blazor-wysiwyg-rich-text-editor) component in your Blazor Server App and Blazor WebAssembly App using Visual Studio.
 
 To get start quickly with Blazor Rich Text Editor components, you can check on this video or [GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/RichTextEditor) sample.
 
@@ -28,9 +28,9 @@ N> You can also explore our [Blazor Rich Text Editor](https://blazor.syncfusion.
 
 You can create a **Blazor Server App** or **Blazor WebAssembly App** using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0) or the [Syncfusion Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
 
-## Install Syncfusion Blazor RichTextEditor and Themes NuGet in the App
+## Install Syncfusion Blazor Rich Text Editor and Themes NuGet in the App
 
-To add **Blazor RichTextEditor** component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install [Syncfusion.Blazor.RichTextEditor](https://www.nuget.org/packages/Syncfusion.Blazor.RichTextEditor) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/). Alternatively, you can utilize the following package manager command to achieve the same.
+To add **Blazor Rich Text Editor** component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install [Syncfusion.Blazor.RichTextEditor](https://www.nuget.org/packages/Syncfusion.Blazor.RichTextEditor) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/). Alternatively, you can utilize the following package manager command to achieve the same.
 
 {% tabs %}
 {% highlight C# tabtitle="Package Manager" %}
@@ -114,9 +114,9 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 ```
 N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic to discover various methods ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference), and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)) for referencing themes in your Blazor application. Also, check out the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic to learn different approaches for adding script references in your Blazor application.
 
-## Add Blazor RichTextEditor component
+## Add Blazor Rich Text Editor component
 
-Add the Syncfusion Blazor RichTextEditor component in the **~/Pages/Index.razor** file.
+Add the Syncfusion Blazor Rich Text Editor component in the **~/Pages/Index.razor** file.
 
 {% tabs %}
 {% highlight razor %}
@@ -130,9 +130,9 @@ Add the Syncfusion Blazor RichTextEditor component in the **~/Pages/Index.razor*
 {% endhighlight %}
 {% endtabs %}
 
-* Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion Blazor RichTextEditor component in your default web browser.
+* Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion Blazor Rich Text Editor component in your default web browser.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rXhfZMqXAUqtaOyK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor RichTextEditor Component](./images/blazor-richtexteditor.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rXhfZMqXAUqtaOyK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Rich Text Editor Component](./images/blazor-richtexteditor.png)" %}
 
 ## Configure the Toolbar
 
@@ -199,164 +199,7 @@ Configure the toolbar with the tools using [RichTextEditorToolbarSettings.Items]
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hthTNWAZUAqIpYkv?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor RichTextEditor with Toolbar](./images/blazor-richtexteditor-toolbar.png)" %}
-
-## Insert images and links
-
-The **Image** inserts an image into Rich Text Editor's content area, and the **Link** links an external resources such as website URLs to the selected text in the Rich Text Editor's content respectively.
-
-Specifies the items to be rendered in quick toolbar based on the target elements such as image, link and table element. The quick toolbar opens to customize the element by clicking the target element.
-
-{% tabs %}
-{% highlight razor %}
-
-<SfRichTextEditor>
-    <RichTextEditorToolbarSettings Items="@Tools" />
-    <RichTextEditorQuickToolbarSettings Image="@Image" Link="@Link" />
-    <p>Rich Text Editor allows to insert images from online source as well as local computer where you want to insert the image in your content.</p>
-    <p><b>Get started Quick Toolbar to click on the image</b></p>
-    <p>It is possible to add custom style on the selected image inside the Rich Text Editor through quick toolbar.</p>
-    <img alt='Logo' style='width: 300px; height: 300px; transform: rotate(0deg);' src='https://blazor.syncfusion.com/demos/_content/blazor_webapp_common_net8/images/rich-text-editor/rte-image-feather.png' />
-</SfRichTextEditor>
-
-@code {
-    private List<ToolbarItemModel> Tools = new List<ToolbarItemModel>()
-    {
-        new ToolbarItemModel() { Command = ToolbarCommand.Bold },
-        new ToolbarItemModel() { Command = ToolbarCommand.Italic },
-        new ToolbarItemModel() { Command = ToolbarCommand.Underline },
-        new ToolbarItemModel() { Command = ToolbarCommand.Separator },
-        new ToolbarItemModel() { Command = ToolbarCommand.Formats },
-        new ToolbarItemModel() { Command = ToolbarCommand.Alignments },
-        new ToolbarItemModel() { Command = ToolbarCommand.Separator },
-        new ToolbarItemModel() { Command = ToolbarCommand.CreateLink },
-        new ToolbarItemModel() { Command = ToolbarCommand.Image },
-        new ToolbarItemModel() { Command = ToolbarCommand.Separator },
-        new ToolbarItemModel() { Command = ToolbarCommand.SourceCode },
-        new ToolbarItemModel() { Command = ToolbarCommand.Separator },
-        new ToolbarItemModel() { Command = ToolbarCommand.Undo },
-        new ToolbarItemModel() { Command = ToolbarCommand.Redo }
-    };
-    private List<ImageToolbarItemModel> Image = new List<ImageToolbarItemModel>()
-    {
-        new ImageToolbarItemModel() { Command = ImageToolbarCommand.Replace },
-        new ImageToolbarItemModel() { Command = ImageToolbarCommand.Align },
-        new ImageToolbarItemModel() { Command = ImageToolbarCommand.Caption },
-        new ImageToolbarItemModel() { Command = ImageToolbarCommand.Remove },
-        new ImageToolbarItemModel() { Command = ImageToolbarCommand.OpenImageLink },
-        new ImageToolbarItemModel() { Command = ImageToolbarCommand.HorizontalSeparator },
-        new ImageToolbarItemModel() { Command = ImageToolbarCommand.EditImageLink },
-        new ImageToolbarItemModel() { Command = ImageToolbarCommand.RemoveImageLink },
-        new ImageToolbarItemModel() { Command = ImageToolbarCommand.Display },
-        new ImageToolbarItemModel() { Command = ImageToolbarCommand.AltText },
-        new ImageToolbarItemModel() { Command = ImageToolbarCommand.Dimension }
-    };
-    private List<LinkToolbarItemModel> Link = new List<LinkToolbarItemModel>()
-    {
-        new LinkToolbarItemModel() { Command = LinkToolbarCommand.Open },
-        new LinkToolbarItemModel() { Command = LinkToolbarCommand.Edit },
-        new LinkToolbarItemModel() { Command = LinkToolbarCommand.UnLink }
-    };
-}
-
-{% endhighlight %}
-{% endtabs %}
-
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hjVztWADAAziHrZz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor RichTextEditor with Image](./images/blazor-richtexteditor-image.png)" %}
-
-## Retrieve the formatted content
-
-To retrieve the editor contents in HTML format, use the [Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.SfRichTextEditor.html#Syncfusion_Blazor_RichTextEditor_SfRichTextEditor_Value) property of Rich Text Editor, and to fetch the editor content as plain text, use the [GetText](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.SfRichTextEditor.html#Syncfusion_Blazor_RichTextEditor_SfRichTextEditor_GetTextAsync) method of Rich Text Editor.
-
-{% tabs %}
-{% highlight razor %}
-
-@using Syncfusion.Blazor.Buttons
-@using Syncfusion.Blazor.RichTextEditor
-@using Syncfusion.Blazor.Popups
-
-<SfButton @onclick="@GetValue">Get Value</SfButton>
-<SfButton @onclick="@GetText">Get Text</SfButton>
-
-<br />
-<SfDialog @ref="DialogObj" @bind-Visible="@Visibility" Content="@Content" Header="@Header" Target="#target" Height="200px"
-          Width="400px" ShowCloseIcon="true">
-    <DialogButtons>
-        <DialogButton Content="Ok" IsPrimary="true" OnClick="@DlgButtonClick" />
-    </DialogButtons>
-
-</SfDialog>
-<SfRichTextEditor @ref="RteObj" Value="@RteValue" />
-
-@code {
-    SfRichTextEditor RteObj;
-    SfDialog DialogObj;
-    private string Content;
-    private bool Visibility = false;
-    private string Header = "RichTextEditor's Value";
-    private string RteValue = @"<p>Rich Text Editor allows to insert images from online source as well as local computer where you want to insert the image in your content.</p><p><b>Get started Quick Toolbar to click on the image</b></p><p>It is possible to add custom style on the selected image inside the Rich Text Editor through quick toolbar.</p><img alt='Logo' style='width: 300px; height: 300px; transform: rotate(0deg);' src='https://blazor.syncfusion.com/demos/images/RichTextEditor/RTEImage-Feather.png' />";
-    private async Task GetValue()
-    {
-        this.Content = this.RteValue;
-        await this.DialogObj.ShowAsync();
-    }
-    private async Task GetText()
-    {
-        this.Content = await this.RteObj.GetTextAsync();
-        this.DialogObj.ShowAsync();
-    }
-    private async Task DlgButtonClick(object arg)
-    {
-        await this.DialogObj.HideAsync();
-    }
-}
-
-{% endhighlight %}
-{% endtabs %}
-
-## Retrieve the number of characters
-
-To retrieve the maximum number of characters in the Rich Text Editor's content, use the [GetCharCount](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.SfRichTextEditor.html#Syncfusion_Blazor_RichTextEditor_SfRichTextEditor_GetCharCountAsync) method of the Rich Text Editor.
-
-{% tabs %}
-{% highlight razor %}
-
-@using Syncfusion.Blazor.Buttons
-@using Syncfusion.Blazor.RichTextEditor
-@using Syncfusion.Blazor.Popups
-
-<SfButton @onclick="@GetCharCount">Get Char Count</SfButton>
-
-<br />
-<SfDialog @ref="DialogObj" @bind-Visible="@Visibility" Content="@Content" Header="@Header" Target="#target" Height="200px"
-          Width="400px" ShowCloseIcon="true">
-    <DialogButtons>
-        <DialogButton Content="Ok" IsPrimary="true" OnClick="@DlgButtonClick" />
-    </DialogButtons>
-
-</SfDialog>
-<SfRichTextEditor @ref="RteObj" />
-
-@code {
-    SfRichTextEditor RteObj;
-    SfDialog DialogObj;
-    private string Content;
-    private bool Visibility = false;
-    private string Header = "RichTextEditor's Value";
-    private string RteValue = @"<p>Rich Text Editor allows to insert images from online source as well as local computer where you want to insert the image in your content.</p><p><b>Get started Quick Toolbar to click on the image</b></p><p>It is possible to add custom style on the selected image inside the Rich Text Editor through quick toolbar.</p><img alt='Logo' style='width: 300px; height: 300px; transform: rotate(0deg);' src='https://blazor.syncfusion.com/demos/images/RichTextEditor/RTEImage-Feather.png' />";
-    private async Task GetCharCount()
-    {
-        this.Content = await this.RteObj.GetCharCountAsync();
-        await this.DialogObj.ShowAsync();
-    }
-    private async Task DlgButtonClick(object arg)
-    {
-        await this.DialogObj.HideAsync();
-    }
-}
-
-{% endhighlight %}
-{% endtabs %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hthTNWAZUAqIpYkv?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Rich Text Editor with Toolbar](./images/blazor-richtexteditor-toolbar.png)" %}
 
 ## See also
 
