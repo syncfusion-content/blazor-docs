@@ -43,15 +43,16 @@ You can programmatically change the scroll offsets at runtime by using the exter
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
+@using Syncfusion.Blazor.Buttons
 
-<input type="button" @onclick="updateScrollValues"/>
+<SfButton Content="UpdateScrollValues" OnClick="@updateScrollValues" />
 <SfDiagramComponent Height="600px">
     @* Sets the ScrollSettings for the diagram *@
     <ScrollSettings HorizontalOffset="@horizontalOffset" VerticalOffset="@verticalOffset">
     </ScrollSettings>
 </SfDiagramComponent>
 
-@code{
+@code {
     public double horizontalOffset { get; set; } = 100;
     public double verticalOffset { get; set; } = 100;
 
@@ -76,8 +77,9 @@ The Diagram control provides the following event for the scroll settings.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
+@using Syncfusion.Blazor.Buttons
 
-<input type="button" @onclick="updateScrollValues"/>
+<SfButton Content="UpdateScrollValues" OnClick="@updateScrollValues" />
 <SfDiagramComponent Height="600px" ScrollChanged="ScrollChanged">
     @* Sets the ScrollSettings for the diagram *@
     <ScrollSettings HorizontalOffset="@horizontalOffset" VerticalOffset="@verticalOffset">
