@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Getting started with Syncfusion RichTextEditor in Blazor Web App
-description: Check out the documentation for getting started with Syncfusion Blazor RichTextEditor Components in Blazor Web App.
+title: Getting started with Syncfusion Rich Text Editor in Blazor Web App
+description: Check out the documentation for getting started with Syncfusion Blazor Rich Text Editor Components in Blazor Web App.
 platform: Blazor
 control: RichTextEditor
 documentation: ug
 ---
 
-# Getting Started with Blazor RichTextEditor in Blazor Web App
+# Getting Started with Blazor Rich Text Editor in Blazor Web App
 
-This section briefly explains about how to include [Blazor RichTextEditor](https://www.syncfusion.com/blazor-components/blazor-wysiwyg-rich-text-editor) component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/).
+This section briefly explains about how to include [Blazor Rich Text Editor](https://www.syncfusion.com/blazor-components/blazor-wysiwyg-rich-text-editor) component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/).
 
 ## Prerequisites
 
@@ -21,9 +21,9 @@ You can create a **Blazor Web App** using Visual Studio 2022 via [Microsoft Temp
 
 You need to configure the corresponding [Interactive render mode](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-8.0#render-modes) and [Interactivity location](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0&pivots=windows) while creating a Blazor Web Application.
 
-## Install Syncfusion Blazor RichTextEditor and Themes NuGet in the App
+## Install Syncfusion Blazor Rich Text Editor and Themes NuGet in the App
 
-To add **Blazor RichTextEditor** component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install [Syncfusion.Blazor.RichTextEditor](https://www.nuget.org/packages/Syncfusion.Blazor.RichTextEditor) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/).
+To add **Blazor Rich Text Editor** component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install [Syncfusion.Blazor.RichTextEditor](https://www.nuget.org/packages/Syncfusion.Blazor.RichTextEditor) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/).
 
 If you utilize `WebAssembly or Auto` render modes in the Blazor Web App need to be install Syncfusion Blazor components NuGet packages within the client project.
 
@@ -83,9 +83,9 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 
 N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic to discover various methods ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference), and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)) for referencing themes in your Blazor application. Also, check out the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic to learn different approaches for adding script references in your Blazor application.
 
-## Add Syncfusion Blazor RichTextEditor component
+## Add Syncfusion Blazor Rich Text Editor component
 
-Add the Syncfusion Blazor RichTextEditor component in the **~Pages/.razor** file. If an interactivity location as `Per page/component` in the web app, define a render mode at the top of the `~Pages/.razor` component, as follows:
+Add the Syncfusion Blazor Rich Text Editor component in the **~Pages/.razor** file. If an interactivity location as `Per page/component` in the web app, define a render mode at the top of the `~Pages/.razor` component, as follows:
 
 {% tabs %}
 {% highlight razor %}
@@ -108,9 +108,9 @@ Add the Syncfusion Blazor RichTextEditor component in the **~Pages/.razor** file
 {% endhighlight %}
 {% endtabs %}
 
-* Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion Blazor RichTextEditor component in your default web browser.
+* Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion Blazor Rich Text Editor component in your default web browser.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rXhfZMqXAUqtaOyK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor RichTextEditor Component](./images/blazor-richtexteditor.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rXhfZMqXAUqtaOyK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Rich Text Editor Component](./images/blazor-richtexteditor.png)" %}
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/RichTextEditor/BlazorWebApp).
 
@@ -179,7 +179,7 @@ Configure the toolbar with the tools using [RichTextEditorToolbarSettings.Items]
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hthTNWAZUAqIpYkv?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor RichTextEditor with Toolbar](./images/blazor-richtexteditor-toolbar.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hthTNWAZUAqIpYkv?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Rich Text Editor with Toolbar](./images/blazor-richtexteditor-toolbar.png)" %}
 
 ## Insert images and links
 
@@ -242,7 +242,7 @@ Specifies the items to be rendered in quick toolbar based on the target elements
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hjVztWADAAziHrZz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor RichTextEditor with Image](./images/blazor-richtexteditor-image.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hjVztWADAAziHrZz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Rich Text Editor with Image](./images/blazor-richtexteditor-image.png)" %}
 
 ## Retrieve the formatted content
 
@@ -273,7 +273,7 @@ To retrieve the editor contents in HTML format, use the [Value](https://help.s
     SfDialog DialogObj;
     private string Content;
     private bool Visibility = false;
-    private string Header = "RichTextEditor's Value";
+    private string Header = "Rich Text Editor's Value";
     private string RteValue = @"<p>Rich Text Editor allows to insert images from online source as well as local computer where you want to insert the image in your content.</p><p><b>Get started Quick Toolbar to click on the image</b></p><p>It is possible to add custom style on the selected image inside the Rich Text Editor through quick toolbar.</p><img alt='Logo' style='width: 300px; height: 300px; transform: rotate(0deg);' src='https://blazor.syncfusion.com/demos/images/RichTextEditor/RTEImage-Feather.png' />";
     private async Task GetValue()
     {
@@ -322,7 +322,7 @@ To retrieve the maximum number of characters in the Rich Text Editor's content, 
     SfDialog DialogObj;
     private string Content;
     private bool Visibility = false;
-    private string Header = "RichTextEditor's Value";
+    private string Header = "Rich Text Editor's Value";
     private string RteValue = @"<p>Rich Text Editor allows to insert images from online source as well as local computer where you want to insert the image in your content.</p><p><b>Get started Quick Toolbar to click on the image</b></p><p>It is possible to add custom style on the selected image inside the Rich Text Editor through quick toolbar.</p><img alt='Logo' style='width: 300px; height: 300px; transform: rotate(0deg);' src='https://blazor.syncfusion.com/demos/images/RichTextEditor/RTEImage-Feather.png' />";
     private async Task GetCharCount()
     {
