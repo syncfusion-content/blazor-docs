@@ -262,3 +262,7 @@ https://blazor.syncfusion.com/documentation/rich-text-editor/tools/built-in-tool
 ## See also
 
 * [How to render the toolbar in inline mode](./inline-mode)
+
+
+
+
