@@ -115,6 +115,7 @@ You can customize the inserted image in the editor by using the [RichTextEditorQ
 {% endhighlight %}
 {% endtabs %}
 
+{% endhighlight %}
 ![Blazor RichTextEditor image quick toolbar](./images/blazor-richtexteditor-image-toolbar.png)
 
 ### Link quick Toolbar
