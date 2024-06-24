@@ -16,74 +16,11 @@ The Stepper component allows you to set the validation state for each step, disp
 ```cshtml
 
 @using Syncfusion.Blazor.Navigations
-
-<SfStepper>
-    <StepperSteps>
-        <StepperStep IconCss="sf-icon-cart" IsValid="true"></StepperStep>        
-        <StepperStep IconCss="sf-icon-transport"></StepperStep>
-        <StepperStep IconCss="sf-icon-payment" IsValid="false"></StepperStep>
-        <StepperStep IconCss="sf-icon-success"></StepperStep>
-    </StepperSteps>
-</SfStepper>
-
-<SfStepper ID="labelStepper">
-    <StepperSteps>
-        <StepperStep Label="Cart" IsValid="true"></StepperStep>
-        <StepperStep Label="Address"></StepperStep>
-        <StepperStep Label="Payment" IsValid="false"></StepperStep>
-        <StepperStep Label="Confirmation"></StepperStep>
-    </StepperSteps>
-</SfStepper>
-
-<style>
-    @@font-face {
-        font-family: 'Default';
-        src:
-        url(data:application/x-font-ttf;charset=utf-8;base64,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) format('truetype');
-        font-weight: normal;
-        font-style: normal;
-    }
-
-    [class^="sf-icon-"], [class*=" sf-icon-"] {
-        font-family: 'Default' !important;
-        speak: none;
-        font-style: normal;
-        font-weight: normal;
-        font-variant: normal;
-        text-transform: none;
-        line-height: inherit;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-    }
-
-    .sf-icon-cart:before { content: "\e710"; }
-    .sf-icon-transport:before { content: "\e702"; }
-    .sf-icon-payment:before { content: "\e706"; }
-    .sf-icon-success:before { content: "\e715"; }
-
-    #labelStepper {
-        margin-top: 50px;
-    }
-</style>
-
-```
-
-![Blazor Stepper Component with Validation](./images/Blazor-validation.png)
-
-# Steps validation using EditForm Component
-
-The Stepper component allows you to create multi-step forms with integrated validation by using the Blazor `EditForm` component. The below example demonstrates how the `DataAnnotationsValidator` component in Blazor enables validation based on data annotations applied to `StepperModel` properties.
-
-The validation messages are displayed using the `ValidationMessage` component, ensuring that required fields are not left empty within an EditForm.
-
-```cshtml
-
-@using Syncfusion.Blazor.Navigations
 @using System.ComponentModel.DataAnnotations
 
 <SfStepper @ref="stepper" StepChanging="@handleStepChange" Linear=true>
     <StepperSteps>
-        <StepperStep @ref="stepperStep1" IconCss="sf-icon-survey-intro" Text="Survey Introduction"></StepperStep>
+        <StepperStep @ref="stepperStep1" IconCss="sf-icon-survey-intro" Text="Survey Info"></StepperStep>
         <StepperStep @ref="stepperStep2" IconCss="sf-icon-survey-feedback" Text="Feedback"></StepperStep>
         <StepperStep @ref="stepperStep3" IconCss="sf-icon-survey-status" Text="Status"></StepperStep>
     </StepperSteps>
@@ -96,44 +33,63 @@ The validation messages are displayed using the `ValidationMessage` component, e
         {
             <div class="form-group">
                 <label for="name">Enter Your Name:</label>
-                <InputText id="name" @bind-Value="@model.Name" />
-                <ValidationMessage For="@(() => model.Name)" />
+                <div class="validation-container">
+                    <InputText id="name" @bind-Value="@model.Name" />
+                    <ValidationMessage For="@(() => model.Name)" />
+                </div>
             </div>
             <div class="form-group">
-                <label for="address">Enter Your Address:</label>
-                <InputText id="address" @bind-Value="@model.Address" />
-                <ValidationMessage For="@(() => model.Address)" />
+                <label for="email">Enter Your Email Address:</label>
+                <div class="validation-container">
+                    <InputText id="email" @bind-Value="@model.Email" />
+                    <ValidationMessage For="@(() => model.Email)" />
+                </div>
             </div>
         }
         else if (currentStep == 2)
         {
-            <div class="form-group">
-                <label for="Feedback">FeedBack:</label>
+            <div class="feedback-form">
                 <p>Anything else you'd like to share?</p>
-                <InputText id="Feedback" @bind-Value="@model.Feedback" />
-                @if (isValidMsg)
-                {
-                    <ValidationMessage For="@(() => model.Feedback)" />
-                }
-                
+                <div class="validation-container">
+                    <InputTextArea id="Feedback" @bind-Value="@model.Feedback"></InputTextArea>
+                    @if (isValidMsg)
+                    {
+                        <ValidationMessage For="@(() => model.Feedback)" />
+                    }
+                    @if (model.Feedback != null && model.Feedback.Length < 15)
+                    {
+                        <div class="validation-message">Please enter at least 15 characters.</div>
+                    }
+                </div>
+
             </div>
         }
     </div>
+    @if (currentStep == 2)
+    {
+        <button type="submit" style="margin-right: 3%;" class="e-btn" @onclick="@onPreviousStep"> Previous </button>
+    }
     @if (currentStep != 3)
     {
         content = "";
         <button type="submit" style="margin-right: 3%;" class="e-btn" @onclick="@onNextStep">@(currentStep == 1 ? "Next" : "Submit Feedback")</button>
     }
-
-    @if (currentStep == 2)
-    {
-        <button type="submit" style="margin-right: 3%;" class="e-btn" @onclick="@onPreviousStep"> Previous </button>
-    }
+    <h5 style="margin-top: 20px; color: green">@content</h5>
     @if (currentStep == 3)
     {
-        <button type="submit" class="e-btn" @onclick="@orderConfirm">Confirm</button>
+        if (showFeedBack)
+        {
+            <h6><b>Please confirm to submit your feedback.</b></h6>
+            <p>@model.Feedback</p>
+            <button type="submit" style="margin-right: 3%;" class="e-btn" @onclick="@onPreviousStep"> Previous </button>
+            <button type="submit" class="e-btn" @onclick="@orderConfirm">Confirm</button>
+        }
+        else
+        {
+            <button type="submit" style="margin-top: 20px;" class="e-btn" @onclick="@onReset"> Reset </button>
+        }
     }
-    <h4 style="margin-top: 20px;">@content</h4>
+    
 </EditForm>
 
 @code {
@@ -146,6 +102,7 @@ The validation messages are displayed using the `ValidationMessage` component, e
     private bool isValid = false;
     private string content = "";
     private bool isValidMsg = false;
+    private bool showFeedBack = false;
 
     private async void onNextStep()
     {
@@ -155,12 +112,23 @@ The validation messages are displayed using the `ValidationMessage` component, e
     {
         await stepper.PreviousStepAsync();
     }
+    private async void onReset()
+    {
+        currentStep = 1;        
+        await stepper.ResetAsync();
+        await Task.Delay(50);
+        model.Name = string.Empty;
+        model.Email = string.Empty;
+        model.Feedback = string.Empty;
+        StateHasChanged();
+    }
 
     private void orderConfirm()
     {
-        if (isValid && currentStep==3)
+        if (isValid && currentStep == 3)
         {
             content = "Thanks! Feedback has been submitted successfully.";
+            showFeedBack = false;
         }
     }
 
@@ -170,14 +138,16 @@ The validation messages are displayed using the `ValidationMessage` component, e
         {
             isValid = false;
             switch (currentStep)
-            {
+                {
                 case 1:
-                    if (!string.IsNullOrEmpty(model.Name) && !string.IsNullOrEmpty(model.Address))
+                    if (!string.IsNullOrEmpty(model.Name) && !string.IsNullOrEmpty(model.Email))
                     {
                         stepperStep1.IsValid = true;
                         if (args.ActiveStep < args.PreviousStep)
                         {
                             stepperStep1.IsValid = null;
+                            stepperStep2.IsValid = null;
+                            stepperStep3.IsValid = null;
                         }
                         else
                         {
@@ -192,24 +162,38 @@ The validation messages are displayed using the `ValidationMessage` component, e
                     }
                     break;
                 case 2:
-                    if (!string.IsNullOrEmpty(model.Feedback))
+                    if (!string.IsNullOrEmpty(model.Feedback) && model.Feedback.Length >= 15)
                     {
                         stepperStep2.IsValid = isValid = true;
                         if (args.ActiveStep < args.PreviousStep)
                         {
                             currentStep = currentStep - 1;
                             stepperStep2.IsValid = null;
+                            if (args.ActiveStep == 0)
+                            {
+                                stepperStep1.IsValid = null;
+                            }
                         }
                         else
                         {
                             currentStep++;
+                            showFeedBack = true;
                         }
                         args.Cancel = false;
-                    }
+                        }
                     else
                     {
-                        stepperStep2.IsValid = isValid = false;
-                        args.Cancel = isValidMsg = true;
+                        if (args.ActiveStep == 0)
+                        {
+                            stepperStep1.IsValid = null;
+                            currentStep -= 1;
+                            args.Cancel = false;
+                        }
+                        else
+                        {
+                            stepperStep2.IsValid = isValid = false;
+                            args.Cancel = isValidMsg = true;
+                        }
                     }
                     break;
                 case 3:
@@ -230,10 +214,12 @@ The validation messages are displayed using the `ValidationMessage` component, e
         [Required(ErrorMessage = "Please enter your name")]
         public string Name { get; set; }
 
-        [Required(ErrorMessage = "Please enter your address")]
-        public string Address { get; set; }
+        [Required(ErrorMessage = "Please enter your email address")]
+        [EmailAddress(ErrorMessage = "Invalid email address")]
+        public string Email { get; set; }
 
         [Required(ErrorMessage = "Please enter your feedback")]
+        [MinLength(15)]
         public string Feedback { get; set; }
     }
 }
@@ -272,13 +258,27 @@ The validation messages are displayed using the `ValidationMessage` component, e
         content: "\e707";
     }
 
+    label {
+        min-width: 200px;
+    }
+
+    form {
+        margin: 0 auto;
+        width: fit-content;
+    }
+
     .form-group {
         margin-top: 20px;
+        display: flex;
+    }
+
+    .validation-message {
+        font-size: 14px;
     }
 
     .valid-form {
-        width: 300px;
-        margin: 20px 0;
+        margin: 40px 0;
+        padding: 0 10px;
     }
 </style>
 
