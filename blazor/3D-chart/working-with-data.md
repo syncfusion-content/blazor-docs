@@ -238,7 +238,7 @@ The [WebApiAdaptor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data
 
 ### Sending additional parameters to the server
 
-To create a data request with a custom parameter, add additional parameters to the [Query](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Query) object and assign it to the chart's Query property.
+To create a data request with a custom parameter, add additional parameters to the `Query` object and assign it to the chart's Query property.
 
 The following sample code shows how to send parameters using the Query property in the series.
 
