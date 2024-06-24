@@ -9,9 +9,9 @@ documentation: ug
 
 # Accessibility Customization in Blazor Chart Component
 
-The Blazor Chart component offers extensive support for accessibility customization, enabling you to improve the user experience for individuals with disabilities. This section provides a brief explanation of the key properties for accessibility customization in the Blazor Chart component.
+The Syncfusion Blazor Chart component is structured to visualize data in a graphical manner. It provides robust customisation options for accessibility, allowing you to enhance the user experience for those with disabilities. The main attributes of the Blazor Chart component's accessibility customisation are briefly explained in this section.
 
-The chart component includes several properties that allow for the customization of accessibility features such as:
+The chart component has a number of characteristics that enable accessibility features to be customised, including:
 *  [AccessibilityDescription](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfChart.html#Syncfusion_Blazor_Charts_SfChart_AccessibilityDescription) - Provides a text description for the chart, improving support for screen readers.
 *  [AccessibilityRole](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfChart.html#Syncfusion_Blazor_Charts_SfChart_AccessibilityRole) - Specifies the role of the chart, helping screen readers to identify the element appropriately.
 *  [Focusable](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfChart.html#Syncfusion_Blazor_Charts_SfChart_Focusable) - Allows the chart to receive focus, making it accessible via keyboard navigation.
@@ -59,7 +59,7 @@ The chart component includes several properties that allow for the customization
 
 ## Series
 
-The accessibility for the individual chart series can be customized using the properties within the [ChartSeries](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html). The available properties for accessibility customization in [ChartSeries](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html) include:
+The [ChartSeries](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html) attributes allow for customisation of the accessibility for each specific chart series. [ChartSeries](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html) has characteristics that can be adjusted for accessibility, such as:
 * [AccessibilityDescription](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_AccessibilityDescription) - Provides a text description for the series' root element, enhancing support for screen readers.
 * [AccessibilityDescriptionFormat](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_AccessibilityDescriptionFormat) - Specifies a format for the accessibility description of each point in the series, allowing dynamic content. The format string can include the placeholders such as ${series.name}, ${point.x}, ${point.y}, ${point.high}, etc. For example, the format "${series.name} : ${point.x}" displays the series name and x-value of the point in the accessibility description. Data point's values like `high`, `low`, `open`, and `close` are applicable based on the series types.
 * [AccessibilityRole](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_AccessibilityRole) - Specifies the role of the series, helping screen readers to identify the element appropriately.
@@ -100,7 +100,7 @@ The accessibility for the individual chart series can be customized using the pr
 
 ## Title and subtitle
 
-The chart's title and subtitle accessibility can be customized using the properties within the [ChartTitleStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTitleStyle.html) and [ChartSubTitleStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSubTitleStyle.html). The available properties for accessibility customization in [ChartTitleStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTitleStyle.html) and [ChartSubTitleStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSubTitleStyle.html) include:
+In blazor chart component, the [ChartTitleStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTitleStyle.html) and [ChartSubTitleStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSubTitleStyle.html) attributes allow you to customise the accessibility of the chart's title and subtitle.The following properties in [ChartTitleStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTitleStyle.html) and [ChartSubTitleStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSubTitleStyle.html) can be customised for accessibility:
 * [AccessibilityDescription](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTitleStyle.html#Syncfusion_Blazor_Charts_ChartTitleStyle_AccessibilityDescription) - Provides a text description for the chart title, enhancing support for screen readers.
 * [AccessibilityRole](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTitleStyle.html#Syncfusion_Blazor_Charts_ChartTitleStyle_AccessibilityRole) - Specifies the role of the chart title, helping screen readers to identify the element appropriately.
 * [Focusable](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTitleStyle.html#Syncfusion_Blazor_Charts_ChartTitleStyle_Focusable) - Enables or disables the keyboard navigation focus for title.
@@ -141,7 +141,7 @@ The chart's title and subtitle accessibility can be customized using the propert
 
 ## Annotations
 
-The accessibility for the annotations can be customized using the properties within the [ChartAnnotations](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAnnotations.html) such as: 
+The [ChartAnnotations](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAnnotations.html) property allows to add annotations to the chart at specific region. The characteristics, which include the following, allow for customisation of the annotations' accessibility: 
 * [AccessibilityDescription](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAnnotations.html#Syncfusion_Blazor_Charts_ChartAnnotations_AccessibilityDescription) - Provides a text description for the annotation, enhancing support for screen readers.
 * [AccessibilityRole](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAnnotations.html#Syncfusion_Blazor_Charts_ChartAnnotations_AccessibilityRole) - Specifies the role of the annotation, helping screen readers to identify the element appropriately.
 * [Focusable](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAnnotations.html#Syncfusion_Blazor_Charts_ChartAnnotations_Focusable) - Specifies whether annotations are focusable via keyboard navigation.
@@ -193,7 +193,7 @@ The accessibility for the annotations can be customized using the properties wit
 
 ## Trendline
 
-The chart's trendline accessibility can be customized using properties within the [ChartTrendline](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTrendline.html) such as:
+Customisable properties within the [ChartTrendline](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTrendline.html) allow you to control the accessibility of the trendline on the chart, including:
 * [AccessibilityDescription](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTrendline.html#Syncfusion_Blazor_Charts_ChartTrendline_AccessibilityDescription) - Provides a text description for the trendline, enhancing support for screen readers.
 * [AccessibilityDescriptionFormat](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTrendline.html#Syncfusion_Blazor_Charts_ChartTrendline_AccessibilityDescriptionFormat) - Specifies a format for the accessibility description of the trendline, allowing dynamic content. For example, the format "${series.name} : ${point.x}" displays the series name and x-value of the point in the accessibility description.
 * [AccessibilityRole](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTrendline.html#Syncfusion_Blazor_Charts_ChartTrendline_AccessibilityRole) - Specifies the role of the trendline, helping screen readers to identify the element appropriately.
@@ -238,7 +238,7 @@ The chart's trendline accessibility can be customized using properties within th
 
 ## Zooming
 
-The accessibility for the chart's zooming can be customized using the properties within [ChartZoomSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartZoomSettings.html). The available properties for accessibility customization in [ChartZoomSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartZoomSettings.html) include:
+The [ChartZoomSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartZoomSettings.html) attributes allow you to adjust the chart's zooming capability. [ChartZoomSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartZoomSettings.html) offers the following parameters for accessibility customisation:
 * [AccessibilityDescriptionFormat](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartZoomSettings.html#Syncfusion_Blazor_Charts_ChartZoomSettings_AccessibilityDescriptionFormat) - Specifies a format for the accessibility description of the zoom toolkit items, allowing dynamic content. The format string can include placeholders such as {value} to display zoom toolkit item name in the accessibility description. For example, the format "Selected the ${value} option" will read as "Selected the ZoomIn option" for the ZoomIn item from [ToolbarItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartZoomSettings.html#Syncfusion_Blazor_Charts_ChartZoomSettings_ToolbarItems).
 * [AccessibilityRole](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartZoomSettings.html#Syncfusion_Blazor_Charts_ChartZoomSettings_AccessibilityRole) - Specifies the role of the zoom toolkit items, helping screen readers to identify the element appropriately.
 * [Focusable](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartZoomSettings.html#Syncfusion_Blazor_Charts_ChartZoomSettings_Focusable) - Specifies whether zoom toolkit items are focusable via keyboard navigation.
@@ -279,7 +279,7 @@ The accessibility for the chart's zooming can be customized using the properties
 
 ## Legend
 
-The accessibility for the chart's legend can be customized using the properties in [ChartLegendSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartLegendSettings.html) such as:
+The [ChartLegendSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartLegendSettings.html) provides the information on the series shown in the chart. The following properties in [ChartLegendSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartLegendSettings.html) can be used to alter the accessibility of the chart's legend:
 * [AccessibilityDescriptionFormat](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartLegendSettings.html#Syncfusion_Blazor_Charts_ChartLegendSettings_AccessibilityDescriptionFormat) - Specifies a format for the accessibility description of the legend items. The format string can include placeholders such as {value} to set the accessibility text for the legend item. For example, the format "Selected the ${value} legend" will read as "Selected the Product A legend" for the legend item with text "Product A".
 * [AccessibilityRole](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartLegendSettings.html#Syncfusion_Blazor_Charts_ChartLegendSettings_AccessibilityRole) - Specifies the role of the legend items to screen readers, providing appropriate context.
 * [Focusable](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartLegendSettings.html#Syncfusion_Blazor_Charts_ChartLegendSettings_Focusable) - Specifies whether legend items are focusable via keyboard navigation.
