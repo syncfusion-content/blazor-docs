@@ -940,7 +940,7 @@ N> All the events should be provided in a single **GridEvents** component.
         public double? Freight { get; set; }
     }
 
-    public void CellSavedHandler(CellSaveArgs<Order> args)
+    public void CellSavedHandler(CellSavedArgs<Order> args)
     {
         // Here, you can customize your code.
     }

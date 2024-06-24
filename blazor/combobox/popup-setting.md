@@ -83,12 +83,6 @@ The [OnOpen](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.C
 
 The [Opened](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListEvents-2.html#Syncfusion_Blazor_DropDowns_DropDownListEvents_2_Opened) event triggers when the popup opens.
 
-{% highlight Razor %}
-
-{% include_relative code-snippet/popup-setting/opened-event.razor %}
-
-{% endhighlight %}
-
 ### OnClose event
 
 The [OnClose](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ComboBoxEvents-2.html#Syncfusion_Blazor_DropDowns_ComboBoxEvents_2_OnClose) event triggers before the popup is closed. If you cancel this event, the popup will remain open.

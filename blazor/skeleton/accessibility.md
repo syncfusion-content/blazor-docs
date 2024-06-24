@@ -22,6 +22,7 @@ The accessibility compliance for the Blazor Skeleton component is outlined below
 | [Color Contrast](../common/accessibility#color-contrast) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
 | [Mobile Device Support](../common/accessibility#mobile-device-support) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
 | [Axe-core Accessibility Validation](../common/accessibility#ensuring-accessibility) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
+| [Keyboard Navigation Support](../common/accessibility#keyboard-navigation-support) | N/A |
 
 <style>
     .post .post-content img {

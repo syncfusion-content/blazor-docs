@@ -44,7 +44,7 @@ Add the following NuGet packages into the Blazor Server app.
 * Register the Syncfusion Blazor Service in the **~/Program.cs** file.
 
 {% tabs %}
-{% highlight c# tabtitle="~/Program.cs" hl_lines="3 9 12" %}
+{% highlight c# tabtitle="~/Program.cs" hl_lines="3 11 14" %}
 
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Web;
@@ -54,7 +54,9 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
-builder.Services.AddServerSideBlazor().AddHubOptions(o => { o.MaximumReceiveMessageSize = 102400000; });
+builder.Services.AddServerSideBlazor();
+
+builder.Services.AddSignalR(o => { o.MaximumReceiveMessageSize = 102400000; });
 
 // Add Syncfusion Blazor service to the container.
 builder.Services.AddSyncfusionBlazor();
@@ -63,6 +65,8 @@ var app = builder.Build();
 
 {% endhighlight %}
 {% endtabs %}
+
+N> [Processing Large Files Without Increasing Maximum Message Size in SfPdfViewer Component](../how-to/processing-large-files-without-increasing-maximum-message-size)
 
 ## Adding stylesheet and script
 
@@ -113,3 +117,5 @@ Run the application, and the PDF file will be displayed using Syncfusion's Blazo
 * [Getting Started with Blazor PDF Viewer (Next Gen) Component in WSL mode](https://blazor.syncfusion.com/documentation/pdfviewer-2/getting-started/wsl-application)
 
 * [Learn different ways to add script reference in Blazor Application](https://blazor.syncfusion.com/documentation/common/adding-script-references)
+
+* [Processing Large Files Without Increasing Maximum Message Size in SfPdfViewer Component](../how-to/processing-large-files-without-increasing-maximum-message-size)
