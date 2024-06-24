@@ -95,6 +95,52 @@ A title can be added to the axis using [Title](https://help.syncfusion.com/cr/bl
 
 ![Blazor Column Chart with Axis Title](images/axis-customization/blazor-column-chart-axis-title.png)
 
+### Axis title alignment
+
+The axis title's position can be aligned using the `TextAlignment` property in [ChartAxisTitleStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAxisTitleStyle.html). The `TextAlignment` property allows you to specify the alignment of the title relative to the axis. You can set it to `Alignment.Near`, `Alignment.Center`, or `Alignment.Far` to position the title near the start, at the center, or far from the start of the axis, respectively. 
+
+```cshtml
+
+@using Syncfusion.Blazor.Charts
+
+<SfChart Title="Olympic Medals">
+    <ChartPrimaryXAxis Title="Countries" ValueType="Syncfusion.Blazor.Charts.ValueType.Category">
+        <ChartAxisTitleStyle Size="16px" FontFamily="Segoe UI" FontWeight="bold" TextAlignment="Syncfusion.Blazor.Charts.Alignment.Near" />
+    </ChartPrimaryXAxis>
+    <ChartPrimaryYAxis Title="Medal Counts">
+        <ChartAxisTitleStyle Size="16px" FontFamily="Segoe UI" FontWeight="bold" TextAlignment="Syncfusion.Blazor.Charts.Alignment.Far" />
+    </ChartPrimaryYAxis>
+
+    <ChartSeriesCollection>
+        <ChartSeries DataSource="@MedalDetails" XName="X" YName="YValue" Type="Syncfusion.Blazor.Charts.ChartSeriesType.Column" />
+    </ChartSeriesCollection>
+</SfChart>
+
+@code {
+    public class ChartData
+    {
+        public string X { get; set; }
+        public double YValue { get; set; }
+    }
+
+    public List<ChartData> MedalDetails = new List<ChartData>
+    {
+         new ChartData { X= "USA", YValue= 46 },
+         new ChartData { X= "GBR", YValue= 27 },
+         new ChartData { X= "CHN", YValue= 26 },
+         new ChartData { X= "UK", YValue= 26 },
+         new ChartData { X= "AUS", YValue= 26 },
+         new ChartData { X= "IND", YValue= 26 },
+         new ChartData { X= "DEN", YValue= 26 },
+         new ChartData { X= "MEX", YValue= 26 },
+    };
+}
+
+```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LZVfDHirzNGCVAZq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} 
+
+![Blazor Column Chart with Axis Title Alignment](images/axis-customization/blazor-column-chart-axis-title-alignment.png)
+
 ## Tick lines
 
 The width, color, and size of the minor and major tick lines can be customized using [MajorTickLines](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonAxis.html#Syncfusion_Blazor_Charts_ChartCommonAxis_MajorTickLines) and [MinorTickLines](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonAxis.html#Syncfusion_Blazor_Charts_ChartCommonAxis_MinorTickLines) properties in the axis.
