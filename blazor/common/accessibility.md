@@ -596,7 +596,7 @@ Circular Gauge
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
 </td>
 <td>
-
+<img src="https://cdn.syncfusion.com/content/images/landing-page/no.png" alt="No">
 </td>
 <td>
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
@@ -1216,7 +1216,7 @@ HeatMap Chart
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
 </td>
 <td>
-
+<img src="https://cdn.syncfusion.com/content/images/landing-page/no.png" alt="No">
 </td>
 <td>
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
@@ -1225,7 +1225,7 @@ HeatMap Chart
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
 </td>
 <td>
-
+<img src="https://cdn.syncfusion.com/content/images/landing-page/no.png" alt="No">
 </td>
 <td>
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
@@ -1392,6 +1392,7 @@ Linear Gauge
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
 </td>
 <td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/no.png" alt="No">
 </td>
 <td>
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
@@ -1400,6 +1401,7 @@ Linear Gauge
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
 </td>
 <td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/no.png" alt="No">
 </td>
 <td>
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
@@ -1495,6 +1497,7 @@ Maps
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
 </td>
 <td>
+<img src="https://cdn.syncfusion.com/content/images/landing-page/no.png" alt="No">
 </td>
 <td>
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
@@ -1952,10 +1955,10 @@ Range Slider
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
 </td>
 <td>
-
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
 </td>
 <td>
-
+<img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
 </td>
 <td>
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
@@ -2762,7 +2765,7 @@ TreeMap
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
 </td>
 <td>
-
+<img src="https://cdn.syncfusion.com/content/images/landing-page/no.png" alt="No">
 </td>
 <td>
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
