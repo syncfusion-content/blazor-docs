@@ -48,12 +48,12 @@ The following example demonstrates how to navigate tracked revision programmatic
 /**
  * Navigate to next tracked change from the current selection.
  */
-container.DocumentEditor.Selection.NavigateNextRevisionAsync();
+await container.DocumentEditor.Selection.NavigateNextRevisionAsync();
 
 /**
  * Navigate to previous tracked change from the current selection.
  */
-container.DocumentEditor.Selection.NavigatePreviousRevisionAsync();
+await container.DocumentEditor.Selection.NavigatePreviousRevisionAsync();
 ```
 
 ## Filtering changes based on user
@@ -78,12 +78,12 @@ The following example code illustrates how to enforce and stop protection in Doc
 
 @code {
     SfDocumentEditorContainer container;
-    protected void protectDocument(object args)
+    protected async void protectDocument(object args)
     {
         //enforce protection
-        container.DocumentEditor.Editor.EnforceProtectionAsync("123", ProtectionType.RevisionsOnly);
+        await container.DocumentEditor.Editor.EnforceProtectionAsync("123", ProtectionType.RevisionsOnly);
         //stop the document protection
-        container.DocumentEditor.Editor.StopProtectionAsync("123");
+        await container.DocumentEditor.Editor.StopProtectionAsync("123");
     }
 }
 ```
