@@ -68,7 +68,7 @@ The [EditorType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataFor
 {% tabs %}
 {% highlight razor tabtitle="Razor"  %}
 
-{% include_relative code-snippet/form-items/configure-model-ID.cs %}
+{% include_relative code-snippet/form-items/configure-editor-type.razor %}
 
 {% endhighlight %}
 
