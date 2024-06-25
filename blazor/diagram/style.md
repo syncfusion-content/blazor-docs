@@ -167,7 +167,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ![SymbolPalette Hover in Blazor Diagram](images/SymbolPaletteHover.gif)
 
-## How to customize the symbolpalette when symbol is selected
+## How to customize the symbol palette when symbol is selected
 
 To change the appearance of the symbol palette when a symbol is selected, use the following CSS code:
 
