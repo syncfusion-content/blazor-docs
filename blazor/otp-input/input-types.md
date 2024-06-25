@@ -53,7 +53,7 @@ You can set the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.I
 
 ```
 
-![Blazor OTP Input Component with Password Type](images/blazor-otp-text.png)
+![Blazor OTP Input Component with Password Type](images/blazor-otp-password.png)
 
 ## Value
 
