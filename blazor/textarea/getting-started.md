@@ -112,10 +112,12 @@ Add the Syncfusion Blazor TextArea component in the **~/Pages/Index.razor** file
 {% tabs %}
 {% highlight razor %}
 
-<SfTextArea Placeholder='First Name'></SfTextArea>
+<SfTextArea Placeholder='Add your Comments'></SfTextArea>
 
 {% endhighlight %}
 {% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LXLTjdsAsprhYodH?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor TextArea Component](./images/blazor-textarea.png)" %}
 
 ## Floating label
 
@@ -124,10 +126,12 @@ The floating label TextArea floats the label above the TextArea after focusing, 
 {% tabs %}
 {% highlight razor %}
 
-<SfTextArea Placeholder='First Name' FloatLabelType='@FloatLabelType.Auto'></SfTextArea>
+<SfTextArea Placeholder='Add your Comments' FloatLabelType='@FloatLabelType.Auto'></SfTextArea>
 
 {% endhighlight %}
 {% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXLTjdiKszhkOkia?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor TextArea with Floating Label](./images/blazor-textarea-float-label.png)" %}
 
 ## See Also
 

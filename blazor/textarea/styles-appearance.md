@@ -40,10 +40,6 @@ By applying these classes, users can easily customize the appearance of the Text
 {% endhighlight %}
 {% highlight cshtml tabtitle="Css"  %}
 
-#container {
-  visibility: hidden;
-}
-
 #loader {
   color: #008cff;
   font-family: 'Helvetica Neue','calibiri';
@@ -77,11 +73,12 @@ By applying these classes, users can easily customize the appearance of the Text
 {% endhighlight %}
 {% endtabs %}
 
+![Blazor TextArea with Sizing](./images/blazor-textarea-sizing.png)
 
 ## Filled and outline mode
 
 The Filled and Outline modes can be enabled in the TextArea component by adding the `e-outline` or `e-filled` class to the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextArea.html#Syncfusion_Blazor_Inputs_SfTextArea_CssClass) API.
-By adding these classes, users can choose between a filled or outline appearance for the TextArea control, aligning with the design aesthetics of their application.
+By adding these classes, users can choose between a filled or outline appearance for the TextArea control, aligning with the design aesthetics of their application. Please find the demo link [here](https://blazor.syncfusion.com/demos/textarea/default-functionalities?theme=material3).
 
 {% tabs %}
 {% highlight razor %}
@@ -111,7 +108,7 @@ By utilizing the `CssClass` API, users can apply custom CSS classes to the TextA
 
 ## Setting the disabled state
 
-To disable the TextArea, you can utilize the [Enabled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextArea.html#Syncfusion_Blazor_Inputs_SfTextArea_Enabled) property. When set to `false`, the TextArea becomes disabled, preventing user interaction.
+To disable the TextArea, you can utilize the [Enabled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextArea.html#Syncfusion_Blazor_Inputs_SfTextArea_Enabled) property. When set to `false`, the TextArea becomes disabled, preventing user interaction. Please find the demo link [here](https://blazor.syncfusion.com/demos/textarea/api?theme=fluent).
 
 {% tabs %}
 {% highlight razor %}
@@ -124,7 +121,7 @@ To disable the TextArea, you can utilize the [Enabled](https://help.syncfusion.c
 
 ## Set the ReadOnly property
 
-To make the TextArea read-only , you can use the [ReadOnly](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextArea.html#Syncfusion_Blazor_Inputs_SfTextArea_Readonly) property. When set to `true`, it prevents users from editing the content of the TextArea.
+To make the TextArea read-only , you can use the [ReadOnly](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextArea.html#Syncfusion_Blazor_Inputs_SfTextArea_Readonly) property. When set to `true`, it prevents users from editing the content of the TextArea. Please find the demo link [here](https://blazor.syncfusion.com/demos/textarea/api?theme=fluent).
 
 {% tabs %}
 {% highlight razor %}
@@ -151,10 +148,11 @@ Render the TextArea with `rounded corner` by adding the `e-corner` class to the 
 {% endhighlight %}
 {% endtabs %}
 
+![Blazor TextArea with Rounded Corner](./images/blazor-textarea-rounded-corner.png)
 
 ## Static Clear Button
 
-To display a static clear button in the TextArea component, you can add the `e-static-clear` class to the `CssClass` property. This class ensures that the clear button remains visible at all times, providing users with the ability to easily clear the TextArea content without needing to focus on the control.
+To display a static clear button in the TextArea component, you can add the `e-static-clear` class to the `CssClass` property. This class ensures that the clear button remains visible at all times, providing users with the ability to easily clear the TextArea content without needing to focus on the control. Please find the demo link [here](https://blazor.syncfusion.com/demos/textarea/api?theme=fluent).
 
 {% tabs %}
 {% highlight razor %}
@@ -174,17 +172,13 @@ You can customize the TextArea styles such as background-color, text-color and b
 <div id='container'>
     <div class='wrap'>
         <div id="input-container">
-            <SfTextArea id="default"></SfTextArea>
+            <SfTextArea Placeholder="Enter your comments" ></SfTextArea>
         </div>
     </div>
 </div>
 
 {% endhighlight %}
 {% highlight cshtml tabtitle="Css"  %}
-
-#container {
-  visibility: hidden;
-}
 
 #loader {
   color: #008cff;
@@ -223,7 +217,7 @@ You can customize the TextArea styles such as background-color, text-color and b
 
 ## Change the floating label color
 
-You can change the floating label color of the TextArea for both `success` and `warning` validation states by applying the following CSS styles.
+You can change the floating label color of the TextArea for both `success` and `warning` validation states by applying the following CSS styles. Please find the demo link [here](https://blazor.syncfusion.com/demos/textarea/default-functionalities?theme=fluent).
 
 ```css
 
@@ -249,10 +243,10 @@ You can change the floating label color of the TextArea for both `success` and `
     <div class='wrap'>
         <div id="input-container">
             <div>
-                <SfTextArea id="default1" Placeholder="Success" CssClass="e-success" FloatLabelType="Auto"></SfTextArea>
+                <SfTextArea id="default1" Placeholder="Success" CssClass="e-success" FloatLabelType="@FloatLabelType.Auto"></SfTextArea>
             </div>
             <div>
-                <SfTextArea id="default2" Placeholder ="Warning" CssClass="e-warning" FloatLabelType="Auto"></SfTextArea>
+                <SfTextArea id="default2" Placeholder ="Warning" CssClass="e-warning" FloatLabelType="@FloatLabelType.Auto"></SfTextArea>
             </div>
         </div>
     </div>
@@ -260,10 +254,6 @@ You can change the floating label color of the TextArea for both `success` and `
 
 {% endhighlight %}
 {% highlight cshtml tabtitle="Css"  %}
-
-#container {
-  visibility: hidden;
-}
 
 #loader {
   color: #008cff;
@@ -326,17 +316,13 @@ To add a mandatory asterisk (*) to the placeholder in the TextArea component, yo
 <div id='container'>
     <div class='wrap'>
         <div id="input-container">
-            <SfTextArea id="default" Placeholder="Enter your comments" FloatLabelType="Auto"></SfTextArea>
+            <SfTextArea id="default" Placeholder="Enter your comments" FloatLabelType="@FloatLabelType.Auto"></SfTextArea>
         </div>
     </div>
 </div>
 
 {% endhighlight %}
 {% highlight cshtml tabtitle="Css"  %}
-
-#container {
-  visibility: hidden;
-}
 
 #loader {
   color: #008cff;
@@ -364,3 +350,5 @@ To add a mandatory asterisk (*) to the placeholder in the TextArea component, yo
 
 {% endhighlight %}
 {% endtabs %}
+
+![Blazor TextArea with Sizing](./images/blazor-textarea-asterisk.png)

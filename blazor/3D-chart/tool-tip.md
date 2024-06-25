@@ -22,7 +22,7 @@ By default, tooltip is not visible. The tooltip can be enabled by setting the `E
 @using Syncfusion.Blazor.Chart3D
 
 <SfChart3D WallColor="transparent" EnableRotation="true" RotationAngle="7" TiltAngle="10" Depth="100">
-    <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Chart3D.ValueType.Category" LabelPlacement="LabelPlacement.BetweenTicks" />
+    <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Chart3D.ValueType.Category" LabelPlacement="Syncfusion.Blazor.Chart3D.LabelPlacement.BetweenTicks" />
     <Chart3DTooltipSettings Enable="true"></Chart3DTooltipSettings>
     <Chart3DSeriesCollection>
         <Chart3DSeries DataSource="@SalesReports" XName="Month" YName="Sales" Type="Chart3DSeriesType.Column" />
@@ -54,6 +54,7 @@ By default, tooltip is not visible. The tooltip can be enabled by setting the `E
 }
 
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LtBfXHiKipfupKhA?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Column 3D Chart with Tooltip](images/tooltip/blazor-column-chart-tooltip.png)
 
@@ -66,7 +67,7 @@ By default, tooltip track the mouse movement, but the tooltip can be set in fixe
 @using Syncfusion.Blazor.Chart3D
 
 <SfChart3D WallColor="transparent" EnableRotation="true" RotationAngle="7" TiltAngle="10" Depth="100">
-    <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Chart3D.ValueType.Category" LabelPlacement="LabelPlacement.BetweenTicks" />
+    <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Chart3D.ValueType.Category" LabelPlacement="Syncfusion.Blazor.Chart3D.LabelPlacement.BetweenTicks" />
     <Chart3DTooltipSettings Enable="true">
         <Chart3DTooltipLocation X="120" Y="20"></Chart3DTooltipLocation>
     </Chart3DTooltipSettings>
@@ -100,6 +101,7 @@ By default, tooltip track the mouse movement, but the tooltip can be set in fixe
 }
 
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hDBzNHiACfySnnZq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Column 3D Chart with Fixed Tooltip](images/tooltip/blazor-column-chart-fixed-tooltip.png)
 
@@ -114,7 +116,7 @@ By default, tooltip shows information of x and y value in points. In addition to
 @using Syncfusion.Blazor.Chart3D
 
 <SfChart3D WallColor="transparent" EnableRotation="true" RotationAngle="7" TiltAngle="10" Depth="100">
-    <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Chart3D.ValueType.Category" LabelPlacement="LabelPlacement.BetweenTicks" />
+    <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Chart3D.ValueType.Category" LabelPlacement="Syncfusion.Blazor.Chart3D.LabelPlacement.BetweenTicks" />
     <Chart3DTooltipSettings Enable="true" Header="Sales" Format="<b>${series.name} : ${point.y}</b>">
     </Chart3DTooltipSettings>
     <Chart3DSeriesCollection>
@@ -147,6 +149,7 @@ By default, tooltip shows information of x and y value in points. In addition to
 }
 
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BXBpNnsgspnNkiNQ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Column 3D Chart with Tooltip Format](images/tooltip/blazor-column-chart-tooltip-format.png)
 
@@ -161,7 +164,7 @@ Any HTML elements can be displayed within the tooltip by using the `Chart3DToolt
 @using Syncfusion.Blazor.Chart3D
 
 <SfChart3D WallColor="transparent" EnableRotation="true" RotationAngle="7" TiltAngle="10" Depth="100">
-    <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Chart3D.ValueType.Category" LabelPlacement="LabelPlacement.BetweenTicks" />
+    <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Chart3D.ValueType.Category" LabelPlacement="Syncfusion.Blazor.Chart3D.LabelPlacement.BetweenTicks" />
     <Chart3DTooltipSettings Enable="true">
         <Chart3DTooltipTemplate>
             @{
@@ -205,6 +208,7 @@ Any HTML elements can be displayed within the tooltip by using the `Chart3DToolt
 }
 
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VjhpDnCUWTxpwqMH?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Column 3D Chart with Tooltip Template](images/tooltip/blazor-column-chart-tooltip-template.png)
 
@@ -217,7 +221,7 @@ The `Fill` and `Border` properties are used to customize the background color an
 @using Syncfusion.Blazor.Chart3D
 
 <SfChart3D WallColor="transparent" EnableRotation="true" RotationAngle="7" TiltAngle="10" Depth="100">
-    <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Chart3D.ValueType.Category" LabelPlacement="LabelPlacement.BetweenTicks" />
+    <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Chart3D.ValueType.Category" LabelPlacement="Syncfusion.Blazor.Chart3D.LabelPlacement.BetweenTicks" />
     <Chart3DTooltipSettings Enable="true" Format="<b>${point.x} : ${point.y}</b>" Fill="#7bb4eb">
         <Chart3DTooltipBorder Color="red" Width="1"></Chart3DTooltipBorder>
     </Chart3DTooltipSettings>
@@ -251,5 +255,6 @@ The `Fill` and `Border` properties are used to customize the background color an
 }
 
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hZrTXxsgsfmibwll?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Column 3D Chart with Custom Tooltip](images/tooltip/blazor-column-chart-custom-tooltip.png)
