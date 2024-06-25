@@ -29,7 +29,7 @@ When a placeholder with multiple placeholder characters is provided each input f
 
 @using Syncfusion.Blazor.Inputs
 
-<SfOtpInput Placeholder="x"></SfOtpInput>
+<SfOtpInput Placeholder="wxyz"></SfOtpInput>
 
 ```
 
