@@ -667,7 +667,7 @@ OData (Open Data Protocol) is a standardized protocol for building and consuming
 <div id="diagram-space" class="content-wrapper">
     <SfDiagramComponent Height="400px" NodeCreating="OnNodeCreating" ConnectorCreating="OnConnectorCreating">
         <DataSourceSettings Id="EmployeeID" ParentId="ReportsTo">
-            <SfDataManager Url="https://blazor.syncfusion.com/services/development/odata/DiagramOData" Adaptor="Syncfusion.Blazor.Adaptors.ODataV4Adaptor"></SfDataManager>
+            <SfDataManager Url="https://blazor.syncfusion.com/services/production/odata/DiagramOData" Adaptor="Syncfusion.Blazor.Adaptors.ODataV4Adaptor"></SfDataManager>
         </DataSourceSettings>
         <SnapSettings Constraints="SnapConstraints.None"></SnapSettings>
         <Layout HorizontalSpacing="100" VerticalSpacing="100" Type="LayoutType.HierarchicalTree"></Layout>
@@ -756,7 +756,7 @@ The ODataV4 is an improved version of OData protocols, and the SfDataManager can
 <div id="diagram-space" class="content-wrapper">
     <SfDiagramComponent Height="400px" NodeCreating="OnNodeCreating" ConnectorCreating="OnConnectorCreating">
         <DataSourceSettings Id="EmployeeID" ParentId="ReportsTo">
-            <SfDataManager Url="https://blazor.syncfusion.com/services/development/odata/DiagramODataV4" Adaptor="Syncfusion.Blazor.Adaptors.ODataV4Adaptor"></SfDataManager>
+            <SfDataManager Url="https://blazor.syncfusion.com/services/production/odata/DiagramODataV4" Adaptor="Syncfusion.Blazor.Adaptors.ODataV4Adaptor"></SfDataManager>
         </DataSourceSettings>
         <SnapSettings Constraints="SnapConstraints.None"></SnapSettings>
         <Layout HorizontalSpacing="100" VerticalSpacing="100" Type="LayoutType.HierarchicalTree"></Layout>
@@ -940,7 +940,7 @@ The following sample code demonstrates binding data to the Diagram component thr
 <div id="diagram-space" class="content-wrapper">
     <SfDiagramComponent Height="400px" NodeCreating="OnNodeCreating" ConnectorCreating="OnConnectorCreating">
         <DataSourceSettings Id="EmployeeID" ParentId="ReportsTo">
-            <SfDataManager Url="https://blazor.syncfusion.com/services/development/api/DiagramRemoteAPI" Adaptor="Syncfusion.Blazor.Adaptors.UrlAdaptor"></SfDataManager>
+            <SfDataManager Url="https://blazor.syncfusion.com/services/production/api/DiagramRemoteAPI" Adaptor="Syncfusion.Blazor.Adaptors.UrlAdaptor"></SfDataManager>
         </DataSourceSettings>
         <SnapSettings Constraints="SnapConstraints.None"></SnapSettings>
         <Layout HorizontalSpacing="100" VerticalSpacing="100" Type="LayoutType.HierarchicalTree"></Layout>
