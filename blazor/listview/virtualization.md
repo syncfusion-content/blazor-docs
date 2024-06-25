@@ -104,3 +104,8 @@ UI virtualization can be enabled in the ListView by setting the `EnableVirtualiz
 ```
 
 ![Virtualization in Blazor ListView](./images/list/blazor-listview-virtualization.png)
+
+## Limitations for virtualization
+
+* When enabling Virtual Scrolling for ListView, it is important to specify the height in pixels. Percentage values are not accepted.
+* If you prefer to use a percentage value, you can render the component within a div container with a specific pixel value set for height (It will be rendered based on the parent container height).
