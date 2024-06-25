@@ -48,6 +48,7 @@ documentation: ug
 }
 
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hjhTZHirphUnPCqM?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor 3D Chart with DateTime Axis](images/datetime/blazor-column-chart-datetime-axis.png)
 
@@ -86,6 +87,7 @@ The `DateTimeCategory` axis is used to display the date time values with non-lin
 }
 
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hXLpjHiVJrKOIbbu?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Column 3D Chart with DateTime Axis](images/datetime/blazor-column-chart-with-datetime-axis.png)
 
@@ -127,6 +129,7 @@ Range of an axis will be calculated automatically based on the provided data. Yo
 }
 
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VDrJXdCLzhJLRmjw?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Changing Blazor Column 3D Chart DateTime Axis based on Range](images/datetime/blazor-column-chart-axis-based-on-range.png)
 
@@ -147,7 +150,7 @@ Date time intervals can be customized by using the `Interval` and `IntervalType`
 @using Syncfusion.Blazor.Chart3D
 
 <SfChart3D WallColor="transparent" EnableRotation="true" RotationAngle="7" TiltAngle="10" Depth="100">
-    <Chart3DPrimaryXAxis Interval="1" IntervalType="IntervalType.Months" ValueType="Syncfusion.Blazor.Chart3D.ValueType.DateTime">
+    <Chart3DPrimaryXAxis Interval="1" IntervalType="Syncfusion.Blazor.Chart3D.IntervalType.Months" ValueType="Syncfusion.Blazor.Chart3D.ValueType.DateTime">
     </Chart3DPrimaryXAxis>
     <Chart3DSeriesCollection>
         <Chart3DSeries DataSource="@WeatherReports" XName="XValue" YName="YValue">
@@ -174,6 +177,7 @@ Date time intervals can be customized by using the `Interval` and `IntervalType`
 }
 
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNBpDdirTBfmVqNO?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Changing Blazor Column 3D Chart DateTime Axis based on Interval](images/datetime/blazor-column-chart-axis-based-on-interval.png)
 
@@ -194,7 +198,7 @@ When the `RangePadding` is set to **None**, the minimum and maximum of the a
 @using Syncfusion.Blazor.Chart3D
 
 <SfChart3D WallColor="transparent" EnableRotation="true" RotationAngle="7" TiltAngle="10" Depth="100">
-    <Chart3DPrimaryXAxis RangePadding="ChartRangePadding.None" ValueType="Syncfusion.Blazor.Chart3D.ValueType.DateTime">
+    <Chart3DPrimaryXAxis RangePadding="Syncfusion.Blazor.Chart3D.ChartRangePadding.None" ValueType="Syncfusion.Blazor.Chart3D.ValueType.DateTime">
     </Chart3DPrimaryXAxis>
 
     <Chart3DSeriesCollection>
@@ -222,6 +226,7 @@ When the `RangePadding` is set to **None**, the minimum and maximum of the a
 }
 
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNrptHMhfBIrZRdV?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Column 3D Chart without RangePadding](images/datetime/blazor-column-chart-axis-based-on-range-none.png)
 
@@ -235,7 +240,7 @@ When the `RangePadding` is set to `Round`, minimum and maximum will be rounded t
 @using Syncfusion.Blazor.Chart3D
 
 <SfChart3D WallColor="transparent" EnableRotation="true" RotationAngle="7" TiltAngle="10" Depth="100">
-    <Chart3DPrimaryXAxis RangePadding="ChartRangePadding.Round" ValueType="Syncfusion.Blazor.Chart3D.ValueType.DateTime">
+    <Chart3DPrimaryXAxis RangePadding="Syncfusion.Blazor.Chart3D.ChartRangePadding.Round" ValueType="Syncfusion.Blazor.Chart3D.ValueType.DateTime">
     </Chart3DPrimaryXAxis>
 
     <Chart3DSeriesCollection>
@@ -263,6 +268,7 @@ When the `RangePadding` is set to `Round`, minimum and maximum will be rounded t
 }
 
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rthpZRWBJVSnflQi?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Column 3D Chart with Round RangePadding](images/datetime/blazor-column-chart-axis-based-on-range-round.png)
 
@@ -275,7 +281,7 @@ When the `RangePadding` property is set to **Additional**, the interval of an ax
 @using Syncfusion.Blazor.Chart3D
  
 <SfChart3D WallColor="transparent" EnableRotation="true" RotationAngle="7" TiltAngle="10" Depth="100">
-    <Chart3DPrimaryXAxis RangePadding="ChartRangePadding.Additional" ValueType="Syncfusion.Blazor.Chart3D.ValueType.DateTime">
+    <Chart3DPrimaryXAxis RangePadding="Syncfusion.Blazor.Chart3D.ChartRangePadding.Additional" ValueType="Syncfusion.Blazor.Chart3D.ValueType.DateTime">
     </Chart3DPrimaryXAxis>
 
     <Chart3DSeriesCollection>
@@ -303,6 +309,7 @@ When the `RangePadding` property is set to **Additional**, the interval of an ax
 }
 
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BXBTjdsrfrxMZeIc?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Column 3D Chart with Additional RangePadding](images/datetime/blazor-column-chart-axis-based-on-range-Additional.png)
 
@@ -347,6 +354,7 @@ The date can be formatted and parsed to all globalize format using the `LabelFo
 }
 
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VZLftHshTUyFcIMA?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Axis Label Formatting in Blazor Column 3D Chart](images/datetime/blazor-column-chart-axis-label-format.png)
 

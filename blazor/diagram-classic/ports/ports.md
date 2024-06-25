@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Actions of port in Blazor Diagram Component | Syncfusion
+title: Actions of Port in Blazor Diagram Component | Syncfusion
 description: Checkout and learn here all about Actions of port in Syncfusion Blazor Diagram component and much more.
 platform: Blazor
 control: Diagram
@@ -9,7 +9,7 @@ documentation: ug
 
 N> Syncfusion recommends using [Blazor Diagram Component](https://blazor.syncfusion.com/documentation/diagram/getting-started) which provides better performance than this diagram control. Blazor Diagram Component will be actively developed in the future.
 
-# Actions of port in Blazor Diagram Component
+# Actions of Port in Blazor Diagram Component
 
 Port is a special connection point in a Node that you can glue the connectors. When you glue a connector to a node or port, they stay connected, even if one of the node is moved.
 

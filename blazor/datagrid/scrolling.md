@@ -154,7 +154,7 @@ In the following sample, the Grid headers will be sticky while scrolling the Gri
 
 ```
 
-![Sticky Header in Blazor DataGrid](./images/blazor-datagrid-sticky-header.gif)
+![Sticky header in Blazor DataGrid.](./images/blazor-datagrid-sticky-header.gif)
 
 ## Frozen rows and columns
 
@@ -427,7 +427,7 @@ In this demo, the **OrderID** column is frozen at the left side, the **ShipCount
 
 The following GIF represent a frozen direction.
 
-![Freezing Blazor DataGrid Columns on Right Side](./images/blazor-datagrid-frozen-fixed-side.gif)
+![Frozen direction in Blazor DataGrid.](./images/blazor-datagrid-frozen-direction.gif)
 
 ### Limitations of freeze direction
 
@@ -506,7 +506,7 @@ The [GridColumns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.
 
 N> If frozen columns are not specified, the frozen column separator will be displayed at the left and right ends. You can dynamically change the frozen columns by dragging the column separator.
 
-![Add or Remove Frozen Blazor DataGrid Columns by Dragging the Column Separator](./images/blazor-datagrid-drag-and-drop-the-column-separator.gif)
+![Drag and drop column separator in Blazor DataGrid.](./images/blazor-datagrid-drag-and-drop-the-column-separator.gif)
 
 ## Customize grid scroll bar
 
@@ -568,4 +568,4 @@ N> You can find the fully working sample [here](https://github.com/SyncfusionExa
 
 ```
 
-![Customizing the Scroll bar in the Blazor DataGrid](./images/blazor-datagrid-scrollbar-customization.png)
+![Customizing the scroll bar in Blazor DataGrid.](./images/blazor-datagrid-scrollbar-customization.png)

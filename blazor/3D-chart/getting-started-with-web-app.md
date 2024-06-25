@@ -139,8 +139,7 @@ Using the `Title` property, you can add a title to the chart and the axes to pro
 
 <SfChart3D Title="Sales Analysis">
     <Chart3DPrimaryXAxis Title="Month" ValueType="Syncfusion.Blazor.Chart3D.ValueType.Category"></Chart3DPrimaryXAxis>
-    
-    <Chart3DPrimaryYAxis Title="Sales in Dollar"><Chart3DPrimaryYAxis>
+    <Chart3DPrimaryYAxis Title="Sales in Dollar"></Chart3DPrimaryYAxis>
     <Chart3DSeriesCollection>
         <Chart3DSeries DataSource="@Sales" XName="Month" YName="SalesValue" Type="Chart3DSeriesType.Column">
         </Chart3DSeries>
@@ -149,6 +148,8 @@ Using the `Title` property, you can add a title to the chart and the axes to pro
 
 {% endhighlight %}
 {% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VtLfNRsgCVjHdioT?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Enable legend
 
@@ -169,6 +170,8 @@ You can use legend for the 3D Chart by setting the `Visible` property to **true*
 {% endhighlight %}
 {% endtabs %}
 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VDhpDRiKMriVAFPn?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 ## Add data label
 
 You can add data labels to improve the readability of the 3D Chart. This can be achieved by setting the `Visible` property to **true** in the `Chart3DDataLabel`. Now, the data labels are arranged smartly based on series.
@@ -187,6 +190,8 @@ You can add data labels to improve the readability of the 3D Chart. This can be 
 
 {% endhighlight %}
 {% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LtrfDxCqCLizaoKV?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Enable tooltip
 
@@ -207,6 +212,8 @@ The tooltip is useful when you cannot display information by using the data labe
 
 {% endhighlight %}
 {% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hXLzXHWUiVMwxISt?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## See also
 

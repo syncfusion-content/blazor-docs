@@ -22,6 +22,7 @@ The accessibility compliance for the Blazor Timeline component is outlined below
 | [Mobile Device Support](../common/accessibility#mobile-device-support) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
 | [Axe-core Accessibility Validation](../common/accessibility#ensuring-accessibility) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
 | [Keyboard Navigation Support](../common/accessibility#keyboard-navigation-support) | N/A |
+| [Screen Reader Support](../common/accessibility#screen-reader-support) | N/A |
 
 <style>
     .post .post-content img {
