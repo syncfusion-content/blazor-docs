@@ -164,6 +164,8 @@ Now, map the data fields  `Month` and `Sales` to the series `XName` and `YName` 
 {% endhighlight %}
 {% endtabs %}
 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VjLJZHCKiVjCNqCE?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 ## Add 3D Chart title
 
 Using the `Title` property, you can add a title to the chart and the axes to provide the user with quick information about the data plotted in the chart.
@@ -184,6 +186,8 @@ Using the `Title` property, you can add a title to the chart and the axes to pro
 {% endhighlight %}
 {% endtabs %}
 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VtLfNRsgCVjHdioT?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 ## Enable legend
 
 You can use legend for the 3D Chart by setting the `Visible` property to **true** in `Chart3DLegendSettings`. The legend name can be changed by using the `Name` property in the series.
@@ -202,6 +206,8 @@ You can use legend for the 3D Chart by setting the `Visible` property to **true*
 
 {% endhighlight %}
 {% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VDhpDRiKMriVAFPn?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Add data label
 
@@ -222,6 +228,8 @@ You can add data labels to improve the readability of the 3D Chart. This can be 
 {% endhighlight %}
 {% endtabs %}
 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LtrfDxCqCLizaoKV?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 ## Enable tooltip
 
 The tooltip is useful when you cannot display information by using the data labels due to space constraints. You can enable tooltip by setting the `Enable` property in `Chart3DTooltipSettings` to **true**.
@@ -241,6 +249,8 @@ The tooltip is useful when you cannot display information by using the data labe
 
 {% endhighlight %}
 {% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hXLzXHWUiVMwxISt?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## See also
 
