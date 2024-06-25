@@ -114,13 +114,7 @@ You can also decide the branch for mind map using [GetBranch](https://help.syncf
         node.Style = new ShapeStyle() { Fill = "#6495ED", StrokeWidth = 1, StrokeColor = "white" };
         node.Shape = new BasicShape() { Type = NodeShapes.Basic, Shape = NodeBasicShapes.Ellipse };
         MindMapDetails mindMapData = node.Data as MindMapDetails;
-        node.Annotations = new DiagramObjectCollection<ShapeAnnotation>()
-        {
-            new ShapeAnnotation()
-            {
-                Content = mindMapData.Label
-            }
-        };
+       node.Annotations[0].Style = new TextStyle() { Color = "white", Bold = true };
     }
     
     //Creates node with some default values.
