@@ -969,7 +969,7 @@ DocumentEditor
 <img src=https://cdn.syncfusion.com/content/images/documentation/partial.png alt="Intermediate">
 </td>
 <td>
-N/A
+<img src="https://cdn.syncfusion.com/content/images/landing-page/no.png" alt="No">
 </td>
 <td>
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
@@ -978,7 +978,7 @@ N/A
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
 </td>
 <td>
-N/A
+<img src="https://cdn.syncfusion.com/content/images/landing-page/no.png" alt="No">
 </td>
 <td>
 <img src=https://cdn.syncfusion.com/content/images/documentation/partial.png alt="Intermediate">
