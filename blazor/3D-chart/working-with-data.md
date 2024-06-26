@@ -26,7 +26,7 @@ An IEnumerable object can be assigned to the `DataSource` property. The list dat
 @using Syncfusion.Blazor.Chart3D
 
 <SfChart3D Title="Inflation - Consumer Price" Width="60%" WallColor="transparent" EnableRotation="true" RotationAngle="7" TiltAngle="10" Depth="100">
-    <Chart3DPrimaryXAxis LabelFormat="yyyy" ValueType="Syncfusion.Blazor.Chart3D.ValueType.DateTime" LabelRotationAngle="-45" LabelPlacement="LabelPlacement.BetweenTicks">
+    <Chart3DPrimaryXAxis LabelFormat="yyyy" ValueType="Syncfusion.Blazor.Chart3D.ValueType.DateTime" LabelRotationAngle="-45" LabelPlacement="Syncfusion.Blazor.Chart3D.LabelPlacement.BetweenTicks">
     </Chart3DPrimaryXAxis>
 	<Chart3DSeriesCollection>
         <Chart3DSeries DataSource="@ConsumerReports" XName="XValue" YName="YValue" Type="Chart3DSeriesType.Column">
@@ -54,6 +54,7 @@ An IEnumerable object can be assigned to the `DataSource` property. The list dat
 }
 
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXrJDdCgiIrsmTGI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Colum 3D Chart with Data Binding](images/working-data/blazor-chart-data-binding.png)
 
@@ -69,7 +70,7 @@ Blazor 3D Chart is a generic component which is strongly bound to a model type. 
 @using System.Dynamic
 
 <SfChart3D WallColor="transparent" EnableRotation="true" RotationAngle="7" TiltAngle="10" Depth="100">
-    <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Chart3D.ValueType.Category" LabelRotationAngle="-45" LabelPlacement="LabelPlacement.BetweenTicks"/>
+    <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Chart3D.ValueType.Category" LabelRotationAngle="-45" LabelPlacement="Syncfusion.Blazor.Chart3D.LabelPlacement.BetweenTicks"/>
     <Chart3DSeriesCollection>
         <Chart3DSeries DataSource="@MedalDetails" XName="X" YName="Y" Type="Chart3DSeriesType.Column">
         </Chart3DSeries>
@@ -176,6 +177,7 @@ The remote data can be bound to the 3D chart using the [SfDataManager](https://h
 </SfChart3D>
 
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VZVfjxsgWyogzTfx?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Remote Data Binding in Blazor 3D Chart](images/working-data/blazor-chart-remote-data-binding.png)
 
@@ -192,11 +194,12 @@ The [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Data
 @using Syncfusion.Blazor.Chart3D
+@using System.Dynamic
 
 <SfChart3D WallColor="transparent" EnableRotation="true" RotationAngle="7" TiltAngle="10" Depth="100">
-    <SfDataManager Url="https://blazor.syncfusion.com/services/production/api/Orders" Adaptor="Adaptors.WebApiAdaptor"></SfDataManager>
+    <SfDataManager Url="https://services.odata.org/V4/Northwind/Northwind.svc/Orders" Adaptor="Adaptors.ODataV4Adaptor"></SfDataManager>
 
-    <Chart3DPrimaryXAxis Title="Orders" ValueType="Syncfusion.Blazor.Chart3D.ValueType.Category" LabelRotationAngle="-45" LabelPlacement="LabelPlacement.BetweenTicks"></Chart3DPrimaryXAxis>
+    <Chart3DPrimaryXAxis Title="Orders" ValueType="Syncfusion.Blazor.Chart3D.ValueType.Category" LabelRotationAngle="-45" LabelPlacement="Syncfusion.Blazor.Chart3D.LabelPlacement.BetweenTicks"></Chart3DPrimaryXAxis>
 
     <Chart3DSeriesCollection>
         <Chart3DSeries XName="OrderID" YName="Freight" Type="Chart3DSeriesType.Column"></Chart3DSeries>
@@ -204,8 +207,66 @@ The [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data
 </SfChart3D>
 
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VZhpXnrpAccANHLf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-![Blazor 3D Chart with ODataV4Adaptor Binding](images/working-data/blazor-chart-odata-adaptor-binding.png)
+![Blazor 3D Chart with ODataV4Adaptor Binding](images/working-data/blazor-chart-odatav4-adaptor-binding.png)
+
+### Web API
+
+The [WebApiAdaptor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.WebApiAdaptor.html) can be used to bind a chart to a Web API created using an [OData](https://www.odata.org/documentation/odata-version-3-0/) endpoint.
+
+```cshtml
+
+@using Syncfusion.Blazor
+@using Syncfusion.Blazor.Data
+@using Syncfusion.Blazor.Chart3D
+
+<SfChart3D WallColor="transparent" EnableRotation="true" RotationAngle="7" TiltAngle="10" Depth="100">
+    <SfDataManager Url="https://blazor.syncfusion.com/services/production/api/Orders" Adaptor="Adaptors.WebApiAdaptor"></SfDataManager>
+
+    <Chart3DPrimaryXAxis Title="Orders" ValueType="Syncfusion.Blazor.Chart3D.ValueType.Category" LabelRotationAngle="-45" LabelPlacement="Syncfusion.Blazor.Chart3D.LabelPlacement.BetweenTicks"></Chart3DPrimaryXAxis>
+
+    <Chart3DSeriesCollection>
+        <Chart3DSeries XName="OrderID" YName="Freight" Type="Chart3DSeriesType.Column"></Chart3DSeries>
+    </Chart3DSeriesCollection>
+</SfChart3D>
+
+```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VjLztdMKsxBTngfW?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+![Blazor 3D Chart with WebApiAdaptor Binding](images/working-data/blazor-chart-webapi-adaptor-binding.png)
+
+### Sending additional parameters to the server
+
+To create a data request with a custom parameter, add additional parameters to the `Query` object and assign it to the chart's Query property.
+
+The following sample code shows how to send parameters using the Query property in the series.
+
+```cshtml
+@using Syncfusion.Blazor.Data
+@using Syncfusion.Blazor.Chart3D
+
+<SfChart3D WallColor="transparent" EnableRotation="true" RotationAngle="7" TiltAngle="10" Depth="100">
+    <SfDataManager Url="https://services.odata.org/V4/Northwind/Northwind.svc/Orders" Adaptor="Adaptors.ODataV4Adaptor"></SfDataManager>
+
+    <Chart3DPrimaryXAxis Title="Orders" ValueType="Syncfusion.Blazor.Chart3D.ValueType.Category" LabelRotationAngle="-45" LabelPlacement="Syncfusion.Blazor.Chart3D.LabelPlacement.BetweenTicks"></Chart3DPrimaryXAxis>
+
+    <Chart3DSeriesCollection>
+        <Chart3DSeries Query="ChartQuery" XName="OrderID" YName="Freight" Type="Chart3DSeriesType.Column"></Chart3DSeries>
+    </Chart3DSeriesCollection>
+</SfChart3D>
+
+@code {
+    public Query ChartQuery { get; set; }
+
+    protected override void OnInitialized()
+    {
+        ChartQuery = new Query().Take(10).Where("Freight", "GreaterThan", 300, false);
+    }
+
+}
+```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hDVzNxLfUlNVErCr?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Empty points
 
@@ -216,12 +277,12 @@ The data points that uses the `null` or `undefined` as value are considered as e
 @using Syncfusion.Blazor.Chart3D
 
 <SfChart3D WallColor="transparent" EnableRotation="true" RotationAngle="7" TiltAngle="10" Depth="100">
-    <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Chart3D.ValueType.Category" LabelRotationAngle="-45" LabelPlacement="LabelPlacement.BetweenTicks">
+    <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Chart3D.ValueType.Category" LabelRotationAngle="-45" LabelPlacement="Syncfusion.Blazor.Chart3D.LabelPlacement.BetweenTicks">
     </Chart3DPrimaryXAxis>
 
     <Chart3DSeriesCollection>
         <Chart3DSeries DataSource="@SalesReports" XName="Month" YName="Sales" Type="Chart3DSeriesType.Column">
-            <Chart3DEmptyPointSettings Fill="gray" Mode="EmptyPointMode.Gap">
+            <Chart3DEmptyPointSettings Fill="gray" Mode="Syncfusion.Blazor.Chart3D.EmptyPointMode.Gap">
             </Chart3DEmptyPointSettings>
         </Chart3DSeries>
     </Chart3DSeriesCollection>
@@ -252,6 +313,7 @@ The data points that uses the `null` or `undefined` as value are considered as e
 }
 
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZLJZHMgMnsEADrH?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Column 3D Chart with Empty Points](images/working-data/blazor-chart-empty-point.png)
 
@@ -264,12 +326,12 @@ The specific color for empty point can be set by the `Fill` property in `Chart3D
 @using Syncfusion.Blazor.Chart3D
 
 <SfChart3D WallColor="transparent" EnableRotation="true" RotationAngle="7" TiltAngle="10" Depth="100">
-    <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Chart3D.ValueType.Category" LabelRotationAngle="-45" LabelPlacement="LabelPlacement.BetweenTicks">
+    <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Chart3D.ValueType.Category" LabelRotationAngle="-45" LabelPlacement="Syncfusion.Blazor.Chart3D.LabelPlacement.BetweenTicks">
     </Chart3DPrimaryXAxis>
 
     <Chart3DSeriesCollection>
         <Chart3DSeries DataSource="@SalesReports" XName="Month" YName="Sales" Type="Chart3DSeriesType.Column">
-            <Chart3DEmptyPointSettings Mode="EmptyPointMode.Average" Fill="green">
+            <Chart3DEmptyPointSettings Mode="Syncfusion.Blazor.Chart3D.EmptyPointMode.Average" Fill="green">
             </Chart3DEmptyPointSettings>
         </Chart3DSeries>
     </Chart3DSeriesCollection>
@@ -300,5 +362,6 @@ The specific color for empty point can be set by the `Fill` property in `Chart3D
 }
 
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LXhzXxiUsnqLRyNK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Column 3D Chart with Customized Empty Points](images/working-data/blazor-chart-custom-empty-point.png)

@@ -56,6 +56,7 @@ The default color of series or points can be customized by providing a custom co
 }
 
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BjVfXxCBqRuWmxlT?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Column 3D Chart with Custom Color Palette](images/appearance/blazor-column-chart-custom-color-palette.png)
 
@@ -99,6 +100,7 @@ The color for the points can be bound from the `DataSource` for the series by ut
 }
 
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rtrfDxMrKwXpXlgX?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} 
 
 ![Blazor Column 3D Chart with PointColorMapping](images/appearance/blazor-column-chart-with-point-color.png)
 
@@ -162,6 +164,7 @@ The data label and fill color of each data point can be customized using the `Po
 }
 
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZBzXdsrUGMqoJpK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Column 3D Chart with Point level customization](images/appearance/blazor-column-chart-point-level-customization.png)
 
@@ -209,6 +212,7 @@ The background color and border of the 3D chart can be customized using the `Bac
 }
 
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDhptRCLgGMkWnGY?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Column 3D Chart with Custom Background and Border](images/appearance/blazor-column-chart-custom-background-and-border.png)
 
@@ -253,6 +257,7 @@ The 3D chart's margin can be set from its container using the `Chart3DMargin` pr
 }
 
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/htLftnshAmBJsYEA?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Column 3D Chart with Custom Margin](images/appearance/blazor-column-chart-custom-margin.png)
 
@@ -298,6 +303,7 @@ To customize the animation for a particular series, the `Chart3DAnimation` prope
 }
 
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDrpjRsrAmhveiAm?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Chart rotation
 
@@ -339,6 +345,7 @@ The 3D chart can be rotated by using the `EnableRotation` property.
 }
 
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VjVzNHWLKwqqyvoo?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Title
 
@@ -380,6 +387,7 @@ The 3D chart can be given a title by using `Title` property, to show the informa
 }
 
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rNrJZRihUwKPsGvh?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Column 3D Chart with Title](images/appearance/blazor-column-chart-title.png)
 
@@ -423,6 +431,7 @@ By using the `Position`property in `TitleStyle`, the `Title` can be positioned 
 }
 
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNhTDnsBKczVydKx?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Column 3D Chart with Title](images/appearance/blazor-column-chart-title-position.png)
 
@@ -464,6 +473,7 @@ The custom option is used to position the title anywhere in the 3D chart using `
 }
 
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VDBftnWBgwTPesmR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Column 3D Chart with Custom Title](images/appearance/blazor-column-chart-title-custom.png)
 
@@ -476,7 +486,7 @@ The title can be aligned to the near, far, or center of the 3D chart by using th
 @using Syncfusion.Blazor.Chart3D
 
 <SfChart3D Title="Olympic Medals" WallColor="transparent" EnableRotation="true" RotationAngle="7" TiltAngle="10" Depth="100">
-    <Chart3DTitleStyle TextAlignment="Alignment.Far"></Chart3DTitleStyle>
+    <Chart3DTitleStyle TextAlignment="Syncfusion.Blazor.Chart3D.Alignment.Far"></Chart3DTitleStyle>
     <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Chart3D.ValueType.Category">
     </Chart3DPrimaryXAxis>
 
@@ -507,6 +517,7 @@ The title can be aligned to the near, far, or center of the 3D chart by using th
 }
 
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LXVzXdiBKwdsnLib?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Column 3D Chart Title with Text Alignment](images/appearance/blazor-column-chart-title-alignment.png)
 
@@ -519,7 +530,7 @@ The `TitleStyle` property of the 3D chart provides options to customize the titl
 @using Syncfusion.Blazor.Chart3D
 
 <SfChart3D Title="Olympic Medals" WallColor="transparent" EnableRotation="true" RotationAngle="7" TiltAngle="10" Depth="100">
-    <Chart3DTitleStyle FontSize="18px" Color="red" TextOverflow="@TextOverflow.Wrap"></Chart3DTitleStyle>
+    <Chart3DTitleStyle FontSize="18px" Color="red" TextOverflow="Syncfusion.Blazor.Chart3D.TextOverflow.Wrap"></Chart3DTitleStyle>
 
     <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Chart3D.ValueType.Category">
     </Chart3DPrimaryXAxis>
@@ -551,6 +562,7 @@ The `TitleStyle` property of the 3D chart provides options to customize the titl
 }
 
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hjBzDHirqQwNwVvM?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Column 3D Chart Title with Customization](images/appearance/blazor-column-chart-title-with-customization.png)
 
