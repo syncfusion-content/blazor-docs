@@ -825,7 +825,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ### Tooltip template for symbols
 
-You can provide custom template as tooltip for symbols in the symbol palette using SymbolTooltipTemplate. Once tooltip template is defined then enable the custom tooltip for symbols in the symbol palette by setting the Tooltip constraints for node and connector. This allows the tooltips template to be displayed when hovering over symbols in the symbol palette.
+You can provide custom template as tooltip for symbols in the symbol palette using [TooltipTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SymbolPalette.SymbolPaletteTemplates.html#Syncfusion_Blazor_Diagram_SymbolPalette_SymbolPaletteTemplates_TooltipTemplate) property of `SfDiagramComponent`. Once tooltip template is defined then enable the custom tooltip for symbols in the symbol palette by setting the Tooltip constraints for node and connector. This allows the tooltips template to be displayed when hovering over symbols in the symbol palette.
 
 The following code example illustrates how to provide the tooltip template for nodes.
 
