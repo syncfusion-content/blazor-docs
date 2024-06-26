@@ -596,7 +596,7 @@ Circular Gauge
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
 </td>
 <td>
-<img src="https://cdn.syncfusion.com/content/images/landing-page/no.png" alt="No">
+N/A
 </td>
 <td>
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
@@ -969,7 +969,7 @@ DocumentEditor
 <img src=https://cdn.syncfusion.com/content/images/documentation/partial.png alt="Intermediate">
 </td>
 <td>
-<img src="https://cdn.syncfusion.com/content/images/landing-page/no.png" alt="No">
+N/A
 </td>
 <td>
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
@@ -978,7 +978,7 @@ DocumentEditor
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
 </td>
 <td>
-<img src="https://cdn.syncfusion.com/content/images/landing-page/no.png" alt="No">
+N/A
 </td>
 <td>
 <img src=https://cdn.syncfusion.com/content/images/documentation/partial.png alt="Intermediate">
@@ -1216,7 +1216,7 @@ HeatMap Chart
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
 </td>
 <td>
-<img src="https://cdn.syncfusion.com/content/images/landing-page/no.png" alt="No">
+N/A
 </td>
 <td>
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
@@ -1225,7 +1225,7 @@ HeatMap Chart
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
 </td>
 <td>
-<img src="https://cdn.syncfusion.com/content/images/landing-page/no.png" alt="No">
+N/A
 </td>
 <td>
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
@@ -1392,7 +1392,7 @@ Linear Gauge
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
 </td>
 <td>
-<img src="https://cdn.syncfusion.com/content/images/landing-page/no.png" alt="No">
+N/A
 </td>
 <td>
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
@@ -1401,7 +1401,7 @@ Linear Gauge
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
 </td>
 <td>
-<img src="https://cdn.syncfusion.com/content/images/landing-page/no.png" alt="No">
+N/A
 </td>
 <td>
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
@@ -1497,7 +1497,7 @@ Maps
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
 </td>
 <td>
-<img src="https://cdn.syncfusion.com/content/images/landing-page/no.png" alt="No">
+N/A
 </td>
 <td>
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
@@ -2591,7 +2591,7 @@ Toast
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
 </td>
 <td>
-<img src="https://cdn.syncfusion.com/content/images/landing-page/no.png" alt="No">
+N/A
 </td>
 <td>
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
@@ -2766,7 +2766,7 @@ TreeMap
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
 </td>
 <td>
-<img src="https://cdn.syncfusion.com/content/images/landing-page/no.png" alt="No">
+N/A
 </td>
 <td>
 <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes">
