@@ -656,7 +656,7 @@ When using SfDataManager for data binding then the TValue must be provided expli
 
 ### Binding with OData services
 
-OData (Open Data Protocol) is a standardized protocol for building and consuming RESTful APIs. It enables the creation and consumption of queryable and interoperable REST APIs in a simple and standard way. OData services expose data as resources that are addressable by URLs and can be queried using standard HTTP methods (GET, POST, PUT, DELETE). For more details on OData services, refer to the [OData documentation](https://www.odata.org/documentation/odata-version-3-0/odata-version-3-0-core-protocol/). To bind OData service, use the ODataAdaptor.
+OData (Open Data Protocol) is a standardized protocol for building and consuming RESTful APIs. It enables the creation and consumption of queryable and interoperable REST APIs in a simple and standard way. OData services expose data as resources that are addressable by URLs and can be queried using standard HTTP methods (GET, POST, PUT, DELETE). For more details on OData services, refer to the [OData documentation](https://www.odata.org/documentation/odata-version-3-0/odata-version-3-0-core-protocol/). To bind an OData service, use the ODataAdaptor.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -834,11 +834,11 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ### Binding with WebAPI services
 
-You can use the `WebApiAdaptor` to interact with Web APIs created with OData endpoint. The `WebApiAdaptor` is extended from the `ODataAdaptor`. Hence to use `WebApiAdaptor`, the endpoint should understand the OData formatted queries sent along with request.
+You can use the `WebApiAdaptor` to interact with Web APIs created with OData endpoints. The `WebApiAdaptor` is extended from the `ODataAdaptor`. Therefore, to use the `WebApiAdaptor`, the endpoint must understand the OData formatted queries sent with the request.
 
-To enable OData query option for Web API, refer to this [documentation](https://learn.microsoft.com/en-us/aspnet/web-api/overview/odata-support-in-aspnet-web-api/supporting-odata-query-options).
+To enable OData query option for a Web API, refer to this [documentation](https://learn.microsoft.com/en-us/aspnet/web-api/overview/odata-support-in-aspnet-web-api/supporting-odata-query-options).
 
-The following sample code demonstrates binding remote data to the Diagram component through the [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) using Web API service,
+The following sample code demonstrates hoe to bind remote data to the Diagram component through the [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) using a Web API service,
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -926,10 +926,9 @@ The following sample code demonstrates binding remote data to the Diagram compon
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/DataBinding/RemoteData)
 
 ### Binding with URL services
+A URL service is a web service accessible via a Uniform Resource Locator (URL). These services provide specific functionalities or data when a client sends an HTTP request to the given URL. URL services are a foundational aspect of web-based APIs (Application Programming Interfaces) and RESTful services. The [UrlAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors#url-adaptor) serves as the base adaptor for interacting with remote data services. Most built-in adaptors are derived from the `UrlAdaptor`.
 
-A URL service is a web service that is accessible via a URL (Uniform Resource Locator). These services provide specific functionalities or data when a client sends an HTTP request to the given URL. URL services are a foundational aspect of web-based APIs (Application Programming Interfaces) and RESTful services.The [UrlAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors#url-adaptor) acts as the base adaptor for interacting with remote data services. Most of the built-in adaptors are derived from the `UrlAdaptor`.
-
-The following sample code demonstrates binding data to the Diagram component through the [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) using `UrlAdaptor`,
+The following sample code demonstrates how to bind data to the Diagram component through the [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) using the `UrlAdaptor`,
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
