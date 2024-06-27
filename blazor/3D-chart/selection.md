@@ -30,7 +30,7 @@ To select a point, set the `SelectionMode` property to **Point**.
 
 @using Syncfusion.Blazor.Chart3D
 
-<SfChart3D Title="Olympic Medals" SelectionMode="SelectionMode.Point" WallColor="transparent" EnableRotation="true" RotationAngle="7" TiltAngle="10" Depth="100">
+<SfChart3D Title="Olympic Medals" SelectionMode="Syncfusion.Blazor.Chart3D.SelectionMode.Point" WallColor="transparent" EnableRotation="true" RotationAngle="7" TiltAngle="10" Depth="100">
     <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Chart3D.ValueType.Category">
     </Chart3DPrimaryXAxis>
 
@@ -67,6 +67,7 @@ To select a point, set the `SelectionMode` property to **Point**.
 }
 
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LXVpjnMgCpXGYJIf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Column 3D Chart with Point Selection](images/selection/blazor-chart-point-selection.png)
 
@@ -78,7 +79,7 @@ To select a series, set the `SelectionMode` property to **Series**.
 
 @using Syncfusion.Blazor.Chart3D
 
-<SfChart3D Title="Olympic Medals" SelectionMode="SelectionMode.Series" WallColor="transparent" EnableRotation="true" RotationAngle="7" TiltAngle="10" Depth="100">
+<SfChart3D Title="Olympic Medals" SelectionMode="Syncfusion.Blazor.Chart3D.SelectionMode.Series" WallColor="transparent" EnableRotation="true" RotationAngle="7" TiltAngle="10" Depth="100">
     <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Chart3D.ValueType.Category">
     </Chart3DPrimaryXAxis>
 
@@ -115,6 +116,7 @@ To select a series, set the `SelectionMode` property to **Series**.
 }
 
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rjrpXHWUCJCTRDgK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Column 3D Chart with Series Selection](images/selection/blazor-chart-series-selection.png)
 
@@ -126,7 +128,7 @@ To select the points that corresponds to the same index in all the series, set t
 
 @using Syncfusion.Blazor.Chart3D
 
-<SfChart3D Title="Olympic Medals" SelectionMode="SelectionMode.Cluster" WallColor="transparent" EnableRotation="true" RotationAngle="7" TiltAngle="10" Depth="100">
+<SfChart3D Title="Olympic Medals" SelectionMode="Syncfusion.Blazor.Chart3D.SelectionMode.Cluster" WallColor="transparent" EnableRotation="true" RotationAngle="7" TiltAngle="10" Depth="100">
     <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Chart3D.ValueType.Category">
     </Chart3DPrimaryXAxis>
 
@@ -163,6 +165,7 @@ To select the points that corresponds to the same index in all the series, set t
 }
 
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hXhpXxsKCJCblvOv?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Column 3D Chart with Cluster Selection](images/selection/blazor-chart-cluster-selection.png)
 
@@ -174,7 +177,7 @@ To select multiple points or series, enable the `AllowMultiSelection`  property.
 
 @using Syncfusion.Blazor.Chart3D
 
-<SfChart3D Title="Olympic Medals" SelectionMode="SelectionMode.Point" AllowMultiSelection="true" WallColor="transparent" EnableRotation="true" RotationAngle="7" TiltAngle="10" Depth="100">
+<SfChart3D Title="Olympic Medals" SelectionMode="Syncfusion.Blazor.Chart3D.SelectionMode.Point" AllowMultiSelection="true" WallColor="transparent" EnableRotation="true" RotationAngle="7" TiltAngle="10" Depth="100">
     <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Chart3D.ValueType.Category">
     </Chart3DPrimaryXAxis>
 
@@ -211,6 +214,7 @@ To select multiple points or series, enable the `AllowMultiSelection`  property.
 }
 
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rjVTZxiqipLEJFtn?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Column 3D Chart with Multiple Selection](images/selection/blazor-chart-multiple-selection.png)
 
@@ -222,7 +226,7 @@ In a 3D chart, selecting a point or series during initial loading can only be do
 
 @using Syncfusion.Blazor.Chart3D
 
-<SfChart3D Title="Olympic Medals" SelectionMode="SelectionMode.Point" WallColor="transparent" EnableRotation="true" RotationAngle="7" TiltAngle="10" Depth="100">
+<SfChart3D Title="Olympic Medals" SelectionMode="Syncfusion.Blazor.Chart3D.SelectionMode.Point" WallColor="transparent" EnableRotation="true" RotationAngle="7" TiltAngle="10" Depth="100">
     <Chart3DPrimaryXAxis ValueType="Syncfusion.Blazor.Chart3D.ValueType.Category">
     </Chart3DPrimaryXAxis>
     <Chart3DSelectedDataIndexes>
@@ -261,6 +265,7 @@ In a 3D chart, selecting a point or series during initial loading can only be do
 }
 
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hNVJDnsqWfUAipdG?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Column 3D Chart with Selection during initial loading](images/selection/blazor-chart-initial-selection.png)
 
@@ -307,5 +312,6 @@ To select a point or series through legend use the `ToggleVisibility` property. 
 }
 
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BXrpDRsqiTqkPxPM?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Column 3D Chart with Legend Selection](images/selection/blazor-chart-legend-selection.png)
