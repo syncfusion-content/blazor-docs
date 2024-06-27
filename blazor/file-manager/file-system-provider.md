@@ -13,12 +13,12 @@ The file system provider allows the File Manager component to manage the files a
 
 The following file providers are added in Syncfusion Blazor File Manager component.
 
-* [ASP.NET Core file system provider](#aspnet-core-file-system-provider)
-* [ASP.NET Core Azure cloud file system Provider](#aspnet-core-azure-cloud-file-system-provider)
-* [ASP.NET Core Amazon S3 cloud file provider](#aspnet-core-amazon-s3-cloud-file-provider)
-* [File Transfer Protocol file system provider](#file-transfer-protocol-file-system-provider)
-* [SQL database file system provider](#sql-database-server-file-system-provider)
-* [Google Drive file system provider](#google-drive-file-system-provider)
-* [Firebase Real time Database file system provider](#firebase-realtime-database-file-system-provider)
-* [Custom file system provider](#firebase-realtime-database-file-system-provider)
+* [ASP.NET Core file system provider](https://blazor.syncfusion.com/documentation/file-manager/file-system-provider/ASP.NET-Core-file-system-provider)
+* [ASP.NET Core Azure cloud file system Provider](https://blazor.syncfusion.com/documentation/file-manager/file-system-provider/ASP.NET-Core-Azure-cloud-file-system-provider)
+* [ASP.NET Core Amazon S3 cloud file provider](https://blazor.syncfusion.com/documentation/file-manager/file-system-provider/ASP.NET-Core-Amazon-S3-cloud-file-provider)
+* [File Transfer Protocol file system provider](https://blazor.syncfusion.com/documentation/file-manager/file-system-provider/File-Transfer-Protocol-file-system-provider)
+* [SQL database file system provider](https://blazor.syncfusion.com/documentation/file-manager/file-system-provider/SQL-database-file-system-provider)
+* [Google Drive file system provider](https://blazor.syncfusion.com/documentation/file-manager/file-system-provider/Google-Drive-file-system-provider)
+* [Firebase Real time Database file system provider](https://blazor.syncfusion.com/documentation/file-manager/file-system-provider/Firebase-Real-time-Database-file-system-provider)
+* [Custom file system provider](https://blazor.syncfusion.com/documentation/file-manager/file-system-provider#custom-file-provider-for-the-syncfusion-blazor-fil-emanager-component)
 
