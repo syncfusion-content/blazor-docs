@@ -20,5 +20,5 @@ The following file providers are added in Syncfusion Blazor File Manager compone
 * [SQL database file system provider](https://blazor.syncfusion.com/documentation/file-manager/file-system-provider/SQL-database-file-system-provider)
 * [Google Drive file system provider](https://blazor.syncfusion.com/documentation/file-manager/file-system-provider/Google-Drive-file-system-provider)
 * [Firebase Real time Database file system provider](https://blazor.syncfusion.com/documentation/file-manager/file-system-provider/Firebase-Real-time-Database-file-system-provider)
-* [Custom file system provider](https://blazor.syncfusion.com/documentation/file-manager/file-system-provider#custom-file-provider-for-the-syncfusion-blazor-fil-emanager-component)
+* [Custom file system provider](https://blazor.syncfusion.com/documentation/file-manager/file-system-provider/custom-file-provider)
 
