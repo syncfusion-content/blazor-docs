@@ -1,0 +1,83 @@
+---
+layout: post
+title: File System Provider for ASP.NET Core Azure cloud in Blazor FileManager Component | Syncfusion
+description: Checkout and learn here all about ASP.NET Core Azure cloud file system provider in Syncfusion Blazor FileManager component and more.
+platform: Blazor
+control: File Manager
+documentation: ug
+---
+
+## ASP.NET Core Azure cloud file system provider
+
+The Azure file system provider allows the users to access and manage the blobs in the Azure blob storage. To get started, clone the [EJ2.ASP.NET Core Azure File Provider](https://github.com/SyncfusionExamples/ej2-azure-aspcore-file-provider) using the following command.
+
+```
+
+git clone https://github.com/SyncfusionExamples/ej2-azure-aspcore-file-provider  ej2-azure-aspcore-file-provider
+
+```
+
+After cloning, just open the project in Visual Studio and restore the NuGet packages. Now, you need to register the Azure storage by passing details like name, password, and blob name to the Register Azure method in the FileManager controller.
+
+```csharp
+
+this.operation.RegisterAzure("<--accountName-->", "<--accountKey-->", "<--blobName-->");
+
+ ```
+
+Then, set the blob container and the root blob directory by passing the corresponding URLs as parameters in the setBlobContainer method as shown below.
+
+```csharp
+
+public AzureProviderController(IHostingEnvironment hostingEnvironment)
+    {
+        this.operation = new AzureFileProvider();
+        blobPath = "<--blobPath-->";
+        filePath = "<--filePath-->";
+        ...
+        this.operation.SetBlobContainer(blobPath, filePath);            
+    }
+
+```
+
+N> Also, **blobPath** is a container path in Azure Blob Storage, and **filePath** is the file location path. For example, create a **files** container in the mentioned Azure blob storage. Inside that container, create a new folder, **Files** which includes all files and folders that need to be viewed in FileManager. Check out the below path for an example.
+
+```csharp
+
+public AzureProviderController(IHostingEnvironment hostingEnvironment)
+    {
+        this.operation = new AzureFileProvider();
+        blobPath = "https://azure_service_account.blob.core.windows.net/files/";
+        filePath = "https://azure_service_account.blob.core.windows.net/files/Files";
+
+``` 
+
+After setting the blob container references, just build and run the project. Now, the project will be hosted in `http://localhost:{port}:{port}` and just mapping the **ajaxSettings** property of the FileManager component to the appropriate controller methods allows to manage the Azure blob storage.
+
+```cshtml
+
+@*Initializing File Manager with Azure service.*@
+
+@* Replace the hosted port number in the place of "{port}" *@
+
+<SfFileManager TValue="FileManagerDirectoryContent">
+    <FileManagerAjaxSettings Url="http://localhost:{port}/api/AzureProvider/AzureFileOperations"
+                             UploadUrl="http://localhost:{port}/api/AzureProvider/AzureUpload"
+                             DownloadUrl="http://localhost:{port}/api/AzureProvider/AzureDownload"
+                             GetImageUrl="http://localhost:{port}/api/AzureProvider/AzureGetImage">
+    </FileManagerAjaxSettings>
+</SfFileManager>
+
+```
+
+N> **NuGet:** Additionally, a [NuGet](https://www.nuget.org/packages/Syncfusion.EJ2.FileManager.AzureFileProvider.AspNet.Core) package of **ASP.NET Core Azure file system provider** has been created.
+
+Use the following command to install the NuGet package in an application.
+
+```
+
+ dotnet add package Syncfusion.EJ2.FileManager.AzureFileProvider.AspNet.Core
+
+```
+
+N> To learn more about file actions that can be performed with ASP.NET Core Azure cloud file system provider, refer to this [link](https://github.com/SyncfusionExamples/ej2-azure-aspcore-file-provider#key-features)
