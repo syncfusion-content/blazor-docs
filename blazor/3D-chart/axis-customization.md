@@ -50,6 +50,7 @@ The title for the axis can be added by using the `Title` property. It helps to p
 }
 
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXhJDdChpXSmCYrG?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Column 3D Chart with Axis Title](images/axis-customization/blazor-column-chart-axis-title.png)
 
@@ -93,6 +94,7 @@ The title can be rotated from 0 to 360 degree by using the `TitleRotationAngle` 
 }
 
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rjLJXdWBfZniAVZI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Column 3D Chart with Axis Title Rotation](images/axis-customization/blazor-column-chart-axis-title-rotation.png)
 
@@ -135,6 +137,7 @@ The width, color, and height of the minor and major tick lines can be custo
 }
 
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rjLJtxChftnfOPTu?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Column 3D Chart with Custom Tick Lines](images/axis-customization/blazor-column-chart-custom-tick-lines.png)
 
@@ -177,6 +180,7 @@ The width and color of the minor and major grid lines can be customized by usin
 }
 
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rZhzjxWLJXbLjntW?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Column 3D Chart with Custom GridLines](images/axis-customization/blazor-column-chart-custom-gridline.png)
 
@@ -222,6 +226,7 @@ In addition to primary X and Y axis, n number of axis can be added to the chart.
 }
 
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNhTDxirztleaKrC?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor 3D Column Chart with Multiple Axes](images/axis-customization/blazor-column-chart-multiple-axes.png)
 
@@ -264,6 +269,7 @@ When an axis is inversed, highest value of the axis comes closer to origin and v
 }
 
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDrJjxWLpXlYDizR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Column 3D Chart with Inversed Axis](images/axis-customization/blazor-column-chart-inversed-axis.png)
 
@@ -305,6 +311,7 @@ To place an axis opposite from its original position, set the `OpposedPosition` 
 } 
 
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VtBzZHWhJZuVFHfl?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Column 3D Chart Axis in Opposed Position](images/axis-customization/blazor-column-chart-axis-at-opposed-position.png)
 
