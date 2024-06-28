@@ -43,10 +43,7 @@ The following code example illustrates how to create an organizational chart.
         node.Width = 100;
         //Initializing the default node's shape style.
         node.Style = new ShapeStyle() { Fill = "darkcyan", StrokeWidth = 3, StrokeColor = "Black" };
-        node.Annotations = new DiagramObjectCollection<ShapeAnnotation>()
-        {
-            new ShapeAnnotation { Style = new TextStyle() { Color = "white", Bold = true } }
-        };
+        node.Annotations[0].Style = new TextStyle() { Color = "white", Bold = true };
     }
 
     private void OnConnectorCreating(IDiagramObject connector)
