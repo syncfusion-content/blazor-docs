@@ -63,12 +63,12 @@ The following example code illustrates how to enforce and stop protection in Doc
 
 @code {
     SfDocumentEditorContainer container;
-    protected void protectDocument(object args)
+    protected async void protectDocument(object args)
     {
         //enforce protection
-        container.DocumentEditor.Editor.EnforceProtectionAsync("123", ProtectionType.CommentsOnly);
+        await container.DocumentEditor.Editor.EnforceProtectionAsync("123", ProtectionType.CommentsOnly);
         //stop the document protection
-        container.DocumentEditor.Editor.StopProtectionAsync("123");
+        await container.DocumentEditor.Editor.StopProtectionAsync("123");
     }
 }
 ```

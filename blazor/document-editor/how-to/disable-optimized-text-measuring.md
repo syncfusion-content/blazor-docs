@@ -37,7 +37,6 @@ The following example code illustrates how to disable optimized text measuring i
 
 ```csharp
 
-@page "/"
 @using Syncfusion.Blazor.DocumentEditor;
 
 <SfDocumentEditor IsReadOnly="false" DocumentEditorSettings="settings">

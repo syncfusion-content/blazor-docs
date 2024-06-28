@@ -43,7 +43,7 @@ The following example code illustrates how to add the new paragraph in current s
 
 ```csharp
 // It will add the new paragraph in current selection
-await container.DocumentEditor.Editor.InsertTextAsync('\n');
+await container.DocumentEditor.Editor.InsertTextAsync("\n");
 ```
 
 ## Insert the rich-text content
@@ -58,6 +58,7 @@ The following example illustrates how to insert the HTML content at current curs
 
 ```csharp
 @using Syncfusion.Blazor.DocumentEditor
+@using System.Text.Json
 
 <SfDocumentEditorContainer @ref="container" EnableToolbar=true>
     <DocumentEditorContainerEvents Created="OnCreated"></DocumentEditorContainerEvents>

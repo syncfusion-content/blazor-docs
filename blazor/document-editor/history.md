@@ -18,15 +18,15 @@ Inject the [`EditorHistory`](https://help.syncfusion.com/cr/blazor/Syncfusion.Bl
 ```cshtml
 @using Syncfusion.Blazor.DocumentEditor
 
-<SfDocumentEditor @ref="documentEditor" IsReadOnly=false EnableEditor=true EnableSelection=true>
+<SfDocumentEditorContainer @ref="container" EnableToolbar=true>
     <DocumentEditorContainerEvents Created="OnLoad"></DocumentEditorContainerEvents>
-</SfDocumentEditor>
+</SfDocumentEditorContainer>
 
 @code {
-    SfDocumentEditor documentEditor;
+    SfDocumentEditorContainer container;
     protected void OnLoad(object args)
     {
-        documentEditor.EnableEditorHistory = true;
+        container.DocumentEditor.EnableEditorHistory = true;
     }
 }
 ```

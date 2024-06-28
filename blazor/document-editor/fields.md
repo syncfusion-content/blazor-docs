@@ -18,8 +18,8 @@ You can add a field to the document by using [`InsertFieldAsync`](https://help.s
 The following example code illustrates how to insert merge field programmatically by providing the field code and field result.
 
 ```csharp
-string fieldCode = 'MERGEFIELD  First Name  \\* MERGEFORMAT ';
-string fieldResult = '«First Name»';
+string fieldCode = "MERGEFIELD  First Name  \\* MERGEFORMAT ";
+string fieldResult = "«First Name»";
 await container.DocumentEditor.Editor.InsertFieldAsync(fieldCode, fieldResult);
 ```
 
@@ -64,10 +64,10 @@ You can modify the field code and field result of the current selected field by 
 FieldInfo fieldInfo = await container.DocumentEditor.Selection.GetFieldInfoAsync();
 
 //Modify field code
-fieldInfo.Code = 'MERGEFIELD  First Name  \\* MERGEFORMAT ';
+fieldInfo.Code = "MERGEFIELD  First Name  \\* MERGEFORMAT ";
 
 //Modify field result
-fieldInfo.Result = '«First Name»';
+fieldInfo.Result = "«First Name»";
 
 //Modify field code and result of the current selected field.
 await container.DocumentEditor.Editor.SetFieldInfoAsync(fieldInfo);
