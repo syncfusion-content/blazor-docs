@@ -28,20 +28,21 @@ The Stepper component allows you to set the validation state for each step, disp
 
 <EditForm Model="@model">
     <DataAnnotationsValidator />
-    <div class="valid-form">
+    <div class="form-container">
+        <div class="valid-form">
         @if (currentStep == 1)
         {
             <div class="form-group">
-                <label for="name">Enter Your Name:</label>
+                <label for="name">Enter your name:</label>
                 <div class="validation-container">
-                    <InputText id="name" @bind-Value="@model.Name" />
+                    <InputText id="name" @bind-Value="@model.Name" width="350px" />
                     <ValidationMessage For="@(() => model.Name)" />
                 </div>
             </div>
             <div class="form-group">
-                <label for="email">Enter Your Email Address:</label>
+                <label for="email">Enter your e-mail:</label>
                 <div class="validation-container">
-                    <InputText id="email" @bind-Value="@model.Email" />
+                    <InputText id="email" @bind-Value="@model.Email"/>
                     <ValidationMessage For="@(() => model.Email)" />
                 </div>
             </div>
@@ -52,44 +53,43 @@ The Stepper component allows you to set the validation state for each step, disp
                 <p>Anything else you'd like to share?</p>
                 <div class="validation-container">
                     <InputTextArea id="Feedback" @bind-Value="@model.Feedback"></InputTextArea>
-                    @if (isValidMsg)
+                    @if (!string.IsNullOrEmpty(model.Feedback) && model.Feedback.Length < 5)
                     {
-                        <ValidationMessage For="@(() => model.Feedback)" />
-                    }
-                    @if (model.Feedback != null && model.Feedback.Length < 15)
-                    {
-                        <div class="validation-message">Please enter at least 15 characters.</div>
+                        <div class="validation-message">Please enter at least 5 characters.</div>
                     }
                 </div>
-
             </div>
         }
     </div>
-    @if (currentStep == 2)
-    {
-        <button type="submit" style="margin-right: 3%;" class="e-btn" @onclick="@onPreviousStep"> Previous </button>
-    }
-    @if (currentStep != 3)
-    {
-        content = "";
-        <button type="submit" style="margin-right: 3%;" class="e-btn" @onclick="@onNextStep">@(currentStep == 1 ? "Next" : "Submit Feedback")</button>
-    }
-    <h5 style="margin-top: 20px; color: green">@content</h5>
+    <div class="btn-container">
+        @if (currentStep == 2)
+        {
+            <button type="submit" style="margin: 10px;" class="e-btn" @onclick="@onPreviousStep"> Previous </button>
+        }
+        @if (currentStep != 3)
+        {
+            content = "";
+            <button type="submit" style="margin: 10px;" class="e-btn" @onclick="@onNextStep">@(currentStep == 1 ? "Next" : "Submit Feedback")</button>
+        }
+    </div>
+    <h5 style="color: green; margin-top: 20px;">@content</h5>
     @if (currentStep == 3)
     {
         if (showFeedBack)
         {
             <h6><b>Please confirm to submit your feedback.</b></h6>
             <p>@model.Feedback</p>
-            <button type="submit" style="margin-right: 3%;" class="e-btn" @onclick="@onPreviousStep"> Previous </button>
-            <button type="submit" class="e-btn" @onclick="@orderConfirm">Confirm</button>
+            <div class="btn-container">
+                <button type="submit" style="margin: 10px;" class="e-btn" @onclick="@onPreviousStep"> Previous </button>
+                <button type="submit" class="e-btn" @onclick="@orderConfirm">Confirm</button>
+            </div>
         }
         else
         {
-            <button type="submit" style="margin-top: 20px;" class="e-btn" @onclick="@onReset"> Reset </button>
+            <button type="submit" style="margin: 10px;" class="e-btn" @onclick="@onReset"> Reset </button>
         }
     }
-    
+    </div>
 </EditForm>
 
 @code {
@@ -116,10 +116,7 @@ The Stepper component allows you to set the validation state for each step, disp
     {
         currentStep = 1;        
         await stepper.ResetAsync();
-        await Task.Delay(50);
-        model.Name = string.Empty;
-        model.Email = string.Empty;
-        model.Feedback = string.Empty;
+        model = new StepperModel();
         StateHasChanged();
     }
 
@@ -138,9 +135,9 @@ The Stepper component allows you to set the validation state for each step, disp
         {
             isValid = false;
             switch (currentStep)
-                {
+            {
                 case 1:
-                    if (!string.IsNullOrEmpty(model.Name) && !string.IsNullOrEmpty(model.Email))
+                    if (ValidateCurrentStep() && !string.IsNullOrEmpty(model.Name))
                     {
                         stepperStep1.IsValid = true;
                         if (args.ActiveStep < args.PreviousStep)
@@ -162,7 +159,7 @@ The Stepper component allows you to set the validation state for each step, disp
                     }
                     break;
                 case 2:
-                    if (!string.IsNullOrEmpty(model.Feedback) && model.Feedback.Length >= 15)
+                    if (!string.IsNullOrEmpty(model.Feedback) && model.Feedback.Length >= 5)
                     {
                         stepperStep2.IsValid = isValid = true;
                         if (args.ActiveStep < args.PreviousStep)
@@ -180,7 +177,7 @@ The Stepper component allows you to set the validation state for each step, disp
                             showFeedBack = true;
                         }
                         args.Cancel = false;
-                        }
+                    }
                     else
                     {
                         if (args.ActiveStep == 0)
@@ -201,13 +198,27 @@ The Stepper component allows you to set the validation state for each step, disp
                     if (args.ActiveStep < args.PreviousStep)
                     {
                         currentStep = currentStep - 1;
-                        stepperStep3.IsValid = null;
+                        stepperStep2.IsValid = stepperStep3.IsValid = null;
                     }
                     break;
             }
         }
     }
 
+    private bool ValidateCurrentStep()
+    {
+        bool isStepValid = true;
+        var context = new ValidationContext(model);
+        var validationResults = new List<ValidationResult>();
+        isStepValid = Validator.TryValidateObject(model, context, validationResults, true);
+
+        if (currentStep == 1)
+        {
+            isStepValid = validationResults.All(result => result.MemberNames.Contains(nameof(StepperModel.Email)) == false || result.ErrorMessage == null);
+        }
+
+        return isStepValid;
+    }
 
     public class StepperModel
     {
@@ -219,7 +230,7 @@ The Stepper component allows you to set the validation state for each step, disp
         public string Email { get; set; }
 
         [Required(ErrorMessage = "Please enter your feedback")]
-        [MinLength(15)]
+        [MinLength(5)]
         public string Feedback { get; set; }
     }
 }
@@ -259,16 +270,38 @@ The Stepper component allows you to set the validation state for each step, disp
     }
 
     label {
-        min-width: 200px;
+        min-width: 135px;
     }
 
-    form {
+    .validation-container input {
+        width: 350px;
+    }
+
+    .validation-container textarea {
+        width: 400px;
+    }
+
+    .form-container {
         margin: 0 auto;
         width: fit-content;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .btn-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .form-group,
+    .feedback-container {
+        margin: 20px 0px;
     }
 
     .form-group {
-        margin-top: 20px;
         display: flex;
     }
 
@@ -277,7 +310,7 @@ The Stepper component allows you to set the validation state for each step, disp
     }
 
     .valid-form {
-        margin: 40px 0;
+        margin-top: 20px;
         padding: 0 10px;
     }
 </style>
