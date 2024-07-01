@@ -991,7 +991,7 @@ The CRUD operations can be performed and customized on our own by overriding the
 * Update/UpdateAsync
 * BatchUpdate/BatchUpdateAsync
 
-Let’s see how to perform CRUD operation using MongDB data with Syncfusion Blazor DataGrid component.
+Let’s see how to perform CRUD operation using MongoDB data with Syncfusion Blazor DataGrid component.
 
 **Insert Operation:**
 
