@@ -7,7 +7,7 @@ control: File Manager
 documentation: ug
 ---
 
-## ASP.NET Core file system provider
+# ASP.NET Core file system provider
 
 The ASP.NET Core file system provider allows the users to access and manage the physical file system. To get started, clone the [EJ2.ASP.NET Core File Provider](https://github.com/SyncfusionExamples/ej2-aspcore-file-provider) using the following command.
 

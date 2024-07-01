@@ -7,7 +7,7 @@ control: File Manager
 documentation: ug
 ---
 
-## File Transfer Protocol file system provider
+# File Transfer Protocol file system provider
 
 In ASP.NET Core, File Transfer Protocol file system provider allows the users to access to the hosted file system as collection of objects stored in the file storage using File Transfer Protocol. To get started, clone the [EJ2.ASP.NET Core FTP File Provider](https://github.com/SyncfusionExamples/ej2-ftp-aspcore-file-provider) using the following command
 

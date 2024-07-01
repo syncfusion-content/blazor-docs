@@ -7,7 +7,7 @@ control: File Manager
 documentation: ug
 ---
 
-## Google Drive file system provider
+# Google Drive file system provider
 
 The Google Drive file system provider allows the users to manage the files and folders in a Google Drive account. The Google Drive file system provider works on id basis where each file and folder have a unique ID. To get started, clone the [EJ2.ASP.NET Core Google Drive File Provider](https://github.com/SyncfusionExamples/ej2-google-drive-aspcore-file-provider) using the following command.
 

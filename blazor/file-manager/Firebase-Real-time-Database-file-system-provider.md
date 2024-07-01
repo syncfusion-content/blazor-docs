@@ -7,7 +7,7 @@ control: File Manager
 documentation: ug
 ---
 
-## Firebase file system provider
+# Firebase file system provider
 
 The [Firebase Real time Database](https://firebase.google.com/) file system provider in **ASP.NET Core** provides the efficient way to store the File Manager file system in a cloud database as JSON representation.
 

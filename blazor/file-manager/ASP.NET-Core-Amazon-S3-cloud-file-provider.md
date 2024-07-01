@@ -7,7 +7,7 @@ control: File Manager
 documentation: ug
 ---
 
-## ASP.NET Core Amazon S3 cloud file provider
+# ASP.NET Core Amazon S3 cloud file provider
 
 In ASP.NET Core, Amazon ***S3*** (*Simple Storage Service*) cloud file provider allows the users to access and manage a server hosted file system as collection of objects stored in the Amazon S3 Bucket. To get started, clone the [EJ2.ASP.NET Core Amazon S3 File Provider](https://github.com/SyncfusionExamples/ej2-amazon-s3-aspcore-file-provider) using the following command
 
