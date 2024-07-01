@@ -1,6 +1,6 @@
 ---
 layout: post
-title: File System Providers for File Transfer Protocol in Blazor FileManager Component | Syncfusion
+title: File Transfer Protocol Provider in Blazor FileManager Component | Syncfusion
 description: Checkout and learn here all about File Transfer Protocol file system provider in Syncfusion Blazor FileManager component and more.
 platform: Blazor
 control: File Manager
