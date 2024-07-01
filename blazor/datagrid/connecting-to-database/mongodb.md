@@ -33,7 +33,7 @@ This section describes step by step process how to retrieve data from a MongoDB 
 
 **3.** Create an API controller (aka, GridController.cs) file under **Controllers** folder that helps to establish data communication with the Blazor DataGrid component.
 
-**4.** In an API controller (aka, GridController), connect to MongoDB. In the **Get()** method  **MongoClient** and its **GetDatabase** method helps to connect the MongoDB database. Next, using **GetCollection** method of the **IMongoDatabase** is used to retrieve data from the database. Then, using a **BsonDocument** instance, populate the data collection from the **IMongoCollection** into a list using the **Find** method as shown in the following code snippet.
+**4.** In an API controller (aka, GridController), connect to MongoDB. In the **Get()** method **MongoClient** and it’s **GetDatabase** method helps to connect the MongoDB database. Next, using **GetCollection** method of the **IMongoDatabase** is used to retrieve data from the database. Then, using a **BsonDocument** instance, populate the data collection from the **IMongoCollection** into a list using the **Find** method as shown in the following code snippet.
 
 {% tabs %}
 {% highlight razor tabtitle="GridController.cs"%}
@@ -548,7 +548,7 @@ When you run the application, the resultant Blazor DataGrid component will look 
 
 > Find the sample from this [GitHub location]().
 
-## Binding data from MongoD using CustomAdaptor
+## Binding data from MongoDB using CustomAdaptor
 
 This section describes step by step process how to retrieve data from a MongoDB using `CustomAdaptor` and bind it to the Blazor DataGrid component.
 
@@ -556,7 +556,7 @@ This section describes step by step process how to retrieve data from a MongoDB 
 
 > * In this Blazor Web app, set the `rendermode` as either **InteractiveServer** or **InteractiveAuto** as per your configuration.
 
-**2.** To connect a MongoDB database using the MongDB driver in your application, you need to install the [MongoDB.Driver](https://www.nuget.org/packages/MongoDB.Driver) NuGet package. To add **MongoDB.Driver** in the app, open the NuGet package manager in Visual Studio (Tools → NuGet Package Manager → Manage NuGet Packages for Solution), search and install it.
+**2.** To connect a MongoDB database using the MongoDB driver in your application, you need to install the [MongoDB.Driver](https://www.nuget.org/packages/MongoDB.Driver) NuGet package. To add **MongoDB.Driver** in the app, open the NuGet package manager in Visual Studio (Tools → NuGet Package Manager → Manage NuGet Packages for Solution), search and install it.
 
 **3.** If you intend to inject your own service into the `CustomAdaptor` and utilize it, you can achieve this as follows.
 
