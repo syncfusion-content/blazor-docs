@@ -1,6 +1,6 @@
 ---
 layout: post
-title: File System Provider for Google Drive in Blazor FileManager Component | Syncfusion
+title: Google Drive provider in Blazor FileManager Component | Syncfusion
 description: Checkout and learn here all about Google Drive file system provider in Syncfusion Blazor FileManager component and more.
 platform: Blazor
 control: File Manager

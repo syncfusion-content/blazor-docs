@@ -1,6 +1,6 @@
 ---
 layout: post
-title: File System Providers for SQL database in Blazor FileManager Component | Syncfusion
+title: SQL database provider in Blazor FileManager Component | Syncfusion
 description: Checkout and learn here all about SQL database file system provider in Syncfusion Blazor FileManager component and more.
 platform: Blazor
 control: File Manager

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: File System Provider for ASP.NET Core in Blazor FileManager Component | Syncfusion
+title: ASP.NET Core provider in Blazor FileManager Component | Syncfusion
 description: Checkout and learn here all about ASP.NET Core File System Provider in Syncfusion Blazor FileManager component and more.
 platform: Blazor
 control: File Manager

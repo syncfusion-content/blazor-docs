@@ -1,6 +1,6 @@
 ---
 layout: post
-title: File System Provider for ASP.NET Core Amazon S3 cloud in Blazor FileManager Component | Syncfusion
+title: Amazon S3 cloud Provider in Blazor FileManager Component | Syncfusion
 description: Checkout and learn here all about ASP.NET Core Amazon S3 cloud file provider in Syncfusion Blazor FileManager component and more.
 platform: Blazor
 control: File Manager

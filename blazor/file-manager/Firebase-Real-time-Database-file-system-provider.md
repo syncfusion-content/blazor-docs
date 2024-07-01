@@ -1,6 +1,6 @@
 ---
 layout: post
-title: File System Provider for Firebase in Blazor FileManager Component | Syncfusion
+title: Firebase provider in Blazor FileManager Component | Syncfusion
 description: Checkout and learn here all about Firebase file system provider in Syncfusion Blazor FileManager component and more.
 platform: Blazor
 control: File Manager
