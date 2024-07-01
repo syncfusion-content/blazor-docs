@@ -13,9 +13,9 @@ The file system provider allows the File Manager component to manage the files a
 
 The following file providers are added in Syncfusion Blazor File Manager component.
 
-* [ASP.NET Core file system provider](https://blazor.syncfusion.com/documentation/file-manager/ASP.NET-Core-file-system-provider)
-* [ASP.NET Core Azure cloud file system Provider](https://blazor.syncfusion.com/documentation/file-manager/ASP.NET-Core-Azure-cloud-file-system-provider)
-* [ASP.NET Core Amazon S3 cloud file provider](https://blazor.syncfusion.com/documentation/file-manager/ASP.NET-Core-Amazon-S3-cloud-file-provider)
+* [ASP.NET Core file system provider](https://blazor.syncfusion.com/documentation/file-manager/ASP-NET-Core-file-system-provider)
+* [ASP.NET Core Azure cloud file system Provider](https://blazor.syncfusion.com/documentation/file-manager/ASP-NET-Core-Azure-cloud-file-system-provider)
+* [ASP.NET Core Amazon S3 cloud file provider](https://blazor.syncfusion.com/documentation/file-manager/ASP-NET-Core-Amazon-S3-cloud-file-provider)
 * [File Transfer Protocol file system provider](https://blazor.syncfusion.com/documentation/file-manager/File-Transfer-Protocol-file-system-provider)
 * [SQL database file system provider](https://blazor.syncfusion.com/documentation/file-manager/SQL-database-file-system-provider)
 * [Google Drive file system provider](https://blazor.syncfusion.com/documentation/file-manager/Google-Drive-file-system-provider)
