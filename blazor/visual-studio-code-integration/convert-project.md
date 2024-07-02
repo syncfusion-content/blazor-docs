@@ -7,7 +7,7 @@ component: Common
 documentation: ug
 ---
 
-# Converting Blazor application to Syncfusion Blazor application
+# Converting Blazor Extension for Visual Studio Code
 
 The Syncfusion Blazor conversion is an add-in for Visual Studio Code that converts an existing Blazor application into a Syncfusion Blazor Web Application by adding the required NuGet packages and themes.
 

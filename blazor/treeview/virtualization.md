@@ -9,20 +9,17 @@ documentation: ug
 
 # Virtualization in Blazor TreeView Component
 
-The TreeView has been provided UI virtualization support to improve the UI performance for a large amount of data when [EnableVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_EnableVirtualization) is true. This feature initially gathers all the data, but doesn’t render out the entire data source on initial rendering. It loads the N number of items in the initial rendering and the remaining set number of items will load on each scrolling action in the TreeView container. To setup the virtualization, define the [EnableVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_EnableVirtualization) as true and TreeView container height by [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_Height) property.
+The TreeView supports UI virtualization to improve the performance for a large amount of data. This feature initially gathers all the data, but doesn’t render out the entire data source on initial rendering. It loads the N number of items in the initial rendering and the remaining set number of items will load on each scrolling action in the TreeView container. To setup the virtualization, define the [EnableVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_EnableVirtualization) as true and TreeView container height by [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_Height) property.
 
 The following sample shows the example of Virtualization.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
-<div class="control-section">
-    <div class="control_wrapper">
-        @*Initialize the TreeView component*@
-        <SfTreeView TValue="TreeData" EnableVirtualization="true" Height="400">
-            <TreeViewFieldsSettings DataSource="@TreeDataSource" Id="Id" ParentID="Pid" Text="Name" HasChildren="HasChild" Expanded="Expanded"></TreeViewFieldsSettings>
-        </SfTreeView>
-    </div>
-</div>
+
+<SfTreeView TValue="TreeData" EnableVirtualization="true" Height="400">
+    <TreeViewFieldsSettings DataSource="@TreeDataSource" Id="Id" ParentID="Pid" Text="Name" HasChildren="HasChild" Expanded="Expanded"></TreeViewFieldsSettings>
+</SfTreeView>
+
 @code {
     // Specifies the DataSource value for TreeView component.
     List<TreeData> TreeDataSource = new List<TreeData>()

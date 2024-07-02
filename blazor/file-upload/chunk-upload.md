@@ -220,7 +220,7 @@ When the request fails, the pause icon is changed to retry icon. By clicking the
 
 The following example explains about chunk upload with cancel support.
 
-`SaveUrl` and `RemoveUrl` actions are explained in this [link](./chunk-upload/#save-and-remove-action-for-blazor-aspnet-core-hosted-application).
+`SaveUrl` and `RemoveUrl` actions are explained in this [link](./chunk-upload#save-and-remove-action-for-blazor-aspnet-core-hosted-application).
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
