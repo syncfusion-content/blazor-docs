@@ -85,6 +85,24 @@ Error Correction Level Table
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LNBKCVCzzDcveinV?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
+## QR code with logo
+
+The QR Code component supports embedding a logo image using the [ImageUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BarcodeGenerator.QRCodeLogo.html#Syncfusion_Blazor_BarcodeGenerator_QRCodeLogo_ImageUrl) property within the [QRCodeLogo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BarcodeGenerator.QRCodeLogo.html) element. This property is used to set the logo image in the QR barcode. By leveraging these functionalities, users can generate QR codes that seamlessly incorporate custom logos or images, resulting in a visually appealing and branded QR code experience.
+
+The following code example demonstrates how to generate a QR barcode with a logo positioned at the center of it.
+
+```cshtml
+@using Syncfusion.Blazor.BarcodeGenerator
+
+<SfQRCodeGenerator Width="200px" Height="150px" Value="https://www.syncfusion.com/blazor-components/blazor-barcode">
+    <QRCodeGeneratorDisplayText Visibility="false"></QRCodeGeneratorDisplayText>
+    <QRCodeLogo ImageUrl="images/barcode/syncfusion.png"></QRCodeLogo>
+</SfQRCodeGenerator>
+
+```
+
+![QR barcode with logo in Blazor Barcode](images/blazor-barcode-qrcode-with-logo.png)
+
 ## Event
 
 [OnValidationFailed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BarcodeGenerator.SfQRCodeGenerator.html#Syncfusion_Blazor_BarcodeGenerator_SfQRCodeGenerator_OnValidationFailed) event in the [SfQRCodeGenerator](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BarcodeGenerator.SfQRCodeGenerator.html) is used to trigger when the input is an invalid string.
