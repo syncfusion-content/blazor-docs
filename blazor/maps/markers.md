@@ -443,7 +443,10 @@ The Maps can be initially scaled to the center value based on the marker distanc
             </MapsMarkerSettings>
         </MapsLayer>
     </MapsLayers>
-    <MapsZoomSettings Enable='true' HorizontalAlignment="Syncfusion.Blazor.Maps.Alignment.Near" ShouldZoomInitially="true"></MapsZoomSettings>
+    <MapsZoomSettings Enable='true' ShouldZoomInitially="true">
+        <MapsZoomToolbarSettings HorizontalAlignment="Alignment.Near">
+        </MapsZoomToolbarSettings>
+    </MapsZoomSettings>
 </SfMaps>
 @code {
     public class MapMarkerDataSource

@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Open PDF files from GCS in Blazor SfPdfViewer Component | Syncfusion
-description: Learn here all about how to Open PDF files from Google Cloud Storage in Syncfusion Blazor SfPdfViewer component and much more details.
+title: Save PDF files to GCS in Blazor SfPdfViewer Component | Syncfusion
+description: Learn here all about how to Save PDF files to Google Cloud Storage in Syncfusion Blazor SfPdfViewer component and much more details.
 platform: Blazor
 control: SfPdfViewer
 documentation: ug
 ---
 
-# Open PDF file from Google Cloud Storage
+# Save PDF file to Google Cloud Storage
 
-To load a PDF file from Google Cloud Storage in a SfPdfViewer, you can follow the steps below
+To save a PDF file to Google Cloud Storage in a SfPdfViewer, you can follow the steps below
 
 **Step 1** Create a Service Account
 
@@ -77,3 +77,7 @@ N> Replace **path/to/service-account-key.json** with the actual file path to you
 N> The **Google.Cloud.Storage.V1** NuGet package must be installed in your application to use the previous code example.
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Load%20and%20Save/Open%20and%20Save%20from%20GCS-SfPdfViewer)
+
+## See also
+
+* [Processing Large Files Without Increasing Maximum Message Size in SfPdfViewer Component](../how-to/processing-large-files-without-increasing-maximum-message-size)

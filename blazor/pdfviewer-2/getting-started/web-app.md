@@ -74,7 +74,7 @@ Interactive render mode as WebAssembly or Auto, need to add the following proper
 If you select an Interactive render mode as `WebAssembly` or `Auto`, you need to register the Syncfusion Blazor service in both **~/Program.cs** files of your Blazor Web App.
 
 {% tabs %}
-{% highlight c# tabtitle=".NET 8 (~/Program.cs) Server" hl_lines="2 8 10 12" %}
+{% highlight c# tabtitle=".NET 8 (~/Program.cs) Server" hl_lines="2 9 11 13" %}
 
 using BlazorWebAppServer.Components;
 using Syncfusion.Blazor;
@@ -82,8 +82,9 @@ using Syncfusion.Blazor;
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddRazorComponents() 
-        .AddInteractiveServerComponents()
-        .AddHubOptions(o => { o.MaximumReceiveMessageSize = 102400000; });
+        .AddInteractiveServerComponents();
+
+builder.Services.AddSignalR(o => { o.MaximumReceiveMessageSize = 102400000; });
 
 builder.Services.AddMemoryCache();
 //Add Syncfusion Blazor service to the container.
@@ -179,6 +180,8 @@ app.MapRazorComponents<App>()
 {% endhighlight %}
 {% endtabs %}
 
+N> [Processing Large Files Without Increasing Maximum Message Size in SfPdfViewer Component](../how-to/processing-large-files-without-increasing-maximum-message-size)
+
 ## Adding stylesheet and script
 
 Add the following stylesheet and script to the head section of the **~/Components/App.razor** file.
@@ -238,3 +241,5 @@ N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-
 * [Getting Started with Blazor PDF Viewer (Next Gen) Component in WSL mode](./wsl-application)
 
 * [Learn different ways to add script reference in Blazor Application](https://blazor.syncfusion.com/documentation/common/adding-script-references)
+
+* [Processing Large Files Without Increasing Maximum Message Size in SfPdfViewer Component](../how-to/processing-large-files-without-increasing-maximum-message-size)

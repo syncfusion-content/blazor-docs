@@ -262,13 +262,56 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 **Note:** Routing is applicable only for orthogonal connectors.
 
-### Routing types
+### Routing Types
 
-The diagram supports two types of routing algorithm:
-    * [Classic]: Additional segments will be added based on the position and dimensions of the obstacles in the path. This routing method prioritizes reducing the impact of obstacles over minimizing geometry length and the number of bends.
-    * [Advanced]: This routing type evaluates all possible geometrical paths for a connector, aiming to find the one with the minimal bends and the shortest length.
+Determines the routing strategy used for connectors in the diagram. It can be set to either [Classic](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.RoutingTypes.html#Syncfusion_Blazor_Diagram_RoutingTypes_Classic) for faster routing or [Advanced](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.RoutingTypes.html#Syncfusion_Blazor_Diagram_RoutingTypes_Advanced) for more accurate routing with better obstacle avoidance. The routing algorithm can be specified by using [RoutingType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.LineRoutingSettings.html#Syncfusion_Blazor_Diagram_LineRoutingSettings_RoutingType) property of [LineRoutingSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.LineRoutingSettings.html) class.
 
-The routing algorithm can be specified by using [RoutingType] property of [LineRoutingSettings] class. You can also set the distance from an obstacle node to route the connector for advanced routing by using [ObstaclePadding].
+#### Classic Routing
+
+The [Classic](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.RoutingTypes.html#Syncfusion_Blazor_Diagram_RoutingTypes_Classic) routing algorithm adds additional segments based on the position and dimensions of the obstacles in the path. This routing method prioritizes reducing the impact of obstacles over minimizing the geometry length and the number of bends. Use Classic routing when it's crucial to navigate around obstacles efficiently, even if it means having a longer path or more bends.
+
+
+```cshtml
+@using Syncfusion.Blazor.Diagram
+
+<SfDiagramComponent Width="1000px" Height="500px" Connectors="@connectors" Nodes="@nodes" Constraints="@diagramConstraints">
+    <LineRoutingSettings RoutingType ="@routingTypes"></LineRoutingSettings>
+</SfDiagramComponent>
+@code 
+{
+    // Set the type of the routing
+    RoutingTypes routingTypes = RoutingTypes.Classic;
+    // Enable routing constraints for diagram.
+    DiagramConstraints diagramConstraints = DiagramConstraints.Default | DiagramConstraints.Routing;
+    // Intialize the node collection.
+    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    // Intialize the connector collection.
+    DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+    
+    protected override void OnInitialized()
+    {
+        nodes = new DiagramObjectCollection<Node>()
+        {
+            new Node() { ID = "node1", OffsetX = 100, OffsetY = 300, Width = 100, Height =100 },
+            new Node() { ID = "node2", OffsetX = 600, OffsetY = 100, Width = 100, Height = 100 },
+            new Node() { ID = "node3", OffsetX = 400, OffsetY = 250, Width = 100, Height = 100 }
+        };
+        connectors = new DiagramObjectCollection<Connector>(){
+            new Connector()
+            {
+                ID = "connector1",
+                SourceID = "node1", TargetID = "node2",
+                Type = ConnectorSegmentType.Orthogonal
+            }
+        };
+    }
+}
+```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Interaction/ClassicLineRouting)
+
+#### Advanced Routing
+
+The [Advanced](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.RoutingTypes.html#Syncfusion_Blazor_Diagram_RoutingTypes_Advanced) routing algorithm evaluates all possible geometrical paths for a connector, aiming to find the one with the minimal bends and the shortest length. Use Advanced routing when you need a more optimized path with the fewest bends and the shortest possible length, even if it means the path might get closer to obstacles.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -309,9 +352,9 @@ The routing algorithm can be specified by using [RoutingType] property of [LineR
 }
 ```
 
-**Note:** Default value of [RoutingType] is Classic. ObstaclePadding property is only applicable when the [RoutingType] property is set to [RoutingTypes.Advanced].
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Interaction/LineRoutingSettings)
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Interaction).
+**Note:** Default value of [RoutingType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.LineRoutingSettings.html#Syncfusion_Blazor_Diagram_LineRoutingSettings_RoutingType) is [Classic](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.RoutingTypes.html#Syncfusion_Blazor_Diagram_RoutingTypes_Classic).
 
 ### How to enable or disable routing for nodes
 
@@ -448,6 +491,60 @@ By default, each connector's routing process is inherited based on the value of 
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Interaction/RoutingConstraints).
 
+### How to define distance between node and connector
+
+The [ObstaclePadding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.LineRoutingSettings.html#Syncfusion_Blazor_Diagram_LineRoutingSettings_ObstaclePadding) defines the minimum distance between the connectors and obstacles when the advanced routing is enabled. This ensures connectors are routed with clear spacing around obstacles, improving diagram readability.
+
+```cshtml
+@using Syncfusion.Blazor.Diagram
+
+<SfDiagramComponent Width="1000px" Height="500px" Connectors="@connectors" Nodes="@nodes" Constraints="@diagramConstraints">
+    <LineRoutingSettings RoutingType ="@routingTypes" ObstaclePadding="@padding"></LineRoutingSettings>
+</SfDiagramComponent>
+@code 
+{
+    // Set the type of the routing
+    RoutingTypes routingTypes = RoutingTypes.Advanced;
+    // Set the padding for the obstable
+    double padding = 20;
+    // Enable routing constraints for diagram.
+    DiagramConstraints diagramConstraints = DiagramConstraints.Default | DiagramConstraints.Routing;
+    // Intialize the node collection.
+    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    // Intialize the connector collection.
+    DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+    
+    protected override void OnInitialized()
+    {
+        nodes = new DiagramObjectCollection<Node>()
+        {
+            new Node() { ID = "node1", OffsetX = 100, OffsetY = 300, Width = 100, Height =100 },
+            new Node() { ID = "node2", OffsetX = 600, OffsetY = 100, Width = 100, Height = 100 },
+            new Node() { ID = "node3", OffsetX = 400, OffsetY = 250, Width = 100, Height = 100 }
+        };
+        connectors = new DiagramObjectCollection<Connector>(){
+            new Connector()
+            {
+                ID = "connector1",
+                SourceID = "node1", TargetID = "node2",
+                Type = ConnectorSegmentType.Orthogonal
+            }
+        };
+    }
+}
+```
+
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Interaction/ObstaclePadding)
+
+The following table shows the various obstacle padding.
+
+| ObstaclePadding values | Output |
+|---|---|
+| 12 | ![Blazor Diagram ObstaclePadding12 ](../images/blazor-diagram-obstacle-padding12.png) |
+| 20 | ![Blazor Diagram ObstaclePadding20 ](../images/blazor-diagram-obstacle-padding20.png) |
+
+**Note:** [ObstaclePadding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.LineRoutingSettings.html#Syncfusion_Blazor_Diagram_LineRoutingSettings_ObstaclePadding) property is only applicable when the [RoutingType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.LineRoutingSettings.html#Syncfusion_Blazor_Diagram_LineRoutingSettings_RoutingType) property is set to [RoutingTypes.Advanced]. Default value of [ObstaclePadding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.LineRoutingSettings.html#Syncfusion_Blazor_Diagram_LineRoutingSettings_ObstaclePadding) is 12.
+
 ## How to flip the connector
 
 The [Flip](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeBase.html#Syncfusion_Blazor_Diagram_NodeBase_Flip) is performed to give the mirrored image of the original element.
@@ -461,4 +558,3 @@ For more information about the connector flip, refer to [Connector Flip](../flip
 * [How to change the segments](./segments)
 
 * [How to get the connector events](./events)
- 
