@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started with Syncfusion Blazor ComboBox Component in Web App
-description: Checkout and learn about the documentation for getting started with Blazor ComboBox Component in Blazor Web App.
+title: Getting Started with Web App in Blazor ComboBox | Syncfusion
+description: Checkout and learn here all about the documentation for getting started with Blazor ComboBox component in Blazor Web App.
 platform: Blazor
 component: ComboBox
 documentation: ug

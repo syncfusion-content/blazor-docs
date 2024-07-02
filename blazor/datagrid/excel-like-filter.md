@@ -522,7 +522,7 @@ In the Syncfusion Blazor Grid, you have the flexibility to enhance the visual pr
 
 **1.Removing context menu option**
 
-The excel filter dialog includes several features such as **context menu**, **search box**, and c**heckbox list** that may not be required in some scenarios. You can remove these options using the className attribute in the grid component.
+The excel filter dialog includes several features such as **context menu**, **search box**, and **checkbox list** that may not be required in some scenarios. You can remove these options using the className attribute in the grid component.
 
 ```cshtml
 <style>
@@ -833,7 +833,7 @@ By default, the CheckBox/Excel filter can only filter the selected items. If fil
 
 The following image describes the above mentioned behavior.
 
-![AddCurrentSelectionToFilter in Blazor DataGrid](./images/blazor-datagrid-add-current-selection-to-filter.png)
+![Add current selection to filter in Blazor DataGrid.](./images/blazor-datagrid-add-current-selection-to-filter.png)
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VDBfNLDBsuTLPqvx?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
