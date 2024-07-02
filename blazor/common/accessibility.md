@@ -963,10 +963,10 @@ Dialog
 DocumentEditor
 </td>
 <td>
-<img src=https://cdn.syncfusion.com/content/images/documentation/partial.png alt="Intermediate">
+<img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Intermediate">
 </td>
 <td>
-<img src=https://cdn.syncfusion.com/content/images/documentation/partial.png alt="Intermediate">
+<img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Intermediate">
 </td>
 <td>
 <img src="https://cdn.syncfusion.com/content/images/landing-page/no.png" alt="No">
@@ -981,10 +981,10 @@ DocumentEditor
 <img src="https://cdn.syncfusion.com/content/images/landing-page/no.png" alt="No">
 </td>
 <td>
-<img src=https://cdn.syncfusion.com/content/images/documentation/partial.png alt="Intermediate">
+<img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Intermediate">
 </td>
 <td>
-<img src=https://cdn.syncfusion.com/content/images/documentation/partial.png alt="Intermediate">
+<img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Intermediate">
 </td>
 <td>
 <a href="https://blazor.syncfusion.com/accessibility/document-editor" target="_blank">Demo</a>
