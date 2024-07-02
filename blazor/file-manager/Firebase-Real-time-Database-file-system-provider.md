@@ -1,13 +1,13 @@
 ---
 layout: post
-title: File System Provider for Firebase in Blazor FileManager Component | Syncfusion
+title: Firebase provider in Blazor FileManager Component | Syncfusion
 description: Checkout and learn here all about Firebase file system provider in Syncfusion Blazor FileManager component and more.
 platform: Blazor
 control: File Manager
 documentation: ug
 ---
 
-## Firebase file system provider
+# Firebase file system provider
 
 The [Firebase Real time Database](https://firebase.google.com/) file system provider in **ASP.NET Core** provides the efficient way to store the File Manager file system in a cloud database as JSON representation.
 

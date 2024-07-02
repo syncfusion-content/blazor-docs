@@ -1,13 +1,13 @@
 ---
 layout: post
-title: File System Providers for File Transfer Protocol in Blazor FileManager Component | Syncfusion
+title: File Transfer Protocol in Blazor FileManager Component | Syncfusion
 description: Checkout and learn here all about File Transfer Protocol file system provider in Syncfusion Blazor FileManager component and more.
 platform: Blazor
 control: File Manager
 documentation: ug
 ---
 
-## File Transfer Protocol file system provider
+# File Transfer Protocol file system provider
 
 In ASP.NET Core, File Transfer Protocol file system provider allows the users to access to the hosted file system as collection of objects stored in the file storage using File Transfer Protocol. To get started, clone the [EJ2.ASP.NET Core FTP File Provider](https://github.com/SyncfusionExamples/ej2-ftp-aspcore-file-provider) using the following command
 
@@ -25,7 +25,7 @@ After cloning, open the project in Visual Studio and restore the NuGet packages.
 
 ```
 
-After registering the File Transfer Protocol details, just build and run the project. Now, the project will be hosted in `http://localhost:{port}` and just mapping the **ajaxSettings** property of the FileManager component to the appropriate controller methods allows you to manage the FTP’s objects storage.
+After registering the File Transfer Protocol details, just build and run the project. Now, the project will be hosted in `http://localhost:{port}` and just mapping the **ajaxSettings** property of the FileManager component to the appropriate controller methods allows you to manage the FTP's objects storage.
 
 ```cshtml
 
