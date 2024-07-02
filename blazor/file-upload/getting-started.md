@@ -197,58 +197,49 @@ The remove action is optional. The remove action handler removes the files that 
 {% highlight cshtml %}
 
 [Route("api/[controller]")]
-
-private IHostingEnvironment hostingEnv;
-
-public SampleDataController(IHostingEnvironment env)
+public class SampleDataController : Controller
 {
-    this.hostingEnv = env;
-}
+    public string uploads = ".\\Uploaded Files"; // replace with your directory path
 
-[HttpPost("[action]")]
-public void Save(IList<IFormFile> UploadFiles)
-{
-    try
+    [HttpPost("[action]")]
+    public async Task<IActionResult> Save(IFormFile UploadFiles) // Save the uploaded file here
     {
-        foreach (var file in UploadFiles)
+        if (UploadFiles.Length > 0)
         {
-            var filename = hostingEnv.ContentRootPath + $@"\{file.FileName}";
-            if (!System.IO.File.Exists(filename))
+            //Create directory if not exists
+            if (!Directory.Exists(uploads))
             {
-                using (FileStream fs = System.IO.File.Create(filename))
-                {
-                    file.CopyTo(fs);
-                    fs.Flush();
-                }
+                Directory.CreateDirectory(uploads);
+            }
+
+            var filePath = Path.Combine(uploads, UploadFiles.FileName);
+            if (System.IO.File.Exists(filePath))
+            {
+                //Return conflict status code
+                return new StatusCodeResult(StatusCodes.Status409Conflict);
+            }
+            using (var fileStream = new FileStream(filePath, FileMode.Create))
+            {
+                //Save the uploaded file to server
+                await UploadFiles.CopyToAsync(fileStream);
             }
         }
+        return Ok();
     }
-    catch (Exception e)
-    {
-        Response.Clear();
-        Response.StatusCode = 204;
-        Response.HttpContext.Features.Get<IHttpResponseFeature>().ReasonPhrase = "File failed to upload";
-        Response.HttpContext.Features.Get<IHttpResponseFeature>().ReasonPhrase = e.Message;
-    }
-}
 
-[HttpPost("[action]")]
-public void Remove(IList<IFormFile> UploadFiles)
-{
-    try
+
+    [HttpPost("[action]")]
+    public void Remove(string UploadFiles) // Delete the uploaded file here
     {
-        var filename = hostingEnv.ContentRootPath + $@"\{UploadFiles[0].FileName}";
-        if (System.IO.File.Exists(filename))
+        if(UploadFiles != null)
         {
-            System.IO.File.Delete(filename);
+            var filePath = Path.Combine(uploads, UploadFiles);
+            if (System.IO.File.Exists(filePath))
+            {
+                //Delete the file from server
+                System.IO.File.Delete(filePath);
+            }
         }
-    }
-    catch (Exception e)
-    {
-        Response.Clear();
-        Response.StatusCode = 200;
-        Response.HttpContext.Features.Get<IHttpResponseFeature>().ReasonPhrase = "File removed successfully";
-        Response.HttpContext.Features.Get<IHttpResponseFeature>().ReasonPhrase = e.Message;
     }
 }
 
