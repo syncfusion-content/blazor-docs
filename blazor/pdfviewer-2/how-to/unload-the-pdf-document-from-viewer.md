@@ -11,7 +11,7 @@ documentation: ug
 
 The SfPdfViewer component will automatically unload and clear the resources occupied by the PDF document when the control is disposed. Also, when loading another PDF file, the resources occupied by previous loaded file in viewer will be automatically unloaded and cleared.
 
-If you want to unload and clear the resources occupied by the PDF file programmatically, invoke the `Unload()` method as shown below.
+If you want to unload and clear the resources occupied by the PDF file programmatically, invoke the [Unload()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_UnloadAsync) method as shown below.
 
 ```cshtml
 

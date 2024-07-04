@@ -9,7 +9,7 @@ documentation: ug
 
 # Load PDF documents dynamically in Blazor SfPdfViewer Component
 
-At times, you might need to switch or load the PDF documents dynamically after the initial load operation. To achieve this, load the PDF document as a base64 string or file path in SfPdfViewer control using the `LoadAsync()` method dynamically.
+At times, you might need to switch or load the PDF documents dynamically after the initial load operation. To achieve this, load the PDF document as a base64 string or file path in SfPdfViewer control using the [LoadAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_LoadAsync_System_Byte___System_String_) method dynamically.
 
 The following code example shows how to load a bas64 string dynamically.
 

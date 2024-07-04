@@ -9,7 +9,7 @@ documentation: ug
 
 # Load desired PDF for initial loading in Blazor SfPdfViewer Component
 
-You can load your own PDF document for initial loading as well as change the document at runtime in the Blazor SfPdfViewer component.To load your desired PDF document for initial display, you need to set the `DocumentPath` property of the SfPdfViewer component to the path of your PDF file. 
+You can load your own PDF document for initial loading as well as change the document at runtime in the Blazor SfPdfViewer component.To load your desired PDF document for initial display, you need to set the [DocumentPath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_DocumentPath) property of the SfPdfViewer component to the path of your PDF file. 
 
 ```cshtml
 
@@ -42,7 +42,7 @@ You can load your own PDF document for initial loading as well as change the doc
 
 ```
 
-In the above code, When the `Load Another Document` button is clicked, the `LoadAnotherDocument` method is triggered. This method uses the HttpClient service to retrieve the desired PDF document as a `byte` array. The byte array is then converted to a `base64` string, and the `DocumentPath` property is updated with the new document path.
+In the above code, When the `Load Another Document` button is clicked, the `LoadAnotherDocument` method is triggered. This method uses the HttpClient service to retrieve the desired PDF document as a `byte` array. The byte array is then converted to a `base64` string, and the [DocumentPath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_DocumentPath) property is updated with the new document path.
 
 With this implementation, users can click the `Load Another Document` button to dynamically change the PDF document displayed in the Blazor SfPdfViewer component.
 
