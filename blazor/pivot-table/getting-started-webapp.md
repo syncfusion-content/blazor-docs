@@ -270,7 +270,7 @@ In-order to define each field in the respective axis, the following basic proper
 {% endhighlight %}
 {% endtabs %}
 
-N> [View Sample in GitHub.](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/PivotTable/BlazorWebApp)
+
 
 ## Applying formatting to a value field
 
@@ -313,7 +313,7 @@ N> Only fields from value section, which is in the form of numeric data values a
 {% endhighlight %}
 {% endtabs %}
 
-After successful compilation of the application, simply press F5 to run the same. The pivot table component will render in the default web browser like below.
+* Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion Blazor Pivot Table component in your default web browser like  below
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rtVfZMqtrIxIbWRH?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor PivotTable with Formatting](images/blazor-pivottable-formatting.png)" %}
 
@@ -488,6 +488,70 @@ The calculated field feature allows user to insert or add a new calculated field
 {% endtabs %}
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BtrTDMUNBxfzcndb?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor PivotTable with Caluclation Button](images/blazor-pivottable-calculate-button.png)" %}
+
+## Handling exceptions
+
+Exceptions occurred during Pivot actions can be handled without stopping application. These error messages or exception details can be acquired using the [OnActionFailure](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewEvents-1.html#Syncfusion_Blazor_PivotView_PivotViewEvents_1_OnActionFailure) event.
+
+The argument passed to the [OnActionFailure](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewEvents-1.html#Syncfusion_Blazor_PivotView_PivotViewEvents_1_OnActionFailure) event contains the error details returned from the server.
+
+N> Recommend you to bind `OnActionFailure` event during your application development phase, this helps you to find any exceptions. You can pass these exception details to our support team to get solution as early as possible.
+
+The following sample code demonstrates notifying user when server-side exception has occurred during data operation,
+
+{% tabs %}
+{% highlight razor %}
+
+<span class="error">@ErrorDetails</span>
+<SfPivotView TValue="PivotViewData" Width="100%" Height="450" AllowDataCompression="true" EnableVirtualization="true" ShowFieldList="true" ShowGroupingBar="true" MaxNodeLimitInMemberEditor="50">
+    <PivotViewDataSourceSettings TValue="PivotViewData" Url="https://some.com/invalidUrl" ExpandAll="false" EnableSorting="true" EnableServerSideAggregation="true" AlwaysShowValueHeader="true">
+        <PivotViewColumns>
+            <PivotViewColumn Name="Year" Caption="Production Year"></PivotViewColumn>
+        </PivotViewColumns>
+        <PivotViewRows>
+            <PivotViewRow Name="ProductID" Caption="Product ID"></PivotViewRow>
+        </PivotViewRows>
+        <PivotViewValues>
+            <PivotViewValue Name="Sold" Caption="Unit Sold"></PivotViewValue>
+            <PivotViewValue Name="Price" Caption="Unit Amount"></PivotViewValue>
+        </PivotViewValues>
+        <PivotViewFormatSettings>
+            <PivotViewFormatSetting Name="Price" Format="C0"></PivotViewFormatSetting>
+            <PivotViewFormatSetting Name="Sold" Format="N0"></PivotViewFormatSetting>
+        </PivotViewFormatSettings>
+    </PivotViewDataSourceSettings>
+    <PivotViewGridSettings ColumnWidth="120"></PivotViewGridSettings>
+    <PivotViewEvents TValue="PivotViewData" OnActionFailure="ActionFailure"></PivotViewEvents>
+</SfPivotView>
+
+<style>
+    .error {
+        color: red;
+    }
+</style>
+
+@code{
+    public string ErrorDetails = "";
+    public class PivotViewData
+    {
+        public string ProductID { get; set; }
+        public string Country { get; set; }
+        public string Product { get; set; }
+        public double Sold { get; set; }
+        public double Price { get; set; }
+        public string Year { get; set; }
+    }
+    public void ActionFailure(PivotActionFailureEventArgs args)
+    {
+        this.ErrorDetails = args.ErrorInfo.Message;
+        StateHasChanged();
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+N> [View Sample in GitHub.](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/PivotTable/BlazorWebApp)
 
 ## See also
 
