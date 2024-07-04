@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Load PDF documents dynamically in Blazor SfPdfViewer component| Syncfusion
+title: Load PDF File dynamically in Blazor SfPdfViewer component| Syncfusion
 description: Learn here all about how to load PDF documents dynamically in Syncfusion Blazor SfPdfViewer component and more.
 platform: Blazor
 control: SfPdfViewer
