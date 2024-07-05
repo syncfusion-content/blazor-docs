@@ -87,7 +87,7 @@ Error Correction Level Table
 
 ## QR code with logo
 
-The QR Code component supports embedding a logo image using the [ImageUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BarcodeGenerator.QRCodeLogo.html#Syncfusion_Blazor_BarcodeGenerator_QRCodeLogo_ImageUrl) property within the [QRCodeLogo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BarcodeGenerator.QRCodeLogo.html) element. This property is used to set the logo image in the QR barcode. By leveraging these functionalities, users can generate QR codes that seamlessly incorporate custom logos or images, resulting in a visually appealing and branded QR code experience.
+The QR Code component supports embedding a logo image using the [ImageUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BarcodeGenerator.QRCodeLogo.html#Syncfusion_Blazor_BarcodeGenerator_QRCodeLogo_ImageUrl) property within the [QRCodeLogo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BarcodeGenerator.QRCodeLogo.html) element. This property is used to set the logo image in the QR barcode. The image is rendered at one-third of the QR code's size. Therefore, if you increase the size of the QR code, the image size will also increase. By leveraging these functionalities, users can generate QR codes that seamlessly incorporate custom logos or images, resulting in a visually appealing and branded QR code experience.
 
 The following code example demonstrates how to generate a QR barcode with a logo positioned at the center of it.
 
@@ -102,6 +102,8 @@ The following code example demonstrates how to generate a QR barcode with a logo
 ```
 
 ![QR barcode with logo in Blazor Barcode](images/blazor-barcode-qrcode-with-logo.png)
+
+>**Note:** The [Error correction level](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BarcodeGenerator.ErrorCorrectionLevel.html) is not taken into account when rendering the logo image inside the QR code.
 
 ## Event
 
