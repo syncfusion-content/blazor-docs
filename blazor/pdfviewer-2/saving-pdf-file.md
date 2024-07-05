@@ -89,7 +89,7 @@ If you have plenty of PDF files stored in database and you want to save the upda
 
 ## Download
 
-The SfPdfViewer supports downloading the loaded PDF file from the toolbar by default. You can enable or disable the download option by setting the `EnableDownload` API.
+The SfPdfViewer supports downloading the loaded PDF file from the toolbar by default. You can enable or disable the download option by setting the [EnableDownload](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_EnableDownload) API.
 
 ```cshtml
 
@@ -131,7 +131,7 @@ The SfPdfViewer supports downloading the loaded PDF file from the toolbar by def
 
 ### Download Filename
 
-The `DownloadFileName` property of the SfPdfViewer enables you to sets the name of the file to be downloaded.
+The [DownloadFileName](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_DownloadFileName) property of the SfPdfViewer enables you to sets the name of the file to be downloaded.
 
 The following code example shows how to set default filename to the downloaded file.
 
