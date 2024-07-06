@@ -15,7 +15,7 @@ documentation: ug
 
 ## Right to Left
 
-To enable right-to-left (RTL) rendering for the user interface, you can set the `EnableRtl` property of the desired control to `true`. This will ensure that the control is rendered appropriately for users who use RTL languages such as Arabic, Hebrew, Azerbaijani, Persian, and Urdu. The following code snippet demonstrates how to enable RTL rendering.
+To enable right-to-left (RTL) rendering for the user interface, you can set the [EnableRtl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_EnableRtl) property of the desired control to `true`. This will ensure that the control is rendered appropriately for users who use RTL languages such as Arabic, Hebrew, Azerbaijani, Persian, and Urdu. The following code snippet demonstrates how to enable RTL rendering.
 
 By setting EnableRtl to `true`, the control will adjust its layout and appearance to align text, icons, and other elements from right to left, providing an optimized user experience for RTL language users.
 

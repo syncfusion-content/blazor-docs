@@ -29,7 +29,7 @@ The built-in toolbar of SfPdfViewer contains the following page navigation tools
 
 ![Blazor SfPdfViewer with Page Navigation](../pdfviewer/images/blazor-pdfviewer-page-navigation.png)
 
-You can enable or disable the page navigation option in SfPdfViewer default toolbar by setting the `EnableNavigation` property.
+You can enable or disable the page navigation option in SfPdfViewer default toolbar by setting the [EnableNavigation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_EnableNavigation) property.
 
 ```cshtml
 
@@ -120,7 +120,7 @@ The bookmarks saved in PDF files are loaded and listed in the bookmark pane (in 
 
 ![Blazor SfPdfViewer with Bookmark Navigation](../pdfviewer/images/blazor-pdfviewer-bookmark-navigation.png)
 
-You can enable or disable the bookmark navigation pane by setting the `EnableBookmark` property.
+You can enable or disable the bookmark navigation pane by setting the [EnableBookmark](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_EnableBookmarkPanel) property.
 
 ```cshtml
 
@@ -140,7 +140,7 @@ Page thumbnails is the miniature representation of actual pages in the PDF files
 
 ![Blazor SfPdfViewer with Page Thumbnail Navigation](../pdfviewer/images/blazor-pdfviewer-page-thumbnail-navigation.png)
 
-You can enable or disable the thumbnail navigation pane by setting the `EnableThumbnail` property.
+You can enable or disable the thumbnail navigation pane by setting the [EnableThumbnail](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_EnableThumbnailPanel) property.
 
 ```cshtml
 
@@ -156,7 +156,7 @@ You can enable or disable the thumbnail navigation pane by setting the `EnableTh
 
 ### Open thumbnail panel programmatically
 
-You can view the thumbnail navigation initially while loading the PDF document in the PDFViewer using the `IsThumbnailPanelOpen` property.
+You can view the thumbnail navigation initially while loading the PDF document in the PDFViewer using the [IsThumbnailPanelOpen](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_IsThumbnailPanelOpen) property.
 
 The following code illustrates how to open thumbnail panel programmatically.
 
@@ -209,7 +209,7 @@ You can enable or disable both hyperlink and table of content navigation by sett
 
 ```
 
-You can set the target attribute for a hyperlink in SfPdfViewer using the `HyperlinkOpenState` property.
+You can set the target attribute for a hyperlink in SfPdfViewer using the [HyperlinkOpenState](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_HyperlinkOpenState) property.
 
 ```cshtml
 
