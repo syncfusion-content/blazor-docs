@@ -138,8 +138,8 @@ You can customize the height of a table row as `Auto`, `AtLeast`, or `Exactly`. 
     protected async void OnLoad(object args)
     {
         await documentEditor.Editor.InsertTableAsync(2, 2);
-        await documentEditor.Selection.RowFormat.SetHeight(20);
-        await documentEditor.Selection.RowFormat.SetHeightType(HeightType.Exactly);
+        await documentEditor.Selection.RowFormat.SetHeightAsync(20);
+        await documentEditor.Selection.RowFormat.SetHeightTypeAsync(HeightType.Exactly);
     }
 }
 ```
