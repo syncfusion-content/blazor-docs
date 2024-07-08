@@ -12,7 +12,7 @@ In this article, we are going to see how to autosave the document to server. You
 
 The following example illustrates how to auto save the document in server.
 
-* In the client-side, using content change event, we can automatically save the edited content in regular intervals of time. Based on `contentChanged` boolean, the document send as Docx format to server-side using [`saveAsBlob`] method.
+* In the client-side, using content change event, we can automatically save the edited content in regular intervals of time. Based on `contentChanged` boolean, the document send as Docx format to server-side using [`SaveAsBlobAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.SfDocumentEditor.html#Syncfusion_Blazor_DocumentEditor_SfDocumentEditor_SaveAsBlobAsync_System_Nullable_Syncfusion_Blazor_DocumentEditor_FormatType__) method.
 
 ```cshtml
 @using Syncfusion.Blazor.DocumentEditor
