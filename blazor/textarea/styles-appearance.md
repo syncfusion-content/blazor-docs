@@ -228,16 +228,16 @@ You can change the floating label color of the TextArea for both `success` and `
 ```css
 
     /* For Success state */
-    .e-float-input.e-success label.e-float-text,
-    .e-float-input.e-success input:focus ~ label.e-float-text,
-    .e-float-input.e-success input:valid ~ label.e-float-text {
+    .e-float-input.e-success textarea ~ label.e-float-text,
+    .e-float-input.e-success textarea:focus ~ label.e-float-text,
+    .e-float-input.e-success textarea:valid ~ label.e-float-text {
       color: #22b24b;
     }
 
     /* For Warning state */
-    .e-float-input.e-warning label.e-float-text,
-    .e-float-input.e-warning input:focus ~ label.e-float-text,
-    .e-float-input.e-warning input:valid ~ label.e-float-text {
+    .e-float-input.e-warning textarea ~ label.e-float-text,
+    .e-float-input.e-warning textarea:focus ~ label.e-float-text,
+    .e-float-input.e-warning textarea:valid ~ label.e-float-text {
       color: #ffca1c;
     }
 
@@ -279,6 +279,7 @@ You can change the floating label color of the TextArea for both `success` and `
   width: 340px;
 }
 
+/* For Success state */
 #input-container .e-float-input.e-success textarea ~ label.e-float-text,
 #input-container .e-float-input.e-success textarea:focus ~ label.e-float-text,
 #input-container .e-float-input.e-success textarea:valid ~ label.e-float-text {
