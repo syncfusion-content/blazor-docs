@@ -46,9 +46,9 @@ The [TextAreaInputEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Bl
 }
 ```
 
-## Change event
+## ValueChange event
 
-The TextArea component triggers the [Change](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextArea.html#Syncfusion_Blazor_Inputs_SfTextArea_ValueChange) event when the content of TextArea has changed and gets focus-out. This event provides users with an opportunity to execute specific actions in response to changes made by the user.
+The TextArea component triggers the [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextArea.html#Syncfusion_Blazor_Inputs_SfTextArea_ValueChange) event when the content of TextArea has changed and gets focus-out. This event provides users with an opportunity to execute specific actions in response to changes made by the user.
 The [TextAreaValueChangeEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.TextAreaValueChangeEventArgs.html) passed as an event argument provides the details about the changes in the TextArea's value.
 
 ```cshtml
