@@ -1,13 +1,13 @@
 ---
 layout: post
 title: How to troubleshoot exceptions in TextBox Blazor | Syncfusion
-description: Checkout and learn here all about troubleshooting exceptions in TextBox Blazor.
+description: Checkout and learn here all about troubleshooting server and client exceptions in Blazor TextBox component.
 platform: Blazor
 component: Common
 documentation: ug
 ---
 
-# How to troubleshoot exceptions in TextBox Blazor
+# How to troubleshoot exceptions in Blazor TextBox
 
 <!-- markdownlint-disable MD036 -->
 
