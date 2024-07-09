@@ -370,7 +370,6 @@ AppBar toggle button used to control the expand and collapse state of **SfSideba
     }
 </style>
 ```
-
 ![Blazor AppBar with SideBar.](./images/blazor-appbar-sidebar.png)
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hDVKirMTrrRbKrNE?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
