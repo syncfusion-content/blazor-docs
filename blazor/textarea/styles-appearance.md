@@ -89,7 +89,7 @@ By adding these classes, users can choose between a filled or outline appearance
 {% endhighlight %}
 {% endtabs %}
 
->Note: Filled and Outline theme customization are available only with Material themes.
+>Note: Filled and Outline theme customization are available only with Material and Material3 themes.
 
 ## Custom styling with CssClass property
 
