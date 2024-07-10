@@ -258,7 +258,7 @@ To explore about the options , refer [ScrollLimitMode](https://help.syncfusion.c
 |   Infinity  | ![ScrollLimitMode as Infinity](./images/ScrollLimitInfinity.gif)|
 
 ## Scroll Padding
-The [ScrollPadding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ScrollSettings.html#Syncfusion_Blazor_Diagram_ScrollSettings_ScrollPadding) property of scroll settings allows you to extend the scrollable region that is based on the scroll limit. It is used to specify the maximum distance between the object and the diagram’s edge.
+The [ScrollPadding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ScrollSettings.html#Syncfusion_Blazor_Diagram_ScrollSettings_ScrollPadding) property in the scroll settings allows you to extend the scrollable region based on the [scrolllimit](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ScrollSettings.html#Syncfusion_Blazor_Diagram_ScrollSettings_ScrollLimit). It specifies the maximum distance between the object and the edge of the  diagram.
 
 N> The default value is 0 pixels.
 
