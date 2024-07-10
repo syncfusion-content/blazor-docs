@@ -11,11 +11,11 @@ documentation: ug
 
 This section outlines the methods available for interacting with the TextArea component.
 
-## FocusIn method
+## FocusAsync method
 
-The [FocusIn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextArea.html#Syncfusion_Blazor_Inputs_SfTextArea_FocusIn) method in the TextArea, is used to set focus to the textarea element, enabling user interaction.
+The [FocusAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextArea.html#Syncfusion_Blazor_Inputs_SfTextArea_FocusAsync) method in the TextArea, is used to set focus to the textarea element, enabling user interaction.
 
-By calling the `FocusIn` method, you can programmatically set focus to the TextArea component, allowing users to interact with it via keyboard input or other means.
+By calling the `FocusAsync` method, you can programmatically set focus to the TextArea component, allowing users to interact with it via keyboard input or other means.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
@@ -29,14 +29,14 @@ By calling the `FocusIn` method, you can programmatically set focus to the TextA
 
     private void AddFocus()
     {
-        textArea.FocusIn();
+        textArea.FocusAsync();
     }
 }
 ```
 
-## FocusOut method
+## FocusOutAsync method
 
-The [FocusOut](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextArea.html#Syncfusion_Blazor_Inputs_SfTextArea_FocusOut) method in the TextArea component is used to remove focus from the textarea element, ending user interaction.
+The [FocusOutAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextArea.html#Syncfusion_Blazor_Inputs_SfTextArea_FocusOutAsync) method in the TextArea component is used to remove focus from the textarea element, ending user interaction.
 This method is beneficial for scenarios where user need to programmatically remove focus from the TextArea component, such as after completing a specific task or when navigating to another element in the application.
 
 ```cshtml
@@ -51,14 +51,14 @@ This method is beneficial for scenarios where user need to programmatically remo
 
     private void RemoveFocus()
     {
-        textArea.FocusOut();
+        textArea.FocusOutAsync();
     }
 }
 ```
 
-## GetPersistData method
+## GetPersistDataAsync method
 
-The [GetPersistData](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextArea.html#Syncfusion_Blazor_Inputs_SfTextArea_GetPersistData) method in the TextArea component retrieves the properties that need to be maintained in the persisted state.
+The [GetPersistDataAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextArea.html#Syncfusion_Blazor_Inputs_SfTextArea_GetPersistDataAsync) method in the TextArea component retrieves the properties that need to be maintained in the persisted state.
 This method returns an object containing the properties to be persisted, which can include various configuration options and state information of the TextArea component. 
 
 ```cshtml
@@ -73,7 +73,7 @@ This method returns an object containing the properties to be persisted, which c
 
     private void GetData()
     {
-        textArea.GetPersistData();
+        textArea.GetPersistDataAsync();
     }
 }
 ```
