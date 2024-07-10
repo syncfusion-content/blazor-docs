@@ -143,9 +143,6 @@ Render the TextArea with `rounded corner` by adding the `e-corner` class to the 
 <SfTextArea Placeholder='Enter your comments'  CssClass="e-corner"></SfTextArea>
 
 {% endhighlight %}
-{% endtabs %}
-
-{% endhighlight %}
 {% highlight cshtml tabtitle="Css"  %}
 
 .e-input-group.e-corner {
