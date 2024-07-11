@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Recurring events in Blazor Scheduler Component | Syncfusion
-description: Checkout and learn here all about recurring events in Syncfusion Blazor Scheduler component.
+description: Checkout and learn here all about recurring events and features in Syncfusion Blazor Scheduler component.
 platform: Blazor
 control: Scheduler
 documentation: ug
 ---
 
-# Recurring events
+# Recurring events in Blazor Scheduler Component
 
 It represents an appointment that is created for a certain time interval and occurring repeatedly on a daily, weekly, monthly or yearly basis at the same time interval based on the provided recurrence rule. Usually, the recurring events are indicated by a repeat marker added at the bottom-right position.
 
