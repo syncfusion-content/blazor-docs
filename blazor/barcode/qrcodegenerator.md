@@ -87,7 +87,17 @@ Error Correction Level Table
 
 ## QR code with logo
 
-The QR Code component supports embedding a logo image using the [ImageUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BarcodeGenerator.QRCodeLogo.html#Syncfusion_Blazor_BarcodeGenerator_QRCodeLogo_ImageUrl) property within the [QRCodeLogo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BarcodeGenerator.QRCodeLogo.html) element. This property is used to set the logo image in the QR barcode. The image is rendered at one-third of the QR code's size. Therefore, if you increase the size of the QR code, the image size will also increase. By leveraging these functionalities, users can generate QR codes that seamlessly incorporate custom logos or images, resulting in a visually appealing and branded QR code experience.
+The QR Code component supports embedding a logo image using the [ImageUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BarcodeGenerator.QRCodeLogo.html#Syncfusion_Blazor_BarcodeGenerator_QRCodeLogo_ImageUrl) property within the [QRCodeLogo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BarcodeGenerator.QRCodeLogo.html) element. This property sets the logo image in the QR barcode, positioned at one-third of the QR code's size. Therefore, adjusting the size of the QR code will proportionally scale the logo image.
+
+Advantages of Image QR Codes
+
+* Enhanced Brand Identity: A QR code with an image allows businesses to integrate their logos or brand elements directly into the QR code. This enhances brand consistency and recognition, making it more memorable for users when they interact with the QR code.
+
+* Increased User Interaction: An image QR code can convey messages, showcase products, or provide information more effectively than plain text or URLs. This visual approach can significantly boost user engagement and make the content more compelling and memorable.
+
+* Comprehensive Visual Content: An image QR code generator enables the sharing of high-resolution images, infographics, diagrams, or product photos. This is particularly beneficial in art-related contexts where visual content is crucial for effective communication.
+
+These benefits illustrate how an image QR code converter can enhance the effectiveness and impact of QR codes in various domains, from marketing to education and beyond.
 
 The following code example demonstrates how to generate a QR barcode with a logo positioned at the center of it.
 
