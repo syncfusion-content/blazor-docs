@@ -11,11 +11,11 @@ documentation: ug
 
 It represents an appointment that is created for a certain time interval and occurring repeatedly on a daily, weekly, monthly or yearly basis at the same time interval based on the provided recurrence rule. Usually, the recurring events are indicated by a repeat marker added at the bottom-right position.
 
-N>Set `RecurrenceRule` property to create recurring events.
+N>Set [`RecurrenceRule`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.FieldRecurrenceRule.html) property to create recurring events.
 
 ## Recurrence options and rules
 
-Events can be repeated on a daily, weekly, monthly or yearly basis based on the recurrence rule which accepts the string value. The following details should be assigned to the `RecurrenceRule` property to generate the recurring instances.
+Events can be repeated on a daily, weekly, monthly or yearly basis based on the recurrence rule which accepts the string value. The following details should be assigned to the [`RecurrenceRule`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.FieldRecurrenceRule.html) property to generate the recurring instances.
 
 * Repeat type - daily/weekly/monthly/yearly.
 * How many times it needs to be repeated?
@@ -89,7 +89,7 @@ The following example depicts how to create a recurring event on Scheduler with 
 
 ## Adding exceptions
 
-A few instance of the recurrence series can be excluded on specific dates, by adding those exceptional dates to the `RecurrenceException` field. These date values should be given in the ISO date time format with no hyphens(-) separating the date elements.
+A few instance of the recurrence series can be excluded on specific dates, by adding those exceptional dates to the [`RecurrenceException`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.FieldRecurrenceException.html) field. These date values should be given in the ISO date time format with no hyphens(-) separating the date elements.
 
 For example, 7th January 2020 can be represented as 20200107. Also, the time part being represented in UTC format needs to add "Z" after the time portion with no space. "09:30 AM" is therefore represented as "040000Z".
 
@@ -130,9 +130,9 @@ For example, 7th January 2020 can be represented as 20200107. Also, the time par
 
 ## Editing an occurrence from a series
 
-To dynamically edit a particular occurrence from an event series and display it on the initial load of Scheduler, the edited occurrence needs to be added as a new event to the dataSource collection, with an additional `RecurrenceID` field defined to it. The `RecurrenceID` field of edited occurrence usually maps the ID value of the parent event.
+To dynamically edit a particular occurrence from an event series and display it on the initial load of Scheduler, the edited occurrence needs to be added as a new event to the dataSource collection, with an additional [`RecurrenceID`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.FieldRecurrenceId.html) field defined to it. The [`RecurrenceID`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.FieldRecurrenceId.html) field of edited occurrence usually maps the ID value of the parent event.
 
-In this example, a recurring instance that displays on the date 30th January 2020 is edited with different timings. Therefore, this particular date is excluded from the parent recurring event that repeats from 28th January 2020 to 1st February 2020. This can be done by adding the `RecurrenceException` field with the excluded date value on the parent event. Also, the edited occurrence event which is created as a new event should carry the `RecurrenceID` field pointing to the parent event's `Id` value.
+In this example, a recurring instance that displays on the date 30th January 2020 is edited with different timings. Therefore, this particular date is excluded from the parent recurring event that repeats from 28th January 2020 to 1st February 2020. This can be done by adding the [`RecurrenceException`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.FieldRecurrenceException.html) field with the excluded date value on the parent event. Also, the edited occurrence event which is created as a new event should carry the [`RecurrenceID`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.FieldRecurrenceId.html) field pointing to the parent event's [`Id`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleField.html#Syncfusion_Blazor_Schedule_ScheduleField_Id) value.
 
 ```cshtml
 @using Syncfusion.Blazor.Schedule
@@ -172,9 +172,9 @@ In this example, a recurring instance that displays on the date 30th January 202
 
 ## Edit/Delete following recurrence events
 
-The Scheduler allows the user to edit the following recurrence events by setting true value to [AllowEditFollowingEvents](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleEventSettings-1.html#Syncfusion_Blazor_Schedule_ScheduleEventSettings_1_AllowEditFollowingEvents) within the `ScheduleEventSettings` tag. Once the recurrence events are edited/ deleted as following events, then the following recurrence events will be considered as separate series, the changes will not reflect to parent series. In the following code example, if any of the recurrence event is edited or deleted with the following events option, then the edit or delete action is applied to further recurrence events.
+The Scheduler allows the user to edit the following recurrence events by setting true value to [AllowEditFollowingEvents](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleEventSettings-1.html#Syncfusion_Blazor_Schedule_ScheduleEventSettings_1_AllowEditFollowingEvents) within the [`ScheduleEventSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleEventSettings-1.html) tag. Once the recurrence events are edited/ deleted as following events, then the following recurrence events will be considered as separate series, the changes will not reflect to parent series. In the following code example, if any of the recurrence event is edited or deleted with the following events option, then the edit or delete action is applied to further recurrence events.
 
-N>To edit/delete following recurrence events into the scheduler, set `AllowEditFollowingEvents` field to **true** in `ScheduleEventSettings`.
+N>To edit/delete following recurrence events into the scheduler, set [`AllowEditFollowingEvents`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleEventSettings-1.html#Syncfusion_Blazor_Schedule_ScheduleEventSettings_1_AllowEditFollowingEvents) field to **true** in [`ScheduleEventSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleEventSettings-1.html).
 
 ```cshtml
 @using Syncfusion.Blazor.Schedule
