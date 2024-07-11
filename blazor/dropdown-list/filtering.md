@@ -85,7 +85,7 @@ You can use [FilterBarPlaceholder](https://help.syncfusion.com/cr/blazor/Syncfus
 
 DropDownList component filter queries can be customized using [Filtering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListEvents-2.html#Syncfusion_Blazor_DropDowns_DropDownListEvents_2_Filtering) event. You can also filter the text in multiple columns in the data source.
 
-In the below sample demonstration, filter the data using its `FirstName` or `LastName` field. Hence in the Filtering event, [Predicate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.WhereFilter.html#Syncfusion_Blazor_Data_WhereFilter_Condition) is used with `or` condition for filtering both the fields. 
+In the below sample demonstration, filter the data using its `FirstName` or `LastName` field. Hence in the Filtering event, [Predicate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.WhereFilter.html#Syncfusion_Blazor_Data_WhereFilter_predicates) is used with `or` condition for filtering both the fields. 
 
 For instance , the data source item consists of `FirstName` as `Nancy` and `LastName` as `Davalio`. But you can filter the data by typing the `N` or `D` character and it will showcase the `Nancy`(FirstName field) in the popup.
 
