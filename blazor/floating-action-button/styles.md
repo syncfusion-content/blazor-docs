@@ -82,9 +82,9 @@ By using [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Butt
 
 ![Blazor FAB Component with Hover](./images/onhover.png)
 
-## Customized outlines
+## Outline customization
 
-By using the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfButton.html#Syncfusion_Blazor_Buttons_SfButton_CssClass) property, you can customize the outline of the Floating Action Button, providing increased flexibility to adjust its appearance according to your preferences.
+By using the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfButton.html#Syncfusion_Blazor_Buttons_SfButton_CssClass) property, you can customize the outline color of the Floating Action Button.
 
 ```csharp
 
