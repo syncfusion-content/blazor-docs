@@ -45,8 +45,7 @@ Using the heading navigation pane allows users to swiftly navigate documents by 
 The following example demonstrates how to enable the heading navigation pane in a document editor. 
 
 ```csharp
-<SfDocumentEditorContainer @ref="container" Height="590px">
-    <DocumentEditorContainerEvents Created="OnCreated" DocumentEditorSettings="settings"></DocumentEditorContainerEvents>
+<SfDocumentEditorContainer @ref="container" Height="590px" DocumentEditorSettings="settings">
 </SfDocumentEditorContainer>
 
 @code {

@@ -43,14 +43,7 @@ Complex hierarchical tree layout arranges nodes in a tree-like structure, where 
         node.Width = 100;
         //Initializing the default node's shape style.
         node.Style = new ShapeStyle() { Fill = "darkcyan", StrokeWidth = 3, StrokeColor = "Black" };
-        node.Annotations = new DiagramObjectCollection<ShapeAnnotation>()
-        {
-            new ShapeAnnotation 
-            { 
-                Content = node.Annotations[0].Content,
-                Style = new TextStyle() { Color = "white", Bold = true }, 
-            }
-        };
+       node.Annotations[0].Style = new TextStyle() { Color = "white", Bold = true };
     }
 
     private void OnConnectorCreating(IDiagramObject connector)
@@ -157,11 +150,15 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ![Blazor Complex Hierarchical Diagram](../images/blazor-diagram-samepoint.png)
 
+>**Note:** In the DataSourceSettings, the type of the ID and ParentID properties is string. The provided DataSource should have a parent-child relationship. It is necessary for at least one node to have an empty ParentID.
+
 ### How to enable/disable linear arrangement
 
 Linear arrangement  is used to arrange the child nodes in linear manner in the layout, that is the parent node is placed in the center, corresponding to its children. When line distribution is enabled, the linear arrangement is also activated by default. The [LinearArrangement](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_LinearArrangement) property of layout is used to enable or disable the linear arrangement in the layout. By default, the value is false.
 The following code illustrates how to arrange the nodes in non linear manner.
 ```csharp
+@using Syncfusion.Blazor.Diagram
+
  <SfDiagramComponent Height="600px" NodeCreating="@OnNodeCreating" ConnectorCreating="@OnConnectorCreating">
     <DataSourceSettings ID="Id" ParentID="ReportingPerson" DataSource="@DataSource"></DataSourceSettings>
     <Layout Type="LayoutType.ComplexHierarchicalTree" LinearArrangement="false" @bind-HorizontalSpacing="@HorizontalSpacing" @bind-VerticalSpacing="@VerticalSpacing">

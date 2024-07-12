@@ -197,58 +197,49 @@ The remove action is optional. The remove action handler removes the files that 
 {% highlight cshtml %}
 
 [Route("api/[controller]")]
-
-private IHostingEnvironment hostingEnv;
-
-public SampleDataController(IHostingEnvironment env)
+public class SampleDataController : Controller
 {
-    this.hostingEnv = env;
-}
+    public string uploads = ".\\Uploaded Files"; // replace with your directory path
 
-[HttpPost("[action]")]
-public void Save(IList<IFormFile> UploadFiles)
-{
-    try
+    [HttpPost("[action]")]
+    public async Task<IActionResult> Save(IFormFile UploadFiles) // Save the uploaded file here
     {
-        foreach (var file in UploadFiles)
+        if (UploadFiles.Length > 0)
         {
-            var filename = hostingEnv.ContentRootPath + $@"\{file.FileName}";
-            if (!System.IO.File.Exists(filename))
+            //Create directory if not exists
+            if (!Directory.Exists(uploads))
             {
-                using (FileStream fs = System.IO.File.Create(filename))
-                {
-                    file.CopyTo(fs);
-                    fs.Flush();
-                }
+                Directory.CreateDirectory(uploads);
+            }
+
+            var filePath = Path.Combine(uploads, UploadFiles.FileName);
+            if (System.IO.File.Exists(filePath))
+            {
+                //Return conflict status code
+                return new StatusCodeResult(StatusCodes.Status409Conflict);
+            }
+            using (var fileStream = new FileStream(filePath, FileMode.Create))
+            {
+                //Save the uploaded file to server
+                await UploadFiles.CopyToAsync(fileStream);
             }
         }
+        return Ok();
     }
-    catch (Exception e)
-    {
-        Response.Clear();
-        Response.StatusCode = 204;
-        Response.HttpContext.Features.Get<IHttpResponseFeature>().ReasonPhrase = "File failed to upload";
-        Response.HttpContext.Features.Get<IHttpResponseFeature>().ReasonPhrase = e.Message;
-    }
-}
 
-[HttpPost("[action]")]
-public void Remove(IList<IFormFile> UploadFiles)
-{
-    try
+
+    [HttpPost("[action]")]
+    public void Remove(string UploadFiles) // Delete the uploaded file here
     {
-        var filename = hostingEnv.ContentRootPath + $@"\{UploadFiles[0].FileName}";
-        if (System.IO.File.Exists(filename))
+        if(UploadFiles != null)
         {
-            System.IO.File.Delete(filename);
+            var filePath = Path.Combine(uploads, UploadFiles);
+            if (System.IO.File.Exists(filePath))
+            {
+                //Delete the file from server
+                System.IO.File.Delete(filePath);
+            }
         }
-    }
-    catch (Exception e)
-    {
-        Response.Clear();
-        Response.StatusCode = 200;
-        Response.HttpContext.Features.Get<IHttpResponseFeature>().ReasonPhrase = "File removed successfully";
-        Response.HttpContext.Features.Get<IHttpResponseFeature>().ReasonPhrase = e.Message;
     }
 }
 
@@ -273,6 +264,139 @@ The [OnFailure](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.U
     {
         // Here, you can customize your code.
     }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+### Server-side configuration for saving and returning responses
+
+The following example demonstrates the server-side action for saving files on the server and returning responses in JSON, String, and File formats.
+
+{% tabs %}
+{% highlight cshtml %}
+
+[Route("api/[controller]")]
+
+private IHostingEnvironment hostingEnv;
+
+public SampleDataController(IHostingEnvironment env)
+{
+    this.hostingEnv = env;
+}
+
+[HttpPost("[action]")]
+public IActionResult Save()
+{
+    // for JSON Data
+    try
+    {
+        // Process uploaded files
+        var responseData = new
+        {
+            Success = true,
+            Message = "Files uploaded successfully",
+            // Additional data can be added here
+        };
+
+        return Ok(responseData);
+    }
+    catch (Exception e)
+    {
+        var errorResponse = new
+        {
+            Success = false,
+            Message = "File upload failed: " + e.Message
+        };
+
+        return BadRequest(errorResponse);
+    }
+
+    // for String Data
+    try
+    {
+        // Process string data
+        var data = "success";
+        // Return the string data
+        return Content(data);
+    }
+    catch (Exception)
+    {
+        var data = "failed";
+        return Content(data);
+    }
+
+    // for File Data
+    try
+    {
+        // Example: Retrieve file path for stream.txt
+        var filePath = "stream.txt"; // Example file path
+        
+        var fullPath = Path.GetFullPath(filePath);
+
+        // Return the file
+        return PhysicalFile(fullPath, "text/plain");
+    }
+    catch (Exception e)
+    {
+        return Content("Failed to retrieve file response: " + e.Message, "text/plain");
+    }
+
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+### Client-side configuration for saving and returning responses
+
+The following example demonstrates the client-side action for saving files on the server and returning responses in JSON, String, and File formats.
+
+{% tabs %}
+{% highlight cshtml %}
+
+@using Syncfusion.Blazor.Inputs
+@using System.Text.Json
+
+
+<SfUploader>
+    <UploaderAsyncSettings SaveUrl="/api/Uploader/Save"></UploaderAsyncSettings>
+    <UploaderEvents Success="@OnSuccessHandler"></UploaderEvents>
+</SfUploader>
+
+@code {
+
+    private void OnSuccessHandler(SuccessEventArgs args)
+    {
+        if (args.Response is not null) // Check if the event argument is not null
+        {
+           var responseText = args.Response.ResponseText;
+           if (!string.IsNullOrWhiteSpace(responseText))
+           {    
+                // for JSON and File Datas
+                using var jsonDoc = JsonDocument.Parse(responseText);
+                var jsonResponse = jsonDoc.RootElement;
+
+                if (jsonResponse.TryGetProperty("success", out var successProp))
+                {
+                    var isSuccess = successProp.GetBoolean();
+
+                    if (isSuccess)
+                    {
+                        // File upload success
+                        var message = jsonResponse.TryGetProperty("message", out var messageProp) ? messageProp.GetString() : "File uploaded successfully";
+
+                        // Additional processing as needed
+                    }
+                }
+
+
+                // for string Data
+                var message = responseText;
+                // Additional processing as needed
+           }
+        }
+    }
+
 }
 
 {% endhighlight %}

@@ -82,6 +82,7 @@ You can save the current layout of the pivot table by using [GetPersistDataAsync
 </SfPivotView>
 
 @code{
+    SfPivotView<ProductDetails> pivot;
     public List<ProductDetails> data { get; set; }
     protected override void OnInitialized()
     {

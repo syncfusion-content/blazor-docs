@@ -732,8 +732,10 @@ When panning the Maps, the [OnPan](https://help.syncfusion.com/cr/blazor/Syncfus
 ```cshtml
 @using Syncfusion.Blazor.Maps
 <SfMaps>
-    <MapsZoomSettings Enable="true" ToolBarOrientation="Orientation.Vertical" EnablePanning="true"
-                      Toolbars='new string[]{"Zoom", "ZoomIn", "ZoomOut", "Pan", "Reset" }'>
+    <MapsZoomSettings Enable="true" EnablePanning="true">
+        <MapsZoomToolbarSettings Orientation="Orientation.Vertical">
+            <MapsZoomToolbarButton ToolbarItems="new List<ToolbarItem>() { ToolbarItem.Zoom, ToolbarItem.ZoomIn, ToolbarItem.ZoomOut, ToolbarItem.Pan, ToolbarItem.Reset }"></MapsZoomToolbarButton>
+        </MapsZoomToolbarSettings>
     </MapsZoomSettings>
     <MapsEvents OnPan="@OnPanEvent"></MapsEvents>
     <MapsLayers>
@@ -757,8 +759,10 @@ The [OnPanComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps
 ```cshtml
 @using Syncfusion.Blazor.Maps
 <SfMaps>
-    <MapsZoomSettings Enable="true" ToolBarOrientation="Orientation.Vertical" EnablePanning="true"
-                      Toolbars='new string[]{"Zoom", "ZoomIn", "ZoomOut", "Pan", "Reset" }'>
+    <MapsZoomSettings Enable="true" EnablePanning="true">
+        <MapsZoomToolbarSettings Orientation="Orientation.Vertical">
+            <MapsZoomToolbarButton ToolbarItems="new List<ToolbarItem>() { ToolbarItem.Zoom, ToolbarItem.ZoomIn, ToolbarItem.ZoomOut, ToolbarItem.Pan, ToolbarItem.Reset }"></MapsZoomToolbarButton>
+        </MapsZoomToolbarSettings>
     </MapsZoomSettings>
     <MapsEvents OnPanComplete="@OnPanCompleteEvent"></MapsEvents>
     <MapsLayers>
@@ -793,10 +797,10 @@ The [OnPrint](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsE
 
 @code {
     SfMaps maps;
-    public void PrintMap()
+    public async Task PrintMap()
     {
         // using Maps component reference call 'Print' method
-        this.maps.Print();
+        await this.maps.PrintAsync();
     }
     public void GetGEOLocation(Syncfusion.Blazor.Maps.PrintEventArgs args)
     {
@@ -836,8 +840,10 @@ The [OnZoom](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsEv
 ```cshtml
 @using Syncfusion.Blazor.Maps
 <SfMaps>
-    <MapsZoomSettings Enable="true" ToolBarOrientation="Orientation.Vertical"
-                      Toolbars='new string[]{"Zoom", "ZoomIn", "ZoomOut", "Pan", "Reset" }'>
+    <MapsZoomSettings Enable="true">
+        <MapsZoomToolbarSettings Orientation="Orientation.Vertical">
+            <MapsZoomToolbarButton ToolbarItems="new List<ToolbarItem>() { ToolbarItem.Zoom, ToolbarItem.ZoomIn, ToolbarItem.ZoomOut, ToolbarItem.Pan, ToolbarItem.Reset }"></MapsZoomToolbarButton>
+        </MapsZoomToolbarSettings>
     </MapsZoomSettings>
     <MapsEvents OnZoom="@OnZoomEvent"></MapsEvents>
     <MapsLayers>
@@ -861,8 +867,10 @@ The [OnZoomComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Map
 ```cshtml
 @using Syncfusion.Blazor.Maps
 <SfMaps>
-    <MapsZoomSettings Enable="true" ToolBarOrientation="Orientation.Vertical"
-                      Toolbars='new string[]{"Zoom", "ZoomIn", "ZoomOut", "Pan", "Reset" }'>
+    <MapsZoomSettings Enable="true">
+        <MapsZoomToolbarSettings Orientation="Orientation.Vertical">
+            <MapsZoomToolbarButton ToolbarItems="new List<ToolbarItem>() { ToolbarItem.Zoom, ToolbarItem.ZoomIn, ToolbarItem.ZoomOut, ToolbarItem.Pan, ToolbarItem.Reset }"></MapsZoomToolbarButton>
+        </MapsZoomToolbarSettings>
     </MapsZoomSettings>
     <MapsEvents OnZoomComplete="@OnZoomCompleteEvent"></MapsEvents>
     <MapsLayers>

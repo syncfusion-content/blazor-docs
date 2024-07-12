@@ -35,7 +35,7 @@ If you select an Interactive render mode as WebAssembly or Auto, you can install
 N> If you select an Interactive render mode as `WebAssembly or Auto`, you can install the NuGet package in the client-side project to add component in Web App.
 * [SkiaSharp.Views.Blazor](https://www.nuget.org/packages/SkiaSharp.Views.Blazor)
 
-![SkiaSharp Views Blazor](GettingStarted_images/skia-sharp-image.png)
+![SkiaSharp Views Blazor](gettingstarted-images/skia-sharp-image.png)
 
 ## Add the following PropertyGroup and ItemGroup
 
@@ -74,7 +74,7 @@ Interactive render mode as WebAssembly or Auto, need to add the following proper
 If you select an Interactive render mode as `WebAssembly` or `Auto`, you need to register the Syncfusion Blazor service in both **~/Program.cs** files of your Blazor Web App.
 
 {% tabs %}
-{% highlight c# tabtitle=".NET 8 (~/Program.cs) Server" hl_lines="2 8 10 12" %}
+{% highlight c# tabtitle=".NET 8 (~/Program.cs) Server" hl_lines="2 9 11 13" %}
 
 using BlazorWebAppServer.Components;
 using Syncfusion.Blazor;
@@ -82,8 +82,9 @@ using Syncfusion.Blazor;
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddRazorComponents() 
-        .AddInteractiveServerComponents()
-        .AddHubOptions(o => { o.MaximumReceiveMessageSize = 102400000; });
+        .AddInteractiveServerComponents();
+
+builder.Services.AddSignalR(o => { o.MaximumReceiveMessageSize = 102400000; });
 
 builder.Services.AddMemoryCache();
 //Add Syncfusion Blazor service to the container.
@@ -179,6 +180,8 @@ app.MapRazorComponents<App>()
 {% endhighlight %}
 {% endtabs %}
 
+N> [Processing Large Files Without Increasing Maximum Message Size in SfPdfViewer Component](../how-to/processing-large-files-without-increasing-maximum-message-size)
+
 ## Adding stylesheet and script
 
 Add the following stylesheet and script to the head section of the **~/Components/App.razor** file.
@@ -221,13 +224,13 @@ Add the Syncfusion PDF Viewer component in the **~/Pages/Index.razor** file.
 {% endhighlight %}
 {% endtabs %}
 
-N> If you don’t provide the `DocumentPath` property value, the PDF Viewer (Next Gen) component will be rendered without loading the PDF document. Users can then use the **open** option from the toolbar to browse and open the PDF as required.
+N> If you don’t provide the [DocumentPath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_DocumentPath) property value, the PDF Viewer (Next Gen) component will be rendered without loading the PDF document. Users can then use the **open** option from the toolbar to browse and open the PDF as required.
 
 ## Run the application
 
 Run the application, and the PDF file will be displayed using Syncfusion’s Blazor PDF Viewer (Next Gen) component in your browser.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hZVzNWqXLSZpnuzc?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor SfPdfViewer Component](GettingStarted_images/blazor-pdfviewer.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hZVzNWqXLSZpnuzc?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor SfPdfViewer Component](gettingstarted-images/blazor-pdfviewer.png)" %}
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/PDFViewer%20%202/BlazorWebApp).
 
@@ -238,3 +241,5 @@ N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-
 * [Getting Started with Blazor PDF Viewer (Next Gen) Component in WSL mode](./wsl-application)
 
 * [Learn different ways to add script reference in Blazor Application](https://blazor.syncfusion.com/documentation/common/adding-script-references)
+
+* [Processing Large Files Without Increasing Maximum Message Size in SfPdfViewer Component](../how-to/processing-large-files-without-increasing-maximum-message-size)

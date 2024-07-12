@@ -21,6 +21,7 @@ The accessibility compliance for the Blazor TreeMap component is outlined below.
 | [Right-To-Left Support](../common/accessibility) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
 | [Color Contrast](../common/accessibility) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
 | [Mobile Device Support](../common/accessibility) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
+| [Keyboard Navigation Support](../common/accessibility) | Not Applicable |
 | [Axe-core Accessibility Validation](../common/accessibility) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
 
 <style>
@@ -60,6 +61,6 @@ Accessibility in the Blazor TreeMap component ensures that all users, regardless
 
 ## Ensuring accessibility
 
-The Blazor TreeMap component's accessibility levels are ensured through an [axe-core](https://www.npmjs.com/package/axe-core) software tool during automated testing.
+The Blazor TreeMap component's accessibility levels are ensured through an [axe-core](https://www.nuget.org/packages/Deque.AxeCore.Playwright) software tool during automated testing.
 
 The accessibility compliance of the TreeMap component is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/treemap) in a new window to evaluate the accessibility of the TreeMap component with accessibility tools.

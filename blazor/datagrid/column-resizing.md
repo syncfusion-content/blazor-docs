@@ -364,7 +364,7 @@ To resize columns on a touch device:
 
 The following screenshot represents the column resizing in touch device.
 
-![Blazor DataGrid Column Resizing in Touch Interaction](./images/blazor-datagrid-column-resizing.jpg)
+![Blazor DataGrid column resizing in touch interaction.](./images/blazor-datagrid-column-resizing.jpg)
 
 <!-- Resize events
 

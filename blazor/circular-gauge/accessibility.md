@@ -22,6 +22,7 @@ The accessibility compliance for the Blazor Circular Gauge component is outlined
 | [Right-To-Left Support](../common/accessibility) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
 | [Color Contrast](../common/accessibility) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
 | [Mobile Device Support](../common/accessibility) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
+| [Keyboard Navigation Support](../common/accessibility) | Not Applicable |
 | [Axe-core Accessibility Validation](../common/accessibility) | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
 
 <style>
@@ -61,6 +62,6 @@ Accessibility in the Blazor Circular Gauge component ensures that all users, reg
 
 ## Ensuring accessibility
 
-The Blazor Circular Gauge component's accessibility levels are ensured through an [axe-core](https://www.npmjs.com/package/axe-core) software tool during automated testing.
+The Blazor Circular Gauge component's accessibility levels are ensured through an [axe-core](https://www.nuget.org/packages/Deque.AxeCore.Playwright) software tool during automated testing.
 
 The accessibility compliance of the Circular Gauge component is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/circulargauge) in a new window to evaluate the accessibility of the Circular Gauge component with accessibility tools.

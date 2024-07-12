@@ -25,6 +25,18 @@ Specify the boolean value to the [Readonly](https://help.syncfusion.com/cr/blazo
 
 ![Blazor ComboBox with Readonly mode](./images/style/blazor_combobox_readonly-mode.png)
 
+## Disabled state
+
+Specify the boolean value to the [Enabled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_Enabled) property that indicates whether the component is enabled or not.
+
+{% highlight cshtml %}
+
+{% include_relative code-snippet/style/disabled-state.razor %}
+
+{% endhighlight %}
+
+![Blazor ComboBox with Disabled ](./images/style/blazor_ComboBox_disabled-state.png)
+
 ## CssClass  
 
 Specifies the CSS class name that can be appended to the root element of the ComboBox. One or more custom CSS classes can be added to a ComboBox.
@@ -44,6 +56,20 @@ Some of the possible values are:
 {% endhighlight %} 
 
 ![Blazor ComboBox with CssClass property](./images/style/blazor_combobox_cssclass-property.png)
+
+## Customizing the disabled component’s text color
+
+You can customize the text color of a disabled component by targeting its CSS class `.e-input[disabled]`, which indicates the input element in a disabled state, and set the desired color to the `-webkit-text-fill-color` property.
+
+{% highlight cshtml %}
+
+{% include_relative code-snippet/style/disable-text-color.razor %}
+
+{% endhighlight %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hNhqMVBwUFMudrwO?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+![Blazor ComboBox with Disabled component text color](./images/style/blazor_combobox_disabled-text-color.png)
 
 ## Customizing the appearance of container element
 
@@ -101,19 +127,93 @@ You can customize the color of the combobox component when it is in a focused st
 
 ![Blazor ComboBox focusing color outline theme](./images/style/blazor_combobox_outline-focus-color.png)
 
-## Customizing the disabled component’s text color
+## Customizing the background color of focus, hover, and active items
 
-You can customize the text color of a disabled component by targeting its CSS class `.e-input[disabled]`, which indicates the input element in a disabled state, and set the desired color to the `-webkit-text-fill-color` property.
+You can customize the background color and text color of list items within the combobox component when they are in a focused, active, or hovered state by targeting the CSS classes `.e-list-item.e-item-focus`, `.e-list-item.e-active`, and `.e-list-item.e-hover`, and set the desired color to the background-color and color properties.
 
 {% highlight cshtml %}
 
-{% include_relative code-snippet/style/disable-text-color.razor %}
+{% include_relative code-snippet/style/background-color.razor %}
 
 {% endhighlight %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hNhqMVBwUFMudrwO?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VZhKWhLwgPKXzzDZ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-![Blazor ComboBox with Disabled component text color](./images/style/blazor_combobox_disabled-text-color.png)
+![Blazor ComboBox with customizing the focus, hover and active item color](./images/style/blazor_combobox_background-color.png)
+
+## Customizing the appearance of pop-up element
+
+You can customize the appearance of the popup element within the combobox component by targeting the CSS class `.e-list-item.e-item-focus`, which indicates the list item element when it is focused, and and allows you to apply any desired styles to the component.
+
+{% highlight cshtml %}
+
+{% include_relative code-snippet/style/appearance-popup.razor %}
+
+{% endhighlight %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BjhqiBVmUPKLSlDK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+![Blazor ComboBox with customizing popup color](./images/style/blazor_combobox_appearance-of-popup.png)
+
+## Change the HTML attributes
+
+Add the additional html attributes such as styles, class, and more to the root element using the [HTMLAttributes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_HtmlAttributes) property and accepts n number of attributes in a key-value pair format.
+
+{% highlight cshtml %}
+
+{% include_relative code-snippet/style/html-attributes.razor %}
+
+{% endhighlight %}
+
+![Blazor ComboBox with different font family](./images/style/blazor_ComboBox_html-attributes.png)
+
+## Show tooltip on list item
+
+You can achieve this behavior by integrating the tooltip component. When the mouse hovers over the ComboBox option, a tooltip appears with information about the hovered list item.
+
+The following code demonstrates how to display a tooltip when hovering over the ComboBox option.
+
+{% highlight cshtml %}
+
+{% include_relative code-snippet/style/combobox-with-tooltip.razor %}
+
+{% endhighlight %}
+
+![Blazor ComboBox with tooltip](./images/style/blazor-combobox-tooltip.png)
+
+## Customize selected item opacity
+
+In the following code , the CSS style that targets the `.e-list-item` class within the `.e-dropdownbase` class when it is in an active or active and hovered state. It sets the opacity property , which will make the elements appear transparent. This can be used to change the appearance of the dropdown list items when they are in a certain state.
+
+![Blazor ComboBox with opacity style](./images/style/blazor_combobox_opacity-style.png)
+
+## Disable specific items in DropDownList
+
+Prevent some items in the popup list from selecting. This can be achieved by disabling the item for a specific combobox component by adding the custom class for the popup element using the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_CssClass) property.
+
+In the following code, a single list Item is hidden using js interop.
+
+{% tabs %}
+{% highlight razor %}
+
+{% include_relative code-snippet/style/disable-listitem.razor %}
+
+{% endhighlight %}
+{% highlight cshtml tabtitle="~/_Layout.cshtml" %}
+
+<script>
+    window.disable = function (id) { 
+    setTimeout(function (e) { 
+        var liCollections = document.querySelectorAll('.e-popup.e-custom-class .e-list-item') 
+        if (liCollections && liCollections.length > 0) 
+        liCollections[1].classList.add('e-disabled'); 
+        liCollections[1].classList.add('e-overlay'); 
+    }, 30); 
+ } 
+</script>
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Customizing the float label element's focusing color
 
@@ -170,31 +270,3 @@ The appearance of a selected item within a combobox component can be customized 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BNLKCVBGgPVvrliw?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor ComboBox with customizing the focus, hover and active item color](./images/style/blazor_combobox_text-selection-color.png)
-
-## Customizing the background color of focus, hover, and active items
-
-You can customize the background color and text color of list items within the combobox component when they are in a focused, active, or hovered state by targeting the CSS classes `.e-list-item.e-item-focus`, `.e-list-item.e-active`, and `.e-list-item.e-hover`, and set the desired color to the background-color and color properties.
-
-{% highlight cshtml %}
-
-{% include_relative code-snippet/style/background-color.razor %}
-
-{% endhighlight %}
-
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VZhKWhLwgPKXzzDZ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Blazor ComboBox with customizing the focus, hover and active item color](./images/style/blazor_combobox_background-color.png)
-
-## Customizing the appearance of pop-up element
-
-You can customize the appearance of the popup element within the combobox component by targeting the CSS class `.e-list-item.e-item-focus`, which indicates the list item element when it is focused, and and allows you to apply any desired styles to the component.
-
-{% highlight cshtml %}
-
-{% include_relative code-snippet/style/appearance-popup.razor %}
-
-{% endhighlight %}
-
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BjhqiBVmUPKLSlDK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Blazor ComboBox with customizing popup color](./images/style/blazor_combobox_appearance-of-popup.png)

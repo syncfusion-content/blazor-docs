@@ -40,7 +40,7 @@ The accessibility compliance for the Blazor TimePicker component is outlined bel
 
 ## WAI-ARIA attributes
 
-The Blazor TimePicker component has covered the [WAI-ARIA](https://www.w3.org/TR/wai-aria-practices/) specifications with the following list of WAI-ARIA attributes: `aria-haspopup`, `aria-selected`, `aria-disabled`, `aria-activedescendant`, `aria-expanded`, `aria-owns`, and `aria-autocomplete`.
+The Blazor TimePicker component has covered the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/) specifications with the following list of WAI-ARIA attributes: `aria-haspopup`, `aria-selected`, `aria-disabled`, `aria-activedescendant`, `aria-expanded`, `aria-owns`, and `aria-autocomplete`.
 
 In the TimePicker, the `combobox` plays the role of input element, and the `listbox` plays the role of popup element.
 
@@ -64,7 +64,7 @@ In the TimePicker, the `combobox` plays the role of input element, and the `list
 
 Keyboard accessibility is one of the most important aspects of web accessibility. Disabled people like blind and those who have motor disabilities or birth defects use keyboard shortcuts more than the mouse.
 
-The Blazor TimePicker component has built-in keyboard accessibility support by following the [WAI-ARIA practices](https://www.w3.org/TR/wai-aria-practices/).
+The Blazor TimePicker component has built-in keyboard accessibility support by following the [WAI-ARIA practices](https://www.w3.org/WAI/ARIA/apg/).
 
 N> It supports the following list of shortcut keys to interact with the TimePicker component:
 
@@ -81,7 +81,7 @@ N> It supports the following list of shortcut keys to interact with the TimePick
 | <kbd>Alt + Down Arrow</kbd> | Opens the popup. |
 | <kbd>Esc</kbd> | Closes the popup. |
 
-N> To focusout the TimePicker component, use the `t` keys. For additional information about native event, [click](./native-events/) here.
+N> To focusout the TimePicker component, use the `t` keys. For additional information about native event, [click](https://blazor.syncfusion.com/documentation/timepicker/native-events) here.
 
 ```cshtml
 @using Syncfusion.Blazor.Calendars

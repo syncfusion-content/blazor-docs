@@ -84,7 +84,7 @@ The Bullet Chart supports different type of themes via the [Theme](https://help.
 @using Syncfusion.Blazor.Charts
 @using Syncfusion.Blazor
 
-<SfBulletChart DataSource="@BulletChartData" Theme="Theme.HighContrast" ValueField="FieldValue" TargetField="TargetValue" Minimum="0" Maximum="100" Interval="20">
+<SfBulletChart DataSource="@BulletChartData" Theme="Theme.Fluent2Dark" ValueField="FieldValue" TargetField="TargetValue" Minimum="0" Maximum="100" Interval="20">
     <BulletChartRangeCollection>
         <BulletChartRange End=35></BulletChartRange>
         <BulletChartRange End=50></BulletChartRange>

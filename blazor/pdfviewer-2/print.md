@@ -9,7 +9,7 @@ documentation: ug
 
 # Print in Blazor SfPdfViewer Component
 
-The SfPdfViewer supports printing the loaded PDF file by default. You can enable or disable printing by setting the `EnablePrint` property.
+The SfPdfViewer supports printing the loaded PDF file by default. You can enable or disable printing by setting the [EnablePrint](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_EnablePrint) property.
 
 ```cshtml
 

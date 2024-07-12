@@ -181,6 +181,8 @@ Set [SelectionMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Char
 
 In the drag complete event, the selected data will be returned as an array collection.
 
+N> To select a rectangular area on a chart using a touch device, quickly double-tap and then drag your finger to define the selection area.
+
 ```cshtml
 
 @using Syncfusion.Blazor.Charts
@@ -315,14 +317,13 @@ A point or series can be selected programmatically on a chart using the [Selecte
 <SfChart Title="Olympic Medals" SelectionMode="SelectionMode.Point" IsMultiSelect="true">
     <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category">
     </ChartPrimaryXAxis>
-
     <ChartSelectedDataIndexes>
-        <ChartSelectedDataIndex Series="0" Point="1">
-        </ChartSelectedDataIndex>
-        <ChartSelectedDataIndex Series="1" Point="3">
-        </ChartSelectedDataIndex>
+        @foreach (SelectedDataPoint s in Selection)
+        {
+            <ChartSelectedDataIndex Series="@s.seriesIndex" Point="@s.pointIndex">
+            </ChartSelectedDataIndex>
+        }
     </ChartSelectedDataIndexes>
-
     <ChartSeriesCollection>
         <ChartSeries DataSource="@MedalDetails" XName="Country" YName="Gold" Type="ChartSeriesType.Column">
         </ChartSeries>
@@ -334,6 +335,20 @@ A point or series can be selected programmatically on a chart using the [Selecte
 </SfChart>
 
 @code{
+    public List<SelectedDataPoint> Selection = new List<SelectedDataPoint>();
+    public class SelectedDataPoint
+    {
+        public int seriesIndex { get; set; }
+        public int pointIndex { get; set; }
+    }
+    protected override void OnInitialized()
+    {
+        Selection = new List<SelectedDataPoint>
+        {
+            new SelectedDataPoint { seriesIndex = 0, pointIndex = 1 },
+            new SelectedDataPoint { seriesIndex = 1, pointIndex = 3 }
+        };
+    }
     public class ChartData
     {
         public string Country { get; set; }
@@ -358,6 +373,7 @@ A point or series can be selected programmatically on a chart using the [Selecte
 ```
 
 ![Programmatically Selection in Blazor Column Chart](images/selection/blazor-column-chart-programmatic-selection.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rjVJtgBxfkYWmfSE?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Legend Selection
 

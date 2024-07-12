@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Context Menu in Blazor FileManager Component | Syncfusion
-description: Checkout and learn here all about Context Menu in Syncfusion Blazor FileManager component and more.
+description: Checkout and learn here all about Context Menu in Syncfusion Blazor FileManager component and much more.
 platform: Blazor
 control: File Manager
 documentation: ug
@@ -320,3 +320,7 @@ The [OnMenuClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileMa
 }
 
 ```
+
+## See Also
+
+[Adding Custom Item To Context Menu](https://blazor.syncfusion.com/documentation/file-manager/how-to/adding-custom-item-to-context-menu)
