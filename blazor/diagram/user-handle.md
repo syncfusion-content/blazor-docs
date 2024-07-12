@@ -518,11 +518,11 @@ You can define user handle style using a template in the [UserHandleTemplate](ht
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/UserHandle/CustomizeUserHandle)
 
+![Template for UserHandle](images/UserHandleTemplate.gif)
+
 ### How to set tooltip for user handle
 
-The diagram supports displaying tooltips when the mouse hovers over any [UserHandle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SelectorConstraints.html#Syncfusion_Blazor_Diagram_SelectorConstraints_UserHandle). To achieve this, the tooltip property of the diagram model must be configured to contain the tooltip [Content](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramTooltip.html#Syncfusion_Blazor_Diagram_DiagramTooltip_Content) and to [Position](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramTooltip.html#Syncfusion_Blazor_Diagram_DiagramTooltip_Position) it appropriately. This ensures that when users hover over a handle, relevant information is displayed at the correct position relative to the handle.
-
-The following code example illustrates how to set the tooltip for user handle.
+The diagram supports displaying tooltips when the mouse hovers over any [UserHandle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SelectorConstraints.html#Syncfusion_Blazor_Diagram_SelectorConstraints_UserHandle). To achieve this, the tooltip property of the diagram model must be configured to contain the tooltip [Content](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramTooltip.html#Syncfusion_Blazor_Diagram_DiagramTooltip_Content) and to [Position](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramTooltip.html#Syncfusion_Blazor_Diagram_DiagramTooltip_Position) it appropriately. This ensures that when users hover over a handle, relevant information is displayed at the correct position relative to the handle. By default, tooltips are not displayed; you need to add the tooltip as shown in the following example.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -530,10 +530,6 @@ The following code example illustrates how to set the tooltip for user handle.
 <SfDiagramComponent Height="600px"
                     Nodes="@nodes"
                     SelectionSettings="@SelectedModel">
-    <SnapSettings>
-        <HorizontalGridLines LineColor="White" LineDashArray="2,2" />
-        <VerticalGridLines LineColor="White" LineDashArray="2,2" />
-    </SnapSettings>
 </SfDiagramComponent>
 
 @code
@@ -557,11 +553,7 @@ The following code example illustrates how to set the tooltip for user handle.
         {
             cloneHandle
         };
-        SelectedModel = new DiagramSelectionSettings()
-        {
-            Constraints = SelectorConstraints.UserHandle,
-            UserHandles = this.UserHandles
-        };
+        SelectedModel.UserHandles = UserHandles;
         nodes = new DiagramObjectCollection<Node>();
         Node diagramNode = new Node()
         {
@@ -937,9 +929,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ### How to set tooltip for Fixed user handle
 
-The diagram supports displaying tooltips when the mouse hovers over any [FixedUserHandle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.FixedUserHandle.html). To achieve this, the tooltip property of the diagram model must be configured to contain the tooltip [Content](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramTooltip.html#Syncfusion_Blazor_Diagram_DiagramTooltip_Content) and to [Position](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramTooltip.html#Syncfusion_Blazor_Diagram_DiagramTooltip_Position) it appropriately. This ensures that when users hover over a fixed user handle, relevant information is displayed at the correct position relative to the handle.
-
-The following code example illustrates how to set the tooltip for user handle.
+The diagram supports displaying tooltips when the mouse hovers over any [FixedUserHandle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.FixedUserHandle.html). To achieve this, the tooltip property of the diagram model must be configured to contain the tooltip [Content](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramTooltip.html#Syncfusion_Blazor_Diagram_DiagramTooltip_Content) and to [Position](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramTooltip.html#Syncfusion_Blazor_Diagram_DiagramTooltip_Position) it appropriately. This ensures that when users hover over a fixed user handle, relevant information is displayed at the correct position relative to the handle. By default, tooltips are not displayed; you need to add the tooltip as shown in the following example.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
