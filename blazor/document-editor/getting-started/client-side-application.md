@@ -7,7 +7,7 @@ control: DocumentEditor
 documentation: ug
 ---
 
-# Getting Started with Blazor DocumentEditor Component in Blazor WASM
+# Getting Started with Blazor DocumentEditor Component
 
 This section briefly explains about how to include [Blazor DocumentEditor](https://www.syncfusion.com/blazor-components/blazor-word-processor) component in your Blazor WebAssembly (WASM) App using Visual Studio.
 
