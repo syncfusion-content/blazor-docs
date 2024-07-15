@@ -113,7 +113,7 @@ The floating label TextArea floats the label above the TextArea after focusing, 
 {% tabs %}
 {% highlight razor %}
 
-<SfTextArea Placeholder='Add your Comments' FloatLabelType='FloatLabelType.Auto'></SfTextArea>
+<SfTextArea Placeholder='Add your Comments' FloatLabelType='@FloatLabelType.Auto'></SfTextArea>
 
 {% endhighlight %}
 {% endtabs %}

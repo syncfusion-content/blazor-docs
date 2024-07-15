@@ -498,7 +498,7 @@ ab* | Everything that has an “a” in it, followed by anything, followed by a 
 
 The following GIF represent a WildCard operator filtering.
 
-![Blazor DataGrid with WildCard operator filtering](./images/blazor-datagrid-wildcard-operator-filtering.gif)
+![Blazor DataGrid with WildCard operator filtering.](./images/blazor-datagrid-wildcard-operator-filtering.gif)
 
 ### Like filtering
 The Like filter can process single search patterns using the “%” symbol, retrieving values matching the specified patterns. The following Grid features support Like filtering on string-type columns:
@@ -516,7 +516,7 @@ ab% | Returns all the value that are ends with “ab” character.
 
 The following GIF represent a Like operator filtering.
 
-![Blazor DataGrid with Like operator filtering](./images/blazor-datagrid-like-operator-filtering.gif)
+![Blazor DataGrid with like operator filtering.](./images/blazor-datagrid-like-operator-filtering.gif)
 
 ## Filtering with case sensitivity
 

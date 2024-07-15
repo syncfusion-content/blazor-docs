@@ -51,4 +51,4 @@ You can use the underline style by setting the [StylingMode](https://help.syncfu
 
 ```
 
-![Blazor OTP Input Component with Underlined Mode](images/blazor-otp-filled.png)
+![Blazor OTP Input Component with Underlined Mode](images/blazor-otp-underlined.png)
