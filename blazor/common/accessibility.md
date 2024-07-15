@@ -150,7 +150,7 @@ Accordion
 <a href="https://blazor.syncfusion.com/accessibility/accordion" target="_blank">Demo</a>
 </td>
 <td>
-<a href="../accordion/accessibility.md" target="_blank">Documentation</a>
+<a href="https://blazor.syncfusion.com/documentation/accordion/accessibility" target="_blank">Documentation</a>
 </td>
 </tr>
 <tr>
@@ -185,7 +185,7 @@ Accumulation Chart
 <a href="https://blazor.syncfusion.com/accessibility/accumulation-chart" target="_blank">Demo</a>
 </td>
 <td>
-<a href="../accumulation-chart/accessibility.md" target="_blank">Documentation</a>
+<a href="https://blazor.syncfusion.com/documentation/accumulation-chart/accessibility" target="_blank">Documentation</a>
 </td>
 </tr>
 <tr>
@@ -220,7 +220,7 @@ AppBar
 <a href="https://blazor.syncfusion.com/accessibility/appbar" target="_blank">Demo</a>
 </td>
 <td>
-<a href="../appbar/accessibility.md" target="_blank">Documentation</a>
+<a href="https://blazor.syncfusion.com/documentation/appbar/accessibility" target="_blank">Documentation</a>
 </td>
 </tr>
 <tr>
@@ -255,7 +255,7 @@ AutoComplete
 <a href="https://blazor.syncfusion.com/accessibility/autocomplete" target="_blank">Demo</a>
 </td>
 <td>
-<a href="../autocomplete/accessibility.md" target="_blank">Documentation</a>
+<a href="https://blazor.syncfusion.com/documentation/autocomplete/accessibility" target="_blank">Documentation</a>
 </td>
 </tr>
 <tr>
@@ -290,7 +290,7 @@ Breadcrumb
 <a href="https://blazor.syncfusion.com/accessibility/breadcrumb" target="_blank">Demo</a>
 </td>
 <td>
-<a href="../breadcrumb/accessibility.md" target="_blank">Documentation</a>
+<a href="https://blazor.syncfusion.com/documentation/breadcrumb/accessibility" target="_blank">Documentation</a>
 </td>
 </tr>
 <tr>
@@ -325,7 +325,7 @@ Bullet Chart
 <a href="https://blazor.syncfusion.com/accessibility/bullet-chart" target="_blank">Demo</a>
 </td>
 <td>
-<a href="../bullet-chart/accessibility.md" target="_blank">Documentation</a>
+<a href="https://blazor.syncfusion.com/documentation/bullet-chart/accessibility" target="_blank">Documentation</a>
 </td>
 </tr>
 <tr>
@@ -360,7 +360,7 @@ Button
 <a href="https://blazor.syncfusion.com/accessibility/button" target="_blank">Demo</a>
 </td>
 <td>
-<a href="../button/accessibility.md" target="_blank">Documentation</a>
+<a href="https://blazor.syncfusion.com/documentation/button/accessibility" target="_blank">Documentation</a>
 </td>
 </tr>
 <tr>
@@ -395,7 +395,7 @@ Button Group
 <a href="https://blazor.syncfusion.com/accessibility/button-group" target="_blank">Demo</a>
 </td>
 <td>
-<a href="../button-group/accessibility.md" target="_blank">Documentation</a>
+<a href="https://blazor.syncfusion.com/documentation/button-group/accessibility" target="_blank">Documentation</a>
 </td>
 </tr>
 <tr>
@@ -430,7 +430,7 @@ Calendar
 <a href="https://blazor.syncfusion.com/accessibility/calendar" target="_blank">Demo</a>
 </td>
 <td>
-<a href="../calendar/accessibility.md" target="_blank">Documentation</a>
+<a href="https://blazor.syncfusion.com/documentation/calendar/accessibility" target="_blank">Documentation</a>
 </td>
 </tr>
 <tr>
@@ -465,7 +465,7 @@ Carousel
 <a href="https://blazor.syncfusion.com/accessibility/carousel" target="_blank">Demo</a>
 </td>
 <td>
-<a href="../carousel/accessibility.md" target="_blank">Documentation</a>
+<a href="https://blazor.syncfusion.com/documentation/carousel/accessibility" target="_blank">Documentation</a>
 </td>
 </tr>
 <tr>
@@ -500,7 +500,7 @@ Chart
 <a href="https://blazor.syncfusion.com/accessibility/chart" target="_blank">Demo</a>
 </td>
 <td>
-<a href="../chart/accessibility.md" target="_blank">Documentation</a>
+<a href="https://blazor.syncfusion.com/documentation/chart/accessibility" target="_blank">Documentation</a>
 </td>
 </tr>
 <tr>
@@ -535,7 +535,7 @@ CheckBox
 <a href="https://blazor.syncfusion.com/accessibility/checkbox" target="_blank">Demo</a>
 </td>
 <td>
-<a href="../check-box/accessibility.md" target="_blank">Documentation</a>
+<a href="https://blazor.syncfusion.com/documentation/check-box/accessibility" target="_blank">Documentation</a>
 </td>
 </tr>
 <tr>
@@ -570,7 +570,7 @@ Blazor Chip
 <a href="https://blazor.syncfusion.com/accessibility/chips" target="_blank">Demo</a>
 </td>
 <td>
-<a href="../chip/accessibility.md" target="_blank">Documentation</a>
+<a href="https://blazor.syncfusion.com/documentation/chip/accessibility" target="_blank">Documentation</a>
 </td>
 </tr>
 <tr>
@@ -605,7 +605,7 @@ N/A
 <a href="https://blazor.syncfusion.com/accessibility/circulargauge" target="_blank">Demo</a>
 </td>
 <td>
-<a href="../circular-gauge/accessibility.md" target="_blank">Documentation</a>
+<a href="https://blazor.syncfusion.com/documentation/circular-gauge/accessibility" target="_blank">Documentation</a>
 </td>
 </tr>
 <tr>
@@ -640,7 +640,7 @@ Color Picker
 <a href="https://blazor.syncfusion.com/accessibility/color-picker" target="_blank">Demo</a>
 </td>
 <td>
-<a href="../color-picker/accessibility.md" target="_blank">Documentation</a>
+<a href="https://blazor.syncfusion.com/documentation/color-picker/accessibility" target="_blank">Documentation</a>
 </td>
 </tr>
 <tr>
@@ -675,7 +675,7 @@ ComboBox
 <a href="https://blazor.syncfusion.com/accessibility/combobox" target="_blank">Demo</a>
 </td>
 <td>
-<a href="../combobox/accessibility.md" target="_blank">Documentation</a>
+<a href="https://blazor.syncfusion.com/documentation/combobox/accessibility" target="_blank">Documentation</a>
 </td>
 </tr>
 <tr>
@@ -710,7 +710,7 @@ ContextMenu
 <a href="https://blazor.syncfusion.com/accessibility/context-menu" target="_blank">Demo</a>
 </td>
 <td>
-<a href="../context-menu/accessibility.md" target="_blank">Documentation</a>
+<a href="https://blazor.syncfusion.com/documentation/context-menu/accessibility" target="_blank">Documentation</a>
 </td>
 </tr>
 <tr>
@@ -745,7 +745,7 @@ N/A
 <a href="https://blazor.syncfusion.com/accessibility/dashboardlayout" target="_blank">Demo</a>
 </td>
 <td>
-<a href="../dashboard-layout/accessibility.md" target="_blank">Documentation</a>
+<a href="https://blazor.syncfusion.com/documentation/dashboard-layout/accessibility" target="_blank">Documentation</a>
 </td>
 </tr>
 <tr>
@@ -780,7 +780,7 @@ Grid
 <a href="https://blazor.syncfusion.com/accessibility/datagrid" target="_blank">Demo</a>
 </td>
 <td>
-<a href="../datagrid/accessibility.md" target="_blank">Documentation</a>
+<a href="https://blazor.syncfusion.com/documentation/datagrid/accessibility" target="_blank">Documentation</a>
 </td>
 </tr>
 <tr>
@@ -815,7 +815,7 @@ DatePicker
 <a href="https://blazor.syncfusion.com/accessibility/datepicker" target="_blank">Demo</a>
 </td>
 <td>
-<a href="../datepicker/accessibility.md" target="_blank">Documentation</a>
+<a href="https://blazor.syncfusion.com/documentation/datepicker/accessibility" target="_blank">Documentation</a>
 </td>
 </tr>
 <tr>
@@ -850,7 +850,7 @@ DateRangePicker
 <a href="https://blazor.syncfusion.com/accessibility/daterangepicker" target="_blank">Demo</a>
 </td>
 <td>
-<a href="../daterangepicker/accessibility.md" target="_blank">Documentation</a>
+<a href="https://blazor.syncfusion.com/documentation/daterangepicker/accessibility" target="_blank">Documentation</a>
 </td>
 </tr>
 <tr>
@@ -885,7 +885,7 @@ Datetime Picker
 <a href="https://blazor.syncfusion.com/accessibility/datetimepicker" target="_blank">Demo</a>
 </td>
 <td>
-<a href="../datetime-picker/accessibility.md" target="_blank">Documentation</a>
+<a href="https://blazor.syncfusion.com/documentation/datetime-picker/accessibility" target="_blank">Documentation</a>
 </td>
 </tr>
 <tr>
@@ -920,7 +920,7 @@ Diagram
 <a href="https://blazor.syncfusion.com/accessibility/diagram" target="_blank">Demo</a>
 </td>
 <td>
-<a href="../diagram/accessibility.md" target="_blank">Documentation</a>
+<a href="https://blazor.syncfusion.com/documentation/diagram/accessibility" target="_blank">Documentation</a>
 </td>
 </tr>
 <tr>
@@ -955,7 +955,7 @@ Dialog
 <a href="https://blazor.syncfusion.com/accessibility/dialog" target="_blank">Demo</a>
 </td>
 <td>
-<a href="../dialog/accessibility.md" target="_blank">Documentation</a>
+<a href="https://blazor.syncfusion.com/documentation/dialog/accessibility" target="_blank">Documentation</a>
 </td>
 </tr>
 <tr>
@@ -990,7 +990,7 @@ DocumentEditor
 <a href="https://blazor.syncfusion.com/accessibility/document-editor" target="_blank">Demo</a>
 </td>
 <td>
-<a href="../document-editor/accessibility.md" target="_blank">Documentation</a>
+<a href="https://blazor.syncfusion.com/documentation/document-editor/accessibility" target="_blank">Documentation</a>
 </td>
 </tr>
 <tr>
@@ -1025,7 +1025,7 @@ Dropdown Menu
 <a href="https://blazor.syncfusion.com/accessibility/dropdown-button" target="_blank">Demo</a>
 </td>
 <td>
-<a href="../drop-down-menu/accessibility.md" target="_blank">Documentation</a>
+<a href="https://blazor.syncfusion.com/documentation/drop-down-menu/accessibility" target="_blank">Documentation</a>
 </td>
 </tr>
 <tr>
@@ -1060,7 +1060,7 @@ DropDown List
 <a href="https://blazor.syncfusion.com/accessibility/dropdownlist" target="_blank">Demo</a>
 </td>
 <td>
-<a href="../dropdown-list/accessibility.md" target="_blank">Documentation</a>
+<a href="https://blazor.syncfusion.com/documentation/dropdown-list/accessibility" target="_blank">Documentation</a>
 </td>
 </tr>
 <tr>
@@ -1095,7 +1095,7 @@ Dropdown Tree
 <a href="https://blazor.syncfusion.com/accessibility/dropdowntree" target="_blank">Demo</a>
 </td>
 <td>
-<a href="../dropdown-tree/accessibility.md" target="_blank">Documentation</a>
+<a href="https://blazor.syncfusion.com/documentation/dropdown-tree/accessibility" target="_blank">Documentation</a>
 </td>
 </tr>
 <tr>
@@ -1130,7 +1130,7 @@ FileManager
 <a href="https://blazor.syncfusion.com/accessibility/filemanager" target="_blank">Demo</a>
 </td>
 <td>
-<a href="../file-manager/accessibility.md" target="_blank">Documentation</a>
+<a href="https://blazor.syncfusion.com/documentation/file-manager/accessibility" target="_blank">Documentation</a>
 </td>
 </tr>
 <tr>
@@ -1165,7 +1165,7 @@ File Upload
 <a href="https://blazor.syncfusion.com/accessibility/uploader" target="_blank">Demo</a>
 </td>
 <td>
-<a href="../file-upload/accessibility.md" target="_blank">Documentation</a>
+<a href="https://blazor.syncfusion.com/documentation/file-upload/accessibility" target="_blank">Documentation</a>
 </td>
 </tr>
 <tr>
@@ -1200,7 +1200,7 @@ Gantt Chart
 <a href="https://blazor.syncfusion.com/accessibility/gantt-chart" target="_blank">Demo</a>
 </td>
 <td>
-<a href="../gantt-chart/accessibility.md" target="_blank">Documentation</a>
+<a href="https://blazor.syncfusion.com/documentation/gantt-chart/accessibility" target="_blank">Documentation</a>
 </td>
 <tr>
 <td>
@@ -1234,7 +1234,7 @@ N/A
 <a href="https://blazor.syncfusion.com/accessibility/heatmap" target="_blank">Demo</a>
 </td>
 <td>
-<a href="../heatmap-chart/accessibility.md" target="_blank">Documentation</a>
+<a href="https://blazor.syncfusion.com/documentation/heatmap-chart/accessibility" target="_blank">Documentation</a>
 </td>
 </tr>
 </tr>
@@ -1270,7 +1270,7 @@ In-place editor
 <a href="https://blazor.syncfusion.com/accessibility/inplace-editor" target="_blank">Demo</a>
 </td>
 <td>
-<a href="../in-place-editor/accessibility.md" target="_blank">Documentation</a>
+<a href="https://blazor.syncfusion.com/documentation/in-place-editor/accessibility" target="_blank">Documentation</a>
 </td>
 </tr>
 <tr>
@@ -1305,7 +1305,7 @@ Image Editor
 <a href="https://blazor.syncfusion.com/accessibility/image-editor" target="_blank">Demo</a>
 </td>
 <td>
-<a href="../image-editor/accessibility.md" target="_blank">Documentation</a>
+<a href="https://blazor.syncfusion.com/documentation/image-editor/accessibility" target="_blank">Documentation</a>
 </td>
 </tr>
 <tr>
@@ -1340,7 +1340,7 @@ Input Mask
 <a href="https://blazor.syncfusion.com/accessibility/maskedtextbox" target="_blank">Demo</a>
 </td>
 <td>
-<a href="../input-mask/accessibility.md" target="_blank">Documentation</a>
+<a href="https://blazor.syncfusion.com/documentation/input-mask/accessibility" target="_blank">Documentation</a>
 </td>
 </tr>
 <tr>
@@ -1375,7 +1375,7 @@ Kanban
 <a href="https://blazor.syncfusion.com/accessibility/kanban" target="_blank">Demo</a>
 </td>
 <td>
-<a href="../kanban/accessibility.md" target="_blank">Documentation</a>
+<a href="https://blazor.syncfusion.com/documentation/kanban/accessibility" target="_blank">Documentation</a>
 </td>
 </tr>
 <tr>
@@ -1410,7 +1410,7 @@ N/A
 <a href="https://blazor.syncfusion.com/accessibility/lineargauge" target="_blank">Demo</a>
 </td>
 <td>
-<a href="../linear-gauge/accessibility.md" target="_blank">Documentation</a>
+<a href="https://blazor.syncfusion.com/documentation/linear-gauge/accessibility" target="_blank">Documentation</a>
 </td>
 </tr>
 <tr>
@@ -1445,7 +1445,7 @@ ListBox
 <a href="https://blazor.syncfusion.com/accessibility/listbox" target="_blank">Demo</a>
 </td>
 <td>
-<a href="../listbox/accessibility.md" target="_blank">Documentation</a>
+<a href="https://blazor.syncfusion.com/documentation/listbox/accessibility" target="_blank">Documentation</a>
 </td>
 </tr>
 <tr>
@@ -1480,7 +1480,7 @@ ListView
 <a href="https://blazor.syncfusion.com/accessibility/listview" target="_blank">Demo</a>
 </td>
 <td>
-<a href="../listview/accessibility.md" target="_blank">Documentation</a>
+<a href="https://blazor.syncfusion.com/documentation/listview/accessibility" target="_blank">Documentation</a>
 </td>
 </tr>
 <tr>
@@ -1515,7 +1515,7 @@ N/A
 <a href="https://blazor.syncfusion.com/accessibility/maps" target="_blank">Demo</a>
 </td>
 <td>
-<a href="../maps/accessibility.md" target="_blank">Documentation</a>
+<a href="https://blazor.syncfusion.com/documentation/maps/accessibility" target="_blank">Documentation</a>
 </td>
 </tr>
 <tr>
@@ -1550,7 +1550,7 @@ Mention
 <a href="https://blazor.syncfusion.com/accessibility/mention" target="_blank">Demo</a>
 </td>
 <td>
-<a href="../mention/accessibility.md" target="_blank">Documentation</a>
+<a href="https://blazor.syncfusion.com/documentation/mention/accessibility" target="_blank">Documentation</a>
 </td>
 </tr>
 <tr>
@@ -1585,7 +1585,7 @@ Menu Bar
 <a href="https://blazor.syncfusion.com/accessibility/menu" target="_blank">Demo</a>
 </td>
 <td>
-<a href="../menu-bar/accessibility.md" target="_blank">Documentation</a>
+<a href="https://blazor.syncfusion.com/documentation/menu-bar/accessibility" target="_blank">Documentation</a>
 </td>
 </tr>
 <tr>
@@ -1620,7 +1620,7 @@ MultiSelect Dropdown
 <a href="https://blazor.syncfusion.com/accessibility/multiselect" target="_blank">Demo</a>
 </td>
 <td>
-<a href="../multiselect-dropdown/accessibility.md" target="_blank">Documentation</a>
+<a href="https://blazor.syncfusion.com/documentation/multiselect-dropdown/accessibility" target="_blank">Documentation</a>
 </td>
 </tr>
 <tr>
@@ -1655,7 +1655,7 @@ Numeric TextBox
 <a href="https://blazor.syncfusion.com/accessibility/numerictextbox" target="_blank">Demo</a>
 </td>
 <td>
-<a href="../numeric-textbox/accessibility.md" target="_blank">Documentation</a>
+<a href="https://blazor.syncfusion.com/documentation/numeric-textbox/accessibility" target="_blank">Documentation</a>
 </td>
 </tr>
 <tr>
@@ -1690,7 +1690,7 @@ Pager
 <a href="https://blazor.syncfusion.com/accessibility/pager" target="_blank">Demo</a>
 </td>
 <td>
-<a href="../pager/accessibility.md" target="_blank">Documentation</a>
+<a href="https://blazor.syncfusion.com/documentation/pager/accessibility" target="_blank">Documentation</a>
 </td>
 </tr>
 <tr>
@@ -1725,7 +1725,7 @@ SfPdfViewer
 <a href="https://blazor.syncfusion.com/accessibility/pdfviewer" target="_blank">Demo</a>
 </td>
 <td>
-<a href="../pdfviewer-2/accessibility.md" target="_blank">Documentation</a>
+<a href="https://blazor.syncfusion.com/documentation/pdfviewer-2/accessibility" target="_blank">Documentation</a>
 </td>
 </tr>
 <tr>
@@ -1760,7 +1760,7 @@ Pivot Table
 <a href="https://blazor.syncfusion.com/accessibility/pivot-table" target="_blank">Demo</a>
 </td>
 <td>
-<a href="../pivot-table/accessibility.md" target="_blank">Documentation</a>
+<a href="https://blazor.syncfusion.com/documentation/pivot-table/accessibility" target="_blank">Documentation</a>
 </td>
 </tr>
 <tr>
@@ -1795,7 +1795,7 @@ ProgressBar
 <a href="https://blazor.syncfusion.com/accessibility/progress-bar" target="_blank">Demo</a>
 </td>
 <td>
-<a href="../progress-bar/accessibility.md" target="_blank">Documentation</a>
+<a href="https://blazor.syncfusion.com/documentation/progress-bar/accessibility" target="_blank">Documentation</a>
 </td>
 </tr>
 <tr>
@@ -1830,7 +1830,7 @@ ProgressButton
 <a href="https://blazor.syncfusion.com/accessibility/progress-button" target="_blank">Demo</a>
 </td>
 <td>
-<a href="../progress-button/accessibility.md" target="_blank">Documentation</a>
+<a href="https://blazor.syncfusion.com/documentation/progress-button/accessibility" target="_blank">Documentation</a>
 </td>
 </tr>
 <tr>
@@ -1865,7 +1865,7 @@ Query Builder
 <a href="https://blazor.syncfusion.com/accessibility/querybuilder" target="_blank">Demo</a>
 </td>
 <td>
-<a href="../query-builder/accessibility.md" target="_blank">Documentation</a>
+<a href="https://blazor.syncfusion.com/documentation/query-builder/accessibility" target="_blank">Documentation</a>
 </td>
 </tr>
 <tr>
@@ -1900,7 +1900,7 @@ RadioButton
 <a href="https://blazor.syncfusion.com/accessibility/radio-button" target="_blank">Demo</a>
 </td>
 <td>
-<a href="../radio-button/accessibility.md" target="_blank">Documentation</a>
+<a href="https://blazor.syncfusion.com/documentation/radio-button/accessibility" target="_blank">Documentation</a>
 </td>
 </tr>
 <tr>
@@ -1935,7 +1935,7 @@ Range Selector
 <a href="https://blazor.syncfusion.com/accessibility/range-selector" target="_blank">Demo</a>
 </td>
 <td>
-<a href="../range-selector/accessibility.md" target="_blank">Documentation</a>
+<a href="https://blazor.syncfusion.com/documentation/range-selector/accessibility" target="_blank">Documentation</a>
 </td>
 </tr>
 <tr>
@@ -1970,7 +1970,7 @@ Range Slider
 <a href="https://blazor.syncfusion.com/accessibility/slider" target="_blank">Demo</a>
 </td>
 <td>
-<a href="../range-slider/accessibility.md" target="_blank">Documentation</a>
+<a href="https://blazor.syncfusion.com/documentation/range-slider/accessibility" target="_blank">Documentation</a>
 </td>
 </tr>
 <tr>
@@ -2005,7 +2005,7 @@ Rating
 <a href="https://blazor.syncfusion.com/accessibility/rating" target="_blank">Demo</a>
 </td>
 <td>
-<a href="../rating/accessibility.md" target="_blank">Documentation</a>
+<a href="https://blazor.syncfusion.com/documentation/rating/accessibility" target="_blank">Documentation</a>
 </td>
 </tr>
 <tr>
@@ -2040,7 +2040,7 @@ Rich Text Editor
 <a href="https://blazor.syncfusion.com/accessibility/rich-text-editor" target="_blank">Demo</a>
 </td>
 <td>
-<a href="../rich-text-editor/accessibility.md" target="_blank">Documentation</a>
+<a href="https://blazor.syncfusion.com/documentation/rich-text-editor/accessibility" target="_blank">Documentation</a>
 </td>
 </tr>
 <tr>
@@ -2075,7 +2075,7 @@ Scheduler
 <a href="https://blazor.syncfusion.com/accessibility/schedule" target="_blank">Demo</a>
 </td>
 <td>
-<a href="../scheduler/accessibility.md" target="_blank">Documentation</a>
+<a href="https://blazor.syncfusion.com/documentation/scheduler/accessibility" target="_blank">Documentation</a>
 </td>
 </tr>
 <tr>
@@ -2110,7 +2110,7 @@ Sidebar
 <a href="https://blazor.syncfusion.com/accessibility/sidebar" target="_blank">Demo</a>
 </td>
 <td>
-<a href="../sidebar/accessibility.md" target="_blank">Documentation</a>
+<a href="https://blazor.syncfusion.com/documentation/sidebar/accessibility" target="_blank">Documentation</a>
 </td>
 </tr>
 <tr>
@@ -2145,7 +2145,7 @@ N/A
 <a href="https://blazor.syncfusion.com/accessibility/signature" target="_blank">Demo</a>
 </td>
 <td>
-<a href="../signature/accessibility.md" target="_blank">Documentation</a>
+<a href="https://blazor.syncfusion.com/documentation/signature/accessibility" target="_blank">Documentation</a>
 </td>
 </tr>
 <tr>
@@ -2180,7 +2180,7 @@ N/A
 <a href="https://blazor.syncfusion.com/accessibility/skeleton" target="_blank">Demo</a>
 </td>
 <td>
-<a href="../skeleton/accessibility.md" target="_blank">Documentation</a>
+<a href="https://blazor.syncfusion.com/documentation/skeleton/accessibility" target="_blank">Documentation</a>
 </td>
 </tr>
 <tr>
@@ -2215,7 +2215,7 @@ Smith Chart
 <a href="https://blazor.syncfusion.com/accessibility/smith-chart" target="_blank">Demo</a>
 </td>
 <td>
-<a href="../smith-chart/accessibility.md" target="_blank">Documentation</a>
+<a href="https://blazor.syncfusion.com/documentation/smith-chart/accessibility" target="_blank">Documentation</a>
 </td>
 </tr>
 <tr>
@@ -2250,7 +2250,7 @@ Sparkline
 <a href="https://blazor.syncfusion.com/accessibility/sparkline" target="_blank">Demo</a>
 </td>
 <td>
-<a href="../sparkline/accessibility.md" target="_blank">Documentation</a>
+<a href="https://blazor.syncfusion.com/documentation/sparkline/accessibility" target="_blank">Documentation</a>
 </td>
 </tr>
 <tr>
@@ -2285,7 +2285,7 @@ SpeedDial
 <a href="https://blazor.syncfusion.com/accessibility/speeddial" target="_blank">Demo</a>
 </td>
 <td>
-<a href="../speeddial/accessibility.md" target="_blank">Documentation</a>
+<a href="https://blazor.syncfusion.com/documentation/speeddial/accessibility" target="_blank">Documentation</a>
 </td>
 </tr>
 <tr>
@@ -2320,7 +2320,7 @@ N/A
 <a href="https://blazor.syncfusion.com/accessibility/split-button" target="_blank">Demo</a>
 </td>
 <td>
-<a href="../split-button/accessibility.md" target="_blank">Documentation</a>
+<a href="https://blazor.syncfusion.com/documentation/split-button/accessibility" target="_blank">Documentation</a>
 </td>
 </tr>
 <tr>
@@ -2355,7 +2355,7 @@ Splitter
 <a href="https://blazor.syncfusion.com/accessibility/splitter" target="_blank">Demo</a>
 </td>
 <td>
-<a href="../splitter/accessibility.md" target="_blank">Documentation</a>
+<a href="https://blazor.syncfusion.com/documentation/splitter/accessibility" target="_blank">Documentation</a>
 </td>
 </tr>
 <tr>
@@ -2390,7 +2390,7 @@ Stepper
 <a href="https://blazor.syncfusion.com/accessibility/stepper" target="_blank">Demo</a>
 </td>
 <td>
-<a href="../stepper/accessibility.md" target="_blank">Documentation</a>
+<a href="https://blazor.syncfusion.com/documentation/stepper/accessibility" target="_blank">Documentation</a>
 </td>
 </tr>
 <tr>
@@ -2425,7 +2425,7 @@ Stock Chart
 <a href="https://blazor.syncfusion.com/accessibility/stock-chart" target="_blank">Demo</a>
 </td>
 <td>
-<a href="../stock-chart/accessibility.md" target="_blank">Documentation</a>
+<a href="https://blazor.syncfusion.com/documentation/stock-chart/accessibility" target="_blank">Documentation</a>
 </td>
 </tr>
 <tr>
@@ -2460,7 +2460,7 @@ Tabs
 <a href="https://blazor.syncfusion.com/accessibility/tab" target="_blank">Demo</a>
 </td>
 <td>
-<a href="../tabs/accessibility.md" target="_blank">Documentation</a>
+<a href="https://blazor.syncfusion.com/documentation/tabs/accessibility" target="_blank">Documentation</a>
 </td>
 </tr>
 <tr>
@@ -2495,7 +2495,7 @@ TextBox
 <a href="https://blazor.syncfusion.com/accessibility/textbox" target="_blank">Demo</a>
 </td>
 <td>
-<a href="../textbox/accessibility.md" target="_blank">Documentation</a>
+<a href="https://blazor.syncfusion.com/documentation/textbox/accessibility" target="_blank">Documentation</a>
 </td>
 </tr>
 <tr>
@@ -2530,7 +2530,7 @@ N/A
 <a href="https://blazor.syncfusion.com/accessibility/timeline" target="_blank">Demo</a>
 </td>
 <td>
-<a href="../timeline/accessibility.md" target="_blank">Documentation</a>
+<a href="https://blazor.syncfusion.com/documentation/timeline/accessibility" target="_blank">Documentation</a>
 </td>
 </tr>
 <tr>
@@ -2565,7 +2565,7 @@ TimePicker
 <a href="https://blazor.syncfusion.com/accessibility/timepicker" target="_blank">Demo</a>
 </td>
 <td>
-<a href="../timepicker/accessibility.md" target="_blank">Documentation</a>
+<a href="https://blazor.syncfusion.com/documentation/timepicker/accessibility" target="_blank">Documentation</a>
 </td>
 </tr>
 <tr>
@@ -2600,7 +2600,7 @@ N/A
 <a href="https://blazor.syncfusion.com/accessibility/toast" target="_blank">Demo</a>
 </td>
 <td>
-<a href="../toast/accessibility.md" target="_blank">Documentation</a>
+<a href="https://blazor.syncfusion.com/documentation/toast/accessibility" target="_blank">Documentation</a>
 </td>
 </tr>
 <tr>
@@ -2635,7 +2635,7 @@ N/A
 <a href="https://blazor.syncfusion.com/accessibility/switch" target="_blank">Demo</a>
 </td>
 <td>
-<a href="../toggle-switch-button/accessibility.md" target="_blank">Documentation</a>
+<a href="https://blazor.syncfusion.com/documentation/toggle-switch-button/accessibility" target="_blank">Documentation</a>
 </td>
 </tr>
 <tr>
@@ -2670,7 +2670,7 @@ Toolbar
 <a href="https://blazor.syncfusion.com/accessibility/toolbar" target="_blank">Demo</a>
 </td>
 <td>
-<a href="../toolbar/accessibility.md" target="_blank">Documentation</a>
+<a href="https://blazor.syncfusion.com/documentation/toolbar/accessibility" target="_blank">Documentation</a>
 </td>
 </tr>
 <tr>
@@ -2705,7 +2705,7 @@ Tooltip
 <a href="https://blazor.syncfusion.com/accessibility/tooltip" target="_blank">Demo</a>
 </td>
 <td>
-<a href="../tooltip/accessibility.md" target="_blank">Documentation</a>
+<a href="https://blazor.syncfusion.com/documentation/tooltip/accessibility" target="_blank">Documentation</a>
 </td>
 </tr>
 <tr>
@@ -2740,7 +2740,7 @@ TreeGrid
 <a href="https://blazor.syncfusion.com/accessibility/treegrid" target="_blank">Demo</a>
 </td>
 <td>
-<a href="../treegrid/accessibility.md" target="_blank">Documentation</a>
+<a href="https://blazor.syncfusion.com/documentation/treegrid/accessibility" target="_blank">Documentation</a>
 </td>
 </tr>
 <tr>
@@ -2775,7 +2775,7 @@ N/A
 <a href="https://blazor.syncfusion.com/accessibility/treemap" target="_blank">Demo</a>
 </td>
 <td>
-<a href="../treemap/accessibility.md" target="_blank">Documentation</a>
+<a href="https://blazor.syncfusion.com/documentation/treemap/accessibility" target="_blank">Documentation</a>
 </td>
 </tr>
 <tr>
@@ -2810,7 +2810,7 @@ TreeView
 <a href="https://blazor.syncfusion.com/accessibility/treeview" target="_blank">Demo</a>
 </td>
 <td>
-<a href="../treeview/accessibility.md" target="_blank">Documentation</a>
+<a href="https://blazor.syncfusion.com/documentation/treeview/accessibility" target="_blank">Documentation</a>
 </td>
 </tr>
 <tr>
@@ -2845,7 +2845,7 @@ PDF Viewer
 <a href="https://blazor.syncfusion.com/accessibility/pdfviewer" target="_blank">Demo</a>
 </td>
 <td>
-<a href="../pdfviewer/accessibility.md" target="_blank">Documentation</a>
+<a href="https://blazor.syncfusion.com/documentation/pdfviewer/accessibility" target="_blank">Documentation</a>
 </td>
 </tr>
 </table>
