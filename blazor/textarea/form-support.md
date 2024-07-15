@@ -11,7 +11,7 @@ documentation: ug
 
 The TextArea component seamlessly integrates with HTML forms, enabling efficient submission of longer text data. By including TextArea inputs within HTML forms, users can conveniently input multiline text content and submit it as part of form submissions.
 
-This integration enhances the usability of forms, allowing users to provide detailed feedback, enter lengthy descriptions, or input other multiline text data seamlessly.
+This integration enhances the usability of forms, allowing users to provide detailed feedback, enter lengthy descriptions, or input other multiline text data seamlessly. Please find the demo link [here](https://blazor.syncfusion.com/demos/textarea/formsvalidation?theme=fluent).
 
 {% tabs %}
 {% highlight razor %}
@@ -19,7 +19,7 @@ This integration enhances the usability of forms, allowing users to provide deta
 @using Syncfusion.Blazor.Inputs
 @using System.ComponentModel.DataAnnotations
 
-<EditForm Model="@formModel" OnValidSubmit="HandleValidSubmit">
+<EditForm Model="@formModel" OnValidSubmit="HandleValidSubmit" OnInvalidSubmit="@HandleInvalidSubmit">
     <SfTextArea @bind-Value="@formModel.Address" Placeholder="Enter the Address" FloatLabelType="@FloatLabelType.Auto"></SfTextArea>
     <button type="submit">Submit</button>
 </EditForm>
@@ -30,6 +30,11 @@ This integration enhances the usability of forms, allowing users to provide deta
     private void HandleValidSubmit()
     {
         // Handle the valid form submission here
+    }
+
+    private void HandleInvalidSubmit()
+    {
+        // Handle the invalid form submission here
     }
 
     public class FormModel

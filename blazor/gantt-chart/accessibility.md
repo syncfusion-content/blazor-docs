@@ -61,30 +61,129 @@ The following ARIA attributes are used in Blazor Gantt:
 
 The Blazor Gantt component followed the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/) guideline, making it easy for people who use assistive technologies (AT) and those who completely rely on keyboard navigation. The following keyboard shortcuts are supported by the Blazor Gantt component.
 
-Interaction Keys |Description
------|-----
-<kbd>Home</kbd> |Selects the first row.
-<kbd>End</kbd> |Selects the last row.
-<kbd>DownArrow</kbd> |Moves the cell focus/row or cell selection downward.
-<kbd>UpArrow</kbd> |Moves the cell focus/row or cell selection upward.
-<kbd>LeftArrow</kbd> |Moves the cell focus/row or cell selection left side.
-<kbd>RightArrow</kbd> |Moves the cell focus/row or cell selection right side.
-<kbd>Ctrl + Up Arrow</kbd> |Collapses all tasks.
-<kbd>Ctrl + Down Arrow</kbd> |Expands all tasks.
-<kbd>Ctrl + Shift + Up Arrow</kbd> |Collapses the selected row.
-<kbd>Ctrl + Shift + Down Arrow</kbd> |Expands the selected row.
-<kbd>Enter</kbd> |Saves request.
-<kbd>Esc</kbd> |Cancels request.
-<kbd>Insert</kbd> |Adds a new row.
-<kbd>Ctrl + Insert</kbd> |Opens addRowDialog.
-<kbd>Ctrl + F2</kbd> |Opens editRowDialog.
-<kbd>Delete</kbd> |Deletes the selected row.
-<kbd>Shift + F5</kbd> |FocusTask
-<kbd>Ctrl + Shift + F</kbd> |Focus search
-<kbd>Shift + DownArrow</kbd> |Extends the row/cell selection downwards.
-<kbd>Shift + UpArrow</kbd> |Extends the row/cell selection upwards.
-<kbd>Shift + LeftArrow</kbd> |Extends the cell selection to the left side.
-<kbd>Shift + RightArrow</kbd> |Extends the cell selection to the right side.
+<b>Focus Elements</b>
+
+**Windows**  | **MAC** | **To do this**
+-----|----- | -----
+<kbd>Alt + J</kbd> | <kbd>Alt + J</kbd> | Moves the focus to the entire gantt chart.
+<kbd>Home</kbd> | <kbd>Fn + Left Arrow</kbd> | Moves the focus to the first cell of the focused row.
+<kbd>End</kbd> | <kbd>Fn + Right Arrow</kbd> | Moves the focus to the last cell of the focused row.
+<kbd>Ctrl + Home</kbd> | <kbd>Command + Fn + Left Arrow</kbd> | Moves the focus to the first Cell of the first row in the gantt chart.
+<kbd>Ctrl + End</kbd> | <kbd>Command +  Fn + Right Arrow</kbd> | Moves the focus to the last Cell of the last row in the gantt chart.
+<kbd>Up Arrow</kbd> | <kbd>Up Arrow</kbd> | Moves the cell focus upward from the focused cell.
+<kbd>Down Arrow</kbd> | <kbd>Down Arrow</kbd> |  Moves the cell focus downward from the focused cell.
+<kbd>Right Arrow</kbd> | <kbd>Right Arrow</kbd> | Moves the cell focus right side from the focused cell.
+<kbd>Left Arrow</kbd> | <kbd>Left Arrow</kbd> |  Moves the cell focus left side from the focused cell.
+<kbd>Alt + W</kbd> | <kbd>Alt + W</kbd> | Moves the focus to the gantt content element.
+
+<b>Expand/Collapse</b>
+
+**Windows**  | **MAC** | **To do this**
+-----|----- | -----
+<kbd>Ctrl + Down arrow</kbd> | <kbd>Ctrl + Down arrow</kbd> | Expands all tasks.
+<kbd>Ctrl + Up arrow</kbd> | <kbd>Ctrl + Up arrow</kbd> | Collapses all tasks.
+<kbd>Ctrl + Shift + Up arrow</kbd> | <kbd>Ctrl + Shift + Up arrow</kbd> | Collapse the selected row.
+<kbd>Ctrl + Shift + Down arrow</kbd> | <kbd>Ctrl + Shift + Down arrow</kbd> | Expands the selected row.
+
+<b>Selection</b>
+
+**Windows**  | **MAC** | **To do this**
+-----|----- | -----
+<kbd>Up Arrow</kbd> | <kbd>Up Arrow</kbd> | Moves up a row/cell selection from the selected row/cell.
+<kbd>Down Arrow</kbd> | <kbd>Down Arrow</kbd> | Moves down a row/cell selection from the selected row/cell.
+<kbd>Right Arrow</kbd> | <kbd>Right Arrow</kbd> | Moves to the right cell selection from the selected cell.
+<kbd>Left Arrow</kbd> | <kbd>Left Arrow</kbd> | Moves to the left cell selection from the selected cell.
+<kbd>Shift + Up Arrow</kbd> | <kbd>Shift + Up Arrow</kbd> | Extends the row/cell selection upwards from the selected row/cell.
+<kbd>Shift + Down Arrow</kbd> | <kbd>Shift + Down Arrow</kbd> | Extends the row/cell selection downwards from the selected row/cell.
+<kbd>Shift + Right Arrow</kbd> | <kbd>Shift + Right Arrow</kbd> | Extends the cell selection to the right side from the selected cell.
+<kbd>Shift + Left Arrow</kbd> | <kbd>Shift + Left Arrow</kbd> | Extends the cell selection to the left side from the selected cell.
+<kbd>Enter</kbd> | <kbd>Enter</kbd> | Moves the row/cell selection downward from the selected cell/row.
+<kbd>Shift + Enter</kbd> | <kbd>Shift + Enter</kbd> | Moves the row/cell selection upward.
+<kbd>Esc</kbd> | <kbd>Esc</kbd> | Deselects all the selected row/cells.
+<kbd>Ctrl + A</kbd> | <kbd>Ctrl + A</kbd> | Select all the row/cells in the current page.
+
+<b>Clipboard</b>
+
+**Windows**  | **MAC** | **To do this**
+-----|----- | -----
+<kbd>Ctrl + C</kbd> | <kbd>Command + C</kbd> | Copies selected rows or cells data into the clipboard.
+<kbd>Ctrl + Shift + H</kbd> | <kbd>Ctrl + Shift + H</kbd> | Copies selected rows or cells data with header into clipboard.
+ 
+<b>Context Menu</b>
+
+**Windows**  | **MAC** | **To do this**
+-----|----- | -----
+<kbd>Esc</kbd> | <kbd>Esc</kbd> | Closes the opened sub menu.
+<kbd>Enter</kbd> | <kbd>Enter</kbd> | Selects the focused item. 
+<kbd>Up</kbd> | <kbd>Up</kbd> | Navigates up or to the previous menu item.
+<kbd>Down</kbd> |  <kbd>Down</kbd> | Navigates down or to the next menu item.
+<kbd>Left</kbd> | <kbd>Left</kbd> | Close the current sub menu and navigates to the parent menu.
+<kbd>Right</kbd> | <kbd>Right</kbd> | Navigates and open the next sub menu.
+
+<b>Cell Editing</b>
+
+**Windows**  | **MAC** | **To do this**
+-----|----- | -----
+<kbd>F2</kbd> | <kbd>F2</kbd> | Starts editing of selected Row/cell.
+<kbd>Enter</kbd> | <kbd>Enter</kbd> | Saves current cell.
+<kbd>Insert</kbd> | <kbd>Ctrl + Command + Enter<kbd> | Creates a new add form based on the new row position.
+<kbd>Delete</kbd> | <kbd>Delete</kbd> | Deletes the current selected record.
+<kbd>Tab</kbd> | <kbd>Tab</kbd> | Navigates to the next editable cell, saves the current cell, and starts editing the next cell.
+<kbd>Shift + Tab</kbd> | <kbd>Shift + Tab</kbd> | Navigates to the previous editable cell, saves the current cell, and starts editing the previous cell.
+<kbd>Shift + Enter</kbd> | <kbd>Shift + Enter</kbd> | Saves the current cell and starts editing the previous row cell.
+
+<b>Filtering</b>
+
+**Windows**  | **MAC** | **To do this**
+-----|----- | -----
+<kbd>Alt + Down arrow</kbd> | <kbd>Alt + Down arrow</kbd> | Opens the filter menu when its header element is in focused state.
+
+<b>Column Menu</b>
+
+**Windows**  | **MAC** | **To do this**
+-----|----- | -----
+<kbd>Alt + Down arrow</kbd> | <kbd>Alt + Down arrow</kbd> | Opens column menu when its header element is in focused state.
+
+<b>Reordering</b>
+
+**Windows**  | **MAC** | **To do this**
+-----|----- | -----
+<kbd>Ctrl + left arrow or right arrow</kbd> | <kbd>Command  + left arrow or right arrow</kbd> | Reorders the focused header column to the left or right side.
+
+<b>Sorting</b>
+
+**Windows**  | **MAC** | **To do this**
+-----|----- | -----
+<kbd>Enter</kbd> | <kbd>Enter</kbd> | Performs sorting(ascending/descending) on a column when its header element is in focused state.
+<kbd>Ctrl + Enter</kbd> | <kbd>Command + Enter</kbd> | Performs multi-sorting on a column when its header element is in focused state.
+<kbd>Shift + Enter</kbd> | <kbd>Shift + Enter</kbd> | Clears sorting for the focused header column.
+
+<b>Toolbar</b>
+
+**Windows**  | **MAC** | **To do this**
+-----|----- | -----
+<kbd>Left</kbd> | <kbd>Left</kbd> | Focuses the previous element.
+<kbd>Right</kbd> | <kbd>Right</kbd> | Focuses the next element.
+<kbd>Enter</kbd> | <kbd>Enter</kbd> | Performs the focused toolbar element action.
+<b>Tooltip</b>
+
+**Windows**  | **MAC** | **To do this**
+-----|----- | -----
+<kbd>Escape</kbd> | <kbd>Escape</kbd> | Closes or dismisses the tooltip.
+<kbd>Tab</kbd> | <kbd>Tab</kbd> | A form control receiving focus (say through tab key), opens the tooltip, and on focus out closes it.
+
+<b>Dialog Editing</b>
+
+**Windows**  | **MAC** | **To do this**
+-----|----- | -----
+<kbd>Ctrl + Insert</kbd> | <kbd>Command + Insert</kbd> | Opens the add row dialog popup.
+<kbd>Ctrl + F2</kbd> | <kbd>Command + F2</kbd> | Opens the edit row dialog popup.
+<kbd>Del</kbd> | <kbd>Del</kbd> | Deletes the currently selected record.
+<kbd>Enter</kbd> | <kbd>Enter</kbd> | Saves the current row.
+<kbd>Esc</kbd> | <kbd>Esc</kbd> | Closes the dialog.
+<kbd>Tab</kbd> | <kbd>Tab</kbd> | Navigates to the next editable cell, saves the current cell, and starts editing the next cell in the dialog elements.
+<kbd>Shift + Tab</kbd> | <kbd>Shift + Tab</kbd> | Navigates to the previous editable cell, saves the current cell, and starts editing the previous cell in the dialog elements. 
+
 
 ## Ensuring accessibility
 
