@@ -87,7 +87,7 @@ The selected text can be made superscript by using the following sample code.
 //Gets the value for baseline alignment formatting of selected text.
 BaselineAlignment baselineAlignment = await documentEditor.Selection.CharacterFormat.GetBaselineAlignmentAsync();
 //Sets baseline alignment formatting for selected text.
-documentEditor.Selection.CharacterFormat.SetBaselineAlignmentAsync(BaselineAlignment.Superscript);
+await documentEditor.Selection.CharacterFormat.SetBaselineAlignmentAsync(BaselineAlignment.Superscript);
 ```
 
 Toggle the selected text as superscript or normal using the following sample code.
@@ -101,7 +101,7 @@ await documentEditor.Editor.ToggleSuperscriptAsync();
 The selected text can be made subscript by using the following sample code.
 
 ```csharp
-documentEditor.Selection.CharacterFormat.SetBaselineAlignmentAsync(BaselineAlignment.Subscript);
+await documentEditor.Selection.CharacterFormat.SetBaselineAlignmentAsync(BaselineAlignment.Subscript);
 ```
 
 Toggle the selected text as subscript or normal using the following sample code.
