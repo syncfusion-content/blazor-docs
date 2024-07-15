@@ -199,7 +199,7 @@ The [VisibleTarget](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diag
 
 | VisibleTarget | Node | Connector | Description |
 | -------- | -------- | -------- |-------- |
-|Node|![VisibleTarget set as Node](Images/blazor-diagram-user-handle-visible-target-node.png)|![VisibleTarget set as Node](Images/blazor-diagram-user-handle-visible-target-node1.png)|When the visibletarget is set as the node, the userhandle only renders for nodes, not for connectors. |
+|Node|![VisibleTarget set as Node](Images/blazor-diagram-user-handle-visible-target-node.png)|![VisibleTarget set as Node](Images/blazor-diagram-user-handle-visible-target-node1.png)|When the Visibletarget is set as the node, the userhandle only renders for nodes, not for connectors. |
 |Connector|![VisibleTarget set as connector](Images/blazor-diagram-user-handle-visible-target-connector1.png)|![VisibleTarget set as connector](Images/blazor-diagram-user-handle-visible-target-connector.png)|When VisibleTarget is set as the connector, the userhandle only renders for the connector, not for nodes. |
 |Both|![VisibleTarget set as Both](Images/blazor-diagram-user-handle-visible-target-node.png)|![VisibleTarget set as Both](Images/blazor-diagram-user-handle-visible-target-connector.png)|When the VisibleTarget is set as both, then the userhandle renders for both nodes and connectors |
 
