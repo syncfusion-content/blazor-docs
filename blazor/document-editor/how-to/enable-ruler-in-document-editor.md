@@ -30,6 +30,10 @@ The following example illustrates how to enable ruler in Document Editor Contain
     private void ClickHandler()
     {
          container.DocumentEditorSettings.ShowRuler = !container.DocumentEditorSettings.ShowRuler;
+         settings = new DocumentEditorSettingsModel() {
+            ShowRuler = container.DocumentEditorSettings.ShowRuler,
+        };
+        StateHasChanged();
     }   
 }
 ```

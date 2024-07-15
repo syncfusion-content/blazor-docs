@@ -34,6 +34,9 @@ Example code snippet to show/hide spinner
 Refer to the following example.
 
 ```csharp
+@using Syncfusion.Blazor.DocumentEditor
+@using System.Net
+@using Syncfusion.Blazor.Spinner
 <div>
     <SfDocumentEditorContainer @ref="container" EnableToolbar=true Height="590px">
         <DocumentEditorContainerEvents Created="OnLoad"></DocumentEditorContainerEvents>
