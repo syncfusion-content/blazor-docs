@@ -233,6 +233,9 @@ private List<ToolbarItemModel> textQuickToolbarItems = new List<ToolbarItemModel
 Refer the following link for more items in the text quick toolbar.
 https://blazor.syncfusion.com/documentation/rich-text-editor/tools/built-in-tools
 
+{% tabs %}
+{% highlight razor %}
+
 <SfRichTextEditor>
     <RichTextEditorQuickToolbarSettings Text="@TextQuickToolbarItems"></RichTextEditorQuickToolbarSettings>
     <p>The Rich Text Editor component is WYSIWYG ('what you see is what you get') editor that provides the best user experience to create and update the content. Users can format their content using standard toolbar commands.</p>

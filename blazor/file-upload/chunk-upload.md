@@ -21,65 +21,57 @@ The Uploader sends the large file split into small chunks and transmits to the s
 
 ```csharp
 [Route("api/[controller]")]
-
-private IHostingEnvironment hostingEnv;
-
-public SampleDataController(IHostingEnvironment env)
+public class SampleDataController : Controller
 {
-    this.hostingEnv = env;
-}
+    public string uploads = ".\\Uploaded Files"; // replace with your directory path
 
-[HttpPost("[action]")]
-public void Save(IList<IFormFile> chunkFile, IList<IFormFile> UploadFiles)
-{
-    try
+    [HttpPost("[action]")]
+    public async Task<IActionResult> Save(IFormFile UploadFiles) // Save the uploaded file here
     {
-        foreach (var file in chunkFile)
+        if (UploadFiles.Length > 0)
         {
-            var filename = hostingEnv.ContentRootPath + $@"\{file.FileName}";
-            if (!System.IO.File.Exists(filename))
+            //Create directory if not exists
+            if (!Directory.Exists(uploads))
             {
-                using (FileStream fs = System.IO.File.Create(filename))
-                {
-                    file.CopyTo(fs);
-                    fs.Flush();
-                }
+                Directory.CreateDirectory(uploads);
             }
-            else
+
+            if (UploadFiles.Length > 0)
             {
-                using (FileStream fs = System.IO.File.Open(filename, FileMode.Append))
+                if (UploadFiles.ContentType == "application/octet-stream") //Handle chunk upload
                 {
-                    file.CopyTo(fs);
-                    fs.Flush();
+                    var filePath = Path.Combine(uploads, UploadFiles.FileName);
+                    using (var fileStream = new FileStream(filePath, FileMode.Append))
+                    {
+                        await UploadFiles.CopyToAsync(fileStream);
+                    }
+                }
+                else //Handle normal upload
+                {
+                    var filePath = Path.Combine(uploads, UploadFiles.FileName);
+                    using (var fileStream = new FileStream(filePath, FileMode.Create))
+                    {
+                        await UploadFiles.CopyToAsync(fileStream);
+                    }
                 }
             }
         }
+        return Ok();
     }
-    catch (Exception e)
+
+
+    [HttpPost("[action]")]
+    public void Remove(string UploadFiles) // Delete the uploaded file here
     {
-        Response.Clear();
-        Response.StatusCode = 204;
-        Response.HttpContext.Features.Get<IHttpResponseFeature>().ReasonPhrase = "File failed to upload";
-        Response.HttpContext.Features.Get<IHttpResponseFeature>().ReasonPhrase = e.Message;
-    }
-}
-[HttpPost("[action]")]
-public void Remove(IList<IFormFile> UploadFiles)
-{
-    try
-    {
-        var filename = hostingEnv.ContentRootPath + $@"\{UploadFiles[0].FileName}";
-        if (System.IO.File.Exists(filename))
+        if(UploadFiles != null)
         {
-            System.IO.File.Delete(filename);
+            var filePath = Path.Combine(uploads, UploadFiles);
+            if (System.IO.File.Exists(filePath))
+            {
+                //Delete the file from server
+                System.IO.File.Delete(filePath);
+            }
         }
-    }
-    catch (Exception e)
-    {
-        Response.Clear();
-        Response.StatusCode = 200;
-        Response.HttpContext.Features.Get<IHttpResponseFeature>().ReasonPhrase = "File removed successfully";
-        Response.HttpContext.Features.Get<IHttpResponseFeature>().ReasonPhrase = e.Message;
     }
 }
 ```
@@ -220,7 +212,7 @@ When the request fails, the pause icon is changed to retry icon. By clicking the
 
 The following example explains about chunk upload with cancel support.
 
-`SaveUrl` and `RemoveUrl` actions are explained in this [link](./chunk-upload/#save-and-remove-action-for-blazor-aspnet-core-hosted-application).
+`SaveUrl` and `RemoveUrl` actions are explained in this [link](./chunk-upload#save-and-remove-action-for-blazor-aspnet-core-hosted-application).
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs

@@ -358,18 +358,26 @@ The following code example is used to set tooltip tip pointer for connectors.
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Tooltip/TipPointerForConnectorTooltip)
 
 ## Tooltip template content
-
-To customize the tooltip content or to create your own visualized element on the tooltip,the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramTooltip.html#Syncfusion_Blazor_Diagram_DiagramTooltip_Template) can be used.
+To customize the tooltip content or create your own visualized element on the tooltip, you can use the [TooltipTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramTemplates.html#Syncfusion_Blazor_Diagram_DiagramTemplates_TooltipTemplate) property of `SfDiagramComponent`.
 
 The following code example illustrates how to add the formatted template content to the tooltip for the nodes.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
-@using Syncfusion.Blazor.Popups
 @using Syncfusion.Blazor.Buttons
 
-<SfButton Content="Node Template" OnClick="@TemplateChange" />
-<SfDiagramComponent Width="1000px" Height="500px" Nodes="@nodes" />
+<SfDiagramComponent Width="1000px" Height="500px" Nodes="@nodes" >
+    <DiagramTemplates>
+        <TooltipTemplate>
+            @{
+                if (context is Node)
+                {
+                    <div><p>Product Name : Diagram</p><p>Element: Node</p><p>Content: Node Tooltip </p></div>
+                }
+            }
+        </TooltipTemplate>
+    </DiagramTemplates>
+</SfDiagramComponent>
 @code
 {
     //Define diagram's nodes collection
@@ -391,25 +399,15 @@ The following code example illustrates how to add the formatted template content
                     Fill = "#6495ED",
                     StrokeColor = "white"
                 },
-                Tooltip = new DiagramTooltip() { Template = getContent() },
+                Tooltip = new DiagramTooltip(),
                 Constraints = NodeConstraints.Default | NodeConstraints.Tooltip,
             };
         nodes.Add(node);
     }
-    //Method to getcontent
-    private string getContent()
-    {
-        string content = "<div><p>Product Name : Diagram</p><p>Element: Node</p><p>Content: Node Tooltip <p></p></div>";
-        return content;
-    }
-    //Change the Template at run time.
-    private void TemplateChange()
-    {
-        nodes[0].Tooltip.Template = "<p>TemplateUpdate</p>";
-    }
 }
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Tooltip/TooltipTemplateForNode)
+
 
 The following code example illustrates how to add the formatted template content to the tooltip for the connectors.
 
@@ -418,8 +416,18 @@ The following code example illustrates how to add the formatted template content
 @using Syncfusion.Blazor.Popups
 @using Syncfusion.Blazor.Buttons
 
-<SfButton Content="Connector Template" OnClick="@TemplateChange" />
-<SfDiagramComponent Width="1000px" Height="500px" Connectors="connector" />
+<SfDiagramComponent Width="1000px" Height="500px" Connectors="connector">
+    <DiagramTemplates>
+        <TooltipTemplate>
+            @{
+                if (context is Connector)
+                {
+                    <div><p>Product Name : Diagram</p><p>Element: Node</p><p>Content: Node Tooltip </p></div>
+                }
+            }
+        </TooltipTemplate>
+    </DiagramTemplates>
+</SfDiagramComponent>
 @code
 {
     //Define diagram's connectors collection
@@ -435,25 +443,16 @@ The following code example illustrates how to add the formatted template content
                 ID = "Connector1",
                 SourcePoint = new DiagramPoint() { X = 500, Y = 500 },
                 TargetPoint = new DiagramPoint() { X = 600, Y = 400 },
-                Tooltip = new DiagramTooltip() { Content = "ConnectorTooltip", Template = getContent() },
+                Tooltip = new DiagramTooltip(),
                 Constraints = ConnectorConstraints.Default | ConnectorConstraints.Tooltip,
             };
         connector.Add(connectors);
     }
-    //Method to getcontent
-    private string getContent()
-    {
-        string content = "<div><p>Product Name : Diagram</p><p>Element: Connector</p><p>Content: Connector Tooltip <p></p></div>";
-        return content;
-    }
-    //Change the Template at run time.
-    private void TemplateChange()
-    {
-        connector[0].Tooltip.Template = "<p>TemplateUpdate</p>";
-    }
 }
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Tooltip/TooltipTemplateForConnector)
+
+>**Note:**  When the content propoerty of the tooltip is also defined with the template for either node , connector or diagram, only the  content will get rendered. The template content will get rendered only when the content property is undefined.
 
 ## Tooltip animation
 
