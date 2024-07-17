@@ -459,9 +459,8 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## How to set tooltip for ports
 
-The diagram provides support to show a tooltip when the mouse hovers over any port. The tooltip can be customized for each port.
+The diagram provides support to show a tooltip when the mouse hovers over any port. The tooltip can be customized for each port.To achieve this, the tooltip property of the diagram model must be configured to contain the tooltip [Content](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramTooltip.html#Syncfusion_Blazor_Diagram_DiagramTooltip_Content) and to [Position](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramTooltip.html#Syncfusion_Blazor_Diagram_DiagramTooltip_Position) it appropriately. By default, tooltips are not displayed; you need to add the tooltip as shown in the following example.
 
-The following code example illustrates how to customize the tooltip for port.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram

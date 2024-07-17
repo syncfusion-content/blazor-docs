@@ -85,9 +85,6 @@ The following code example illustrates how to customize the tooltip for connecto
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Tooltip/TooltipForSpecificConnector)
 ![ToolTip During hover the node](images/blazor-diagram-connectortooltip.png)  
 
-
-The following code example illustrates how to customize the in connect and out connect constraints for port.
-
 ## How to set tooltip position for nodes/connectors
 
 Tooltips can be attached to 12 static locations around the target. On initializing the Tooltip, set the [Position](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramTooltip.html#Syncfusion_Blazor_Diagram_DiagramTooltip_Position) property with any one of the following values:
