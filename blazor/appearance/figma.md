@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Introduction to the Figma UI Kit in Blazor - Syncfusion
-description: Check out and learn about the introduction to the Figma UI Kit in the Syncfusion Blazor.
+description: Check out and learn about the introduction to the Figma UI Kit in the Syncfusion Blazor and more details.
 platform: Blazor
 component: Common
 documentation: ug
