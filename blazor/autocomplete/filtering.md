@@ -21,7 +21,7 @@ The following code demonstrates the filtering functionality with local data in t
 
 {% endhighlight %}
 
-![Blazor AutoComplete with local data filtering](./images/filtering/blazor_autocomplete_local-data.png)
+![Blazor AutoComplete with local Data Filtering.](./images/filtering/blazor-autocomplete-local-data.png)
 
 ## Remote data
 
@@ -35,7 +35,7 @@ The below code demonstrates the filtering functionality with [ODataAdaptor](http
 
 {% endhighlight %}
 
-![Blazor AutoComplete with Remote Data filtering](./images/filtering/blazor_autocomplete_remote-data.png)
+![Blazor AutoComplete with Remote Data Filtering](./images/filtering/blazor-autocomplete-remote-data.png)
 
 ## Filter type
 
@@ -57,7 +57,7 @@ In the following example, `StartsWith` filter type has been mapped to the `Filte
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hjBKMhipBzHIgAvv?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-![Blazor AutoComplete with Filter Type](./images/filtering/blazor_autocomplete_filter-type.png)
+![Blazor AutoComplete with Filter Type.](./images/filtering/blazor-autocomplete-filter-type.png)
 
 ## Minimum length
 
@@ -73,7 +73,7 @@ In the following example, the remote request does not fetch the search data unti
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BDBUsBsJhzbSDGTo?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-![Filtering Blazor AutoComplete Items based on Character Count](./images/blazor-autocomplete-filter-based-length.png)
+![Filtering Blazor AutoComplete Items based on Character Count.](./images/blazor-autocomplete-filter-based-length.png)
 
 ## Multi column filtering
 
@@ -85,7 +85,7 @@ In the built-in Syncfusion Blazor theme files, support for multi column can be e
 
 {% endhighlight %}
 
-![Blazor AutoComplete with Multi Column filtering](./images/filtering/blazor_autocomplete_multi-column.png)
+![Blazor AutoComplete with Multi Column Filtering.](./images/filtering/blazor-autocomplete-multi-column.png)
 
 You can achieve multiple column(field) filtering by passing the List of [predicates](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.WhereFilter.html#Syncfusion_Blazor_Data_WhereFilter_predicates) to the [And](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.WhereFilter.html#Syncfusion_Blazor_Data_WhereFilter_And_Syncfusion_Blazor_Data_WhereFilter_) or [Or](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.WhereFilter.html#Syncfusion_Blazor_Data_WhereFilter_Or_Syncfusion_Blazor_Data_WhereFilter_) methods of [WhereFilters](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.WhereFilter.html#Syncfusion_Blazor_Data_WhereFilter__ctor).
 
@@ -95,7 +95,7 @@ You can achieve multiple column(field) filtering by passing the List of [predica
 
 {% endhighlight %}
 
-![Blazor AutoComplete with Multi Column filtering](./images/filtering/blazor_autocomplete_multi-colum-filtering.gif)
+![Blazor AutoComplete with Multi Column filtering.](./images/filtering/blazor-autocomplete-multi-colum-filtering.gif)
 
 ## Case sensitive filtering
 
@@ -137,7 +137,7 @@ Refer to the following example to restrict the suggestion list item counts as 3.
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LNrgMVWTLTmOENnq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-![Filtering Blazor AutoComplete Items based on Count](./images/blazor-autocomplete-filter-item-count.png)
+![Filtering Blazor AutoComplete Items based on Count.](./images/blazor-autocomplete-filter-item-count.png)
 
 ## AutoComplete with google search result
 
@@ -149,7 +149,7 @@ The Blazor AutoComplete component offers Google-like search suggestions. This fu
 
 {% endhighlight %} 
 
-![Blazor AutoComplete with google search result](./images/filtering/blazor_autocomplete_google-search-result.gif)
+![Blazor AutoComplete with Google Search Result.](./images/filtering/blazor-autocomplete-google-search-result.gif)
 
 ### Highlighting Search character using property
 
@@ -163,7 +163,7 @@ You can highlight the search text in the suggested list items of the autocomplet
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BZLAMLszLyjsCNWA?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-![Blazor AutoComplete with highlight property](./images/filtering/blazor_autocomplete_highlight-property.png)
+![Blazor AutoComplete with Highlight Property](./images/filtering/blazor-autocomplete-highlight-property.png)
 
 ### Highlighting Search character using method
 
@@ -180,6 +180,6 @@ You can highlight the search text in the suggested list items of the autocomplet
 
 {% endhighlight %} 
 
-![Blazor AutoComplete with HighLightSearch method](./images/filtering/blazor_dropdown_highLightSearch-method.png)
+![Blazor AutoComplete with HighLightSearch Method](./images/filtering/blazor-autocomplete-highLightSearch-method.png)
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rthUsLsphSZYvuHw?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
