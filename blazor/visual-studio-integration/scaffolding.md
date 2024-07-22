@@ -49,7 +49,7 @@ N> Before use the Syncfusion Blazor Scaffolding, check whether the Syncfusion Bl
 
         To set up your application with local data, first enter the **Controller/Service name** and then enter the **Razor page name**. Next, select the required **Model class** for the active application and choose the relevant **Data context class**. Finally, click **Next** to continue.
 
-    ![Choose required Model](images/Model_Window_Local.png)
+        ![Choose required Model](images/Model_Window_Local.png)
 
     N> We are introducing Adaptor types in Blazor scaffolding for remote data. 
 
@@ -57,17 +57,19 @@ N> Before use the Syncfusion Blazor Scaffolding, check whether the Syncfusion Bl
 
         To set up your application with remote data, first enter the **Razor page name**, choose the **Adaptor type**, and then enter the valid **URL**. Next, enter the **TValue**. Finally, click **Next** to continue.
 
-    N> In the DataGrid and TreeGrid controls, when selecting the **URL adaptor** in the **Adaptor type**, an additional **Remote service** option will appear. You need to select either the **Localhost URL** or **API URL**.
-        •	If you select the **Localhost URL**, enter the **Controller/Service name**. Then, select the required **Model class** for the active application and choose the relevant **Data context class**. Finally, click **Next** to continue.
-        •	If you select the **API URL**, enter the valid **URL**. Next, enter the **TValue**. Finally, click **Next** to continue.
+        N> In the DataGrid and TreeGrid controls, when selecting the **URL adaptor** in the **Adaptor type**, an additional **Remote service** option will appear. You need to select either the **Localhost URL** or **API URL**.
 
-    ![Choose required Model](images/Model_Window_Remote.png)
+            If you select the **Localhost URL**, enter the **Controller/Service name**. Then, select the required **Model class** for the active application and choose the relevant **Data context class**. Finally, click **Next** to continue.
+        
+            If you select the **API URL**, enter the valid **URL**. Next, enter the **TValue**. Finally, click **Next** to continue.
+        
+        ![Choose required Model](images/Model_Window_Remote.png)
 
-    When using adaptor types in Blazor scaffolding, it's important to note that we provide default adaptor links for sample purposes only. These default links are designed to help you understand how the adaptors work, but they do not perform CRUD (Add, Edit, Update, Delete) operations. Instead, these default links are placeholders to demonstrate the integration process.
+        When using adaptor types in Blazor scaffolding, it's important to note that we provide default adaptor links for sample purposes only. These default links are designed to help you understand how the adaptors work, but they do not perform CRUD (Add, Edit, Update, Delete) operations. Instead, these default links are placeholders to demonstrate the integration process.
 
-    To help you implement CRUD operations, we will provide sample code that you can use as a reference. This code will guide you through the necessary steps to enable CRUD functionality in your application. You can modify and integrate this sample code to suit your specific requirements.
+        To help you implement CRUD operations, we will provide sample code that you can use as a reference. This code will guide you through the necessary steps to enable CRUD functionality in your application. You can modify and integrate this sample code to suit your specific requirements.
 
-    However, if you wish to perform CRUD operations, you need to provide a valid link that handles these operations. This link should point to an endpoint or a service that is capable of managing the database operations required by your application. By providing this link, you ensure that your application can interact with the backend service to perform CRUD operations effectively.
+        However, if you wish to perform CRUD operations, you need to provide a valid link that handles these operations. This link should point to an endpoint or a service that is capable of managing the database operations required by your application. By providing this link, you ensure that your application can interact with the back end service to perform CRUD operations effectively.
 
     For **ServerSide Application**, both Local data and Remote data types will be available.
 
