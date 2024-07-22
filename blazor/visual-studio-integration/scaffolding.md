@@ -31,8 +31,6 @@ N> Before use the Syncfusion Blazor Scaffolding, check whether the Syncfusion Bl
 
     ![Scaffolded add-in from the hosted project](images/Add_scaffold_hosted.png)
 
-    N> Scheduler control is not applicable for Blazor Hosted application.
-
 2. In the **Add New Scaffolded item** dialog, select **Syncfusion Blazor Scaffolder** and then click **‘Add’**.
 
     ![Choose Syncfusion Scaffolding from Visual Studio Add scaffold dialog](images/Syncfusion_scaffolder.png)
