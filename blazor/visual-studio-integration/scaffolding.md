@@ -41,7 +41,7 @@ N> Before use the Syncfusion Blazor Scaffolding, check whether the Syncfusion Bl
 
 4. The Syncfusion UI Scaffolder dialog for the selected control will be displayed. As per the application requirements, follow these steps to set up your application.
 
-    ### Select Data Source Type ###
+### Select Data Source Type
     
     1. **Local Data (default selection)**
 
