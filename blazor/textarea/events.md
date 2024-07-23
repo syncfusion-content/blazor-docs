@@ -54,8 +54,7 @@ The [TextAreaValueChangeEventArgs](https://help.syncfusion.com/cr/blazor/Syncfus
 ```cshtml
 @using Syncfusion.Blazor.Inputs
 
-<SfTextArea ValueChange="@ChangeHandler"></SfTextArea>
-
+<SfTextArea  ValueChange="@ChangeHandler"></SfTextArea>
 @code {
     private void ChangeHandler(TextAreaValueChangeEventArgs args)
     {
@@ -85,7 +84,7 @@ The [TextAreaFocusInEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.
 ## Blur event
 
 The TextArea component triggers the [Blur](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextArea.html#Syncfusion_Blazor_Inputs_SfTextArea_Blur) when the TextArea loses focus. This event allows users to execute specific actions when the user interacts with the TextArea by moving focus away from it.
-The [TextAreaFocusInEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.TextAreaFocusOutEventArgs.html) passed as an argument provides details about the blur event in the TextArea.
+The [TextAreaFocusOutEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.TextAreaFocusOutEventArgs.html) passed as an argument provides details about the blur event in the TextArea.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
@@ -93,7 +92,7 @@ The [TextAreaFocusInEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.
 <SfTextArea Blur="@BlurHandler"></SfTextArea>
 
 @code {
-    private void BlurHandler(TextAreaFocusInEventArgs args)
+    private void BlurHandler(TextAreaFocusOutEventArgs args)
     {
         // Here you can customize your code
     }
