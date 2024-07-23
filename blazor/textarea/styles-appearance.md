@@ -105,7 +105,6 @@ By utilizing the `CssClass` API, users can apply custom CSS classes to the TextA
 {% endhighlight %}
 {% endtabs %}
 
-
 ## Setting the disabled state
 
 To disable the TextArea, you can utilize the [Disabled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextArea.html#Syncfusion_Blazor_Inputs_SfTextArea_Disabled) property. When set to `true`, the TextArea becomes disabled, preventing user interaction. Please find the demo link [here](https://blazor.syncfusion.com/demos/textarea/api?theme=fluent).
