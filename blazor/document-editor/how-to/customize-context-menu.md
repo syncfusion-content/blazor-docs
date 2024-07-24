@@ -61,7 +61,7 @@ The following code shows how to hide default context menu and add custom option 
 
 ```csharp
 <SfDocumentEditorContainer @ref="container" Height="590px">
-    <DocumentEditorContainerEvents Created="OnCreated" ></DocumentEditorContainerEvents>
+    <DocumentEditorContainerEvents Created="OnCreated"></DocumentEditorContainerEvents>
 </SfDocumentEditorContainer>
 
 @code {

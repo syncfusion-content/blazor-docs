@@ -18,7 +18,7 @@ Inject the [`EditorHistory`](https://help.syncfusion.com/cr/blazor/Syncfusion.Bl
 ```cshtml
 @using Syncfusion.Blazor.DocumentEditor
 
-<SfDocumentEditorContainer @ref="container" EnableToolbar=true >
+<SfDocumentEditorContainer @ref="container" EnableToolbar=true>
     <DocumentEditorContainerEvents Created="OnLoad"></DocumentEditorContainerEvents>
 </SfDocumentEditorContainer>
 
