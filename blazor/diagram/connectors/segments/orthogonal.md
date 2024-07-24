@@ -55,7 +55,7 @@ Orthogonal segments are used to create segments that are perpendicular to each o
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Segments/Orthogonal)
 
-The [Length](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.OrthogonalSegment.html#Syncfusion_Blazor_Diagram_OrthogonalSegment_Length) and [Direction](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.OrthogonalSegment.html#Syncfusion_Blazor_Diagram_OrthogonalSegment_Direction)properties allow defining the flow and length of the segment. The following code example illustrates how to create customized orthogonal segments.
+The [Length](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.OrthogonalSegment.html#Syncfusion_Blazor_Diagram_OrthogonalSegment_Length) and [Direction](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.OrthogonalSegment.html#Syncfusion_Blazor_Diagram_OrthogonalSegment_Direction) properties allow defining the flow and length of the segment. The following code example illustrates how to create customized orthogonal segments.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -157,7 +157,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## How to customize Orthogonal Segment Thumb Shape and Style
 
-The [Orthogonal](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ConnectorSegmentType.html#Syncfusion_Blazor_Diagram_ConnectorSegmentType_Orthogonal) connector supports an arbitrary number of segments between its source and target points. By default, these  [Segments](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Connector.html#Syncfusion_Blazor_Diagram_Connector_Segments)  are displayed with a rhombus shape in grey color. You can customize the appearance of these segments using the SegmentThumbSettings property. This property allows you to choose from several predefined shapes and customize their styles. Shapes can be changed only when the InheritSegmentThumbShape enum is added to connector constriants. The following predefined shapes are provided:
+The [Orthogonal](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ConnectorSegmentType.html#Syncfusion_Blazor_Diagram_ConnectorSegmentType_Orthogonal) connector supports an arbitrary number of segments between its source and target points. By default, these  [Segments](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Connector.html#Syncfusion_Blazor_Diagram_Connector_Segments)  are displayed with a rhombus shape in Grey color. You can customize the appearance of these segments using the SegmentThumbSettings property. This property allows you to choose from several predefined shapes and customize their styles. Shapes can be changed only when the InheritSegmentThumbShape enum is added to connector constraints. The following predefined shapes are provided:
 
 | Shape name | Shape |
 |-------- | -------- |
