@@ -30,7 +30,7 @@ Syncfusion provides Blazor Mac installer for both evaluation and paid customers.
 
    ![Start Trial download](images/start-trial-download-installer.png)
 
-6. Click the More Download Options (element 2 in the above screenshot) button to get the Essential Studio Blazor Offline trial installer which is available in PKG format.
+6. Click the More Download Options (element 2 in the above screenshot) button to get the Essential Studio Blazor Offline trial installer which is available in DMG format.
 
    ![Trial Downlaod Offline Installer](images/blazor_mac.png)
 
@@ -66,7 +66,7 @@ You should initiate an evaluation if you have already obtained our components th
 
 4. Unlock key is not required to install the Syncfusion Blazor Mac trial installer.
 
-5. For Mac OS, PKG formats is available for download.
+5. For Mac OS, DMG formats is available for download.
 
    ![License Download Installer](images/blazor_mac.png)
 
