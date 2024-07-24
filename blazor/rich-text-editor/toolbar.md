@@ -11,7 +11,7 @@ documentation: ug
 
 The Rich Text Editor toolbar contains a collection of tools such as bold, Italic, and text alignment buttons that are used to format the content.
 
-You can customize the toolbar configurations by usig the [RichTextEditorToolbarSettings.Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorToolbarSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorToolbarSettings_Type) property. The types of toolbar are:
+You can customize the toolbar configurations by using the [RichTextEditorToolbarSettings.Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorToolbarSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorToolbarSettings_Type) property. The types of toolbar are:
 
 1. Expand
 2. MultiRow
@@ -91,6 +91,7 @@ The Rich text editor has quick toolbars that are open as context-menu on clickin
 | [Table](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.TableToolbarCommand.html#fields) | TableHeader, TableRows, TableColumns, BackgroundColor, TableRemove, Alignments, TableCellVerticalAlign, Styles |
 | [Audio](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.AudioToolbarCommand.html#fields) | AudioReplace, AudioRemove, AudioLayoutOption |
 | [Video](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.VideoToolbarCommand.html#fields) | VideoReplace, VideoAlign, VideoRemove, VideoLayoutOption, VideoDimension |
+| [Text](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.VideoToolbarCommand.html#fields) |No Default item have it and it support the all toolbar items |
 
 ### Image quick Toolbar
 
@@ -204,6 +205,62 @@ The Rich Text Editor allows you to customize the inserted video by using the [Ri
 ![Blazor RichTextEditor video quick toolbar](./images/blazor-richtexteditor-quick-toolbar-video.png)
 
 N> You can refer to our [Blazor Rich Text Editor](https://www.syncfusion.com/blazor-components/blazor-wysiwyg-rich-text-editor) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Rich Text Editor](https://blazor.syncfusion.com/demos/rich-text-editor/overview?theme=bootstrap4) example to knows how to render and configure the rich text editor tools.
+
+### Text quick Toolbar
+
+By activating the "RichTextEditorQuickToolbarSettings.Text" property, the Rich Text Editor offers the ability to display a quick toolbar when needed. The floating toolbar shows up when you select or focus on editable text. By modifying the "RichTextEditorQuickToolbarSettings.Text" property, the commands shown in the text quick toolbar can be changed.
+
+{% tabs %}
+{% highlight razor %}
+
+private List<ToolbarItemModel> textQuickToolbarItems = new List<ToolbarItemModel>()
+    {
+        new ToolbarItemModel() { Command = ToolbarCommand.Bold },
+        new ToolbarItemModel() { Command = ToolbarCommand.Italic },
+        new ToolbarItemModel() { Command = ToolbarCommand.Underline },
+        new ToolbarItemModel() { Command = ToolbarCommand.FontColor },
+        new ToolbarItemModel() { Command = ToolbarCommand.BackgroundColor },
+        new ToolbarItemModel() { Command = ToolbarCommand.HorizontalSeparator },
+        new ToolbarItemModel() { Command = ToolbarCommand.Alignments },
+        new ToolbarItemModel() { Command = ToolbarCommand.Formats },
+        new ToolbarItemModel() { Command = ToolbarCommand.NumberFormatList },
+        new ToolbarItemModel() { Command = ToolbarCommand.BulletFormatList }
+    };
+
+{% endhighlight %}
+{% endtabs %}
+
+Refer the following link for more items in the text quick toolbar.
+https://blazor.syncfusion.com/documentation/rich-text-editor/tools/built-in-tools
+
+{% tabs %}
+{% highlight razor %}
+
+<SfRichTextEditor>
+    <RichTextEditorQuickToolbarSettings Text="@TextQuickToolbarItems"></RichTextEditorQuickToolbarSettings>
+    <p>The Rich Text Editor component is WYSIWYG ('what you see is what you get') editor that provides the best user experience to create and update the content. Users can format their content using standard toolbar commands.</p>
+</SfRichTextEditor>
+
+@code {
+    private List<ToolbarItemModel> TextQuickToolbarItems = new List<ToolbarItemModel>()
+    {
+        new ToolbarItemModel() { Command = ToolbarCommand.Bold },
+        new ToolbarItemModel() { Command = ToolbarCommand.Italic },
+        new ToolbarItemModel() { Command = ToolbarCommand.Underline },
+        new ToolbarItemModel() { Command = ToolbarCommand.FontColor },
+        new ToolbarItemModel() { Command = ToolbarCommand.BackgroundColor },
+        new ToolbarItemModel() { Command = ToolbarCommand.HorizontalSeparator },
+        new ToolbarItemModel() { Command = ToolbarCommand.Alignments },
+        new ToolbarItemModel() { Command = ToolbarCommand.Formats },
+        new ToolbarItemModel() { Command = ToolbarCommand.NumberFormatList },
+        new ToolbarItemModel() { Command = ToolbarCommand.BulletFormatList }
+    };
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Blazor RichTextEditor removed default toolbar items](./images/blazor-richtexteditor-text-quick-toolbar.png)
 
 ## See also
 

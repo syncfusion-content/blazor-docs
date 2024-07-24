@@ -485,7 +485,6 @@ The argument passed to the [OnActionFailure](https://help.syncfusion.com/cr/blaz
 
 N> We recommend you bind the `OnActionFailure` event during your application development phase, this helps you to find any exceptions. You can pass these exception details to our support team to get a solution as early as possible.
 
-
 The following sample code demonstrates how to notify the user when a server-side exception occurs during a data operation:
 
 {% tabs %}
