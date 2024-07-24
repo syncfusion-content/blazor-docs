@@ -19,8 +19,8 @@ The Essential Studio Blazor Mac installer allows you to create the Blazor applic
      
    If you receive this alert, follow the below steps for the easiest solution.   
 
-   1.	Right-click the downloaded pkg file.
-   2.	Select the "Open With" option and choose "Installer (Default)". The following pop-up appears.
+   1.	Right-click the downloaded dmg file.
+   2.	Select the "Open With" option and choose "DiskImageMounter (Default)". The following pop-up appears.
    
 		![pop-up Image](images/Mac_Catalina_MacOS_Alert2.png)
    
@@ -30,44 +30,32 @@ The Essential Studio Blazor Mac installer allows you to create the Blazor applic
 
 The steps below show how to install the Essential Studio Blazor Mac installer.
 
-1. Open Syncfusion Essential Studio Blazor Mac Installer(.pkg) file. The Installer Wizard opens. Click Continue.
+1. Locate the downloaded dmg file and open the file by double click on it.
 
-   ![Installer Wizard](images/Mac_installer_1.PNG)
+   ![Installer Wizard](images/Mac_Installer1.png)
 
-2. The Software License Agreement wizard will appear. Click the Continue button.
+2. This action will automatically mount the disk image and create a virtual drive on your desktop or in the Finder sidebar.
 
-   ![Software License Agreement Wizard](images/Mac_installer_2.PNG)
+   ![Software License Agreement Wizard](images/Mac_Installer2.png)
 
-3. The License Agreement’s Confirmation window will appear. If you have read the Software License Agreement, click Agree.
+3. Copy the mounted disk file.
 
-   ![License Agreements Confirmation](images/Mac_installer_3.PNG)
+   ![License Agreements Confirmation](images/Mac_Installer3.png)
 
    N> The Unlock key is not required to install the Essential Studio Blazor Mac installer.
 
-4. The Destination select wizard will appear. You can choose which disc to install the Syncfusion Essential Studio for Blazor installer on here.
+4. And paste it in “Applications” folder shortcut.
 
-   ![Destination select wizard](images/Mac_installer_4.PNG)
+   ![Destination select wizard](images/Mac_Installer4.png)
 
-5. The Installation Type wizard will appear. Click Install to begin the standard installation of the Syncfusion Essential Studio Blazor Mac installer.
+5. Now you can open the folder to explore the Syncfusion Essential Studio Mac installer.
 
-   ![Installation Type wizard](images/Mac_installer_5.PNG)
+   ![Installation Type wizard](images/Mac_Installer5.png)
 
-6. The Authentication window will appear. To begin the installation, enter the Mac machine’s password and click Install Software.
+6. To remove the DMG file, Right-click on the virtual drive on your desktop or in the Finder sidebar and select “Eject.” Also delete the folder from the Applications.
 
-   ![Authentication window](images/Mac_installer_6.PNG)
+   ![Authentication window](images/Mac_Installer6.png)
 
-7. The installation process will begin on your machine.
-
-   ![Installation process](images/Mac_installer_7.PNG)
-
-8. Once the installation is complete, the completed screen will be displayed. To exit the installation wizard, click Close.
-
-   ![Installation complete](images/Mac_installer_8.PNG)
-
-   By default, Mac installer will install the files in following location.
-   Location: {Documents}/Syncfusion/{version}/Blazor
-
-   ![Installation complete](images/install_location.PNG)
 
 ## License key registration in samples
 
