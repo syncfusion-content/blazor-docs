@@ -35,7 +35,7 @@ This package contains the base component, common classes, common functionalities
 <a href="https://www.nuget.org/packages/Syncfusion.Blazor.Core/">Syncfusion.Blazor.Core</a>
 </td>
 <td>
-Common
+Common, Base
 </td>
 <td>
 <ul>
