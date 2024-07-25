@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with Blazor GanttChart Component in WebApp | Syncfusion
+title: Getting Started with Blazor GanttChart in WebApp | Syncfusion
 description: Checkout and learn about the documentation for getting started with Blazor Gantt Chart Component in Web App, its elements and more.
 platform: Blazor
 component: Gantt Chart
