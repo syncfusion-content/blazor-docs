@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Migration from PDF Viewer to PDF Viewer (NextGen) control | Syncfusion
-description: This section explains the features available in the PDF Viewer (NextGen) control over PDF Viewer.
+title: Migration from PDF Viewer to PDF Viewer (NextGen) Control | Syncfusion
+description: Learn here all about the features available in the PDF Viewer (NextGen) control over PDF Viewer, its elements, and more.
 platform: Blazor
 control: SfPdfViewer
 documentation: ug
