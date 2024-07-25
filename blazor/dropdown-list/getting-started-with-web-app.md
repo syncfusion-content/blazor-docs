@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with Blazor DropDown List in Web App | Syncfusion
-description: Checkout and learn about the documentation for getting started with Blazor DropDown List Component in Blazor Web App.
+description: Checkout and learn about the documentation for getting started with Blazor DropDown List component, its elements, and more.
 platform: Blazor
 component: DropDown List
 documentation: ug
@@ -17,7 +17,7 @@ This section briefly explains about how to include [Blazor DropDown List](https:
 
 ## Create a new Blazor Web App
 
-You can create a **Blazor Web App** using Visual Studio 2022 via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0) or the [Syncfusion Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
+You can create a **Blazor Web App** using Visual Studio 2022 via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0&pivots=vs) or the [Syncfusion Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
 
 You need to configure the corresponding [Interactive render mode](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-8.0#render-modes) and [Interactivity location](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0&pivots=windows) while creating a Blazor Web Application.
 
