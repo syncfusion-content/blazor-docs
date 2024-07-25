@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with Blazor File Upload Component | Syncfusion
-description: Checkout and learn about getting started with Blazor File Upload component in Blazor Server App and Blazor WebAssembly App.
+description: Checkout and learn about getting started with Blazor File Upload component in Server and WebAssembly App, its elements, and more.
 platform: Blazor
 control: File Upload
 documentation: ug
