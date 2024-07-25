@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Stared with Blazor File Upload in WebAssembly | Syncfusion
-description: Checkout and learn about getting started with Blazor WebAssembly App and Blazor File Upload Component in Visual Studio and much more.
+description: Checkout and learn about getting started with WebAssembly App and Blazor File Upload Component in Visual Studio, its elements, and more.
 platform: Blazor
 control: File Upload
 documentation: ug
@@ -17,7 +17,7 @@ This article provides a step-by-step instructions for building Blazor WebAssembl
 
 ## Create a Blazor WebAssembly App in Visual Studio
 
-You can create a **Blazor WebAssembly App** using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0) or the [Syncfusion Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
+You can create a **Blazor WebAssembly App** using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0&pivots=vs) or the [Syncfusion Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
 
 ## Install Syncfusion Blazor Inputs and Themes NuGet in the App
 
