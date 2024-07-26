@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Columns in Blazor Tree Grid Component | Syncfusion
-description: Checkout and learn here all about columns in Syncfusion Blazor Tree Grid component and much more details.
+description: Check out and learn here all about columns in Syncfusion Blazor Tree Grid component, its elements and more.
 platform: Blazor
 control: Tree Grid
 documentation: ug
