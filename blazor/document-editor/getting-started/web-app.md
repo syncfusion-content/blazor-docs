@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with Blazor DocumentEditor in Web App | Syncfusion
-description: Checkout and learn about the documentation for getting started with Blazor DocumentEditor component, its elements and more.
+description: Checkout and learn about the documentation for getting started with Blazor Document Editor component, its elements, and more.
 platform: Blazor
 component: DocumentEditor
 documentation: ug

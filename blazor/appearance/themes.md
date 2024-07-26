@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Built-in-themes in Blazor Component | Syncfusion
-description: Learn here all about how to check out the documentation for built-in-themes in Blazor and it's elements.
+description: Learn here all about how to check out the documentation for built-in-themes in Blazor, its elements, and more.
 platform: Blazor
 component: Appearance
 documentation: ug
