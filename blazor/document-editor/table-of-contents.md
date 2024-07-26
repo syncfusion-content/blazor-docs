@@ -37,7 +37,7 @@ await editor.Editor.InsertTableOfContentsAsync(tableOfContentsSettings);
 ```
 
 ```cshtml
-@using Syncfusion.Blazor.DocumentEditor
+@using Syncfusion.Blazor.DocumentEditor;
 
 <SfDocumentEditorContainer @ref="container" EnableToolbar=true>
     <DocumentEditorContainerEvents Created="OnLoad"></DocumentEditorContainerEvents>

@@ -9,7 +9,7 @@ documentation: ug
 
 # Add/Remove Items in Blazor ListBox Component
 
-To add an item or multiple items, `AddItem` method can be used. In the following example, the `Ferrari LaFerrari` and `McLaren P1` items will be added while clicking `Add Items` button.
+To add an item or multiple items, [AddItemsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_AddItemsAsync_System_Collections_Generic_IEnumerable__0__System_Nullable_System_Int32__) method can be used. In the following example, the `Ferrari LaFerrari` and `McLaren P1` items will be added while clicking `Add Items` button.
 
 ```cshtml
 @using Syncfusion.Blazor.DropDowns
