@@ -19,7 +19,7 @@ margin-top: 1.5em;     margin-bottom: 1.5em;
 
 # Syncfusion license key validation in CI services
 
-Syncfusion license key validation in CI services ensures that Syncfusion Essential Studio components are properly licensed during CI processes, Validating the license key at the CI level can prevent licensing errors during deployment. The following section shows how to validate the Syncfusion license key in CI services.
+Syncfusion license key validation in CI services ensures that Syncfusion Essential Studio components are properly licensed during CI processes. Validating the license key at the CI level can prevent licensing errors during deployment. The following section shows how to validate the Syncfusion license key in CI services.
 
 * Download and extract the LicenseKeyValidator.zip utility from the following link: [LicenseKeyValidator](https://s3.amazonaws.com/files2.syncfusion.com/Installs/LicenseKeyValidation/LicenseKeyValidator.zip).
 
@@ -107,7 +107,7 @@ pipeline {
 
 * Register the license key properly by calling RegisterLicense("License Key") method with the license key. 
 
-* Once the license key is registered, It can be validated by using ValidateLicense("Platform.Blazor") method. This ensures that the license key is valid for the platform and version you are using. For reference please check the following example.
+* Once the license key is registered, it can be validated by using ValidateLicense("Platform.Blazor") method. This ensures that the license key is valid for the platform and version you are using. For reference please check the following example.
 
 ![LicenseKeyValidationMethod](images/license-validation-method.png)
 
@@ -115,6 +115,3 @@ pipeline {
 
 * If ValidateLicense() method returns false, there will be invalid license errors in deployment due to either an invalid license key or an incorrect assembly or package version that is referenced in the project. Please ensure that all the referenced Syncfusion assemblies or NuGet packages are all on the same version as the license key’s version before deployment.
 
-## See also
-
-* [Licensing FAQ](https://help.syncfusion.com/common/essential-studio/licensing/overview/)
