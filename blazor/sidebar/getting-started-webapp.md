@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting started with Syncfusion Sidebar Component in Blazor Web App
-description: Check out the documentation for getting started with Syncfusion Blazor Sidebar Components in Blazor Web App.
+title: Getting started with Blazor Sidebar in Web App | Syncfusion
+description: Learn here all about the documentation for getting started with Syncfusion Blazor Sidebar Components in Web App, its elements, and more.
 platform: Blazor
 control: Sidebar
 documentation: ug
@@ -17,7 +17,7 @@ This section briefly explains about how to include [Blazor Sidebar](https://www.
 
 ## Create a new Blazor Web App
 
-You can create a **Blazor Web App** using Visual Studio 2022 via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0) or the [Syncfusion Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
+You can create a **Blazor Web App** using Visual Studio 2022 via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0&pivots=vs) or the [Syncfusion Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
 
 You need to configure the corresponding [Interactive render mode](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-8.0#render-modes) and [Interactivity location](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0&pivots=windows) while creating a Blazor Web Application.
 
