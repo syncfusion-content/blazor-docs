@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Filtering in Blazor Tree Grid Component | Syncfusion
-description: Checkout and learn here all about filtering in Syncfusion Blazor Tree Grid component and much more details.
+description: Check out and learn here all about filtering in Syncfusion Blazor Tree Grid component, its elements, and more.
 platform: Blazor
 control: Tree Grid
 documentation: ug
