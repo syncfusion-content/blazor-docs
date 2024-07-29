@@ -551,9 +551,13 @@ On remote data binding, all tree grid actions such as paging, loading child on-d
 
 ### LoadChildOnDemand
 
-Tree Grid provides option to load the child records also during the initial rendering itself for remote data binding by setting the [LoadChildOnDemand](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_LoadChildOnDemand)  as `true`.
+The Tree Grid component provides option to load child records during the initial rendering itself when using remote data binding by setting [LoadChildOnDemand](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_LoadChildOnDemand)  to `true`.The behavior of the [LoadChildOnDemand](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_LoadChildOnDemand) feature of Tree Grid described below.
 
-When the [LoadChildOnDemand](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_LoadChildOnDemand) is enabled parent records are rendered in expanded state.
+*The parent records are rendered in an expanded state. 
+
+*Child records are loaded along with the parent records during the initial rendering.
+
+This feature is particularly useful for applications that require hierarchical data to be readily accessible without additional user interaction for expanding nodes.
 
 The following code example describes the behavior of the `LoadChildOnDemand` feature of Tree Grid.
 
@@ -793,6 +797,9 @@ namespace WebAPI.Controller
 {% endhighlight %}
 
 {% endtabs %}
+
+N> The LoadChildOnDemand feature is not applicable for local data binding.
+
 
 <!-- Custom Adaptor
 
