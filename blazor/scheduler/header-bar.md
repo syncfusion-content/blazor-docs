@@ -13,7 +13,7 @@ The header part of Scheduler can be customized easily with the built-in options 
 
 ## Show or Hide header bar
 
-By default, the header bar holds the date and view navigation options, through which the user can switch between the dates and various views. This header bar can be hidden from the UI by setting `false` to the `ShowHeaderBar` property. It's default value is `true`.
+By default, the header bar holds the date and view navigation options, through which the user can switch between the dates and various views. This header bar can be hidden from the UI by setting `false` to the [`ShowHeaderBar`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_ShowHeaderBar) property. It's default value is `true`.
 
 ```cshtml
 @using Syncfusion.Blazor.Schedule
@@ -50,7 +50,7 @@ By default, the header bar holds the date and view navigation options, through w
 
 ## How to display the view options within the header bar popup
 
-By default, the header bar holds the view navigation options, through which the user can switch between various views. You can move this view options to the header bar popup by setting `true` to the `EnableAdaptiveUI` property.
+By default, the header bar holds the view navigation options, through which the user can switch between various views. You can move this view options to the header bar popup by setting `true` to the [`EnableAdaptiveUI`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_EnableAdaptiveUI) property.
 
 ```cshtml
 @using Syncfusion.Blazor.Schedule
@@ -96,7 +96,7 @@ N> Refer [here](./resources#adaptive-ui-in-desktop) to know more about adaptive 
 
 ## Date header customization
 
-The Scheduler UI that displays the date text on all views are considered as the date header cells. You can customize the date header cells of Scheduler using `DateHeaderTemplate`. The `DateHeaderTemplate` option is used to customize the date header cells of day, week and work-week views.
+The Scheduler UI that displays the date text on all views are considered as the date header cells. You can customize the date header cells of Scheduler using [`DateHeaderTemplate`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleTemplates.html#Syncfusion_Blazor_Schedule_ScheduleTemplates_DateRangeTemplate ). The [`DateHeaderTemplate`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleTemplates.html#Syncfusion_Blazor_Schedule_ScheduleTemplates_DateRangeTemplate) option is used to customize the date header cells of day, week and work-week views.
 
 ```cshtml
 @using Syncfusion.Blazor.Schedule
@@ -193,7 +193,7 @@ The Scheduler UI that displays the date text on all views are considered as the 
 
 ### Customization using OnRenderCell event
 
-The date header can be customized by using `OnRenderCell` event. In the `OnRenderCell`, the argument `RenderCellEventArgs` returns the `ElementType` as `DateHeader` when the date header is rendering.
+The date header can be customized by using [`OnRenderCell`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleEvents-1.html#Syncfusion_Blazor_Schedule_ScheduleEvents_1_OnRenderCell) event. In the [`OnRenderCell`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleEvents-1.html#Syncfusion_Blazor_Schedule_ScheduleEvents_1_OnRenderCell), the argument `RenderCellEventArgs` returns the `ElementType` as `DateHeader` when the date header is rendering.
 
 ```cshtml
 @using Syncfusion.Blazor.Schedule
@@ -248,7 +248,7 @@ The date header can be customized by using `OnRenderCell` event. In the `OnRende
 
 ## TimelineYear header customization
 
-The day header cells and month header cells can be customized in the TimelineYear view of the Scheduler using `DayHeaderTemplate` and `MonthHeaderTemplate`. The `DayHeaderTemplate` option is used to customize the day header cells of the TimelineYear view in both Vertical and Horizontal orientations. The `MonthHeaderTemplate` option is used to customize the month header cells of the TimelineYear view in both Vertical and Horizontal orientations.
+The day header cells and month header cells can be customized in the TimelineYear view of the Scheduler using [`DayHeaderTemplate`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleTemplates.html#Syncfusion_Blazor_Schedule_ScheduleTemplates_DayHeaderTemplate) and [`MonthHeaderTemplate`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleTemplates.html#Syncfusion_Blazor_Schedule_ScheduleTemplates_MonthHeaderTemplate). The [`DayHeaderTemplate`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleTemplates.html#Syncfusion_Blazor_Schedule_ScheduleTemplates_DayHeaderTemplate) option is used to customize the day header cells of the TimelineYear view in both Vertical and Horizontal orientations. The [`MonthHeaderTemplate`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleTemplates.html#Syncfusion_Blazor_Schedule_ScheduleTemplates_MonthHeaderTemplate) option is used to customize the month header cells of the TimelineYear view in both Vertical and Horizontal orientations.
 
 ```cshtml
 @using Syncfusion.Blazor.Schedule
@@ -310,7 +310,7 @@ The day header cells and month header cells can be customized in the TimelineYea
 
 ## Customizing header indent cells
 
-It is possible to customize the header indent cells using the `HeaderIndentTemplate` option and change the look and appearance in both the vertical and timeline views. In vertical views, the header indent cells can be customized at the hierarchy level and the resource header left indent cell can be customized in timeline views using the template option.
+It is possible to customize the header indent cells using the [`HeaderIndentTemplate`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleTemplates.html#Syncfusion_Blazor_Schedule_ScheduleTemplates_HeaderIndentTemplate) option and change the look and appearance in both the vertical and timeline views. In vertical views, the header indent cells can be customized at the hierarchy level and the resource header left indent cell can be customized in timeline views using the template option.
 
 **Example:** To customize the header left indent cell to display resources text, refer to the below code example.
 

@@ -9,7 +9,7 @@ documentation: ug
 
 # Timeline Header Rows in Blazor Scheduler Component
 
-The Timeline views can have additional header rows other than its default date and time header rows. It is possible to show individual header rows for displaying year, month and week separately using the `ScheduleHeaderRow` which is applicable only on the timeline views. The possible rows which can be added using `ScheduleHeaderRow` are as follows.
+The Timeline views can have additional header rows other than its default date and time header rows. It is possible to show individual header rows for displaying year, month and week separately using the [`ScheduleHeaderRow`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleHeaderRows.html) which is applicable only on the timeline views. The possible rows which can be added using [`ScheduleHeaderRow`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleHeaderRows.html) are as follows.
 
 * `Year`
 * `Month`
@@ -61,7 +61,7 @@ N> The `Hour` row is not applicable for Timeline month view.
 
 ## Display year and month rows in timeline views
 
-To display the timeline Scheduler simply with year and month names alone, define the option `Year` and `Month` within the `ScheduleHeaderRow` property.
+To display the timeline Scheduler simply with year and month names alone, define the option `Year` and `Month` within the [`ScheduleHeaderRow`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleHeaderRows.html) property.
 
 ```cshtml
 @using Syncfusion.Blazor.Schedule
@@ -96,7 +96,7 @@ To display the timeline Scheduler simply with year and month names alone, define
 
 ## Display week numbers in timeline views
 
-The week number can be displayed in a separate header row of the timeline Scheduler by setting `Week` option within `ScheduleHeaderRow` property.
+The week number can be displayed in a separate header row of the timeline Scheduler by setting `Week` option within [`ScheduleHeaderRow`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleHeaderRows.html) property.
 
 ```cshtml
 @using Syncfusion.Blazor.Schedule
@@ -133,7 +133,7 @@ The week number can be displayed in a separate header row of the timeline Schedu
 
 ## Timeline view displaying dates of a complete year
 
-It is possible to display a complete year in a timeline view by setting `Interval` value as 12 and defining **TimelineMonth** view option within the `ScheduleView` tag helper.
+It is possible to display a complete year in a timeline view by setting `Interval` value as 12 and defining **TimelineMonth** view option within the [`ScheduleView`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleViews.html) tag helper.
 
 ```cshtml
 @using Syncfusion.Blazor.Schedule
@@ -168,7 +168,7 @@ It is possible to display a complete year in a timeline view by setting `Interva
 
 ## Customizing the header rows using template
 
-The text of the header rows can be customized and display any images or format text on each individual header rows using the built-in `Template` option available within the `ScheduleHeaderRow`.
+The text of the header rows can be customized and display any images or format text on each individual header rows using the built-in [`Template`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleHeaderRow.html#Syncfusion_Blazor_Schedule_ScheduleHeaderRow_Template) option available within the [`ScheduleHeaderRow`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleHeaderRow.html).
 
 ```cshtml
 @using Syncfusion.Blazor.Schedule
