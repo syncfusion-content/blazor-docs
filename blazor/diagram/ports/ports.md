@@ -434,11 +434,7 @@ The following code example how to set connection direction to port.
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Ports/ActionofPorts/PortDirection)
 
-**Before ConnectionDirection**
-![Before Set ConnectionDirection](../images/BeforeConnectionDirection.png)
-
-**After ConnectionDirection**
-![After Set ConnectionDirection](../images/AfterConnectionDirection.png)
+![Port Connection Direction](../images/PortDirection.gif)
 
 ## How to get InEdges and OutEdges of ports
 
