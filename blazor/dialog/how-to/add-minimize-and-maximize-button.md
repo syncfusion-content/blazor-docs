@@ -33,7 +33,6 @@ Blazor Dialog allows end users to either minimize or maximize the Dialog compone
             {
                 <span class="e-icons sf-icon-Restore" title="Restore" @onclick="@maximize"></span>
             }
-
             @if (!IsMinimized)
             {
                 <span class="e-icons sf-icon-Minimize" title="Minimize" @onclick="@minimize"></span>
@@ -42,7 +41,6 @@ Blazor Dialog allows end users to either minimize or maximize the Dialog compone
             {
                 <span class="e-icons sf-icon-Restore" title="Restore" @onclick="@minimize"></span>
             }
-
         </Header>
         <Content>
             <p>This is a dialog with minimize and maximize buttons</p>
@@ -59,40 +57,40 @@ Blazor Dialog allows end users to either minimize or maximize the Dialog compone
         width: auto;
     }
 
-        .e-dialog .e-dlg-header .e-icons.sf-icon-Maximize::before,
-        .e-dialog .e-dlg-header .e-icons.sf-icon-Minimize::before,
-        .e-dialog .e-dlg-header .e-icons.sf-icon-Restore::before {
-            position: relative;
-        }
+    .e-dialog .e-dlg-header .e-icons.sf-icon-Maximize::before,
+    .e-dialog .e-dlg-header .e-icons.sf-icon-Minimize::before,
+    .e-dialog .e-dlg-header .e-icons.sf-icon-Restore::before {
+        position: relative;
+    }
 
-        .e-dialog .e-dlg-header .e-icons.sf-icon-Minimize,
-        .e-dialog .e-dlg-header .e-icons.sf-icon-Maximize,
-        .e-dialog .e-dlg-header .e-icons.sf-icon-Restore {
-            font-size: 12px;
-            width: 30px;
-            height: 30px;
-            line-height: 16px;
-            float: right;
-            position: relative;
-            text-align: center;
-            cursor: pointer;
-            color: grey;
-        }
+    .e-dialog .e-dlg-header .e-icons.sf-icon-Minimize,
+    .e-dialog .e-dlg-header .e-icons.sf-icon-Maximize,
+    .e-dialog .e-dlg-header .e-icons.sf-icon-Restore {
+        font-size: 12px;
+        width: 30px;
+        height: 30px;
+        line-height: 16px;
+        float: right;
+        position: relative;
+        text-align: center;
+        cursor: pointer;
+        color: grey;
+    }
 
-            .e-dialog .e-dlg-header .e-icons.sf-icon-Minimize:hover, .e-dialog .e-dlg-header .e-icons.sf-icon-Maximize:hover,
-            .e-dialog .e-dlg-header .e-icons.sf-icon-Restore:hover {
-                /*    background-color: #e0e0e0;
-                  border-color: transparent;
-                  box-shadow: 0 0 0 transparent;
-                  border-radius: 50%;*/
-                color: black;
-            }
+    .e-dialog .e-dlg-header .e-icons.sf-icon-Minimize:hover, .e-dialog .e-dlg-header .e-icons.sf-icon-Maximize:hover,
+    .e-dialog .e-dlg-header .e-icons.sf-icon-Restore:hover {
+        /*    background-color: #e0e0e0;
+            border-color: transparent;
+            box-shadow: 0 0 0 transparent;
+            border-radius: 50%;*/
+        color: black;
+    }
 
-        .e-dialog .e-dlg-header .e-icons.sf-icon-Minimize,
-        .e-dialog .e-dlg-header .e-icons.sf-icon-Restore {
-            padding-left: 5px;
-            padding-right: 5px;
-        }
+    .e-dialog .e-dlg-header .e-icons.sf-icon-Minimize,
+    .e-dialog .e-dlg-header .e-icons.sf-icon-Restore {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
 
     .e-dialog .e-dlg-header {
         position: relative;
@@ -158,7 +156,6 @@ Blazor Dialog allows end users to either minimize or maximize the Dialog compone
     private SfDialog DialogObj;
     private bool IsVisible { get; set; } = false;
     public string dialogClass = "";
-
     private void OpenDialog() => IsVisible = true;
     private void CloseDialog() => IsVisible = false;
 
@@ -184,7 +181,6 @@ Blazor Dialog allows end users to either minimize or maximize the Dialog compone
 
 
 {% endhighlight %}
-
 {% highlight cshtml tabtitle="Host.cshtml" hl_lines="4" %}
 
  <script>
