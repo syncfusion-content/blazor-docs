@@ -13,7 +13,7 @@ Syncfusion Blazor Components is a modern enterprise native UI components library
 
 ## How to best read this user guide
 
-* The best way to get started would be to read the "Getting Started" section of the documentation for the component that you would like to start using first. The `Getting Started` gives information that is to known before starting to write code. This is the only section that is recommended to be read end-to-end before starting to write code, all other information can be referred to as needed.
+* The best way to get started would be to read the "Getting Started" section of the documentation for the component that you would like to start using first. The `Getting Started` gives information that is to be known before starting to write code. This is the only section that is recommended to be read end-to-end before starting to write code, all other information can be referred to as needed.
 
 * After being familiar with the basics of using the component, the next step would be to start integrating the component into the application. A good starting point would be to refer to the code snippets in the [online sample browser](https://blazor.syncfusion.com/demos/) which contains hundreds of code samples, you will likely find a code sample that resembles your intended usage scenario.
 
