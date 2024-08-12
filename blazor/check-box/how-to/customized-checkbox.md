@@ -78,7 +78,7 @@ The background and border color of the Checkbox is customized through the custom
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BZVKshBQrJbnEQzO?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-![Customizing Appearance of Blazor CheckBox](./../images/blazor-checkbox-appearance-customization.png)
+![Customizing appearance of Blazor CheckBox.](./../images/blazor-checkbox-appearance-customization.png)
 
 ## Customize width and height
 
@@ -121,7 +121,7 @@ The following section explains about how to customize the height and width of th
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BtrUWLLGVTFECslm?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-![Customizing Height and Width of Blazor CheckBox](./../images/blazor-checkbox-height-width-customization.png)
+![Customizing height and width of Blazor CheckBox.](./../images/blazor-checkbox-height-width-customization.png)
 
 ## Custom frame
 
@@ -180,7 +180,7 @@ In the following example, to-do list is displayed with round checkbox by changin
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BZrgirhGhJYCyqDJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-![Customizing Blazor CheckBox Frame](./../images/blazor-checkbox-frame-customization.png)
+![Customizing frame in Blazor CheckBox.](./../images/blazor-checkbox-frame-customization.png)
 
 ## Custom check icon
 
@@ -230,4 +230,4 @@ In the following example, the check icon can be customized by changing check ico
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rjBgWrLGrpkSQSUL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-![Customizing Check Icon in Blazor CheckBox](./../images/blazor-checkbox-check-icon-customization.png)
+![Customizing check icon in Blazor CheckBox.](./../images/blazor-checkbox-check-icon-customization.png)
