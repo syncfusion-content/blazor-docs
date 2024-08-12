@@ -37,8 +37,8 @@ The following example code illustrates how to show/hide the revisions pane.
     SfDocumentEditorContainer container;
     public async void OnLoad(object args)
     {
-        container.DocumentEditor.ShowRevisions=true;
-        container.DocumentEditor.ShowRevisions=false;
+        container.DocumentEditor.ShowRevisions=true; // To show revisions pane
+        container.DocumentEditor.ShowRevisions=false; // To hide revisions pane
     }
 }
 

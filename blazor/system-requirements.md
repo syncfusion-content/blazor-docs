@@ -38,3 +38,5 @@ If you are planning to use Visual Studio to develop Blazor Applications.
 * .NET 8.0 requires Visual Studio 2022 17.8.0 or later.
 * .NET 7.0 requires Visual Studio 2022 17.4.3 or later.
 * .NET 6.0 requires Visual Studio 2022 17.0 Preview 4.1 or later.
+
+N> [WASM workload](https://learn.microsoft.com/en-us/aspnet/core/blazor/webassembly-build-tools-and-aot?view=aspnetcore-8.0#net-webassembly-build-tools) is necessary for the [WASM PDF Viewer (NextGen)](https://blazor.syncfusion.com/documentation/pdfviewer-2/getting-started/web-assembly-application#prerequisites) component. 
