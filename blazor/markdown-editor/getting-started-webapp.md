@@ -251,8 +251,6 @@ The Rich Text Editor component is a WYSIWYG (What You See Is What You Get) edito
 - Supports third-party library integration
 - Allows preview of modified content before saving it
 
-![Logo](https://cdn.syncfusion.com/ej2/richtexteditor-resources/RTE-Portrait.png){:style="width: 300px; height: 300px; transform: rotate(0deg);"}
-
 <RichTextEditorToolbarSettings Items="@Tools" />
 <RichTextEditorQuickToolbarSettings Image="@Image" Link="@Link" />
 </SfRichTextEditor>
