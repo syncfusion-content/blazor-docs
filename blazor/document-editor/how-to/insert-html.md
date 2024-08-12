@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Insert HTML in Blazor DocumentEditor | Syncfusion
-description: Learn how to Insert HTML in the Syncfusion Blazor Document Editor component and much more.
+description: Learn how to Insert HTML using System Clipboard in the Syncfusion Blazor Document Editor component and much more.
 platform: Blazor
 control: DocumentEditor
 documentation: ug
