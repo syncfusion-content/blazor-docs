@@ -247,7 +247,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ### How to customize Bezier Segment Thumb Shape and Style
 
-The bezier connector can have any number of segments in between the source and the target point. By default, these segments are rendered as circles in grey color. The Shape and Style property of `SegmentThumbSettings` allows to define the shape and style of the segment thumb. This feature can be enabled by adding the `InheritSegmentThumbShape` enum value to the Constraints property of diagram. You have the option to customize the color, width, and appearance of these segment thumbs. You can choose the shape by any one of the following shapes.
+The bezier connector can have any number of segments in between the source and the target point. By default, these segments are rendered as circles . The Shape property of `SegmentThumbSettings` allows to define the shape of the segment thumb. This feature ensures that the shape will be updated whether or not the `InheritSegmentThumbShape` enum value is added to the Constraints property of the diagram. If you apply `InheritSegmentThumbShape` constraints, the shape will be updated at the diagram level. Without these constraints, the shape will be updated at the connector level. You can choose the shape by any one of the following shapes.
 
 * `Circle`
 * `Square`
@@ -263,7 +263,7 @@ The bezier connector can have any number of segments in between the source and t
 * `OutdentedArrow`
 * `DoubleArrow`
 
-The following code example illustrates how to create a customized bezier segment thumb.
+The following code example illustrates how to create a customized bezier segment thumb shape using the `InheritSegmentThumbShape` constraints.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -275,8 +275,8 @@ The following code example illustrates how to create a customized bezier segment
 
     //Define the diagram's connector collection.
     DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
-    //Define the segment shape and style
-    SegmentThumbSettings connectorSegmentThumb = new SegmentThumbSettings() { Shape = SegmentThumbShapes.Rectangle, Style = new ShapeStyle() {Fill = "red" , StrokeColor = "black"} };
+    //Define the segment shape 
+    SegmentThumbSettings connectorSegmentThumb = new SegmentThumbSettings() { Shape = SegmentThumbShapes.Rectangle };
 
     protected override void OnInitialized()
     {
@@ -300,7 +300,8 @@ The following code example illustrates how to create a customized bezier segment
 
                 },
 
-                Constraints = ConnectorConstraints.Default | ConnectorConstraints.DragSegmentThumb | ConnectorConstraints.InheritSegmentThumbShape
+                Constraints = ConnectorConstraints.Default | ConnectorConstraints.DragSegmentThumb | ConnectorConstraints.InheritSegmentThumbShape,
+                SegmentThumbSettings = new SegmentThumbSettings() { Shape = SegmentThumbShapes.Square},
             };
         connectors.Add(connector);
 
@@ -310,3 +311,48 @@ The following code example illustrates how to create a customized bezier segment
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Segments/BezierSegmentShape).
 
 ![Connector with Bezier Segment Shape and Style in Blazor Diagram](../../../images/BezierSegmentShape.png)
+
+The following code example illustrates how to create a customized bezier segment thumb shape without  using the `InheritSegmentThumbShape` constraints.
+
+```cshtml
+@using Syncfusion.Blazor.Diagram
+@using Syncfusion.Blazor.Diagram.Internal
+
+<SfDiagramComponent Width="1000px" Height="500px"  Connectors="@connectors" ></SfDiagramComponent>
+
+@code {
+
+    //Define the diagram's connector collection.
+    DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+
+    protected override void OnInitialized()
+    {
+        Connector connector = new Connector()
+            {
+                ID = "connector",
+                SourcePoint = new DiagramPoint() { X = 100, Y = 100 },
+                TargetPoint = new DiagramPoint() { X = 300, Y =300 },
+                SourceDecorator = new DecoratorSettings() { Shape = DecoratorShape.Diamond },
+                Segments = new DiagramObjectCollection<ConnectorSegment>()
+                {
+                new BezierSegment(){Type = ConnectorSegmentType.Bezier, Point = new DiagramPoint(){X = 200, Y = 100}
+                ,
+                },
+                new BezierSegment(){Type = ConnectorSegmentType.Bezier, Point = new DiagramPoint(){X = 260, Y = 150}}
+                },
+                Type = ConnectorSegmentType.Bezier,
+                BezierConnectorSettings = new BezierConnectorSettings()
+                {
+                    ControlPointsVisibility = ControlPointsVisibility.All
+
+                },
+
+                Constraints = ConnectorConstraints.Default | ConnectorConstraints.DragSegmentThumb,
+                SegmentThumbSettings = new SegmentThumbSettings() { Shape = SegmentThumbShapes.Square},
+            };
+        connectors.Add(connector);
+
+    }
+}
+```
+![Connector with Bezier Segment Shape and Style in Blazor Diagram](../../../images/BezierSegmentShape1.png)
