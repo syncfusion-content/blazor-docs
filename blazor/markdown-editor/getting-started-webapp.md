@@ -3,7 +3,7 @@ layout: post
 title: Getting started with Markdown Editor in Blazor Web App | Syncfusion
 description: Check out the documentation for getting started with Syncfusion Blazor Markdown Editor Components in Blazor Web App.
 platform: Blazor
-control: RichTextEditor
+control: MarkdownEditor
 documentation: ug
 ---
 
