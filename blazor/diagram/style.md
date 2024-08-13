@@ -361,6 +361,20 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 ![SymbolPalette in Blazor Diagram](images/SymbolPaletteSymbolContainer.png)
 
 
+## How to customize the style of orthogonal segment thumb
 
+To change the appearance of the Orthogonal segment thumb, use the following CSS code:
 
+```cshtml
+<style>
+     .e-diagram-ortho-segment-handle {
+       stroke: red;
+       stroke-width: 1px;
+       fill: green;
+   }
 
+</style>
+```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Sample/Style/OrthogonalThumbStyle)
+
+![SymbolPalette in Blazor Diagram](images/OrthogonalThumbStyle.png)
