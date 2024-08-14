@@ -299,7 +299,7 @@ The following code example illustrates how to set scroll padding.
     }
 }
 //Refer below sample for the complete code.
-
+```
 ![Scoll Padding support for node](images/ScrollPadding.gif)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/ScrollSettings/ScrollPadding)
