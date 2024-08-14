@@ -226,20 +226,6 @@ Markdown Table Format
 {
     private List<ToolbarItemModel> Tools = new List<ToolbarItemModel>()
     {
-        new ToolbarItemModel() { Command = ToolbarCommand.Bold },
-        new ToolbarItemModel() { Command = ToolbarCommand.Italic },
-        new ToolbarItemModel() { Command = ToolbarCommand.Underline },
-        new ToolbarItemModel() { Command = ToolbarCommand.Separator },
-        new ToolbarItemModel() { Command = ToolbarCommand.Formats },
-        new ToolbarItemModel() { Command = ToolbarCommand.Alignments },
-        new ToolbarItemModel() { Command = ToolbarCommand.Separator },
-        new ToolbarItemModel() { Command = ToolbarCommand.CreateLink },
-        new ToolbarItemModel() { Command = ToolbarCommand.Image },
-        new ToolbarItemModel() { Command = ToolbarCommand.Separator },
-        new ToolbarItemModel() { Command = ToolbarCommand.SourceCode },
-        new ToolbarItemModel() { Command = ToolbarCommand.Separator },
-        new ToolbarItemModel() { Command = ToolbarCommand.Undo },
-        new ToolbarItemModel() { Command = ToolbarCommand.Redo },
         new ToolbarItemModel() { Command = ToolbarCommand.CreateTable }
     };
 }
@@ -269,51 +255,20 @@ The Rich Text Editor component is a WYSIWYG (What You See Is What You Get) edito
 - Allows preview of modified content before saving it
 
 <RichTextEditorToolbarSettings Items="@Tools" />
-<RichTextEditorQuickToolbarSettings Image="@Image" Link="@Link" />
 </SfRichTextEditor>
 
 @code
 {
     private List<ToolbarItemModel> Tools = new List<ToolbarItemModel>()
     {
-        new ToolbarItemModel() { Command = ToolbarCommand.Bold },
-        new ToolbarItemModel() { Command = ToolbarCommand.Italic },
-        new ToolbarItemModel() { Command = ToolbarCommand.Underline },
-        new ToolbarItemModel() { Command = ToolbarCommand.Separator },
-        new ToolbarItemModel() { Command = ToolbarCommand.Formats },
-        new ToolbarItemModel() { Command = ToolbarCommand.Alignments },
-        new ToolbarItemModel() { Command = ToolbarCommand.Separator },
         new ToolbarItemModel() { Command = ToolbarCommand.CreateLink },
-        new ToolbarItemModel() { Command = ToolbarCommand.Image },
-        new ToolbarItemModel() { Command = ToolbarCommand.Separator },
-        new ToolbarItemModel() { Command = ToolbarCommand.SourceCode },
-        new ToolbarItemModel() { Command = ToolbarCommand.Separator },
-        new ToolbarItemModel() { Command = ToolbarCommand.Undo },
-        new ToolbarItemModel() { Command = ToolbarCommand.Redo }
-    };
-    private List<ImageToolbarItemModel> Image = new List<ImageToolbarItemModel>()
-    {
-        new ImageToolbarItemModel() { Command = ImageToolbarCommand.Replace },
-        new ImageToolbarItemModel() { Command = ImageToolbarCommand.Align },
-        new ImageToolbarItemModel() { Command = ImageToolbarCommand.Caption },
-        new ImageToolbarItemModel() { Command = ImageToolbarCommand.Remove },
-        new ImageToolbarItemModel() { Command = ImageToolbarCommand.OpenImageLink },
-        new ImageToolbarItemModel() { Command = ImageToolbarCommand.HorizontalSeparator },
-        new ImageToolbarItemModel() { Command = ImageToolbarCommand.EditImageLink },
-        new ImageToolbarItemModel() { Command = ImageToolbarCommand.RemoveImageLink },
-        new ImageToolbarItemModel() { Command = ImageToolbarCommand.Display },
-        new ImageToolbarItemModel() { Command = ImageToolbarCommand.AltText },
-        new ImageToolbarItemModel() { Command = ImageToolbarCommand.Dimension }
-    };
-    private List<LinkToolbarItemModel> Link = new List<LinkToolbarItemModel>()
-    {
-        new LinkToolbarItemModel() { Command = LinkToolbarCommand.Open },
-        new LinkToolbarItemModel() { Command = LinkToolbarCommand.Edit },
-        new LinkToolbarItemModel() { Command = LinkToolbarCommand.UnLink }
+        new ToolbarItemModel() { Command = ToolbarCommand.Image }
     };
 }
 
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor Markdown Editor with Image and link](images/blazor-markdown-editor-with-image-and-link.png)
+![Blazor Markdown Editor with Image and link](images/blazor-markdown-editor-image.png)
+
+![Blazor Markdown Editor with Image and link](images/blazor-markdown-editor-link.png)
