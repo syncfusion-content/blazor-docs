@@ -1242,4 +1242,4 @@ The following example demonstrates how the `Sorting` and `Sorted` events work wh
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hDhzNWNzLolkmHqw?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 
-> You can refer to our [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap4) to understand how to present and manipulate data.
+> You can refer to our [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap5) to understand how to present and manipulate data.
