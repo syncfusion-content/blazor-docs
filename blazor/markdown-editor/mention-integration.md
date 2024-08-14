@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Mention Integration in Blazor RichTextEditor with Markdown Editor | Syncfusion
+title: Mention Integration in Blazor Markdown Editor | Syncfusion
 description: Checkout and learn here all about Mention integration in Syncfusion Blazor RichTextEditor component and much more.
 platform: Blazor
 control: MarkdownEditor
 documentation: ug
 ---
 
-# Mention Integration in Blazor Markdown Editor inside the RichTextEditor
+# Mention Integration in Blazor Markdown Editor
 
 By integrating the [Mention](https://blazor.syncfusion.com/documentation/mention/getting-started) component with a Markdown Editor inside the Rich Text Editor, users can easily mention or tag other users or objects from the suggested list without having to manually type out their names or other identifying information.
 
