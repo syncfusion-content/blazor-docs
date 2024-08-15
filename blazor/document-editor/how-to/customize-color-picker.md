@@ -20,8 +20,7 @@ The following example code illustrates how to Customize the color picker in Docu
 @inject Microsoft.AspNetCore.Components.NavigationManager UriHelper
 @inject IJSRuntime JSRuntime;
 
-<SfDocumentEditorContainer @ref="container" Height="590px">
-    <DocumentEditorContainerEvents Created="OnCreated" DocumentEditorSettings="settings"></DocumentEditorContainerEvents> 
+<SfDocumentEditorContainer @ref="container" Height="590px" DocumentEditorSettings="@settings" >
 </SfDocumentEditorContainer> 
 
 @code {

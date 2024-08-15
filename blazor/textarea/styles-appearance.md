@@ -89,7 +89,7 @@ By adding these classes, users can choose between a filled or outline appearance
 {% endhighlight %}
 {% endtabs %}
 
->Note: Filled and Outline theme customization are available only with Material themes.
+>Note: Filled and Outline theme customization are available only with Material and Material3 themes.
 
 ## Custom styling with CssClass property
 
@@ -105,15 +105,14 @@ By utilizing the `CssClass` API, users can apply custom CSS classes to the TextA
 {% endhighlight %}
 {% endtabs %}
 
-
 ## Setting the disabled state
 
-To disable the TextArea, you can utilize the [Enabled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextArea.html#Syncfusion_Blazor_Inputs_SfTextArea_Enabled) property. When set to `false`, the TextArea becomes disabled, preventing user interaction. Please find the demo link [here](https://blazor.syncfusion.com/demos/textarea/api?theme=fluent).
+To disable the TextArea, you can utilize the [Disabled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextArea.html#Syncfusion_Blazor_Inputs_SfTextArea_Disabled) property. When set to `true`, the TextArea becomes disabled, preventing user interaction. Please find the demo link [here](https://blazor.syncfusion.com/demos/textarea/api?theme=fluent).
 
 {% tabs %}
 {% highlight razor %}
 
-<SfTextArea Placeholder='Enter your comments' Enabled="false" ></SfTextArea>
+<SfTextArea Placeholder='Enter your comments' Disabled="true" ></SfTextArea>
 
 {% endhighlight %}
 {% endtabs %}
@@ -141,9 +140,14 @@ Render the TextArea with `rounded corner` by adding the `e-corner` class to the 
 {% tabs %}
 {% highlight razor %}
 
-<div class="e-corner">
-    <SfTextArea Placeholder='Enter your comments'></SfTextArea>
-</div>
+<SfTextArea Placeholder='Enter your comments'  CssClass="e-corner"></SfTextArea>
+
+{% endhighlight %}
+{% highlight cshtml tabtitle="Css"  %}
+
+.e-input-group.e-corner {
+    border-radius: 4px;
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -200,8 +204,7 @@ You can customize the TextArea styles such as background-color, text-color and b
 
 /* To change the background-color and text-color for textarea */ 
 .e-input-group,
-.e-float-input,
-.e-float-input.e-input-group { /* csslint allow: adjoining-classes */
+.e-input-group.e-multi-line-input { /* csslint allow: adjoining-classes */
   background : lightgray;
   color: green;
 }
@@ -222,16 +225,16 @@ You can change the floating label color of the TextArea for both `success` and `
 ```css
 
     /* For Success state */
-    .e-float-input.e-success label.e-float-text,
-    .e-float-input.e-success input:focus ~ label.e-float-text,
-    .e-float-input.e-success input:valid ~ label.e-float-text {
+    .e-float-input.e-success textarea ~ label.e-float-text,
+    .e-float-input.e-success textarea:focus ~ label.e-float-text,
+    .e-float-input.e-success textarea:valid ~ label.e-float-text {
       color: #22b24b;
     }
 
     /* For Warning state */
-    .e-float-input.e-warning label.e-float-text,
-    .e-float-input.e-warning input:focus ~ label.e-float-text,
-    .e-float-input.e-warning input:valid ~ label.e-float-text {
+    .e-float-input.e-warning textarea ~ label.e-float-text,
+    .e-float-input.e-warning textarea:focus ~ label.e-float-text,
+    .e-float-input.e-warning textarea:valid ~ label.e-float-text {
       color: #ffca1c;
     }
 
@@ -273,24 +276,18 @@ You can change the floating label color of the TextArea for both `success` and `
   width: 340px;
 }
 
-.e-float-input.e-success label.e-float-text{ /* csslint allow: adjoining-classes */
-  color: #22b24b;
-}
-.e-float-input.e-success input:focus ~ label.e-float-text{ /* csslint allow: adjoining-classes */
-  color: #22b24b;
-}
-.e-float-input.e-success input:valid ~ label.e-float-text { /* csslint allow: adjoining-classes */
-  color: #22b24b;
+/* For Success state */
+#input-container .e-float-input.e-success textarea ~ label.e-float-text,
+#input-container .e-float-input.e-success textarea:focus ~ label.e-float-text,
+#input-container .e-float-input.e-success textarea:valid ~ label.e-float-text {
+    color: #22b24b;
 }
 
-.e-float-input.e-warning label.e-float-text{ /* csslint allow: adjoining-classes */
-  color: #ffca1c;
-}
-.e-float-input.e-warning input:focus ~ label.e-float-text{ /* csslint allow: adjoining-classes */
-  color: #ffca1c;
-}
-.e-float-input.e-warning input:valid ~ label.e-float-text { /* csslint allow: adjoining-classes */
-  color: #ffca1c;
+/* For Warning state */
+#input-container .e-float-input.e-warning textarea ~ label.e-float-text,
+#input-container .e-float-input.e-warning textarea:focus ~ label.e-float-text,
+#input-container .e-float-input.e-warning textarea:valid ~ label.e-float-text {
+    color: red;
 }
 
 {% endhighlight %}
