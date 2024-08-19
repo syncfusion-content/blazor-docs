@@ -81,7 +81,7 @@ The following code illustrates how to interact with Bezier efficiently by using 
                     //Define the smoothness for a bezier connector.
                     Smoothness = BezierSmoothness.SymmetricAngle,
                     //Define the orientation of the segment editing controls.
-                    SegmentEditOrientation = BezierSegmentEditOrientation.Freeform
+                    SegmentEditOrientation = BezierSegmentEditOrientation.FreeForm
                 },
                 Constraints = ConnectorConstraints.Default | ConnectorConstraints.DragSegmentThumb
             };
