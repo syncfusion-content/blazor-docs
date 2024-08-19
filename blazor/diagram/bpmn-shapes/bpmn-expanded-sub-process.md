@@ -109,7 +109,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 While resizing or dragging the child element, if the child element bounds are within the ExpandedSubProcess bounds, the ExpandedSubProcess size will be updated along with that.
 
-The following image shows how to add BPMNNode into the BPMN ExpandedSubProcess at runtime.
+The following image shows how to add BPMN node into the BPMN ExpandedSubProcess at runtime.
 
 ![BPMN Expanded Sub-Process](../images/Bpmn-ExpandedSubProcess.gif)
 
