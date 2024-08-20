@@ -86,7 +86,7 @@ The [ID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DataSou
     };
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/DataBinding)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/DataBinding/Parent-Child%20Relationship)
 
 ## How to bind local data with diagram
 
@@ -244,7 +244,12 @@ The following code example illustrates how to bind ExpandoObject data with the d
     int VerticalSpacing = 30;
     public List<ExpandoObject> DataSource { get; set; }
     public List<ExpandoObject> ExpandoData = new List<ExpandoObject>();
-
+    public class ExpandoObject
+    {   
+        public string Name { get; set; }
+        public string Category { get; set; }
+        public string FillColor { get; set; }
+    }
     // Defines the connector's default values.
     private void ConnectorDefaults(IDiagramObject connector)
     {
@@ -393,6 +398,7 @@ The following code example illustrates how to bind DynamicObject data with the d
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
+@using System.Dynamic
 
 <SfDiagramComponent @ref="@Diagram" 
                     Height="499px"
@@ -491,7 +497,7 @@ The following code example illustrates how to bind DynamicObject data with the d
     }
     protected override void OnInitialized()
     {
-        this.ExpandoDataSource = GetData();
+        this.DataSource = GetData();
     }
     public List<HierarchicalDetails> GetData()
     {

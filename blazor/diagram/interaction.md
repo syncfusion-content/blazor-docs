@@ -28,6 +28,8 @@ An element can be selected by clicking that element. During single click, all pr
 | [SelectionChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_SelectionChanged) | [SelectionChangedEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SelectionChangedEventArgs.html) | Notify after clicking to select the elements in the diagram. |
 
 ```csharp
+@using Syncfusion.Blazor.Diagram
+
 <SfDiagramComponent Height="600px" Nodes="@NodeCollection" 
     SelectionChanging="OnSelectionChanging" 
     SelectionChanged="OnSelectionChanged">

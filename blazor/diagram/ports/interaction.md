@@ -65,7 +65,7 @@ The following code explains how to draw the connector by using the port constrai
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Ports/Interaction)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Ports/Interaction/DrawConstraints)
 
 ![Drawing Port Connection in Blazor Diagram](../images/blazor-diagram-draw-port-connection.gif)
 
@@ -89,10 +89,10 @@ The following code explains how to draw the connector by using the port constrai
 @code
 {
     DiagramObjectCollection<Node> nodes;
-
+    public SfDiagramComponent diagram;
+    IDiagramObject DrawingObject;
     protected override void OnInitialized()
     {
-        public SfDiagramComponent diagram;
         nodes = new DiagramObjectCollection<Node>();
         // Nodes are created and stored in the nodes array.
         Node node1 = new Node()
@@ -157,7 +157,7 @@ The following code explains how to draw the connector by using the port constrai
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Ports/Interaction).
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Ports/Interaction/DrawConstraintsWithDrawingObject).
 
 ![Drawing Bezier Port Connection in Blazor Diagram](../images/blazor-diagram-draw-port-connection-bezier.gif)
 ## See also

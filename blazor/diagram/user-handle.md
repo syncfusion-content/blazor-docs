@@ -856,8 +856,8 @@ You can define fixed user handle style using a template in the [FixedUserHandleT
             TargetPoint = new DiagramPoint() { X = 800, Y = 400 },
             FixedUserHandles = new DiagramObjectCollection<ConnectorFixedUserHandle>() { new ConnectorFixedUserHandle() { 
                 ID="user2",
-                Offset = 0.5, 
-                Alignment = FixedUserHandleAlignment.Center, 
+                Offset = 1, 
+                Alignment = FixedUserHandleAlignment.After, 
                 Displacement = new DiagramPoint() { X = 10}, 
                 Padding = new DiagramThickness() { Bottom = 1, Left = 1, Right = 1, Top = 1 }, 
                 Width = 30, 

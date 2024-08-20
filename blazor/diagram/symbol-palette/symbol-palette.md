@@ -996,7 +996,6 @@ The [RefreshSymbols](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Dia
         </div>
     </div>
 </div>
-<input type="button" value="RefreshSymbols" @onclick="RefreshSymbols" />
 <SfButton Content="RefreshSymbols" OnClick="@RefreshSymbols" />
 
 @code
