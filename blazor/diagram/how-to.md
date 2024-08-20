@@ -1649,7 +1649,7 @@ The following code illustrates how to set background color for node.
     }
     private void GetParent()
     {
-     diagram.Nodes[0].GetParent();
+        IDiagramObject parent = diagram.Nodes[0].GetParent();
     }
 }
 ```
