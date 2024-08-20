@@ -1502,7 +1502,7 @@ The following code illustrates how to execute the CanZoomIn command.
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Commands/CanZoomIn)
 
-![CanZoomIn to bring the small diagram into view](images/CanZoomIn.webp)
+![CanZoomIn to bring the small diagram into view](images/CanZoomIn.png)
 
 ## Command manager
 
