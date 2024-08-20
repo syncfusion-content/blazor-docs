@@ -335,7 +335,7 @@ The [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Chart
 
 **DashArray**
 
-* [DashArray](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_DashArray) property determines the pattern of dashes and gaps in the series.
+The [DashArray](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_DashArray) property determines the pattern of dashes and gaps in the series.
 
 ```cshtml
 
