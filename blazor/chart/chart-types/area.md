@@ -47,7 +47,7 @@ documentation: ug
 
 ![Blazor Area Chart](../images/chart-types-images/blazor-area-chart.png)
 
-N> Refer to our [Blazor Area Charts](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/area-chart) feature tour page to know about its other groundbreaking feature representations. Explore our [Blazor Area Chart Example](https://blazor.syncfusion.com/demos/chart/area) to know how to represent time-dependent data, showing trends at equal intervals.
+N> Refer to our [Blazor Area Charts](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/area-chart) feature tour page to know about its other groundbreaking feature representations. Explore our [Blazor Area Chart Example](https://blazor.syncfusion.com/demos/chart/area?theme=bootstrap5) to know how to represent time-dependent data, showing trends at equal intervals.
 
 ## Binding data with series
 
