@@ -1654,4 +1654,4 @@ In the following sample, the `SfDropDownList` component is rendered in the [Filt
 
 ## See also
 
-* [How to Perform Multiple Value Filtering for Same Column in Grid](https://www.syncfusion.com/kb/12472/how-to-perform-multiple-value-filtering-for-same-column-in-grid)
+* [How to Perform Multiple Value Filtering for Same Column in Grid](https://support.syncfusion.com/kb/article/10996/how-to-perform-multiple-value-filtering-for-same-column-in-grid)
