@@ -72,10 +72,10 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 ## How to draw different types of connector from the port
 
 You can change the default connector type while drawing the connector from the port by setting the specific connector type instance to the[DrawingObject](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_DrawingObject) property. This enables the drawing of various connector types from the port, including:
-* Staright
+* Straight
 * Bezier
 * Polyline
-* Orthagonal
+* Orthogonal
 * Free Hand
 
 
