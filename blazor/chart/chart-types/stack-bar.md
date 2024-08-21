@@ -54,7 +54,7 @@ documentation: ug
 
 ![Blazor Stacked Bar Chart](../images/chart-types-images/blazor-stacked-bar-chart.png)
 
-N> Refer to our [Blazor Stacked Bar Chart](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/stacked-bar-chart) feature tour page to know about its other groundbreaking feature representations. Explore our [Blazor Stacked Bar Chart Example](https://blazor.syncfusion.com/demos/chart/stacked-bar?theme=bootstrap4) to know how to to render and configure the Stacked Bar type chart.
+N> Refer to our [Blazor Stacked Bar Chart](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/stacked-bar-chart) feature tour page to know about its other groundbreaking feature representations. Explore our [Blazor Stacked Bar Chart Example](https://blazor.syncfusion.com/demos/chart/stacked-bar?theme=bootstrap5) to know how to to render and configure the Stacked Bar type chart.
 
 ## Stacking group
 
@@ -640,7 +640,7 @@ The [`OnPointRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ch
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rtVTXPrDrNFGxSMi?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-N> Refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
+N> Refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap5) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
 
 ## See also
 

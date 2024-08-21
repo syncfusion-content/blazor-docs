@@ -51,7 +51,7 @@ documentation: ug
 
 ![Blazor Step Area Chart](../images/chart-types-images/blazor-step-area-chart.png)
 
-N> Refer to our [Blazor Step Area Chart](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/step-area-chart) feature tour page to know about its other groundbreaking feature representations. Explore our [Blazor Step Area Chart Example](https://blazor.syncfusion.com/demos/chart/step-area?theme=bootstrap4) to know how to render and configure the Step Area type chart.
+N> Refer to our [Blazor Step Area Chart](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/step-area-chart) feature tour page to know about its other groundbreaking feature representations. Explore our [Blazor Step Area Chart Example](https://blazor.syncfusion.com/demos/chart/step-area?theme=bootstrap5) to know how to render and configure the Step Area type chart.
 
 ## Binding data with series
 
@@ -400,7 +400,7 @@ The [`OnPointRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ch
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VNhTtFCEpvoMIdnA?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-N> Refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
+N> Refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap5) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
 
 ## See also
 
