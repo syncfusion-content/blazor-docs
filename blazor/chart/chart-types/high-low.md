@@ -30,7 +30,6 @@ documentation: ug
     public class Data
     {
         public string X { get; set; }
-        public double Y { get; set; }
         public double High { get; set; }
         public double Low { get; set; }
     }
@@ -80,7 +79,6 @@ You can bind data to the chart using the [`DataSource`](https://help.syncfusion.
     public class Data
     {
         public string X { get; set; }
-        public double Y { get; set; }
         public double High { get; set; }
         public double Low { get; set; }
     }
@@ -130,7 +128,6 @@ The [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartS
     public class Data
     {
         public string X { get; set; }
-        public double Y { get; set; }
         public double High { get; set; }
         public double Low { get; set; }
     }
@@ -155,7 +152,7 @@ The [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartS
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BXBpjPVXpydPcQUK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-The [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Fill) property can be used to apply a gradient color to the range area series. By configuring this property with gradient values, you can create a visually appealing effect in which the color transitions smoothly from one shade to another.
+The [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Fill) property can be used to apply a gradient color to the hilo series. By configuring this property with gradient values, you can create a visually appealing effect in which the color transitions smoothly from one shade to another.
 
 ```cshtml
 
@@ -183,7 +180,6 @@ The [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartS
     public class Data
     {
         public string X { get; set; }
-        public double Y { get; set; }
         public double High { get; set; }
         public double Low { get; set; }
     }
@@ -230,7 +226,6 @@ The [Opacity](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Cha
     public class Data
     {
         public string X { get; set; }
-        public double Y { get; set; }
         public double High { get; set; }
         public double Low { get; set; }
     }
@@ -282,7 +277,6 @@ Use the [`Mode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.
     public class Data
     {
         public string X { get; set; }
-        public double Y { get; set; }
         public double High { get; set; }
         public double Low { get; set; }
     }
@@ -330,7 +324,6 @@ Use the [`Fill`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.
     public class Data
     {
         public string X { get; set; }
-        public double Y { get; set; }
         public double High { get; set; }
         public double Low { get; set; }
     }
@@ -378,7 +371,6 @@ The [`OnSeriesRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.C
     public class Data
     {
         public string X { get; set; }
-        public double Y { get; set; }
         public double High { get; set; }
         public double Low { get; set; }
     }
@@ -429,7 +421,6 @@ The [`OnPointRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ch
     public class Data
     {
         public string X { get; set; }
-        public double Y { get; set; }
         public double High { get; set; }
         public double Low { get; set; }
     }

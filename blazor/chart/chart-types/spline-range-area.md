@@ -138,7 +138,7 @@ The [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartS
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VNVfDvCaUYLJHtBm?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-The [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Fill) property can be used to apply a gradient color to the range area series. By configuring this property with gradient values, you can create a visually appealing effect in which the color transitions smoothly from one shade to another.
+The [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Fill) property can be used to apply a gradient color to the spline range area series. By configuring this property with gradient values, you can create a visually appealing effect in which the color transitions smoothly from one shade to another.
 
 ```cshtml
 
@@ -521,7 +521,7 @@ The [`OnPointRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ch
          new ChartData { X= "Sun", Low= 2.5, High= 9.8 },
          new ChartData { X= "Mon", Low= 4.7, High= 11.4 },
          new ChartData { X= "Tue", Low= 6.4, High= 14.4 },
-         new ChartData { X=  "Wed", Low=  9.6, High=  17.2 },
+         new ChartData { X= "Wed", Low=  9.6, High=  17.2 },
          new ChartData { X= "Thu", Low= 7.5, High= 15.1 },
          new ChartData { X= "Fri", Low= 3.0, High= 10.5 },
          new ChartData { X= "Sat", Low= 1.2, High= 7.9 }

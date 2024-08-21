@@ -206,7 +206,7 @@ The [Opacity](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Cha
 
 **DashArray**
 
-The [DashArray](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_DashArray) property determines the pattern of dashes and gaps in the series.
+The [DashArray](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_DashArray) property determines the pattern of dashes and gaps in the series border.
 
 ```cshtml
 
@@ -258,7 +258,7 @@ The following properties in the [ChartSeriesBorder](https://help.syncfusion.com/
     <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category" />
     <ChartSeriesCollection>
         <ChartSeries DataSource="@MedalDetails" XName="X" YName="Y" Opacity="0.5" Type="ChartSeriesType.Area">
-            <ChartSeriesBorder Width="2"></ChartSeriesBorder>
+            <ChartSeriesBorder Width="2" Color="red"></ChartSeriesBorder>
         </ChartSeries>
     </ChartSeriesCollection>
 </SfChart>
@@ -281,7 +281,7 @@ The following properties in the [ChartSeriesBorder](https://help.syncfusion.com/
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BDLKiLVdhnoffMQB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LZhJtFBiZcITWTzh?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Area Chart with Border](../images/chart-types-images/blazor-area-border.png)
 

@@ -30,7 +30,6 @@ documentation: ug
     public class Data
     {
         public string X { get; set; }
-        public double Y { get; set; }
         public double High { get; set; }
         public double Low { get; set; }
         public double Open { get; set; }
@@ -71,7 +70,6 @@ You can bind data to the chart using the [`DataSource`](https://help.syncfusion.
     public class Data
     {
         public string X { get; set; }
-        public double Y { get; set; }
         public double High { get; set; }
         public double Low { get; set; }
         public double Open { get; set; }
@@ -112,7 +110,6 @@ In [HiloOpenClose](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Chart
     public class Data
     {
         public string X { get; set; }
-        public double Y { get; set; }
         public double High { get; set; }
         public double Low { get; set; }
         public double Open { get; set; }
@@ -158,7 +155,6 @@ Use the [`Mode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.
     public class Data
     {
         public string X { get; set; }
-        public double Y { get; set; }
         public double High { get; set; }
         public double Low { get; set; }
         public double Open { get; set; }
@@ -200,7 +196,6 @@ Use the [`Fill`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.
     public class Data
     {
         public string X { get; set; }
-        public double Y { get; set; }
         public double High { get; set; }
         public double Low { get; set; }
         public double Open { get; set; }
@@ -242,7 +237,6 @@ The [`OnSeriesRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.C
     public class Data
     {
         public string X { get; set; }
-        public double Y { get; set; }
         public double High { get; set; }
         public double Low { get; set; }
         public double Open { get; set; }
@@ -288,7 +282,6 @@ The [`OnPointRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ch
     public class Data
     {
         public string X { get; set; }
-        public double Y { get; set; }
         public double High { get; set; }
         public double Low { get; set; }
         public double Open { get; set; }

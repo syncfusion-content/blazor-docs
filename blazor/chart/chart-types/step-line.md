@@ -311,8 +311,6 @@ The [DashArray](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.C
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VXhJjFWJzgWBvwJc?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-![Blazor Step Line with Custom Series](../images/chart-types-images/blazor-step-line-chart-custom-series.png)
-
 ## Empty points
 
 Data points with `null` or `undefined` values are considered empty. Empty data points are ignored and not plotted on the chart.

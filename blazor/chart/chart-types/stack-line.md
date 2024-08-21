@@ -609,99 +609,6 @@ Use the [`Mode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VNLptlixKIlJureq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-**Fill**
-
-Use the [`Fill`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEmptyPointSettings.html#Syncfusion_Blazor_Charts_ChartEmptyPointSettings_Fill) property to customize the fill color of empty points in the series.
-
-```cshtml
-
-@using Syncfusion.Blazor.Charts
-
-<SfChart Title="Family Expense for Month">
-    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
-    <ChartSeriesCollection>
-        <ChartSeries XName="X" DataSource="@ExpenseReports" YName="Y" Type="ChartSeriesType.StackingLine">
-            <ChartEmptyPointSettings Mode="EmptyPointMode.Average" Fill="#8E44AD"></ChartEmptyPointSettings>
-            <ChartMarker Visible="true" Height="10" Width="10"></ChartMarker>
-        </ChartSeries>
-    </ChartSeriesCollection>
-</SfChart>
-
-@code {
-    public class ChartData
-    {
-        public string X { get; set; }
-        public double Y { get; set; }
-    }
-
-    public List<ChartData> ExpenseReports = new List<ChartData>
-    {
-        new ChartData { X = "Food", Y = 90 },
-        new ChartData { X = "Transport", Y = 80 },
-        new ChartData { X = "Medical", Y = 50 },
-        new ChartData { X = "Clothes", Y = 70 },
-        new ChartData { X = "Personal Care", Y = 30 },
-        new ChartData { X = "Books", Y = double.NaN },
-        new ChartData { X = "Fitness", Y = double.NaN },
-        new ChartData { X = "Electricity", Y = double.NaN },
-        new ChartData { X = "Tax", Y = double.NaN },
-        new ChartData { X = "Pet Care", Y = 40 },
-        new ChartData { X = "Education", Y = 45 },
-        new ChartData { X = "Entertainment", Y = 75 }
-    };
-}
-
-```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BjLTDPCnUwEYEbUi?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-**Border**
-
-Use the [`Border`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEmptyPointSettings.html#Syncfusion_Blazor_Charts_ChartEmptyPointSettings_Border) property to customize the [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEmptyPointBorder.html#Syncfusion_Blazor_Charts_ChartEmptyPointBorder_Width) and [Color](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEmptyPointBorder.html#Syncfusion_Blazor_Charts_ChartEmptyPointBorder_Color) of the border for empty points.
-
-```cshtml
-
-@using Syncfusion.Blazor.Charts
-
-<SfChart Title="Family Expense for Month">
-    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
-    <ChartSeriesCollection>
-        <ChartSeries XName="X" DataSource="@ExpenseReports" YName="Y" Type="ChartSeriesType.StackingLine">
-            <ChartEmptyPointSettings Mode="EmptyPointMode.Average" Fill="#FFDE59">
-                <ChartEmptyPointBorder Color="red" Width="2"></ChartEmptyPointBorder>
-            </ChartEmptyPointSettings>
-            <ChartMarker Visible="true" Height="10" Width="10"></ChartMarker>
-        </ChartSeries>
-    </ChartSeriesCollection>
-
-</SfChart>
-
-@code {
-    public class ChartData
-    {
-        public string X { get; set; }
-        public double Y { get; set; }
-    }
-
-    public List<ChartData> ExpenseReports = new List<ChartData>
-    {
-        new ChartData { X = "Food", Y = 90 },
-        new ChartData { X = "Transport", Y = 80 },
-        new ChartData { X = "Medical", Y = 50 },
-        new ChartData { X = "Clothes", Y = 70 },
-        new ChartData { X = "Personal Care", Y = 30 },
-        new ChartData { X = "Books", Y = double.NaN },
-        new ChartData { X = "Fitness", Y = double.NaN },
-        new ChartData { X = "Electricity", Y = double.NaN },
-        new ChartData { X = "Tax", Y = double.NaN },
-        new ChartData { X = "Pet Care", Y = 40 },
-        new ChartData { X = "Education", Y = 45 },
-        new ChartData { X = "Entertainment", Y = 75 }
-    };
-}
-
-```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BNhJtvinTDVYhFvC?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
 ## Events
 
 ### Series render
@@ -715,12 +622,28 @@ The [`OnSeriesRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.C
 <SfChart Title="Family Expense for Month">
     <ChartEvents OnSeriesRender="SeriesRender"></ChartEvents>
     <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
-    <ChartSeriesCollection>
-        <ChartSeries XName="X" DataSource="@ExpenseReports" YName="Y" Type="ChartSeriesType.StackingLine">
-            <ChartMarker Visible="true" Height="10" Width="10"></ChartMarker>
+     <ChartSeriesCollection>
+        <ChartSeries XName="X" Width="2" DashArray="5,1" DataSource="@ExpenseReports"
+                     YName="Y" Type="Syncfusion.Blazor.Charts.ChartSeriesType.StackingLine">
+            <ChartMarker Visible="true">
+            </ChartMarker>
+        </ChartSeries>
+        <ChartSeries XName="X" Width="2" DashArray="5,1" DataSource="@ExpenseReports"
+                     YName="Y1" Type="Syncfusion.Blazor.Charts.ChartSeriesType.StackingLine">
+            <ChartMarker Visible="true">
+            </ChartMarker>
+        </ChartSeries>
+        <ChartSeries XName="X" Width="2" DashArray="5,1" DataSource="@ExpenseReports"
+                     YName="Y2" Type="Syncfusion.Blazor.Charts.ChartSeriesType.StackingLine">
+            <ChartMarker Visible="true">
+            </ChartMarker>
+        </ChartSeries>
+        <ChartSeries XName="X" Width="2" DashArray="5,1" DataSource="@ExpenseReports"
+                     YName="Y3" Type="Syncfusion.Blazor.Charts.ChartSeriesType.StackingLine">
+            <ChartMarker Visible="true">
+            </ChartMarker>
         </ChartSeries>
     </ChartSeriesCollection>
-
 </SfChart>
 
 @code {
@@ -728,22 +651,25 @@ The [`OnSeriesRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.C
     {
         public string X { get; set; }
         public double Y { get; set; }
+        public double Y1 { get; set; }
+        public double Y2 { get; set; }
+        public double Y3 { get; set; }
     }
 
     public List<ChartData> ExpenseReports = new List<ChartData>
-    {
-        new ChartData { X = "Food", Y = 90 },
-        new ChartData { X = "Transport", Y = 80 },
-        new ChartData { X = "Medical", Y = 50 },
-        new ChartData { X = "Clothes", Y = 70 },
-        new ChartData { X = "Personal Care", Y = 30 },
-        new ChartData { X = "Books", Y = 10 },
-        new ChartData { X = "Fitness", Y = 100 },
-        new ChartData { X = "Electricity", Y = 55 },
-        new ChartData { X = "Tax", Y = 20 },
-        new ChartData { X = "Pet Care", Y = 40 },
-        new ChartData { X = "Education", Y = 45 },
-        new ChartData { X = "Entertainment", Y = 75 }
+	{
+        new ChartData { X = "Food" , Y = 90, Y1 = 40 , Y2= 70, Y3= 120},
+        new ChartData { X = "Transport", Y = 80, Y1 = 90, Y2= 110, Y3= 70 },
+        new ChartData { X = "Medical",Y = 50, Y1 = 80, Y2= 120, Y3= 50 },
+        new ChartData { X = "Clothes",Y = 70, Y1 = 30, Y2= 60, Y3= 180 },
+        new ChartData { X = "Personal Care", Y = 30, Y1 = 80, Y2= 80, Y3= 30 },
+        new ChartData { X = "Books", Y = 10, Y1 = 40, Y2= 30, Y3= 270},
+        new ChartData { X = "Fitness",Y = 100, Y1 = 30, Y2= 70, Y3= 40 },
+        new ChartData { X = "Electricity", Y = 55, Y1 = 95, Y2= 55, Y3= 75},
+        new ChartData { X = "Tax", Y = 20, Y1 = 50, Y2= 40, Y3= 65 },
+        new ChartData { X = "Pet Care", Y = 40, Y1 = 20, Y2= 80, Y3= 95 },
+        new ChartData { X = "Education", Y = 45, Y1 = 15, Y2= 45, Y3= 195 },
+        new ChartData { X = "Entertainment", Y = 75, Y1 = 45, Y2= 65, Y3= 115 }
     };
 
     public void SeriesRender(SeriesRenderEventArgs args)
@@ -753,7 +679,7 @@ The [`OnSeriesRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.C
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LXhzNPCxfjIJHvFO?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VDBpNlrMihQhygii?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ### Point render
 
@@ -766,10 +692,27 @@ The [`OnPointRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ch
 <SfChart Title="Family Expense for Month">
     <ChartEvents OnPointRender="PointRender"></ChartEvents>
     <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
-    <ChartSeriesCollection>
-        <ChartSeries XName="X" DataSource="@ExpenseReports" YName="Y" Type="ChartSeriesType.StackingLine">
-            <ChartMarker Visible="true" Height="10" Width="10"></ChartMarker>
-        </ChartSeries>        
+     <ChartSeriesCollection>
+        <ChartSeries XName="X" Width="2" DashArray="5,1" DataSource="@ExpenseReports"
+                     YName="Y" Type="Syncfusion.Blazor.Charts.ChartSeriesType.StackingLine">
+            <ChartMarker Visible="true" Height="10" Width ="10">
+            </ChartMarker>
+        </ChartSeries>
+        <ChartSeries XName="X" Width="2" DashArray="5,1" DataSource="@ExpenseReports"
+                     YName="Y1" Type="Syncfusion.Blazor.Charts.ChartSeriesType.StackingLine">
+            <ChartMarker Visible="true" Height="10" Width ="10">
+            </ChartMarker>
+        </ChartSeries>
+        <ChartSeries XName="X" Width="2" DashArray="5,1" DataSource="@ExpenseReports"
+                     YName="Y2" Type="Syncfusion.Blazor.Charts.ChartSeriesType.StackingLine">
+            <ChartMarker Visible="true" Height="10" Width ="10">
+            </ChartMarker>
+        </ChartSeries>
+        <ChartSeries XName="X" Width="2" DashArray="5,1" DataSource="@ExpenseReports"
+                     YName="Y3" Type="Syncfusion.Blazor.Charts.ChartSeriesType.StackingLine">
+            <ChartMarker Visible="true" Height="10" Width ="10">
+            </ChartMarker>
+        </ChartSeries>
     </ChartSeriesCollection>
 
 </SfChart>
@@ -779,22 +722,25 @@ The [`OnPointRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ch
     {
         public string X { get; set; }
         public double Y { get; set; }
+        public double Y1 { get; set; }
+        public double Y2 { get; set; }
+        public double Y3 { get; set; }
     }
 
     public List<ChartData> ExpenseReports = new List<ChartData>
-    {
-        new ChartData { X = "Food", Y = 90 },
-        new ChartData { X = "Transport", Y = 80 },
-        new ChartData { X = "Medical", Y = 50 },
-        new ChartData { X = "Clothes", Y = 70 },
-        new ChartData { X = "Personal Care", Y = 30 },
-        new ChartData { X = "Books", Y = 10 },
-        new ChartData { X = "Fitness", Y = 100 },
-        new ChartData { X = "Electricity", Y = 55 },
-        new ChartData { X = "Tax", Y = 20 },
-        new ChartData { X = "Pet Care", Y = 40 },
-        new ChartData { X = "Education", Y = 45 },
-        new ChartData { X = "Entertainment", Y = 75 }
+	{
+        new ChartData { X = "Food" , Y = 90, Y1 = 40 , Y2= 70, Y3= 120},
+        new ChartData { X = "Transport", Y = 80, Y1 = 90, Y2= 110, Y3= 70 },
+        new ChartData { X = "Medical",Y = 50, Y1 = 80, Y2= 120, Y3= 50 },
+        new ChartData { X = "Clothes",Y = 70, Y1 = 30, Y2= 60, Y3= 180 },
+        new ChartData { X = "Personal Care", Y = 30, Y1 = 80, Y2= 80, Y3= 30 },
+        new ChartData { X = "Books", Y = 10, Y1 = 40, Y2= 30, Y3= 270},
+        new ChartData { X = "Fitness",Y = 100, Y1 = 30, Y2= 70, Y3= 40 },
+        new ChartData { X = "Electricity", Y = 55, Y1 = 95, Y2= 55, Y3= 75},
+        new ChartData { X = "Tax", Y = 20, Y1 = 50, Y2= 40, Y3= 65 },
+        new ChartData { X = "Pet Care", Y = 40, Y1 = 20, Y2= 80, Y3= 95 },
+        new ChartData { X = "Education", Y = 45, Y1 = 15, Y2= 45, Y3= 195 },
+        new ChartData { X = "Entertainment", Y = 75, Y1 = 45, Y2= 65, Y3= 115 }
     };
 
     public void PointRender(PointRenderEventArgs args)
@@ -804,7 +750,7 @@ The [`OnPointRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ch
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LjhpZbWdJDvBBWQC?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNVptPLiCLxTKLSN?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 N> Refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
 

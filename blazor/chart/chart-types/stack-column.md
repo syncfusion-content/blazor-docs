@@ -1,29 +1,29 @@
 ---
 layout: post
-title: 100% Stacked Column in Blazor Charts Component | Syncfusion
-description: Checkout and learn here all about 100% Stacked Column Chart in Syncfusion Blazor Charts component and more.
+title: Stacked Column in Blazor Charts Component | Syncfusion
+description: Checkout and learn here all about Stacked Column Chart in Syncfusion Blazor Charts component and more.
 platform: Blazor
 control: Chart
 documentation: ug
 ---
 
-# 100% Stacked Column in Blazor Charts Component
+# Stacked Column in Blazor Charts Component
 
-## 100% Stacked Column
+## Stacked Column
 
-[100% Stacked Column Chart](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/100-stacked-column-chart) displays multiple series of data as stacked columns, ensuring that the cumulative proportion of each stacked element always totals 100%. Hence, the y-axis will always be rendered with the range 0–100%. To render a [100% stacked column](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/100-stacked-column-chart) series in your chart, define the series [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Type) as [`StackingColumn100`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesType.html#Syncfusion_Blazor_Charts_ChartSeriesType_StackingColumn100) in your chart configuration. This indicates that the data should be represented as a 100% stacked column chart, with segments that show the percentage contribution of each part.
+[Stacked Column Chart](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/stacked-column-chart) is a chart with Y values stacked over one another in the series order. It shows the relation between individual values to the total sum of the points. To render a [stacked column](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/stacked-column-chart) series in your chart, define the series [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Type) as [`StackingColumn`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesType.html#Syncfusion_Blazor_Charts_ChartSeriesType_StackingColumn) in your chart configuration. This indicates that the data should be represented as a stacked column chart, where each column consists of multiple segments stacked on top of each other.
 
 ```cshtml
 
 @using Syncfusion.Blazor.Charts
 
 <SfChart>
-    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"/>
-	
+    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
+
     <ChartSeriesCollection>
-        <ChartSeries DataSource="@MedalDetails" XName="X" YName="YValue" Type="ChartSeriesType.StackingColumn100">
+        <ChartSeries DataSource="@MedalDetails" XName="X" YName="YValue" Type="ChartSeriesType.StackingColumn">
         </ChartSeries>
-        <ChartSeries DataSource="@MedalDetails" XName="X" YName="YValue1" Type="ChartSeriesType.StackingColumn100">
+        <ChartSeries DataSource="@MedalDetails" XName="X" YName="YValue1" Type="ChartSeriesType.StackingColumn">
         </ChartSeries>
     </ChartSeriesCollection>
 </SfChart>
@@ -50,11 +50,59 @@ documentation: ug
 }
 
 ``` 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rjrzXFLjZJglWize?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LXVqWLrRzHvzyQHq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-![Blazor Stacked Column100 Chart](../images/chart-types-images/blazor-stacked-column-100-chart.png)
+![Blazor Stacked Column Chart](../images/chart-types-images/blazor-stacked-column-chart.png)
 
-N> Refer to our [Blazor 100% Stacked Column Chart](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/100-stacked-column-chart) feature tour page to know about its other groundbreaking feature representations. Explore our [Blazor 100% Stacked Column Chart Example](https://blazor.syncfusion.com/demos/chart/percent-stacked-column?theme=bootstrap4) to know how to render and configure the 100% Stacked Column type chart.
+N> Refer to our [Blazor Stacked Column Chart](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/stacked-column-chart) feature tour page to know about its other groundbreaking feature representations. Explore our [Blazor Stacked Column Chart Example](https://blazor.syncfusion.com/demos/chart/stacked-column?theme=bootstrap4) to know how to render and configure the Stacked Column type chart.
+
+## Stacking group
+
+The [StackingGroup](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_StackingGroup) property is used to group stacked columns and 100% stacked columns. Columns with same group name are stacked on top of each other.
+
+```cshtml
+
+@using Syncfusion.Blazor.Charts
+
+<SfChart>
+    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
+
+    <ChartSeriesCollection>
+        <ChartSeries DataSource="@DataSource" StackingGroup="Group1" XName="X" YName="YValue" Type="ChartSeriesType.StackingColumn">
+        </ChartSeries>
+        <ChartSeries DataSource="@DataSource" StackingGroup="Group1" XName="X" YName="YValue1" Type="ChartSeriesType.StackingColumn">
+        </ChartSeries>
+        <ChartSeries DataSource="@DataSource" StackingGroup="Group2" XName="X" YName="YValue2" Type="ChartSeriesType.StackingColumn">
+        </ChartSeries>
+    </ChartSeriesCollection>
+</SfChart>
+
+@code{
+    public class ChartData
+    {
+        public string X { get; set; }
+        public double YValue { get; set; }
+        public double YValue1 { get; set; }
+        public double YValue2 { get; set; }
+    }
+
+    public List<ChartData> DataSource = new List<ChartData>
+	{
+        new ChartData { X= "USA", YValue= 46, YValue1=56, YValue2=26},
+        new ChartData { X= "GBR", YValue= 27, YValue1=17, YValue2=37},
+        new ChartData { X= "CHN", YValue= 26, YValue1=36, YValue2=56},
+        new ChartData { X= "UK", YValue= 56,  YValue1=16, YValue2=36},
+        new ChartData { X= "AUS", YValue= 12, YValue1=46, YValue2=26},
+        new ChartData { X= "IND", YValue= 26, YValue1=16, YValue2=76},
+        new ChartData { X= "DEN", YValue= 26, YValue1=12, YValue2=42},
+        new ChartData { X= "MEX", YValue= 34, YValue1=32, YValue2=82 },
+    };
+}
+
+``` 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rjrqWBhRJHPHyIOf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+![Grouping in Blazor Stacked Column Chart](../images/chart-types-images/blazor-stacked-colum-chart-with-grouping.png)
 
 ## Binding data with series
 
@@ -68,9 +116,9 @@ You can bind data to the chart using the [`DataSource`](https://help.syncfusion.
     <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
 
     <ChartSeriesCollection>
-        <ChartSeries DataSource="@MedalDetails" XName="X" YName="YValue" Type="ChartSeriesType.StackingColumn100">
+        <ChartSeries DataSource="@MedalDetails" XName="X" YName="YValue" Type="ChartSeriesType.StackingColumn">
         </ChartSeries>
-        <ChartSeries DataSource="@MedalDetails" XName="X" YName="YValue1" Type="ChartSeriesType.StackingColumn100">
+        <ChartSeries DataSource="@MedalDetails" XName="X" YName="YValue1" Type="ChartSeriesType.StackingColumn">
         </ChartSeries>
     </ChartSeriesCollection>
 </SfChart>
@@ -97,11 +145,11 @@ You can bind data to the chart using the [`DataSource`](https://help.syncfusion.
 }
 
 ``` 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rjrzXFLjZJglWize?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LXVqWLrRzHvzyQHq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Series customization
 
-The following properties can be used to customize the [100% Stacked Column](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesType.html#Syncfusion_Blazor_Charts_ChartSeriesType_StackingColumn100) series.
+The following properties can be used to customize the [Stacked Column](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesType.html#Syncfusion_Blazor_Charts_ChartSeriesType_StackingColumn) series.
 
 **Fill**
 
@@ -115,9 +163,9 @@ The [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartS
     <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
 
     <ChartSeriesCollection>
-        <ChartSeries DataSource="@MedalDetails" XName="X" YName="YValue" Fill="green" Type="Syncfusion.Blazor.Charts.ChartSeriesType.StackingColumn100">
+        <ChartSeries DataSource="@MedalDetails" XName="X" YName="YValue" Fill="green" Type="Syncfusion.Blazor.Charts.ChartSeriesType.StackingColumn">
         </ChartSeries>
-        <ChartSeries DataSource="@MedalDetails" XName="X" YName="YValue1" Fill="blue" Type="Syncfusion.Blazor.Charts.ChartSeriesType.StackingColumn100">
+        <ChartSeries DataSource="@MedalDetails" XName="X" YName="YValue1" Fill="blue" Type="Syncfusion.Blazor.Charts.ChartSeriesType.StackingColumn">
         </ChartSeries>
     </ChartSeriesCollection>
 </SfChart>
@@ -144,7 +192,7 @@ The [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartS
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hZrzZbhtDzJHbHUF?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hNhpNvBZtLVeJKeD?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 The [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Fill) property can be used to apply a gradient color to the stacked column series. By configuring this property with gradient values, you can create a visually appealing effect in which the color transitions smoothly from one shade to another.
 
@@ -156,9 +204,9 @@ The [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartS
     <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
 
     <ChartSeriesCollection>
-        <ChartSeries DataSource="@MedalDetails" XName="X" YName="YValue" Fill="url(#grad1)" Type="Syncfusion.Blazor.Charts.ChartSeriesType.StackingColumn100">
+        <ChartSeries DataSource="@MedalDetails" XName="X" YName="YValue" Fill="url(#grad1)" Type="Syncfusion.Blazor.Charts.ChartSeriesType.StackingColumn">
         </ChartSeries>
-        <ChartSeries DataSource="@MedalDetails" XName="X" YName="YValue1" Fill="url(#grad2)" Type="Syncfusion.Blazor.Charts.ChartSeriesType.StackingColumn100">
+        <ChartSeries DataSource="@MedalDetails" XName="X" YName="YValue1" Fill="url(#grad2)" Type="Syncfusion.Blazor.Charts.ChartSeriesType.StackingColumn">
         </ChartSeries>
     </ChartSeriesCollection>
 </SfChart>
@@ -203,7 +251,7 @@ The [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartS
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rZLpDbVZDpeJxRbT?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hNVfjlrXjVgbAmai?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 **Opacity**
 
@@ -217,9 +265,9 @@ The [Opacity](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Cha
     <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
 
     <ChartSeriesCollection>
-        <ChartSeries DataSource="@MedalDetails" XName="X" YName="YValue" Fill="green" Opacity="0.5" Type="Syncfusion.Blazor.Charts.ChartSeriesType.StackingColumn100">
+        <ChartSeries DataSource="@MedalDetails" XName="X" YName="YValue" Fill="green" Opacity="0.5" Type="Syncfusion.Blazor.Charts.ChartSeriesType.StackingColumn">
         </ChartSeries>
-        <ChartSeries DataSource="@MedalDetails" XName="X" YName="YValue1" Fill="blue" Opacity="0.5" Type="Syncfusion.Blazor.Charts.ChartSeriesType.StackingColumn100">
+        <ChartSeries DataSource="@MedalDetails" XName="X" YName="YValue1" Fill="blue" Opacity="0.5" Type="Syncfusion.Blazor.Charts.ChartSeriesType.StackingColumn">
         </ChartSeries>
     </ChartSeriesCollection>
 </SfChart>
@@ -246,7 +294,7 @@ The [Opacity](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Cha
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hZhfXlLDtpRWScRW?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hjhzZPrNZrTHBufy?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 **DashArray**
 
@@ -260,10 +308,10 @@ The [DashArray](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.C
     <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
 
     <ChartSeriesCollection>
-        <ChartSeries DataSource="@DataSource" XName="X" DashArray="5,5" Fill="blue" Opacity="0.7" YName="YValue" Type="ChartSeriesType.StackingColumn100">
+        <ChartSeries DataSource="@DataSource" XName="X" DashArray="5,5" Fill="blue" Opacity="0.7" YName="YValue" Type="ChartSeriesType.StackingColumn">
             <ChartSeriesBorder Width="2" Color="black"></ChartSeriesBorder>
         </ChartSeries>
-        <ChartSeries DataSource="@DataSource" XName="X" DashArray="5,5" Fill="green" Opacity="0.7" YName="YValue" Type="ChartSeriesType.StackingColumn100">
+        <ChartSeries DataSource="@DataSource" XName="X" DashArray="5,5" Fill="green" Opacity="0.7" YName="YValue" Type="ChartSeriesType.StackingColumn">
             <ChartSeriesBorder Width="2" Color="black"></ChartSeriesBorder>
         </ChartSeries>
     </ChartSeriesCollection>
@@ -291,7 +339,7 @@ The [DashArray](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.C
 }
 
 ``` 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LtrfZFBXtTREKKtD?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BDLAiBhxJRlYsLQr?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 **Series Border**
 
@@ -303,13 +351,13 @@ The [ChartSeriesBorder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 
 <SfChart>
     <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
-	
+
     <ChartSeriesCollection>
-        <ChartSeries DataSource="@DataSource" StackingGroup="Asia" XName="X" DashArray="5,5" Fill="red" Opacity="0.7" YName="YValue" Type="ChartSeriesType.StackingColumn100">
-		<ChartSeriesBorder Width="2" Color="black"></ChartSeriesBorder>
+        <ChartSeries DataSource="@DataSource" XName="X" DashArray="5,5" Fill="blue" Opacity="0.7" YName="YValue" Type="ChartSeriesType.StackingColumn">
+            <ChartSeriesBorder Width="2" Color="black"></ChartSeriesBorder>
         </ChartSeries>
-        <ChartSeries DataSource="@DataSource" StackingGroup="Asia" XName="X" DashArray="5,5" Fill="blue" Opacity="0.7" YName="YValue" Type="ChartSeriesType.StackingColumn100">
-		<ChartSeriesBorder Width="2" Color="black"></ChartSeriesBorder>
+        <ChartSeries DataSource="@DataSource" XName="X" DashArray="5,5" Fill="green" Opacity="0.7" YName="YValue" Type="ChartSeriesType.StackingColumn">
+            <ChartSeriesBorder Width="2" Color="black"></ChartSeriesBorder>
         </ChartSeries>
     </ChartSeriesCollection>
 </SfChart>
@@ -323,7 +371,7 @@ The [ChartSeriesBorder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
     }
 
     public List<ChartData> DataSource = new List<ChartData>
-	{
+    {
         new ChartData { X= "USA", YValue= 46, YValue1=56 },
         new ChartData { X= "GBR", YValue= 27, YValue1=17 },
         new ChartData { X= "CHN", YValue= 26, YValue1=36 },
@@ -336,9 +384,9 @@ The [ChartSeriesBorder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 }
 
 ``` 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LjhztbLttJGRdVTO?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BDLAiBhxJRlYsLQr?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-![Blazor Stacked Column100 Chart with Custom Series](../images/chart-types-images/blazor-stacked-column-100-chart-custom-series.png)
+![Blazor Stacked Column Chart with Custom Series](../images/chart-types-images/blazor-stacked-column-chart-custom-series.png)
 
 ## Empty points
 
@@ -356,11 +404,11 @@ Use the [`Mode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.
     <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
 
     <ChartSeriesCollection>
-        <ChartSeries DataSource="@MedalDetails" XName="X" YName="YValue" Type="Syncfusion.Blazor.Charts.ChartSeriesType.StackingColumn100">
+        <ChartSeries DataSource="@MedalDetails" XName="X" YName="YValue" Type="Syncfusion.Blazor.Charts.ChartSeriesType.StackingColumn">
             <ChartEmptyPointSettings Mode="EmptyPointMode.Gap"></ChartEmptyPointSettings>
             <ChartMarker Visible="true" Height="10" Width="10"></ChartMarker>
         </ChartSeries>
-        <ChartSeries DataSource="@MedalDetails" XName="X" YName="YValue1" Type="Syncfusion.Blazor.Charts.ChartSeriesType.StackingColumn100">
+        <ChartSeries DataSource="@MedalDetails" XName="X" YName="YValue1" Type="Syncfusion.Blazor.Charts.ChartSeriesType.StackingColumn">
             <ChartEmptyPointSettings Mode="EmptyPointMode.Gap"></ChartEmptyPointSettings>
             <ChartMarker Visible="true" Height="10" Width="10"></ChartMarker>
         </ChartSeries>
@@ -389,7 +437,7 @@ Use the [`Mode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LXBJtFBtXJPJboSq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BtLpNvrjNVdcSZTH?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 **Fill**
 
@@ -403,11 +451,11 @@ Use the [`Fill`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.
     <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
 
     <ChartSeriesCollection>
-        <ChartSeries DataSource="@MedalDetails" XName="X" YName="YValue" Type="Syncfusion.Blazor.Charts.ChartSeriesType.StackingColumn100">
+        <ChartSeries DataSource="@MedalDetails" XName="X" YName="YValue" Type="Syncfusion.Blazor.Charts.ChartSeriesType.StackingColumn">
             <ChartEmptyPointSettings Fill="blue" Mode="EmptyPointMode.Average"></ChartEmptyPointSettings>
             <ChartMarker Visible="true" Height="10" Width="10"></ChartMarker>
         </ChartSeries>
-        <ChartSeries DataSource="@MedalDetails" XName="X" YName="YValue1" Type="Syncfusion.Blazor.Charts.ChartSeriesType.StackingColumn100">
+        <ChartSeries DataSource="@MedalDetails" XName="X" YName="YValue1" Type="Syncfusion.Blazor.Charts.ChartSeriesType.StackingColumn">
             <ChartEmptyPointSettings Fill="green" Mode="EmptyPointMode.Average"></ChartEmptyPointSettings>
             <ChartMarker Visible="true" Height="10" Width="10"></ChartMarker>
         </ChartSeries>
@@ -436,7 +484,7 @@ Use the [`Fill`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rZrTDPrDXfuDyxhy?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hZVfNvrXDhlMBxkn?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 **Border**
 
@@ -450,13 +498,13 @@ Use the [`Border`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Chart
     <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
 
     <ChartSeriesCollection>
-        <ChartSeries DataSource="@MedalDetails" XName="X" YName="YValue" Type="Syncfusion.Blazor.Charts.ChartSeriesType.StackingColumn100">
+        <ChartSeries DataSource="@MedalDetails" XName="X" YName="YValue" Type="Syncfusion.Blazor.Charts.ChartSeriesType.StackingColumn">
             <ChartEmptyPointSettings Fill="blue" Mode="EmptyPointMode.Average">
                 <ChartEmptyPointBorder Width="2" Color="#FF0000"></ChartEmptyPointBorder>
             </ChartEmptyPointSettings>
             <ChartMarker Visible="true" Height="10" Width="10"></ChartMarker>
         </ChartSeries>
-        <ChartSeries DataSource="@MedalDetails" XName="X" YName="YValue1" Type="Syncfusion.Blazor.Charts.ChartSeriesType.StackingColumn100">
+        <ChartSeries DataSource="@MedalDetails" XName="X" YName="YValue1" Type="Syncfusion.Blazor.Charts.ChartSeriesType.StackingColumn">
             <ChartEmptyPointSettings Fill="green" Mode="EmptyPointMode.Average">
                 <ChartEmptyPointBorder Width="2" Color="#FF0000"></ChartEmptyPointBorder>
             </ChartEmptyPointSettings>
@@ -487,7 +535,7 @@ Use the [`Border`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Chart
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hXrTXPVXtpunTNPI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VjLptFhDZhbbbatc?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Events
 
@@ -503,8 +551,8 @@ The [`OnSeriesRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.C
     <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
     <ChartEvents OnSeriesRender="SeriesRender"></ChartEvents>
     <ChartSeriesCollection>
-        <ChartSeries DataSource="@MedalDetails" Name="Series1" XName="X" YName="YValue" Type="Syncfusion.Blazor.Charts.ChartSeriesType.StackingColumn100" />
-        <ChartSeries DataSource="@MedalDetails" Name="Series2" XName="X" YName="YValue1" Type="Syncfusion.Blazor.Charts.ChartSeriesType.StackingColumn100" />
+        <ChartSeries DataSource="@MedalDetails" Name="Series1" XName="X" YName="YValue" Type="Syncfusion.Blazor.Charts.ChartSeriesType.StackingColumn" />
+        <ChartSeries DataSource="@MedalDetails" Name="Series2" XName="X" YName="YValue1" Type="Syncfusion.Blazor.Charts.ChartSeriesType.StackingColumn" />
     </ChartSeriesCollection>
     <ChartLegendSettings Visible="false"></ChartLegendSettings>
 </SfChart>
@@ -543,7 +591,7 @@ The [`OnSeriesRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.C
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LNrpXlVNXILDXtap?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BDLpDPhjNqDOpxgK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ### Point render
 
@@ -557,8 +605,8 @@ The [`OnPointRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ch
     <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
     <ChartEvents OnPointRender="PointRender"></ChartEvents>
     <ChartSeriesCollection>
-        <ChartSeries DataSource="@MedalDetails" Name="Series1" XName="X" YName="YValue" Type="Syncfusion.Blazor.Charts.ChartSeriesType.StackingColumn100" />
-        <ChartSeries DataSource="@MedalDetails" Name="Series2" XName="X" YName="YValue1" Type="Syncfusion.Blazor.Charts.ChartSeriesType.StackingColumn100" />
+        <ChartSeries DataSource="@MedalDetails" Name="Series1" XName="X" YName="YValue" Type="Syncfusion.Blazor.Charts.ChartSeriesType.StackingColumn" />
+        <ChartSeries DataSource="@MedalDetails" Name="Series2" XName="X" YName="YValue1" Type="Syncfusion.Blazor.Charts.ChartSeriesType.StackingColumn" />
     </ChartSeriesCollection>
     <ChartLegendSettings Visible="false"></ChartLegendSettings>
 </SfChart>
@@ -590,8 +638,7 @@ The [`OnPointRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ch
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rDhfjvLDtoVdecVW?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hXhzNlLNtqSiONMl?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 N> Refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
 
