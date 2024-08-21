@@ -292,14 +292,14 @@ SubProcessType represents the type of task that is being processed. The [SubProc
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/BpmnEditor/BpmnExpandedSubProcess/ExpandedSubProcessType)
 
-![Event Boundary BPMN Shape](../images/Bpmn-CollapsedSub-Process-Event.png)
+![Event Boundary BPMN Shape](../images/Bpmn-ExpandedSub-Process-Event.png)
 
 The following table contains various types of BPMN SubProcess.
 
 | SubProcessType | Image | Description|
 | -------- | -------- | -------- |
-| Call | ![Call Boundary BPMN Shape](../images/Bpmn-CollapsedSub-Process-Call.png) |It is a global sub-process that is reused at various points in the business flow.|
-| Event | ![Event Boundary BPMN Shape](../images/Bpmn-CollapsedSub-Process-Event.png) |The event sub-process is a sub-process that is triggered by an event. An event sub-process can be added at the process level or at any sub-process level.|
-| Transaction | ![Default Boundary BPMN Shape](../images/Bpmn-CollapsedSub-Process-Transaction.png) |It is a specialized sub-process that involves payment.|
-| Default | ![Default Boundary BPMN Shape](../images/Bpmn-CollapsedSub-Process-Default.png) |The task that is performed in a business process. It is represented by a rounded rectangle.|
+| Call | ![Call Boundary BPMN Shape](../images/Bpmn-ExpandedSub-Process-Call.png) |It is a global sub-process that is reused at various points in the business flow.|
+| Event | ![Event Boundary BPMN Shape](../images/Bpmn-ExpandedSub-Process-Event.png) |The event sub-process is a sub-process that is triggered by an event. An event sub-process can be added at the process level or at any sub-process level.|
+| Transaction | ![Default Boundary BPMN Shape](../images/Bpmn-ExpandedSub-Process-Transaction.png) |It is a specialized sub-process that involves payment.|
+| Default | ![Default Boundary BPMN Shape](../images/Bpmn-ExpandedSub-Process-None.png) |The task that is performed in a business process. It is represented by a rounded rectangle.|
 

@@ -664,7 +664,7 @@ The following code illustrates how to set the Pivot value.
                     StrokeColor = "white"
                 },
                 // Pivot of the node.
-                Pivot = new DiagramPoint() { X = 0.5, Y = 0.5}
+                Pivot = new DiagramPoint() { X = 0, Y = 0 }
             };
         nodes.Add(node);
     }
