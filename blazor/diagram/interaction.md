@@ -342,7 +342,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 }
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Interaction/DiagramPositionEvent)
-For more information about dragging, refer [Node Drag](https://blazor.syncfusion.com/documentation/diagram/nodes/interaction#drag)
+For more information about dragging, refer [Node Drag](./nodes/interaction)
 
 ## Resize
 
