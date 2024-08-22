@@ -298,7 +298,6 @@ The following code example illustrates how to set scroll padding.
         nodes.Add(node);
     }
 }
-//Refer below sample for the complete code.
 ```
 ![Scoll Padding support for node](images/ScrollPadding.gif)
 
