@@ -25,7 +25,7 @@ To create a swimlane, you have to define the swimlane object and add it to the [
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Height="600px" Swimlanes="@SwimlaneCollections" />
+<SfDiagramComponent Height="600px" Swimlanes="@SwimlaneCollections" NodeCreating="@OnNodeCreating"/>
 
 @code
 {
@@ -41,6 +41,25 @@ To create a swimlane, you have to define the swimlane object and add it to the [
         };
         // Add swimlane.
         SwimlaneCollections.Add(swimlane);
+    }
+    private void OnNodeCreating(IDiagramObject obj)
+    {
+        if (obj is Swimlane swimlane)
+        {
+            swimlane.Header.Style = new TextStyle()
+            {
+                Fill = "#5b9bd5",
+                StrokeColor = "#5b9bd5"
+            };
+            foreach (Phase phase in swimlane.Phases)
+            {
+                phase.Style = new ShapeStyle() { Fill = "#5b9bd5", StrokeColor = "#5b9bd5" };
+            }
+            foreach (Lane lane in swimlane.Lanes)
+            {
+                lane.Header.Style = new TextStyle() { Fill = "#5b9bd5", StrokeColor = "#5b9bd5" };
+            }
+        }
     }
 }
 ```
@@ -64,7 +83,7 @@ The following code example explains how to define the swimlane header.
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Height="600px" Swimlanes="@SwimlaneCollections" />
+<SfDiagramComponent Height="600px" Swimlanes="@SwimlaneCollections" NodeCreating="@OnNodeCreating"/>
 
 @code
 {
@@ -89,6 +108,25 @@ The following code example explains how to define the swimlane header.
         // Add swimlane.
         SwimlaneCollections.Add(swimlane);
     }
+    private void OnNodeCreating(IDiagramObject obj)
+    {
+        if (obj is Swimlane swimlane)
+        {
+             swimlane.Header.Style = new TextStyle()
+             {
+                 Fill = "#5b9bd5",
+                 StrokeColor = "#5b9bd5"
+             };
+             foreach (Phase phase in swimlane.Phases)
+             {
+                 phase.Style = new ShapeStyle() { Fill = "#5b9bd5", StrokeColor = "#5b9bd5" };
+             }
+             foreach (Lane lane in swimlane.Lanes)
+             {
+                 lane.Header.Style = new TextStyle() { Fill = "#5b9bd5", StrokeColor = "#5b9bd5" };
+             }
+        }
+    }
 }
 ```
 
@@ -105,7 +143,7 @@ The following code example explains how to customize the swimlane header.
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Height="600px" Swimlanes="@SwimlaneCollections" />
+<SfDiagramComponent Height="600px" Swimlanes="@SwimlaneCollections" NodeCreating="@OnNodeCreating" />
 
 @code
 {
@@ -134,6 +172,20 @@ The following code example explains how to customize the swimlane header.
         }
         // Add swimlane.
         SwimlaneCollections.Add(swimlane);
+    }
+    private void OnNodeCreating(IDiagramObject obj)
+    {
+        if (obj is Swimlane swimlane)
+        {
+            foreach (Phase phase in swimlane.Phases)
+            {
+               phase.Style = new ShapeStyle() { Fill = "#5b9bd5", StrokeColor = "#5b9bd5" };
+            }
+            foreach (Lane lane in swimlane.Lanes)
+            {
+               lane.Header.Style = new TextStyle() { Fill = "#5b9bd5", StrokeColor = "#5b9bd5" };
+            }
+        }
     }
 }
 ```
