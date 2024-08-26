@@ -662,7 +662,7 @@ When using SfDataManager for data binding then the TValue must be provided expli
 
 ### Binding with OData services
 
-OData (Open Data Protocol) is a standardized protocol for building and consuming RESTful APIs. It enables the creation and consumption of queryable and compatible REST APIs in a simple and standard way. OData services expose data as resources that are addressable by URLs and can be queried using standard HTTP methods (GET, POST, PUT, DELETE). For more details on OData services, refer to the [OData documentation](https://www.odata.org/documentation/odata-version-3-0/odata-version-3-0-core-protocol/). To bind an OData service, use the ODataAdaptor.
+OData (Open Data Protocol) is a standardized protocol for building and consuming RESTful APIs. It enables the creation and consumption of queryable and interoperable REST APIs in a simple and standard way. OData services expose data as resources that are addressable by URLs and can be queried using standard HTTP methods (GET, POST, PUT, DELETE). For more details on OData services, refer to the [OData documentation](https://www.odata.org/documentation/odata-version-3-0/odata-version-3-0-core-protocol/). To bind an OData service, use the ODataAdaptor.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -932,7 +932,7 @@ The following sample code demonstrates hoe to bind remote data to the Diagram co
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/DataBinding/RemoteData/WebAPIAdaptor)
 
 ### Binding with URL services
-A URL service is a web service accessible via a Uniform Resource Locater (URL). These services provide specific functionalities or data when a client sends an HTTP request to the given URL. URL services are a foundational aspect of web-based APIs (Application Programming Interfaces) and RESTful services. The [UrlAdaptor](../data/adaptors#url-adaptor) serves as the base adaptor for interacting with remote data services. Most built-in adaptors are derived from the `UrlAdaptor`.
+A URL service is a web service accessible via a Uniform Resource Locator (URL). These services provide specific functionalities or data when a client sends an HTTP request to the given URL. URL services are a foundational aspect of web-based APIs (Application Programming Interfaces) and RESTful services. The [UrlAdaptor](../data/adaptors#url-adaptor) serves as the base adaptor for interacting with remote data services. Most built-in adaptors are derived from the `UrlAdaptor`.
 
 The following sample code demonstrates how to bind data to the Diagram component through the [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) using the `UrlAdaptor`,
 
