@@ -44,7 +44,7 @@ To achieve this, the `keydown` event has to be bound to the Rich Text Editor con
         "CreateLink", "Image", "|", "ClearFormat", "Print",
         "SourceCode", "FullScreen", "|", "Undo", "Redo"
     };
-    public void onKeydown(UIKeyboardEventArgs arg) {
+    public void onKeydown(KeyboardEventArgs arg) {
         if (arg.Key == "s" && arg.CtrlKey == true) {
             this.rteObj.UpdateValue();
             var value = this.rteObj.Value;
