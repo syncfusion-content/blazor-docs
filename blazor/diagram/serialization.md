@@ -135,3 +135,27 @@ The diagram provides support to save and load the diagram using file stream. The
 ```
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Serialization/SaveAndLoad)
+
+## Save the diagram as Mermaid string
+
+The [SfDiagramComponent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html) supports saving diagrams as a Mermaid string. The `SaveDiagramToMermaid` method serializes the diagram into a Mermaid-compatible string format. This method is specifically designed for diagrams that utilize Flowchart and Mindmap layouts. The following code illustrates how to save the diagram in Mermaid string format.
+
+```cshtml
+SfDiagramComponent Diagram;
+//returns the serialized Mermaid string of the Diagram
+string data = Diagram.SaveDiagramToMermaid();
+```
+
+## Load the diagram from Mermaid string
+
+You can load a [diagram](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html) from the serialized Mermaid string using the `LoadDiagramFromMermaidAsync` method. The following code illustrates how to load a diagram from a Mermaid string data.
+
+```cshtml
+SfDiagramComponent Diagram;
+// Retrieves the serialized Mermaid string of the Diagram
+string data = Diagram.SaveDiagramToMermaid();
+// Loads the Diagram from the saved Mermaid string
+await Diagram.LoadDiagramFromMermaidAsync(data);
+```
+
+>Note: Currently, Mermaid string serialization and deserialization are only supported for Flowchart and Mindmap layouts. Please ensure that your diagram uses one of these layouts to successfully load the data.
