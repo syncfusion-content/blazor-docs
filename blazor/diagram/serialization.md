@@ -158,4 +158,4 @@ string data = Diagram.SaveDiagramToMermaid();
 await Diagram.LoadDiagramFromMermaidAsync(data);
 ```
 
->Note: Currently, Mermaid string serialization and deserialization are only supported for Flowchart and Mindmap layouts. Please ensure that your diagram uses one of these layouts to successfully load the data.
+>**Note:** Currently, Mermaid string serialization and deserialization are only supported for Flowchart and Mindmap layouts. Please ensure that your diagram uses one of these layouts to successfully load the data.
