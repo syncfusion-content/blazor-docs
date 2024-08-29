@@ -55,7 +55,7 @@ The following code example illustrates how to customize the tooltip for nodes.
 }
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Tooltip/TooltipForSpecificNode)
-|![ToolTip During hover the node](images/blazor-diagram-nodetooltip.png) | 
+|![ToolTip During hover the node](images/blazor-diagram-nodetooltip.png)  
 
 The following code example illustrates how to customize the tooltip for connectors.
 
@@ -83,7 +83,7 @@ The following code example illustrates how to customize the tooltip for connecto
 }
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Tooltip/TooltipForSpecificConnector)
-|![ToolTip During hover the node](images/blazor-diagram-connectortooltip.png) | 
+|![ToolTip During hover the node](images/blazor-diagram-connectortooltip.png) 
 
 ## How to set tooltip position for nodes/connectors
 

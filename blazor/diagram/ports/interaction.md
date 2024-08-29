@@ -160,6 +160,82 @@ The following code explains how to draw the connector by using the port constrai
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Ports/Interaction/DrawConstraintsWithDrawingObject).
 
 ![Drawing Bezier Port Connection in Blazor Diagram](../images/blazor-diagram-draw-port-connection-bezier.gif)
+
+## How to set tooltip for ports
+
+The diagram provides support to show a tooltip when the mouse hovers over any port. The tooltip can be customized for each port.To achieve this, the tooltip property of the diagram model must be configured to contain the tooltip [Content](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramTooltip.html#Syncfusion_Blazor_Diagram_DiagramTooltip_Content) and to [Position](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramTooltip.html#Syncfusion_Blazor_Diagram_DiagramTooltip_Position) it appropriately. By default, tooltips are not displayed; you need to add the tooltip as shown in the following example.
+
+
+```cshtml
+@using Syncfusion.Blazor.Diagram
+<SfDiagramComponent Width="1000px" Height="500px" Nodes="@nodes"  />
+@code
+{
+    DiagramObjectCollection<Node> nodes;
+    
+    protected override void OnInitialized()
+    {
+        nodes = new DiagramObjectCollection<Node>();
+        Node node = new Node()
+        {
+            ID = "node1",
+            OffsetX = 250,
+            OffsetY = 250,
+            Width = 100,
+            Height = 100,
+            Style = new ShapeStyle() 
+            { 
+                Fill = "#6495ED", 
+                StrokeColor = "white" 
+            },
+            Ports = new DiagramObjectCollection<PointPort>()
+            {
+                new PointPort(){
+                    ID="Port1",
+                    Style = new ShapeStyle(){ Fill = "gray" },
+                    Offset = new DiagramPoint() { X = 1, Y = 0.5 },
+                    Visibility = PortVisibility.Visible,
+                    Tooltip = new DiagramTooltip(){ Content = "OutConnectPort"},
+                    Constraints = PortConstraints.Default | PortConstraints.Draw
+                } 
+            }
+        };
+        nodes.Add(node);
+        Node node2 = new Node()
+        {
+             ID = "node2",
+             OffsetX = 450,
+             OffsetY = 250,
+             Width = 100,
+             Height = 100,
+             Style = new ShapeStyle()
+             {
+                 Fill = "#6495ED",
+                 StrokeColor = "white"
+             },
+             Ports = new DiagramObjectCollection<PointPort>()
+             {
+                 new PointPort()
+                 {
+                    ID="Port2",
+                    Style = new ShapeStyle(){ Fill = "gray" },
+                    Offset = new DiagramPoint() { X = 0, Y = 0.5},
+                    Visibility = PortVisibility.Visible,
+                    Tooltip = new DiagramTooltip(){ Content = "InConnectPort"},
+                    Constraints = PortConstraints.Default | PortConstraints.Draw
+                 }
+             }
+        };
+        nodes.Add(node2);  
+    }
+}
+```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Ports/ActionofPorts/TooltipForSpecificPort)
+
+![ToolTip During hover the port](../images/PortTooltip.gif )
+
+For more information about tooltip, refer to [Tooltip](https://blazor.syncfusion.com/documentation/diagram/tool-tip)
+
 ## See also
 
 * [How to create a node](../nodes/nodes)
