@@ -360,7 +360,17 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ![SymbolPalette in Blazor Diagram](images/SymbolPaletteSymbolContainer.png)
 
+## How to customize the bezier and straight connector segment 
+To change the appearance of the Bezier and Straight connector segment, use the following CSS code:
 
+```cshtml
+<style>
+  .e-diagram-bezier-segment-handle {
+    fill: red;
+    stroke: green;
+  }
+</style>
+```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Style/SegmentStyle)
 
-
-
+![Segment shape  in Blazor Diagram](images/SegmentStyle.png)
