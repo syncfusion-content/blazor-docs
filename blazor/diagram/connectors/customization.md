@@ -623,7 +623,7 @@ The following code illustrates how to set the HitPadding for the connector.
             SourcePoint = new DiagramPoint() { X = 100, Y = 100 },
             TargetPoint = new DiagramPoint() { X = 200, Y = 200 },
             // Type of the connector segments.
-            Type = ConnectorSegmentType.Straight
+            Type = ConnectorSegmentType.Straight,
             //Define the HitPadding property.
             HitPadding = 20,
         };
