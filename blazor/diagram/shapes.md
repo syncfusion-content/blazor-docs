@@ -51,11 +51,7 @@ The following code illustrates how to create a text node.
                 //Set the Content of the text shape.
                 Content = "Text Node"
             },
-            Style = new TextStyle()
-            {
-                Fill = "Yellow",
-                TextAlign= TextAlign.Left
-            }
+            
         };
         nodes.Add(node);
     }

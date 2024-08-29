@@ -22,7 +22,7 @@ The following code example explains how to add a phase at the swimlane.
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Height="600px" Swimlanes="@SwimlaneCollections" />
+<SfDiagramComponent Height="600px" Swimlanes="@SwimlaneCollections" NodeCreating="@OnNodeCreating" />
 
 @code
 {
@@ -62,6 +62,25 @@ The following code example explains how to add a phase at the swimlane.
         // Add swimlane.
         SwimlaneCollections.Add(swimlane);
     }
+    private void OnNodeCreating(IDiagramObject obj)
+    {
+        if (obj is Swimlane swimlane)
+        {
+             swimlane.Header.Style = new TextStyle()
+             {
+                 Fill = "#5b9bd5",
+                 StrokeColor = "#5b9bd5"
+             };
+             foreach (Phase phase in swimlane.Phases)
+             {
+                 phase.Style = new ShapeStyle() { Fill = "#5b9bd5", StrokeColor = "#5b9bd5" };
+             }
+             foreach (Lane lane in swimlane.Lanes)
+             {
+                 lane.Header.Style = new TextStyle() { Fill = "#5b9bd5", StrokeColor = "#5b9bd5" };
+             }
+        }
+    }
 }
 ```
 
@@ -80,7 +99,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 <SfButton Content="Add Phase" OnClick="@AddPhase" />
 <SfButton Content="Remove Phase" OnClick="@RemovePhase" />
-<SfDiagramComponent Height="600px" Swimlanes="@SwimlaneCollections" />
+<SfDiagramComponent Height="600px" Swimlanes="@SwimlaneCollections" NodeCreating="@OnNodeCreating" />
 
 @code
 {
@@ -131,7 +150,8 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
                 {
                     Annotation = new ShapeAnnotation() { Content = "Phase " + (swimlane.Phases.Count + 1) },
                     Height = 30
-                }
+                },
+                 Style = new ShapeStyle() { Fill = "#5b9bd5", StrokeColor = "#5b9bd5" }
             };
         swimlane.Phases.Add(newPhase);
     }
@@ -142,6 +162,26 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
         if (swimlane.Phases.Count > 1)
             swimlane.Phases.RemoveAt(swimlane.Phases.Count - 1);
     }
+    private void OnNodeCreating(IDiagramObject obj)
+    {
+        if (obj is Swimlane swimlane)
+        {
+             swimlane.Header.Style = new TextStyle()
+             {
+                 Fill = "#5b9bd5",
+                 StrokeColor = "#5b9bd5"
+             };
+             foreach (Phase phase in swimlane.Phases)
+             {
+                 phase.Style = new ShapeStyle() { Fill = "#5b9bd5", StrokeColor = "#5b9bd5" };
+             }
+             foreach (Lane lane in swimlane.Lanes)
+             {
+                 lane.Header.Style = new TextStyle() { Fill = "#5b9bd5", StrokeColor = "#5b9bd5" };
+             }
+        }
+    } 
+
 }
 ```
 
@@ -160,7 +200,7 @@ The following code example explains how to define a Phase header and its customi
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Height="600px" Swimlanes="@SwimlaneCollections" />
+<SfDiagramComponent Height="600px" Swimlanes="@SwimlaneCollections" NodeCreating="@OnNodeCreating"/>
 
 @code
 {
@@ -200,6 +240,21 @@ The following code example explains how to define a Phase header and its customi
             };
         // Add swimlane.
         SwimlaneCollections.Add(swimlane);
+    }
+    private void OnNodeCreating(IDiagramObject obj)
+    {
+        if (obj is Swimlane swimlane)
+        {
+            swimlane.Header.Style = new TextStyle()
+            {
+                Fill = "#5b9bd5",
+                StrokeColor = "#5b9bd5"
+            };
+            foreach (Lane lane in swimlane.Lanes)
+            {
+                lane.Header.Style = new TextStyle() { Fill = "#5b9bd5", StrokeColor = "#5b9bd5" };
+            }
+        }
     }
 }
 ```

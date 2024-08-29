@@ -530,7 +530,7 @@ The following code example how to get [InEdges](https://help.syncfusion.com/cr/b
     }
     private void GetInEdges()
     {
-        List<Connector> Inedges= new List<Connector>();
+        List<string> Inedges= new List<string>();
         foreach (string inedge in diagram.Nodes[1].Ports[0].InEdges)
         {
             Inedges.Add(inedge);
