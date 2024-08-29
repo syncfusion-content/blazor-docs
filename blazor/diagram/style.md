@@ -371,6 +371,6 @@ To change the appearance of the Bezier and Straight connector segment, use the f
   }
 </style>
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Style/SegmentStyle)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples)
 
 ![Segment shape  in Blazor Diagram](images/SegmentStyle.png)
