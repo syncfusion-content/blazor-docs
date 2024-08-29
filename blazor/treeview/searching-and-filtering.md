@@ -198,7 +198,7 @@ The Blazor TreeView component allows for searching and filtering of TreeView nod
         else
        {
             DataSource = GetData();
-            // Filter all the nodes of the Serached ID.
+            // Filter all the nodes of the Searched ID.
             List<Listdata> filteredValues = DataSource.FindAll(e => e.Name.ToString().StartsWith(eventArgs.Value));
             List<Listdata> filteredDataSource = new List<Listdata>();
             Listdata data = new Listdata();
@@ -222,7 +222,7 @@ The Blazor TreeView component allows for searching and filtering of TreeView nod
                     filteredDataSource.Add(data);
                 }
             }
-            // Update the TreeView based on the searched ID vallue.
+            // Update the TreeView based on the searched ID value.
             ListDataSource = filteredDataSource;
             isFiltered = true;
         }
