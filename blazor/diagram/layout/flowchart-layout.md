@@ -216,12 +216,29 @@ The sequence of a node's direction can be customized by flowchart's orientation,
 
 This orientation arranges elements in the layout vertically, flowing from top to bottom. It is commonly used in flowcharts to represent the sequential progression of steps or actions in a process.
 
+```csharp
+@using Syncfusion.Blazor.Diagram
 
+<SfDiagramComponent @ref="Diagram"Height="500px">
+    <Layout Type="LayoutType.Flowchart" Orientation="LayoutOrientation.TopToBottom">
+    </Layout>
+</SfDiagramComponent>
+```
+![Blazor Diagram with Flowchart layout](../images/Flowchart_Layout.png)
 
 ### LeftToRight orientation
 
 This orientation arranges elements in the layout horizontally, flowing from left to right. It is typically used to represent processes or workflows that move sequentially across the page, emphasizing a linear progression of steps or actions.
 
+```csharp
+@using Syncfusion.Blazor.Diagram
+
+<SfDiagramComponent @ref="Diagram"Height="500px">
+    <Layout Type="LayoutType.Flowchart" Orientation="LayoutOrientation.LeftToRight">
+    </Layout>
+</SfDiagramComponent>
+```
+![Blazor Diagram with Flowchart layout](../images/Flowchart_LeftToRight.png)
 
 ## Customize the decision output directions
 
