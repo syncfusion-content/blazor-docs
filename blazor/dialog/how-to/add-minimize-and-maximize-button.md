@@ -21,93 +21,90 @@ Blazor Dialog allows end users to either minimize or maximize the Dialog compone
 
 <SfButton @onclick="@OpenDialog">Open Dialog</SfButton>
 
-    <SfDialog @ref="@DialogObj" Width="50%" ShowCloseIcon="true" IsModal="true" @bind-Visible="@IsVisible" CssClass="@dialogClass">
-        <DialogTemplates>
-            <Header>
-                Dialog
-                @if (!IsMaximized)
-                {
-                    <span class="e-icons sf-icon-Maximize" id="max-btn" title="Maximize" @onclick="@maximize"></span>
-                }
-                else
-                {
-                    <span class="e-icons sf-icon-Restore" id="max-btn" title="Maximize" @onclick="@maximize"></span>
-                }
+<SfDialog @ref="@DialogObj" Width="50%" ShowCloseIcon="true" IsModal="true" @bind-Visible="@IsVisible" CssClass="@dialogClass">
+    <DialogTemplates>
+        <Header>
+            Dialog
+            @if (!IsMaximized)
+            {
+                <span class="e-icons sf-icon-Maximize" title="Maximize" @onclick="@maximize"></span>
+            }
+            else
+            {
+                <span class="e-icons sf-icon-Restore" title="Restore" @onclick="@maximize"></span>
+            }
+            @if (!IsMinimized)
+            {
+                <span class="e-icons sf-icon-Minimize" title="Minimize" @onclick="@minimize"></span>
+            }
+            else
+            {
+                <span class="e-icons sf-icon-Restore" title="Restore" @onclick="@minimize"></span>
+            }
+        </Header>
+        <Content>
+            <p>This is a dialog with minimize and maximize buttons</p>
+        </Content>
+    </DialogTemplates>
+    <DialogButtons>
+        <DialogButton Content="Ok" IsPrimary="true" OnClick="@CloseDialog" />
+        <DialogButton Content="Cancel" OnClick="@CloseDialog" />
+    </DialogButtons>
+</SfDialog>
 
-                @if (!IsMinimized)
-                {
-                    <span class="e-icons sf-icon-Minimize" id="min-btn" title="Minimize" @onclick="@minimize"></span>
-                }
-                else
-                {
-                    <span class="e-icons sf-icon-Restore" id="min-btn" title="Minimize" @onclick="@minimize"></span>
-                }
-
-            </Header>
-            <Content>
-                <p>This is a dialog with minimize and maximize buttons</p>
-            </Content>
-        </DialogTemplates>
-        <DialogButtons>
-            <DialogButton Content="Ok" IsPrimary="true" OnClick="@CloseDialog" />
-            <DialogButton Content="Cancel" OnClick="@CloseDialog" />
-        </DialogButtons>
-        <DialogPositionData X="@Xvalue" Y="@Yvalue"></DialogPositionData>
-    </SfDialog>
-
-    <style>
-      .e-dialog .e-dlg-header {
+<style>
+    .e-dialog .e-dlg-header {
         width: auto;
-      }
+    }
 
-      .e-dialog .e-dlg-header .e-icons.sf-icon-Maximize::before,
-      .e-dialog .e-dlg-header .e-icons.sf-icon-Minimize::before,
-      .e-dialog .e-dlg-header .e-icons.sf-icon-Restore::before {
-          position: relative;
-      }
+    .e-dialog .e-dlg-header .e-icons.sf-icon-Maximize::before,
+    .e-dialog .e-dlg-header .e-icons.sf-icon-Minimize::before,
+    .e-dialog .e-dlg-header .e-icons.sf-icon-Restore::before {
+        position: relative;
+    }
 
-        .e-dialog .e-dlg-header .e-icons.sf-icon-Minimize,
-        .e-dialog .e-dlg-header .e-icons.sf-icon-Maximize,
-        .e-dialog .e-dlg-header .e-icons.sf-icon-Restore {
-            font-size: 12px;
-            width: 30px;
-            height: 30px;
-            line-height: 16px;
-            float: right;
-            position: relative;
-            text-align: center;
-            cursor: pointer;
-            color: grey;
-        }
+    .e-dialog .e-dlg-header .e-icons.sf-icon-Minimize,
+    .e-dialog .e-dlg-header .e-icons.sf-icon-Maximize,
+    .e-dialog .e-dlg-header .e-icons.sf-icon-Restore {
+        font-size: 12px;
+        width: 30px;
+        height: 30px;
+        line-height: 16px;
+        float: right;
+        position: relative;
+        text-align: center;
+        cursor: pointer;
+        color: grey;
+    }
 
-      .e-dialog .e-dlg-header .e-icons.sf-icon-Minimize:hover, .e-dialog .e-dlg-header .e-icons.sf-icon-Maximize:hover,
-      .e-dialog .e-dlg-header .e-icons.sf-icon-Restore:hover {
-      /*    background-color: #e0e0e0;
-          border-color: transparent;
-          box-shadow: 0 0 0 transparent;
-          border-radius: 50%;*/
-          color: black;
-      }
+    .e-dialog .e-dlg-header .e-icons.sf-icon-Minimize:hover, .e-dialog .e-dlg-header .e-icons.sf-icon-Maximize:hover,
+    .e-dialog .e-dlg-header .e-icons.sf-icon-Restore:hover {
+        /*    background-color: #e0e0e0;
+            border-color: transparent;
+            box-shadow: 0 0 0 transparent;
+            border-radius: 50%;*/
+        color: black;
+    }
 
-      .e-dialog .e-dlg-header .e-icons.sf-icon-Minimize,
-      .e-dialog .e-dlg-header .e-icons.sf-icon-Restore {
-          padding-left: 5px;
-          padding-right: 5px;
-      }
+    .e-dialog .e-dlg-header .e-icons.sf-icon-Minimize,
+    .e-dialog .e-dlg-header .e-icons.sf-icon-Restore {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
 
-      .e-dialog .e-dlg-header {
-          position: relative;
-          top: 1px;
-      }
+    .e-dialog .e-dlg-header {
+        position: relative;
+        top: 1px;
+    }
 
-      .e-dialog .e-dlg-content.hide-content, .e-dialog .e-footer-content.hide-content {
-          display: none;
-      }
+    .e-dialog .e-dlg-content.hide-content, .e-dialog .e-footer-content.hide-content {
+        display: none;
+    }
 
-      .e-dialog .e-dlg-header span.title {
-          width: 60px;
-          display: inline-block;
-      }
+    .e-dialog .e-dlg-header span.title {
+        width: 60px;
+        display: inline-block;
+    }
 
 
 
@@ -151,76 +148,57 @@ Blazor Dialog allows end users to either minimize or maximize the Dialog compone
     .e-dialog.hide-content .e-dlg-content, .e-dialog.hide-content .e-footer-content {
         display: none;
     }
-    </style>
+</style>
 
-    @code {
-        public bool IsMaximized { get; set; } = false;
-        public bool IsMinimized { get; set; } = false;
-        [Inject]
-        IJSRuntime JsRuntime { get; set; }
-        SfDialog DialogObj;
-        private bool IsVisible { get; set; } = false;
-        private string Xvalue = "center";
-        private string Yvalue = "center";
-        public string dialogClass = "";
-        private void OpenDialog()
+@code {
+    public bool IsMaximized { get; set; } = false;
+    public bool IsMinimized { get; set; } = false;
+    private SfDialog DialogObj;
+    private bool IsVisible { get; set; } = false;
+    public string dialogClass = "";
+    private void OpenDialog() => IsVisible = true;
+    private void CloseDialog() => IsVisible = false;
+
+    private async Task maximize()
+    {
+        IsMaximized = !IsMaximized;
+        if (IsMaximized)
         {
-            this.IsVisible = true;
+            await JsRuntime.InvokeVoidAsync("Dialog.maximize");
         }
-        private void CloseDialog()
+
+    }
+
+    private async Task minimize()
+    {
+        IsMinimized = !IsMinimized;
+        if (IsMinimized)
         {
-            this.IsVisible = false;
-        }
-        private void maximize()
-        {
-            if (this.IsMaximized)
-            {
-                this.DialogObj.ShowAsync(false);
-                this.IsMaximized = false;
-            }
-            else
-            {
-                this.DialogObj.ShowAsync(true);
-                this.IsMaximized = true;
-            }
-        }
-        private void minimize()
-        {
-            if (this.IsMinimized)
-            {
-                this.Xvalue = "center";
-                this.Yvalue = "center";
-                this.dialogClass = "";
-                this.IsMinimized = false;
-            }
-            else
-            {
-                if (this.IsMaximized)
-                {
-                    JsRuntime.InvokeAsync<string>("Dialog.minimize");
-                    this.IsMaximized = false;
-                }
-                this.Xvalue = "center";
-                this.Yvalue = "bottom";
-                this.dialogClass = "hide-content";
-                this.IsMinimized = true;
-            }
+            await JsRuntime.InvokeVoidAsync("Dialog.minimize");
         }
     }
+}
+
 
 {% endhighlight %}
-
 {% highlight cshtml tabtitle="Host.cshtml" hl_lines="4" %}
 
-<script>
-window.Dialog = {
-    minimize: function () {
-        var maximizeIcon;
-        var dialogElem = document.querySelector('.e-dialog');
-        dialogElem.classList.remove('e-dlg-fullscreen');
-    }
-} 
-</script>
+ <script>
+     window.Dialog = {
+         minimize: function () {
+             var dialogElem = document.querySelector('.e-dialog');
+             if (dialogElem) {
+                 dialogElem.classList.remove('e-dlg-fullscreen');
+             }
+         },
+         maximize: function () {
+             var dialogElem = document.querySelector('.e-dialog');
+             if (dialogElem) {
+                 dialogElem.classList.add('e-dlg-fullscreen');
+             }
+         }
+     }
+ </script>
 
 {% endhighlight %}
 {% endtabs %}

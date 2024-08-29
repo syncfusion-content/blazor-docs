@@ -86,7 +86,7 @@ The [ID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DataSou
     };
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/DataBinding)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/DataBinding/Parent-Child%20Relationship)
 
 ## How to bind local data with diagram
 
@@ -244,7 +244,12 @@ The following code example illustrates how to bind ExpandoObject data with the d
     int VerticalSpacing = 30;
     public List<ExpandoObject> DataSource { get; set; }
     public List<ExpandoObject> ExpandoData = new List<ExpandoObject>();
-
+    public class ExpandoObject
+    {   
+        public string Name { get; set; }
+        public string Category { get; set; }
+        public string FillColor { get; set; }
+    }
     // Defines the connector's default values.
     private void ConnectorDefaults(IDiagramObject connector)
     {
@@ -393,6 +398,7 @@ The following code example illustrates how to bind DynamicObject data with the d
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
+@using System.Dynamic
 
 <SfDiagramComponent @ref="@Diagram" 
                     Height="499px"
@@ -491,7 +497,7 @@ The following code example illustrates how to bind DynamicObject data with the d
     }
     protected override void OnInitialized()
     {
-        this.ExpandoDataSource = GetData();
+        this.DataSource = GetData();
     }
     public List<HierarchicalDetails> GetData()
     {
@@ -926,7 +932,7 @@ The following sample code demonstrates hoe to bind remote data to the Diagram co
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/DataBinding/RemoteData/WebAPIAdaptor)
 
 ### Binding with URL services
-A URL service is a web service accessible via a Uniform Resource Locator (URL). These services provide specific functionalities or data when a client sends an HTTP request to the given URL. URL services are a foundational aspect of web-based APIs (Application Programming Interfaces) and RESTful services. The [UrlAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors#url-adaptor) serves as the base adaptor for interacting with remote data services. Most built-in adaptors are derived from the `UrlAdaptor`.
+A URL service is a web service accessible via a Uniform Resource Locator (URL). These services provide specific functionalities or data when a client sends an HTTP request to the given URL. URL services are a foundational aspect of web-based APIs (Application Programming Interfaces) and RESTful services. The [UrlAdaptor](../data/adaptors#url-adaptor) serves as the base adaptor for interacting with remote data services. Most built-in adaptors are derived from the `UrlAdaptor`.
 
 The following sample code demonstrates how to bind data to the Diagram component through the [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) using the `UrlAdaptor`,
 
@@ -1016,7 +1022,7 @@ The following sample code demonstrates how to bind data to the Diagram component
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/DataBinding/RemoteData/URLAdaptor)
 
 ### Binding with GraphQL service
-GraphQL is a query language for APIs with which you can get exactly what you need and nothing more. The GraphQLAdaptor provides an option to retrieve data from the GraphQL server. For more details on GraphQL service, refer to the [GraphQL documentation](https://blazor.syncfusion.com/documentation/data/adaptors#graphql-service-binding).
+GraphQL is a query language for APIs with which you can get exactly what you need and nothing more. The GraphQLAdaptor provides an option to retrieve data from the GraphQL server. For more details on GraphQL service, refer to the [GraphQL documentation](../data/adaptors#graphql-service-binding).
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
