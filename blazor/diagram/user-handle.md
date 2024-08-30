@@ -1026,6 +1026,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 ![Tooltip for UserHandle](images/FixedUserHandleTooltip.gif)
 
 For more information about tooltip, refer to the [Tooltip](https://blazor.syncfusion.com/documentation/diagram/tool-tip)
+
 ## How to set sticky tooltip for fixed user handles
 
 With this mode set to `true`, Tooltips for fixed user handles can be made to show up on the screen as long as the close icon is pressed. In this mode, close icon is attached to the Tooltip located at the top right corner. This mode can be enabled or disabled using the `IsSticky` property in tooltip. By default, the value of the IsSticky property is set to false.

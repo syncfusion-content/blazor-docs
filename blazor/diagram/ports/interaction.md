@@ -291,6 +291,8 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ![ToolTip During hover the ports with Stikcy Mode](../images/PortIsSticky.png)
 
+For more information about tooltip, refer to [Tooltip](https://blazor.syncfusion.com/documentation/diagram/tool-tip)
+
 ## See also
 
 * [How to create a node](../nodes/nodes)
