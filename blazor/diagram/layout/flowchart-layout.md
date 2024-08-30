@@ -9,7 +9,7 @@ documentation: ug
 
 # Flowchart layout in Blazor Diagram Component
 
-The flowchart layout provides a visual representation of processes, workflows, systems, or algorithms in a diagrammatic format. It employs various symbols to depict different actions, with arrows connecting these symbols to indicate the flow or direction of the process. Flowcharts are essential tools for illustrating step-by-step sequences, making complex processes easier to understand and communicate.
+The flowchart layout provides a visual representation of processes, workflows, systems, or algorithms in a diagrammatic format. It uses various symbols to depict different actions, with arrows connecting these symbols to indicate the flow or direction of the process. Flowcharts are essential tools for illustrating step-by-step sequences, making complex processes easier to understand and communicate.
 
 ## Common flowchart symbols
 
@@ -208,9 +208,11 @@ Different flowchart symbols have different meanings that are used to represent d
 
 ![Blazor Diagram with Flowchart layout](../images/Flowchart_Layout.png)
 
-## Customize flowchart layout orientation
+You can download a complete working sample from `GitHub`.
 
-The sequence of a node's direction can be customized by flowchart's orientation, either vertically from top to bottom or horizontally from left to right. The [Orientation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_Orientation) property of the Layout class allows you to define the flow direction for the flowchart as either `TopToBottom` or `LeftToRight`.
+## How to customize flowchart layout orientation
+
+The sequence of a node's direction can be customized by flowchart's orientation, either vertically from top to bottom or horizontally from left to right. The [Orientation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_Orientation) property of the layout class allows you to define the flow direction for the flowchart as either `TopToBottom` or `LeftToRight`.
 
 ### TopToBottom orientation
 
@@ -240,7 +242,7 @@ This orientation arranges elements in the layout horizontally, flowing from left
 ```
 ![Blazor Diagram with Flowchart layout](../images/Flowchart_LeftToRight.png)
 
-## Customize the decision output directions
+## How to customize the decision output directions
 
 The decision symbol in a flowchart represents a question or condition that leads to different paths based on a binary outcome (Yes/No, True/False). You can customize the output direction of these paths using the `YesBranchDirection` and `NoBranchDirection` properties of the `FlowchartLayoutSettings` class.
 
@@ -254,12 +256,15 @@ The following table will explain the pictorial representation of the behavior:
 
 |YesBranchDirection| NoBranchDirection | TopToBottom | LeftToRight |
 |---|---|---|---|
-| Left In Flow |Right In Flow|![WPF Diagram displays Decision Output at Left Flow Direction in Vertical](Automatic-Layouts_images/wpf-diagram-decison-at-left-side-in-vertical.png)|![WPF Diagram displays Decision Output at Right Flow Direction in Horizontal](Automatic-Layouts_images/wpf-diagram-decison-at-left-side-in-horizontal.png)|
-| Right In Flow |Left In Flow |![WPF Diagram displays Decision Output at Right Flow Direction in Vertical](Automatic-Layouts_images/wpf-diagram-decision-at-right-in-vertical.png)|![WPF Diagram displays Decision Output at Left Flow Direction in Horizontal](Automatic-Layouts_images/wpf-diagram-decision-at-right-in-horizontal.png) |
-| Same As Flow |Right In Flow |![WPF Diagram displays Decision Output at Both Direction in Vertical](Automatic-Layouts_images/wpf-diagram-decision-both-side.png)|![WPF Diagram displays Decision Output at Right Flow Direction in Horizontal](Automatic-Layouts_images/wpf-diagram-decision-at-right-side.png) |
-|Same As Flow |Same As Flow|![WPF Diagram displays Decision Output at Both Direction in Vertical](Automatic-Layouts_images/wpf-diagram-decision-at-both-side-in-vertical.png)|![WPF Diagram displays Decision Output at Both Direction in Horizontal](Automatic-Layouts_images/wpf-diagram-decision-at-both-side-in-horizontal.png)|
+| Left In Flow |Right In Flow|![Blazor Diagram displays Decision Output at Left Flow Direction in Vertical](../images/Flowchart_VerticalLeftAndRightBranches.png)|![Blazor Diagram displays Decision Output at Right Flow Direction in Horizontal](../images/Flowchart_HorizontalLeftAndRightBranches.png)|
+| Right In Flow |Left In Flow |![Blazor Diagram displays Decision Output at Right Flow Direction in Vertical](../images/Flowchart_VerticalRightAndLeftBranches.png)|![Blazor Diagram displays Decision Output at Left Flow Direction in Horizontal](../images/Flowchart_HorizontalRightAndLeftBranches.png) |
+| Same As Flow |Right In Flow |![Blazor Diagram displays Decision Output at Both Direction in Vertical](../images/Flowchart_VerticalSameAndRightBranches.png)|![Blazor Diagram displays Decision Output at Right Flow Direction in Horizontal](../images/Flowchart_HorizontalSameAndRightBranches.png) |
+| Right In Flow | Same As Flow |![Blazor Diagram displays Decision Output at Both Direction in Vertical](../images/Flowchart_VerticalRightAndSameBranches.png)|![Blazor Diagram displays Decision Output at Right Flow Direction in Horizontal](../images/Flowchart_HorizontalRightAndSameBranches.png) |
+|Same As Flow |Same As Flow|![Blazor Diagram displays Decision Output at Both Direction in Vertical](../images/Flowchart_VerticalSameBranches.png)|![Blazor Diagram displays Decision Output at Both Direction in Horizontal](../images/Flowchart_HorizontalSameBranches.png)|
 
-N> If both branch directions are same, **Yes** branch will be prioritized.
+>**Note:** If both branch directions are same, **Yes** branch will be prioritized.
+
+You can download a complete working sample from `GitHub`.
 
 ### Custom Yes and No branch values
 
@@ -267,9 +272,152 @@ The decision symbol will produce the two branches as output, which will be **Yes
 
 Any text value can be given as a connector text to describe the flow. Also, any string value can be given in the `YesBranchValues` and `NoBranchValues`. To decide the flow based on if or else, that connector text should match the values in the `YesBranchValues` and `NoBranchValues`.
 
+```csharp
+@using Syncfusion.Blazor.Diagram
 
-## Customize vertical and horizontal spacing 
+<SfDiagramComponent @ref="Diagram" Width="100%" Height="900px" ConnectorCreating="@OnConnectorCreating" NodeCreating="@OnNodeCreating" DataLoaded="@OnDataLoaded">
+    <DataSourceSettings ID="Id" ParentID="ParentId" DataSource="DataSource"> </DataSourceSettings>
+    <Layout Type="LayoutType.Flowchart" HorizontalSpacing="50" Orientation="LayoutOrientation.TopToBottom" VerticalSpacing="50" FlowchartLayoutSettings="@flowchartSettings">
+    </Layout>
+</SfDiagramComponent>
+
+@code
+{
+    SfDiagramComponent Diagram;
+    FlowchartLayoutSettings flowchartSettings = new FlowchartLayoutSettings()
+    {
+        YesBranchValues = new List<string> { "Accept", "Yes" },
+        NoBranchValues = new List<string> { "Reject", "No" },
+    };
+
+    private void OnDataLoaded(object obj)
+    {
+        for (int i = 0; i < Diagram.Connectors.Count; i++)
+        {
+            var connector = Diagram.Connectors[i];
+            {
+                var node = Diagram.GetObject(connector.TargetID) as Node;
+                var srcNode = Diagram.GetObject(connector.SourceID) as Node;
+                if (node.Data != null && node.Data is ItemInfo itemInfo)
+                {
+                    if (itemInfo.Label != null && itemInfo.Label.Count > 0)
+                    {
+                        if (itemInfo.ParentId.IndexOf((srcNode.Data as ItemInfo).Id) != -1)
+                        {
+                            var parentIndex = itemInfo.ParentId.IndexOf((srcNode.Data as ItemInfo).Id);
+                            if (itemInfo.Label.Count > parentIndex)
+                            {
+                                connector.Annotations = new DiagramObjectCollection<PathAnnotation>()
+                                {
+                                    new PathAnnotation() { Content = itemInfo.Label[parentIndex], Style = new TextStyle(){ Bold = true} }
+                                };
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    private void OnConnectorCreating(IDiagramObject obj)
+    {
+        if (obj is Connector connector)
+        {
+            connector.Type = ConnectorSegmentType.Orthogonal;
+        }
+    }
+    private void OnNodeCreating(IDiagramObject obj)
+    {
+        Node node = obj as Node;
+        if (node.Data != null && node.Data is ItemInfo)
+        {
+            ItemInfo employeeDetails = node.Data as ItemInfo;
+            node.Width = employeeDetails._Width;
+            node.Height = employeeDetails._Height;
+            if (employeeDetails._Shape == "StartOrEnd")
+            {
+                node.Shape = new FlowShape() { Shape = NodeFlowShapes.Terminator };
+            }
+            else
+                node.Shape = new FlowShape() { Shape = (NodeFlowShapes)Enum.Parse(typeof(NodeFlowShapes), employeeDetails._Shape.ToString()) };
+            node.Style.Fill = employeeDetails._Color;
+            node.Style.StrokeColor = employeeDetails._Color;
+            node.Annotations = new DiagramObjectCollection<ShapeAnnotation>()
+            {
+                new ShapeAnnotation(){ Content = employeeDetails.Name, Style = new TextStyle(){ Color = "white", Bold = true} }
+            };
+        }
+    }
+    public List<ItemInfo> DataSource = new List<ItemInfo>(){
+        new ItemInfo()
+        {
+            Id = "1",
+            Name = "Start",
+            _Shape = "StartOrEnd",
+            _Width = 100,
+            _Height = 50,
+            _Color = "#6CA0DC"
+        },
+        new ItemInfo()
+        {
+            Id = "2",
+            Name = "Decision?",
+            ParentId = new List<string> { "1" },
+            _Shape = "Decision",
+            _Width = 100,
+            _Height = 80,
+            _Color = "#6CA0DC"
+        },
+        new ItemInfo()
+        {
+            Id = "3",
+            Label = new List<string> { "Reject" },
+            Name = "Process1",
+            ParentId = new List<string> { "2" },
+            _Shape = "Process",
+            _Width = 100,
+            _Height = 60,
+            _Color = "#6CA0DC"
+        },
+        new ItemInfo()
+        {
+            Id = "4",
+            Label = new List<string> { "Accept" },
+            Name = "Process2",
+            ParentId = new List<string>() { "2" },
+            _Shape = "Process",
+            _Width = 100,
+            _Height = 60,
+            _Color = "#6CA0DC"
+        },
+        new ItemInfo()
+        {
+            Id = "5",
+            Name = "End",
+            ParentId = new List<string> { "4"},
+            _Shape = "Terminator",
+            _Width = 100,
+            _Height = 50,
+            _Color = "#6CA0DC"
+        },
+    };
+    public class ItemInfo
+    {
+        public string Name { get; set; }
+        public string Id { get; set; }
+        public List<string> Label { get; set; }
+        public List<string> ParentId { get; set; }
+        public string _Shape { get; set; }
+        public double _Width { get; set; }
+        public double _Height { get; set; }
+        public string _Color { get; set; }
+    }
+}
+```
+
+![Blazor Flowchart layout diagram](../images/Flowchart_CustomYesOrNoBranches.png)
+
+You can download a complete working sample from `GitHub`.
+
+## How to update the spacing between nodes 
 
 You can control the spacing between nodes in your diagram layout using the [HorizontalSpacing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_HorizontalSpacing) and [VerticalSpacing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_VerticalSpacing) properties of the layout class. These properties allow you to adjust the distance between nodes both horizontally and vertically, giving you precise control over the appearance and organization of your diagram.
-
-[View sample in GitHub](https://github.com/SyncfusionExamples/WPF-Diagram-Examples/tree/master/Samples/Automatic%20Layout/Flowchart%20Layout)
