@@ -163,7 +163,11 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## How to set tooltip for ports
 
-The diagram provides support to show a tooltip when the mouse hovers over any port. The tooltip can be customized for each port.To achieve this, the tooltip property of the diagram model must be configured to contain the tooltip [Content](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramTooltip.html#Syncfusion_Blazor_Diagram_DiagramTooltip_Content) and to [Position](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramTooltip.html#Syncfusion_Blazor_Diagram_DiagramTooltip_Position) it appropriately. By default, tooltips are not displayed; you need to add the tooltip as shown in the following example.
+The Diagram component provides support for showing or hiding tooltips when the mouse hovers over any port. You can customize the tooltip for each port individually.
+
+To set a tooltip for a port, you need to configure the Tooltip property of the port. This property allows you to define the tooltip [Content](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramTooltip.html#Syncfusion_Blazor_Diagram_DiagramTooltip_Content) and [Position](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramTooltip.html#Syncfusion_Blazor_Diagram_DiagramTooltip_Position) it appropriately.
+
+By default, tooltips are not displayed. To display a tooltip, you must explicitly configure the tooltip settings for each port as shown in the following example:
 
 
 ```cshtml
@@ -238,9 +242,13 @@ For more information about tooltip, refer to [Tooltip](https://blazor.syncfusion
 
 ## How to set sticky tooltip for ports
 
-With this mode set to `true`, Tooltips for ports can be made to show up on the screen as long as the close icon is pressed. In this mode, close icon is attached to the Tooltip located at the top right corner. This mode can be enabled or disabled using the `IsSticky` property in tooltip. By default, the value of the IsSticky property is set to false.
+You can configure tooltips for ports to remain visible until the close icon is pressed. This feature is known as a "sticky" tooltip. When sticky mode is enabled, a close icon appears at the top right corner of the tooltip, allowing users to manually close it.
 
-The following code example demonstrates how to set the IsSticky property to true for the ports:
+To enable or disable this sticky mode, use the `IsSticky` property in the tooltip configuration. By default, the `IsSticky` property is set to `false`.
+
+**Note:** The tooltip will have an open and close state whenever the mouse hovers over different diagram elements. Only one "sticky" tooltip can be visible in the diagram at a time.
+
+The following code example demonstrates how to set the `IsSticky` property to `true` for the ports:
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram

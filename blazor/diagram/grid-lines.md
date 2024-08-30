@@ -287,7 +287,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ### How to customize the Snap line style
 
-The `SnapLineStyle` property allows you to define the style of the snapline used in the diagram. By customizing the SnapLineStyle property, you can enhance the visual contrast and visibility of these guides, making it easier to achieve accurate alignment. Using this property we can customize snap line color, stroke width, stroke dash array and opacity. By default the snap line color is set to `'#07EDE1'`.
+The `SnapLineStyle` property allows you to define the style of the snap line used in the diagram. By customizing the SnapLineStyle property, you can enhance the visual contrast and visibility of these guides, making it easier to achieve accurate alignment. Using this property we can customize snap line color, stroke width, stroke dash array and opacity. By default the snap line color is set to `'#07EDE1'`.
 
 The following code example illustrates how to customize the snap line style.
 

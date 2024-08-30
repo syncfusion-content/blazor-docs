@@ -157,7 +157,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## How to customize Orthogonal Segment Thumb Shape
 
-The [Orthogonal](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ConnectorSegmentType.html#Syncfusion_Blazor_Diagram_ConnectorSegmentType_Orthogonal) connector in the Syncfusion Blazor Diagram component supports an arbitrary number of segments between its source and target points. By default, these  [Segments](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Connector.html#Syncfusion_Blazor_Diagram_Connector_Segments)  are displayed with a circular shape in grey color. 
+The [Orthogonal](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ConnectorSegmentType.html#Syncfusion_Blazor_Diagram_ConnectorSegmentType_Orthogonal) connector in the Syncfusion Blazor Diagram component supports an arbitrary number of segments between its source and target points. By default, these  [Segments](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Connector.html#Syncfusion_Blazor_Diagram_Connector_Segments)  are displayed with a circular shape in Grey color. 
 
 You can customize the appearance of these segments using the `SegmentThumbSettings` property, which allows you to choose from several predefined shapes. However, to ensure that these shapes are visible, you must include the `DragSegmentThumb` enum in the connector's constraints.
 

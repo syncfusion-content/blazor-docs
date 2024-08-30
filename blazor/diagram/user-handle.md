@@ -522,7 +522,12 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ### How to set tooltip for user handle
 
-The diagram supports displaying tooltips when the mouse hovers over any [UserHandle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SelectorConstraints.html#Syncfusion_Blazor_Diagram_SelectorConstraints_UserHandle). To achieve this, the tooltip property of the diagram model must be configured to contain the tooltip [Content](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramTooltip.html#Syncfusion_Blazor_Diagram_DiagramTooltip_Content) and to [Position](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramTooltip.html#Syncfusion_Blazor_Diagram_DiagramTooltip_Position) it appropriately. This ensures that when users hover over a handle, relevant information is displayed at the correct position relative to the handle. By default, tooltips are not displayed; you need to add the tooltip as shown in the following example.
+### How to Set Tooltip for User Handles
+
+The Diagram component supports displaying tooltips when the mouse hovers over any [UserHandle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SelectorConstraints.html#Syncfusion_Blazor_Diagram_SelectorConstraints_UserHandle). To achieve this, you need to configure the `Tooltip` property of the `UserHandle` to include the tooltip [Content](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramTooltip.html#Syncfusion_Blazor_Diagram_DiagramTooltip_Content) and set its [Position](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramTooltip.html#Syncfusion_Blazor_Diagram_DiagramTooltip_Position) appropriately. This configuration ensures that relevant information is displayed at the correct position relative to the handle when users hover over it.
+
+By default, tooltips are not displayed. You need to explicitly configure the tooltip settings as shown in the following example:
+
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
@@ -569,15 +574,20 @@ The diagram supports displaying tooltips when the mouse hovers over any [UserHan
 }
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/UserHandle/UserHandleTooltip)
+
 ![Tooltip for UserHandle](images/UserHandleTooltip.gif)
 
 For more information about tooltip, refer to the [Tooltip](https://blazor.syncfusion.com/documentation/diagram/tool-tip)
 
 ### How to set sticky tooltip for user handles
 
-With this mode set to `true`, Tooltips for user handles can be made to show up on the screen as long as the close icon is pressed. In this mode, close icon is attached to the Tooltip located at the top right corner. This mode can be enabled or disabled using the `IsSticky` property in tooltip. By default, the value of the IsSticky property is set to false.
+You can configure tooltips for user handle to remain visible until the close icon is pressed. This feature is known as a "sticky" tooltip. When sticky mode is enabled, a close icon appears at the top right corner of the tooltip, allowing users to manually close it.
 
-The following code example demonstrates how to set the IsSticky property to true for the user handle:
+To enable or disable this sticky mode, use the `IsSticky` property in the tooltip configuration. By default, the `IsSticky` property is set to `false`.
+
+**Note:** The tooltip will have an open and close state whenever the mouse hovers over different diagram elements. Only one "sticky" tooltip can be visible in the diagram at a time.
+
+The following code example demonstrates how to set the `IsSticky` property to `true` for the user handle:
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -625,6 +635,7 @@ The following code example demonstrates how to set the IsSticky property to true
 }
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/UserHandleIsSticky/)
+
 ![ToolTip During hover the ports with Stikcy Mode](images/UserHandleIsSticky.png)
 
 For more information about tooltip, refer to the [Tooltip](https://blazor.syncfusion.com/documentation/diagram/tool-tip)
@@ -983,7 +994,10 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## How to set tooltip for Fixed user handle
 
-The diagram supports displaying tooltips when the mouse hovers over any [FixedUserHandle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.FixedUserHandle.html). To achieve this, the tooltip property of the diagram model must be configured to contain the tooltip [Content](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramTooltip.html#Syncfusion_Blazor_Diagram_DiagramTooltip_Content) and to [Position](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramTooltip.html#Syncfusion_Blazor_Diagram_DiagramTooltip_Position) it appropriately. This ensures that when users hover over a fixed user handle, relevant information is displayed at the correct position relative to the handle. By default, tooltips are not displayed; you need to add the tooltip as shown in the following example.
+The Diagram component supports displaying tooltips when the mouse hovers over any [FixedUserHandle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.FixedUserHandle.html). To achieve this, you need to configure the `Tooltip` property of the `FixedUserHandle` to include the tooltip [Content](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramTooltip.html#Syncfusion_Blazor_Diagram_DiagramTooltip_Content) and set its [Position](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramTooltip.html#Syncfusion_Blazor_Diagram_DiagramTooltip_Position) appropriately. This configuration ensures that relevant information is displayed at the correct position relative to the handle when users hover over it.
+
+By default, tooltips are not displayed. You need to explicitly configure the tooltip settings as shown in the following example:
+
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
@@ -1029,9 +1043,13 @@ For more information about tooltip, refer to the [Tooltip](https://blazor.syncfu
 
 ## How to set sticky tooltip for fixed user handles
 
-With this mode set to `true`, Tooltips for fixed user handles can be made to show up on the screen as long as the close icon is pressed. In this mode, close icon is attached to the Tooltip located at the top right corner. This mode can be enabled or disabled using the `IsSticky` property in tooltip. By default, the value of the IsSticky property is set to false.
+You can configure tooltips for fixed user handle to remain visible until the close icon is pressed. This feature is known as a "sticky" tooltip. When sticky mode is enabled, a close icon appears at the top right corner of the tooltip, allowing users to manually close it.
 
-The following code example demonstrates how to set the IsSticky property to true for the fixed user handle:
+To enable or disable this sticky mode, use the `IsSticky` property in the tooltip configuration. By default, the `IsSticky` property is set to `false`.
+
+**Note:** The tooltip will have an open and close state whenever the mouse hovers over different diagram elements. Only one "sticky" tooltip can be visible in the diagram at a time.
+
+The following code example demonstrates how to set the `IsSticky` property to `true` for the fixed user handle:
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -1072,6 +1090,7 @@ The following code example demonstrates how to set the IsSticky property to true
 }
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/UserHandle/FixedUserHandleIsSticky)
+
 ![ToolTip During hover the ports with Stikcy Mode](images/FixedUserHandleIsSticky.png)
 
 For more information about tooltip, refer to the [Tooltip](https://blazor.syncfusion.com/documentation/diagram/tool-tip)
