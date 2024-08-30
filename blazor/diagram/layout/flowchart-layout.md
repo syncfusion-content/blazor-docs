@@ -43,7 +43,9 @@ Different flowchart symbols have different meanings that are used to represent d
 
 @code
 {
+    //Initialize diagram component.
     SfDiagramComponent Diagram;
+    //Initialize flowchart layout settings.
     FlowchartLayoutSettings flowchartSettings = new FlowchartLayoutSettings()
     {
         YesBranchDirection = BranchDirection.LeftInFlow,
@@ -78,6 +80,7 @@ Different flowchart symbols have different meanings that are used to represent d
             }
         }
     }
+    //Creates connectors with some default values.
     private void OnConnectorCreating(IDiagramObject obj)
     {
         if (obj is Connector connector)
@@ -85,6 +88,7 @@ Different flowchart symbols have different meanings that are used to represent d
             connector.Type = ConnectorSegmentType.Orthogonal;
         }
     }
+    //Creates nodes with some default values.
     private void OnNodeCreating(IDiagramObject obj)
     {
         Node node = obj as Node;
@@ -107,6 +111,7 @@ Different flowchart symbols have different meanings that are used to represent d
             };
         }
     }
+    //Initialize data source collection.
     public List<ItemInfo> DataSource = new List<ItemInfo>(){
         new ItemInfo()
         {
@@ -282,7 +287,9 @@ Any text value can be given as a connector text to describe the flow. Also, any 
 
 @code
 {
+    //Initialize diagram component.
     SfDiagramComponent Diagram;
+    //Initialize flowchart layout settings.
     FlowchartLayoutSettings flowchartSettings = new FlowchartLayoutSettings()
     {
         YesBranchValues = new List<string> { "Accept", "Yes" },
@@ -317,6 +324,7 @@ Any text value can be given as a connector text to describe the flow. Also, any 
             }
         }
     }
+    //Creates connectors with some default values.
     private void OnConnectorCreating(IDiagramObject obj)
     {
         if (obj is Connector connector)
@@ -324,6 +332,7 @@ Any text value can be given as a connector text to describe the flow. Also, any 
             connector.Type = ConnectorSegmentType.Orthogonal;
         }
     }
+    //Creates nodes with some default values.
     private void OnNodeCreating(IDiagramObject obj)
     {
         Node node = obj as Node;
@@ -346,6 +355,7 @@ Any text value can be given as a connector text to describe the flow. Also, any 
             };
         }
     }
+    //Initialize data source collection.
     public List<ItemInfo> DataSource = new List<ItemInfo>(){
         new ItemInfo()
         {
