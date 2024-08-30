@@ -233,6 +233,4 @@ The following code example illustrates how to customize orthogonal segment thumb
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Segments/OrthogonalThumbSetting)
 
 ![Editing Orthogonal Segment in Blazor Diagram](../../images/OrthogonalThumbSettings1.png)
- Binary file addedBIN +4.48 KB 
-blazor/diagram/images/ArrowThumb.png
 
