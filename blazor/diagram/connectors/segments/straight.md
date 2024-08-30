@@ -102,7 +102,15 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ### How to customize Straight Segment Thumb Shape 
 
-The straight connector can have any number of segments in between the source and the target point. By default, these segments are rendered as circles. The Shape property of `SegmentThumbSettings` allows to define the shape of the segment thumb. This feature ensures that the shape will be updated whether or not the `InheritSegmentThumbShape` enum value is added to the Constraints property of the diagram. If you apply `InheritSegmentThumbShape` constraints, the shape will be updated at the diagram level. Without these constraints, the shape will be updated at the connector level. The shapes will be visible only when the DragSegmentThumb enum is added to the connector constraints. The following predefined shapes are provided:
+The straight connector does not have segments by default, featuring only the source and target thumbs. However, you can create multiple segments between the source and target points by using the `Segments` property. By default, these segments are rendered as circles.
+
+You can customize the shape of these segment thumbs using the `Shape` property of the `SegmentThumbSettings` class.
+
+This customization is effective whether or not the `InheritSegmentThumbShape` enum value is included in the `Constraints` property of the diagram. If you apply the `InheritSegmentThumbShape` constraint, the shape specified at the diagram level will be applied to all segment thumbs within the diagram. Without this constraint, the shape will be applied at the individual connector level.
+
+To ensure that the customized shapes are visible, you must include the `DragSegmentThumb` enum in the connector's constraints.
+
+The following predefined shapes are available for segment thumbs:
 
 | Shape name | Shape |
 |-------- | -------- |

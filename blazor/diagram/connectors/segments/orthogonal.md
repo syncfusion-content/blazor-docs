@@ -157,7 +157,11 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## How to customize Orthogonal Segment Thumb Shape
 
-The [Orthogonal](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ConnectorSegmentType.html#Syncfusion_Blazor_Diagram_ConnectorSegmentType_Orthogonal) connector supports an arbitrary number of segments between its source and target points. By default, these  [Segments](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Connector.html#Syncfusion_Blazor_Diagram_Connector_Segments)  are displayed with a circle shape in Grey color. You can customize the appearance of these segments using the SegmentThumbSettings property. This property allows you to choose from several predefined shapes. The shapes will be visible only when the DragSegmentThumb enum is added to the connector constraints. The following predefined shapes are provided:
+The [Orthogonal](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ConnectorSegmentType.html#Syncfusion_Blazor_Diagram_ConnectorSegmentType_Orthogonal) connector in the Syncfusion Blazor Diagram component supports an arbitrary number of segments between its source and target points. By default, these  [Segments](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Connector.html#Syncfusion_Blazor_Diagram_Connector_Segments)  are displayed with a circular shape in grey color. 
+
+You can customize the appearance of these segments using the `SegmentThumbSettings` property, which allows you to choose from several predefined shapes. However, to ensure that these shapes are visible, you must include the `DragSegmentThumb` enum in the connector's constraints.
+
+The following predefined shapes are available for segment thumbs:
 
 | Shape name | Shape |
 |-------- | -------- |
@@ -203,7 +207,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ![Editing Orthogonal Segment in Blazor Diagram](../../images/OrthogonalThumbSettings.png)
 
-When InheritSegmentThumbShape is enabled in the connector constraints, the shape specified in the diagram will be applied to the connector segment thumb.
+When the `InheritSegmentThumbShape` constraint is enabled in the connector, the shape specified at the diagram level will be applied to the connector segment thumb. This allows for consistent segment thumb shapes across the entire diagram.
 
 The following code example illustrates how to customize orthogonal segment thumb shape using InheritSegmentThumbShape.
 

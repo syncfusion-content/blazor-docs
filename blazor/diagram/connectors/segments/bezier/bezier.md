@@ -246,7 +246,11 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ### How to customize Bezier Segment Thumb Shape 
 
-The bezier connector can have any number of segments in between the source and the target point. By default, these segments are rendered as circles . The Shape property of `SegmentThumbSettings` allows to define the shape of the segment thumb. This feature ensures that the shape will be updated whether or not the `InheritSegmentThumbShape` enum value is added to the Constraints property of the diagram. If you apply `InheritSegmentThumbShape` constraints, the shape will be updated at the diagram level. Without these constraints, the shape will be updated at the connector level. The shapes will be visible only when the DragSegmentThumb enum is added to the connector constraints. The following predefined shapes are provided:
+The bezier connector can have any number of segments in between the source and the target point. By default, these segments are rendered as circles . The `Shape` property of `SegmentThumbSettings` allows to define the shape of the segment thumb.
+
+ This feature ensures that the shape is updated regardless of whether the  `InheritSegmentThumbShape` enum value is added to the `Constraints` property of the diagram. If you apply the `InheritSegmentThumbShape` constraints, the shape will be updated at the diagram level. Without these constraints, the shape will be updated at the connector level. 
+
+ To make the shapes visible, ensure that the `DragSegmentThumb` enum is added to the connector's constraints. The following predefined shapes are provided:
 
 | Shape name | Shape |
 |-------- | -------- |
