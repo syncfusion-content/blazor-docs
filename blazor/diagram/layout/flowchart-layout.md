@@ -39,7 +39,6 @@ Different flowchart symbols have different meanings that are used to represent d
     <DataSourceSettings ID="Id" ParentID="ParentId" DataSource="DataSource"> </DataSourceSettings>
     <Layout Type="LayoutType.Flowchart" HorizontalSpacing="50" Orientation="LayoutOrientation.TopToBottom" VerticalSpacing="50" FlowchartLayoutSettings="@flowchartSettings">
     </Layout>
-    <SnapSettings Constraints="SnapConstraints.None"></SnapSettings>
 </SfDiagramComponent>
 
 @code
@@ -206,7 +205,7 @@ Different flowchart symbols have different meanings that are used to represent d
 ```
 >**Note:** When rendering a flowchart layout using a datasource, the connector labels must be set manually through the `DataLoaded` event.
 
-![Blazor Diagram with Flowchart layout](../images/Flowchart_Layout.png)
+![Blazor Flowchart layout diagram](../images/Flowchart_Layout.png)
 
 You can download a complete working sample from `GitHub`.
 
@@ -226,7 +225,7 @@ This orientation arranges elements in the layout vertically, flowing from top to
     </Layout>
 </SfDiagramComponent>
 ```
-![Blazor Diagram with Flowchart layout](../images/Flowchart_Layout.png)
+![Blazor Flowchart layout diagram](../images/Flowchart_Layout.png)
 
 ### LeftToRight orientation
 
@@ -240,7 +239,7 @@ This orientation arranges elements in the layout horizontally, flowing from left
     </Layout>
 </SfDiagramComponent>
 ```
-![Blazor Diagram with Flowchart layout](../images/Flowchart_LeftToRight.png)
+![Blazor Flowchart layout diagram](../images/Flowchart_LeftToRight.png)
 
 ## How to customize the decision output directions
 
@@ -256,11 +255,11 @@ The following table will explain the pictorial representation of the behavior:
 
 |YesBranchDirection| NoBranchDirection | TopToBottom | LeftToRight |
 |---|---|---|---|
-| Left In Flow |Right In Flow|![Blazor Diagram displays Decision Output at Left Flow Direction in Vertical](../images/Flowchart_VerticalLeftAndRightBranches.png)|![Blazor Diagram displays Decision Output at Right Flow Direction in Horizontal](../images/Flowchart_HorizontalLeftAndRightBranches.png)|
-| Right In Flow |Left In Flow |![Blazor Diagram displays Decision Output at Right Flow Direction in Vertical](../images/Flowchart_VerticalRightAndLeftBranches.png)|![Blazor Diagram displays Decision Output at Left Flow Direction in Horizontal](../images/Flowchart_HorizontalRightAndLeftBranches.png) |
-| Same As Flow |Right In Flow |![Blazor Diagram displays Decision Output at Both Direction in Vertical](../images/Flowchart_VerticalSameAndRightBranches.png)|![Blazor Diagram displays Decision Output at Right Flow Direction in Horizontal](../images/Flowchart_HorizontalSameAndRightBranches.png) |
-| Right In Flow | Same As Flow |![Blazor Diagram displays Decision Output at Both Direction in Vertical](../images/Flowchart_VerticalRightAndSameBranches.png)|![Blazor Diagram displays Decision Output at Right Flow Direction in Horizontal](../images/Flowchart_HorizontalRightAndSameBranches.png) |
-|Same As Flow |Same As Flow|![Blazor Diagram displays Decision Output at Both Direction in Vertical](../images/Flowchart_VerticalSameBranches.png)|![Blazor Diagram displays Decision Output at Both Direction in Horizontal](../images/Flowchart_HorizontalSameBranches.png)|
+| Left In Flow |Right In Flow|![Blazor Diagram displays Decision Output in Vertical](../images/Flowchart_VerticalLeftAndRightBranches.png)|![Blazor Diagram displays Decision Output in Horizontal](../images/Flowchart_HorizontalLeftAndRightBranches.png)|
+| Right In Flow |Left In Flow |![Blazor Diagram displays Decision Output in Vertical](../images/Flowchart_VerticalRightAndLeftBranches.png)|![Blazor Diagram displays Decision Output in Horizontal](../images/Flowchart_HorizontalRightAndLeftBranches.png) |
+| Same As Flow |Right In Flow |![Blazor Diagram displays Decision Output in Vertical](../images/Flowchart_VerticalSameAndRightBranches.png)|![Blazor Diagram displays Decision Output in Horizontal](../images/Flowchart_HorizontalSameAndRightBranches.png) |
+| Right In Flow | Same As Flow |![Blazor Diagram displays Decision Output in Vertical](../images/Flowchart_VerticalRightAndSameBranches.png)|![Blazor Diagram displays Decision Output in Horizontal](../images/Flowchart_HorizontalRightAndSameBranches.png) |
+|Same As Flow |Same As Flow|![Blazor Diagram displays Decision Output in Vertical](../images/Flowchart_VerticalSameBranches.png)|![Blazor Diagram displays Decision Output in Horizontal](../images/Flowchart_HorizontalSameBranches.png)|
 
 >**Note:** If both branch directions are same, **Yes** branch will be prioritized.
 
