@@ -246,7 +246,7 @@ You can configure tooltips for ports to remain visible until the close icon is p
 
 To enable or disable this sticky mode, use the `IsSticky` property in the tooltip configuration. By default, the `IsSticky` property is set to `false`.
 
-**Note:** The tooltip will have an open and close state whenever the mouse hovers over different diagram elements. Only one "sticky" tooltip can be visible in the diagram at a time.
+N> The tooltip will have an open and close state whenever the mouse hovers over different diagram elements. Only one "sticky" tooltip can be visible in the diagram at a time.
 
 The following code example demonstrates how to set the `IsSticky` property to `true` for the ports:
 

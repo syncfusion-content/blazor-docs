@@ -55,6 +55,7 @@ The following code example illustrates how to customize the tooltip for nodes.
 }
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Tooltip/TooltipForSpecificNode)
+
 ![ToolTip During hover the node](images/blazor-diagram-nodetooltip.png)  
 
 The following code example illustrates how to customize the tooltip for connectors.
@@ -83,6 +84,7 @@ The following code example illustrates how to customize the tooltip for connecto
 }
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Tooltip/TooltipForSpecificConnector)
+
 ![ToolTip During hover the node](images/blazor-diagram-connectortooltip.png) 
 
 ## How to set tooltip position for nodes/connectors
@@ -750,11 +752,13 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Sticky Mode
 
-When this mode is set to true, tooltips remain visible on the screen until the close icon is pressed. The close icon is positioned in the top right corner of the tooltip. This mode can be enabled or disabled using the IsSticky property.
+You can configure tooltips for nodes and connectors to remain visible until the close icon is pressed. This feature is known as a "sticky" tooltip. When sticky mode is enabled, a close icon appears at the top right corner of the tooltip, allowing users to manually close it.
 
-By default, the value of the IsSticky property is set to false.
+To enable or disable this sticky mode, use the `IsSticky` property in the tooltip configuration. By default, the `IsSticky` property is set to `false`.
 
-The following code example demonstrates how to set the IsSticky property to true for the node:
+N> The tooltip will have an open and close state whenever the mouse hovers over different diagram elements. Only one "sticky" tooltip can be visible in the diagram at a time.
+
+The following code example demonstrates how to set the `IsSticky` property to `true` for the node:
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -794,7 +798,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 |![ToolTip During hover the node with Stikcy Mode](images/StickyNode.png) | 
 
-The following code example demonstrates how to set the IsSticky property to true for the connector:
+The following code example demonstrates how to set the `IsSticky` property to `true` for the connector:
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram

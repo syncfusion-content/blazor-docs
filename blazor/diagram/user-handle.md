@@ -585,7 +585,7 @@ You can configure tooltips for user handle to remain visible until the close ico
 
 To enable or disable this sticky mode, use the `IsSticky` property in the tooltip configuration. By default, the `IsSticky` property is set to `false`.
 
-**Note:** The tooltip will have an open and close state whenever the mouse hovers over different diagram elements. Only one "sticky" tooltip can be visible in the diagram at a time.
+N> The tooltip will have an open and close state whenever the mouse hovers over different diagram elements. Only one "sticky" tooltip can be visible in the diagram at a time.
 
 The following code example demonstrates how to set the `IsSticky` property to `true` for the user handle:
 
@@ -1037,6 +1037,7 @@ By default, tooltips are not displayed. You need to explicitly configure the too
 }
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/UserHandle/FixedUserHandleTooltip)
+
 ![Tooltip for UserHandle](images/FixedUserHandleTooltip.gif)
 
 For more information about tooltip, refer to the [Tooltip](https://blazor.syncfusion.com/documentation/diagram/tool-tip)
@@ -1047,7 +1048,7 @@ You can configure tooltips for fixed user handle to remain visible until the clo
 
 To enable or disable this sticky mode, use the `IsSticky` property in the tooltip configuration. By default, the `IsSticky` property is set to `false`.
 
-**Note:** The tooltip will have an open and close state whenever the mouse hovers over different diagram elements. Only one "sticky" tooltip can be visible in the diagram at a time.
+N> The tooltip will have an open and close state whenever the mouse hovers over different diagram elements. Only one "sticky" tooltip can be visible in the diagram at a time.
 
 The following code example demonstrates how to set the `IsSticky` property to `true` for the fixed user handle:
 
