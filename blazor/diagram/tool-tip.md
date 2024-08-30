@@ -748,3 +748,83 @@ The following code example illustrates how to set the open mode to the tooltip f
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Tooltip/TooltipOpenModeForConnector)
 
+## Sticky Mode
+
+When this mode is set to true, tooltips remain visible on the screen until the close icon is pressed. The close icon is positioned in the top right corner of the tooltip. This mode can be enabled or disabled using the IsSticky property.
+
+By default, the value of the IsSticky property is set to false.
+
+The following code example demonstrates how to set the IsSticky property to true for the node:
+
+```cshtml
+@using Syncfusion.Blazor.Diagram
+@using Syncfusion.Blazor.Popups
+@using Syncfusion.Blazor.Buttons
+
+<SfDiagramComponent @ref="@diagram" Width="1000px" Height="500px" Nodes="@nodes" />
+@code
+{
+    //Define diagram's nodes collection
+    DiagramObjectCollection<Node> nodes;
+    //Reference the diagram
+    SfDiagramComponent diagram;
+    protected override void OnInitialized()
+    {
+        //Intialize diagram's nodes collection
+        nodes = new DiagramObjectCollection<Node>();
+        Node node = new Node()
+            {
+                ID = "node1",
+                OffsetX = 100,
+                OffsetY = 100,
+                Width = 100,
+                Height = 100,
+                Style = new ShapeStyle()
+                {
+                    Fill = "#6495ED",
+                    StrokeColor = "white"
+                },
+                Tooltip = new DiagramTooltip() { Content = "Tooltip", IsSticky=true },
+                Constraints = NodeConstraints.Default | NodeConstraints.Tooltip,
+            };
+        nodes.Add(node);
+    }
+}
+```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Tooltip/)
+
+|![ToolTip During hover the node with Stikcy Mode](images/StickyNode.png) | 
+
+The following code example demonstrates how to set the IsSticky property to true for the connector:
+
+```cshtml
+@using Syncfusion.Blazor.Diagram
+@using Syncfusion.Blazor.Popups
+@using Syncfusion.Blazor.Buttons
+
+<SfDiagramComponent @ref="@diagram" Width="1000px" Height="500px" Connectors="connectors" />
+@code
+{
+    //Define diagram's connectors collection
+    DiagramObjectCollection<Connector> connectors;
+    //Refrence the diagram
+    SfDiagramComponent diagram;
+    protected override void OnInitialized()
+    {
+        //Intialize diagram's nodes collection
+        connectors = new DiagramObjectCollection<Connector>();
+        Connector connector = new Connector()
+            {
+                ID = "Connector1",
+                SourcePoint = new DiagramPoint() { X = 100, Y = 200 },
+                TargetPoint = new DiagramPoint() { X = 200, Y = 100 },
+                Tooltip = new DiagramTooltip() { Content = "Tooltip", IsSticky=true  },
+                Constraints = ConnectorConstraints.Default | ConnectorConstraints.Tooltip,
+            };
+        connectors.Add(connector);
+    }
+}
+```
+|![ToolTip During hover the node with Stikcy Mode](images/StickyConnector.png) | 
+
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Tooltip/)
