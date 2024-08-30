@@ -246,21 +246,22 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ### How to customize Bezier Segment Thumb Shape 
 
-The bezier connector can have any number of segments in between the source and the target point. By default, these segments are rendered as circles . The Shape property of `SegmentThumbSettings` allows to define the shape of the segment thumb. This feature ensures that the shape will be updated whether or not the `InheritSegmentThumbShape` enum value is added to the Constraints property of the diagram. If you apply `InheritSegmentThumbShape` constraints, the shape will be updated at the diagram level. Without these constraints, the shape will be updated at the connector level. You can choose the shape by any one of the following shapes.
+The bezier connector can have any number of segments in between the source and the target point. By default, these segments are rendered as circles . The Shape property of `SegmentThumbSettings` allows to define the shape of the segment thumb. This feature ensures that the shape will be updated whether or not the `InheritSegmentThumbShape` enum value is added to the Constraints property of the diagram. If you apply `InheritSegmentThumbShape` constraints, the shape will be updated at the diagram level. Without these constraints, the shape will be updated at the connector level. The shapes will be visible only when the DragSegmentThumb enum is added to the connector constraints. The following predefined shapes are provided:
 
-* `Circle`
-* `Square`
-* `Rectangle`
-* `Ellipse`
-* `Arrow`
-* `Diamond`
-* `OpenArrow`
-* `Rhombus`
-* `OpenFetch`
-* `Fletch`
-* `IndentedArrow`
-* `OutdentedArrow`
-* `DoubleArrow`
+| Shape name | Shape |
+|-------- | -------- |
+|Rhombus| ![Rhombus](../../images/RhombusBezier.png) |
+| Square | ![Square](../../images/SquareBezier.png) |
+| Rectangle | ![Rectangle](../../images/RectangleBezier.png) |
+| Ellipse |![Ellipse](../../images/EllipseBezier.png) |
+| Circle |![Circle](../../images/CircleBezier.png) |
+|Arrow| ![Arrow](../../images/ArrowBezier.png) |
+| OpenArrow | ![OpenArrow](../../images/OpenArrowBezier.png) |
+| Fletch|![Fletch](../../images/FletchBezier.png) |
+|OpenFetch| ![OpenFetch](../../images/OpenFetchBezier.png) |
+| IndentedArrow | ![IndentedArrow](../../images/IndentedBezier.png) |
+| OutdentedArrow | ![OutdentedArrow](../../images/OutdentedBezier.png) |
+| DoubleArrow |![DoubleArrow](../../images/DoubleArrowBezier.png) |
 
 The following code example illustrates how to create a customized bezier segment thumb shape using the `InheritSegmentThumbShape` constraints.
 

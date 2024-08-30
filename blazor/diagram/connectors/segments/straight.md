@@ -102,21 +102,23 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ### How to customize Straight Segment Thumb Shape 
 
-The straight connector can have any number of segments in between the source and the target point. By default, these segments are rendered as circles. The Shape property of `SegmentThumbSettings` allows to define the shape of the segment thumb. This feature ensures that the shape will be updated whether or not the `InheritSegmentThumbShape` enum value is added to the Constraints property of the diagram. If you apply `InheritSegmentThumbShape` constraints, the shape will be updated at the diagram level. Without these constraints, the shape will be updated at the connector level. You can choose the shape by any one of the following shapes.
+The straight connector can have any number of segments in between the source and the target point. By default, these segments are rendered as circles. The Shape property of `SegmentThumbSettings` allows to define the shape of the segment thumb. This feature ensures that the shape will be updated whether or not the `InheritSegmentThumbShape` enum value is added to the Constraints property of the diagram. If you apply `InheritSegmentThumbShape` constraints, the shape will be updated at the diagram level. Without these constraints, the shape will be updated at the connector level. The shapes will be visible only when the DragSegmentThumb enum is added to the connector constraints. The following predefined shapes are provided:
 
-* `Circle`
-* `Square`
-* `Rectangle`
-* `Ellipse`
-* `Arrow`
-* `Diamond`
-* `OpenArrow`
-* `Rhombus`
-* `OpenFetch`
-* `Fletch`
-* `IndentedArrow`
-* `OutdentedArrow`
-* `DoubleArrow`
+| Shape name | Shape |
+|-------- | -------- |
+|Rhombus| ![Rhombus](../../images/RhombusStraight.png) |
+| Square | ![Square](../../images/SquareStraight.png) |
+| Rectangle | ![Rectangle](../../images/RectangleStraight.png) |
+| Ellipse |![Ellipse](../../images/EllipseStraight.png) |
+| Circle |![Circle](../../images/CircleStraight.png) |
+|Arrow| ![Arrow](../../images/ArrowStraight.png) |
+| OpenArrow | ![OpenArrow](../../images/OpenArrowStraight.png) |
+| Fletch|![Fletch](../../images/FletchStraight.png) |
+|OpenFetch| ![OpenFetch](../../images/OpenFetchStraight.png) |
+| IndentedArrow | ![IndentedArrow](../../images/IndentedStraight.png) |
+| OutdentedArrow | ![OutdentedArrow](../../images/OutdentedStraight.png) |
+| DoubleArrow |![DoubleArrow](../../images/DoubleArrowStraight.png) |
+
 
 The following code example illustrates how to create a customized bezier segment thumb shape using the `InheritSegmentThumbShape` constraints.
 
