@@ -520,7 +520,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ![Template for UserHandle](images/UserHandleTemplate.gif)
 
-### How to Set Tooltip for User Handles
+### How to Set tooltip for user handles
 
 The Diagram component supports displaying tooltips when the mouse hovers over any [UserHandle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SelectorConstraints.html#Syncfusion_Blazor_Diagram_SelectorConstraints_UserHandle). To achieve this, you need to configure the `Tooltip` property of the `UserHandle` to include the tooltip [Content](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramTooltip.html#Syncfusion_Blazor_Diagram_DiagramTooltip_Content) and set its [Position](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramTooltip.html#Syncfusion_Blazor_Diagram_DiagramTooltip_Position) appropriately. This configuration ensures that relevant information is displayed at the correct position relative to the handle when users hover over it.
 
@@ -990,7 +990,7 @@ You can define fixed user handle style using a template in the [FixedUserHandleT
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/UserHandle/CustomizeFixedUserHandle)
 ![Template for FixedUserHandle](images/FixedUserTemplate.png)
 
-## How to set tooltip for Fixed user handle
+## How to set tooltip for fixed user handle
 
 The Diagram component supports displaying tooltips when the mouse hovers over any [FixedUserHandle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.FixedUserHandle.html). To achieve this, you need to configure the `Tooltip` property of the `FixedUserHandle` to include the tooltip [Content](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramTooltip.html#Syncfusion_Blazor_Diagram_DiagramTooltip_Content) and set its [Position](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramTooltip.html#Syncfusion_Blazor_Diagram_DiagramTooltip_Position) appropriately. This configuration ensures that relevant information is displayed at the correct position relative to the handle when users hover over it.
 
