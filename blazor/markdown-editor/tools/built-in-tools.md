@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Built-in tools in Blazor Markdown Component | Syncfusion
-description: Checkout and learn here all about Built-in tools in Syncfusion Blazor RichTextEditor component and more.
+title: Built-in tools in Blazor Markdown Editor | Syncfusion
+description: Checkout and learn here all about Built-in tools in Syncfusion Blazor Markdown Editor and more.
 platform: Blazor
-control: RichTextEditor
+control: Markdown Editor
 documentation: ug
 ---
 
-# Built-in Tools in RichTextEditor 
+# Built-in Tools in Markdown Editor 
 
 To initialize the tools, use the following code. You can change the tool's name as per your requirements. For your reference, here is the `bold` tool initialized.
 
