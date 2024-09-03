@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Form validation in Blazor Markdown Editor | Syncfusion
-description: Checkout and learn here all about Form validation in Syncfusion Blazor Markdown Editor and more.
+description: Checkout and learn here all about Form validation in the Syncfusion Blazor Markdown Editor and more.
 platform: Blazor
 control: MarkdownEditor
 documentation: ug
