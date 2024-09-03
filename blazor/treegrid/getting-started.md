@@ -148,7 +148,7 @@ Add the Syncfusion Blazor TreeGrid component in the **~/Pages/Index.razor** file
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion Blazor TreeGrid component in your default web browser.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BNLzXiANJxYypVIp?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor TreeGrid](images/blazor-treegrid-component.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BNLzXiANJxYypVIp?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor TreeGrid Component.](images/blazor-treegrid-component.png)" %}
 
 ## Defining columns
 
@@ -305,7 +305,7 @@ The sorting feature enables to order the records. It can be enabled by setting t
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rtLzNMKDzGDJVWCD?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor TreeGrid](images/blazor-treegrid.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rtLzNMKDzGDJVWCD?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor TreeGrid enable sorting.](images/blazor-treegrid-enable-sorting.png)" %}
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/TreeGrid).
 
