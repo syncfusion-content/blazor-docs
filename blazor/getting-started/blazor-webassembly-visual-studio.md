@@ -100,4 +100,4 @@ Add the Syncfusion Blazor Calendar component in the **~/Pages/Index.razor** file
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LDBgirsJBGDheWFi?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 
-![Blazor Calendar Component](images/output-calendar-using-blazor-webassembly.png)
+![Blazor Calendar Component.](images/blazor-calendar-component.png)
