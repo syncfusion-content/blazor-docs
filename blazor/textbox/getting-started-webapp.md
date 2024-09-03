@@ -135,7 +135,7 @@ You can add an icon to the TextBox component using the [AddIconAsync](https://he
         {
             //Add icon to the TextBox
             await TextBoxDropDownObj.AddIconAsync("append", "e-icons e-date-icon");
-        }
+}
     }
 }
 ```
