@@ -9,7 +9,7 @@ documentation: ug
 
 # Edit-Form Validation
 
-The Rich Text Editor supports validation using the [EditForm](https://learn.microsoft.com/en-us/aspnet/core/blazor/forms-and-input-components?view=aspnetcore-6.0). The user-typed text content inside the editor is validated with [data annotations](https://learn.microsoft.com/en-us/aspnet/core/mvc/models/validation?view=aspnetcore-5.0) attributes. In the following example, the `FormModel` class has the `Description` property marked required with the `RequiredAttribute` and `MinLengthAttribute` for minimum string length validation and an error message. The `Description` property is bound to the editor via the `@bind-Value` property, and validation works based on user input.
+The Rich Text Editor supports validation using the [EditForm](https://learn.microsoft.com/en-us/aspnet/core/blazor/forms/?view=aspnetcore-6.0). The user-typed text content inside the editor is validated with [data annotations](https://learn.microsoft.com/en-us/aspnet/core/mvc/models/validation?view=aspnetcore-5.0) attributes. In the following example, the `FormModel` class has the `Description` property marked required with the `RequiredAttribute` and `MinLengthAttribute` for minimum string length validation and an error message. The `Description` property is bound to the editor via the `@bind-Value` property, and validation works based on user input.
 
 N> [View Sample in GitHub.](https://github.com/SyncfusionExamples/blazor-richtexteditor-editform-validation)
 
@@ -57,4 +57,4 @@ The form validation error message can be moved from its default location to a de
 
 ![Blazor RichTextEditor validation in custom placement](./images/blazor-richtexteditor-validation-placement.png)
 
-N> You can refer to our [Blazor Rich Text Editor](https://www.syncfusion.com/blazor-components/blazor-wysiwyg-rich-text-editor) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Rich Text Editor](https://blazor.syncfusion.com/demos/rich-text-editor/overview?theme=bootstrap4) example to know how to render and configure the rich text editor tools.
+N> You can refer to our [Blazor Rich Text Editor](https://www.syncfusion.com/blazor-components/blazor-rich-text-editor) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Rich Text Editor](https://blazor.syncfusion.com/demos/rich-text-editor/overview?theme=bootstrap5) example to know how to render and configure the rich text editor tools.
