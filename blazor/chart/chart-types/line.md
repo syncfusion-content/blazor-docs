@@ -564,7 +564,7 @@ The [`OnSeriesRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.C
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VZLJjPMzKelOwLZm?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} 
 
-### Point render
+![Blazor Line Chart with custom series.](../images/chart-types-images/blazor-line-chart-custom-series.png)
 
 The [`OnPointRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnPointRender) event allows you to customize each data point before it is rendered on the chart.
 
