@@ -53,7 +53,7 @@ documentation: ug
 ``` 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BXrKiVhdhoVJjpOZ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-![Blazor Line Chart](../images/chart-types-images/blazor-line-chart.png)
+![Blazor Line Chart.](../images/chart-types-images/blazor-line-chart.png)
 
 N> Refer to our [Blazor Line Chart](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/line-chart) feature tour page to know about its other groundbreaking feature representations. Explore our [Blazor Line Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap5) to know how to represent time-dependent data, showing trends at equal intervals.
 
@@ -511,7 +511,7 @@ To render a multicolored line series in your chart, define the series [`Type`](h
 ``` 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rZhqiBrHryhdGmHf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-![Blazor Multicolored Line Chart](../images/chart-types-images/blazor-multicolor-line-chart.png)
+![Blazor Multicolored Line Chart.](../images/chart-types-images/blazor-multicolor-line-chart.png)
 
 ## Events
 
