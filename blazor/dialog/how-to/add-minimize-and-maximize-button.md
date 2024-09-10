@@ -156,6 +156,7 @@ Blazor Dialog allows end users to either minimize or maximize the Dialog compone
     private SfDialog DialogObj;
     private bool IsVisible { get; set; } = false;
     public string dialogClass = "";
+
     private void OpenDialog() => IsVisible = true;
     private void CloseDialog() => IsVisible = false;
 

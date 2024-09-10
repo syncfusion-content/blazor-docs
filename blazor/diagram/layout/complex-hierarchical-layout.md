@@ -40,9 +40,9 @@ Complex hierarchical tree layout arranges nodes in a tree-like structure, where 
     {
         Node node = obj as Node;
         node.Height = 40;
-        node.Width = 100;
+        node.Width = 50;
         //Initializing the default node's shape style.
-        node.Style = new ShapeStyle() { Fill = "darkcyan", StrokeWidth = 3, StrokeColor = "Black" };
+        node.Style = new ShapeStyle() { Fill = "#6CA0DC", StrokeColor = "#6CA0DC" };
        node.Annotations[0].Style = new TextStyle() { Color = "white", Bold = true };
     }
 
@@ -224,6 +224,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 The following code illustrates how to arrange the nodes in  linear manner.
 
 ```csharp
+ @using Syncfusion.Blazor.Diagram
  <SfDiagramComponent Height="600px" NodeCreating="@OnNodeCreating" ConnectorCreating="@OnConnectorCreating">
     <DataSourceSettings ID="Id" ParentID="ReportingPerson" DataSource="@DataSource"></DataSourceSettings>
     <Layout Type="LayoutType.ComplexHierarchicalTree" LinearArrangement="true" @bind-HorizontalSpacing="@HorizontalSpacing" @bind-VerticalSpacing="@VerticalSpacing">

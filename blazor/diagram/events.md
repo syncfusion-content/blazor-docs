@@ -86,7 +86,7 @@ The [Click](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDi
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Events/ClickEvent)
 
 ## PropertyChanged Event
-The [Property Changed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_PropertyChanged) event is triggered when the property changed at run time. To explore about arguments, refer to[PropertyChangedEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PropertyChangedEventArgs.html)
+The [Property Changed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_PropertyChanged) event is triggered when the property changed at run time. To explore about arguments, refer to [PropertyChangedEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PropertyChangedEventArgs.html)
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -369,10 +369,11 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
                     Nodes="nodes"
                     DragStart="DragStart">
 </SfDiagramComponent>
-<SfSymbolPaletteComponent Height="600px" Palettes="@Palettes"  SymbolHeight="40" GetSymbolInfo="GetSymbolInfo" SymbolWidth="40" >
+<SfSymbolPaletteComponent @ref="PaletteInstance" Height="600px" Palettes="@Palettes"  SymbolHeight="40" GetSymbolInfo="GetSymbolInfo" SymbolWidth="40" >
 </SfSymbolPaletteComponent >
 @code{
     SfDiagramComponent Diagram;
+    SfSymbolPaletteComponent PaletteInstance;
     DiagramObjectCollection<Palette> Palettes = new DiagramObjectCollection<Palette>();
     DiagramObjectCollection<NodeBase> TNodes = new DiagramObjectCollection<NodeBase>();
     DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
@@ -395,6 +396,11 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
              {
                 new Palette(){Symbols =TNodes,Title="Flow Shapes",ID="Flow Shapes" },
              };
+    }
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        PaletteInstance.Targets = new DiagramObjectCollection<SfDiagramComponent>() { };
+        PaletteInstance.Targets.Add(Diagram);
     }
      //Notify the drag start event.
     private void DragStart(DragStartEventArgs args)
