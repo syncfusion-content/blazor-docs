@@ -112,7 +112,7 @@ Add the Syncfusion Blazor AI AssistView component in the **~/Pages/Index.razor**
 {% tabs %}
 {% highlight razor %}
 
-<div class="aiassist-container" style="height: 300px;">
+<div class="aiassist-container" style="height: 350px; width: 650px;">
     <SfAIAssistView></SfAIAssistView>
 </div>
 
@@ -122,3 +122,50 @@ Add the Syncfusion Blazor AI AssistView component in the **~/Pages/Index.razor**
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion Blazor AI AssistView component in your default web browser.
 
 ![Blazor AI AssistView Component](./images/ai-assistview-component.png)
+
+## Configure suggestions and responses
+
+You can use the `PromptSuggestions` property and the `PromptRequested` event to add matching responses for prompts, or the default responses will be displayed.
+
+{% tabs %}
+{% highlight razor %}
+
+@* desired render mode define here *@
+@rendermode InteractiveAuto
+
+{% endhighlight %}
+{% endtabs %}
+
+{% tabs %}
+{% highlight razor %}
+
+<div class="aiassist-container" style="height: 350px; width: 650px;">
+    <SfAIAssistView PromptSuggestions="@promptSuggestions" PromptRequested="@PromptRequest"></SfAIAssistView>
+</div>
+
+@code {
+    List<string> promptSuggestions = new List<string> { "How do I prioritize my tasks?", "How can I improve my time management skills?" };
+    public class AssistModel
+    {
+        public string Prompt { get; set; }
+        public string Response { get; set; }
+    }
+    private List<AssistModel> prompts = new List<AssistModel>()
+    {
+        new AssistModel() { Prompt = "How do I prioritize my tasks?", Response = "Prioritize tasks by urgency and impact: tackle high-impact tasks first, delegate when possible, and break large tasks into smaller steps. For more assistance, feel free to ask—I’m here to help!" },
+        new AssistModel() { Prompt = "How can I improve my time management skills?", Response = "To improve time management skills, try setting clear goals, using a planner or digital tools, prioritizing tasks, breaking tasks into smaller steps, and minimizing distractions. Regularly review and adjust your approach for better efficiency" }
+    };
+    private async Task PromptRequest(AssistViewPromptRequestedEventArgs args)
+    {
+        await Task.Delay(3000);
+        var isPromptFound = prompts.Any(prompt => prompt.Prompt == args.Prompt);
+        var promptData = prompts.FirstOrDefault(prompt => prompt.Prompt == args.Prompt);
+        var defaultResponse = "For real-time prompt processing, connect the AI AssistView control to your preferred AI service, such as OpenAI or Azure Cognitive Services. Ensure you obtain the necessary API credentials to authenticate and enable seamless integration.";
+        args.Response = isPromptFound ? promptData.Response : defaultResponse;
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Blazor AI AssistView default prompt](./images/default-prompt.png)
