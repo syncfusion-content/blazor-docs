@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Performance tips for Blazor Gantt Chart Component | Syncfusion
-description: Checkout and learn here all about how to improve the loading performance of Blazor Gantt Chart Component even binding large data set.
+description: Check out and learn how to improve the loading performance of Blazor Gantt Chart Component even binding large data set.
 platform: Blazor
 control: Gantt Chart
 documentation: ug
@@ -29,7 +29,7 @@ To enhance the efficiency of the Blazor Gantt Chart, particularly when handling 
 
 For the most comprehensive performance optimization, combining row, column, and timeline virtualization in the Blazor Gantt Chart allows efficient management of extensive datasets and timelines. By dynamically loading only the visible rows, columns, and timeline cells, this approach minimizes memory usage and ensures smooth scrolling and interaction across large projects. This combined strategy significantly improves performance, reduces initial load times, and enhances the overall user experience by maintaining a responsive and efficient Gantt Chart.
 
-## How to improve perforance of Gantt chart in Blazor WASM application
+## How to improve performance of Gantt chart in Blazor WASM application
 
 This section provides performance guidelines for using the Syncfusion Gantt Chart component efficiently in Blazor WebAssembly (WASM) applications. For general Blazor WebAssembly performance best practices, please refer to the official guidelines [here](https://learn.microsoft.com/en-us/aspnet/core/blazor/performance?view=aspnetcore-8.0).
 
@@ -68,7 +68,7 @@ Instead of using the consolidated `Syncfusion.Blazor` package, which includes al
 
 When configuring your Blazor `Gantt Chart`, use individual script and CSS files instead of a single large package file. This practice allows for more efficient loading and rendering of the component by reducing the amount of data processed during initialization. By referring to individual scripts and CSS files, you can ensure that only the necessary resources are loaded, which enhances performance and speeds up the initial rendering of the Gantt Chart.
 
-Refer the below documentations
+Refer the below documentation
 * [Individual nuget package](https://blazor.syncfusion.com/documentation/gantt-chart/getting-started-with-web-app#install-syncfusion-blazor-gantt-and-themes-nuget-in-the-blazor-web-app)
 * [Adding script and CSS](https://blazor.syncfusion.com/documentation/gantt-chart/getting-started-with-web-app#add-stylesheet-and-script-resources)
 
@@ -96,7 +96,7 @@ By considering these factors and implementing the recommended solutions, you can
 
 For more detailed guidance, refer to the [documentation](https://learn.microsoft.com/en-us/aspnet/core/blazor/host-and-deploy/server?view=aspnetcore-8.0) on hosting and deploying Blazor applications.
 
-## Microsoft excel limitation while exporting millions of records to excel file format
+## Microsoft Excel limitation while exporting millions of records to excel file format
 
 Microsoft Excel supports a maximum of 1,048,576 rows per sheet. Therefore, it is not feasible to export millions of records into a single Excel file due to this limitation. For handling large datasets, consider exporting data in formats such as CSV (Comma-Separated Values), which can efficiently manage larger volumes of data.
 For more details on Microsoft Excel's specifications and limits, you can refer to the official [documentation](https://support.microsoft.com/en-gb/office/excel-specifications-and-limits-1672b34d-7043-467e-8e27-269d656771c3).
