@@ -22,8 +22,8 @@ When you drag and resize the Dashboard Layout's panel or resizing the window, th
 @using Syncfusion.Blazor.Maps
 @using Syncfusion.Blazor.Layouts
 
-<SfDashboardLayout ID="DashBoard" @ref="DashboardLayout" AllowResizing="true"  AllowFloating="true" CellSpacing="@CellSpacing" Columns="20">
-<DashboardLayoutEvents Created="Created" OnResizeStop="@ResizingHandler" OnWindowResize="@ResizingWindow" Resizing="ResizingHandler"></DashboardLayoutEvents>
+<SfDashboardLayout ID="DashBoard" AllowResizing="true"  AllowFloating="true" CellSpacing="@CellSpacing" Columns="20">
+<DashboardLayoutEvents Created="Created" OnWindowResize="@ResizingWindow" Resizing="@ResizingWindow"></DashboardLayoutEvents>
     <DashboardLayoutPanels>
         <DashboardLayoutPanel Id="LayoutOne" Row="0" Col="5" SizeX="5" SizeY="7">
             <HeaderTemplate><div>Maps</div></HeaderTemplate>
@@ -82,7 +82,6 @@ When you drag and resize the Dashboard Layout's panel or resizing the window, th
     SfMaps MapsOne;
     SfMaps MapsTwo;
     SfMaps MapsThree;
-    SfDashboardLayout DashboardLayout;
     private Timer _resizeTimer;
     
     public double[] CellSpacing = { 10, 10 };
