@@ -9,23 +9,21 @@ documentation: ug
 
 # Render Linear Gauge component inside other components
 
-The Linear Gauge can be rendered within components such as the Dashboard Layout, Tabs, Dialog, and others. In general, the Linear Gauge component renders before other components, so a boolean variable ((i.e. boolean flag) is used to determine when to begin rendering the Linear Gauge component.
+The Linear Gauge can be rendered within components such as the Dashboard Layout, Tabs, Dialog, and others. In general, the Linear Gauge component renders before other components, so a boolean variable (i.e. boolean flag) is used to determine when to begin rendering the Linear Gauge component.
 
 ## Linear Gauge component inside Dashboard Layout
 
-When the Linear Gauge component renders within a panel of the Dashboard Layout component, its rendering begins concurrently with the Dashboard Layout component's rendering. As a result, the size of the Linear Gauge component will not be proper. To properly render the Linear Gauge component, a boolean variable (i.e. **IsInitialRender**) must be created and it is used to determine the Linear Gauge component's rendering. The boolean variable is set to **false** by default, so the Linear Gauge component will not be rendered initially. When the Dashboard Layout component is rendered, its [Created](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.DashboardLayoutEvents.html#Syncfusion_Blazor_Layouts_DashboardLayoutEvents_Created) event is fired, and the boolean variable (i.e. **IsInitialRender**) in this event must be changed to **true** to initiate the render of the Linear Gauge component.
+When the Linear Gauge component renders within a panel of the Dashboard Layout component, its rendering begins concurrently with the Dashboard Layout component's rendering. As a result, the size of the Linear Gauge component will not be proper. To properly render the Linear Gauge component, a boolean variable (i.e. **IsInitialRender**) must be created and it is used to determine the Linear Gauge component's rendering. The boolean variable is set to **false** by default, so the Linear Gauge component will not be rendered initially. When the Dashboard Layout component is rendered, its [Created](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.DashboardLayoutEvents.html#Syncfusion_Blazor_Layouts_DashboardLayoutEvents_Created) event is fired. Within this event, the `Task.Yield()` method should be called, and the boolean variable (i.e. **IsInitialRender**) must be changed to **true** to initiate the render of the Linear Gauge component. This ensures that the Dashboard Layout component is completely rendered before the Linear Gauge component starts rendering.
 
-When you drag and resize the Dashboard Layout's panel, the Linear Gauge component is not notified, so the Linear Gauge is not properly rendered within the panel. To avoid this scenario, the Linear Gauge component's [RefreshAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.SfLinearGauge.html#Syncfusion_Blazor_LinearGauge_SfLinearGauge_RefreshAsync) method must be called in the Dashboard Layout's [Resizing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.DashboardLayoutEvents.html#Syncfusion_Blazor_Layouts_DashboardLayoutEvents_Resizing) and [OnResizeStop](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.DashboardLayoutEvents.html#Syncfusion_Blazor_Layouts_DashboardLayoutEvents_OnResizeStop) events. Because the panel size of the Dashboard Layout is determined after a delay, a 100 millisecond delay must be provided before refreshing the Linear Gauge component.
-
-On window resizing, the Linear Gauge component is not notified, so the Linear Gauge is not properly rendered within the panel. To avoid this scenario, the Dashboard Layout component's [RefreshAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.SfDashboardLayout.html#Syncfusion_Blazor_Layouts_SfDashboardLayout_RefreshAsync) and  the Linear Gauge component's [RefreshAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.SfLinearGauge.html#Syncfusion_Blazor_LinearGauge_SfLinearGauge_RefreshAsync) method must be called in the Dashboard Layout's [OnWindowResize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.DashboardLayoutEvents.html#Syncfusion_Blazor_Layouts_DashboardLayoutEvents_OnWindowResize) events.
+When you drag and resize the Dashboard Layout's panel or resizing the window, the Linear Gauge component is not notified, so the Linear Gauge is not properly rendered within the panel. To avoid this scenario, the Linear Gauge component's [RefreshAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.SfLinearGauge.html#Syncfusion_Blazor_LinearGauge_SfLinearGauge_RefreshAsync) method must be called in the Dashboard Layout's [Resizing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.DashboardLayoutEvents.html#Syncfusion_Blazor_Layouts_DashboardLayoutEvents_Resizing) and [OnWindowResize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.DashboardLayoutEvents.html#Syncfusion_Blazor_Layouts_DashboardLayoutEvents_OnWindowResize) events. Additionally, a 300 millisecond delay is applied using the timer to refresh the Linear Gauge components once the resizing is complete.
 
 ```cshtml
 
 @using Syncfusion.Blazor.LinearGauge
 @using Syncfusion.Blazor.Layouts
 
-<SfDashboardLayout ID="DashBoard" @ref="DashboardLayout" AllowResizing="true" AllowFloating="true" CellSpacing="@CellSpacing" Columns="20">
-<DashboardLayoutEvents Created="Created" OnResizeStop="@ResizingHandler" OnWindowResize="@ResizingWindow" Resizing="ResizingHandler"></DashboardLayoutEvents>
+<SfDashboardLayout ID="DashBoard" AllowResizing="true" AllowFloating="true" CellSpacing="@CellSpacing" Columns="20">
+<DashboardLayoutEvents Created="Created" OnWindowResize="@ResizingWindow" Resizing="@ResizingWindow"></DashboardLayoutEvents>
     <DashboardLayoutPanels>
         <DashboardLayoutPanel Id="LayoutOne" Row="0" Col="5" SizeX="5" SizeY="7">
             <HeaderTemplate><div> Linear Gauge - Vertical</div></HeaderTemplate>
@@ -138,7 +136,7 @@ On window resizing, the Linear Gauge component is not notified, so the Linear Ga
     SfLinearGauge GaugeOne;
     SfLinearGauge GaugeTwo;
     SfLinearGauge GaugeThree;
-    SfDashboardLayout DashboardLayout;
+    private Timer _resizeTimer;
 
     public double[] CellSpacing = { 10, 10 };
     public string BorderColor = "#E5E7EB";
@@ -148,35 +146,33 @@ On window resizing, the Linear Gauge component is not notified, so the Linear Ga
 
     public bool IsInitialRender { get; set; }
 
-
     public async void Created(Object args)
     {
+        await Task.Yield();
         IsInitialRender = true;
     }
 
     public async Task ResizingWindow(ResizeArgs args)
     {
-        await DashboardLayout.RefreshAsync();
+        if (_resizeTimer != null)
+        {
+            _resizeTimer.Dispose();
+        }
+        _resizeTimer = new Timer(async _ =>
+        {
+            await InvokeAsync(() =>
+            {
+                RefreshComponents();
+            });
+        }, null, 300, Timeout.Infinite);
+    }
+    
+    private async Task RefreshComponents()
+    {
+        await Task.Yield();
         await GaugeOne.RefreshAsync();
         await GaugeTwo.RefreshAsync();
         await GaugeThree.RefreshAsync();
-    }
-
-    public async Task ResizingHandler(ResizeArgs args)
-    {
-        if (args.Id == "LayoutOne")
-        {
-            await Task.Delay(100);
-            await GaugeOne.RefreshAsync();
-        } else if (args.Id == "LayoutTwo")
-        {
-            await Task.Delay(100);
-            await GaugeTwo.RefreshAsync();
-        } else if (args.Id == "LayoutThree")
-        {
-            await Task.Delay(100);
-            await GaugeThree.RefreshAsync();
-        }
     }
 }
 
@@ -333,7 +329,7 @@ When the Linear Gauge component renders within the Tab component, its rendering 
 
 ## Linear Gauge component inside Dialog
 
-When the Linear Gauge component renders within the Dialog component, its rendering begins concurrently with the Dialog component's rendering. As a result, the size of the Linear Gauge component will not be proper. To properly render the Linear Gauge component, a boolean variable (i.e. **IsInitialRender**) must be created and it is used to determine the Linear Gauge component's rendering. The boolean variable is set to **false** by default, so the Linear Gauge component will not be rendered initially. When the Dialog component is being opened, its [OnOpen](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogEvents.html#Syncfusion_Blazor_Popups_DialogEvents_OnOpen) event is fired, and the boolean variable (i.e. **IsInitialRender**) in this event must be changed to **true** to initiate the render of the Linear Gauge component. When the Dialog component is closed, its [Closed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogEvents.html#Syncfusion_Blazor_Popups_DialogEvents_Closed) event is fired, and the boolean variable (i.e. **IsInitialRender**) in this event must be changed to **false**.
+When the Linear Gauge component renders within the Dialog component, its rendering begins concurrently with the Dialog component's rendering. As a result, the size of the Linear Gauge component will not be proper. To properly render the Linear Gauge component, a boolean variable (i.e. **IsInitialRender**) must be created and it is used to determine the Linear Gauge component's rendering. The boolean variable is set to **false** by default, so the Linear Gauge component will not be rendered initially. When the Dialog component is being opened, its [OnOpen](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogEvents.html#Syncfusion_Blazor_Popups_DialogEvents_OnOpen) event is fired. Within this event, the `Task.Yield()` method should be called, and the boolean variable (i.e. **IsInitialRender**) must be changed to **true** to initiate the render of the Linear Gauge component. This ensures that the Dialog component is completely rendered before the Linear Gauge component starts rendering. When the Dialog component is closed, its [Closed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogEvents.html#Syncfusion_Blazor_Popups_DialogEvents_Closed) event is fired, and the boolean variable (i.e. **IsInitialRender**) in this event must be changed to **false**.
 
 When you drag and resize the Dialog component, the Linear Gauge component is not notified, so the Linear Gauge is not properly rendered within the Dialog. To avoid this scenario, the Linear Gauge component's `RefreshAsync` method must be called in the Dialog's [Resizing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogEvents.html#Syncfusion_Blazor_Popups_DialogEvents_Resizing) and [OnResizeStop](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogEvents.html#Syncfusion_Blazor_Popups_DialogEvents_OnResizeStop) events. Because the size of the Dialog is determined after a delay, a 100 millisecond delay must be provided before refreshing the Linear Gauge component.
 
@@ -402,11 +398,13 @@ When you drag and resize the Dialog component, the Linear Gauge component is not
         GaugeOne.RefreshAsync();
     }
 
-    private void DialogOpen(Object args)
+    public async Task DialogOpen(Object args)
     {
-        this.ShowButton = false;
-        IsInitialRender = true;
+       this.ShowButton = false;
+       await Task.Yield();
+       IsInitialRender = true;
     }
+
     private void DialogClose(Object args)
     {
         this.ShowButton = true;
