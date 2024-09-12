@@ -9,15 +9,13 @@ documentation: ug
 
 # Render Maps component inside other components
 
-The Maps can be rendered within components such as the Dashboard Layout, Tabs, Dialog, and others. In general, the Maps component renders before other components, so a boolean variable ((i.e. boolean flag) is used to determine when to begin rendering the Maps component.
+The Maps can be rendered within components such as the Dashboard Layout, Tabs, Dialog, and others. In general, the Maps component renders before other components, so a boolean variable (i.e. boolean flag) is used to determine when to begin rendering the Maps component.
 
 ## Maps component inside Dashboard Layout
 
-When the Maps component renders within a panel of the Dashboard Layout component, its rendering begins concurrently with the Dashboard Layout component's rendering. As a result, the size of the Maps component will not be proper. To properly render the Maps component, a boolean variable (i.e. **IsInitialRender**) must be created and it is used to determine the Maps component's rendering. The boolean variable is set to **false** by default, so the Maps component will not be rendered initially. When the Dashboard Layout component is rendered, its [Created](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.DashboardLayoutEvents.html#Syncfusion_Blazor_Layouts_DashboardLayoutEvents_Created) event is fired, and the boolean variable (i.e. **IsInitialRender**) in this event must be changed to **true** to initiate the render of the Maps component.
+When the Maps component renders within a panel of the Dashboard Layout component, its rendering begins concurrently with the Dashboard Layout component's rendering. As a result, the size of the Maps component will not be proper. To properly render the Maps component, a boolean variable (i.e. **IsInitialRender**) must be created and it is used to determine the Maps component's rendering. The boolean variable is set to **false** by default, so the Maps component will not be rendered initially. When the Dashboard Layout component is rendered, its [Created](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.DashboardLayoutEvents.html#Syncfusion_Blazor_Layouts_DashboardLayoutEvents_Created) event is fired. Within this event, the `Task.Yield()` method should be called, and the boolean variable (i.e. **IsInitialRender**) must be changed to **true** to initiate the render of the Maps component. This ensures that the Dashboard Layout component is completely rendered before the Maps component starts rendering.
 
-When you drag and resize the Dashboard Layout's panel, the Maps component is not notified, so the Maps are not properly rendered within the panel. To avoid this scenario, the Maps component's [Refresh](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.SfMaps.html#Syncfusion_Blazor_Maps_SfMaps_Refresh) method must be called in the Dashboard Layout's [Resizing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.DashboardLayoutEvents.html#Syncfusion_Blazor_Layouts_DashboardLayoutEvents_Resizing) and [OnResizeStop](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.DashboardLayoutEvents.html#Syncfusion_Blazor_Layouts_DashboardLayoutEvents_OnResizeStop) events. Because the panel size of the Dashboard Layout is determined after a delay, a 500 millisecond delay must be provided before refreshing the Maps component.
-
-On window resizing, the Maps component is not notified, so the Maps is not properly rendered within the panel. To avoid this scenario, the Dashboard Layout component's [RefreshAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.SfDashboardLayout.html#Syncfusion_Blazor_Layouts_SfDashboardLayout_RefreshAsync) and  the Maps component's [RefreshAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.SfMaps.html#Syncfusion_Blazor_Maps_SfMaps_Refresh) method must be called in the Dashboard Layout's [OnWindowResize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.DashboardLayoutEvents.html#Syncfusion_Blazor_Layouts_DashboardLayoutEvents_OnWindowResize) events.
+When you drag and resize the Dashboard Layout's panel or resizing the window, the Maps component is not notified, so the Maps are not properly rendered within the panel. To avoid this scenario, the Maps component's [Refresh](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.SfMaps.html#Syncfusion_Blazor_Maps_SfMaps_Refresh) method must be called in the Dashboard Layout's [Resizing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.DashboardLayoutEvents.html#Syncfusion_Blazor_Layouts_DashboardLayoutEvents_Resizing) and[OnWindowResize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.DashboardLayoutEvents.html#Syncfusion_Blazor_Layouts_DashboardLayoutEvents_OnWindowResize) events. Additionally, a 300 millisecond delay is applied using the timer to refresh the Maps components once the resizing is complete.
 
 ```cshtml
 
@@ -85,39 +83,40 @@ On window resizing, the Maps component is not notified, so the Maps is not prope
     SfMaps MapsTwo;
     SfMaps MapsThree;
     SfDashboardLayout DashboardLayout;
-
+    private Timer _resizeTimer;
+    
     public double[] CellSpacing = { 10, 10 };
     public bool IsInitialRender { get; set; }
 
     public async void Created(Object args)
     {
+        await Task.Yield();
         IsInitialRender = true;
     }
 
     public async Task ResizingWindow(ResizeArgs args)
     {
-        await DashboardLayout.RefreshAsync();
+        if (_resizeTimer != null)
+        {
+            _resizeTimer.Dispose();
+        }
+        _resizeTimer = new Timer(async _ =>
+        {
+            await InvokeAsync(() =>
+            {
+               RefreshComponents();
+            });
+        }, null, 300, Timeout.Infinite);
+    }
+
+    private async Task RefreshComponents()
+    {
+        await Task.Yield();
         MapsOne.Refresh();
         MapsTwo.Refresh();
         MapsThree.Refresh();
     }
-    
-    public async void ResizingHandler(ResizeArgs args)
-    {
-        if(args.Id == "LayoutOne")
-        {
-            await Task.Delay(500);
-            MapsOne.Refresh();
-        } else if (args.Id == "LayoutTwo")
-        {
-            await Task.Delay(500);
-            MapsTwo.Refresh();
-        } else if(args.Id == "LayoutThree")
-        {
-            await Task.Delay(500);
-            MapsThree.Refresh();
-        }
-    }
+
 }
 
 ```
@@ -208,7 +207,9 @@ When the Maps component renders within the Tab component, its rendering begins c
 
 ## Maps component inside Dialog
 
-When the Maps component renders within the Dialog component, its rendering begins concurrently with the Dialog component's rendering. As a result, the size of the Maps component will not be proper. To properly render the Maps component, a boolean variable (i.e. **IsInitialRender**) must be created and it is used to determine the Maps component's rendering. The boolean variable is set to **false** by default, so the Maps component will not be rendered initially. When the Dialog component is being opened, its [OnOpen](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogEvents.html#Syncfusion_Blazor_Popups_DialogEvents_OnOpen) event is fired, and the boolean variable (i.e. **IsInitialRender**) in this event must be changed to **true** to initiate the render of the Maps component. When the Dialog component is closed, its [Closed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogEvents.html#Syncfusion_Blazor_Popups_DialogEvents_Closed) event is fired, and the boolean variable (i.e. **IsInitialRender**) in this event must be changed to **false**.
+When the Maps component renders within the Dialog component, its rendering begins concurrently with the Dialog component's rendering. As a result, the size of the Maps component will not be proper. To properly render the Maps component, a boolean variable (i.e. **IsInitialRender**) must be created and it is used to determine the Maps component's rendering. The boolean variable is set to **false** by default, so the Maps component will not be rendered initially. When the Dialog component is being opened, its [OnOpen](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogEvents.html#Syncfusion_Blazor_Popups_DialogEvents_OnOpen) event is fired.   Within this event, the `Task.Yield()` method should be called, and the boolean variable (i.e. **IsInitialRender**) must be changed to **true** to initiate the render of the Maps component. This ensures that the Dialog component is completely rendered before the Maps component starts rendering.
+
+When the Dialog component is closed, its [Closed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogEvents.html#Syncfusion_Blazor_Popups_DialogEvents_Closed) event is fired, and the boolean variable (i.e. **IsInitialRender**) in this event must be changed to **false**.
 
 When you drag and resize the Dialog component, the Maps component is not notified, so the Maps are not properly rendered within the Dialog. To avoid this scenario, the Maps component's `Refresh` method must be called in the Dialog's [Resizing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogEvents.html#Syncfusion_Blazor_Popups_DialogEvents_Resizing) and [OnResizeStop](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogEvents.html#Syncfusion_Blazor_Popups_DialogEvents_OnResizeStop) events. Because the size of the Dialog is determined after a delay, a 500 millisecond delay must be provided before refreshing the Maps component.
 
@@ -261,11 +262,13 @@ When you drag and resize the Dialog component, the Maps component is not notifie
         Maps.Refresh();
     }
 
-    private void DialogOpen(Object args)
+    public async Task DialogOpen(Object args)
     {
-        this.ShowButton = false;
-        IsInitialRender = true;
+       this.ShowButton = false;
+       await Task.Yield();
+       IsInitialRender = true;
     }
+    
     private void DialogClose(Object args)
     {
         this.ShowButton = true;
