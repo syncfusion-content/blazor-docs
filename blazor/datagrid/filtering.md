@@ -489,7 +489,7 @@ The **WildCard** filter can process one or more search patterns using the “*�
 * The **WildCard** filter option is supported for the DataGrid that has all search options.
 
 Operator |Description
------|-----|
+-----|-----
 a*b | Everything that starts with “a” and ends with “b”.
 a* | Everything that starts with “a”.
 *b | Everything that ends with “b”.
