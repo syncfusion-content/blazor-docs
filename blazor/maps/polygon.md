@@ -345,4 +345,4 @@ The following example shows how to customize the line shape over the tile images
 ```
 >Note: Refer the value of the JSON file of [linedata.json](https://www.syncfusion.com/downloads/support/directtrac/general/ze/linedata1776693370)  here.
 
-![Blazor Maps with line shape](./images/Polygon/blazor-map-line-shape-on-tile-images.png)
+![Blazor Maps with line shape](./images/Polygon/blazor-map-line-shape-on-tile-images.gif)
