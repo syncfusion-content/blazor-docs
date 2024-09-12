@@ -108,4 +108,4 @@ Add the Syncfusion Blazor AI AssistView component in the **~Pages/.razor** file.
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion Blazor AI AssistView component in your default web browser.
 
-![Blazor AI AssistView Component](./images/blazor-ai-assistview-component.png)
+![Blazor AI AssistView Component](./images/ai-assistview-component.png)
