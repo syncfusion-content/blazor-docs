@@ -11,7 +11,7 @@ documentation: ug
 
 ## Default editors
 
-The [EditType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) property of the [GridColumn](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Grids.GridColumn.html) component is used for defining the editor component for any particular column. You can set the [EditType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) based on the data type of the column.
+The [EditType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_EditType) property of the [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) component is used for defining the editor component for any particular column. You can set the `EditType` based on the data type of the column.
 
 The available default edit types are,
 
@@ -32,10 +32,10 @@ component for TimeOnly data type.
 
 ## Customizing the default editor controls
 
-You can customize the behavior of the editor component through the [EditorSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) property of the [GridColumn](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Grids.GridColumn.html) component.
+You can customize the behavior of the editor component through the [EditorSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_EditorSettings) property of the [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) component.
 
-N> We have limited the properties of editor components that can be customized using [EditorSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) in Grid default editor components. Find the list of properties that can be customized the below topics.
-<br/> If you want to customize other properties, refer to our [EditTemplate](https://blazor.syncfusion.com/documentation/datagrid/editing/#cell-edit-template) documentation to render the custom components in EditForm along with your customization.
+N> We have limited the properties of editor components that can be customized using [EditorSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_EditorSettings) in Grid default editor components. Find the list of properties that can be customized the below topics.
+<br/> If you want to customize other properties, refer to our [EditTemplate](https://blazor.syncfusion.com/documentation/datagrid/cell-edit-types#using-autocomplete-in-edittemplate) documentation to render the custom components in EditForm along with your customization.
 
 ### DefaultEdit
 
@@ -428,15 +428,13 @@ The following sample code demonstrates the customization applied to TimePicker c
     }
 }
 ```
-
-
 ## Custom editors using template/Cell edit template
 
 N> Before adding edit template to the datagrid, it is recommended to go through the [template](./templates/#templates) section topic to configure the template.
 
-The cell edit template is used to add a custom component for a particular column. You can use the **EditTemplate** of the [GridColumn](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Grids.GridColumn.html) component to add the custom component. You can access the parameters passed to the templates using implicit parameter named **context**.
+The cell edit template is used to add a custom component for a particular column. You can use the **EditTemplate** of the [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) component to add the custom component. You can access the parameters passed to the templates using implicit parameter named **context**.
 
-N> Custom components inside the EditTemplate must be specified with two-way (**@bind-Value**) binding to reflect the changes in DataGrid.
+> Custom components inside the EditTemplate must be specified with two-way (**@bind-Value**) binding to reflect the changes in DataGrid.
 
 ### Using AutoComplete in EditTemplate
 
@@ -854,6 +852,74 @@ You can render the **SfRichTextEditor** component in [EditTemplate](https://help
 In the following image, **SfRichTextEditor** component is rendered with **EditTemplate** in Customer ID column
 
 ![Blazor DataGrid with Editing in Custom RichTextEditor](./images/blazor-datagrid-editing-in-custom-richtexteditor.png)
+
+### Using SfMaskedTextBox in EditTemplate 
+
+The **SfMaskedTextBox** component in Syncfusion Blazor provides a masked input control that allows you to enforce specific input patterns for text values. This feature can be used within the Syncfusion Blazor Grid component to enable masked input for a specific column in the [EditTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_EditTemplate).
+
+```cshtml
+@using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor.Inputs
+
+<SfGrid DataSource="@Orders" AllowPaging="true" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Cancel", "Update" })" Height="315">
+    <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true" Mode="EditMode.Normal"></GridEditSettings>
+    <GridColumns>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" IsPrimaryKey="true" ValidationRules="@(new ValidationRules{ Required=true})" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer ID" DisableHtmlEncode="false" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" EditType="EditType.DatePickerEdit" Format="d" TextAlign="TextAlign.Right" Width="130" Type="ColumnType.Date"></GridColumn>
+        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" EditType="EditType.NumericEdit" Width="120"></GridColumn>
+        <GridColumn Field="PhoneNumber" HeaderText="Phone Number" Width="120">
+            <EditTemplate>
+                @{
+                    var data = context as Order;
+                }
+
+                <SfMaskedTextBox ID="PhoneNumber" Mask="##-###-#####" Placeholder="PhoneNumber" ValueChange="@(args=>OnChanged(args,data))" Value="((context as Order).PhoneNumber.ToString())"></SfMaskedTextBox>
+            </EditTemplate>
+
+        </GridColumn>
+        <GridColumn Field=@nameof(Order.ShipCountry) HeaderText="Ship Country" EditType="EditType.DropDownEdit" Width="150"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code {
+    public List<Order> Orders { get; set; }
+    public string Maskedvalue { get; set; }
+
+    protected override void OnInitialized()
+    {
+        Orders = Enumerable.Range(1, 75).Select(x => new Order()
+            {
+                OrderID = 1000 + x,
+                CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
+                Freight = 2.1 * x,
+                OrderDate = DateTime.Now.AddDays(-x),
+                PhoneNumber = 9876543210,
+                ShipCountry = (new string[] { "USA", "UK", "CHINA", "RUSSIA", "INDIA" })[new Random().Next(5)]
+            }).ToList();
+    }
+    public class Order
+    {
+        public int? OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public DateTime? OrderDate { get; set; }
+        public double? Freight { get; set; }
+        public long PhoneNumber { get; set; }
+        public string ShipCountry { get; set; }
+    }
+    public void OnChanged(MaskChangeEventArgs Args,Order Data)
+    {
+        if (Args.Value != null)
+        {
+            // store the value global variable.
+            Data.PhoneNumber = long.Parse(Args.Value);
+        }
+    }
+}
+```
+In the following image, **SfMaskedTextBox** component is rendered with **EditTemplate** in PhoneNumber column .
+
+![Using SfMaskedTextBox in EditTemplate](./images/Blazor-MaskedTextbox.png)
 
 ### DynamicObject data binding with edit template feature
 
