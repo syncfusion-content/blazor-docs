@@ -9,7 +9,7 @@ documentation: ug
 
 # Resources and Grouping in Blazor Scheduler Component
 
-[Resources and grouping](https://www.syncfusion.com/blazor-components/blazor-scheduler/multiple-resources/) support allows the Scheduler to be shared by multiple resources. Also, the appointments of each resources are displayed under relevant resources. Each resource in the Scheduler is arranged in a column or row wise order, with individual spacing to display all its respective appointments on a single page. It also supports the multiple levels of grouping of resources, thus enabling the categorization of resources in a hierarchical structure and shows it either in expandable groups (Timeline views) or else vertical hierarchy one after the other (Calendar views).
+[Resources and grouping](https://www.syncfusion.com/blazor-components/blazor-scheduler/multiple-resources) support allows the Scheduler to be shared by multiple resources. Also, the appointments of each resources are displayed under relevant resources. Each resource in the Scheduler is arranged in a column or row wise order, with individual spacing to display all its respective appointments on a single page. It also supports the multiple levels of grouping of resources, thus enabling the categorization of resources in a hierarchical structure and shows it either in expandable groups (Timeline views) or else vertical hierarchy one after the other (Calendar views).
 
 It is also possible to assign one or more resources to the same appointment, by allowing multiple selection of resource options available in the event editor window.
 
@@ -25,7 +25,7 @@ The default options available within the `Resources` collection are as follows,
 | `Title` | string | It holds the title of the resource field to be displayed on the event editor window. |
 | `Name` | string | A unique resource name used for differentiating various resource objects while grouping. |
 | `AllowMultiple` | bool | When set to `true`, allows multiple selection of resource names, thus creating multiple instances of same appointment for the selected resources. |
-| `DataSource` | Object | Assigns the resource [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleResource-2.html#Syncfusion_Blazor_Schedule_ScheduleResource_2_DataSource), where data can be passed either as an array of JavaScript objects, or else can create an instance of [DataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) in case of processing remote data and can be assigned to the `DataSource` property. With the remote data assigned to `DataSource`, check the available [Adaptors](https://blazor.syncfusion.com/documentation/data/adaptors/) to customize the data processing. |
+| `DataSource` | Object | Assigns the resource [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleResource-2.html#Syncfusion_Blazor_Schedule_ScheduleResource_2_DataSource), where data can be passed either as an array of JavaScript objects, or else can create an instance of [DataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) in case of processing remote data and can be assigned to the `DataSource` property. With the remote data assigned to `DataSource`, check the available [Adaptors](https://blazor.syncfusion.com/documentation/data/adaptors) to customize the data processing. |
 | `Query` | query | Defines the external [Query](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.Query.html) that will be executed along with the data processing. |
 | `IdField` | string/int/Guid | Binds the resource ID field name from the resources `DataSource`. |
 | `TextField` | string | Binds the text field name from the resources `DataSource`. It usually holds the resource names. |
@@ -1887,4 +1887,4 @@ Some of the default changes made for compact Scheduler to render in desktop devi
 
 ## See Also
 
-[How to expand or collapse a resource programmatically](./how-to/#expand-collapse-resource-programmatically)
+[How to expand or collapse a resource programmatically](./how-to/blazor-web-assembly-scheduler)
