@@ -11,6 +11,16 @@ documentation: ug
 
 This article provides a step-by-step instructions for building Blazor Web App with `Syncfusion Blazor` component using the [.NET CLI](https://dotnet.microsoft.com/en-us/download/dotnet).
 
+## Using Playground
+
+[Blazor Playground](https://blazor.syncfusion.com/documentation/blazor-playground/overview) allows you to interact with our Blazor components directly in your web browser without need to install any required NuGet packages. By default, the `Syncfusion.Blazor` package is included in this.
+
+[https://blazorplayground.syncfusion.com/](https://blazorplayground.syncfusion.com/)
+
+To use the individual component in Blazor playground, uninstall the existing package and then install the needed NuGet package.
+
+![Blazor Playground with Accordion component](images/pg-accordion.png)
+
 ## Prerequisites
 
 Latest version of the [.NET Core SDK](https://dotnet.microsoft.com/en-us/download). If you previously installed the SDK, you can determine the installed version by executing the following command in a command prompt (Windows) or terminal (macOS) or command shell (Linux).
@@ -27,42 +37,173 @@ dotnet --version
 
 Run the following command to create a new Blazor Web App in a command prompt (Windows) or terminal (macOS) or command shell (Linux).
 
-For a Blazor Web App with `Server` interactive render mode & `Per page/component` interactivity location, use the following commands
+If you set the Authentication Type as `None` and Interactivity location as `Per page/component`, you need to use the following command.
 
-{% tabs %}
-{% highlight c# tabtitle=".NET CLI" %}
-
-dotnet new blazor -o BlazorApp
-cd BlazorApp
-
+<table>
+<tr>
+<th>Interactive Render Mode</th>
+<th>Command</th>
+</tr>
+<tr>
+<td>Server</td>
+<td>
+{% highlight c# %}
+dotnet new blazor -o BlazorApp -int Server
 {% endhighlight %}
-{% endtabs %}
-
-For a Blazor Web App with `WebAssembly` interactive render mode & `Per page/component` interactivity location, use the following commands
-
-{% tabs %}
-{% highlight c# tabtitle=".NET CLI" %}
-
+</td>
+</tr>
+<tr>
+<td>WebAssembly</td>
+<td>
+{% highlight c# %}
 dotnet new blazor -o BlazorApp -int WebAssembly
-cd BlazorApp
-cd BlazorApp.Client
-
 {% endhighlight %}
-{% endtabs %}
-
-For a Blazor Web App with `Auto` interactive render mode & `Per page/component` interactivity location, use the following commands
-
-{% tabs %}
-{% highlight c# tabtitle=".NET CLI" %}
-
+</td>
+</tr>
+<tr>
+<td>Auto</td>
+<td>
+{% highlight c# %}
 dotnet new blazor -o BlazorApp -int Auto
-cd BlazorApp
-cd BlazorApp.Client
-
 {% endhighlight %}
-{% endtabs %}
+</td>
+</tr>
+<tr>
+<td>None</td>
+<td>
+{% highlight c# %}
+dotnet new blazor -o BlazorApp -int None
+{% endhighlight %}
+</td>
+</tr>
+</table>
+
+If you set the Authentication Type as `Individual Accounts` and Interactivity location as `Per page/component`, you need to use the following command.
+
+<table>
+<tr>
+<th>Interactive Render Mode</th>
+<th>Command</th>
+</tr>
+<tr>
+<td>Server</td>
+<td>
+{% highlight c# %}
+dotnet new blazor -o BlazorApp -au Individual -int Server
+{% endhighlight %}
+</td>
+</tr>
+<tr>
+<td>WebAssembly</td>
+<td>
+{% highlight c# %}
+dotnet new blazor -o BlazorApp -au Individual -int WebAssembly
+{% endhighlight %}
+</td>
+</tr>
+<tr>
+<td>Auto</td>
+<td>
+{% highlight c# %}
+dotnet new blazor -o BlazorApp -au Individual -int Auto
+{% endhighlight %}
+</td>
+</tr>
+<tr>
+<td>None</td>
+<td>
+{% highlight c# %}
+dotnet new blazor -o BlazorApp -au Individual -int None
+{% endhighlight %}
+</td>
+</tr>
+</table>
+
+If you set the Authentication Type as `Individual Accounts` and Interactivity location as `Global`, you need to use the following command.
+
+<table>
+<tr>
+<th>Interactive Render Mode</th>
+<th>Command</th>
+</tr>
+<tr>
+<td>Server</td>
+<td>
+{% highlight c# %}
+dotnet new blazor -o BlazorApp -au Individual -int Server -ai
+{% endhighlight %}
+</td>
+</tr>
+<tr>
+<td>WebAssembly</td>
+<td>
+{% highlight c# %}
+dotnet new blazor -o BlazorApp -au Individual -int WebAssembly -ai
+{% endhighlight %}
+</td>
+</tr>
+<tr>
+<td>Auto</td>
+<td>
+{% highlight c# %}
+dotnet new blazor -o BlazorApp -au Individual -int Auto -ai
+{% endhighlight %}
+</td>
+</tr>
+<tr>
+<td>None</td>
+<td>
+{% highlight c# %}
+dotnet new blazor -o BlazorApp -au Individual -int None -ai
+{% endhighlight %}
+</td>
+</tr>
+</table>
+
+If you set the Authentication Type as `None` and Interactivity location as `Global`, you need to use the following command.
+
+<table>
+<tr>
+<th>Interactive Render Mode</th>
+<th>Command</th>
+</tr>
+<tr>
+<td>Server</td>
+<td>
+{% highlight c# %}
+dotnet new blazor -o BlazorApp -int Server-ai
+{% endhighlight %}
+</td>
+</tr>
+<tr>
+<td>WebAssembly</td>
+<td>
+{% highlight c# %}
+dotnet new blazor -o BlazorApp -int WebAssembly -ai
+{% endhighlight %}
+</td>
+</tr>
+<tr>
+<td>Auto</td>
+<td>
+{% highlight c# %}
+dotnet new blazor -o BlazorApp8 -int Auto -ai
+{% endhighlight %}
+</td>
+</tr>
+<tr>
+<td>None</td>
+<td>
+{% highlight c# %}
+dotnet new blazor -o BlazorApp8 -int None -ai
+{% endhighlight %}
+</td>
+</tr>
+</table>
 
 This command creates new Blazor Web app project and places it in a new directory called `BlazorApp` inside your current location. See [Create Blazor app topic](https://dotnet.microsoft.com/en-us/learn/aspnet/blazor-tutorial/create) and [dotnet new CLI command](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?pivots=linux-macos&view=aspnetcore-8.0) topics for more details.
+
+N> If you want to see more available templates, you need to run the `dotnet new blazor --help` or `dotnet new blazor -h` command.
 
 ## Install Syncfusion Blazor Calendars and Themes NuGet in the App
 
@@ -160,6 +301,6 @@ dotnet run
 
 ![Blazor Calendar Component](images/output-calendar-using-blazor-webassembly.png)
 
-## See Also
+## See also
 
 * [Getting Started with Blazor Server App using .NET CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-dotnet-cli)

@@ -11,6 +11,16 @@ documentation: ug
 
 This article provides a step-by-step instructions for building Blazor WebAssembly App with `Blazor Calendar` component using the [.NET CLI](https://dotnet.microsoft.com/en-us/download/dotnet).
 
+## Using Playground
+
+[Blazor Playground](https://blazor.syncfusion.com/documentation/blazor-playground/overview) allows you to interact with our Blazor components directly in your web browser without need to install any required NuGet packages. By default, the `Syncfusion.Blazor` package is included in this.
+
+[https://blazorplayground.syncfusion.com/](https://blazorplayground.syncfusion.com/)
+
+To use the individual component in Blazor playground, uninstall the existing package and then install the needed NuGet package.
+
+![Blazor Playground with Accordion component](images/pg-accordion.png)
+
 ## Prerequisites
 
 Latest version of the [.NET Core SDK](https://dotnet.microsoft.com/en-us/download). If you previously installed the SDK, you can determine the installed version by executing the following command in a command prompt (Windows) or terminal (macOS) or command shell (Linux).
@@ -138,6 +148,6 @@ dotnet run
 
 ![Blazor Calendar Component](images/output-calendar-using-blazor-webassembly.png)
 
-## See Also
+## See also
 
 * [Getting Started with Blazor Server App using .NET CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-dotnet-cli)
