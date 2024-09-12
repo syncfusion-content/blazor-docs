@@ -13,9 +13,11 @@ The TreeMap can be rendered within components such as the Dashboard Layout, Tabs
 
 ## TreeMap component inside Dashboard Layout
 
-When the TreeMap component renders within a panel of the Dashboard Layout component, its rendering begins concurrently with the Dashboard Layout component's rendering. As a result, the size of the TreeMap component will not be proper. To properly render the TreeMap component, a boolean variable (i.e. **IsInitialRender**) must be created and it is used to determine the TreeMap component's rendering. The boolean variable is set to **false** by default, so the TreeMap component will not be rendered initially. When the Dashboard Layout component is rendered, its [Created](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.DashboardLayoutEvents.html#Syncfusion_Blazor_Layouts_DashboardLayoutEvents_Created) event is fired. Within this event, the `Task.Yield()` method should be called, and the boolean variable (i.e. **IsInitialRender**) must be changed to **true** to initiate the render of the TreeMap component. This ensures that the Dashboard Layout component is completely rendered before the TreeMap component starts rendering.
+When the TreeMap component renders within a panel of the Dashboard Layout component, its rendering begins concurrently with the Dashboard Layout component's rendering. As a result, the size of the TreeMap component will not be proper. To properly render the TreeMap component, a boolean variable (i.e. **IsInitialRender**) must be created and it is used to determine the TreeMap component's rendering. The boolean variable is set to **false** by default, so the TreeMap component will not be rendered initially. When the Dashboard Layout component is rendered, its [Created](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.DashboardLayoutEvents.html#Syncfusion_Blazor_Layouts_DashboardLayoutEvents_Created) event is fired, and the boolean variable (i.e. **IsInitialRender**) in this event must be changed to **true** to initiate the render of the TreeMap component.
 
-When you drag and resize the Dashboard Layout's panel or resizing the window, the TreeMap component is not notified, so the TreeMap are not properly rendered within the panel. To avoid this scenario, the TreeMap component's [RefreshAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.SfTreeMap-1.html#Syncfusion_Blazor_TreeMap_SfTreeMap_1_RefreshAsync) method must be called in the Dashboard Layout's [Resizing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.DashboardLayoutEvents.html#Syncfusion_Blazor_Layouts_DashboardLayoutEvents_Resizing) and [OnWindowResize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.DashboardLayoutEvents.html#Syncfusion_Blazor_Layouts_DashboardLayoutEvents_OnWindowResize) events. Additionally, a 300 millisecond delay is applied using the timer to refresh the TreeMap components once the resizing is complete.
+When you drag and resize the Dashboard Layout's panel, the TreeMap component is not notified, so the TreeMap are not properly rendered within the panel. To avoid this scenario, the TreeMap component's [RefreshAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.SfTreeMap-1.html#Syncfusion_Blazor_TreeMap_SfTreeMap_1_RefreshAsync) method must be called in the Dashboard Layout's [Resizing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.DashboardLayoutEvents.html#Syncfusion_Blazor_Layouts_DashboardLayoutEvents_Resizing) and [OnResizeStop](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.DashboardLayoutEvents.html#Syncfusion_Blazor_Layouts_DashboardLayoutEvents_OnResizeStop) events. Because the panel size of the Dashboard Layout is determined after a delay, a 500 millisecond delay must be provided before refreshing the TreeMap component.
+
+On window resizing, the TreeMap component is not notified, so the TreeMap is not properly rendered within the panel. To avoid this scenario, the Dashboard Layout component's [RefreshAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.SfDashboardLayout.html#Syncfusion_Blazor_Layouts_SfDashboardLayout_RefreshAsync) and  the TreeMap component's [RefreshAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.SfTreeMap-1.html#Syncfusion_Blazor_TreeMap_SfTreeMap_1_RefreshAsync) method must be called in the Dashboard Layout's [OnWindowResize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.DashboardLayoutEvents.html#Syncfusion_Blazor_Layouts_DashboardLayoutEvents_OnWindowResize) events.
 
 ```cshtml
 
@@ -24,8 +26,8 @@ When you drag and resize the Dashboard Layout's panel or resizing the window, th
 @using Syncfusion.Blazor.Inputs
 
 
-<SfDashboardLayout ID="DashBoard" AllowResizing="true" AllowFloating="true" CellSpacing="@CellSpacing" Columns="20">
-<DashboardLayoutEvents Created="Created" OnWindowResize="@ResizingWindow" Resizing="@ResizingWindow"></DashboardLayoutEvents>
+<SfDashboardLayout ID="DashBoard" @ref="DashboardLayout" AllowResizing="true" AllowFloating="true" CellSpacing="@CellSpacing" Columns="20">
+<DashboardLayoutEvents Created="Created" OnResizeStop="@ResizingHandler" OnWindowResize="@ResizingWindow" Resizing="ResizingHandler"></DashboardLayoutEvents>
     <DashboardLayoutPanels>
         <DashboardLayoutPanel Id="LayoutOne" Row="0" Col="5" SizeX="5" SizeY="7">
             <HeaderTemplate><div>TreeMap</div></HeaderTemplate>
@@ -107,7 +109,8 @@ When you drag and resize the Dashboard Layout's panel or resizing the window, th
     SfTreeMap<CarSalesDetails> TreeOne;
     SfTreeMap<LeafData> TreeTwo;
     SfTreeMap<USAElectionResult> TreeThree;
-    private Timer _resizeTimer;
+    SfDashboardLayout DashboardLayout;
+
     public string[] LeafColor = new string[] { "#9cbb59" };
     public string[] LeafColorOne = new string[] { "#D84444" };
     public string[] LeafColorTwo = new string[] { "#316DB5" };
@@ -124,31 +127,32 @@ When you drag and resize the Dashboard Layout's panel or resizing the window, th
 
     public async void Created(Object args)
     {
-        await Task.Yield();
         IsInitialRender = true;
     }
 
     public async Task ResizingWindow(ResizeArgs args)
     {
-        if (_resizeTimer != null)
-        {
-            _resizeTimer.Dispose();
-        }
-        _resizeTimer = new Timer(async _ =>
-        {
-            await InvokeAsync(() =>
-            {
-                RefreshComponents();
-            });
-        }, null, 300, Timeout.Infinite);
-    }
-    
-    private async Task RefreshComponents()
-    {
-        await Task.Yield();
+        await DashboardLayout.RefreshAsync();
         await TreeOne.RefreshAsync();
         await TreeTwo.RefreshAsync();
         await TreeThree.RefreshAsync();
+    }
+
+    public async Task ResizingHandler(ResizeArgs args)
+    {
+        if (args.Id == "LayoutOne")
+        {
+            await Task.Delay(100);
+            TreeOne.RefreshAsync();
+        } else if (args.Id == "LayoutTwo")
+        {
+            await Task.Delay(100);
+            TreeTwo.RefreshAsync();
+        } else if (args.Id == "LayoutThree")
+        {
+            await Task.Delay(100);
+            TreeThree.RefreshAsync();
+        }
     }
 
     public class CarSalesDetails
@@ -525,7 +529,7 @@ When the TreeMap component renders within the Tab component, its rendering begin
 
 ## TreeMap component inside Dialog
 
-When the TreeMap component renders within the Dialog component, its rendering begins concurrently with the Dialog component's rendering. As a result, the size of the TreeMap component will not be proper. To properly render the TreeMap component, a boolean variable (i.e. **IsInitialRender**) must be created and it is used to determine the TreeMap component's rendering. The boolean variable is set to **false** by default, so the TreeMap component will not be rendered initially. When the Dialog component is being opened, its [OnOpen](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogEvents.html#Syncfusion_Blazor_Popups_DialogEvents_OnOpen) event is fired. Within this event, the `Task.Yield()` method should be called, and the boolean variable (i.e. **IsInitialRender**) must be changed to **true** to initiate the render of the TreeMap component. This ensures that the Dialog component is completely rendered before the TreeMap component starts rendering. When the Dialog component is closed, its [Closed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogEvents.html#Syncfusion_Blazor_Popups_DialogEvents_Closed) event is fired, and the boolean variable (i.e. **IsInitialRender**) in this event must be changed to **false**.
+When the TreeMap component renders within the Dialog component, its rendering begins concurrently with the Dialog component's rendering. As a result, the size of the TreeMap component will not be proper. To properly render the TreeMap component, a boolean variable (i.e. **IsInitialRender**) must be created and it is used to determine the TreeMap component's rendering. The boolean variable is set to **false** by default, so the TreeMap component will not be rendered initially. When the Dialog component is being opened, its [OnOpen](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogEvents.html#Syncfusion_Blazor_Popups_DialogEvents_OnOpen) event is fired, and the boolean variable (i.e. **IsInitialRender**) in this event must be changed to **true** to initiate the render of the TreeMap component. When the Dialog component is closed, its [Closed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogEvents.html#Syncfusion_Blazor_Popups_DialogEvents_Closed) event is fired, and the boolean variable (i.e. **IsInitialRender**) in this event must be changed to **false**.
 
 When you drag and resize the Dialog component, the TreeMap component is not notified, so the TreeMap are not properly rendered within the Dialog. To avoid this scenario, the TreeMap component's `RefreshAsync` method must be called in the Dialog's [Resizing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogEvents.html#Syncfusion_Blazor_Popups_DialogEvents_Resizing) and [OnResizeStop](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogEvents.html#Syncfusion_Blazor_Popups_DialogEvents_OnResizeStop) events. Because the size of the Dialog is determined after a delay, a 500 millisecond delay must be provided before refreshing the TreeMap component.
 
@@ -630,10 +634,9 @@ When you drag and resize the Dialog component, the TreeMap component is not noti
         TreeOne.RefreshAsync();
     }
 
-    public async Task DialogOpen(Object args)
+    private void DialogOpen(Object args)
     {
         this.ShowButton = false;
-        await Task.Yield();
         IsInitialRender = true;
     }
     private void DialogClose(Object args)
