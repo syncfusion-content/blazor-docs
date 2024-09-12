@@ -69,6 +69,114 @@ The following example demonstrates how to use the `CellClicked` event to retriev
 ```
 ![CellClicked event in Blazor HeatMap Chart](images/events/blazor-heatmap-chart-cell-clicked-event.gif)
 
+The following example demonstrates how to use the `CellClicked` event to notify the right click event in the HeatMap component. When you right-click on a HeatMap cell, the `CellClicked` event is triggered, and the value of `HasRightClicked` property will be true. In this example, a dialog box is displayed only on right-clicking the HeatMap cell.
+
+```
+@using Syncfusion.Blazor.HeatMap
+@using Syncfusion.Blazor.Popups
+ 
+<SfHeatMap DataSource="@dataSource">
+    <HeatMapEvents CellClicked="CellClick"></HeatMapEvents>
+    <HeatMapXAxis Labels="@XAxisLabels"></HeatMapXAxis>
+    <HeatMapYAxis Labels="@YAxisLabels"></HeatMapYAxis>
+    <HeatMapTitleSettings Text="Sales Revenue per Employee (in 1000 US$)">
+    </HeatMapTitleSettings>
+    <HeatMapCellSettings ShowLabel="true" TileType="CellType.Rect">
+        <HeatMapCellBorder Width="1" Radius="4" Color="White"></HeatMapCellBorder>
+    </HeatMapCellSettings>
+    <HeatMapLegendSettings ShowLabel="true"></HeatMapLegendSettings>
+</SfHeatMap>
+
+@if (this.ShowButton)
+{
+    <SfDialog ResizeHandles="@DialogResizeDirections" AllowDragging="true" Height="200px" Width="300px" EnableResize="true" ShowCloseIcon="true" @bind-Visible="Visibility">
+        <DialogPositionData X="@Xvalue" Y="@Yvalue"></DialogPositionData>
+        <DialogEvents Closed="@DialogClose"></DialogEvents>
+        <DialogTemplates>
+            <Header>HeatMap Cell Values</Header>
+            <Content>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>X-axis Label</th>
+                            <th>Y-axis Label</th>
+                            <th>Current Cell Value</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>@xLabel</td>
+                            <td>@yLabel</td>
+                            <td>@cellValue</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </Content>
+        </DialogTemplates>
+    </SfDialog>
+}
+
+<style>
+    .styled-table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+        .styled-table th, .styled-table td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: left;
+        }
+
+        .styled-table thead {
+            background-color: #f2f2f2;
+        }
+</style>
+@code {
+    public bool ShowButton { get; set; } = false;
+    public bool Visibility { get; set; } = false;
+    public ResizeDirection[] DialogResizeDirections { get; set; } = new ResizeDirection[] { ResizeDirection.All };
+    string[] XAxisLabels = new string[] { "Nancy", "Andrew", "Janet", "Margaret", "Steven", "Michael" };
+    string[] YAxisLabels = new string[] { "Mon", "Tue", "Wed", "Thu", "Fri", "Sat" };
+    public string xLabel { get; set; }
+    public string yLabel { get; set; }
+    public double cellValue { get; set; }
+    public string Xvalue { get; set; }
+    public string Yvalue { get; set; }
+
+    int[,] dataSource = new int[,]
+    {
+        {73, 39, 26, 39, 94, 0},
+        {93, 58, 53, 38, 26, 68},
+        {99, 28, 22, 4, 66, 90},
+        {14, 26, 97, 69, 69, 3},
+        {7, 46, 47, 47, 88, 6},
+        {41, 55, 73, 23, 3, 79},
+    };
+
+    public void CellClick(CellClickEventArgs args)
+    {
+        if (args.HasRightClicked)
+        {
+            Xvalue = args.X;
+            Yvalue = args.Y;
+            ShowButton = true;
+            Visibility = true;
+            xLabel = args.XLabel;
+            yLabel = args.YLabel;
+            cellValue = args.Value;
+        }
+    }
+
+    private void DialogClose(Object args)
+    {
+        ShowButton = false;
+    }
+
+}
+```
+
+![Notify the Right Click event in Blazor HeatMap Chart](images/events/blazor-heatmap-chart-notify-right-click-event.png)
 
 ## CellRendering
 
@@ -402,3 +510,123 @@ The following example demonstrates how to use the `TooltipRendering` event to cu
 }
 ```
 ![TooltipRendering event in Blazor HeatMap Chart](images/events/blazor-heatmap-chart-tooltip-render-event.png)
+
+## CellDoubleClicked
+
+When you double click on a HeatMap cell, the [CellDoubleClicked](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapEvents.html#Syncfusion_Blazor_HeatMap_HeatMapEvents_CellDoubleClicked) event is triggered. More information about the arguments in this event can be found [here](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.CellDoubleClickEventArgs.html).
+
+The following example demonstrates how to use the `CellDoubleClicked` event to retrieve the value of a cell, as well as its x-axis and y-axis labels, by performing a double-click action.
+
+```cshtml
+@using Syncfusion.Blazor.HeatMap
+
+@if(IsVisible) {
+    <div>
+        <span> X-Label : <b> @XLabel </b> </span> <br />
+        <span> Y-Label : <b> @YLabel </b> </span> <br />
+        <span> CellValue : <b> @CellValue </b> </span>
+    </div>
+}
+
+<SfHeatMap DataSource="@dataSource">
+    <HeatMapEvents CellDoubleClicked="@CellDoubleClicked" />
+    <HeatMapTitleSettings Text="Sales Revenue per Employee (in 1000 US$)" />
+    <HeatMapXAxis Labels="@xAxisLabels" />
+    <HeatMapYAxis Labels="@yAxisLabels" />
+</SfHeatMap>
+
+@code {
+    public bool IsVisible = false;
+    public string XLabel { get; set; }
+    public string YLabel { get; set; }
+    public double CellValue { get; set; }
+    private void CellDoubleClicked(CellDoubleClickEventArgs args)
+    {
+        IsVisible = true;
+        XLabel = args.XLabel;
+        YLabel = args.YLabel;
+        CellValue = args.Value;
+    }
+    public double[,] dataSource = new double[,]
+    {
+            { 73, 39, 26, 39, 94, 0 },
+            { 93, 58, 53, 38, 26, 68 },
+            { 99, 28, 22, 4, 66, 90 },
+            { 14, 26, 97, 69, 69, 3 },
+            { 7, 46, 47, 47, 88, 6 },
+            { 41, 55, 73, 23, 3, 79 },
+            { 56, 69, 21, 86, 3, 33 },
+            { 45, 7, 53, 81, 95, 79 },
+            { 60, 77, 74, 68, 88, 51 },
+            { 25, 25, 10, 12, 78, 14 },
+            { 25, 56, 55, 58, 12, 82 },
+            { 74, 33, 88, 23, 86, 59 }
+    };
+    public string[] xAxisLabels = new string[] { "Nancy", "Andrew", "Janet", "Margaret", "Steven",
+                 "Michael", "Robert", "Laura", "Anne", "Paul", "Karin", "Mario" };
+    public string[] yAxisLabels = new string[] { "Mon", "Tues", "Wed", "Thurs", "Fri", "Sat" };
+}
+```
+![CellDoubleClicked event in Blazor HeatMap Chart](images/events/blazor-heatmap-chart-cell-double-clicked-event.gif)
+
+## LegendRendering
+
+The [LegendRendering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapEvents.html#Syncfusion_Blazor_HeatMap_HeatMapEvents_LegendRendering) event will be triggered before each legend is rendered. More information about the arguments in this event can be found [here](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.LegendRenderEventArgs.html).
+
+The following example demonstrates how to use the `LegendRendering` event to customize the value of the text in the legend.
+
+```cshtml
+@using Syncfusion.Blazor.HeatMap
+
+<SfHeatMap DataSource="@HeatMapData" Width="500px" Height="500px">
+    <HeatMapEvents LegendRendering="@LegendRender" />
+    <HeatMapTitleSettings Text="Sales Revenue per Employee (in 1000 US$)">
+    </HeatMapTitleSettings>
+    <HeatMapXAxis Labels="@XAxisLabels"></HeatMapXAxis>
+    <HeatMapYAxis Labels="@YAxisLabels"></HeatMapYAxis>
+    <HeatMapCellSettings ShowLabel="true" TileType="CellType.Rect"></HeatMapCellSettings>
+    <HeatMapPaletteSettings Type="PaletteType.Gradient">
+        <HeatMapPalettes>
+            <HeatMapPalette Value="0" Color="#C2E7EC"></HeatMapPalette>
+            <HeatMapPalette Value="10" Color="#AEDFE6"></HeatMapPalette>
+            <HeatMapPalette Value="20" Color="#9AD7E0"></HeatMapPalette>
+            <HeatMapPalette Value="30" Color="#72C7D4"></HeatMapPalette>
+            <HeatMapPalette Value="40" Color="#5EBFCE"></HeatMapPalette>
+            <HeatMapPalette Value="50" Color="#4AB7C8"></HeatMapPalette>
+            <HeatMapPalette Value="60" Color="#309DAE"></HeatMapPalette>
+            <HeatMapPalette Value="70" Color="#2B8C9B"></HeatMapPalette>
+            <HeatMapPalette Value="80" Color="#257A87"></HeatMapPalette>
+            <HeatMapPalette Value="90" Color="#15464D"></HeatMapPalette>
+            <HeatMapPalette Value="100" Color="#000000"></HeatMapPalette>
+        </HeatMapPalettes>
+    </HeatMapPaletteSettings>
+    <HeatMapLegendSettings Visible="true"></HeatMapLegendSettings>
+</SfHeatMap>
+
+
+@code {
+    public int[,] HeatMapData = new int[,]
+    {
+        {73, 39, 26, 39, 94, 0},
+        {93, 58, 53, 38, 26, 68},
+        {99, 28, 22, 4, 66, 90},
+        {14, 26, 97, 69, 69, 3},
+        {7, 46, 47, 47, 88, 6},
+        {41, 55, 73, 23, 3, 79}
+    };
+    string[] XAxisLabels = new string[] { "Nancy", "Andrew", "Janet", "Margaret", "Steven", "Michael" };
+    string[] YAxisLabels = new string[] { "Mon", "Tue", "Wed", "Thu", "Fri", "Sat" };
+    private void LegendRender(Syncfusion.Blazor.HeatMap.LegendRenderEventArgs args)
+    {
+        if (args.Text == "0")
+        {
+            args.Text = "100";
+        }
+        else
+        {
+            args.Text = "";
+        }
+    }
+}
+```
+![LegendRendering event in Blazor HeatMap Chart](images/events/blazor-heatmap-chart-legendrendering-event.png)
