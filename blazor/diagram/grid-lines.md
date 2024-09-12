@@ -284,3 +284,55 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 
 ![GuideLines in Blazor Diagram](images/blazor-diagram-guidelines.gif)
+
+### How to customize the Snap line style
+
+The `SnapLineStyle` property allows you to define the style of the snapline used in the diagram. By customizing the SnapLineStyle property, you can enhance the visual contrast and visibility of these guides, making it easier to achieve accurate alignment. Using this property we can customize snap line color, stroke width, stroke dash array and opacity. By default the snap line color is set to `'#07EDE1'`.
+
+The following code example illustrates how to customize the snap line style.
+
+
+```cshtml
+@page "/"
+
+@using Syncfusion.Blazor.Diagram
+
+<SfDiagramComponent Height="600px" Nodes="@nodes">
+    <SnapSettings Constraints="@snapConstraints" SnapAngle="10" SnapDistance="10" SnapLineStyle="snapLineStyle">
+    </SnapSettings>
+</SfDiagramComponent>
+
+@code
+{
+    //Sets the Snap to objects constraints.
+    public SnapConstraints snapConstraints = SnapConstraints.ShowLines | SnapConstraints.SnapToObject | SnapConstraints.SnapToLines;
+    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    ShapeStyle snapLineStyle = new ShapeStyle() { StrokeColor = "green", StrokeWidth = 3 };
+
+    protected override void OnInitialized()
+    {
+        nodes = new DiagramObjectCollection<Node>();
+        Node diagramNode = new Node();
+        diagramNode.OffsetX = 100;
+        diagramNode.OffsetY = 100;
+        diagramNode.Width = 100;
+        diagramNode.Height = 100;
+        diagramNode.Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "#6495ED" };
+        diagramNode.ID = "node1";
+        nodes.Add(diagramNode);
+
+        diagramNode = new Node();
+        diagramNode.OffsetX = 300;
+        diagramNode.OffsetY = 100;
+        diagramNode.Width = 100;
+        diagramNode.Height = 100;
+        diagramNode.Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "#6495ED" };
+        diagramNode.ID = "node2";
+        nodes.Add(diagramNode);
+    }
+}
+```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Gridlines/SnapLineStyle)
+
+
+![GuideLines in Blazor Diagram](images/SnapLineStyle.png)
