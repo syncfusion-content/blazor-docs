@@ -312,7 +312,7 @@ The following example shows how to customize the line shape over the tile images
     public List<Coordinate> Coordinates = new List<Coordinate>();
     protected override async Task OnInitializedAsync()
     {
-        string path = NavigationManager.BaseUri + "linedata.json";
+        string path = NavigationManager.BaseUri + "line.json";
         HttpClient httpClient = new HttpClient();
         string response = await Http.GetStringAsync(path);
         GeoJson shapeData = JsonConvert.DeserializeObject<GeoJson>(response);
@@ -343,6 +343,6 @@ The following example shows how to customize the line shape over the tile images
     }
 }
 ```
->Note: Refer the value of the JSON file of [linedata.json](https://www.syncfusion.com/downloads/support/directtrac/general/ze/linedata1776693370)  here.
+>Note: Refer the value of the JSON file of [line.json](https://www.syncfusion.com/downloads/support/directtrac/general/ze/line140125043)  here.
 
 ![Blazor Maps with line shape](./images/Polygon/blazor-map-line-shape-on-tile-images.gif)
