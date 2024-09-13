@@ -251,4 +251,4 @@ Complex Data Binding allows you to create subfield for columns. To implement com
 
 ![Complex Data Binding in Blazor QueryBuilder](./images/blazor-query-builder-complex-db.png)
 
-N> You can also explore our [Blazor Query Builder example](https://blazor.syncfusion.com/demos/query-builder/default-functionalities?theme=bootstrap4) to know how to render and configure the query builder.
+N> You can also explore our [Blazor Query Builder example](https://blazor.syncfusion.com/demos/query-builder/default-functionalities?theme=bootstrap5) to know how to render and configure the query builder.
