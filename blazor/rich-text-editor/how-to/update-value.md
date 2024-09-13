@@ -13,7 +13,6 @@ To achieve this, the `keydown` event has to be bound to the Rich Text Editor con
 
 ```cshtml
 
-@page "/";
 @using Syncfusion.Blazor.RichTextEditor
 @inject IJSRuntime JSRuntime
 
