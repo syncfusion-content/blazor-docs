@@ -125,7 +125,7 @@ Add the Syncfusion Blazor AI AssistView component in the **~/Pages/Index.razor**
 
 ## Configure suggestions and responses
 
-You can use the `PromptSuggestions` property and the `PromptRequested` event to add matching responses for prompts, or the default responses will be displayed.
+You can use the `PromptSuggestions` property to add prompt suggestions and the `PromptRequested` event to add responses when the prompt matches the specified prompts data otherwise, the default response will be displayed.
 
 {% tabs %}
 {% highlight razor %}
@@ -160,7 +160,7 @@ You can use the `PromptSuggestions` property and the `PromptRequested` event to 
         await Task.Delay(3000);
         var isPromptFound = prompts.Any(prompt => prompt.Prompt == args.Prompt);
         var promptData = prompts.FirstOrDefault(prompt => prompt.Prompt == args.Prompt);
-        var defaultResponse = "For real-time prompt processing, connect the AI AssistView control to your preferred AI service, such as OpenAI or Azure Cognitive Services. Ensure you obtain the necessary API credentials to authenticate and enable seamless integration.";
+        var defaultResponse = "For real-time prompt processing, connect the AI AssistView component to your preferred AI service, such as OpenAI or Azure Cognitive Services. Ensure you obtain the necessary API credentials to authenticate and enable seamless integration.";
         args.Response = isPromptFound ? promptData.Response : defaultResponse;
     }
 }
