@@ -24,22 +24,29 @@
     private async void addRedact()
     {
         ImageDimension Dimension = await ImageEditor.GetImageDimensionAsync();
-        await ImageEditor.DrawTextAsync(Dimension.X.Value + 100, Dimension.Y.Value + 100, "Syncfusion");
+        await ImageEditor.DrawRedactAsync(RedactType.Blur, Dimension.X.Value + 100, Dimension.Y.Value + 100, 200, 300);
     }
     private async void updateRedact()
     {
-        ImageDimension Dimension = await ImageEditor.GetImageDimensionAsync();
-        await ImageEditor.DrawTextAsync(Dimension.X.Value + 100, Dimension.Y.Value + 100, 'Syncfusion', 'Arial', 70, false, false, '', false, null, '', 'green', 8);;
+        RedactSettings[] redacts = ImageEditor.GetRedactsAsync();
+        if (redacts.length > 0) {
+            redacts[redacts.length - 1].blurIntensity = 100;
+            ImageEditor.UpdateRedactAsync(redacts[redacts.length - 1]);
+        }
     }
     private async void selectRedact()
     {
-        ImageDimension Dimension = await ImageEditor.GetImageDimensionAsync();
-        await ImageEditor.DrawTextAsync(Dimension.X.Value + 100, Dimension.Y.Value + 100, 'Syncfusion', 'Arial', 70, false, false, '', false, null, 'red', '', null);
+        RedactSettings[] redacts = ImageEditor.GetRedactsAsync();
+        if (redacts.length > 0) {
+            ImageEditor.SelectRedactAsync(redacts[redacts.length - 1].id);
+        }
     }
     private async void deleteRedact()
     {
-        ImageDimension Dimension = await ImageEditor.GetImageDimensionAsync();
-        await ImageEditor.DrawTextAsync(Dimension.X.Value + 100, Dimension.Y.Value + 100, 'Syncfusion', 'Arial', 70, false, false, '', false, null, 'red', '', null);
+        RedactSettings[] redacts = ImageEditor.GetRedactsAsync();
+        if (redacts.length > 0) {
+            ImageEditor.DeleteRedactAsync(redacts[redacts.length - 1].id);
+        }
     }
 }
 ```
