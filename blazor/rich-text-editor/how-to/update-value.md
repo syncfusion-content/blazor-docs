@@ -13,12 +13,15 @@ To achieve this, the `keydown` event has to be bound to the Rich Text Editor con
 
 ```cshtml
 
+@page "/";
 @using Syncfusion.Blazor.RichTextEditor
+@inject IJSRuntime JSRuntime
+
 
 <div class="control-section">
-    <SfRichTextEditor ID="defalt_RTE" ref="rteObj" onkeydown="@onKeydown" >
-        <RichTextEditorToolbarSettings Items="@tools"></RichTextEditorToolbarSettings>
-        <p>The Rich Text Editor component is WYSIWYG ('what you see is what you get') editor that provides the best user experience to create and update the content. Users can format their content using standard toolbar commands.</p>
+    <SfRichTextEditor ID="defalt_RTE" ref="editor" onkeydown="@onKeydown">
+         <RichTextEditorToolbarSettings Items="@Tools"></RichTextEditorToolbarSettings>
+         <p>The Rich Text Editor component is WYSIWYG ('what you see is what you get') editor that provides the best user experience to create and update the content. Users can format their content using standard toolbar commands.</p>
         <p><b> Key features:</b></p>
         <ul>
             <li><p> Provides <b>IFRAME</b> and <b>DIV</b> modes </p></li>
@@ -31,23 +34,71 @@ To achieve this, the `keydown` event has to be bound to the Rich Text Editor con
         </ul>
     </SfRichTextEditor>
 </div>
-
-@functions {
-    SfRichTextEditor rteObj;
-
-    public static object[] tools = new object[] {
-        "Bold", "Italic", "Underline", "StrikeThrough",
-        "FontName", "FontSize", "FontColor", "BackgroundColor",
-        "LowerCase", "UpperCase", "|",
-        "Formats", "Alignments", "OrderedList", "UnorderedList",
-        "Outdent", "Indent", "|", "CreateTable",
-        "CreateLink", "Image", "|", "ClearFormat", "Print",
-        "SourceCode", "FullScreen", "|", "Undo", "Redo"
+<script>
+    window.preventSaveAction = function () {
+        document.addEventListener("keydown", function (e) {
+            if (e.ctrlKey && e.key === 's') {
+                e.preventDefault();
+                console.log("Ctrl + S pressed - Save action prevented!");
+            }
+        });
     };
-    public void onKeydown(UIKeyboardEventArgs arg) {
-        if (arg.Key == "s" && arg.CtrlKey == true) {
-            this.rteObj.UpdateValue();
-            var value = this.rteObj.Value;
+</script>
+
+@code {
+    SfRichTextEditor editor;
+
+    private List<ToolbarItemModel> Tools = new List<ToolbarItemModel>()
+    {
+        new ToolbarItemModel() { Command = ToolbarCommand.Undo },
+        new ToolbarItemModel() { Command = ToolbarCommand.Redo },
+        new ToolbarItemModel() { Command = ToolbarCommand.Separator },
+        new ToolbarItemModel() { Command = ToolbarCommand.Bold },
+        new ToolbarItemModel() { Command = ToolbarCommand.Italic },
+        new ToolbarItemModel() { Command = ToolbarCommand.Underline },
+        new ToolbarItemModel() { Command = ToolbarCommand.StrikeThrough },
+        new ToolbarItemModel() { Command = ToolbarCommand.SuperScript },
+        new ToolbarItemModel() { Command = ToolbarCommand.SubScript },
+        new ToolbarItemModel() { Command = ToolbarCommand.Separator },
+        new ToolbarItemModel() { Command = ToolbarCommand.FontName },
+        new ToolbarItemModel() { Command = ToolbarCommand.FontSize },
+        new ToolbarItemModel() { Command = ToolbarCommand.FontColor },
+        new ToolbarItemModel() { Command = ToolbarCommand.BackgroundColor },
+        new ToolbarItemModel() { Command = ToolbarCommand.Separator },
+        new ToolbarItemModel() { Command = ToolbarCommand.LowerCase },
+        new ToolbarItemModel() { Command = ToolbarCommand.UpperCase },
+        new ToolbarItemModel() { Command = ToolbarCommand.Separator },
+        new ToolbarItemModel() { Command = ToolbarCommand.Formats },
+        new ToolbarItemModel() { Command = ToolbarCommand.Alignments },
+        new ToolbarItemModel() { Command = ToolbarCommand.Separator },
+        new ToolbarItemModel() { Command = ToolbarCommand.OrderedList },
+        new ToolbarItemModel() { Command = ToolbarCommand.UnorderedList },
+        new ToolbarItemModel() { Command = ToolbarCommand.Separator },
+        new ToolbarItemModel() { Command = ToolbarCommand.Outdent },
+        new ToolbarItemModel() { Command = ToolbarCommand.Indent },
+        new ToolbarItemModel() { Command = ToolbarCommand.Separator },
+        new ToolbarItemModel() { Command = ToolbarCommand.CreateLink },
+        new ToolbarItemModel() { Command = ToolbarCommand.Image },    
+        new ToolbarItemModel() { Command = ToolbarCommand.CreateTable },
+        new ToolbarItemModel() { Command = ToolbarCommand.Separator },
+        new ToolbarItemModel() { Command = ToolbarCommand.ClearFormat },
+        new ToolbarItemModel() { Command = ToolbarCommand.Print },
+        new ToolbarItemModel() { Command = ToolbarCommand.SourceCode },
+        new ToolbarItemModel() { Command = ToolbarCommand.FullScreen },
+    };
+    public void onKeydown(KeyboardEventArgs arg)
+    {
+        if (arg.Key == "s" && arg.CtrlKey == true)
+        {
+            var value = this.editor.Value; 
+            this.editor.UpdateValue(value);
+        }
+    }
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            await JSRuntime.InvokeVoidAsync("preventSaveAction");
         }
     }
 }
