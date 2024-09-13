@@ -80,7 +80,6 @@ The Blazor Gantt Chart supports various adaptors (OData, ODataV4, WebAPI, URL, e
 
 * Filtering
 * Sorting
-* Aggregates
 
 ## Strategic approaches to addressing latency challenges
 
