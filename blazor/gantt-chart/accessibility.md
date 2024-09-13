@@ -59,7 +59,7 @@ The following ARIA attributes are used in Blazor Gantt:
 
 ## Keyboard navigation
 
-The Blazor Gantt component followed the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/) guideline, making it easy for people who use assistive technologies (AT) and those who completely rely on keyboard navigation. The following keyboard shortcuts are supported by the Blazor Gantt component.
+The Gantt component follows the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/) guideline, ensuring accessibility for users of assistive technologies (AT) and those who rely solely on keyboard navigation. The following keyboard shortcuts are supported by the Gantt component:
 
 <b>Focus Elements</b>
 
@@ -165,6 +165,7 @@ The Blazor Gantt component followed the [keyboard interaction](https://www.w3.or
 <kbd>Left</kbd> | <kbd>Left</kbd> | Focuses the previous element.
 <kbd>Right</kbd> | <kbd>Right</kbd> | Focuses the next element.
 <kbd>Enter</kbd> | <kbd>Enter</kbd> | Performs the focused toolbar element action.
+
 <b>Tooltip</b>
 
 **Windows**  | **MAC** | **To do this**
