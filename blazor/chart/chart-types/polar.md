@@ -47,6 +47,8 @@ documentation: ug
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BthpXPhXfsXrrssZ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} 
 
+![Blazor Polar Chart](../images/polar-radar/blazor-polar-chart.png)
+
 N> Refer to our [Blazor Polar Chart](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/polar-chart) feature tour page to know about its other groundbreaking feature representations. Explore our [Blazor Polar Chart Example](https://blazor.syncfusion.com/demos/chart/polar-line) to know how to render and configure the Polar type chart.
 
 ## Binding data with series
@@ -130,8 +132,6 @@ To render a [line](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Chart
 ``` 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LZVzDbVjfMVssote?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} 
 
-![Blazor Polar Chart with Line Series](../images/polar-radar/blazor-polar-chart-line-series.png)
-
 ### Spline
 
 To render a [spline](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDrawType.html#Syncfusion_Blazor_Charts_ChartDrawType_Spline) draw type, Define the series [DrawType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_DrawType) as [Spline](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDrawType.html#Syncfusion_Blazor_Charts_ChartDrawType_Spline) in your chart configuration. This indicates that the data should be represented as a polar spline chart, with smooth, curved lines connecting each data point.
@@ -171,8 +171,6 @@ To render a [spline](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Cha
 ``` 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VthpNlLZTCqugtIw?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} 
 
-![Blazor Polar Chart with Spline Series](../images/polar-radar/blazor-polar-chart-spline-series.png)
-
 ### Area
 
 To render an [area](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDrawType.html#Syncfusion_Blazor_Charts_ChartDrawType_Area) draw type, define the series [DrawType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_DrawType) as [Area](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDrawType.html#Syncfusion_Blazor_Charts_ChartDrawType_Area) in your chart configuration. This indicates that the data should be represented as a polar area chart, with filled areas below the lines connecting each data point.
@@ -211,8 +209,6 @@ To render an [area](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Char
 
 ``` 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rjBzjlBXTWSRXqYZ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} 
-
-![Blazor Polar Chart with Area Series](../images/polar-radar/blazor-polar-chart-area-series.png)
 
 ### Stacked Area
 
@@ -268,8 +264,6 @@ To render a [stacking area](https://help.syncfusion.com/cr/blazor/Syncfusion.Bla
 ``` 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LjhJNvrtTiQtUrwf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} 
 
-![Blazor Polar Chart with Stacked Area Series](../images/polar-radar/blazor-polar-chart-stacked-area-series.png)
-
 ### Column
 
 To render a [column](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDrawType.html#Syncfusion_Blazor_Charts_ChartDrawType_Column) draw type, define the series [DrawType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_DrawType) as [Column](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDrawType.html#Syncfusion_Blazor_Charts_ChartDrawType_Column) in your chart configuration. This indicates that the data should be represented as a polar column chart, allowing for the comparison of values across categories.
@@ -308,8 +302,6 @@ To render a [column](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Cha
 
 ``` 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VXrJZbhZfivRPCTM?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} 
-
-![Blazor Polar Chart with Column Series](../images/polar-radar/blazor-polar-chart-column-series.png)
 
 ### Stacked column
 
@@ -362,8 +354,6 @@ To render a [stacking column](https://help.syncfusion.com/cr/blazor/Syncfusion.B
 ``` 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VXLJXbBDTLZKLCRn?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} 
 
-![Blazor Polar Chart with Stacked Column Series](../images/polar-radar/blazor-polar-chart-stacked-column-series.png)
-
 ### Range column
 
 To render a [range column](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDrawType.html#Syncfusion_Blazor_Charts_ChartDrawType_RangeColumn) draw type, define the series [DrawType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_DrawType) as [RangeColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDrawType.html#Syncfusion_Blazor_Charts_ChartDrawType_RangeColumn) in your chart configuration. This indicates that the data should be represented as a polar range column chart, where each column spans a range of values.
@@ -411,8 +401,6 @@ To render a [range column](https://help.syncfusion.com/cr/blazor/Syncfusion.Blaz
 ``` 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rDLpjlhZfVAjIYyK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} 
 
-![Blazor Polar Chart with Range Column Series](../images/polar-radar/blazor-polar-chart-range-column-series.png)
-
 ### Scatter
   
 To render a [scatter](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDrawType.html#Syncfusion_Blazor_Charts_ChartDrawType_Scatter) draw type, define the series [DrawType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_DrawType) as [Scatter](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDrawType.html#Syncfusion_Blazor_Charts_ChartDrawType_Scatter) in your chart configuration. This indicates that the data should be represented as a polar scatter chart.
@@ -453,8 +441,6 @@ To render a [scatter](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ch
 
 ``` 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LthfNlrDfBJUztOA?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} 
-
-![Blazor Polar Chart with Scatter Series](../images/polar-radar/blazor-polar-chart-scatter-series.png)
 
 ## Series customization
 
@@ -499,8 +485,6 @@ To customize the start angle of the [Polar Chart](https://help.syncfusion.com/cr
 ``` 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BZhTDPBZphQtaNHK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} 
 
-![Blazor Polar Chart with Start Angle](../images/polar-radar/blazor-polar-chart-start-angle.png)
-
 ### Radius
 
 To customize the radius of the [Polar Chart](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesType.html#Syncfusion_Blazor_Charts_ChartSeriesType_Polar), use [Coefficient](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAxis.html#Syncfusion_Blazor_Charts_ChartAxis_Coefficient) property. By default, [Coefficient](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAxis.html#Syncfusion_Blazor_Charts_ChartAxis_Coefficient) value is **100**.
@@ -542,11 +526,9 @@ To customize the radius of the [Polar Chart](https://help.syncfusion.com/cr/blaz
 ``` 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VXLJjFLZfLwTKJNf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} 
 
-![Blazor Polar Chart with Radius](../images/polar-radar/blazor-polar-chart-radius.png)
-
 ## Empty points
 
-Data points with `null` or `undefined` values are considered empty. Empty data points are ignored and not plotted on the chart.
+Data points with `null`, `double.NaN` or `undefined` values are considered empty. Empty data points are ignored and not plotted on the chart.
 
 **Mode**
 
