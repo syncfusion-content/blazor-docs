@@ -31,7 +31,7 @@ You can use the `ViewTemplate` tag directive to customize view of the active vie
 
 #### Show or hide clear button
 
-You can use the  `showClearButton` property using the `AssistView` tag directive to specify whether to show or hide the clear button in the textarea. By default, its value is `false`. When the clear button is clicked, the prompt text area will be cleared.
+You can use the `ShowClearButton` property using the `AssistView` tag directive to specify whether to show or hide the clear button in the textarea. By default, its value is `false`. When the clear button is clicked, the prompt text area will be cleared.
 
 ## Setting active view
 

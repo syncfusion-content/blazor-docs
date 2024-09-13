@@ -21,7 +21,7 @@ You can use the `PromptItemTemplate` tag directive to customize prompt items wit
 
 ## Response item template
 
-You can use the `responseItemTemplate` tag directive to customize response items within the AI AssistView. The template context includes the prompt text, response text, and toolbar items.
+You can use the `ResponseItemTemplate` tag directive to customize response items within the AI AssistView. The template context includes the prompt text, response text, and toolbar items.
 
 ## Prompt suggestion item template
 
@@ -29,4 +29,4 @@ You can use the `PromptSuggestionItemTemplate` tag directive to customize prompt
 
 ## Footer template
 
-You can use the `footerTemplate` tag directive to customize footer within the AI AssistView.
+You can use the `FooterTemplate` tag directive to customize footer within the AI AssistView.
