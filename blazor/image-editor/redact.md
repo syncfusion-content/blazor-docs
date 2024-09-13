@@ -1,3 +1,4 @@
+
 ```cshtml
 @using Syncfusion.Blazor.ImageEditor
 @using Syncfusion.Blazor.Buttons
@@ -8,19 +9,17 @@
     <SfButton OnClick="selectRedact">Select Redact</SfButton>
     <SfButton OnClick="deleteRedact">Delete Redact</SfButton>
 </div>
+
 <SfImageEditor @ref="ImageEditor" Toolbar="customToolbarItem" Height="400">
-    <ImageEditorEvents Created="OpenAsync"></ImageEditorEvents>
-</SfImageEditor> 
-
+<ImageEditorEvents Created="OpenAsync"></ImageEditorEvents>
+</SfImageEditor>
 @code {
-    SfImageEditor ImageEditor; 
-    private List<ImageEditorToolbarItemModel> customToolbarItem = new List<ImageEditorToolbarItemModel>() { }; 
-
-    private async void OpenAsync() 
-    { 
-        await ImageEditor.OpenAsync("nature.png"); 
+    private SfImageEditor ImageEditor;
+    private List<ImageEditorToolbarItemModel> customToolbarItem = new List<ImageEditorToolbarItemModel>() { };
+    private async void OpenAsync()
+    {
+        await ImageEditor.OpenAsync("nature.png");
     }
-
     private async void addRedact()
     {
         ImageDimension Dimension = await ImageEditor.GetImageDimensionAsync();
@@ -28,24 +27,24 @@
     }
     private async void updateRedact()
     {
-        RedactSettings[] redacts = ImageEditor.GetRedactsAsync();
-        if (redacts.length > 0) {
-            redacts[redacts.length - 1].blurIntensity = 100;
-            ImageEditor.UpdateRedactAsync(redacts[redacts.length - 1]);
+        RedactSettings[] redacts = await ImageEditor.GetRedactsAsync();
+        if (redacts.Length > 0) {
+            redacts[redacts.Length - 1].BlurIntensity = 100;
+           await  ImageEditor.UpdateRedactAsync(redacts[redacts.Length - 1]);
         }
     }
     private async void selectRedact()
     {
-        RedactSettings[] redacts = ImageEditor.GetRedactsAsync();
-        if (redacts.length > 0) {
-            ImageEditor.SelectRedactAsync(redacts[redacts.length - 1].id);
+        RedactSettings[] redacts = await ImageEditor.GetRedactsAsync();
+        if (redacts.Length > 0) {
+            await ImageEditor.SelectRedactAsync(redacts[redacts.Length - 1].ID);
         }
     }
     private async void deleteRedact()
     {
-        RedactSettings[] redacts = ImageEditor.GetRedactsAsync();
-        if (redacts.length > 0) {
-            ImageEditor.DeleteRedactAsync(redacts[redacts.length - 1].id);
+        RedactSettings[] redacts = await ImageEditor.GetRedactsAsync();
+        if (redacts.Length > 0) {
+            await ImageEditor.DeleteRedactAsync(redacts[redacts.Length - 1].ID);
         }
     }
 }
