@@ -15,7 +15,7 @@ The [Blazor Image Editor](https://www.syncfusion.com/blazor-components/blazor-im
 
 Text annotation feature in the Blazor Image Editor component provides the capability to add and customize labels, captions, and other text elements directly onto the image. With this feature, you can easily insert text at specific locations within the image and customize various aspects of the text to meet your requirements.
 
-You have control over the customization options including text content, font family, font style and font size for the text annotation.
+You have control over the customization options including text content, font family, font style, font color, fill color, stroke color, stroke width and font size for the text annotation.
 
 ### Add a text
 
@@ -38,6 +38,14 @@ The [`DrawTextAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Im
 * color - Specifies the font color of the text, allowing you to define the desired color using appropriate color values or names.
 
 * isSelected: Specifies to show the text in the selected state.
+
+* degree: Specifies the degree to rotate the text.
+
+* fillColor: Specifies the background color of the text.
+
+* strokeColor: Specifies the outline color of the text annotation.
+
+* strokeWidth: Specifies the outline stroke width of the text annotation.
 
 By utilizing the [`DrawTextAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_DrawTextAsync_System_Nullable_System_Double__System_Nullable_System_Double__System_String_System_String_System_Nullable_System_Int32__System_Boolean_System_Boolean_System_String_) method with these parameters, you can precisely position and customize text annotations within the image. This provides the flexibility to add labels, captions, or other text elements with specific font styles, sizes, and colors, enhancing the visual presentation and clarity of the image. 
 
@@ -408,6 +416,8 @@ The [`DrawRectangleAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blaz
 * degree: Specifies the degree to rotate the rectangle.
 
 * isSelected: Specifies to show the rectangle in the selected state.
+
+* borderRadius: Specifies the radius to apply border radius to rectangle.
 
 The [`DrawEllipseAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_DrawEllipseAsync_System_Nullable_System_Double__System_Nullable_System_Double__System_Nullable_System_Double__System_Nullable_System_Double__System_Nullable_System_Double__System_String_System_String_) method in the Blazor Image Editor component is used to draw an ellipse. Ellipse annotations are valuable for highlighting, emphasizing, or marking specific areas of an image.
 
