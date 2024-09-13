@@ -238,8 +238,8 @@ To customize the Primary Toolbar in the PDF Viewer, you can achieve this by sett
 
 @code{ 
     private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf"; 
-    SfPdfViewer2 Viewer; 
-    MemoryStream stream; 
+    SfPdfViewer2 Viewer = default!;
+    MemoryStream stream = default!;
 
     // List provide the position and element for the custom toolbar items
     public List<PdfToolbarItem> CustomToolbarItems = new List<PdfToolbarItem>() 
