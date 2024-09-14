@@ -9,7 +9,7 @@ documentation: ug
 
 # Toolbar items in Blazor AI AssistView component
 
-The AI AssistView component allows you to add or to customize the default appearance of the Prompt, Response and Header toolbar items.
+You can render the AI AssistView toolbar items by using the `AssistViewToolbarItem`, `PromptToolbarItem` & `ResponseToolbarItem` tag directives.
 
 ## Adding header toolbar items
 
@@ -19,15 +19,42 @@ The AI AssistView component allows you to add header toolbar items using the `As
 
 Items can be constructed with the following built-in command types or item template.
 
-#### Adding icon CSS
+#### Adding iconCSS
 
-You can define the CSS class to show the icon for the toolbar item using the `IconCss` property.
+You can customize the toolbar icons by using the `IconCss` property.
+
+```cshtml
+
+@using Syncfusion.Blazor.InteractiveChat
+@using Syncfusion.Blazor.Navigations
+
+<div class="aiassist-container" style="height: 350px; width: 650px;">
+    <SfAIAssistView PromptRequested="@PromptRequest">
+        <AssistViewToolbar>
+            <AssistViewToolbarItem Type="ItemType.Spacer"></AssistViewToolbarItem>
+            <AssistViewToolbarItem IconCss="e-icons e-refresh"></AssistViewToolbarItem>
+        </AssistViewToolbar>
+    </SfAIAssistView>
+</div>
+
+@code {
+    private async Task PromptRequest(AssistViewPromptRequestedEventArgs args)
+    {
+        await Task.Delay(1000);
+        var defaultResponse = "For real-time prompt processing, connect the AI AssistView component to your preferred AI service, such as OpenAI or Azure Cognitive Services. Ensure you obtain the necessary API credentials to authenticate and enable seamless integration.";
+        args.Response = defaultResponse;
+    }
+}
+
+```
+
+![Blazor AI AssistView toolbar iconCss](./images/header-toolbar-item-type.png)
 
 #### Setting item type
 
-You can change the toolbar item type by using the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.ToolbarItem.html#Syncfusion_Blazor_Navigations_ToolbarItem_Type) property. The `Type` supports three types of items such as `Button`, `Separator`, `Spacer` and `Input`.
+You can change the toolbar item type by using the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.ToolbarItem.html#Syncfusion_Blazor_Navigations_ToolbarItem_Type) property. The `Type` supports three types of items such as `Button`, `Separator`, `Spacer` and `Input`. By default, the type is `Button`.
 
-In the following example, toolbar item type is set with `Button`.
+In the following example, toolbar item type is set as `Button`.
 
 ```cshtml
 
@@ -55,11 +82,11 @@ In the following example, toolbar item type is set with `Button`.
 
 ```
 
-![Blazor AI AssistView toolbar item type](./images/header-toolbar-item-type.png)
+![Blazor AI AssistView toolbar item Type](./images/header-toolbar-item-type.png)
 
 #### Setting text
 
-You can use the [Text](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.ToolbarItem.html#Syncfusion_Blazor_Navigations_ToolbarItem_Text) property to set a text for toolbar item.
+You can use the [Text](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.ToolbarItem.html#Syncfusion_Blazor_Navigations_ToolbarItem_Text) property to set the text for toolbar item.
 
 ```cshtml
 
@@ -86,11 +113,11 @@ You can use the [Text](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.N
 
 ```
 
-![Blazor AI AssistView toolbar item text](./images/assistview-toolbar-item-text.png)
+![Blazor AI AssistView toolbar item Text](./images/assistview-toolbar-item-text.png)
 
 #### Show or hide toolbar item
 
-The [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.ToolbarItem.html#Syncfusion_Blazor_Navigations_ToolbarItem_Visible) property is used to specify whether to show or hide the toolbar item. By default, its value is `false`.
+You can use the [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.ToolbarItem.html#Syncfusion_Blazor_Navigations_ToolbarItem_Visible) property to specify whether to show or hide the toolbar item. By default, its value is `true`.
 
 ```cshtml
 
@@ -116,11 +143,12 @@ The [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigation
 
 ```
 
-![Blazor AI AssistView toolbar item visible](./images/assistview-toolbar-item-visible.png)
+![Blazor AI AssistView toolbar item Visible](./images/assistview-toolbar-item-visible.png)
 
 #### Setting disabled
 
-The [Disabled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.ToolbarItem.html#Syncfusion_Blazor_Navigations_ToolbarItem_Disabled) property is used to disable the toolbar item. By default, its value is `false`.
+You can use the [Disabled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.ToolbarItem.html#Syncfusion_Blazor_Navigations_ToolbarItem_Disabled) property to disable the toolbar item. By default, its value is `false`.
+
 
 ```cshtml
 
@@ -147,11 +175,11 @@ The [Disabled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigatio
 
 ```
 
-![Blazor AI AssistView toolbar item disabled](./images/assistview-toolbar-item-disable.png)
+![Blazor AI AssistView toolbar item Disabled](./images/assistview-toolbar-item-disable.png)
 
 #### Setting tooltip text
 
-The [Tooltip](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.ToolbarItem.html#Syncfusion_Blazor_Navigations_ToolbarItem_TooltipText) property is used to specifies text to be displayed on hovering the toolbar item.
+You can use the [Tooltip](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.ToolbarItem.html#Syncfusion_Blazor_Navigations_ToolbarItem_TooltipText) property to specify the tooltip text to be displayed on hovering the toolbar item.
 
 ```cshtml
 
@@ -213,15 +241,15 @@ You can use the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blaz
 
 ```
 
-![Blazor AI AssistView toolbar item cssclass](./images/assistview-toolbar-item-css.png)
+![Blazor AI AssistView toolbar item CssClass](./images/assistview-toolbar-item-css.png)
 
-#### Enabling tab key navigation in Toolbar
+#### Enabling tab key navigation in toolbar
 
-The [TabIndex](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.ToolbarItem.html#Syncfusion_Blazor_Navigations_ToolbarItem_TabIndex) property of a Toolbar item is used to enable tab key navigation for the item. By default, the user can switch between items using the arrow keys, but the `TabIndex` property allows you to switch between items using the Tab and Shift+Tab keys as well.
+You can use the [TabIndex](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.ToolbarItem.html#Syncfusion_Blazor_Navigations_ToolbarItem_TabIndex) property of a Toolbar item to enable tab key navigation for the item. By default, the user can switch between items using the arrow keys, but the `TabIndex` property allows you to switch between items using the `Tab` and `Shift+Tab` keys as well.
 
-To use the `TabIndex` property, you need to set it for each Toolbar item that you want to enable tab key navigation. The `TabIndex` property should be set to a positive integer value. A value of 0 or a negative value will disable tab key navigation for the item.
+To use the `TabIndex` property, set it for each Toolbar item which you want to enable tab key navigation. The `TabIndex` property should be set to a positive integer value. A value of `0` or a negative value will disable tab key navigation for the item.
 
-For example, to enable tab key navigation for two Toolbar items, you can use the following code:
+For example, to enable tab key navigation for two Toolbar items you can use the following code:
 
 ```cshtml
 
@@ -261,7 +289,7 @@ If you set the `TabIndex` value to 0 for all Toolbar items, tab key navigation w
 
 #### Setting template
 
-You can use the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.ToolbarItem.html#Syncfusion_Blazor_Navigations_ToolbarItem_Template) property to customize each toolbar item within the AI AssistView component. Template property can be given as the `HTML element` or `RenderFragment`.
+You can use the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.ToolbarItem.html#Syncfusion_Blazor_Navigations_ToolbarItem_Template) property to add custom toolbar item in the AI AssistView component. Template property can be given as the `HTML element` or `RenderFragment`.
 
 ```cshtml
 
@@ -299,11 +327,11 @@ You can use the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blaz
 
 ```
 
-![Blazor AI AssistView toolbar item template](./images/assistview-toolbar-item-template.png)
+![Blazor AI AssistView toolbar ItemTemplate](./images/assistview-toolbar-item-template.png)
 
 ### Item clicked
 
-You can define `ItemClicked` event in the `AssistViewToolbar` tag directive which will be triggered when the toolbar item is clicked.
+You can define `ItemClicked` event in the `AssistViewToolbar` tag directive which will be triggered when the header toolbar item is clicked.
 
 ```cshtml
 
@@ -337,7 +365,9 @@ You can define `ItemClicked` event in the `AssistViewToolbar` tag directive whic
 
 ### Prompt
 
-By default, the prompt toolbar in the AI AssistView component includes built-in items such as `edit` and `copy` icons. These allow users to modify the prompt text or copy it as needed.
+By default, the prompt toolbar renders the built-in items such as `edit` and `copy` items. These allow users to edit the prompt text or copy as needed.
+
+In the following example, AI AssistView component rendered with built-in toolbar items such as `edit` and `copy` items.
 
 ```cshtml
 
@@ -364,11 +394,11 @@ By default, the prompt toolbar in the AI AssistView component includes built-in 
 
 ```
 
-![Blazor AI AssistView prompts](./images/assistview-prompts.png)
+![Blazor AI AssistView Prompts](./images/assistview-prompts.png)
 
 #### Setting width
 
-You can use the `Width` property using `PromptToolbar` tag directive to set the width of the prompt toolbar in the AI AssistView component.
+You can use the `Width` property using `PromptToolbar` tag directive to set the width of the prompt toolbar in the AI AssistView.
 
 ```cshtml
 
@@ -434,7 +464,9 @@ You can define `ItemClicked` event in the `PromptToolbar` tag directive which wi
 
 ### Response
 
-The response toolbar comes with built-in items like `copy`, `like`, and `dislike` icons for user interaction with the responses.
+By default, the response toolbar renders the built-in items like `copy`, `like`, and `dislike` items to perform response copy and perform rating actions.
+
+In the following example, AI AssistView renders with built-in toolbar items.
 
 ```cshtml
 
@@ -461,11 +493,11 @@ The response toolbar comes with built-in items like `copy`, `like`, and `dislike
 
 ```
 
-![Blazor AI AssistView prompts](./images/assistview-prompts.png)
+![Blazor AI AssistView Prompts](./images/assistview-prompts.png)
 
 #### Setting width
 
-You can use the `Width` property using `ResponseToolbar` tag directive to set the width of the response toolbar in the AI AssistView component.
+You can use the `Width` property using `ResponseToolbar` tag directive to set the width of the response toolbar in the AI AssistView.
 
 ```cshtml
 
@@ -531,11 +563,11 @@ You can define `ItemClicked` event in the `ResponseToolbar` tag directive which 
 
 ## Adding custom toolbar items
 
-You can also add custom toolbar items in the AI AssistView component.
+You can also add custom toolbar items in the AI AssistView by using the `AssistViewToolbarItem`, `PromptToolbarItem` & `ResponseToolbarItem` tag directives.
 
 ### Prompt
 
-you can customize the default appearance of the Prompt toolbar by using the `PromptToolbarItem` tag directive within the `PromptToolbar`.
+You can use the `PromptToolbarItem` tag directive within the `PromptToolbar` to add custom items for the prompt toolbar in the AI AssistView.
 
 > To know more about the items, please refer to the [Items](./toolbar-items#items) section.
 
@@ -568,11 +600,11 @@ you can customize the default appearance of the Prompt toolbar by using the `Pro
 
 ```
 
-![Blazor AI AssistView prompt toolbar item](./images/assistview-prompt-toolbar-item.png)
+![Blazor AI AssistView PromptToolbarItem](./images/assistview-prompt-toolbar-item.png)
 
 ### Response
 
-you can customize the default appearance of the Response toolbar by using the `ResponseToolbarItem` tag directive within the `ResponseToolbar`.
+You can use the `ResponseToolbarItem` tag directive within the `ResponseToolbar` to add custom response toolbar in the AI AssistView.
 
 > To know more about the items, please refer to the [Items](./toolbar-items#items) section.
 
@@ -608,4 +640,8 @@ you can customize the default appearance of the Response toolbar by using the `R
 
 ```
 
-![Blazor AI AssistView response toolbar item](./images/assistview-response-toolbar-item.png)
+![Blazor AI AssistView ResponseToolbarItem](./images/assistview-response-toolbar-item.png)
+
+#### Item clicked
+
+The `itemClicked` event is triggered when the custom toolbar item is clicked.

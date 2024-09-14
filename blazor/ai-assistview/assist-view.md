@@ -7,12 +7,11 @@ control: AI AssistView
 documentation: ug
 ---
 
-
 # Assist view in Blazor AI AssistView component
 
 ## Setting prompt text
 
-You can use the `Prompt` property to define the input text prompt for the AI AssistView component.
+You can use the `Prompt` property to define the prompt text for the AI AssistView component.
 
 ```cshtml
 
@@ -33,11 +32,11 @@ You can use the `Prompt` property to define the input text prompt for the AI Ass
 
 ```
 
-![Blazor AI AssistView prompt text](./images/prompt-text.png)
+![Blazor AI AssistView PromptText](./images/prompt-text.png)
 
 ## Setting prompt placeholder
 
-You can use the `PromptPlaceholder` property to set a short hint that describes the expected input in the prompt text area of the AI AssistView component.
+You can use the `PromptPlaceholder` property to set the placeholder text for the prompt textarea. The default prompt placeholder value is `Type prompt for assistance...`.
 
 ```cshtml
 
@@ -58,15 +57,15 @@ You can use the `PromptPlaceholder` property to set a short hint that describes 
 
 ```
 
-![Blazor AI AssistView placeholder](./images/prompt-placeholder.png)
+![Blazor AI AssistView PromptPlaceholder](./images/prompt-placeholder.png)
 
 ## Prompt-response collection
 
-The `Prompts` property specifies the collection of prompts and their responses in the AI AssistView component.
+By using the `Prompts` property you can specifies the collection of prompts and their responses in the AI AssistView. It allows to load pre-defined prompt & response pairs during the initial setup or just either one of it ensuring the component is initialized with data condigured.
 
-It allows you to load pre-defined prompt-response pairs during the initial setup, ensuring the component is initialized with relevant data.
+By using the `Prompts` property, you can specify the collection of prompts and responses, allowing you to load pre-defined pairs or individual entries ensuring the control is initialized with the configured data.
 
-The `Prompts` property also enables you to gather and manage user interactions by collecting the input prompts and their corresponding responses during use.
+The `Prompts` property also stores the collection of all the prompts and their corresponding responses generated.
 
 ```cshtml
 
@@ -93,11 +92,11 @@ The `Prompts` property also enables you to gather and manage user interactions b
 
 ```
 
-![Blazor AI AssistView prompts](./images/assistview-prompts.png)
+![Blazor AI AssistView Prompts](./images/assistview-prompts.png)
 
 ## Adding prompt suggestions
 
-You can use the `PromptSuggestions` property to specifies the list of suggested prompts in the AI AssistView component. These suggestions can be selected by users to be used as prompts.
+By using the `PromptSuggestions` property, you can configure the list of suggested prompts in the AI AssistView. Users can choose from these suggestions to use as their prompts.
 
 ```cshtml
 
@@ -121,11 +120,11 @@ You can use the `PromptSuggestions` property to specifies the list of suggested 
 
 ```
 
-![Blazor AI AssistView suggestions](./images/assistview-suggestions.png)
+![Blazor AI AssistView PromptSuggestions](./images/assistview-suggestions.png)
 
-### Setting suggestions header
+### Adding suggestion headers
 
-You can use the `PromptSuggestionsHeader` property to set the header text for the prompt suggestions in the AI AssistView component.
+You can use the `PromptSuggestionsHeader` property to set the header text for the prompt suggestions in the AI AssistView.
 
 ```cshtml
 
@@ -149,11 +148,11 @@ You can use the `PromptSuggestionsHeader` property to set the header text for th
 
 ```
 
-![Blazor AI AssistView suggestion header](./images/assistview-suggestion-header.png)
+![Blazor AI AssistView PromptSuggestionsHeader](./images/assistview-suggestion-header.png)
 
-## Adding prompt icon CSS
+## Adding prompt iconCSS
 
-You can define the CSS class to show the prompter avatar in the AI AssistView component using the `PromptIconCss` property.
+You can customize the appearance of the prompter avatar by using the `PromptIconCss` property.
 
 ```cshtml
 
@@ -180,11 +179,11 @@ You can define the CSS class to show the prompter avatar in the AI AssistView co
 
 ```
 
-![Blazor AI AssistView prompt icon](./images/assistview-prompt-icon.png)
+![Blazor AI AssistView PromptIcon](./images/assistview-prompt-icon.png)
 
-## Adding response icon CSS
+## Adding response iconCSS
 
-You can define the CSS class to the responder avatar in the AI AssistView component using the `ResponseIconCss` property.
+You can use the `ResponseIconCss` property to customize the appearance of the responder avatar. By default, the `e-assistview-icon` class is added as the built-in AI AssistView response icon.
 
 ```cshtml
 
@@ -211,4 +210,4 @@ You can define the CSS class to the responder avatar in the AI AssistView compon
 
 ```
 
-![Blazor AI AssistView response icon](./images/assistview-response-icon.png)
+![Blazor AI AssistView ResponseIconCss](./images/assistview-response-icon.png)

@@ -15,10 +15,69 @@ This section describes the AI AssistView events that will be triggered when appr
 
 The AI AssistView component triggers the `Created` event when the component rendering is completed.
 
-## Prompt request
+```cshtml
+@using Syncfusion.Blazor.InteractiveChat
+
+<div class="aiassist-container" style="height: 350px; width: 650px;">
+    <SfAIAssistView Created="Created" PromptRequested="PromptRequest"></SfAIAssistView>
+</div>
+
+@code {
+    private void Created()
+    {
+        // Your required action here
+    }
+    private async Task PromptRequest(AssistViewPromptRequestedEventArgs args)
+    {
+        await Task.Delay(1000);
+        var defaultResponse = "For real-time prompt processing, connect the AI AssistView component to your preferred AI service, such as OpenAI or Azure Cognitive Services. Ensure you obtain the necessary API credentials to authenticate and enable seamless integration.";
+        args.Response = defaultResponse;
+    }
+}
+```
+
+## PromptRequested
 
 The `PromptRequested` event is triggered when the prompt request is made in the AI AssistView component.
 
-## Prompt changed
+```cshtml
+@using Syncfusion.Blazor.InteractiveChat
+
+<div class="aiassist-container" style="height: 350px; width: 650px;">
+    <SfAIAssistView PromptRequested="PromptRequest"></SfAIAssistView>
+</div>
+
+@code {
+    private async Task PromptRequest(AssistViewPromptRequestedEventArgs args)
+    {
+        await Task.Delay(1000);
+        var defaultResponse = "For real-time prompt processing, connect the AI AssistView component to your preferred AI service, such as OpenAI or Azure Cognitive Services. Ensure you obtain the necessary API credentials to authenticate and enable seamless integration.";
+        args.Response = defaultResponse;
+    }
+}
+```
+
+## PromptChanged
 
 The `PromptChanged` event is triggered when the prompt text changed in the AI AssistView component.
+
+```cshtml
+@using Syncfusion.Blazor.InteractiveChat
+
+<div class="aiassist-container" style="height: 350px; width: 650px;">
+    <SfAIAssistView PromptChanged="PromptChange" PromptRequested="PromptRequest"></SfAIAssistView>
+</div>
+
+@code {
+    private void PromptChange()
+    {
+        // Your required action here
+    }
+    private async Task PromptRequest(AssistViewPromptRequestedEventArgs args)
+    {
+        await Task.Delay(1000);
+        var defaultResponse = "For real-time prompt processing, connect the AI AssistView component to your preferred AI service, such as OpenAI or Azure Cognitive Services. Ensure you obtain the necessary API credentials to authenticate and enable seamless integration.";
+        args.Response = defaultResponse;
+    }
+}
+```
